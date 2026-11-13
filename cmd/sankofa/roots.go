@@ -89,6 +89,29 @@ everyone in the collection.`,
 					for _, line := range strings.Split(wrap(claim, 74-len(indent)), "\n") {
 						fmt.Fprintf(w, "%s   %s\n", indent, stDim.Render(line))
 					}
+					how := st.Link.How
+					if lang == "ru" && st.Link.HowRU != "" {
+						how = st.Link.HowRU
+					}
+					if how != "" {
+						for _, line := range strings.Split(wrap(how, 74-len(indent)), "\n") {
+							fmt.Fprintf(w, "%s   %s\n", indent, line)
+						}
+					}
+					if len(st.Link.Carries) > 0 {
+						var els []string
+						for _, id := range st.Link.Carries {
+							name := id
+							if e := rs.Element(id); e != nil {
+								name = e.Name
+								if lang == "ru" && e.NameRU != "" {
+									name = e.NameRU
+								}
+							}
+							els = append(els, name)
+						}
+						fmt.Fprintf(w, "%s   %s %s\n", indent, stMeta.Render(tr("Carries")+":"), strings.Join(els, ", "))
+					}
 					var srcs []string
 					for _, s := range st.Link.Sources {
 						srcs = append(srcs, atlas.Hyperlink(osc, s.URL, s.Title))
