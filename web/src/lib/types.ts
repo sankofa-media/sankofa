@@ -34,6 +34,8 @@ export interface Card {
   years: number[];
   places: Place[];
   zoom: number;
+  /** The moment the story is about: a year and an index into places (default 0). */
+  moment?: { year: number; place?: number };
   era?: string;
   books: Book[];
   edition?: Edition;

@@ -430,6 +430,17 @@ test('phone step boxes look alike in every chapter and no map name peeks out aro
   expect(peeking).toBe(0);
 });
 
+test('a step label is never said twice running', async ({ page }) => {
+  await page.goto('/');
+  const repeats = await page.locator('article.chapter').evaluateAll((chs) =>
+    chs.flatMap((ch) => {
+      const labels = [...ch.querySelectorAll('.step')].map((s) => s.querySelector('.where')?.textContent ?? '');
+      return labels.filter((l, i) => l && l === labels[i - 1]).map((l) => `${(ch as HTMLElement).dataset.chapter}: ${l}`);
+    }),
+  );
+  expect(repeats).toEqual([]);
+});
+
 test('a card panel holds the page still; the counter keeps the card wording', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('.cover-lang')).toHaveCount(0);

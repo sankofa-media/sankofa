@@ -5,7 +5,7 @@
 import type { App } from '../app';
 import type { Card } from '../lib/types';
 import { ERAS } from '../lib/types';
-import { formatYears, plain, span } from '../lib/cards';
+import { formatYears, plain, span, when } from '../lib/cards';
 import { bookMarks, h, reducedMotion, svgIcon } from '../lib/dom';
 import { chapterCopy, eraColor, readerCards } from '../lib/atlasModel';
 import { MOVEMENTS } from '../lib/movements';
@@ -288,7 +288,7 @@ export class Descent {
       const el = this.cardEl(c, colW);
       els.set('card:' + c.id, el);
       // Every card at its own start year, so the year beside it is the year it shows.
-      list.push({ kind: 'card', id: c.id, year: Math.max(START, span(c)[0]), h: 0 });
+      list.push({ kind: 'card', id: c.id, year: Math.max(START, when(c).year), h: 0 });
     }
     // Level 1 is a summary: each era opens with its picture, title and span.
     if (this.level === 1) {
@@ -521,7 +521,8 @@ export class Descent {
 
   private cardEl(c: Card, w: number): HTMLElement {
     const img = c.media?.find((m) => m.type === 'image');
-    const [a] = span(c);
+    // The year beside a card is the moment its story is about.
+    const a = when(c).year;
     return h(
       `a.dc${img ? '' : '.noimg'}${c.zoom <= 2 ? '.big' : ''}`,
       { href: `#focus=${c.id}`, 'data-card': c.id, style: `width:${w}px;--era:${eraColor(c.era)}` },

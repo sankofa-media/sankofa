@@ -4,7 +4,7 @@ import { scaleLinear, type ScaleLinear } from 'd3-scale';
 import { select, type Selection } from 'd3-selection';
 import { brushX, type BrushBehavior } from 'd3-brush';
 import type { Card } from '../lib/types';
-import { formatYears, span } from '../lib/cards';
+import { formatYears, span, when } from '../lib/cards';
 import { eraColor } from '../lib/atlasModel';
 import { chapterLabel, chapterNumber, pick, t } from '../lib/i18n';
 
@@ -107,10 +107,12 @@ export class Timeline {
       const x0 = x(a);
       const life = c.kind === 'person' && b > a;
       if (!life) {
-        let lane = beadEnds.findIndex((e) => e < x0 - 7);
+        // A bead stands at the moment its story is about.
+        const xm = x(when(c).year);
+        let lane = beadEnds.findIndex((e) => e < xm - 7);
         if (lane < 0) lane = beadEnds.length < 3 ? beadEnds.length : beadEnds.indexOf(Math.min(...beadEnds));
-        beadEnds[lane] = x0;
-        beads.push({ c, x: x0, lane });
+        beadEnds[lane] = xm;
+        beads.push({ c, x: xm, lane });
         continue;
       }
       const x1 = Math.max(x(b), x0 + 4);

@@ -2,7 +2,7 @@
 // today. Scroll distance is time, stretched where the cards are dense so the
 // quiet centuries stay quiet and the crowded ones get room.
 import type { Card, Chapter } from './types';
-import { span } from './cards';
+import { when } from './cards';
 
 export const NOW = new Date().getFullYear();
 export const START = 1300;
@@ -90,7 +90,7 @@ function rank(it: Item): number {
 
 /** Long silences between cards get a quiet note instead of nothing. */
 export function quietStretches(cards: Card[], min = 45): { from: number; to: number }[] {
-  const years = [START, ...cards.map((c) => Math.max(START, span(c)[0])).sort((a, b) => a - b)];
+  const years = [START, ...cards.map((c) => Math.max(START, when(c).year)).sort((a, b) => a - b)];
   const out: { from: number; to: number }[] = [];
   for (let i = 1; i < years.length; i++) {
     if (years[i] - years[i - 1] >= min) out.push({ from: years[i - 1], to: years[i] });
@@ -149,7 +149,7 @@ const LANDMARKS = [1, 3, 3, 3, 3];
  * (the few landmark cards of each century), 2 regions, 3 cities and genres,
  * 4 people, 5 every single document.
  */
-export function levelCards<T extends { id: string; zoom: number; years: number[]; media?: unknown[] }>(cards: T[], level: number): T[] {
+export function levelCards<T extends { id: string; zoom: number; years: number[]; places?: Card['places']; moment?: Card['moment']; media?: unknown[] }>(cards: T[], level: number): T[] {
   const lvl = Math.max(1, Math.min(5, Math.round(level)));
   if (lvl >= 5) return cards;
   const keep = new Set(cards.filter((c) => c.zoom <= lvl).map((c) => c.id));
@@ -157,11 +157,11 @@ export function levelCards<T extends { id: string; zoom: number; years: number[]
   if (n) {
     const byCentury = new Map<number, T[]>();
     for (const c of cards) {
-      const k = Math.floor(Math.max(START, c.years[0]) / 100);
+      const k = Math.floor(Math.max(START, when(c).year) / 100);
       byCentury.set(k, [...(byCentury.get(k) ?? []), c]);
     }
     for (const group of byCentury.values()) {
-      const ranked = [...group].sort((a, b) => a.zoom - b.zoom || Number(!!b.media?.length) - Number(!!a.media?.length) || a.years[0] - b.years[0]);
+      const ranked = [...group].sort((a, b) => a.zoom - b.zoom || Number(!!b.media?.length) - Number(!!a.media?.length) || when(a).year - when(b).year);
       let added = group.filter((c) => keep.has(c.id)).length;
       for (const c of ranked) {
         if (added >= n) break;

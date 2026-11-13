@@ -99,6 +99,17 @@ export function span(c: { years: number[] }): [number, number] {
   return [a, b];
 }
 
+/**
+ * The year and place a card's story is about: its moment when set, else its
+ * first year at its first place. `years` stays the span shown elsewhere.
+ */
+export function when(c: { years: number[]; places?: Place[]; moment?: Card['moment'] }): { year: number; place: Place } {
+  const m = c.moment;
+  const places = c.places ?? [];
+  const place = (m && places[m.place ?? 0]) || places[0];
+  return { year: m?.year ?? c.years[0], place };
+}
+
 export function formatYears(years: number[]): string {
   if (!years.length) return '';
   const fmt = (y: number) => (y < 0 ? `${-y} ${t('BCE')}` : String(y));

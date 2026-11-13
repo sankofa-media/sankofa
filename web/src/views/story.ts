@@ -4,7 +4,7 @@ import type { App } from '../app';
 import { richText } from '../app';
 import type { Card, Chapter } from '../lib/types';
 import { ERAS } from '../lib/types';
-import { formatYears, KIND_LABEL, links } from '../lib/cards';
+import { formatYears, KIND_LABEL, links, when } from '../lib/cards';
 import { bookMarks, h, reducedMotion, revealOnScroll } from '../lib/dom';
 import { chapterLabel, chapterNumber, lang, pick, t } from '../lib/i18n';
 import { chapterCopy, eraColor, isNonPlace, readerCards } from '../lib/atlasModel';
@@ -273,21 +273,27 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
     if (c) used.add(c.id);
     return c;
   });
+  let lastWhere = '';
   const steps = ch.steps.map((s, i) => {
     const sc = stepCards(app, s);
-    // The label belongs to the paragraph's first linked card alone: its place
-    // and its own year, never a span stretched across several cards.
+    // The label belongs to the paragraph's first linked card alone: the place
+    // and year its story is about (its moment), never a span stretched
+    // across several cards, nor a birth year over a later deed.
     const anchor = sc[0];
-    const year = anchor?.years.length ? formatYears([anchor.years[0]]) : '';
+    const at = anchor ? when(anchor) : undefined;
+    const year = at?.year !== undefined ? formatYears([at.year]) : '';
     // The chapter's opening step speaks for the whole chapter: its own span and place.
-    const where = i === 0 || !anchor ? ch.kicker : isNonPlace(anchor) ? year : `${anchor.places[0].name}${year ? ' · ' + year : ''}`;
+    const label = i === 0 || !anchor ? ch.kicker : isNonPlace(anchor) ? year : `${at!.place.name}${year ? ' · ' + year : ''}`;
+    // The same label twice running is said once.
+    const where = label === lastWhere ? '' : label;
+    lastWhere = label;
     const img = stepImage[i]?.media?.find((m) => m.type === 'image');
     return h(
       `div.step${i === 0 ? '.first' : ''}`,
       { 'data-step': String(i), lang: ch.textLang && ch.textLang !== lang() ? ch.textLang : undefined },
       // On phones the picture sits above the text instead of under it.
       img ? h('figure.step-fig', {}, progressive(app, img.file, { want: 960, sizes: '92vw', alt: img.caption ?? stepImage[i]!.title, near: true }).img, h('figcaption.credit', {}, img.caption ? img.caption + ' · ' : '', img.credit, ' · ', img.license)) : null,
-      h('div.where', {}, where),
+      where ? h('div.where', {}, where) : null,
       h('p', {}, richText(app, s)),
     );
   });
