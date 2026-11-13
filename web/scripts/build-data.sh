@@ -35,6 +35,8 @@ if [ -d "$src/media" ]; then
 fi
 echo "media: $(ls web/public/media | wc -l | tr -d ' ') files"
 node "$web/scripts/build-media.ts" web/public/media web/public/data/media.json
+# Documents, working objects, how we checked, the guide and the dedication.
+node "$web/scripts/build-mechanics.ts" "$src" web/public/data
 # The public, read-only visitor kubeconfig (hack/stand/visitor-kubeconfig.sh),
 # offered in the engine room when the stand has produced one.
 if [ -f dist/visitor.kubeconfig ]; then

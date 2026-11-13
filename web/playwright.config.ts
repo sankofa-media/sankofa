@@ -1,12 +1,15 @@
 import { defineConfig, devices } from '@playwright/test';
 
+// PORT lets several checkouts test side by side.
+const port = Number(process.env.PORT ?? 4173);
+
 export default defineConfig({
   testDir: 'e2e',
   timeout: 60_000,
-  use: { baseURL: 'http://localhost:4173/', colorScheme: 'dark' },
+  use: { baseURL: `http://localhost:${port}/`, colorScheme: 'dark' },
   webServer: {
-    command: 'npm run preview',
-    url: 'http://localhost:4173/',
+    command: `npx vite preview --port ${port} --strictPort`,
+    url: `http://localhost:${port}/`,
     reuseExistingServer: true,
   },
   projects: [

@@ -1,0 +1,66 @@
+id: equiano-narrative
+card: equiano
+title:
+  en: "The Interesting Narrative of the Life of Olaudah Equiano, or Gustavus Vassa, the African"
+  ru: "«Удивительное повествование о жизни Олауды Эквиано, или Густава Васы, африканца»"
+imprint:
+  en: "London, printed for the author, 1789 · volume I, title page and list of subscribers · John Carter Brown Library copy"
+  ru: "Лондон, напечатано для автора, 1789 · том I, титульный лист и список подписчиков · экземпляр Библиотеки Джона Картера Брауна"
+source:
+  title: "Wikimedia Commons: The interesting narrative of the life of Olaudah Equiano, or Gustavus Vassa, the African. (IA interestingnarra01equi).pdf"
+  url: "https://commons.wikimedia.org/wiki/File:The_interesting_narrative_of_the_life_of_Olaudah_Equiano,_or_Gustavus_Vassa,_the_African._(IA_interestingnarra01equi).pdf"
+  scan: "https://archive.org/details/interestingnarra01equi"
+  license: "Public domain"
+pages:
+  - {file: doc-equiano-title.jpg, label: {en: "Title page", ru: "Титульный лист"}}
+  - {file: doc-equiano-subscribers.jpg, label: {en: "List of subscribers", ru: "Список подписчиков"}}
+lines:
+  - page: 0
+    boxes: [[0.05, 0.165, 0.62, 0.185]]
+    text: "THE INTERESTING NARRATIVE OF THE LIFE OF OLAUDAH EQUIANO,"
+    ru: "Удивительное повествование о жизни Олауды Эквиано,"
+    note:
+      en: "Published in London in 1789, the book became a bestseller and ran to nine editions by 1794."
+      ru: "Книга вышла в Лондоне в 1789 году, стала бестселлером и к 1794 году выдержала девять изданий."
+  - page: 0
+    boxes: [[0.1, 0.36, 0.51, 0.055]]
+    text: "OR GUSTAVUS VASSA,"
+    ru: "или Густава Васы,"
+    note:
+      en: "Olaudah Equiano was also called Gustavus Vassa."
+      ru: "Олауду Эквиано называли также Густавом Васой."
+  - page: 0
+    boxes: [[0.225, 0.418, 0.255, 0.028]]
+    text: "THE AFRICAN."
+    ru: "африканца."
+    note:
+      en: "Yet a 1759 baptism record and a 1773 Navy muster roll both give his birthplace as Carolina; where he was born is still contested."
+      ru: "Однако запись о крещении 1759 года и судовой список флота 1773 года называют местом его рождения Каролину; спор о том, где он родился, не решён до сих пор."
+  - page: 0
+    boxes: [[0.05, 0.452, 0.62, 0.03]]
+    text: "WRITTEN BY HIMSELF."
+    ru: "Написано им самим."
+    note:
+      en: "It tells of a childhood in Igbo country, kidnapping, the Middle Passage, and the day in 1766 when he bought his own freedom for £40."
+      ru: "В ней — детство в земле игбо, похищение, Средний путь и день в 1766 году, когда он выкупил себя на свободу за 40 фунтов."
+  - page: 0
+    boxes: [[0.045, 0.633, 0.62, 0.058]]
+    text: "LONDON: Printed for and ſold by the AUTHOR, No. 10, Union-Street, Middleſex Hoſpital;"
+    ru: "Лондон. Напечатано для автора и продаётся у него: Юнион-стрит, дом 10, у Мидлсекской больницы;"
+    note:
+      en: "He published it himself, financed by subscribers who paid in advance."
+      ru: "Он издал книгу на деньги подписчиков, заплативших вперёд."
+  - page: 1
+    boxes: [[0.375, 0.152, 0.55, 0.035]]
+    text: "LIST OF SUBSCRIBERS."
+    ru: "Список подписчиков."
+    note:
+      en: "The people who paid in advance for the book are named before the story begins."
+      ru: "Те, кто заранее заплатил за книгу, названы поимённо ещё до начала рассказа."
+  - page: 1
+    boxes: [[0.365, 0.198, 0.565, 0.028]]
+    text: "His Royal Highneſs the Prince of Wales."
+    ru: "Его королевское высочество принц Уэльский."
+    note:
+      en: "The first name on the list was the Prince of Wales."
+      ru: "Первым в списке стоял принц Уэльский."

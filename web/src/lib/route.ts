@@ -2,8 +2,9 @@
 // open (view=descent) and which chapter the story is at (ch=v3). Go's
 // atlas.Parse ignores these keys, so terminal links stay compatible.
 import { formatFragment, goQueryEscape, safeParse, type Point } from './fragment';
+import { isMechView, type MechView } from '../mechanics/views';
 
-export type View = 'descent' | 'listen' | 'atlas' | 'engine' | 'roots' | 'roots-map';
+export type View = 'descent' | 'listen' | 'atlas' | 'engine' | 'roots' | 'roots-map' | MechView;
 
 export interface Route {
   point: Point;
@@ -11,15 +12,18 @@ export interface Route {
   view?: View;
   /** the artist the roots view is rooted on */
   artist?: string;
+  /** the document or object a mechanics view opens on */
+  item?: string;
 }
 
 export function parseRoute(hash: string): Route {
   const s = hash.startsWith('#') ? hash.slice(1) : hash;
   const q = new URLSearchParams(s);
   const v = q.get('view');
-  const view = v === 'descent' || v === 'listen' || v === 'atlas' || v === 'engine' || v === 'roots' || v === 'roots-map' ? v : undefined;
+  const view = v === 'descent' || v === 'listen' || v === 'atlas' || v === 'engine' || v === 'roots' || v === 'roots-map' || isMechView(v) ? v : undefined;
   const artist = q.get('artist') ?? undefined;
-  return { point: safeParse(s), ch: q.get('ch') ?? undefined, view, ...(artist ? { artist } : {}) };
+  const item = q.get('item') ?? undefined;
+  return { point: safeParse(s), ch: q.get('ch') ?? undefined, view, ...(artist ? { artist } : {}), ...(item ? { item } : {}) };
 }
 
 /** The fragment for a route: atlas keys as Go writes them, museum keys after. */
@@ -28,6 +32,7 @@ export function formatRoute(r: Route): string {
   if (r.ch) extra.push('ch=' + goQueryEscape(r.ch));
   if (r.view) extra.push('view=' + r.view);
   if (r.artist) extra.push('artist=' + goQueryEscape(r.artist));
+  if (r.item) extra.push('item=' + goQueryEscape(r.item));
   return [formatFragment(r.point), ...extra].filter(Boolean).join('&');
 }
 

@@ -10,6 +10,7 @@ import { edition, lang, pick, t } from '../lib/i18n';
 import { editionNote, pairLink } from './editionNote';
 import { cardYaml } from '../lib/cardYaml';
 import { mediaSrc } from '../lib/media';
+import { cardChecks, cardExtras } from '../mechanics';
 
 /** A drawer that slides in from the right, with a focus trap and Esc to close. */
 export class Drawer {
@@ -163,6 +164,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
         h('figcaption.credit', {}, a.caption ? a.caption + ' · ' : '', a.credit, ' · ', a.url ? h('a', { href: a.url, rel: 'noopener', target: '_blank' }, a.license) : a.license),
       ),
     ),
+    cardExtras(app, c),
     c.further?.length ? h('section.sec.further', {}, h('h3', {}, t('Go further')), h('ul', {}, c.further.map((f) => h('li', {}, richText(app, f))))) : null,
     sameGenre.length || backlinks.length
       ? h(
@@ -207,6 +209,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
         c.sources.map((s) => h('li', {}, s.url ? h('a', { href: s.url, rel: 'noopener', target: '_blank' }, s.title) : s.title)),
       ),
     ),
+    cardChecks(app, c),
   );
 
   const media = img

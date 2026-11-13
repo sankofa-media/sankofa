@@ -1,0 +1,127 @@
+import { readdirSync, readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import YAML from 'yaml';
+import { describe, expect, it } from 'vitest';
+import { buildChecks, factText, findClaim, type Ledgers } from '../src/mechanics/checks/model';
+
+const src = (s: string) => ({ title: s, url: `https://example.org/${s}` });
+
+function fixture(): Ledgers {
+  return {
+    final: {
+      a: [
+        { status: 'agreed', fact: 'The ship sailed in 1781 (also wow)' },
+        { status: 'recheck-confirmed', fact: 'It carried 442 people' },
+        { status: 'corrected', fact: 'The narrower, corrected wording.' },
+      ],
+    },
+    match: {
+      claims: [
+        { card: 'a', claim: 'The ship sailed in 1781 (also wow)', status: 'agreed', codex: { verdict: 'confirmed', entries: [{ sources: [src('a1'), src('a2')] }] }, claude: { verdict: 'confirmed', entries: [{ sources: [src('b1'), src('b2'), src('b1')] }] } },
+        { card: 'a', claim: 'It carried 442 people', status: 'contested', codex: { verdict: 'removed', entries: [] }, claude: { verdict: 'confirmed', entries: [{ sources: [src('b3'), src('b4')] }] } },
+        { card: 'a', claim: 'The broad original wording', status: 'contested', codex: { verdict: 'unverified' }, claude: { verdict: 'confirmed', entries: [{ sources: [src('b5')] }] } },
+        { card: 'a', claim: 'Something false', status: 'refuted' },
+        { card: 'a', claim: 'Something unconfirmed', status: 'unconfirmed' },
+      ],
+    },
+    recheckA: [
+      { card: 'a', claim: 'It carried 442 people', verdict: 'confirmed', sources: [src('a3'), src('a4')] },
+      { card: 'a', claim: 'The broad original wording', verdict: 'corrected', sources: [src('a5')], note: 'The narrower, corrected wording.' },
+      { card: 'a', claim: 'Dropped claim', verdict: 'unverified' },
+    ],
+    recheckB: [],
+    explainersNew: { a: [{ claim: 'An explainer claim', sources: [src('w1')] }, { claim: 'A removed explainer claim' }] },
+    explainersCheck: { claims: [{ card: 'a', claim: 'An explainer claim', verdict: 'confirmed', sources: [src('c1'), src('c2')] }, { card: 'a', claim: 'A removed explainer claim', verdict: 'unverified' }] },
+    media: [{ card: 'a', file: 'a.jpg', url: 'https://commons.example/a', license: 'CC0', license_wording: 'No rights reserved.', sha256: 'abc' }],
+    mediaCheck: [{ card: 'a', file: 'a.jpg', verdict: 'ok' }],
+    rootsCheck: { links: [{ verdict: 'confirmed' }] },
+    rootsDeepCheck: { checks: [{ verdict: 'corrected' }, { verdict: 'confirmed' }] },
+  };
+}
+
+describe('how we checked: ledgers joined per card', () => {
+  const l = fixture();
+  const out = buildChecks(l, ['a', 'b']);
+
+  it('strips the ledger bookkeeping from facts', () => {
+    expect(factText('Born in 1930 (also wow: young)')).toBe('Born in 1930');
+    expect(out.cards.a.facts[0].fact).toBe('The ship sailed in 1781');
+  });
+
+  it('gives both agents and their sources, without duplicates', () => {
+    const [a, b] = out.cards.a.facts[0].checks;
+    expect(a).toMatchObject({ agent: 'A', verdict: 'confirmed' });
+    expect(a.sources.map((s) => s.title)).toEqual(['a1', 'a2']);
+    expect(b.sources.map((s) => s.title)).toEqual(['b1', 'b2']);
+  });
+
+  it('takes the re-check as the verdict of the agent that re-checked', () => {
+    const [a, b] = out.cards.a.facts[1].checks;
+    expect(a).toMatchObject({ agent: 'A', verdict: 'confirmed', recheck: true, first: 'removed' });
+    expect(a.sources.map((s) => s.title)).toEqual(['a3', 'a4']);
+    expect(b.verdict).toBe('confirmed');
+  });
+
+  it('finds a corrected fact through the re-check note', () => {
+    expect(findClaim('a', 'The narrower, corrected wording.', l)?.claim).toBe('The broad original wording');
+    expect(out.cards.a.facts[2].checks[0]).toMatchObject({ verdict: 'corrected', recheck: true });
+  });
+
+  it('keeps only explainer claims the second agent confirmed', () => {
+    const ex = out.cards.a.facts.filter((f) => f.checks[0]?.agent === 'W');
+    expect(ex.map((f) => f.fact)).toEqual(['An explainer claim']);
+    expect(ex[0].checks[1]).toMatchObject({ agent: 'C', verdict: 'confirmed' });
+  });
+
+  it('carries the licence wording and the second check of pictures', () => {
+    expect(out.cards.a.media[0]).toMatchObject({ file: 'a.jpg', wording: 'No rights reserved.', second: { verdict: 'ok' } });
+  });
+
+  it('counts the totals from the ledgers', () => {
+    expect(out.totals).toMatchObject({
+      cards: 1,
+      facts: 4,
+      claimsExamined: 7,
+      refuted: 1,
+      unconfirmed: 3,
+      rechecked: 3,
+      images: 1,
+      imageSecond: { ok: 1 },
+      rootsLinks: 3,
+      rootsByVerdict: { confirmed: 2, corrected: 1 },
+    });
+    expect(out.cards.b).toBeUndefined();
+  });
+});
+
+describe('how we checked: the museum’s own ledgers', () => {
+  const root = join(__dirname, '../../content');
+  const y = (f: string) => YAML.parse(readFileSync(join(root, 'ledger', f), 'utf8'));
+  const ids = readdirSync(join(root, 'cards'))
+    .filter((f) => f.endsWith('.md') && !/\.[a-z]{2}\.md$/.test(f))
+    .map((f) => f.replace(/\.md$/, ''));
+  const out = buildChecks(
+    {
+      final: y('final.yaml'),
+      match: y('match.yaml'),
+      recheckA: y('recheck-codex-result.yaml'),
+      recheckB: y('recheck-claude-result.yaml'),
+      explainersNew: y('explainers-new.yaml'),
+      explainersCheck: y('explainers-check.yaml'),
+      media: [...y('media.yaml'), ...y('media-documents.yaml')],
+      mediaCheck: y('media-check.yaml'),
+    },
+    ids,
+  );
+
+  it('has a record for every card', () => {
+    expect(Object.keys(out.cards).sort()).toEqual([...ids].sort());
+  });
+
+  it('traces almost every fact to the two agents', () => {
+    const facts = Object.values(out.cards).flatMap((c) => c.facts);
+    const traced = facts.filter((f) => f.checks.length === 2);
+    expect(traced.length / facts.length).toBeGreaterThan(0.99);
+    for (const f of traced) for (const c of f.checks) expect(['A', 'B', 'W', 'C']).toContain(c.agent);
+  });
+});
