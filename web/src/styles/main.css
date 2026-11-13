@@ -7458,3 +7458,48 @@ html:lang(ru) .xref {
     background: transparent;
   }
 }
+/* Level 5 on a desktop: the desk appears only with a card on it, and the
+   introduction keeps clear of the year meter and of the desk. */
+.descent.lvl5 .d-desk:empty {
+  display: none;
+}
+@media (min-width: 761px) {
+  .descent.lvl5 .d-intro {
+    left: clamp(220px, 17vw, 300px);
+    right: 38vw;
+  }
+  .descent.lvl5 .d-intro h2 {
+    font-size: clamp(44px, 5.2vw, 88px);
+  }
+}
+/* Level 5 on a phone: no desk over the column (it repeated the card in
+   view); each card carries its first paragraph instead. The level hint
+   sits at the bottom, clear of the year and the chapter title. */
+@media (max-width: 760px) {
+  .descent.lvl5 .d-desk {
+    display: none;
+  }
+  .descent.lvl5 .d-track {
+    padding-bottom: 0;
+  }
+  .descent.lvl5 .d-outro,
+  .descent.lvl5 .d-intro {
+    padding-bottom: 0;
+  }
+  .d-hint {
+    top: auto;
+    bottom: 16px;
+  }
+}
+.dc .dc-body {
+  display: block;
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.55;
+  opacity: 0.9;
+}
+@media (max-width: 760px) {
+  .descent.lvl5 a.dc:not(.desk-on) {
+    opacity: 1;
+  }
+}

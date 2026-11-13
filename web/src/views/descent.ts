@@ -5,7 +5,7 @@
 import type { App } from '../app';
 import type { Card } from '../lib/types';
 import { ERAS } from '../lib/types';
-import { formatYears, span } from '../lib/cards';
+import { formatYears, plain, span } from '../lib/cards';
 import { bookMarks, h, reducedMotion, svgIcon } from '../lib/dom';
 import { chapterCopy, eraColor, readerCards } from '../lib/atlasModel';
 import { MOVEMENTS } from '../lib/movements';
@@ -29,7 +29,7 @@ const STARS = scaleLinear().domain([1945, 1975, 2005]).range([0, 0.55, 1]).clamp
 const QUIET = [
   { en: 'The archive is quiet here. The people were not.', ru: 'Архив здесь молчит. Люди — нет.' },
   { en: 'Few records survive from these years. Absence of evidence, not of lives.', ru: 'От этих лет почти не осталось записей. Документов нет, но люди жили.' },
-  { en: 'A long stretch with no card yet. Somebody was singing.', ru: 'Долгий отрезок без единой карточки. Кто-то в это время пел.' },
+  { en: 'A long stretch with no card. Somebody was singing.', ru: 'Долгий отрезок без единой карточки. Кто-то в это время пел.' },
   { en: 'Silence in the sources. Keep going.', ru: 'Источники молчат. Идите дальше.' },
 ];
 
@@ -530,6 +530,8 @@ export class Descent {
         h('small', {}, c.era ? h('span.era', { title: `${chapterLabel(c.era)} · ${this.app.chapters.find((x) => x.id === c.era)?.title ?? ''}` }, String(chapterNumber(c.era) ?? '')) : null, h('b', {}, String(a)), h('i.pl', {}, c.places[0].name), bookMarks(c.books)),
         h('strong', {}, c.title),
         h('span.w', {}, c.wow),
+        // On a phone level 5 has no desk beside the column: the card itself opens up.
+        this.level === 5 && this.phone() ? h('span.dc-body', {}, plain(c.body.split(/\n\s*\n/)[0]).replace(/\s*\n\s*/g, ' ')) : null,
         c.years.length > 1 && c.years[1] !== a ? h('em', {}, formatYears(c.years)) : null,
       ),
     );
@@ -556,8 +558,13 @@ export class Descent {
     imgs.forEach((i) => io.observe(i));
   }
 
+  private phone(): boolean {
+    return (this.el.clientWidth || window.innerWidth) < 760;
+  }
+
   /** Level 5: the card under the reading line, laid open on the desk. */
   private updateDesk(): void {
+    if (this.phone()) return void this.desk.replaceChildren();
     const line = this.el.clientHeight * 0.45;
     let best: HTMLElement | undefined;
     let bestD = Infinity;
@@ -569,7 +576,8 @@ export class Descent {
         best = el;
       }
     }
-    const id = best?.dataset.card ?? '';
+    // No card near the reading line (the introduction, say): no empty desk.
+    const id = best && bestD < this.el.clientHeight * 0.35 ? (best.dataset.card ?? '') : '';
     if (id === this.deskId) return;
     this.deskId = id;
     this.track.querySelectorAll('a.dc.desk-on').forEach((e) => e.classList.remove('desk-on'));

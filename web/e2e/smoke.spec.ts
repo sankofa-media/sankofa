@@ -319,6 +319,21 @@ test('readers never see the internal chapter ids v0–v7', async ({ page }) => {
   await expect(page.locator('#ch-v2 .hero .release .v')).toHaveText('Глава 3');
 });
 
+test('level 5 never shows an empty desk, and a phone reads the card in the column', async ({ page }, info) => {
+  await page.goto('/#t=1300&view=descent&zoom=5');
+  await page.waitForTimeout(1200);
+  await expect(page.locator('.d-desk')).toBeHidden();
+  await page.goto('about:blank');
+  await page.goto('/#t=1925&view=descent&zoom=5');
+  await page.waitForTimeout(1200);
+  if (info.project.name === 'mobile') {
+    await expect(page.locator('.d-desk')).toBeHidden();
+    await expect(page.locator('.descent a.dc .dc-body').first()).not.toBeEmpty();
+  } else {
+    await expect(page.locator('.d-desk .desk-in h3')).toBeVisible();
+  }
+});
+
 test('a card panel holds the page still; the counter keeps the card wording', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('.cover-lang')).toHaveCount(0);
