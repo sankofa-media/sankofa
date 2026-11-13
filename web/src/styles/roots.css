@@ -840,11 +840,8 @@ a.rt-who:hover b {
 .rm-info .rt-route {
   margin-top: 8px;
 }
-.rm-edge.el-on {
-  stroke: var(--ec) !important;
-  stroke-opacity: 0.95 !important;
-  stroke-width: 3 !important;
-  stroke-dasharray: none !important;
+.rmap.lit .rm-edge.on.el-on {
+  stroke-dasharray: none;
 }
 .rmap.lit .rm-node.near:not(.on) {
   opacity: 0.5;
@@ -937,4 +934,123 @@ a.rt-who:hover b {
   font-family: var(--font-sans);
   font-size: 12px;
   fill: rgba(242, 233, 216, 0.7);
+}
+
+/* The music map's side panel (a bottom sheet on phones) */
+.rm-path-head > small {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.rm-path-head > b {
+  display: block;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.1;
+  margin: 4px 0 8px;
+}
+.rm-info.path {
+  width: min(420px, 40vw);
+  top: 250px;
+  bottom: 54px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.mp-on .rm-info.path {
+  bottom: 110px;
+}
+.rm-path-head .rt-playroute {
+  margin: 4px 0 6px;
+}
+.rm-path-head .rt-threads {
+  padding: 10px 12px;
+}
+.rm-path-head .rt-threads-lede {
+  font-size: 15px;
+}
+.rm-info-btns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.rm-elbar {
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+}
+.rm-elbar-lede {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--ink-3);
+}
+.rm-el-count {
+  font-family: var(--font-sans);
+  font-size: 13px;
+}
+@media (max-width: 760px) {
+  .rm-info.path {
+    top: auto;
+    width: auto;
+    max-height: 56vh;
+    bottom: 8px;
+  }
+  .mp-on .rm-info.path {
+    bottom: 76px;
+  }
+  .rm-elbar {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+  .rm-els {
+    flex-wrap: nowrap;
+  }
+  .rm-els .rt-el {
+    white-space: nowrap;
+  }
+}
+.rm-sheet-toggle {
+  display: none;
+}
+@media (max-width: 760px) {
+  .rm-sheet-toggle {
+    display: inline-flex;
+    margin-top: 6px;
+  }
+  .rm-info.path:not(.open) .rt-reader,
+  .rm-info.path:not(.open) > a.btn,
+  .rm-info.path:not(.open) .rt-threads {
+    display: none;
+  }
+  .rm-info.path .rm-path-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 12px;
+  }
+  .rm-info.path .rm-path-head > small {
+    flex-basis: 100%;
+  }
+  .rm-info.path .rm-path-head > b {
+    margin: 0;
+  }
+  .rm-info.path .rt-playroute {
+    margin: 0;
+    padding: 6px 14px;
+  }
+}
+@media (max-width: 760px) {
+  .rm-stage {
+    overflow: auto;
+  }
+}
+@media (max-width: 760px) {
+  .rmap.lit .rm-hint-line {
+    display: none;
+  }
 }

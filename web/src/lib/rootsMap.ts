@@ -28,6 +28,8 @@ export interface GEdge {
   from: string;
   to: string;
   kind: LinkKind | 'lineage' | 'unknown';
+  /** elements of music carried along this link */
+  carries?: string[];
 }
 
 export interface Graph {
@@ -38,7 +40,7 @@ export interface Graph {
   in: Map<string, string[]>;
 }
 
-export function buildGraph(artists: Artist[], cards: Map<string, MapCard>, name: (a: Artist) => string): Graph {
+export function buildGraph(artists: Artist[], cards: Map<string, MapCard>, name: (a: Artist) => string, cardCarries: Map<string, string[]> = new Map()): Graph {
   const byId = new Map<string, GNode>();
   const edges: GEdge[] = [];
   const add = (n: GNode) => byId.get(n.id) ?? (byId.set(n.id, n), n);
@@ -50,7 +52,7 @@ export function buildGraph(artists: Artist[], cards: Map<string, MapCard>, name:
     if (known) return known;
     const n = add({ id: `card:${id}`, card: true, label: c.title, year: c.years[0] ?? 1900, support: 0 });
     for (const r of c.roots ?? []) {
-      if (addCard(r)) edges.push({ from: n.id, to: `card:${r}`, kind: 'lineage' });
+      if (addCard(r)) edges.push({ from: n.id, to: `card:${r}`, kind: 'lineage', carries: cardCarries.get(`${id}>${r}`) });
     }
     return n;
   };
@@ -58,7 +60,7 @@ export function buildGraph(artists: Artist[], cards: Map<string, MapCard>, name:
     for (const l of a.links) {
       const [k, ref] = l.to.split(':');
       const to = k === 'card' ? (addCard(ref) ? `card:${ref}` : undefined) : byId.has(ref) ? ref : undefined;
-      if (to) edges.push({ from: a.id, to, kind: l.kind ?? 'unknown' });
+      if (to) edges.push({ from: a.id, to, kind: l.kind ?? 'unknown', carries: l.carries });
     }
   }
   const out = new Map<string, string[]>();
@@ -78,6 +80,12 @@ export function reach(g: Graph, id: string): Set<string> {
   const stack = [id];
   while (stack.length) for (const n of g.out.get(stack.pop()!) ?? []) if (!seen.has(n)) (seen.add(n), stack.push(n));
   return seen;
+}
+
+/** The links that carry an element, and every node they touch. */
+export function carrying(g: Graph, element: string): { edges: GEdge[]; nodes: Set<string> } {
+  const edges = g.edges.filter((e) => e.carries?.includes(element));
+  return { edges, nodes: new Set(edges.flatMap((e) => [e.from, e.to])) };
 }
 
 /** Everything that grew out of a node. */
