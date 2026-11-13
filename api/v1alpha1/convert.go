@@ -22,6 +22,9 @@ func FromCard(c *card.Card) *Card {
 	if c.Era != "" {
 		o.Labels["sankofa.kuberoot.dev/era"] = c.Era
 	}
+	if c.Moment != nil {
+		o.Spec.Moment = &Moment{Year: c.Moment.Year, Place: c.Moment.Place}
+	}
 	for _, p := range c.Places {
 		o.Spec.Places = append(o.Spec.Places, Place{Name: p.Name, Lat: ftoa(p.Lat), Lon: ftoa(p.Lon)})
 	}
@@ -50,6 +53,9 @@ func ToCard(o *Card) *card.Card {
 	}
 	if c.Edition == "" {
 		c.Edition = card.EditionBoth
+	}
+	if s.Moment != nil {
+		c.Moment = &card.Moment{Year: s.Moment.Year, Place: s.Moment.Place}
 	}
 	for _, p := range s.Places {
 		lat, _ := strconv.ParseFloat(p.Lat, 64)

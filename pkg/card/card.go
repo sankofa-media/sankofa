@@ -104,6 +104,38 @@ type Media struct {
 	URL     string `json:"url,omitempty"` // where the original lives
 }
 
+// Moment is the point a card's story is about: a person's card spans a life,
+// but its story may be one year in one of its places (Robert Smalls is born
+// in 1839; the card tells his escape of 1862).
+type Moment struct {
+	Year  int `json:"year"`
+	Place int `json:"place,omitempty"` // index into places, 0 by default
+}
+
+// MomentSlack is how far outside a card's years its moment may fall (a story
+// told about the years just before or after a span).
+const MomentSlack = 10
+
+// When returns the year and place the card's story is about: the moment when
+// set, else the first year at the first place.
+func (c *Card) When() (int, Place) {
+	var p Place
+	if len(c.Places) > 0 {
+		p = c.Places[0]
+	}
+	if c.Moment == nil {
+		y := 0
+		if len(c.Years) > 0 {
+			y = c.Years[0]
+		}
+		return y, p
+	}
+	if c.Moment.Place >= 0 && c.Moment.Place < len(c.Places) {
+		p = c.Places[c.Moment.Place]
+	}
+	return c.Moment.Year, p
+}
+
 // Card is one entry of the dictionary.
 type Card struct {
 	ID      string   `json:"id"`
@@ -114,6 +146,7 @@ type Card struct {
 	Years   []int    `json:"years"`            // [from] or [from, to]
 	Places  []Place  `json:"places"`           // first is the main point
 	Zoom    int      `json:"zoom"`             // 1..5, see docs/card-format.md
+	Moment  *Moment  `json:"moment,omitempty"` // the moment the story is about, when not years[0] at places[0]
 	Era     string   `json:"era,omitempty"`    // v0..v7
 	Books   []string `json:"books"`            // voices | archives | heirs
 	Edition string   `json:"edition,omitempty"`
@@ -382,6 +415,17 @@ func (s *Set) Validate() []error {
 		}
 		if c.Zoom < 1 || c.Zoom > 5 {
 			bad(c, "zoom must be 1..5")
+		}
+		if m := c.Moment; m != nil {
+			if len(c.Years) > 0 {
+				from, to := c.Years[0], c.Years[len(c.Years)-1]
+				if m.Year < from-MomentSlack || m.Year > to+MomentSlack {
+					bad(c, "moment year %d is not within or near years %d-%d", m.Year, from, to)
+				}
+			}
+			if m.Place < 0 || m.Place >= len(c.Places) {
+				bad(c, "moment place %d is not an index into its %d places", m.Place, len(c.Places))
+			}
 		}
 		if len(c.Books) == 0 {
 			bad(c, "needs at least one book")
