@@ -33,6 +33,8 @@ sources:
   - {title: "GRAMMY.com: R&B pioneer Johnny Otis dies", url: "https://www.grammy.com/news/rb-pioneer-johnny-otis-dies/"}
   - {title: "Mark Puryear, Tell It Like It Is, Smithsonian Folklife Festival (2011), pp. 53–63", url: "https://folkways-media.si.edu/docs/festival/2011/festival-program-book-rnb.pdf"}
   - {title: "Case Western Reserve University, Encyclopedia of Cleveland History: Rock & Roll", url: "https://case.edu/ech/articles/r/rock-roll"}
+  - {title: "BlackPast: Ruth Brown (1928-2006)", url: "https://www.blackpast.org/african-american-history/brown-ruth-1928-2006/"}
+  - {title: "Diane Moroff, Brown, Ruth, Contemporary Musicians, via Encyclopedia.com", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/ruth-brown"}
 media:
   - {"type": "image", "file": "rhythm-and-blues.jpg", "caption": "Ruth Brown performing, 10 September 2005", "credit": "caviera (-cp on Flickr)", "license": "CC BY 2.0", "url": "https://commons.wikimedia.org/wiki/File:Ruth_Brown.jpg"}
 ---
@@ -49,7 +51,7 @@ Billboard once ranked Black popular records under the name "Race". Jerry
 Wexler, a young writer editing its charts, proposed another: "rhythm and
 blues", and in 1949 the magazine renamed the chart. The music had its
 labels too. Atlantic Records, founded in 1947, became known as "The House
-that Ruth Built" thanks to the singer Ruth Brown.
+that Ruth Built" thanks to the singer Ruth Brown, and Wexler himself soon joined it as a partner and producer. Decades later Brown fought Atlantic for unpaid royalties; the label paid her and dozens of other artists of her era, and the Rhythm and Blues Foundation grew out of her fight.
 
 Out of R&B, the [[blues|blues]] and [[gospel|gospel]] came [[rock-n-roll|rock and roll]] and [[funk|funk]],
-and by the mid-1960s it had helped give rise to soul; compare [[rosetta-tharpe|Sister Rosetta Tharpe]].
+and by the mid-1960s it had helped give rise to soul.

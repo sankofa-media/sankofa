@@ -21,14 +21,6 @@ sources:
   - {title: "Encyclopedia Virginia: Virginia act of December 1662", url: "https://encyclopediavirginia.org/primary-documents/negro-womens-children-to-serve-according-to-the-condition-of-the-mother-1662/"}
   - {title: "Encyclopedia Virginia: Baptism act of September 1667", url: "https://encyclopediavirginia.org/primary-documents/an-act-declaring-that-baptisme-of-slaves-doth-not-exempt-them-from-bondage-1667/"}
   - {title: "Encyclopedia Virginia: An act declaring that baptisme of slaves doth not exempt them from bondage (1667)", url: "https://encyclopediavirginia.org/entries/an-act-declaring-that-baptisme-of-slaves-doth-not-exempt-them-from-bondage-1667/"}
+  - {title: "African American National Biography (Oxford), via enslaved.org: Elizabeth Key", url: "https://projects.kora.matrix.msu.edu/files/16-23-101311/Elizabeth_Key_AANB.pdf"}
 ---
-One sentence of Virginia law made slavery hereditary through the mother.
-Elizabeth Key was the daughter of an English planter, Thomas Key, and an
-enslaved African woman. Baptised, and held far beyond the nine years her
-father had set, she won her freedom in 1656; English common law said a child
-followed the father. In December 1662 the General Assembly enacted, probably
-at least in part in answer to her case, that children "shalbe held bond or
-free only according to the condition of the mother". In 1667 it added that
-baptism did not free an enslaved person. Compare [[anthony-johnson|Anthony
-Johnson]], [[ashleys-sack|Ashley's Sack]] and [[sojourner-truth|Sojourner
-Truth]].
+One sentence of Virginia law made slavery hereditary through the mother. Elizabeth Key was the daughter of an English planter, Thomas Key, and an enslaved African woman. Baptised, and held far beyond the nine years her father had set, she sued for freedom in 1656, helped by William Grinsted, whom she later married. English common law said a child followed the father. A county jury freed her, the General Court reversed it, and an Assembly committee upheld her claim: she went free. In December 1662 the Assembly enacted, probably at least in part in answer to her case, that children "shalbe held bond or free only according to the condition of the mother". In 1667 it added that baptism did not free an enslaved person. From then on, children of white men by enslaved women were born slaves for life.

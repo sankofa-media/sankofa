@@ -23,17 +23,9 @@ sources:
   - {title: "Wikimedia Commons: Representação do Quilombo dos Palmares em mapa holandês (1647)", url: "https://commons.wikimedia.org/wiki/File:Representa%C3%A7%C3%A3o_do_Quilombo_dos_Palmares_em_mapa_holand%C3%AAs_(1647).jpg"}
   - {title: "Wikimedia Commons: Serra da Barriga - Alagoas - Brasil 04", url: "https://commons.wikimedia.org/wiki/File:Serra_da_Barriga_-_Alagoas_-_Brasil_04.jpg"}
   - {title: "Fundação Cultural Palmares: Dandara e Zumbi", url: "https://www.gov.br/palmares/pt-br/departamentos/protecao-preservacao-e-articulacao/serra-da-barriga-1/dandara-e-zumbi/"}
+  - {title: "Flávio Gomes, Palmares, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/palmares"}
 media:
   - {type: "image", file: "palmares.jpg", caption: "Palmares marked on a Dutch map of southern Pernambuco, 1647", credit: "Frans Post (Dutch Brazil, 1647)", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Representa%C3%A7%C3%A3o_do_Quilombo_dos_Palmares_em_mapa_holand%C3%AAs_(1647).jpg"}
   - {type: "image", file: "palmares-2.jpg", caption: "Serra da Barriga, Alagoas, 2018", credit: "Vanderlei Almeida de Oliveira / Wikimedia Commons", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Serra_da_Barriga_-_Alagoas_-_Brasil_04.jpg"}
 ---
-For decades a runaway community in the hills of northeast Brazil beat back
-Dutch and Portuguese expeditions. From around 1600, people who fled the
-sugar plantations of Pernambuco built a network of villages centred on the
-Serra da Barriga, in present-day Alagoas. Ganga Zumba led Palmares, and then
-Zumbi. In 1694 Domingos Jorge Velho's force captured Macaco. Zumbi escaped,
-but was killed on 20 November 1695 and his head sent to Recife. Brazil's
-Black movement made that date its own, and law 14.759 of December 2023 made
-it a national holiday, the Dia de Zumbi e da Consciência Negra. Compare
-[[nanny-of-the-maroons|Jamaica's maroons]], [[capoeira|capoeira]] and
-[[haitian-revolution|the Haitian Revolution]].
+Quilombo dos Palmares was a refuge of people who escaped slavery in colonial Brazil. From around 1600, runaways from the sugar plantations of Pernambuco built a network of villages around the Serra da Barriga, in present-day Alagoas. For almost a century they beat back Dutch and Portuguese expeditions. King Ganga Zumba accepted a peace deal from the governor; Zumbi refused it, the deal collapsed, and Zumbi took the lead. In 1694 a force under Domingos Jorge Velho, a hired frontier fighter, or bandeirante, captured their capital, Macaco. Zumbi escaped and fought on until one of his own men betrayed him: on 20 November 1695 he was killed and his head sent to Recife. Brazil's Black movement made that date its own, and law 14.759 of December 2023 made it a national holiday, the Dia de Zumbi e da Consciência Negra.
