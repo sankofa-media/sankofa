@@ -17,7 +17,7 @@ independent authoritative sources each.
 | Feature | What it gives you | Inspired by |
 |---|---|---|
 | **Griot**, the memory | The life of every object, including after deletion: `sankofa tell deployment/web`, `kubectl get timelines`. Status and secret values are never stored; reading the memory follows RBAC. | The griot, keeper of oral history in West Africa |
-| **Sankofa fetch** | Restore one object as it was at any moment: `sankofa fetch deployment/web --at 2h` | The Sankofa bird |
+| **Sankofa fetch** | Restore one object or a whole namespace as it was at any moment, and diff two moments: `sankofa fetch deployment/web --at 2h`, `sankofa fetch namespace/shop --at 2h`, `sankofa diff namespace/shop --from 2h`. Griot also runs alone ([docs/griot.md](docs/griot.md), `charts/griot`). | The Sankofa bird |
 | **Kgotla** | Objects labelled `sankofa.kuberoot.dev/kgotla=protected` are deleted only after a council: every named voice has spoken, the chief spoke last. Names come from authentication. | The Tswana kgotla |
 | **Polyrhythm** | Write `H` in a CronJob minute (`H 3 * * *`) and jobs take free beats instead of all starting at once. | West African 12/8 ensembles |
 | **Credits** | `sankofa credits pod/x` walks an image's declared lineage; a webhook warns or refuses images that hide their base, source or licence. | "Hound Dog" was Big Mama Thornton's before it was Elvis's |
