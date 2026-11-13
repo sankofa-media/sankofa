@@ -25,6 +25,9 @@ const chapters = sortChapters(
         console.warn(`${tf}: its {male}/{female} markers differ from the original's; the body stays in English`);
         delete tr.steps;
       }
+      if (tr.steps && Boolean(tr.stepLabels) !== Boolean(ch.stepLabels)) {
+        console.warn(`${tf}: its {at} labels differ from the original's`);
+      }
       delete tr.stepCopies;
       ch.translations = { ...ch.translations, [lang]: tr };
     }

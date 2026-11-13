@@ -283,7 +283,8 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
     const at = anchor ? when(anchor) : undefined;
     const year = at?.year !== undefined ? formatYears([at.year]) : '';
     // The chapter's opening step speaks for the whole chapter: its own span and place.
-    const label = i === 0 || !anchor ? ch.kicker : isNonPlace(anchor) ? year : `${at!.place.name}${year ? ' · ' + year : ''}`;
+    // A label written for the paragraph itself ({at Place · Year}) wins.
+    const label = ch.stepLabels?.[i] || (i === 0 || !anchor ? ch.kicker : isNonPlace(anchor) ? year : `${at!.place.name}${year ? ' · ' + year : ''}`);
     // The same label twice running is said once.
     const where = label === lastWhere ? '' : label;
     lastWhere = label;

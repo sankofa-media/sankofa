@@ -181,3 +181,41 @@ describe('edition markers', () => {
     expect(v4.translations.ru.steps).toBeUndefined();
   });
 });
+
+describe('step labels', () => {
+  const EN = `---
+id: v9
+title: T
+---
+{at Oyo · 1949} Drums of [[equiano]].
+
+{male} {at Charleston · 1862} His story.
+
+{female} {at Combahee River · 1863} Her story.
+`;
+  const RU = `---
+title: Т
+kicker: К
+---
+{at Ойо · 1949} Барабаны [[equiano|Эквиано]].
+
+{male} {at Чарлстон · 1862} Его история.
+
+{female} {at река Комбахи · 1863} Её история.
+`;
+  it('strips {at …} after the copy marker and keeps it per step', () => {
+    const c = parseChapter(EN);
+    expect(c.steps).toEqual(['Drums of [[equiano]].', 'His story.', 'Her story.']);
+    expect(c.stepLabels).toEqual(['Oyo · 1949', 'Charleston · 1862', 'Combahee River · 1863']);
+    expect(chapterForEdition(c, 'f').stepLabels).toEqual(['Oyo · 1949', 'Combahee River · 1863']);
+  });
+  it('a translation shows its own labels', () => {
+    const c = { ...parseChapter(EN), translations: { ru: parseChapterTranslation(RU) } };
+    const ru = chapterForEdition(localizeChapter(c, 'ru'), 'm');
+    expect(ru.stepLabels).toEqual(['Ойо · 1949', 'Чарлстон · 1862']);
+    expect(ru.steps[0]).toBe('Барабаны [[equiano|Эквиано]].');
+  });
+  it('unlabelled chapters have no labels', () => {
+    expect(parseChapter(SRC).stepLabels).toBeUndefined();
+  });
+});

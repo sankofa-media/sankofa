@@ -56,7 +56,15 @@ cards: [equiano, zong, slavevoyages-names]   # the cards the chapter walks throu
 ---
 Chapter text: short paragraphs, separated by blank lines. Each paragraph is one
 scroll step. Use [[card-id]] links like in cards. A step is at most 80 words (it must fit its box on a phone); each copy reads 6–14 steps.
+
+{at Ouidah · 1860} A paragraph may open (after any {male}/{female} marker) with
+the label its step shows: the place and the year the paragraph itself is about,
+or a century or period when it gives no year. Label every paragraph or none.
 ```
+
+Labels are short place names ("Detroit · 1991", "Benin City · 16th century"), never an
+institution or an address. A translation carries its own label on the same paragraphs
+(`{at Уида · 1860}`).
 
 Media files for cards and chapters live in `content/media/`.
 
