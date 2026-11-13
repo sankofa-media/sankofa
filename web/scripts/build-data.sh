@@ -2,6 +2,7 @@
 # Build the museum data from the content repository:
 #   web/public/data/cards.json     (sankofa content export)
 #   web/public/data/chapters.json  (chapter Markdown -> JSON)
+#   web/public/data/listen.json    (recordings to listen to)
 #   web/public/media/              (content/media)
 # Content comes from content/ when it has chapters; otherwise from the
 # placeholder set in web/fixtures/. Override with SANKOFA_CONTENT=<dir>.
@@ -30,6 +31,8 @@ if ! ls "$src/roots"/*.yaml >/dev/null 2>&1 && [ "$src" != web/fixtures ]; then
 fi
 go run ./cmd/sankofa content export "$cards" -o web/public/data/cards.json
 node "$web/scripts/build-chapters.ts" "$src/chapters" web/public/data/chapters.json
+# Official recordings to listen to (content/listen.yaml); empty when absent.
+node "$web/scripts/build-listen.ts" "$src/listen.yaml" web/public/data/listen.json
 if [ -d "$src/media" ]; then
   cp -R "$src/media/." web/public/media/
 fi

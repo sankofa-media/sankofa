@@ -13,6 +13,7 @@ import { chapterLabel, chapterNumber, detectLang, isLang, lang, setLang, storeLa
 import { buildStory } from './views/story';
 import { localizeStatics, RU_TITLE_FIX } from './lib/statics';
 import { loadMediaManifest } from './lib/media';
+import { EMPTY_LISTEN, type ListenFile } from './lib/listen';
 import { watchTypography } from './lib/typo';
 import { Drawer, renderBook, renderCard } from './views/card';
 import { Atlas } from './views/atlas';
@@ -64,13 +65,20 @@ async function start(): Promise<void> {
   document.body.append(loading);
   let cardsFile: CardsFile;
   let chaptersFile: ChaptersFile;
+  let listenFile: ListenFile;
   navLegend(current);
   // The language switch needs no data, so it works while the cards load.
   document.querySelectorAll<HTMLElement>('[data-lang-switch]').forEach((b) => b.addEventListener('click', () => switchLang(lang() === 'ru' ? 'en' : 'ru')));
   // Let the static cover paint before the 1 MB of cards competes for the wire.
   await new Promise<void>((r) => requestAnimationFrame(() => setTimeout(r, 0)));
   try {
-    [cardsFile, chaptersFile] = await Promise.all([load<CardsFile>('data/cards.json'), load<ChaptersFile>('data/chapters.json'), loadMediaManifest()]);
+    [cardsFile, chaptersFile, listenFile] = await Promise.all([
+      load<CardsFile>('data/cards.json'),
+      load<ChaptersFile>('data/chapters.json'),
+      // Listening is an extra: the museum opens without it.
+      load<ListenFile>('data/listen.json').catch(() => EMPTY_LISTEN),
+      loadMediaManifest(),
+    ]);
   } catch (e) {
     loading.remove();
     document.getElementById('story')!.append(h('p.error', {}, t('The museum could not load its cards ({error}). Run scripts/build-data.sh.', { error: (e as Error).message })));
@@ -103,6 +111,7 @@ async function start(): Promise<void> {
       engine.open();
     },
     chapters,
+    listen: listenFile,
     edition: held,
     media: (file) => `media/${file}`,
     openCard(id, opts = {}) {

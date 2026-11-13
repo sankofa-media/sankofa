@@ -10,6 +10,7 @@ import { chapterLabel, edition, lang, pick, t } from '../lib/i18n';
 import { editionNote, pairLink } from './editionNote';
 import { cardYaml } from '../lib/cardYaml';
 import { mediaSrc } from '../lib/media';
+import { listenBlock, stopPlayer } from './player';
 
 /** A drawer that slides in from the right, with a focus trap and Esc to close. */
 export class Drawer {
@@ -38,6 +39,7 @@ export class Drawer {
 
   show(content: HTMLElement): void {
     if (!this.isOpen) this.returnTo = document.activeElement;
+    stopPlayer();
     const close = h('button.icon-btn.close', { 'aria-label': t('Close'), onclick: () => this.close() }, svgIcon('close'));
     // A sticky header holds the close button, so it never covers the text.
     const bar = h('div.drawer-bar', {}, h('span.drawer-label', {}, ...vtags(content.dataset.label ?? '')), close);
@@ -54,6 +56,8 @@ export class Drawer {
 
   close(silent = false): void {
     if (!this.isOpen) return;
+    // Nothing keeps playing behind a closed panel.
+    stopPlayer();
     this.el.classList.remove('on');
     this.scrim.classList.remove('on');
     document.documentElement.classList.remove('panel-open');
@@ -155,6 +159,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
     ),
     ...notices,
     h('div.text', {}, ...paragraphs),
+    ...(app.listen.cards[c.id] ?? []).slice(0, 1).map((r) => listenBlock(r)),
     ...audio.map((a) =>
       h(
         'figure.card-audio',

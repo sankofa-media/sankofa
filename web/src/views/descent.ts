@@ -12,6 +12,7 @@ import { MOVEMENTS } from '../lib/movements';
 import { chapterLabel, chapterNumber, count, pick, t, yearsAgo } from '../lib/i18n';
 import { LEVEL_NAMES } from './map';
 import { mediaSrc } from '../lib/media';
+import { listenBlock, stopPlayer } from './player';
 import { richText } from '../app';
 import { buildScale, chapterAt, chapterCentres, chaptersAt, lanes, levelCards, NOW, place, quietStretches, START, type Item, type Placed, type Scale } from '../lib/descentModel';
 import { interpolateRgb } from 'd3-interpolate';
@@ -171,6 +172,7 @@ export class Descent {
   }
 
   close(): void {
+    stopPlayer();
     this.el.classList.remove('open');
     document.body.classList.remove('locked');
   }
@@ -600,6 +602,7 @@ export class Descent {
           // The hook only when the body does not open with the same words.
           sameStart(c.wow, c.body) ? null : h('p.desk-wow', {}, c.wow),
           h('div.desk-body', {}, richText(this.app, c.body.split(/\n\s*\n/)[0].replace(/\s*\n\s*/g, ' '))),
+          ...(this.app.listen.cards[c.id] ?? []).slice(0, 1).map((r) => listenBlock(r, { compact: true })),
         ),
         h('div.desk-foot', {}, h('a.btn', { href: `#focus=${c.id}`, 'data-card': c.id }, pick({ en: 'Open the card →', ru: 'Открыть карточку →' }))),
       ),

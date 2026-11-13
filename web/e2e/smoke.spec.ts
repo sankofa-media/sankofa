@@ -762,3 +762,44 @@ test('the phone icon legend never covers an open view', async ({ browser, baseUR
   await expect(page.locator('.descent.open')).toBeVisible();
   await expect(page.locator('.nav-legend')).toHaveCount(0);
 });
+
+/** Record requests to the video host; answer them locally so tests stay offline. */
+async function watchYouTube(page: import('@playwright/test').Page): Promise<string[]> {
+  const seen: string[] = [];
+  page.on('request', (r) => {
+    if (/(^|\.)youtube(-nocookie)?\.com\//.test(new URL(r.url()).host + '/')) seen.push(r.url());
+  });
+  await page.route(/https:\/\/(www\.)?youtube(-nocookie)?\.com\/.*/, (r) => r.fulfill({ status: 200, contentType: 'text/html', body: '<!doctype html><title>player</title>' }));
+  await page.route(/https:\/\/i\.ytimg\.com\/.*/, (r) => r.fulfill({ status: 200, contentType: 'image/svg+xml', body: '<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360"/>' }));
+  return seen;
+}
+
+test('a card with a recording shows a facade and loads the player only on click', async ({ page }) => {
+  const yt = await watchYouTube(page);
+  await page.goto('/#focus=big-mama-thornton');
+  const block = page.locator('.drawer.on .lb');
+  await expect(block).toBeVisible();
+  await expect(block.locator('.lb-head')).toHaveText('Listen');
+  await expect(block.locator('img')).toHaveAttribute('src', 'https://i.ytimg.com/vi/aKicGqIMpqk/hqdefault.jpg');
+  await expect(block.locator('img')).toHaveAttribute('loading', 'lazy');
+  await expect(block.locator('.lb-src')).toHaveText('Official upload: Big Mama Thornton - Topic');
+  await expect(block.locator('iframe')).toHaveCount(0);
+  await page.waitForTimeout(500);
+  expect(yt).toEqual([]);
+  await block.locator('.lb-facade').click();
+  const frame = block.locator('iframe');
+  await expect(frame).toHaveAttribute('src', 'https://www.youtube-nocookie.com/embed/aKicGqIMpqk?autoplay=1');
+  await expect(frame).toHaveAttribute('allow', 'autoplay; encrypted-media; picture-in-picture');
+  await expect(frame).toHaveAttribute('title', /Hound Dog/);
+  // Closing the card unloads the player.
+  await page.keyboard.press('Escape');
+  await expect(page.locator('iframe.lb-frame')).toHaveCount(0);
+});
+
+test('Russian names the listening block and the uploader in Russian', async ({ page }) => {
+  await watchYouTube(page);
+  await page.goto('/#focus=big-mama-thornton&lang=ru');
+  const block = page.locator('.drawer.on .lb');
+  await expect(block.locator('.lb-head')).toHaveText('Слушать');
+  await expect(block.locator('.lb-src')).toHaveText('Официальная загрузка: Big Mama Thornton - Topic');
+});
