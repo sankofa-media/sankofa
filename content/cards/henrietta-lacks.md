@@ -27,18 +27,13 @@ sources:
   - {title: "NHGRI: Henrietta Lacks timeline", url: "https://www.genome.gov/sites/default/files/media/files/2019-07/hela_timeline.pdf"}
   - {title: "Food and Drug Law Institute: Lacks v. Thermo Fisher Scientific, historical chronology", url: "https://www.fdli.org/2023/08/lacks-v-thermo-fisher-scientific-inc-an-extraordinary-event-from-more-than-70-years-ago/"}
   - {title: "GBH News: Family of Henrietta Lacks reaches settlement in lawsuit against Thermo Fisher", url: "https://www.wgbh.org/news/local/2023-08-01/family-of-henrietta-lacks-reaches-settlement-in-lawsuit-against-thermo-fisher"}
+  - {title: "Embryo Project Encyclopedia, Arizona State University: Henrietta Lacks (1920–1951)", url: "https://embryo.asu.edu/pages/henrietta-lacks-1920-1951"}
 media:
   - {type: "image", file: "henrietta-lacks.jpg", caption: "Statue of Henrietta Lacks by Helen Wilson-Roe, Royal Fort House, Bristol, unveiled October 2021", credit: "Photo: 14GTR / Wikimedia Commons", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Henrietta_Lacks_statue,_Bristol.jpg"}
   - {type: "image", file: "henrietta-lacks-2.jpg", caption: "HeLa cells under the electron microscope, 1976", credit: "National Institutes of Health", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:HeLa_Cells_Image_3709-PH.jpg"}
 ---
-Henrietta Lacks died in 1951, but her cells are still alive. She came to
-Johns Hopkins Hospital in Baltimore with cervical cancer, and in February
-1951, when she was 30, doctors kept a sample of her tumour cells; no one
-asked her. She died that October. The HeLa line became the first
-immortalised human cell line, still dividing in laboratories worldwide, and
-it supported the research and testing behind the polio vaccine, while her
-family was left out. Rebecca Skloot's 2010 book brought the story to a much
-wider public. In 2013 the NIH gave the family a say over access to the HeLa
-genome, and in 2023 they settled a lawsuit against Thermo Fisher Scientific
-on confidential terms. Read her story beside [[tuskegee|the Tuskegee study
-of untreated syphilis]].
+Henrietta Lacks, born Loretta Pleasant in Virginia in 1920, worked on tobacco farms, married David Lacks and was raising five children when she developed cervical cancer. In 1951 she was treated at Johns Hopkins Hospital in Baltimore, one of the few hospitals in the area that took Black patients, in a segregated ward. In February, when she was 30, doctors sent a sample of her tumour cells to the tissue-culture laboratory of George Gey; no one asked her. She died that October, aged 31.
+
+Her cells did what no human cells had done before: they kept dividing. The HeLa line became the first immortalised human cell line, still dividing in laboratories worldwide, and it supported the research and testing behind the polio vaccine. Her family was left out and learned what had become of her cells only decades later. Rebecca Skloot's 2010 book brought the story to a much wider public. In 2013 the NIH gave the family a say over access to the HeLa genome. In 2021 her estate sued Thermo Fisher Scientific, accusing it of profiting from her cells, and on 1 August 2023, what would have been her 103rd birthday, the two sides settled on confidential terms.
+
+Her story made a public question of who decides what happens to tissue taken from a patient's body.

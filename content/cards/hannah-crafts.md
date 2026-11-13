@@ -23,14 +23,8 @@ sources:
 media:
   - {"type": "image", "file": "hannah-crafts.jpg", "caption": "Henry Louis Gates Jr., 18 July 2013", "credit": "Oregon State University", "license": "CC BY-SA 2.0", "url": "https://commons.wikimedia.org/wiki/File:Henry_Louis_Gates,_Jr.jpg"}
 ---
-A novel handwritten probably in the 1850s waited generations for its
-readers. In 2001 Henry Louis Gates Jr. bought the manuscript at Swann
-Galleries in New York for $8,500. It came from the collection of Dorothy
-Porter Wesley, and its title page named the author as "Hannah Crafts, a
-fugitive slave recently escaped from North Carolina". Published in 2002 as
-The Bondwoman's Narrative, it became a bestseller. Who was Crafts? In 2013,
-after a decade of research, Gregg Hecimovich named Hannah Bond, enslaved by
-John Hill Wheeler. The identification is widely accepted, though still
-argued. Compare [[jacobs-garret|Harriet Jacobs in the garret]],
-[[phillis-wheatley|Phillis Wheatley]] and [[wpa-narratives|the WPA slave
-narratives]].
+The Bondwoman's Narrative is a novel about slavery, written by hand probably in the 1850s; its title page names the author as "Hannah Crafts, a fugitive slave recently escaped from North Carolina". It may be the first novel written by an enslaved African American woman. Its narrator, Hannah, serves in plantation houses and is sold into the household of a real North Carolina enslaver, John Hill Wheeler, and the book takes its revenge: at its climax a face powder turns Mrs Wheeler's face black.
+
+The manuscript lay unpublished for a century and a half. In 2001 Henry Louis Gates Jr. bought it at Swann Galleries in New York for $8,500; it came from the collection of Dorothy Porter Wesley. Published in 2002, it became a bestseller. Who was Crafts? In 2013, after a decade of research in wills, diaries and public records, Gregg Hecimovich named Hannah Bond, enslaved by Wheeler. The identification is widely accepted, though still argued.
+
+Its author now stands beside [[phillis-wheatley|Phillis Wheatley]] and [[jacobs-garret|Harriet Jacobs]] among the women who wrote out of slavery, and her view of a slaveholding house from below adds a novelist's voice to the testimony of [[wpa-narratives|the WPA slave narratives]], recorded some eighty years later.
