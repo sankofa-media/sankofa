@@ -189,6 +189,10 @@ the offset from the UID, and from `status.lastScheduleTime`.
   `offset mod period`. Validation therefore does not compare the two, but the
   API server returns a warning when `maxDelaySeconds` is larger than the
   smallest interval of the schedule (see [Validation](#validation)).
+- `@every <duration>` schedules are relative to the previous run (or to the
+  CronJob's creation), so they are already phase-shifted by creation time and a
+  translation does not move them. The field has no effect on them; the API
+  server returns a warning when both are set.
 - The offset is in whole seconds. Minute-granularity spreading (as `H` or the
   webhook alternative produce) leaves a burst at second `:00` of every minute;
   see the measurements in [evidence.md](evidence.md).
