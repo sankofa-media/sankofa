@@ -1,4 +1,5 @@
 import './styles/main.css';
+import './styles/roots.css';
 import type { App } from './app';
 import type { CardsFile, ChaptersFile } from './lib/types';
 import { ERAS } from './lib/types';

@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { Artist, LineageCard } from '../src/lib/roots';
-import { bestVia, elementReach, forksOf, layoutRoutes, routeSet, routeThrough, segShape, stepsOf, threadsOf } from '../src/lib/routes';
+import { bestVia, coreRoutes, subset, elementReach, forksOf, layoutRoutes, routeSet, routeThrough, segShape, stepsOf, threadsOf } from '../src/lib/routes';
 import { cardLinkIndex, parseCardLinks, parseElements } from '../src/lib/elements';
 
 const src = [{ title: 'a', url: 'https://a' }, { title: 'b', url: 'https://b' }];
@@ -58,7 +58,7 @@ describe('routes', () => {
     const o = layoutRoutes(rs, (r) => rs.depth.get(r)!);
     const spots = [...o.spots.values()].map((s) => `${s.at}:${s.lane}`);
     expect(new Set(spots).size).toBe(rs.nodes.length);
-    expect(rs.routes[0].map((r) => o.spots.get(r)!.lane)).toEqual([0, 0, 0, 0]);
+    expect(new Set(rs.routes[0].map((r) => o.spots.get(r)!.lane)).size).toBe(1);
     // every link drawn once
     expect(o.segs).toHaveLength(rs.edges.length);
     expect(new Set(o.segs.map((s) => `${s.from}>${s.to}`)).size).toBe(rs.edges.length);
@@ -107,5 +107,19 @@ describe('steps and threads', () => {
     const r = elementReach(all, [...elements.values()]);
     expect(r.get('riff')).toEqual({ routes: 2, artists: ['a', 'b'] });
     expect(r.get('blue')).toEqual({ routes: 2, artists: ['a', 'b'] });
+  });
+});
+
+describe('the overview draws the artist chains, not every genre branch', () => {
+  const rs = routeSet(byId.get('a')!, byId, cards);
+  it('keeps one route per documented chain plus the current one', () => {
+    expect(coreRoutes(rs, 0)).toEqual([0, 2]);
+    expect(coreRoutes(rs, 3)).toEqual([0, 2, 3]);
+  });
+  it('a subset has only its own stations, merged, with fresh depths', () => {
+    const sub = subset(rs, coreRoutes(rs, 0));
+    expect(sub.nodes).toEqual(['a', 'b', 'c', 'card:x', 'card:y']);
+    expect(sub.edges).toHaveLength(5);
+    expect(sub.depth.get('card:y')).toBe(3);
   });
 });

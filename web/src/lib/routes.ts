@@ -63,6 +63,43 @@ export function routeSetOfTree(tree: TreeNode): RouteSet {
   return { root: tree.ref, routes, nodes: dag.order, edges: dag.edges.map((e) => ({ from: e.from, to: e.to })), depth };
 }
 
+/**
+ * The routes the overview draws: one per documented chain of the artist (to
+ * the first museum card), each continued along the cards' first roots, and
+ * the current route. The museum's own genealogy branches at almost every
+ * card; those branches are offered where the reader stands, not all at once.
+ */
+export function coreRoutes(rs: RouteSet, current: number): number[] {
+  const out: number[] = [];
+  const seen = new Set<string>();
+  rs.routes.forEach((r, i) => {
+    const k = r.findIndex((x) => x.startsWith('card:'));
+    const key = r.slice(0, k + 1).join('>');
+    if (!seen.has(key)) (seen.add(key), out.push(i));
+  });
+  if (!out.includes(current) && rs.routes[current]) out.push(current);
+  return out;
+}
+
+/** A smaller route set over some of the routes: stations, links and depths of those routes only. */
+export function subset(rs: RouteSet, indices: number[]): RouteSet {
+  const routes = indices.map((i) => rs.routes[i]).filter(Boolean);
+  const keys = new Set<string>();
+  const edges: RouteSet['edges'] = [];
+  for (const r of routes)
+    for (let i = 0; i < r.length - 1; i++) {
+      const k = `${r[i]}>${r[i + 1]}`;
+      if (!keys.has(k)) (keys.add(k), edges.push({ from: r[i], to: r[i + 1] }));
+    }
+  const on = new Set(routes.flat());
+  const nodes = rs.nodes.filter((n) => on.has(n));
+  const depth = new Map<string, number>([[rs.root, 0]]);
+  for (const ref of nodes) for (const e of edges) if (e.from === ref) depth.set(e.to, Math.max(depth.get(e.to) ?? 0, (depth.get(ref) ?? 0) + 1));
+  // Reading order by the new depths, ties as before.
+  nodes.sort((a, b) => depth.get(a)! - depth.get(b)! || rs.nodes.indexOf(a) - rs.nodes.indexOf(b));
+  return { root: rs.root, routes, nodes, edges, depth };
+}
+
 const samePrefix = (a: string[], b: string[], n: number) => {
   for (let i = 0; i < n; i++) if (a[i] !== b[i]) return false;
   return true;
@@ -235,9 +272,10 @@ export function layoutRoutes(rs: RouteSet, at: (ref: string) => number): Overvie
   const spots = new Map<string, Spot>();
   const segs: Seg[] = [];
   const drawn = new Set<string>();
-  const busy: [number, number][][] = [];
-  const free = (lane: number, lo: number, hi: number) => !(busy[lane] ?? []).some(([a, b]) => a <= hi && lo <= b);
-  const take = (lane: number, lo: number, hi: number) => (busy[lane] ??= []).push([lo, hi]);
+  // Lanes may lie on either side of the first route; they are renumbered from 0 at the end.
+  const busy = new Map<number, [number, number][]>();
+  const free = (lane: number, lo: number, hi: number) => !(busy.get(lane) ?? []).some(([a, b]) => a <= hi && lo <= b);
+  const take = (lane: number, lo: number, hi: number) => busy.set(lane, [...(busy.get(lane) ?? []), [lo, hi]]);
   spots.set(rs.root, { at: at(rs.root), lane: 0 });
   take(0, 2 * at(rs.root), 2 * at(rs.root));
   for (const route of rs.routes) {
@@ -254,9 +292,19 @@ export function layoutRoutes(rs: RouteSet, at: (ref: string) => number): Overvie
       }
       const lo = 2 * at(a) + 1;
       const hi = b ? 2 * at(b) - 1 : 2 * at(fresh[fresh.length - 1]);
-      const prefer = [spots.get(a)!.lane, ...(b ? [spots.get(b)!.lane] : [])];
-      let lane = prefer.find((l) => free(l, lo, hi)) ?? -1;
-      for (let l = 0; lane < 0; l++) if (free(l, lo, hi)) lane = l;
+      // The free lane closest to both ends: short bends, no long drops.
+      const la = spots.get(a)!.lane;
+      const lb = b ? spots.get(b)!.lane : la;
+      let lane = la;
+      let best = Infinity;
+      for (let d = 0; d <= busy.size + 2; d++) {
+        for (const l of d ? [la + d, la - d, lb + d, lb - d] : [la, lb]) {
+          if (!free(l, lo, hi)) continue;
+          const cost = Math.abs(l - la) + Math.abs(l - lb) + (l < 0 ? 0.5 : 0);
+          if (cost < best) (best = cost), (lane = l);
+        }
+        if (best < Infinity && d > best) break;
+      }
       take(lane, lo, hi);
       const chain = [a, ...fresh, ...(b ? [b] : [])];
       for (const n of fresh) spots.set(n, { at: at(n), lane });
@@ -267,9 +315,14 @@ export function layoutRoutes(rs: RouteSet, at: (ref: string) => number): Overvie
       i = b ? j : route.length;
     }
   }
+  const used = new Set([...spots.values()].map((s) => s.lane).concat(segs.map((s) => s.lane)));
+  const low = Math.min(...used);
+  for (const s of spots.values()) s.lane -= low;
+  for (const s of segs) s.lane -= low;
   let span = 0;
   let lanes = 0;
   for (const s of spots.values()) (span = Math.max(span, s.at)), (lanes = Math.max(lanes, s.lane));
+  for (const s of segs) lanes = Math.max(lanes, s.lane);
   return { spots, segs, span: span + 1, lanes: lanes + 1 };
 }
 

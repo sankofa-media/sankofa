@@ -23,6 +23,10 @@ export interface ListenOpts {
   /** Something under the player, e.g. the way on to the next stop of a chain. */
   after?: HTMLElement | null;
   compact?: boolean;
+  /** Let the page pause and resume the player (the docked mini-player). */
+  api?: boolean;
+  /** Called when the player is unloaded back to its facade (stopped by another source). */
+  onUnload?: () => void;
 }
 
 /** A listening block for one recording. Start it with playBlock(el) or a click. */
@@ -50,7 +54,7 @@ export function listenBlock(r: Recording, opts: ListenOpts = {}): HTMLElement {
   const id = `player-${++made}`;
   const play = () => {
     if (playing() === id) return;
-    const src = embedUrl(r);
+    const src = embedUrl(r) && opts.api ? `${embedUrl(r)}&enablejsapi=1` : embedUrl(r);
     let media: HTMLElement;
     if (src) {
       media = h('iframe.lb-frame', {
@@ -73,9 +77,23 @@ export function listenBlock(r: Recording, opts: ListenOpts = {}): HTMLElement {
     release(id);
     stage.replaceChildren(facade());
     el.classList.remove('on');
+    opts.onUnload?.();
   };
   el.addEventListener('lb-play', play);
+  el.addEventListener('lb-unload', () => playing() === id && unload());
   return el;
+}
+
+/** Pause or resume a loaded block (YouTube through its iframe API, audio directly). */
+export function pauseBlock(el: HTMLElement, pause: boolean): void {
+  const audio = el.querySelector<HTMLAudioElement>('audio');
+  if (audio) {
+    if (pause) audio.pause();
+    else void audio.play();
+    return;
+  }
+  const frame = el.querySelector<HTMLIFrameElement>('iframe');
+  frame?.contentWindow?.postMessage(JSON.stringify({ event: 'command', func: pause ? 'pauseVideo' : 'playVideo', args: [] }), '*');
 }
 
 /** Start a block's player, as its own button would (call it from a click). */
