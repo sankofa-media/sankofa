@@ -9,6 +9,12 @@ LAB=${LAB:-/work/lab}
 case ${1:-} in
 down)
   for p in "$LAB"/*.pid; do [ -f "$p" ] && kill "$(cat "$p")" 2>/dev/null || true; done
+  # Wait for every process to exit, so the next "up" finds its ports free.
+  for p in "$LAB"/*.pid; do
+    [ -f "$p" ] || continue
+    while kill -0 "$(cat "$p")" 2>/dev/null; do sleep 1; done
+    rm -f "$p"
+  done
   exit ;;
 up) BIN=${2:?bin dir}; GATES=${3:-} ;;
 *) echo "usage: $0 up BIN_DIR [GATES] | down" >&2; exit 1 ;;
