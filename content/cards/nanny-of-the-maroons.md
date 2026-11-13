@@ -8,6 +8,7 @@ places:
   - {name: "Moore Town, Portland, Jamaica", lat: 18.0742, lon: -76.4250}
   - {name: "Blue Mountains, Jamaica", lat: 18.0500, lon: -76.5800}
 zoom: 4
+moment: {year: 1739, place: 1}
 era: v2
 books: [heirs, archives]
 further:

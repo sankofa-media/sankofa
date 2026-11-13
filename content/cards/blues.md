@@ -9,6 +9,7 @@ places:
   - {name: "American South", lat: 34.0145, lon: -90.4318}
   - {name: "Memphis, Tennessee", lat: 35.1495, lon: -90.0490}
 zoom: 3
+moment: {year: 1903}
 era: v5
 books: [heirs]
 roots: [work-songs, spirituals]

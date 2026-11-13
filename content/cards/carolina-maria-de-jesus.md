@@ -8,6 +8,7 @@ places:
   - {name: "Canindé favela, São Paulo", lat: -23.5175, lon: -46.6203}
   - {name: "Sacramento, Minas Gerais", lat: -19.8653, lon: -47.4400}
 zoom: 4
+moment: {year: 1960}
 era: v4
 books: [voices]
 further:

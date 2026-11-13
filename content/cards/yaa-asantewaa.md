@@ -9,6 +9,7 @@ places:
   - {name: "Ejisu, Asante (Ghana)", lat: 6.7220, lon: -1.4700}
   - {name: "Mahé, Seychelles", lat: -4.6796, lon: 55.4920}
 zoom: 4
+moment: {year: 1900}
 era: v2
 books: [archives, heirs]
 further:

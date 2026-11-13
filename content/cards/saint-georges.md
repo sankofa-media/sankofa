@@ -8,6 +8,7 @@ places:
   - {name: Paris, lat: 48.8566, lon: 2.3522}
   - {name: "Basse-Terre, Guadeloupe", lat: 15.9985, lon: -61.7255}
 zoom: 4
+moment: {year: 1781}
 era: v5
 books: [heirs]
 further:

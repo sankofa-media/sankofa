@@ -10,6 +10,7 @@ places:
   - {name: "Fisk University, Nashville", lat: 36.1689, lon: -86.8053}
   - {name: London, lat: 51.5072, lon: -0.1276}
 zoom: 3
+moment: {year: 1871, place: 1}
 era: v3
 books: [voices, heirs]
 roots: [work-songs]

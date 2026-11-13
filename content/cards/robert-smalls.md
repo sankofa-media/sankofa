@@ -8,6 +8,7 @@ places:
   - {name: "Charleston Harbor, South Carolina", lat: 32.7500, lon: -79.8800}
   - {name: "Beaufort, South Carolina", lat: 32.4316, lon: -80.6698}
 zoom: 4
+moment: {year: 1862}
 era: v2
 books: [archives, heirs]
 edition: m

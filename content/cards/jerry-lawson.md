@@ -8,6 +8,7 @@ places:
   - {name: "Silicon Valley (Fairchild Camera and Instrument)", lat: 37.3861, lon: -122.0839}
   - {name: "Queens, New York", lat: 40.7282, lon: -73.7949}
 zoom: 4
+moment: {year: 1976}
 era: v7
 books: [heirs]
 further:

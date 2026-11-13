@@ -8,6 +8,7 @@ places:
   - {name: "Kangaba, Mali heartland", lat: 11.9372, lon: -8.4133}
   - {name: Cairo, lat: 30.0444, lon: 31.2357}
 zoom: 4
+moment: {year: 1324, place: 1}
 era: v0
 books: [archives]
 further:

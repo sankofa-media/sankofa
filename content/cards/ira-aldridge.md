@@ -9,6 +9,7 @@ places:
   - {name: London, lat: 51.5072, lon: -0.1276}
   - {name: Łódź, lat: 51.7592, lon: 19.4560}
 zoom: 4
+moment: {year: 1858}
 era: v5
 books: [heirs]
 dispute: "His birth year is given as 1807 (Folger) and 1805 (Encyclopedia of Ukraine), and some sources date his London debut to 1826 rather than October 1825."

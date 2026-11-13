@@ -8,6 +8,7 @@ places:
   - {name: London, lat: 51.5072, lon: -0.1276}
   - {name: "Freetown (Granville Town), Sierra Leone", lat: 8.4840, lon: -13.2299}
 zoom: 4
+moment: {year: 1783}
 era: v1
 books: [archives]
 further:
