@@ -1135,8 +1135,11 @@
   -webkit-hyphens: manual;
   font-size: clamp(20px, 2vw, 26px);
   line-height: 1.55;
-  font-style: italic;
   font-weight: 340;
+}
+/* Only the opening paragraph is set in italic; the rest read upright. */
+.mx-ded-prose > p:first-of-type {
+  font-style: italic;
 }
 .mx-ded-prose .unseen {
   color: var(--bg);
