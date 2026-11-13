@@ -20,6 +20,7 @@ sources:
   - {title: "NPR (2006)", url: "https://www.npr.org/2006/11/11/6473116/mamie-smith-and-the-birth-of-the-blues-market"}
   - {title: "David Jansen: Perry Bradford Story, Smithsonian Folkways liner notes", url: "https://folkways-media.si.edu/docs/folkways/artwork/FW02863.pdf"}
   - {title: "CBS New York: Effort under way to honor NYC blues singer Mamie Smith", url: "https://www.cbsnews.com/newyork/news/effort-underway-to-honor-nyc-blues-singer-mamie-smith/"}
+  - {title: "DNAinfo New York (2014): Blues singer's unmarked grave gets headstone", url: "https://www.dnainfo.com/new-york/20141217/richmond-town/blues-singers-unmarked-grave-gets-headstone-thanks-writers-campaign"}
 media:
   - {type: "audio", file: "crazy-blues.ogg", caption: "Mamie Smith and Her Jazz Hounds, \"Crazy Blues\", OKeh 4169, recorded 10 August 1920", credit: "Mamie Smith and Her Jazz Hounds; music by Perry Bradford; transfer via the Internet Archive", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Mamie_Smith,_Crazy_Blues.ogg"}
   - {type: "image", file: "crazy-blues.jpg", caption: "OKeh advertisement for Mamie Smith, The Talking Machine World, 15 January 1921", credit: "The Talking Machine World, via the Internet Archive", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:OkeH_Records_Advertising_-_Mamie_Smith._January_1921.jpg"}
