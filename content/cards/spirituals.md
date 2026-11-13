@@ -22,7 +22,7 @@ sources:
   - {title: "National Geographic: The Fisk Jubilee Singers", url: "https://www.nationalgeographic.com/history/article/the-fisk-jubilee-singers-amazing-story-from-slavery-to-stardom"}
   - {title: "Carnegie Hall: Concert spiritual", url: "https://timeline.carnegiehall.org/genres/concert-spiritual"}
   - {title: "Carnegie Hall Timeline: Folk Spiritual", url: "https://timeline.carnegiehall.org/genres/folk-spiritual"}
-  - {title: "Library of Congress, Songs of America: Spirituals", url: "https://www.loc.gov/item/ihas.200197495/?fo=json"}
+  - {title: "Library of Congress, Songs of America: Spirituals", url: "https://www.loc.gov/item/ihas.200197495/"}
   - {title: "Fisk University: History", url: "https://www.fisk.edu/about/history/"}
   - {title: "PBS American Experience: Jubilee Singers", url: "https://www.pbs.org/wgbh/americanexperience/films/singers/"}
   - {title: "Africans in Yorkshire Project: $20,000 after six months", url: "https://africansinyorkshireproject.com/fisk-jubilee-singers-part-one.html"}

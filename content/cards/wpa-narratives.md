@@ -14,12 +14,12 @@ further:
 sources:
   - {title: "Historic New Orleans Collection: Born in Slavery", url: "https://hnoc.org/virtual-exhibitions/purchased-lives/born-slavery-slave-narratives-federal-writers-project-1936-1938"}
   - {title: "Encyclopedia of Arkansas: WPA Slave Narratives", url: "https://encyclopediaofarkansas.net/entries/wpa-slave-narratives-4041/"}
-  - {title: "Library of Congress: Born in Slavery, about this collection", url: "https://www.loc.gov/collections/slave-narratives-from-the-federal-writers-project-1936-to-1938/about-this-collection/?fo=json"}
+  - {title: "Library of Congress: Born in Slavery, about this collection", url: "https://www.loc.gov/collections/slave-narratives-from-the-federal-writers-project-1936-to-1938/about-this-collection/"}
   - {title: "MDAH Mississippi History Now: WPA Slave Narratives", url: "https://mshistory.mdah.ms.gov/issue/wpa-slave-narratives"}
   - {title: "Library of Congress: The New Deal at 75", url: "https://www.loc.gov/loc/lcib/0804/newdeal.html"}
   - {title: "JSTOR Daily: Hearing Aunt Harriet", url: "https://daily.jstor.org/hearing-aunt-harriet-slave-narratives"}
-  - {title: "LoC, Norman R. Yetman: Limitations of the Slave Narrative Collection", url: "https://www.loc.gov/collections/slave-narratives-from-the-federal-writers-project-1936-to-1938/articles-and-essays/introduction-to-the-wpa-slave-narratives/limitations-of-the-slave-narrative-collection/?fo=json"}
-  - {title: "LoC: A Note on the Language of the Narratives", url: "https://www.loc.gov/collections/slave-narratives-from-the-federal-writers-project-1936-to-1938/articles-and-essays/note-on-the-language-of-the-narratives/?fo=json"}
+  - {title: "LoC, Norman R. Yetman: Limitations of the Slave Narrative Collection", url: "https://www.loc.gov/collections/slave-narratives-from-the-federal-writers-project-1936-to-1938/articles-and-essays/introduction-to-the-wpa-slave-narratives/limitations-of-the-slave-narrative-collection/"}
+  - {title: "LoC: A Note on the Language of the Narratives", url: "https://www.loc.gov/collections/slave-narratives-from-the-federal-writers-project-1936-to-1938/articles-and-essays/note-on-the-language-of-the-narratives/"}
 media:
   - {"type": "image", "file": "wpa-narratives.jpg", "caption": "Hannah Crasson, photographed for the Federal Writers' Project slave narratives, between 1937 and about 1938", "credit": "U.S. Works Progress Administration, Federal Writers' Project; Library of Congress Prints and Photographs Division", "license": "Public domain", "url": "https://www.loc.gov/item/99615427/"}
 ---

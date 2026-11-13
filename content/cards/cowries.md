@@ -20,7 +20,7 @@ sources:
   - {title: "NMAAHC: Cowrie Shells and Trade Power", url: "https://nmaahc.si.edu/cowrie-shells-and-trade-power"}
   - {title: "Bank of England Museum: Slavery and the Bank, p. 47", url: "https://www.bankofengland.co.uk/-/media/boe/files/museum/slavery-and-the-bank-large-print-guide"}
   - {title: "Justine Wintjes, The Conversation via Daily Maverick (2021): relatively new commodity for Europeans in the 1550s", url: "https://www.dailymaverick.co.za/article/2021-09-28-small-seashells-tell-a-big-story-of-slavery-and-transoceanic-trade-500-years-ago/"}
-  - {title: "Hansard, HC Deb 30 May 1911: Northern Nigeria (Currency)", url: "https://api.parliament.uk/historic-hansard/written_answers/1911/may/30/northern-nigeria-currency"}
+  - {title: "Hansard, HC Deb 30 May 1911, Written Answers: Northern Nigeria (Currency)", url: "https://hansard.parliament.uk/Commons/1911-05-30"}
   - {title: "Journal of Economic History: From Traditional to British Currency in Southern Nigeria, 1880–1948", url: "https://www.cambridge.org/core/journals/journal-of-economic-history/article/from-traditional-to-british-currency-in-southern-nigeria-analysis-of-a-currency-revolution-18801948/0153DA3573B899A5B76A22260D9994CB"}
 media:
   - {"type": "image", "file": "cowries.jpg", "caption": "Money cowrie (Monetaria moneta), specimen ZMA.MOLL.52002, collected in Jakarta Bay in 1938", "credit": "Naturalis Biodiversity Center/Wikimedia Commons", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:Naturalis_Biodiversity_Center_-_ZMA.MOLL.52002_-_Monetaria_moneta_(Linnaeus,_1758)_-_Cypraeidae_-_Mollusc_shell.jpeg"}

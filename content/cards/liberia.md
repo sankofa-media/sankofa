@@ -15,7 +15,7 @@ further:
   - "Library of Congress: American Colonization Society, Map of Liberia (1870)"
 sources:
   - {title: "U.S. Department of State, Office of the Historian: Founding of Liberia, 1847", url: "https://history.state.gov/milestones/1830-1860/liberia"}
-  - {title: "Library of Congress, Maps of Liberia: History of Liberia, a time line", url: "https://www.loc.gov/collections/maps-of-liberia-1830-to-1870/articles-and-essays/history-of-liberia/?fo=json"}
+  - {title: "Library of Congress, Maps of Liberia: History of Liberia, a time line", url: "https://www.loc.gov/collections/maps-of-liberia-1830-to-1870/articles-and-essays/history-of-liberia/"}
   - {title: "PBS: Liberia history", url: "https://www.pbs.org/wgbh/globalconnections/liberia/essays/history/"}
   - {title: "PBS, The Black Press: Freedom's Journal", url: "https://www.pbs.org/blackpress/news_bios/newbios/nwsppr/freedom/freedom.html"}
   - {title: "Encyclopedia of World Biography, via Encyclopedia.com: John Brown Russwurm", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/john-brown-russwurm"}
