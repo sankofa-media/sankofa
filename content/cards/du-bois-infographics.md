@@ -29,11 +29,15 @@ In 1900 Paris held a world's fair, the Exposition Universelle, and the
 American section included a Negro Exhibit, put together by Thomas J.
 Calloway, W. E. B. Du Bois, Booker T. Washington and Daniel Murray of the
 Library of Congress. Its job was to show the economic and social progress
-of African Americans in the decades since emancipation. Du Bois, then
+of African Americans in the decades since emancipation.
+
+Du Bois, then
 a professor at Atlanta University, answered with data. With his
 students and colleagues he drew charts by hand: population, occupations,
 property and land, many of them about Black life in Georgia, with captions
-in English and French so that Europe could read them. The exhibit won
+in English and French so that Europe could read them.
+
+The exhibit won
 prizes from the exposition's judges, among them a Grand Prize, and Du Bois
 himself received a gold medal. The originals survive in the Library of
 Congress's Daniel Murray collection. They carried

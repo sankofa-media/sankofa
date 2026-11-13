@@ -14,7 +14,7 @@ further:
   - "Olaudah Equiano, The Interesting Narrative of the Life of Olaudah Equiano, or Gustavus Vassa, the African (London, 1789)"
   - "Vincent Carretta, Equiano, the African: Biography of a Self-Made Man (2005)"
   - "London Museum: a 1790 third edition of the Narrative in its collection"
-dispute: "Birthplace. Equiano wrote of a childhood in Igbo country and kidnapping. Vincent Carretta pointed to a 1759 baptism record and a 1773 Royal Navy muster roll that give his birthplace as Carolina, and argues he was probably born in South Carolina; other scholars, such as Brycchan Carey, hold that the records show what he told clerks, and that we cannot know. Unresolved."
+dispute: "Birthplace. Equiano wrote of a childhood in Igbo country and kidnapping. Vincent Carretta pointed to a 1759 baptism record and a 1773 Royal Navy muster roll that give his birthplace as Carolina, and argues he was probably born in South Carolina; other scholars, such as Brycchan Carey, hold that the records show what he told clerks, and that we cannot know. Whether the African chapters are memory or gathered testimony is still argued. Unresolved."
 sources:
   - {title: "London Museum: Olaudah Equiano, writer and abolitionist", url: "https://www.londonmuseum.org.uk/collections/london-stories/olaudah-equiano-writer-abolitionist/"}
   - {title: "Brycchan Carey: Equiano biography", url: "https://brycchancarey.com/equiano/biog.htm"}
@@ -33,16 +33,18 @@ the story of his own enslavement and turned it against the slave trade. As
 a boy he was owned by a Royal Navy officer, Michael Pascal, who named him
 Gustavus Vassa; later the Quaker merchant Robert King of Montserrat used him
 in his business rather than the fields, and in 1766 Equiano bought his
-freedom for £40. In 1783 he carried news of the [[zong|Zong massacre]] to [[granville-sharp|Granville
+freedom for £40.
+
+In 1783 he carried news of the [[zong|Zong massacre]] to [[granville-sharp|Granville
 Sharp]]. In 1787 he was commissary for the expedition taking Black
 Londoners to Sierra Leone, and was dismissed after he publicly condemned its
 mismanagement. In 1789 he published The Interesting Narrative, financed by
 subscribers headed by the Prince of Wales. It tells of a childhood in Igbo
 country, kidnapping and the Middle Passage, and it ran to nine editions by
 1794; he toured Britain and Ireland with it, at readings arranged by local
-abolition committees. Yet a 1759 baptism record and a 1773 Navy muster roll
-both give his birthplace as Carolina, and whether the African chapters are
-memory or gathered testimony is still argued. In 1792 he married Susanna
+abolition committees.
+
+In 1792 he married Susanna
 Cullen; they had two daughters. He died in London on 31 March 1797. With
 [[phillis-wheatley|Phillis Wheatley]] before him, he made a Black author's
 own words part of the case against slavery.

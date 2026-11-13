@@ -13,6 +13,7 @@ zoom: 4
 moment: {year: 1729}
 era: v5
 books: [voices, heirs]
+dispute: "The year of Amo's death at Shama is not known."
 further:
   - "Stephen Menn and Justin E. H. Smith (eds.), Anton Wilhelm Amo's Philosophical Dissertations on Mind and Body (Oxford University Press, 2020)"
   - "Staatsbibliothek zu Berlin: digitised 1734 Wittenberg dissertation"
@@ -30,4 +31,8 @@ sources:
 media:
   - {type: "image", file: "amo.jpg", caption: "Title page of Amo's dissertation De humanae mentis apatheia, Wittenberg, 1734", credit: "Anton Wilhelm Amo; scan Staatsbibliothek zu Berlin, via Wikimedia Commons", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Anton_Wilhelm_Amo_(c._1703_%E2%80%93_c._1759)_-_Dissertatio_inauguralis_philosophica_de_humanae_mentis_apatheia,_Wittenberg,_1734,_title_page.jpg"}
 ---
-Anton Wilhelm Amo was a philosopher born near Axim on the Gold Coast, in today's Ghana, who studied and taught at German universities. As a small child he was brought to Europe, most likely as a "gift" from the Dutch West India Company, and reached the court of the dukes of Brunswick-Wolfenbüttel, where he served as a "court Moor" and was educated. In 1729, at the University of Halle, he stood up to argue that Africans had the same claim as Europeans not to be enslaved in Europe. That disputation on the rights of Moors in Europe is lost; only later summaries survive. In 1734 at Wittenberg he took his doctorate with De humanae mentis apatheia, on the impassivity of the human mind, and he went on to lecture at Halle and Jena. Facing racist hostility, he went home to Axim around 1747. He was still living there in the early 1750s; later he lived at the Dutch fort of San Sebastian in Shama, where he died, in a year that remains uncertain. Germany has come back to him: in August 2025 Berlin renamed its Mohrenstraße, the "street of the Moors", Anton-Wilhelm-Amo-Straße. He stands among the Africans who made their names in European letters, with [[juan-latino|Juan Latino]], [[equiano|Olaudah Equiano]] and [[phillis-wheatley|Phillis Wheatley]].
+Anton Wilhelm Amo was a philosopher born near Axim on the Gold Coast, in today's Ghana, who studied and taught at German universities. As a small child he was brought to Europe, most likely as a "gift" from the Dutch West India Company, and reached the court of the dukes of Brunswick-Wolfenbüttel, where he served as a "court Moor" and was educated.
+
+In 1729, at the University of Halle, he stood up to argue that Africans had the same claim as Europeans not to be enslaved in Europe. That disputation on the rights of Moors in Europe is lost; only later summaries survive. In 1734 at Wittenberg he took his doctorate with De humanae mentis apatheia, on the impassivity of the human mind, and he went on to lecture at Halle and Jena. Facing racist hostility, he went home to Axim around 1747.
+
+He was still living there in the early 1750s; later he lived at the Dutch fort of San Sebastian in Shama, where he died. Germany has come back to him: in August 2025 Berlin renamed its Mohrenstraße, the "street of the Moors", Anton-Wilhelm-Amo-Straße. He stands among the Africans who made their names in European letters, with [[juan-latino|Juan Latino]], [[equiano|Olaudah Equiano]] and [[phillis-wheatley|Phillis Wheatley]].

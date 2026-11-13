@@ -2,7 +2,7 @@
 id: adinkra
 kind: script
 title: Adinkra and Sankofa
-wow: "Sankofa, the Akan sign this distribution is named after, literally means \"go back and get it\"."
+wow: "Sankofa, the Akan sign this distribution is named after, literally means \"go back and fetch it\"."
 years: [1817]
 places:
   - {name: "Akan region", lat: 6.6885, lon: -1.6244}
@@ -33,4 +33,4 @@ media:
 ---
 Adinkra are signs of the Akan people of Ghana, each standing for a proverb, a belief or an idea, and printed by hand on cloth. The printer carves the sign in relief on a piece of calabash and makes a dark ink from the bark of the badie tree. A comb dipped in the ink rules a grid across the cloth, and the stamps fill its sections. Adinkra was traditionally associated with Asante mourning and elite use; over time its use broadened to other ranks and festive occasions too.
 
-One of the signs is Sankofa, a bird looking back over its shoulder. Its name literally means "go back and get it": heritage as a tool to build the future. In 1817 Thomas Bowdich, on a mission to the Asante capital, acquired a stamped adinkra cloth that is now in the British Museum, and Ntonso, near Kumasi, still stamps it today. Across the Atlantic, a heart of tacks on a colonial-era coffin lid at New York's African Burial Ground was first hailed as Sankofa; a later peer-reviewed study argued for an Anglo-American design, and the National Park Service now says only "perhaps a Sankofa". Related traditions include [[kente|kente cloth]], the [[nsibidi|Nsibidi]] signs and [[benin-bronzes|the Benin Bronzes]].
+One of the signs is Sankofa, a bird looking back over its shoulder. Its name literally means "go back and fetch it": heritage as a tool to build the future. In 1817 Thomas Bowdich, on a mission to the Asante capital, acquired a stamped adinkra cloth that is now in the British Museum, and Ntonso, near Kumasi, still stamps it today. Across the Atlantic, a heart of tacks on a colonial-era coffin lid at New York's African Burial Ground was hailed as Sankofa. Related traditions include [[kente|kente cloth]], the [[nsibidi|Nsibidi]] signs and [[benin-bronzes|the Benin Bronzes]].

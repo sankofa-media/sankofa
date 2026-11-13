@@ -8,6 +8,7 @@ places:
   - {name: "St. Michael's, Talbot County, Maryland", lat: 38.7851, lon: -76.2244}
 zoom: 4
 era: v3
+dispute: "The year of the hire to Covey: 1834 is the date usually given; Douglass's own Narrative gives 1833."
 books: [voices]
 edition: m
 pair: freedom
@@ -24,14 +25,17 @@ media:
 ---
 Frederick Douglass was born enslaved in Talbot County, Maryland. In 1834, when he was about
 sixteen, his owner, Thomas Auld, hired him out for a year to Edward Covey,
-a farmer near St. Michael's known as a "negro-breaker" (Douglass's own
-Narrative gives 1833). In the first six months, Douglass wrote, scarce a
+a farmer near St. Michael's known as a "negro-breaker".
+
+In the first six months, Douglass wrote, scarce a
 week passed without a whipping; he was "broken in body, soul, and spirit".
 Then, in August, he turned on Covey, and the two fought for nearly two
 hours. Covey never laid a hand on him again, nor sent him to be whipped in
 public: a breaker who admitted he had failed to break a sixteen-year-old
 would have lost his reputation. It was, Douglass wrote, "the turning-point
-in my career as a slave". The body was still owned; the will was not. He
+in my career as a slave".
+
+The body was still owned; the will was not. He
 remained enslaved for four more years. On 3 September 1838 he escaped
 north, and in 1845 he published his Narrative, telling the fight in print
 for anyone to read. His pen went on to fight the whole system.

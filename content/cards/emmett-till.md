@@ -32,14 +32,18 @@ media:
 ---
 Emmett Till, fourteen, left Chicago in August 1955 to visit
 family in the Mississippi Delta. On 24 August he stopped at Bryant's store
-in Money; accounts of what happened there differ. Four nights later Roy
+in Money. Four nights later Roy
 Bryant and J. W. Milam took him from his great-uncle's house; his body was
-found in the Tallahatchie River. His mother, Mamie Till-Mobley, would not
+found in the Tallahatchie River.
+
+His mother, Mamie Till-Mobley, would not
 let the world look away. In Chicago she held an open-casket funeral at
 Roberts Temple and let Jet photographer David Jackson take pictures; Jet
 ran them in September. The trial opened in Sumner on 19 September, and an
 all-white jury acquitted both men in about an hour. In January 1956, safe
-from retrial, they sold their confession to Look. Carolyn Bryant's reported recantation is contested. In
+from retrial, they sold their confession to Look.
+
+In
 December 1955 Rosa Parks refused to give up her bus seat; she
 later said she thought of Emmett Till and could not go back. Mamie
 Till-Mobley kept her son's story alive until her death in 2003. In March
