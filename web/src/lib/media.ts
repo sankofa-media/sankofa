@@ -11,12 +11,15 @@ interface Manifest {
   ratios?: Record<string, number>;
   /** files that also come as WebP next to every copy */
   webp?: string[];
+  /** average colour of each image, #rrggbb: its frame's colour while it loads */
+  colours?: Record<string, string>;
 }
 
 let variants: Record<string, number[]> = {};
 let sizes: Record<string, number> = {};
 let webp = new Set<string>();
 let ratios: Record<string, number> = {};
+let colours: Record<string, string> = {};
 
 export async function loadMediaManifest(): Promise<void> {
   try {
@@ -27,16 +30,51 @@ export async function loadMediaManifest(): Promise<void> {
     sizes = m.sizes ?? {};
     webp = new Set(m.webp ?? []);
     ratios = m.ratios ?? {};
+    colours = m.colours ?? {};
   } catch {
     /* no variants: the originals are used */
   }
 }
 
 /** For tests. */
-export function setVariants(v: Record<string, number[]>, s: Record<string, number> = {}, w: string[] = []): void {
+export function setVariants(v: Record<string, number[]>, s: Record<string, number> = {}, w: string[] = [], c: Record<string, string> = {}): void {
   variants = v;
   sizes = s;
   webp = new Set(w);
+  colours = c;
+}
+
+/** The image's average colour, when the build measured it. */
+export function colourOf(file: string): string | undefined {
+  return colours[file];
+}
+
+/** The URL of the smallest copy: what a placeholder or a preview loads. */
+export function smallSrc(app: Pick<App, 'media'>, file: string): string {
+  const small = variants[file]?.[0];
+  return small ? served(`media/w${small}/${file}`, file) : served(app.media(file), file);
+}
+
+const preloaded = new Set<string>();
+/**
+ * Ask the browser for an image ahead of the reader, with the same srcset and
+ * sizes the <img> will use, so the request is the one the page then needs.
+ */
+export function preloadImage(app: Pick<App, 'media'>, file: string, want: number, sizesAttr: string): void {
+  const key = `${file} ${sizesAttr}`;
+  if (preloaded.has(key) || typeof document === 'undefined') return;
+  preloaded.add(key);
+  const src = mediaSrc(app, file, [want]);
+  const link = document.createElement('link');
+  link.rel = 'preload';
+  link.as = 'image';
+  link.href = src.src;
+  if (src.srcset) {
+    link.setAttribute('imagesrcset', src.srcset);
+    link.setAttribute('imagesizes', sizesAttr);
+  }
+  link.dataset.preload = file;
+  document.head.append(link);
 }
 
 /** The served name of a copy: WebP when the build made one. */
@@ -73,25 +111,32 @@ export function mediaSrc(app: Pick<App, 'media'>, file: string, want: number[] =
 export function progressive(
   app: Pick<App, 'media'>,
   file: string,
-  opts: { want?: number; sizes?: string; alt?: string; cls?: string; near?: boolean } = {},
-): { img: HTMLImageElement; ready: Promise<void> } {
+  opts: { want?: number; sizes?: string; alt?: string; cls?: string; near?: boolean; margin?: string; priority?: 'high' | 'low' } = {},
+): { img: HTMLImageElement; ready: Promise<void>; start: () => void } {
   const img = document.createElement('img');
   img.alt = opts.alt ?? '';
   // Reserve the picture's shape before it loads: nothing below it jumps.
   if (ratios[file]) img.style.aspectRatio = String(ratios[file]);
   img.decoding = 'async';
+  // Until the picture arrives its frame wears the picture's own colour.
+  if (colours[file]) img.style.backgroundColor = colours[file];
+  if (opts.priority) img.setAttribute('fetchpriority', opts.priority);
   if (opts.cls) img.className = opts.cls;
   const small = variants[file]?.[0];
   const full = mediaSrc(app, file, [opts.want ?? 960]);
   let resolve!: () => void;
   const ready = new Promise<void>((r) => (resolve = r));
+  let started = false;
   const start = () => {
+    if (started) return;
+    started = true;
     if (small && full.srcset) {
       img.classList.add('lq');
       img.src = served(`media/w${small}/${file}`, file);
       img.decode().then(resolve, resolve);
       const hi = new Image();
       hi.decoding = 'async';
+      if (opts.priority) hi.setAttribute('fetchpriority', opts.priority);
       if (opts.sizes) hi.sizes = opts.sizes;
       hi.srcset = full.srcset;
       hi.src = full.src;
@@ -101,10 +146,16 @@ export function progressive(
           img.srcset = full.srcset!;
           img.src = full.src;
           img.classList.remove('lq');
+          img.style.backgroundColor = '';
+          resolve();
         },
         () => img.classList.remove('lq'),
       );
     } else {
+      if (opts.sizes && full.srcset) {
+        img.sizes = opts.sizes;
+        img.srcset = full.srcset;
+      }
       img.src = full.src;
       img.decode().then(resolve, resolve);
     }
@@ -116,9 +167,9 @@ export function progressive(
         io.disconnect();
         start();
       },
-      { rootMargin: '250% 0px' },
+      { rootMargin: opts.margin ?? '250% 0px' },
     );
     queueMicrotask(() => io.observe(img));
   } else start();
-  return { img, ready };
+  return { img, ready, start };
 }
