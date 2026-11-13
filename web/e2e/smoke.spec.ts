@@ -803,3 +803,36 @@ test('Russian names the listening block and the uploader in Russian', async ({ p
   await expect(block.locator('.lb-head')).toHaveText('Слушать');
   await expect(block.locator('.lb-src')).toHaveText('Официальная загрузка: Big Mama Thornton - Topic');
 });
+
+test('stepping through a roots chain loads exactly one player at a time', async ({ page }) => {
+  const yt = await watchYouTube(page);
+  await page.goto('/#view=roots&artist=the-beatles');
+  await expect(page.locator('.r-listen').first()).toBeVisible();
+  await page.waitForTimeout(500);
+  expect(yt).toEqual([]);
+  await expect(page.locator('iframe.lb-frame')).toHaveCount(0);
+  await page.getByRole('button', { name: 'Play the chain' }).click();
+  await expect(page.locator('iframe.lb-frame')).toHaveCount(1);
+  const first = await page.locator('iframe.lb-frame').getAttribute('src');
+  await page.locator('.r-listen.on .lb-next').click();
+  await expect(page.locator('iframe.lb-frame')).toHaveCount(1);
+  await expect(page.locator('iframe.lb-frame')).not.toHaveAttribute('src', first!);
+  // The edge between the two stops says how the borrowing happened.
+  await expect(page.locator('.r-edge .r-kind').first()).toBeVisible();
+});
+
+test('the music map steps along a lit path with one player at a time', async ({ page }) => {
+  const yt = await watchYouTube(page);
+  await page.goto('/#view=roots-map');
+  await page.locator('.rm-input').fill('beatles');
+  await page.locator('.rm-input').press('Enter');
+  const chain = page.locator('.rm-chain');
+  await expect(chain).toBeVisible();
+  await page.waitForTimeout(500);
+  expect(yt).toEqual([]);
+  await chain.locator('.lb-facade').click();
+  await expect(page.locator('iframe.lb-frame')).toHaveCount(1);
+  await chain.getByRole('button', { name: 'Next →' }).click();
+  await expect(chain).toContainText('stop 2 of');
+  await expect(page.locator('iframe.lb-frame')).toHaveCount(1);
+});
