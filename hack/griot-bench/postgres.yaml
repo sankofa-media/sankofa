@@ -1,0 +1,40 @@
+# PostgreSQL for the benchmark Griot. The password lives in the Secret
+# griot-postgres (key password), created by run.sh, never in the repository.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata: {name: postgres, namespace: griot-bench}
+spec:
+  accessModes: [ReadWriteOnce]
+  resources: {requests: {storage: 10Gi}}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: postgres, namespace: griot-bench}
+spec:
+  replicas: 1
+  strategy: {type: Recreate}
+  selector: {matchLabels: {app: postgres}}
+  template:
+    metadata: {labels: {app: postgres}}
+    spec:
+      containers:
+        - name: postgres
+          image: docker.io/library/postgres:17-alpine@sha256:d3244e8ce3f165ee3c93d9c4a4b1d0fe48b3a89e2287b717fdcbbde92d405065
+          env:
+            - {name: POSTGRES_USER, value: griot}
+            - {name: POSTGRES_DB, value: griot}
+            - {name: POSTGRES_PASSWORD, valueFrom: {secretKeyRef: {name: griot-postgres, key: password}}}
+            - {name: PGDATA, value: /var/lib/postgresql/data/pgdata}
+          args: [-c, shared_buffers=256MB, -c, max_connections=100, -c, synchronous_commit=on]
+          ports: [{containerPort: 5432}]
+          readinessProbe: {exec: {command: [pg_isready, -U, griot]}, periodSeconds: 5}
+          volumeMounts: [{name: data, mountPath: /var/lib/postgresql/data}]
+          resources: {requests: {cpu: 250m, memory: 512Mi}, limits: {memory: 1Gi}}
+      volumes: [{name: data, persistentVolumeClaim: {claimName: postgres}}]
+---
+apiVersion: v1
+kind: Service
+metadata: {name: postgres, namespace: griot-bench}
+spec:
+  selector: {app: postgres}
+  ports: [{port: 5432}]
