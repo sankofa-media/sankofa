@@ -6,9 +6,9 @@
 # outside the ledger (see "unledgered" below).
 checkedAt: "2026-11-13"
 summary:
-  entriesChecked: 101
-  confirmed: 91
-  corrected: 10
+  entriesChecked: 145
+  confirmed: 131
+  corrected: 14
 claims:
 - card: jerry-lawson
   fact: "Before the Channel F, home consoles played only the games built into them"
@@ -673,3 +673,292 @@ claims:
     - {title: "Massachusetts Historical Society: Phillis Wheatley", url: "https://www.masshist.org/features/endofslavery/wheatley", quote: "Phillis Wheatley was the author of the first known book of poetry by a Black woman, published in London in 1773."}
     - {title: "National Women's History Museum: Phillis Wheatley", url: "https://www.womenshistory.org/education-resources/biographies/phillis-wheatley", quote: "Phillis Wheatley Peters is broadly recognized as the first African American and the second U.S. woman to publish a book of poetry."}
   note: "MHS: first known book of poetry by a Black woman; NWHM: first African American to publish a book of poetry."
+- card: planet-rock
+  fact: "Afrika Bambaataa was a Bronx DJ and the founder of the Universal Zulu Nation."
+  verdict: confirmed
+  sources:
+    - {title: "theGrio (9 April 2026): Hip hop pioneer Afrika Bambaataa dies at age 67", url: "https://thegrio.com/2026/04/09/hip-hop-pioneer-afrika-bambaataa-dies-at-age-67/", quote: "The Bronx-born rapper, DJ, and founder of the Universal Zulu Nation"}
+    - {title: "Complex (2026)", url: "https://www.complex.com/music/a/backwoodsaltar/afrika-bambaataa-dead-hip-hop-pioneer", quote: "Bambaataa was also one of the founders of the hip-hop awareness group, Universal Zulu Nation."}
+  note: "Complex says 'one of the founders'; theGrio 'founder'. The card's 'founder' follows theGrio and is the usual description."
+- card: planet-rock
+  fact: "\"Planet Rock\" became one of hip-hop's earliest hits and most influential tracks."
+  verdict: confirmed
+  sources:
+    - {title: "theGrio (9 April 2026)", url: "https://thegrio.com/2026/04/09/hip-hop-pioneer-afrika-bambaataa-dies-at-age-67/", quote: "His 1982 single \"Planet Rock\" is one of the most influential hip hop tracks ever made."}
+    - {title: "Complex (2026)", url: "https://www.complex.com/music/a/backwoodsaltar/afrika-bambaataa-dead-hip-hop-pioneer", quote: "His album Planet Rock , which consisted of singles released from 1980 to 1986, was one of the genre's earliest successes."}
+  note: "theGrio: one of the most influential hip-hop tracks; Complex: among the genre's earliest successes (said of the Planet Rock album). Baker's own account (RBMA) is a participant's, not counted."
+- card: planet-rock
+  fact: "After the 2016 accusations Bambaataa stepped down as head of the Zulu Nation."
+  verdict: confirmed
+  sources:
+    - {title: "The Guardian (23 May 2025)", url: "https://www.theguardian.com/music/2025/may/23/hip-hop-pioneer-afrika-bambaataa-loses-civil-case-suing-him-for-child-sexual-abuse", quote: "The musician denied all allegations in a 2016 interview with Fox 5 News, but left his position as the head of his Universal Zulu Nation organisation"}
+    - {title: "Complex (2026)", url: "https://www.complex.com/music/a/backwoodsaltar/afrika-bambaataa-dead-hip-hop-pioneer", quote: "Many members of the Zulu Nation resigned following the allegations, and Bambaataa also stood down from his leadership role as a result."}
+- card: radio-haiti
+  fact: "Creole is the language most Haitians speak."
+  verdict: confirmed
+  sources:
+    - {title: "Duke Today (2014)", url: "https://today.duke.edu/2014/04/radiohaitiarchives", quote: "It was the first radio station to deliver news and commentary in Creole, the language most people there speak"}
+    - {title: "NEH: Voices of Change, preserving Radio Haiti", url: "https://www.neh.gov/divisions/preservation/featured-project/tune-in-tuesdays-voices-change-preserving-radio-haiti", quote: "Reporting in Haitian Creole (a language spoken by 90% of the Haitian population) as well as French"}
+- card: radio-haiti
+  fact: "When Jean-Claude Duvalier fled in 1986, Dominique and Montas returned to a crowd that nearly carried them to the wrecked station, which reopened."
+  verdict: corrected
+  sources:
+    - {title: "Duke Rubenstein Library blog (2015)", url: "https://blogs.library.duke.edu/rubenstein/2015/11/20/radio-haiti-you-are-the-rain-if-you-didnt-fall-we-could-not-bloom-repression-and-remembrance-on-november-28/", quote: "on February 7, 1986 ... Jean-Claude Duvalier and his family boarded a US Air Force cargo plane and fled to France. On March 4, Jean Dominique and Michèle Montas returned to Port-au-Prince, where many thousands of people ... received them at the airport and nearly carried them to the old Radio Haiti station on Rue du Quai. ... The station had been ravaged, their equipment smashed."}
+    - {title: "Amnesty International (2002): Haiti, Jean Dominique investigation", url: "https://www.amnesty.org/fr/wp-content/uploads/sites/8/2021/06/amr360012002fr.pdf", quote: "ont par la suite apporté des fonds pour contribuer à la réouverture de la station de radio. Celle-ci a recommencé à émettre fin 1986."}
+    - {title: "Duke University Libraries: Radio Haiti audio recordings, 1957-2003 (collection guide)", url: "https://archives.lib.duke.edu/catalog/radiohaiti", quote: "When the Duvalier regime fell in 1986, the couple immediately returned to Port-au-Prince to rebuild the station with funds raised from the Haitian people."}
+    - {title: "Amnesty International (2002), crowd", url: "https://www.amnesty.org/fr/wp-content/uploads/sites/8/2021/06/amr360012002fr.pdf", quote: "À leur descente de l’avion à Port-au-Prince, ils ont été accueillis par une foule comptant des dizaines de milliers de personnes."}
+  note: "Amnesty: welcomed at the airport by a crowd of tens of thousands, and the station was back on air at the end of 1986 with donations; Duke collection guide: rebuilt with funds raised from Haitians. That the crowd 'nearly carried them to the station' is only in the Duke blog. Card now says a crowd of tens of thousands met them and they rebuilt the station with money raised from Haitians."
+- card: radio-haiti
+  fact: "Who ordered Dominique's killing was never established."
+  verdict: confirmed
+  sources:
+    - {title: "Committee to Protect Journalists (25 March 2003)", url: "https://cpj.org/2003/03/six-men-indicted-for-journalists-murderalleged-mas/", quote: "the indictment issued in Haiti on Friday, March 21, which failed to charge the masterminds behind the murder of prominent Haitian journalist Jean Leópold Dominique"}
+    - {title: "The World (2022)", url: "https://theworld.org/stories/2022/05/04/radio-haiti-archives-find-home-duke-university", quote: "No one knows exactly who was behind the assasination — but Dominique had plenty of enemies."}
+- card: radio-haiti
+  fact: "Montas kept running the station until gunmen attacked her home; threats then closed it."
+  verdict: confirmed
+  sources:
+    - {title: "Committee to Protect Journalists (25 March 2003)", url: "https://cpj.org/2003/03/six-men-indicted-for-journalists-murderalleged-mas/", quote: "On December 25, 2002, gunmen attacked Montas' house, killing one of her bodyguards. Two months later, Montas, who has run Radio Haïti-Inter since her husband's murder and has anchored the daily newscast, stopped broadcasting because of constant threats and harassment."}
+    - {title: "WUNC (2015): Bringing Back Radio Haiti", url: "https://www.wunc.org/show/the-state-of-things/2015-02-25/bringing-back-radio-haiti-a-station-that-told-the-overlooked-stories", quote: "Montas continued running the station until an attempt on her own life in 2003 forced her to close the station for good."}
+- card: radio-haiti
+  fact: "After the 1991 coup the new rulers attacked the station, and the couple went into exile again, returning in 1994."
+  verdict: confirmed
+  sources:
+    - {title: "Amnesty International (2002): Haiti, Jean Dominique investigation", url: "https://www.amnesty.org/fr/wp-content/uploads/sites/8/2021/06/amr360012002fr.pdf", quote: "Les instigateurs du coup d'État qui ont renversé Jean-Bertrand Aristide sept mois seulement après son entrée en fonction ont également pris Radio Haïti Inter pour cible. Les traces de balles sont encore visibles sur les murs de l'immeuble. Jean Dominique et sa famille sont alors repartis en exil aux États-Unis et ne sont rentrés au pays qu'après le retour à un système constitutionnel en 1994."}
+    - {title: "Duke University Libraries: Radio Haiti audio recordings, 1957-2003 (collection guide; archive.org 2026-11-06)", url: "https://archives.lib.duke.edu/catalog/radiohaiti", quote: "Dominique and Montas fled once more into exile, returning in 1994 when U.S. troops invaded Haiti and re-instated Aristide."}
+  note: "The return in 1994 is in Amnesty only among the ledger sources (the Duke Today page says only 'exiled twice'). Added the Duke University Libraries collection guide ('fled once more into exile, returning in 1994') to the card."
+- card: reggae
+  fact: "Clive Campbell (DJ Kool Herc), from Kingston, moved to the Bronx in 1967 and built a Kingston-style sound system there."
+  verdict: confirmed
+  sources:
+    - {title: "GRAMMY.com (2023): DJ Kool Herc and Cindy Campbell, Jamaican roots", url: "https://www.grammy.com/news/dj-kool-herc-cindy-campbell-50th-anniversary-of-hip-hop-interview-jamaican-roots", quote: "Clive arrived in the Bronx in 1967. With the help of his father, Herc set up his own sound system, The Herculoids, its powerful, rumbling sonic replicating what he heard in his Kingston youth"}
+    - {title: "Red Bull Music Academy (2018): Interview, DJ Kool Herc", url: "https://daily.redbullmusicacademy.com/2018/01/kool-herc-interview", quote: "Marrying the bass-heavy sensibilities of his native Kingston, Jamaica, to the party vibe of the Bronx, Herc created a soundsystem that could dominate any rival. ... I came here in 1967, aged 13."}
+- card: reggae
+  fact: "As DJ Kool Herc he played the Bronx parties from which hip-hop grew."
+  verdict: confirmed
+  sources:
+    - {title: "GRAMMY.com (2023)", url: "https://www.grammy.com/news/dj-kool-herc-cindy-campbell-50th-anniversary-of-hip-hop-interview-jamaican-roots", quote: "On Aug. 11, 1973, high school student Cindy Campbell threw a party in the recreation room of her family's Bronx apartment building ... she asked her 18-year-old brother Clive to play the music. Clive, better known as DJ Kool Herc"}
+    - {title: "Red Bull Music Academy (2018): Interview, DJ Kool Herc", url: "https://daily.redbullmusicacademy.com/2018/01/kool-herc-interview", quote: "the teenage block parties that birthed an entire global culture"}
+- card: rhythm-and-blues
+  fact: "Jerry Wexler later joined Atlantic Records as a partner and producer."
+  verdict: confirmed
+  sources:
+    - {title: "Contemporary Authors, via Encyclopedia.com: Wexler, Jerry 1917-2008", url: "https://www.encyclopedia.com/arts/educational-magazines/wexler-jerry-1917-2008-gerald-wexler", quote: "In 1953 he joined Atlantic Records, as a vice president, partner, and record producer for artists like the Drifters."}
+    - {title: "Mark Puryear, Tell It Like It Is, Smithsonian Folklife Festival (2011)", url: "https://folkways-media.si.edu/docs/festival/2011/festival-program-book-rnb.pdf", quote: "Coined by then-music journalist and later Atlantic Records executive Jerry Wexler to replace the older categories of \"race music\" or \"race records,\""}
+    - {title: "Rock and Roll Hall of Fame: Jerry Wexler", url: "https://www.rockhall.com/inductees/jerry-wexler", quote: "Jerry Wexler's position at Atlantic Records (an upstart, indie label at the time) allowed him to work hands-on with artists and revolutionize the recording process."}
+- card: rhythm-and-blues
+  fact: "Decades later Ruth Brown fought Atlantic for unpaid royalties; the label paid her and dozens of other artists of her era, and the Rhythm and Blues Foundation grew out of her fight."
+  verdict: confirmed
+  sources:
+    - {title: "NPR Forebears: Ruth Brown (2017)", url: "https://text.npr.org/559070707", quote: "Brown then used her new fame to leverage Atlantic Records into paying her back royalties — and she didn't stop there. The deal she cut with the label also allowed dozens of other musicians to recoup their earnings as well. In 1988 she helped found the Rhythm & Blues Foundation"}
+    - {title: "BlackPast: Ruth Brown (1928-2006)", url: "https://www.blackpast.org/african-american-history/brown-ruth-1928-2006/", quote: "Because she spoke out, Atlantic waived unrecouped debts held by Brown and thirty-five other musicians of her era and agreed to pay twenty years' worth of retroactive royalties. Atlantic also contributed almost $2 million to start the Rhythm and Blues Foundation"}
+    - {title: "Diane Moroff, Brown, Ruth, Contemporary Musicians, via Encyclopedia.com", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/ruth-brown", quote: "she spent far too much of her hard-earned money trying to win back royalties from Atlantic Records — eventually, with the help of her longtime fan and lawyer, Howell Begles, she not only got herself some paychecks but helped to establish the Rhythm and Blues Foundation"}
+  note: "NPR: dozens of musicians; BlackPast: thirty-five others and almost $2 million towards the Foundation."
+- card: rinse-fm
+  fact: "Slimzee's 2005 ASBO banned him for five years from the roofs of taller buildings in Tower Hamlets, on pain of prison."
+  verdict: corrected
+  sources:
+    - {title: "Building (22 April 2005): Pirate DJ silenced in rooftop radio purge", url: "https://www.building.co.uk/pirate-dj-silenced-in-rooftop-radio-purge/3050083.article", quote: "A pirate radio DJ has been banned from rooftops over four storeys ... Magistrates last week agreed to Tower Hamlets council's request to impose the five-year, borough-wide ban against 23-year-old Dean Fullman, aka DJ Slimzee."}
+    - {title: "Dummy: The Dummy guide to Rinse FM", url: "https://dmy.co/features/the-dummy-guide-to-rinse-fm/", quote: "As recently as 2005, Slimzee was given an \"unprecedented\" ASBO and banned for five years from the roof of any building in Tower Hamlets with more than four storeys"}
+  note: "Building and Dummy: five-year ban from roofs over four storeys in Tower Hamlets. 'On pain of prison' is in Time Out only and was dropped."
+- card: rinse-fm
+  fact: "Rinse started its own record label, which launched the singer Katy B."
+  verdict: confirmed
+  sources:
+    - {title: "Time Out (2024): 30 years of Rinse FM", url: "https://www.timeout.com/london/music/rinse-fm-cover-interview", quote: "Geeneus established Rinse Recordings as a label in 2003. ... In about 2006, Geeneus met Katy B and worked with the network of Rinse talent to eventually drop her legendary debut album, 'On a Mission'."}
+    - {title: "Dazed (2024): Rinse FM at 30, an oral history", url: "https://www.dazeddigital.com/music/article/62542/1/rinse-fm-at-30-an-oral-history-of-the-notorious-east-london-radio", quote: "Geeneus turned his attention to Rinse the record label. He released a number of grime, dubstep and funky records throughout the 2000s, then around 2007 he heard about a singer from south London who was really into raving, now known as Katy B."}
+- card: rinse-fm
+  fact: "The station turned thirty in 2024."
+  verdict: confirmed
+  sources:
+    - {title: "Time Out (2024): 30 years of Rinse FM", url: "https://www.timeout.com/london/music/rinse-fm-cover-interview", quote: "It's 30 years to the day since Rinse FM's legendary first broadcast on the day of Notting Hill Carnival."}
+    - {title: "Dazed (2024): Rinse FM at 30, an oral history", url: "https://www.dazeddigital.com/music/article/62542/1/rinse-fm-at-30-an-oral-history-of-the-notorious-east-london-radio", quote: "Rinse FM at 30: an oral history of the notorious London radio station"}
+  note: "Both 2024 anniversary pieces; founding in 1994 is in the card already."
+- card: robert-smalls
+  fact: "Smalls was born enslaved in Beaufort, South Carolina, in 1839."
+  verdict: confirmed
+  sources:
+    - {title: "National Park Service: Robert Smalls", url: "https://www.nps.gov/people/robert-smalls.htm", quote: "Robert Smalls was born in 1839, enslaved by a local planter in Beaufort, South Carolina."}
+    - {title: "US House of Representatives, History, Art & Archives: Robert Smalls", url: "https://history.house.gov/People/Listing/S/SMALLS,-Robert-(S000502)/", quote: "Robert Smalls was born enslaved on April 5, 1839, in Beaufort, South Carolina."}
+- card: robert-smalls
+  fact: "He died in Beaufort in 1915, when segregation had taken hold."
+  verdict: confirmed
+  sources:
+    - {title: "National Park Service: Robert Smalls", url: "https://www.nps.gov/people/robert-smalls.htm", quote: "By the time Robert Smalls died in February 1915, southern Democrats had completely retaken the political landscape of the south and instituted harsh segregation policies."}
+    - {title: "US House of Representatives, History, Art & Archives: Robert Smalls", url: "https://history.house.gov/People/Listing/S/SMALLS,-Robert-(S000502)/", quote: "Over time, his duties as collector became more onerous in the face of racism and segregation in Beaufort. He was forced to step down in 1913 ... Smalls died in his Beaufort home on February 23, 1915."}
+- card: robert-smalls
+  fact: "A champion of public schools, he helped write South Carolina's new constitution in 1868."
+  verdict: confirmed
+  sources:
+    - {title: "National Park Service: Robert Smalls", url: "https://www.nps.gov/people/robert-smalls.htm", quote: "Smalls became an advocate for public education, including for himself. In 1868, he served as a delegate to the South Carolina state convention that wrote a new state constitution. Smalls lobbied for public education to be a key component of the new document."}
+    - {title: "US House of Representatives, History, Art & Archives: Robert Smalls", url: "https://history.house.gov/People/Listing/S/SMALLS,-Robert-(S000502)/", quote: "He embarked on business ventures, opening a store and a school for Black students in 1867. ... He was a delegate to the 1868 South Carolina constitutional convention"}
+- card: rock-n-roll
+  fact: "Chess Records issued \"Rocket 88\" crediting Jackie Brenston, one of Ike Turner's saxophonists, and in June 1951 it went to number one on Billboard's rhythm and blues chart."
+  verdict: confirmed
+  sources:
+    - {title: "Blues Foundation Hall of Fame: Rocket 88 (Jim O'Neal, 1991)", url: "https://www.blues.org/award-search/rocket-88-is-one-of-many-blues-a", quote: "turned the mike over to one of his saxophonists, Jackie Brenston, for the uptempo 'Rocket '88.' ... 1 on the R&B charts (Chess Records' first chart-topper)"}
+    - {title: "Saturday Evening Post: The Very First Rock and Roll Song", url: "https://www.saturdayeveningpost.com/2021/03/the-very-first-rock-and-roll-song/", quote: "Licensed to Chess Records, who switched the band's name on the label, the song went to #1 on the Billboard R&B records chart that June"}
+  note: "Saturday Evening Post read through an archive.org snapshot (May 2026): 'went to #1 on the Billboard R&B records chart that June'. Blues Foundation: #1 on the R&B charts, Brenston one of Turner's saxophonists. June rests on the Post; Billboard's chart dating of June 1951 is uncontested."
+- card: rock-n-roll
+  fact: "White singers built careers on covers of Black artists' records, and by the mid-1950s the name rock and roll was applied mostly to white musicians such as Elvis Presley, though Black musicians remained crucial to the music."
+  verdict: confirmed
+  sources:
+    - {title: "Carnegie Hall, Timeline of African American Music: Rock 'n' Roll", url: "https://timeline.carnegiehall.org/genres/rock-n-roll", quote: "Several established and/or advanced their careers in rock ‘n’ roll by covering the recordings of Black artists"}
+    - {title: "Encyclopedia of African-American Culture and History, via Encyclopedia.com: Rhythm and Blues", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues", quote: "By the mid-1950s, as more and more white teenagers began to listen to rhythm and blues, the scope of the term rock and roll expanded and was primarily applied to white musicians such as Elvis Presley ... However, black musicians remained crucial to the development of rock and roll even after the term was being applied mostly to white musicians."}
+- card: rosetta-tharpe
+  fact: "Sister Rosetta Tharpe was born in 1915 in Cotton Plant, Arkansas, and as a child performed with her mother, an evangelist of the (Pentecostal) Church of God in Christ."
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Arkansas: Sister Rosetta Tharpe", url: "https://encyclopediaofarkansas.net/entries/sister-rosetta-tharpe-1781/", quote: "Rosetta Tharpe was born in Cotton Plant (Woodruff County) on March 20, 1915, to Katie Bell Nubin Atkins—an evangelist, singer, and mandolin player for the Church of God in Christ (COGIC) ... By age six, she appeared regularly with her mother"}
+    - {title: "PBS American Masters: Timeline, the years of Sister Rosetta Tharpe", url: "https://www.pbs.org/wnet/americanmasters/timeline-the-years-of-sister-rosetta-tharpe/2487/", quote: "1915 – Rosie Etta Atkins is born in Cotton Plant, Arkansas, on March 20 ... 1920s-30s – Rosabell and her mother, Katie Bell, evangelize for the Church of God in Christ."}
+    - {title: "Gayle Wald: Why We Keep Rediscovering the Flamboyant Godmother of Rock", url: "https://whatitmeanstobeamerican.org/encounters/why-we-keep-rediscovering-the-flamboyant-godmother-of-rock/", quote: "With her mother, an evangelist, she came of age as a singer and instrumentalist at Southern tent meetings, churches, and religious revivals."}
+- card: rosetta-tharpe
+  fact: "The 1964 Manchester performance was filmed for British television before an audience of young British fans."
+  verdict: corrected
+  sources:
+    - {title: "Gayle Wald: Why We Keep Rediscovering the Flamboyant Godmother of Rock", url: "https://whatitmeanstobeamerican.org/encounters/why-we-keep-rediscovering-the-flamboyant-godmother-of-rock/", quote: "The Blues and Gospel Caravan, as the TV show based on the 1964 tour was dubbed, was filmed at a defunct suburban Manchester, England, railroad station ... On one side of the tracks are bleachers filled with long-haired white British kids"}
+    - {title: "Encyclopedia of Arkansas: Sister Rosetta Tharpe", url: "https://encyclopediaofarkansas.net/entries/sister-rosetta-tharpe-1781/", quote: "The burgeoning British rock-and-roll scene of the early 1960s benefitted many of the pioneering African-American gospel/blues singers, as they were often credited as influences by the young, roots-based rockers."}
+  note: "Filming for British TV: Smithsonian ('What It Means to Be American') and PBS (the caravan show 'appears on British TV'). The young audience appears only in the Smithsonian piece; the Encyclopedia of Arkansas line is about the British rock scene in general, not this audience. 'Before young fans' dropped."
+- card: rosetta-tharpe
+  fact: "After a stroke in 1970 she lost a leg (amputation)."
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Arkansas: Sister Rosetta Tharpe", url: "https://encyclopediaofarkansas.net/entries/sister-rosetta-tharpe-1781/", quote: "A stroke in 1970 necessitated a leg amputation and caused speech difficulties, but it merely slowed her down."}
+    - {title: "PBS American Masters: Timeline, the years of Sister Rosetta Tharpe", url: "https://www.pbs.org/wnet/americanmasters/timeline-the-years-of-sister-rosetta-tharpe/2487/", quote: "1970 – Rosetta falls ill, probably with a stroke, in Switzerland ... 1971 – Rosetta undergoes amputation of a leg due to complications from diabetes."}
+  note: "EoA: the 1970 stroke led to the amputation; PBS: 1970 stroke, 1971 amputation from diabetes. The card says only 'after a stroke in 1970 she lost a leg', which fits both."
+- card: rosetta-tharpe
+  fact: "In December 1938 she sang at John Hammond's From Spirituals to Swing concert at Carnegie Hall."
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Arkansas: Sister Rosetta Tharpe", url: "https://encyclopediaofarkansas.net/entries/sister-rosetta-tharpe-1781/", quote: "The popularity of her singles led to Tharpe’s inclusion in John Hammond’s Black music extravaganza, “From Spirituals to Swing,” held in Carnegie Hall in New York City on December 23, 1938."}
+    - {title: "PBS American Masters: Timeline, the years of Sister Rosetta Tharpe", url: "https://www.pbs.org/wnet/americanmasters/timeline-the-years-of-sister-rosetta-tharpe/2487/", quote: "In addition to John Hammond’s From Spirituals to Swing at Carnegie Hall, she plays the Paramount with Count Basie, and appears at Harlem’s Apollo Theater."}
+- card: rosetta-tharpe
+  fact: "In 1951 she married for the third time in a sold-out baseball stadium in Washington, D.C., playing electric guitar from the outfield."
+  verdict: confirmed
+  sources:
+    - {title: "PBS American Masters: Timeline, the years of Sister Rosetta Tharpe", url: "https://www.pbs.org/wnet/americanmasters/timeline-the-years-of-sister-rosetta-tharpe/2487/", quote: "Rosetta’s third wedding, to Russell Morrison. Staged at Griffith Stadium in Washington, DC, as a joint wedding-concert, the event attracts upwards of 20,000 paying fans, who cheer as bride plays electric guitar from center field."}
+    - {title: "Gayle Wald: Why We Keep Rediscovering the Flamboyant Godmother of Rock", url: "https://whatitmeanstobeamerican.org/encounters/why-we-keep-rediscovering-the-flamboyant-godmother-of-rock/", quote: "in the early 1950s she staged her own wedding—her third—in a sold-out ceremony/concert in a Washington, D.C. baseball stadium, playing electric guitar from the outfield while wearing a white wedding gown."}
+  note: "PBS: upwards of 20,000 paying fans at Griffith Stadium, guitar from center field; Smithsonian: sold-out, outfield."
+- card: rosetta-tharpe
+  fact: "In 1964 she toured Britain with the American Folk, Blues and Gospel Caravan, alongside Muddy Waters."
+  verdict: confirmed
+  sources:
+    - {title: "PBS American Masters: Timeline, the years of Sister Rosetta Tharpe", url: "https://www.pbs.org/wnet/americanmasters/timeline-the-years-of-sister-rosetta-tharpe/2487/", quote: "1964 – British tour with the American Folk, Blues, and Gospel Caravan ... The lineup includes Muddy Waters, Chess pianist Otis Spann, and the duo Sonny Terry and Brownie McGhee."}
+    - {title: "Gayle Wald: Why We Keep Rediscovering the Flamboyant Godmother of Rock", url: "https://whatitmeanstobeamerican.org/encounters/why-we-keep-rediscovering-the-flamboyant-godmother-of-rock/", quote: "the American Folk, Blues, and Gospel Caravan, which traveled Britain and Europe in spring 1964, showcasing Tharpe along with the likes of bluesmen Sonny Terry, Brownie McGhee, and Muddy Waters."}
+- card: rosetta-tharpe
+  fact: "She died in Philadelphia in 1973."
+  verdict: confirmed
+  sources:
+    - {title: "PBS American Masters: Timeline, the years of Sister Rosetta Tharpe", url: "https://www.pbs.org/wnet/americanmasters/timeline-the-years-of-sister-rosetta-tharpe/2487/", quote: "1973 – Rosetta suffers a stroke and dies at Temple University Hospital in Philadelphia, on October 9."}
+    - {title: "Encyclopedia of Arkansas: Sister Rosetta Tharpe", url: "https://encyclopediaofarkansas.net/entries/sister-rosetta-tharpe-1781/", quote: "Tharpe continued to tour and perform until her death in Philadelphia, Pennsylvania, on October 9, 1973."}
+- card: saint-georges
+  fact: "Joseph Bologne was born in Guadeloupe to a French planter and an enslaved woman, Nanon, and was taken to France as a child."
+  verdict: confirmed
+  sources:
+    - {title: "Handel and Haydn Society: Joseph Bologne", url: "https://handelandhaydn.org/joseph-bologne-chevalier-de-saint-georges-through-the-years/", quote: "his birth to an enslaved mother, Nanon, on the Caribbean island of Basse-Terre, part of the French colony of Guadeloupe. ... Soon the family was forced to flee to France"}
+    - {title: "BBC Music Magazine: Paul Riley on Joseph Bologne", url: "https://www.classical-music.com/features/composers/bologne-joseph", quote: "Born in Guadeloupe ... to a French colonial plantation owner, George Bologne de Saint-Georges, ... and his mistress, a young Senegalese slave, Joseph was taken to Paris at an early age to acquire the education of a gentleman."}
+    - {title: "Boston Public Library: Joseph Bologne, Chevalier de Saint-Georges", url: "https://www.bpl.org/blogs/post/joseph-bologne-chevalier-de-saint-georges/", quote: "His father was the French plantation owner George de Bologne Saint‐Georges and his mother was the enslaved African woman known as Nanon. In 1748, the young Bologne's father went back to France and brought along not only his wife but Joseph and his mother"}
+  note: "The mother's name Nanon is in Handel and Haydn only; BBC Music Magazine calls her a young Senegalese slave without a name. Added the Boston Public Library biography (names Nanon) to the card."
+- card: saint-georges
+  fact: "Proposed as director of the Paris Opéra, he was blocked when singers objected, partly on racial grounds, to working under him, and he did not get the post."
+  verdict: confirmed
+  sources:
+    - {title: "Handel and Haydn Society: Joseph Bologne", url: "https://handelandhaydn.org/joseph-bologne-chevalier-de-saint-georges-through-the-years/", quote: "he was put forward as a proposed music director of the Paris Opéra, where four leading female singers petitioned Marie Antoinette to prevent them from having to “submit to the orders of a mulatto.” He was denied the job"}
+    - {title: "BBC Music Magazine: Paul Riley on Joseph Bologne", url: "https://www.classical-music.com/features/composers/bologne-joseph", quote: "The directorship of the Paris Opéra was up for grabs, and to many he was the obvious candidate. ... Partly racially motivated, and perhaps fearful too at how a new broom might sweep clean, a small cabal within the company objected and Bologne withdrew."}
+- card: saint-georges
+  fact: "He was imprisoned during the Terror, survived, and died in Paris in 1799."
+  verdict: confirmed
+  sources:
+    - {title: "Handel and Haydn Society: Joseph Bologne", url: "https://handelandhaydn.org/joseph-bologne-chevalier-de-saint-georges-through-the-years/", quote: "Bologne was imprisoned the following year during the deadly paranoia of the Reign of Terror. ... before dying of an infection in 1799."}
+    - {title: "BBC Music Magazine: Paul Riley on Joseph Bologne", url: "https://www.classical-music.com/features/composers/bologne-joseph", quote: "he endured lengthy imprisonment – only escaping Madame La Guillotine by a whisker. ... Bologne died in Paris in 1799 of a bladder infection."}
+- card: saint-georges
+  fact: "The Paris Opéra episode was in 1776; after losing the post he went on to write operas of his own."
+  verdict: confirmed
+  sources:
+    - {title: "Handel and Haydn Society: Joseph Bologne", url: "https://handelandhaydn.org/joseph-bologne-chevalier-de-saint-georges-through-the-years/", quote: "In 1776, for instance, he was put forward as a proposed music director of the Paris Opéra ... He was denied the job, but went on to write operas independently"}
+    - {title: "BBC Music Magazine: Paul Riley on Joseph Bologne", url: "https://www.classical-music.com/features/composers/bologne-joseph", quote: "if in 1776 Bologne seemed on the crest of a wave, a squall was brewing. The directorship of the Paris Opéra was up for grabs ... It must have left a bad taste, but it didn’t put him off opera. ... Produced in 1777, Ernestine (a one-night-wonder) signalled his first foray onto an operatic stage"}
+- card: slavevoyages
+  fact: "SlaveVoyages was led among others by the historian David Eltis of Emory University; the 2008 website covered nearly 35,000 voyages."
+  verdict: confirmed
+  sources:
+    - {title: "Emory Report: Slave trade database goes online (24 November 2008)", url: "https://news.emory.edu/emory-report-archive/erarchive/2008/November/Nov24/SlaveTradeDatabase.htm", quote: "“‘Voyages’ provides searchable information on almost 35,000 trans-Atlantic voyages hauling human cargo, as well as maps, images and data on some individual Africans transported,” says Eltis."}
+    - {title: "Associated Press via Lawrence Journal-World: Database catalogs slaves' trans-Atlantic treks", url: "https://www2.ljworld.com/news/2008/dec/06/database-catalogs-slaves-trans-atlantic-treks/", quote: "said Emory history professor David Eltis, who helped direct the project. ... includes searchable information on nearly 35,000 trips"}
+  note: "Emory Report and the Lawrence Journal-World (AP)."
+- card: slavevoyages
+  fact: "African Origins uses the Africans' own names to help trace their homelands."
+  verdict: confirmed
+  sources:
+    - {title: "Nicholas Radburn, USC Dornsife (2017)", url: "https://dornsife.usc.edu/news/stories/a-digital-archive-of-slave-voyages-details-the-largest-forced-migration-in-history/", quote: "By combining those names with information from Voyages on liberated Africans’ ports of origin, the Origins website aims to better understand the homelands from which enslaved people came."}
+    - {title: "Associated Press via Lawrence Journal-World: Database catalogs slaves' trans-Atlantic treks", url: "https://www2.ljworld.com/news/2008/dec/06/database-catalogs-slaves-trans-atlantic-treks/", quote: "because the database lists the slaves’ African names — which were later Westernized — researching an ancestor by name is difficult."}
+- card: slavevoyages
+  fact: "In 2025 Harvard's Hutchins Center announced that SlaveVoyages, with all its databases, would make its permanent home at Harvard."
+  verdict: confirmed
+  sources:
+    - {title: "Harvard Gazette: Slave trade database moving to Harvard (April 2025)", url: "https://news.harvard.edu/gazette/story/2025/04/slave-trade-database-moving-to-harvard/", quote: "Word of the project’s upcoming move was shared recently by Henry Louis Gates Jr., ... director of the Hutchins Center for African & African American Research."}
+    - {title: "Harvard Crimson: Initiative to Digitize Records of Slave Trade Will Move to Harvard (28 April 2025)", url: "https://www.thecrimson.com/article/2025/4/28/slavevoyages-research-moves-to-harvard/", quote: "“I’m pleased to tell you today that the SlaveVoyages site, with all of its databases, will live in perpetuity here at Harvard University,” Gates announced"}
+  note: "Harvard Gazette (the university's news office) and The Harvard Crimson (independent student paper): same campus, separate editorial lines."
+- card: sojourner-truth
+  fact: "Sojourner Truth was born Isabella in 1797, enslaved in Dutch-speaking Ulster County, New York."
+  verdict: confirmed
+  sources:
+    - {title: "National Park Service: Sojourner Truth", url: "https://www.nps.gov/articles/sojourner-truth.htm", quote: "Born into slavery in 1797, Isabella Baumfree, who later changed her name to Sojourner Truth"}
+    - {title: "National Women's History Museum: Sojourner Truth", url: "https://www.womenshistory.org/education-resources/biographies/sojourner-truth", quote: "Born Isabella Bomfree in 1797 in Dutch-speaking Ulster County, New York, she grew up enslaved by multiple owners."}
+- card: sojourner-truth
+  fact: "She walked away from slavery and in 1843 took the name Sojourner Truth to preach."
+  verdict: confirmed
+  sources:
+    - {title: "National Park Service: Sojourner Truth", url: "https://www.nps.gov/articles/sojourner-truth.htm", quote: "“I did not run away, I walked away by daylight….” After experiencing a religious conversion, Isabella became an itinerant preacher and in 1843 changed her name to Sojourner Truth."}
+    - {title: "National Women's History Museum: Sojourner Truth", url: "https://www.womenshistory.org/education-resources/biographies/sojourner-truth", quote: "In 1843, she declared that the Spirit had called her to preach the truth, renaming herself Sojourner Truth."}
+- card: sojourner-truth
+  fact: "Gage's 1863 version became the famous one and is still reprinted."
+  verdict: confirmed
+  sources:
+    - {title: "Library of Congress, Headlines & Heroes: Sojourner Truth's most famous speech (2021)", url: "https://blogs.loc.gov/headlinesandheroes/2021/04/sojourner-truths-most-famous-speech/", quote: "Twelve years passed before the more famous version of Truth’s speech appeared ... In 1972, Gage’s version was presented without dialect by Miriam Schneir in her Feminism: The Essential Historical Writings and such versions continue to appear to the present."}
+    - {title: "The Sojourner Truth Project: Compare the speeches", url: "https://www.thesojournertruthproject.com/compare-the-speeches", quote: "The most common yet inaccurate rendering of Truth's speech—the one that introduced the famous phrase \"Ar'n't I a woman?\"—was constructed by Frances Dana Gage"}
+- card: sojourner-truth
+  fact: "Truth went on speaking for abolition and women's rights and died in Battle Creek, Michigan, in 1883."
+  verdict: confirmed
+  sources:
+    - {title: "National Park Service: Sojourner Truth", url: "https://www.nps.gov/articles/sojourner-truth.htm", quote: "She continued to speak out for the rights of African Americans and women during and after the Civil War. ... Sojourner Truth died in Battle Creek, Michigan, in 1883."}
+    - {title: "Library of Congress, Headlines & Heroes: Sojourner Truth's most famous speech (2021)", url: "https://blogs.loc.gov/headlinesandheroes/2021/04/sojourner-truths-most-famous-speech/", quote: "Gage’s account, as well as Stowe’s profile, added to Truth’s fame while she continued to lecture until 1880. There were many obituaries following Sojourner Truth’s death on November 26, 1883"}
+- card: sojourner-truth
+  fact: "She left slavery with her infant daughter, and in 1828 won a court fight in New York to bring back her son Peter, who had been sold into slavery in Alabama."
+  verdict: confirmed
+  sources:
+    - {title: "Associated Press via Christian Science Monitor: This is Sojourner Truth, new documents reveal more to her story (15 June 2022)", url: "https://www.csmonitor.com/USA/2022/0615/This-is-Sojourner-Truth-New-documents-reveal-more-to-her-story", quote: "In 1828, years before she took the name Sojourner Truth, a Black woman who had escaped slavery with her infant daughter won a court fight in New York’s Hudson Valley to bring her son, Peter, home from Alabama."}
+    - {title: "National Women's History Museum: Sojourner Truth", url: "https://www.womenshistory.org/education-resources/biographies/sojourner-truth", quote: "Truth fled with only her infant daughter, Sophia ... With the support of the Van Wagenens, Truth successfully sued for the return of her five-year-old son, Peter. After a year-long legal battle, a judge of the Ulster County Courthouse ruled in her favor"}
+    - {title: "New York Almanack: Sojourner Truth's groundbreaking 1828 court case (2025)", url: "https://www.newyorkalmanack.com/2025/03/sojourner-truth-1828-court-case/", quote: "In 1828, Sojourner Truth, then known as Isabella Van Wagenen, sued for and won the freedom of her young son, Peter, from bondage."}
+  note: "CSM carries the AP report; NWHM gives the infant daughter, Peter's illegal sale to Alabama and the won suit, but not the year. Added New York Almanack (1828, sued for and won Peter's freedom) to the card."
+- card: spirituals
+  fact: "In 1873 the Fisk Jubilee Singers sang for Queen Victoria."
+  verdict: confirmed
+  sources:
+    - {title: "National Geographic: The Fisk Jubilee Singers", url: "https://www.nationalgeographic.com/history/article/the-fisk-jubilee-singers-amazing-story-from-slavery-to-stardom", quote: "A large portrait of the original Singers (background) was a gift from Queen Victoria following a command performance for Her Majesty in 1873."}
+    - {title: "PBS American Experience: Jubilee Singers", url: "https://www.pbs.org/wgbh/americanexperience/films/singers/", quote: "Only one day after their London debut, the singers were astonished to find themselves performing before none other than Queen Victoria herself."}
+- card: spirituals
+  fact: "The Jubilee Singers' money saved Fisk University and built Jubilee Hall, which still stands on the campus."
+  verdict: confirmed
+  sources:
+    - {title: "Fisk University: History", url: "https://www.fisk.edu/about/history/", quote: "raised funds that preserved their University and permitted construction of Jubilee Hall, the South's first permanent structure built for the education of black students. As a designated National Historical Landmark, today, Jubilee Hall remains the dramatic focal point of Fisk's campus."}
+    - {title: "PBS American Experience: Jubilee Singers", url: "https://www.pbs.org/wgbh/americanexperience/films/singers/", quote: "The singers who returned to Nashville were honored by Fisk for raising over one hundred and sixty-thousand dollars to complete Jubilee Hall, and save their school."}
+    - {title: "National Geographic: The Fisk Jubilee Singers", url: "https://www.nationalgeographic.com/history/article/the-fisk-jubilee-singers-amazing-story-from-slavery-to-stardom", quote: "They introduced Black spirituals to the world—and saved their university from financial ruin."}
+- card: steelpan
+  fact: "Trinidad's British colonial authorities banned drumming, people turned to tamboo bamboo, and when bamboo too was banned, oil drums followed."
+  verdict: confirmed
+  sources:
+    - {title: "Oxford Business Group: The story of the steel drum in Trinidad and Tobago (2015)", url: "https://oxfordbusinessgroup.com/reports/trinidad-tobago/2015-report/economy/the-story-of-the-steel-drum-in-trinidad-and-tobago", quote: "This was followed by a ban on the unlicensed playing of all percussion, string and wood-wind instruments. In one of the initial attempts to circumvent the ban, local residents innovated by creating the Tamboo-Bamboo ... by the 1930s it too was banned, triggering a new wave of musical innovation."}
+    - {title: "Discover Trinidad and Tobago: The steelpan", url: "https://www.discovertnt.com/articles/Trinidad/Steelbands/136/3/19", quote: "When the colonial government banned drumming, bamboo branches were used in what came to be known as tambu bamboo bands. During World War II, the government banned both tambu bamboo and Carnival."}
+  note: "Oxford Business Group and Discover Trinidad & Tobago (tourism board); both describe the drum ban, tamboo bamboo and its later ban."
+- card: stolen-legacy
+  fact: "The Egyptian 'mystery system' in Stolen Legacy derives from Masonic lore traced by scholars to an eighteenth-century French novel, the Abbé Terrasson's Sethos."
+  verdict: corrected
+  sources:
+    - {title: "Bryn Mawr Classical Review 1996.05.07: Lawrence Tritle on Lefkowitz", url: "https://bmcr.brynmawr.edu/1996/1996.05.07", quote: "Lefkowitz rejects James’ argument that there was any sort of a universal “Egyptian mystery system.” ... The discussion of “Egyptian mysteries” leads to one detailing the emergence of Masonic rituals and beliefs from the French Enlightenment work Sethos published by the Abbé J. Terrasson"}
+    - {title: "Thomas G. Palaima, review of Not Out of Africa, National Review, 25 March 1996", url: "https://sites.utexas.edu/scripts/files/2020/06/1996-TGP-revNotOutOfAfrica.pdf", quote: "myth of Egypt as the fons et origo of all European learning and culture was invented in the eighteenth century in a popular Bildungsroman ... By tracing an intellectual pedigree from Terrasson through Blyden, Du Bois, and Garvey to James"}
+  note: "Both sources are reviews of one book, Lefkowitz's Not Out of Africa, so the Terrasson genealogy rests on a single scholar. The card said 'scholars trace'; it now attributes the tracing to Lefkowitz, which the two independent reviews confirm."
+- card: stolen-legacy
+  fact: "Stolen Legacy became an important text of the Afrocentric movement."
+  verdict: confirmed
+  sources:
+    - {title: "Thomas G. Palaima, review of Not Out of Africa, National Review, 25 March 1996", url: "https://sites.utexas.edu/scripts/files/2020/06/1996-TGP-revNotOutOfAfrica.pdf", quote: "the entire Afrocentrist intellectual movement of which Stolen Legacy is an important component"}
+    - {title: "Bryn Mawr Classical Review 1996.05.07: Lawrence Tritle on Lefkowitz", url: "https://bmcr.brynmawr.edu/1996/1996.05.07", quote: "Lefkowitz refutes the Afrocentric assertion that the Greeks “stole” their philosophy from Egypt, a point made most famous in G. James’ Stolen Legacy."}

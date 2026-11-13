@@ -24,6 +24,7 @@ sources:
   - {title: "Narrative of Sojourner Truth (1850), Documenting the American South", url: "https://docsouth.unc.edu/neh/truth50/truth50.html"}
   - {title: "National Women's History Museum: Sojourner Truth", url: "https://www.womenshistory.org/education-resources/biographies/sojourner-truth"}
   - {title: "Associated Press via Christian Science Monitor: This is Sojourner Truth, new documents reveal more to her story (15 June 2022)", url: "https://www.csmonitor.com/USA/2022/0615/This-is-Sojourner-Truth-New-documents-reveal-more-to-her-story"}
+  - {title: "New York Almanack: Sojourner Truth's groundbreaking 1828 court case (2025)", url: "https://www.newyorkalmanack.com/2025/03/sojourner-truth-1828-court-case/"}
 media:
   - {"type": "image", "file": "sojourner-truth.jpg", "caption": "Sojourner Truth, photograph, 1864: “I sell the shadow to support the substance”", "credit": "Library of Congress, Rare Book and Special Collections Division, Alfred Whital Stern Collection of Lincolniana", "license": "Public domain", "url": "https://www.loc.gov/item/scsm000880/"}
 ---

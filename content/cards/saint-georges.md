@@ -15,6 +15,7 @@ further:
   - "Haydn, Symphonies Nos. 82-87 (the Paris symphonies)"
 sources:
   - {title: "Handel and Haydn Society: Joseph Bologne", url: "https://handelandhaydn.org/joseph-bologne-chevalier-de-saint-georges-through-the-years/"}
+  - {title: "Boston Public Library: Joseph Bologne, Chevalier de Saint-Georges", url: "https://www.bpl.org/blogs/post/joseph-bologne-chevalier-de-saint-georges/"}
   - {title: "BBC Music Magazine: Paul Riley on Joseph Bologne", url: "https://www.classical-music.com/features/composers/bologne-joseph"}
   - {title: "Warwick Lister: The First Performance of Haydn’s Paris Symphonies, Eighteenth-Century Music", url: "https://www.cambridge.org/core/journals/eighteenth-century-music/article/abs/the-first-performance-of-haydns-paris-symphonies/9A97AFA6AFAB74C1511D9121DEFF8035"}
   - {title: "Philharmonie de Paris: Haydn Symphony No. 84 programme notes", url: "https://pad.philharmoniedeparis.fr/download.ashx?id=CMTN000339500_01&typedoc=CMTN"}
