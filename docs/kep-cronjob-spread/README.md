@@ -69,9 +69,11 @@ herd:
 
 - the CronJob controller has to create N Jobs and update N CronJob statuses at
   once; its client-side rate limit turns this into an uncontrolled, unfair
-  queue — measured on a v1.35 cluster, 800 CronJobs at `40 * * * *` produced
-  Jobs over 94 seconds, the median Job 46 seconds late
-  ([evidence](evidence.md));
+  queue — 1000 CronJobs on one schedule produced their Jobs over 119 seconds,
+  the median Job 58 seconds and the last 118 seconds late, with the same
+  numbers on a hosted v1.35 cluster and on an isolated v1.37 control plane
+  ([evidence](evidence.md)); the pace is set by the controller's client rate
+  limit, not by the cluster;
 - the Job controller, the scheduler and the kubelets then receive N Pods within
   the same window; image pulls, sandbox creation and the workloads themselves
   (backups, report generation, cache warmers, calls to shared external APIs)
@@ -663,7 +665,7 @@ with the chosen time persisted in status.
 ### Controller rate limiting / a global concurrency cap
 
 The CronJob controller's client rate limit already serializes the herd, but
-unfairly (the measured median Job was 46 s late, the last 94 s) and without
+unfairly (the measured median Job was 58 s late, the last 118 s) and without
 predictability. A cap across CronJobs addresses resource usage of running
 Jobs, not the creation burst; it is complementary (see #138569).
 
