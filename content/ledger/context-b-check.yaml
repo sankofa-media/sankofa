@@ -1,0 +1,675 @@
+# Second, independent check of content/ledger/context-b.yaml.
+# Every cited page was fetched again (curl; archive.org snapshots for CDC, Time,
+# OpenEdition and the Saturday Evening Post) and each quote was located in the page text.
+# Sources from one publisher, or resting on one account, are counted once.
+# Card bodies (EN and RU) were also read against these sources and against claims
+# outside the ledger (see "unledgered" below).
+checkedAt: "2026-11-13"
+summary:
+  entriesChecked: 101
+  confirmed: 91
+  corrected: 10
+claims:
+- card: jerry-lawson
+  fact: "Before the Channel F, home consoles played only the games built into them"
+  verdict: confirmed
+  sources:
+    - {title: "The Henry Ford: The F Stands for Fun, Jerry Lawson and the Fairchild Channel F (2021)", url: "https://www.thehenryford.org/explore/blog/jerry-lawson-and-the-fairchild-channel-f-video-entertainment-system", quote: "Until the invention of the video game cartridge, home video games were built directly onto the ROM storage and soldered permanently onto the main circuit board."}
+    - {title: "The Washington Post via Bangor Daily News: Gerald Lawson, engineer whose innovation changed video games, dies at 70 (2011)", url: "https://www.bangordailynews.com/2011/04/25/news/gerald-lawson-engineer-whose-innovation-changed-video-games-dies-at-70/", quote: "Unlike other units whose games were preprogrammed by the manufacturer, the Fairchild Channel F enabled players to switch cartridges"}
+  note: "Both state pre-cartridge consoles had games built in."
+- card: jerry-lawson
+  fact: "Around 1980 Lawson left Fairchild and founded Video Soft (Videosoft), which made software for the Atari 2600"
+  verdict: confirmed
+  sources:
+    - {title: "The Henry Ford: The F Stands for Fun, Jerry Lawson and the Fairchild Channel F (2021)", url: "https://www.thehenryford.org/explore/blog/jerry-lawson-and-the-fairchild-channel-f-video-entertainment-system", quote: "Around 1980, Lawson left Fairchild to form Videosoft (ironically, a company dedicated to producing games and software for Atari)"}
+    - {title: "The Washington Post via Bangor Daily News: Gerald Lawson, engineer whose innovation changed video games, dies at 70 (2011)", url: "https://www.bangordailynews.com/2011/04/25/news/gerald-lawson-engineer-whose-innovation-changed-video-games-dies-at-70/", quote: "After leaving Fairchild in 1980, he launched Videosoft, a Santa Clara-based company that developed software for the Atari 2600 gaming system"}
+  note: "Henry Ford says around 1980, the Post obituary 1980; card says around 1980."
+- card: jerry-lawson
+  fact: "In March 2011 the IGDA's Minority Special Interest Group honoured him, and he died in April 2011"
+  verdict: confirmed
+  sources:
+    - {title: "The Strong National Museum of Play: Collection documents the career of video game pioneer Jerry Lawson", url: "https://www.museumofplay.org/blog/collection-documents-the-career-of-video-game-pioneer-jerry-lawson/", quote: "Before he passed away in April 2011, the International Game Developers Association’s Minority Special Interest Group honored him for his contributions to the gaming industry."}
+    - {title: "The Washington Post via Bangor Daily News: Gerald Lawson, engineer whose innovation changed video games, dies at 70 (2011)", url: "https://www.bangordailynews.com/2011/04/25/news/gerald-lawson-engineer-whose-innovation-changed-video-games-dies-at-70/", quote: "In March, Lawson was honored by the International Game Developers Association’s Minority Special Interest Group at the Game Developers Conference in San Francisco."}
+    - {title: "Vintage Computing and Gaming: Jerry Lawson (1940-2011)", url: "https://www.vintagecomputing.com/index.php/archives/755", quote: "The IGDA honored Lawson’s contributions to the industry during an informal session at this year’s Game Developer’s Conference on March 4th, 2011."}
+  note: "Strong gives April 2011 death and the IGDA honour; the Post obituary and Vintage Computing (March 4, 2011, GDC) give March."
+- card: jerry-lawson
+  fact: "The interchangeable cartridge transformed the industry and was carried on in later consoles"
+  verdict: confirmed
+  sources:
+    - {title: "The Strong National Museum of Play: Collection documents the career of video game pioneer Jerry Lawson", url: "https://www.museumofplay.org/blog/collection-documents-the-career-of-video-game-pioneer-jerry-lawson/", quote: "The Channel F’s removable game cartridges transformed the industry"}
+    - {title: "The Henry Ford: The F Stands for Fun, Jerry Lawson and the Fairchild Channel F (2021)", url: "https://www.thehenryford.org/explore/blog/jerry-lawson-and-the-fairchild-channel-f-video-entertainment-system", quote: "the programmable and interchangeable video game cartridge, which continues to be adapted into modern gaming systems."}
+- card: jerry-lawson
+  fact: "Video Soft's one official release was the Color Bar Generator, a utility cartridge for television repair"
+  verdict: corrected
+  sources:
+    - {title: "The Henry Ford: The F Stands for Fun, Jerry Lawson and the Fairchild Channel F (2021)", url: "https://www.thehenryford.org/explore/blog/jerry-lawson-and-the-fairchild-channel-f-video-entertainment-system", quote: "but only one cartridge found official release: a technical tool for television repair called “Color Bar Generator.”"}
+    - {title: "The Strong National Museum of Play: Collection documents the career of video game pioneer Jerry Lawson", url: "https://www.museumofplay.org/blog/collection-documents-the-career-of-video-game-pioneer-jerry-lawson/", quote: "In 1984, the company released its novel Color Bar Generator utility cartridge for the Atari 2600."}
+  note: "Only Henry Ford says it was the sole official release; Strong says the company released the Color Bar Generator in 1984. Card now says Video Soft released it, without 'one official release'."
+- card: jerry-lawson
+  fact: "He died in April 2011, aged 70, of complications of diabetes"
+  verdict: confirmed
+  sources:
+    - {title: "The Washington Post via Bangor Daily News: Gerald Lawson, engineer whose innovation changed video games, dies at 70 (2011)", url: "https://www.bangordailynews.com/2011/04/25/news/gerald-lawson-engineer-whose-innovation-changed-video-games-dies-at-70/", quote: "Lawson, who lived in Santa Clara, Calif., died April 9 of complications of diabetes in El Camino Hospital in Mountain View"}
+    - {title: "Vintage Computing and Gaming: Jerry Lawson (1940-2011)", url: "https://www.vintagecomputing.com/index.php/archives/755", quote: "Jerry Lawson died Saturday morning, April 9th, 2011, at the age of 70."}
+  note: "Post obituary (via Bangor Daily News) and Vintage Computing quoting the NYT obituary: independent."
+- card: juan-latino
+  fact: "He married Ana de Carleval (Carlobal/Carloval), a woman of a noble Granada family"
+  verdict: confirmed
+  sources:
+    - {title: "Cambridge University Library: Juan Latino", url: "https://languagecollections-blog.lib.cam.ac.uk/2020/07/10/juan-latino-16th-century-afro-spaniard-freed-slave-poet-and-latin-professor", quote: "Latino married a noble woman, Ana de Carleval"}
+    - {title: "BlackPast.org: Juan Latino (ca. 1518–ca. 1594)", url: "https://www.blackpast.org/global-african-history/latino-juan-c-1518-c-1594/", quote: "gave him access to the best houses in Granada where he found his wife Ana Carlobal."}
+    - {title: "Eduardo Soler Fiérrez, Juan Latino: biografía", url: "http://culturaypensamientodelospueblosnegros.com/juan-latino-biografia-esclavo-catedratico-granada/", quote: "Logró casarse con Ana de Carloval con la que tuvo cuatro hijos, una dama distinguida hija de un veinticuatro"}
+  note: "Three spellings of the surname; card uses Carleval."
+- card: juan-latino
+  fact: "With the backing of Archbishop Pedro Guerrero he became a Latin professor in Granada"
+  verdict: confirmed
+  sources:
+    - {title: "Cambridge University Library: Juan Latino", url: "https://languagecollections-blog.lib.cam.ac.uk/2020/07/10/juan-latino-16th-century-afro-spaniard-freed-slave-poet-and-latin-professor", quote: "The Archbishop of Granada, Pedro Guerrero appointed him to the professorship of Arts."}
+    - {title: "BlackPast.org: Juan Latino (ca. 1518–ca. 1594)", url: "https://www.blackpast.org/global-african-history/latino-juan-c-1518-c-1594/", quote: "Latino, with the help of his protector Archbishop Pedro Guerrero, took up his job as a lecturer in the Cathedral school."}
+  note: "Cambridge: professorship of Arts; BlackPast: lecturer in the Cathedral school, under Guerrero's protection."
+- card: juan-latino
+  fact: "He taught for decades"
+  verdict: confirmed
+  sources:
+    - {title: "University of Granada: ¿Quién fue Juan Latino?", url: "https://patrimonio.ugr.es/bien-inmaterial/quien-fue-juan-latino/", quote: "catedrático de Gramática y Lengua Latina de la Universidad de Granada, cargo que ostentó durante cuatro décadas."}
+    - {title: "Eduardo Soler Fiérrez, Juan Latino: biografía", url: "http://culturaypensamientodelospueblosnegros.com/juan-latino-biografia-esclavo-catedratico-granada/", quote: "se hizo un excelente maestro que ejerció durante muchos años, ya que fue muy longevo."}
+- card: juan-latino
+  fact: "He died an old man around (or after) 1594"
+  verdict: confirmed
+  sources:
+    - {title: "Cambridge University Library: Juan Latino", url: "https://languagecollections-blog.lib.cam.ac.uk/2020/07/10/juan-latino-16th-century-afro-spaniard-freed-slave-poet-and-latin-professor", quote: "Latino had a long academic career and died in old age ca. 1594."}
+    - {title: "BlackPast.org: Juan Latino (ca. 1518–ca. 1594)", url: "https://www.blackpast.org/global-african-history/latino-juan-c-1518-c-1594/", quote: "Latino died on an unknown date after 1594."}
+  note: "Cambridge ca. 1594, BlackPast after 1594; card says around 1594."
+- card: juan-latino
+  fact: "In 1652 a Spanish play (Diego Jiménez de Enciso) put his life on stage"
+  verdict: confirmed
+  sources:
+    - {title: "Cambridge University Library: Juan Latino", url: "https://languagecollections-blog.lib.cam.ac.uk/2020/07/10/juan-latino-16th-century-afro-spaniard-freed-slave-poet-and-latin-professor", quote: "Diego Jiménez de Enciso wrote a comedy based on Latino’s life (1652)."}
+    - {title: "BlackPast.org: Juan Latino (ca. 1518–ca. 1594)", url: "https://www.blackpast.org/global-african-history/latino-juan-c-1518-c-1594/", quote: "the black humanist himself became the object of literature in Diego Jiménez de Enciso’s play La famosa comedia the Juan Latino (1652)"}
+- card: kente
+  fact: "Kente is a cloth of what is now Ghana"
+  verdict: corrected
+  sources:
+    - {title: "North Carolina Museum of Art: Man’s Cloth in the Darkoro Yesre Pattern", url: "https://learn.ncartmuseum.org/artwork/mans-cloth-in-the-darkoro-yesre-certainly-one-day-you-will-laugh-pattern/", quote: "Kente cloth is a textile that originated in Ghana, West Africa, centuries ago."}
+    - {title: "SUNY Cortland: Kente Tradition Grows Stronger (12 March 2019)", url: "https://www2.cortland.edu/news/kente-tradition-grows-stronger", quote: "The traditional, woven kente cloth of Ghana, originally worn by royalty"}
+  note: "Sources say kente is a cloth of Ghana; the card opened 'the woven cloth of the Asante' while noting Ewe weaving next. Reworded to 'a woven cloth of what is now Ghana'."
+- card: kente
+  fact: "The finest kente was once reserved for Asante royalty"
+  verdict: confirmed
+  sources:
+    - {title: "North Carolina Museum of Art: Man’s Cloth in the Darkoro Yesre Pattern", url: "https://learn.ncartmuseum.org/artwork/mans-cloth-in-the-darkoro-yesre-certainly-one-day-you-will-laugh-pattern/", quote: "The finest, most intricate kente cloths were once reserved for Akan and Asante royalty."}
+    - {title: "SUNY Cortland: Kente Tradition Grows Stronger (12 March 2019)", url: "https://www2.cortland.edu/news/kente-tradition-grows-stronger", quote: "The traditional, woven kente cloth of Ghana, originally worn by royalty"}
+  note: "NCMA: Akan and Asante royalty; Cortland: originally worn by royalty."
+- card: kente
+  fact: "Bonwire is still the leading centre (capital) of kente weaving"
+  verdict: confirmed
+  sources:
+    - {title: "Bowers Museum: Kente Cloth and Naming Conventions", url: "https://bowers.org/index.php/collection/collections-blog/weaving-history-kente-cloth-and-naming-conventions-in-ghana", quote: "two brothers from the Ashanti village of Bonwire, which remains to date the capital of kente"}
+    - {title: "Touring Ghana: Bonwire Kente Weaving Village", url: "https://touringghana.com/bonwire-kente-weaving-village/", quote: "Bonwire (a leading town for the production of Kente in Ghana)"}
+  note: "Bowers Museum and Touring Ghana (tourism site, weaker); Bowers is the stronger source."
+- card: kente
+  fact: "Kente became a symbol of connection to Africa (pan-African identity) for Black Americans"
+  verdict: confirmed
+  sources:
+    - {title: "SUNY Cortland: Kente Tradition Grows Stronger (12 March 2019)", url: "https://www2.cortland.edu/news/kente-tradition-grows-stronger", quote: "serves as an important symbol for many African-Americans to highlight their connection to the African continent."}
+    - {title: "Bowers Museum: Kente Cloth and Naming Conventions", url: "https://bowers.org/index.php/collection/collections-blog/weaving-history-kente-cloth-and-naming-conventions-in-ghana", quote: "it has now been adopted as symbol of pan-African identity."}
+- card: liberia
+  fact: "In 1980 soldiers led by (Master Sergeant) Samuel Doe killed President William Tolbert"
+  verdict: confirmed
+  sources:
+    - {title: "Library of Congress Country Study, Liberia (1985), via GlobalSecurity: The April 12 Coup", url: "https://www.globalsecurity.org/military/library/report/1985/liberia_1_april12coup.htm", quote: "Led by Master Sergeant Samuel Kanyon Doe, they entered the Executive Mansion, where they killed Tolbert and 27 members of the president's security guard."}
+    - {title: "Encyclopedia of World Biography, via Encyclopedia.com: Samuel Kanyon Doe", url: "https://encyclopedia.com/people/history/african-history-biographies/samuel-kanyon-doe", quote: "They stormed the executive mansion and killed President Tolbert."}
+  note: "GlobalSecurity reproduces the 1985 Library of Congress country study; independent of the Encyclopedia.com biography."
+- card: liberia
+  fact: "The coup ended the rule of the True Whig Party, the party of the Americo-Liberian settler elite"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of World Biography, via Encyclopedia.com: Samuel Kanyon Doe", url: "https://encyclopedia.com/people/history/african-history-biographies/samuel-kanyon-doe", quote: "His seizure of power ended 110 years of rule by the True Whig Party"}
+    - {title: "Library of Congress Country Study, Liberia (1985), via GlobalSecurity: The April 12 Coup", url: "https://www.globalsecurity.org/military/library/report/1985/liberia_1_april12coup.htm", quote: "Several hundred government officials, politicians, and leaders of the True Whig Party were rounded up and were either detained or placed under house arrest."}
+  note: "Encyclopedia.com: ended 110 years of True Whig rule, Americo-Liberian dominance; LoC study: True Whig leaders detained, parties banned."
+- card: liberia
+  fact: "The Colonization Society's backers ranged from abolitionists to slaveholders who saw free Black people as a threat to slavery"
+  verdict: confirmed
+  sources:
+    - {title: "U.S. Department of State, Office of the Historian: Founding of Liberia, 1847", url: "https://history.state.gov/milestones/1830-1860/liberia", quote: "The motives for joining the society were vast as a range of people from abolitionists to slaveholders counted themselves members."}
+    - {title: "National Geographic: Were there sinister motives behind founding Liberia?", url: "https://www.nationalgeographic.com/history/article/liberia-america-colonial-history", quote: "They believed an African colony would remove those whose free status and abolitionist ideas might otherwise incite uprisings among the enslaved Black people of the South."}
+- card: liberia
+  fact: "The first settlers landed on swampy Sherbro Island, where many died of malaria"
+  verdict: confirmed
+  sources:
+    - {title: "U.S. Department of State, Office of the Historian: Founding of Liberia, 1847", url: "https://history.state.gov/milestones/1830-1860/liberia", quote: "They found shelter on Scherbo Island off the west coast of Africa, but many died from malaria."}
+    - {title: "National Geographic: Were there sinister motives behind founding Liberia?", url: "https://www.nationalgeographic.com/history/article/liberia-america-colonial-history", quote: "Sherbro Island proved swampy and insalubrious."}
+- card: mansa-musa
+  fact: "Mali was a West African empire rich in gold"
+  verdict: confirmed
+  sources:
+    - {title: "South African History Online: The Kingdom of Mali and the city of Timbuktu in the 14th century", url: "https://sahistory.org.za/article/summary-kingdom-mali-and-city-timbuktu-14th-century", quote: "gold flowing northward from the Bambuk and Bure goldfields"}
+    - {title: "Northwestern Magazine: A Golden Age, King Mansa Musa’s Reign", url: "https://magazine.northwestern.edu/features/caravans-of-gold-fragments-in-time/a-golden-age-king-mansa-musas-reign", quote: "traveling with an entourage that included 8,000 courtiers, 12,000 servants and 100 camel loads of pure gold."}
+- card: mansa-musa
+  fact: "Returning from Mecca, Musa brought scholars and an Andalusian architect, and Timbuktu gained the great Djinguereber (Djingareyber) mosque"
+  verdict: confirmed
+  sources:
+    - {title: "Northwestern Magazine: A Golden Age, King Mansa Musa’s Reign", url: "https://magazine.northwestern.edu/features/caravans-of-gold-fragments-in-time/a-golden-age-king-mansa-musas-reign", quote: "When the emperor returned from Mecca to Timbuktu, he brought back scholars and an Andalusian architect from Cairo to build a great mosque — Djinguereber"}
+    - {title: "South African History Online: The Kingdom of Mali and the city of Timbuktu in the 14th century", url: "https://sahistory.org.za/article/summary-kingdom-mali-and-city-timbuktu-14th-century", quote: "Returning from Mecca, Musa brought with him the Andalusian-Egyptian poet and architect Abu Ishaq al-Sahili"}
+  note: "Northwestern names Djinguereber and the Andalusian architect; SAHO names al-Sahili and dates Djingareyber c. 1327."
+- card: mansa-musa
+  fact: "About twelve years later the price of gold in Egypt had still not recovered"
+  verdict: confirmed
+  sources:
+    - {title: "Boston University: al-Umari on Musa in Cairo", url: "https://www.bu.edu/africa/outreach/teachingresources/history/ancient-to-medieval-history/k_o_mali/", quote: "This has been the state of affairs for about twelve years until this day by reason of the large amount of gold which they brought into Egypt and spent there."}
+    - {title: "South African History Online: The Kingdom of Mali and the city of Timbuktu in the 14th century", url: "https://sahistory.org.za/article/summary-kingdom-mali-and-city-timbuktu-14th-century", quote: "triggering a currency devaluation that Egyptian sources recorded as lasting between ten and twelve years"}
+  note: "Both rest on al-Umari (BU quotes him directly); the card attributes the claim to al-Umari, so the shared primary is stated."
+- card: misogyny-in-hip-hop
+  fact: "Dr. Dre pleaded no contest to the assault charge"
+  verdict: confirmed
+  sources:
+    - {title: "NBC News: Apple responds after Dr. Dre's apology to women he's hurt (22 August 2015)", url: "https://www.nbcnews.com/pop-culture/celebrity/apple-responds-after-dr-dres-apology-women-hes-hurt-n414156", quote: "Dre pleaded no contest to a charge of assault and battery"}
+    - {title: "Dazed: Dr. Dre addresses Dee Barnes assault (2017)", url: "https://www.dazeddigital.com/music/article/36725/1/dr-dre-addresses-dee-barnes-assault", quote: "Dre pleaded no contest to misdemeanor battery"}
+  note: "NBC, Dazed and FACT independently report the no-contest plea."
+- card: misogyny-in-hip-hop
+  fact: "Barnes's lawsuit against Dre was settled out of court"
+  verdict: confirmed
+  sources:
+    - {title: "Dazed: Dr. Dre addresses Dee Barnes assault (2017)", url: "https://www.dazeddigital.com/music/article/36725/1/dr-dre-addresses-dee-barnes-assault", quote: "settled out of court with Barnes after she sued for $22 million."}
+    - {title: "FACT: Dr. Dre addresses Dee Barnes assault in The Defiant Ones (2017)", url: "https://factmag.com/2017/07/12/dr-dre-addresses-dee-barnes-assault-the-defiant-ones-hbo", quote: "Barnes reportedly sued for $22 million, with the case being settled out of court."}
+  note: "Dazed and FACT (separate publishers) both report an out-of-court settlement; FACT says 'reportedly'."
+- card: misogyny-in-hip-hop
+  fact: "Misogynoir means misogyny directed specifically at Black women"
+  verdict: confirmed
+  sources:
+    - {title: "Northwestern: Misogynoir enters Merriam-Webster", url: "https://news.northwestern.edu/stories/2023/05/professor-coins-new-word-misogynoir", quote: "to describe the specific type of oppression that Black women experience often characterized by a combination of racism and sexism."}
+    - {title: "Word Origins: misogynoir (2021)", url: "https://www.wordorigins.org/big-list-entries/misogynoir", quote: "a term for misogyny that is unique to or specifically directed at Black women."}
+- card: misogyny-in-hip-hop
+  fact: "The word misogynoir is now in dictionaries"
+  verdict: confirmed
+  sources:
+    - {title: "Northwestern: Misogynoir enters Merriam-Webster", url: "https://news.northwestern.edu/stories/2023/05/professor-coins-new-word-misogynoir", quote: "“Misogynoir” — the newest word included in Merriam-Webster’s dictionary — was coined by Northwestern’s School of Communication associate professor Moya Bailey."}
+    - {title: "Dictionary.com: misogynoir", url: "https://www.dictionary.com/browse/misogynoir", quote: "misogynoir ... noun the specific hatred, dislike, distrust, and prejudice directed toward Black women"}
+  note: "Northwestern: added to Merriam-Webster; Dictionary.com carries an entry."
+- card: misogyny-in-hip-hop
+  fact: "The Tip Drill video aired only on BET's late-night show Uncut"
+  verdict: corrected
+  sources:
+    - {title: "The Hilltop / HU News Service: Spelman says no to Nelly (2004)", url: "https://hunewsservice.com/?p=1355", quote: "which has only been approved to air on BET’s after-hours video program Uncut and local rap video shows due to its racy content."}
+    - {title: "Houston Chronicle: Female students spurn Nelly over explicit rap video", url: "https://www.chron.com/entertainment/music/article/female-students-spurn-nelly-over-explicit-rap-1973875.php", quote: "has become popular on BET's late night Uncut show."}
+  note: "HU News: approved to air on BET's Uncut and on local rap video shows, so 'aired only on Uncut' overreaches. Card now says BET aired it only on its late-night Uncut."
+- card: nanny-of-the-maroons
+  fact: "The Maroons were people who escaped slavery and formed free communities, Nanny's in the Blue Mountains"
+  verdict: confirmed
+  sources:
+    - {title: "National Library of Jamaica: The Maroons", url: "https://www.nlj.gov.jm/history-notes/The%20Maroons%20edited%20final.htm", quote: "The Jamaican Maroons are often described as enslaved Africans and persons of noticeable African descent who ran away or escaped from their masters or owners to acquire and preserve their freedom."}
+    - {title: "Colonial Williamsburg: Nanny, Slavery and Remembrance", url: "https://slaveryandremembrance.org/people/person/?id=PP023", quote: "In 1720, Nanny had become the leader of a maroon settlement, Nanny Town, located in the Blue Mountain region."}
+- card: nanny-of-the-maroons
+  fact: "In 1734 the British took Nanny Town"
+  verdict: confirmed
+  sources:
+    - {title: "National Library of Jamaica: The Maroons", url: "https://www.nlj.gov.jm/history-notes/The%20Maroons%20edited%20final.htm", quote: "In 1734, the English managed to capture a major Maroon settlement, Nanny Town"}
+    - {title: "Colonial Williamsburg: Nanny, Slavery and Remembrance", url: "https://slaveryandremembrance.org/people/person/?id=PP023", quote: "In 1734, British commander Stoddard destroyed Nanny Town"}
+- card: nanny-of-the-maroons
+  fact: "The treaties secured Maroon freedom and land but obliged the signers to turn back/return new runaways"
+  verdict: corrected
+  sources:
+    - {title: "AAIHS Black Perspectives: Freedom as Marronage as Anti-capitalism", url: "https://www.aaihs.org/freedom-as-marronage-as-anti-capitalism/", quote: "While grand marronage communities who signed the Treaty – which did not include Jamaican national hero Queen Nanny – attained a measure of recognized autonomy, in return they assented to repelling any new runaway slaves."}
+    - {title: "National Library of Jamaica: The Maroons", url: "https://www.nlj.gov.jm/history-notes/The%20Maroons%20edited%20final.htm", quote: "the flogging of two Maroons who were convicted of stealing pigs by a runaway slave they had returned to the authorities in adherence with one of the articles of the Treaties."}
+  note: "Treaty terms confirmed (NLJ quotes the land article and a returned runaway; AAIHS the obligation to repel runaways). The card joined them to Nanny's opposition with a colon, implying her motive; no source gives it. Split into a separate sentence."
+- card: nanny-of-the-maroons
+  fact: "The Moore Town Maroons honour Nanny as their leader"
+  verdict: confirmed
+  sources:
+    - {title: "National Library of Jamaica: The Maroons", url: "https://www.nlj.gov.jm/history-notes/The%20Maroons%20edited%20final.htm", quote: "another treaty was signed a year later by Nanny, perhaps the most celebrated leader of the Moore Town Maroons."}
+    - {title: "Jamaica Gleaner: Nanny was real, not a myth (2018)", url: "http://past.jamaica-gleaner.com/article/lead-stories/20181012/nanny-was-real-not-myth-govt-conferred-order-national-hero-nanny-1976", quote: "Nanny of the Maroon's resting place \"Bump Grave\" in Moore Town, Portland."}
+- card: nanny-of-the-maroons
+  fact: "After the British took Nanny Town in 1734, her people regrouped and settled anew"
+  verdict: confirmed
+  sources:
+    - {title: "EBSCO Research Starters: Nanny", url: "https://www.ebsco.com/research-starters/biography/nanny", quote: "British forces attacked and occupied Nanny Town in 1734, but Nanny and her followers regrouped in the jungle and soon formed Moore Town."}
+    - {title: "Colonial Williamsburg: Nanny, Slavery and Remembrance", url: "https://slaveryandremembrance.org/people/person/?id=PP023", quote: "The settlement that emerged on this land was dubbed New Nanny Town."}
+- card: nanny-of-the-maroons
+  fact: "Historians believe she lived into the 1750s"
+  verdict: confirmed
+  sources:
+    - {title: "EBSCO Research Starters: Nanny", url: "https://www.ebsco.com/research-starters/biography/nanny", quote: "Historians believe she lived until the 1750’s."}
+    - {title: "Colonial Williamsburg: Nanny, Slavery and Remembrance", url: "https://slaveryandremembrance.org/people/person/?id=PP023", quote: "Nanny likely died about 1750."}
+  note: "EBSCO: lived until the 1750s; Slavery and Remembrance: likely died about 1750. 'Into the 1750s' kept as EBSCO's wording with 'historians believe'."
+- card: nanny-of-the-maroons
+  fact: "Her grave, Bump Grave, is kept by the Maroons at Moore Town"
+  verdict: confirmed
+  sources:
+    - {title: "EBSCO Research Starters: Nanny", url: "https://www.ebsco.com/research-starters/biography/nanny", quote: "A monument was placed by her grave by Maroons in Moore Town."}
+    - {title: "Jamaica Gleaner: Nanny was real, not a myth (2018)", url: "http://past.jamaica-gleaner.com/article/lead-stories/20181012/nanny-was-real-not-myth-govt-conferred-order-national-hero-nanny-1976", quote: "Nanny of the Maroon's resting place \"Bump Grave\" in Moore Town, Portland."}
+- card: nardal-sisters
+  fact: "At the Clamart salon students from the French Caribbean and Africa (Senghor, Césaire) met Harlem Renaissance figures (Claude McKay, Alain Locke)"
+  verdict: corrected
+  sources:
+    - {title: "Marie-Adeline Tavares, Paulette Nardal aux sources de l'internationalisme noir", url: "https://laviedesidees.fr/IMG/pdf/20250527_nardal.pdf", quote: "étudiants à Paris, que sont Léopold Sédar Senghor ou encore Aimé Césaire, croisent les grandes figures de la Harlem Renaissance de passage en France comme Claude McKay, Alain Locke ou Countee Cullen."}
+    - {title: "Princeton University Library: La Revue du monde noir", url: "https://dpul.princeton.edu/surrealism-at-one-hundred/feature/la-revue-du-monde-noir", quote: "the Clamart Salon became the space of encounter between the intellectuals of the Negritude movement and those of the Harlem Renaissance"}
+    - {title: "Kariculture: 125 years ago, Paulette Nardal, pioneer of Negritude, was born in Martinique", url: "https://kariculture.net/en/?p=77449", quote: "Many black intellectuals of the time attended her flat : René Maran (who won the Prix Goncourt in 1921), Léon-Gontran Damas, Léopold Senghor, Aimé Césaire, Jean Price Mars, Claude MacKay, Marcus Garvey, Félix Éboué…"}
+  note: "La Vie des idées names Senghor, Césaire, McKay, Locke and Cullen at the Clamart Sundays; Princeton confirms Négritude-Harlem encounters there; Kariculture names Senghor, Césaire and McKay among visitors. Locke rests on one source and was dropped."
+- card: nardal-sisters
+  fact: "Césaire, Senghor and Léon-Gontran Damas went on to found Négritude"
+  verdict: confirmed
+  sources:
+    - {title: "Princeton University Library: La Revue du monde noir", url: "https://dpul.princeton.edu/surrealism-at-one-hundred/feature/la-revue-du-monde-noir", quote: "Aimé Césaire, Léopold Sédar Senghor , and Léon-Gontran Damas – the trio that would later be famously known as les Trois Pères of the Negritude movement"}
+    - {title: "Modernist Magazines: La Revue du monde noir", url: "https://modernistmagazines.org/european/la-revue-du-monde-noir/", quote: "three of whom would go on to found the Négritude movement: Aimé Césaire, Léopold Senghor, and Léon Damas"}
+- card: nardal-sisters
+  fact: "The women's contribution was long overlooked"
+  verdict: confirmed
+  sources:
+    - {title: "Modernist Magazines: La Revue du monde noir", url: "https://modernistmagazines.org/european/la-revue-du-monde-noir/", quote: "Her contributions to the Négritude movement, too, are often overlooked"}
+    - {title: "Marie-Adeline Tavares, Paulette Nardal aux sources de l'internationalisme noir", url: "https://laviedesidees.fr/IMG/pdf/20250527_nardal.pdf", quote: "l’effacement presque total d’une génération de femmes"}
+- card: nardal-sisters
+  fact: "Back in Martinique Paulette Nardal founded the Rassemblement féminin and a journal (La Femme dans la cité) for women about to vote for the first time"
+  verdict: confirmed
+  sources:
+    - {title: "Marie-Adeline Tavares, Paulette Nardal aux sources de l'internationalisme noir", url: "https://laviedesidees.fr/IMG/pdf/20250527_nardal.pdf", quote: "Rentrée à la Martinique en 1939, Paulette Nardal y fonde au sortir du second conflit mondial un périodique, La Femme dans la cité, et un mouvement d’incitation au vote des Martiniquaises, le Rassemblement féminin."}
+    - {title: "AAIHS Black Perspectives, Annette Joseph-Gabriel: The Legacy of Martinican Women in French Politics", url: "https://www.aaihs.org/?p=21977", quote: "In 1944, she founded the Rassemblement féminin (Feminine Rally)"}
+    - {title: "AAIHS Black Perspectives, Annette Joseph-Gabriel: The Legacy of Martinican Women in French Politics", url: "https://www.aaihs.org/?p=21977", quote: "Nardal therefore saw Woman in the City as an important platform from which to engage in pertinent and sometimes controversial conversations about the role that Martinican women would play as first-time voters"}
+- card: nardal-sisters
+  fact: "Paulette Nardal died in 1985"
+  verdict: confirmed
+  sources:
+    - {title: "Marie-Adeline Tavares, Paulette Nardal aux sources de l'internationalisme noir", url: "https://laviedesidees.fr/IMG/pdf/20250527_nardal.pdf", quote: "Paulette Nardal est d’ailleurs « largement inconnue en Martinique » lorsqu’elle meurt, le 16 février 1985."}
+    - {title: "Modernist Magazines: La Revue du monde noir", url: "https://modernistmagazines.org/european/la-revue-du-monde-noir/", quote: "Paulette Nardal (1896 – 1985)"}
+  note: "La Vie des idées gives 16 February 1985; Kariculture also gives 16 February 1985 in Fort-de-France."
+- card: nardal-sisters
+  fact: "In 1939, returning to France after a stay in Martinique, Paulette Nardal was badly injured when a German submarine torpedoed her ship, and she then settled in Martinique for good"
+  verdict: confirmed
+  sources:
+    - {title: "AAIHS Black Perspectives, Annette Joseph-Gabriel: The Legacy of Martinican Women in French Politics", url: "https://www.aaihs.org/?p=21977", quote: "Traveling in the opposite direction back to Paris after a short work-related stay in Martinique, Nardal experienced firsthand the violence of World War II when the ship was torpedoed by German submarines and sank off the English coast."}
+    - {title: "Kariculture: 125 years ago, Paulette Nardal, pioneer of Negritude, was born in Martinique", url: "https://kariculture.net/en/?p=77449", quote: "In 1939, Germany declared war on France, and Paulette Nardal, who was on holiday in her native island, decided to return to France but her boat was torpedoed, she was seriously injured and was treated in Plymouth, England."}
+  note: "AAIHS: torpedoed, rescued, permanent limp, nearly a year in hospital, then settled in Martinique; Kariculture: torpedoed, seriously injured, treated in Plymouth."
+- card: ngugi
+  fact: "Ngũgĩ criticised the elites/government of independent Kenya"
+  verdict: confirmed
+  sources:
+    - {title: "Daily Maverick / Reuters: Ngugi wa Thiong'o dies at 87 (2025)", url: "https://www.dailymaverick.co.za/article/2025-05-29-ngugi-wa-thiongo-kenyan-author-who-reckoned-with-colonial-legacy-dies-at-87.md", quote: "whose sharp criticisms of post-independence elites led to his jailing and two decades in exile"}
+    - {title: "NPR via WUSF: Ngũgĩ obituary", url: "https://www.wusf.org/2025-05-29/ngugi-wa-thiongo-kenyan-literary-giant-who-fought-colonialism-dies-at-87", quote: "the Kenyan writer and novelist who critiqued colonial rule as well as the post-colonial Kenyan government"}
+  note: "Daily Maverick (wire obituary) and WUSF/NPR."
+- card: ngugi
+  fact: "Harassed after his release, he went into exile in 1982"
+  verdict: confirmed
+  sources:
+    - {title: "The Star Kenya: Who was Ngũgĩ wa Thiong’o", url: "https://www.the-star.co.ke/news/2025-05-29-who-was-ngugi-wa-thiongo", quote: "Following his release from prison in December 1978, Ngũgĩ faced continued harassment"}
+    - {title: "Daily Maverick / Reuters: Ngugi wa Thiong'o dies at 87 (2025)", url: "https://www.dailymaverick.co.za/article/2025-05-29-ngugi-wa-thiongo-kenyan-author-who-reckoned-with-colonial-legacy-dies-at-87.md", quote: "He went into exile in 1982 after he said he had learnt of plans by President Daniel arap Moi’s security services to arrest and kill him."}
+- card: ngugi
+  fact: "He taught at the University of California, Irvine"
+  verdict: confirmed
+  sources:
+    - {title: "Daily Maverick / Reuters: Ngugi wa Thiong'o dies at 87 (2025)", url: "https://www.dailymaverick.co.za/article/2025-05-29-ngugi-wa-thiongo-kenyan-author-who-reckoned-with-colonial-legacy-dies-at-87.md", quote: "He became a professor of English and comparative literature at the University of California-Irvine."}
+    - {title: "NPR via WUSF: Ngũgĩ obituary", url: "https://www.wusf.org/2025-05-29/ngugi-wa-thiongo-kenyan-literary-giant-who-fought-colonialism-dies-at-87", quote: "Ngũgĩ eventually became a professor of comparative literature at the University of California, Irvine"}
+- card: ngugi
+  fact: "He returned to Kenya in 2004 after about twenty-two years in exile"
+  verdict: confirmed
+  sources:
+    - {title: "The Star Kenya: Who was Ngũgĩ wa Thiong’o", url: "https://www.the-star.co.ke/news/2025-05-29-who-was-ngugi-wa-thiongo", quote: "In 2004, Ngũgĩ returned to Kenya after more than two decades in exile."}
+    - {title: "Daily Maverick / Reuters: Ngugi wa Thiong'o dies at 87 (2025)", url: "https://www.dailymaverick.co.za/article/2025-05-29-ngugi-wa-thiongo-kenyan-author-who-reckoned-with-colonial-legacy-dies-at-87.md", quote: "After two decades in exile, he returned to Kenya in 2004"}
+  note: "The Star gives 22 years; BBC 2004 also says 22 years of exile; Daily Maverick 'two decades'."
+- card: ngugi
+  fact: "Days after his return in 2004, armed men broke into his Nairobi apartment and beat him and his wife; police called it a robbery, others a political attack"
+  verdict: corrected
+  sources:
+    - {title: "BBC News: Kenyan writer's wife was raped (2004)", url: "http://news.bbc.co.uk/2/hi/africa/3569480.stm", quote: "Four thieves broke into their apartment on Wednesday night armed with guns and a machete, beating up the couple, burning him with cigarettes and stealing money,"}
+    - {title: "The Star Kenya: Who was Ngũgĩ wa Thiong’o", url: "https://www.the-star.co.ke/news/2025-05-29-who-was-ngugi-wa-thiongo", quote: "However, his homecoming was tragically marred by a violent, politically charged attack on him and his second wife, Njeeri wa Ngũgĩ, in their Nairobi apartment."}
+    - {title: "BBC News: Renowned Kenyan author attacked (12 August 2004)", url: "http://news.bbc.co.uk/2/hi/africa/3558050.stm", quote: "Professor Thiong'o only returned to Kenya last month after 22 years in self-imposed exile."}
+  note: "Both BBC pages count as one publisher; The Star is the second source. BBC (12 Aug 2004) says he returned 'last month', so the attack came weeks, not days, after his return. 'Days later' changed to 'Within weeks'."
+- card: nollywood
+  fact: "The film came out of a time of economic hardship in Nigeria (late 1980s–early 1990s, structural adjustment)"
+  verdict: confirmed
+  sources:
+    - {title: "MUBI Notebook: Nollywood Unlimited and Living in Bondage", url: "https://mubi.com/en/notebook/posts/mubi-podcast-expanded-nollywood-unlimited-and-living-in-bondage", quote: "the film’s enduring narrative is rooted in the socio-economic problems of late 80s and early 90s Nigeria."}
+    - {title: "Africa Is a Country: Who started Nollywood? (2026)", url: "https://africasacountry.com/2026/09/who-started-nollywood", quote: "landed hard in a country deep in structural adjustment-era desperation, when stories of ritual money were part of the cultural air people breathed."}
+- card: nollywood
+  fact: "Plot: Andy Okeke joins an occult society, sacrifices his wife for wealth and is haunted by her ghost; stories of ritual money were current"
+  verdict: confirmed
+  sources:
+    - {title: "ThisDay: 'Living in Bondage', where new and old school meld (2019)", url: "https://www.thisdaylive.com/2019/10/26/living-in-bondage-where-new-and-old-school-meld", quote: "follows the story of an ambitious young man Andy Okeke (played by Kenneth Okonkwo) who sacrificed his wife to become wealthy."}
+    - {title: "MUBI Notebook: Nollywood Unlimited and Living in Bondage", url: "https://mubi.com/en/notebook/posts/mubi-podcast-expanded-nollywood-unlimited-and-living-in-bondage", quote: "Driven by greed, he joins the occult and sacrifices his wife as part of a money-making ritual."}
+    - {title: "Africa Is a Country: Who started Nollywood? (2026)", url: "https://africasacountry.com/2026/09/who-started-nollywood", quote: "a man who joins an occult society and sacrifices his wife for wealth, only to be haunted by what he’s done"}
+- card: nollywood
+  fact: "In 2019 a sequel, Living in Bondage: Breaking Free, was released in cinemas"
+  verdict: confirmed
+  sources:
+    - {title: "ThisDay: 'Living in Bondage', where new and old school meld (2019)", url: "https://www.thisdaylive.com/2019/10/26/living-in-bondage-where-new-and-old-school-meld", quote: "Nouah announced the remake had become a sequel now titled, Living in Bondage: Breaking Free."}
+    - {title: "MUBI Notebook: Nollywood Unlimited and Living in Bondage", url: "https://mubi.com/en/notebook/posts/mubi-podcast-expanded-nollywood-unlimited-and-living-in-bondage", quote: "its recent 2019 sequel Living in Bondage: Breaking Free"}
+  note: "ThisDay: cinema release 8 November; MUBI: 2019 sequel with a November 2019 theatrical release."
+- card: nollywood
+  fact: "In 2009 a UNESCO survey ranked Nigeria second in the world, ahead of Hollywood, by number of films produced, all on video"
+  verdict: confirmed
+  sources:
+    - {title: "UN News: Nigeria surpasses Hollywood as world's second largest film producer (2009)", url: "https://news.un.org/en/story/2009/05/299102-nigeria-surpasses-hollywood-worlds-second-largest-film-producer-un", quote: "Nigeria’s moviemakers, commonly known as Nollywood, came out with 872 productions – all in video format – while the United States produced 485 major films."}
+    - {title: "The Conversation: Nigeria isn't the world's second-biggest film industry after all (2014)", url: "https://theconversation.com/hooray-for-nollywood-nigeria-isnt-the-worlds-second-biggest-film-industry-after-all-25527", quote: "The event that kicked off the wave of international publicity was the 2009 publication of the UNESCO report analysis of the UIS International Survey on Feature Film Statistics."}
+  note: "UN News reports UNESCO's own release (the primary); The Conversation is independent and notes the ranking is by number of films. Card says 'by the number of films', which matches."
+- card: nsibidi
+  fact: "The Abakuá society is still active in Cuba today"
+  verdict: confirmed
+  sources:
+    - {title: "OnCuba Magazine: Chivo que rompe tambó, verdad y mito del abakuá", url: "https://oncubanews.com/informe/chivo-que-rompe-tambo-verdad-y-mito-del-abakua", quote: "Desde 2005, una Resolución dictada por el Ministerio de Justicia reconoce a la Asociación Abakuá de Cuba"}
+    - {title: "Ivor L. Miller, Abakuá, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/abakua", quote: "Abakuá consider their society to exist as a separate state within the nation, with their own language and laws."}
+- card: nsibidi
+  fact: "Elphinstone Dayrell was the British District Commissioner at Ikom, and his 1911 article gave nsibidi signs with their meanings"
+  verdict: confirmed
+  sources:
+    - {title: "Royal Anthropological Institute archives MS 23", url: "https://therai.org.uk/archives-and-manuscripts/manuscript-contents/0023-dayrell-elphinstone-ms-23/", quote: "Dayrell, FRGS, FRAI, District Commissioner Ikom, Southern Nigeria [Ikom, 20 May 1911]"}
+    - {title: "Dayrell, JRAI 41 (1911): nsibidi signs of the Egbo society", url: "https://zenodo.org/records/1449623/files/article.pdf", quote: "Further Notes on 'Nsibidi Signs with Their Meanings from the Ikom District, Southern Nigeria. Author(s): Elphinstone Dayrell"}
+  note: "Card also said colonial officials 'began' to write the signs down; Dayrell's own title is 'Further Notes' (Macgregor published nsibidi in 1909), so that framing was dropped."
+- card: nzinga
+  fact: "Ndongo was a kingdom of the Mbundu (Kimbundu) people, in today's Angola"
+  verdict: confirmed
+  sources:
+    - {title: "South African History Online: Njinga Ana de Sousa", url: "https://sahistory.org.za/people/njinga-ana-de-sousa", quote: "The Kingdom of Ndongo was established by the Mbundu people living on the Western coast of Central Africa."}
+    - {title: "Boston University: The Enduring Power of Queen Njinga", url: "https://www.bu.edu/articles/2011/the-enduring-power-of-queen-njinga", quote: "Today the Kimbundu, Njinga’s tribe, comprise 23 percent of Angola’s population"}
+- card: nzinga
+  fact: "From Luanda the Portuguese waged war on Ndongo for land and slaves"
+  verdict: confirmed
+  sources:
+    - {title: "South African History Online: Njinga Ana de Sousa", url: "https://sahistory.org.za/people/njinga-ana-de-sousa", quote: "From the 1580s Portugal was in constant war with the Kingdom of Ndongo in an effort to conquer more land and acquire more slaves"}
+    - {title: "Linda Heywood: Njinga, Dictionary of African Christian Biography", url: "https://dacb.org/stories/angola/njinga/", quote: "de Novais and subsequent royal officials made constant wars in their desire to establish a permanent coastal enclave and strategic military outposts along the Kwanza River for their slave trading activities."}
+- card: nzinga
+  fact: "In Luanda she won a peace treaty and was baptised Ana de Sousa, but fighting soon resumed"
+  verdict: confirmed
+  sources:
+    - {title: "South African History Online: Njinga Ana de Sousa", url: "https://sahistory.org.za/people/njinga-ana-de-sousa", quote: "To improve her negotiating position she allowed herself to be baptised as a Catholic and took the Christian name Ana de Sousa"}
+    - {title: "South African History Online: Njinga Ana de Sousa", url: "https://sahistory.org.za/people/njinga-ana-de-sousa", quote: "Njinga managed to negotiate a peace treaty with the Portuguese, but it was broken by the Portuguese almost as soon as she had left Luanda."}
+    - {title: "Linda Heywood: Njinga, Dictionary of African Christian Biography", url: "https://dacb.org/stories/angola/njinga/", quote: "she went to Luanda and conducted successful peace negotiations."}
+    - {title: "Linda Heywood: Njinga, Dictionary of African Christian Biography", url: "https://dacb.org/stories/angola/njinga/", quote: "Njinga, at forty years, took the baptismal name of Azevedo’s wife Ana, who also served as her godmother, and the surname de Sousa"}
+  note: "Treaty and baptism in two sources; the treaty's quick breakdown is in SAHO only, but the card's 'wars soon resumed' is borne out by her 1624 seizure of power and the later wars both sources describe."
+- card: nzinga
+  fact: "The Dutch held Luanda from 1641 until 1648, when the Portuguese drove them out"
+  verdict: confirmed
+  sources:
+    - {title: "South African History Online: Njinga Ana de Sousa", url: "https://sahistory.org.za/people/njinga-ana-de-sousa", quote: "in 1641 an armada of Dutch ships attacked and seized Luanda"}
+    - {title: "South African History Online: Njinga Ana de Sousa", url: "https://sahistory.org.za/people/njinga-ana-de-sousa", quote: "The tide would turn in 1648 however, as an armada from Brazil came to the assistance of the Portuguese forces"}
+    - {title: "John K. Thornton, Legitimacy and Political Power: Queen Njinga, 1624-1663, Journal of African History 32 (1991)", url: "https://www.cambridge.org/core/product/identifier/S0021853700025329/type/journal_article", quote: "Dutch soldiers who served in her army during the Dutch occupation of Angola, 1641–8"}
+- card: nzinga
+  fact: "She died in 1663 at about eighty, still a queen"
+  verdict: confirmed
+  sources:
+    - {title: "Boston University: The Enduring Power of Queen Njinga", url: "https://www.bu.edu/articles/2011/the-enduring-power-of-queen-njinga", quote: "Njinga, who was born around 1583 and whose cinematic life ended peacefully at 80"}
+    - {title: "Linda Heywood: Njinga, Dictionary of African Christian Biography", url: "https://dacb.org/stories/angola/njinga/", quote: "one of the Capuchin missionaries who ministered to Njinga from 1657 to her death in 1663"}
+- card: nzinga
+  fact: "After her brother's death in 1624 she took power in Ndongo"
+  verdict: confirmed
+  sources:
+    - {title: "South African History Online: Njinga Ana de Sousa", url: "https://sahistory.org.za/people/njinga-ana-de-sousa", quote: "In 1624 Njinga's brother, the Ngola Mbandi, died under suspicious circumstances"}
+    - {title: "EBSCO Research Starters: Ndongo Wars", url: "https://www.ebsco.com/research-starters/history/ndongo-wars", quote: "Njinga (1582-1663), queen of Ndongo and Matamba, r. 1624-1663"}
+- card: nzinga
+  fact: "In 1656 she made peace with Portugal (correcting the old claim that she fought the Portuguese until her death)"
+  verdict: confirmed
+  sources:
+    - {title: "South African History Online: Njinga Ana de Sousa", url: "https://sahistory.org.za/people/njinga-ana-de-sousa", quote: "In 1654 she began to negotiate for peace with the Portuguese and in 1656 they reached an agreement."}
+    - {title: "EBSCO Research Starters: Ndongo Wars", url: "https://www.ebsco.com/research-starters/history/ndongo-wars", quote: "The peace treaty was finally signed on October 12, 1656, resulting in the establishment of trade and Christian missions in Matamba."}
+- card: nzinga
+  fact: "Her sister succeeded her"
+  verdict: confirmed
+  sources:
+    - {title: "South African History Online: Njinga Ana de Sousa", url: "https://sahistory.org.za/people/njinga-ana-de-sousa", quote: "She was succeeded by her sister Barbara who ruled until 1666"}
+    - {title: "EBSCO Research Starters: Ndongo Wars", url: "https://www.ebsco.com/research-starters/history/ndongo-wars", quote: "On December 17, 1663, Queen Njinga died, leaving her sister and husband as rulers."}
+- card: octavia-butler
+  fact: "Kindred's heroine, a Black woman from 1976 Los Angeles, is pulled back to antebellum Maryland to save a white man, the slaveholder's son who is her ancestor."
+  verdict: confirmed
+  sources:
+    - {title: "Seattle Times (AP), 26 February 2006", url: "https://archive.seattletimes.com/archive/20060226/webbutlerobit26/octavia-butler-prominent-science-fiction-author-dies-at-58", quote: "It concerned a black woman who travels back in time to the South to save a white man."}
+    - {title: "EBSCO Research Starters: Kindred by Octavia E. Butler", url: "https://www.ebsco.com/research-starters/literature-and-writing/kindred-octavia-e-butler", quote: "TIME OF PLOT: June 9-July 4, 1976, and the early nineteenth century LOCALE: Los Angeles and Maryland ... Rufus Weylin , Dana's white ancestor in antebellum Maryland Tom Weylin , Rufus's father, a slave owner"}
+- card: octavia-butler
+  fact: "Parable of the Sower (1993) is set in the Los Angeles area of the mid-2020s, where walled communities hide from a collapsing society."
+  verdict: confirmed
+  sources:
+    - {title: "EBSCO Research Starters: Parable of the Sower", url: "https://www.ebsco.com/research-starters/literature-and-writing/parable-sower-octavia-e-butler", quote: "The story begins in the dystopian future of 2024 in Robledo, California, in a gated community near Los Angeles"}
+    - {title: "Publishers Weekly review of Parable of the Sower", url: "https://www.publishersweekly.com/9780941423991", quote: "by 2025, global warming, pollution, racial and ethnic tensions and other ills have precipitated a worldwide decline. In the Los Angeles area, small beleaguered communities of the still-employed hide behind makeshift walls"}
+  note: "EBSCO: 2024; Publishers Weekly: by 2025. 'Mid-2020s' covers both."
+- card: octavia-butler
+  fact: "She died in 2006 after a fall outside her home in Lake Forest Park, near Seattle."
+  verdict: confirmed
+  sources:
+    - {title: "Seattle Times (AP), 26 February 2006", url: "https://archive.seattletimes.com/archive/20060226/webbutlerobit26/octavia-butler-prominent-science-fiction-author-dies-at-58", quote: "died after falling and striking her head on the cobbled walkway outside her home ... Butler was found outside her home in the north Seattle suburb of Lake Forest Park on Friday."}
+    - {title: "EBSCO Research Starters: Octavia E. Butler", url: "https://www.ebsco.com/research-starters/biography/octavia-e-butler", quote: "Butler died of complications from a fall outside her home in Lake Forest, Washington."}
+- card: octavia-butler
+  fact: "She gave a Black woman's voice to a genre long dominated by white men."
+  verdict: confirmed
+  sources:
+    - {title: "EBSCO Research Starters: Octavia E. Butler", url: "https://www.ebsco.com/research-starters/biography/octavia-e-butler", quote: "Butler brought an African American woman's voice to science fiction, a genre traditionally dominated by white men."}
+    - {title: "Seattle Times (AP), 26 February 2006", url: "https://archive.seattletimes.com/archive/20060226/webbutlerobit26/octavia-butler-prominent-science-fiction-author-dies-at-58", quote: "Octavia E. Butler, the first black woman to gain national prominence as a science fiction writer"}
+- card: octavia-butler
+  fact: "She left her papers, including her self-motivational notes, to the Huntington Library."
+  verdict: confirmed
+  sources:
+    - {title: "Online Archive of California: Octavia E. Butler Papers, Huntington Library", url: "https://oac.cdlib.org/findaid/ark:/13030/c8hm5br8/admin/", quote: "Acquisition information: Bequest of Octavia E. Butler, August 2008 (Boxes 1-354, 387-392, oversize folders 1-18) and July 2017"}
+    - {title: "Good Black News (2017)", url: "https://goodblacknews.org/2017/07/03/sci-fi-writer-octavia-butlers-inspirational-notes-to-herself-on-display-at-huntington-library-in-ca-through-87/", quote: "presents about 100 items, including manuscripts, photographs and notebooks filled with writing and self-motivational notes, including one that reads in part, 'My novels go onto the bestseller lists. … So be it! See to it!'"}
+  note: "OAC finding aid records the bequest; Good Black News (aggregating a 2017 report) shows the self-motivational notes in the Huntington exhibition."
+- card: oliver-golden
+  fact: "Golden was a communist."
+  verdict: confirmed
+  sources:
+    - {title: "Meredith Roman, Journal of Russian American Studies (2022)", url: "https://journals.ku.edu/jras/article/download/17979/16210", quote: "Oliver Golden, an African American communist who led a team of Black agricultural specialists to the U.S.S.R. in 1931 to help develop the cotton industry in Uzbekistan"}
+    - {title: "RFE/RL (2009): For Russian Blacks, Obama visit stirs special interest", url: "https://www.rferl.org/amp/For_Russian_Blacks_Obama_Visit_Stirs_Special_Interest/1770531.html", quote: "Oliver Golden, became a member of the Communist Party in the United States after he failed to find work as anything but a waiter despite having a college degree"}
+- card: oliver-golden
+  fact: "The 1931 team numbered sixteen."
+  verdict: confirmed
+  sources:
+    - {title: "Indiana University Libraries: African Americans in Soviet Russia", url: "https://guides.libraries.indiana.edu/c.php?g=792963&p=5681557", quote: "In 1931 a group of 16 African American agricultural specialists traveled to Uzbekistan to work at an experimental cotton farm"}
+    - {title: "Colonial Beach Historical Society and Museum: African American history", url: "https://www.cbhistoryandmuseum.org/african-american-history", quote: "In 1931 Oliver Golden, an agricultural specialist who had studied at Tuskegee Institute , organized a group of sixteen black Americans"}
+- card: oliver-golden
+  fact: "His wife Bertha Bialek was a Polish-born Jewish labour activist."
+  verdict: confirmed
+  sources:
+    - {title: "Meredith Roman, Journal of Russian American Studies (2022)", url: "https://journals.ku.edu/jras/article/download/17979/16210", quote: "Bertha Bialek, a Polish-born, Jewish-American labor activist"}
+    - {title: "Indiana University Libraries: African Americans in Soviet Russia", url: "https://guides.libraries.indiana.edu/c.php?g=792963&p=5681557", quote: "Golden brought along his second wife Bertha Bialek, who was of Polish Jewish origin."}
+- card: oliver-golden
+  fact: "Golden stayed; their daughter Lily was born in Tashkent in 1934, and he died in 1940, when she was six."
+  verdict: confirmed
+  sources:
+    - {title: "Lily Golden, Autobiography (africana.ru)", url: "https://africana.ru/Golden/info/autobiography.htm", quote: "Я родилась в Ташкенте в 1934 году. Когда мне исполнилось шесть лет, мой отец умер."}
+    - {title: "Indiana University Libraries: African Americans in Soviet Russia", url: "https://guides.libraries.indiana.edu/c.php?g=792963&p=5681557", quote: "John Oliver Golden (1887 – 1940) ... Most of them left after a few months, but two - Golden and George Tynes – stayed on. ... Their daughter Lily Golden (1934 – 2010)"}
+  note: "Lily Golden's autobiography (primary) and the Indiana University guide (dates 1887-1940, 1934)."
+- card: oliver-golden
+  fact: "Lily Golden worked for more than thirty years at the Institute of Africa in Moscow."
+  verdict: corrected
+  sources:
+    - {title: "Lily Golden, Autobiography (africana.ru)", url: "https://africana.ru/Golden/info/autobiography.htm", quote: "Когда в 1959 году открылся Институт Африки при Академии наук СССР я перешла на работу туда и проработала там больше 30 лет"}
+    - {title: "Indiana University Libraries: African Americans in Soviet Russia", url: "https://guides.libraries.indiana.edu/c.php?g=792963&p=5681557", quote: "Their daughter Lily Golden (1934 – 2010) graduated from Moscow State University, worked in the Institute of African Studies"}
+    - {title: "BlackPast.org: Lily Golden (1934-2010)", url: "https://www.blackpast.org/global-african-history/golden-lily-1934-2010/", quote: "In 1959, the Soviet Academy of Sciences opened the African Institute where Golden worked for over 30 years, publishing books on Africans living in Russia, African music, and over a hundred articles."}
+  note: "'More than 30 years' comes only from Lily Golden's own autobiography; BlackPast repeats it in a close paraphrase of that text (same list of books and 'over a hundred articles'), so it is not independent. Indiana confirms she worked at the Institute of African Studies. Card now says she worked at the Institute of Africa, without the length."
+- card: oliver-golden
+  fact: "Lily Golden married Abdullah Hanga, a revolutionary from Zanzibar; Yelena Khanga is their daughter."
+  verdict: confirmed
+  sources:
+    - {title: "Meredith Roman, Journal of Russian American Studies (2022)", url: "https://journals.ku.edu/jras/article/download/17979/16210", quote: "Khanga's mother, Lily Golden (b. 1934) married Abdullah Hanga, a revolutionary leader from Zanzibar who was studying in Moscow in the early 1960s."}
+    - {title: "RFE/RL (2009)", url: "https://www.rferl.org/amp/For_Russian_Blacks_Obama_Visit_Stirs_Special_Interest/1770531.html", quote: "Lily -- who went on to marry Abdullah Khanga, a political leader from Zanzibar"}
+- card: omar-ibn-said
+  fact: "In his thirties he was captured in a war and shipped across the ocean to be sold."
+  verdict: confirmed
+  sources:
+    - {title: "Library of Congress blog (2019): Educated and Enslaved, story map", url: "https://blogs.loc.gov/loc/2019/07/new-omar-bin-said-story-map/", quote: "he was an educated and respected man in his early 30s, a devout Muslim, when he was taken prisoner during a regional conflict and sold into slavery"}
+    - {title: "Lowcountry Digital History Initiative: Omar ibn Said", url: "https://ldhi.library.cofc.edu/exhibits/show/african-muslims-in-the-south/five-african-muslims/omar-ibn-said--1770-1864", quote: "Said was captured in his early thirties and sold into the trans-Atlantic slave trade around the age of thirty-seven."}
+    - {title: "National Humanities Center: Autobiography of Omar ibn Said, 1831", url: "https://nationalhumanitiescenter.org/pds/maai/community/text3/religionomaribnsaid.pdf", quote: "Then there came to our place a large army, who killed many men, and took me, and brought me to the great sea, and sold me into the hands of the Christians"}
+- card: omar-ibn-said
+  fact: "He was caught in Fayetteville after going into a church to pray."
+  verdict: confirmed
+  sources:
+    - {title: "Documenting the American South: summary by Patrick E. Horn", url: "https://docsouth.unc.edu/nc/omarsaid/summary.html", quote: "Said escaped and made his way to Fayetteville, North Carolina, where he was imprisoned after entering a Christian church to pray."}
+    - {title: "National Humanities Center: Autobiography of Omar ibn Said, 1831", url: "https://nationalhumanitiescenter.org/pds/maai/community/text3/religionomaribnsaid.pdf", quote: "On the new moon I went into a church to pray. A lad saw me and rode off to the place of his father and informed him that he had seen a black man in the church."}
+- card: omar-ibn-said
+  fact: "General James Owen bought him."
+  verdict: confirmed
+  sources:
+    - {title: "Documenting the American South: summary", url: "https://docsouth.unc.edu/nc/omarsaid/summary.html", quote: "Said became the legal property of General James Owen of Bladen County"}
+    - {title: "Lowcountry Digital History Initiative: Omar ibn Said", url: "https://ldhi.library.cofc.edu/exhibits/show/african-muslims-in-the-south/five-african-muslims/omar-ibn-said--1770-1864", quote: "Said was eventually purchased by a prominent man in the area, General James Owen."}
+- card: omar-ibn-said
+  fact: "In the autobiography he wrote that Owen did not beat him or let him go hungry."
+  verdict: confirmed
+  sources:
+    - {title: "National Humanities Center: Autobiography of Omar ibn Said, 1831", url: "https://nationalhumanitiescenter.org/pds/maai/community/text3/religionomaribnsaid.pdf", quote: "I continue in the hand of Jim Owen who never beats me, nor scolds me. I neither go hungry nor naked"}
+    - {title: "Library of Congress blog (2019)", url: "https://blogs.loc.gov/loc/2019/07/new-omar-bin-said-story-map/", quote: "I continue in the hands of Jim Owen who does not beat me, nor calls me bad names, nor subjects me to hunger, nakedness, or hard work"}
+  note: "Both render the same passage of the 1831 autobiography (NHC translation and LoC); the claim is about what he wrote, so the primary text plus LoC suffices."
+- card: omar-ibn-said
+  fact: "He later became a Christian."
+  verdict: confirmed
+  sources:
+    - {title: "Lowcountry Digital History Initiative: Omar ibn Said", url: "https://ldhi.library.cofc.edu/exhibits/show/african-muslims-in-the-south/five-african-muslims/omar-ibn-said--1770-1864", quote: "Said attended the local Presbyterian Church and was baptized as a Christian in 1821."}
+    - {title: "Documenting the American South: summary", url: "https://docsouth.unc.edu/nc/omarsaid/summary.html", quote: "Said's later conversion to Christianity rendered him a celebrity of sorts"}
+- card: omar-ibn-said
+  fact: "He was never freed and died still enslaved."
+  verdict: confirmed
+  sources:
+    - {title: "Library of Congress blog (2019)", url: "https://blogs.loc.gov/loc/2019/07/new-omar-bin-said-story-map/", quote: "He died in 1863, still enslaved, during the Civil War."}
+    - {title: "Lowcountry Digital History Initiative: Omar ibn Said", url: "https://ldhi.library.cofc.edu/exhibits/show/african-muslims-in-the-south/five-african-muslims/omar-ibn-said--1770-1864", quote: "Unlike Suleiman Diallo and Rahman, Said was never granted freedom."}
+- card: omar-ibn-said
+  fact: "He had spent twenty-five years in study before he was enslaved."
+  verdict: confirmed
+  sources:
+    - {title: "Documenting the American South: summary by Patrick E. Horn", url: "https://docsouth.unc.edu/nc/omarsaid/summary.html", quote: "After receiving 25 years of schooling in Africa, he was enslaved and transported to Charleston, South Carolina."}
+    - {title: "National Humanities Center: Autobiography of Omar ibn Said, 1831", url: "https://nationalhumanitiescenter.org/pds/maai/community/text3/religionomaribnsaid.pdf", quote: "I continued my studies twenty-five years."}
+- card: omar-ibn-said
+  fact: "The crossing took a month and a half."
+  verdict: confirmed
+  sources:
+    - {title: "Documenting the American South: summary", url: "https://docsouth.unc.edu/nc/omarsaid/summary.html", quote: "his crossing of \"the great sea\" for a month and a half testifies to the raw violence of the slave trade"}
+    - {title: "National Humanities Center: Autobiography of Omar ibn Said, 1831", url: "https://nationalhumanitiescenter.org/pds/maai/community/text3/religionomaribnsaid.pdf", quote: "we sailed upon the great sea a month and a half, when we came to a place called Charleston"}
+- card: omar-ibn-said
+  fact: "He landed in Charleston around 1807."
+  verdict: confirmed
+  sources:
+    - {title: "National Humanities Center: Autobiography of Omar ibn Said, 1831 (headnote)", url: "https://nationalhumanitiescenter.org/pds/maai/community/text3/religionomaribnsaid.pdf", quote: "About 1807 he was captured and taken to Charleston, South Carolina to be sold."}
+    - {title: "Lowcountry Digital History Initiative: Omar ibn Said", url: "https://ldhi.library.cofc.edu/exhibits/show/african-muslims-in-the-south/five-african-muslims/omar-ibn-said--1770-1864", quote: "Scholars estimate that the slave ship that brought Said to Charleston, South Carolina landed in 1807."}
+- card: omar-ibn-said
+  fact: "When a man from Charleston came to buy him, he answered 'No, no, no, no, no, no, no'."
+  verdict: confirmed
+  sources:
+    - {title: "National Humanities Center: Autobiography of Omar ibn Said, 1831", url: "https://nationalhumanitiescenter.org/pds/maai/community/text3/religionomaribnsaid.pdf", quote: "a man by the name of Mitchell came to buy me. He asked me if I were willing to go to Charleston City. I said \"No, no, no, no, no, no, no, I am not willing to go to Charleston. I stay in the hand of Jim Owen.\""}
+    - {title: "Documenting the American South: summary", url: "https://docsouth.unc.edu/nc/omarsaid/summary.html", quote: "he does report that on one occasion a Charleston man named Mitchell tried to purchase him from Owen. \"I said 'No, no, no, no, no, no, no,'\" Said recalled"}
+- card: palmares
+  fact: "Macaco was the capital of Palmares."
+  verdict: confirmed
+  sources:
+    - {title: "Fundação Cultural Palmares: Dandara e Zumbi", url: "https://www.gov.br/palmares/pt-br/departamentos/protecao-preservacao-e-articulacao/serra-da-barriga-1/dandara-e-zumbi/", quote: "conseguiu tomar a capital palmarina – Macaco –"}
+    - {title: "Flávio Gomes, Palmares, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/palmares", quote: "The primary quilombo, known by the name Macaco (Monkey), was the political and administrative center, functioning as the capital of Palmares."}
+  note: "Fundação Cultural Palmares (gov.br) and Encyclopedia.com."
+- card: palmares
+  fact: "Palmares resisted for almost a century."
+  verdict: confirmed
+  sources:
+    - {title: "Reis and Gomes, Quilombo: Brazilian Maroons during Slavery, Cultural Survival Quarterly", url: "https://www.culturalsurvival.org/publications/cultural-survival-quarterly/quilombo-brazilian-maroons-during-slavery", quote: "resisted for almost a century the various punitive expeditions sent out against it, and was finally destroyed only in 1694-1695"}
+    - {title: "Fundação Cultural Palmares: Quilombo", url: "https://www.gov.br/palmares/pt-br/departamentos/protecao-preservacao-e-articulacao/serra-da-barriga-1/quilombo/", quote: "resistindo por quase cem anos aos ataques holandeses, luso-brasileiros e de bandeirantes paulistas"}
+- card: palmares
+  fact: "Ganga Zumba accepted a peace deal with the governor of Pernambuco; Zumbi refused it, the deal failed and Zumbi became leader."
+  verdict: confirmed
+  sources:
+    - {title: "Fundação Cultural Palmares: Dandara e Zumbi", url: "https://www.gov.br/palmares/pt-br/departamentos/protecao-preservacao-e-articulacao/serra-da-barriga-1/dandara-e-zumbi/", quote: "após um malfadado acordo de paz entre o rei palmarino Ganga Zumba e o governador de Pernambuco, Pedro de Almeida, Zumbi, que se recusara a aderir a esse acordo, rebelou-se e se tornou o novo rei"}
+    - {title: "Flávio Gomes, Palmares, via Encyclopedia.com", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/palmares", quote: "Portuguese colonial authorities ... began proposing peace treaties ... While an agreement was initially accepted in 1678, it was later rejected by the quilombos and sabotaged by the ranchers and businessmen who were interested in the lands occupied by the quilombos."}
+- card: palmares
+  fact: "Domingos Jorge Velho was a hired bandeirante (mercenary frontier fighter)."
+  verdict: confirmed
+  sources:
+    - {title: "Fundação Cultural Palmares: Quilombo", url: "https://www.gov.br/palmares/pt-br/departamentos/protecao-preservacao-e-articulacao/serra-da-barriga-1/quilombo/", quote: "Domingos Jorge Velho, bandeirante contratado com a incumbência de sufocar Palmares"}
+    - {title: "Flávio Gomes, Palmares, via Encyclopedia.com", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/palmares", quote: "destroyed in 1695 by a large force of bandeirantes (mercenary fighters)"}
+- card: palmares
+  fact: "Zumbi escaped the fall of Macaco, fought on, and was betrayed by one of his own men before he was killed."
+  verdict: confirmed
+  sources:
+    - {title: "Fundação Cultural Palmares: Dandara e Zumbi", url: "https://www.gov.br/palmares/pt-br/departamentos/protecao-preservacao-e-articulacao/serra-da-barriga-1/dandara-e-zumbi/", quote: "ele escapou ao cerco que destruiu Macaco, tendo resistido, ainda, durante um ano com seus guerrilheiros nas matas alagoanas, até ser denunciado por um de seus homens de confiança"}
+    - {title: "Flávio Gomes, Palmares, via Encyclopedia.com", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/palmares", quote: "The well-protected leader of Palmares was eventually betrayed; he was found and assassinated on November 20, 1695."}
+- card: palmares
+  fact: "Palmares became the most famous quilombo in Brazil and the model for the study of quilombos."
+  verdict: confirmed
+  sources:
+    - {title: "Reis and Gomes, Quilombo: Brazilian Maroons during Slavery, Cultural Survival Quarterly", url: "https://www.culturalsurvival.org/publications/cultural-survival-quarterly/quilombo-brazilian-maroons-during-slavery", quote: "Palmares became the prototype of the quilombo in Brazilian historical and anthropological literature."}
+    - {title: "Fundação Cultural Palmares: Quilombo", url: "https://www.gov.br/palmares/pt-br/departamentos/protecao-preservacao-e-articulacao/serra-da-barriga-1/quilombo/", quote: "No Brasil, a mais famosa comunidade quilombola foi Palmares"}
+- card: paper-bag-test
+  fact: "Kerr's book (2006) is built largely on oral history and documents the rumours and legends about complexion themselves."
+  verdict: corrected
+  sources:
+    - {title: "University of Tennessee Press: The Paper Bag Principle", url: "https://utpress.org/9781621902652/the-paper-bag-principle/", quote: "considers the function of oral history in shaping community dynamics among African American residents of the nation's capitol. The only attempt to document rumor and legends relating to complexion in Black communities"}
+    - {title: "Chronicle of Higher Education via History News Network (2007)", url: "https://www.hnn.us/article/prejudice-against-dark-skinned-students-at-howard-", quote: "Drawing largely on oral history, Ms. Kerr traces color prejudice -- \"or the belief in color prejudice\" -- at Howard"}
+  note: "Content confirmed (UT Press: the only attempt to document rumour and legends about complexion; HNN: drawing largely on oral history). Neither page gives 2006: the UT Press page lists the May 2016 paperback. Year dropped from the card."
+- card: paper-bag-test
+  fact: "Women perceived as light-skinned also served about 11% less time."
+  verdict: confirmed
+  sources:
+    - {title: "theGrio (2011)", url: "https://thegrio.com/2011/06/23/is-justice-colorblind-in-post-racial-america", quote: "Light skinned black women also served roughly 11 percent less time in prison than their dark skin counterparts."}
+    - {title: "The Root (2011)", url: "https://www.theroot.com/the-lighter-the-skin-the-shorter-the-prison-term", quote: "Women with light skin also served 11 percent less time than darker women."}
+  note: "TheGrio and The Root report the same Villanova study (the study itself is in the card's sources); the reports are by separate publishers."
+- card: paper-bag-test
+  fact: "The study accounted for the type of crime and the women's criminal records."
+  verdict: confirmed
+  sources:
+    - {title: "The Root (2011)", url: "https://www.theroot.com/the-lighter-the-skin-the-shorter-the-prison-term", quote: "The study took into account the type of crimes the women committed and each woman's criminal history to generate apples-to-apples comparisons."}
+    - {title: "NewsOne (2011)", url: "https://newsone.com/1328605/light-skin-black-women-prison-sentences/", quote: "the study authors controlled factors including prior record, conviction date and weight; they also considered if the woman in question was serving time for robbery or homicide"}
+- card: partus-1662
+  fact: "William Grinsted acted for Elizabeth Key in her freedom suit, and she later married him."
+  verdict: confirmed
+  sources:
+    - {title: "Library of Virginia, Dictionary of Virginia Biography: Elizabeth Key", url: "https://www.lva.virginia.gov/collections/dvb/bio/key-elizabeth-fl-1655-1660", quote: "One of the court records identified Grinsted as her attorney. What that meant was that he was her attorney in fact, not an attorney at law. ... By the summer of 1660 Elizabeth Key Grinsted had another son and a daughter named Elizabeth."}
+    - {title: "African American National Biography: Elizabeth Key", url: "https://projects.kora.matrix.msu.edu/files/16-23-101311/Elizabeth_Key_AANB.pdf", quote: "Her lawyer, William Grinsted, petitioned the court for her freedom on several grounds. ... That Key later married Grinsted is also noteworthy."}
+  note: "Dictionary of Virginia Biography (Library of Virginia) and the African American National Biography entry: independent."
+- card: partus-1662
+  fact: "A county jury freed her, the General Court reversed the verdict, and a committee of the General Assembly upheld her claim to freedom."
+  verdict: corrected
+  sources:
+    - {title: "Library of Virginia, Dictionary of Virginia Biography: Elizabeth Key", url: "https://www.lva.virginia.gov/collections/dvb/bio/key-elizabeth-fl-1655-1660", quote: "On 20 January 1656, a Northumberland County jury decided that Elizabeth should be free. ... it is clear that the court ruled against her. ... The committee of burgesses therefore determined that under all the existing rules of law, even without any clear parliamentary or Virginia statutes and in spite of the General Court's verdict, she was entitled to her freedom and to her father's surname."}
+    - {title: "African American National Biography: Elizabeth Key", url: "https://projects.kora.matrix.msu.edu/files/16-23-101311/Elizabeth_Key_AANB.pdf", quote: "following an appeal by the executor of Mottram's estate (another justice of the peace) to the Virginia General Court, which ruled that Elizabeth Key was indeed a slave. ... The committee agreed with the original decision of the Northumberland County Court"}
+  note: "Sequence confirmed. Dates differ by calendar (AANB: suit and jury early 1655; DVB: jury 20 January 1656), so the card's 'sued for her freedom in 1656' was replaced; the year now goes on the 1656 committee ruling."
+- card: partus-1662
+  fact: "Under the 1662 act the children of white men by enslaved women were born slaves for life."
+  verdict: confirmed
+  sources:
+    - {title: "Library of Virginia, Dictionary of Virginia Biography: Elizabeth Key", url: "https://www.lva.virginia.gov/collections/dvb/bio/key-elizabeth-fl-1655-1660", quote: "Thereafter, at the time of their birth the children of white male Virginians and enslaved female laborers legally became somebody's slave property for life."}
+    - {title: "Encyclopedia Virginia: Negro womens children to serve according to the condition of the mother (1662)", url: "https://encyclopediavirginia.org/primary-documents/negro-womens-children-to-serve-according-to-the-condition-of-the-mother-1662/", quote: "This was a reversal of the usual common law presumption that the status of the child was determined by the father. The act enabled the reproduction of one's own labor force."}
+  note: "DVB states the effect directly; Encyclopedia Virginia prints the act (children 'got by any Englishman upon a negro woman') and its reversal of the paternal rule."
+- card: phillis-wheatley
+  fact: "She was brought to Boston in 1761 and named after the ship that carried her, the Phillis."
+  verdict: confirmed
+  sources:
+    - {title: "Massachusetts Historical Society: Phillis Wheatley", url: "https://www.masshist.org/features/endofslavery/wheatley", quote: "Wheatley was named for the ship, the Phillis , that brought her to Boston on 11 July 1761, and the Wheatley family who enslaved her."}
+    - {title: "Boston Public Library (2023): Tracing the Life of Phillis Wheatley Peters", url: "https://www.bpl.org/blogs/post/tracing-the-life-of-phillis-wheatley-peters/", quote: "she arrived in Boston Harbor in the summer of 1761. There, she was purchased by her enslavers, the prominent Bostonian couple Susanna and John Wheatley, who renamed Phillis after the ship that had brought her to the city."}
+  note: "MHS and BPL both also say she came from West Africa (unledgered in the card, now verified)."
+- card: phillis-wheatley
+  fact: "Soon after returning from London in 1773 she was freed; she wrote that her master had 'given me my freedom'."
+  verdict: confirmed
+  sources:
+    - {title: "Massachusetts Historical Society: Phillis Wheatley", url: "https://www.masshist.org/features/endofslavery/wheatley", quote: "\"Since my return to America my Master, has at the desire of my friends in England given me my freedom.\" ~Phillis Wheatley to David Wooster, 18 October 1773"}
+    - {title: "Boston Public Library (2023)", url: "https://www.bpl.org/blogs/post/tracing-the-life-of-phillis-wheatley-peters/", quote: "In this letter dated May 6, 1774, Wheatley Peters – now a free woman – writes to the abolitionist minister Samuel Hopkins"}
+- card: phillis-wheatley
+  fact: "She married John Peters, a free Black man."
+  verdict: confirmed
+  sources:
+    - {title: "Massachusetts Historical Society: Phillis Wheatley", url: "https://www.masshist.org/features/endofslavery/wheatley", quote: "She married John Peters, a free Black man living in Boston"}
+    - {title: "National Women's History Museum: Phillis Wheatley", url: "https://www.womenshistory.org/education-resources/biographies/phillis-wheatley", quote: "In 1778, Wheatley married John Peters, a free Black man from Boston"}
+- card: phillis-wheatley
+  fact: "Her proposed second volume was never published, during the war years in Boston."
+  verdict: corrected
+  sources:
+    - {title: "Massachusetts Historical Society: Phillis Wheatley", url: "https://www.masshist.org/features/endofslavery/wheatley", quote: "Phillis Wheatley drew up proposals for a second volume of poetry which was never published, probably due to wartime shortages in Boston."}
+    - {title: "National Women's History Museum: Phillis Wheatley", url: "https://www.womenshistory.org/education-resources/biographies/phillis-wheatley", quote: "she started work on a second collection. This volume, which would have included thirteen letters and thirty-three poems, was never finished."}
+  note: "MHS: proposals for a second volume never published, probably because of wartime shortages; NWHM: never finished. The card's 'found no publisher' implies a failed search for a publisher that neither says. Reworded to 'was never published'."
+- card: phillis-wheatley
+  fact: "She was living in a boardinghouse when she died in December 1784."
+  verdict: confirmed
+  sources:
+    - {title: "Massachusetts Historical Society: Phillis Wheatley", url: "https://www.masshist.org/features/endofslavery/wheatley", quote: "By 1784 Wheatley was living in a boardinghouse, and in December of that year both she and her third child passed away."}
+    - {title: "National Women's History Museum: Phillis Wheatley", url: "https://www.womenshistory.org/education-resources/biographies/phillis-wheatley", quote: "To support her family, she worked as a maid in a boardinghouse while continuing to write poetry. Wheatley became ill and died on December 5th, 1784"}
+- card: phillis-wheatley
+  fact: "At about fourteen she published her first poem in a newspaper (Newport Mercury, 1767)."
+  verdict: confirmed
+  sources:
+    - {title: "Massachusetts Historical Society: Phillis Wheatley", url: "https://www.masshist.org/features/endofslavery/wheatley", quote: "her first published poem, \"On Messrs Hussey and Coffin,\" appeared in 1767 in the Newport Mercury"}
+    - {title: "Boston Public Library (2023)", url: "https://www.bpl.org/blogs/post/tracing-the-life-of-phillis-wheatley-peters/", quote: "Phillis Wheatley Peters' first published poem – On Messrs. Hussey and Coffin – appeared in the Newport Mercury on December 21, 1767, when she was 14 years old."}
+- card: phillis-wheatley
+  fact: "In 1770 an elegy on George Whitefield made her famous."
+  verdict: confirmed
+  sources:
+    - {title: "Massachusetts Historical Society: Phillis Wheatley", url: "https://www.masshist.org/features/endofslavery/wheatley", quote: "In 1770, her elegy on the death of George Whitefield, a celebrated evangelical Methodist minister who had traveled through the American colonies, drew international attention"}
+    - {title: "National Women's History Museum: Phillis Wheatley", url: "https://www.womenshistory.org/education-resources/biographies/phillis-wheatley", quote: "Her 1770 poem \"An Elegiac Poem, on the Death of the Celebrated Divine George Whitefield,\" dedicated to a famous English preacher, made her a household name"}
+- card: phillis-wheatley
+  fact: "In 1773 she sailed to London, where the book was published that September."
+  verdict: confirmed
+  sources:
+    - {title: "Massachusetts Historical Society: Phillis Wheatley", url: "https://www.masshist.org/features/endofslavery/wheatley", quote: "the family's son Nathaniel to England, where plans for the publication had begun, but she was called home by the illness of Susannah Wheatley, and departed before the book appeared in September"}
+    - {title: "National Women's History Museum: Phillis Wheatley", url: "https://www.womenshistory.org/education-resources/biographies/phillis-wheatley", quote: "In March 1773, with financial support from the English Countess of Huntingdon, who was an admirer of her work, Wheatley traveled to London with the Wheatley's son to publish her first collection of poems"}
+  note: "MHS: sailed May 1773 and left before the book appeared in September; NWHM: March 1773. Card gives no month and does not say she was present at publication, so it stands."
+- card: phillis-wheatley
+  fact: "Poems on Various Subjects was the first known book of poetry by a Black woman."
+  verdict: confirmed
+  sources:
+    - {title: "Massachusetts Historical Society: Phillis Wheatley", url: "https://www.masshist.org/features/endofslavery/wheatley", quote: "Phillis Wheatley was the author of the first known book of poetry by a Black woman, published in London in 1773."}
+    - {title: "National Women's History Museum: Phillis Wheatley", url: "https://www.womenshistory.org/education-resources/biographies/phillis-wheatley", quote: "Phillis Wheatley Peters is broadly recognized as the first African American and the second U.S. woman to publish a book of poetry."}
+  note: "MHS: first known book of poetry by a Black woman; NWHM: first African American to publish a book of poetry."
