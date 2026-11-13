@@ -96,8 +96,8 @@ func ManagerOf(u *unstructured.Unstructured) (Owner, bool) {
 	return Owner{}, false
 }
 
-// skipReason says why an object is never restored from memory, or "".
-func skipReason(u *unstructured.Unstructured) string {
+// SkipReason says why an object is never restored from memory, or "".
+func SkipReason(u *unstructured.Unstructured) string {
 	kind, name := u.GetKind(), u.GetName()
 	switch {
 	case kind == "Secret":
@@ -141,7 +141,7 @@ func PlanRestore(recs []Record, force bool) (Plan, error) {
 		if err := json.Unmarshal(r.Object, &u.Object); err != nil {
 			return p, fmt.Errorf("%s: %w", r.Ref, err)
 		}
-		if reason := skipReason(u); reason != "" {
+		if reason := SkipReason(u); reason != "" {
 			p.Skipped = append(p.Skipped, Skip{Ref: r.Ref, Kind: r.Kind, Reason: reason})
 			continue
 		}
