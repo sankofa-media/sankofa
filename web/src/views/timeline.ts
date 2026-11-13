@@ -6,7 +6,7 @@ import { brushX, type BrushBehavior } from 'd3-brush';
 import type { Card } from '../lib/types';
 import { formatYears, span } from '../lib/cards';
 import { eraColor } from '../lib/atlasModel';
-import { pick, t } from '../lib/i18n';
+import { chapterLabel, chapterNumber, pick, t } from '../lib/i18n';
 
 export interface EraSpan {
   id: string;
@@ -146,7 +146,7 @@ export class Timeline {
         .attr('class', 'era')
         .attr('tabindex', 0)
         .attr('role', 'button')
-        .attr('aria-label', `${e.id}, ${e.label}, ${e.from} to ${e.to}`)
+        .attr('aria-label', `${chapterLabel(e.id)}, ${e.label}, ${e.from} to ${e.to}`)
         .style('--era', eraColor(e.id))
         .on('click', () => this.opts.onEra?.(e.id))
         .on('keydown', (ev: KeyboardEvent) => {
@@ -154,10 +154,14 @@ export class Timeline {
         });
       const y = eraTop + lane * (eraH + 3);
       g.append('rect').attr('x', x(e.from)).attr('y', y).attr('width', Math.max(6, x(e.to) - x(e.from))).attr('height', eraH).attr('rx', 3);
+      // The chapter's name where it fits, its number where it does not.
+      const room = x(e.to) - x(e.from) - 12;
+      const label = e.label.length * 6.6 <= room ? e.label : String(chapterNumber(e.id) ?? '');
       g.append('text')
         .attr('x', x(e.from) + 6)
         .attr('y', y + 11.5)
-        .text(`${e.id}  ${x(e.to) - x(e.from) > 120 ? e.label : ''}`);
+        .text(label);
+      g.append('title').text(`${chapterLabel(e.id)} · ${e.label}`);
     }
 
     // Century and decade ticks.

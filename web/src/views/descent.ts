@@ -6,10 +6,10 @@ import type { App } from '../app';
 import type { Card } from '../lib/types';
 import { ERAS } from '../lib/types';
 import { formatYears, span } from '../lib/cards';
-import { vtags, bookMarks, h, reducedMotion, svgIcon } from '../lib/dom';
+import { bookMarks, h, reducedMotion, svgIcon } from '../lib/dom';
 import { chapterCopy, eraColor, readerCards } from '../lib/atlasModel';
 import { MOVEMENTS } from '../lib/movements';
-import { count, pick, t, yearsAgo } from '../lib/i18n';
+import { chapterLabel, chapterNumber, count, pick, t, yearsAgo } from '../lib/i18n';
 import { LEVEL_NAMES } from './map';
 import { mediaSrc } from '../lib/media';
 import { richText } from '../app';
@@ -197,7 +197,7 @@ export class Descent {
       const f = (y: number) => ((y - START) / (NOW - START)) * 100;
       return h('b', {
         style: `top:${f(a)}%;height:${Math.max(1, f(b) - f(a))}%;--era:${eraColor(e.id)};left:${ERAS.indexOf(e) % 2 ? 5 : 0}px`,
-        title: `${e.id} ${e.label}`,
+        title: `${chapterLabel(e.id)} · ${e.label}`,
       });
     });
   }
@@ -230,8 +230,8 @@ export class Descent {
           this.meterEra.dataset.key = key;
           this.meterEra.style.setProperty('--era', eraColor(ch?.id));
           this.meterEra.replaceChildren(
-            ch ? h('span.main', {}, ...vtags(`${ch.id} · ${ch.title}`)) : '',
-            also.length ? h('span.also', {}, pick({ en: 'also: ', ru: 'а также: ' }), ...also.map((c) => h('i', { style: `--era:${eraColor(c.id)}`, title: c.title }, c.id))) : '',
+            ch ? h('span.main', {}, `${chapterLabel(ch.id)} · ${ch.title}`) : '',
+            also.length ? h('span.also', {}, pick({ en: also.length > 1 ? 'also chapters ' : 'also chapter ', ru: also.length > 1 ? 'а также главы ' : 'а также глава ' }), ...also.map((c) => h('i', { style: `--era:${eraColor(c.id)}`, title: `${chapterLabel(c.id)} · ${c.title}` }, String(chapterNumber(c.id) ?? '')))) : '',
           );
         }
       }
@@ -300,7 +300,7 @@ export class Descent {
           h(
             'div.tx',
             {},
-            h('small', {}, ...vtags(`${ch.id} · ${ch.kicker}`)),
+            h('small', {}, `${chapterLabel(ch.id)} · ${ch.kicker}`),
             h('b', {}, ch.title),
             h('span', {}, pick({ en: `${count(chapterCopy(app.set, app.edition, ch).length, 'card', 'en')} in this era · read the chapter →`, ru: `В этой эпохе ${count(chapterCopy(app.set, app.edition, ch).length, 'card', 'ru')} · читать главу →` })),
           ),
@@ -411,8 +411,8 @@ export class Descent {
         bands.append(
           h(
             'a.d-lane',
-            { href: `#ch=${ch.id}`, 'data-chapter': ch.id, style: `top:${y0}px;height:${Math.max(30, y1 - y0)}px;left:${x}px;--era:${eraColor(ch.id)}`, title: `${ch.id} · ${ch.title} · ${ch.kicker}` },
-            h('span', {}, ...vtags(`${ch.id} · ${ch.title}`)),
+            { href: `#ch=${ch.id}`, 'data-chapter': ch.id, style: `top:${y0}px;height:${Math.max(30, y1 - y0)}px;left:${x}px;--era:${eraColor(ch.id)}`, title: `${chapterLabel(ch.id)} · ${ch.title} · ${ch.kicker}` },
+            h('span', {}, ch.title),
           ),
         );
       });
@@ -527,7 +527,7 @@ export class Descent {
       h(
         'div.tx',
         {},
-        h('small', {}, c.era ? h('span.era', { title: this.app.chapters.find((x) => x.id === c.era)?.title ?? '' }, c.era) : null, h('b', {}, String(a)), h('i.pl', {}, c.places[0].name), bookMarks(c.books)),
+        h('small', {}, c.era ? h('span.era', { title: `${chapterLabel(c.era)} · ${this.app.chapters.find((x) => x.id === c.era)?.title ?? ''}` }, String(chapterNumber(c.era) ?? '')) : null, h('b', {}, String(a)), h('i.pl', {}, c.places[0].name), bookMarks(c.books)),
         h('strong', {}, c.title),
         h('span.w', {}, c.wow),
         c.years.length > 1 && c.years[1] !== a ? h('em', {}, formatYears(c.years)) : null,
@@ -587,7 +587,7 @@ export class Descent {
           {},
           // The full picture straight away: the document is the point of this level.
           img ? h('figure', {}, h('img', { ...mediaSrc(this.app, img.file, [960]), sizes: '(max-width: 760px) 92vw, 36vw', alt: img.caption ?? c.title, decoding: 'async' }), h('figcaption.credit', {}, img.caption ?? '')) : null,
-          h('small', {}, ...vtags(`${c.era ?? ''} · ${formatYears(c.years)} · ${c.places[0].name}`)),
+          h('small', {}, [chapterLabel(c.era), formatYears(c.years), c.places[0].name].filter(Boolean).join(' · ')),
           h('h3', {}, c.title),
           // The hook only when the body does not open with the same words.
           sameStart(c.wow, c.body) ? null : h('p.desk-wow', {}, c.wow),

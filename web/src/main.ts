@@ -9,7 +9,7 @@ import { formatFragment } from './lib/fragment';
 import { formatRoute, parseRoute, screenOf, type Route } from './lib/route';
 import * as reader from './lib/reader';
 import { copyText, h, svgIcon, toast } from './lib/dom';
-import { detectLang, isLang, lang, setLang, storeLang, storedLang, t, t as tr, type Lang } from './lib/i18n';
+import { chapterLabel, chapterNumber, detectLang, isLang, lang, setLang, storeLang, storedLang, t, t as tr, type Lang } from './lib/i18n';
 import { buildStory } from './views/story';
 import { localizeStatics, RU_TITLE_FIX } from './lib/statics';
 import { loadMediaManifest } from './lib/media';
@@ -388,7 +388,7 @@ function setupNav(app: App, atlas: Atlas): void {
   const nav = document.querySelector<HTMLElement>('.nav')!;
   const progress = nav.querySelector<HTMLElement>('.progress')!;
   for (const ch of app.chapters) {
-    progress.append(h('a', { href: `#ch=${ch.id}`, 'data-chapter': ch.id, 'aria-label': `${ch.id}: ${ch.title}` }, h('span', {}, ch.id)));
+    progress.append(h('a', { href: `#ch=${ch.id}`, 'data-chapter': ch.id, 'aria-label': `${chapterLabel(ch.id)}: ${ch.title}`, title: `${chapterLabel(ch.id)} · ${ch.title}` }, h('span', {}, String(chapterNumber(ch.id) ?? ''))));
   }
   nav.querySelector('[data-home]')!.addEventListener('click', (e) => {
     e.preventDefault();

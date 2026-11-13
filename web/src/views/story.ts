@@ -6,7 +6,7 @@ import type { Card, Chapter } from '../lib/types';
 import { ERAS } from '../lib/types';
 import { formatYears, KIND_LABEL, links } from '../lib/cards';
 import { bookMarks, h, reducedMotion, revealOnScroll } from '../lib/dom';
-import { lang, pick, t } from '../lib/i18n';
+import { chapterLabel, chapterNumber, lang, pick, t } from '../lib/i18n';
 import { chapterCopy, eraColor, isNonPlace, readerCards } from '../lib/atlasModel';
 import { MOVEMENTS, movementText } from '../lib/movements';
 import { mediaSrc, progressive } from '../lib/media';
@@ -172,7 +172,7 @@ function toc(app: App): HTMLElement {
         h(
           'a.toc-item.reveal',
           { href: `#ch=${ch.id}`, 'data-chapter': ch.id, style: `--era:${eraColor(ch.id)}` },
-          heroImg(app, withHero(app, ch).ch, false, withHero(app, ch).pos, '(max-width: 720px) 46vw, 300px') ?? h('span.toc-glyph', { 'aria-hidden': 'true' }, ch.id),
+          heroImg(app, withHero(app, ch).ch, false, withHero(app, ch).pos, '(max-width: 720px) 46vw, 300px') ?? h('span.toc-glyph', { 'aria-hidden': 'true' }, String(chapterNumber(ch.id) ?? '')),
           h('span.num', {}, pick({ en: `Chapter ${app.chapters.indexOf(ch) + 1}`, ru: `Глава ${app.chapters.indexOf(ch) + 1}` })),
           h('span.t', {}, h('b', {}, ch.title), h('span', {}, ch.kicker)),
         ),
@@ -251,7 +251,7 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
     h(
       'div.hero-text',
       {},
-      h('div.release', {}, h('span.v', {}, ch.id), h('span.kicker', {}, ch.kicker)),
+      h('div.release', {}, h('span.v', {}, chapterLabel(ch.id)), h('span.kicker', {}, ch.kicker)),
       h('h2', { id: `title-${ch.id}` }, ch.title),
     ),
     mapHero ? h('p.credit', {}, t('The places of this chapter · map data: Natural Earth, public domain')) : null,

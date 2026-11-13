@@ -2,9 +2,9 @@
 // sourced link, to a card of the museum.
 import type { App } from '../app';
 import { placeName, buildTree, chainLine, deepest, endCards, extendLineage, groupChildren, KIND_LABEL, quotes, longestRoots, searchArtists, suggestions, type Artist, type LineageCard, type RootLink, type TreeNode } from '../lib/roots';
-import { vtags, copyText, h, reducedMotion, svgIcon, toast } from '../lib/dom';
+import { copyText, h, reducedMotion, svgIcon, toast } from '../lib/dom';
 import { formatYears } from '../lib/cards';
-import { count, lang, pick, t } from '../lib/i18n';
+import { chapterLabel, count, lang, pick, t } from '../lib/i18n';
 import { mediaSrc } from '../lib/media';
 import { eraColor } from '../lib/atlasModel';
 
@@ -365,7 +365,7 @@ export class Roots {
       h(
         'div',
         {},
-        h('small', {}, ...vtags(`${pick({ en: 'In the museum', ru: 'В музее' })} · ${c.era ?? ''} · ${formatYears(c.years)}`)),
+        h('small', {}, [pick({ en: 'In the museum', ru: 'В музее' }), chapterLabel(c.era), formatYears(c.years)].filter(Boolean).join(' · ')),
         h('b', {}, c.title),
         h('span', {}, c.wow),
       ),

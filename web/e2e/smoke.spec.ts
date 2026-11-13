@@ -307,6 +307,18 @@ test('interludes and strips never repeat a card the steps of this copy narrate',
   }
 });
 
+test('readers never see the internal chapter ids v0–v7', async ({ page }) => {
+  for (const url of ['/', '/#lang=ru', '/#view=descent&zoom=1', '/#t=1925&view=descent&zoom=5', '/#zoom=1', '/#focus=equiano', '/#view=roots&artist=oasis']) {
+    await page.goto('about:blank');
+    await page.goto(url);
+    await page.waitForTimeout(1500);
+    const text = await page.evaluate(() => document.body.innerText);
+    expect(text.match(/\bv[0-7]\b/g), url).toBeNull();
+  }
+  await page.goto('/#ch=v2&lang=ru');
+  await expect(page.locator('#ch-v2 .hero .release .v')).toHaveText('Глава 3');
+});
+
 test('a card panel holds the page still; the counter keeps the card wording', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('.cover-lang')).toHaveCount(0);
