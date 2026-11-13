@@ -25,6 +25,7 @@ RUN set -eu; cd /src; \
     mkdir -p web/public/data web/public/media; \
     sankofa content export "$src/cards" -o web/public/data/cards.json; \
     node web/scripts/build-chapters.ts "$src/chapters" web/public/data/chapters.json; \
+    node web/scripts/build-roots-extra.ts "$src" web/public/data; \
     if [ -d "$src/media" ]; then cp -R "$src/media/." web/public/media/; fi; \
     node web/scripts/build-media.ts web/public/media web/public/data/media.json; \
     cd web && npx vite build

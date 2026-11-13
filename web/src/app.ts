@@ -6,6 +6,7 @@ import { lang } from './lib/i18n';
 import { t } from './lib/i18n';
 import { h } from './lib/dom';
 import type { ListenFile } from './lib/listen';
+import type { CardLinksFile, ElementsFile } from './lib/elements';
 
 export interface App {
   set: CardSet;
@@ -15,6 +16,10 @@ export interface App {
   chapters: Chapter[];
   /** Recordings to listen to, by card and by roots artist. */
   listen: ListenFile;
+  /** Musical elements the roots carry (content/roots/elements.yaml). */
+  elements: ElementsFile;
+  /** The "why" of each genre-to-genre step (content/card-links.yaml). */
+  cardLinks: CardLinksFile;
   edition: 'm' | 'f';
   media(file: string): string;
   /** Open a card over the current view. `asked` is what the link pointed to. */

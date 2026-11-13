@@ -18,6 +18,11 @@ export interface RootLink {
   claim: string;
   claimRu?: string;
   sources: RootSource[];
+  /** musical elements passed on along this link (lib/elements) */
+  carries?: string[];
+  /** what was passed on, in one sentence */
+  how?: string;
+  howRu?: string;
 }
 
 export interface Artist {
