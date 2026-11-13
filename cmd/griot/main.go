@@ -203,11 +203,25 @@ func run(ctx context.Context, log *slog.Logger, o options) error {
 			log.Error("recorder", "err", err)
 		}
 	}
-	if o.leaderElect {
-		go elect(ctx, log, kube, o, record)
-	} else {
-		go record(ctx)
-	}
+	// On shutdown, wait for the recorder to flush its last batch and for the
+	// leader to release its lease, so a successor takes over at once instead
+	// of after the lease expires.
+	recorded := make(chan struct{})
+	go func() {
+		defer close(recorded)
+		if o.leaderElect {
+			elect(ctx, log, kube, o, record)
+		} else {
+			record(ctx)
+		}
+	}()
+	defer func() {
+		select {
+		case <-recorded:
+		case <-time.After(20 * time.Second):
+			log.Warn("recorder did not stop in time")
+		}
+	}()
 
 	auth, err := frontProxy(ctx, kube)
 	if err != nil {
