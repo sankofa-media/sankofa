@@ -179,9 +179,13 @@ test('a fact from the context rewrite shows the writer’s sources and the secon
   await expect(fact.locator('.ck-agent').nth(1).locator('.ck-sources a').first()).toHaveAttribute('href', /^https?:/);
 });
 
-test('the guide: from the top bar and from the copy note, with numbers filled in, in Russian too', async ({ page }) => {
+test('the guide: from the top bar and from the copy note, with numbers filled in, in Russian too', async ({ page }, info) => {
   await page.goto('/');
-  await page.locator('.nav-actions [data-mech="guide"]').click();
+  // On a phone the guide is in the labelled menu.
+  if (info.project.name === 'mobile') {
+    await page.locator('.nav-menu-btn').click();
+    await page.locator('.nav-sheet [data-entry="guide"]').click();
+  } else await page.locator('.nav-actions [data-mech="guide"]').click();
   await expect(sheet(page).locator('.mx-guide h2').first()).toHaveText('How to read this museum');
   await expect(sheet(page)).not.toContainText('{{');
   await expect(sheet(page).locator('.mx-prose h2')).toHaveCount(10);

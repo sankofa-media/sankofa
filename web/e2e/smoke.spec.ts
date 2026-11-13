@@ -114,7 +114,7 @@ test('the listening room plays the live cluster from /pulse', async ({ page }) =
   await expect(page.locator('.l-badge')).toHaveText(/Live/);
   await expect(page.locator('.l-node')).toHaveCount(2);
   await expect(page.locator('.l-node.silent')).toHaveCount(1);
-  await expect(page.locator('.l-status')).toContainText('1 of 2 nodes playing');
+  await expect(page.locator('.l-status')).toContainText('1 of 2 drums playing');
 });
 
 test('a chapter without a photograph opens on its own night map', async ({ page, request }) => {
@@ -625,7 +625,7 @@ test('the room state stays consistent: late node not counted, pods return gradua
   await expect(page.locator('.l-badge')).toHaveText(/Recorded\sdemo/);
   await page.getByRole('button', { name: 'Break a node' }).click();
   await page.clock.runFor(1000);
-  await expect(page.locator('.l-status')).toContainText(/2\sof\s3\snodes\splaying.*Sogo\slate/);
+  await expect(page.locator('.l-status')).toContainText(/2\sof\s3\sdrums\splaying.*Sogo\slate/);
   const label = await page.locator('.l-node.broken .st').textContent();
   const sub = await page.locator('.l-subs').textContent();
   expect(label!.match(/down\sin\s(\d+)/)?.[1]).toBeTruthy();
@@ -635,9 +635,9 @@ test('the room state stays consistent: late node not counted, pods return gradua
   await page.getByRole('button', { name: 'Mend the node' }).click();
   await page.clock.runFor(500);
   await expect(page.locator('.l-subs')).toContainText(/does\snot\smove\spods\sback/);
-  await expect(page.locator('.l-node').nth(1).locator('.st')).toContainText(/back\s·\s0\sready/);
+  await expect(page.locator('.l-node').nth(1).locator('.st')).toContainText(/back\s·\s0\sanswer/);
   await page.clock.runFor(7000);
-  await expect(page.locator('.l-node').nth(1).locator('.st')).toContainText(/back\s·\s[12]\sready/);
+  await expect(page.locator('.l-node').nth(1).locator('.st')).toContainText(/back\s·\s[12]\sanswer/);
 });
 
 test('a step reached by a jump is the active one and never shows the previous picture', async ({ page }, info) => {
@@ -736,16 +736,50 @@ test('a first visit to the engine room does not claim a card was opened', async 
   await expect(page.locator('.e-yaml p').first()).toContainText('One card');
 });
 
-test('a first visit on a phone names the top-bar icons once', async ({ browser, baseURL }, info) => {
+test('on a phone the top bar is a labelled menu that names every way in', async ({ page }, info) => {
   test.skip(info.project.name !== 'mobile', 'phones only');
-  const page = await (await browser.newContext({ ...info.project.use, baseURL })).newPage();
   await page.goto('/');
-  const strip = page.locator('.nav-legend');
-  await expect(strip).toContainText('Atlas');
-  await strip.getByRole('button').click();
-  await expect(strip).toHaveCount(0);
-  await page.reload();
-  await expect(page.locator('.nav-legend')).toHaveCount(0);
+  const menu = page.locator('.nav-menu-btn');
+  await expect(menu).toBeVisible();
+  await expect(menu).toHaveText('Menu');
+  // No bare icons and no "0" badge in the bar.
+  await expect(page.locator('.nav [data-open-atlas]')).toBeHidden();
+  await expect(page.locator('.nav [data-path-count]')).toBeHidden();
+  await menu.click();
+  const sheet = page.locator('.nav-sheet');
+  await expect(sheet).toBeVisible();
+  for (const name of ['Descend', 'Atlas', 'Listen', 'Roots', 'Engine room', 'Your book', 'Objects', 'Guide']) await expect(sheet.locator('.nav-sheet-item b', { hasText: name }).first()).toBeVisible();
+  // Every entry says in a line what it is.
+  expect(await sheet.locator('.nav-sheet-item small').count()).toBeGreaterThanOrEqual(8);
+  await sheet.locator('[data-entry="atlas"]').click();
+  await expect(sheet).toBeHidden();
+  await expect(page.locator('.atlas.open')).toBeVisible();
+});
+
+test('the menu speaks Russian, and the book counts only once there is something in it', async ({ page }, info) => {
+  test.skip(info.project.name !== 'mobile', 'phones only');
+  await page.goto('/#lang=ru');
+  await expect(page.locator('.nav-menu-btn')).toHaveText('Меню');
+  await page.locator('.nav-menu-btn').click();
+  await expect(page.locator('.nav-sheet [data-entry="book"] b')).toHaveText('Ваша книга');
+  await page.keyboard.press('Escape');
+  await page.goto('/#focus=equiano&lang=ru');
+  await expect(page.locator('.drawer.on')).toBeVisible();
+  await page.locator('.drawer.on .close').click();
+  await page.locator('.nav-menu-btn').click();
+  await expect(page.locator('.nav-sheet [data-entry="book"] b')).toContainText('1 карточка');
+});
+
+test('the chapter chip stays on one line on a phone', async ({ page }, info) => {
+  test.skip(info.project.name !== 'mobile', 'phones only');
+  await page.goto('/#lang=ru');
+  for (const id of ['v0', 'v7']) {
+    const chip = page.locator(`#ch-${id} .hero .release .v`);
+    await chip.scrollIntoViewIfNeeded();
+    const box = await chip.boundingBox();
+    // One line of 13px text with its padding is well under two lines.
+    expect(box!.height).toBeLessThan(32);
+  }
 });
 
 test('switching language keeps the reader in the same chapter', async ({ page }) => {
@@ -764,14 +798,6 @@ test('switching language keeps the reader in the same chapter', async ({ page })
       })?.dataset.chapter;
     });
   await expect.poll(mid, { timeout: 6000 }).toBe('v4');
-});
-
-test('the phone icon legend never covers an open view', async ({ browser, baseURL }, info) => {
-  test.skip(info.project.name !== 'mobile', 'phones only');
-  const page = await (await browser.newContext({ ...info.project.use, baseURL })).newPage();
-  await page.goto('/#view=descent');
-  await expect(page.locator('.descent.open')).toBeVisible();
-  await expect(page.locator('.nav-legend')).toHaveCount(0);
 });
 
 /** Record requests to the video host; answer them locally so tests stay offline. */
