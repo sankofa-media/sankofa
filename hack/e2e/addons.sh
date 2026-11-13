@@ -99,4 +99,12 @@ cards=$(curl -sk https://museum.sankofa.workshop.aenix.io/data/cards.json | pyth
 [ "$cards" -ge 50 ] || fail "museum serves only $cards cards"
 ok "the museum is public and serves $cards cards"
 
+# The real headers, not the dev server's: recordings must be allowed to load.
+csp=$(curl -skI https://museum.sankofa.workshop.aenix.io/ | tr -d '\r' | grep -i '^content-security-policy:')
+case "$csp" in *"frame-src https://www.youtube-nocookie.com"*) ;; *) fail "CSP blocks the YouTube player: $csp";; esac
+case "$csp" in *"https://i.ytimg.com"*) ;; *) fail "CSP blocks recording posters: $csp";; esac
+media=$(curl -skI https://museum.sankofa.workshop.aenix.io/media/$(curl -sk https://museum.sankofa.workshop.aenix.io/data/cards.json | python3 -c 'import json,sys;c=[x for x in json.load(sys.stdin)["cards"] if x.get("media")];print(c[0]["media"][0]["file"])') | tr -d '\r' | grep -i '^cache-control:')
+case "$media" in *max-age*) ;; *) fail "media are served without caching: $media";; esac
+ok "the museum lets recordings play and caches media"
+
 echo "all $pass checks passed"
