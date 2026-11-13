@@ -1,0 +1,1678 @@
+# Second, independent check (2026-11-13) of content/ledger/context-a.yaml.
+# Every cited URL was reopened; quotes are copied from the fetched page text
+# (archive.org snapshots or WebFetch where the site blocks scripts, as noted).
+# verdict: confirmed | corrected (card wording or sources changed) |
+#          refuted | unconfirmed (removed from the card).
+# Entries whose fact starts with "(unledgered)" check claims added in the
+# rewrite that the first ledger did not record.
+- card: achebe
+  fact: "Things Fall Apart went on to sell more than ten million copies and was translated into some 50 languages"
+  verdict: confirmed
+  sources:
+    - {title: "Brown University News (2013)", url: "https://archive2.news.brown.edu/2007-2015/articles/2013/03/achebe.html", quote: "having sold more than 12 million copies in English alone. It has been translated into 50 languages."}
+    - {title: "PBS NewsHour (2013)", url: "https://www.pbs.org/newshour/arts/remembering-nigerian-novelist-chinua-achebe", quote: "which has sold more than 10 million copies and has been translated into more than 50 languages"}
+  note: "PBS and Bard alumni reprint the same AP obituary (one source); Brown is independent. Al Jazeera agrees."
+- card: achebe
+  fact: "A car accident in Nigeria in 1990 left Achebe paralysed"
+  verdict: confirmed
+  sources:
+    - {title: "Times Higher Education: Story-teller torn from his roots", url: "https://www.timeshighereducation.com/node/95698", quote: "Achebe's current - and second - exile began in 1990 when he suffered a terrible motor accident. Nigerian hospitals were unable to deal with his injuries, so he was flown to Britain ... he is still paralysed"}
+    - {title: "Encyclopaedia Britannica: Chinua Achebe", url: "https://www.britannica.com/biography/Chinua-Achebe", quote: "After an automobile accident in Nigeria in 1990 that left him partially paralyzed, he moved to the United States"}
+  note: "Ledger's PBS and Bard alumni quotes are the same AP text. 'In Nigeria' needed an explicit source; Britannica added to card sources."
+- card: achebe
+  fact: "He taught at Bard College"
+  verdict: confirmed
+  sources:
+    - {title: "Times Higher Education", url: "https://www.timeshighereducation.com/node/95698", quote: "After six months he moved to the United States, to a professorship in literature at Bard College"}
+    - {title: "PBS NewsHour (AP, 2013)", url: "https://www.pbs.org/newshour/arts/remembering-nigerian-novelist-chinua-achebe", quote: "he lived for many years in a cottage on the campus of Bard College, where he was a faculty member"}
+  note: ""
+- card: achebe
+  fact: "From 2009 he taught at Brown University"
+  verdict: confirmed
+  sources:
+    - {title: "Brown University News (2013)", url: "https://archive2.news.brown.edu/2007-2015/articles/2013/03/achebe.html", quote: "joined the Brown faculty in the fall of 2009"}
+    - {title: "PBS NewsHour (AP, 2013)", url: "https://www.pbs.org/newshour/arts/remembering-nigerian-novelist-chinua-achebe", quote: "He joined Brown University in 2009 as a professor of languages and literature."}
+  note: ""
+- card: achebe
+  fact: "He died in Boston on 21 March 2013"
+  verdict: confirmed
+  sources:
+    - {title: "Brown University News (2013)", url: "https://archive2.news.brown.edu/2007-2015/articles/2013/03/achebe.html", quote: "died in Boston Thursday evening, March 21, 2013"}
+    - {title: "African Studies Centre Leiden", url: "https://www.ascleiden.nl/content/library-highlights/chinua-achebe", quote: "Chinua Achebe died on 21 March 2013 at the age of 82."}
+  note: "Boston also in Al Jazeera ('Nigeria novelist Achebe dies in Boston')."
+- card: achebe
+  fact: "(unledgered) The 1975 Amherst lecture was printed as 'An Image of Africa'"
+  verdict: confirmed
+  sources:
+    - {title: "The Massachusetts Review, vol. 57 no. 1", url: "https://massreview.org/volume-57-issue-1/", quote: "gave his Chancellor's Lecture \"An Image of Africa: Racism in Conrad's Heart of Darkness\" at the University of Massachusetts, Amherst in 1975. The lecture was published by the Massachusetts Review in 1977."}
+    - {title: "Caryl Phillips, Was Joseph Conrad Really a Racist?", url: "https://gcp-web.sjsu.edu/people/cynthia.rostankowski/courses/HUM2BS14/s0/Caryl-Phillips-and-Chinua-Achebe---Was-Joseph-Conrad-Really-a-Racist.pdf", quote: "lecture entitled \"An Image of Africa: Racism in Conrad's Heart of Darkness.\""}
+  note: "Both already in card sources."
+- card: adinkra
+  fact: "(unledgered) The Burial Ground heart was first hailed as Sankofa; later research for the federal government suggested an Anglo-American design; NPS now says only 'perhaps a Sankofa'"
+  verdict: corrected
+  sources:
+    - {title: "History News Network, from the New York Times (26 Jan 2010)", url: "https://www.historynewsnetwork.org/article/122687", quote: "a peer-reviewed study, published this month in a leading history journal ... suggests ... that the design is likely Anglo-American in origin. The National Park Service ... is itself stepping back from the original claim. As a result of research by scholars who prepared reports in 2006 for the federal government"}
+    - {title: "NPS African Burial Ground brochure (2019)", url: "https://www.npshistory.com/publications/afbg/brochures/2019.pdf", quote: "heart-shaped pattern-perhaps a Sankofa-created"}
+  note: "Moved from the dispute field into the body. The Anglo-American reading comes from a 2010 peer-reviewed study, not from the federal-government reports (those made NPS hedge). Body and dispute (EN+RU) reworded accordingly."
+- card: adinkra
+  fact: "(unledgered) The hope behind that reading shows what the sign means to descendants looking for their past"
+  verdict: unconfirmed
+  sources:
+    - {title: "History News Network, from the New York Times (2010)", url: "https://www.historynewsnetwork.org/article/122687", quote: "it was embraced by many African-Americans as a remarkable example of the survival of African customs"}
+  note: "Interpretive sentence; only one source (NYT) speaks to it. Removed in EN and RU."
+- card: adlam
+  fact: "The brothers taught Adlam first to their sister and friends"
+  verdict: confirmed
+  sources:
+    - {title: "Microsoft Unlocked: ADLaM, can an alphabet save a culture?", url: "https://unlocked.microsoft.com/adlam-can-an-alphabet-save-a-culture/", quote: "The boys shared their alphabet with anyone who showed interest. First their sister, then their friends."}
+    - {title: "Languages and Numbers: ADLaM, the story of an artificial script", url: "https://www.languagesandnumbers.com/articles/en/ADLaM/", quote: "Their sister, Aissata Barry, who had learnt the alphabet too, entered then and read it. The proof was made. The ADLaM script swiftly gained popularity"}
+  note: "Ledger paraphrase replaced by the real Microsoft quote. Duke/Face2Face Africa also say the younger sister was the first taught (derivative, not counted)."
+- card: adlam
+  fact: "With their father they began translating books into Adlam"
+  verdict: corrected
+  sources:
+    - {title: "Communication Arts, Thomas Phinney", url: "https://www.commarts.com/columns/finding-a-common-language", quote: "The brothers and their father started translating books into Adlam"}
+    - {title: "Microsoft Unlocked", url: "https://unlocked.microsoft.com/adlam-can-an-alphabet-save-a-culture/", quote: "They transcribed books, developed pamphlets and organized classes."}
+  note: "Only Communication Arts names the father; Microsoft attributes the book work to the boys. 'With their father' removed (EN+RU); 'began translating books into it' kept."
+- card: adlam
+  fact: "Word of Adlam spread to neighbouring countries where Fulani is spoken"
+  verdict: confirmed
+  sources:
+    - {title: "Monotype: The story of Adlam", url: "https://www.monotype.com/resources/expertise/story-adlam", quote: "In time, the news of Adlam spread to neighboring countries where Fulani is also spoken."}
+    - {title: "The Unicode Standard 17.0, ch. 19", url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/", quote: "it was widely adopted among Fulani communities and is currently taught at schools in Guinea, Nigeria, Liberia and other nearby countries"}
+  note: ""
+- card: adlam
+  fact: "The brothers knew Adlam had to work on computers to survive"
+  verdict: confirmed
+  sources:
+    - {title: "Monotype: The story of Adlam", url: "https://www.monotype.com/resources/expertise/story-adlam", quote: "the two brothers realized that this new alphabet had to be supported on computers if it was to survive"}
+    - {title: "Microsoft Unlocked", url: "https://unlocked.microsoft.com/adlam-can-an-alphabet-save-a-culture/", quote: "But the brothers knew that their language needed to be accessible on computers and phones to reach a critical mass."}
+  note: "Ledger's Communication Arts quote is the author's own remark, not the brothers' view; replaced by Microsoft."
+- card: afrobeat
+  fact: "Tony Allen left Fela's band in 1979"
+  verdict: confirmed
+  sources:
+    - {title: "OkayAfrica (30 April 2020)", url: "https://www.okayafrica.com/trailblazing-afrobeat-drummer-pioneer-tony-allen-has-died/117647", quote: "The musician parted ways with Fela in 1979 and formed his own group"}
+    - {title: "uDiscover Music (1 May 2020)", url: "https://udiscovermusic.com/news/tony-allen-afrobeat-dead-79", quote: "Allen left the band in 1979, after reported rifts with the band leader over royalties."}
+  note: ""
+- card: afrobeat
+  fact: "Tony Allen died in Paris in 2020"
+  verdict: confirmed
+  sources:
+    - {title: "OkayAfrica (30 April 2020)", url: "https://www.okayafrica.com/trailblazing-afrobeat-drummer-pioneer-tony-allen-has-died/117647", quote: "passed away on Thursday night in Paris. He was 79."}
+    - {title: "uDiscover Music (1 May 2020)", url: "https://udiscovermusic.com/news/tony-allen-afrobeat-dead-79", quote: "died in Paris on Thursday aged 79, his manager has confirmed"}
+  note: "Both rest on the manager's statement to AFP; acceptable as two outlets reporting a primary statement, but not strongly independent."
+- card: afrobeat
+  fact: "(unledgered) Allen played on until his death"
+  verdict: corrected
+  sources:
+    - {title: "OkayAfrica (2020)", url: "https://www.okayafrica.com/trailblazing-afrobeat-drummer-pioneer-tony-allen-has-died/117647", quote: "formed his own group ... He later moved to Paris and collaborated with a number of renowned African artists ... last month, the artist released a joint album with ... Hugh Masekela"}
+    - {title: "uDiscover Music (2020)", url: "https://udiscovermusic.com/news/tony-allen-afrobeat-dead-79", quote: "He collaborated with a number of artists during his long music career"}
+  note: "Reworded to 'went on to a long career of his own', which both sources support (EN+RU)."
+- card: afrobeat
+  fact: "In February 1977 the soldiers razed the Kalakuta commune and beat Fela"
+  verdict: confirmed
+  sources:
+    - {title: "Fela Kuti official site: 1977", url: "https://felakuti.com/story/1977", quote: "On 18 February ... 1,000 soldiers batter their way into Kalakuta and raze it to the ground ... beat and arrest Fela"}
+    - {title: "Songlines: Fela Kuti, a beginner's guide", url: "https://songlines.co.uk/features/a-beginner-s-guide/fela-kuti-a-beginner-s-guide", quote: "on February 18, 1977 ... Fela was severely beaten ... His Kalakuta compound was burned to the ground"}
+  note: "Red Bull Music Academy also agrees."
+- card: afrobeat
+  fact: "His mother died of the injuries from the attack (in 1978)"
+  verdict: confirmed
+  sources:
+    - {title: "Fela Kuti official site: 1978", url: "https://felakuti.com/story/1978", quote: "On 13 April, Fela's mother dies from injuries she suffered during the attack."}
+    - {title: "Songlines", url: "https://songlines.co.uk/features/a-beginner-s-guide/fela-kuti-a-beginner-s-guide", quote: "his elderly mother thrown from a window, causing fatal injuries"}
+  note: "The year 1978 was already in the card before the rewrite."
+- card: afrobeat
+  fact: "Fela died in 1997"
+  verdict: confirmed
+  sources:
+    - {title: "Fela Kuti official site: 1997", url: "https://felakuti.com/story/1997", quote: "On 2 August, Fela dies."}
+    - {title: "Red Bull Music Academy Daily (2012)", url: "https://daily.redbullmusicacademy.com/2012/12/a-guide-to-the-albums-of-fela-kuti", quote: "leaving our physical plane on August 2, 1997, aged 58"}
+  note: ""
+- card: afrobeat
+  fact: "Hundreds of thousands of people filled the streets of Lagos for his funeral"
+  verdict: confirmed
+  sources:
+    - {title: "Songlines", url: "https://songlines.co.uk/features/a-beginner-s-guide/fela-kuti-a-beginner-s-guide", quote: "Hundreds of thousands of people took to the streets of Lagos for Fela's funeral in 1997"}
+    - {title: "Fela Kuti official site: 1997", url: "https://felakuti.com/story/1997", quote: "An estimated hundred and fifty thousand people gather in Tafawa Balewa Square ... and over a million others line the route"}
+  note: ""
+- card: amen-break
+  fact: "The Amen break is a drum solo a few seconds long"
+  verdict: confirmed
+  sources:
+    - {title: "NPR (2017)", url: "https://text.npr.org/542087087", quote: "these six seconds"}
+    - {title: "DJ TechTools (2009)", url: "https://djtechtools.com/2009/12/10/dj-history-the-drums-that-last-forever", quote: "his 5-second drum solo was going to spawn and influence multiple genres of music"}
+  note: ""
+- card: amen-break
+  fact: "Spencer left music in the 1970s, studied at Howard University and became a Baptist minister and high-school teacher in North Carolina"
+  verdict: corrected
+  sources:
+    - {title: "WFAE (28 Dec 2020)", url: "https://www.wfae.org/arts-culture/2020-12-28/richard-lewis-spencer-north-carolina-musician-known-for-the-winstons-dies-at-78", quote: "Spencer left music in the 1970s and went to college, eventually getting his Ph.D. at Howard University. He was a licensed Baptist minister and taught high school in Wadesboro."}
+    - {title: "Smith's Funeral Home obituary", url: "https://www.articobits.com/obituaries/smiths-funeral-home-wadesbaro-nc/mr-richard-lewis-spencer-obituary", quote: "He studied for his PhD at Howard University ... retired from the Washington DC Metro system in 2000 and became a licensed Baptist Minister and high school teacher in Montgomery County, North Carolina ... Even though Spencer left the recording industry"}
+  note: "'In the 1970s' rests on WFAE alone; the obituary gives no date. Reworded to 'had left the recording industry' (EN+RU)."
+- card: amen-break
+  fact: "Gregory Coleman died in 2006"
+  verdict: confirmed
+  sources:
+    - {title: "NPR (2017)", url: "https://text.npr.org/542087087", quote: "Gregory Coleman was the drummer. He died in 2006."}
+    - {title: "DJ TechTools (2009)", url: "https://djtechtools.com/2009/12/10/dj-history-the-drums-that-last-forever", quote: "Unfortunately Coleman passed away in '06."}
+  note: ""
+- card: amen-break
+  fact: "Spencer died in December 2020, aged 78"
+  verdict: confirmed
+  sources:
+    - {title: "Smith's Funeral Home obituary", url: "https://www.articobits.com/obituaries/smiths-funeral-home-wadesbaro-nc/mr-richard-lewis-spencer-obituary", quote: "He departed this life, Sunday, December 27, 2020, at the age of 78."}
+    - {title: "WFAE (28 Dec 2020)", url: "https://www.wfae.org/arts-culture/2020-12-28/richard-lewis-spencer-north-carolina-musician-known-for-the-winstons-dies-at-78", quote: "Richard Lewis Spencer ... died Sunday (headline: Dies At 78)"}
+  note: ""
+- card: amen-break
+  fact: "(unledgered) Jungle and drum and bass were the sound pirate stations such as Rinse FM broadcast from east London tower blocks"
+  verdict: confirmed
+  sources:
+    - {title: "Dazed: Rinse FM at 30", url: "https://www.dazeddigital.com/music/article/62542/1/rinse-fm-at-30-an-oral-history-of-the-notorious-east-london-radio", quote: "Geeneus and his original Rinse crew spent the 90s hopping between tower blocks, first playing jungle, then garage across the east London airwaves"}
+    - {title: "Dummy: The Dummy guide to Rinse FM", url: "https://dmy.co/features/the-dummy-guide-to-rinse-fm/", quote: "It started out as a jungle station ... banned for five years from the roof of any building in Tower Hamlets with more than four storeys, after being caught on a tower block"}
+  note: "Both added to card sources."
+- card: amen-break
+  fact: "(unledgered) The break turned funk drumming into raw material for machines, much as Planet Rock did with Kraftwerk; whole genres were built on it"
+  verdict: confirmed
+  sources:
+    - {title: "DJ TechTools (2009)", url: "https://djtechtools.com/2009/12/10/dj-history-the-drums-that-last-forever", quote: "his 5-second drum solo was going to spawn and influence multiple genres of music"}
+    - {title: "Songfacts: Planet Rock (planet-rock card source)", url: "https://www.songfacts.com/facts/afrika-bambaataa-the-soulsonic-force/planet-rock", quote: "Even though this interpolated Kraftwerk's song \"Trans-Europe Express,\" it didn't sample it directly"}
+  note: "Interpretive comparison; Planet Rock side is documented on the linked card (rebuilt on a TR-808). Kept."
+- card: amo
+  fact: "As a small child he was brought to Europe, most likely as a 'gift' from the Dutch West India Company"
+  verdict: confirmed
+  sources:
+    - {title: "Stanford Encyclopedia of Philosophy: German philosophy before Kant", url: "https://plato.stanford.edu/archives/spr2025/entries/18thGerman-preKant/", quote: "was brought to the Netherlands as a small boy in 1707 through the Dutch West India Company"}
+    - {title: "Universität Halle: Amo Lectures, about Amo", url: "https://amo-lectures.uni-halle.de/about", quote: "many scholars assume that Amo was enslaved as a child and came to the court of Duke Anton Ulrich von Braunschweig-Wolfenbüttel via Amsterdam as a so-called \"gift\" from the Dutch West India Company. However, the historical sources are sparce and inconclusive"}
+  note: "'Most likely' matches the hedge in the Halle page."
+- card: amo
+  fact: "He was still living at Axim in the early 1750s"
+  verdict: confirmed
+  sources:
+    - {title: "Stanford Encyclopedia of Philosophy", url: "https://plato.stanford.edu/archives/spr2025/entries/18thGerman-preKant/", quote: "it was in Axim that a Swiss doctor would report encountering Amo in the early 1750s"}
+    - {title: "Universität Halle: Amo Lectures", url: "https://amo-lectures.uni-halle.de/about", quote: "Until at least 1753 he lived in Axim in what is now Ghana, where the Swiss traveller Henri-David Gallandat reported meeting him"}
+  note: "Both ledger paraphrases replaced by real quotes."
+- card: amo
+  fact: "He later lived at the Dutch fort of San Sebastian in Shama, where he died; the year is uncertain"
+  verdict: confirmed
+  sources:
+    - {title: "Universität Halle: Amo Lectures", url: "https://amo-lectures.uni-halle.de/about", quote: "Later, Amo moved, or possibly was moved, to the Dutch-controlled Fort San Sebastian in Shama, where his tombstone can be found noting the year of death as 1784"}
+    - {title: "Parliament of Ghana, Hansard: Legacy of Anton Wilhelm Amo", url: "https://www.parliament.gh/floor?dis=166", quote: "it is known that he had died at a fort in Shama ... why they kept him in the Fort San Sebastian, in Shama"}
+  note: "Deutsche Biographie gives place of death Shama and dates 'after 1753'; SEP says 'thought to have died not long after' the early 1750s; the gravestone says 1784, so 'uncertain' is right. Parliament of Ghana added to card sources for the fort."
+- card: amo
+  fact: "In August 2025 Berlin renamed Mohrenstraße Anton-Wilhelm-Amo-Straße"
+  verdict: confirmed
+  sources:
+    - {title: "Berlin.de, Bezirk Mitte", url: "https://www.berlin.de/kunst-und-kultur-mitte/geschichte/erinnerungskultur/strassenbenennungen/artikel.1066742.php", quote: "Die Umbenennung der Mohrenstraße in Anton-Wilhelm-Amo-Straße wird am 23. August 2025 vollzogen."}
+    - {title: "ZDFheute (2025)", url: "https://www.zdfheute.de/politik/deutschland/mohrenstrasse-berlin-umbenannt-anton-wilhelm-amo-100.html", quote: "Ein Arbeiter ersetzt das Straßenschild der Mohrenstraße mit einer neuen Aufschrift. Ab dem 23. August"}
+  note: ""
+- card: amo
+  fact: "De humanae mentis apatheia is 'On the impassivity of the human mind'"
+  verdict: confirmed
+  sources:
+    - {title: "Stanford Encyclopedia of Philosophy", url: "https://plato.stanford.edu/archives/spr2025/entries/18thGerman-preKant/", quote: "De humanae mentis apatheia (On the Impassivity of the Human Mind)"}
+    - {title: "Wikimedia Commons: title page, Wittenberg 1734 (primary)", url: "https://commons.wikimedia.org/wiki/File:Anton_Wilhelm_Amo_(c._1703_%E2%80%93_c._1759)_-_Dissertatio_inauguralis_philosophica_de_humanae_mentis_apatheia,_Wittenberg,_1734,_title_page.jpg", quote: "Dissertatio inauguralis philosophica de humanae mentis apatheia"}
+  note: "A translation of a Latin title; the primary title page plus SEP suffice."
+- card: amo
+  fact: "(unledgered) He was educated at the Brunswick-Wolfenbüttel court"
+  verdict: confirmed
+  sources:
+    - {title: "Universität Halle: Amo Lectures", url: "https://amo-lectures.uni-halle.de/about", quote: "Amo also received his first formal education in the context of the court in Wolfenbüttel, including literacy in Latin"}
+    - {title: "Stanford Encyclopedia of Philosophy", url: "https://plato.stanford.edu/archives/spr2025/entries/18thGerman-preKant/", quote: "Amo evidently worked as a servant in the Duke's court in Wolffenbüttel, though he would also receive an education"}
+  note: ""
+- card: anthony-johnson
+  fact: "A neighbour, Robert Parker, kept Casor; the court found Parker held him unjustly, ordered him returned to Johnson and made Parker pay the costs"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia Virginia: Court ruling on Anthony Johnson and his servant (1655), primary document", url: "https://encyclopediavirginia.org/primary-documents/court-ruling-on-anthony-johnson-and-his-servant-1655/", quote: "doe fynde that the said Mr. Robert Parker most unjustly keepeth the said Negro from Anthony Johnson his master ... ordered That the said John Casor Negro forthwith returne unto the service of his said master Anthony Johnson, And that mr. Robert Parker make payment of all charge in the suit."}
+    - {title: "Encyclopedia.com: Anthony Johnson", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/johnson-anthony", quote: "Parker stepped in and took Casor to his farm ... On March 8, 1655, the court ruled that Parker had acquired Casor illegally and that Casor should be returned to Johnson."}
+  note: "'Neighbour' is the Encyclopedia Virginia editorial summary ('Johnson's neighbor, Robert Parker')."
+- card: anthony-johnson
+  fact: "In the 1660s the Johnsons moved to Somerset County, Maryland, and rented a 300-acre farm"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia.com: Anthony Johnson", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/johnson-anthony", quote: "Around 1665 ... the entire Johnson family moved to Somerset County, Maryland. They leased a 300-acre plantation, which they called \"Tonies Vineyard.\""}
+    - {title: "Virtual Jamestown: Anthony Johnson", url: "https://www.virtualjamestown.org/ajohnsonRP.html", quote: "In the 1660s, the Johnson clan, searching for more productive land, moved to Somerset County, Maryland. There Anthony leased a 300-acre estate."}
+  note: "PBS Africans in America agrees ('In 1665 ... moved to Maryland, where they leased a 300-arce tract')."
+- card: anthony-johnson
+  fact: "Anthony Johnson died in 1670"
+  verdict: confirmed
+  sources:
+    - {title: "Maryland Public Television, Maryland Roots", url: "https://mdroots.thinkport.org/library/anthonyjohnson.asp", quote: "When Anthony Johnson died in 1670, the lease passed to his wife Mary"}
+    - {title: "PBS Africans in America: Anthony Johnson", url: "https://www.pbs.org/wgbh/aia/part1/1p265.html", quote: "Anthony died five years later, in the spring of 1670"}
+  note: "Virtual Jamestown also: 'Anthony Johnson died in 1670.'"
+- card: anthony-johnson
+  fact: "(unledgered) Johnson was one of the first Africans in Virginia and rose from bondage to own land"
+  verdict: confirmed
+  sources:
+    - {title: "PBS Africans in America: Anthony Johnson (read via web.archive.org)", url: "https://www.pbs.org/wgbh/aia/part1/1p265.html", quote: "Anthony Johnson first arrived in Virginia in 1621 ... finding yourself in bondage on a Virginia tobacco plantation ... Anthony Johnson would rise above his low status ... They acquired their own land."}
+    - {title: "Virtual Jamestown: Anthony Johnson", url: "https://www.virtualjamestown.org/ajohnsonRP.html", quote: "Johnson and his sons farmed independently, held slaves and indentured servants, and left sizeable estates."}
+  note: "'One of the first' follows from the 1621 arrival, two years after the 1619 arrival covered by the card's Encyclopedia Virginia source."
+- card: aro-and-dahomey
+  fact: "Ouidah was Dahomey's second town and a major outlet of the trade, where captives were sold in the market square and forced onto ships at the beach"
+  verdict: corrected
+  sources:
+    - {title: "Robin Law: Ouidah, Ohio University Press (book description)", url: "https://www.ohioswallow.com/9780821415726/ouidah/", quote: "the second-most-important town of the Dahomey kingdom. It served as a major outlet for the transatlantic slave trade. Between the seventeenth and the nineteenth centuries, Ouidah was the most important embarkation point for slaves in the region"}
+    - {title: "Encyclopaedia Britannica: Ouidah (read via web.archive.org)", url: "https://www.britannica.com/place/Ouidah", quote: "In the 18th and 19th centuries, Ouidah (Whydah) was a slave-trading hub and an important center of commerce in the kingdom of Dahomey."}
+    - {title: "Slavery Monuments: La Porte du Non Retour", url: "https://www.slaverymonuments.org/items/show/1147", quote: "The memorial gate, which marks the point where African captives were forced onto transatlantic slave ships, is connected by a path, known as the \"Slave Route,\" to the market square, where enslaved people were once sold."}
+  note: "'Second town' rests on Robin Law alone (the Cambridge introduction is the same book). Reworded to 'its great slave-trading port' (EN+RU); Britannica added to card sources. Market square and beach confirmed by Slavery Monuments plus Law's 'embarkation point'."
+- card: aro-and-dahomey
+  fact: "In 2024 Benin passed a law offering nationality to people who can trace descent to a sub-Saharan African deported in the slave trade"
+  verdict: confirmed
+  sources:
+    - {title: "Republic of Benin (official): Benin, a land of opportunity for Afro-descendants", url: "https://benin.bj/en/news/benin-a-land-of-opportunity-for-afro-descendants", quote: "July 30, 2024 marks a historic turning point ... The new law on Beninese nationality now enables anyone whose genealogy reveals a sub-Saharan African ancestor deported during the slave trade to apply for Beninese citizenship."}
+    - {title: "Africanews (16 Dec 2024), via WebFetch", url: "https://www.africanews.com/2024/12/16/benin-grants-citizenship-to-slave-descendants/", quote: "can provide proof that an ancestor was deported via the slave trade from anywhere in sub-Saharan Africa"}
+  note: "Africanews blocks curl (406); read through WebFetch. The ledger quote 'grants citizenship to those who can trace their lineage to the slave trade' is on the page."
+- card: aro-and-dahomey
+  fact: "(unledgered) Olaudah Equiano, by his own account, was taken from Igboland"
+  verdict: confirmed
+  sources:
+    - {title: "Equiano, The Interesting Narrative (1789), Project Gutenberg", url: "https://www.gutenberg.org/cache/epub/15399/pg15399.txt", quote: "in one of the most remote and fertile of which, called Eboe, I was born, in the year 1745"}
+    - {title: "Brycchan Carey: Olaudah Equiano, a brief biography", url: "https://brycchancarey.com/equiano/biog.htm", quote: "Equiano tells us that he was born around the year 1745 in an area called 'Eboe' in Guinea. Ibo (or Igbo) is one of the main languages of present day Nigeria."}
+  note: "'By his own account' correctly hedges the disputed birthplace."
+- card: ashleys-sack
+  fact: "Ashley was sold in the 1850s"
+  verdict: confirmed
+  sources:
+    - {title: "NPR Fresh Air via KENW (2021), Tiya Miles interview", url: "https://www.kenw.org/post/how-cotton-sack-passed-down-over-generations-tells-larger-story-about-slavery", quote: "One winter day in South Carolina in the 1850s, an enslaved woman by the name of Rose discovered that her 9-year-old daughter was about to be sold off"}
+    - {title: "Mark Auslander, Southern Spaces (2016)", url: "https://southernspaces.org/2016/slaverys-traces-search-ashleys-sack/", quote: "There is no specific record of an \"Ashley\" after the 1853 inventory ... suggests that Rose may have died prior to 1865, or was sold out of the area after 1853"}
+  note: "The National Book Foundation blurb ('In 1850s South Carolina') is the publisher's copy of Miles's book, the same source as the NPR interview. Auslander's archival reconstruction is independent and points to a sale after the 1852-53 estate inventory."
+- card: ashleys-sack
+  fact: "Rose and Ashley never saw each other again"
+  verdict: confirmed
+  sources:
+    - {title: "Mark Auslander, Southern Spaces (2016)", url: "https://southernspaces.org/2016/slaverys-traces-search-ashleys-sack/", quote: "The embroidered text records that Rose and Ashley never saw one another again"}
+    - {title: "NPR via KENW (2021)", url: "https://www.kenw.org/post/how-cotton-sack-passed-down-over-generations-tells-larger-story-about-slavery", quote: "told her it be filled with my love always. She never saw her again."}
+  note: "Both quote the embroidery itself (the primary text). CWU news is Auslander's own university; not counted separately."
+- card: ashleys-sack
+  fact: "Ruth Middleton lived in Philadelphia"
+  verdict: confirmed
+  sources:
+    - {title: "Mark Auslander, Southern Spaces (2016)", url: "https://southernspaces.org/2016/slaverys-traces-search-ashleys-sack/", quote: "married Arthur Middleton ... in Philadelphia, Pennsylvania, where she evidently resided for the rest of her life"}
+    - {title: "NPR via KENW (2021), Tiya Miles", url: "https://www.kenw.org/post/how-cotton-sack-passed-down-over-generations-tells-larger-story-about-slavery", quote: "information about what it meant to be a young Black woman in Philadelphia in the early 1900s"}
+  note: "Independence problem: the ledger's second source, the CWU news release, is Auslander's employer reporting his research (same source). Replaced by Miles on NPR."
+- card: ashleys-sack
+  fact: "A shopper at a Tennessee flea market found the sack in a bin of rags and bought the bin for $20"
+  verdict: confirmed
+  sources:
+    - {title: "NPR via KENW (2021)", url: "https://www.kenw.org/post/how-cotton-sack-passed-down-over-generations-tells-larger-story-about-slavery", quote: "she came across this bit of rags in a Tennessee flea market, just rifling through the bin and noticed the inscription on the sack ... purchased the whole bin of old discarded cloth of rags for $20"}
+    - {title: "Mark Auslander, Southern Spaces (2016)", url: "https://southernspaces.org/2016/slaverys-traces-search-ashleys-sack/", quote: "in February 2007 a white woman ... discovered and purchased Ashley's Sack for twenty dollars from a white man at an open-air flea market in Springfield, Tennessee"}
+  note: "The 'bin of rags' detail is from Miles only; Auslander confirms Tennessee flea market and $20."
+- card: ashleys-sack
+  fact: "The sack now belongs to Middleton Place"
+  verdict: confirmed
+  sources:
+    - {title: "NPR via KENW (2021)", url: "https://www.kenw.org/post/how-cotton-sack-passed-down-over-generations-tells-larger-story-about-slavery", quote: "Middleton Play [sic] Foundation is the owner of the sack. And the staff members there are caring for it, and they view it as their most important artifact."}
+    - {title: "Mark Auslander, Southern Spaces (2016)", url: "https://southernspaces.org/2016/slaverys-traces-search-ashleys-sack/", quote: "she decided to transfer it to the Middleton Place historic house museum near Charleston ... On loan from South Carolina's Middleton Place"}
+  note: ""
+- card: ashleys-sack
+  fact: "In 2021 Tiya Miles won the National Book Award for nonfiction with All That She Carried"
+  verdict: confirmed
+  sources:
+    - {title: "National Book Foundation (award body)", url: "https://www.nationalbook.org/books/all-that-she-carried-the-journey-of-ashleys-sack-a-black-family-keepsake/", quote: "Winner, National Book Awards 2021 for Nonfiction"}
+    - {title: "American Historical Association (2021), via WebFetch", url: "https://www.historians.org/news/aha-member-wins-2021-national-book-award/", quote: "AHA member Tiya Miles (Harvard Univ.) has been awarded the 2021 National Book Award for Nonfiction."}
+  note: "AHA blocks curl (403); read through WebFetch."
+- card: bamum
+  fact: "The French deported Njoya to Yaoundé, where he died in exile on 30 May 1933"
+  verdict: confirmed
+  sources:
+    - {title: "Kenneth J. Orosz, Njoya's Alphabet, Cahiers d'études africaines 217 (2015), read via web.archive.org", url: "https://journals.openedition.org/etudesafricaines/18002", quote: "Marchand had him arrested and sent into exile in Yaoundé where he died two years later on May 30, 1933."}
+    - {title: "African Studies Centre Leiden: Ibrahim Njoya", url: "https://www.ascleiden.nl/content/library-weekly/ibrahim-njoya", quote: "On 30 May 1933, Sultan Ibrahim Njoya ... died in exile in Yaoundé at the age of 66 ... The French administration terminated his reign by deporting him to Yaoundé."}
+  note: "OpenEdition is behind a bot wall (Anubis); the archived copy was used."
+- card: bamum
+  fact: "Documents in the script are kept in the palace archives in Foumban and have been digitised (British Library Endangered Archives Programme)"
+  verdict: confirmed
+  sources:
+    - {title: "British Library, EAP051/1/2/1008", url: "https://searcharchives.bl.uk/catalog/040-002762330", quote: "The original materials are held at the Archives du Palais des Rois Bamum, in the Royal Palace of the Bamum Kings, Foumban, Cameroon ... Digital copies can be viewed online"}
+    - {title: "Kenneth J. Orosz (2015)", url: "https://journals.openedition.org/etudesafricaines/18002", quote: "a project launched in 2005 with the cooperation of the current sultan, Ibrahim Mbombo Njoya, to preserve and eventually digitize records kept in the palace archive and private hands"}
+  note: ""
+- card: bamum
+  fact: "(unledgered) Orosz attributes the script's decline to colonial schooling and politics"
+  verdict: corrected
+  sources:
+    - {title: "Kenneth J. Orosz (2015)", url: "https://journals.openedition.org/etudesafricaines/18002", quote: "the reason for this precipitous decline was not because the French outlawed his script or forced the closure of Njoya's schools. Rather, it was an unintended consequence of local inter-war politics and the sultan's clashes with the French colonial administration."}
+    - {title: "Kenneth J. Orosz (2015)", url: "https://journals.openedition.org/etudesafricaines/18002", quote: "There is, however, no evidence to support this in the historical record."}
+  note: "A claim about one historian's argument; his own article is the authority. 'Colonial schooling' was not his explanation; reworded to 'inter-war politics and Njoya's clashes with the French' (EN+RU)."
+- card: banjo
+  fact: "Joel Sweeney, said to have learned from enslaved players, made the banjo a star of blackface minstrel shows"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia Virginia: Joel Walker Sweeney", url: "https://encyclopediavirginia.org/entries/joel-walker-sweeney-ca-1810-october-1860/", quote: "learned to play from local enslaved musicians ... In more than 150 circus, theater, and minstrel performances (in most of which he appeared in blackface)"}
+    - {title: "Ballad of America: Banjo", url: "https://balladofamerica.org/banjo/", quote: "Joel Walker Sweeney was the first minstrel performer to play the banjo. He learned the instrument from Black musicians in his home state of Virginia. From 1836 on, Sweeney toured the United States and Europe in blackface, becoming the first superstar of the banjo."}
+  note: ""
+- card: banjo
+  fact: "Minstrel shows mocked Black Americans"
+  verdict: confirmed
+  sources:
+    - {title: "Ballad of America: Banjo", url: "https://balladofamerica.org/banjo/", quote: "Blackface characters portrayed African Americans in derogatory, clownish exaggerations."}
+    - {title: "McClung Museum, University of Tennessee: The Banjo", url: "https://mcclungmuseum.utk.edu/exhibitions/the-banjo-from-africa-to-america-and-beyond/", quote: "Certainly, the ridicule associated with the minstrel show (the banjo being its pivotal instrument) drove many black musicians to choose another ... instrument"}
+  note: "Ledger's McClung quote (burnt cork) did not itself say 'mocked'; replaced by the 'ridicule' sentence."
+- card: banjo
+  fact: "Many Black musicians later turned from the banjo to the guitar"
+  verdict: confirmed
+  sources:
+    - {title: "McClung Museum: The Banjo", url: "https://mcclungmuseum.utk.edu/exhibitions/the-banjo-from-africa-to-america-and-beyond/", quote: "drove many black musicians to choose another, perhaps less stigmatized instrument, such as the guitar"}
+    - {title: "Ballad of America: Banjo", url: "https://balladofamerica.org/banjo/", quote: "there was a steep decline in the presence of the banjo in Black music ... the guitar's sustain and deep bottom end suited their musical needs better than the banjo"}
+  note: "The sources give different reasons (stigma, sound); the card states only the shift, which both support."
+- card: banjo
+  fact: "In 2011 the African American string band Carolina Chocolate Drops won a Grammy (Best Traditional Folk Album) for Genuine Negro Jig"
+  verdict: confirmed
+  sources:
+    - {title: "Recording Academy: Best Traditional Folk Album 2011", url: "https://www.grammy.com/awards/categories/best-traditional-folk-album/2011/", quote: "Carolina Chocolate Drops won the 2011 Grammy Award for Best Traditional Folk Album with \"Genuine Negro Jig\""}
+    - {title: "Earl Scruggs Center: Carolina Chocolate Drops", url: "https://earlscruggscenter.org/carolina-chocolate-drops/", quote: "Their 2010 album, \"Genuine Negro Jig\" won the Grammy Award for Best Traditional Folk Album at the 53rd Annual Grammy Awards ... one of the few remaining African American string bands"}
+  note: "Independence problem: Nonesuch is the band's own label. Replaced in card sources by the Recording Academy (the award body). Country Standard Time (13 Feb 2011) also reports the win."
+- card: benin-bronzes
+  fact: "The Kingdom of Benin lay in what is now Edo State in southern Nigeria"
+  verdict: confirmed
+  sources:
+    - {title: "Pitt Rivers Museum: The Kingdom of Benin", url: "https://prm.ox.ac.uk/kingdom-benin", quote: "It was one of the most important kingdoms in West Africa, located in present-day Edo State, Nigeria."}
+    - {title: "Sainsbury Centre: Plaque fragment representing a Portuguese soldier", url: "https://www.sainsburymuseum.com/?p=30916", quote: "Benin City was the principal settlement of the Edo Kingdom of Benin, situated in the south of Nigeria."}
+  note: "The Art Newspaper also: 'what is now southern Nigeria'."
+- card: benin-bronzes
+  fact: "In the winter of 1896-97 a party of British officials and traders heading for Benin City was attacked and several were killed; in February 1897 a British punitive expedition took the city"
+  verdict: confirmed
+  sources:
+    - {title: "Pitt Rivers Museum: The Kingdom of Benin", url: "https://prm.ox.ac.uk/kingdom-benin", quote: "attacked Benin City ... in retaliation for a deadly attack on a group of unarmed British officials and traders the previous month ... In little more than a week Benin City was captured and burned to the ground."}
+    - {title: "Cumbria County History Trust", url: "https://cumbriacountyhistory.org.uk/cumbrias-connection-benin-bronzes", quote: "he led an expedition to Benin City in the winter of 1896-97 ... his party was ambushed and Philips was among those killed. The British Government's subsequent punitive expedition against the king of Benin in February 1897"}
+  note: "Sainsbury Centre also: 'In February 1897 the city was attacked by British military'."
+- card: benin-bronzes
+  fact: "The British deposed and exiled Oba Ovonramwen"
+  verdict: confirmed
+  sources:
+    - {title: "Sainsbury Centre", url: "https://www.sainsburymuseum.com/?p=30916", quote: "the Oba (King) Ovonramwen Nogbaisi (reigned 1888–1897) was exiled"}
+    - {title: "National Museums Liverpool: Chief Egharevba", url: "https://liverpoolmuseums.org.uk/stories/chief-egharevba-pioneer-historian-of-benin", quote: "when they deposed and exiled Oba Ovonramwen in 1897"}
+  note: ""
+- card: benin-bronzes
+  fact: "The 20 objects returned in Abuja in December 2022 were the first of more than 1,000 that Germany pledged to return"
+  verdict: confirmed
+  sources:
+    - {title: "The Art Newspaper (22 Dec 2022)", url: "https://www.theartnewspaper.com/2022/12/22/germany-kicks-off-major-benin-bronze-restitution-with-return-of-20-artefacts-to-nigeria", quote: "have returned the first 20 Benin bronzes ... in a ceremony held at the Nigerian foreign ministry in Abuja on 20 December. Under the German agreement, 1,100 artefacts will be returned"}
+    - {title: "Al Jazeera (21 Dec 2022)", url: "https://www.aljazeera.com/news/2022/12/21/germany-returns-nigerian-bronzes-notes-its-dark-past", quote: "Earlier this year, Germany pledged to repatriate more than 1,000 of them in the coming years."}
+  note: ""
+- card: big-mama-thornton
+  fact: "She also played drums and harmonica"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Alabama", url: "https://encyclopediaofalabama.org/?p=15700", quote: "Willie Mae grew up singing in church and learned drums and harmonica"}
+    - {title: "Rock & Roll Hall of Fame", url: "https://www.rockhall.com/inductees/big-mama-thornton", quote: "Thornton evolved into a commanding vocalist, as well as drummer, harmonica player and songwriter"}
+  note: ""
+- card: big-mama-thornton
+  fact: "As a teenager she went on the road with Sammy Green's Hot Harlem Revue; later she settled in Houston, where Don Robey signed her to Peacock"
+  verdict: confirmed
+  sources:
+    - {title: "Library of Congress NRPB essay: Hound Dog", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/HoundDog.pdf", quote: "When Willie Mae was about 14 years old ... She won first prize and began traveling with Sammy Green's \"Hot Harlem Revue.\" ... Thornton went to Houston, Texas ... Don Robey, owner of Peacock Records, heard Big Mama Thornton and signed her"}
+    - {title: "Encyclopedia of Alabama", url: "https://encyclopediaofalabama.org/?p=15700", quote: "in 1941 Thornton joined Green's Georgia-based show, The Hot Harlem Revue ... In 1948, Thornton left the Revue and settled in Houston ... He signed her to a five-year contract with his Peacock Records Label."}
+  note: ""
+- card: big-mama-thornton
+  fact: "She toured Europe with the American Folk Blues Festival"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Alabama", url: "https://encyclopediaofalabama.org/?p=15700", quote: "in 1965 toured Europe with the American Folk Blues Festival, an unusual honor for a female artist"}
+    - {title: "Library of Congress essay: Hound Dog", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/HoundDog.pdf", quote: "She toured Europe twice as part of the American Folk Blues festival, both times with enormous success."}
+  note: ""
+- card: big-mama-thornton
+  fact: "She died on 25 July 1984"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Alabama", url: "https://encyclopediaofalabama.org/?p=15700", quote: "Willie Mae Thornton died of a heart attack in Los Angeles on July 25, 1984, at the age of 57."}
+    - {title: "Library of Congress essay: Hound Dog", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/HoundDog.pdf", quote: "When she died on July 25, 1984"}
+  note: ""
+- card: big-mama-thornton
+  fact: "In 2024 she was inducted into the Rock and Roll Hall of Fame"
+  verdict: confirmed
+  sources:
+    - {title: "Rock & Roll Hall of Fame", url: "https://www.rockhall.com/inductees/big-mama-thornton", quote: "Inducted: 2024 Category: Musical Influence Inducted By: Brittany Howard"}
+    - {title: "Variety (2024)", url: "https://au.variety.com/2024/awards/news/rock-hall-2024-inductees-cher-jimmy-buffett-mary-j-blige-dave-matthews-peter-frampton-foreigner-13515/", quote: "Musical Influence Award: Alexis Korner John Mayall Big Mama Thornton"}
+  note: ""
+- card: blues
+  fact: "Handy went on to write and publish blues of his own, 'The Memphis Blues' and then 'St. Louis Blues', his most popular, which sold phenomenally"
+  verdict: confirmed
+  sources:
+    - {title: "National Park Service: W. C. Handy", url: "https://www.nps.gov/locations/lowermsdeltaregion/wc-handy.htm", quote: "In 1912, \"Mr. Crump\" was given new lyrics and published as \"The Memphis Blues,\" ... publishing many popular tunes including \"St. Louis Blues\" ... \"St. Louis Blues\" in particular had phenomenal sales success"}
+    - {title: "Mississippi Blues Trail: W.C. Handy Encounters the Blues", url: "https://msbluestrail.org/?p=487", quote: "Handy adapted the blues into a series of compositions ... including \"Memphis Blues,\" \"Yellow Dog Blues,\" \"Beale Street Blues,\" and, most popularly, the classic \"St. Louis Blues.\""}
+  note: ""
+- card: bridgetower
+  fact: "Born in Biala in Galicia (Poland) to a Black father and a European mother"
+  verdict: confirmed
+  sources:
+    - {title: "Jeff Bowersox, Black Central Europe", url: "https://blackcentraleurope.com/sources/1750-1850/beethoven-performs-with-his-friend-george-bridgetower-the-great-mulatto-composer-and-lunatic-1803/", quote: "He was born in Biała in Austrian Galicia, the son of a Black West Indian servant and a white German or Polish mother"}
+    - {title: "Trinity Hall, Cambridge: George Bridgetower", url: "https://www.trinhall.cam.ac.uk/about/people/notable-alumni/george-bridgetower-1778-1860/", quote: "born in Poland to an African father (who came to Europe from Barbados), Joanis Fredericus de Augustus, and a Polish or German mother"}
+  note: ""
+- card: bridgetower
+  fact: "A child prodigy, he made his debut in Paris in 1789"
+  verdict: corrected
+  sources:
+    - {title: "Trinity Hall, Cambridge", url: "https://www.trinhall.cam.ac.uk/about/people/notable-alumni/george-bridgetower-1778-1860/", quote: "By spring 1786, when George was seven, his family had moved to Frankfurt, where he gave his first recorded public debut ... Kleve and Liège (December and January 1788); Brussels (February 1789); the Hague (March 1789); and Paris as part of the 'Concert Spirituel' series on 11 April 1789"}
+    - {title: "Jeff Bowersox, Black Central Europe", url: "https://blackcentraleurope.com/sources/1750-1850/beethoven-performs-with-his-friend-george-bridgetower-the-great-mulatto-composer-and-lunatic-1803/", quote: "A child prodigy, he made his debut in Paris in 1789"}
+  note: "Trinity Hall documents a 1786 Frankfurt debut and earlier concerts, so 'debut in Paris' is contradicted. Reworded to 'he played in Paris in 1789' (EN+RU), which both support."
+- card: bridgetower
+  fact: "In London he won the patronage of the Prince of Wales, the future George IV"
+  verdict: confirmed
+  sources:
+    - {title: "Jeff Bowersox, Black Central Europe", url: "https://blackcentraleurope.com/sources/1750-1850/beethoven-performs-with-his-friend-george-bridgetower-the-great-mulatto-composer-and-lunatic-1803/", quote: "He soon secured the patronage of the future King George IV, who furthered his musical education."}
+    - {title: "Trinity Hall, Cambridge", url: "https://www.trinhall.cam.ac.uk/about/people/notable-alumni/george-bridgetower-1778-1860/", quote: "He quickly came to the attention of George Augustus Frederick, Prince of Wales ... was taken into the custody of the Prince in late 1789. George was brought up in the royal household at Carlton House"}
+  note: ""
+- card: bridgetower
+  fact: "He was in Vienna in spring 1803, where he befriended Beethoven"
+  verdict: confirmed
+  sources:
+    - {title: "Trinity Hall, Cambridge", url: "https://www.trinhall.cam.ac.uk/about/people/notable-alumni/george-bridgetower-1778-1860/", quote: "It was here, in spring 1803, that he met the German pianist and composer Ludwig van Beethoven. Evidently there was great professional and personal sympathy between the two musicians"}
+    - {title: "Jeff Bowersox, Black Central Europe", url: "https://blackcentraleurope.com/sources/1750-1850/beethoven-performs-with-his-friend-george-bridgetower-the-great-mulatto-composer-and-lunatic-1803/", quote: "was invited to Vienna, where he became fast friends with Ludwig van Beethoven"}
+  note: ""
+- card: bridgetower
+  fact: "He went on performing and teaching in England and took a Bachelor of Music at Cambridge in 1811"
+  verdict: confirmed
+  sources:
+    - {title: "Trinity Hall, Cambridge", url: "https://www.trinhall.cam.ac.uk/about/people/notable-alumni/george-bridgetower-1778-1860/", quote: "George was awarded the degree of Bachelor of Music from the University in June 1811 ... Bridgetower continued his performing and teaching career in London and other cities in England."}
+    - {title: "The Strad (2022)", url: "https://thestrad.com/news/black-violinist-george-bridgetower-commemorated-with-blue-plaque/15567.article", quote: "He received a bachelor of music from Trinity Hall, Cambridge in 1811 ... Bridgetower continued his musical career teaching and performing"}
+  note: ""
+- card: bridgetower
+  fact: "He slipped into obscurity and died in Peckham, south London, in 1860"
+  verdict: confirmed
+  sources:
+    - {title: "The Strad (2022)", url: "https://thestrad.com/news/black-violinist-george-bridgetower-commemorated-with-blue-plaque/15567.article", quote: "Falling into relative obscurity in his adult years ... Bridgetower died in 1860 at his residence in Peckham."}
+    - {title: "The Peckham Society: George Augustus Polgreen Bridgetower", url: "https://www.peckhamsociety.org.uk/?p=2602", quote: "the public eventually forgot George Bridgetower ... His death certificate records that 'George Polegreen Bridgetower, Gentleman', died at 8 Victory Cottages on 29 February 1860 aged 78 years."}
+  note: "Classic FM (weak) replaced in card sources by the Peckham Society, which cites the death certificate."
+- card: bridgetower
+  fact: "(unledgered) Bridgetower belongs to the same generation as Saint-Georges and General Dumas"
+  verdict: corrected
+  sources:
+    - {title: "Trinity Hall, Cambridge", url: "https://www.trinhall.cam.ac.uk/about/people/notable-alumni/george-bridgetower-1778-1860/", quote: "George Augustus Polgreen Bridgetower (1778–1860)"}
+    - {title: "Jeff Bowersox, Black Central Europe", url: "https://blackcentraleurope.com/sources/1750-1850/beethoven-performs-with-his-friend-george-bridgetower-the-great-mulatto-composer-and-lunatic-1803/", quote: "George Augustus Polgreen Bridgetower (1778 or 1780-1860) was a celebrated violinist who toured Britain and the continent."}
+  note: "Saint-Georges (born 1745) is a generation older than Bridgetower (1778). Reworded to 'men of African descent who made their names in late eighteenth-century Europe' (EN+RU)."
+- card: brookes
+  fact: "Some 7,000 copies of the plan with woodcuts were printed and distributed"
+  verdict: confirmed
+  sources:
+    - {title: "Understanding Slavery Initiative (Hull Museums object): Description of a slave ship", url: "https://understandingslavery.com/?p=547", quote: "Over 7000 posters of the plan were printed and distributed to promote the abolition campaign."}
+    - {title: "Princeton Rare Books blog (2008), citing the London Committee minutes", url: "https://rarebooks.blogs.princeton.edu/2008/05/219-years-ago-description-of-a/", quote: "the printing orders are recorded on July 28, 1789, as follows : \"1,700 Description of a Slave Ship with copper plate ; 7,000 ditto with wood cuts\""}
+  note: ""
+- card: brookes
+  fact: "The plan shows 482 people; the real ship had often carried more than 600"
+  verdict: confirmed
+  sources:
+    - {title: "Understanding Slavery Initiative", url: "https://understandingslavery.com/?p=547", quote: "carried over 600 enslaved Africans on two Atlantic crossings in 1783. The print actually shows only 482 people"}
+    - {title: "The Victorian Web: antislavery imagery", url: "https://victorianweb.org/victorian/history/antislavery/antislavery4.html", quote: "The diagram showed 482 slaves—a respectable number given the ship often carried more than 600"}
+  note: ""
+- card: brookes
+  fact: "The image circulated across Britain and abroad"
+  verdict: confirmed
+  sources:
+    - {title: "Royal Museums Greenwich: The slave ship 'Brooks'", url: "https://www.rmg.co.uk/collections/objects/rmgc-object-254938", quote: "The image was so effective that it was soon reproduced and distributed widely around the country and abroad."}
+    - {title: "The Victorian Web", url: "https://victorianweb.org/victorian/history/antislavery/antislavery4.html", quote: "It was promptly distributed to homes and pubs around the country and eventually reached the Continent"}
+  note: ""
+- card: brookes
+  fact: "On 25 March 1807 the Act for the Abolition of the Slave Trade became law, banning the trade across the British Empire from 1 May 1807"
+  verdict: confirmed
+  sources:
+    - {title: "Royal Museums Greenwich: How did the slave trade end in Britain?", url: "https://www.rmg.co.uk/stories/topics/how-did-slave-trade-end-britain", quote: "on 25 March 1807, King George III signed into law the Act for the Abolition of the Slave Trade, banning trading in enslaved people in the British Empire ... the trade was made illegal from 1 May 1807"}
+    - {title: "Discovering Bristol: The final years of campaigning", url: "https://www.discoveringbristol.org.uk/slavery/against-slavery/campaign-against-slave-trade/legal-framework/final-years/", quote: "received the Royal Assent (royal agreement) on 25 March. After 1 May 1807, it would be illegal for any ship to leave any port in British colonies on a slaving voyage"}
+  note: ""
+- card: brookes
+  fact: "(unledgered) The Act ended the trade, not slavery itself"
+  verdict: confirmed
+  sources:
+    - {title: "Royal Museums Greenwich", url: "https://www.rmg.co.uk/stories/topics/how-did-slave-trade-end-britain", quote: "Although the abolitionists had won the end of Britain's involvement in the trade, plantation slavery still existed in British colonies ... Full emancipation was not achieved until 1838"}
+    - {title: "Discovering Bristol", url: "https://www.discoveringbristol.org.uk/slavery/against-slavery/campaign-against-slave-trade/legal-framework/final-years/", quote: "it would be illegal for any ship to leave any port in British colonies on a slaving voyage, and no slaves could be brought to British colonies after 1 March 1808"}
+  note: ""
+- card: burleigh-dvorak
+  fact: "Dvořák was hired to head the National Conservatory in New York to help American composers find their own voice"
+  verdict: confirmed
+  sources:
+    - {title: "NHPR/NPR (2023)", url: "https://www.nhpr.org/2023-07-07/dvoraks-beloved-new-world-symphony-was-an-anthem-to-what-american-music-could-be", quote: "Dvorak was hired to run a national conservatory in New York to help American composers find their own voice and shake off the European sound."}
+    - {title: "Radio Prague International (read via web.archive.org)", url: "https://english.radio.cz/node/8711161", quote: "less than a year after the famous Czech composer became head of the National Conservatory of Music in New York. Many hoped he would help develop a distinctly American style of classical music."}
+  note: "radio.cz blocks curl (403); archived copy used."
+- card: burleigh-dvorak
+  fact: "Burleigh became Dvořák's assistant and the conservatory's librarian and copyist"
+  verdict: confirmed
+  sources:
+    - {title: "Dvořák American Heritage Association", url: "https://www.dvoraknyc.org/african-american-influences", quote: "Burleigh served as the orchestra librarian and copyist, and filled in on double bass and tympani."}
+    - {title: "Boston Cecilia: A New World friendship", url: "https://www.bostoncecilia.org/beyond-the-score/2023/2/6/a-new-world-friendship-dvok-and-burleigh", quote: "Burleigh became Dvořák's personal assistant—as well as the librarian and copyist"}
+  note: "NPR (Horowitz): 'Dvorak chose a Black person to be his assistant.'"
+- card: burleigh-dvorak
+  fact: "Dvořák told the press: 'the future music of this country must be founded upon what are called Negro melodies'"
+  verdict: confirmed
+  sources:
+    - {title: "Radio Prague International (archived)", url: "https://english.radio.cz/node/8711161", quote: "\"the future music of this country must be founded upon what are called Negro melodies. This must be the real foundation of any serious and original school of composition to be developed in the United States.\""}
+    - {title: "Joseph Horowitz, New World Prophecy, The American Scholar (2019)", url: "https://theamericanscholar.org/new-world-prophecy/", quote: "In 1893, he told the New York Herald: \"I am now satisfied that the future music of this country must be founded upon what are called negro melodies.\""}
+  note: "The NHPR reading drops the word 'music' ('The future of this country ...'), so it does not support the exact wording; replaced by The American Scholar, added to card sources."
+- card: burleigh-dvorak
+  fact: "The symphony premiered at Carnegie Hall and was an immediate success; the audience applauded after the first movement"
+  verdict: corrected
+  sources:
+    - {title: "antonin-dvorak.cz: Symphony No. 9", url: "https://www.antonin-dvorak.cz/en/symphony9", quote: "The success of the symphony was immediate and lasting. ... from noon onwards a long queue of those eager to get tickets formed all the way down Carnegie Hall."}
+    - {title: "Radio Prague International: Largo, from Dvořák's New World Symphony (archived)", url: "https://english.radio.cz/best-czech-classical-music-part-4-largo-antonin-dvoraks-new-world-symphony-8109273", quote: "A New York Herald article published on December 17, 1893 ... described a night at Carnegie Hall that ended in a thunderous storm of applause and cries of \"Dvořák! Dvořák!\""}
+  note: "Independence problem (known): the applause after the first movement comes only from Otakar Dvořák's memoir, quoted by both antonin-dvorak.cz and the Cleveland Orchestra. That clause is removed (EN+RU); Carnegie Hall and the immediate success are confirmed (Britannica also gives Carnegie Hall, 16 Dec 1893). Radio Prague added to card sources."
+- card: burleigh-dvorak
+  fact: "Burleigh sang as soloist at St George's Episcopal Church in New York for more than fifty years"
+  verdict: confirmed
+  sources:
+    - {title: "Hymnology Archive: Harry T. Burleigh", url: "https://hymnologyarchive.com/harry-t-burleigh", quote: "He was baritone soloist for fifty-two years at St. George's Church (Episcopal), in New York City, 1894–1946."}
+    - {title: "Boston Cecilia", url: "https://www.bostoncecilia.org/beyond-the-score/2023/2/6/a-new-world-friendship-dvok-and-burleigh", quote: "to become the first Black soloist at an all-white congregation at St. George's Church in NYC, where he sang for over 50 years"}
+  note: ""
+- card: burleigh-dvorak
+  fact: "In 1914 he helped found ASCAP"
+  verdict: confirmed
+  sources:
+    - {title: "Hymnology Archive (quoting the 1949 Boston Globe and AP obituaries)", url: "https://hymnologyarchive.com/harry-t-burleigh", quote: "when Victor Herbert organized the American Society of Composers, Authors, and Publishers (A.S.C.A.P.) in 1914, Burleigh became a charter member"}
+    - {title: "Skidmore Saratoga Memory Project: Burleigh timeline", url: "https://ssmp.skidmore.edu/exhibits/show/burleigh_in_saratoga/burleigh_bio/timeline", quote: "1914 Burleigh helped to found the American Society of Composers, Authors, and Publishers (ASCAP)"}
+  note: ""
+- card: burleigh-dvorak
+  fact: "Burleigh died in 1949"
+  verdict: confirmed
+  sources:
+    - {title: "Dvořák American Heritage Association", url: "https://www.dvoraknyc.org/african-american-influences", quote: "he died in 1949 at age 81"}
+    - {title: "Skidmore Saratoga Memory Project", url: "https://ssmp.skidmore.edu/exhibits/show/burleigh_in_saratoga/burleigh_bio/timeline", quote: "September 12, 1949 Harry T. Burleigh died of heart failure at age 82"}
+  note: "The Hymnology Archive reprints the AP obituary dated 12 Sept 1949."
+- card: burleigh-dvorak
+  fact: "(unledgered) Burleigh came to New York on a scholarship and sang the spirituals for Dvořák and his family"
+  verdict: corrected
+  sources:
+    - {title: "Hymnology Archive (1949 obituaries)", url: "https://hymnologyarchive.com/harry-t-burleigh", quote: "he went to New York City in 1892 and earned a scholarship at the National Conservatory of Music"}
+    - {title: "Radio Prague International (archived)", url: "https://english.radio.cz/node/8711161", quote: "Harry T. Burleigh, who sang spirituals and other vernacular music for Dvořák and his family"}
+  note: "Scholarship confirmed (also Skidmore: 'on a full scholarship'). 'And his family' rests on Radio Prague alone; removed (EN+RU). NPR: 'Burleigh sang spirituals to Dvorak'."
+- card: candomble
+  fact: "Casa Branca belongs to the tradition of peoples from what is now Nigeria (Nagô)"
+  verdict: confirmed
+  sources:
+    - {title: "A Tarde: Tombamento da Casa Branca há 40 anos", url: "https://atarde.com.br/colunistas/atardememoria/tombamento-da-casa-branca-ha-40-anos-inovou-politica-de-patrimonio-1271738", quote: "o mais antigo terreiro de candomblé da tradição dos povos que vieram do território da atual Nigéria"}
+    - {title: "Brasil de Fato (2024)", url: "https://www.brasildefato.com.br/2024/06/07/terreiro-da-casa-branca-celebra-40-anos-de-tombamento/", quote: "foi fundado por três mulheres africanas da nação nagô"}
+  note: ""
+- card: candomble
+  fact: "Casa Branca was founded by three African women"
+  verdict: confirmed
+  sources:
+    - {title: "Brasil de Fato (2024)", url: "https://www.brasildefato.com.br/2024/06/07/terreiro-da-casa-branca-celebra-40-anos-de-tombamento/", quote: "foi fundado por três mulheres africanas da nação nagô"}
+    - {title: "Fundação Bienal, Terra: Ilê Axé Iyá Nassô Oká", url: "https://terra.bienal.org.br/Ile-Axe-Iya-Nasso-Oka-Terreiro-da-Casa-Branca", quote: "Três mulheres africanas planejaram e construíram o primeiro monumento negro tombado no Brasil"}
+  note: ""
+- card: candomble
+  fact: "Candomblé was persecuted, including by the state, and police raided its houses"
+  verdict: confirmed
+  sources:
+    - {title: "A Tarde", url: "https://atarde.com.br/colunistas/atardememoria/tombamento-da-casa-branca-ha-40-anos-inovou-politica-de-patrimonio-1271738", quote: "uma prática religiosa que foi perseguida e marginalizada inclusive pelo Estado"}
+    - {title: "Odete Dourado, Risco (USP) 2011", url: "https://journals.usp.br/risco/article/download/45501/49110/54308", quote: "as batidas policiais nos terreiros de candomblé"}
+  note: "Second half of the ledger's Risco quote is not verbatim in the PDF text; the first half suffices."
+- card: candomble
+  fact: "Casa Branca moved from near the Barroquinha church to Engenho Velho, where it still stands"
+  verdict: confirmed
+  sources:
+    - {title: "Odete Dourado, Risco 2011", url: "https://journals.usp.br/risco/article/download/45501/49110/54308", quote: "teria sido fundado na Ladeira do Berquó, nas proximidades da Igreja de Nossa Senhora da Barroquinha ... onde até hoje se encontra"}
+    - {title: "Fundação Bienal, Terra", url: "https://terra.bienal.org.br/Ile-Axe-Iya-Nasso-Oka-Terreiro-da-Casa-Branca", quote: "Casa Branca do Engenho Velho ... (1830 - até hoje)"}
+  note: ""
+- card: candomble
+  fact: "The listing made Casa Branca the first monument of Black culture recognised as national heritage"
+  verdict: confirmed
+  sources:
+    - {title: "A Tarde", url: "https://atarde.com.br/colunistas/atardememoria/tombamento-da-casa-branca-ha-40-anos-inovou-politica-de-patrimonio-1271738", quote: "Esta foi a primeira vez que a SPHAN tombou um monumento ligado à cultura negra."}
+    - {title: "Fundação Bienal, Terra", url: "https://terra.bienal.org.br/Ile-Axe-Iya-Nasso-Oka-Terreiro-da-Casa-Branca", quote: "o primeiro monumento negro tombado no Brasil"}
+  note: "The unledgered sentence 'a religion once treated as a police matter' is covered by A Tarde: 'ainda um caso de polícia'."
+- card: capoeira
+  fact: "Capoeira developed from traditions brought by enslaved Africans and is tied to resistance to slavery"
+  verdict: confirmed
+  sources:
+    - {title: "Smithsonian Folklife Festival", url: "https://festival.si.edu/blog/capoeira-from-occult-martial-art-to-international-dance", quote: "Capoeira developed in Brazil, derived from traditions brought across the Atlantic Ocean by enslaved Africans."}
+    - {title: "T. J. Desch-Obi via Encyclopedia.com", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/capoeira", quote: "a martial art of African origins that was once used by enslaved Africans in Brazil as a form of physical and social resistance"}
+  note: "Replaced the ledger's weaker Desch-Obi quote with a direct one from the same page."
+- card: capoeira
+  fact: "In the 1930s, in the Vargas era, persecution eased and a legal, schooled capoeira took shape"
+  verdict: confirmed
+  sources:
+    - {title: "Smithsonian Folklife Festival", url: "https://festival.si.edu/blog/capoeira-from-occult-martial-art-to-international-dance", quote: "The oppression of capoeira diminished significantly during the 1930s."}
+    - {title: "Desch-Obi via Encyclopedia.com", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/capoeira", quote: "The efforts of Mestre Bimba and the policies of Vargas together led to a legalization of a controlled capoeira"}
+  note: ""
+- card: capoeira
+  fact: "Their students carried capoeira across Brazil and around the world"
+  verdict: confirmed
+  sources:
+    - {title: "Desch-Obi via Encyclopedia.com", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/capoeira", quote: "Students of Mestre Bimba spread this new variant throughout Brazil and more recently the world. Although not nearly as widespread as capoeira regional, capoeira Angola has also begun to spread worldwide"}
+    - {title: "Smithsonian Folklife Festival", url: "https://festival.si.edu/blog/capoeira-from-occult-martial-art-to-international-dance", quote: "Today, we find people all over the world practicing capoeira."}
+  note: "Covers both Bimba's and Pastinha's lines, so 'their students' holds."
+- card: capoeira
+  fact: "Once a crime, capoeira became a symbol of Brazil"
+  verdict: confirmed
+  sources:
+    - {title: "ReVista, Harvard", url: "https://revista.drclas.harvard.edu/axe-capoeira/", quote: "its status as a cultural symbol of Brazilian identity was elevated by UNESCO's designation"}
+    - {title: "Desch-Obi via Encyclopedia.com", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/capoeira", quote: "Capoeira is now recognized as a Brazilian national sport"}
+  note: ""
+- card: carolina-maria-de-jesus
+  fact: "Quarto de Despejo sold tens of thousands of copies within months"
+  verdict: confirmed
+  sources:
+    - {title: "Revista Pesquisa FAPESP", url: "https://revistapesquisa.fapesp.br/en/a-multifaceted-author/", quote: "it sold 50,000 copies within just a month of its release"}
+    - {title: "Encyclopedia.com (Women in World History)", url: "https://www.encyclopedia.com/women/dictionaries-thesauruses-pictures-and-press-releases/jesus-carolina-maria-de-c-1913-1977", quote: "in less than six months sales exceeded 90,000 copies"}
+  note: ""
+- card: carolina-maria-de-jesus
+  fact: "It was eventually translated into 13 languages"
+  verdict: corrected
+  sources:
+    - {title: "Encyclopedia.com (Women in World History)", url: "https://www.encyclopedia.com/women/dictionaries-thesauruses-pictures-and-press-releases/jesus-carolina-maria-de-c-1913-1977", quote: "Eventually her work was translated into 13 languages and was published in 40 countries."}
+    - {title: "IPOTESI, UFJF (2025)", url: "https://periodicos.ufjf.br/index.php/ipotesi/article/download/48742/29880/227667", quote: "Até o presente momento foi possível encontrar traduções para 21 línguas disponibilizadas em 40 países"}
+  note: "Ledger's second source was Google Doodles (weak, repeats the same figure). Translation research now counts 21 languages, so the exact '13' is outdated. Card now says 'more than a dozen languages' (EN+RU); IPOTESI added to sources."
+- card: carolina-maria-de-jesus
+  fact: "With the money she moved her family into a brick house outside the favela"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia.com", url: "https://www.encyclopedia.com/women/dictionaries-thesauruses-pictures-and-press-releases/jesus-carolina-maria-de-c-1913-1977", quote: "move her family into a small brick house in the working-class neighborhood of Imirim"}
+    - {title: "Revista Pesquisa FAPESP", url: "https://revistapesquisa.fapesp.br/en/a-multifaceted-author/", quote: "a brick house in a São Paulo suburb, where she moved after leaving the Canindé district"}
+  note: ""
+- card: carolina-maria-de-jesus
+  fact: "Her later books, some published at her own expense, found few readers"
+  verdict: confirmed
+  sources:
+    - {title: "Revista Pesquisa FAPESP", url: "https://revistapesquisa.fapesp.br/en/a-multifaceted-author/", quote: "In the 1960s, she published two more books—with her own money"}
+    - {title: "Encyclopedia.com", url: "https://www.encyclopedia.com/women/dictionaries-thesauruses-pictures-and-press-releases/jesus-carolina-maria-de-c-1913-1977", quote: "Carolina's third book, Provérbios de Carolina Maria de Jesús, exhausted what money she had set aside."}
+  note: "FAPESP also: 'Most of these works, however, were to have incomparably less impact'."
+- card: carolina-maria-de-jesus
+  fact: "By the late 1960s she was close to poverty again and withdrew to a small farm at Parelheiros"
+  verdict: corrected
+  sources:
+    - {title: "Encyclopedia.com", url: "https://www.encyclopedia.com/women/dictionaries-thesauruses-pictures-and-press-releases/jesus-carolina-maria-de-c-1913-1977", quote: "by the late 1960s she was again living on the edge of poverty ... died in Parelheiros of asthma on February 13, 1977"}
+    - {title: "Revista Pesquisa FAPESP", url: "https://revistapesquisa.fapesp.br/en/a-multifaceted-author/", quote: "In the neighborhood of Parelheiros, in São Paulo ... Taking refuge on a farm on the outskirts of the city"}
+  note: "Neither source says 'small'; dropped 'small' (EN 'a farm', RU 'на ферму')."
+- card: carolina-maria-de-jesus
+  fact: "She died in 1977 on the verge of destitution"
+  verdict: confirmed
+  sources:
+    - {title: "Robert M. Levine, LARR (1994)", url: "https://www.cambridge.org/core/journals/latin-american-research-review/article/cautionary-tale-of-carolina-maria-de-jesus/5321F967C3A31A99C06BFB2CB1E5E537", quote: "Carolina died in 1977, on the verge of indigence."}
+    - {title: "Encyclopedia.com", url: "https://www.encyclopedia.com/women/dictionaries-thesauruses-pictures-and-press-releases/jesus-carolina-maria-de-c-1913-1977", quote: "by the late 1960s she was again living on the edge of poverty"}
+  note: "Encyclopedia.com entry draws on Levine's work; independence partial, but Levine is a peer-reviewed primary scholarly source."
+- card: carolina-maria-de-jesus
+  fact: "UNLEDGERED: Her diary gave the people of the favela a voice of their own in Brazilian literature"
+  verdict: unconfirmed
+  sources:
+    - {title: "Revista Pesquisa FAPESP", url: "https://revistapesquisa.fapesp.br/en/a-multifaceted-author/", quote: "Despite the book's success ... de Jesus was relegated to the margins of Brazilian literature."}
+  note: "Not in ledger; FAPESP points the other way. Sentence removed (EN+RU); story still ends on the comparison sentence."
+- card: chicago-defender
+  fact: "The Defender was a weekly; its founder Robert S. Abbott was a Georgia-born lawyer"
+  verdict: confirmed
+  sources:
+    - {title: "New Georgia Encyclopedia", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/robert-sengstacke-abbott-1868-1940/", quote: "In 1905 he founded the Chicago Defender, a weekly newspaper"}
+    - {title: "Encyclopedia.com: Chicago Defender", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/chicago-defender", quote: "founded in 1905 by Robert Sengstacke Abbott, a journalist and lawyer from Georgia"}
+  note: ""
+- card: chicago-defender
+  fact: "Circulation reached 125,000 by 1918"
+  verdict: confirmed
+  sources:
+    - {title: "New Georgia Encyclopedia", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/robert-sengstacke-abbott-1868-1940/", quote: "125,000 by 1918"}
+    - {title: "Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/chicago-defender", quote: "climbing from 33,000 in 1916 to 125,000 in 1918"}
+  note: ""
+- card: chicago-defender
+  fact: "Abbott died in 1940 and left the paper to his nephew John Sengstacke"
+  verdict: confirmed
+  sources:
+    - {title: "New Georgia Encyclopedia", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/robert-sengstacke-abbott-1868-1940/", quote: "Abbott died in Chicago on February 29, 1940 ... designated his Savannah-born nephew John H. Sengstacke his successor"}
+    - {title: "Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/chicago-defender", quote: "In 1939, the year before he died, Abbott passed control of the paper to his nephew John Sengstacke."}
+  note: ""
+- card: chicago-defender
+  fact: "The last print edition came out on 10 July 2019; online only afterwards"
+  verdict: confirmed
+  sources:
+    - {title: "NPR via WFAE (10 July 2019)", url: "https://www.wfae.org/2019-07-10/chicago-defender-ends-print-edition-to-continue-as-an-online-only-newspaper", quote: "after today, the paper is online only"}
+    - {title: "ABC7 Chicago (2019)", url: "https://abc7chicago.com/post/chicago-defender-goes-digital-after-114-years-in-print/5388018/", quote: "Wednesday's edition of the Chicago Defender is the last one available in print."}
+  note: "10 July 2019 was a Wednesday."
+- card: chicago-defender
+  fact: "Historians count the Defender among the forces behind the Great Migration"
+  verdict: confirmed
+  sources:
+    - {title: "New Georgia Encyclopedia", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/robert-sengstacke-abbott-1868-1940/", quote: "The Defender considerably influenced the Great Migration."}
+    - {title: "ABC7 Chicago (2019)", url: "https://abc7chicago.com/post/chicago-defender-goes-digital-after-114-years-in-print/5388018/", quote: "The Chicago Defender was an instrumental part of the black migration."}
+  note: ""
+- card: chicago-house
+  fact: "At Disco Demolition the crowd stormed the field and the second game was never played"
+  verdict: confirmed
+  sources:
+    - {title: "SABR Games Project", url: "https://sabr.org/gamesproj/game/july-12-1979-chicagos-disco-demolition-night-doubleheader-results-in-loss-and-forfeit/", quote: "spectators already in Comiskey Park stormed the field with little resistance ... The only option for the White Sox was to forfeit the second game of the doubleheader."}
+    - {title: "Aeon", url: "https://aeon.co/ideas/the-night-when-straight-white-males-tried-to-kill-disco", quote: "the second game was postponed due to unsafe conditions"}
+  note: ""
+- card: chicago-house
+  fact: "Frankie Knuckles died in 2014"
+  verdict: confirmed
+  sources:
+    - {title: "DNAinfo Chicago (1 April 2014)", url: "https://www.dnainfo.com/chicago/20140401/downtown/frankie-knuckles-dead-godfather-of-house-music-dies-at-59-reports-say", quote: "died unexpectedly at his home Monday afternoon at the age of 59"}
+    - {title: "NBC Chicago (2023)", url: "https://www.nbcchicago.com/news/local/the-warehouse-birthplace-of-house-music-designated-a-chicago-landmark/3166059/", quote: "He passed away in 2014."}
+  note: ""
+- card: chicago-house
+  fact: "In 2023 Chicago made the Warehouse building a city landmark"
+  verdict: confirmed
+  sources:
+    - {title: "Windy City Times (22 June 2023)", url: "https://windycitytimes.com/2023/06/22/chicago-city-council-approves-landmark-status-for-the-warehouse-building/", quote: "On June 21, the Chicago City Council, among other things, approved landmark status for The Warehouse building."}
+    - {title: "NBC Chicago (2023)", url: "https://www.nbcchicago.com/news/local/the-warehouse-birthplace-of-house-music-designated-a-chicago-landmark/3166059/", quote: "The Warehouse, birthplace of 'House' music, designated a Chicago Landmark"}
+  note: ""
+- card: chicago-house
+  fact: "UNLEDGERED: Detroit techno and Planet Rock are 'all rooted in funk'"
+  verdict: unconfirmed
+  sources: []
+  note: "New genealogical claim with no source; reverted to the original neutral 'cousins' list (EN+RU)."
+- card: cindy-campbell
+  fact: "The room was packed"
+  verdict: confirmed
+  sources:
+    - {title: "The Henry Ford: From a DJ's Closet", url: "https://www.thehenryford.org/collections/explore/articles/from-a-djs-closet", quote: "The two siblings gave out hand-drawn index cards as invitations and packed the room."}
+    - {title: "GRAMMY.com", url: "https://www.grammy.com/news/dj-kool-herc-cindy-campbell-50th-anniversary-of-hip-hop-interview-jamaican-roots", quote: "While the large turnout of their peers ensured Cindy would start the school year donning the latest fashions"}
+  note: "Unledgered 'her family's building' confirmed by GRAMMY.com: 'the recreation room of her family's Bronx apartment building'."
+- card: cindy-campbell
+  fact: "Herc saw dancers waiting for breaks, played two copies of a record to stretch the break, called it the merry-go-round"
+  verdict: confirmed
+  sources:
+    - {title: "GRAMMY.com", url: "https://www.grammy.com/news/dj-kool-herc-cindy-campbell-50th-anniversary-of-hip-hop-interview-jamaican-roots", quote: "Herc utilized dual copies of the same record on two turntables, switching between them with a mixer and prolonging a song's short percussive interval"}
+    - {title: "HISTORY", url: "https://www.history.com/this-day-in-history/hip-hop-is-born-at-a-birthday-party-in-the-bronx", quote: "switch back and forth repeatedly between two copies of the same record, extending the short drum break that the crowd most wanted to hear. He called his trick the Merry-Go-Round."}
+  note: ""
+- card: cindy-campbell
+  fact: "Within months the parties outgrew the room and moved outdoors to parks such as Cedar Park"
+  verdict: confirmed
+  sources:
+    - {title: "GRAMMY.com", url: "https://www.grammy.com/news/dj-kool-herc-cindy-campbell-50th-anniversary-of-hip-hop-interview-jamaican-roots", quote: "By the end of 1973, the recreation room couldn't accommodate the size of the crowds"}
+    - {title: "KEXP (2023)", url: "https://kexp.org/podcasts/50-years-of-hip-hop/2023/12/20/1974-the-cedar-park-jams/", quote: "So, Herc decided to relocate the parties down the street to Cedar Park. ... Their very first Cedar Park jam was held on May 25, 1974."}
+  note: "Ledger's KEXP quote was stitched from two sentences; real wording given."
+- card: cindy-campbell
+  fact: "Herc's stretched breaks, later called breakbeats, became one of the foundations of the music"
+  verdict: confirmed
+  sources:
+    - {title: "The Henry Ford", url: "https://www.thehenryford.org/collections/explore/articles/from-a-djs-closet", quote: "This was the invention of the \"breakbeat,\" and the crowd went wild."}
+    - {title: "HISTORY", url: "https://www.history.com/this-day-in-history/hip-hop-is-born-at-a-birthday-party-in-the-bronx", quote: "He called his trick the Merry-Go-Round. Today, it is known as the \"break beat.\""}
+  note: "Ledger's HISTORY quote did not support the fact; replaced. 'Foundation' backed by GRAMMY.com: 'widely recognized as laying the foundation upon which hip-hop was built'."
+- card: claudia-jones
+  fact: "Convicted under the Smith Act in the McCarthy years"
+  verdict: confirmed
+  sources:
+    - {title: "Verso Books Encyclopedia", url: "https://www.versobooks.com/pages/encyclopedia/jones-claudia", quote: "Using Jones's own written work as evidence, she and her fellow defendants were convicted."}
+    - {title: "Harvard Magazine (2020)", url: "https://www.harvardmagazine.com/index%2ephp/2020/08/features-vita-claudia-jones", quote: "In the second major Smith Act trial, in 1953, Jones and 12 comrades were in the dock ... After sentencing"}
+  note: "AAIHS (in card sources) says she was convicted under the McCarran-Walter Act; it is the outlier."
+- card: claudia-jones
+  fact: "A year and a day at Alderson women's prison"
+  verdict: confirmed
+  sources:
+    - {title: "Hinds, Race & Class (2008)", url: "https://www.marxists.org/history/erol/uk.secondwave/jones-gazette.pdf", quote: "Claudia began her sentence of a year and a day at the Federal Reformatory for Women at Alderson, West Virginia."}
+    - {title: "Verso Books Encyclopedia", url: "https://www.versobooks.com/pages/encyclopedia/jones-claudia", quote: "She was sentenced to one year and one day in prison"}
+  note: ""
+- card: claudia-jones
+  fact: "The BBC televised part of the January 1959 carnival"
+  verdict: confirmed
+  sources:
+    - {title: "Hinds, Race & Class (2008)", url: "https://www.marxists.org/history/erol/uk.secondwave/jones-gazette.pdf", quote: "it was held in St Pancras town hall in January 1959. The BBC televised it."}
+    - {title: "English Heritage", url: "https://www.english-heritage.org.uk/visit/blue-plaques/claudia-jones/", quote: "held at St Pancras Town Hall on 30 January 1959 and was partly televised"}
+  note: "English Heritage (independent of Hinds) supports 'partly televised'; Vauxhall History names the BBC."
+- card: claudia-jones
+  fact: "The indoor carnivals ran every year until her death"
+  verdict: confirmed
+  sources:
+    - {title: "English Heritage", url: "https://www.english-heritage.org.uk/visit/blue-plaques/claudia-jones/", quote: "The indoor carnivals became an annual occurrence for the rest of her life."}
+    - {title: "Hinds, Race & Class (2008)", url: "https://www.marxists.org/history/erol/uk.secondwave/jones-gazette.pdf", quote: "Five more carnivals followed annually, up to 1964."}
+  note: ""
+- card: claudia-jones
+  fact: "She died in December 1964, at 49"
+  verdict: confirmed
+  sources:
+    - {title: "English Heritage", url: "https://www.english-heritage.org.uk/visit/blue-plaques/claudia-jones/", quote: "She died of a heart attack at home in Belsize Park in December 1964."}
+    - {title: "Verso Books Encyclopedia", url: "https://www.versobooks.com/pages/encyclopedia/jones-claudia", quote: "She died on Christmas Eve 1964, two months before her fiftieth birthday."}
+  note: ""
+- card: claudia-jones
+  fact: "The West Indian Gazette folded eight months after her death"
+  verdict: corrected
+  sources:
+    - {title: "Hinds, Race & Class (2008)", url: "https://www.marxists.org/history/erol/uk.secondwave/jones-gazette.pdf", quote: "The paper finally folded eight months and four editions after Claudia's own death, in December 1964."}
+    - {title: "Lambeth Archives, Borough Photos", url: "https://boroughphotos.org/lambeth/?p=37296", quote: "The gazette was to fold six months after her death on December 25th, 1964."}
+  note: "Vauxhall History likely repeats Hinds; Lambeth Archives gives six months. Card now says 'folded the following year' (both agree on 1965). Lambeth added to sources."
+- card: claudia-jones
+  fact: "Notting Hill Carnival became a London institution and still runs today"
+  verdict: confirmed
+  sources:
+    - {title: "Vauxhall History", url: "https://vauxhallhistory.org/claudia-jones/", quote: "is now held yearly over the August bank holiday weekend in the streets of Notting Hill and Kensington"}
+    - {title: "Harvard Magazine (2020)", url: "https://www.harvardmagazine.com/index%2ephp/2020/08/features-vita-claudia-jones", quote: "a 1959 fundraiser for the paper became London's first Caribbean Carnival (now the Notting Hill Carnival)"}
+  note: "Ledger's Harvard quote was a paraphrase; real wording given."
+- card: clotilda
+  fact: "Meaher had wagered he could smuggle captives into Mobile Bay"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Alabama: Clotilda", url: "https://encyclopediaofalabama.org/article/emclotilda-em/", quote: "wagered that he could smuggle a ship carrying enslaved people into Mobile Bay"}
+    - {title: "National Geographic", url: "https://www.nationalgeographic.com/magazine/article/clotilda-americas-last-slave-ship-stole-them-from-home-it-couldnt-steal-their-identities-feature", quote: "Meaher made a bold wager: He would bring a cargo of African captives into Mobile"}
+  note: ""
+- card: clotilda
+  fact: "Meaher was never punished; only Foster paid a fine"
+  verdict: corrected
+  sources:
+    - {title: "Encyclopedia of Alabama: Clotilda", url: "https://encyclopediaofalabama.org/article/emclotilda-em/", quote: "the only punishment meted out was a $1,000 fine levied against Foster"}
+    - {title: "National Geographic", url: "https://www.nationalgeographic.com/magazine/article/clotilda-americas-last-slave-ship-stole-them-from-home-it-couldnt-steal-their-identities-feature", quote: "Timothy Meaher was arrested, released on bail, tried, and cleared of all charges. ... Foster was fined $1,000"}
+  note: "Sources say the fine was levied, not that it was paid. EN 'only Foster was fined', RU 'оштрафовали одного Фостера'."
+- card: clotilda
+  fact: "Survivors saved to return to Africa but could not raise enough"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Alabama: Cudjo Lewis", url: "https://encyclopediaofalabama.org/?p=15143", quote: "when they failed to raise enough money for the trip, they decided to stay in Alabama"}
+    - {title: "National Geographic", url: "https://www.nationalgeographic.com/magazine/article/clotilda-americas-last-slave-ship-stole-them-from-home-it-couldnt-steal-their-identities-feature", quote: "they saved all they could, longing to return home, but it was not enough"}
+  note: ""
+- card: clotilda
+  fact: "Kossola asked Meaher for land; Meaher refused; they bought land from him and others"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Alabama: Cudjo Lewis", url: "https://encyclopediaofalabama.org/?p=15143", quote: "Cudjo was chosen as the spokesman. Meaher refused their demand, and they purchased land from him and others"}
+    - {title: "National Geographic", url: "https://www.nationalgeographic.com/magazine/article/clotilda-americas-last-slave-ship-stole-them-from-home-it-couldnt-steal-their-identities-feature", quote: "Why don't you give us a piece of this land and let us build for ourselves an African Town?"}
+  note: ""
+- card: clotilda
+  fact: "Kossola died in 1935"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Alabama: Cudjo Lewis", url: "https://encyclopediaofalabama.org/?p=15143", quote: "Cudjo Lewis died of age-related illness on July 26, 1935"}
+    - {title: "National Geographic", url: "https://www.nationalgeographic.com/magazine/article/clotilda-americas-last-slave-ship-stole-them-from-home-it-couldnt-steal-their-identities-feature", quote: "Kossola died in 1935, Redoshi the following year."}
+  note: ""
+- card: clotilda
+  fact: "Many descendants still live in Africatown"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Alabama: Clotilda", url: "https://encyclopediaofalabama.org/article/emclotilda-em/", quote: "many descendants—some into the fifth generation—still live in the community, now known as Africatown"}
+    - {title: "National Geographic", url: "https://www.nationalgeographic.com/magazine/article/clotilda-americas-last-slave-ship-stole-them-from-home-it-couldnt-steal-their-identities-feature", quote: "Many of their descendants still live there today."}
+  note: ""
+- card: combahee-raid
+  fact: "Tubman had escaped slavery in Maryland and become a well-known conductor"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: We Called Ourselves Combee", url: "https://www.nps.gov/articles/000/we-called-ourselves-combee.htm", quote: "She was born enslaved in Maryland and liberated herself through escape and became a well-known conductor on the Underground Railroad before the Civil War."}
+    - {title: "National Archives", url: "https://www.archives.gov/research/african-americans/individuals/harriet-tubman", quote: "would return to Maryland many times to recover her family and reunite them in freedom"}
+  note: ""
+- card: combahee-raid
+  fact: "In 1863 she was a spy and scout at Beaufort, learned where the river was mined, guided the boats past the mines"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: We Called Ourselves Combee", url: "https://www.nps.gov/articles/000/we-called-ourselves-combee.htm", quote: "she volunteered to go to Beaufort ... her connections to military officials gave her opportunities to begin her preferred work – that as a spy and scout ... Francis Izzard provided the U.S. military with information about the locations of sea mines"}
+    - {title: "American Battlefield Trust", url: "https://www.battlefields.org/learn/articles/civil-war-irregular-operations", quote: "Tubman guided them past treacherous mines"}
+  note: "Ledger's NPS quote was a paraphrase; real wording given."
+- card: combahee-raid
+  fact: "Soldiers burned houses and rice mills; the gunboats' cannon drove off a Confederate attack"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: We Called Ourselves Combee", url: "https://www.nps.gov/articles/000/we-called-ourselves-combee.htm", quote: "Confederates attacked, but the Harriet A. Weed opened cannon fire on them, scattering the soldiers."}
+    - {title: "American Battlefield Trust", url: "https://www.battlefields.org/learn/articles/civil-war-irregular-operations", quote: "were quickly repelled by the big guns of the John Adams. By this time, the damage had been done, and plantations, mills and outbuildings were in flames."}
+  note: "Sources name different gunboats; card says 'the gunboats' cannon', which fits both."
+- card: combahee-raid
+  fact: "Many freed men enlisted in the 2nd South Carolina Volunteers"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: We Called Ourselves Combee", url: "https://www.nps.gov/articles/000/we-called-ourselves-combee.htm", quote: "Tubman helped recruit more than 150 Combahee River freedom seekers to join the 2nd South Carolina Volunteers (34th USCT)."}
+    - {title: "Carnegie Mellon University News (2024)", url: "https://www.cmu.edu/news/stories/archives/2024/March/harriet-tubman-legacy", quote: "the Combahee men who enlisted in the Second South Carolina Volunteers after the raid"}
+  note: ""
+- card: combahee-raid
+  fact: "In 1899 Congress raised her pension to $20 a month without recognizing her scouting"
+  verdict: confirmed
+  sources:
+    - {title: "National Archives, Center for Legislative Archives", url: "https://www.archives.gov/legislative/features/claim-of-harriet-tubman", quote: "authorized an increase of Tubman's pension to twenty dollars per month for her service as a nurse"}
+    - {title: "Government Executive (2021)", url: "https://www.govexec.com/pay-benefits/2021/06/harriet-tubmans-three-decade-battle-federal-pension/174812/", quote: "with no recognition of her own service and accomplishments"}
+  note: ""
+- card: combahee-raid
+  fact: "The 1977 Combahee River Collective statement introduced the phrase 'identity politics'"
+  verdict: confirmed
+  sources:
+    - {title: "Massachusetts Women's History", url: "https://www.mawomenshistory.org/resources/articles/combahee-river-collective-pioneers-intersectional-feminism", quote: "It was here that they introduced the term \"identity politics,\""}
+    - {title: "WBUR (2019)", url: "https://www.wbur.org/news/2019/06/10/boston-combahee-river-collective-intersectional-black-feminism", quote: "their use of the term \"identity politics.\""}
+  note: "Ledger's MA Women's History quote was the statement text, not the claim; real claim quoted."
+- card: cowries
+  fact: "Ships carried cowries to West Africa by the million"
+  verdict: confirmed
+  sources:
+    - {title: "Fauvelle, Shell Money (Cambridge Elements)", url: "https://www.cambridge.org/core/elements/shell-money/59F5D361C6CA7C596A8C168C84A960D0", quote: "Importing millions of cowries by sea in the hulls of European ships"}
+    - {title: "Wintjes, The Conversation via Daily Maverick", url: "https://www.dailymaverick.co.za/article/2021-09-28-small-seashells-tell-a-big-story-of-slavery-and-transoceanic-trade-500-years-ago/", quote: "billions of money cowries from the Indian Ocean were shipped to the Bight of Benin"}
+  note: ""
+- card: cowries
+  fact: "So many shells arrived that the cowrie lost much of its value"
+  verdict: confirmed
+  sources:
+    - {title: "Fauvelle, Shell Money", url: "https://www.cambridge.org/core/elements/shell-money/59F5D361C6CA7C596A8C168C84A960D0", quote: "the cowrie depreciated in value by some 75 percent"}
+    - {title: "Bank of England Museum guide", url: "https://www.bankofengland.co.uk/-/media/boe/files/museum/slavery-and-the-bank-large-print-guide", quote: "With cowrie shells flooding the local economy ... the West African economy was de-valued"}
+  note: ""
+- card: cowries
+  fact: "Colonial governments tried to ban cowries as money, yet they were used for small purchases into the twentieth century"
+  verdict: confirmed
+  sources:
+    - {title: "Fauvelle, Shell Money", url: "https://www.cambridge.org/core/elements/shell-money/59F5D361C6CA7C596A8C168C84A960D0", quote: "Several colonial governments attempted to prohibit the use of cowries as money ... cowries still being used for small transactions into the middle of the twentieth century"}
+    - {title: "Hansard, HC Deb 30 May 1911", url: "https://api.parliament.uk/historic-hansard/written_answers/1911/may/30/northern-nigeria-currency", quote: "the cowrie currency has, and without warning, been demonetised by the Government over an important section of Nigeria"}
+    - {title: "Journal of Economic History (Southern Nigeria 1880–1948)", url: "https://www.cambridge.org/core/journals/journal-of-economic-history/article/from-traditional-to-british-currency-in-southern-nigeria-analysis-of-a-currency-revolution-18801948/0153DA3573B899A5B76A22260D9994CB", quote: "cowries and other traditional currencies which they recalled using in the forties and in some cases as late as 1952"}
+  note: "Ledger's Citéco and Conchological Society quotes say nothing of bans. Replaced with Hansard (ban) and JEH (20th-century use); both added to sources."
+- card: crazy-blues
+  fact: "Crazy Blues was the first blues record by an African American singer"
+  verdict: confirmed
+  sources:
+    - {title: "NPR (2006)", url: "https://www.npr.org/2006/11/11/6473116/mamie-smith-and-the-birth-of-the-blues-market", quote: "Mamie Smith was the first black artist to record a blues song: 1920's \"Crazy Blues.\""}
+    - {title: "Ed Komara, LoC NRR essay", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "The breakthrough record by an African American performer came in November 1920, with the release of Mamie Smith's performance of \"Crazy Blues\""}
+  note: "Ballad of America swapped for NPR (already in card sources) as the stronger source."
+- card: crazy-blues
+  fact: "Bradford pestered companies until OKeh agreed; the February 1920 session did well enough for a follow-up"
+  verdict: confirmed
+  sources:
+    - {title: "LoC essay (Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "encouraged Bradford to pester recording firms to record her"}
+    - {title: "Jansen, Smithsonian Folkways liner notes FJ 2863", url: "https://folkways-media.si.edu/docs/folkways/artwork/FW02863.pdf", quote: "Perry waged a one-man campaign to get the major record companies ... record female Blues singers ... accompanied Mamie on her February 14, 1920 recording session ... Released in July of that year on Okeh 4113"}
+  note: "Folkways PDF is OCR; quote normalised from the scan."
+- card: crazy-blues
+  fact: "The Jazz Hounds were a band of Black musicians"
+  verdict: confirmed
+  sources:
+    - {title: "LoC essay (Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "Mamie Smith with a group of African American musicians recorded \"Crazy Blues\""}
+    - {title: "Smithsonian Folkways liner notes", url: "https://folkways-media.si.edu/docs/folkways/artwork/FW02863.pdf", quote: "backed by a five-piece black jazz band"}
+  note: ""
+- card: crazy-blues
+  fact: "For the rest of the 1920s companies hurried to record Black women singing the blues"
+  verdict: confirmed
+  sources:
+    - {title: "LoC essay (Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "igniting the women blues singers trend across the recording industry through the end of the 1920s"}
+    - {title: "Ballad of America", url: "https://balladofamerica.org/blues-queens-and-race-records-in-the-1920s/", quote: "Bradford's experiment was an overwhelming success, awakening the entertainment industry to a vast potential market."}
+  note: "Second source is weak (educational site); NPR also: 'The recording opened the door for a brand new market'."
+- card: crazy-blues
+  fact: "Mamie Smith died poor on Staten Island in 1946, buried in an unmarked grave"
+  verdict: confirmed
+  sources:
+    - {title: "CBS New York", url: "https://www.cbsnews.com/newyork/news/effort-underway-to-honor-nyc-blues-singer-mamie-smith/", quote: "When she died on Staten Island at the age of 63, Smith was poor, and she ended up being buried in an unmarked mass grave"}
+    - {title: "DNAinfo New York (2014)", url: "https://www.dnainfo.com/new-york/20141217/richmond-town/blues-singers-unmarked-grave-gets-headstone-thanks-writers-campaign", quote: "A groundbreaking blues singer whose body lay in an unmarked Staten Island grave"}
+  note: "LoC says 'communal grave', not 'unmarked'; DNAinfo added for 'unmarked'."
+- card: dave-the-potter
+  fact: "The law forbade enslaved people to read and write"
+  verdict: confirmed
+  sources:
+    - {title: "SAAM", url: "https://americanart.si.edu/node/66211", quote: "In 1834, South Carolina outlawed literacy among its enslaved population"}
+    - {title: "UMich LSA Magazine", url: "https://prod.lsa.umich.edu/lsa/news-events/lsa-magazine/lsa-magazine-archive/Fall-2023/a-history-carved-in-stoneware.html", quote: "at a time when it was forbidden for enslaved people to read and write"}
+  note: ""
+- card: dave-the-potter
+  fact: "In December 1834 South Carolina passed harsher anti-literacy codes"
+  verdict: corrected
+  sources:
+    - {title: "SAAM", url: "https://americanart.si.edu/node/66211", quote: "In 1834, South Carolina outlawed literacy among its enslaved population as a measure to squash potential organized rebellions."}
+    - {title: "JSTOR Daily", url: "https://daily.jstor.org/dave-the-potter-mark-on-history", quote: "In 1834, South Carolina \"clamped down\" on literacy of African Americans; the state passed a law forbidding anyone from teaching"}
+  note: "Only Antiques and the Arts Weekly gives December; month dropped ('that same year'). JSTOR Daily also records inscriptions in 1836 and 1840, so 'he kept on writing' holds. JSTOR Daily added to sources."
+- card: dave-the-potter
+  fact: "His own family had been sold away from him"
+  verdict: corrected
+  sources:
+    - {title: "JSTOR Daily (quoting MFA curator Ethan Lasser)", url: "https://daily.jstor.org/dave-the-potter-mark-on-history", quote: "He likely had a wife and children who were auctioned away in the 1850s based on a poem of his and inventories"}
+    - {title: "Antiques and the Arts Weekly", url: "https://www.antiquesandthearts.com/hear-me-now-the-black-potters-of-old-edgefield-south-carolina/", quote: "a reference, perhaps, to the sale of Dave's family to a planter 500 miles distant"}
+  note: "Scholars hedge ('likely', 'perhaps'); only LSA states it flatly. EN 'had most likely been sold', RU 'по всей видимости, продали'."
+- card: dave-the-potter
+  fact: "He took the surname of a former enslaver, Drake"
+  verdict: confirmed
+  sources:
+    - {title: "Antiques and the Arts Weekly", url: "https://www.antiquesandthearts.com/hear-me-now-the-black-potters-of-old-edgefield-south-carolina/", quote: "upon emancipation took the surname of one of his former enslavers, Drake"}
+    - {title: "JSTOR Daily", url: "https://daily.jstor.org/dave-the-potter-mark-on-history", quote: "In the 1870 US Census, Koverman notes, there is documentation that Dave took on Harvey Drake's surname after he was emancipated."}
+  note: ""
+- card: dave-the-potter
+  fact: "Still alive in 1870, died in the 1870s"
+  verdict: confirmed
+  sources:
+    - {title: "AP via News Tribune (2025)", url: "https://www.newstribune.com/news/2025/nov/21/descendants-obtain-works-of-enslaved-potter-in/", quote: "Researchers believe Drake died sometime in the 1870s ... He is accounted for in the 1870 census, but not in the 1880 census."}
+    - {title: "SAAM", url: "https://americanart.si.edu/node/66211", quote: "born ca. 1800-died after 1870"}
+  note: "Ledger's AP quote was a paraphrase; real wording given."
+- card: dave-the-potter
+  fact: "The family sold one returned jar back to the MFA and lent it the other"
+  verdict: confirmed
+  sources:
+    - {title: "WBUR (2025)", url: "https://www.wbur.org/news/2025/10/29/mfa-resolves-ownership-for-vessels-by-enslaved-potter-david-drake", quote: "the MFA repurchased one of the pieces — \"Poem Jar\" — from the descendants. The family retained ownership of the second pot — \"Signed Jar\" — but they decided to loan it to the MFA under a long-term agreement."}
+    - {title: "AP via News Tribune (2025)", url: "https://www.newstribune.com/news/2025/nov/21/descendants-obtain-works-of-enslaved-potter-in/", quote: "they sold one back so people can continue to learn from Dave's legacy. The other is on lease to the museum, at least temporarily."}
+  note: ""
+- card: detroit-techno
+  fact: "Since 2000 Detroit has held an annual festival, now Movement, on Memorial Day weekend"
+  verdict: confirmed
+  sources:
+    - {title: "Detroit Historical Society", url: "https://www.detroithistorical.org/learn/online-research/blog/flashback-2002-detroit-electronic-music-festival", quote: "In 2000, the city held the first annual Detroit Electronic Music Festival"}
+    - {title: "Michigan Public (2026)", url: "https://www.michiganpublic.org/news/2026-11-02/juan-atkins-obituary-detroit-techno", quote: "is celebrated each Memorial Day weekend at Movement Electronic Music Festival"}
+  note: ""
+- card: detroit-techno
+  fact: "Atkins died in 2026 aged 64"
+  verdict: confirmed
+  sources:
+    - {title: "Michigan Public (2 Nov 2026)", url: "https://www.michiganpublic.org/news/2026-11-02/juan-atkins-obituary-detroit-techno", quote: "Detroit techno godfather Juan Atkins died over the weekend. He was 64."}
+    - {title: "NPR Illinois (2 Nov 2026)", url: "https://www.nprillinois.org/2026-11-02/remembering-juan-atkins-known-as-the-originator-of-techno", quote: "Juan Atkins died in Mexico City on Saturday. He was 64 years old."}
+  note: "Both NPR member stations but separate pieces (local obituary vs national remembrance)."
+- card: douglass-covey
+  fact: "Thomas Auld hired him out to Covey for one year"
+  verdict: confirmed
+  sources:
+    - {title: "Douglass, Narrative (1845), DocSouth", url: "https://docsouth.unc.edu/neh/douglass/douglass.html", quote: "let me for one year to a man named Edward Covey"}
+    - {title: "NPS: Chronology", url: "https://www.nps.gov/frdo/learn/kidsyouth/chronology.htm", quote: "1833, March Sent to St. Michaels to live with Thomas Auld. 1834, January 1 Begins year as field hand under Edward Covey"}
+  note: ""
+- card: douglass-covey
+  fact: "For the first six months Covey whipped him almost every week"
+  verdict: confirmed
+  sources:
+    - {title: "Narrative (1845)", url: "https://docsouth.unc.edu/neh/douglass/douglass.html", quote: "During the first six months, of that year, scarce a week passed without his whipping me."}
+    - {title: "PBS Wisconsin, Becoming Frederick Douglass", url: "https://pbswisconsin.org/watch/becoming-frederick-douglass/battling-slave-breaker-ydsxqo/", quote: "After six months of taking these brutal beatings, Frederick had enough."}
+  note: "Unledgered quote 'broken in body, soul, and spirit' is verbatim in the Narrative."
+- card: douglass-covey
+  fact: "The fight, in August 1834, lasted nearly two hours"
+  verdict: confirmed
+  sources:
+    - {title: "Narrative (1845)", url: "https://docsouth.unc.edu/neh/douglass/douglass.html", quote: "for nearly two hours"}
+    - {title: "NPS: Chronology", url: "https://www.nps.gov/frdo/learn/kidsyouth/chronology.htm", quote: "1834, August Fights with Covey; is not whipped thereafter."}
+  note: "PBS: 'this epic two-hour battle'."
+- card: douglass-covey
+  fact: "Covey did not have him publicly whipped, as it would have cost him his reputation as a breaker"
+  verdict: confirmed
+  sources:
+    - {title: "Narrative (1845)", url: "https://docsouth.unc.edu/neh/douglass/douglass.html", quote: "had he sent me--a boy about sixteen years old--to the public whipping-post, his reputation would have been lost"}
+    - {title: "PBS Wisconsin (Derrick Spires)", url: "https://pbswisconsin.org/watch/becoming-frederick-douglass/battling-slave-breaker-ydsxqo/", quote: "He had the reputation as the slave breaker. And so, to retaliate in a way that was visible ... was against Covey's best interest."}
+  note: ""
+- card: douglass-covey
+  fact: "Four more years enslaved; escaped north on 3 September 1838"
+  verdict: confirmed
+  sources:
+    - {title: "Narrative (1845)", url: "https://docsouth.unc.edu/neh/douglass/douglass.html", quote: "though I remained a slave four years afterwards"}
+    - {title: "NPS: Chronology", url: "https://www.nps.gov/frdo/learn/kidsyouth/chronology.htm", quote: "1838, September 3: Escapes north by train and boat."}
+  note: ""
+- card: douglass-covey
+  fact: "He published his Narrative in 1845"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: Chronology", url: "https://www.nps.gov/frdo/learn/kidsyouth/chronology.htm", quote: "1845, May 28: Narrative of the Life of Frederick Douglass, an American Slave, published"}
+    - {title: "DocSouth: Narrative (Boston, 1845)", url: "https://docsouth.unc.edu/neh/douglass/douglass.html", quote: "Boston: Published at the Anti-Slavery Office, 1845"}
+  note: ""
+- card: douglass-covey
+  fact: "Born enslaved in Talbot County, Maryland"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: Chronology", url: "https://www.nps.gov/frdo/learn/kidsyouth/chronology.htm", quote: "Holme Hill Farm on Tuckahoe Creek, Talbot County"}
+    - {title: "Narrative (1845)", url: "https://docsouth.unc.edu/neh/douglass/douglass.html", quote: "I was born in Tuckahoe, near Hillsborough, and about twelve miles from Easton, in Talbot county, Maryland."}
+  note: ""
+- card: du-bois-infographics
+  fact: "Du Bois, then at Atlanta University, made the charts with students and colleagues"
+  verdict: confirmed
+  sources:
+    - {title: "NYRB (2021)", url: "https://www.nybooks.com/articles/2021/08/19/du-bois-color-line-paris-exposition/", quote: "Du Bois was teaching sociology at Atlanta University ... With $2,500 and the help of students and faculty, he went to work"}
+    - {title: "Public Domain Review", url: "https://publicdomainreview.org/collection/w-e-b-du-bois-hand-drawn-infographics-of-african-american-life-1900", quote: "Created by Du Bois and his students at Atlanta"}
+  note: "Covers unledgered 'professor'."
+- card: du-bois-infographics
+  fact: "Charts covered population, occupations, property and land, many about Georgia"
+  verdict: confirmed
+  sources:
+    - {title: "LoC Teaching with the Library", url: "https://blogs.loc.gov/teachers/2020/02/du-bois-in-paris-exposition-universelle-1900/", quote: "including several devoted to property ownership and land valuation, education, income, population ... several devoted to occupations including Occupations of Negroes and whites in Georgia"}
+    - {title: "Public Domain Review", url: "https://publicdomainreview.org/collection/w-e-b-du-bois-hand-drawn-infographics-of-african-american-life-1900", quote: "many of which focus on economic life in Georgia"}
+  note: "loc.gov catalog item blocks bots (403); not needed."
+- card: du-bois-infographics
+  fact: "The exhibit won a Grand Prize, and Du Bois himself a gold medal"
+  verdict: confirmed
+  sources:
+    - {title: "Transition (Harvard)", url: "https://transitionmagazine.fas.harvard.edu/a-significant-occurrence-w-e-b-du-bois-the-paris-exposition-and-the-banquet/", quote: "He had won a Grand Prix, a gold medal and a bronze medal, among other prizes, for his contributions to the American Negro Exhibit."}
+    - {title: "NYRB (2021)", url: "https://www.nybooks.com/articles/2021/08/19/du-bois-color-line-paris-exposition/", quote: "Du Bois himself won a gold medal."}
+  note: ""
+- card: emmett-till
+  fact: "The trial opened in Sumner on 19 September 1955"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: monument proclamation", url: "https://www.nps.gov/till/learn/management/presidential-proclamation.htm", quote: "The trial for the murder of Emmett Till began just weeks after his lynching, on September 19, 1955"}
+    - {title: "NMAAHC Searchable Museum", url: "https://www.searchablemuseum.com/emmett-till/", quote: "The trial of Roy Bryant and J. W. Milam began on September 19, 1955, in front of an all-white jury."}
+  note: "Ledger's NMAAHC quote ('the men were set free') did not support the date; replaced. Sumner: PBS/AP 'the Tallahatchie County Second District Courthouse in Sumner, Mississippi, where Till's killers were tried'."
+- card: emmett-till
+  fact: "Rosa Parks said she thought of Emmett Till and could not go back"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: monument proclamation", url: "https://www.nps.gov/till/learn/management/presidential-proclamation.htm", quote: "I thought of Emmett Till and I couldn't go back."}
+    - {title: "NMAAHC Searchable Museum", url: "https://www.searchablemuseum.com/emmett-till/", quote: "I thought about Emmett Till, and I could not go back."}
+  note: "RU rendered the quote as 'не смогла уйти в конец салона', an interpretation; changed to 'не смогла уйти назад'."
+- card: emmett-till
+  fact: "Mamie Till-Mobley kept his story alive and died in 2003"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: monument proclamation", url: "https://www.nps.gov/till/learn/management/presidential-proclamation.htm", quote: "For the remainder of her life, well into her 80s, Mamie Till-Mobley furthered the memory of her son Emmett"}
+    - {title: "Monument Lab", url: "https://monumentlab.com/bulletin/looking-for-emmett-and-mamie-in-chicago", quote: "Before she passed away in 2003"}
+  note: ""
+- card: emmett-till
+  fact: "Emmett Till Antilynching Act signed March 2022"
+  verdict: confirmed
+  sources:
+    - {title: "PBS NewsHour / AP (2023)", url: "https://www.pbs.org/newshour/politics/biden-will-establish-a-national-monument-for-emmett-till-black-teen-lynched-in-1955", quote: "In March 2022, Biden signed the Emmett Till Anti-Lynching Act into law."}
+    - {title: "Public Law 117-107", url: "https://www.congress.gov/117/plaws/publ107/PLAW-117publ107.htm", quote: "Approved March 29, 2022."}
+  note: ""
+- card: emmett-till
+  fact: "In 2023 Roberts Temple, the Sumner courthouse and Graball Landing became a national monument"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: monument proclamation", url: "https://www.nps.gov/till/learn/management/presidential-proclamation.htm", quote: "Establishment of the Emmett Till and Mamie Till-Mobley National Monument ... Graball Landing ... the Tallahatchie County Second District Courthouse ... the Roberts Temple Church of God in Christ"}
+    - {title: "PBS NewsHour / AP (2023)", url: "https://www.pbs.org/newshour/politics/biden-will-establish-a-national-monument-for-emmett-till-black-teen-lynched-in-1955", quote: "Graball Landing, believed to be where Till's mutilated body was pulled from the Tallahatchie River, and the Tallahatchie County Second District Courthouse in Sumner"}
+  note: ""
+- card: equiano
+  fact: "As a boy he was owned by the naval officer Michael Pascal, who named him Gustavus Vassa"
+  verdict: confirmed
+  sources:
+    - {title: "Brycchan Carey: Equiano biography", url: "https://brycchancarey.com/equiano/biog.htm", quote: "In the summer of 1754, Equiano was sold to an officer in the Royal Navy called Michael Pascal. ... Pascal gave the boy the name of Gustavus Vassa."}
+    - {title: "London Museum: Olaudah Equiano, writer and abolitionist", url: "https://www.londonmuseum.org.uk/collections/london-stories/olaudah-equiano-writer-abolitionist/", quote: "references the name that was forced on him by enslaver Michael Pascal in 1754: Gustavus Vassa"}
+  note: ""
+- card: equiano
+  fact: "Later the Quaker merchant Robert King of Montserrat put him to work trading, and he bought his freedom from King in 1766 for £40"
+  verdict: corrected
+  sources:
+    - {title: "Colonial Williamsburg, Slavery and Remembrance: Olaudah Equiano", url: "https://www.slaveryandremembrance.org/people/person/?id=PP003", quote: "sold him to a Quaker named Robert King in Montserrat. King recognized Equiano's skills and put him to work in marketing rather than in the fields. In 1766, after three years in his service, King allowed Equiano to purchase his own freedom."}
+    - {title: "Brycchan Carey: Equiano biography", url: "https://brycchancarey.com/equiano/biog.htm", quote: "sold again to a Quaker by the name of Robert King ... much too valuable to be sent into the fields. King had him trained as a gauger"}
+    - {title: "London Museum", url: "https://www.londonmuseum.org.uk/collections/london-stories/olaudah-equiano-writer-abolitionist/", quote: "his freedom, which he purchased from one of his enslavers Robert King in 1766 for £40"}
+    - {title: "Paul Lovejoy, Equiano's World", url: "https://equianosworld.org/associates-abolition.php", quote: "Captain Michael Henry Pascal, and merchant Robert King"}
+  note: "Only one source says 'marketing'; the other says gauger. Card now says King kept him out of the fields and used him in his business (EN+RU)."
+- card: equiano
+  fact: "In 1787 he was commissary for the Sierra Leone expedition and was dismissed after publicly condemning its management"
+  verdict: confirmed
+  sources:
+    - {title: "Brycchan Carey: Equiano biography", url: "https://brycchancarey.com/equiano/biog.htm", quote: "he was given the job of Commissary of Provisions and Stores ... The Navy Board stood up for him, but he was sacked nonetheless."}
+    - {title: "Paul Lovejoy, Equiano's World: Associates in abolition", url: "https://equianosworld.org/associates-abolition.php", quote: "was hired as Commissary Officer for the expedition ... Following his public condemnation of the plan, Vassa was dismissed from his position. On April 9, 1787, the ships sailed"}
+  note: ""
+- card: equiano
+  fact: "He toured Britain and Ireland with the book, at readings arranged by local abolition committees"
+  verdict: confirmed
+  sources:
+    - {title: "Brycchan Carey: Equiano biography", url: "https://brycchancarey.com/equiano/biog.htm", quote: "going on lecture tours around England, Scotland, Wales, and Ireland ... it was local abolition committees who arranged the lectures and readings at which he was present"}
+    - {title: "London Museum", url: "https://www.londonmuseum.org.uk/collections/london-stories/olaudah-equiano-writer-abolitionist/", quote: "a prolific writer, speaker and campaigner who travelled across the country to present the case for abolishing slavery"}
+  note: "The committees detail rests on Carey alone; the touring itself is confirmed by both."
+- card: equiano
+  fact: "In 1792 he married Susanna Cullen; they had two daughters"
+  verdict: confirmed
+  sources:
+    - {title: "Brycchan Carey: Equiano biography", url: "https://brycchancarey.com/equiano/biog.htm", quote: "on 7 April 1792 he married an Englishwoman, Susanna Cullen, at Soham in Cambridgeshire. Olaudah and Susanna had two daughters"}
+    - {title: "Paul Lovejoy, Equiano's World", url: "https://equianosworld.org/associates-abolition.php", quote: "In 1792, he married a white woman named Suzannah Cullen. The couple had two daughters, Anne Marie Vassa and Joanna Vassa."}
+  note: ""
+- card: equiano
+  fact: "He died in London on 31 March 1797"
+  verdict: confirmed
+  sources:
+    - {title: "London Museum", url: "https://www.londonmuseum.org.uk/collections/london-stories/olaudah-equiano-writer-abolitionist/", quote: "He died in London on 31 March 1797"}
+    - {title: "Brycchan Carey: Equiano biography", url: "https://brycchancarey.com/equiano/biog.htm", quote: "Equiano died in March 1797"}
+  note: ""
+- card: equiano
+  fact: "(unledgered) In 1783 he carried news of the Zong massacre to Granville Sharp"
+  verdict: confirmed
+  sources:
+    - {title: "Understanding Slavery Initiative: The Zong", url: "https://understandingslavery.com/casestudy/the-zong/", quote: "On 19 March 1783, the African Olaudah Equiano called on anti-slavery campaigner Granville Sharp ... with news of an event"}
+    - {title: "London Museum: The Zong massacre trial", url: "https://londonmuseum.org.uk/collections/london-stories/zong-massacre-trial/", quote: "Olaudah Equiano, a campaigner for the end of slavery who raised the Zong case with Sharp"}
+  note: "Not in the ledger; Understanding Slavery added to the card's sources."
+- card: freedoms-journal
+  fact: "At its peak it circulated in eleven states, the District of Columbia, Haiti, Europe and Canada"
+  verdict: confirmed
+  sources:
+    - {title: "Buffalo State University Archives: Freedom's Journal", url: "https://library.buffalostate.edu/archives/mfc/freedoms_journal", quote: "Freedom's Journal at its peak circulated in eleven states, the District of Columbia, Haiti, Europe, and Canada."}
+    - {title: "Encyclopedia.com: Freedom's Journal", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/freedoms-journal", quote: "The paper's circulation extended to eleven U.S. states, the District of Columbia, Haiti, Europe, and Canada."}
+  note: "Wording is identical in both; one may derive from the other, but they are separate institutions (university archive vs. Gale reference)."
+- card: freedoms-journal
+  fact: "Cornish resigned in September 1827; Russwurm, as sole editor, moved toward the American Colonization Society's plan"
+  verdict: confirmed
+  sources:
+    - {title: "Buffalo State University Archives", url: "https://library.buffalostate.edu/archives/mfc/freedoms_journal", quote: "In September 1827 Russwurm became sole editor of Freedom's Journal following the resignation of Cornish over differences regarding African American colonization of Africa. Russwurm had begun to promote the colonization movement lead by the American Colonization Society"}
+    - {title: "Encyclopedia.com: Freedom's Journal", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/freedoms-journal", quote: "after Cornish resigned in September 1827, Russwurm became the sole editor and shifted the Journal toward a pro-colonization position"}
+  note: ""
+- card: freedoms-journal
+  fact: "Cornish tried to revive the paper as The Rights of All, which was short-lived"
+  verdict: confirmed
+  sources:
+    - {title: "EBSCO Research Starters: John Brown Russwurm", url: "https://www.ebsco.com/research-starters/history/john-brown-russwurm/", quote: "Cornish later attempted to revive the publication under a new name, The Rights of All. That publication was short-lived."}
+    - {title: "Encyclopedia.com: Freedom's Journal", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/freedoms-journal", quote: "Cornish, remaining in New York, published a newspaper called The Rights of All in 1829, which only lasted six months."}
+  note: ""
+- card: freedoms-journal
+  fact: "Russwurm governed Maryland-in-Liberia from 1836 until his death in 1851"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia.com: John Brown Russwurm", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/john-brown-russwurm", quote: "Russwurm governed the colony from 1836 until 1851 ... He died on June 17, 1851."}
+    - {title: "EBSCO Research Starters: John Brown Russwurm", url: "https://www.ebsco.com/research-starters/history/john-brown-russwurm/", quote: "In 1836, he became governor of the Maryland colony in Liberia. ... After his death, the colony eventually became part of the independent Republic of Liberia."}
+  note: "EBSCO gives 1836 and implies he died in office; its death year appears only in its bibliography (James, ... 1799-1851). Maine Memory Network gives 1839 for the governorship, a minority date; kept 1836."
+- card: funk
+  fact: "When Stubblefield was fighting cancer, Prince paid $90,000 of his medical bills"
+  verdict: confirmed
+  sources:
+    - {title: "NPR (Daoud Tyler-Ameen), via NPR Illinois, 18 February 2017", url: "https://www.nprillinois.org/2017-02-18/clyde-stubblefield-james-browns-funky-drummer-dies-at-73", quote: "Prince donated $90,000 to help him pay his hospital bills, after the drummer developed bladder cancer in the early 2000s"}
+    - {title: "AP via ABC News (Australia), 19 February 2017", url: "https://www.abc.net.au/news/2017-02-19/james-browns-funky-drummer-clyde-stubblefield-dies-at-73/8284220", quote: "When Prince got wind in 2000 that Stubblefield was deep in debt from a fight against bladder cancer, he personally paid $90,000 to cover his bills"}
+  note: ""
+- card: funk
+  fact: "Stubblefield died in 2017, aged 73"
+  verdict: confirmed
+  sources:
+    - {title: "NPR via NPR Illinois (18 February 2017)", url: "https://www.nprillinois.org/2017-02-18/clyde-stubblefield-james-browns-funky-drummer-dies-at-73", quote: "Clyde Stubblefield ... has died at the age of 73"}
+    - {title: "AP via ABC News (19 February 2017)", url: "https://www.abc.net.au/news/2017-02-19/james-browns-funky-drummer-clyde-stubblefield-dies-at-73/8284220", quote: "died on Saturday aged 73"}
+  note: ""
+- card: gannibal
+  fact: "He studied in France from 1717 to 1723"
+  verdict: confirmed
+  sources:
+    - {title: "Saint Petersburg Encyclopedia: Gannibal", url: "https://encspb.ru/object/2804035654?dv=2853952566&lc=en", quote: "Studied in France (1717-23, from 1720 - in the artillery school in LaFerre)."}
+    - {title: "Russian Biographical Dictionary (Wikisource): Ганнибал, Абрам Петрович", url: "https://ru.wikisource.org/wiki/РБС/ВТ/Ганнибал,_Абрам_Петрович", quote: "В 1717 г. Г. отправлен был царем во Францию для изучения инженерных наук ... в начале 1723 г. явился в Петербург."}
+  note: ""
+- card: gannibal
+  fact: "After Peter's death he fell into disgrace and was sent off to Siberia"
+  verdict: confirmed
+  sources:
+    - {title: "Brockhaus and Efron (Wikisource): Ганнибал", url: "https://ru.wikisource.org/wiki/ЭСБЕ/Ганнибал,_Абрам_Петрович", quote: "После смерти Петра Г. пристал к партии недовольных возвышением Меншикова, за что был отправлен в Сибирь (1727)"}
+    - {title: "Vokrug Sveta: Из Африки в Сибирь", url: "https://www.vokrugsveta.ru/articles/iz-afriki-v-sibir-kak-arap-petra-velikogo-v-ssylku-popal-id740147", quote: "Ганнибал мог помешать осуществлению этого плана, и Меншиков решил сослать его подальше от двора."}
+  note: ""
+- card: gannibal
+  fact: "Elizabeth granted him Mikhailovskoye (Pskov district) in 1742"
+  verdict: corrected
+  sources:
+    - {title: "Russian Biographical Dictionary (Wikisource)", url: "https://ru.wikisource.org/wiki/РБС/ВТ/Ганнибал,_Абрам_Петрович", quote: "в тот же день ему было пожаловано дворцовое имение Михайловская Губа в Псковском уезде с 569 душами крестьян"}
+    - {title: "Pushkin Museum-Reserve Mikhailovskoye", url: "https://pushkinland.ru/2018/english/res1.php", quote: "On 12 January, 1742 most of the land which made up Mikhalovskaya Guba was granted in perpetuity by decree of Empress Elizabeth, daughter of Peter the Great, to Pushkin's great-grandfather, Abram Petrovich Gannibal"}
+  note: "Card said 'near Pskov' / 'под Псковом'; sources say Pskov district (uyezd), and the estate is far from the town. Now 'in the Pskov district' / 'в Псковском уезде'."
+- card: gannibal
+  fact: "He retired in 1762 and died in 1781 at Suyda"
+  verdict: confirmed
+  sources:
+    - {title: "Russian Biographical Dictionary (Wikisource)", url: "https://ru.wikisource.org/wiki/РБС/ВТ/Ганнибал,_Абрам_Петрович", quote: "9 июня 1762 г. Г. был уволен в отставку за старостью. Последние годы своей жизни он провел в одном из пожалованных ему имений — Суйде, где и скончался 14 мая 1781 г."}
+    - {title: "Saint Petersburg Encyclopedia", url: "https://encspb.ru/object/2804035654?dv=2853952566&lc=en", quote: "Gannibal retired in 1762."}
+    - {title: "Russian Life: Pushkin's estates (1999)", url: "https://www.russianlife.com/magazine/june-july-1999/pushkins-estates/", quote: "After Abraham's death, in 1781, the estate went to his son Osip"}
+  note: "Suyda as place of death rests on RBS; the SPb Encyclopedia page as cached does not show the Suyda clause quoted in the ledger. Place of death kept on RBS, an authoritative dictionary; flagged as single-sourced detail."
+- card: gannibal
+  fact: "His son Osip was Pushkin's maternal grandfather"
+  verdict: confirmed
+  sources:
+    - {title: "Brockhaus and Efron (Wikisource)", url: "https://ru.wikisource.org/wiki/ЭСБЕ/Ганнибал,_Абрам_Петрович", quote: "Дочь другого сына Г., Осипа, была матерью А. С. Пушкина"}
+    - {title: "Pushkin Museum-Reserve Mikhailovskoye", url: "https://pushkinland.ru/2018/english/res1.php", quote: "The estate was created by Pushkin's grandfather, Osip Abramovich Gannibal"}
+  note: ""
+- card: gannibal
+  fact: "Pushkin spent two years of exile at Mikhailovskoye"
+  verdict: confirmed
+  sources:
+    - {title: "Pushkin Museum-Reserve Mikhailovskoye", url: "https://pushkinland.ru/2018/english/res1.php", quote: "From 1824 until the end of his life Pushkin made frequent visit to Mikhailovskoye, where he also spent two years in exile."}
+    - {title: "Russian Life: Pushkin's estates (1999)", url: "https://www.russianlife.com/magazine/june-july-1999/pushkins-estates/", quote: "Pushkin was left largely to himself at Mikhailovskoe for the next two years."}
+  note: ""
+- card: gannibal
+  fact: "The novel begun in 1827 was published only after Pushkin's death, under the title The Moor of Peter the Great"
+  verdict: confirmed
+  sources:
+    - {title: "C. T. Nepomnyashchy, introduction to Under the Sky of My Africa (Northwestern UP, 2006)", url: "https://api.pageplace.de/preview/DT0400.9780810162051_A49429564/preview-9780810162051_A49429564.pdf", quote: "uncompleted attempt at a novel, titled by the editors who published it shortly after the poet's death, The Blackamoor of Peter the Great (Arap Petra Velikogo)"}
+    - {title: "Wikisource: Арап Петра Великого (FEB notes)", url: "https://ru.wikisource.org/wiki/Арап_Петра_Великого_(Пушкин)", quote: "Время работы над романом определяется датой перед первой главой романа — 31 июля 1827 г. ... Впервые как целостное произведение напечатан после смерти Пушкина под заглавием «Арап Петра Великого»"}
+  note: ""
+- card: general-dumas
+  fact: "In Egypt he quarrelled with Napoleon over the campaign and asked to return to France"
+  verdict: confirmed
+  sources:
+    - {title: "Enslaved.org: Thomas-Alexandre Dumas", url: "https://enslaved.org/fullStory/16-23-92891/", quote: "During a desert march, Dumas criticized Napoleon's leadership, and after a dispute, Dumas requested to return to France."}
+    - {title: "Columbia Encyclopedia via Encyclopedia.com", url: "https://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/dumas-thomas-alexandre", quote: "...Napoleon while in Egypt. Accused of mutiny, he requested to return to France."}
+    - {title: "Fondation pour la mémoire de l'esclavage", url: "https://memoire-esclavage.org/biographies/thomas-alexandre-dumas", quote: "Mais les deux hommes s'opposent, et Dumas réalise rapidement que la campagne est un échec."}
+  note: ""
+- card: general-dumas
+  fact: "He was held at Taranto by forces of the Kingdom of Naples and released in 1801"
+  verdict: confirmed
+  sources:
+    - {title: "Columbia Encyclopedia via Encyclopedia.com", url: "https://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/dumas-thomas-alexandre", quote: "Forced to land at Taranto, Italy because his ship was sinking, Dumas was imprisoned (1799–1801) by forces loyal to the king of Naples."}
+    - {title: "Enslaved.org", url: "https://enslaved.org/fullStory/16-23-92891/", quote: "March 1801 After Napoleon's forces defeat King Ferdinand IV's army, Dumas is released from prison and returns to France."}
+  note: ""
+- card: general-dumas
+  fact: "He never received the pension owed for his captivity"
+  verdict: corrected
+  sources:
+    - {title: "Fondation pour la mémoire de l'esclavage", url: "https://memoire-esclavage.org/biographies/thomas-alexandre-dumas", quote: "Il ne recevra jamais ses arriérés de pension liés à sa captivité"}
+    - {title: "Enslaved.org", url: "https://enslaved.org/fullStory/16-23-92891/", quote: "Napoleon particularly targeted Dumas given their history, denying him of his full pension"}
+  note: "Only FME ties the pension to the captivity; Enslaved.org says he was denied his full pension. Card now: 'He was denied the full pension he was owed' / 'Полной пенсии, причитавшейся ему, он так и не получил'."
+- card: general-dumas
+  fact: "He died at Villers-Cotterêts in 1806"
+  verdict: confirmed
+  sources:
+    - {title: "Fondation pour la mémoire de l'esclavage", url: "https://memoire-esclavage.org/biographies/thomas-alexandre-dumas", quote: "mort le 26 février 1806 à Villers-Cotterêts"}
+    - {title: "Enslaved.org", url: "https://enslaved.org/fullStory/16-23-92891/", quote: "February 26, 1806 Dumas dies of stomach cancer at the age of 43 in Villers-Cotterêts, France."}
+  note: ""
+- card: general-dumas
+  fact: "A statue of the general in Paris was destroyed during the German occupation; a sculpture of shackles now commemorates him"
+  verdict: confirmed
+  sources:
+    - {title: "Fondation pour la mémoire de l'esclavage", url: "https://memoire-esclavage.org/biographies/thomas-alexandre-dumas", quote: "En 1912, une statue à son effigie ... est érigée place Malesherbes ... Cette statue fondue sous l'Occupation en 1942 pour en récupérer le métal ... jusqu'à l'inauguration de l'œuvre Fers, réalisée en 2008"}
+    - {title: "Enslaved.org", url: "https://enslaved.org/fullStory/16-23-92891/", quote: "destroyed during World War II by occupying Nazi forces as 'offensive.' In 2009 a monument to Dumas was unveiled in Paris. The monument is a set of shackles"}
+  note: "Sources differ on dates (1912/1913 statue, 2008/2009 sculpture); the card states no dates, so no conflict."
+- card: gospel
+  fact: "Mahalia Jackson sang 'Take My Hand, Precious Lord' at Martin Luther King Jr.'s funeral (1968)"
+  verdict: confirmed
+  sources:
+    - {title: "64 Parishes: Mahalia Jackson (via archive.org; live site returns 403)", url: "https://64parishes.org/entry/mahalia-jackson", quote: "Five years later, she sang Dorsey's most famous song, \"Take My Hand, Precious Lord\" at King's funeral."}
+    - {title: "Discipleship Ministries (UMC): Martin Luther King, Jr.'s Favorite Hymn (via archive.org)", url: "https://www.umcdiscipleship.org/resources/martin-luther-king-jr-s-favorite-hymn", quote: "His good friend, singer Mahalia Jackson, sang \"Precious Lord\" at the funeral. ... Later that same day, Jackson sang the song again at a service held at Morehouse College"}
+  note: "Ledger's second source (Christianity Today) says only that the song was played at the funeral, not that Jackson sang it; replaced by Discipleship Ministries, added to sources."
+- card: gospel
+  fact: "Dorsey died in Chicago in 1993, having written hundreds of songs"
+  verdict: confirmed
+  sources:
+    - {title: "New Georgia Encyclopedia: Georgia Tom Dorsey", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/georgia-tom-dorsey-1899-1993/", quote: "Dorsey died in Chicago on January 23, 1993"}
+    - {title: "Christianity Today (2018)", url: "https://www.christianitytoday.com/2018/05/father-gospel-music-thomas-dorsey/", quote: "Dorsey died in 1993 ... calling it \"the greatest song I have written out of near four hundred\""}
+    - {title: "Hymnology Archive, quoting the Atlanta Constitution obituary (24 January 1993)", url: "https://hymnologyarchive.com/thomas-a-dorsey", quote: "In addition to hundreds of blues songs, Mr. Dorsey wrote more than 1,000 gospel songs"}
+  note: "Counts vary (about 400 to over 1,000); 'hundreds' is safe."
+- card: gospel
+  fact: "(unledgered) Rosetta Tharpe carried gospel and her guitar into the Cotton Club"
+  verdict: confirmed
+  sources:
+    - {title: "BlackPast: Sister Rosetta Tharpe", url: "https://www.blackpast.org/african-american-history/tharpe-sister-rosetta-1915-1973/", quote: "By 1938, Tharpe, was performing gospel music at the Cotton Club and Café Society with Bill \"Bojangles\" Robinson, Cab Calloway, and Benny Goodman."}
+    - {title: "Encyclopedia.com (Gale): Tharpe, Sister Rosetta", url: "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/tharpe-sister-rosetta-originally-nubin-rosetta", quote: "During the 1930s and 1940s, she appeared at Cotton Club revues and worked with Cab Calloway."}
+  note: "Not in ledger. The rosetta-tharpe card's Rock Hall essay and PBS timeline are both by Gayle Wald (one source); used BlackPast and Gale instead, added to gospel sources."
+- card: granville-sharp
+  fact: "Strong's master later sold him to a Jamaica planter and had him seized; Sharp brought the case before the Lord Mayor, who set Strong free"
+  verdict: confirmed
+  sources:
+    - {title: "Brycchan Carey: Granville Sharp", url: "https://brycchancarey.com/abolition/sharp.htm", quote: "Lisle sold the young man to a Jamaica planter called James Kerr for £30. He then arranged for Strong to be kidnapped ... Sharp brought his case up before the Lord Mayor of London. The mayor agreed that Strong had committed no crime and should thus be set free."}
+    - {title: "Royal Collection Trust: Sharp, A Representation of the Injustice ... of Tolerating Slavery", url: "https://col.rct.uk/collection/1125524/a-representation-of-the-injustice-and-dangerous-tendancy-of-tolerating-slavery-or", quote: "In 1767, Lisle saw Strong running errands and arranged for his capture, intending to sell him to James Kerr, an enslaver in Jamaica. Lisle ... sold the young man to Kerr for £30. ... Strong was granted his freedom."}
+  note: "Ledger's London Museum quote is too vague for the sale; replaced by Royal Collection Trust (added to sources). Body said 'a young African'; sources say 'a young black man' (Lisle was a Barbados planter), so now 'a young Black man' / 'молодого чернокожего'."
+- card: granville-sharp
+  fact: "Strong's health was ruined by the beating and he died young, at about 25"
+  verdict: confirmed
+  sources:
+    - {title: "Brycchan Carey: Granville Sharp", url: "https://brycchancarey.com/abolition/sharp.htm", quote: "Strong himself, his health permanently damaged from Lisle's beating, died at the age of 25, in 1770."}
+    - {title: "Royal Collection Trust", url: "https://col.rct.uk/collection/1125524/a-representation-of-the-injustice-and-dangerous-tendancy-of-tolerating-slavery-or", quote: "Jonathan Strong died five years later at the age of 25"}
+    - {title: "Christian History Institute", url: "https://christianhistoryinstitute.org/dailystory/permalink/granville-sharp-spent-a-lifetime-on-abolition-of-slavery-and-other-good-causes", quote: "Strong, whom Lisle had badly beaten some months earlier, soon died of the after-effects of the brutality."}
+  note: "Year of death differs (1770 vs 1773); card gives none."
+- card: granville-sharp
+  fact: "Sharp backed James Somerset; on 22 June 1772 Lord Mansfield ruled a master could not seize a slave in England to send him abroad for sale; Somerset was freed, but slavery was not abolished"
+  verdict: confirmed
+  sources:
+    - {title: "English Heritage: The Somerset v Stewart case", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history-stories-kenwood/somerset-case", quote: "Somerset's case was ... financed by Sharp ... The court held that 'a master could not seize a slave in England and detain him preparatory to sending him out of the realm to be sold' ... The question at stake was not the legality of slavery"}
+    - {title: "Brycchan Carey: Granville Sharp", url: "https://brycchancarey.com/abolition/sharp.htm", quote: "on 22 June 1772, he made his ruling ... Somerset was discharged ... Mansfield had not ruled that slavery was illegal in England"}
+  note: ""
+- card: granville-sharp
+  fact: "Sharp's demand for a murder trial over the Zong failed: no one was ever prosecuted"
+  verdict: confirmed
+  sources:
+    - {title: "London Museum: The Zong massacre trial", url: "https://londonmuseum.org.uk/collections/london-stories/zong-massacre-trial/", quote: "Sharp wrote to the prime minister asking for a murder trial. They never got one. None of the murderers were ever prosecuted."}
+    - {title: "Brycchan Carey: Granville Sharp", url: "https://brycchancarey.com/abolition/sharp.htm", quote: "while no-one was prosecuted, the incident mobilised public feeling against the slave trade"}
+  note: ""
+- card: granville-sharp
+  fact: "Disease and war killed most of the Sierra Leone settlers"
+  verdict: confirmed
+  sources:
+    - {title: "Brycchan Carey: Granville Sharp", url: "https://brycchancarey.com/abolition/sharp.htm", quote: "In 1787, 374 mostly black colonists did in fact sail for Sierra Leone, but the colony, ravaged by war and disease, failed. By 1791, only 60 of the colonists survived."}
+    - {title: "Farfán and López-Uribe, Africa at LSE (2020)", url: "https://blogs.lse.ac.uk/africaatlse/2020/06/27/british-founding-sierra-leone-slave-trade/", quote: "This first colony only lasted approximately two and a half years, decimated by disease, hunger and hostility from its neighbours."}
+  note: ""
+- card: granville-sharp
+  fact: "In 1789 a local Temne ruler burned Granville Town"
+  verdict: confirmed
+  sources:
+    - {title: "Farfán and López-Uribe, Africa at LSE (2020)", url: "https://blogs.lse.ac.uk/africaatlse/2020/06/27/british-founding-sierra-leone-slave-trade/", quote: "Granville Town, the first settlement, was burned down in 1789 by the local Temne suzerain, King Jimmy"}
+    - {title: "Black Loyalists (Canada's Digital Collections): The Sierra Leone Company", url: "https://blackloyalist.com/cdc/story/exodus/company.htm", quote: "In 1789, the local chief of the Temne tribe attacked the settlement over a dispute over rent for the land. Granville Town, the main settlement, was completely destroyed"}
+  note: ""
+- card: granville-sharp
+  fact: "The colony was refounded and today's Freetown grew from it"
+  verdict: confirmed
+  sources:
+    - {title: "Clapham Society: Granville Sharp", url: "https://claphamsociety.com/article/24-granville-sharp/", quote: "The first 400 settlers arrived on 15th May 1787. That original settlement later became Freetown, the capital of Sierra Leone."}
+    - {title: "Columbia Encyclopedia via Encyclopedia.com: Freetown", url: "https://www.encyclopedia.com/places/africa/sierra-leone-political-geography/freetown", quote: "Freetown was founded by the British in 1787 as a settlement for freed slaves from England, Nova Scotia and Jamaica."}
+    - {title: "Black Loyalists: The Sierra Leone Company", url: "https://blackloyalist.com/cdc/story/exodus/company.htm", quote: "Undaunted, Granville Sharp and the Sierra Leone Company continued their efforts. New investors had been found, a royal charter had been granted"}
+  note: ""
+- card: granville-sharp
+  fact: "Sharp died in 1813"
+  verdict: confirmed
+  sources:
+    - {title: "Brycchan Carey: Granville Sharp", url: "https://brycchancarey.com/abolition/sharp.htm", quote: "Granville Sharp died in Fulham, south-west London, on 6 July 1813."}
+    - {title: "Clapham Society: Granville Sharp", url: "https://claphamsociety.com/article/24-granville-sharp/", quote: "By the time of his death on 6th July 1813"}
+  note: ""
+- card: gullah
+  fact: "Researchers Joseph Opala and Cynthia Schmidt traced Amelia Dawley's Mende song to Sierra Leone, where Baindu Jabati of Senehun Ngola still knew it as a funeral song"
+  verdict: confirmed
+  sources:
+    - {title: "California Newsreel: The Language You Cry In", url: "https://newsreel.org/video/THE-LANGUAGE-YOU-CRY-IN", quote: "Cynthia Schmidt discovered a woman, Baindu Jabati, living in the remote interior village of Senehum Ngola, who had preserved a song with strikingly similar lyrics, a dirge performed during a graveside ceremony"}
+    - {title: "Harris Neck Land Trust: Amelia's Song", url: "https://harrisnecklandtrust.org/amelias-song", quote: "anthropologist Joseph Opala first rediscovered this song and then, with the help of musicologist Cynthia Schmidt and others, traced the song from Senehun Ngola to Harris Neck ... it was sung in Senehun Ngola by women as they prepared the body of a loved one for burial"}
+  note: "Ledger's Folkstreams quote was a paraphrase; the page actually says Opala and Schmidt 'found relatives of Amelia Dawley ... who remembered portions of Ms. Dawley's Mende funeral song'. Harris Neck Land Trust added as an independent source."
+- card: gullah
+  fact: "In 1997 Dawley's daughter Mary Moran travelled to the village, was received with jubilation, and she and Baindu Jabati sang the song together"
+  verdict: confirmed
+  sources:
+    - {title: "California Newsreel", url: "https://newsreel.org/video/THE-LANGUAGE-YOU-CRY-IN", quote: "found Amelia Dawley's daughter, Mary Moran ... Finally in 1997, Mary Moran and her family could travel and ... were received with jubilation in Senehum Ngola"}
+    - {title: "Harris Neck Land Trust: Amelia's Song", url: "https://harrisnecklandtrust.org/amelias-song", quote: "In 1997 Amelia's daughter, Mary Moran, and other members of the Moran family were invited to Sierra Leone ... in the small village of Senehun Ngola, Mary and Bendu Jabati met and sang this song together for the first time."}
+  note: "Independence/accuracy problem: the ledger's Kenyon College page calls Amelia Dawley Mary's grandmother and 'a freed slave', contradicting the film distributor and Harris Neck; Kenyon should not be relied on for the relationship. 'Jubilation' rests on Newsreel."
+- card: gullah
+  fact: "Gullah is still spoken today"
+  verdict: confirmed
+  sources:
+    - {title: "Folkstreams: Dr. Lorenzo Turner and the Gullah Language", url: "https://www.folkstreams.net/contexts/dr-lorenzo-turner-and-the-gullah-language", quote: "can be heard, even today, in the subtlest forms and nuances of Gullah speech"}
+    - {title: "Kenyon College: American Language, African Roots", url: "https://digital.kenyon.edu/gullah_language.html", quote: "The language's continued use is a story of victory."}
+  note: ""
+- card: haitian-revolution
+  fact: "In 1789 Saint-Domingue was the richest colony in the Americas, worked by hundreds of thousands of enslaved Africans on sugar and coffee plantations"
+  verdict: confirmed
+  sources:
+    - {title: "Colonial Williamsburg, Slavery and Remembrance: Haiti", url: "https://slaveryandremembrance.org/articles/article/?id=A0111", quote: "Saint-Domingue grew to be the wealthiest colony in the French empire and, perhaps, the richest colony in the world. Shortly before the Haitian Revolution, Saint-Domingue produced roughly 40 percent of the sugar and 60 percent of the coffee"}
+    - {title: "Stewart R. King, Haitian Revolution, IESS via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/haitian-revolution", quote: "the richest colony in the Americas in 1789. Almost half a million slaves toiled on its sugar, coffee, indigo, and cotton plantations."}
+  note: ""
+- card: haitian-revolution
+  fact: "Toussaint Louverture was seized in 1802, shipped to France and died in a mountain fortress (Fort de Joux) in April 1803"
+  verdict: confirmed
+  sources:
+    - {title: "BnF France-Amériques: Toussaint Louverture, Destiny and Contradictions", url: "https://heritage.bnf.fr/france-ameriques/en/toussaint-louverture-destiny-and-contradictions", quote: "was taken prisoner in June 1802 and deported to France. Denied a trial, he was confined in the Fort de Joux in the Jura mountains, where he died in April 1803"}
+    - {title: "Stewart R. King, IESS via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/haitian-revolution", quote: "Toussaint himself was arrested and imprisoned in France, where he died in 1803."}
+  note: "Ledger's IESS quote was a paraphrase; real quote given. Month and fortress rest on BnF."
+- card: haitian-revolution
+  fact: "The French were finally defeated late in 1803"
+  verdict: confirmed
+  sources:
+    - {title: "Colonial Williamsburg", url: "https://slaveryandremembrance.org/articles/article/?id=A0111", quote: "the rebellion finally defeated French forces in late 1803"}
+    - {title: "Stewart R. King, IESS via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/haitian-revolution", quote: "the final defeat of the French forces at Vertières on November 18, 1803"}
+  note: ""
+- card: haitian-revolution
+  fact: "Haiti borrowed in France to pay the indemnity; it made the last indemnity payment in 1878 and paid off the 1825 loan in 1888"
+  verdict: confirmed
+  sources:
+    - {title: "BnF: Gaillard-Pourchet, Haiti's independence debt", url: "https://heritage.bnf.fr/france-ameriques/en/haitis-independence-debt-slave-unit-account-1794-1922", quote: "loan in November, 1825 of 30 million francs on the French market ... The independence debt is finally paid off by Haiti in 1878 ... The external loans of 1825 and 1875 are, respectively, paid off in 1887-88 and in 1921-22"}
+    - {title: "New York Times: Historical data on Haiti's debt (GitHub)", url: "https://github.com/nytimes/haiti-debt", quote: "In December 1870, a new agreement between France and Haiti consolidated the indemnity debt with the debt from the 1825 loan ... In 1878 ... 1888"}
+  note: "Ledger's BnF quote was a paraphrase; real wording given ('1887-88'). Card's 1888 matches NYT and the end of BnF's range."
+- card: hannah-crafts
+  fact: "The novel may be the first written by an enslaved African American woman"
+  verdict: confirmed
+  sources:
+    - {title: "New York Review of Books: In Search of the Real Hannah Crafts (2024)", url: "https://www.nybooks.com/articles/2024/08/15/in-search-of-the-real-hannah-crafts-gregg-hecimovich/", quote: "The Bondwoman's Narrative is thought to be the first novel by a Black woman to describe slavery from the inside"}
+    - {title: "Yale News (2003)", url: "https://news.yale.edu/2003/05/28/henry-louis-gates-jr-donate-rare-manuscript-female-slave-yale", quote: "The book is thought to be the first novel ever written by an African-American slave, and possibly by a black woman anywhere."}
+    - {title: "Harvard Gazette (2023)", url: "https://news.harvard.edu/gazette/story/2023/12/solving-the-mystery-of-the-bondwomans-narrative/", quote: "the earliest known novel by an African American woman — and the first by an enslaved or formerly enslaved female author"}
+  note: "Card hedges with 'may be', matching 'thought to be'."
+- card: hannah-crafts
+  fact: "In the novel the narrator is sold into the household of John Hill Wheeler, and at its climax a face powder blackens Mrs Wheeler's face, a literary revenge on the Wheelers"
+  verdict: confirmed
+  sources:
+    - {title: "New York Review of Books (2024)", url: "https://www.nybooks.com/articles/2024/08/15/in-search-of-the-real-hannah-crafts-gregg-hecimovich/", quote: "While living as a captive of John Hill and Ellen Wheeler in Washington, D.C., Hannah is sent to purchase a popular white face powder for Mrs. Wheeler ... Mrs. Wheeler uses the powder, which turns her face black"}
+    - {title: "Harvard Gazette (2023)", url: "https://news.harvard.edu/gazette/story/2023/12/solving-the-mystery-of-the-bondwomans-narrative/", quote: "the novel's pivotal chapter — featuring a \"genius\" blackface scene that exacts literary revenge ... John Hill and Ellen Sully Wheeler, who were actual North Carolina enslavers"}
+  note: "Ledger quotes were paraphrases; real wording given."
+- card: hannah-crafts
+  fact: "Hecimovich's research drew on wills, diaries and public records"
+  verdict: confirmed
+  sources:
+    - {title: "Fine Books Magazine (2013)", url: "https://www.finebooksmagazine.com/blog/slave-manuscript-mystery-solved", quote: "Hecimovich described his decade of \"obsessive\" researching of wills, diaries, almanacs, and public records"}
+    - {title: "New York Review of Books (2024)", url: "https://www.nybooks.com/articles/2024/08/15/in-search-of-the-real-hannah-crafts-gregg-hecimovich/", quote: "Tirelessly Hecimovich scavenges for old letters, diaries, wills ... reading census reports, and tracking down ledgers and shipping records"}
+  note: "Independence problem: the ledger's two sources (Fine Books and CBS News) both report the same 2013 New York Times article, so they count as one. Replaced CBS with NYRB 2024 (already in sources)."
+- card: henrietta-lacks
+  fact: "Henrietta Lacks was born Loretta Pleasant in Virginia in 1920, worked on tobacco farms, married David Lacks and raised five children"
+  verdict: confirmed
+  sources:
+    - {title: "NHGRI: Henrietta Lacks timeline", url: "https://www.genome.gov/sites/default/files/media/files/2019-07/hela_timeline.pdf", quote: "Henrietta Lacks was born Loretta Pleasant on August 1, 1920, in Roanoke, Virginia ... On April 10, 1941, Henrietta Pleasant married David \"Day\" Lacks"}
+    - {title: "Food and Drug Law Institute (via archive.org; live site 403)", url: "https://www.fdli.org/2023/08/lacks-v-thermo-fisher-scientific-inc-an-extraordinary-event-from-more-than-70-years-ago/", quote: "Henrietta Lacks was born Loretta Pleasant on August 1, 1920. As a young child, Ms. Lacks worked as a tobacco farmer ... Months after giving birth to her fifth child"}
+    - {title: "AP via WVTF (2023)", url: "https://www.wvtf.org/news/2023-08-01/thermo-fisher-scientific-settles-with-family-of-henrietta-lacks-whose-hela-cells-uphold-medicine", quote: "A poor tobacco farmer ... five children when doctors discovered a tumor in her cervix"}
+  note: "Ledger quotes for FDLI and AP were paraphrases; real wording given."
+- card: henrietta-lacks
+  fact: "Johns Hopkins was one of the few hospitals in the area that treated Black patients, and she was treated in its segregated ward"
+  verdict: confirmed
+  sources:
+    - {title: "Food and Drug Law Institute (via archive.org)", url: "https://www.fdli.org/2023/08/lacks-v-thermo-fisher-scientific-inc-an-extraordinary-event-from-more-than-70-years-ago/", quote: "She went to Johns Hopkins Hospital, which was one of the few hospitals that would treat Black patients—although only in racially segregated wards."}
+    - {title: "Embryo Project Encyclopedia, ASU", url: "https://embryo.asu.edu/pages/henrietta-lacks-1920-1951", quote: "The Johns Hopkins Hospital was the only hospital in Lacks's area that would treat Lacks, though she received her care in what Skloot refers to as the colored ward of the hospital."}
+  note: "Both ultimately rest on Skloot's book, but are separate scholarly summaries; acceptable."
+- card: henrietta-lacks
+  fact: "The sample went to the tissue-culture laboratory of George Gey"
+  verdict: confirmed
+  sources:
+    - {title: "NHGRI: Henrietta Lacks timeline", url: "https://www.genome.gov/sites/default/files/media/files/2019-07/hela_timeline.pdf", quote: "A biopsy of Henrietta Lack's tumor was taken and sent to the lab of Dr. George Gey resulting in the creation of HeLa cell line."}
+    - {title: "Embryo Project Encyclopedia, ASU", url: "https://embryo.asu.edu/pages/henrietta-lacks-1920-1951", quote: "had a resident transfer the samples to The Johns Hopkins Hospital researcher and head of tissue culture research, George Otto Gey"}
+  note: ""
+- card: henrietta-lacks
+  fact: "She died aged 31"
+  verdict: confirmed
+  sources:
+    - {title: "NHGRI timeline", url: "https://www.genome.gov/sites/default/files/media/files/2019-07/hela_timeline.pdf", quote: "she died at the age of 31 years old"}
+    - {title: "NIH: The NIH-Lacks Family Agreement", url: "https://grants.nih.gov/policy-and-compliance/policy-topics/sharing-policies/dms/privacy/nih-lacks-family-agreement", quote: "biopsy specimens of a 31-year-old patient named Henrietta Lacks"}
+    - {title: "AP via WVTF (2023)", url: "https://www.wvtf.org/news/2023-08-01/thermo-fisher-scientific-settles-with-family-of-henrietta-lacks-whose-hela-cells-uphold-medicine", quote: "Lacks was 31 when she died"}
+  note: "NHGRI and NIH are both NIH; AP is the independent second."
+- card: henrietta-lacks
+  fact: "Her family learned what had become of her cells only decades later"
+  verdict: confirmed
+  sources:
+    - {title: "Food and Drug Law Institute (via archive.org)", url: "https://www.fdli.org/2023/08/lacks-v-thermo-fisher-scientific-inc-an-extraordinary-event-from-more-than-70-years-ago/", quote: "Ms. Lacks' family did not learn about her \"immortal cells\" until more than 25 years after her death."}
+    - {title: "Embryo Project Encyclopedia, ASU", url: "https://embryo.asu.edu/pages/henrietta-lacks-1920-1951", quote: "known only to the scientific community in 1970, before Lacks's own family became aware in 1975"}
+  note: ""
+- card: henrietta-lacks
+  fact: "In 2021 her estate sued Thermo Fisher, accusing it of profiting from her cells; the settlement was announced on 1 August 2023, what would have been her 103rd birthday"
+  verdict: confirmed
+  sources:
+    - {title: "GBH News (1 August 2023)", url: "https://www.wgbh.org/news/local/2023-08-01/family-of-henrietta-lacks-reaches-settlement-in-lawsuit-against-thermo-fisher", quote: "The Lacks family sued Thermo Fisher Scientific in 2021 ... \"on what would have been Henrietta Lacks' 103rd birthday\""}
+    - {title: "AP via WVTF (1 August 2023)", url: "https://www.wvtf.org/news/2023-08-01/thermo-fisher-scientific-settles-with-family-of-henrietta-lacks-whose-hela-cells-uphold-medicine", quote: "a lawyer for her descendants said they have reached a settlement with a biotechnology company they sued in 2021, accusing its leaders of reaping billions of dollars"}
+    - {title: "Food and Drug Law Institute (via archive.org)", url: "https://www.fdli.org/2023/08/lacks-v-thermo-fisher-scientific-inc-an-extraordinary-event-from-more-than-70-years-ago/", quote: "The estate of Ms. Lacks complained that Thermo Fisher Scientific profited from the unlawful conduct of Ms. Lacks' doctors ... the complaint was dated October 4, 2021"}
+  note: "GBH carries AP copy in part; FDLI is the independent second for the 2021 suit; the 103rd birthday quote is a statement by the family's lawyer reported by GBH, and the 1 August date is both outlets' dateline (birth date 1 August 1920 per NHGRI)."
+- card: hip-hop
+  fact: "In the 1970s the South Bronx was burning: landlords paid arsonists to torch buildings for insurance, and the near-bankrupt city cut fire and other basic services"
+  verdict: confirmed
+  sources:
+    - {title: "PBS Independent Lens: How the burning of the Bronx led to the birth of hip-hop", url: "https://www.pbs.org/independentlens/blog/how-the-burning-of-the-bronx-led-to-the-birth-of-hip-hop/", quote: "New York City was bankrupt. And across broad swaths of the South Bronx, landlords were paying arsonists to torch their buildings for insurance money as the city—advised by the RAND Corporation to close fire stations and let its poorest areas burn—let it happen."}
+    - {title: "WNYC: The South Bronx, where hip-hop was born", url: "https://www.wnyc.org/story/89709-south-bronx-hip-hop-year-zero/", quote: "heavy arson activity from slumlords seeking insurance money to the lack of basic services like law enforcement, firefighters, sanitation and health"}
+  note: ""
+- card: hurston
+  fact: "Kossola (Cudjo Lewis), after freedom, helped found Africatown"
+  verdict: confirmed
+  sources:
+    - {title: "National Park Service: Zora Neale Hurston and Cudjo's Own Story", url: "https://www.nps.gov/articles/000/zora-neale-hurston-and-cudjo-s-own-story.htm", quote: "After gaining their freedom, he and others from the Clotilda bought the land to establish Africatown."}
+    - {title: "NPR Fresh Air, Maureen Corrigan (2018), via WUSF", url: "https://www.wusf.org/2018-05-08/barracoon-offers-a-vivid-first-hand-account-of-slavery-in-america", quote: "Cudjo spent years in slavery and after the Civil War helped found a settlement called Africatown near Mobile."}
+  note: "Ledger's NPS quote was a paraphrase; real wording given."
+- card: hurston
+  fact: "She finished the Barracoon manuscript in 1931; a publisher would take it only if the dialect were rewritten in standard English, and she refused"
+  verdict: confirmed
+  sources:
+    - {title: "Zora Neale Hurston estate, excerpting the New York Times (2018)", url: "https://www.zoranealehurston.com/news/a-work-by-zora-neale-hurston-will-finally-be-published/", quote: "In the spring of 1931, Zora Neale Hurston finished her first book ... One offered to buy it if she rewrote it \"in language rather than dialect,\" ... She refused"}
+    - {title: "NPR Fresh Air via WUSF (2018)", url: "https://www.wusf.org/2018-05-08/barracoon-offers-a-vivid-first-hand-account-of-slavery-in-america", quote: "Only Viking Press was willing to publish it with the stipulation that Hurston change Cudjo's voice, transforming his dialect speech into the King's English. Hurston refused"}
+  note: ""
+- card: hurston
+  fact: "By 1950 she was working as a maid"
+  verdict: confirmed
+  sources:
+    - {title: "PBS American Masters: Zora Neale Hurston career timeline", url: "https://www.pbs.org/wnet/americanmasters/zora-neale-hurston-career-timeline/94", quote: "1950 ... MIAMI HERALD breaks story that Hurston is down on her luck working as a maid in Miami."}
+    - {title: "Encyclopedia.com: Hurston, Zora Neale", url: "https://www.encyclopedia.com/history/culture-magazines/hurston-zora-neale", quote: "by 1950 she was forced to take a job as a maid"}
+  note: ""
+- card: hurston
+  fact: "Her largely forgotten books were revived in the 1970s, with Alice Walker leading the way"
+  verdict: confirmed
+  sources:
+    - {title: "Zora Neale Hurston estate: About", url: "https://www.zoranealehurston.com/about/", quote: "March 1975 Walker publishes \"In Search of Zora Neale Hurston,\" in Ms., launching a Hurston revival"}
+    - {title: "Encyclopedia.com: Hurston, Zora Neale", url: "https://www.encyclopedia.com/history/culture-magazines/hurston-zora-neale", quote: "Hurston's works were largely overlooked until the 1970s, when African American and other writers and readers began to rediscover them. A key figure in this rediscovery was novelist and poet Alice Walker"}
+  note: "Ledger quotes were paraphrases; real wording given."
+- card: ida-b-wells
+  fact: "Born in Holly Springs, Mississippi, in 1862"
+  verdict: confirmed
+  sources:
+    - {title: "National Women's History Museum: Ida B. Wells-Barnett", url: "https://www.womenshistory.org/education-resources/biographies/ida-b-wells-barnett", quote: "Ida B. Wells-Barnett was born on July 16, 1862, in Holly Springs, Mississippi."}
+    - {title: "Encyclopedia.com: Wells-Barnett, Ida Bell", url: "https://www.encyclopedia.com/law/encyclopedias-almanacs-transcripts-and-maps/wells-barnett-ida-bell", quote: "Born July 16, 1862, in Holly Springs"}
+  note: "Ledger quotes were paraphrases; real wording given."
+- card: ida-b-wells
+  fact: "In 1893 she took the anti-lynching campaign to Britain"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia.com: Wells-Barnett, Ida Bell", url: "https://www.encyclopedia.com/law/encyclopedias-almanacs-transcripts-and-maps/wells-barnett-ida-bell", quote: "In 1893, Wells-Barnett carried her antilynching campaign to Great Britain"}
+    - {title: "National Women's History Museum", url: "https://www.womenshistory.org/education-resources/biographies/ida-b-wells-barnett", quote: "Domestic Efforts and Abroad Lectures In 1893"}
+  note: "NWHM section heading only; the Britain detail is explicit in Gale. Weak second; LoC blog also covers her British tours in general."
+- card: ida-b-wells
+  fact: "In 1895 she married the Chicago lawyer Ferdinand Barnett; in Chicago she helped form the NAACP and a Black women's suffrage club (the Alpha Suffrage Club); she died in 1931"
+  verdict: confirmed
+  sources:
+    - {title: "National Women's History Museum", url: "https://www.womenshistory.org/education-resources/biographies/ida-b-wells-barnett", quote: "helped found several suffrage organizations for Black women, including ... the Alpha Suffrage Club ... On June 27, 1895, she married attorney Ferdinand L. Barnett ... On March 15, 1931, Ida B. Wells-Barnett died"}
+    - {title: "Encyclopedia.com (Gale): Wells-Barnett, Ida Bell", url: "https://www.encyclopedia.com/law/encyclopedias-almanacs-transcripts-and-maps/wells-barnett-ida-bell", quote: "In 1895, Wells-Barnett married Ferdinand L. Barnett ... she was involved in the formation of the National Association for the Advancement ... Wells-Barnett died in Chicago on March 25, 1931"}
+    - {title: "Library of Congress, Headlines and Heroes (2020)", url: "https://blogs.loc.gov/headlinesandheroes/2020/02/ida-b-wells-and-the-activism-of-investigative-journalism/", quote: "Alpha Suffrage Club, the first suffrage club for black women. She helped in the founding of the National Association for the Advancement of Colored People (NAACP) ... She died March 21, 1931."}
+  note: "Sources disagree on the day of death (15, 21, 25 March); the card gives only the year."
+- card: ida-b-wells
+  fact: "In 2020 the Pulitzer board gave her a posthumous special citation for 'her outstanding and courageous reporting'"
+  verdict: corrected
+  sources:
+    - {title: "ABC7 Chicago (5 May 2020)", url: "https://abc7chicago.com/post/ida-b-wells-awarded-pulitzer-prize-special-citation/6152768/", quote: "has been awarded a Pulitzer Prize special citation for \"her outstanding and courageous reporting.\""}
+    - {title: "Daily Memphian (5 May 2020)", url: "https://dailymemphian.com/article/13696/ida-b-wells-special-pulitzer-lynching", quote: "honored by the Pulitzer Prize committee \"For her outstanding and courageous reporting on the horrific and vicious violence against African Americans during the era of lynching.\""}
+  note: "Ms. Magazine does not contain the quoted wording; replaced by Daily Memphian (added to sources). EN body lacked 'posthumous' while RU had 'посмертно'; EN now says 'posthumous special citation'."
+- card: ira-aldridge
+  fact: "When Edmund Kean collapsed during a run of Othello at Covent Garden, Aldridge took over the part; critics were hostile to him over his race and the production closed"
+  verdict: confirmed
+  sources:
+    - {title: "Folger Shakespeare Library: Ira Aldridge", url: "https://www.folger.edu/blogs/shakespeare-and-beyond/ira-aldridge/", quote: "Kean was starring as Othello at the Theatre Royal, Covent Garden when he collapsed during a performance in March 1833, and Aldridge was asked to fill the role ... critics objected to his race, his youth, and his inexperience. Aldridge performed as Othello only twice before the show was cancelled."}
+    - {title: "English Heritage: Blue plaque, Ira Aldridge", url: "https://www.english-heritage.org.uk/visit/blue-plaques/aldridge-ira", quote: "In April 1833 Aldridge was chosen to replace the mortally ill Edmund Kean ... savaged by the critics, who failed to overcome their racial prejudices ... the theatre bowed to the critics and cancelled his run"}
+  note: "Rockefeller Selections page did not load (timeout; not needed). Ledger Folger quote was a paraphrase; real wording given."
+- card: ira-aldridge
+  fact: "From the 1850s he performed mainly on tour in continental Europe"
+  verdict: confirmed
+  sources:
+    - {title: "Shakespeare Birthplace Trust: Chevalier Ira Aldridge", url: "https://www.shakespeare.org.uk/explore-shakespeare/blogs/chevalier-ira-aldridge/", quote: "In 1852 ... Europe, accepting invitations to appear in Germany, Prussia, Switzerland and Russia"}
+    - {title: "Internet Encyclopedia of Ukraine: Aldridge, Ira Frederick", url: "http://www.encyclopediaofukraine.com/pages%5CA%5CL%5CAldridgeIraFrederick.htm", quote: "In the 1850s he performed mostly in Europe and won high acclaim, particularly in Russia."}
+  note: ""
+- card: ira-aldridge
+  fact: "Saxony made him a knight"
+  verdict: confirmed
+  sources:
+    - {title: "Shakespeare Birthplace Trust", url: "https://www.shakespeare.org.uk/explore-shakespeare/blogs/chevalier-ira-aldridge/", quote: "In 1858 he was given the title Chevalier Ira Aldridge, Knight of Saxony"}
+    - {title: "Rockefeller University, Selections (via archive.org)", url: "https://selections.rockefeller.edu/an-extraordinary-early-american-in-europe/", quote: "from the Royal Saxon House of Order, he became Chevalier Ira Aldridge, Knight of Saxony"}
+  note: ""
+- card: ira-aldridge
+  fact: "Shevchenko's freedom from serfdom was bought by friends in 1838; arrested in 1847, he spent ten years in exile as a common soldier, released in 1857"
+  verdict: confirmed
+  sources:
+    - {title: "Internet Encyclopedia of Ukraine: Shevchenko, Taras", url: "http://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CS%5CH%5CShevchenkoTaras.htm", quote: "a lottery whose proceeds were used to buy Shevchenko's freedom on 5 May 1838 ... 1847 ... 1857, two years after Nicholas I's death"}
+    - {title: "Kyiv Post, Bohdan Nahaylo", url: "https://www.kyivpost.com/post/14050", quote: "Ukraine's leading poet and recent political prisoner who had earlier been freed from serfdom ... soldier in the Russian army in a remote area in present-day Kazakhstan ... After a decade of i[mprisonment]"}
+  note: "Ledger quotes were paraphrases; real wording given."
+- card: ira-aldridge
+  fact: "In the 1860s Aldridge toured Ukrainian cities including Kyiv and Odesa"
+  verdict: confirmed
+  sources:
+    - {title: "Internet Encyclopedia of Ukraine: Aldridge", url: "http://www.encyclopediaofukraine.com/pages%5CA%5CL%5CAldridgeIraFrederick.htm", quote: "In 1861–6 Aldridge toured several cities in Ukraine—Kyiv, Kharkiv, Odesa, Zhytomyr, and Yelysavethrad"}
+    - {title: "Kyiv Post, Bohdan Nahaylo", url: "https://www.kyivpost.com/post/14050", quote: "Between 1861 and 1865 he performed in Kyiv, Odesa, Kharkiv, Poltava, Zhytomyr and Elizavetgrad"}
+  note: ""
+- card: jacobs-garret
+  fact: "Born into slavery in Edenton around 1813; had two children with the white lawyer Samuel Sawyer"
+  verdict: confirmed
+  sources:
+    - {title: "North Carolina DNCR: Harriet Jacobs (c. 1813–1897)", url: "https://www.dncr.nc.gov/blog/2023/12/04/harriet-jacobs-c-1813-1897-72", quote: "Harriet Jacobs c. 1813-1897 ... Lived in Edenton ... Jacobs established a liaison with local attorney Samuel Sawyer ... The relationship produced two children"}
+    - {title: "Documenting the American South: summary of Incidents", url: "https://docsouth.unc.edu/fpn/jacobs/summary.html", quote: "Harriet Ann Jacobs was born a slave in Edenton, North Carolina in 1813 ... a prominent white lawyer named Samuel Treadwell Sawyer and bearing him two children"}
+  note: "Ledger quotes were paraphrases; real wording given."
+- card: jacobs-garret
+  fact: "In the North she was reunited with her children"
+  verdict: confirmed
+  sources:
+    - {title: "Documenting the American South", url: "https://docsouth.unc.edu/fpn/jacobs/summary.html", quote: "Jacobs was finally able to make her way to New York City by boat in 1842 and was eventually reunited with her children there."}
+    - {title: "North Carolina DNCR", url: "https://www.dncr.nc.gov/blog/2023/12/04/harriet-jacobs-c-1813-1897-72", quote: "In 1842 Jacobs boarded a ship in Edenton and escaped to New York ... She in time gathered her children to her side"}
+  note: ""
+- card: jacobs-garret
+  fact: "In 1852 her employer, Cornelia Willis, bought her freedom"
+  verdict: confirmed
+  sources:
+    - {title: "Documenting the American South", url: "https://docsouth.unc.edu/fpn/jacobs/summary.html", quote: "Around 1852, her employer, Cornelia Grinnell Willis, purchased her freedom from the Norcoms."}
+    - {title: "North Carolina DNCR", url: "https://www.dncr.nc.gov/blog/2023/12/04/harriet-jacobs-c-1813-1897-72", quote: "in 1852 achieved her freedom"}
+    - {title: "PBS Africans in America: Harriet Jacobs", url: "https://www.pbs.org/wgbh/aia/part4/4p2923.html", quote: "finally become legally free after a friend arranged her purchase"}
+  note: "Cornelia Willis by name rests on DocSouth; NYPL confirms she worked for the family of Nathaniel Parker Willis (Cornelia's husband)."
+- card: jacobs-garret
+  fact: "Her authorship was long doubted and was established only in the 1980s (Jean Fagan Yellin, 1987)"
+  verdict: confirmed
+  sources:
+    - {title: "New York Public Library: Harper and Jacobs", url: "https://libguides.nypl.org/african-american-women-writers-of-the-19th-Century/Harper-Jacobs", quote: "For most of the twentieth century, Linda Brent was thought to be a white woman, and Incidents ... a work of pure fiction. It was not until the 1980s"}
+    - {title: "North Carolina DNCR", url: "https://www.dncr.nc.gov/blog/2023/12/04/harriet-jacobs-c-1813-1897-72", quote: "For years historians dismissed the published life story of Harriet Jacobs as fabrication ... In 1987 Jean Yellin stipulated that Jacobs was indeed the author"}
+  note: ""
+- card: jacobs-garret
+  fact: "During the Civil War she worked among Black refugees; she died in 1897"
+  verdict: confirmed
+  sources:
+    - {title: "PBS Africans in America", url: "https://www.pbs.org/wgbh/aia/part4/4p2923.html", quote: "During the war she used her celebrity to raise money for black refugees."}
+    - {title: "New York Public Library", url: "https://libguides.nypl.org/african-american-women-writers-of-the-19th-Century/Harper-Jacobs", quote: "relief worker during the Civil War"}
+    - {title: "Documenting the American South", url: "https://docsouth.unc.edu/fpn/jacobs/summary.html", quote: "died there on March 7, 1897"}
+  note: ""
+- card: jazz
+  fact: "Buddy Bolden was the first king of New Orleans jazz; in 1907 he was committed to the state asylum at Jackson, Louisiana, where he died in 1931"
+  verdict: confirmed
+  sources:
+    - {title: "National Park Service, New Orleans Jazz NHP: Charles 'Buddy' Bolden", url: "https://www.nps.gov/jazz/learn/historyculture/bolden.htm", quote: "for a period ranging from around 1898 until 1906, reigned as the undisputed King of black New Orleans music ... committed to the Louisiana State asylum in Jackson where he would reside until his death in 1931"}
+    - {title: "Library of Congress, Now See Hear!: The Elusive Buddy Bolden (2014)", url: "https://blogs.loc.gov/now-see-hear/2014/11/the-elusive-buddy-bolden/", quote: "In June of 1907 was committed to the Louisiana State Insane Asylum at Jackson, Louisiana, where he frittered away his final 24 years, dying on November 4, 1931."}
+    - {title: "Bruce Boyd Raeburn, Traditional New Orleans Jazz, 64 Parishes (via archive.org)", url: "https://64parishes.org/entry/traditional-new-orleans-jazz", quote: "Buddy Bolden, the first cornet king of jazz"}
+  note: "1907 rests on LoC; NPS gives no year of commitment."
+- card: jazz
+  fact: "The Original Dixieland Jass Band's 1917 Victor record was an unexpected hit"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: Jazz Origins in New Orleans", url: "https://www.nps.gov/jazz/learn/historyculture/history_early.htm", quote: "The Victor release was an unexpected hit. Suddenly, jazz New Orleans style was a national craze."}
+    - {title: "American Heritage, John McDonough: The Diamond Jubilee of Jazz", url: "https://www.americanheritage.com/diamond-jubilee-jazz", quote: "Victor released the records on March 1, and they quickly became a national sensation."}
+  note: "'Unexpected' rests on NPS; the hit itself is confirmed by both."
+- card: jazz
+  fact: "(unledgered) Crazy Blues (1920) showed that Black artists' records would sell; the Chicago Defender urged Black Southerners north"
+  verdict: confirmed
+  sources:
+    - {title: "Sankofa card crazy-blues (its sources: NPR 2006 and others)", url: "content/cards/crazy-blues.md", quote: "it showed the record industry a market it had overlooked ... The record opened the \"race records\" market."}
+    - {title: "Sankofa card chicago-defender (its sources: TIME 2015, Washington Informer)", url: "content/cards/chicago-defender.md", quote: "The Defender urged Black Southerners to move north and printed the jobs waiting for them there."}
+  note: "Cross-link glosses restating facts already carried, with sources, by the linked cards (checked by another fork); not re-verified independently here."
+- card: highlife
+  fact: "(unledgered) E. T. Mensah was later known as the King of Highlife"
+  verdict: confirmed
+  sources:
+    - {title: "MyJoyOnline: Legend of the week, E. T. Mensah", url: "https://www.myjoyonline.com/legend-of-the-week-e-t-mensah/", quote: "E.T. Mensah, tagged 'The King of Highlife'"}
+    - {title: "Graphic Online: 100 years of highlife", url: "https://www.graphic.com.gh/entertainment/showbiz-news/100-years-of-highlife.html", quote: "A key figure in this transformation was E.T. Mensah, often referred to as the 'King of Highlife'"}
+  note: "Not in the ledger; both sources were already in the card."
+- card: highlife
+  fact: "(unledgered) In May 1956 Mensah shared a stage with the visiting Louis Armstrong"
+  verdict: confirmed
+  sources:
+    - {title: "Georgetown University Library: Jazz Ambassador, Louis Armstrong in Ghana, 1956", url: "https://www.library.georgetown.edu/exhibition/jazz-ambassador-louis-armstrong-ghana-1956", quote: "In May 1956, Louis Armstrong visited the city of Accra, then the capital of the British Gold Coast Colony ... Invitation to Mensah['s performance with Armstrong]"}
+    - {title: "MyJoyOnline: Legend of the week, E. T. Mensah", url: "https://www.myjoyonline.com/legend-of-the-week-e-t-mensah/", quote: "He also performed with a host of great musicians, notable amongst them is American trumpeter and vocalist, Louis Armstrong in 1956."}
+  note: "Not in the ledger. The card's Native Mag source wrongly dates it to 1957 (independence); Georgetown exhibition added to sources."
+- card: highlife
+  fact: "(unledgered) The hero of The Palm-Wine Drinkard goes to the land of the dead"
+  verdict: confirmed
+  sources:
+    - {title: "Sankofa card tutuola (its own sources)", url: "content/cards/tutuola.md", quote: "to Deads' Town to bring him back"}
+  note: "Cross-link gloss restating the tutuola card; plot fact, not re-verified externally."

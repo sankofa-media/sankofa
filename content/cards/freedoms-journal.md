@@ -23,16 +23,23 @@ sources:
   - {title: "Wikisource transcription: To Our Patrons, 16 March 1827", url: "https://en.wikisource.org/wiki/Freedom%27s_Journal/1827/03/16/To_Our_Patrons"}
   - {title: "Encyclopedia.com: Russwurm", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/john-brown-russwurm"}
   - {title: "Wisconsin Historical Society: Freedom’s Journal digitized issue register", url: "https://legacy.wisconsinhistory.org/Records/Article/CS4415"}
+  - {title: "EBSCO Research Starters: John Brown Russwurm", url: "https://www.ebsco.com/research-starters/history/john-brown-russwurm/"}
 media:
   - {type: "image", file: "freedoms-journal.jpg", caption: "Front page of Freedom's Journal, vol. 1, no. 3, New York, 30 March 1827", credit: "Scan reproduced in The Afro-American Press; via Wikimedia Commons", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Freedom%27s_Journal,_Vol._1_No._3,_front_page.png"}
 ---
 "We wish to plead our own cause. Too long have others spoken for us." So
-began Freedom's Journal, launched in New York on 16 March 1827 by two
-free Black men, Samuel Cornish and John Russwurm: the first African
-American owned and operated newspaper in the United States. The weekly
-carried news, biographies, births and deaths, and attacks on slavery and
-discrimination. Then it split over Africa. When Russwurm declared for
-colonization in 1829, readers abandoned the paper; the last issue is dated
-28 March 1829. By the end of the year Russwurm was in [[liberia|Liberia]], where he
-later governed Maryland-in-Liberia. Heirs: [[ida-b-wells|Ida B. Wells]],
+began Freedom's Journal, launched in New York on 16 March 1827 by two free
+Black men, Samuel Cornish and John Russwurm: the first African American
+owned and operated newspaper in the United States. The weekly carried news,
+biographies, births and deaths, and attacks on slavery and discrimination,
+and at its peak it reached readers in eleven states, the District of
+Columbia, Haiti, Europe and Canada. Then it split over Africa. Cornish
+resigned in September 1827, and Russwurm, now sole editor, moved toward the
+American Colonization Society's plan to settle free Black Americans in
+Africa. When he declared for colonization in 1829, readers abandoned the
+paper; the last issue is dated 28 March 1829. Cornish tried to revive it as
+The Rights of All, which was short-lived. By the end of the year Russwurm
+was in [[liberia|Liberia]], where he governed Maryland-in-Liberia from 1836
+until his death in 1851. The idea in its first line, a Black press speaking
+for itself, passed to [[ida-b-wells|Ida B. Wells]] and
 [[chicago-defender|the Chicago Defender]].

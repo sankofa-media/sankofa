@@ -102,6 +102,7 @@
 | Kreutzer | Крейцер |
 | Toots Hibbert | Тутс Хибберт |
 | Kool Herc / Clive Campbell | Кул Херк / Клайв Кэмпбелл |
+| Cudjo Lewis (Kossola) | Каджо Льюис (Коссола); не «Куджо» |
 
 ### Мандинго (манде)
 

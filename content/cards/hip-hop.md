@@ -37,23 +37,8 @@ sources:
 media:
   - {type: "image", file: "hip-hop.jpg", caption: "DJ Kool Herc at the turntables at an event on the West Indian roots of hip-hop, Hunts Point, the Bronx, 28 February 2009", credit: "Bigtimepeace, via Wikimedia Commons", license: "Public domain (released by the photographer)", url: "https://commons.wikimedia.org/wiki/File:Herc_on_the_Wheels_of_Steel.JPG"}
 ---
-Hip-hop is a whole culture, born in the Bronx in the early 1970s among young
-African American, Caribbean and Latino New Yorkers: DJing, rapping (MCing),
-breaking and graffiti. Its music began with two people. The DJ cut between
-records to stretch the instrumental break; the MC rhymed over the beat in
-rhythm and street speech. It was made for parties in homes, community centres,
-parks and on the block, and for young people the city had neglected it was an
-outlet and a voice. Later, drum machines and samples, including funk, became
-its instruments.
+Hip-hop is a whole culture of DJing, rapping (MCing), breaking and graffiti, born in the Bronx in the early 1970s among young African American, Caribbean and Latino New Yorkers. The South Bronx was burning then: landlords paid arsonists to torch buildings for the insurance, and the near-bankrupt city cut fire and other basic services. For neglected young people, parties in homes, community centres, parks and on the block became an outlet and a voice. The DJ cut between records to stretch the instrumental break; the MC rhymed over the beat in rhythm and street speech.
 
-Hip-hop began with two copies of the same record. Clive Campbell, born in
-Kingston, Jamaica, and known as DJ Kool Herc, brought Jamaica's sound-system
-culture to the Bronx, his father's big speakers powering the parties. His
-trick was the merry-go-round: two copies of one funk or soul record on two
-turntables, switching between them so the drum break ran as long as he liked.
-The party usually dated as the start is [[cindy-campbell|Cindy Campbell]]'s, in August 1973.
-Grandmaster Flash and Afrika Bambaataa built on it. The record that took rap
-to a mass market, "Rapper's Delight" (1979), rode Chic's "Good Times" bass
-line and ended in shared writing credits.
+Hip-hop began with two copies of the same record. Clive Campbell, born in Kingston, Jamaica, and known as DJ Kool Herc, brought Jamaica's sound-system culture to the Bronx, his father's big speakers powering the parties. His trick was the merry-go-round: two copies of one funk or soul record on two turntables, switching between them so the drum break ran as long as he liked. The party usually dated as the start is [[cindy-campbell|Cindy Campbell]]'s, in August 1973. Grandmaster Flash and Afrika Bambaataa built on it. "Rapper's Delight" (1979), the record that took rap to a mass market, rode Chic's "Good Times" bass line and ended in shared writing credits.
 
-Roots: [[reggae|reggae]] and [[funk|funk]]; heir: [[amen-break|the Amen break from "Amen, Brother"]].
+Later, drum machines and samples, including funk, became its instruments. Its roots are [[reggae|reggae]] and [[funk|funk]]; among the breaks it looped into fame is [[amen-break|the Amen break from "Amen, Brother"]].

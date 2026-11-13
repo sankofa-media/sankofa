@@ -28,11 +28,15 @@ sources:
   - {title: "Library of Congress, African American Spirituals: Introduction", url: "https://guides.loc.gov/spirituals-folklife"}
   - {title: "Ben Sandmel, Black Gospel, Music Rising at Tulane University", url: "https://musicrising.tulane.edu/discover/themes/black-gospel/"}
   - {title: "WTTW, DuSable to Obama: Dorsey’s Gospel", url: "https://www.wttw.com/dusable-to-obama/dorseys-gospel"}
+  - {title: "Discipleship Ministries, United Methodist Church: Martin Luther King, Jr.'s Favorite Hymn", url: "https://www.umcdiscipleship.org/resources/martin-luther-king-jr-s-favorite-hymn"}
+  - {title: "Hymnology Archive: Thomas A. Dorsey (with Atlanta Constitution obituary, 1993)", url: "https://hymnologyarchive.com/thomas-a-dorsey"}
+  - {title: "BlackPast: Sister Rosetta Tharpe (1915–1973)", url: "https://www.blackpast.org/african-american-history/tharpe-sister-rosetta-1915-1973/"}
+  - {title: "Encyclopedia.com (Gale): Tharpe, Sister Rosetta", url: "https://www.encyclopedia.com/arts/dictionaries-thesauruses-pictures-and-press-releases/tharpe-sister-rosetta-originally-nubin-rosetta"}
 media:
   - {type: "image", file: "gospel.jpg", caption: "Mahalia Jackson, 1962", credit: "Carl Van Vechten, Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Mahalia_Jackson_LCCN2004663076.jpg"}
 ---
 The blues-based style of Black gospel flourished in Chicago in the 1930s: new songs with sacred words, set to the melodies, harmonies and beat of the [[blues|blues]]. Unlike the [[spirituals|spirituals]], which no one person wrote, gospel songs had composers and were sold as sheet music. Choirs and soloists sang them, first to the piano and later to the Hammond organ, often to a strong, rocking beat. Many ministers at first turned the songs away: the beat sounded secular, like the blues clubs.
 
-The man called the father of gospel music first made his name in the blues. Thomas A. Dorsey came to Chicago from Georgia in 1916, and as "Georgia Tom" he led Ma Rainey's band. Then he began setting sacred words to blues patterns, publishing his songs himself. In 1932 his wife Nettie died in childbirth, and their son died the next day. In his grief he wrote "Take My Hand, Precious Lord". In 1933 he co-founded a national convention of gospel choirs, and later teamed with Mahalia Jackson, who had come up from New Orleans.
+The man called the father of gospel music first made his name in the blues. Thomas A. Dorsey came to Chicago from Georgia in 1916, and as "Georgia Tom" he led Ma Rainey's band. Then he began setting sacred words to blues patterns, publishing his songs himself. In 1932 his wife Nettie died in childbirth, and their son died the next day. In his grief he wrote "Take My Hand, Precious Lord". In 1933 he co-founded a national convention of gospel choirs, and later teamed with Mahalia Jackson, who had come up from New Orleans. In 1968 she sang "Precious Lord" at the funeral of Martin Luther King Jr. Dorsey died in Chicago in 1993, having written hundreds of songs.
 
-It went on with [[rosetta-tharpe|Rosetta Tharpe]] and into [[funk|funk]].
+From the churches the sound passed to [[rosetta-tharpe|Rosetta Tharpe]], who carried gospel and her guitar into the Cotton Club, and on into [[funk|funk]].
