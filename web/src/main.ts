@@ -21,6 +21,8 @@ import { Listen } from './views/listen';
 import { Engine } from './views/engine';
 import { Roots } from './views/roots';
 import { RootsMap } from './views/rootsMap';
+import { installMechanics } from './mechanics';
+import { isMechView } from './mechanics/views';
 
 async function load<T>(url: string): Promise<T> {
   // The cover paints first; the data comes at a lower priority.
@@ -210,6 +212,7 @@ async function start(): Promise<void> {
     if (keep !== 'descent' && descent.isOpen) descent.close();
     if (keep !== 'listen' && listen.isOpen) listen.close();
     if (keep !== 'engine' && engine.isOpen) engine.close();
+    if (!isMechView(keep) && mech.isOpen) mech.close();
   };
   const listen = new Listen(app);
   listen.onClose = () => {
@@ -248,6 +251,16 @@ async function start(): Promise<void> {
     }),
   );
   buildStory(app, document.getElementById('story')!);
+  // Documents, working objects, how we checked, the guide and the dedication.
+  const mech = installMechanics(app, {
+    navigate(view, item, push = true) {
+      cardDrawer.close(true);
+      bookDrawer.close(true);
+      if (view) closeOverlays(view);
+      route = view ? { point: {}, view, ...(item ? { item } : {}) } : { point: {}, ch: chapterNow ?? undefined };
+      writeRoute(route, push);
+    },
+  });
   watchTypography(current);
   trackChapters(app);
   loading.remove();
@@ -343,6 +356,7 @@ async function start(): Promise<void> {
     else if (screen === 'engine') engine.open();
     else if (screen === 'roots') roots.open(route.artist);
     else if (screen === 'roots-map') rootsMap.open();
+    else if (isMechView(screen)) mech.open(screen, route.item);
     else if (screen === 'descent') descent.open(route.point.from, route.point.zoom);
     else if (screen === 'atlas') atlas.open(route.point);
     else if (route.ch && (initial || route.ch !== chapterNow)) {
