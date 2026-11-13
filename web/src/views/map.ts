@@ -489,13 +489,21 @@ export class GeoMap {
       !avoid.some((p) => r[0] < p[2] && r[2] > p[0] && r[1] < p[3] && r[3] > p[1]);
     lab.each((d, i, n) => {
       const el = n[i] as SVGTextElement;
+      // Measure the title as drawn: an estimate lets two titles overlap.
+      let bb: DOMRect | undefined;
+      try {
+        bb = el.getBBox?.();
+      } catch {
+        bb = undefined;
+      }
+      if (bb && bb.width) this.labelWidths.set(d.id, bb.width);
       const w = this.labelWidths.get(d.id) ?? Math.max(d.label!.text.length * 8, (d.label!.sub ?? '').length * 6.4);
       const box = (x: number, y: number): [number, number, number, number] => [x, y - 15, x + w, y + (d.label!.sub ? 22 : 6)];
       const mids = [...d.legs].map((l) => ({ l, m: this.curveMid(l) })).sort((p, q) => q.m[2] - p.m[2]);
       let best: [number, number] | undefined;
       for (const { m } of mids) {
         const [mx, my] = m;
-        for (const [x, y] of [[mx - w / 2, my - 22], [mx - w / 2, my + 20], [mx + 10, my + 4], [mx - w - 10, my + 4]] as [number, number][]) {
+        for (const [x, y] of [[mx - w / 2, my - 22], [mx - w / 2, my + 20], [mx + 10, my + 4], [mx - w - 10, my + 4], [mx - w / 2, my - 46], [mx - w / 2, my + 44]] as [number, number][]) {
           const cx = Math.max(4, Math.min(this.w - w - 4, x));
           if (free(box(cx, y))) {
             best = [cx, y];
@@ -504,17 +512,12 @@ export class GeoMap {
         }
         if (best) break;
       }
-      if (!best) {
-        const [mx, my] = mids[0]?.m ?? this.xy(d.label!.at[0], d.label!.at[1]);
-        best = [Math.max(4, Math.min(this.w - w - 4, mx - w / 2)), my - 22];
-      }
+      // A title with no free room steps back rather than sit on another one;
+      // its route is still drawn, and named again when the map moves.
+      el.classList.toggle('crowded', !best);
+      if (!best) return;
       placed.push(box(best[0], best[1]));
       el.setAttribute('transform', `translate(${best[0].toFixed(1)},${best[1].toFixed(1)})`);
-    });
-    lab.each((d, i, n) => {
-      if (this.labelWidths.has(d.id)) return;
-      const bb = (n[i] as SVGTextElement).getBBox?.();
-      if (bb && bb.width) this.labelWidths.set(d.id, bb.width);
     });
   }
 
