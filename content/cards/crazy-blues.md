@@ -27,6 +27,6 @@ media:
 ---
 "Crazy Blues" is the 1920 record that first put an African American singer of the blues on disc, and it showed the record industry a market it had overlooked. The songwriter Perry Bradford pestered record companies to record Mamie Smith, a vaudeville singer and dancer, until OKeh agreed. The record from her first session, in February 1920, sold well enough, and on 10 August she recorded his "Crazy Blues" with her Jazz Hounds, a band of Black musicians.
 
-The record sold fast and opened the "race records" market. For the rest of the decade companies hurried to record Black women singing the blues: Bessie Smith came next, then the [[blues|blues]] boom, and with it a market for [[jazz|jazz]] on record.
+The record opened the "race records" market. For the rest of the decade companies hurried to record Black women singing the blues: Bessie Smith came next, then the [[blues|blues]] boom, and with it a market for [[jazz|jazz]] on record.
 
 Mamie Smith herself died poor on Staten Island in 1946 and was buried in an unmarked grave. The line of Black women singing the blues on record runs from her to [[big-mama-thornton|Willie Mae "Big Mama" Thornton]].
