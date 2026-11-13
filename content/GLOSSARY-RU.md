@@ -25,7 +25,8 @@
 | MacArthur Fellowship | грант Макартура |
 | National Hero (Jamaica) | национальный герой (со строчной) |
 | Zong massacre | резня на «Зонге» |
-| Sankofa, "go back and get it" | Санкофа, «вернись и забери» |
+| Sankofa, "go back and fetch it" | Санкофа, «вернись и забери» |
+| Saint-Domingue | Сан-Доминго (не Сен-Доменг) |
 | Fulani (language) | язык фула |
 | Middle Passage | Средний путь (с прописной; путь через Атлантику) |
 | Underground Railroad | Подземная железная дорога |
