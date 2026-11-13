@@ -207,12 +207,16 @@ export class Timeline {
       const y = lifeTop + p.row * rowH;
       const g = hook(gLife.append('g').attr('class', 'life'), p.c);
       g.append('rect').attr('x', p.x0).attr('y', y).attr('width', p.x1 - p.x0).attr('height', barH).attr('rx', barH / 2);
-      if (p.label !== 'none')
-        g.append('text')
-          .attr('class', p.label === 'in' ? 'in' : 'out')
-          .attr('x', p.label === 'in' ? p.x0 + 6 : p.x1 + 5)
-          .attr('y', y + barH / 2 + 3.5)
-          .text(p.c.title);
+      g.append('title').text(`${p.c.title}, ${formatYears(p.c.years)}`);
+      if (p.label !== 'none') {
+        const tx = p.label === 'in' ? p.x0 + 6 : p.x1 + 5;
+        // Room up to the next bar in the row (or the end of its own bar):
+        // a name that does not fit is cut with an ellipsis, never by a bar.
+        const next = Math.min(x(NOW), ...placed.filter((q) => q.row === p.row && q.x0 > p.x0).map((q) => q.x0));
+        const room = (p.label === 'in' ? p.x1 : next) - tx - 4;
+        const text = g.append('text').attr('class', p.label === 'in' ? 'in' : 'out').attr('x', tx).attr('y', y + barH / 2 + 3.5).text(p.c.title);
+        fitText(text.node()!, p.c.title, room);
+      }
     }
     for (const b of beads) {
       const g = hook(gLife.append('g').attr('class', 'life bead'), b.c);
@@ -276,6 +280,17 @@ export class Timeline {
     this.ro.disconnect();
     this.svg.remove();
   }
+}
+
+/** Cut a drawn label to its room with an ellipsis; the full name stays in the title. */
+export function fitText(el: SVGTextElement, full: string, room: number): void {
+  if (!el.getComputedTextLength || el.getComputedTextLength() <= room) return;
+  if (room < 24) {
+    el.textContent = '';
+    return;
+  }
+  let n = full.length;
+  while (n > 1 && el.getComputedTextLength() > room) el.textContent = full.slice(0, --n).trimEnd() + '…';
 }
 
 let ctx2d: CanvasRenderingContext2D | null | undefined;

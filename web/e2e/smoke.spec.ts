@@ -334,6 +334,32 @@ test('level 5 never shows an empty desk, and a phone reads the card in the colum
   }
 });
 
+test('timeline names are never cut by a neighbouring bar, and atlas level 1 has one name', async ({ page }) => {
+  await page.goto('/#zoom=1');
+  await expect(page.locator('.atlas .levels button').first()).toContainText('Centuries');
+  await page.goto('about:blank');
+  await page.goto('/');
+  await page.locator('.finale .timeline-wrap').evaluate((e) => e.scrollIntoView({ block: 'center' }));
+  await expect(page.locator('.timeline-wrap g.life rect').first()).toBeAttached();
+  await page.waitForTimeout(400);
+  const hits = await page.locator('.timeline-wrap').evaluate((root) => {
+    const lives = [...root.querySelectorAll('g.life:not(.bead)')];
+    const out: string[] = [];
+    for (const g of lives) {
+      const t = g.querySelector('text');
+      if (!t || !t.textContent) continue;
+      const a = t.getBoundingClientRect();
+      for (const o of lives) {
+        if (o === g) continue;
+        const b = o.querySelector('rect')!.getBoundingClientRect();
+        if (a.left < b.right - 1 && a.right > b.left + 1 && a.top < b.bottom - 1 && a.bottom > b.top + 1) out.push(`${t.textContent} / ${o.getAttribute('data-id')}`);
+      }
+    }
+    return out;
+  });
+  expect(hits).toEqual([]);
+});
+
 test('a card panel holds the page still; the counter keeps the card wording', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('.cover-lang')).toHaveCount(0);
