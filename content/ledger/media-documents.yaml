@@ -1,0 +1,99 @@
+# Scans laid on the desk in "Document on the desk" (content/documents/*.yaml).
+# Same fields as media.yaml. Each derivative is one page rendered by Wikimedia
+# Commons from the multi-page file named in `url`, resized to at most 1600 px on
+# the long edge (no other change). The licence wording was copied from the
+# Commons file page on the date given; `source_revision` pins that page.
+- card: equiano
+  file: doc-equiano-title.jpg
+  url: https://commons.wikimedia.org/wiki/File:The_interesting_narrative_of_the_life_of_Olaudah_Equiano,_or_Gustavus_Vassa,_the_African._(IA_interestingnarra01equi).pdf
+  license: Public domain
+  license_wording: >-
+    This work is in the public domain in its country of origin and other countries and
+    areas where the copyright term is the author's life plus 100 years or fewer. This work is in the
+    public domain in the United States because it was published (or registered with the U.S. Copyright
+    Office) before January 1, 1931.
+  note: >-
+    Title page of volume I (PDF page 9). Scan by the John Carter Brown Library via the Internet Archive
+    (interestingnarra01equi), London, 1789. The handwritten owner's name at the top is part of the copy.
+  verified_on: '2026-11-13'
+  sha256: fb264db4b03866612058c2fe1383cf86385f4de24f1e451391cdafd4273fddb5
+  source_revision: https://commons.wikimedia.org/w/index.php?oldid=1245553450
+- card: equiano
+  file: doc-equiano-subscribers.jpg
+  url: https://commons.wikimedia.org/wiki/File:The_interesting_narrative_of_the_life_of_Olaudah_Equiano,_or_Gustavus_Vassa,_the_African._(IA_interestingnarra01equi).pdf
+  license: Public domain
+  license_wording: >-
+    This work is in the public domain in its country of origin and other countries and
+    areas where the copyright term is the author's life plus 100 years or fewer. This work is in the
+    public domain in the United States because it was published (or registered with the U.S. Copyright
+    Office) before January 1, 1931.
+  note: >-
+    First page of the list of subscribers, volume I (PDF page 16); same scan as above.
+  verified_on: '2026-11-13'
+  sha256: 72be9bcf18a98799cc4fdc19604edaf5b6d2afe21caa1867bbc7d60139e4d14d
+  source_revision: https://commons.wikimedia.org/w/index.php?oldid=1245553450
+- card: douglass-covey
+  file: doc-douglass-72.jpg
+  url: https://commons.wikimedia.org/wiki/File:Narrative_of_the_Life_of_Frederick_Douglass,_an_American_Slave.djvu
+  license: Public domain
+  license_wording: >-
+    This file is in the public domain because it is a mere mechanical scan or photocopy
+    of a public domain original, or – from the available evidence – is so similar to such a scan or photocopy
+    that no copyright protection can be expected to arise. The original itself is in the public domain
+    for the following reason: This work is in the public domain in its country of origin and other countries
+    and areas where the copyright term is the author's life plus 70 years or fewer.
+  note: >-
+    Page 72 (DjVu page 96) of the Boston 1845 first edition, Internet Archive narrativeoflifeo1845doug.
+    The Commons page carries no separate US tag; the book was published in 1845 and Douglass died in 1895.
+  verified_on: '2026-11-13'
+  sha256: f0e419b14577cdd5fbab3eb544384e1ecd51bd5d2cc5c981569dae2adc7a5cd6
+  source_revision: https://commons.wikimedia.org/w/index.php?oldid=517663930
+- card: douglass-covey
+  file: doc-douglass-73.jpg
+  url: https://commons.wikimedia.org/wiki/File:Narrative_of_the_Life_of_Frederick_Douglass,_an_American_Slave.djvu
+  license: Public domain
+  license_wording: >-
+    This file is in the public domain because it is a mere mechanical scan or photocopy
+    of a public domain original, or – from the available evidence – is so similar to such a scan or photocopy
+    that no copyright protection can be expected to arise. The original itself is in the public domain
+    for the following reason: This work is in the public domain in its country of origin and other countries
+    and areas where the copyright term is the author's life plus 70 years or fewer.
+  note: >-
+    Page 73 (DjVu page 97); same scan as above.
+  verified_on: '2026-11-13'
+  sha256: 2f66bd381c3dbcc9732d878e58dc433873175df632a64a1a8ef17874fd3a1c65
+  source_revision: https://commons.wikimedia.org/w/index.php?oldid=517663930
+- card: jacobs-garret
+  file: doc-jacobs-173.jpg
+  url: https://commons.wikimedia.org/wiki/File:Incidents_in_the_life_of_a_slave_girl._(IA_incidentsinlifeo1861jaco).pdf
+  license: Public domain
+  license_wording: >-
+    This work is in the public domain in its country of origin and other countries and
+    areas where the copyright term is the author's life plus 100 years or fewer. This work is in the
+    public domain in the United States because it was published (or registered with the U.S. Copyright
+    Office) before January 1, 1931.
+  note: >-
+    Page 173, chapter XXI (PDF page 179), Boston 1861. Scan by the Boston Public Library via the Internet
+    Archive (incidentsinlifeo1861jaco).
+  verified_on: '2026-11-13'
+  sha256: 4b58851efcb79d28319f12c641dbcfb205c2a48039fcaa18aa761c23dd44c0eb
+  source_revision: https://commons.wikimedia.org/w/index.php?oldid=1248298584
+- card: freedoms-journal
+  file: doc-freedoms-journal-1.jpg
+  url: https://commons.wikimedia.org/wiki/File:Freedom%27s_Journal_Volume_1,_Number_1_(March_16,_1827).pdf
+  license: Public domain
+  license_wording: >-
+    This file is in the public domain because it is a mere mechanical scan or photocopy
+    of a public domain original, or – from the available evidence – is so similar to such a scan or photocopy
+    that no copyright protection can be expected to arise. The original itself is in the public domain
+    for the following reason: This work is in the public domain in its country of origin and other countries
+    and areas where the copyright term is the author's life plus 70 years or fewer. This work is in the
+    public domain in the United States because it was published (or registered with the U.S. Copyright
+    Office) before January 1, 1931.
+  note: >-
+    Front page of the first issue, 16 March 1827 (PDF page 1), from the Wisconsin Historical Society's
+    digitized run; converted to greyscale for size. Transcription cross-checked with Wikisource,
+    Page:Freedom's_Journal_First_Issue.pdf/1.
+  verified_on: '2026-11-13'
+  sha256: 7f40d5062926dd9003c31b61599467b6267bce8e4c1b1e0927103c85104e3b8c
+  source_revision: https://commons.wikimedia.org/w/index.php?oldid=1185359616
