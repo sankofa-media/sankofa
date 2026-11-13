@@ -36,21 +36,8 @@ sources:
 media:
   - {type: "image", file: "rock-n-roll.jpg", caption: "Chuck Berry, publicity photograph, 1957", credit: "Universal Attractions (management)", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Chuck_Berry_1957.jpg"}
 ---
-Rock and roll grew from rhythm and blues. In the early 1950s young
-white listeners found the records of Black musicians, and the music was sold
-to Black and white teenagers alike; the phrase itself was old blues slang for
-sex. "What they call rock 'n' roll is rhythm and blues," said Fats Domino. It
-ran on an aggressive beat and loud electric guitar, with saxophone solos and
-pounding piano.
+Rock and roll, the loud teenage dance music of 1950s America, grew out of rhythm and blues. Young white listeners found the records of Black musicians, and the music was sold to Black and white teenagers alike; the phrase itself was old blues slang for sex. "What they call rock 'n' roll is rhythm and blues," said Fats Domino of New Orleans. It ran on an aggressive beat and loud electric guitar, with saxophone solos and pounding piano.
 
-The record often called the first rock and roll single was credited to the
-singer, not the band. In March 1951 Ike Turner's Kings of Rhythm cut "Rocket
-88", a song about an Oldsmobile, at Sam Phillips's studio in Memphis: Turner's
-piano, two saxophones, drums and a guitar with a distorted buzz. It was issued under
-singer Jackie Brenston's name. Whether it really was the first is debated.
-That same year in Cleveland the DJ Alan Freed began playing rhythm and blues
-and calling it rock and roll. Fats Domino came up from New Orleans, and labels
-aimed separate versions at white buyers.
+The record often called the first rock and roll single was credited to the singer, not the band. In March 1951 Ike Turner's Kings of Rhythm cut "Rocket 88", a song about an Oldsmobile, at Sam Phillips's studio in Memphis: Turner's piano, two saxophones, drums and a guitar with a distorted buzz. Chess Records credited it to Jackie Brenston, Turner's saxophonist, and that June it topped Billboard's rhythm and blues chart. Whether it was the first is debated. That year in Cleveland the DJ Alan Freed began playing rhythm and blues and calling it rock and roll.
 
-Under it all lay the [[blues|blues]], [[gospel|gospel]], [[rhythm-and-blues|rhythm and blues]],
-[[rosetta-tharpe|Sister Rosetta Tharpe]]'s guitar and [[big-mama-thornton|Willie Mae "Big Mama" Thornton]]'s "Hound Dog".
+Labels aimed separate versions at white buyers, and white singers built careers on covers of Black records. By the mid-1950s the name meant mostly white musicians such as Elvis Presley, though Black musicians stayed at its heart. Under it all lay the [[blues|blues]], [[gospel|gospel]], [[rhythm-and-blues|rhythm and blues]], [[rosetta-tharpe|Sister Rosetta Tharpe]]'s guitar and [[big-mama-thornton|Willie Mae "Big Mama" Thornton]]'s "Hound Dog".

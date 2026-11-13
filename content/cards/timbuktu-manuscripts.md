@@ -21,16 +21,10 @@ sources:
   - {title: "CSMC Hamburg: The Timbuktu manuscripts", url: "https://www.csmc.uni-hamburg.de/timbuktu/manuscripts.html"}
   - {title: "Military Periscope: Tuareg rebels take Timbuktu", url: "https://www.militaryperiscope.com/news/tuareg-rebels-take-timbuktu"}
   - {title: "The World, quoting UNESCO's David Stehl: 4,203 burned or stolen", url: "https://theworld.org/stories/2013/07/03/islamists-have-destroyed-one-tenth-timbuktus-ancient-manuscripts-un-finds"}
+  - {title: "National Geographic: Timbuktu Manuscripts Burned by Islamists (2013)", url: "https://www.nationalgeographic.com/science/article/130129-mali-timbuktu-manuscripts-islamists-fighting-geography-culture"}
+  - {title: "Al Jazeera: French-led troops regain Timbuktu from rebels (2013)", url: "https://www.aljazeera.com/news/2013/1/29/french-led-troops-regain-timbuktu-from-rebels"}
+  - {title: "South African History Online: The Kingdom of Mali and the City of Timbuktu in the 14th Century", url: "https://sahistory.org.za/article/summary-kingdom-mali-and-city-timbuktu-14th-century"}
 media:
   - {type: "image", file: "timbuktu-manuscripts.jpg", caption: "Kashf al-Ghummah, a manuscript, from the Mamma Haidara Commemorative Library, Timbuktu", credit: "Library of Congress exhibition Ancient Manuscripts from the Desert Libraries of Timbuktu, via Wikimedia Commons", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Loc_timbuktu_manuscripts_amm0001rs.jpg"}
 ---
-When armed jihadist groups took Timbuktu on 1 April 2012, its librarians
-smuggled the city's books out to Bamako, some by cart, some by boat on the
-Niger. Those books had been kept by Timbuktu's families for centuries, in
-household libraries and later in the state Ahmed Baba Institute. The escape
-was organised by Abdel Kader Haidara, keeper of the Mamma Haidara library
-and head of SAVAMA-DCI. National Geographic counts about 350,000 manuscripts
-rescued, though the totals are contested. Before fleeing in early 2013 the
-militants destroyed manuscripts at the Ahmed Baba Institute. Compare
-[[nsibidi|Nsibidi]] and [[adinkra|adinkra signs]], other African ways of
-keeping knowledge, and the Mali of [[mansa-musa|Mansa Musa]].
+Timbuktu, in today's Mali, grew in the Middle Ages as a trading town on the Niger's northern bend and became a centre of Islamic learning. Its great Djinguereber and Sankore mosques date from the 14th century, the age of Mali's ruler [[mansa-musa|Mansa Musa]], and became seats of scholarship. Its scholars wrote on law, mathematics and astronomy, and Timbuktu's families kept such books for centuries, in household libraries and later in the state Ahmed Baba Institute. When armed jihadist groups took Timbuktu on 1 April 2012, its librarians smuggled the books out to Bamako, some by cart, some by boat on the Niger. The escape was organised by Abdel Kader Haidara, keeper of the Mamma Haidara library and head of SAVAMA-DCI. National Geographic counts about 350,000 manuscripts rescued, though the totals are contested. Before French and Malian troops retook the town in late January 2013, the militants set fire to the Ahmed Baba Institute, and some 4,000 of its manuscripts were burned or stolen. The rescued books stayed in Bamako, where conservators set to work on them.

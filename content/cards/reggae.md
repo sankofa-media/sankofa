@@ -31,6 +31,7 @@ sources:
   - {title: "Cambridge International, IGCSE Music teachers guide (2021), Caribbean Music, pp. 21–24", url: "https://www.cambridgeinternational.org/Images/599248-2021-teachers-guide-to-set-works-and-the-world-focus.pdf"}
   - {title: "Jake Homiak, Black History in Roots Reggae Music, Smithsonian essay republished by Jamaica Information Service", url: "https://jis.gov.jm/jamaica/black-history-in-roots-reggae-music/"}
   - {title: "Mellonee V. Burnim and Portia K. Maultsby, eds., African American Music: An Introduction, 2nd ed. (2015), chapters on African roots and funk", url: "https://microsite-oh-prod.s3.amazonaws.com/media/editor/405/vdoc.pub_african-american-music-an-introduction.pdf"}
+  - {title: "Red Bull Music Academy (2018): Interview, DJ Kool Herc", url: "https://daily.redbullmusicacademy.com/2018/01/kool-herc-interview"}
 media:
   - {"type": "image", "file": "reggae.jpg", "caption": "Toots Hibbert performing with Toots and the Maytals in Orlando, Florida, 29 April 2010", "credit": "Karl Simpson", "license": "CC BY-SA 2.0", "url": "https://commons.wikimedia.org/wiki/File:Toots-Hibbert.jpg"}
 ---
@@ -46,11 +47,10 @@ The first song to use the name was the Maytals' "Do the Reggay", recorded
 in 1968. Toots Hibbert said the word came to him in Trench Town from
 "streggay", slang for a person who does not dress well; the story is his
 own. Ska slowed into rocksteady and then into reggae, taking in soul and
-rhythm and blues from the United States. Its engine was the sound system:
+[[rhythm-and-blues|rhythm and blues]] from the United States. Its engine was the sound system:
 the first appeared in the late 1940s, and the selector at the records and
 the deejay who toasted over them followed, especially in the 1950s. In 2018
 UNESCO inscribed reggae music of Jamaica on its list of intangible
 heritage.
 
-That deejay, talking in rhythm over a record, was one influence on New York rap.
-Compare [[rhythm-and-blues|rhythm and blues]], [[hip-hop|hip-hop]] and [[afrobeat|Afrobeat]].
+The deejay's art travelled too. Clive Campbell, a Kingston boy who moved to the Bronx in 1967, built a Kingston-style sound system there and, as DJ Kool Herc, played the parties from which [[hip-hop|hip-hop]] grew.

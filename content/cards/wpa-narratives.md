@@ -23,13 +23,4 @@ sources:
 media:
   - {"type": "image", "file": "wpa-narratives.jpg", "caption": "Hannah Crasson, photographed for the Federal Writers' Project slave narratives, between 1937 and about 1938", "credit": "U.S. Works Progress Administration, Federal Writers' Project; Library of Congress Prints and Photographs Division", "license": "Public domain", "url": "https://www.loc.gov/item/99615427/"}
 ---
-The answers people born into slavery gave in the 1930s changed with the
-colour of the person asking. Between 1936 and 1938 the Federal Writers'
-Project, a New Deal program, sent writers to interview them, and the Library
-of Congress now holds more than 2,300 of their first-person accounts, online
-as Born in Slavery. Read them with care, and with wonder that they exist at
-all. Most interviewers were white, some from former slaveholding families,
-and they were told to capture "dialect", which often came out as stereotype.
-Behind that filter, people who had lived through slavery speak in the first
-person. Compare [[spirituals|spirituals]], [[work-songs|work songs, field
-hollers]] and [[jacobs-garret|Harriet Jacobs in her garret]].
+In the Great Depression the US government gave jobs to unemployed writers through the Federal Writers' Project, a New Deal program, and between 1936 and 1938 it sent them to interview people born into slavery. The answers those people gave changed with the colour of the person asking. Most interviewers were white, some from former slaveholding families, and they were told to capture "dialect", which often came out as stereotype. The accounts have to be read with care, and with wonder that they exist at all: behind that filter, people who had lived through slavery speak in the first person. In 1972 George P. Rawick published the interviews in print as The American Slave. The Library of Congress now holds more than 2,300 of these first-person accounts, online as Born in Slavery.

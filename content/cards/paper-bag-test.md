@@ -19,14 +19,7 @@ sources:
   - {title: "University of Tennessee Press: The Paper Bag Principle", url: "https://utpress.org/9781621902652/the-paper-bag-principle/"}
   - {title: "theGrio (2011)", url: "https://thegrio.com/2011/06/23/is-justice-colorblind-in-post-racial-america"}
   - {title: "Viglione, Hannon and DeFina: The impact of light skin on prison time for black female offenders (2011)", url: "https://www.sciencedirect.com/science/article/abs/pii/S0362331910000923"}
+  - {title: "The Root (2011): The Lighter the Skin, the Shorter the Prison Term?", url: "https://www.theroot.com/the-lighter-the-skin-the-shorter-the-prison-term"}
+  - {title: "NewsOne (2011): Light-Skinned Black Women Receive Lighter Prison Sentences", url: "https://newsone.com/1328605/light-skin-black-women-prison-sentences/"}
 ---
-Hold a brown paper bag to someone's arm; if their skin is darker, they are
-not let into the club, the fraternity or the sorority. That is the story,
-and whether such tests were ever formally applied rests largely on rumour
-and oral testimony. The scholar Audrey Elisa Kerr set out to ask Black
-Washington whether the test was real or an urban myth. The bag remains
-contested; the preference it names is measurable. In North Carolina, a 2011
-Villanova study of more than 12,000 imprisoned Black women found that those
-perceived as light-skinned got sentences about 12% shorter. Compare
-[[what-black-means|what "Black" means]] from one country to the next, and
-[[partus-1662|Virginia's 1662 law of partus sequitur ventrem]].
+The paper bag test is a story about colorism, the preference for lighter skin, told in Black communities in the United States: hold a brown paper bag to someone's arm, and if their skin is darker, they are not let into the club, the fraternity or the sorority. Whether such tests were ever formally applied rests largely on rumour and oral testimony. The scholar Audrey Elisa Kerr set out to ask Black Washington whether the test was real or an urban myth. Her book The Paper Bag Principle, built largely on oral history, records the rumours and legends themselves rather than settling them. The bag remains contested; the preference it names is measurable. In North Carolina, a 2011 Villanova study of more than 12,000 imprisoned Black women found that those perceived as light-skinned got sentences about 12% shorter and served about 11% less time, even after accounting for the kind of crime and their criminal records.

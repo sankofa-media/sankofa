@@ -25,11 +25,4 @@ sources:
 media:
   - {"type": "image", "file": "oliver-golden.jpg", "caption": "Yelena Khanga at Lena Lenina's private show at the Estet jewellery house, 15 January 2010", "credit": "Mikhail Popov / thebestphotos.ru", "license": "CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:%D0%A5%D0%B0%D0%BD%D0%B3%D0%B0_%D0%95%D0%BB%D0%B5%D0%BD%D0%B0.jpg"}
 ---
-In 1931 Oliver Golden led a team of Black American agronomists to a Soviet
-cotton project in Uzbekistan. He had studied at Tuskegee, though accounts
-differ on whether he graduated. He came with Bertha Bialek, and the story
-did not end with him: their granddaughter, Yelena Khanga, became a
-journalist and a television host in Moscow, and wrote the family's story.
-Compare [[gannibal|Abram Petrovich Gannibal]], an African in Russia two
-centuries earlier, and [[what-black-means|what "Black" means]] from one
-country to the next.
+Oliver Golden was a Black American agronomist and a communist. In 1931 he led a team of sixteen Black agricultural specialists to the Soviet Union, to help develop cotton growing in Uzbekistan. He had studied at Tuskegee, though accounts differ on whether he graduated. He came with his wife, Bertha Bialek, a Polish-born Jewish labour activist. Golden stayed: their daughter Lily was born in Tashkent in 1934, and he died in 1940, when she was six. Lily Golden grew up Soviet and became a scholar at the Institute of Africa in Moscow. She married Abdullah Hanga, a revolutionary from Zanzibar. Their daughter, Yelena Khanga, became a journalist and a television host in Moscow and wrote the family's story in Soul to Soul (1992). Two centuries earlier another African, [[gannibal|Abram Gannibal]], had made his life in Russia.

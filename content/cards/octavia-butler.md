@@ -24,15 +24,12 @@ sources:
   - {title: "SYFY Wire: Butler reaches New York Times bestseller list", url: "https://www.syfy.com/syfy-wire/octavia-butler-new-york-times-bestseller-list-parable-of-sower"}
   - {title: "Wikimedia Commons: Butler signing", url: "https://commons.wikimedia.org/wiki/File:Butler_signing.jpg"}
   - {title: "Literary Hub (2020)", url: "https://lithub.com/octavia-butler-has-finally-made-the-new-york-times-best-seller-list/"}
+  - {title: "Seattle Times (AP), 26 February 2006: Octavia Butler, prominent science fiction author, dies at 58", url: "https://archive.seattletimes.com/archive/20060226/webbutlerobit26/octavia-butler-prominent-science-fiction-author-dies-at-58"}
+  - {title: "EBSCO Research Starters: Kindred by Octavia E. Butler", url: "https://www.ebsco.com/research-starters/literature-and-writing/kindred-octavia-e-butler"}
+  - {title: "EBSCO Research Starters: Parable of the Sower by Octavia E. Butler", url: "https://www.ebsco.com/research-starters/literature-and-writing/parable-sower-octavia-e-butler"}
+  - {title: "Publishers Weekly: Parable of the Sower (review, 1993)", url: "https://www.publishersweekly.com/9780941423991"}
+  - {title: "EBSCO Research Starters: Octavia E. Butler", url: "https://www.ebsco.com/research-starters/biography/octavia-e-butler"}
 media:
   - {type: "image", file: "octavia-butler.jpg", caption: "Octavia E. Butler signing a copy of Fledgling on her book tour, 25 October 2005", credit: "Nikolas Coukouma, via Wikimedia Commons", license: "CC BY-SA 2.5", url: "https://commons.wikimedia.org/wiki/File:Butler_signing.jpg"}
 ---
-Octavia E. Butler reached the New York Times bestseller list in 2020,
-fourteen years after her death in 2006, with Parable of the Sower. She grew
-up in Pasadena, raised by a mother who worked as a maid. Kindred (1979)
-brought slavery into science fiction through time travel. In 1995 she became
-the first science fiction writer to receive a MacArthur Fellowship. Long
-before the list caught up with her, she wrote affirmations to herself
-predicting that her books would be bestsellers. Read her beside [[sun-ra|Sun
-Ra]] and [[hurston|Zora Neale Hurston]], and Kindred beside
-[[jacobs-garret|Harriet Jacobs's years in the garret]].
+Octavia E. Butler, an American science fiction writer, was born in Pasadena, California, in 1947 and raised by a mother who worked as a maid. She gave a Black woman's voice to a genre long dominated by white men. Her novel Kindred (1979) brought slavery into science fiction through time travel: a Black woman from 1976 Los Angeles is pulled back again and again to antebellum Maryland to keep alive a white slaveholder's son who is her own ancestor. Parable of the Sower (1993) imagined the Los Angeles area of the mid-2020s, where walled neighbourhoods hide from a society falling apart. In 1995 she became the first science fiction writer to receive a MacArthur Fellowship. Long before any bestseller list noticed her, she wrote affirmations to herself predicting that her books would be bestsellers. She died in 2006 after a fall outside her home near Seattle, and left her papers, those notes among them, to the Huntington Library. Fourteen years after her death, in 2020, Parable of the Sower reached the New York Times bestseller list.

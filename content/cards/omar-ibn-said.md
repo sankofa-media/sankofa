@@ -26,12 +26,4 @@ sources:
 media:
   - {"type": "image", "file": "omar-ibn-said.jpg", "caption": "Opening of Omar ibn Said's Arabic manuscript The Life of Omar ben Saeed, 1831, which begins with Sūrat al-Mulk", "credit": "Omar ibn Said; Library of Congress, African and Middle Eastern Division, Omar Ibn Said Collection", "license": "Public domain", "url": "https://www.loc.gov/item/2018371864/"}
 ---
-In 1831 an enslaved man in North Carolina wrote his life in Arabic and
-opened it with verses of the Qur'an. Omar ibn Said was a Fula scholar from
-Futa Toro in West Africa, landed in Charleston as a slave. He fled a cruel
-owner and was jailed in Fayetteville, where he wrote in Arabic on the walls
-of his cell. He lived with the Owen family until his death, in 1863 or 1864
-by different records. His manuscript is the only known slave autobiography
-written in Arabic in America. Compare the [[timbuktu-manuscripts|Timbuktu
-manuscripts]], and other lives told by their own hand: [[equiano|Olaudah
-Equiano]] and [[douglass-covey|Frederick Douglass]].
+Omar ibn Said was a Fula Muslim scholar from Futa Toro, in West Africa's Senegal River valley, who had spent twenty-five years in study. In his thirties he was captured in a war and shipped across the ocean, a voyage of a month and a half, and around 1807 he landed in Charleston as a slave. He fled a cruel owner and was caught in Fayetteville, North Carolina, after walking into a church to pray. In jail he wrote in Arabic on the walls of his cell. General James Owen bought him, and Omar lived out his life with the Owen family. When a man from Charleston came to buy him, he later wrote, he answered: "No, no, no, no, no, no, no." In 1831 he wrote his life in Arabic and opened it with verses of the Qur'an; Owen, he wrote, did not beat him or let him go hungry. He later became a Christian but died still enslaved, in 1863 or 1864, by different records. His manuscript is the only known slave autobiography written in Arabic in America; the lives of [[equiano|Olaudah Equiano]] and [[douglass-covey|Frederick Douglass]] were told in English.
