@@ -25,12 +25,4 @@ sources:
 media:
   - {type: "image", file: "nollywood.jpg", caption: "A crew shooting a Nollywood film in Awka, Nigeria, May 2015", credit: "Bestvillage, via Wikimedia Commons", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Shooting_a_nollywood_movie_in_Awka.jpg"}
 ---
-The film remembered as Nollywood's first blockbuster began, the story goes,
-with VHS tapes that would not sell. Their owner, Kenneth Nnebue, put an
-original story on them, written with Okechukwu Ogunjiofor. Living in Bondage
-(1992) was shot in Igbo for 150,000 naira and, by different counts, sold
-100,000 copies in weeks or over a million. Nnebue had already made
-Yoruba-language films; the Igbo one is the one remembered. Both the tapes
-story and the sales figures are contested. Compare [[achebe|Chinua Achebe]]
-and [[tutuola|Amos Tutuola]] in print, and the Lagos of
-[[afrobeat|Afrobeat]].
+In early-1990s Nigeria, in years of hard economic times, a film made straight for video started an industry. Living in Bondage (1992) began, the story goes, with VHS tapes that would not sell: their owner, Kenneth Nnebue, put an original story on them, written with Okechukwu Ogunjiofor. Shot in Igbo for 150,000 naira, it follows Andy Okeke, who joins an occult society and sacrifices his wife for wealth, then is haunted by her ghost; tales of ritual money were in the air. By different counts it sold 100,000 copies in weeks or over a million. Nnebue had already made Yoruba-language films; the Igbo one is the one remembered as Nollywood's first blockbuster. Both the tapes story and the sales figures are contested. In 2019 the story returned, in cinemas this time, as a sequel: Living in Bondage: Breaking Free.
