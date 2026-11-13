@@ -34,13 +34,14 @@ Alexander Pushkin, Russia's national poet, was the great-grandson of an
 African boy who had been kidnapped. Held in Constantinople, the child was
 brought to Peter the Great around 1705, and the tsar became his godfather.
 Peter sent him to France to study military engineering, from 1717 to 1723.
+
 Back in Russia he served as an engineer, but after Peter's death he fell
 into disgrace and was sent off to Siberia. Elizabeth, Peter's daughter,
 brought him back to favour: in 1742 she granted him the estate of
 Mikhailovskoye in the Pskov district, and he rose to general-in-chief. He retired in
-1762 and died in 1781 on his estate at Suyda. Where he was born is
-disputed: Ethiopia in the old account, the Logone sultanate near Lake Chad
-in Dieudonné Gnammankou's. His son Osip was the father of Pushkin's mother,
+1762 and died in 1781 on his estate at Suyda.
+
+His son Osip was the father of Pushkin's mother,
 and Pushkin spent two years of exile at Mikhailovskoye. In 1827 he began a
 novel about his great-grandfather; it was published only after the poet's
 death, as The Moor of Peter the Great. Through Gannibal an African story
