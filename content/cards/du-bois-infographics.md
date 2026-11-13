@@ -20,17 +20,23 @@ sources:
   - {title: "Nightingale: Du Bois's data visualizations, part 1", url: "https://nightingaledvs.com/w-e-b-du-bois-staggering-data-visualizations-are-as-powerful-today-as-they-were-in-1900-part-1/"}
   - {title: "Smithsonian: Du Bois at the world’s fair", url: "https://www.smithsonianmag.com/smithsonian-institution/how-web-du-bois-disrupted-americas-dominance-at-the-worlds-fair-180981538/"}
   - {title: "LoC catalog: Proportion of freemen and slaves", url: "https://www.loc.gov/item/2014645356/?fo=json"}
+  - {title: "New York Review of Books: The Color Line (2021)", url: "https://www.nybooks.com/articles/2021/08/19/du-bois-color-line-paris-exposition/"}
+  - {title: "Transition: A Significant Occurrence, W. E. B. Du Bois, the Paris Exposition and the Banquet", url: "https://transitionmagazine.fas.harvard.edu/a-significant-occurrence-w-e-b-du-bois-the-paris-exposition-and-the-banquet/"}
 media:
   - {"type": "image", "file": "du-bois-infographics.jpg", "caption": "The Georgia Negro: Negro population of Georgia by counties, 1890, chart for the Paris Exposition, 1900", "credit": "W. E. B. Du Bois; Library of Congress, Prints and Photographs Division, Daniel Murray collection", "license": "Public domain", "url": "https://www.loc.gov/item/2013650424/"}
 ---
-W. E. B. Du Bois and his students at Atlanta University answered a world's
-fair with data: hand-drawn charts of Black America, made for Paris in 1900.
-The Exposition Universelle had a Negro Exhibit in the American section, put
-together by Thomas J. Calloway, Du Bois, Booker T. Washington and Daniel
-Murray of the Library of Congress. Its job was to show the economic and
-social progress of African Americans since emancipation. They answered with
-charts, with captions in English and French so that Europe could read them.
-The originals were drawn by hand, and they survive in the Library of
-Congress's Daniel Murray collection. Compare [[hurston|Zora Neale Hurston]],
-[[freedoms-journal|Freedom's Journal]] and [[wpa-narratives|the WPA slave
-narratives]].
+In 1900 Paris held a world's fair, the Exposition Universelle, and the
+American section included a Negro Exhibit, put together by Thomas J.
+Calloway, W. E. B. Du Bois, Booker T. Washington and Daniel Murray of the
+Library of Congress. Its job was to show the economic and social progress
+of African Americans in the decades since emancipation. Du Bois, then
+a professor at Atlanta University, answered with data. With his
+students and colleagues he drew charts by hand: population, occupations,
+property and land, many of them about Black life in Georgia, with captions
+in English and French so that Europe could read them. The exhibit won
+prizes from the exposition's judges, among them a Grand Prize, and Du Bois
+himself received a gold medal. The originals survive in the Library of
+Congress's Daniel Murray collection. They carried
+on what [[freedoms-journal|Freedom's Journal]] had begun in 1827: Black
+Americans presenting the record of their own lives, rather than leaving it
+to others.

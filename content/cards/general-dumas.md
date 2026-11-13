@@ -23,14 +23,20 @@ sources:
 media:
   - {type: "image", file: "general-dumas.jpg", caption: "General Dumas, engraving by Jacques Marchand after a drawing by Guillaume Guillon Lethière, Paris, 1797-99", credit: "Jacques Marchand after Guillaume Guillon Lethière; Bibliothèque nationale de France (Gallica)", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Le_G%C3%A9n%C3%A9ral_Dumas_dessin%C3%A9_par_Guillaume_Lethi%C3%A8re_et_grav%C3%A9_par_Marchand,_1797-99.png"}
 ---
-His own father pawned him; he went on to command whole French armies.
-Thomas-Alexandre was born in Jérémie, Saint-Domingue, in 1762, the son of
-Marie-Cessette, an enslaved woman, and the nobleman Antoine Davy de la
-Pailleterie, who pawned the boy before bringing him to France. He enlisted
-under his mother's surname, and in 1792 the
-[[saint-georges|Chevalier de Saint-Georges]] made him second in command of
-his Black Legion. Within a year he was a general, later leading the Army of
-the Alps. Sailing home from Egypt in 1799, his leaking ship put in at
-Taranto, where he was held prisoner for two years. He came back broken and
-died in 1806. His son became the novelist Alexandre Dumas. Compare
-[[haitian-revolution|the Haitian Revolution]] and [[gannibal|Abram Petrovich Gannibal]].
+Thomas-Alexandre Dumas was born in 1762 in Jérémie, in the French colony
+of Saint-Domingue, the son of Marie-Cessette, an enslaved woman, and
+the nobleman Antoine Davy de la Pailleterie. His father pawned the boy
+before bringing him to France. He enlisted under his mother's surname, and
+in 1792 the [[saint-georges|Chevalier de Saint-Georges]] made him second in
+command of his Black Legion. Within a year the son of an enslaved woman was
+a general, later leading the Army of the Alps. In Egypt he quarrelled with
+Napoleon over the campaign and asked to go home. When he sailed for France in 1799, his
+leaking ship put in at Taranto, in the Kingdom of Naples, where he was held
+prisoner for two years. Released in 1801, he came back broken. He never
+received the pension owed for his captivity, and he died at
+Villers-Cotterêts in 1806. His son became the novelist Alexandre Dumas. A
+statue of the general raised in Paris was destroyed during the German
+occupation; today a sculpture of shackles stands in his memory. He rose in the same
+revolutionary years that brought [[haitian-revolution|the Haitian
+Revolution]] to his birthplace; in Russia, [[gannibal|Abram Petrovich
+Gannibal]] had climbed through another empire's service a lifetime earlier.

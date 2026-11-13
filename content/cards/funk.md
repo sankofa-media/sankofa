@@ -45,14 +45,15 @@ records, and Sly Stone blurred it with rock and soul.
 
 A few bars of drumming became one of the most reused sounds in music. Clyde
 Stubblefield's short solo on James Brown's "Funky Drummer" (1970), recorded
-in 1969 at the King studios in Cincinnati, has been sampled on hundreds of
-songs, hip-hop above all, including Public Enemy's "Fight the Power" (1989).
-He received very little in royalties for it. Funk was groove first, and then
-it went to space: in 1976 George Clinton's Parliament-Funkadelic landed a
-Mothership on stage, with Black "afronauts" and Afrofuturism in the spirit of
-[[sun-ra|Sun Ra]]. A replica now stands in the Smithsonian.
+in 1969 at the King studios in Cincinnati, has been sampled on hundreds of songs, hip-hop above
+all, including Public Enemy's "Fight the Power" (1989). He received very
+little in royalties; when he was fighting cancer, Prince paid $90,000 of his
+medical bills. He died in 2017, aged 73. Funk also
+went to space: in 1976 George Clinton's Parliament-Funkadelic landed a
+Mothership on stage, with Black "afronauts" and Afrofuturism in the spirit
+of [[sun-ra|Sun Ra]]. A replica now stands in the Smithsonian.
 
 Its roots run through [[gospel|gospel]], [[rhythm-and-blues|rhythm and
-blues]] and [[jazz|jazz]]. Funk fed [[hip-hop|hip-hop]], whose producers
-built new songs on its samples, and [[afrobeat|Afrobeat]]; compare the
-breakbeat of [[amen-break|"Amen, Brother", the Amen break]].
+blues]] and [[jazz|jazz]]. Funk fed [[afrobeat|Afrobeat]] and [[hip-hop|hip-hop]], whose
+producers built new songs from its breaks as they did from
+[[amen-break|the Amen break]].
