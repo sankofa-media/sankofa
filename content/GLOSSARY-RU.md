@@ -91,7 +91,7 @@
 | Emmett Till / Mamie Till | Эммет Тилл / Мейми Тилл |
 | Dave the Potter (David Drake) | Гончар Дейв (Дэвид Дрейк) |
 | Big Mama Thornton | Биг Мама Торнтон |
-| Sister Rosetta Tharpe | Сестра Розетта Тарп |
+| Sister Rosetta Tharpe | Систер Розетта Тарп (несклоняемое «Систер»: «Систер Розетты Тарп») |
 | Mamie Smith | Мейми Смит |
 | W. E. B. Du Bois | У. Э. Б. Дюбуа |
 | Sojourner Truth | Соджорнер Трут |
