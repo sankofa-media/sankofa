@@ -130,3 +130,35 @@ describe('telling each fact once', () => {
     expect(groupChildren(n).map((g) => g.map((c) => c.ref))).toEqual([['card:jazz', 'cobham']]);
   });
 });
+
+import { chainSteps } from '../src/lib/roots';
+import { recordingFor, type ListenFile } from '../src/lib/listen';
+
+describe('a chain to listen along', () => {
+  const sab = art('sabbath', 'Black Sabbath', ['card:blues'], [['sabbath', 'card:blues']]);
+  sab.links[0] = { ...sab.links[0], kind: 'cover', what: 'Warning' };
+  const met = art('metallica', 'Metallica', ['root:sabbath'], [['metallica', 'sabbath', 'card:blues']]);
+  met.links[0] = { ...met.links[0], kind: 'influence' };
+  const ids = new Map([sab, met].map((a) => [a.id, a]));
+  const cards = new Map([
+    ['blues', { id: 'blues', roots: ['work-songs'] }],
+    ['work-songs', { id: 'work-songs' }],
+  ]);
+
+  it('runs from the artist to the oldest root, saying how each step was taken', () => {
+    const steps = chainSteps(met, ids, cards);
+    expect(steps.map((s) => s.ref)).toEqual(['metallica', 'sabbath', 'card:blues', 'card:work-songs']);
+    expect(steps[0].next).toMatchObject({ kind: 'influence' });
+    expect(steps[1].next).toMatchObject({ kind: 'cover', link: { what: 'Warning' } });
+    expect(steps[2].next).toEqual({ kind: 'lineage' });
+    expect(steps[3].next).toBeUndefined();
+  });
+
+  it('finds each stop’s recording, and none where there is none', () => {
+    const rec = { source: 'youtube' as const, kind: 'official' as const, youtube: 'HrrWhCbZAyY', title: 't' };
+    const data: ListenFile = { version: 1, cards: { blues: [rec] }, roots: { sabbath: [rec] } };
+    expect(recordingFor(data, 'card:blues')).toBe(rec);
+    expect(recordingFor(data, 'sabbath')).toBe(rec);
+    expect(recordingFor(data, 'metallica')).toBeUndefined();
+  });
+});
