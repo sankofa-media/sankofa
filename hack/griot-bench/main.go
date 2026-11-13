@@ -60,6 +60,7 @@ var (
 	tiers       = flag.String("tiers", "", "retain: compaction tiers")
 	maxVersions = flag.Int("max-versions", 0, "retain: versions per object")
 	shift       = flag.Duration("shift", 0, "retain: pretend now is this much later")
+	probeName   = flag.String("probe-name", "probe", "probe: config map to write (one per concurrent probe)")
 )
 
 func main() {
@@ -287,19 +288,19 @@ func probe(ctx context.Context, kc kubernetes.Interface) error {
 	}
 	ns := "bench-probe"
 	_, _ = kc.CoreV1().Namespaces().Create(ctx, &corev1.Namespace{ObjectMeta: metav1.ObjectMeta{Name: ns, Labels: map[string]string{"bench": "griot"}}}, metav1.CreateOptions{})
-	_, _ = kc.CoreV1().ConfigMaps(ns).Create(ctx, &corev1.ConfigMap{ObjectMeta: metav1.ObjectMeta{Name: "probe"}, Data: map[string]string{"t": "0"}}, metav1.CreateOptions{})
+	_, _ = kc.CoreV1().ConfigMaps(ns).Create(ctx, &corev1.ConfigMap{ObjectMeta: metav1.ObjectMeta{Name: *probeName}, Data: map[string]string{"t": "0"}}, metav1.CreateOptions{})
 	end := time.Now().Add(*duration)
 	var lags []time.Duration
 	misses := 0
 	for time.Now().Before(end) {
 		stamp := strconv.FormatInt(time.Now().UnixNano(), 10)
 		written := time.Now()
-		if _, err := kc.CoreV1().ConfigMaps(ns).Patch(ctx, "probe", types.MergePatchType, []byte(`{"data":{"t":"`+stamp+`"}}`), metav1.PatchOptions{}); err != nil {
+		if _, err := kc.CoreV1().ConfigMaps(ns).Patch(ctx, *probeName, types.MergePatchType, []byte(`{"data":{"t":"`+stamp+`"}}`), metav1.PatchOptions{}); err != nil {
 			return err
 		}
 		found := false
 		for time.Since(written) < 60*time.Second {
-			b, err := g.get(ctx, "/namespaces/"+ns+"/timelines/configmaps.core:probe", nil)
+			b, err := g.get(ctx, "/namespaces/"+ns+"/timelines/configmaps.core:"+*probeName, nil)
 			if err == nil && strings.Contains(string(b), stamp) {
 				found = true
 				break

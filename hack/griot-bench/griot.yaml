@@ -1,7 +1,7 @@
 # Two benchmark Griots recording the throwaway control plane (vapi):
 # griot-pg: PostgreSQL, two replicas, one leader records, both serve reads.
 # griot-sqlite: SQLite on its own volume, one replica.
-# IMAGE is replaced by run.sh with the digest from hack/stand/push.sh.
+# IMAGE and BENCH_IMAGE are replaced with digests from push_in_stand (run.sh).
 apiVersion: apps/v1
 kind: Deployment
 metadata: {name: griot-pg, namespace: griot-bench}
@@ -42,13 +42,6 @@ spec:
   selector: {app: griot-pg}
   ports: [{name: https, port: 443, targetPort: 8443}, {name: metrics, port: 9090}]
 ---
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata: {name: griot-sqlite, namespace: griot-bench}
-spec:
-  accessModes: [ReadWriteOnce]
-  resources: {requests: {storage: 10Gi}}
----
 apiVersion: apps/v1
 kind: Deployment
 metadata: {name: griot-sqlite, namespace: griot-bench}
@@ -71,10 +64,20 @@ spec:
           readinessProbe: {httpGet: {path: /readyz, port: https, scheme: HTTPS}}
           volumeMounts: [{name: pki, mountPath: /pki}, {name: serving, mountPath: /serving}, {name: data, mountPath: /data}]
           resources: {requests: {cpu: 50m, memory: 256Mi}, limits: {memory: 1536Mi}}
+        # The bench binary next to the SQLite file: samples metrics, and
+        # `kubectl exec ... griot-bench retain --store sqlite --dsn /data/memory.db`
+        # measures retention on the live file.
+        - name: bench
+          image: BENCH_IMAGE
+          args: [metrics, --urls=http://localhost:9090/metrics, --every=10s, --duration=24h]
+          volumeMounts: [{name: data, mountPath: /data}]
+          resources: {requests: {cpu: 10m, memory: 64Mi}, limits: {memory: 512Mi}}
       volumes:
         - {name: pki, secret: {secretName: vapi-pki}}
         - {name: serving, secret: {secretName: griot-serving}}
-        - {name: data, persistentVolumeClaim: {claimName: griot-sqlite}}
+        # The node's disk, not a PVC: on the stand a second hot-plugged volume
+        # stayed unattached. The benchmark measures Griot, not the volume.
+        - {name: data, emptyDir: {sizeLimit: 8Gi}}
 ---
 apiVersion: v1
 kind: Service
