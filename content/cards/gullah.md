@@ -23,6 +23,7 @@ sources:
   - {title: "Kenyon College: American Language, African Roots", url: "https://digital.kenyon.edu/gullah_language.html"}
   - {title: "California Newsreel: The Language You Cry In", url: "https://newsreel.org/cn-langua"}
   - {title: "California Newsreel: The Language You Cry In", url: "https://newsreel.org/video/THE-LANGUAGE-YOU-CRY-IN"}
+  - {title: "Harris Neck Land Trust: Amelia's Song", url: "https://harrisnecklandtrust.org/amelias-song"}
   - {title: "University of Chicago Magazine: Lorenzo Dow Turner, PhD'26 (2011)", url: "https://magazine.uchicago.edu/1012/features/legacy.shtml"}
   - {title: "Georgia Sea Island Singers, The Complete Friends of Old Time Music Concert, Smithsonian Folkways SFW40258, Note about the Gullah language", url: "https://folkways-media.si.edu/docs/folkways/artwork/SFW40258.pdf"}
 media:

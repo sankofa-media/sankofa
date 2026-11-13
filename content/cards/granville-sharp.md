@@ -26,12 +26,13 @@ sources:
   - {title: "Abraham Farfán and María del Pilar López-Uribe, Africa at LSE: The British founding of Sierra Leone (2020)", url: "https://blogs.lse.ac.uk/africaatlse/2020/06/27/british-founding-sierra-leone-slave-trade/"}
   - {title: "Black Loyalists: Our Story, Our People: The Sierra Leone Company", url: "https://blackloyalist.com/cdc/story/exodus/company.htm"}
   - {title: "Columbia Encyclopedia via Encyclopedia.com: Freetown", url: "https://www.encyclopedia.com/places/africa/sierra-leone-political-geography/freetown"}
+  - {title: "Royal Collection Trust: Granville Sharp, A Representation of the Injustice ... of Tolerating Slavery (1769)", url: "https://col.rct.uk/collection/1125524/a-representation-of-the-injustice-and-dangerous-tendancy-of-tolerating-slavery-or"}
 media:
   - {type: "image", file: "granville-sharp.jpg", caption: "Granville Sharp, portrait lithograph, about 1810", credit: "After Francis Legatt Chantrey; National Library of Wales", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Granville_Sharp_(4671963).jpg"}
 ---
 Granville Sharp was a clerk in the Ordnance Office at the Tower of London
 when slavery crossed his path. In 1765 he took in Jonathan Strong, a young
-African beaten and thrown into the street by his master. When the master
+Black man beaten and thrown into the street by his master. When the master
 later sold Strong to a Jamaica planter and had him seized, Sharp took the
 case to the Lord Mayor, who set Strong free. Broken by the
 beating, Strong died at about twenty-five. Sharp then backed James Somerset,

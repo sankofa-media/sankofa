@@ -24,6 +24,7 @@ sources:
   - {title: "Afrisson: 1928, Jacob Sam", url: "https://www.afrisson.com/1928-jacob-sam-kumasi-trio-10854/"}
   - {title: "Wikimedia Commons: Armstrong-Mensahinvitation", url: "https://commons.wikimedia.org/wiki/File:Armstrong-Mensahinvitation.jpg"}
   - {title: "MyJoyOnline: Legend of the week, E. T. Mensah", url: "https://www.myjoyonline.com/legend-of-the-week-e-t-mensah/"}
+  - {title: "Georgetown University Library: Jazz Ambassador, Louis Armstrong in Ghana, 1956", url: "https://www.library.georgetown.edu/exhibition/jazz-ambassador-louis-armstrong-ghana-1956"}
   - {title: "The Native: Native Roots, Highlife", url: "https://thenativemag.com/native-roots-highlife/"}
   - {title: "John Collins via MyJoyOnline: Highlife music dates as far back as the 19th century", url: "https://www.myjoyonline.com/highlife-music-dates-as-far-back-as-19th-century-prof-collins/"}
   - {title: "Songlines: Fela Kuti, a beginner's guide", url: "https://songlines.co.uk/features/a-beginner-s-guide/fela-kuti-a-beginner-s-guide"}

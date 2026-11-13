@@ -37,7 +37,7 @@ Peter sent him to France to study military engineering, from 1717 to 1723.
 Back in Russia he served as an engineer, but after Peter's death he fell
 into disgrace and was sent off to Siberia. Elizabeth, Peter's daughter,
 brought him back to favour: in 1742 she granted him the estate of
-Mikhailovskoye near Pskov, and he rose to general-in-chief. He retired in
+Mikhailovskoye in the Pskov district, and he rose to general-in-chief. He retired in
 1762 and died in 1781 on his estate at Suyda. Where he was born is
 disputed: Ethiopia in the old account, the Logone sultanate near Lake Chad
 in Dieudonné Gnammankou's. His son Osip was the father of Pushkin's mother,

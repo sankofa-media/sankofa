@@ -23,16 +23,17 @@ sources:
   - {title: "Colonial Williamsburg, Slavery and Remembrance: Olaudah Equiano", url: "https://www.slaveryandremembrance.org/people/person/?id=PP003"}
   - {title: "Oxford University Press: Equiano historical evidence module", url: "https://learninglink.oup.com/access/content/for-history-reviewing/html-ct-customization-1"}
   - {title: "Paul Lovejoy, Equiano's World: Associates in abolition", url: "https://equianosworld.org/associates-abolition.php"}
+  - {title: "Understanding Slavery Initiative: The Zong", url: "https://understandingslavery.com/casestudy/the-zong/"}
 media:
   - {type: "image", file: "equiano.jpg", caption: "Frontispiece of the first edition of The Interesting Narrative, London, 1789", credit: "W. Dent and D. Orme (engraving), British Library", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Olaudah_Equiano_-_The_interesting_Narrative_of_the_Life_of_Olaudah_Equiano_(1789),_frontispiece_-_BL.jpg"}
 ---
 Olaudah Equiano was an African writer in eighteenth-century London who told
 the story of his own enslavement and turned it against the slave trade. As
 a boy he was owned by a Royal Navy officer, Michael Pascal, who named him
-Gustavus Vassa; later the Quaker merchant Robert King of Montserrat put him
-to work trading, and in 1766 Equiano bought his freedom for £40. In 1783 he
-carried news of the [[zong|Zong massacre]] to [[granville-sharp|Granville
-Sharp]]. In 1787 he was hired as commissary for the expedition taking Black
+Gustavus Vassa; later the Quaker merchant Robert King of Montserrat used him
+in his business rather than the fields, and in 1766 Equiano bought his
+freedom for £40. In 1783 he carried news of the [[zong|Zong massacre]] to [[granville-sharp|Granville
+Sharp]]. In 1787 he was commissary for the expedition taking Black
 Londoners to Sierra Leone, and was dismissed after he publicly condemned its
 mismanagement. In 1789 he published The Interesting Narrative, financed by
 subscribers headed by the Prince of Wales. It tells of a childhood in Igbo
