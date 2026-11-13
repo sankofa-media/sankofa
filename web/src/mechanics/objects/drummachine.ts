@@ -3,7 +3,7 @@
 // its steps as two rows of big buttons. Arrow keys move around the grid.
 import { h } from '../../lib/dom';
 import { pick } from '../../lib/i18n';
-import { audioContext, claim, release } from './bus';
+import { audioContext, claim, release } from '../../lib/sound';
 import { clearPattern, patternLength, toggle, type Pattern } from './model';
 import { Sequencer } from './sequencer';
 import type { Voice } from './voices';
@@ -25,7 +25,11 @@ export interface DrumMachineOpts {
   presetName: { en: string; ru: string };
 }
 
+let made = 0;
+
 export function drumMachine(o: DrumMachineOpts): HTMLElement {
+  // Unique per instance: the same machine can sit on its card and on the shelf.
+  const sid = `${o.id}-${++made}`;
   const preset = o.pattern;
   const seq = new Sequencer(o.kit, preset, o.bpm);
   const steps = patternLength(preset);
@@ -41,12 +45,12 @@ export function drumMachine(o: DrumMachineOpts): HTMLElement {
   };
   const stop = () => {
     seq.stop();
-    release(o.id);
+    release(sid);
     paintPlay();
   };
   play.addEventListener('click', () => {
     if (seq.running) return stop();
-    claim(o.id, stop);
+    claim(sid, stop, root);
     seq.start(audioContext());
     paintPlay();
   });
@@ -79,7 +83,7 @@ export function drumMachine(o: DrumMachineOpts): HTMLElement {
               title: pick(vi.name),
               'aria-label': pick({ en: `Play one ${vi.name.en.toLowerCase()} hit`, ru: `Один удар: ${vi.name.ru.toLowerCase()}` }),
               onclick: () => {
-                claim(o.id, stop);
+                claim(sid, stop, root);
                 seq.hit(audioContext(), vi.key);
               },
             },
@@ -160,7 +164,7 @@ export function drumMachine(o: DrumMachineOpts): HTMLElement {
   const clear = h('button.btn', { type: 'button', onclick: () => ((seq.pattern = clearPattern(seq.pattern)), render()) }, pick({ en: 'Clear', ru: 'Очистить' }));
   render();
 
-  return h(
+  const root = h(
     'div.mx-machine',
     { 'data-object': o.id },
     h('div.mx-controls', {}, play, h('label.mx-tempo', {}, h('span', {}, pick({ en: 'Tempo', ru: 'Темп' })), tempo, tempoOut), reset, clear),
@@ -169,4 +173,5 @@ export function drumMachine(o: DrumMachineOpts): HTMLElement {
     grid,
     h('p.mx-preset', {}, pick(o.presetName)),
   );
+  return root;
 }

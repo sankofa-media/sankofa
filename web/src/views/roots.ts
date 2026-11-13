@@ -8,7 +8,8 @@ import { chapterLabel, count, lang, pick, t } from '../lib/i18n';
 import { mediaSrc } from '../lib/media';
 import { eraColor } from '../lib/atlasModel';
 import { recordingFor } from '../lib/listen';
-import { listenBlock, playBlock, stopPlayer } from './player';
+import { listenBlock, playBlock } from './player';
+import { stopWithin } from '../lib/sound';
 
 export class Roots {
   readonly el: HTMLElement;
@@ -92,7 +93,7 @@ export class Roots {
   }
 
   close(): void {
-    stopPlayer();
+    stopWithin(this.el);
     this.el.classList.remove('open');
     document.body.classList.remove('locked');
   }
@@ -214,7 +215,7 @@ export class Roots {
     const tree = extendLineage(buildTree(a, this.byId), this.lineage);
     const ends = endCards(tree);
     let step = 0;
-    stopPlayer();
+    stopWithin(this.el);
     // The chain to listen along: the deepest one, stop by stop. Each stop with
     // a recording gets a player; "Next" loads the next stop's, never by itself.
     const stops = chainSteps(a, this.byId, this.lineage).map((s) => s.ref);

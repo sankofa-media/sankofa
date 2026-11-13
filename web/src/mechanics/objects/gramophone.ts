@@ -3,7 +3,7 @@
 // or use the slider; the record turns while it plays.
 import { h, reducedMotion } from '../../lib/dom';
 import { pick } from '../../lib/i18n';
-import { adopt, claim, release } from './bus';
+import { adopt, claim, release } from '../../lib/sound';
 import { formatTime, GROOVE, radiusAtTime, timeAtRadius } from './model';
 
 const NS = 'http://www.w3.org/2000/svg';
@@ -37,8 +37,10 @@ export interface GramophoneOpts {
   rpm: number;
 }
 
+let made = 0;
+
 export function gramophone(o: GramophoneOpts): HTMLElement {
-  const id = 'gramophone';
+  const id = `gramophone-${++made}`;
   const audio = new Audio();
   audio.preload = 'none';
   adopt(audio);
@@ -126,7 +128,7 @@ export function gramophone(o: GramophoneOpts): HTMLElement {
   };
   const playAt = (t?: number) => {
     ensureSrc();
-    claim(id, stop);
+    claim(id, stop, wrap);
     if (t !== undefined) {
       const seek = () => (audio.currentTime = Math.min(t, Math.max(0, (audio.duration || t + 1) - 0.5)));
       if (audio.readyState >= 1) seek();
@@ -186,7 +188,7 @@ export function gramophone(o: GramophoneOpts): HTMLElement {
 
   const wrap = h(
     'div.mx-gramophone',
-    { 'data-object': id },
+    { 'data-object': 'gramophone' },
     h('div.g-deck', { title: pick({ en: 'Drop the needle anywhere on the record', ru: 'Опустите иглу в любом месте пластинки' }) }, svg as unknown as HTMLElement),
     h('div.g-controls', {}, btn, h('label.g-pos', {}, h('span.mx-sr', {}, pick({ en: 'Needle position', ru: 'Положение иглы' })), slider), time),
     h('p.mx-hint', {}, pick({ en: 'Press on the record to drop the needle there: the outer groove is the beginning.', ru: 'Нажмите на пластинку, чтобы опустить туда иглу: внешняя бороздка — начало записи.' })),

@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import YAML from 'yaml';
 import { describe, expect, it } from 'vitest';
+import { parseListen } from '../src/lib/listen';
 import { clearPattern, formatTime, GROOVE, hits, parsePattern, parseSteps, patternLength, radiusAtTime, stepSeconds, timeAtRadius, toggle } from '../src/mechanics/objects/model';
 
 describe('working objects: patterns', () => {
@@ -33,9 +34,13 @@ describe('working objects: the museum’s presets', () => {
     expect(patternLength(parsePattern(o.tr808.pattern))).toBe(16);
     expect(patternLength(parsePattern(o.amen.pattern))).toBe(64);
   });
-  it('the Amen break has no recording, only a link to the official one', () => {
+  it('the Amen break has no recording; the official one comes from the listening list', () => {
     expect(JSON.stringify(o.amen)).not.toMatch(/\.(ogg|mp3|wav|flac)/);
-    expect(o.amen.youtube.id).toMatch(/^[\w-]{11}$/);
+    const listen = parseListen(readFileSync(join(__dirname, '../../content/listen.yaml'), 'utf8'));
+    const rec = listen.cards[o.amen.card]?.[0];
+    expect(rec?.source).toBe('youtube');
+    // A copy kept in objects.yaml is ignored by the build, but must not disagree.
+    if (o.amen.youtube) expect(o.amen.youtube.id).toBe(rec?.youtube);
   });
   it('the gramophone plays the card’s own recording', () => {
     const card = readFileSync(join(__dirname, `../../content/cards/${o.gramophone.card}.md`), 'utf8');

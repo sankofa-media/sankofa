@@ -2,7 +2,7 @@
 // fingers; keys 1–4 play them while the pads have focus.
 import { h } from '../../lib/dom';
 import { pick } from '../../lib/i18n';
-import { audioContext, claim } from './bus';
+import { audioContext, claim } from '../../lib/sound';
 import type { Voice } from './voices';
 
 export interface Pad {
@@ -10,9 +10,12 @@ export interface Pad {
   name: { en: string; ru: string };
 }
 
+let made = 0;
+
 export function pads(id: string, kit: Record<string, Voice>, list: Pad[]): HTMLElement {
+  const sid = `${id}-${++made}`;
   const hit = (key: string, el: HTMLElement) => {
-    claim(id, () => undefined);
+    claim(sid, () => undefined, wrap);
     const ctx = audioContext();
     const g = ctx.createGain();
     g.gain.value = 0.85;

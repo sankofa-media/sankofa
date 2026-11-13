@@ -11,7 +11,8 @@ import { editionNote, pairLink } from './editionNote';
 import { cardYaml } from '../lib/cardYaml';
 import { mediaSrc } from '../lib/media';
 import { cardChecks, cardExtras } from '../mechanics';
-import { listenBlock, stopPlayer } from './player';
+import { listenBlock } from './player';
+import { stopWithin } from '../lib/sound';
 
 /** A drawer that slides in from the right, with a focus trap and Esc to close. */
 export class Drawer {
@@ -40,7 +41,7 @@ export class Drawer {
 
   show(content: HTMLElement): void {
     if (!this.isOpen) this.returnTo = document.activeElement;
-    stopPlayer();
+    stopWithin(this.el);
     const close = h('button.icon-btn.close', { 'aria-label': t('Close'), onclick: () => this.close() }, svgIcon('close'));
     // A sticky header holds the close button, so it never covers the text.
     const bar = h('div.drawer-bar', {}, h('span.drawer-label', {}, ...vtags(content.dataset.label ?? '')), close);
@@ -58,7 +59,7 @@ export class Drawer {
   close(silent = false): void {
     if (!this.isOpen) return;
     // Nothing keeps playing behind a closed panel.
-    stopPlayer();
+    stopWithin(this.el);
     this.el.classList.remove('on');
     this.scrim.classList.remove('on');
     document.documentElement.classList.remove('panel-open');

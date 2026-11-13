@@ -9,7 +9,7 @@ import { gramophone } from './gramophone';
 import type { ObjectsFile } from './model';
 import { pads } from './pads';
 import { KIT_808, KIT_ACOUSTIC } from './voices';
-import { youtubeFacade } from './youtube';
+import { listenBlock } from '../../views/player';
 
 type Key = 'gramophone' | 'tr808' | 'amen';
 export const OBJECT_KEYS: Key[] = ['gramophone', 'tr808', 'amen'];
@@ -35,7 +35,7 @@ const STORY: Record<Key, { en: string; ru: string }> = {
   },
 };
 
-function instrument(app: App, key: Key, o: ObjectsFile): HTMLElement | null {
+function instrument(app: App, key: Key, o: ObjectsFile, where: 'card' | 'shelf'): HTMLElement | null {
   if (key === 'gramophone' && o.gramophone) {
     const c = app.set.get(o.gramophone.card);
     const audio = c?.media?.find((m) => m.type === 'audio' && m.file === o.gramophone!.audio);
@@ -92,9 +92,16 @@ function instrument(app: App, key: Key, o: ObjectsFile): HTMLElement | null {
           { key: 'kick', short: 'KD', name: { en: 'Kick', ru: 'Бочка' } },
         ],
       }),
-      o.amen.youtube ? youtubeFacade('amen', o.amen.youtube) : null,
+      // The official recording, from the museum's listening list. On its card
+      // the card's own listening block already offers it.
+      where === 'shelf' ? recording(app, o.amen.card) : null,
     );
   return null;
+}
+
+function recording(app: App, card: string): HTMLElement | null {
+  const r = app.listen.cards[card]?.[0];
+  return r ? listenBlock(r, { heading: pick({ en: 'The original recording', ru: 'Оригинальная запись' }) }) : null;
 }
 
 function cardOf(o: ObjectsFile, key: Key): string | undefined {
@@ -103,7 +110,7 @@ function cardOf(o: ObjectsFile, key: Key): string | undefined {
 
 /** One object, as a section: what it is, the instrument, and its card. */
 export function objectBlock(app: App, o: ObjectsFile, key: Key, where: 'card' | 'shelf'): HTMLElement | null {
-  const inst = instrument(app, key, o);
+  const inst = instrument(app, key, o, where);
   if (!inst) return null;
   const card = cardOf(o, key);
   const c = card ? app.set.get(card) : undefined;

@@ -1,20 +1,15 @@
 // The listening facade: a poster and a caption until the reader asks for
 // sound, then the player itself. Nothing is fetched from the video host
-// before that click, and only one player is ever loaded: starting one
-// unloads the one before.
+// before that click. A loaded player is a source like any other (lib/sound):
+// starting it stops whatever sounds, and starting anything else unloads it
+// back to its facade.
 import type { Recording } from '../lib/listen';
 import { embedUrl, posterUrl } from '../lib/listen';
 import { h } from '../lib/dom';
 import { pick } from '../lib/i18n';
+import { adopt, claim, playing, release } from '../lib/sound';
 
-let playing: HTMLElement | null = null;
-
-/** Unload the player that is loaded now, if any, back to its facade. */
-export function stopPlayer(): void {
-  const el = playing;
-  playing = null;
-  if (el?.isConnected) el.dispatchEvent(new CustomEvent('lb-stop'));
-}
+let made = 0;
 
 function sourceLine(r: Recording): string {
   if (!r.channel) return '';
@@ -52,9 +47,9 @@ export function listenBlock(r: Recording, opts: ListenOpts = {}): HTMLElement {
     h('figcaption', {}, r.note ? h('span.lb-note', { lang: 'en' }, r.note) : h('span.lb-note', {}, r.title), sourceLine(r) ? h('small.lb-src', {}, sourceLine(r)) : null),
     opts.after ?? null,
   );
+  const id = `player-${++made}`;
   const play = () => {
-    if (playing === el) return;
-    stopPlayer();
+    if (playing() === id) return;
     const src = embedUrl(r);
     let media: HTMLElement;
     if (src) {
@@ -67,17 +62,19 @@ export function listenBlock(r: Recording, opts: ListenOpts = {}): HTMLElement {
       });
     } else if (r.audio) {
       const a = h('audio.lb-audio', { controls: true, autoplay: true, src: r.start ? `${r.audio}#t=${r.start}` : r.audio }) as HTMLAudioElement;
+      adopt(a);
       media = a;
     } else return;
+    claim(id, unload, el);
     stage.replaceChildren(media);
     el.classList.add('on');
-    playing = el;
   };
-  el.addEventListener('lb-play', play);
-  el.addEventListener('lb-stop', () => {
+  const unload = () => {
+    release(id);
     stage.replaceChildren(facade());
     el.classList.remove('on');
-  });
+  };
+  el.addEventListener('lb-play', play);
   return el;
 }
 

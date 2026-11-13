@@ -10,7 +10,8 @@ export interface ObjectsFile {
   version: 1;
   gramophone?: { card: string; audio: string; rpm: number; caption?: string; credit?: string; license?: string; url?: string };
   tr808?: { card: string; tempo: number; pattern: Pattern };
-  amen?: { card: string; tempo: number; pattern: Pattern; youtube?: { id: string; title: string; channel: string; start?: number } };
+  /** The Amen break's official recording comes from data/listen.json, by its card. */
+  amen?: { card: string; tempo: number; pattern: Pattern };
 }
 
 /** "x..x|x..." -> booleans; `|` only separates bars for the eye. */

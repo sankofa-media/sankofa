@@ -6,6 +6,7 @@ import { richText } from '../app';
 import { h, reducedMotion, svgIcon } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
 import { guestLabel, subtitle, type Sub } from '../lib/subtitles';
+import { claim, release } from '../lib/sound';
 import { BELL, GRACE, mend, roomState, simTargets, type RoomState, GUEST_EVERY, GUEST_PART, PARTS, PULSES, guestPitch, SLOTS, TUNINGS, demoLeases, demoVoices, drumName, exchange, podsOf, type Sim, type SimVoice, parsePulse, playing, strokes, type Exchange, type Voice } from '../lib/rhythm';
 
 const PULSE = 0.2; // seconds per pulse: one 12/8 cycle is 2.4 s
@@ -412,6 +413,7 @@ export class Listen {
   }
 
   private play(): void {
+    claim('listening-room', () => this.stop(), this.el);
     this.ens ??= new Ensemble();
     void this.ens.ctx.resume();
     this.playingNow = true;
@@ -428,6 +430,7 @@ export class Listen {
   }
 
   private stop(): void {
+    release('listening-room');
     this.playingNow = false;
     clearInterval(this.timer);
     cancelAnimationFrame(this.raf);

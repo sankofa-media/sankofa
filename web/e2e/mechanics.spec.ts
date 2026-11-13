@@ -80,15 +80,47 @@ test('the shelf of objects: one sound at a time, keyboard steps, a video only on
   const pad = sheet(page).locator('.mx-pad').first();
   await pad.click();
   await expect(pad).toHaveClass(/hit/);
-  // YouTube is asked for nothing until the reader presses play.
-  expect(asked.some((u) => /youtube|ytimg/.test(u))).toBe(false);
-  await expect(sheet(page).locator('.mx-yt iframe')).toHaveCount(0);
-  await sheet(page).locator('.mx-yt-poster').click();
-  await expect(sheet(page).locator('.mx-yt iframe')).toHaveAttribute('src', /^https:\/\/www\.youtube-nocookie\.com\/embed\/HrrWhCbZAyY\?autoplay=1/);
+  // The Amen recording is the museum's shared listening block, with the video
+  // from the listening list; nothing is asked of the video host before play.
+  const video = sheet(page).locator('.mx-obj-amen .lb');
+  expect(asked.some((u) => /youtube-nocookie|googlevideo/.test(u))).toBe(false);
+  await expect(video.locator('iframe')).toHaveCount(0);
+  await video.locator('.lb-facade').click();
+  await expect(video.locator('iframe')).toHaveAttribute('src', /^https:\/\/www\.youtube-nocookie\.com\/embed\/HrrWhCbZAyY\?autoplay=1/);
   // Starting an instrument closes the video.
   await play.click();
-  await expect(sheet(page).locator('.mx-yt iframe')).toHaveCount(0);
+  await expect(video.locator('iframe')).toHaveCount(0);
   await play.click();
+});
+
+test('one sound at a time: the gramophone, a card recording and the video stop each other', async ({ page }) => {
+  await page.goto('/#focus=crazy-blues');
+  const card = page.locator('.drawer.on');
+  const g = card.locator('.mx-gramophone');
+  const gBtn = g.locator('.g-controls .btn');
+  const video = card.locator('figure.lb').first();
+  const record = card.locator('figure.card-audio audio').first();
+  await expect(g).toBeVisible();
+  // The gramophone, then the card's listening block: the record stops.
+  await gBtn.click();
+  await expect(gBtn).toHaveAttribute('aria-pressed', 'true', { timeout: 15000 });
+  await video.locator('.lb-facade').click();
+  await expect(video.locator('iframe')).toHaveCount(1);
+  await expect(gBtn).toHaveAttribute('aria-pressed', 'false');
+  // The card's own recording (a plain <audio>) unloads the video.
+  await record.evaluate((a: HTMLAudioElement) => {
+    a.muted = true;
+    return a.play();
+  });
+  await expect(video.locator('iframe')).toHaveCount(0);
+  // The gramophone pauses that recording.
+  await gBtn.click();
+  await expect(gBtn).toHaveAttribute('aria-pressed', 'true', { timeout: 15000 });
+  await expect.poll(() => record.evaluate((a: HTMLAudioElement) => a.paused)).toBe(true);
+  // Closing the card silences what sounds in it.
+  await page.keyboard.press('Escape');
+  await expect(card).toHaveCount(0);
+  await expect.poll(() => page.evaluate(() => [...document.querySelectorAll('audio')].every((a) => a.paused))).toBe(true);
 });
 
 test('the gramophone drops the needle where the record is pressed', async ({ page }) => {

@@ -12,7 +12,8 @@ import { MOVEMENTS } from '../lib/movements';
 import { chapterLabel, chapterNumber, count, pick, t, yearsAgo } from '../lib/i18n';
 import { LEVEL_NAMES } from './map';
 import { mediaSrc } from '../lib/media';
-import { listenBlock, stopPlayer } from './player';
+import { listenBlock } from './player';
+import { stopWithin } from '../lib/sound';
 import { richText } from '../app';
 import { buildScale, chapterAt, chapterCentres, chaptersAt, lanes, levelCards, NOW, place, quietStretches, START, type Item, type Placed, type Scale } from '../lib/descentModel';
 import { interpolateRgb } from 'd3-interpolate';
@@ -172,7 +173,7 @@ export class Descent {
   }
 
   close(): void {
-    stopPlayer();
+    stopWithin(this.el);
     this.el.classList.remove('open');
     document.body.classList.remove('locked');
   }

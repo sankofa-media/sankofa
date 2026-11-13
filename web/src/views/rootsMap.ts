@@ -10,7 +10,8 @@ import { h, reducedMotion, svgIcon } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
 import { buildGraph, grewFrom, headline, layout, radius, reach, yearY, type GEdge, type GNode, type Graph, type MapCard } from '../lib/rootsMap';
 import { nbsp, quotes } from '../lib/typo';
-import { listenBlock, playBlock, stopPlayer } from './player';
+import { listenBlock, playBlock } from './player';
+import { stopWithin } from '../lib/sound';
 import { recordingFor } from '../lib/listen';
 import { chainSteps, placeName, KIND_LABEL, searchArtists, type Artist, type LineageCard, type LinkKind } from '../lib/roots';
 
@@ -101,7 +102,7 @@ export class RootsMap {
   }
 
   close(): void {
-    stopPlayer();
+    stopWithin(this.el);
     this.el.classList.remove('open');
     document.body.classList.remove('locked');
   }

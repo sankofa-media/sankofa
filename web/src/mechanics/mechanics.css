@@ -724,73 +724,9 @@
   }
 }
 
-/* the video behind a click */
-.mx-yt {
+/* the Amen break's recording: the shared listening block */
+.mx-amen > .lb {
   margin-top: 18px;
-  max-width: 640px;
-  aspect-ratio: 16 / 9;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #08080d;
-}
-.mx-yt iframe {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
-.mx-yt-poster {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 18px;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  padding: 0 clamp(18px, 4vw, 36px);
-  border: 0;
-  background:
-    repeating-radial-gradient(circle at 85% 50%, rgba(255, 255, 255, 0.035) 0 1px, transparent 1px 5px),
-    linear-gradient(135deg, #17141f, #0b0a10);
-  color: #f2e9d8;
-  text-align: left;
-  cursor: pointer;
-}
-.mx-yt-play {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: var(--gold);
-  position: relative;
-}
-.mx-yt-play::after {
-  content: '';
-  position: absolute;
-  left: 26px;
-  top: 20px;
-  border-style: solid;
-  border-width: 12px 0 12px 19px;
-  border-color: transparent transparent transparent #1c1a2a;
-}
-.mx-yt-text b {
-  display: block;
-  font-size: clamp(20px, 2.4vw, 28px);
-  font-weight: 380;
-}
-.mx-yt-text span {
-  display: block;
-  font-family: var(--font-sans);
-  font-size: 13px;
-  color: rgba(242, 233, 216, 0.75);
-}
-.mx-yt-text small {
-  display: block;
-  margin-top: 10px;
-  font-family: var(--font-sans);
-  font-size: 12px;
-  color: rgba(242, 233, 216, 0.55);
-}
-.mx-yt-poster:hover .mx-yt-play {
-  transform: scale(1.05);
 }
 
 @media (max-width: 640px) {
@@ -827,21 +763,6 @@
   }
   .mx-pads {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .mx-yt-poster {
-    gap: 14px;
-  }
-  .mx-yt-play {
-    width: 48px;
-    height: 48px;
-  }
-  .mx-yt-play::after {
-    left: 19px;
-    top: 14px;
-    border-width: 10px 0 10px 15px;
-  }
-  .mx-yt-text small {
-    display: none;
   }
 }
 

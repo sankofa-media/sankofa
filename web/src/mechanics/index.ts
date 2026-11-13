@@ -15,7 +15,7 @@ import { isMechView, type MechView } from './views';
 import { desk, type DeskView } from './docs/view';
 import { checksPanel, methodPage } from './checks/view';
 import { objectBlock, objectKeyForCard, OBJECT_KEYS, shelf } from './objects/view';
-import { stopAll, watchPage } from './objects/bus';
+import { stopAll, watchPage } from '../lib/sound';
 import { inLang, prose } from './guide/view';
 import './mechanics.css';
 

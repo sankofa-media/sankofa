@@ -88,7 +88,7 @@ if (objSrc.gramophone) {
   else objects.gramophone = { card: g.card, audio: g.audio, rpm: g.rpm ?? 78 };
 }
 for (const key of ['tr808', 'amen'] as const) {
-  const o = objSrc[key] as { card: string; tempo: number; pattern: Record<string, string>; youtube?: { id: string; title: string; channel: string; start?: number } } | undefined;
+  const o = objSrc[key] as { card: string; tempo: number; pattern: Record<string, string> } | undefined;
   if (!o) continue;
   if (!cards.has(o.card)) {
     errors.push(`objects.yaml: ${key} card ${o.card} does not exist`);
@@ -97,7 +97,8 @@ for (const key of ['tr808', 'amen'] as const) {
   try {
     const pattern = parsePattern(o.pattern);
     if (key === 'tr808') objects.tr808 = { card: o.card, tempo: o.tempo, pattern };
-    else objects.amen = { card: o.card, tempo: o.tempo, pattern, ...(o.youtube ? { youtube: o.youtube } : {}) };
+    // Its recording is the card's entry in listen.yaml; a `youtube` copy here is ignored.
+    else objects.amen = { card: o.card, tempo: o.tempo, pattern };
   } catch (e) {
     errors.push(`objects.yaml: ${key}: ${(e as Error).message}`);
   }
