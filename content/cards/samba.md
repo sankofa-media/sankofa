@@ -18,6 +18,7 @@ dispute: "'Pelo Telefone' is often called the first samba, but earlier discs use
 sources:
   - {title: "UNESCO ICH: Samba de Roda of the Recôncavo of Bahia", url: "https://ich.unesco.org/en/RL/samba-de-roda-of-the-reconcavo-of-bahia-00101"}
   - {title: "Instituto Moreira Salles: Little Africas, QR code 10", url: "https://ims.com.br/2023/10/09/little-africas-qr-code-10/"}
+  - {title: "Instituto Moreira Salles: Little Africas, QR code 18 (Donga and Pelo telefone)", url: "https://ims.com.br/2023/10/09/little-africas-qr-code-18/"}
   - {title: "Espaço do Conhecimento UFMG: Tia Ciata, a matriarca do samba", url: "https://www.ufmg.br/espacodoconhecimento/blog-espaco/tia-ciata-a-matriarca-do-samba/"}
   - {title: "Dicionário Cravo Albin: Tia Ciata", url: "http://dicionariompb.com.br/personalidade/tia-ciata"}
   - {title: "USP: O centenário de Pelo Telefone", url: "https://jornal.usp.br/artigos/o-centenario-de-pelo-telefone/"}
