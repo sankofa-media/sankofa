@@ -68,8 +68,8 @@ const MECHANISMS: Mechanism[] = [
   {
     name: 'Credits',
     culture: {
-      en: 'Big Mama Thornton recorded “Hound Dog” in 1952; most people know Elvis Presley’s version of 1956.',
-      ru: 'Биг Мама Торнтон записала «Hound Dog» в 1952 году; большинство знает версию Элвиса Пресли 1956 года.',
+      en: 'Again and again a Black musician recorded a song first, and the version the world remembers, with the credit and the money, came later from someone else.',
+      ru: 'Снова и снова чернокожий музыкант записывал песню первым, а версия, которую помнит мир, — вместе с признанием и деньгами — появлялась позже у кого-то другого.',
     },
     does: {
       en: 'Every container image stands on other images. Credits shows that lineage and warns when it is not declared.',

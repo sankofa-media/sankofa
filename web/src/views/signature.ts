@@ -3,7 +3,7 @@
 // insert, or a sentence set large. No new facts here.
 import type { App } from '../app';
 import type { Card } from '../lib/types';
-import { cardForEdition, formatYears } from '../lib/cards';
+import { cardForEdition, formatYears, links } from '../lib/cards';
 import { h, reducedMotion } from '../lib/dom';
 import { lang, pick } from '../lib/i18n';
 import { progressive } from '../lib/media';
@@ -66,15 +66,42 @@ export function freshLine(c: Card, near: string): string {
   return candidates.find((x) => !repeats(x, near)) ?? '';
 }
 
-export function signature(app: App, chapterId: string, cards: Card[], fallback?: Card, near = ''): HTMLElement | null {
+const hasImage = (c: Card) => !!c.media?.some((m) => m.type === 'image');
+
+/**
+ * The card a chapter's interlude is built from. It is never one the reader's
+ * steps already narrate: the planned card when the prose leaves it out,
+ * otherwise another unnarrated card of the chapter (one with a picture for a
+ * plate, a short hook for a quote), otherwise none at all.
+ */
+export function pickInterlude(chapterId: string, cards: Card[], narrated: Set<string>): Card | undefined {
+  const pool = cards.filter((c) => !narrated.has(c.id));
+  if (!pool.length) return undefined;
   const plan = PLAN[chapterId];
-  const c0 = (plan && cards.find((x) => x.id === plan.card)) ?? fallback;
+  const planned = plan && pool.find((c) => c.id === plan.card);
+  if (planned) return planned;
+  if (plan && (plan.kind === 'plate' || plan.kind === 'insert')) {
+    const pic = pool.find(hasImage);
+    if (pic) return pic;
+  }
+  return pool.find((c) => c.wow.length < 140) ?? pool[0];
+}
+
+/** Every card a chapter's steps link to. */
+export function narratedCards(steps: string[]): Set<string> {
+  return new Set(steps.flatMap((s) => links(s)));
+}
+
+export function signature(app: App, chapterId: string, c0: Card | undefined, near = ''): HTMLElement | null {
+  const plan = PLAN[chapterId];
   if (!c0) return null;
   // An interlude never repeats a fact the step beside it has just told.
   const line = freshLine(c0, near);
   const c = { ...c0, wow: line };
   const img = c.media?.find((m) => m.type === 'image');
-  let kind: Kind = plan && plan.card === c.id ? plan.kind : 'quote';
+  // A stand-in for the planned card keeps a plate a plate when it has a picture;
+  // the cartridge and the counter belong to their own cards.
+  let kind: Kind = plan && plan.card === c.id ? plan.kind : plan && (plan.kind === 'plate' || plan.kind === 'insert') && img ? 'plate' : 'quote';
   if ((kind === 'plate' || kind === 'insert') && !img) kind = 'quote';
   const r0 = app.raw(c.id);
   const raw = r0 ? cardForEdition(r0, app.edition) : c;

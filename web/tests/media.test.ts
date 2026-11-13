@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { mediaSrc, setVariants } from '../src/lib/media';
-import { firstBigNumber, qualifierOf } from '../src/views/signature';
+import { firstBigNumber, narratedCards, pickInterlude, qualifierOf } from '../src/views/signature';
+import type { Card } from '../src/lib/types';
 
 const app = { media: (f: string) => `media/${f}` };
 
@@ -40,5 +41,18 @@ describe('map labels', () => {
     expect(shortLabel('Partus sequitur ventrem: Virginia, 1662', 40)).toBe('Partus sequitur ventrem');
     expect(shortLabel('Joseph Bologne, Chevalier de Saint-Georges', 40)).toBe('Joseph Bologne');
     expect(shortLabel('Dahomey the Aro and the African side of the trade', 22)).toBe('Dahomey the Aro and…');
+  });
+});
+
+describe('interludes', () => {
+  const c = (id: string, extra: Partial<Card> = {}): Card => ({ id, kind: 'person', title: id, wow: 'a short hook', years: [1900], places: [], zoom: 4, books: ['heirs'], sources: [], body: '', ...extra });
+  const img = { media: [{ type: 'image' as const, file: 'x.jpg', credit: '', license: '' }] };
+
+  it('never picks a card the steps narrate, and none when all are narrated', () => {
+    const cards = [c('timbuktu-manuscripts', img), c('mansa-musa'), c('kora', img)];
+    expect(pickInterlude('v0', cards, new Set(['timbuktu-manuscripts']))?.id).toBe('kora');
+    expect(pickInterlude('v0', cards, new Set())?.id).toBe('timbuktu-manuscripts');
+    expect(pickInterlude('v0', cards, new Set(['timbuktu-manuscripts', 'mansa-musa', 'kora']))).toBeUndefined();
+    expect(pickInterlude('v6', [c('big-mama-thornton'), c('funk')], narratedCards(['[[big-mama-thornton|Thornton]]’s “Hound Dog”']))?.id).toBe('funk');
   });
 });

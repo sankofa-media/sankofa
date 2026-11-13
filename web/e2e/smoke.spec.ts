@@ -273,7 +273,8 @@ test('descent cards hold their text and the level control changes what is shown'
 
 test('each chapter ends on a quiet editorial beat, and maps never stack labels', async ({ page }) => {
   await page.goto('/');
-  await expect(page.locator('.strip h3').first()).toHaveText('More from this chapter');
+  // A strip appears only where the chapter has cards its steps did not narrate.
+  if (await page.locator('.strip').count()) await expect(page.locator('.strip h3').first()).toHaveText('More from this chapter');
   await expect(page.locator('.ch-cluster')).toHaveCount(0);
   await expect(page.locator('.toc-grid')).not.toContainText(/release/);
   await expect(page.locator('.toc-head h2')).toHaveText(/Eight\schapters|Восемь\sглав/);
@@ -294,6 +295,16 @@ test('each chapter ends on a quiet editorial beat, and maps never stack labels',
     return n;
   });
   expect(overlaps).toBe(0);
+});
+
+test('interludes and strips never repeat a card the steps of this copy narrate', async ({ page }) => {
+  await page.goto('/');
+  for (const ch of await page.locator('article.chapter').all()) {
+    const narrated = await ch.locator('.step a.xref').evaluateAll((as) => as.map((a) => a.getAttribute('data-card')));
+    expect(narrated.length).toBeGreaterThan(0);
+    const again = await ch.locator('.sig a[data-card], .interlude a[data-card], .strip a[data-card]').evaluateAll((as) => as.map((a) => a.getAttribute('data-card')));
+    expect(again.filter((id) => narrated.includes(id))).toEqual([]);
+  }
 });
 
 test('a card panel holds the page still; the counter keeps the card wording', async ({ page }) => {

@@ -10,7 +10,7 @@ import { lang, pick, t } from '../lib/i18n';
 import { chapterCopy, eraColor, isNonPlace, readerCards } from '../lib/atlasModel';
 import { MOVEMENTS, movementText } from '../lib/movements';
 import { mediaSrc, progressive } from '../lib/media';
-import { signature, SIGNATURE_CARD } from './signature';
+import { narratedCards, pickInterlude, signature } from './signature';
 import { GeoMap, LEVEL_K, type MapRoute } from './map';
 import { Timeline } from './timeline';
 import { editionNote } from './editionNote';
@@ -238,6 +238,10 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
   const swap = swapMedia ? { pos: swapPos } : undefined;
   const color = eraColor(ch.id);
   const cards = chapterCopy(app.set, app.edition, ch);
+  // What the reader's own steps already tell is never told again below them:
+  // not as an interlude, not in the strip.
+  const narrated = narratedCards(ch.steps);
+  const sigCard = pickInterlude(ch.id, cards, narrated);
 
   const mapHero = !ch.hero?.file || ch.hero.file === COVER_IMAGE;
   const hero = h(
@@ -265,7 +269,7 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
     if (i === 0 || used.size >= 3) return undefined;
     const c = stepCards(app, s)
       .map((x) => inCopy(app, x))
-      .find((x) => x.media?.some((m) => m.type === 'image') && !used.has(x.id) && x.id !== SIGNATURE_CARD[ch.id] && x.media?.find((m) => m.type === 'image')?.file !== ch.hero?.file);
+      .find((x) => x.media?.some((m) => m.type === 'image') && !used.has(x.id) && x.id !== sigCard?.id && x.media?.find((m) => m.type === 'image')?.file !== ch.hero?.file);
     if (c) used.add(c.id);
     return c;
   });
@@ -289,15 +293,12 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
   });
   const scrolly = h('div.scrolly', {}, graphic, h('div.steps', {}, steps));
 
-  // The interlude never repeats a hook the strip right below will show again.
-  const fallback = cards.slice(LEAD_CARDS).find((c) => c.wow.length < 140) ?? cards.find((c, i) => i > 0 && c.wow.length < 140) ?? cards[0];
   const near = ch.steps.join(' ').replace(/\[\[[^|\]]*\|?([^\]]*)\]\]/g, '$1');
-  const interlude = signature(app, ch.id, cards, fallback, near);
+  const interlude = signature(app, ch.id, sigCard, near);
 
   const LEAD = LEAD_CARDS;
-  // The card the signature already set large goes to the end of the strip.
-  const sigId = SIGNATURE_CARD[ch.id];
-  const stripCards = [...cards.filter((c) => c.id !== sigId), ...cards.filter((c) => c.id === sigId)];
+  // More from the chapter means more: neither a card the steps narrated nor the interlude's.
+  const stripCards = cards.filter((c) => !narrated.has(c.id) && c.id !== (interlude ? sigCard?.id : undefined));
   const rest = stripCards.slice(LEAD);
   const more = rest.length
     ? h(
@@ -315,7 +316,7 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
       )
     : null;
   // A quiet editorial beat, not a catalogue: a few more pages from the chapter.
-  const strip = cards.length
+  const strip = stripCards.length
     ? h(
         'section.strip',
         {},
