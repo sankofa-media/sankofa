@@ -126,7 +126,7 @@ func (a *Authenticator) User(r *http.Request) (string, []string, error) {
 
 // API serves the history group for the aggregator.
 type API struct {
-	Store *Store
+	Store Store
 	Auth  *Authenticator
 	Kube  kubernetes.Interface
 }
@@ -238,7 +238,7 @@ func (a *API) serve(w http.ResponseWriter, r *http.Request) {
 	}
 	tl := toTimeline(ref, life)
 	if at := r.URL.Query().Get("at"); at != "" {
-		t, err := time.Parse(time.RFC3339, at)
+		t, err := time.Parse(time.RFC3339Nano, at)
 		if err != nil {
 			status(w, 400, metav1.StatusReasonBadRequest, "at must be RFC3339")
 			return
@@ -260,6 +260,40 @@ func (a *API) serve(w http.ResponseWriter, r *http.Request) {
 }
 
 func (a *API) list(ctx context.Context, w http.ResponseWriter, r *http.Request, user string, groups []string, ns string, cluster bool) {
+	kind := "TimelineList"
+	if cluster {
+		kind = "ClusterTimelineList"
+	}
+	out := TimelineList{TypeMeta: metav1.TypeMeta{Kind: kind, APIVersion: Group + "/" + Version}, Items: []Timeline{}}
+	check := a.checker(ctx, user, groups)
+	if at := r.URL.Query().Get("at"); at != "" {
+		// The namespace (or the cluster scope) as it was at a moment: every
+		// object alive then, with its state.
+		t, err := time.Parse(time.RFC3339Nano, at)
+		if err != nil {
+			status(w, 400, metav1.StatusReasonBadRequest, "at must be RFC3339")
+			return
+		}
+		if ns == metav1.NamespaceAll && !cluster {
+			status(w, 400, metav1.StatusReasonBadRequest, "?at= lists one namespace at a time")
+			return
+		}
+		recs, err := a.Store.NamespaceAt(ctx, ns, t)
+		if err != nil {
+			status(w, 500, metav1.StatusReasonInternalError, err.Error())
+			return
+		}
+		for _, rec := range recs {
+			if !check(rec.Ref) {
+				continue
+			}
+			tl := toTimeline(rec.Ref, []Record{rec})
+			tl.Object = rec.Object
+			out.Items = append(out.Items, tl)
+		}
+		writeJSON(w, 200, out)
+		return
+	}
 	limit := 100
 	if l, err := strconv.Atoi(r.URL.Query().Get("limit")); err == nil && l > 0 && l <= 1000 {
 		limit = l
@@ -269,19 +303,30 @@ func (a *API) list(ctx context.Context, w http.ResponseWriter, r *http.Request, 
 		status(w, 500, metav1.StatusReasonInternalError, err.Error())
 		return
 	}
-	kind := "TimelineList"
-	if cluster {
-		kind = "ClusterTimelineList"
-	}
-	out := TimelineList{TypeMeta: metav1.TypeMeta{Kind: kind, APIVersion: Group + "/" + Version}, Items: []Timeline{}}
 	for _, rec := range recs {
-		if cluster != (rec.Ref.Namespace == "") || !a.allowed(ctx, user, groups, rec.Ref) {
+		if cluster != (rec.Ref.Namespace == "") || !check(rec.Ref) {
 			continue
 		}
 		tl := toTimeline(rec.Ref, []Record{rec})
 		out.Items = append(out.Items, tl)
 	}
 	writeJSON(w, 200, out)
+}
+
+// checker authorises many objects of one request. A caller who may get a
+// resource in the whole namespace may read the memory of all its objects
+// with one review; otherwise each object is reviewed by name.
+func (a *API) checker(ctx context.Context, user string, groups []string) func(Ref) bool {
+	wide := map[Ref]bool{}
+	return func(ref Ref) bool {
+		k := Ref{Group: ref.Group, Resource: ref.Resource, Namespace: ref.Namespace}
+		ok, seen := wide[k]
+		if !seen {
+			ok = a.allowed(ctx, user, groups, k)
+			wide[k] = ok
+		}
+		return ok || a.allowed(ctx, user, groups, ref)
+	}
 }
 
 func (a *API) allowed(ctx context.Context, user string, groups []string, ref Ref) bool {
