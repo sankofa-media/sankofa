@@ -1,0 +1,77 @@
+{{- include "griot.validate" . }}
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: {{ include "griot.name" . }}
+  namespace: {{ .Release.Namespace }}
+  labels: {{- include "griot.labels" . | nindent 4 }}
+---
+# Griot reads everything to remember everything. Secret values are redacted
+# before they reach the informer cache and the store; reads of the memory are
+# authorised per caller with SubjectAccessReview.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: {{ .Release.Namespace }}:{{ include "griot.name" . }}
+  labels: {{- include "griot.labels" . | nindent 4 }}
+rules:
+  - apiGroups: ["*"]
+    resources: ["*"]
+    verbs: ["get", "list", "watch"]
+  - apiGroups: ["authorization.k8s.io"]
+    resources: ["subjectaccessreviews"]
+    verbs: ["create"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: {{ .Release.Namespace }}:{{ include "griot.name" . }}
+  labels: {{- include "griot.labels" . | nindent 4 }}
+roleRef: {apiGroup: rbac.authorization.k8s.io, kind: ClusterRole, name: {{ .Release.Namespace }}:{{ include "griot.name" . }}}
+subjects: [{kind: ServiceAccount, name: {{ include "griot.name" . }}, namespace: {{ .Release.Namespace }}}]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: {{ .Release.Namespace }}:{{ include "griot.name" . }}:auth-reader
+  namespace: kube-system
+  labels: {{- include "griot.labels" . | nindent 4 }}
+roleRef: {apiGroup: rbac.authorization.k8s.io, kind: Role, name: extension-apiserver-authentication-reader}
+subjects: [{kind: ServiceAccount, name: {{ include "griot.name" . }}, namespace: {{ .Release.Namespace }}}]
+{{- if gt (int .Values.replicas) 1 }}
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: {{ include "griot.name" . }}-leader
+  namespace: {{ .Release.Namespace }}
+  labels: {{- include "griot.labels" . | nindent 4 }}
+rules:
+  - apiGroups: ["coordination.k8s.io"]
+    resources: ["leases"]
+    verbs: ["get", "create", "update"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: {{ include "griot.name" . }}-leader
+  namespace: {{ .Release.Namespace }}
+  labels: {{- include "griot.labels" . | nindent 4 }}
+roleRef: {apiGroup: rbac.authorization.k8s.io, kind: Role, name: {{ include "griot.name" . }}-leader}
+subjects: [{kind: ServiceAccount, name: {{ include "griot.name" . }}, namespace: {{ .Release.Namespace }}}]
+{{- end }}
+---
+# Everyone who may read an object may read its memory.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: griot:memory-reader
+  labels:
+    {{- include "griot.labels" . | nindent 4 }}
+    rbac.authorization.k8s.io/aggregate-to-view: "true"
+    rbac.authorization.k8s.io/aggregate-to-edit: "true"
+    rbac.authorization.k8s.io/aggregate-to-admin: "true"
+rules:
+  - apiGroups: ["history.sankofa.kuberoot.dev"]
+    resources: ["timelines", "clustertimelines"]
+    verbs: ["get", "list"]
