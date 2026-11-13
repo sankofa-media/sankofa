@@ -17,7 +17,9 @@ unset GOFLAGS
 mkdir -p "$OUT"
 for c in kube-apiserver kube-controller-manager; do
   CGO_ENABLED=0 GOOS=linux GOARCH="$ARCH" go build -p "${JOBS:-2}" -trimpath \
-    -ldflags "-s -w -X k8s.io/component-base/version.gitVersion=$VERSION+sankofa -X k8s.io/component-base/version.gitTreeState=clean" \
+    -ldflags "-s -w -X k8s.io/component-base/version.gitVersion=$VERSION+sankofa -X k8s.io/component-base/version.gitTreeState=clean \
+      -X k8s.io/component-base/version.gitMajor=$(echo "$VERSION" | cut -d. -f1 | tr -d v) \
+      -X k8s.io/component-base/version.gitMinor=$(echo "$VERSION" | cut -d. -f2)" \
     -o "$OUT/$c" "./cmd/$c"
 done
 ls "$HERE/$VERSION"/*.patch | xargs -n1 basename > "$OUT/PATCHES"

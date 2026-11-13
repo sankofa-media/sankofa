@@ -12,7 +12,7 @@ Job pods carry a nodeSelector that matches no node by default (--unschedulable),
 so a run loads the control plane (API server, storage, controllers, scheduler)
 without placing pods on nodes or triggering a cluster autoscaler.
 """
-import argparse, json, re, subprocess, sys, time
+import argparse, json, re, ssl, subprocess, sys, time, urllib.request
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 
@@ -25,9 +25,23 @@ def kubectl(a, *args, data=None, check=True):
     return r
 
 
+def fnv32a(data):
+    h = 0x811C9DC5
+    for b in data.encode():
+        h = ((h ^ b) * 0x01000193) & 0xFFFFFFFF
+    return h
+
+
 def cronjob(a, i):
+    name = f"{a.arm}-{i:04d}"
+    schedule = a.schedule
+    if a.hash_minutes:
+        # What a minute-granular spread (Jenkins H, Sankofa's webhook) produces:
+        # the minute moves by a hash of namespace/name within a window.
+        minute, rest = schedule.split(" ", 1)
+        schedule = f"{(int(minute) + fnv32a(f'{a.namespace}/{name}') % a.hash_minutes) % 60} {rest}"
     spec = {
-        "schedule": a.schedule,
+        "schedule": schedule,
         "concurrencyPolicy": "Forbid",
         "successfulJobsHistoryLimit": 1,
         "failedJobsHistoryLimit": 1,
@@ -46,7 +60,7 @@ def cronjob(a, i):
     if a.spread:
         spec["scheduleSpread"] = {"maxDelaySeconds": a.spread}
     return {"apiVersion": "batch/v1", "kind": "CronJob",
-            "metadata": {"name": f"{a.arm}-{i:04d}", "namespace": a.namespace, "labels": {"bench": a.arm}},
+            "metadata": {"name": name, "namespace": a.namespace, "labels": {"bench": a.arm}},
             "spec": spec}
 
 
@@ -70,6 +84,22 @@ KEEP = re.compile(r'^(apiserver_request_total|apiserver_request_duration_seconds
 RES = ('resource="jobs"', 'resource="pods"', 'resource="cronjobs"', 'resource="events"', 'resource="pods/binding"')
 
 
+EXTRA = re.compile(r'^(etcd_mvcc_(put|delete|txn)_total|etcd_disk_wal_fsync_duration_seconds_count'
+                   r'|etcd_server_proposals_committed_total|process_cpu_seconds_total'
+                   r'|cronjob_controller_job_creation_skew_duration_seconds_(bucket|count|sum)'
+                   r'|workqueue_depth\{name="(cronjob|job|job_orphan_pod)"'
+                   r'|scheduler_pending_pods|scheduler_schedule_attempts_total)')
+
+
+def scrape(url):
+    ctx = ssl.create_default_context()
+    ctx.check_hostname, ctx.verify_mode = False, ssl.CERT_NONE
+    try:
+        return urllib.request.urlopen(url, timeout=10, context=ctx).read().decode()
+    except Exception:
+        return ""
+
+
 def sample(a):
     end = time.time() + a.duration
     with open(a.out, "a") as f:
@@ -86,6 +116,12 @@ def sample(a):
                 if name.startswith("apiserver_storage_objects") and not any(x in name for x in ('="jobs.batch"', '="pods"', '="cronjobs.batch"', '="events"')):
                     continue
                 series[name] = float(val)
+            for spec in a.extra:
+                tag, _, url = spec.partition("=")
+                for line in scrape(url).splitlines():
+                    if EXTRA.match(line):
+                        name, _, val = line.rpartition(" ")
+                        series[f"{tag}:{name}"] = float(val)
             f.write(json.dumps({"t": t, "s": series}) + "\n")
             f.flush()
             time.sleep(max(0, a.interval - (time.time() - t)))
@@ -185,6 +221,30 @@ def report(a):
     out["storage_writes_in_window"] = int(etcd_writes)
     out["storage_peak_writes_per_second"] = round(peak_etcd, 1)
     out["apf_peak_inqueue_requests"] = peak_inflight
+    for tag, metric in (("etcd", "etcd_mvcc_put_total"), ("etcd", "etcd_mvcc_txn_total"),
+                        ("etcd", "etcd_disk_wal_fsync_duration_seconds_count")):
+        key = f"{tag}:{metric}"
+        vals = [(r["t"], r["s"][key]) for r in rows if key in r["s"]]
+        if len(vals) > 1:
+            out[f"{key}_in_window"] = int(vals[-1][1] - vals[0][1])
+            out[f"{key}_peak_per_second"] = round(max((v2 - v1) / (t2 - t1) for (t1, v1), (t2, v2) in zip(vals, vals[1:])), 1)
+    for name in ("process_cpu_seconds_total", "etcd:process_cpu_seconds_total", "kcm:process_cpu_seconds_total", "sched:process_cpu_seconds_total"):
+        vals = [(r["t"], r["s"][name]) for r in rows if name in r["s"]]
+        if len(vals) > 1:
+            out[f"{name}_peak_cores"] = round(max((v2 - v1) / (t2 - t1) for (t1, v1), (t2, v2) in zip(vals, vals[1:])), 2)
+            out[f"{name}_in_window"] = round(vals[-1][1] - vals[0][1], 1)
+    for name in ('kcm:workqueue_depth{name="cronjob"}', 'kcm:workqueue_depth{name="job"}', "sched:scheduler_pending_pods{queue=\"unschedulable\"}", "sched:scheduler_pending_pods{queue=\"active\"}"):
+        vals = [r["s"][name] for r in rows if name in r["s"]]
+        if vals:
+            out[f"{name}_peak"] = max(vals)
+    skew = defaultdict(float)
+    first = next((r for r in rows if any(k.startswith("kcm:cronjob_controller_job_creation_skew_duration_seconds_bucket") for k in r["s"])), None)
+    if first:
+        last = rows[-1]
+        for k, v in last["s"].items():
+            if k.startswith("kcm:cronjob_controller_job_creation_skew_duration_seconds_bucket"):
+                skew[float(re.search(r'le="([^"]+)"', k).group(1))] = v - first["s"].get(k, 0)
+        out["kcm_job_creation_skew_p50_p99_seconds"] = [quantile(list(skew.items()), 0.5), quantile(list(skew.items()), 0.99)]
     out["post_latency_p99_seconds"] = {r: quantile(list(b.items()), 0.99) for r, b in lat.items()}
     print(json.dumps(out, indent=1))
 
@@ -199,7 +259,8 @@ def main():
     c.add_argument("--n", type=int, default=1000)
     c.add_argument("--schedule", required=True)
     c.add_argument("--arm", required=True)
-    c.add_argument("--spread", type=int, default=0)
+    c.add_argument("--spread", type=int, default=0, help="spec.scheduleSpread.maxDelaySeconds")
+    c.add_argument("--hash-minutes", type=int, default=0, help="move the minute by fnv32a(ns/name) mod N")
     c.add_argument("--image", default="registry.k8s.io/pause:3.10")
     c.add_argument("--unschedulable", action=argparse.BooleanOptionalAction, default=True)
     c.add_argument("--chunk", type=int, default=50)
@@ -208,6 +269,8 @@ def main():
     s.add_argument("--out", required=True)
     s.add_argument("--interval", type=float, default=5)
     s.add_argument("--duration", type=float, required=True)
+    s.add_argument("--extra", action="append", default=[], metavar="TAG=URL",
+                   help="also scrape this metrics URL (etcd, controller-manager, scheduler)")
     o = sub.add_parser("collect")
     o.add_argument("--out", required=True)
     sub.add_parser("suspend")
