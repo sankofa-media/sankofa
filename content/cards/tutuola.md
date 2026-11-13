@@ -26,15 +26,4 @@ sources:
 media:
   - {"type": "image", "file": "tutuola.jpg", "caption": "A palm-wine tapper climbing a palm tree, 27 January 2024", "credit": "Goodymeraj", "license": "CC0", "url": "https://commons.wikimedia.org/wiki/File:A_palm_wine_tapper_01.jpg"}
 ---
-A government employee in Lagos wrote a Yoruba journey to the land of the
-dead in his own English, and Dylan Thomas, reviewing it in The Observer,
-called it bewitching. Amos Tutuola was born in Abeokuta in 1920. His book
-follows a man who drinks palm wine all day and, when his tapster dies, walks
-to Deads' Town to bring him back, past fantastic creatures drawn from Yoruba
-tales. Faber published The Palm-Wine Drinkard in London in 1952, and Thomas
-was wildly enthusiastic. Reportedly many Nigerian readers were not: they
-called the English broken and the stories borrowed, though how far reception
-split this way is contested. The argument over whose English an African
-writer should use ran on through [[achebe|Chinua Achebe]] and [[ngugi|Ngũgĩ
-wa Thiong'o]]; compare the Yoruba voices of [[talking-drums|the talking
-drums]].
+Amos Tutuola, born in Abeokuta in 1920, was a government messenger in Lagos when he wrote a Yoruba journey to the land of the dead in his own English. His hero drinks palm wine all day and, when his tapster dies, walks to Deads' Town to bring him back, meeting creatures from Yoruba tales. Faber published The Palm-Wine Drinkard in London in 1952. Dylan Thomas, reviewing it in The Observer, was wildly enthusiastic and called it bewitching. Many Nigerian readers reportedly called its English broken and its stories borrowed, though how widely is contested. Tutuola became the first Nigerian writer to win international recognition, went on to My Life in the Bush of Ghosts (1954) and died in Nigeria in 1997. The argument over whose English African writers should use ran on through [[achebe|Chinua Achebe]] and [[ngugi|Ngũgĩ wa Thiong'o]].

@@ -26,12 +26,4 @@ sources:
 media:
   - {type: "image", file: "zong.jpg", caption: "Report of Gregson v. Gilbert, Douglas's Reports, vol. 3, 1831, p. 232", credit: "Oxford University copy, digitised by Google, via Internet Archive", license: "Public domain", url: "https://archive.org/details/reportscasesarg04glengoog/page/n248/mode/1up"}
 ---
-More than 130 Africans were thrown into the sea, and the owners then claimed
-them on insurance as lost cargo. In late 1781 the Liverpool-owned slave ship
-Zong overshot Jamaica, and the crew threw captives overboard; accounts of
-the exact number differ. In 1783 a jury found for the owners. [[equiano|Olaudah Equiano]]
-carried the news to [[granville-sharp|Granville Sharp]], who demanded a murder trial and
-never got one. In May Lord Mansfield's court granted the insurers a new
-trial; there is no evidence it was ever held. In 2008 M. NourbeSe Philip
-built a poem, Zong!, only from the words of the case report, Gregson v.
-Gilbert. Compare the [[brookes|Brookes]] print.
+In late 1781 the Liverpool-owned slave ship Zong, packed with twice the captives it was built for, overshot Jamaica. Its master, Luke Collingwood, and the crew threw more than 130 Africans into the sea; accounts of the exact number differ. The crew later claimed the water was running out, which the insurers disputed, and the owners claimed the dead on insurance as lost cargo. In 1783 a jury found for the owners. [[equiano|Olaudah Equiano]] carried the news to [[granville-sharp|Granville Sharp]], who demanded a murder trial and never got one. In May Lord Mansfield's court granted the insurers a new trial; there is no evidence it was ever held. Outrage over the killings fed the abolition society founded in 1787. In 2008 M. NourbeSe Philip built a poem, Zong!, only from the words of the case report, Gregson v. Gilbert.
