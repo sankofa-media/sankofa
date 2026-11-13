@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"strconv"
 	"strings"
+	"sync"
 	"time"
 
 	authzv1 "k8s.io/api/authorization/v1"
@@ -129,6 +130,8 @@ type API struct {
 	Store Store
 	Auth  *Authenticator
 	Kube  kubernetes.Interface
+
+	cache sync.Map // review key -> verdict
 }
 
 func (a *API) Handler() http.Handler {
@@ -329,7 +332,26 @@ func (a *API) checker(ctx context.Context, user string, groups []string) func(Re
 	}
 }
 
+// authzTTL is how long a review result is reused, like the API server's
+// webhook authorizer cache, but short: revoking access takes effect within it.
+const authzTTL = 10 * time.Second
+
+type verdict struct {
+	ok      bool
+	expires time.Time
+}
+
 func (a *API) allowed(ctx context.Context, user string, groups []string, ref Ref) bool {
+	key := user + "\x00" + strings.Join(groups, ",") + "\x00" + ref.String()
+	if v, ok := a.cache.Load(key); ok && time.Now().Before(v.(verdict).expires) {
+		return v.(verdict).ok
+	}
+	ok := a.review(ctx, user, groups, ref)
+	a.cache.Store(key, verdict{ok: ok, expires: time.Now().Add(authzTTL)})
+	return ok
+}
+
+func (a *API) review(ctx context.Context, user string, groups []string, ref Ref) bool {
 	sar := &authzv1.SubjectAccessReview{Spec: authzv1.SubjectAccessReviewSpec{
 		User: user, Groups: groups,
 		ResourceAttributes: &authzv1.ResourceAttributes{Verb: "get", Group: ref.Group, Resource: ref.Resource, Namespace: ref.Namespace, Name: ref.Name},

@@ -158,6 +158,9 @@ func run(ctx context.Context, log *slog.Logger, o options) error {
 	if err != nil {
 		return err
 	}
+	// Every read of the memory costs a SubjectAccessReview; the client-go
+	// default of 5 requests per second would cap the API at a few reads.
+	cfg.QPS, cfg.Burst = 100, 200
 	kube := kubernetes.NewForConfigOrDie(cfg)
 	sch := runtime.NewScheme()
 	_ = clientgoscheme.AddToScheme(sch)
