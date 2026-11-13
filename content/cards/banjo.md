@@ -30,7 +30,7 @@ sources:
   - {title: "A quantitative approach to the origins of the banjo, Humanities and Social Sciences Communications (2022)", url: "https://www.nature.com/articles/s41599-022-01401-3"}
   - {title: "Guitar World, How T-Bone Walker invented electric blues guitar (2025)", url: "https://www.guitarworld.com/artists/guitarists/t-bone-walker-and-the-birth-of-electric-blues-guitar"}
   - {title: "Barry Lee Pearson, Appalachian Blues, Smithsonian Folkways Magazine (2010), oral-history interviews and string-band discussion", url: "https://folkways.si.edu/magazine-summer-2010-appalachian-blues/african-american-folk/music/article/smithsonian"}
-  - {title: "Nonesuch Journal: Grammy Awards go to the Black Keys, Carolina Chocolate Drops (2011)", url: "https://nonesuch.com/journal/grammy-awards-go-to-the-black-keys-carolina-chocolate-drops-ali-farka-toure-toumani-diabate-2011-02-13"}
+  - {title: "Recording Academy: Best Traditional Folk Album, 2011 winners", url: "https://www.grammy.com/awards/categories/best-traditional-folk-album/2011/"}
   - {title: "Earl Scruggs Center: Carolina Chocolate Drops", url: "https://earlscruggscenter.org/carolina-chocolate-drops/"}
 media:
   - {type: "image", file: "banjo.jpg", caption: "\"The Old Plantation\", watercolour attributed to John Rose, South Carolina, about 1785–1790: a gourd banjo and a drum accompany dancers", credit: "Attributed to John Rose; image via Colonial Williamsburg", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Slave_dance_to_banjo,_1780s.jpg"}

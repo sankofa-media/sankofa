@@ -25,6 +25,7 @@ sources:
   - {title: "Wikimedia Commons: title page, Wittenberg 1734", url: "https://commons.wikimedia.org/wiki/File:Anton_Wilhelm_Amo_(c._1703_%E2%80%93_c._1759)_-_Dissertatio_inauguralis_philosophica_de_humanae_mentis_apatheia,_Wittenberg,_1734,_title_page.jpg"}
   - {title: "Berlin.de, Bezirk Mitte: Koloniale Straßennamen und ihre Umbenennung", url: "https://www.berlin.de/kunst-und-kultur-mitte/geschichte/erinnerungskultur/strassenbenennungen/artikel.1066742.php"}
   - {title: "ZDFheute: Berlin, Mohrenstraße in Anton-Wilhelm-Amo-Straße umbenannt (2025)", url: "https://www.zdfheute.de/politik/deutschland/mohrenstrasse-berlin-umbenannt-anton-wilhelm-amo-100.html"}
+  - {title: "Parliament of Ghana, Hansard: Legacy of Anton Wilhelm Amo", url: "https://www.parliament.gh/floor?dis=166"}
 media:
   - {type: "image", file: "amo.jpg", caption: "Title page of Amo's dissertation De humanae mentis apatheia, Wittenberg, 1734", credit: "Anton Wilhelm Amo; scan Staatsbibliothek zu Berlin, via Wikimedia Commons", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Anton_Wilhelm_Amo_(c._1703_%E2%80%93_c._1759)_-_Dissertatio_inauguralis_philosophica_de_humanae_mentis_apatheia,_Wittenberg,_1734,_title_page.jpg"}
 ---

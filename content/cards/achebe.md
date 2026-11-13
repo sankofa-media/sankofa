@@ -29,6 +29,7 @@ sources:
   - {title: "Al Jazeera: Nigeria novelist Achebe dies in Boston (2013)", url: "https://www.aljazeera.com/news/africa/2013/03/2013322203632128819.html"}
   - {title: "Times Higher Education: Story-teller torn from his roots", url: "https://www.timeshighereducation.com/node/95698"}
   - {title: "Bard College alumni: Chinua Achebe, 1930–2013", url: "https://alums.bard.edu/news/remembrances/chinua-achebe-1930-2013"}
+  - {title: "Encyclopaedia Britannica: Chinua Achebe", url: "https://www.britannica.com/biography/Chinua-Achebe"}
 media:
   - {type: "image", file: "achebe.jpg", caption: "Chinua Achebe speaking at Asbury Hall, Buffalo, New York, 25 September 2008", credit: "Stuart C. Shapiro, via Wikimedia Commons", license: "CC BY 3.0", url: "https://commons.wikimedia.org/wiki/File:Chinua_Achebe_-_Buffalo_25Sep2008_crop.jpg"}
 ---
