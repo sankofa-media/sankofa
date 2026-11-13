@@ -1,0 +1,613 @@
+# Official recordings to listen to, by card or roots artist.
+# Every id was checked against YouTube oEmbed (HTTP 200) on 2026-11-13;
+# title and channel are the oEmbed title and author_name as returned.
+cards:
+  afrobeat:
+    youtube: "Qj5x6pbJMyU"
+    title: "Fela Kuti - Zombie"
+    channel: "Fela Kuti"
+    note: "Fela Kuti and Africa 70, \"Zombie\" (1976), the album that attacked the military"
+  amen-break:
+    youtube: "HrrWhCbZAyY"
+    title: "Amen Brother"
+    channel: "The Winstons - Topic"
+    note: "The Winstons, \"Amen, Brother\" (1969); the drum break comes at about 1:26"
+    start: 85
+  banjo:
+    youtube: "aQkcPSpWWCo"
+    title: "“Cripple Creek” performed by Rhiannon Giddens, Banjo l Met Music"
+    channel: "The Met"
+    note: "Rhiannon Giddens plays \"Cripple Creek\" on the banjo, filmed in the Met's musical-instrument galleries (2018)"
+  big-mama-thornton:
+    youtube: "aKicGqIMpqk"
+    title: "Hound Dog"
+    channel: "Big Mama Thornton - Topic"
+    note: "\"Hound Dog\", Big Mama Thornton's Peacock recording (1953)"
+  blues:
+    youtube: "cSuTTSOctGw"
+    title: "W.C. Handy \"St. Louis Blues\" On The Ed Sullivan Show"
+    channel: "The Ed Sullivan Show"
+    note: "W. C. Handy, \"St. Louis Blues\", on The Ed Sullivan Show"
+  bridgetower:
+    youtube: "s2BYvSzZ_i4"
+    title: "Beethoven: Violin Sonata No. 9 in A Major, Op. 47 \"Kreutzer\": I. Adagio sostenuto – Presto"
+    channel: "Itzhak Perlman - Topic"
+    note: "Beethoven, Violin Sonata No. 9 \"Kreutzer\", Op. 47, first movement; Itzhak Perlman"
+  burleigh-dvorak:
+    youtube: "acurczH-Yt8"
+    title: "Dvořák: Symphony No. 9 in E Minor, Op. 95, B. 178 \"From the New World\": II. Largo"
+    channel: "Berliner Philharmoniker - Topic"
+    note: "Dvořák, Symphony No. 9 \"From the New World\", II. Largo; Berliner Philharmoniker"
+  capoeira:
+    youtube: "_Ut0NCthq8c"
+    title: "Banguela"
+    channel: "Mestre Bimba - Topic"
+    note: "Mestre Bimba, \"Banguela\", from Curso de Capoeira Regional (capoeira regional berimbau toque)"
+  chicago-house:
+    youtube: "ottFhv0zD_8"
+    title: "Your Love"
+    channel: "Frankie Knuckles - Topic"
+    note: "Frankie Knuckles, \"Your Love\" (Trax, 1987)"
+  cindy-campbell:
+    youtube: "-Udnb6F1A0g"
+    title: "Apache"
+    channel: "Incredible Bongo Band - Topic"
+    note: "Incredible Bongo Band, \"Apache\" (1973), a break DJ Kool Herc made a party staple"
+  crazy-blues:
+    youtube: "ANQ2Y702hQg"
+    title: "Crazy Blues (78rpm Version)"
+    channel: "Mamie Smith and Her Jazz Hounds - Topic"
+    note: "Mamie Smith and Her Jazz Hounds, \"Crazy Blues\" (OKeh, 1920)"
+  detroit-techno:
+    youtube: "Unc8kDUzbU8"
+    title: "Clear"
+    channel: "Cybotron - Topic"
+    note: "Cybotron (Juan Atkins and Richard Davis), \"Clear\""
+  funk:
+    youtube: "QXw6YZltKJk"
+    title: "Funky Drummer (Pt. 1 & 2)"
+    channel: "James Brown - Topic"
+    note: "James Brown, \"Funky Drummer\" (Pts. 1 & 2), with Clyde Stubblefield's break"
+  gospel:
+    youtube: "uYUwO6_lysw"
+    title: "Mahalia Jackson - Take My Hand, Precious Lord (Official Audio)"
+    channel: "MahaliaJacksonVEVO"
+    note: "Mahalia Jackson, \"Take My Hand, Precious Lord\" (Thomas A. Dorsey)"
+  highlife:
+    youtube: "OVB8isxRngs"
+    title: "All for You"
+    channel: "E.T. Mensah Of Ghana - Topic"
+    note: "E. T. Mensah and the Tempos, \"All for You\" (1950s)"
+  hip-hop:
+    youtube: "ZjRi-S7J70Y"
+    title: "Rapper's Delight (Long Version)"
+    channel: "The Sugarhill Gang - Topic"
+    note: "Sugarhill Gang, \"Rapper's Delight\" (1979), long version over the \"Good Times\" bass line"
+  jazz:
+    youtube: "BTxhgmk_ofk"
+    title: "West End Blues"
+    channel: "Louis Armstrong And The All-Stars - Topic"
+    note: "Louis Armstrong and His Hot Five, \"West End Blues\" (1928)"
+  misogyny-in-hip-hop:
+    youtube: "f8cHxydDb7o"
+    title: "Queen Latifah - U.N.I.T.Y."
+    channel: "QueenLatifahVEVO"
+    note: "Queen Latifah, \"U.N.I.T.Y.\" (1993)"
+  planet-rock:
+    youtube: "9J3lwZjHenA"
+    title: "Afrika Bambaataa & The Soulsonic Force - Planet Rock (Official Music Video) [HD]"
+    channel: "Tommy Boy"
+    note: "Afrika Bambaataa and the Soulsonic Force, \"Planet Rock\" (Tommy Boy, 1982)"
+  reggae:
+    youtube: "bGkpDM4M7P4"
+    title: "Do The Reggay"
+    channel: "Toots & The Maytals - Topic"
+    note: "Toots and the Maytals, \"Do the Reggay\" (1968)"
+  rhythm-and-blues:
+    youtube: "-h5FMLv5bzU"
+    title: "Caldonia (Single Version)"
+    channel: "Louis Jordan & His Tympany Five - Topic"
+    note: "Louis Jordan and His Tympany Five, \"Caldonia\" (1945)"
+  rinse-fm:
+    youtube: "tvCaWKqyKjg"
+    title: "Wot Do U Call It?"
+    channel: "Wiley - Topic"
+    note: "Wiley, \"Wot Do U Call It?\" (2004), grime from a Rinse co-founder"
+  rock-n-roll:
+    youtube: "BIKrC555muk"
+    title: "Rocket 88 (Single Version)"
+    channel: "Jackie Brenston & His Delta Cats - Topic"
+    note: "Jackie Brenston and His Delta Cats (Ike Turner's Kings of Rhythm), \"Rocket 88\" (1951)"
+  rosetta-tharpe:
+    youtube: "x9RU4y7GPxQ"
+    title: "Strange Things Happening Every Day"
+    channel: "Sister Rosetta Tharpe - Topic"
+    note: "Sister Rosetta Tharpe, \"Strange Things Happening Every Day\" (Decca, 1944)"
+  saint-georges:
+    youtube: "eQ1unCtX6K0"
+    title: "Augustin Hadelich plays Joseph Bologne, Chevalier de Saint-Georges Concerto in A, Op. 5/2"
+    channel: "Augustin Hadelich"
+    note: "Saint-Georges, Violin Concerto in A, Op. 5 No. 2; Augustin Hadelich"
+  samba:
+    youtube: "5J-WcQYsq-M"
+    title: "Pelo Telefone"
+    channel: "BAIANO - Topic"
+    note: "Bahiano, \"Pelo Telefone\" (1917 recording of the Donga samba)"
+  spirituals:
+    youtube: "ASUjzszcRws"
+    title: "Swing Low, Sweet Chariot"
+    channel: "The Fisk Jubilee Singers - Topic"
+    note: "Fisk Jubilee Singers, \"Swing Low, Sweet Chariot\" (recorded 1909–1911)"
+  steelpan:
+    youtube: "-XTiD9_gsLU"
+    title: "Hold 'Em Joe"
+    channel: "Brute Force Steel Band - Topic"
+    note: "Brute Force Steel Band of Antigua, \"Hold 'Em Joe\" (Cook Records, 1955)"
+  sun-ra:
+    youtube: "CmY72PYQXek"
+    title: "Space Is The Place"
+    channel: "Sun Ra - Topic"
+    note: "Sun Ra and his Arkestra, \"Space Is the Place\" (1973)"
+  sunjata:
+    youtube: "nuA0hDluS04"
+    title: "The Sunjata epic"
+    channel: "British Library"
+    note: "Extract from a performance of the Sunjata epic: Hawa Kassé Made Diabaté (voice), Fode Lassana Diabaté (balafon), Chérif Keita (narrator)"
+  talking-drums:
+    youtube: "QDm6V_MvMVg"
+    title: "Dundun Drums and Shekere Rattles (3)"
+    channel: "Release - Topic"
+    note: "Yoruba dùndún drummers with shekere, from Drums of the Yoruba of Nigeria (Folkways, 1953)"
+  work-songs:
+    youtube: "tLGeDY-w3p4"
+    title: "Old Alabama"
+    channel: "B.B And Six Others - Topic"
+    note: "\"Old Alabama\", work song recorded by Alan Lomax at Parchman Farm, Mississippi (1947)"
+roots:
+  abba:
+    youtube: "xFrGuyw1V8s"
+    title: "ABBA - Dancing Queen (Official Music Video)"
+    channel: "AbbaVEVO"
+    note: "\"Dancing Queen\" (1976), official video"
+  adele:
+    youtube: "0put0_a--Ng"
+    title: "Adele - Make You Feel My Love (Official Video)"
+    channel: "XL Recordings"
+    note: "\"Make You Feel My Love\" (Bob Dylan song), official video"
+  albert-ayler:
+    youtube: "dKrdZm0EbF8"
+    title: "Spirits Rejoice"
+    channel: "Albert Ayler - Topic"
+    note: "\"Spirits Rejoice\" (1965)"
+  amy-winehouse:
+    youtube: "Uug7z_448WQ"
+    title: "Moody's Mood For Love / Teo Licks"
+    channel: "Amy Winehouse - Topic"
+    note: "\"Moody's Mood for Love / Teo Licks\", from Frank (2003)"
+  aquarium:
+    youtube: "Tc30quBAbec"
+    title: "Вавилон"
+    channel: "Aquarium - Topic"
+    note: "«Вавилон» (\"Babylon\"), from Istoriya Akvariuma, vol. 2 (Elektrichestvo)"
+  arctic-monkeys:
+    youtube: "atYNqvZcQ3M"
+    title: "Baby I'm Yours"
+    channel: "Arctic Monkeys - Topic"
+    note: "\"Baby I'm Yours\" (Barbara Lewis song), with the 747s"
+  aretha-franklin:
+    youtube: "0Sl59Prs8CE"
+    title: "Precious Lord (Pt. 1 / Remastered/2019)"
+    channel: "Aretha Franklin - Topic"
+    note: "\"Precious Lord, Pt. 1\", recorded at her father's church at 14 (Songs of Faith, 1956)"
+  arthur-crudup:
+    youtube: "LtHW8wpDjkg"
+    title: "Arthur Crudup - That's All Right (Official Audio)"
+    channel: "ArthurCrudupVEVO"
+    note: "\"That's All Right\" (1946)"
+  bessie-smith:
+    youtube: "cwRbsULaQIo"
+    title: "Bessie Smith - St. Louis Blues (Audio)"
+    channel: "BessieSmithVEVO"
+    note: "\"St. Louis Blues\" (1925), with Louis Armstrong"
+  big-mama-thornton:
+    youtube: "aKicGqIMpqk"
+    title: "Hound Dog"
+    channel: "Big Mama Thornton - Topic"
+    note: "\"Hound Dog\" (Peacock, 1953)"
+  billie-eilish:
+    youtube: "DyDfgMOUjCI"
+    title: "Billie Eilish - bad guy"
+    channel: "BillieEilishVEVO"
+    note: "\"bad guy\" (2019), official video"
+  billy-cobham:
+    youtube: "qjQ3UWy1GsA"
+    title: "Stratus"
+    channel: "Billy Cobham - Topic"
+    note: "\"Stratus\" (1973), sampled in Massive Attack's \"Safe from Harm\""
+  black-sabbath:
+    youtube: "0lVdMbUx1_k"
+    title: "BLACK SABBATH - \"Black Sabbath\" (Official Video)"
+    channel: "Black Sabbath"
+    note: "\"Black Sabbath\" (1970)"
+  bob-dylan:
+    youtube: "KhiTnjNx1OI"
+    title: "Bob Dylan - See That My Grave Is Kept Clean (Official Audio)"
+    channel: "BobDylanVEVO"
+    note: "\"See That My Grave Is Kept Clean\" (Blind Lemon Jefferson), from Bob Dylan (1962)"
+  bob-marley:
+    youtube: "5hZBEr9FKEo"
+    title: "Duppy Conqueror (1973) - Bob Marley & The Wailers"
+    channel: "Bob Marley"
+    note: "\"Duppy Conqueror\" (Burnin', 1973), a song first cut with Lee Perry and the Barrett brothers in 1970"
+  bts:
+    youtube: "rBG5L7UsUxA"
+    title: "BTS (방탄소년단) 'No More Dream' Official MV"
+    channel: "HYBE LABELS"
+    note: "\"No More Dream\" (2013), their hip-hop debut, official video"
+  charles-mingus:
+    youtube: "E7hoX7golZI"
+    title: "Better Git It in Your Soul"
+    channel: "Charles Mingus - Topic"
+    note: "\"Better Git It in Your Soul\" (Mingus Ah Um, 1959)"
+  charley-patton:
+    youtube: "sdytu2e3v6Y"
+    title: "Pony Blues (2010 Remastered)"
+    channel: "Charley Patton - Topic"
+    note: "\"Pony Blues\" (1929)"
+  charlie-parker:
+    youtube: "0ajJBNodEYs"
+    title: "Ko-Ko"
+    channel: "Charlie Parker - Topic"
+    note: "\"Ko-Ko\" (1945)"
+  christina-aguilera:
+    youtube: "fbgvlERKj9U"
+    title: "Christina Aguilera - At Last (Official Video)"
+    channel: "CAguileraVEVO"
+    note: "\"At Last\", official video (2004); not the funeral performance"
+  chuck-berry:
+    youtube: "uFeZ_x--aRg"
+    title: "Johnny B. Goode"
+    channel: "Chuck Berry - Topic"
+    note: "\"Johnny B. Goode\" (Chess, 1958)"
+  coldplay:
+    youtube: "EH9meoWmAOM"
+    title: "Coldplay - Talk (Official Video)"
+    channel: "Coldplay"
+    note: "\"Talk\" (2005), built on Kraftwerk's \"Computer Love\", official video"
+  creedence-clearwater-revival:
+    youtube: "KWxDGQm2hKk"
+    title: "Creedence Clearwater Revival - I Put A Spell On You"
+    channel: "CCRVEVO"
+    note: "\"I Put a Spell on You\" (Screamin' Jay Hawkins song), 1968"
+  daft-punk:
+    youtube: "gAjR4_CbPpQ"
+    title: "Daft Punk - Harder, Better, Faster, Stronger (Official Video)"
+    channel: "Daft Punk"
+    note: "\"Harder, Better, Faster, Stronger\" (2001), official video"
+  david-bowie:
+    youtube: "YsqlXkkEKxI"
+    title: "David Bowie - Wild Is The Wind (Official Video) [HD]"
+    channel: "David Bowie"
+    note: "\"Wild Is the Wind\" (Station to Station, 1976), official video"
+  deep-purple:
+    youtube: "5jc9tKTm9FQ"
+    title: "Lucille (Live)"
+    channel: "Deep Purple - Topic"
+    note: "\"Lucille\" (Little Richard song), live, from Made in Japan (1972)"
+  dinah-washington:
+    youtube: "upJ3OgMRiUA"
+    title: "What A Difference A Day Makes"
+    channel: "Dinah Washington - Topic"
+    note: "\"What a Diff'rence a Day Makes\" (1959)"
+  dolly-parton:
+    youtube: "dXW-p4nKdDA"
+    title: "Let It Be (feat. Paul McCartney & Ringo Starr) (Official Audio)"
+    channel: "DollyPartonVEVO"
+    note: "\"Let It Be\" with Paul McCartney and Ringo Starr (Rockstar, 2023)"
+  dr-dre:
+    youtube: "8GliyDgAGQI"
+    title: "Dr Dre - Nuthin' But A \"G\" Thang [Official Music Video]"
+    channel: "Dr. Dre"
+    note: "\"Nuthin' but a 'G' Thang\" (The Chronic, 1992), official video"
+  ed-sheeran:
+    youtube: "ZXvzzTICvJs"
+    title: "Ed Sheeran - You Need Me, I Don't Need You [Official Music Video]"
+    channel: "Ed Sheeran"
+    note: "\"You Need Me, I Don't Need You\" (2011), rapid-fire delivery, official video"
+  edwin-birdsong:
+    youtube: "fiD39jo5Yo4"
+    title: "Cola Bottle Baby"
+    channel: "Edwin Birdsong - Topic"
+    note: "\"Cola Bottle Baby\" (1979), sampled in Daft Punk's \"Harder, Better, Faster, Stronger\""
+  elvis-presley:
+    youtube: "-eHJ12Vhpyc"
+    title: "Elvis Presley - Hound Dog (Official Audio)"
+    channel: "ElvisPresleyVEVO"
+    note: "\"Hound Dog\" (1956)"
+  eminem:
+    youtube: "sNPnbI1arSE"
+    title: "Eminem - My Name Is (Official Music Video)"
+    channel: "EminemVEVO"
+    note: "\"My Name Is\" (1999), built on Labi Siffre's \"I Got The...\", official video"
+  eric-clapton:
+    youtube: "ZMWgqr3-Sb4"
+    title: "When You Got a Good Friend"
+    channel: "Eric Clapton - Topic"
+    note: "\"When You Got a Good Friend\" (Robert Johnson), from Me and Mr. Johnson (2004)"
+  etta-james:
+    youtube: "1qJU8G7gR_g"
+    title: "At Last"
+    channel: "Etta James - Topic"
+    note: "\"At Last\" (1960)"
+  fela-kuti:
+    youtube: "kisTH3SFegc"
+    title: "Fela Kuti - Water No Get Enemy"
+    channel: "Fela Kuti"
+    note: "\"Water No Get Enemy\" (1975)"
+  george-mccrae:
+    youtube: "ll7KRg_r_nM"
+    title: "Rock Your Baby"
+    channel: "George McCrae - Topic"
+    note: "\"Rock Your Baby\" (1974)"
+  george-michael:
+    youtube: "diYAc7gB-0A"
+    title: "George Michael - Freedom! ’90 (Official Video)"
+    channel: "georgemichaelVEVO"
+    note: "\"Freedom! '90\", built on the \"Funky Drummer\" break, official video"
+  howlin-wolf:
+    youtube: "VMUt8KdDtTY"
+    title: "Smokestack Lightning"
+    channel: "Howlin' Wolf - Topic"
+    note: "\"Smokestack Lightning\" (1956)"
+  iron-maiden:
+    youtube: "IvvtpUoC1R4"
+    title: "Communication Breakdown"
+    channel: "Iron Maiden - Topic"
+    note: "\"Communication Breakdown\" (Led Zeppelin song)"
+  james-brown:
+    youtube: "M7DNkovC2Tk"
+    title: "Papa's Got A Brand New Bag"
+    channel: "James Brown - Topic"
+    note: "\"Papa's Got a Brand New Bag\" (1965)"
+  janis-joplin:
+    youtube: "X1zFnyEe3nE"
+    title: "Janis Joplin - Ball & Chain - Monterey Pop"
+    channel: "CRITERION"
+    note: "\"Ball and Chain\" (Big Mama Thornton song), live at Monterey Pop, 1967"
+  jimmy-cliff:
+    youtube: "doWWHQDWe2k"
+    title: "Many Rivers To Cross"
+    channel: "Jimmy Cliff - Topic"
+    note: "\"Many Rivers to Cross\" (1969)"
+  joe-cocker:
+    youtube: "ZtFUX4Y2U84"
+    title: "Joe Cocker - Unchain My Heart (Official Video)"
+    channel: "Joe Cocker"
+    note: "\"Unchain My Heart\" (Ray Charles hit), official video"
+  john-coltrane:
+    youtube: "Dmx2WuUPVcs"
+    title: "John Coltrane - A Love Supreme, Pt. I – Acknowledgement"
+    channel: "JohnColtraneVEVO"
+    note: "\"A Love Supreme, Pt. I – Acknowledgement\" (1965)"
+  johnny-cash:
+    youtube: "e4kGISEHuZM"
+    title: "Rock Island Line"
+    channel: "Johnny Cash - Topic"
+    note: "\"Rock Island Line\" (Sun, 1957)"
+  joss-stone:
+    youtube: "4DwcPqjCW3Y"
+    title: "Joss Stone - Fell In Love With A Boy"
+    channel: "JossStoneVEVO"
+    note: "\"Fell in Love with a Boy\" (The Soul Sessions, 2003), official video"
+  junior-murvin:
+    youtube: "4dZky936vtU"
+    title: "Police & Thieves"
+    channel: "Junior Murvin - Topic"
+    note: "\"Police and Thieves\" (1976), produced by Lee \"Scratch\" Perry"
+  king-tubby:
+    youtube: "oxAl3Jijs20"
+    title: "King Tubby Meets Rockers Uptown"
+    channel: "King Tubby - Topic"
+    note: "\"King Tubby Meets Rockers Uptown\" (with Augustus Pablo)"
+  kraftwerk:
+    youtube: "7ZDyqXmzlAo"
+    title: "Trans-Europe Express / Metal on Metal / Abzug"
+    channel: "Kraftwerk - Topic"
+    note: "\"Trans-Europe Express / Metal on Metal / Abzug\" (1977)"
+  labi-siffre:
+    youtube: "A4JWkW0oROg"
+    title: "I Got The... (2006 Remaster)"
+    channel: "Labi Siffre - Topic"
+    note: "\"I Got The...\" (1975), sampled in Eminem's \"My Name Is\""
+  lead-belly:
+    youtube: "2awJUF4l6co"
+    title: "Rock Island Line (2003 Remastered)"
+    channel: "Lead Belly - Topic"
+    note: "\"Rock Island Line\""
+  led-zeppelin:
+    youtube: "JM3fodiK9rY"
+    title: "Led Zeppelin - When The Levee Breaks (Official Audio)"
+    channel: "Led Zeppelin"
+    note: "\"When the Levee Breaks\" (Kansas Joe McCoy and Memphis Minnie song), 1971"
+  lee-scratch-perry:
+    youtube: "Zu6x44bLKHY"
+    title: "Blackboard Jungle Dub (Version 1)"
+    channel: "Lee \"Scratch\" Perry - Topic"
+    note: "\"Blackboard Jungle Dub (Version 1)\" (1973)"
+  little-richard:
+    youtube: "NnIIvWnpaBU"
+    title: "Tutti Frutti"
+    channel: "Little Richard - Topic"
+    note: "\"Tutti Frutti\" (1955)"
+  lou-reed:
+    youtube: "oG6fayQBm9w"
+    title: "Lou Reed - Walk on the Wild Side (Official Audio)"
+    channel: "LouReedVEVO"
+    note: "\"Walk on the Wild Side\" (1972)"
+  madonna:
+    youtube: "GsVcUzP_O_8"
+    title: "Madonna - Express Yourself (Official Video)"
+    channel: "Madonna"
+    note: "\"Express Yourself\" (1989), official video"
+  marvin-gaye:
+    youtube: "o5TmORitlKk"
+    title: "Marvin Gaye - What's Going On (Official Video 2019)"
+    channel: "MarvinGayeVEVO"
+    note: "\"What's Going On\" (1971), official video"
+  mashina-vremeni:
+    youtube: "6cw-vz7vS-8"
+    title: "Поворот"
+    channel: "Машина Времени - Topic"
+    note: "«Поворот» (\"Povorot\")"
+  massive-attack:
+    youtube: "PKtTmZnVhhI"
+    title: "Massive Attack - Safe From Harm"
+    channel: "MassiveAttackVEVO"
+    note: "\"Safe from Harm\" (1991), built on Billy Cobham's \"Stratus\", official video"
+  metallica:
+    youtube: "K5Wv0Yty1z4"
+    title: "Sabbra Cadabra"
+    channel: "Metallica - Topic"
+    note: "\"Sabbra Cadabra\" (Black Sabbath song), from Garage Inc. (1998)"
+  miles-davis:
+    youtube: "ylXk1LBvIqU"
+    title: "Miles Davis - So What (Audio) (Official Audio)"
+    channel: "MilesDavisVEVO"
+    note: "\"So What\" (Kind of Blue, 1959)"
+  muddy-waters:
+    youtube: "gwJZcNNxdck"
+    title: "Rollin' Stone"
+    channel: "Muddy Waters - Topic"
+    note: "\"Rollin' Stone\" (Chess, 1950)"
+  mumiy-troll:
+    youtube: "Ok1-XYV3k60"
+    title: "Мумий Тролль — Утекай"
+    channel: "Мумий Тролль (Mumiy Troll)"
+    note: "«Утекай» (\"Utekai\"), signature song; their \"Prekrasny diletant\" for Re:Aquarium has no official upload"
+  nirvana:
+    youtube: "hEMm7gxBYSc"
+    title: "Nirvana - Where Did You Sleep Last Night (Live On MTV Unplugged, 1993 / Unedited)"
+    channel: "NirvanaVEVO"
+    note: "\"Where Did You Sleep Last Night\", MTV Unplugged (1993)"
+  oasis:
+    youtube: "uPs3oCDpvXc"
+    title: "Oasis - I Am The Walrus (Official Visualiser)"
+    channel: "Oasis"
+    note: "\"I Am the Walrus\" (The Beatles song), from The Masterplan"
+  ornette-coleman:
+    youtube: "YMasmoE-_vY"
+    title: "Lonely Woman (Mono)"
+    channel: "Ornette Coleman - Topic"
+    note: "\"Lonely Woman\" (The Shape of Jazz to Come, 1959)"
+  otis-redding:
+    youtube: "pli44utBOwo"
+    title: "Try a Little Tenderness (2020 Remaster)"
+    channel: "Otis Redding - Topic"
+    note: "\"Try a Little Tenderness\" (1966)"
+  paul-simon:
+    youtube: "L0BUsDf0dxY"
+    title: "Paul Simon - Mother and Child Reunion (Official Audio)"
+    channel: "PaulSimonVEVO"
+    note: "\"Mother and Child Reunion\" (1972), recorded in Kingston"
+  peter-gabriel:
+    youtube: "OJWJE0x7T4Q"
+    title: "Peter Gabriel - Sledgehammer (HD version)"
+    channel: "Peter Gabriel"
+    note: "\"Sledgehammer\" (1986), his tribute to Otis Redding's soul, official video"
+  radiohead:
+    youtube: "3M_Gg1xAHE4"
+    title: "Radiohead - Pyramid Song"
+    channel: "Radiohead"
+    note: "\"Pyramid Song\" (2001), official video"
+  rakim:
+    youtube: "E7t8eoA_1jQ"
+    title: "Eric B. & Rakim - Paid In Full"
+    channel: "EricBAndRakimVEVO"
+    note: "Eric B. & Rakim, \"Paid in Full\" (1987), official video"
+  ray-charles:
+    youtube: "alQqMveYv0I"
+    title: "I've Got a Woman (2005 Remaster)"
+    channel: "Ray Charles - Topic"
+    note: "\"I've Got a Woman\" (1954)"
+  red-hot-chili-peppers:
+    youtube: "gDBfZl6ZSFg"
+    title: "Higher Ground"
+    channel: "Red Hot Chili Peppers - Topic"
+    note: "\"Higher Ground\" (Stevie Wonder song), from Mother's Milk (1989)"
+  robert-johnson:
+    youtube: "Kxi4XkIVWLQ"
+    title: "Robert Johnson - Robert Johnson's Cross Road Blues (Official Video)"
+    channel: "RobertJohnsonVEVO"
+    note: "\"Cross Road Blues\" (1936)"
+  son-house:
+    youtube: "bsgFo2irGjo"
+    title: "Death Letter Blues"
+    channel: "Son House - Topic"
+    note: "\"Death Letter Blues\" (1965)"
+  stevie-wonder:
+    youtube: "zGSxvH5i6XQ"
+    title: "Higher Ground (Single Version)"
+    channel: "Stevie Wonder - Topic"
+    note: "\"Higher Ground\" (1973), single version"
+  talking-heads:
+    youtube: "5IsSpAOD6K8"
+    title: "Talking Heads - Once in a Lifetime (Official Video)"
+    channel: "Talking Heads"
+    note: "\"Once in a Lifetime\" (Remain in Light, 1980), official video"
+  television:
+    youtube: "g4myghLPLZc"
+    title: "Marquee Moon"
+    channel: "Television - Topic"
+    note: "\"Marquee Moon\" (1977)"
+  the-beatles:
+    youtube: "2RicaUqd9Hg"
+    title: "Twist And Shout (Remastered 2009)"
+    channel: "The Beatles - Topic"
+    note: "\"Twist and Shout\" (1963), after the Isley Brothers' version"
+  the-clash:
+    youtube: "N3A8uNG3GH4"
+    title: "The Clash - Police & Thieves (Official Audio)"
+    channel: "theclashVEVO"
+    note: "\"Police & Thieves\" (Junior Murvin song), from The Clash (1977)"
+  the-libertines:
+    youtube: "0u_g6zNuP_I"
+    title: "The Libertines - Up The Bracket"
+    channel: "Rough Trade Records"
+    note: "\"Up the Bracket\" (2002), produced by Mick Jones"
+  the-police:
+    youtube: "MX6MvV8cbh8"
+    title: "The Police - So Lonely (Official Music Video)"
+    channel: "ThePoliceVEVO"
+    note: "\"So Lonely\" (1978), official video"
+  the-prodigy:
+    youtube: "4bfrTHAlkz0"
+    title: "Smack My Bitch Up"
+    channel: "The Prodigy - Topic"
+    note: "\"Smack My Bitch Up\" (1997), hook from Ultramagnetic MCs' \"Give the Drummer Some\""
+  the-rolling-stones:
+    youtube: "Lr0q0zlrZXM"
+    title: "Little Red Rooster (Mono)"
+    channel: "The Rolling Stones - Topic"
+    note: "\"Little Red Rooster\" (1964)"
+  the-velvet-underground:
+    youtube: "foptT2bsKww"
+    title: "Heroin"
+    channel: "The Velvet Underground - Topic"
+    note: "\"Heroin\" (1967)"
+  the-white-stripes:
+    youtube: "hgSG6qvxTcE"
+    title: "Death Letter"
+    channel: "The White Stripes - Topic"
+    note: "\"Death Letter\" (Son House song), from De Stijl (2000)"
+  ultramagnetic-mcs:
+    youtube: "5UcP7qoUqJA"
+    title: "Give the Drummer Some"
+    channel: "Ultramagnetic MC's - Topic"
+    note: "\"Give the Drummer Some\" (1988)"
+  van-morrison:
+    youtube: "IBrnkhoFBy0"
+    title: "Baby, Please Don't Go (Take 4)"
+    channel: "Them - Topic"
+    note: "Them, \"Baby, Please Don't Go\" (take 4 of the 1964 session)"
+missing:
+  - {id: taylor-swift, reason: "her \"September\" cover, the song of the roots link, has no official YouTube upload"}
