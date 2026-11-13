@@ -133,6 +133,19 @@ export function checksPanel(c: Card, data: CardChecks | undefined): HTMLElement 
 }
 
 /** The site page: the method in plain words, and the totals from the ledgers. */
+/** Who "the two agents" are, said once, plainly. */
+export function agentsNote(): HTMLElement {
+  return h(
+    'p.mx-agents',
+    {},
+    h('b', {}, pick({ en: 'Who the two agents are. ', ru: 'Кто такие два агента. ' })),
+    pick({
+      en: 'Two independent AI research agents. Each had to find two independent, authoritative sources for every fact; a fact stays only if both agents confirm it.',
+      ru: 'Два независимых исследовательских ИИ-агента. Каждый должен был найти для каждого факта два независимых авторитетных источника; факт остаётся, только если его подтвердили оба агента.',
+    }),
+  );
+}
+
 export function methodPage(data: ChecksFile): HTMLElement {
   const t = data.totals;
   const kept = (s: string) => t.byStatus[s] ?? 0;
@@ -165,6 +178,7 @@ export function methodPage(data: ChecksFile): HTMLElement {
           ru: 'Каждый факт проверили два агента, работавшие независимо друг от друга. Каждый искал два независимых авторитетных источника: архивы, библиотеки, музеи, работы учёных, солидные газеты. Две страницы, переписанные одна с другой, считаются за одну. Факт остаётся, только если его подтвердили оба агента.',
         }),
       ),
+      agentsNote(),
       h(
         'p',
         {},

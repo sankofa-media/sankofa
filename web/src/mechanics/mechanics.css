@@ -1179,3 +1179,79 @@
     grid-area: inst;
   }
 }
+
+/* ---------- loading and failure: never an empty room ---------- */
+.mx-loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18vh 0;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  color: var(--ink-2);
+}
+.mx-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--line-2);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: mx-spin 0.9s linear infinite;
+}
+@keyframes mx-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mx-spinner {
+    animation: none;
+  }
+}
+.mx-error {
+  max-width: 34rem;
+  margin: 16vh auto;
+  text-align: center;
+  font-family: var(--font-sans);
+}
+.mx-error p {
+  font-size: 17px;
+  margin: 0 0 20px;
+}
+
+/* ---------- the method page and the guide: a centred, readable column ---------- */
+.mx-method,
+.mx-guide {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+.mx-method .mx-head,
+.mx-guide .mx-head,
+.mx-guide .mx-prose,
+.mx-method .ck-rule,
+.mx-method .ck-where,
+.mx-method .ck-totals > p,
+.mx-method .ck-breakdown {
+  max-width: none;
+}
+.mx-method .ck-rule p,
+.mx-guide .mx-prose p {
+  font-size: clamp(18px, 1.35vw, 20px);
+  line-height: 1.68;
+}
+.mx-guide .mx-prose > p:first-child {
+  font-size: clamp(20px, 1.7vw, 23px);
+}
+.mx-agents {
+  font-family: var(--font-sans);
+  font-size: 15px !important;
+  line-height: 1.6 !important;
+  color: var(--ink-2);
+  border-left: 2px solid var(--gold);
+  padding: 4px 0 4px 14px;
+  margin: 0 0 1.4em;
+}
+.mx-agents b {
+  color: var(--ink);
+}
