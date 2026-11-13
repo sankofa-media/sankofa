@@ -10,7 +10,7 @@ import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import YAML from 'yaml';
-import { buildChecks, type Ledgers, type MediaEntry } from '../src/mechanics/checks/model.ts';
+import { buildChecks, pairContext, type ContextRound, type Ledgers, type MediaEntry } from '../src/mechanics/checks/model.ts';
 import { validateDoc, type Doc } from '../src/mechanics/docs/model.ts';
 import { parsePattern, type ObjectsFile } from '../src/mechanics/objects/model.ts';
 import { parseProse, type ProseFile } from '../src/mechanics/guide/model.ts';
@@ -111,7 +111,16 @@ if (errors.length) {
 write('documents.json', { version: 1, documents });
 write('objects.json', objects);
 
-// How we checked.
+// How we checked. The context rewrite: every context-<x>.yaml (the writer's
+// facts with sources) beside its context-<x>-check.yaml (the second check).
+const context: ContextRound[] = (existsSync(ledger) ? readdirSync(ledger) : [])
+  .filter((f) => /^context-[a-z0-9]+\.yaml$/.test(f) && existsSync(join(ledger, f.replace(/\.yaml$/, '-check.yaml'))))
+  .sort()
+  .map((f) => ({ facts: yaml(join(ledger, f), []), check: yaml(join(ledger, f.replace(/\.yaml$/, '-check.yaml')), []) }));
+for (const [i, round] of context.entries()) {
+  const unchecked = pairContext(round).pairs.filter((p) => !p.check);
+  for (const p of unchecked) console.warn(`ledger: context round ${i + 1}: no second check for ${p.fact.card}: ${p.fact.fact.slice(0, 80)}`);
+}
 const ledgers: Ledgers = {
   final: yaml(join(ledger, 'final.yaml'), {}),
   match: yaml(join(ledger, 'match.yaml'), { claims: [] }),
@@ -123,6 +132,7 @@ const ledgers: Ledgers = {
   mediaCheck: yaml(join(ledger, 'media-check.yaml'), []),
   rootsCheck: yaml(join(ledger, 'roots-check.yaml'), {}),
   rootsDeepCheck: yaml(join(ledger, 'roots-deep-check.yaml'), {}),
+  context,
 };
 const checks = buildChecks(ledgers, cardIds);
 write('checks.json', checks);
@@ -140,4 +150,4 @@ for (const base of ['guide', 'dedication']) {
   else rmSync(join(out, `${base}.json`), { force: true });
 }
 
-console.log(`${documents.length} documents, ${Object.keys(objects).length - 1} objects, checks for ${checks.totals.cards} cards (${checks.totals.facts} facts) -> ${out}`);
+console.log(`${documents.length} documents, ${Object.keys(objects).length - 1} objects, checks for ${checks.totals.cards} cards (${checks.totals.facts} facts, ${checks.totals.context.kept} from the context rewrite) -> ${out}`);

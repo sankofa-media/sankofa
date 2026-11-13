@@ -160,6 +160,23 @@ test('every card says how it was checked, and the method page counts the ledgers
   const stats = sheet(page).locator('.ck-stat b');
   await expect(stats.nth(0)).toHaveText(String(checks.totals.claimsExamined));
   await expect(stats.nth(1)).toHaveText(String(checks.totals.facts));
+  // The context rewrite is counted with the rest.
+  await expect(sheet(page).locator('.ck-breakdown')).toContainText(`${checks.totals.context.kept} added when cards were rewritten for context and outcomes`);
+});
+
+test('a fact from the context rewrite shows the writer’s sources and the second check', async ({ page, request }) => {
+  const checks = await (await request.get('data/checks.json')).json();
+  await page.goto('/#focus=gullah');
+  const panel = page.locator('.drawer.on .mx-checks');
+  await panel.locator('summary').first().click();
+  const facts = checks.cards.gullah.facts as { fact: string; checks: { agent: string; note?: string }[] }[];
+  const i = facts.findIndex((f) => f.checks[0]?.agent === 'W');
+  expect(i).toBeGreaterThanOrEqual(0);
+  const fact = panel.locator('.ck-fact').nth(i);
+  await fact.locator('summary').click();
+  await expect(fact.locator('.ck-agent').first()).toContainText('The writer’s sources');
+  await expect(fact.locator('.ck-agent').nth(1)).toContainText('Second agent');
+  await expect(fact.locator('.ck-agent').nth(1).locator('.ck-sources a').first()).toHaveAttribute('href', /^https?:/);
 });
 
 test('the guide: from the top bar and from the copy note, with numbers filled in, in Russian too', async ({ page }) => {

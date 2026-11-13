@@ -20,13 +20,17 @@ export interface AgentCheck {
   /** The agent's first-round verdict, when a re-check replaced it. */
   first?: string;
   sources: SourceRef[];
+  /** What the checking agent wrote about its verdict. */
+  note?: string;
 }
 
 export interface FactCheck {
   fact: string;
-  /** agreed | recheck-confirmed | corrected | disputed | confirmed (explainers) */
+  /** agreed | recheck-confirmed | corrected | disputed | confirmed (explainers, context) */
   status: string;
   checks: AgentCheck[];
+  /** Added in a rewrite without an entry in the writer's ledger; found and checked by the second agent. */
+  unledgered?: boolean;
 }
 
 export interface MediaRight {
@@ -57,6 +61,23 @@ export interface Totals {
   imageSecond: Record<string, number>;
   rootsLinks: number;
   rootsByVerdict: Record<string, number>;
+  /** Facts kept from the explainer rewrite. */
+  explainers: number;
+  /** The context rewrite: the writer's ledger and its independent second check. */
+  context: ContextTotals;
+}
+
+export interface ContextTotals {
+  /** Facts the writer recorded, each with its sources. */
+  facts: number;
+  /** Sentences the writer had not recorded, found and checked by the second agent. */
+  unledgered: number;
+  /** Kept on the cards, as written or corrected. */
+  kept: number;
+  confirmed: number;
+  corrected: number;
+  /** Taken out of the cards: refuted, unconfirmed or removed. */
+  dropped: number;
 }
 
 export interface ChecksFile {
@@ -112,6 +133,30 @@ export interface MediaCheck {
   note?: string;
 }
 
+/** One fact the writer added to a card in the context rewrite, with its sources. */
+export interface ContextFact {
+  card: string;
+  fact: string;
+  sources?: RawSource[] | null;
+}
+/** The second agent's verdict on a context fact. */
+export interface ContextCheck {
+  card: string;
+  fact: string;
+  verdict: string;
+  sources?: (RawSource | string)[] | null;
+  note?: string;
+}
+/**
+ * A check file: either a list, where an unledgered sentence's fact starts
+ * with "(unledgered)" or "UNLEDGERED:", or { claims, unledgered }.
+ */
+export type ContextCheckFile = ContextCheck[] | { claims?: ContextCheck[]; unledgered?: ContextCheck[] };
+export interface ContextRound {
+  facts: ContextFact[];
+  check: ContextCheckFile;
+}
+
 export interface Ledgers {
   final: Record<string, FinalFact[]>;
   match: { claims: MatchClaim[] };
@@ -125,6 +170,8 @@ export interface Ledgers {
   mediaCheck?: MediaCheck[];
   rootsCheck?: { links?: { verdict: string }[] };
   rootsDeepCheck?: { checks?: { verdict: string }[] };
+  /** The context rewrite, one round per ledger (context-a, context-b). */
+  context?: ContextRound[];
 }
 
 export const norm = (s: string): string =>
@@ -232,6 +279,92 @@ export function checksFor(card: string, f: FinalFact, l: Ledgers, index = indexL
   return [ra ? fromRecheck(a, ra) : a, rb ? fromRecheck(b, rb) : b];
 }
 
+const UNLEDGERED = /^\s*(\(unledgered\)|unledgered:)\s*/i;
+const KEPT = new Set(['confirmed', 'corrected']);
+
+/** A check file in one shape: the claims of the writer's ledger, and the unledgered sentences. */
+export function contextCheckEntries(f: ContextCheckFile | undefined): { claims: ContextCheck[]; unledgered: ContextCheck[] } {
+  if (!f) return { claims: [], unledgered: [] };
+  if (!Array.isArray(f)) return { claims: f.claims ?? [], unledgered: f.unledgered ?? [] };
+  const claims: ContextCheck[] = [];
+  const unledgered: ContextCheck[] = [];
+  for (const e of f) {
+    if (UNLEDGERED.test(e.fact)) unledgered.push({ ...e, fact: e.fact.replace(UNLEDGERED, '') });
+    else claims.push(e);
+  }
+  return { claims, unledgered };
+}
+
+export interface ContextPair {
+  fact: ContextFact;
+  check?: ContextCheck;
+}
+
+/**
+ * Each writer's fact with its check. The checker sometimes quotes a fact in
+ * slightly different words; on a card, an unmatched fact takes the unmatched
+ * check that shares most words with it.
+ */
+export function pairContext(round: ContextRound): { pairs: ContextPair[]; unledgered: ContextCheck[] } {
+  const { claims, unledgered } = contextCheckEntries(round.check);
+  const exact = new Map<string, ContextCheck>();
+  for (const c of claims) exact.set(c.card + '|' + norm(c.fact), c);
+  const used = new Set<ContextCheck>();
+  const pairs: ContextPair[] = round.facts.map((f) => {
+    const c = exact.get(f.card + '|' + norm(f.fact));
+    if (c && !used.has(c)) used.add(c);
+    return { fact: f, check: c && used.has(c) ? c : undefined };
+  });
+  for (const p of pairs) {
+    if (p.check) continue;
+    let best: ContextCheck | undefined;
+    let score = 0;
+    for (const c of claims) {
+      if (used.has(c) || c.card !== p.fact.card) continue;
+      const s = overlap(p.fact.fact, c.fact);
+      if (s > score) [best, score] = [c, s];
+    }
+    if (best && score >= 0.5) {
+      used.add(best);
+      p.check = best;
+    }
+  }
+  return { pairs, unledgered };
+}
+
+function contextChecks(l: Ledgers): { byCard: Map<string, FactCheck[]>; totals: ContextTotals } {
+  const byCard = new Map<string, FactCheck[]>();
+  const totals: ContextTotals = { facts: 0, unledgered: 0, kept: 0, confirmed: 0, corrected: 0, dropped: 0 };
+  const keep = (card: string, f: FactCheck) => byCard.set(card, [...(byCard.get(card) ?? []), f]);
+  const count = (verdict: string) => {
+    if (verdict === 'confirmed' || verdict === 'corrected') {
+      totals.kept++;
+      totals[verdict]++;
+    } else totals.dropped++;
+  };
+  const second = (c: ContextCheck): AgentCheck => ({ agent: 'C', verdict: c.verdict, sources: sources(c.sources ?? []), ...(c.note ? { note: c.note } : {}) });
+  for (const round of l.context ?? []) {
+    const { pairs, unledgered } = pairContext(round);
+    totals.facts += pairs.length;
+    totals.unledgered += unledgered.length;
+    for (const { fact, check } of pairs) {
+      // A fact nobody re-checked does not count as checked, and is not shown as such.
+      if (!check) continue;
+      count(check.verdict);
+      if (!KEPT.has(check.verdict)) continue;
+      keep(fact.card, { fact: factText(check.fact), status: check.verdict, checks: [{ agent: 'W', verdict: 'confirmed', sources: sources(fact.sources ?? []) }, second(check)] });
+    }
+    for (const u of unledgered) {
+      const kept = KEPT.has(u.verdict);
+      // A kept sentence without sources only points at a ledger entry already counted.
+      if (kept && !(u.sources ?? []).length) continue;
+      count(u.verdict);
+      if (kept) keep(u.card, { fact: factText(u.fact), status: u.verdict, unledgered: true, checks: [second(u)] });
+    }
+  }
+  return { byCard, totals };
+}
+
 export function buildChecks(l: Ledgers, cardIds: string[]): ChecksFile {
   const index = indexLedgers(l);
   const cards: Record<string, CardChecks> = {};
@@ -239,7 +372,9 @@ export function buildChecks(l: Ledgers, cardIds: string[]): ChecksFile {
   const explainerChecks = new Map((l.explainersCheck?.claims ?? []).map((c) => [c.card + '|' + norm(c.claim), c]));
   const second = new Map((l.mediaCheck ?? []).map((m) => [m.card + '|' + m.file, m]));
   const known = new Set(cardIds);
+  const context = contextChecks(l);
   let facts = 0;
+  let explainers = 0;
   for (const id of cardIds) {
     const list: FactCheck[] = [];
     for (const f of l.final[id] ?? []) {
@@ -257,7 +392,9 @@ export function buildChecks(l: Ledgers, cardIds: string[]): ChecksFile {
           { agent: 'C', verdict: chk.verdict, sources: sources(chk.sources) },
         ],
       });
+      explainers++;
     }
+    list.push(...(context.byCard.get(id) ?? []));
     for (const f of list) byStatus[f.status] = (byStatus[f.status] ?? 0) + 1;
     facts += list.length;
     const media = (l.media ?? [])
@@ -286,6 +423,12 @@ export function buildChecks(l: Ledgers, cardIds: string[]): ChecksFile {
   const ex = l.explainersCheck?.claims ?? [];
   const roots = [...(l.rootsCheck?.links ?? []), ...(l.rootsDeepCheck?.checks ?? [])];
   const images = (l.media ?? []).filter((m) => known.has(m.card));
+  // Context facts taken out of the cards, by the checker's verdict.
+  const contextDropped = (...verdicts: string[]) =>
+    (l.context ?? []).reduce((n, round) => {
+      const { pairs, unledgered } = pairContext(round);
+      return n + [...pairs.map((p) => p.check?.verdict), ...unledgered.map((u) => u.verdict)].filter((v) => v && verdicts.includes(v)).length;
+    }, 0);
   return {
     version: 1,
     cards,
@@ -293,14 +436,16 @@ export function buildChecks(l: Ledgers, cardIds: string[]): ChecksFile {
       cards: Object.keys(cards).length,
       facts,
       byStatus,
-      claimsExamined: l.match.claims.length + ex.length,
-      refuted: matchCount('refuted') + rechecks.filter((r) => r.verdict === 'refuted').length + ex.filter((r) => r.verdict === 'refuted').length,
-      unconfirmed: matchCount('unconfirmed') + rechecks.filter((r) => r.verdict === 'unverified').length + ex.filter((r) => r.verdict === 'unverified').length,
+      claimsExamined: l.match.claims.length + ex.length + context.totals.facts + context.totals.unledgered,
+      refuted: matchCount('refuted') + rechecks.filter((r) => r.verdict === 'refuted').length + ex.filter((r) => r.verdict === 'refuted').length + contextDropped('refuted'),
+      unconfirmed: matchCount('unconfirmed') + rechecks.filter((r) => r.verdict === 'unverified').length + ex.filter((r) => r.verdict === 'unverified').length + contextDropped('unconfirmed', 'unverified', 'removed'),
       rechecked: rechecks.length,
       images: images.length,
       imageSecond: tally(images.map((m) => second.get(m.card + '|' + m.file)).filter((x): x is MediaCheck => !!x)),
       rootsLinks: roots.length,
       rootsByVerdict: tally(roots),
+      explainers,
+      context: context.totals,
     },
   };
 }

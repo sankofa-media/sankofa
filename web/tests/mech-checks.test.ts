@@ -2,7 +2,7 @@ import { readdirSync, readFileSync } from 'node:fs';
 import { join } from 'node:path';
 import YAML from 'yaml';
 import { describe, expect, it } from 'vitest';
-import { buildChecks, factText, findClaim, type Ledgers } from '../src/mechanics/checks/model';
+import { buildChecks, factText, findClaim, pairContext, type Ledgers } from '../src/mechanics/checks/model';
 
 const src = (s: string) => ({ title: s, url: `https://example.org/${s}` });
 
@@ -36,6 +36,34 @@ function fixture(): Ledgers {
     mediaCheck: [{ card: 'a', file: 'a.jpg', verdict: 'ok' }],
     rootsCheck: { links: [{ verdict: 'confirmed' }] },
     rootsDeepCheck: { checks: [{ verdict: 'corrected' }, { verdict: 'confirmed' }] },
+    context: [
+      // The list form (context-a-check): unledgered sentences are marked in the fact.
+      {
+        facts: [
+          { card: 'a', fact: 'The writer’s first context fact', sources: [src('w2'), src('w3')] },
+          { card: 'a', fact: 'A context fact quoted with other words by the checker', sources: [src('w4')] },
+          { card: 'a', fact: 'A context fact the checker could not confirm', sources: [src('w5')] },
+        ],
+        check: [
+          { card: 'a', fact: 'The writer’s first context fact', verdict: 'confirmed', sources: [src('c3'), src('c4')], note: 'Both quotes found.' },
+          { card: 'a', fact: 'A context fact quoted in other words by the checker', verdict: 'corrected', sources: [src('c5')] },
+          { card: 'a', fact: 'A context fact the checker could not confirm', verdict: 'unconfirmed', sources: [] },
+          { card: 'a', fact: '(unledgered) A sentence the writer did not record', verdict: 'confirmed', sources: [src('c6')] },
+          { card: 'a', fact: 'UNLEDGERED: Another unrecorded sentence', verdict: 'unconfirmed', sources: [src('c7')] },
+        ],
+      },
+      // The map form (context-b-check): { claims, unledgered }.
+      {
+        facts: [{ card: 'a', fact: 'A fact of the second round', sources: [src('w6'), src('w7')] }],
+        check: {
+          claims: [{ card: 'a', fact: 'A fact of the second round', verdict: 'confirmed', sources: [src('c8'), src('c9')] }],
+          unledgered: [
+            { card: 'a', fact: 'An unrecorded sentence that was dropped', verdict: 'removed', sources: [src('c10')] },
+            { card: 'a', fact: 'A pointer to another entry', verdict: 'corrected', sources: null },
+          ],
+        },
+      },
+    ],
   };
 }
 
@@ -68,9 +96,24 @@ describe('how we checked: ledgers joined per card', () => {
   });
 
   it('keeps only explainer claims the second agent confirmed', () => {
-    const ex = out.cards.a.facts.filter((f) => f.checks[0]?.agent === 'W');
+    const ex = out.cards.a.facts.filter((f) => f.checks[0]?.agent === 'W' && f.fact.includes('xplainer'));
     expect(ex.map((f) => f.fact)).toEqual(['An explainer claim']);
     expect(ex[0].checks[1]).toMatchObject({ agent: 'C', verdict: 'confirmed' });
+  });
+
+  it('joins the context rewrite: the writer’s sources, the second check and its note', () => {
+    const ctx = out.cards.a.facts.filter((f) => f.checks.some((c) => c.agent === 'W') && !f.fact.includes('explainer'));
+    expect(ctx.map((f) => f.fact)).toEqual(['The writer’s first context fact', 'A context fact quoted in other words by the checker', 'A fact of the second round']);
+    expect(ctx[0].checks[0]).toMatchObject({ agent: 'W', verdict: 'confirmed' });
+    expect(ctx[0].checks[0].sources.map((s) => s.title)).toEqual(['w2', 'w3']);
+    expect(ctx[0].checks[1]).toMatchObject({ agent: 'C', verdict: 'confirmed', note: 'Both quotes found.' });
+    expect(ctx[1].status).toBe('corrected');
+  });
+
+  it('shows the unledgered sentences the second agent confirmed, from both file forms', () => {
+    const un = out.cards.a.facts.filter((f) => f.unledgered);
+    expect(un.map((f) => f.fact)).toEqual(['A sentence the writer did not record']);
+    expect(un[0].checks.map((c) => c.agent)).toEqual(['C']);
   });
 
   it('carries the licence wording and the second check of pictures', () => {
@@ -80,10 +123,14 @@ describe('how we checked: ledgers joined per card', () => {
   it('counts the totals from the ledgers', () => {
     expect(out.totals).toMatchObject({
       cards: 1,
-      facts: 4,
-      claimsExamined: 7,
+      facts: 8,
+      // 5 phase-one claims, 2 explainer claims, 4 context facts and 4 unledgered sentences.
+      claimsExamined: 15,
       refuted: 1,
-      unconfirmed: 3,
+      // 3 from the main check and the explainers, 3 from the context rewrite.
+      unconfirmed: 6,
+      explainers: 1,
+      context: { facts: 4, unledgered: 4, kept: 4, confirmed: 3, corrected: 1, dropped: 3 },
       rechecked: 3,
       images: 1,
       imageSecond: { ok: 1 },
@@ -110,9 +157,18 @@ describe('how we checked: the museum’s own ledgers', () => {
       explainersCheck: y('explainers-check.yaml'),
       media: [...y('media.yaml'), ...y('media-documents.yaml')],
       mediaCheck: y('media-check.yaml'),
+      context: ['a', 'b'].map((x) => ({ facts: y(`context-${x}.yaml`), check: y(`context-${x}-check.yaml`) })),
     },
     ids,
   );
+
+  it('pairs every fact of the context rewrite with its second check', () => {
+    for (const x of ['a', 'b']) {
+      const { pairs } = pairContext({ facts: y(`context-${x}.yaml`), check: y(`context-${x}-check.yaml`) });
+      expect(pairs.filter((p) => !p.check).map((p) => `${p.fact.card}: ${p.fact.fact}`)).toEqual([]);
+    }
+    expect(out.totals.context.kept).toBeGreaterThan(400);
+  });
 
   it('has a record for every card', () => {
     expect(Object.keys(out.cards).sort()).toEqual([...ids].sort());
@@ -120,7 +176,8 @@ describe('how we checked: the museum’s own ledgers', () => {
 
   it('traces almost every fact to the two agents', () => {
     const facts = Object.values(out.cards).flatMap((c) => c.facts);
-    const traced = facts.filter((f) => f.checks.length === 2);
+    // An unledgered sentence has only the second agent's check: the writer recorded none.
+    const traced = facts.filter((f) => f.checks.length === (f.unledgered ? 1 : 2));
     expect(traced.length / facts.length).toBeGreaterThan(0.99);
     for (const f of traced) for (const c of f.checks) expect(['A', 'B', 'W', 'C']).toContain(c.agent);
   });

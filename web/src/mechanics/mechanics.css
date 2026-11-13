@@ -890,6 +890,18 @@
 .ck-sources a {
   color: var(--ink-2);
 }
+.ck-agent-note {
+  margin: 6px 0 0;
+  color: var(--ink-3);
+  font-style: italic;
+  overflow-wrap: anywhere;
+}
+.ck-unledgered {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--ink-2);
+  margin: 0 0 10px 2.2em;
+}
 .ck-none {
   font-family: var(--font-sans);
   font-size: 13px;

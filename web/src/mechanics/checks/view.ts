@@ -55,6 +55,7 @@ function agentBlock(c: AgentCheck): HTMLElement {
           c.sources.map((s) => h('li', {}, s.url ? h('a', { href: s.url, rel: 'noopener', target: '_blank' }, s.title) : s.title)),
         )
       : h('p.ck-none', {}, pick({ en: 'No sources recorded for this verdict.', ru: 'Источники для этого вердикта не записаны.' })),
+    c.note ? h('p.ck-agent-note', { lang: 'en' }, c.note) : null,
   );
 }
 
@@ -66,6 +67,9 @@ function factRow(f: FactCheck, i: number): HTMLElement {
       'details',
       {},
       h('summary', {}, h('span.ck-n', { 'aria-hidden': 'true' }, String(i + 1)), h('span.ck-text', { lang: 'en' }, f.fact), h(`span.ck-status.s-${f.status}`, {}, STATUS[f.status] ? pick(STATUS[f.status]) : f.status)),
+      f.unledgered
+        ? h('p.ck-unledgered', {}, pick({ en: 'The writer added this sentence without recording it; the second agent found it in the card and checked it on its own.', ru: 'Автор добавил это предложение, не записав его в журнал; второй агент нашёл его в карточке и проверил сам.' }))
+        : null,
       f.checks.length
         ? h('div.ck-agents', {}, f.checks.map(agentBlock))
         : h('p.ck-none', {}, pick({ en: 'The ledger records the result; the two agents filed this fact under other wording.', ru: 'Результат записан в журнале; агенты проверяли этот факт в другой формулировке.' })),
@@ -105,8 +109,8 @@ export function checksPanel(c: Card, data: CardChecks | undefined): HTMLElement 
       'p.ck-intro',
       {},
       pick({
-        en: 'Each fact on this card was checked by two independent agents, each against two independent sources. Open a fact to see who checked it and with what.',
-        ru: 'Каждый факт этой карточки проверили два независимых агента, и каждый — по двум независимым источникам. Откройте факт, чтобы увидеть, кто его проверял и по каким источникам.',
+        en: 'Each fact on this card was checked twice, independently, against independent sources: by two agents, or by the writer who added it and a second agent who reopened every source. Open a fact to see who checked it and with what.',
+        ru: 'Каждый факт этой карточки проверен дважды, независимо и по независимым источникам: двумя агентами или автором, который его добавил, и вторым агентом, заново открывшим каждый источник. Откройте факт, чтобы увидеть, кто его проверял и по каким источникам.',
       }),
       ' ',
       h('a', { href: '#view=method', 'data-mech': 'method' }, pick({ en: 'How the museum checks facts →', ru: 'Как музей проверяет факты →' })),
@@ -173,6 +177,14 @@ export function methodPage(data: ChecksFile): HTMLElement {
         'p',
         {},
         pick({
+          en: 'When the cards were rewritten to give each story its context and its outcome, the writer recorded every new fact with at least two independent sources and a quotation from each. A second agent then reopened every one of those pages, looked for each quotation in the page itself, and gave its own verdict; it also read the cards against their sources and checked, the same way, the sentences the writer had added without recording them. What it could not confirm was taken out of the cards.',
+          ru: 'Когда карточки переписывали, чтобы у каждой истории были предыстория и развязка, автор записывал каждый новый факт минимум с двумя независимыми источниками и цитатой из каждого. Затем второй агент заново открыл каждую из этих страниц, нашёл каждую цитату в самом тексте страницы и вынес свой вердикт; кроме того, он сверил карточки с источниками и так же проверил предложения, которые автор добавил, не записав. То, что подтвердить не удалось, из карточек убрано.',
+        }),
+      ),
+      h(
+        'p',
+        {},
+        pick({
           en: 'Pictures follow the same discipline. Each one is public domain or openly licensed, and the licence was read on the file’s own source page and copied word for word, with the date and a checksum of the file. A second check reopened every source page.',
           ru: 'Изображения подчиняются той же дисциплине. Каждое находится в общественном достоянии или под открытой лицензией; лицензию прочитали на странице самого файла и переписали слово в слово, с датой и контрольной суммой файла. Вторая проверка заново открыла каждую такую страницу.',
         }),
@@ -195,8 +207,16 @@ export function methodPage(data: ChecksFile): HTMLElement {
         {},
         h('li', {}, pick({ en: `${formatNumber(kept('agreed'))} confirmed by both agents in the first round;`, ru: `${formatNumber(kept('agreed'))} — подтвердили оба агента в первом же круге;` })),
         h('li', {}, pick({ en: `${formatNumber(kept('recheck-confirmed'))} confirmed when the second agent re-checked them (${formatNumber(t.rechecked)} claims went back for a re-check);`, ru: `${formatNumber(kept('recheck-confirmed'))} — подтверждены, когда второй агент перепроверил их (всего на перепроверку вернулось ${formatNumber(t.rechecked)} утверждений);` })),
-        h('li', {}, pick({ en: `${formatNumber(kept('confirmed'))} added when cards were rewritten to explain their subject, each confirmed by a second agent;`, ru: `${formatNumber(kept('confirmed'))} — добавлены, когда карточки переписывали, чтобы объяснить сам предмет, и каждый подтвердил второй агент;` })),
-        h('li', {}, pick({ en: `${formatNumber(kept('corrected'))} kept in a corrected form;`, ru: `${formatNumber(kept('corrected'))} — оставлены в исправленном виде;` })),
+        h('li', {}, pick({ en: `${formatNumber(t.explainers)} added when cards were rewritten to explain their subject, each confirmed by a second agent;`, ru: `${formatNumber(t.explainers)} — добавлены, когда карточки переписывали, чтобы объяснить сам предмет, и каждый подтвердил второй агент;` })),
+        h(
+          'li',
+          {},
+          pick({
+            en: `${formatNumber(t.context.kept)} added when cards were rewritten for context and outcomes: of ${formatNumber(t.context.facts)} facts the writer recorded with sources and ${formatNumber(t.context.unledgered)} sentences it had not recorded, the second check confirmed ${formatNumber(t.context.confirmed)}, corrected ${formatNumber(t.context.corrected)} and took ${formatNumber(t.context.dropped)} out;`,
+            ru: `${formatNumber(t.context.kept)} — добавлены, когда карточки переписывали ради предыстории и развязки: из ${formatNumber(t.context.facts)} ${pluralRu(t.context.facts, ['факта', 'фактов', 'фактов'])}, записанных автором с источниками, и ${formatNumber(t.context.unledgered)} ${pluralRu(t.context.unledgered, ['предложения', 'предложений', 'предложений'])}, которые он не записал, вторая проверка подтвердила ${formatNumber(t.context.confirmed)}, исправила ${formatNumber(t.context.corrected)} и убрала ${formatNumber(t.context.dropped)};`,
+          }),
+        ),
+        h('li', {}, pick({ en: `${formatNumber(kept('corrected'))} kept in a corrected form, in all;`, ru: `${formatNumber(kept('corrected'))} — всего оставлены в исправленном виде;` })),
         h('li', {}, pick({ en: `${formatNumber(kept('disputed'))} kept only as contested.`, ru: `${formatNumber(kept('disputed'))} — оставлены только как спорные.` })),
       ),
       h(
@@ -216,8 +236,8 @@ export function methodPage(data: ChecksFile): HTMLElement {
         'p',
         {},
         pick({
-          en: 'On every card, the panel “How we checked” lists the card’s facts with both agents’ verdicts and sources, and the rights of its pictures. The ledgers themselves are in the museum’s repository, in content/ledger.',
-          ru: 'На каждой карточке панель «Как мы проверяли» перечисляет её факты с вердиктами и источниками обоих агентов, а также права на её изображения. Сами журналы лежат в репозитории музея, в content/ledger.',
+          en: 'On every card, the panel “How we checked” lists the card’s facts with both checks’ verdicts and sources, and the rights of its pictures. The ledgers themselves are in the museum’s repository, in content/ledger.',
+          ru: 'На каждой карточке панель «Как мы проверяли» перечисляет её факты с вердиктами и источниками обеих проверок, а также права на её изображения. Сами журналы лежат в репозитории музея, в content/ledger.',
         }),
       ),
     ),
