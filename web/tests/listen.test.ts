@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
-import { embedUrl, parseListen, posterUrl } from '../src/lib/listen';
+import { embedUrl, noteFor, parseListen, posterUrl } from '../src/lib/listen';
 
 describe('listen data', () => {
   it('reads cards and roots, with an optional start, and drops the editors’ missing list', () => {
@@ -33,6 +33,21 @@ missing:
     expect(embedUrl(d.cards['work-songs'][0])).toBeUndefined();
   });
 
+  it('reads a Russian note and a non-official kind, on YouTube too', () => {
+    const d = parseListen(`cards:\n  gullah:\n    - {youtube: "HocmOCVoVOE", kind: field, title: "Mende Song", channel: "Release - Topic", note: "antiphony", noteRu: "антифония"}\n`);
+    const r = d.cards.gullah[0];
+    expect(r).toMatchObject({ source: 'youtube', kind: 'field', note: 'antiphony', noteRu: 'антифония' });
+    expect(noteFor(r, 'ru')).toEqual({ text: 'антифония', lang: 'ru' });
+    expect(noteFor(r, 'en')).toEqual({ text: 'antiphony', lang: 'en' });
+  });
+
+  it('falls back to the English note, then to the title, in Russian mode', () => {
+    const enOnly = parseListen(`cards:\n  x:\n    - {youtube: "HocmOCVoVOE", title: "Song", note: "about it"}\n`);
+    expect(noteFor(enOnly.cards.x[0], 'ru')).toEqual({ text: 'about it', lang: 'en' });
+    const noNote = parseListen(`cards:\n  x:\n    - {youtube: "HocmOCVoVOE", title: "Song"}\n`);
+    expect(noteFor(noNote.cards.x[0], 'ru')).toEqual({ text: 'Song', lang: 'en' });
+  });
+
   it('rejects what would break a player', () => {
     expect(() => parseListen('cards:\n  x: {youtube: "not an id", title: t}\n')).toThrow(/YouTube video id/);
     expect(() => parseListen('cards:\n  x: {youtube: "HrrWhCbZAyY", title: t, start: -3}\n')).toThrow(/whole seconds/);
@@ -42,6 +57,6 @@ missing:
   it('parses the museum’s own list', () => {
     const d = parseListen(readFileSync(new URL('../../content/listen.yaml', import.meta.url), 'utf8'));
     const n = Object.values(d.cards).flat().length + Object.values(d.roots).flat().length;
-    expect(n).toBe(121);
+    expect(n).toBe(148);
   });
 });

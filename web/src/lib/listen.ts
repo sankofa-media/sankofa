@@ -3,6 +3,7 @@
 // later (a field recording with a direct audio file, an archival voice clip
 // with subtitles) without changing what a card or an artist holds.
 import { parse as parseYaml } from 'yaml';
+import { lang, type Lang } from './i18n.ts';
 
 export type RecordingSource = 'youtube' | 'audio';
 /** Why the museum offers it: an official upload, a field recording, an archival voice. */
@@ -20,8 +21,10 @@ export interface Recording {
   title: string;
   /** The uploader or the archive. */
   channel?: string;
-  /** What to listen for, in English (shown as is in every language). */
+  /** What to listen for, in English. */
   note?: string;
+  /** The same note in Russian, shown in Russian mode when present. */
+  noteRu?: string;
 }
 
 export interface ListenFile {
@@ -36,13 +39,16 @@ function entry(raw: unknown, where: string): Recording {
   const r = (raw ?? {}) as Record<string, unknown>;
   const start = r.start === undefined ? undefined : Number(r.start);
   if (start !== undefined && !(Number.isInteger(start) && start >= 0)) throw new Error(`${where}: start must be whole seconds`);
+  const note = r.note ? String(r.note) : undefined;
+  const noteRu = r.noteRu ? String(r.noteRu) : undefined;
   if (typeof r.youtube === 'string') {
     if (!YT_ID.test(r.youtube)) throw new Error(`${where}: not a YouTube video id: ${r.youtube}`);
-    return { source: 'youtube', kind: 'official', youtube: r.youtube, start, title: String(r.title ?? ''), channel: r.channel ? String(r.channel) : undefined, note: r.note ? String(r.note) : undefined };
+    const kind = r.kind === 'field' || r.kind === 'voice' ? r.kind : 'official';
+    return { source: 'youtube', kind, youtube: r.youtube, start, title: String(r.title ?? ''), channel: r.channel ? String(r.channel) : undefined, note, noteRu };
   }
   if (typeof r.audio_url === 'string' || typeof r.audio === 'string') {
     const kind = r.kind === 'voice' || r.kind === 'official' ? r.kind : 'field';
-    return { source: 'audio', kind, audio: String(r.audio_url ?? r.audio), start, title: String(r.title ?? ''), channel: r.channel ? String(r.channel) : undefined, note: r.note ? String(r.note) : undefined };
+    return { source: 'audio', kind, audio: String(r.audio_url ?? r.audio), start, title: String(r.title ?? ''), channel: r.channel ? String(r.channel) : undefined, note, noteRu };
   }
   throw new Error(`${where}: a recording needs youtube or audio_url`);
 }
@@ -73,6 +79,12 @@ export function posterUrl(r: Recording): string | undefined {
 export function embedUrl(r: Recording): string | undefined {
   if (r.source !== 'youtube' || !r.youtube) return undefined;
   return `https://www.youtube-nocookie.com/embed/${r.youtube}?autoplay=1${r.start ? `&start=${r.start}` : ''}`;
+}
+
+/** The caption's note in the reader's language: Russian mode prefers noteRu. */
+export function noteFor(r: Recording, l: Lang = lang()): { text: string; lang: 'en' | 'ru' } {
+  const ru = l === 'ru' ? r.noteRu : undefined;
+  return { text: ru ?? r.note ?? r.title, lang: ru ? 'ru' : 'en' };
 }
 
 /** The first recording the museum offers for a card or a roots artist ("card:<id>" or an artist id). */

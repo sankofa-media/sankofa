@@ -1,5 +1,7 @@
-# Official recordings to listen to, by card or roots artist.
-# Every id was checked against YouTube oEmbed (HTTP 200) on 2026-11-13;
+# Recordings to listen to, by card or roots artist: the official upload first,
+# then field recordings (kind: field) from the archives listed in
+# content/listen-folk.yaml, which keeps their sources and rights.
+# Every YouTube id was checked against YouTube oEmbed (HTTP 200) on 2026-11-13;
 # title and channel are the oEmbed title and author_name as returned.
 cards:
   afrobeat:
@@ -14,20 +16,44 @@ cards:
     note: "The Winstons, \"Amen, Brother\" (1969); the drum break comes at about 1:26"
     start: 85
   banjo:
-    youtube: "aQkcPSpWWCo"
-    title: "“Cripple Creek” performed by Rhiannon Giddens, Banjo l Met Music"
-    channel: "The Met"
-    note: "Rhiannon Giddens plays \"Cripple Creek\" on the banjo, filmed in the Met's musical-instrument galleries (2018)"
+    - youtube: "aQkcPSpWWCo"
+      title: "“Cripple Creek” performed by Rhiannon Giddens, Banjo l Met Music"
+      channel: "The Met"
+      note: "Rhiannon Giddens plays \"Cripple Creek\" on the banjo, filmed in the Met's musical-instrument galleries (2018)"
+    - youtube: "MuDbKpv90Ys"
+      kind: field
+      title: "Sid Hemphill: The Carrier Line (1942)"
+      channel: "Lomax Film Collection"
+      note: "Hemphill's Black string band from the Mississippi Hill Country, fiddle and banjo over a bass drum, plays \"The Carrier Line\", one of Hemphill's own blues ballads; Lomax's 1942 discs were the first recordings of the region's local music."
+      noteRu: "Чёрный струнный оркестр Сида Хемпхилла из холмов Миссисипи, скрипка и банджо поверх большого барабана, играет «The Carrier Line», одну из блюзовых баллад самого Хемпхилла. Записи Ломакса 1942 года стали первыми записями здешней музыки."
+    - youtube: "TTZToDDPF1E"
+      kind: field
+      title: "The Coo Coo (Coo Coo Bird)"
+      channel: "Release - Topic"
+      note: "An instrumental \"Coo Coo\" on a fretless banjo, its gapped scale and near-neutral seventh pointing, in the annotators' view, back toward Africa."
+      noteRu: "Инструментальная «Кукушка» на безладовом банджо; её звукоряд с пропусками и почти нейтральной септимой, по мнению составителей, отсылает к Африке."
   big-mama-thornton:
     youtube: "aKicGqIMpqk"
     title: "Hound Dog"
     channel: "Big Mama Thornton - Topic"
     note: "\"Hound Dog\", Big Mama Thornton's Peacock recording (1953)"
   blues:
-    youtube: "cSuTTSOctGw"
-    title: "W.C. Handy \"St. Louis Blues\" On The Ed Sullivan Show"
-    channel: "The Ed Sullivan Show"
-    note: "W. C. Handy, \"St. Louis Blues\", on The Ed Sullivan Show"
+    - youtube: "cSuTTSOctGw"
+      title: "W.C. Handy \"St. Louis Blues\" On The Ed Sullivan Show"
+      channel: "The Ed Sullivan Show"
+      note: "W. C. Handy, \"St. Louis Blues\", on The Ed Sullivan Show"
+    - youtube: "sRAXrVt3Ass"
+      kind: field
+      title: "Country Blues (No. 1) (Plantation Recording)"
+      channel: "Muddy Waters - Topic"
+      note: "Muddy Waters's first recording, made at home on Stovall's plantation for the Library of Congress, a bottleneck blues and an early version of a song he later recorded commercially in Chicago."
+      noteRu: "Первая запись Мадди Уотерса, сделанная для Библиотеки Конгресса у него дома на плантации Стовалла: блюз с бутылочным горлышком, ранний вариант песни, которую он потом запишет в Чикаго для пластинки."
+    - youtube: "9pdMzkb1HeE"
+      kind: field
+      title: "Black Woman"
+      channel: "Rich Amerson - Topic"
+      note: "An unaccompanied \"field blues\" with moans, falsetto and a preacher's \"ah-hmm\"; Courlander heard in it the link between plantation field calls and city blues."
+      noteRu: "«Полевой блюз» без аккомпанемента, со стонами, фальцетом и проповедническим «а-хм». Курлендер слышал в нём связующее звено между плантационными кличами и городским блюзом."
   bridgetower:
     youtube: "s2BYvSzZ_i4"
     title: "Beethoven: Violin Sonata No. 9 in A Major, Op. 47 \"Kreutzer\": I. Adagio sostenuto – Presto"
@@ -38,11 +64,24 @@ cards:
     title: "Dvořák: Symphony No. 9 in E Minor, Op. 95, B. 178 \"From the New World\": II. Largo"
     channel: "Berliner Philharmoniker - Topic"
     note: "Dvořák, Symphony No. 9 \"From the New World\", II. Largo; Berliner Philharmoniker"
+  candomble:
+    - youtube: "TmwHfoL_iqU"
+      kind: field
+      title: "Agolonã"
+      channel: "Release - Topic"
+      note: "The stately processional rhythm of Ketu candomblé that greets the orixás when the possessed initiates return in their gods' clothing; one of the earliest recordings of candomblé, made by the Herskovitses for the Library of Congress."
+      noteRu: "Торжественный шествующий ритм кандомбле кету, которым встречают ориша, когда одержимые посвящённые возвращаются в одеждах своих богов; одна из самых ранних записей кандомбле, сделанная Херсковицами для Библиотеки Конгресса."
   capoeira:
-    youtube: "_Ut0NCthq8c"
-    title: "Banguela"
-    channel: "Mestre Bimba - Topic"
-    note: "Mestre Bimba, \"Banguela\", from Curso de Capoeira Regional (capoeira regional berimbau toque)"
+    - youtube: "_Ut0NCthq8c"
+      title: "Banguela"
+      channel: "Mestre Bimba - Topic"
+      note: "Mestre Bimba, \"Banguela\", from Curso de Capoeira Regional (capoeira regional berimbau toque)"
+    - youtube: "9QQMsl9UQXg"
+      kind: field
+      title: "Toques Tradicionais: Cavalaria (Aviso)"
+      channel: "Grupo de Capoeira Angola Pelourinho - Topic"
+      note: "Cavalaria, the berimbau rhythm that imitates horses' hooves and was traditionally played to warn players of a raid by mounted police."
+      noteRu: "Кавалария — ритм беримбау, подражающий стуку копыт: по традиции им предупреждали игроков о налёте конной полиции."
   chicago-house:
     youtube: "ottFhv0zD_8"
     title: "Your Love"
@@ -73,6 +112,25 @@ cards:
     title: "Mahalia Jackson - Take My Hand, Precious Lord (Official Audio)"
     channel: "MahaliaJacksonVEVO"
     note: "Mahalia Jackson, \"Take My Hand, Precious Lord\" (Thomas A. Dorsey)"
+  gullah:
+    - youtube: "HocmOCVoVOE"
+      kind: field
+      title: "Mende Song"
+      channel: "Release - Topic"
+      note: "Mende women in a small Sierra Leone village sing in antiphony, soloists answered by a chorus of eleven: the language of the funeral song that survived among the Gullah, though this is a different song."
+      noteRu: "Женщины менде из маленькой деревни в Сьерра-Леоне поют антифонно: солисткам отвечает хор из одиннадцати голосов. Это язык той погребальной песни, что сохранилась у гулла, хотя песня здесь другая."
+    - youtube: "actgC4ZsMoA"
+      kind: field
+      title: "Join the Band (Live)"
+      channel: "Georgia Sea Island Singers - Topic"
+      note: "A secular work song of the St. Simons Island stevedores, led by John Davis with scat syllables and bluesy Sea Island harmonies."
+      noteRu: "Светская рабочая песня грузчиков с острова Сент-Саймонс: ведёт Джон Дэвис, с распевом на слогах и блюзовой гармонией Морских островов."
+    - youtube: "uxPU5517u8c"
+      kind: field
+      title: "McIntosh County Shouters: Gullah-Geechee Ring Shout from Georgia"
+      channel: "Library of Congress"
+      note: "A full ring shout: dancers move counterclockwise, a leader calls and the group answers, and a stick beaten on the wooden floor keeps the beat; the tradition, first described in detail during the Civil War, was thought extinct until its rediscovery in McIntosh County in 1980."
+      noteRu: "Настоящий «ринг-шаут»: участники движутся по кругу против часовой стрелки, ведущий запевает, остальные отвечают, а палка, которой бьют по деревянному полу, держит ритм. Обычай, подробно описанный ещё в годы Гражданской войны, считали исчезнувшим, пока в 1980 году его не нашли в округе Макинтош."
   highlife:
     youtube: "OVB8isxRngs"
     title: "All for You"
@@ -83,16 +141,50 @@ cards:
     title: "Rapper's Delight (Long Version)"
     channel: "The Sugarhill Gang - Topic"
     note: "Sugarhill Gang, \"Rapper's Delight\" (1979), long version over the \"Good Times\" bass line"
+  hurston:
+    - audio_url: "https://tile.loc.gov/storage-services/media/ingested/api/loc.afc.afcflwpa.3136b1.mp3"
+      kind: field
+      title: "Mule on the Mount"
+      channel: "Library of Congress"
+      note: "Hurston sings a track-lining work song she learned in Eatonville from George Thomas, keeping the rhythm railroad crews used; the LOC note calls it the most widely distributed work song in the United States."
+      noteRu: "Хёрстон поёт рабочую песню путейцев, которую переняла в Итонвилле у Джорджа Томаса, и держит тот самый ритм, под который бригады выравнивали рельсы. В примечании Библиотеки Конгресса она названа самой распространённой рабочей песней в США."
   jazz:
     youtube: "BTxhgmk_ofk"
     title: "West End Blues"
     channel: "Louis Armstrong And The All-Stars - Topic"
     note: "Louis Armstrong and His Hot Five, \"West End Blues\" (1928)"
+  liberia:
+    - youtube: "rYOwD0r5wDo"
+      kind: field
+      title: "Loma (Buzi) Song with Fanga Drums"
+      channel: "Release - Topic"
+      note: "Two Loma drummers tap the wooden shells of their fanga drums, then move to the heads and bend the pitch by squeezing the lacing with an elbow: music of the interior peoples whom the Americo-Liberian state governed."
+      noteRu: "Двое барабанщиков лома сначала постукивают по деревянным корпусам барабанов фанга, потом переходят на мембраны и меняют высоту звука, зажимая шнуровку локтем. Это музыка народов внутренних районов, которыми управляло государство американо-либерийцев."
   misogyny-in-hip-hop:
     youtube: "f8cHxydDb7o"
     title: "Queen Latifah - U.N.I.T.Y."
     channel: "QueenLatifahVEVO"
     note: "Queen Latifah, \"U.N.I.T.Y.\" (1993)"
+  nanny-of-the-maroons:
+    - youtube: "FTkajdyFS0Q"
+      kind: field
+      title: "Grandy Nanny"
+      channel: "Release - Topic"
+      note: "Kromanti drumming in speech mode on gumbe, grandy and kwat under a song that calls on Grandy Nanny; in Scott's Hall it traditionally opened every Kromanti Play."
+      noteRu: "Барабаны кроманти — гумбе, гранди и кват — «говорят», а песня призывает Бабушку Нэнни; в Скоттс-Холле ею по традиции открывали каждое действо кроманти."
+    - youtube: "l7s3lP7D4l0"
+      kind: field
+      title: "Abeng (Signaling Horn)"
+      channel: "Release - Topic"
+      note: "The cow-horn abeng, the Windward Maroons' signalling instrument, blown to usher in Christmas, the only time of year it may be sounded freely."
+      noteRu: "Абенг, коровий рог — сигнальный инструмент наветренных маронов; здесь он возвещает Рождество, единственную пору года, когда в него можно трубить свободно."
+  palmares:
+    - youtube: "5u_qO9llq30"
+      kind: field
+      title: "Ladainha: Rei Zumbi dos Palmares"
+      channel: "Grupo de Capoeira Angola Pelourinho - Topic"
+      note: "A capoeira ladainha by Mestre Moraes in homage to Zumbi of Palmares, recorded for the 300th anniversary of Zumbi's death; berimbaus, pandeiros and atabaque behind the solo voice."
+      noteRu: "Ладаинья местре Мораиса в честь Зумби из Палмариса, записанная к трёхсотлетию его гибели: за сольным голосом — беримбау, пандейру и атабаке."
   planet-rock:
     youtube: "9J3lwZjHenA"
     title: "Afrika Bambaataa & The Soulsonic Force - Planet Rock (Official Music Video) [HD]"
@@ -129,40 +221,119 @@ cards:
     channel: "Augustin Hadelich"
     note: "Saint-Georges, Violin Concerto in A, Op. 5 No. 2; Augustin Hadelich"
   samba:
-    youtube: "5J-WcQYsq-M"
-    title: "Pelo Telefone"
-    channel: "BAIANO - Topic"
-    note: "Bahiano, \"Pelo Telefone\" (1917 recording of the Donga samba)"
+    - youtube: "5J-WcQYsq-M"
+      title: "Pelo Telefone"
+      channel: "BAIANO - Topic"
+      note: "Bahiano, \"Pelo Telefone\" (1917 recording of the Donga samba)"
+    - youtube: "lIN-EIs4VzE"
+      kind: field
+      title: "The Samba de Roda of Recôncavo of Bahia"
+      channel: "UNESCO"
+      note: "UNESCO's short film on samba de roda, the circle of song, hand-clapping, viola and dance in the Bahian Recôncavo from which Rio's urban samba drew."
+      noteRu: "Короткий фильм ЮНЕСКО о самбе де рода — круге песни, хлопков, виолы и танца в баиянском Реконкаву, из которого выросла городская самба Рио."
   spirituals:
-    youtube: "ASUjzszcRws"
-    title: "Swing Low, Sweet Chariot"
-    channel: "The Fisk Jubilee Singers - Topic"
-    note: "Fisk Jubilee Singers, \"Swing Low, Sweet Chariot\" (recorded 1909–1911)"
+    - youtube: "ASUjzszcRws"
+      title: "Swing Low, Sweet Chariot"
+      channel: "The Fisk Jubilee Singers - Topic"
+      note: "Fisk Jubilee Singers, \"Swing Low, Sweet Chariot\" (recorded 1909–1911)"
+    - audio_url: "https://tile.loc.gov/storage-services/media/afc/lomax/afc1939001_02684a1.mp3"
+      kind: field
+      title: "Amazing Grace"
+      channel: "Library of Congress"
+      note: "Three Alabama singers draw out the hymn in the slow, ornamented lined-hymn style of Black congregations, each syllable stretched over many notes."
+      noteRu: "Трое певцов из Алабамы протяжно ведут гимн в медленной, богато украшенной манере «линованного» пения чёрных общин, растягивая каждый слог на множество нот."
+    - youtube: "NupAm6QnpCA"
+      kind: field
+      title: "Bessie Jones and the Georgia Sea Island Singers: Yonder Come Day (1959)"
+      channel: "Lomax Film Collection"
+      note: "The singers talk about Watch Night, the New Year's Eve vigil, and then sing the song that greeted the dawn of the new year."
+      noteRu: "Певцы рассказывают о Ночи бдения, новогодней службе до рассвета, и поют песню, которой встречали первую зарю нового года."
   steelpan:
-    youtube: "-XTiD9_gsLU"
-    title: "Hold 'Em Joe"
-    channel: "Brute Force Steel Band - Topic"
-    note: "Brute Force Steel Band of Antigua, \"Hold 'Em Joe\" (Cook Records, 1955)"
+    - youtube: "-XTiD9_gsLU"
+      title: "Hold 'Em Joe"
+      channel: "Brute Force Steel Band - Topic"
+      note: "Brute Force Steel Band of Antigua, \"Hold 'Em Joe\" (Cook Records, 1955)"
+    - youtube: "5C7UswyIIW8"
+      kind: field
+      title: "Yankees Gone"
+      channel: "Release - Topic"
+      note: "A steel band plays down the street at Carnival 1956 while the crowd sings along to 'Jean and Dinah', the Mighty Sparrow calypso that won that year's crown."
+      noteRu: "Стил-бэнд идёт по улице на карнавале 1956 года, и толпа подпевает «Джин и Дайне» — калипсо Майти Спэрроу, взявшему в тот год корону."
   sun-ra:
     youtube: "CmY72PYQXek"
     title: "Space Is The Place"
     channel: "Sun Ra - Topic"
     note: "Sun Ra and his Arkestra, \"Space Is the Place\" (1973)"
   sunjata:
-    youtube: "nuA0hDluS04"
-    title: "The Sunjata epic"
-    channel: "British Library"
-    note: "Extract from a performance of the Sunjata epic: Hawa Kassé Made Diabaté (voice), Fode Lassana Diabaté (balafon), Chérif Keita (narrator)"
+    - youtube: "nuA0hDluS04"
+      title: "The Sunjata epic"
+      channel: "British Library"
+      note: "Extract from a performance of the Sunjata epic: Hawa Kassé Made Diabaté (voice), Fode Lassana Diabaté (balafon), Chérif Keita (narrator)"
+    - youtube: "xXuVykFNCaY"
+      kind: field
+      title: "Sunjata (Sauta Tuning)"
+      channel: "Foday Musa Suso - Topic"
+      note: "The standard kora piece in honour of Sunjata Keita: the Gambian jali Foday Musa Suso sings only a few lines and spends the rest on variations over the kumbengo accompaniment."
+      noteRu: "Каноническая пьеса для коры в честь Сунджаты Кейты. Гамбийский джали Фоде Муса Сусо поёт всего несколько строк, а остальное время отдаёт вариациям поверх аккомпанемента кумбенго."
+    - youtube: "27Bo2_e_bVk"
+      kind: field
+      title: "The Cultural Space of Sosso-Bala"
+      channel: "UNESCO"
+      note: "The balafon said to have belonged to Sumaoro Kanté, Sunjata's enemy, kept in a hut at Nyagassola by the Kouyaté griots, who still play it on great occasions."
+      noteRu: "Балафон, который, по преданию, принадлежал Сумаоро Канте, противнику Сунджаты. Его хранят в хижине в Ньягассоле гриоты Куяте и до сих пор играют на нём по большим праздникам."
   talking-drums:
-    youtube: "QDm6V_MvMVg"
-    title: "Dundun Drums and Shekere Rattles (3)"
-    channel: "Release - Topic"
-    note: "Yoruba dùndún drummers with shekere, from Drums of the Yoruba of Nigeria (Folkways, 1953)"
+    - youtube: "QDm6V_MvMVg"
+      title: "Dundun Drums and Shekere Rattles (3)"
+      channel: "Release - Topic"
+      note: "Yoruba dùndún drummers with shekere, from Drums of the Yoruba of Nigeria (Folkways, 1953)"
+    - youtube: "0abB33q-J68"
+      kind: field
+      title: "Talking Drum"
+      channel: "Release - Topic"
+      note: "A praise text is spoken and then drummed on a pair of atumpan, so you can hear the tones of spoken Twi turn into drumbeats; the Akan counterpart to the Yoruba dùndún."
+      noteRu: "Хвалебный текст сначала произносят, а потом выбивают на паре барабанов атумпан, и слышно, как тоны разговорного языка тви превращаются в удары. Это аканская параллель йорубскому дундуну."
+    - youtube: "65zuMHAQo7Y"
+      kind: field
+      title: "Ashanti: Atumpan"
+      channel: "Release - Topic"
+      note: "A pair of Asante atumpan, the royal drums played with hooked sticks, calls a village to a dance; the booklet calls it drum signalling rather than a drummed text."
+      noteRu: "Пара атумпан, царских барабанов асанте, на которых играют изогнутыми палочками, созывает деревню на танец. Буклет называет это скорее барабанным сигналом, чем отбитым текстом."
+  vai-script:
+    - youtube: "6oNYOsnsXh0"
+      kind: field
+      title: "Historical Song"
+      channel: "Release - Topic"
+      note: "A 52-second chorus, \"Koli munda\" (\"I am a young leopard, take me to the chief\"), which, according to the notes, commemorates Duala Bukele's invention of the Vai script and is sung when Vai unity matters."
+      noteRu: "Хор длиной в пятьдесят две секунды, «Коли мунда» («Я молодой леопард, отведите меня к вождю»). По словам составителя, песня посвящена тому, как Дуала Букеле изобрёл письмо ваи, и звучит, когда народу ваи важно ощутить единство."
   work-songs:
-    youtube: "tLGeDY-w3p4"
-    title: "Old Alabama"
-    channel: "B.B And Six Others - Topic"
-    note: "\"Old Alabama\", work song recorded by Alan Lomax at Parchman Farm, Mississippi (1947)"
+    - youtube: "tLGeDY-w3p4"
+      title: "Old Alabama"
+      channel: "B.B And Six Others - Topic"
+      note: "\"Old Alabama\", work song recorded by Alan Lomax at Parchman Farm, Mississippi (1947)"
+    - audio_url: "https://tile.loc.gov/storage-services/media/afc/lomax/afc1939001_02663a3.mp3"
+      kind: field
+      title: "Cornfield holler"
+      channel: "Library of Congress"
+      note: "A solo field holler sung by a prisoner on an Arkansas prison farm; the Lomaxes noted the singer's own word for it, \"a sorrow song to make yo' heart feel sorry\"."
+      noteRu: "Одинокий полевой клич заключённого с арканзасской тюремной фермы. Ломаксы записали, как назвал его сам певец: «печальная песня, чтоб сердцу стало жалко»."
+    - youtube: "xpoLxDPV6aE"
+      kind: field
+      title: "Ain't No More Cane on the Brazos"
+      channel: "Ernest \"Mexico\" Williams - Topic"
+      note: "A sugar-cane gang song from the Texas convict-lease farms; in this take Lomax prompts Williams to add the verse \"you should have been here in 1910, they was driving the women just like the men\"."
+      noteRu: "Песня каторжной бригады с тексасских сахарных плантаций. В этом дубле Ломакс просит Уильямса спеть куплет «был бы ты здесь в 1910-м: женщин гоняли наравне с мужчинами»."
+    - youtube: "sv9qL6PaA-g"
+      kind: field
+      title: "Levee Camp Holler"
+      channel: "B.A.M.A. - Topic"
+      note: "A long, bending solo holler of the levee camps, sung by a Parchman prisoner and recorded on Alan Lomax's paper tapes."
+      noteRu: "Протяжный, переливчатый одиночный клич из лагерей строителей дамб; его спел заключённый Парчмена, а Алан Ломакс записал на бумажную магнитную ленту."
+    - youtube: "YFugnaMnJEI"
+      kind: field
+      title: "Bright Light Quartet: Menhaden fishermen's chantey medley (1960)"
+      channel: "Lomax Film Collection"
+      note: "Four Chesapeake menhaden fishermen sing the chanteys that timed the hauling of heavy purse nets, in close quartet harmony."
+      noteRu: "Четверо чесапикских рыбаков, ловивших менхэдена, поют шанти, под которые вытягивали тяжёлые кошельковые сети, плотной квартетной гармонией."
 roots:
   abba:
     youtube: "xFrGuyw1V8s"
