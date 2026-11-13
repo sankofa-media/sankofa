@@ -176,6 +176,8 @@ def report(a):
     for kind in ("jobs", "pods"):
         sec = Counter(int(ts(o["created"])) for o in objs[kind] if w0 <= ts(o["created"]) < w1)
         mins = Counter(int(ts(o["created"])) // 60 for o in objs[kind] if w0 <= ts(o["created"]) < w1)
+        first10 = sum(c for t, c in sec.items() if t % 60 < 10)
+        out[kind + "_share_in_first_10s_of_minute"] = round(first10 / max(sum(sec.values()), 1), 2)
         out[kind] = {"count": sum(sec.values()), "peak_per_second": max(sec.values(), default=0),
                      "peak_per_minute": max(mins.values(), default=0),
                      "seconds_with_creations": len(sec)}
