@@ -7503,3 +7503,10 @@ html:lang(ru) .xref {
     opacity: 1;
   }
 }
+/* The music map's label placement has the last word: a label it hides for a
+   collision (or, on a phone, for being off the lit path) stays hidden. */
+.rm-node .lbl.hide,
+.rmap .rm-node.card .lbl.hide,
+.rmap.lit .rm-node.on .lbl.hide {
+  display: none !important;
+}

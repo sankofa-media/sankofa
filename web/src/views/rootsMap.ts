@@ -32,6 +32,8 @@ export class RootsMap {
   private built = false;
   private phone = false;
   private early = 0.28;
+  private lit?: Set<string>;
+  private litCard = false;
   onClose?: () => void;
 
   constructor(
@@ -128,19 +130,26 @@ export class RootsMap {
     this.draw(W, H, years);
     // Headline: computed from the data.
     const hl = headline(g);
-    const rc = hl.root ? this.app.set.get(hl.root.id.slice(5)) : undefined;
-    const rootInline = rc?.inline || (hl.root ? (lang() === 'ru' ? `«${hl.root.label}»` : hl.root.label.charAt(0).toLowerCase() + hl.root.label.slice(1)) : '');
+    const inline = (n: GNode) => {
+      const rc = this.app.set.get(n.id.slice(5));
+      return rc?.inline || (lang() === 'ru' ? `«${n.label}»` : n.label.replace(/^The /, 'the '));
+    };
+    const names = hl.roots.map(inline);
+    const two = names.length > 1;
+    // As many roots as the map draws at its foot, named, never "one root" over two.
+    const en = two ? `${names.length === 2 ? 'two' : names.length} roots: ${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}` : names[0];
+    const ruN = two ? `${names.length === 2 ? 'двум' : names.length === 3 ? 'трём' : names.length} корням: ${names.slice(0, -1).join(', ')} и ${names[names.length - 1]}` : `корню: ${names[0]}`;
     // Set explicitly: the heading is written before the page-wide typesetter starts.
-    this.head.querySelector('h2')!.textContent = nbsp(hl.root
+    this.head.querySelector('h2')!.textContent = nbsp(hl.roots.length
       ? pick({
           en:
             hl.count === hl.total
-              ? `All ${hl.total} artists lead back to ${rootInline}`
-              : `Of ${count(hl.total, 'artist', 'en')}, ${hl.count} lead back to ${rootInline}`,
+              ? `All ${hl.total} artists lead back to ${en}`
+              : `Of ${count(hl.total, 'artist', 'en')}, ${hl.count} lead back to ${en}`,
           ru:
             hl.count === hl.total
-              ? `Все ${count(hl.total, 'artist', 'ru')} ${pluralLead(hl.total)} к одному корню: ${rootInline}`
-              : `Из ${count(hl.total, 'artistOf', 'ru')} ${hl.count} ${pluralLead(hl.count)} к одному корню: ${rootInline}`,
+              ? `Все ${count(hl.total, 'artist', 'ru')} ${pluralLead(hl.total)} к ${ruN}`
+              : `Из ${count(hl.total, 'artistOf', 'ru')} ${hl.count} ${pluralLead(hl.count)} к ${ruN}`,
         })
       : pick({ en: 'Every chain on one map', ru: 'Все цепочки на одной карте' }), lang());
     if (!this.phone) {
@@ -166,6 +175,12 @@ export class RootsMap {
       select(this.svg).call(this.zoomer.transform, zoomIdentity.translate((vw - (x1 - x0) * k) / 2 - x0 * k, (vh - (y1 - y0) * k) / 2 - y0 * k).scale(k));
     }
     this.placeLabels();
+    // Labels are measured: measure again once the faces have loaded.
+    // The italic face of the root names loads only once they are drawn.
+    const again = () => this.isOpen && this.placeLabels(this.lit);
+    void document.fonts?.ready.then(again);
+    document.fonts?.addEventListener?.('loadingdone', again);
+    setTimeout(again, 700);
     this.showInfo();
     // Phones open on the roots at the bottom, with the artists above them; the
     // line under the search says that later artists are further up.
@@ -236,10 +251,13 @@ export class RootsMap {
   private light(id?: string): void {
     const g = this.g!;
     this.el.classList.toggle('lit', !!id);
+    this.lit = undefined;
+    this.litCard = false;
     if (!id) {
       this.nodeEls.forEach((el) => el.classList.remove('on'));
       this.edgeEls.forEach(({ el }) => el.classList.remove('on'));
       this.showInfo();
+      this.placeLabels();
       return;
     }
     const n = g.byId.get(id)!;
@@ -247,6 +265,8 @@ export class RootsMap {
     this.nodeEls.forEach((el, k) => el.classList.toggle('on', set.has(k)));
     this.edgeEls.forEach(({ e, el }) => el.classList.toggle('on', set.has(e.from) && set.has(e.to)));
     this.showInfo(n, set);
+    this.lit = set;
+    this.litCard = n.card;
     this.placeLabels(set);
   }
 
@@ -308,17 +328,29 @@ export class RootsMap {
     }
     let self = '';
     const over = (r: DOMRect, b: DOMRect) => r.left < b.right + 3 && r.right > b.left - 3 && r.top < b.bottom + 1 && r.bottom > b.top - 1;
-    const hits = (r: DOMRect) => boxes.some((b) => over(r, b)) || [...dots].some(([id, b]) => id !== self && b.width > 0 && over(r, b));
+    // A root's name may pass over a small artist dot, never over a label or another root.
+    let selfCard = false;
+    const hits = (r: DOMRect) => boxes.some((b) => over(r, b)) || [...dots].some(([id, b]) => id !== self && b.width > 0 && (!selfCard || id.startsWith('card:')) && over(r, b));
+    const fewArtists = !!priority && [...priority].filter((k) => !g.byId.get(k)?.card).length <= 8;
     const bigRoots = new Set(g.nodes.filter((x) => x.card).sort((a, b) => b.support - a.support).slice(0, 3).map((x) => x.id));
     lbls.forEach(({ n, el }, i) => {
       self = n.id;
+      selfCard = n.card;
       let r = rects[i];
-      const want = priority ? priority.has(n.id) || n.card : famous ? famous.has(n.id) || n.card : true;
+      // On a phone a lit path is named alone: an artist's chain, or for a root
+      // only the traditions that grew from it, never the forty artists above.
+      const want = priority
+        ? this.phone
+          ? priority.has(n.id) && (!this.litCard || n.card || fewArtists)
+          : priority.has(n.id) || n.card
+        : famous
+          ? famous.has(n.id) || n.card
+          : true;
       // Every root keeps its name: above its dot, or below it if that is taken.
       if (n.card) {
         const rr = radius(n);
         // above, below, right, left: the first place that is free
-        const spots: [number, number, string][] = [[0, -rr - 5, 'middle'], [0, rr + 16, 'middle'], [rr + 6, 4, 'start'], [-rr - 6, 4, 'end']];
+        const spots: [number, number, string][] = [[0, -rr - 5, 'middle'], [0, rr + 16, 'middle'], [rr + 6, 4, 'start'], [-rr - 6, 4, 'end'], [rr + 4, -rr - 2, 'start'], [-rr - 4, -rr - 2, 'end'], [rr + 4, rr + 12, 'start'], [-rr - 4, rr + 12, 'end']];
         for (const [x, y, anchor] of spots) {
           el.setAttribute('x', String(x));
           el.setAttribute('y', String(y));

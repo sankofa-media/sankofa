@@ -360,6 +360,29 @@ test('timeline names are never cut by a neighbouring bar, and atlas level 1 has 
   expect(hits).toEqual([]);
 });
 
+test('the music map names as many roots as it draws, and a lit root does not pile up labels', async ({ page }, info) => {
+  await page.goto('/#view=roots-map&lang=ru');
+  await expect(page.locator('.rm-head h2')).not.toBeEmpty();
+  await expect(page.locator('.rm-head h2')).not.toContainText('одному корню');
+  await page.goto('about:blank');
+  await page.goto('/#view=roots-map&lang=en');
+  await expect(page.locator('.rm-head h2')).toContainText('lead back to');
+  await page.waitForTimeout(1200);
+  const visibleLabels = () => page.locator('.rm-node .lbl').evaluateAll((ls) => ls.filter((l) => getComputedStyle(l).display !== 'none' && l.textContent).length);
+  const root = page.locator('.rm-node.card').filter({ hasText: /^Gospel$/ });
+  await root.dispatchEvent('click');
+  await page.waitForTimeout(400);
+  if (info.project.name === 'mobile') expect(await visibleLabels()).toBeLessThanOrEqual(12);
+  // No two visible labels overlap.
+  const overlaps = await page.locator('.rm-node .lbl').evaluateAll((ls) => {
+    const r = ls.filter((l) => getComputedStyle(l).display !== 'none' && l.textContent).map((l) => l.getBoundingClientRect());
+    let n = 0;
+    for (let i = 0; i < r.length; i++) for (let j = i + 1; j < r.length; j++) if (r[i].left < r[j].right - 1 && r[i].right > r[j].left + 1 && r[i].top < r[j].bottom - 1 && r[i].bottom > r[j].top + 1) n++;
+    return n;
+  });
+  expect(overlaps).toBe(0);
+});
+
 test('a card panel holds the page still; the counter keeps the card wording', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('.cover-lang')).toHaveCount(0);

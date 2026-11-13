@@ -40,11 +40,22 @@ describe('music map', () => {
     expect(grewFrom(g, 'card:blues')).toEqual(new Set(['card:blues', 'card:rock-n-roll', 'sabbath', 'beatles', 'oasis']));
   });
 
-  it('finds the headline root', () => {
+  it('names every root at the foot of the map in the headline', () => {
     const hl = headline(g);
     expect(hl.total).toBe(4);
-    expect(hl.root?.id).toBe('card:work-songs');
-    expect(hl.count).toBe(3);
+    expect(hl.roots.map((r) => r.id)).toEqual(['card:work-songs', 'card:gospel']);
+    expect(hl.count).toBe(4);
+  });
+
+  it('counts a tradition of the same age beside its root as a root too', () => {
+    const c2 = new Map([
+      ['blues', { id: 'blues', title: 'The blues', years: [1890], roots: ['work-songs', 'spirituals'] }],
+      ['spirituals', { id: 'spirituals', title: 'Spirituals', years: [1780], roots: ['work-songs'] }],
+      ['work-songs', { id: 'work-songs', title: 'Work songs', years: [1790] }],
+    ]);
+    const g2 = buildGraph([art('sabbath', 1968, [['card:blues', 'member']])], c2, (a) => a.name);
+    expect(headline(g2).roots.map((r) => r.id)).toEqual(['card:spirituals', 'card:work-songs']);
+    expect(headline(g2).count).toBe(1);
   });
 
   it('lays out time from bottom (old) to top (new), the same every time', () => {
