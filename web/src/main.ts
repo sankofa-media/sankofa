@@ -3,8 +3,8 @@ import type { App } from './app';
 import type { CardsFile, ChaptersFile } from './lib/types';
 import { ERAS } from './lib/types';
 import { rememberPlace, takePlace } from './lib/place';
-import { CardSet, localizeCard, localizeChapter } from './lib/cards';
-import { sortChapters } from './lib/chapters';
+import { CardSet, cardForEdition, localizeCard, localizeChapter } from './lib/cards';
+import { chapterForEdition, sortChapters } from './lib/chapters';
 import { formatFragment } from './lib/fragment';
 import { formatRoute, parseRoute, screenOf, type Route } from './lib/route';
 import * as reader from './lib/reader';
@@ -78,8 +78,11 @@ async function start(): Promise<void> {
   }
 
   const rawCards = new Map(cardsFile.cards.map((c) => [c.id, c]));
-  const set = new CardSet(cardsFile.cards.map((c) => localizeCard(c, current)));
-  const chapters = sortChapters(chaptersFile.chapters.map((c) => localizeChapter(c, current))).map((c) => ({ ...c, title: RU_TITLE_FIX[c.title] ?? c.title }));
+  const held = reader.edition();
+  // Cards, like chapters, hold only the reader's copy of a marked paragraph.
+  const set = new CardSet(cardsFile.cards.map((c) => cardForEdition(localizeCard(c, current), held)));
+  // Each copy reads only its own paragraphs: every step and count follows from here.
+  const chapters = sortChapters(chaptersFile.chapters.map((c) => chapterForEdition(localizeChapter(c, current), held))).map((c) => ({ ...c, title: RU_TITLE_FIX[c.title] ?? c.title }));
   // One name per release: every era label is the chapter's own title.
   for (const e of ERAS) e.label = chapters.find((c) => c.id === e.id)?.title ?? e.label;
   const cardDrawer = new Drawer(t('Card'));
@@ -100,7 +103,7 @@ async function start(): Promise<void> {
       engine.open();
     },
     chapters,
-    edition: reader.edition(),
+    edition: held,
     media: (file) => `media/${file}`,
     openCard(id, opts = {}) {
       const path = route.point.path;

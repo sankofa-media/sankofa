@@ -150,6 +150,31 @@ export function localizeCard(c0: Card, lang: string): Card {
   return out;
 }
 
+const COPY_MARK = /^\{(male|female)\}\s+/;
+
+/**
+ * A card body as one copy reads it: a paragraph that opens with `{male} ` or
+ * `{female} ` stays only in that copy (marker stripped); the rest in both.
+ */
+export function bodyForEdition(body: string, edition: 'm' | 'f'): string {
+  if (!/(^|\n)\s*\{(male|female)\}/.test(body)) return body;
+  return body
+    .split(/\n\s*\n/)
+    .flatMap((p) => {
+      const t = p.trim();
+      const m = t.match(COPY_MARK);
+      if (!m) return [p];
+      return (m[1] === 'male' ? 'm' : 'f') === edition ? [t.slice(m[0].length)] : [];
+    })
+    .join('\n\n');
+}
+
+/** The card as the reader's copy holds it. */
+export function cardForEdition(c: Card, edition: 'm' | 'f'): Card {
+  const body = bodyForEdition(c.body, edition);
+  return body === c.body ? c : { ...c, body };
+}
+
 /** A chapter in the reader's language; the body only when every step is there. */
 export function localizeChapter(ch: Chapter, lang: string): Chapter {
   const tr = lang === 'en' ? undefined : ch.translations?.[lang];

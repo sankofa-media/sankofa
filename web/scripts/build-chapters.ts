@@ -21,7 +21,11 @@ const chapters = sortChapters(
       if (tr.steps && tr.steps.length !== ch.steps.length) {
         console.warn(`${tf}: ${tr.steps.length} paragraphs, the original has ${ch.steps.length}; the body stays in English`);
         delete tr.steps;
+      } else if (tr.steps && (tr.stepCopies ?? []).join() !== (ch.stepCopies ?? []).join()) {
+        console.warn(`${tf}: its {male}/{female} markers differ from the original's; the body stays in English`);
+        delete tr.steps;
       }
+      delete tr.stepCopies;
       ch.translations = { ...ch.translations, [lang]: tr };
     }
     return ch;

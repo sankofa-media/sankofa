@@ -199,8 +199,18 @@ const HERO_FROM_CARD: Record<string, { card: string; pos: string }> = {
   v5: { card: 'hurston', pos: '50% 22%' },
 };
 
-/** Chapter heroes that portray the subject of a paired card. */
-const HERO_SUBJECT: Record<string, string> = { v3: 'douglass-covey' };
+/**
+ * The paired card of this chapter whose subject the hero portrays: one that
+ * uses the hero's own picture, or whose title names the person in the
+ * caption ("Frederick Douglass, daguerreotype" → "Frederick Douglass fights…").
+ */
+function heroSubject(app: App, ch: Chapter): Card | undefined {
+  const file = ch.hero?.file;
+  if (!file) return undefined;
+  const paired = app.set.all().filter((c) => c.pair && c.era === ch.id);
+  const who = (ch.hero?.caption ?? '').split(/[,(]/)[0].trim();
+  return paired.find((c) => c.media?.some((x) => x.file === file)) ?? (who.length >= 6 ? paired.find((c) => c.title.startsWith(who)) : undefined);
+}
 
 /**
  * Pictures follow the copy the reader holds: a paired card of the other copy
@@ -217,7 +227,7 @@ function withHero(app: App, ch: Chapter): { ch: Chapter; pos?: string; swapped: 
   const m = swap ? app.set.get(swap.card)?.media?.find((x) => x.type === 'image') : undefined;
   if (m) return { ch: { ...ch, hero: { ...m, type: 'image' } }, pos: swap!.pos, swapped: true };
   // A hero that portrays a paired card's subject follows the copy too.
-  const owner = HERO_SUBJECT[ch.id] ? app.set.get(HERO_SUBJECT[ch.id]) : ch.hero?.file ? app.set.all().find((c) => c.pair && c.media?.some((x) => x.file === ch.hero!.file)) : undefined;
+  const owner = heroSubject(app, ch);
   const mine = owner ? inCopy(app, owner) : undefined;
   const mm = mine && mine !== owner ? mine.media?.find((x) => x.type === 'image') : undefined;
   return mm ? { ch: { ...ch, hero: { ...mm, type: 'image' } }, pos: '50% 25%', swapped: true } : { ch, swapped: false };

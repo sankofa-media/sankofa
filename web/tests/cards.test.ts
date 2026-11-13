@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { CardSet, bookSymbols, formatYears, links, overlaps, plain, segments } from '../src/lib/cards';
+import { CardSet, bookSymbols, cardForEdition, formatYears, links, localizeCard, overlaps, plain, segments } from '../src/lib/cards';
+import { readFileSync } from 'node:fs';
 import type { Card } from '../src/lib/types';
 
 const card = (c: Partial<Card> & { id: string }): Card => ({
@@ -87,5 +88,31 @@ describe('places and time', () => {
     expect(formatYears([1778, 1860])).toBe('1778–1860');
     expect(formatYears([1781])).toBe('1781');
     expect(formatYears([1781, 1781])).toBe('1781');
+  });
+});
+
+describe('card bodies by copy', () => {
+  const card = JSON.parse(readFileSync(new URL('./fixtures/marked/card.json', import.meta.url), 'utf8')) as Card;
+
+  it('keeps the marked paragraphs of the reader’s copy only, marker stripped', () => {
+    const m = cardForEdition(card, 'm').body.split('\n\n');
+    const f = cardForEdition(card, 'f').body.split('\n\n');
+    expect(m).toHaveLength(3);
+    expect(f).toHaveLength(3);
+    expect(m[1]).toBe('Only the male copy reads this\nwrapped line.');
+    expect(f[1]).toBe('Only the female copy reads this.');
+    expect(m[0]).toBe(f[0]);
+    expect(m.join(' ')).not.toMatch(/\{(male|female)\}/);
+  });
+
+  it('works on the translation too and never touches the hook or title', () => {
+    const ru = cardForEdition(localizeCard(card, 'ru'), 'f');
+    expect(ru.body).toBe('Общий первый абзац.\n\nТолько женский экземпляр.\n\nОбщий последний абзац.');
+    expect(cardForEdition(card, 'f').wow).toBe(card.wow);
+  });
+
+  it('returns an unmarked card unchanged', () => {
+    const plainCard = { ...card, body: 'One.\n\nTwo.' };
+    expect(cardForEdition(plainCard, 'm')).toBe(plainCard);
   });
 });

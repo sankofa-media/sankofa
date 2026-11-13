@@ -527,8 +527,9 @@ test('the copy switch flips a paired card at once, and the pairs list links both
   await expect(page.locator('.notice.edition')).toContainText('This story belongs to the other copy');
   await page.goto('/');
   const note = page.locator('.opener .ed-note:visible');
-  await expect(note).toContainText(/In\sthe\sfemale\scopy\syou\sread\s[^;]*Harriet\sJacobs/);
-  await expect(note).toContainText(/Yours\sis\sthe\sfemale\scopy/);
+  await expect(note).toContainText(/Yours\sis\sthe\sfemale\scopy;\sin\sit\syou\sread\s.*Harriet\sJacobs/);
+  // The note names the reader's own stories, never both copies' (the list is behind a button).
+  await expect(note.locator('p').first()).not.toContainText('Frederick Douglass');
   // The pairs come from the data: count them there.
   const pairs = await page.evaluate(async () => {
     const d = await (await fetch('data/cards.json')).json();

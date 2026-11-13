@@ -3,7 +3,7 @@
 // insert, or a sentence set large. No new facts here.
 import type { App } from '../app';
 import type { Card } from '../lib/types';
-import { formatYears } from '../lib/cards';
+import { cardForEdition, formatYears } from '../lib/cards';
 import { h, reducedMotion } from '../lib/dom';
 import { lang, pick } from '../lib/i18n';
 import { progressive } from '../lib/media';
@@ -76,7 +76,8 @@ export function signature(app: App, chapterId: string, cards: Card[], fallback?:
   const img = c.media?.find((m) => m.type === 'image');
   let kind: Kind = plan && plan.card === c.id ? plan.kind : 'quote';
   if ((kind === 'plate' || kind === 'insert') && !img) kind = 'quote';
-  const raw = app.raw(c.id) ?? c;
+  const r0 = app.raw(c.id);
+  const raw = r0 ? cardForEdition(r0, app.edition) : c;
   const n = kind === 'counter' ? firstBigNumber(`${raw.wow} ${raw.body}`) : undefined;
   if (kind === 'counter' && (!n || near.replace(/[\s,\u00a0\u202f]/g, '').includes(String(n)))) kind = 'quote';
   if (kind === 'quote' && !line) return null;
