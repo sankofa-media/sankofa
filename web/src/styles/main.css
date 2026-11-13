@@ -7510,3 +7510,56 @@ html:lang(ru) .xref {
 .rmap.lit .rm-node.on .lbl.hide {
   display: none !important;
 }
+/* Engine room: a command is one line that scrolls sideways, never broken
+   inside a flag; its copy button is a small icon, so the line has room. */
+.e-card .term code,
+.engine .term code {
+  white-space: pre;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+.term:not(.multi) button.copy {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  padding: 0;
+  flex: none;
+}
+.term:not(.multi) button.copy svg {
+  width: 15px;
+  height: 15px;
+}
+.term:not(.multi) button.copy:hover {
+  color: #e3ab3d;
+}
+/* The copy icon takes its own column beside the lines, so a line that
+   scrolls sideways never runs under it. */
+.engine .term.multi pre {
+  padding-right: 12px;
+}
+.engine .term.multi button.copy {
+  position: static;
+  flex: none;
+  margin: 8px 8px 8px 0;
+}
+/* Seven mechanisms: three across, then two rows of two, so none is left alone. */
+@media (min-width: 1000px) {
+  .e-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+  .e-grid > .e-card {
+    grid-column: span 2;
+  }
+  .e-grid > .e-card:nth-child(n + 4) {
+    grid-column: span 3;
+  }
+}
+.e-card h4 .e-comp {
+  font-family: var(--font-sans);
+  font-size: 0.5em;
+  font-variant: small-caps;
+  text-transform: lowercase;
+  letter-spacing: 0.08em;
+  color: var(--ink-3, var(--ink-2));
+  vertical-align: 0.25em;
+}

@@ -392,6 +392,26 @@ test('a roots search that finds nobody clears the previous chain', async ({ page
   expect(page.url()).not.toContain('artist=oasis');
 });
 
+test('engine room commands stay on one line, the grid has no orphan, Russian names the components', async ({ page }, info) => {
+  await page.goto('/#view=engine');
+  const codes = page.locator('.e-card .term code');
+  await expect(codes.first()).toBeVisible();
+  for (const c of await codes.all()) {
+    expect(await c.evaluate((e) => getComputedStyle(e).whiteSpace)).toBe('pre');
+    const lineH = await c.evaluate((e) => parseFloat(getComputedStyle(e).lineHeight) || 20);
+    expect(await c.evaluate((e) => e.clientHeight)).toBeLessThan(lineH * 2 + 24);
+  }
+  if (info.project.name === 'desktop') {
+    const tops = await page.locator('.e-grid > .e-card').evaluateAll((els) => els.map((e) => Math.round(e.getBoundingClientRect().top)));
+    const rows = new Map<number, number>();
+    tops.forEach((t) => rows.set(t, (rows.get(t) ?? 0) + 1));
+    expect([...rows.values()].some((n) => n === 1)).toBe(false);
+  }
+  await page.goto('about:blank');
+  await page.goto('/#view=engine&lang=ru');
+  await expect(page.locator('.e-card h4').filter({ hasText: 'Родословная' })).toContainText('(Credits)');
+});
+
 test('a card panel holds the page still; the counter keeps the card wording', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('.cover-lang')).toHaveCount(0);

@@ -4,12 +4,14 @@
 import type { App } from '../app';
 import { cardTable, cardYaml } from '../lib/cardYaml';
 import { copyText, h, svgIcon, toast } from '../lib/dom';
-import { count, pick, t } from '../lib/i18n';
+import { count, lang, pick, t } from '../lib/i18n';
 import { readerCards } from '../lib/atlasModel';
 import { readPath } from '../lib/reader';
 
 interface Mechanism {
   name: string;
+  /** The Russian name; the component's own name follows it in small capitals. */
+  ru: string;
   culture: { en: string; ru: string };
   does: { en: string; ru: string };
   cmd: string;
@@ -19,6 +21,7 @@ interface Mechanism {
 const MECHANISMS: Mechanism[] = [
   {
     name: 'Griot',
+    ru: 'Гриот',
     culture: {
       en: 'In West Africa a griot keeps the memory of families and kingdoms in speech and song.',
       ru: 'В Западной Африке гриот хранит память семей и царств в речи и песне.',
@@ -31,6 +34,7 @@ const MECHANISMS: Mechanism[] = [
   },
   {
     name: 'Sankofa',
+    ru: 'Санкофа',
     culture: {
       en: 'An Adinkra symbol of the Akan: go back and fetch what you left behind.',
       ru: 'Символ адинкра у акан: вернись и забери то, что оставил.',
@@ -43,6 +47,7 @@ const MECHANISMS: Mechanism[] = [
   },
   {
     name: 'Kgotla',
+    ru: 'Кготла',
     culture: {
       en: 'The Tswana council in Botswana: everyone speaks, and the chief speaks last.',
       ru: 'Совет у тсвана в Ботсване: высказываются все, а вождь говорит последним.',
@@ -55,6 +60,7 @@ const MECHANISMS: Mechanism[] = [
   },
   {
     name: 'Polyrhythm',
+    ru: 'Полиритм',
     culture: {
       en: 'In a West African 12/8 ensemble the parts interlock instead of striking on the same beat.',
       ru: 'В западноафриканском ансамбле 12/8 партии сплетаются, а не бьют в одну долю.',
@@ -67,6 +73,7 @@ const MECHANISMS: Mechanism[] = [
   },
   {
     name: 'Credits',
+    ru: 'Родословная',
     culture: {
       en: 'Again and again a Black musician recorded a song first, and the version the world remembers, with the credit and the money, came later from someone else.',
       ru: 'Снова и снова чернокожий музыкант записывал песню первым, а версия, которую помнит мир, — вместе с признанием и деньгами — появлялась позже у кого-то другого.',
@@ -79,6 +86,7 @@ const MECHANISMS: Mechanism[] = [
   },
   {
     name: 'Pulse',
+    ru: 'Пульс',
     culture: {
       en: 'Talking drums carry speech in rhythm; spirituals answer a call.',
       ru: 'Говорящие барабаны передают речь ритмом; спиричуэлс отвечают на зов.',
@@ -92,6 +100,7 @@ const MECHANISMS: Mechanism[] = [
   },
   {
     name: 'Roots',
+    ru: 'Корни',
     culture: {
       en: 'Rock, pop and metal grew from the blues, gospel and rhythm and blues, one documented step at a time.',
       ru: 'Рок, поп и метал выросли из блюза, госпела и ритм-н-блюза — шаг за шагом, и каждый шаг задокументирован.',
@@ -110,7 +119,7 @@ function term(cmd: string, multiline = false, table = false): HTMLElement {
   el.append(
     multiline
       ? h('button.copy', { 'aria-label': t('Copy'), title: t('Copy'), onclick: async () => toast((await copyText(cmd)) ? t('Copied') : t('Copy failed')) }, svgIcon('copy'))
-      : h('button', { onclick: async () => toast((await copyText(cmd)) ? t('Command copied') : t('Copy failed')) }, t('Copy')),
+      : h('button.copy', { 'aria-label': t('Copy'), title: t('Copy'), onclick: async () => toast((await copyText(cmd)) ? t('Command copied') : t('Copy failed')) }, svgIcon('copy')),
   );
   return el;
 }
@@ -190,7 +199,7 @@ export class Engine {
             h(
               'article.e-card',
               {},
-              h('h4', {}, m.name),
+              lang() === 'ru' ? h('h4', {}, m.ru, ' ', h('span.e-comp', { lang: 'en' }, `(${m.name})`)) : h('h4', {}, m.name),
               h('p.e-culture', {}, pick(m.culture)),
               h('p.e-does', {}, pick(m.does)),
               term(m.cmd),
