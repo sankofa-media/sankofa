@@ -412,6 +412,24 @@ test('engine room commands stay on one line, the grid has no orphan, Russian nam
   await expect(page.locator('.e-card h4').filter({ hasText: 'Родословная' })).toContainText('(Credits)');
 });
 
+test('phone step boxes look alike in every chapter and no map name peeks out around them', async ({ page }, info) => {
+  test.skip(info.project.name !== 'mobile', 'phones only');
+  await page.goto('/#ch=v2');
+  const step = page.locator('#ch-v2 .step').nth(1);
+  await step.evaluate((e) => e.scrollIntoView({ block: 'center' }));
+  await page.waitForTimeout(2500);
+  const bg = (sel: string) => page.locator(sel).first().evaluate((e) => getComputedStyle(e).backgroundColor);
+  expect(await bg('#ch-v2 .step')).toBe(await bg('#ch-v0 .step'));
+  const peeking = await page.evaluate(() => {
+    const boxes = [...document.querySelectorAll('#ch-v2 .step')].map((s) => s.getBoundingClientRect()).filter((r) => r.bottom > 0 && r.top < innerHeight);
+    return [...document.querySelectorAll<SVGTextElement>('#ch-v2 .graphic g.pt text.lbl')]
+      .filter((l) => getComputedStyle(l).display !== 'none' && getComputedStyle(l).visibility !== 'hidden' && l.textContent)
+      .map((l) => l.getBoundingClientRect())
+      .filter((r) => boxes.some((b) => r.right > b.left && r.left < b.right && r.bottom > b.top - 30 && r.top < b.bottom + 30)).length;
+  });
+  expect(peeking).toBe(0);
+});
+
 test('a card panel holds the page still; the counter keeps the card wording', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('.cover-lang')).toHaveCount(0);

@@ -488,7 +488,29 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
     });
     if (map || current >= 0) activate(k);
   };
+  // On a phone the step boxes slide over the map: a place name that would
+  // peek out right above or below a box hides until the box has passed.
+  const clearOfBoxes = () => {
+    if (!phone()) return;
+    const boxes = steps.map((s) => s.getBoundingClientRect()).filter((r) => r.bottom > 0 && r.top < window.innerHeight);
+    mapHost.querySelectorAll<SVGTextElement>('g.pt text.lbl').forEach((l) => {
+      const r = l.getBoundingClientRect();
+      const near = boxes.some((b) => r.right > b.left - 8 && r.left < b.right + 8 && r.bottom > b.top - 36 && r.top < b.bottom + 36);
+      l.classList.toggle('by-box', near);
+    });
+  };
+  // Labels also move when the map flies or relabels: check again then.
+  let clearQueued = false;
+  new MutationObserver(() => {
+    if (clearQueued || !phone()) return;
+    clearQueued = true;
+    requestAnimationFrame(() => {
+      clearQueued = false;
+      clearOfBoxes();
+    });
+  }).observe(mapHost, { subtree: true, childList: true, attributes: true, attributeFilter: ['transform', 'class', 'x', 'y'] });
   const onScroll = () => {
+    clearOfBoxes();
     if (!queued) {
       queued = true;
       requestAnimationFrame(pickStep);

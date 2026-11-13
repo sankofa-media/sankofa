@@ -7563,3 +7563,26 @@ html:lang(ru) .xref {
   color: var(--ink-3, var(--ink-2));
   vertical-align: 0.25em;
 }
+/* Phones: every chapter's step boxes are the same dark box (Resistance's
+   were cream); the picture still follows the words in that rhythm. */
+@media (max-width: 760px) {
+  .chapter.rhythm-2 .step {
+    background: #121226 !important;
+    color: inherit;
+    border-top: 0;
+  }
+  .chapter.rhythm-2 .step .xref,
+  .chapter.rhythm-2 .step-fig figcaption {
+    color: inherit;
+  }
+  .chapter.rhythm-2 .step .where {
+    color: var(--era);
+  }
+  .chapter.rhythm-2 .step-fig img {
+    background: transparent;
+  }
+  /* A map name that would peek out around a step box steps back. */
+  .graphic .pt .lbl.by-box {
+    visibility: hidden;
+  }
+}
