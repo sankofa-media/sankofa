@@ -1,0 +1,43 @@
+# Working objects: instruments the reader can play, each tied to its card.
+# Sounds are either a recording the card already carries (with its rights on
+# the card and in the ledgers) or synthesized in the browser; nothing else is
+# hosted. Patterns are written here, in 16 steps per bar.
+gramophone:
+  card: crazy-blues
+  # The card's own public-domain recording (see the card's media entry).
+  audio: crazy-blues.ogg
+  rpm: 78
+
+tr808:
+  card: planet-rock
+  tempo: 120
+  # A simple electro pattern in the spirit the card describes. It is not the
+  # pattern of any record.
+  pattern:
+    bd: "x..x......x..x.."
+    sd: "....x.......x..."
+    cp: "....x.......x..."
+    ch: "x.x.x.x.x.x.xxx."
+    oh: "..............x."
+    cb: "..........x....."
+    lt: "......x........."
+
+amen:
+  card: amen-break
+  tempo: 136
+  # An approximate four-bar re-creation of the famous break, played on
+  # synthesized drums. Not a sample, and not the recording.
+  pattern:
+    ride:  "x.x.x.x.x.x.x.x.|x.x.x.x.x.x.x.x.|x.x.x.x.x.x.x.x.|x.x.x.x.x.....x."
+    crash: "................|................|................|..........x....."
+    snare: "....x..x.x..x..x|....x..x.x..x..x|....x..x.x....x.|.x..x..x.x....x."
+    kick:  "x.x.......xx....|x.x.......xx....|x.x.......x.....|..xx......x....."
+    hat:   "................|................|................|................"
+  # The official recording, opened only when the reader asks for it. Copied
+  # from the museum's listening list (cards.amen-break), checked against
+  # YouTube oEmbed on 2026-11-13.
+  youtube:
+    id: "HrrWhCbZAyY"
+    title: "Amen Brother"
+    channel: "The Winstons - Topic"
+    start: 85
