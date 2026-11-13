@@ -126,7 +126,15 @@ export class Roots {
       ),
     );
     const q = this.input.value.trim();
-    if (q && !found.length) this.results.append(h('li.r-none', {}, this.emptyLine()));
+    if (q && !found.length) {
+      this.results.append(h('li.r-none', {}, this.emptyLine()));
+      // A search that finds nobody leaves no answer from before under it.
+      if (this.current) {
+        this.current = undefined;
+        this.renderEmpty();
+        this.onArtist?.(undefined);
+      }
+    }
     this.input.setAttribute('aria-expanded', String(!!q));
     this.stage.classList.toggle('typing', !!q && !this.current);
     this.results.classList.toggle('on', !!q);

@@ -383,6 +383,15 @@ test('the music map names as many roots as it draws, and a lit root does not pil
   expect(overlaps).toBe(0);
 });
 
+test('a roots search that finds nobody clears the previous chain', async ({ page }) => {
+  await page.goto('/#view=roots&artist=oasis');
+  await expect(page.locator('.r-stage .r-artist').first()).toBeVisible();
+  await page.locator('.r-input').fill('zzqqxx');
+  await expect(page.locator('.r-none')).toBeVisible();
+  await expect(page.locator('.r-stage .r-artist')).toHaveCount(0);
+  expect(page.url()).not.toContain('artist=oasis');
+});
+
 test('a card panel holds the page still; the counter keeps the card wording', async ({ page }) => {
   await page.goto('/');
   await expect(page.locator('.cover-lang')).toHaveCount(0);

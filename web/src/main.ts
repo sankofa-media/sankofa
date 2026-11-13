@@ -192,7 +192,8 @@ async function start(): Promise<void> {
   const roots = new Roots(app, cardsFile.roots ?? []);
   roots.onArtist = (artist) => {
     route = { point: {}, view: 'roots', artist };
-    writeRoute(route, true);
+    // A chain is a page to come back to; a cleared one is not.
+    writeRoute(route, !!artist);
   };
   roots.onClose = () => {
     roots.close();
