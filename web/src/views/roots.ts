@@ -1,12 +1,14 @@
 // Roots: type a band or an artist and watch the chain grow back, link by
 // sourced link, to a card of the museum.
 import type { App } from '../app';
-import { placeName, buildTree, chainLine, deepest, endCards, extendLineage, groupChildren, KIND_LABEL, quotes, longestRoots, searchArtists, suggestions, type Artist, type LineageCard, type RootLink, type TreeNode } from '../lib/roots';
-import { vtags, copyText, h, reducedMotion, svgIcon, toast } from '../lib/dom';
+import { placeName, buildTree, chainLine, chainSteps, deepest, endCards, extendLineage, groupChildren, KIND_LABEL, quotes, longestRoots, searchArtists, suggestions, type Artist, type LineageCard, type RootLink, type TreeNode } from '../lib/roots';
+import { copyText, h, reducedMotion, svgIcon, toast } from '../lib/dom';
 import { formatYears } from '../lib/cards';
-import { count, lang, pick, t } from '../lib/i18n';
+import { chapterLabel, count, lang, pick, t } from '../lib/i18n';
 import { mediaSrc } from '../lib/media';
 import { eraColor } from '../lib/atlasModel';
+import { recordingFor } from '../lib/listen';
+import { listenBlock, playBlock, stopPlayer } from './player';
 
 export class Roots {
   readonly el: HTMLElement;
@@ -90,6 +92,7 @@ export class Roots {
   }
 
   close(): void {
+    stopPlayer();
     this.el.classList.remove('open');
     document.body.classList.remove('locked');
   }
@@ -126,7 +129,15 @@ export class Roots {
       ),
     );
     const q = this.input.value.trim();
-    if (q && !found.length) this.results.append(h('li.r-none', {}, this.emptyLine()));
+    if (q && !found.length) {
+      this.results.append(h('li.r-none', {}, this.emptyLine()));
+      // A search that finds nobody leaves no answer from before under it.
+      if (this.current) {
+        this.current = undefined;
+        this.renderEmpty();
+        this.onArtist?.(undefined);
+      }
+    }
     this.input.setAttribute('aria-expanded', String(!!q));
     this.stage.classList.toggle('typing', !!q && !this.current);
     this.results.classList.toggle('on', !!q);
@@ -203,6 +214,32 @@ export class Roots {
     const tree = extendLineage(buildTree(a, this.byId), this.lineage);
     const ends = endCards(tree);
     let step = 0;
+    stopPlayer();
+    // The chain to listen along: the deepest one, stop by stop. Each stop with
+    // a recording gets a player; "Next" loads the next stop's, never by itself.
+    const stops = chainSteps(a, this.byId, this.lineage).map((s) => s.ref);
+    const heard = stops.filter((ref) => recordingFor(this.app.listen, ref));
+    const blocks = new Map<string, HTMLElement>();
+    const goTo = (ref: string) => {
+      const b = blocks.get(ref);
+      if (!b) return;
+      b.scrollIntoView({ block: 'center', behavior: reducedMotion() ? 'auto' : 'smooth' });
+      playBlock(b);
+    };
+    const listenAt = (ref: string): HTMLElement | null => {
+      const r = recordingFor(this.app.listen, ref);
+      if (!r || blocks.has(ref)) return null;
+      const k = heard.indexOf(ref);
+      const nextRef = k >= 0 ? heard[k + 1] : undefined;
+      const after = nextRef
+        ? h('button.btn.lb-next', { type: 'button', onclick: () => goTo(nextRef) }, pick({ en: `Next in the chain: ${this.refName(nextRef)} ↓`, ru: `Дальше по цепочке: ${this.refName(nextRef)} ↓` }))
+        : null;
+      const b = listenBlock(r, { compact: true, after });
+      b.dataset.ref = ref;
+      b.classList.add('r-listen');
+      blocks.set(ref, b);
+      return b;
+    };
     // A chain of chains: each step is told on the connector between exactly
     // the two names it joins; where an artist has several roots, each is its
     // own indented sub-chain; a node met before is a short pointer back.
@@ -222,6 +259,8 @@ export class Roots {
           ? this.cardEl(n.ref.slice(5), step++, !!n.lineage)
           : this.artistEl(n.ref, isRoot, step++);
       out.push(el);
+      const lb = listenAt(n.ref);
+      if (lb) out.push(lb);
       const all = groupChildren(n);
       const members = all.filter((g) => g.length === 1 && g[0].link?.kind === 'member' && !g[0].ref.startsWith('card:'));
       for (const g of members) out.push(...render(g[0], false, n.ref));
@@ -269,6 +308,14 @@ export class Roots {
         { 'data-root': id },
         story ? h('p.r-story', {}, story) : null,
         h('p.r-count', {}, pick({ en: `${a.paths.length} ${a.paths.length === 1 ? 'chain leads' : 'chains lead'} back to ${ends.length} ${ends.length === 1 ? 'card' : 'cards'} of the museum`, ru: `${count(a.paths.length, 'chain', 'ru')} ${a.paths.length % 10 === 1 && a.paths.length % 100 !== 11 ? 'ведёт' : 'ведут'} к ${toCardsRu(ends.length)} музея` })),
+        heard.length > 1
+          ? h(
+              'p.r-playchain',
+              {},
+              h('button.btn.primary', { type: 'button', onclick: () => goTo(heard[0]) }, svgIcon('wave'), pick({ en: 'Play the chain', ru: 'Слушать цепочку' })),
+              h('span', {}, pick({ en: `${heard.length} of its ${stops.length} stops can be heard; each plays when you ask.`, ru: `Из ${stops.length} звеньев можно послушать ${heard.length}; каждое звучит, только когда вы попросите.` })),
+            )
+          : null,
         column,
       ),
       close,
@@ -365,7 +412,7 @@ export class Roots {
       h(
         'div',
         {},
-        h('small', {}, ...vtags(`${pick({ en: 'In the museum', ru: 'В музее' })} · ${c.era ?? ''} · ${formatYears(c.years)}`)),
+        h('small', {}, [pick({ en: 'In the museum', ru: 'В музее' }), chapterLabel(c.era), formatYears(c.years)].filter(Boolean).join(' · ')),
         h('b', {}, c.title),
         h('span', {}, c.wow),
       ),

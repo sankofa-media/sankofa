@@ -10,7 +10,9 @@ import { h, reducedMotion, svgIcon } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
 import { buildGraph, grewFrom, headline, layout, radius, reach, yearY, type GEdge, type GNode, type Graph, type MapCard } from '../lib/rootsMap';
 import { nbsp, quotes } from '../lib/typo';
-import { placeName, KIND_LABEL, searchArtists, type Artist, type LinkKind } from '../lib/roots';
+import { listenBlock, playBlock, stopPlayer } from './player';
+import { recordingFor } from '../lib/listen';
+import { chainSteps, placeName, KIND_LABEL, searchArtists, type Artist, type LineageCard, type LinkKind } from '../lib/roots';
 
 const NS = 'http://www.w3.org/2000/svg';
 const KINDS: (LinkKind | 'lineage')[] = ['influence', 'cover', 'sample', 'interpolation', 'member', 'producer', 'collaboration', 'scene', 'teacher', 'lineage'];
@@ -32,6 +34,8 @@ export class RootsMap {
   private built = false;
   private phone = false;
   private early = 0.28;
+  private lit?: Set<string>;
+  private litCard = false;
   onClose?: () => void;
 
   constructor(
@@ -97,6 +101,7 @@ export class RootsMap {
   }
 
   close(): void {
+    stopPlayer();
     this.el.classList.remove('open');
     document.body.classList.remove('locked');
   }
@@ -128,19 +133,26 @@ export class RootsMap {
     this.draw(W, H, years);
     // Headline: computed from the data.
     const hl = headline(g);
-    const rc = hl.root ? this.app.set.get(hl.root.id.slice(5)) : undefined;
-    const rootInline = rc?.inline || (hl.root ? (lang() === 'ru' ? `«${hl.root.label}»` : hl.root.label.charAt(0).toLowerCase() + hl.root.label.slice(1)) : '');
+    const inline = (n: GNode) => {
+      const rc = this.app.set.get(n.id.slice(5));
+      return rc?.inline || (lang() === 'ru' ? `«${n.label}»` : n.label.replace(/^The /, 'the '));
+    };
+    const names = hl.roots.map(inline);
+    const two = names.length > 1;
+    // As many roots as the map draws at its foot, named, never "one root" over two.
+    const en = two ? `${names.length === 2 ? 'two' : names.length} roots: ${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}` : names[0];
+    const ruN = two ? `${names.length === 2 ? 'двум' : names.length === 3 ? 'трём' : names.length} корням: ${names.slice(0, -1).join(', ')} и ${names[names.length - 1]}` : `корню: ${names[0]}`;
     // Set explicitly: the heading is written before the page-wide typesetter starts.
-    this.head.querySelector('h2')!.textContent = nbsp(hl.root
+    this.head.querySelector('h2')!.textContent = nbsp(hl.roots.length
       ? pick({
           en:
             hl.count === hl.total
-              ? `All ${hl.total} artists lead back to ${rootInline}`
-              : `Of ${count(hl.total, 'artist', 'en')}, ${hl.count} lead back to ${rootInline}`,
+              ? `All ${hl.total} artists lead back to ${en}`
+              : `Of ${count(hl.total, 'artist', 'en')}, ${hl.count} lead back to ${en}`,
           ru:
             hl.count === hl.total
-              ? `Все ${count(hl.total, 'artist', 'ru')} ${pluralLead(hl.total)} к одному корню: ${rootInline}`
-              : `Из ${count(hl.total, 'artistOf', 'ru')} ${hl.count} ${pluralLead(hl.count)} к одному корню: ${rootInline}`,
+              ? `Все ${count(hl.total, 'artist', 'ru')} ${pluralLead(hl.total)} к ${ruN}`
+              : `Из ${count(hl.total, 'artistOf', 'ru')} ${hl.count} ${pluralLead(hl.count)} к ${ruN}`,
         })
       : pick({ en: 'Every chain on one map', ru: 'Все цепочки на одной карте' }), lang());
     if (!this.phone) {
@@ -166,6 +178,12 @@ export class RootsMap {
       select(this.svg).call(this.zoomer.transform, zoomIdentity.translate((vw - (x1 - x0) * k) / 2 - x0 * k, (vh - (y1 - y0) * k) / 2 - y0 * k).scale(k));
     }
     this.placeLabels();
+    // Labels are measured: measure again once the faces have loaded.
+    // The italic face of the root names loads only once they are drawn.
+    const again = () => this.isOpen && this.placeLabels(this.lit);
+    void document.fonts?.ready.then(again);
+    document.fonts?.addEventListener?.('loadingdone', again);
+    setTimeout(again, 700);
     this.showInfo();
     // Phones open on the roots at the bottom, with the artists above them; the
     // line under the search says that later artists are further up.
@@ -236,10 +254,14 @@ export class RootsMap {
   private light(id?: string): void {
     const g = this.g!;
     this.el.classList.toggle('lit', !!id);
+    this.lit = undefined;
+    this.litCard = false;
+    this.nodeEls.forEach((el) => el.classList.remove('cur'));
     if (!id) {
       this.nodeEls.forEach((el) => el.classList.remove('on'));
       this.edgeEls.forEach(({ el }) => el.classList.remove('on'));
       this.showInfo();
+      this.placeLabels();
       return;
     }
     const n = g.byId.get(id)!;
@@ -247,6 +269,8 @@ export class RootsMap {
     this.nodeEls.forEach((el, k) => el.classList.toggle('on', set.has(k)));
     this.edgeEls.forEach(({ e, el }) => el.classList.toggle('on', set.has(e.from) && set.has(e.to)));
     this.showInfo(n, set);
+    this.lit = set;
+    this.litCard = n.card;
     this.placeLabels(set);
   }
 
@@ -264,6 +288,7 @@ export class RootsMap {
         h('small', {}, pick({ en: 'A root in the museum', ru: 'Корень в музее' })),
         h('b', {}, n.label),
         h('p', {}, pick({ en: `${count(artists, 'artist', 'en')} grew out of it.`, ru: `Из него выросло: ${count(artists, 'artist', 'ru')}.` })),
+        ...(recordingFor(this.app.listen, n.id) ? [listenBlock(recordingFor(this.app.listen, n.id)!, { compact: true })] : []),
         h('a.btn', { href: `#focus=${n.id.slice(5)}`, 'data-card': n.id.slice(5) }, pick({ en: 'Open the card →', ru: 'Открыть карточку →' })),
       );
       return;
@@ -274,8 +299,51 @@ export class RootsMap {
       h('small', {}, `${a.years[0]} · ${placeName(a, lang())}`),
       h('b', {}, this.nameOf(a)),
       ...(story ? [h('p', {}, story)] : []),
+      ...[this.chainPlayer(a)].filter((x): x is HTMLElement => !!x),
       h('a.btn', { href: `#view=roots&artist=${a.id}`, 'data-artist-roots': a.id }, pick({ en: 'Follow the chain →', ru: 'Пройти по цепочке →' })),
     );
+  }
+
+  /**
+   * The lit path, stop by stop: the stop's own recording, then how the next
+   * stop was borrowed, then "Next", which loads the next stop's player.
+   * Stops without a recording stay on the way, without a player.
+   */
+  private chainPlayer(a: Artist): HTMLElement | null {
+    const byId = new Map(this.artists.map((x) => [x.id, x]));
+    const lineage = new Map<string, LineageCard>(this.app.set.all().map((c) => [c.id, { id: c.id, roots: c.roots }]));
+    const steps = chainSteps(a, byId, lineage);
+    if (steps.filter((s) => recordingFor(this.app.listen, s.ref)).length < 1) return null;
+    const box = h('section.rm-chain', { 'aria-label': pick({ en: 'Listen along the path', ru: 'Слушать путь' }) });
+    const name = (ref: string) => (ref.startsWith('card:') ? this.app.set.get(ref.slice(5))?.title ?? ref : byId.get(ref) ? this.nameOf(byId.get(ref)!) : ref);
+    const L = lang();
+    const show = (i: number, play: boolean) => {
+      const st = steps[i];
+      const rec = recordingFor(this.app.listen, st.ref);
+      const nx = steps[i + 1];
+      const how = st.next
+        ? st.next.kind === 'lineage'
+          ? pick({ en: 'rooted in', ru: 'корни в' })
+          : [st.next.kind !== 'unknown' ? pick(KIND_LABEL[st.next.kind]) : '', quotes((L === 'ru' && (st.next.link?.whatRu || st.next.link?.claimRu)) || st.next.link?.what || st.next.link?.claim || '', L)].filter(Boolean).join(': ')
+        : '';
+      const block = rec ? listenBlock(rec, { compact: true, heading: '' }) : null;
+      this.nodeEls.forEach((el, k) => el.classList.toggle('cur', k === st.ref));
+      box.replaceChildren(
+        h('div.rm-chain-head', {}, h('small', {}, pick({ en: `Listen · stop ${i + 1} of ${steps.length} · ${name(st.ref)}`, ru: `Слушать · звено ${i + 1} из ${steps.length} · ${name(st.ref)}` }))),
+        ...(block ? [block] : []),
+        nx ? h('div.rm-chain-how', {}, h('span', { 'aria-hidden': 'true' }, '↓ '), how ? `${how} · ` : '', h('strong', {}, name(nx.ref))) : h('div.rm-chain-how', {}, pick({ en: 'The oldest root on this path.', ru: 'Самый старый корень на этом пути.' })),
+        h(
+          'div.rm-chain-nav',
+          {},
+          h('button.btn', { type: 'button', disabled: i === 0, onclick: () => show(i - 1, true) }, pick({ en: '← Back', ru: '← Назад' })),
+          nx ? h('button.btn.primary', { type: 'button', onclick: () => show(i + 1, true) }, pick({ en: 'Next →', ru: 'Дальше →' })) : null,
+        ),
+      );
+      // Only the reader's own click starts sound: Back and Next are clicks.
+      if (play && block) playBlock(block);
+    };
+    show(0, false);
+    return box;
   }
 
   /** Labels by importance; none overlap. While something is lit, its labels come first. */
@@ -308,17 +376,29 @@ export class RootsMap {
     }
     let self = '';
     const over = (r: DOMRect, b: DOMRect) => r.left < b.right + 3 && r.right > b.left - 3 && r.top < b.bottom + 1 && r.bottom > b.top - 1;
-    const hits = (r: DOMRect) => boxes.some((b) => over(r, b)) || [...dots].some(([id, b]) => id !== self && b.width > 0 && over(r, b));
+    // A root's name may pass over a small artist dot, never over a label or another root.
+    let selfCard = false;
+    const hits = (r: DOMRect) => boxes.some((b) => over(r, b)) || [...dots].some(([id, b]) => id !== self && b.width > 0 && (!selfCard || id.startsWith('card:')) && over(r, b));
+    const fewArtists = !!priority && [...priority].filter((k) => !g.byId.get(k)?.card).length <= 8;
     const bigRoots = new Set(g.nodes.filter((x) => x.card).sort((a, b) => b.support - a.support).slice(0, 3).map((x) => x.id));
     lbls.forEach(({ n, el }, i) => {
       self = n.id;
+      selfCard = n.card;
       let r = rects[i];
-      const want = priority ? priority.has(n.id) || n.card : famous ? famous.has(n.id) || n.card : true;
+      // On a phone a lit path is named alone: an artist's chain, or for a root
+      // only the traditions that grew from it, never the forty artists above.
+      const want = priority
+        ? this.phone
+          ? priority.has(n.id) && (!this.litCard || n.card || fewArtists)
+          : priority.has(n.id) || n.card
+        : famous
+          ? famous.has(n.id) || n.card
+          : true;
       // Every root keeps its name: above its dot, or below it if that is taken.
       if (n.card) {
         const rr = radius(n);
         // above, below, right, left: the first place that is free
-        const spots: [number, number, string][] = [[0, -rr - 5, 'middle'], [0, rr + 16, 'middle'], [rr + 6, 4, 'start'], [-rr - 6, 4, 'end']];
+        const spots: [number, number, string][] = [[0, -rr - 5, 'middle'], [0, rr + 16, 'middle'], [rr + 6, 4, 'start'], [-rr - 6, 4, 'end'], [rr + 4, -rr - 2, 'start'], [-rr - 4, -rr - 2, 'end'], [rr + 4, rr + 12, 'start'], [-rr - 4, rr + 12, 'end']];
         for (const [x, y, anchor] of spots) {
           el.setAttribute('x', String(x));
           el.setAttribute('y', String(y));

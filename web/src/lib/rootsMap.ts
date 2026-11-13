@@ -88,20 +88,32 @@ export function grewFrom(g: Graph, id: string): Set<string> {
   return seen;
 }
 
-/** The root most artists lead back to, for the headline. */
-export function headline(g: Graph): { total: number; root?: GNode; count: number } {
+/**
+ * The roots at the bottom of the map, for the headline: every tradition with
+ * no older root of its own, and the traditions of the same age that grew from
+ * them (spirituals beside work songs), as the map draws them side by side.
+ * `count` is how many artists lead back to at least one of them.
+ */
+export function headline(g: Graph, sameAge = 50): { total: number; roots: GNode[]; count: number } {
   const artists = g.nodes.filter((n) => !n.card);
-  const roots = g.nodes.filter((n) => n.card && !(g.out.get(n.id)?.length));
-  let best: GNode | undefined;
-  let count = 0;
-  for (const r of roots) {
-    const n = [...grewFrom(g, r.id)].filter((id) => !g.byId.get(id)!.card).length;
-    if (n > count) {
-      count = n;
-      best = r;
-    }
+  // Only traditions older than every artist stand at the foot: a card with no
+  // roots of its own from the artists' own century is not one of them.
+  const first = Math.min(...artists.map((n) => n.year));
+  const terminal = g.nodes.filter((n) => n.card && !(g.out.get(n.id)?.length) && n.year < first);
+  const oldest = new Set(terminal.map((n) => n.id));
+  for (const n of g.nodes) {
+    const outs = g.out.get(n.id) ?? [];
+    if (n.card && outs.length && outs.every((o) => oldest.has(o) && n.year <= g.byId.get(o)!.year + sameAge)) oldest.add(n.id);
   }
-  return { total: artists.length, root: best, count };
+  const reached = new Map<string, number>();
+  const any = new Set<string>();
+  for (const id of oldest) {
+    const grew = [...grewFrom(g, id)].filter((k) => !g.byId.get(k)!.card);
+    reached.set(id, grew.length);
+    grew.forEach((k) => any.add(k));
+  }
+  const roots = [...oldest].filter((id) => reached.get(id)! > 0).map((id) => g.byId.get(id)!).sort((a, b) => a.year - b.year || reached.get(b.id)! - reached.get(a.id)!);
+  return { total: artists.length, roots, count: any.size };
 }
 
 /**

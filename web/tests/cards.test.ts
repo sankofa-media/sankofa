@@ -1,5 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { CardSet, bookSymbols, formatYears, links, overlaps, plain, segments } from '../src/lib/cards';
+import { CardSet, bookSymbols, cardForEdition, formatYears, links, localizeCard, overlaps, plain, segments, when } from '../src/lib/cards';
+import { atlasLayers } from '../src/lib/atlasModel';
+import { quietStretches } from '../src/lib/descentModel';
+import { readFileSync } from 'node:fs';
 import type { Card } from '../src/lib/types';
 
 const card = (c: Partial<Card> & { id: string }): Card => ({
@@ -87,5 +90,53 @@ describe('places and time', () => {
     expect(formatYears([1778, 1860])).toBe('1778–1860');
     expect(formatYears([1781])).toBe('1781');
     expect(formatYears([1781, 1781])).toBe('1781');
+  });
+});
+
+describe('card bodies by copy', () => {
+  const card = JSON.parse(readFileSync(new URL('./fixtures/marked/card.json', import.meta.url), 'utf8')) as Card;
+
+  it('keeps the marked paragraphs of the reader’s copy only, marker stripped', () => {
+    const m = cardForEdition(card, 'm').body.split('\n\n');
+    const f = cardForEdition(card, 'f').body.split('\n\n');
+    expect(m).toHaveLength(3);
+    expect(f).toHaveLength(3);
+    expect(m[1]).toBe('Only the male copy reads this\nwrapped line.');
+    expect(f[1]).toBe('Only the female copy reads this.');
+    expect(m[0]).toBe(f[0]);
+    expect(m.join(' ')).not.toMatch(/\{(male|female)\}/);
+  });
+
+  it('works on the translation too and never touches the hook or title', () => {
+    const ru = cardForEdition(localizeCard(card, 'ru'), 'f');
+    expect(ru.body).toBe('Общий первый абзац.\n\nТолько женский экземпляр.\n\nОбщий последний абзац.');
+    expect(cardForEdition(card, 'f').wow).toBe(card.wow);
+  });
+
+  it('returns an unmarked card unchanged', () => {
+    const plainCard = { ...card, body: 'One.\n\nTwo.' };
+    expect(cardForEdition(plainCard, 'm')).toBe(plainCard);
+  });
+});
+
+describe('the moment a card is about', () => {
+  const smalls = card({ id: 'robert-smalls', years: [1839, 1915], places: [{ name: 'Beaufort', lat: 32.4, lon: -80.7 }, { name: 'Charleston', lat: 32.8, lon: -79.9 }], moment: { year: 1862, place: 1 } });
+
+  it('reads the moment, falling back to the first year and place', () => {
+    expect(when(smalls)).toEqual({ year: 1862, place: smalls.places[1] });
+    expect(when({ ...smalls, moment: { year: 1862 } }).place.name).toBe('Beaufort');
+    expect(when({ ...smalls, moment: undefined })).toEqual({ year: 1839, place: smalls.places[0] });
+  });
+
+  it('places the atlas pin at the moment, in place and in time', () => {
+    const set = new CardSet([smalls]);
+    const at1862 = atlasLayers(set, { level: 4, from: 1860, to: 1865, edition: '' });
+    expect(at1862.points[0]).toMatchObject({ lon: -79.9, lat: 32.8, out: false });
+    const at1900 = atlasLayers(set, { level: 4, from: 1900, to: 1910, edition: '' });
+    expect(at1900.points[0].out).toBe(true);
+  });
+
+  it('anchors the descent at the moment', () => {
+    expect(quietStretches([smalls], 45)[0]).toEqual({ from: 1300, to: 1862 });
   });
 });

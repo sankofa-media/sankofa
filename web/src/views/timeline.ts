@@ -4,9 +4,9 @@ import { scaleLinear, type ScaleLinear } from 'd3-scale';
 import { select, type Selection } from 'd3-selection';
 import { brushX, type BrushBehavior } from 'd3-brush';
 import type { Card } from '../lib/types';
-import { formatYears, span } from '../lib/cards';
+import { formatYears, span, when } from '../lib/cards';
 import { eraColor } from '../lib/atlasModel';
-import { pick, t } from '../lib/i18n';
+import { chapterLabel, chapterNumber, pick, t } from '../lib/i18n';
 
 export interface EraSpan {
   id: string;
@@ -107,10 +107,12 @@ export class Timeline {
       const x0 = x(a);
       const life = c.kind === 'person' && b > a;
       if (!life) {
-        let lane = beadEnds.findIndex((e) => e < x0 - 7);
+        // A bead stands at the moment its story is about.
+        const xm = x(when(c).year);
+        let lane = beadEnds.findIndex((e) => e < xm - 7);
         if (lane < 0) lane = beadEnds.length < 3 ? beadEnds.length : beadEnds.indexOf(Math.min(...beadEnds));
-        beadEnds[lane] = x0;
-        beads.push({ c, x: x0, lane });
+        beadEnds[lane] = xm;
+        beads.push({ c, x: xm, lane });
         continue;
       }
       const x1 = Math.max(x(b), x0 + 4);
@@ -146,7 +148,7 @@ export class Timeline {
         .attr('class', 'era')
         .attr('tabindex', 0)
         .attr('role', 'button')
-        .attr('aria-label', `${e.id}, ${e.label}, ${e.from} to ${e.to}`)
+        .attr('aria-label', `${chapterLabel(e.id)}, ${e.label}, ${e.from} to ${e.to}`)
         .style('--era', eraColor(e.id))
         .on('click', () => this.opts.onEra?.(e.id))
         .on('keydown', (ev: KeyboardEvent) => {
@@ -154,10 +156,14 @@ export class Timeline {
         });
       const y = eraTop + lane * (eraH + 3);
       g.append('rect').attr('x', x(e.from)).attr('y', y).attr('width', Math.max(6, x(e.to) - x(e.from))).attr('height', eraH).attr('rx', 3);
+      // The chapter's name where it fits, its number where it does not.
+      const room = x(e.to) - x(e.from) - 12;
+      const label = e.label.length * 6.6 <= room ? e.label : String(chapterNumber(e.id) ?? '');
       g.append('text')
         .attr('x', x(e.from) + 6)
         .attr('y', y + 11.5)
-        .text(`${e.id}  ${x(e.to) - x(e.from) > 120 ? e.label : ''}`);
+        .text(label);
+      g.append('title').text(`${chapterLabel(e.id)} · ${e.label}`);
     }
 
     // Century and decade ticks.
@@ -203,12 +209,16 @@ export class Timeline {
       const y = lifeTop + p.row * rowH;
       const g = hook(gLife.append('g').attr('class', 'life'), p.c);
       g.append('rect').attr('x', p.x0).attr('y', y).attr('width', p.x1 - p.x0).attr('height', barH).attr('rx', barH / 2);
-      if (p.label !== 'none')
-        g.append('text')
-          .attr('class', p.label === 'in' ? 'in' : 'out')
-          .attr('x', p.label === 'in' ? p.x0 + 6 : p.x1 + 5)
-          .attr('y', y + barH / 2 + 3.5)
-          .text(p.c.title);
+      g.append('title').text(`${p.c.title}, ${formatYears(p.c.years)}`);
+      if (p.label !== 'none') {
+        const tx = p.label === 'in' ? p.x0 + 6 : p.x1 + 5;
+        // Room up to the next bar in the row (or the end of its own bar):
+        // a name that does not fit is cut with an ellipsis, never by a bar.
+        const next = Math.min(x(NOW), ...placed.filter((q) => q.row === p.row && q.x0 > p.x0).map((q) => q.x0));
+        const room = (p.label === 'in' ? p.x1 : next) - tx - 4;
+        const text = g.append('text').attr('class', p.label === 'in' ? 'in' : 'out').attr('x', tx).attr('y', y + barH / 2 + 3.5).text(p.c.title);
+        fitText(text.node()!, p.c.title, room);
+      }
     }
     for (const b of beads) {
       const g = hook(gLife.append('g').attr('class', 'life bead'), b.c);
@@ -272,6 +282,17 @@ export class Timeline {
     this.ro.disconnect();
     this.svg.remove();
   }
+}
+
+/** Cut a drawn label to its room with an ellipsis; the full name stays in the title. */
+export function fitText(el: SVGTextElement, full: string, room: number): void {
+  if (!el.getComputedTextLength || el.getComputedTextLength() <= room) return;
+  if (room < 24) {
+    el.textContent = '';
+    return;
+  }
+  let n = full.length;
+  while (n > 1 && el.getComputedTextLength() > room) el.textContent = full.slice(0, --n).trimEnd() + '…';
 }
 
 let ctx2d: CanvasRenderingContext2D | null | undefined;

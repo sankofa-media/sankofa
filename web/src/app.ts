@@ -1,10 +1,11 @@
 import type { Card, Chapter, Book } from './lib/types';
-import { CardSet, segments } from './lib/cards';
+import { CardSet, segments, when } from './lib/cards';
 import { type Point } from './lib/fragment';
 import { placeKey } from './lib/cards';
 import { lang } from './lib/i18n';
 import { t } from './lib/i18n';
 import { h } from './lib/dom';
+import type { ListenFile } from './lib/listen';
 
 export interface App {
   set: CardSet;
@@ -12,6 +13,8 @@ export interface App {
   raw(id: string): Card | undefined;
   openEngine(push?: boolean): void;
   chapters: Chapter[];
+  /** Recordings to listen to, by card and by roots artist. */
+  listen: ListenFile;
   edition: 'm' | 'f';
   media(file: string): string;
   /** Open a card over the current view. `asked` is what the link pointed to. */
@@ -26,6 +29,11 @@ export interface App {
 }
 
 export function cardPoint(c: Card): Point {
+  // A card with a moment opens on that moment; otherwise on its span.
+  if (c.moment) {
+    const at = when(c);
+    return { from: at.year, place: placeKey(at.place), zoom: c.zoom, focus: c.id, lang: lang() === 'en' ? undefined : lang() };
+  }
   const [a, b] = [c.years[0], c.years[1]];
   return { from: a, to: b && b !== a ? b : undefined, place: placeKey(c.places[0]), zoom: c.zoom, focus: c.id, lang: lang() === 'en' ? undefined : lang() };
 }

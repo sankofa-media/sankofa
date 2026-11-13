@@ -6,11 +6,12 @@ import { formatYears, KIND_LABEL } from '../lib/cards';
 import { formatFragment, terminalCommand } from '../lib/fragment';
 import { vtags, bookMarks, copyText, h, svgIcon, toast } from '../lib/dom';
 import { eraColor } from '../lib/atlasModel';
-import { edition, lang, pick, t } from '../lib/i18n';
+import { chapterLabel, edition, lang, pick, t } from '../lib/i18n';
 import { editionNote, pairLink } from './editionNote';
 import { cardYaml } from '../lib/cardYaml';
 import { mediaSrc } from '../lib/media';
 import { cardChecks, cardExtras } from '../mechanics';
+import { listenBlock, stopPlayer } from './player';
 
 /** A drawer that slides in from the right, with a focus trap and Esc to close. */
 export class Drawer {
@@ -39,6 +40,7 @@ export class Drawer {
 
   show(content: HTMLElement): void {
     if (!this.isOpen) this.returnTo = document.activeElement;
+    stopPlayer();
     const close = h('button.icon-btn.close', { 'aria-label': t('Close'), onclick: () => this.close() }, svgIcon('close'));
     // A sticky header holds the close button, so it never covers the text.
     const bar = h('div.drawer-bar', {}, h('span.drawer-label', {}, ...vtags(content.dataset.label ?? '')), close);
@@ -55,6 +57,8 @@ export class Drawer {
 
   close(silent = false): void {
     if (!this.isOpen) return;
+    // Nothing keeps playing behind a closed panel.
+    stopPlayer();
     this.el.classList.remove('on');
     this.scrim.classList.remove('on');
     document.documentElement.classList.remove('panel-open');
@@ -142,7 +146,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
     h(
       'div.meta',
       {},
-      h('span.era-tag', {}, ...vtags(`${c.era ?? ''} ${era ? '· ' + era.label : ''}`)),
+      h('span.era-tag', {}, [chapterLabel(c.era), era?.label].filter(Boolean).join(' · ')),
       h('span', {}, KIND_LABEL[c.kind] ?? c.kind),
       h('span', {}, formatYears(c.years)),
       h('span', {}, c.places.map((p) => p.name).join(' → ')),
@@ -156,6 +160,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
     ),
     ...notices,
     h('div.text', {}, ...paragraphs),
+    ...(app.listen.cards[c.id] ?? []).slice(0, 1).map((r) => listenBlock(r)),
     ...audio.map((a) =>
       h(
         'figure.card-audio',
@@ -228,7 +233,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
       )
     : null;
 
-  return h('article.card', { 'data-label': `${c.era ?? ''} · ${KIND_LABEL[c.kind] ?? c.kind}`, 'data-card-id': c.id, 'aria-labelledby': 'card-title', lang: c.textLang && c.textLang !== lang() ? c.textLang : undefined }, media, body);
+  return h('article.card', { 'data-label': [chapterLabel(c.era), KIND_LABEL[c.kind] ?? c.kind].filter(Boolean).join(' · '), 'data-card-id': c.id, 'aria-labelledby': 'card-title', lang: c.textLang && c.textLang !== lang() ? c.textLang : undefined }, media, body);
 }
 
 export function renderBook(app: App, path: string[], actions: { share(): void; replay(): void; clear(): void }): HTMLElement {

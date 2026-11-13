@@ -7,16 +7,6 @@ import { setEdition } from '../lib/reader';
 import { rememberPlace } from '../lib/place';
 import type { Card } from '../lib/types';
 
-/** Short names for the list sentence; Russian in the nominative. */
-const NAMES: Record<string, { en: string; ru: string }> = {
-  'douglass-covey': { en: 'Frederick Douglass', ru: 'Фредерик Дуглас' },
-  'jacobs-garret': { en: 'Harriet Jacobs', ru: 'Гарриет Джейкобс' },
-  tuskegee: { en: 'the Tuskegee study', ru: 'исследование в Таскиги' },
-  'henrietta-lacks': { en: 'Henrietta Lacks', ru: 'Генриетта Лакс' },
-  'robert-smalls': { en: 'Robert Smalls', ru: 'Роберт Смоллс' },
-  'combahee-raid': { en: 'the Combahee River Raid', ru: 'рейд на реке Комбахи' },
-};
-
 const EN_NUM = ['no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
 const RU_IN = ['ни в одном месте', 'в одном месте', 'в двух местах', 'в трёх местах', 'в четырёх местах', 'в пяти местах', 'в шести местах', 'в семи местах', 'в восьми местах', 'в девяти местах', 'в десяти местах'];
 const RU_ALL = ['', 'Единственная пара', 'Обе пары', 'Все три пары', 'Все четыре пары', 'Все пять пар', 'Все шесть пар', 'Все семь пар', 'Все восемь пар', 'Все девять пар', 'Все десять пар'];
@@ -57,16 +47,17 @@ export function editionNote(app: App): HTMLElement {
   const ru = lang() === 'ru';
   const pairs = editionPairs(app);
   const mine = app.edition;
-  const other = mine === 'f' ? 'm' : 'f';
+  const other: 'm' | 'f' = mine === 'f' ? 'm' : 'f';
   const n = pairs.length;
   // Every pair from the data, in each copy's own words.
-  const name = (c: Card) => (ru ? NAMES[c.id]?.ru ?? `«${c.title}»` : NAMES[c.id]?.en ?? (c.inline || `“${c.title}”`));
+  // Names come from the cards themselves, so a new pair needs no code here.
+  const name = (c: Card) => (ru ? `«${c.title}»` : c.inline || c.title.replace(/^The /, 'the '));
   const join = (xs: string[]) => (xs.length > 1 ? `${xs.slice(0, -1).join(', ')} ${ru ? 'и' : 'and'} ${xs[xs.length - 1]}` : xs.join(''));
-  const fList = join(pairs.map((p) => name(p.f)));
-  const mList = join(pairs.map((p) => name(p.m)));
+  // Only the reader's own stories are named: the other copy stays a door, not a summary.
+  const own = join(pairs.map((p) => name(p[mine])));
   const text = ru
-    ? `Как у Павича, у музея два экземпляра — мужской и женский. Они расходятся ${RU_IN[n] ?? `в ${n} местах`}: одну и ту же тему там рассказывают разные истории. В женском экземпляре — ${fList}; в мужском — ${mList}. У вас — ${mine === 'f' ? 'женский' : 'мужской'}.`
-    : `Like Pavić’s dictionary, this museum has two copies, a male and a female one. They differ in ${EN_NUM[n] ?? n} places, where the same theme is told through a different story. In the female copy you read ${fList}; in the male copy, ${mList}. Yours is the ${mine === 'f' ? 'female' : 'male'} copy.`;
+    ? `Как у Павича, у музея два экземпляра — мужской и женский. Они расходятся ${RU_IN[n] ?? `в ${n} местах`}: одну и ту же тему там рассказывают разные истории. У вас — ${mine === 'f' ? 'женский' : 'мужской'}; в нём вы прочтёте: ${own}.`
+    : `Like Pavić’s dictionary, this museum has two copies, a male and a female one. They differ in ${EN_NUM[n] ?? n} places, where the same theme is told through a different story. Yours is the ${mine === 'f' ? 'female' : 'male'} copy; in it you read ${own}.`;
 
   const list = h(
     'ol.ed-pairs',

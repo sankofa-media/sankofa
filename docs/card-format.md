@@ -14,6 +14,7 @@ years: [1778, 1860]     # [from] or [from, to]
 places:                 # first place is the main atlas point
   - {name: Vienna, lat: 48.2082, lon: 16.3738}
 zoom: 4                 # 1 centuries/Atlantic, 2 regions, 3 cities and genres, 4 people, 5 a single document or recording
+moment: {year: 1802}    # optional: the year the story is about and `place:` (index into places, default 0), when not years[0] at places[0]; within 10 years of `years`
 era: v5                 # v0 Africa before, v1 Middle Passage, v2 resistance, v3 voices, v4 diaspora, v5 Harlem/Négritude (and earlier Europe), v6 civil rights, v7 Afrofuturism
 books: [heirs]          # voices (their own words), archives (records of those who traded and ruled), heirs (diaspora, memory, art)
 edition: both           # both | m | f ; m/f cards come in pairs sharing `pair`
@@ -37,6 +38,7 @@ Rules:
 - Admiration, not stigma: start from what the person made or did. Do not hide uncomfortable topics either.
 - No generalising: every card has a place and a time.
 - `sankofa content lint content/` must pass.
+- A paragraph of the body (or of a chapter) that starts with `{male} ` or `{female} ` is read only in that copy of the museum; unmarked paragraphs are read in both. A translation must mark the same paragraphs.
 
 # Chapter format
 

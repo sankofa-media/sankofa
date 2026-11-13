@@ -3,16 +3,17 @@ import type { App } from './app';
 import type { CardsFile, ChaptersFile } from './lib/types';
 import { ERAS } from './lib/types';
 import { rememberPlace, takePlace } from './lib/place';
-import { CardSet, localizeCard, localizeChapter } from './lib/cards';
-import { sortChapters } from './lib/chapters';
+import { CardSet, cardForEdition, localizeCard, localizeChapter } from './lib/cards';
+import { chapterForEdition, sortChapters } from './lib/chapters';
 import { formatFragment } from './lib/fragment';
 import { formatRoute, parseRoute, screenOf, type Route } from './lib/route';
 import * as reader from './lib/reader';
 import { copyText, h, svgIcon, toast } from './lib/dom';
-import { detectLang, isLang, lang, setLang, storeLang, storedLang, t, t as tr, type Lang } from './lib/i18n';
+import { chapterLabel, chapterNumber, detectLang, isLang, lang, setLang, storeLang, storedLang, t, t as tr, type Lang } from './lib/i18n';
 import { buildStory } from './views/story';
 import { localizeStatics, RU_TITLE_FIX } from './lib/statics';
 import { loadMediaManifest } from './lib/media';
+import { EMPTY_LISTEN, type ListenFile } from './lib/listen';
 import { watchTypography } from './lib/typo';
 import { Drawer, renderBook, renderCard } from './views/card';
 import { Atlas } from './views/atlas';
@@ -66,13 +67,20 @@ async function start(): Promise<void> {
   document.body.append(loading);
   let cardsFile: CardsFile;
   let chaptersFile: ChaptersFile;
+  let listenFile: ListenFile;
   navLegend(current);
   // The language switch needs no data, so it works while the cards load.
   document.querySelectorAll<HTMLElement>('[data-lang-switch]').forEach((b) => b.addEventListener('click', () => switchLang(lang() === 'ru' ? 'en' : 'ru')));
   // Let the static cover paint before the 1 MB of cards competes for the wire.
   await new Promise<void>((r) => requestAnimationFrame(() => setTimeout(r, 0)));
   try {
-    [cardsFile, chaptersFile] = await Promise.all([load<CardsFile>('data/cards.json'), load<ChaptersFile>('data/chapters.json'), loadMediaManifest()]);
+    [cardsFile, chaptersFile, listenFile] = await Promise.all([
+      load<CardsFile>('data/cards.json'),
+      load<ChaptersFile>('data/chapters.json'),
+      // Listening is an extra: the museum opens without it.
+      load<ListenFile>('data/listen.json').catch(() => EMPTY_LISTEN),
+      loadMediaManifest(),
+    ]);
   } catch (e) {
     loading.remove();
     document.getElementById('story')!.append(h('p.error', {}, t('The museum could not load its cards ({error}). Run scripts/build-data.sh.', { error: (e as Error).message })));
@@ -80,8 +88,11 @@ async function start(): Promise<void> {
   }
 
   const rawCards = new Map(cardsFile.cards.map((c) => [c.id, c]));
-  const set = new CardSet(cardsFile.cards.map((c) => localizeCard(c, current)));
-  const chapters = sortChapters(chaptersFile.chapters.map((c) => localizeChapter(c, current))).map((c) => ({ ...c, title: RU_TITLE_FIX[c.title] ?? c.title }));
+  const held = reader.edition();
+  // Cards, like chapters, hold only the reader's copy of a marked paragraph.
+  const set = new CardSet(cardsFile.cards.map((c) => cardForEdition(localizeCard(c, current), held)));
+  // Each copy reads only its own paragraphs: every step and count follows from here.
+  const chapters = sortChapters(chaptersFile.chapters.map((c) => chapterForEdition(localizeChapter(c, current), held))).map((c) => ({ ...c, title: RU_TITLE_FIX[c.title] ?? c.title }));
   // One name per release: every era label is the chapter's own title.
   for (const e of ERAS) e.label = chapters.find((c) => c.id === e.id)?.title ?? e.label;
   const cardDrawer = new Drawer(t('Card'));
@@ -102,7 +113,8 @@ async function start(): Promise<void> {
       engine.open();
     },
     chapters,
-    edition: reader.edition(),
+    listen: listenFile,
+    edition: held,
     media: (file) => `media/${file}`,
     openCard(id, opts = {}) {
       const path = route.point.path;
@@ -191,7 +203,8 @@ async function start(): Promise<void> {
   const roots = new Roots(app, cardsFile.roots ?? []);
   roots.onArtist = (artist) => {
     route = { point: {}, view: 'roots', artist };
-    writeRoute(route, true);
+    // A chain is a page to come back to; a cleared one is not.
+    writeRoute(route, !!artist);
   };
   roots.onClose = () => {
     roots.close();
@@ -399,7 +412,7 @@ function setupNav(app: App, atlas: Atlas): void {
   const nav = document.querySelector<HTMLElement>('.nav')!;
   const progress = nav.querySelector<HTMLElement>('.progress')!;
   for (const ch of app.chapters) {
-    progress.append(h('a', { href: `#ch=${ch.id}`, 'data-chapter': ch.id, 'aria-label': `${ch.id}: ${ch.title}` }, h('span', {}, ch.id)));
+    progress.append(h('a', { href: `#ch=${ch.id}`, 'data-chapter': ch.id, 'aria-label': `${chapterLabel(ch.id)}: ${ch.title}`, title: `${chapterLabel(ch.id)} · ${ch.title}` }, h('span', {}, String(chapterNumber(ch.id) ?? ''))));
   }
   nav.querySelector('[data-home]')!.addEventListener('click', (e) => {
     e.preventDefault();

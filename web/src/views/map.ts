@@ -425,6 +425,24 @@ export class GeoMap {
     return `M${a[0].toFixed(1)},${a[1].toFixed(1)}Q${q0[0].toFixed(1)},${q0[1].toFixed(1)} ${end[0].toFixed(1)},${end[1].toFixed(1)}`;
   }
 
+  /** The screen midpoint of a leg's arc, and the arc's chord length. */
+  private curveMid(leg: Leg): [number, number, number] {
+    const a = this.xy(leg.from[0], leg.from[1]);
+    const b = this.xy(leg.to[0], leg.to[1]);
+    const dx = b[0] - a[0];
+    const dy = b[1] - a[1];
+    const len = Math.hypot(dx, dy);
+    let nx = -dy / (len || 1);
+    let ny = dx / (len || 1);
+    if (ny > 0) {
+      nx = -nx;
+      ny = -ny;
+    }
+    const bend = Math.min(0.24 * len, 220);
+    const c = [(a[0] + b[0]) / 2 + nx * bend, (a[1] + b[1]) / 2 + ny * bend];
+    return [0.25 * a[0] + 0.5 * c[0] + 0.25 * b[0], 0.25 * a[1] + 0.5 * c[1] + 0.25 * b[1], len];
+  }
+
   private renderRoutes(): void {
     const legs = this.routes.flatMap((r) => r.legs.map((l, i) => ({ r, l, key: `${r.id}:${i}` })));
     this.gRoutes
@@ -455,36 +473,43 @@ export class GeoMap {
         t.append('tspan').attr('class', 'sub').attr('dy', '1.35em');
         return t;
       });
-    lab
-      .attr('transform', (d) => {
-        const [x, y] = this.xy(d.label!.at[0], d.label!.at[1]);
-        // Keep the label on screen: clamp by its measured width.
-        const w = (this.labelWidths.get(d.id) ?? d.label!.text.length * 8) + 8;
-        // Not under the text column either.
-        const left = Math.max(8, ...(this.opts.avoid?.() ?? []).filter((a) => y > a[1] - 30 && y < a[3]).map((a) => a[2] + 12));
-        const cx = Math.max(left, Math.min(this.w - w, x));
-        return `translate(${cx.toFixed(1)},${y})`;
-      })
-      .style('opacity', (d) => Math.min(1, ((d.progress ?? 1) - 0.4) * 2));
     // Titles above every arc, never crossed by one.
     lab.raise();
     lab.select('tspan.main').attr('x', 0).text((d) => d.label!.text);
     lab.select('tspan.sub').attr('x', 0).text((d) => d.label!.sub ?? '');
-    // Movement titles never stack on one another: each moves down until free.
-    const placed: DOMRect[] = [];
-    lab.each((_, i, n) => {
+    lab.style('opacity', (d) => Math.min(1, ((d.progress ?? 1) - 0.4) * 2));
+    // Each title sits at the middle of its own route: just above the arc's
+    // midpoint, else below it or beside it, on whichever leg has room. A title
+    // that finds no room keeps its first place rather than drifting away.
+    const placed: [number, number, number, number][] = [];
+    const avoid = this.opts.avoid?.() ?? [];
+    const free = (r: [number, number, number, number]) =>
+      r[0] >= 4 && r[2] <= this.w - 4 && r[1] >= 4 && r[3] <= this.h - 4 &&
+      !placed.some((p) => r[0] < p[2] && r[2] > p[0] && r[1] < p[3] + 4 && r[3] > p[1] - 4) &&
+      !avoid.some((p) => r[0] < p[2] && r[2] > p[0] && r[1] < p[3] && r[3] > p[1]);
+    lab.each((d, i, n) => {
       const el = n[i] as SVGTextElement;
-      const tr = el.getAttribute('transform') ?? '';
-      const m = tr.match(/translate\(([-\d.]+),([-\d.]+)\)/);
-      if (!m) return;
-      let y = Number(m[2]);
-      for (let k = 0; k < 6; k++) {
-        const r = el.getBoundingClientRect();
-        if (!placed.some((p) => r.left < p.right && r.right > p.left && r.top < p.bottom + 4 && r.bottom > p.top - 4)) break;
-        y += 40;
-        el.setAttribute('transform', `translate(${m[1]},${y})`);
+      const w = this.labelWidths.get(d.id) ?? Math.max(d.label!.text.length * 8, (d.label!.sub ?? '').length * 6.4);
+      const box = (x: number, y: number): [number, number, number, number] => [x, y - 15, x + w, y + (d.label!.sub ? 22 : 6)];
+      const mids = [...d.legs].map((l) => ({ l, m: this.curveMid(l) })).sort((p, q) => q.m[2] - p.m[2]);
+      let best: [number, number] | undefined;
+      for (const { m } of mids) {
+        const [mx, my] = m;
+        for (const [x, y] of [[mx - w / 2, my - 22], [mx - w / 2, my + 20], [mx + 10, my + 4], [mx - w - 10, my + 4]] as [number, number][]) {
+          const cx = Math.max(4, Math.min(this.w - w - 4, x));
+          if (free(box(cx, y))) {
+            best = [cx, y];
+            break;
+          }
+        }
+        if (best) break;
       }
-      placed.push(el.getBoundingClientRect());
+      if (!best) {
+        const [mx, my] = mids[0]?.m ?? this.xy(d.label!.at[0], d.label!.at[1]);
+        best = [Math.max(4, Math.min(this.w - w - 4, mx - w / 2)), my - 22];
+      }
+      placed.push(box(best[0], best[1]));
+      el.setAttribute('transform', `translate(${best[0].toFixed(1)},${best[1].toFixed(1)})`);
     });
     lab.each((d, i, n) => {
       if (this.labelWidths.has(d.id)) return;

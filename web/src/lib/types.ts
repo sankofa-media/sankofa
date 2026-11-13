@@ -34,6 +34,8 @@ export interface Card {
   years: number[];
   places: Place[];
   zoom: number;
+  /** The moment the story is about: a year and an index into places (default 0). */
+  moment?: { year: number; place?: number };
   era?: string;
   books: Book[];
   edition?: Edition;
@@ -67,6 +69,9 @@ export interface CardTranslation {
   body: string;
 }
 
+/** Which copy a chapter paragraph belongs to: '' for both, m or f for one. */
+export type StepCopy = '' | 'm' | 'f';
+
 export interface ChapterTranslation {
   title?: string;
   kicker?: string;
@@ -74,6 +79,7 @@ export interface ChapterTranslation {
   heroCredit?: string;
   heroLicense?: string;
   steps?: string[];
+  stepCopies?: StepCopy[];
 }
 
 export interface Chapter {
@@ -85,6 +91,8 @@ export interface Chapter {
   places: Place[];
   cards: string[];
   steps: string[];
+  /** Parallel to steps, present only when some paragraph is marked {male} or {female}. */
+  stepCopies?: StepCopy[];
   translations?: Record<string, ChapterTranslation>;
   textLang?: string;
 }

@@ -99,6 +99,17 @@ export function span(c: { years: number[] }): [number, number] {
   return [a, b];
 }
 
+/**
+ * The year and place a card's story is about: its moment when set, else its
+ * first year at its first place. `years` stays the span shown elsewhere.
+ */
+export function when(c: { years: number[]; places?: Place[]; moment?: Card['moment'] }): { year: number; place: Place } {
+  const m = c.moment;
+  const places = c.places ?? [];
+  const place = (m && places[m.place ?? 0]) || places[0];
+  return { year: m?.year ?? c.years[0], place };
+}
+
 export function formatYears(years: number[]): string {
   if (!years.length) return '';
   const fmt = (y: number) => (y < 0 ? `${-y} ${t('BCE')}` : String(y));
@@ -148,6 +159,31 @@ export function localizeCard(c0: Card, lang: string): Card {
       out.media = c.media.map((m, i) => ({ ...m, caption: caps?.[i] || m.caption, credit: credits?.[i] || m.credit, license: licenses?.[i] || m.license }));
   }
   return out;
+}
+
+const COPY_MARK = /^\{(male|female)\}\s+/;
+
+/**
+ * A card body as one copy reads it: a paragraph that opens with `{male} ` or
+ * `{female} ` stays only in that copy (marker stripped); the rest in both.
+ */
+export function bodyForEdition(body: string, edition: 'm' | 'f'): string {
+  if (!/(^|\n)\s*\{(male|female)\}/.test(body)) return body;
+  return body
+    .split(/\n\s*\n/)
+    .flatMap((p) => {
+      const t = p.trim();
+      const m = t.match(COPY_MARK);
+      if (!m) return [p];
+      return (m[1] === 'male' ? 'm' : 'f') === edition ? [t.slice(m[0].length)] : [];
+    })
+    .join('\n\n');
+}
+
+/** The card as the reader's copy holds it. */
+export function cardForEdition(c: Card, edition: 'm' | 'f'): Card {
+  const body = bodyForEdition(c.body, edition);
+  return body === c.body ? c : { ...c, body };
 }
 
 /** A chapter in the reader's language; the body only when every step is there. */

@@ -5,13 +5,14 @@
 import type { App } from '../app';
 import type { Card } from '../lib/types';
 import { ERAS } from '../lib/types';
-import { formatYears, span } from '../lib/cards';
-import { vtags, bookMarks, h, reducedMotion, svgIcon } from '../lib/dom';
+import { formatYears, plain, span, when } from '../lib/cards';
+import { bookMarks, h, reducedMotion, svgIcon } from '../lib/dom';
 import { chapterCopy, eraColor, readerCards } from '../lib/atlasModel';
 import { MOVEMENTS } from '../lib/movements';
-import { count, pick, t, yearsAgo } from '../lib/i18n';
+import { chapterLabel, chapterNumber, count, pick, t, yearsAgo } from '../lib/i18n';
 import { LEVEL_NAMES } from './map';
 import { mediaSrc } from '../lib/media';
+import { listenBlock, stopPlayer } from './player';
 import { richText } from '../app';
 import { buildScale, chapterAt, chapterCentres, chaptersAt, lanes, levelCards, NOW, place, quietStretches, START, type Item, type Placed, type Scale } from '../lib/descentModel';
 import { interpolateRgb } from 'd3-interpolate';
@@ -29,7 +30,7 @@ const STARS = scaleLinear().domain([1945, 1975, 2005]).range([0, 0.55, 1]).clamp
 const QUIET = [
   { en: 'The archive is quiet here. The people were not.', ru: 'Архив здесь молчит. Люди — нет.' },
   { en: 'Few records survive from these years. Absence of evidence, not of lives.', ru: 'От этих лет почти не осталось записей. Документов нет, но люди жили.' },
-  { en: 'A long stretch with no card yet. Somebody was singing.', ru: 'Долгий отрезок без единой карточки. Кто-то в это время пел.' },
+  { en: 'A long stretch with no card. Somebody was singing.', ru: 'Долгий отрезок без единой карточки. Кто-то в это время пел.' },
   { en: 'Silence in the sources. Keep going.', ru: 'Источники молчат. Идите дальше.' },
 ];
 
@@ -171,6 +172,7 @@ export class Descent {
   }
 
   close(): void {
+    stopPlayer();
     this.el.classList.remove('open');
     document.body.classList.remove('locked');
   }
@@ -197,7 +199,7 @@ export class Descent {
       const f = (y: number) => ((y - START) / (NOW - START)) * 100;
       return h('b', {
         style: `top:${f(a)}%;height:${Math.max(1, f(b) - f(a))}%;--era:${eraColor(e.id)};left:${ERAS.indexOf(e) % 2 ? 5 : 0}px`,
-        title: `${e.id} ${e.label}`,
+        title: `${chapterLabel(e.id)} · ${e.label}`,
       });
     });
   }
@@ -230,8 +232,8 @@ export class Descent {
           this.meterEra.dataset.key = key;
           this.meterEra.style.setProperty('--era', eraColor(ch?.id));
           this.meterEra.replaceChildren(
-            ch ? h('span.main', {}, ...vtags(`${ch.id} · ${ch.title}`)) : '',
-            also.length ? h('span.also', {}, pick({ en: 'also: ', ru: 'а также: ' }), ...also.map((c) => h('i', { style: `--era:${eraColor(c.id)}`, title: c.title }, c.id))) : '',
+            ch ? h('span.main', {}, `${chapterLabel(ch.id)} · ${ch.title}`) : '',
+            also.length ? h('span.also', {}, pick({ en: also.length > 1 ? 'also chapters ' : 'also chapter ', ru: also.length > 1 ? 'а также главы ' : 'а также глава ' }), ...also.map((c) => h('i', { style: `--era:${eraColor(c.id)}`, title: `${chapterLabel(c.id)} · ${c.title}` }, String(chapterNumber(c.id) ?? '')))) : '',
           );
         }
       }
@@ -286,7 +288,7 @@ export class Descent {
       const el = this.cardEl(c, colW);
       els.set('card:' + c.id, el);
       // Every card at its own start year, so the year beside it is the year it shows.
-      list.push({ kind: 'card', id: c.id, year: Math.max(START, span(c)[0]), h: 0 });
+      list.push({ kind: 'card', id: c.id, year: Math.max(START, when(c).year), h: 0 });
     }
     // Level 1 is a summary: each era opens with its picture, title and span.
     if (this.level === 1) {
@@ -300,7 +302,7 @@ export class Descent {
           h(
             'div.tx',
             {},
-            h('small', {}, ...vtags(`${ch.id} · ${ch.kicker}`)),
+            h('small', {}, `${chapterLabel(ch.id)} · ${ch.kicker}`),
             h('b', {}, ch.title),
             h('span', {}, pick({ en: `${count(chapterCopy(app.set, app.edition, ch).length, 'card', 'en')} in this era · read the chapter →`, ru: `В этой эпохе ${count(chapterCopy(app.set, app.edition, ch).length, 'card', 'ru')} · читать главу →` })),
           ),
@@ -411,8 +413,8 @@ export class Descent {
         bands.append(
           h(
             'a.d-lane',
-            { href: `#ch=${ch.id}`, 'data-chapter': ch.id, style: `top:${y0}px;height:${Math.max(30, y1 - y0)}px;left:${x}px;--era:${eraColor(ch.id)}`, title: `${ch.id} · ${ch.title} · ${ch.kicker}` },
-            h('span', {}, ...vtags(`${ch.id} · ${ch.title}`)),
+            { href: `#ch=${ch.id}`, 'data-chapter': ch.id, style: `top:${y0}px;height:${Math.max(30, y1 - y0)}px;left:${x}px;--era:${eraColor(ch.id)}`, title: `${chapterLabel(ch.id)} · ${ch.title} · ${ch.kicker}` },
+            h('span', {}, ch.title),
           ),
         );
       });
@@ -519,7 +521,8 @@ export class Descent {
 
   private cardEl(c: Card, w: number): HTMLElement {
     const img = c.media?.find((m) => m.type === 'image');
-    const [a] = span(c);
+    // The year beside a card is the moment its story is about.
+    const a = when(c).year;
     return h(
       `a.dc${img ? '' : '.noimg'}${c.zoom <= 2 ? '.big' : ''}`,
       { href: `#focus=${c.id}`, 'data-card': c.id, style: `width:${w}px;--era:${eraColor(c.era)}` },
@@ -527,9 +530,11 @@ export class Descent {
       h(
         'div.tx',
         {},
-        h('small', {}, c.era ? h('span.era', { title: this.app.chapters.find((x) => x.id === c.era)?.title ?? '' }, c.era) : null, h('b', {}, String(a)), h('i.pl', {}, c.places[0].name), bookMarks(c.books)),
+        h('small', {}, c.era ? h('span.era', { title: `${chapterLabel(c.era)} · ${this.app.chapters.find((x) => x.id === c.era)?.title ?? ''}` }, String(chapterNumber(c.era) ?? '')) : null, h('b', {}, String(a)), h('i.pl', {}, c.places[0].name), bookMarks(c.books)),
         h('strong', {}, c.title),
         h('span.w', {}, c.wow),
+        // On a phone level 5 has no desk beside the column: the card itself opens up.
+        this.level === 5 && this.phone() ? h('span.dc-body', {}, plain(c.body.split(/\n\s*\n/)[0]).replace(/\s*\n\s*/g, ' ')) : null,
         c.years.length > 1 && c.years[1] !== a ? h('em', {}, formatYears(c.years)) : null,
       ),
     );
@@ -556,8 +561,13 @@ export class Descent {
     imgs.forEach((i) => io.observe(i));
   }
 
+  private phone(): boolean {
+    return (this.el.clientWidth || window.innerWidth) < 760;
+  }
+
   /** Level 5: the card under the reading line, laid open on the desk. */
   private updateDesk(): void {
+    if (this.phone()) return void this.desk.replaceChildren();
     const line = this.el.clientHeight * 0.45;
     let best: HTMLElement | undefined;
     let bestD = Infinity;
@@ -569,7 +579,8 @@ export class Descent {
         best = el;
       }
     }
-    const id = best?.dataset.card ?? '';
+    // No card near the reading line (the introduction, say): no empty desk.
+    const id = best && bestD < this.el.clientHeight * 0.35 ? (best.dataset.card ?? '') : '';
     if (id === this.deskId) return;
     this.deskId = id;
     this.track.querySelectorAll('a.dc.desk-on').forEach((e) => e.classList.remove('desk-on'));
@@ -587,11 +598,12 @@ export class Descent {
           {},
           // The full picture straight away: the document is the point of this level.
           img ? h('figure', {}, h('img', { ...mediaSrc(this.app, img.file, [960]), sizes: '(max-width: 760px) 92vw, 36vw', alt: img.caption ?? c.title, decoding: 'async' }), h('figcaption.credit', {}, img.caption ?? '')) : null,
-          h('small', {}, ...vtags(`${c.era ?? ''} · ${formatYears(c.years)} · ${c.places[0].name}`)),
+          h('small', {}, [chapterLabel(c.era), formatYears(c.years), c.places[0].name].filter(Boolean).join(' · ')),
           h('h3', {}, c.title),
           // The hook only when the body does not open with the same words.
           sameStart(c.wow, c.body) ? null : h('p.desk-wow', {}, c.wow),
           h('div.desk-body', {}, richText(this.app, c.body.split(/\n\s*\n/)[0].replace(/\s*\n\s*/g, ' '))),
+          ...(this.app.listen.cards[c.id] ?? []).slice(0, 1).map((r) => listenBlock(r, { compact: true })),
         ),
         h('div.desk-foot', {}, h('a.btn', { href: `#focus=${c.id}`, 'data-card': c.id }, pick({ en: 'Open the card →', ru: 'Открыть карточку →' }))),
       ),

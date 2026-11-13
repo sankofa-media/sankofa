@@ -273,7 +273,8 @@ test('descent cards hold their text and the level control changes what is shown'
 
 test('each chapter ends on a quiet editorial beat, and maps never stack labels', async ({ page }) => {
   await page.goto('/');
-  await expect(page.locator('.strip h3').first()).toHaveText('More from this chapter');
+  // A strip appears only where the chapter has cards its steps did not narrate.
+  if (await page.locator('.strip').count()) await expect(page.locator('.strip h3').first()).toHaveText('More from this chapter');
   await expect(page.locator('.ch-cluster')).toHaveCount(0);
   await expect(page.locator('.toc-grid')).not.toContainText(/release/);
   await expect(page.locator('.toc-head h2')).toHaveText(/Eight\schapters|Восемь\sглав/);
@@ -294,6 +295,150 @@ test('each chapter ends on a quiet editorial beat, and maps never stack labels',
     return n;
   });
   expect(overlaps).toBe(0);
+});
+
+test('interludes and strips never repeat a card the steps of this copy narrate', async ({ page }) => {
+  await page.goto('/');
+  for (const ch of await page.locator('article.chapter').all()) {
+    const narrated = await ch.locator('.step a.xref').evaluateAll((as) => as.map((a) => a.getAttribute('data-card')));
+    expect(narrated.length).toBeGreaterThan(0);
+    const again = await ch.locator('.sig a[data-card], .interlude a[data-card], .strip a[data-card]').evaluateAll((as) => as.map((a) => a.getAttribute('data-card')));
+    expect(again.filter((id) => narrated.includes(id))).toEqual([]);
+  }
+});
+
+test('readers never see the internal chapter ids v0–v7', async ({ page }) => {
+  for (const url of ['/', '/#lang=ru', '/#view=descent&zoom=1', '/#t=1925&view=descent&zoom=5', '/#zoom=1', '/#focus=equiano', '/#view=roots&artist=oasis']) {
+    await page.goto('about:blank');
+    await page.goto(url);
+    await page.waitForTimeout(1500);
+    const text = await page.evaluate(() => document.body.innerText);
+    expect(text.match(/\bv[0-7]\b/g), url).toBeNull();
+  }
+  await page.goto('/#ch=v2&lang=ru');
+  await expect(page.locator('#ch-v2 .hero .release .v')).toHaveText('Глава 3');
+});
+
+test('level 5 never shows an empty desk, and a phone reads the card in the column', async ({ page }, info) => {
+  await page.goto('/#t=1300&view=descent&zoom=5');
+  await page.waitForTimeout(1200);
+  await expect(page.locator('.d-desk')).toBeHidden();
+  await page.goto('about:blank');
+  await page.goto('/#t=1925&view=descent&zoom=5');
+  await page.waitForTimeout(1200);
+  if (info.project.name === 'mobile') {
+    await expect(page.locator('.d-desk')).toBeHidden();
+    await expect(page.locator('.descent a.dc .dc-body').first()).not.toBeEmpty();
+  } else {
+    await expect(page.locator('.d-desk .desk-in h3')).toBeVisible();
+  }
+});
+
+test('timeline names are never cut by a neighbouring bar, and atlas level 1 has one name', async ({ page }) => {
+  await page.goto('/#zoom=1');
+  await expect(page.locator('.atlas .levels button').first()).toContainText('Centuries');
+  await page.goto('about:blank');
+  await page.goto('/');
+  await page.locator('.finale .timeline-wrap').evaluate((e) => e.scrollIntoView({ block: 'center' }));
+  await expect(page.locator('.timeline-wrap g.life rect').first()).toBeAttached();
+  await page.waitForTimeout(400);
+  const hits = await page.locator('.timeline-wrap').evaluate((root) => {
+    const lives = [...root.querySelectorAll('g.life:not(.bead)')];
+    const out: string[] = [];
+    for (const g of lives) {
+      const t = g.querySelector('text');
+      if (!t || !t.textContent) continue;
+      const a = t.getBoundingClientRect();
+      for (const o of lives) {
+        if (o === g) continue;
+        const b = o.querySelector('rect')!.getBoundingClientRect();
+        if (a.left < b.right - 1 && a.right > b.left + 1 && a.top < b.bottom - 1 && a.bottom > b.top + 1) out.push(`${t.textContent} / ${o.getAttribute('data-id')}`);
+      }
+    }
+    return out;
+  });
+  expect(hits).toEqual([]);
+});
+
+test('the music map names as many roots as it draws, and a lit root does not pile up labels', async ({ page }, info) => {
+  await page.goto('/#view=roots-map&lang=ru');
+  await expect(page.locator('.rm-head h2')).not.toBeEmpty();
+  await expect(page.locator('.rm-head h2')).not.toContainText('одному корню');
+  await page.goto('about:blank');
+  await page.goto('/#view=roots-map&lang=en');
+  await expect(page.locator('.rm-head h2')).toContainText('lead back to');
+  await page.waitForTimeout(1200);
+  const visibleLabels = () => page.locator('.rm-node .lbl').evaluateAll((ls) => ls.filter((l) => getComputedStyle(l).display !== 'none' && l.textContent).length);
+  const root = page.locator('.rm-node.card').filter({ hasText: /^Gospel$/ });
+  await root.dispatchEvent('click');
+  await page.waitForTimeout(400);
+  if (info.project.name === 'mobile') expect(await visibleLabels()).toBeLessThanOrEqual(12);
+  // No two visible labels overlap.
+  const overlaps = await page.locator('.rm-node .lbl').evaluateAll((ls) => {
+    const r = ls.filter((l) => getComputedStyle(l).display !== 'none' && l.textContent).map((l) => l.getBoundingClientRect());
+    let n = 0;
+    for (let i = 0; i < r.length; i++) for (let j = i + 1; j < r.length; j++) if (r[i].left < r[j].right - 1 && r[i].right > r[j].left + 1 && r[i].top < r[j].bottom - 1 && r[i].bottom > r[j].top + 1) n++;
+    return n;
+  });
+  expect(overlaps).toBe(0);
+});
+
+test('a roots search that finds nobody clears the previous chain', async ({ page }) => {
+  await page.goto('/#view=roots&artist=oasis');
+  await expect(page.locator('.r-stage .r-artist').first()).toBeVisible();
+  await page.locator('.r-input').fill('zzqqxx');
+  await expect(page.locator('.r-none')).toBeVisible();
+  await expect(page.locator('.r-stage .r-artist')).toHaveCount(0);
+  expect(page.url()).not.toContain('artist=oasis');
+});
+
+test('engine room commands stay on one line, the grid has no orphan, Russian names the components', async ({ page }, info) => {
+  await page.goto('/#view=engine');
+  const codes = page.locator('.e-card .term code');
+  await expect(codes.first()).toBeVisible();
+  for (const c of await codes.all()) {
+    expect(await c.evaluate((e) => getComputedStyle(e).whiteSpace)).toBe('pre');
+    const lineH = await c.evaluate((e) => parseFloat(getComputedStyle(e).lineHeight) || 20);
+    expect(await c.evaluate((e) => e.clientHeight)).toBeLessThan(lineH * 2 + 24);
+  }
+  if (info.project.name === 'desktop') {
+    const tops = await page.locator('.e-grid > .e-card').evaluateAll((els) => els.map((e) => Math.round(e.getBoundingClientRect().top)));
+    const rows = new Map<number, number>();
+    tops.forEach((t) => rows.set(t, (rows.get(t) ?? 0) + 1));
+    expect([...rows.values()].some((n) => n === 1)).toBe(false);
+  }
+  await page.goto('about:blank');
+  await page.goto('/#view=engine&lang=ru');
+  await expect(page.locator('.e-card h4').filter({ hasText: 'Родословная' })).toContainText('(Credits)');
+});
+
+test('phone step boxes look alike in every chapter and no map name peeks out around them', async ({ page }, info) => {
+  test.skip(info.project.name !== 'mobile', 'phones only');
+  await page.goto('/#ch=v2');
+  const step = page.locator('#ch-v2 .step').nth(1);
+  await step.evaluate((e) => e.scrollIntoView({ block: 'center' }));
+  await page.waitForTimeout(2500);
+  const bg = (sel: string) => page.locator(sel).first().evaluate((e) => getComputedStyle(e).backgroundColor);
+  expect(await bg('#ch-v2 .step')).toBe(await bg('#ch-v0 .step'));
+  const peeking = await page.evaluate(() => {
+    const boxes = [...document.querySelectorAll('#ch-v2 .step')].map((s) => s.getBoundingClientRect()).filter((r) => r.bottom > 0 && r.top < innerHeight);
+    return [...document.querySelectorAll<SVGTextElement>('#ch-v2 .graphic g.pt text.lbl')]
+      .filter((l) => getComputedStyle(l).display !== 'none' && getComputedStyle(l).visibility !== 'hidden' && l.textContent)
+      .map((l) => l.getBoundingClientRect())
+      .filter((r) => boxes.some((b) => r.right > b.left && r.left < b.right && r.bottom > b.top - 30 && r.top < b.bottom + 30)).length;
+  });
+  expect(peeking).toBe(0);
+});
+
+test('a step label is never said twice running', async ({ page }) => {
+  await page.goto('/');
+  const repeats = await page.locator('article.chapter').evaluateAll((chs) =>
+    chs.flatMap((ch) => {
+      const labels = [...ch.querySelectorAll('.step')].map((s) => s.querySelector('.where')?.textContent ?? '');
+      return labels.filter((l, i) => l && l === labels[i - 1]).map((l) => `${(ch as HTMLElement).dataset.chapter}: ${l}`);
+    }),
+  );
+  expect(repeats).toEqual([]);
 });
 
 test('a card panel holds the page still; the counter keeps the card wording', async ({ page }) => {
@@ -527,8 +672,9 @@ test('the copy switch flips a paired card at once, and the pairs list links both
   await expect(page.locator('.notice.edition')).toContainText('This story belongs to the other copy');
   await page.goto('/');
   const note = page.locator('.opener .ed-note:visible');
-  await expect(note).toContainText(/In\sthe\sfemale\scopy\syou\sread\s[^;]*Harriet\sJacobs/);
-  await expect(note).toContainText(/Yours\sis\sthe\sfemale\scopy/);
+  await expect(note).toContainText(/Yours\sis\sthe\sfemale\scopy;\sin\sit\syou\sread\s.*Harriet\sJacobs/);
+  // The note names the reader's own stories, never both copies' (the list is behind a button).
+  await expect(note.locator('p').first()).not.toContainText('Frederick Douglass');
   // The pairs come from the data: count them there.
   const pairs = await page.evaluate(async () => {
     const d = await (await fetch('data/cards.json')).json();
@@ -626,4 +772,78 @@ test('the phone icon legend never covers an open view', async ({ browser, baseUR
   await page.goto('/#view=descent');
   await expect(page.locator('.descent.open')).toBeVisible();
   await expect(page.locator('.nav-legend')).toHaveCount(0);
+});
+
+/** Record requests to the video host; answer them locally so tests stay offline. */
+async function watchYouTube(page: import('@playwright/test').Page): Promise<string[]> {
+  const seen: string[] = [];
+  page.on('request', (r) => {
+    if (/(^|\.)youtube(-nocookie)?\.com\//.test(new URL(r.url()).host + '/')) seen.push(r.url());
+  });
+  await page.route(/https:\/\/(www\.)?youtube(-nocookie)?\.com\/.*/, (r) => r.fulfill({ status: 200, contentType: 'text/html', body: '<!doctype html><title>player</title>' }));
+  await page.route(/https:\/\/i\.ytimg\.com\/.*/, (r) => r.fulfill({ status: 200, contentType: 'image/svg+xml', body: '<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360"/>' }));
+  return seen;
+}
+
+test('a card with a recording shows a facade and loads the player only on click', async ({ page }) => {
+  const yt = await watchYouTube(page);
+  await page.goto('/#focus=big-mama-thornton');
+  const block = page.locator('.drawer.on .lb');
+  await expect(block).toBeVisible();
+  await expect(block.locator('.lb-head')).toHaveText('Listen');
+  await expect(block.locator('img')).toHaveAttribute('src', 'https://i.ytimg.com/vi/aKicGqIMpqk/hqdefault.jpg');
+  await expect(block.locator('img')).toHaveAttribute('loading', 'lazy');
+  await expect(block.locator('.lb-src')).toHaveText('Official upload: Big Mama Thornton - Topic');
+  await expect(block.locator('iframe')).toHaveCount(0);
+  await page.waitForTimeout(500);
+  expect(yt).toEqual([]);
+  await block.locator('.lb-facade').click();
+  const frame = block.locator('iframe');
+  await expect(frame).toHaveAttribute('src', 'https://www.youtube-nocookie.com/embed/aKicGqIMpqk?autoplay=1');
+  await expect(frame).toHaveAttribute('allow', 'autoplay; encrypted-media; picture-in-picture');
+  await expect(frame).toHaveAttribute('title', /Hound Dog/);
+  // Closing the card unloads the player.
+  await page.keyboard.press('Escape');
+  await expect(page.locator('iframe.lb-frame')).toHaveCount(0);
+});
+
+test('Russian names the listening block and the uploader in Russian', async ({ page }) => {
+  await watchYouTube(page);
+  await page.goto('/#focus=big-mama-thornton&lang=ru');
+  const block = page.locator('.drawer.on .lb');
+  await expect(block.locator('.lb-head')).toHaveText('Слушать');
+  await expect(block.locator('.lb-src')).toHaveText('Официальная загрузка: Big Mama Thornton - Topic');
+});
+
+test('stepping through a roots chain loads exactly one player at a time', async ({ page }) => {
+  const yt = await watchYouTube(page);
+  await page.goto('/#view=roots&artist=the-beatles');
+  await expect(page.locator('.r-listen').first()).toBeVisible();
+  await page.waitForTimeout(500);
+  expect(yt).toEqual([]);
+  await expect(page.locator('iframe.lb-frame')).toHaveCount(0);
+  await page.getByRole('button', { name: 'Play the chain' }).click();
+  await expect(page.locator('iframe.lb-frame')).toHaveCount(1);
+  const first = await page.locator('iframe.lb-frame').getAttribute('src');
+  await page.locator('.r-listen.on .lb-next').click();
+  await expect(page.locator('iframe.lb-frame')).toHaveCount(1);
+  await expect(page.locator('iframe.lb-frame')).not.toHaveAttribute('src', first!);
+  // The edge between the two stops says how the borrowing happened.
+  await expect(page.locator('.r-edge .r-kind').first()).toBeVisible();
+});
+
+test('the music map steps along a lit path with one player at a time', async ({ page }) => {
+  const yt = await watchYouTube(page);
+  await page.goto('/#view=roots-map');
+  await page.locator('.rm-input').fill('beatles');
+  await page.locator('.rm-input').press('Enter');
+  const chain = page.locator('.rm-chain');
+  await expect(chain).toBeVisible();
+  await page.waitForTimeout(500);
+  expect(yt).toEqual([]);
+  await chain.locator('.lb-facade').click();
+  await expect(page.locator('iframe.lb-frame')).toHaveCount(1);
+  await chain.getByRole('button', { name: 'Next →' }).click();
+  await expect(chain).toContainText('stop 2 of');
+  await expect(page.locator('iframe.lb-frame')).toHaveCount(1);
 });

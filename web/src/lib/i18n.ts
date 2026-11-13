@@ -300,3 +300,14 @@ export function localizeCredit(s: string, l: Lang = current): string {
   if (l !== 'ru' || !s) return s;
   return CREDIT_RU.reduce((acc, [re, to]) => acc.replace(re, to), s);
 }
+
+/** The reader's name for a chapter: v0 → "Chapter 1" / «Глава 1». Internal ids never show. */
+export function chapterNumber(id?: string): number | undefined {
+  const m = id?.match(/^v(\d+)$/);
+  return m ? Number(m[1]) + 1 : undefined;
+}
+
+export function chapterLabel(id?: string, l: Lang = current): string {
+  const n = chapterNumber(id);
+  return n ? (l === 'ru' ? `Глава ${n}` : `Chapter ${n}`) : '';
+}

@@ -296,3 +296,25 @@ export function groupChildren(n: TreeNode): TreeNode[][] {
 export function placeName(a: Pick<Artist, 'place' | 'placeRu'>, lang: string): string {
   return (lang === 'ru' && a.placeRu) || a.place.name;
 }
+
+/** One stop on a playable chain: who, and how the step to the next stop was taken. */
+export interface ChainStep {
+  ref: string;
+  /** The step from this stop to the next; absent on the last. */
+  next?: { kind: LinkKind | 'lineage' | 'unknown'; link?: RootLink };
+}
+
+/**
+ * An artist's deepest chain as stops to listen to in turn: the artist, the
+ * artists it borrowed from, the museum card, and the card's own roots.
+ */
+export function chainSteps(artist: Artist, byId: Map<string, Artist>, cards: Map<string, LineageCard>): ChainStep[] {
+  const path = deepest(extendLineage(buildTree(artist, byId), cards));
+  return path.map((ref, i) => {
+    const to = path[i + 1];
+    if (!to) return { ref };
+    if (ref.startsWith('card:')) return { ref, next: { kind: 'lineage' } };
+    const link = linkTo(byId.get(ref), to);
+    return { ref, next: { kind: link?.kind ?? 'unknown', link } };
+  });
+}

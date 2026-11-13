@@ -4,13 +4,13 @@ import type { App } from '../app';
 import { richText } from '../app';
 import type { Card, Chapter } from '../lib/types';
 import { ERAS } from '../lib/types';
-import { formatYears, KIND_LABEL, links } from '../lib/cards';
+import { formatYears, KIND_LABEL, links, when } from '../lib/cards';
 import { bookMarks, h, reducedMotion, revealOnScroll } from '../lib/dom';
-import { lang, pick, t } from '../lib/i18n';
+import { chapterLabel, chapterNumber, lang, pick, t } from '../lib/i18n';
 import { chapterCopy, eraColor, isNonPlace, readerCards } from '../lib/atlasModel';
 import { MOVEMENTS, movementText } from '../lib/movements';
 import { mediaSrc, progressive } from '../lib/media';
-import { signature, SIGNATURE_CARD } from './signature';
+import { narratedCards, pickInterlude, signature } from './signature';
 import { GeoMap, LEVEL_K, type MapRoute } from './map';
 import { Timeline } from './timeline';
 import { editionNote } from './editionNote';
@@ -172,7 +172,7 @@ function toc(app: App): HTMLElement {
         h(
           'a.toc-item.reveal',
           { href: `#ch=${ch.id}`, 'data-chapter': ch.id, style: `--era:${eraColor(ch.id)}` },
-          heroImg(app, withHero(app, ch).ch, false, withHero(app, ch).pos, '(max-width: 720px) 46vw, 300px') ?? h('span.toc-glyph', { 'aria-hidden': 'true' }, ch.id),
+          heroImg(app, withHero(app, ch).ch, false, withHero(app, ch).pos, '(max-width: 720px) 46vw, 300px') ?? h('span.toc-glyph', { 'aria-hidden': 'true' }, String(chapterNumber(ch.id) ?? '')),
           h('span.num', {}, pick({ en: `Chapter ${app.chapters.indexOf(ch) + 1}`, ru: `Глава ${app.chapters.indexOf(ch) + 1}` })),
           h('span.t', {}, h('b', {}, ch.title), h('span', {}, ch.kicker)),
         ),
@@ -199,8 +199,18 @@ const HERO_FROM_CARD: Record<string, { card: string; pos: string }> = {
   v5: { card: 'hurston', pos: '50% 22%' },
 };
 
-/** Chapter heroes that portray the subject of a paired card. */
-const HERO_SUBJECT: Record<string, string> = { v3: 'douglass-covey' };
+/**
+ * The paired card of this chapter whose subject the hero portrays: one that
+ * uses the hero's own picture, or whose title names the person in the
+ * caption ("Frederick Douglass, daguerreotype" → "Frederick Douglass fights…").
+ */
+function heroSubject(app: App, ch: Chapter): Card | undefined {
+  const file = ch.hero?.file;
+  if (!file) return undefined;
+  const paired = app.set.all().filter((c) => c.pair && c.era === ch.id);
+  const who = (ch.hero?.caption ?? '').split(/[,(]/)[0].trim();
+  return paired.find((c) => c.media?.some((x) => x.file === file)) ?? (who.length >= 6 ? paired.find((c) => c.title.startsWith(who)) : undefined);
+}
 
 /**
  * Pictures follow the copy the reader holds: a paired card of the other copy
@@ -217,7 +227,7 @@ function withHero(app: App, ch: Chapter): { ch: Chapter; pos?: string; swapped: 
   const m = swap ? app.set.get(swap.card)?.media?.find((x) => x.type === 'image') : undefined;
   if (m) return { ch: { ...ch, hero: { ...m, type: 'image' } }, pos: swap!.pos, swapped: true };
   // A hero that portrays a paired card's subject follows the copy too.
-  const owner = HERO_SUBJECT[ch.id] ? app.set.get(HERO_SUBJECT[ch.id]) : ch.hero?.file ? app.set.all().find((c) => c.pair && c.media?.some((x) => x.file === ch.hero!.file)) : undefined;
+  const owner = heroSubject(app, ch);
   const mine = owner ? inCopy(app, owner) : undefined;
   const mm = mine && mine !== owner ? mine.media?.find((x) => x.type === 'image') : undefined;
   return mm ? { ch: { ...ch, hero: { ...mm, type: 'image' } }, pos: '50% 25%', swapped: true } : { ch, swapped: false };
@@ -228,6 +238,10 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
   const swap = swapMedia ? { pos: swapPos } : undefined;
   const color = eraColor(ch.id);
   const cards = chapterCopy(app.set, app.edition, ch);
+  // What the reader's own steps already tell is never told again below them:
+  // not as an interlude, not in the strip.
+  const narrated = narratedCards(ch.steps);
+  const sigCard = pickInterlude(ch.id, cards, narrated);
 
   const mapHero = !ch.hero?.file || ch.hero.file === COVER_IMAGE;
   const hero = h(
@@ -237,7 +251,7 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
     h(
       'div.hero-text',
       {},
-      h('div.release', {}, h('span.v', {}, ch.id), h('span.kicker', {}, ch.kicker)),
+      h('div.release', {}, h('span.v', {}, chapterLabel(ch.id)), h('span.kicker', {}, ch.kicker)),
       h('h2', { id: `title-${ch.id}` }, ch.title),
     ),
     mapHero ? h('p.credit', {}, t('The places of this chapter · map data: Natural Earth, public domain')) : null,
@@ -255,39 +269,42 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
     if (i === 0 || used.size >= 3) return undefined;
     const c = stepCards(app, s)
       .map((x) => inCopy(app, x))
-      .find((x) => x.media?.some((m) => m.type === 'image') && !used.has(x.id) && x.id !== SIGNATURE_CARD[ch.id] && x.media?.find((m) => m.type === 'image')?.file !== ch.hero?.file);
+      .find((x) => x.media?.some((m) => m.type === 'image') && !used.has(x.id) && x.id !== sigCard?.id && x.media?.find((m) => m.type === 'image')?.file !== ch.hero?.file);
     if (c) used.add(c.id);
     return c;
   });
+  let lastWhere = '';
   const steps = ch.steps.map((s, i) => {
     const sc = stepCards(app, s);
-    // The label belongs to the paragraph's first linked card alone: its place
-    // and its own year, never a span stretched across several cards.
+    // The label belongs to the paragraph's first linked card alone: the place
+    // and year its story is about (its moment), never a span stretched
+    // across several cards, nor a birth year over a later deed.
     const anchor = sc[0];
-    const year = anchor?.years.length ? formatYears([anchor.years[0]]) : '';
+    const at = anchor ? when(anchor) : undefined;
+    const year = at?.year !== undefined ? formatYears([at.year]) : '';
     // The chapter's opening step speaks for the whole chapter: its own span and place.
-    const where = i === 0 || !anchor ? ch.kicker : isNonPlace(anchor) ? year : `${anchor.places[0].name}${year ? ' · ' + year : ''}`;
+    const label = i === 0 || !anchor ? ch.kicker : isNonPlace(anchor) ? year : `${at!.place.name}${year ? ' · ' + year : ''}`;
+    // The same label twice running is said once.
+    const where = label === lastWhere ? '' : label;
+    lastWhere = label;
     const img = stepImage[i]?.media?.find((m) => m.type === 'image');
     return h(
       `div.step${i === 0 ? '.first' : ''}`,
       { 'data-step': String(i), lang: ch.textLang && ch.textLang !== lang() ? ch.textLang : undefined },
       // On phones the picture sits above the text instead of under it.
       img ? h('figure.step-fig', {}, progressive(app, img.file, { want: 960, sizes: '92vw', alt: img.caption ?? stepImage[i]!.title, near: true }).img, h('figcaption.credit', {}, img.caption ? img.caption + ' · ' : '', img.credit, ' · ', img.license)) : null,
-      h('div.where', {}, where),
+      where ? h('div.where', {}, where) : null,
       h('p', {}, richText(app, s)),
     );
   });
   const scrolly = h('div.scrolly', {}, graphic, h('div.steps', {}, steps));
 
-  // The interlude never repeats a hook the strip right below will show again.
-  const fallback = cards.slice(LEAD_CARDS).find((c) => c.wow.length < 140) ?? cards.find((c, i) => i > 0 && c.wow.length < 140) ?? cards[0];
   const near = ch.steps.join(' ').replace(/\[\[[^|\]]*\|?([^\]]*)\]\]/g, '$1');
-  const interlude = signature(app, ch.id, cards, fallback, near);
+  const interlude = signature(app, ch.id, sigCard, near);
 
   const LEAD = LEAD_CARDS;
-  // The card the signature already set large goes to the end of the strip.
-  const sigId = SIGNATURE_CARD[ch.id];
-  const stripCards = [...cards.filter((c) => c.id !== sigId), ...cards.filter((c) => c.id === sigId)];
+  // More from the chapter means more: neither a card the steps narrated nor the interlude's.
+  const stripCards = cards.filter((c) => !narrated.has(c.id) && c.id !== (interlude ? sigCard?.id : undefined));
   const rest = stripCards.slice(LEAD);
   const more = rest.length
     ? h(
@@ -305,7 +322,7 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
       )
     : null;
   // A quiet editorial beat, not a catalogue: a few more pages from the chapter.
-  const strip = cards.length
+  const strip = stripCards.length
     ? h(
         'section.strip',
         {},
@@ -477,7 +494,29 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
     });
     if (map || current >= 0) activate(k);
   };
+  // On a phone the step boxes slide over the map: a place name that would
+  // peek out right above or below a box hides until the box has passed.
+  const clearOfBoxes = () => {
+    if (!phone()) return;
+    const boxes = steps.map((s) => s.getBoundingClientRect()).filter((r) => r.bottom > 0 && r.top < window.innerHeight);
+    mapHost.querySelectorAll<SVGTextElement>('g.pt text.lbl').forEach((l) => {
+      const r = l.getBoundingClientRect();
+      const near = boxes.some((b) => r.right > b.left - 8 && r.left < b.right + 8 && r.bottom > b.top - 36 && r.top < b.bottom + 36);
+      l.classList.toggle('by-box', near);
+    });
+  };
+  // Labels also move when the map flies or relabels: check again then.
+  let clearQueued = false;
+  new MutationObserver(() => {
+    if (clearQueued || !phone()) return;
+    clearQueued = true;
+    requestAnimationFrame(() => {
+      clearQueued = false;
+      clearOfBoxes();
+    });
+  }).observe(mapHost, { subtree: true, childList: true, attributes: true, attributeFilter: ['transform', 'class', 'x', 'y'] });
   const onScroll = () => {
+    clearOfBoxes();
     if (!queued) {
       queued = true;
       requestAnimationFrame(pickStep);

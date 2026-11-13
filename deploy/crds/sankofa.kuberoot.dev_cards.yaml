@@ -130,6 +130,19 @@ spec:
                   - type
                   type: object
                 type: array
+              moment:
+                description: The moment the card's story is about, when it is not
+                  the first year at the first place.
+                properties:
+                  place:
+                    description: Index into places.
+                    minimum: 0
+                    type: integer
+                  year:
+                    type: integer
+                required:
+                - year
+                type: object
               pair:
                 type: string
               places:

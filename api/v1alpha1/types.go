@@ -53,6 +53,15 @@ type Media struct {
 	URL string `json:"url,omitempty"`
 }
 
+// Moment is the year a card's story is about and the index of its place.
+type Moment struct {
+	Year int `json:"year"`
+	// Index into places.
+	// +kubebuilder:validation:Minimum=0
+	// +optional
+	Place int `json:"place,omitempty"`
+}
+
 // CardSpec is one short, sourced piece of culture.
 type CardSpec struct {
 	// +kubebuilder:validation:Enum=person;genre;place;object;language;script;instrument;event;media;work;myth;comparison
@@ -72,6 +81,9 @@ type CardSpec struct {
 	// +kubebuilder:validation:Minimum=1
 	// +kubebuilder:validation:Maximum=5
 	Zoom int `json:"zoom"`
+	// The moment the card's story is about, when it is not the first year at the first place.
+	// +optional
+	Moment *Moment `json:"moment,omitempty"`
 	// +optional
 	Era string `json:"era,omitempty"`
 	// voices (their own words), archives (records of those who traded and ruled), heirs (diaspora and memory).

@@ -3,14 +3,14 @@
 import type { App } from '../app';
 import type { Point } from '../lib/fragment';
 import { terminalCommand } from '../lib/fragment';
-import { vtags, copyText, h, svgIcon, toast } from '../lib/dom';
+import { copyText, h, svgIcon, toast } from '../lib/dom';
 import { atlasLayers, eraColor, readerCards } from '../lib/atlasModel';
 import { formatYears, span } from '../lib/cards';
 import { ERAS, type Card } from '../lib/types';
 import { GeoMap, LEVEL_K, LEVEL_NAMES } from './map';
 import { Timeline } from './timeline';
 import { showTip, hideTip } from './tip';
-import { count, pick, t } from '../lib/i18n';
+import { chapterLabel, count, pick, t } from '../lib/i18n';
 
 export class Atlas {
   readonly el: HTMLElement;
@@ -54,7 +54,7 @@ export class Atlas {
     );
     const ladder = h('div.levels', { role: 'group', 'aria-label': t('Zoom level') });
     LEVEL_NAMES.forEach((name, i) => {
-      const short = pick({ en: ['Atlantic', 'Regions', 'Cities', 'People', 'Document'], ru: ['Атлантика', 'Регионы', 'Города', 'Люди', 'Документ'] })[i];
+      const short = pick({ en: ['Centuries', 'Regions', 'Cities', 'People', 'Document'], ru: ['Века', 'Регионы', 'Города', 'Люди', 'Документ'] })[i];
       const b = h('button', { 'aria-pressed': 'false', 'aria-label': name, onclick: () => this.setLevel(i + 1) }, h('b', {}, String(i + 1)), h('span', {}, name), h('span.short', {}, short)) as HTMLButtonElement;
       this.levels.push(b);
       ladder.append(b);
@@ -64,7 +64,7 @@ export class Atlas {
     const legend = h(
       'div.legend',
       { 'aria-hidden': 'true' },
-      ERAS.map((e) => h('span', { style: `--c:${eraColor(e.id)}` }, h('i'), ...vtags(`${e.id} ${e.label}`))),
+      ERAS.map((e) => h('span', { style: `--c:${eraColor(e.id)}`, title: chapterLabel(e.id) }, h('i'), e.label)),
       h(
         'span.legend-note',
         {},
@@ -307,7 +307,7 @@ export class Atlas {
       'div.atlas-eras',
       {},
       h('button.chip', { 'aria-pressed': String(!this.p.from), onclick: () => this.setTime() }, '1300 –'),
-      eras.map((e) => h('button.chip', { 'aria-pressed': String(this.p.from === e.from && this.p.to === e.to), onclick: () => this.setTime(e.from, e.to) }, e.id)),
+      eras.map((e) => h('button.chip', { 'aria-pressed': String(this.p.from === e.from && this.p.to === e.to), onclick: () => this.setTime(e.from, e.to), title: chapterLabel(e.id) }, e.label)),
     );
     const items = [...visible].sort((a, b) => span(a)[0] - span(b)[0]).map((c) =>
       h('button.atlas-item', { role: 'listitem', onclick: () => this.focus(c.id), style: `--era:${eraColor(c.era)}` }, h('span.y', {}, formatYears(c.years)), h('b', {}, c.title), h('span.pl', {}, c.places[0].name)),
