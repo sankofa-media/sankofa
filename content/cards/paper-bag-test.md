@@ -8,6 +8,7 @@ places:
   - {name: "15th Street Presbyterian Church, Washington, D.C.", lat: 38.9122, lon: -77.0347}
   - {name: North Carolina, lat: 35.7596, lon: -79.0193}
 zoom: 3
+moment: {year: 2011, place: 1}
 era: v6
 books: [heirs]
 further:

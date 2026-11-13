@@ -10,6 +10,7 @@ places:
   - {name: Jena, lat: 50.9271, lon: 11.5892}
   - {name: Axim, lat: 4.8699, lon: -2.2405}
 zoom: 4
+moment: {year: 1729}
 era: v5
 books: [voices, heirs]
 further:

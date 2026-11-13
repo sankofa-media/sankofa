@@ -9,6 +9,7 @@ places:
   - {name: "Somerset County, Maryland", lat: 38.0790, lon: -75.8540}
   - {name: "Stateburg, South Carolina", lat: 33.9590, lon: -80.5340}
 zoom: 4
+moment: {year: 1655}
 era: v1
 books: [archives]
 further:

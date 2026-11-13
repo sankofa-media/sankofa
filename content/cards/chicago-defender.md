@@ -3,10 +3,11 @@ id: chicago-defender
 kind: media
 title: The Chicago Defender
 wow: "A Chicago weekly named the day to leave the South, and Black Pullman porters hid it on southbound trains."
-years: [1905]
+years: [1905, 2019]
 places:
   - {name: "Bronzeville, Chicago", lat: 41.8314, lon: -87.6170}
 zoom: 3
+moment: {year: 1917}
 era: v5
 books: [voices]
 further:

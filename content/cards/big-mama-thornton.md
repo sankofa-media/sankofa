@@ -8,6 +8,7 @@ places:
   - {name: "Los Angeles", lat: 34.0522, lon: -118.2437}
   - {name: "Houston (Peacock Records)", lat: 29.7604, lon: -95.3698}
 zoom: 4
+moment: {year: 1953, place: 1}
 era: v6
 books: [heirs]
 genres: [blues, rock-n-roll]

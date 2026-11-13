@@ -9,6 +9,7 @@ places:
   - {name: "Chicago, Illinois", lat: 41.8781, lon: -87.6298}
   - {name: London, lat: 51.5072, lon: -0.1276}
 zoom: 4
+moment: {year: 1892}
 era: v3
 books: [voices]
 further:

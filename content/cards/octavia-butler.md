@@ -8,6 +8,7 @@ places:
   - {name: "Pasadena, California", lat: 34.1478, lon: -118.1445}
   - {name: "Huntington Library, San Marino", lat: 34.1291, lon: -118.1145}
 zoom: 4
+moment: {year: 1979}
 era: v7
 books: [voices, heirs]
 further:

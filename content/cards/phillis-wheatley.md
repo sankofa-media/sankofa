@@ -8,6 +8,7 @@ places:
   - {name: "Boston, Massachusetts", lat: 42.3601, lon: -71.0589}
   - {name: London, lat: 51.5072, lon: -0.1276}
 zoom: 4
+moment: {year: 1773, place: 1}
 era: v3
 books: [voices]
 further:

@@ -9,6 +9,7 @@ places:
   - {name: "Macon, Georgia", lat: 32.8407, lon: -83.6324}
   - {name: "Wilbraham Road station, Manchester", lat: 53.4475, lon: -2.2752}
 zoom: 4
+moment: {year: 1938}
 era: v6
 books: [heirs]
 genres: [gospel, rock-n-roll]

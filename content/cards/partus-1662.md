@@ -8,6 +8,7 @@ places:
   - {name: "Jamestown, Virginia", lat: 37.2096, lon: -76.7775}
   - {name: "Northumberland County, Virginia", lat: 37.8807, lon: -76.4100}
 zoom: 5
+moment: {year: 1662}
 era: v1
 books: [archives]
 further:

@@ -9,6 +9,7 @@ places:
   - {name: "Futa Toro, Senegal River valley", lat: 16.2000, lon: -14.0000}
   - {name: "Charleston, South Carolina", lat: 32.7765, lon: -79.9311}
 zoom: 4
+moment: {year: 1831}
 era: v3
 books: [voices]
 further:

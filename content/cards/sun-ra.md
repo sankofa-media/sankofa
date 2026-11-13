@@ -9,6 +9,7 @@ places:
   - {name: Chicago, lat: 41.8781, lon: -87.6298}
   - {name: Philadelphia, lat: 39.9526, lon: -75.1652}
 zoom: 4
+moment: {year: 1952, place: 1}
 era: v7
 books: [heirs]
 genres: [jazz]

@@ -203,13 +203,33 @@ func lintChapters(dir string, s *card.Set) []error {
 				bad("link to unknown card %q", l.Target)
 			}
 		}
-		if n := len(strings.Fields(body.PlainBody())); n < 80 || n > 450 {
-			bad("text has %d words, want 80..450", n)
+		for _, ed := range []string{card.EditionMale, card.EditionFemale} {
+			steps := card.CopyParagraphs(parts[1], ed)
+			if n := card.Words(strings.Join(steps, "\n\n")); n < 80 {
+				bad("%s copy has %d words, want at least 80", ed, n)
+			}
+			if len(steps) < minChapterSteps || len(steps) > maxChapterSteps {
+				bad("%s copy has %d steps, want %d..%d", ed, len(steps), minChapterSteps, maxChapterSteps)
+			}
+		}
+		for i, p := range card.Paragraphs(parts[1]) {
+			if n := card.Words(p); n > maxStepWords {
+				bad("paragraph %d has %d words, want at most %d: a step must fit its box on a phone", i+1, n, maxStepWords)
+			}
 		}
 		errs = append(errs, lintChapterTranslation(dir, e.Name(), parts[1], bad)...)
 	}
 	return errs
 }
+
+// A chapter is read as scroll steps, one per paragraph: a step must fit its
+// text box on a phone, and a chapter needs enough steps for a rhythm but not
+// so many that it turns into a feed. Each copy of the museum is counted alone.
+const (
+	maxStepWords    = 80
+	minChapterSteps = 6
+	maxChapterSteps = 14
+)
 
 type chapterText struct {
 	Title       string `json:"title"`

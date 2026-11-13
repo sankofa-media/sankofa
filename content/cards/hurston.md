@@ -9,6 +9,7 @@ places:
   - {name: "Africatown, Mobile, Alabama", lat: 30.7347, lon: -88.0544}
   - {name: "Fort Pierce, Florida", lat: 27.4467, lon: -80.3256}
 zoom: 4
+moment: {year: 1927, place: 1}
 era: v5
 books: [voices, heirs]
 further:

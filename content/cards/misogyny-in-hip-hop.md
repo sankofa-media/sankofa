@@ -7,6 +7,7 @@ years: [1991, 2015]
 places:
   - {name: "Spelman College, Atlanta", lat: 33.7457, lon: -84.4113}
 zoom: 3
+moment: {year: 2004}
 era: v7
 books: [voices, heirs]
 genres: [hip-hop]

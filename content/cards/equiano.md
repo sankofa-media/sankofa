@@ -7,6 +7,7 @@ years: [1766, 1794]
 places:
   - {name: London, lat: 51.5072, lon: -0.1276}
 zoom: 4
+moment: {year: 1789}
 era: v1
 books: [voices, archives]
 further:

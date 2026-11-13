@@ -9,6 +9,7 @@ places:
   - {name: Lagos, lat: 6.4541, lon: 3.3947}
   - {name: "Amherst, Massachusetts", lat: 42.3732, lon: -72.5199}
 zoom: 4
+moment: {year: 1958, place: 1}
 era: v6
 books: [voices, heirs]
 further:

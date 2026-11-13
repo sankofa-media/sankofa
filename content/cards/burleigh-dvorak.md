@@ -8,6 +8,7 @@ places:
   - {name: "National Conservatory of Music, East 17th Street, New York", lat: 40.7359, lon: -73.9866}
   - {name: "Erie, Pennsylvania", lat: 42.1292, lon: -80.0851}
 zoom: 4
+moment: {year: 1892}
 era: v5
 books: [heirs]
 genres: [spirituals]

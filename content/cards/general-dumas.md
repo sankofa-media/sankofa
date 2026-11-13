@@ -9,6 +9,7 @@ places:
   - {name: "Jérémie, Saint-Domingue", lat: 18.6500, lon: -74.1167}
   - {name: Villers-Cotterêts, lat: 49.2533, lon: 3.0906}
 zoom: 4
+moment: {year: 1762, place: 1}
 era: v5
 books: [archives, heirs]
 further:

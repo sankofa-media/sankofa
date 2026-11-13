@@ -9,6 +9,7 @@ places:
   - {name: London, lat: 51.5072, lon: -0.1276}
   - {name: Liverpool, lat: 53.4084, lon: -2.9916}
 zoom: 5
+moment: {year: 1789, place: 1}
 era: v1
 books: [archives]
 further:

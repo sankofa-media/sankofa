@@ -7,6 +7,7 @@ years: [1582, 1663]
 places:
   - {name: Luanda, lat: -8.8390, lon: 13.2894}
 zoom: 4
+moment: {year: 1622}
 era: v2
 books: [archives, heirs]
 further:

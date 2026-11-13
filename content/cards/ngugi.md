@@ -7,6 +7,7 @@ years: [1938, 2025]
 places:
   - {name: "Kamiriithu, Limuru", lat: -1.1136, lon: 36.6420}
 zoom: 4
+moment: {year: 1977}
 era: v6
 books: [voices]
 further:

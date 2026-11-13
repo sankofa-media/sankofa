@@ -27,7 +27,7 @@ media:                  # optional, public domain or open licence only
   - {type: image, file: bridgetower.jpg, caption: "...", credit: "...", license: "Public domain", url: "https://commons.wikimedia.org/..."}
 dispute: ""             # set when a claim is contested; say what is disputed
 ---
-The body: 40–140 words, a story, not a reference. Cross-references are
+The body: up to 220 words (235 for genre, instrument, script and language cards), counted per copy; a complete short story, not a reference. Cross-references are
 written [[zong]] or [[zong|the Zong massacre]] and must point to existing cards.
 ```
 
@@ -55,7 +55,7 @@ places: [{name: Atlantic Ocean, lat: 10, lon: -30}]
 cards: [equiano, zong, slavevoyages-names]   # the cards the chapter walks through, in order
 ---
 Chapter text: short paragraphs, separated by blank lines. Each paragraph is one
-scroll step. Use [[card-id]] links like in cards. 150–400 words in total.
+scroll step. Use [[card-id]] links like in cards. A step is at most 80 words (it must fit its box on a phone); each copy reads 6–14 steps.
 ```
 
 Media files for cards and chapters live in `content/media/`.

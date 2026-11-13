@@ -7,7 +7,9 @@ wow: "Hip-hop began with a trick: two copies of the same funk record on two turn
 years: [1973]
 places:
   - {name: "1520 Sedgwick Avenue, the Bronx", lat: 40.8470, lon: -73.9235}
+  - {name: "The Bronx", lat: 40.8448, lon: -73.8648}
 zoom: 3
+moment: {year: 1973, place: 1}
 era: v7
 books: [heirs]
 roots: [funk, reggae]

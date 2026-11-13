@@ -9,6 +9,7 @@ places:
   - {name: "250 Brixton Road, London", lat: 51.4687, lon: -0.1132}
   - {name: "Belmont, Port of Spain", lat: 10.6650, lon: -61.5050}
 zoom: 4
+moment: {year: 1959}
 era: v6
 books: [heirs, voices]
 further:

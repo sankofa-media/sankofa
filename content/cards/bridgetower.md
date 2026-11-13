@@ -8,6 +8,7 @@ places:
   - {name: Vienna, lat: 48.2082, lon: 16.3738}
   - {name: London, lat: 51.5072, lon: -0.1276}
 zoom: 4
+moment: {year: 1803}
 era: v5
 books: [heirs]
 further:
