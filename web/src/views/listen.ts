@@ -5,7 +5,7 @@ import type { App } from '../app';
 import { richText } from '../app';
 import { h, reducedMotion, svgIcon } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
-import { guestLabel, subtitle, type Sub } from '../lib/subtitles';
+import { answering, guestLabel, guestMeaning, guestTech, subtitle, type Sub } from '../lib/subtitles';
 import { claim, release } from '../lib/sound';
 import { BELL, GRACE, mend, roomState, simTargets, type RoomState, GUEST_EVERY, GUEST_PART, PARTS, PULSES, guestPitch, SLOTS, TUNINGS, demoLeases, demoVoices, drumName, exchange, podsOf, type Sim, type SimVoice, parsePulse, playing, strokes, type Exchange, type Voice } from '../lib/rhythm';
 
@@ -265,6 +265,12 @@ export class Listen {
   private callRow: HTMLElement;
   private demoRow: HTMLElement;
   onClose?: () => void;
+  /** Show the cluster's own names (nodes, pods, workloads) instead of plain words. */
+  private tech = false;
+
+  private techLabel(): string {
+    return this.tech ? pick({ en: 'Plain words', ru: 'Простыми словами' }) : pick({ en: 'Technical details', ru: 'Технические подробности' });
+  }
 
   constructor(app: App) {
     this.badge = h('span.l-badge');
@@ -309,7 +315,25 @@ export class Listen {
     );
     const talk = app.set.get('talking-drums') ? `[[talking-drums|${t('talking drums')}]]` : t('talking drums');
     const spirit = app.set.get('spirituals') ? `[[spirituals|${t('the spirituals')}]]` : t('the spirituals');
-    const ctl = h('div.l-ctl', {}, h('div.l-controls', {}, this.button, this.badge), this.demoRow, this.status);
+    // Plain words by default; the cluster's own names on demand.
+    const techBtn = h(
+      'button.linkish.l-tech',
+      {
+        type: 'button',
+        'aria-pressed': 'false',
+        onclick: () => {
+          this.tech = !this.tech;
+          techBtn.setAttribute('aria-pressed', String(this.tech));
+          techBtn.textContent = this.techLabel();
+          this.el.classList.toggle('tech', this.tech);
+          this.render();
+          this.paintNext();
+        },
+      },
+      '',
+    );
+    techBtn.textContent = this.techLabel();
+    const ctl = h('div.l-ctl', {}, h('div.l-controls', {}, this.button, this.badge), this.demoRow, this.status, techBtn);
     const ctlSlot = h('div.l-ctl-slot');
     const text = h(
       'div.l-text',
@@ -581,6 +605,7 @@ export class Listen {
       // On a small circle the number alone fits inside the drum.
       g.querySelector('text.no')!.textContent = small ? String(k + 1) : `${t('node')} ${k + 1}`;
       g.querySelector('text.nm')!.setAttribute('aria-label', v.node);
+
       g.querySelector('text.st')!.textContent = v.broken
         ? v.alive
           ? small
@@ -593,11 +618,22 @@ export class Listen {
             : pick({ en: 'declared down · pods silent', ru: 'объявлен выбывшим · поды молчат' })
         : v.alive
           ? v.rebalancing
-            ? pick({ en: `back · ${v.ready} ready, more as pods restart`, ru: `вернулся · готово ${v.ready}, остальные по мере перезапуска` })
+            ? this.tech
+              ? pick({ en: `back · ${v.ready} ready, more as pods restart`, ru: `вернулся · готово ${v.ready}, остальные по мере перезапуска` })
+              : pick({ en: `back · ${answering(v.ready, 0, 'en', true)}, more as programs restart`, ru: `вернулся · ${answering(v.ready, 0, 'ru', true)}, остальные по мере перезапуска` })
             : small
-              ? pick({ en: `${v.ready}${v.adopted ? ` (+${v.adopted})` : ''} ready`, ru: `готово ${v.ready}${v.adopted ? ` (+${v.adopted})` : ''}` })
-              : (v.adopted ? pick({ en: `took over ${v.adopted} · `, ru: `принял ${v.adopted} · ` }) : '') + t('{ready} ready', { ready: v.ready }) + (v.notReady ? ' · ' + t('{n} silent', { n: v.notReady }) : '')
+              ? this.tech
+                ? pick({ en: `${v.ready}${v.adopted ? ` (+${v.adopted})` : ''} ready`, ru: `готово ${v.ready}${v.adopted ? ` (+${v.adopted})` : ''}` })
+                : answering(v.ready, 0, lang(), true)
+              : this.tech
+                ? (v.adopted ? pick({ en: `took over ${v.adopted} · `, ru: `принял ${v.adopted} · ` }) : '') + t('{ready} ready', { ready: v.ready }) + (v.notReady ? ' · ' + t('{n} silent', { n: v.notReady }) : '')
+                : (v.adopted ? pick({ en: `took over ${v.adopted} · `, ru: `принял ${v.adopted} · ` }) : '') + answering(v.ready, v.notReady, lang())
           : t('silent');
+      // The technical view names the machine as the cluster does.
+      if (this.tech) {
+        const st = g.querySelector('text.st')!;
+        st.textContent = `${shortName(v.node, voices.map((x) => x.node))} · ${st.textContent}`;
+      }
       g.classList.toggle('broken', !!v.broken);
       // The lateness arc: how far into its lease the node is.
       const f = Math.max(0, Math.min(0.999, v.late));
@@ -689,11 +725,16 @@ export class Listen {
   private paintNext(): void {
     const g = this.source.guests;
     if (g.size) {
-      const names = [...g.keys()].map((n) => guestLabel(n, lang()));
+      const keys = [...g.keys()];
+      const names = [...new Set(keys.map((n) => (this.tech ? guestTech(n, lang()) : guestLabel(n, lang()))))];
       const list = (and: string) => (names.length > 1 ? `${names.slice(0, -1).join(', ')} ${and} ${names[names.length - 1]}` : names[0]);
-      this.next.textContent = pick({ en: `Playing now: ${list('and')}`, ru: `Сейчас ${names.length > 1 ? 'играют' : 'играет'} ${list('и')}` });
+      // Said plainly: what is heard, and what it means.
+      const meaning = this.tech ? '' : `: ${guestMeaning(keys[0], lang())}`;
+      this.next.textContent = pick({ en: `Playing now: ${list('and')}${meaning}.`, ru: `Сейчас ${names.length > 1 ? 'звучат' : 'звучит'} ${list('и')}${meaning}.` });
+      this.next.title = keys.map((n) => guestTech(n, lang())).join(', ');
       return;
     }
+    this.next.removeAttribute('title');
     if (!this.source.lastGuestAt || this.source.mode !== 'live') {
       this.next.textContent = pick({ en: 'Every few minutes a guest drummer joins.', ru: 'Каждые несколько минут вступает приглашённый барабанщик.' });
       return;
@@ -833,9 +874,11 @@ export class Listen {
     const st = this.source.state;
     const late = st.late.map((n) => this.drumOf(n));
     this.status.textContent = st.total
-      ? t('{alive} of {total} playing · {ready} answering', { alive: st.playing, total: count(st.total, 'nodeOf'), ready: count(st.ready, 'pod') }) +
+      ? (this.tech
+          ? t('{alive} of {total} playing · {ready} answering', { alive: st.playing, total: count(st.total, 'nodeOf'), ready: count(st.ready, 'pod') })
+          : pick({ en: `${st.playing} of ${st.total} drums playing · ${count(st.ready, 'program')} answering the call`, ru: `${drumsRu(st.playing)} из ${st.total} · на зов отвечают ${count(st.ready, 'program')}` })) +
         (late.length ? ' · ' + pick({ en: `${late.join(', ')} late`, ru: `опаздывает: ${late.join(', ')}` }) : '') +
-        (st.silent ? ' · ' + pick({ en: `${st.silent} silent ${st.silent === 1 ? 'pod' : 'pods'}`, ru: `молчат: ${st.silent}` }) : '')
+        (st.silent ? ' · ' + (this.tech ? pick({ en: `${st.silent} silent ${st.silent === 1 ? 'pod' : 'pods'}`, ru: `молчат: ${st.silent}` }) : pick({ en: `${count(st.silent, 'program')} silent`, ru: `молчат: ${count(st.silent, 'program')}` })) : '')
       : m === 'connecting'
         ? t('Listening for the cluster…')
         : t('No nodes yet.');
@@ -861,6 +904,13 @@ export class Listen {
       }
     }
   }
+}
+
+/** "Играют 3 барабана": the verb and the noun agree with the number. */
+function drumsRu(n: number): string {
+  const one = n % 10 === 1 && n % 100 !== 11;
+  const few = n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14);
+  return `${one ? 'Играет' : 'Играют'} ${n} ${one ? 'барабан' : few ? 'барабана' : 'барабанов'}`;
 }
 
 /** The part of a node name that tells it apart: kubernetes-museum-md0-htprj-z9txf → z9txf. */
