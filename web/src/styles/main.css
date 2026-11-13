@@ -7446,3 +7446,15 @@ html:lang(ru) .xref {
     flex: 1;
   }
 }
+/* Phones: the instrument scrolls with the page; pinned, it filled the screen
+   and the explanation and legend under it could not be read. */
+@media (max-width: 900px) {
+  .listen .l-stage {
+    position: relative;
+    top: auto;
+    max-height: none;
+    overflow: visible;
+    box-shadow: none;
+    background: transparent;
+  }
+}
