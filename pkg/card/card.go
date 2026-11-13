@@ -61,8 +61,9 @@ const (
 	EditionFemale = "f"
 )
 
-// MaxBodyWords keeps cards short: enough to inspire, not an encyclopedia entry.
-const MaxBodyWords = 140
+// MaxBodyWords keeps cards short: room for a complete short story (context,
+// what happened, how it ended, why it matters), not an encyclopedia entry.
+const MaxBodyWords = 220
 
 // MaxExplainerWords is the room for cards that must first explain what
 // something is — a genre, an instrument, a script, a language — before the
