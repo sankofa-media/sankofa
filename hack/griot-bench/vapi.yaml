@@ -26,7 +26,7 @@ spec:
           image: registry.k8s.io/etcd:3.6.9-0
           command: [etcd, --data-dir=/var/lib/etcd, --listen-client-urls=http://127.0.0.1:2379, --advertise-client-urls=http://127.0.0.1:2379, --listen-peer-urls=http://127.0.0.1:2380, --quota-backend-bytes=8589934592, --snapshot-count=50000]
           volumeMounts: [{name: etcd, mountPath: /var/lib/etcd}]
-          resources: {requests: {cpu: 300m, memory: 512Mi}, limits: {memory: 2Gi}}
+          resources: {requests: {cpu: 100m, memory: 512Mi}, limits: {memory: 2Gi}}
         - name: apiserver
           image: registry.k8s.io/kube-apiserver:v1.35.9
           env: [{name: POD_IP, valueFrom: {fieldRef: {fieldPath: status.podIP}}}]
@@ -54,7 +54,7 @@ spec:
             - --max-requests-inflight=800
             - --max-mutating-requests-inflight=400
           volumeMounts: [{name: pki, mountPath: /pki}]
-          resources: {requests: {cpu: 500m, memory: 1Gi}, limits: {memory: 3Gi}}
+          resources: {requests: {cpu: 200m, memory: 1Gi}, limits: {memory: 3Gi}}
         - name: controller-manager
           image: registry.k8s.io/kube-controller-manager:v1.35.9
           command:
@@ -71,4 +71,4 @@ spec:
             - --concurrent-replicaset-syncs=10
             - --controllers=*,-nodeipam,-nodelifecycle,-service,-route,-cloud-node-lifecycle,-persistentvolume-binder,-attachdetach
           volumeMounts: [{name: pki, mountPath: /pki}]
-          resources: {requests: {cpu: 100m, memory: 256Mi}, limits: {memory: 1Gi}}
+          resources: {requests: {cpu: 50m, memory: 256Mi}, limits: {memory: 1Gi}}

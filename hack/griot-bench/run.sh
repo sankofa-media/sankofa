@@ -6,7 +6,7 @@
 #   vk get ns                             # kubectl against the benchmark control plane
 # Needs BENCH_IMAGE (digest from hack/stand/push.sh griot-bench ./hack/griot-bench)
 # and BENCH_CERTS (output dir of certs.sh).
-source "$(dirname "${BASH_SOURCE[0]}")/../stand/env.sh"
+source "$(git rev-parse --show-toplevel)/hack/stand/env.sh"
 BN=griot-bench
 
 _bench_pod() {
@@ -28,7 +28,7 @@ spec:
           valueFrom: {secretKeyRef: {name: griot-postgres, key: password}}
         - {name: GRIOT_DSN, value: "postgres://griot@postgres.griot-bench.svc:5432/griot?sslmode=disable"}
       volumeMounts: [{name: pki, mountPath: /pki}]
-      resources: {requests: {cpu: 250m, memory: 256Mi}, limits: {memory: 1Gi}}
+      resources: {requests: {cpu: 50m, memory: 128Mi}, limits: {memory: 1Gi}}
   volumes: [{name: pki, secret: {secretName: vapi-pki}}]
 YAML
 }
@@ -48,4 +48,20 @@ vk() {
     sleep 3
   fi
   kubectl --kubeconfig "$BENCH_CERTS/kubeconfig.local" --server https://localhost:16443 --context bench "$@"
+}
+
+# Push an image tarball (ko build --push=false --tarball=...) to the registry
+# of every node from inside the stand: a laptop port-forward is too fragile
+# for large uploads. Prints the digest reference.
+push_in_stand() {
+  local name=$1 tar=$2 ref=""
+  km -n $BN get pod crane >/dev/null 2>&1 || {
+    km -n $BN run crane --image=gcr.io/go-containerregistry/crane:debug --restart=Never --command -- sleep 86400 >/dev/null
+    km -n $BN wait --for=condition=Ready pod/crane --timeout=120s >/dev/null
+  }
+  km -n $BN cp "$tar" "crane:/tmp/$name.tar" >/dev/null
+  for ip in $(km -n sankofa-registry get pods -l app=registry -o jsonpath='{.items[*].status.podIP}'); do
+    ref=$(km -n $BN exec crane -- crane push --insecure "/tmp/$name.tar" "$ip:5000/sankofa/$name:dev" 2>/dev/null)
+  done
+  echo "localhost:5000/sankofa/$name@${ref##*@}"
 }

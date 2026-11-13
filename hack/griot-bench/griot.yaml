@@ -30,7 +30,7 @@ spec:
           ports: [{name: https, containerPort: 8443}, {name: metrics, containerPort: 9090}]
           readinessProbe: {httpGet: {path: /readyz, port: https, scheme: HTTPS}}
           volumeMounts: [{name: pki, mountPath: /pki}, {name: serving, mountPath: /serving}]
-          resources: {requests: {cpu: 200m, memory: 256Mi}, limits: {memory: 1536Mi}}
+          resources: {requests: {cpu: 50m, memory: 256Mi}, limits: {memory: 1536Mi}}
       volumes:
         - {name: pki, secret: {secretName: vapi-pki}}
         - {name: serving, secret: {secretName: griot-serving}}
@@ -70,7 +70,7 @@ spec:
           ports: [{name: https, containerPort: 8443}, {name: metrics, containerPort: 9090}]
           readinessProbe: {httpGet: {path: /readyz, port: https, scheme: HTTPS}}
           volumeMounts: [{name: pki, mountPath: /pki}, {name: serving, mountPath: /serving}, {name: data, mountPath: /data}]
-          resources: {requests: {cpu: 200m, memory: 256Mi}, limits: {memory: 1536Mi}}
+          resources: {requests: {cpu: 50m, memory: 256Mi}, limits: {memory: 1536Mi}}
       volumes:
         - {name: pki, secret: {secretName: vapi-pki}}
         - {name: serving, secret: {secretName: griot-serving}}
