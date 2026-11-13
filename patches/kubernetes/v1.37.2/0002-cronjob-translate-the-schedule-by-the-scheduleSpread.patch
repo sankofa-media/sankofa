@@ -1,0 +1,390 @@
+From be873bd0a85408d9bbde1e8bae592aa872a431fb Mon Sep 17 00:00:00 2001
+From: sankofa <sankofa@invalid>
+Date: Fri, 13 Nov 2026 18:41:27 +0000
+Subject: [PATCH 2/2] cronjob: translate the schedule by the scheduleSpread
+ offset
+
+With the feature gate enabled and spec.scheduleSpread set, every activation
+of the schedule is delayed by FNV-1a-64(uid) mod maxDelaySeconds seconds.
+A constant offset is a translation of the schedule, so missed-schedule
+accounting, startingDeadlineSeconds, concurrencyPolicy, Job names and
+lastScheduleTime all work on the translated times unchanged.
+
+Signed-off-by: sankofa <sankofa@invalid>
+Assisted-by: LLM
+---
+ .../cronjob/cronjob_controllerv2.go           |   4 +-
+ .../cronjob/schedule_spread_test.go           | 258 ++++++++++++++++++
+ pkg/controller/cronjob/utils.go               |  49 ++++
+ 3 files changed, 310 insertions(+), 1 deletion(-)
+ create mode 100644 pkg/controller/cronjob/schedule_spread_test.go
+
+diff --git a/pkg/controller/cronjob/cronjob_controllerv2.go b/pkg/controller/cronjob/cronjob_controllerv2.go
+index cf235866..185acf21 100644
+--- a/pkg/controller/cronjob/cronjob_controllerv2.go
++++ b/pkg/controller/cronjob/cronjob_controllerv2.go
+@@ -416,7 +416,7 @@ func (jm *ControllerV2) updateCronJob(logger klog.Logger, old interface{}, curr
+ 	// if the change in schedule results in next requeue having to be sooner than it already was,
+ 	// it will be handled here by the queue. If the next requeue is further than previous schedule,
+ 	// the sync loop will essentially be a no-op for the already queued key with old schedule.
+-	if oldCJ.Spec.Schedule != newCJ.Spec.Schedule || !ptr.Equal(oldCJ.Spec.TimeZone, newCJ.Spec.TimeZone) {
++	if oldCJ.Spec.Schedule != newCJ.Spec.Schedule || !ptr.Equal(oldCJ.Spec.TimeZone, newCJ.Spec.TimeZone) || !ptr.Equal(oldCJ.Spec.ScheduleSpread, newCJ.Spec.ScheduleSpread) {
+ 		// schedule changed, change the requeue time, pass nil recorder so that syncCronJob will output any warnings
+ 		sched, err := parsers.ParseCronScheduleWithPanicRecovery(formatSchedule(newCJ, nil))
+ 		if err != nil {
+@@ -426,6 +426,7 @@ func (jm *ControllerV2) updateCronJob(logger klog.Logger, old interface{}, curr
+ 			jm.recorder.Eventf(newCJ, corev1.EventTypeWarning, "UnParseableCronJobSchedule", "unparseable schedule for cronjob: %s", newCJ.Spec.Schedule)
+ 			return
+ 		}
++		sched = withScheduleSpread(newCJ, sched)
+ 		now := jm.now()
+ 		t := nextScheduleTimeDuration(newCJ, now, sched)
+ 
+@@ -546,6 +547,7 @@ func (jm *ControllerV2) syncCronJob(
+ 		jm.recorder.Eventf(cronJob, corev1.EventTypeWarning, "UnparseableSchedule", "unparseable schedule: %q : %s", cronJob.Spec.Schedule, err)
+ 		return nil, updateStatus, nil
+ 	}
++	sched = withScheduleSpread(cronJob, sched)
+ 
+ 	scheduledTime, err := nextScheduleTime(logger, cronJob, now, sched, jm.recorder)
+ 	if err != nil {
+diff --git a/pkg/controller/cronjob/schedule_spread_test.go b/pkg/controller/cronjob/schedule_spread_test.go
+new file mode 100644
+index 00000000..f8932ca2
+--- /dev/null
++++ b/pkg/controller/cronjob/schedule_spread_test.go
+@@ -0,0 +1,258 @@
++/*
++Copyright The Kubernetes Authors.
++
++Licensed under the Apache License, Version 2.0 (the "License");
++you may not use this file except in compliance with the License.
++You may obtain a copy of the License at
++
++    http://www.apache.org/licenses/LICENSE-2.0
++
++Unless required by applicable law or agreed to in writing, software
++distributed under the License is distributed on an "AS IS" BASIS,
++WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++See the License for the specific language governing permissions and
++limitations under the License.
++*/
++
++package cronjob
++
++import (
++	"context"
++	"fmt"
++	"testing"
++	"time"
++
++	cron "github.com/robfig/cron/v3"
++	batchv1 "k8s.io/api/batch/v1"
++	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
++	"k8s.io/apimachinery/pkg/types"
++	utilfeature "k8s.io/apiserver/pkg/util/feature"
++	"k8s.io/client-go/tools/record"
++	featuregatetesting "k8s.io/component-base/featuregate/testing"
++	"k8s.io/klog/v2/ktesting"
++	"k8s.io/kubernetes/pkg/features"
++	"k8s.io/utils/ptr"
++)
++
++func mustParseTime(t *testing.T, s string) time.Time {
++	t.Helper()
++	v, err := time.Parse(time.RFC3339, s)
++	if err != nil {
++		t.Fatal(err)
++	}
++	return v
++}
++
++func spreadCronJob(uid string, maxDelaySeconds int32) *batchv1.CronJob {
++	cj := cronJob()
++	cj.UID = types.UID(uid)
++	cj.Spec.Schedule = onTheHour
++	cj.Spec.ScheduleSpread = &batchv1.CronJobScheduleSpread{MaxDelaySeconds: maxDelaySeconds}
++	return &cj
++}
++
++func TestScheduleSpreadOffset(t *testing.T) {
++	featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.CronJobScheduleSpread, true)
++
++	cj := spreadCronJob("6a2e1f0c-5d4b-4c1a-9e8f-0b7a6c5d4e3f", 3600)
++	first := scheduleSpreadOffset(cj)
++	for i := 0; i < 3; i++ {
++		if got := scheduleSpreadOffset(cj.DeepCopy()); got != first {
++			t.Fatalf("offset is not stable: %v then %v", first, got)
++		}
++	}
++	// Name, namespace, schedule and other spec fields do not move the offset.
++	renamed := cj.DeepCopy()
++	renamed.Name, renamed.Namespace, renamed.Spec.Schedule = "other", "elsewhere", "*/5 * * * *"
++	if got := scheduleSpreadOffset(renamed); got != first {
++		t.Errorf("offset depends on more than the UID: %v vs %v", got, first)
++	}
++
++	if got := scheduleSpreadOffset(spreadCronJob("x", 1)); got != 0 {
++		t.Errorf("maxDelaySeconds=1 must give offset 0, got %v", got)
++	}
++	unset := cronJob()
++	if got := scheduleSpreadOffset(&unset); got != 0 {
++		t.Errorf("no spread must give offset 0, got %v", got)
++	}
++
++	// 2000 CronJobs at the same schedule: offsets stay in range, are whole
++	// seconds and cover the interval instead of clustering.
++	const n, maxDelay = 2000, 3600
++	perMinute := map[int64]int{}
++	for i := 0; i < n; i++ {
++		off := scheduleSpreadOffset(spreadCronJob(fmt.Sprintf("00000000-0000-0000-0000-%012d", i), maxDelay))
++		if off < 0 || off >= maxDelay*time.Second || off%time.Second != 0 {
++			t.Fatalf("offset %v out of [0, %ds) or not whole seconds", off, maxDelay)
++		}
++		perMinute[int64(off/time.Minute)]++
++	}
++	if len(perMinute) != 60 {
++		t.Errorf("expected all 60 minutes used, got %d", len(perMinute))
++	}
++	for m, c := range perMinute {
++		// Mean is 33.3 per minute; a uniform hash stays far below 3x that.
++		if c > 100 {
++			t.Errorf("minute %d holds %d of %d CronJobs", m, c, n)
++		}
++	}
++}
++
++func TestScheduleSpreadOffsetFeatureDisabled(t *testing.T) {
++	featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.CronJobScheduleSpread, false)
++	if got := scheduleSpreadOffset(spreadCronJob("6a2e1f0c", 3600)); got != 0 {
++		t.Errorf("disabled feature must give offset 0, got %v", got)
++	}
++}
++
++func TestSpreadScheduleNext(t *testing.T) {
++	offset := 23*time.Minute + 17*time.Second
++	cases := map[string]struct {
++		schedule string
++		from     string
++		want     string
++	}{
++		"before the delayed time": {schedule: "0 * * * *", from: "2026-11-13T10:00:00Z", want: "2026-11-13T10:23:17Z"},
++		"at the delayed time":     {schedule: "0 * * * *", from: "2026-11-13T10:23:17Z", want: "2026-11-13T11:23:17Z"},
++		"after the delayed time":  {schedule: "0 * * * *", from: "2026-11-13T10:30:00Z", want: "2026-11-13T11:23:17Z"},
++		"daily, across midnight":  {schedule: "50 23 * * *", from: "2026-11-13T23:55:00Z", want: "2026-11-14T00:13:17Z"},
++		// @every is relative to the previous run, so a translation does not move it.
++		"every interval, unaffected": {schedule: "@every 1h", from: "2026-11-13T10:00:00Z", want: "2026-11-13T11:00:00Z"},
++		"time zone":                  {schedule: "TZ=America/New_York 0 3 * * *", from: "2026-11-13T00:00:00Z", want: "2026-11-13T08:23:17Z"},
++	}
++	for name, tc := range cases {
++		t.Run(name, func(t *testing.T) {
++			sched, err := cron.ParseStandard(tc.schedule)
++			if err != nil {
++				t.Fatal(err)
++			}
++			got := spreadSchedule{schedule: sched, offset: offset}.Next(mustParseTime(t, tc.from))
++			if want := mustParseTime(t, tc.want); !got.Equal(want) {
++				t.Errorf("Next(%s) = %s, want %s", tc.from, got.UTC().Format(time.RFC3339), tc.want)
++			}
++		})
++	}
++
++	never, err := cron.ParseStandard("0 0 30 2 *")
++	if err != nil {
++		t.Fatal(err)
++	}
++	if got := (spreadSchedule{schedule: never, offset: offset}).Next(mustParseTime(t, "2026-11-13T00:00:00Z")); !got.IsZero() {
++		t.Errorf("a schedule that never fires must stay zero, got %s", got)
++	}
++}
++
++// The translated schedule keeps the controller's missed-schedule and deadline
++// accounting: it is measured from the delayed times.
++func TestMostRecentScheduleTimeWithSpread(t *testing.T) {
++	inner, err := cron.ParseStandard("0 * * * *")
++	if err != nil {
++		t.Fatal(err)
++	}
++	offset := 23*time.Minute + 17*time.Second
++	sched := spreadSchedule{schedule: inner, offset: offset}
++
++	cj := cronJob()
++	cj.CreationTimestamp = metav1.Time{Time: mustParseTime(t, "2026-11-13T09:50:00Z")}
++	cj.Status.LastScheduleTime = &metav1.Time{Time: mustParseTime(t, "2026-11-13T10:23:17Z")}
++
++	_, recent, missed, err := mostRecentScheduleTime(&cj, mustParseTime(t, "2026-11-13T12:30:00Z"), sched, false)
++	if err != nil {
++		t.Fatal(err)
++	}
++	if recent == nil || !recent.Equal(mustParseTime(t, "2026-11-13T12:23:17Z")) || missed != fewMissed {
++		t.Errorf("got recent=%v missed=%v, want 12:23:17 and few missed", recent, missed)
++	}
++
++	cj.Spec.StartingDeadlineSeconds = ptr.To[int64](60)
++	logger, _ := ktesting.NewTestContext(t)
++	recorder := record.NewFakeRecorder(10)
++	// Within the deadline of the delayed 11:23:17 run.
++	got, err := nextScheduleTime(logger, &cj, mustParseTime(t, "2026-11-13T11:23:50Z"), sched, recorder)
++	if err != nil || got == nil || !got.Equal(mustParseTime(t, "2026-11-13T11:23:17Z")) {
++		t.Errorf("within deadline: got %v, %v; want 11:23:17", got, err)
++	}
++	// Past the deadline of the delayed run: nothing to start.
++	got, err = nextScheduleTime(logger, &cj, mustParseTime(t, "2026-11-13T11:25:00Z"), sched, recorder)
++	if err != nil || got != nil {
++		t.Errorf("past deadline: got %v, %v; want nil", got, err)
++	}
++}
++
++func TestControllerV2SyncCronJobScheduleSpread(t *testing.T) {
++	const uid = "6a2e1f0c-5d4b-4c1a-9e8f-0b7a6c5d4e3f"
++	nominal := mustParseTime(t, "2026-11-13T10:00:00Z")
++
++	featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.CronJobScheduleSpread, true)
++	offset := scheduleSpreadOffset(spreadCronJob(uid, 3600))
++	if offset < 2*time.Second {
++		t.Fatalf("test setup: offset %v too small for this test", offset)
++	}
++
++	cases := map[string]struct {
++		enabled     bool
++		now         time.Time
++		wantJobAt   *time.Time
++		wantRequeue time.Duration
++	}{
++		"enabled, nominal time passed, delayed time not yet": {
++			enabled:     true,
++			now:         nominal.Add(offset - time.Second),
++			wantRequeue: time.Second + nextScheduleDelta,
++		},
++		"enabled, delayed time reached": {
++			enabled:     true,
++			now:         nominal.Add(offset + time.Second),
++			wantJobAt:   ptr.To(nominal.Add(offset)),
++			wantRequeue: time.Hour - time.Second + nextScheduleDelta,
++		},
++		"disabled, the field is ignored": {
++			enabled:     false,
++			now:         nominal.Add(offset + time.Second),
++			wantJobAt:   ptr.To(nominal),
++			wantRequeue: time.Hour - offset - time.Second + nextScheduleDelta,
++		},
++	}
++	for name, tc := range cases {
++		t.Run(name, func(t *testing.T) {
++			featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.CronJobScheduleSpread, tc.enabled)
++			cj := spreadCronJob(uid, 3600)
++			cj.CreationTimestamp = metav1.Time{Time: nominal.Add(-time.Second)}
++
++			jc := &fakeJobControl{}
++			cjc := &fakeCJControl{CronJob: cj.DeepCopy()}
++			jm := ControllerV2{
++				jobControl:     jc,
++				cronJobControl: cjc,
++				recorder:       record.NewFakeRecorder(10),
++				now:            func() time.Time { return tc.now },
++			}
++			requeue, _, err := jm.syncCronJob(context.TODO(), cj, nil)
++			if err != nil {
++				t.Fatal(err)
++			}
++			if requeue == nil || *requeue != tc.wantRequeue {
++				t.Errorf("requeue after %v, want %v", requeue, tc.wantRequeue)
++			}
++			if tc.wantJobAt == nil {
++				if len(jc.Jobs) != 0 {
++					t.Fatalf("expected no job, got %d", len(jc.Jobs))
++				}
++				return
++			}
++			if len(jc.Jobs) != 1 {
++				t.Fatalf("expected one job, got %d", len(jc.Jobs))
++			}
++			job := jc.Jobs[0]
++			if want := getJobName(cj, *tc.wantJobAt); job.Name != want {
++				t.Errorf("job name %q, want %q", job.Name, want)
++			}
++			if got, want := job.Annotations[batchv1.CronJobScheduledTimestampAnnotation], tc.wantJobAt.Format(time.RFC3339); got != want {
++				t.Errorf("scheduled-timestamp annotation %q, want %q", got, want)
++			}
++			if cj.Status.LastScheduleTime == nil || !cj.Status.LastScheduleTime.Time.Equal(*tc.wantJobAt) {
++				t.Errorf("lastScheduleTime %v, want %v", cj.Status.LastScheduleTime, *tc.wantJobAt)
++			}
++		})
++	}
++}
+diff --git a/pkg/controller/cronjob/utils.go b/pkg/controller/cronjob/utils.go
+index 47d74076..f46145c1 100644
+--- a/pkg/controller/cronjob/utils.go
++++ b/pkg/controller/cronjob/utils.go
+@@ -18,6 +18,7 @@ package cronjob
+ 
+ import (
+ 	"fmt"
++	"hash/fnv"
+ 	"time"
+ 
+ 	"github.com/robfig/cron/v3"
+@@ -27,8 +28,10 @@ import (
+ 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+ 	"k8s.io/apimachinery/pkg/labels"
+ 	"k8s.io/apimachinery/pkg/types"
++	utilfeature "k8s.io/apiserver/pkg/util/feature"
+ 	"k8s.io/client-go/tools/record"
+ 	"k8s.io/klog/v2"
++	"k8s.io/kubernetes/pkg/features"
+ 	"k8s.io/utils/ptr"
+ )
+ 
+@@ -289,3 +292,49 @@ func (o byJobStartTime) Less(i, j int) bool {
+ 	}
+ 	return o[i].Status.StartTime.Before(o[j].Status.StartTime)
+ }
++
++// scheduleSpreadOffset returns the stable delay added to every scheduled time
++// of cj: FNV-1a (64 bit) of the CronJob's UID modulo
++// spec.scheduleSpread.maxDelaySeconds, in whole seconds. It is zero when the
++// feature is disabled or the CronJob does not ask for a spread.
++func scheduleSpreadOffset(cj *batchv1.CronJob) time.Duration {
++	if !utilfeature.DefaultFeatureGate.Enabled(features.CronJobScheduleSpread) {
++		return 0
++	}
++	spread := cj.Spec.ScheduleSpread
++	if spread == nil || spread.MaxDelaySeconds < 1 {
++		return 0
++	}
++	h := fnv.New64a()
++	_, _ = h.Write([]byte(cj.UID))
++	return time.Duration(h.Sum64()%uint64(spread.MaxDelaySeconds)) * time.Second
++}
++
++// spreadSchedule is a cron schedule translated in time by a constant offset:
++// every activation of the underlying schedule happens offset later. A
++// translation keeps the order of activations and the intervals between them,
++// so missed-schedule accounting, startingDeadlineSeconds and concurrencyPolicy
++// work on the translated times unchanged.
++type spreadSchedule struct {
++	schedule cron.Schedule
++	offset   time.Duration
++}
++
++// Next returns the first translated activation strictly after t.
++func (s spreadSchedule) Next(t time.Time) time.Time {
++	next := s.schedule.Next(t.Add(-s.offset))
++	if next.IsZero() {
++		// The underlying schedule never fires (for example "0 0 30 2 *").
++		return next
++	}
++	return next.Add(s.offset)
++}
++
++// withScheduleSpread returns sched translated by the CronJob's spread offset,
++// or sched itself when there is no offset.
++func withScheduleSpread(cj *batchv1.CronJob, sched cron.Schedule) cron.Schedule {
++	if offset := scheduleSpreadOffset(cj); offset > 0 {
++		return spreadSchedule{schedule: sched, offset: offset}
++	}
++	return sched
++}
+-- 
+2.39.5
+
