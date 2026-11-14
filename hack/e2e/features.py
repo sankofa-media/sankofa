@@ -197,7 +197,11 @@ if __name__ == '__main__':
     try:
         create('Namespace', NS)
         create('Namespace', PRIVATE)
-        for test in (cards, memory, rbac, kgotla, polyrhythm, credits):
+        tests = (cards, memory, rbac, kgotla, polyrhythm, credits)
+        # E2E_TESTS=memory,rbac runs a subset, e.g. against a stand whose
+        # cards come from another content version.
+        only = [t for t in os.environ.get('E2E_TESTS', '').split(',') if t]
+        for test in [t for t in tests if not only or t.__name__ in only]:
             start = time.monotonic()
             test()
             result = dict(test=test.__name__, status='passed', seconds=round(time.monotonic()-start, 2))

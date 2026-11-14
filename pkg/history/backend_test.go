@@ -117,7 +117,7 @@ func TestBackends(t *testing.T) {
 				at   time.Duration
 				want string
 			}{{30 * time.Minute, "one"}, {90 * time.Minute, "one,two"}, {150 * time.Minute, "one"}, {4 * time.Hour, "one,two"}} {
-				recs, err := s.NamespaceAt(ctx, "a", t0.Add(tc.at))
+				recs, err := s.NamespaceAt(ctx, "a", t0.Add(tc.at), nil, 0)
 				if err != nil {
 					t.Fatal(err)
 				}
@@ -244,6 +244,14 @@ func TestCompaction(t *testing.T) {
 			if again.Compacted != 0 {
 				t.Fatalf("compaction must be idempotent, forgot %d more", again.Compacted)
 			}
+			before, _ := s.Stats(ctx)
+			if err := s.Vacuum(ctx); err != nil {
+				t.Fatal(err)
+			}
+			after, _ := s.Stats(ctx)
+			if name == "sqlite" && after.Bytes >= before.Bytes {
+				t.Fatalf("vacuum did not shrink the file: %d -> %d", before.Bytes, after.Bytes)
+			}
 		})
 	}
 }
@@ -307,70 +315,173 @@ func TestParseTiers(t *testing.T) {
 	}
 }
 
-// The informer transform redacts secret values before they reach the cache,
-// and Normalize redacts them again before they reach the store.
+// Normalize redacts secret values, including the copy kubectl apply keeps in
+// an annotation, before they reach the store.
 func TestSecretValuesNeverStored(t *testing.T) {
-	sec := func() *unstructured.Unstructured {
-		return &unstructured.Unstructured{Object: map[string]any{
-			"apiVersion": "v1", "kind": "Secret",
-			"metadata":   map[string]any{"name": "s", "namespace": "a", "uid": "u9", "annotations": map[string]any{"kubectl.kubernetes.io/last-applied-configuration": `{"data":{"password":"aHVudGVyMg=="}}`}},
-			"data":       map[string]any{"password": "aHVudGVyMg=="},
-			"stringData": map[string]any{"token": "hunter2"},
-		}}
-	}
+	sec := &unstructured.Unstructured{Object: map[string]any{
+		"apiVersion": "v1", "kind": "Secret",
+		"metadata":   map[string]any{"name": "s", "namespace": "a", "uid": "u9", "annotations": map[string]any{"kubectl.kubernetes.io/last-applied-configuration": `{"data":{"password":"aHVudGVyMg=="}}`}},
+		"data":       map[string]any{"password": "aHVudGVyMg=="},
+		"stringData": map[string]any{"token": "hunter2"},
+	}}
 	gr := schema.GroupResource{Resource: "secrets"}
-	cached, err := transform(gr)(sec())
+	rec, _, err := Normalize(gr, sec)
 	if err != nil {
 		t.Fatal(err)
 	}
-	for _, u := range []*unstructured.Unstructured{cached.(*unstructured.Unstructured), sec()} {
-		rec, _, err := Normalize(gr, u)
-		if err != nil {
+	if strings.Contains(string(rec.Object), "aHVudGVyMg") || strings.Contains(string(rec.Object), "hunter2") {
+		t.Fatalf("secret value leaked into history: %s", rec.Object)
+	}
+	for name, s := range backends(t) {
+		if err := s.Add(context.Background(), rec, "h"); err != nil {
 			t.Fatal(err)
 		}
-		if strings.Contains(string(rec.Object), "aHVudGVyMg") || strings.Contains(string(rec.Object), "hunter2") {
-			t.Fatalf("secret value leaked into history: %s", rec.Object)
-		}
-		for name, s := range backends(t) {
-			if err := s.Add(context.Background(), rec, "h"); err != nil {
-				t.Fatal(err)
-			}
-			got, _, _ := s.Latest(context.Background(), "u9")
-			if strings.Contains(string(got.Object), "hunter2") || !strings.Contains(string(got.Object), "redacted") {
-				t.Fatalf("%s: %s", name, got.Object)
-			}
+		got, _, _ := s.Latest(context.Background(), "u9")
+		if strings.Contains(string(got.Object), "hunter2") || !strings.Contains(string(got.Object), "redacted") {
+			t.Fatalf("%s: %s", name, got.Object)
 		}
 	}
 	// A secret-shaped config map is not a secret.
-	c, _ := transform(cms)(cm("a", "x", "u", "hunter2"))
-	if !strings.Contains(fmt.Sprint(c.(*unstructured.Unstructured).Object), "hunter2") {
+	c, _, _ := Normalize(cms, cm("a", "x", "u", "hunter2"))
+	if !strings.Contains(string(c.Object), "hunter2") {
 		t.Fatal("config maps must not be redacted")
 	}
 }
 
-// The transform keeps the last writer, so dropping managedFields from the
-// cache does not lose "who did it".
-func TestTransformKeepsManager(t *testing.T) {
+func TestNormalizeKeepsManager(t *testing.T) {
 	u := cm("a", "x", "u", "1")
 	u.Object["metadata"].(map[string]any)["managedFields"] = []any{
 		map[string]any{"manager": "kubectl", "operation": "Update", "time": "2026-11-01T10:00:00Z"},
 		map[string]any{"manager": "helm", "operation": "Update", "time": "2026-11-02T10:00:00Z"},
 	}
 	u.Object["status"] = map[string]any{"x": "y"}
-	out, _ := transform(cms)(u)
-	rec, _, err := Normalize(cms, out.(*unstructured.Unstructured))
+	rec, h1, err := Normalize(cms, u)
 	if err != nil {
 		t.Fatal(err)
 	}
 	if rec.Manager != "helm" || !rec.At.Equal(time.Date(2026, 11, 2, 10, 0, 0, 0, time.UTC)) {
 		t.Fatalf("manager %q at %s", rec.Manager, rec.At)
 	}
-	if strings.Contains(string(rec.Object), "griot.sankofa") || strings.Contains(string(rec.Object), "managedFields") || strings.Contains(string(rec.Object), "status") {
-		t.Fatalf("private annotations or status leaked: %s", rec.Object)
+	if strings.Contains(string(rec.Object), "managedFields") || strings.Contains(string(rec.Object), "status") {
+		t.Fatalf("managed fields or status kept: %s", rec.Object)
 	}
-	_, h1, _ := Normalize(cms, out.(*unstructured.Unstructured))
-	_, h2, _ := Normalize(cms, cm("a", "x", "u", "1"))
-	if h1 != h2 {
-		t.Fatal("the transform must not change the content hash")
+	if _, h2, _ := Normalize(cms, cm("a", "x", "u", "1")); h1 != h2 {
+		t.Fatal("status and managed fields must not change the content hash")
+	}
+}
+
+// Paged reads agree with whole reads: the story told from a summary is the
+// story told from every record, and pages of a namespace cover it once.
+func TestSummaryAndPages(t *testing.T) {
+	for name, s := range backends(t) {
+		t.Run(name, func(t *testing.T) {
+			ctx := context.Background()
+			u := cm("a", "x", "u1", "0")
+			es := []Entry{entry(t, cms, u, Born, t0)}
+			for i := 1; i <= 7; i++ {
+				e := entry(t, cms, cm("a", "x", "u1", fmt.Sprint(i)), Changed, t0.Add(time.Duration(i)*time.Minute))
+				e.Record.Manager = []string{"kubectl", "helm"}[i%2]
+				es = append(es, e)
+			}
+			es = append(es, entry(t, cms, u, Died, t0.Add(time.Hour)), entry(t, cms, cm("a", "x", "u2", "again"), Born, t0.Add(2*time.Hour)))
+			for i := 0; i < 23; i++ {
+				es = append(es, entry(t, cms, cm("a", fmt.Sprintf("n%02d", i), fmt.Sprintf("v%d", i), "1"), Born, t0))
+			}
+			if err := s.AddBatch(ctx, es[:5]); err != nil {
+				t.Fatal(err)
+			}
+			if err := s.AddBatch(ctx, es[5:]); err != nil {
+				t.Fatal(err)
+			}
+			ref := Ref{Resource: "configmaps", Namespace: "a", Name: "x"}
+			life, _ := s.Life(ctx, ref)
+			sum, err := s.Summarize(ctx, ref)
+			if err != nil || sum.Records != len(life) {
+				t.Fatalf("summary %+v %v", sum, err)
+			}
+			if got, want := StoryOf("ConfigMap", ref, sum), Story("ConfigMap", ref, life); got != want {
+				t.Fatalf("story from summary:\n%s\nwant\n%s", got, want)
+			}
+			page, _ := s.Moments(ctx, ref, 4, 0)
+			older, _ := s.Moments(ctx, ref, 100, page[3].ID)
+			if len(page) != 4 || page[0].UID != "u2" || len(page)+len(older) != len(life) || len(page[0].Object) != 0 {
+				t.Fatalf("moments pages %d + %d of %d", len(page), len(older), len(life))
+			}
+			for _, at := range []time.Duration{30 * time.Second, 30 * time.Minute, 90 * time.Minute, 3 * time.Hour} {
+				whole, _ := s.NamespaceAtScan(ctx, "a", t0.Add(at))
+				var paged []Record
+				var after *Cursor
+				for {
+					p, err := s.NamespaceAt(ctx, "a", t0.Add(at), after, 5)
+					if err != nil {
+						t.Fatal(err)
+					}
+					paged = append(paged, p...)
+					if len(p) < 5 {
+						break
+					}
+					l := p[len(p)-1]
+					after = &Cursor{Group: l.Ref.Group, Resource: l.Ref.Resource, Name: l.Ref.Name, ID: l.ID}
+				}
+				if len(paged) != len(whole) {
+					t.Fatalf("at +%s: %d paged, %d scanned", at, len(paged), len(whole))
+				}
+				for i := range whole {
+					if paged[i].ID != whole[i].ID {
+						t.Fatalf("at +%s: record %d differs: %d vs %d", at, i, paged[i].ID, whole[i].ID)
+					}
+				}
+			}
+			// Compaction removes records from the middle of a life: the
+			// intervals must be repaired so reads still agree.
+			tiers, _ := ParseTiers("1h:24h")
+			if _, err := s.Retain(ctx, Policy{Tiers: tiers}, t0.Add(48*time.Hour)); err != nil {
+				t.Fatal(err)
+			}
+			for _, at := range []time.Duration{30 * time.Second, 3 * time.Minute, 30 * time.Minute, 90 * time.Minute, 3 * time.Hour} {
+				whole, _ := s.NamespaceAtScan(ctx, "a", t0.Add(at))
+				now, _ := s.NamespaceAt(ctx, "a", t0.Add(at), nil, 0)
+				if len(now) != len(whole) {
+					t.Fatalf("after compaction at +%s: %d vs %d", at, len(now), len(whole))
+				}
+				for i := range whole {
+					if now[i].ID != whole[i].ID {
+						t.Fatalf("after compaction at +%s: %d vs %d", at, now[i].ID, whole[i].ID)
+					}
+				}
+			}
+		})
+	}
+}
+
+// A store written before validity intervals gets them on open.
+func TestIntervalsBackfilled(t *testing.T) {
+	path := filepath.Join(t.TempDir(), "old.db")
+	db, err := sql.Open("sqlite", path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	_, err = db.Exec(`CREATE TABLE records (id INTEGER PRIMARY KEY AUTOINCREMENT, grp TEXT NOT NULL, resource TEXT NOT NULL, namespace TEXT NOT NULL, name TEXT NOT NULL,
+  uid TEXT NOT NULL, kind TEXT NOT NULL, verb TEXT NOT NULL, at INTEGER NOT NULL, manager TEXT NOT NULL, revision TEXT NOT NULL, hash TEXT NOT NULL, object BLOB NOT NULL);
+INSERT INTO records(grp,resource,namespace,name,uid,kind,verb,at,manager,revision,hash,object) VALUES
+ ('','configmaps','a','x','u1','ConfigMap','born',1000,'','1','h','{}'),
+ ('','configmaps','a','x','u1','ConfigMap','changed',2000,'','2','h2','{}'),
+ ('','configmaps','a','y','u2','ConfigMap','born',1000,'','1','h','{}'),
+ ('','configmaps','a','y','u2','ConfigMap','died',3000,'','1','h','{}');`)
+	db.Close()
+	if err != nil {
+		t.Fatal(err)
+	}
+	s, err := OpenSQLite(path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer s.Close()
+	for _, at := range []int64{500, 1500, 2500, 3500} {
+		whole, _ := s.NamespaceAtScan(context.Background(), "a", time.UnixMilli(at))
+		now, _ := s.NamespaceAt(context.Background(), "a", time.UnixMilli(at), nil, 0)
+		if len(whole) != len(now) {
+			t.Fatalf("at %d: %d vs %d", at, len(now), len(whole))
+		}
 	}
 }

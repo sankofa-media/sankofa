@@ -60,6 +60,8 @@ var (
 	tiers       = flag.String("tiers", "", "retain: compaction tiers")
 	maxVersions = flag.Int("max-versions", 0, "retain: versions per object")
 	shift       = flag.Duration("shift", 0, "retain: pretend now is this much later")
+	vacuum      = flag.Bool("vacuum", false, "retain: vacuum after retention (SQLite VACUUM, PostgreSQL plain VACUUM ANALYZE)")
+	repair      = flag.Bool("repair", false, "retain: recompute every validity interval first")
 	probeName   = flag.String("probe-name", "probe", "probe: config map to write (one per concurrent probe)")
 )
 
@@ -85,6 +87,8 @@ func main() {
 		err = sample(ctx)
 	case "retain":
 		err = retain(ctx)
+	case "nsat":
+		err = nsat(ctx)
 	case "delete":
 		err = deleteNS(ctx, kube(), *namespaces, false)
 	case "cleanup":
@@ -385,7 +389,7 @@ func query(ctx context.Context) error {
 	timeit("life deployment", *iterations, life(func(int) string {
 		return fmt.Sprintf("/namespaces/%s/timelines/deployments.apps:web-%04d", nsName(rand.IntN(*namespaces)), rand.IntN(*deployments))
 	}))
-	timeit("life probe (long history)", *iterations, life(func(int) string { return "/namespaces/bench-probe/timelines/configmaps.core:probe" }))
+	timeit("life probe (long history)", *iterations, life(func(int) string { return "/namespaces/bench-probe/timelines/configmaps.core:" + *probeName }))
 	timeit("at configmap (mid)", *iterations, func(i int) (int, error) {
 		_, err := g.get(ctx, cmPath(i), map[string]string{"at": ts(mid)})
 		return 1, err
@@ -497,6 +501,14 @@ func retain(ctx context.Context) error {
 	if err != nil {
 		return err
 	}
+	if *repair {
+		rt := time.Now()
+		n, err := s.(*history.SQLStore).RepairIntervals(ctx)
+		if err != nil {
+			return err
+		}
+		fmt.Printf("retain repaired %d intervals in %s\n", n, time.Since(rt).Round(time.Millisecond))
+	}
 	before, err := s.Stats(ctx)
 	if err != nil {
 		return err
@@ -508,14 +520,12 @@ func retain(ctx context.Context) error {
 		return err
 	}
 	took := time.Since(t)
-	if sq, ok := s.(*history.SQLStore); ok && sq.Dialect() == "postgres" {
-		// Plain VACUUM makes freed space reusable; it does not shrink files.
-		// VACUUM FULL is what an operator runs to give space back.
+	if *vacuum {
 		vt := time.Now()
-		if _, err := sq.DB().ExecContext(ctx, `VACUUM FULL records`); err != nil {
+		if err := s.Vacuum(ctx); err != nil {
 			return err
 		}
-		fmt.Printf("retain vacuum-full took=%s\n", time.Since(vt).Round(time.Millisecond))
+		fmt.Printf("retain vacuum took=%s\n", time.Since(vt).Round(time.Millisecond))
 	}
 	after, err := s.Stats(ctx)
 	if err != nil {
@@ -543,6 +553,51 @@ func deleteNS(ctx context.Context, kc kubernetes.Interface, n int, all bool) err
 			return err
 		}
 		fmt.Println("deleted namespace", ns.Name)
+	}
+	return nil
+}
+
+// nsat compares the namespace read before and after validity intervals on
+// the same store: the scan of the latest record per uid against the
+// interval range, at several moments, and checks they agree.
+func nsat(ctx context.Context) error {
+	st, err := history.OpenStore(*storeKind, *dsn)
+	if err != nil {
+		return err
+	}
+	defer st.Close()
+	s := st.(*history.SQLStore)
+	var first, last int64
+	if err := s.DB().QueryRowContext(ctx, `SELECT MIN(at), MAX(at) FROM records WHERE namespace='bench-00'`).Scan(&first, &last); err != nil {
+		return err
+	}
+	for _, frac := range []float64{0.1, 0.5, 0.9, 1.0} {
+		t := time.UnixMilli(first + int64(frac*float64(last-first)))
+		if frac == 1.0 {
+			t = time.Now()
+		}
+		var scan, iv []time.Duration
+		var n1, n2 int
+		for i := 0; i < *iterations; i++ {
+			ns := nsName(i % *namespaces)
+			a := time.Now()
+			r1, err := s.NamespaceAtScan(ctx, ns, t)
+			if err != nil {
+				return err
+			}
+			scan = append(scan, time.Since(a))
+			b := time.Now()
+			r2, err := s.NamespaceAt(ctx, ns, t, nil, 0)
+			if err != nil {
+				return err
+			}
+			iv = append(iv, time.Since(b))
+			n1, n2 = len(r1), len(r2)
+			if n1 != n2 {
+				fmt.Printf("nsat MISMATCH %s at %s: scan %d, intervals %d\n", ns, t.UTC().Format(time.RFC3339), n1, n2)
+			}
+		}
+		fmt.Printf("nsat at=%s (%.0f%%) objects=%d scan: %s | intervals: %s\n", t.UTC().Format(time.RFC3339), frac*100, n2, summary(scan), summary(iv))
 	}
 	return nil
 }

@@ -6,18 +6,19 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"log/slog"
+	"math/rand/v2"
 	"strings"
 	"sync"
 	"sync/atomic"
 	"time"
 
+	apierrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+	"k8s.io/apimachinery/pkg/watch"
 	"k8s.io/client-go/discovery"
 	"k8s.io/client-go/dynamic"
-	"k8s.io/client-go/dynamic/dynamicinformer"
-	"k8s.io/client-go/tools/cache"
 )
 
 // Skipped resources are noise, not memory: heartbeats, events and endpoints
@@ -91,12 +92,37 @@ type pending struct {
 	seen  time.Time
 }
 
+// head is the latest record of one incarnation, as small as it can be: the
+// recorder keeps one per object in the cluster, and nothing else.
 type head struct {
-	hash, verb string
-	ref        Ref
+	hash [32]byte
+	verb uint8
+	ref  Ref
+}
+
+var verbs = []string{"", Born, Changed, Died}
+
+func verbCode(v string) uint8 {
+	for i, s := range verbs {
+		if s == v {
+			return uint8(i)
+		}
+	}
+	return 0
+}
+
+func parseHash(s string) (h [32]byte) {
+	_, _ = hex.Decode(h[:], []byte(s))
+	return h
 }
 
 // Recorder watches every resource and writes their lives into the store.
+//
+// It lists and watches each resource itself instead of using informers: an
+// informer keeps every object in memory, while the recorder only needs the
+// latest content hash of each object to tell a change from a resync. Memory
+// then follows the number of objects at a few hundred bytes each, not their
+// size.
 type Recorder struct {
 	Store     Store
 	Discovery discovery.DiscoveryInterface
@@ -106,11 +132,14 @@ type Recorder struct {
 	// BatchSize and FlushEvery bound one write transaction.
 	BatchSize  int
 	FlushEvery time.Duration
-	Counters   Counters
+	// PageSize is the list page size.
+	PageSize int64
+	Counters Counters
 
 	mu      sync.Mutex
 	started map[schema.GroupVersionResource]bool
 	heads   map[string]head // uid -> latest record, the dedup cache
+	strs    map[string]string
 	queue   chan pending
 }
 
@@ -123,28 +152,45 @@ func (r *Recorder) Run(ctx context.Context, interval time.Duration) error {
 	if r.FlushEvery <= 0 {
 		r.FlushEvery = 200 * time.Millisecond
 	}
+	if r.PageSize <= 0 {
+		r.PageSize = 500
+	}
 	r.started = map[schema.GroupVersionResource]bool{}
 	r.heads = map[string]head{}
+	r.strs = map[string]string{}
 	r.queue = make(chan pending, 4*r.BatchSize)
 	if err := r.warm(ctx); err != nil {
 		return err
 	}
 	done := make(chan struct{})
 	go func() { r.write(ctx); close(done) }()
-	factory := dynamicinformer.NewDynamicSharedInformerFactory(r.Dynamic, 0)
+	var wg sync.WaitGroup
 	for {
-		if err := r.discover(ctx, factory); err != nil {
+		if err := r.discover(ctx, &wg); err != nil {
 			r.Log.Warn("discovery", "err", err)
 		}
-		factory.Start(ctx.Done())
 		select {
 		case <-ctx.Done():
-			factory.Shutdown()
+			wg.Wait()
 			<-done
 			return nil
 		case <-time.After(interval):
 		}
 	}
+}
+
+// intern shares the strings repeated across objects: groups, resources and
+// namespaces. Callers hold r.mu.
+func (r *Recorder) intern(s string) string {
+	if v, ok := r.strs[s]; ok {
+		return v
+	}
+	r.strs[s] = s
+	return s
+}
+
+func (r *Recorder) internRef(ref Ref) Ref {
+	return Ref{Group: r.intern(ref.Group), Resource: r.intern(ref.Resource), Namespace: r.intern(ref.Namespace), Name: ref.Name}
 }
 
 // warm loads the latest record of every uid, so a restart does not rewrite
@@ -154,9 +200,11 @@ func (r *Recorder) warm(ctx context.Context) error {
 	if err != nil {
 		return err
 	}
+	r.mu.Lock()
 	for _, h := range heads {
-		r.heads[h.UID] = head{hash: h.Hash, verb: h.Verb, ref: h.Ref}
+		r.heads[h.UID] = head{hash: parseHash(h.Hash), verb: verbCode(h.Verb), ref: r.internRef(h.Ref)}
 	}
+	r.mu.Unlock()
 	r.Log.Info("memory warmed", "objects", len(heads))
 	return nil
 }
@@ -174,7 +222,7 @@ func (r *Recorder) write(ctx context.Context) {
 		for i, p := range batch {
 			entries[i] = p.entry
 		}
-		// Retry with a fresh context so a shutdown does not lose the tail.
+		// A fresh context, so a shutdown does not lose the tail.
 		wctx, cancel := context.WithTimeout(context.WithoutCancel(ctx), 30*time.Second)
 		err := r.Store.AddBatch(wctx, entries)
 		cancel()
@@ -212,7 +260,7 @@ func (r *Recorder) write(ctx context.Context) {
 	}
 }
 
-func (r *Recorder) discover(ctx context.Context, f dynamicinformer.DynamicSharedInformerFactory) error {
+func (r *Recorder) discover(ctx context.Context, wg *sync.WaitGroup) error {
 	lists, err := r.Discovery.ServerPreferredResources()
 	if err != nil && len(lists) == 0 {
 		return err
@@ -235,40 +283,136 @@ func (r *Recorder) discover(ctx context.Context, f dynamicinformer.DynamicShared
 			if seen {
 				continue
 			}
-			inf := f.ForResource(gvr).Informer()
-			// Keep only what is remembered in the informer cache: no status, no
-			// managed fields, no secret values. This bounds memory and keeps
-			// secret values out of the process after the first decode.
-			_ = inf.SetTransform(transform(gr))
-			_, _ = inf.AddEventHandler(cache.ResourceEventHandlerFuncs{
-				AddFunc:    func(o any) { r.observe(ctx, gr, o, false) },
-				UpdateFunc: func(_, o any) { r.observe(ctx, gr, o, false) },
-				DeleteFunc: func(o any) { r.observe(ctx, gr, o, true) },
-			})
-			go r.sweep(ctx, gr, inf)
+			wg.Add(1)
+			go func() {
+				defer wg.Done()
+				r.follow(ctx, gvr)
+			}()
 			r.Log.Debug("watching", "resource", gvr.String())
 		}
 	}
 	return nil
 }
 
-// sweep records deaths that happened while nobody was recording: objects
-// alive in the memory but absent from the first full list.
-func (r *Recorder) sweep(ctx context.Context, gr schema.GroupResource, inf cache.SharedIndexInformer) {
-	if !cache.WaitForCacheSync(ctx.Done(), inf.HasSynced) {
-		return
+// follow lists a resource page by page, then watches it from the list's
+// resource version; when the watch history is gone it lists again. Objects
+// missing from a list died while nobody was watching.
+func (r *Recorder) follow(ctx context.Context, gvr schema.GroupVersionResource) {
+	ri := r.Dynamic.Resource(gvr)
+	gr := gvr.GroupResource()
+	backoff := time.Second
+	wait := func() {
+		select {
+		case <-ctx.Done():
+		case <-time.After(backoff):
+		}
+		backoff = min(2*backoff, time.Minute)
 	}
-	alive := map[string]bool{}
-	for _, o := range inf.GetStore().List() {
-		if u, ok := o.(*unstructured.Unstructured); ok {
-			alive[string(u.GetUID())] = true
+	for ctx.Err() == nil {
+		rv, err := r.list(ctx, ri, gr)
+		if err != nil {
+			if ctx.Err() == nil {
+				r.Log.Warn("list", "resource", gvr.String(), "err", err)
+			}
+			wait()
+			continue
+		}
+		backoff = time.Second
+		for ctx.Err() == nil {
+			next, relist, err := r.watch(ctx, ri, gr, rv)
+			if relist {
+				break
+			}
+			if err != nil {
+				if ctx.Err() == nil {
+					r.Log.Warn("watch", "resource", gvr.String(), "err", err)
+				}
+				wait()
+				continue
+			}
+			rv, backoff = next, time.Second
 		}
 	}
+}
+
+func (r *Recorder) list(ctx context.Context, ri dynamic.NamespaceableResourceInterface, gr schema.GroupResource) (string, error) {
+	present := map[string]struct{}{}
+	opts := metav1.ListOptions{Limit: r.PageSize}
+	var rv string
+	for {
+		page, err := ri.List(ctx, opts)
+		if err != nil {
+			return "", err
+		}
+		if rv == "" {
+			rv = page.GetResourceVersion()
+		}
+		for i := range page.Items {
+			u := &page.Items[i]
+			present[string(u.GetUID())] = struct{}{}
+			r.observe(ctx, gr, u, false)
+		}
+		if opts.Continue = page.GetContinue(); opts.Continue == "" {
+			break
+		}
+	}
+	r.sweep(ctx, gr, present)
+	return rv, nil
+}
+
+// watch follows changes from rv. It returns the last resource version seen,
+// or relist when the server no longer has that history.
+func (r *Recorder) watch(ctx context.Context, ri dynamic.NamespaceableResourceInterface, gr schema.GroupResource, rv string) (string, bool, error) {
+	timeout := int64(300 + rand.IntN(300))
+	w, err := ri.Watch(ctx, metav1.ListOptions{ResourceVersion: rv, AllowWatchBookmarks: true, TimeoutSeconds: &timeout})
+	if err != nil {
+		if apierrors.IsResourceExpired(err) || apierrors.IsGone(err) {
+			return rv, true, nil
+		}
+		return rv, false, err
+	}
+	defer w.Stop()
+	for {
+		select {
+		case <-ctx.Done():
+			return rv, false, nil
+		case ev, ok := <-w.ResultChan():
+			if !ok {
+				return rv, false, nil
+			}
+			switch ev.Type {
+			case watch.Error:
+				err := apierrors.FromObject(ev.Object)
+				if apierrors.IsResourceExpired(err) || apierrors.IsGone(err) {
+					return rv, true, nil
+				}
+				return rv, false, err
+			case watch.Bookmark:
+				if u, ok := ev.Object.(*unstructured.Unstructured); ok {
+					rv = u.GetResourceVersion()
+				}
+			case watch.Added, watch.Modified, watch.Deleted:
+				u, ok := ev.Object.(*unstructured.Unstructured)
+				if !ok {
+					continue
+				}
+				rv = u.GetResourceVersion()
+				r.observe(ctx, gr, u, ev.Type == watch.Deleted)
+			}
+		}
+	}
+}
+
+// sweep records deaths that happened while nobody was watching: objects alive
+// in the memory but absent from a full list.
+func (r *Recorder) sweep(ctx context.Context, gr schema.GroupResource, present map[string]struct{}) {
 	r.mu.Lock()
 	var gone []string
 	for uid, h := range r.heads {
-		if h.verb != Died && h.ref.Group == gr.Group && h.ref.Resource == gr.Resource && !alive[uid] && r.Scope.keeps(gr, h.ref.Namespace) {
-			gone = append(gone, uid)
+		if h.verb != verbCode(Died) && h.ref.Group == gr.Group && h.ref.Resource == gr.Resource && r.Scope.keeps(gr, h.ref.Namespace) {
+			if _, ok := present[uid]; !ok {
+				gone = append(gone, uid)
+			}
 		}
 	}
 	r.mu.Unlock()
@@ -301,14 +445,10 @@ func hasVerbs(r metav1.APIResource, verbs ...string) bool {
 	return true
 }
 
-func (r *Recorder) observe(ctx context.Context, gr schema.GroupResource, o any, deleted bool) {
+func (r *Recorder) observe(ctx context.Context, gr schema.GroupResource, u *unstructured.Unstructured, deleted bool) {
 	seen := time.Now()
 	r.Counters.Events.Add(1)
-	if d, ok := o.(cache.DeletedFinalStateUnknown); ok {
-		o = d.Obj
-	}
-	u, ok := o.(*unstructured.Unstructured)
-	if !ok || !r.Scope.keeps(gr, u.GetNamespace()) {
+	if !r.Scope.keeps(gr, u.GetNamespace()) {
 		return
 	}
 	rec, hash, err := Normalize(gr, u)
@@ -326,9 +466,9 @@ func (r *Recorder) observe(ctx context.Context, gr schema.GroupResource, o any, 
 		rec.Verb = Died
 		rec.At = time.Now().UTC()
 		rec.Manager = ""
-	case !known || h.verb == Died:
+	case !known || h.verb == verbCode(Died):
 		rec.Verb = Born
-	case h.hash == hash:
+	case h.hash == parseHash(hash):
 		r.Counters.Skipped.Add(1)
 		return
 	default:
@@ -339,44 +479,13 @@ func (r *Recorder) observe(ctx context.Context, gr schema.GroupResource, o any, 
 
 func (r *Recorder) enqueue(ctx context.Context, rec Record, hash string, seen time.Time) {
 	r.mu.Lock()
-	r.heads[rec.UID] = head{hash: hash, verb: rec.Verb, ref: rec.Ref}
+	r.heads[rec.UID] = head{hash: parseHash(hash), verb: verbCode(rec.Verb), ref: r.internRef(rec.Ref)}
 	r.mu.Unlock()
 	r.Counters.Queue.Add(1)
 	select {
 	case r.queue <- pending{entry: Entry{Record: rec, Hash: hash}, seen: seen}:
 	case <-ctx.Done():
 		r.Counters.Queue.Add(-1)
-	}
-}
-
-// Annotations the informer transform leaves for Normalize: the last writer and
-// when, taken from managedFields before they are dropped.
-const (
-	lastManagerKey = "griot.sankofa.kuberoot.dev/last-manager"
-	lastWriteKey   = "griot.sankofa.kuberoot.dev/last-write"
-)
-
-func transform(gr schema.GroupResource) cache.TransformFunc {
-	return func(o any) (any, error) {
-		u, ok := o.(*unstructured.Unstructured)
-		if !ok {
-			return o, nil
-		}
-		if who, when := lastWrite(u); !when.IsZero() {
-			ann := u.GetAnnotations()
-			if ann == nil {
-				ann = map[string]string{}
-			}
-			ann[lastManagerKey] = who
-			ann[lastWriteKey] = when.UTC().Format(time.RFC3339)
-			u.SetAnnotations(ann)
-		}
-		unstructured.RemoveNestedField(u.Object, "status")
-		unstructured.RemoveNestedField(u.Object, "metadata", "managedFields")
-		if isSecret(gr) {
-			redact(u.Object)
-		}
-		return u, nil
 	}
 }
 
@@ -404,18 +513,6 @@ func redact(obj map[string]any) {
 func Normalize(gr schema.GroupResource, u *unstructured.Unstructured) (Record, string, error) {
 	o := u.DeepCopy()
 	manager, at := lastWrite(o)
-	ann := o.GetAnnotations()
-	if v, ok := ann[lastWriteKey]; ok {
-		if t, err := time.Parse(time.RFC3339, v); err == nil && t.After(at) {
-			manager, at = ann[lastManagerKey], t
-		}
-		delete(ann, lastWriteKey)
-		delete(ann, lastManagerKey)
-		if len(ann) == 0 {
-			ann = nil
-		}
-		o.SetAnnotations(ann)
-	}
 	if at.IsZero() {
 		at = o.GetCreationTimestamp().Time
 	}

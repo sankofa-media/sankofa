@@ -53,12 +53,12 @@ const managedBy = "griot"
 
 type options struct {
 	kubeconfig, store, db, dsn, listen, apiService, host, register, pulse, metrics string
-	tlsCert, tlsKey                                                                string
+	tlsCert, tlsKey, auditListen, auditCA                                          string
 	sync, record, webhooks, compress                                               bool
 	leaderElect                                                                    bool
 	leaseName, leaseNamespace                                                      string
 	policy                                                                         history.Policy
-	retainEvery                                                                    time.Duration
+	retainEvery, vacuumEvery                                                       time.Duration
 	scope                                                                          history.Scope
 }
 
@@ -81,6 +81,7 @@ func main() {
 	flag.DurationVar(&o.policy.TombstoneTTL, "tombstone-ttl", 0, "forget dead objects entirely this long after their death (0: never)")
 	flag.StringVar(&compact, "compact", "", `compaction tiers AFTER:WINDOW, e.g. "24h:1h,168h:24h" (every change for a day, hourly for a week, daily after)`)
 	flag.DurationVar(&o.retainEvery, "retain-every", time.Hour, "how often to apply retention and compaction")
+	flag.DurationVar(&o.vacuumEvery, "vacuum-every", -1, "how often to vacuum the store after retention (default: weekly for SQLite, never for PostgreSQL, whose autovacuum does it; 0 disables)")
 	flag.StringVar(&namespaces, "namespaces", "", "remember only these namespaces (comma-separated; cluster-scoped objects are always kept)")
 	flag.StringVar(&excludeNS, "exclude-namespaces", "", "never remember these namespaces")
 	flag.StringVar(&excludeRes, "exclude-resources", "", "never remember these resources, e.g. pods,replicasets.apps")
@@ -93,6 +94,8 @@ func main() {
 	flag.BoolVar(&o.webhooks, "webhooks", true, "serve the Sankofa admission webhooks (Kgotla, Polyrhythm, Credits)")
 	flag.StringVar(&o.pulse, "pulse", ":8081", "plain-HTTP listen address of the public pulse stream (empty to disable)")
 	flag.StringVar(&o.metrics, "metrics", "", "plain-HTTP listen address of /metrics (empty to disable)")
+	flag.StringVar(&o.auditListen, "audit-listen", "", "HTTPS listen address for the API server's audit webhook (POST /audit); names the user behind each moment")
+	flag.StringVar(&o.auditCA, "audit-client-ca", "", "CA of the client certificate the API server presents to --audit-listen (required with it)")
 	flag.Parse()
 	o.sync, o.record = !noSync, !noRecord
 	o.scope = history.ParseScope(namespaces, excludeNS, excludeRes)
@@ -103,6 +106,12 @@ func main() {
 		os.Exit(2)
 	}
 	o.policy.Tiers = tiers
+	if o.vacuumEvery < 0 {
+		o.vacuumEvery = 0
+		if o.store == "sqlite" || o.store == "" {
+			o.vacuumEvery = 7 * 24 * time.Hour
+		}
+	}
 	if o.dsn == "" {
 		o.dsn = os.Getenv("GRIOT_DSN")
 	}
@@ -198,7 +207,7 @@ func run(ctx context.Context, log *slog.Logger, o options) error {
 	}
 	record := func(ctx context.Context) {
 		m.leader.Store(true)
-		go retain(ctx, log, store, o.policy, o.retainEvery, m)
+		go retain(ctx, log, store, o.policy, o.retainEvery, o.vacuumEvery, m)
 		if err := rec.Run(ctx, 2*time.Minute); err != nil {
 			log.Error("recorder", "err", err)
 		}
@@ -238,8 +247,21 @@ func run(ctx context.Context, log *slog.Logger, o options) error {
 	} else if cert, caPEM, err = selfSigned(o.host); err != nil {
 		return err
 	}
+	api := &history.API{Store: store, Auth: auth, Kube: kube}
+	if o.auditListen != "" {
+		as, ok := store.(history.AuditStore)
+		if !ok {
+			return fmt.Errorf("this store does not keep audit events")
+		}
+		if err := serveAudit(ctx, log, o, cert, as); err != nil {
+			return err
+		}
+		api.Who = func(ctx context.Context, ref history.Ref, ms []history.Moment) {
+			history.AttributeMoments(ctx, as, ref, ms)
+		}
+	}
 	mux := http.NewServeMux()
-	mux.Handle("/", (&history.API{Store: store, Auth: auth, Kube: kube}).Handler())
+	mux.Handle("/", api.Handler())
 	if o.webhooks {
 		webhooks(mux, cl, kube)
 	}
@@ -460,4 +482,37 @@ func publishWebhookCA(ctx context.Context, cl client.Client, name string, ca []b
 		return nil
 	}
 	return cl.Update(ctx, obj)
+}
+
+// serveAudit receives the API server's audit webhook over TLS and accepts
+// only clients with a certificate from --audit-client-ca: whoever can post
+// here can put names into the memory.
+func serveAudit(ctx context.Context, log *slog.Logger, o options, cert tls.Certificate, s history.AuditStore) error {
+	if o.auditCA == "" {
+		return fmt.Errorf("--audit-listen needs --audit-client-ca")
+	}
+	pem, err := os.ReadFile(o.auditCA)
+	if err != nil {
+		return err
+	}
+	pool := x509.NewCertPool()
+	if !pool.AppendCertsFromPEM(pem) {
+		return fmt.Errorf("no certificates in %s", o.auditCA)
+	}
+	mux := http.NewServeMux()
+	mux.Handle("/audit", &history.AuditReceiver{Store: s, Log: log})
+	srv := &http.Server{
+		Addr:              o.auditListen,
+		Handler:           mux,
+		ReadHeaderTimeout: 10 * time.Second,
+		TLSConfig:         &tls.Config{Certificates: []tls.Certificate{cert}, ClientAuth: tls.RequireAndVerifyClientCert, ClientCAs: pool, MinVersion: tls.VersionTLS12},
+	}
+	go func() { <-ctx.Done(); _ = srv.Close() }()
+	go func() {
+		if err := srv.ListenAndServeTLS("", ""); err != nil && err != http.ErrServerClosed {
+			log.Error("audit", "err", err)
+		}
+	}()
+	log.Info("receiving audit events", "addr", o.auditListen)
+	return nil
 }

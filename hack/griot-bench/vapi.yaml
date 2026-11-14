@@ -20,6 +20,7 @@ spec:
     spec:
       volumes:
         - {name: pki, secret: {secretName: vapi-pki}}
+        - {name: audit, secret: {secretName: vapi-audit}}
         - {name: etcd, emptyDir: {}}
       containers:
         - name: etcd
@@ -53,7 +54,11 @@ spec:
             - --enable-aggregator-routing=true
             - --max-requests-inflight=800
             - --max-mutating-requests-inflight=400
-          volumeMounts: [{name: pki, mountPath: /pki}]
+            # Audit events go to griot-pg, which names users in timelines.
+            - --audit-policy-file=/audit/policy.yaml
+            - --audit-webhook-config-file=/audit/webhook.kubeconfig
+            - --audit-webhook-batch-max-wait=1s
+          volumeMounts: [{name: pki, mountPath: /pki}, {name: audit, mountPath: /audit}]
           resources: {requests: {cpu: 200m, memory: 1Gi}, limits: {memory: 3Gi}}
         - name: controller-manager
           image: registry.k8s.io/kube-controller-manager:v1.35.9

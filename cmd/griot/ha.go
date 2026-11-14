@@ -62,10 +62,12 @@ func elect(ctx context.Context, log *slog.Logger, kube kubernetes.Interface, o o
 	})
 }
 
-// retain applies the policy periodically on the recording replica.
-func retain(ctx context.Context, log *slog.Logger, s history.Store, p history.Policy, every time.Duration, m *metrics) {
+// retain applies the policy periodically on the recording replica, and
+// vacuums the store every vacuumEvery (0: never).
+func retain(ctx context.Context, log *slog.Logger, s history.Store, p history.Policy, every, vacuumEvery time.Duration, m *metrics) {
 	t := time.NewTicker(every)
 	defer t.Stop()
+	lastVacuum := time.Now()
 	for {
 		start := time.Now()
 		st, err := s.Retain(ctx, p, start)
@@ -75,6 +77,16 @@ func retain(ctx context.Context, log *slog.Logger, s history.Store, p history.Po
 			log.Info("forgot old changes", "compacted", st.Compacted, "expired", st.Expired, "trimmed", st.Trimmed, "tombstones", st.Tombstones, "took", time.Since(start))
 		}
 		m.retained(st, time.Since(start))
+		if vacuumEvery > 0 && time.Since(lastVacuum) >= vacuumEvery {
+			vs := time.Now()
+			if err := s.Vacuum(ctx); err != nil {
+				log.Warn("vacuum", "err", err)
+			} else {
+				log.Info("vacuumed the store", "took", time.Since(vs))
+				m.vacuumed(time.Since(vs))
+			}
+			lastVacuum = time.Now()
+		}
 		if size, err := s.Stats(ctx); err == nil {
 			m.stats(size)
 		}
@@ -95,7 +107,14 @@ type metrics struct {
 	mu        sync.Mutex
 	forgotten int64
 	retainDur time.Duration
+	vacuumDur time.Duration
 	size      history.Stats
+}
+
+func (m *metrics) vacuumed(d time.Duration) {
+	m.mu.Lock()
+	defer m.mu.Unlock()
+	m.vacuumDur = d
 }
 
 func (m *metrics) retained(st history.RetainStats, d time.Duration) {
@@ -114,7 +133,7 @@ func (m *metrics) stats(s history.Stats) {
 func (m *metrics) ServeHTTP(w http.ResponseWriter, _ *http.Request) {
 	c := &m.rec.Counters
 	m.mu.Lock()
-	size, forgotten, rd := m.size, m.forgotten, m.retainDur
+	size, forgotten, rd, vd := m.size, m.forgotten, m.retainDur, m.vacuumDur
 	m.mu.Unlock()
 	leader := 0
 	if m.leader.Load() {
@@ -139,6 +158,7 @@ func (m *metrics) ServeHTTP(w http.ResponseWriter, _ *http.Request) {
 		{"griot_store_bytes", "gauge", "store size at the last retention run", size.Bytes},
 		{"griot_retention_forgotten_total", "counter", "records forgotten by retention and compaction", forgotten},
 		{"griot_retention_last_seconds", "gauge", "duration of the last retention run", rd.Seconds()},
+		{"griot_vacuum_last_seconds", "gauge", "duration of the last vacuum", vd.Seconds()},
 	} {
 		fmt.Fprintf(w, "# HELP %s %s\n# TYPE %s %s\n%s %v\n", l.name, l.help, l.name, l.kind, l.name, l.v)
 	}
