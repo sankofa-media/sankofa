@@ -74,6 +74,17 @@ type Stats struct {
 	Bytes   int64 `json:"bytes"`   // on-disk size as the backend reports it
 }
 
+// Summary is an object's life in numbers: what a story needs without
+// reading every record.
+type Summary struct {
+	Records  int
+	Changes  int
+	Lives    int
+	First    Record // without body
+	Last     Record // without body
+	Managers []string
+}
+
 // Store is where the memory lives. SQLite (one file, one writer) and
 // PostgreSQL (shared by several Griot replicas) implement it.
 type Store interface {
@@ -96,9 +107,13 @@ type Store interface {
 	Latest(ctx context.Context, uid string) (Record, bool, error)
 	// Obituaries lists deaths, newest first, optionally in one namespace.
 	Obituaries(ctx context.Context, namespace string, limit int) ([]Record, error)
-	// NamespaceAt returns the latest record of every object that was alive in
-	// the namespace at t ("" means cluster-scoped objects).
-	NamespaceAt(ctx context.Context, namespace string, t time.Time) ([]Record, error)
+	// NamespaceAt returns the state of every object that was alive in the
+	// namespace at t ("" means cluster-scoped objects), paged.
+	NamespaceAt(ctx context.Context, namespace string, t time.Time, after *Cursor, limit int) ([]Record, error)
+	// Moments returns records without bodies, newest first, paged by id.
+	Moments(ctx context.Context, ref Ref, limit int, beforeID int64) ([]Record, error)
+	// Summarize counts an object's life without reading it.
+	Summarize(ctx context.Context, ref Ref) (Summary, error)
 	// Prune forgets records older than before, except the latest of each uid.
 	Prune(ctx context.Context, before time.Time) (int64, error)
 	// Retain applies a retention policy and compaction.

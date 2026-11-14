@@ -105,10 +105,16 @@ func tellCmd() *cobra.Command {
 			w := cmd.OutOrStdout()
 			fmt.Fprintln(w, wrap(tl.Story, 78))
 			fmt.Fprintln(w)
+			if tl.Records > len(tl.Moments) {
+				fmt.Fprintf(w, "  (the latest %d of %d moments)\n", len(tl.Moments), tl.Records)
+			}
 			for _, m := range tl.Moments {
 				who := m.Manager
 				if who == "" {
 					who = "-"
+				}
+				if m.User != "" {
+					who += " (" + m.User + ")"
 				}
 				fmt.Fprintf(w, "  %s  %-7s  %s\n", m.At.Local().Format("2006-01-02 15:04:05"), m.Verb, who)
 			}

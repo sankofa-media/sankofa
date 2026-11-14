@@ -59,20 +59,30 @@ func namespaceAt(ctx context.Context, ns, at string) (*history.Record, []history
 		return nil, nil, err
 	}
 	base := "/apis/" + history.Group + "/" + history.Version
-	raw, err := kc.Discovery().RESTClient().Get().AbsPath(base+"/namespaces/"+ns+"/timelines").Param("at", at).DoRaw(ctx)
-	if err != nil {
-		return nil, nil, err
-	}
-	var list history.TimelineList
-	if err := json.Unmarshal(raw, &list); err != nil {
-		return nil, nil, err
-	}
 	var recs []history.Record
-	for _, tl := range list.Items {
-		recs = append(recs, timelineRecord(tl))
+	cont := ""
+	for {
+		req := kc.Discovery().RESTClient().Get().AbsPath(base+"/namespaces/"+ns+"/timelines").Param("at", at).Param("limit", "500")
+		if cont != "" {
+			req = req.Param("continue", cont)
+		}
+		raw, err := req.DoRaw(ctx)
+		if err != nil {
+			return nil, nil, err
+		}
+		var list history.TimelineList
+		if err := json.Unmarshal(raw, &list); err != nil {
+			return nil, nil, err
+		}
+		for _, tl := range list.Items {
+			recs = append(recs, timelineRecord(tl))
+		}
+		if cont = list.Continue; cont == "" {
+			break
+		}
 	}
 	var nsRec *history.Record
-	raw, err = kc.Discovery().RESTClient().Get().AbsPath(base+"/clustertimelines/"+history.TimelineName(history.Ref{Resource: "namespaces", Name: ns})).Param("at", at).DoRaw(ctx)
+	raw, err := kc.Discovery().RESTClient().Get().AbsPath(base+"/clustertimelines/"+history.TimelineName(history.Ref{Resource: "namespaces", Name: ns})).Param("at", at).DoRaw(ctx)
 	switch {
 	case err == nil:
 		var tl history.Timeline

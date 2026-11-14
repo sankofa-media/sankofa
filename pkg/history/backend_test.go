@@ -117,7 +117,7 @@ func TestBackends(t *testing.T) {
 				at   time.Duration
 				want string
 			}{{30 * time.Minute, "one"}, {90 * time.Minute, "one,two"}, {150 * time.Minute, "one"}, {4 * time.Hour, "one,two"}} {
-				recs, err := s.NamespaceAt(ctx, "a", t0.Add(tc.at))
+				recs, err := s.NamespaceAt(ctx, "a", t0.Add(tc.at), nil, 0)
 				if err != nil {
 					t.Fatal(err)
 				}
@@ -359,5 +359,121 @@ func TestNormalizeKeepsManager(t *testing.T) {
 	}
 	if _, h2, _ := Normalize(cms, cm("a", "x", "u", "1")); h1 != h2 {
 		t.Fatal("status and managed fields must not change the content hash")
+	}
+}
+
+// Paged reads agree with whole reads: the story told from a summary is the
+// story told from every record, and pages of a namespace cover it once.
+func TestSummaryAndPages(t *testing.T) {
+	for name, s := range backends(t) {
+		t.Run(name, func(t *testing.T) {
+			ctx := context.Background()
+			u := cm("a", "x", "u1", "0")
+			es := []Entry{entry(t, cms, u, Born, t0)}
+			for i := 1; i <= 7; i++ {
+				e := entry(t, cms, cm("a", "x", "u1", fmt.Sprint(i)), Changed, t0.Add(time.Duration(i)*time.Minute))
+				e.Record.Manager = []string{"kubectl", "helm"}[i%2]
+				es = append(es, e)
+			}
+			es = append(es, entry(t, cms, u, Died, t0.Add(time.Hour)), entry(t, cms, cm("a", "x", "u2", "again"), Born, t0.Add(2*time.Hour)))
+			for i := 0; i < 23; i++ {
+				es = append(es, entry(t, cms, cm("a", fmt.Sprintf("n%02d", i), fmt.Sprintf("v%d", i), "1"), Born, t0))
+			}
+			if err := s.AddBatch(ctx, es[:5]); err != nil {
+				t.Fatal(err)
+			}
+			if err := s.AddBatch(ctx, es[5:]); err != nil {
+				t.Fatal(err)
+			}
+			ref := Ref{Resource: "configmaps", Namespace: "a", Name: "x"}
+			life, _ := s.Life(ctx, ref)
+			sum, err := s.Summarize(ctx, ref)
+			if err != nil || sum.Records != len(life) {
+				t.Fatalf("summary %+v %v", sum, err)
+			}
+			if got, want := StoryOf("ConfigMap", ref, sum), Story("ConfigMap", ref, life); got != want {
+				t.Fatalf("story from summary:\n%s\nwant\n%s", got, want)
+			}
+			page, _ := s.Moments(ctx, ref, 4, 0)
+			older, _ := s.Moments(ctx, ref, 100, page[3].ID)
+			if len(page) != 4 || page[0].UID != "u2" || len(page)+len(older) != len(life) || len(page[0].Object) != 0 {
+				t.Fatalf("moments pages %d + %d of %d", len(page), len(older), len(life))
+			}
+			for _, at := range []time.Duration{30 * time.Second, 30 * time.Minute, 90 * time.Minute, 3 * time.Hour} {
+				whole, _ := s.NamespaceAtScan(ctx, "a", t0.Add(at))
+				var paged []Record
+				var after *Cursor
+				for {
+					p, err := s.NamespaceAt(ctx, "a", t0.Add(at), after, 5)
+					if err != nil {
+						t.Fatal(err)
+					}
+					paged = append(paged, p...)
+					if len(p) < 5 {
+						break
+					}
+					l := p[len(p)-1]
+					after = &Cursor{Group: l.Ref.Group, Resource: l.Ref.Resource, Name: l.Ref.Name, ID: l.ID}
+				}
+				if len(paged) != len(whole) {
+					t.Fatalf("at +%s: %d paged, %d scanned", at, len(paged), len(whole))
+				}
+				for i := range whole {
+					if paged[i].ID != whole[i].ID {
+						t.Fatalf("at +%s: record %d differs: %d vs %d", at, i, paged[i].ID, whole[i].ID)
+					}
+				}
+			}
+			// Compaction removes records from the middle of a life: the
+			// intervals must be repaired so reads still agree.
+			tiers, _ := ParseTiers("1h:24h")
+			if _, err := s.Retain(ctx, Policy{Tiers: tiers}, t0.Add(48*time.Hour)); err != nil {
+				t.Fatal(err)
+			}
+			for _, at := range []time.Duration{30 * time.Second, 3 * time.Minute, 30 * time.Minute, 90 * time.Minute, 3 * time.Hour} {
+				whole, _ := s.NamespaceAtScan(ctx, "a", t0.Add(at))
+				now, _ := s.NamespaceAt(ctx, "a", t0.Add(at), nil, 0)
+				if len(now) != len(whole) {
+					t.Fatalf("after compaction at +%s: %d vs %d", at, len(now), len(whole))
+				}
+				for i := range whole {
+					if now[i].ID != whole[i].ID {
+						t.Fatalf("after compaction at +%s: %d vs %d", at, now[i].ID, whole[i].ID)
+					}
+				}
+			}
+		})
+	}
+}
+
+// A store written before validity intervals gets them on open.
+func TestIntervalsBackfilled(t *testing.T) {
+	path := filepath.Join(t.TempDir(), "old.db")
+	db, err := sql.Open("sqlite", path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	_, err = db.Exec(`CREATE TABLE records (id INTEGER PRIMARY KEY AUTOINCREMENT, grp TEXT NOT NULL, resource TEXT NOT NULL, namespace TEXT NOT NULL, name TEXT NOT NULL,
+  uid TEXT NOT NULL, kind TEXT NOT NULL, verb TEXT NOT NULL, at INTEGER NOT NULL, manager TEXT NOT NULL, revision TEXT NOT NULL, hash TEXT NOT NULL, object BLOB NOT NULL);
+INSERT INTO records(grp,resource,namespace,name,uid,kind,verb,at,manager,revision,hash,object) VALUES
+ ('','configmaps','a','x','u1','ConfigMap','born',1000,'','1','h','{}'),
+ ('','configmaps','a','x','u1','ConfigMap','changed',2000,'','2','h2','{}'),
+ ('','configmaps','a','y','u2','ConfigMap','born',1000,'','1','h','{}'),
+ ('','configmaps','a','y','u2','ConfigMap','died',3000,'','1','h','{}');`)
+	db.Close()
+	if err != nil {
+		t.Fatal(err)
+	}
+	s, err := OpenSQLite(path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer s.Close()
+	for _, at := range []int64{500, 1500, 2500, 3500} {
+		whole, _ := s.NamespaceAtScan(context.Background(), "a", time.UnixMilli(at))
+		now, _ := s.NamespaceAt(context.Background(), "a", time.UnixMilli(at), nil, 0)
+		if len(whole) != len(now) {
+			t.Fatalf("at %d: %d vs %d", at, len(now), len(whole))
+		}
 	}
 }

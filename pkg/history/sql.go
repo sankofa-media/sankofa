@@ -28,7 +28,7 @@ CREATE TABLE IF NOT EXISTS records (
   grp TEXT NOT NULL, resource TEXT NOT NULL, namespace TEXT NOT NULL, name TEXT NOT NULL,
   uid TEXT NOT NULL, kind TEXT NOT NULL, verb TEXT NOT NULL, at INTEGER NOT NULL,
   manager TEXT NOT NULL, revision TEXT NOT NULL, hash TEXT NOT NULL, object BLOB NOT NULL,
-  recorded INTEGER NOT NULL DEFAULT 0
+  recorded INTEGER NOT NULL DEFAULT 0, until INTEGER NOT NULL DEFAULT 4611686018427387904
 );`}
 
 var postgresDialect = dialect{name: "postgres", dollar: true, schema: `
@@ -37,14 +37,17 @@ CREATE TABLE IF NOT EXISTS records (
   grp TEXT NOT NULL, resource TEXT NOT NULL, namespace TEXT NOT NULL, name TEXT NOT NULL,
   uid TEXT NOT NULL, kind TEXT NOT NULL, verb TEXT NOT NULL, at BIGINT NOT NULL,
   manager TEXT NOT NULL, revision TEXT NOT NULL, hash TEXT NOT NULL, object BYTEA NOT NULL,
-  recorded BIGINT NOT NULL DEFAULT 0
-);`}
+  recorded BIGINT NOT NULL DEFAULT 0, until BIGINT NOT NULL DEFAULT 4611686018427387904
+);
+-- Many small deletes from retention: vacuum and analyze this table early
+-- rather than at the default 20% of dead rows.
+ALTER TABLE records SET (autovacuum_vacuum_scale_factor = 0.02, autovacuum_analyze_scale_factor = 0.01, autovacuum_vacuum_cost_limit = 1000);`}
 
 const indexes = `
 CREATE INDEX IF NOT EXISTS records_ref ON records(grp, resource, namespace, name, at);
 CREATE INDEX IF NOT EXISTS records_verb ON records(verb, at);
 CREATE INDEX IF NOT EXISTS records_uid ON records(uid, id);
-CREATE INDEX IF NOT EXISTS records_ns ON records(namespace, at);`
+CREATE INDEX IF NOT EXISTS records_ns_until ON records(namespace, until, at);`
 
 func (d dialect) rebind(q string) string {
 	if !d.dollar {
@@ -117,6 +120,19 @@ func newSQLStore(db *sql.DB, d dialect) (*SQLStore, error) {
 			return nil, err
 		}
 	}
+	// Stores created before validity intervals: add and fill them once.
+	if _, err := db.Exec(`SELECT until FROM records LIMIT 0`); err != nil {
+		if _, err := db.Exec(`ALTER TABLE records ADD COLUMN until BIGINT NOT NULL DEFAULT ` + strconv.FormatInt(Forever, 10)); err != nil {
+			db.Close()
+			return nil, err
+		}
+		if _, err := db.Exec(d.rebind(repairUntil), Forever, Forever); err != nil {
+			db.Close()
+			return nil, fmt.Errorf("fill validity intervals: %w", err)
+		}
+	}
+	// The old namespace index is replaced by records_ns_until.
+	_, _ = db.Exec(`DROP INDEX IF EXISTS records_ns`)
 	for _, stmt := range strings.Split(strings.TrimSpace(indexes), ";") {
 		if stmt = strings.TrimSpace(stmt); stmt == "" {
 			continue
@@ -235,29 +251,81 @@ func (s *SQLStore) Add(ctx context.Context, r Record, hash string) error {
 // batchRows keeps a multi-row INSERT well under SQLite's parameter limit.
 const batchRows = 500
 
-// AddBatch appends records in one transaction with multi-row inserts.
+// Forever is the end of the validity interval of a current state.
+const Forever int64 = 1 << 62
+
+// Every record is the state of its object from at until the next record of
+// the same uid; a death is valid for no time at all. The interval makes
+// "everything alive at T" an index range instead of a scan of all history.
+//
+// repairUntil recomputes intervals after records were removed from the middle
+// of a life (compaction) or for stores created before intervals existed.
+const repairUntil = `UPDATE records SET until = CASE WHEN verb='died' THEN at ELSE COALESCE((SELECT n.at FROM records n WHERE n.uid=records.uid AND n.id>records.id ORDER BY n.id LIMIT 1), ?) END
+ WHERE until <> CASE WHEN verb='died' THEN at ELSE COALESCE((SELECT n.at FROM records n WHERE n.uid=records.uid AND n.id>records.id ORDER BY n.id LIMIT 1), ?) END`
+
+// AddBatch appends records in one transaction with multi-row inserts, and
+// closes the validity interval of the state each record replaces.
 func (s *SQLStore) AddBatch(ctx context.Context, entries []Entry) error {
 	if len(entries) == 0 {
 		return nil
+	}
+	// Within the batch, a record is valid until the next one of its uid.
+	until := make([]int64, len(entries))
+	next := map[string]int{}
+	first := map[string]int64{} // uid -> at of its first record in the batch
+	var order []string
+	for i := len(entries) - 1; i >= 0; i-- {
+		r := entries[i].Record
+		until[i] = Forever
+		if j, ok := next[r.UID]; ok {
+			until[i] = entries[j].Record.At.UnixMilli()
+		}
+		if r.Verb == Died {
+			until[i] = r.At.UnixMilli()
+		}
+		next[r.UID] = i
+	}
+	for i, e := range entries {
+		if _, ok := first[e.Record.UID]; !ok {
+			first[e.Record.UID] = entries[i].Record.At.UnixMilli()
+			order = append(order, e.Record.UID)
+		}
 	}
 	tx, err := s.db.BeginTx(ctx, nil)
 	if err != nil {
 		return err
 	}
 	defer func() { _ = tx.Rollback() }()
+	for start := 0; start < len(order); start += batchRows {
+		chunk := order[start:min(start+batchRows, len(order))]
+		var b strings.Builder
+		b.WriteString(`WITH v(uid, t) AS (VALUES `)
+		args := make([]any, 0, 2*len(chunk)+1)
+		for i, uid := range chunk {
+			if i > 0 {
+				b.WriteByte(',')
+			}
+			b.WriteString("(CAST(? AS TEXT), CAST(? AS BIGINT))")
+			args = append(args, uid, first[uid])
+		}
+		b.WriteString(`) UPDATE records SET until = (SELECT t FROM v WHERE v.uid = records.uid) WHERE until = ? AND uid IN (SELECT uid FROM v)`)
+		if _, err := tx.ExecContext(ctx, s.q(b.String()), append(args, Forever)...); err != nil {
+			return fmt.Errorf("close intervals: %w", err)
+		}
+	}
 	now := time.Now().UnixMilli()
 	for start := 0; start < len(entries); start += batchRows {
 		chunk := entries[start:min(start+batchRows, len(entries))]
 		var b strings.Builder
-		b.WriteString(`INSERT INTO records(grp,resource,namespace,name,uid,kind,verb,at,manager,revision,hash,object,recorded) VALUES`)
-		args := make([]any, 0, len(chunk)*13)
+		b.WriteString(`INSERT INTO records(grp,resource,namespace,name,uid,kind,verb,at,manager,revision,hash,object,recorded,until) VALUES`)
+		args := make([]any, 0, len(chunk)*14)
 		for i, e := range chunk {
 			if i > 0 {
 				b.WriteByte(',')
 			}
-			b.WriteString("(?,?,?,?,?,?,?,?,?,?,?,?,?)")
+			b.WriteString("(?,?,?,?,?,?,?,?,?,?,?,?,?,?)")
 			r := e.Record
-			args = append(args, r.Ref.Group, r.Ref.Resource, r.Ref.Namespace, r.Ref.Name, r.UID, r.Kind, r.Verb, r.At.UnixMilli(), r.Manager, r.Revision, e.Hash, s.pack(r.Object), now)
+			args = append(args, r.Ref.Group, r.Ref.Resource, r.Ref.Namespace, r.Ref.Name, r.UID, r.Kind, r.Verb, r.At.UnixMilli(), r.Manager, r.Revision, e.Hash, s.pack(r.Object), now, until[start+i])
 		}
 		if _, err := tx.ExecContext(ctx, s.q(b.String()), args...); err != nil {
 			return err
@@ -310,10 +378,111 @@ func (s *SQLStore) Obituaries(ctx context.Context, namespace string, limit int) 
 	return s.query(ctx, q, append(args, limit)...)
 }
 
-// NamespaceAt returns the state of every object alive in the namespace at t.
-func (s *SQLStore) NamespaceAt(ctx context.Context, namespace string, t time.Time) ([]Record, error) {
+// Cursor continues a paged namespace read after the last object returned.
+type Cursor struct {
+	Group, Resource, Name string
+	ID                    int64
+}
+
+// NamespaceAt returns the state of every object alive in the namespace at t,
+// ordered by resource and name, at most limit (0: all) after the cursor. It
+// reads the validity intervals: its cost follows the objects alive at t and
+// the changes made after t, not the whole history.
+func (s *SQLStore) NamespaceAt(ctx context.Context, namespace string, t time.Time, after *Cursor, limit int) ([]Record, error) {
+	q := `SELECT ` + cols + ` FROM records WHERE namespace=? AND until>? AND at<=? AND verb<>'died'`
+	args := []any{namespace, t.UnixMilli(), t.UnixMilli()}
+	if after != nil {
+		q += ` AND (grp, resource, name, id) > (?, ?, ?, ?)`
+		args = append(args, after.Group, after.Resource, after.Name, after.ID)
+	}
+	q += ` ORDER BY grp, resource, name, id`
+	if limit > 0 {
+		q += ` LIMIT ?`
+		args = append(args, limit)
+	}
+	return s.query(ctx, q, args...)
+}
+
+// NamespaceAtScan is the query NamespaceAt used before validity intervals:
+// the latest record of every uid not after t. Kept to measure the difference.
+func (s *SQLStore) NamespaceAtScan(ctx context.Context, namespace string, t time.Time) ([]Record, error) {
 	return s.query(ctx, `SELECT `+cols+` FROM records WHERE id IN (SELECT MAX(id) FROM records WHERE namespace=? AND at<=? GROUP BY uid) AND verb<>'died' ORDER BY grp, resource, name`,
 		namespace, t.UnixMilli())
+}
+
+// Moments returns records of an object without bodies, newest first, at most
+// limit, older than beforeID when it is not zero.
+func (s *SQLStore) Moments(ctx context.Context, ref Ref, limit int, beforeID int64) ([]Record, error) {
+	q := `SELECT id,grp,resource,namespace,name,uid,kind,verb,at,manager,revision,recorded FROM records` + byRef
+	args := refArgs(ref)
+	if beforeID > 0 {
+		q += ` AND id<?`
+		args = append(args, beforeID)
+	}
+	q += ` ORDER BY id DESC LIMIT ?`
+	rows, err := s.db.QueryContext(ctx, s.q(q), append(args, limit)...)
+	if err != nil {
+		return nil, err
+	}
+	defer rows.Close()
+	var out []Record
+	for rows.Next() {
+		var r Record
+		var at, recorded int64
+		if err := rows.Scan(&r.ID, &r.Ref.Group, &r.Ref.Resource, &r.Ref.Namespace, &r.Ref.Name, &r.UID, &r.Kind, &r.Verb, &at, &r.Manager, &r.Revision, &recorded); err != nil {
+			return nil, err
+		}
+		r.At = time.UnixMilli(at).UTC()
+		if recorded > 0 {
+			r.Recorded = time.UnixMilli(recorded).UTC()
+		}
+		out = append(out, r)
+	}
+	return out, rows.Err()
+}
+
+// Summarize counts an object's life without reading it.
+func (s *SQLStore) Summarize(ctx context.Context, ref Ref) (Summary, error) {
+	var sum Summary
+	var changed, born sql.NullInt64
+	err := s.db.QueryRowContext(ctx, s.q(`SELECT COUNT(*), SUM(CASE WHEN verb='changed' THEN 1 ELSE 0 END), SUM(CASE WHEN verb='born' THEN 1 ELSE 0 END) FROM records`+byRef), refArgs(ref)...).
+		Scan(&sum.Records, &changed, &born)
+	if err != nil || sum.Records == 0 {
+		return sum, err
+	}
+	sum.Changes, sum.Lives = int(changed.Int64), int(born.Int64)
+	first, err := s.Moments(ctx, ref, 1, 0)
+	if err != nil {
+		return sum, err
+	}
+	sum.Last = first[0]
+	rows, err := s.db.QueryContext(ctx, s.q(`SELECT id,grp,resource,namespace,name,uid,kind,verb,at,manager,revision,recorded FROM records`+byRef+` ORDER BY id LIMIT 1`), refArgs(ref)...)
+	if err != nil {
+		return sum, err
+	}
+	for rows.Next() {
+		var at, recorded int64
+		r := &sum.First
+		if err := rows.Scan(&r.ID, &r.Ref.Group, &r.Ref.Resource, &r.Ref.Namespace, &r.Ref.Name, &r.UID, &r.Kind, &r.Verb, &at, &r.Manager, &r.Revision, &recorded); err != nil {
+			rows.Close()
+			return sum, err
+		}
+		r.At = time.UnixMilli(at).UTC()
+	}
+	rows.Close()
+	mrows, err := s.db.QueryContext(ctx, s.q(`SELECT DISTINCT manager FROM records`+byRef+` AND manager<>'' ORDER BY manager LIMIT 50`), refArgs(ref)...)
+	if err != nil {
+		return sum, err
+	}
+	defer mrows.Close()
+	for mrows.Next() {
+		var m string
+		if err := mrows.Scan(&m); err != nil {
+			return sum, err
+		}
+		sum.Managers = append(sum.Managers, m)
+	}
+	return sum, mrows.Err()
 }
 
 // Prune forgets records older than the retention, except the last record of

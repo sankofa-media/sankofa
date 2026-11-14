@@ -111,6 +111,13 @@ func (s *SQLStore) Retain(ctx context.Context, p Policy, now time.Time) (RetainS
 		}
 		st.Compacted += n
 	}
+	if st.Compacted > 0 {
+		// Records left the middle of lives: the states before them now last
+		// until the next surviving record.
+		if _, err := s.exec(ctx, repairUntil, Forever, Forever); err != nil {
+			return st, fmt.Errorf("repair intervals: %w", err)
+		}
+	}
 	if p.MaxAge > 0 {
 		if st.Expired, err = s.Prune(ctx, now.Add(-p.MaxAge)); err != nil {
 			return st, fmt.Errorf("expire: %w", err)
