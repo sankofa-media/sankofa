@@ -388,7 +388,7 @@ func query(ctx context.Context) error {
 	timeit("life deployment", *iterations, life(func(int) string {
 		return fmt.Sprintf("/namespaces/%s/timelines/deployments.apps:web-%04d", nsName(rand.IntN(*namespaces)), rand.IntN(*deployments))
 	}))
-	timeit("life probe (long history)", *iterations, life(func(int) string { return "/namespaces/bench-probe/timelines/configmaps.core:probe" }))
+	timeit("life probe (long history)", *iterations, life(func(int) string { return "/namespaces/bench-probe/timelines/configmaps.core:" + *probeName }))
 	timeit("at configmap (mid)", *iterations, func(i int) (int, error) {
 		_, err := g.get(ctx, cmPath(i), map[string]string{"at": ts(mid)})
 		return 1, err

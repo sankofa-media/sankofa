@@ -169,6 +169,25 @@ def test_namespace_list_follows_rbac():
     k('delete', 'clusterrole', 'griot-e2e-memory')
 
 
+def test_who_did_it():
+    # The benchmark API server sends audit events to griot-pg: each moment
+    # names the user of the request, here an impersonated one.
+    user = NS + '-alice'
+    apply(dict(apiVersion='rbac.authorization.k8s.io/v1', kind='RoleBinding', metadata=dict(name='alice-edit', namespace=NS),
+               roleRef=dict(apiGroup='rbac.authorization.k8s.io', kind='ClusterRole', name='edit'), subjects=[dict(kind='User', name=user)]))
+    k('create', 'configmap', 'signed', '-n', NS, '--from-literal=a=1', '--as', user)
+    k('patch', 'configmap', 'signed', '-n', NS, '-p', '{"data":{"a":"2"}}', '--as', user)
+    k('delete', 'configmap', 'signed', '-n', NS)
+
+    def named():
+        tl = json.loads(k('get', '--raw', f'/apis/history.sankofa.kuberoot.dev/v1alpha1/namespaces/{NS}/timelines/configmaps.core:signed').stdout)
+        users = [m.get('user', '') for m in tl['moments']]
+        return len(users) == 3 and users[0].startswith(user) and users[1].startswith(user) and users[2] == 'bench-admin'
+    eventually(named, 60)
+    out = cli('tell', 'configmap/signed', '-n', NS).stdout
+    assert f'({user} (as, by bench-admin))' in out, out
+
+
 def test_failover_keeps_recording():
     lease = lambda: json.loads(k('get', 'lease', 'griot-recorder', '-n', 'default', '-o', 'json').stdout)['spec']['holderIdentity']
     leader = lease()
@@ -184,7 +203,7 @@ if __name__ == '__main__':
         setup()
         t2 = test_diff_namespace()
         for name, fn in [('fetch_namespace', lambda: test_fetch_namespace(t2)), ('fetch_refuses_dry_run_failure', test_fetch_refuses_dry_run_failure),
-                         ('namespace_list_follows_rbac', test_namespace_list_follows_rbac), ('failover_keeps_recording', test_failover_keeps_recording)]:
+                         ('namespace_list_follows_rbac', test_namespace_list_follows_rbac), ('who_did_it', test_who_did_it), ('failover_keeps_recording', test_failover_keeps_recording)]:
             start = time.monotonic()
             fn()
             print(json.dumps(dict(test=name, status='passed', seconds=round(time.monotonic() - start, 1))), flush=True)
