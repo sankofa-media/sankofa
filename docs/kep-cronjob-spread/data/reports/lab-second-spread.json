@@ -1,0 +1,78 @@
+{
+ "jobs_share_in_first_10s_of_minute": 0.17,
+ "jobs": {
+  "count": 1000,
+  "peak_per_second": 7,
+  "peak_per_minute": 105,
+  "seconds_with_creations": 497
+ },
+ "pods_share_in_first_10s_of_minute": 0.17,
+ "pods": {
+  "count": 1000,
+  "peak_per_second": 7,
+  "peak_per_minute": 105,
+  "seconds_with_creations": 497
+ },
+ "job_creation_lag_seconds": {
+  "p50": 0.0,
+  "p99": 0.0,
+  "max": 0.0
+ },
+ "pod_first_scheduling_attempt_seconds": {
+  "p50": 0.0,
+  "max": 0.0
+ },
+ "api_peak_requests_per_second": {
+  "GET cronjobs": 3.0,
+  "PATCH events": 5.5,
+  "PATCH pods/status": 5.5,
+  "POST events": 20.0,
+  "POST jobs": 5.5,
+  "POST pods": 5.5,
+  "PUT cronjobs/status": 5.5,
+  "PUT jobs/status": 5.5
+ },
+ "api_requests_in_window": {
+  "GET cronjobs": 396,
+  "PATCH events": 996,
+  "PATCH pods/status": 996,
+  "POST events": 3988,
+  "POST jobs": 996,
+  "POST pods": 996,
+  "PUT cronjobs/status": 996,
+  "PUT jobs/status": 996,
+  "WATCH cronjobs": 1,
+  "WATCH pods": 2
+ },
+ "storage_writes_in_window": 10160,
+ "storage_peak_writes_per_second": 50.0,
+ "apf_peak_inqueue_requests": 0,
+ "etcd:etcd_mvcc_put_total_in_window": 10199,
+ "etcd:etcd_mvcc_put_total_peak_per_second": 44.0,
+ "etcd:etcd_mvcc_txn_total_in_window": 0,
+ "etcd:etcd_mvcc_txn_total_peak_per_second": 0.0,
+ "etcd:etcd_disk_wal_fsync_duration_seconds_count_in_window": 6616,
+ "etcd:etcd_disk_wal_fsync_duration_seconds_count_peak_per_second": 24.5,
+ "process_cpu_seconds_total_peak_cores": 0.23,
+ "process_cpu_seconds_total_in_window": 64.7,
+ "etcd:process_cpu_seconds_total_peak_cores": 0.05,
+ "etcd:process_cpu_seconds_total_in_window": 17.2,
+ "kcm:process_cpu_seconds_total_peak_cores": 0.05,
+ "kcm:process_cpu_seconds_total_in_window": 11.0,
+ "sched:process_cpu_seconds_total_peak_cores": 0.04,
+ "sched:process_cpu_seconds_total_in_window": 12.5,
+ "kcm:workqueue_depth{name=\"cronjob\"}_peak": 0.0,
+ "kcm:workqueue_depth{name=\"job\"}_peak": 0.0,
+ "sched:scheduler_pending_pods{queue=\"unschedulable\"}_peak": 0.0,
+ "sched:scheduler_pending_pods{queue=\"active\"}_peak": 0.0,
+ "kcm_job_creation_skew_p50_p99_seconds": [
+  0.5,
+  0.99
+ ],
+ "post_latency_p99_seconds": {
+  "cronjobs": null,
+  "events": 0.024241437632135307,
+  "pods": 0.02478385093167702,
+  "jobs": 0.02480199146514936
+ }
+}

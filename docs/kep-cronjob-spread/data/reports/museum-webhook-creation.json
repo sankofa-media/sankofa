@@ -1,0 +1,69 @@
+{
+ "jobs_share_in_first_10s_of_minute": 1.0,
+ "jobs": {
+  "count": 121,
+  "peak_per_second": 21,
+  "peak_per_minute": 65,
+  "seconds_with_creations": 12
+ },
+ "pods_share_in_first_10s_of_minute": 1.0,
+ "pods": {
+  "count": 121,
+  "peak_per_second": 20,
+  "peak_per_minute": 65,
+  "seconds_with_creations": 13
+ },
+ "job_creation_lag_seconds": {
+  "p50": 1.0,
+  "p99": 5.0,
+  "max": 6.0
+ },
+ "pod_first_scheduling_attempt_seconds": {
+  "p50": 0.0,
+  "max": 0.0
+ },
+ "api_peak_requests_per_second": {
+  "GET jobs": 1.0,
+  "LIST cronjobs": 6.6,
+  "PATCH pods/status": 6.8,
+  "POST cronjobs": 6.6,
+  "POST events": 19.2,
+  "POST jobs": 6.6,
+  "POST pods": 6.8,
+  "PUT cronjobs/status": 7.0,
+  "PUT jobs/status": 7.2
+ },
+ "api_requests_in_window": {
+  "DELETE jobs": 1,
+  "DELETE pods": 1,
+  "GET cronjobs": 4,
+  "GET jobs": 5,
+  "GET pods": 6,
+  "LIST cronjobs": 1000,
+  "PATCH events": 1,
+  "PATCH jobs": 1,
+  "PATCH pods": 1,
+  "PATCH pods/status": 125,
+  "POST cronjobs": 1000,
+  "POST events": 490,
+  "POST jobs": 122,
+  "POST pods": 122,
+  "POST pods/binding": 1,
+  "PUT cronjobs/status": 123,
+  "PUT jobs/status": 126,
+  "WATCH cronjobs": 2,
+  "WATCH jobs": 1,
+  "WATCH pods": 7
+ },
+ "storage_writes_in_window": 2769,
+ "storage_peak_writes_per_second": 62.4,
+ "apf_peak_inqueue_requests": 0,
+ "process_cpu_seconds_total_peak_cores": 0.42,
+ "process_cpu_seconds_total_in_window": 38.6,
+ "post_latency_p99_seconds": {
+  "events": 0.022030303030303046,
+  "pods": 0.024815999999999998,
+  "cronjobs": 0.39382716049382716,
+  "jobs": 0.023780000000000003
+ }
+}
