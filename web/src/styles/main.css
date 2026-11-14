@@ -8030,3 +8030,9 @@ html:lang(ru) .xref {
 .listen button.l-tech[aria-pressed="true"] {
   color: var(--gold);
 }
+/* The descent's desk footer is not the document desk's footer (mechanics.css). */
+.d-desk .desk-foot {
+  margin: 0;
+  max-width: none;
+  padding-top: 12px;
+}
