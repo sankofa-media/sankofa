@@ -86,7 +86,7 @@ export function answering(ready: number, silent: number, l: Lang, short = false)
     const a = short ? `${verb} ${ready}` : `${verb} ${count(ready, 'program', 'ru')}`;
     return silent ? `${a}, молчат ${silent}` : a;
   }
-  const a = short ? `${ready} answer${ready === 1 ? 's' : ''}` : `${count(ready, 'program', 'en')} answer${ready === 1 ? 's' : ''}`;
+  const a = short ? `${ready} answering` : `${count(ready, 'program', 'en')} answer${ready === 1 ? 's' : ''}`;
   return silent ? `${a}, ${silent} silent` : a;
 }
 

@@ -635,9 +635,9 @@ test('the room state stays consistent: late node not counted, pods return gradua
   await page.getByRole('button', { name: 'Mend the node' }).click();
   await page.clock.runFor(500);
   await expect(page.locator('.l-subs')).toContainText(/does\snot\smove\spods\sback/);
-  await expect(page.locator('.l-node').nth(1).locator('.st')).toContainText(/back\s·\s0\sanswer/);
+  await expect(page.locator('.l-node').nth(1).locator('.st')).toContainText(/back\s·\s0\sanswering/);
   await page.clock.runFor(7000);
-  await expect(page.locator('.l-node').nth(1).locator('.st')).toContainText(/back\s·\s[12]\sanswer/);
+  await expect(page.locator('.l-node').nth(1).locator('.st')).toContainText(/back\s·\s[12]\sanswering/);
 });
 
 test('a step reached by a jump is the active one and never shows the previous picture', async ({ page }, info) => {
