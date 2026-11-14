@@ -12,7 +12,7 @@ BN=griot-bench
 _bench_pod() {
   local name=$1; shift
   local args; args=$(printf '"%s",' "$@"); args="[${args%,}]"
-  km -n $BN apply -f - >/dev/null <<YAML
+  km -n $BN apply --validate=false -f - >/dev/null <<YAML
 apiVersion: v1
 kind: Pod
 metadata: {name: $name, namespace: $BN, labels: {app: bench-run}}

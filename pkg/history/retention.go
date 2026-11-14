@@ -96,6 +96,7 @@ const latest = `SELECT MAX(id) FROM records GROUP BY uid`
 func (s *SQLStore) Retain(ctx context.Context, p Policy, now time.Time) (RetainStats, error) {
 	var st RetainStats
 	var err error
+	touched := map[string]struct{}{} // uids that lost records from the middle of a life
 	for i, t := range p.Tiers {
 		hi := now.Add(-t.After).UnixMilli()
 		lo := int64(math.MinInt64 / 2)
@@ -103,19 +104,40 @@ func (s *SQLStore) Retain(ctx context.Context, p Policy, now time.Time) (RetainS
 			lo = now.Add(-p.Tiers[i+1].After).UnixMilli()
 		}
 		w := t.Window.Milliseconds()
-		n, err := s.exec(ctx, `DELETE FROM records WHERE verb='changed' AND at>=? AND at<?
+		rows, err := s.db.QueryContext(ctx, s.q(`DELETE FROM records WHERE verb='changed' AND at>=? AND at<?
  AND id NOT IN (SELECT MAX(id) FROM records WHERE verb='changed' AND at>=? AND at<? GROUP BY uid, at/?)
- AND id NOT IN (`+latest+`)`, lo, hi, lo, hi, w)
+ AND id NOT IN (`+latest+`) RETURNING uid`), lo, hi, lo, hi, w)
 		if err != nil {
 			return st, fmt.Errorf("compact tier %d: %w", i, err)
 		}
-		st.Compacted += n
+		for rows.Next() {
+			var uid string
+			if err := rows.Scan(&uid); err != nil {
+				rows.Close()
+				return st, err
+			}
+			touched[uid] = struct{}{}
+			st.Compacted++
+		}
+		rows.Close()
+		if err := rows.Err(); err != nil {
+			return st, fmt.Errorf("compact tier %d: %w", i, err)
+		}
 	}
-	if st.Compacted > 0 {
-		// Records left the middle of lives: the states before them now last
-		// until the next surviving record.
-		if _, err := s.exec(ctx, repairUntil, Forever, Forever); err != nil {
-			return st, fmt.Errorf("repair intervals: %w", err)
+	if len(touched) > 0 {
+		// Records left the middle of these lives: the states before them now
+		// last until the next surviving record.
+		uids := make([]any, 0, len(touched))
+		for uid := range touched {
+			uids = append(uids, uid)
+		}
+		for start := 0; start < len(uids); start += batchRows {
+			chunk := uids[start:min(start+batchRows, len(uids))]
+			marks := strings.TrimSuffix(strings.Repeat("?,", len(chunk)), ",")
+			args := append([]any{Forever, Forever}, chunk...)
+			if _, err := s.exec(ctx, repairUntil+` AND uid IN (`+marks+`)`, args...); err != nil {
+				return st, fmt.Errorf("repair intervals: %w", err)
+			}
 		}
 	}
 	if p.MaxAge > 0 {
