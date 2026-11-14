@@ -6,7 +6,7 @@ two independent authoritative sources. Both a researcher and a separate
 reviewer open and check the sources. Two websites repeating the same
 interview do not count as two independent sources.
 
-The collection contains 90 artists and 148 links. The deeper edition adds
+The collection contains 90 artists and 157 links. The deeper edition adds
 40 intermediate artists and 98 links, preserving all 50 original links,
 their claims, translations and sources. Every original artist now has a
 documented path through another artist to a museum tradition. Paths are
@@ -66,6 +66,14 @@ concrete evidence. A tag needs a passage from the link's sources, recorded in
 [`roots-elements.yaml`](../ledger/roots-elements.yaml). When the evidence
 shows only admiration, a cover or a childhood setting, `carries` is empty and
 `how` says what kind of influence it was.
+
+Where a route ran only through anecdotes, a further link names the device
+the artist actually took and from whom, for example the bass riff the Beatles
+took from Chuck Berry or the slide guitar Brian Jones learned from Elmore
+James records; the anecdote links stay.
+[`roots-deepen.yaml`](../ledger/roots-deepen.yaml) records these links with
+quoted passages, the artists whose only honest connection is still an
+anecdote, and the verdicts of an independent check.
 
 [`card-links.yaml`](card-links.yaml) explains each step between a card and
 one of its `roots` by the elements it carried, resting on card facts or
