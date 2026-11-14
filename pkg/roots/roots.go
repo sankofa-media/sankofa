@@ -60,6 +60,16 @@ type Note struct {
 // Link is one documented step of stylistic influence. To is another artist
 // of the collection ("root:<id>"), a style ("style:<id>") or a museum card
 // ("card:<id>").
+// Legacy is a labelled note on how an artist's music passed on into Black
+// traditions, the other direction from the routes. It points to museum cards
+// and is never a step of a route.
+type Legacy struct {
+	Text    string   `json:"text"`
+	TextRU  string   `json:"textRu,omitempty"`
+	Cards   []string `json:"cards"`
+	Sources []Source `json:"sources"`
+}
+
 type Link struct {
 	To string `json:"to"`
 	// Kind: influence (the artist listened to and drew on the target), style
@@ -94,10 +104,11 @@ type Artist struct {
 	GenreRU string     `json:"genreRu,omitempty"`
 	// Story tells in two or three sentences how the artist's style grew out
 	// of the tradition, built only from the facts of its own links.
-	Story   string `json:"story,omitempty"`
-	StoryRU string `json:"storyRu,omitempty"`
-	Links   []Link `json:"links"`
-	Notes   []Note `json:"notes,omitempty"`
+	Story   string  `json:"story,omitempty"`
+	StoryRU string  `json:"storyRu,omitempty"`
+	Links   []Link  `json:"links"`
+	Notes   []Note  `json:"notes,omitempty"`
+	Legacy  *Legacy `json:"legacy,omitempty"`
 }
 
 // Trait is a short stylistic feature of a style.
@@ -339,6 +350,29 @@ func (s *Set) Validate(cards *card.Set) []error {
 			}
 			if !quoted(n.Source) {
 				bad("note %d: source needs a title, a URL and a quote", i)
+			}
+		}
+		if lg := a.Legacy; lg != nil {
+			if strings.TrimSpace(lg.Text) == "" || strings.TrimSpace(lg.TextRU) == "" {
+				bad("legacy needs text and textRu")
+			}
+			if len(lg.Cards) == 0 {
+				bad("legacy needs at least one card")
+			}
+			for _, c := range lg.Cards {
+				if cards.ByID[c] == nil {
+					bad("legacy: unknown card %q", c)
+				}
+			}
+			hosts := map[string]bool{}
+			for _, src := range lg.Sources {
+				if !quoted(src) {
+					bad("legacy: source needs a title, a URL and a quote")
+				}
+				hosts[host(src.URL)] = true
+			}
+			if len(hosts) < 2 {
+				bad("legacy needs quoted sources from at least two websites")
 			}
 		}
 	}

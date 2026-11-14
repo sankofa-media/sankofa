@@ -18,6 +18,30 @@
 .rt-head .r-story {
   margin: 0;
 }
+.rt-legacy {
+  max-width: 58ch;
+  padding: 12px 16px;
+  border-left: 2px solid var(--gold);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.rt-legacy small {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 4px;
+}
+.rt-legacy p {
+  margin: 0;
+}
+.rt-legacy .rt-legacy-cards {
+  margin-top: 6px;
+}
 
 /* The overview */
 .rt-overview {

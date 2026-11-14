@@ -188,6 +188,15 @@ everyone in the collection.`,
 					say("", fmt.Sprintf("%s · %s (%s): %s", n.Period, n.Who, n.Role, pick(n.What, n.WhatRU)))
 				}
 			}
+			if lg := a.Legacy; lg != nil {
+				fmt.Fprintf(w, "\n%s\n", stMeta.Render(tr("The other direction (not a route step)")+":"))
+				say("", pick(lg.Text, lg.TextRU))
+				refs := make([]string, len(lg.Cards))
+				for i, c := range lg.Cards {
+					refs[i] = node("card:" + c)
+				}
+				fmt.Fprintf(w, "   → %s\n", strings.Join(refs, ", "))
+			}
 			return nil
 		},
 	}
