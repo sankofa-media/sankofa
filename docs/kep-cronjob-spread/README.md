@@ -573,7 +573,10 @@ CronJob grows by about 20 bytes when the field is set.
 
 ###### Will enabling / using this feature result in increasing time taken by any operations covered by existing SLIs/SLOs?
 
-No. It reduces peak API latency during schedule boundaries; see
+No. It removes the queueing delay at schedule boundaries (1000 CronJobs on one
+schedule: median Job 58 s late without a spread, 0 s with
+`maxDelaySeconds: 600`) and lowers peak storage writes (80.5 → 44 etcd puts
+per second) and API server CPU (0.37 → 0.23 cores) for the same total work; see
 [evidence.md](evidence.md).
 
 ###### Will enabling / using this feature result in non-negligible increase of resource usage (CPU, RAM, disk, IO, ...) in any components?
@@ -639,10 +642,13 @@ yet used by CronJobs with the same remaining fields, and records the written
 schedule in an annotation. It needs no core change, but:
 
 - it lists every CronJob in the cluster on each CronJob create/update to find
-  free minutes, which grows quadratically with the number of CronJobs;
+  free minutes, which grows quadratically with the number of CronJobs
+  (measured: 1000 LIST requests and 65% more API server CPU while creating
+  1000 CronJobs);
 - the chosen minute depends on creation order and is not reproducible;
 - it only spreads across minutes, leaving a burst at second `:00` of each
-  minute (measured in [evidence.md](evidence.md));
+  minute: 84% of Jobs started in the first ten seconds of their minute, at the
+  herd's per-second peak ([evidence.md](evidence.md));
 - with `failurePolicy: Ignore`, a webhook outage makes `H` schedules fail
   validation; with `Fail`, it blocks all CronJob writes;
 - the stored `spec.schedule` differs from the manifest, so GitOps tools see
