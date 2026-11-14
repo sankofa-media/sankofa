@@ -1,4 +1,3 @@
----
 id: bts
 name: BTS
 nameRu: BTS
@@ -15,18 +14,102 @@ place:
 placeRu: "Сеул"
 genre: K-pop and hip-hop
 genreRu: кей-поп и хип-хоп
+story: "BTS debuted as a hip-hop group: their leader RM grew up on Nas, Eminem and Epik High and meant to be an underground rapper, and the rappers RM, Suga and J-Hope still anchor the group’s songs. Around that core they built K-pop’s mix of American pop, choreography synchronized as tightly as their vocal routines, and visuals."
+storyRu: "BTS начинали как хип-хоп-группа: их лидер RM вырос на Nas, Эминеме и Epik High и собирался стать андеграундным рэпером, и рэперы RM, Шуга и Джей-Хоуп по-прежнему держат на себе песни группы. Вокруг этого ядра они выстроили свойственную кей-попу смесь американского попа, хореографии, сведённой так же точно, как их вокальные партии, и визуального ряда."
 links:
-  - to: root:eminem
-    claim: BTS leader RM counts Eminem among the rappers who influenced him.
-    claimRu: Лидер BTS RM называет Эминема среди рэперов, повлиявших на него.
-    sources:
-      - title: 'El País: Interview with BTS leader RM'
-        url: https://english.elpais.com/culture/2023-03-15/rm-the-leader-of-k-pop-band-bts-we-work-so-hard-in-korea-because-70-years-ago-there-was-nothing.html
-      - title: 'Rolling Stone Korea: RM and Pharrell Williams in conversation'
-        url: https://rollingstone.co.kr/the-cover/the-cover-print-cover/18024
-    kind: influence
+  - to: "card:hip-hop"
+    kind: "influence"
+    scope: "career"
+    how: "BTS grew from hip-hop: they debuted as a rap group, their leader RM was drawn to rap as “rhythm plus poetry” by Nas, Eminem and Epik High, and the rap verses of RM, Suga and J-Hope carry the structure of their songs."
+    howRu: "BTS выросли из хип-хопа: дебютировали как рэп-группа, их лидер RM пришёл к рэпу как к «ритму плюс поэзии» благодаря Nas, Эминему и Epik High, а рэп-куплеты RM, Шуги и Джей-Хоупа держат на себе строение их песен."
     carries: ["rap-flow"]
-    how: RM, a rapper, names Eminem among the rappers who influenced him.
-    howRu: RM, сам рэпер, называет Эминема среди рэперов, которые на него повлияли.
-story: One of BTS’s documented roots runs through their leader RM. He names Eminem among the rappers who influenced him.
-storyRu: Одна из документированных связей BTS проходит через лидера группы RM. Он называет Эминема среди рэперов, повлиявших на него.
+    dimensions: ["melody-vocal", "harmony-form", "rhythm"]
+    evidence:
+      - type: "critics"
+        dimensions: ["harmony-form", "melody-vocal"]
+        text: "Sheldon Pearce notes that BTS debuted as a rap outfit and that their rap verses are essential to the structure of their songs."
+        textRu: "Шелдон Пирс отмечает, что BTS дебютировали как рэп-группа и что рэп-куплеты — основа строения их песен."
+        source:
+          title: "Pitchfork (Sheldon Pearce): BTS — Love Yourself 轉 ‘Tear’ (2018)"
+          url: "https://pitchfork.com/reviews/albums/bts-love-yourself-tear/"
+          quote: "Where rap verses are often stopgaps for other K-pop groups, obligatory aspects of pop roleplaying, they are essential to structure and composition here."
+      - type: "listening"
+        dimensions: ["melody-vocal"]
+        text: "Rolling Stone Korea writes that Nas, Eminem and Epik High drew RM into music and an imagined underground hip-hop career."
+        textRu: "Rolling Stone Korea пишет, что именно Nas, Эминем и Epik High привели RM в музыку и к мечте о карьере в андеграундном хип-хопе."
+        source:
+          title: "Rolling Stone Korea: RM and Pharrell Williams in conversation (2022)"
+          url: "https://rollingstone.co.kr/the-cover/the-cover-print-cover/18024"
+          quote: "When RM was growing up outside of Seoul, rap had already gone global, to the point where Nas, Eminem, and local groups like Epik High could seduce a studious South Korean kid into devoting his life to music — which, after some twists and turns, led him to BTS instead of the underground hip-hop career he imagined."
+      - type: "testimony"
+        dimensions: ["rhythm", "melody-vocal"]
+        text: "RM told El País that he wanted to be a rapper, not an idol, and that what got him was rap: “rhythm plus poetry”."
+        textRu: "RM рассказывал El País, что хотел быть рэпером, а не айдолом, и что его захватил рэп — «ритм плюс поэзия»."
+        source:
+          title: "El País: RM, the leader of K-pop band BTS — ‘We work so hard in Korea because 70 years ago there was nothing’ (2023)"
+          url: "https://english.elpais.com/culture/2023-03-15/rm-the-leader-of-k-pop-band-bts-we-work-so-hard-in-korea-because-70-years-ago-there-was-nothing.html"
+          quote: "What got me was rap: rhythm plus poetry."
+  - to: "style:k-pop"
+    kind: "style"
+    scope: "career"
+    how: "BTS work in K-pop: a mix of American pop, visuals and social media, with vocal routines as carefully synchronized as their choreography and a sound that shifts from rap-sung mashups to electro-pop."
+    howRu: "BTS работают в кей-попе — смеси американского попа, визуального ряда и соцсетей, где вокальные партии выверены так же точно, как хореография, а звучание меняется от смеси рэпа и пения до электропопа."
+    carries: ["rap-flow"]
+    dimensions: ["performance", "sound", "image"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["image", "sound"]
+        text: "RM describes K-pop as a mix of American pop music, visuals, Korea and social media."
+        textRu: "RM описывает кей-поп как смесь американской поп-музыки, визуального ряда, Кореи и соцсетей."
+        source:
+          title: "Rolling Stone Korea: RM and Pharrell Williams in conversation (2022)"
+          url: "https://rollingstone.co.kr/the-cover/the-cover-print-cover/18024"
+          quote: "So that was a tricky part actually, because K-pop is like a mix. It’s the mix of American pop music, other visuals, Korea, and social media and stuff."
+      - type: "critics"
+        dimensions: ["performance"]
+        text: "Pearce notes that their vocal routines are synchronized as carefully as their choreography."
+        textRu: "Пирс отмечает, что их вокальные партии выверены так же тщательно, как хореография."
+        source:
+          title: "Pitchfork (Sheldon Pearce): BTS — Love Yourself 轉 ‘Tear’ (2018)"
+          url: "https://pitchfork.com/reviews/albums/bts-love-yourself-tear/"
+          quote: "The sequencing of the vocal routines is as carefully synchronized as the choreography in their videos."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Pearce traces their evolution from a swag rap outfit through rap-sung mashups to electro-pop."
+        textRu: "Пирс прослеживает их путь от свэг-рэп-группы через смеси рэпа и пения к электропопу."
+        source:
+          title: "Pitchfork (Sheldon Pearce): BTS — Love Yourself 轉 ‘Tear’ (2018)"
+          url: "https://pitchfork.com/reviews/albums/bts-love-yourself-tear/"
+          quote: "After debuting as a swag rap outfit, they evolved from rap-sung mashups to posh electro-pop pageantry."
+      - type: "testimony"
+        dimensions: ["performance"]
+        text: "RM describes the work of K-pop as fighting day and night to perfect choreography, videos and music."
+        textRu: "RM описывает работу в кей-попе как борьбу днём и ночью за безупречную хореографию, клипы и музыку."
+        source:
+          title: "El País: RM, the leader of K-pop band BTS — ‘We work so hard in Korea because 70 years ago there was nothing’ (2023)"
+          url: "https://english.elpais.com/culture/2023-03-15/rm-the-leader-of-k-pop-band-bts-we-work-so-hard-in-korea-because-70-years-ago-there-was-nothing.html"
+          quote: "You fight day and night to perfect the choreography, the videos, the music, and there’s an explosion, a Big Bang."
+  - to: "root:eminem"
+    kind: "influence"
+    scope: "career"
+    how: "Through their leader and chief lyricist RM, BTS’s rap draws on Eminem, whom RM names among the rappers who turned him to rap."
+    howRu: "Рэп BTS через их лидера и главного автора текстов RM опирается на Эминема: RM называет Эминема среди рэперов, которые обратили его к рэпу."
+    carries: ["rap-flow"]
+    dimensions: ["melody-vocal"]
+    evidence:
+      - type: "listening"
+        dimensions: ["melody-vocal"]
+        text: "El País notes that RM cites rappers like Nas and Eminem as influences."
+        textRu: "El País отмечает, что RM называет среди тех, кто на него повлиял, таких рэперов, как Nas и Эминем."
+        source:
+          title: "El País: RM, the leader of K-pop band BTS — ‘We work so hard in Korea because 70 years ago there was nothing’ (2023)"
+          url: "https://english.elpais.com/culture/2023-03-15/rm-the-leader-of-k-pop-band-bts-we-work-so-hard-in-korea-because-70-years-ago-there-was-nothing.html"
+          quote: "You cite rappers like Nas and Eminem and groups like Radiohead and Portishead as influences, but you never mention boy bands."
+      - type: "listening"
+        dimensions: ["melody-vocal"]
+        text: "Rolling Stone Korea names Eminem among the rappers who drew RM into music."
+        textRu: "Rolling Stone Korea называет Эминема среди рэперов, которые привели RM в музыку."
+        source:
+          title: "Rolling Stone Korea: RM and Pharrell Williams in conversation (2022)"
+          url: "https://rollingstone.co.kr/the-cover/the-cover-print-cover/18024"
+          quote: "rap had already gone global, to the point where Nas, Eminem, and local groups like Epik High could seduce a studious South Korean kid into devoting his life to music"

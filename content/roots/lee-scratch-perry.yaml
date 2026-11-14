@@ -7,30 +7,72 @@ place: {"name": "Kendal, Hanover, Jamaica", "lat": 18.354, "lon": -78.079}
 placeRu: "Кендал, Ганновер, Ямайка"
 genre: "Reggae and dub"
 genreRu: "регги и даб"
-story: "Lee “Scratch” Perry developed dub by experimenting with reggae rhythm tracks and studio effects. On Blackboard Jungle Dub, King Tubby shared the mixing while Perry added the effects."
-storyRu: "Ли «Скрэтч» Перри развивал даб через эксперименты с ритм-треками регги и студийными эффектами. «Blackboard Jungle Dub» он сводил вместе с Кингом Табби, сам добавляя эффекты."
+story: "Lee “Scratch” Perry’s off-kilter rhythm on “People Funny Boy”, taken from a pocomania church service, helped the new reggae style into being, and his loping tempos set the roots-reggae sound. At his Black Ark studio he treated the mixing desk as a living instrument, pioneering dub with emphasised bass, dropped vocals, reverb and echo."
+storyRu: "Сбитый ритм, который Ли «Скрэтч» Перри подхватил на службе церкви покомания и положил в основу «People Funny Boy», помог родиться новому стилю — регги, а его раскачивающиеся темпы задали звучание рутс-регги. В студии Black Ark он обращался с пультом как с живым инструментом и стал одним из первооткрывателей даба: выдвинутый вперёд бас, исчезающий вокал, реверберация и эхо."
 links:
   - to: "card:reggae"
-    kind: "scene"
-    claim: "Lee “Scratch” Perry helped develop dub through experiments with reggae rhythm tracks and studio effects."
-    claimRu: "Ли «Скрэтч» Перри развивал даб, экспериментируя с ритм-треками регги и студийными эффектами."
-    sources:
-      - title: "Songlines: Obituary — Lee “Scratch” Perry (1936–2021)"
-        url: "https://www.songlines.co.uk/news/obituary-lee-scratch-perry-1936-2021"
-      - title: "Danny Kelly: Lee Perry interview (NME, archived by Uncarved)"
-        url: "https://uncarved.org/dub/scratch.html"
-    carries: ["reggae-offbeat", "dub"]
-    how: Perry helped shape the early reggae rhythm and then dub, through studio experiments with reverb and echo.
-    howRu: Перри помог сложиться раннему ритму регги, а потом и дабу — через студийные опыты с реверберацией и эхом.
-  - to: "root:king-tubby"
-    kind: "producer"
-    claim: "King Tubby co-mixed Lee “Scratch” Perry’s Blackboard Jungle Dub (1973), with Perry adding the effects."
-    claimRu: "Кинг Табби вместе с Ли «Скрэтчем» Перри сводил «Blackboard Jungle Dub» (1973), а Перри добавлял эффекты."
-    sources:
-      - title: "David Katz: The Strange World Of King Tubby (The Quietus)"
-        url: "https://thequietus.com/interviews/strange-world-of/king-tubby-best-music/"
-      - title: "Sean Williams: Tubby’s Dub Style (2012)"
-        url: "https://www.pure.ed.ac.uk/ws/portalfiles/portal/15441495/Tubbys_Dub_Style.pdf"
+    kind: "style"
+    scope: "career"
+    how: "Perry helped bring reggae into being with an off-kilter rhythm drawn from pocomania church drumming, and his loping tempos established the roots-reggae sound."
+    howRu: "Перри помог родиться регги, взяв сбитый ритм у барабанов церкви покомания, а его неторопливые, раскачивающиеся темпы утвердили звучание рутс-регги."
+    carries: ["reggae-offbeat", "groove"]
+    dimensions: ["rhythm"]
+    evidence:
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "Songlines credits the off-kilter rhythm of “People Funny Boy” (1968), inspired by a pocomania service, with helping reggae come into being."
+        textRu: "Songlines пишет, что сбитый ритм «People Funny Boy» (1968), навеянный службой покомания, помог родиться регги."
+        source:
+          title: "Songlines: Obituary — Lee ‘Scratch’ Perry (1936–2021)"
+          url: "https://www.songlines.co.uk/news/obituary-lee-scratch-perry-1936-2021"
+          quote: "Perry scored a big hit in Jamaica with ‘People Funny Boy’, a song of financial disappointments and grudges, illustrated by a crying baby lifted from a sound-effects record. The song’s unusual, off-kilter rhythm, inspired by a pocomania church service, helped the new reggae style come into being."
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "The Guardian says his loping tempos established the roots reggae sound."
+        textRu: "The Guardian пишет, что его неторопливые темпы утвердили звучание рутс-регги."
+        source:
+          title: "The Guardian (Ben Beaumont-Thomas): Lee ‘Scratch’ Perry, visionary master of reggae, dies aged 85 (2021)"
+          url: "https://www.theguardian.com/music/2021/aug/29/lee-scratch-perry-visionary-master-of-reggae-dies-aged-85"
+          quote: "The loping tempos of Perry’s work established the roots reggae sound that Bob Marley made world famous"
+  - to: "style:dub"
+    kind: "style"
+    scope: "career"
+    how: "At the Black Ark Perry pioneered dub: reggae tracks with the bass pushed forward, vocals dropped out and reverb, echo and delay creating an eerie sonic space, the studio played as a living instrument."
+    howRu: "В Black Ark Перри стал одним из первооткрывателей даба: в записях регги бас выдвинут вперёд, вокал выпадает, реверберация, эхо и задержка создают призрачное звуковое пространство, а на студии он играет как на живом инструменте."
     carries: ["dub"]
-    how: 'Perry and King Tubby shared the dub method: Tubby remixed, Perry added effects.'
-    howRu: 'Перри и Кинг Табби делили метод даба: Табби пересводил, Перри добавлял эффекты.'
+    dimensions: ["sound", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Songlines says the dub art form came into being at the Black Ark through experiments with reverb, echo and delay."
+        textRu: "Songlines пишет, что в Black Ark даб родился из опытов с реверберацией, эхом и задержкой."
+        source:
+          title: "Songlines: Obituary — Lee ‘Scratch’ Perry (1936–2021)"
+          url: "https://www.songlines.co.uk/news/obituary-lee-scratch-perry-1936-2021"
+          quote: "In 1973, Perry opened his own rudimentary four-track studio at his home on the outskirts of Kingston, known as the Black Ark, where Perry helped the dub art form to come into being through experimentation with reverb, echo, delay and other effects."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "The Guardian describes his dub versions: bass emphasised, vocals removed, reverb added."
+        textRu: "The Guardian описывает его даб-версии: бас подчёркнут, вокал убран, добавлена реверберация."
+        source:
+          title: "The Guardian (Ben Beaumont-Thomas): Lee ‘Scratch’ Perry, visionary master of reggae, dies aged 85 (2021)"
+          url: "https://www.theguardian.com/music/2021/aug/29/lee-scratch-perry-visionary-master-of-reggae-dies-aged-85"
+          quote: "He pioneered the technique of dub versions of reggae tracks, with the bass emphasised, vocals sometimes removed, and reverb added to create an eerie, echoing sonic space."
+      - type: "testimony"
+        dimensions: ["performance"]
+        text: "Perry described the studio as a living thing into which he put his mind."
+        textRu: "Перри описывал студию как живое существо, в которое он вкладывал свой разум."
+        source:
+          title: "The Guardian (Ben Beaumont-Thomas): Lee ‘Scratch’ Perry, visionary master of reggae, dies aged 85 (2021)"
+          url: "https://www.theguardian.com/music/2021/aug/29/lee-scratch-perry-visionary-master-of-reggae-dies-aged-85"
+          quote: "“I see the studio must be like a living thing, a life itself,” he said. “The machine must be live and intelligent. Then I put my mind into the machine and the machine perform reality.”"
+notes:
+  - period: "1973 (Blackboard Jungle Dub)"
+    who: "King Tubby"
+    role: "engineer"
+    what: "Perry’s dub album Blackboard Jungle heavily featured King Tubby’s mixing."
+    whatRu: "Даб-альбом Перри «Blackboard Jungle» во многом держится на сведении Кинга Табби."
+    source:
+      title: "Sean Williams, University of Edinburgh: Tubby’s dub style — the live art of record production (2012)"
+      url: "https://www.pure.ed.ac.uk/ws/portalfiles/portal/15441495/Tubbys_Dub_Style.pdf"
+      quote: "this soon led to the release of entire dub albums such as Lee Perry's 14 Dub Blackboard Jungle (Upsetters, 1973) and Augustus Pablo's King Tubbys Meets Rockers Uptown (Yard Music, 1976), both of which heavily featured King Tubby's mixing skills."

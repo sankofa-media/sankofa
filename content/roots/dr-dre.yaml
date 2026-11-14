@@ -7,18 +7,86 @@ place: {"name": "Compton, California", "lat": 33.8958, "lon": -118.2201}
 placeRu: "Комптон, Калифорния"
 genre: "Hip-hop and G-funk"
 genreRu: "хип-хоп и джи-фанк"
-story: "Parliament-Funkadelic’s grooves were a model for The Chronic. Dr. Dre reshaped that funk into G-funk."
-storyRu: "Грувы Parliament-Funkadelic послужили образцом для «The Chronic». Доктор Дре переработал этот фанк в джи-фанк."
+story: "Dr. Dre came out of N.W.A and gangsta rap, already experimenting with a new production style on the group’s last album. Taking Parliament-Funkadelic’s grooves as his North Star, on The Chronic (1992) he rebuilt ’70s P-Funk with live players, whining Moog synthesizers and deep bass at an unhurried tempo — the G-funk that gave West Coast rap its own sound."
+storyRu: "Доктор Дре вышел из N.W.A и гангста-рэпа и ещё на последнем альбоме группы пробовал новую манеру продакшна. Взяв грувы Parliament-Funkadelic за путеводную звезду, на «The Chronic» (1992) он заново собрал пи-фанк 1970-х: живые музыканты, ноющие синтезаторы Moog, глубокий бас и неторопливый темп — так появился джи-фанк, давший рэпу Западного побережья собственный звук."
 links:
+  - to: "style:g-funk"
+    kind: "style"
+    scope: "career"
+    how: "Dre made G-funk his signature: high-pitched whining synthesizers, deep bass grooves, funk and soul elements and a leisurely, bouncing tempo, built from the drums and bass up."
+    howRu: "Дре сделал джи-фанк своим почерком: высокие ноющие синтезаторы, глубокий басовый грув, элементы фанка и соула и неторопливый, пружинящий темп, а всё выстроено от барабанов и баса."
+    carries: ["groove"]
+    dimensions: ["sound", "rhythm"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "rhythm"]
+        text: "Rashad Grove calls “Nuthin’ But a ‘G’ Thang” the blueprint of G-funk: funk and soul samples, high-pitched synthesizers and deep bass grooves."
+        textRu: "Рашад Гроув называет «Nuthin’ But a ‘G’ Thang» образцом джи-фанка: сэмплы фанка и соула, высокие синтезаторы и глубокий басовый грув."
+        source:
+          title: "Library of Congress, National Recording Registry (Rashad Grove): “The Chronic” — Dr. Dre (1992)"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/the-chronic.pdf"
+          quote: "“Nuthin' But a ‘G’ Thang” was released as the album’s first single on November 19, 1992 and it became the blueprint for the G-funk sound, with funk and soul samples, high-pitched synthesizers, and deep bass grooves that Dre had mastered adding to his mystic reputation as the ultimate perfectionist."
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "Sheldon Pearce hears G-funk’s songs move more leisurely than East Coast rap."
+        textRu: "Шелдон Пирс слышит, что песни джи-фанка движутся неторопливее, чем рэп Восточного побережья."
+        source:
+          title: "Pitchfork (Sheldon Pearce): Dr. Dre — The Chronic"
+          url: "https://pitchfork.com/reviews/albums/dr-dre-the-chronic/"
+          quote: "The album’s reinterpretation of ’70s P-Funk, dubbed G-Funk, was altogether different. Dr. Dre’s songs moved more leisurely, a tonic for the hustle and bustle of East Coast rap."
   - to: "card:funk"
     kind: "influence"
-    claim: "Dr. Dre built the G-funk sound of The Chronic around Parliament-Funkadelic’s grooves."
-    claimRu: "Доктор Дре построил джи-фанковое звучание «The Chronic» на грувах Parliament-Funkadelic."
-    sources:
-      - title: "Library of Congress: Rashad Grove — The Chronic"
-        url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/the-chronic.pdf"
-      - title: "Pitchfork: Sheldon Pearce — The Chronic"
-        url: "https://pitchfork.com/reviews/albums/dr-dre-the-chronic/"
-    carries: ["groove", "sampling"]
-    how: Dr. Dre built G-funk by sampling and slowing down Parliament-Funkadelic’s grooves.
-    howRu: Dr. Dre построил джи-фанк, сэмплируя и замедляя грувы Parliament-Funkadelic.
+    scope: "career"
+    how: "Dre took Parliament-Funkadelic’s style as his North Star: the deep, alien grooves of George Clinton and Bernie Worrell, replayed by live musicians and bent into whining Moog lines."
+    howRu: "Дре взял за путеводную звезду стиль Parliament-Funkadelic: глубокие «инопланетные» грувы Джорджа Клинтона и Берни Уоррелла, переигранные живыми музыкантами и переплавленные в ноющие партии Moog."
+    carries: ["groove"]
+    dimensions: ["rhythm", "sound"]
+    evidence:
+      - type: "critics"
+        dimensions: ["rhythm", "sound"]
+        text: "Grove writes that Dre used Parliament-Funkadelic’s grooves as his North Star, mixing samples with live instrumentation."
+        textRu: "Гроув пишет, что Дре сделал грувы Parliament-Funkadelic своей путеводной звездой, соединяя сэмплы с живой игрой."
+        source:
+          title: "Library of Congress, National Recording Registry (Rashad Grove): “The Chronic” — Dr. Dre (1992)"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/the-chronic.pdf"
+          quote: "Using the timeless grooves of Parliament Funkadelic as his North Star, Dre seamlessly wielded samples with live instrumentation that created a unique sound that caused a seismic shift in the hip hop landscape."
+      - type: "critics"
+        dimensions: ["rhythm", "sound"]
+        text: "Pearce describes live musicians channelling Bernie Worrell and George Clinton, and Dre’s whining Moog synthesizers."
+        textRu: "Пирс описывает живых музыкантов, играющих в духе Берни Уоррелла и Джорджа Клинтона, и ноющие синтезаторы Moog у Дре."
+        source:
+          title: "Pitchfork (Sheldon Pearce): Dr. Dre — The Chronic"
+          url: "https://pitchfork.com/reviews/albums/dr-dre-the-chronic/"
+          quote: "Instead of sampling records, as he had for N.W.A, Dre had his live musicians channeling the deep alien grooves of Bernie Worrell and George Clinton. Dre helped to reshape the sound of the West using whining Moog synthesizers."
+  - to: "card:hip-hop"
+    kind: "style"
+    scope: "career"
+    how: "Dre came up as producer and member of N.W.A, the group that fused gangsta rap into a genre, and his G-funk production gave West Coast hip-hop a distinct sound."
+    howRu: "Дре вырос как продюсер и участник N.W.A — группы, превратившей гангста-рэп в жанр, а его джи-фанк дал хип-хопу Западного побережья узнаваемый звук."
+    carries: ["sampling", "rap-flow"]
+    dimensions: ["image", "sound"]
+    evidence:
+      - type: "critics"
+        dimensions: ["image"]
+        text: "The Rock & Roll Hall of Fame credits N.W.A, with Dre as a member, with turning gangsta rap into a genre."
+        textRu: "Зал славы рок-н-ролла ставит N.W.A, где был и Дре, в заслугу то, что гангста-рэп стал жанром."
+        source:
+          title: "Rock & Roll Hall of Fame: N.W.A (2016)"
+          url: "https://rockhall.com/inductees/nwa/"
+          quote: "N.W.A solidified the disparate elements of gangsta rap into a groundbreaking genre."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Grove notes that Dre was already experimenting with G-funk production on N.W.A’s last LP."
+        textRu: "Гроув отмечает, что Дре пробовал джи-фанк ещё на последнем альбоме N.W.A."
+        source:
+          title: "Library of Congress, National Recording Registry (Rashad Grove): “The Chronic” — Dr. Dre (1992)"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/the-chronic.pdf"
+          quote: "The group’s last LP, “Niggaz4Life,” saw Dre experimenting with a G-funk style of production that would later come to define his motif behind the boards."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Pearce says West Coast rap had no sound distinct from the East Coast until The Chronic."
+        textRu: "Пирс пишет, что до «The Chronic» у рэпа Западного побережья не было звука, отличного от Восточного."
+        source:
+          title: "Pitchfork (Sheldon Pearce): Dr. Dre — The Chronic"
+          url: "https://pitchfork.com/reviews/albums/dr-dre-the-chronic/"
+          quote: "there wasn’t yet a distinctive sound separating them from their East Coast predecessors. The Chronic was instrumental in changing all that."

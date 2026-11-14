@@ -14,8 +14,10 @@ export interface MapCard {
 }
 
 export interface GNode extends SimulationNodeDatum {
-  id: string; // artist id or "card:<id>"
+  id: string; // artist id, "style:<id>" or "card:<id>"
   card: boolean;
+  /** a style station (British beat, soul), not an artist */
+  style?: boolean;
   label: string;
   year: number;
   /** how many artists stand on this node (reach it through their links) */
@@ -44,7 +46,7 @@ export function buildGraph(artists: Artist[], cards: Map<string, MapCard>, name:
   const byId = new Map<string, GNode>();
   const edges: GEdge[] = [];
   const add = (n: GNode) => byId.get(n.id) ?? (byId.set(n.id, n), n);
-  for (const a of artists) add({ id: a.id, card: false, label: name(a), year: a.years[0] ?? 1950, support: 0 });
+  for (const a of artists) add({ id: a.id, card: false, style: !!a.style, label: name(a), year: a.years[0] ?? 1950, support: 0 });
   const addCard = (id: string): GNode | undefined => {
     const c = cards.get(id);
     if (!c) return undefined;
@@ -59,7 +61,7 @@ export function buildGraph(artists: Artist[], cards: Map<string, MapCard>, name:
   for (const a of artists) {
     for (const l of a.links) {
       const [k, ref] = l.to.split(':');
-      const to = k === 'card' ? (addCard(ref) ? `card:${ref}` : undefined) : byId.has(ref) ? ref : undefined;
+      const to = k === 'card' ? (addCard(ref) ? `card:${ref}` : undefined) : k === 'style' ? (byId.has(l.to) ? l.to : undefined) : byId.has(ref) ? ref : undefined;
       if (to) edges.push({ from: a.id, to, kind: l.kind ?? 'unknown', carries: l.carries });
     }
   }
@@ -70,7 +72,7 @@ export function buildGraph(artists: Artist[], cards: Map<string, MapCard>, name:
     inn.set(e.to, [...(inn.get(e.to) ?? []), e.from]);
   }
   const g: Graph = { nodes: [...byId.values()], edges, byId, out, in: inn };
-  for (const a of artists) for (const id of reach(g, a.id)) if (id !== a.id) byId.get(id)!.support++;
+  for (const a of artists) if (!a.style) for (const id of reach(g, a.id)) if (id !== a.id) byId.get(id)!.support++;
   return g;
 }
 
@@ -103,7 +105,7 @@ export function grewFrom(g: Graph, id: string): Set<string> {
  * `count` is how many artists lead back to at least one of them.
  */
 export function headline(g: Graph, sameAge = 50): { total: number; roots: GNode[]; count: number } {
-  const artists = g.nodes.filter((n) => !n.card);
+  const artists = g.nodes.filter((n) => !n.card && !n.style);
   // Only traditions older than every artist stand at the foot: a card with no
   // roots of its own from the artists' own century is not one of them.
   const first = Math.min(...artists.map((n) => n.year));
@@ -116,7 +118,7 @@ export function headline(g: Graph, sameAge = 50): { total: number; roots: GNode[
   const reached = new Map<string, number>();
   const any = new Set<string>();
   for (const id of oldest) {
-    const grew = [...grewFrom(g, id)].filter((k) => !g.byId.get(k)!.card);
+    const grew = [...grewFrom(g, id)].filter((k) => !g.byId.get(k)!.card && !g.byId.get(k)!.style);
     reached.set(id, grew.length);
     grew.forEach((k) => any.add(k));
   }

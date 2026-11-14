@@ -7,18 +7,78 @@ place: {"name": "Dawson, Georgia", "lat": 31.7735, "lon": -84.4466}
 placeRu: "Доусон, Джорджия"
 genre: "Soul"
 genreRu: "соул"
-story: "Otis Redding’s voice grew out of church singing. That upbringing was one of the foundations of his music."
-storyRu: "Голос Отиса Реддинга вырос из церковного пения. Это воспитание стало одной из основ его музыки."
+story: "Otis Redding began by trying to sound like Little Richard; critics hear in his mature voice the harshness of Little Richard joined to the softness of Sam Cooke. In soul he became a titan of emotion and live energy, building records on the Stax groove and on horn lines he sang to the players, over the triplet feel he called “church things”."
+storyRu: "Отис Реддинг начинал с попыток звучать как Литл Ричард; критики слышат в его зрелом голосе резкость Литл Ричарда, соединённую с мягкостью Сэма Кука. В соуле он стал титаном чувства и концертной энергии: его записи держались на груве Stax, на духовых партиях, которые он напевал музыкантам, и на триольном пульсе, который он называл «церковными штуками»."
 links:
-  - to: "card:gospel"
+  - to: "root:little-richard"
     kind: "influence"
-    claim: "Otis Redding’s musical upbringing was rooted in singing in church."
-    claimRu: "Музыкальное воспитание Отиса Реддинга началось с церковного пения."
-    sources:
-      - title: "New Georgia Encyclopedia: Otis Redding"
-        url: "https://www.georgiaencyclopedia.org/articles/arts-culture/otis-redding-1941-1967"
-      - title: "Thaddeus Russell: Otis Redding (American National Biography)"
-        url: "https://academic.oup.com/american-national-biography/reference/63042/reference-article-abstract/570547002"
-    carries: ["gospel-vocal"]
-    how: Redding’s singing drew on his Baptist church upbringing and on gospel-rooted singers such as Sam Cooke and Little Richard.
-    howRu: Пение Реддинга опиралось на баптистскую церковь его детства и на певцов госпеловой школы — Сэма Кука и Литтл Ричарда.
+    how: "Redding formed his singing on Little Richard’s harsh, shouting rock-and-roll vocal, which he first imitated and then blended with a softer gospel-pop croon."
+    howRu: "Реддинг выстроил своё пение на резком, кричащем рок-н-ролльном вокале Литл Ричарда: сначала подражал ему, а потом соединил его с более мягким, крунерским пением в духе госпел-попа."
+    carries: []
+    dimensions: ["melody-vocal"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The New Georgia Encyclopedia names Little Richard first among the influences with which Redding began his career as a vocalist."
+        textRu: "«Новая энциклопедия Джорджии» называет Литл Ричарда первым среди влияний, с которыми Реддинг начал путь вокалиста."
+        source:
+          title: "New Georgia Encyclopedia: Otis Redding"
+          url: "https://www.georgiaencyclopedia.org/articles/arts-culture/otis-redding-1941-1967/"
+          quote: "Influenced by Little Richard, Sam Cooke, and his own Baptist church upbringing, Redding began his musical career in earnest in 1960 as a vocalist"
+      - type: "listening"
+        dimensions: ["melody-vocal"]
+        text: "His biographer Mark Ribowsky tells NPR that the young Redding went to Macon clubs to see Little Richard and at first tried to be another Little Richard."
+        textRu: "Биограф Марк Рибовски рассказывает NPR, что юный Реддинг ходил по клубам Мейкона смотреть Литл Ричарда и поначалу пытался стать вторым Литл Ричардом."
+        source:
+          title: "NPR: ‘Like An Avalanche’ — Otis Redding’s Unstoppable Crossover (2015)"
+          url: "https://www.npr.org/2015/05/30/410264042/like-an-avalanche-otis-reddings-unstoppable-crossover"
+          quote: "they knew he had talent, but he didn't have the right material, because he was trying to be another Little Richard or sound like another Jackie Wilson ."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Steve Cropper, writing for Rolling Stone, hears in Redding the harshness of Little Richard joined to the softness of Sam Cooke."
+        textRu: "Стив Кроппер в эссе для Rolling Stone слышит в Реддинге резкость Литл Ричарда, соединённую с мягкостью Сэма Кука."
+        source:
+          title: "Rolling Stone: 100 Greatest Artists — Otis Redding (essay by Steve Cropper)"
+          url: "https://www.rollingstone.com/music/lists/100-greatest-artists-of-all-time-19691231/ray-charles-20110420"
+          quote: "Otis had the softness of Sam Cooke and the harshness of Little Richard, and he was his own man."
+    scope: "career"
+  - to: "style:soul"
+    kind: "style"
+    how: "Redding sang soul of raw emotion and electrifying live energy, built on the Stax groove, gospel triplet feel and horn lines he sang to the players himself."
+    howRu: "Реддинг пел соул сырого чувства и электризующей концертной энергии — на груве Stax, на госпельном триольном пульсе и на духовых партиях, которые он сам напевал музыкантам."
+    carries: ["groove"]
+    dimensions: ["melody-vocal", "performance", "rhythm", "sound"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal", "performance"]
+        text: "The Rock and Roll Hall of Fame calls him a titan of soul whose live performances crackled with energy."
+        textRu: "Зал славы рок-н-ролла называет его титаном соула, чьи концерты искрили энергией."
+        source:
+          title: "Rock & Roll Hall of Fame: Otis Redding"
+          url: "https://rockhall.com/inductees/otis-redding/"
+          quote: "No one had Otis Redding’s emotion. Otis Redding was a titan of soul. His live performances crackled with energy, electrifying audiences with the pure power of his expression."
+      - type: "analysis"
+        dimensions: ["rhythm", "sound"]
+        text: "Biographer Jonathan Gould tells NPR that “Respect” was Redding’s first successful Stax “groove song” and that he sang the horn lines to the players as a “head arranger”."
+        textRu: "Биограф Джонатан Гулд рассказывает NPR, что «Respect» стала первой удачной «грув-песней» Реддинга на Stax и что он, «аранжировщик без нот», напевал духовые партии музыкантам."
+        source:
+          title: "NPR: Otis Redding’s ‘Unfinished Life’ Still Resonates (2017)"
+          url: "https://www.npr.org/2017/05/13/528116058/otis-reddings-unfinished-life-still-resonates"
+          quote: "He would simply sing these horn lines to the horn players — make them up in his head and put them together in the studio."
+      - type: "analysis"
+        dimensions: ["rhythm"]
+        text: "The same interview notes the Stax term for the kind of record “Respect” was."
+        textRu: "Там же приводится словечко Stax для записей вроде «Respect»."
+        source:
+          title: "NPR: Otis Redding’s ‘Unfinished Life’ Still Resonates (2017)"
+          url: "https://www.npr.org/2017/05/13/528116058/otis-reddings-unfinished-life-still-resonates"
+          quote: "his first really successful \"groove song,\" as they called them at Stax."
+      - type: "testimony"
+        dimensions: ["rhythm", "melody-vocal"]
+        text: "Cropper recalls Redding asking at his first Stax session for “those church things” — gospel triplets — before singing “These Arms of Mine”."
+        textRu: "Кроппер вспоминает, как на первой сессии в Stax Реддинг попросил «эти церковные штуки» — госпельные триоли, — прежде чем спеть «These Arms of Mine»."
+        source:
+          title: "Rolling Stone: 100 Greatest Artists — Otis Redding (essay by Steve Cropper)"
+          url: "https://www.rollingstone.com/music/lists/100-greatest-artists-of-all-time-19691231/ray-charles-20110420"
+          quote: "Otis said, \"Just gimme those church things.\" We call them triplets in music."
+    scope: "career"

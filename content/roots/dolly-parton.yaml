@@ -13,20 +13,38 @@ place:
 placeRu: "округ Севир, Теннесси"
 genre: Country
 genreRu: кантри
+story: "Dolly Parton works in country music. Her shimmering soprano and storytelling songs distil the life of the Tennessee mountains and the upland South, and her duets with Porter Wagoner are counted among the best in the genre."
+storyRu: "Долли Партон работает в кантри. Её искрящееся сопрано и песни-истории передают жизнь теннессийских гор и южного нагорья, а её дуэты с Портером Вагонером считают одними из лучших в жанре."
 links:
-  - to: root:the-beatles
-    claim: Dolly Parton recorded the Beatles’ “Let It Be” with Paul McCartney and Ringo Starr for Rockstar.
-    claimRu: Долли Партон записала «Let It Be» группы Beatles вместе с Полом Маккартни и Ринго Старром для альбома Rockstar.
-    sources:
-      - title: 'Dolly Parton: Let It Be release announcement'
-        url: https://www.dollyparton.com/news/dolly-parton-releases-her-powerful-rendition-of-rock-classic-let-it-be
-      - title: 'Reuters / The Fiji Times: Surviving Beatles join Dolly Parton on Let It Be'
-        url: https://www.fijitimes.com.fj/surviving-beatles-join-dolly-parton-on-let-it-be-cover/
-    kind: cover
-    what: The Beatles’ “Let It Be”, newly recorded for Rockstar with Paul McCartney and Ringo Starr.
-    whatRu: Песня The Beatles «Let It Be», заново записанная для «Rockstar» с Полом Маккартни и Ринго Старром.
+  - to: "style:country"
+    kind: "style"
+    how: "Parton works in country: a bright, shimmering soprano, story songs drawn from the mountain life of the upland South, and the man-woman duet singing of the Nashville stage."
+    howRu: "Партон работает в кантри: светлое, искрящееся сопрано, песни-истории о горной жизни южного нагорья и мужско-женский дуэт нэшвиллской сцены."
     carries: []
-    how: 'A cover of a Beatles song: no element from a Black tradition is documented on this step.'
-    howRu: 'Кавер на песню «Битлз»: никакого элемента из чёрной традиции на этом шаге не задокументировано.'
-story: Dolly Parton reached into the Beatles’ repertoire for Rockstar. She recorded “Let It Be” with Paul McCartney and Ringo Starr.
-storyRu: Для «Rockstar» Долли Партон обратилась к репертуару The Beatles. Она записала «Let It Be» вместе с Полом Маккартни и Ринго Старром.
+    dimensions: ["melody-vocal", "harmony-form", "performance", "image"]
+    scope: "career"
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal", "harmony-form", "image"]
+        text: "The Rock & Roll Hall of Fame describes Parton’s shimmering soprano, her Tennessee mountain roots and her iconic country songs as a master storyteller."
+        textRu: "Зал славы рок-н-ролла пишет об искрящемся сопрано Партон, её корнях в горах Теннесси и знаменитых песнях кантри, в которых она выступает мастером рассказа."
+        source:
+          title: "Rock & Roll Hall of Fame: Dolly Parton"
+          url: "https://rockhall.com/inductees/dolly-parton/"
+          quote: "With a shimmering soprano, Dolly Parton tapped into her Tennessee mountain roots and penned some of country music’s most iconic songs. A master storyteller, accomplished musician, and captivating performer"
+      - type: "critics"
+        dimensions: ["harmony-form", "image"]
+        text: "The Tennessee Encyclopedia calls her best songs authentic distillations of life and culture in the upland South."
+        textRu: "Энциклопедия Теннесси называет её лучшие песни подлинной квинтэссенцией жизни и культуры южного нагорья."
+        source:
+          title: "Tennessee Encyclopedia: Camille Wells, Dolly Parton"
+          url: "https://tennesseeencyclopedia.net/entries/dolly-parton/"
+          quote: "most Parton songs–and all of her best ones–are rich, authentic distillations of life and culture in the upland South."
+      - type: "critics"
+        dimensions: ["performance"]
+        text: "The same entry ranks her partnership with Porter Wagoner among the best man-woman singing duos in country music."
+        textRu: "Та же статья ставит её дуэт с Портером Вагонером в число лучших мужско-женских вокальных дуэтов в истории кантри."
+        source:
+          title: "Tennessee Encyclopedia: Camille Wells, Dolly Parton"
+          url: "https://tennesseeencyclopedia.net/entries/dolly-parton/"
+          quote: "Many still regard Wagoner and Parton as among the best man-woman singing duos in country music history."

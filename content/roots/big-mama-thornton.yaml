@@ -8,17 +8,61 @@ placeRu: "Аритон, Алабама"
 genre: "Blues / rhythm and blues"
 genreRu: "блюз / ритм-н-блюз"
 links:
-  - to: "card:blues"
-    kind: "scene"
-    claim: "After touring with the Hot Harlem Revue, Big Mama Thornton established herself in Houston and began recording for Peacock."
-    claimRu: "После гастролей с Hot Harlem Revue Биг Мама Торнтон обосновалась в Хьюстоне и начала записываться на Peacock."
-    sources:
-      - title: "Yale University Library: Big Mama Thornton — Early Years"
-        url: "https://onlineexhibits.library.yale.edu/s/ohamstruggles/page/bmt1"
-      - title: "Encyclopedia of Alabama: Willie Mae “Big Mama” Thornton"
-        url: "https://encyclopediaofalabama.org/article/willie-mae-big-mama-thornton/"
-    carries: ["twelve-bar-blues"]
-    how: 'Big Mama Thornton worked in the twelve-bar blues form: “Hound Dog” was written for her as a twelve-bar blues.'
-    howRu: 'Биг Мама Торнтон работала в форме двенадцатитактового блюза: «Hound Dog» написали для неё именно так.'
-story: "Big Mama Thornton’s apprenticeship included touring with the Hot Harlem Revue. She then established herself in Houston and began recording for Peacock."
-storyRu: "Биг Мама Торнтон прошла школу гастролей с Hot Harlem Revue. Затем она обосновалась в Хьюстоне и начала записываться на Peacock."
+  - to: "root:bessie-smith"
+    kind: "influence"
+    how: "Thornton named Bessie Smith among the singers she grew from and was billed early on as the “New Bessie Smith”: a powerful, unadorned blues voice in the line of the classic blues women."
+    howRu: "Торнтон называла Бесси Смит среди певиц, на которых выросла, и в начале пути её объявляли «новой Бесси Смит»: мощный, неприкрашенный блюзовый голос в традиции классических блюзовых певиц."
+    carries: []
+    dimensions: ["melody-vocal"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "Thornton acknowledged Bessie Smith, Ma Rainey, Junior Parker and Memphis Minnie as influences and toured as a singer billed as the “New Bessie Smith”."
+        textRu: "Торнтон признавала влияние Бесси Смит, Ма Рейни, Джуниора Паркера и Мемфис Минни и гастролировала, а в афишах её объявляли «новой Бесси Смит»."
+        source:
+          title: "Encyclopedia of Alabama (Tina Spencer Dreisbach): Willie Mae “Big Mama” Thornton"
+          url: "https://encyclopediaofalabama.org/article/willie-mae-big-mama-thornton/"
+          quote: "Billed as the \"New Bessie Smith,\" she sang and danced throughout the southeastern United States. She later acknowledged the influence of artists heard during this time, including Smith, Ma Rainey, Junior Parker, and Memphis Minnie."
+      - type: "listening"
+        dimensions: []
+        text: "The Rock & Roll Hall of Fame lists Bessie Smith first among Thornton’s influences."
+        textRu: "Зал славы рок-н-ролла ставит Бесси Смит первой в списке тех, кто повлиял на Торнтон."
+        source:
+          title: "Rock & Roll Hall of Fame: Big Mama Thornton"
+          url: "https://rockhall.com/inductees/big-mama-thornton/"
+          quote: "Bessie Smith"
+    scope: "career"
+  - to: "card:rhythm-and-blues"
+    kind: "style"
+    how: "Thornton sang rhythm and blues in a robust, moaning voice, played drums and harmonica herself, and challenged the gender norms of the stage."
+    howRu: "Торнтон пела ритм-н-блюз мощным, стонущим голосом, сама играла на барабанах и губной гармонике и бросала вызов гендерным нормам сцены."
+    carries: []
+    dimensions: ["melody-vocal", "sound", "image"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal", "sound", "image"]
+        text: "The Hall of Fame calls her a commanding vocalist who played drums and harmonica herself and says she challenged gender norms."
+        textRu: "Зал славы называет её властной певицей, которая сама играла на барабанах и губной гармонике, и пишет, что она бросала вызов гендерным нормам."
+        source:
+          title: "Rock & Roll Hall of Fame: Big Mama Thornton"
+          url: "https://rockhall.com/inductees/big-mama-thornton/"
+          quote: "She challenged gender norms, and broke barriers for women. … a commanding vocalist, as well as drummer, harmonica player and songwriter"
+      - type: "analysis"
+        dimensions: ["melody-vocal"]
+        text: "Mike Stoller, who co-wrote “Hound Dog” for her, called her a wonderful blues singer with a great moaning style; she was billed as Peacock’s “Belting Lady Killer of the Blues”."
+        textRu: "Майк Столлер, соавтор песни «Hound Dog», написанной для неё, называл её чудесной блюзовой певицей с великолепной стонущей манерой; Peacock рекламировал её как «голосистую сердцеедку блюза»."
+        source:
+          title: "Library of Congress, National Recording Registry (Michael Spörke): “Hound Dog” — Big Mama Thornton (1953)"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/HoundDog.pdf"
+          quote: "She was a wonderful blues singer with a great moaning style"
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The Encyclopedia of Alabama calls “Hound Dog” a gutsy rhythm and blues record full of whoops and barks, sung in her robust, powerful voice."
+        textRu: "Энциклопедия Алабамы называет «Hound Dog» напористой ритм-н-блюзовой записью, полной выкриков и «лая», спетой её сильным, мощным голосом."
+        source:
+          title: "Encyclopedia of Alabama (Tina Spencer Dreisbach): Willie Mae “Big Mama” Thornton"
+          url: "https://encyclopediaofalabama.org/article/willie-mae-big-mama-thornton/"
+          quote: "her robust, powerful voice"
+    scope: "career"
+story: "Big Mama Thornton named Bessie Smith among her models and was billed as the “New Bessie Smith”. She sang rhythm and blues in a robust, moaning voice, played drums and harmonica herself, and challenged gender norms."
+storyRu: "Биг Мама Торнтон называла Бесси Смит среди своих образцов, и её объявляли «новой Бесси Смит». Она пела ритм-н-блюз мощным, стонущим голосом, сама играла на барабанах и губной гармонике и бросала вызов гендерным нормам."

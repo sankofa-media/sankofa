@@ -14,18 +14,87 @@ place:
 placeRu: "Лос-Анджелес"
 genre: Alternative pop
 genreRu: альтернативный поп
+story: "Billie Eilish says the Beatles raised her and gave her most of her love for music. Hip-hop is the other ground of her sound: she names Tyler, the Creator as an influence on everything about her, and her first records moved between pop, trap and EDM. On Happier Than Ever she turned to the torch singing of 1950s jazz."
+storyRu: "Билли Айлиш говорит, что её вырастили The Beatles и что им она обязана почти всей своей любовью к музыке. Вторая опора её звука — хип-хоп: по её словам, Тайлер, The Creator повлиял на всё в ней, а её первые записи кочевали между поп-музыкой, трэпом и EDM. На «Happier Than Ever» она обратилась к джазовому торч-сонгу 1950-х."
 links:
-  - to: root:the-beatles
-    claim: Billie Eilish names the Beatles as a formative musical influence, having grown up listening to them.
-    claimRu: 'Билли Айлиш называет The Beatles музыкой, которая её сформировала: она выросла на их записях.'
-    sources:
-      - title: 'NME: Billie Eilish — Glastonbury cover interview'
-        url: https://www.nme.com/big-reads/billie-eilish-cover-interview-2022-glastonbury-festival-3253169
-      - title: 'MusicRadar: Billie Eilish names the Beatles song she wishes she had written'
-        url: https://www.musicradar.com/news/billie-eilish-lunch-finneas-guitar
-    kind: influence
+  - to: "root:the-beatles"
+    kind: "influence"
+    how: "The Beatles were the music Eilish grew up on and the songwriting she most admires; she credits them with most of her love for music."
+    howRu: "The Beatles — музыка, на которой выросла Айлиш, и песенное мастерство, которым она восхищается больше всего; им, по её словам, она обязана почти всей своей любовью к музыке."
     carries: []
-    how: An admiration for the Beatles; no musical element from a Black tradition is documented on this step.
-    howRu: 'Любовь к «Битлз»: на этом шаге никакой музыкальный приём из чёрной традиции не задокументирован.'
-story: Billie Eilish grew up listening to the Beatles. She names their music as a formative influence.
-storyRu: Билли Айлиш выросла на записях The Beatles. Она называет их музыку одной из сил, сформировавших её.
+    dimensions: ["harmony-form"]
+    scope: "career"
+    evidence:
+      - type: "listening"
+        dimensions: []
+        text: "Eilish told NME that the Beatles raised her and that 95 per cent of her love for music is owed to them and Paul McCartney."
+        textRu: "Айлиш сказала NME, что её вырастили The Beatles и что своей любовью к музыке она на 95 процентов обязана им и Полу Маккартни."
+        source:
+          title: "NME: Billie Eilish — Glastonbury cover interview (2022)"
+          url: "https://www.nme.com/big-reads/billie-eilish-cover-interview-2022-glastonbury-festival-3253169"
+          quote: "The Beatles were what raised me. My love for music I feel 95 per cent owes to the Beatles and Paul."
+      - type: "listening"
+        dimensions: ["harmony-form"]
+        text: "On BBC Radio 1 she called the Beatles her biggest inspiration and the main music of her childhood, naming “Julia” as the song she wishes she had written."
+        textRu: "На BBC Radio 1 она назвала The Beatles своим главным источником вдохновения и главной музыкой детства, а «Julia» — песней, которую хотела бы написать сама."
+        source:
+          title: "MusicRadar: Billie Eilish names the Beatles song she wishes she’d written (2024)"
+          url: "https://www.musicradar.com/news/billie-eilish-lunch-finneas-guitar"
+          quote: "The Beatles are my biggest inspiration and the main thing that was in my ears when I was a child, and this song is just incredible"
+  - to: "card:hip-hop"
+    kind: "influence"
+    how: "Hip-hop shaped Eilish’s sound and persona: she names Tyler, the Creator as an influence on everything about her, and critics hear trap production in her early records and note her baggy, androgynous clothes."
+    howRu: "Хип-хоп сформировал звук и облик Айлиш: по её словам, Тайлер, The Creator повлиял на всё в ней, а критики слышат в её ранних записях трэп-продакшн и отмечают мешковатую, андрогинную одежду."
+    carries: []
+    dimensions: ["sound", "image"]
+    scope: "career"
+    evidence:
+      - type: "testimony"
+        dimensions: []
+        text: "On her Apple Music series “me & dad radio”, reported by Billboard, Eilish says Tyler, the Creator has inspired part of everything about her and that she knows all his songs by heart."
+        textRu: "В своей передаче на Apple Music «me & dad radio», о которой пишет Billboard, Айлиш говорит, что Тайлер, The Creator отчасти вдохновил всё, что в ней есть, и что она знает наизусть все его песни."
+        source:
+          title: "Billboard: Here Are the Artists Who Inspired Billie Eilish Over the Years"
+          url: "https://www.billboard.com/music/pop/billie-eilish-musical-inspirations-9391977/"
+          quote: "including Eilish describing how Tyler, the Creator has inspired “part of everything about me.”"
+      - type: "critics"
+        dimensions: ["sound", "image"]
+        text: "Pitchfork notes that she names Tyler, the Creator among her greatest influences and hears her music moving between pop, trap and EDM, sung by a singer in baggy, androgynous clothes."
+        textRu: "Pitchfork отмечает, что она называет Тайлера, The Creator среди тех, кто повлиял на неё сильнее всего, и слышит, как её музыка кочует между поп-музыкой, трэпом и EDM, а поёт её певица в мешковатой, андрогинной одежде."
+        source:
+          title: "Pitchfork: Billie Eilish — When We All Fall Asleep, Where Do We Go? (review, 2019)"
+          url: "https://pitchfork.com/reviews/albums/billie-eilish-when-we-all-fall-asleep-where-do-we-go/"
+          quote: "here was this music that shifted between genres—from pop to trap and EDM—made by a lawless young female singer sporting baggy, androgynous clothes."
+      - type: "critics"
+        dimensions: []
+        text: "The same review states her own naming of Tyler, the Creator as a major influence."
+        textRu: "Та же рецензия приводит её собственные слова о том, что Тайлер, The Creator сильно на неё повлиял."
+        source:
+          title: "Pitchfork: Billie Eilish — When We All Fall Asleep, Where Do We Go? (review, 2019)"
+          url: "https://pitchfork.com/reviews/albums/billie-eilish-when-we-all-fall-asleep-where-do-we-go/"
+          quote: "Eilish has namechecked Tyler, the Creator as one of her greatest influences"
+  - to: "card:jazz"
+    kind: "influence"
+    how: "On Happier Than Ever Eilish swapped much of the trap for the soft, sorrowful sound of 1950s jazz torch singing, naming Julie London, Frank Sinatra and Peggy Lee."
+    howRu: "На «Happier Than Ever» Айлиш во многом сменила трэп на мягкий, печальный звук джазового торч-сонга 1950-х, а образцами назвала Джули Лондон, Фрэнка Синатру и Пегги Ли."
+    carries: []
+    dimensions: ["sound", "melody-vocal"]
+    scope: "period"
+    period: "2021 (Happier Than Ever)"
+    evidence:
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Pitchfork hears less trap and more jazz on the album and notes that Eilish named jazz torch singers as models."
+        textRu: "Pitchfork слышит в альбоме меньше трэпа и больше джаза и отмечает, что Айлиш называла образцами джазовых исполнителей торч-сонгов."
+        source:
+          title: "Pitchfork: Billie Eilish — Happier Than Ever (review, 2021)"
+          url: "https://pitchfork.com/reviews/albums/billie-eilish-happier-than-ever/"
+          quote: "There’s a lot less trap and a lot more jazz"
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Rolling Stone describes her controlled slides, delicate vibrato and breathy texture, and her turn to the timeless sorrow of 1950s jazz on her second album."
+        textRu: "Rolling Stone пишет о её выверенных глиссандо, тонком вибрато и придыхании, а также о том, как на втором альбоме она обратилась к вечной печали джаза 1950-х."
+        source:
+          title: "Rolling Stone: The 200 Greatest Singers of All Time (2023)"
+          url: "https://www.rollingstone.com/music/music-lists/best-singers-all-time-1234642307/"
+          quote: "she played with the timeless sorrow of 1950s jazz and contemporary pop on her sophomore effort"

@@ -7,42 +7,70 @@ place: {"name": "Nogales, Arizona", "lat": 31.3404, "lon": -110.9343}
 placeRu: "Ногалес, Аризона"
 genre: "Jazz"
 genreRu: "джаз"
-story: "Charles Mingus’s early musical world included the singing he heard in church. The gospel singing and preaching of his youth later fed compositions such as “Better Git It in Your Soul”."
-storyRu: "В раннем музыкальном мире Чарльза Мингуса звучало церковное пение. Позже госпел и проповеди его юности отозвались в таких сочинениях, как «Better Git It in Your Soul»."
+story: "Charles Mingus took Duke Ellington’s sonic blend and harmonies as his touchstone and pushed them further, with abrupt changes of meter and tempo. Into the same jazz he brought the Holiness church: gospel tremolo, call-and-response between the horns and shouting from the bandstand."
+storyRu: "Чарльз Мингус взял за образец звуковую палитру и гармонии Дюка Эллингтона и повёл их дальше — к резким сменам размера и темпа. В тот же джаз он принёс церковь движения святости: госпельное тремоло, перекличку духовых и выкрики со сцены."
 links:
+  - to: "card:jazz"
+    kind: "style"
+    scope: "career"
+    how: "Mingus built his jazz on Duke Ellington’s orchestral blend and harmonies, adding abrasive dissonance, abrupt changes of meter and tempo and accelerating momentum."
+    howRu: "Мингус строил свой джаз на оркестровой палитре и гармониях Дюка Эллингтона, добавляя резкие диссонансы, внезапные смены размера и темпа и нарастающий напор."
+    carries: ["improvisation", "swing"]
+    dimensions: ["harmony-form", "sound", "rhythm"]
+    evidence:
+      - type: "critics"
+        dimensions: ["harmony-form", "sound", "rhythm"]
+        text: "Blue Note’s biography names Ellington as his touchstone and describes how Mingus took Ellington’s blend and harmonies further."
+        textRu: "Биография Blue Note называет Эллингтона его главным ориентиром и описывает, как Мингус развил эллингтоновскую палитру и гармонии."
+        source:
+          title: "Blue Note Records: Charles Mingus — biography"
+          url: "https://www.bluenote.com/artist/charles-mingus/"
+          quote: "His touchstone was Duke Ellington, but Mingus took the sonic blend and harmonies of Ellingtonia much further, throwing in abrasive dissonances and abrupt changes in meter and tempo, introducing tremendously exhilarating accelerations that generated a momentum of their own."
+      - type: "testimony"
+        dimensions: ["sound"]
+        text: "Mingus recalled that hearing Ellington on the radio at eight was among his earliest musical influences."
+        textRu: "Мингус вспоминал, что одним из самых ранних музыкальных влияний на него стал Эллингтон, услышанный по радио в восемь лет."
+        source:
+          title: "Charles Mingus official site: biography"
+          url: "https://www.charlesmingus.com/mingusbio"
+          quote: "his earliest musical influences came from the church-- choir and group singing-- and from \"hearing Duke Ellington over the radio when [he] was eight years old.\""
+      - type: "listening"
+        dimensions: ["sound"]
+        text: "WICN’s profile calls Ellington his lifelong greatest influence and idol."
+        textRu: "Профиль на радио WICN называет Эллингтона его кумиром и тем, кто всю жизнь влиял на него сильнее всех."
+        source:
+          title: "WICN Public Radio: Artist of the Month — Charles Mingus (2022)"
+          url: "https://wicn.org/wicn-artist-of-the-month-april-2022-charles-mingus/"
+          quote: "Ellington remained his lifelong greatest influence and idol"
   - to: "card:gospel"
     kind: "influence"
-    claim: "The church music Charles Mingus heard as a child was one of his earliest musical influences."
-    claimRu: "Церковная музыка, которую Чарльз Мингус слышал в детстве, стала одним из его первых музыкальных влияний."
-    sources:
-      - title: "Charles Mingus estate: Biography"
-        url: "https://www.charlesmingus.com/mingusbio"
-      - title: "Blue Note Records: Charles Mingus biography"
-        url: "https://www.bluenote.com/artist/charles-mingus/"
-    carries: []
-    how: The church choir and group singing were Mingus’s first musical world; the sources name no specific element taken from them.
-    howRu: Церковный хор и групповое пение были первым музыкальным миром Мингуса; конкретного элемента, взятого оттуда, источники не называют.
-  - to: "card:gospel"
-    kind: "influence"
-    claim: "Charles Mingus drew on the gospel singing and preaching of his youth in compositions such as “Better Git It in Your Soul”."
-    claimRu: "В таких сочинениях, как «Better Git It in Your Soul», Чарльз Мингус опирался на госпел и проповеди, которые слышал в юности."
-    sources:
-      - title: "Blue Note Records: Charles Mingus biography"
-        url: "https://www.bluenote.com/artist/charles-mingus/"
-      - title: "WICN: Charles Mingus, Artist of the Month, April 2022"
-        url: "https://wicn.org/wicn-artist-of-the-month-april-2022-charles-mingus/"
-    carries: []
-    how: Mingus turned the gospel singing and preaching of his youth into jazz compositions; the sources describe the inspiration, not the device.
-    howRu: Мингус превратил госпел и проповеди своей юности в джазовые композиции; источники описывают вдохновение, а не приём.
-  - to: "card:gospel"
-    kind: "influence"
-    claim: "Mingus brought the call-and-response and the shouting of the Holiness church he attended with his mother into pieces such as “Wednesday Night Prayer Meeting”."
-    claimRu: "Мингус перенёс зов и отклик и выкрики церкви движения святости, куда ходил с матерью, в такие пьесы, как «Wednesday Night Prayer Meeting»."
-    sources:
-      - title: "OUPblog: A holding corporation called old America — Charles Mingus’ religious multitudes"
-        url: "https://blog.oup.com/?p=94894"
-      - title: "First Things: Holiness, folk culture, and the African-American experience"
-        url: "https://firstthings.com/blogs/firstthoughts/2014/02/holiness-folk-culture-and-the-african-american-experience"
-    carries: ["call-and-response"]
-    how: "Call and response from Holiness worship: the band trades phrases back and forth and Mingus shouts from inside it, the stage his pulpit."
-    howRu: "Зов и отклик из богослужений движения святости: оркестр перебрасывается фразами, а Мингус выкрикивает изнутри, и сцена становится его кафедрой."
+    scope: "career"
+    how: "Mingus wrote the Holiness church into his jazz: low gospel tremolo, antiphonal call-and-response between horns, guttural vocal textures, and his own shouting from the bandstand as from a pulpit."
+    howRu: "Мингус вписал церковь движения святости в свой джаз: низкое госпельное тремоло, антифонная перекличка духовых, гортанные «вокальные» тембры и его собственные выкрики со сцены, словно с кафедры."
+    carries: ["call-and-response", "gospel-vocal"]
+    dimensions: ["harmony-form", "sound", "performance", "melody-vocal"]
+    evidence:
+      - type: "analysis"
+        dimensions: ["harmony-form", "sound", "melody-vocal"]
+        text: "Jason Bivins hears church influences on Oh Yeah, Ah Um and Blues and Roots: gospel tremolo, antiphonal call-and-response and vocal textures."
+        textRu: "Джейсон Бивинс слышит в «Oh Yeah», «Ah Um» и «Blues and Roots» влияние церкви: госпельное тремоло, антифонную перекличку и «вокальные» тембры."
+        source:
+          title: "OUPblog (Jason C. Bivins): A holding corporation called old America — Charles Mingus’ religious multitudes"
+          url: "https://blog.oup.com/?p=94894"
+          quote: "It is meaningful, then, that records like Oh Yeah, Ah Um, and Blues and Roots brimmed with church influences: a low-end gospel tremolo; complex antiphonal work, trading phrases back and forth in a knowing echo of the call-and-response dialogism of African-American music; and a use of guttural, vocalic textures that connected New Orleans to the avant-garde."
+      - type: "analysis"
+        dimensions: ["performance"]
+        text: "Bivins describes Mingus shouting encouragement to his band, the stage as his pulpit."
+        textRu: "Бивинс описывает, как Мингус криками подбадривал своих музыкантов: сцена была его кафедрой."
+        source:
+          title: "OUPblog (Jason C. Bivins): A holding corporation called old America — Charles Mingus’ religious multitudes"
+          url: "https://blog.oup.com/?p=94894"
+          quote: "Mingus shouted encouragement to his bandmates, the stage his pulpit."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Blue Note’s biography lists gospel and blues first among the elements Mingus’s music drew on."
+        textRu: "Биография Blue Note ставит госпел и блюз первыми среди истоков музыки Мингуса."
+        source:
+          title: "Blue Note Records: Charles Mingus — biography"
+          url: "https://www.bluenote.com/artist/charles-mingus/"
+          quote: "Intensely ambitious yet often earthy in expression, simultaneously radical and deeply traditional, Mingus’ music took elements from everything he had experienced — from gospel and blues through New Orleans jazz, swing, bop, Latin music, modern classical music, even the jazz avant-garde."

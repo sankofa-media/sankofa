@@ -7,18 +7,71 @@ place: {"name": "Los Angeles", "lat": 34.0522, "lon": -118.2437}
 placeRu: "Лос-Анджелес"
 genre: "Jazz funk"
 genreRu: "джаз-фанк"
-story: "Edwin Birdsong’s jazz-funk took shape in collaboration with Roy Ayers. Together they made records that joined jazz to funk."
-storyRu: "Джаз-фанк Эдвина Бёрдсонга складывался в сотрудничестве с Роем Эйерсом. Вместе они создавали записи на стыке джаза и фанка."
+story: "Edwin Birdsong was an organist and songwriter of 1970s jazz-funk: a funky, bluesy jazz built on his complex organ arrangements that worked both live and on the dance floor. At the end of the decade, drawn to Larry Levan and New York club culture, he moved to a more upbeat disco and boogie sound."
+storyRu: "Эдвин Бёрдсонг был органистом и автором песен в джаз-фанке 1970-х — фанковом, блюзовом джазе, который держался на его сложных органных аранжировках и работал и на сцене, и на танцполе. В конце десятилетия, увлёкшись Ларри Леваном и нью-йоркской клубной культурой, он перешёл к более бодрому звучанию диско и буги."
 links:
   - to: "card:funk"
-    kind: "scene"
-    claim: "Edwin Birdsong developed jazz-funk records in collaboration with Roy Ayers."
-    claimRu: "Эдвин Бёрдсонг создавал джаз-фанковые записи вместе с Роем Эйерсом."
-    sources:
-      - title: "Resident Advisor: Edwin Birdsong obituary"
-        url: "https://ra.co/news/43130"
-      - title: "Wax Poetics: Edwin Birdsong — Cosmic Reverb"
-        url: "https://magazine.waxpoetics.com/article/edwin-birdsong-cosmic-reverb/"
+    kind: "style"
+    scope: "career"
+    how: "Birdsong played jazz-funk: a funky, more bluesy and commercial jazz for live stages and dance floors, carried by his complex organ arrangements and his singing."
+    howRu: "Бёрдсонг играл джаз-фанк — фанковый, более блюзовый и доступный джаз для сцены и танцпола, который держался на его сложных органных аранжировках и его вокале."
     carries: ["groove"]
-    how: Birdsong’s jazz-funk with Roy Ayers was groove music, later mined for samples.
-    howRu: Джаз-фанк Бёрдсонга с Роем Айерсом был музыкой грува, которую потом разбирали на сэмплы.
+    dimensions: ["sound", "rhythm", "melody-vocal"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "rhythm"]
+        text: "Wax Poetics describes the funky jazz he made with Roy Ayers, built on Birdsong’s organ arrangements, for stage and dance floor."
+        textRu: "Wax Poetics описывает фанковый джаз, который он делал с Роем Айерсом, — на органных аранжировках Бёрдсонга, для сцены и танцпола."
+        source:
+          title: "Wax Poetics (Andy Thomas): Edwin Birdsong — Cosmic Reverb"
+          url: "https://magazine.waxpoetics.com/article/edwin-birdsong-cosmic-reverb/"
+          quote: "The relationship would give birth to a funky jazz with commercial leanings that worked both live and on the dance floor."
+      - type: "testimony"
+        dimensions: ["melody-vocal", "sound"]
+        text: "Birdsong said he pushed Ayers from pure jazz towards a bluesier, more commercial sound with more singing."
+        textRu: "Бёрдсонг говорил, что подтолкнул Айерса от чистого джаза к более блюзовому, доступному звучанию, где больше пели."
+        source:
+          title: "Wax Poetics (Andy Thomas): Edwin Birdsong — Cosmic Reverb"
+          url: "https://magazine.waxpoetics.com/article/edwin-birdsong-cosmic-reverb/"
+          quote: "“I think my main influence on Roy at that time was getting him to move from being a purely jazz musician to become more bluesy and commercial,” he says. “I also took him from just playing jazz into singing more.”"
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Resident Advisor’s obituary calls him a funk, disco and jazz artist and an experimental keyboardist and organist."
+        textRu: "Некролог Resident Advisor называет его фанк-, диско- и джаз-музыкантом, экспериментатором на клавишных и органе."
+        source:
+          title: "Resident Advisor (Carlos Hawthorn): Edwin Birdsong, US funk musician sampled by Daft Punk, dies age 77 (2019)"
+          url: "https://ra.co/news/43130"
+          quote: "Born in Los Angeles in 1941, Birdsong was an experimental keyboardist, organist and singer-songwriter active in the '70s and '80s, releasing five solo albums on labels such as Polydor and Salsoul."
+  - to: "style:disco"
+    kind: "style"
+    scope: "period"
+    period: "1977–1981 (Lifeline with Roy Ayers to Funtown Express)"
+    how: "In the disco years Birdsong moved to an upbeat dance-floor sound and left-field boogie, shaped by Larry Levan and the New York club scene."
+    howRu: "В годы диско Бёрдсонг перешёл к бодрому танцевальному звучанию и необычному буги под влиянием Ларри Левана и нью-йоркской клубной сцены."
+    carries: ["groove"]
+    dimensions: ["rhythm"]
+    evidence:
+      - type: "listening"
+        dimensions: ["rhythm"]
+        text: "Wax Poetics says his boogie anthem “Cola Bottle Baby” was influenced by Larry Levan and the New York club scene."
+        textRu: "Wax Poetics пишет, что его буги-гимн «Cola Bottle Baby» создан под влиянием Ларри Левана и нью-йоркской клубной сцены."
+        source:
+          title: "Wax Poetics (Andy Thomas): Edwin Birdsong — Cosmic Reverb"
+          url: "https://magazine.waxpoetics.com/article/edwin-birdsong-cosmic-reverb/"
+          quote: "Influenced by Larry Levan and the New York club scene, Birdsong’s left-field boogie anthem “Cola Bottle Baby” would become fodder for both Daft Punk and Kanye West"
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "The same article describes the upbeat dance-floor sound he and Ayers developed as disco broke out of the underground."
+        textRu: "Там же описано бодрое танцевальное звучание, которое он и Айерс выработали, когда диско выходило из подполья."
+        source:
+          title: "Wax Poetics (Andy Thomas): Edwin Birdsong — Cosmic Reverb"
+          url: "https://magazine.waxpoetics.com/article/edwin-birdsong-cosmic-reverb/"
+          quote: "While disco was about to transcend its underground roots, Birdsong and Ayers had been working on a more upbeat dance-floor sound that would reach its zenith on the 1977 LP Lifeline."
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "Resident Advisor files him under funk, disco and jazz."
+        textRu: "Resident Advisor относит его к фанку, диско и джазу."
+        source:
+          title: "Resident Advisor (Carlos Hawthorn): Edwin Birdsong, US funk musician sampled by Daft Punk, dies age 77 (2019)"
+          url: "https://ra.co/news/43130"
+          quote: "US funk, disco and jazz artist Edwin Birdsong has died aged 77."

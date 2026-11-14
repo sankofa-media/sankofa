@@ -15,32 +15,78 @@ place:
 placeRu: "Шеффилд"
 genre: Soul / blues rock
 genreRu: соул / блюз-рок
+story: "Joe Cocker modelled his singing on Ray Charles: as a teenager he copied the gritty, gospel-charged voice and even the bodily abandon of Charles’s performances, and critics heard him bring that influence into rock. Out of it grew his own soul manner — ragged, soulful readings that made other people’s songs sound like his."
+storyRu: "Джо Кокер строил своё пение по Рэю Чарльзу: подростком он копировал его хрипловатый, заряженный госпелом голос и даже телесную самоотдачу на сцене, и критики слышали, как он принёс это влияние в рок. Отсюда выросла его собственная соул-манера — рваные, проникновенные трактовки, после которых чужие песни звучали как его собственные."
 links:
-  - to: card:rhythm-and-blues
-    claim: Joe Cocker reinterpreted Ray Charles’s hit “Unchain My Heart”.
-    claimRu: Джо Кокер записал свою версию хита Рэя Чарльза «Unchain My Heart».
-    sources:
-      - title: 'NPR Morning Edition: Singer Joe Cocker dies at 70 (BPR transcript)'
-        url: https://www.bpr.org/2014-12-23/singer-joe-cocker-dies-of-lung-cancer-at-70
-      - title: 'Contemporary Musicians: Joe Cocker (Encyclopedia.com)'
-        url: https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/joe-cocker
-    kind: cover
-    what: "“Unchain My Heart”, previously a Ray Charles hit, in Cocker’s new performance."
-    whatRu: "«Unchain My Heart», прежде ставшая хитом Рэя Чарльза, в новом исполнении Кокера."
-    carries: []
-    how: Cocker rearranged Ray Charles’s hit with a new rhythm; the song travelled, not a documented element.
-    howRu: Кокер переаранжировал хит Рэя Чарльза в новом ритме; перешла песня, а не задокументированный приём.
-  - to: root:ray-charles
-    kind: influence
-    claim: Ray Charles was Joe Cocker’s principal vocal influence from his teenage years.
-    claimRu: Рэй Чарльз был главным вокальным ориентиром Джо Кокера ещё с подростковых лет.
-    sources:
-      - title: 'Contemporary Musicians: Joe Cocker'
-        url: https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/joe-cocker
-      - title: 'Melody Maker: Joe captures that King of Soul sound, October 19, 1968, p. 8'
-        url: https://worldradiohistory.com/UK/Melody-Maker/60s/68/Melody-Maker-1968-1019.pdf
+  - to: "root:ray-charles"
+    kind: "influence"
+    how: "Cocker took from Ray Charles a gritty, gospel-charged soul voice and a physical, abandoned way of delivering it on stage, carrying Charles’s manner into rock."
+    howRu: "У Рэя Чарльза Кокер взял хрипловатый соул-голос, заряженный госпелом, и телесную, самозабвенную подачу на сцене — и перенёс эту манеру в рок."
     carries: ["gospel-vocal"]
-    how: Cocker modelled his singing on Ray Charles, whose voice was the gospel-powered voice of early soul.
-    howRu: Кокер строил своё пение по Рэю Чарльзу, чей голос был госпеловым голосом раннего соула.
-story: Ray Charles was Joe Cocker’s principal vocal influence from his teenage years. Cocker later made his own version of Charles’s hit “Unchain My Heart”.
-storyRu: Рэй Чарльз был главным вокальным ориентиром Джо Кокера ещё с подростковых лет. Позже Кокер записал свою версию его хита «Unchain My Heart».
+    dimensions: ["melody-vocal", "performance"]
+    scope: "career"
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "In a 1969 Boston Globe interview quoted by Far Out, Cocker said he had once copied Ray Charles outright and that Charles’s influence remained deep."
+        textRu: "В интервью Boston Globe 1969 года, которое цитирует Far Out, Кокер признал, что когда-то прямо копировал Рэя Чарльза и что влияние Чарльза осталось глубоким."
+        source:
+          title: "Far Out Magazine: The singer Joe Cocker admitted to “really copying” early in his career"
+          url: "https://faroutmagazine.co.uk/the-singer-a-young-joe-cocker-admitted-to-really-copying/"
+          quote: "“At one time, I was really copying Ray Charles, trying to imitate him,” Cocker admitted in an interview with the Boston Globe"
+      - type: "critics"
+        dimensions: ["melody-vocal", "performance"]
+        text: "Far Out hears in Cocker’s early records a gospel-soul voice and stage physicality closely modelled on Charles."
+        textRu: "Far Out слышит в ранних записях Кокера госпел-соуловый голос и сценическую телесность, во многом списанные с Чарльза."
+        source:
+          title: "Far Out Magazine: The singer Joe Cocker admitted to “really copying” early in his career"
+          url: "https://faroutmagazine.co.uk/the-singer-a-young-joe-cocker-admitted-to-really-copying/"
+          quote: "The gritty vocal acrobatics were one thing, but the physicality – once you saw the face behind the voice – was arguably a step beyond homage."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "A reference biography calls Ray Charles Cocker’s primary vocal influence, from his teenage years on."
+        textRu: "Справочная биография называет Рэя Чарльза главным вокальным ориентиром Кокера с подростковых лет."
+        source:
+          title: "Encyclopedia.com (Contemporary Musicians): Joe Cocker"
+          url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/joe-cocker"
+          quote: "The gist of the album was to pay homage to Cocker's primary vocal influence, Ray Charles"
+      - type: "critics"
+        dimensions: []
+        text: "Rolling Stone quotes Steven Van Zandt: Cocker brought Ray Charles into rock as an influence."
+        textRu: "Rolling Stone приводит слова Стивена Ван Зандта: Кокер принёс в рок влияние Рэя Чарльза."
+        source:
+          title: "Rolling Stone (Daniel Kreps): Joe Cocker, Iconic Rock Singer, Dead at 70 (2014)"
+          url: "https://www.rollingstone.com/music/music-news/joe-cocker-iconic-rock-singer-dead-at-70-231126/"
+          quote: "“He brought Ray Charles to the mix as an influence on rock & roll,” E Street Band guitarist Steven Van Zandt said of Cocker for Rolling Stone ‘s 100 Greatest Singers."
+    example:
+      song: "“Unchain My Heart” (1987)"
+      text: "Cocker recut a Ray Charles hit with a new rhythm and attack, an homage rather than a copy."
+      textRu: "Кокер перезаписал хит Рэя Чарльза в новом ритме и с новой атакой — это дань уважения, а не копия."
+      source:
+        title: "NPR Morning Edition via BPR: Singer Joe Cocker Dies Of Lung Cancer At 70 (2014)"
+        url: "https://www.bpr.org/2014-12-23/singer-joe-cocker-dies-of-lung-cancer-at-70"
+        quote: "When I did \"Unchain My Heart,\" the Ray Charles (singing rhythm of Ray Charles' version), we completely changed the rhythm and gave it a different attack and it made it like a new song."
+  - to: "style:soul"
+    kind: "style"
+    how: "Cocker sang as a British soul shouter, turning rock and pop songs into ragged, gospel-tinged soul performances."
+    howRu: "Кокер пел как британский соул-шаутер, превращая рок- и поп-песни в рваные, окрашенные госпелом соул-номера."
+    carries: ["gospel-vocal"]
+    dimensions: ["melody-vocal"]
+    scope: "career"
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "High Fidelity, quoted in a reference biography, says Cocker turned songs such as “With a Little Help from My Friends” into ragged, soulful numbers of his own."
+        textRu: "Журнал High Fidelity, который цитирует справочная биография, пишет, что Кокер превращал песни вроде «With a Little Help from My Friends» в рваные, проникновенные номера, ставшие его собственными."
+        source:
+          title: "Encyclopedia.com (Contemporary Musicians): Joe Cocker"
+          url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/joe-cocker"
+          quote: "into ragged, soulful numbers of his own creation"
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Far Out describes his “With a Little Help from My Friends” as a gospel-soul performance."
+        textRu: "Far Out описывает его «With a Little Help from My Friends» как госпел-соуловое исполнение."
+        source:
+          title: "Far Out Magazine: The singer Joe Cocker admitted to “really copying” early in his career"
+          url: "https://faroutmagazine.co.uk/the-singer-a-young-joe-cocker-admitted-to-really-copying/"
+          quote: "transforming it from a poppy little music hall number with a silly Ringo vocal into an epic gospel soul experience"

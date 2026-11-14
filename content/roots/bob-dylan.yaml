@@ -7,32 +7,62 @@ place: {"name": "Duluth, Minnesota", "lat": 46.7867, "lon": -92.1005}
 placeRu: "Дулут, Миннесота"
 genre: "Folk rock"
 genreRu: "фолк-рок"
+story: "Bob Dylan built his songwriting on the country blues: he learned blues chord changes from older players, slipped blues lines into his own songs and sang them in a moaning, bending blues manner. In Robert Johnson he found his model for the compressed, allegorical lyric line."
+storyRu: "Боб Дилан строил свои песни на кантри-блюзе: перенимал блюзовые гармонии у старших музыкантов, вплетал в собственные песни блюзовые строки и пел их тягуче, с блюзовыми подтяжками. В Роберте Джонсоне он нашёл образец сжатой, иносказательной песенной строки."
 links:
   - to: "card:blues"
-    claim: "Bob Dylan recorded Blind Lemon Jefferson’s “See That My Grave Is Kept Clean” for his debut album."
-    claimRu: "Боб Дилан записал для дебютного альбома песню Блайнд Лемона Джефферсона «See That My Grave Is Kept Clean»."
-    sources:
-      - title: "Bob Dylan: The Basement Tapes Complete — official liner notes"
-        url: "https://www.bobdylan.com/albums/bootleg-series-vol-11-basement-tapes-complete"
-      - title: "Oxford University Press: Bob Dylan — A first listen"
-        url: "https://blog.oup.com/2013/03/bob-dylan-first-listen/"
-    kind: "cover"
-    what: "“See That My Grave Is Kept Clean”: Dylan’s debut-album performance of Blind Lemon Jefferson’s song."
-    whatRu: "«See That My Grave Is Kept Clean»: исполнение песни Блайнд Лемона Джефферсона на дебютном альбоме Дилана."
+    kind: "style"
+    how: "Dylan's early songcraft was country blues: blues chord changes learned from older bluesmen, songs assembled from old blues and spiritual lines, and a moaning, bending blues vocal."
+    howRu: "Ранние песни Дилана вышли из кантри-блюза: блюзовые гармонии, перенятые у старых блюзменов, песни, собранные из строк старых блюзов и спиричуэлс, и тягучий блюзовый вокал с подтяжками."
     carries: []
-    how: 'A cover of a Blind Lemon Jefferson song on a debut album: repertoire, not a documented element.'
-    howRu: 'Кавер на песню Слепого Лемона Джефферсона на дебютном альбоме: репертуар, а не задокументированный приём.'
+    dimensions: ["harmony-form", "melody-vocal"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["harmony-form", "melody-vocal"]
+        text: "In his Nobel lecture Dylan says that, among the folk songs he learned to play, he had a natural feeling for country blues."
+        textRu: "В нобелевской лекции Дилан говорит, что из народных песен, которые он учился играть, к кантри-блюзу у него было природное чутьё."
+        source:
+          title: "Bob Dylan: Nobel Lecture in Literature (2017), nobelprize.org"
+          url: "https://www.nobelprize.org/prizes/literature/2016/dylan/lecture/"
+          quote: "All you had to do was be well versed and be able to play the melody. Some of these songs were easy, some not. I had a natural feeling for the ancient ballads and country blues, but everything else I had to learn from scratch."
+      - type: "critics"
+        dimensions: ["harmony-form"]
+        text: "Reviewing Chronicles, Lucy Sante notes that Dylan learned blues chord changes from Lonnie Johnson and Victoria Spivey and quotes him on building songs out of old blues lines."
+        textRu: "Рецензируя «Хроники», Люси Санте отмечает, что Дилан учился блюзовым гармониям у Лонни Джонсона и Виктории Спайви, и приводит его слова о том, как он собирал песни из строк старых блюзов."
+        source:
+          title: "Lucy Sante: ‘I Is Someone Else’, The New York Review of Books (2005)"
+          url: "https://www.nybooks.com/articles/2005/03/10/i-is-someone-else/"
+          quote: "The young Dylan believed fervently in the passing of the torch, the laying on of hands—he learned blues chord changes from Lonnie Johnson and Victoria Spivey … I could slip in verses or lines from old spirituals or blues. That was okay; others did it all the time."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "A listener's guide to Dylan's debut album hears his blues arrangement as a moaning, bending blues vocal."
+        textRu: "Разбор дебютного альбома Дилана слышит в его блюзовой аранжировке тягучий блюзовый вокал с подтяжками."
+        source:
+          title: "OUPblog: Bob Dylan — A first listen (2013)"
+          url: "https://blog.oup.com/2013/03/bob-dylan-first-listen/"
+          quote: "“ In My Time of Dyin’ ” arr. Dylan: This is more to my liking, a moany, bendy blues tune. Dylan can really sing!"
+    scope: "career"
   - to: "root:robert-johnson"
     kind: "influence"
-    claim: "Bob Dylan studied Robert Johnson as a songwriting model."
-    claimRu: "Боб Дилан учился писать песни у Роберта Джонсона."
-    sources:
-      - title: "Keith Negus: Bob Dylan’s phonographic imagination (Popular Music)"
-        url: "https://research.gold.ac.uk/4704/1/BobDylanPhonographicImag.pdf"
-      - title: "Elijah Wald: Bob Dylan, Dave Van Ronk, and Robert Johnson"
-        url: "https://elijahwald.com/davdyl.html"
+    how: "Dylan studied Robert Johnson's songs as a model of lyric construction: the patterns of his old-style lines, free association and allegory compressed into a few words."
+    howRu: "Дилан изучал песни Роберта Джонсона как образец того, как строится текст: рисунок его старинных строк, свободные ассоциации и иносказание, сжатое в несколько слов."
     carries: []
-    how: 'Dylan took from Robert Johnson a way of building songs: compressed, metaphor-heavy lyrics, Johnson’s guitar sound and rhythm; songwriting, not one of the elements traced here.'
-    howRu: 'Дилан взял у Роберта Джонсона способ строить песню: сжатый, насыщенный метафорами текст, звук гитары и ритм Джонсона; это песенное ремесло, а не один из элементов нашего списка.'
-story: "Robert Johnson was a songwriting model for Bob Dylan. Dylan’s debut album also included Blind Lemon Jefferson’s “See That My Grave Is Kept Clean”."
-storyRu: "Роберт Джонсон служил Бобу Дилану образцом в сочинении песен. На дебютном альбоме Дилана прозвучала и «See That My Grave Is Kept Clean» Блайнд Лемона Джефферсона."
+    dimensions: ["harmony-form"]
+    evidence:
+      - type: "analysis"
+        dimensions: ["harmony-form"]
+        text: "Elijah Wald argues that Dylan took nothing from Johnson's voice or guitar, but that Johnson's example revolutionised his songwriting, and quotes Dylan's account of copying out the lyrics to study their construction."
+        textRu: "Элайджа Уолд считает, что ни голоса, ни гитары Дилан у Джонсона не взял, зато пример Джонсона перевернул его манеру сочинять, и приводит рассказ Дилана о том, как он переписывал тексты, чтобы разобрать их устройство."
+        source:
+          title: "Elijah Wald: Bob Dylan, Dave Van Ronk, and Robert Johnson (elijahwald.com)"
+          url: "https://elijahwald.com/davdyl.html"
+          quote: "But he was learning how to put his own lyrics together, and his approach to songwriting seems to have been revolutionized by Johnson’s example. “I copied Johnson’s words down on scraps of paper so I could more closely examine the lyrics and patterns, the construction of his old-style lines and the free association that he used"
+      - type: "critics"
+        dimensions: ["harmony-form"]
+        text: "Lucy Sante quotes Dylan on Johnson's elemental words and hears in Johnson the omissions that link the blues lyric to Dylan's modernism."
+        textRu: "Люси Санте приводит слова Дилана о стихийной силе текстов Джонсона и слышит у Джонсона те умолчания, что связывают блюзовый текст с модернизмом Дилана."
+        source:
+          title: "Lucy Sante: ‘I Is Someone Else’, The New York Review of Books (2005)"
+          url: "https://www.nybooks.com/articles/2005/03/10/i-is-someone-else/"
+          quote: "Robert Johnson can certainly sound like a modernist, especially, as Dylan suggests, by virtue of how much he omits."
+    scope: "career"

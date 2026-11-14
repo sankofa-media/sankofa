@@ -13,32 +13,62 @@ place:
 placeRu: "Нью-Йорк"
 genre: Art rock
 genreRu: арт-рок
-story: Lou Reed helped form the Velvet Underground as their singer, guitarist and songwriter. His writing and playing were part of the band’s musical foundation.
-storyRu: Лу Рид стоял у истоков The Velvet Underground как певец, гитарист и автор песен. Его песни и игра стали частью музыкальной основы группы.
+story: "The Velvet Underground were built on Lou Reed's songs: two- and three-chord rock structures, dark street-level lyrics and guitar feedback. Under them ran the band's shared rock and roll and R&B: Bo Diddley, Chuck Berry and Jimmy Reed, and Moe Tucker's stripped-down beat, played with mallets."
+storyRu: "The Velvet Underground держались на песнях Лу Рида: рок-конструкциях на двух-трёх аккордах, мрачных текстах об улице и гитарном фидбэке. Под ними лежал общий для группы рок-н-ролл и ритм-н-блюз — Бо Диддли, Чак Берри и Джимми Рид — и простой бит Мо Такер, игравшей колотушками."
 links:
   - to: root:lou-reed
-    kind: member
-    claim: Singer, guitarist and songwriter Lou Reed was a founding member of the Velvet Underground.
-    claimRu: Певец, гитарист и автор песен Лу Рид был одним из основателей The Velvet Underground.
-    sources:
-      - title: 'Aidan Levy: The Velvet Underground & Nico — Library of Congress'
-        url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf
-      - title: 'Guitar World: Lou Reed — 1998 interview'
-        url: https://www.guitarworld.com/magazine/lou-reed-talks-about-velvet-underground-songwriting-and-gear-1998-guitar-world-interview
+    kind: influence
+    how: "Reed brought the band its songs and guitar: simple two- and three-chord rock forms made new by repetition, transgressive street lyrics, and feedback-driven guitar."
+    howRu: "Рид принёс группе её песни и гитару: простые рок-формы на двух-трёх аккордах, обновлённые повтором, вызывающие тексты об улице и гитару на фидбэке."
     carries: []
-    how: 'Membership, not influence: Reed founded the band, and the Velvets even banned blues licks.'
-    howRu: 'Членство, а не влияние: Рид основал группу, а Velvet Underground даже запрещали блюзовые ходы.'
-  - to: "root:marvin-gaye"
-    kind: "interpolation"
-    what: "“There She Goes Again”: the opening guitar figure replays the rhythmic pattern of the intro of Marvin Gaye’s “Hitch Hike”; no recording is reused."
-    whatRu: "«There She Goes Again»: вступительная гитарная фигура повторяет ритмический рисунок вступления «Hitch Hike» Марвина Гэя; сама запись не используется."
-    claim: "The guitar intro of the Velvet Underground’s “There She Goes Again” borrows the intro of Marvin Gaye’s Motown single “Hitch Hike”."
-    claimRu: "Гитарное вступление «There She Goes Again» The Velvet Underground заимствует вступление мотауновского сингла Марвина Гэя «Hitch Hike»."
-    sources:
-      - title: "Aidan Levy: The Velvet Underground & Nico — Library of Congress"
-        url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf"
-      - title: "Far Out: “There She Goes Again” — the Lou Reed song inspired by Marvin Gaye"
-        url: "https://faroutmagazine.co.uk/lou-reed-song-inspired-by-marvin-gaye/"
-    carries: ["riff"]
-    how: "An R&B riff moved to rock guitar: the band opened “There She Goes Again” with the rhythmic figure that opens “Hitch Hike”."
-    howRu: "Ритм-н-блюзовый рифф, переложенный на рок-гитару: группа открыла «There She Goes Again» той же ритмической фигурой, что открывает «Hitch Hike»."
+    dimensions: ["harmony-form", "image", "sound"]
+    evidence:
+      - type: "analysis"
+        dimensions: ["harmony-form"]
+        text: "Aidan Levy describes Reed's method of keeping songs to two or three chords and repurposing the repetitive structure of rock."
+        textRu: "Эйдан Леви описывает метод Рида: держать песню на двух-трёх аккордах и по-новому использовать повторяющуюся структуру рока."
+        source:
+          title: "Aidan Levy: The Velvet Underground & Nico, National Recording Registry essay, Library of Congress"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf"
+          quote: "“The Velvet Underground could do a lot of things a lot of ways. They could be very dissonant, very pretty,” he said. “And they were all two-, three-chord songs.” The key for Reed was to take the repetitive structure of rock and make it new--never to recycle, but to repurpose."
+      - type: "critics"
+        dimensions: ["sound", "image"]
+        text: "Guitar World credits the band with taking feedback and noise to new extremes and Reed's lyrics with taking rock into territory it had never entered."
+        textRu: "Guitar World пишет, что группа довела фидбэк и шум до небывалых крайностей, а тексты Рида увели рок туда, где он ещё не бывал."
+        source:
+          title: "Alan di Perna: Lou Reed interview, Guitar World (1998)"
+          url: "https://www.guitarworld.com/magazine/lou-reed-talks-about-velvet-underground-songwriting-and-gear-1998-guitar-world-interview"
+          quote: "With guitars, electrified viola and madly overdriven combo organs, they took feedback and noise to new extremes. Meanwhile, Reed’s lyrics took rock down a dark street where it had never been before"
+    scope: "career"
+  - to: card:rock-n-roll
+    kind: style
+    how: "Beneath the avant-garde noise the Velvets played rock and roll: I–IV three-chord changes, a shared love of Bo Diddley, Chuck Berry and Jimmy Reed, and Moe Tucker's stripped-down, mallet-played beat drawn from her love of Bo Diddley and Babatunde Olatunji."
+    howRu: "Под авангардным шумом Velvet Underground играли рок-н-ролл: трёхаккордовые переходы с первой ступени на четвёртую, общая любовь к Бо Диддли, Чаку Берри и Джимми Риду и простой бит Мо Такер, игравшей колотушками, — он вырос из её любви к Бо Диддли и Бабатунде Олатунджи."
+    carries: []
+    dimensions: ["rhythm", "harmony-form"]
+    evidence:
+      - type: "listening"
+        dimensions: ["rhythm"]
+        text: "Levy notes that Reed, Tucker and Morrison shared a love of Bo Diddley, Steve Cropper, Chuck Berry, Mickey Baker and Jimmy Reed."
+        textRu: "Леви отмечает, что Рида, Такер и Моррисона объединяла любовь к Бо Диддли, Стиву Кропперу, Чаку Берри, Микки Бейкеру и Джимми Риду."
+        source:
+          title: "Aidan Levy: The Velvet Underground & Nico, National Recording Registry essay, Library of Congress"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf"
+          quote: "In fact, Reed, Tucker, and Morrison had a common interest in the blues: Bo Diddley, Booker T. & the M.G.’s guitarist Steve Cropper, Chuck Berry, Mickey Baker, Jimmy Reed. The challenge was to make it their own without appropriation."
+      - type: "analysis"
+        dimensions: ["rhythm"]
+        text: "Levy describes Tucker playing a stripped-down kit standing up, with mallets, and loving Babatunde Olatunji and Bo Diddley."
+        textRu: "Леви описывает, как Такер играла стоя на урезанной установке, колотушками вместо палочек, и любила Бабатунде Олатунджи и Бо Диддли."
+        source:
+          title: "Aidan Levy: The Velvet Underground & Nico, National Recording Registry essay, Library of Congress"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf"
+          quote: "Maureen “Moe” Tucker, who played a stripped-down drum kit standing up, favored mallets over sticks, and loved Babatunde Olatunji and Bo Diddley."
+      - type: "testimony"
+        dimensions: ["harmony-form"]
+        text: "Reed describes the pleasure of rock's I–IV chord change, which he hears in rock rather than jazz."
+        textRu: "Рид говорит об удовольствии от рокового перехода с первой ступени на четвёртую — того, что есть в роке и чего нет в джазе."
+        source:
+          title: "Alan di Perna: Lou Reed interview, Guitar World (1998)"
+          url: "https://www.guitarworld.com/magazine/lou-reed-talks-about-velvet-underground-songwriting-and-gear-1998-guitar-world-interview"
+          quote: "There’s something about those kind of changes. You don’t have that in jazz, really. You have it in rock. There’s just a great deal of satisfaction in going from a I to a IV chord."
+    scope: "career"

@@ -8,43 +8,91 @@ placeRu: "Лондон"
 genre: "Rock"
 genreRu: "рок"
 links:
-  - to: "card:blues"
-    claim: "The Rolling Stones released the blues song “Little Red Rooster” as a single."
-    claimRu: "The Rolling Stones выпустили блюзовую песню «Little Red Rooster» отдельным синглом."
-    sources:
-      - title: "The Current (MPR): Today in Music History — the Stones record a blues standard"
-        url: "https://www.thecurrent.org/feature/2019/08/28/today-in-music-history-the-stones-record-a-blues-standard"
-      - title: "uDiscover Music: Little Red Rooster, the first blues record to top the UK singles chart"
-        url: "https://www.udiscovermusic.com/stories/the-first-blues-record-to-top-the-uk-singles-chart"
-    kind: "cover"
-    what: "“Little Red Rooster”: the Rolling Stones’ own recording of the blues song."
-    whatRu: "«Little Red Rooster»: собственная запись блюзовой песни группой The Rolling Stones."
-    carries: []
-    how: The Stones’ version closely mirrors Howlin’ Wolf’s record, whose slide riff was played by Hubert Sumlin; the sources do not show which element the Stones’ own recording kept.
-    howRu: Версия Rolling Stones близко повторяет запись Хаулина Вулфа, где слайдовый рифф играл Хьюберт Самлин; какой элемент сохранила запись самих Stones, источники не показывают.
   - to: "root:muddy-waters"
     kind: "influence"
-    claim: "Muddy Waters was one of the blues models around whom the young Rolling Stones formed their musical identity."
-    claimRu: "Мадди Уотерс был одним из блюзовых музыкантов, на которых равнялись молодые The Rolling Stones, вырабатывая своё звучание."
-    sources:
-      - title: "Chicago Sun-Times: Mick Jagger and Keith Richards on Chicago blues"
-        url: "https://chicago.suntimes.com/2017/4/13/18381179/mick-jagger-keith-richards-chat-chicago-blues-exhibitionism"
-      - title: "uDiscover Music: Blues That Influenced the Rolling Stones"
-        url: "https://www.udiscovermusic.com/stories/songs-that-influenced-the-rolling-stones/"
-    carries: []
-    how: Chicago blues shaped Richards’s guitar licks and Jagger’s singing; the sources describe a broad style, not one of the elements traced here.
-    howRu: Чикагский блюз сформировал гитарные ходы Ричардса и пение Джаггера; источники описывают стиль в целом, а не один из элементов нашего списка.
-  - to: "card:blues"
+    scope: "career"
+    how: "From Muddy Waters and the South Side Chicago blues the Stones took the amplified band sound and the tight interplay of a blues group playing together."
+    howRu: "У Мадди Уотерса и чикагского блюза Саут-Сайда Rolling Stones взяли электрическое звучание ансамбля и плотную сыгранность блюзовой группы."
+    dimensions: ["sound", "performance"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["sound", "performance"]
+        text: "Keith Richards says the band's connection to Chicago comes from South Side Chicago blues: they wanted to know how those players got their sound, and what struck them was the tightness of the playing together."
+        textRu: "Кит Ричардс говорит, что связь группы с Чикаго — это чикагский блюз Саут-Сайда: они хотели понять, откуда у тех музыкантов такой звук, и поражала их плотность совместной игры."
+        source:
+          title: "Chicago Sun-Times: Mick Jagger and Keith Richards on Chicago blues (2017)"
+          url: "https://chicago.suntimes.com/2017/4/13/18381179/mick-jagger-keith-richards-chat-chicago-blues-exhibitionism"
+          quote: "Our connection with Chicago comes from Chicago music, especially South Side Chicago blues. … But it was particularly Chicago blues that impressed us. We just wanted to know how guys got that sound. … It was just the tightness, the way these guys played together."
+      - type: "listening"
+        dimensions: []
+        text: "Mick Jagger names Muddy Waters and Chuck Berry among the band's favourites, met at the Chess studio whose sound intrigued them."
+        textRu: "Мик Джаггер называет Мадди Уотерса и Чака Берри среди любимых музыкантов группы — с ними они встретились в студии Chess, чей звук их так манил."
+        source:
+          title: "Chicago Sun-Times: Mick Jagger and Keith Richards on Chicago blues (2017)"
+          url: "https://chicago.suntimes.com/2017/4/13/18381179/mick-jagger-keith-richards-chat-chicago-blues-exhibitionism"
+          quote: "We met some of our favorites there. We met Chuck Berry and Muddy [Waters] and many others in that studio"
+      - type: "critics"
+        dimensions: []
+        text: "The Rock & Roll Hall of Fame describes Muddy's Chicago group as, in retrospect, the prototypical rock band, and says he inspired the Rolling Stones to take up rock's legacy."
+        textRu: "Зал славы рок-н-ролла называет чикагский ансамбль Мадди, если смотреть из сегодняшнего дня, прообразом рок-группы и пишет, что он вдохновил Rolling Stones подхватить наследие рока."
+        source:
+          title: "Rock & Roll Hall of Fame: Muddy Waters"
+          url: "https://www.rockhall.com/inductees/muddy-waters"
+          quote: "He has inspired such icons as the Rolling Stones and Eric Clapton to take up rock's legacy."
+  - to: "root:chuck-berry"
     kind: "influence"
-    claim: "Brian Jones learned electric slide guitar from Elmore James and Robert Johnson records and played slide on the Stones’ “Little Red Rooster”."
-    claimRu: "Брайан Джонс осваивал электрическую слайд-гитару по пластинкам Элмора Джеймса и Роберта Джонсона и сыграл слайдом в «Little Red Rooster» Rolling Stones."
-    sources:
-      - title: "Classic Rock (Louder): The Rolling Stones’ blues roots in the early 1960s"
-        url: "https://www.loudersound.com/features/rolling-stones-blues-roots-early-1960s"
-      - title: "uDiscover Music: Why Brian Jones was so important to the Rolling Stones"
-        url: "https://www.udiscovermusic.com/stories/just-why-was-brian-jones-so-important-to-the-rolling-stones"
-    carries: ["slide-guitar"]
-    how: "Slide guitar from the blues: Brian Jones practised it to Elmore James and Robert Johnson records and brought it into the early Stones."
-    howRu: "Слайд-гитара из блюза: Брайан Джонс осваивал её по пластинкам Элмора Джеймса и Роберта Джонсона и принёс её в ранние Rolling Stones."
-story: "Muddy Waters was one of the blues models around whom the young Rolling Stones shaped their sound. Their single “Little Red Rooster” carried a blues song into their own repertoire."
-storyRu: "Молодые The Rolling Stones вырабатывали своё звучание, равняясь на Мадди Уотерса и его блюз. Выпустив сингл «Little Red Rooster», они включили блюзовую песню в собственный репертуар."
+    scope: "career"
+    how: "From Chuck Berry the Stones took the riff-driven rock-and-roll guitar that Keith Richards studied above all, and the energized stage manner of the frontman."
+    howRu: "У Чака Берри Rolling Stones взяли рок-н-ролльную гитару на риффах, которую прежде всего изучал Кит Ричардс, и заряженную сценическую подачу фронтмена."
+    carries: ["riff"]
+    dimensions: ["sound", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "performance"]
+        text: "The Encyclopedia of African-American Culture and History names the Rolling Stones among the performers who emulated both Berry's guitar style and his highly energized stage presence."
+        textRu: "«Энциклопедия афроамериканской культуры и истории» называет Rolling Stones среди тех, кто перенял у Берри и гитарную манеру, и предельно энергичную сценическую подачу."
+        source:
+          title: "David Henderson, Encyclopedia of African-American Culture and History: Chuck Berry (via Encyclopedia.com)"
+          url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/chuck-berry"
+          quote: "He had a tremendous influence on rock performers who came after him, including Buddy Holly, the Beatles, the Beach Boys, and the Rolling Stones, who emulated both his guitar style and his highly energized stage presence."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "The Encyclopedia of World Biography calls Keith Richards perhaps the ultimate student of the Chuck Berry school of guitar."
+        textRu: "«Энциклопедия всемирной биографии» называет Кита Ричардса, пожалуй, самым прилежным учеником гитарной школы Чака Берри."
+        source:
+          title: "Calen Stone, Encyclopedia of World Biography: Chuck Berry (via Encyclopedia.com)"
+          url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/chuck-berry"
+          quote: "In 1986 Rolling Stones guitarist Keith Richard, perhaps the ultimate student of the Chuck Berry School of Guitar,"
+      - type: "critics"
+        dimensions: ["sound", "performance"]
+        text: "The Rock & Roll Hall of Fame credits Berry's technical prowess and showmanship with inspiring the Rolling Stones, and its 1986 essay says the Stones appropriated his songs and style and made them their own."
+        textRu: "Зал славы рок-н-ролла пишет, что техника и артистизм Берри вдохновили Rolling Stones, а в эссе 1986 года — что Stones присвоили его песни и стиль и переиначили их на свой лад."
+        source:
+          title: "Rock & Roll Hall of Fame: Chuck Berry"
+          url: "https://www.rockhall.com/inductees/chuck-berry"
+          quote: "his technical prowess and showmanship inspiring the Beatles, the Rolling Stones, Jimi Hendrix, and countless more."
+  - to: "style:british-beat"
+    kind: "style"
+    scope: "career"
+    how: "The Stones were the blues-and-R&B wing of British beat: American blues and rhythm and blues played with swagger, a dangerous image and a frontman who moved on stage as no white singer had."
+    howRu: "Rolling Stones были блюзовым и ритм-н-блюзовым крылом британского бита: американский блюз и ритм-н-блюз, сыгранные с вызовом, опасный образ и фронтмен, который двигался на сцене так, как до него не двигался ни один белый певец."
+    dimensions: ["sound", "image", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "image"]
+        text: "The Rock & Roll Hall of Fame describes a band that married its love of blues and American R&B to many styles, with swagger as the constant throughline; Pete Townshend: they had the sound, the image, and they were dangerous."
+        textRu: "Зал славы рок-н-ролла пишет о группе, которая соединила любовь к блюзу и американскому ритм-н-блюзу со множеством стилей, и сквозная нить у неё — вызов. Пит Таунсенд: у них был звук, был образ, и они были опасны."
+        source:
+          title: "Rock & Roll Hall of Fame: The Rolling Stones"
+          url: "https://www.rockhall.com/inductees/rolling-stones"
+          quote: "They had the sound, they had the image, and they were dangerous."
+      - type: "critics"
+        dimensions: ["performance"]
+        text: "The St. James Encyclopedia of Popular Culture says the Stones brought the Afro-American form of blues to a young white audience, with early records built on rhythm and blues and a stage image of surly sexuality; Lillian Roxon wrote that no one had seen a white man move on stage as Jagger did."
+        textRu: "«Энциклопедия популярной культуры Сент-Джеймс» пишет, что Stones принесли афроамериканский блюз молодой белой публике: ранние записи держались на ритм-н-блюзе, а сценический образ — на угрюмой сексуальности. Лиллиан Роксон писала, что никто ещё не видел, чтобы белый человек так двигался на сцене, как Джаггер."
+        source:
+          title: "Martyn Bone, St. James Encyclopedia of Popular Culture: The Rolling Stones (via Encyclopedia.com)"
+          url: "https://www.encyclopedia.com/media/encyclopedias-almanacs-transcripts-and-maps/rolling-stones"
+          quote: "No one had ever seen a white man move on stage the way Jagger moved."
+story: "The Rolling Stones learned from the South Side Chicago blues of Muddy Waters: the amplified sound and tight interplay of a blues band. From Chuck Berry Keith Richards took his riff-driven guitar, and the band his energized stage manner. Together this made them the blues-and-R&B wing of British beat, with swagger, danger and Jagger's movement on stage."
+storyRu: "Rolling Stones учились у чикагского блюза Саут-Сайда, у Мадди Уотерса, — электрическому звучанию и плотной сыгранности блюзового ансамбля. У Чака Берри Кит Ричардс взял гитару на риффах, а группа — заряженную сценическую подачу. Так они стали блюзовым и ритм-н-блюзовым крылом британского бита — с вызовом, ощущением опасности и пластикой Джаггера на сцене."

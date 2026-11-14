@@ -16,6 +16,8 @@ export interface App {
   chapters: Chapter[];
   /** Recordings to listen to, by card and by roots artist. */
   listen: ListenFile;
+  /** Styles as route stations, keyed "style:<id>" (content/roots/styles.yaml). */
+  styles: import('./lib/roots').Artist[];
   /** Musical elements the roots carry (content/roots/elements.yaml). */
   elements: ElementsFile;
   /** Genre-to-genre steps told by what they carried (content/roots/card-links.yaml). */

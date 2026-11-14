@@ -85,11 +85,21 @@ export function metro(o: MetroOpts): HTMLElement {
     if (!sp) continue;
     const [x, y] = xy([sp.at, sp.lane]);
     const card = ref.startsWith('card:');
-    const dot = document.createElementNS(NS, 'circle');
-    dot.setAttribute('cx', String(x));
-    dot.setAttribute('cy', String(y));
-    dot.setAttribute('r', card ? '7' : '5.5');
-    dot.setAttribute('class', `rt-mdot${card ? ' card' : ''}${onRoute.has(ref) ? ' on' : ''}${terminals.has(ref) ? ' end' : ''}`);
+    const style = ref.startsWith('style:');
+    // A style is a diamond: a station of the route, neither an artist nor a card.
+    const dot = document.createElementNS(NS, style ? 'rect' : 'circle');
+    if (style) {
+      dot.setAttribute('x', String(x - 5.5));
+      dot.setAttribute('y', String(y - 5.5));
+      dot.setAttribute('width', '11');
+      dot.setAttribute('height', '11');
+      dot.setAttribute('transform', `rotate(45 ${x} ${y})`);
+    } else {
+      dot.setAttribute('cx', String(x));
+      dot.setAttribute('cy', String(y));
+      dot.setAttribute('r', card ? '7' : '5.5');
+    }
+    dot.setAttribute('class', `rt-mdot${card ? ' card' : ''}${style ? ' style' : ''}${onRoute.has(ref) ? ' on' : ''}${terminals.has(ref) ? ' end' : ''}`);
     svg.append(dot);
     const more = hidden.get(ref) ?? 0;
     if (more) {
@@ -123,7 +133,7 @@ export function metro(o: MetroOpts): HTMLElement {
         ? pick({ en: `${name}: take the route that ends here`, ru: `${name}: выбрать маршрут, который здесь заканчивается` })
         : pick({ en: `${name}: take a route through here`, ru: `${name}: выбрать маршрут через эту станцию` })) + extra;
     const b = h(
-      `button.rt-mstop${card ? '.card' : ''}${here ? '.on' : ''}${terminals.has(ref) ? '.end' : ''}`,
+      `button.rt-mstop${card ? '.card' : ''}${style ? '.style' : ''}${here ? '.on' : ''}${terminals.has(ref) ? '.end' : ''}`,
       {
         type: 'button',
         'data-ref': ref,

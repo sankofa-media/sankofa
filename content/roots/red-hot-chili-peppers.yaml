@@ -1,4 +1,3 @@
----
 id: red-hot-chili-peppers
 name: Red Hot Chili Peppers
 aliases:
@@ -14,32 +13,54 @@ place:
 placeRu: "Лос-Анджелес"
 genre: Funk rock
 genreRu: фанк-рок
+story: "Red Hot Chili Peppers built their sound on funk: slap bass and drumming schooled on James Brown, Sly and the Family Stone, the Meters and Funkadelic, with Anthony Kiedis rapping over the groove. They fused it with the speed and aggression of Los Angeles punk, which their own singer called the band's other half."
+storyRu: "Red Hot Chili Peppers построили свой звук на фанке: слэп-бас и барабаны, выученные на Джеймсе Брауне, Sly and the Family Stone, The Meters и Funkadelic, а поверх грува читает рэп Энтони Кидис. Этот фанк они сплавили со скоростью и напором лос-анджелесского панка — второй половиной группы, по словам её же певца."
 links:
-  - to: card:funk
-    claim: Red Hot Chili Peppers recorded a cover of Stevie Wonder's 'Higher Ground'.
-    claimRu: Red Hot Chili Peppers записали кавер на «Higher Ground» Стиви Уандера.
-    sources:
-      - title: 'Rolling Stone: Red Hot Chili Peppers on 25 Years of Mother’s Milk'
-        url: https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/
-      - title: 'Guitar World: Flea’s bittersweet hip-hop recording experience'
-        url: https://www.guitarworld.com/artists/bassists/flea-young-mc-bust-a-move
-    kind: cover
-    what: Stevie Wonder’s “Higher Ground”, newly performed on Mother’s Milk.
-    whatRu: Песня Стиви Уандера «Higher Ground» в новом исполнении на «Mother’s Milk».
+  - to: "card:funk"
+    kind: "influence"
+    how: "The band's rhythm section and vocal manner came from funk: slap bass, a drummer raised on James Brown, Sly Stone and Tower of Power, and a singer who sent him to the Meters and Funkadelic, with rapping laid over the groove."
+    howRu: "Ритм-секция и вокальная манера группы пришли из фанка: слэп-бас, барабанщик, выросший на Джеймсе Брауне, Слае Стоуне и Tower of Power, и певец, отправивший его слушать The Meters и Funkadelic, а поверх грува — рэп."
     carries: []
-    how: 'A cover of a Stevie Wonder song: repertoire, not a documented element.'
-    howRu: 'Кавер на песню Стиви Уандера: репертуар, а не задокументированный приём.'
-  - to: root:james-brown
-    kind: influence
-    claim: James Brown’s funk was one of Red Hot Chili Peppers’ musical influences.
-    claimRu: Фанк Джеймса Брауна был одним из музыкальных ориентиров Red Hot Chili Peppers.
-    sources:
-      - title: 'Rock & Roll Hall of Fame: Red Hot Chili Peppers — Influences'
-        url: https://rockhall.com/inductees/red-hot-chili-peppers/
-      - title: 'Rolling Stone: Chad Smith on Mother’s Milk'
-        url: https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/
-    carries: ["groove"]
-    how: With James Brown and Parliament-Funkadelic among their influences, the Chili Peppers built their sound on funk grooves and slap bass.
-    howRu: Среди их влияний Джеймс Браун и Parliament-Funkadelic, и Red Hot Chili Peppers построили свой звук на фанковых грувах и слэп-басе.
-story: James Brown’s funk was one of Red Hot Chili Peppers’ musical influences. Their recorded repertoire also includes Stevie Wonder’s “Higher Ground”.
-storyRu: Фанк Джеймса Брауна был одним из музыкальных ориентиров Red Hot Chili Peppers. В их записанный репертуар вошла и «Higher Ground» Стиви Уандера.
+    dimensions: ["rhythm", "sound", "melody-vocal", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "melody-vocal", "performance"]
+        text: "The Rock and Roll Hall of Fame defines the band's signature as slap bass and rapping, names Parliament-Funkadelic and James Brown among its influences and stresses its reputation as a live act."
+        textRu: "Зал славы рок-н-ролла называет фирменным знаком группы слэп-бас и рэп, причисляет к её влияниям Parliament-Funkadelic и Джеймса Брауна и подчёркивает её славу концертной группы."
+        source:
+          title: "Rock & Roll Hall of Fame: Red Hot Chili Peppers (inducted 2012)"
+          url: "https://rockhall.com/inductees/red-hot-chili-peppers/"
+          quote: "Red Hot Chili Peppers’ signature blend of slap bass, rapping, and punk-metal guitar set the ‘80s on fire. Initially beloved as a formidable live act, they achieved breakthrough radio success with ‘91’s Blood Sugar Sex Magik."
+      - type: "testimony"
+        dimensions: ["rhythm"]
+        text: "Drummer Chad Smith recalls that he grew up on James Brown and Sly and the Family Stone, and that Kiedis schooled him in funk with the Meters and Funkadelic, calling funk a really important part of the band."
+        textRu: "Барабанщик Чед Смит вспоминает, что вырос на Джеймсе Брауне и Sly and the Family Stone, а Кидис доучивал его фанку на The Meters и Funkadelic; фанк Смит называет по-настоящему важной частью группы."
+        source:
+          title: "Rolling Stone Australia: Red Hot Chili Peppers on 25 Years of Mother’s Milk (2014)"
+          url: "https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/"
+          quote: "I was into Tower of Power, James Brown, of course Sly and the Family Stone, ... Listen to 'Cissy Strut.' Listen to this Funkadelic stuff. ... We do the hard thing, the punk thing, but also the funk — it's a really important part of our band."
+    scope: "career"
+  - to: "style:punk"
+    kind: "style"
+    how: "From the Los Angeles punk scene the band took hard, fast, aggressive guitar playing and a ferocious stage manner, set against their funk rhythm section."
+    howRu: "Из лос-анджелесской панк-сцены группа взяла жёсткую, быструю, агрессивную гитару и яростную сценическую манеру, противопоставив их своей фанковой ритм-секции."
+    carries: []
+    dimensions: ["sound", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "performance"]
+        text: "The Hall of Fame describes the band's guitar as punk-metal, lists Black Flag and the Minutemen among its influences, and traces it to the Los Angeles club scene."
+        textRu: "Зал славы называет гитару группы панк-металлической, относит к её влияниям Black Flag и Minutemen и выводит её из лос-анджелесской клубной сцены."
+        source:
+          title: "Rock & Roll Hall of Fame: Red Hot Chili Peppers (inducted 2012)"
+          url: "https://rockhall.com/inductees/red-hot-chili-peppers/"
+          quote: "Red Hot Chili Peppers’ signature blend of slap bass, rapping, and punk-metal guitar set the ‘80s on fire."
+      - type: "testimony"
+        dimensions: ["sound", "performance"]
+        text: "Chad Smith recalls that Kiedis defined the band as doing the hard punk thing alongside funk, and that he had to be schooled in punk, starting with Bad Brains."
+        textRu: "Чед Смит вспоминает, как Кидис определил группу: жёсткий панк плюс фанк, — и как самого Смита пришлось подтягивать в панке, начиная с Bad Brains."
+        source:
+          title: "Rolling Stone Australia: Red Hot Chili Peppers on 25 Years of Mother’s Milk (2014)"
+          url: "https://au.rollingstone.com/music/music-news/red-hot-chili-peppers-on-25-years-of-mothers-milk-490/"
+          quote: "We do the hard thing, the punk thing, but also the funk ... I had to get schooled on it a little bit, for sure. ... Listen to Bad Brains, man — Bad Brains is the most ferocious band ever!"
+    scope: "career"

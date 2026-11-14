@@ -10,28 +10,83 @@ genreRu: "дельта-блюз"
 links:
   - to: "root:son-house"
     kind: "influence"
-    claim: "Son House was one of the Delta musicians Robert Johnson took as models while developing his blues."
-    claimRu: "Сон Хаус был одним из музыкантов дельты Миссисипи, на которых равнялся Роберт Джонсон, создавая свой блюз."
-    sources:
-      - title: "Library of Congress: The Complete Recordings — Robert Johnson"
-        url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RobertJohnsonCompleteRecordings.pdf"
-      - title: "Mississippi Encyclopedia: Robert Johnson"
-        url: "https://mississippiencyclopedia.org/entries/robert-johnson/"
-      - {"title": "NPS Lower Mississippi Delta: Son House", "url": "https://home.nps.gov/locations/lowermsdeltaregion/son-house.htm"}
+    how: "As a youth Johnson watched House at plantation dances and learned from him directly, taking his raw, percussive bottleneck slide guitar."
+    howRu: "Юношей Джонсон слушал Хауса на танцах на плантациях и учился у него напрямую — перенял его грубый, ударный слайд с бутылочным горлышком."
     carries: ["slide-guitar"]
-    how: Johnson took Son House as a model and learned his licks, the slide-guitar blues of the Delta.
-    howRu: Джонсон взял за образец Сана Хауса и выучил его ходы — дельта-блюз на слайд-гитаре.
+    dimensions: ["sound", "rhythm", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "rhythm", "performance"]
+        text: "House's raw intensity and percussive bottleneck playing impressed the blues players around him, Johnson among them, who watched House perform as a youth."
+        textRu: "Грубая сила Хауса и его ударный слайд поразили окружавших его блюзменов, и среди них Джонсона, который юношей ходил на его выступления."
+        source:
+          title: "EBSCO Research Starters: Son House"
+          url: "https://www.ebsco.com/research-starters/history/son-house"
+          quote: "While few recordings exist from his early, and arguably prime, period, the raw intensity, percussive and bottleneck slide guitar practice, and religious subject matter made a profound impression on many prevailing blues musicians. Notably, Robert Johnson and Muddy Waters fortuitously had personal interactions with House. [...] Johnson observed House perform at several plantation balls as a youth."
+      - type: "analysis"
+        dimensions: ["sound"]
+        text: "House's bottleneck playing significantly influenced younger guitarists such as Johnson, whom House said he had taught to play."
+        textRu: "Слайд Хауса заметно повлиял на гитаристов помоложе, например на Джонсона; Хаус говорил, что сам учил его играть."
+        source:
+          title: "64 Parishes (Louisiana Endowment for the Humanities): Son House"
+          url: "https://64parishes.org/entry/son-house"
+          quote: "Son House did not invent bottleneck guitar playing, but he excelled at it, significantly influencing younger African American blues guitarists such as Robert Johnson and Muddy Waters (born McKinley Morganfield)."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Johnson copped guitar licks directly from House."
+        textRu: "Гитарные ходы Джонсон снимал прямо у Хауса."
+        source:
+          title: "Guitar World: Robert Johnson’s ferocious guitar style"
+          url: "https://www.guitarworld.com/lessons/acoustic-nation-robert-johnsons-ferocious-guitar-style"
+          quote: "In his youth, Johnson copped licks directly from Son House, who later in his life vividly recalled how Johnson developed from a bad guitarist to a “master” in just two years."
+      - type: "analysis"
+        dimensions: []
+        text: "Johnson took the best Delta players he heard as models, Patton, House and Willie Brown above all."
+        textRu: "Образцами для Джонсона стали лучшие музыканты дельты, которых он слышал, — прежде всего Паттон, Хаус и Вилли Браун."
+        source:
+          title: "Library of Congress, National Recording Registry, Ed Komara: “The Complete Recordings” — Robert Johnson"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RobertJohnsonCompleteRecordings.pdf"
+          quote: "For his models, he took the best musicians that he was hearing in the region, especially Charley Patton, Son House, and Willie Brown, along with the records being made by St. Louis musician Lonnie Johnson."
+    scope: "career"
+    example:
+      song: "“Preaching Blues” and “Walking Blues” (1936)"
+      text: "Both grew out of House's “Preachin' the Blues”."
+      textRu: "Обе выросли из «Preachin’ the Blues» Хауса."
+      source:
+        title: "National Park Service, Lower Mississippi Delta: Son House"
+        url: "https://home.nps.gov/locations/lowermsdeltaregion/son-house.htm"
+        quote: "His song \"Preachin' The Blues Part I & II\" was a six-minute biography of his life and served as inspiration for Robert Johnson's \"Preaching Blues\" and \"Walking Blues.\""
   - to: "card:blues"
-    kind: "scene"
-    claim: "Robert Johnson developed his music among the blues musicians of the Mississippi Delta."
-    claimRu: "Музыка Роберта Джонсона складывалась в среде блюзовых исполнителей дельты Миссисипи."
-    sources:
-      - title: "Library of Congress: The Complete Recordings — Robert Johnson"
-        url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RobertJohnsonCompleteRecordings.pdf"
-      - title: "Mississippi Encyclopedia: Robert Johnson"
-        url: "https://mississippiencyclopedia.org/entries/robert-johnson/"
-    carries: []
-    how: Johnson learned the Delta blues from its players; the sources stress his steady four-beat pulse that rock later used, which is not one of the elements traced here.
-    howRu: Джонсон учился дельта-блюзу у его музыкантов; источники подчёркивают его ровный четырёхдольный пульс, на который потом опирался рок, но этого элемента в нашем списке нет.
-story: "Robert Johnson developed his music among Mississippi Delta blues musicians. Son House was one of the models he followed."
-storyRu: "Музыка Роберта Джонсона складывалась в блюзовой среде дельты Миссисипи. Одним из его образцов был Сон Хаус."
+    kind: "style"
+    how: "Johnson's Delta blues set a virtuoso guitar to a steady, pulsing four-beat meter, moved piano boogie figures onto the guitar and sang them with a wide, piercing vocal range."
+    howRu: "В дельта-блюзе Джонсона виртуозная гитара шла по ровному, пульсирующему четырёхдольному метру, фигуры фортепианного буги перешли на гитару, а пел он в широком, пронзительном диапазоне."
+    carries: ["riff"]
+    dimensions: ["rhythm", "sound", "melody-vocal"]
+    evidence:
+      - type: "analysis"
+        dimensions: ["rhythm", "sound"]
+        text: "Johnson played the guitar to the pulsing 4/4 “big beat” that big-band and later rock rhythm sections were built on."
+        textRu: "Джонсон играл на гитаре под пульсирующий четырёхдольный «большой бит», на котором держались ритм-секции биг-бэндов, а потом и рок-групп."
+        source:
+          title: "Library of Congress, National Recording Registry, Ed Komara: “The Complete Recordings” — Robert Johnson"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RobertJohnsonCompleteRecordings.pdf"
+          quote: "Furthermore, in many of his blues, Johnson was playing to the pulsing “big beat” meter in 4/4 time to which rhythm sections in the big bands and, since the 1950s, rock bands were anchoring their sounds."
+      - type: "critics"
+        dimensions: ["rhythm", "sound"]
+        text: "He moved the boogie-blues groove, until then a piano figure, onto the guitar."
+        textRu: "Он перенёс на гитару грув буги-блюза — до тех пор фортепианную фигуру."
+        source:
+          title: "Guitar World: Robert Johnson’s ferocious guitar style"
+          url: "https://www.guitarworld.com/lessons/acoustic-nation-robert-johnsons-ferocious-guitar-style"
+          quote: "FIGURE 1 mimics Johnson’s hugely influential “boogie blues” riff, as heard in “I Believe I’ll Dust My Broom.” Prior to Johnson’s recording of the song, this groove was played only on piano, but it became the basis for countless guitar-based tunes after he used it."
+      - type: "analysis"
+        dimensions: ["sound", "melody-vocal"]
+        text: "His recordings show instrumental virtuosity and a spine-tingling vocal range."
+        textRu: "В его записях — инструментальная виртуозность и диапазон голоса, от которого бегут мурашки."
+        source:
+          title: "Mississippi Encyclopedia: Robert Johnson"
+          url: "https://mississippiencyclopedia.org/entries/robert-johnson/"
+          quote: "His recorded body of songs includes examples of instrumental virtuosity, emotionally evocative lyrical poetry, and spine-tingling vocal range."
+    scope: "career"
+story: "Robert Johnson watched Son House at plantation dances as a youth and learned his raw, percussive slide guitar from him. His own Delta blues set a virtuoso guitar to a pulsing four-beat meter, carried piano boogie figures onto the guitar and was sung with a wide, piercing range."
+storyRu: "Юношей Роберт Джонсон слушал Сона Хауса на танцах на плантациях и перенял у него грубый, ударный слайд. В его собственном дельта-блюзе виртуозная гитара шла по пульсирующему четырёхдольному метру, фигуры фортепианного буги перешли на гитару, а пел он в широком, пронзительном диапазоне."

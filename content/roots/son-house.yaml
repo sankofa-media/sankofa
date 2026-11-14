@@ -8,17 +8,101 @@ placeRu: "Лайон, Миссисипи"
 genre: "Delta blues"
 genreRu: "дельта-блюз"
 links:
+  - to: "root:charley-patton"
+    kind: "influence"
+    how: "House sought to play the blues the way Patton did, stayed near him and then performed alongside him in the Delta; his guitar kept Patton's percussive snapped-string bass."
+    howRu: "Хаус хотел играть блюз так, как играл Паттон, держался рядом с ним, а потом выступал с ним в дельте; в его гитаре остался ударный паттоновский бас с хлёсткими щелчками струн."
+    carries: []
+    dimensions: ["sound", "performance"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["sound"]
+        text: "House said he could not play the blues like Patton straight off, so he stayed around him for a while."
+        textRu: "Хаус говорил, что не мог сразу заиграть блюз так, как Паттон, и потому какое-то время держался возле него."
+        source:
+          title: "Classic Rock (Louder), Jerry Gilbert: A Preacher, A Killer — the incredible story of Son House (2015, with a 1970 Sounds interview)"
+          url: "https://loudersound.com/features/a-preacher-a-killer-son-house-king-of-the-delta-blues"
+          quote: "I was born and raised in Clarksdale but Charley [Patton] was living in Jackson, Mississippi when I first ran into him. I couldn’t play the blues like him by just learning straight off. So I stayed around with him for a little while, then I moved on and ran into Willie Brown."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "His 1942 Library of Congress playing shows how close he stood to Patton's guitar style."
+        textRu: "Его записи 1942 года для Библиотеки Конгресса показывают, как близок он был к гитарной манере Паттона."
+        source:
+          title: "Classic Rock (Louder), Jerry Gilbert: A Preacher, A Killer — the incredible story of Son House (2015)"
+          url: "https://loudersound.com/features/a-preacher-a-killer-son-house-king-of-the-delta-blues"
+          quote: "From his second session with Alan Lomax for the Library Of Congress comes this demonstration of how close House was to Charley Patton – the snapped-string descending bass figure matches Patton’s on numbers like Moon Going Down."
+      - type: "analysis"
+        dimensions: ["performance"]
+        text: "House played at times with Patton, a progenitor of the Delta blues."
+        textRu: "Временами Хаус играл вместе с Паттоном, одним из прародителей дельта-блюза."
+        source:
+          title: "64 Parishes (Louisiana Endowment for the Humanities): Son House"
+          url: "https://64parishes.org/entry/son-house"
+          quote: "He played at times with the guitarist Charley Patton, an iconic progenitor of Delta blues."
+      - type: "analysis"
+        dimensions: ["performance"]
+        text: "From 1930 House, Patton and Willie Brown played plantation balls together."
+        textRu: "С 1930 года Хаус, Паттон и Вилли Браун вместе играли на плантационных балах."
+        source:
+          title: "EBSCO Research Starters: Son House"
+          url: "https://www.ebsco.com/research-starters/history/son-house"
+          quote: "In 1930, he met Willie Brown and Charley Patton, and eventually the three began playing at old plantation balls and similar events."
+    scope: "career"
+    example:
+      song: "“Shetland Pony Blues” (1941)"
+      text: "House took Patton's song but made his own arrangement around his bottleneck playing."
+      textRu: "Хаус взял песню Паттона, но сделал собственную аранжировку под свой слайд."
+      source:
+        title: "EBSCO Research Starters: Son House"
+        url: "https://www.ebsco.com/research-starters/history/son-house"
+        quote: "Recorded in 1941 (and again in 1942 under the title “Pony Blues”), the basic song is borrowed from Charley Patton. House, however, crafted his own arrangement, complete with original verses and his distinctive style of playing bottleneck guitar."
   - to: "card:blues"
-    kind: "scene"
-    claim: "Son House developed his guitar playing within the Mississippi Delta’s blues community."
-    claimRu: "Сон Хаус выработал свою гитарную манеру в блюзовой среде дельты Миссисипи."
-    sources:
-      - title: "National Park Service: Son House"
-        url: "https://home.nps.gov/locations/lowermsdeltaregion/son-house.htm"
-      - title: "Mississippi Encyclopedia: Blues"
-        url: "https://mississippiencyclopedia.org/entries/blues/"
-    carries: ["slide-guitar"]
-    how: Son House’s Delta blues ran on slashing slide guitar and powerful vocals.
-    howRu: Дельта-блюз Сана Хауса держался на режущей слайд-гитаре и мощном голосе.
-story: "Son House developed as a guitarist in the Mississippi Delta. Its blues community was the setting in which his playing took shape."
-storyRu: "Сон Хаус становился гитаристом в дельте Миссисипи. Его манера складывалась в местной блюзовой среде."
+    kind: "style"
+    how: "House's Delta blues joined a highly rhythmic, percussive guitar and slashing bottleneck slide with notes “in the cracks” to an impassioned, shouted, gospel-tinged voice and a preacher's address to the audience."
+    howRu: "Дельта-блюз Хауса соединял очень ритмичную, ударную гитару и режущий слайд, берущий ноты «в щелях», с исступлённым, срывающимся на крик голосом в духе госпела и с проповедническим обращением к залу."
+    carries: ["slide-guitar", "blue-notes"]
+    dimensions: ["rhythm", "sound", "melody-vocal", "harmony-form", "performance"]
+    evidence:
+      - type: "analysis"
+        dimensions: ["rhythm", "sound", "melody-vocal"]
+        text: "His style rested on highly rhythmic guitar and vocals shaped by gospel, with frequent slide."
+        textRu: "Его стиль держался на очень ритмичной гитаре, на голосе, сложившемся под влиянием госпела, и на частом слайде."
+        source:
+          title: "EBSCO Research Starters: Son House"
+          url: "https://www.ebsco.com/research-starters/history/son-house"
+          quote: "His music style was accentuated by a highly rhythmic guitar and vocal style, influenced by black gospel and spiritual music, and frequently utilized slide guitar."
+      - type: "analysis"
+        dimensions: ["harmony-form", "melody-vocal", "sound"]
+        text: "His “Walkin' Blues” is a standard twelve-bar blues, sung and shouted over forceful strumming."
+        textRu: "Его «Walkin’ Blues» — обычный двенадцатитактовый блюз, который он поёт и выкрикивает под мощный бой по струнам."
+        source:
+          title: "EBSCO Research Starters: Son House"
+          url: "https://www.ebsco.com/research-starters/history/son-house"
+          quote: "“Walkin’ Blues.” An ideal example of the “standard” twelve-bar blues, the 1941 recording includes Brown on guitar, Fiddlin’ Joe Martin on mandolin, and Leroy Williams on harmonica. [...] House sings and shouts his lyrics while forcefully strumming his famous steel-bodied National guitar."
+      - type: "analysis"
+        dimensions: ["sound", "melody-vocal"]
+        text: "His bottleneck touches pitches “in the cracks”, voice-like effects suited to the blues, matched by his impassioned singing."
+        textRu: "Его слайд задевает высоты «в щелях» между нотами — похожие на голос эффекты, созданные для блюза, — и им под стать исступлённое пение."
+        source:
+          title: "64 Parishes (Louisiana Endowment for the Humanities): Son House"
+          url: "https://64parishes.org/entry/son-house"
+          quote: "In addition, such notes may not conform with conventional standards of tuning and perfect pitch, existing instead, to use bandstand parlance, “in the cracks.” These effects, which invite comparisons to the nuances of the human voice, fit well with the deeply emotive aesthetics of blues music. So did House’s intense, impassioned singing."
+      - type: "analysis"
+        dimensions: ["sound", "melody-vocal"]
+        text: "Powerful vocals and slashing slide made him a giant of the Delta school."
+        textRu: "Мощный голос и режущий слайд сделали его гигантом школы дельта-блюза."
+        source:
+          title: "National Park Service, Lower Mississippi Delta: Son House"
+          url: "https://home.nps.gov/locations/lowermsdeltaregion/son-house.htm"
+          quote: "House's powerful vocals and slashing slide guitar style established him as a giant of the Delta School but did not lead to commercial success."
+      - type: "critics"
+        dimensions: ["performance"]
+        text: "On stage he prefaced songs with sermon-like words to a hushed audience."
+        textRu: "На сцене он предварял песни словами, похожими на проповедь, и обращал их к притихшему залу."
+        source:
+          title: "Classic Rock (Louder), Jerry Gilbert: A Preacher, A Killer — the incredible story of Son House (2015, with a 1970 Sounds report)"
+          url: "https://loudersound.com/features/a-preacher-a-killer-son-house-king-of-the-delta-blues"
+          quote: "Son House has marked a penchant for the introductory prefaces to his songs – little fragments of Son House philosophy, mostly with religious connotations, directed at a hushed audience, like a preacher addressing his congregation."
+    scope: "career"
+story: "Son House set out to play the blues the way Charley Patton did and kept close to him, later performing with him across the Delta. His own Delta blues joined a highly rhythmic, percussive guitar and slashing slide to an impassioned, shouted voice and a preacher's manner on stage."
+storyRu: "Сон Хаус хотел играть блюз так, как Чарли Паттон, держался рядом с ним, а потом выступал с ним по всей дельте. Его собственный дельта-блюз соединял очень ритмичную, ударную гитару и режущий слайд с исступлённым, срывающимся на крик голосом и манерой проповедника на сцене."

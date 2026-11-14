@@ -10,15 +10,59 @@ genreRu: "рок-н-ролл"
 links:
   - to: "card:gospel"
     kind: "influence"
-    claim: "Little Richard’s vocal style drew on gospel singing."
-    claimRu: "Вокальная манера Литл Ричарда выросла из госпела."
-    sources:
-      - title: "New Georgia Encyclopedia: Little Richard Penniman"
-        url: "https://www.georgiaencyclopedia.org/articles/arts-culture/little-richard-penniman-1932-2020/"
-      - title: "NPR: Little Richard, the King and Queen of Rock and Roll (WYPR)"
-        url: "https://www.wypr.org/2020-05-09/little-richard-the-king-and-queen-of-rock-and-roll-dead-at-87"
+    how: "Little Richard sang with the voice of gospel: a churchy tone, gospel-styled shouting and a whoop he said he took from the gospel singer Marion Williams."
+    howRu: "Литл Ричард пел голосом госпела: «церковный» тембр, крик на манер госпела и фирменное «уханье», которое, по его словам, он взял у госпел-певицы Мэрион Уильямс."
     carries: ["gospel-vocal"]
-    how: 'Little Richard sang rock and roll with gospel’s voice: shouting, whooping and a “churchy” tone.'
-    howRu: 'Литтл Ричард пел рок-н-ролл голосом госпела: крик, «уханье» и «церковный» тембр.'
-story: "Gospel singing lies behind Little Richard’s vocal style. His voice carried that musical inheritance."
-storyRu: "За вокальной манерой Литл Ричарда стоит госпел. Его голос продолжал эту музыкальную традицию."
+    dimensions: ["melody-vocal", "image"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "Little Richard said his trademark whoop came from the gospel singer Marion Williams; NPR hears gospel-strong vocals in his records."
+        textRu: "Литл Ричард говорил, что фирменное «уханье» взял у госпел-певицы Мэрион Уильямс; NPR слышит в его записях голос госпельной силы."
+        source:
+          title: "NPR (Elizabeth Blair), via WYPR: Little Richard, the King and Queen of Rock and Roll (2020)"
+          url: "https://www.wypr.org/2020-05-09/little-richard-the-king-and-queen-of-rock-and-roll-dead-at-87"
+          quote: "Then there was gospel singer Marion Williams, from whom Little Richard said he got his trademark whoop."
+      - type: "critics"
+        dimensions: ["melody-vocal", "image"]
+        text: "He learned from the singer Billy Wright, who joined gospel-styled blues shouting to a towering hairdo and stage make-up; his own demo revealed a dramatic, churchy voice."
+        textRu: "Он учился у певца Билли Райта, соединявшего блюзовый крик в духе госпела с высоченной причёской и сценическим гримом; а его собственная демозапись открыла драматичный, «церковный» голос."
+        source:
+          title: "New Georgia Encyclopedia: Little Richard Penniman (1932–2020)"
+          url: "https://www.georgiaencyclopedia.org/articles/arts-culture/little-richard-penniman-1932-2020/"
+          quote: "gospel-styled blues shouting"
+    scope: "career"
+  - to: "card:rock-n-roll"
+    kind: "style"
+    how: "He set the wildest pattern of rock and roll: pounding piano, explosive rhythm, screaming vocals, and a flamboyant showman’s image of pompadour, eyeliner and loud clothes."
+    howRu: "Он задал самый неистовый образец рок-н-ролла: молотящее фортепиано, взрывной ритм, вокал на крике и броский облик шоумена — помпадур, подведённые глаза, кричащие наряды."
+    carries: []
+    dimensions: ["rhythm", "harmony-form", "melody-vocal", "sound", "performance", "image"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "rhythm", "performance", "image"]
+        text: "The Hall of Fame names his thunderous piano, visceral rhythms, unrestrained performances and flamboyance as the trail he blazed for rock and roll."
+        textRu: "По словам Зала славы, путь рок-н-роллу он проложил громовым фортепиано, нутряным ритмом, безудержными выступлениями и броскостью."
+        source:
+          title: "Rock & Roll Hall of Fame: Little Richard"
+          url: "https://rockhall.com/inductees/little-richard/"
+          quote: "The flamboyant icon that blazed a trail for rock and roll"
+      - type: "critics"
+        dimensions: ["sound", "melody-vocal", "rhythm", "performance", "image"]
+        text: "The New Georgia Encyclopedia credits his pounding piano, screaming vocals and exuberant stage persona with inspiring generations of rock musicians, and hears explosive rhythm in “Tutti Frutti”."
+        textRu: "«Новая энциклопедия Джорджии» считает, что его молотящее фортепиано, вокал на крике и бьющий через край сценический образ вдохновили поколения рок-музыкантов, и слышит в «Tutti Frutti» взрывной ритм."
+        source:
+          title: "New Georgia Encyclopedia: Little Richard Penniman (1932–2020)"
+          url: "https://www.georgiaencyclopedia.org/articles/arts-culture/little-richard-penniman-1932-2020/"
+          quote: "pounding piano, screaming vocals, and exuberant stage persona"
+      - type: "critics"
+        dimensions: ["harmony-form", "melody-vocal", "image"]
+        text: "NPR describes him mixing gospel, country, vaudeville and blues into something of his own, with growling vocals and the outlandish look of an audacious showman."
+        textRu: "NPR пишет, что он смешал госпел, кантри, водевиль и блюз в нечто своё, с рычащим вокалом и вызывающим обликом дерзкого шоумена."
+        source:
+          title: "NPR (Elizabeth Blair), via WYPR: Little Richard, the King and Queen of Rock and Roll (2020)"
+          url: "https://www.wypr.org/2020-05-09/little-richard-the-king-and-queen-of-rock-and-roll-dead-at-87"
+          quote: "mixing gospel, country, vaudeville and blues into something all his own"
+    scope: "career"
+story: "Little Richard sang with gospel’s voice: a churchy tone, gospel-styled shouting and a whoop he said came from Marion Williams. He set rock and roll’s wildest pattern with pounding piano, explosive rhythm, screams and a flamboyant showman’s image."
+storyRu: "Литл Ричард пел голосом госпела: «церковный» тембр, крик в духе госпела и «уханье», которое, по его словам, пришло от Мэрион Уильямс. Молотящим фортепиано, взрывным ритмом, криком и броским обликом шоумена он задал самый неистовый образец рок-н-ролла."

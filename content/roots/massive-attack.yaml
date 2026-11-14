@@ -6,35 +6,94 @@ place: {"name": "Bristol", "lat": 51.4545, "lon": -2.5879}
 placeRu: "Бристоль"
 genre: "Trip hop"
 genreRu: "трип-хоп"
-story: "“Safe from Harm” runs on a loop of Billy Cobham’s “Stratus”. The bass-and-drums groove of his 1973 recording became Massive Attack’s rhythm section."
-storyRu: "«Safe from Harm» держится на петле из «Stratus» Билли Кобэма. Грув баса и барабанов из его записи 1973 года стал ритм-секцией Massive Attack."
+story: "Massive Attack grew out of the Wild Bunch, a Bristol sound system where Daddy G came from reggae, 3D from punk, and hip-hop brought them together. On Blue Lines (1991) they slowed hip-hop down, set soul vocals, raps in Bristol cadences and Jamaican-accented MCing over dragging beats and dub bass — the sound the world called trip-hop."
+storyRu: "Massive Attack выросли из Wild Bunch — бристольской саунд-системы, где Дэдди Джи пришёл из регги, 3D — из панка, а соединил их хип-хоп. На «Blue Lines» (1991) они замедлили хип-хоп и положили на тяжело волочащиеся биты и дабовый бас соул-вокал, рэп с бристольской интонацией и ямайский говорок эмси — звук, который мир назвал трип-хопом."
 links:
-  - to: "card:jazz"
-    kind: "sample"
-    claim: "Massive Attack sampled Billy Cobham's 'Stratus' in 'Safe from Harm'."
-    claimRu: "В «Safe from Harm» Massive Attack использовали сэмпл из «Stratus» Билли Кобэма."
-    what: "Instrumental backing phrases from Billy Cobham's 1973 recording 'Stratus', looped in 'Safe from Harm'."
-    whatRu: "Фрагменты инструментального сопровождения из записи «Stratus» Билли Кобэма 1973 года, зацикленные в «Safe from Harm»."
-    sources:
-      - title: "Hit Channel: Interview — Billy Cobham"
-        url: "https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/"
-      - title: "Rolf Großmann: Xtended Sampling 1995–2026, in Un_Making Beats, p. 97"
-        url: "https://www.uni-hildesheim.de/ojs/index.php/MMD/de/article/download/498/541"
-      - {"title": "MusicTech: Landmark Productions — Massive Attack, Blue Lines", "url": "https://musictech.net/guides/essential-guide/landmarks-massive-attack/"}
-    carries: ["sampling", "groove"]
-    how: Massive Attack sampled the rhythm section of a jazz-fusion record as the groove of “Safe from Harm”.
-    howRu: Massive Attack сэмплировали ритм-секцию джаз-фьюжн-пластинки как грув «Safe from Harm».
-  - to: "root:billy-cobham"
-    kind: "sample"
-    claim: "Massive Attack sampled Billy Cobham's 'Stratus' in 'Safe from Harm'."
-    claimRu: "В «Safe from Harm» Massive Attack использовали сэмпл из «Stratus» Билли Кобэма."
-    what: "The bass-and-drums groove of Billy Cobham’s 1973 recording “Stratus”, looped as the rhythm section of “Safe from Harm”."
-    whatRu: "Грув баса и барабанов из записи «Stratus» Билли Кобэма 1973 года, зацикленный как ритм-секция «Safe from Harm»."
-    sources:
-      - title: "Hit Channel: Interview — Billy Cobham"
-        url: "https://hit-channel.com/interviewbilly-cobham-solomahavishnu-orchestramiles-davis-56775/"
-      - title: "MusicTech: Landmark Productions — Massive Attack, Blue Lines"
-        url: "https://musictech.net/guides/essential-guide/landmarks-massive-attack/"
-    carries: ["sampling", "groove"]
-    how: Massive Attack sampled the rhythm section of Cobham’s “Stratus” as the groove of “Safe from Harm”.
-    howRu: Massive Attack сэмплировали ритм-секцию «Stratus» Кобэма как грув «Safe from Harm».
+  - to: "style:trip-hop"
+    kind: "style"
+    scope: "career"
+    how: "Massive Attack created trip-hop — their own “minimalist lover’s hip-hop”: dragging, slowed-down beats and sparse samples under aching soul vocals, Bristol-accented raps and restrained reggae."
+    howRu: "Massive Attack создали трип-хоп — по их собственному определению, «минималистичный лаверс-хип-хоп»: волочащиеся, замедленные биты и скупые сэмплы под щемящим соул-вокалом, рэпом с бристольским выговором и сдержанным регги."
+    carries: ["sampling", "breakbeat"]
+    dimensions: ["rhythm", "sound", "melody-vocal"]
+    evidence:
+      - type: "critics"
+        dimensions: ["rhythm", "sound", "melody-vocal"]
+        text: "Alexis Petridis hears Blue Lines’ dragging beats, sparse samples and aching vocals."
+        textRu: "Алексис Петридис слышит на «Blue Lines» волочащиеся биты, скупые сэмплы и щемящий вокал."
+        source:
+          title: "The Guardian (Alexis Petridis): Massive Attack — Blue Lines (remastered), review (2012)"
+          url: "https://www.theguardian.com/music/2012/dec/06/massive-attack-blue-lines-review"
+          quote: "The dragging beats and sparse, scattered samples conjure up a stoned disquiet: Horace Andy and Shara Nelson's vocals feel aching and sorrowful."
+      - type: "critics"
+        dimensions: ["melody-vocal", "sound"]
+        text: "MusicTech describes soul, reggae and hip-hop side by side on Blue Lines, which the band called “minimalist lover’s hip-hop”."
+        textRu: "MusicTech описывает, как на «Blue Lines» — альбоме, который сама группа называла «минималистичным лаверс-хип-хопом», — соседствуют соул, регги и хип-хоп."
+        source:
+          title: "MusicTech (Andy Price): Landmark Productions — Massive Attack, Blue Lines (2015)"
+          url: "https://musictech.net/guides/essential-guide/landmarks-massive-attack/"
+          quote: "Achingly beautiful soul sits comfortably alongside restrained reggae and tough hip-hop, all backed with a detailed and suggestive musical texture."
+      - type: "analysis"
+        dimensions: ["rhythm", "sound"]
+        text: "Sean O’Hagan calls Blue Lines the prototype of trip-hop, merging hip-hop, funk and dub reggae."
+        textRu: "Шон О’Хаган называет «Blue Lines» прообразом трип-хопа, в котором сплавились хип-хоп, фанк и даб-регги."
+        source:
+          title: "The Guardian (Sean O’Hagan): Blue Lines — Massive Attack’s blueprint for UK pop’s future (2012)"
+          url: "https://www.theguardian.com/music/2012/oct/28/massive-attack-blue-lines-remaster"
+          quote: "Blue Lines is also viewed in pop historical terms as the prototype of trip-hop, a downbeat genre that merged elements of American hiphop, funk and Jamaican dub reggae into a somnambulant, skunk-fuelled soundtrack to British inner-city life."
+  - to: "style:dub"
+    kind: "influence"
+    scope: "career"
+    how: "Massive Attack came from Bristol’s reggae sound-system culture: Daddy G’s reggae and sound-system background, Jamaican-accented MCing, dub-heavy bass and echo, and Horace Andy’s voice."
+    howRu: "Massive Attack вышли из бристольской культуры регги-саунд-систем: регги и саунд-система за плечами Дэдди Джи, ямайский говорок эмси, тяжёлый дабовый бас и эхо, голос Хораса Энди."
+    carries: ["dub", "reggae-offbeat"]
+    dimensions: ["sound", "melody-vocal", "performance"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["performance"]
+        text: "3D said Daddy G came from a reggae and sound-system angle, he from punk, and hip-hop brought them together."
+        textRu: "3D говорил, что Дэдди Джи пришёл из регги и саунд-систем, сам он — из панка, а соединил их хип-хоп."
+        source:
+          title: "The Guardian: Massive Attack — ‘Phantom funk? Who said that?’ (2009)"
+          url: "https://www.theguardian.com/music/2009/sep/10/massive-attack-interview"
+          quote: "Because G was coming from a reggae and soundsystem angle, I was from a punk angle, completely different aspects. It was hip-hop that brought us together."
+      - type: "critics"
+        dimensions: ["melody-vocal", "performance"]
+        text: "Petridis traces Bristol hip-hop to the city’s reggae sound-system culture, audible all over Blue Lines."
+        textRu: "Петридис выводит бристольский хип-хоп из городской культуры регги-саунд-систем, которая слышна на «Blue Lines» повсюду."
+        source:
+          title: "The Guardian (Alexis Petridis): Massive Attack — Blue Lines (remastered), review (2012)"
+          url: "https://www.theguardian.com/music/2012/dec/06/massive-attack-blue-lines-review"
+          quote: "But then, hip-hop had grown up rather oddly in Bristol, the result of the city's well-established reggae sound system culture and the lasting impact of its post-punk scene."
+      - type: "critics"
+        dimensions: ["sound", "melody-vocal"]
+        text: "MusicTech hears dub-influenced territory on “Five Man Army”, with Horace Andy among the voices."
+        textRu: "MusicTech слышит в «Five Man Army» влияние даба; среди голосов — Хорас Энди."
+        source:
+          title: "MusicTech (Andy Price): Landmark Productions — Massive Attack, Blue Lines (2015)"
+          url: "https://musictech.net/guides/essential-guide/landmarks-massive-attack/"
+          quote: "Five Man Army drags us into more dub-influenced territory with an almost theatrical range of characters sharing vocal duties: 3D, Tricky, Daddy G, Willy Wee and Horace Andy all take turns to perform their spoken word raps"
+  - to: "card:hip-hop"
+    kind: "influence"
+    scope: "career"
+    how: "Hip-hop was the common ground of the band: Bristol slowed it down and filled it with dub and punk, and Massive Attack rapped over it in their own Bristol cadence."
+    howRu: "Общей почвой группы был хип-хоп: Бристоль замедлил его, насытил дабом и панком, а Massive Attack читали поверх него рэп со своей бристольской интонацией."
+    carries: ["rap-flow", "breakbeat"]
+    dimensions: ["rhythm", "melody-vocal"]
+    evidence:
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "Luke Bainbridge describes how Bristol took hip-hop, slowed it down and introduced it to dub and punk."
+        textRu: "Люк Бейнбридж описывает, как Бристоль взял хип-хоп, замедлил его и познакомил с дабом и панком."
+        source:
+          title: "The Guardian (Luke Bainbridge and others): Site and sound — when neighbourhoods spawn new forms of music (2014)"
+          url: "https://www.theguardian.com/music/2014/apr/26/site-and-sound-when-cities-spawn-music-london-grime-trip-hop-bristol"
+          quote: "Bristol took hip-hop and, well, Bristolised it: fed it a diet of weed, slowed it down, showed it around a series of subterranean dens and warehouse parties, and introduced it to long-time resident sounds dub and punk."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "MusicTech calls the title track, with raps by Tricky, 3D and Daddy G over echoey beats, one of the album’s overtly hip-hop pieces."
+        textRu: "MusicTech называет заглавный трек, где Трики, 3D и Дэдди Джи читают рэп поверх гулких битов, одной из самых откровенно хип-хоповых вещей альбома."
+        source:
+          title: "MusicTech (Andy Price): Landmark Productions — Massive Attack, Blue Lines (2015)"
+          url: "https://musictech.net/guides/essential-guide/landmarks-massive-attack/"
+          quote: "The album’s title track conjures up a strange demented atmosphere with discordant electric piano, echoey beats and rapping from Tricky, 3D and Daddy G – one of the record’s more overtly hip-hop influenced pieces"

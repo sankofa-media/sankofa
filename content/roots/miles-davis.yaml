@@ -14,30 +14,87 @@ place:
 placeRu: "Олтон, Иллинойс"
 genre: Jazz
 genreRu: джаз
-story: Miles Davis came of age in New York’s bebop scene. Playing alongside Charlie Parker helped shape his musical voice.
-storyRu: Майлз Дэвис складывался как музыкант на нью-йоркской сцене бибопа. Игра рядом с Чарли Паркером помогла ему выработать собственный музыкальный голос.
+story: "Miles Davis came of age as a bebop acolyte of Charlie Parker, absorbing the fast, inventive soloing of 52nd Street. He turned it into a lyrical, muted, introspective voice and moved jazz from chord changes to modal scales; from 1968 he electrified it with rock rhythms."
+storyRu: "Майлз Дэвис сложился как бибоповый ученик Чарли Паркера и впитал быстрые, изобретательные соло 52-й улицы. Он превратил их в лиричный, приглушённый сурдиной, сосредоточенный голос и перевёл джаз с гармонических последовательностей на модальные лады, а с 1968 года сделал его электрическим, с роковыми ритмами."
 links:
-  - to: root:charlie-parker
-    kind: influence
-    claim: Playing alongside Charlie Parker helped shape the young Miles Davis’s musical voice.
-    claimRu: Игра рядом с Чарли Паркером помогла молодому Майлзу Дэвису выработать собственный музыкальный голос.
-    sources:
-      - &id001
-        title: 'Blue Note Records: Miles Davis — biography'
-        url: https://www.bluenote.com/artist/miles-davis/
-      - title: 'American Jazz Museum: Bird, Diz, and Miles — The Making of Miles Davis'
-        url: https://americanjazzmuseum.org/exhibits-events/bird-diz-and-miles-the-making-of-miles-davis/
+  - to: "root:charlie-parker"
+    kind: "influence"
+    scope: "career"
+    how: "Davis formed his voice playing behind Parker: the bebop language of fast, inventive soloing and shifting rhythms, which he absorbed and then reshaped in his own slower, less flashy style."
+    howRu: "Дэвис сложился, играя рядом с Паркером: язык бибопа — быстрые, изобретательные соло и подвижный ритм — он впитал, а затем переплавил в собственную, более медленную и сдержанную манеру."
     carries: ["improvisation"]
-    how: Playing beside Parker, Davis learned bebop’s fast, inventive improvising.
-    howRu: Играя рядом с Паркером, Дэвис осваивал быструю, изобретательную импровизацию бибопа.
-  - to: card:jazz
-    kind: scene
-    claim: Miles Davis entered New York’s bebop scene in the mid-1940s.
-    claimRu: В середине 1940-х годов Майлз Дэвис вошёл в нью-йоркскую сцену бибопа.
-    sources:
-      - title: 'National Endowment for the Arts: Miles Davis'
-        url: https://www.arts.gov/honors/jazz/miles-davis
-      - *id001
+    dimensions: ["performance", "rhythm", "sound"]
+    evidence:
+      - type: "critics"
+        dimensions: ["performance", "rhythm"]
+        text: "Davis’s biography at Blue Note says he fell under Parker and Gillespie’s spell, the architects of bebop’s fast, inventive soloing and dynamic rhythm."
+        textRu: "В биографии Дэвиса на сайте Blue Note сказано, что он попал под чары Паркера и Гиллеспи — создателей бибопа с его быстрыми, изобретательными соло и подвижным ритмом."
+        source:
+          title: "Blue Note Records: Miles Davis — biography"
+          url: "https://www.bluenote.com/artist/miles-davis/"
+          quote: "The band featured trumpeter Dizzy Gillespie and saxophonist Charlie Parker, the architects of the emerging bebop style of jazz, which was characterized by fast, inventive soloing and dynamic rhythm variations."
+      - type: "critics"
+        dimensions: ["sound", "performance"]
+        text: "The same biography notes that Davis followed bebop despite his own slower, less flashy style."
+        textRu: "Там же отмечено, что Дэвис пошёл за бибопом, хотя его собственная манера была медленнее и сдержаннее."
+        source:
+          title: "Blue Note Records: Miles Davis — biography"
+          url: "https://www.bluenote.com/artist/miles-davis/"
+          quote: "It is striking that Davis fell so completely under Gillespie and Parker’s spell, since his own slower and less flashy style never really compared to theirs. But bebop was the new sound of the day, and the young trumpeter was bound to follow it."
+      - type: "analysis"
+        dimensions: ["sound"]
+        text: "The American Jazz Museum’s exhibition on 1944–1950 traces how Davis absorbed Parker’s sounds and ideas into his own voice."
+        textRu: "Выставка Американского музея джаза о 1944–1950 годах прослеживает, как Дэвис вобрал звуки и идеи Паркера в собственный голос."
+        source:
+          title: "American Jazz Museum: Bird, Diz, and Miles — The Making of Miles Davis (1944–1950)"
+          url: "https://americanjazzmuseum.org/exhibits-events/bird-diz-and-miles-the-making-of-miles-davis/"
+          quote: "Playing alongside innovators like Charlie Parker and Dizzy Gillespie, Davis absorbed the sounds and ideas that would shape his own groundbreaking voice."
+  - to: "card:jazz"
+    kind: "style"
+    scope: "career"
+    how: "Davis played jazz trumpet in a lyrical, introspective, melodic style, often through a Harmon mute, and moved jazz improvisation from chord changes to modal scales."
+    howRu: "Дэвис играл на джазовой трубе лирично, сосредоточенно и мелодично, часто с сурдиной Хармона, и перевёл джазовую импровизацию с гармонических последовательностей на модальные лады."
     carries: ["improvisation"]
-    how: Davis went from bebop soloing to improvising on modes instead of chord changes.
-    howRu: Дэвис прошёл путь от бибоп-соло к импровизации на ладах вместо смены аккордов.
+    dimensions: ["sound", "melody-vocal", "harmony-form"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "melody-vocal"]
+        text: "Blue Note’s biography describes his constant lyrical, muted trumpet manner."
+        textRu: "Биография Blue Note описывает его неизменно лиричную манеру игры с сурдиной."
+        source:
+          title: "Blue Note Records: Miles Davis — biography"
+          url: "https://www.bluenote.com/artist/miles-davis/"
+          quote: "Throughout a professional career lasting 50 years, Miles Davis played the trumpet in a lyrical, introspective, and melodic style, often employing a stemless Harmon mute to make his sound more personal and intimate."
+      - type: "critics"
+        dimensions: ["harmony-form"]
+        text: "John Coltrane’s official biography credits Davis with the shift from chord-based forms to modal structures."
+        textRu: "Официальная биография Джона Колтрейна приписывает Дэвису переход от форм, построенных на аккордах, к модальным структурам."
+        source:
+          title: "John Coltrane: official biography"
+          url: "https://www.johncoltrane.com/biography"
+          quote: "Miles’s shift from traditional, chord-based song forms to more open-ended, modal structures provided a needed freshness that helped improvisers avoid the same old bebop clichés."
+  - to: "style:jazz-fusion"
+    kind: "style"
+    scope: "period"
+    period: "1968–1975 (In a Silent Way to Agharta)"
+    how: "From In a Silent Way and Bitches Brew Davis electrified his band, bringing electronic instruments and rock rhythms into jazz."
+    howRu: "Начиная с «In a Silent Way» и «Bitches Brew» Дэвис перевёл свой ансамбль на электричество, введя в джаз электронные инструменты и роковые ритмы."
+    carries: ["groove"]
+    dimensions: ["sound", "rhythm"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "rhythm"]
+        text: "The NEA notes that Davis led the way to electric jazz, deepening electronic elements and rock rhythms."
+        textRu: "Национальный фонд искусств США отмечает, что Дэвис проложил путь электрическому джазу, всё глубже уходя в электронику и роковые ритмы."
+        source:
+          title: "National Endowment for the Arts: Miles Davis — NEA Jazz Master"
+          url: "https://www.arts.gov/honors/jazz/miles-davis"
+          quote: "In 1968, Davis again changed direction, leading the way for electric jazz with the release of In a Silent Way. By the 1969 release of Bitches Brew, as he deepened the electronic elements and rock rhythms of his music, the transformation was complete."
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "The Rock & Roll Hall of Fame points to his experimentation with rock rhythms."
+        textRu: "Зал славы рок-н-ролла указывает на его эксперименты с роковыми ритмами."
+        source:
+          title: "Rock & Roll Hall of Fame: Miles Davis"
+          url: "https://rockhall.com/inductees/miles-davis/"
+          quote: "His love of pushing the envelope and experimentation with rock rhythms have influenced punk-funk, grunge and more."

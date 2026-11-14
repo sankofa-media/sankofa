@@ -7,32 +7,113 @@ place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
 placeRu: "Лондон"
 genre: "Art rock"
 genreRu: "арт-рок"
-story: "Nina Simone’s interpretation of “Wild Is the Wind” inspired David Bowie. He made his own recording of the song for Station to Station."
-storyRu: "Интерпретация «Wild Is the Wind» Нины Симон вдохновила Дэвида Боуи. Он записал собственную версию для «Station to Station»."
+story: "David Bowie's rock began with Little Richard: the boy took up the saxophone to play in his horn-heavy band. The Velvet Underground gave him rock built on noise and ambience and lyrics out of urban novels, and in 1975 he went to Philadelphia soul for what he called plastic soul."
+storyRu: "Рок Дэвида Боуи начался с Литл Ричарда: мальчишкой он взялся за саксофон, чтобы играть в его группе с целой секцией духовых. The Velvet Underground дали ему рок, построенный на шуме и атмосфере, и тексты, будто из городских романов, а в 1975 году он обратился к филадельфийскому соулу ради того, что сам назвал «пластмассовым соулом»."
 links:
-  - to: "card:jazz"
-    kind: "cover"
-    claim: "Nina Simone's version of 'Wild Is the Wind' inspired David Bowie to record it for Station to Station."
-    claimRu: "Версия «Wild Is the Wind» Нины Симон вдохновила Дэвида Боуи записать эту песню для альбома Station to Station."
-    what: "'Wild Is the Wind', recorded for Station to Station after Nina Simone's interpretation."
-    whatRu: "«Wild Is the Wind», записанная для «Station to Station» под впечатлением от интерпретации Нины Симон."
-    sources:
-      - title: "NPO Radio 2: David Bowies Wild Is The Wind is een eerbetoon aan Nina Simone"
-        url: "https://www.nporadio2.nl/nieuws/top2000/93682543-a548-417c-b69e-9b220e4b507b/david-bowies-wild-is-the-wind-is-een-eerbetoon-aan-nina-simone"
-      - title: "Verve / UMe: Nina Simone’s Historic Philips Years Celebrated with Vinyl Remasters"
-        url: "https://www.prnewswire.com/news-releases/nina-simones-historic-philips-years-celebrated-with-vinyl-remasters-of-seven-classic-albums-including-nina-simone-in-concert-wild-is-the-wind-high-priestess-of-soul-300337404.html"
-    carries: []
-    how: Bowie recorded a song after Nina Simone’s version of it; an interpretation, not a documented element.
-    howRu: Боуи записал песню вслед за версией Нины Симон; это интерпретация, а не задокументированный приём.
-  - to: "root:james-brown"
+  - to: "root:little-richard"
     kind: "influence"
-    claim: "Carlos Alomar, who had worked with James Brown, built the guitar part of Bowie’s “Fame” as interlocking parts in the manner of Brown’s guitarists."
-    claimRu: "Карлос Аломар, работавший с Джеймсом Брауном, выстроил гитару в «Fame» Боуи из сцепленных партий — так, как играли гитаристы Брауна."
-    sources:
-      - title: "The Line of Best Fit: Carlos Alomar on David Bowie"
-        url: "https://www.thelineofbestfit.com/features/longread/carlos-alomar-on-david-bowie-he-was-a-transitional-generational-artist"
-      - title: "Far Out: The song that inspired David Bowie and John Lennon’s “Fame” (quoting Alomar to The Intercept, 2020)"
-        url: "https://faroutmagazine.co.uk/the-song-that-inspired-david-bowie-and-john-lennons-fame/"
-    carries: ["groove"]
-    how: "James Brown’s funk groove: Alomar split the guitar into three locked, syncopated parts, the way Brown’s guitarists played; “that’s what you hear on that track,” he said."
-    howRu: "Фанковый грув Джеймса Брауна: Аломар разложил гитару на три сцепленные синкопированные партии, как играли гитаристы Брауна, — «это и звучит в той записи», говорил он."
+    how: "Little Richard's loud, high-energy rock and roll with a saxophone-heavy band made the young Bowie take up the saxophone."
+    howRu: "Громкий, напористый рок-н-ролл Литл Ричарда с группой, полной саксофонов, заставил юного Боуи взяться за саксофон."
+    carries: []
+    dimensions: ["sound"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["sound"]
+        text: "Bowie recalls that a photograph of Little Richard showed him how many saxophones were in his band, and that he wanted to be one of them."
+        textRu: "Боуи вспоминает, что по фотографии Литл Ричарда понял, сколько саксофонов в его группе, и захотел стать одним из этих саксофонистов."
+        source:
+          title: "David Bowie (official site): Little Richard dies aged 87 (2020), quoting Bowie in 1991"
+          url: "https://davidbowie.com/blog/2020/5/9/little-richard-dies-aged-87"
+          quote: "And ever since I saw that photograph, I realised he had so many saxophones in his band."
+      - type: "testimony"
+        dimensions: ["sound"]
+        text: "Bowie says his childhood ambition was to be one of Little Richard's sax players."
+        textRu: "Боуи говорит, что в детстве мечтал стать одним из саксофонистов Литл Ричарда."
+        source:
+          title: "Far Out: “I want to do that”: The artist that made David Bowie love rock and roll"
+          url: "https://faroutmagazine.co.uk/the-artist-that-made-david-bowie-love-rock-and-roll/"
+          quote: "Actually, my ambition at eight or nine years old was to be one of Little Richard's sax players."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Dan Epstein writes that Little Richard's records sent the young Bowie to buy a saxophone."
+        textRu: "Дэн Эпстайн пишет, что пластинки Литл Ричарда заставили юного Боуи купить саксофон."
+        source:
+          title: "FLOOD Magazine (Dan Epstein): 10 Massive Artists Profoundly Inspired by Little Richard"
+          url: "https://floodmagazine.com/77783/10-massive-artists-profoundly-inspired-by-little-richard"
+          quote: "A young David Bowie, fired up by Little Richard's \"I Got It,\" bought a saxophone"
+    scope: "career"
+  - to: "root:the-velvet-underground"
+    kind: "influence"
+    how: "From the Velvet Underground Bowie took rock fused with the avant-garde: cacophony used as background noise and ambience, and Lou Reed's lyrics drawn from the urban literature of the street."
+    howRu: "У The Velvet Underground Боуи взял рок, сплавленный с авангардом: какофонию как фоновый шум и атмосферу и тексты Лу Рида, выросшие из городской литературы улицы."
+    carries: []
+    dimensions: ["sound", "image"]
+    evidence:
+      - type: "listening"
+        dimensions: ["sound"]
+        text: "Recalling the first Velvet Underground album, Bowie singles out its use of cacophony to create an ambience unknown in rock."
+        textRu: "Вспоминая первый альбом The Velvet Underground, Боуи выделяет в нём какофонию, создающую неслыханную в роке атмосферу."
+        source:
+          title: "Far Out: David Bowie remembers the first Velvet Underground album he ever received (PBS interview)"
+          url: "https://faroutmagazine.co.uk/david-bowie-first-velvet-underground-album/"
+          quote: "One of them was the use of cacophony as background noise and to create an ambience that had been unknown in rock"
+      - type: "testimony"
+        dimensions: ["image"]
+        text: "In the same interview Bowie links Reed's lyric writing to Hubert Selby Jr's Last Exit to Brooklyn."
+        textRu: "В том же интервью Боуи связывает тексты Рида с романом Хьюберта Селби-младшего «Последний поворот на Бруклин»."
+        source:
+          title: "Far Out: David Bowie remembers the first Velvet Underground album he ever received (PBS interview)"
+          url: "https://faroutmagazine.co.uk/david-bowie-first-velvet-underground-album/"
+          quote: "the nature of his lyric writing which for me just smacked of things like Hubert Selby Jr, The Last Exit from Brooklyn"
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Chris Wheatley stresses the band's fusion of rock with the avant-garde and how deeply it resonated with Bowie."
+        textRu: "Крис Уитли подчёркивает, как группа сплавила рок с авангардом и как глубоко это отозвалось в Боуи."
+        source:
+          title: "CultureSonar (Chris Wheatley): 10 Artists Who Influenced David Bowie (2021)"
+          url: "https://www.culturesonar.com/10-artists-who-influenced-david-bowie/"
+          quote: "Their music certainly resonated deeply with Bowie, who would eventually work closely with Velvet frontman Lou Reed"
+      - type: "analysis"
+        dimensions: ["sound"]
+        text: "Aidan Levy's Library of Congress essay names Bowie among the listeners of the first Velvet Underground album who started a band, the album being a basis of many stars' sounds and styles."
+        textRu: "Эссе Эйдана Леви для Библиотеки Конгресса называет Боуи среди слушателей первого альбома The Velvet Underground, создавших свои группы: на этой пластинке выросли звук и стиль многих звёзд."
+        source:
+          title: "Library of Congress, National Recording Registry (Aidan Levy): “The Velvet Underground & Nico”"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf"
+          quote: "A partial list of listeners who started a band would include: David Bowie, Jonathan Richman, Michael Stipe, Patti Smith, Iggy Pop"
+    scope: "career"
+  - to: "style:soul"
+    kind: "style"
+    how: "On Young Americans Bowie turned to the Philadelphia soul then filling the charts, singing what he himself called plastic soul — the squashed remains of Black music sung by a white Englishman."
+    howRu: "На «Young Americans» Боуи обратился к филадельфийскому соулу, заполнявшему тогда чарты, и пел то, что сам называл «пластмассовым соулом», — расплющенные остатки чёрной музыки в исполнении белого англичанина."
+    carries: []
+    dimensions: ["sound", "melody-vocal"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Jeff Giles writes that Bowie was partly inspired by the Philly soul acts in the charts at the time."
+        textRu: "Джефф Джайлз пишет, что Боуи отчасти вдохновили филадельфийские соул-исполнители, заполнявшие тогда чарты."
+        source:
+          title: "Ultimate Classic Rock (Jeff Giles): When David Bowie Made an R&B Move With ‘Young Americans’"
+          url: "https://ultimateclassicrock.com/david-bowie-young-americans/"
+          quote: "Partly inspired by the flush of Philly soul acts hitting the charts at the time"
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "Bowie described the record as the remains of ethnic music in the age of Muzak rock, written and sung by a white limey."
+        textRu: "Боуи описывал пластинку как остатки этнической музыки в эпоху рока-музака, написанные и спетые белым англичанином."
+        source:
+          title: "Far Out: A look at David Bowie's plastic soul in ‘Young Americans’"
+          url: "https://faroutmagazine.co.uk/david-bowie-plastic-soul-young-americans/"
+          quote: "the squashed remains of ethnic music as it survives in the age of Muzak rock, written and sung by a white limey."
+    scope: "period"
+    period: "1975 (Young Americans)"
+notes:
+  - period: "1975–1980 (Young Americans to Scary Monsters)"
+    who: "Carlos Alomar"
+    role: "session"
+    what: "Bowie's guitarist and bandleader brought an R&B rhythm-guitar background into the band of these years."
+    whatRu: "Гитарист и бэнд-лидер Боуи принёс в его группу тех лет опыт ритм-гитариста из ритм-н-блюза."
+    source:
+      title: "The Line of Best Fit: Carlos Alomar on David Bowie"
+      url: "https://www.thelineofbestfit.com/features/longread/carlos-alomar-on-david-bowie-he-was-a-transitional-generational-artist"
+      quote: "I was already working the whole R&B thing, and it really had nothing to do with any British music whatsoever."

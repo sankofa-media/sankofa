@@ -8,31 +8,67 @@ placeRu: "Эль-Серрито, Калифорния"
 genre: "Roots rock / blues rock"
 genreRu: "рутс-рок / блюз-рок"
 links:
-  - to: "card:rhythm-and-blues"
-    claim: "Creedence Clearwater Revival recorded Screamin’ Jay Hawkins’s “I Put a Spell on You”."
-    claimRu: "Creedence Clearwater Revival записали «I Put a Spell on You» Скримин Джея Хокинса."
-    sources:
-      - title: "Concord: Creedence Clearwater Revival, 40th Anniversary Edition"
-        url: "https://concord.com/concord-albums/creedence-clearwater-revival-40th-anniv-edition/"
-      - title: "Americana UK: The Top Ten Creedence Clearwater Revival Cover Songs"
-        url: "https://americana-uk.com/essentials-the-top-ten-creedence-clearwater-revival-cover-songs"
-    kind: "cover"
-    what: "“I Put a Spell on You”: Creedence Clearwater Revival’s own recording of Screamin’ Jay Hawkins’s song."
-    whatRu: "«I Put a Spell on You»: собственная запись песни Скримин Джея Хокинса группой Creedence Clearwater Revival."
-    carries: []
-    how: 'A cover of Screamin’ Jay Hawkins’s song: repertoire, not a documented element.'
-    howRu: 'Кавер на песню Скримин Джея Хокинса: репертуар, а не задокументированный приём.'
   - to: "root:little-richard"
     kind: "influence"
-    claim: "Little Richard was a formative influence on Creedence Clearwater Revival’s John Fogerty."
-    claimRu: "Литл Ричард повлиял на музыкальное становление Джона Фогерти из Creedence Clearwater Revival."
-    sources:
-      - title: "Rock Cellar: John Fogerty — A Fortunate Son Speaks"
-        url: "https://rockcellarmagazine.com/john-fogerty-a-fortunate-son-speaks-the-interview/"
-      - title: "Den of Geek: John Lingan on Creedence’s musical formation"
-        url: "https://www.denofgeek.com/culture/why-creedence-clearwater-revival-remains-the-definitive-band-of-its-era/"
-    carries: []
-    how: Little Richard was a formative model for Fogerty, but the sources name no single device he took.
-    howRu: Литтл Ричард был для Фогерти образцом с юности, но какой-то один приём источники не называют.
-story: "Little Richard helped shape Creedence Clearwater Revival’s John Fogerty as a musician. The band also recorded Screamin’ Jay Hawkins’s “I Put a Spell on You”."
-storyRu: "Литл Ричард повлиял на становление Джона Фогерти из Creedence Clearwater Revival как музыканта. Группа также записала «I Put a Spell on You» Скримин Джея Хокинса."
+    scope: "career"
+    how: "From Little Richard John Fogerty took the rasp and the howl of his singing, and songs spurred by what he heard in Little Richard's records."
+    howRu: "У Литл Ричарда Джон Фогерти взял хрипотцу и вопль своего пения, а услышанное на пластинках Ричарда подтолкнуло его к собственным песням."
+    dimensions: ["melody-vocal", "harmony-form"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "John Lingan, author of a book on Creedence, says Fogerty was indebted to Little Richard and James Brown for the rasp and the howl of his voice."
+        textRu: "Джон Линган, автор книги о Creedence, говорит, что хрипотцой и воплем своего голоса Фогерти обязан Литл Ричарду и Джеймсу Брауну."
+        source:
+          title: "Den of Geek: John Lingan on why Creedence Clearwater Revival remains the definitive band of its era"
+          url: "https://www.denofgeek.com/culture/why-creedence-clearwater-revival-remains-the-definitive-band-of-its-era/"
+          quote: "I think he was really indebted to Little Richard and James Brown. That's how he got the rasp and the howl that we think of."
+      - type: "testimony"
+        dimensions: ["harmony-form"]
+        text: "Fogerty says his early songwriting was derivative, spurred on by what he heard around him, such as Little Richard."
+        textRu: "Фогерти признаёт, что ранние песни были подражательными: их подсказывало то, что он слышал вокруг, например Литл Ричард."
+        source:
+          title: "Rock Cellar Magazine: John Fogerty — A Fortunate Son Speaks (interview)"
+          url: "https://rockcellarmagazine.com/john-fogerty-a-fortunate-son-speaks-the-interview/"
+          quote: "but it was pretty much derivative, meaning spurred on by something else that I'd heard around me"
+      - type: "critics"
+        dimensions: []
+        text: "Bob Merlis's Rock & Roll Hall of Fame essay names Little Richard first among the standard-bearers of American music celebrated in CCR's songs and performances."
+        textRu: "В эссе Боба Мерлиса для Зала славы рок-н-ролла Литл Ричард открывает список знаменосцев американской музыки, которых CCR славили в своих песнях и концертах."
+        source:
+          title: "Rock & Roll Hall of Fame: Creedence Clearwater Revival, 1993 induction essay by Bob Merlis"
+          url: "https://rockhall25.wpenginepowered.com/wp-content/uploads/2025/10/Creedence_Clearwater_Revival_1993.pdf"
+          quote: "Little Richard, Bo Diddley, Hank Williams, Leadbelly, Motown, Stax, Buck Owens and, of course, Elvis, were some of the standard bearers of real American Music celebrated in CCR’s songs and performances."
+  - to: "card:rock-n-roll"
+    kind: "style"
+    scope: "career"
+    how: "Creedence played rock and roll in the fifties sense: concise, hard-driving three-minute songs out of the rockabilly and rock-and-roll roots the band grew up with, blended with soul, R&B and country."
+    howRu: "Creedence играли рок-н-ролл в духе пятидесятых: сжатые, напористые трёхминутные песни, выросшие из рокабилли и рок-н-ролла их юности, смешанные с соулом, ритм-н-блюзом и кантри."
+    dimensions: ["harmony-form", "sound", "rhythm"]
+    evidence:
+      - type: "testimony"
+        dimensions: []
+        text: "Fogerty says the band's music was what they had grown up with: rock and roll and its roots, from the rockabilly of the fifties on."
+        textRu: "Фогерти говорит, что музыка группы была тем, на чём они выросли: рок-н-ролл и его корни, от рокабилли пятидесятых и дальше."
+        source:
+          title: "Rock Cellar Magazine: John Fogerty — A Fortunate Son Speaks (interview)"
+          url: "https://rockcellarmagazine.com/john-fogerty-a-fortunate-son-speaks-the-interview/"
+          quote: "It was more like what we had grown up with, rock and roll and rock and roll roots; anything from the rockabilly of the '50s all the way up to cool stuff from the Beatles and the Stones."
+      - type: "critics"
+        dimensions: ["harmony-form", "rhythm"]
+        text: "Bob Merlis hears in CCR a throwback to the golden era of rock and roll, with three-minute bursts of hard-driving rock and roll."
+        textRu: "Боб Мерлис слышит в CCR возврат к золотому веку рок-н-ролла — трёхминутные залпы напористого рок-н-ролла."
+        source:
+          title: "Rock & Roll Hall of Fame: Creedence Clearwater Revival, 1993 induction essay by Bob Merlis"
+          url: "https://rockhall25.wpenginepowered.com/wp-content/uploads/2025/10/Creedence_Clearwater_Revival_1993.pdf"
+          quote: "a throw back to the golden era of rock & roll when you got two great Elvis, Little Richard, Jerry Lee or Ricky Nelson songs for the price of one. … three-minute bursts of hard driving rock & roll with the most singular purity and purpose ever to find a mass audience."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Den of Geek describes a band that condensed rock and roll, soul, rhythm and blues and country into one sound; Lingan stresses Fogerty's range as singer, songwriter and guitarist."
+        textRu: "Den of Geek пишет о группе, которая свела рок-н-ролл, соул, ритм-н-блюз и кантри в единое звучание; Линган подчёркивает диапазон Фогерти — певца, автора и гитариста."
+        source:
+          title: "Den of Geek: John Lingan on why Creedence Clearwater Revival remains the definitive band of its era"
+          url: "https://www.denofgeek.com/culture/why-creedence-clearwater-revival-remains-the-definitive-band-of-its-era/"
+          quote: "condensed rock and roll, soul, rhythm and blues, and country into a unique sonic blend which has become iconic rock."
+story: "John Fogerty took the rasp and howl of his singing from Little Richard, whose records also spurred his first songs. Creedence Clearwater Revival played the rock and roll they had grown up with, from fifties rockabilly on: concise, hard-driving three-minute songs blended with soul, R&B and country."
+storyRu: "Хрипотцу и вопль своего пения Джон Фогерти взял у Литл Ричарда, чьи пластинки подтолкнули его и к первым песням. Creedence Clearwater Revival играли рок-н-ролл, на котором выросли, — от рокабилли пятидесятых и дальше: сжатые, напористые трёхминутные песни, сплавленные с соулом, ритм-н-блюзом и кантри."

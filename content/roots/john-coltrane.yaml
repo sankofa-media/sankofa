@@ -14,30 +14,87 @@ place:
 placeRu: "Гамлет, Северная Каролина"
 genre: Jazz
 genreRu: джаз
-story: John Coltrane developed as a sideman in jazz bands before leading his own groups. Joining Miles Davis’s band in 1955 brought that apprenticeship to a new stage.
-storyRu: Прежде чем возглавить собственные ансамбли, Джон Колтрейн набирался опыта в чужих джазовых группах. В 1955 году он вошёл в ансамбль Майлза Дэвиса — это стало новым этапом его становления.
+story: "John Coltrane was hooked by Charlie Parker’s bebop, with its rhythmic freedom and widened harmony, and it set the course of his saxophone playing. In Miles Davis’s band, whom he called “Teacher”, he found the modal freedom he later developed in his own quartet; in the 1960s, drawn by Ornette Coleman and Albert Ayler, he moved into free jazz."
+storyRu: "Джона Колтрейна захватил бибоп Чарли Паркера с его ритмической свободой и расширенной гармонией — это определило, куда пойдёт его игра на саксофоне. В ансамбле Майлза Дэвиса, которого он звал «Учителем», он нашёл модальную свободу и потом развил её в собственном квартете; в 1960-е, увлёкшись Орнеттом Коулманом и Альбертом Эйлером, ушёл во фри-джаз."
 links:
-  - to: card:jazz
-    kind: scene
-    claim: John Coltrane’s early jazz apprenticeship included playing in Dizzy Gillespie’s band.
-    claimRu: В начале своего пути в джазе Джон Колтрейн набирался опыта в ансамбле Диззи Гиллеспи.
-    sources:
-      - &id001
-        title: 'John Coltrane: official biography'
-        url: https://www.johncoltrane.com/biography
-      - &id002
-        title: 'Blue Note Records: John Coltrane — biography'
-        url: https://www.bluenote.com/artist/john-coltrane/
+  - to: "root:charlie-parker"
+    kind: "influence"
+    scope: "career"
+    how: "Coltrane learned the bebop language that Parker brought: fresh rhythmic freedom and an expanded harmonic range, played on the saxophone."
+    howRu: "Колтрейн усвоил на саксофоне язык бибопа, принесённый Паркером: новую ритмическую свободу и расширенный гармонический диапазон."
     carries: ["improvisation"]
-    how: Coltrane came up through bebop bands, Gillespie’s among them, and made the long improvisation his art.
-    howRu: Колтрейн вырос в бибоп-оркестрах, и у Гиллеспи тоже, и сделал долгую импровизацию своим искусством.
-  - to: root:miles-davis
-    kind: member
-    claim: John Coltrane joined Miles Davis’s band in 1955, a formative step before leading his own groups.
-    claimRu: В 1955 году Джон Колтрейн вошёл в ансамбль Майлза Дэвиса — важный этап становления, прежде чем он возглавил собственные группы.
-    sources:
-      - *id001
-      - *id002
+    dimensions: ["rhythm", "harmony-form", "sound"]
+    evidence:
+      - type: "listening"
+        dimensions: ["rhythm", "harmony-form"]
+        text: "Coltrane’s official biography says Parker’s bebop grabbed his generation and that Coltrane was hooked by its rhythmic freedom and harmonic range."
+        textRu: "Официальная биография Колтрейна говорит, что бибоп Паркера захватил его поколение, а самого Колтрейна покорили ритмическая свобода и гармонический размах этой музыки."
+        source:
+          title: "John Coltrane: official biography"
+          url: "https://www.johncoltrane.com/biography"
+          quote: "Bebop was a new exciting language that snapped and popped with a fresh, rhythmic freedom, and expanded the harmonic bandwidth of the music—requiring an under-the-hood familiarity with the mechanics of music. Coltrane, already an autodidact, was hooked, intellectually and emotionally."
+      - type: "listening"
+        dimensions: ["sound"]
+        text: "Blue Note’s biography reports that Coltrane moved from alto to tenor after encountering Parker, feeling Parker had exhausted the alto."
+        textRu: "Биография Blue Note сообщает, что Колтрейн перешёл с альта на тенор после встречи с Паркером: ему казалось, что Паркер исчерпал возможности альта."
+        source:
+          title: "Blue Note Records: John Coltrane — biography"
+          url: "https://www.bluenote.com/artist/john-coltrane/"
+          quote: "During the year, he switched from alto to tenor saxophone. One account claims that this was as the result of encountering alto saxophonist Charlie Parker and feeling the better-known musician had exhausted the possibilities on the instrument"
+  - to: "root:miles-davis"
+    kind: "teacher"
+    scope: "career"
+    how: "Coltrane took from Davis the move from chord-based forms to open modal structures and the freedom to stretch out, and developed modal improvisation further in his own 1960s groups."
+    howRu: "Колтрейн взял у Дэвиса переход от аккордовых форм к открытым модальным структурам и свободу развёрнутой импровизации, а затем развил модальную игру в собственных ансамблях 1960-х."
     carries: ["improvisation"]
-    how: In Miles Davis’s band Coltrane learned to improvise over open modal structures instead of dense chord changes.
-    howRu: В ансамбле Майлза Дэвиса Колтрейн научился импровизировать на открытых ладовых структурах вместо плотной смены аккордов.
+    dimensions: ["harmony-form", "performance"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["harmony-form", "performance"]
+        text: "Coltrane said Davis’s music gave him freedom to apply his harmonic ideas; he called Davis “Teacher” and later developed modal ideas in his own groups."
+        textRu: "Колтрейн говорил, что музыка Дэвиса дала ему свободу применять собственные гармонические идеи; он звал Дэвиса «Учителем», а модальные идеи потом развивал в своих ансамблях."
+        source:
+          title: "John Coltrane: official biography"
+          url: "https://www.johncoltrane.com/biography"
+          quote: "“Miles's music gave me plenty of freedom,\" he said. \"It's a beautiful approach...I found it easy to apply harmonic ideas that I had.\""
+      - type: "critics"
+        dimensions: ["harmony-form"]
+        text: "Blue Note’s biography describes Kind of Blue, on which Coltrane played, as an album of modal improvisation on scales rather than chords."
+        textRu: "Биография Blue Note описывает «Kind of Blue», где играл Колтрейн, как альбом модальной импровизации — на ладах, а не на аккордах."
+        source:
+          title: "Blue Note Records: John Coltrane — biography"
+          url: "https://www.bluenote.com/artist/john-coltrane/"
+          quote: "this landmark album known for its “modal” playing (improvisations based on scales or “modes,” rather than chords) became one of the best-selling and most-acclaimed recordings in the history of jazz."
+  - to: "style:free-jazz"
+    kind: "style"
+    scope: "period"
+    period: "1961–1967 (Impulse! years, Ascension, Meditations)"
+    how: "In his last years Coltrane played long, seemingly formless free solos, drawing on Ornette Coleman’s melody-driven avant-garde and Albert Ayler’s writing."
+    howRu: "В последние годы Колтрейн играл длинные, словно бесформенные свободные соло, опираясь на мелодический авангард Орнетта Коулмана и сочинения Альберта Эйлера."
+    carries: ["improvisation"]
+    dimensions: ["performance", "melody-vocal"]
+    evidence:
+      - type: "critics"
+        dimensions: ["performance"]
+        text: "Blue Note’s biography places his 1960s playing in the “free” style, with formless, extended solos like Ornette Coleman’s."
+        textRu: "Биография Blue Note относит его игру 1960-х к «свободному» стилю: бесформенные развёрнутые соло, как у Орнетта Коулмана."
+        source:
+          title: "Blue Note Records: John Coltrane — biography"
+          url: "https://www.bluenote.com/artist/john-coltrane/"
+          quote: "By this time, his playing was frequently in a style alternately dubbed “avant-garde,” “free,” or “The New Thing.” Like Ornette Coleman, he played seemingly formless, extended solos that some listeners found tremendously impressive, and others decried as noise."
+      - type: "listening"
+        dimensions: ["melody-vocal"]
+        text: "The official biography says he turned to the emotional, melody-driven avant-garde, inspired by Ornette Coleman."
+        textRu: "Официальная биография говорит, что он обратился к эмоциональному, мелодическому авангарду, вдохновлённый Орнеттом Коулманом."
+        source:
+          title: "John Coltrane: official biography"
+          url: "https://www.johncoltrane.com/biography"
+          quote: "He began to focus more on the highly emotional, melody-driven influence of the avant-garde jazz of the time, inspired greatly by the music of Ornette Coleman"
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Kevin Whitehead hears Albert Ayler’s composing in Coltrane’s late albums."
+        textRu: "Кевин Уайтхед слышит в поздних альбомах Колтрейна композиторскую манеру Альберта Эйлера."
+        source:
+          title: "Texas Public Radio / NPR (Kevin Whitehead): Albert Ayler — Testifying the Breaking Point (2001)"
+          url: "https://www.tpr.org/2001-05-07/albert-ayler-testifying-the-breaking-point"
+          quote: "You can hear the influence of Ayler's composing on some later Coltrane albums, such as Meditations and Stellar Regions."

@@ -10,28 +10,75 @@ genreRu: "блюз"
 links:
   - to: "root:son-house"
     kind: "influence"
-    claim: "Muddy Waters learned from Son House’s Delta blues before developing his Chicago sound."
-    claimRu: "Прежде чем создать своё чикагское звучание, Мадди Уотерс учился на дельта-блюзе Сона Хауса."
-    sources:
-      - title: "Mississippi Blues Trail: Muddy Waters Birthplace"
-        url: "https://msbluestrail.org/blues-trail-markers/muddy-waters-birthplace"
-      - title: "National Park Service: Muddy Waters"
-        url: "https://www.nps.gov/locations/lowermsdeltaregion/muddy-waters.htm"
-      - {"title": "NPS Lower Mississippi Delta: Son House", "url": "https://home.nps.gov/locations/lowermsdeltaregion/son-house.htm"}
+    how: "By his own account Muddy took up bottleneck playing from Son House; House's heavy, percussive guitar with stinging slides and deep, emotional singing was his most important direct model."
+    howRu: "По собственным словам Мадди, слайд с бутылочным горлышком он перенял у Сона Хауса; тяжёлая, ударная гитара Хауса с жалящим слайдом и глубокое, страстное пение были для него главным прямым образцом."
     carries: ["slide-guitar"]
-    how: Muddy Waters learned Delta slide guitar from Son House’s songs and playing.
-    howRu: Мадди Уотерс учился дельта-слайду на песнях и игре Сана Хауса.
+    dimensions: ["sound", "rhythm", "melody-vocal"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["sound"]
+        text: "Muddy said Son House influenced him to play and that he picked up bottleneck playing from House."
+        textRu: "Мадди говорил, что играть его подтолкнул Сон Хаус и что слайд с горлышком он перенял именно у него."
+        source:
+          title: "EBSCO Research Starters: Son House"
+          url: "https://www.ebsco.com/research-starters/history/son-house"
+          quote: "Waters has been quoted as saying, “it was Son House who influenced me to play” and, in reference to bottleneck playing, that he “picked that up from Son House.”"
+      - type: "testimony"
+        dimensions: ["sound"]
+        text: "Muddy recalled House playing with a bottle neck on his little finger and admitted getting the idea from him."
+        textRu: "Мадди вспоминал, как Хаус играл с бутылочным горлышком на мизинце, и признавал, что взял эту идею у него."
+        source:
+          title: "Classic Rock (Louder), Jerry Gilbert: A Preacher, A Killer — the incredible story of Son House (2015)"
+          url: "https://loudersound.com/features/a-preacher-a-killer-son-house-king-of-the-delta-blues"
+          quote: "Muddy recalled that Son came from a plantation east of Clarksdale and played with the neck of a bottle over his little finger. Muddy admits to getting the idea from Son House, but felt that Son never came over as well on record as his live performances."
+      - type: "analysis"
+        dimensions: ["sound", "rhythm", "melody-vocal"]
+        text: "House, with his heavy, percussive style, stinging slides and intensely emotional vocals, was Muddy's most important direct musical influence."
+        textRu: "Главным прямым музыкальным влиянием на Мадди был Хаус с его тяжёлой, ударной манерой, жалящим слайдом и предельно страстным вокалом."
+        source:
+          title: "Mississippi Encyclopedia: Muddy Waters"
+          url: "https://mississippiencyclopedia.org/entries/muddy-waters/"
+          quote: "the most important direct musical influence on Waters was Son House, a charismatic singer and guitarist who played a heavy, percussive style punctuated with stinging slides and deep, intensely emotional vocals."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "House's bottleneck playing significantly influenced younger guitarists such as Muddy Waters."
+        textRu: "Слайд Хауса заметно повлиял на гитаристов помоложе, таких как Мадди Уотерс."
+        source:
+          title: "64 Parishes (Louisiana Endowment for the Humanities): Son House"
+          url: "https://64parishes.org/entry/son-house"
+          quote: "Son House did not invent bottleneck guitar playing, but he excelled at it, significantly influencing younger African American blues guitarists such as Robert Johnson and Muddy Waters (born McKinley Morganfield)."
+    scope: "career"
   - to: "card:blues"
-    kind: "scene"
-    claim: "Muddy Waters carried the Delta blues into the electric-band setting of Chicago."
-    claimRu: "Мадди Уотерс перенёс дельта-блюз в звучание чикагского ансамбля с электрическими инструментами."
-    sources:
-      - title: "Rock & Roll Hall of Fame: Muddy Waters"
-        url: "https://www.rockhall.com/inductees/muddy-waters"
-      - title: "National Park Service: Muddy Waters"
-        url: "https://www.nps.gov/locations/lowermsdeltaregion/muddy-waters.htm"
+    kind: "style"
+    how: "Muddy amplified the Delta blues into the Chicago band sound: a rich tenor sung behind the beat, dark bass-heavy electric slide, a band that defined the genre, and a loud, raw, boastful attitude."
+    howRu: "Мадди перевёл дельта-блюз в электрическое звучание чикагского бэнда: густой тенор чуть позади доли, тёмный, басовитый электрический слайд, состав, задавший канон жанра, и громкая, грубая, хвастливая повадка."
     carries: ["slide-guitar"]
-    how: Muddy Waters carried Delta slide guitar into the amplified Chicago band.
-    howRu: Мадди Уотерс перенёс дельта-слайд в электрический чикагский бэнд.
-story: "Muddy Waters learned from Son House’s Delta blues. He carried that tradition into the electric-band setting of Chicago."
-storyRu: "Мадди Уотерс учился на дельта-блюзе Сона Хауса. Он перенёс эту традицию в звучание чикагского ансамбля с электрическими инструментами."
+    dimensions: ["melody-vocal", "rhythm", "sound", "performance", "image"]
+    evidence:
+      - type: "analysis"
+        dimensions: ["melody-vocal", "rhythm", "sound"]
+        text: "His rich tenor sung slightly behind the beat and his dark, bass-laden slide set him apart from the jazzy single-string guitarists of the day."
+        textRu: "Густой тенор, звучащий чуть позади доли, и тёмный, басовитый слайд отличали его от джазовых гитаристов тех лет, игравших по одной струне."
+        source:
+          title: "National Park Service, Lower Mississippi Delta: Muddy Waters"
+          url: "https://www.nps.gov/locations/lowermsdeltaregion/muddy-waters.htm"
+          quote: "His strong, rich tenor, sung slightly behind the beat, had a drawl that appealed to southern-born black record buyers. Waters's dark, bass-laden slide guitar conjured shades of blue that stood in stark contrast to the jazzy, single-string guitarists such as T. Bone Walker who were then in vogue."
+      - type: "analysis"
+        dimensions: ["sound", "image"]
+        text: "His Chicago music was loud, electric and raw, “amplified attitude” grafting southern roots onto South Side street life."
+        textRu: "Его чикагская музыка была громкой, электрической и грубой — «усиленная повадка», привившая южные корни к уличной жизни Саут-Сайда."
+        source:
+          title: "Mississippi Encyclopedia: Muddy Waters"
+          url: "https://mississippiencyclopedia.org/entries/muddy-waters/"
+          quote: "Loud, electric, raw, aggressive, and sinuous, his new music grafted its unmistakably southern roots onto the gritty street life of Chicago’s South Side. It was amplified attitude, and the lyrics boldly proclaimed his new lifestyle."
+      - type: "analysis"
+        dimensions: ["performance", "sound"]
+        text: "His band virtually defined Chicago blues, and his live shows were sensual and electrifying."
+        textRu: "Его бэнд фактически задал канон чикагского блюза, а концерты были чувственными и электризующими."
+        source:
+          title: "Mississippi Blues Trail: Muddy Waters Birthplace"
+          url: "https://msbluestrail.org/blues-trail-markers/muddy-waters-birthplace"
+          quote: "Many of the finest musicians, including harmonica player Little Walter Jacobs, pianist Otis Spann, and guitarist Jimmy Rogers, worked in the seminal Muddy Waters Blues Band, which virtually defined the Chicago blues genre. Both through his recordings on the Aristocrat and Chess labels and through his sensual and electrifying live performances, he not only became a blues icon"
+    scope: "career"
+story: "Muddy Waters took up bottleneck slide from Son House, whose heavy, percussive guitar and deep, emotional singing were his most important model. In Chicago he amplified that Delta blues into a loud, raw band sound, with a rich tenor sung behind the beat over dark, bass-heavy slide."
+storyRu: "Слайд с бутылочным горлышком Мадди Уотерс перенял у Сона Хауса, чья тяжёлая, ударная гитара и глубокое, страстное пение стали для него главным образцом. В Чикаго он превратил этот дельта-блюз в громкое, грубое звучание электрического бэнда: густой тенор чуть позади доли поверх тёмного, басовитого слайда."

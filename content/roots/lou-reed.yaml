@@ -14,46 +14,86 @@ place:
 placeRu: "Бруклин"
 genre: Art rock
 genreRu: арт-рок
-story: Lou Reed began recording doo-wop as a teenager. Later, Ornette Coleman’s free jazz helped shape his approach to the guitar.
-storyRu: Лу Рид начал записывать ду-воп ещё подростком. Позднее фри-джаз Орнетта Коулмана повлиял на его подход к гитаре.
+story: "Lou Reed's guitar and songs had two sources: the R&B, doo-wop and rockabilly of 1950s radio, with Steve Cropper's and James Burton's ensemble guitar parts, and the free jazz of Ornette Coleman and Cecil Taylor, whose energy he chased through feedback and long improvised solos."
+storyRu: "У гитары и песен Лу Рида было два истока: ритм-н-блюз, ду-воп и рокабилли радио 1950-х с ансамблевыми гитарными партиями Стива Кроппера и Джеймса Бёртона — и фри-джаз Орнетта Коулмана и Сесила Тейлора, чью энергию он искал в фидбэке и долгих импровизированных соло."
 links:
   - to: card:rhythm-and-blues
     kind: influence
-    claim: Lou Reed began recording as a teenager in the doo-wop tradition.
-    claimRu: Лу Рид начал записываться ещё подростком, обратившись к традиции ду-вопа.
-    sources:
-      - title: 'New York Public Library: Lou Reed Papers — Early Lou Reed'
-        url: https://libguides.nypl.org/loureed
-      - title: 'Mark Paytress: Lou Reed interviewed — MOJO'
-        url: https://www.mojo4music.com/articles/stories/lou-reed-interviewed/
+    how: "Reed grew up on R&B and doo-wop radio: vocal-group harmony and the ensemble guitar parts of R&B session players like Steve Cropper became the basis of his song-centred, part-based playing."
+    howRu: "Рид вырос на ритм-н-блюзе и ду-вопе по радио: гармония вокальных групп и ансамблевые гитарные партии ритм-н-блюзовых сессионщиков вроде Стива Кроппера стали основой его игры, подчинённой песне и построенной на партиях."
     carries: []
-    how: Reed began in doo-wop, Black vocal-group rhythm and blues; the sources record the style, not a specific element.
-    howRu: Рид начинал в ду-вопе, ритм-н-блюзе чёрных вокальных групп; источники фиксируют стиль, а не конкретный приём.
+    dimensions: ["melody-vocal", "performance"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "Reed describes R&B, doo-wop and rockabilly as one of the two sides of his musical make-up."
+        textRu: "Рид называет ритм-н-блюз, ду-воп и рокабилли одной из двух сторон своей музыкальной основы."
+        source:
+          title: "Aidan Levy: The Velvet Underground & Nico, National Recording Registry essay, Library of Congress"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf"
+          quote: "Reed, for his part, was not averse to avant-garde experimentation. “There were two sides of the coin for me,” he said. “R&B, doo-wop, rockabilly, and then Ornette Coleman and Don Cherry,"
+      - type: "testimony"
+        dimensions: ["performance"]
+        text: "Reed says he tried to copy the ensemble guitar parts of Steve Cropper and James Burton, and that the Velvets were about parts rather than solos."
+        textRu: "Рид говорит, что старался копировать ансамблевые партии Стива Кроппера и Джеймса Бёртона и что Velvet Underground держались на партиях, а не на соло."
+        source:
+          title: "Alan di Perna: Lou Reed interview, Guitar World (1998)"
+          url: "https://www.guitarworld.com/magazine/lou-reed-talks-about-velvet-underground-songwriting-and-gear-1998-guitar-world-interview"
+          quote: "So that’s what I was listening to, along with guitar players like James Burton and Steve Cropper. Who doesn’t try to copy Cropper? He’s a great guitar player. You know, it’s not all about soloing. It’s about those parts that guys like Burton and Cropper played. And the Velvet Underground, we were about parts."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Mark Paytress describes radio rock and roll, R&B and doo-wop as the young Reed's salvation."
+        textRu: "Марк Пейтресс пишет, что спасением для юного Рида было радио с рок-н-роллом, ритм-н-блюзом и ду-вопом."
+        source:
+          title: "Mark Paytress: Lou Reed interviewed, MOJO"
+          url: "https://www.mojo4music.com/articles/stories/lou-reed-interviewed/"
+          quote: "Reed’s salvation was the radio, spluttering out rock’n’roll, R&B and his beloved doo wop as if direct from city street corners."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The New York Public Library's guide to Reed's papers records his lifelong love of 1950s doo-wop."
+        textRu: "Путеводитель Нью-Йоркской публичной библиотеки по архиву Рида отмечает его любовь к ду-вопу 1950-х, пронесённую через всю жизнь."
+        source:
+          title: "New York Public Library: Lou Reed Papers — research guide"
+          url: "https://libguides.nypl.org/loureed"
+          quote: "Lou Reed loved 1950s doo-wop music. He seized every opportunity to talk about the genre."
+    scope: "career"
+    example:
+      song: "“There She Goes Again” (1967)"
+      text: "Levy hears Reed's R&B side in the song's intro, modelled on Marvin Gaye's “Hitch Hike”."
+      textRu: "Леви слышит ритм-н-блюзовую сторону Рида во вступлении песни, построенном по образцу «Hitch Hike» Марвина Гэя."
+      source:
+        title: "Aidan Levy: The Velvet Underground & Nico, National Recording Registry essay, Library of Congress"
+        url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf"
+        quote: "That R&B influence would manifest in songs like “There She Goes Again,” with the intro sampling Marvin Gaye’s “Hitch Hike.”"
   - to: root:ornette-coleman
     kind: influence
-    claim: Ornette Coleman’s free jazz shaped Lou Reed’s approach to guitar in the Velvet Underground.
-    claimRu: Фри-джаз Орнетта Коулмана повлиял на подход Лу Рида к игре на гитаре в The Velvet Underground.
-    sources:
-      - title: 'Aidan Levy: The Velvet Underground & Nico — Library of Congress'
-        url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf
-      - title: 'Guitar World: Lou Reed — 1998 interview'
-        url: https://www.guitarworld.com/magazine/lou-reed-talks-about-velvet-underground-songwriting-and-gear-1998-guitar-world-interview
-      - title: 'Far Out: Ornette Coleman — Lou Reed’s greatest influence'
-        url: https://faroutmagazine.co.uk/ornette-coleman-lou-reeds-greatest-influence/
-    carries: []
-    how: Reed listened to the free-jazz players Ornette Coleman and Cecil Taylor and brought their energy into rock guitar, though by his own account he could not play like them.
-    howRu: Рид слушал фри-джазовых музыкантов Орнетта Коулмана и Сесила Тейлора и принёс их энергию в рок-гитару, хотя, по собственным словам, играть как они не умел.
-  - to: "root:marvin-gaye"
-    kind: "interpolation"
-    what: "“There She Goes Again”: the opening guitar figure replays the rhythmic pattern of the intro of Marvin Gaye’s “Hitch Hike”; no recording is reused."
-    whatRu: "«There She Goes Again»: вступительная гитарная фигура повторяет ритмический рисунок вступления «Hitch Hike» Марвина Гэя; сама запись не используется."
-    claim: "Lou Reed opened his song “There She Goes Again” with the intro of Marvin Gaye’s Motown single “Hitch Hike”."
-    claimRu: "Лу Рид начал свою песню «There She Goes Again» со вступления мотауновского сингла Марвина Гэя «Hitch Hike»."
-    sources:
-      - title: "Aidan Levy: The Velvet Underground & Nico — Library of Congress"
-        url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf"
-      - title: "Far Out: “There She Goes Again” — the Lou Reed song inspired by Marvin Gaye"
-        url: "https://faroutmagazine.co.uk/lou-reed-song-inspired-by-marvin-gaye/"
-    carries: ["riff"]
-    how: "An R&B riff moved to rock guitar: Reed set the rhythmic figure that opens “Hitch Hike” at the head of his own song."
-    howRu: "Ритм-н-блюзовый рифф, переложенный на рок-гитару: Рид поставил ритмическую фигуру из начала «Hitch Hike» в начало собственной песни."
+    how: "Reed carried the energy of Ornette Coleman's free jazz into rock guitar: long improvised solos, noise and feedback in place of blues licks, without the jazz players' technique."
+    howRu: "Рид перенёс энергию фри-джаза Орнетта Коулмана в рок-гитару: долгие импровизированные соло, шум и фидбэк вместо блюзовых ходов — не владея техникой джазменов."
+    carries: ["improvisation"]
+    dimensions: ["performance", "sound"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["performance"]
+        text: "Reed says he listened to Cecil Taylor and Ornette Coleman and, lacking their technique, brought their energy instead."
+        textRu: "Рид рассказывает, что слушал Сесила Тейлора и Орнетта Коулмана и, не владея их техникой, взял у них энергию."
+        source:
+          title: "Alan di Perna: Lou Reed interview, Guitar World (1998)"
+          url: "https://www.guitarworld.com/magazine/lou-reed-talks-about-velvet-underground-songwriting-and-gear-1998-guitar-world-interview"
+          quote: "I’d been listening to [avant garde jazz artists] Cecil Taylor and Ornette Coleman. Of course I was not trained to play like them. I couldn’t read and write music. I couldn’t even begin to think of having technique like that. But I certainly had the energy—and a good ear."
+      - type: "testimony"
+        dimensions: ["performance"]
+        text: "Reed recalls following Coleman around the Village and says his guitar on “European Son” channeled Coleman."
+        textRu: "Рид вспоминает, как ходил за Коулманом по Гринвич-Виллидж, и говорит, что его гитара в «European Son» шла от Коулмана."
+        source:
+          title: "Aidan Levy: The Velvet Underground & Nico, National Recording Registry essay, Library of Congress"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf"
+          quote: "I used to run around the Village following Ornette Coleman wherever he played.” That R&B influence would manifest in songs like “There She Goes Again,” with the intro sampling Marvin Gaye’s “Hitch Hike.” “European Son,” Reed said, channeled “Ornette Coleman on the guitar.”"
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Far Out describes Reed hearing the future of music in the sheer noise of Coleman's playing that put others off."
+        textRu: "Far Out пишет, что в шуме Коулмана, отпугивавшем других, Рид услышал будущее музыки."
+        source:
+          title: "Far Out: Ornette Coleman — Lou Reed’s greatest influence"
+          url: "https://faroutmagazine.co.uk/ornette-coleman-lou-reeds-greatest-influence/"
+          quote: "Whereas most were hearing raw noise being blasted in their ears for minutes on end, Reed heard the future of music."
+    scope: "career"

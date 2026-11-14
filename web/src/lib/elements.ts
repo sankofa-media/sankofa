@@ -3,7 +3,7 @@
 // through them, and the main lines of the traditions. All three come with
 // the cards (`sankofa content export`: rootsElements, rootsCardLinks,
 // rootsLines); the museum works without any of them.
-import type { RootSource } from './roots';
+import { styleStations, type Artist, type RootLink, type RootSource, type Style } from './roots';
 
 export interface Quote extends RootSource {
   quote?: string;
@@ -58,7 +58,12 @@ const list = <T>(v: unknown): T[] => (Array.isArray(v) ? (v as T[]) : []);
 const ids = (v: unknown): string[] => list<unknown>(v).filter((x): x is string => typeof x === 'string' && !!x);
 
 /** The roots' extra layers as exported, with anything missing or malformed left out. */
-export function rootsExtras(doc: { rootsElements?: unknown; rootsCardLinks?: unknown; rootsLines?: unknown }): { elements: ElementsFile; cardLinks: CardLinksFile; lines: Line[] } {
+export function rootsExtras(doc: { rootsStyles?: unknown; rootsElements?: unknown; rootsCardLinks?: unknown; rootsLines?: unknown }): { styles: Artist[]; elements: ElementsFile; cardLinks: CardLinksFile; lines: Line[] } {
+  const styles = styleStations(
+    list<Style>(doc.rootsStyles)
+      .filter((st) => st?.id && st.name)
+      .map((st) => ({ ...st, years: list<number>(st.years), traits: list<Style['traits'][number]>(st.traits), sources: list<Quote>(st.sources), from: list<RootLink>(st.from).filter((l) => l?.to) })),
+  );
   const elements = list<MusicElement>(doc.rootsElements)
     .filter((e) => e?.id && e.name)
     .map((e) => ({ ...e, what: e.what ?? '', origin: ids(e.origin).map((o) => o.replace(/^card:/, '')), sources: list<Quote>(e.sources) }));
@@ -68,7 +73,7 @@ export function rootsExtras(doc: { rootsElements?: unknown; rootsCardLinks?: unk
   const lines = list<Line>(doc.rootsLines)
     .filter((l) => l?.id && l.name && Array.isArray(l.path))
     .map((l) => ({ ...l, elements: ids(l.elements), overview: l.overview ?? '', sources: list<Quote>(l.sources) }));
-  return { elements: { elements }, cardLinks: { links }, lines };
+  return { styles, elements: { elements }, cardLinks: { links }, lines };
 }
 
 /** Card-to-card links by "from>to" (card ids without the prefix). */

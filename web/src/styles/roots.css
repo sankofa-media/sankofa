@@ -1199,3 +1199,130 @@ a.rt-who:hover b {
 .rt-threads .rt-el {
   border-radius: 12px;
 }
+
+/* ---------- styles as stations, evidence by kind ---------- */
+:root {
+  --k-style: #7fc4cf;
+}
+.rt-mdot.style {
+  stroke: var(--k-style);
+}
+.rt-mdot.style.on {
+  fill: var(--k-style);
+  stroke: #e6fbff;
+}
+.rt-mstop.style .rt-mname {
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  color: var(--k-style);
+}
+.rt-stylest::before {
+  border-radius: 3px;
+  transform: rotate(45deg);
+  border-color: var(--k-style);
+}
+.rt-diamond {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  margin: 7px;
+  transform: rotate(45deg);
+  border: 2px solid var(--k-style);
+  background: color-mix(in srgb, var(--k-style) 18%, transparent);
+}
+.rt-stylest .rt-plate b {
+  font-variant: small-caps;
+  letter-spacing: 0.03em;
+}
+.rt-stylekind {
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--k-style);
+}
+.rt-traits {
+  margin: 6px 0 0;
+  padding: 0 0 0 18px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--ink-2);
+}
+.rt-link.k-style {
+  --kc: var(--k-style);
+}
+.rt-scope {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--line-2);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--ink-2);
+}
+.rt-dims {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin: 0 0 10px;
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+.rt-dims-on {
+  color: var(--ink-2);
+}
+.rt-dims-off {
+  color: var(--ink-3);
+}
+.rt-ev {
+  margin: 0 0 8px;
+}
+.rt-ev-head {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin: 0 0 4px;
+}
+.rt-ev-src {
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  color: var(--ink-3);
+  text-decoration-color: var(--line-2);
+}
+.rt-example {
+  margin: 0 0 8px;
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  color: var(--ink-3);
+}
+.rt-example summary {
+  cursor: pointer;
+}
+.rt-example p {
+  margin: 4px 0 0;
+  color: var(--ink-2);
+}
+.rt-example a {
+  color: var(--ink-3);
+}
+.rm-node.style .dot {
+  fill: var(--k-style);
+  stroke: #07070d;
+}
+.rm-node.style .lbl {
+  font-variant: small-caps;
+  fill: var(--k-style);
+}
+.rm-edge.k-style {
+  --kc: var(--k-style);
+}
+.rm-traits {
+  margin: 6px 0;
+  padding-left: 18px;
+}

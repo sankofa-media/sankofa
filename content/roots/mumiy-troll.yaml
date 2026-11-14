@@ -7,20 +7,70 @@ place: {"name": "Vladivostok", "lat": 43.1155, "lon": 131.8855}
 placeRu: "Владивосток"
 genre: "Rock / pop"
 genreRu: "рок / поп"
-story: "Mumiy Troll’s documented connection here runs through Aquarium’s “Prekrasny diletant”. The band recorded it for the 2012 Re:Aquarium tribute."
-storyRu: "Документированная связь «Мумий Тролля» здесь проходит через «Прекрасного дилетанта» группы «Аквариум». Группа записала песню для трибьюта «Re:Аквариум» 2012 года."
+story: "Ilya Lagutenko grew up on the Leningrad rock club bands and then soaked up London’s Britpop years in the early 1990s. Mumiy Troll became a Russian version of Pulp and Suede — abrasive guitars, pop chords and a mannered, seductive vocal — and brought intonation, poses and theatre into Russian rock."
+storyRu: "Илья Лагутенко вырос на группах ленинградского рок-клуба, а в начале 1990-х впитал Лондон времён брит-попа. «Мумий Тролль» стал русской версией Pulp и Suede — абразивные гитары, поп-аккорды и манерный, обольстительный вокал — и принёс в русский рок интонацию, позу и театр."
 links:
-  - to: "root:aquarium"
-    kind: "cover"
-    claim: "Mumiy Troll recorded Aquarium’s “Prekrasny diletant” for the 2012 Re:Aquarium tribute."
-    claimRu: "«Мумий Тролль» записал «Прекрасного дилетанта» группы «Аквариум» для трибьюта «Re:Аквариум» 2012 года."
-    what: "Aquarium's 'Prekrasny diletant', rerecorded for the 2012 Re:Aquarium tribute."
-    whatRu: "«Прекрасный дилетант» группы «Аквариум», заново записанный для трибьюта «Re:Аквариум» 2012 года."
-    sources:
-      - title: "Muzykalnaya Pravda: Lagutenko’s Prekrasny diletant"
-        url: "https://www.newlookmedia.ru/?p=24869"
-      - title: "Afisha Volna: Nick Cave, The Killers, R.E.M., Mumiy Troll and others"
-        url: "https://daily.afisha.ru/archive/volna/archive/week_playlist_041212/"
+  - to: "style:britpop"
+    kind: "influence"
+    how: "Lagutenko’s years in early-1990s London gave Mumiy Troll the Britpop template: a powerful abrasive guitar sound under catchy pop chords, close to Pulp, Suede, Oasis and Blur."
+    howRu: "Годы, проведённые Лагутенко в Лондоне начала 1990-х, дали «Мумий Троллю» шаблон брит-попа: мощный абразивный гитарный звук под цепкими поп-аккордами, близкий к Pulp, Suede, Oasis и Blur."
     carries: []
-    how: 'A Russian tribute cover: no element from a Black tradition is documented on this step.'
-    howRu: 'Кавер для русского трибьюта: элемента из чёрной традиции на этом шаге не задокументировано.'
+    dimensions: ["sound", "harmony-form"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["sound"]
+        text: "Lagutenko recalls London in the early 1990s — the flowering of Britpop and rave — as an enormous influence on him."
+        textRu: "Лагутенко вспоминает, что Лондон начала 1990-х — расцвет брит-попа и рейвов — оказал на него огромное влияние."
+        source:
+          title: "Skyeng Magazine: Илья Лагутенко — о музыке детства, своём английском и жизни в Лондоне (2025)"
+          url: "https://skyeng.ru/magazine/intervyu-ilya-lagutenko-o-muzyke-detstva-svoem-anglijskom-i-zhizni-v-londone/"
+          quote: "Тогда в Лондоне были очень интересные музыкальные времена: расцвет брит-попа, рейвов, все бурлило и кипело. И оказывало на меня огромное влияние."
+      - type: "critics"
+        dimensions: ["sound", "harmony-form"]
+        text: "Snob writes that the albums Morskaya and Ikra opened new British music to 1990s Russia, making the band a Russian version of Pulp, Suede and the Verve, with a powerful abrasive sound and pop chords."
+        textRu: "«Сноб» пишет, что альбомы «Морская» и «Икра» открыли России 90-х новую британскую музыку и сделали группу русской версией Pulp, Suede и The Verve — с мощным абразивным звуком и поп-аккордами."
+        source:
+          title: "Сноб: «Наступят времена почище» — 50 лет Илье Лагутенко (Александр Морсин, 2018)"
+          url: "https://snob.ru/entry/166943/"
+          quote: "Дуплет альбомов «Морская» и «Икра» открыл России 90-х новую британскую музыку … «Мумий Тролль» стал крайне удачной русской версией групп вроде Pulp, Suede и The Verve … с мощным абразивным звуком и симпатичными поп-аккордами"
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Snob’s guide to the band’s key songs says their sound at times resembled the mid-1990s Britpop of Oasis, Blur, Pulp and Suede."
+        textRu: "Путеводитель «Сноба» по главным песням группы отмечает, что её звучание местами походило на брит-поп середины 1990-х — Oasis, Blur, Pulp и Suede."
+        source:
+          title: "Сноб: Кассетный мальчик разбивает стекла. 5 главных песен группы «Мумий Тролль» (Егор Спесивцев, 2023)"
+          url: "https://snob.ru/culture/kassetnyj-malchik-razbivaet-stekla-5-glavnyh-pesen-gruppy-mumij-troll/"
+          quote: "Местами звучание «Мумий Тролля» походило на популярные в середине 1990-х брит-поп-группы Oasis, Blur и Suede"
+    scope: "career"
+  - to: "style:russian-rock"
+    kind: "style"
+    how: "Formed by the Leningrad rock club bands, Mumiy Troll renewed Russian rock’s theatre with ‘rokapops’: light, ironic songs without heartfelt rock ballads, where intonation, mannerisms and poses mattered."
+    howRu: "Выросший на группах ленинградского рок-клуба, «Мумий Тролль» обновил театр русского рока «рокапопсом» — лёгкими, ироничными песнями без надрывных рок-баллад, где важны интонации, ужимки и позы."
+    carries: []
+    dimensions: ["melody-vocal", "performance", "image"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["image"]
+        text: "Lagutenko names Auktyon and Zvuki Mu as his favourite bands and calls Auktyon the embodiment of real rock in the Leningrad rock club years."
+        textRu: "Лагутенко называет «Аукцыон» и «Звуки Му» своими самыми любимыми группами, а «Аукцыон» — воплощением настоящего рока времён ленинградского рок-клуба."
+        source:
+          title: "Афиша — Волна: Илья Лагутенко слушает и комментирует чужую музыку (2003)"
+          url: "https://daily.afisha.ru/archive/volna/archive/amba_lagytenko/"
+          quote: "«Аукцыон» — очень близкая мне по духу группа … «Аукцыон» и «Звуки Му» — это были у меня самые любимые группы"
+      - type: "critics"
+        dimensions: ["melody-vocal", "performance", "image"]
+        text: "Snob writes that with Lagutenko intonation, mannerisms and poses became important in Russian rock, and that he renewed the whole kit of the national rock theatre."
+        textRu: "«Сноб» пишет, что с приходом Лагутенко в русском роке стали важны интонации, ужимки и позы и что он обновил весь инвентарь отечественного рок-театра."
+        source:
+          title: "Сноб: «Наступят времена почище» — 50 лет Илье Лагутенко (Александр Морсин, 2018)"
+          url: "https://snob.ru/entry/166943/"
+          quote: "Именно с приходом Лагутенко в русском роке стали важны интонации, ужимки и позы … обновил весь инвентарь отечественного рок-театра"
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Sobaka.ru describes Lagutenko’s ‘rokapops’ as free of both heartfelt rock ballads and pompous pop — light in pictures and lyrics alike."
+        textRu: "«Собака.ru» описывает «рокапопс» Лагутенко как музыку без надрывных рок-баллад и без напыщенной попсы — лёгкую и в картинках, и в текстах."
+        source:
+          title: "Собака.ru: Ксения Гощицкая о съёмке Ильи Лагутенко в Лос-Анджелесе (2014)"
+          url: "https://www.sobaka.ru/entertainment/music/32147"
+          quote: "Ни надрывных рок-баллад, ни напыщенной попсы, все было предельно легко — и в картинках, и в текстах."
+    scope: "career"

@@ -13,30 +13,70 @@ place:
 placeRu: "Сагино, Мичиган"
 genre: Soul and funk
 genreRu: соул и фанк
+story: "Stevie Wonder grew up on gospel and rhythm and blues, and his music kept that soul at its core. In the 1970s he fused classic soul with the syncopated grooves of funk and with synthesizer sounds that were still a novelty in R&B, which made him one of the forefathers of modern funk."
+storyRu: "Стиви Уандер вырос на госпеле и ритм-н-блюзе, и соул остался сердцевиной его музыки. В 1970-е он соединил классический соул с синкопированным грувом фанка и со звуками синтезатора, тогда ещё непривычными для ритм-н-блюза, и стал одним из праотцов современного фанка."
 links:
-  - to: root:ray-charles
-    kind: influence
-    claim: Ray Charles’s rhythm and blues was an early influence on Stevie Wonder.
-    claimRu: Ритм-н-блюз Рэя Чарльза повлиял на Стиви Уандера ещё в детстве.
-    sources:
-      - title: 'WERS: The Vault of Soul — Stevie Wonder'
-        url: https://wers.org/the-vault-of-soul-stevie-wonder/
-      - title: 'University Musical Society: From Cass Corridor to the World, Winter 2013'
-        url: https://www.annarbor.com/ums_the_event_program_insert_05_v3_01-10-13.pdf
-    carries: []
-    how: Wonder’s first album was a tribute of Ray Charles covers; the sources record admiration and repertoire, not a specific element.
-    howRu: Первый альбом Уандера — трибьют из каверов на Рэя Чарльза; источники фиксируют восхищение и репертуар, а не конкретный приём.
-  - to: card:gospel
-    kind: scene
-    claim: Stevie Wonder’s childhood church choir singing helped form his musical background.
-    claimRu: Пение в церковном хоре в детстве стало частью музыкального воспитания Стиви Уандера.
-    sources:
-      - title: 'University Musical Society: From Cass Corridor to the World, Winter 2013'
-        url: https://www.annarbor.com/ums_the_event_program_insert_05_v3_01-10-13.pdf
-      - title: 'WERS: The Vault of Soul — Stevie Wonder'
-        url: https://wers.org/the-vault-of-soul-stevie-wonder/
+  - to: "card:funk"
+    kind: "style"
+    how: "In the 1970s Wonder built percolating funk on syncopated grooves and was among the first to make the synthesizer and electronic keyboards central to the sound of R&B."
+    howRu: "В 1970-е Уандер строил кипучий фанк на синкопированном груве и одним из первых сделал синтезатор и электронные клавишные основой звучания ритм-н-блюза."
+    carries: ["groove"]
+    dimensions: ["rhythm", "sound"]
+    scope: "career"
+    evidence:
+      - type: "critics"
+        dimensions: ["rhythm", "sound"]
+        text: "A reference biography says his 1970s work fused classic soul with the syncopations of funk and showed the synthesizer’s versatility in R&B."
+        textRu: "Справочная биография пишет, что его работы 1970-х соединили классический соул с синкопами фанка и показали, на что способен синтезатор в ритм-н-блюзе."
+        source:
+          title: "Encyclopedia.com (Contemporary Black Biography): Stevie Wonder"
+          url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/stevie-wonder"
+          quote: "managed to fuse the high spirits of classic soul, the down-and-dirty syncopations of funk, exquisite melodies, and his own introspective and increasingly politicized lyrical sensibility. From a sonic standpoint, too, he was a trailblazer, demonstrating the versatility of the synthesizer when it was still something of a novelty instrument in the R&B world."
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "The same reference work calls him one of the forefathers of modern funk and R&B."
+        textRu: "То же издание называет его одним из праотцов современного фанка и ритм-н-блюза."
+        source:
+          title: "Encyclopedia.com (Contemporary Musicians): Stevie Wonder"
+          url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/stevie-wonder"
+          quote: "Though many in the music industry view Wonder as one of the forefathers of modern funk and R&B"
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "WERS describes him as a forerunner in embracing synthesizers and drum machines who expanded the sound of R&B."
+        textRu: "WERS называет его первопроходцем в освоении синтезаторов и драм-машин, расширившим звучание ритм-н-блюза."
+        source:
+          title: "WERS 88.9: The Vault of Soul — Stevie Wonder"
+          url: "https://wers.org/the-vault-of-soul-stevie-wonder/"
+          quote: "he was a forerunner of embracing new technologies such as sampling, drum machines and synthesizers. He helped in shifting attitudes about the use of electronic music and expanded the sound of R&B music."
+      - type: "critics"
+        dimensions: ["rhythm", "sound"]
+        text: "Biography.com calls “Superstition” a funk jam and stresses his pioneering synthesized sounds."
+        textRu: "Biography.com называет «Superstition» фанковым джемом и подчёркивает его новаторские синтезаторные звуки."
+        source:
+          title: "Biography.com: Stevie Wonder"
+          url: "https://www.biography.com/musicians/stevie-wonder"
+          quote: "His 1972 album Talking Book offered two No. 1 hits, the jaunty funk jam \"Superstition\" and \"You Are the Sunshine of My Life,\""
+  - to: "style:soul"
+    kind: "style"
+    how: "Wonder’s singing stayed in soul, carrying the emotional charge of the gospel he sang as a boy into Motown records that leaned towards jazz and funk."
+    howRu: "Как певец Уандер остался в соуле: эмоциональный заряд госпела, который он пел мальчиком, он перенёс в мотауновские записи с уклоном в джаз и фанк."
     carries: ["gospel-vocal"]
-    how: Wonder sang in a church choir, and gospel stayed in his music.
-    howRu: Уандер пел в церковном хоре, и госпел остался в его музыке.
-story: Stevie Wonder’s musical background included singing in a church choir as a child. Ray Charles’s rhythm and blues was another early influence.
-storyRu: В детстве Стиви Уандер пел в церковном хоре. Другим ранним влиянием стал ритм-н-блюз Рэя Чарльза.
+    dimensions: ["melody-vocal"]
+    scope: "career"
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "WERS hears in his late-1960s hits his love of jazz and funk joined to the emotion of his gospel singing — music that does not lack soul."
+        textRu: "WERS слышит в его хитах конца 1960-х любовь к джазу и фанку, соединённую с чувством его госпельного пения, — музыку, в которой хватает соула."
+        source:
+          title: "WERS 88.9: The Vault of Soul — Stevie Wonder"
+          url: "https://wers.org/the-vault-of-soul-stevie-wonder/"
+          quote: "he traded the usual smooth and elegant Motown sound for something that brings in his love for jazz and funk, as well as the emotional brevity of his time singing gospel music. And all things said, it certainly doesn’t lack soul."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "A reference biography places his 1970s work in the high spirits of classic soul, with exquisite melodies."
+        textRu: "Справочная биография видит в его работах 1970-х приподнятый дух классического соула и изысканные мелодии."
+        source:
+          title: "Encyclopedia.com (Contemporary Black Biography): Stevie Wonder"
+          url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/stevie-wonder"
+          quote: "managed to fuse the high spirits of classic soul, the down-and-dirty syncopations of funk, exquisite melodies"

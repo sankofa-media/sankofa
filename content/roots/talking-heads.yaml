@@ -6,30 +6,89 @@ place: {"name": "New York", "lat": 40.7128, "lon": -74.006}
 placeRu: "Нью-Йорк"
 genre: "New wave and art rock"
 genreRu: "новая волна и арт-рок"
-story: "Talking Heads turned to Fela Kuti’s Afrobeat while making Remain in Light. It became a source for their own music on that album."
-storyRu: "Работая над «Remain in Light», Talking Heads обратились к афробиту Фелы Кути. Он стал одним из источников музыки этого альбома."
+story: "Talking Heads came out of the mid-1970s merging punk, rock and funk, and led new wave with artsy, nervous, funky songs. In 1980, for Remain in Light, they built long jams on looping Afrobeat rhythms after listening to Fela Kuti, with David Byrne improvising sermon-like lines over them."
+storyRu: "Talking Heads появились в середине 1970-х, сплавив панк, рок и фанк, и повели за собой новую волну — артистичными, нервными, фанковыми песнями. В 1980 году для «Remain in Light», наслушавшись Фелы Кути, они строили долгие джемы на закольцованных ритмах афробита, а Дэвид Бирн импровизировал поверх них строки в духе проповеди."
 links:
-  - to: "card:afrobeat"
+  - to: "card:funk"
     kind: "influence"
-    claim: "Talking Heads drew on Fela Kuti's Afrobeat when making Remain in Light."
-    claimRu: "Работая над Remain in Light, Talking Heads опирались на афробит Фелы Кути."
-    sources:
-      - title: "Library of Congress: Remain in Light — Talking Heads"
-        url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf"
-      - title: "Pitchfork: Talking Heads — Remain in Light"
-        url: "https://pitchfork.com/reviews/albums/talking-heads-remain-in-light/"
+    how: "From funk the band took the groove as the core of the song: interlocking, repeating, polyrhythmic parts under artsy new wave songs."
+    howRu: "У фанка группа взяла грув как основу песни: сцепленные, повторяющиеся, полиритмичные партии под артистичными песнями новой волны."
     carries: ["polyrhythm"]
-    how: 'Talking Heads built Remain in Light from looped, layered Afrobeat rhythms: West African polyrhythm in a rock band.'
-    howRu: 'Talking Heads собрали Remain in Light из зацикленных, наслоённых ритмов афробита: западноафриканская полиритмия в рок-группе.'
+    dimensions: ["rhythm"]
+    evidence:
+      - type: "analysis"
+        dimensions: ["rhythm"]
+        text: "The Library of Congress registry essay says the band formed by merging punk, rock and funk."
+        textRu: "В эссе для Национального реестра звукозаписей Библиотеки Конгресса сказано, что группа сложилась, сплавив панк, рок и фанк."
+        source:
+          title: "Library of Congress, National Recording Registry (Kevin Buck): “Remain in Light”"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf"
+          quote: "Talking Heads formed in the mid-70s merging punk, rock and funk to lead the way in the New Wave music genre."
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "The Rock & Roll Hall of Fame describes the band's blend of funk, minimalism and polyrhythmic world beats."
+        textRu: "Зал славы рок-н-ролла описывает смесь фанка, минимализма и полиритмии world music в музыке группы."
+        source:
+          title: "Rock & Roll Hall of Fame: Talking Heads"
+          url: "https://www.rockhall.com/inductees/talking-heads"
+          quote: "Their blend of funk, minimalism and polyrhythmic world beats articulated the strangeness and anxiety of modern times."
+    scope: "career"
+  - to: "style:post-punk"
+    kind: "style"
+    how: "Talking Heads led new wave with art-school, experimental songs full of nervous energy."
+    howRu: "Talking Heads возглавили новую волну артистичными, экспериментальными песнями, полными нервной энергии."
+    carries: []
+    dimensions: ["performance", "image"]
+    evidence:
+      - type: "critics"
+        dimensions: ["performance", "image"]
+        text: "The Rock & Roll Hall of Fame calls the band artsy and experimental, its music abuzz with nervous energy."
+        textRu: "Зал славы рок-н-ролла называет группу артистичной и экспериментальной, а её музыку — гудящей от нервной энергии."
+        source:
+          title: "Rock & Roll Hall of Fame: Talking Heads"
+          url: "https://www.rockhall.com/inductees/talking-heads"
+          quote: "Artsy and experimental, Talking Heads created an oeuvre of funky New Wave hits."
+      - type: "analysis"
+        dimensions: ["image"]
+        text: "The Library of Congress essay places the band at the head of new wave, a loose genre of punk, rock and anything that sounded different."
+        textRu: "Эссе Библиотеки Конгресса ставит группу во главе новой волны — размытого жанра, куда входили панк, рок и всё, что звучало иначе."
+        source:
+          title: "Library of Congress, National Recording Registry (Kevin Buck): “Remain in Light”"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf"
+          quote: "A loosely defined music genre that included punk, rock and anything else that sounded different from mainstream rock."
+    scope: "career"
   - to: "root:fela-kuti"
     kind: "influence"
-    claim: "Talking Heads drew on Fela Kuti's Afrobeat when making Remain in Light."
-    claimRu: "Работая над Remain in Light, Talking Heads опирались на афробит Фелы Кути."
-    sources:
-      - title: "Library of Congress: Remain in Light — Talking Heads"
-        url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf"
-      - title: "Pitchfork: Talking Heads — Remain in Light"
-        url: "https://pitchfork.com/reviews/albums/talking-heads-remain-in-light/"
-    carries: ["polyrhythm"]
-    how: 'Talking Heads built Remain in Light from looped, layered Afrobeat rhythms: West African polyrhythm in a rock band.'
-    howRu: 'Talking Heads собрали Remain in Light из зацикленных, наслоённых ритмов афробита: западноафриканская полиритмия в рок-группе.'
+    how: "Listening to Fela Kuti, the band built Remain in Light from long overlapping loops of Afrobeat rhythm, parts meshing in a communal groove, with improvised, sermon-like vocal lines and call and response on top."
+    howRu: "Слушая Фелу Кути, группа собрала «Remain in Light» из длинных накладывающихся петель афробита, где партии сцепляются в общий грув, а сверху ложатся импровизированные вокальные строки в духе проповеди и переклички."
+    carries: []
+    dimensions: ["rhythm", "melody-vocal"]
+    evidence:
+      - type: "analysis"
+        dimensions: ["rhythm", "melody-vocal"]
+        text: "The Library of Congress essay says the sessions' jams were based on looping Afrobeat rhythms pioneered by Fela Kuti, and that Byrne scatted improvised lyrics drawing on African music."
+        textRu: "Эссе Библиотеки Конгресса пишет, что джемы этих сессий строились на закольцованных ритмах афробита, открытых Фелой Кути, а Бирн, опираясь на африканскую музыку, импровизировал слова скэтом."
+        source:
+          title: "Library of Congress, National Recording Registry (Kevin Buck): “Remain in Light”"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf"
+          quote: "The resulting instrumental jams, based on looping Afrobeat rhythms (pioneered by Fela Kuti), were intended as a blending of music genres from around the world rather than just an imitation."
+      - type: "listening"
+        dimensions: ["rhythm"]
+        text: "Byrne recalls the band listening to African pop such as Fela Kuti and King Sunny Adé, sharing its ecstatic communal feeling."
+        textRu: "Бирн вспоминает, что группа слушала африканскую поп-музыку — Фелу Кути, Кинга Санни Аде — и разделяла её экстатическое чувство общности."
+        source:
+          title: "Far Out: The music that inspired Talking Heads' seminal album ‘Remain in Light’"
+          url: "https://faroutmagazine.co.uk/the-music-that-inspired-talking-heads-album-seminal-remain-in-light/"
+          quote: "We were listening to African pop music – such that was available – like Fela Kuti and King Sunny Adé"
+    scope: "period"
+    period: "1980 (Remain in Light)"
+notes:
+  - period: "1978–1980 (More Songs About Buildings and Food to Remain in Light)"
+    who: "Brian Eno"
+    role: "producer"
+    what: "Eno produced the band's albums of these years and played them Fela Kuti's music."
+    whatRu: "Ино продюсировал альбомы группы этих лет и ставил музыкантам записи Фелы Кути."
+    source:
+      title: "Far Out: The music that inspired Talking Heads' seminal album ‘Remain in Light’"
+      url: "https://faroutmagazine.co.uk/the-music-that-inspired-talking-heads-album-seminal-remain-in-light/"
+      quote: "I played them a record by Fela Kuti, the African-Nigerian musician who'd invented that thing called Afro-beat"

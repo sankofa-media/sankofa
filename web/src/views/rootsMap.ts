@@ -19,7 +19,7 @@ import { ElementPanel } from './elementPanel';
 import { miniPlayer } from './miniPlayer';
 
 const NS = 'http://www.w3.org/2000/svg';
-const KINDS: (LinkKind | 'lineage')[] = ['influence', 'cover', 'sample', 'interpolation', 'member', 'producer', 'collaboration', 'scene', 'teacher', 'lineage'];
+const KINDS: (LinkKind | 'lineage')[] = ['influence', 'style', 'scene', 'teacher', 'lineage'];
 
 export class RootsMap {
   readonly el: HTMLElement;
@@ -93,7 +93,7 @@ export class RootsMap {
       h('div.rm-search', {}, this.input, this.results),
       h('p.rm-hint-line', {}, pick({ en: 'Tap an artist to light its way to the roots. Later artists are further up ↑', ru: 'Коснитесь исполнителя — загорится его путь к корням. Выше — более поздние исполнители ↑' })),
     );
-    this.byId = new Map(artists.map((a) => [a.id, a]));
+    this.byId = new Map([...artists, ...app.styles].map((a) => [a.id, a]));
     this.lineage = new Map(app.set.all().map((c) => [c.id, { id: c.id, roots: c.roots }] as [string, LineageCard]));
     this.elements = new Map(app.elements.elements.map((e) => [e.id, e]));
     this.colors = elementColors(app.elements);
@@ -151,7 +151,7 @@ export class RootsMap {
     this.built = true;
     const cards = new Map<string, MapCard>(this.app.set.all().map((c) => [c.id, { id: c.id, title: c.title, years: c.years, roots: c.roots }]));
     const cardCarries = new Map(this.app.cardLinks.links.filter((l) => l.carries?.length).map((l) => [`${l.from}>${l.to}`, l.carries!]));
-    const g = (this.g = buildGraph(this.artists, cards, (a) => this.nameOf(a), cardCarries));
+    const g = (this.g = buildGraph([...this.artists, ...this.app.styles], cards, (a) => this.nameOf(a), cardCarries));
     this.phone = window.innerWidth < 760;
     // Phones get a canvas wider than the screen, panned sideways, so the
     // artists spread out instead of piling at the left edge.
@@ -272,13 +272,14 @@ export class RootsMap {
     }
     for (const n of [...g.nodes].sort((x, y) => Number(x.card) - Number(y.card))) {
       const el = document.createElementNS(NS, 'g');
-      el.setAttribute('class', `rm-node${n.card ? ' card' : ''}`);
+      el.setAttribute('class', `rm-node${n.card ? ' card' : ''}${n.style ? ' style' : ''}`);
       el.setAttribute('transform', `translate(${n.x},${n.y})`);
       el.setAttribute('tabindex', '0');
       el.setAttribute('role', 'button');
       el.setAttribute('aria-label', `${n.label}, ${n.year}`);
       const r = radius(n);
-      el.innerHTML = `${n.card ? `<circle class="halo" r="${r * 3.2}" fill="url(#rm-glow)"/>` : ''}<circle class="dot" r="${r}"/><text class="lbl" y="${-r - 5}" text-anchor="middle"></text>`;
+      const dot = n.style ? `<rect class="dot" x="${-r}" y="${-r}" width="${2 * r}" height="${2 * r}" transform="rotate(45)"/>` : `<circle class="dot" r="${r}"/>`;
+      el.innerHTML = `${n.card ? `<circle class="halo" r="${r * 3.2}" fill="url(#rm-glow)"/>` : ''}${dot}<text class="lbl" y="${-r - 5}" text-anchor="middle"></text>`;
       el.querySelector('text')!.textContent = quotes(n.label, lang());
       el.addEventListener('click', () => this.pick(n.id));
       el.addEventListener('keydown', (e) => {
@@ -313,8 +314,9 @@ export class RootsMap {
       return;
     }
     const n = g.byId.get(id)!;
-    if (n.card) {
-      const set = grewFrom(g, id);
+    if (n.card || n.style) {
+      // A root or a style: everything that grew from it, and for a style the way down too.
+      const set = n.style ? new Set([...grewFrom(g, id), ...reach(g, id)]) : grewFrom(g, id);
       this.nodeEls.forEach((el, k) => el.classList.toggle('on', set.has(k)));
       this.edgeEls.forEach(({ e, el }) => el.classList.toggle('on', set.has(e.from) && set.has(e.to)));
       this.showInfo(n, set);
@@ -378,7 +380,7 @@ export class RootsMap {
     this.lit = nodes;
     this.placeLabels(nodes);
     const e = this.elements.get(id)!;
-    const reachOf = elementReach(this.artists, [e]).get(id);
+    const reachOf = elementReach(this.artists, [e], this.app.styles).get(id);
     this.info.classList.remove('idle');
     this.info.replaceChildren(
       h('small', { style: `color:${color}` }, pick({ en: 'An element of music', ru: 'Элемент музыки' })),
@@ -398,8 +400,19 @@ export class RootsMap {
       );
       return;
     }
+    if (n.style) {
+      const st = this.byId.get(n.id);
+      const grew = [...grewFrom(this.g!, n.id)].filter((k) => !this.g!.byId.get(k)!.card && !this.g!.byId.get(k)!.style).length;
+      this.info.replaceChildren(
+        h('small', {}, pick({ en: 'A style', ru: 'Стиль' })),
+        h('b', {}, n.label),
+        h('ul.rm-traits', {}, (st?.traits ?? []).map((t) => h('li', {}, (lang() === 'ru' && t.ru) || t.en))),
+        h('p', {}, pick({ en: `${count(grew, 'artist', 'en')} of the collection work in it.`, ru: `Исполнителей коллекции в этом стиле: ${grew}.` })),
+      );
+      return;
+    }
     if (n.card) {
-      const artists = [...set!].filter((k) => !this.g!.byId.get(k)!.card).length;
+      const artists = [...set!].filter((k) => !this.g!.byId.get(k)!.card && !this.g!.byId.get(k)!.style).length;
       const rec = recordingFor(this.app.listen, n.id);
       this.info.replaceChildren(
         h('small', {}, pick({ en: 'A root in the museum', ru: 'Корень в музее' })),

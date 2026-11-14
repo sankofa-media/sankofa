@@ -7,31 +7,94 @@ place: {"name": "Abeokuta, Nigeria", "lat": 7.1475, "lon": 3.3619}
 placeRu: "Абеокута, Нигерия"
 genre: "Afrobeat"
 genreRu: "афробит"
-story: "Fela Kuti joined West African highlife to jazz, soul and funk in Afrobeat. James Brown was one of the musicians who shaped that fusion."
-storyRu: "В афробите Фела Кути соединил западноафриканский хайлайф с джазом, соулом и фанком. Одним из музыкантов, повлиявших на этот сплав, был Джеймс Браун."
+story: "Fela Kuti grew up on Nigerian dance-band highlife and took from James Brown the syncopated, percussive funk he heard on his 1969 American tour. Fusing the two with jazz, Yoruba rhythms and long improvisation, he created Afrobeat: guitars playing drum parts, a female choir answering his pidgin vocals and hours-long, politically charged shows."
+storyRu: "Фела Кути вырос на нигерийском танцевальном хайлайфе и взял у Джеймса Брауна синкопированный, ударный фанк, который услышал во время американских гастролей 1969 года. Сплавив их с джазом, ритмами йоруба и долгой импровизацией, он создал афробит: гитары, играющие партии барабанов, женский хор, отвечающий на его пение на пиджине, и многочасовые концерты, заряженные политикой."
 links:
   - to: "card:afrobeat"
-    kind: "influence"
-    claim: "Fela Kuti developed Afrobeat by combining West African highlife, jazz and American soul and funk."
-    claimRu: "Фела Кути создал афробит, соединив западноафриканский хайлайф, джаз и американские соул и фанк."
-    sources:
-      - title: "Rock and Roll Hall of Fame: Fela Kuti"
-        url: "https://rockhall.com/inductees/fela-kuti/"
-      - title: "Trinity Laban: Fela Kuti"
-        url: "https://www.trinitylaban.ac.uk/about-us/our-history/fela-kuti/"
-      - {"title": "Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)", "url": "https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en"}
-    carries: ["polyrhythm", "call-and-response"]
-    how: Fela built Afrobeat on interlocking, repeating rhythmic patterns, with a female chorus answering his voice in call and response.
-    howRu: Фела построил афробит на сцепленных, повторяющихся ритмических рисунках, а женский хор отвечал его голосу по принципу зова и отклика.
+    kind: "style"
+    scope: "career"
+    how: "Fela created Afrobeat: a rhythmically complex hybrid of highlife, jazz, soul and funk and Yoruba rhythms, with traditional drum roles given to electric guitars, a female choir in call-and-response with his pidgin vocals, extended improvisation and hours-long political performances."
+    howRu: "Фела создал афробит — ритмически сложный сплав хайлайфа, джаза, соула и фанка и ритмов йоруба: традиционные партии барабанов отданы электрогитарам, женский хор перекликается с его вокалом на пиджине, импровизации тянутся долго, а многочасовые концерты полны политики."
+    carries: ["polyrhythm", "call-and-response", "improvisation", "groove"]
+    dimensions: ["rhythm", "melody-vocal", "performance", "image", "sound"]
+    evidence:
+      - type: "critics"
+        dimensions: ["rhythm", "performance", "image"]
+        text: "Trinity Laban describes the fusion that culminated in Afrobeat and his hours-long performances of music, dance, satire and political critique."
+        textRu: "Тринити Лабан описывает сплав, из которого вырос афробит, и его многочасовые выступления, где соединялись музыка, танец, сатира и политическая критика."
+        source:
+          title: "Trinity Laban Conservatoire: Fela Kuti — our history"
+          url: "https://www.trinitylaban.ac.uk/about-us/our-history/fela-kuti/"
+          quote: "This evolution culminated in Afrobeat, a powerful and rhythmically complex form that became synonymous with Fela’s band Africa 70, and later Egypt 80. His performances, often lasting hours and combining music, dance, satire, and political critique, made him one of the most compelling and provocative artists of his era."
+      - type: "analysis"
+        dimensions: ["melody-vocal", "sound"]
+        text: "Naeem Inayatullah describes how, after 1969, Fela added a female choir answering his singing over a guitar-, percussion- and horn-heavy band."
+        textRu: "Наим Инаятулла описывает, как после 1969 года Фела добавил женский хор, отвечающий на его пение, к ансамблю, насыщенному гитарами, ударными и духовыми."
+        source:
+          title: "Contexto Internacional (Naeem Inayatullah): Gigging on the World Stage — Bossa Nova and Afrobeat after De-reification (2016)"
+          url: "https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en"
+          quote: "added a female choir that responded to his singing. This ‘call and response’ provided West African depth to his guitar, percussion, and horn-saturated band."
+      - type: "critics"
+        dimensions: ["image"]
+        text: "The Rock & Roll Hall of Fame calls him a revolutionary voice who fused jazz, West African music and soul into Afrobeat."
+        textRu: "Зал славы рок-н-ролла называет его революционным голосом, который сплавил джаз, западноафриканскую музыку и соул в афробит."
+        source:
+          title: "Rock & Roll Hall of Fame: Fela Kuti (2026)"
+          url: "https://rockhall.com/inductees/fela-kuti/"
+          quote: "Fela Kuti was a revolutionary voice who spoke out against injustice through his innovative music – provoking political change while infusing jazz, West African, and soul music to pioneer the Afrobeat genre."
   - to: "root:james-brown"
     kind: "influence"
-    claim: "James Brown’s funk helped shape Fela Kuti’s music."
-    claimRu: "Фанк Джеймса Брауна помог сформироваться музыке Фелы Кути."
-    sources:
-      - title: "Rock and Roll Hall of Fame: Fela Kuti"
-        url: "https://rockhall.com/inductees/fela-kuti/"
-      - title: "Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)"
-        url: "https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en"
+    scope: "career"
+    how: "Fela drew on James Brown’s funk, heard on his 1969 US tour: a highly syncopated percussive rhythm scheme under gospel-driven vocals and jazzy horns, which he re-Africanised into Afrobeat."
+    howRu: "Фела опирался на фанк Джеймса Брауна, услышанный во время американских гастролей 1969 года: сильно синкопированную ударную ритмическую схему под госпельным вокалом и джазовыми духовыми — и вернул её в Африку в виде афробита."
+    carries: ["groove", "polyrhythm"]
+    dimensions: ["rhythm", "sound", "melody-vocal"]
+    evidence:
+      - type: "listening"
+        dimensions: ["rhythm"]
+        text: "The Rock Hall says Fela was influenced by James Brown and Sly Stone when he toured the United States."
+        textRu: "Зал славы рок-н-ролла пишет, что на гастролях в США Фела попал под влияние Джеймса Брауна и Слая Стоуна."
+        source:
+          title: "Rock & Roll Hall of Fame: Fela Kuti (2026)"
+          url: "https://rockhall.com/inductees/fela-kuti/"
+          quote: "He later toured the United States, where he was influenced by soul and funk legends James Brown and Sly Stone."
+      - type: "analysis"
+        dimensions: ["rhythm", "sound", "melody-vocal"]
+        text: "Inayatullah, following Michael Veal, names Brown’s funk among Fela’s influences and spells out its vocal, horn and rhythmic elements."
+        textRu: "Инаятулла вслед за Майклом Вилом называет фанк Брауна среди влияний Фелы и разбирает, что в этом фанке дают вокал, духовые и ритм."
+        source:
+          title: "Contexto Internacional (Naeem Inayatullah): Gigging on the World Stage — Bossa Nova and Afrobeat after De-reification (2016)"
+          url: "https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en"
+          quote: "Funk was equally influential, but arrived later. James Brown developed funk in the 1960s by combining his ‘gospel-driven vocals’ with ‘jazzy horn arrangements’, all on top of a ‘highly syncopated percussive rhythm scheme’ (Veal 2000: 11)."
+  - to: "card:highlife"
+    kind: "influence"
+    scope: "career"
+    how: "Afrobeat grew out of Nigerian dance-band highlife — the brass-led, Afro-Cuban-tinged dance music of E. T. Mensah and Victor Olaiya — which Fela reworked with African-American influences."
+    howRu: "Афробит вырос из нигерийского танцевального хайлайфа — музыки духовых оркестров с афрокубинским оттенком, как у Э. Т. Менсы и Виктора Олайи, — который Фела переработал под влиянием афроамериканской музыки."
     carries: ["groove"]
-    how: From James Brown Fela took funk’s highly syncopated percussive groove.
-    howRu: У Джеймса Брауна Фела взял сильно синкопированный ударный грув фанка.
+    dimensions: ["sound", "rhythm"]
+    evidence:
+      - type: "analysis"
+        dimensions: ["sound", "rhythm"]
+        text: "Inayatullah quotes Veal describing Afrobeat as an African-American-influenced variant of Nigerian dance-band highlife."
+        textRu: "Инаятулла приводит определение Вила: афробит — вариант нигерийского танцевального хайлайфа под афроамериканским влиянием."
+        source:
+          title: "Contexto Internacional (Naeem Inayatullah): Gigging on the World Stage — Bossa Nova and Afrobeat after De-reification (2016)"
+          url: "https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en"
+          quote: "Veal first describes afrobeat as an ‘AfricanAmerican influenced variant of the Nigerian dance-band highlife tradition’"
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "The Rock Hall names traditional West African highlife among the elements of Fela’s rhythmic hybrid."
+        textRu: "Зал славы рок-н-ролла называет традиционный западноафриканский хайлайф среди составляющих ритмического сплава Фелы."
+        source:
+          title: "Rock & Roll Hall of Fame: Fela Kuti (2026)"
+          url: "https://rockhall.com/inductees/fela-kuti/"
+          quote: "Reflecting the musical and cultural flavors of Africa and Black America’s Civil Rights Movement, Fela fused elements of traditional West African highlife, jazz, and soul music and dubbed this rhythmic hybrid “Afrobeat.”"
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Trinity Laban lists highlife in the fusion that became Afrobeat."
+        textRu: "Тринити Лабан включает хайлайф в сплав, ставший афробитом."
+        source:
+          title: "Trinity Laban Conservatoire: Fela Kuti — our history"
+          url: "https://www.trinitylaban.ac.uk/about-us/our-history/fela-kuti/"
+          quote: "After returning to Nigeria, Fela began experimenting with a fusion of jazz, highlife, Yoruba rhythms, funk, and extended improvisation."

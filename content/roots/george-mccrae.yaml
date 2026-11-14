@@ -13,18 +13,56 @@ place:
 placeRu: "Уэст-Палм-Бич, Флорида"
 genre: Soul and disco
 genreRu: соул и диско
+story: "George McCrae’s “Rock Your Baby” (1974) carried the sound of disco onto the radio and onto dance floors, and he saw it himself as the start of the disco era. His high, striking voice fronted the Miami sound that the record brought to Britain."
+storyRu: "«Rock Your Baby» Джорджа Маккрея (1974) вынесла звук диско в радиоэфир и на танцполы, и сам он видел в этой песне начало эпохи диско. Его высокий, яркий голос стал лицом майамского звучания, которое эта запись принесла в Британию."
 links:
-  - to: card:gospel
-    kind: scene
-    claim: George McCrae began developing his singing voice in a choir as a child.
-    claimRu: Джордж Маккрей начал развивать свой певческий голос в хоре ещё ребёнком.
-    sources:
-      - title: 'Beat Instrumental: The Miami McRae sound, February 1975, p. 17'
-        url: https://worldradiohistory.com/UK/Beat-Instrumental/Beat-Instrumental-1975-02-S-OCR.pdf
-      - title: 'Maxazine: George McCrae — It’s all about love'
-        url: https://maxazine.com/2020/07/17/george-mccrae-its-all-about-love/
+  - to: "style:disco"
+    kind: "style"
+    how: "McCrae was an early disco singer: his high, striking voice carried “Rock Your Baby”, the record that brought the disco sound to radio; the groove itself was the work of its writers and producers."
+    howRu: "Маккрей — один из первых певцов диско: его высокий, яркий голос нёс «Rock Your Baby», запись, которая привела звучание диско в эфир; сам грув придумали её авторы и продюсеры."
     carries: []
-    how: McCrae sang in a choir as a child; the sources name no specific technique carried into his soul records.
-    howRu: Маккрей пел в хоре ребёнком; какой приём перешёл оттуда в его соул, источники не называют.
-story: George McCrae began developing his voice as a child. His early school of singing was a choir.
-storyRu: Джордж Маккрей начал развивать свой голос ещё ребёнком. Его первой певческой школой стал хор.
+    dimensions: ["melody-vocal"]
+    scope: "career"
+    evidence:
+      - type: "critics"
+        dimensions: []
+        text: "The St. James Encyclopedia of Popular Culture names “Rock Your Baby” as one of the two records that introduced the sounds of disco to AM radio."
+        textRu: "«Энциклопедия популярной культуры Сент-Джеймс» называет «Rock Your Baby» одной из двух записей, которые принесли звучание диско в AM-эфир."
+        source:
+          title: "Encyclopedia.com (St. James Encyclopedia of Popular Culture): Disco"
+          url: "https://www.encyclopedia.com/media/encyclopedias-almanacs-transcripts-and-maps/disco"
+          quote: "In 1974 and 1975 respectively, George McCrae's \"Rock Your Baby\" and Van McCoy's \"The Hustle\" introduced the sounds of disco to AM radio"
+      - type: "testimony"
+        dimensions: []
+        text: "McCrae says the song heralded the era of disco dancing and still fills dance floors."
+        textRu: "Маккрей говорит, что песня возвестила эпоху танцев под диско и до сих пор заполняет танцполы."
+        source:
+          title: "Maxazine (René Hoeflaak): George McCrae — It’s all about love (2020)"
+          url: "https://maxazine.com/2020/07/17/george-mccrae-its-all-about-love/"
+          quote: "The significance of ‘Rock your baby’ to the music industry was great and heralded a new era, that of dancing in a disco. The song is still rock solid. Play ‘Rock Your Baby’ and the dance floor will fill up."
+      - type: "critics"
+        dimensions: []
+        text: "Beat Instrumental in 1975 credited his chart-topping record with bringing the Miami sound to Britain."
+        textRu: "Beat Instrumental в 1975 году писал, что именно его хит номер один принёс в Британию майамское звучание."
+        source:
+          title: "Beat Instrumental: The Miami McRae sound, February 1975, p. 17"
+          url: "https://worldradiohistory.com/UK/Beat-Instrumental/Beat-Instrumental-1975-02-S-OCR.pdf"
+          quote: "The Miami Sound has already burst forth over here, thanks to George McRae's chart - topping Rock Your Baby and KC and the Sunshine Band's Queen of Clubs."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Maxazine credits his high, striking voice with making him world famous."
+        textRu: "Maxazine пишет, что мировую славу ему принёс высокий, яркий голос."
+        source:
+          title: "Maxazine (René Hoeflaak): George McCrae — It’s all about love (2020)"
+          url: "https://maxazine.com/2020/07/17/george-mccrae-its-all-about-love/"
+          quote: "His high and striking voice made George McCrae world famous."
+notes:
+  - period: "1974 (“Rock Your Baby”)"
+    who: "Harry Wayne Casey and Richard Finch (KC and the Sunshine Band)"
+    role: "producer"
+    what: "KC and the Sunshine Band furnished the backing track of “Rock Your Baby”; the groove of the record is theirs, the voice is McCrae’s."
+    whatRu: "Аккомпанемент «Rock Your Baby» записали KC and the Sunshine Band: грув пластинки — их, голос — Маккрея."
+    source:
+      title: "Beat Instrumental: The Miami McRae sound, February 1975, p. 17"
+      url: "https://worldradiohistory.com/UK/Beat-Instrumental/Beat-Instrumental-1975-02-S-OCR.pdf"
+      quote: "Band who furnished the backing tracks for Rock Your Baby (see page 48)"

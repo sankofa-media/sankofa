@@ -9,28 +9,84 @@ genre: "Blues"
 genreRu: "блюз"
 links:
   - to: "root:charley-patton"
-    kind: "teacher"
-    claim: "Charley Patton taught Howlin’ Wolf songs and performance technique."
-    claimRu: "Чарли Паттон учил Хаулина Вулфа песням и сценическим приёмам."
-    sources:
-      - title: "National Park Service: Howlin’ Wolf"
-        url: "https://www.nps.gov/locations/lowermsdeltaregion/howlin-wolf.htm"
-      - title: "Mississippi Blues Trail: Howlin’ Wolf"
-        url: "https://msbluestrail.org/blues-trail-markers/howlin-wolf"
-    carries: []
-    how: Patton taught the young Wolf songs and showmanship; repertoire and stagecraft rather than one musical element.
-    howRu: 'Паттон учил молодого Вулфа песням и умению держать сцену: репертуар и сценическое ремесло, а не один музыкальный приём.'
-  - to: "card:blues"
-    kind: "scene"
-    claim: "Howlin’ Wolf adapted the Delta blues of his upbringing to an amplified band."
-    claimRu: "Хаулин Вулф перенёс дельта-блюз, на котором вырос, в звучание ансамбля с усиленными инструментами."
-    sources:
-      - title: "National Park Service: Howlin’ Wolf"
-        url: "https://www.nps.gov/locations/lowermsdeltaregion/howlin-wolf.htm"
-      - title: "Mississippi Blues Trail: Howlin’ Wolf"
-        url: "https://msbluestrail.org/blues-trail-markers/howlin-wolf"
+    kind: "influence"
+    how: "From Patton, Wolf took a gruff vocal manner, blues built on riffs, Patton's guitar playing and a strong sense of showmanship."
+    howRu: "У Паттона Вулф взял грубоватую вокальную манеру, блюз на риффах, его гитарную игру и сильное чувство сцены."
     carries: ["riff"]
-    how: Wolf moved Delta blues onto amplified instruments, with electric guitar riffs driving the band.
-    howRu: Вулф перенёс дельта-блюз на усиленные инструменты, и группу повели электрические гитарные риффы.
-story: "Charley Patton taught Howlin’ Wolf songs and stagecraft. Wolf later carried his Delta blues into an amplified band."
-storyRu: "Чарли Паттон учил Хаулина Вулфа песням и сценическим приёмам. Позднее Вулф перенёс свой дельта-блюз в звучание ансамбля с усиленными инструментами."
+    dimensions: ["melody-vocal", "harmony-form", "sound", "performance"]
+    evidence:
+      - type: "analysis"
+        dimensions: ["melody-vocal", "harmony-form", "performance"]
+        text: "Patton mentored the teenage Wolf, who built on his gruff vocals, riff-based structures and showmanship."
+        textRu: "Паттон опекал подростка Вулфа, и тот строил своё на паттоновском грубом вокале, риффовых структурах и умении держать сцену."
+        source:
+          title: "Mississippi Encyclopedia: Howlin’ Wolf"
+          url: "https://mississippiencyclopedia.org/entries/howlin-wolf/"
+          quote: "As a result, Burnett came into contact with Delta blues giant Charley Patton, who mentored the teenager musically—the first song he learned on guitar was Patton’s “Pony Blues”—and Burnett built on several elements of Patton’s playing, from a gruff vocal style and the preference of riff-based blues structures to a strong sense of showmanship."
+      - type: "analysis"
+        dimensions: ["sound"]
+        text: "Wolf learned guitar under Patton's and Willie Brown's influence and moved to Dockery to be around Patton."
+        textRu: "Гитаре Вулф учился под влиянием Паттона и Вилли Брауна и перебрался на Докери, чтобы быть рядом с Паттоном."
+        source:
+          title: "National Park Service, Lower Mississippi Delta: Howlin’ Wolf"
+          url: "https://www.nps.gov/locations/lowermsdeltaregion/howlin-wolf.htm"
+          quote: "Burnett learned to play the guitar as a teen, influenced by guitarists Charley Patton and Willie Brown, who played on the square in nearby Drew. Burnett moved to the Dockery Plantation in 1929, both to work and to be around Patton."
+      - type: "analysis"
+        dimensions: ["performance"]
+        text: "Patton taught him showmanship."
+        textRu: "Паттон научил его держать сцену."
+        source:
+          title: "Mississippi Blues Trail: Howlin’ Wolf"
+          url: "https://msbluestrail.org/blues-trail-markers/howlin-wolf"
+          quote: "Burnett soon fell under the wing of blues pioneer Charley Patton, who taught him showmanship"
+    scope: "career"
+  - to: "card:blues"
+    kind: "style"
+    how: "Wolf carried field hollers and Delta blues into an amplified small band: a voice from guttural growl to falsetto howl treated as the distorted equal of guitar and harmonica, slashing guitar riffs, pounding drums and a wild, physical stage act."
+    howRu: "Вулф перенёс полевые кличи и дельта-блюз в небольшой электрический бэнд: голос от утробного рыка до фальцетного воя, перегруженный наравне с гитарой и губной гармоникой, режущие гитарные риффы, тяжёлые барабаны и необузданное, телесное шоу."
+    carries: ["riff"]
+    dimensions: ["melody-vocal", "sound", "rhythm", "performance"]
+    evidence:
+      - type: "analysis"
+        dimensions: ["melody-vocal", "sound"]
+        text: "He sang as if his voice were the amp-distorted equal of guitar and harmonica, ranging from growls to a falsetto moan."
+        textRu: "Он пел так, будто его голос, как гитара и гармоника, пропущен через перегруженный усилитель, — от рыка до фальцетного стона."
+        source:
+          title: "Mississippi Encyclopedia: Howlin’ Wolf"
+          url: "https://mississippiencyclopedia.org/entries/howlin-wolf/"
+          quote: "Burnett treated his singing as if it were the amp-distorted equal of the guitar and harmonica in urban blues combos. His range ventured from guttural growls to a falsetto moan that played up his stage name"
+      - type: "analysis"
+        dimensions: ["sound"]
+        text: "He tailored the field hollers and folk blues of his upbringing to amplified small ensembles."
+        textRu: "Полевые кличи и народный блюз своей юности он приспособил к небольшим электрическим составам."
+        source:
+          title: "Mississippi Encyclopedia: Howlin’ Wolf"
+          url: "https://mississippiencyclopedia.org/entries/howlin-wolf/"
+          quote: "Burnett, who tailored the field hollers and folk blues of his upbringing to the amplified, small ensemble settings of a nascent postwar blues scene, also wielded direct influence on a generation of blues-indebted rock performers"
+      - type: "analysis"
+        dimensions: ["performance"]
+        text: "He performed with visceral abandon, crawling on all fours and climbing stage curtains."
+        textRu: "Он выступал с животной самоотдачей: ползал на четвереньках, карабкался по занавесу сцены."
+        source:
+          title: "Mississippi Encyclopedia: Howlin’ Wolf"
+          url: "https://mississippiencyclopedia.org/entries/howlin-wolf/"
+          quote: "performing with an oft-noted visceral energy and abandon—crawling on all fours one minute, climbing stage curtains the next—in an embodiment of the blues that made for both legendary theater and cathartic ritual."
+      - type: "analysis"
+        dimensions: ["melody-vocal", "sound", "rhythm"]
+        text: "On record his ferocious voice rode over harmonica melody, slashing guitar riffs and pounding drums."
+        textRu: "На записи его свирепый голос шёл поверх мелодии губной гармоники, режущих гитарных риффов и тяжёлых барабанов."
+        source:
+          title: "National Park Service, Lower Mississippi Delta: Howlin’ Wolf"
+          url: "https://www.nps.gov/locations/lowermsdeltaregion/howlin-wolf.htm"
+          quote: "On record, Wolf's huge, ferocious voice sounded as if it were torn from the back of his throat. His high-pressure moaning punctuated by a wolfish howl sounded like an amped-up Tommy Johnson. Wolf's harmonica playing held the melody while Willie Johnson played slashing guitar riffs and Willie Steel pounded the drums ferociously."
+      - type: "analysis"
+        dimensions: ["sound", "melody-vocal"]
+        text: "A pioneer in electrifying the Delta blues, with a raspy, howling voice."
+        textRu: "Один из первых, кто электрифицировал дельта-блюз; голос хриплый, воющий."
+        source:
+          title: "Mississippi Blues Trail: Howlin’ Wolf"
+          url: "https://msbluestrail.org/blues-trail-markers/howlin-wolf"
+          quote: "In his early teens Burnett began performing in the Delta and was later a pioneer in electrifying the Delta blues."
+    scope: "career"
+story: "Howlin’ Wolf built on Charley Patton’s gruff vocals, riff-based blues and showmanship. He carried that Delta blues into an amplified band, with a voice ranging from growl to falsetto howl over slashing guitar riffs and pounding drums."
+storyRu: "Хаулин Вулф строил своё на грубоватом вокале, риффовом блюзе и сценической хватке Чарли Паттона. Этот дельта-блюз он перенёс в электрический бэнд: голос от рыка до фальцетного воя поверх режущих гитарных риффов и тяжёлых барабанов."

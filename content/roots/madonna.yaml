@@ -13,18 +13,62 @@ place:
 placeRu: "Бей-Сити, Мичиган"
 genre: Dance pop
 genreRu: танцевальный поп
+story: "Madonna came out of the New York club scene of the early 1980s with demos that the industry found “too disco”, and the Rock & Roll Hall of Fame names Donna Summer and Giorgio Moroder among her influences. Her music stayed dance-pop for the dancefloor — synth-pop and R&B, then house, electronica and EDM — with the image of a Danceteria club kid."
+storyRu: "Мадонна вышла из нью-йоркской клубной сцены начала 1980-х с демозаписями, которые индустрия сочла «слишком диско», а Зал славы рок-н-ролла называет среди её влияний Донну Саммер и Джорджо Мородера. Её музыка так и осталась танцевальным попом для танцпола — синти-поп и ритм-н-блюз, затем хаус, электроника и EDM — с образом завсегдатая клуба Danceteria."
 links:
-  - to: card:funk
-    claim: Madonna drew on Sly and the Family Stone’s funk for “Express Yourself”.
-    claimRu: Создавая «Express Yourself», Мадонна опиралась на фанк Sly and the Family Stone.
-    sources:
-      - title: 'Vice: Like a Prayer was Madonna’s first masterpiece'
-        url: https://www.vice.com/en/article/like-a-prayer-was-madonnas-first-masterpiece
-      - title: 'Attitude: Ten reasons Like a Prayer remains an all-time classic'
-        url: https://www.attitude.co.uk/culture/sexuality/like-a-prayer-at-31-ten-reasons-madonnas-fourth-album-remains-an-all-time-classic-298511/
-    kind: influence
-    carries: ["groove"]
-    how: Madonna modelled “Express Yourself” on the funk groove of Sly and the Family Stone.
-    howRu: Мадонна строила «Express Yourself» по фанковому груву Sly and the Family Stone.
-story: The funk of Sly and the Family Stone fed into Madonna’s “Express Yourself”, the song of hers that leans on it most openly.
-storyRu: Фанк Sly and the Family Stone вошёл в музыку Мадонны через «Express Yourself».
+  - to: "style:disco"
+    kind: "influence"
+    how: "Madonna started from disco: dancefloor songs in the line of Donna Summer and Giorgio Moroder, so close to the style that her first demos were dismissed as too disco."
+    howRu: "Мадонна начинала с диско: песни для танцпола в духе Донны Саммер и Джорджо Мородера, настолько близкие к стилю, что её первые демо отвергали как слишком диско."
+    carries: []
+    dimensions: ["sound"]
+    scope: "career"
+    evidence:
+      - type: "critics"
+        dimensions: []
+        text: "The Rock & Roll Hall of Fame names Donna Summer and Giorgio Moroder among Madonna’s influences."
+        textRu: "Зал славы рок-н-ролла называет Донну Саммер и Джорджо Мородера среди влияний Мадонны."
+        source:
+          title: "Rock & Roll Hall of Fame: Madonna (inducted 2008)"
+          url: "https://rockhall.com/inductees/madonna/"
+          quote: "Influences David Bowie Prince Blondie Donna Summer The Pretenders Giorgio Moroder Karen Carpenter Elton John Madonna Influenced"
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Her former manager recalls that in 1981 the industry turned down her demos as too disco."
+        textRu: "Её бывший менеджер вспоминает, что в 1981 году индустрия отвергала её демо как слишком диско."
+        source:
+          title: "The Guardian, Lucy O’Brien: Madonna — evolution of the zeitgeist-capturing dance diva (2023)"
+          url: "https://www.theguardian.com/music/2023/aug/20/madonna-evolution-of-the-zeitgeist-capturing-dance-diva"
+          quote: "Nobody got it. The reaction was: ‘too disco’. It was 1981, and after the disco thing.”"
+  - to: "style:dance-pop"
+    kind: "style"
+    how: "Madonna works in dance-pop: streetwise dance music made for the dancefloor, moving from synth-pop and R&B to house, electronica and EDM, with the look and attitude of New York club culture."
+    howRu: "Мадонна работает в танцевальном попе: уличная танцевальная музыка для танцпола, от синти-попа и ритм-н-блюза к хаусу, электронике и EDM, с обликом и повадками нью-йоркской клубной культуры."
+    carries: []
+    dimensions: ["sound", "image", "rhythm"]
+    scope: "career"
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "rhythm"]
+        text: "The Hall of Fame traces her sound from 1980s synth-pop through R&B to house, electronica and EDM, always made to animate the dancefloor."
+        textRu: "Зал славы прослеживает её звук от синти-попа 1980-х через ритм-н-блюз к хаусу, электронике и EDM — всегда для того, чтобы ожил танцпол."
+        source:
+          title: "Rock & Roll Hall of Fame: Madonna (inducted 2008)"
+          url: "https://rockhall.com/inductees/madonna/"
+          quote: "Madonna’s sound evolution began with ‘80s synth-pop, morphing quickly into R&B, rock and lush ballads. In the ‘90s, she incorporated house, electronica and industrial textures, moving into EDM in the ‘00s. Through constant risk and reinvention, her music always succeeded in animating the dancefloor, whatever the decade."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Alexis Petridis argues that her most celebrated work carries the tang of the New York club scene that spawned her and is best when it sits near the DJ booth."
+        textRu: "Алексис Петридис считает, что в лучших её работах чувствуется привкус нью-йоркской клубной сцены, которая её породила, и что лучше всего её музыка звучит поближе к диджейскому пульту."
+        source:
+          title: "The Guardian, Alexis Petridis: Madonna, I Feel So Free — review (2026)"
+          url: "https://www.theguardian.com/music/2026/apr/18/madonna-i-feel-so-free-review-album-teaser-hypnotic-glimpse-return-club-scene-roots"
+          quote: "her most celebrated work almost always carries at least the faint tang of the New York club scene that spawned her"
+      - type: "critics"
+        dimensions: ["image"]
+        text: "Lucy O’Brien describes her early look as East Village punk meeting a Danceteria club kid, a reflection of club culture."
+        textRu: "Люси О’Брайен описывает её ранний облик как встречу панка из Ист-Виллиджа с завсегдатаем клуба Danceteria — отражение клубной культуры."
+        source:
+          title: "The Guardian, Lucy O’Brien: Madonna — evolution of the zeitgeist-capturing dance diva (2023)"
+          url: "https://www.theguardian.com/music/2023/aug/20/madonna-evolution-of-the-zeitgeist-capturing-dance-diva"
+          quote: "It was that look – a combination of East Village punk meets Danceteria club kid – that led to her dominating fledgling MTV as a video pioneer."

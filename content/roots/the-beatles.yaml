@@ -8,55 +8,133 @@ placeRu: "Ливерпуль"
 genre: "Rock"
 genreRu: "рок"
 links:
-  - to: "card:rhythm-and-blues"
-    claim: "The Beatles recorded “Twist and Shout” after the Isley Brothers made it an R&B hit."
-    claimRu: "The Beatles записали «Twist and Shout» вслед за The Isley Brothers, которые сделали эту песню хитом ритм-н-блюза."
-    sources:
-      - title: "Charles Gower Price: Sources of American Styles in the Music of the Beatles (American Music, 1997)"
-        url: "https://static1.1.sqspcdn.com/static/f/221758/1911861/1221287203007/beatlessourcesGower.pdf"
-      - title: "Far Out: Twist and Shout — the one-take Beatles song that nearly killed John Lennon"
-        url: "https://faroutmagazine.co.uk/one-take-beatles-hit-nearly-killed-john-lennon/"
-    kind: "cover"
-    what: "“Twist and Shout”: the Beatles’ recording follows the Isley Brothers’ version."
-    whatRu: "«Twist and Shout»: запись The Beatles следует за версией The Isley Brothers."
-    carries: []
-    how: 'The Beatles’ “Twist and Shout” was an arrangement honed on stage from an R&B record: repertoire, not a documented element.'
-    howRu: '«Twist and Shout» у «Битлз» — аранжировка, отточенная на сцене по ритм-н-блюзовой пластинке: репертуар, а не задокументированный приём.'
   - to: "root:little-richard"
     kind: "influence"
-    claim: "Little Richard’s songs were part of the repertoire through which the Beatles developed as a live band."
-    claimRu: "Песни Литл Ричарда входили в репертуар, на котором The Beatles учились играть перед публикой."
-    sources:
-      - title: "The Beatles Story: The Beatles and Black Music"
-        url: "https://artsandculture.google.com/story/the-beatles-and-black-music-the-beatles-story/3QVhEdhba2lOBg?hl=en"
-      - title: "Polar Music Prize: Paul McCartney"
-        url: "https://www.polarmusicprize.org/laureates/paul-mccartney/"
-    carries: []
-    how: Little Richard’s songs were the repertoire on which the Beatles learned to play live; the sources do not name a device they took.
-    howRu: Песни Литтл Ричарда были репертуаром, на котором «Битлз» учились играть вживую; какой приём они взяли, источники не называют.
+    scope: "career"
+    how: "From Little Richard the Beatles took the hard rock-and-roll vocal: a screaming, gospel-charged delivery that McCartney made his own, and the uninhibited stage routine of their early years."
+    howRu: "У Литл Ричарда The Beatles взяли жёсткий рок-н-ролльный вокал — крик с госпельным накалом, ставший собственной манерой Маккартни, — и раскованную повадку на сцене в ранние годы."
+    carries: ["gospel-vocal"]
+    dimensions: ["melody-vocal", "performance", "rhythm"]
+    evidence:
+      - type: "analysis"
+        dimensions: ["melody-vocal", "rhythm", "performance"]
+        text: "Musicologist Charles Gower Price calls Little Richard a formative influence: a frenzied gospel singing style over a raucous boogie beat, and the model for the Beatles' early performance routine."
+        textRu: "Музыковед Чарльз Гауэр Прайс называет Литл Ричарда одним из тех, кто сформировал группу: исступлённую госпельную манеру пения поверх буйного ритма буги — образец для ранних выступлений The Beatles."
+        source:
+          title: "Charles Gower Price: Sources of American Styles in the Music of the Beatles (American Music 15/2, 1997)"
+          url: "https://static1.1.sqspcdn.com/static/f/221758/1911861/1221287203007/beatlessourcesGower.pdf"
+          quote: "Another formative influence on the Beatles was \"Little Richard\" Penniman, the dynamic African American singer and pianist from Macon, Georgia, who had adapted a frenzied gospel singing style to a raucous boogie beat … It is difficult to overestimate Little Richard's influence on the Beatles, particularly their early performance routine."
+      - type: "analysis"
+        dimensions: ["melody-vocal"]
+        text: "Price hears McCartney's singing on “Helter Skelter” as a classic example of Little Richard's screaming vocal style."
+        textRu: "В пении Маккартни в «Helter Skelter» Прайс слышит классический образец кричащей вокальной манеры Литл Ричарда."
+        source:
+          title: "Charles Gower Price: Sources of American Styles in the Music of the Beatles (American Music 15/2, 1997)"
+          url: "https://static1.1.sqspcdn.com/static/f/221758/1911861/1221287203007/beatlessourcesGower.pdf"
+          quote: "McCartney's singing on \"Helter Skelter\" is a classic example of Little Richard's screaming vocal style."
+      - type: "critics"
+        dimensions: ["melody-vocal", "performance"]
+        text: "The Rock & Roll Hall of Fame essay says that for McCartney rock and roll meant first of all Little Richard and his rollicking, uninhibited approach."
+        textRu: "В эссе Зала славы рок-н-ролла сказано, что для Маккартни рок-н-ролл означал прежде всего Литл Ричарда с его разудалой, раскованной манерой."
+        source:
+          title: "Rock & Roll Hall of Fame: The Beatles, 1988 induction essay"
+          url: "https://rockhall25.wpenginepowered.com/wp-content/uploads/2025/09/essay-beatles-1.pdf"
+          quote: "For McCartney rock and roll meant, on the one hand, Little Richard and his rollicking, uninhibited approach."
+      - type: "listening"
+        dimensions: []
+        text: "The Beatles Story museum in Liverpool notes that McCartney was practically obsessed with Little Richard and sang lead on the group's Little Richard numbers."
+        textRu: "Ливерпульский музей The Beatles Story пишет, что Маккартни был буквально одержим Литл Ричардом и был ведущим вокалистом в песнях Литл Ричарда из репертуара группы."
+        source:
+          title: "The Beatles Story (Google Arts & Culture): The Beatles and Black Music"
+          url: "https://artsandculture.google.com/story/the-beatles-and-black-music-the-beatles-story/3QVhEdhba2lOBg?hl=en"
+          quote: "Paul McCartney was practically obsessed with Little Richard."
   - to: "root:chuck-berry"
     kind: "influence"
-    claim: "Chuck Berry’s songs were a foundation of the Beatles’ early performing repertoire."
-    claimRu: "Песни Чака Берри составляли одну из основ раннего концертного репертуара The Beatles."
-    sources:
-      - title: "The Beatles Story: The Beatles and Black Music"
-        url: "https://artsandculture.google.com/story/the-beatles-and-black-music-the-beatles-story/3QVhEdhba2lOBg?hl=en"
-      - title: "Polar Music Prize: Paul McCartney"
-        url: "https://www.polarmusicprize.org/laureates/paul-mccartney/"
-    carries: []
-    how: Chuck Berry’s songs were the core of the Beatles’ early sets; the sources record repertoire, not a specific device.
-    howRu: Песни Чака Берри были основой ранних сетов «Битлз»; источники фиксируют репертуар, а не конкретный приём.
-  - to: "root:chuck-berry"
-    kind: "influence"
-    claim: "Paul McCartney took the bass line of the Beatles’ “I Saw Her Standing There” note for note from Chuck Berry’s “I’m Talking About You”."
-    claimRu: "Пол Маккартни нота в ноту взял басовую партию «I Saw Her Standing There» из песни Чака Берри «I’m Talking About You»."
-    sources:
-      - title: "Skidmore College, Gordon Thompson: “I Saw Her Standing There” (course notes quoting McCartney in Miles, Many Years From Now, 1997)"
-        url: "https://thompsong.domains.skidmore.edu/dept/courses/mu220/campus/08-Lennon-McCartney/2-Songwriting/60br082a.html"
-      - title: "MusicRadar: Paul McCartney on his favourite basses, key lines and influential players (Tony Bacon, 1994)"
-        url: "https://www.musicradar.com/news/classic-interview-paul-mccartney-on-his-favourite-basses-key-lines-and-influential-players"
+    scope: "career"
+    how: "From Chuck Berry the Beatles took the electric-guitar rock and roll of riff-built solos and driving rhythm parts, together with his energized stage presence; Lennon counted him the model songwriter."
+    howRu: "У Чака Берри The Beatles взяли электрогитарный рок-н-ролл — соло на риффах и напористые ритм-партии — и его заряженную энергией сценическую подачу; Леннон считал Берри образцовым автором песен."
     carries: ["riff"]
-    how: "The riff as a repeated bass figure: McCartney played the notes of the bass riff of Berry’s “I’m Talking About You” under a Beatles song of his own."
-    howRu: "Рифф как повторяющаяся басовая фигура: Маккартни сыграл под собственной песней «Битлз» те же ноты, что и в басовом риффе «I’m Talking About You» Берри."
-story: "The Beatles learned to play for an audience with songs by Little Richard and Chuck Berry. Their recording of “Twist and Shout” also followed the Isley Brothers’ R&B hit."
-storyRu: "The Beatles учились играть перед публикой на песнях Литл Ричарда и Чака Берри. Записав «Twist and Shout», они также обратились к песне, которую The Isley Brothers сделали хитом ритм-н-блюза."
+    dimensions: ["sound", "performance", "harmony-form"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["harmony-form"]
+        text: "Lennon called Berry a rock poet ahead of his time, in the tradition of the great blues artists but writing his own songs, and said: “We all owe him a lot.”"
+        textRu: "Леннон называл Берри рок-поэтом, опередившим своё время: он продолжал традицию великих блюзменов, но писал собственные песни. «Мы все ему многим обязаны», — говорил Леннон."
+        source:
+          title: "Charles Gower Price: Sources of American Styles in the Music of the Beatles (American Music 15/2, 1997), quoting John Lennon"
+          url: "https://static1.1.sqspcdn.com/static/f/221758/1911861/1221287203007/beatlessourcesGower.pdf"
+          quote: "Chuck Berry is one of the all-time great poets, a rock poet you could call him. He was well advanced of his time lyric-wise. We all owe him a lot, including Dylan. I've loved everything he's ever done. He was in a different class from the other performers, he was in the tradition of the great blues artists but he really wrote his own stuff"
+      - type: "analysis"
+        dimensions: ["sound"]
+        text: "Price locates Berry's contribution not in his vocal delivery but in his distinctive solo and rhythm guitar work and his youth-directed lyrics."
+        textRu: "Вклад Берри Прайс видит не в манере пения, а в самобытной игре на гитаре — сольной и ритмической — и в текстах, обращённых к молодёжи."
+        source:
+          title: "Charles Gower Price: Sources of American Styles in the Music of the Beatles (American Music 15/2, 1997)"
+          url: "https://static1.1.sqspcdn.com/static/f/221758/1911861/1221287203007/beatlessourcesGower.pdf"
+          quote: "Berry's main contribution to rock and roll was not his vocal delivery, which could easily have been mistaken for a country or pop singer, but his distinctive solo and rhythm guitar work and the straightforward, youth-directed lyrics of his songs."
+      - type: "critics"
+        dimensions: ["sound", "performance"]
+        text: "The Encyclopedia of African-American Culture and History names the Beatles among the rock performers who emulated both Berry's guitar style and his highly energized stage presence."
+        textRu: "«Энциклопедия афроамериканской культуры и истории» называет The Beatles среди рок-музыкантов, перенявших у Берри и гитарную манеру, и его предельно энергичную сценическую подачу."
+        source:
+          title: "David Henderson, Encyclopedia of African-American Culture and History: Chuck Berry (via Encyclopedia.com)"
+          url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/chuck-berry"
+          quote: "He had a tremendous influence on rock performers who came after him, including Buddy Holly, the Beatles, the Beach Boys, and the Rolling Stones, who emulated both his guitar style and his highly energized stage presence."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Contemporary Musicians lists the Beatles among those who admit to having emulated Berry's complex guitar riffs in their early days."
+        textRu: "Справочник Contemporary Musicians относит The Beatles к тем, кто признавал, что в ранние годы подражал сложным гитарным риффам Берри."
+        source:
+          title: "Michael P. Belfiore, Contemporary Musicians: Chuck Berry (via Encyclopedia.com)"
+          url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/chuck-berry"
+          quote: "Among those who admit to having emulated his complex guitar riffs and quick, witty lyrics in their early days are some of the most prominent bands and artists of the past 50 years— including the Beatles, the Rolling Stones, Bob Dylan, and Bruce Springsteen."
+      - type: "critics"
+        dimensions: ["sound", "performance"]
+        text: "The Rock & Roll Hall of Fame credits Berry's technical prowess and showmanship with inspiring the Beatles."
+        textRu: "Зал славы рок-н-ролла пишет, что техника и артистизм Берри вдохновили The Beatles."
+        source:
+          title: "Rock & Roll Hall of Fame: Chuck Berry"
+          url: "https://www.rockhall.com/inductees/chuck-berry"
+          quote: "his technical prowess and showmanship inspiring the Beatles, the Rolling Stones, Jimi Hendrix, and countless more."
+    example:
+      song: "“I Saw Her Standing There” (1963)"
+      text: "McCartney said he played exactly the notes of the bass line of Berry's “I'm Talking About You” under this song."
+      textRu: "Маккартни рассказывал, что сыграл в этой песне нота в ноту басовую партию из «I'm Talking About You» Берри."
+      source:
+        title: "Skidmore College, Gordon Thompson: “I Saw Her Standing There” (quoting McCartney in Miles, Many Years From Now, 1997)"
+        url: "https://thompsong.domains.skidmore.edu/dept/courses/mu220/campus/08-Lennon-McCartney/2-Songwriting/60br082a.html"
+        quote: "I played exactly the same notes as he did and it fitted our number perfectly."
+  - to: "style:british-beat"
+    kind: "style"
+    scope: "career"
+    how: "The Beatles built British beat: a guitar-bass-drums group playing Chuck Berry-style rock and roll, with a vocal style joining the hard rock-and-roll shout to the gospel call and response of American vocal groups, and a Motown-inspired groove."
+    howRu: "The Beatles создали британский бит: группа из гитар, баса и барабанов играет рок-н-ролл в духе Чака Берри, вокал соединяет жёсткий рок-н-ролльный крик с госпельной перекличкой американских вокальных групп, а грув взят у Motown."
+    carries: ["call-and-response"]
+    dimensions: ["melody-vocal", "harmony-form", "rhythm"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Charlie Gillett, quoted by Price, derives the group's vocal style from two American styles: the hard rock and roll of Little Richard and the soft gospel call and response of the Shirelles and the Drifters."
+        textRu: "Чарли Гиллетт, которого цитирует Прайс, выводит вокальную манеру группы из двух американских стилей: жёсткого рок-н-ролла Литл Ричарда и мягкой госпельной переклички The Shirelles и The Drifters."
+        source:
+          title: "Charles Gower Price: Sources of American Styles in the Music of the Beatles (American Music 15/2, 1997), quoting Charlie Gillett"
+          url: "https://static1.1.sqspcdn.com/static/f/221758/1911861/1221287203007/beatlessourcesGower.pdf"
+          quote: "The group's vocal style was a derivative of two American styles. . . the hard rock and roll style of singers like Little Richard and Larry Williams and the soft gospel call-and-response style of the Shirelles, the Drifters, and the rest of the singers"
+      - type: "analysis"
+        dimensions: []
+        text: "Price places the Beatles' early repertory within the shared practice of the Mersey beat groups of Liverpool."
+        textRu: "Ранний репертуар The Beatles Прайс вписывает в общую практику мерсибит-групп Ливерпуля."
+        source:
+          title: "Charles Gower Price: Sources of American Styles in the Music of the Beatles (American Music 15/2, 1997)"
+          url: "https://static1.1.sqspcdn.com/static/f/221758/1911861/1221287203007/beatlessourcesGower.pdf"
+          quote: "Several of Chuck Berry's songs were part of the Beatles' early repertory, as they were for most Mersey beat groups from Liverpool."
+      - type: "critics"
+        dimensions: ["rhythm", "harmony-form"]
+        text: "The Rock & Roll Hall of Fame describes the Beatles' sound as a synthesis of fifties rock and roll, tight pop harmonies and a Motown-inspired groove."
+        textRu: "Зал славы рок-н-ролла описывает звучание The Beatles как синтез рок-н-ролла пятидесятых, плотных поп-гармоний и грува, вдохновлённого Motown."
+        source:
+          title: "Rock & Roll Hall of Fame: The Beatles"
+          url: "https://www.rockhall.com/inductees/beatles"
+          quote: "Presenting irresistible tunes via a revolutionary synthesis of ‘50s rock & roll, tight pop harmonies, a Motown-inspired groove, and a taste for risk"
+story: "The Beatles' singing grew out of Little Richard's screaming, gospel-charged rock and roll, which McCartney made his own. Chuck Berry gave them riff-built electric guitar and an energized stage manner, and Lennon a model of songwriting. From these they made British beat, joining the rock-and-roll shout to gospel call and response and a Motown groove."
+storyRu: "Пение The Beatles выросло из кричащего, напитанного госпелом рок-н-ролла Литл Ричарда — у Маккартни эта манера стала собственной. Чак Берри дал им электрогитару, построенную на риффах, и энергичную сценическую подачу, а Леннону — образец того, как писать песни. Из этого они сложили британский бит, где рок-н-ролльный крик встречается с госпельной перекличкой и грувом Motown."

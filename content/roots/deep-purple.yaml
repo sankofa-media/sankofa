@@ -8,31 +8,62 @@ placeRu: "Хартфорд, Англия"
 genre: "Hard rock"
 genreRu: "хард-рок"
 links:
-  - to: "card:rock-n-roll"
-    claim: "Deep Purple performed Little Richard’s “Lucille” in their 1972 concerts."
-    claimRu: "Deep Purple исполняли «Lucille» Литл Ричарда на концертах 1972 года."
-    sources:
-      - title: "MOJO: Deep Purple Made in Japan reviewed"
-        url: "https://www.mojo4music.com/articles/new-music/deep-purple-made-in-japan-reviewed-revered-72-live-album-remixed-and-expanded/"
-      - title: "metal.de: Deep Purple — In Concert ’72 reissue review"
-        url: "https://www.metal.de/reviews/deep-purple-in-concert-72-re-release-58099/"
-    kind: "cover"
-    what: "“Lucille”: Deep Purple’s live performances in 1972 of Little Richard’s song."
-    whatRu: "«Lucille»: концертные исполнения песни Литл Ричарда группой Deep Purple в 1972 году."
-    carries: []
-    how: 'A Little Richard cover in concert: repertoire, not a documented element.'
-    howRu: 'Кавер на Литтл Ричарда в концерте: репертуар, а не задокументированный приём.'
-  - to: "root:little-richard"
+  - to: "style:heavy-metal"
+    kind: "style"
+    how: "Deep Purple pushed hard rock towards metal: breakneck riffs at overwhelming volume, an overdriven Hammond organ duelling with the guitar, classical-orchestral ideas and long improvised jams on stage."
+    howRu: "Deep Purple подтолкнули хард-рок к металу: стремительные риффы на оглушительной громкости, перегруженный орган Хаммонда в дуэли с гитарой, идеи классической оркестровой музыки и долгие импровизированные джемы на сцене."
+    carries: ["riff", "improvisation"]
+    dimensions: ["sound", "harmony-form", "performance", "melody-vocal"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "harmony-form"]
+        text: "The Rock & Roll Hall of Fame calls Deep Purple harbingers of hard rock who paved the way for metal and drew on both orchestral music and harder rock."
+        textRu: "Зал славы рок-н-ролла называет Deep Purple предвестниками хард-рока, проложившими дорогу металу и черпавшими и из оркестровой музыки, и из жёсткого рока."
+        source:
+          title: "Rock & Roll Hall of Fame: Deep Purple"
+          url: "https://rockhall.com/inductees/deep-purple/"
+          quote: "Deep Purple were the harbingers of hard rock, paving the way for metal groups with their breakneck style. … They drew inspiration from both orchestral music and harder rocking sounds"
+      - type: "critics"
+        dimensions: ["sound", "melody-vocal", "performance"]
+        text: "MOJO’s review of the 1972 live album recalls Blackmore’s demand that everything be louder and singles out Gillan’s high wailing and Lord’s overdriven Hammond."
+        textRu: "Рецензия MOJO на концертный альбом 1972 года напоминает требование Блэкмора, чтобы всё звучало громче, и выделяет высокий вопль Гиллана и перегруженный «Хаммонд» Лорда."
+        source:
+          title: "MOJO: Deep Purple, Made in Japan reviewed (James McNair)"
+          url: "https://www.mojo4music.com/articles/new-music/deep-purple-made-in-japan-reviewed-revered-72-live-album-remixed-and-expanded/"
+          quote: "Can we have everything louder than everything else? … Ian Gillan's Olympian wailing on Child In Time … Jon Lord's brutally overdrawn Hammond on Lazy"
+      - type: "critics"
+        dimensions: ["performance"]
+        text: "metal.de hears the 1972 concerts as grooving, improvised jams with Lord’s Hammond duelling Blackmore in solos."
+        textRu: "metal.de слышит в концертах 1972 года грувовые импровизированные джемы, где «Хаммонд» Лорда сходится в сольной дуэли с Блэкмором."
+        source:
+          title: "metal.de: Deep Purple — In Concert ’72 reissue review"
+          url: "https://www.metal.de/reviews/deep-purple-in-concert-72-re-release-58099/"
+          quote: "wunderbar improvisierte Jam-Orgie zwischen wilden Hammondabfahrten im Solo Duell gegen Blackmore"
+    scope: "career"
+  - to: "root:elvis-presley"
     kind: "influence"
-    claim: "Little Richard was among the early rock-and-roll singers who first drew Deep Purple’s Ian Gillan to music."
-    claimRu: "Литл Ричард был среди первых рок-н-ролльных певцов, которые привели Иэна Гиллана из Deep Purple в музыку."
-    sources:
-      - title: "Wikimetal: Interview with Ian Gillan (2011)"
-        url: "https://www.wikimetal.com.br/en/site/interview-with-ian-gillan"
-      - title: "ABC Radio National: Ian Gillan interview (2006)"
-        url: "https://www.abc.net.au/listen/programs/musicshow/ian-gillan/3338452"
+    how: "Ian Gillan, the singer of the classic line-up, formed his rock-and-roll vocal manner by copying Elvis Presley first of all, alongside Little Richard and Buddy Holly."
+    howRu: "Иэн Гиллан, певец классического состава, сложил свою рок-н-ролльную вокальную манеру, подражая прежде всего Элвису Пресли, а также Литл Ричарду и Бадди Холли."
     carries: []
-    how: Early rock and roll first drew Gillan to music; the sources name no device he took from Little Richard.
-    howRu: Ранний рок-н-ролл впервые привёл Гиллана к музыке; какой приём он взял у Литтл Ричарда, источники не говорят.
-story: "Little Richard’s rock and roll was among the music that first drew Ian Gillan to singing. Deep Purple’s 1972 concerts also included Richard’s “Lucille”."
-storyRu: "Рок-н-ролл Литл Ричарда был среди той музыки, что впервые привела Иэна Гиллана к пению. На концертах 1972 года Deep Purple исполняли и его «Lucille»."
+    dimensions: ["melody-vocal"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "Gillan says Elvis, Little Richard and Buddy Holly inspired him and that a young singer should copy them."
+        textRu: "Гиллан говорит, что его вдохновляли Элвис, Литл Ричард и Бадди Холли и что молодому певцу стоит им подражать."
+        source:
+          title: "Wikimetal: Interview with Ian Gillan (2011)"
+          url: "https://www.wikimetal.com.br/en/site/interview-with-ian-gillan"
+          quote: "Elvis, Little Richard, and Buddy Holly gave me the inspiration. … I think it's important, when you're young, to copy Elvis Presley, Buddy Holly, Little Richard."
+      - type: "listening"
+        dimensions: ["melody-vocal"]
+        text: "Asked on ABC Radio National which singers formed him, Gillan names Elvis as the one."
+        textRu: "На вопрос ABC Radio National о том, какие певцы его сформировали, Гиллан называет главным Элвиса."
+        source:
+          title: "ABC Radio National, The Music Show: Ian Gillan (2006)"
+          url: "https://www.abc.net.au/listen/programs/musicshow/ian-gillan/3338452"
+          quote: "Elvis was definitely the one."
+    scope: "period"
+    period: "1969–1973 and from 1984 (line-ups with Ian Gillan)"
+story: "Deep Purple pushed hard rock towards metal with breakneck riffs at overwhelming volume, Jon Lord’s overdriven Hammond duelling with Ritchie Blackmore’s guitar, orchestral ideas and long improvised jams. In the line-ups with Ian Gillan the band’s voice came from a singer who learned rock and roll by copying Elvis Presley."
+storyRu: "Deep Purple подтолкнули хард-рок к металу: стремительные риффы на оглушительной громкости, перегруженный «Хаммонд» Джона Лорда в дуэли с гитарой Ричи Блэкмора, оркестровые идеи и долгие импровизированные джемы. В составах с Иэном Гилланом голосом группы стал певец, учившийся рок-н-роллу, подражая Элвису Пресли."

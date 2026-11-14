@@ -8,60 +8,170 @@ import (
 	"github.com/tym83/sankofa/pkg/card"
 )
 
-const two = `
-    sources:
-      - {title: a, url: "https://a"}
-      - {title: b, url: "https://b"}`
+// link renders a link with two evidence items from two websites.
+func link(to, scope string) string {
+	return `
+  - to: ` + to + `
+    kind: influence
+    scope: ` + scope + `
+    period: "1975"
+    how: Took the backbeat and the shouted vocal.
+    howRu: Взяли бэкбит и крик в голосе.
+    carries: [backbeat]
+    dimensions: [rhythm, melody-vocal]
+    evidence:
+      - type: testimony
+        dimensions: [rhythm]
+        text: They say so.
+        textRu: Они так говорят.
+        source: {title: a, url: "https://a.org/x", quote: "qa"}
+      - type: critics
+        dimensions: [melody-vocal]
+        text: Critics heard it.
+        textRu: Критики это услышали.
+        source: {title: b, url: "https://www.b.com/y", quote: "qb"}`
+}
 
-func TestPaths(t *testing.T) {
-	fsys := fstest.MapFS{
-		"oasis.yaml":   {Data: []byte("id: oasis\nname: Oasis\nyears: [1991]\nplace: {name: M, lat: 1, lon: 1}\ngenre: britpop\nlinks:\n  - to: root:beatles\n    claim: c" + two + "\n")},
-		"beatles.yaml": {Data: []byte("id: beatles\nname: The Beatles\naliases: [битлз]\nyears: [1960]\nplace: {name: L, lat: 1, lon: 1}\ngenre: rock\nlinks:\n  - to: card:rock-n-roll\n    claim: c" + two + "\n")},
+// indented shifts a link under a style's from.
+func indented(l string) string { return strings.ReplaceAll(l, "\n", "\n    ") }
+
+func artist(id, links string) []byte {
+	return []byte("id: " + id + "\nname: " + id + "\naliases: [битлз]\nyears: [1960]\nplace: {name: L, lat: 1, lon: 1}\ngenre: rock\nlinks:" + links + "\n")
+}
+
+const style = `styles:
+  - id: beat
+    name: British beat
+    years: [1962]
+    place: Liverpool
+    traits:
+      - {en: backbeat, ru: бэкбит}
+      - {en: guitars, ru: гитары}
+      - {en: harmony vocals, ru: многоголосие}
+    sources:
+      - {title: a, url: "https://a.org", quote: "qa"}
+      - {title: b, url: "https://b.org", quote: "qb"}
+    from:`
+
+func load(t *testing.T, files map[string]string) *Set {
+	t.Helper()
+	fsys := fstest.MapFS{}
+	for k, v := range files {
+		fsys[k] = &fstest.MapFile{Data: []byte(v)}
 	}
 	s, err := LoadFS(fsys)
 	if err != nil {
 		t.Fatal(err)
 	}
-	cards := &card.Set{ByID: map[string]*card.Card{"rock-n-roll": {ID: "rock-n-roll"}}}
+	return s
+}
+
+var cards = &card.Set{ByID: map[string]*card.Card{"rock-n-roll": {ID: "rock-n-roll"}, "blues": {ID: "blues"}}}
+
+const elements = `elements:
+  - id: backbeat
+    name: Backbeat
+    what: Two and four.
+    origin: [blues]
+    sources:
+      - {title: a, url: "https://a", quote: "qa"}
+      - {title: b, url: "https://b", quote: "qb"}
+`
+
+func TestStyleRoute(t *testing.T) {
+	s := load(t, map[string]string{
+		"oasis.yaml":   string(artist("oasis", link("root:beatles", "career"))),
+		"beatles.yaml": string(artist("beatles", link("style:beat", "career"))),
+		StylesFile:     style + indented(link("card:rock-n-roll", "career")),
+		ElementsFile:   elements,
+	})
 	if errs := s.Validate(cards); len(errs) != 0 {
 		t.Fatal(errs)
 	}
-	ps, _ := s.Paths("oasis", 8)
-	if len(ps) != 1 || len(ps[0]) != 2 || ps[0][1].Link.To != "card:rock-n-roll" {
+	ps, _ := s.MainPaths("oasis", 8)
+	if len(ps) != 1 || len(ps[0]) != 3 || ps[0][1].From != "beatles" || ps[0][2].From != "style:beat" || ps[0][2].Link.To != "card:rock-n-roll" {
 		t.Fatalf("%+v", ps)
 	}
-	if f := s.Find("Битлз"); len(f) != 1 || f[0].ID != "beatles" {
+	if f := s.Find("Битлз"); len(f) != 2 {
 		t.Fatal("alias search")
-	}
-	s.ByID["beatles"].Links[0].Sources = s.ByID["beatles"].Links[0].Sources[:1]
-	errs := s.Validate(cards)
-	if len(errs) == 0 || !strings.Contains(errs[0].Error(), "want at least 2") {
-		t.Fatal("one source must fail")
 	}
 }
 
-func TestBorrowingKinds(t *testing.T) {
-	for _, kind := range []string{"cover", "sample", "interpolation"} {
-		t.Run(kind, func(t *testing.T) {
-			fsys := fstest.MapFS{
-				"artist.yaml": {Data: []byte("id: artist\nname: Artist\nyears: [2000]\nplace: {name: City}\ngenre: pop\nlinks:\n  - to: card:jazz\n    kind: " + kind + "\n    what: A replayed melody\n    whatRu: Заново сыгранная мелодия\n    claim: A documented borrowing" + two + "\n")},
+func TestPeriodOnlyIsNotARoute(t *testing.T) {
+	s := load(t, map[string]string{
+		"bowie.yaml": string(artist("bowie", link("card:rock-n-roll", "period"))),
+		ElementsFile: elements,
+	})
+	errs := s.Validate(cards)
+	if len(errs) != 1 || !strings.Contains(errs[0].Error(), "only through period-scope") {
+		t.Fatalf("a period-only route must fail: %v", errs)
+	}
+}
+
+func TestCycle(t *testing.T) {
+	s := load(t, map[string]string{
+		"a.yaml":     string(artist("a", link("root:b", "career")+link("card:blues", "career"))),
+		"b.yaml":     string(artist("b", link("root:a", "career"))),
+		ElementsFile: elements,
+	})
+	errs := s.Validate(cards)
+	if len(errs) == 0 || !strings.Contains(errs[0].Error(), "cycle") {
+		t.Fatalf("a cycle must fail: %v", errs)
+	}
+}
+
+func TestStyleMustReachCard(t *testing.T) {
+	s := load(t, map[string]string{
+		"x.yaml":     string(artist("x", link("style:beat", "career"))),
+		StylesFile:   style + indented(link("root:x", "career")),
+		ElementsFile: elements,
+	})
+	errs := s.Validate(cards)
+	joined := ""
+	for _, e := range errs {
+		joined += e.Error() + "\n"
+	}
+	if !strings.Contains(joined, "a style grows from style:<id> or card:<id>") {
+		t.Fatalf("a style leading to an artist must fail: %v", errs)
+	}
+}
+
+func TestEvidenceRules(t *testing.T) {
+	cases := map[string]struct{ from, to, want string }{
+		"one website":         {`url: "https://www.b.com/y"`, `url: "https://a.org/z"`, "one website"},
+		"missing quote":       {`quote: "qb"`, `quote: ""`, "needs a title, a URL and a quote"},
+		"unknown type":        {`type: critics`, `type: rumour`, `type "rumour"`},
+		"unbacked dimension":  {`dimensions: [melody-vocal]`, `dimensions: [rhythm]`, `dimension "melody-vocal" is not backed`},
+		"unknown kind":        {`kind: influence`, `kind: cover`, `kind "cover"`},
+		"period without name": {`period: "1975"`, `period: ""`, "must name its period"},
+	}
+	for name, c := range cases {
+		t.Run(name, func(t *testing.T) {
+			scope := "career"
+			if name == "period without name" {
+				scope = "period"
 			}
-			s, err := LoadFS(fsys)
-			if err != nil {
-				t.Fatal(err)
-			}
-			cards := &card.Set{ByID: map[string]*card.Card{"jazz": {ID: "jazz"}}}
-			if errs := s.Validate(cards); len(errs) != 0 {
-				t.Fatal(errs)
-			}
-			for _, missing := range []string{"", "   "} {
-				s.ByID["artist"].Links[0].What = missing
-				errs := s.Validate(cards)
-				if len(errs) != 1 || !strings.Contains(errs[0].Error(), "must say what was taken") {
-					t.Fatalf("borrowing without an identified source part must fail: %v", errs)
-				}
+			l := strings.Replace(link("card:blues", scope), c.from, c.to, 1)
+			s := load(t, map[string]string{"x.yaml": string(artist("x", l+link("card:rock-n-roll", "career"))), ElementsFile: elements})
+			errs := s.Validate(cards)
+			if len(errs) == 0 || !strings.Contains(errs[0].Error(), c.want) {
+				t.Fatalf("want %q, got %v", c.want, errs)
 			}
 		})
+	}
+}
+
+func TestNotes(t *testing.T) {
+	s := load(t, map[string]string{
+		"x.yaml":     string(artist("x", link("card:blues", "career"))) + "notes:\n  - {period: \"1977\", who: Eno, role: producer, what: Shaped the sound., source: {title: a, url: \"https://a\", quote: q}}\n",
+		ElementsFile: elements,
+	})
+	if errs := s.Validate(cards); len(errs) != 0 {
+		t.Fatal(errs)
+	}
+	s.ByID["x"].Notes[0].Role = "uncle"
+	if errs := s.Validate(cards); len(errs) != 1 || !strings.Contains(errs[0].Error(), "note 0") {
+		t.Fatalf("a note with an unknown role must fail: %v", errs)
 	}
 }
 
@@ -70,38 +180,26 @@ func TestElementLayer(t *testing.T) {
     sources:
       - {title: a, url: "https://a", quote: "qa"}
       - {title: b, url: "https://b", quote: "qb"}`
-	fsys := fstest.MapFS{
-		"band.yaml":   {Data: []byte("id: band\nname: Band\nyears: [1960]\nplace: {name: L}\ngenre: rock\nlinks:\n  - to: card:blues\n    claim: c\n    carries: [riff]\n    how: The band took blues riffs.\n    howRu: Группа взяла блюзовые риффы." + two + "\n")},
-		ElementsFile:  {Data: []byte("elements:\n  - id: riff\n    name: The riff\n    what: A short repeated phrase.\n    origin: [blues]" + q + "\n")},
-		CardLinksFile: {Data: []byte("links:\n  - from: blues\n    to: work-songs\n    how: The holler bent its notes.\n    carries: [riff]\n    facts:\n      - {card: work-songs, quote: a long bending cry}\n")},
-		LinesFile:     {Data: []byte("lines:\n  - id: blues\n    name: The blues line\n    path: [work-songs, blues]\n    elements: [riff]\n    overview: From hollers to the blues." + q + "\n")},
-	}
-	s, err := LoadFS(fsys)
-	if err != nil {
-		t.Fatal(err)
-	}
+	s := load(t, map[string]string{
+		"band.yaml":   string(artist("band", link("card:blues", "career"))),
+		ElementsFile:  elements,
+		CardLinksFile: "links:\n  - from: blues\n    to: work-songs\n    how: The holler bent its notes.\n    carries: [backbeat]\n    facts:\n      - {card: work-songs, quote: a long bending cry}\n",
+		LinesFile:     "lines:\n  - id: blues\n    name: The blues line\n    path: [work-songs, blues]\n    elements: [backbeat]\n    overview: From hollers to the blues." + q + "\n",
+	})
 	if len(s.Order) != 1 || len(s.Elements) != 1 || len(s.CardLinks) != 1 || len(s.Lines) != 1 {
 		t.Fatalf("layer files must not load as artists: %+v", s)
 	}
-	cards := &card.Set{ByID: map[string]*card.Card{"blues": {ID: "blues", Roots: []string{"work-songs"}}, "work-songs": {ID: "work-songs"}}}
-	if errs := s.Validate(cards); len(errs) != 0 {
+	cs := &card.Set{ByID: map[string]*card.Card{"blues": {ID: "blues", Roots: []string{"work-songs"}}, "work-songs": {ID: "work-songs"}}}
+	if errs := s.Validate(cs); len(errs) != 0 {
 		t.Fatal(errs)
 	}
-	if s.ByID["band"].Links[0].How == "" || s.CardLink("blues", "work-songs") == nil || s.Element("riff") == nil {
-		t.Fatal("lookups")
-	}
 	s.ByID["band"].Links[0].Carries = []string{"swing"}
-	if errs := s.Validate(cards); len(errs) != 1 || !strings.Contains(errs[0].Error(), "unknown element") {
+	if errs := s.Validate(cs); len(errs) != 1 || !strings.Contains(errs[0].Error(), "unknown element") {
 		t.Fatalf("unknown element must fail: %v", errs)
 	}
-	s.ByID["band"].Links[0].Carries = []string{"riff"}
+	s.ByID["band"].Links[0].Carries = nil
 	s.CardLinks[0].To = "jazz"
-	if errs := s.Validate(cards); len(errs) == 0 {
+	if errs := s.Validate(cs); len(errs) == 0 {
 		t.Fatal("a card link to an unknown card must fail")
-	}
-	s.CardLinks[0].To = "work-songs"
-	s.Elements[0].Sources = s.Elements[0].Sources[:1]
-	if errs := s.Validate(cards); len(errs) != 1 || !strings.Contains(errs[0].Error(), "want at least 2") {
-		t.Fatalf("an element with one source must fail: %v", errs)
 	}
 }

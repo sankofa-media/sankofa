@@ -8,31 +8,53 @@ placeRu: "Лондон"
 genre: "Heavy metal"
 genreRu: "хеви-метал"
 links:
-  - to: "root:led-zeppelin"
-    claim: "Iron Maiden recorded a cover of Led Zeppelin’s “Communication Breakdown”."
-    claimRu: "Iron Maiden записали свою версию песни Led Zeppelin «Communication Breakdown»."
-    sources:
-      - title: "Metal Injection: Iron Maiden’s cover of Led Zeppelin’s Communication Breakdown"
-        url: "https://metalinjection.net/editorials/back-in-the-day/iron-zeppelin-iron-maidens-kick-ass-cover-of-led-zeppelins-communication-breakdown"
-      - title: "Far Out: The 10 greatest covers of Led Zeppelin songs"
-        url: "https://faroutmagazine.co.uk/led-zeppelin-greatest-covers-jeff-buckley-iron-maiden/"
-    kind: "cover"
-    what: "“Communication Breakdown”: Iron Maiden’s own performance of Led Zeppelin’s song."
-    whatRu: "«Communication Breakdown»: собственное исполнение песни Led Zeppelin группой Iron Maiden."
-    carries: ["riff"]
-    how: Iron Maiden covered a song built on a Jimmy Page riff, the riff-driven hard rock of their predecessors.
-    howRu: Iron Maiden записали кавер на песню, построенную на риффе Джимми Пейджа, — на риффовом хард-роке своих предшественников.
   - to: "root:deep-purple"
     kind: "influence"
-    claim: "Deep Purple were a formative influence on Iron Maiden’s Steve Harris."
-    claimRu: "Deep Purple повлияли на музыкальное становление Стива Харриса из Iron Maiden."
-    sources:
-      - title: "Guitar World: Steve Harris and Dave Murray interview (1988)"
-        url: "https://guitarworld.com/gw-archive/steve-harris-and-dave-murray-iron-maiden-open-1988-guitar-world-interview"
-      - title: "Dave Ling: Steve Harris — Burning Ambition, Classic Rock"
-        url: "https://www.loudersound.com/features/steve-harris-burning-ambition"
+    how: "Steve Harris and Adrian Smith grew up on Deep Purple’s hard rock: Harris built his songs on its power combined with frequent time changes, and Smith took Ritchie Blackmore as his main guitar model."
+    howRu: "Стив Харрис и Эдриан Смит выросли на хард-роке Deep Purple: Харрис строил песни на его мощи в сочетании с частой сменой размеров, а Смит взял главным гитарным образцом Ричи Блэкмора."
     carries: []
-    how: Harris learned bass by playing along to Deep Purple records; the sources name no element.
-    howRu: Харрис учился играть на басу, подыгрывая пластинкам Deep Purple; конкретного приёма источники не называют.
-story: "Deep Purple helped shape Steve Harris as a musician. Iron Maiden also recorded Led Zeppelin’s “Communication Breakdown”."
-storyRu: "Deep Purple повлияли на становление Стива Харриса как музыканта. Iron Maiden также записали «Communication Breakdown» Led Zeppelin."
+    dimensions: ["harmony-form", "sound"]
+    evidence:
+      - type: "listening"
+        dimensions: ["harmony-form", "sound"]
+        text: "Harris lists Deep Purple among the bands he listened to and says his own songwriting started with combinations, time changes and power; the magazine notes that Smith names Blackmore and Deep Purple as his main influence."
+        textRu: "Харрис называет Deep Purple среди групп, которые он слушал, и говорит, что его собственные песни начинались с сочетаний, смены размеров и мощи; журнал отмечает, что сильнее всего на Смита, по его словам, повлияли Блэкмор и Deep Purple."
+        source:
+          title: "Guitar World: Steve Harris and Dave Murray of Iron Maiden open up (1988)"
+          url: "https://www.guitarworld.com/gw-archive/steve-harris-and-dave-murray-iron-maiden-open-1988-guitar-world-interview"
+          quote: "Black Sabbath , Deep Purple and Led Zeppelin . \"So when I started writing my own stuff, it was with a lot of combinations and time changes and power. … Smith acknowledges Ritchie Blackmore and Deep Purple as his main influence"
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Dave Ling’s Classic Rock profile counts Harris a huge fan of Deep Purple and records that he taught himself bass by playing along to Deep Purple records."
+        textRu: "Портрет Харриса в Classic Rock, написанный Дейвом Лингом, относит его к горячим поклонникам Deep Purple и сообщает, что он сам выучился играть на басу, подыгрывая пластинкам Deep Purple."
+        source:
+          title: "Classic Rock (Louder), Dave Ling: Steve Harris — Burning Ambition"
+          url: "https://www.loudersound.com/features/steve-harris-burning-ambition"
+          quote: "The young Harris became a huge fan of Led Zeppelin, Deep Purple, Judas Priest, the Scorpions, Jethro Tull, The Who, Wishbone Ash, King Crimson, Todd Rundgren and early Genesis"
+    scope: "career"
+  - to: "style:heavy-metal"
+    kind: "style"
+    how: "Iron Maiden made a progressive heavy metal: twin harmony guitars, a bass played with the attack of a rhythm guitar and long songs full of time changes."
+    howRu: "Iron Maiden создали прогрессивный хеви-метал: две гитары в гармонии, бас с напором ритм-гитары и длинные песни, полные смен размера."
+    carries: []
+    dimensions: ["sound", "performance", "harmony-form"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["sound", "performance"]
+        text: "Dave Murray says he and Smith were into harmony guitar playing and that Maiden gave them room for it; the magazine places Maiden among the most virtuosic heavy bands."
+        textRu: "Дейв Мюррей говорит, что они со Смитом увлекались игрой двух гитар в гармонии и в Maiden для неё нашлось место; журнал ставит Maiden в ряд самых виртуозных тяжёлых групп."
+        source:
+          title: "Guitar World: Steve Harris and Dave Murray of Iron Maiden open up (1988)"
+          url: "https://www.guitarworld.com/gw-archive/steve-harris-and-dave-murray-iron-maiden-open-1988-guitar-world-interview"
+          quote: "We were really into harmony guitar playing, and in Maiden there's a lot of opportunity for that. … one that's earned them a rightful place alongside the industry's most virtuosic heavy bands"
+      - type: "critics"
+        dimensions: ["sound", "harmony-form"]
+        text: "Classic Rock quotes Janick Gers on Harris’s bass working like a rhythm guitar and recalls that Harris left his earlier band because his songs had too many time changes."
+        textRu: "Classic Rock приводит слова Яника Герса о том, что бас Харриса работает как ритм-гитара, и напоминает, что Харрис ушёл из прежней группы, потому что в его песнях было слишком много смен размера."
+        source:
+          title: "Classic Rock (Louder), Dave Ling: Steve Harris — Burning Ambition"
+          url: "https://www.loudersound.com/features/steve-harris-burning-ambition"
+          quote: "Steve has a way of hearing things and a tone that isn’t normally associated with a bass, it’s more like a rhythm guitar. … “They thought my songs had too many time changes.”"
+    scope: "career"
+story: "Steve Harris and Adrian Smith grew up on Deep Purple’s hard rock, and Harris built his songs on its power and on frequent time changes. Iron Maiden turned this into a progressive heavy metal of twin harmony guitars and a bass played like a rhythm guitar."
+storyRu: "Стив Харрис и Эдриан Смит выросли на хард-роке Deep Purple, и Харрис строил песни на его мощи и частой смене размеров. Iron Maiden превратили это в прогрессивный хеви-метал, где звучат две гитары в гармонии, а бас играет как ритм-гитара."

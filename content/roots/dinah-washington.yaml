@@ -14,18 +14,78 @@ place:
 placeRu: "Таскалуса, Алабама"
 genre: Jazz and blues
 genreRu: джаз и блюз
+story: "Dinah Washington was above all a jazz vocalist: she sang with Lionel Hampton’s band and recorded straight jazz sessions with Clifford Brown and Clark Terry, reshaping a melody at will while keeping every syllable clear. In rhythm and blues she dominated the charts of the late 1940s and 1950s as the “Queen of the Blues”, with a penetrating, high-pitched voice and a taste for bawdy songs."
+storyRu: "Дайна Вашингтон была прежде всего джазовой певицей: она пела в оркестре Лайонела Хэмптона и записывала чисто джазовые сессии с Клиффордом Брауном и Кларком Терри, перекраивая мелодию как хотела, и каждый слог у неё звучал внятно. В ритм-н-блюзе она, «королева блюза», царила в чартах конца 1940-х и 1950-х годов — пронзительным высоким голосом и вкусом к фривольным песням."
 links:
-  - to: card:gospel
-    kind: scene
-    claim: Dinah Washington’s musical upbringing began with singing and playing piano in church.
-    claimRu: Музыкальное воспитание Дайны Вашингтон началось с пения и игры на фортепиано в церкви.
-    sources:
-      - title: 'Alabama Music Hall of Fame: Dinah Washington'
-        url: https://www.alamhof.org/dinah-washington-1
-      - title: 'Encyclopedia of Alabama: Dinah Washington'
-        url: https://encyclopediaofalabama.org/article/dinah-washington/
-    carries: ["gospel-vocal"]
-    how: 'Dinah Washington’s voice was trained in gospel: she sang in church and accompanied the gospel singer Sallie Martin before turning to clubs.'
-    howRu: 'Голос Дайны Вашингтон поставил госпел: она пела в церкви и аккомпанировала госпел-певице Салли Мартин, прежде чем уйти в клубы.'
-story: Dinah Washington’s musical upbringing began in church. There, she sang and played piano.
-storyRu: Музыкальное воспитание Дайны Вашингтон началось в церкви. Там она пела и играла на фортепиано.
+  - to: "card:jazz"
+    kind: "style"
+    how: "Washington worked as a jazz vocalist: big-band singing with Lionel Hampton, small-group sessions with leading jazz soloists, and a free, improvising way with a melody that never blurred the words."
+    howRu: "Вашингтон работала как джазовая певица: пела с биг-бэндом Лайонела Хэмптона, записывалась с ведущими джазовыми солистами в малых составах и вольно, по-импровизаторски обращалась с мелодией, не размывая слов."
+    carries: []
+    dimensions: ["melody-vocal", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal", "performance"]
+        text: "The Encyclopedia of Alabama calls her primarily a jazz vocalist who recorded with many of the most acclaimed jazz musicians of the 1950s."
+        textRu: "«Энциклопедия Алабамы» называет её прежде всего джазовой вокалисткой, записывавшейся со многими из самых признанных джазменов 1950-х."
+        source:
+          title: "Encyclopedia of Alabama: Dinah Washington"
+          url: "https://encyclopediaofalabama.org/article/dinah-washington/"
+          quote: "Primarily a jazz vocalist, she performed in a variety of styles, including pop, rhythm and blues (R&B), and country."
+      - type: "critics"
+        dimensions: ["performance"]
+        text: "The same article lists her mid-1950s work with drummer Jimmy Cobb, Cannonball Adderley and the Clifford Brown–Max Roach Quintet."
+        textRu: "Там же перечислены её записи середины 1950-х с барабанщиком Джимми Коббом, Кэннонболлом Эддерли и квинтетом Клиффорда Брауна и Макса Роуча."
+        source:
+          title: "Encyclopedia of Alabama: Dinah Washington"
+          url: "https://encyclopediaofalabama.org/article/dinah-washington/"
+          quote: "During the mid- to late-1950s, Washington recorded with many of the most acclaimed jazz musicians of the period, including drummer Jimmy Cobb and saxophonist Julian \"Cannonball\" Adderly."
+      - type: "critics"
+        dimensions: ["performance", "melody-vocal"]
+        text: "The Alabama Music Hall of Fame notes that she sang with Lionel Hampton’s band and recorded straight jazz sessions with Clifford Brown, Clark Terry and Maynard Ferguson."
+        textRu: "Музыкальный зал славы Алабамы отмечает, что она пела в оркестре Лайонела Хэмптона и записывала чисто джазовые сессии с Клиффордом Брауном, Кларком Терри и Мейнардом Фергюсоном."
+        source:
+          title: "Alabama Music Hall of Fame: Dinah Washington"
+          url: "https://www.alamhof.org/dinah-washington-1"
+          quote: "she also recorded straight jazz sessions for EmArcy and Mercury, with horn accompaniment by Clifford Brown, Clark Terry and Maynard Ferguson and piano by Wynton Kelly, a young Joe Zawinul and Andrew Hill."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Quincy Jones, quoted by NPR, described how she could take a melody apart and rebuild it while every syllable stayed clear."
+        textRu: "Куинси Джонс, которого цитирует NPR, описывал, как она разбирала мелодию и собирала её заново, а каждый слог оставался внятным."
+        source:
+          title: "NPR: Dinah Washington — A Queen in Turmoil (2004)"
+          url: "https://www.npr.org/2004/08/29/3872390/dinah-washington-a-queen-in-turmoil"
+          quote: "could take the melody in her hand, hold it like an egg, crack it open, fry it, let it sizzle, reconstruct it, put the egg back in the box and back in the refrigerator and you would've still understood every single syllable."
+    scope: "career"
+  - to: "card:rhythm-and-blues"
+    kind: "style"
+    how: "In rhythm and blues Washington brought a penetrating, high-pitched voice, a strong sense of drama and timing and bawdy, suggestive blues material, and ruled the R&B charts of the late 1940s and 1950s."
+    howRu: "В ритм-н-блюз Вашингтон принесла пронзительный высокий голос, острое чувство драмы и времени и фривольный, двусмысленный блюзовый репертуар — и царила в ритм-н-блюзовых чартах конца 1940-х и 1950-х."
+    carries: []
+    dimensions: ["melody-vocal", "image"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The Alabama Music Hall of Fame describes her penetrating, high-pitched voice and her dominance of the R&B charts."
+        textRu: "Музыкальный зал славы Алабамы пишет о её пронзительном высоком голосе и о её господстве в ритм-н-блюзовых чартах."
+        source:
+          title: "Alabama Music Hall of Fame: Dinah Washington"
+          url: "https://www.alamhof.org/dinah-washington-1"
+          quote: "Washington’s penetrating, high-pitched voice – along with her incredible sense of drama and timing, her crystal-clear enunciation and equal facility with sad, bawdy, celebratory or rousing material – enabled her to sing anything and everything."
+      - type: "critics"
+        dimensions: ["image", "melody-vocal"]
+        text: "The Encyclopedia of Alabama notes that she was billed as the “Queen of the Blues” and, like Bessie Smith, known for bawdy “dirty blues”."
+        textRu: "«Энциклопедия Алабамы» отмечает, что её объявляли «королевой блюза» и что она, как Бесси Смит, славилась фривольным «грязным блюзом»."
+        source:
+          title: "Encyclopedia of Alabama: Dinah Washington"
+          url: "https://encyclopediaofalabama.org/article/dinah-washington/"
+          quote: "Like Smith, she was known for her bawdy and suggestive songs, also known as \"dirty blues.\""
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The Rock and Roll Hall of Fame, which inducted her as a musical influence, sums up her impact as intricate, penetrating vocals."
+        textRu: "Зал славы рок-н-ролла, принявший её в свои ряды как музыканта, повлиявшего на эту музыку, сводит её вклад к замысловатому, пронзительному вокалу."
+        source:
+          title: "Rock & Roll Hall of Fame: Dinah Washington"
+          url: "https://rockhall.com/inductees/dinah-washington/"
+          quote: "Impact Intricate, penetrating vocals"
+    scope: "career"
