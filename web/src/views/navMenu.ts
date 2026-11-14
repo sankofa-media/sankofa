@@ -14,6 +14,7 @@ const HINTS: Record<string, { en: string; ru: string }> = {
   book: { en: 'The cards you have opened, kept in this browser', ru: 'Открытые вами карточки — хранятся в этом браузере' },
   objects: { en: 'Three instruments from the cards, to play', ru: 'Три инструмента из карточек — на них можно играть' },
   guide: { en: 'What is where, and how the facts were checked', ru: 'Что где лежит и как проверяли факты' },
+  dedication: { en: 'Whom this museum is for', ru: 'Кому посвящён этот музей' },
 };
 
 /** Which entry a top-bar button is. */

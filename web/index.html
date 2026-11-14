@@ -41,7 +41,6 @@
       .cover-art{position:absolute;inset:0;margin:0;z-index:-2}
       .cover-art img{width:100%;height:100%;object-fit:cover;object-position:68% 30%}
       .cover-inner{padding:0 clamp(16px,4vw,56px) clamp(48px,10vh,110px)}
-      .cover-ded{margin:.6em 0 1.2em;font-style:italic;font-size:clamp(15px,1.4vw,18px);opacity:.85}.cover-ded a{color:inherit;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.2em}
       .cover h1{font-size:clamp(64px,15vw,210px);line-height:.86;margin:0;font-weight:400}
       html:not(:lang(ru)) [data-l=ru],html:lang(ru) [data-l=en]{display:none}
     </style>
@@ -61,6 +60,7 @@
         <button class="btn" type="button" data-open-book><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5Zm0 16a2 2 0 0 1 2-2h13v2"/></svg><span class="label"><span data-l="en">Your book</span><span data-l="ru">Ваша книга</span></span> <span class="count" data-path-count>0</span></button>
         <a class="btn mx-nav" href="#view=objects" data-mech="objects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm0-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm0-2.2v.4"/></svg><span class="label"><span data-l="en">Objects</span><span data-l="ru">Предметы</span></span></a>
         <a class="btn mx-nav" href="#view=guide" data-mech="guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-2.6-11.5a2.7 2.7 0 0 1 5.2 1c0 1.8-2.6 2.2-2.6 3.8m0 2.6v.1"/></svg><span class="label"><span data-l="en">Guide</span><span data-l="ru">Как читать</span></span></a>
+        <a class="btn mx-nav" href="#view=dedication" data-mech="dedication"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10v18l-5-3.5L7 21V3Z"/></svg><span class="label"><span data-l="en">Dedication</span><span data-l="ru">Посвящение</span></span></a>
         <button class="btn lang-switch" type="button" data-lang-switch><span data-l="en" lang="ru" aria-label="Читать по-русски">RU</span><span data-l="ru" lang="en" aria-label="Read in English">EN</span></button>
         <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to light theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/></svg></button>
       </div>
@@ -76,7 +76,6 @@
           <p class="deck" data-l="ru">Семь веков чёрной культуры — от библиотек Тимбукту до звездолётов Сан Ра.</p>
           <p class="cover-wow" data-l="en">In 1324 a king of Mali, on his way to Mecca, spent so much gold in Cairo that its price there was still low some twelve years later.</p>
           <p class="cover-wow" data-l="ru">В 1324 году царь Мали по пути в Мекку потратил в Каире столько золота, что и лет двенадцать спустя оно стоило там дешевле прежнего.</p>
-          <p class="cover-ded"><a href="#view=dedication" data-mech="dedication"><span data-l="en">Dedicated to Irina Mikhailovna Udler</span><span data-l="ru">Посвящается Ирине Михайловне Удлер</span></a></p>
           <div class="cover-actions">
             <a class="btn primary" href="#t=1300&amp;view=descent" data-descent=""><span data-l="en">Descend through seven centuries</span><span data-l="ru">Спуститься сквозь семь веков</span></a>
             <a class="btn l-cover" href="#view=roots" data-roots=""><span data-l="en">Find your band’s roots</span><span data-l="ru">Найти корни своей группы</span></a>
