@@ -1187,3 +1187,15 @@ a.rt-who:hover b {
   font-size: 16px;
   line-height: 1.5;
 }
+.rt-el-t {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  line-height: 1.2;
+}
+.rt-el-t small {
+  margin-top: 1px;
+}
+.rt-threads .rt-el {
+  border-radius: 12px;
+}

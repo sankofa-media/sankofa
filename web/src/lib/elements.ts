@@ -83,16 +83,19 @@ export function cardLinkIndex(f: CardLinksFile): Map<string, CardLink> {
 export function linesOf(route: string[], lines: Line[]): Line[] {
   const cards = route.filter((r) => r.startsWith('card:')).map((r) => r.slice(5));
   return lines
-    // Ties go to the line through the card where the artist's chain enters the museum.
-    .map((l) => ({ l, n: cards.filter((c) => l.path.includes(c)).length + (l.path.includes(cards[0]) ? 0.5 : 0) }))
-    .filter((x) => x.n >= 2)
-    .sort((a, b) => b.n - a.n)
+    // The card where the artist's chain enters the museum weighs most.
+    .map((l) => {
+      const shared = cards.filter((c) => l.path.includes(c)).length;
+      return { l, shared, score: shared + (l.path.includes(cards[0]) ? 1.5 : 0) };
+    })
+    .filter((x) => x.shared >= 2)
+    .sort((a, b) => b.score - a.score)
     .map((x) => x.l);
 }
 
 // Thread colours: distinct on the dark roots background, none of them the
 // gold of the route itself.
-const PALETTE = ['#6ac0a8', '#e07a50', '#8fa4e8', '#c79ae8', '#9fd08a', '#ef8fb0', '#5fc4e0', '#d9c35a', '#f0a868', '#b0c4a0', '#e8b4f0', '#7fd6c2', '#f07a7a', '#a8b8ff', '#c6a16e', '#7ab0d8'];
+const PALETTE = ['#6ac0a8', '#e07a50', '#8fa4e8', '#c79ae8', '#9fd08a', '#ef8fb0', '#5fc4e0', '#d9c35a', '#f0a868', '#b0c4a0', '#e8b4f0', '#e9e1c8', '#f07a7a', '#a8b8ff', '#c6a16e', '#7ab0d8'];
 
 /** A stable colour per element, by its place in the file. */
 export function elementColors(f: ElementsFile): Map<string, string> {

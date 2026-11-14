@@ -178,8 +178,7 @@ export class RouteReader {
       'button.rt-el',
       { type: 'button', 'data-el': id, style: `--ec:${this.ctx.colors.get(id) ?? 'var(--gold)'}`, 'aria-label': pick({ en: `${this.elName(id)}: what it is and where it comes from`, ru: `${this.elName(id)}: что это и откуда` }), onclick: () => this.ctx.onElement(id) },
       h('i', { 'aria-hidden': 'true' }),
-      this.elName(id),
-      note ? h('small', {}, note) : null,
+      note ? h('span.rt-el-t', {}, this.elName(id), h('small', {}, note)) : this.elName(id),
     );
   }
 
