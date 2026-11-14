@@ -61,7 +61,33 @@ export function guestLabel(name: string, l: Lang): string {
   };
   const k = known[name];
   if (k) return l === 'ru' ? k.ru : k.en;
-  return l === 'ru' ? `программа ${name}` : `the ${name} program`;
+  // Any other workload is a visitor too: say what it is, not its object name
+  // (the name is kept for the technical view).
+  return l === 'ru' ? 'гостевая программа' : 'a visiting program';
+}
+
+/** What a guest is, for a newcomer: what is heard and what it means. */
+export function guestMeaning(name: string, l: Lang): string {
+  if (name === 'credits') return l === 'ru' ? 'финальные титры: кластер играет коду' : 'the closing credits: the cluster plays its coda';
+  return l === 'ru'
+    ? 'кластер запустил ещё одну задачу на минуту — её слышно как лишний барабан'
+    : 'the cluster has started one more task for a minute, heard as an extra drum';
+}
+
+/** The guest as the cluster names it: the workload's own name. */
+export function guestTech(name: string, l: Lang): string {
+  return l === 'ru' ? `рабочая нагрузка ${name}` : `workload ${name}`;
+}
+
+/** A drum's state in plain words: how many of its programs answer the call. */
+export function answering(ready: number, silent: number, l: Lang, short = false): string {
+  if (l === 'ru') {
+    const verb = ready % 10 === 1 && ready % 100 !== 11 ? 'отвечает' : 'отвечают';
+    const a = short ? `${verb} ${ready}` : `${verb} ${count(ready, 'program', 'ru')}`;
+    return silent ? `${a}, молчат ${silent}` : a;
+  }
+  const a = short ? `${ready} answering` : `${count(ready, 'program', 'en')} answer${ready === 1 ? 's' : ''}`;
+  return silent ? `${a}, ${silent} silent` : a;
 }
 
 const cap = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);

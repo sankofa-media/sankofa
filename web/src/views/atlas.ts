@@ -92,7 +92,8 @@ export class Atlas {
       interactive: true,
       detail: 'high',
       maxLabels: () => (window.innerWidth < 720 ? 5 : 18),
-      avoid: () => [[0, 0, window.innerWidth < 720 ? 210 : 250, window.innerWidth < 720 ? 52 : 330]],
+      // Names keep clear of the zoom ladder and of the legend in the corner.
+      avoid: () => [[0, 0, window.innerWidth < 720 ? 210 : 250, window.innerWidth < 720 ? 52 : 330], ...this.cornerBoxes()],
       onPoint: (id) => this.focus(id),
       onRegion: (r) => this.map!.flyTo(r.lon, r.lat, LEVEL_K[2], 1200),
       onLevel: (lvl) => {
@@ -263,8 +264,20 @@ export class Atlas {
     this.emit();
   }
 
+  /** The legend's box on the map, as the map measures its labels. */
+  private cornerBoxes(): [number, number, number, number][] {
+    const legend = this.stage.querySelector<HTMLElement>('.legend');
+    if (!legend || !legend.offsetParent) return [];
+    const s = this.stage.getBoundingClientRect();
+    const r = legend.getBoundingClientRect();
+    if (!r.width) return [];
+    return [[r.left - s.left - 8, r.top - s.top - 8, r.right - s.left + 8, r.bottom - s.top + 4]];
+  }
+
   private draw(animate: boolean): void {
     if (!this.map) return;
+    // The Middle Passage note explains the weighted lines of the first two levels only.
+    this.stage.classList.toggle('lvl-near', this.level >= 3);
     const path = this.pathCards();
     const layers = atlasLayers(
       this.app.set,

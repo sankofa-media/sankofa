@@ -9,10 +9,12 @@ import { formatFragment } from './lib/fragment';
 import { formatRoute, parseRoute, screenOf, type Route } from './lib/route';
 import * as reader from './lib/reader';
 import { copyText, h, svgIcon, toast } from './lib/dom';
-import { chapterLabel, chapterNumber, detectLang, isLang, lang, setLang, storeLang, storedLang, t, t as tr, type Lang } from './lib/i18n';
+import { chapterLabel, chapterNumber, detectLang, isLang, lang, pick, setLang, storeLang, storedLang, t, t as tr, type Lang } from './lib/i18n';
 import { buildStory } from './views/story';
 import { localizeStatics, RU_TITLE_FIX } from './lib/statics';
 import { loadMediaManifest } from './lib/media';
+import { loadJson } from './lib/loadJson';
+import { foldStepMarks, splitStepMarks } from './lib/stepMarks';
 import { EMPTY_LISTEN, type ListenFile } from './lib/listen';
 import { watchTypography } from './lib/typo';
 import { Drawer, renderBook, renderCard } from './views/card';
@@ -23,13 +25,15 @@ import { Engine } from './views/engine';
 import { Roots } from './views/roots';
 import { RootsMap } from './views/rootsMap';
 import { installMechanics } from './mechanics';
+import { installNavMenu, setBookCount } from './views/navMenu';
 import { isMechView } from './mechanics/views';
 
 async function load<T>(url: string): Promise<T> {
-  // The cover paints first; the data comes at a lower priority.
-  const r = await fetch(url, { priority: 'low' } as RequestInit);
-  if (!r.ok) throw new Error(`${url}: ${r.status}`);
-  return r.json() as Promise<T>;
+  // The cover paints first; the data comes at a lower priority, with a
+  // timeout and further tries on a slow line.
+  const data = await loadJson<T>(url, { priority: 'low', timeout: 20_000 });
+  if (data === null) throw new Error(`${url}: not found`);
+  return data;
 }
 
 function readRoute(): Route {
@@ -68,7 +72,7 @@ async function start(): Promise<void> {
   let cardsFile: CardsFile;
   let chaptersFile: ChaptersFile;
   let listenFile: ListenFile;
-  navLegend(current);
+  installNavMenu(document.querySelector<HTMLElement>('.nav')!);
   // The language switch needs no data, so it works while the cards load.
   document.querySelectorAll<HTMLElement>('[data-lang-switch]').forEach((b) => b.addEventListener('click', () => switchLang(lang() === 'ru' ? 'en' : 'ru')));
   // Let the static cover paint before the 1 MB of cards competes for the wire.
@@ -83,7 +87,15 @@ async function start(): Promise<void> {
     ]);
   } catch (e) {
     loading.remove();
-    document.getElementById('story')!.append(h('p.error', {}, t('The museum could not load its cards ({error}). Run scripts/build-data.sh.', { error: (e as Error).message })));
+    document.getElementById('story')!.append(
+      h(
+        'div.load-error',
+        { role: 'alert' },
+        h('p', {}, pick({ en: 'The museum could not load its cards. Check the connection and try again.', ru: 'Музей не смог загрузить карточки. Проверьте соединение и попробуйте ещё раз.' })),
+        h('p.load-error-detail', {}, (e as Error).message),
+        h('button.btn.primary', { type: 'button', onclick: () => location.reload() }, pick({ en: 'Try again', ru: 'Попробовать ещё раз' })),
+      ),
+    );
     return;
   }
 
@@ -92,7 +104,9 @@ async function start(): Promise<void> {
   // Cards, like chapters, hold only the reader's copy of a marked paragraph.
   const set = new CardSet(cardsFile.cards.map((c) => cardForEdition(localizeCard(c, current), held)));
   // Each copy reads only its own paragraphs: every step and count follows from here.
-  const chapters = sortChapters(chaptersFile.chapters.map((c) => chapterForEdition(localizeChapter(c, current), held))).map((c) => ({ ...c, title: RU_TITLE_FIX[c.title] ?? c.title }));
+  // A step's own label and picture ({at …}, {img …}) travel with its paragraph
+  // through both filters, then come off as fields beside the clean text.
+  const chapters = sortChapters(chaptersFile.chapters.map((c) => splitStepMarks(chapterForEdition(localizeChapter(foldStepMarks(c), current), held)))).map((c) => ({ ...c, title: RU_TITLE_FIX[c.title] ?? c.title }));
   // One name per release: every era label is the chapter's own title.
   for (const e of ERAS) e.label = chapters.find((c) => c.id === e.id)?.title ?? e.label;
   const cardDrawer = new Drawer(t('Card'));
@@ -423,10 +437,8 @@ function setupNav(app: App, atlas: Atlas): void {
   atlasBtn.addEventListener('click', () => app.openAtlas({ zoom: 1 }));
   const bookBtn = nav.querySelector<HTMLElement>('[data-open-book]')!;
   bookBtn.addEventListener('click', () => app.openBook());
-  const count = nav.querySelector<HTMLElement>('[data-path-count]')!;
-  const setCount = (p: string[]) => {
-    count.textContent = String(new Set(p).size);
-  };
+  // The book's count shows only once there is something in it.
+  const setCount = (p: string[]) => setBookCount(new Set(p).size);
   setCount(reader.readPath());
   app.onPath(setCount);
 
@@ -478,41 +490,3 @@ function trackChapters(app: App): void {
 }
 
 start();
-
-/**
- * On a phone the top bar is icons only. On the first visit a strip under it
- * names each icon once; it goes away when closed or when an icon is used.
- */
-function navLegend(l: string): void {
-  if (window.innerWidth >= 720) return;
-  const KEY = 'sankofa.navlegend';
-  try {
-    if (localStorage.getItem(KEY)) return;
-  } catch {
-    return;
-  }
-  const items = [...document.querySelectorAll<HTMLElement>('.nav-actions .btn:not(.lang-switch)')]
-    .map((b) => {
-      const svg = b.querySelector('svg')?.cloneNode(true);
-      const name = b.querySelector(`.label [data-l="${l}"]`)?.textContent ?? '';
-      return svg && name ? h('span', {}, svg as SVGElement as unknown as HTMLElement, name) : null;
-    })
-    .filter((x): x is HTMLElement => !!x);
-  if (!items.length) return;
-  const strip = h('div.nav-legend', { role: 'note' }, ...items, h('button.icon-btn', { 'aria-label': l === 'ru' ? 'Скрыть подсказку' : 'Hide this hint', onclick: () => done() }, '×'));
-  const done = () => {
-    strip.remove();
-    try {
-      localStorage.setItem(KEY, '1');
-    } catch {
-      /* private mode */
-    }
-  };
-  document.querySelectorAll('.nav-actions .btn').forEach((b) => b.addEventListener('click', done, { once: true }));
-  // Only on the story, and only until the reader starts reading: the first
-  // scroll folds it away for good, and it never sits over an open view.
-  if (/(^|[#&])(view|focus)=/.test(location.hash) || document.body.classList.contains('locked')) return;
-  window.addEventListener('scroll', done, { once: true, passive: true });
-  new MutationObserver(() => document.body.classList.contains('locked') && done()).observe(document.body, { attributes: true, attributeFilter: ['class'] });
-  document.body.append(strip);
-}

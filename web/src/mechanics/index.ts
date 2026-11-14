@@ -13,7 +13,7 @@ import * as data from './data';
 import { Sheet } from './sheet';
 import { isMechView, type MechView } from './views';
 import { desk, type DeskView } from './docs/view';
-import { checksPanel, methodPage } from './checks/view';
+import { agentsNote, checksPanel, methodPage } from './checks/view';
 import { objectBlock, objectKeyForCard, OBJECT_KEYS, shelf } from './objects/view';
 import { stopAll, watchPage } from '../lib/sound';
 import { inLang, prose } from './guide/view';
@@ -51,6 +51,7 @@ export function installMechanics(app: App, hooks: MechHooks): Mechanics {
     current = null;
     view = null;
     stopAll();
+    delete sheet.el.dataset.view;
     sheet.hide();
   };
   sheet.onClose = () => {
@@ -68,6 +69,19 @@ export function installMechanics(app: App, hooks: MechHooks): Mechanics {
       current = null;
       sheet.show(pick(KICKER[v]), label, el ?? h('p.mx-empty', {}, pick({ en: 'Nothing here yet.', ru: 'Здесь пока ничего нет.' })));
     };
+    // The sheet opens at once and says it is loading: never an empty room
+    // while the data is still on its way.
+    if (!sheet.isOpen || sheet.el.dataset.view !== v || sheet.body.querySelector('.mx-error')) ready(loadingState(), pick(KICKER[v]));
+    sheet.el.dataset.view = v;
+    try {
+      await fill(v, item, my, ready);
+    } catch {
+      if (my !== token) return;
+      ready(errorState(() => void show(v, item)), pick(KICKER[v]));
+    }
+  };
+
+  const fill = async (v: MechView, item: string | undefined, my: number, ready: (el: HTMLElement | null, label: string) => void) => {
     if (v === 'document') {
       const docs = await data.documents();
       const d = docs?.documents.find((x) => x.id === item) ?? docs?.documents[0];
@@ -89,7 +103,7 @@ export function installMechanics(app: App, hooks: MechHooks): Mechanics {
       ready(c ? methodPage(c) : null, pick(KICKER.method));
     } else if (v === 'guide') {
       returnCard = undefined;
-      const [g, docs, o] = await Promise.all([data.guide(), data.documents(), data.objects()]);
+      const [g, docs, o] = await Promise.all([data.guide(), data.documents().catch(() => null), data.objects().catch(() => null)]);
       const doc = inLang(g);
       const values = {
         cards: String(app.set.all().filter((c) => c.edition === 'both' || c.edition === app.edition).length),
@@ -97,7 +111,11 @@ export function installMechanics(app: App, hooks: MechHooks): Mechanics {
         documents: String(docs?.documents.length ?? 0),
         objects: String(OBJECT_KEYS.filter((k) => o?.[k]).length),
       };
-      ready(doc ? h('article.mx-guide', {}, h('header.mx-head', {}, h('h2', {}, doc.title ?? pick(KICKER.guide))), prose(doc, values)) : null, doc?.title ?? pick(KICKER.guide));
+      const body = doc ? prose(doc, values) : null;
+      // Where the guide first speaks of the agents, say who they are.
+      const about = body ? [...body.querySelectorAll('p')].find((p) => /\bagents?\b|агент/i.test(p.textContent ?? '')) : undefined;
+      about?.after(agentsNote());
+      ready(doc ? h('article.mx-guide', {}, h('header.mx-head', {}, h('h2', {}, doc.title ?? pick(KICKER.guide))), body) : null, doc?.title ?? pick(KICKER.guide));
     } else if (v === 'dedication') {
       returnCard = undefined;
       const doc = inLang(await data.dedication());
@@ -166,11 +184,29 @@ function decorate(): void {
     ),
   );
   // The dedication appears only when the content has one.
-  void data.dedication().then((d) => {
-    if (!inLang(d)) return;
-    ded.hidden = false;
-    codaDed.hidden = false;
-  });
+  void data
+    .dedication()
+    .then((d) => {
+      if (!inLang(d)) return;
+      ded.hidden = false;
+      codaDed.hidden = false;
+    })
+    .catch(() => undefined);
+}
+
+/** What a view shows while its data is on the way. */
+export function loadingState(): HTMLElement {
+  return h('div.mx-loading', { role: 'status', 'aria-live': 'polite' }, h('span.mx-spinner', { 'aria-hidden': 'true' }), pick({ en: 'Loading…', ru: 'Загружается…' }));
+}
+
+/** What a view shows when its data could not be loaded, with a way to ask again. */
+export function errorState(retry: () => void): HTMLElement {
+  return h(
+    'div.mx-error',
+    { role: 'alert' },
+    h('p', {}, pick({ en: 'This page could not be loaded. The connection may be slow; try again.', ru: 'Эту страницу не удалось загрузить. Возможно, медленное соединение — попробуйте ещё раз.' })),
+    h('button.btn.primary', { type: 'button', onclick: retry }, pick({ en: 'Try again', ru: 'Попробовать ещё раз' })),
+  );
 }
 
 /** Blocks on a card: its working object and its documents. */
@@ -195,7 +231,7 @@ export function cardExtras(app: App, c: Card): HTMLElement {
       if (b) parts.push(b);
     }
     host.replaceChildren(...parts);
-  });
+  }).catch(() => undefined);
   return host;
 }
 
@@ -205,7 +241,7 @@ export function cardChecks(_app: App, c: Card): HTMLElement {
   void data.checks().then((f) => {
     const p = checksPanel(c, f?.cards[c.id]);
     if (p) host.replaceChildren(p);
-  });
+  }).catch(() => undefined);
   return host;
 }
 

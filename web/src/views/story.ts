@@ -9,7 +9,17 @@ import { bookMarks, h, reducedMotion, revealOnScroll } from '../lib/dom';
 import { chapterLabel, chapterNumber, lang, pick, t } from '../lib/i18n';
 import { chapterCopy, eraColor, isNonPlace, readerCards } from '../lib/atlasModel';
 import { MOVEMENTS, movementText } from '../lib/movements';
-import { mediaSrc, progressive } from '../lib/media';
+import { colourOf, mediaSrc, progressive } from '../lib/media';
+import type { Media } from '../lib/types';
+import type { MarkedChapter } from '../lib/stepMarks';
+
+/** The picture a step shows, and the card it comes from. */
+interface StepPicture {
+  card: Card;
+  media: Media;
+  /** One figure per card picture. */
+  key: string;
+}
 import { narratedCards, pickInterlude, signature } from './signature';
 import { GeoMap, LEVEL_K, type MapRoute } from './map';
 import { Timeline } from './timeline';
@@ -48,34 +58,21 @@ function coverMap(host: HTMLElement | null): void {
   });
 }
 
-function heroImg(app: App, ch: Chapter, eager: boolean, pos?: string, sizes = '100vw'): HTMLElement | null {
+/** Each chapter's hero, by chapter id: started early by the chapter before it. */
+const heroStarts = new Map<string, () => void>();
+
+/**
+ * A hero picture that is never an empty frame: its own colour first, a small
+ * copy softly blurred, then the full one once decoded. It starts loading a
+ * screen and a half ahead, and earlier still when the chapter before it is
+ * being read (see chapter()).
+ */
+function heroImg(app: App, ch: Chapter, pos?: string, sizes = '100vw', margin = '150% 0px'): ReturnType<typeof progressive> | null {
   if (!ch.hero?.file) return null;
-  const src = mediaSrc(app, ch.hero.file, [sizes === '100vw' ? 1600 : 480]);
-  const img = h('img', {
-    style: pos ? `object-position:${pos}` : undefined,
-    sizes,
-    alt: ch.hero.caption ?? '',
-    decoding: 'async',
-    fetchpriority: eager ? 'high' : undefined,
-  }) as HTMLImageElement;
-  const load = () => {
-    if (src.srcset) img.srcset = src.srcset;
-    img.src = src.src;
-  };
-  if (eager) load();
-  else {
-    // Only the cover frame loads up front; the others when they come within a screen.
-    const io = new IntersectionObserver(
-      (es) => {
-        if (!es.some((e) => e.isIntersecting)) return;
-        io.disconnect();
-        load();
-      },
-      { rootMargin: '100% 0px' },
-    );
-    io.observe(img);
-  }
-  return img;
+  const p = progressive(app, ch.hero.file, { want: sizes === '100vw' ? 1600 : 480, sizes, alt: ch.hero.caption ?? '', near: true, margin });
+  if (pos) p.img.style.objectPosition = pos;
+  p.img.dataset.file = ch.hero.file;
+  return p;
 }
 
 /**
@@ -172,7 +169,7 @@ function toc(app: App): HTMLElement {
         h(
           'a.toc-item.reveal',
           { href: `#ch=${ch.id}`, 'data-chapter': ch.id, style: `--era:${eraColor(ch.id)}` },
-          heroImg(app, withHero(app, ch).ch, false, withHero(app, ch).pos, '(max-width: 720px) 46vw, 300px') ?? h('span.toc-glyph', { 'aria-hidden': 'true' }, String(chapterNumber(ch.id) ?? '')),
+          heroImg(app, withHero(app, ch).ch, withHero(app, ch).pos, '(max-width: 720px) 46vw, 300px', '100% 0px')?.img ?? h('span.toc-glyph', { 'aria-hidden': 'true' }, String(chapterNumber(ch.id) ?? '')),
           h('span.num', {}, pick({ en: `Chapter ${app.chapters.indexOf(ch) + 1}`, ru: `Глава ${app.chapters.indexOf(ch) + 1}` })),
           h('span.t', {}, h('b', {}, ch.title), h('span', {}, ch.kicker)),
         ),
@@ -244,10 +241,12 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
   const sigCard = pickInterlude(ch.id, cards, narrated);
 
   const mapHero = !ch.hero?.file || ch.hero.file === COVER_IMAGE;
+  const heroPic = mapHero ? null : heroImg(app, ch, swap?.pos);
+  if (heroPic) heroStarts.set(ch.id, heroPic.start);
   const hero = h(
     `header.hero${mapHero ? '.map-hero' : ''}${swapMedia ? '.portrait' : ''}`,
     { style: `--era:${color}` },
-    mapHero ? heroMap(app, ch) : heroImg(app, ch, false, swap?.pos),
+    mapHero ? heroMap(app, ch) : heroPic?.img,
     h(
       'div.hero-text',
       {},
@@ -261,17 +260,30 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
   const mapHost = h('div.map', { 'aria-hidden': 'true' });
   const imgHost = h('div.img', { 'aria-hidden': 'true' });
   const graphic = h('div.graphic', {}, mapHost, imgHost);
-  // Which picture each step shows: the first linked card with an image that
-  // an earlier step has not shown. Step 0 always orients on the map.
+  // Which picture each step shows: the one its paragraph names ({img card:n}),
+  // else the first linked card with an image that an earlier step has not
+  // shown. Step 0 always orients on the map.
+  const marked = ch as MarkedChapter;
   const used = new Set<string>();
-  const stepImage: (Card | undefined)[] = ch.steps.map((s, i) => {
+  const stepImage: (StepPicture | undefined)[] = ch.steps.map((s, i) => {
+    const ref = marked.stepImages?.[i];
+    if (ref) {
+      const named = app.set.get(ref.card);
+      const pics = named?.media?.filter((m) => m.type === 'image') ?? [];
+      const m = pics[ref.index] ?? pics[0];
+      if (named && m) {
+        used.add(named.id);
+        return { card: named, media: m, key: `${named.id}:${pics.indexOf(m)}` };
+      }
+    }
     // At most three pictures per chapter, so the map and the words breathe.
     if (i === 0 || used.size >= 3) return undefined;
     const c = stepCards(app, s)
       .map((x) => inCopy(app, x))
       .find((x) => x.media?.some((m) => m.type === 'image') && !used.has(x.id) && x.id !== sigCard?.id && x.media?.find((m) => m.type === 'image')?.file !== ch.hero?.file);
-    if (c) used.add(c.id);
-    return c;
+    if (!c) return undefined;
+    used.add(c.id);
+    return { card: c, media: c.media!.find((m) => m.type === 'image')!, key: c.id };
   });
   let lastWhere = '';
   const steps = ch.steps.map((s, i) => {
@@ -283,17 +295,18 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
     const at = anchor ? when(anchor) : undefined;
     const year = at?.year !== undefined ? formatYears([at.year]) : '';
     // The chapter's opening step speaks for the whole chapter: its own span and place.
-    // A label written for the paragraph itself ({at Place · Year}) wins.
-    const label = ch.stepLabels?.[i] || (i === 0 || !anchor ? ch.kicker : isNonPlace(anchor) ? year : `${at!.place.name}${year ? ' · ' + year : ''}`);
+    // A label the paragraph sets itself ({at Place · Year}) wins.
+    const own = marked.stepLabels?.[i];
+    const label = own ? own : i === 0 || !anchor ? ch.kicker : isNonPlace(anchor) ? year : `${at!.place.name}${year ? ' · ' + year : ''}`;
     // The same label twice running is said once.
     const where = label === lastWhere ? '' : label;
     lastWhere = label;
-    const img = stepImage[i]?.media?.find((m) => m.type === 'image');
+    const img = stepImage[i]?.media;
     return h(
       `div.step${i === 0 ? '.first' : ''}`,
       { 'data-step': String(i), lang: ch.textLang && ch.textLang !== lang() ? ch.textLang : undefined },
-      // On phones the picture sits above the text instead of under it.
-      img ? h('figure.step-fig', {}, progressive(app, img.file, { want: 960, sizes: '92vw', alt: img.caption ?? stepImage[i]!.title, near: true }).img, h('figcaption.credit', {}, img.caption ? img.caption + ' · ' : '', img.credit, ' · ', img.license)) : null,
+      // On phones the picture always sits above the words of its step.
+      img ? h('figure.step-fig', {}, progressive(app, img.file, { want: 960, sizes: '(max-width: 720px) calc(100vw - 48px), 1px', alt: img.caption ?? stepImage[i]!.card.title, near: true, margin: '200% 0px' }).img, h('figcaption.credit', {}, img.caption ? img.caption + ' · ' : '', img.credit, ' · ', img.license)) : null,
       where ? h('div.where', {}, where) : null,
       h('p', {}, richText(app, s)),
     );
@@ -343,6 +356,20 @@ function chapter(app: App, ch0: Chapter): HTMLElement {
     h('div.kente', { 'aria-hidden': 'true' }),
   );
   runScrolly(app, ch, el, graphic, mapHost, imgHost, steps, stepImage);
+  // While this chapter is read, the next chapter's hero is fetched, so it is
+  // there when the reader arrives, not seconds later.
+  const next = app.chapters[app.chapters.indexOf(ch0) + 1];
+  if (next) {
+    const io = new IntersectionObserver(
+      (es) => {
+        if (!es.some((e) => e.isIntersecting)) return;
+        io.disconnect();
+        heroStarts.get(next.id)?.();
+      },
+      { rootMargin: '50% 0px' },
+    );
+    io.observe(el);
+  }
   return el;
 }
 
@@ -351,7 +378,7 @@ export function teaser(app: App, c: Card, seen = false): HTMLElement {
   return h(
     `a.teaser${seen ? '.seen' : ''}.reveal${img ? '' : '.textonly'}`,
     { href: `#focus=${c.id}`, 'data-card': c.id, style: `--era:${eraColor(c.era)}` },
-    img ? h('div.ph', {}, h('img', { ...mediaSrc(app, img.file, [480]), sizes: '(max-width: 720px) 92vw, 300px', alt: '', loading: 'lazy', decoding: 'async' })) : null,
+    img ? h('div.ph', { style: colourOf(img.file) ? `background-color:${colourOf(img.file)}` : undefined }, progressive(app, img.file, { want: 480, sizes: '(max-width: 720px) calc(100vw - 48px), 300px', near: true, margin: '200% 0px' }).img) : null,
     h(
       'div.tx',
       {},
@@ -363,7 +390,7 @@ export function teaser(app: App, c: Card, seen = false): HTMLElement {
   );
 }
 
-function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement, mapHost: HTMLElement, imgHost: HTMLElement, steps: HTMLElement[], stepImage: (Card | undefined)[]): void {
+function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement, mapHost: HTMLElement, imgHost: HTMLElement, steps: HTMLElement[], stepImage: (StepPicture | undefined)[]): void {
   let map: GeoMap | null = null;
   let current = -1;
   const figures = new Map<string, HTMLElement>();
@@ -372,17 +399,16 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
   const phone = () => window.innerWidth < 720;
 
   const ready = new Map<string, Promise<void>>();
-  const figure = (c: Card): HTMLElement | null => {
-    const m = c.media?.find((x) => x.type === 'image');
-    if (!m) return null;
-    if (!figures.has(c.id)) {
-      const p = progressive(app, m.file, { want: 960, sizes: '58vw', alt: m.caption ?? c.title });
+  const figure = (sp: StepPicture): HTMLElement => {
+    const { card: c, media: m, key } = sp;
+    if (!figures.has(key)) {
+      const p = progressive(app, m.file, { want: 960, sizes: '(min-width: 721px) 58vw, 100vw', alt: m.caption ?? c.title });
       const f = h('figure', {}, p.img, h('figcaption.credit', {}, h('b', {}, m.caption ?? c.title), m.credit, ' · ', m.license));
-      ready.set(c.id, p.ready);
-      figures.set(c.id, f);
+      ready.set(key, p.ready);
+      figures.set(key, f);
       imgHost.append(f);
     }
-    return figures.get(c.id)!;
+    return figures.get(key)!;
   };
   // Pictures of this chapter start loading two screens ahead.
   new IntersectionObserver(
@@ -413,13 +439,13 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
     const withImage = stepImage[i];
     if (withImage && !phone()) {
       // Cross-fade only once the picture is decoded: never a black void.
-      const f = figure(withImage)!;
+      const f = figure(withImage);
       const show = () => {
         if (current !== i) return;
         figures.forEach((x) => x.classList.toggle('on', x === f));
         graphic.classList.add('show-img');
       };
-      void ready.get(withImage.id)!.then(show);
+      void ready.get(withImage.key)!.then(show);
     } else {
       graphic.classList.remove('show-img');
     }

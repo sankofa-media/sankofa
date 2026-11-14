@@ -10,6 +10,7 @@ import { chapterLabel, edition, lang, pick, t } from '../lib/i18n';
 import { editionNote, pairLink } from './editionNote';
 import { cardYaml } from '../lib/cardYaml';
 import { mediaSrc } from '../lib/media';
+import { paragraphsOf } from '../lib/paragraphs';
 import { cardChecks, cardExtras } from '../mechanics';
 import { listenBlock } from './player';
 import { stopWithin } from '../lib/sound';
@@ -99,10 +100,11 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
     h('button', { onclick: async () => toast((await copyText(terminalCommand(point))) ? t('Command copied') : t('Copy failed')) }, t('Copy')),
   );
 
-  const paragraphs = c.body.split(/\n\s*\n/).map((p) => h('p', {}, richText(app, p.replace(/\s*\n\s*/g, ' '))));
+  const paragraphs = paragraphsOf(c.body).map((p) => h('p', {}, richText(app, p)));
   const partner = app.set.partner(c.id);
   const notices: HTMLElement[] = [];
-  if (c.dispute) notices.push(h('div.notice', { role: 'note' }, h('b', {}, t('Contested.') + ' '), c.dispute));
+  // What is disputed reads after the story it qualifies, not before it.
+  const contested = c.dispute ? h('div.notice.contested', { role: 'note' }, h('b', {}, t('Contested.') + ' '), c.dispute) : null;
   if (ctx.asked && ctx.asked.id !== c.id) {
     notices.push(
       h(
@@ -161,6 +163,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
     ),
     ...notices,
     h('div.text', {}, ...paragraphs),
+    contested,
     ...(app.listen.cards[c.id] ?? []).slice(0, 1).map((r) => listenBlock(r)),
     ...audio.map((a) =>
       h(

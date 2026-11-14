@@ -11,6 +11,7 @@ import { chapterCopy, eraColor, readerCards } from '../lib/atlasModel';
 import { MOVEMENTS } from '../lib/movements';
 import { chapterLabel, chapterNumber, count, pick, t, yearsAgo } from '../lib/i18n';
 import { LEVEL_NAMES } from './map';
+import { paragraphsOf } from '../lib/paragraphs';
 import { mediaSrc } from '../lib/media';
 import { listenBlock } from './player';
 import { stopWithin } from '../lib/sound';
@@ -603,12 +604,34 @@ export class Descent {
           h('h3', {}, c.title),
           // The hook only when the body does not open with the same words.
           sameStart(c.wow, c.body) ? null : h('p.desk-wow', {}, c.wow),
-          h('div.desk-body', {}, richText(this.app, c.body.split(/\n\s*\n/)[0].replace(/\s*\n\s*/g, ' '))),
+          h('div.desk-body', {}, ...paragraphsOf(c.body).map((p) => h('p', {}, richText(this.app, p)))),
           ...(this.app.listen.cards[c.id] ?? []).slice(0, 1).map((r) => listenBlock(r, { compact: true })),
         ),
         h('div.desk-foot', {}, h('a.btn', { href: `#focus=${c.id}`, 'data-card': c.id }, pick({ en: 'Open the card →', ru: 'Открыть карточку →' }))),
       ),
     );
+    this.watchClip();
+  }
+
+  /**
+   * A desk text taller than its panel fades out at the bottom edge instead of
+   * being cut mid-line, and the button below says there is more to read.
+   */
+  private watchClip(): void {
+    const scroll = this.desk.querySelector<HTMLElement>('.desk-scroll');
+    const btn = this.desk.querySelector<HTMLElement>('.desk-foot .btn');
+    if (!scroll || !btn) return;
+    const paint = () => {
+      const clipped = scroll.scrollHeight - scroll.clientHeight > 4;
+      const atEnd = scroll.scrollTop + scroll.clientHeight >= scroll.scrollHeight - 4;
+      scroll.classList.toggle('clipped', clipped && !atEnd);
+      btn.textContent = clipped ? pick({ en: 'Read more →', ru: 'Читать дальше →' }) : pick({ en: 'Open the card →', ru: 'Открыть карточку →' });
+    };
+    scroll.addEventListener('scroll', paint, { passive: true });
+    requestAnimationFrame(paint);
+    // Pictures and fonts settle after the first frame.
+    scroll.querySelectorAll('img').forEach((i) => i.addEventListener('load', paint, { once: true }));
+    setTimeout(paint, 600);
   }
 
   private reveal(): void {

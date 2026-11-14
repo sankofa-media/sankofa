@@ -230,8 +230,22 @@ export class Engine {
     });
     document.body.append(this.el);
     this.renderTry(false);
-    void fetch('visitor.kubeconfig', { method: 'HEAD' })
-      .then((r) => this.renderTry(r.ok && !(r.headers.get('content-type') ?? '').includes('text/html')))
+  }
+
+  private probed = false;
+
+  /**
+   * Whether the stand published a visitor kubeconfig: asked once, only when
+   * the engine room opens, and a missing file simply keeps the build-it-yourself
+   * instructions.
+   */
+  private probeConfig(): void {
+    if (this.probed) return;
+    this.probed = true;
+    void fetch('visitor.kubeconfig', { method: 'HEAD', cache: 'no-store' })
+      .then((r) => {
+        if (r.ok && !(r.headers.get('content-type') ?? '').includes('text/html')) this.renderTry(true);
+      })
       .catch(() => undefined);
   }
 
@@ -240,6 +254,7 @@ export class Engine {
   }
 
   open(): void {
+    this.probeConfig();
     this.renderYaml();
     this.el.classList.add('open');
     document.body.classList.add('locked');
