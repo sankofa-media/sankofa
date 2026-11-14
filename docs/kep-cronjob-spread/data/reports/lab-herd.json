@@ -1,0 +1,75 @@
+{
+ "jobs_share_in_first_10s_of_minute": 0.18,
+ "jobs": {
+  "count": 1000,
+  "peak_per_second": 21,
+  "peak_per_minute": 513,
+  "seconds_with_creations": 119
+ },
+ "pods_share_in_first_10s_of_minute": 0.18,
+ "pods": {
+  "count": 1000,
+  "peak_per_second": 20,
+  "peak_per_minute": 510,
+  "seconds_with_creations": 119
+ },
+ "job_creation_lag_seconds": {
+  "p50": 58.0,
+  "p99": 117.0,
+  "max": 118.0
+ },
+ "pod_first_scheduling_attempt_seconds": {
+  "p50": 0.0,
+  "max": 0.0
+ },
+ "api_peak_requests_per_second": {
+  "PATCH events": 9.0,
+  "PATCH pods/status": 9.0,
+  "POST events": 42.5,
+  "POST jobs": 9.0,
+  "POST pods": 9.0,
+  "PUT cronjobs/status": 9.0,
+  "PUT jobs/status": 9.0
+ },
+ "api_requests_in_window": {
+  "PATCH events": 980,
+  "PATCH pods/status": 977,
+  "POST events": 3958,
+  "POST jobs": 975,
+  "POST pods": 977,
+  "PUT cronjobs/status": 979,
+  "PUT jobs/status": 980,
+  "WATCH pods": 2
+ },
+ "storage_writes_in_window": 9924,
+ "storage_peak_writes_per_second": 78.0,
+ "apf_peak_inqueue_requests": 0,
+ "etcd:etcd_mvcc_put_total_in_window": 10099,
+ "etcd:etcd_mvcc_put_total_peak_per_second": 80.5,
+ "etcd:etcd_mvcc_txn_total_in_window": 0,
+ "etcd:etcd_mvcc_txn_total_peak_per_second": 0.0,
+ "etcd:etcd_disk_wal_fsync_duration_seconds_count_in_window": 8560,
+ "etcd:etcd_disk_wal_fsync_duration_seconds_count_peak_per_second": 64.5,
+ "process_cpu_seconds_total_peak_cores": 0.37,
+ "process_cpu_seconds_total_in_window": 47.0,
+ "etcd:process_cpu_seconds_total_peak_cores": 0.1,
+ "etcd:process_cpu_seconds_total_in_window": 15.0,
+ "kcm:process_cpu_seconds_total_peak_cores": 0.09,
+ "kcm:process_cpu_seconds_total_in_window": 9.4,
+ "sched:process_cpu_seconds_total_peak_cores": 0.06,
+ "sched:process_cpu_seconds_total_in_window": 8.7,
+ "kcm:workqueue_depth{name=\"cronjob\"}_peak": 999.0,
+ "kcm:workqueue_depth{name=\"job\"}_peak": 3.0,
+ "sched:scheduler_pending_pods{queue=\"unschedulable\"}_peak": 0.0,
+ "sched:scheduler_pending_pods{queue=\"active\"}_peak": 0.0,
+ "kcm_job_creation_skew_p50_p99_seconds": [
+  57.40823970037454,
+  126.56179775280899
+ ],
+ "post_latency_p99_seconds": {
+  "cronjobs": null,
+  "events": 0.024521951219512197,
+  "pods": 0.024255483870967747,
+  "jobs": 0.024145569620253167
+ }
+}

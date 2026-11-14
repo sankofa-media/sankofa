@@ -1,0 +1,1655 @@
+From fbaaeb0eefe49cd09ab5c8488eb3e214e283a5aa Mon Sep 17 00:00:00 2001
+From: sankofa <sankofa@invalid>
+Date: Fri, 13 Nov 2026 18:41:27 +0000
+Subject: [PATCH 1/2] batch: add CronJob spec.scheduleSpread behind
+ CronJobScheduleSpread
+
+Adds an optional struct with maxDelaySeconds (1..86400) to CronJobSpec in
+batch/v1 and batch/v1beta1, the alpha feature gate, validation, dropping of
+the field while the gate is disabled, and generated code.
+
+Signed-off-by: sankofa <sankofa@invalid>
+Assisted-by: LLM
+---
+ pkg/apis/batch/types.go                       |  14 ++
+ pkg/apis/batch/v1/zz_generated.conversion.go  |  30 ++++
+ pkg/apis/batch/v1/zz_generated.validations.go |   1 +
+ .../batch/v1beta1/zz_generated.conversion.go  |  30 ++++
+ .../batch/v1beta1/zz_generated.validations.go |   1 +
+ pkg/apis/batch/validation/validation.go       |  16 ++
+ pkg/apis/batch/validation/validation_test.go  |  36 ++++
+ pkg/apis/batch/zz_generated.deepcopy.go       |  21 +++
+ pkg/features/kube_features.go                 |  14 ++
+ pkg/generated/openapi/zz_generated.openapi.go |  62 ++++++-
+ pkg/registry/batch/cronjob/strategy.go        |  10 ++
+ pkg/registry/batch/cronjob/strategy_test.go   |  38 ++++
+ .../src/k8s.io/api/batch/v1/generated.pb.go   | 170 ++++++++++++++++++
+ .../src/k8s.io/api/batch/v1/generated.proto   |  22 +++
+ staging/src/k8s.io/api/batch/v1/types.go      |  22 +++
+ .../batch/v1/types_swagger_doc_generated.go   |  10 ++
+ .../api/batch/v1/zz_generated.deepcopy.go     |  21 +++
+ .../api/batch/v1/zz_generated.model_name.go   |   5 +
+ .../k8s.io/api/batch/v1beta1/generated.pb.go  | 170 ++++++++++++++++++
+ .../k8s.io/api/batch/v1beta1/generated.proto  |  22 +++
+ staging/src/k8s.io/api/batch/v1beta1/types.go |  22 +++
+ .../v1beta1/types_swagger_doc_generated.go    |  10 ++
+ .../batch/v1beta1/zz_generated.deepcopy.go    |  21 +++
+ .../batch/v1beta1/zz_generated.model_name.go  |   5 +
+ .../api/testdata/HEAD/batch.v1.CronJob.json   |   5 +-
+ .../api/testdata/HEAD/batch.v1.CronJob.pb     | Bin 12615 -> 12619 bytes
+ .../api/testdata/HEAD/batch.v1.CronJob.yaml   |   2 +
+ .../testdata/HEAD/batch.v1beta1.CronJob.json  |   5 +-
+ .../testdata/HEAD/batch.v1beta1.CronJob.pb    | Bin 12620 -> 12624 bytes
+ .../testdata/HEAD/batch.v1beta1.CronJob.yaml  |   2 +
+ .../batch/v1/cronjobschedulespread.go         |  44 +++++
+ .../batch/v1/cronjobspec.go                   |  18 ++
+ .../batch/v1beta1/cronjobschedulespread.go    |  44 +++++
+ .../batch/v1beta1/cronjobspec.go              |  18 ++
+ .../applyconfigurations/internal/internal.go  |  20 +++
+ .../client-go/applyconfigurations/utils.go    |   4 +
+ 36 files changed, 931 insertions(+), 4 deletions(-)
+ create mode 100644 staging/src/k8s.io/client-go/applyconfigurations/batch/v1/cronjobschedulespread.go
+ create mode 100644 staging/src/k8s.io/client-go/applyconfigurations/batch/v1beta1/cronjobschedulespread.go
+
+diff --git a/pkg/apis/batch/types.go b/pkg/apis/batch/types.go
+index a40a7892..7f2bb21a 100644
+--- a/pkg/apis/batch/types.go
++++ b/pkg/apis/batch/types.go
+@@ -762,6 +762,20 @@ type CronJobSpec struct {
+ 	// This is a pointer to distinguish between explicit zero and not specified.
+ 	// +optional
+ 	FailedJobsHistoryLimit *int32
++
++	// scheduleSpread delays every run of this CronJob by a stable, per-CronJob
++	// offset in [0, scheduleSpread.maxDelaySeconds), derived from a hash of the
++	// CronJob's UID.
++	// +featureGate=CronJobScheduleSpread
++	// +optional
++	ScheduleSpread *CronJobScheduleSpread
++}
++
++// CronJobScheduleSpread describes how the runs of a CronJob are spread in time.
++type CronJobScheduleSpread struct {
++	// maxDelaySeconds is the exclusive upper bound, in seconds, of the offset
++	// added to every scheduled time of the CronJob.
++	MaxDelaySeconds int32
+ }
+ 
+ // ConcurrencyPolicy describes how the job will be handled.
+diff --git a/pkg/apis/batch/v1/zz_generated.conversion.go b/pkg/apis/batch/v1/zz_generated.conversion.go
+index 05640a25..ba976968 100644
+--- a/pkg/apis/batch/v1/zz_generated.conversion.go
++++ b/pkg/apis/batch/v1/zz_generated.conversion.go
+@@ -57,6 +57,16 @@ func RegisterConversions(s *runtime.Scheme) error {
+ 	}); err != nil {
+ 		return err
+ 	}
++	if err := s.AddGeneratedConversionFunc((*batchv1.CronJobScheduleSpread)(nil), (*batch.CronJobScheduleSpread)(nil), func(a, b interface{}, scope conversion.Scope) error {
++		return Convert_v1_CronJobScheduleSpread_To_batch_CronJobScheduleSpread(a.(*batchv1.CronJobScheduleSpread), b.(*batch.CronJobScheduleSpread), scope)
++	}); err != nil {
++		return err
++	}
++	if err := s.AddGeneratedConversionFunc((*batch.CronJobScheduleSpread)(nil), (*batchv1.CronJobScheduleSpread)(nil), func(a, b interface{}, scope conversion.Scope) error {
++		return Convert_batch_CronJobScheduleSpread_To_v1_CronJobScheduleSpread(a.(*batch.CronJobScheduleSpread), b.(*batchv1.CronJobScheduleSpread), scope)
++	}); err != nil {
++		return err
++	}
+ 	if err := s.AddGeneratedConversionFunc((*batchv1.CronJobSpec)(nil), (*batch.CronJobSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
+ 		return Convert_v1_CronJobSpec_To_batch_CronJobSpec(a.(*batchv1.CronJobSpec), b.(*batch.CronJobSpec), scope)
+ 	}); err != nil {
+@@ -274,6 +284,26 @@ func Convert_batch_CronJobList_To_v1_CronJobList(in *batch.CronJobList, out *bat
+ 	return autoConvert_batch_CronJobList_To_v1_CronJobList(in, out, s)
+ }
+ 
++func autoConvert_v1_CronJobScheduleSpread_To_batch_CronJobScheduleSpread(in *batchv1.CronJobScheduleSpread, out *batch.CronJobScheduleSpread, s conversion.Scope) error {
++	*out = *(*batch.CronJobScheduleSpread)(unsafe.Pointer(in))
++	return nil
++}
++
++// Convert_v1_CronJobScheduleSpread_To_batch_CronJobScheduleSpread is an autogenerated conversion function.
++func Convert_v1_CronJobScheduleSpread_To_batch_CronJobScheduleSpread(in *batchv1.CronJobScheduleSpread, out *batch.CronJobScheduleSpread, s conversion.Scope) error {
++	return autoConvert_v1_CronJobScheduleSpread_To_batch_CronJobScheduleSpread(in, out, s)
++}
++
++func autoConvert_batch_CronJobScheduleSpread_To_v1_CronJobScheduleSpread(in *batch.CronJobScheduleSpread, out *batchv1.CronJobScheduleSpread, s conversion.Scope) error {
++	*out = *(*batchv1.CronJobScheduleSpread)(unsafe.Pointer(in))
++	return nil
++}
++
++// Convert_batch_CronJobScheduleSpread_To_v1_CronJobScheduleSpread is an autogenerated conversion function.
++func Convert_batch_CronJobScheduleSpread_To_v1_CronJobScheduleSpread(in *batch.CronJobScheduleSpread, out *batchv1.CronJobScheduleSpread, s conversion.Scope) error {
++	return autoConvert_batch_CronJobScheduleSpread_To_v1_CronJobScheduleSpread(in, out, s)
++}
++
+ func autoConvert_v1_CronJobSpec_To_batch_CronJobSpec(in *batchv1.CronJobSpec, out *batch.CronJobSpec, s conversion.Scope) error {
+ 	*out = *(*batch.CronJobSpec)(unsafe.Pointer(in))
+ 	return nil
+diff --git a/pkg/apis/batch/v1/zz_generated.validations.go b/pkg/apis/batch/v1/zz_generated.validations.go
+index 0a830fde..fd252e25 100644
+--- a/pkg/apis/batch/v1/zz_generated.validations.go
++++ b/pkg/apis/batch/v1/zz_generated.validations.go
+@@ -198,6 +198,7 @@ func Validate_CronJobSpec(
+ 
+ 	// field batchv1.CronJobSpec.SuccessfulJobsHistoryLimit has no validation
+ 	// field batchv1.CronJobSpec.FailedJobsHistoryLimit has no validation
++	// field batchv1.CronJobSpec.ScheduleSpread has no validation
+ 	return errs
+ }
+ 
+diff --git a/pkg/apis/batch/v1beta1/zz_generated.conversion.go b/pkg/apis/batch/v1beta1/zz_generated.conversion.go
+index ae401a35..5199dac9 100644
+--- a/pkg/apis/batch/v1beta1/zz_generated.conversion.go
++++ b/pkg/apis/batch/v1beta1/zz_generated.conversion.go
+@@ -57,6 +57,16 @@ func RegisterConversions(s *runtime.Scheme) error {
+ 	}); err != nil {
+ 		return err
+ 	}
++	if err := s.AddGeneratedConversionFunc((*batchv1beta1.CronJobScheduleSpread)(nil), (*batch.CronJobScheduleSpread)(nil), func(a, b interface{}, scope conversion.Scope) error {
++		return Convert_v1beta1_CronJobScheduleSpread_To_batch_CronJobScheduleSpread(a.(*batchv1beta1.CronJobScheduleSpread), b.(*batch.CronJobScheduleSpread), scope)
++	}); err != nil {
++		return err
++	}
++	if err := s.AddGeneratedConversionFunc((*batch.CronJobScheduleSpread)(nil), (*batchv1beta1.CronJobScheduleSpread)(nil), func(a, b interface{}, scope conversion.Scope) error {
++		return Convert_batch_CronJobScheduleSpread_To_v1beta1_CronJobScheduleSpread(a.(*batch.CronJobScheduleSpread), b.(*batchv1beta1.CronJobScheduleSpread), scope)
++	}); err != nil {
++		return err
++	}
+ 	if err := s.AddGeneratedConversionFunc((*batchv1beta1.CronJobSpec)(nil), (*batch.CronJobSpec)(nil), func(a, b interface{}, scope conversion.Scope) error {
+ 		return Convert_v1beta1_CronJobSpec_To_batch_CronJobSpec(a.(*batchv1beta1.CronJobSpec), b.(*batch.CronJobSpec), scope)
+ 	}); err != nil {
+@@ -144,6 +154,26 @@ func Convert_batch_CronJobList_To_v1beta1_CronJobList(in *batch.CronJobList, out
+ 	return autoConvert_batch_CronJobList_To_v1beta1_CronJobList(in, out, s)
+ }
+ 
++func autoConvert_v1beta1_CronJobScheduleSpread_To_batch_CronJobScheduleSpread(in *batchv1beta1.CronJobScheduleSpread, out *batch.CronJobScheduleSpread, s conversion.Scope) error {
++	*out = *(*batch.CronJobScheduleSpread)(unsafe.Pointer(in))
++	return nil
++}
++
++// Convert_v1beta1_CronJobScheduleSpread_To_batch_CronJobScheduleSpread is an autogenerated conversion function.
++func Convert_v1beta1_CronJobScheduleSpread_To_batch_CronJobScheduleSpread(in *batchv1beta1.CronJobScheduleSpread, out *batch.CronJobScheduleSpread, s conversion.Scope) error {
++	return autoConvert_v1beta1_CronJobScheduleSpread_To_batch_CronJobScheduleSpread(in, out, s)
++}
++
++func autoConvert_batch_CronJobScheduleSpread_To_v1beta1_CronJobScheduleSpread(in *batch.CronJobScheduleSpread, out *batchv1beta1.CronJobScheduleSpread, s conversion.Scope) error {
++	*out = *(*batchv1beta1.CronJobScheduleSpread)(unsafe.Pointer(in))
++	return nil
++}
++
++// Convert_batch_CronJobScheduleSpread_To_v1beta1_CronJobScheduleSpread is an autogenerated conversion function.
++func Convert_batch_CronJobScheduleSpread_To_v1beta1_CronJobScheduleSpread(in *batch.CronJobScheduleSpread, out *batchv1beta1.CronJobScheduleSpread, s conversion.Scope) error {
++	return autoConvert_batch_CronJobScheduleSpread_To_v1beta1_CronJobScheduleSpread(in, out, s)
++}
++
+ func autoConvert_v1beta1_CronJobSpec_To_batch_CronJobSpec(in *batchv1beta1.CronJobSpec, out *batch.CronJobSpec, s conversion.Scope) error {
+ 	*out = *(*batch.CronJobSpec)(unsafe.Pointer(in))
+ 	return nil
+diff --git a/pkg/apis/batch/v1beta1/zz_generated.validations.go b/pkg/apis/batch/v1beta1/zz_generated.validations.go
+index 95bb6c76..56e41179 100644
+--- a/pkg/apis/batch/v1beta1/zz_generated.validations.go
++++ b/pkg/apis/batch/v1beta1/zz_generated.validations.go
+@@ -181,6 +181,7 @@ func Validate_CronJobSpec(
+ 
+ 	// field batchv1beta1.CronJobSpec.SuccessfulJobsHistoryLimit has no validation
+ 	// field batchv1beta1.CronJobSpec.FailedJobsHistoryLimit has no validation
++	// field batchv1beta1.CronJobSpec.ScheduleSpread has no validation
+ 	return errs
+ }
+ 
+diff --git a/pkg/apis/batch/validation/validation.go b/pkg/apis/batch/validation/validation.go
+index 19593323..8767edaf 100644
+--- a/pkg/apis/batch/validation/validation.go
++++ b/pkg/apis/batch/validation/validation.go
+@@ -920,10 +920,26 @@ func validateCronJobSpec(spec, oldSpec *batch.CronJobSpec, fldPath *field.Path,
+ 		// zero is a valid SuccessfulJobsHistoryLimit
+ 		allErrs = append(allErrs, apivalidation.ValidateNonnegativeField(int64(*spec.FailedJobsHistoryLimit), fldPath.Child("failedJobsHistoryLimit"))...)
+ 	}
++	allErrs = append(allErrs, validateCronJobScheduleSpread(spec.ScheduleSpread, fldPath.Child("scheduleSpread"))...)
+ 
+ 	return allErrs
+ }
+ 
++// MaxCronJobScheduleSpreadSeconds is the largest allowed
++// spec.scheduleSpread.maxDelaySeconds: one day.
++const MaxCronJobScheduleSpreadSeconds = 24 * 60 * 60
++
++func validateCronJobScheduleSpread(spread *batch.CronJobScheduleSpread, fldPath *field.Path) field.ErrorList {
++	if spread == nil {
++		return nil
++	}
++	allErrs := field.ErrorList{}
++	if d := spread.MaxDelaySeconds; d < 1 || d > MaxCronJobScheduleSpreadSeconds {
++		allErrs = append(allErrs, field.Invalid(fldPath.Child("maxDelaySeconds"), d, fmt.Sprintf("must be between 1 and %d", MaxCronJobScheduleSpreadSeconds)))
++	}
++	return allErrs
++}
++
+ func validateConcurrencyPolicy(concurrencyPolicy *batch.ConcurrencyPolicy, fldPath *field.Path) field.ErrorList {
+ 	allErrs := field.ErrorList{}
+ 	switch *concurrencyPolicy {
+diff --git a/pkg/apis/batch/validation/validation_test.go b/pkg/apis/batch/validation/validation_test.go
+index 02219ab9..2c8a90e2 100644
+--- a/pkg/apis/batch/validation/validation_test.go
++++ b/pkg/apis/batch/validation/validation_test.go
+@@ -4994,3 +4994,39 @@ func TestValidateScheduleFormatNormalCases(t *testing.T) {
+ 		})
+ 	}
+ }
++
++func TestValidateCronJobScheduleSpread(t *testing.T) {
++	validPodTemplateSpec := getValidPodTemplateSpecForGenerated(getValidGeneratedSelector())
++	validPodTemplateSpec.Labels = map[string]string{}
++	cases := map[string]struct {
++		spread  *batch.CronJobScheduleSpread
++		wantErr bool
++	}{
++		"unset":             {spread: nil},
++		"one second":        {spread: &batch.CronJobScheduleSpread{MaxDelaySeconds: 1}},
++		"one hour":          {spread: &batch.CronJobScheduleSpread{MaxDelaySeconds: 3600}},
++		"one day":           {spread: &batch.CronJobScheduleSpread{MaxDelaySeconds: MaxCronJobScheduleSpreadSeconds}},
++		"zero":              {spread: &batch.CronJobScheduleSpread{MaxDelaySeconds: 0}, wantErr: true},
++		"negative":          {spread: &batch.CronJobScheduleSpread{MaxDelaySeconds: -5}, wantErr: true},
++		"more than one day": {spread: &batch.CronJobScheduleSpread{MaxDelaySeconds: MaxCronJobScheduleSpreadSeconds + 1}, wantErr: true},
++	}
++	for name, tc := range cases {
++		t.Run(name, func(t *testing.T) {
++			spec := &batch.CronJobSpec{
++				Schedule:          "0 * * * *",
++				ConcurrencyPolicy: batch.AllowConcurrent,
++				ScheduleSpread:    tc.spread,
++				JobTemplate:       batch.JobTemplateSpec{Spec: batch.JobSpec{Template: validPodTemplateSpec}},
++			}
++			errs := validateCronJobSpec(spec, nil, field.NewPath("spec"), corevalidation.PodValidationOptions{})
++			if got := len(errs) > 0; got != tc.wantErr {
++				t.Fatalf("wantErr=%v, got %v", tc.wantErr, errs)
++			}
++			for _, e := range errs {
++				if e.Field != "spec.scheduleSpread.maxDelaySeconds" {
++					t.Errorf("unexpected field %q", e.Field)
++				}
++			}
++		})
++	}
++}
+diff --git a/pkg/apis/batch/zz_generated.deepcopy.go b/pkg/apis/batch/zz_generated.deepcopy.go
+index a063cd41..e931b6f2 100644
+--- a/pkg/apis/batch/zz_generated.deepcopy.go
++++ b/pkg/apis/batch/zz_generated.deepcopy.go
+@@ -90,6 +90,22 @@ func (in *CronJobList) DeepCopyObject() runtime.Object {
+ 	return nil
+ }
+ 
++// DeepCopyInto is an autogenerated deepcopy function, copying the receiver, writing into out. in must be non-nil.
++func (in *CronJobScheduleSpread) DeepCopyInto(out *CronJobScheduleSpread) {
++	*out = *in
++	return
++}
++
++// DeepCopy is an autogenerated deepcopy function, copying the receiver, creating a new CronJobScheduleSpread.
++func (in *CronJobScheduleSpread) DeepCopy() *CronJobScheduleSpread {
++	if in == nil {
++		return nil
++	}
++	out := new(CronJobScheduleSpread)
++	in.DeepCopyInto(out)
++	return out
++}
++
+ // DeepCopyInto is an autogenerated deepcopy function, copying the receiver, writing into out. in must be non-nil.
+ func (in *CronJobSpec) DeepCopyInto(out *CronJobSpec) {
+ 	*out = *in
+@@ -119,6 +135,11 @@ func (in *CronJobSpec) DeepCopyInto(out *CronJobSpec) {
+ 		*out = new(int32)
+ 		**out = **in
+ 	}
++	if in.ScheduleSpread != nil {
++		in, out := &in.ScheduleSpread, &out.ScheduleSpread
++		*out = new(CronJobScheduleSpread)
++		**out = **in
++	}
+ 	return
+ }
+ 
+diff --git a/pkg/features/kube_features.go b/pkg/features/kube_features.go
+index fbe3c418..b7e7f0f7 100644
+--- a/pkg/features/kube_features.go
++++ b/pkg/features/kube_features.go
+@@ -182,6 +182,14 @@ const (
+ 	// Enables coordinated leader election in the API server
+ 	CoordinatedLeaderElection featuregate.Feature = "CoordinatedLeaderElection"
+ 
++	// owner: @tym83
++	// kep: https://kep.k8s.io/NNNN
++	//
++	// Enables spec.scheduleSpread on CronJobs: every run is delayed by a stable,
++	// hash-derived per-CronJob offset so that CronJobs sharing a schedule do not
++	// all start at once.
++	CronJobScheduleSpread featuregate.Feature = "CronJobScheduleSpread"
++
+ 	// owner: @ttakahashi21 @mkimuram
+ 	// kep: https://kep.k8s.io/3294
+ 	//
+@@ -1444,6 +1452,10 @@ var defaultVersionedKubernetesFeatureGates = map[featuregate.Feature]featuregate
+ 		{Version: version.MustParse("1.33"), Default: false, PreRelease: featuregate.Alpha},
+ 	},
+ 
++	CronJobScheduleSpread: {
++		{Version: version.MustParse("1.37"), Default: false, PreRelease: featuregate.Alpha},
++	},
++
+ 	CrossNamespaceVolumeDataSource: {
+ 		{Version: version.MustParse("1.26"), Default: false, PreRelease: featuregate.Alpha},
+ 	},
+@@ -2578,6 +2590,8 @@ var defaultKubernetesFeatureGateDependencies = map[featuregate.Feature][]feature
+ 
+ 	CoordinatedLeaderElection: {},
+ 
++	CronJobScheduleSpread: {},
++
+ 	CrossNamespaceVolumeDataSource: {},
+ 
+ 	DRAAdminAccess: {DynamicResourceAllocation},
+diff --git a/pkg/generated/openapi/zz_generated.openapi.go b/pkg/generated/openapi/zz_generated.openapi.go
+index 70593f7d..0fcd56ce 100644
+--- a/pkg/generated/openapi/zz_generated.openapi.go
++++ b/pkg/generated/openapi/zz_generated.openapi.go
+@@ -419,6 +419,7 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
+ 		autoscalingv2.ResourceMetricStatus{}.OpenAPIModelName():                                                         schema_k8sio_api_autoscaling_v2_ResourceMetricStatus(ref),
+ 		batchv1.CronJob{}.OpenAPIModelName():                                                                            schema_k8sio_api_batch_v1_CronJob(ref),
+ 		batchv1.CronJobList{}.OpenAPIModelName():                                                                        schema_k8sio_api_batch_v1_CronJobList(ref),
++		batchv1.CronJobScheduleSpread{}.OpenAPIModelName():                                                              schema_k8sio_api_batch_v1_CronJobScheduleSpread(ref),
+ 		batchv1.CronJobSpec{}.OpenAPIModelName():                                                                        schema_k8sio_api_batch_v1_CronJobSpec(ref),
+ 		batchv1.CronJobStatus{}.OpenAPIModelName():                                                                      schema_k8sio_api_batch_v1_CronJobStatus(ref),
+ 		batchv1.Job{}.OpenAPIModelName():                                                                                schema_k8sio_api_batch_v1_Job(ref),
+@@ -437,6 +438,7 @@ func GetOpenAPIDefinitions(ref common.ReferenceCallback) map[string]common.OpenA
+ 		batchv1.UncountedTerminatedPods{}.OpenAPIModelName():                                                            schema_k8sio_api_batch_v1_UncountedTerminatedPods(ref),
+ 		batchv1beta1.CronJob{}.OpenAPIModelName():                                                                       schema_k8sio_api_batch_v1beta1_CronJob(ref),
+ 		batchv1beta1.CronJobList{}.OpenAPIModelName():                                                                   schema_k8sio_api_batch_v1beta1_CronJobList(ref),
++		batchv1beta1.CronJobScheduleSpread{}.OpenAPIModelName():                                                         schema_k8sio_api_batch_v1beta1_CronJobScheduleSpread(ref),
+ 		batchv1beta1.CronJobSpec{}.OpenAPIModelName():                                                                   schema_k8sio_api_batch_v1beta1_CronJobSpec(ref),
+ 		batchv1beta1.CronJobStatus{}.OpenAPIModelName():                                                                 schema_k8sio_api_batch_v1beta1_CronJobStatus(ref),
+ 		batchv1beta1.JobTemplateSpec{}.OpenAPIModelName():                                                               schema_k8sio_api_batch_v1beta1_JobTemplateSpec(ref),
+@@ -16566,6 +16568,28 @@ func schema_k8sio_api_batch_v1_CronJobList(ref common.ReferenceCallback) common.
+ 	}
+ }
+ 
++func schema_k8sio_api_batch_v1_CronJobScheduleSpread(ref common.ReferenceCallback) common.OpenAPIDefinition {
++	return common.OpenAPIDefinition{
++		Schema: spec.Schema{
++			SchemaProps: spec.SchemaProps{
++				Description: "CronJobScheduleSpread describes how the runs of a CronJob are spread in time.",
++				Type:        []string{"object"},
++				Properties: map[string]spec.Schema{
++					"maxDelaySeconds": {
++						SchemaProps: spec.SchemaProps{
++							Description: "maxDelaySeconds is the exclusive upper bound, in seconds, of the offset added to every scheduled time of the CronJob. It must be between 1 and 86400 (one day).",
++							Default:     0,
++							Type:        []string{"integer"},
++							Format:      "int32",
++						},
++					},
++				},
++				Required: []string{"maxDelaySeconds"},
++			},
++		},
++	}
++}
++
+ func schema_k8sio_api_batch_v1_CronJobSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+ 	return common.OpenAPIDefinition{
+ 		Schema: spec.Schema{
+@@ -16631,12 +16655,18 @@ func schema_k8sio_api_batch_v1_CronJobSpec(ref common.ReferenceCallback) common.
+ 							Format:      "int32",
+ 						},
+ 					},
++					"scheduleSpread": {
++						SchemaProps: spec.SchemaProps{
++							Description: "scheduleSpread delays every run of this CronJob by a stable, per-CronJob offset, so that many CronJobs sharing the same schedule do not all start at the same instant. The offset is a whole number of seconds in [0, scheduleSpread.maxDelaySeconds), derived from a hash of the CronJob's UID; it does not change across controller restarts or updates to the CronJob. All other scheduling rules (startingDeadlineSeconds, concurrencyPolicy, suspend, status.lastScheduleTime) apply to the delayed times. This field is alpha-level and is only honored by servers that enable the CronJobScheduleSpread feature.",
++							Ref:         ref(batchv1.CronJobScheduleSpread{}.OpenAPIModelName()),
++						},
++					},
+ 				},
+ 				Required: []string{"schedule", "jobTemplate"},
+ 			},
+ 		},
+ 		Dependencies: []string{
+-			batchv1.JobTemplateSpec{}.OpenAPIModelName()},
++			batchv1.CronJobScheduleSpread{}.OpenAPIModelName(), batchv1.JobTemplateSpec{}.OpenAPIModelName()},
+ 	}
+ }
+ 
+@@ -17538,6 +17568,28 @@ func schema_k8sio_api_batch_v1beta1_CronJobList(ref common.ReferenceCallback) co
+ 	}
+ }
+ 
++func schema_k8sio_api_batch_v1beta1_CronJobScheduleSpread(ref common.ReferenceCallback) common.OpenAPIDefinition {
++	return common.OpenAPIDefinition{
++		Schema: spec.Schema{
++			SchemaProps: spec.SchemaProps{
++				Description: "CronJobScheduleSpread describes how the runs of a CronJob are spread in time.",
++				Type:        []string{"object"},
++				Properties: map[string]spec.Schema{
++					"maxDelaySeconds": {
++						SchemaProps: spec.SchemaProps{
++							Description: "maxDelaySeconds is the exclusive upper bound, in seconds, of the offset added to every scheduled time of the CronJob. It must be between 1 and 86400 (one day).",
++							Default:     0,
++							Type:        []string{"integer"},
++							Format:      "int32",
++						},
++					},
++				},
++				Required: []string{"maxDelaySeconds"},
++			},
++		},
++	}
++}
++
+ func schema_k8sio_api_batch_v1beta1_CronJobSpec(ref common.ReferenceCallback) common.OpenAPIDefinition {
+ 	return common.OpenAPIDefinition{
+ 		Schema: spec.Schema{
+@@ -17602,12 +17654,18 @@ func schema_k8sio_api_batch_v1beta1_CronJobSpec(ref common.ReferenceCallback) co
+ 							Format:      "int32",
+ 						},
+ 					},
++					"scheduleSpread": {
++						SchemaProps: spec.SchemaProps{
++							Description: "scheduleSpread delays every run of this CronJob by a stable, per-CronJob offset, so that many CronJobs sharing the same schedule do not all start at the same instant. The offset is a whole number of seconds in [0, scheduleSpread.maxDelaySeconds), derived from a hash of the CronJob's UID; it does not change across controller restarts or updates to the CronJob. All other scheduling rules (startingDeadlineSeconds, concurrencyPolicy, suspend, status.lastScheduleTime) apply to the delayed times. This field is alpha-level and is only honored by servers that enable the CronJobScheduleSpread feature.",
++							Ref:         ref(batchv1beta1.CronJobScheduleSpread{}.OpenAPIModelName()),
++						},
++					},
+ 				},
+ 				Required: []string{"schedule", "jobTemplate"},
+ 			},
+ 		},
+ 		Dependencies: []string{
+-			batchv1beta1.JobTemplateSpec{}.OpenAPIModelName()},
++			batchv1beta1.CronJobScheduleSpread{}.OpenAPIModelName(), batchv1beta1.JobTemplateSpec{}.OpenAPIModelName()},
+ 	}
+ }
+ 
+diff --git a/pkg/registry/batch/cronjob/strategy.go b/pkg/registry/batch/cronjob/strategy.go
+index 5e94f46d..9832a5f9 100644
+--- a/pkg/registry/batch/cronjob/strategy.go
++++ b/pkg/registry/batch/cronjob/strategy.go
+@@ -93,6 +93,7 @@ func (cronJobStrategy) PrepareForCreate(ctx context.Context, obj runtime.Object)
+ 	cronJob.Generation = 1
+ 
+ 	job.DropDisabledFields(&cronJob.Spec.JobTemplate.Spec, nil)
++	dropDisabledCronJobFields(&cronJob.Spec, nil)
+ 
+ 	pod.DropDisabledTemplateFields(&cronJob.Spec.JobTemplate.Spec.Template, nil)
+ }
+@@ -104,6 +105,7 @@ func (cronJobStrategy) PrepareForUpdate(ctx context.Context, obj, old runtime.Ob
+ 	newCronJob.Status = oldCronJob.Status
+ 
+ 	job.DropDisabledFields(&newCronJob.Spec.JobTemplate.Spec, &oldCronJob.Spec.JobTemplate.Spec)
++	dropDisabledCronJobFields(&newCronJob.Spec, &oldCronJob.Spec)
+ 
+ 	pod.DropDisabledTemplateFields(&newCronJob.Spec.JobTemplate.Spec.Template, &oldCronJob.Spec.JobTemplate.Spec.Template)
+ 
+@@ -114,6 +116,14 @@ func (cronJobStrategy) PrepareForUpdate(ctx context.Context, obj, old runtime.Ob
+ 	}
+ }
+ 
++// dropDisabledCronJobFields removes disabled fields from the CronJob spec,
++// unless the old spec already used them.
++func dropDisabledCronJobFields(spec, oldSpec *batch.CronJobSpec) {
++	if !utilfeature.DefaultFeatureGate.Enabled(features.CronJobScheduleSpread) && (oldSpec == nil || oldSpec.ScheduleSpread == nil) {
++		spec.ScheduleSpread = nil
++	}
++}
++
+ // Validate validates a new scheduled job.
+ func (cronJobStrategy) Validate(ctx context.Context, obj runtime.Object) field.ErrorList {
+ 	cronJob := obj.(*batch.CronJob)
+diff --git a/pkg/registry/batch/cronjob/strategy_test.go b/pkg/registry/batch/cronjob/strategy_test.go
+index fbdf1da0..8843f502 100644
+--- a/pkg/registry/batch/cronjob/strategy_test.go
++++ b/pkg/registry/batch/cronjob/strategy_test.go
+@@ -500,3 +500,41 @@ func TestCronJobStrategy_WarningsOnUpdate(t *testing.T) {
+ 		})
+ 	}
+ }
++
++func TestCronJobStrategy_DropDisabledScheduleSpread(t *testing.T) {
++	spread := &batch.CronJobScheduleSpread{MaxDelaySeconds: 600}
++	other := &batch.CronJobScheduleSpread{MaxDelaySeconds: 60}
++	cases := map[string]struct {
++		enabled  bool
++		update   bool
++		old, new *batch.CronJobScheduleSpread
++		want     *batch.CronJobScheduleSpread
++	}{
++		"enabled, create":                   {enabled: true, new: spread, want: spread},
++		"disabled, create":                  {enabled: false, new: spread, want: nil},
++		"disabled, update of a user":        {enabled: false, update: true, old: spread, new: other, want: other},
++		"disabled, update adding the field": {enabled: false, update: true, new: spread, want: nil},
++		"enabled, update adding the field":  {enabled: true, update: true, new: spread, want: spread},
++	}
++	for name, tc := range cases {
++		t.Run(name, func(t *testing.T) {
++			featuregatetesting.SetFeatureGateDuringTest(t, utilfeature.DefaultFeatureGate, features.CronJobScheduleSpread, tc.enabled)
++			ctx := genericapirequest.NewDefaultContext()
++			newCJ := &batch.CronJob{
++				ObjectMeta: metav1.ObjectMeta{Name: "spread", Namespace: metav1.NamespaceDefault, ResourceVersion: "1"},
++				Spec:       *validCronjobSpec.DeepCopy(),
++			}
++			newCJ.Spec.ScheduleSpread = tc.new
++			if tc.update {
++				oldCJ := newCJ.DeepCopy()
++				oldCJ.Spec.ScheduleSpread = tc.old
++				Strategy.PrepareForUpdate(ctx, newCJ, oldCJ)
++			} else {
++				Strategy.PrepareForCreate(ctx, newCJ)
++			}
++			if !ptr.Equal(newCJ.Spec.ScheduleSpread, tc.want) {
++				t.Errorf("scheduleSpread = %v, want %v", newCJ.Spec.ScheduleSpread, tc.want)
++			}
++		})
++	}
++}
+diff --git a/staging/src/k8s.io/api/batch/v1/generated.pb.go b/staging/src/k8s.io/api/batch/v1/generated.pb.go
+index 7c086a41..aed925ab 100644
+--- a/staging/src/k8s.io/api/batch/v1/generated.pb.go
++++ b/staging/src/k8s.io/api/batch/v1/generated.pb.go
+@@ -40,6 +40,8 @@ func (m *CronJob) Reset() { *m = CronJob{} }
+ 
+ func (m *CronJobList) Reset() { *m = CronJobList{} }
+ 
++func (m *CronJobScheduleSpread) Reset() { *m = CronJobScheduleSpread{} }
++
+ func (m *CronJobSpec) Reset() { *m = CronJobSpec{} }
+ 
+ func (m *CronJobStatus) Reset() { *m = CronJobStatus{} }
+@@ -176,6 +178,32 @@ func (m *CronJobList) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+ 	return len(dAtA) - i, nil
+ }
+ 
++func (m *CronJobScheduleSpread) Marshal() (dAtA []byte, err error) {
++	size := m.Size()
++	dAtA = make([]byte, size)
++	n, err := m.MarshalToSizedBuffer(dAtA[:size])
++	if err != nil {
++		return nil, err
++	}
++	return dAtA[:n], nil
++}
++
++func (m *CronJobScheduleSpread) MarshalTo(dAtA []byte) (int, error) {
++	size := m.Size()
++	return m.MarshalToSizedBuffer(dAtA[:size])
++}
++
++func (m *CronJobScheduleSpread) MarshalToSizedBuffer(dAtA []byte) (int, error) {
++	i := len(dAtA)
++	_ = i
++	var l int
++	_ = l
++	i = encodeVarintGenerated(dAtA, i, uint64(m.MaxDelaySeconds))
++	i--
++	dAtA[i] = 0x8
++	return len(dAtA) - i, nil
++}
++
+ func (m *CronJobSpec) Marshal() (dAtA []byte, err error) {
+ 	size := m.Size()
+ 	dAtA = make([]byte, size)
+@@ -196,6 +224,18 @@ func (m *CronJobSpec) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+ 	_ = i
+ 	var l int
+ 	_ = l
++	if m.ScheduleSpread != nil {
++		{
++			size, err := m.ScheduleSpread.MarshalToSizedBuffer(dAtA[:i])
++			if err != nil {
++				return 0, err
++			}
++			i -= size
++			i = encodeVarintGenerated(dAtA, i, uint64(size))
++		}
++		i--
++		dAtA[i] = 0x4a
++	}
+ 	if m.TimeZone != nil {
+ 		i -= len(*m.TimeZone)
+ 		copy(dAtA[i:], *m.TimeZone)
+@@ -1178,6 +1218,16 @@ func (m *CronJobList) Size() (n int) {
+ 	return n
+ }
+ 
++func (m *CronJobScheduleSpread) Size() (n int) {
++	if m == nil {
++		return 0
++	}
++	var l int
++	_ = l
++	n += 1 + sovGenerated(uint64(m.MaxDelaySeconds))
++	return n
++}
++
+ func (m *CronJobSpec) Size() (n int) {
+ 	if m == nil {
+ 		return 0
+@@ -1206,6 +1256,10 @@ func (m *CronJobSpec) Size() (n int) {
+ 		l = len(*m.TimeZone)
+ 		n += 1 + l + sovGenerated(uint64(l))
+ 	}
++	if m.ScheduleSpread != nil {
++		l = m.ScheduleSpread.Size()
++		n += 1 + l + sovGenerated(uint64(l))
++	}
+ 	return n
+ }
+ 
+@@ -1588,6 +1642,16 @@ func (this *CronJobList) String() string {
+ 	}, "")
+ 	return s
+ }
++func (this *CronJobScheduleSpread) String() string {
++	if this == nil {
++		return "nil"
++	}
++	s := strings.Join([]string{`&CronJobScheduleSpread{`,
++		`MaxDelaySeconds:` + fmt.Sprintf("%v", this.MaxDelaySeconds) + `,`,
++		`}`,
++	}, "")
++	return s
++}
+ func (this *CronJobSpec) String() string {
+ 	if this == nil {
+ 		return "nil"
+@@ -1601,6 +1665,7 @@ func (this *CronJobSpec) String() string {
+ 		`SuccessfulJobsHistoryLimit:` + valueToStringGenerated(this.SuccessfulJobsHistoryLimit) + `,`,
+ 		`FailedJobsHistoryLimit:` + valueToStringGenerated(this.FailedJobsHistoryLimit) + `,`,
+ 		`TimeZone:` + valueToStringGenerated(this.TimeZone) + `,`,
++		`ScheduleSpread:` + strings.Replace(this.ScheduleSpread.String(), "CronJobScheduleSpread", "CronJobScheduleSpread", 1) + `,`,
+ 		`}`,
+ 	}, "")
+ 	return s
+@@ -2111,6 +2176,75 @@ func (m *CronJobList) Unmarshal(dAtA []byte) error {
+ 	}
+ 	return nil
+ }
++func (m *CronJobScheduleSpread) Unmarshal(dAtA []byte) error {
++	l := len(dAtA)
++	iNdEx := 0
++	for iNdEx < l {
++		preIndex := iNdEx
++		var wire uint64
++		for shift := uint(0); ; shift += 7 {
++			if shift >= 64 {
++				return ErrIntOverflowGenerated
++			}
++			if iNdEx >= l {
++				return io.ErrUnexpectedEOF
++			}
++			b := dAtA[iNdEx]
++			iNdEx++
++			wire |= uint64(b&0x7F) << shift
++			if b < 0x80 {
++				break
++			}
++		}
++		fieldNum := int32(wire >> 3)
++		wireType := int(wire & 0x7)
++		if wireType == 4 {
++			return fmt.Errorf("proto: CronJobScheduleSpread: wiretype end group for non-group")
++		}
++		if fieldNum <= 0 {
++			return fmt.Errorf("proto: CronJobScheduleSpread: illegal tag %d (wire type %d)", fieldNum, wire)
++		}
++		switch fieldNum {
++		case 1:
++			if wireType != 0 {
++				return fmt.Errorf("proto: wrong wireType = %d for field MaxDelaySeconds", wireType)
++			}
++			m.MaxDelaySeconds = 0
++			for shift := uint(0); ; shift += 7 {
++				if shift >= 64 {
++					return ErrIntOverflowGenerated
++				}
++				if iNdEx >= l {
++					return io.ErrUnexpectedEOF
++				}
++				b := dAtA[iNdEx]
++				iNdEx++
++				m.MaxDelaySeconds |= int32(b&0x7F) << shift
++				if b < 0x80 {
++					break
++				}
++			}
++		default:
++			iNdEx = preIndex
++			skippy, err := skipGenerated(dAtA[iNdEx:])
++			if err != nil {
++				return err
++			}
++			if (skippy < 0) || (iNdEx+skippy) < 0 {
++				return ErrInvalidLengthGenerated
++			}
++			if (iNdEx + skippy) > l {
++				return io.ErrUnexpectedEOF
++			}
++			iNdEx += skippy
++		}
++	}
++
++	if iNdEx > l {
++		return io.ErrUnexpectedEOF
++	}
++	return nil
++}
+ func (m *CronJobSpec) Unmarshal(dAtA []byte) error {
+ 	l := len(dAtA)
+ 	iNdEx := 0
+@@ -2351,6 +2485,42 @@ func (m *CronJobSpec) Unmarshal(dAtA []byte) error {
+ 			s := string(dAtA[iNdEx:postIndex])
+ 			m.TimeZone = &s
+ 			iNdEx = postIndex
++		case 9:
++			if wireType != 2 {
++				return fmt.Errorf("proto: wrong wireType = %d for field ScheduleSpread", wireType)
++			}
++			var msglen int
++			for shift := uint(0); ; shift += 7 {
++				if shift >= 64 {
++					return ErrIntOverflowGenerated
++				}
++				if iNdEx >= l {
++					return io.ErrUnexpectedEOF
++				}
++				b := dAtA[iNdEx]
++				iNdEx++
++				msglen |= int(b&0x7F) << shift
++				if b < 0x80 {
++					break
++				}
++			}
++			if msglen < 0 {
++				return ErrInvalidLengthGenerated
++			}
++			postIndex := iNdEx + msglen
++			if postIndex < 0 {
++				return ErrInvalidLengthGenerated
++			}
++			if postIndex > l {
++				return io.ErrUnexpectedEOF
++			}
++			if m.ScheduleSpread == nil {
++				m.ScheduleSpread = &CronJobScheduleSpread{}
++			}
++			if err := m.ScheduleSpread.Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
++				return err
++			}
++			iNdEx = postIndex
+ 		default:
+ 			iNdEx = preIndex
+ 			skippy, err := skipGenerated(dAtA[iNdEx:])
+diff --git a/staging/src/k8s.io/api/batch/v1/generated.proto b/staging/src/k8s.io/api/batch/v1/generated.proto
+index da24d6d9..ea52e21f 100644
+--- a/staging/src/k8s.io/api/batch/v1/generated.proto
++++ b/staging/src/k8s.io/api/batch/v1/generated.proto
+@@ -60,6 +60,15 @@ message CronJobList {
+   repeated CronJob items = 2;
+ }
+ 
++// CronJobScheduleSpread describes how the runs of a CronJob are spread in time.
++message CronJobScheduleSpread {
++  // maxDelaySeconds is the exclusive upper bound, in seconds, of the offset
++  // added to every scheduled time of the CronJob. It must be between 1 and
++  // 86400 (one day).
++  // +required
++  optional int32 maxDelaySeconds = 1;
++}
++
+ // CronJobSpec describes how the job execution will look like and when it will actually run.
+ message CronJobSpec {
+   // The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.
+@@ -110,6 +119,19 @@ message CronJobSpec {
+   // Defaults to 1.
+   // +optional
+   optional int32 failedJobsHistoryLimit = 7;
++
++  // scheduleSpread delays every run of this CronJob by a stable, per-CronJob
++  // offset, so that many CronJobs sharing the same schedule do not all start
++  // at the same instant. The offset is a whole number of seconds in
++  // [0, scheduleSpread.maxDelaySeconds), derived from a hash of the CronJob's
++  // UID; it does not change across controller restarts or updates to the
++  // CronJob. All other scheduling rules (startingDeadlineSeconds,
++  // concurrencyPolicy, suspend, status.lastScheduleTime) apply to the delayed
++  // times. This field is alpha-level and is only honored by servers that enable
++  // the CronJobScheduleSpread feature.
++  // +featureGate=CronJobScheduleSpread
++  // +optional
++  optional CronJobScheduleSpread scheduleSpread = 9;
+ }
+ 
+ // CronJobStatus represents the current state of a cron job.
+diff --git a/staging/src/k8s.io/api/batch/v1/types.go b/staging/src/k8s.io/api/batch/v1/types.go
+index 8e35cb22..42cdd972 100644
+--- a/staging/src/k8s.io/api/batch/v1/types.go
++++ b/staging/src/k8s.io/api/batch/v1/types.go
+@@ -836,6 +836,28 @@ type CronJobSpec struct {
+ 	// Defaults to 1.
+ 	// +optional
+ 	FailedJobsHistoryLimit *int32 `json:"failedJobsHistoryLimit,omitempty" protobuf:"varint,7,opt,name=failedJobsHistoryLimit"`
++
++	// scheduleSpread delays every run of this CronJob by a stable, per-CronJob
++	// offset, so that many CronJobs sharing the same schedule do not all start
++	// at the same instant. The offset is a whole number of seconds in
++	// [0, scheduleSpread.maxDelaySeconds), derived from a hash of the CronJob's
++	// UID; it does not change across controller restarts or updates to the
++	// CronJob. All other scheduling rules (startingDeadlineSeconds,
++	// concurrencyPolicy, suspend, status.lastScheduleTime) apply to the delayed
++	// times. This field is alpha-level and is only honored by servers that enable
++	// the CronJobScheduleSpread feature.
++	// +featureGate=CronJobScheduleSpread
++	// +optional
++	ScheduleSpread *CronJobScheduleSpread `json:"scheduleSpread,omitempty" protobuf:"bytes,9,opt,name=scheduleSpread"`
++}
++
++// CronJobScheduleSpread describes how the runs of a CronJob are spread in time.
++type CronJobScheduleSpread struct {
++	// maxDelaySeconds is the exclusive upper bound, in seconds, of the offset
++	// added to every scheduled time of the CronJob. It must be between 1 and
++	// 86400 (one day).
++	// +required
++	MaxDelaySeconds int32 `json:"maxDelaySeconds" protobuf:"varint,1,opt,name=maxDelaySeconds"`
+ }
+ 
+ // ConcurrencyPolicy describes how the job will be handled.
+diff --git a/staging/src/k8s.io/api/batch/v1/types_swagger_doc_generated.go b/staging/src/k8s.io/api/batch/v1/types_swagger_doc_generated.go
+index ddf64555..ba45d89c 100644
+--- a/staging/src/k8s.io/api/batch/v1/types_swagger_doc_generated.go
++++ b/staging/src/k8s.io/api/batch/v1/types_swagger_doc_generated.go
+@@ -48,6 +48,15 @@ func (CronJobList) SwaggerDoc() map[string]string {
+ 	return map_CronJobList
+ }
+ 
++var map_CronJobScheduleSpread = map[string]string{
++	"":                "CronJobScheduleSpread describes how the runs of a CronJob are spread in time.",
++	"maxDelaySeconds": "maxDelaySeconds is the exclusive upper bound, in seconds, of the offset added to every scheduled time of the CronJob. It must be between 1 and 86400 (one day).",
++}
++
++func (CronJobScheduleSpread) SwaggerDoc() map[string]string {
++	return map_CronJobScheduleSpread
++}
++
+ var map_CronJobSpec = map[string]string{
+ 	"":                           "CronJobSpec describes how the job execution will look like and when it will actually run.",
+ 	"schedule":                   "The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.",
+@@ -58,6 +67,7 @@ var map_CronJobSpec = map[string]string{
+ 	"jobTemplate":                "Specifies the job that will be created when executing a CronJob.",
+ 	"successfulJobsHistoryLimit": "The number of successful finished jobs to retain. Value must be non-negative integer. Defaults to 3.",
+ 	"failedJobsHistoryLimit":     "The number of failed finished jobs to retain. Value must be non-negative integer. Defaults to 1.",
++	"scheduleSpread":             "scheduleSpread delays every run of this CronJob by a stable, per-CronJob offset, so that many CronJobs sharing the same schedule do not all start at the same instant. The offset is a whole number of seconds in [0, scheduleSpread.maxDelaySeconds), derived from a hash of the CronJob's UID; it does not change across controller restarts or updates to the CronJob. All other scheduling rules (startingDeadlineSeconds, concurrencyPolicy, suspend, status.lastScheduleTime) apply to the delayed times. This field is alpha-level and is only honored by servers that enable the CronJobScheduleSpread feature.",
+ }
+ 
+ func (CronJobSpec) SwaggerDoc() map[string]string {
+diff --git a/staging/src/k8s.io/api/batch/v1/zz_generated.deepcopy.go b/staging/src/k8s.io/api/batch/v1/zz_generated.deepcopy.go
+index 50d47596..60254d6a 100644
+--- a/staging/src/k8s.io/api/batch/v1/zz_generated.deepcopy.go
++++ b/staging/src/k8s.io/api/batch/v1/zz_generated.deepcopy.go
+@@ -90,6 +90,22 @@ func (in *CronJobList) DeepCopyObject() runtime.Object {
+ 	return nil
+ }
+ 
++// DeepCopyInto is an autogenerated deepcopy function, copying the receiver, writing into out. in must be non-nil.
++func (in *CronJobScheduleSpread) DeepCopyInto(out *CronJobScheduleSpread) {
++	*out = *in
++	return
++}
++
++// DeepCopy is an autogenerated deepcopy function, copying the receiver, creating a new CronJobScheduleSpread.
++func (in *CronJobScheduleSpread) DeepCopy() *CronJobScheduleSpread {
++	if in == nil {
++		return nil
++	}
++	out := new(CronJobScheduleSpread)
++	in.DeepCopyInto(out)
++	return out
++}
++
+ // DeepCopyInto is an autogenerated deepcopy function, copying the receiver, writing into out. in must be non-nil.
+ func (in *CronJobSpec) DeepCopyInto(out *CronJobSpec) {
+ 	*out = *in
+@@ -119,6 +135,11 @@ func (in *CronJobSpec) DeepCopyInto(out *CronJobSpec) {
+ 		*out = new(int32)
+ 		**out = **in
+ 	}
++	if in.ScheduleSpread != nil {
++		in, out := &in.ScheduleSpread, &out.ScheduleSpread
++		*out = new(CronJobScheduleSpread)
++		**out = **in
++	}
+ 	return
+ }
+ 
+diff --git a/staging/src/k8s.io/api/batch/v1/zz_generated.model_name.go b/staging/src/k8s.io/api/batch/v1/zz_generated.model_name.go
+index d7305143..95de5d78 100644
+--- a/staging/src/k8s.io/api/batch/v1/zz_generated.model_name.go
++++ b/staging/src/k8s.io/api/batch/v1/zz_generated.model_name.go
+@@ -31,6 +31,11 @@ func (in CronJobList) OpenAPIModelName() string {
+ 	return "io.k8s.api.batch.v1.CronJobList"
+ }
+ 
++// OpenAPIModelName returns the OpenAPI model name for this type.
++func (in CronJobScheduleSpread) OpenAPIModelName() string {
++	return "io.k8s.api.batch.v1.CronJobScheduleSpread"
++}
++
+ // OpenAPIModelName returns the OpenAPI model name for this type.
+ func (in CronJobSpec) OpenAPIModelName() string {
+ 	return "io.k8s.api.batch.v1.CronJobSpec"
+diff --git a/staging/src/k8s.io/api/batch/v1beta1/generated.pb.go b/staging/src/k8s.io/api/batch/v1beta1/generated.pb.go
+index 5e0888a6..8c1cabf3 100644
+--- a/staging/src/k8s.io/api/batch/v1beta1/generated.pb.go
++++ b/staging/src/k8s.io/api/batch/v1beta1/generated.pb.go
+@@ -36,6 +36,8 @@ func (m *CronJob) Reset() { *m = CronJob{} }
+ 
+ func (m *CronJobList) Reset() { *m = CronJobList{} }
+ 
++func (m *CronJobScheduleSpread) Reset() { *m = CronJobScheduleSpread{} }
++
+ func (m *CronJobSpec) Reset() { *m = CronJobSpec{} }
+ 
+ func (m *CronJobStatus) Reset() { *m = CronJobStatus{} }
+@@ -142,6 +144,32 @@ func (m *CronJobList) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+ 	return len(dAtA) - i, nil
+ }
+ 
++func (m *CronJobScheduleSpread) Marshal() (dAtA []byte, err error) {
++	size := m.Size()
++	dAtA = make([]byte, size)
++	n, err := m.MarshalToSizedBuffer(dAtA[:size])
++	if err != nil {
++		return nil, err
++	}
++	return dAtA[:n], nil
++}
++
++func (m *CronJobScheduleSpread) MarshalTo(dAtA []byte) (int, error) {
++	size := m.Size()
++	return m.MarshalToSizedBuffer(dAtA[:size])
++}
++
++func (m *CronJobScheduleSpread) MarshalToSizedBuffer(dAtA []byte) (int, error) {
++	i := len(dAtA)
++	_ = i
++	var l int
++	_ = l
++	i = encodeVarintGenerated(dAtA, i, uint64(m.MaxDelaySeconds))
++	i--
++	dAtA[i] = 0x8
++	return len(dAtA) - i, nil
++}
++
+ func (m *CronJobSpec) Marshal() (dAtA []byte, err error) {
+ 	size := m.Size()
+ 	dAtA = make([]byte, size)
+@@ -162,6 +190,18 @@ func (m *CronJobSpec) MarshalToSizedBuffer(dAtA []byte) (int, error) {
+ 	_ = i
+ 	var l int
+ 	_ = l
++	if m.ScheduleSpread != nil {
++		{
++			size, err := m.ScheduleSpread.MarshalToSizedBuffer(dAtA[:i])
++			if err != nil {
++				return 0, err
++			}
++			i -= size
++			i = encodeVarintGenerated(dAtA, i, uint64(size))
++		}
++		i--
++		dAtA[i] = 0x4a
++	}
+ 	if m.TimeZone != nil {
+ 		i -= len(*m.TimeZone)
+ 		copy(dAtA[i:], *m.TimeZone)
+@@ -364,6 +404,16 @@ func (m *CronJobList) Size() (n int) {
+ 	return n
+ }
+ 
++func (m *CronJobScheduleSpread) Size() (n int) {
++	if m == nil {
++		return 0
++	}
++	var l int
++	_ = l
++	n += 1 + sovGenerated(uint64(m.MaxDelaySeconds))
++	return n
++}
++
+ func (m *CronJobSpec) Size() (n int) {
+ 	if m == nil {
+ 		return 0
+@@ -392,6 +442,10 @@ func (m *CronJobSpec) Size() (n int) {
+ 		l = len(*m.TimeZone)
+ 		n += 1 + l + sovGenerated(uint64(l))
+ 	}
++	if m.ScheduleSpread != nil {
++		l = m.ScheduleSpread.Size()
++		n += 1 + l + sovGenerated(uint64(l))
++	}
+ 	return n
+ }
+ 
+@@ -465,6 +519,16 @@ func (this *CronJobList) String() string {
+ 	}, "")
+ 	return s
+ }
++func (this *CronJobScheduleSpread) String() string {
++	if this == nil {
++		return "nil"
++	}
++	s := strings.Join([]string{`&CronJobScheduleSpread{`,
++		`MaxDelaySeconds:` + fmt.Sprintf("%v", this.MaxDelaySeconds) + `,`,
++		`}`,
++	}, "")
++	return s
++}
+ func (this *CronJobSpec) String() string {
+ 	if this == nil {
+ 		return "nil"
+@@ -478,6 +542,7 @@ func (this *CronJobSpec) String() string {
+ 		`SuccessfulJobsHistoryLimit:` + valueToStringGenerated(this.SuccessfulJobsHistoryLimit) + `,`,
+ 		`FailedJobsHistoryLimit:` + valueToStringGenerated(this.FailedJobsHistoryLimit) + `,`,
+ 		`TimeZone:` + valueToStringGenerated(this.TimeZone) + `,`,
++		`ScheduleSpread:` + strings.Replace(this.ScheduleSpread.String(), "CronJobScheduleSpread", "CronJobScheduleSpread", 1) + `,`,
+ 		`}`,
+ 	}, "")
+ 	return s
+@@ -784,6 +849,75 @@ func (m *CronJobList) Unmarshal(dAtA []byte) error {
+ 	}
+ 	return nil
+ }
++func (m *CronJobScheduleSpread) Unmarshal(dAtA []byte) error {
++	l := len(dAtA)
++	iNdEx := 0
++	for iNdEx < l {
++		preIndex := iNdEx
++		var wire uint64
++		for shift := uint(0); ; shift += 7 {
++			if shift >= 64 {
++				return ErrIntOverflowGenerated
++			}
++			if iNdEx >= l {
++				return io.ErrUnexpectedEOF
++			}
++			b := dAtA[iNdEx]
++			iNdEx++
++			wire |= uint64(b&0x7F) << shift
++			if b < 0x80 {
++				break
++			}
++		}
++		fieldNum := int32(wire >> 3)
++		wireType := int(wire & 0x7)
++		if wireType == 4 {
++			return fmt.Errorf("proto: CronJobScheduleSpread: wiretype end group for non-group")
++		}
++		if fieldNum <= 0 {
++			return fmt.Errorf("proto: CronJobScheduleSpread: illegal tag %d (wire type %d)", fieldNum, wire)
++		}
++		switch fieldNum {
++		case 1:
++			if wireType != 0 {
++				return fmt.Errorf("proto: wrong wireType = %d for field MaxDelaySeconds", wireType)
++			}
++			m.MaxDelaySeconds = 0
++			for shift := uint(0); ; shift += 7 {
++				if shift >= 64 {
++					return ErrIntOverflowGenerated
++				}
++				if iNdEx >= l {
++					return io.ErrUnexpectedEOF
++				}
++				b := dAtA[iNdEx]
++				iNdEx++
++				m.MaxDelaySeconds |= int32(b&0x7F) << shift
++				if b < 0x80 {
++					break
++				}
++			}
++		default:
++			iNdEx = preIndex
++			skippy, err := skipGenerated(dAtA[iNdEx:])
++			if err != nil {
++				return err
++			}
++			if (skippy < 0) || (iNdEx+skippy) < 0 {
++				return ErrInvalidLengthGenerated
++			}
++			if (iNdEx + skippy) > l {
++				return io.ErrUnexpectedEOF
++			}
++			iNdEx += skippy
++		}
++	}
++
++	if iNdEx > l {
++		return io.ErrUnexpectedEOF
++	}
++	return nil
++}
+ func (m *CronJobSpec) Unmarshal(dAtA []byte) error {
+ 	l := len(dAtA)
+ 	iNdEx := 0
+@@ -1024,6 +1158,42 @@ func (m *CronJobSpec) Unmarshal(dAtA []byte) error {
+ 			s := string(dAtA[iNdEx:postIndex])
+ 			m.TimeZone = &s
+ 			iNdEx = postIndex
++		case 9:
++			if wireType != 2 {
++				return fmt.Errorf("proto: wrong wireType = %d for field ScheduleSpread", wireType)
++			}
++			var msglen int
++			for shift := uint(0); ; shift += 7 {
++				if shift >= 64 {
++					return ErrIntOverflowGenerated
++				}
++				if iNdEx >= l {
++					return io.ErrUnexpectedEOF
++				}
++				b := dAtA[iNdEx]
++				iNdEx++
++				msglen |= int(b&0x7F) << shift
++				if b < 0x80 {
++					break
++				}
++			}
++			if msglen < 0 {
++				return ErrInvalidLengthGenerated
++			}
++			postIndex := iNdEx + msglen
++			if postIndex < 0 {
++				return ErrInvalidLengthGenerated
++			}
++			if postIndex > l {
++				return io.ErrUnexpectedEOF
++			}
++			if m.ScheduleSpread == nil {
++				m.ScheduleSpread = &CronJobScheduleSpread{}
++			}
++			if err := m.ScheduleSpread.Unmarshal(dAtA[iNdEx:postIndex]); err != nil {
++				return err
++			}
++			iNdEx = postIndex
+ 		default:
+ 			iNdEx = preIndex
+ 			skippy, err := skipGenerated(dAtA[iNdEx:])
+diff --git a/staging/src/k8s.io/api/batch/v1beta1/generated.proto b/staging/src/k8s.io/api/batch/v1beta1/generated.proto
+index 411d681d..90d0fb26 100644
+--- a/staging/src/k8s.io/api/batch/v1beta1/generated.proto
++++ b/staging/src/k8s.io/api/batch/v1beta1/generated.proto
+@@ -60,6 +60,15 @@ message CronJobList {
+   repeated CronJob items = 2;
+ }
+ 
++// CronJobScheduleSpread describes how the runs of a CronJob are spread in time.
++message CronJobScheduleSpread {
++  // maxDelaySeconds is the exclusive upper bound, in seconds, of the offset
++  // added to every scheduled time of the CronJob. It must be between 1 and
++  // 86400 (one day).
++  // +required
++  optional int32 maxDelaySeconds = 1;
++}
++
+ // CronJobSpec describes how the job execution will look like and when it will actually run.
+ message CronJobSpec {
+   // The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.
+@@ -112,6 +121,19 @@ message CronJobSpec {
+   // Defaults to 1.
+   // +optional
+   optional int32 failedJobsHistoryLimit = 7;
++
++  // scheduleSpread delays every run of this CronJob by a stable, per-CronJob
++  // offset, so that many CronJobs sharing the same schedule do not all start
++  // at the same instant. The offset is a whole number of seconds in
++  // [0, scheduleSpread.maxDelaySeconds), derived from a hash of the CronJob's
++  // UID; it does not change across controller restarts or updates to the
++  // CronJob. All other scheduling rules (startingDeadlineSeconds,
++  // concurrencyPolicy, suspend, status.lastScheduleTime) apply to the delayed
++  // times. This field is alpha-level and is only honored by servers that enable
++  // the CronJobScheduleSpread feature.
++  // +featureGate=CronJobScheduleSpread
++  // +optional
++  optional CronJobScheduleSpread scheduleSpread = 9;
+ }
+ 
+ // CronJobStatus represents the current state of a cron job.
+diff --git a/staging/src/k8s.io/api/batch/v1beta1/types.go b/staging/src/k8s.io/api/batch/v1beta1/types.go
+index dea910b8..bd8079ef 100644
+--- a/staging/src/k8s.io/api/batch/v1beta1/types.go
++++ b/staging/src/k8s.io/api/batch/v1beta1/types.go
+@@ -135,6 +135,28 @@ type CronJobSpec struct {
+ 	// Defaults to 1.
+ 	// +optional
+ 	FailedJobsHistoryLimit *int32 `json:"failedJobsHistoryLimit,omitempty" protobuf:"varint,7,opt,name=failedJobsHistoryLimit"`
++
++	// scheduleSpread delays every run of this CronJob by a stable, per-CronJob
++	// offset, so that many CronJobs sharing the same schedule do not all start
++	// at the same instant. The offset is a whole number of seconds in
++	// [0, scheduleSpread.maxDelaySeconds), derived from a hash of the CronJob's
++	// UID; it does not change across controller restarts or updates to the
++	// CronJob. All other scheduling rules (startingDeadlineSeconds,
++	// concurrencyPolicy, suspend, status.lastScheduleTime) apply to the delayed
++	// times. This field is alpha-level and is only honored by servers that enable
++	// the CronJobScheduleSpread feature.
++	// +featureGate=CronJobScheduleSpread
++	// +optional
++	ScheduleSpread *CronJobScheduleSpread `json:"scheduleSpread,omitempty" protobuf:"bytes,9,opt,name=scheduleSpread"`
++}
++
++// CronJobScheduleSpread describes how the runs of a CronJob are spread in time.
++type CronJobScheduleSpread struct {
++	// maxDelaySeconds is the exclusive upper bound, in seconds, of the offset
++	// added to every scheduled time of the CronJob. It must be between 1 and
++	// 86400 (one day).
++	// +required
++	MaxDelaySeconds int32 `json:"maxDelaySeconds" protobuf:"varint,1,opt,name=maxDelaySeconds"`
+ }
+ 
+ // ConcurrencyPolicy describes how the job will be handled.
+diff --git a/staging/src/k8s.io/api/batch/v1beta1/types_swagger_doc_generated.go b/staging/src/k8s.io/api/batch/v1beta1/types_swagger_doc_generated.go
+index 3b3eafe8..75f4b213 100644
+--- a/staging/src/k8s.io/api/batch/v1beta1/types_swagger_doc_generated.go
++++ b/staging/src/k8s.io/api/batch/v1beta1/types_swagger_doc_generated.go
+@@ -48,6 +48,15 @@ func (CronJobList) SwaggerDoc() map[string]string {
+ 	return map_CronJobList
+ }
+ 
++var map_CronJobScheduleSpread = map[string]string{
++	"":                "CronJobScheduleSpread describes how the runs of a CronJob are spread in time.",
++	"maxDelaySeconds": "maxDelaySeconds is the exclusive upper bound, in seconds, of the offset added to every scheduled time of the CronJob. It must be between 1 and 86400 (one day).",
++}
++
++func (CronJobScheduleSpread) SwaggerDoc() map[string]string {
++	return map_CronJobScheduleSpread
++}
++
+ var map_CronJobSpec = map[string]string{
+ 	"":                           "CronJobSpec describes how the job execution will look like and when it will actually run.",
+ 	"schedule":                   "The schedule in Cron format, see https://en.wikipedia.org/wiki/Cron.",
+@@ -58,6 +67,7 @@ var map_CronJobSpec = map[string]string{
+ 	"jobTemplate":                "Specifies the job that will be created when executing a CronJob.",
+ 	"successfulJobsHistoryLimit": "The number of successful finished jobs to retain. This is a pointer to distinguish between explicit zero and not specified. Defaults to 3.",
+ 	"failedJobsHistoryLimit":     "The number of failed finished jobs to retain. This is a pointer to distinguish between explicit zero and not specified. Defaults to 1.",
++	"scheduleSpread":             "scheduleSpread delays every run of this CronJob by a stable, per-CronJob offset, so that many CronJobs sharing the same schedule do not all start at the same instant. The offset is a whole number of seconds in [0, scheduleSpread.maxDelaySeconds), derived from a hash of the CronJob's UID; it does not change across controller restarts or updates to the CronJob. All other scheduling rules (startingDeadlineSeconds, concurrencyPolicy, suspend, status.lastScheduleTime) apply to the delayed times. This field is alpha-level and is only honored by servers that enable the CronJobScheduleSpread feature.",
+ }
+ 
+ func (CronJobSpec) SwaggerDoc() map[string]string {
+diff --git a/staging/src/k8s.io/api/batch/v1beta1/zz_generated.deepcopy.go b/staging/src/k8s.io/api/batch/v1beta1/zz_generated.deepcopy.go
+index 2c857033..e4239ed3 100644
+--- a/staging/src/k8s.io/api/batch/v1beta1/zz_generated.deepcopy.go
++++ b/staging/src/k8s.io/api/batch/v1beta1/zz_generated.deepcopy.go
+@@ -87,6 +87,22 @@ func (in *CronJobList) DeepCopyObject() runtime.Object {
+ 	return nil
+ }
+ 
++// DeepCopyInto is an autogenerated deepcopy function, copying the receiver, writing into out. in must be non-nil.
++func (in *CronJobScheduleSpread) DeepCopyInto(out *CronJobScheduleSpread) {
++	*out = *in
++	return
++}
++
++// DeepCopy is an autogenerated deepcopy function, copying the receiver, creating a new CronJobScheduleSpread.
++func (in *CronJobScheduleSpread) DeepCopy() *CronJobScheduleSpread {
++	if in == nil {
++		return nil
++	}
++	out := new(CronJobScheduleSpread)
++	in.DeepCopyInto(out)
++	return out
++}
++
+ // DeepCopyInto is an autogenerated deepcopy function, copying the receiver, writing into out. in must be non-nil.
+ func (in *CronJobSpec) DeepCopyInto(out *CronJobSpec) {
+ 	*out = *in
+@@ -116,6 +132,11 @@ func (in *CronJobSpec) DeepCopyInto(out *CronJobSpec) {
+ 		*out = new(int32)
+ 		**out = **in
+ 	}
++	if in.ScheduleSpread != nil {
++		in, out := &in.ScheduleSpread, &out.ScheduleSpread
++		*out = new(CronJobScheduleSpread)
++		**out = **in
++	}
+ 	return
+ }
+ 
+diff --git a/staging/src/k8s.io/api/batch/v1beta1/zz_generated.model_name.go b/staging/src/k8s.io/api/batch/v1beta1/zz_generated.model_name.go
+index 77fe2f66..c6b61489 100644
+--- a/staging/src/k8s.io/api/batch/v1beta1/zz_generated.model_name.go
++++ b/staging/src/k8s.io/api/batch/v1beta1/zz_generated.model_name.go
+@@ -31,6 +31,11 @@ func (in CronJobList) OpenAPIModelName() string {
+ 	return "io.k8s.api.batch.v1beta1.CronJobList"
+ }
+ 
++// OpenAPIModelName returns the OpenAPI model name for this type.
++func (in CronJobScheduleSpread) OpenAPIModelName() string {
++	return "io.k8s.api.batch.v1beta1.CronJobScheduleSpread"
++}
++
+ // OpenAPIModelName returns the OpenAPI model name for this type.
+ func (in CronJobSpec) OpenAPIModelName() string {
+ 	return "io.k8s.api.batch.v1beta1.CronJobSpec"
+diff --git a/staging/src/k8s.io/api/testdata/HEAD/batch.v1.CronJob.json b/staging/src/k8s.io/api/testdata/HEAD/batch.v1.CronJob.json
+index ab1a0427..32cfbef7 100644
+--- a/staging/src/k8s.io/api/testdata/HEAD/batch.v1.CronJob.json
++++ b/staging/src/k8s.io/api/testdata/HEAD/batch.v1.CronJob.json
+@@ -2023,7 +2023,10 @@
+       }
+     },
+     "successfulJobsHistoryLimit": 6,
+-    "failedJobsHistoryLimit": 7
++    "failedJobsHistoryLimit": 7,
++    "scheduleSpread": {
++      "maxDelaySeconds": 1
++    }
+   },
+   "status": {
+     "active": [
+diff --git a/staging/src/k8s.io/api/testdata/HEAD/batch.v1.CronJob.pb b/staging/src/k8s.io/api/testdata/HEAD/batch.v1.CronJob.pb
+index 375107cf7eb7930c99112824254a0d6b74b5f9b8..d8dae98572127367b9927ee5e5836e794e8d601c 100644
+GIT binary patch
+delta 30
+mcmX?}bUJB*6w~UY%^Mg~7#WXkZe(=UXYpd<V4Qr!pcw$T$O@_e
+
+delta 25
+hcmX?|bUbN-6w~sg%^Mg~7#R<3Ze(=UpM1ig832q@3QYh2
+
+diff --git a/staging/src/k8s.io/api/testdata/HEAD/batch.v1.CronJob.yaml b/staging/src/k8s.io/api/testdata/HEAD/batch.v1.CronJob.yaml
+index f31f2638..9be6eb0c 100644
+--- a/staging/src/k8s.io/api/testdata/HEAD/batch.v1.CronJob.yaml
++++ b/staging/src/k8s.io/api/testdata/HEAD/batch.v1.CronJob.yaml
+@@ -1395,6 +1395,8 @@ spec:
+               volumePath: volumePathValue
+       ttlSecondsAfterFinished: 8
+   schedule: scheduleValue
++  scheduleSpread:
++    maxDelaySeconds: 1
+   startingDeadlineSeconds: 2
+   successfulJobsHistoryLimit: 6
+   suspend: true
+diff --git a/staging/src/k8s.io/api/testdata/HEAD/batch.v1beta1.CronJob.json b/staging/src/k8s.io/api/testdata/HEAD/batch.v1beta1.CronJob.json
+index 58985ede..a2d51d55 100644
+--- a/staging/src/k8s.io/api/testdata/HEAD/batch.v1beta1.CronJob.json
++++ b/staging/src/k8s.io/api/testdata/HEAD/batch.v1beta1.CronJob.json
+@@ -2023,7 +2023,10 @@
+       }
+     },
+     "successfulJobsHistoryLimit": 6,
+-    "failedJobsHistoryLimit": 7
++    "failedJobsHistoryLimit": 7,
++    "scheduleSpread": {
++      "maxDelaySeconds": 1
++    }
+   },
+   "status": {
+     "active": [
+diff --git a/staging/src/k8s.io/api/testdata/HEAD/batch.v1beta1.CronJob.pb b/staging/src/k8s.io/api/testdata/HEAD/batch.v1beta1.CronJob.pb
+index 89a9bf9bc76ee57f78e1cafb0f540e101c327a00..88674cc875c4932e690aed53b6df416607935949 100644
+GIT binary patch
+delta 28
+kcmX?;bRlViJmcz(3aN~Y$2PYyI_tA|F>x?XK55Vl0G@vd&Hw-a
+
+delta 23
+fcmcbRbS7znJmd0>3aN~Yhc>q{I_pn9YtRe;c6JGI
+
+diff --git a/staging/src/k8s.io/api/testdata/HEAD/batch.v1beta1.CronJob.yaml b/staging/src/k8s.io/api/testdata/HEAD/batch.v1beta1.CronJob.yaml
+index 53cb9a18..d8116fe7 100644
+--- a/staging/src/k8s.io/api/testdata/HEAD/batch.v1beta1.CronJob.yaml
++++ b/staging/src/k8s.io/api/testdata/HEAD/batch.v1beta1.CronJob.yaml
+@@ -1395,6 +1395,8 @@ spec:
+               volumePath: volumePathValue
+       ttlSecondsAfterFinished: 8
+   schedule: scheduleValue
++  scheduleSpread:
++    maxDelaySeconds: 1
+   startingDeadlineSeconds: 2
+   successfulJobsHistoryLimit: 6
+   suspend: true
+diff --git a/staging/src/k8s.io/client-go/applyconfigurations/batch/v1/cronjobschedulespread.go b/staging/src/k8s.io/client-go/applyconfigurations/batch/v1/cronjobschedulespread.go
+new file mode 100644
+index 00000000..65804ec0
+--- /dev/null
++++ b/staging/src/k8s.io/client-go/applyconfigurations/batch/v1/cronjobschedulespread.go
+@@ -0,0 +1,44 @@
++/*
++Copyright The Kubernetes Authors.
++
++Licensed under the Apache License, Version 2.0 (the "License");
++you may not use this file except in compliance with the License.
++You may obtain a copy of the License at
++
++    http://www.apache.org/licenses/LICENSE-2.0
++
++Unless required by applicable law or agreed to in writing, software
++distributed under the License is distributed on an "AS IS" BASIS,
++WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++See the License for the specific language governing permissions and
++limitations under the License.
++*/
++
++// Code generated by applyconfiguration-gen. DO NOT EDIT.
++
++package v1
++
++// CronJobScheduleSpreadApplyConfiguration represents a declarative configuration of the CronJobScheduleSpread type for use
++// with apply.
++//
++// CronJobScheduleSpread describes how the runs of a CronJob are spread in time.
++type CronJobScheduleSpreadApplyConfiguration struct {
++	// maxDelaySeconds is the exclusive upper bound, in seconds, of the offset
++	// added to every scheduled time of the CronJob. It must be between 1 and
++	// 86400 (one day).
++	MaxDelaySeconds *int32 `json:"maxDelaySeconds,omitempty"`
++}
++
++// CronJobScheduleSpreadApplyConfiguration constructs a declarative configuration of the CronJobScheduleSpread type for use with
++// apply.
++func CronJobScheduleSpread() *CronJobScheduleSpreadApplyConfiguration {
++	return &CronJobScheduleSpreadApplyConfiguration{}
++}
++
++// WithMaxDelaySeconds sets the MaxDelaySeconds field in the declarative configuration to the given value
++// and returns the receiver, so that objects can be built by chaining "With" function invocations.
++// If called multiple times, the MaxDelaySeconds field is set to the value of the last call.
++func (b *CronJobScheduleSpreadApplyConfiguration) WithMaxDelaySeconds(value int32) *CronJobScheduleSpreadApplyConfiguration {
++	b.MaxDelaySeconds = &value
++	return b
++}
+diff --git a/staging/src/k8s.io/client-go/applyconfigurations/batch/v1/cronjobspec.go b/staging/src/k8s.io/client-go/applyconfigurations/batch/v1/cronjobspec.go
+index f76d58ba..b7848a95 100644
+--- a/staging/src/k8s.io/client-go/applyconfigurations/batch/v1/cronjobspec.go
++++ b/staging/src/k8s.io/client-go/applyconfigurations/batch/v1/cronjobspec.go
+@@ -60,6 +60,16 @@ type CronJobSpecApplyConfiguration struct {
+ 	// The number of failed finished jobs to retain. Value must be non-negative integer.
+ 	// Defaults to 1.
+ 	FailedJobsHistoryLimit *int32 `json:"failedJobsHistoryLimit,omitempty"`
++	// scheduleSpread delays every run of this CronJob by a stable, per-CronJob
++	// offset, so that many CronJobs sharing the same schedule do not all start
++	// at the same instant. The offset is a whole number of seconds in
++	// [0, scheduleSpread.maxDelaySeconds), derived from a hash of the CronJob's
++	// UID; it does not change across controller restarts or updates to the
++	// CronJob. All other scheduling rules (startingDeadlineSeconds,
++	// concurrencyPolicy, suspend, status.lastScheduleTime) apply to the delayed
++	// times. This field is alpha-level and is only honored by servers that enable
++	// the CronJobScheduleSpread feature.
++	ScheduleSpread *CronJobScheduleSpreadApplyConfiguration `json:"scheduleSpread,omitempty"`
+ }
+ 
+ // CronJobSpecApplyConfiguration constructs a declarative configuration of the CronJobSpec type for use with
+@@ -131,3 +141,11 @@ func (b *CronJobSpecApplyConfiguration) WithFailedJobsHistoryLimit(value int32)
+ 	b.FailedJobsHistoryLimit = &value
+ 	return b
+ }
++
++// WithScheduleSpread sets the ScheduleSpread field in the declarative configuration to the given value
++// and returns the receiver, so that objects can be built by chaining "With" function invocations.
++// If called multiple times, the ScheduleSpread field is set to the value of the last call.
++func (b *CronJobSpecApplyConfiguration) WithScheduleSpread(value *CronJobScheduleSpreadApplyConfiguration) *CronJobSpecApplyConfiguration {
++	b.ScheduleSpread = value
++	return b
++}
+diff --git a/staging/src/k8s.io/client-go/applyconfigurations/batch/v1beta1/cronjobschedulespread.go b/staging/src/k8s.io/client-go/applyconfigurations/batch/v1beta1/cronjobschedulespread.go
+new file mode 100644
+index 00000000..d426d8b9
+--- /dev/null
++++ b/staging/src/k8s.io/client-go/applyconfigurations/batch/v1beta1/cronjobschedulespread.go
+@@ -0,0 +1,44 @@
++/*
++Copyright The Kubernetes Authors.
++
++Licensed under the Apache License, Version 2.0 (the "License");
++you may not use this file except in compliance with the License.
++You may obtain a copy of the License at
++
++    http://www.apache.org/licenses/LICENSE-2.0
++
++Unless required by applicable law or agreed to in writing, software
++distributed under the License is distributed on an "AS IS" BASIS,
++WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
++See the License for the specific language governing permissions and
++limitations under the License.
++*/
++
++// Code generated by applyconfiguration-gen. DO NOT EDIT.
++
++package v1beta1
++
++// CronJobScheduleSpreadApplyConfiguration represents a declarative configuration of the CronJobScheduleSpread type for use
++// with apply.
++//
++// CronJobScheduleSpread describes how the runs of a CronJob are spread in time.
++type CronJobScheduleSpreadApplyConfiguration struct {
++	// maxDelaySeconds is the exclusive upper bound, in seconds, of the offset
++	// added to every scheduled time of the CronJob. It must be between 1 and
++	// 86400 (one day).
++	MaxDelaySeconds *int32 `json:"maxDelaySeconds,omitempty"`
++}
++
++// CronJobScheduleSpreadApplyConfiguration constructs a declarative configuration of the CronJobScheduleSpread type for use with
++// apply.
++func CronJobScheduleSpread() *CronJobScheduleSpreadApplyConfiguration {
++	return &CronJobScheduleSpreadApplyConfiguration{}
++}
++
++// WithMaxDelaySeconds sets the MaxDelaySeconds field in the declarative configuration to the given value
++// and returns the receiver, so that objects can be built by chaining "With" function invocations.
++// If called multiple times, the MaxDelaySeconds field is set to the value of the last call.
++func (b *CronJobScheduleSpreadApplyConfiguration) WithMaxDelaySeconds(value int32) *CronJobScheduleSpreadApplyConfiguration {
++	b.MaxDelaySeconds = &value
++	return b
++}
+diff --git a/staging/src/k8s.io/client-go/applyconfigurations/batch/v1beta1/cronjobspec.go b/staging/src/k8s.io/client-go/applyconfigurations/batch/v1beta1/cronjobspec.go
+index 0a15bc89..7f087125 100644
+--- a/staging/src/k8s.io/client-go/applyconfigurations/batch/v1beta1/cronjobspec.go
++++ b/staging/src/k8s.io/client-go/applyconfigurations/batch/v1beta1/cronjobspec.go
+@@ -62,6 +62,16 @@ type CronJobSpecApplyConfiguration struct {
+ 	// This is a pointer to distinguish between explicit zero and not specified.
+ 	// Defaults to 1.
+ 	FailedJobsHistoryLimit *int32 `json:"failedJobsHistoryLimit,omitempty"`
++	// scheduleSpread delays every run of this CronJob by a stable, per-CronJob
++	// offset, so that many CronJobs sharing the same schedule do not all start
++	// at the same instant. The offset is a whole number of seconds in
++	// [0, scheduleSpread.maxDelaySeconds), derived from a hash of the CronJob's
++	// UID; it does not change across controller restarts or updates to the
++	// CronJob. All other scheduling rules (startingDeadlineSeconds,
++	// concurrencyPolicy, suspend, status.lastScheduleTime) apply to the delayed
++	// times. This field is alpha-level and is only honored by servers that enable
++	// the CronJobScheduleSpread feature.
++	ScheduleSpread *CronJobScheduleSpreadApplyConfiguration `json:"scheduleSpread,omitempty"`
+ }
+ 
+ // CronJobSpecApplyConfiguration constructs a declarative configuration of the CronJobSpec type for use with
+@@ -133,3 +143,11 @@ func (b *CronJobSpecApplyConfiguration) WithFailedJobsHistoryLimit(value int32)
+ 	b.FailedJobsHistoryLimit = &value
+ 	return b
+ }
++
++// WithScheduleSpread sets the ScheduleSpread field in the declarative configuration to the given value
++// and returns the receiver, so that objects can be built by chaining "With" function invocations.
++// If called multiple times, the ScheduleSpread field is set to the value of the last call.
++func (b *CronJobSpecApplyConfiguration) WithScheduleSpread(value *CronJobScheduleSpreadApplyConfiguration) *CronJobSpecApplyConfiguration {
++	b.ScheduleSpread = value
++	return b
++}
+diff --git a/staging/src/k8s.io/client-go/applyconfigurations/internal/internal.go b/staging/src/k8s.io/client-go/applyconfigurations/internal/internal.go
+index a8007a3d..fa0cde0a 100644
+--- a/staging/src/k8s.io/client-go/applyconfigurations/internal/internal.go
++++ b/staging/src/k8s.io/client-go/applyconfigurations/internal/internal.go
+@@ -3432,6 +3432,13 @@ var schemaYAML = typed.YAMLObject(`types:
+       type:
+         namedType: io.k8s.api.batch.v1.CronJobStatus
+       default: {}
++- name: io.k8s.api.batch.v1.CronJobScheduleSpread
++  map:
++    fields:
++    - name: maxDelaySeconds
++      type:
++        scalar: numeric
++      default: 0
+ - name: io.k8s.api.batch.v1.CronJobSpec
+   map:
+     fields:
+@@ -3449,6 +3456,9 @@ var schemaYAML = typed.YAMLObject(`types:
+       type:
+         scalar: string
+       default: ""
++    - name: scheduleSpread
++      type:
++        namedType: io.k8s.api.batch.v1.CronJobScheduleSpread
+     - name: startingDeadlineSeconds
+       type:
+         scalar: numeric
+@@ -3751,6 +3761,13 @@ var schemaYAML = typed.YAMLObject(`types:
+       type:
+         namedType: io.k8s.api.batch.v1beta1.CronJobStatus
+       default: {}
++- name: io.k8s.api.batch.v1beta1.CronJobScheduleSpread
++  map:
++    fields:
++    - name: maxDelaySeconds
++      type:
++        scalar: numeric
++      default: 0
+ - name: io.k8s.api.batch.v1beta1.CronJobSpec
+   map:
+     fields:
+@@ -3768,6 +3785,9 @@ var schemaYAML = typed.YAMLObject(`types:
+       type:
+         scalar: string
+       default: ""
++    - name: scheduleSpread
++      type:
++        namedType: io.k8s.api.batch.v1beta1.CronJobScheduleSpread
+     - name: startingDeadlineSeconds
+       type:
+         scalar: numeric
+diff --git a/staging/src/k8s.io/client-go/applyconfigurations/utils.go b/staging/src/k8s.io/client-go/applyconfigurations/utils.go
+index f498c284..40225b19 100644
+--- a/staging/src/k8s.io/client-go/applyconfigurations/utils.go
++++ b/staging/src/k8s.io/client-go/applyconfigurations/utils.go
+@@ -506,6 +506,8 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
+ 		// Group=batch, Version=v1
+ 	case batchv1.SchemeGroupVersion.WithKind("CronJob"):
+ 		return &applyconfigurationsbatchv1.CronJobApplyConfiguration{}
++	case batchv1.SchemeGroupVersion.WithKind("CronJobScheduleSpread"):
++		return &applyconfigurationsbatchv1.CronJobScheduleSpreadApplyConfiguration{}
+ 	case batchv1.SchemeGroupVersion.WithKind("CronJobSpec"):
+ 		return &applyconfigurationsbatchv1.CronJobSpecApplyConfiguration{}
+ 	case batchv1.SchemeGroupVersion.WithKind("CronJobStatus"):
+@@ -540,6 +542,8 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
+ 		// Group=batch, Version=v1beta1
+ 	case batchv1beta1.SchemeGroupVersion.WithKind("CronJob"):
+ 		return &applyconfigurationsbatchv1beta1.CronJobApplyConfiguration{}
++	case batchv1beta1.SchemeGroupVersion.WithKind("CronJobScheduleSpread"):
++		return &applyconfigurationsbatchv1beta1.CronJobScheduleSpreadApplyConfiguration{}
+ 	case batchv1beta1.SchemeGroupVersion.WithKind("CronJobSpec"):
+ 		return &applyconfigurationsbatchv1beta1.CronJobSpecApplyConfiguration{}
+ 	case batchv1beta1.SchemeGroupVersion.WithKind("CronJobStatus"):
+-- 
+2.39.5
+

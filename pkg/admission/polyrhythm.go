@@ -38,16 +38,23 @@ func Polyrhythm(taken Taken) Handler {
 			return Allow()
 		}
 		rest := strings.Join(fields[1:], " ")
-		minute := Beat(req.Namespace+"/"+req.Name, taken(r.Context(), rest, req.Namespace+"/"+req.Name))
+		key := req.Namespace + "/" + req.Name
 		step := 0
 		if m := strings.TrimPrefix(fields[0], "H"); strings.HasPrefix(m, "/") {
 			step, _ = strconv.Atoi(m[1:])
 		}
 		var min string
 		if step > 0 && step < 60 {
-			min = strconv.Itoa(minute%step) + "/" + strconv.Itoa(step)
+			// H/step plays once per step minutes: choose the beat among the
+			// step offsets, so a taken offset moves to the next free offset
+			// instead of wrapping onto offset 0.
+			inStep := map[int]bool{}
+			for m := range taken(r.Context(), rest, key) {
+				inStep[m%step] = true
+			}
+			min = strconv.Itoa(BeatIn(key, inStep, step)) + "/" + strconv.Itoa(step)
 		} else {
-			min = strconv.Itoa(minute)
+			min = strconv.Itoa(Beat(key, taken(r.Context(), rest, key)))
 		}
 		schedule := min + " " + rest
 		ops := []map[string]any{{"op": "replace", "path": "/spec/schedule", "value": schedule}}
@@ -60,13 +67,17 @@ func Polyrhythm(taken Taken) Handler {
 }
 
 // Beat picks a minute from the hash of key, moving forward past taken minutes.
-func Beat(key string, taken map[int]bool) int {
+func Beat(key string, taken map[int]bool) int { return BeatIn(key, taken, 60) }
+
+// BeatIn picks a beat in [0, n) from the hash of key, moving forward past
+// taken beats; when every beat is taken, the hashed one is shared.
+func BeatIn(key string, taken map[int]bool, n int) int {
 	h := fnv.New32a()
 	_, _ = h.Write([]byte(key))
-	m := int(h.Sum32() % 60)
-	for i := 0; i < 60; i++ {
-		if !taken[(m+i)%60] {
-			return (m + i) % 60
+	m := int(h.Sum32() % uint32(n))
+	for i := 0; i < n; i++ {
+		if !taken[(m+i)%n] {
+			return (m + i) % n
 		}
 	}
 	return m

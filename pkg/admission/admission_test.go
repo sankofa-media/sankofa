@@ -92,6 +92,28 @@ func TestPolyrhythm(t *testing.T) {
 	}
 }
 
+// H/step chooses among the step offsets: with every offset but one taken,
+// the job gets the free one, not offset 0 (the old wrap-around bias).
+func TestPolyrhythmStep(t *testing.T) {
+	cj := map[string]any{"apiVersion": "batch/v1", "kind": "CronJob", "metadata": map[string]any{"name": "sync", "namespace": "db"}, "spec": map[string]any{"schedule": "H/10 * * * *"}}
+	free := (BeatIn("db/sync", nil, 10) + 7) % 10
+	taken := func(context.Context, string, string) map[int]bool {
+		out := map[int]bool{}
+		for m := 0; m < 10; m++ {
+			if m != free {
+				out[m] = true
+			}
+		}
+		return out
+	}
+	resp := Polyrhythm(taken)(r, &admissionv1.AdmissionRequest{Operation: admissionv1.Create, Name: "sync", Namespace: "db", Object: raw(cj)})
+	var ops []map[string]any
+	_ = json.Unmarshal(resp.Patch, &ops)
+	if got, want := ops[0]["value"].(string), itoa(free)+"/10 * * * *"; got != want {
+		t.Fatalf("schedule %q, want %q", got, want)
+	}
+}
+
 func itoa(i int) string { b, _ := json.Marshal(i); return string(b) }
 
 func TestCredits(t *testing.T) {
