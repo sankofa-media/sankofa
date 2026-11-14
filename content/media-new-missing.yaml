@@ -1,12 +1,911 @@
 afro-turks:
-  reason: Festival photographs found on Commons were sourced from Voice of America, excluded by the no-news-site
-    rule. No independently licensed documentary alternative was verified.
-  reviewed_urls:
-  - https://commons.wikimedia.org/wiki/File:Dana_Bayramı_01.jpg
+  reason: The relevant festival photographs found were sourced from Voice of America. No independent documentary
+    alternative with verified rights was found.
+  category: excluded_news_source
+  checked_on: '2026-11-14'
+  search_terms:
+  - Mustafa Olpak
+  - Afro Turks festival
+alice-ball:
+  reason: The 1915 portrait has a generic public-domain claim without a specific publication or copyright-expiry
+    basis; the additional yearbook results depict unrelated people.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Alice Ball 1915 yearbook
+  - Alice Ball yearbook
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Colorado_College_Nugget_(yearbook)_(1904)_(14592944177).jpg
+  - https://commons.wikimedia.org/wiki/File:Jambalaya_(yearbook)_1917_(1917)_(14779633074).jpg
+  - https://commons.wikimedia.org/wiki/File:Colorado_College_Nugget_(yearbook)_(1906)_(14781803675).jpg
+  - https://commons.wikimedia.org/wiki/File:Colorado_College_Nugget_(yearbook)_(1904)_(14799319203).jpg
 all-negro-hour:
-  reason: Searches for the programme and Jack L. Cooper returned unrelated material or later magazine
-    pages without verified usable rights; no programme photograph was verified.
+  reason: Searches for the programme and Jack L. Cooper did not locate a relevant programme document,
+    studio photograph or portrait with verifiable rights.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Jack L Cooper
+  - '"Jack Cooper" radio'
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Walter_Crane_-_The_House_that_Jack_Built_-_Google_Art_Project.jpg
+  - https://commons.wikimedia.org/wiki/File:Jet_19_Mar_1953_pg_PA56.jpg
+  - https://commons.wikimedia.org/wiki/File:A_Farewell_to_Arms_(1932_film)_5.jpg
+  - https://commons.wikimedia.org/wiki/File:A_Farewell_to_Arms_(1932_film)_5-alt.jpg
 bassa-vah:
-  reason: Available alphabet diagrams are modern renderings; screenshots credited to uploaders do not
-    establish permission from the underlying source. No documentary manuscript photograph with verified
+  reason: The available Bassa Vah candidates were modern alphabet renderings or screenshots with unclear
+    underlying authorship; no documentary manuscript was verified.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Bassa Vah
+  - Bamum manuscript
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Escritura_bassa_vah.png
+  - https://commons.wikimedia.org/wiki/File:Bassa_tones.jpg
+  - https://commons.wikimedia.org/wiki/File:Striped_bass_FWS_1.jpg
+  - https://commons.wikimedia.org/wiki/File:Bassa_alphabet.jpg
+birchtown:
+  reason: The relevant photographs reproduce a modern illustrated interpretation panel. The photograph's
+    licence does not establish rights in that panel.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Birchtown
+  - Birchtown Nova Scotia
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Birchtown,_Nova_Scotia_(cropped).jpg
+  - https://commons.wikimedia.org/wiki/File:Birchtown,_Nova_Scotia.jpg
+  - https://commons.wikimedia.org/wiki/File:The_Famous_Bluenose_(Restored).jpg
+bouabre-bete-script:
+  reason: Candidates reproduce modern Bété artwork or alphabet drawings; no licence covering the underlying
+    artwork or documentary manuscript was established.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Frederic Bruly Bouabre
+  - Bete writing manuscript
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Ecriture_B%C3%A9t%C3%A9.jpg
+  - https://commons.wikimedia.org/wiki/File:Fr%C3%A9d%C3%A9ric_Bruly_Bouabr%C3%A9,_GRE%3DGLE_N%C2%B0141.jpg
+  - https://commons.wikimedia.org/wiki/File:Fr%C3%A9d%C3%A9ric_Bruly_Bouabr%C3%A9,_GRO%3DGLO_N%C2%B0146.jpg
+  - https://commons.wikimedia.org/wiki/File:Fr%C3%A9d%C3%A9ric_Bruly_Bouabr%C3%A9_Digital_painting.png
+carlota-lucumi:
+  reason: Carlota and Triunvirato searches returned namesakes or unrelated historical material; no suitable
+    photograph of the relevant Cuban site was verified.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Carlota Triunvirato
+  - Triunvirato Cuba
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Carlota_Corday_1889,_Arturo_Michelena.jpg
+  - https://commons.wikimedia.org/wiki/File:Carlota_Millanes_Allue.jpg
+  - https://commons.wikimedia.org/wiki/File:Detail_in_Carlota_Corday.jpg
+  - https://commons.wikimedia.org/wiki/File:Barbie_dolls_and_Carlota_Alfaro_20090827.png
+catherine-flon:
+  reason: The square photograph was rejected on visual review because a modern mural dominates it and
+    the mural's rights are not established. Other candidates were modern depictions or insufficiently
+    specific places.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Catherine Flon
+  - Arcahaie Haiti
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Catherine_Flon_(papier_m%C3%A2ch%C3%A9).jpg
+  - https://commons.wikimedia.org/wiki/File:Place_de_Catherine_Flon_petirt-Goave!.jpg
+  - https://commons.wikimedia.org/wiki/File:Photo_Esplanade_du_Flon,_Catherine_Leutenegger.jpg
+  - https://commons.wikimedia.org/wiki/File:Place_du_drapeau_ou_Catherine_Flon_%C3%A0_Petit-Go%C3%A2ve.jpg
+circus-1936:
+  reason: The 1936 film-still candidate lacks a sufficiently clear public-domain basis covering its reuse
+    internationally; no independently licensed production photograph was verified.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Circus 1936 film
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Patterson1936cirk.jpg
+  - https://commons.wikimedia.org/wiki/File:Circus_Circus_Reno_North_Tower_(2).jpg
+  - https://commons.wikimedia.org/wiki/File:Circus_macrourus_MHNT.ZOO.2010.11.97.11.jpg
+  - https://commons.wikimedia.org/wiki/File:Circus_pygargus_MHNT.ZOO.2010.11.97.2.jpg
+congos-villa-mella:
+  reason: Searches for the Congos of Villa Mella did not locate a sufficiently identified documentary
+    photograph with verifiable rights.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Congos Villa Mella
+  - Villa Mella congos
+cuba-1912:
+  reason: The party photograph lacks specific provenance and dating sufficient to substantiate its copyright
+    expiry. The historical cartoon is not a suitable substitute for the subject.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Evaristo Estenoz
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Evaristo_Estenoz_Corominas.jpg
+  - https://commons.wikimedia.org/wiki/File:Football_with_heads_of_blacks_Oriente_Cuba.jpg
+  - https://commons.wikimedia.org/wiki/File:Partido_Independiente_de_Color.jpg
+dbc-pirate:
+  reason: No relevant Dread Broadcasting Corporation studio, station or founder photograph with verified
+    rights was located.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Dread Broadcasting
+  - Lepke Dread Broadcasting
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Radio_for_everybody;_being_a_popular_guide_to_practical_radio-phone_reception_and_transmission_and_to_the_dot-and-dash_reception_and_transmission_of_the_radio_telegraph,_for_the_layman_who_wants_to_(14754671481).jpg
+destination-freedom:
+  reason: Searches for Destination Freedom and Richard Durham did not yield a verified programme image
+    or relevant portrait.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Richard Durham
+  - Richard Durham radio
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Richard_Evans_(1784-1871)_-_Dr_Richard_Prosser_(1747%E2%80%931839)_-_18.718_-_Durham_University.jpg
+  - https://commons.wikimedia.org/wiki/File:Durham_Townscape_-_Durham_Indoor_Market_(geograph_3126158).jpg
+  - https://commons.wikimedia.org/wiki/File:Richard_Handley_-_2017_Tour_Series_(Durham).jpg
+  - https://commons.wikimedia.org/wiki/File:Seal_of_Richard_de_Bury.png
+dikenga:
+  reason: The relevant candidates are modern digital diagrams of the Kongo cosmogram; no photographed
+    historical inscribed object was verified.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Kongo cosmogram
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Kongo_Cosmogram_-_blank.png
+  - https://commons.wikimedia.org/wiki/File:Kongo_Cosmogram_02.png
+  - https://commons.wikimedia.org/wiki/File:Kongo_Cosmogram_01.png
+  - https://commons.wikimedia.org/wiki/File:Kongo_Cosmogram_3.png
+drum-magazine:
+  reason: Searches for the South African magazine returned mainly unrelated objects; no issue cover or
+    editorial photograph with clear rights was verified.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Drum magazine
+  - Drum magazine South Africa
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:DaytonDrumMagazine.jpg
+  - https://commons.wikimedia.org/wiki/File:Thompson_Magazine_(cropped,_drum_magazine).JPG
+  - https://commons.wikimedia.org/wiki/File:RPD_belt_drum_noBG.jpg
+  - https://commons.wikimedia.org/wiki/File:Camp_Drum_Powder_Magazine,_2013.jpg
+ella-baker:
+  reason: The historical portrait relies on an unsubstantiated nonrenewal claim; the alternatives include
+    a modern quotation poster or a newspaper reproduction.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Ella Baker
+  - Ella Baker photograph
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Ella_Baker_(1903-1986)_circa_1944.png
+  - https://commons.wikimedia.org/wiki/File:Ella_Baker_photo_with_quote.jpeg
+  - https://commons.wikimedia.org/wiki/File:Ella_J._Baker_1953_Edit.jpg
+  - https://commons.wikimedia.org/wiki/File:Plaque_de_rue_%C3%A9ph%C3%A9m%C3%A8re_%22rue_Ella_Baker%22.jpeg
+eugene-bullard:
+  reason: USAF hosting of First World War French photographs does not establish that they are U.S. government
+    works. The original photographers and an adequate expiry basis were not established.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Eugene Bullard
+  - Eugene Bullard 1917
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Eugene_Jacques_Bullard,_first_African_American_combat_pilot_in_uniform,_First_World_War.jpg
+  - https://commons.wikimedia.org/wiki/File:Eugene_Bullard_photo_montage.jpg
+  - https://commons.wikimedia.org/wiki/File:Eugene_Bullard_group_photo.jpg
+  - https://commons.wikimedia.org/wiki/File:Eugene_Jacques_Bullard_group_photo.jpg
+freedomways:
+  reason: No relevant Freedomways issue, editorial photograph or other documentary image with verified
+    rights was located.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Freedomways
+  - Freedomways journal
+garay:
+  reason: Garay glyph screenshots identify an unclear picture creator; no permission for the underlying
+    material or historical manuscript was verified.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Garay alphabet
+  - Assane Faye Garay
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Garay_N_uppercase.png
+  - https://commons.wikimedia.org/wiki/File:Garay_%C3%89.png
+  - https://commons.wikimedia.org/wiki/File:Garay_U.png
+  - https://commons.wikimedia.org/wiki/File:Garay_%C3%9C.png
+guyana-emancipation-villages:
+  reason: Searches for Victoria village in Guyana did not yield a relevant, identified photograph with
+    verified rights; the returned Victoria images were mostly Canadian namesakes.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Victoria Guyana village
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Detail_of_the_Central_Branch_of_Greater_Victoria_Public_Library,_Victoria,_British_Columbia,_Canada_01.jpg
+  - https://commons.wikimedia.org/wiki/File:Craigdarroch_Castle_just_after_sunset_-_view_from_the_west,_Victoria,_Canada.jpg
+  - https://commons.wikimedia.org/wiki/File:British_Columbia_Parliament_Building_in_Victoria,_British_Columbia,_Canada_07.jpg
+  - https://commons.wikimedia.org/wiki/File:Roof_above_entrance_to_Victoria_Conference_Centre,_Victoria,_British_Columbia,_Canada_09.jpg
+haya-steel:
+  reason: No documentary photograph of Haya ironworking or the relevant furnace remains with verified
+    rights was located.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Haya furnace
+  - Haya iron furnace Tanzania
+independance-cha-cha:
+  reason: The relevant band photographs are promotional or newspaper reproductions whose underlying rights
+    were not adequately established.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Joseph Kabasele
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Joseph_Kabasele_promotional_photo.jpg
+  - https://commons.wikimedia.org/wiki/File:Joseph_Kabasele_and_Vicky_Longomba_performing_at_the_Round_Table_Conference.jpg
+  - https://commons.wikimedia.org/wiki/File:African_Jazz_in_1961.jpg
+  - https://commons.wikimedia.org/wiki/File:F%C3%A9licit%C3%A9_Safouesse_(Jeanne_F%C3%A9licit%C3%A9_Safou-Safouesse).jpg
+jamaican-patois:
+  reason: The relevant results reproduce a modern poem or a screenshot banner; no documentary image with
+    permission covering the underlying content was verified.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Louise Bennett
+  - Louise Bennett Jamaica
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Sep7_Woman_of_the_Day.png
+  - https://commons.wikimedia.org/wiki/File:Natalie_Bennett_Patrick_Harvie_Louise_Batchelor_(14945452508).jpg
+  - https://commons.wikimedia.org/wiki/File:Envelope_showing_Confederate_flag,_addressed_to_Miss_Lou_Taylor,_No._461_Sixth_St.,_Cincinnati,_Ohio_LCCN2013645680.tif
+  - https://commons.wikimedia.org/wiki/File:Louise_Bours_2016.jpg
+john-caesar:
+  reason: The portrait results depict unrelated people called John Caesar, including a seventeenth-century
+    Englishman; no authenticated image or suitable document for the Australian subject was verified.
+  category: misidentified_subject
+  checked_on: '2026-11-14'
+  search_terms:
+  - John Caesar Australia
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:English_Cricketers_in_Australia_1863-4.jpg
+  - https://commons.wikimedia.org/wiki/File:Sir_John_C%C3%A6sar,_PA05637.jpg
+  - https://commons.wikimedia.org/wiki/File:Springs_sky.jpg
+  - https://commons.wikimedia.org/wiki/File:What_A_Dawn%27s_Sight.jpg
+josephine-bakhita:
+  reason: An old Bakhita portrait is claimed as the modern uploader's own work without an identified photographer
+    or provenance. The CC0 declaration does not establish ownership of the original photograph.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Josephine Bakhita
+  - Bakhita Schio church
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Bakhita_Szent_Jozefina.jpeg
+  - https://commons.wikimedia.org/wiki/File:Photograph_of_Saint_Josephine_Bakhita_(c._1910).jpg
+  - https://commons.wikimedia.org/wiki/File:Leanne_Bowen,_Saint_Josephine_Bakhita.webp
+  - https://commons.wikimedia.org/wiki/File:Janet_Mckenzie,_St._Josephine_Bakhita.webp
+julia-tv:
+  reason: Publicity photographs rely on unverified absence-of-notice claims; another relevant portrait
+    originates with the Los Angeles Times. No eligible alternative was verified.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Diahann Carroll
+  - Diahann Carroll 2013
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Diahann_Carroll_1976.JPG
+  - https://commons.wikimedia.org/wiki/File:Diahann_carroll_julia_1969.JPG
+  - https://commons.wikimedia.org/wiki/File:Diahann_Carroll,_1979.jpg
+  - https://commons.wikimedia.org/wiki/File:Newlyweds_Frederick_Glusman_and_Diahann_Carroll,_1973.jpg
+kikakui:
+  reason: Only modern rendered Kikakui glyphs were located; no documentary manuscript image with verified
     rights was found.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Mende Kikakui
+  - Kikakui manuscript
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Mende_Kikakui_syllables.png
+  - https://commons.wikimedia.org/wiki/File:Mende-ka.jpg
+  - https://commons.wikimedia.org/wiki/File:Mende-yi-a.png
+  - https://commons.wikimedia.org/wiki/File:Mende-ga.jpg
+kimpa-vita:
+  reason: The historical Kongo engraving attributes a public-domain release to an uploader without a reliable
+    original-work rationale. A suitable independently licensed site photograph was not verified.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Mbanza Kongo
+  - Mbanza Kongo ruins
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Tomada_da_cidade_de_S%C3%A3o_Salvador_s%C3%A9culo_XVIII_(panor%C3%A2mico).jpg
+  - https://commons.wikimedia.org/wiki/File:The_Bansa,_or_residence_of_the_King_of_Kongo,_called_St._Salvador_(M%27Banza_Kongo),_Astley_1745.jpg
+  - https://commons.wikimedia.org/wiki/File:Mbanza_Kongo_(Kongo_capital)_in_1668,_also_known_as_Sao_Salvador..webp
+  - https://commons.wikimedia.org/wiki/File:Bras%C3%A3o_de_S%C3%A3o_Salvador_do_Congo.png
+la-ultima-cena:
+  reason: The director's photograph has a date after his death and unclear capture provenance; no permitted
+    film still or independently licensed production photograph was verified.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Tomas Gutierrez Alea
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Juan_Furest_con_el_Director_de_Cine_Tom%C3%A1s_Gutierrez_Alea.jpg
+legitime-defense:
+  reason: No verified issue cover, document or relevant editorial portrait for Légitime Défense was located.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Etienne Lero
+loiza-vejigantes:
+  reason: Museum mask photographs do not identify the makers, creation dates or permission for the underlying
+    contemporary masks. No suitable performance photograph was verified.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Loiza vejigantes
+  - Loiza bomba Puerto Rico
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Vejigante_Mask_from_Loiza,_Puerto_Rico.jpg
+  - https://commons.wikimedia.org/wiki/File:Phoenix-Phoenix-Musical_Instrument_Museum-Vejigante_Mask_and_Costume.jpg
+losing-ground:
+  reason: Searches for Kathleen Collins and Losing Ground did not locate a relevant, clearly licensed
+    director portrait or production photograph; namesake results were excluded.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Kathleen Collins
+  - Kathleen Collins filmmaker
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Border_Devils_lobby_card_2.jpg
+  - https://commons.wikimedia.org/wiki/File:Somewhere_in_Sonora_lobby_card.jpg
+  - https://commons.wikimedia.org/wiki/File:Fangs_of_Wolfheart_(1925)_-_1.jpg
+  - https://commons.wikimedia.org/wiki/File:Francis_Collins_with_Kathleen_Sebelius_after_swearing-in_ceremony.jpg
+lusona:
+  reason: The candidates are modern digital lusona diagrams rather than photographs of sand drawings or
+    historical documents.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Chokwe sona
+  - Sona sand drawing
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Kalunga-lusona.jpg
+  - https://commons.wikimedia.org/wiki/File:Chokwe_Lusona_-_The_creation_of_the_world.jpg
+  - https://commons.wikimedia.org/wiki/File:Lusona_7.jpg
+  - https://commons.wikimedia.org/wiki/File:Lusona_3.jpg
+mandombe:
+  reason: The modern Mandombe manual scan has an uploader waiver but no established permission for the
+    underlying manual; no other documentary example was verified.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Mandombe
+  - Mandombe handwriting
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Mandombe_Sample.jpg
+  - https://commons.wikimedia.org/wiki/File:Mandombe_traduction.jpg
+  - https://commons.wikimedia.org/wiki/File:Mandombe_Mvuala_Pelekete.png
+  - https://commons.wikimedia.org/wiki/File:Mandombe_a.png
+mangrove-nine:
+  reason: The National Archives candidates use a no-known-restrictions statement rather than an established
+    public-domain rationale or one of the permitted Creative Commons licences.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Mangrove Nine
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Mangrove_Nine_flyer_(24819736331).jpg
+  - https://commons.wikimedia.org/wiki/File:Mangrove_Nine_evidence_photo_(24617611240).jpg
+  - https://commons.wikimedia.org/wiki/File:Mangrove_Nine_evidence_photo_(24284954764).jpg
+  - https://commons.wikimedia.org/wiki/File:Summary_%27Mangrove_restaurant_affair%27_(24284955664).jpg
+marie-maynard-daly:
+  reason: The 1942 yearbook portrait requires a substantiated nonrenewal or permission claim. The date
+    alone does not establish that copyright has expired.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Marie Maynard Daly
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Marie_Maynard_Daly.jpg
+  - https://commons.wikimedia.org/wiki/File:Apr16_Woman_of_the_Day.png
+  - https://commons.wikimedia.org/wiki/File:New_York-_CLINTON_County,_Enumeration_District_18,_Sheet_No._12B_-_DPLA_-_4042880c1892e978eaef1393c86312c0.jpg
+  - https://commons.wikimedia.org/wiki/File:Air_Mens_Memorial_St_Edward%27s_Leek.jpg
+marielle-franco:
+  reason: The independent staircase photograph was rejected on visual review because it is dominated by
+    a modern portrait mural with unverified underlying rights. Other relevant portraits came from news
+    organisations.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Marielle Franco
+  - Marielle Franco Brasil
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Marielle_Franco.jpg
+  - https://commons.wikimedia.org/wiki/File:Marielle_Franco_-_Cianotipia.jpg
+  - https://commons.wikimedia.org/wiki/File:Marielle_Franco_(cropped).jpg
+  - https://commons.wikimedia.org/wiki/File:Marielle_Franco_postcard_2.jpg
+mary-dee:
+  reason: The 1950s radio publicity and advertisement photographs rely on absence-of-notice claims not
+    sufficiently substantiated for this selection.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Mary Dee Dudley
+  - Mary Dee radio
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Mary_Dee,_1951_full.jpg
+  - https://commons.wikimedia.org/wiki/File:Mary_Dee,_Sponsor,_1953.jpg
+  - https://commons.wikimedia.org/wiki/File:William_Goode_and_Mary_Dee,_1954_sponsor.jpg
+  - https://commons.wikimedia.org/wiki/File:Mary_Dee_and_Mal_Goode,_1952_full_advertisement.jpg
+mary-fields:
+  reason: The circa-1895 portrait is reproduced from a modern blog with a generic expired-copyright template;
+    original publication or an authoritative specific rights statement was not established.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Mary Fields
+  - Mary Fields 1895
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Mary_Fields.jpg
+  - https://commons.wikimedia.org/wiki/File:Mary_Field_in_Slander_House_(1938).jpg
+  - https://commons.wikimedia.org/wiki/File:Portrait_of_US_Navy_Rear_Admiral_(lower_half)_Mary_F._Hall.jpg
+  - https://commons.wikimedia.org/wiki/File:Mary_Fields_Horse_%26_Heritage_Museum_in_Hartford,_CT_(Interior_exhibit,_October_2025).jpg
+mau-mau-settlement:
+  reason: The returned memorial artwork has separate underlying rights; the cave photograph does not itself
+    establish the asserted connection with Mau Mau. No adequately documented alternative for the settlement
+    story was verified.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Mau Mau memorial
+  - '"Mau Mau" Kenya'
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Bundesarchiv_Bild_192-269,_KZ_Mauthausen,_H%C3%A4ftlinge_im_Steinbruch.jpg
+  - https://commons.wikimedia.org/wiki/File:Eingangsgeb%C3%A4ude_mit_Haupttor_KZ_Mauthausen_2014.jpg
+  - https://commons.wikimedia.org/wiki/File:Einfahrtsgeb%C3%A4ude_zum_KZ_Mauthausen_2014_2.jpg
+  - https://commons.wikimedia.org/wiki/File:KZ_Mauthausen,_H%C3%A4ftlingsbaracken_und_Lagerstra%C3%9Fe.jpg
+mbube:
+  reason: The relevant Solomon Linda and Evening Birds photographs were sourced through The Telegraph;
+    composite versions inherit that source and do not resolve the task's news-source exclusion.
+  category: excluded_news_source
+  checked_on: '2026-11-14'
+  search_terms:
+  - Solomon Linda
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Solomon-linda.jpg
+  - https://commons.wikimedia.org/wiki/File:Solomon_Linda_and_the_Tokens.png
+  - https://commons.wikimedia.org/wiki/File:Solomon_Linda_(cropped).jpeg
+  - https://commons.wikimedia.org/wiki/File:Solomon_Linda%27s_Original_Evening_Birds_(1941).jpeg
+medefaidrin:
+  reason: Only modern rendered Medefaidrin glyph charts were located; no documentary manuscript with verified
+    rights was found.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Medefaidrin
+  - Medefaidrin manuscript
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Oberi_Okaime.png
+  - https://commons.wikimedia.org/wiki/File:Medefaidrin.png
+  - https://commons.wikimedia.org/wiki/File:UCB_Medefaidrin.png
+mmanthatisi:
+  reason: No authenticated portrait, relevant historical document or sufficiently specific place photograph
+    with verified rights was located for Mmanthatisi.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Mmanthatisi
+negro-worker:
+  reason: The 1932 issue image claims EU anonymous-work expiry, but a corresponding U.S. public-domain
+    basis or an eligible museum licence was not established.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Negro Worker
+  - Negro Worker 1931
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:The_Negro_Worker.jpg
+  - https://commons.wikimedia.org/wiki/File:Cover_of_The_Negro_Worker_April_1932.jpg
+  - https://commons.wikimedia.org/wiki/File:St._Joseph_the_Worker_Church_facade,_Victorias_City,_Negros_Occidental.jpg
+  - https://commons.wikimedia.org/wiki/File:IFI_Parish_of_St._Joseph_the_Worker,_Bacolod.jpg
+osmanya:
+  reason: The Osmanya typewriter photograph has an unknown author and a modern date without a substantiated
+    public-domain rationale for the original photograph.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Osmanya
+  - Osmanya typewriter
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Map_of_Somalia_written_in_osmanya_alphabet.png
+  - https://commons.wikimedia.org/wiki/File:Typewriter_of_British_Somaliland_with_Osmanya_script.jpg
+  - https://commons.wikimedia.org/wiki/File:Somali_passport_cover_in_osmanya,arabic_%26_latin.jpg
+  - https://commons.wikimedia.org/wiki/File:Ciismaniya.jpg
+paper-bag-test:
+  reason: The relevant-looking candidate is a generic brown-paper-bag texture, not documentary evidence
+    of the practice; it was not used as a stock substitute.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Paper bag test
+  - paper bag test
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:The_Test_(BM_1868,0808.5914).jpg
+  - https://commons.wikimedia.org/wiki/File:Friele_white_sugar.jpg
+  - https://commons.wikimedia.org/wiki/File:23andMe_DNA_test_-_31_January_2021_-_kit_ready_to_be_sent.jpg
+  - https://commons.wikimedia.org/wiki/File:Brown_paper_bag_texture.jpg
+partus-1662:
+  reason: No verified image of the 1662 Virginia law or an adequately specific historical document was
+    located; unrelated book ornaments were excluded.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Virginia laws 1662
+  - Virginia 1662 slavery law
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Cartouche_John_Page_House_1662_Williamsburg.jpg
+  - https://commons.wikimedia.org/wiki/File:Samuel_Hartlib_(1600-1662).png
+  - https://commons.wikimedia.org/wiki/File:Acts_of_Assembly,_passed_in_the_colony_of_Virginia,_from_1662,_to_1715._Volume_I._Fleuron_T101035-3.png
+  - https://commons.wikimedia.org/wiki/File:Acts_of_Assembly,_passed_in_the_colony_of_Virginia,_from_1662,_to_1715._Volume_I._Fleuron_T101035-6.png
+patricia-bath:
+  reason: The portrait has a government-work template, but original photographic authorship was not established.
+    Its linked NLM biography now redirects to a general exhibition page, which does not corroborate rights
+    in this particular photograph.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Patricia Bath
+  - Patricia Bath portrait
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Patriciabath.jpg
+  - https://commons.wikimedia.org/wiki/File:Ex_Convento_de_San_Diego_Churubusco.jpg
+  - https://commons.wikimedia.org/wiki/File:Setting_up_a_display_130308-N-DI878-051.jpg
+pinnacle-rastafari:
+  reason: No relevant image of Pinnacle or its community with verifiable rights was located.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Pinnacle Rastafari
+  - Pinnacle Jamaica Rastafari
+precious-lord:
+  reason: Initial Thomas Dorsey results concerned a different person; the refined gospel-composer search
+    did not produce an eligible portrait, document or performance image.
+  category: misidentified_subject
+  checked_on: '2026-11-14'
+  search_terms:
+  - Thomas Dorsey
+  - '"Thomas Dorsey" gospel'
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Thomas_A._Dorsey_Farmhouse.jpg
+  - https://commons.wikimedia.org/wiki/File:Charles_Goodman_and_Robert_Piggot,_after_Thomas_Sully,_John_Syng_Dorsey,_M.D.,_1819,_NGA_197331.jpg
+  - https://commons.wikimedia.org/wiki/File:Thomas_Beale_Dorsey_(cropped).jpg
+  - https://commons.wikimedia.org/wiki/File:John_Syng_Dorsey_NLM.tif
+pressure-1976:
+  reason: No verified portrait of Horace Ové or production photograph for Pressure was located; unrelated
+    namesake results were excluded.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Horace Ove
+  - '"Horace Ové"'
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Emblemi_di_Q._Orazio_Flacco_(1777)_(14559512129).jpg
+  - https://commons.wikimedia.org/wiki/File:Emblemi_di_Q._Orazio_Flacco_(1777)_(14745798032).jpg
+  - https://commons.wikimedia.org/wiki/File:Beautify_your_yard_(1913)_(14781728095).jpg
+radio-freedom:
+  reason: No relevant Radio Freedom/ANC station photograph or programme document with verified rights
+    was located.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Radio Freedom
+  - Radio Freedom ANC
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Voices_of_Freedom_Budapest_2011.JPG
+  - https://commons.wikimedia.org/wiki/File:Radio_upernavik_2007-06-01.jpg
+  - https://commons.wikimedia.org/wiki/File:Vintage_Novelty_Transistor_AM_Radio_-_Delco_Mini_Freedom_Battery_Novelty_Radio,_Model_MP77-7,_Made_In_Hong_Kong,_Distributed_By_Premium_Resources_International_(PRI)_(14728480372).jpg
+  - https://commons.wikimedia.org/wiki/File:Old_radio_2.jpeg
+radio-haiti:
+  reason: Searches returned Radio Kiskeya, another station, and unrelated historical namesakes of Jean
+    Dominique; no eligible Radio Haiti document or photograph was verified.
+  category: misidentified_subject
+  checked_on: '2026-11-14'
+  search_terms:
+  - Radio Haiti
+  - Jean Dominique Haiti
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Radio_Kiskeya,_Ha%C3%AFti.jpg
+  - https://commons.wikimedia.org/wiki/File:Wikimedia_Haiti_promote.jpg
+  - https://commons.wikimedia.org/wiki/File:Jacmel_Haiti_map_1799.jpg
+  - https://commons.wikimedia.org/wiki/File:Radio_Kiskeya.jpg
+raisin-in-the-sun:
+  reason: The 1959 stage publicity photographs and cover need stronger evidence than unverified absence
+    of a copyright notice; no clearly licensed alternative was verified.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Lorraine Hansberry
+  - Lorraine Hansberry 1959
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Lorraine_Hansberry_speaking_to_an_audience.jpg
+  - https://commons.wikimedia.org/wiki/File:%22The_Sign_in_Sidney_Brustein%27s_Window%22,_by_Lorraine_Hansberry.tif
+  - https://commons.wikimedia.org/wiki/File:West_Farms_Sq_IRT_td_(2018-09-29)_09_-_PS_214_Lorraine_Hansberry_Academy.jpg
+  - https://commons.wikimedia.org/wiki/File:Class-of-2016-final.png
+recy-taylor:
+  reason: The 1944 portrait is credited to the Daily Worker without an adequately established permission
+    or expiry basis for this selection.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Recy Taylor
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Recy_Taylor_(1944).png
+remedios-del-valle:
+  reason: The relevant candidates are modern imagined portraits or photographs dominated by those artworks;
+    no documentary historical image was verified.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Remedios Valle
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Dibujo_de_Mar%C3%ADa_Remedios_del_Valle.jpg
+  - https://commons.wikimedia.org/wiki/File:Conemoraci%C3%B3n_Mar%C3%ADa_Remedios_del_Valle_en_Diputados.jpg
+  - https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Remedios_del_Valle_(cropped).jpg
+  - https://commons.wikimedia.org/wiki/File:Mar%C3%ADa_Remedios_del_Valle_%C2%A9_2013_Mirta_Toledo.jpg
+rivers-of-babylon:
+  reason: Searches returned an unrelated company, a different orchestra and a Saint-Saëns score; no verified
+    Melodians photograph or relevant record image was located.
+  category: misidentified_subject
+  checked_on: '2026-11-14'
+  search_terms:
+  - The Melodians
+  - Brent Dowe Melodians
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Headquarters_of_Melodian.jpg
+  - https://commons.wikimedia.org/wiki/File:Headquarters_of_Melodian_Co.,Ltd.jpg
+  - https://commons.wikimedia.org/wiki/File:Melodian_Co.,Ltd._headquarters.jpg
+  - https://commons.wikimedia.org/wiki/File:Melodians_BBC_Virtual_Orchestra_2016.jpg
+rtlm:
+  reason: Only a modern explanatory donor chart and unrelated search results were found; no verified documentary
+    RTLM image was located.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - RTLM
+  - RTLM building Kigali
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:DonateursRTLM.png
+  - https://commons.wikimedia.org/wiki/File:%D0%A2%D1%80%D0%B0%D0%BA%D1%82%D0%BE%D1%80_%D0%A0%D0%BE%D1%81%D1%82%D1%81%D0%B5%D0%BB%D1%8C%D0%BC%D0%B0%D1%88_2400.jpg
+  - https://commons.wikimedia.org/wiki/File:Rostselmash_RSM_2400_Agritechnica_2019_-_Front_and_right_side.jpg
+  - https://commons.wikimedia.org/wiki/File:Ratlam_Railway_junction_station,Madhya_Pradesh.jpg
+runaway-adverts-britain:
+  reason: No relevant British runaway advertisement scan with a verified file-page rights statement was
+    located.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - runaway slave advertisement London
+  - runaway slave Britain advertisement
+saamaka:
+  reason: The apparently relevant 1910 photograph is explicitly identified on its source page as a Ndyuka
+    person, not Saamaka. Event images came from a news outlet; no independent alternative was verified.
+  category: misidentified_subject
+  checked_on: '2026-11-14'
+  search_terms:
+  - Saamaka
+  - Saamaka village Suriname
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Saramaka-1910.jpg
+  - https://commons.wikimedia.org/wiki/File:Saamaka_Daka,_2019_-_4.png
+  - https://commons.wikimedia.org/wiki/File:Saamaka_Daka,_2019_-_5.PNG
+  - https://commons.wikimedia.org/wiki/File:Saamaka_Daka,_2019_-_3.PNG
+sarah-ann-gill:
+  reason: Searches for Sarah Ann Gill and Bridgetown did not produce an authenticated portrait, document
+    or suitable identified place photograph with verified rights.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Sarah Ann Gill
+  - Sarah Ann Gill Bridgetown
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:John_Gill_(born_1788)_baptism.jpg
+  - https://commons.wikimedia.org/wiki/File:Parci_Gill_-_geograph.org.uk_-_50932.jpg
+  - https://commons.wikimedia.org/wiki/File:2023_Art%2BFeminism_Annual_Campaign_Year_10,_Collective_Action,_English.jpg
+  - https://commons.wikimedia.org/wiki/File:Art%2BFeminism_Armenia_2023_Zoom_Edit_a_Thon_(1).jpg
+saramaccan:
+  reason: 'The historical photograph is explicitly mislabelled: it shows a Ndyuka person, not Saamaka.
+    Other results are modern drawings of objects, not documentary language material.'
+  category: misidentified_subject
+  checked_on: '2026-11-14'
+  search_terms:
+  - Saramaka
+  - Saramaka village
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Saramaka-1910.jpg
+  - https://commons.wikimedia.org/wiki/File:Tribus_de_Saramaka_(Guyane_Fran%C3%A7aise).jpg
+  - https://commons.wikimedia.org/wiki/File:Guyane_-_Saramakas.jpg
+  - https://commons.wikimedia.org/wiki/File:Tropenmuseum_Royal_Tropical_Institute_Objectnumber_H-3421_Aquarel_voorstellende_woningen_van_suik.jpg
+sheng:
+  reason: The results did not provide a documentary example of Sheng use with verifiable rights; the initial
+    candidate was a news-site graphic.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Sheng Nairobi
+  - Sheng Nairobi sign
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Street_News_Kenya.jpg
+solitude:
+  reason: The candidates are modern illustrations or photographs of modern Solitude sculptures; rights
+    in the underlying artworks were not established.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Solitude Guadeloupe
+  - Solitude Guadeloupe garden
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:La_Mul%C3%A2tresse_Solitude_drawing.jpg
+  - https://commons.wikimedia.org/wiki/File:Nicolas_Alquin_%E2%80%93_%C2%ABSolitude,_monument_aux_esclaves_resistants%C2%BB.jpg
+  - https://commons.wikimedia.org/wiki/File:Close-up_of_the_Statue_of_Solitude,_Les_Abymes,_Guadeloupe.jpg
+  - https://commons.wikimedia.org/wiki/File:Monument_%C3%A0_la_mul%C3%A2tresse_Solitude,_carrefour_Solitude_Les_Abymes.jpg
+sranan-tongo:
+  reason: The candidates include a modern dictionary-cover photograph and rendered alphabet chart; permission
+    for the underlying publication or a verified historical document was not established.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Sranan Tongo
+  - Sranan dictionary 1856
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Sranan_Tongo_-_Dutch_dictionary.png
+  - https://commons.wikimedia.org/wiki/File:Sranan-Tongo.language-alphabet.gif
+  - https://commons.wikimedia.org/wiki/File:Taki_in_Taki.jpg
+  - https://commons.wikimedia.org/wiki/File:Taki_townhall.jpg
+stolen-legacy:
+  reason: Searches for George G. M. James returned unrelated maps by another James; no eligible book image
+    or authenticated author portrait was verified.
+  category: misidentified_subject
+  checked_on: '2026-11-14'
+  search_terms:
+  - George G M James
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:The_world_to_H._M._G._M._George_the_IVth._-_this_delineation_of_the_present_state_of_geographical_knowledge..._-_(dedicated_by)..._James_Gardner..._-_btv1b531563454_(1_of_9).jpg
+  - https://commons.wikimedia.org/wiki/File:The_world_to_H._M._G._M._George_the_IVth._-_this_delineation_of_the_present_state_of_geographical_knowledge..._-_(dedicated_by)..._James_Gardner..._-_btv1b531563454_(9_of_9).jpg
+  - https://commons.wikimedia.org/wiki/File:The_world_to_H._M._G._M._George_the_IVth._-_this_delineation_of_the_present_state_of_geographical_knowledge..._-_(dedicated_by)..._James_Gardner..._-_btv1b531563454_(8_of_9).jpg
+  - https://commons.wikimedia.org/wiki/File:The_world_to_H._M._G._M._George_the_IVth._-_this_delineation_of_the_present_state_of_geographical_knowledge..._-_(dedicated_by)..._James_Gardner..._-_btv1b531563454_(4_of_9).jpg
+sungbos-eredo:
+  reason: The landscape candidate says it was taken from another source without establishing the uploader's
+    rights. Other results are a modern-art presentation or an unsupported CC0 claim on a university-news
+    image.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Sungbo Eredo
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Sungbo-eredo-photo.jpg
+  - https://commons.wikimedia.org/wiki/File:Multidisciplinary_technologist_Ade_Olufeko_inside_Sungbo%27s_Eredo.jpg
+sweet-mother:
+  reason: No relevant Prince Nico Mbarga portrait, performance photograph or record image with verified
+    rights was located.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Prince Nico Mbarga
+theophilus-thompson:
+  reason: The chess-player portrait lacks an identified author, date and original publication supporting
+    expiry. Other portraits depict a different Theophilus Thompson, a physician.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Theophilus Thompson
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Theophilus_Thompson_-_portrait_-_1855.jpg
+  - https://commons.wikimedia.org/wiki/File:Theophilus_Thompson.jpg
+  - https://commons.wikimedia.org/wiki/File:Theophilus_Thompson_watercolor.jpg
+  - https://commons.wikimedia.org/wiki/File:Bear_Pits_Philadelphia_Zoo.jpg
+thomas-fuller-calculator:
+  reason: The available Thomas Fuller portraits depict namesakes, not the African calculator; no suitable
+    authenticated document image was verified.
+  category: misidentified_subject
+  checked_on: '2026-11-14'
+  search_terms:
+  - Thomas Fuller calculator
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Thomas_Fuller_b1654.jpg
+  - https://commons.wikimedia.org/wiki/File:Grave_Thomas_Fuller_Potter.jpg
+  - https://commons.wikimedia.org/wiki/File:Thomas_Fuller_Potter_Dec._1895.jpg
+  - https://commons.wikimedia.org/wiki/File:Thomas_Fuller_1841.jpg
+trouble-in-mind:
+  reason: Searches for Alice Childress and Trouble in Mind returned unrelated people and documents; no
+    eligible author or production photograph was verified.
+  category: no_suitable_documentary_image
+  checked_on: '2026-11-14'
+  search_terms:
+  - Alice Childress
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:New_York-_WESTCHESTER_County,_Enumeration_District_87,_Sheet_No._1A_-_DPLA_-_cc90061828e0a9b3a254a69ae8e8ed22.jpg
+  - https://commons.wikimedia.org/wiki/File:Illinois-_KNOX_County,_Enumeration_District_60,_Sheet_No._3B_-_DPLA_-_0e4b14b8e1d8d207d6fdfb38bcd2bfcc.jpg
+  - https://commons.wikimedia.org/wiki/File:Pennsylvania-_ALLEGHENY_County,_Enumeration_District_314,_Sheet_No._23A_-_DPLA_-_138da98211e11a3ed0a719cae7b5496a.jpg
+tutu-enwonwu:
+  reason: Portrait candidates use an inadequately substantiated publicity/nonrenewal claim or reproduce
+    copyrighted exhibition material. No permitted image of Tutu or independent documentary alternative
+    was verified.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Ben Enwonwu
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Ben_Enwonwu_-_Africa_Report_1958-01_(Vol_3_Iss_1)_(page_18_crop).jpg
+  - https://commons.wikimedia.org/wiki/File:Ben_Enonwu_working_on_a_sculpture_of_Ann_Gerrard_(1957).jpg
+  - https://commons.wikimedia.org/wiki/File:Ben_Enwonwu,_Room_2,_Ben_Enwonwu_-_Ghosts_of_Tradition,_Nigerian_Modernism,_Tate_Modern,_London_23.jpg
+  - https://commons.wikimedia.org/wiki/File:Ben_Enwonwu,_Room_2,_Ben_Enwonwu_-_Ghosts_of_Tradition,_Nigerian_Modernism,_Tate_Modern,_London_27.jpg
+victoria-santa-cruz:
+  reason: The relevant Victoria Santa Cruz photographs were credited to El Comercio; no independently
+    licensed documentary alternative was verified.
+  category: excluded_news_source
+  checked_on: '2026-11-14'
+  search_terms:
+  - Victoria Santa Cruz
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Victoria_Santa_Cruz_(compositora_peruana).jpg
+  - https://commons.wikimedia.org/wiki/File:Victoria_y_Nicomedes_Santa_Cruz.jpg
+  - https://commons.wikimedia.org/wiki/File:00_3204_Santa-Cruz-Riesenseerose_(Victoria_cruziana).jpg
+  - https://commons.wikimedia.org/wiki/File:Egresados_N%C3%BAcleo_La_Victoria_Santa_Cruz_de_Mora.jpg
+werd:
+  reason: Searches for WERD in Atlanta mostly returned the Zurich district of Werd; no relevant station
+    photograph or document with verified rights was located.
+  category: misidentified_subject
+  checked_on: '2026-11-14'
+  search_terms:
+  - WERD
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Impression_-_Statistisches_Quartier_Werd_-_Z%C3%BCrich_-_Bild_4.JPG
+  - https://commons.wikimedia.org/wiki/File:Impression_-_Statistisches_Quartier_Werd_-_Z%C3%BCrich_-_Bild_24.JPG
+  - https://commons.wikimedia.org/wiki/File:Impression_-_Statistisches_Quartier_Werd_-_Z%C3%BCrich_-_Bild_25.JPG
+  - https://commons.wikimedia.org/wiki/File:Impression_-_Statistisches_Quartier_Werd_-_Z%C3%BCrich_-_Bild_7.JPG
+wlib-inner-city:
+  reason: The relevant historical group photo has an unresolved original-photographer/date provenance
+    issue. Other results depict unrelated stations or a namesake Hal Jackson.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - WLIB
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Jack_Nelson_of_WDAP_(soon_to_be_WGN),_Jan._1924.jpg
+  - https://commons.wikimedia.org/wiki/File:James_Stephens_interviewed_by_WGN_announcer_Quin_Ryan,_1925_photo_by_Drake_Studio.jpg
+  - https://commons.wikimedia.org/wiki/File:WGN-AM.jpg
+  - https://commons.wikimedia.org/wiki/File:WGN_(13666408895).jpg
+year-of-africa-1960:
+  reason: The 1960 independence candidates did not establish a sufficiently clear rights basis for the
+    original photographs; other results were unrelated celebrations or a modern map.
+  category: rights_unverified
+  checked_on: '2026-11-14'
+  search_terms:
+  - Africa independence 1960
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Somaliland_independence_26_June_1960.jpg
+  - https://commons.wikimedia.org/wiki/File:New_flags_of_1960.jpg
+  - https://commons.wikimedia.org/wiki/File:The_Prime_Minister,_Sir_Abubakar_Tafawa_Balewa_on_Independence_Day,_October_1,_1960.jpg
+  - https://commons.wikimedia.org/wiki/File:March_Defenders_of_Ukraine_on_Independence_Day_in_Kyiv,_2021_106.jpg
+zera-yacob:
+  reason: The results depict an Ethiopian ruler or the modern prince Zera Yacob Amha Selassie, not the
+    philosopher; no authenticated Hatata manuscript image with verified rights was located.
+  category: misidentified_subject
+  checked_on: '2026-11-14'
+  search_terms:
+  - Zera Yacob
+  candidate_urls:
+  - https://commons.wikimedia.org/wiki/File:Home_of_Zera_Yacob_Amha_Selassie,_Isle_of_Dogs.jpg
+  - https://commons.wikimedia.org/wiki/File:Zara_Yacob.png
+  - https://commons.wikimedia.org/wiki/File:Buildings_in_Manchester_Road,_Isle_of_Dogs.jpg
