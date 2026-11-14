@@ -6,8 +6,8 @@ place: {"name": "Düsseldorf", "lat": 51.2277, "lon": 6.7735}
 placeRu: "Дюссельдорф"
 genre: "Electronic music"
 genreRu: "электронная музыка"
-story: "Kraftwerk built a regimented electronic pop on drum machines, vocoders and synthesizers that became the groundwork of synth-pop. Florian Schneider told Juan Atkins the band was hugely influenced by James Brown, Ralf Hütter hears in rhythm machines the core of funk, and Karl Bartos says he brought Brown’s funky beats in more and more from the late 1970s — the American rhythm under the European melody that Detroit and the Bronx heard."
-storyRu: "Kraftwerk построили строгий электронный поп на драм-машинах, вокодерах и синтезаторах, ставший основой синти-попа. Флориан Шнайдер рассказывал Хуану Аткинсу, что группа испытала огромное влияние Джеймса Брауна, Ральф Хюттер слышит в ритм-машинах самую суть фанка, а Карл Бартос говорит, что с конца 1970-х всё больше вносил в музыку фанковые биты Брауна — американский ритм под европейской мелодией, который услышали Детройт и Бронкс."
+story: "Kraftwerk grew out of krautrock: Ralf Hütter and Florian Schneider started in Düsseldorf with free improvisation, on the same scene as Can and Faust, and set out to make music of their own, away from Anglo-American structures built on the blues. Krautrock itself stood on 1960s rock, whose electric band and driving beat come from rhythm and blues, and on the collective improvisation of free jazz. From the late 1970s, Karl Bartos says, James Brown’s funky beats came in more and more."
+storyRu: "Kraftwerk выросли из краутрока: Ральф Хюттер и Флориан Шнайдер начинали в Дюссельдорфе со свободной импровизации — на одной сцене с Can и Faust — и хотели своей музыки — подальше от англо-американских структур на блюзовой основе. Сам краутрок стоял на роке 1960-х, чья электрическая группа и напористый бит пришли из ритм-н-блюза, и на коллективной импровизации фри-джаза. А с конца 1970-х, по словам Карла Бартоса, в музыку группы всё больше входили фанковые биты Джеймса Брауна."
 links:
   - to: "root:james-brown"
     kind: "influence"
@@ -58,35 +58,97 @@ links:
           title: "Exclaim!: Kraftwerk — Days of Future Past"
           url: "https://exclaim.ca/music/article/kraftwerk-days_of_future_past"
           quote: "It becomes the title track of their new album, which opens by morphing train noises into a funky drum pattern and creating a disco staple."
-  - to: "style:synth-pop"
+  - to: "style:krautrock"
     kind: "style"
     scope: "career"
-    how: "Kraftwerk laid the groundwork of synth-pop: songs built entirely from synthesizers, drum machines and vocoded voices, with regimented pulses and a formal, robotic image that synth-pop bands copied."
-    howRu: "Kraftwerk заложили основу синти-попа: песни целиком из синтезаторов, драм-машин и голосов через вокодер, строгая пульсация и формальный, «роботизированный» образ, который переняли синти-поп-группы."
-    carries: ["groove"]
-    dimensions: ["sound", "rhythm", "image"]
+    how: "Kraftwerk came out of the West German experimental rock that British critics called krautrock. Ralf Hütter and Florian Schneider began with freely improvised music in Organisation (1969) and on the first Kraftwerk albums of 1970–73, played happenings, art galleries and festivals alongside Can and Faust, and shared the scene’s aim of a music of their own, away from Anglo-American structures based on the blues. From it they took the long, hypnotic, repeated pulse that Autobahn (1974) made electronic."
+    howRu: "Kraftwerk вышли из западногерманского экспериментального рока, который британские критики окрестили краутроком. Ральф Хюттер и Флориан Шнайдер начинали со свободной импровизации — в группе Organisation (1969) и на первых альбомах Kraftwerk 1970–1973 годов, — выступали на хеппенингах, в галереях и на фестивалях рядом с Can и Faust и разделяли общую для этой сцены цель: своя музыка, подальше от англо-американских структур на блюзовой основе. Оттуда они вынесли долгий, гипнотический, повторяющийся пульс, который «Autobahn» (1974) сделал электронным."
+    carries: ["improvisation"]
+    dimensions: ["performance", "sound", "rhythm", "harmony-form", "image"]
     evidence:
       - type: "critics"
-        dimensions: ["rhythm", "sound"]
-        text: "Exclaim! says Autobahn’s regimented hypno-pulses laid the groundwork for electro-funk, ambient and synth-pop."
-        textRu: "Exclaim! пишет, что строгая гипнотическая пульсация «Autobahn» заложила основу электро-фанка, эмбиента и синти-попа."
-        source:
-          title: "Exclaim!: Kraftwerk — Days of Future Past"
-          url: "https://exclaim.ca/music/article/kraftwerk-days_of_future_past"
-          quote: "the album's regimented hypno-pulses lay the groundwork for electro-funk, ambient, and synth-pop."
-      - type: "critics"
-        dimensions: ["image"]
-        text: "Rob Bowman’s Hall of Fame essay notes their groomed, formal image, which many synth-pop bands followed."
-        textRu: "В эссе для Зала славы Роб Боумен отмечает их ухоженный, формальный образ, которому затем следовали многие синти-поп-группы."
+        dimensions: ["performance", "sound"]
+        text: "Rob Bowman’s Hall of Fame essay: Hütter and Schneider, drawn together by improvisation and electronic sound, recorded an album of freely improvised music with Organisation in 1969, and their first three Kraftwerk albums were largely improvised sound constructions."
+        textRu: "Эссе Роба Боумена для Зала славы: Хюттера и Шнайдера свели вместе импровизация и электронный звук; в 1969 году с группой Organisation они записали альбом свободной импровизации, а первые три альбома Kraftwerk были во многом импровизированными звуковыми конструкциями."
         source:
           title: "Rock & Roll Hall of Fame (Rob Bowman): Kraftwerk induction essay (2021)"
           url: "https://rockhall25.wpenginepowered.com/wp-content/uploads/2025/10/Kraftwerk_26746_RNRHF_2021_Highres-11.pdf"
-          quote: "Schneider cut his hair short and began adopting a neatly groomed, highly formalized appearance and manner. The rest of the band followed suit, as would many synth pop bands in the following decade."
+          quote: "After recording an album of freely improvised music with a group called Organisation in 1969, Hütter and Schneider began working as a duo under the moniker Kraftwerk"
+      - type: "testimony"
+        dimensions: ["performance", "image"]
+        text: "Hütter: in a country with no continuous tradition of entertainment and everything Americanised, they were part of the ’68 movement, played happenings and art events and set out to make an industrial German sound."
+        textRu: "Хюттер: в стране, где не было непрерывной традиции развлекательной музыки, а всё вокруг американизировалось, они были частью движения 1968 года, играли на хеппенингах и арт-событиях и взялись создать индустриальный немецкий звук."
+        source:
+          title: "Red Bull Music Academy Daily (Jon Savage): Interview — Kraftwerk (Ralf Hütter, 1991)"
+          url: "https://daily.redbullmusicacademy.com/2012/08/kraftwerk-interview"
+          quote: "Through the 50s and 60s everything was Americanised, directed towards consumer behaviour. So, we were part of this ’68 movement, where suddenly there were possibilities, and we performed at happenings and art situations. Then we started just with sound, to establish some form of industrial German sound"
+      - type: "testimony"
+        dimensions: ["performance"]
+        text: "Hütter on Can and Faust: they crossed paths at festivals and art-gallery concerts, and were friends with Holger Czukay from the very old days."
+        textRu: "Хюттер о Can и Faust: их пути пересекались на фестивалях и концертах в галереях, а с Хольгером Шукаем они дружили с самых давних времён."
+        source:
+          title: "Red Bull Music Academy Daily (Jon Savage): Interview — Kraftwerk (Ralf Hütter, 1991)"
+          url: "https://daily.redbullmusicacademy.com/2012/08/kraftwerk-interview"
+          quote: "We would cross paths every once in a while, playing festivals. We have been friends with Holger since the very old days, art gallery concerts, sure."
+      - type: "testimony"
+        dimensions: ["harmony-form", "image"]
+        text: "Michael Rother, who played in Kraftwerk for six months in 1971, says jamming with Hütter showed him he was not alone in wanting a music different from Anglo-American structures based on the blues."
+        textRu: "Михаэль Ротер, полгода игравший в Kraftwerk в 1971 году, вспоминает: джем с Хюттером показал ему, что он не один хочет музыки, непохожей на англо-американские структуры на блюзовой основе."
+        source:
+          title: "Red Bull Music Academy: Michael Rother lecture (Tokyo, 2014)"
+          url: "https://www.redbullmusicacademy.com/lectures/michael-rother-tokyo-2014"
+          quote: "That was, for me, the first situation where I discovered that I was not completely alone with my idea of creating a music that was different, different from Anglo-American musical structures that are mostly, or were mostly, based on the blues."
+      - type: "testimony"
+        dimensions: ["image"]
+        text: "Hütter places the band’s roots in film music, classical music, German electronic music and machine rhythms rather than in American music."
+        textRu: "Корни группы Хюттер видит в музыке кино, классике, немецкой электронной музыке и машинных ритмах, а не в американской музыке."
+        source:
+          title: "Red Bull Music Academy Daily (Jon Savage): Interview — Kraftwerk (Ralf Hütter, 1991)"
+          url: "https://daily.redbullmusicacademy.com/2012/08/kraftwerk-interview"
+          quote: "our roots are more in film music, classical music, German electronic music and in machine-generated rhythm patterns, things like that."
       - type: "critics"
         dimensions: ["sound"]
-        text: "Marcus Barnes lists early synth pop among the scenes that grew from Kraftwerk’s blueprint."
-        textRu: "Маркус Барнс называет ранний синти-поп среди сцен, выросших из образца, заданного Kraftwerk."
+        text: "Simon Reynolds counts Kraftwerk among the krautrock bands for three albums and the Organisation prequel, and hears psychedelic roots in them: guitar harmonics, bottleneck glissandos, echo-chamber freak-outs, backwards guitar."
+        textRu: "Саймон Рейнольдс причисляет Kraftwerk к краутроку на три альбома и «пролог» Organisation и слышит в них психоделические корни: гитарные флажолеты, глиссандо бутылочным горлышком, эхо-камерные «фрик-ауты», гитару задом наперёд."
+        source:
+          title: "Simon Reynolds: Krautrock (Melody Maker, July 1996), author’s archive"
+          url: "https://reynoldsretro.blogspot.com/2013/03/krautrock-melody-maker-july-1996-by.html"
+          quote: "Elsewhere, Kraftwerk's avant-classical and psychedelic roots are showing: there's John Cage-like gamelan chimes, clusters of woozy guitar-harmonics and droopy, almost Hawaian-souding bottleneck-glissandos, echo-chamber freak-outs, Beach Boys/barbershop harmonies and even Byrdsy backwards-guitar."
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "Reynolds hears the robotic riff of “Ruckzuck” (1970), played on a flute, foretell the hypnotic rush of Trans-Europe Express."
+        textRu: "В роботизированном риффе «Ruckzuck» (1970), сыгранном на флейте, Рейнольдс слышит предвестие гипнотического напора «Trans-Europe Express»."
+        source:
+          title: "Simon Reynolds: Krautrock (Melody Maker, July 1996), author’s archive"
+          url: "https://reynoldsretro.blogspot.com/2013/03/krautrock-melody-maker-july-1996-by.html"
+          quote: "Despite the fact that its robotic riff is played on a flute rather than a synth, \"Ruckzuck\" prophesises the hypnotic rush of \"Trance Europe Express\""
+      - type: "critics"
+        dimensions: ["rhythm", "sound"]
+        text: "Steve Wright: Autobahn fused synthesisers with mechanical rhythms and reshaped krautrock’s direction; with Trans-Europe Express Kraftwerk completed their change from experimental krautrockers to electro pioneers."
+        textRu: "Стив Райт: «Autobahn» соединил синтезаторы с механическими ритмами и повернул краутрок в новую сторону, а с «Trans-Europe Express» Kraftwerk окончательно превратились из экспериментаторов краутрока в пионеров электро."
+        source:
+          title: "Classical Music (Steve Wright): Ranked — the 17 greatest krautrock albums of all time (2025)"
+          url: "https://www.classical-music.com/features/recordings/best-krautrock-albums"
+          quote: "With Trans-Europe Express, Kraftwerk completed their metamorphosis from experimental krautrockers to sleek electro-pioneers."
+      - type: "listening"
+        dimensions: ["sound"]
+        text: "Marcus Barnes: when Kraftwerk started in 1970, their influences included the Detroit rock of the Stooges and MC5 and, according to Karl Bartos, Motown."
+        textRu: "Маркус Барнс: когда Kraftwerk начинали в 1970 году, на них влиял детройтский рок The Stooges и MC5, а по словам Карла Бартоса — и Motown."
         source:
           title: "The Guardian (Marcus Barnes): From Germany to Detroit and back — how Kraftwerk forged an industrial exchange (2020)"
           url: "https://www.theguardian.com/music/2020/may/25/from-germany-to-detroit-and-back-how-kraftwerk-forged-an-industrial-exchange"
-          quote: "New wave, early synth pop, the new romantics, London’s Blitz kids, OMD, David Bowie, Gary Numan, Visage, Depeche Mode, Soft Cell"
+          quote: "When Schneider and Ralf Hütter started Kraftwerk in 1970, their influences included several Detroit-based acts including the Stooges, MC5 and, according to later member Karl Bartos, Berry Gordy’s Motown label."
+legacy:
+  text: "Kraftwerk’s main bond with Black music runs the other way. In the Bronx, Afrika Bambaataa played “Trans-Europe Express” in his sets and in 1982, with Arthur Baker, rebuilt it and the beat of “Numbers” on a Roland TR-808 for “Planet Rock”; in Detroit, Juan Atkins and other young Black musicians joined Kraftwerk’s machines to the funk of Parliament-Funkadelic and made techno. This is what Kraftwerk gave, not what they grew from, so it is not a step of their route."
+  textRu: "Главная связь Kraftwerk с чёрной музыкой идёт в обратную сторону. В Бронксе Африка Бамбаатаа ставил «Trans-Europe Express» в своих сетах, а в 1982 году они с Артуром Бейкером пересобрали его на Roland TR-808, добавив бит «Numbers», — так появилась «Planet Rock». В Детройте Хуан Аткинс и другие молодые чернокожие музыканты соединили машины Kraftwerk с фанком Parliament-Funkadelic — и получилось техно. Здесь Kraftwerk отдавали, а не наследовали, поэтому шагом их маршрута это не считается."
+  cards: ["planet-rock", "detroit-techno"]
+  sources:
+    - title: "The Guardian (Marcus Barnes): From Germany to Detroit and back — how Kraftwerk forged an industrial exchange (2020)"
+      url: "https://www.theguardian.com/music/2020/may/25/from-germany-to-detroit-and-back-how-kraftwerk-forged-an-industrial-exchange"
+      quote: "Kraftwerk’s pioneering approach, using synthesisers and sequenced drum arrangements to evoke robotic or industrial rhythms, became the blueprint for Detroit musicians such as Juan Atkins, who coined the term “techno”."
+    - title: "The Guardian (Marcus Barnes): From Germany to Detroit and back — how Kraftwerk forged an industrial exchange (2020)"
+      url: "https://www.theguardian.com/music/2020/may/25/from-germany-to-detroit-and-back-how-kraftwerk-forged-an-industrial-exchange"
+      quote: "As with Bambaataa’s iconic Planet Rock, produced with Arthur Baker (another Kraftwerk fan), Atkins’ early work draws heavily on Kraftwerk’s tropes and themes."
+    - title: "Exclaim!: Kraftwerk — Days of Future Past"
+      url: "https://exclaim.ca/music/article/kraftwerk-days_of_future_past"
+      quote: "the album's regimented hypno-pulses lay the groundwork for electro-funk, ambient, and synth-pop."
