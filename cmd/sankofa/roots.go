@@ -136,13 +136,15 @@ everyone in the collection.`,
 					}
 					fmt.Fprintln(w, head)
 					say(indent, pick(l.How, l.HowRU))
-					var undoc []string
+					var doc, undoc []string
 					for _, d := range roots.Dimensions {
-						if !slices.Contains(l.Dimensions, d) {
-							undoc = append(undoc, d)
+						if slices.Contains(l.Dimensions, d) {
+							doc = append(doc, tr(d))
+						} else {
+							undoc = append(undoc, tr(d))
 						}
 					}
-					dims := stMeta.Render(tr("Documented")+":") + " " + strings.Join(l.Dimensions, ", ")
+					dims := stMeta.Render(tr("Documented")+":") + " " + strings.Join(doc, ", ")
 					if len(undoc) > 0 {
 						dims += " · " + stMeta.Render(tr("Not documented")+":") + " " + strings.Join(undoc, ", ")
 					}
