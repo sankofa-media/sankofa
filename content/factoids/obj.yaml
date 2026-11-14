@@ -1,0 +1,48 @@
+---
+- id: fx-obj-0001
+  cat: obj
+  en: Queen Victoria's nephew Count Gleichen sculpted Mary Seacole in 1871, producing
+    the terracotta bust now held by London's National Portrait Gallery.
+  ru: Племянник королевы Виктории граф Глейхен создал в 1871 году терракотовый бюст
+    Мэри Сикол, который хранится в лондонской Национальной портретной галерее.
+  year: 1871
+  place:
+    name: London
+    lat: 51.5074
+    lon: -0.1278
+  cards:
+  - mary-seacole
+  gender: f
+  region: europe
+  sources:
+  - title: 'National Portrait Gallery: Mary Seacole, NPG 7149'
+    url: https://www.npg.org.uk/collections/search/portrait/mw304526/Mary-Seacole
+    quote: terracotta bust, 1871
+  - title: 'English Heritage: Mary Seacole'
+    url: https://www.english-heritage.org.uk/visit/blue-plaques/mary-seacole/
+    quote: in 1871 was sculpted by Count Gleichen, Queen Victoria’s nephew.
+  status: drafted
+- id: fx-obj-0002
+  cat: obj
+  en: Gainsborough painted writer and composer Ignatius Sancho in 1768, a portrait
+    now in the National Gallery of Canada.
+  ru: Гейнсборо написал портрет писателя и композитора Игнатиуса Санчо в 1768 году
+    — теперь картина хранится в Национальной галерее Канады.
+  year: 1768
+  place:
+    name: National Gallery of Canada, Ottawa
+    lat: 45.4295
+    lon: -75.6986
+  cards: []
+  gender: m
+  region: global
+  sources:
+  - title: 'National Portrait Gallery: Ignatius Sancho after Thomas Gainsborough'
+    url: https://www.npg.org.uk/schools-hub/ignatius-sancho-based-on-a-work-by-thomas-gainsborough
+    quote: This is a miniature copy of another portrait made by the artist Thomas
+      Gainsborough in 1768.
+  - title: 'National Gallery: Thomas Gainsborough'
+    url: https://www.nationalgallery.org.uk/artists/thomas-gainsborough
+    quote: In 1768 Gainsborough painted a portrait of writer Ignatius Sancho (National
+      Gallery of Canada, Ottawa)
+  status: drafted
