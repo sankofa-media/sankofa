@@ -456,6 +456,7 @@ export class RootsMap {
     return [
       h('small', {}, `${a.years[0]} · ${placeName(a, lang())}`),
       h('b', {}, this.nameOf(a)),
+      ...(((lang() === 'ru' && a.storyRu) || a.story) ? [h('p.rm-story', {}, (lang() === 'ru' && a.storyRu) || a.story!)] : []),
       ...(heard ? [h('button.btn.primary.rt-playroute', { type: 'button', onclick: () => this.reader.playRoute() }, svgIcon('wave'), pick({ en: 'Play the route', ru: 'Слушать маршрут' }))] : []),
       ...(summary ? [summary] : []),
     ];

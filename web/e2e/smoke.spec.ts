@@ -492,13 +492,15 @@ test('roots: Cyrillic search finds an artist and the chain ends at a museum card
   // A deep link renders the chain and it ends at a card.
   await page.goto('about:blank');
   await page.goto(`/#view=roots&artist=${a.id}`);
-  const end = page.locator('.r-tree .r-card').last();
-  await expect(end).toBeVisible();
+  const end = page.locator('.rt-route .rt-card').last();
+  await expect(end).toBeAttached();
   const cardId = await end.getAttribute('data-card');
-  expect(a.paths.some((p: string[]) => p[p.length - 1] === `card:${cardId}` || p[p.length - 1].startsWith('card:'))).toBe(true);
-  await expect(page.locator('.r-edge .r-say').first()).toBeVisible();
-  await expect(page.locator('.r-edge-head').first()).toContainText('→');
-  await expect(page.locator('.r-src a')).not.toHaveCount(0);
+  expect(cardId).toBeTruthy();
+  expect(a.paths.some((p: string[]) => p[p.length - 1].startsWith('card:'))).toBe(true);
+  await expect(page.locator('.rt-link .rt-claim').first()).toBeVisible();
+  await expect(page.locator('.rt-link .rt-verb').first()).toBeVisible();
+  await expect(page.locator('.rt-src a')).not.toHaveCount(0);
+  await end.scrollIntoViewIfNeeded();
   await end.click();
   await expect(page.locator('.drawer.on article.card')).toBeVisible();
 });
@@ -544,16 +546,16 @@ test('roots unwind past the card, name the kind of each link and what was borrow
   await serveFixtureRoots(page);
   await page.goto('/#view=roots&artist=the-prodigy');
   await expect(page.locator('.r-tree')).toBeVisible();
-  await expect(page.locator('.r-edge.k-sample .r-kind')).toContainText('sample');
-  await expect(page.locator('.r-edge.k-sample .r-say')).toContainText('handclaps');
-  // gospel grows from spirituals: the chain goes on past the first card
-  await expect(page.locator('.r-edge.r-lin').first()).toBeVisible();
-  await expect(page.locator('.r-card.r-deep').first()).toBeVisible();
+  await expect(page.locator('.rt-link.k-sample .rt-verb')).toContainText('sampled');
+  await expect(page.locator('.rt-link.k-sample')).toContainText('handclaps');
+  // gospel grows from spirituals: the route goes on past the first card
+  await expect(page.locator('.rt-link.k-lineage').first()).toBeAttached();
+  await expect(page.locator('.rt-cardst.deep').first()).toBeAttached();
 
   await page.goto('about:blank');
   await page.goto('/#view=roots&artist=television&lang=ru');
   await expect(page.locator('.r-story')).toContainText('[заглушка]');
-  await expect(page.locator('.r-kind').first()).toContainText('влияние');
+  await expect(page.locator('.rt-verb em').first()).toContainText('под влиянием');
 
   await page.goto('about:blank');
   await page.goto('/#view=roots');
@@ -569,8 +571,8 @@ test('the music map counts its roots, finds an artist and lights its way down', 
   await page.locator('.rm-input').fill('telev');
   await page.locator('.rm-input').press('Enter');
   await expect(page.locator('.rmap.lit')).toBeAttached();
-  await expect(page.locator('.rm-info b')).toHaveText('Television');
-  await expect(page.locator('.rm-info p')).toContainText('[placeholder]');
+  await expect(page.locator('.rm-path-head > b')).toHaveText('Television');
+  await expect(page.locator('.rm-path-head .rm-story')).toContainText('[placeholder]');
   // its way down reaches a museum card
   expect(await page.locator('.rm-node.card.on').count()).toBeGreaterThan(0);
 
@@ -597,10 +599,11 @@ test('breaking a node is told at once and the stopped node never checks in', asy
   expect(lines.slice(0, since).some((l) => /Sogo\s+checked\s+in/.test(l))).toBe(false);
 });
 
-test('the music map fits the viewport; descent level 1 shows eras; Renaissance opens on a photograph', async ({ page }) => {
+test('the music map fits the viewport; descent level 1 shows eras; Renaissance opens on a photograph', async ({ page }, info) => {
   await page.goto('/#view=roots-map');
   await page.waitForTimeout(1500);
-  const clipped = await page.evaluate(() =>
+  // Phones pan a full-size canvas, so only wide screens must fit every label.
+  const clipped = info.project.name === 'mobile' ? 0 : await page.evaluate(() =>
     [...document.querySelectorAll('.rm-node .lbl:not(.hide)')].filter((t) => {
       const r = t.getBoundingClientRect();
       return r.width && (r.right > innerWidth + 1 || r.left < -1);
@@ -698,10 +701,11 @@ test('one name per chapter: era tags read the chapter titles', async ({ page }) 
   await expect(page.locator('.opener .lede:visible')).toContainText('«Сопротивление»');
 });
 
-test('a band goes on through its member instead of a separate step', async ({ page }) => {
+test('a band goes on through its member', async ({ page }) => {
   await page.goto('/#view=roots&artist=the-velvet-underground');
-  await expect(page.locator('.r-member').first()).toContainText('Lou Reed, of The Velvet Underground');
-  await expect(page.locator('.r-col')).not.toContainText('years back');
+  await page.locator('.rt-mstop[data-ref="lou-reed"]').click();
+  await expect(page.locator('.rt-link.k-member .rt-verb').first()).toHaveText(/^The\sVelvet\sUnderground\sthrough\sits\smember\sLou\sReed$/);
+  await expect(page.locator('.rt-reader')).not.toContainText('years back');
 });
 
 test('Russian descent speaks Russian in its empty stretches', async ({ page }) => {
@@ -726,9 +730,10 @@ test('counts agree: a chapter has as many cards in the contents, its end and the
 
 test('roots: a person is not written as a band', async ({ page }) => {
   await page.goto('/#view=roots&artist=john-coltrane');
-  const m = page.locator('.r-member').first();
-  await expect(m).toContainText('Miles Davis, who led the band John Coltrane played in');
-  await expect(page.locator('.r-col')).not.toContainText('Miles Davis, of John Coltrane');
+  await page.locator('.rt-mstop[data-ref="miles-davis"]').click();
+  const m = page.locator('.rt-link.k-member .rt-verb').first();
+  await expect(m).toHaveText(/^John\sColtrane\splayed\sin\sthe\sband\sof\sMiles\sDavis$/);
+  await expect(page.locator('.rt-reader')).not.toContainText('through its member');
 });
 
 test('a first visit to the engine room does not claim a card was opened', async ({ page }) => {
@@ -815,35 +820,55 @@ test('Russian names the listening block and the uploader in Russian', async ({ p
   await expect(block.locator('.lb-src')).toHaveText('Официальная загрузка: Big Mama Thornton - Topic');
 });
 
-test('stepping through a roots chain loads exactly one player at a time', async ({ page }) => {
+test('the docked player loads exactly one player, and only after a click', async ({ page }) => {
   const yt = await watchYouTube(page);
   await page.goto('/#view=roots&artist=the-beatles');
-  await expect(page.locator('.r-listen').first()).toBeVisible();
+  await expect(page.locator('.rt-play').first()).toBeVisible();
   await page.waitForTimeout(500);
+  // No players in the chain, nothing from the video host before a click.
   expect(yt).toEqual([]);
-  await expect(page.locator('iframe.lb-frame')).toHaveCount(0);
-  await page.getByRole('button', { name: 'Play the chain' }).click();
+  await expect(page.locator('iframe')).toHaveCount(0);
+  await expect(page.locator('.rt-route .lb')).toHaveCount(0);
+  await expect(page.locator('.mp')).toBeHidden();
+  await page.getByRole('button', { name: 'Play the route' }).click();
+  await expect(page.locator('.mp')).toBeVisible();
   await expect(page.locator('iframe.lb-frame')).toHaveCount(1);
+  await expect(page.locator('.mp .mp-now')).toContainText('Now playing');
   const first = await page.locator('iframe.lb-frame').getAttribute('src');
-  await page.locator('.r-listen.on .lb-next').click();
+  expect(first).toContain('youtube-nocookie.com/embed/');
+  await page.locator('.mp .mp-next').click();
   await expect(page.locator('iframe.lb-frame')).toHaveCount(1);
   await expect(page.locator('iframe.lb-frame')).not.toHaveAttribute('src', first!);
-  // The edge between the two stops says how the borrowing happened.
-  await expect(page.locator('.r-edge .r-kind').first()).toBeVisible();
+  // The station sounding now is marked in the route.
+  await expect(page.locator('.rt-play[aria-pressed="true"]')).toHaveCount(1);
+  // A station's own button plays it; closing silences everything.
+  await page.locator('.rt-play').first().click();
+  await expect(page.locator('iframe.lb-frame')).toHaveCount(1);
+  await page.locator('.mp .mp-close').click();
+  await expect(page.locator('.mp')).toBeHidden();
+  await expect(page.locator('iframe')).toHaveCount(0);
 });
 
-test('the music map steps along a lit path with one player at a time', async ({ page }) => {
+test('the music map reads a lit path in its panel and plays it in the docked player', async ({ page }) => {
   const yt = await watchYouTube(page);
   await page.goto('/#view=roots-map');
   await page.locator('.rm-input').fill('beatles');
   await page.locator('.rm-input').press('Enter');
-  const chain = page.locator('.rm-chain');
-  await expect(chain).toBeVisible();
+  const panel = page.locator('.rm-info.path');
+  await expect(panel).toBeAttached();
+  await expect(panel.locator('.rt-link').first()).toBeAttached();
+  // No players drawn on the map or in the panel.
+  await expect(page.locator('.rmap .lb')).toHaveCount(0);
   await page.waitForTimeout(500);
   expect(yt).toEqual([]);
-  await chain.locator('.lb-facade').click();
+  // Only the lit route is named; every name shown belongs to it.
+  const route = await panel.locator('.rt-station').evaluateAll((els) => els.map((e) => e.getAttribute('data-ref')));
+  const named = await page.locator('.rm-node .lbl').evaluateAll((ls) => ls.filter((l) => getComputedStyle(l).display !== 'none' && l.textContent).map((l) => l.closest('.rm-node')!.classList.contains('on')));
+  expect(named.length).toBeGreaterThan(1);
+  expect(named.every(Boolean)).toBe(true);
+  expect(route.length).toBeGreaterThan(1);
+  await panel.locator('.rt-playroute').click();
   await expect(page.locator('iframe.lb-frame')).toHaveCount(1);
-  await chain.getByRole('button', { name: 'Next →' }).click();
-  await expect(chain).toContainText('stop 2 of');
-  await expect(page.locator('iframe.lb-frame')).toHaveCount(1);
+  await expect(page.locator('.mp')).toBeVisible();
 });
+

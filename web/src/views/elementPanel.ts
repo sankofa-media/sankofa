@@ -15,7 +15,7 @@ export interface ElementInfo {
 
 /** "carried along 3 routes" / «несут три маршрута» */
 export function routesLine(n: number): string {
-  return pick({ en: `${n} ${n === 1 ? 'route carries it' : 'routes carry it'}`, ru: `маршрутов, которые его несут: ${n}` });
+  return pick({ en: `${n} ${n === 1 ? 'route carries it' : 'routes carry it'}`, ru: `Маршрутов, которые его несут: ${n}` });
 }
 
 export class ElementPanel {

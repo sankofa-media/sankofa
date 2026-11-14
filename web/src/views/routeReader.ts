@@ -293,7 +293,7 @@ export class RouteReader {
     return h(
       `div.rt-link.k-${s.kind}`,
       { 'data-step': String(i) },
-      h('p.rt-verb', {}, h('span.rt-arrow', { 'aria-hidden': 'true' }, '↓'), h('span', {}, from), ' ', h('em', {}, verb), ' ', h('span', {}, to)),
+      h('p.rt-verb', {}, h('span', {}, from), ' ', h('em', {}, verb), ' ', h('span', {}, to)),
       lead,
       how && carried.length ? h('p.rt-carried', {}, ...carried.map((id) => this.elChip(id))) : null,
       claim ? h(`p.rt-claim${lead ? '.evidence' : ''}`, {}, lead ? h('small', {}, pick({ en: 'The evidence', ru: 'Свидетельство' })) : null, claim) : null,

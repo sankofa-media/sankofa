@@ -198,15 +198,6 @@ export function deepest(tree: TreeNode): string[] {
 }
 
 /**
- * Runs of single steps longer than `keep` are folded: the first and last
- * steps stay, the middle ones hide behind "+N steps". Returns how many to hide.
- */
-export function foldRun(length: number, keep = 4): { show: number; hide: number } {
-  if (length <= keep) return { show: length, hide: 0 };
-  return { show: 2, hide: length - 2 };
-}
-
-/**
  * The teaser on the landing: artists with the deepest chains first, then the
  * ones whose links name a sample or a cover.
  */
@@ -285,41 +276,7 @@ export function quotes(text: string, lang: string): string {
   return text.replace(/«([^»]+)»/g, '“$1”').replace(/"([^"]+)"/g, '“$1”').replace(/(^|[\s(])'([^']+)'(?=[\s.,;:!?)]|$)/g, '$1“$2”');
 }
 
-/** Children of a node grouped by the same borrowing (kind and what), so one fact is told once. */
-export function groupChildren(n: TreeNode): TreeNode[][] {
-  const groups: TreeNode[][] = [];
-  for (const c of n.children) {
-    const key = c.link ? `${c.link.kind ?? ''}|${(c.link.what || c.link.claim).trim()}` : `lineage|${c.ref}`;
-    const g = groups.find((x) => x[0].link && `${x[0].link.kind ?? ''}|${(x[0].link.what || x[0].link.claim).trim()}` === key);
-    if (g && c.link) g.push(c);
-    else groups.push([c]);
-  }
-  return groups;
-}
-
 /** An artist's place in the reader's language. */
 export function placeName(a: Pick<Artist, 'place' | 'placeRu'>, lang: string): string {
   return (lang === 'ru' && a.placeRu) || a.place.name;
-}
-
-/** One stop on a playable chain: who, and how the step to the next stop was taken. */
-export interface ChainStep {
-  ref: string;
-  /** The step from this stop to the next; absent on the last. */
-  next?: { kind: LinkKind | 'lineage' | 'unknown'; link?: RootLink };
-}
-
-/**
- * An artist's deepest chain as stops to listen to in turn: the artist, the
- * artists it borrowed from, the museum card, and the card's own roots.
- */
-export function chainSteps(artist: Artist, byId: Map<string, Artist>, cards: Map<string, LineageCard>): ChainStep[] {
-  const path = deepest(extendLineage(buildTree(artist, byId), cards));
-  return path.map((ref, i) => {
-    const to = path[i + 1];
-    if (!to) return { ref };
-    if (ref.startsWith('card:')) return { ref, next: { kind: 'lineage' } };
-    const link = linkTo(byId.get(ref), to);
-    return { ref, next: { kind: link?.kind ?? 'unknown', link } };
-  });
 }
