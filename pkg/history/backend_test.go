@@ -307,70 +307,57 @@ func TestParseTiers(t *testing.T) {
 	}
 }
 
-// The informer transform redacts secret values before they reach the cache,
-// and Normalize redacts them again before they reach the store.
+// Normalize redacts secret values, including the copy kubectl apply keeps in
+// an annotation, before they reach the store.
 func TestSecretValuesNeverStored(t *testing.T) {
-	sec := func() *unstructured.Unstructured {
-		return &unstructured.Unstructured{Object: map[string]any{
-			"apiVersion": "v1", "kind": "Secret",
-			"metadata":   map[string]any{"name": "s", "namespace": "a", "uid": "u9", "annotations": map[string]any{"kubectl.kubernetes.io/last-applied-configuration": `{"data":{"password":"aHVudGVyMg=="}}`}},
-			"data":       map[string]any{"password": "aHVudGVyMg=="},
-			"stringData": map[string]any{"token": "hunter2"},
-		}}
-	}
+	sec := &unstructured.Unstructured{Object: map[string]any{
+		"apiVersion": "v1", "kind": "Secret",
+		"metadata":   map[string]any{"name": "s", "namespace": "a", "uid": "u9", "annotations": map[string]any{"kubectl.kubernetes.io/last-applied-configuration": `{"data":{"password":"aHVudGVyMg=="}}`}},
+		"data":       map[string]any{"password": "aHVudGVyMg=="},
+		"stringData": map[string]any{"token": "hunter2"},
+	}}
 	gr := schema.GroupResource{Resource: "secrets"}
-	cached, err := transform(gr)(sec())
+	rec, _, err := Normalize(gr, sec)
 	if err != nil {
 		t.Fatal(err)
 	}
-	for _, u := range []*unstructured.Unstructured{cached.(*unstructured.Unstructured), sec()} {
-		rec, _, err := Normalize(gr, u)
-		if err != nil {
+	if strings.Contains(string(rec.Object), "aHVudGVyMg") || strings.Contains(string(rec.Object), "hunter2") {
+		t.Fatalf("secret value leaked into history: %s", rec.Object)
+	}
+	for name, s := range backends(t) {
+		if err := s.Add(context.Background(), rec, "h"); err != nil {
 			t.Fatal(err)
 		}
-		if strings.Contains(string(rec.Object), "aHVudGVyMg") || strings.Contains(string(rec.Object), "hunter2") {
-			t.Fatalf("secret value leaked into history: %s", rec.Object)
-		}
-		for name, s := range backends(t) {
-			if err := s.Add(context.Background(), rec, "h"); err != nil {
-				t.Fatal(err)
-			}
-			got, _, _ := s.Latest(context.Background(), "u9")
-			if strings.Contains(string(got.Object), "hunter2") || !strings.Contains(string(got.Object), "redacted") {
-				t.Fatalf("%s: %s", name, got.Object)
-			}
+		got, _, _ := s.Latest(context.Background(), "u9")
+		if strings.Contains(string(got.Object), "hunter2") || !strings.Contains(string(got.Object), "redacted") {
+			t.Fatalf("%s: %s", name, got.Object)
 		}
 	}
 	// A secret-shaped config map is not a secret.
-	c, _ := transform(cms)(cm("a", "x", "u", "hunter2"))
-	if !strings.Contains(fmt.Sprint(c.(*unstructured.Unstructured).Object), "hunter2") {
+	c, _, _ := Normalize(cms, cm("a", "x", "u", "hunter2"))
+	if !strings.Contains(string(c.Object), "hunter2") {
 		t.Fatal("config maps must not be redacted")
 	}
 }
 
-// The transform keeps the last writer, so dropping managedFields from the
-// cache does not lose "who did it".
-func TestTransformKeepsManager(t *testing.T) {
+func TestNormalizeKeepsManager(t *testing.T) {
 	u := cm("a", "x", "u", "1")
 	u.Object["metadata"].(map[string]any)["managedFields"] = []any{
 		map[string]any{"manager": "kubectl", "operation": "Update", "time": "2026-11-01T10:00:00Z"},
 		map[string]any{"manager": "helm", "operation": "Update", "time": "2026-11-02T10:00:00Z"},
 	}
 	u.Object["status"] = map[string]any{"x": "y"}
-	out, _ := transform(cms)(u)
-	rec, _, err := Normalize(cms, out.(*unstructured.Unstructured))
+	rec, h1, err := Normalize(cms, u)
 	if err != nil {
 		t.Fatal(err)
 	}
 	if rec.Manager != "helm" || !rec.At.Equal(time.Date(2026, 11, 2, 10, 0, 0, 0, time.UTC)) {
 		t.Fatalf("manager %q at %s", rec.Manager, rec.At)
 	}
-	if strings.Contains(string(rec.Object), "griot.sankofa") || strings.Contains(string(rec.Object), "managedFields") || strings.Contains(string(rec.Object), "status") {
-		t.Fatalf("private annotations or status leaked: %s", rec.Object)
+	if strings.Contains(string(rec.Object), "managedFields") || strings.Contains(string(rec.Object), "status") {
+		t.Fatalf("managed fields or status kept: %s", rec.Object)
 	}
-	_, h1, _ := Normalize(cms, out.(*unstructured.Unstructured))
-	_, h2, _ := Normalize(cms, cm("a", "x", "u", "1"))
-	if h1 != h2 {
-		t.Fatal("the transform must not change the content hash")
+	if _, h2, _ := Normalize(cms, cm("a", "x", "u", "1")); h1 != h2 {
+		t.Fatal("status and managed fields must not change the content hash")
 	}
 }
