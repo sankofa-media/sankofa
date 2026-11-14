@@ -1,0 +1,73 @@
+---
+- id: fx-spt-0005
+  cat: spt
+  en: Alice Coachman's winning high jump at the 1948 London Olympics cleared 1.68
+    metres, an Olympic record.
+  ru: Победный прыжок Элис Коучмен на Олимпиаде 1948 года в Лондоне — 1,68 метра —
+    стал олимпийским рекордом.
+  year: 1948
+  place:
+    name: London
+    lat: 51.5074
+    lon: -0.1278
+  cards:
+  - alice-coachman
+  gender: f
+  region: europe
+  sources:
+  - title: 'World Athletics: 1948 Olympic high jump champion Coachman dies'
+    url: https://worldathletics.org/news/iaaf-news/alica-coachman-obituary
+    quote: the 1948 Games, where she took the title with a US and Olympic record of
+      1.68m.
+  - title: 'USA Track & Field: Alice Coachman'
+    url: https://www.usatf.org/athlete-bios/alice-coachman
+    quote: 'Olympic Record: High Jump - 1.68 m (August 7, 1948)'
+  status: drafted
+- id: fx-spt-0006
+  cat: spt
+  en: Wilma Rudolph won Olympic bronze in Melbourne's 4×100-metre relay in 1956, four
+    years before her Rome victories.
+  ru: Бронзу в эстафете 4×100 метров Вильма Рудольф завоевала на Олимпиаде в Мельбурне
+    в 1956 году, за четыре года до побед в Риме.
+  year: 1956
+  place:
+    name: Melbourne
+    lat: -37.8136
+    lon: 144.9631
+  cards:
+  - wilma-rudolph
+  gender: f
+  region: global
+  sources:
+  - title: 'World Athletics: Sixty years since historic Olympic triple, Rudolph’s
+      legacy lives on'
+    url: https://worldathletics.org/news/feature/wilma-rudolph-1960-olympics-100m-usa
+    quote: her Olympic experience ended on a high when she anchored the US team to
+      a bronze medal in the 4x100m.
+  - title: 'National Women''s History Museum: Wilma Rudolph'
+    url: https://www.womenshistory.org/education-resources/biographies/wilma-rudolph
+    quote: She competed in the 1956 Olympic games and won a bronze medal in 4x100
+      relay.
+  status: drafted
+- id: fx-spt-0007
+  cat: spt
+  en: Derartu Tulu reclaimed the Olympic 10,000-metre title in Sydney in 2000, eight
+    years after her Barcelona victory.
+  ru: Дерарту Тулу вернула себе олимпийское золото на дистанции 10 000 метров в Сиднее
+    в 2000 году, спустя восемь лет после победы в Барселоне.
+  year: 2000
+  place:
+    name: Sydney
+    lat: -33.8688
+    lon: 151.2093
+  cards: []
+  gender: f
+  region: global
+  sources:
+  - title: 'World Athletics: Tulu and Meyer: the victory lap that united Africa'
+    url: https://worldathletics.org/news/heritage/tulu-meyer-1992-olympic-barcelona-10000m-victory-lap-unite-africa
+    quote: Tulu went on to win the Olympic 10,000m title in Sydney in 2000
+  - title: 'Olympedia: Derartu Tulu'
+    url: https://www.olympedia.org/athletes/67372
+    quote: In 2000, she became the first woman, to repeat in the Olympic 10K
+  status: drafted
