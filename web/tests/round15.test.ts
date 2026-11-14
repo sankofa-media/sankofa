@@ -65,7 +65,7 @@ describe('step markers: {at Place · Year} and {img card:n}', () => {
     expect(folded.translations!.ru.steps).toEqual(['А', '{at Там · 1400} Б']);
     const split = splitStepMarks(folded);
     expect(split.steps).toEqual(['A', 'B']);
-    expect(split.stepLabels).toEqual(['Here · 1300', undefined]);
+    expect(split.stepLabels).toEqual(['Here · 1300', '']);
   });
   it('leaves a chapter without markers as it is', () => {
     const ch = { id: 'v1', title: 'T', kicker: '', years: [], places: [], cards: [], steps: ['A', 'B'] } as Chapter;

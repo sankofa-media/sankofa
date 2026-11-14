@@ -121,7 +121,7 @@ export function splitStepMarks(ch: Chapter): MarkedChapter {
   return {
     ...ch,
     steps: marks.map((m) => m.text),
-    stepLabels: marks.map((m) => m.label),
+    stepLabels: marks.map((m) => m.label ?? ""),
     stepImages: marks.map((m) => m.img),
   };
 }
