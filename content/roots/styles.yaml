@@ -1287,6 +1287,190 @@ styles:
               url: "https://faroutmagazine.co.uk/ornette-coleman-lou-reeds-greatest-influence/"
               quote: "Although The Velvets might be known as the progenitors of alternative, punk, and other stripes of rock and roll, one of Reed’s biggest influences actually comes from the world of jazz."
         scope: "career"
+  - id: "krautrock"
+    name: "Krautrock"
+    nameRu: "краутрок"
+    years: [1968, 1977]
+    place: "West Germany (Cologne, Düsseldorf, Munich, Berlin, Hamburg)"
+    placeRu: "ФРГ (Кёльн, Дюссельдорф, Мюнхен, Берлин, Гамбург)"
+    traits:
+      - {en: "Long, hypnotic pieces over a steady, repeated pulse: Can's locked grooves, the motorik beat of Neu!", ru: "Долгие гипнотические пьесы на ровном, повторяющемся пульсе: неотступный грув Can, моторик Neu!"}
+      - {en: "Collective, unscored improvisation, often edited on tape into finished pieces (‘instant composition’)", ru: "Коллективная импровизация без нот, которую часто потом монтируют на плёнке в готовые вещи («мгновенная композиция»)"}
+      - {en: "The electric guitar, organ and tape used as sources of sound and texture, joined by early electronics", ru: "Электрогитара, орган и магнитная плёнка — источники звука и фактуры, а рядом с ними первая электроника"}
+      - {en: "A deliberate turn away from blues-based Anglo-American rock towards music drawn from their own, German experience", ru: "Сознательный отказ от англо-американского рока на блюзовой основе ради музыки, выросшей из собственного, немецкого опыта"}
+    sources:
+      - title: "Classical Music (Steve Wright): Ranked — the 17 greatest krautrock albums of all time (2025)"
+        url: "https://www.classical-music.com/features/recordings/best-krautrock-albums"
+        quote: "Emerging in late 1960s and early ’70s West Germany, this experimental genre rejected both American blues-rock and German pop convention. Instead, it carved out something visionary: hypnotic rhythms, improvisation, analog electronics, and cosmic ambition."
+      - title: "Simon Reynolds: Krautrock (Melody Maker, July 1996), author’s archive"
+        url: "https://reynoldsretro.blogspot.com/2013/03/krautrock-melody-maker-july-1996-by.html"
+        quote: "Expanding on the innovations of Hendrix, Syd Barrett, the VU, etc, the Krautrock bands explored the electric guitar's potential as source of sound-in-itself."
+      - title: "KQED (Richie Unterberger): ‘A Good Way to Master the Future’ — an interview with Holger Czukay, 1997"
+        url: "https://www.kqed.org/arts/13807595/a-good-way-to-master-the-future-an-interview-with-holger-czukay-1997"
+        quote: "We liked to do something without notation. We didn’t want to read music off papers. We really tried to make instant compositions from the very beginning."
+      - title: "Modern Drummer: Jaki Liebezeit — Hero to a Generation of Thinking Alternative Groovers (2017)"
+        url: "https://www.moderndrummer.com/2017/01/jaki-liebezeit-hero-generation-thinking-alternative-groovers/"
+        quote: "Repeating rhythms and grooves over and over again very consciously was a whole new thing at the time"
+    from:
+      - to: "style:art-rock"
+        kind: "style"
+        scope: "career"
+        how: "Krautrock grew out of late-1960s rock: the Velvet Underground’s mesmerising repetition, Hendrix, Syd Barrett’s Pink Floyd and the studio experiments of the later Beatles. It kept what rock had inherited from rhythm and blues and rock and roll — the amplified electric band of guitar, bass and drums and the steady, driving beat — and stretched repetition into trance. It rejected the blues idiom itself: blues-based song structures and harmonies, the blues-rock purism of Cream and the Stones, and the effort to sound English or American."
+        howRu: "Краутрок вырос из рока конца 1960-х: из завораживающих повторов The Velvet Underground, из Хендрикса, из Pink Floyd времён Сида Барретта и студийных опытов поздних The Beatles. Он сохранил то, что рок унаследовал от ритм-н-блюза и рок-н-ролла, — громкую электрическую группу из гитары, баса и барабанов и ровный напористый бит — и растянул повтор до транса. А от самого блюзового языка отказался: от блюзовых форм и гармоний, от блюз-рокового пуризма Cream и The Rolling Stones, от желания звучать по-английски или по-американски."
+        carries: []
+        dimensions: ["sound", "rhythm", "harmony-form", "performance", "image"]
+        evidence:
+          - type: "critics"
+            dimensions: ["sound"]
+            text: "Simon Reynolds hears krautrock’s main inputs in late-1960s rock: the Velvet Underground’s mantras, Hendrix, Syd Barrett’s Pink Floyd, Brian Wilson and the later Beatles."
+            textRu: "Саймон Рейнольдс слышит главные истоки краутрока в роке конца 1960-х: в «мантрах» The Velvet Underground, у Хендрикса, у Pink Floyd времён Сида Барретта, у Брайана Уилсона и поздних The Beatles."
+            source:
+              title: "Simon Reynolds: Krautrock (Melody Maker, July 1996), author’s archive"
+              url: "https://reynoldsretro.blogspot.com/2013/03/krautrock-melody-maker-july-1996-by.html"
+              quote: "Krautrock's primary inputs, and urgency, came from late '60s rock: Velvet Underground's mesmerising mantras, Hendrix's pyrotechnique, Syd Barrett-era Pink Floyd's chromatic chaos, plus dashes of West Coast folkadelic rock and the studio-centric experiments of Brian Wilson and the later Beatles."
+          - type: "critics"
+            dimensions: ["harmony-form"]
+            text: "Reynolds is just as clear about what the German bands left out: the blues purism of Cream and the Rolling Stones."
+            textRu: "Столь же ясно Рейнольдс говорит и о том, что немецкие группы оставили в стороне: блюзовый пуризм Cream и The Rolling Stones."
+            source:
+              title: "Simon Reynolds: Krautrock (Melody Maker, July 1996), author’s archive"
+              url: "https://reynoldsretro.blogspot.com/2013/03/krautrock-melody-maker-july-1996-by.html"
+              quote: "Equally significant is what they didn't draw on, namely the blues-bore purism sired by Cream and the Stones."
+          - type: "critics"
+            dimensions: ["rhythm", "sound"]
+            text: "Turning the guitar into a source of pure sound, the krautrock bands still kept the rhythmic thrust of rock and roll."
+            textRu: "Превратив гитару в источник чистого звука, краутрок-группы всё же сохранили ритмический напор рок-н-ролла."
+            source:
+              title: "Simon Reynolds: Krautrock (Melody Maker, July 1996), author’s archive"
+              url: "https://reynoldsretro.blogspot.com/2013/03/krautrock-melody-maker-july-1996-by.html"
+              quote: "the Krauts anticipated the soundpainting and texturology of today's post-rock, while still retaining the rhythmic thrust of rock'n'roll."
+          - type: "testimony"
+            dimensions: ["sound", "performance"]
+            text: "Holger Czukay names the Beatles and above all the Velvet Underground as Can’s main rock influences; they encouraged the band to play rock rather than academic avant-garde music."
+            textRu: "Хольгер Шукай называет главными рок-влияниями Can группу The Beatles и прежде всего The Velvet Underground: именно они убедили музыкантов играть рок, а не академический авангард."
+            source:
+              title: "KQED (Richie Unterberger): ‘A Good Way to Master the Future’ — an interview with Holger Czukay, 1997"
+              url: "https://www.kqed.org/arts/13807595/a-good-way-to-master-the-future-an-interview-with-holger-czukay-1997"
+              quote: "The influence, for me, of Beatles and Velvet Underground was most important. The Velvet Underground especially."
+          - type: "testimony"
+            dimensions: ["performance"]
+            text: "Czukay: that feeling encouraged them to go on with rock music instead of academic avant-garde music."
+            textRu: "Шукай: это чувство придало им смелости заниматься роком, а не академическим авангардом."
+            source:
+              title: "KQED (Richie Unterberger): ‘A Good Way to Master the Future’ — an interview with Holger Czukay, 1997"
+              url: "https://www.kqed.org/arts/13807595/a-good-way-to-master-the-future-an-interview-with-holger-czukay-1997"
+              quote: "This feeling made us encouraged to go on with rock music in general, instead of making avant-garde academic music."
+          - type: "testimony"
+            dimensions: ["sound", "performance"]
+            text: "Michael Rother grew up on the British beat groups, then on Cream and Jimi Hendrix, whom he once wanted to copy."
+            textRu: "Михаэль Ротер вырос на британских бит-группах, а потом на Cream и Джими Хендриксе, которого одно время хотел копировать."
+            source:
+              title: "Red Bull Music Academy: Michael Rother lecture (Tokyo, 2014)"
+              url: "https://www.redbullmusicacademy.com/lectures/michael-rother-tokyo-2014"
+              quote: "Later on, of course, also bands like Cream and Jimi Hendrix, whom I still love, I can say. I mean, I don’t want to be Jimi Hendrix, I wanted to be a copy of Jimi Hendrix for a while when I was a teenager"
+          - type: "testimony"
+            dimensions: ["harmony-form"]
+            text: "Rother’s main idea was to steer away from Anglo-American musical structures based on the blues."
+            textRu: "Главной мыслью Ротера было уйти от англо-американских музыкальных структур, построенных на блюзе."
+            source:
+              title: "Red Bull Music Academy: Michael Rother lecture (Tokyo, 2014)"
+              url: "https://www.redbullmusicacademy.com/lectures/michael-rother-tokyo-2014"
+              quote: "different from Anglo-American musical structures that are mostly, or were mostly, based on the blues. That was one of the main ideas I had. I wanted to steer away from that."
+          - type: "critics"
+            dimensions: ["harmony-form", "rhythm"]
+            text: "Clash describes Rother’s explicit rejection of the blues harmonies and structures that dominated pop and rock; Rother still loves Little Richard, Chuck Berry and Hendrix, ‘but they were the originals’."
+            textRu: "Clash пишет о том, как открыто Ротер отказался от блюзовых гармоний и структур, господствовавших тогда в поп- и рок-музыке; при этом Ротер по-прежнему любит Литл Ричарда, Чака Берри и Хендрикса — «но они были оригиналами»."
+            source:
+              title: "Clash: Fortunes Of Krautrock — An Interview With Michael Rother (2020)"
+              url: "https://www.clashmusic.com/features/fortunes-of-krautrock-an-interview-with-michael-rother/"
+              quote: "He admits that his explicit rejection of blues harmonies and structures that dominated pop and rock at the time was met with general indifference from audiences."
+          - type: "critics"
+            dimensions: ["rhythm"]
+            text: "Neu!’s debut stripped rock down to its rhythmic essentials, with Klaus Dinger’s relentless motorik beat."
+            textRu: "Дебют Neu! свёл рок к его ритмической сути — к неумолимому моторик-биту Клауса Дингера."
+            source:
+              title: "Classical Music (Steve Wright): Ranked — the 17 greatest krautrock albums of all time (2025)"
+              url: "https://www.classical-music.com/features/recordings/best-krautrock-albums"
+              quote: "Neu!’s 1972 debut is a cornerstone of krautrock minimalism—boldly stripping rock down to its rhythmic essentials. Michael Rother’s shimmering guitar textures and Klaus Dinger’s relentless “motorik” beat"
+          - type: "critics"
+            dimensions: ["harmony-form", "image"]
+            text: "The genre as a whole rejected American blues-rock as well as German pop convention."
+            textRu: "Жанр в целом отверг и американский блюз-рок, и немецкие эстрадные условности."
+            source:
+              title: "Classical Music (Steve Wright): Ranked — the 17 greatest krautrock albums of all time (2025)"
+              url: "https://www.classical-music.com/features/recordings/best-krautrock-albums"
+              quote: "this experimental genre rejected both American blues-rock and German pop convention."
+          - type: "testimony"
+            dimensions: ["image"]
+            text: "Jaki Liebezeit: many German groups tried to sound English, and it did not work; Can and Faust did not sound English at all."
+            textRu: "Яки Либецайт: многие немецкие группы пытались звучать по-английски, и ничего не выходило; Can и Faust по-английски не звучали совсем."
+            source:
+              title: "The Quietus (Ben Graham): Still Growing — Hans-Joachim Irmler and Jaki Liebezeit interviewed (2015)"
+              url: "https://thequietus.com/interviews/hans-joachim-irmler-jaki-liebezeit-interview/"
+              quote: "But because of that so many German groups tried to play English music, and it doesn’t work. Because the language is not your mother language; you sing in English and you try to play like English bands, and I don’t think there’s any need for that. But Faust and Can were two examples of groups that didn’t sound at all English."
+          - type: "testimony"
+            text: "Irmin Schmidt, who founded Can, says American music has another history because of the blues and the African presence in Western culture, which created a totally new tradition."
+            textRu: "Ирмин Шмидт, основатель Can, говорит, что у американской музыки другая история — благодаря блюзу и тому, что африканцы вошли в западную культуру; так родилась совершенно новая традиция."
+            source:
+              title: "Louder / Prog (Rob Hughes): ‘We never saw ourselves as a rock group’ — the Prog interview with Can’s Irmin Schmidt (2019)"
+              url: "https://www.loudersound.com/features/we-never-saw-ourselves-as-a-rock-group-the-prog-interview-with-cans-irmin-schmidt"
+              quote: "America has another music history because of the blues and the population spread of Africans into Western culture. It created a totally new tradition and consciousness for music."
+      - to: "style:free-jazz"
+        kind: "style"
+        scope: "career"
+        how: "From free jazz krautrock took collective, unscored improvisation and some of its players: Can’s drummer Jaki Liebezeit and Guru Guru’s Mani Neumeier came from the West German free jazz of Manfred Schoof and Peter Brötzmann. But it put back what free jazz had given up — a fixed, repeated pulse: Liebezeit left free jazz because it allowed nothing rhythmically structured."
+        howRu: "У фри-джаза краутрок взял коллективную импровизацию без нот — и часть музыкантов: барабанщик Can Яки Либецайт и Мани Ноймайер из Guru Guru пришли из западногерманского фри-джаза Манфреда Шоофа и Петера Брётцмана. Но краутрок вернул то, от чего фри-джаз отказался, — постоянный, повторяющийся пульс: Либецайт ушёл из фри-джаза как раз потому, что там нельзя было играть ничего ритмически упорядоченного."
+        carries: ["improvisation"]
+        dimensions: ["performance", "rhythm", "sound"]
+        evidence:
+          - type: "critics"
+            dimensions: ["performance"]
+            text: "Reynolds describes Can’s core as four lapsed avant-garde and free jazz musicians who decided rock was where it was at."
+            textRu: "Ядро Can, по словам Рейнольдса, составили четверо бывших авангардистов и фри-джазменов, решивших, что настоящее дело теперь — рок."
+            source:
+              title: "Simon Reynolds: Krautrock (Melody Maker, July 1996), author’s archive"
+              url: "https://reynoldsretro.blogspot.com/2013/03/krautrock-melody-maker-july-1996-by.html"
+              quote: "CAN's core was a quartet of lapsed avant-garde and free jazz musicians (bassist Holger Czukay, guitarist Michael Karoli, keyboardist Irmin Schmidt and drummer Jaki Leibezeit) who--blown away by the VU and the Beatles' \"I Am The Walrus\"-- decided rock was where it was at."
+          - type: "critics"
+            dimensions: ["performance"]
+            text: "Before Can, Liebezeit drummed in the Manfred Schoof Quintet, a pioneering European free jazz group, and on Globe Unity (1966) with Peter Brötzmann and Mani Neumeier, who later formed Guru Guru."
+            textRu: "До Can Либецайт играл в квинтете Манфреда Шоофа, одном из первых европейских фри-джазовых составов, и на альбоме «Globe Unity» (1966) вместе с Петером Брётцманом и Мани Ноймайером, который потом основал Guru Guru."
+            source:
+              title: "The Quietus (Ben Graham): Still Growing — Hans-Joachim Irmler and Jaki Liebezeit interviewed (2015)"
+              url: "https://thequietus.com/interviews/hans-joachim-irmler-jaki-liebezeit-interview/"
+              quote: "He played with Chet Baker in Barcelona and then joined the Manfred Schoof Quintet, generally regarded as one of the pioneering European free jazz outfits. In 1966 he played on the album Globe Unity which featured Peter Brotzmann on alto saxophone and Liebezeit drumming in the left channel while Mani Neumeier, later to form Guru Guru, drummed in the right."
+          - type: "testimony"
+            dimensions: ["performance", "rhythm"]
+            text: "Liebezeit: he was the first free jazz drummer in Germany, but left because free jazz allowed nothing harmonically or rhythmically structured — and repetition is a basic element of music."
+            textRu: "Либецайт: он был первым фри-джазовым барабанщиком в Германии, но ушёл, потому что во фри-джазе нельзя было играть ничего гармонически или ритмически упорядоченного, а повтор — основа музыки."
+            source:
+              title: "Modern Drummer: Jaki Liebezeit — Hero to a Generation of Thinking Alternative Groovers (2017)"
+              url: "https://www.moderndrummer.com/2017/01/jaki-liebezeit-hero-generation-thinking-alternative-groovers/"
+              quote: "In the mid-’60s I was the first free jazz drummer in Germany. But I stopped that because, to my mind, I couldn’t develop any further in that genre. In free jazz you just weren’t allowed to play anything that was harmonically or rhythmically structured."
+          - type: "testimony"
+            dimensions: ["rhythm"]
+            text: "Irmin Schmidt did not want a free jazz drummer for Can, and Liebezeit no longer wanted to be one."
+            textRu: "Ирмин Шмидт не хотел брать в Can фри-джазового барабанщика — а Либецайт и сам больше не хотел им быть."
+            source:
+              title: "Louder / Prog (Rob Hughes): ‘We never saw ourselves as a rock group’ — the Prog interview with Can’s Irmin Schmidt (2019)"
+              url: "https://www.loudersound.com/features/we-never-saw-ourselves-as-a-rock-group-the-prog-interview-with-cans-irmin-schmidt"
+              quote: "I thought, “Shit, I don’t want a free jazz drummer.” And then it turned out that he didn’t want to be one anymore anyway."
+          - type: "critics"
+            dimensions: ["sound", "performance"]
+            text: "Guru Guru, led by Mani Neumeier, fused acid rock, free jazz and avant-garde noise into improvisational chaos."
+            textRu: "Guru Guru во главе с Мани Ноймайером сплавили эйсид-рок, фри-джаз и авангардный шум в импровизационный хаос."
+            source:
+              title: "Classical Music (Steve Wright): Ranked — the 17 greatest krautrock albums of all time (2025)"
+              url: "https://www.classical-music.com/features/recordings/best-krautrock-albums"
+              quote: "Fusing acid rock, free jazz, and avant-garde noise, Guru Guru—led by powerhouse drummer Mani Neumeier—created a cosmic freak-out that felt both anarchic and visionary. The album’s relentless energy and improvisational chaos"
+          - type: "testimony"
+            dimensions: ["performance"]
+            text: "Czukay: from the very beginning Can made ‘instant compositions’ without notation."
+            textRu: "Шукай: с самого начала Can сочиняли «мгновенно», без нот."
+            source:
+              title: "KQED (Richie Unterberger): ‘A Good Way to Master the Future’ — an interview with Holger Czukay, 1997"
+              url: "https://www.kqed.org/arts/13807595/a-good-way-to-master-the-future-an-interview-with-holger-czukay-1997"
+              quote: "We liked to do something without notation. We didn’t want to read music off papers. We really tried to make instant compositions from the very beginning."
   - id: "folk-rock"
     name: "Folk rock"
     nameRu: "фолк-рок"
