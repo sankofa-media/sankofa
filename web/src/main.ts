@@ -3,7 +3,7 @@ import './styles/roots.css';
 import type { App } from './app';
 import type { CardsFile, ChaptersFile } from './lib/types';
 import { ERAS } from './lib/types';
-import { rememberPlace, takePlace } from './lib/place';
+import { holdScroll, placeTop, rememberPlace, takePlace } from './lib/place';
 import { CardSet, cardForEdition, localizeCard, localizeChapter } from './lib/cards';
 import { chapterForEdition, sortChapters } from './lib/chapters';
 import { formatFragment } from './lib/fragment';
@@ -54,9 +54,13 @@ function writeRoute(r: Route, push: boolean): void {
 export function switchLang(to: Lang): void {
   storeLang(to);
   const r = parseRoute(location.hash);
-  // Keep the reader's place in the story across the rebuild.
+  // Keep the reader's place in the story across the rebuild: the chapter and
+  // the step being read go into the link, the offset in it into this tab.
   const here = !r.view ? rememberPlace() : undefined;
-  if (here) r.ch = here.ch;
+  if (here) {
+    r.ch = here.ch;
+    r.step = here.step >= 0 ? here.step : undefined;
+  }
   const frag = formatRoute({ ...r, point: { ...r.point, lang: to === 'en' ? undefined : to } });
   history.replaceState(null, '', frag ? `#${frag}` : location.pathname + location.search);
   location.reload();
@@ -391,25 +395,17 @@ async function start(): Promise<void> {
     else if (screen === 'descent') descent.open(route.point.from, route.point.zoom);
     else if (screen === 'atlas') atlas.open(route.point);
     else if (route.ch && (initial || route.ch !== chapterNow)) {
-      scrollToChapter(route.ch, initial);
-      // After a language or copy switch, come back to the same depth in the chapter.
-      const back = initial ? takePlace(route.ch) : undefined;
-      const el = back && document.getElementById(`ch-${back.ch}`);
-      if (back && el) {
-        // Pictures and fonts above may still settle: aim again a few times,
-        // unless the reader has started scrolling.
-        let moved = false;
-        const stop = () => (moved = true);
-        window.addEventListener('wheel', stop, { once: true, passive: true });
-        window.addEventListener('touchstart', stop, { once: true, passive: true });
-        const aim = () => !moved && window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY + back.frac * el.offsetHeight, behavior: 'auto' });
-        requestAnimationFrame(aim);
-        [300, 900, 1800].forEach((ms) => setTimeout(aim, ms));
-      }
+      // After a language or copy switch, come back to the same step; a plain
+      // chapter link opens at the chapter's top. Either way the place is held
+      // while pictures, maps and fonts above it settle.
+      const back = initial ? takePlace(route.ch, route.step) : undefined;
+      if (back && document.getElementById(`ch-${back.ch}`)) holdScroll(() => placeTop(back));
+      else if (initial) holdChapter(route.ch);
+      else scrollToChapter(route.ch);
     } else if (initial && route.point.focus) {
       // A card link opens over its own chapter, not wherever the story was.
       const era = app.set.get(route.point.focus)?.era;
-      if (era) scrollToChapter(era, true);
+      if (era) holdChapter(era);
     }
     if (route.point.focus) app.openCard(route.point.focus, { push: false });
     else cardDrawer.close(true);
@@ -421,9 +417,18 @@ async function start(): Promise<void> {
   apply(true);
 }
 
-function scrollToChapter(id: string, instant = false): void {
+function scrollToChapter(id: string): void {
+  document.getElementById(`ch-${id}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/**
+ * Open the story at a chapter at once and keep it there while the page
+ * settles. ('auto' would follow the page's smooth scrolling and still be on
+ * its way, chapters away, when the reader starts reading.)
+ */
+function holdChapter(id: string): void {
   const el = document.getElementById(`ch-${id}`);
-  el?.scrollIntoView({ behavior: instant ? 'auto' : 'smooth', block: 'start' });
+  if (el) holdScroll(() => el.getBoundingClientRect().top + window.scrollY);
 }
 
 function setupNav(app: App, atlas: Atlas): void {

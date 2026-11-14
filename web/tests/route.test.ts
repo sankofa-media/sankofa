@@ -20,6 +20,18 @@ describe('route', () => {
     expect(screenOf(parseRoute(''))).toBe('story');
   });
 
+  it('keeps the step being read next to its chapter', () => {
+    const r = parseRoute('#lang=ru&ch=v4&step=2');
+    expect(r.ch).toBe('v4');
+    expect(r.step).toBe(2);
+    expect(formatRoute({ point: {}, ch: 'v4', step: 2 })).toBe('ch=v4&step=2');
+    // A step means nothing without its chapter, and only a small number is one.
+    expect(parseRoute('step=2').step).toBeUndefined();
+    expect(parseRoute('ch=v4&step=-1').step).toBeUndefined();
+    expect(parseRoute('ch=v4&step=x').step).toBeUndefined();
+    expect(formatRoute({ point: {}, step: 2 })).toBe('');
+  });
+
   it('opens the listening room', () => {
     expect(screenOf(parseRoute('view=listen'))).toBe('listen');
     expect(formatRoute({ point: {}, view: 'listen' })).toBe('view=listen');
