@@ -28,6 +28,19 @@ retention:
   tombstoneTTL: 2160h   # forget deleted objects entirely after this, 0 = never
   compact: "24h:1h,168h:24h"  # every change for a day, the newest per hour for a week, per day after
   every: 1h
+  # Give freed space back. SQLite: VACUUM rebuilds the file (needs free disk
+  # as large as the store, blocks writes while it runs); weekly by default.
+  # PostgreSQL: autovacuum does it (Griot tunes it on its table); set a
+  # duration here only to add a plain VACUUM ANALYZE. Never VACUUM FULL.
+  vacuumEvery: ""   # "" = default for the store, "0" = never, e.g. "168h"
+
+# Name the user behind each moment from the API server's audit events.
+# Point the API server's audit webhook (--audit-webhook-config-file) at
+# https://<release>.<namespace>.svc:9444/audit with a client certificate
+# signed by the CA in clientCASecret (key ca.crt).
+audit:
+  enabled: false
+  clientCASecret: ""
 
 scope:
   namespaces: []         # only these (cluster-scoped objects are always recorded)
