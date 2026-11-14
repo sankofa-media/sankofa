@@ -133,7 +133,7 @@ func newSQLStore(db *sql.DB, d dialect) (*SQLStore, error) {
 	}
 	// The old namespace index is replaced by records_ns_until.
 	_, _ = db.Exec(`DROP INDEX IF EXISTS records_ns`)
-	for _, stmt := range strings.Split(strings.TrimSpace(indexes), ";") {
+	for _, stmt := range strings.Split(strings.TrimSpace(indexes+";"+auditSchema), ";") {
 		if stmt = strings.TrimSpace(stmt); stmt == "" {
 			continue
 		}

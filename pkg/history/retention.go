@@ -122,6 +122,9 @@ func (s *SQLStore) Retain(ctx context.Context, p Policy, now time.Time) (RetainS
 		if st.Expired, err = s.Prune(ctx, now.Add(-p.MaxAge)); err != nil {
 			return st, fmt.Errorf("expire: %w", err)
 		}
+		if _, err = s.PruneAudit(ctx, now.Add(-p.MaxAge)); err != nil {
+			return st, fmt.Errorf("expire audit: %w", err)
+		}
 	}
 	if p.MaxVersions > 0 {
 		st.Trimmed, err = s.exec(ctx, `DELETE FROM records WHERE id IN (
