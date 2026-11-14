@@ -2,7 +2,7 @@
 id: banjo
 kind: instrument
 title: The banjo
-wow: "The banjo is an African instrument, rebuilt by enslaved people from West African gourd lutes."
+wow: "Before minstrel shows took it, the banjo was a West African gourd lute rebuilt by enslaved Africans."
 years: [1680, 2010]
 places:
   - {name: "Caribbean", lat: 15.0000, lon: -75.0000}
@@ -37,4 +37,6 @@ media:
 ---
 The banjo is a drum with a neck: a round body, once a hollowed gourd and later a wooden hoop, covered with stretched skin, with the strings' bridge resting on the skin. Five-string banjos add a short thumb, or drone, string. In the early downstroke, or clawhammer, a finger strikes down and the thumb catches the drone on the way back, so melody and rhythm come out as one pulse for dancing.
 
-Enslaved Africans in the Caribbean and the American South rebuilt West African gourd lutes into the banjo. A close relative is the akonting of the Jola people of Senegambia: a calabash covered with goat skin, a long neck, a short thumb string and the same downward stroke. A watercolour called The Old Plantation, painted in South Carolina around 1785–1790, shows a banjo beside a drum. Then the instrument changed hands. Joel Sweeney, a white Virginian said to have learned from enslaved players, made it a star of blackface minstrel shows, which mocked Black Americans, and many Black musicians later turned to the guitar. The banjo still cut through early jazz bands, drove Black and white string bands at Appalachian dances and rings through bluegrass. In 2011 an African American string band, the Carolina Chocolate Drops, won a Grammy with Genuine Negro Jig. Its story runs alongside [[stono-drum-ban|the drum ban that followed the Stono Rebellion]], [[work-songs|the work songs of the fields]] and [[blues|the blues]].
+Enslaved Africans in the Caribbean and the American South rebuilt West African gourd lutes into the banjo. A close relative is the akonting of the Jola people of Senegambia: a calabash covered with goat skin, a long neck, a short thumb string and the same downward stroke. A watercolour called The Old Plantation, painted in South Carolina around 1785–1790, shows a banjo beside a drum.
+
+Then the instrument changed hands. Joel Sweeney, a white Virginian said to have learned from enslaved players, made it a star of blackface minstrel shows, which mocked Black Americans, and many Black musicians later turned to the guitar. The banjo still cut through early jazz bands, drove Black and white string bands at Appalachian dances and rings through bluegrass. In 2011 an African American string band, the Carolina Chocolate Drops, won a Grammy with Genuine Negro Jig. Its story runs alongside [[stono-drum-ban|the drum ban that followed the Stono Rebellion]], [[work-songs|the work songs of the fields]] and [[blues|the blues]].

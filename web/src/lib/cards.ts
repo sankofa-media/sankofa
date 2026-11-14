@@ -197,6 +197,8 @@ export function localizeChapter(ch: Chapter, lang: string): Chapter {
     kicker: tr.kicker || ch.kicker,
     hero: ch.hero ? { ...ch.hero, caption: tr.heroCaption || ch.hero.caption, credit: tr.heroCredit || localizeCredit(ch.hero.credit, lang as 'ru'), license: tr.heroLicense || localizeCredit(ch.hero.license, lang as 'ru') } : ch.hero,
     steps,
+    // Labels are written in the language of their paragraphs.
+    stepLabels: steps === ch.steps ? ch.stepLabels : tr.stepLabels,
     textLang: steps === ch.steps ? 'en' : lang,
   };
 }

@@ -80,6 +80,7 @@ export interface ChapterTranslation {
   heroLicense?: string;
   steps?: string[];
   stepCopies?: StepCopy[];
+  stepLabels?: string[];
 }
 
 export interface Chapter {
@@ -93,6 +94,8 @@ export interface Chapter {
   steps: string[];
   /** Parallel to steps, present only when some paragraph is marked {male} or {female}. */
   stepCopies?: StepCopy[];
+  /** Parallel to steps, present only when paragraphs carry `{at Place · Year}`: the label each step shows. */
+  stepLabels?: string[];
   translations?: Record<string, ChapterTranslation>;
   textLang?: string;
 }

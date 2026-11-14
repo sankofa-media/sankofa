@@ -17,7 +17,7 @@ further:
   - "Cybotron, \"Clear\" and Enter"
   - "Techno! The New Dance Sound of Detroit (compilation, 1988)"
   - "Underground Resistance, \"X-101\" (Tresor, 1991)"
-dispute: "Atkins said the word techno came from Alvin Toffler's The Third Wave; some reference works say only that it was probably inspired by the book. The 1982 date of Cybotron's \"Clear\" is also questioned in one review."
+dispute: "Atkins said the word techno came from Alvin Toffler's The Third Wave; some reference works say only that it was probably inspired by the book. Cybotron's \"Clear\" is usually dated 1982; one review questions that date."
 sources:
   - {title: "Encyclopedia.com: Atkins, Juan", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/atkins-juan"}
   - {title: "Afropop Worldwide (2011): Juan Atkins interview", url: "https://old.afropop.org/articles/juan-atkins-interview"}
@@ -39,6 +39,6 @@ media:
 ---
 Techno is dance music made almost entirely by machines: drum machines, synthesizers, sequencers and computers lay down a relentless pulse and cool, futuristic patterns, often with few or no words. It was born in Detroit in the early 1980s among young Black musicians who loved two things at once, the funk of Parliament-Funkadelic and the electronic pop of Germany's Kraftwerk. Their city was losing its factories and its jobs, and they answered with music about technology, space and the future.
 
-Techno's story runs from a small-town Michigan high school to a Berlin club. Juan Atkins, Derrick May and Kevin Saunderson met at high school in Belleville, outside Detroit, and became the Belleville Three. Atkins worked with Richard Davis as Cybotron, whose "Clear" is usually dated 1982, and ran his own label, Metroplex. He said he took the word techno from Alvin Toffler's The Third Wave.
+Techno's story runs from a small-town Michigan high school to a Berlin club. Juan Atkins, Derrick May and Kevin Saunderson met at high school in Belleville, outside Detroit, and became the Belleville Three. Atkins worked with Richard Davis as Cybotron, known for "Clear", and ran his own label, Metroplex. He said he took the word techno from Alvin Toffler's The Third Wave.
 
 Europe took to it faster than America. In 1991, in a Berlin reinventing itself after the Wall, Underground Resistance's "X-101" was the first release on the new Tresor label, and techno is still often taken for European music. Detroit claimed its music back: since 2000 the city has held an electronic music festival, now called Movement, every Memorial Day weekend. Atkins died in 2026, aged 64. Techno grew up alongside [[chicago-house|Chicago house]] and [[planet-rock|"Planet Rock"]], and its older kin are [[funk|funk]] and the space-age music of [[sun-ra|Sun Ra]].

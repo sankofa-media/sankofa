@@ -15,7 +15,7 @@ further:
   - "Library of Congress: American Colonization Society, Map of Liberia (1870)"
 sources:
   - {title: "U.S. Department of State, Office of the Historian: Founding of Liberia, 1847", url: "https://history.state.gov/milestones/1830-1860/liberia"}
-  - {title: "Library of Congress, Maps of Liberia: History of Liberia, a time line", url: "https://www.loc.gov/collections/maps-of-liberia-1830-to-1870/articles-and-essays/history-of-liberia/?fo=json"}
+  - {title: "Library of Congress, Maps of Liberia: History of Liberia, a time line", url: "https://www.loc.gov/collections/maps-of-liberia-1830-to-1870/articles-and-essays/history-of-liberia/"}
   - {title: "PBS: Liberia history", url: "https://www.pbs.org/wgbh/globalconnections/liberia/essays/history/"}
   - {title: "PBS, The Black Press: Freedom's Journal", url: "https://www.pbs.org/blackpress/news_bios/newbios/nwsppr/freedom/freedom.html"}
   - {title: "Encyclopedia of World Biography, via Encyclopedia.com: John Brown Russwurm", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/john-brown-russwurm"}
@@ -33,4 +33,8 @@ sources:
 media:
   - {"type": "image", "file": "liberia.jpg", "caption": "Map of Liberia published by the American Colonization Society, 1870", "credit": "American Colonization Society, D. McClelland; Library of Congress Geography and Map Division", "license": "Public domain", "url": "https://www.loc.gov/item/96684991/"}
 ---
-Liberia, on the West African coast, began as a colony for free Black Americans. In 1816 white Americans founded the American Colonization Society to move free Black people to Africa. Its backers ranged from abolitionists to slaveholders who saw free Black people as a danger to slavery. The first settlers sailed in 1820 and landed on swampy Sherbro Island, where many died of malaria; later emigrants included editors like John Russwurm of [[freedoms-journal|Freedom's Journal]]. In 1847 Liberia declared itself a sovereign republic. The settlers mostly kept apart from the peoples already there, among them the Vai with their own [[vai-script|script]], and filled the government. In 1930 an international commission, with the African American scholar Charles S. Johnson as the U.S. member, found officials shipping forced labour to Fernando Po, named Vice President Yancy and called the conditions "scarcely distinguishable from slave raiding". President King resigned. Settler rule held until 1980, when soldiers led by Samuel Doe killed President William Tolbert and toppled the settlers' True Whig Party.
+Liberia, on the West African coast, began as a colony for free Black Americans. In 1816 white Americans founded the American Colonization Society to move free Black people to Africa. Its backers ranged from abolitionists to slaveholders who saw free Black people as a danger to slavery.
+
+The first settlers sailed in 1820 and landed on swampy Sherbro Island, where many died of malaria; later emigrants included editors like John Russwurm of [[freedoms-journal|Freedom's Journal]]. In 1847 Liberia declared itself a sovereign republic. The settlers mostly kept apart from the peoples already there, among them the Vai with their own [[vai-script|script]], and filled the government.
+
+In 1930 an international commission, with the African American scholar Charles S. Johnson as the U.S. member, found officials shipping forced labour to Fernando Po, named Vice President Yancy and called the conditions "scarcely distinguishable from slave raiding". President King resigned. Settler rule held until 1980, when soldiers led by Samuel Doe killed President William Tolbert and toppled the settlers' True Whig Party.

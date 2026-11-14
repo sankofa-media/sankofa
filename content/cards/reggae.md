@@ -45,8 +45,7 @@ Bob Marley carried it far beyond the island.
 
 The first song to use the name was the Maytals' "Do the Reggay", recorded
 in 1968. Toots Hibbert said the word came to him in Trench Town from
-"streggay", slang for a person who does not dress well; the story is his
-own. Ska slowed into rocksteady and then into reggae, taking in soul and
+"streggay", slang for a person who does not dress well. Ska slowed into rocksteady and then into reggae, taking in soul and
 [[rhythm-and-blues|rhythm and blues]] from the United States. Its engine was the sound system:
 the first appeared in the late 1940s, and the selector at the records and
 the deejay who toasted over them followed, especially in the 1950s. In 2018

@@ -36,12 +36,16 @@ when slavery crossed his path. In 1765 he took in Jonathan Strong, a young
 Black man beaten and thrown into the street by his master. When the master
 later sold Strong to a Jamaica planter and had him seized, Sharp took the
 case to the Lord Mayor, who set Strong free. Broken by the
-beating, Strong died at about twenty-five. Sharp then backed James Somerset,
+beating, Strong died at about twenty-five.
+
+Sharp then backed James Somerset,
 and on 22 June 1772 Lord Mansfield ruled that a master could not seize a
 slave in England to ship him abroad for sale. Somerset went free, though
 the ruling did not abolish slavery. In 1783 [[equiano|Olaudah Equiano]]
 told him of the [[zong|Zong massacre]]; Sharp demanded a murder
-trial, but no one was ever prosecuted. In 1787 he helped found the Society
+trial, but no one was ever prosecuted.
+
+In 1787 he helped found the Society
 for Effecting the Abolition of the Slave Trade, whose campaign produced
 [[wedgwood-medallion|the "Am I Not a Man and a Brother?" medallion]] and
 the [[brookes|Brookes]] print. He also championed the Province of Freedom,

@@ -27,4 +27,8 @@ sources:
 media:
   - {"type": "image", "file": "planet-rock.jpg", "caption": "Afrika Bambaataa performing in Eindhoven, the Netherlands, 5 December 1998", "credit": "Mika-photography (Mikael Väisänen)", "license": "CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Afrika_Bambaataa.jpg"}
 ---
-"Planet Rock" is a [[hip-hop|hip-hop]] record made in New York in 1982 from a German band's music and a Japanese drum machine. Afrika Bambaataa, a Bronx DJ and founder of the Universal Zulu Nation, cut it with producer Arthur Baker for Tom Silverman's new label, Tommy Boy. Bambaataa already played Kraftwerk's "Trans-Europe Express" in his sets, and the beat of "Numbers" went in too; they rebuilt both on a Roland TR-808. Kraftwerk were angry, and Tommy Boy paid them a dollar for every copy. The record became one of hip-hop's earliest hits and most influential tracks. From 2016 several men accused Bambaataa of abusing them as boys; he denied it, was never criminally charged and stepped down as head of the Zulu Nation; the accusations remain contested. In 2025 he lost a civil suit by default. He died in 2026.
+"Planet Rock" is a [[hip-hop|hip-hop]] record made in New York in 1982 from a German band's music and a Japanese drum machine. Afrika Bambaataa, a Bronx DJ and founder of the Universal Zulu Nation, cut it with producer Arthur Baker for Tom Silverman's new label, Tommy Boy.
+
+Bambaataa already played Kraftwerk's "Trans-Europe Express" in his sets, and the beat of "Numbers" went in too; they rebuilt both on a Roland TR-808. Kraftwerk were angry, and Tommy Boy paid them a dollar for every copy. The record became one of hip-hop's earliest hits and most influential tracks.
+
+From 2016 several men accused Bambaataa of abusing them as boys; he denied it, was never criminally charged and stepped down as head of the Zulu Nation. In 2025 he lost a civil suit by default. He died in 2026.

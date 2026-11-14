@@ -33,12 +33,16 @@ Black men, Samuel Cornish and John Russwurm: the first African American
 owned and operated newspaper in the United States. The weekly carried news,
 biographies, births and deaths, and attacks on slavery and discrimination,
 and at its peak it reached readers in eleven states, the District of
-Columbia, Haiti, Europe and Canada. Then it split over Africa. Cornish
+Columbia, Haiti, Europe and Canada.
+
+Then it split over Africa. Cornish
 resigned in September 1827, and Russwurm, now sole editor, moved toward the
 American Colonization Society's plan to settle free Black Americans in
 Africa. When he declared for colonization in 1829, readers abandoned the
 paper; the last issue is dated 28 March 1829. Cornish tried to revive it as
-The Rights of All, which was short-lived. By the end of the year Russwurm
+The Rights of All, which was short-lived.
+
+By the end of the year Russwurm
 was in [[liberia|Liberia]], where he governed Maryland-in-Liberia from 1836
 until his death in 1851. The idea in its first line, a Black press speaking
 for itself, passed to [[ida-b-wells|Ida B. Wells]] and

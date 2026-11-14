@@ -19,35 +19,48 @@ function paragraphs(body: string): string[] {
 }
 
 const MARKER = /^\{(male|female)\}\s+/;
+/** `{at Place · Year} `: the label a step shows, written for the paragraph itself. */
+const LABEL = /^\{at ([^{}]+)\}\s+/;
 
 /**
- * Paragraphs with their copy: a paragraph that opens with `{male} ` or
- * `{female} ` belongs to that copy alone (the marker is stripped); the others
- * are read in both. `copies` is set only when some paragraph is marked.
+ * Paragraphs with their copy and label: a paragraph that opens with `{male} `
+ * or `{female} ` belongs to that copy alone, the others are read in both; after
+ * that marker a paragraph may carry its label as `{at Place · Year} `. Markers
+ * are stripped; `copies` and `labels` are set only when some paragraph has one.
  */
-export function markedParagraphs(body: string): { steps: string[]; copies?: StepCopy[] } {
+export function markedParagraphs(body: string): { steps: string[]; copies?: StepCopy[]; labels?: string[] } {
   const steps: string[] = [];
   const copies: StepCopy[] = [];
-  for (const p of paragraphs(body)) {
+  const labels: string[] = [];
+  for (let p of paragraphs(body)) {
     const m = p.match(MARKER);
-    steps.push(m ? p.slice(m[0].length) : p);
+    if (m) p = p.slice(m[0].length);
+    const l = p.match(LABEL);
+    if (l) p = p.slice(l[0].length);
+    steps.push(p);
     copies.push(m ? (m[1] === 'male' ? 'm' : 'f') : '');
+    labels.push(l ? l[1].trim() : '');
   }
-  return copies.some(Boolean) ? { steps, copies } : { steps };
+  return {
+    steps,
+    ...(copies.some(Boolean) ? { copies } : {}),
+    ...(labels.some(Boolean) ? { labels } : {}),
+  };
 }
 
 /** The chapter as one copy reads it: the other copy's paragraphs dropped. */
-export function chapterForEdition<T extends { steps: string[]; stepCopies?: StepCopy[] }>(ch: T, edition: 'm' | 'f'): T {
+export function chapterForEdition<T extends { steps: string[]; stepCopies?: StepCopy[]; stepLabels?: string[] }>(ch: T, edition: 'm' | 'f'): T {
   if (!ch.stepCopies) return ch;
   const keep = ch.stepCopies.map((c) => !c || c === edition);
   const out = { ...ch, steps: ch.steps.filter((_, i) => keep[i]) };
+  if (ch.stepLabels) out.stepLabels = ch.stepLabels.filter((_, i) => keep[i]);
   delete out.stepCopies;
   return out;
 }
 
-function stepsOf(body: string): { steps: string[]; stepCopies?: StepCopy[] } {
-  const { steps, copies } = markedParagraphs(body);
-  return copies ? { steps, stepCopies: copies } : { steps };
+function stepsOf(body: string): { steps: string[]; stepCopies?: StepCopy[]; stepLabels?: string[] } {
+  const { steps, copies, labels } = markedParagraphs(body);
+  return { steps, ...(copies ? { stepCopies: copies } : {}), ...(labels ? { stepLabels: labels } : {}) };
 }
 
 /** Parse a chapter Markdown file (docs/card-format.md, "Chapter format"). */
@@ -77,9 +90,10 @@ export function parseChapterTranslation(src: string, file = 'translation'): Chap
   if (cap) out.heroCaption = String(cap);
   if (fm.heroCredit) out.heroCredit = String(fm.heroCredit);
   if (fm.heroLicense) out.heroLicense = String(fm.heroLicense);
-  const { steps, stepCopies } = stepsOf(body);
+  const { steps, stepCopies, stepLabels } = stepsOf(body);
   if (steps.length) out.steps = steps;
   if (stepCopies) out.stepCopies = stepCopies;
+  if (stepLabels) out.stepLabels = stepLabels;
   return out;
 }
 

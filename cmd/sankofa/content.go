@@ -6,6 +6,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
+	"unicode/utf8"
 
 	"github.com/spf13/cobra"
 	"sigs.k8s.io/yaml"
@@ -203,8 +204,25 @@ func lintChapters(dir string, s *card.Set) []error {
 				bad("link to unknown card %q", l.Target)
 			}
 		}
+		labelled := 0
+		paras := card.Paragraphs(parts[1])
+		for i, p := range paras {
+			label, _, err := stepLabel(p)
+			if err != nil {
+				bad("paragraph %d: %v", i+1, err)
+			}
+			if label != "" {
+				labelled++
+			}
+		}
+		if labelled > 0 && labelled < len(paras) {
+			bad("%d of %d paragraphs carry an {at Place · Year} label: label all of them or none", labelled, len(paras))
+		}
 		for _, ed := range []string{card.EditionMale, card.EditionFemale} {
 			steps := card.CopyParagraphs(parts[1], ed)
+			for i, p := range steps {
+				_, steps[i], _ = stepLabel(p)
+			}
 			if n := card.Words(strings.Join(steps, "\n\n")); n < 80 {
 				bad("%s copy has %d words, want at least 80", ed, n)
 			}
@@ -212,7 +230,8 @@ func lintChapters(dir string, s *card.Set) []error {
 				bad("%s copy has %d steps, want %d..%d", ed, len(steps), minChapterSteps, maxChapterSteps)
 			}
 		}
-		for i, p := range card.Paragraphs(parts[1]) {
+		for i, p := range paras {
+			_, p, _ = stepLabel(p)
 			if n := card.Words(p); n > maxStepWords {
 				bad("paragraph %d has %d words, want at most %d: a step must fit its box on a phone", i+1, n, maxStepWords)
 			}
@@ -230,6 +249,45 @@ const (
 	minChapterSteps = 6
 	maxChapterSteps = 14
 )
+
+// stepLabel splits a chapter paragraph into the label it shows and its text.
+// After an optional {male}/{female} marker a paragraph may open with
+// `{at Place · Year} `: one or two parts, short, no braces. The text keeps the
+// copy marker.
+func stepLabel(p string) (label, text string, err error) {
+	marker := ""
+	for _, m := range []string{card.MarkerMale, card.MarkerFemale} {
+		if strings.HasPrefix(p, m) {
+			marker, p = m, strings.TrimPrefix(p, m)
+		}
+	}
+	if !strings.HasPrefix(p, "{at") {
+		return "", marker + p, nil
+	}
+	end := strings.Index(p, "}")
+	if !strings.HasPrefix(p, "{at ") || end < 0 || !strings.HasPrefix(p[end+1:], " ") {
+		return "", marker + p, fmt.Errorf("malformed label, want `{at Place · Year} ` before the text")
+	}
+	label = strings.TrimSpace(p[len("{at "):end])
+	text = marker + strings.TrimSpace(p[end+1:])
+	parts := strings.Split(label, " · ")
+	switch {
+	case strings.ContainsAny(label, "{"):
+		return label, text, fmt.Errorf("label %q holds a brace", label)
+	case len(parts) > 2:
+		return label, text, fmt.Errorf("label %q has %d parts, want Place · Year", label, len(parts))
+	case utf8.RuneCountInString(label) > maxLabelRunes:
+		return label, text, fmt.Errorf("label %q is longer than %d characters: name the place, not the institution", label, maxLabelRunes)
+	}
+	for _, x := range parts {
+		if strings.TrimSpace(x) == "" || strings.Contains(x, "·") {
+			return label, text, fmt.Errorf("label %q has an empty part, want Place · Year", label)
+		}
+	}
+	return label, text, nil
+}
+
+const maxLabelRunes = 40
 
 type chapterText struct {
 	Title       string `json:"title"`
@@ -270,6 +328,18 @@ func lintChapterTranslation(dir, name, original string, bad func(string, ...any)
 		}
 		if a, b := paras(original), paras(parts[1]); a != b {
 			bad("%s translation has %d paragraphs, want %d (one per scroll step)", lang, b, a)
+		} else {
+			op, tp := card.Paragraphs(original), card.Paragraphs(parts[1])
+			for i := range op {
+				ol, _, _ := stepLabel(op[i])
+				tl, _, err := stepLabel(tp[i])
+				if err != nil {
+					bad("%s translation paragraph %d: %v", lang, i+1, err)
+				}
+				if (ol == "") != (tl == "") {
+					bad("%s translation paragraph %d: the original and the translation must both carry an {at} label or neither", lang, i+1)
+				}
+			}
 		}
 		want := map[string]bool{}
 		for _, l := range (&card.Card{Body: original}).Links() {

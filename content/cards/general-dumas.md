@@ -30,12 +30,16 @@ the nobleman Antoine Davy de la Pailleterie. His father pawned the boy
 before bringing him to France. He enlisted under his mother's surname, and
 in 1792 the [[saint-georges|Chevalier de Saint-Georges]] made him second in
 command of his Black Legion. Within a year the son of an enslaved woman was
-a general, later leading the Army of the Alps. In Egypt he quarrelled with
+a general, later leading the Army of the Alps.
+
+In Egypt he quarrelled with
 Napoleon over the campaign and asked to go home. When he sailed for France in 1799, his
 leaking ship put in at Taranto, in the Kingdom of Naples, where he was held
 prisoner for two years. Released in 1801, he came back broken. He was
 denied the full pension he was owed, and he died at
-Villers-Cotterêts in 1806. His son became the novelist Alexandre Dumas. A
+Villers-Cotterêts in 1806.
+
+His son became the novelist Alexandre Dumas. A
 statue of the general raised in Paris was destroyed during the German
 occupation; today a sculpture of shackles stands in his memory. He rose in the same
 revolutionary years that brought [[haitian-revolution|the Haitian
