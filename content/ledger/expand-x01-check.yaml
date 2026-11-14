@@ -1,0 +1,932 @@
+# Second, independent check (2026-11-13) of content/ledger/expand-x01.yaml.
+# Every cited URL was reopened (curl; Britannica via an archived copy; Oyez via its API); every
+# quote in the ledger was found verbatim (ignoring spacing/punctuation) in the fetched text.
+# verdict: confirmed | corrected (card wording or sources changed) | refuted | unconfirmed (removed from the card).
+# King Institute pages count as one source together; SNCC Digital pages as one; NARA milestone pages as one.
+entries:
+  - card: montgomery-bus-boycott
+    fact: "In 1955 Montgomery's city buses were segregated by law and Black passengers could be ordered to give up seats to white riders"
+    verdict: confirmed
+    sources:
+      - {title: "Stewart Burns, Encyclopedia of Alabama: Montgomery Bus Boycott", url: "https://encyclopediaofalabama.org/article/montgomery-bus-boycott/", quote: "She was arrested for violating the segregated seating ordinances"}
+      - {title: "Stanford King Institute: Montgomery Bus Boycott", url: "https://kinginstitute.stanford.edu/montgomery-bus-boycott", quote: "Mary Louise Smith was arrested for refusing to yield her seat to a white passenger"}
+    note: ""
+  - card: montgomery-bus-boycott
+    fact: "The Women's Political Council, Black professional women led by Jo Ann Robinson, a college teacher, warned the mayor in 1954 of a possible boycott"
+    verdict: confirmed
+    sources:
+      - {title: "Stewart Burns, Encyclopedia of Alabama: Montgomery Bus Boycott", url: "https://encyclopediaofalabama.org/article/montgomery-bus-boycott/", quote: "In May 1954, WPC president Jo Ann Robinson , an English professor at Alabama State College , warned the mayor in a letter that a bus boycott might be imminent"}
+      - {title: "Stanford King Institute: Montgomery Bus Boycott", url: "https://kinginstitute.stanford.edu/montgomery-bus-boycott", quote: "WPC president Jo Ann Robinson reiterated the council’s requests in a 21 May letter to Mayor Gayle, telling him, “There has been talk from twenty-five or more local organizations of planning a city-wide boycott of buses”"}
+    note: ""
+  - card: montgomery-bus-boycott
+    fact: "Earlier in 1955 police arrested 15-year-old Claudette Colvin and 18-year-old Mary Louise Smith for not giving up their seats"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Montgomery Bus Boycott", url: "https://kinginstitute.stanford.edu/montgomery-bus-boycott", quote: "a 15-year-old named Claudette Colvin was arrested for challenging segregation on a Montgomery bus. Seven months later, 18-year-old Mary Louise Smith was arrested for refusing to yield her seat to a white passenger"}
+      - {title: "Stewart Burns, Encyclopedia of Alabama: Montgomery Bus Boycott", url: "https://encyclopediaofalabama.org/article/montgomery-bus-boycott/", quote: "In March 1955, Claudette Colvin , a 15-year-old high school junior, refused to give up her bus seat to a white person. She was arrested"}
+    note: ""
+  - card: montgomery-bus-boycott
+    fact: "On 1 December 1955 Rosa Parks refused to give up her seat and was arrested"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Montgomery Bus Boycott", url: "https://kinginstitute.stanford.edu/montgomery-bus-boycott", quote: "Sparked by the arrest of Rosa Parks on 1 December 1955"}
+      - {title: "Stewart Burns, Encyclopedia of Alabama: Montgomery Bus Boycott", url: "https://encyclopediaofalabama.org/article/montgomery-bus-boycott/", quote: "In the early evening of December 1, 1955, Rosa L. Parks"}
+    note: ""
+  - card: montgomery-bus-boycott
+    fact: "That night Robinson and two students mimeographed tens of thousands of leaflets at Alabama State College calling for a one-day boycott on 5 December"
+    verdict: confirmed
+    sources:
+      - {title: "Stewart Burns, Encyclopedia of Alabama: Montgomery Bus Boycott", url: "https://encyclopediaofalabama.org/article/montgomery-bus-boycott/", quote: "Robinson and two students stayed up all night at the college mimeographing 50,000 flyers that called for a one-day bus boycott on Monday, December 5"}
+      - {title: "Stanford King Institute: Robinson, Jo Ann Gibson", url: "https://kinginstitute.stanford.edu/robinson-jo-ann-gibson", quote: "Late that night, she, two students, and John Cannon, chairman of the Business Department at Alabama State, mimeographed and distributed approximately 52,500 leaflets calling for a boycott of the buses"}
+    note: ""
+  - card: montgomery-bus-boycott
+    fact: "On 5 December almost no Black passengers rode the buses"
+    verdict: corrected
+    sources:
+      - {title: "Stanford King Institute: Montgomery Bus Boycott", url: "https://kinginstitute.stanford.edu/montgomery-bus-boycott", quote: "On 5 December, 90 percent of Montgomery’s black citizens stayed off the buses"}
+      - {title: "Stewart Burns, Encyclopedia of Alabama: Montgomery Bus Boycott", url: "https://encyclopediaofalabama.org/article/montgomery-bus-boycott/", quote: "On Monday morning, December 5, 1955, few African Americans rode buses"}
+    note: "Body said 'Almost no one rode'; narrowed to Black passengers, as both sources say."
+  - card: montgomery-bus-boycott
+    fact: "That afternoon leaders formed the Montgomery Improvement Association and elected King, new to Montgomery, as president"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Montgomery Bus Boycott", url: "https://kinginstitute.stanford.edu/montgomery-bus-boycott", quote: "During this meeting the MIA was formed, and King was elected president. Parks recalled: “The advantage of having Dr. King as president was that he was so new to Montgomery"}
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "In 1954, Martin Luther King became pastor of the Dexter Avenue Baptist Church in Montgomery, Alabama"}
+    note: "'New to town' rested on the King Institute alone; NobelPrize.org's 1954 arrival date added as the second source. EoA confirms 'that afternoon'."
+  - card: montgomery-bus-boycott
+    fact: "King was 26 at the time (born 15 January 1929)"
+    verdict: confirmed
+    sources:
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "(January 15, 1929-April 4, 1968)"}
+      - {title: "National Park Service: Birth Home, Martin Luther King, Jr. National Historical Park", url: "https://www.nps.gov/malu/planyourvisit/birth-home.htm", quote: "was born here on Tuesday January 15th, 1929"}
+    note: ""
+  - card: montgomery-bus-boycott
+    fact: "Boycotters walked or shared rides in an organised carpool, and women did much of the work that kept the boycott going"
+    verdict: corrected
+    sources:
+      - {title: "Stewart Burns, Encyclopedia of Alabama: Montgomery Bus Boycott", url: "https://encyclopediaofalabama.org/article/montgomery-bus-boycott/", quote: "The MIA created a highly efficient carpool system managed by women leaders, one of many vital roles that women performed"}
+      - {title: "Stanford King Institute: Montgomery Bus Boycott", url: "https://kinginstitute.stanford.edu/montgomery-bus-boycott", quote: "the MIA developed an intricate carpool system of about 300 cars"}
+    note: "'Carpool run largely by women' had only EoA; King Institute says only that 'women played crucial roles'. Card reworded to what both support."
+  - card: montgomery-bus-boycott
+    fact: "King's house was bombed"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Montgomery Bus Boycott", url: "https://kinginstitute.stanford.edu/montgomery-bus-boycott", quote: "In early 1956, the homes of King and E. D. Nixon were bombed"}
+      - {title: "Stewart Burns, Encyclopedia of Alabama: Montgomery Bus Boycott", url: "https://encyclopediaofalabama.org/article/montgomery-bus-boycott/", quote: "His house was bombed while his wife, Coretta , and infant daughter were at home"}
+    note: ""
+  - card: montgomery-bus-boycott
+    fact: "Dozens of leaders were indicted under an old conspiracy law"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Montgomery Bus Boycott", url: "https://kinginstitute.stanford.edu/montgomery-bus-boycott", quote: "indicted over 80 boycott leaders under a 1921 law prohibiting conspiracies that interfered with lawful business"}
+      - {title: "Stewart Burns, Encyclopedia of Alabama: Montgomery Bus Boycott", url: "https://encyclopediaofalabama.org/article/montgomery-bus-boycott/", quote: "city leaders indicted nearly 100 boycott leaders on conspiracy charges under an old anti-union law"}
+    note: ""
+  - card: montgomery-bus-boycott
+    fact: "Four women, among them Colvin and Smith, sued in federal court (Browder v. Gayle)"
+    verdict: confirmed
+    sources:
+      - {title: "Stewart Burns, Encyclopedia of Alabama: Montgomery Bus Boycott", url: "https://encyclopediaofalabama.org/article/montgomery-bus-boycott/", quote: "attorney Fred Gray filed a federal lawsuit on behalf of four female plaintiffs: Claudette Colvin, Mary Louise Smith, Aurelia Browder, and Susan McDonald"}
+      - {title: "Stanford King Institute: Browder v. Gayle", url: "https://kinginstitute.stanford.edu/browder-v-gayle-352-us-903", quote: "The original plaintiffs in the case were Aurelia S. Browder, Susie McDonald, Claudette Colvin, Mary Louise Smith, and Jeanatta Reese, but outside pressure convinced Reese to withdraw from the case in February"}
+    note: ""
+  - card: montgomery-bus-boycott
+    fact: "In November 1956 the Supreme Court upheld the ruling that bus segregation was unconstitutional"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Montgomery Bus Boycott", url: "https://kinginstitute.stanford.edu/montgomery-bus-boycott", quote: "in November 1956 the U.S. Supreme Court affirmed Browder v. Gayle and struck down laws requiring segregated seating on public buses"}
+      - {title: "Stewart Burns, Encyclopedia of Alabama: Montgomery Bus Boycott", url: "https://encyclopediaofalabama.org/article/montgomery-bus-boycott/", quote: "The U.S. Supreme Court upheld that decision in November"}
+    note: ""
+  - card: montgomery-bus-boycott
+    fact: "On 21 December 1956 Black Montgomery boarded desegregated buses"
+    verdict: confirmed
+    sources:
+      - {title: "Stewart Burns, Encyclopedia of Alabama: Montgomery Bus Boycott", url: "https://encyclopediaofalabama.org/article/montgomery-bus-boycott/", quote: "black citizens desegregated Montgomery's buses on December 21, 1956"}
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "On December 21, 1956, after the Supreme Court of the United States had declared unconstitutional the laws requiring segregation on buses, Negroes and whites rode the buses as equals"}
+    note: ""
+  - card: montgomery-bus-boycott
+    fact: "The boycott lasted more than a year"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Montgomery Bus Boycott", url: "https://kinginstitute.stanford.edu/montgomery-bus-boycott", quote: "the Montgomery bus boycott was a 13-month mass protest"}
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "The boycott lasted 382 days"}
+    note: ""
+  - card: montgomery-bus-boycott
+    fact: "The boycott made King a national figure and became a model for nonviolent campaigns across the South"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Montgomery Bus Boycott", url: "https://kinginstitute.stanford.edu/montgomery-bus-boycott", quote: "The bus boycott demonstrated the potential for nonviolent mass protest to successfully challenge racial segregation and served as an example for other southern campaigns that followed"}
+      - {title: "Stewart Burns, Encyclopedia of Alabama: Montgomery Bus Boycott", url: "https://encyclopediaofalabama.org/article/montgomery-bus-boycott/", quote: "The Montgomery experience showed the power of mass nonviolent direct action"}
+    note: ""
+  - card: march-on-washington
+    fact: "On 28 August 1963 the March on Washington for Jobs and Freedom gathered at the Lincoln Memorial"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: March on Washington for Jobs and Freedom", url: "https://kinginstitute.stanford.edu/march-washington-jobs-and-freedom", quote: "On 28 August 1963, more than 200,000 demonstrators took part in the March on Washington for Jobs and Freedom"}
+      - {title: "National Park Service: March on Washington for Jobs and Freedom", url: "https://www.nps.gov/articles/march-on-washington.htm", quote: "the words spoken that day at the Lincoln Memorial"}
+    note: ""
+  - card: march-on-washington
+    fact: "The idea came from A. Philip Randolph, founder of the Brotherhood of Sleeping Car Porters, whose 1941 march threat pushed Roosevelt to bar discrimination in the defence industry; he then cancelled it"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: March on Washington for Jobs and Freedom", url: "https://kinginstitute.stanford.edu/march-washington-jobs-and-freedom", quote: "The threat of 100,000 marchers in Washington, D.C., pushed President Franklin D. Roosevelt to issue Executive Order 8802"}
+      - {title: "National Park Service: March on Washington for Jobs and Freedom", url: "https://www.nps.gov/articles/march-on-washington.htm", quote: "the original idea came from A. Philip Randolph , a labor organizer and founder of the Brotherhood of Sleeping Car Porters"}
+    note: ""
+  - card: march-on-washington
+    fact: "Bayard Rustin, Randolph's long-time partner, organised the march"
+    verdict: confirmed
+    sources:
+      - {title: "National Park Service: March on Washington for Jobs and Freedom", url: "https://www.nps.gov/articles/march-on-washington.htm", quote: "Randolph handed the day-to-day planning to his partner in the March on Washington Movement, Bayard Rustin"}
+      - {title: "Stanford King Institute: March on Washington for Jobs and Freedom", url: "https://kinginstitute.stanford.edu/march-washington-jobs-and-freedom", quote: "march organizer Bayard Rustin"}
+    note: ""
+  - card: march-on-washington
+    fact: "Demands included a strong civil rights bill, jobs and fair employment, and desegregated schools"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: March on Washington for Jobs and Freedom", url: "https://kinginstitute.stanford.edu/march-washington-jobs-and-freedom", quote: "“desegregation of all public schools in 1963”; a massive federal works program “to train and place unemployed workers”; and “a Federal Fair Employment Practices Act barring discrimination in all employment”"}
+      - {title: "National Park Service: March on Washington for Jobs and Freedom", url: "https://www.nps.gov/articles/march-on-washington.htm", quote: "There was a list of \"Ten Demands\" from the sponsors, insisting on a fair living wage, fair employment policies, and desegregation of school districts"}
+    note: ""
+  - card: march-on-washington
+    fact: "Some 250,000 people came"
+    verdict: confirmed
+    sources:
+      - {title: "National Park Service: March on Washington for Jobs and Freedom", url: "https://www.nps.gov/articles/march-on-washington.htm", quote: "An estimated 250,000 people attended the March on Washington for Jobs and Freedom on August 28, 1963"}
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "the peaceful march on Washington, D.C., of 250,000 people"}
+    note: ""
+  - card: march-on-washington
+    fact: "John Lewis agreed to cut the sharpest lines of his draft at the request of allies, but the speech he gave was still a sharp one"
+    verdict: corrected
+    sources:
+      - {title: "Stanford King Institute: March on Washington for Jobs and Freedom", url: "https://kinginstitute.stanford.edu/march-washington-jobs-and-freedom", quote: "Lewis agreed to eliminate those and other phrases, but believed that in its final form his address “was still a strong speech, very strong”"}
+      - {title: "National Park Service: March on Washington for Jobs and Freedom", url: "https://www.nps.gov/articles/march-on-washington.htm", quote: "Although the SNCC chairman had toned down his remarks at the request of white liberals and moderate black allies, he still managed to criticize both political parties"}
+    note: "'Too little and too late' (King Institute only) and the quoted 'free now, not gradually' (NPS only) each had one source; removed."
+  - card: march-on-washington
+    fact: "Near the end King delivered the 'I Have a Dream' speech"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: March on Washington for Jobs and Freedom", url: "https://kinginstitute.stanford.edu/march-washington-jobs-and-freedom", quote: "The day’s high point came when King took the podium toward the end of the event"}
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "to whom he delivered his address, “l Have a Dream”"}
+    note: ""
+  - card: march-on-washington
+    fact: "The bill the marchers demanded became the Civil Rights Act of 1964 the following summer"
+    verdict: confirmed
+    sources:
+      - {title: "National Park Service: March on Washington for Jobs and Freedom", url: "https://www.nps.gov/articles/march-on-washington.htm", quote: "support for the Civil Rights Act that the Kennedy Administration was attempting to pass through Congress"}
+      - {title: "Stanford King Institute: March on Washington for Jobs and Freedom", url: "https://kinginstitute.stanford.edu/march-washington-jobs-and-freedom", quote: "the provisions of the Civil Rights Act of 1964 and Voting Rights Act of 1965 reflect the demands of the march"}
+    note: ""
+  - card: march-on-washington
+    fact: "The march passed off peacefully"
+    verdict: corrected
+    sources:
+      - {title: "National Park Service: March on Washington for Jobs and Freedom", url: "https://www.nps.gov/articles/march-on-washington.htm", quote: "In the end, the crowds were calm and there were no incidents reported by police"}
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "the peaceful march on Washington"}
+    note: "'Without a single act of violence' was stronger than the sources; now 'peacefully'."
+  - card: march-on-washington
+    fact: "Wow: the idea was 22 years old (1941 to 1963)"
+    verdict: confirmed
+    sources:
+      - {title: "National Park Service: March on Washington for Jobs and Freedom", url: "https://www.nps.gov/articles/march-on-washington.htm", quote: "the culmination of an idea born more than 20 years before"}
+      - {title: "Stanford King Institute: March on Washington for Jobs and Freedom", url: "https://kinginstitute.stanford.edu/march-washington-jobs-and-freedom", quote: "In the summer of 1941 A. Philip Randolph"}
+    note: ""
+  - card: martin-luther-king
+    fact: "King was born in Atlanta on 15 January 1929 as Michael; the name was later changed to Martin"
+    verdict: confirmed
+    sources:
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "was born Michael Luther King, Jr., but later had his name changed to Martin"}
+      - {title: "National Park Service: Birth Home, Martin Luther King, Jr. National Historical Park", url: "https://www.nps.gov/malu/planyourvisit/birth-home.htm", quote: "Michael Luther King Junior was born here on Tuesday January 15th, 1929, at 12 noon he would later be renamed Martin Luther King Junior"}
+    note: ""
+  - card: martin-luther-king
+    fact: "His maternal grandfather and then his father were pastors of Ebenezer Baptist Church"
+    verdict: confirmed
+    sources:
+      - {title: "New Georgia Encyclopedia: Martin Luther King Jr. (1929-1968)", url: "https://www.georgiaencyclopedia.org/articles/history-archaeology/martin-luther-king-jr-1929-1968/", quote: "His maternal grandfather, A. D. Williams, was pastor at Ebenezer from 1894 until 1931. After Williams’s death, the elder King succeeded his father-in-law at the pulpit."}
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "His grandfather began the family’s long tenure as pastors of the Ebenezer Baptist Church in Atlanta, serving from 1914 to 1931; his father has served from then until the present"}
+    note: "NobelPrize.org does not say 'maternal' and gives 1914; NGE (independent) supplies both. King Institute agrees (1894). NPS birth home also names A. D. Williams the maternal grandfather."
+  - card: martin-luther-king
+    fact: "He studied theology in Pennsylvania (Crozer) and Boston"
+    verdict: confirmed
+    sources:
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "After three years of theological study at Crozer Theological Seminary in Pennsylvania"}
+      - {title: "Stanford King Institute: Ebenezer Baptist Church", url: "https://kinginstitute.stanford.edu/ebenezer-baptist-church-atlanta-georgia", quote: "during his breaks from Crozer Theological Seminary and from his doctoral studies at Boston University"}
+    note: ""
+  - card: martin-luther-king
+    fact: "In 1954 he became pastor of Dexter Avenue Baptist Church in Montgomery"
+    verdict: corrected
+    sources:
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "In 1954, Martin Luther King became pastor of the Dexter Avenue Baptist Church in Montgomery, Alabama"}
+      - {title: "New Georgia Encyclopedia: Martin Luther King Jr. (1929-1968)", url: "https://www.georgiaencyclopedia.org/articles/history-archaeology/martin-luther-king-jr-1929-1968/", quote: "King was offered the position, and in 1954 he moved to Montgomery with Coretta"}
+    note: "Body called it his 'first pulpit'; NGE notes he had served as assistant at Ebenezer, so the phrase was dropped."
+  - card: martin-luther-king
+    fact: "At 26 he was elected to lead the Montgomery bus boycott"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Montgomery Bus Boycott", url: "https://kinginstitute.stanford.edu/montgomery-bus-boycott", quote: "its president, Martin Luther King, Jr., became a prominent civil rights leader"}
+      - {title: "Stewart Burns, Encyclopedia of Alabama: Montgomery Bus Boycott", url: "https://encyclopediaofalabama.org/article/montgomery-bus-boycott/", quote: "unexpectedly elected King as MIA president"}
+    note: ""
+  - card: martin-luther-king
+    fact: "He was arrested, and his house was bombed with his family at home; no one was hurt"
+    verdict: corrected
+    sources:
+      - {title: "Stewart Burns, Encyclopedia of Alabama: Montgomery Bus Boycott", url: "https://encyclopediaofalabama.org/article/montgomery-bus-boycott/", quote: "His house was bombed while his wife, Coretta, and infant daughter were at home, but they were unharmed"}
+      - {title: "Stanford King Institute: Montgomery Bus Boycott", url: "https://kinginstitute.stanford.edu/montgomery-bus-boycott", quote: "King was able to calm the crowd that gathered at his home by declaring: “Be calm as I and my family are. We are not hurt"}
+    note: "'Baby daughter' rested on EoA alone; generalised to 'family'. Arrest: NobelPrize.org and NGE."
+  - card: martin-luther-king
+    fact: "From 1957 he headed the SCLC, preaching a nonviolence drawn from Christianity and from Gandhi"
+    verdict: corrected
+    sources:
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "In 1957 he was elected president of the Southern Christian Leadership Conference ... The ideals for this organization he took from Christianity; its operational techniques from Gandhi"}
+      - {title: "New Georgia Encyclopedia: Martin Luther King Jr. (1929-1968)", url: "https://www.georgiaencyclopedia.org/articles/history-archaeology/martin-luther-king-jr-1929-1968/", quote: "In August 1957 the Southern Christian Leadership Conference (SCLC), an organization comprising religious, civic, and political affiliate groups, was launched with King as president"}
+    note: "The SCLC-level 'ideals from Christianity, methods from Gandhi' is NobelPrize.org only; reworded to King's own nonviolence, which King Institute also ties to Christ and Gandhi (“Christ showed us the way, and Gandhi in India showed it could work”)."
+  - card: martin-luther-king
+    fact: "Jailed in Birmingham in 1963, he wrote the Letter from Birmingham Jail"
+    verdict: corrected
+    sources:
+      - {title: "New Georgia Encyclopedia: Martin Luther King Jr. (1929-1968)", url: "https://www.georgiaencyclopedia.org/articles/history-archaeology/martin-luther-king-jr-1929-1968/", quote: "Learning from Albany, King and the SCLC carefully chose their next target in 1963. ... Arrested and jailed for eight days during the Birmingham campaign, King composed his well-known “Letter from Birmingham Jail”"}
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "In these years, he led a massive protest in Birmingham, Alabama, that caught the attention of the entire world, providing what he called a coalition of conscience. and inspiring his “Letter from a Birmingham Jail”"}
+      - {title: "Stanford King Institute: Letter from Birmingham Jail", url: "https://kinginstitute.stanford.edu/letter-birmingham-jail", quote: "King’s 12 April 1963 arrest for violating Alabama’s law against mass public demonstrations"}
+    note: "'April' rests on King Institute pages only (Birmingham campaign and Letter pages are one source); card now says 1963."
+  - card: martin-luther-king
+    fact: "That August he spoke at the March on Washington"
+    verdict: confirmed
+    sources:
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "he directed the peaceful march on Washington, D.C., of 250,000 people to whom he delivered his address"}
+      - {title: "Stanford King Institute: March on Washington for Jobs and Freedom", url: "https://kinginstitute.stanford.edu/march-washington-jobs-and-freedom", quote: "During this event, Martin Luther King delivered his memorable “ I Have a Dream ” speech"}
+    note: ""
+  - card: martin-luther-king
+    fact: "In 1964, at 35, he became the youngest Nobel Peace Prize recipient up to then"
+    verdict: confirmed
+    sources:
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "At the age of thirty-five, Martin Luther King, Jr., was the youngest man to have received the Nobel Peace Prize"}
+      - {title: "National Park Service: Frequently Asked Questions about Dr. Martin Luther King, Jr.", url: "https://home.nps.gov/malu/faq_dr_martin_luther_king_jr.htm", quote: "Dr. King received the Nobel Peace prize in 1964 at the age of 35 years old, making him the youngest recipient to that time"}
+    note: ""
+  - card: martin-luther-king
+    fact: "He gave the prize money to the movement, sharing it among civil rights organisations"
+    verdict: confirmed
+    sources:
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "he announced that he would turn over the prize money of $54,123 to the furtherance of the civil rights movement"}
+      - {title: "Stanford King Institute: Nobel Peace Prize", url: "https://kinginstitute.stanford.edu/nobel-peace-prize", quote: "King shared the $54,000 monetary prize with leading civil rights groups"}
+    note: ""
+  - card: martin-luther-king
+    fact: "The Selma campaign he joined pushed Congress to pass the Voting Rights Act in 1965"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Voting Rights Act of 1965", url: "https://kinginstitute.stanford.edu/voting-rights-act-1965", quote: "The law came seven months after Martin Luther King launched a Southern Christian Leadership Conference (SCLC) campaign based in Selma, Alabama, with the aim of pressuring Congress to pass such legislation"}
+      - {title: "U.S. Department of Justice: History of Federal Voting Rights Laws", url: "https://www.justice.gov/crt/history-federal-voting-rights-laws", quote: "Finally, the unprovoked attack on March 7, 1965, by state troopers on peaceful marchers crossing the Edmund Pettus Bridge in Selma, Alabama, en route to the state capitol in Montgomery, persuaded the President and Congress"}
+    note: ""
+  - card: martin-luther-king
+    fact: "In April 1968 he went to Memphis to support striking Black sanitation workers"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Memphis Sanitation Workers' Strike", url: "https://kinginstitute.stanford.edu/memphis-sanitation-workers-strike", quote: "He arrived on 3 April and was persuaded to speak by a crowd of dedicated sanitation workers"}
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "where he was to lead a protest march in sympathy with striking garbage workers of that city"}
+    note: ""
+  - card: martin-luther-king
+    fact: "On 4 April 1968 he was shot dead on the balcony of the Lorraine Motel, aged 39"
+    verdict: confirmed
+    sources:
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "On the evening of April 4, 1968, while standing on the balcony of his motel room in Memphis, Tennessee"}
+      - {title: "Stanford King Institute: Memphis Sanitation Workers' Strike", url: "https://kinginstitute.stanford.edu/memphis-sanitation-workers-strike", quote: "he was shot and killed on the balcony of the Lorraine Motel"}
+    note: ""
+  - card: fannie-lou-hamer
+    fact: "Born in Mississippi in 1917, the youngest of twenty children of sharecroppers"
+    verdict: confirmed
+    sources:
+      - {title: "Lisa K. Speer, Mississippi Encyclopedia: Fannie Lou Hamer", url: "https://mississippiencyclopedia.org/entries/fannie-lou-hamer/", quote: "was born in 1917 in Montgomery County, Mississippi, the youngest of the twenty children of sharecroppers"}
+      - {title: "Stanford King Institute: Hamer, Fannie Lou", url: "https://kinginstitute.stanford.edu/hamer-fannie-lou", quote: "Born to sharecroppers in Montgomery County, Mississippi, in 1917, Fannie Lou was the youngest of 20 children"}
+    note: ""
+  - card: fannie-lou-hamer
+    fact: "She grew up on a cotton plantation in Sunflower County"
+    verdict: confirmed
+    sources:
+      - {title: "Lisa K. Speer, Mississippi Encyclopedia: Fannie Lou Hamer", url: "https://mississippiencyclopedia.org/entries/fannie-lou-hamer/", quote: "Townsend grew up on the E. W. Brandon Plantation in Sunflower County"}
+      - {title: "Stanford King Institute: Hamer, Fannie Lou", url: "https://kinginstitute.stanford.edu/hamer-fannie-lou", quote: "She grew up on a Sunflower County plantation"}
+    note: ""
+  - card: fannie-lou-hamer
+    fact: "She left school after the sixth grade"
+    verdict: confirmed
+    sources:
+      - {title: "Lisa K. Speer, Mississippi Encyclopedia: Fannie Lou Hamer", url: "https://mississippiencyclopedia.org/entries/fannie-lou-hamer/", quote: "after sixth grade left school entirely"}
+      - {title: "SNCC Digital Gateway: Fannie Lou Hamer", url: "https://snccdigital.org/people/fannie-lou-hamer/", quote: "After reaching the sixth grade at the age of 12, she dropped out of school"}
+    note: ""
+  - card: fannie-lou-hamer
+    fact: "For nearly two decades she and her husband Perry worked on a plantation outside Ruleville, where she was timekeeper"
+    verdict: confirmed
+    sources:
+      - {title: "Lisa K. Speer, Mississippi Encyclopedia: Fannie Lou Hamer", url: "https://mississippiencyclopedia.org/entries/fannie-lou-hamer/", quote: "In 1944 she married Perry “Pap” Hamer, also a sharecropper, and the two moved to the W. D. Marlow Plantation outside Ruleville"}
+      - {title: "Stanford King Institute: Hamer, Fannie Lou", url: "https://kinginstitute.stanford.edu/hamer-fannie-lou", quote: "For the next 18 years, she worked as a sharecropper and a timekeeper for the plantation owner"}
+    note: ""
+  - card: fannie-lou-hamer
+    fact: "In 1962 SNCC organisers came to the county to register Black voters and Hamer tried to register"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Hamer, Fannie Lou", url: "https://kinginstitute.stanford.edu/hamer-fannie-lou", quote: "In 1962 Robert Moses and other members of the Student Nonviolent Coordinating Committee (SNCC) came to Sunflower County to register black voters"}
+      - {title: "Lisa K. Speer, Mississippi Encyclopedia: Fannie Lou Hamer", url: "https://mississippiencyclopedia.org/entries/fannie-lou-hamer/", quote: "In 1962, after Hamer attempted to register to vote"}
+    note: ""
+  - card: fannie-lou-hamer
+    fact: "The owner fired her and forced her off the land"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Hamer, Fannie Lou", url: "https://kinginstitute.stanford.edu/hamer-fannie-lou", quote: "he fired Hamer and forced her to leave her home"}
+      - {title: "Lisa K. Speer, Mississippi Encyclopedia: Fannie Lou Hamer", url: "https://mississippiencyclopedia.org/entries/fannie-lou-hamer/", quote: "W. D. Marlow evicted the Hamers"}
+    note: ""
+  - card: fannie-lou-hamer
+    fact: "In 1963 she was arrested with other activists and beaten in the Winona jail, with lifelong injuries"
+    verdict: confirmed
+    sources:
+      - {title: "Lisa K. Speer, Mississippi Encyclopedia: Fannie Lou Hamer", url: "https://mississippiencyclopedia.org/entries/fannie-lou-hamer/", quote: "in 1963 she and several other SNCC workers returning from a voter registration conference in South Carolina were arrested and taken to the Winona jail and severely beaten. Hamer never completely recovered from injuries sustained in the attack"}
+      - {title: "Stanford King Institute: Hamer, Fannie Lou", url: "https://kinginstitute.stanford.edu/hamer-fannie-lou", quote: "Hamer was so severely beaten in the Winona, Mississippi, jail that she suffered kidney damage and was made partially blind"}
+    note: ""
+  - card: fannie-lou-hamer
+    fact: "She joined the SNCC staff"
+    verdict: corrected
+    sources:
+      - {title: "Stanford King Institute: Hamer, Fannie Lou", url: "https://kinginstitute.stanford.edu/hamer-fannie-lou", quote: "That year, Hamer, then in her forties, became the oldest SNCC employee"}
+      - {title: "Lisa K. Speer, Mississippi Encyclopedia: Fannie Lou Hamer", url: "https://mississippiencyclopedia.org/entries/fannie-lou-hamer/", quote: "in 1963 she and several other SNCC workers returning from a voter registration conference in South Carolina were arrested"}
+    note: "'Field secretary' is King Institute only; SNCC Digital shows her only under 'SNCC Staff'. Card now says she joined the staff."
+  - card: fannie-lou-hamer
+    fact: "In 1964 she cast her first vote; she twice ran for Congress herself"
+    verdict: corrected
+    sources:
+      - {title: "Stanford King Institute: Hamer, Fannie Lou", url: "https://kinginstitute.stanford.edu/hamer-fannie-lou", quote: "By the time she cast her first vote in 1964, she was already very active in politics. “I cast my first vote for myself, because I was running for Congress,”"}
+      - {title: "Lisa K. Speer, Mississippi Encyclopedia: Fannie Lou Hamer", url: "https://mississippiencyclopedia.org/entries/fannie-lou-hamer/", quote: "In 1963 she passed the voter registration test, and the following year she cast her first vote in a Mississippi election. ... She twice ran unsuccessfully for the US Congress"}
+    note: "'Her first vote was for herself' is her own recollection quoted by the King Institute only; card no longer claims it."
+  - card: fannie-lou-hamer
+    fact: "That summer she helped found the MFDP to challenge the all-white delegation at the Democratic convention in Atlantic City"
+    verdict: confirmed
+    sources:
+      - {title: "Lisa K. Speer, Mississippi Encyclopedia: Fannie Lou Hamer", url: "https://mississippiencyclopedia.org/entries/fannie-lou-hamer/", quote: "Later in 1964 Hamer became one of the founding members of the Mississippi Freedom Democratic Party, which challenged the seating of the state’s all-white delegation to the Democratic National Convention in Atlantic City"}
+      - {title: "Stanford King Institute: Hamer, Fannie Lou", url: "https://kinginstitute.stanford.edu/hamer-fannie-lou", quote: "When the MFDP challenged the all-white Mississippi delegation at the 1964 Democratic National Convention in Atlantic City, New Jersey"}
+    note: ""
+  - card: fannie-lou-hamer
+    fact: "She testified to the credentials committee about her beating and ended 'I question America'"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Hamer, Fannie Lou", url: "https://kinginstitute.stanford.edu/hamer-fannie-lou", quote: "Hamer closed her testimony, which was later broadcast in full on the evening news, by stating: “If the Freedom Democratic Party is not seated now, I question America”"}
+      - {title: "Lisa K. Speer, Mississippi Encyclopedia: Fannie Lou Hamer", url: "https://mississippiencyclopedia.org/entries/fannie-lou-hamer/", quote: "Hamer’s “I Question America” speech at the convention"}
+    note: ""
+  - card: fannie-lou-hamer
+    fact: "(wow) President Johnson called a press conference to draw the cameras away from her testimony"
+    verdict: confirmed
+    sources:
+      - {title: "SNCC Digital Gateway: Fannie Lou Hamer", url: "https://snccdigital.org/people/fannie-lou-hamer/", quote: "President Johnson staged an impromptu press conference for fear of the power of her story"}
+      - {title: "Stanford King Institute: Hamer, Fannie Lou", url: "https://kinginstitute.stanford.edu/hamer-fannie-lou", quote: "President Lyndon B. Johnson scheduled a live address at the same time, forcing networks to break away from her speech"}
+    note: ""
+  - card: fannie-lou-hamer
+    fact: "Offered two seats, she said: 'We didn't come all this way for no two seats'"
+    verdict: confirmed
+    sources:
+      - {title: "Lisa K. Speer, Mississippi Encyclopedia: Fannie Lou Hamer", url: "https://mississippiencyclopedia.org/entries/fannie-lou-hamer/", quote: "When the Democratic Party offered to give two convention seats to the Mississippi Freedom Democrats, she replied, “We didn’t come all this way for no two seats.”"}
+      - {title: "Stanford King Institute: Hamer, Fannie Lou", url: "https://kinginstitute.stanford.edu/hamer-fannie-lou", quote: "“We didn’t come all this way for no two seats!”"}
+    note: "Card said 'two token seats'; 'token' dropped (sources say two at-large/convention seats)."
+  - card: fannie-lou-hamer
+    fact: "She was a delegate in 1968, founded Freedom Farm in 1969 and died in 1977"
+    verdict: confirmed
+    sources:
+      - {title: "Lisa K. Speer, Mississippi Encyclopedia: Fannie Lou Hamer", url: "https://mississippiencyclopedia.org/entries/fannie-lou-hamer/", quote: "she served as a delegate to the 1968 and 1972 Democratic National Conventions"}
+      - {title: "Stanford King Institute: Hamer, Fannie Lou", url: "https://kinginstitute.stanford.edu/hamer-fannie-lou", quote: "as a delegate to the 1968 Democratic National Convention"}
+    note: ""
+  - card: selma-1965
+    fact: "In 1965 only about 2 per cent of Black residents of Dallas County were registered"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Selma to Montgomery March", url: "https://kinginstitute.stanford.edu/selma-montgomery-march", quote: "only two percent were on the voting rolls"}
+      - {title: "National Park Service: Selma to Montgomery National Historic Trail, History & Culture", url: "https://www.nps.gov/semo/learn/historyculture/index.htm", quote: "only 2% percent in Dallas County"}
+    note: ""
+  - card: selma-1965
+    fact: "Local activists (Dallas County Voters League), SNCC and SCLC ran a voting-rights campaign in Selma from January 1965, met by mass arrests under Sheriff Jim Clark"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Selma to Montgomery March", url: "https://kinginstitute.stanford.edu/selma-montgomery-march", quote: "On 2 January 1965 King and SCLC joined SNCC, the Dallas County Voters League, and other local African American activists in a voting rights campaign in Selma"}
+      - {title: "Encyclopedia of Alabama: Selma to Montgomery March", url: "https://encyclopediaofalabama.org/article/selma-to-montgomery-march/", quote: "The demonstrations, which began on January 18, 1965, produced rapidly escalating tensions in Selma, culminating in mass arrests by authorities under the direction of Sheriff James G. Clark, Jr."}
+    note: ""
+  - card: selma-1965
+    fact: "On 18 February a state trooper shot Jimmie Lee Jackson at a night march in Marion; he died eight days later"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Selma to Montgomery March", url: "https://kinginstitute.stanford.edu/selma-montgomery-march", quote: "On the night of 18 February, Alabama state troopers joined local police breaking up an evening march in Marion. In the ensuing melee, a state trooper shot Jimmie Lee Jackson"}
+      - {title: "Encyclopedia of Alabama: Selma to Montgomery March", url: "https://encyclopediaofalabama.org/article/selma-to-montgomery-march/", quote: "Trooper J. Bonard Fowler shot black laborer Jimmie Lee Jackson in the stomach"}
+    note: ""
+  - card: selma-1965
+    fact: "In response about 600 people set out on Sunday 7 March to walk 54 miles to Montgomery, led by Hosea Williams and John Lewis"
+    verdict: confirmed
+    sources:
+      - {title: "National Park Service: Selma to Montgomery National Historic Trail, History & Culture", url: "https://www.nps.gov/semo/learn/historyculture/index.htm", quote: "On March 7 th , approximately 600 non-violent protestors, the vast majority being African-American, departed from Brown Chapel African Methodist Episcopal Church in Selma intent on marching 54 miles to Montgomery"}
+      - {title: "Encyclopedia of Alabama: Selma to Montgomery March", url: "https://encyclopediaofalabama.org/article/selma-to-montgomery-march/", quote: "On Sunday, March 7, some 600 black protesters, led by SCLC's Hosea Williams and SNCC's John Lewis , undertook the march"}
+    note: ""
+  - card: selma-1965
+    fact: "On the Edmund Pettus Bridge troopers and mounted possemen attacked with clubs and tear gas; more than fifty needed hospital treatment"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Selma to Montgomery March", url: "https://kinginstitute.stanford.edu/selma-montgomery-march", quote: "the troopers attacked the crowd with clubs and tear gas. Mounted police chased retreating marchers"}
+      - {title: "Encyclopedia of Alabama: Selma to Montgomery March", url: "https://encyclopediaofalabama.org/article/selma-to-montgomery-march/", quote: "15 mounted members of the sheriff's deputized posse"}
+    note: "Card wording now 'more than fifty ended up in hospital' (EoA 56 hospitalised; NPS at least 50 needed hospital treatment)."
+  - card: selma-1965
+    fact: "Television carried 'Bloody Sunday' nationwide"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Selma to Montgomery March", url: "https://kinginstitute.stanford.edu/selma-montgomery-march", quote: "Television coverage of “Bloody Sunday,” as the event became known, triggered national outrage"}
+      - {title: "National Archives, Center for Legislative Archives: Congress and the Voting Rights Act of 1965", url: "https://www.archives.gov/legislative/features/voting-rights-1965", quote: "News cameras filmed the violence in what became known as “Bloody Sunday.”"}
+    note: ""
+  - card: selma-1965
+    fact: "Two days later King led some 2,000 back to the bridge, knelt to pray and turned around"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Selma to Montgomery March", url: "https://kinginstitute.stanford.edu/selma-montgomery-march", quote: "He led more than 2,000 marchers"}
+      - {title: "National Park Service: Selma to Montgomery National Historic Trail, History & Culture", url: "https://www.nps.gov/semo/learn/historyculture/index.htm", quote: "Dr. King led a second march of approximately 2,000 protestors to the site of the Bloody Sunday attack"}
+    note: ""
+  - card: selma-1965
+    fact: "That night white men beat the Unitarian minister James Reeb, who died"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Selma to Montgomery March", url: "https://kinginstitute.stanford.edu/selma-montgomery-march", quote: "several local whites attacked James Reeb , a white Unitarian minister who had come from Massachusetts to join the protest. His death two days later"}
+      - {title: "National Park Service: Selma to Montgomery National Historic Trail, History & Culture", url: "https://www.nps.gov/semo/learn/historyculture/index.htm", quote: "three Unitarian ministers who had traveled to Selma in order to join the protest were attacked by a group of white men. On March 11 th Rev. James Reeb died from his injuries"}
+    note: ""
+  - card: selma-1965
+    fact: "Federal judge Frank M. Johnson Jr. authorised the march"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopedia of Alabama: Selma to Montgomery March", url: "https://encyclopediaofalabama.org/article/selma-to-montgomery-march/", quote: "On March 17, after five days of testimony, Judge Johnson granted an order authorizing the march"}
+      - {title: "National Park Service: Selma to Montgomery National Historic Trail, History & Culture", url: "https://www.nps.gov/semo/learn/historyculture/index.htm", quote: "On March 17th, Federal Judge Frank M. Johnson, Jr. ruled that the march could go on to Montgomery"}
+    note: ""
+  - card: selma-1965
+    fact: "About 8,000 left Selma on 21 March; 25,000 gathered at the capitol on 25 March"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopedia of Alabama: Selma to Montgomery March", url: "https://encyclopediaofalabama.org/article/selma-to-montgomery-march/", quote: "On March 21, King led a diverse group of 8,000 demonstrators out of Selma"}
+      - {title: "National Park Service: Selma to Montgomery National Historic Trail, History & Culture", url: "https://www.nps.gov/semo/learn/historyculture/index.htm", quote: "On March 21 st , the final Selma to Montgomery March began, with more than 8,000 protestors"}
+    note: ""
+  - card: selma-1965
+    fact: "That night Klansmen murdered Viola Liuzzo, a volunteer driving marchers home"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Selma to Montgomery March", url: "https://kinginstitute.stanford.edu/selma-montgomery-march", quote: "while ferrying Selma demonstrators back home from Montgomery, Viola Liuzzo, a housewife from Michigan who had come to Alabama to volunteer, was shot and killed by four members of the Ku Klux Klan"}
+      - {title: "Encyclopedia of Alabama: Selma to Montgomery March", url: "https://encyclopediaofalabama.org/article/selma-to-montgomery-march/", quote: "a car containing four Birmingham Ku Klux Klansmen overtook one driven by Viola Gregg Liuzzo of Detroit, who had been ferrying demonstrators back to Selma from Montgomery"}
+    note: ""
+  - card: selma-1965
+    fact: "The march pushed Congress to act; on 6 August Johnson signed the Voting Rights Act"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Selma to Montgomery March", url: "https://kinginstitute.stanford.edu/selma-montgomery-march", quote: "On 6 August, in the presence of King and other civil rights leaders, President Johnson signed the Voting Rights Act of 1965"}
+      - {title: "National Park Service: Selma to Montgomery National Historic Trail, History & Culture", url: "https://www.nps.gov/semo/learn/historyculture/index.htm", quote: "On August 6th, five months after the marches, President Johnson signed the Voting Rights Act of 1965 into law"}
+    note: ""
+  - card: selma-1965
+    fact: "(wow) Eighteen days separated Bloody Sunday (7 March) from the 25,000-strong rally at the capitol (25 March)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopedia of Alabama: Selma to Montgomery March", url: "https://encyclopediaofalabama.org/article/selma-to-montgomery-march/", quote: "On Sunday, March 7"}
+      - {title: "National Park Service: Selma to Montgomery National Historic Trail, History & Culture", url: "https://www.nps.gov/semo/learn/historyculture/index.htm", quote: "On Thursday, March 25th, the last day of the march"}
+    note: ""
+  - card: civil-rights-act-1964
+    fact: "In June 1963 President Kennedy sent Congress a broad civil rights bill"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Civil Rights Act of 1964", url: "https://kinginstitute.stanford.edu/civil-rights-act-1964", quote: "The civil rights legislation that Kennedy introduced to Congress on 19 June 1963"}
+      - {title: "National Archives: Civil Rights Act (1964)", url: "https://www.archives.gov/milestone-documents/civil-rights-act", quote: "Soon after, Kennedy proposed that Congress consider civil rights legislation that would address voting rights, public accommodations, school desegregation"}
+    note: ""
+  - card: civil-rights-act-1964
+    fact: "The March on Washington rallied behind the bill"
+    verdict: confirmed
+    sources:
+      - {title: "National Park Service: March on Washington for Jobs and Freedom", url: "https://www.nps.gov/articles/march-on-washington.htm", quote: "support for the Civil Rights Act that the Kennedy Administration was attempting to pass through Congress"}
+      - {title: "Stanford King Institute: Civil Rights Act of 1964", url: "https://kinginstitute.stanford.edu/civil-rights-act-1964", quote: "In an article published after the 1963 March on Washington for Jobs and Freedom"}
+    note: ""
+  - card: civil-rights-act-1964
+    fact: "After Kennedy's assassination Johnson pressed the bill"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Civil Rights Act of 1964", url: "https://kinginstitute.stanford.edu/civil-rights-act-1964", quote: "Following Kennedy’s assassination in November 1963, King continued to press for the bill as did newly inaugurated President Lyndon B. Johnson"}
+      - {title: "National Archives: Civil Rights Act (1964)", url: "https://www.archives.gov/milestone-documents/civil-rights-act", quote: "Despite Kennedy’s assassination in November of 1963, his proposal culminated in the Civil Rights Act of 1964"}
+    note: ""
+  - card: civil-rights-act-1964
+    fact: "Southern senators filibustered until Dirksen gathered Republican votes to cut off debate"
+    verdict: confirmed
+    sources:
+      - {title: "National Archives: Civil Rights Act (1964)", url: "https://www.archives.gov/milestone-documents/civil-rights-act", quote: "In the Senate, Southern Democratic opponents attempted to talk the bill to death in a filibuster"}
+      - {title: "U.S. Senate: Civil Rights Filibuster Ended", url: "https://www.senate.gov/about/powers-procedures/filibusters-cloture/civil-rights-filibuster-ended.htm", quote: "Minority Leader Everett Dirksen , who had enlisted the Republican votes that made cloture a realistic option"}
+    note: ""
+  - card: civil-rights-act-1964
+    fact: "On 2 July 1964 Johnson signed the Act with King among those present"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Civil Rights Act of 1964", url: "https://kinginstitute.stanford.edu/civil-rights-act-1964", quote: "On 2 July 1964, Johnson signed the new Civil Rights Act of 1964 into law with King and other civil rights leaders present"}
+      - {title: "US House of Representatives, History, Art & Archives: The Civil Rights Act of 1964", url: "https://history.house.gov/Historical-Highlights/1951-2000/The-Civil-Rights-Act-of-1964/", quote: "Those gathered behind President Johnson at the bill signing included civil rights leader Martin Luther King, Jr."}
+    note: ""
+  - card: civil-rights-act-1964
+    fact: "The Act outlawed segregation in public places (hotels, restaurants, theatres), banned employment discrimination including by sex, and created the EEOC"
+    verdict: confirmed
+    sources:
+      - {title: "National Archives: Civil Rights Act (1964)", url: "https://www.archives.gov/milestone-documents/civil-rights-act", quote: "The act outlawed segregation in businesses such as theaters, restaurants, and hotels. It banned discriminatory practices in employment"}
+      - {title: "Stanford King Institute: Civil Rights Act of 1964", url: "https://kinginstitute.stanford.edu/civil-rights-act-1964", quote: "created the Equal Employment Opportunity Commission to address race and sex discrimination in employment"}
+    note: ""
+  - card: civil-rights-act-1964
+    fact: "After the Selma attack in March 1965 Johnson sent Congress a voting rights bill and signed it on 6 August"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Voting Rights Act of 1965", url: "https://kinginstitute.stanford.edu/voting-rights-act-1965", quote: "Johnson introduced the Voting Rights Act that same month, “with the outrage of Selma still fresh”"}
+      - {title: "U.S. Department of Justice: History of Federal Voting Rights Laws", url: "https://www.justice.gov/crt/history-federal-voting-rights-laws", quote: "President Johnson signed the resulting legislation into law on August 6, 1965"}
+    note: ""
+  - card: civil-rights-act-1964
+    fact: "The VRA banned literacy tests, sent federal examiners to register voters, and required preclearance of election-rule changes"
+    verdict: confirmed
+    sources:
+      - {title: "National Archives: Voting Rights Act (1965)", url: "https://www.archives.gov/milestone-documents/voting-rights-act", quote: "outlawed literacy tests and provided for the appointment of federal examiners (with the power to register qualified citizens to vote)"}
+      - {title: "U.S. Department of Justice: History of Federal Voting Rights Laws", url: "https://www.justice.gov/crt/history-federal-voting-rights-laws", quote: "the Attorney General could designate a county covered by these special provisions for the appointment of a federal examiner to review the qualifications of persons who wanted to register to vote"}
+    note: ""
+  - card: civil-rights-act-1964
+    fact: "(wow) This came nearly a century after the Fifteenth Amendment promised the vote"
+    verdict: confirmed
+    sources:
+      - {title: "National Archives: Voting Rights Act (1965)", url: "https://www.archives.gov/milestone-documents/voting-rights-act", quote: "was signed into law 95 years after the amendment was ratified"}
+      - {title: "U.S. Department of Justice: History of Federal Voting Rights Laws", url: "https://www.justice.gov/crt/history-federal-voting-rights-laws", quote: "After enduring nearly a century of systematic resistance to the Fifteenth Amendment"}
+    note: ""
+  - card: civil-rights-act-1964
+    fact: "In 1966 the Supreme Court struck down Virginia's poll tax"
+    verdict: confirmed
+    sources:
+      - {title: "National Archives: Voting Rights Act (1965)", url: "https://www.archives.gov/milestone-documents/voting-rights-act", quote: "In Harper v. Virginia State Board of Elections , 383 U.S. 663 (1966), the Supreme Court held Virginia's poll tax to be unconstitutional"}
+      - {title: "Oyez: Harper v. Virginia Board of Elections (1966)", url: "https://www.oyez.org/cases/1965/48", quote: "the Court held the poll tax violated the Equal Protection Clause"}
+    note: ""
+  - card: civil-rights-act-1964
+    fact: "In 2013 Shelby County v. Holder voided the coverage formula"
+    verdict: confirmed
+    sources:
+      - {title: "National Archives: Voting Rights Act (1965)", url: "https://www.archives.gov/milestone-documents/voting-rights-act", quote: "In 2013, the Court struck down a key provision of the act involving federal oversight of voting rules in nine states"}
+      - {title: "Oyez: Shelby County v. Holder (2013)", url: "https://www.oyez.org/cases/2012/12-96", quote: "The Court also held that the formula for determining whether changes to a state's voting procedure should be federally reviewed is now outdated"}
+    note: ""
+  - card: ghana-1957
+    fact: "On 6 March 1957 the British colony of the Gold Coast became independent Ghana"
+    verdict: confirmed
+    sources:
+      - {title: "Kenneth W. Heger, Prologue (National Archives), Winter 1999: Race Relations in the United States and American Cultural and Informational Programs in Ghana, 1957–1966", url: "https://www.archives.gov/publications/prologue/1999/winter/us-and-ghana-1957-1966", quote: "On March 6, 1957, American relations with Africa entered a new era when Ghana, the former British colony of Gold Coast, gained its independence"}
+      - {title: "Office of the Historian, U.S. Department of State: Ghana", url: "https://history.state.gov/countries/ghana", quote: "Ghana, formerly known as the Gold Coast, was proclaimed independent from the British Empire"}
+    note: ""
+  - card: ghana-1957
+    fact: "Ghana was hailed as the first colony south of the Sahara to win independence (contested: Sudan, recognised 1 January 1956)"
+    verdict: confirmed
+    sources:
+      - {title: "Kenneth W. Heger, Prologue (National Archives), Winter 1999: Race Relations in the United States and American Cultural and Informational Programs in Ghana, 1957–1966", url: "https://www.archives.gov/publications/prologue/1999/winter/us-and-ghana-1957-1966", quote: "As the first sub-Saharan colony to gain independence"}
+      - {title: "NPR, News & Notes: 'Our Ghana' at 50 (2007)", url: "https://www.npr.org/2007/03/06/7728721/our-ghana-at-50", quote: "Ghana was the first sub-Saharan African country to gain independence from colonial rule"}
+    note: ""
+  - card: ghana-1957
+    fact: "Nkrumah studied at Lincoln University and the University of Pennsylvania"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Kwame Nkrumah (archived copy)", url: "https://www.britannica.com/biography/Kwame-Nkrumah", quote: "He entered Lincoln University in Pennsylvania in 1935 and, after graduating in 1939, obtained master’s degrees from Lincoln and from the University of Pennsylvania"}
+      - {title: "NPR, News & Notes: 'Our Ghana' at 50 (2007)", url: "https://www.npr.org/2007/03/06/7728721/our-ghana-at-50", quote: "Nkrumah got his undergraduate degree at Lincoln University in Philly and went to the University of Pennsylvania for grad school"}
+    note: ""
+  - card: ghana-1957
+    fact: "In 1949 Nkrumah founded the Convention People's Party to demand self-government"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Kwame Nkrumah (archived copy)", url: "https://www.britannica.com/biography/Kwame-Nkrumah", quote: "he formed in June 1949 the new Convention Peoples’ Party (CPP), a mass-based party that was committed to a program of immediate self-government"}
+      - {title: "Ryan Hurst, BlackPast: Kwame Nkrumah (1909-1972)", url: "https://www.blackpast.org/global-african-history/nkrumah-kwame-1909-1972/", quote: "in 1949 Nkrumah split with the organization over its political objectives and formed the Convention People’s Party (CPP)"}
+    note: ""
+  - card: ghana-1957
+    fact: "Imprisoned in 1950, he was released in 1951 after his party won the election in a landslide, and became prime minister in 1952"
+    verdict: confirmed
+    sources:
+      - {title: "Ryan Hurst, BlackPast: Kwame Nkrumah (1909-1972)", url: "https://www.blackpast.org/global-african-history/nkrumah-kwame-1909-1972/", quote: "Imprisoned by the British in 1950 for his political activities, Nkrumah was released in 1951 when his party won the general election in a landslide victory. He subsequently was elected prime minister in 1952"}
+      - {title: "Encyclopaedia Britannica: Kwame Nkrumah (archived copy)", url: "https://www.britannica.com/biography/Kwame-Nkrumah", quote: "Elected to Parliament, Nkrumah was released from prison to become leader of gover"}
+    note: ""
+  - card: ghana-1957
+    fact: "At the stroke of midnight Nkrumah proclaimed independence in Accra"
+    verdict: confirmed
+    sources:
+      - {title: "Kenneth W. Heger, Prologue (National Archives), Winter 1999: Race Relations in the United States and American Cultural and Informational Programs in Ghana, 1957–1966", url: "https://www.archives.gov/publications/prologue/1999/winter/us-and-ghana-1957-1966", quote: "At the stroke of midnight, March 6, 1957, Kwame Nkrumah proclaims Ghana's independence"}
+      - {title: "Stanford King Institute: Ghana Trip", url: "https://kinginstitute.stanford.edu/ghana-trip", quote: "At midnight on 6 March, King attended the official ceremony in which the British Union Jack was lowered and the new flag of Ghana was raised"}
+    note: ""
+  - card: ghana-1957
+    fact: "Vice-President Richard Nixon led the US delegation"
+    verdict: confirmed
+    sources:
+      - {title: "Kenneth W. Heger, Prologue (National Archives), Winter 1999: Race Relations in the United States and American Cultural and Informational Programs in Ghana, 1957–1966", url: "https://www.archives.gov/publications/prologue/1999/winter/us-and-ghana-1957-1966", quote: "the Eisenhower administration chose Vice President Richard Nixon to lead the American delegation to Ghana's independence celebrations"}
+      - {title: "Stanford King Institute: Ghana Trip", url: "https://kinginstitute.stanford.edu/ghana-trip", quote: "attended a reception where he met then Vice President Richard Nixon"}
+    note: ""
+  - card: ghana-1957
+    fact: "Martin Luther King Jr. attended, soon after the Montgomery bus boycott"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Ghana Trip", url: "https://kinginstitute.stanford.edu/ghana-trip", quote: "In March 1957, Martin Luther King, Jr., and his wife Coretta Scott King traveled to West Africa to attend Ghana’s independence ceremony"}
+      - {title: "NPR, News & Notes: 'Our Ghana' at 50 (2007)", url: "https://www.npr.org/2007/03/06/7728721/our-ghana-at-50", quote: "Dr. Martin Luther King, Jr. was there at the moment freedom was announced"}
+    note: ""
+  - card: ghana-1957
+    fact: "(wow) King reportedly invited Nixon to Alabama, where Black people sought the same freedom"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Ghana Trip", url: "https://kinginstitute.stanford.edu/ghana-trip", quote: "King told Nixon, “I want you to come visit us down in Alabama where we are seeking the same kind of freedom the Gold Coast is celebrating”"}
+      - {title: "NPR, News & Notes: 'Our Ghana' at 50 (2007)", url: "https://www.npr.org/2007/03/06/7728721/our-ghana-at-50", quote: "It is reported that Doctor King told Richard Nixon on that day, I want you to come and visit us in Alabama where we are seeking the same kind of freedom Ghana is celebrating"}
+    note: ""
+  - card: ghana-1957
+    fact: "Free Ghana drew Black American leaders and icons; Malcolm X was among them"
+    verdict: corrected
+    sources:
+      - {title: "NPR, News & Notes: 'Our Ghana' at 50 (2007)", url: "https://www.npr.org/2007/03/06/7728721/our-ghana-at-50", quote: "A whole lot of American leaders and icons flocked to Ghana in the years just before and just after its independence. People like Malcolm X"}
+      - {title: "Malik Simba, BlackPast: Malcolm X (1925-1965)", url: "https://www.blackpast.org/african-american-history/x-malcolm-1925-1965/", quote: "was received like a visiting head of state in many countries including Egypt, Nigeria, Tanzania, Kenya, and Ghana"}
+    note: "'Received like a visiting head of state' and the 1964 date rest on BlackPast alone; removed. Both sources confirm Malcolm X went to Ghana."
+  - card: ghana-1957
+    fact: "Nkrumah banned other parties; overthrown in a 1966 coup while abroad; died in exile in 1972"
+    verdict: confirmed
+    sources:
+      - {title: "BBC On This Day: 1957, Ghana celebrates independence", url: "http://news.bbc.co.uk/onthisday/hi/dates/stories/march/6/newsid_2515000/2515459.stm", quote: "He banned all opposition parties. He was deposed in 1966 by a military coup while on a trip to Peking. He later died in exile in Romania in 1972"}
+      - {title: "Ryan Hurst, BlackPast: Kwame Nkrumah (1909-1972)", url: "https://www.blackpast.org/global-african-history/nkrumah-kwame-1909-1972/", quote: "Nkrumah subsequently outlawed all other political parties. In 1966, Nkrumah’s government was overthrown by a coup d’état while he was on a trip to Beijing, China"}
+    note: ""
+  - card: ghana-1957
+    fact: "In 1960 seventeen more African colonies became independent"
+    verdict: confirmed
+    sources:
+      - {title: "African Studies Centre Leiden: Infosheets on the 17 African countries that gained independence in 1960", url: "https://ascleiden.nl/news/infosheets-17-african-countries-gained-independence-1960", quote: "1960 was the ‘Year of Africa’: seventeen colonies in Africa became politically independent"}
+      - {title: "Katherine Everett, Emily Hardick, Damarius Johnson, Origins (Ohio State University): The Year of Africa", url: "https://origins.osu.edu/article/year-of-africa-1960-rumba-pan-africanism-Kariba", quote: "with 17 new countries created that year"}
+    note: ""
+  - card: year-of-africa-1960
+    fact: "In 1960 seventeen African colonies became independent, and the year is known as the Year of Africa"
+    verdict: confirmed
+    sources:
+      - {title: "African Studies Centre Leiden: Infosheets on the 17 African countries that gained independence in 1960", url: "https://ascleiden.nl/news/infosheets-17-african-countries-gained-independence-1960", quote: "1960 was the ‘Year of Africa’: seventeen colonies in Africa became politically independent"}
+      - {title: "Katherine Everett, Emily Hardick, Damarius Johnson, Origins (Ohio State University): The Year of Africa", url: "https://origins.osu.edu/article/year-of-africa-1960-rumba-pan-africanism-Kariba", quote: "1960, often known as the Year of Africa, marked a turning point of African independence with 17 new countries created that year"}
+    note: ""
+  - card: year-of-africa-1960
+    fact: "Among them was the Belgian Congo, independent on 30 June 1960"
+    verdict: confirmed
+    sources:
+      - {title: "African Studies Centre Leiden: Infosheets on the 17 African countries that gained independence in 1960", url: "https://ascleiden.nl/news/infosheets-17-african-countries-gained-independence-1960", quote: "ASCL Infosheet 'DRC at 60' (independent 30 June 1960)"}
+      - {title: "Katherine Everett, Emily Hardick, Damarius Johnson, Origins (Ohio State University): The Year of Africa", url: "https://origins.osu.edu/article/year-of-africa-1960-rumba-pan-africanism-Kariba", quote: "The conference set Congo’s independence for June 30, 1960"}
+    note: ""
+  - card: year-of-africa-1960
+    fact: "In January and February 1960 Congolese politicians and Belgian officials met at a Round Table in the Palais des Congrès, Brussels, which set independence for 30 June"
+    verdict: confirmed
+    sources:
+      - {title: "Royal Museum for Central Africa: Round Table / Indépendance Cha Cha", url: "https://independance.africamuseum.be/en/node/220", quote: "Palais des Congrès, Brussels, 20 January to 20 February 1960 The first Round Table leads rapidly to agreement in principle on Congo's immedia"}
+      - {title: "Katherine Everett, Emily Hardick, Damarius Johnson, Origins (Ohio State University): The Year of Africa", url: "https://origins.osu.edu/article/year-of-africa-1960-rumba-pan-africanism-Kariba", quote: "Congolese politicians and Belgian administrators met in January 1960 to negotiate the colony’s fate"}
+    note: ""
+  - card: year-of-africa-1960
+    fact: "The Kanza brothers brought Joseph Kabasele (Le Grand Kallé) and musicians from African Jazz and OK Jazz to Brussels"
+    verdict: confirmed
+    sources:
+      - {title: "Royal Museum for Central Africa: Round Table / Indépendance Cha Cha", url: "https://independance.africamuseum.be/en/node/220", quote: "Thomas Kanza had the great idea of sending a telegram to his brother Philippe Kanza, asking him to form a band comprised of musicians from OK Jazz and African Jazz"}
+      - {title: "Alan Brain, PAM (Pan African Music): The other heroes of the Round Table (2021)", url: "https://pan-african-music.com/en/round-table-independence-cha-cha/", quote: "The brothers Thomas and Philippe Kanza, who were the owners of the Congo newspaper, took over the organization of the whole trip"}
+    note: ""
+  - card: year-of-africa-1960
+    fact: "In Brussels the band introduced 'Indépendance Cha Cha', a Congolese rumba in cha-cha time in Lingala and French"
+    verdict: confirmed
+    sources:
+      - {title: "Alan Brain, PAM (Pan African Music): The other heroes of the Round Table (2021)", url: "https://pan-african-music.com/en/round-table-independence-cha-cha/", quote: "Immediately after the battle cry of Kanza, Grand Kallé and African Jazz launched into their new song “Indépendance Cha Cha”"}
+      - {title: "Katherine Everett, Emily Hardick, Damarius Johnson, Origins (Ohio State University): The Year of Africa", url: "https://origins.osu.edu/article/year-of-africa-1960-rumba-pan-africanism-Kariba", quote: "in their original Lingala and French, these lyrics set to an Afro-Cuban beat"}
+    note: ""
+  - card: year-of-africa-1960
+    fact: "The song named the parties and leaders, including Kasavubu, Lumumba and Tshombe"
+    verdict: confirmed
+    sources:
+      - {title: "Royal Museum for Central Africa: Round Table / Indépendance Cha Cha", url: "https://independance.africamuseum.be/en/node/220", quote: "'Indépendance Cha Cha' cites the names of the mo"}
+      - {title: "Katherine Everett, Emily Hardick, Damarius Johnson, Origins (Ohio State University): The Year of Africa", url: "https://origins.osu.edu/article/year-of-africa-1960-rumba-pan-africanism-Kariba", quote: "was one of many politicians named in Independence Cha Cha"}
+    note: ""
+  - card: year-of-africa-1960
+    fact: "It became a hit beyond Congo and an independence anthem of other African countries"
+    verdict: confirmed
+    sources:
+      - {title: "Royal Museum for Central Africa: Round Table / Indépendance Cha Cha", url: "https://independance.africamuseum.be/en/node/220", quote: "It soon becomes the independence anthem of other African countries"}
+      - {title: "Katherine Everett, Emily Hardick, Damarius Johnson, Origins (Ohio State University): The Year of Africa", url: "https://origins.osu.edu/article/year-of-africa-1960-rumba-pan-africanism-Kariba", quote: "is widely considered to be the first pan-African hit"}
+    note: ""
+  - card: year-of-africa-1960
+    fact: "Soon after independence Katanga under Tshombe seceded"
+    verdict: confirmed
+    sources:
+      - {title: "UN Dag Hammarskjöld Library: Dag Hammarskjöld, the UN years, 1960", url: "https://static.un.org/depts/dhl/dag/time1960.htm", quote: "On 11 July, Mr. Tshombé, who had requested the Belgian paratroops, proclaimed the independence of Katanga"}
+      - {title: "Katherine Everett, Emily Hardick, Damarius Johnson, Origins (Ohio State University): The Year of Africa", url: "https://origins.osu.edu/article/year-of-africa-1960-rumba-pan-africanism-Kariba", quote: "secessionist movements in the southern regions of Katanga and South Kasai"}
+    note: ""
+  - card: year-of-africa-1960
+    fact: "Lumumba was ousted, imprisoned and killed in Katanga early in 1961"
+    verdict: corrected
+    sources:
+      - {title: "Katherine Everett, Emily Hardick, Damarius Johnson, Origins (Ohio State University): The Year of Africa", url: "https://origins.osu.edu/article/year-of-africa-1960-rumba-pan-africanism-Kariba", quote: "Secessionists and UN and U.S. officials then conspired with the Belgian Foreign Ministry to assassinate Lumumba in January 1961"}
+      - {title: "UN Dag Hammarskjöld Library: Dag Hammarskjöld, the UN years, 1961", url: "https://static.un.org/depts/dhl/dag/time1961.htm", quote: "Since his capture in December 1960, Patrice Lumumba had been kept prisoner at Thysville. On 17 January, he was transferred to Katanga. The Katanga Minister of the Interior announced his escape on 10 February, and then his death on 13 February"}
+    note: "UN chronology gives the transfer to Katanga (17 January) but not the date of death; card now says 'early in 1961'."
+  - card: year-of-africa-1960
+    fact: "It is perhaps the most famous Congolese song"
+    verdict: corrected
+    sources:
+      - {title: "Royal Museum for Central Africa: Round Table / Indépendance Cha Cha", url: "https://independance.africamuseum.be/en/node/220", quote: "'Indépendance Cha Cha' is probably the most famous Congolese song"}
+      - {title: "Katherine Everett, Emily Hardick, Damarius Johnson, Origins (Ohio State University): The Year of Africa", url: "https://origins.osu.edu/article/year-of-africa-1960-rumba-pan-africanism-Kariba", quote: "Baloji released a reworking of the most famous song of 1960, Le Jour d'Après / Siku Ya Baadaye (Indépendance Cha-Cha)"}
+    note: "Kept hedged ('perhaps'); Origins calls it the most famous song of 1960."
+  - card: malcolm-x
+    fact: "Malcolm X was born Malcolm Little in Omaha, Nebraska, on 19 May 1925"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Malcolm X", url: "https://kinginstitute.stanford.edu/malcolm-x", quote: "Malcolm Little was born to Louise and Earl Little in Omaha, Nebraska, on 19 May 1925"}
+      - {title: "Malik Simba, BlackPast: Malcolm X (1925-1965)", url: "https://www.blackpast.org/african-american-history/x-malcolm-1925-1965/", quote: "was born Malcolm Little in Omaha, Nebraska, on May 19, 1925"}
+    note: ""
+  - card: malcolm-x
+    fact: "His father died when he was six; the family believed white supremacists killed him"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Malcolm X", url: "https://kinginstitute.stanford.edu/malcolm-x", quote: "His father died when he was six years old—the victim, he believed, of a white racist group"}
+      - {title: "Malik Simba, BlackPast: Malcolm X (1925-1965)", url: "https://www.blackpast.org/african-american-history/x-malcolm-1925-1965/", quote: "Little was killed by a streetcar in 1931. Authorities ruled it a suicide, but the family believed he was killed by white supremacists"}
+    note: ""
+  - card: malcolm-x
+    fact: "In 1946 he was imprisoned in Massachusetts for burglary and joined the Nation of Islam there"
+    verdict: confirmed
+    sources:
+      - {title: "Malik Simba, BlackPast: Malcolm X (1925-1965)", url: "https://www.blackpast.org/african-american-history/x-malcolm-1925-1965/", quote: "Malcolm was arrested for burglary in Boston in 1946 and received a ten-year prison sentence. There, he joined the Nation of Islam (NOI)"}
+      - {title: "Stanford King Institute: Malcolm X", url: "https://kinginstitute.stanford.edu/malcolm-x", quote: "Malcolm joined the Nation of Islam (NOI) while serving a prison term in Massachusetts on burglary charges"}
+    note: ""
+  - card: malcolm-x
+    fact: "Released in 1952, he dropped his 'slave name' for X"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Malcolm X", url: "https://kinginstitute.stanford.edu/malcolm-x", quote: "Shortly after his release in 1952, he moved to Chicago and became a minister under Elijah Muhammad, abandoning his “slave name,” and becoming Malcolm X"}
+      - {title: "Malik Simba, BlackPast: Malcolm X (1925-1965)", url: "https://www.blackpast.org/african-american-history/x-malcolm-1925-1965/", quote: "Upon his parole in 1952"}
+    note: ""
+  - card: malcolm-x
+    fact: "By the late 1950s he was the NOI's leading spokesman, and his views stood in sharp contrast to King's nonviolence"
+    verdict: corrected
+    sources:
+      - {title: "Stanford King Institute: Malcolm X", url: "https://kinginstitute.stanford.edu/malcolm-x", quote: "By the late 1950s, Malcolm had become the NOI’s leading spokesman ... Although Malcolm rejected King’s message of nonviolence"}
+      - {title: "Malik Simba, BlackPast: Malcolm X (1925-1965)", url: "https://www.blackpast.org/african-american-history/x-malcolm-1925-1965/", quote: "This documentary revealed the views of the NOI, of which Malcolm was the principal spokesperson, and showed those views to be in sharp contrast to those of most well-known African American leaders of the time"}
+    note: "'Preaching Black nationalism' had only the King Institute (BlackPast tags him a Black nationalist only in its category list); reworded."
+  - card: malcolm-x
+    fact: "On 26 March 1964 Malcolm X and King met in the US Capitol after King's press conference on the Senate debate over the Civil Rights Act; a news photographer photographed them"
+    verdict: confirmed
+    sources:
+      - {title: "Library of Congress: Martin Luther King and Malcolm X after King's press conference at the U.S. Capitol (1964)", url: "https://www.loc.gov/pictures/item/92522562/", quote: "[Martin Luther King and Malcolm X after King's press conference at the U.S. Capitol about the Senate debate on the Civil Rights Act of 1964] [1964 March 26]"}
+      - {title: "Stanford King Institute: Malcolm X", url: "https://kinginstitute.stanford.edu/malcolm-x", quote: "during the Senate debate on the Civil Rights Act of 1964 , King and Malcolm met for the first and only time. After holding a press conference in the Capitol on the proceedings, King encountered Malcolm in the hallway"}
+    note: ""
+  - card: malcolm-x
+    fact: "Earlier in March 1964 (8 March) he had broken with the Nation of Islam"
+    verdict: corrected
+    sources:
+      - {title: "Malik Simba, BlackPast: Malcolm X (1925-1965)", url: "https://www.blackpast.org/african-american-history/x-malcolm-1925-1965/", quote: "Malcolm used the suspension to announce on March 8, 1964, his break with the NOI"}
+      - {title: "Stanford King Institute: Malcolm X", url: "https://kinginstitute.stanford.edu/malcolm-x", quote: "In the spring of 1964, Malcolm broke away from the NOI and made a pilgrimage to Mecca"}
+    note: "The break (8 March) came before the 26 March meeting; card said 'That month', now 'Earlier that month'. The day rests on BlackPast; King Institute confirms spring 1964."
+  - card: malcolm-x
+    fact: "He made the pilgrimage to Mecca, travelled through Africa and founded the Organization of Afro-American Unity"
+    verdict: confirmed
+    sources:
+      - {title: "Malik Simba, BlackPast: Malcolm X (1925-1965)", url: "https://www.blackpast.org/african-american-history/x-malcolm-1925-1965/", quote: "Malcolm traveled to Africa and the Middle East in late Spring 1964"}
+      - {title: "Stanford King Institute: Malcolm X", url: "https://kinginstitute.stanford.edu/malcolm-x", quote: "made a pilgrimage to Mecca"}
+    note: ""
+  - card: malcolm-x
+    fact: "The OAAU placed Black America's struggle in a worldwide one"
+    verdict: confirmed
+    sources:
+      - {title: "Malik Simba, BlackPast: Malcolm X (1925-1965)", url: "https://www.blackpast.org/african-american-history/x-malcolm-1925-1965/", quote: "Malcolm placed the Black Revolution in the context of a worldwide anti-imperialist struggle taking place in Africa, Asia, and Latin America"}
+      - {title: "Stanford King Institute: Malcolm X", url: "https://kinginstitute.stanford.edu/malcolm-x", quote: "Malcolm saw his newly created Organization of African American Unity (OAAU) as a potential source of ideological guidance"}
+    note: ""
+  - card: malcolm-x
+    fact: "On 21 February 1965 he was shot dead at the Audubon Ballroom in upper Manhattan"
+    verdict: corrected
+    sources:
+      - {title: "Malik Simba, BlackPast: Malcolm X (1925-1965)", url: "https://www.blackpast.org/african-american-history/x-malcolm-1925-1965/", quote: "on February 21, 1965, Malcolm X was assassinated at the Audubon Ballroom in the Washington Heights section of Manhattan"}
+      - {title: "National Registry of Exonerations: Khalil Islam", url: "https://exonerationregistry.org/cases/13121", quote: "The murder happened just after 3 p.m. on February 21, 1965. Malcolm was starting to give a speech at the Audubon Ballroom on 165th Street and Broadway in upper Manhattan"}
+    note: "The Registry and Innocence Project pages share the same text (one source), so 'as he began a speech' had one source; dropped."
+  - card: malcolm-x
+    fact: "In November 2021 a Manhattan judge vacated the convictions of Muhammad Aziz and Khalil Islam"
+    verdict: confirmed
+    sources:
+      - {title: "National Registry of Exonerations: Khalil Islam", url: "https://exonerationregistry.org/cases/13121", quote: "On November 18, 2021, the murder convictions against Khalil Islam and Muhammad Aziz in the 1965 assassination of Malcolm X were vacated in a Manhattan, New York courtroom"}
+      - {title: "Ryland West, New York Law Journal: Two Men Convicted of Killing Malcolm X Are Cleared After 55 Years (2021)", url: "https://law.com/newyorklawjournal/2021/11/18/two-men-convicted-of-killing-malcolm-x-are-cleared-after-55-years", quote: "Manhattan Supreme Court Justice Ellen Biben cleared Muhammad Aziz and Khalil Islam in the Feb. 21, 1965, slaying of Malcolm X"}
+    note: ""
+  - card: malcolm-x
+    fact: "(wow) 56 years passed between the murder (Feb 1965) and the exoneration (Nov 2021); he had joined the Nation of Islam in prison and became its most famous voice"
+    verdict: confirmed
+    sources:
+      - {title: "National Registry of Exonerations: Khalil Islam", url: "https://exonerationregistry.org/cases/13121", quote: "On November 18, 2021"}
+      - {title: "Ryland West, New York Law Journal: Two Men Convicted of Killing Malcolm X Are Cleared After 55 Years (2021)", url: "https://law.com/newyorklawjournal/2021/11/18/two-men-convicted-of-killing-malcolm-x-are-cleared-after-55-years", quote: "in the Feb. 21, 1965, slaying of Malcolm X"}
+    note: ""
+  - card: malcolm-x
+    fact: "His last eleven months (March 1964 to February 1965) took him from Harlem to Accra"
+    verdict: confirmed
+    sources:
+      - {title: "Malik Simba, BlackPast: Malcolm X (1925-1965)", url: "https://www.blackpast.org/african-american-history/x-malcolm-1925-1965/", quote: "His proselytizing success earned a reassignment in 1954 to Temple Number Seven in Harlem"}
+      - {title: "NPR, News & Notes: 'Our Ghana' at 50 (2007)", url: "https://www.npr.org/2007/03/06/7728721/our-ghana-at-50", quote: "People like Malcolm X"}
+    note: ""
+  - card: ella-baker
+    fact: "Ella Baker was born in Norfolk, Virginia, in 1903, granddaughter of people born into slavery"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Baker, Ella Josephine", url: "https://kinginstitute.stanford.edu/baker-ella-josephine", quote: "Born in Norfolk, Virginia, on 13 December 1903, Baker was raised on the same land her grandparents had worked as slaves"}
+      - {title: "SNCC Digital Gateway: Ella Baker", url: "https://snccdigital.org/people/ella-baker/", quote: "Born a slave in Halifax County, North Carolina, “Bet” Ross"}
+    note: ""
+  - card: ella-baker
+    fact: "In the late 1930s and the 1940s she worked for the NAACP, rising to director of branches"
+    verdict: corrected
+    sources:
+      - {title: "Stanford King Institute: Baker, Ella Josephine", url: "https://kinginstitute.stanford.edu/baker-ella-josephine", quote: "In 1938 Baker joined the staff of the National Association for the Advancement of Colored People (NAACP) as an assistant field secretary and later as director of branches"}
+      - {title: "SNCC Digital Gateway: Ella Baker", url: "https://snccdigital.org/people/ella-baker/", quote: "Because of her work as NAACP Director of Branches in the 1940s, Baker had a network"}
+    note: "Card said 'field secretary' (she was assistant field secretary); 'building a network of local activists across the South' rests on SNCC Digital alone. Both removed."
+  - card: ella-baker
+    fact: "Later she ran SCLC's Atlanta headquarters"
+    verdict: corrected
+    sources:
+      - {title: "Stanford King Institute: Baker, Ella Josephine", url: "https://kinginstitute.stanford.edu/baker-ella-josephine", quote: "She ran SCLC’s Atlanta headquarters"}
+      - {title: "SNCC Digital Gateway: Ella Baker", url: "https://snccdigital.org/people/ella-baker/", quote: "While serving as Executive Secretary for the Southern Christian Leadership Conference (SCLC)"}
+    note: "'In 1958' and 'moved to Atlanta' are King Institute only; card no longer gives the year."
+  - card: ella-baker
+    fact: "In early 1960 sit-ins at whites-only lunch counters spread across the South"
+    verdict: confirmed
+    sources:
+      - {title: "Ella Baker, Bigger Than a Hamburger, The Southern Patriot, May 1960 (Civil Rights Movement Archive)", url: "https://www.crmvet.org/docs/sncc2.htm", quote: "current sit-ins and other demonstrations"}
+      - {title: "Stanford King Institute: Student Nonviolent Coordinating Committee (SNCC)", url: "https://kinginstitute.stanford.edu/student-nonviolent-coordinating-committee-sncc", quote: "invited black college students who had participated in the early 1960 sit-ins"}
+    note: ""
+  - card: ella-baker
+    fact: "Baker called the students to Shaw University, Raleigh, over Easter weekend in April 1960"
+    verdict: confirmed
+    sources:
+      - {title: "SNCC Digital Gateway: Ella Baker", url: "https://snccdigital.org/people/ella-baker/", quote: "she organized the founding conference of SNCC , held at Shaw University in Raleigh, North Carolina during the Easter weekend of 1960"}
+      - {title: "Stanford King Institute: Student Nonviolent Coordinating Committee (SNCC)", url: "https://kinginstitute.stanford.edu/student-nonviolent-coordinating-committee-sncc", quote: "to an April 1960 gathering at Shaw University in Raleigh, North Carolina"}
+    note: ""
+  - card: ella-baker
+    fact: "King hoped for an SCLC student wing; Baker urged independence and they founded SNCC"
+    verdict: confirmed
+    sources:
+      - {title: "SNCC Digital Gateway: Ella Baker", url: "https://snccdigital.org/people/ella-baker/", quote: "Rev. King hoped they would become an SCLC student wing. Ella Baker, however, encouraged the students to think about forming their own organization"}
+      - {title: "Stanford King Institute: Student Nonviolent Coordinating Committee (SNCC)", url: "https://kinginstitute.stanford.edu/student-nonviolent-coordinating-committee-sncc", quote: "Baker encouraged the more than 200 student attendees to remain autonomous, rather than affiliate with SCLC"}
+    note: ""
+  - card: ella-baker
+    fact: "She wrote that the sit-ins were about 'something much bigger than a hamburger or even a giant-sized Coke' and praised group-centered leadership"
+    verdict: confirmed
+    sources:
+      - {title: "Ella Baker, Bigger Than a Hamburger, The Southern Patriot, May 1960 (Civil Rights Movement Archive)", url: "https://www.crmvet.org/docs/sncc2.htm", quote: "concerned with something much bigger than a hamburger or even a giant-sized Coke"}
+      - {title: "SNCC Digital Gateway: Ella Baker", url: "https://snccdigital.org/people/ella-baker/", quote: "Speaking to the conference Ella Baker told the students that their struggle was “much bigger than a hamburger or even a giant-sized coke.”"}
+    note: ""
+  - card: ella-baker
+    fact: "SNCC took voter registration to Mississippi, where Fannie Lou Hamer joined its staff"
+    verdict: corrected
+    sources:
+      - {title: "SNCC Digital Gateway: Ella Baker", url: "https://snccdigital.org/people/ella-baker/", quote: "in the summer of 1960 she sent Bob Moses to meet local NAACP leader Amzie Moore in Cleveland, Mississippi, and out of this meeting emerged SNCC’s first voter registration project"}
+      - {title: "Stanford King Institute: Hamer, Fannie Lou", url: "https://kinginstitute.stanford.edu/hamer-fannie-lou", quote: "In 1962 Robert Moses and other members of the Student Nonviolent Coordinating Committee (SNCC) came to Sunflower County to register black voters ... became the oldest SNCC employee"}
+    note: "'Field secretary' changed to 'joined its staff' (see Hamer). Also fixed a grammar slip ('; where')."
+  - card: ella-baker
+    fact: "Baker remained an adviser and died on her 83rd birthday, 13 December 1986"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: Baker, Ella Josephine", url: "https://kinginstitute.stanford.edu/baker-ella-josephine", quote: "In addition to continuing her involvement as an advisor to SNCC"}
+      - {title: "SNCC Digital Gateway: Ella Baker", url: "https://snccdigital.org/people/ella-baker/", quote: "December 13, 1903 – December 13, 1986"}
+    note: ""
+  - card: ella-baker
+    fact: "She believed leaders should grow out of the people"
+    verdict: confirmed
+    sources:
+      - {title: "SNCC Digital Gateway: Ella Baker", url: "https://snccdigital.org/people/ella-baker/", quote: "Her belief was always that organizing people meant that they could lead themselves"}
+      - {title: "Stanford King Institute: Baker, Ella Josephine", url: "https://kinginstitute.stanford.edu/baker-ella-josephine", quote: "the movement made Martin rather than Martin making the movement"}
+    note: ""
+unledgered:
+  - card: montgomery-bus-boycott
+    fact: "(unledgered) The Women's Political Council was a group of Black professional women"
+    verdict: confirmed
+    sources:
+      - {title: "Stewart Burns, Encyclopedia of Alabama: Montgomery Bus Boycott", url: "https://encyclopediaofalabama.org/article/montgomery-bus-boycott/", quote: "the newly formed Women's Political Council (WPC) of Montgomery, an activist group of black professional women"}
+      - {title: "Stanford King Institute: Montgomery Bus Boycott", url: "https://kinginstitute.stanford.edu/montgomery-bus-boycott", quote: "The Women’s Political Council (WPC), a group of black professionals founded in 1946"}
+    note: ""
+  - card: martin-luther-king
+    fact: "(unledgered) By then he was the best-known voice of Black America and a figure known around the world"
+    verdict: corrected
+    sources:
+      - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/", quote: "became not only the symbolic leader of American blacks but also a world figure"}
+      - {title: "New Georgia Encyclopedia: Martin Luther King Jr. (1929-1968)", url: "https://www.georgiaencyclopedia.org/articles/history-archaeology/martin-luther-king-jr-1929-1968/", quote: "King’s “I Have a Dream” speech was the most memorable event of the day and confirmed him as Black America’s most prominent spokesperson"}
+    note: "Replaces the unsourced closing line 'He had turned local protests into a national movement that changed American law'."
+  - card: march-on-washington
+    fact: "(unledgered) Randolph founded the Brotherhood of Sleeping Car Porters"
+    verdict: confirmed
+    sources:
+      - {title: "Stanford King Institute: March on Washington for Jobs and Freedom", url: "https://kinginstitute.stanford.edu/march-washington-jobs-and-freedom", quote: "In the summer of 1941 A. Philip Randolph, founder of the Brotherhood of Sleeping Car Porters, called for a march on Washington"}
+      - {title: "National Park Service: March on Washington for Jobs and Freedom", url: "https://www.nps.gov/articles/march-on-washington.htm", quote: "the original idea came from A. Philip Randolph, a labor organizer and founder of the Brotherhood of Sleeping Car Porters"}
+    note: "Ledger #17 cited only NPS for this part."
+  - card: selma-1965
+    fact: "(unledgered) Mass arrests under Sheriff Jim Clark"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopedia of Alabama: Selma to Montgomery March", url: "https://encyclopediaofalabama.org/article/selma-to-montgomery-march/", quote: "culminating in mass arrests by authorities under the direction of Sheriff James G. Clark, Jr."}
+      - {title: "Stanford King Institute: Selma to Montgomery March", url: "https://kinginstitute.stanford.edu/selma-montgomery-march", quote: "The campaign in Selma and nearby Marion, Alabama, progressed with mass arrests but little violence for the first month"}
+    note: "King Institute also names 'local law enforcement under Sheriff Jim Clark'."
+  - card: civil-rights-act-1964
+    fact: "(unledgered) Opening line: the two laws outlawed segregation in public life and tore down the legal barriers to the Black vote"
+    verdict: corrected
+    sources:
+      - {title: "US House of Representatives, History, Art & Archives: The Civil Rights Act of 1964", url: "https://history.house.gov/Historical-Highlights/1951-2000/The-Civil-Rights-Act-of-1964/", quote: "prohibited discrimination in public accommodations"}
+      - {title: "Stanford King Institute: Voting Rights Act of 1965", url: "https://kinginstitute.stanford.edu/voting-rights-act-1965", quote: "abolished literacy tests and poll taxes designed to disenfranchise African American voters"}
+    note: "Original 'ended legal segregation and legal disfranchisement' overstated; reworded. NARA milestone pages agree."
+  - card: civil-rights-act-1964
+    fact: "(unledgered) The ballot was still blocked by literacy tests and intimidation"
+    verdict: confirmed
+    sources:
+      - {title: "National Archives: Voting Rights Act (1965)", url: "https://www.archives.gov/milestone-documents/voting-rights-act", quote: "African Americans in the South faced tremendous obstacles to voting, including poll taxes, literacy tests, and other bureaucratic restrictions to deny them the right to vote. They also risked harassment, intimidation, economic reprisals"}
+      - {title: "Stanford King Institute: Voting Rights Act of 1965", url: "https://kinginstitute.stanford.edu/voting-rights-act-1965", quote: "In addition to facing arbitrary literacy tests and poll taxes, African Americans in Selma and other southern towns were intimidated, harassed, and assaulted when they sought to register to vote"}
+    note: ""
+  - card: year-of-africa-1960
+    fact: "(unledgered) The lyrics name the parties as though they were united"
+    verdict: confirmed
+    sources:
+      - {title: "Royal Museum for Central Africa: Round Table / Indépendance Cha Cha", url: "https://independance.africamuseum.be/en/node/220", quote: "ASSORECO and ABAKO agree as though they're the same man CONAKAT and CARTEL are united in a common front"}
+      - {title: "Katherine Everett, Emily Hardick, Damarius Johnson, Origins (Ohio State University): The Year of Africa", url: "https://origins.osu.edu/article/year-of-africa-1960-rumba-pan-africanism-Kariba", quote: "the song narrates the 1960 Round Table Conference on Congolese Independence in Brussels"}
+    note: "Primary text (lyrics) as published by the RMCA."
+  - card: year-of-africa-1960
+    fact: "(unledgered) 'Indépendance Cha Cha' is a Congolese rumba"
+    verdict: confirmed
+    sources:
+      - {title: "Katherine Everett, Emily Hardick, Damarius Johnson, Origins (Ohio State University): The Year of Africa", url: "https://origins.osu.edu/article/year-of-africa-1960-rumba-pan-africanism-Kariba", quote: "the Democratic Republic of the Congo negotiated independence from Belgium to the rhythm of the country’s greatest export: Congolese rumba"}
+      - {title: "Alan Brain, PAM (Pan African Music): The other heroes of the Round Table (2021)", url: "https://pan-african-music.com/en/round-table-independence-cha-cha/", quote: "conquering audiences with the sweet sounds of Congolese rumba"}
+    note: ""
+  - card: ghana-1957
+    fact: "(unledgered) Midnight ceremony in Accra"
+    verdict: confirmed
+    sources:
+      - {title: "Kenneth W. Heger, Prologue (National Archives), Winter 1999", url: "https://www.archives.gov/publications/prologue/1999/winter/us-and-ghana-1957-1966", quote: "At the stroke of midnight, March 6, 1957, Kwame Nkrumah proclaims Ghana's independence"}
+      - {title: "BBC On This Day: 1957, Ghana celebrates independence", url: "http://news.bbc.co.uk/onthisday/hi/dates/stories/march/6/newsid_2515000/2515459.stm", quote: "The Gold Coast Legislative Assembly was prorogued at midnight to cheers from the waiting crowd outside"}
+    note: "Same as ledger #83, BBC added as a further independent source."
