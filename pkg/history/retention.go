@@ -88,8 +88,6 @@ func ParseDuration(s string) (time.Duration, error) {
 	return time.ParseDuration(s)
 }
 
-// latest is the set of records that retention never touches.
-const latest = `SELECT MAX(id) FROM records GROUP BY uid`
 
 // Retain applies the policy: compaction, then age, then version count, then
 // tombstones.
@@ -104,9 +102,13 @@ func (s *SQLStore) Retain(ctx context.Context, p Policy, now time.Time) (RetainS
 			lo = now.Add(-p.Tiers[i+1].After).UnixMilli()
 		}
 		w := t.Window.Milliseconds()
-		rows, err := s.db.QueryContext(ctx, s.q(`DELETE FROM records WHERE verb='changed' AND at>=? AND at<?
- AND id NOT IN (SELECT MAX(id) FROM records WHERE verb='changed' AND at>=? AND at<? GROUP BY uid, at/?)
- AND id NOT IN (`+latest+`) RETURNING uid`), lo, hi, lo, hi, w)
+		// Every change but the newest of its uid in its window. Such a record
+		// always has a newer one, so it is never the latest state. (NOT IN
+		// over large id sets falls back to a quadratic plan in PostgreSQL once
+		// the set outgrows work_mem; an IN over a window function does not.)
+		rows, err := s.db.QueryContext(ctx, s.q(`DELETE FROM records WHERE id IN (
+ SELECT id FROM (SELECT id, ROW_NUMBER() OVER (PARTITION BY uid, at/? ORDER BY id DESC) AS rn
+  FROM records WHERE verb='changed' AND at>=? AND at<?) w WHERE rn > 1) RETURNING uid`), w, lo, hi)
 		if err != nil {
 			return st, fmt.Errorf("compact tier %d: %w", i, err)
 		}
@@ -157,7 +159,7 @@ func (s *SQLStore) Retain(ctx context.Context, p Policy, now time.Time) (RetainS
 	}
 	if p.TombstoneTTL > 0 {
 		st.Tombstones, err = s.exec(ctx, `DELETE FROM records WHERE uid IN (
- SELECT uid FROM records WHERE id IN (`+latest+`) AND verb='died' AND at<?)`, now.Add(-p.TombstoneTTL).UnixMilli())
+ SELECT uid FROM records r WHERE verb='died' AND at<? AND NOT EXISTS (SELECT 1 FROM records n WHERE n.uid=r.uid AND n.id>r.id))`, now.Add(-p.TombstoneTTL).UnixMilli())
 		if err != nil {
 			return st, fmt.Errorf("tombstones: %w", err)
 		}

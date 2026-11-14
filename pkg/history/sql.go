@@ -488,7 +488,7 @@ func (s *SQLStore) Summarize(ctx context.Context, ref Ref) (Summary, error) {
 // Prune forgets records older than the retention, except the last record of
 // each object, so every object keeps at least its obituary.
 func (s *SQLStore) Prune(ctx context.Context, before time.Time) (int64, error) {
-	return s.exec(ctx, `DELETE FROM records WHERE at<? AND id NOT IN (SELECT MAX(id) FROM records GROUP BY uid)`, before.UnixMilli())
+	return s.exec(ctx, `DELETE FROM records WHERE at<? AND EXISTS (SELECT 1 FROM records n WHERE n.uid=records.uid AND n.id>records.id)`, before.UnixMilli())
 }
 
 func (s *SQLStore) exec(ctx context.Context, q string, args ...any) (int64, error) {
