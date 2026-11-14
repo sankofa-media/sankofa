@@ -60,6 +60,7 @@ var (
 	tiers       = flag.String("tiers", "", "retain: compaction tiers")
 	maxVersions = flag.Int("max-versions", 0, "retain: versions per object")
 	shift       = flag.Duration("shift", 0, "retain: pretend now is this much later")
+	vacuum      = flag.Bool("vacuum", false, "retain: vacuum after retention (SQLite VACUUM, PostgreSQL plain VACUUM ANALYZE)")
 	probeName   = flag.String("probe-name", "probe", "probe: config map to write (one per concurrent probe)")
 )
 
@@ -508,14 +509,12 @@ func retain(ctx context.Context) error {
 		return err
 	}
 	took := time.Since(t)
-	if sq, ok := s.(*history.SQLStore); ok && sq.Dialect() == "postgres" {
-		// Plain VACUUM makes freed space reusable; it does not shrink files.
-		// VACUUM FULL is what an operator runs to give space back.
+	if *vacuum {
 		vt := time.Now()
-		if _, err := sq.DB().ExecContext(ctx, `VACUUM FULL records`); err != nil {
+		if err := s.Vacuum(ctx); err != nil {
 			return err
 		}
-		fmt.Printf("retain vacuum-full took=%s\n", time.Since(vt).Round(time.Millisecond))
+		fmt.Printf("retain vacuum took=%s\n", time.Since(vt).Round(time.Millisecond))
 	}
 	after, err := s.Stats(ctx)
 	if err != nil {

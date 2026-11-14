@@ -58,7 +58,7 @@ type options struct {
 	leaderElect                                                                    bool
 	leaseName, leaseNamespace                                                      string
 	policy                                                                         history.Policy
-	retainEvery                                                                    time.Duration
+	retainEvery, vacuumEvery                                                       time.Duration
 	scope                                                                          history.Scope
 }
 
@@ -81,6 +81,7 @@ func main() {
 	flag.DurationVar(&o.policy.TombstoneTTL, "tombstone-ttl", 0, "forget dead objects entirely this long after their death (0: never)")
 	flag.StringVar(&compact, "compact", "", `compaction tiers AFTER:WINDOW, e.g. "24h:1h,168h:24h" (every change for a day, hourly for a week, daily after)`)
 	flag.DurationVar(&o.retainEvery, "retain-every", time.Hour, "how often to apply retention and compaction")
+	flag.DurationVar(&o.vacuumEvery, "vacuum-every", -1, "how often to vacuum the store after retention (default: weekly for SQLite, never for PostgreSQL, whose autovacuum does it; 0 disables)")
 	flag.StringVar(&namespaces, "namespaces", "", "remember only these namespaces (comma-separated; cluster-scoped objects are always kept)")
 	flag.StringVar(&excludeNS, "exclude-namespaces", "", "never remember these namespaces")
 	flag.StringVar(&excludeRes, "exclude-resources", "", "never remember these resources, e.g. pods,replicasets.apps")
@@ -103,6 +104,12 @@ func main() {
 		os.Exit(2)
 	}
 	o.policy.Tiers = tiers
+	if o.vacuumEvery < 0 {
+		o.vacuumEvery = 0
+		if o.store == "sqlite" || o.store == "" {
+			o.vacuumEvery = 7 * 24 * time.Hour
+		}
+	}
 	if o.dsn == "" {
 		o.dsn = os.Getenv("GRIOT_DSN")
 	}
@@ -198,7 +205,7 @@ func run(ctx context.Context, log *slog.Logger, o options) error {
 	}
 	record := func(ctx context.Context) {
 		m.leader.Store(true)
-		go retain(ctx, log, store, o.policy, o.retainEvery, m)
+		go retain(ctx, log, store, o.policy, o.retainEvery, o.vacuumEvery, m)
 		if err := rec.Run(ctx, 2*time.Minute); err != nil {
 			log.Error("recorder", "err", err)
 		}

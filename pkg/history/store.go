@@ -118,6 +118,11 @@ type Store interface {
 	Prune(ctx context.Context, before time.Time) (int64, error)
 	// Retain applies a retention policy and compaction.
 	Retain(ctx context.Context, p Policy, now time.Time) (RetainStats, error)
+	// Vacuum gives space freed by retention back: SQLite rebuilds its file
+	// (VACUUM; it needs free disk as large as the store and blocks writes
+	// while it runs), PostgreSQL runs a plain VACUUM ANALYZE (no lock against
+	// writes; space is reused, not returned to the file system).
+	Vacuum(ctx context.Context) error
 	// Stats reports counts and size.
 	Stats(ctx context.Context) (Stats, error)
 	Close() error

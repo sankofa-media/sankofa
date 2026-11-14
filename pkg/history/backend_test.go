@@ -244,6 +244,14 @@ func TestCompaction(t *testing.T) {
 			if again.Compacted != 0 {
 				t.Fatalf("compaction must be idempotent, forgot %d more", again.Compacted)
 			}
+			before, _ := s.Stats(ctx)
+			if err := s.Vacuum(ctx); err != nil {
+				t.Fatal(err)
+			}
+			after, _ := s.Stats(ctx)
+			if name == "sqlite" && after.Bytes >= before.Bytes {
+				t.Fatalf("vacuum did not shrink the file: %d -> %d", before.Bytes, after.Bytes)
+			}
 		})
 	}
 }

@@ -144,3 +144,13 @@ func (s *SQLStore) Retain(ctx context.Context, p Policy, now time.Time) (RetainS
 	}
 	return st, nil
 }
+
+// Vacuum gives space freed by retention back to the store.
+func (s *SQLStore) Vacuum(ctx context.Context) error {
+	if s.d.name == "sqlite" {
+		_, err := s.db.ExecContext(ctx, `VACUUM`)
+		return err
+	}
+	_, err := s.db.ExecContext(ctx, `VACUUM (ANALYZE) records`)
+	return err
+}
