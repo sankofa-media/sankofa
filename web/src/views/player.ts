@@ -4,7 +4,7 @@
 // starting it stops whatever sounds, and starting anything else unloads it
 // back to its facade.
 import type { Recording } from '../lib/listen';
-import { embedUrl, posterUrl } from '../lib/listen';
+import { embedUrl, noteFor, posterUrl } from '../lib/listen';
 import { h } from '../lib/dom';
 import { pick } from '../lib/i18n';
 import { adopt, claim, playing, release } from '../lib/sound';
@@ -44,7 +44,7 @@ export function listenBlock(r: Recording, opts: ListenOpts = {}): HTMLElement {
     { 'data-source': r.source },
     heading ? h('div.lb-head', {}, heading) : null,
     stage,
-    h('figcaption', {}, r.note ? h('span.lb-note', { lang: 'en' }, r.note) : h('span.lb-note', {}, r.title), sourceLine(r) ? h('small.lb-src', {}, sourceLine(r)) : null),
+    h('figcaption', {}, r.note ? h('span.lb-note', { lang: noteFor(r).lang }, noteFor(r).text) : h('span.lb-note', {}, r.title), sourceLine(r) ? h('small.lb-src', {}, sourceLine(r)) : null),
     opts.after ?? null,
   );
   const id = `player-${++made}`;
