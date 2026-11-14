@@ -61,6 +61,7 @@ func contentCmd() *cobra.Command {
 			doc := Export(s)
 			if rs, err := roots.LoadDir(filepath.Join(args[0], "..", "roots")); err == nil {
 				doc["roots"] = ExportRoots(rs)
+				doc["rootsStyles"] = rs.Styles
 				doc["rootsElements"] = rs.Elements
 				doc["rootsCardLinks"] = rs.CardLinks
 				doc["rootsLines"] = rs.Lines
@@ -361,7 +362,11 @@ func lintChapterTranslation(dir, name, original string, bad func(string, ...any)
 // ExportedArtist is an artist with every resolved chain to the museum.
 type ExportedArtist struct {
 	*roots.Artist
-	Paths [][]string `json:"paths"` // each path: artist ids then the final card:<id>
+	// Each path: the artist id, then artist ids and "style:<id>" stations,
+	// then the final "card:<id>". Paths made only of career-scope links
+	// come first; MainPaths counts them.
+	Paths     [][]string `json:"paths"`
+	MainPaths int        `json:"mainPaths"`
 }
 
 // ExportRoots prepares roots for the museum.
@@ -369,7 +374,7 @@ func ExportRoots(rs *roots.Set) []ExportedArtist {
 	out := []ExportedArtist{}
 	for _, id := range rs.Order {
 		ea := ExportedArtist{Artist: rs.ByID[id], Paths: [][]string{}}
-		ps, _ := rs.Paths(id, 8)
+		ps, _ := rs.Paths(id, 12)
 		for _, p := range ps {
 			var ids []string
 			for _, st := range p {
@@ -377,6 +382,9 @@ func ExportRoots(rs *roots.Set) []ExportedArtist {
 			}
 			ids = append(ids, p[len(p)-1].Link.To)
 			ea.Paths = append(ea.Paths, ids)
+			if roots.Career(p) {
+				ea.MainPaths++
+			}
 		}
 		out = append(out, ea)
 	}

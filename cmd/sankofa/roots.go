@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"path/filepath"
+	"slices"
 	"strings"
 
 	"github.com/spf13/cobra"
@@ -20,12 +21,13 @@ func loadRoots(cmd *cobra.Command) (*roots.Set, error) {
 }
 
 func rootsCmd() *cobra.Command {
-	return &cobra.Command{
+	c := &cobra.Command{
 		Use:   "roots [ARTIST]",
 		Short: "Trace how an artist stands on Black traditions, link by sourced link",
 		Long: `Pick an artist or a band — Metallica, Oasis, Taylor Swift — and follow the
-documented chain of influence back to the museum: to the blues, rock'n'roll,
-reggae, the banjo. Every link names its sources. Without an argument, lists
+documented chain of stylistic influence, through the artists they listened
+to and the styles they work in, back to the museum: to the blues,
+rock'n'roll, reggae. Every link names its evidence. Without an argument, lists
 everyone in the collection.`,
 		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
@@ -38,6 +40,17 @@ everyone in the collection.`,
 				return err
 			}
 			w := cmd.OutOrStdout()
+			if check, _ := cmd.Flags().GetBool("check"); check {
+				errs := rs.Validate(cards)
+				for _, e := range errs {
+					fmt.Fprintln(w, e)
+				}
+				if len(errs) > 0 {
+					return fmt.Errorf("%d roots problems", len(errs))
+				}
+				fmt.Fprintf(w, "%d artists, %d styles OK\n", len(rs.Order), len(rs.Styles))
+				return nil
+			}
 			name := func(a *roots.Artist) string {
 				if lang == "ru" && a.NameRU != "" {
 					return a.NameRU
@@ -60,68 +73,119 @@ everyone in the collection.`,
 				return fmt.Errorf("%s: %q", tr("no such artist in the collection"), args[0])
 			}
 			a := found[0]
-			paths, err := rs.Paths(a.ID, 8)
+			paths, err := rs.Paths(a.ID, 12)
 			if err != nil {
 				return err
 			}
 			osc := isTerminal(w)
+			ru := lang == "ru"
+			pick := func(en, r string) string {
+				if ru && r != "" {
+					return r
+				}
+				return en
+			}
+			node := func(ref string) string {
+				if id, ok := strings.CutPrefix(ref, "style:"); ok {
+					if st := rs.Style(id); st != nil {
+						return pick(st.Name, st.NameRU) + " (" + tr("style") + ")"
+					}
+					return ref
+				}
+				if id, ok := strings.CutPrefix(ref, "card:"); ok {
+					if c := cards.ByID[id]; c != nil {
+						return atlas.Hyperlink(osc, cardPoint(c).URL(), stLink.Render(c.Title))
+					}
+					return id
+				}
+				if x := rs.ByID[strings.TrimPrefix(ref, "root:")]; x != nil {
+					return name(x)
+				}
+				return ref
+			}
+			say := func(indent, text string) {
+				for _, line := range strings.Split(wrap(text, 74-len(indent)), "\n") {
+					fmt.Fprintf(w, "%s   %s\n", indent, line)
+				}
+			}
+			groups := []struct {
+				label string
+				types []string
+			}{
+				{"In their own words", []string{"testimony"}},
+				{"What they listened to", []string{"listening"}},
+				{"What critics heard", []string{"critics"}},
+				{"In the music", []string{"analysis"}},
+			}
 			fmt.Fprintf(w, "%s\n\n", stTitle.Render(name(a)))
 			for i, p := range paths {
 				if i > 0 {
 					fmt.Fprintln(w)
 				}
 				for _, st := range p {
-					claim := st.Link.Claim
-					if lang == "ru" && st.Link.ClaimRU != "" {
-						claim = st.Link.ClaimRU
-					}
-					from := name(rs.ByID[st.From])
-					kind, ref, _ := strings.Cut(st.Link.To, ":")
-					to := ref
-					if kind == "root" {
-						to = name(rs.ByID[ref])
-					} else if c := cards.ByID[ref]; c != nil {
-						u := cardPoint(c).URL()
-						to = atlas.Hyperlink(osc, u, stLink.Render(c.Title))
-					}
+					l := st.Link
 					indent := strings.Repeat("   ", st.Depth)
-					fmt.Fprintf(w, "%s%s → %s\n", indent, from, to)
-					for _, line := range strings.Split(wrap(claim, 74-len(indent)), "\n") {
-						fmt.Fprintf(w, "%s   %s\n", indent, stDim.Render(line))
+					head := fmt.Sprintf("%s%s → %s", indent, node(st.From), node(l.To))
+					if l.Scope == "period" {
+						head += "  " + stMeta.Render("["+tr("Period")+": "+l.Period+"]")
 					}
-					how := st.Link.How
-					if lang == "ru" && st.Link.HowRU != "" {
-						how = st.Link.HowRU
-					}
-					if how != "" {
-						for _, line := range strings.Split(wrap(how, 74-len(indent)), "\n") {
-							fmt.Fprintf(w, "%s   %s\n", indent, line)
+					fmt.Fprintln(w, head)
+					say(indent, pick(l.How, l.HowRU))
+					var undoc []string
+					for _, d := range roots.Dimensions {
+						if !slices.Contains(l.Dimensions, d) {
+							undoc = append(undoc, d)
 						}
 					}
-					if len(st.Link.Carries) > 0 {
+					dims := stMeta.Render(tr("Documented")+":") + " " + strings.Join(l.Dimensions, ", ")
+					if len(undoc) > 0 {
+						dims += " · " + stMeta.Render(tr("Not documented")+":") + " " + strings.Join(undoc, ", ")
+					}
+					fmt.Fprintf(w, "%s   %s\n", indent, dims)
+					if len(l.Carries) > 0 {
 						var els []string
-						for _, id := range st.Link.Carries {
-							name := id
+						for _, id := range l.Carries {
+							n := id
 							if e := rs.Element(id); e != nil {
-								name = e.Name
-								if lang == "ru" && e.NameRU != "" {
-									name = e.NameRU
-								}
+								n = pick(e.Name, e.NameRU)
 							}
-							els = append(els, name)
+							els = append(els, n)
 						}
 						fmt.Fprintf(w, "%s   %s %s\n", indent, stMeta.Render(tr("Carries")+":"), strings.Join(els, ", "))
 					}
-					var srcs []string
-					for _, s := range st.Link.Sources {
-						srcs = append(srcs, atlas.Hyperlink(osc, s.URL, s.Title))
+					for _, g := range groups {
+						var items []roots.Evidence
+						for _, ev := range l.Evidence {
+							if slices.Contains(g.types, ev.Type) {
+								items = append(items, ev)
+							}
+						}
+						if len(items) == 0 {
+							continue
+						}
+						fmt.Fprintf(w, "%s   %s\n", indent, stMeta.Render(tr(g.label)+":"))
+						for _, ev := range items {
+							say(indent+"  ", "· "+pick(ev.Text, ev.TextRU))
+							fmt.Fprintf(w, "%s       %s\n", indent, stDim.Render(atlas.Hyperlink(osc, ev.Source.URL, ev.Source.Title)))
+						}
 					}
-					fmt.Fprintf(w, "%s   %s %s\n", indent, stMeta.Render(tr("Sources")+":"), strings.Join(srcs, "; "))
+					if ex := l.Example; ex != nil {
+						fmt.Fprintf(w, "%s   %s %s\n", indent, stMeta.Render(tr("Example")+":"), ex.Song)
+						say(indent+"  ", pick(ex.Text, ex.TextRU))
+					}
+				}
+			}
+			if len(a.Notes) > 0 {
+				fmt.Fprintf(w, "\n%s\n", stMeta.Render(tr("Period notes")+":"))
+				for _, n := range a.Notes {
+					say("", fmt.Sprintf("%s · %s (%s): %s", n.Period, n.Who, n.Role, pick(n.What, n.WhatRU)))
 				}
 			}
 			return nil
 		},
 	}
+	c.Flags().Bool("check", false, "validate the roots collection and list every problem")
+	return c
 }
 
 type cardYears struct{ y []int }

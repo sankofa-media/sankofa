@@ -17,35 +17,68 @@ import (
 	"github.com/tym83/sankofa/pkg/card"
 )
 
-// Source backs one link.
+// Source backs a statement: where it was read and the passage itself.
 type Source struct {
 	Title string `json:"title"`
 	URL   string `json:"url"`
+	Quote string `json:"quote,omitempty"`
 }
 
-// Link is one documented step of influence. To is either another artist of
-// the collection ("root:<id>") or a museum card ("card:<id>").
+// Evidence is one typed piece of proof for a link: the artist's own words
+// (testimony), what they listened to and admired (listening), what critics
+// heard (critics) or an analysis of the music (analysis).
+type Evidence struct {
+	Type string `json:"type"`
+	// Dimensions of style this item documents (see Dimensions).
+	Dimensions []string `json:"dimensions,omitempty"`
+	Text       string   `json:"text"`
+	TextRU     string   `json:"textRu,omitempty"`
+	Source     Source   `json:"source"`
+}
+
+// Example is an optional small illustration of a link: one song, never the
+// basis of the route.
+type Example struct {
+	Song   string `json:"song"`
+	Text   string `json:"text"`
+	TextRU string `json:"textRu,omitempty"`
+	Source Source `json:"source"`
+}
+
+// Note records someone other than the artist (a producer, an engineer, a
+// session player) who shaped one period of the artist's sound. A note is
+// never a step of a route.
+type Note struct {
+	Period string `json:"period"`
+	Who    string `json:"who"`
+	Role   string `json:"role"`
+	What   string `json:"what"`
+	WhatRU string `json:"whatRu,omitempty"`
+	Source Source `json:"source"`
+}
+
+// Link is one documented step of stylistic influence. To is another artist
+// of the collection ("root:<id>"), a style ("style:<id>") or a museum card
+// ("card:<id>").
 type Link struct {
 	To string `json:"to"`
-	// Kind of borrowing: influence (named as an influence), cover (recorded
-	// their song), sample (used a recording), interpolation (replayed part of
-	// a composition), member (played in the band),
-	// producer, scene (came out of the same scene), teacher, collaboration.
-	Kind string `json:"kind,omitempty"`
-	// What exactly was borrowed, for covers, samples and interpolations: the song or the
-	// recording and what of it (beat, handclaps, a riff).
-	What    string   `json:"what,omitempty"`
-	WhatRU  string   `json:"whatRu,omitempty"`
-	Claim   string   `json:"claim"`
-	Sources []Source `json:"sources"`
-	// Russian translation of the claim.
-	ClaimRU string `json:"claimRu,omitempty"`
-	// Carries lists the musical elements (elements.yaml ids) this step
-	// actually transmitted; empty when the evidence shows no element.
-	Carries []string `json:"carries,omitempty"`
-	// How says in one sentence, in systemic terms, what the later artist took.
-	How   string `json:"how,omitempty"`
+	// Kind: influence (the artist listened to and drew on the target), style
+	// (works in that style or card genre), scene, teacher.
+	Kind string `json:"kind"`
+	// Scope: career (formation of the style) or period (a named period or
+	// album, in Period). Only career links make a main route.
+	Scope  string `json:"scope"`
+	Period string `json:"period,omitempty"`
+	// How says in style terms what passed on.
+	How   string `json:"how"`
 	HowRU string `json:"howRu,omitempty"`
+	// Carries lists the musical elements (elements.yaml ids) this step
+	// transmitted.
+	Carries []string `json:"carries,omitempty"`
+	// Dimensions of style this link documents; the rest are not documented.
+	Dimensions []string   `json:"dimensions"`
+	Evidence   []Evidence `json:"evidence"`
+	Example    *Example   `json:"example,omitempty"`
 }
 
 // Artist is someone whose roots we trace.
@@ -59,14 +92,42 @@ type Artist struct {
 	PlaceRU string     `json:"placeRu,omitempty"`
 	Genre   string     `json:"genre"`
 	GenreRU string     `json:"genreRu,omitempty"`
-	// Story tells in two or three sentences how the artist grew out of the
-	// tradition, built only from the facts of its own links.
+	// Story tells in two or three sentences how the artist's style grew out
+	// of the tradition, built only from the facts of its own links.
 	Story   string `json:"story,omitempty"`
 	StoryRU string `json:"storyRu,omitempty"`
 	Links   []Link `json:"links"`
+	Notes   []Note `json:"notes,omitempty"`
 }
 
-var validKinds = map[string]bool{"influence": true, "cover": true, "sample": true, "interpolation": true, "member": true, "producer": true, "scene": true, "teacher": true, "collaboration": true}
+// Trait is a short stylistic feature of a style.
+type Trait struct {
+	EN string `json:"en"`
+	RU string `json:"ru,omitempty"`
+}
+
+// Style is a style artists work in that is not a museum card: British beat,
+// soul, grunge. It grows out of other styles or cards through From.
+type Style struct {
+	ID      string   `json:"id"`
+	Name    string   `json:"name"`
+	NameRU  string   `json:"nameRu,omitempty"`
+	Years   []int    `json:"years"`
+	Place   string   `json:"place"`
+	PlaceRU string   `json:"placeRu,omitempty"`
+	Traits  []Trait  `json:"traits"`
+	Sources []Source `json:"sources"`
+	From    []Link   `json:"from"`
+}
+
+// Evidence types, dimensions, link kinds, scopes and note roles.
+var (
+	EvidenceTypes = []string{"testimony", "listening", "critics", "analysis"}
+	Dimensions    = []string{"rhythm", "harmony-form", "melody-vocal", "sound", "performance", "image"}
+	validKinds    = []string{"influence", "style", "scene", "teacher"}
+	validScopes   = []string{"career", "period"}
+	noteRoles     = []string{"producer", "engineer", "session", "collaborator", "label"}
+)
 
 // Quote is a source with the passage that backs a statement.
 type Quote struct {
@@ -122,6 +183,7 @@ type Line struct {
 type Set struct {
 	ByID      map[string]*Artist
 	Order     []string
+	Styles    []Style
 	Elements  []Element
 	CardLinks []CardLink
 	Lines     []Line
@@ -129,6 +191,7 @@ type Set struct {
 
 // Files of the collection that are not artists.
 const (
+	StylesFile    = "styles.yaml"
 	ElementsFile  = "elements.yaml"
 	CardLinksFile = "card-links.yaml"
 	LinesFile     = "lines.yaml"
@@ -139,6 +202,16 @@ func (s *Set) Element(id string) *Element {
 	for i := range s.Elements {
 		if s.Elements[i].ID == id {
 			return &s.Elements[i]
+		}
+	}
+	return nil
+}
+
+// Style returns the style with the id, or nil.
+func (s *Set) Style(id string) *Style {
+	for i := range s.Styles {
+		if s.Styles[i].ID == id {
+			return &s.Styles[i]
 		}
 	}
 	return nil
@@ -166,6 +239,15 @@ func LoadFS(fsys fs.FS) (*Set, error) {
 			return err
 		}
 		switch path.Base(p) {
+		case StylesFile:
+			var doc struct {
+				Styles []Style `json:"styles"`
+			}
+			if err := yaml.UnmarshalStrict(data, &doc); err != nil {
+				return fmt.Errorf("%s: %w", p, err)
+			}
+			s.Styles = doc.Styles
+			return nil
 		case ElementsFile:
 			var doc struct {
 				Elements []Element `json:"elements"`
@@ -220,7 +302,8 @@ func LoadDir(dir string) (*Set, error) {
 	return LoadFS(os.DirFS(dir))
 }
 
-// Validate checks sources, references and that every artist reaches a card.
+// Validate checks evidence, references, cycles and that every artist and
+// style reaches a museum card through career-scope steps.
 func (s *Set) Validate(cards *card.Set) []error {
 	var errs []error
 	for _, id := range s.Order {
@@ -233,50 +316,241 @@ func (s *Set) Validate(cards *card.Set) []error {
 			bad("needs at least one link")
 		}
 		for i, l := range a.Links {
-			if l.Kind != "" && !validKinds[l.Kind] {
-				bad("link %d: unknown kind %q", i, l.Kind)
-			}
-			if (l.Kind == "sample" || l.Kind == "cover" || l.Kind == "interpolation") && strings.TrimSpace(l.What) == "" {
-				bad("link %d: a %s must say what was taken", i, l.Kind)
-			}
-			if strings.TrimSpace(l.Claim) == "" {
-				bad("link %d has no claim", i)
-			}
-			if len(l.Sources) < 2 {
-				bad("link %d to %s has %d sources, want at least 2", i, l.To, len(l.Sources))
-			}
-			for _, src := range l.Sources {
-				if src.Title == "" || !strings.HasPrefix(src.URL, "http") {
-					bad("link %d: source needs a title and a URL", i)
-				}
-			}
-			for _, e := range l.Carries {
-				if s.Element(e) == nil {
-					bad("link %d: unknown element %q", i, e)
-				}
-			}
-			if len(l.Carries) > 0 && strings.TrimSpace(l.How) == "" {
-				bad("link %d: carries elements but has no how", i)
-			}
-			kind, ref, _ := strings.Cut(l.To, ":")
-			switch kind {
-			case "card":
-				if cards.ByID[ref] == nil {
-					bad("link %d: unknown card %q", i, ref)
-				}
-			case "root":
-				if s.ByID[ref] == nil {
-					bad("link %d: unknown artist %q", i, ref)
-				}
-			default:
-				bad("link %d: to must be card:<id> or root:<id>", i)
+			for _, e := range s.checkLink(l, cards, false) {
+				bad("link %d to %s: %s", i, l.To, e)
 			}
 		}
-		if _, err := s.Paths(id, 8); err != nil {
-			bad("%v", err)
+		for i, n := range a.Notes {
+			if strings.TrimSpace(n.Period) == "" || strings.TrimSpace(n.Who) == "" || strings.TrimSpace(n.What) == "" || !contains(noteRoles, n.Role) {
+				bad("note %d needs a period, who, a role (%s) and what", i, strings.Join(noteRoles, ", "))
+			}
+			if !quoted(n.Source) {
+				bad("note %d: source needs a title, a URL and a quote", i)
+			}
+		}
+	}
+	seen := map[string]bool{}
+	for _, st := range s.Styles {
+		bad := func(f string, x ...any) { errs = append(errs, fmt.Errorf("style %s: %s", st.ID, fmt.Sprintf(f, x...))) }
+		if st.ID == "" || seen[st.ID] {
+			bad("empty or duplicate id")
+		}
+		seen[st.ID] = true
+		if st.Name == "" || len(st.Years) == 0 || st.Place == "" {
+			bad("needs name, years and place")
+		}
+		if len(st.Traits) < 3 || len(st.Traits) > 5 {
+			bad("has %d traits, want 3 to 5", len(st.Traits))
+		}
+		for _, t := range st.Traits {
+			if strings.TrimSpace(t.EN) == "" || strings.TrimSpace(t.RU) == "" {
+				bad("a trait needs English and Russian")
+			}
+		}
+		if len(st.Sources) < 2 {
+			bad("has %d sources, want at least 2", len(st.Sources))
+		}
+		for _, src := range st.Sources {
+			if !quoted(src) {
+				bad("source needs a title, a URL and a quote")
+			}
+		}
+		if len(st.From) == 0 {
+			bad("needs at least one from step")
+		}
+		for i, l := range st.From {
+			for _, e := range s.checkLink(l, cards, true) {
+				bad("from %d to %s: %s", i, l.To, e)
+			}
+		}
+	}
+	if cyc := s.cycle(); cyc != nil {
+		errs = append(errs, fmt.Errorf("roots: cycle %s", strings.Join(cyc, " → ")))
+		return append(errs, s.validateLayer(cards)...)
+	}
+	for _, id := range s.Order {
+		if _, err := s.Paths(id, 12); err != nil {
+			errs = append(errs, fmt.Errorf("roots %s: %v", id, err))
+		} else if _, err := s.MainPaths(id, 12); err != nil {
+			errs = append(errs, fmt.Errorf("roots %s: %v", id, err))
+		}
+	}
+	for _, st := range s.Styles {
+		if _, err := s.MainPaths("style:"+st.ID, 12); err != nil {
+			errs = append(errs, fmt.Errorf("style %s: %v", st.ID, err))
 		}
 	}
 	return append(errs, s.validateLayer(cards)...)
+}
+
+func quoted(src Source) bool {
+	return src.Title != "" && strings.HasPrefix(src.URL, "http") && strings.TrimSpace(src.Quote) != ""
+}
+
+func host(u string) string {
+	u = strings.TrimPrefix(strings.TrimPrefix(u, "https://"), "http://")
+	h, _, _ := strings.Cut(u, "/")
+	return strings.TrimPrefix(strings.ToLower(h), "www.")
+}
+
+// checkLink validates one link of an artist, or one from step of a style
+// (which may lead only to styles and cards).
+func (s *Set) checkLink(l Link, cards *card.Set, ofStyle bool) []string {
+	var out []string
+	bad := func(f string, x ...any) { out = append(out, fmt.Sprintf(f, x...)) }
+	if !contains(validKinds, l.Kind) {
+		bad("kind %q, want one of %s", l.Kind, strings.Join(validKinds, ", "))
+	}
+	if !contains(validScopes, l.Scope) {
+		bad("scope %q, want career or period", l.Scope)
+	}
+	if l.Scope == "period" && strings.TrimSpace(l.Period) == "" {
+		bad("a period link must name its period")
+	}
+	if strings.TrimSpace(l.How) == "" || strings.TrimSpace(l.HowRU) == "" {
+		bad("needs how and howRu")
+	}
+	for _, e := range l.Carries {
+		if s.Element(e) == nil {
+			bad("unknown element %q", e)
+		}
+	}
+	if len(l.Dimensions) == 0 {
+		bad("documents no dimension")
+	}
+	tagged := map[string]bool{}
+	hosts := map[string]bool{}
+	if len(l.Evidence) < 2 {
+		bad("has %d evidence items, want at least 2", len(l.Evidence))
+	}
+	for j, ev := range l.Evidence {
+		if !contains(EvidenceTypes, ev.Type) {
+			bad("evidence %d: type %q, want one of %s", j, ev.Type, strings.Join(EvidenceTypes, ", "))
+		}
+		if strings.TrimSpace(ev.Text) == "" || strings.TrimSpace(ev.TextRU) == "" {
+			bad("evidence %d needs text and textRu", j)
+		}
+		if !quoted(ev.Source) {
+			bad("evidence %d: source needs a title, a URL and a quote", j)
+		}
+		for _, d := range ev.Dimensions {
+			if !contains(Dimensions, d) {
+				bad("evidence %d: unknown dimension %q", j, d)
+			}
+			tagged[d] = true
+		}
+		hosts[host(ev.Source.URL)] = true
+	}
+	if len(l.Evidence) >= 2 && len(hosts) < 2 {
+		bad("evidence comes from one website; want at least two independent ones")
+	}
+	for _, d := range l.Dimensions {
+		if !contains(Dimensions, d) {
+			bad("unknown dimension %q", d)
+		} else if !tagged[d] {
+			bad("dimension %q is not backed by any evidence item", d)
+		}
+	}
+	if ex := l.Example; ex != nil {
+		if strings.TrimSpace(ex.Song) == "" || strings.TrimSpace(ex.Text) == "" || !quoted(ex.Source) {
+			bad("an example needs a song, text and a quoted source")
+		}
+	}
+	kind, ref, _ := strings.Cut(l.To, ":")
+	switch {
+	case kind == "card":
+		if cards.ByID[ref] == nil {
+			bad("unknown card %q", ref)
+		}
+	case kind == "style":
+		if s.Style(ref) == nil {
+			bad("unknown style %q", ref)
+		}
+	case kind == "root" && !ofStyle:
+		if s.ByID[ref] == nil {
+			bad("unknown artist %q", ref)
+		}
+	default:
+		if ofStyle {
+			bad("a style grows from style:<id> or card:<id>")
+		} else {
+			bad("to must be root:<id>, style:<id> or card:<id>")
+		}
+	}
+	return out
+}
+
+// node is an artist id or "style:<id>".
+func (s *Set) linksOf(node string) []Link {
+	if id, ok := strings.CutPrefix(node, "style:"); ok {
+		if st := s.Style(id); st != nil {
+			return st.From
+		}
+		return nil
+	}
+	if a := s.ByID[node]; a != nil {
+		return a.Links
+	}
+	return nil
+}
+
+func next(l Link) (string, bool) {
+	kind, ref, _ := strings.Cut(l.To, ":")
+	switch kind {
+	case "root":
+		return ref, true
+	case "style":
+		return l.To, true
+	}
+	return "", false
+}
+
+// cycle returns one cycle among artists and styles, or nil.
+func (s *Set) cycle() []string {
+	const (
+		white = iota
+		grey
+		black
+	)
+	color := map[string]int{}
+	var stack, found []string
+	var visit func(n string) bool
+	visit = func(n string) bool {
+		color[n] = grey
+		stack = append(stack, n)
+		for _, l := range s.linksOf(n) {
+			m, ok := next(l)
+			if !ok {
+				continue
+			}
+			switch color[m] {
+			case grey:
+				for i, x := range stack {
+					if x == m {
+						found = append(append([]string(nil), stack[i:]...), m)
+					}
+				}
+				return true
+			case white:
+				if visit(m) {
+					return true
+				}
+			}
+		}
+		stack = stack[:len(stack)-1]
+		color[n] = black
+		return false
+	}
+	nodes := append([]string(nil), s.Order...)
+	for _, st := range s.Styles {
+		nodes = append(nodes, "style:"+st.ID)
+	}
+	for _, n := range nodes {
+		if color[n] == white && visit(n) {
+			return found
+		}
+	}
+	return nil
 }
 
 // validateLayer checks elements, card links and lines.
@@ -372,14 +646,24 @@ func contains(xs []string, x string) bool {
 
 // Step is one hop of a resolved path.
 type Step struct {
-	From  string // artist id
+	From  string // artist id or "style:<id>"
 	Link  Link
 	Depth int
 }
 
-// Paths returns every chain from the artist to museum cards (depth-first,
-// each artist visited once per chain). An artist that cannot reach a card is
-// an error.
+// Career reports whether every step of the path is a career-scope link.
+func Career(p []Step) bool {
+	for _, st := range p {
+		if st.Link.Scope != "career" {
+			return false
+		}
+	}
+	return true
+}
+
+// Paths returns every chain from an artist (or "style:<id>") to museum
+// cards, depth-first, each node visited once per chain; chains made only of
+// career links come first. A node that cannot reach a card is an error.
 func (s *Set) Paths(id string, maxDepth int) ([][]Step, error) {
 	var out [][]Step
 	var walk func(cur string, chain []Step, seen map[string]bool) error
@@ -387,16 +671,15 @@ func (s *Set) Paths(id string, maxDepth int) ([][]Step, error) {
 		if len(chain) > maxDepth {
 			return fmt.Errorf("chain from %s is longer than %d", id, maxDepth)
 		}
-		a := s.ByID[cur]
-		if a == nil {
+		if !strings.HasPrefix(cur, "style:") && s.ByID[cur] == nil {
 			return fmt.Errorf("unknown artist %q", cur)
 		}
-		for _, l := range a.Links {
+		for _, l := range s.linksOf(cur) {
 			st := Step{From: cur, Link: l, Depth: len(chain)}
-			next := append(append([]Step(nil), chain...), st)
-			kind, ref, _ := strings.Cut(l.To, ":")
-			if kind == "card" {
-				out = append(out, next)
+			nextChain := append(append([]Step(nil), chain...), st)
+			ref, ok := next(l)
+			if !ok {
+				out = append(out, nextChain)
 				continue
 			}
 			if seen[ref] {
@@ -406,7 +689,7 @@ func (s *Set) Paths(id string, maxDepth int) ([][]Step, error) {
 			for k := range seen {
 				seen2[k] = true
 			}
-			if err := walk(ref, next, seen2); err != nil {
+			if err := walk(ref, nextChain, seen2); err != nil {
 				return err
 			}
 		}
@@ -417,6 +700,26 @@ func (s *Set) Paths(id string, maxDepth int) ([][]Step, error) {
 	}
 	if len(out) == 0 {
 		return nil, fmt.Errorf("%s does not reach any museum card", id)
+	}
+	sort.SliceStable(out, func(i, j int) bool { return Career(out[i]) && !Career(out[j]) })
+	return out, nil
+}
+
+// MainPaths returns the chains made only of career-scope links: the routes
+// that may stand for the artist. A period-only influence is never one.
+func (s *Set) MainPaths(id string, maxDepth int) ([][]Step, error) {
+	ps, err := s.Paths(id, maxDepth)
+	if err != nil {
+		return nil, err
+	}
+	var out [][]Step
+	for _, p := range ps {
+		if Career(p) {
+			out = append(out, p)
+		}
+	}
+	if len(out) == 0 {
+		return nil, fmt.Errorf("%s reaches a museum card only through period-scope links", id)
 	}
 	return out, nil
 }
