@@ -4,25 +4,88 @@
 export interface RootSource {
   title: string;
   url: string;
+  /** the passage that backs the statement */
+  quote?: string;
 }
 
-export type LinkKind = 'influence' | 'cover' | 'sample' | 'interpolation' | 'member' | 'producer' | 'scene' | 'teacher' | 'collaboration';
+/** influence: listened to and drew on; style: works in that style or genre. The rest is older data. */
+export type LinkKind = 'influence' | 'style' | 'scene' | 'teacher' | 'cover' | 'sample' | 'interpolation' | 'member' | 'producer' | 'collaboration';
+
+export type EvidenceType = 'testimony' | 'listening' | 'critics' | 'analysis';
+
+/** The sides of a style a link can document. */
+export const DIMENSIONS = ['rhythm', 'harmony-form', 'melody-vocal', 'sound', 'performance', 'image'] as const;
+export type Dimension = (typeof DIMENSIONS)[number];
+
+export const DIMENSION_LABEL: Record<Dimension, { en: string; ru: string }> = {
+  rhythm: { en: 'rhythm', ru: 'ритм' },
+  'harmony-form': { en: 'harmony and form', ru: 'гармония и форма' },
+  'melody-vocal': { en: 'melody and vocal manner', ru: 'мелодия и манера пения' },
+  sound: { en: 'sound and instruments', ru: 'звук и инструменты' },
+  performance: { en: 'performance', ru: 'исполнение' },
+  image: { en: 'attitude and image', ru: 'образ и позиция' },
+};
+
+/** Evidence grouped as the reader sees it. */
+export const EVIDENCE_GROUPS: { types: EvidenceType[]; en: string; ru: string }[] = [
+  { types: ['testimony', 'listening'], en: 'In their own words', ru: 'Своими словами' },
+  { types: ['critics'], en: 'What critics heard', ru: 'Что услышали критики' },
+  { types: ['analysis'], en: 'In the music', ru: 'В самой музыке' },
+];
+
+export interface Evidence {
+  type: EvidenceType;
+  dimensions?: Dimension[];
+  text: string;
+  textRu?: string;
+  source: RootSource;
+}
 
 export interface RootLink {
-  to: string; // root:<id> | card:<id>
-  /** what kind of borrowing (pkg/roots); absent in older data */
+  to: string; // root:<id> | style:<id> | card:<id>
   kind?: LinkKind;
-  /** for covers and samples: which song or recording, and what of it */
-  what?: string;
-  whatRu?: string;
-  claim: string;
-  claimRu?: string;
-  sources: RootSource[];
-  /** musical elements passed on along this link (lib/elements) */
-  carries?: string[];
-  /** what was passed on, in one sentence */
+  /** career: the formation of the style; period: one named period or album */
+  scope?: 'career' | 'period';
+  period?: string;
+  /** what of the style passed on */
   how?: string;
   howRu?: string;
+  /** musical elements passed on along this link (lib/elements) */
+  carries?: string[];
+  /** the sides of the style this link documents; the rest are not documented */
+  dimensions?: Dimension[];
+  evidence?: Evidence[];
+  /** a small illustration, never the basis of the route */
+  example?: { song: string; text: string; textRu?: string; source: RootSource };
+  /** older data */
+  what?: string;
+  whatRu?: string;
+  claim?: string;
+  claimRu?: string;
+  sources?: RootSource[];
+}
+
+/** Someone other than the artist who shaped one period of the sound; never a step of a route. */
+export interface PeriodNote {
+  period: string;
+  who: string;
+  role: string;
+  what: string;
+  whatRu?: string;
+  source: RootSource;
+}
+
+/** A style that is not a museum card (British beat, soul), as exported. */
+export interface Style {
+  id: string;
+  name: string;
+  nameRu?: string;
+  years: number[];
+  place: string;
+  placeRu?: string;
+  traits: { en: string; ru?: string }[];
+  sources: RootSource[];
+  from: RootLink[];
 }
 
 export interface Artist {
@@ -39,8 +102,39 @@ export interface Artist {
   story?: string;
   storyRu?: string;
   links: RootLink[];
-  /** each: artist ids, then the final "card:<id>" */
+  notes?: PeriodNote[];
+  /** each: artist ids and "style:<id>" stations, then the final "card:<id>"; career-only routes first */
   paths: string[][];
+  /** how many of the paths are made only of career links */
+  mainPaths?: number;
+  /** a style station, not an artist */
+  style?: boolean;
+  traits?: Style['traits'];
+}
+
+/** Styles as stations of the routes: keyed "style:<id>", their `from` as links, no paths of their own. */
+export function styleStations(styles: Style[]): Artist[] {
+  return styles.map((st) => ({
+    id: `style:${st.id}`,
+    name: st.name,
+    nameRu: st.nameRu,
+    years: st.years,
+    place: { name: st.place, lat: 0, lon: 0 },
+    placeRu: st.placeRu,
+    genre: 'Style',
+    genreRu: 'стиль',
+    links: st.from,
+    paths: [],
+    style: true,
+    traits: st.traits,
+  }));
+}
+
+/** Every source of a link, once: its evidence first, then older plain sources. */
+export function linkSources(l: RootLink | undefined): RootSource[] {
+  const out: RootSource[] = [];
+  for (const s of [...(l?.evidence ?? []).map((e) => e.source), ...(l?.sources ?? [])]) if (!out.some((o) => o.url === s.url)) out.push(s);
+  return out;
 }
 
 /** Lower case, ё as е, no diacritics, no punctuation: what search compares. */
@@ -76,7 +170,7 @@ export function searchArtists(all: Artist[], query: string, limit = 8): Artist[]
 /** The link an artist uses to reach the next step of a path. */
 export function linkTo(from: Artist | undefined, to: string): RootLink | undefined {
   if (!from) return undefined;
-  const target = to.startsWith('card:') ? to : `root:${to}`;
+  const target = to.startsWith('card:') || to.startsWith('style:') ? to : `root:${to}`;
   return from.links.find((l) => l.to === target);
 }
 
@@ -146,6 +240,7 @@ export function suggestions(all: Artist[], n = 6): Artist[] {
 export const KIND_LABEL: Record<LinkKind, { en: string; ru: string; glyph: string }> = {
   // Neutral nouns, so the label never has to agree with a name in number or gender.
   influence: { en: 'influence', ru: 'влияние', glyph: '❝' },
+  style: { en: 'style', ru: 'стиль', glyph: '◆' },
   cover: { en: 'cover', ru: 'кавер', glyph: '↻' },
   sample: { en: 'sample', ru: 'сэмпл', glyph: '◐' },
   interpolation: { en: 'interpolation', ru: 'интерполяция', glyph: '♪' },
@@ -201,8 +296,8 @@ export function deepest(tree: TreeNode): string[] {
  * The teaser on the landing: artists with the deepest chains first, then the
  * ones whose links name a sample or a cover.
  */
-export function longestRoots(all: Artist[], cards: Map<string, LineageCard>, n = 4): { artist: Artist; chain: string[]; borrowed?: RootLink }[] {
-  const byId = new Map(all.map((a) => [a.id, a]));
+export function longestRoots(all: Artist[], cards: Map<string, LineageCard>, n = 4, stations: Artist[] = []): { artist: Artist; chain: string[]; borrowed?: RootLink }[] {
+  const byId = new Map([...all, ...stations].map((a) => [a.id, a]));
   const rows = all
     .filter((a) => a.paths.length)
     .map((a) => {

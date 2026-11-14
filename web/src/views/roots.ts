@@ -34,7 +34,7 @@ export class Roots {
     private app: App,
     private artists: Artist[],
   ) {
-    this.byId = new Map(artists.map((a) => [a.id, a]));
+    this.byId = new Map([...artists, ...app.styles].map((a) => [a.id, a]));
     this.lineage = new Map(app.set.all().map((c) => [c.id, { id: c.id, roots: c.roots }] as [string, LineageCard]));
     this.input = h('input.r-input', {
       type: 'search',
@@ -62,8 +62,8 @@ export class Roots {
         'p.r-lede',
         {},
         pick({
-          en: 'Pick a band or an artist. The chain runs back from them to Black traditions and ends at a card of the museum; every link in it is documented by two sources.',
-          ru: 'Выберите группу или исполнителя. Цепочка ведёт от них назад, к чёрным традициям, и заканчивается карточкой музея; каждое её звено подтверждено двумя источниками.',
+          en: 'Pick a band or an artist. The chain runs back through the artists they listened to and the styles they play to Black traditions, and ends at a card of the museum; every link says what of the style passed on and is documented by at least two sources.',
+          ru: 'Выберите группу или исполнителя. Цепочка ведёт от них назад — через тех, кого они слушали, и стили, в которых они играют, — к чёрным традициям и заканчивается карточкой музея. Каждое звено говорит, что именно перешло из стиля, и подтверждено как минимум двумя источниками.',
         }),
       ),
       h('div.r-search', {}, searchIcon(), this.input, this.results),
@@ -83,7 +83,7 @@ export class Roots {
     document.body.append(this.el);
     this.elements = new Map(app.elements.elements.map((e) => [e.id, e]));
     this.colors = elementColors(app.elements);
-    this.reach = elementReach(artists, app.elements.elements);
+    this.reach = elementReach(artists, app.elements.elements, app.styles);
     this.reader = new RouteReader({ app, byId: this.byId, cardLinks: cardLinkIndex(app.cardLinks), elements: this.elements, colors: this.colors, lines: app.lines, onElement: (id) => this.openElement(id) });
     this.panel = new ElementPanel(app, this.byId, this.el, app.cardLinks.links);
     this.renderSuggestions();
@@ -191,7 +191,7 @@ export class Roots {
   }
 
   private renderEmpty(): void {
-    const top = longestRoots(this.artists, this.lineage, 4);
+    const top = longestRoots(this.artists, this.lineage, 4, this.app.styles);
     this.stage.replaceChildren(
       ...(top.length
         ? [h(
@@ -207,7 +207,7 @@ export class Roots {
                   { href: `#view=roots&artist=${artist.id}`, 'data-artist': artist.id },
                   h('small', {}, pick({ en: `${chain.length - 1} steps back`, ru: `шагов назад: ${chain.length - 1}` })),
                   h('b', {}, this.nameOf(artist)),
-                  borrowed ? h('span.r-what', {}, quotes((lang() === 'ru' && (borrowed.whatRu || borrowed.claimRu)) || borrowed.what || borrowed.claim, lang())) : null,
+                  borrowed?.how ? h('span.r-what', {}, quotes((lang() === 'ru' && borrowed.howRu) || borrowed.how, lang())) : null,
                   h('span.r-chain', {}, chainLine(chain, (r) => this.refName(r))),
                 ),
               ),

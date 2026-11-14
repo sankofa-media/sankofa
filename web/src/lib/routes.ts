@@ -222,8 +222,8 @@ export function threadsOf(route: string[], steps: RouteStep[], elements: Map<str
 }
 
 /** How many of the collection's routes (each artist's documented chains) carry each element, and by which artists. */
-export function elementReach(artists: Artist[], elements: MusicElement[]): Map<string, { routes: number; artists: string[] }> {
-  const byId = new Map(artists.map((a) => [a.id, a]));
+export function elementReach(artists: Artist[], elements: MusicElement[], stations: Artist[] = []): Map<string, { routes: number; artists: string[] }> {
+  const byId = new Map([...artists, ...stations].map((a) => [a.id, a]));
   const out = new Map(elements.map((e) => [e.id, { routes: 0, artists: [] as string[] }]));
   for (const a of artists) {
     for (const p of a.paths) {

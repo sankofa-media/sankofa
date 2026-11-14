@@ -10,7 +10,7 @@ import { chapterLabel, lang, pick } from '../lib/i18n';
 import { eraColor } from '../lib/atlasModel';
 import { recordingFor } from '../lib/listen';
 import { mediaSrc } from '../lib/media';
-import { placeName, quotes, type Artist } from '../lib/roots';
+import { DIMENSIONS, DIMENSION_LABEL, EVIDENCE_GROUPS, linkSources, placeName, quotes, type Artist } from '../lib/roots';
 import { linesOf, type CardLink, type Line, type MusicElement } from '../lib/elements';
 import { forksOf, stepsOf, threadsOf, type RouteSet, type RouteStep, type StepKind, type Thread } from '../lib/routes';
 import { miniPlayer, type Track } from './miniPlayer';
@@ -30,7 +30,8 @@ export const VERB: Record<StepKind, { en: string; ru: string }> = {
   // English joins the two names with a verb. Russian names the step after
   // them («Эд Ширан → Эминем — влияние»): a verb between two names would
   // need cases and genders the names do not give.
-  influence: { en: 'was influenced by', ru: 'влияние' },
+  influence: { en: 'drew on', ru: 'влияние' },
+  style: { en: 'works in', ru: 'стиль' },
   cover: { en: 'covered', ru: 'кавер-версия' },
   sample: { en: 'sampled', ru: 'сэмпл' },
   interpolation: { en: 'interpolated', ru: 'интерполяция' },
@@ -267,6 +268,22 @@ export class RouteReader {
     }
     const a = this.ctx.byId.get(ref);
     if (!a) return h('div.rt-station', { 'data-ref': ref }, ref);
+    if (a.style) {
+      const traits = a.traits ?? [];
+      return h(
+        'div.rt-station.rt-stylest',
+        { 'data-ref': ref, tabindex: '-1' },
+        h('span.rt-diamond', { 'aria-hidden': 'true' }),
+        h(
+          'div.rt-plate',
+          {},
+          h('small.rt-stylekind', {}, pick({ en: 'A style', ru: 'Стиль' })),
+          h('b', {}, this.name(ref)),
+          h('small', {}, [formatYears(a.years), placeName(a, lang())].filter(Boolean).join(' · ')),
+          traits.length ? h('ul.rt-traits', {}, traits.map((t) => h('li', {}, (lang() === 'ru' && t.ru) || t.en))) : null,
+        ),
+      );
+    }
     const genre = (lang() === 'ru' && a.genreRu) || a.genre;
     let hue = 0;
     for (const ch of a.genre) hue = (hue * 31 + ch.charCodeAt(0)) % 360;
@@ -317,34 +334,64 @@ export class RouteReader {
     const cl = s.cardLink;
     const from = this.name(s.from);
     const to = this.name(s.to);
-    // A band goes on through its member; a person played in a leader's band.
-    let verb = pick(VERB[s.kind]);
+    // A style grows out of styles and genres, as a genre does.
+    const kind: StepKind = s.from.startsWith('style:') ? 'lineage' : s.kind;
+    let verb = pick(VERB[kind]);
     if (s.kind === 'member') {
       const a = this.ctx.byId.get(s.from);
       if (a && isGroup(a)) verb = pick({ en: 'through its member', ru: 'участник группы' });
     }
     const how = (L === 'ru' && (l?.howRu || cl?.howRu)) || l?.how || cl?.how || '';
-    const claim = l ? quotes((L === 'ru' && l.claimRu) || l.claim, L) : '';
-    const what = l?.what ? quotes((L === 'ru' && l.whatRu) || l.what, L) : '';
+    const claim = l?.claim ? quotes((L === 'ru' && l.claimRu) || l.claim, L) : '';
     const carried = s.carries.filter((id) => this.ctx.elements.has(id));
-    // A step that passed on no musical element (a cover, admiration, a
-    // childhood in church) is a personal tie: a thin dotted connector, its
-    // sentence in ordinary type.
+    // A step that passed on no musical element is a looser tie: a thin
+    // dotted connector, its sentence in ordinary type.
     const bare = !carried.length;
     const lead = how ? h(bare ? 'p.rt-tie' : 'p.rt-how', {}, how) : !bare ? h('p.rt-how', {}, pick({ en: 'Passed on: ', ru: 'Передано: ' }), ...carried.flatMap((id, k) => [k ? ', ' : '', this.elChip(id)])) : null;
     const facts = cl?.facts ?? [];
-    const sources = l?.sources ?? cl?.sources ?? [];
+    const sources = l ? linkSources(l) : (cl?.sources ?? []);
+    const dims = l?.dimensions ?? [];
+    const dimName = (d: (typeof DIMENSIONS)[number]) => pick(DIMENSION_LABEL[d]);
+    const undocumented = DIMENSIONS.filter((d) => !dims.includes(d));
+    const evidence = l?.evidence ?? [];
+    const ex = l?.example;
     return h(
-      `div.rt-link.k-${s.kind}${bare ? '.bare' : ''}`,
+      `div.rt-link.k-${kind}${bare ? '.bare' : ''}`,
       { 'data-step': String(i) },
       L === 'ru'
         ? h('p.rt-verb', {}, h('span', {}, from), ' → ', h('span', {}, to), ' — ', h('em', {}, verb))
         : h('p.rt-verb', {}, h('span', {}, from), ' ', h('em', {}, verb), ' ', h('span', {}, to)),
+      l?.scope === 'period' ? h('p.rt-scope', {}, pick({ en: 'One period only: ', ru: 'Только один период: ' }), l.period ?? '') : null,
       bare ? h('p.rt-bare', {}, pick({ en: 'No musical element named for this step', ru: 'Для этого шага музыкальный элемент не назван' })) : null,
       lead,
       how && !bare ? h('p.rt-carried', {}, ...carried.map((id) => this.elChip(id))) : null,
+      dims.length
+        ? h(
+            'p.rt-dims',
+            {},
+            h('span.rt-dims-on', {}, pick({ en: 'Documented: ', ru: 'Задокументировано: ' }), dims.map(dimName).join(', ')),
+            undocumented.length ? h('span.rt-dims-off', {}, pick({ en: 'Not documented: ', ru: 'Не задокументировано: ' }), undocumented.map(dimName).join(', ')) : null,
+          )
+        : null,
+      ...EVIDENCE_GROUPS.map((g) => {
+        const items = evidence.filter((e) => g.types.includes(e.type));
+        if (!items.length) return null;
+        return h(
+          'div.rt-ev',
+          {},
+          h('small.rt-ev-head', {}, pick(g)),
+          ...items.map((e) =>
+            h(
+              'p.rt-claim.evidence',
+              {},
+              quotes((L === 'ru' && e.textRu) || e.text, L),
+              ' ',
+              h('a.rt-ev-src', { href: e.source.url, rel: 'noopener', target: '_blank', title: e.source.quote ?? '' }, e.source.title),
+            ),
+          ),
+        );
+      }),
       claim ? h(`p.rt-claim${lead ? '.evidence' : ''}`, {}, lead ? h('small', {}, pick({ en: 'The evidence', ru: 'Свидетельство' })) : null, claim) : null,
-      what && what !== claim ? h('p.rt-what', {}, what) : null,
       ...facts.map((f) =>
         h(
           'p.rt-claim.evidence.rt-fact',
@@ -353,6 +400,14 @@ export class RouteReader {
           quotes(f.quote, 'en'),
         ),
       ),
+      ex
+        ? h(
+            'details.rt-example',
+            {},
+            h('summary', {}, pick({ en: 'For example: ', ru: 'Например: ' }), quotes(ex.song, L)),
+            h('p', {}, quotes((L === 'ru' && ex.textRu) || ex.text, L), ' ', h('a', { href: ex.source.url, rel: 'noopener', target: '_blank' }, ex.source.title)),
+          )
+        : null,
       sources.length ? h('ol.rt-src', { 'aria-label': pick({ en: 'Sources', ru: 'Источники' }) }, sources.map((src) => h('li', {}, h('a', { href: src.url, rel: 'noopener', target: '_blank' }, src.title)))) : null,
     );
   }

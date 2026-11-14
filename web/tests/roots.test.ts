@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildTree, chainLine, deepest, endCards, extendLineage, fold, longestRoots, searchArtists, suggestions, type Artist } from '../src/lib/roots';
+import { buildTree, chainLine, deepest, endCards, extendLineage, fold, linkSources, linkTo, longestRoots, searchArtists, styleStations, suggestions, type Artist } from '../src/lib/roots';
 
 const link = (to: string) => ({ to, claim: `to ${to}`, sources: [{ title: 'a', url: 'https://a' }, { title: 'b', url: 'https://b' }] });
 const art = (id: string, name: string, links: string[], paths: string[][], extra: Partial<Artist> = {}): Artist => ({
@@ -130,5 +130,34 @@ describe('recordings along a route', () => {
     expect(recordingFor(data, 'card:blues')).toBe(rec);
     expect(recordingFor(data, 'sabbath')).toBe(rec);
     expect(recordingFor(data, 'metallica')).toBeUndefined();
+  });
+});
+
+describe('styles as stations', () => {
+  const evidence = [
+    { type: 'testimony' as const, dimensions: ['rhythm' as const], text: 'They say so.', source: { title: 'a', url: 'https://a', quote: 'q' } },
+    { type: 'critics' as const, dimensions: ['sound' as const], text: 'Critics heard it.', source: { title: 'b', url: 'https://b', quote: 'q' } },
+  ];
+  const stations = styleStations([
+    { id: 'british-beat', name: 'British beat', years: [1962], place: 'Liverpool', traits: [{ en: 'backbeat' }], sources: [], from: [{ to: 'card:rock-n-roll', kind: 'style', how: 'h', evidence }] },
+  ]);
+  const oasis = art('oasis', 'Oasis', [], [['oasis', 'style:british-beat', 'card:rock-n-roll']], { links: [{ to: 'style:british-beat', kind: 'style', how: 'h', evidence }] });
+
+  it('turn styles into stations keyed style:<id>, whose links are their parents', () => {
+    expect(stations[0].id).toBe('style:british-beat');
+    expect(stations[0].style).toBe(true);
+    expect(linkTo(oasis, 'style:british-beat')?.kind).toBe('style');
+    expect(linkTo(stations[0], 'card:rock-n-roll')?.how).toBe('h');
+  });
+
+  it('build a tree through a style station', () => {
+    const byId = new Map([oasis, ...stations].map((a) => [a.id, a]));
+    const tree = buildTree(oasis, byId);
+    expect(tree.children[0].ref).toBe('style:british-beat');
+    expect(tree.children[0].children[0].link?.how).toBe('h');
+  });
+
+  it('list every source of a link once, from its evidence', () => {
+    expect(linkSources(oasis.links[0]).map((s) => s.url)).toEqual(['https://a', 'https://b']);
   });
 });
