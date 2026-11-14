@@ -8,17 +8,85 @@ placeRu: "Сент-Луис, Миссури"
 genre: "Rock and roll"
 genreRu: "рок-н-ролл"
 links:
-  - to: "card:rhythm-and-blues"
+  - to: "root:muddy-waters"
     kind: "influence"
-    claim: "Chuck Berry developed his rock-and-roll sound by combining blues and R&B with country music."
-    claimRu: "Чак Берри создал свой рок-н-ролльный звук, соединив блюз и ритм-н-блюз с кантри."
-    sources:
-      - title: "Rock & Roll Hall of Fame: Chuck Berry"
-        url: "https://rockhall.com/inductees/chuck-berry/"
-      - title: "Chuck Berry: official biography"
-        url: "https://www.chuckberry.com/biography"
+    how: "Among the music Berry absorbed, the Chicago blues of Muddy Waters stood out: blues songs from Waters’ repertoire were what he played before rock and roll."
+    howRu: "Из всего, что впитал Берри, особенно выделялся чикагский блюз Мадди Уотерса: до рок-н-ролла он играл блюзы из его репертуара."
+    carries: []
+    dimensions: ["harmony-form"]
+    evidence:
+      - type: "critics"
+        dimensions: ["harmony-form"]
+        text: "Swing guitarists shaped Berry’s playing, but it was the blues, above all Muddy Waters’, that held his attention."
+        textRu: "Игру Берри определили свинговые гитаристы, но внимание его притягивал блюз, и прежде всего блюз Мадди Уотерса."
+        source:
+          title: "Contemporary Musicians (Gale), via Encyclopedia.com: Chuck Berry"
+          url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/chuck-berry"
+          quote: "it was the blues, especially that of Muddy Waters, that caught Berry's attention."
+      - type: "listening"
+        dimensions: ["harmony-form"]
+        text: "Before Chess, Berry played blues songs by bands such as Muddy Waters’, while modelling his vocal clarity on Nat King Cole."
+        textRu: "До Chess Берри играл блюзы из репертуара таких бэндов, как у Мадди Уотерса, а ясность голоса брал у Нэта Кинга Коула."
+        source:
+          title: "Chuck Berry: official biography"
+          url: "https://www.chuckberry.com/biography"
+          quote: "He emulated the smooth vocal clarity of his idol, Nat King Cole, while playing blues songs from bands like Muddy Waters."
+      - type: "listening"
+        dimensions: []
+        text: "The Rock & Roll Hall of Fame lists Muddy Waters among the artists who shaped Berry."
+        textRu: "Зал славы рок-н-ролла называет Мадди Уотерса среди артистов, сформировавших Берри."
+        source:
+          title: "Rock & Roll Hall of Fame: Chuck Berry"
+          url: "https://rockhall.com/inductees/chuck-berry/"
+          quote: "Muddy Waters"
+    scope: "career"
+  - to: "card:rock-n-roll"
+    kind: "style"
+    how: "Berry fused blues, R&B and country into the template of rock and roll: jazz-inspired guitar riffs over jump-blues rhythm, story lyrics delivered in rhythmic bursts, and a bent-kneed stage show."
+    howRu: "Берри сплавил блюз, ритм-н-блюз и кантри в образец рок-н-ролла: гитарные риффы с джазовой закваской поверх ритма джамп-блюза, сюжетные тексты, выпаленные ритмичными очередями, и сценическое шоу на полусогнутых."
     carries: ["riff"]
-    how: Chuck Berry built rock and roll from blues chords, jump-blues rhythm and guitar riffs.
-    howRu: Чак Берри собрал рок-н-ролл из блюзовых аккордов, ритма джамп-блюза и гитарных риффов.
-story: "Chuck Berry’s sound grew from blues and R&B. He combined them with country music to develop his rock and roll."
-storyRu: "Звучание Чака Берри выросло из блюза и ритм-н-блюза. Соединив их с кантри, он создал свой рок-н-ролл."
+    dimensions: ["rhythm", "harmony-form", "melody-vocal", "sound", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["rhythm", "harmony-form", "sound", "melody-vocal"]
+        text: "The Hall of Fame describes his records as an amalgam of jazz-inspired riffs, jump-blues rhythm and country storytelling, sung in rhythmic bursts, and credits him with widening the electric guitar’s vocabulary."
+        textRu: "Зал славы описывает его записи как сплав джазовых риффов, ритма джамп-блюза и кантри-повествования, спетого ритмичными очередями, и ставит ему в заслугу расширение словаря электрогитары."
+        source:
+          title: "Rock & Roll Hall of Fame: Chuck Berry"
+          url: "https://rockhall.com/inductees/chuck-berry/"
+          quote: "an amalgam of jazz-inspired guitar riffs, jump blues rhythms, and country storytelling"
+      - type: "critics"
+        dimensions: ["harmony-form"]
+        text: "His fusion of blues, R&B and country set the instrumentation template of rock and roll."
+        textRu: "Его сплав блюза, ритм-н-блюза и кантри задал образец инструментовки рок-н-ролла."
+        source:
+          title: "Rock & Roll Hall of Fame: Chuck Berry"
+          url: "https://rockhall.com/inductees/chuck-berry/"
+          quote: "Chuck Berry's fusion of blues, R&B, and country created an enduring template for rock & roll instrumentation"
+      - type: "analysis"
+        dimensions: ["sound", "performance"]
+        text: "Gale’s Contemporary Musicians calls him the fountainhead of rock guitar and describes his trademark licks and bent-kneed, rhythmic duck walk on stage."
+        textRu: "Справочник Contemporary Musicians называет его истоком рок-гитары и описывает фирменные гитарные ходы и ритмичную «утиную походку» на полусогнутых."
+        source:
+          title: "Contemporary Musicians (Gale), via Encyclopedia.com: Chuck Berry"
+          url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/chuck-berry"
+          quote: "If there were a single fountainhead for rock guitar, Chuck Berry would be it."
+      - type: "testimony"
+        dimensions: ["sound"]
+        text: "Berry described bending his strings to make guitar passages the piano could not produce."
+        textRu: "Берри рассказывал, что подтягивал струны, добиваясь гитарных пассажей, недоступных фортепиано."
+        source:
+          title: "Chuck Berry: official biography"
+          url: "https://www.chuckberry.com/biography"
+          quote: "I would slur my strings to make a passage that Johnnie (Johnson) could not produce with piano keys"
+    scope: "career"
+    example:
+      song: "“Maybellene” (1955)"
+      text: "His first hit was adapted from the country standard “Ida Red”, the country strand of his blend in one record."
+      textRu: "Первый хит Берри вырос из кантри-стандарта «Ida Red» — кантри-нить его сплава в одной пластинке."
+      source:
+        title: "Rock & Roll Hall of Fame: Chuck Berry"
+        url: "https://rockhall.com/inductees/chuck-berry/"
+        quote: "Adapted from country standard \"Ida Red,\" Berry initially considered this 1955 tune a novelty one-off."
+story: "Chuck Berry listened above all to the Chicago blues of Muddy Waters. He fused blues, R&B and country into the template of rock and roll: jazz-tinged guitar riffs over jump-blues rhythm, story lyrics in rhythmic bursts, and the duck walk."
+storyRu: "Чак Берри слушал прежде всего чикагский блюз Мадди Уотерса. Он сплавил блюз, ритм-н-блюз и кантри в образец рок-н-ролла: гитарные риффы с джазовой закваской поверх ритма джамп-блюза, сюжетные тексты ритмичными очередями и «утиная походка»."

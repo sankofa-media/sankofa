@@ -8,31 +8,82 @@ placeRu: "Рипли, Суррей"
 genre: "Blues rock"
 genreRu: "блюз-рок"
 links:
-  - to: "card:blues"
-    claim: "Eric Clapton devoted Me and Mr. Johnson (2004) to covers of blues musician Robert Johnson’s songs."
-    claimRu: "Эрик Клэптон посвятил альбом Me and Mr. Johnson (2004) кавер-версиям песен блюзмена Роберта Джонсона."
-    sources:
-      - title: "Eric Clapton: Official biography"
-        url: "https://ericclapton.com/pages/about"
-      - title: "MusicRadar: Eric Clapton on Robert Johnson and Me and Mr Johnson"
-        url: "https://www.musicradar.com/news/eric-clapton-on-robert-johnson-blues"
-    kind: "cover"
-    what: "Me and Mr. Johnson (2004): an album of new performances of Robert Johnson’s songs."
-    whatRu: "«Me and Mr. Johnson» (2004): альбом новых исполнений песен Роберта Джонсона."
-    carries: ["riff"]
-    how: Clapton took the riffs of blues records, Robert Johnson’s first of all, and worked them into his own guitar vocabulary.
-    howRu: Клэптон взял риффы блюзовых пластинок, прежде всего Роберта Джонсона, и вплавил их в собственный гитарный словарь.
   - to: "root:robert-johnson"
     kind: "influence"
-    claim: "Robert Johnson’s recordings became a formative blues influence on the young Eric Clapton."
-    claimRu: "Записи Роберта Джонсона стали одним из главных блюзовых ориентиров юного Эрика Клэптона."
-    sources:
-      - title: "Guitar World: Eric Clapton — The King and I"
-        url: "https://www.guitarworld.com/artists/eric-clapton-king-and-i"
-      - title: "NPR Morning Edition: Eric Clapton takes on Robert Johnson’s blues (2004)"
-        url: "https://www.npr.org/2004/03/30/1798862/eric-clapton-takes-on-robert-johnsons-blues"
-    carries: ["groove"]
-    how: In Robert Johnson’s boogie patterns Clapton heard where many rhythm-and-blues grooves came from.
-    howRu: В буги-рисунках Роберта Джонсона Клэптон услышал, откуда взялись многие грувы ритм-н-блюза.
-story: "Robert Johnson’s recordings helped form Eric Clapton’s understanding of the blues. He later devoted Me and Mr. Johnson to new performances of Johnson’s songs."
-storyRu: "Записи Роберта Джонсона помогли Эрику Клэптону найти свой путь в блюзе. Позднее он посвятил альбом «Me and Mr. Johnson» новым исполнениям песен Джонсона."
+    scope: "career"
+    how: "From Robert Johnson Clapton took the measure of blues expression: an intense, uncompromising delivery and a voice he heard as the most powerful cry in human singing."
+    howRu: "У Роберта Джонсона Клэптон взял мерило блюзовой выразительности — напряжённую, бескомпромиссную подачу и голос, в котором он слышал самый сильный крик, какой способен издать человек."
+    dimensions: ["performance", "melody-vocal"]
+    evidence:
+      - type: "listening"
+        dimensions: ["performance"]
+        text: "Clapton first heard Johnson as a teenager, was overwhelmed and even repelled by the intensity, and got hooked because it was more powerful than anything else he was listening to; Johnson, he says, was talking from his soul without compromising for anybody."
+        textRu: "Клэптон впервые услышал Джонсона подростком; его ошеломила и даже отпугнула эта сила, но он «подсел», потому что ничего мощнее он не слышал. Джонсон, по его словам, говорил от души и ни под кого не подстраивался."
+        source:
+          title: "NPR Morning Edition: Eric Clapton takes on Robert Johnson's blues (2004)"
+          url: "https://text.npr.org/1798862"
+          quote: "I was definitely overwhelmed, but I was also a bit repelled by the intensity of it … I kind of got hooked on it because it was so much more powerful than anything else I had heard or was listening to."
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "Clapton describes Johnson's voice as deeply soulful, the most powerful cry to be found in the human voice."
+        textRu: "Голос Джонсона Клэптон называет глубоко душевным — самым сильным криком, какой только можно найти в человеческом голосе."
+        source:
+          title: "EBSCO Research Starters: Robert Johnson"
+          url: "https://www.ebsco.com/research-starters/history/robert-johnson"
+          quote: "deeply soulful…the most powerful cry that I think you can find in the human voice."
+  - to: "root:muddy-waters"
+    kind: "influence"
+    scope: "career"
+    how: "From Muddy Waters and the Chicago electric blues Clapton took the amplified electric guitar as the voice of the blues."
+    howRu: "У Мадди Уотерса и чикагского электрического блюза Клэптон взял электрогитару с усилителем как голос блюза."
+    dimensions: ["sound"]
+    evidence:
+      - type: "listening"
+        dimensions: ["sound"]
+        text: "Clapton's official biography says he took up the electric guitar in 1962 after hearing the electric blues of Freddie King, B.B. King, Muddy Waters and Buddy Guy."
+        textRu: "Официальная биография Клэптона сообщает, что в 1962 году он взялся за электрогитару, услышав электрический блюз Фредди Кинга, Би Би Кинга, Мадди Уотерса и Бадди Гая."
+        source:
+          title: "Eric Clapton: Official biography"
+          url: "https://ericclapton.com/pages/about"
+          quote: "after hearing the electric blues of Freddie King, B.B. King, Muddy Waters, Buddy Guy, and others."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "EBSCO's reference entry names Clapton among the 1960s rock artists who incorporated elements of Waters's electric approach into their own music."
+        textRu: "Справочная статья EBSCO называет Клэптона среди рок-музыкантов 1960-х, которые вплели в свою музыку элементы электрического подхода Уотерса."
+        source:
+          title: "EBSCO Research Starters: Muddy Waters"
+          url: "https://www.ebsco.com/research-starters/history/muddy-waters"
+          quote: "influenced 1960’s rock and pop artists such as Eric Clapton, Bob Dylan, and the band Led Zeppelin, who incorporated elements of Waters’s approach into their own music."
+      - type: "critics"
+        dimensions: []
+        text: "The Rock & Roll Hall of Fame says Muddy inspired the Rolling Stones and Eric Clapton to take up rock's legacy."
+        textRu: "Зал славы рок-н-ролла пишет, что Мадди вдохновил Rolling Stones и Эрика Клэптона подхватить наследие рока."
+        source:
+          title: "Rock & Roll Hall of Fame: Muddy Waters"
+          url: "https://www.rockhall.com/inductees/muddy-waters"
+          quote: "He has inspired such icons as the Rolling Stones and Eric Clapton to take up rock's legacy."
+  - to: "style:blues-rock"
+    kind: "style"
+    scope: "career"
+    how: "Clapton played blues rock: fiery, blues-driven electric guitar that carried the emotion of the blues records he studied into the Yardbirds and Cream rather than copying their riffs."
+    howRu: "Клэптон играл блюз-рок: огненная электрогитара на блюзовой основе, которая переносила в The Yardbirds и Cream чувство изученных им блюзовых пластинок, а не копировала их риффы."
+    dimensions: ["sound", "performance", "image"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "The Rock & Roll Hall of Fame credits Clapton's fiery, blues-driven guitar work with propelling the Yardbirds and Cream."
+        textRu: "Зал славы рок-н-ролла пишет, что огненная, проникнутая блюзом гитара Клэптона двигала вперёд The Yardbirds и Cream."
+        source:
+          title: "Rock & Roll Hall of Fame: Eric Clapton"
+          url: "https://www.rockhall.com/inductees/eric-clapton"
+          quote: "Eric Clapton's fiery, blues-driven guitar work propelled iconic '60s bands like the Yardbirds and Cream"
+      - type: "critics"
+        dimensions: ["performance", "image"]
+        text: "His official biography says Clapton did not simply replicate the blues riffs he heard on records but brought the emotion of the original performances into his own playing, and that the blues fitted his sense of himself as an outsider."
+        textRu: "Официальная биография говорит, что Клэптон не просто повторял блюзовые риффы с пластинок, а переносил в свою игру чувство оригинальных исполнений и что блюз совпадал с его ощущением себя чужаком."
+        source:
+          title: "Eric Clapton: Official biography"
+          url: "https://ericclapton.com/pages/about"
+          quote: "Clapton was unique because he did not simply replicate the blues riffs he heard on records. He incorporated the emotion of the original performances into his own style of playing"
+story: "Eric Clapton heard in Robert Johnson an intensity and a vocal cry more powerful than anything else he knew. The electric blues of Muddy Waters and the Chicago players set him on the electric guitar. He carried that emotion, not just the riffs, into the blues rock of the Yardbirds and Cream."
+storyRu: "В Роберте Джонсоне Эрик Клэптон услышал напряжение и крик, сильнее которых он ничего не знал. Электрический блюз Мадди Уотерса и чикагских музыкантов привёл его к электрогитаре. В блюз-рок The Yardbirds и Cream он перенёс это чувство, а не одни только риффы."

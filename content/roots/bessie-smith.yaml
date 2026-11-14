@@ -15,29 +15,45 @@ placeRu: "Чаттануга, Теннесси"
 genre: Blues
 genreRu: блюз
 links:
-  - to: card:blues
-    kind: scene
-    claim: Bessie Smith developed her blues performance on the Black vaudeville circuit.
-    claimRu: Бесси Смит оттачивала своё блюзовое искусство в гастрольных водевильных труппах чернокожих артистов.
-    sources:
-      - title: 'NPR: Bessie Smith, Empress of the Stage'
-        url: https://www.npr.org/2019/08/09/748402597/empress-of-the-stage
-      - title: 'National Park Service: Bessie Smith'
-        url: https://home.nps.gov/locations/lowermsdeltaregion/bessie-smith.htm
-    carries: []
-    how: The evidence is about where Bessie Smith shaped her blues, on the Black vaudeville stage, not about a particular musical device.
-    howRu: Свидетельства говорят о том, где Бесси Смит выковала свой блюз — на сцене чёрного водевиля, — а не о конкретном музыкальном приёме.
   - to: "card:blues"
-    kind: "scene"
-    claim: "Bessie Smith sang the classic blues, built on the twelve-bar form, and varied her phrases from verse to verse like a jazz improviser, as transcriptions of her first recordings show."
-    claimRu: "Бесси Смит пела классический блюз, построенный на двенадцатитактовой форме, и от куплета к куплету меняла фразы, как джазовый импровизатор, — это видно по расшифровкам её первых записей."
-    sources:
-      - title: "NPR: How Bessie Smith influenced a century of popular music (2019)"
-        url: "https://www.npr.org/2019/08/05/747738120/how-bessie-smith-influenced-a-century-of-popular-music"
-      - title: "Alona Sagee: Bessie Smith — “Down Hearted Blues” and “Gulf Coast Blues” revisited, Popular Music 26/1 (Cambridge University Press, 2007)"
-        url: "https://www.cambridge.org/core/journals/popular-music/article/bessie-smith-down-hearted-blues-and-gulf-coast-blues-revisited/AD6C34C4BC8AC400BBF941F08F473E28"
-    carries: ["twelve-bar-blues", "improvisation"]
-    how: "Smith worked inside the twelve-bar blues and improvised within it, changing phrasing and inflection from verse to verse."
-    howRu: "Смит пела в рамках двенадцатитактового блюза и импровизировала внутри него, меняя фразировку и интонацию от куплета к куплету."
-story: Bessie Smith’s blues grew on the Black vaudeville stage. Touring with those shows gave her a place to develop her performance.
-storyRu: Блюз Бесси Смит рос на водевильной сцене чернокожих артистов. Гастроли с этими труппами стали для неё школой исполнительского мастерства.
+    kind: "style"
+    how: "Smith sang the classic blues in a heavy, throaty voice with a fine sense of timing, varying her phrases from verse to verse like a jazz improviser, and delivered them as a stage storyteller with a defiant, self-possessed attitude."
+    howRu: "Смит пела классический блюз тяжёлым, грудным голосом с безупречным чувством времени, меняла фразы от куплета к куплету, как джазовый импровизатор, и подавала их как сценическая рассказчица — с вызовом и чувством собственного достоинства."
+    carries: ["improvisation"]
+    dimensions: ["melody-vocal", "rhythm", "performance", "image"]
+    evidence:
+      - type: "analysis"
+        dimensions: ["melody-vocal", "performance"]
+        text: "Full transcriptions of her first two recordings show phrases that keep varying in imaginative ways, as a jazz improviser's would."
+        textRu: "Полные расшифровки двух её первых записей показывают фразы, которые всё время изобретательно меняются, как у джазового импровизатора."
+        source:
+          title: "Alona Sagee, Popular Music 26/1 (Cambridge University Press, 2007): Bessie Smith — “Down Hearted Blues” and “Gulf Coast Blues” revisited"
+          url: "https://www.cambridge.org/core/journals/popular-music/article/bessie-smith-down-hearted-blues-and-gulf-coast-blues-revisited/AD6C34C4BC8AC400BBF941F08F473E28"
+          quote: "The method demonstrates that, although Bessie's phrases display some similarities with each other, they constantly vary in imaginative ways, matching her with true jazz improvisers."
+      - type: "analysis"
+        dimensions: ["melody-vocal", "rhythm", "performance"]
+        text: "Her heavy, throaty vocals were balanced by a fine sense of timing, and her shows mixed comedy and drama in song."
+        textRu: "Тяжёлый, грудной голос уравновешивало у неё тонкое чувство времени, а её концерты смешивали в песне комедию и драму."
+        source:
+          title: "National Park Service, Lower Mississippi Delta: Bessie Smith"
+          url: "https://home.nps.gov/locations/lowermsdeltaregion/bessie-smith.htm"
+          quote: "Smith had her own voice, however, and owed her success to no one. Her heavy, throaty vocals were balanced by a delightful sense of timing. Her live shows were a blend of comedy and drama in song."
+      - type: "critics"
+        dimensions: ["melody-vocal", "performance"]
+        text: "Her authoritative delivery and storytelling, as singer, actress and comedian, made her performances convincing live and on record."
+        textRu: "Властная подача и дар рассказчицы — певицы, актрисы и комедиантки — делали её выступления убедительными и на сцене, и на пластинке."
+        source:
+          title: "NPR, Maureen Mahon: How Bessie Smith influenced a century of popular music (2019)"
+          url: "https://www.npr.org/2019/08/05/747738120/how-bessie-smith-influenced-a-century-of-popular-music"
+          quote: "Smith's authoritative delivery conveyed an authenticity that suggested she had actually lived through the things she sang about. An excellent storyteller, she made prodigious use of her skills as vocalist, actress and comedian to develop convincing and compelling performances, live and on record."
+      - type: "critics"
+        dimensions: ["image"]
+        text: "The persona of her songs is a woman with power and agency, a defiant stance for a poor Black woman."
+        textRu: "Героиня её песен — женщина, у которой есть сила и воля, и для бедной чернокожей женщины это был вызов."
+        source:
+          title: "NPR, Maureen Mahon: How Bessie Smith influenced a century of popular music (2019)"
+          url: "https://www.npr.org/2019/08/05/747738120/how-bessie-smith-influenced-a-century-of-popular-music"
+          quote: "Smith's protagonist presents herself as a person with power and agency, someone who can choose and refuse, someone who will no longer be put upon or accept whatever she is handed. This is a defiant stance, especially for a poor, black woman to assume, and one that surely resonated with black female listeners."
+    scope: "career"
+story: "Bessie Smith sang the classic blues in a heavy, throaty voice with a fine sense of timing, varying her phrases like a jazz improviser. On stage and on record she was a storyteller whose songs voiced a defiant woman with power over her own life."
+storyRu: "Бесси Смит пела классический блюз тяжёлым, грудным голосом с безупречным чувством времени и меняла фразы, как джазовый импровизатор. На сцене и на пластинке она была рассказчицей, а героиня её песен — непокорной женщиной, которая сама распоряжается своей жизнью."

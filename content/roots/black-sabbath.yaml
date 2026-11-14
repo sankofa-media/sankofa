@@ -8,29 +8,61 @@ placeRu: "Бирмингем, Англия"
 genre: "Heavy metal"
 genreRu: "хеви-метал"
 links:
-  - to: "card:blues"
-    claim: "Before adopting the name Black Sabbath, the band played blues under the name Earth."
-    claimRu: "Прежде чем стать Black Sabbath, группа играла блюз под названием Earth."
-    sources:
-      - title: "Rolling Stone: Heavy Metal, Year One — The Inside Story of Black Sabbath’s Groundbreaking Debut"
-        url: "https://au.rollingstone.com/music/music-features/black-sabbath-debut-album-heavy-metal-origin-interview-7306/"
-      - title: "Guitar World: Original Members of Black Sabbath Look Back on 30-Plus Years of Demonic Riffing"
-        url: "https://www.guitarworld.com/gw-archive/archive-original-members-black-sabbath-look-back-30-plus-years-demonic-riffing-2001"
-    kind: "scene"
+  - to: "style:blues-rock"
+    kind: "style"
+    how: "Black Sabbath began as a British blues band playing twelve-bar blues from Chicago and Delta records, drawn in by John Mayall’s and Eric Clapton’s blues boom."
+    howRu: "Black Sabbath начинали как британская блюзовая группа: играли двенадцатитактовый блюз с чикагских и дельтовых пластинок, увлёкшись блюзовым бумом Джона Мейолла и Эрика Клэптона."
+    carries: ["twelve-bar-blues"]
+    dimensions: ["harmony-form", "performance"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["harmony-form"]
+        text: "Iommi says the band played twelve-bar blues and names John Mayall with Eric Clapton as the inspiration of his generation."
+        textRu: "Айомми говорит, что группа играла двенадцатитактовый блюз, и называет Джона Мейолла с Эриком Клэптоном вдохновением своего поколения."
+        source:
+          title: "Tony Iommi: official biography"
+          url: "https://www.iommi.com/biography/"
+          quote: "We were playing 12-bar blues … John Mayall was a particular inspiration to my generation. Mayall with Eric Clapton."
+      - type: "critics"
+        dimensions: ["performance", "harmony-form"]
+        text: "Rolling Stone records that Earth’s early sets were Chicago and Delta blues, recalled by Ten Years After’s Leo Lyons."
+        textRu: "Rolling Stone пишет, что ранние программы Earth состояли из чикагского и дельтового блюза; об этом вспоминает Лео Лайонс из Ten Years After."
+        source:
+          title: "Rolling Stone: Heavy Metal, Year One — The Inside Story of Black Sabbath’s Groundbreaking Debut"
+          url: "https://au.rollingstone.com/music/music-features/black-sabbath-debut-album-heavy-metal-origin-interview-7306/"
+          quote: "They were playing Muddy Waters, Howlin' Wolf, John Lee Hooker kind of stuff."
+    scope: "career"
+  - to: "style:heavy-metal"
+    kind: "style"
+    how: "Out of that blues Black Sabbath made heavy metal: downtuned, ringing riffs built on the tritone, crushing volume, a high urgent vocal and lyrics of the occult, war and working-class despair."
+    howRu: "Из этого блюза Black Sabbath сделали хеви-метал: риффы на пониженном строе с гулко звенящими открытыми струнами, построенные на тритоне, оглушительная громкость, высокий напряжённый вокал и тексты об оккультном, войне и безысходности рабочих кварталов."
     carries: ["riff"]
-    how: Black Sabbath grew out of a blues band and built heavy metal on slowed, weighted blues riffs.
-    howRu: Black Sabbath выросли из блюзовой группы и построили хеви-метал на замедленных, утяжелённых блюзовых риффах.
-  - to: "root:eric-clapton"
-    kind: "influence"
-    claim: "Tony Iommi developed his early guitar playing under the influence of Eric Clapton’s blues."
-    claimRu: "Ранняя гитарная манера Тони Айомми складывалась под влиянием блюза Эрика Клэптона."
-    sources:
-      - title: "Tony Iommi: official biography"
-        url: "https://www.iommi.com/biography/"
-      - title: "Guitar World: Tony Iommi talks Dio, Van Halen, Judas Priest and more (2008)"
-        url: "https://www.guitarworld.com/magazine/tony-iommi-talks-dio-van-halen-judas-priest-and-more-outtake-2008-guitar-world-interview"
-    carries: []
-    how: Iommi learned blues guitar from Clapton’s records with John Mayall and from blues records in general; the sources name no single device.
-    howRu: Айомми учился блюзовой гитаре по записям Клэптона с Джоном Мейоллом и по блюзовым пластинкам вообще; какой-то один приём источники не называют.
-story: "Before Black Sabbath, the band played blues as Earth. Tony Iommi’s early guitar playing also grew through his admiration for Eric Clapton’s blues."
-storyRu: "До Black Sabbath группа играла блюз под названием Earth. Ранняя гитарная манера Тони Айомми складывалась и под влиянием блюза Эрика Клэптона."
+    dimensions: ["sound", "harmony-form", "melody-vocal", "image"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["sound", "harmony-form", "image"]
+        text: "Iommi explains his heavier sound through the ringing open E string; the article names the diminished-fifth riff of “Black Sabbath”, and Butler says the lyrics were about working-class reality."
+        textRu: "Айомми объясняет свой тяжёлый звук гулом открытой струны ми; статья называет рифф «Black Sabbath» на уменьшённой квинте, а Батлер говорит, что тексты были о реальности рабочего класса."
+        source:
+          title: "Rolling Stone: Heavy Metal, Year One — The Inside Story of Black Sabbath’s Groundbreaking Debut"
+          url: "https://au.rollingstone.com/music/music-features/black-sabbath-debut-album-heavy-metal-origin-interview-7306/"
+          quote: "So I play a lot in E and let the open E string ring out. … revolves around a diminished fifth, a sinister sound … wanted to write about the reality of working-class life and escapism"
+      - type: "critics"
+        dimensions: ["sound", "melody-vocal", "image"]
+        text: "The Guardian’s obituary of Osbourne names Iommi’s low tuning, Butler’s occult lyrics and Osbourne’s high-register vocal as the band’s dark sound."
+        textRu: "Некролог Осборна в The Guardian называет тёмным звуком группы пониженный строй Айомми, оккультные тексты Батлера и высокий вокал Осборна."
+        source:
+          title: "The Guardian: Ozzy Osbourne obituary (2025)"
+          url: "https://www.theguardian.com/music/2025/jul/22/ozzy-osbourne-obituary"
+          quote: "The atmosphere was darkened further by the guitarist Tony Iommi’s fondness for tuning his strings lower than usual, and lyrics (mostly written by the bass player Geezer Butler) that alluded to the occult and mental illness, sung in Osbourne’s urgent high-register whine."
+      - type: "critics"
+        dimensions: ["sound", "image"]
+        text: "The Rock & Roll Hall of Fame credits Black Sabbath with delivering heavy metal through relentless hard rock about the dark and demonic."
+        textRu: "Зал славы рок-н-ролла считает, что Black Sabbath принесли в мир хеви-метал — неумолимый хард-рок о тёмном и демоническом."
+        source:
+          title: "Rock & Roll Hall of Fame: Black Sabbath"
+          url: "https://www.rockhall.com/inductees/black-sabbath"
+          quote: "relentless hard rock that deal with the dark and demonic"
+    scope: "career"
+story: "Black Sabbath started as a blues band playing twelve-bar blues in the wake of John Mayall and Eric Clapton. From it they made heavy metal: downtuned riffs on the tritone, crushing volume, Osbourne’s high urgent voice and lyrics of the occult and working-class despair."
+storyRu: "Black Sabbath начинали как блюзовая группа, игравшая двенадцатитактовый блюз вслед за Джоном Мейоллом и Эриком Клэптоном. Из него они сделали хеви-метал: риффы на тритоне в пониженном строе, оглушительная громкость, высокий напряжённый голос Осборна и тексты об оккультном и безысходности рабочих кварталов."

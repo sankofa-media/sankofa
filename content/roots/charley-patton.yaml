@@ -9,16 +9,36 @@ genre: "Delta blues"
 genreRu: "дельта-блюз"
 links:
   - to: "card:blues"
-    kind: "teacher"
-    claim: "At Dockery, Charley Patton developed his blues by studying the playing of local guitarist Henry Sloan."
-    claimRu: "На плантации Докери Чарли Паттон развивал свой блюз, изучая игру местного гитариста Генри Слоуна."
-    sources:
-      - title: "Mississippi Encyclopedia: Charley Patton"
-        url: "https://mississippiencyclopedia.org/entries/charley-patton/"
-      - title: "National Park Service: Charley Patton"
-        url: "https://home.nps.gov/locations/lowermsdeltaregion/charley-patton.htm"
-    carries: ["polyrhythm"]
-    how: 'Patton’s Delta blues was polyrhythmic: picking against a beat tapped on the body of the guitar.'
-    howRu: 'Дельта-блюз Паттона был полиритмичным: перебор поверх ритма, который он отстукивал по корпусу гитары.'
-story: "At Dockery, Charley Patton studied local guitarist Henry Sloan. He developed his own blues through that musical example."
-storyRu: "На плантации Докери Чарли Паттон изучал игру местного гитариста Генри Слоуна. На этом примере он развивал свой блюз."
+    kind: "style"
+    how: "Patton played Delta blues as polyrhythmic dance music: picking against a beat tapped on the guitar body, heavy bass notes, slide played with a knife, a loud rough voice and clowning showmanship."
+    howRu: "Паттон играл дельта-блюз как полиритмичную танцевальную музыку: перебор поверх ритма, отстуканного по корпусу гитары, тяжёлые басы, слайд ножом, громкий хриплый голос и шутовское шоу."
+    carries: ["polyrhythm", "slide-guitar"]
+    dimensions: ["rhythm", "sound", "melody-vocal", "performance"]
+    evidence:
+      - type: "analysis"
+        dimensions: ["rhythm", "performance"]
+        text: "His polyrhythmic picking against a beat tapped on the guitar made long dance pieces; Son House recalled him clowning with the guitar behind his back."
+        textRu: "Полиритмичный перебор поверх ритма, отстуканного по гитаре, складывался в долгие танцевальные пьесы; Сон Хаус вспоминал, как Паттон паясничал, играя на гитаре за спиной."
+        source:
+          title: "National Park Service, Lower Mississippi Delta: Charley Patton"
+          url: "https://home.nps.gov/locations/lowermsdeltaregion/charley-patton.htm"
+          quote: "Patton's polyrhythmic picking, accompanied by tapping the body of the guitar, created an intricate dance melody that its author could play for thirty minutes or more. Son House, who recorded in a 1930 session that also featured Patton and Brown, recalled that Charley \"clowned\" for an audience by playing the guitar behind his back or between his knees."
+      - type: "analysis"
+        dimensions: ["sound", "rhythm"]
+        text: "Building on Henry Sloan's raw, rhythmic technique, Patton made a style of heavy bass notes and slide played with a knife."
+        textRu: "Отталкиваясь от грубой, ритмичной техники Генри Слоуна, Паттон выработал стиль с тяжёлыми басами и слайдом ножом."
+        source:
+          title: "Mississippi Encyclopedia: Charley Patton"
+          url: "https://mississippiencyclopedia.org/entries/charley-patton/"
+          quote: "He began to study the raw and rhythmic blues-playing technique of guitarist Henry Sloan, eventually crafting an inventive style that incorporated heavy bass notes and playing slide guitar with a knife."
+      - type: "analysis"
+        dimensions: ["melody-vocal"]
+        text: "He sang in a loud, rough voice."
+        textRu: "Пел он громким, хриплым голосом."
+        source:
+          title: "Mississippi Encyclopedia: Charley Patton"
+          url: "https://mississippiencyclopedia.org/entries/charley-patton/"
+          quote: "Patton sang in a loud, rough voice, and many of the lyrics in his recordings are nearly incomprehensible."
+    scope: "career"
+story: "Charley Patton played the Delta blues as dance music: polyrhythmic picking over a beat tapped on the guitar, heavy bass notes and slide played with a knife. He sang in a loud, rough voice and clowned with the guitar for his audiences."
+storyRu: "Чарли Паттон играл дельта-блюз как танцевальную музыку: полиритмичный перебор поверх ритма, отстуканного по гитаре, тяжёлые басы и слайд ножом. Пел он громким, хриплым голосом и паясничал с гитарой на потеху публике."
