@@ -14,18 +14,111 @@ place:
 placeRu: "Лос-Анджелес"
 genre: Soul and blues
 genreRu: соул и блюз
+story: "Etta James was a rhythm and blues singer through and through: a powerhouse contralto with grit that could melt like sugar or rub like salt, a defiant, abrasive delivery and a formidable live act. That voice was built in gospel, where a choirmaster taught her to sing from the gut. From the mid-1990s she turned to jazz, channelling Billie Holiday."
+storyRu: "Этта Джеймс была ритм-н-блюзовой певицей до мозга костей: мощное контральто с шершавостью, которая то таяла, как сахар, то въедалась, как соль в рану, вызывающая, колючая подача и грозная сила на концертной сцене. Этот голос сложился в госпеле, где хормейстер учил её петь нутром. С середины 1990-х она обратилась к джазу, следуя за Билли Холидей."
 links:
-  - to: card:gospel
-    kind: scene
-    claim: Etta James began singing in a church gospel choir at five.
-    claimRu: Этта Джеймс начала петь в церковном госпел-хоре в пять лет.
-    sources:
-      - title: 'California Museum: Etta James'
-        url: https://californiamuseum.org/inductee/etta-james/
-      - title: 'Biography: Etta James'
-        url: https://www.biography.com/musicians/etta-james
+  - to: "card:rhythm-and-blues"
+    kind: "style"
+    how: "James sang rhythm and blues with a powerhouse contralto, a gritty, defiant and abrasive delivery and the raw energy of a club performer, set against bluesy string arrangements on her Chess ballads."
+    howRu: "Джеймс пела ритм-н-блюз мощным контральто — с шершавой, вызывающей, колючей подачей и сырой энергией клубной исполнительницы; в её балладах на Chess этот голос ложился на блюзовые струнные аранжировки."
+    carries: []
+    dimensions: ["melody-vocal", "performance", "sound"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal", "sound"]
+        text: "Garth Cartwright’s Guardian obituary describes her powerhouse contralto matched with bluesy string arrangements at Chess."
+        textRu: "Гарт Картрайт в некрологе для The Guardian описывает её мощное контральто в паре с блюзовыми струнными аранжировками на Chess."
+        source:
+          title: "The Guardian: Etta James obituary (Garth Cartwright, 2012)"
+          url: "https://www.theguardian.com/music/2012/jan/20/etta-james"
+          quote: "Here her powerhouse contralto voice was matched with the sumptuous, bluesy string arrangements of Riley Hampton, and James truly came into her own as a singer."
+      - type: "critics"
+        dimensions: ["melody-vocal", "performance"]
+        text: "The same obituary calls her live album Rocks the House the document of a formidable performer."
+        textRu: "Там же концертный альбом Rocks the House назван свидетельством грозной исполнительницы."
+        source:
+          title: "The Guardian: Etta James obituary (Garth Cartwright, 2012)"
+          url: "https://www.theguardian.com/music/2012/jan/20/etta-james"
+          quote: "Her 1963 album Etta James Rocks the House was recorded live at the New Era club in Nashville and documents a formidable performer."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "It adds that by the late 1960s other singers were adopting her defiant, abrasive vocal style."
+        textRu: "Там же сказано, что к концу 1960-х её вызывающую, колючую манеру перенимали другие певицы."
+        source:
+          title: "The Guardian: Etta James obituary (Garth Cartwright, 2012)"
+          url: "https://www.theguardian.com/music/2012/jan/20/etta-james"
+          quote: "That year, James's influence was everywhere, with a variety of black female singers (including Turner, Gladys Knight and Candi Staton) employing her defiant, abrasive vocal style."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "NPR hears grit in her voice and counts ten R&B chart records between 1960 and 1963."
+        textRu: "NPR слышит в её голосе шершавость и насчитывает десять ритм-н-блюзовых хитов в 1960–1963 годах."
+        source:
+          title: "NPR: Remembering Etta James, Stunning Singer (2012)"
+          url: "https://www.npr.org/2012/01/20/123125338/remembering-etta-james-stunning-singer"
+          quote: "James had grit in her voice that could melt like sugar or rub like salt in a wound. Between 1960 and 1963, she had 10 records on the R&B charts"
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Spencer Leigh in The Independent says that on “Tell Mama” she sounds like a female Otis Redding."
+        textRu: "Спенсер Ли в The Independent пишет, что в «Tell Mama» она звучит как Отис Реддинг в женском обличье."
+        source:
+          title: "The Independent: Etta James obituary (Spencer Leigh, 2012)"
+          url: "https://www.independent.co.uk/news/obituaries/etta-james-acclaimed-soul-singer-who-fought-to-overcome-her-personal-demons-6292566.html"
+          quote: "Her 1967 single \"Tell Mama\", was a superb performance of a Clarence Carter song on which she sounds like a female Otis Redding"
+    scope: "career"
+  - to: "card:gospel"
+    kind: "style"
+    how: "James’s big, gut-driven voice was trained in gospel, under a choirmaster whose influence she acknowledged, and gospel feeling stayed in her secular records."
+    howRu: "Большой голос Джеймс, идущий из самого нутра, был поставлен в госпеле — у хормейстера, чьё влияние она признавала, — и госпеловое чувство осталось в её светских записях."
     carries: ["gospel-vocal"]
-    how: Etta James was a gospel prodigy and kept that gospel charge in her rhythm and blues.
-    howRu: Этта Джеймс была вундеркиндом госпела и сохранила его заряд в своём ритм-н-блюзе.
-story: Etta James’s singing began in church. At five, she was already singing in a gospel choir.
-storyRu: Певческий путь Этты Джеймс начался в церкви. В пять лет она уже пела в госпел-хоре.
+    dimensions: ["melody-vocal"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "The Guardian notes that she sang gospel from the age of five and later acknowledged the influence of her choirmaster, Professor James Earl Hines."
+        textRu: "The Guardian отмечает, что она пела госпел с пяти лет и позже признавала влияние своего хормейстера, профессора Джеймса Эрла Хайнса."
+        source:
+          title: "The Guardian: Etta James obituary (Garth Cartwright, 2012)"
+          url: "https://www.theguardian.com/music/2012/jan/20/etta-james"
+          quote: "From the age of five, she sang gospel in the local church and later acknowledged the influence of the choirmaster, Professor James Earl Hines."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The Independent describes the choirmaster’s method of making her sing from the gut, which gave her a huge voice."
+        textRu: "The Independent описывает метод хормейстера, заставлявшего её петь нутром, — так у неё появился огромный голос."
+        source:
+          title: "The Independent: Etta James obituary (Spencer Leigh, 2012)"
+          url: "https://www.independent.co.uk/news/obituaries/etta-james-acclaimed-soul-singer-who-fought-to-overcome-her-personal-demons-6292566.html"
+          quote: "This unconventional and highly suspect method resulted in her developing a huge voice, especially for a child."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The same obituary calls her Chess single “Something’s Got a Hold on Me” gospel-based."
+        textRu: "Там же её сингл на Chess «Something’s Got a Hold on Me» назван основанным на госпеле."
+        source:
+          title: "The Independent: Etta James obituary (Spencer Leigh, 2012)"
+          url: "https://www.independent.co.uk/news/obituaries/etta-james-acclaimed-soul-singer-who-fought-to-overcome-her-personal-demons-6292566.html"
+          quote: "She recorded the gospel-based \"Something's Got A Hold On Me\""
+    scope: "career"
+  - to: "card:jazz"
+    kind: "style"
+    how: "In her later career James took on jazz vocal, channelling Billie Holiday, the singer her mother loved and she idolised."
+    howRu: "В поздние годы Джеймс взялась за джазовый вокал, следуя за Билли Холидей — певицей, которую любила её мать и которой поклонялась она сама."
+    carries: []
+    dimensions: ["melody-vocal"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "On NPR’s Fresh Air James said jazz had once seemed too disciplined for her; her 1994 Billie Holiday tribute Mystery Lady honoured her mother, who loved Holiday and jazz."
+        textRu: "В программе NPR Fresh Air Джеймс говорила, что когда-то джаз казался ей слишком дисциплинированным; её посвящение Билли Холидей, альбом Mystery Lady 1994 года, было данью и матери, любившей Холидей и джаз."
+        source:
+          title: "NPR: Remembering Etta James, Stunning Singer (2012)"
+          url: "https://www.npr.org/2012/01/20/123125338/remembering-etta-james-stunning-singer"
+          quote: "James said making her tribute to Billie Holiday, 1994's Mystery Lady, also honored her mother, who loved both Holiday and jazz."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The Guardian describes Mystery Lady as the first of a series of jazz vocal albums channelling Holiday’s influence."
+        textRu: "The Guardian называет Mystery Lady первым в серии джазовых вокальных альбомов, где она следовала влиянию Холидей."
+        source:
+          title: "The Guardian: Etta James obituary (Garth Cartwright, 2012)"
+          url: "https://www.theguardian.com/music/2012/jan/20/etta-james"
+          quote: "James recorded Mystery Lady, the first in a series of jazz vocal albums where she channelled the influence of Billie Holiday."
+    scope: "period"
+    period: "1994–2000s (jazz vocal albums from Mystery Lady)"

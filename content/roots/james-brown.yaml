@@ -7,18 +7,86 @@ place: {"name": "Barnwell, South Carolina", "lat": 33.2449, "lon": -81.3587}
 placeRu: "Барнуэлл, Южная Каролина"
 genre: "Soul and funk"
 genreRu: "соул и фанк"
-story: "Gospel supplied the vocal intensity that James Brown carried into rhythm and blues. That gospel voice also powered his funk."
-storyRu: "Госпел дал Джеймсу Брауну вокальный накал, который он перенёс в ритм-н-блюз. Тот же голос, воспитанный госпелом, зазвучал и в его фанке."
+story: "James Brown turned gospel fervour into rhythm and blues: he sang with gospel-driven vocals, rooted in the gospel quartet he formed as a teenager, and his shows went to the very edge of gospel abandon. Within R&B he made the groove, not the conventional song, the centre of the music, and backed it with precise choreography and dynamic showmanship."
+storyRu: "Джеймс Браун превратил госпеловый жар в ритм-н-блюз: он пел на госпеловой тяге, выросшей из госпел-квартета, который он собрал подростком, а его концерты доходили до самой грани госпелового самозабвения. Внутри ритм-н-блюза он сделал центром музыки грув, а не привычную песню, и подкрепил его точной хореографией и напористым шоу."
 links:
   - to: "card:gospel"
-    kind: "influence"
-    claim: "James Brown carried gospel vocal intensity into his rhythm-and-blues and funk."
-    claimRu: "Джеймс Браун перенёс накал госпел-вокала в свой ритм-н-блюз и фанк."
-    sources:
-      - title: "Rock and Roll Hall of Fame: James Brown"
-        url: "https://library.rockhall.com/james_brown"
-      - title: "Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)"
-        url: "https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en"
+    kind: "style"
+    how: "Brown carried gospel fervour into secular music: gospel-driven vocals, a scream and a stage intensity that pushed soul to the edge of church abandon."
+    howRu: "Браун перенёс госпеловый жар в светскую музыку: вокал на госпеловой тяге, крик и сценический накал, доводивший соул до церковного самозабвения."
     carries: ["gospel-vocal"]
-    how: 'James Brown carried gospel singing into secular music: gospel-driven vocals over a syncopated rhythm.'
-    howRu: 'Джеймс Браун перенёс госпел-пение в светскую музыку: вокал на госпеловом напоре поверх синкопированного ритма.'
+    dimensions: ["melody-vocal", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal", "performance"]
+        text: "The Rock and Roll Hall of Fame credits him with transforming gospel fervour into the explosive intensity of rhythm and blues."
+        textRu: "Зал славы рок-н-ролла приписывает ему превращение госпелового жара во взрывной накал ритм-н-блюза."
+        source:
+          title: "Rock & Roll Hall of Fame Library: James Brown research guide"
+          url: "https://library.rockhall.com/james_brown"
+          quote: "His transformation of gospel fervor into the taut, explosive intensity of rhythm & blues, combined with precision choreography and dynamic showmanship, served to define the directions black music would take"
+      - type: "critics"
+        dimensions: ["performance"]
+        text: "The same guide hears Live at the Apollo taking soul power to the very edge of gospel abandon."
+        textRu: "Тот же путеводитель слышит, как Live at the Apollo доводит силу соула до самой грани госпелового самозабвения."
+        source:
+          title: "Rock & Roll Hall of Fame Library: James Brown research guide"
+          url: "https://library.rockhall.com/james_brown"
+          quote: "James Brown and the Famous Flames tear their way through a slew of King hits taking soul power to the very edge of gospel abandon in the process."
+      - type: "analysis"
+        dimensions: ["melody-vocal"]
+        text: "Naeem Inayatullah, following Michael Veal, describes Brown building funk on his gospel-driven vocals."
+        textRu: "Наим Инаятулла вслед за Майклом Вилом пишет, что Браун строил фанк на своём вокале с госпеловой тягой."
+        source:
+          title: "Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)"
+          url: "https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en"
+          quote: "James Brown developed funk in the 1960s by combining his ‘gospel-driven vocals’ with ‘jazzy horn arrangements’, all on top of a ‘highly syncopated percussive rhythm scheme’ (Veal 2000: 11)."
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "Brown recalled to Gerri Hirshey the gospel quartet he formed as a teenage inmate: “We sang like angels.”"
+        textRu: "Браун вспоминал в разговоре с Джерри Херши госпел-квартет, который он собрал подростком в заключении: «Мы пели как ангелы»."
+        source:
+          title: "Rolling Stone: Funk’s Founding Father — James Brown, 1933–2006 (Gerri Hirshey, 2007)"
+          url: "https://www.rollingstone.com/music/music-news/funks-founding-father-james-brown-1933-2006-69720/"
+          quote: "Redemption came with the gospel quartet he formed there. “We sang like angels,” he said."
+    scope: "career"
+  - to: "card:rhythm-and-blues"
+    kind: "style"
+    how: "Brown worked within rhythm and blues and remade it from the inside: a raw scream, precise choreography and a show-stopping live act, and records built from the groove rather than from the conventional song."
+    howRu: "Браун работал внутри ритм-н-блюза и переделал его изнутри: сырой крик, точная хореография, концерт, сметавший всё на своём пути, и записи, выросшие из грува, а не из привычной песни."
+    carries: ["groove"]
+    dimensions: ["rhythm", "performance", "melody-vocal"]
+    evidence:
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "Rick Rubin, writing for Rolling Stone, sets Brown against his R&B contemporaries: his music always came from the groove."
+        textRu: "Рик Рубин в эссе для Rolling Stone противопоставляет Брауна его современникам по ритм-н-блюзу: его музыка всегда шла от грува."
+        source:
+          title: "Rolling Stone: 100 Greatest Artists — James Brown (essay by Rick Rubin)"
+          url: "https://www.rollingstone.com/music/music-lists/100-greatest-artists-147446/james-brown-2-30248"
+          quote: "And the music always came from the groove, whereas for so many R&B and Motown artists at the time it was more about conventional songs."
+      - type: "critics"
+        dimensions: ["performance"]
+        text: "The Rock and Roll Hall of Fame Library calls Live at the Apollo the most exciting document of live performance in the history of R&B."
+        textRu: "Библиотека Зала славы рок-н-ролла называет Live at the Apollo самым захватывающим документом живого выступления в истории ритм-н-блюза."
+        source:
+          title: "Rock & Roll Hall of Fame Library: James Brown research guide"
+          url: "https://library.rockhall.com/james_brown"
+          quote: "There is no more exciting document of live performance in the history of R&B"
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Gerri Hirshey’s Rolling Stone obituary speaks of his trademark soul scream."
+        textRu: "Некролог Джерри Херши в Rolling Stone говорит о его фирменном соул-крике."
+        source:
+          title: "Rolling Stone: Funk’s Founding Father — James Brown, 1933–2006 (Gerri Hirshey, 2007)"
+          url: "https://www.rollingstone.com/music/music-news/funks-founding-father-james-brown-1933-2006-69720/"
+          quote: "For a man whose trademark soul scream – black, American and proud – upended a half century of popular music"
+      - type: "critics"
+        dimensions: ["performance"]
+        text: "PBS American Masters traces how his vocal group, the Famous Flames, gravitated toward R&B and toured Georgia in the mid-1950s."
+        textRu: "PBS в цикле American Masters прослеживает, как его вокальная группа Famous Flames повернула к ритм-н-блюзу и выступала по всей Джорджии в середине 1950-х."
+        source:
+          title: "PBS American Masters: James Brown — Soul Survivor (James Maycock)"
+          url: "https://www.pbs.org/wnet/americanmasters/james-brown-soul-survivor/532/"
+          quote: "Eventually gravitating toward R&B music, the group, which came to be known as the Famous Flames, performed across Georgia in the mid-’50s."
+    scope: "career"

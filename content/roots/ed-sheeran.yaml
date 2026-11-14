@@ -13,18 +13,78 @@ place:
 placeRu: "Галифакс, Англия"
 genre: Folk pop
 genreRu: фолк-поп
+story: "Ed Sheeran names Eminem as one of the reasons he started writing songs; as a boy he learned Eminem’s fast, melodic, percussive rapping by heart, and critics hear hip-hop bravado in his songwriting. His other ground is the acoustic folk-pop of the troubadour: one man, a guitar and a loop pedal."
+storyRu: "Эд Ширан называет Эминема одной из причин, по которым он начал писать песни; мальчиком он выучил наизусть быстрый, мелодичный, ударный рэп Эминема, и критики слышат в его песнях хип-хоповую браваду. Вторая его опора — акустический фолк-поп трубадура: один человек, гитара и луп-педаль."
 links:
-  - to: root:eminem
-    claim: Ed Sheeran learned Eminem’s The Marshall Mathers LP by heart as a child, practising its rapid rap delivery.
-    claimRu: В детстве Эд Ширан выучил наизусть The Marshall Mathers LP Эминема и упражнялся в быстрой рэп-подаче.
-    sources:
-      - title: 'ABC News: How Eminem Helped Ed Sheeran Overcome Stuttering'
-        url: https://abcnews.com/Entertainment/eminem-helped-ed-sheeran-overcome-stuttering/story?id=31661107
-      - title: 'The Standard: Ed Sheeran on Eminem and his childhood stutter'
-        url: https://www.standard.co.uk/showbiz/ed-sheeran-eminem-cured-his-childhood-stutter-friendship-howard-stern-b1081401.html
-    kind: influence
+  - to: "root:eminem"
+    kind: "influence"
+    how: "Eminem gave Sheeran the impulse to write songs and a rap delivery, very fast, melodic and percussive, that he learned by heart; critics hear the resulting blend of hip-hop bravado and everyday songwriting as the core of his breakthrough."
+    howRu: "Эминем дал Ширану желание писать песни и рэп-подачу — очень быструю, мелодичную и ударную, — которую тот выучил наизусть; критики слышат в получившейся смеси хип-хоповой бравады и бытовой песни основу его прорыва."
     carries: ["rap-flow"]
-    how: 'A childhood exercise in rap delivery: Sheeran rapped Eminem’s album back to back to cure a stutter; the sources tell it as practice, not as a style he adopted.'
-    howRu: 'Детское упражнение в рэп-подаче: Ширан раз за разом рэповал альбом Эминема, чтобы избавиться от заикания; источники рассказывают об этом как о тренировке, а не о стиле, который он перенял.'
-story: Ed Sheeran learned Eminem’s The Marshall Mathers LP by heart as a child. Practising its rapid delivery was part of his musical education.
-storyRu: Эд Ширан ещё ребёнком выучил наизусть «The Marshall Mathers LP» Эминема. Упражнения в быстрой рэп-подаче стали частью его музыкального воспитания.
+    dimensions: ["melody-vocal", "rhythm", "harmony-form", "image"]
+    scope: "career"
+    evidence:
+      - type: "testimony"
+        dimensions: ["harmony-form"]
+        text: "When he featured on Eminem’s “River”, Sheeran said Eminem was one of the reasons he started writing songs."
+        textRu: "Записав с Эминемом «River», Ширан сказал, что Эминем — одна из причин, по которым он начал писать песни."
+        source:
+          title: "Entertainment.ie: Eminem’s new album ‘Revival’ features Ed Sheeran on one song (2017)"
+          url: "http://entertainment.ie/music/news/Eminems-new-album-Revival-features-Ed-Sheeran-on-one-song-yes-really/399935.htm"
+          quote: "He is one of the reasons I started writing songs, and was such a pleasure to work with him."
+      - type: "listening"
+        dimensions: ["melody-vocal", "rhythm"]
+        text: "Sheeran says he learned The Marshall Mathers LP by heart as a boy and describes Eminem’s rapping as very fast, melodic and percussive."
+        textRu: "Ширан рассказывает, что мальчиком выучил наизусть «The Marshall Mathers LP», и описывает рэп Эминема как очень быстрый, мелодичный и ударный."
+        source:
+          title: "ABC News: How Eminem Helped Ed Sheeran Overcome Stuttering (2015)"
+          url: "https://abcnews.com/Entertainment/eminem-helped-ed-sheeran-overcome-stuttering/story?id=31661107"
+          quote: "And he raps very fast and very melodically and very percussively"
+      - type: "critics"
+        dimensions: ["melody-vocal", "image"]
+        text: "Rolling Stone hears in Divide the blend of hip-hop bravado and everyday-bloke songwriting that made his breakthrough."
+        textRu: "Rolling Stone слышит в «Divide» ту смесь хип-хоповой бравады и песен простого парня, с которой начался его прорыв."
+        source:
+          title: "Rolling Stone: Maura Johnston, Review: Ed Sheeran’s ‘Divide’ (2017)"
+          url: "https://www.rollingstone.com/music/albumreviews/review-ed-sheerans-divide-w470271"
+          quote: "Sheeran doubles down on the blend of hip-hop bravado and everyday-bloke songwriting that helped him break out at the turn of the decade."
+    example:
+      song: "The Marshall Mathers LP (2000)"
+      text: "Sheeran says rapping Eminem’s album back to back as a child cured his stutter."
+      textRu: "Ширан говорит, что в детстве раз за разом читал этот альбом Эминема и так избавился от заикания."
+      source:
+        title: "The Standard: Ed Sheeran says Eminem ‘cured’ his childhood stutter (2023)"
+        url: "https://www.standard.co.uk/showbiz/ed-sheeran-eminem-cured-his-childhood-stutter-friendship-howard-stern-b1081401.html"
+        quote: "By learning that record and rapping it back to back to back to back, it cured my stutter,"
+  - to: "style:folk-rock"
+    kind: "style"
+    how: "Sheeran works in the acoustic singer-songwriter strand of folk-rock, as a folk-pop troubadour: one man with an acoustic guitar and a loop pedal, playing earnest, dressed-down songs."
+    howRu: "Ширан работает в акустической, авторской ветви фолк-рока как фолк-поп-трубадур: один человек с акустической гитарой и луп-педалью, искренние песни без прикрас."
+    carries: []
+    dimensions: ["sound", "performance", "image"]
+    scope: "career"
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "performance"]
+        text: "The Guardian’s Alexis Petridis describes his breakthrough as an austere, dressed-down act: one unassuming man, his guitar and a loop pedal."
+        textRu: "Алексис Петридис в Guardian описывает его прорыв как аскетичный, нарочито простой номер: один скромный человек, его гитара и луп-педаль."
+        source:
+          title: "The Guardian: Alexis Petridis, Grounded: how Ed Sheeran brought pop back down to earth (2019)"
+          url: "https://www.theguardian.com/music/2019/nov/18/how-ed-sheeran-brought-pop-back-down-to-earth"
+          quote: "one unassuming man, his guitar and a loop pedal."
+      - type: "critics"
+        dimensions: ["image"]
+        text: "Petridis places Sheeran at the head of a wave of earnest, boy-next-door troubadours."
+        textRu: "Петридис ставит Ширана во главе волны искренних трубадуров — «парней из соседнего двора»."
+        source:
+          title: "The Guardian: Alexis Petridis, Grounded: how Ed Sheeran brought pop back down to earth (2019)"
+          url: "https://www.theguardian.com/music/2019/nov/18/how-ed-sheeran-brought-pop-back-down-to-earth"
+          quote: "the wave of earnest, dressed-down, boy-next-door troubadours reached critical mass a few years ago, when the charts were packed with Sheeran-alikes"
+      - type: "critics"
+        dimensions: ["image"]
+        text: "Rolling Stone calls him a folk-pop troubadour."
+        textRu: "Rolling Stone называет его фолк-поп-трубадуром."
+        source:
+          title: "Rolling Stone: Maura Johnston, Review: Ed Sheeran’s ‘Divide’ (2017)"
+          url: "https://www.rollingstone.com/music/albumreviews/review-ed-sheerans-divide-w470271"
+          quote: "Our take on the folk-pop troubadour's third album"

@@ -13,18 +13,78 @@ place:
 placeRu: "Лондон"
 genre: Soul and folk
 genreRu: соул и фолк
+story: "Labi Siffre grew up on his brother’s records of modern jazz and trained as a jazz guitarist in Soho clubs, modelling his playing on Wes Montgomery. On that ground he built an intimate acoustic folk-rock of complex fretwork and high, unadorned singing."
+storyRu: "Лаби Сиффре вырос на пластинках модерн-джаза из коллекции брата и учился на джазового гитариста в клубах Сохо, равняясь на Уэса Монтгомери. На этой почве он построил камерный акустический фолк-рок — со сложной игрой на грифе и высоким, ничем не украшенным пением."
 links:
-  - to: card:jazz
-    kind: scene
-    claim: Labi Siffre worked as a jazz musician before his solo recording career.
-    claimRu: До сольной карьеры Лаби Сиффре работал джазовым музыкантом.
-    sources:
-      - title: 'NME: Siffre — enemy of the trendy cults, January 15, 1972'
-        url: https://www.worldradiohistory.com/UK/New-Musical-Express/1972/NME%201972-01-15.pdf
-      - title: 'Pitchfork: Labi Siffre — Crying Laughing Loving Lying'
-        url: https://pitchfork.com/reviews/albums/labi-siffre-crying-laughing-loving-lying/
-    carries: ["improvisation"]
-    how: Siffre learned music by improvising in jazz clubs.
-    howRu: Сиффре учился музыке, импровизируя в джаз-клубах.
-story: Before his solo recording career, Labi Siffre worked as a jazz musician. Jazz was part of his practical musical education.
-storyRu: До сольной карьеры Лаби Сиффре работал джазовым музыкантом. Джаз стал частью его музыкальной школы на практике.
+  - to: "card:jazz"
+    kind: "influence"
+    how: "Siffre formed as a jazz guitarist: modern-jazz records shaped his ear, he modelled his playing on Wes Montgomery and learned on the bandstand of Soho jazz clubs, and the complex fretwork stayed in his songs."
+    howRu: "Сиффре сложился как джазовый гитарист: слух ему поставили пластинки модерн-джаза, игру он строил по Уэсу Монтгомери и учился прямо на сцене джаз-клубов Сохо — и сложная игра на грифе осталась в его песнях."
+    carries: []
+    dimensions: ["sound", "melody-vocal", "performance"]
+    scope: "career"
+    evidence:
+      - type: "listening"
+        dimensions: []
+        text: "Siffre says his brother’s record collection, the largest influence on him as a musician, raised him on modern jazz and blues, from Coltrane, Monk and Mingus to Wes Montgomery and Sarah Vaughan."
+        textRu: "Сиффре рассказывает, что коллекция пластинок брата — самое большое влияние на него как музыканта — воспитала его на модерн-джазе и блюзе, от Колтрейна, Монка и Мингуса до Уэса Монтгомери и Сары Воан."
+        source:
+          title: "The Big Issue (Jamie Atkins): Labi Siffre — Letter to My Younger Self (2024)"
+          url: "https://bigissue.com/culture/music/labi-siffre-music-life-career-gay-black-husbands"
+          quote: "So I grew up listening to the best of blues and modern jazz – Ornette Coleman, John Coltrane, Monk, Miles, Mingus, Howlin’ Wolf, John Lee Hooker, straight through to Ellington, Bird, Wes Montgomery, Oscar Peterson, Erroll Garner, Ella, the divine Sarah Vaughan, Mel Tormé, Little Richard, Fats Domino."
+      - type: "critics"
+        dimensions: ["sound", "performance"]
+        text: "Pitchfork says he modelled his guitar style on Wes Montgomery while playing in a trio at Annie Ross’s jazz club, learning from visiting jazz singers."
+        textRu: "Pitchfork пишет, что он строил свою гитарную манеру по Уэсу Монтгомери, играя в трио в джаз-клубе Энни Росс и учась у заезжих джазовых певцов."
+        source:
+          title: "Pitchfork (Eric Torres): Labi Siffre — Crying Laughing Loving Lying (2023)"
+          url: "https://pitchfork.com/reviews/albums/labi-siffre-crying-laughing-loving-lying/"
+          quote: "Modeling his bluesy style after legendary guitarist Wes Montgomery, the moonlighting allowed Siffre to hone his skills while encountering a series of stars: Mose Allison, Betty Carter, and Joe Williams all passed through the club"
+      - type: "critics"
+        dimensions: ["sound", "melody-vocal"]
+        text: "Pitchfork hears those early influences in his complex fretwork and sweet, yearning melodies."
+        textRu: "Pitchfork слышит эти ранние влияния в его сложной игре на грифе и в сладких, щемящих мелодиях."
+        source:
+          title: "Pitchfork (Eric Torres): Labi Siffre — Crying Laughing Loving Lying (2023)"
+          url: "https://pitchfork.com/reviews/albums/labi-siffre-crying-laughing-loving-lying/"
+          quote: "Those early influences often bubble up in Siffre’s music, delivered through his complex fretwork, bittersweet lyricism, and a sense of wilted yearning bound in sweet melodies."
+      - type: "testimony"
+        dimensions: []
+        text: "Rolling Stone reports that as a boy he saw himself becoming a jazz guitarist."
+        textRu: "Rolling Stone пишет, что мальчиком он видел себя джазовым гитаристом."
+        source:
+          title: "Rolling Stone: Labi Siffre and “Crying Laughing Loving Lying” in The Holdovers (2024)"
+          url: "https://www.rollingstone.com/music/music-features/the-holdovers-song-crying-laughing-loving-lying-labi-siffre-1234939657/"
+          quote: "envisioned himself becoming a jazz guitarist."
+  - to: "style:folk-rock"
+    kind: "style"
+    how: "Siffre’s own records are intimate acoustic folk-rock: songs carried by a single guitar and a high, unadorned voice, set against the psychedelic English folk of his time."
+    howRu: "Собственные пластинки Сиффре — камерный акустический фолк-рок: песни держатся на одной гитаре и высоком, ничем не украшенном голосе, наперекор психоделическому английскому фолку того времени."
+    carries: []
+    dimensions: ["sound", "melody-vocal", "performance"]
+    scope: "career"
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "melody-vocal"]
+        text: "Pitchfork calls Crying Laughing Loving Lying an intimate, delicate collection of folk-rock and stresses his acoustic guitar and high voice."
+        textRu: "Pitchfork называет Crying Laughing Loving Lying камерным, хрупким сборником фолк-рока и выделяет его акустическую гитару и высокий голос."
+        source:
+          title: "Pitchfork (Eric Torres): Labi Siffre — Crying Laughing Loving Lying (2023)"
+          url: "https://pitchfork.com/reviews/albums/labi-siffre-crying-laughing-loving-lying/"
+          quote: "an intimate and delicate collection of queer folk-rock from one of the best voices in his generation."
+      - type: "critics"
+        dimensions: ["sound", "melody-vocal"]
+        text: "Pitchfork attributes the warmth of his music to his acoustic guitar and high-pitched voice."
+        textRu: "Pitchfork объясняет теплоту его музыки акустической гитарой и высоким голосом."
+        source:
+          title: "Pitchfork (Eric Torres): Labi Siffre — Crying Laughing Loving Lying (2023)"
+          url: "https://pitchfork.com/reviews/albums/labi-siffre-crying-laughing-loving-lying/"
+          quote: "That intimacy, drawn from Siffre’s faithful acoustic guitar and his inimitable, high-pitched voice"
+      - type: "critics"
+        dimensions: ["performance"]
+        text: "Rolling Stone says his career clicked when he began playing a folk club in Amsterdam with just his guitar."
+        textRu: "Rolling Stone пишет, что всё сложилось, когда он стал выступать в амстердамском фолк-клубе с одной гитарой."
+        source:
+          title: "Rolling Stone: Labi Siffre and “Crying Laughing Loving Lying” in The Holdovers (2024)"
+          url: "https://www.rollingstone.com/music/music-features/the-holdovers-song-crying-laughing-loving-lying-labi-siffre-1234939657/"
+          quote: "There, Siffre started playing at a folk club, accompanied by just his guitar, and something clicked."

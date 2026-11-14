@@ -15,46 +15,103 @@ place:
 placeRu: "Лондон"
 genre: Soul and jazz
 genreRu: соул и джаз
+story: "Amy Winehouse said she learned to sing from Dinah Washington: from her she took a smoky timbre, blues-drenched phrasing and the habit of making a song her own. She sang as a jazz singer, scatting on record and changing melodies night after night on stage, and on Back to Black turned this voice towards R&B and the girl groups of the 1960s."
+storyRu: "Эми Уайнхаус говорила, что петь училась у Дайны Вашингтон: у неё она взяла дымный тембр, насквозь блюзовую фразировку и привычку делать песню своей. Она пела как джазовая певица — скэтом на записи, с новыми мелодиями каждый вечер на сцене, — а на «Back to Black» повернула этот голос к ритм-н-блюзу и женским группам 1960-х."
 links:
-  - to: card:jazz
-    claim: Amy Winehouse recorded the jazz standard “Moody’s Mood for Love” on her debut album Frank.
-    claimRu: Эми Уайнхаус записала джазовый стандарт «Moody’s Mood for Love» на своём дебютном альбоме Frank.
-    sources:
-      - title: 'NME: The Amy Winehouse Band on why she was so special'
-        url: https://www.nme.com/features/music-interviews/amy-winehouse-band-dale-davis-3612156
-      - title: 'Beat: Frank is a testament to the brilliance of Amy Winehouse'
-        url: https://beat.com.au/16-years-on-frank-is-a-testament-to-the-brilliance-of-amy-winehouse/
-    kind: cover
-    what: "“Moody’s Mood for Love”, the jazz vocalese standard, on Frank."
-    whatRu: Джазовый вокальный стандарт «Moody’s Mood for Love» на альбоме «Frank».
-    carries: ["improvisation"]
-    how: 'Winehouse took jazz singing’s habit of improvising: on stage she changed melodies night after night instead of repeating the record.'
-    howRu: 'Уайнхаус переняла у джазового пения привычку импровизировать: на сцене она каждый вечер меняла мелодию, а не повторяла запись.'
-  - to: root:dinah-washington
-    kind: influence
-    claim: Dinah Washington was one of the jazz singers who shaped Amy Winehouse’s musical style.
-    claimRu: Дайна Вашингтон была одной из джазовых певиц, сформировавших музыкальный стиль Эми Уайнхаус.
-    sources:
-      - title: 'GRAMMY Museum: Beyond Black — The Style of Amy Winehouse'
-        url: https://grammymuseum.org/wp-content/uploads/2020/02/Amy-Winehouse-Exhibit-Press-Release_FINAL-d88d68fdbf.pdf
-      - title: 'Design Museum: Amy — Beyond the Stage'
-        url: https://designmuseum.org/asset/download?id=98f1cd4d-370a-4875-9221-a69f4fe4dc27
+  - to: "root:dinah-washington"
+    kind: "influence"
+    how: "Winehouse took from Dinah Washington a smoky timbre, blues-drenched, freely phrased singing and the interpreter’s habit of remaking a standard so completely that it becomes hers."
+    howRu: "Уайнхаус взяла у Дайны Вашингтон дымный тембр, насквозь блюзовое, свободно фразированное пение и привычку интерпретатора переделывать стандарт так, что он становится её собственным."
     carries: []
-    how: A named influence on Winehouse’s style among other jazz singers; the sources do not say which element of Dinah Washington’s singing she took.
-    howRu: Названное влияние на стиль Уайнхаус в ряду других джазовых певиц; какой именно элемент пения Дайны Вашингтон она взяла, источники не говорят.
-  - to: root:marvin-gaye
-    kind: sample
-    claim: "“Tears Dry on Their Own” is built on a sample of Marvin Gaye and Tammi Terrell’s “Ain’t No Mountain High Enough”."
-    claimRu: «Tears Dry on Their Own» построена на сэмпле из «Ain’t No Mountain High Enough» Марвина Гэя и Тамми Террелл.
-    sources:
-      - title: 'Classic Motown: Marvin Gaye & Tammi Terrell — United'
-        url: https://classic.motown.com/story/marvin-gaye-tammi-terrell-united/
-      - title: 'NPR The Formula: Salaam Remi on sampling for Nas and Amy Winehouse'
-        url: https://www.npr.org/2020/05/02/849076752/salaam-remi-sampling-amy-winehouse-nas-apache-marvin-gaye-tammi-terrell
-    what: The backing of the 1967 Marvin Gaye/Tammi Terrell recording of “Ain’t No Mountain High Enough”, sampled and looped by producer Salaam Remi under Winehouse’s vocal in “Tears Dry on Their Own”.
-    whatRu: Аккомпанемент записи «Ain’t No Mountain High Enough» Марвина Гэя и Тамми Террелл 1967 года, который продюсер Салаам Реми засэмплировал и зациклил под голосом Уайнхаус в «Tears Dry on Their Own».
-    carries: ["sampling"]
-    how: 'The hip-hop method of sampling: Winehouse’s producer built “Tears Dry on Their Own” on a Motown recording.'
-    howRu: 'Хип-хоповый метод сэмплирования: продюсер Уайнхаус построил «Tears Dry on Their Own» на записи «Мотауна».'
-story: Dinah Washington helped shape Amy Winehouse’s musical style, and Frank included the jazz standard “Moody’s Mood for Love”. “Tears Dry on Their Own” is built on a sample of Marvin Gaye and Tammi Terrell’s “Ain’t No Mountain High Enough”.
-storyRu: Дайна Вашингтон повлияла на музыкальный стиль Эми Уайнхаус, а в «Frank» вошёл джазовый стандарт «Moody’s Mood for Love». А «Tears Dry on Their Own» построена на сэмпле из «Ain’t No Mountain High Enough» Марвина Гэя и Тамми Террелл.
+    dimensions: ["melody-vocal", "sound", "performance"]
+    scope: "career"
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "In a 2006 BBC interview Winehouse said that she learned to sing from Dinah Washington."
+        textRu: "В интервью Би-би-си 2006 года Уайнхаус сказала, что петь она научилась у Дайны Вашингтон."
+        source:
+          title: "Mental Floss: The Jazz Legend Amy Winehouse Said Taught Her How to Sing (2026)"
+          url: "https://www.mentalfloss.com/entertainment/music/jazz-legend-taught-amy-winehouse-to-sing"
+          quote: "“I learned to sing from Dinah Washington,” she said. “It wasn’t just the vocal jazz—I learned from everything, really.”"
+      - type: "testimony"
+        dimensions: ["performance"]
+        text: "In 2003 Winehouse named as her idols singers who made songs completely theirs, and Dinah Washington above all."
+        textRu: "В 2003 году Уайнхаус назвала своими кумирами тех, кто делал песни целиком своими, и прежде всего Дайну Вашингтон."
+        source:
+          title: "Dazed: Amy Winehouse 1983–2011 (2003 interview, republished 2011)"
+          url: "https://www.dazeddigital.com/music/article/10978/1/amy-winehouse-1983-2011"
+          quote: "My idols are people that took songs and made them completely theirs. Which is why Dinah Washington is one of my favourite singers because she was doing the same songs everyone was doing"
+      - type: "critics"
+        dimensions: ["melody-vocal", "sound"]
+        text: "uDiscover Music hears Washington’s smoky timbre and blues-drenched phrasing in Winehouse’s singing, combined with hip-hop, soul and pop."
+        textRu: "uDiscover Music слышит в пении Уайнхаус дымный тембр и насквозь блюзовую фразировку Вашингтон, соединённые с хип-хопом, соулом и поп-музыкой."
+        source:
+          title: "uDiscover Music: Amy Winehouse, Jazz Singer — An Appreciation of Her Vocal Talent"
+          url: "https://www.udiscovermusic.com/stories/amy-winehouse-jazz-singer-feature"
+          quote: "Winehouse assimilated Washington’s smoky timbre and blues-drenched phrasing, Vaughan’s fluttery vibrato and Fitzgerald’s ability to improvise (or “scat”) and combined those features with elements drawn from hip-hop, soul and pop to create a distinctive musical identity."
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "Her father, Mitch Winehouse, hears a lot of Dinah Washington in her voice and says Amy took on Washington’s freestyle manner."
+        textRu: "Её отец Митч Уайнхаус слышит в её голосе многое от Дайны Вашингтон и говорит, что Эми переняла её свободную манеру."
+        source:
+          title: "Complex: Mitch Winehouse interview"
+          url: "https://www.complex.com/music/a/julian-kimble/mitch-winehouse-interview"
+          quote: "Sarah Vaughn was obviously brilliantly technically, but she sang like an opera singer, and Dinah Washington, more than Ella, was very freestyle and Amy became very much like that."
+  - to: "card:jazz"
+    kind: "style"
+    how: "Winehouse sang as a jazz vocalist: standards and scat on record, and on stage new melodies improvised night after night."
+    howRu: "Уайнхаус пела как джазовая вокалистка: стандарты и скэт на записи, а на сцене — новые мелодии, сымпровизированные каждый вечер заново."
+    carries: ["improvisation"]
+    dimensions: ["melody-vocal", "performance"]
+    scope: "career"
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "Winehouse said in 2003 that she had been singing jazz for about six years."
+        textRu: "В 2003 году Уайнхаус говорила, что поёт джаз уже лет шесть."
+        source:
+          title: "Dazed: Amy Winehouse 1983–2011 (2003 interview, republished 2011)"
+          url: "https://www.dazeddigital.com/music/article/10978/1/amy-winehouse-1983-2011"
+          quote: "Yeah, I’ve been singing jazz for maybe six years."
+      - type: "critics"
+        dimensions: ["melody-vocal", "performance"]
+        text: "On Frank, uDiscover Music notes, her jazz influences were on full display, including an improvised scat section."
+        textRu: "На «Frank», отмечает uDiscover Music, её джазовые корни видны в полную силу, вплоть до импровизированного скэта."
+        source:
+          title: "uDiscover Music: Amy Winehouse, Jazz Singer — An Appreciation of Her Vocal Talent"
+          url: "https://www.udiscovermusic.com/stories/amy-winehouse-jazz-singer-feature"
+          quote: "She channelled her inner Ella Fitzgerald on the improvised scat section featured in “Know You Now,”"
+      - type: "testimony"
+        dimensions: ["performance"]
+        text: "Her bassist and bandleader Dale Davis recalls that she changed melodies from night to night and improvised every show."
+        textRu: "Её басист и руководитель группы Дейл Дэвис вспоминает, что она меняла мелодии от вечера к вечеру и импровизировала на каждом концерте."
+        source:
+          title: "NME: The Amy Winehouse Band on why she was so special"
+          url: "https://www.nme.com/features/music-interviews/amy-winehouse-band-dale-davis-3612156"
+          quote: "After four nights of singing the same song, she would introduce new melodies and change things around so everything was different. That ended up being one of her downfalls because she improvised every night"
+  - to: "style:soul"
+    kind: "style"
+    scope: "period"
+    period: "2006 (Back to Black)"
+    how: "On Back to Black Winehouse moved into R&B-tinged soul shaped by Donny Hathaway and the girl groups of the 1960s, while still phrasing as a jazz singer."
+    howRu: "На «Back to Black» Уайнхаус ушла в соул с ритм-н-блюзовым оттенком, сложившийся под влиянием Донни Хатауэя и женских групп 1960-х, но фразировала по-прежнему как джазовая певица."
+    carries: []
+    dimensions: ["sound"]
+    evidence:
+      - type: "listening"
+        dimensions: ["sound"]
+        text: "Her father says that as she got older she listened to Donny Hathaway and the 1960s girl groups, and that this listening shaped Back to Black."
+        textRu: "Отец рассказывает, что, повзрослев, она слушала Донни Хатауэя и женские группы 1960-х и что это слушание определило «Back to Black»."
+        source:
+          title: "Complex: Mitch Winehouse interview"
+          url: "https://www.complex.com/music/a/julian-kimble/mitch-winehouse-interview"
+          quote: "As she got older she started listening to Donnie Hathaway and the girl groups of the '60s, which influenced Back to Black ."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "uDiscover Music describes the sound of Back to Black as R&B-tinged, approached with a jazz singer’s sensibility."
+        textRu: "uDiscover Music называет звучание «Back to Black» окрашенным ритм-н-блюзом, но поданным с чутьём джазовой певицы."
+        source:
+          title: "uDiscover Music: Amy Winehouse, Jazz Singer — An Appreciation of Her Vocal Talent"
+          url: "https://www.udiscovermusic.com/stories/amy-winehouse-jazz-singer-feature"
+          quote: "Though her jazz influences were not so apparent on her more successful second album, 2006’s Back To Black , where her sonic landscape was R&B-tinged, Winehouse still approached her material with the sensibility and mindset of a jazz singer"

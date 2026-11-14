@@ -14,20 +14,81 @@ place:
 placeRu: "Рединг, Пенсильвания"
 genre: Country pop
 genreRu: кантри-поп
+story: "Taylor Swift formed her style in country music: from the age of six she listened to LeAnn Rimes and the women of Nineties country, and her first records turned teenage life into story songs with fiddles and vocal twang. On 1989 she turned to the synth-pop of the late Eighties."
+storyRu: "Тейлор Свифт сложилась в кантри: с шести лет она слушала Лиэнн Раймс и женщин кантри девяностых, а её первые пластинки превращали жизнь подростка в песни-истории со скрипками и певучим выговором. На «1989» она обратилась к синти-попу конца восьмидесятых."
 links:
-  - to: card:funk
-    claim: Taylor Swift recorded a cover of Earth, Wind & Fire’s “September”.
-    claimRu: Тейлор Свифт записала кавер на «September» группы Earth, Wind & Fire.
-    sources:
-      - title: 'NPR / WBGO: Taylor Swift Covers Earth, Wind & Fire’s September'
-        url: https://www.wbgo.org/2018-04-13/you-know-what-fine-taylor-swift-covers-earth-wind-fires-september
-      - title: 'Library of Congress: Rickey Vincent on September'
-        url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/September.pdf
-    kind: cover
-    what: Earth, Wind & Fire’s “September”, newly performed by Swift.
-    whatRu: Песня Earth, Wind & Fire «September» в новом исполнении Свифт.
+  - to: "style:country"
+    kind: "style"
+    how: "Swift grew up on Nineties country and began as a Nashville country singer: diaristic story songs in the old country craft of storytelling, fiddle and banjo colour, and a twanged vocal delivery."
+    howRu: "Свифт выросла на кантри девяностых и начинала как нэшвиллская кантри-певица: песни-дневники в старой кантри-традиции рассказа, краски скрипки и банджо, певучий «южный» выговор."
     carries: []
-    how: 'A cover of a funk-era hit: repertoire, not a documented element.'
-    howRu: 'Кавер на хит эпохи фанка: репертуар, а не задокументированный приём.'
-story: Taylor Swift reached into funk with a cover. She recorded her own version of Earth, Wind & Fire’s “September”.
-storyRu: К фанку Тейлор Свифт обратилась через кавер. Она записала свою версию «September» группы Earth, Wind & Fire.
+    dimensions: ["harmony-form", "sound", "melody-vocal"]
+    scope: "career"
+    evidence:
+      - type: "listening"
+        dimensions: []
+        text: "Swift says that after discovering a LeAnn Rimes record at six she wanted to hear only country, and loved the female country artists of the Nineties."
+        textRu: "Свифт рассказывает, что в шесть лет открыла для себя пластинку Лиэнн Раймс и с тех пор хотела слушать только кантри, полюбив женщин кантри девяностых."
+        source:
+          title: "Rolling Stone: Vanessa Grigoriadis, The Very Pink, Very Perfect Life of Taylor Swift (2009)"
+          url: "https://www.rollingstone.com/music/music-country/the-very-pink-very-perfect-life-of-taylor-swift-107451/"
+          quote: "At six, she discovered a LeAnn Rimes record, which she began to listen to compulsively. “All I wanted to hear from then on was country,” she says. “I loved the amazing female country artists of the Nineties — Faith, Shania, the Dixie Chicks — each with an incredible sound and standing for incredible things.”"
+      - type: "critics"
+        dimensions: ["harmony-form"]
+        text: "In the same profile her writing is credited with the storytelling that marks old-school country song-craft."
+        textRu: "В том же очерке её песням приписывают умение рассказывать — примету старой кантри-школы песенного ремесла."
+        source:
+          title: "Rolling Stone: Vanessa Grigoriadis, The Very Pink, Very Perfect Life of Taylor Swift (2009)"
+          url: "https://www.rollingstone.com/music/music-country/the-very-pink-very-perfect-life-of-taylor-swift-107451/"
+          quote: "You can hear great pop sensibilities in her writing as well as great storytelling, which is the trademark of old-school country song-crafting."
+      - type: "critics"
+        dimensions: ["sound", "melody-vocal", "harmony-form"]
+        text: "Pitchfork hears her debut as a country record whose genre signifiers are fiddles and vocal twang, built from songs about the lives of her peers."
+        textRu: "Pitchfork слышит в её дебюте кантри-пластинку, где приметы жанра — скрипки и певучий выговор, а песни рассказывают о жизни её сверстников."
+        source:
+          title: "Pitchfork: Maura Johnston, Taylor Swift — Taylor Swift (review, 2019)"
+          url: "https://pitchfork.com/reviews/albums/taylor-swift-taylor-swift/"
+          quote: "chief genre signifiers, like fiddles and vocal twang, are rooted in ’00s Nashville tropes"
+      - type: "critics"
+        dimensions: ["harmony-form"]
+        text: "Pitchfork describes her craft of turning her own experiences into country songs."
+        textRu: "Pitchfork описывает её умение превращать собственные переживания в песни кантри."
+        source:
+          title: "Pitchfork: Maura Johnston, Taylor Swift — Taylor Swift (review, 2019)"
+          url: "https://pitchfork.com/reviews/albums/taylor-swift-taylor-swift/"
+          quote: "meticulously turning her experiences with boys and with her girlfriends into country songs that reflected the lives of her peers"
+  - to: "style:synth-pop"
+    kind: "style"
+    how: "For 1989 Swift traded guitars for new-wave synthesizers and the polished, propulsive synth-pop production of the late Eighties, which she says she was obsessed with."
+    howRu: "Для «1989» Свифт сменила гитары на синтезаторы новой волны и отполированный, напористый синти-поп конца восьмидесятых, которым, по её словам, была одержима."
+    carries: []
+    dimensions: ["sound", "melody-vocal"]
+    scope: "period"
+    period: "2014 (1989)"
+    evidence:
+      - type: "testimony"
+        dimensions: ["sound", "melody-vocal"]
+        text: "Swift says the sounds of the Eighties she was obsessed with, like synth pop, shaped the album, naming late-Eighties production and vocal styling."
+        textRu: "Свифт говорит, что альбом строился на звуках восьмидесятых, которыми она была одержима, — синти-попе, — и называет продюсерский звук и манеру пения конца десятилетия."
+        source:
+          title: "Billboard: Taylor Swift on new album 1989 (2014)"
+          url: "https://www.billboard.com/music/pop/taylor-swift-on-new-album-1989-6296366/"
+          quote: "Playing around with different sounds has been exciting as well — sounds from the ’80s I was obsessed with, like, synth pop. I love the production of Peter Gabriel and Madonna in the late ’80s, and Annie Lennox and Sinéad O’Connor as far as vocal styling."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Pitchfork names the polished, propulsive synth-pop of “Style” as the album’s clearest statement."
+        textRu: "Pitchfork называет отполированный, напористый синти-поп «Style» самым ясным высказыванием альбома."
+        source:
+          title: "Pitchfork: Vrinda Jagota, Taylor Swift — 1989 (review, 2019)"
+          url: "https://pitchfork.com/reviews/albums/taylor-swift-1989/"
+          quote: "The polished, propulsive synth-pop of album highlight “Style” showcases it best"
+notes:
+  - period: "2014 (1989)"
+    who: "Max Martin"
+    role: "producer"
+    what: "Max Martin, with Shellback, co-wrote and produced most of 1989."
+    whatRu: "Макс Мартин вместе со Шеллбэком стал соавтором и продюсером большей части «1989»."
+    source:
+      title: "Pitchfork: Taylor Swift — 1989 (Taylor’s Version) (review, 2023)"
+      url: "https://pitchfork.com/reviews/albums/taylor-swift-1989-taylors-version/"
+      quote: "Max Martin and Shellback, who co-wrote and produced most of the record"

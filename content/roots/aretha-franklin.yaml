@@ -14,18 +14,78 @@ place:
 placeRu: "Мемфис, Теннесси"
 genre: Soul and gospel
 genreRu: соул и госпел
+story: "Aretha Franklin’s style was gospel through and through: the riffs, bent notes, melisma and circling of the beat that she carried into R&B, soul and pop, the gospel piano she taught herself, and a stage manner of church abandon. Critics also hear in her the secular line of Dinah Washington, who coached her singing as a girl."
+storyRu: "Стиль Ареты Франклин — госпел насквозь: риффы, подтянутые ноты, мелизмы и пение вокруг доли, которые она перенесла в ритм-н-блюз, соул и поп, госпеловое фортепиано, освоенное ею самоучкой, и церковная самоотдача на сцене. Критики слышат в ней и светскую линию Дайны Вашингтон, которая в детстве учила её петь."
 links:
-  - to: card:gospel
-    kind: scene
-    claim: Aretha Franklin began her singing career in her father’s church and on his gospel tours.
-    claimRu: Арета Франклин начала певческую карьеру в церкви своего отца и в его госпел-гастролях.
-    sources:
-      - title: 'Detroit Historical Society: Aretha Franklin'
-        url: https://www.detroithistorical.org/learn/online-research/encyclopedia-of-detroit/franklin-aretha
-      - title: 'TIME: Aretha Franklin’s passing is the end of an era'
-        url: https://time.com/5367138/aretha-franklin-appreciation/
+  - to: "card:gospel"
+    kind: "style"
+    how: "Franklin’s whole vocal technique — riffs, bent notes, melisma, singing around the beat — came from gospel, as did her self-taught gospel piano and the church abandon of her stage manner."
+    howRu: "Вся вокальная техника Франклин — риффы, подтянутые ноты, мелизмы, пение вокруг доли — пришла из госпела; оттуда же её госпеловое фортепиано, освоенное самоучкой, и церковная самоотдача на сцене."
     carries: ["gospel-vocal"]
-    how: 'Aretha Franklin’s voice was formed in gospel: her father’s church and the gospel singer Clara Ward were her models.'
-    howRu: 'Голос Ареты Франклин сложился в госпеле: её образцами были церковь отца и госпел-певица Клара Уорд.'
-story: Aretha Franklin’s singing career began in her father’s church. It continued on his gospel tours.
-storyRu: Певческая карьера Ареты Франклин началась в церкви отца. Затем она продолжилась в его госпел-гастролях.
+    dimensions: ["melody-vocal", "harmony-form", "performance"]
+    evidence:
+      - type: "analysis"
+        dimensions: ["melody-vocal"]
+        text: "David Remnick in The New Yorker lists her riffs, bent notes, melisma and circling of the beat, which the gospel scholar Anthony Heilbut calls pure gospel."
+        textRu: "Дэвид Ремник в The New Yorker перечисляет её риффы, подтянутые ноты, мелизмы и пение вокруг доли, а исследователь госпела Энтони Хейлбат называет всё это чистым госпелом."
+        source:
+          title: "The New Yorker: Soul Survivor — Aretha Franklin’s American soul (David Remnick, 2016)"
+          url: "https://www.newyorker.com/magazine/2016/04/04/aretha-franklins-american-soul"
+          quote: "She could riff, bending notes as if high on the neck of a guitar; she had fantastic range and command of every effect, from melisma to circling the beat. These techniques came into play in her career in R. & B., soul, and pop, but “all that was echt gospel,” according to the scholar Anthony Heilbut."
+      - type: "analysis"
+        dimensions: ["harmony-form"]
+        text: "The same article notes that the gospel star James Cleveland showed her how to play gospel chords."
+        textRu: "В той же статье сказано, что звезда госпела Джеймс Кливленд показал ей, как играть госпеловые аккорды."
+        source:
+          title: "The New Yorker: Soul Survivor — Aretha Franklin’s American soul (David Remnick, 2016)"
+          url: "https://www.newyorker.com/magazine/2016/04/04/aretha-franklins-american-soul"
+          quote: "The Reverend James Cleveland, a pillar of the gospel world, showed Aretha how to play gospel chords."
+      - type: "critics"
+        dimensions: ["harmony-form", "melody-vocal"]
+        text: "Richard Williams’s Guardian obituary says she mastered gospel piano by ear and calls her heir to the sacred tradition of Mahalia Jackson and Clara Ward."
+        textRu: "Ричард Уильямс в некрологе для The Guardian пишет, что она освоила госпеловое фортепиано на слух, и называет её наследницей церковной традиции Махалии Джексон и Клары Уорд."
+        source:
+          title: "The Guardian: Aretha Franklin obituary (Richard Williams, 2018)"
+          url: "https://www.theguardian.com/music/2018/aug/16/aretha-franklin-obituary"
+          quote: "Rejecting formal keyboard lessons as a child, she learned to play by ear and mastered the techniques of gospel piano."
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "The Detroit Historical Society, citing her autobiography, names her father and the gospel singer Clara Ward as major influences."
+        textRu: "Детройтское историческое общество со ссылкой на её автобиографию называет главными влияниями отца и госпел-певицу Клару Уорд."
+        source:
+          title: "Detroit Historical Society, Encyclopedia of Detroit: Aretha Franklin"
+          url: "https://www.detroithistorical.org/learn/online-research/encyclopedia-of-detroit/franklin-aretha"
+          quote: "Franklin’s father and gospel singer Clara Ward were major influences, according to Franklin’s autobiography Aretha, From These Roots ."
+      - type: "critics"
+        dimensions: ["performance", "melody-vocal"]
+        text: "Rolling Stone’s obituary hears a “gospel roar” and quotes Jerry Wexler on her “conducting church” in a nightclub."
+        textRu: "Некролог Rolling Stone слышит у неё «госпеловый рык» и приводит слова Джерри Уэкслера о том, что она «правит церковную службу» прямо в ночном клубе."
+        source:
+          title: "Rolling Stone: Aretha Franklin, Queen of Soul, Dead at 76 (2018)"
+          url: "https://www.rollingstone.com/music/music-news/aretha-franklin-queen-of-soul-dead-at-76-119453/"
+          quote: "It’s Aretha conducting church right in the middle of a smoky nightclub. It’s everything to everyone."
+    scope: "career"
+  - to: "root:dinah-washington"
+    kind: "influence"
+    how: "Beside the sacred line, Franklin’s singing descends from the secular blues and jazz vocal of Dinah Washington, who coached her as a girl."
+    howRu: "Рядом с церковной линией пение Франклин наследует светскому блюзовому и джазовому вокалу Дайны Вашингтон, которая учила её петь ещё девочкой."
+    carries: []
+    dimensions: ["melody-vocal"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The Guardian obituary calls her the lineal descendant of the secular Bessie Smith and Dinah Washington."
+        textRu: "Некролог The Guardian называет её прямой наследницей светских Бесси Смит и Дайны Вашингтон."
+        source:
+          title: "The Guardian: Aretha Franklin obituary (Richard Williams, 2018)"
+          url: "https://www.theguardian.com/music/2018/aug/16/aretha-franklin-obituary"
+          quote: "She was both the heir to the sacred tradition of Mahalia Jackson and Clara Ward, frequent visitors to her childhood home, and the lineal descendant of the very secular Bessie Smith and Dinah Washington."
+      - type: "analysis"
+        dimensions: ["melody-vocal"]
+        text: "The New Yorker, drawing on Nick Salvatore’s biography of her father, records that Dinah Washington coached the Franklin girls on their singing."
+        textRu: "The New Yorker со ссылкой на биографию её отца, написанную Ником Сальваторе, сообщает, что Дайна Вашингтон учила сестёр Франклин петь."
+        source:
+          title: "The New Yorker: Soul Survivor — Aretha Franklin’s American soul (David Remnick, 2016)"
+          url: "https://www.newyorker.com/magazine/2016/04/04/aretha-franklins-american-soul"
+          quote: "Dinah Washington coached the girls on their singing."
+    scope: "career"

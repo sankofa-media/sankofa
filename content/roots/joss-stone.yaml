@@ -14,32 +14,88 @@ place:
 placeRu: "Дувр, Кент"
 genre: Soul / R&B
 genreRu: соул / ритм-н-блюз
+story: "Joss Stone says her voice came from listening to Aretha Franklin, her first and biggest influence, and from trying to make listeners feel what a soul singer made her feel. Critics heard a throaty roar between Janis Joplin and Mavis Staples and placed her from the start in classic soul, sung over a tight band of R&B veterans."
+storyRu: "Джосс Стоун говорит, что её голос родился из слушания Ареты Франклин, первого и главного её образца, и из желания, чтобы слушатель чувствовал то, что заставляли чувствовать её соул-певцы. Критики услышали в нём хриплый рёв где-то между Дженис Джоплин и Мейвис Стейплс и с самого начала отнесли Стоун к классическому соулу, спетому под плотный аккомпанемент ветеранов ритм-н-блюза."
 links:
-  - to: root:the-white-stripes
-    claim: On The Soul Sessions, Joss Stone remade the White Stripes’ “Fell in Love with a Girl” as “Fell in Love with a Boy”.
-    claimRu: На альбоме The Soul Sessions Джосс Стоун переосмыслила «Fell in Love with a Girl» группы The White Stripes, переименовав её в «Fell in Love with a Boy».
-    sources:
-      - title: 'musicOMH: Joss Stone — The Soul Sessions'
-        url: https://www.musicomh.com/reviews/albums/joss-stone-the-soul-sessions
-      - title: 'Apple Music: The Soul Sessions editorial album note'
-        url: https://music.apple.com/us/album/the-soul-sessions/712408255
-    kind: cover
-    what: The White Stripes’ “Fell in Love with a Girl”, remade as “Fell in Love with a Boy” on The Soul Sessions.
-    whatRu: Песня The White Stripes «Fell in Love with a Girl», переосмысленная как «Fell in Love with a Boy» на альбоме «The Soul Sessions».
+  - to: "root:aretha-franklin"
+    kind: "influence"
+    how: "Stone modelled her big, emotionally direct soul singing on Aretha Franklin, aiming to move listeners the way Franklin’s records moved her."
+    howRu: "Свою мощную, эмоционально прямую соул-манеру Стоун строила по Арете Франклин и хотела трогать слушателей так же, как её трогали пластинки Франклин."
     carries: []
-    how: Stone turned a White Stripes song into a funk jam with soul musicians; the element came from her soul band, not from the White Stripes.
-    howRu: Стоун превратила песню White Stripes в фанк-джем с соул-музыкантами; элемент пришёл от её соул-состава, а не от White Stripes.
-  - to: root:aretha-franklin
-    kind: influence
-    claim: Joss Stone traces her singing to childhood listening to Aretha Franklin.
-    claimRu: Джосс Стоун связывает свою манеру пения с тем, как в детстве слушала Арету Франклин.
-    sources:
-      - title: 'The Guardian: Purely belter — Joss Stone interview'
-        url: https://www.theguardian.com/music/2003/nov/14/popandrock1
-      - title: 'Mike Ragogna: Joss Stone interview (2011), archived by Stone’d Records'
-        url: https://www.stoned-records.com/news/joss-stone/chatting-with-joss-stone
-    carries: ["gospel-vocal"]
-    how: Stone says her voice came from listening to Aretha Franklin, the gospel-trained soul singer.
-    howRu: Стоун говорит, что её голос родился из слушания Ареты Франклин, соул-певицы госпеловой школы.
-story: Joss Stone traces her singing to childhood listening to Aretha Franklin. On The Soul Sessions, she turned the White Stripes’ “Fell in Love with a Girl” into “Fell in Love with a Boy”.
-storyRu: Джосс Стоун связывает свою манеру пения с тем, как в детстве слушала Арету Франклин. На «The Soul Sessions» она превратила «Fell in Love with a Girl» группы The White Stripes в «Fell in Love with a Boy».
+    dimensions: ["melody-vocal", "performance"]
+    scope: "career"
+    evidence:
+      - type: "listening"
+        dimensions: ["melody-vocal"]
+        text: "Asked where her voice came from, Stone pointed to the music she listened to, starting with an Aretha Franklin CD at ten."
+        textRu: "На вопрос, откуда у неё такой голос, Стоун ответила, что он из музыки, которую она слушала, — начиная с диска Ареты Франклин в десять лет."
+        source:
+          title: "The Guardian, Alexis Petridis: Purely belter — Joss Stone interview (2003)"
+          url: "https://www.theguardian.com/music/2003/nov/14/popandrock1"
+          quote: "\"Where did my voice come from? I don't know. I think it was just the music I listened to. I had an Aretha Franklin CD when I was 10 and I listened to Lauryn Hill a lot."
+      - type: "testimony"
+        dimensions: ["performance"]
+        text: "Stone calls Franklin her major influence and says that, approaching a song, she tries to do to listeners what Aretha, James Brown or Gladys Knight did to her."
+        textRu: "Стоун называет Франклин своим главным влиянием и говорит, что, берясь за песню, старается сделать со слушателем то, что делали с ней Арета, Джеймс Браун или Глэдис Найт."
+        source:
+          title: "Mike Ragogna: A conversation with Joss Stone (2011), archived by Stone’d Records"
+          url: "https://www.stoned-records.com/news/joss-stone/chatting-with-joss-stone"
+          quote: "when you listen to someone like Aretha or James Brown or Gladys Knight or somebody like that--you feel what they feel and that's the whole point. That's what a soul singer does to you. They make you feel."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Reviewing her debut, musicOMH writes that she sounds as though she had sung for years alongside Aretha Franklin."
+        textRu: "В рецензии на её дебют musicOMH пишет, что она звучит так, будто годами пела рядом с Аретой Франклин."
+        source:
+          title: "musicOMH, John Murphy: Joss Stone — The Soul Sessions (2003)"
+          url: "https://www.musicomh.com/reviews/albums/joss-stone-the-soul-sessions"
+          quote: "As with Winehouse, you’d swear she’d been around for years singing with the likes of Aretha Franklin ."
+  - to: "style:soul"
+    kind: "style"
+    how: "Stone works in classic soul: a throaty, roaring voice over languid grooves and heavy bass played by a band of R&B veterans."
+    howRu: "Стоун работает в классическом соуле: хриплый, рокочущий голос над тягучим грувом и тяжёлым басом, которые играет группа ветеранов ритм-н-блюза."
+    carries: []
+    dimensions: ["melody-vocal", "sound"]
+    scope: "career"
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The Guardian describes her voice as a throaty roar between Janis Joplin and Mavis Staples and reports that she is tipped in the US as a soul singer."
+        textRu: "The Guardian описывает её голос как хриплый рёв между Дженис Джоплин и Мейвис Стейплс и сообщает, что в США её прочат в соул-певицы."
+        source:
+          title: "The Guardian, Alexis Petridis: Purely belter — Joss Stone interview (2003)"
+          url: "https://www.theguardian.com/music/2003/nov/14/popandrock1"
+          quote: "She has a startling voice, a throaty roar somewhere between Janis Joplin and Mavis Staples."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "musicOMH hears her reworking of a rock song as a languid soul song with a heavy bassline."
+        textRu: "musicOMH слышит, как она переделала рок-песню в тягучий соул с тяжёлым басом."
+        source:
+          title: "musicOMH, John Murphy: Joss Stone — The Soul Sessions (2003)"
+          url: "https://www.musicomh.com/reviews/albums/joss-stone-the-soul-sessions"
+          quote: "the furious guitar work of the original is stripped away and we’re left with a deliciously languid soul song, with a downright filthy bassline."
+      - type: "critics"
+        dimensions: ["sound", "performance"]
+        text: "The same review credits a band of R&B veterans with keeping the album tight."
+        textRu: "Та же рецензия отмечает, что группа ветеранов ритм-н-блюза держит альбом в тонусе."
+        source:
+          title: "musicOMH, John Murphy: Joss Stone — The Soul Sessions (2003)"
+          url: "https://www.musicomh.com/reviews/albums/joss-stone-the-soul-sessions"
+          quote: "the band of R ‘n’ B veterans keep things tight and listenable even when the material falls short."
+    example:
+      song: "“Fell in Love with a Boy” (2003)"
+      text: "Stone recast the White Stripes’ garage-rock “Fell in Love with a Girl” as a slow soul number."
+      textRu: "Стоун переделала гаражный рок White Stripes «Fell in Love with a Girl» в неспешный соул."
+      source:
+        title: "musicOMH, John Murphy: Joss Stone — The Soul Sessions (2003)"
+        url: "https://www.musicomh.com/reviews/albums/joss-stone-the-soul-sessions"
+        quote: "with her version of Fell In Love With A Girl by the The White Stripes being the best of a wonderful bunch. Renamed Fell In Love With A Boy"
+notes:
+  - period: "2003 (The Soul Sessions)"
+    who: "Betty Wright"
+    role: "producer"
+    what: "The Miami soul singer Betty Wright produced Stone’s debut album."
+    whatRu: "Дебютный альбом Стоун спродюсировала майамская соул-певица Бетти Райт."
+    source:
+      title: "musicOMH, John Murphy: Joss Stone — The Soul Sessions (2003)"
+      url: "https://www.musicomh.com/reviews/albums/joss-stone-the-soul-sessions"
+      quote: "soul legend Betty Wright producing this, her debut album."
