@@ -13,7 +13,10 @@ already use, how to run it, and what it costs, measured on a stand.
 - **Every resource the API serves.** The exceptions are noise that the cluster
   derives itself: Events, Endpoints, EndpointSlices, Leases and metrics. New CRDs
   are picked up every two minutes. `--namespaces`, `--exclude-namespaces` and
-  `--exclude-resources` narrow the scope.
+  `--exclude-resources` narrow the scope. Griot lists each resource page by
+  page and then watches it; it keeps no copy of the objects, only a content
+  hash per object, so its memory follows the number of objects (about 1 KB
+  each), not their size.
 - **One record per change.** A record holds the full normalized object:
   `status`, `managedFields` and `resourceVersion` removed, the body compressed
   with zstd. It also keeps the field manager of the last write (who did it),
@@ -25,8 +28,8 @@ already use, how to run it, and what it costs, measured on a stand.
   is recorded as dead.
 - **Never Secret values.** `data`, `stringData` and the
   `last-applied-configuration` annotation (which `kubectl apply` fills with
-  the whole Secret) are redacted inside the informer transform. The values
-  never stay in Griot's memory and never reach the store. As a consequence,
+  the whole Secret) are redacted before anything is stored. The values only
+  pass through Griot while an event is decoded. As a consequence,
   Griot cannot restore a Secret. It says so and leaves Secrets out of restores.
 - **Reads follow RBAC.** The memory is served as the aggregated API
   `history.sankofa.kuberoot.dev/v1alpha1` (`timelines`, `clustertimelines`).
@@ -36,7 +39,7 @@ already use, how to run it, and what it costs, measured on a stand.
 ## Commands
 
 ```bash
-sankofa tell deployment/web                       # life story: born, changed (by whom), died
+sankofa tell deployment/web                       # life story: born, changed (field manager, and user with audit), died
 sankofa diff deployment/web --from 2h             # unified diff between two moments (--to defaults to now)
 sankofa diff namespace/shop --from 2026-11-12T10:00:00Z --to 2026-11-12T11:00:00Z [--details]
                                                   # which objects were created / changed / deleted
@@ -188,12 +191,13 @@ instead.
   a watch reconnects with a relist, intermediate states in between are merged
   into one change. The time of a change comes from `managedFields`, at
   one-second resolution.
-- **"Who" is the field manager** (`kubectl-client-side-apply`, `helm`,
-  `kube-controller-manager`), not the authenticated user. Deaths carry no
-  manager at all, because a watch does not say who deleted.
+- **"Who" is the field manager by default** (`kubectl-client-side-apply`,
+  `helm`, `kube-controller-manager`), not the authenticated user. Deaths
+  carry no manager at all, because a watch does not say who deleted. With
+  the audit webhook (below), Griot names users, on a best-effort match.
 - **No Secret restore,** by design.
-- **Memory follows cluster size.** The informer cache holds every recorded
-  object, slimmed: no status, no managedFields, no Secret values.
+- **Memory follows the number of objects:** about 1 KB per object for the
+  content hash, the reference and the map around them.
 
 ## Running it
 
@@ -202,7 +206,7 @@ instead.
 | Replicas | exactly 1 (the chart refuses more) | 2+; one leader records, all serve reads |
 | Failover | pod restart on a RWO volume | lease handover; a new leader warms its cache from the store |
 | Survives losing the cluster | no | yes, if the database lives outside it |
-| Space reclaimed by retention | yes on new stores (`auto_vacuum=incremental`) | reused after VACUUM; `VACUUM FULL` to shrink |
+| Space reclaimed by retention | `VACUUM` weekly by default (`--vacuum-every`); it rewrites the file, blocks writes while it runs and needs free disk as large as the store | autovacuum, tuned by Griot on its table; space is reused, not returned to the file system; never `VACUUM FULL` in normal operation |
 
 ```bash
 # SQLite, one replica
@@ -230,9 +234,77 @@ Births, deaths and the latest state of every object survive compaction,
 
 `/metrics` (port 9090) exposes events, records written, batches, write
 errors, queue length, last batch lag, store size, records forgotten by
-retention, and whether the replica is the leader.
+retention, the last vacuum, and whether the replica is the leader.
+
+### PostgreSQL maintenance
+
+Retention deletes many rows scattered through the table. On start, Griot sets
+these storage parameters on its `records` table, so autovacuum runs after 2%
+of dead rows instead of PostgreSQL's default 20%:
+
+```sql
+ALTER TABLE records SET (autovacuum_vacuum_scale_factor = 0.02,
+  autovacuum_analyze_scale_factor = 0.01, autovacuum_vacuum_cost_limit = 1000);
+```
+
+Plain (auto)vacuum makes the space reusable for new records but does not
+shrink files. That is the steady state you want: the table stops growing
+once retention removes as much as the cluster writes. `VACUUM FULL` (or
+`pg_repack`) does return the space, but it takes an exclusive lock that
+stops recording while it runs. Use it only as a one-off, for example after
+tightening a retention policy. Server-wide, keep autovacuum on (the
+default) and give it enough `autovacuum_work_mem` for the table size.
+
+### Who did it: audit correlation
+
+Griot can receive the API server's audit events and name the user behind
+each moment:
+
+```yaml
+# kube-apiserver flags
+--audit-policy-file=/etc/kubernetes/audit-policy.yaml
+--audit-webhook-config-file=/etc/kubernetes/griot-audit.kubeconfig   # server: https://griot.<ns>.svc:9444/audit
+# audit-policy.yaml: Metadata level is enough
+rules:
+  - {level: None, verbs: [get, list, watch]}
+  - level: Metadata
+```
+
+```bash
+helm upgrade griot charts/griot --set audit.enabled=true --set audit.clientCASecret=griot-audit-ca
+```
+
+- **Authentication.** Griot accepts audit events only from a client
+  certificate signed by `audit.clientCASecret` (`--audit-client-ca`),
+  because whoever can post there can put names into the memory.
+- **What it keeps.** Successful mutating requests on objects, not on their
+  status, about 200 bytes each: time, object, verb, user and audit ID.
+  Their retention follows `retention.maxAge`.
+- **How it matches.** Each moment gets the nearest request on the same
+  object with a matching verb within ±10 s:
+  - a birth matches a create, or a patch or update (server-side apply
+    creates with a patch);
+  - a change matches a patch or update;
+  - a death matches a delete, or a `deletecollection` of its resource in its
+    namespace (how the namespace controller deletes).
+- **How it shows.** Impersonation shows as
+  `alice (as, by admin)`. `sankofa tell` prints the user after the field
+  manager.
+- **Limits.**
+  - The match is best effort. Two users writing the same object in the
+    same second can be swapped.
+  - Events the API server's batching dropped leave a moment without a
+    name, never with a wrong one.
+  - Without the webhook (managed control planes often don't allow it),
+    moments carry only the field manager.
+  - Reading audit log files is not implemented.
+
 
 ## Measurements
+
+Two rounds: the first build (phase 1, 13 November) and the current one
+(phase 2, 14 November). The tables of the first round are kept for
+comparison; the current build's numbers are in [Phase 2](#phase-2-the-current-build).
 
 Everything below was measured on the Sankofa stand on 13–14 November 2026,
 not on a laptop. Some of these numbers show where the design runs out;
@@ -347,32 +419,135 @@ Figures are p50 / p95.
 | Other components | PostgreSQL 0.4–0.46 GiB, under 0.06 core | — |
 | For scale | the benchmark API server itself used 1.6–1.9 GiB | |
 
-### What the numbers say
+### What the first round showed
+
+These findings are from the first round. Where the current build changed
+the picture, the bullet says so.
 
 - **The authorization fix.** The first read latencies sat at 200 ms because
   every read created a SubjectAccessReview through a client limited to 5
   requests per second. Reviews are now cached for 10 s per caller and
   object, and the client allows 100 requests per second. That took single
-  reads to 2–9 ms. The "before the fix" column is the old build, measured
-  on both backends.
+  reads to 2–9 ms.
 - **The failover fix.** A rolling update left the lease held by a dead pod
   for about 20 s, because the process exited without releasing it or
   flushing its last batch. Fixed; with the fix, takeover took 3 s.
-- **Throughput is not the limit.** Throughput was bounded by what this API
-  server produced. Both backends kept pace with ~950 changes/s, and a cold
-  SQLite recorder caught up at 5,500 records/s. Nothing on the stand
-  saturated the writer.
-- **Memory is the limit.** Memory is about 10 KB per recorded live object,
-  and it follows the size of the cluster, not the history. The informer
-  cache keeps unstructured maps, even slimmed. A cluster with a million
-  objects would need ~10 GiB. This is the first thing for phase 2.
-- **Namespace reads slow down with history.** "Namespace at T" grew from
-  ~210 ms to ~440–820 ms as the history grew from 437k to 679k records. It
-  came back to ~200 ms after compaction and `VACUUM FULL`. The query takes
-  the latest record per uid in the namespace; a covering index or a
-  "current state" table would keep it flat.
-- **Failover loses granularity, not states.** While the new leader warms up
-  and lists (about 12 s), intermediate states are lost; the final ones and
-  the deaths are caught on takeover.
-- **The aggregator's own hop** adds a proxy round trip, not measured
-  separately.
+- **Throughput is not the limit.** Both backends kept pace with what this
+  API server produced (~950 changes/s), and a cold SQLite recorder caught
+  up at 5,500 records/s.
+- **Memory was the limit:** about 10 KB per live object, held in the
+  informer cache. The current build does not keep that cache.
+- **Namespace reads slowed down with history:** they read every record up
+  to the moment. The current build reads validity intervals instead.
+
+### Phase 2: the current build
+
+**What changed in the method**
+
+- **Same harness, same load.** 20 namespaces × (4,500 ConfigMaps + 250
+  Deployments), about 105k objects. Two 15-minute rounds of ~300–400
+  patches/s with rollouts brought the history to 726k records.
+- **The stand had three workers this time.** The autoscaler had added a
+  node.
+- **SQLite on a real volume.** A third volume in the cluster never
+  attaches on the stand: with either storage class, the underlying claim
+  stays pending. So SQLite shared PostgreSQL's volume, in its own directory
+  and on the same node.
+- **Audit events.** The benchmark API server sent its audit events to
+  `griot-pg` during the whole run.
+- **Store-level reads.** `griot-bench nsat` compares the old namespace scan
+  with the interval read on the same store and checks that both return the
+  same objects.
+
+**Memory and CPU** (~105–127k live objects)
+
+| | first round | current |
+|---|---|---|
+| PostgreSQL leader | 1.0–1.1 GiB | 82–136 MiB under churn, 187 MiB peak while 105k objects were created |
+| PostgreSQL follower | 20 MiB | 20–73 MiB |
+| SQLite | 1.0–1.1 GiB | 84–129 MiB, 176 MiB peak during vacuum and reads |
+| CPU, recording | 0.2–0.7 core | 0.15–0.28 core; 0.7 core during a takeover's full list |
+
+**Writing and lag**
+
+| What | PostgreSQL | SQLite (on a volume) |
+|---|---|---|
+| Creating 105k objects in 2m32s | kept pace, peak ~710 records/s, queue < 30 | kept pace, peak ~680/s |
+| Churn: 286,143 patches in 15 min | 379 records/s on average, queue ≤ 685, batch lag ≤ 1 s | 379/s, queue ≤ 949 |
+| Lag behind the API under that churn | p50 191 ms, p95 471 ms, p99 919 ms, max 1.4 s (n=956, 0 misses) | p50 229 ms, p95 774 ms, p99 1.38 s, max 2.1 s |
+| Leader killed under ~400 changes/s | new leader warmed 119k heads in 6 s; deaths from the gap recorded 10 s after taking over | n/a |
+| Audit events | 412k events, 87 MB (~210 B each) | n/a |
+
+Lag is higher than the first round's 125 / 229 / 275 ms. Two likely
+causes: every batch now also closes the intervals of the states it
+replaces, and the stand had a third node and other work. They are not
+separated here.
+
+**Namespace at T**
+
+Store level, p50 for one namespace (5.3–6k objects), the old scan versus
+the interval read, on the same data:
+
+| History | Moment | PostgreSQL: scan → intervals | SQLite: scan → intervals |
+|---|---|---|---|
+| 424k records | early / middle / late / now | 81 / 89 / 102 / 100 → 57 / 63 / 64 / 62 ms | 68 / 111 / 145 / 141 → 62 / 74 / 71 / 76 ms |
+| 726k records | early / middle / late / now | 228 / 482 / 708 / 913 → 68 / 66 / 73 / 69 ms | 79 / 155 / 213 / 194 → 64 / 76 / 81 / 73 ms |
+
+The interval read stays at 55–80 ms as the history grows. The scan grows
+with it, about 9× slower for "now" on PostgreSQL. Both reads returned the
+same objects on intact intervals. A mismatch showed up once, after an
+interrupted compaction; that is a bug, described under
+[What the current round found](#what-the-current-round-found).
+
+**Through the API at 726k records** (p50 / p95; one replica)
+
+| Query | PostgreSQL | SQLite |
+|---|---|---|
+| Life of an object (newest page of moments, no bodies) | 4 / 8 ms | 2 / 3 ms |
+| Life of an object with >1,000 versions (page of 500) | 14 / 34 ms | 19 / 25 ms |
+| At, one object | 4 / 6 ms | 2 / 2 ms |
+| Namespace at T, ~6k objects with bodies | 302–390 ms | 206–207 ms |
+| Namespace diff | 578 / 594 ms | 589 / 598 ms |
+| Restore plan | 265 ms | 261 ms |
+| Obituaries (100) | 2 / 13 ms | 45 / 63 ms |
+
+Most of "namespace at T" through the API goes to encoding about 6k objects
+as JSON; the database part is the ~70 ms above. Pages
+(`?limit=500&continue=`) bound each response. `sankofa fetch` and
+`sankofa diff` page through.
+
+**Compaction and space**
+
+| What | PostgreSQL | SQLite |
+|---|---|---|
+| Tiers `10m:1m,30m:10m` on 726k records | −25% records (see the bug below) | −25% records (725,700 → 544,844) in 24.6 s; `VACUUM` 10.5 s: 590 MB → 439 MB |
+| Tiers `10m:5m,30m:30m` (fixed build) | −143,746 records in 29.6 s, one transaction | |
+| Tiers `5m:5m,15m:60m` | −94,490 records in 16.2 s | |
+| Plain `VACUUM ANALYZE` | 4–5 s; size unchanged (681 MB), space reused for new records | n/a |
+
+### What the current round found
+
+- **Memory is no longer the limit.** Without the informer cache, Griot holds
+  a content hash and a reference per object: about 1 KB each, roughly a
+  tenth of the first round. That is ~130 MiB for 110k objects, and would
+  be ~1 GiB for a million.
+- **Namespace reads no longer depend on the history.**
+- **Two retention bugs, found and fixed on the stand:**
+  - A compaction `DELETE … NOT IN (ids to keep)` ran for more than 3
+    minutes on 542k records. PostgreSQL stops hashing a `NOT IN` set once
+    it outgrows `work_mem` and falls back to a quadratic plan. Compaction
+    now deletes by a window function, and the age and tombstone rules check
+    for a newer record with an index lookup.
+  - After that cancelled compaction, about 130 objects were missing from
+    namespace reads in the compacted range. The first tier had committed
+    without its interval repair. Compaction and the repair now commit
+    together, and `RepairIntervals` fixes stores damaged before (here 4,305
+    intervals in 5 s).
+- **Locking during compaction.** Compaction runs as one transaction of
+  15–30 s at this size. On SQLite, the recorder's writes wait for it; with
+  one connection they queue, and a write times out after 30 s. Run it often
+  (the default is hourly) so each run stays small.
+- **Failover loses granularity, not states.** While a new leader warms up
+  and lists (about 10 s here), intermediate states are lost; final states
+  and deaths are caught on takeover.
+- **Not measured separately:** the aggregator's own hop.
