@@ -805,6 +805,59 @@ test('switching language keeps the reader in the same chapter', async ({ page })
   await expect.poll(mid, { timeout: 6000 }).toBe('v4');
 });
 
+/** The chapter and step at the middle of the screen: the step whose stretch (its top to the next step's top) holds it. */
+function readerAt(page: import('@playwright/test').Page): Promise<string | undefined> {
+  return page.evaluate(() => {
+    const y = innerHeight / 2;
+    const a = [...document.querySelectorAll<HTMLElement>('article.chapter')].find((x) => {
+      const r = x.getBoundingClientRect();
+      return r.top <= y && r.bottom >= y;
+    });
+    if (!a) return undefined;
+    const above = [...a.querySelectorAll<HTMLElement>('.step[data-step]')].filter((s) => s.getBoundingClientRect().top <= y);
+    return `${a.dataset.chapter}/${above.length ? above[above.length - 1].dataset.step : 'top'}`;
+  });
+}
+
+/** Read step 2 of chapter four in one language, switch, and expect the same step in the other. */
+async function switchKeepsStep(page: import('@playwright/test').Page, from: 'en' | 'ru'): Promise<void> {
+  const to = from === 'en' ? 'ru' : 'en';
+  await page.goto(from === 'en' ? '/#ch=v4' : '/#ch=v4&lang=ru');
+  await expect(page.locator('html')).toHaveAttribute('lang', from);
+  const step = page.locator('#ch-v4 .step').nth(2);
+  await expect(step).toBeAttached();
+  await step.evaluate((e) => e.scrollIntoView({ block: 'center', behavior: 'instant' }));
+  await expect.poll(() => readerAt(page)).toBe('v4/2');
+  await page.locator('[data-lang-switch]').click();
+  await expect(page.locator('html')).toHaveAttribute('lang', to);
+  // The link names the step, so the place survives without this tab's storage too.
+  await expect(page).toHaveURL(/[#&]ch=v4&step=2(&|$)/);
+  await expect.poll(() => readerAt(page), { timeout: 6000 }).toBe('v4/2');
+  // And stays there once the pictures and fonts above have settled.
+  await page.waitForTimeout(1500);
+  expect(await readerAt(page)).toBe('v4/2');
+}
+
+test('switching language keeps the reader on the same step', async ({ page }) => {
+  await switchKeepsStep(page, 'en');
+});
+
+test('switching back from Russian keeps the reader on the same step', async ({ page }) => {
+  await switchKeepsStep(page, 'ru');
+});
+
+test.describe('on a phone', () => {
+  test.use({ viewport: { width: 412, height: 839 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2.625 });
+
+  test('switching language keeps the reader on the same step', async ({ page }) => {
+    await switchKeepsStep(page, 'en');
+  });
+
+  test('switching back from Russian keeps the reader on the same step', async ({ page }) => {
+    await switchKeepsStep(page, 'ru');
+  });
+});
+
 /** Record requests to the video host; answer them locally so tests stay offline. */
 async function watchYouTube(page: import('@playwright/test').Page): Promise<string[]> {
   const seen: string[] = [];
