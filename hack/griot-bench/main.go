@@ -61,6 +61,7 @@ var (
 	maxVersions = flag.Int("max-versions", 0, "retain: versions per object")
 	shift       = flag.Duration("shift", 0, "retain: pretend now is this much later")
 	vacuum      = flag.Bool("vacuum", false, "retain: vacuum after retention (SQLite VACUUM, PostgreSQL plain VACUUM ANALYZE)")
+	repair      = flag.Bool("repair", false, "retain: recompute every validity interval first")
 	probeName   = flag.String("probe-name", "probe", "probe: config map to write (one per concurrent probe)")
 )
 
@@ -499,6 +500,14 @@ func retain(ctx context.Context) error {
 	ts, err := history.ParseTiers(*tiers)
 	if err != nil {
 		return err
+	}
+	if *repair {
+		rt := time.Now()
+		n, err := s.(*history.SQLStore).RepairIntervals(ctx)
+		if err != nil {
+			return err
+		}
+		fmt.Printf("retain repaired %d intervals in %s\n", n, time.Since(rt).Round(time.Millisecond))
 	}
 	before, err := s.Stats(ctx)
 	if err != nil {

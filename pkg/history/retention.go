@@ -88,58 +88,14 @@ func ParseDuration(s string) (time.Duration, error) {
 	return time.ParseDuration(s)
 }
 
-
 // Retain applies the policy: compaction, then age, then version count, then
 // tombstones.
 func (s *SQLStore) Retain(ctx context.Context, p Policy, now time.Time) (RetainStats, error) {
 	var st RetainStats
 	var err error
-	touched := map[string]struct{}{} // uids that lost records from the middle of a life
-	for i, t := range p.Tiers {
-		hi := now.Add(-t.After).UnixMilli()
-		lo := int64(math.MinInt64 / 2)
-		if i+1 < len(p.Tiers) {
-			lo = now.Add(-p.Tiers[i+1].After).UnixMilli()
-		}
-		w := t.Window.Milliseconds()
-		// Every change but the newest of its uid in its window. Such a record
-		// always has a newer one, so it is never the latest state. (NOT IN
-		// over large id sets falls back to a quadratic plan in PostgreSQL once
-		// the set outgrows work_mem; an IN over a window function does not.)
-		rows, err := s.db.QueryContext(ctx, s.q(`DELETE FROM records WHERE id IN (
- SELECT id FROM (SELECT id, ROW_NUMBER() OVER (PARTITION BY uid, at/? ORDER BY id DESC) AS rn
-  FROM records WHERE verb='changed' AND at>=? AND at<?) w WHERE rn > 1) RETURNING uid`), w, lo, hi)
-		if err != nil {
-			return st, fmt.Errorf("compact tier %d: %w", i, err)
-		}
-		for rows.Next() {
-			var uid string
-			if err := rows.Scan(&uid); err != nil {
-				rows.Close()
-				return st, err
-			}
-			touched[uid] = struct{}{}
-			st.Compacted++
-		}
-		rows.Close()
-		if err := rows.Err(); err != nil {
-			return st, fmt.Errorf("compact tier %d: %w", i, err)
-		}
-	}
-	if len(touched) > 0 {
-		// Records left the middle of these lives: the states before them now
-		// last until the next surviving record.
-		uids := make([]any, 0, len(touched))
-		for uid := range touched {
-			uids = append(uids, uid)
-		}
-		for start := 0; start < len(uids); start += batchRows {
-			chunk := uids[start:min(start+batchRows, len(uids))]
-			marks := strings.TrimSuffix(strings.Repeat("?,", len(chunk)), ",")
-			args := append([]any{Forever, Forever}, chunk...)
-			if _, err := s.exec(ctx, repairUntil+` AND uid IN (`+marks+`)`, args...); err != nil {
-				return st, fmt.Errorf("repair intervals: %w", err)
-			}
+	if len(p.Tiers) > 0 {
+		if st.Compacted, err = s.compact(ctx, p.Tiers, now); err != nil {
+			return st, err
 		}
 	}
 	if p.MaxAge > 0 {
@@ -180,4 +136,69 @@ func (s *SQLStore) Vacuum(ctx context.Context) error {
 	}
 	_, err := s.db.ExecContext(ctx, `VACUUM (ANALYZE) records`)
 	return err
+}
+
+// compact thins out old changes and repairs the validity intervals of the
+// lives it thinned, in one transaction: an interrupted compaction must not
+// leave intervals that point past deleted records.
+func (s *SQLStore) compact(ctx context.Context, tiers []Tier, now time.Time) (int64, error) {
+	tx, err := s.db.BeginTx(ctx, nil)
+	if err != nil {
+		return 0, err
+	}
+	defer func() { _ = tx.Rollback() }()
+	var n int64
+	touched := map[string]struct{}{} // uids that lost records from the middle of a life
+	for i, t := range tiers {
+		hi := now.Add(-t.After).UnixMilli()
+		lo := int64(math.MinInt64 / 2)
+		if i+1 < len(tiers) {
+			lo = now.Add(-tiers[i+1].After).UnixMilli()
+		}
+		w := t.Window.Milliseconds()
+		// Every change but the newest of its uid in its window. Such a record
+		// always has a newer one, so it is never the latest state. (NOT IN
+		// over large id sets falls back to a quadratic plan in PostgreSQL once
+		// the set outgrows work_mem; an IN over a window function does not.)
+		rows, err := tx.QueryContext(ctx, s.q(`DELETE FROM records WHERE id IN (
+ SELECT id FROM (SELECT id, ROW_NUMBER() OVER (PARTITION BY uid, at/? ORDER BY id DESC) AS rn
+  FROM records WHERE verb='changed' AND at>=? AND at<?) w WHERE rn > 1) RETURNING uid`), w, lo, hi)
+		if err != nil {
+			return 0, fmt.Errorf("compact tier %d: %w", i, err)
+		}
+		for rows.Next() {
+			var uid string
+			if err := rows.Scan(&uid); err != nil {
+				rows.Close()
+				return 0, err
+			}
+			touched[uid] = struct{}{}
+			n++
+		}
+		rows.Close()
+		if err := rows.Err(); err != nil {
+			return 0, fmt.Errorf("compact tier %d: %w", i, err)
+		}
+	}
+	// Records left the middle of these lives: the states before them now
+	// last until the next surviving record.
+	uids := make([]any, 0, len(touched))
+	for uid := range touched {
+		uids = append(uids, uid)
+	}
+	for start := 0; start < len(uids); start += batchRows {
+		chunk := uids[start:min(start+batchRows, len(uids))]
+		marks := strings.TrimSuffix(strings.Repeat("?,", len(chunk)), ",")
+		args := append([]any{Forever, Forever}, chunk...)
+		if _, err := tx.ExecContext(ctx, s.q(repairUntil+` AND uid IN (`+marks+`)`), args...); err != nil {
+			return 0, fmt.Errorf("repair intervals: %w", err)
+		}
+	}
+	return n, tx.Commit()
+}
+
+// RepairIntervals recomputes every validity interval: for stores whose
+// intervals were damaged, e.g. by an older Griot interrupted mid-compaction.
+func (s *SQLStore) RepairIntervals(ctx context.Context) (int64, error) {
+	return s.exec(ctx, repairUntil, Forever, Forever)
 }
