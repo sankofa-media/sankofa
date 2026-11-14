@@ -53,13 +53,13 @@ const managedBy = "griot"
 
 type options struct {
 	kubeconfig, store, db, dsn, listen, apiService, host, register, pulse, metrics string
-	tlsCert, tlsKey                                                              string
-	sync, record, webhooks, compress                                             bool
-	leaderElect                                                                  bool
-	leaseName, leaseNamespace                                                    string
-	policy                                                                       history.Policy
-	retainEvery                                                                  time.Duration
-	scope                                                                        history.Scope
+	tlsCert, tlsKey                                                                string
+	sync, record, webhooks, compress                                               bool
+	leaderElect                                                                    bool
+	leaseName, leaseNamespace                                                      string
+	policy                                                                         history.Policy
+	retainEvery                                                                    time.Duration
+	scope                                                                          history.Scope
 }
 
 func main() {
