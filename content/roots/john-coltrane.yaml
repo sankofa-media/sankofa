@@ -15,20 +15,20 @@ placeRu: "Гамлет, Северная Каролина"
 genre: Jazz
 genreRu: джаз
 story: "John Coltrane was hooked by Charlie Parker’s bebop, with its rhythmic freedom and widened harmony, and it set the course of his saxophone playing. In Miles Davis’s band, whom he called “Teacher”, he found the modal freedom he later developed in his own quartet; in the 1960s, drawn by Ornette Coleman and Albert Ayler, he moved into free jazz."
-storyRu: "Джона Колтрейна захватил бибоп Чарли Паркера с его ритмической свободой и расширенной гармонией — это и определило путь его саксофона. В ансамбле Майлза Дэвиса, которого он звал «Учителем», он нашёл модальную свободу и потом развил её в собственном квартете; в 1960-е, вслед за Орнеттом Коулманом и Альбертом Эйлером, ушёл во фри-джаз."
+storyRu: "Джона Колтрейна захватил бибоп Чарли Паркера с его ритмической свободой и расширенной гармонией — это определило, куда пойдёт его игра на саксофоне. В ансамбле Майлза Дэвиса, которого он звал «Учителем», он нашёл модальную свободу и потом развил её в собственном квартете; в 1960-е, увлёкшись Орнеттом Коулманом и Альбертом Эйлером, ушёл во фри-джаз."
 links:
   - to: "root:charlie-parker"
     kind: "influence"
     scope: "career"
     how: "Coltrane learned the bebop language that Parker brought: fresh rhythmic freedom and an expanded harmonic range, played on the saxophone."
-    howRu: "Колтрейн усвоил язык бибопа, принесённый Паркером: новую ритмическую свободу и расширенный гармонический диапазон, сыгранные на саксофоне."
+    howRu: "Колтрейн усвоил на саксофоне язык бибопа, принесённый Паркером: новую ритмическую свободу и расширенный гармонический диапазон."
     carries: ["improvisation"]
     dimensions: ["rhythm", "harmony-form", "sound"]
     evidence:
       - type: "listening"
         dimensions: ["rhythm", "harmony-form"]
         text: "Coltrane’s official biography says Parker’s bebop grabbed his generation and that Coltrane was hooked by its rhythmic freedom and harmonic range."
-        textRu: "Официальная биография Колтрейна говорит, что бибоп Паркера захватил его поколение, а самого Колтрейна покорили его ритмическая свобода и гармонический размах."
+        textRu: "Официальная биография Колтрейна говорит, что бибоп Паркера захватил его поколение, а самого Колтрейна покорили ритмическая свобода и гармонический размах этой музыки."
         source:
           title: "John Coltrane: official biography"
           url: "https://www.johncoltrane.com/biography"
@@ -85,7 +85,7 @@ links:
       - type: "listening"
         dimensions: ["melody-vocal"]
         text: "The official biography says he turned to the emotional, melody-driven avant-garde, inspired by Ornette Coleman."
-        textRu: "Официальная биография говорит, что он обратился к эмоциональному, мелодическому авангарду под сильным впечатлением от Орнетта Коулмана."
+        textRu: "Официальная биография говорит, что он обратился к эмоциональному, мелодическому авангарду, вдохновлённый Орнеттом Коулманом."
         source:
           title: "John Coltrane: official biography"
           url: "https://www.johncoltrane.com/biography"
@@ -93,7 +93,7 @@ links:
       - type: "critics"
         dimensions: ["melody-vocal"]
         text: "Kevin Whitehead hears Albert Ayler’s composing in Coltrane’s late albums."
-        textRu: "Кевин Уайтхед слышит сочинения Альберта Эйлера в поздних альбомах Колтрейна."
+        textRu: "Кевин Уайтхед слышит в поздних альбомах Колтрейна композиторскую манеру Альберта Эйлера."
         source:
           title: "Texas Public Radio / NPR (Kevin Whitehead): Albert Ayler — Testifying the Breaking Point (2001)"
           url: "https://www.tpr.org/2001-05-07/albert-ayler-testifying-the-breaking-point"

@@ -10,10 +10,10 @@ styles:
     placeRu: "Гарлем, Нью-Йорк"
     traits:
       - {en: "Extremely fast tempos and long, flowing improvised lines", ru: "Предельно быстрые темпы и длинные текучие импровизационные линии"}
-      - {en: "Solos built on the chord changes rather than the melody, with elaborated harmonies", ru: "Соло строится на гармонии, а не на мелодии, и сами аккорды усложнены"}
+      - {en: "Solos built on the chord changes rather than the melody, with elaborated harmonies", ru: "Соло строятся на гармонической сетке, а не на мелодии; сами гармонии усложнены"}
       - {en: "Irregular accents, odd-length phrases and drumming that keeps time on the cymbal", ru: "Смещённые акценты, фразы неровной длины и барабаны, которые держат время на тарелке"}
       - {en: "Small combos and after-hours jam sessions instead of the dance big band", ru: "Небольшие составы и ночные джем-сейшны вместо танцевального биг-бэнда"}
-      - {en: "A defiant, nonconformist stance: art music, not dance music", ru: "Вызывающая, независимая позиция: музыка для слушания, а не для танцев"}
+      - {en: "A defiant, nonconformist stance: art music, not dance music", ru: "Вызывающая, нонконформистская позиция: искусство, а не музыка для танцев"}
     sources:
       - title: "Carnegie Hall, Timeline of African American Music: Bebop"
         url: "https://timeline.carnegiehall.org/genres/bebop"
@@ -33,7 +33,7 @@ styles:
           - type: "analysis"
             dimensions: ["rhythm", "performance", "image"]
             text: "Bebop evolved out of the swing bands of the 1930s and drew on swing riffs, while musicians from the big bands moved into smaller combos with more room to improvise; the music carried a nonconformist stance."
-            textRu: "Бибоп вырос из свинговых оркестров 1930-х и опирался на свинговые риффы; музыканты биг-бэндов уходили в маленькие составы, где было больше простора для импровизации, а сама музыка несла вызов и несогласие."
+            textRu: "Бибоп вырос из свинговых оркестров 1930-х и опирался на свинговые риффы; музыканты биг-бэндов уходили в маленькие составы, где было больше простора для импровизации, а сама музыка несла в себе нонконформизм."
             source:
               title: "Carnegie Hall, Timeline of African American Music: Bebop"
               url: "https://timeline.carnegiehall.org/genres/bebop"
@@ -57,7 +57,7 @@ styles:
           - type: "analysis"
             dimensions: ["performance"]
             text: "“Ko Ko” was conceived during Parker’s apprenticeship with Kansas City bands and worked out in New York’s after-hours clubs."
-            textRu: "«Ko Ko» Паркер задумал, ещё учась ремеслу в канзас-ситских оркестрах, а довёл в ночных клубах Нью-Йорка."
+            textRu: "«Ko Ko» Паркер задумал, ещё учась ремеслу в канзас-ситских оркестрах, а отработал в ночных клубах Нью-Йорка."
             source:
               title: "Library of Congress, National Recording Registry: “Ko Ko” — Charlie Parker (essay by Ed Komara)"
               url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/ko-ko.pdf"
@@ -70,7 +70,7 @@ styles:
     placeRu: "Нью-Йорк"
     traits:
       - {en: "Soloists leave the chord progression and pre-arranged structure behind after the theme", ru: "После темы солист уходит от аккордовой сетки и заранее заданной формы"}
-      - {en: "No fixed beat: free rhythms, with the drums and piano treated as sources of rhythmic energy", ru: "Нет неизменного пульса: свободный ритм, а барабаны и фортепиано становятся источниками ритмической энергии"}
+      - {en: "No fixed beat: free rhythms, with the drums and piano treated as sources of rhythmic energy", ru: "Нет постоянного пульса: свободный ритм, а барабаны и фортепиано становятся источниками ритмической энергии"}
       - {en: "Dissonant collective improvisation, sound and texture over tune", ru: "Диссонантная коллективная импровизация: звук и фактура важнее мелодии"}
       - {en: "A political and spiritual voice of the Civil Rights and Black Power years", ru: "Политический и духовный голос эпохи борьбы за гражданские права и «Власти чёрных»"}
     sources:
@@ -116,7 +116,7 @@ styles:
           - type: "analysis"
             dimensions: ["harmony-form", "rhythm"]
             text: "Free jazz styles reduced the role of the fixed beat and the given harmonic structure on which earlier jazz rested."
-            textRu: "Стили фри-джаза ослабили роль неизменного пульса и заданной гармонической структуры, на которых держался прежний джаз."
+            textRu: "Стили фри-джаза ослабили роль постоянного пульса и заданной гармонической структуры, на которых держался прежний джаз."
             source:
               title: "Center for Jazz Studies, Columbia University, Jazz Glossary: free jazz"
               url: "https://ccnmtl.columbia.edu/projects/jazzglossary/f/free_jazz.html"
@@ -125,7 +125,7 @@ styles:
         kind: "style"
         scope: "career"
         how: "Beyond bebop, free jazz reached back to the oldest jazz texture — the many-voiced collective improvisation of New Orleans — and to the blues, now played with dissonance and a percussive attack."
-        howRu: "Через голову бибопа фри-джаз дотянулся до самой старой джазовой фактуры — многоголосой коллективной импровизации Нового Орлеана — и до блюза, но теперь сыгранных диссонансно и с ударной атакой."
+        howRu: "Минуя бибоп, фри-джаз дотянулся до самой старой джазовой фактуры — многоголосой коллективной импровизации Нового Орлеана — и до блюза, только теперь их играли диссонантно и с ударной атакой."
         carries: ["improvisation"]
         dimensions: ["performance", "sound", "harmony-form"]
         evidence:
@@ -162,7 +162,7 @@ styles:
     traits:
       - {en: "Jazz improvisation over rock rhythms and funk grooves", ru: "Джазовая импровизация поверх рок-ритмов и фанковых грувов"}
       - {en: "Electric guitar, electric bass, electric piano and synthesizers, amplified", ru: "Электрогитара, бас-гитара, электропиано и синтезаторы — всё через усилители"}
-      - {en: "Mixed meters, odd time signatures, syncopation and complex chords", ru: "Переменные размеры, нечётные метры, синкопы и сложные аккорды"}
+      - {en: "Mixed meters, odd time signatures, syncopation and complex chords", ru: "Переменный метр, непривычные размеры, синкопы и сложные аккорды"}
       - {en: "Studio techniques borrowed from rock: overdubbing and looping", ru: "Студийные приёмы, взятые у рока: наложения и закольцовки"}
     sources:
       - title: "Carnegie Hall, Timeline of African American Music: Jazz Fusion"
@@ -191,7 +191,7 @@ styles:
           - type: "analysis"
             dimensions: ["melody-vocal", "performance"]
             text: "Herbie Hancock’s “Chameleon” set the unison melodic phrases of hard bop and an improvised synthesizer solo over a funk groove."
-            textRu: "В «Chameleon» Херби Хэнкок положил унисонные мелодические фразы хард-бопа и импровизированное соло на синтезаторе на фанковый грув."
+            textRu: "В «Chameleon» Херби Хэнкок наложил на фанковый грув унисонные мелодические фразы хард-бопа и импровизированное соло на синтезаторе."
             source:
               title: "Carnegie Hall, Timeline of African American Music: Jazz Fusion"
               url: "https://timeline.carnegiehall.org/genres/jazz-fusion"
@@ -199,7 +199,7 @@ styles:
           - type: "critics"
             dimensions: ["performance"]
             text: "Miles Davis, a veteran of bebop and hard bop, led the turn to fusion with young players from his own jazz groups."
-            textRu: "К фьюжн повернул Майлз Дэвис, ветеран бибопа и хард-бопа, вместе с молодыми музыкантами из собственных джазовых составов."
+            textRu: "Поворот к фьюжну возглавил Майлз Дэвис, ветеран бибопа и хард-бопа, вместе с молодыми музыкантами из собственных джазовых составов."
             source:
               title: "Encyclopedia.com (Gale biographies): Miles Davis"
               url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/miles-davis"
@@ -215,7 +215,7 @@ styles:
           - type: "analysis"
             dimensions: ["rhythm", "sound"]
             text: "As soul turned into funk, the rhythms of James Brown and the electronic sounds of Sly and the Family Stone inspired the fusion sound."
-            textRu: "Когда соул превращался в фанк, ритмы Джеймса Брауна и электронное звучание Sly and the Family Stone вдохновили звук фьюжн."
+            textRu: "Когда соул превращался в фанк, ритмы Джеймса Брауна и электронное звучание Sly and the Family Stone вдохновили звучание фьюжна."
             source:
               title: "Carnegie Hall, Timeline of African American Music: Jazz Fusion"
               url: "https://timeline.carnegiehall.org/genres/jazz-fusion"
@@ -239,7 +239,7 @@ styles:
           - type: "testimony"
             dimensions: ["rhythm"]
             text: "Herbie Hancock said James Brown’s beat drew him to R&B and that Sly Stone’s “Thank You” was the funkiest thing he had heard."
-            textRu: "Херби Хэнкок говорил, что к ритм-н-блюзу его привёл бит Джеймса Брауна, а «Thank You» Слая Стоуна было самым фанковым из всего, что он слышал."
+            textRu: "Херби Хэнкок говорил, что к ритм-н-блюзу его привёл бит Джеймса Брауна, а «Thank You» Слая Стоуна — самое фанковое из всего, что он слышал."
             source:
               title: "Encyclopedia.com (Gale biographies): Herbie Hancock"
               url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/herbie-hancock"
@@ -255,7 +255,7 @@ styles:
           - type: "analysis"
             dimensions: ["sound"]
             text: "Inspired by Hendrix’s Are You Experienced, Davis set electric against acoustic instruments and used rock studio techniques; Hendrix and Cream had made rock complex enough for jazz players to borrow from."
-            textRu: "Под впечатлением от Are You Experienced Хендрикса Дэвис столкнул электрические инструменты с акустическими и взял студийные приёмы рока; Хендрикс и Cream сделали рок достаточно сложным, чтобы джазмены стали у него заимствовать."
+            textRu: "Под впечатлением от «Are You Experienced» Хендрикса Дэвис столкнул электрические инструменты с акустическими и взял студийные приёмы рока; Хендрикс и Cream сделали рок достаточно сложным, чтобы джазмены стали у него заимствовать."
             source:
               title: "Carnegie Hall, Timeline of African American Music: Jazz Fusion"
               url: "https://timeline.carnegiehall.org/genres/jazz-fusion"
@@ -271,7 +271,7 @@ styles:
           - type: "critics"
             dimensions: ["sound"]
             text: "The impact of electronics and of players who had mastered them, like Hendrix, pushed Davis to rethink his music and arrive at fusion."
-            textRu: "Электроника и музыканты, освоившие её, как Хендрикс, заставили Дэвиса переосмыслить свою музыку — так появился фьюжн."
+            textRu: "Электроника и музыканты, освоившие её, вроде Хендрикса, заставили Дэвиса переосмыслить свою музыку и прийти к фьюжну."
             source:
               title: "Encyclopedia.com (Gale biographies): Miles Davis"
               url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/miles-davis"
@@ -283,11 +283,11 @@ styles:
     place: "Memphis, Detroit, New York and Muscle Shoals"
     placeRu: "Мемфис, Детройт, Нью-Йорк и Масл-Шолс"
     traits:
-      - {en: "Gospel’s passionate, improvised vocal: melisma, bends, shouts, grunts and moans", ru: "Страстный импровизированный вокал госпела: мелизмы, подтяжки, выкрики, стоны"}
+      - {en: "Gospel’s passionate, improvised vocal: melisma, bends, shouts, grunts and moans", ru: "Страстный импровизированный вокал госпела: мелизмы, подтяжки, выкрики, хрипы и стоны"}
       - {en: "Call and response between lead singer and backing voices", ru: "Зов и отклик между солистом и бэк-вокалом"}
       - {en: "Gospel’s 12/8 rhythms and harmonic progressions over a driving rhythm and blues band", ru: "Госпеловые ритмы на 12/8 и гармонические обороты поверх напористого ритм-н-блюзового бэнда"}
-      - {en: "Performance modelled on the preacher and the sanctified church", ru: "Подача по образцу проповедника и «освящённой» церкви"}
-      - {en: "The soundtrack of Civil Rights and Black pride", ru: "Звуковая дорожка борьбы за гражданские права и чёрной гордости"}
+      - {en: "Performance modelled on the preacher and the sanctified church", ru: "Подача по образцу проповедника и службы в церквях святости"}
+      - {en: "The soundtrack of Civil Rights and Black pride", ru: "Саундтрек борьбы за гражданские права и «чёрной гордости»"}
     sources:
       - title: "Carnegie Hall, Timeline of African American Music: Soul"
         url: "https://timeline.carnegiehall.org/genres/soul"
@@ -318,7 +318,7 @@ styles:
           - type: "analysis"
             dimensions: ["rhythm", "harmony-form", "melody-vocal"]
             text: "Ray Charles’s “Drown in My Own Tears” brought in gospel’s 12/8 rhythms, call and response, harmonic progressions, phrasing and improvisation."
-            textRu: "В «Drown in My Own Tears» Рэй Чарльз принёс госпеловые ритмы на 12/8, зов и отклик, гармонические обороты, фразировку и импровизацию."
+            textRu: "В «Drown in My Own Tears» Рэй Чарльз принёс госпельные ритмы на 12/8, зов и отклик, гармонические обороты, фразировку и импровизацию."
             source:
               title: "Carnegie Hall, Timeline of African American Music: Soul"
               url: "https://timeline.carnegiehall.org/genres/soul"
@@ -334,7 +334,7 @@ styles:
           - type: "analysis"
             dimensions: ["melody-vocal", "harmony-form"]
             text: "Early soul combined R&B themes with gospel elements — call-and-response singing and close harmonies — often by changing a few words of a gospel song."
-            textRu: "Ранний соул соединял темы ритм-н-блюза с элементами госпела — пением в форме зова и отклика, плотными гармониями, — часто просто меняя пару слов в госпеловой песне."
+            textRu: "Ранний соул соединял темы ритм-н-блюза с элементами госпела — пением в форме зова и отклика, плотными гармониями, — часто просто меняя пару слов в госпельной песне."
             source:
               title: "Encyclopedia.com (St. James Encyclopedia of Popular Culture): Soul Music"
               url: "https://www.encyclopedia.com/media/encyclopedias-almanacs-transcripts-and-maps/soul-music"
@@ -358,7 +358,7 @@ styles:
           - type: "analysis"
             dimensions: ["harmony-form"]
             text: "Soul evolved out of rhythm and blues in the cities in the late 1950s."
-            textRu: "Соул вырос из ритм-н-блюза в городах конца 1950-х."
+            textRu: "Соул вырос из ритм-н-блюза в городах в конце 1950-х."
             source:
               title: "Carnegie Hall, Timeline of African American Music: Soul"
               url: "https://timeline.carnegiehall.org/genres/soul"
@@ -366,7 +366,7 @@ styles:
           - type: "analysis"
             dimensions: ["sound", "image"]
             text: "Soul crossed R&B with gospel; Ray Charles’s “What’d I Say” put a gospel call-and-response section in front of a driving R&B band, and his music kept close to the raw elements of R&B."
-            textRu: "Соул скрестил ритм-н-блюз с госпелом; в «What’d I Say» Рэй Чарльз поставил госпеловую перекличку перед напористым ритм-н-блюзовым бэндом, и его музыка держалась близко к сырой основе ритм-н-блюза."
+            textRu: "Соул скрестил ритм-н-блюз с госпелом; в «What’d I Say» Рэй Чарльз поставил госпельную перекличку перед напористым ритм-н-блюзовым бэндом, и его музыка держалась близко к сырой основе ритм-н-блюза."
             source:
               title: "Encyclopedia.com (St. James Encyclopedia of Popular Culture): Soul Music"
               url: "https://www.encyclopedia.com/media/encyclopedias-almanacs-transcripts-and-maps/soul-music"
@@ -382,7 +382,7 @@ styles:
           - type: "analysis"
             dimensions: ["harmony-form"]
             text: "When Black popular music moved from a blues to a gospel foundation in the 1960s, the name “soul” replaced “rhythm and blues”."
-            textRu: "Когда в 1960-е чёрная популярная музыка перешла с блюзовой основы на госпеловую, название «соул» сменило «ритм-н-блюз»."
+            textRu: "Когда в 1960-е чёрная популярная музыка перешла с блюзовой основы на госпельную, название «соул» сменило «ритм-н-блюз»."
             source:
               title: "Carnegie Hall, Timeline of African American Music: R&B"
               url: "https://timeline.carnegiehall.org/genres/rb"
@@ -394,10 +394,10 @@ styles:
     place: "New York and Philadelphia"
     placeRu: "Нью-Йорк и Филадельфия"
     traits:
-      - {en: "The four-to-the-floor bass drum subdivided by the hi-hat", ru: "Бочка на каждую долю, раздроблённая хай-хэтом"}
-      - {en: "Lush string arrangements over an unwavering beat", ru: "Пышные струнные аранжировки над неколебимым битом"}
-      - {en: "Extended six- to eight-minute mixes for all-night dancing", ru: "Растянутые миксы на шесть — восемь минут, чтобы танцевать всю ночь"}
-      - {en: "The DJ as the star of the club, mixing records seamlessly", ru: "Диджей — звезда клуба, сводящий пластинки без швов"}
+      - {en: "The four-to-the-floor bass drum subdivided by the hi-hat", ru: "Бочка на каждую из четырёх долей, а промежутки дробит хай-хэт"}
+      - {en: "Lush string arrangements over an unwavering beat", ru: "Пышные струнные аранжировки поверх неизменного бита"}
+      - {en: "Extended six- to eight-minute mixes for all-night dancing", ru: "Растянутые миксы на шесть–восемь минут, чтобы танцевать всю ночь"}
+      - {en: "The DJ as the star of the club, mixing records seamlessly", ru: "Диджей — звезда клуба: он сводит пластинки без швов"}
       - {en: "A club culture of Black, Latino and gay dancers", ru: "Клубная культура чёрных, латиноамериканских и гей-танцоров"}
     sources:
       - title: "Carnegie Hall, Timeline of African American Music: Disco"
@@ -442,7 +442,7 @@ styles:
           - type: "analysis"
             dimensions: ["sound"]
             text: "Disco began in underground dance venues where DJs played soul, funk and Latin American records."
-            textRu: "Диско началось на подпольных танцполах, где диджеи ставили соул, фанк и латиноамериканскую музыку."
+            textRu: "Диско началось на подпольных танцполах, где диджеи ставили пластинки соула, фанка и латиноамериканской музыки."
             source:
               title: "Carnegie Hall, Timeline of African American Music: Disco"
               url: "https://timeline.carnegiehall.org/genres/disco"
@@ -451,7 +451,7 @@ styles:
         kind: "style"
         scope: "career"
         how: "Funk gave disco its rhythm section: the funk interpretation of rhythm and blues, the bass-guitar-drums groove and syncopated riffs, which funk-rooted disco mixed into the four-on-the-floor beat."
-        howRu: "Фанк дал диско ритм-группу: фанковое прочтение ритм-н-блюза, грув баса, гитары и барабанов и синкопированные риффы, которые «фанковое» диско вплетало в прямую бочку."
+        howRu: "Фанк дал диско ритм-группу: фанковое прочтение ритм-н-блюза, грув баса, гитары и барабанов и синкопированные риффы, которые диско с фанковыми корнями вплетало в бит с бочкой на каждую долю."
         carries: ["groove", "riff"]
         dimensions: ["rhythm", "sound"]
         evidence:
@@ -505,7 +505,7 @@ styles:
         kind: "style"
         scope: "career"
         how: "Dance-pop carried disco out of the club and into the pop charts: the quick, insistent disco beat, the dance-floor purpose of every song, and the club scene where new singers made their names."
-        howRu: "Данс-поп вынес диско из клуба в поп-чарты: быстрый, настойчивый диско-бит, назначение каждой песни — танцпол, и клубную сцену, где новые певцы делали себе имя."
+        howRu: "Данс-поп вынес диско из клуба в поп-чарты: быстрый, настойчивый диско-бит, установку на то, что каждая песня пишется для танцпола, и клубную сцену, где заявляли о себе новые певцы."
         carries: []
         dimensions: ["rhythm", "sound", "performance"]
         evidence:
@@ -520,7 +520,7 @@ styles:
           - type: "critics"
             dimensions: ["rhythm", "performance"]
             text: "Madonna came up in a New York scene that combined post-punk shock with the quick-tempo beats left over from the disco era, and built her name in the dance clubs."
-            textRu: "Мадонна выросла на нью-йоркской сцене, где постпанковый эпатаж соединялся с быстрым битом, оставшимся от эпохи диско, и имя себе сделала в танцевальных клубах."
+            textRu: "Мадонна выросла на нью-йоркской сцене, где постпанковый эпатаж соединялся с быстрым битом, оставшимся от эпохи диско, а известность завоевала в танцевальных клубах."
             source:
               title: "Contemporary Musicians (via Encyclopedia.com): Madonna"
               url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/madonna"
@@ -584,7 +584,7 @@ styles:
           - type: "critics"
             dimensions: ["sound", "performance"]
             text: "Madonna leaned toward a funkier, rhythm-and-blues-tinged sound that went over well in the dance clubs she played."
-            textRu: "Мадонна сдвинулась к более фанковому, окрашенному ритм-н-блюзом звуку, который хорошо принимали в танцевальных клубах, где она выступала."
+            textRu: "Мадонна тяготела к более фанковому, окрашенному ритм-н-блюзом звуку, который хорошо принимали в танцевальных клубах, где она выступала."
             source:
               title: "Contemporary Musicians (via Encyclopedia.com): Madonna"
               url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/madonna"
@@ -700,8 +700,8 @@ styles:
     traits:
       - {en: "Guitar-bass-drums groups driven by a strong backbeat", ru: "Группы из гитар, баса и барабанов, которых гонит вперёд сильный бэкбит"}
       - {en: "Fifties rock and roll and R&B tunes reworked with tight vocal harmonies", ru: "Рок-н-ролл и ритм-н-блюз пятидесятых, переложенные на плотное многоголосие"}
-      - {en: "A loud live style shaped in clubs, from the Cavern to the London R&B nights", ru: "Громкая концертная манера, выкованная в клубах — от «Каверны» до лондонских ритм-н-блюзовых вечеров"}
-      - {en: "Bands writing their own songs and a new youthful look and swagger", ru: "Группы сами пишут песни, а к этому — новый молодёжный облик и дерзость"}
+      - {en: "A loud live style shaped in clubs, from the Cavern to the London R&B nights", ru: "Громкая концертная манера, выкованная в клубах — от клуба «Каверн» до лондонских ритм-н-блюзовых вечеров"}
+      - {en: "Bands writing their own songs and a new youthful look and swagger", ru: "Группы, которые сами пишут песни, новый молодёжный облик и дерзость"}
     sources:
       - title: "Rock & Roll Hall of Fame: The Beatles"
         url: "https://rockhall.com/inductees/beatles/"
@@ -716,7 +716,7 @@ styles:
       - to: "card:rock-n-roll"
         kind: "style"
         how: "The beat groups began by copying American rock and roll: the backbeat on bass and drums, the guitar-led band, the shouted lead vocal of Little Richard and Chuck Berry, which they set against tight pop harmonies."
-        howRu: "Бит-группы начинали с подражания американскому рок-н-роллу: бэкбит на басу и барабанах, группа во главе с гитарой, выкрикнутый ведущий вокал Литл Ричарда и Чака Берри — и всё это поверх плотного эстрадного многоголосия."
+        howRu: "Бит-группы начинали с подражания американскому рок-н-роллу: бэкбит на басу и барабанах, группа во главе с гитарой, крикливый ведущий вокал Литл Ричарда и Чака Берри, который они оттеняли плотным поп-многоголосием."
         carries: ["backbeat"]
         dimensions: ["rhythm", "sound", "melody-vocal", "image"]
         evidence:
@@ -731,7 +731,7 @@ styles:
           - type: "critics"
             dimensions: ["melody-vocal", "rhythm"]
             text: "The Beatles’ sound was a synthesis of fifties rock and roll, tight pop harmonies and a Motown-inspired groove; Little Richard and Chuck Berry head the list of their influences."
-            textRu: "Звук The Beatles был сплавом рок-н-ролла пятидесятых, плотного эстрадного многоголосия и грува в духе «Мотауна»; среди тех, кто на них повлиял, первыми названы Литл Ричард и Чак Берри."
+            textRu: "Звук The Beatles был сплавом рок-н-ролла пятидесятых, плотного поп-многоголосия и грува в духе Motown; среди тех, кто на них повлиял, первыми названы Литл Ричард и Чак Берри."
             source:
               title: "Rock & Roll Hall of Fame: The Beatles"
               url: "https://rockhall.com/inductees/beatles/"
@@ -739,7 +739,7 @@ styles:
           - type: "analysis"
             dimensions: ["melody-vocal"]
             text: "Lennon is said to have been shaped more by Chuck Berry and McCartney by Little Richard, and each sang lead on those covers."
-            textRu: "Принято считать, что на Леннона сильнее повлиял Чак Берри, а Маккартни был одержим Литл Ричардом; каждый и пел ведущую партию в «своих» каверах."
+            textRu: "Принято считать, что Леннона сильнее сформировал Чак Берри, а Маккартни — Литл Ричард, и каждый пел ведущую партию в каверах на «своего» кумира."
             source:
               title: "The Beatles Story, Liverpool (Google Arts & Culture): The Beatles and Black Music, by Les Spaine"
               url: "https://artsandculture.google.com/story/the-beatles-and-black-music-the-beatles-story/3QVhEdhba2lOBg?hl=en"
@@ -747,7 +747,7 @@ styles:
           - type: "analysis"
             dimensions: ["image"]
             text: "British youth looked up to American rock and roll as wilder and freer than their own culture."
-            textRu: "Британская молодёжь смотрела на американский рок-н-ролл снизу вверх: он казался ей куда более диким и свободным, чем всё своё."
+            textRu: "Британская молодёжь смотрела на американский рок-н-ролл снизу вверх: он казался ей куда более диким и свободным, чем родная культура."
             source:
               title: "St. James Encyclopedia of Popular Culture (via Encyclopedia.com): British Invasion"
               url: "https://www.encyclopedia.com/media/encyclopedias-almanacs-transcripts-and-maps/british-invasion"
@@ -795,7 +795,7 @@ styles:
           - type: "analysis"
             dimensions: ["performance"]
             text: "Merseybeat bands raced to learn the Black American records sailors brought home and claimed those songs on stage."
-            textRu: "Мерсисайдские бит-группы наперегонки разучивали чёрные американские пластинки, которые привозили моряки, и закрепляли эти песни за собой на сцене."
+            textRu: "Группы мерсибита наперегонки разучивали чёрные американские пластинки, которые привозили моряки, и закрепляли эти песни за собой на сцене."
             source:
               title: "The Beatles Story, Liverpool (Google Arts & Culture): The Beatles and Black Music, by Les Spaine"
               url: "https://artsandculture.google.com/story/the-beatles-and-black-music-the-beatles-story/3QVhEdhba2lOBg?hl=en"
@@ -826,7 +826,7 @@ styles:
       - to: "card:blues"
         kind: "style"
         how: "Blues rock is the blues made loud: it took the electric Chicago band sound and the Delta repertoire of Robert Johnson, the riff and the bent guitar line, then amplified it into feedback and stretched it into long solos."
-        howRu: "Блюз-рок — это блюз, сделанный громким: он взял электрический звук чикагского бэнда и дельта-репертуар Роберта Джонсона, рифф и гитарную фразу с подтяжками — и усилил их до фидбэка, растянув в длинные соло."
+        howRu: "Блюз-рок — это блюз на полной громкости: он взял электрический звук чикагского бэнда и дельта-репертуар Роберта Джонсона, рифф и гитарную фразу с подтяжками — и усилил их до фидбэка, растянув в длинные соло."
         carries: ["riff", "improvisation"]
         dimensions: ["harmony-form", "sound", "performance"]
         evidence:
@@ -841,7 +841,7 @@ styles:
           - type: "analysis"
             dimensions: ["performance"]
             text: "Touring urban bluesmen had a strong influence on the formation of blues-rock groups in Britain and the US."
-            textRu: "Гастроли городских блюзменов сильно повлияли на рождение блюз-роковых групп в Англии и США."
+            textRu: "Гастроли городских блюзменов сильно повлияли на рождение блюз-роковых групп в Британии и США."
             source:
               title: "Carnegie Hall, Timeline of African American Music: Urban Blues"
               url: "https://timeline.carnegiehall.org/genres/urban-blues"
@@ -849,7 +849,7 @@ styles:
           - type: "analysis"
             dimensions: ["sound", "performance"]
             text: "George Clinton heard the new rock as loud blues; Hendrix sped the blues up and added sound effects."
-            textRu: "Джордж Клинтон услышал в новом роке громкий блюз; Хендрикс ещё и разогнал блюз и добавил к нему звуковые эффекты."
+            textRu: "Джордж Клинтон услышал в новом роке громкий блюз; а Хендрикс разогнал блюз и добавил к нему звуковые эффекты."
             source:
               title: "Carnegie Hall, Timeline of African American Music: Rock (Maureen Mahon)"
               url: "https://timeline.carnegiehall.org/genres/rock"
@@ -857,7 +857,7 @@ styles:
           - type: "critics"
             dimensions: ["sound", "harmony-form"]
             text: "Led Zeppelin transformed the blues into something bigger and brasher than the original."
-            textRu: "Led Zeppelin не просто играли блюз — они преобразили его, вытянув из него звук больше, наглее и смелее оригинала."
+            textRu: "Led Zeppelin превратили блюз в нечто большее и более дерзкое, чем оригинал."
             source:
               title: "Rock & Roll Hall of Fame: Led Zeppelin (essay by J.D. Considine)"
               url: "https://rockhall.com/inductees/led-zeppelin/"
@@ -890,14 +890,14 @@ styles:
       - to: "style:british-beat"
         kind: "style"
         how: "Blues rock grew inside the British beat and R&B club scene: the Bluesbreakers, Blues Incorporated and the Yardbirds trained its guitarists, and the Yardbirds’ rave-ups with feedback and distortion turned the beat group’s blues covers into a new, harder sound."
-        howRu: "Блюз-рок вырос внутри британской бит- и ритм-н-блюзовой клубной сцены: Bluesbreakers, Blues Incorporated и The Yardbirds выучили его гитаристов, а «рейв-апы» The Yardbirds с фидбэком и перегрузом превратили блюзовые каверы бит-групп в новый, более жёсткий звук."
+        howRu: "Блюз-рок вырос внутри британской бит- и ритм-н-блюзовой клубной сцены: Bluesbreakers, Blues Incorporated и The Yardbirds воспитали его гитаристов, а «рейв-апы» The Yardbirds с фидбэком и перегрузом превратили блюзовые каверы бит-групп в новый, более жёсткий звук."
         carries: []
         dimensions: ["sound", "performance"]
         evidence:
           - type: "critics"
             dimensions: ["sound", "performance"]
             text: "The Yardbirds started as a blues cover band; their rave-ups and feedback shaped the genres that followed."
-            textRu: "The Yardbirds начинали как группа блюзовых каверов; их «рейв-апы» и опыты с фидбэком и перегрузом определили жанры, пришедшие следом."
+            textRu: "The Yardbirds начинали как группа блюзовых каверов; их «рейв-апы» и фидбэк определили жанры, пришедшие следом."
             source:
               title: "Rock & Roll Hall of Fame: The Yardbirds"
               url: "https://rockhall.com/inductees/yardbirds/"
@@ -991,7 +991,7 @@ styles:
           - type: "analysis"
             dimensions: ["performance"]
             text: "Metal guitar heroes had to master the blues as well as classical music."
-            textRu: "Гитарный герой метала обязан был знать и блюз, и классику."
+            textRu: "Гитарному герою метала полагалось владеть и блюзом, и классикой."
             source:
               title: "St. James Encyclopedia of Popular Culture (via Encyclopedia.com): Heavy Metal (Colby Vargas)"
               url: "https://www.encyclopedia.com/media/encyclopedias-almanacs-transcripts-and-maps/heavy-metal"
@@ -1007,7 +1007,7 @@ styles:
       - {en: "Short, fast, loud songs on three chords", ru: "Короткие, быстрые и громкие песни на трёх аккордах"}
       - {en: "Distorted guitars and shouted vocals, no solos and no virtuosity", ru: "Перегруженные гитары и выкрикнутый вокал — без соло и без виртуозности"}
       - {en: "Do-it-yourself ethic: anyone can form a band", ru: "Принцип «сделай сам»: группу может собрать любой"}
-      - {en: "Confrontational stage show and an image of revolt against authority", ru: "Вызывающее поведение на сцене и образ бунта против любой власти"}
+      - {en: "Confrontational stage show and an image of revolt against authority", ru: "Вызывающее поведение на сцене и образ бунта против власти"}
     sources:
       - title: "St. James Encyclopedia of Popular Culture (via Encyclopedia.com): Punk"
         url: "https://www.encyclopedia.com/media/encyclopedias-almanacs-transcripts-and-maps/punk"
@@ -1023,7 +1023,7 @@ styles:
         kind: "style"
         scope: "career"
         how: "Punk went back to the rock and roll of the 1950s and early 1960s: its basic three chords and simple melodies, played louder and faster, with the raw garage energy and the provocative, rule-breaking stance of the early rockers turned into open revolt."
-        howRu: "Панк вернулся к рок-н-роллу 1950-х и начала 1960-х: к его трём аккордам и простым мелодиям, только громче и быстрее, — а сырая гаражная энергия и вызывающая, неуёмная манера первых рокеров превратились в открытый бунт."
+        howRu: "Панк вернулся к рок-н-роллу 1950-х и начала 1960-х: к его трём аккордам и простым мелодиям, только громче и быстрее, — а сырая гаражная энергия и вызывающая, ломающая правила манера первых рокеров превратились в открытый бунт."
         carries: []
         dimensions: ["harmony-form", "rhythm", "sound", "performance", "image"]
         evidence:
@@ -1075,7 +1075,7 @@ styles:
     placeRu: "Лондон, Манчестер и Нью-Йорк"
     traits:
       - {en: "Punk’s simplicity and independent ethos turned toward experiment", ru: "Простота и независимость панка, обращённые к эксперименту"}
-      - {en: "Bass-led grooves borrowed from funk and reggae", ru: "Грув, который ведёт бас, — взятый у фанка и регги"}
+      - {en: "Bass-led grooves borrowed from funk and reggae", ru: "Басовый грув, взятый у фанка и регги"}
       - {en: "Angular, nervous guitars, minimalism and repetition", ru: "Угловатые, нервные гитары, минимализм и повтор"}
       - {en: "Danceable songs, synthesizers and a strong visual style", ru: "Танцевальные песни, синтезаторы и яркий визуальный стиль"}
     sources:
@@ -1172,7 +1172,7 @@ styles:
           - type: "analysis"
             dimensions: ["rhythm", "sound"]
             text: "Talking Heads merged punk, rock and funk at the head of new wave; their 1980 album offered a rhythmic funk taken up by dance clubs worldwide."
-            textRu: "Talking Heads соединили панк, рок и фанк и встали во главе новой волны; их альбом 1980 года дал ритмичный фанк, который подхватили танцевальные клубы по всему миру."
+            textRu: "Talking Heads соединили панк, рок и фанк и встали во главе новой волны; их альбом 1980 года принёс ритмичный фанк, который подхватили танцевальные клубы по всему миру."
             source:
               title: "Library of Congress, National Recording Registry: “Remain in Light” — Talking Heads (essay by Kevin Buck)"
               url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf"
@@ -1249,7 +1249,7 @@ styles:
           - type: "analysis"
             dimensions: ["harmony-form", "performance"]
             text: "Around 1965–66 the British Invasion gave way to an age of innovation and eclecticism, with Revolver, Aftermath and Roger the Engineer."
-            textRu: "Около 1965–1966 годов британское вторжение сменилось эпохой новаторства и эклектики — Revolver, Aftermath, Roger the Engineer."
+            textRu: "Около 1965–1966 годов британское вторжение сменилось эпохой новаторства и эклектики — «Revolver», «Aftermath», «Roger the Engineer»."
             source:
               title: "St. James Encyclopedia of Popular Culture (via Encyclopedia.com): British Invasion"
               url: "https://www.encyclopedia.com/media/encyclopedias-almanacs-transcripts-and-maps/british-invasion"
@@ -1281,7 +1281,7 @@ styles:
           - type: "critics"
             dimensions: ["sound", "performance"]
             text: "One of Lou Reed’s biggest influences in forming the Velvet Underground came from jazz: Ornette Coleman’s aggressive, forceful attack."
-            textRu: "Одно из главных влияний, под которым Лу Рид собирал The Velvet Underground, пришло из джаза: напористая, яростная атака Орнетта Коулмана."
+            textRu: "Одно из главных влияний, под которым Лу Рид собирал The Velvet Underground, пришло из джаза: напористая, мощная атака Орнетта Коулмана."
             source:
               title: "Far Out: Ornette Coleman, Lou Reed’s greatest influence (Tim Coffman, 2023)"
               url: "https://faroutmagazine.co.uk/ornette-coleman-lou-reeds-greatest-influence/"
@@ -1397,7 +1397,7 @@ styles:
           - type: "critics"
             dimensions: ["harmony-form", "melody-vocal"]
             text: "The Beatles’ influence can be heard clearly on Oasis’s debut, Definitely Maybe."
-            textRu: "Влияние The Beatles отчётливо слышно на дебюте Oasis — Definitely Maybe."
+            textRu: "Влияние The Beatles отчётливо слышно на дебюте Oasis — «Definitely Maybe»."
             source:
               title: "Far Out: Did Oasis really sound like The Beatles? (Sam Kemp, 2022)"
               url: "https://faroutmagazine.co.uk/did-oasis-really-sound-like-the-beatles/"
@@ -1545,7 +1545,7 @@ styles:
     placeRu: "Сиэтл"
     traits:
       - {en: "Heavy, sludgy, distorted guitars at slowed-down punk tempos", ru: "Тяжёлые, вязкие, перегруженные гитары на замедленных панковских темпах"}
-      - {en: "Metal riffs joined to punk aggression and pop melody", ru: "Металлические риффы вместе с панковской агрессией и поп-мелодией"}
+      - {en: "Metal riffs joined to punk aggression and pop melody", ru: "Риффы метала, соединённые с панковской агрессией и поп-мелодией"}
       - {en: "Hoarse, screaming or soaring vocals and cathartic performance", ru: "Хриплый, срывающийся в крик или взлетающий вокал и концерт как катарсис"}
       - {en: "Independent-label roots, irony about rock stardom, flannel and ripped jeans", ru: "Корни в независимых лейблах, ирония над рок-звёздностью, фланель и рваные джинсы"}
     sources:
@@ -1586,7 +1586,7 @@ styles:
           - type: "critics"
             dimensions: ["sound", "performance"]
             text: "Nirvana delivered a raw, punk-inspired sound through cathartic performances."
-            textRu: "Nirvana давала сырой, вдохновлённый панком звук и концерты-катарсис."
+            textRu: "На концертах-катарсисах Nirvana выдавала сырой, вдохновлённый панком звук."
             source:
               title: "Rock & Roll Hall of Fame: Nirvana"
               url: "https://rockhall.com/inductees/nirvana/"
@@ -1611,7 +1611,7 @@ styles:
         kind: "style"
         scope: "career"
         how: "From heavy metal and 1970s hard rock grunge took the heavy guitar sound, the riff-based writing and the high, powerful vocal of Black Sabbath, Led Zeppelin and Deep Purple, which earlier indie rock had pretended to ignore."
-        howRu: "У хеви-метала и хард-рока 1970-х гранж взял тяжёлый гитарный звук, письмо от риффа и высокий, мощный вокал Black Sabbath, Led Zeppelin и Deep Purple — всё то, чего прежний инди-рок делал вид, что не замечает."
+        howRu: "У хеви-метала и хард-рока 1970-х гранж взял тяжёлый гитарный звук, письмо от риффа и высокий, мощный вокал Black Sabbath, Led Zeppelin и Deep Purple — всё то, что прежний инди-рок демонстративно не замечал."
         carries: ["riff"]
         dimensions: ["sound", "harmony-form", "melody-vocal"]
         evidence:
@@ -1642,7 +1642,7 @@ styles:
           - type: "critics"
             dimensions: ["sound"]
             text: "Nirvana began with the sludge-metal of Bleach."
-            textRu: "Nirvana начинала со «Bleach» — вязкого, тяжёлого сладж-метала."
+            textRu: "Nirvana начинала с вязкого сладж-метала «Bleach»."
             source:
               title: "Rock & Roll Hall of Fame: Nirvana"
               url: "https://rockhall.com/inductees/nirvana/"
@@ -1673,7 +1673,7 @@ styles:
         kind: "style"
         scope: "career"
         how: "Jimmie Rodgers brought the blues into country: the twelve-bar form, ending in his yodel, and a blues-based way of singing that later country singers such as Hank Williams carried on."
-        howRu: "Блюз в кантри принёс Джимми Роджерс: двенадцатитактовую форму, увенчанную его йодлем, и блюзовую манеру пения, которую продолжили поздние кантри-певцы вроде Хэнка Уильямса."
+        howRu: "Блюз в кантри принёс Джимми Роджерс: двенадцатитактовую форму, увенчанную его йодлем, и блюзовую манеру пения, которую подхватили пришедшие позже кантри-певцы вроде Хэнка Уильямса."
         carries: ["twelve-bar-blues"]
         dimensions: ["harmony-form", "melody-vocal"]
         evidence:
@@ -1756,8 +1756,8 @@ styles:
     place: "New York, Los Angeles and Atlanta"
     placeRu: "Нью-Йорк, Лос-Анджелес и Атланта"
     traits:
-      - {en: "Gospel-rooted soul singing over programmed beats", ru: "Соул-вокал с госпеловыми корнями поверх программированного бита"}
-      - {en: "Synthesized funk grooves with a syncopated, swung snare on two and four", ru: "Синтезаторные фанковые грувы с синкопированным свингующим малым барабаном на вторую и четвёртую долю"}
+      - {en: "Gospel-rooted soul singing over programmed beats", ru: "Соул-вокал с госпельными корнями поверх программированного бита"}
+      - {en: "Synthesized funk grooves with a syncopated, swung snare on two and four", ru: "Синтезаторные фанковые грувы с синкопированным свингующим малым барабаном на вторую и четвёртую доли"}
       - {en: "Hip-hop beats, samples and a rap verse or break between the sung verses", ru: "Хип-хоповые биты, сэмплы и рэп-куплет или брейк между спетыми куплетами"}
       - {en: "Producer-built hybrids: new jack swing, hip-hop soul, neo soul", ru: "Гибриды, собранные продюсерами: нью-джек-свинг, хип-хоп-соул, неосоул"}
     sources:
@@ -1775,14 +1775,14 @@ styles:
         kind: "style"
         scope: "career"
         how: "Contemporary R&B kept soul’s voice: the gospel-influenced lead singing of the soul era, its smooth, melismatic phrasing and its love-song themes, now set over machine beats."
-        howRu: "Современный ритм-н-блюз сохранил голос соула: госпеловую манеру солистов соул-эпохи, гладкую мелизматичную фразировку и любовную лирику — только теперь поверх машинного бита."
+        howRu: "Современный ритм-н-блюз сохранил голос соула: госпельную манеру солистов соул-эпохи, гладкую мелизматичную фразировку и любовную лирику — только теперь поверх машинного бита."
         carries: ["gospel-vocal"]
         dimensions: ["melody-vocal"]
         evidence:
           - type: "analysis"
             dimensions: ["melody-vocal"]
             text: "New jack swing combined hip-hop with the gospel vocal manner of soul."
-            textRu: "Нью-джек-свинг соединил хип-хоп с госпеловой вокальной манерой соула."
+            textRu: "Нью-джек-свинг соединил хип-хоп с госпельной вокальной манерой соула."
             source:
               title: "Carnegie Hall, Timeline of African American Music: New Jack Swing"
               url: "https://timeline.carnegiehall.org/genres/new-jack-swing"
@@ -1790,7 +1790,7 @@ styles:
           - type: "analysis"
             dimensions: ["melody-vocal"]
             text: "Whitney Houston and Luther Vandross carried on soul’s gospel-influenced singing into the 1980s and 1990s."
-            textRu: "Уитни Хьюстон и Лютер Вандросс пронесли госпеловую манеру соула через 1980-е и 1990-е."
+            textRu: "Уитни Хьюстон и Лютер Вандросс пронесли госпельную манеру соула через 1980-е и 1990-е."
             source:
               title: "Encyclopedia.com (Gale): Rhythm and Blues"
               url: "https://www.encyclopedia.com/media/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues"
@@ -1798,7 +1798,7 @@ styles:
           - type: "critics"
             dimensions: ["melody-vocal"]
             text: "Rolling Stone’s Rob Tannenbaum located the key to Bobby Brown’s music in adapting the traditional techniques of soul to the language of rap."
-            textRu: "Роб Танненбаум из Rolling Stone видел ключ к музыке Бобби Брауна в том, что тот приспособил традиционные приёмы соула к грубому языку рэпа."
+            textRu: "Роб Танненбаум из Rolling Stone видел ключ к музыке Бобби Брауна в том, что тот приспособил традиционные приёмы соула к языку рэпа."
             source:
               title: "Encyclopedia.com (Gale biographies): Bobby Brown"
               url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/bobby-brown"
@@ -2092,7 +2092,7 @@ styles:
           - type: "critics"
             dimensions: ["melody-vocal", "performance", "sound"]
             text: "K-pop’s blend rests on addictive melodies, slick choreography and production, and performers trained to sing and dance in sync."
-            textRu: "Смесь K-pop держится на цепких мелодиях, отточенной хореографии и продакшне и на исполнителях, выученных петь и танцевать синхронно."
+            textRu: "Смесь K-pop держится на цепких мелодиях, отточенной хореографии и продакшне и на исполнителях, обученных петь и танцевать синхронно."
             source:
               title: "Vox, Aja Romano: How K-pop became a global phenomenon (2018)"
               url: "https://www.vox.com/culture/2018/2/16/16915672/what-is-kpop-history-explained"
@@ -2153,7 +2153,7 @@ styles:
           - type: "critics"
             dimensions: ["melody-vocal", "image"]
             text: "Critic Ilya Smirnov: Makarevich was among those who taught rock and roll to speak Russian."
-            textRu: "Критик Илья Смирнов: Макаревич был среди тех, кто взялся учить рок-н-ролл говорить по-русски."
+            textRu: "Критик Илья Смирнов: Макаревич был среди тех, кто научил рок-н-ролл говорить по-русски."
             source:
               title: "Radio Svoboda: Andrei Makarevich at 50 (with Ilya Smirnov)"
               url: "https://www.svoboda.org/a/24197864.html"
@@ -2161,7 +2161,7 @@ styles:
           - type: "testimony"
             dimensions: ["melody-vocal"]
             text: "Makarevich names Dylan, the Beatles and Jagger among his sources, and recalls copying Beatles lyrics as phonetic English from worn tapes."
-            textRu: "Макаревич называет среди своих источников Дилана, The Beatles и Джаггера и вспоминает, как списывал битловские тексты с затёртых плёнок английскими фонемами."
+            textRu: "Макаревич называет среди своих источников Дилана, The Beatles и Джаггера и вспоминает, как переписывал битловские тексты с затёртых плёнок на слух, по звучанию английских слов."
             source:
               title: "Colta.ru: Andrei Makarevich interview, “Rebyata, eto pro vas pro vsekh” (2019)"
               url: "https://www.colta.ru/articles/music_modern/21682-andrey-makarevich-rebyata-eto-pro-vas-pro-vseh"
@@ -2183,7 +2183,7 @@ styles:
     placeRu: "Кингстон, Ямайка"
     traits:
       - {en: "Remixes of reggae rhythm tracks in which the vocal drops in and out or vanishes", ru: "Ремиксы ритм-треков регги, где голос то появляется, то исчезает совсем"}
-      - {en: "Drum and bass pushed to the front, bass-heavy and spacious", ru: "Барабаны и бас выдвинуты вперёд: звук тяжёлый на басу и полный пустоты"}
+      - {en: "Drum and bass pushed to the front, bass-heavy and spacious", ru: "Барабаны и бас выдвинуты вперёд: много низов и много воздуха"}
       - {en: "Echo, reverb and filter sweeps used as instruments", ru: "Эхо, реверберация и фильтр звучат как самостоятельные инструменты"}
       - {en: "The mixing desk played live: every mix of the same rhythm comes out different", ru: "На микшерном пульте играют вживую: каждый микс одного и того же ритма выходит другим"}
       - {en: "Made for sound-system dances and tested on them", ru: "Музыка для танцев у саунд-систем — там её и проверяли"}
@@ -2241,7 +2241,7 @@ styles:
           - type: "critics"
             dimensions: ["sound"]
             text: "The accidental play of a reggae instrumental opened the way to dub, which King Tubby, Scientist and Lee Perry treated with warping effects."
-            textRu: "Случайно поставленная инструментальная версия регги открыла дорогу дабу, а Кинг Табби, Сайентист и Ли Перри обрабатывали его эффектами до неузнаваемости."
+            textRu: "Случайно поставленная инструментальная версия регги открыла дорогу дабу, а Кинг Табби, Сайентист и Ли Перри обрабатывали его искажающими эффектами."
             source:
               title: "Mixmag: How Jamaican soundsystem culture changed dance music forever"
               url: "https://mixmag.net/feature/how-jamaican-soundsystem-culture-changed-dance-music-forever"
@@ -2255,7 +2255,7 @@ styles:
     traits:
       - {en: "Slowed-down P-Funk grooves, made for riding in a car rather than for dancing", ru: "Замедленные грувы пи-фанка — для езды в машине, а не для танцпола"}
       - {en: "Deep, bouncing, bass-driven grooves with funk’s bright horns stripped away", ru: "Глубокий пружинящий грув на басу, из которого убраны яркие фанковые духовые"}
-      - {en: "A high-pitched, whining synthesizer melody over the bass", ru: "Высокая, тянущаяся синтезаторная мелодия поверх баса"}
+      - {en: "A high-pitched, whining synthesizer melody over the bass", ru: "Высокая, подвывающая синтезаторная мелодия поверх баса"}
       - {en: "Funk and soul samples blended with live musicians replaying the grooves", ru: "Фанковые и соуловые сэмплы вперемешку с живыми музыкантами, которые переигрывают те же грувы"}
       - {en: "Laid-back West Coast gangsta storytelling", ru: "Неторопливые гангста-истории Западного побережья"}
     sources:
@@ -2276,7 +2276,7 @@ styles:
         kind: "style"
         scope: "career"
         how: "G-funk is 1970s P-Funk slowed down for the car: Parliament-Funkadelic grooves, rebuilt from samples and by live players, keep their deep bass and their whining synthesizer lead but lose the bright horns."
-        howRu: "Джи-фанк — это пи-фанк 1970-х, замедленный для езды в машине: грувы Parliament-Funkadelic, собранные из сэмплов и заново сыгранные живыми музыкантами, сохраняют глубокий бас и тянущийся синтезаторный голос, но теряют яркие духовые."
+        howRu: "Джи-фанк — это пи-фанк 1970-х, замедленный для езды в машине: грувы Parliament-Funkadelic, собранные из сэмплов и заново сыгранные живыми музыкантами, сохраняют глубокий бас и подвывающий синтезаторный голос, но теряют яркие духовые."
         carries: ["groove", "sampling"]
         dimensions: ["rhythm", "sound", "performance", "melody-vocal"]
         evidence:
@@ -2291,7 +2291,7 @@ styles:
           - type: "critics"
             dimensions: ["performance", "sound", "melody-vocal"]
             text: "Instead of sampling, Dre had live musicians channel the grooves of P-Funk’s Bernie Worrell and George Clinton, with whining Moog synthesizers."
-            textRu: "Вместо сэмплов Доктор Дре заставил живых музыкантов воспроизводить грувы Берни Уоррелла и Джорджа Клинтона из P-Funk, а сверху — тянущийся «Муг»."
+            textRu: "Вместо сэмплов Доктор Дре поручил живым музыкантам воспроизвести грувы Берни Уоррелла и Джорджа Клинтона из P-Funk, а сверху — подвывающий «Муг»."
             source:
               title: "Pitchfork, Sheldon Pearce: Dr. Dre, The Chronic (Sunday Review, 2019)"
               url: "https://pitchfork.com/reviews/albums/dr-dre-the-chronic/"
@@ -2323,7 +2323,7 @@ styles:
           - type: "critics"
             dimensions: ["melody-vocal", "sound"]
             text: "Gangsta rap is marked by rich storytelling laid over heavy funk samples from Parliament-Funkadelic, James Brown and others, and took on a West Coast flavor."
-            textRu: "Гангста-рэп отличает подробный рассказ поверх тяжёлых фанковых сэмплов из Parliament-Funkadelic, Джеймса Брауна и других; на Западном побережье он обрёл свой особый вкус."
+            textRu: "Гангста-рэп отличает подробный рассказ поверх тяжёлых фанковых сэмплов из Parliament-Funkadelic, Джеймса Брауна и других; на Западном побережье он приобрёл особый местный колорит."
             source:
               title: "St. James Encyclopedia of Popular Culture (via Encyclopedia.com): Gangsta Rap"
               url: "https://www.encyclopedia.com/media/encyclopedias-almanacs-transcripts-and-maps/gangsta-rap"
@@ -2385,7 +2385,7 @@ styles:
           - type: "listening"
             dimensions: ["sound"]
             text: "Many producers of Chicago house’s second wave are named on Daft Punk’s “Teachers” as major influences on the group’s sound."
-            textRu: "Многих продюсеров второй волны чикаго-хауса Daft Punk перечисляют в треке «Teachers» как главные влияния на свой звук."
+            textRu: "Многих продюсеров второй волны чикаго-хауса Daft Punk перечисляют в треке «Teachers» среди тех, кто сильнее всего повлиял на их звук."
             source:
               title: "Complex, David Drake: A Guide to Daft Punk (2013)"
               url: "https://www.complex.com/music/a/david-drake/a-guide-to-daft-punk"
@@ -2469,9 +2469,9 @@ styles:
     place: "England: London, Essex, Manchester, Brighton"
     placeRu: "Англия: Лондон, Эссекс, Манчестер, Брайтон"
     traits:
-      - {en: "Chicago acid house and Detroit techno played at all-night warehouse raves", ru: "Чикагский эйсид-хаус и детройт-техно на ночных рейвах в пустых складах"}
+      - {en: "Chicago acid house and Detroit techno played at all-night warehouse raves", ru: "Чикагский эйсид-хаус и детройт-техно на складских рейвах до утра"}
       - {en: "Huge hip-hop breakbeats in place of the steady house kick", ru: "Огромные хип-хоповые брейкбиты на месте ровной хаусовой «бочки»"}
-      - {en: "Hip-hop sampling and turntable craft: records cut up and rebuilt with drum machines and synthesizers", ru: "Хип-хоповые сэмплирование и работа с вертушками: пластинки режут на куски и собирают заново с драм-машинами и синтезаторами"}
+      - {en: "Hip-hop sampling and turntable craft: records cut up and rebuilt with drum machines and synthesizers", ru: "Сэмплирование и работа с вертушками из хип-хопа: пластинки режут на куски и собирают заново с драм-машинами и синтезаторами"}
       - {en: "Heavy distortion and rock-sized energy in big beat", ru: "Тяжёлый перегруз и почти роковая энергия в биг-бите"}
       - {en: "A defiant, anti-authoritarian youth culture", ru: "Вызывающая, антиавторитарная молодёжная культура"}
     sources:
@@ -2489,7 +2489,7 @@ styles:
         kind: "style"
         scope: "career"
         how: "Rave began when Chicago acid house reached London in 1988: its fast, machine-made dance music and its DJ-led club culture were renamed “rave” and moved into warehouses and fields."
-        howRu: "Рейв начался, когда чикагский эйсид-хаус в 1988 году добрался до Лондона: его быстрая машинная танцевальная музыка и клубная культура во главе с диджеем получили имя «рейв» и переехали в склады и поля."
+        howRu: "Рейв начался, когда чикагский эйсид-хаус в 1988 году добрался до Лондона: его быстрая машинная танцевальная музыка и клубная культура во главе с диджеем получили имя «рейв» и переехали на склады и в поля."
         carries: []
         dimensions: ["sound", "performance"]
         evidence:
@@ -2521,7 +2521,7 @@ styles:
         kind: "style"
         scope: "career"
         how: "English rave drew on Detroit techno: the synthesizer-and-drum-machine dance tracks of Juan Atkins and his peers, issued in Britain on compilations from 1988, reached London clubs alongside Chicago house."
-        howRu: "Английский рейв опирался на детройт-техно: танцевальные треки Хуана Аткинса и его товарищей на синтезаторах и драм-машинах, выходившие в Британии на сборниках с 1988 года, пришли в лондонские клубы вместе с чикаго-хаусом."
+        howRu: "Английский рейв опирался на детройт-техно: танцевальные треки Хуана Аткинса и его круга на синтезаторах и драм-машинах, выходившие в Британии на сборниках с 1988 года, пришли в лондонские клубы вместе с чикаго-хаусом."
         carries: []
         dimensions: ["sound", "performance"]
         evidence:
@@ -2584,7 +2584,7 @@ styles:
           - type: "critics"
             dimensions: ["performance", "sound"]
             text: "Discovering Public Enemy’s It Takes a Nation of Millions to Hold Us Back sent the Chemical Brothers’ DJ work towards remixing samples with synthesizers and drum machines."
-            textRu: "Открытие альбома Public Enemy «It Takes a Nation of Millions to Hold Us Back» повернуло диджейскую работу Chemical Brothers к ремиксам из сэмплов с синтезаторами и драм-машинами."
+            textRu: "Когда Chemical Brothers открыли для себя альбом Public Enemy «It Takes a Nation of Millions to Hold Us Back», их диджейская работа повернула к ремиксам из сэмплов с синтезаторами и драм-машинами."
             source:
               title: "Contemporary Musicians (via Encyclopedia.com): Chemical Brothers"
               url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/chemical-brothers"

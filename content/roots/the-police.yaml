@@ -8,12 +8,12 @@ placeRu: "Лондон"
 genre: "New wave"
 genreRu: "новая волна"
 story: "The Police came up through the punk years but stood apart as a band of trained players inside new wave. Their signature was a reggae-infused rhythm: Sting absorbed Bob Marley's records and the weight of reggae bass, and only then could Stewart Copeland crack the reggae beat."
-storyRu: "The Police выросли в годы панка, но выделялись в новой волне как группа выученных музыкантов. Их почерком стал ритм, пропитанный регги: Стинг заслушивался пластинками Боба Марли и проникся весом регги-баса, и только тогда Стюарт Коупленд смог «расколоть» регги-бит."
+storyRu: "The Police выросли в годы панка, но выделялись в новой волне как группа профессионально обученных музыкантов. Их почерком стал ритм, пропитанный регги: Стинг заслушивался пластинками Боба Марли и проникся весом регги-баса, и только тогда Стюарт Коупленд смог «расколоть» регги-бит."
 links:
   - to: "root:bob-marley"
     kind: "influence"
     how: "Bob Marley's records taught Sting the reggae bass line, its weight and place in the mix; once the bass was there, Copeland's drums found the reggae feel, and the band built its new wave on that rhythm."
-    howRu: "По пластинкам Боба Марли Стинг выучил басовую линию регги — её вес и место в звуке; когда бас встал на место, барабаны Коупленда нашли регги-ощущение, и на этом ритме группа построила свою новую волну."
+    howRu: "По пластинкам Боба Марли Стинг выучил басовую линию регги — её вес и место в миксе; когда бас встал на место, барабаны Коупленда поймали пульс регги, и на этом ритме группа построила свою новую волну."
     carries: []
     dimensions: ["rhythm", "sound"]
     evidence:
@@ -28,7 +28,7 @@ links:
       - type: "testimony"
         dimensions: ["sound"]
         text: "Sting says the importance of the bass in reggae, which he met in London where Marley's career began, hugely influenced him."
-        textRu: "Стинг говорит, что значение баса в регги, с которым он столкнулся в Лондоне, где началась карьера Марли, сильно на него повлияло."
+        textRu: "Стинг говорит, что на него сильно повлияло, какое значение в регги имеет бас: с этой музыкой он столкнулся в Лондоне, где началась карьера Марли."
         source:
           title: "The Current (MPR): Sting talks about his collaboration with Shaggy (2018)"
           url: "https://thecurrent.org/feature/2018/09/24/sting-talks-about-his-collaboration-with-shaggy"
@@ -36,7 +36,7 @@ links:
       - type: "critics"
         dimensions: ["rhythm", "sound"]
         text: "The Rock & Roll Hall of Fame sums up the band's sound as new wave with a reggae twist."
-        textRu: "Зал славы рок-н-ролла определяет звук группы как новую волну с поворотом в сторону регги."
+        textRu: "Зал славы рок-н-ролла определяет звук группы как новую волну с привкусом регги."
         source:
           title: "Rock & Roll Hall of Fame: The Police"
           url: "https://www.rockhall.com/inductees/police"
@@ -45,14 +45,14 @@ links:
   - to: "style:post-punk"
     kind: "style"
     how: "The Police rose with punk, which opened ears to new sounds, but played new wave with a musicianship the punk world held against them."
-    howRu: "The Police поднялись на волне панка, открывшего слух к новому звучанию, но играли новую волну с мастерством, которое панк-мир ставил им в упрёк."
+    howRu: "The Police поднялись на волне панка, приучившего слух к новому звучанию, но играли новую волну с мастерством, которое панк-мир ставил им в упрёк."
     carries: []
     dimensions: ["performance", "image"]
     evidence:
       - type: "testimony"
         dimensions: ["performance", "image"]
         text: "Copeland recalls that punk opened the way for the band, while punks reviled them as fakes for their musicianship."
-        textRu: "Коупленд вспоминает, что панк открыл группе дорогу, а сами панки презирали их как притворщиков за мастерство."
+        textRu: "Коупленд вспоминает, что панк открыл группе дорогу, а сами панки презирали их за мастерство, считая фальшивками."
         source:
           title: "uDiscover Music: “Punk Opened The Way”: Stewart Copeland On The Rise Of The Police"
           url: "https://www.udiscovermusic.com/news/stewart-copeland-police-interview"
@@ -60,7 +60,7 @@ links:
       - type: "critics"
         dimensions: ["performance"]
         text: "The Rock & Roll Hall of Fame places the Police among post-punk bands, set apart by their musical mastery."
-        textRu: "Зал славы рок-н-ролла ставит The Police в ряд постпанк-групп и выделяет их мастерством."
+        textRu: "Зал славы рок-н-ролла ставит The Police в ряд постпанк-групп, которых выделяло мастерство."
         source:
           title: "Rock & Roll Hall of Fame: The Police"
           url: "https://www.rockhall.com/inductees/police"

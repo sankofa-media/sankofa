@@ -15,12 +15,12 @@ placeRu: "Мемфис, Теннесси"
 genre: Soul and gospel
 genreRu: соул и госпел
 story: "Aretha Franklin’s style was gospel through and through: the riffs, bent notes, melisma and circling of the beat that she carried into R&B, soul and pop, the gospel piano she taught herself, and a stage manner of church abandon. Critics also hear in her the secular line of Dinah Washington, who coached her singing as a girl."
-storyRu: "Стиль Ареты Франклин — госпел насквозь: риффы, подтянутые ноты, мелизмы и пение вокруг доли, которые она перенесла в ритм-н-блюз, соул и поп, госпеловое фортепиано, освоенное ею самоучкой, и церковная самоотдача на сцене. Критики слышат в ней и светскую линию Дайны Вашингтон, которая в детстве учила её петь."
+storyRu: "Стиль Ареты Франклин — госпел насквозь: риффы, подтянутые ноты, мелизмы и пение вокруг доли, которые она перенесла в ритм-н-блюз, соул и поп, госпельное фортепиано, освоенное ею самоучкой, и церковное самозабвение на сцене. Критики слышат в ней и светскую линию Дайны Вашингтон, которая в детстве учила её петь."
 links:
   - to: "card:gospel"
     kind: "style"
     how: "Franklin’s whole vocal technique — riffs, bent notes, melisma, singing around the beat — came from gospel, as did her self-taught gospel piano and the church abandon of her stage manner."
-    howRu: "Вся вокальная техника Франклин — риффы, подтянутые ноты, мелизмы, пение вокруг доли — пришла из госпела; оттуда же её госпеловое фортепиано, освоенное самоучкой, и церковная самоотдача на сцене."
+    howRu: "Вся вокальная техника Франклин — риффы, подтянутые ноты, мелизмы, пение вокруг доли — пришла из госпела; оттуда же её госпельное фортепиано, освоенное самоучкой, и церковное самозабвение на сцене."
     carries: ["gospel-vocal"]
     dimensions: ["melody-vocal", "harmony-form", "performance"]
     evidence:
@@ -35,7 +35,7 @@ links:
       - type: "analysis"
         dimensions: ["harmony-form"]
         text: "The same article notes that the gospel star James Cleveland showed her how to play gospel chords."
-        textRu: "В той же статье сказано, что звезда госпела Джеймс Кливленд показал ей, как играть госпеловые аккорды."
+        textRu: "В той же статье сказано, что звезда госпела Джеймс Кливленд показал ей, как играть госпельные аккорды."
         source:
           title: "The New Yorker: Soul Survivor — Aretha Franklin’s American soul (David Remnick, 2016)"
           url: "https://www.newyorker.com/magazine/2016/04/04/aretha-franklins-american-soul"
@@ -43,7 +43,7 @@ links:
       - type: "critics"
         dimensions: ["harmony-form", "melody-vocal"]
         text: "Richard Williams’s Guardian obituary says she mastered gospel piano by ear and calls her heir to the sacred tradition of Mahalia Jackson and Clara Ward."
-        textRu: "Ричард Уильямс в некрологе для The Guardian пишет, что она освоила госпеловое фортепиано на слух, и называет её наследницей церковной традиции Махалии Джексон и Клары Уорд."
+        textRu: "Ричард Уильямс в некрологе для The Guardian пишет, что она освоила госпельное фортепиано на слух, и называет её наследницей церковной традиции Махалии Джексон и Клары Уорд."
         source:
           title: "The Guardian: Aretha Franklin obituary (Richard Williams, 2018)"
           url: "https://www.theguardian.com/music/2018/aug/16/aretha-franklin-obituary"
@@ -59,7 +59,7 @@ links:
       - type: "critics"
         dimensions: ["performance", "melody-vocal"]
         text: "Rolling Stone’s obituary hears a “gospel roar” and quotes Jerry Wexler on her “conducting church” in a nightclub."
-        textRu: "Некролог Rolling Stone слышит у неё «госпеловый рык» и приводит слова Джерри Уэкслера о том, что она «правит церковную службу» прямо в ночном клубе."
+        textRu: "Некролог Rolling Stone слышит у неё «госпельный рык» и приводит слова Джерри Уэкслера о том, что она «ведёт церковную службу» прямо в ночном клубе."
         source:
           title: "Rolling Stone: Aretha Franklin, Queen of Soul, Dead at 76 (2018)"
           url: "https://www.rollingstone.com/music/music-news/aretha-franklin-queen-of-soul-dead-at-76-119453/"
@@ -68,7 +68,7 @@ links:
   - to: "root:dinah-washington"
     kind: "influence"
     how: "Beside the sacred line, Franklin’s singing descends from the secular blues and jazz vocal of Dinah Washington, who coached her as a girl."
-    howRu: "Рядом с церковной линией пение Франклин наследует светскому блюзовому и джазовому вокалу Дайны Вашингтон, которая учила её петь ещё девочкой."
+    howRu: "Помимо церковной, в пении Франклин есть и светская линия: оно наследует блюзовому и джазовому вокалу Дайны Вашингтон, которая учила её петь ещё девочкой."
     carries: []
     dimensions: ["melody-vocal"]
     evidence:
