@@ -265,7 +265,7 @@ export class Roots {
       h(
         'div.r-tree',
         { 'data-root': id },
-        h('header.rt-head', {}, this.plate(a), story ? h('p.r-story', {}, story) : null),
+        h('header.rt-head', {}, this.plate(a), story ? h('p.r-story', {}, story) : null, this.legacy(a)),
         h(
           'section.rt-overview',
           { 'aria-labelledby': 'rt-ov-h' },
@@ -309,6 +309,19 @@ export class Roots {
       const top = this.stage.getBoundingClientRect().top + this.el.scrollTop - 70;
       this.el.scrollTo({ top: Math.max(0, top), behavior: reducedMotion() ? 'auto' : 'smooth' });
     });
+  }
+
+  /** The other direction: how the artist's music passed on into Black traditions; never a station. */
+  private legacy(a: Artist): HTMLElement | null {
+    const lg = a.legacy;
+    if (!lg) return null;
+    return h(
+      'aside.rt-legacy',
+      { 'aria-label': pick({ en: 'The other direction', ru: 'В обратную сторону' }) },
+      h('small', {}, pick({ en: 'The other direction · not a step of the routes', ru: 'В обратную сторону · не шаг маршрутов' })),
+      h('p', {}, (lang() === 'ru' && lg.textRu) || lg.text),
+      h('p.rt-legacy-cards', {}, ...lg.cards.flatMap((id, k) => [k ? ' · ' : '', h('a', { href: `#focus=${id}`, 'data-card': id }, this.refName(`card:${id}`))])),
+    );
   }
 
   /** The artist the routes start from, as a plate. */

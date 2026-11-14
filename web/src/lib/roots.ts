@@ -88,6 +88,14 @@ export interface Style {
   from: RootLink[];
 }
 
+/** Where the artist's music passed on into Black traditions: the other direction, never a route step. */
+export interface Legacy {
+  text: string;
+  textRu?: string;
+  cards: string[];
+  sources: RootSource[];
+}
+
 export interface Artist {
   id: string;
   name: string;
@@ -103,6 +111,7 @@ export interface Artist {
   storyRu?: string;
   links: RootLink[];
   notes?: PeriodNote[];
+  legacy?: Legacy;
   /** each: artist ids and "style:<id>" stations, then the final "card:<id>"; career-only routes first */
   paths: string[][];
   /** how many of the paths are made only of career links */

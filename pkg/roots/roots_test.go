@@ -175,6 +175,36 @@ func TestNotes(t *testing.T) {
 	}
 }
 
+func TestLegacy(t *testing.T) {
+	s := load(t, map[string]string{
+		"x.yaml": string(artist("x", link("card:blues", "career"))) + `legacy:
+  text: Their music went on into the blues.
+  textRu: Их музыка ушла дальше, в блюз.
+  cards: [blues]
+  sources:
+    - {title: a, url: "https://a.org/l", quote: qa}
+    - {title: b, url: "https://b.org/l", quote: qb}
+`,
+		ElementsFile: elements,
+	})
+	if errs := s.Validate(cards); len(errs) != 0 {
+		t.Fatal(errs)
+	}
+	if ps, _ := s.MainPaths("x", 8); len(ps) != 1 {
+		t.Fatalf("a legacy note is never a route step: %+v", ps)
+	}
+	s.ByID["x"].Legacy.Cards = []string{"nowhere"}
+	s.ByID["x"].Legacy.Sources = s.ByID["x"].Legacy.Sources[:1]
+	errs := s.Validate(cards)
+	joined := ""
+	for _, e := range errs {
+		joined += e.Error() + "\n"
+	}
+	if len(errs) != 2 || !strings.Contains(joined, `unknown card "nowhere"`) || !strings.Contains(joined, "two websites") {
+		t.Fatalf("a legacy note needs known cards and two websites: %v", errs)
+	}
+}
+
 func TestElementLayer(t *testing.T) {
 	q := `
     sources:
