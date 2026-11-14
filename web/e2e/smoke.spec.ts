@@ -542,12 +542,12 @@ test('in the demo the guest drummer comes and goes, in Russian too', async ({ pa
 });
 
 
-test('roots unwind past the card, name the kind of each link and what was borrowed', async ({ page }) => {
+test('roots unwind past the card and name the kind of each link', async ({ page }) => {
   await serveFixtureRoots(page);
   await page.goto('/#view=roots&artist=the-prodigy');
   await expect(page.locator('.r-tree')).toBeVisible();
   await expect(page.locator('.rt-link.k-sample .rt-verb')).toContainText('sampled');
-  await expect(page.locator('.rt-link.k-sample')).toContainText('handclaps');
+  await expect(page.locator('.rt-link.k-sample')).toContainText('soul recording');
   // gospel grows from spirituals: the route goes on past the first card
   await expect(page.locator('.rt-link.k-lineage').first()).toBeAttached();
   await expect(page.locator('.rt-cardst.deep').first()).toBeAttached();
@@ -701,10 +701,10 @@ test('one name per chapter: era tags read the chapter titles', async ({ page }) 
   await expect(page.locator('.opener .lede:visible')).toContainText('«Сопротивление»');
 });
 
-test('a band goes on through its member', async ({ page }) => {
+test('a band draws on its core member, not on his band', async ({ page }) => {
   await page.goto('/#view=roots&artist=the-velvet-underground');
   await page.locator('.rt-mstop[data-ref="lou-reed"]').click();
-  await expect(page.locator('.rt-link.k-member .rt-verb').first()).toHaveText(/^The\sVelvet\sUnderground\sthrough\sits\smember\sLou\sReed$/);
+  await expect(page.locator('.rt-link.k-influence .rt-verb').first()).toHaveText(/^The\sVelvet\sUnderground\sdrew\son\sLou\sReed$/);
   await expect(page.locator('.rt-reader')).not.toContainText('years back');
 });
 
@@ -731,8 +731,8 @@ test('counts agree: a chapter has as many cards in the contents, its end and the
 test('roots: a person is not written as a band', async ({ page }) => {
   await page.goto('/#view=roots&artist=john-coltrane');
   await page.locator('.rt-mstop[data-ref="miles-davis"]').click();
-  const m = page.locator('.rt-link.k-member .rt-verb').first();
-  await expect(m).toHaveText(/^John\sColtrane\splayed\sin\sthe\sband\sof\sMiles\sDavis$/);
+  const m = page.locator('.rt-link.k-teacher .rt-verb').first();
+  await expect(m).toHaveText(/^John\sColtrane\slearned\sfrom\sMiles\sDavis$/);
   await expect(page.locator('.rt-reader')).not.toContainText('through its member');
 });
 

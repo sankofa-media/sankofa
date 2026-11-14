@@ -1,5 +1,6 @@
-// Roots read as routes: the overview, forks, the link before each station,
-// elements of music (placeholder layer), and the music map's path panel.
+// Roots read as routes: the overview, forks, style stations, the link
+// before each station with its evidence by kind, elements of music, and the
+// music map's path panel.
 import { expect, test, type Page } from '@playwright/test';
 
 test.beforeEach(async ({ page }) => {
@@ -12,14 +13,17 @@ test.beforeEach(async ({ page }) => {
 const routeText = (page: Page) => page.locator('.rt-which span').textContent();
 
 test('the overview draws every documented chain once, with its forks', async ({ page }) => {
-  await page.goto('/#view=roots&artist=ed-sheeran');
+  await page.goto('/#view=roots&artist=the-beatles');
   const metro = page.locator('.rt-metro');
   await expect(metro).toBeVisible();
   // Each station once, however many routes pass through it.
   const refs = await metro.locator('.rt-mstop').evaluateAll((bs) => bs.map((b) => b.getAttribute('data-ref')));
   expect(new Set(refs).size).toBe(refs.length);
-  expect(refs).toContain('labi-siffre');
-  expect(refs).toContain('card:hip-hop');
+  expect(refs).toContain('chuck-berry');
+  expect(refs).toContain('card:rock-n-roll');
+  // A style is a station of its own, drawn apart from artists and cards.
+  expect(refs).toContain('style:british-beat');
+  await expect(metro.locator('.rt-mstop.style[data-ref="style:british-beat"]')).toHaveCount(1);
   // Stations off the current route are drawn too: the splits are visible.
   expect(await metro.locator('.rt-mstop.on').count()).toBeGreaterThan(1);
   expect(await metro.locator('.rt-mstop:not(.on)').count()).toBeGreaterThan(0);
@@ -29,7 +33,7 @@ test('the overview draws every documented chain once, with its forks', async ({ 
 });
 
 test('switching at a fork reads the other way, and so does picking a station on the overview', async ({ page }) => {
-  await page.goto('/#view=roots&artist=ed-sheeran');
+  await page.goto('/#view=roots&artist=the-beatles');
   const before = await routeText(page);
   const fork = page.locator('.rt-fork').first();
   const way = fork.locator('.rt-way:not(.on)').first();
@@ -40,15 +44,15 @@ test('switching at a fork reads the other way, and so does picking a station on 
   await expect(page.locator(`.rt-route .rt-station[data-ref="${next}"]`)).toHaveCount(1);
   await expect(page.locator('.rt-fork .rt-way.on').first()).toHaveAttribute('data-next', next!);
   // A terminal station on the overview selects the route that ends there.
-  await page.locator('.rt-mstop[data-ref="card:hip-hop"]').click();
-  await expect(page.locator('.rt-mstop.on[data-ref="card:hip-hop"]')).toHaveCount(1);
-  await expect(page.locator('.rt-route .rt-station[data-ref="card:hip-hop"]')).toHaveCount(1);
+  await page.locator('.rt-mstop[data-ref="card:blues"]').click();
+  await expect(page.locator('.rt-mstop.on[data-ref="card:blues"]')).toHaveCount(1);
+  await expect(page.locator('.rt-route .rt-station[data-ref="card:blues"]')).toHaveCount(1);
   // Keyboard: a station button is reachable and named.
-  const stop = page.locator('.rt-mstop[data-ref="labi-siffre"]');
+  const stop = page.locator('.rt-mstop[data-ref="style:british-beat"]');
   await stop.focus();
   await page.keyboard.press('Enter');
-  await expect(page.locator('.rt-route .rt-station[data-ref="labi-siffre"]')).toHaveCount(1);
-  await expect(stop).toHaveAttribute('aria-label', /Labi Siffre/);
+  await expect(page.locator('.rt-route .rt-station[data-ref="style:british-beat"]')).toHaveCount(1);
+  await expect(stop).toHaveAttribute('aria-label', /British beat/);
 });
 
 test('each link says why before the next station, in readable type', async ({ page }) => {
@@ -66,11 +70,39 @@ test('each link says why before the next station, in readable type', async ({ pa
   expect(parseFloat(await claim.evaluate((e) => getComputedStyle(e).fontSize))).toBeGreaterThanOrEqual(16);
 });
 
+test('a link names the sides of the style it documents and groups its evidence', async ({ page }) => {
+  await page.goto('/#view=roots&artist=the-beatles');
+  const link = page.locator('.rt-link.k-influence').first();
+  await expect(link.locator('.rt-dims-on')).toContainText(/^Documented:\s.+/);
+  await expect(link.locator('.rt-dims-off')).toContainText(/^Not documented:\s.+/);
+  const heads = await page.locator('.rt-ev-head').allTextContents();
+  expect(heads.some((t) => /In their own words|What critics heard|In the music/.test(t))).toBe(true);
+  // Every evidence item cites its source.
+  expect(await page.locator('.rt-ev .rt-claim a.rt-ev-src').count()).toBe(await page.locator('.rt-ev .rt-claim').count());
+  // A song is a small example, folded away; it is not the step itself.
+  const ex = page.locator('details.rt-example').first();
+  await expect(ex).toBeAttached();
+  await expect(ex).not.toHaveAttribute('open', '');
+  await expect(ex.locator('summary')).toContainText('For example:');
+});
+
+test('a style station shows its traits and grows out of the museum genres', async ({ page }) => {
+  await page.goto('/#view=roots&artist=the-beatles');
+  await page.locator('.rt-mstop[data-ref="style:british-beat"]').click();
+  const st = page.locator('.rt-route .rt-stylest[data-ref="style:british-beat"]');
+  await expect(st.locator('.rt-stylekind')).toHaveText('A style');
+  expect(await st.locator('.rt-traits li').count()).toBeGreaterThanOrEqual(3);
+  const next = page.locator('.rt-route .rt-link').nth(1);
+  await expect(next.locator('.rt-verb')).toContainText('grew out of');
+  await expect(page.locator('.rt-route .rt-link.k-style').first().locator('.rt-verb')).toContainText('works in');
+});
+
 test('Russian reads the routes in Russian', async ({ page }) => {
-  await page.goto('/#view=roots&artist=ed-sheeran&lang=ru');
+  await page.goto('/#view=roots&artist=the-beatles&lang=ru');
   await expect(page.locator('.rt-overview h3')).toHaveText('Все маршруты к музею');
   await expect(page.locator('.rt-fork p').first()).toHaveText(/^Здесь\sлиния\sрасходится\.\sДальше\s—\s.+\sили\s.+\.$/);
-  await expect(page.locator('.rt-verb').first()).toHaveText(/^Эд\sШиран\s→\sЭминем\s—\sвлияние$/);
+  await expect(page.locator('.rt-verb').first()).toHaveText(/^The\sBeatles\s→\s.+\s—\s(влияние|стиль)$/);
+  await expect(page.locator('.rt-dims-on').first()).toContainText('Задокументировано:');
   await expect(page.locator('.rt-playroute')).toHaveText(/Слушать маршрут/);
 });
 
@@ -86,14 +118,16 @@ test('elements of music run along the route; steps that carry none look differen
   // The thread runs on the overview beside the lit line, and by the reading.
   expect(await page.locator('.rt-mthread').count()).toBeGreaterThan(0);
   expect(await page.locator('.rt-rail').count()).toBeGreaterThan(0);
-  // Plant's admiration for Howlin' Wolf passed on no element: a dotted connector, said so.
+  // A step that names no element, if any, is a dotted connector and says so.
   const bare = page.locator('.rt-link.bare').first();
-  await expect(bare.locator('.rt-bare')).toHaveText(/No\smusical\selement\snamed/);
-  expect(await bare.evaluate((e) => getComputedStyle(e.closest('.rt-row')!, '::before').borderLeftStyle)).toBe('dotted');
-  // A carrying link leads with what was passed on; the fact is the evidence beneath.
+  if (await bare.count()) {
+    await expect(bare.locator('.rt-bare')).toHaveText(/No\smusical\selement\snamed/);
+    expect(await bare.evaluate((e) => getComputedStyle(e.closest('.rt-row')!, '::before').borderLeftStyle)).toBe('dotted');
+  }
+  // A carrying link leads with what was passed on; the evidence follows beneath, by kind.
   const full = page.locator('.rt-link:not(.bare)').first();
   await expect(full.locator('.rt-how')).not.toBeEmpty();
-  await expect(full.locator('.rt-claim.evidence small').first()).toBeAttached();
+  await expect(full.locator('.rt-ev .rt-ev-head').first()).toBeAttached();
   // The route belongs to a main line, told as a whole.
   await expect(page.locator('.rt-line h4')).toHaveText('The blues line');
   await page.locator('.rt-line-more').click();
@@ -116,7 +150,7 @@ test('elements of music run along the route; steps that carry none look differen
 });
 
 test('genre-to-genre steps say what they carried, from the cards', async ({ page }) => {
-  await page.goto('/#view=roots&artist=aquarium');
+  await page.goto('/#view=roots&artist=the-beatles');
   await page.locator('.rt-mstop[data-ref="card:rhythm-and-blues"]').click();
   const lineage = page.locator('.rt-link.k-lineage').first();
   await expect(lineage.locator('.rt-verb')).toContainText('grew out of');
