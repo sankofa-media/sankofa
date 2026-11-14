@@ -1,0 +1,45 @@
+---
+- id: fx-plc-0001
+  cat: plc
+  en: Paris's Rosa-Parks railway station welcomed its first passengers on 13 December
+    2015.
+  ru: Парижская железнодорожная станция «Роза Паркс» приняла первых пассажиров 13
+    декабря 2015 года.
+  year: 2015
+  place:
+    name: Rosa-Parks station, Paris
+    lat: 48.8965
+    lon: 2.3739
+  cards: []
+  gender: f
+  region: europe
+  sources:
+  - title: 'Ville de Paris: Rosa-Parks, une nouvelle gare au nord de Paris'
+    url: https://www.paris.fr/pages/rosa-parks-une-nouvelle-gare-parisienne-au-nord-de-paris-3198
+    quote: la gare a accueilli le 13 décembre 2015 ses premiers voyageurs.
+  - title: 'STIF: Lettre aux associations, January–February 2016, p. 10'
+    url: https://www.iledefrance-mobilites.fr/medias/portail-idfm/c3d93967-1184-4ff8-a537-9666402360f0_stif_en_ligne_n9_la_lettre_aux_associations_janv-fevrier_2016.pdf
+    quote: la gare Rosa Parks a été mise en service le 13 décembre 2015
+  status: drafted
+- id: fx-plc-0002
+  cat: plc
+  en: In 2017, Port Elizabeth's Nelson Mandela Metropolitan University dropped “Metropolitan”
+    from its name.
+  ru: В 2017 году университет имени Нельсона Манделы в Порт-Элизабете убрал из английского
+    названия слово «Metropolitan».
+  year: 2017
+  place:
+    name: Nelson Mandela University, Gqeberha
+    lat: -34.008
+    lon: 25.67
+  cards: []
+  gender: m
+  region: africa
+  sources:
+  - title: 'Nelson Mandela University: Naming and Renaming Policy'
+    url: https://naming.mandela.ac.za/Policy
+    quote: Nelson Mandela University officially launched its new name on 20 July 2017
+  - title: 'Nelson Mandela Foundation: A new name, a new responsibility'
+    url: https://www.nelsonmandela.org/news/entry/nelson-mandela-university-a-new-name-a-new-responsibility
+    quote: 20 July 2017
+  status: drafted
