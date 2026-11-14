@@ -36,13 +36,13 @@ links:
   - to: "card:reggae"
     kind: "style"
     scope: "career"
-    how: "Cliff moved from early-1960s ska to reggae, singing it with a soulful voice over the live Kingston studio sound, and used it, like punk, for political and social comment."
-    howRu: "Клифф прошёл путь от ска начала 1960-х к регги, пел его проникновенным голосом поверх живого звучания кингстонских студий и, как панк, говорил им о политике и обществе."
+    how: "Cliff began with early-1960s ska singles, made reggae on the live Kingston studio sound he later returned to, and used it, like punk, for political and social comment."
+    howRu: "Клифф начинал с синглов ска в начале 1960-х, играл регги на живом звучании кингстонских студий, к которому потом возвращался, и, как панк, говорил им о политике и обществе."
     carries: ["reggae-offbeat"]
-    dimensions: ["sound", "melody-vocal", "image", "rhythm"]
+    dimensions: ["sound", "image"]
     evidence:
       - type: "critics"
-        dimensions: ["melody-vocal", "rhythm"]
+        dimensions: []
         text: "Rolling Stone calls him a soulful singer and lists his early ska classics."
         textRu: "Rolling Stone называет его проникновенным певцом и перечисляет его ранние классические записи ска."
         source:

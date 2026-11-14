@@ -18,14 +18,14 @@ storyRu: "«Rock Your Baby» Джорджа Маккрея (1974) вынесла
 links:
   - to: "style:disco"
     kind: "style"
-    how: "McCrae sang early disco: a high, light voice over a dance-floor groove, the Miami sound that brought disco to mainstream radio."
-    howRu: "Маккрей пел раннее диско: высокий лёгкий голос поверх танцевального грува — майамское звучание, которое привело диско в массовый эфир."
+    how: "McCrae was an early disco singer: his high, striking voice carried “Rock Your Baby”, the record that brought the disco sound to radio; the groove itself was the work of its writers and producers."
+    howRu: "Маккрей — один из первых певцов диско: его высокий, яркий голос нёс «Rock Your Baby», запись, которая привела звучание диско в эфир; сам грув придумали её авторы и продюсеры."
     carries: []
-    dimensions: ["sound", "rhythm", "melody-vocal"]
+    dimensions: ["melody-vocal"]
     scope: "career"
     evidence:
       - type: "critics"
-        dimensions: ["sound"]
+        dimensions: []
         text: "The St. James Encyclopedia of Popular Culture names “Rock Your Baby” as one of the two records that introduced the sounds of disco to AM radio."
         textRu: "«Энциклопедия популярной культуры Сент-Джеймс» называет «Rock Your Baby» одной из двух записей, которые принесли звучание диско в AM-эфир."
         source:
@@ -33,7 +33,7 @@ links:
           url: "https://www.encyclopedia.com/media/encyclopedias-almanacs-transcripts-and-maps/disco"
           quote: "In 1974 and 1975 respectively, George McCrae's \"Rock Your Baby\" and Van McCoy's \"The Hustle\" introduced the sounds of disco to AM radio"
       - type: "testimony"
-        dimensions: ["rhythm"]
+        dimensions: []
         text: "McCrae says the song heralded the era of disco dancing and still fills dance floors."
         textRu: "Маккрей говорит, что песня возвестила эпоху танцев на дискотеке и до сих пор заполняет танцполы."
         source:
@@ -41,7 +41,7 @@ links:
           url: "https://maxazine.com/2020/07/17/george-mccrae-its-all-about-love/"
           quote: "The significance of ‘Rock your baby’ to the music industry was great and heralded a new era, that of dancing in a disco. The song is still rock solid. Play ‘Rock Your Baby’ and the dance floor will fill up."
       - type: "critics"
-        dimensions: ["sound"]
+        dimensions: []
         text: "Beat Instrumental in 1975 credited his chart-topping record with bringing the Miami sound to Britain."
         textRu: "Beat Instrumental в 1975 году писал, что именно его хит принёс в Британию майамское звучание."
         source:

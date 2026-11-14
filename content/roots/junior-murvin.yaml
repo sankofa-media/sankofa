@@ -7,16 +7,16 @@ place: {"name": "Saint James, Jamaica", "lat": 18.382, "lon": -77.872}
 placeRu: "Сент-Джеймс, Ямайка"
 genre: "Reggae"
 genreRu: "регги"
-story: "Junior Murvin was a roots-reggae singer whose high, pure falsetto — his “real-setto” — was modelled on the soul singer Curtis Mayfield. His 1976 “Police and Thieves”, a social comment in that voice, carried him from the Jamaican scene to the world."
-storyRu: "Джуниор Мёрвин — певец рутс-регги, чей высокий чистый фальцет (он сам называл его «настоящим», real-setto) сложился по образцу соул-певца Кёртиса Мейфилда. Его «Police and Thieves» 1976 года, социальная зарисовка, спетая этим голосом, вывела его с ямайской сцены в мир."
+story: "Junior Murvin sang reggae in a high falsetto, one of the most remarkable voices of the music, and named the soul singer Curtis Mayfield as his model. His 1976 “Police and Thieves” carried him from the Jamaican scene to the world."
+storyRu: "Джуниор Мёрвин пел регги высоким фальцетом — одним из самых примечательных голосов этой музыки — и называл своим образцом соул-певца Кёртиса Мейфилда. «Police and Thieves» 1976 года вывела его с ямайской сцены в мир."
 links:
   - to: "card:reggae"
     kind: "style"
     scope: "career"
-    how: "Murvin sang roots reggae of social comment in a high falsetto modelled on Curtis Mayfield’s spiritual soul singing."
-    howRu: "Мёрвин пел рутс-регги с социальными сюжетами высоким фальцетом, сложившимся по образцу одухотворённого соул-пения Кёртиса Мейфилда."
-    carries: ["reggae-offbeat"]
-    dimensions: ["melody-vocal", "image"]
+    how: "Murvin sang reggae in a high falsetto, taking Curtis Mayfield’s spiritual soul singing as his model."
+    howRu: "Мёрвин пел регги высоким фальцетом, взяв за образец одухотворённое соул-пение Кёртиса Мейфилда."
+    carries: []
+    dimensions: ["melody-vocal"]
     evidence:
       - type: "testimony"
         dimensions: ["melody-vocal"]
@@ -27,7 +27,7 @@ links:
           url: "https://rebelbase.be/interviews/detail/junior-murvin---handelsbeurs-102004"
           quote: "but Curtis Mayfield was a spiritual singer. He sang for the people, to help them to live better. He was an American type roots singer."
       - type: "critics"
-        dimensions: ["image"]
+        dimensions: []
         text: "Pitchfork’s obituary calls him a reggae singer best known for the 1976 hit “Police & Thieves”."
         textRu: "Некролог Pitchfork называет его певцом регги, известным прежде всего по хиту 1976 года «Police & Thieves»."
         source:
@@ -36,12 +36,12 @@ links:
           quote: "Murvin is best known as the man behind the 1976 reggae hit \"Police & Thieves\" (produced by Lee \"Scratch\" Perry), which broke him out of the local Jamaican scene and put him on the international radar"
       - type: "critics"
         dimensions: ["melody-vocal"]
-        text: "Erin MacLeod counts his “Police and Thieves” among the canonical records of roots reggae’s Black Ark period."
-        textRu: "Эрин Маклауд относит его «Police and Thieves» к каноническим записям рутс-регги эпохи студии Black Ark."
+        text: "Introducing the interview, Rebelbase calls his falsetto one of the most remarkable voices in reggae."
+        textRu: "Во вступлении к интервью Rebelbase называет его фальцет одним из самых примечательных голосов в регги."
         source:
-          title: "The Guardian (Erin MacLeod): Lee ‘Scratch’ Perry — 10 of his greatest recordings (2021)"
-          url: "https://www.theguardian.com/music/2021/aug/30/lee-scratch-perry-10-of-his-greatest-recordings"
-          quote: "The latter sounds like it exists on a different plane, revolutionising the sound of reggae."
+          title: "Rebelbase: Junior Murvin — Handelsbeurs (2004)"
+          url: "https://rebelbase.be/interviews/detail/junior-murvin---handelsbeurs-102004"
+          quote: "Fact is the man has one of the most remarkable voices in reggae music, even though he'd rather avoid using the term \"falsetto\"... Junior, your unmistakeable falsetto voice is still as strong as ever."
 notes:
   - period: "1976–1977 (Police and Thieves)"
     who: "Lee “Scratch” Perry"

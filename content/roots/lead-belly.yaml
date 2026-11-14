@@ -10,19 +10,11 @@ genreRu: "фолк / блюз"
 links:
   - to: "card:work-songs"
     kind: "style"
-    how: "Lead Belly carried the convict work song into his concerts: choruses in call and response, a percussive, driving pulse, and a spoken story setting up each song."
-    howRu: "Ледбелли перенёс арестантскую рабочую песню на концертную сцену: припевы в форме зова и ответа, ударный, напористый пульс и устный рассказ перед каждой песней."
-    carries: ["call-and-response"]
-    dimensions: ["harmony-form", "rhythm", "performance"]
+    how: "Lead Belly brought the work songs he had learned into his concerts: a percussive, driving pulse and a spoken story setting up each song."
+    howRu: "Ледбелли перенёс выученные рабочие песни на концертную сцену: ударный, напористый пульс и устный рассказ перед каждой песней."
+    carries: []
+    dimensions: ["rhythm", "performance"]
     evidence:
-      - type: "analysis"
-        dimensions: ["harmony-form"]
-        text: "The prison versions of “Rock Island Line” that Lead Belly remembered were dominated by a call-and-response chorus, and he was the one who made the song famous."
-        textRu: "В тюремных версиях «Rock Island Line», которые запомнил Ледбелли, господствовал припев в форме зова и ответа, и прославил песню именно он."
-        source:
-          title: "Encyclopedia of Arkansas: “The Rock Island Line” (song)"
-          url: "https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/"
-          quote: "Both versions were dominated by the chorus, in call-and-response form."
       - type: "analysis"
         dimensions: ["rhythm", "performance"]
         text: "Introducing it as a work song, Lead Belly turned the piece into a percussive musical drama framed by a spoken monologue."
@@ -72,5 +64,5 @@ links:
           url: "https://rockhall.com/inductees/lead-belly/"
           quote: "sharp, keening vocals"
     scope: "career"
-story: "Lead Belly carried the convict work song onto the concert stage, with call-and-response choruses, a percussive pulse and a spoken story before each song. As a blues singer he stood on the twelve-string guitar and a sharp, keening voice."
-storyRu: "Ледбелли перенёс арестантскую рабочую песню на концертную сцену: припевы зовом и ответом, ударный пульс и устный рассказ перед каждой песней. Как блюзовый певец он опирался на двенадцатиструнную гитару и пронзительный, причитающий голос."
+story: "Lead Belly carried the work songs he had learned onto the concert stage, with a percussive pulse and a spoken story before each song. As a blues singer he stood on the twelve-string guitar and a sharp, keening voice."
+storyRu: "Ледбелли перенёс выученные рабочие песни на концертную сцену: ударный пульс и устный рассказ перед каждой песней. Как блюзовый певец он опирался на двенадцатиструнную гитару и пронзительный, причитающий голос."

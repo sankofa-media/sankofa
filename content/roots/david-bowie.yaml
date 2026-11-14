@@ -7,15 +7,15 @@ place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
 placeRu: "Лондон"
 genre: "Art rock"
 genreRu: "арт-рок"
-story: "David Bowie's rock began with Little Richard: the boy took up the saxophone to play in his horn-heavy band and kept his glamorous, androgynous image. The Velvet Underground gave him rock built on noise and ambience and lyrics out of urban novels, and in 1975 he went to Philadelphia soul for what he called plastic soul."
-storyRu: "Рок Дэвида Боуи начался с Литла Ричарда: мальчишкой он взялся за саксофон, чтобы играть в его группе с целой секцией духовых, и навсегда сохранил его гламурный, андрогинный образ. The Velvet Underground дали ему рок, построенный на шуме и атмосфере, и тексты, будто из городских романов, а в 1975 году он обратился к филадельфийскому соулу ради того, что сам назвал «пластмассовым соулом»."
+story: "David Bowie's rock began with Little Richard: the boy took up the saxophone to play in his horn-heavy band. The Velvet Underground gave him rock built on noise and ambience and lyrics out of urban novels, and in 1975 he went to Philadelphia soul for what he called plastic soul."
+storyRu: "Рок Дэвида Боуи начался с Литла Ричарда: мальчишкой он взялся за саксофон, чтобы играть в его группе с целой секцией духовых. The Velvet Underground дали ему рок, построенный на шуме и атмосфере, и тексты, будто из городских романов, а в 1975 году он обратился к филадельфийскому соулу ради того, что сам назвал «пластмассовым соулом»."
 links:
   - to: "root:little-richard"
     kind: "influence"
-    how: "Little Richard's loud, high-energy rock and roll with a saxophone-heavy band made Bowie take up the saxophone, and his glamorous, androgynous image lit the spark for Bowie's own."
-    howRu: "Громкий, напористый рок-н-ролл Литла Ричарда с группой, полной саксофонов, заставил Боуи взяться за саксофон, а гламурный, андрогинный образ Ричарда стал искрой для его собственного."
+    how: "Little Richard's loud, high-energy rock and roll with a saxophone-heavy band made the young Bowie take up the saxophone."
+    howRu: "Громкий, напористый рок-н-ролл Литла Ричарда с группой, полной саксофонов, заставил юного Боуи взяться за саксофон."
     carries: []
-    dimensions: ["sound", "image"]
+    dimensions: ["sound"]
     evidence:
       - type: "testimony"
         dimensions: ["sound"]
@@ -41,14 +41,6 @@ links:
           title: "FLOOD Magazine (Dan Epstein): 10 Massive Artists Profoundly Inspired by Little Richard"
           url: "https://floodmagazine.com/77783/10-massive-artists-profoundly-inspired-by-little-richard"
           quote: "A young David Bowie, fired up by Little Richard's \"I Got It,\" bought a saxophone"
-      - type: "critics"
-        dimensions: ["image"]
-        text: "Chris Wheatley sees Little Richard's glamorous, androgynous image as a spark for Bowie and places Bowie's roots in rock and roll."
-        textRu: "Крис Уитли видит в гламурном, андрогинном образе Литла Ричарда искру для Боуи, а корни самого Боуи находит в рок-н-ролле."
-        source:
-          title: "CultureSonar (Chris Wheatley): 10 Artists Who Influenced David Bowie (2021)"
-          url: "https://www.culturesonar.com/10-artists-who-influenced-david-bowie/"
-          quote: "It is easy to imagine how, visually, his glamorous, androgynous image must have lit a spark in Bowie's mind."
     scope: "career"
   - to: "root:the-velvet-underground"
     kind: "influence"

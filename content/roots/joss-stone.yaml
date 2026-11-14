@@ -51,10 +51,10 @@ links:
           quote: "As with Winehouse, you’d swear she’d been around for years singing with the likes of Aretha Franklin ."
   - to: "style:soul"
     kind: "style"
-    how: "Stone works in classic soul: a throaty, roaring voice over languid grooves and heavy bass played by a band of R&B veterans."
-    howRu: "Стоун работает в классическом соуле: хриплый, рокочущий голос над тягучим грувом и тяжёлым басом, которые играет группа ветеранов ритм-н-блюза."
+    how: "Stone works in classic soul: a throaty, roaring voice that critics place between Janis Joplin and Mavis Staples; the grooves of her early records came from the band of R&B veterans hired for them."
+    howRu: "Стоун работает в классическом соуле: хриплый, рокочущий голос, который критики помещают между Дженис Джоплин и Мейвис Стейплс; грув её ранних записей шёл от приглашённой группы ветеранов ритм-н-блюза."
     carries: []
-    dimensions: ["melody-vocal", "sound"]
+    dimensions: ["melody-vocal"]
     scope: "career"
     evidence:
       - type: "critics"
@@ -66,7 +66,7 @@ links:
           url: "https://www.theguardian.com/music/2003/nov/14/popandrock1"
           quote: "She has a startling voice, a throaty roar somewhere between Janis Joplin and Mavis Staples."
       - type: "critics"
-        dimensions: ["sound"]
+        dimensions: []
         text: "musicOMH hears her reworking of a rock song as a languid soul song with a heavy bassline."
         textRu: "musicOMH слышит, как она переделала рок-песню в тягучий соул с тяжёлым басом."
         source:
@@ -74,7 +74,7 @@ links:
           url: "https://www.musicomh.com/reviews/albums/joss-stone-the-soul-sessions"
           quote: "the furious guitar work of the original is stripped away and we’re left with a deliciously languid soul song, with a downright filthy bassline."
       - type: "critics"
-        dimensions: ["sound", "performance"]
+        dimensions: []
         text: "The same review credits a band of R&B veterans with keeping the album tight."
         textRu: "Та же рецензия отмечает, что группа ветеранов ритм-н-блюза держит альбом в тонусе."
         source:
