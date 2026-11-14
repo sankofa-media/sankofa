@@ -20,6 +20,7 @@ var ru = map[string]string{
 	"Further":           "Дальше",
 	"Further:":          "Дальше:",
 	"Sources":           "Источники",
+	"Carries":           "Передано",
 	"Sources:":          "Источники:",
 	"Disputed: ":        "Спорно: ",
 	"Atlas:":            "Атлас:",

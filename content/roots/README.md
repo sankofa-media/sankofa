@@ -50,6 +50,28 @@ distinction in both languages. The loader still accepts older optional
 metadata, but validates recognized kinds and a nonblank English borrowing
 description when a borrowing kind is set.
 
+## Musical elements
+
+Influence is explained through musical elements, not only through songs and
+anecdotes. [`elements.yaml`](elements.yaml) defines the elements that
+travelled from Black traditions into later music (blue notes, the
+twelve-bar blues, call and response, the backbeat, swing, improvisation, the
+riff, slide guitar, gospel singing, the groove, polyrhythm, the reggae
+offbeat, dub, the break, sampling, rap flow), each with its origin cards and
+at least two quoted sources.
+
+Every link has `carries` (element ids) and `how` / `howRu`: one sentence
+saying in systemic terms what the later artist took; the `claim` stays as the
+concrete evidence. A tag needs a passage from the link's sources, recorded in
+[`roots-elements.yaml`](../ledger/roots-elements.yaml). When the evidence
+shows only admiration, a cover or a childhood setting, `carries` is empty and
+`how` says what kind of influence it was.
+
+[`card-links.yaml`](card-links.yaml) explains each step between a card and
+one of its `roots` by the elements it carried, resting on card facts or
+quoted sources. [`lines.yaml`](lines.yaml) gives short overviews of the main
+lines: blues, gospel, dance and electronic, hip-hop, Caribbean.
+
 ## Evidence and independent review
 
 [`roots-deep-new.yaml`](../ledger/roots-deep-new.yaml) is the exact inventory

@@ -60,6 +60,9 @@ func contentCmd() *cobra.Command {
 			doc := Export(s)
 			if rs, err := roots.LoadDir(filepath.Join(args[0], "..", "roots")); err == nil {
 				doc["roots"] = ExportRoots(rs)
+				doc["rootsElements"] = rs.Elements
+				doc["rootsCardLinks"] = rs.CardLinks
+				doc["rootsLines"] = rs.Lines
 			}
 			data, err := json.MarshalIndent(doc, "", " ")
 			if err != nil {

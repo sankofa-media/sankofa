@@ -1,0 +1,184 @@
+# The main lines of Roots: short "system" overviews of how musical elements
+# travelled through the traditions. Paths are museum card ids, oldest first.
+lines:
+  - id: blues
+    name: "The blues line"
+    nameRu: "Блюзовая линия"
+    path: [work-songs, spirituals, blues, rhythm-and-blues, rock-n-roll]
+    elements: [blue-notes, call-and-response, twelve-bar-blues, slide-guitar, riff, swing, backbeat]
+    overview: >-
+      The bending cries of field hollers and the call and response of work
+      songs and spirituals settled, by the 1890s, into the blues: a three-line
+      verse over twelve bars and three chords, sung on blue notes and answered
+      by a guitar, often played with a slide. In the cities after the Second
+      World War jump bands kept the twelve-bar form, added the shuffle and horn
+      riffs of swing and hit the backbeat hard, and that was rhythm and blues.
+      Rock and roll took the same music to teenagers under a new name, and
+      British and American rock bands learned blues riffs, forms and slide
+      guitar from the records.
+    overviewRu: >-
+      Тягучие, изгибающиеся полевые кличи и зов и отклик рабочих песен и
+      спиричуэлс к 1890-м годам сложились в блюз: трёхстрочный куплет на
+      двенадцать тактов и три аккорда, спетый блюзовыми нотами, и гитара,
+      часто со слайдом, отвечает голосу. В городах после Второй мировой
+      джамп-оркестры сохранили двенадцатитактовую форму, добавили шаффл и
+      духовые риффы свинга и стали жёстко бить бэкбит — так появился
+      ритм-н-блюз. Рок-н-ролл понёс ту же музыку подросткам под новым именем,
+      а британские и американские рок-группы учились блюзовым риффам, формам
+      и слайд-гитаре по пластинкам.
+    sources:
+      - title: "Carnegie Hall, Timeline of African American Music: Rural/Folk Blues"
+        url: "https://timeline.carnegiehall.org/genres/rural-folk-blues"
+        quote: "A direct path can be traced from the most ancient blues form up through rhythm & blues, rock & roll, soul, funk, disco, all the way to rap."
+      - title: "Carnegie Hall, Timeline of African American Music: Rhythm & Blues"
+        url: "https://timeline.carnegiehall.org/genres/rhythm-blues"
+        quote: "These combos, popular from the1940s through the early-1950s, retained the boogie-woogie foundation, the shuffle beat, and the riffing horn patterns from swing."
+      - title: "Library of Congress, Songs of America: Blues"
+        url: "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/popular-songs-of-the-day/blues/"
+        quote: "being overly reliant on a strong \"back beat,\" or a delayed emphasis on the second and fourth beats of the measure."
+      - title: "Case Western Reserve University, Encyclopedia of Cleveland History: Rock & Roll"
+        url: "https://case.edu/ech/articles/r/rock-roll"
+        quote: "the use of \"blue notes\" (flatted thirds), a \"call-and-response\" vocal pattern, and a framework based on a 1-4-5 chord progression (tonic, subdominant, dominant)"
+
+  - id: gospel
+    name: "The gospel line"
+    nameRu: "Госпеловая линия"
+    path: [spirituals, gospel, rhythm-and-blues, funk]
+    elements: [call-and-response, gospel-vocal, improvisation]
+    overview: >-
+      Spirituals gave Black church music its call and response and its
+      improvising leaders. In the 1930s Thomas Dorsey set sacred words to blues
+      melodies and rhythms, and gospel singers developed a style of bent notes,
+      melisma, shouts and moans. Ray Charles, Sam Cooke and others
+      carried that voice into rhythm and blues and made soul; James Brown took
+      gospel’s fervour and call and response into funk.
+    overviewRu: >-
+      Спиричуэлс дали музыке чёрной церкви зов и отклик и импровизирующих
+      запевал. В 1930-х Томас Дорси положил священные слова на блюзовые мелодии
+      и ритмы, а госпел-певцы выработали манеру с подтянутыми нотами, мелизмами,
+      криками и стонами. Рэй Чарльз, Сэм Кук и другие вынесли этот
+      голос в ритм-н-блюз и создали соул; Джеймс Браун перенёс напор госпела и
+      его зов и отклик в фанк.
+    sources:
+      - title: "Carnegie Hall, Timeline of African American Music: Traditional Gospel"
+        url: "https://timeline.carnegiehall.org/genres/traditional-gospel"
+        quote: "Dorsey, known as the “Father of Gospel,” fused blues-styled melodies and harmonies, blues and ragtime rhythms"
+      - title: "Carnegie Hall, Timeline of African American Music: Soul"
+        url: "https://timeline.carnegiehall.org/genres/soul"
+        quote: "introduced the gospel rhythms of the 12/8 meter, call-and-response structures, gospel harmonic progression, vocal phrasings, and improvisatory style"
+      - title: "Library of Congress, Songs of America: Blues"
+        url: "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/popular-songs-of-the-day/blues/"
+        quote: "a rhythm and blues style known as \"soul\" emerged in which the influence of gospel vocal style was stronger"
+      - title: "PBS: How James Brown Invented Funk"
+        url: "https://www.pbs.org/video/how-james-brown-invented-funk-xtwzri/"
+        quote: "The use of this gospel-inspired call and response and vocal punctuations have inspired generations of hip hop artists."
+
+  - id: dance
+    name: "The dance and electronic line"
+    nameRu: "Танцевальная и электронная линия"
+    path: [rhythm-and-blues, funk, chicago-house, detroit-techno]
+    elements: [groove, polyrhythm, sampling]
+    overview: >-
+      Funk moved the accent of rhythm and blues from the backbeat to the first
+      beat, “the one”, and turned the whole band into a groove: short,
+      syncopated, interlocking patterns repeated over and over. House, built on
+      disco, carried the groove into the clubs: in Chicago and Detroit young Black DJs and
+      producers rebuilt it on drum machines, synthesizers and samples as house
+      and techno. Even Kraftwerk, a model for techno, had taken in James
+      Brown’s funky beats, so the machines came back to Detroit carrying funk.
+    overviewRu: >-
+      Фанк перенёс акцент ритм-н-блюза с бэкбита на первую долю, на «раз», и
+      превратил весь оркестр в грув — короткие синкопированные сцепленные
+      рисунки, повторяемые снова и снова. Хаус, выросший из диско, понёс грув в
+      клубы: в Чикаго и Детройте молодые чернокожие диджеи и продюсеры пересобрали его на
+      драм-машинах, синтезаторах и сэмплах — так появились хаус и техно. Даже
+      Kraftwerk, образец для техно, впитали фанковые биты Джеймса Брауна, так
+      что машины вернулись в Детройт, неся в себе фанк.
+    sources:
+      - title: "PBS: How James Brown Invented Funk"
+        url: "https://www.pbs.org/video/how-james-brown-invented-funk-xtwzri/"
+        quote: "What James Brown did was he put the emphasis on the one, on the downbeat of the measure."
+      - title: "Carnegie Hall, Timeline of African American Music: Funk"
+        url: "https://timeline.carnegiehall.org/genres/funk"
+        quote: "This repetitive, syncopated, and polyrhythmic “groove,” established by the bass guitarist and drummer, serves as the foundation for layers of different rhythmic patterns"
+      - title: "Carnegie Hall, Timeline of African American Music: House"
+        url: "https://timeline.carnegiehall.org/genres/house"
+        quote: "House music, built on the foundations of disco and experimental electronic music, has flourished underground in Chicago, Detroit, and New York City"
+      - title: "The Quietus: Karl Bartos interviewed"
+        url: "https://thequietus.com/interviews/karl-bartos-interviewed-kraftwerk-and-the-birth-of-the-modern/"
+        quote: "I was growing up with the funky beats of James Brown and I brought them in more and more."
+
+  - id: hip-hop
+    name: "The hip-hop line"
+    nameRu: "Хип-хоп-линия"
+    path: [funk, reggae, hip-hop, amen-break]
+    elements: [breakbeat, sampling, rap-flow, dub]
+    overview: >-
+      In the Bronx in 1973 DJ Kool Herc, raised in Kingston, played two copies
+      of a funk record and switched between them so the drum break ran on: the
+      breakbeat. He toasted over the records in the manner of Jamaican deejays,
+      and MCs turned that into rap, rhymed speech set to the beat, whose flow
+      became an art of its own. From the mid-1980s samplers did digitally what
+      the DJ had done by hand, and funk breaks such as the Amen break became
+      the raw material of hip-hop and, sped up, of jungle.
+    overviewRu: >-
+      В 1973 году в Бронксе DJ Kool Herc, выросший в Кингстоне, ставил две
+      копии фанковой пластинки и переключался между ними, чтобы барабанный
+      брейк длился и длился, — так появился брейкбит. Поверх пластинок он
+      «тостовал», как ямайские диджеи, и эмси превратили это в рэп —
+      рифмованную речь, уложенную на бит, а флоу стал самостоятельным
+      искусством. С середины 1980-х сэмплеры делали в цифре то, что диджей
+      делал руками, и фанковые брейки вроде брейка Amen стали сырьём хип-хопа,
+      а в ускоренном виде — джангла.
+    sources:
+      - title: "Contemporary Black Biography, via Encyclopedia.com: Kool Herc"
+        url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/kool-herc"
+        quote: "Herc also gave birth to the breakbeat by playing two copies of the same record on different turntables."
+      - title: "Encyclopedia of African-American Culture and History, via Encyclopedia.com: Rap Music"
+        url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-popular-and-jazz/rap-music"
+        quote: "During the mid-1980s, rap's musical production shifted from manual mixing (hands-on-the-turntable) by DJs to digitally produced tracks facilitated by drum machines, samplers, and computers."
+      - title: "Kyle Adams: On the Metrical Techniques of Flow in Rap Music (Music Theory Online 15.5)"
+        url: "https://mtosmt.org/issues/mto.09.15.5/mto.09.15.5.adams.php"
+        quote: "As used in this article, “flow” describes all of the rhythmical and articulative features of a rapper’s delivery of the lyrics."
+      - title: "Engadget: Amen break crowdfunding campaign"
+        url: "https://www.engadget.com/2015/02/20/amen-break-sample-crowdfunding-campaign/"
+        quote: "become a mainstay of early hip hop, before being sped up and chopped to become the breakbeat that defined jungle, drum 'n' bass and techno music"
+
+  - id: caribbean
+    name: "The Caribbean line"
+    nameRu: "Карибская линия"
+    path: [rhythm-and-blues, reggae, hip-hop, amen-break, rinse-fm]
+    elements: [reggae-offbeat, dub, rap-flow, breakbeat]
+    overview: >-
+      Jamaica’s rural mento was overtaken in the late 1950s by ska, a local
+      take on American rhythm and blues with the accent on the offbeat. Ska
+      slowed into rocksteady and reggae, with the “one drop” and a heavier
+      bass, and engineers such as King Tubby and Lee Perry stripped records
+      down to drums and bass and drowned them in echo: dub. The sound system
+      and its toasting deejay travelled to the Bronx with Kool Herc and took
+      root in Britain, where jungle, garage and grime kept the sound-system
+      blueprint alive.
+    overviewRu: >-
+      В конце 1950-х деревенский менто на Ямайке потеснило ска — местное
+      прочтение американского ритм-н-блюза с акцентом на слабую долю. Ска
+      замедлилось до рокстеди и регги с ритмом «уан дроп» и более тяжёлым басом, а
+      звукорежиссёры вроде Кинга Табби и Ли Перри раздевали записи до барабанов
+      и баса и топили их в эхе — так появился даб. Саунд-система с её
+      «тостующим» диджеем уехала в Бронкс вместе с Кул Херком и пустила
+      корни в Британии, где джангл, гэридж и грайм сохранили её устройство.
+    sources:
+      - title: "Jamaica Information Service: Black History in Roots Reggae Music"
+        url: "https://jis.gov.jm/jamaica/black-history-in-roots-reggae-music/"
+        quote: "Mento—a rural-based music that developed from the period of slavery and which came to be influenced by Trinidadian calypso in the urban context of Kingston, was then the popular music."
+      - title: "Jamaica Information Service: Black History in Roots Reggae Music"
+        url: "https://jis.gov.jm/jamaica/black-history-in-roots-reggae-music/"
+        quote: "By the late fifties, a new style known as ska burst onto the urban scene."
+      - title: "Bob Marley official site: History"
+        url: "https://www.bobmarley.com/history/"
+        quote: "A local interpretation of American soul and R&B, with an irresistible accent on the offbeat"
+      - title: "Jamaica Information Service: Reggae"
+        url: "https://jis.gov.jm/jamaica/reggae/"
+        quote: "(The drum and bass became the foundation of a new instrumental music, dub.)"
+      - title: "Mixmag: How Jamaican soundsystem culture changed dance music forever"
+        url: "https://mixmag.net/feature/how-jamaican-soundsystem-culture-changed-dance-music-forever"
+        quote: "From jungle/drum ’n’ bass to garage, grime and dubstep, the spirit of Jamaican soundsystems is unmistakable"
