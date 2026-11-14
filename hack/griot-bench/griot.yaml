@@ -22,12 +22,12 @@ spec:
           args: [--kubeconfig=/pki/kubeconfig, --store=postgres, --leader-elect, --lease-namespace=default,
                  --no-sync, --webhooks=false, --pulse=, --apiservice=, --metrics=:9090,
                  --tls-cert-file=/serving/griot.crt, --tls-key-file=/serving/griot.key,
-                 --retention=0, --retain-every=1m]
+                 --retention=0, --retain-every=1m, --audit-listen=:9444, --audit-client-ca=/pki/ca.crt]
           env:
             - name: PGPASSWORD
               valueFrom: {secretKeyRef: {name: griot-postgres, key: password}}
             - {name: GRIOT_DSN, value: "postgres://griot@postgres.griot-bench.svc:5432/griot?sslmode=disable"}
-          ports: [{name: https, containerPort: 8443}, {name: metrics, containerPort: 9090}]
+          ports: [{name: https, containerPort: 8443}, {name: metrics, containerPort: 9090}, {name: audit, containerPort: 9444}]
           readinessProbe: {httpGet: {path: /readyz, port: https, scheme: HTTPS}}
           volumeMounts: [{name: pki, mountPath: /pki}, {name: serving, mountPath: /serving}]
           resources: {requests: {cpu: 50m, memory: 256Mi}, limits: {memory: 1536Mi}}
@@ -40,7 +40,17 @@ kind: Service
 metadata: {name: griot-pg, namespace: griot-bench}
 spec:
   selector: {app: griot-pg}
-  ports: [{name: https, port: 443, targetPort: 8443}, {name: metrics, port: 9090}]
+  ports: [{name: https, port: 443, targetPort: 8443}, {name: metrics, port: 9090}, {name: audit, port: 9444}]
+---
+# Phase 1 used the node's disk: a PVC of the default (replicated) class never
+# attached. This one uses the kubevirt class.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata: {name: griot-sqlite, namespace: griot-bench}
+spec:
+  accessModes: [ReadWriteOnce]
+  storageClassName: kubevirt
+  resources: {requests: {storage: 10Gi}}
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -75,9 +85,7 @@ spec:
       volumes:
         - {name: pki, secret: {secretName: vapi-pki}}
         - {name: serving, secret: {secretName: griot-serving}}
-        # The node's disk, not a PVC: on the stand a second hot-plugged volume
-        # stayed unattached. The benchmark measures Griot, not the volume.
-        - {name: data, emptyDir: {sizeLimit: 8Gi}}
+        - {name: data, persistentVolumeClaim: {claimName: griot-sqlite}}
 ---
 apiVersion: v1
 kind: Service
