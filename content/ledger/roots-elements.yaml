@@ -810,20 +810,20 @@ tagged:
         url: https://www.udiscovermusic.com/stories/just-why-was-brian-jones-so-important-to-the-rolling-stones
         quote: "Brian became obsessed with the blues, practicing slide guitar while listening to Elmore James and Robert Johnson records."
   - from: led-zeppelin
-    to: root:howlin-wolf
+    to: card:blues
     element: riff
-    how: "The blues riff that keeps turning instead of resolving: Jones built “Black Dog” on the model of the repeating figure of Wolf’s “Smokestack Lightning”."
+    how: "The blues riff that keeps turning instead of resolving: Jones built “Black Dog” on the model of a repeating Chicago blues figure."
     sources:
       - title: "Guitar World: John Paul Jones — Black Dog lesson"
         url: https://www.guitarworld.com/lessons/song-lessons/john-paul-jones-black-dog-lesson
         quote: "I was inspired to write the Black Dog riff after learning an old blues riff in E from the Muddy Waters album, Electric Mud . [ Ed. note: Jones later retracted this , citing Howlin’ Wolf’s Smokestack Lightning as his inspiration for the riff. ]"
-      - title: "Guitar Player: Jimmy Page on Led Zeppelin’s “Black Dog”"
-        url: https://www.guitarplayer.com/music/jimmy-page-on-led-zeppelins-black-dog
-        quote: "But in 2007, Jones clarified that he’d actually meant to credit the repeating riff in Howlin’ Wolf’s “Smokestack Lightning” as his inspiration."
+      - title: "Classic Rock (Louder): How Led Zeppelin created the rhythmic swing of “Black Dog”"
+        url: https://www.loudersound.com/features/black-dog-led-zeppelin-riff
+        quote: "Based on a cartwheeling riff bassist John Paul Jones had been ‘inspired’ to develop after listening to the similarly shaped Tom Cat by Muddy Waters ."
   - from: david-bowie
     to: root:james-brown
     element: groove
-    how: "James Brown’s funk groove: Alomar split the guitar into three locked, syncopated parts, the way Brown’s guitarists played, and that groove became “Fame”."
+    how: "James Brown’s funk groove: Alomar split the guitar into three locked, syncopated parts, the way Brown’s guitarists played; “that’s what you hear on that track,” he said."
     sources:
       - title: "The Line of Best Fit: Carlos Alomar on David Bowie"
         url: https://www.thelineofbestfit.com/features/longread/carlos-alomar-on-david-bowie-he-was-a-transitional-generational-artist
@@ -900,17 +900,6 @@ tagged:
       - title: "Far Out: “There She Goes Again” — the Lou Reed song inspired by Marvin Gaye"
         url: https://faroutmagazine.co.uk/lou-reed-song-inspired-by-marvin-gaye/
         quote: "the introduction to the song that Reed wrote sounds remarkably like Gaye’s tune, with the same rhythmic pattern being applied in the opening guitar chords as is done in the horns of ‘Hitch Hike’."
-  - from: lou-reed
-    to: root:ornette-coleman
-    element: improvisation
-    how: "Free-jazz improvisation carried to rock guitar: Reed said his guitar solo in “European Son” channelled “Ornette Coleman on the guitar”, though by his own account he could not play like Coleman."
-    sources:
-      - title: "Aidan Levy: The Velvet Underground & Nico — Library of Congress"
-        url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf
-        quote: "“European Son,” Reed said, channeled “Ornette Coleman on the guitar.”"
-      - title: "Far Out: Ornette Coleman — Lou Reed’s greatest influence (added source)"
-        url: https://faroutmagazine.co.uk/ornette-coleman-lou-reeds-greatest-influence/
-        quote: "Reed would later admit that his guitar solo on the final song ‘European Son’ was his attempt at trying to write something in the same vein as what Coleman would have done."
 anecdoteOnly:
   - from: adele
     to: root:bob-dylan
@@ -1068,6 +1057,10 @@ anecdoteOnly:
     to: card:rhythm-and-blues
     kind: influence
     how: Reed began in doo-wop, Black vocal-group rhythm and blues; the sources record the style, not a specific element.
+  - from: lou-reed
+    to: root:ornette-coleman
+    kind: influence
+    how: Reed listened to the free-jazz players Ornette Coleman and Cecil Taylor and brought their energy into rock guitar, though by his own account he could not play like them.
   - from: mashina-vremeni
     to: root:the-beatles
     kind: influence

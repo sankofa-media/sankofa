@@ -6,8 +6,8 @@
 description: >-
   Before this pass 32 of 90 artists had no route to a museum card on which
   every step carries an element; 67 of 148 links carried none. This pass adds
-  nine element-carrying links and upgrades one, so that 68 artists have such a
-  route. For each link: the element tags and the passages that support them.
+  nine element-carrying links (157 links, 67 still without an element), so
+  that 68 artists have such a route; a proposed upgrade was rejected. For each link: the element tags and the passages that support them.
   `remaining` lists the artists whose only honest connection is still an
   anecdote, with what was searched. `independentCheck` records the separate
   checker's verdicts and what was applied.
@@ -37,17 +37,17 @@ added:
         quote: 'Brian became obsessed with the blues, practicing slide guitar while listening to Elmore James and Robert Johnson records.'
     note: 'Both sources name Jones’s slide on “Little Red Rooster”: “Jones’s exquisite slide guitar” (Louder); “his slide guitar on “I’m a King Bee,” “Little Red Rooster,” and “No Expectations”” (uDiscover).'
   - from: led-zeppelin
-    to: root:howlin-wolf
+    to: card:blues
     kind: influence
     carries: [riff]
     sources:
       - title: 'Guitar World: John Paul Jones — Black Dog lesson'
         url: https://www.guitarworld.com/lessons/song-lessons/john-paul-jones-black-dog-lesson
         quote: 'I was inspired to write the Black Dog riff after learning an old blues riff in E from the Muddy Waters album, Electric Mud . [ Ed. note: Jones later retracted this , citing Howlin’ Wolf’s Smokestack Lightning as his inspiration for the riff. ]'
-      - title: 'Guitar Player: Jimmy Page on Led Zeppelin’s “Black Dog”'
-        url: https://www.guitarplayer.com/music/jimmy-page-on-led-zeppelins-black-dog
-        quote: 'But in 2007, Jones clarified that he’d actually meant to credit the repeating riff in Howlin’ Wolf’s “Smokestack Lightning” as his inspiration.'
-    note: Jones’s own retraction appeared in Mojo (December 2007); both sources report it independently. Iron Maiden’s riff-carrying cover of Led Zeppelin now continues through this link.
+      - title: 'Classic Rock (Louder): How Led Zeppelin created the rhythmic swing of “Black Dog”'
+        url: https://www.loudersound.com/features/black-dog-led-zeppelin-riff
+        quote: 'Based on a cartwheeling riff bassist John Paul Jones had been ‘inspired’ to develop after listening to the similarly shaped Tom Cat by Muddy Waters .'
+    note: 'First researched as root:howlin-wolf on the 2007 correction reported by Guitar World and Guitar Player (both Future plc); the independent check found the Wolf-versus-Muddy attribution disputed and moved the link to card:blues. Iron Maiden’s riff-carrying cover of Led Zeppelin continues through this link.'
   - from: david-bowie
     to: root:james-brown
     kind: influence
@@ -116,11 +116,13 @@ added:
     kind: interpolation
     carries: [riff]
     sources: *hitchhike
-upgraded:
+upgraded: []
+rejected:
   - from: lou-reed
     to: root:ornette-coleman
     kind: influence
-    carries: [improvisation]
+    proposed: [improvisation]
+    verdict: 'unverified; reverted to carries [] and kept in anecdoteOnly. The added Far Out source stays on the link.'
     was: 'carries: [] (the earlier second check dropped improvisation: the quotes then showed only listening and Reed’s inability to play like Coleman)'
     sources:
       - title: 'Aidan Levy: The Velvet Underground & Nico — Library of Congress'
@@ -174,3 +176,92 @@ remaining:
     why: Mick Jones produced their debut; the Clash’s reggae and dub do not pass through that step.
   - artist: van-morrison
     why: 'Mahalia Jackson and Ray Charles records are named as early inspiration, without a specific device.'
+independentCheck:
+  method: >-
+    A separate checker fetched all 18 source URLs again (none failed) and
+    confirmed every ledger quote word for word against the fetched page text
+    after whitespace normalisation. For each carries tag it then tried to
+    refute: whether the passage names that element (as in elements.yaml) and
+    who it was taken from, whether the two sources are independent rather
+    than one interview copied, and whether claim/how/what and their Russian
+    versions add anything the sources do not say. One extra search was run for
+    the Black Dog attribution.
+  verdicts:
+    - from: the-beatles
+      to: root:chuck-berry
+      element: riff
+      verdict: confirmed
+      reason: 'Two separate McCartney statements, 1997 (Miles) and 1994 (Bacon): "I played exactly the same notes as he did" and "nicked from Chuck Berry ... I’m Talking About You". The Skidmore page also has McCartney call it "a bass riff".'
+    - from: the-rolling-stones
+      to: card:blues
+      element: slide-guitar
+      verdict: confirmed
+      reason: 'uDiscover: "practicing slide guitar while listening to Elmore James and Robert Johnson records". Louder: "Jones’s exquisite slide guitar" on Little Red Rooster. Different publishers. "Electric" is backed by Louder ("the first time Keith had heard anyone playing electric slide guitar").'
+    - from: led-zeppelin
+      to: root:howlin-wolf
+      element: riff
+      verdict: corrected
+      reason: >-
+        The riff tag holds: Jones in Guitar World, "I was inspired to write
+        the Black Dog riff after learning an old blues riff in E". The target
+        does not. The Wolf attribution rests on one 2007 correction, relayed
+        only by two Future plc sister titles (Guitar World editor's note and
+        Guitar Player). Classic Rock (Louder), also citing Mojo 2007, says
+        instead "the similarly shaped Tom Cat by Muddy Waters". Wolf versus
+        Muddy is therefore disputed.
+      correction: Retarget to card:blues with carries [riff], Guitar World plus Louder as sources, claim naming both attributions.
+      applied: true
+    - from: david-bowie
+      to: root:james-brown
+      element: groove
+      verdict: confirmed
+      reason: 'Two separate Alomar interviews (Line of Best Fit; The Intercept 2020 via Far Out): "I’d come from that James Brown school of three guitar players locked perfectly in a perfect rhythm" and "all those little syncopated parts, and that’s what made it funky".'
+      correction: 'The song already existed and the riff came from the band’s “Footstompin’” cover, so “that groove became “Fame”” overstated it; the how now quotes Alomar: “that’s what you hear on that track”.'
+      applied: true
+    - from: the-clash
+      to: card:reggae
+      element: dub
+      verdict: confirmed
+      reason: 'Spectrum Culture: "Thanks to ... Mikey Dread, Sandinista! features ... dub remixes", naming “Version Pardner” as a dub remix of “Junco Partner”. Gigwise and Ken Hunt independently back Dread producing “Bankrobber” and working on Sandinista!.'
+      note: 'The dub passage itself rests on Spectrum Culture alone; the other two support the claim, not the tag. Ken Hunt dates Sandinista! "(1989)" (a typo for 1980); the claim does not use that date.'
+    - from: charles-mingus
+      to: card:gospel
+      element: call-and-response
+      verdict: confirmed
+      reason: 'OUPblog (Bivins): "complex antiphonal work, trading phrases back and forth in a knowing echo of the call-and-response dialogism". First Things: "so filled with the call-and-response dynamic of holiness worship"; it also has "the holiness church with his mother".'
+    - from: bessie-smith
+      to: card:blues
+      element: twelve-bar-blues
+      verdict: confirmed
+      reason: 'NPR places her music in "the classic 12-bar structure" ("there were listeners who found Smith’s Southern blues too slow"). The passage is about the classic blues as a genre, not one of her songs analysed.'
+      correction: 'Claim softened to “sang the classic blues, built on the twelve-bar form” (Ru: «пела классический блюз, построенный на двенадцатитактовой форме»).'
+      applied: true
+    - from: bessie-smith
+      to: card:blues
+      element: improvisation
+      verdict: confirmed
+      reason: 'Sagee (Popular Music, CUP), abstract based on transcriptions: her phrases "constantly vary in imaginative ways, matching her with true jazz improvisers". NPR independently: "she varies her inflection and phrasing".'
+    - from: the-velvet-underground
+      to: root:marvin-gaye
+      element: riff
+      verdict: confirmed
+      reason: 'Levy (LoC): "the intro sampling Marvin Gaye’s “Hitch Hike”" ("sampling" is loose; kind interpolation is right). Far Out: "the same rhythmic pattern being applied in the opening guitar chords as is done in the horns of ‘Hitch Hike’".'
+    - from: lou-reed
+      to: root:marvin-gaye
+      element: riff
+      verdict: confirmed
+      reason: 'Same two sources; Far Out adds that Reed "has acknowledged that he took the idea from Gaye’s original track".'
+    - from: lou-reed
+      to: root:ornette-coleman
+      element: improvisation
+      verdict: unverified
+      reason: >-
+        No opened passage names improvisation. Levy says only that “European
+        Son” "channeled “Ornette Coleman on the guitar”". Far Out calls the
+        solo an attempt "to write something in the same vein". The link's own
+        Guitar World 1998 source has Reed say "I was not trained to play like
+        them". This is the same gap that made the earlier second check drop
+        the tag.
+      correction: Revert to carries [] and the previous how/howRu; keep the added Far Out source; return the link to anecdoteOnly.
+      applied: true
+  summary: 'Of 11 tags: 9 confirmed (two with wording fixes), 1 corrected to a new target, 1 unverified and reverted; none refuted outright. Lou Reed keeps an element-carrying route through the Hitch Hike link.'
