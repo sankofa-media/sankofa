@@ -227,9 +227,12 @@ func (s *Set) CardLink(from, to string) *CardLink {
 	return nil
 }
 
-// LoadFS reads every *.yaml in fsys.
+// LoadFS reads every *.yaml in fsys. A file that does not parse is
+// reported, and the rest of the collection still loads, so a check can
+// list every problem at once.
 func LoadFS(fsys fs.FS) (*Set, error) {
 	s := &Set{ByID: map[string]*Artist{}}
+	var bad []error
 	err := fs.WalkDir(fsys, ".", func(p string, d fs.DirEntry, err error) error {
 		if err != nil || d.IsDir() || path.Ext(p) != ".yaml" {
 			return err
@@ -238,60 +241,70 @@ func LoadFS(fsys fs.FS) (*Set, error) {
 		if err != nil {
 			return err
 		}
-		switch path.Base(p) {
-		case StylesFile:
-			var doc struct {
-				Styles []Style `json:"styles"`
-			}
-			if err := yaml.UnmarshalStrict(data, &doc); err != nil {
-				return fmt.Errorf("%s: %w", p, err)
-			}
-			s.Styles = doc.Styles
-			return nil
-		case ElementsFile:
-			var doc struct {
-				Elements []Element `json:"elements"`
-			}
-			if err := yaml.UnmarshalStrict(data, &doc); err != nil {
-				return fmt.Errorf("%s: %w", p, err)
-			}
-			s.Elements = doc.Elements
-			return nil
-		case CardLinksFile:
-			var doc struct {
-				Links []CardLink `json:"links"`
-			}
-			if err := yaml.UnmarshalStrict(data, &doc); err != nil {
-				return fmt.Errorf("%s: %w", p, err)
-			}
-			s.CardLinks = doc.Links
-			return nil
-		case LinesFile:
-			var doc struct {
-				Lines []Line `json:"lines"`
-			}
-			if err := yaml.UnmarshalStrict(data, &doc); err != nil {
-				return fmt.Errorf("%s: %w", p, err)
-			}
-			s.Lines = doc.Lines
-			return nil
+		if err := s.loadFile(p, data); err != nil {
+			bad = append(bad, err)
 		}
-		var a Artist
-		if err := yaml.UnmarshalStrict(data, &a); err != nil {
-			return fmt.Errorf("%s: %w", p, err)
-		}
-		if _, dup := s.ByID[a.ID]; dup {
-			return fmt.Errorf("%s: duplicate id %q", p, a.ID)
-		}
-		s.ByID[a.ID] = &a
-		s.Order = append(s.Order, a.ID)
 		return nil
 	})
 	if errors.Is(err, fs.ErrNotExist) {
 		return s, nil
 	}
 	sort.Strings(s.Order)
-	return s, err
+	if err != nil {
+		return s, err
+	}
+	return s, errors.Join(bad...)
+}
+
+func (s *Set) loadFile(p string, data []byte) error {
+	switch path.Base(p) {
+	case StylesFile:
+		var doc struct {
+			Styles []Style `json:"styles"`
+		}
+		if err := yaml.UnmarshalStrict(data, &doc); err != nil {
+			return fmt.Errorf("%s: %w", p, err)
+		}
+		s.Styles = doc.Styles
+		return nil
+	case ElementsFile:
+		var doc struct {
+			Elements []Element `json:"elements"`
+		}
+		if err := yaml.UnmarshalStrict(data, &doc); err != nil {
+			return fmt.Errorf("%s: %w", p, err)
+		}
+		s.Elements = doc.Elements
+		return nil
+	case CardLinksFile:
+		var doc struct {
+			Links []CardLink `json:"links"`
+		}
+		if err := yaml.UnmarshalStrict(data, &doc); err != nil {
+			return fmt.Errorf("%s: %w", p, err)
+		}
+		s.CardLinks = doc.Links
+		return nil
+	case LinesFile:
+		var doc struct {
+			Lines []Line `json:"lines"`
+		}
+		if err := yaml.UnmarshalStrict(data, &doc); err != nil {
+			return fmt.Errorf("%s: %w", p, err)
+		}
+		s.Lines = doc.Lines
+		return nil
+	}
+	var a Artist
+	if err := yaml.UnmarshalStrict(data, &a); err != nil {
+		return fmt.Errorf("%s: %w", p, err)
+	}
+	if _, dup := s.ByID[a.ID]; dup {
+		return fmt.Errorf("%s: duplicate id %q", p, a.ID)
+	}
+	s.ByID[a.ID] = &a
+	s.Order = append(s.Order, a.ID)
+	return nil
 }
 
 // LoadDir reads a directory; a missing directory is an empty set.

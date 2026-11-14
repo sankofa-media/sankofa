@@ -31,17 +31,22 @@ rock'n'roll, reggae. Every link names its evidence. Without an argument, lists
 everyone in the collection.`,
 		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
-			rs, err := loadRoots(cmd)
-			if err != nil {
-				return err
+			rs, loadErr := loadRoots(cmd)
+			check, _ := cmd.Flags().GetBool("check")
+			if loadErr != nil && !check {
+				return loadErr
 			}
 			cards, err := loadCards(cmd)
 			if err != nil {
 				return err
 			}
 			w := cmd.OutOrStdout()
-			if check, _ := cmd.Flags().GetBool("check"); check {
-				errs := rs.Validate(cards)
+			if check {
+				var errs []error
+				if loadErr != nil {
+					errs = append(errs, loadErr)
+				}
+				errs = append(errs, rs.Validate(cards)...)
 				for _, e := range errs {
 					fmt.Fprintln(w, e)
 				}
