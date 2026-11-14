@@ -39,6 +39,12 @@ source), which are never route steps. Every artist must reach a museum card
 through `career` links only; a period-only influence is shown, but never as
 the main route. Routes have no cycles.
 
+Where an artist's main bond with Black music runs the other way — their
+music passed on into a Black tradition rather than growing from one — a
+`legacy` note says so (`text` / `textRu`, the museum `cards` it reached and
+quoted sources from at least two websites). It is labelled as the other
+direction and is never a route step.
+
 ## Styles
 
 [`styles.yaml`](styles.yaml) holds the styles artists work in that are not
@@ -64,6 +70,9 @@ every link and style step with its quoted evidence, the links removed or
 demoted (anecdotes, covers, single riffs, producers, proxies, period-only
 influences), and the verdicts of an independent second check that reopened
 every source.
+[`roots-krautrock.yaml`](../ledger/roots-krautrock.yaml) records the
+krautrock style, Kraftwerk's career link to it and its legacy note in the
+same way, with the independent check that reopened every source.
 
 ## Earlier editions
 
