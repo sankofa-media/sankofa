@@ -6,32 +6,87 @@ place: {"name": "Sheffield", "lat": 53.3811, "lon": -1.4701}
 placeRu: "Шеффилд"
 genre: "Indie rock"
 genreRu: "инди-рок"
-story: "For AM, Arctic Monkeys turned to Dr. Dre’s hip-hop rhythms. Their recorded repertoire also includes Barbara Lewis’s “Baby I’m Yours”, performed with the 747s."
-storyRu: "Работая над «AM», Arctic Monkeys обратились к хип-хоп-ритмам Доктора Дре. Среди их записей есть и «Baby I’m Yours» Барбары Льюис, исполненная вместе с 747s."
+story: "Arctic Monkeys grew out of Britpop and garage rock, and took their ideas of song structure from the Strokes and the Libertines — critics heard the Libertines with a sharper Northern edge. On AM (2013) Alex Turner rebuilt the band’s sound around rhythm, aiming for the feel of a Dr. Dre beat."
+storyRu: "Arctic Monkeys выросли из бритпопа и гаражного рока, а представления о строении песни взяли у The Strokes и The Libertines: критики слышали в них The Libertines с более колючей северной интонацией. На «AM» (2013) Алекс Тёрнер перестроил звук группы вокруг ритма, добиваясь ощущения бита Доктора Дре."
 links:
-  - to: "card:rhythm-and-blues"
-    kind: "cover"
-    claim: "Arctic Monkeys recorded Barbara Lewis's 'Baby I'm Yours' with the 747s."
-    claimRu: "Arctic Monkeys вместе с 747s записали кавер на «Baby I’m Yours» Барбары Льюис."
-    what: "Barbara Lewis's 'Baby I'm Yours', recorded by Arctic Monkeys with the 747s."
-    whatRu: "«Baby I’m Yours» Барбары Льюис в исполнении Arctic Monkeys вместе с 747s."
-    sources:
-      - title: "NME: Arctic Monkeys covers revealed"
-        url: "https://www.nme.com/news/music/arctic-monkeys-578-1365201"
-      - title: "Complete Music Update: Arctic Monkeys collaborate with 747s on next single"
-        url: "https://completemusicupdate.com/arctic-monkeys-collaborate-with-747s-on-next-single/"
+  - to: "root:the-libertines"
+    kind: "influence"
+    how: "From the Libertines (and the Strokes) Arctic Monkeys took the shape of the short, jagged guitar song; early critics heard the Libertines’ scrappy guitar jams delivered with a more acerbic Northern tone."
+    howRu: "У The Libertines (и The Strokes) Arctic Monkeys взяли форму короткой, угловатой гитарной песни; ранние критики слышали в них неряшливые гитарные джемы The Libertines, поданные с более едкой северной интонацией."
     carries: []
-    how: A cover of a 1960s R&B song; it shows taste, not a musical element passed on.
-    howRu: 'Кавер на ритм-н-блюз 1960-х: он говорит о вкусе, а не о переданном музыкальном приёме.'
+    dimensions: ["harmony-form", "sound"]
+    evidence:
+      - type: "critics"
+        dimensions: ["harmony-form"]
+        text: "NME’s account of the band’s roots says their ideas of song structure and form came from the Strokes and the Libertines, and through them from the Clash and the Jam."
+        textRu: "NME, разбирая корни группы, пишет, что представления о структуре и форме песни пришли к ним от The Strokes и The Libertines, а через них — от The Clash и The Jam."
+        source:
+          title: "NME: The Roots Of… Arctic Monkeys (Rob Fitzpatrick, 2013)"
+          url: "https://www.nme.com/blogs/nme-blogs/the-roots-of-arctic-monkeys"
+          quote: "ideas about structure and form came from The Strokes and The Libertines – and through them, The Clash and The Jam."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Reviewing the young band in 2005, Vice wrote that they sound a bit like the Libertines, with a more acerbic Northern tone to their Smiths-like guitar playing."
+        textRu: "В 2005 году Vice писал, что молодая группа звучит немного как The Libertines, только с более едкой северной интонацией в гитарных джемах в духе The Smiths."
+        source:
+          title: "Vice: Worst Band Name Ever? (Tim Jonze, 2005)"
+          url: "https://www.vice.com/sv/article/worst-v12n7/"
+          quote: "Arctic Monkeys don't smoke crack and heroin every night but they do sound a bit like the Libertines albeit with a more acerbic Northern tone to their Smiths-y lil' guitar jams."
+    scope: "career"
+  - to: "style:indie-rock"
+    kind: "style"
+    how: "Arctic Monkeys began as a garage-rock guitar band of the 2000s indie revival, raised on Britpop: four players in a room, raw and fast."
+    howRu: "Arctic Monkeys начинали как гаражная гитарная группа инди-возрождения 2000-х, выросшая на бритпопе: четверо в одной комнате, сыро и быстро."
+    carries: []
+    dimensions: ["sound", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "NME lists the band’s starting points as Oasis, Pulp and Blur, hip-hop, Britpop and garage rock."
+        textRu: "NME называет отправными точками группы Oasis, Pulp и Blur, хип-хоп, бритпоп и гаражный рок."
+        source:
+          title: "NME: The Roots Of… Arctic Monkeys (Rob Fitzpatrick, 2013)"
+          url: "https://www.nme.com/blogs/nme-blogs/the-roots-of-arctic-monkeys"
+          quote: "Alex’s musical life begins with Oasis, Pulp and Blur. … liked hip-hop (Alex had tried his hand at beatmaking and sequencing), Britpop and garage-rock."
+      - type: "analysis"
+        dimensions: ["sound", "performance"]
+        text: "An engineering study of AM contrasts it with the garage virility of the band’s earlier records."
+        textRu: "Разбор звукорежиссуры «AM» противопоставляет его гаражной мощи ранних пластинок группы."
+        source:
+          title: "Happy Mag: Engineering the Sound — Arctic Monkeys’ AM (Pinky Latt, 2021)"
+          url: "https://happymag.tv/engineering-the-sound-arctic-monkeys-am/"
+          quote: "Verging from the garage virility of the band's earlier days, AM was above all concerned with rhythm."
+      - type: "testimony"
+        dimensions: ["performance"]
+        text: "Turner said that on AM the band wanted to sound less like four lads playing in a room — the way they had sounded until then."
+        textRu: "Тёрнер говорил, что на «AM» группа хотела меньше походить на четверых парней, играющих в одной комнате, — так она звучала до тех пор."
+        source:
+          title: "NME: Alex Turner on new Arctic Monkeys album — ‘It sounds like Dr Dre’ (2013)"
+          url: "https://www.nme.com/news/music/arctic-monkeys-160-1252025"
+          quote: "sound less like four lads playing in a room this time"
+    scope: "career"
   - to: "root:dr-dre"
     kind: "influence"
-    claim: "Arctic Monkeys drew on Dr. Dre’s hip-hop rhythms when making AM."
-    claimRu: "Работая над «AM», Arctic Monkeys опирались на хип-хоп-ритмы Доктора Дре."
-    sources:
-      - title: "NME: Alex Turner on new Arctic Monkeys album — ‘It sounds like Dr Dre’"
-        url: "https://www.nme.com/news/music/arctic-monkeys-160-1252025"
-      - title: "Enmore Audio: Engineering the Sound — Arctic Monkeys’ AM"
-        url: "https://happymag.tv/engineering-the-sound-arctic-monkeys-am/"
+    how: "For AM the band built every song on bass and drums first, modelling the groove on West Coast hip-hop beats."
+    howRu: "На «AM» группа строила каждую песню сначала из баса и барабанов, беря за образец грув хип-хоп-битов Западного побережья."
     carries: ["groove"]
-    how: 'Arctic Monkeys rebuilt their rock around a hip-hop groove: drum patterns and bass lines modelled on Dr. Dre’s West Coast beats.'
-    howRu: 'Arctic Monkeys перестроили свой рок вокруг хип-хопового грува: барабаны и басовые линии по образцу битов Dr. Dre и Западного побережья.'
+    dimensions: ["rhythm", "sound"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["rhythm", "sound"]
+        text: "Turner described the new record as a Dr. Dre beat played on rock instruments, manipulated until it sounds like hip-hop."
+        textRu: "Тёрнер описывал новую пластинку как бит Доктора Дре, сыгранный на рок-инструментах и обработанный так, чтобы звучать как хип-хоп."
+        source:
+          title: "NME: Alex Turner on new Arctic Monkeys album — ‘It sounds like Dr Dre’ (2013)"
+          url: "https://www.nme.com/news/music/arctic-monkeys-160-1252025"
+          quote: "It sounds like a Dr Dre beat, but we've given it an Ike Turner bowl-cut … if you can find a way to manipulate the instruments or the sounds to the point where it sounds a bit like a hip-hop beat"
+      - type: "analysis"
+        dimensions: ["rhythm", "sound"]
+        text: "An engineering study of AM shows bass and drums recorded first, with bass lines drawn from West Coast hip-hop."
+        textRu: "Разбор звукорежиссуры «AM» показывает, что бас и барабаны записывали первыми, а басовые линии взяты из хип-хопа Западного побережья."
+        source:
+          title: "Happy Mag: Engineering the Sound — Arctic Monkeys’ AM (Pinky Latt, 2021)"
+          url: "https://happymag.tv/engineering-the-sound-arctic-monkeys-am/"
+          quote: "Thunderous Sabbath-inspired riffs appear right alongside bass lines drawn from West Coast hip-hop. … Bass and drums were recorded first, with all other parts built around this rhythmic crux."
+    scope: "period"
+    period: "2013 (AM)"

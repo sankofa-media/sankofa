@@ -6,30 +6,38 @@ place: {"name": "Abingdon, England", "lat": 51.6711, "lon": -1.2828}
 placeRu: "Абингдон, Англия"
 genre: "Art rock"
 genreRu: "арт-рок"
-story: "Radiohead drew on Charles Mingus when making “Pyramid Song”. His jazz was a reference for the band’s own music."
-storyRu: "Создавая «Pyramid Song», Radiohead опирались на Чарльза Мингуса. Его джаз стал ориентиром для собственной музыки группы."
+story: "Radiohead work in the art-rock line that runs back to Pink Floyd: adventurous, challenging records that never settle for genre archetypes yet keep great songs at their heart. From guitar rock they moved to the electronica-soaked Kid A, and Thom Yorke heard the drums of “Pyramid Song” as something from a Charles Mingus record."
+storyRu: "Radiohead продолжают линию арт-рока, идущую от Pink Floyd: смелые, неудобные пластинки, которые не довольствуются жанровыми шаблонами, но в сердцевине держат отличные песни. От гитарного рока группа пришла к пропитанному электроникой «Kid A», а барабаны «Pyramid Song» Том Йорк слышал как что-то с пластинки Чарльза Мингуса."
 links:
-  - to: "card:jazz"
-    kind: "influence"
-    claim: "Radiohead drew on Charles Mingus's jazz for 'Pyramid Song'."
-    claimRu: "Создавая «Pyramid Song», Radiohead опирались на джаз Чарльза Мингуса."
-    sources:
-      - title: "Prog: Radiohead’s proggiest moments"
-        url: "https://www.loudersound.com/features/radioheads-proggiest-moments"
-      - title: "The Irish Times: Taking music to strange places"
-        url: "https://www.irishtimes.com/news/taking-music-to-strange-places-1.327388"
+  - to: "style:art-rock"
+    kind: "style"
+    how: "Radiohead's music is art rock in the line of Pink Floyd: ambitious, adventurous song forms that absorb many influences, and a sound that moved from guitars to electronics while keeping strong songs at the core."
+    howRu: "Музыка Radiohead — арт-рок в линии Pink Floyd: честолюбивые, смелые песенные формы, вбирающие множество влияний, и звук, ушедший от гитар к электронике, но сохранивший в основе сильные песни."
     carries: []
-    how: Radiohead borrowed the loose, irregular drum feel of Mingus records for one song; the band itself denied a jazz sensibility.
-    howRu: Radiohead позаимствовали для одной песни свободную, неровную игру барабанов с пластинок Мингуса; сама группа джазовое чутьё в себе отрицала.
-  - to: "root:charles-mingus"
-    kind: "influence"
-    claim: "Radiohead drew on Charles Mingus's jazz for 'Pyramid Song'."
-    claimRu: "Создавая «Pyramid Song», Radiohead опирались на джаз Чарльза Мингуса."
-    sources:
-      - title: "Dazed: Thom Yorke on Pyramid Song"
+    dimensions: ["harmony-form", "sound"]
+    evidence:
+      - type: "critics"
+        dimensions: ["harmony-form", "sound"]
+        text: "The Rock and Roll Hall of Fame says Radiohead pushed the boundaries of rock and roll, refused genre archetypes in favour of a wide variety of influences, names Pink Floyd as an influence and calls Kid A electronica-soaked."
+        textRu: "Зал славы рок-н-ролла пишет, что Radiohead раздвинули границы рок-н-ролла, отказались от жанровых шаблонов ради множества влияний; среди влияний назван Pink Floyd, а «Kid A» — пластинка, пропитанная электроникой."
+        source:
+          title: "Rock & Roll Hall of Fame: Radiohead (inducted 2019)"
+          url: "https://rockhall.com/inductees/radiohead/"
+          quote: "Radiohead pushed the boundaries of rock and roll. ... Never settling for genre archetypes, they incorporated a wide variety of musical influences ... the cryptic, electronica-soaked Kid A"
+      - type: "critics"
+        dimensions: ["harmony-form"]
+        text: "Prog magazine places Radiohead beside Yes and Genesis: always adventurous and challenging, with great songs at the heart of it."
+        textRu: "Журнал Prog ставит Radiohead рядом с Yes и Genesis: всегда смелые и неудобные, но с отличными песнями в сердцевине."
+        source:
+          title: "Prog (Louder): Radiohead’s proggiest moments"
+          url: "https://www.loudersound.com/features/radioheads-proggiest-moments"
+          quote: "They are always adventurous and challenging. And like Yes and Genesis, they still have great songs at the heart of it."
+    scope: "career"
+    example:
+      song: "“Pyramid Song” (2001)"
+      text: "Thom Yorke heard the song's loose, irregular drumming as something from a Charles Mingus record; the band itself disowned a jazz approach."
+      textRu: "Свободные, неровные барабаны этой песни Том Йорк слышал как что-то с пластинки Чарльза Мингуса; сама группа джазового подхода в себе не признавала."
+      source:
+        title: "Dazed: Uni of Yorke, class 1"
         url: "https://www.dazeddigital.com/music/article/15435/1/uni-of-yorke-class-1-flylo-the-gaslamp-killer-faltydl"
-      - title: "The Irish Times: Taking music to strange places"
-        url: "https://www.irishtimes.com/news/taking-music-to-strange-places-1.327388"
-    carries: []
-    how: Radiohead borrowed the loose, irregular drum feel of Mingus records for one song; the band itself denied a jazz sensibility.
-    howRu: Radiohead позаимствовали для одной песни свободную, неровную игру барабанов с пластинок Мингуса; сама группа джазовое чутьё в себе отрицала.
+        quote: "it sounded like something from a Charlie Mingus record."

@@ -7,54 +7,88 @@ place: {"name": "New York City", "lat": 40.7128, "lon": -74.006}
 placeRu: "Нью-Йорк"
 genre: "Art rock"
 genreRu: "арт-рок"
+story: "Tom Verlaine came to the guitar from the saxophone and the free jazz of John Coltrane and Albert Ayler, and Television's long, exploratory guitar improvisations carry that jazz ambition. The band grew up in the New York punk scene around CBGB, pairing clean melodic leads with aggressive, staccato punk rhythm guitar."
+storyRu: "Том Верлен пришёл к гитаре от саксофона и фри-джаза Джона Колтрейна и Альберта Эйлера, и в долгих ищущих гитарных импровизациях Television живёт эта джазовая планка. Группа выросла на нью-йоркской панк-сцене вокруг CBGB и соединяла чистые мелодичные соло с резкой, отрывистой панковской ритм-гитарой."
 links:
-  - to: "card:jazz"
-    claim: "Before leading Television, Tom Verlaine embraced the jazz of John Coltrane and Albert Ayler as a teenage saxophonist."
-    claimRu: "Задолго до Television Том Верлен, ещё подростком игравший на саксофоне, увлекался джазом Джона Колтрейна и Альберта Эйлера."
-    sources:
-      - title: "The Irish Times: Tom Verlaine, guitarist frontman of US band Television, dies at 73"
-        url: "https://www.irishtimes.com/culture/music/2023/01/30/tom-verlaine-guitarist-frontman-of-us-band-television-dies-at-73"
-      - title: "Patti Smith: He Was Tom Verlaine (The New Yorker)"
-        url: "https://www.newyorker.com/magazine/2023/02/13/he-was-tom-verlaine"
-    kind: "influence"
-    carries: ["improvisation"]
-    how: Verlaine brought the jazz habit of exploratory improvisation into punk-era guitar.
-    howRu: Верлен принёс в гитару эпохи панка джазовую привычку к ищущей импровизации.
-  - to: "root:the-velvet-underground"
-    kind: "influence"
-    claim: "The Velvet Underground were an early influence on Television guitarist Tom Verlaine."
-    claimRu: "The Velvet Underground повлияли на Тома Верлена, гитариста Television, ещё в начале его пути."
-    sources:
-      - title: "Guitar World: A lesson in Tom Verlaine’s guitar style"
-        url: "https://www.guitarworld.com/lessons/tom-verlaine-television-style"
-      - title: "Paste: Air Couldn’t Touch Us — Remembering Tom Verlaine"
-        url: "https://www.pastemagazine.com/music/television/remembering-tom-verlaine-of-television"
-    carries: []
-    how: The Velvet Underground shaped Verlaine’s guitar style; the sources name no element from a Black tradition on this step.
-    howRu: Velvet Underground повлияли на гитарный стиль Верлена; элемента из чёрной традиции на этом шаге источники не называют.
   - to: "root:john-coltrane"
     kind: "influence"
-    claim: "John Coltrane was a formative influence on Tom Verlaine as a teenage saxophonist."
-    claimRu: "Джон Колтрейн повлиял на музыкальное становление Тома Верлена, ещё подростком игравшего на саксофоне."
-    sources:
-      - title: "Guitar World: The songs that made Tom Verlaine take the guitar seriously — recalling his 1981 interview"
-        url: "https://www.guitarworld.com/artists/guitarists/the-songs-that-made-tom-verlaine-take-the-guitar-seriously"
-      - title: "Patti Smith: He Was Tom Verlaine — The New Yorker"
-        url: "https://www.newyorker.com/magazine/2023/02/13/he-was-tom-verlaine"
+    how: "Verlaine, a teenage saxophonist turned on by Coltrane, held the electric guitar to the standard of free jazz: long, exploratory improvisations that move from chaotic soundscapes to clean, finely tuned lines."
+    howRu: "Верлен, подростком взявшийся за саксофон после пластинки Колтрейна, мерил электрогитару планкой фри-джаза: долгие ищущие импровизации, переходящие от хаотичных звуковых пейзажей к чистым, тонко выверенным линиям."
+    carries: ["improvisation"]
+    dimensions: ["performance", "sound"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["performance"]
+        text: "Verlaine recalled taking up the saxophone in seventh grade after someone played him a Coltrane record."
+        textRu: "Верлен вспоминал, что взялся за саксофон в седьмом классе, когда кто-то поставил ему пластинку Колтрейна."
+        source:
+          title: "Phil Weller: The songs that made Tom Verlaine take the guitar seriously, Guitar World (2026, from a 1981 interview)"
+          url: "https://www.guitarworld.com/artists/guitarists/the-songs-that-made-tom-verlaine-take-the-guitar-seriously"
+          quote: "“And then when somebody turned me on to a Coltrane record around seventh grade,” he continued. “I took up the saxophone."
+      - type: "critics"
+        dimensions: ["performance", "sound"]
+        text: "The New York Times obituary, reprinted by the Irish Times, names Ayler and Coltrane among Verlaine's influences and quotes Lenny Kaye on his move from free-jazz soundscapes to delicate filigree."
+        textRu: "Некролог New York Times, перепечатанный Irish Times, называет Эйлера и Колтрейна среди тех, кто повлиял на Верлена, и приводит слова Ленни Кея о том, как тот переходил от фри-джазовых звуковых пейзажей к тонкой филиграни."
+        source:
+          title: "Gavin Edwards and Peter Keepnews: Tom Verlaine obituary, The Irish Times / The New York Times (2023)"
+          url: "https://www.irishtimes.com/culture/music/2023/01/30/tom-verlaine-guitarist-frontman-of-us-band-television-dies-at-73"
+          quote: "He was equally influenced by rock bands such as the Yardbirds and the Rolling Stones and free-jazz musicians such as Albert Ayler and John Coltrane."
+      - type: "critics"
+        dimensions: ["sound", "performance"]
+        text: "Lenny Kaye describes Verlaine's range from chaotic free-jazz soundscapes to delicate filigree."
+        textRu: "Ленни Кей описывает диапазон Верлена — от хаотичных фри-джазовых звуковых пейзажей до тонкой филиграни."
+        source:
+          title: "Gavin Edwards and Peter Keepnews: Tom Verlaine obituary, The Irish Times / The New York Times (2023)"
+          url: "https://www.irishtimes.com/culture/music/2023/01/30/tom-verlaine-guitarist-frontman-of-us-band-television-dies-at-73"
+          quote: "“He could move from chaotic soundscapes of free jazz to delicate filigree. It wasn’t covered up with distortion. He had a real sense of the instrument and its expressive powers.”"
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Matt Mitchell hears the jazz influence on Marquee Moon and says the band wanted to sound like the Velvet Underground jamming with Coltrane."
+        textRu: "Мэтт Митчелл слышит джазовое влияние на «Marquee Moon» и пишет, что группа хотела звучать так, будто Velvet Underground джемуют с Колтрейном."
+        source:
+          title: "Matt Mitchell: Air Couldn’t Touch Us — Remembering Tom Verlaine, Paste (2023)"
+          url: "https://www.pastemagazine.com/music/television/remembering-tom-verlaine-of-television"
+          quote: "Television wanted to make records that sounded like the Velvet Underground jamming with John Coltrane."
+    scope: "career"
+  - to: "style:punk"
+    kind: "scene"
+    how: "Television came up in the New York punk scene at CBGB, combining punk attitude and aggressive, staccato rhythm guitar with melodic leads."
+    howRu: "Television выросли на нью-йоркской панк-сцене в CBGB и соединяли панковский напор и резкую, отрывистую ритм-гитару с мелодичными соло."
     carries: []
-    how: A Coltrane record made Verlaine take up the saxophone; the sources record the spark, not a specific device.
-    howRu: Пластинка Колтрейна заставила Верлена взяться за саксофон; источники фиксируют толчок, а не конкретный приём.
-  - to: "root:albert-ayler"
-    kind: "influence"
-    claim: "As a teenage saxophonist, Television’s Tom Verlaine embraced Albert Ayler’s music."
-    claimRu: "Ещё подростком играя на саксофоне, будущий лидер Television Том Верлен увлёкся музыкой Альберта Эйлера."
-    sources:
-      - title: "Patti Smith: He Was Tom Verlaine — The New Yorker"
-        url: "https://www.newyorker.com/magazine/2023/02/13/he-was-tom-verlaine"
-      - title: "Richard Williams: Tom Verlaine obituary — The Guardian (syndicated)"
-        url: "https://www.inkl.com/news/tom-verlaine-obituary"
-    carries: []
-    how: As a teenage saxophonist Verlaine embraced Ayler; the sources record admiration, not a specific device.
-    howRu: Подростком-саксофонистом Верлен увлекался Эйлером; источники фиксируют восхищение, а не конкретный приём.
-story: "Before Television, Tom Verlaine’s musical education included the saxophone and the music of John Coltrane and Albert Ayler. The Velvet Underground were another early influence."
-storyRu: "До Television Том Верлен учился музыке, играя на саксофоне и слушая Джона Колтрейна и Альберта Эйлера. Ещё одним ранним ориентиром для него стали The Velvet Underground."
+    dimensions: ["image", "rhythm"]
+    evidence:
+      - type: "critics"
+        dimensions: ["image"]
+        text: "The obituary places Television among the most influential bands of the CBGB punk scene, while noting that Verlaine's playing was never easily categorised as punk."
+        textRu: "Некролог ставит Television в ряд самых влиятельных групп панк-сцены CBGB, оговаривая, что игру Верлена никогда не удавалось однозначно записать в панк."
+        source:
+          title: "Gavin Edwards and Peter Keepnews: Tom Verlaine obituary, The Irish Times / The New York Times (2023)"
+          url: "https://www.irishtimes.com/culture/music/2023/01/30/tom-verlaine-guitarist-frontman-of-us-band-television-dies-at-73"
+          quote: "Tom Verlaine, whose band Television was one of the most influential to emerge from the New York punk-rock scene centred on the nightclub CBGB, but whose exploratory guitar improvisations and poetic songwriting were never easily categorisable as punk"
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "Guitar World describes Verlaine's style as melodic lead lines over aggressive, staccato punk-style rhythm guitar."
+        textRu: "Guitar World описывает стиль Верлена как мелодичные соло поверх резкой, отрывистой ритм-гитары в духе панка."
+        source:
+          title: "Guitar World: A lesson in Tom Verlaine’s guitar style"
+          url: "https://www.guitarworld.com/lessons/tom-verlaine-television-style"
+          quote: "he blended melodic lead phrases and solos along with aggressive, staccato punk-style rhythm guitar parts."
+      - type: "critics"
+        dimensions: ["image"]
+        text: "Guitar World calls Verlaine a pioneer of both the punk and new wave scenes."
+        textRu: "Guitar World называет Верлена первопроходцем и панка, и новой волны."
+        source:
+          title: "Phil Weller: The songs that made Tom Verlaine take the guitar seriously, Guitar World (2026, from a 1981 interview)"
+          url: "https://www.guitarworld.com/artists/guitarists/the-songs-that-made-tom-verlaine-take-the-guitar-seriously"
+          quote: "His unusual approach to guitar made him a pioneering figure in the 1970s in both the punk and new wave scenes, as Television found a way to retain attitude while adding smarts in equal measure."
+    scope: "career"
+notes:
+  - period: "1976–1977 (Marquee Moon)"
+    who: "Andy Johns"
+    role: "producer"
+    what: "The band hired Andy Johns to engineer and produce Marquee Moon; his record with the Rolling Stones is not a root of Television's style."
+    whatRu: "Группа пригласила Энди Джонса звукорежиссёром и продюсером «Marquee Moon»; его работа с Rolling Stones корнем стиля Television не считается."
+    source:
+      title: "Matt Mitchell: Air Couldn’t Touch Us — Remembering Tom Verlaine, Paste (2023)"
+      url: "https://www.pastemagazine.com/music/television/remembering-tom-verlaine-of-television"
+      quote: "The band had hired Andy Johns to engineer and produce Marquee Moon because Verlaine was uninterested in having a popular producer’s name attached to the record."

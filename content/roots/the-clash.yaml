@@ -7,60 +7,81 @@ place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
 placeRu: "Лондон"
 genre: "Punk rock"
 genreRu: "панк-рок"
-story: "The Clash brought Junior Murvin’s “Police and Thieves” into their repertoire. They also worked with reggae producer Lee “Scratch” Perry on “Complete Control”."
-storyRu: "The Clash включили в свой репертуар «Police and Thieves» Джуниора Мёрвина. Над «Complete Control» они работали с регги-продюсером Ли «Скрэтчем» Перри."
+story: "The Clash were one of the bands that defined British punk: fast, explosive songs played as political manifestos. Into that punk they let the reggae of West London's streets — Paul Simonon learned his bass by playing along to Jamaican records, and the band called their mix punk reggae."
+storyRu: "The Clash — одна из групп, из которых сложился британский панк: быстрые, взрывные песни, сыгранные как политические манифесты. В этот панк они впустили регги лондонских улиц: Пол Симонон учился играть на басу под ямайские пластинки, а сама группа называла свою смесь панк-регги."
 links:
+  - to: "style:punk"
+    kind: "style"
+    how: "Fast, uptempo songs played with raw adrenaline as political statements: the Clash carried punk's sound, attitude and image and gave the movement its political conscience."
+    howRu: "Быстрые песни, сыгранные на голом адреналине как политические заявления: The Clash несли звук, настрой и облик панка и дали движению политическую совесть."
+    carries: []
+    dimensions: ["rhythm", "performance", "image"]
+    evidence:
+      - type: "critics"
+        dimensions: ["rhythm", "performance", "image"]
+        text: "The Rock & Roll Hall of Fame credits the Clash with creating and defining punk, describing their uptempo manifestos and their political conscience."
+        textRu: "Зал славы рок-н-ролла считает The Clash одними из создателей панка, говоря об их стремительных песнях-манифестах и политической совести."
+        source:
+          title: "Rock & Roll Hall of Fame: The Clash"
+          url: "https://www.rockhall.com/inductees/clash"
+          quote: "Their explosive, uptempo punk-rock manifestos were unleashed with pure adrenaline and total conviction."
+      - type: "critics"
+        dimensions: ["image"]
+        text: "The band's own archive describes the debut album as the sound, attitude and image of London's DIY punk scene."
+        textRu: "Архив группы описывает дебютный альбом как звук, настрой и облик лондонской панк-сцены «сделай сам»."
+        source:
+          title: "The Clash (official site): The Clash (1977)"
+          url: "https://www.theclash.com/music/the-clash"
+          quote: "It is the sound, attitude and image at the heart of London's DIY punk scene."
+    scope: "career"
   - to: "card:reggae"
-    kind: "cover"
-    claim: "The Clash recorded a cover of Junior Murvin’s reggae song “Police and Thieves”."
-    claimRu: "The Clash записали свою версию регги-песни Джуниора Мёрвина «Police and Thieves»."
-    what: "Junior Murvin's 'Police and Thieves', covered on the Clash's debut album."
-    whatRu: "«Police and Thieves» Джуниора Мёрвина в версии с дебютного альбома The Clash."
-    sources:
-      - title: "The Clash: The Clash — official album notes"
-        url: "https://www.theclash.com/music/the-clash"
-      - title: "Pitchfork: R.I.P. Reggae Singer Junior Murvin"
-        url: "https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/"
+    kind: "influence"
+    how: "From reggae the Clash took a heavy, prominent bass that moves like dancing feet, Jamaican rhythm and later its DJ-style toasting and dub, and the idea of music as protest; they called the result punk reggae, not white reggae."
+    howRu: "У регги The Clash взяли тяжёлый, выдвинутый вперёд бас, который движется как ноги в танце, ямайский ритм, позже — диджейскую декламацию и даб, а с ними и мысль, что музыка может быть протестом. Итог они называли панк-регги, а не «белым регги»."
     carries: []
-    how: A punk band’s cover of a reggae song; the sources speak of shared defiance, not of a musical element.
-    howRu: Кавер панк-группы на песню регги; источники говорят об общем бунтарстве, а не о музыкальном приёме.
-  - to: "root:junior-murvin"
-    kind: "cover"
-    claim: "The Clash recorded a cover of Junior Murvin’s reggae song “Police and Thieves”."
-    claimRu: "The Clash записали свою версию регги-песни Джуниора Мёрвина «Police and Thieves»."
-    what: "Junior Murvin's 'Police and Thieves', covered on the Clash's debut album."
-    whatRu: "«Police and Thieves» Джуниора Мёрвина в версии с дебютного альбома The Clash."
-    sources:
-      - title: "The Clash: The Clash — official album notes"
-        url: "https://www.theclash.com/music/the-clash"
-      - title: "Pitchfork: R.I.P. Reggae Singer Junior Murvin"
-        url: "https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/"
-    carries: []
-    how: A punk band’s cover of a reggae song; the sources speak of shared defiance, not of a musical element.
-    howRu: Кавер панк-группы на песню регги; источники говорят об общем бунтарстве, а не о музыкальном приёме.
-  - to: "root:lee-scratch-perry"
-    kind: "producer"
-    claim: "Lee “Scratch” Perry produced the Clash’s “Complete Control”."
-    claimRu: "Ли «Скрэтч» Перри продюсировал «Complete Control» группы The Clash."
-    sources:
-      - title: "The Clash: Complete Control — official single notes"
-        url: "https://www.theclash.com/music/complete-control"
-      - title: "Danny Kelly: Lee Perry interview (NME, archived by Uncarved)"
-        url: "https://uncarved.org/dub/scratch.html"
-    carries: []
-    how: Perry produced one Clash single; the sources record the session, not an element passed on.
-    howRu: Перри спродюсировал один сингл The Clash; источники фиксируют сессию, а не переданный приём.
-  - to: "card:reggae"
-    kind: "producer"
-    claim: "The Jamaican producer Mikey Dread produced the Clash’s “Bankrobber” and worked with them on Sandinista!, which includes dub remixes of their own songs."
-    claimRu: "Ямайский продюсер Майки Дред спродюсировал «Bankrobber» The Clash и работал с группой над «Sandinista!», где есть даб-ремиксы их собственных песен."
-    sources:
-      - title: "Spectrum Culture: Discography — The Clash, Sandinista!"
-        url: "https://spectrumculture.com/2016/03/03/discography-the-clash-sandinista/"
-      - title: "Gigwise: Mikey Dread 1954–2008"
-        url: "https://gigwise.com/features/41679/Mikey-Dread-1954-2008"
-      - title: "Ken Hunt: Michael “Mikey Dread” Campbell (1954–2008)"
-        url: "https://kenhunt.doruzka.com/?p=64"
-    carries: ["dub"]
-    how: "Dub as a studio method: with Mikey Dread the Clash remade their own songs as dub versions, as “Junco Partner” became “Version Pardner”."
-    howRu: "Даб как студийный метод: вместе с Майки Дредом The Clash переделали собственные песни в даб-версии — так из «Junco Partner» получилась «Version Pardner»."
+    dimensions: ["rhythm", "sound", "melody-vocal", "image"]
+    evidence:
+      - type: "listening"
+        dimensions: ["rhythm", "sound"]
+        text: "Paul Simonon says he learned his bass lines by playing along to reggae records, which he heard growing up in Brixton and Ladbroke Grove."
+        textRu: "Пол Симонон рассказывает, что учился басовым партиям, подыгрывая пластинкам регги, которые слышал, когда рос в Брикстоне и Ладброук-Гроуве."
+        source:
+          title: "Far Out: Why The Clash's Paul Simonon claims there's no bass in The Who"
+          url: "https://faroutmagazine.co.uk/the-clash-paul-simonon-claims-no-bass-in-the-who/"
+          quote: "Whereas reggae, I just put the record on and play along to it and work out the lines."
+      - type: "testimony"
+        dimensions: ["image"]
+        text: "Simonon recalls reggae as the only music of the time that had something to say; Strummer called the band's version punk reggae."
+        textRu: "Симонон вспоминает, что регги была тогда единственной музыкой, которой было что сказать; Страммер называл версию группы панк-регги."
+        source:
+          title: "KEXP (Janice Headley): Which Bands Mattered to the “Only Band That Matters”? (2021)"
+          url: "https://kexp.org/read/2021/2/5/which-bands-mattered-only-band-matters/"
+          quote: "that's the only music that seemed to me at that time that had something to say for itself."
+      - type: "critics"
+        dimensions: ["rhythm", "melody-vocal"]
+        text: "Ian Thomson hears London Calling arrive in Jamaican reggae and ska, and Sandinista! take up Jamaican DJ delivery, dubbing and toasting."
+        textRu: "Иэн Томсон слышит, как «London Calling» врывается ямайским регги и ска, а «Sandinista!» перенимает манеру ямайских диджеев — даб и тостинг."
+        source:
+          title: "The Irish Times (Ian Thomson): London Calling 40 years on (2019)"
+          url: "https://www.irishtimes.com/culture/music/london-calling-40-years-on-how-the-clash-rewrote-the-rule-book-1.4102171"
+          quote: "a blaze of righteous Jamaican reggae and driving dance-floor ska."
+    scope: "career"
+notes:
+  - period: "1977 (“Complete Control”)"
+    who: "Lee “Scratch” Perry"
+    role: "producer"
+    what: "The Jamaican producer recorded the single, a meeting rather than a source of the band's style."
+    whatRu: "Ямайский продюсер записал сингл; это встреча, а не источник стиля группы."
+    source:
+      title: "The Clash (official site): Complete Control"
+      url: "https://www.theclash.com/music/complete-control"
+      quote: "It was produced by Jamaican reggae legend Lee 'Scratch' Perry."
+  - period: "1980 (“Bankrobber”, Sandinista!)"
+    who: "Mikey Dread"
+    role: "collaborator"
+    what: "The Jamaican DJ and producer worked with the band in 1980, bridging reggae and punk."
+    whatRu: "Ямайский диджей и продюсер работал с группой в 1980 году, наводя мост между регги и панком."
+    source:
+      title: "Ken Hunt: Mikey Dread obituary (2008)"
+      url: "https://kenhunt.doruzka.com/?p=64"
+      quote: "his work with The Clash on their 1980 Bankrobber single"

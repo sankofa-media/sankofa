@@ -7,18 +7,89 @@ place: {"name": "Leningrad (Saint Petersburg)", "lat": 59.9343, "lon": 30.3351}
 placeRu: "Ленинград (Санкт-Петербург)"
 genre: "Rock / reggae"
 genreRu: "рок / регги"
-story: "Aquarium’s link to Black music runs through reggae. Their song “Vavilon” was first written in that style."
-storyRu: "Связь «Аквариума» с чёрной музыкой проходит через регги. Песню «Вавилон» сначала написали именно в этом жанре."
+story: "Boris Grebenshchikov looked for a Russian Dylan, found none and set out to become one: many early Aquarium songs grew from Dylan’s, and the band proved that original rock in Russian was possible. Around 1980 Aquarium also became the Soviet Union’s first reggae band, writing songs to the Jamaican offbeat."
+storyRu: "Борис Гребенщиков искал «русского Дилана», не нашёл и решил стать им сам: многие ранние песни «Аквариума» выросли из песен Дилана, а группа доказала, что оригинальный рок на русском языке возможен. На рубеже 1980-х «Аквариум» стал и первой в СССР регги-группой, сочиняя песни под ямайскую слабую долю."
 links:
+  - to: "root:bob-dylan"
+    kind: "influence"
+    how: "Grebenshchikov modelled his songwriting on Dylan’s mid-1960s songs — many early Aquarium songs are free adaptations of them — and took on the role of the singer-poet as a ‘Russian Dylan’."
+    howRu: "Гребенщиков учился сочинять по песням Дилана середины 1960-х — многие ранние песни «Аквариума» вольно их перелагают — и примерил роль поэта с гитарой, «русского Дилана»."
+    carries: []
+    dimensions: ["harmony-form", "image"]
+    evidence:
+      - type: "critics"
+        dimensions: ["harmony-form"]
+        text: "Artemy Troitsky says Dylan’s 1965–66 period shaped Grebenshchikov most, that many early Aquarium songs are in effect free adaptations of Dylan songs, and that Grebenshchikov told him ‘Poezd v ogne’ was largely inspired by Dylan."
+        textRu: "Артемий Троицкий говорит, что сильнее всего на Гребенщикова повлиял Дилан 1965–1966 годов, что многие ранние песни «Аквариума» — фактически вольные переводы песен Дилана и что сам Гребенщиков признавался ему: «Поезд в огне» во многом навеян Диланом."
+        source:
+          title: "Meduza: «Такой американский Окуджава» — Артемий Троицкий о Бобе Дилане (2016)"
+          url: "https://meduza.io/feature/2016/10/14/takoy-amerikanskiy-okudzhava"
+          quote: "Этот период сильнее всего повлиял на Майка и БГ. … Многие ранние песни Гребенщикова и «Аквариума» фактически являются вольными переводами песен Дилана … Даже знаменитый перестроечный гимн «Поезд в огне», как мне Боря сам говорил, во многом навеян песней Дилана"
+      - type: "testimony"
+        dimensions: ["image"]
+        text: "By his own account, Grebenshchikov looked for a ‘Russian Dylan’ and, finding none, decided to become one."
+        textRu: "По собственным словам Гребенщикова, он искал «русского Дилана» и, поняв, что такого ещё нет, решил стать им сам."
+        source:
+          title: "Профиль: Танцы на грани зимы — 70 лет Борису Гребенщикову (Александр Зайцев, 2023)"
+          url: "https://profile.ru/culture/tancy-na-grani-zimy-70-let-borisu-grebenshhikovu-1422327/amp/"
+          quote: "По его словам, он искал, не существует ли «русского Дилана», и когда понял, что еще не существует, решил сам стать им."
+    scope: "career"
+  - to: "style:russian-rock"
+    kind: "style"
+    how: "Aquarium made Russian rock a poetic art: original rock songs in Russian, built as a poetic-musical project rather than copies of Western hits."
+    howRu: "«Аквариум» сделал русский рок поэтическим искусством: оригинальные рок-песни на русском языке, задуманные как поэтически-музыкальный проект, а не как копии западных хитов."
+    carries: []
+    dimensions: ["melody-vocal"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Profile credits Aquarium with proving that original rock music in Russian could exist."
+        textRu: "«Профиль» пишет, что «Аквариум» доказал возможность оригинальной рок-музыки на русском языке."
+        source:
+          title: "Профиль: Танцы на грани зимы — 70 лет Борису Гребенщикову (Александр Зайцев, 2023)"
+          url: "https://profile.ru/culture/tancy-na-grani-zimy-70-let-borisu-grebenshhikovu-1422327/amp/"
+          quote: "Ведь «Аквариум» доказал возможность существования оригинальной рок-музыки на русском языке."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Skillbox Media’s history of Russian rock describes Aquarium’s founding in 1972 as a postmodern poetic-musical project."
+        textRu: "История русского рока Skillbox Media описывает основание «Аквариума» в 1972 году как «постмодернистский поэтически-музыкальный проект»."
+        source:
+          title: "Skillbox Media: Русский рок — история, жанры, группы (Настя Сорокина, 2024)"
+          url: "https://skillbox.ru/media/cinemusic/russian-rock/"
+          quote: "В 1972 году Борис Гребенщиков (объявлен в России иностранным агентом) и Анатолий Гуницкий создали «постмодернистский поэтически-музыкальный проект» под названием «Аквариум»."
+    scope: "career"
   - to: "card:reggae"
     kind: "influence"
-    claim: "Aquarium’s song “Vavilon” was originally written as reggae."
-    claimRu: "Песня «Аквариума» «Вавилон» изначально была написана как регги."
-    sources:
-      - title: "Kommersant Weekend: 10 albums of September"
-        url: "https://www.kommersant.ru/doc/4493505"
-      - title: "Colta: Interview with Levsha Patsan about Aquarium in Dub"
-        url: "https://www.colta.ru/articles/music_modern/26051-levsha-patsan-intervyu-albom-akvarium-in-dub-li-skretch-perri-pesni-bg"
-    carries: ["reggae-offbeat"]
-    how: Aquarium wrote “Vavilon” in the reggae rhythm, the Jamaican offbeat feel.
-    howRu: «Аквариум» написал «Вавилон» в ритме регги — с ямайским акцентом на слабую долю.
+    how: "At the turn of the 1980s Aquarium wrote songs such as “Vavilon” and “Aristokrat” to the reggae offbeat and made the first Soviet dub, bringing Jamaican rhythm into Russian rock."
+    howRu: "На рубеже 1980-х «Аквариум» писал песни вроде «Вавилона» и «Аристократа» под регги-акцент на слабую долю и сделал первый советский даб, принеся ямайский ритм в русский рок."
+    carries: ["reggae-offbeat", "dub"]
+    dimensions: ["rhythm", "sound"]
+    evidence:
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "Boris Barabanov notes that “Vavilon” and “Aristokrat” were conceived as reggae from the start."
+        textRu: "Борис Барабанов отмечает, что «Вавилон» и «Аристократ» изначально были придуманы как регги."
+        source:
+          title: "Коммерсантъ Weekend: 10 альбомов сентября (Борис Барабанов, 2020)"
+          url: "https://www.kommersant.ru/doc/4493505"
+          quote: "Помимо «Вавилона» и «Аристократа», изначально придуманных как регги"
+      - type: "critics"
+        dimensions: ["rhythm", "sound"]
+        text: "Producer Levsha Patsan credits Grebenshchikov with bringing Caribbean music to the USSR, calling “Vavilon” the country’s first reggae song and “212-85-06” its first dub, and speaks of the band’s love of Jamaican music."
+        textRu: "Продюсер Левша Пацан считает, что Гребенщиков принёс карибскую музыку в СССР, называет «Вавилон» первой регги-песней страны, а «212-85-06» — первым советским дабом и говорит о любви «Аквариума» к ямайской музыке."
+        source:
+          title: "Colta: «Пришлось вымачивать голос БГ в эликсире молодости» — интервью с Левшой Пацаном (Денис Бояринов, 2020)"
+          url: "https://www.colta.ru/articles/music_modern/26051-levsha-patsan-intervyu-albom-akvarium-in-dub-li-skretch-perri-pesni-bg"
+          quote: "Борис Гребенщиков принес карибскую музыку в СССР … Зная любовь «Аквариума» к разным направлениям ямайской музыки"
+    scope: "period"
+    period: "late 1970s – early 1980s (“Vavilon”, “Aristokrat”, “212-85-06”)"
+notes:
+  - period: "2020 (Aquarium in Dub)"
+    who: "Lee “Scratch” Perry"
+    role: "collaborator"
+    what: "The inventor of dub rebuilt eleven Aquarium songs from different years in Jamaica and sang on the record."
+    whatRu: "Изобретатель даба заново пересобрал на Ямайке одиннадцать песен «Аквариума» разных лет и сам спел на пластинке."
+    source:
+      title: "Коммерсантъ Weekend: 10 альбомов сентября (Борис Барабанов, 2020)"
+      url: "https://www.kommersant.ru/doc/4493505"
+      quote: "11 песен «Аквариума» разных лет, заново пересобранных на Ямайке"

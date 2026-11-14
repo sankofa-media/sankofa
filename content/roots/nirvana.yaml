@@ -7,34 +7,78 @@ place: {"name": "Aberdeen, Washington", "lat": 46.9754, "lon": -123.8157}
 placeRu: "Абердин, Вашингтон"
 genre: "Grunge"
 genreRu: "гранж"
+story: "Nirvana came out of the Pacific Northwest grunge scene, moving from the sludge-metal of Bleach to the polished grunge of Nevermind. Their raw, cathartic sound was punk-inspired — Kurt Cobain pictured pop bands “molested by Black Flag and Black Sabbath” — and their hooks came from the Beatles, whom Cobain called his biggest influence."
+storyRu: "Nirvana вышли из гранжевой сцены тихоокеанского Северо-Запада и прошли путь от тяжёлого, вязкого метала «Bleach» до отполированного гранжа «Nevermind». Их сырой, исступлённый звук вырос из панка — Курт Кобейн описывал его как поп-группы, «над которыми надругались Black Flag и Black Sabbath», — а мелодии пришли от The Beatles, которых Кобейн называл своим главным влиянием."
 links:
-  - to: "card:blues"
-    claim: "Nirvana closed MTV Unplugged with “Where Did You Sleep Last Night”, drawing on Lead Belly’s version of the traditional song."
-    claimRu: "Nirvana завершили MTV Unplugged песней «Where Did You Sleep Last Night», опираясь на версию традиционной песни в исполнении Ледбелли."
-    sources:
-      - title: "David Browne: In the Room at Nirvana’s MTV Unplugged in New York (Rolling Stone)"
-        url: "https://au.rollingstone.com/music/music-features/in-the-room-at-nirvanas-mtv-unplugged-in-new-york-6010/"
-      - title: "Mike Powell: Nirvana — MTV Unplugged in New York (Pitchfork)"
-        url: "https://pitchfork.com/reviews/albums/nirvana-mtv-unplugged-in-new-york/"
-    kind: "cover"
-    what: "“Where Did You Sleep Last Night”: Nirvana’s MTV Unplugged performance, drawing on Lead Belly’s version."
-    whatRu: "«Where Did You Sleep Last Night»: исполнение Nirvana на MTV Unplugged, опирающееся на версию Ледбелли."
+  - to: "style:grunge"
+    kind: "style"
+    how: "Nirvana worked in Seattle-area grunge: a heavy, sludgy guitar sound, a pounding rhythm section and big melodies over the noise."
+    howRu: "Nirvana играли сиэтлский гранж: тяжёлая, вязкая гитара, гулкая ритм-секция и крупные мелодии поверх шума."
     carries: []
-    how: 'Nirvana took a traditional song in Lead Belly’s version: repertoire, not a documented element.'
-    howRu: 'Nirvana взяли народную песню в версии Ледбелли: репертуар, а не задокументированный приём.'
-  - to: "root:lead-belly"
-    kind: "cover"
-    claim: "Nirvana closed MTV Unplugged with “Where Did You Sleep Last Night”, drawing on Lead Belly’s version of the traditional song."
-    claimRu: "Nirvana завершили MTV Unplugged песней «Where Did You Sleep Last Night», опираясь на версию традиционной песни в исполнении Ледбелли."
-    what: "“Where Did You Sleep Last Night”: Nirvana’s MTV Unplugged performance draws on Lead Belly’s version of the traditional song."
-    whatRu: "«Where Did You Sleep Last Night»: исполнение Nirvana на MTV Unplugged опирается на версию традиционной песни в исполнении Ледбелли."
-    sources:
-      - title: "David Browne: In the Room at Nirvana’s MTV Unplugged in New York (Rolling Stone)"
-        url: "https://au.rollingstone.com/music/music-features/in-the-room-at-nirvanas-mtv-unplugged-in-new-york-6010/"
-      - title: "Mike Powell: Nirvana — MTV Unplugged in New York (Pitchfork)"
-        url: "https://pitchfork.com/reviews/albums/nirvana-mtv-unplugged-in-new-york/"
+    dimensions: ["sound", "rhythm", "melody-vocal"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "melody-vocal"]
+        text: "The Rock and Roll Hall of Fame places Nirvana in a movement bred in the Pacific Northwest and traces their sound from sludge-metal to grunge, full of melodic hooks."
+        textRu: "Зал славы рок-н-ролла ставит Nirvana в движение, выросшее на тихоокеанском Северо-Западе, и прослеживает их звук от вязкого метала к гранжу, полному мелодических крючков."
+        source:
+          title: "Rock & Roll Hall of Fame: Nirvana (inducted 2014)"
+          url: "https://rockhall.com/inductees/nirvana/"
+          quote: "Nirvana accidentally kicked off a cultural revolution bred in the Pacific Northwest with 1991's Nevermind. ... Nirvana expressed angst, ennui and frustration – and plenty of melodic hooks. ... From the humble sludge-metal beginnings of Bleach to the polished grunge sheen of Nevermind"
+      - type: "critics"
+        dimensions: ["rhythm", "melody-vocal"]
+        text: "John J. Winters at WBUR calls grunge punk's flannel-bedecked stepchild and hears in Nirvana great melodies harnessed to the maelstrom of the Grohl–Novoselic rhythm section."
+        textRu: "Джон Уинтерс на WBUR называет гранж «приёмышем панка во фланелевых рубахах» и слышит у Nirvana великие мелодии, впряжённые в водоворот ритм-секции Грола и Новоселича."
+        source:
+          title: "John J. Winters, WBUR Cognoscenti: Twenty years later, Kurt Cobain's legacy still does not fade away (2014)"
+          url: "https://www.wbur.org/cognoscenti/2014/04/01/twenty-years-later-kurt-cobains-legacy-still-does-not-fade-away"
+          quote: "Punk (and its flannel-bedecked stepchild, grunge) is about sex and death. ... sweetened with some of the greatest melodies in rock history was a potent mix. ... harnessed to the maelstrom of the Grohl-Novoselic rhythm section"
+    scope: "career"
+  - to: "style:punk"
+    kind: "influence"
+    how: "From hardcore punk such as Black Flag came the raw, abrasive sound and the cathartic performance that Nirvana set against pop melody."
+    howRu: "От хардкор-панка вроде Black Flag пришли сырой, царапающий звук и исступлённая подача, которые Nirvana противопоставили поп-мелодии."
     carries: []
-    how: 'Nirvana took a traditional song in Lead Belly’s version: repertoire, not a documented element.'
-    howRu: 'Nirvana взяли народную песню в версии Ледбелли: репертуар, а не задокументированный приём.'
-story: "Nirvana’s MTV Unplugged finale drew on Lead Belly’s version of a traditional song. That closing performance was “Where Did You Sleep Last Night”."
-storyRu: "В финале MTV Unplugged Nirvana обратились к версии традиционной песни в исполнении Ледбелли. Этой заключительной песней была «Where Did You Sleep Last Night»."
+    dimensions: ["sound", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "performance"]
+        text: "The Hall of Fame describes Nirvana's raw, punk-inspired sound delivered through cathartic performances."
+        textRu: "Зал славы описывает сырой, вдохновлённый панком звук Nirvana и их исступлённые выступления."
+        source:
+          title: "Rock & Roll Hall of Fame: Nirvana (inducted 2014)"
+          url: "https://rockhall.com/inductees/nirvana/"
+          quote: "the Seattle band delivered a raw, punk-inspired sound via cathartic performances."
+      - type: "testimony"
+        dimensions: ["sound"]
+        text: "Cobain described the band's sound as pop bands overpowered by the hardcore of Black Flag and the heaviness of Black Sabbath, as cited by WBUR."
+        textRu: "Кобейн, как приводит WBUR, описывал звук группы как поп, задавленный хардкором Black Flag и тяжестью Black Sabbath."
+        source:
+          title: "John J. Winters, WBUR Cognoscenti: Twenty years later, Kurt Cobain's legacy still does not fade away (2014)"
+          url: "https://www.wbur.org/cognoscenti/2014/04/01/twenty-years-later-kurt-cobains-legacy-still-does-not-fade-away"
+          quote: "The Knack and the Bay City Rollers getting molested by Black Flag and Black Sabbath."
+    scope: "career"
+  - to: "root:the-beatles"
+    kind: "influence"
+    how: "Cobain's songwriting drew on the Beatles' simple, jangly melodies and Rubber Soul-era guitar, the pop side of Nirvana's sound."
+    howRu: "Песни Кобейна опирались на простые звонкие мелодии The Beatles и гитару времён «Rubber Soul» — поп-сторону звука Nirvana."
+    carries: []
+    dimensions: ["melody-vocal", "sound"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal", "sound"]
+        text: "In a 1989 radio interview Cobain named the Beatles his biggest influence and singled out the guitar and simple melodies of the Rubber Soul period."
+        textRu: "В радиоинтервью 1989 года Кобейн назвал The Beatles своим главным влиянием и выделил гитару и простые мелодии периода «Rubber Soul»."
+        source:
+          title: "Far Out Magazine: Kurt Cobain’s favourite song by The Beatles (citing Radio Onde Furlane, 1989)"
+          url: "https://faroutmagazine.co.uk/kurt-cobain-favourite-song-the-beatles/"
+          quote: "I would say the biggest influence I've ever had would be The Beatles ... My favourite period is the Rubber Soul period; the guitar and the simple melodies are my favourite."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The Hall of Fame notes that a jangly pop song written after listening to the Beatles signalled Cobain's genius for melody."
+        textRu: "Зал славы отмечает, что звонкая поп-песня, написанная после прослушивания The Beatles, выдала мелодический дар Кобейна."
+        source:
+          title: "Rock & Roll Hall of Fame: Nirvana (inducted 2014)"
+          url: "https://rockhall.com/inductees/nirvana/"
+          quote: "Written after listening to the Beatles, this jangly pop tune was a risky departure from dissonance ... that signaled Kurt Cobain's genius for melody."
+    scope: "career"
