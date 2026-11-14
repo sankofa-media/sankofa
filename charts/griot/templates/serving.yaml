@@ -1,0 +1,41 @@
+{{- /*
+One serving certificate shared by all replicas, so the aggregator trusts
+whichever replica answers. It is generated once and kept across upgrades.
+*/ -}}
+{{- $name := include "griot.name" . -}}
+{{- $secret := lookup "v1" "Secret" .Release.Namespace (printf "%s-serving" $name) -}}
+{{- $crt := "" -}}{{- $key := "" -}}{{- $ca := "" -}}
+{{- if and $secret (index $secret.data "ca.crt") -}}
+{{- $crt = index $secret.data "tls.crt" -}}{{- $key = index $secret.data "tls.key" -}}{{- $ca = index $secret.data "ca.crt" -}}
+{{- else -}}
+{{- $host := printf "%s.%s.svc" $name .Release.Namespace -}}
+{{- $caObj := genCA (printf "%s-ca" $name) 3650 -}}
+{{- $cert := genSignedCert $host nil (list $host (printf "%s.%s" $name .Release.Namespace) $name) 3650 $caObj -}}
+{{- $crt = $cert.Cert | b64enc -}}{{- $key = $cert.Key | b64enc -}}{{- $ca = $caObj.Cert | b64enc -}}
+{{- end -}}
+apiVersion: v1
+kind: Secret
+metadata:
+  name: {{ $name }}-serving
+  namespace: {{ .Release.Namespace }}
+  labels: {{- include "griot.labels" . | nindent 4 }}
+type: kubernetes.io/tls
+data:
+  tls.crt: {{ $crt }}
+  tls.key: {{ $key }}
+  ca.crt: {{ $ca }}
+{{- if .Values.apiService.enabled }}
+---
+apiVersion: apiregistration.k8s.io/v1
+kind: APIService
+metadata:
+  name: v1alpha1.history.sankofa.kuberoot.dev
+  labels: {{- include "griot.labels" . | nindent 4 }}
+spec:
+  group: history.sankofa.kuberoot.dev
+  version: v1alpha1
+  groupPriorityMinimum: 1000
+  versionPriority: 15
+  service: {name: {{ $name }}, namespace: {{ .Release.Namespace }}, port: 443}
+  caBundle: {{ $ca }}
+{{- end }}

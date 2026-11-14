@@ -51,24 +51,64 @@ import (
 
 const managedBy = "griot"
 
+type options struct {
+	kubeconfig, store, db, dsn, listen, apiService, host, register, pulse, metrics string
+	tlsCert, tlsKey                                                                string
+	sync, record, webhooks, compress                                               bool
+	leaderElect                                                                    bool
+	leaseName, leaseNamespace                                                      string
+	policy                                                                         history.Policy
+	retainEvery                                                                    time.Duration
+	scope                                                                          history.Scope
+}
+
 func main() {
-	var (
-		kubeconfig = flag.String("kubeconfig", "", "kubeconfig (in-cluster when empty)")
-		db         = flag.String("db", "/var/lib/griot/memory.db", "memory store")
-		listen     = flag.String("listen", ":8443", "aggregated API listen address")
-		apiService = flag.String("apiservice", "v1alpha1."+history.Group, "APIService to keep the CA bundle of")
-		host       = flag.String("host", "griot.sankofa-system.svc", "DNS name in the serving certificate")
-		register   = flag.String("register", "", "node IP to register as the Griot service endpoint (single control plane)")
-		retention  = flag.Duration("retention", 30*24*time.Hour, "how long to keep changes (the last record of each object stays)")
-		noSync     = flag.Bool("no-sync", false, "do not sync cards and quests")
-		noRecord   = flag.Bool("no-record", false, "do not record history")
-		pulseAddr  = flag.String("pulse", ":8081", "plain-HTTP listen address of the public pulse stream (empty to disable)")
-	)
+	var o options
+	var noSync, noRecord bool
+	var compact, namespaces, excludeNS, excludeRes string
+	flag.StringVar(&o.kubeconfig, "kubeconfig", "", "kubeconfig (in-cluster when empty)")
+	flag.StringVar(&o.store, "store", "sqlite", "memory backend: sqlite (one replica) or postgres (several replicas with --leader-elect)")
+	flag.StringVar(&o.db, "db", "/var/lib/griot/memory.db", "SQLite file")
+	flag.StringVar(&o.dsn, "dsn", "", "PostgreSQL connection string; prefer the GRIOT_DSN environment variable")
+	flag.StringVar(&o.listen, "listen", ":8443", "aggregated API listen address")
+	flag.StringVar(&o.apiService, "apiservice", "v1alpha1."+history.Group, "APIService to keep the CA bundle of (empty: the CA is managed elsewhere)")
+	flag.StringVar(&o.host, "host", "griot.sankofa-system.svc", "DNS name in the self-signed serving certificate")
+	flag.StringVar(&o.tlsCert, "tls-cert-file", "", "serving certificate shared by all replicas (default: self-signed per process)")
+	flag.StringVar(&o.tlsKey, "tls-key-file", "", "key of --tls-cert-file")
+	flag.StringVar(&o.register, "register", "", "node IP to register as the Griot service endpoint (single control plane)")
+	flag.DurationVar(&o.policy.MaxAge, "retention", 30*24*time.Hour, "forget changes older than this (the latest record of each object stays); 0 keeps all")
+	flag.IntVar(&o.policy.MaxVersions, "max-versions", 0, "keep at most this many records per object (0: no limit)")
+	flag.DurationVar(&o.policy.TombstoneTTL, "tombstone-ttl", 0, "forget dead objects entirely this long after their death (0: never)")
+	flag.StringVar(&compact, "compact", "", `compaction tiers AFTER:WINDOW, e.g. "24h:1h,168h:24h" (every change for a day, hourly for a week, daily after)`)
+	flag.DurationVar(&o.retainEvery, "retain-every", time.Hour, "how often to apply retention and compaction")
+	flag.StringVar(&namespaces, "namespaces", "", "remember only these namespaces (comma-separated; cluster-scoped objects are always kept)")
+	flag.StringVar(&excludeNS, "exclude-namespaces", "", "never remember these namespaces")
+	flag.StringVar(&excludeRes, "exclude-resources", "", "never remember these resources, e.g. pods,replicasets.apps")
+	flag.BoolVar(&o.compress, "compress", true, "store object bodies compressed with zstd")
+	flag.BoolVar(&o.leaderElect, "leader-elect", false, "elect one recorder among replicas; all replicas serve reads (needs --store=postgres)")
+	flag.StringVar(&o.leaseName, "lease-name", "griot-recorder", "leader election lease")
+	flag.StringVar(&o.leaseNamespace, "lease-namespace", os.Getenv("POD_NAMESPACE"), "namespace of the lease")
+	flag.BoolVar(&noSync, "no-sync", false, "do not sync cards and quests")
+	flag.BoolVar(&noRecord, "no-record", false, "do not record history")
+	flag.BoolVar(&o.webhooks, "webhooks", true, "serve the Sankofa admission webhooks (Kgotla, Polyrhythm, Credits)")
+	flag.StringVar(&o.pulse, "pulse", ":8081", "plain-HTTP listen address of the public pulse stream (empty to disable)")
+	flag.StringVar(&o.metrics, "metrics", "", "plain-HTTP listen address of /metrics (empty to disable)")
 	flag.Parse()
+	o.sync, o.record = !noSync, !noRecord
+	o.scope = history.ParseScope(namespaces, excludeNS, excludeRes)
 	log := slog.New(slog.NewTextHandler(os.Stderr, nil))
+	tiers, err := history.ParseTiers(compact)
+	if err != nil {
+		log.Error("griot", "err", err)
+		os.Exit(2)
+	}
+	o.policy.Tiers = tiers
+	if o.dsn == "" {
+		o.dsn = os.Getenv("GRIOT_DSN")
+	}
 	ctx, cancel := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
 	defer cancel()
-	if err := run(ctx, log, *kubeconfig, *db, *listen, *apiService, *host, *pulseAddr, *retention, !*noSync, !*noRecord, *register); err != nil {
+	if err := run(ctx, log, o); err != nil {
 		log.Error("griot", "err", err)
 		os.Exit(1)
 	}
@@ -81,14 +121,46 @@ func restConfig(path string) (*rest.Config, error) {
 	return rest.InClusterConfig()
 }
 
-func run(ctx context.Context, log *slog.Logger, kubeconfig, dbPath, listen, apiService, host, pulseAddr string, retention time.Duration, sync, record bool, register string) error {
-	if register != "" && net.ParseIP(register) == nil {
-		return fmt.Errorf("invalid --register IP %q", register)
+func openStore(o options) (history.Store, error) {
+	switch o.store {
+	case "sqlite", "":
+		if o.leaderElect {
+			return nil, fmt.Errorf("--leader-elect needs --store=postgres: SQLite has one writer and one volume, run one replica")
+		}
+		if err := os.MkdirAll(filepath.Dir(o.db), 0o700); err != nil {
+			return nil, err
+		}
+		s, err := history.OpenSQLite(o.db)
+		if err != nil {
+			return nil, err
+		}
+		s.Compress = o.compress
+		return s, nil
+	case "postgres":
+		if o.dsn == "" {
+			return nil, fmt.Errorf("--store=postgres needs GRIOT_DSN or --dsn")
+		}
+		s, err := history.OpenPostgres(o.dsn)
+		if err != nil {
+			return nil, err
+		}
+		s.Compress = o.compress
+		return s, nil
 	}
-	cfg, err := restConfig(kubeconfig)
+	return nil, fmt.Errorf("unknown --store %q", o.store)
+}
+
+func run(ctx context.Context, log *slog.Logger, o options) error {
+	if o.register != "" && net.ParseIP(o.register) == nil {
+		return fmt.Errorf("invalid --register IP %q", o.register)
+	}
+	cfg, err := restConfig(o.kubeconfig)
 	if err != nil {
 		return err
 	}
+	// Every read of the memory costs a SubjectAccessReview; the client-go
+	// default of 5 requests per second would cap the API at a few reads.
+	cfg.QPS, cfg.Burst = 100, 200
 	kube := kubernetes.NewForConfigOrDie(cfg)
 	sch := runtime.NewScheme()
 	_ = clientgoscheme.AddToScheme(sch)
@@ -97,55 +169,85 @@ func run(ctx context.Context, log *slog.Logger, kubeconfig, dbPath, listen, apiS
 	if err != nil {
 		return err
 	}
-	if sync && !record {
+	if o.sync && !o.record {
 		return syncCards(ctx, log, cl)
 	}
-	if pulseAddr != "" {
+	if o.pulse != "" {
 		hub := &pulse.Hub{}
 		go hub.Run(ctx, kube)
 		pm := http.NewServeMux()
 		pm.Handle("/pulse", hub)
-		ps := &http.Server{Addr: pulseAddr, Handler: pm, ReadHeaderTimeout: 10 * time.Second}
-		go func() { <-ctx.Done(); _ = ps.Close() }()
-		go func() {
-			if err := ps.ListenAndServe(); err != nil && err != http.ErrServerClosed {
-				log.Error("pulse", "err", err)
-			}
-		}()
+		serve(ctx, log, "pulse", o.pulse, pm)
 	}
-	if !record {
+	if !o.record {
 		<-ctx.Done()
 		return nil
 	}
-	if err := os.MkdirAll(filepath.Dir(dbPath), 0700); err != nil {
-		return err
-	}
-	store, err := history.Open(dbPath)
+	store, err := openStore(o)
 	if err != nil {
 		return err
 	}
 	defer store.Close()
 
-	rec := &history.Recorder{Store: store, Discovery: kube.Discovery(), Dynamic: dynamic.NewForConfigOrDie(cfg), Log: log}
-	go func() { _ = rec.Run(ctx, 2*time.Minute) }()
-	go prune(ctx, log, store, retention)
+	rec := &history.Recorder{Store: store, Discovery: kube.Discovery(), Dynamic: dynamic.NewForConfigOrDie(cfg), Log: log, Scope: o.scope}
+	m := &metrics{rec: rec, store: store}
+	if o.metrics != "" {
+		mm := http.NewServeMux()
+		mm.Handle("/metrics", m)
+		serve(ctx, log, "metrics", o.metrics, mm)
+	}
+	record := func(ctx context.Context) {
+		m.leader.Store(true)
+		go retain(ctx, log, store, o.policy, o.retainEvery, m)
+		if err := rec.Run(ctx, 2*time.Minute); err != nil {
+			log.Error("recorder", "err", err)
+		}
+	}
+	// On shutdown, wait for the recorder to flush its last batch and for the
+	// leader to release its lease, so a successor takes over at once instead
+	// of after the lease expires.
+	recorded := make(chan struct{})
+	go func() {
+		defer close(recorded)
+		if o.leaderElect {
+			elect(ctx, log, kube, o, record)
+		} else {
+			record(ctx)
+		}
+	}()
+	defer func() {
+		select {
+		case <-recorded:
+		case <-time.After(20 * time.Second):
+			log.Warn("recorder did not stop in time")
+		}
+	}()
 
 	auth, err := frontProxy(ctx, kube)
 	if err != nil {
 		return fmt.Errorf("front proxy auth: %w", err)
 	}
-	cert, caPEM, err := selfSigned(host)
-	if err != nil {
+	var cert tls.Certificate
+	var caPEM []byte
+	if o.tlsCert != "" {
+		// Replicas behind one Service share one certificate; whoever installs
+		// it also sets the APIService CA bundle.
+		if cert, err = tls.LoadX509KeyPair(o.tlsCert, o.tlsKey); err != nil {
+			return err
+		}
+	} else if cert, caPEM, err = selfSigned(o.host); err != nil {
 		return err
 	}
 	mux := http.NewServeMux()
 	mux.Handle("/", (&history.API{Store: store, Auth: auth, Kube: kube}).Handler())
-	webhooks(mux, cl, kube)
+	if o.webhooks {
+		webhooks(mux, cl, kube)
+	}
 	// Addons and the node service start independently. Reconcile until they
 	// exist, and repair CA bundles after addon reapplication or a restart.
-	go reconcile(ctx, log, cl, apiService, caPEM, register, sync)
+	go reconcile(ctx, log, cl, o.apiService, caPEM, o.register, o.sync, o.webhooks)
 	srv := &http.Server{
-		Addr:    listen,
+		Addr:    o.listen,
 		Handler: mux,
 		TLSConfig: &tls.Config{
 			Certificates: []tls.Certificate{cert},
@@ -161,11 +263,21 @@ func run(ctx context.Context, log *slog.Logger, kubeconfig, dbPath, listen, apiS
 		defer c()
 		_ = srv.Shutdown(sctx)
 	}()
-	log.Info("griot is listening", "addr", listen)
+	log.Info("griot is listening", "addr", o.listen, "store", o.store, "leaderElect", o.leaderElect)
 	if err := srv.ListenAndServeTLS("", ""); err != nil && err != http.ErrServerClosed {
 		return err
 	}
 	return nil
+}
+
+func serve(ctx context.Context, log *slog.Logger, name, addr string, h http.Handler) {
+	s := &http.Server{Addr: addr, Handler: h, ReadHeaderTimeout: 10 * time.Second}
+	go func() { <-ctx.Done(); _ = s.Close() }()
+	go func() {
+		if err := s.ListenAndServe(); err != nil && err != http.ErrServerClosed {
+			log.Error(name, "err", err)
+		}
+	}()
 }
 
 // syncCards applies every embedded card and removes cards that left the
@@ -210,23 +322,6 @@ func syncCards(ctx context.Context, log *slog.Logger, cl client.Client) error {
 	}
 	log.Info("cards in the cluster", "cards", len(set.Order), "quests", len(quests))
 	return nil
-}
-
-func prune(ctx context.Context, log *slog.Logger, s *history.Store, retention time.Duration) {
-	t := time.NewTicker(time.Hour)
-	defer t.Stop()
-	for {
-		if n, err := s.Prune(ctx, time.Now().Add(-retention)); err != nil {
-			log.Warn("prune", "err", err)
-		} else if n > 0 {
-			log.Info("forgot old changes", "records", n)
-		}
-		select {
-		case <-ctx.Done():
-			return
-		case <-t.C:
-		}
-	}
 }
 
 // frontProxy reads the aggregator's client CA and header names, the same way

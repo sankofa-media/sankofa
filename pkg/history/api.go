@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"strconv"
 	"strings"
+	"sync"
 	"time"
 
 	authzv1 "k8s.io/api/authorization/v1"
@@ -126,9 +127,11 @@ func (a *Authenticator) User(r *http.Request) (string, []string, error) {
 
 // API serves the history group for the aggregator.
 type API struct {
-	Store *Store
+	Store Store
 	Auth  *Authenticator
 	Kube  kubernetes.Interface
+
+	cache sync.Map // review key -> verdict
 }
 
 func (a *API) Handler() http.Handler {
@@ -238,7 +241,7 @@ func (a *API) serve(w http.ResponseWriter, r *http.Request) {
 	}
 	tl := toTimeline(ref, life)
 	if at := r.URL.Query().Get("at"); at != "" {
-		t, err := time.Parse(time.RFC3339, at)
+		t, err := time.Parse(time.RFC3339Nano, at)
 		if err != nil {
 			status(w, 400, metav1.StatusReasonBadRequest, "at must be RFC3339")
 			return
@@ -260,6 +263,40 @@ func (a *API) serve(w http.ResponseWriter, r *http.Request) {
 }
 
 func (a *API) list(ctx context.Context, w http.ResponseWriter, r *http.Request, user string, groups []string, ns string, cluster bool) {
+	kind := "TimelineList"
+	if cluster {
+		kind = "ClusterTimelineList"
+	}
+	out := TimelineList{TypeMeta: metav1.TypeMeta{Kind: kind, APIVersion: Group + "/" + Version}, Items: []Timeline{}}
+	check := a.checker(ctx, user, groups)
+	if at := r.URL.Query().Get("at"); at != "" {
+		// The namespace (or the cluster scope) as it was at a moment: every
+		// object alive then, with its state.
+		t, err := time.Parse(time.RFC3339Nano, at)
+		if err != nil {
+			status(w, 400, metav1.StatusReasonBadRequest, "at must be RFC3339")
+			return
+		}
+		if ns == metav1.NamespaceAll && !cluster {
+			status(w, 400, metav1.StatusReasonBadRequest, "?at= lists one namespace at a time")
+			return
+		}
+		recs, err := a.Store.NamespaceAt(ctx, ns, t)
+		if err != nil {
+			status(w, 500, metav1.StatusReasonInternalError, err.Error())
+			return
+		}
+		for _, rec := range recs {
+			if !check(rec.Ref) {
+				continue
+			}
+			tl := toTimeline(rec.Ref, []Record{rec})
+			tl.Object = rec.Object
+			out.Items = append(out.Items, tl)
+		}
+		writeJSON(w, 200, out)
+		return
+	}
 	limit := 100
 	if l, err := strconv.Atoi(r.URL.Query().Get("limit")); err == nil && l > 0 && l <= 1000 {
 		limit = l
@@ -269,13 +306,8 @@ func (a *API) list(ctx context.Context, w http.ResponseWriter, r *http.Request, 
 		status(w, 500, metav1.StatusReasonInternalError, err.Error())
 		return
 	}
-	kind := "TimelineList"
-	if cluster {
-		kind = "ClusterTimelineList"
-	}
-	out := TimelineList{TypeMeta: metav1.TypeMeta{Kind: kind, APIVersion: Group + "/" + Version}, Items: []Timeline{}}
 	for _, rec := range recs {
-		if cluster != (rec.Ref.Namespace == "") || !a.allowed(ctx, user, groups, rec.Ref) {
+		if cluster != (rec.Ref.Namespace == "") || !check(rec.Ref) {
 			continue
 		}
 		tl := toTimeline(rec.Ref, []Record{rec})
@@ -284,7 +316,42 @@ func (a *API) list(ctx context.Context, w http.ResponseWriter, r *http.Request, 
 	writeJSON(w, 200, out)
 }
 
+// checker authorises many objects of one request. A caller who may get a
+// resource in the whole namespace may read the memory of all its objects
+// with one review; otherwise each object is reviewed by name.
+func (a *API) checker(ctx context.Context, user string, groups []string) func(Ref) bool {
+	wide := map[Ref]bool{}
+	return func(ref Ref) bool {
+		k := Ref{Group: ref.Group, Resource: ref.Resource, Namespace: ref.Namespace}
+		ok, seen := wide[k]
+		if !seen {
+			ok = a.allowed(ctx, user, groups, k)
+			wide[k] = ok
+		}
+		return ok || a.allowed(ctx, user, groups, ref)
+	}
+}
+
+// authzTTL is how long a review result is reused, like the API server's
+// webhook authorizer cache, but short: revoking access takes effect within it.
+const authzTTL = 10 * time.Second
+
+type verdict struct {
+	ok      bool
+	expires time.Time
+}
+
 func (a *API) allowed(ctx context.Context, user string, groups []string, ref Ref) bool {
+	key := user + "\x00" + strings.Join(groups, ",") + "\x00" + ref.String()
+	if v, ok := a.cache.Load(key); ok && time.Now().Before(v.(verdict).expires) {
+		return v.(verdict).ok
+	}
+	ok := a.review(ctx, user, groups, ref)
+	a.cache.Store(key, verdict{ok: ok, expires: time.Now().Add(authzTTL)})
+	return ok
+}
+
+func (a *API) review(ctx context.Context, user string, groups []string, ref Ref) bool {
 	sar := &authzv1.SubjectAccessReview{Spec: authzv1.SubjectAccessReviewSpec{
 		User: user, Groups: groups,
 		ResourceAttributes: &authzv1.ResourceAttributes{Verb: "get", Group: ref.Group, Resource: ref.Resource, Namespace: ref.Namespace, Name: ref.Name},
