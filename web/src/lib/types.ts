@@ -105,6 +105,10 @@ export interface CardsFile {
   cards: Card[];
   /** artists traced back to museum cards (pkg/roots), when exported */
   roots?: import('./roots').Artist[];
+  /** the roots' elements of music, card-to-card steps and lines, when exported */
+  rootsElements?: unknown;
+  rootsCardLinks?: unknown;
+  rootsLines?: unknown;
 }
 
 export interface ChaptersFile {

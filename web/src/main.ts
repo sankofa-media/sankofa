@@ -1,4 +1,5 @@
 import './styles/main.css';
+import './styles/roots.css';
 import type { App } from './app';
 import type { CardsFile, ChaptersFile } from './lib/types';
 import { ERAS } from './lib/types';
@@ -16,6 +17,7 @@ import { loadMediaManifest } from './lib/media';
 import { loadJson } from './lib/loadJson';
 import { foldStepMarks, splitStepMarks } from './lib/stepMarks';
 import { EMPTY_LISTEN, type ListenFile } from './lib/listen';
+import { rootsExtras } from './lib/elements';
 import { watchTypography } from './lib/typo';
 import { Drawer, renderBook, renderCard } from './views/card';
 import { Atlas } from './views/atlas';
@@ -128,6 +130,8 @@ async function start(): Promise<void> {
     },
     chapters,
     listen: listenFile,
+    // The roots' elements, genre-to-genre steps and lines come with the cards.
+    ...rootsExtras(cardsFile),
     edition: held,
     media: (file) => `media/${file}`,
     openCard(id, opts = {}) {

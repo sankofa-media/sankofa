@@ -3,10 +3,10 @@ id: dinah-washington
 name: Dinah Washington
 nameRu: Дайна Вашингтон
 aliases:
-- дайна вашингтон
+  - дайна вашингтон
 years:
-- 1924
-- 1963
+  - 1924
+  - 1963
 place:
   name: Tuscaloosa, Alabama
   lat: 33.2098
@@ -15,18 +15,17 @@ placeRu: "Таскалуса, Алабама"
 genre: Jazz and blues
 genreRu: джаз и блюз
 links:
-- to: card:gospel
-  kind: scene
-  claim: Dinah Washington’s musical upbringing began with singing and playing piano
-    in church.
-  claimRu: Музыкальное воспитание Дайны Вашингтон началось с пения и игры на фортепиано
-    в церкви.
-  sources:
-  - title: 'Alabama Music Hall of Fame: Dinah Washington'
-    url: https://www.alamhof.org/dinah-washington-1
-  - title: 'Encyclopedia of Alabama: Dinah Washington'
-    url: https://encyclopediaofalabama.org/article/dinah-washington/
-story: Dinah Washington’s musical upbringing began in church. There, she sang and
-  played piano.
-storyRu: Музыкальное воспитание Дайны Вашингтон началось в церкви. Там она пела и
-  играла на фортепиано.
+  - to: card:gospel
+    kind: scene
+    claim: Dinah Washington’s musical upbringing began with singing and playing piano in church.
+    claimRu: Музыкальное воспитание Дайны Вашингтон началось с пения и игры на фортепиано в церкви.
+    sources:
+      - title: 'Alabama Music Hall of Fame: Dinah Washington'
+        url: https://www.alamhof.org/dinah-washington-1
+      - title: 'Encyclopedia of Alabama: Dinah Washington'
+        url: https://encyclopediaofalabama.org/article/dinah-washington/
+    carries: ["gospel-vocal"]
+    how: 'Dinah Washington’s voice was trained in gospel: she sang in church and accompanied the gospel singer Sallie Martin before turning to clubs.'
+    howRu: 'Голос Дайны Вашингтон поставил госпел: она пела в церкви и аккомпанировала госпел-певице Салли Мартин, прежде чем уйти в клубы.'
+story: Dinah Washington’s musical upbringing began in church. There, she sang and played piano.
+storyRu: Музыкальное воспитание Дайны Вашингтон началось в церкви. Там она пела и играла на фортепиано.

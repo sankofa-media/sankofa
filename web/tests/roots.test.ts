@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildTree, chainLine, deepest, endCards, extendLineage, fold, foldRun, longestRoots, searchArtists, suggestions, type Artist } from '../src/lib/roots';
+import { buildTree, chainLine, deepest, endCards, extendLineage, fold, longestRoots, searchArtists, suggestions, type Artist } from '../src/lib/roots';
 
 const link = (to: string) => ({ to, claim: `to ${to}`, sources: [{ title: 'a', url: 'https://a' }, { title: 'b', url: 'https://b' }] });
 const art = (id: string, name: string, links: string[], paths: string[][], extra: Partial<Artist> = {}): Artist => ({
@@ -77,11 +77,6 @@ describe('deep roots', () => {
     expect(rr.children.every((c) => c.lineage)).toBe(true);
   });
 
-  it('folds long runs of single steps', () => {
-    expect(foldRun(3)).toEqual({ show: 3, hide: 0 });
-    expect(foldRun(6)).toEqual({ show: 2, hide: 4 });
-  });
-
   it('puts the deepest chains and named borrowings first', () => {
     const withSample = [...all];
     withSample[2] = { ...withSample[2], links: [{ ...withSample[2].links[0], kind: 'sample', what: 'the handclaps of X' }] };
@@ -118,42 +113,17 @@ describe('new kinds', () => {
   });
 });
 
-import { groupChildren, quotes } from '../src/lib/roots';
+import { quotes } from '../src/lib/roots';
 describe('telling each fact once', () => {
   it('uses each language’s quotation marks', () => {
     expect(quotes('sampled "Stratus" in \'Safe from Harm\'', 'en')).toBe('sampled “Stratus” in “Safe from Harm”');
     expect(quotes('записали “Stratus” и "Safe from Harm"', 'ru')).toBe('записали «Stratus» и «Safe from Harm»');
   });
-  it('groups two links that tell the same borrowing', () => {
-    const l = { to: 'x', kind: 'sample' as const, what: 'the groove of Stratus', claim: 'c', sources: [] };
-    const n = { ref: 'ma', weight: 2, children: [{ ref: 'card:jazz', link: { ...l, to: 'card:jazz' }, children: [], weight: 1 }, { ref: 'cobham', link: { ...l, to: 'root:cobham' }, children: [], weight: 1 }] };
-    expect(groupChildren(n).map((g) => g.map((c) => c.ref))).toEqual([['card:jazz', 'cobham']]);
-  });
 });
 
-import { chainSteps } from '../src/lib/roots';
 import { recordingFor, type ListenFile } from '../src/lib/listen';
 
-describe('a chain to listen along', () => {
-  const sab = art('sabbath', 'Black Sabbath', ['card:blues'], [['sabbath', 'card:blues']]);
-  sab.links[0] = { ...sab.links[0], kind: 'cover', what: 'Warning' };
-  const met = art('metallica', 'Metallica', ['root:sabbath'], [['metallica', 'sabbath', 'card:blues']]);
-  met.links[0] = { ...met.links[0], kind: 'influence' };
-  const ids = new Map([sab, met].map((a) => [a.id, a]));
-  const cards = new Map([
-    ['blues', { id: 'blues', roots: ['work-songs'] }],
-    ['work-songs', { id: 'work-songs' }],
-  ]);
-
-  it('runs from the artist to the oldest root, saying how each step was taken', () => {
-    const steps = chainSteps(met, ids, cards);
-    expect(steps.map((s) => s.ref)).toEqual(['metallica', 'sabbath', 'card:blues', 'card:work-songs']);
-    expect(steps[0].next).toMatchObject({ kind: 'influence' });
-    expect(steps[1].next).toMatchObject({ kind: 'cover', link: { what: 'Warning' } });
-    expect(steps[2].next).toEqual({ kind: 'lineage' });
-    expect(steps[3].next).toBeUndefined();
-  });
-
+describe('recordings along a route', () => {
   it('finds each stop’s recording, and none where there is none', () => {
     const rec = { source: 'youtube' as const, kind: 'official' as const, youtube: 'HrrWhCbZAyY', title: 't' };
     const data: ListenFile = { version: 1, cards: { blues: [rec] }, roots: { sabbath: [rec] } };

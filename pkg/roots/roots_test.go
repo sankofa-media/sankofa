@@ -64,3 +64,44 @@ func TestBorrowingKinds(t *testing.T) {
 		})
 	}
 }
+
+func TestElementLayer(t *testing.T) {
+	q := `
+    sources:
+      - {title: a, url: "https://a", quote: "qa"}
+      - {title: b, url: "https://b", quote: "qb"}`
+	fsys := fstest.MapFS{
+		"band.yaml":   {Data: []byte("id: band\nname: Band\nyears: [1960]\nplace: {name: L}\ngenre: rock\nlinks:\n  - to: card:blues\n    claim: c\n    carries: [riff]\n    how: The band took blues riffs.\n    howRu: Группа взяла блюзовые риффы." + two + "\n")},
+		ElementsFile:  {Data: []byte("elements:\n  - id: riff\n    name: The riff\n    what: A short repeated phrase.\n    origin: [blues]" + q + "\n")},
+		CardLinksFile: {Data: []byte("links:\n  - from: blues\n    to: work-songs\n    how: The holler bent its notes.\n    carries: [riff]\n    facts:\n      - {card: work-songs, quote: a long bending cry}\n")},
+		LinesFile:     {Data: []byte("lines:\n  - id: blues\n    name: The blues line\n    path: [work-songs, blues]\n    elements: [riff]\n    overview: From hollers to the blues." + q + "\n")},
+	}
+	s, err := LoadFS(fsys)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(s.Order) != 1 || len(s.Elements) != 1 || len(s.CardLinks) != 1 || len(s.Lines) != 1 {
+		t.Fatalf("layer files must not load as artists: %+v", s)
+	}
+	cards := &card.Set{ByID: map[string]*card.Card{"blues": {ID: "blues", Roots: []string{"work-songs"}}, "work-songs": {ID: "work-songs"}}}
+	if errs := s.Validate(cards); len(errs) != 0 {
+		t.Fatal(errs)
+	}
+	if s.ByID["band"].Links[0].How == "" || s.CardLink("blues", "work-songs") == nil || s.Element("riff") == nil {
+		t.Fatal("lookups")
+	}
+	s.ByID["band"].Links[0].Carries = []string{"swing"}
+	if errs := s.Validate(cards); len(errs) != 1 || !strings.Contains(errs[0].Error(), "unknown element") {
+		t.Fatalf("unknown element must fail: %v", errs)
+	}
+	s.ByID["band"].Links[0].Carries = []string{"riff"}
+	s.CardLinks[0].To = "jazz"
+	if errs := s.Validate(cards); len(errs) == 0 {
+		t.Fatal("a card link to an unknown card must fail")
+	}
+	s.CardLinks[0].To = "work-songs"
+	s.Elements[0].Sources = s.Elements[0].Sources[:1]
+	if errs := s.Validate(cards); len(errs) != 1 || !strings.Contains(errs[0].Error(), "want at least 2") {
+		t.Fatalf("an element with one source must fail: %v", errs)
+	}
+}
