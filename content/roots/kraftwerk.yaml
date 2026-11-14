@@ -6,8 +6,8 @@ place: {"name": "Düsseldorf", "lat": 51.2277, "lon": 6.7735}
 placeRu: "Дюссельдорф"
 genre: "Electronic music"
 genreRu: "электронная музыка"
-story: "Kraftwerk grew out of krautrock: Ralf Hütter and Florian Schneider started in Düsseldorf with free improvisation, on the same scene as Can and Faust, and set out to make music of their own, away from Anglo-American structures built on the blues. Krautrock itself stood on 1960s rock, whose electric band and driving beat come from rhythm and blues, and on the collective improvisation of free jazz. From the late 1970s, Karl Bartos says, James Brown’s funky beats came in more and more."
-storyRu: "Kraftwerk выросли из краутрока: Ральф Хюттер и Флориан Шнайдер начинали в Дюссельдорфе со свободной импровизации — на одной сцене с Can и Faust — и хотели своей музыки — подальше от англо-американских структур на блюзовой основе. Сам краутрок стоял на роке 1960-х, чья электрическая группа и напористый бит пришли из ритм-н-блюза, и на коллективной импровизации фри-джаза. А с конца 1970-х, по словам Карла Бартоса, в музыку группы всё больше входили фанковые биты Джеймса Брауна."
+story: "Kraftwerk grew out of krautrock: Ralf Hütter and Florian Schneider started in Düsseldorf with free improvisation, on the same scene as Can and Faust, and set out to make music of their own, away from Anglo-American structures built on the blues. Krautrock itself stood on 1960s rock, whose electric band and driving beat come from rhythm and blues, and partly on the collective improvisation of free jazz. From the late 1970s, Karl Bartos says, James Brown’s funky beats came in more and more."
+storyRu: "Kraftwerk выросли из краутрока: Ральф Хюттер и Флориан Шнайдер начинали в Дюссельдорфе со свободной импровизации, на одной сцене с Can и Faust, и искали собственную музыку, подальше от англо-американских структур на блюзовой основе. Сам краутрок стоял на роке 1960-х, чья электрическая группа и напористый бит пришли из ритм-н-блюза, и отчасти на коллективной импровизации фри-джаза. А с конца 1970-х, по словам Карла Бартоса, в музыку группы всё больше входили фанковые биты Джеймса Брауна."
 links:
   - to: "root:james-brown"
     kind: "influence"
@@ -61,8 +61,8 @@ links:
   - to: "style:krautrock"
     kind: "style"
     scope: "career"
-    how: "Kraftwerk came out of the West German experimental rock that British critics called krautrock. Ralf Hütter and Florian Schneider began with freely improvised music in Organisation (1969) and on the first Kraftwerk albums of 1970–73, played happenings, art galleries and festivals alongside Can and Faust, and shared the scene’s aim of a music of their own, away from Anglo-American structures based on the blues. From it they took the long, hypnotic, repeated pulse that Autobahn (1974) made electronic."
-    howRu: "Kraftwerk вышли из западногерманского экспериментального рока, который британские критики окрестили краутроком. Ральф Хюттер и Флориан Шнайдер начинали со свободной импровизации — в группе Organisation (1969) и на первых альбомах Kraftwerk 1970–1973 годов, — выступали на хеппенингах, в галереях и на фестивалях рядом с Can и Faust и разделяли общую для этой сцены цель: своя музыка, подальше от англо-американских структур на блюзовой основе. Оттуда они вынесли долгий, гипнотический, повторяющийся пульс, который «Autobahn» (1974) сделал электронным."
+    how: "Kraftwerk came out of the West German experimental rock that British critics called krautrock. Ralf Hütter and Florian Schneider began with freely improvised music in Organisation (1969) and on the first Kraftwerk albums of 1970–73, played happenings and art events, crossed paths with Can and Faust at festivals, and shared the scene’s aim of a music of their own, away from Anglo-American structures based on the blues. Kraftwerk later called those records ‘archaeology’ and date their career from Autobahn (1974), but that is where their method formed: Autobahn made electronic the long, hypnotic, repeated pulse they took from that scene."
+    howRu: "Kraftwerk вышли из западногерманского экспериментального рока, который британские критики окрестили краутроком. Ральф Хюттер и Флориан Шнайдер начинали со свободной импровизации — в группе Organisation (1969) и на первых альбомах Kraftwerk 1970–1973 годов, — выступали на хеппенингах и арт-событиях, на фестивалях пересекались с Can и Faust и разделяли общую для этой сцены цель: своя музыка, подальше от англо-американских структур на блюзовой основе. Позже Kraftwerk назвали эти пластинки «археологией» и ведут отсчёт своей карьеры от «Autobahn» (1974), но сложился их метод именно там: «Autobahn» сделал электронным долгий, гипнотический, повторяющийся пульс, вынесенный с этой сцены."
     carries: ["improvisation"]
     dimensions: ["performance", "sound", "rhythm", "harmony-form", "image"]
     evidence:
@@ -74,6 +74,14 @@ links:
           title: "Rock & Roll Hall of Fame (Rob Bowman): Kraftwerk induction essay (2021)"
           url: "https://rockhall25.wpenginepowered.com/wp-content/uploads/2025/10/Kraftwerk_26746_RNRHF_2021_Highres-11.pdf"
           quote: "After recording an album of freely improvised music with a group called Organisation in 1969, Hütter and Schneider began working as a duo under the moniker Kraftwerk"
+      - type: "critics"
+        dimensions: ["performance"]
+        text: "The same essay notes that Hütter calls those early records ‘archaeology’ and that the band dates its career from Autobahn (1974)."
+        textRu: "То же эссе отмечает, что Хюттер называет ранние пластинки «археологией», а сама группа ведёт отсчёт своей карьеры от «Autobahn» (1974)."
+        source:
+          title: "Rock & Roll Hall of Fame (Rob Bowman): Kraftwerk induction essay (2021)"
+          url: "https://rockhall25.wpenginepowered.com/wp-content/uploads/2025/10/Kraftwerk_26746_RNRHF_2021_Highres-11.pdf"
+          quote: "Hütter refers to them as “archaeology,” and the group maintains that its career officially started in 1974 with the more pop-oriented album Autobahn."
       - type: "testimony"
         dimensions: ["performance", "image"]
         text: "Hütter: in a country with no continuous tradition of entertainment and everything Americanised, they were part of the ’68 movement, played happenings and art events and set out to make an industrial German sound."
@@ -99,6 +107,14 @@ links:
           url: "https://www.redbullmusicacademy.com/lectures/michael-rother-tokyo-2014"
           quote: "That was, for me, the first situation where I discovered that I was not completely alone with my idea of creating a music that was different, different from Anglo-American musical structures that are mostly, or were mostly, based on the blues."
       - type: "testimony"
+        dimensions: ["performance"]
+        text: "Rother on the Kraftwerk line-up of 1971: it played very wild, improvised music."
+        textRu: "Ротер о составе Kraftwerk 1971 года: это была очень дикая, импровизированная музыка."
+        source:
+          title: "Red Bull Music Academy: Michael Rother lecture (Tokyo, 2014)"
+          url: "https://www.redbullmusicacademy.com/lectures/michael-rother-tokyo-2014"
+          quote: "This was very wild, improvised music, and in the studio, we had the same clinical situation, and we didn’t really get far"
+      - type: "testimony"
         dimensions: ["image"]
         text: "Hütter places the band’s roots in film music, classical music, German electronic music and machine rhythms rather than in American music."
         textRu: "Корни группы Хюттер видит в музыке кино, классике, немецкой электронной музыке и машинных ритмах, а не в американской музыке."
@@ -108,8 +124,16 @@ links:
           quote: "our roots are more in film music, classical music, German electronic music and in machine-generated rhythm patterns, things like that."
       - type: "critics"
         dimensions: ["sound"]
-        text: "Simon Reynolds counts Kraftwerk among the krautrock bands for three albums and the Organisation prequel, and hears psychedelic roots in them: guitar harmonics, bottleneck glissandos, echo-chamber freak-outs, backwards guitar."
-        textRu: "Саймон Рейнольдс причисляет Kraftwerk к краутроку на три альбома и «пролог» Organisation и слышит в них психоделические корни: гитарные флажолеты, глиссандо бутылочным горлышком, эхо-камерные «фрик-ауты», гитару задом наперёд."
+        text: "Simon Reynolds counts Kraftwerk among the krautrock bands for three albums and the Organisation prequel, though they were “only ‘rock’ for an instant”, mixing New York minimalism with Stockhausen’s electronics."
+        textRu: "Саймон Рейнольдс причисляет Kraftwerk к краутроку на три альбома и «пролог» Organisation, хотя «„роком“ они были лишь мгновение»: Хюттер и Шнайдер смешивали нью-йоркский минимализм с электроникой Штокхаузена."
+        source:
+          title: "Simon Reynolds: Krautrock (Melody Maker, July 1996), author’s archive"
+          url: "https://reynoldsretro.blogspot.com/2013/03/krautrock-melody-maker-july-1996-by.html"
+          quote: "Although they were only \"rock\" for an instant, KRAFTWERK ought to be mentioned around about here. For three fascinating albums (and an interesting prequel as ORGANISATION), Ralf Hutter and Florian Schneider jumbled the New York minimalist school (La Monte Young, John Cage, Steve Reich etc) with German avant-electronics (Stockhausen)."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "In the early albums Reynolds hears psychedelic roots: guitar harmonics, bottleneck glissandos, echo-chamber freak-outs, backwards guitar."
+        textRu: "В ранних альбомах Рейнольдс слышит психоделические корни: гитарные флажолеты, глиссандо бутылочным горлышком, эхо-камерные «фрик-ауты», гитару задом наперёд."
         source:
           title: "Simon Reynolds: Krautrock (Melody Maker, July 1996), author’s archive"
           url: "https://reynoldsretro.blogspot.com/2013/03/krautrock-melody-maker-july-1996-by.html"
