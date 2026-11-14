@@ -1,0 +1,429 @@
+# Musical elements that travelled from Black traditions into later music.
+# Links in the artist files name them in `carries`; card-links.yaml and
+# lines.yaml use the same ids. Every element has at least two independent
+# sources, each with the passage it rests on.
+elements:
+  - id: blue-notes
+    name: Blue notes
+    nameRu: Блюзовые ноты
+    what: >-
+      Notes sung or played slightly flat, between the major and minor of the
+      Western scale, most often the third and the seventh. A singer bends the
+      voice up into them, a guitarist bends the string, and the melody sounds
+      both sad and tense. They were heard in the work songs and hollers of the
+      South before the blues was named.
+    whatRu: >-
+      Ноты, которые поют или играют чуть ниже, чем положено, — между мажором и
+      минором западного звукоряда, чаще всего терция и септима. Певец
+      подтягивает к ним голос, гитарист — струну, и мелодия звучит одновременно
+      печально и напряжённо. Их слышали в рабочих песнях и полевых кличах Юга
+      ещё до того, как у блюза появилось имя.
+    origin: [work-songs, blues]
+    sources:
+      - title: "Library of Congress, Songs of America: Blues"
+        url: "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/popular-songs-of-the-day/blues/"
+        quote: "Blues singers emphasized \"blue notes,\" usually the third, fifth and seventh degrees of the scale, which they often slurred or \"bent\" upward a quarter tone or more"
+      - title: "Center for Jazz Studies, Columbia University, Jazz Glossary: blue notes"
+        url: "https://ccnmtl.columbia.edu/projects/jazzglossary/b/blue_notes.html"
+        quote: "tones that are bent or changed to increase the expressivity of the music, not simply to alter the scale"
+      - title: "Open Music Theory (VIVA Open Publishing): Blues Melodies and the Blues Scale"
+        url: "https://viva.pressbooks.pub/openmusictheory/chapter/blues-melodies-and-the-blues-scale/"
+        quote: "These clashes often produce blue notes—notes that are not really flat or natural, but somewhere in between."
+      - title: "Library of Congress, Folklife Today: The Painful Birth of Blues and Jazz"
+        url: "https://blogs.loc.gov/folklife/2017/02/birth-of-blues-and-jazz/"
+        quote: "These notes likely had earlier origins, as they are found in rural African American work songs."
+
+  - id: twelve-bar-blues
+    name: The twelve-bar blues
+    nameRu: Двенадцатитактовый блюз
+    what: >-
+      The most common shape of a blues song: twelve bars on three chords in a
+      fixed order, with a verse of three lines in which the second repeats the
+      first and the third answers it. It became the shared ground of rhythm and
+      blues and rock and roll.
+    whatRu: >-
+      Самая распространённая форма блюзовой песни: двенадцать тактов на трёх
+      аккордах в заданном порядке и куплет из трёх строк, где вторая повторяет
+      первую, а третья ей отвечает. Она стала общей почвой ритм-н-блюза и
+      рок-н-ролла.
+    origin: [blues]
+    sources:
+      - title: "Carnegie Hall, Timeline of African American Music: Rural/Folk Blues"
+        url: "https://timeline.carnegiehall.org/genres/rural-folk-blues"
+        quote: "The harmonic structure of most blues songs, whether rural blues, urban blues, boogie-woogie, or jazz, is based on a 12-bar form that centers on three chords: tonic, subdominant, and dominant seventh in a predictable sequence."
+      - title: "Center for Jazz Studies, Columbia University, Jazz Glossary: blues"
+        url: "https://ccnmtl.columbia.edu/projects/jazzglossary/b/blues.html"
+        quote: "A 12-bar form built on the I, IV, and V chords"
+      - title: "Open Music Theory (VIVA Open Publishing): Blues Melodies and the Blues Scale"
+        url: "https://viva.pressbooks.pub/openmusictheory/chapter/blues-melodies-and-the-blues-scale/"
+        quote: "The four-bar phrases that make up the 12-bar blues are commonly matched with lyrics that have an aab structure"
+
+  - id: call-and-response
+    name: Call and response
+    nameRu: Зов и отклик
+    what: >-
+      One voice calls, and a group, or an instrument, answers. It timed the
+      strokes of work songs, organised the singing of spirituals and church
+      services, and lives on in the guitar that answers a blues singer, horn
+      sections answering a soloist, gospel choirs and a crowd shouting back at
+      a rapper.
+    whatRu: >-
+      Один голос зовёт — хор или инструмент отвечает. Так задавали ритм взмахам
+      в рабочих песнях, так строилось пение спиричуэлс и церковная служба, и так
+      это живёт дальше: гитара отвечает блюзовому певцу, духовая секция —
+      солисту, госпел-хор — запевале, толпа — рэперу.
+    origin: [work-songs, spirituals]
+    sources:
+      - title: "Center for Jazz Studies, Columbia University, Jazz Glossary: call-and-response"
+        url: "https://ccnmtl.columbia.edu/projects/jazzglossary/c/call_and_response.html"
+        quote: "An antiphonal pattern common to jazz and all African American folk music, with a \"call\" played by a soloist and \"answered\" by the ensemble."
+      - title: "Carnegie Hall, Timeline of African American Music: Jubilee Quartet"
+        url: "https://timeline.carnegiehall.org/genres/jubilee-quartet"
+        quote: "the call-and-response style of folk spiritual work song traditions"
+      - title: "CALS Encyclopedia of Arkansas: “The Rock Island Line” (Song)"
+        url: "https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/"
+        quote: "Both versions were dominated by the chorus, in call-and-response form."
+
+  - id: backbeat
+    name: The backbeat
+    nameRu: Бэкбит
+    what: >-
+      The accent on the second and fourth beats of a four-beat bar, usually a
+      hard snare-drum crack, instead of on the first and third. It is the
+      handclap of rhythm and blues and the drive of rock and roll: the beat
+      that makes a listener move on "two" and "four".
+    whatRu: >-
+      Акцент на второй и четвёртой долях четырёхдольного такта, обычно резкий
+      удар малого барабана, а не на первой и третьей. Это хлопок ритм-н-блюза и
+      напор рок-н-ролла — ритм, под который слушатель двигается на «два» и
+      «четыре».
+    origin: [rhythm-and-blues]
+    sources:
+      - title: "Library of Congress, Songs of America: Blues"
+        url: "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/popular-songs-of-the-day/blues/"
+        quote: "rock and roll was generally perceived as being louder and faster than earlier forms of popular music, and being overly reliant on a strong \"back beat,\" or a delayed emphasis on the second and fourth beats of the measure."
+      - title: "Carnegie Hall, Timeline of African American Music: Rhythm & Blues"
+        url: "https://timeline.carnegiehall.org/genres/rhythm-blues"
+        quote: "substituted for swing rhythms and heavy backbeats on 2 and 4"
+      - title: "American Music Research Center Journal (University of Kansas): soul and funk drum grooves"
+        url: "https://journals.ku.edu/amsj/article/download/4463/4304/"
+        quote: "Notice the snare backbeat on two and four (a standard feature of much swing, rhythm and blues, and soul)"
+
+  - id: swing
+    name: Swing and the shuffle
+    nameRu: Свинг и шаффл
+    what: >-
+      A lilting, uneven way of playing time: pairs of notes are played long
+      and short instead of equal, and accents land just off the expected beat.
+      Born in jazz, it passed to the big bands and, as the shuffle, into the
+      jump blues and rhythm and blues that rock and roll grew out of.
+    whatRu: >-
+      Покачивающаяся, неровная манера держать время: пары нот играют не
+      поровну, а долгую и короткую, и акценты падают чуть мимо ожидаемой доли.
+      Рождённый в джазе, свинг перешёл в биг-бэнды, а в виде шаффла — в
+      джамп-блюз и ритм-н-блюз, из которых вырос рок-н-ролл.
+    origin: [jazz]
+    sources:
+      - title: "Center for Jazz Studies, Columbia University, Jazz Glossary: swing"
+        url: "https://ccnmtl.columbia.edu/projects/jazzglossary/s/swing.html"
+        quote: "a form of syncopation, specifically off-beat accentuation, putting emphasis just before or after an expected beat, or emphasizing an unexpected beat"
+      - title: "Center for Jazz Studies, Columbia University, Jazz Glossary: shuffle"
+        url: "https://ccnmtl.columbia.edu/projects/jazzglossary/s/shuffle.html"
+        quote: "A rhythm used in earlier jazz, based on uneven triplets"
+      - title: "Carnegie Hall, Timeline of African American Music: Rhythm & Blues"
+        url: "https://timeline.carnegiehall.org/genres/rhythm-blues"
+        quote: "retained the boogie-woogie foundation, the shuffle beat, and the riffing horn patterns from swing"
+
+  - id: improvisation
+    name: Improvisation
+    nameRu: Импровизация
+    what: >-
+      Making the music up in the moment instead of reading or repeating it. A
+      spiritual leader improvised a verse, a blues singer varied every chorus,
+      and jazz made the improvised solo its centre; from there it passed to
+      soul singers, rock guitarists and free players who let go of chord
+      changes altogether.
+    whatRu: >-
+      Сочинять музыку прямо в момент исполнения, а не читать её с листа и не
+      повторять заученное. Запевала спиричуэлс импровизировал куплет, блюзовый
+      певец менял каждый припев, а джаз сделал импровизированное соло своим
+      сердцем; оттуда оно перешло к соул-певцам, рок-гитаристам и свободным
+      импровизаторам, отказавшимся от аккордовых схем вовсе.
+    origin: [jazz, spirituals]
+    sources:
+      - title: "Center for Jazz Studies, Columbia University, Jazz Glossary: improvisation"
+        url: "https://ccnmtl.columbia.edu/projects/jazzglossary/i/improvisation.html"
+        quote: "Music created in the moment of performance, without written scores or played from memory."
+      - title: "Carnegie Hall, Timeline of African American Music: Rural/Folk Blues"
+        url: "https://timeline.carnegiehall.org/genres/rural-folk-blues"
+        quote: "Blues adheres to a handful of established rhythmic and melodic patterns, but within those patterns it allows for a great deal of melodic and rhythmic improvisation within each song."
+
+  - id: riff
+    name: The riff
+    nameRu: Рифф
+    what: >-
+      A short melodic phrase repeated over and over so that it works as rhythm
+      as much as melody. Blues guitarists answered the voice with riffs, swing
+      and jump bands built whole tunes on horn riffs, and rock took the guitar
+      riff as its backbone, from Chuck Berry to heavy metal.
+    whatRu: >-
+      Короткая мелодическая фраза, повторяемая снова и снова, так что она
+      работает не меньше как ритм, чем как мелодия. Блюзовые гитаристы отвечали
+      голосу риффами, свинговые и джамп-оркестры строили целые пьесы на
+      духовых риффах, а рок сделал гитарный рифф своим хребтом — от Чака Берри
+      до хеви-метала.
+    origin: [blues, jazz, rhythm-and-blues]
+    sources:
+      - title: "Center for Jazz Studies, Columbia University, Jazz Glossary: riff"
+        url: "https://ccnmtl.columbia.edu/projects/jazzglossary/r/riff.html"
+        quote: "Short repeated melodic phrases that function rhythmically and sometimes even to undercut the harmonic structure of a musical piece."
+      - title: "Carnegie Hall, Timeline of African American Music: Rural/Folk Blues"
+        url: "https://timeline.carnegiehall.org/genres/rural-folk-blues"
+        quote: "Musicians might use a call-and-response or question-and-answer technique where the lead instrument echoes the melody being sung or plays a “riff” or repeated melodic figure related to it."
+      - title: "Carnegie Hall, Timeline of African American Music: Rhythm & Blues"
+        url: "https://timeline.carnegiehall.org/genres/rhythm-blues"
+        quote: "The up-tempo style known as “jump blues” is characterized by a 12-bar blues structure, boogie-woogie bass line, shuffle rhythms (triplet quarter note followed by a triplet eighth note), syncopated horn riffs"
+
+  - id: slide-guitar
+    name: Slide guitar
+    nameRu: Слайд-гитара
+    what: >-
+      Playing the guitar by sliding a bottleneck, a knife or a metal bar along
+      the strings instead of pressing them to the frets. The pitch glides like
+      a voice, and the guitar can moan, cry and hit blue notes between the
+      frets. Delta bluesmen made it their sound; Chicago electrified it, and
+      rock guitarists learned it from their records.
+    whatRu: >-
+      Игра, при которой по струнам ведут горлышком бутылки, ножом или
+      металлической трубкой, а не прижимают их к ладам. Звук скользит, как
+      голос, и гитара может стонать, плакать и попадать в блюзовые ноты между
+      ладами. Блюзмены Дельты сделали это своим звуком, Чикаго подключил его к
+      усилителю, а рок-гитаристы выучили его по их пластинкам.
+    origin: [blues]
+    sources:
+      - title: "Carnegie Hall, Timeline of African American Music: Rural/Folk Blues"
+        url: "https://timeline.carnegiehall.org/genres/rural-folk-blues"
+        quote: "Guitarists, in particular, also sometimes alter the sound by bending the strings or sliding a bottle neck or metal bar atop one string or several, up and down, following the sliding contours of the voice and emphasizing the blue notes"
+      - title: "Encyclopedia of African-American Culture and History, via Encyclopedia.com: Blues"
+        url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/blues"
+        quote: "All embodied genuine innovations, such as bottleneck or slide guitar or imitating the expressiveness of the voice"
+      - title: "Mississippi Blues Trail: Tutwiler"
+        url: "https://msbluestrail.org/?p=487"
+        quote: "he heard a man playing slide guitar with a knife and singing “Goin’ where the Southern cross’ the Dog.”"
+
+  - id: gospel-vocal
+    name: Gospel singing
+    nameRu: Госпел-вокал
+    what: >-
+      The singing style of the Black church: notes bent and slid into, one
+      syllable stretched over many notes (melisma), shouts, moans, sudden
+      leaps into a high register, phrases repeated to build intensity. Soul
+      singers carried it out of church into rhythm and blues, and through them
+      it reached pop, rock and dance music.
+    whatRu: >-
+      Манера пения чёрной церкви: ноты подтягивают и в них въезжают голосом,
+      один слог растягивают на много нот (мелизмы), кричат, стонут, внезапно
+      взлетают в высокий регистр, повторяют фразу, нагнетая напряжение.
+      Соул-певцы вынесли это пение из церкви в ритм-н-блюз, а через них оно
+      дошло до поп-музыки, рока и танцевальной сцены.
+    origin: [gospel]
+    sources:
+      - title: "Carnegie Hall, Timeline of African American Music: Soul"
+        url: "https://timeline.carnegiehall.org/genres/soul"
+        quote: "Timbres alternated between lyrical and percussive, shifted from high to low pitches, and incorporated bends, slides, melisma, and passing tones in the melody."
+      - title: "Library of Congress, Songs of America: Blues"
+        url: "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/popular-songs-of-the-day/blues/"
+        quote: "a rhythm and blues style known as \"soul\" emerged in which the influence of gospel vocal style was stronger"
+      - title: "Center for Jazz Studies, Columbia University, Jazz Glossary: melisma"
+        url: "https://ccnmtl.columbia.edu/projects/jazzglossary/m/melisma.html"
+        quote: "Melodic ornamentation by the use of more than one tone in singing a syllable."
+
+  - id: groove
+    name: The groove
+    nameRu: Грув
+    what: >-
+      A short, syncopated pattern that bass and drums repeat over and over,
+      with guitar, keyboards and horns locking their own patterns into it. In
+      funk James Brown moved the weight to the first beat, "the one". The
+      groove is what disco, house, techno and hip-hop producers looped, slowed
+      down and rebuilt.
+    whatRu: >-
+      Короткий синкопированный рисунок, который бас и барабаны повторяют снова
+      и снова, а гитара, клавишные и духовые встраивают в него свои рисунки. В
+      фанке Джеймс Браун перенёс вес на первую долю — на «раз». Именно грув
+      продюсеры диско, хауса, техно и хип-хопа зацикливали, замедляли и
+      собирали заново.
+    origin: [funk]
+    sources:
+      - title: "Center for Jazz Studies, Columbia University, Jazz Glossary: groove"
+        url: "https://ccnmtl.columbia.edu/projects/jazzglossary/g/groove.html"
+        quote: "A repeated pattern in the rhythm section most common in funk playing; a repeated rhythm pattern that creates the dominant feel of a piece."
+      - title: "Carnegie Hall, Timeline of African American Music: Funk"
+        url: "https://timeline.carnegiehall.org/genres/funk"
+        quote: "This repetitive, syncopated, and polyrhythmic “groove,” established by the bass guitarist and drummer, serves as the foundation for layers of different rhythmic patterns generated by the horn and rhythm sections."
+      - title: "PBS: How James Brown Invented Funk"
+        url: "https://www.pbs.org/video/how-james-brown-invented-funk-xtwzri/"
+        quote: "What James Brown did was he put the emphasis on the one, on the downbeat of the measure."
+
+  - id: polyrhythm
+    name: Polyrhythm
+    nameRu: Полиритмия
+    what: >-
+      Several rhythms at once: drums, guitars and horns each play their own
+      short pattern, and the patterns cross and interlock instead of marching
+      together. Rooted in West African drumming, it shaped funk’s layered
+      grooves and Fela Kuti’s Afrobeat, and through Afrobeat reached rock bands
+      such as Talking Heads.
+    whatRu: >-
+      Несколько ритмов одновременно: барабаны, гитары и духовые играют каждый
+      свой короткий рисунок, и рисунки пересекаются и сцепляются, а не
+      маршируют в ногу. Уходя корнями в западноафриканскую барабанную традицию,
+      полиритмия сформировала многослойные грувы фанка и афробит Фелы Кути, а
+      через афробит дошла до рок-групп вроде Talking Heads.
+    origin: [afrobeat, funk]
+    sources:
+      - title: "Center for Jazz Studies, Columbia University, Jazz Glossary: polyrhythm"
+        url: "https://ccnmtl.columbia.edu/projects/jazzglossary/p/polyrhythm.html"
+        quote: "Simultaneous use of different meters."
+      - title: "Carnegie Hall, Timeline of African American Music: Funk"
+        url: "https://timeline.carnegiehall.org/genres/funk"
+        quote: "Soul singer James Brown gave funk its polyrhythmic foundation"
+      - title: "Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)"
+        url: "https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en"
+        quote: "Afrobeat’s three guitars – bass, tenor and alto – do not improvise. Instead, they play interlocked, strictly repetitive patterns."
+      - title: "Pitchfork: Talking Heads, Remain in Light"
+        url: "https://pitchfork.com/reviews/albums/talking-heads-remain-in-light/"
+        quote: "Afrobeat combined American funk and jazz influences with West-African polyrhythms"
+
+  - id: reggae-offbeat
+    name: The reggae offbeat
+    nameRu: Офбит регги
+    what: >-
+      Jamaican rhythm that puts the chop of guitar and keyboard between the
+      beats instead of on them. Ska took it from American rhythm and blues and
+      played it fast; rocksteady and reggae slowed it down, gave the bass more
+      weight and, in Carleton Barrett's "one drop", set a new drum feel.
+    whatRu: >-
+      Ямайский ритм, в котором отрывистый удар гитары и клавишных приходится
+      между долями, а не на них. Ска взяло его из американского ритм-н-блюза и
+      играло быстро; рокстеди и регги замедлили его, придали басу больше веса,
+      а в ритме «уан дроп» Карлтона Барретта нашли новую игру барабанов.
+    origin: [reggae]
+    sources:
+      - title: "Bob Marley official site: History"
+        url: "https://www.bobmarley.com/history/"
+        quote: "A local interpretation of American soul and R&B, with an irresistible accent on the offbeat, ska exerted a widespread influence on poor Jamaican youth"
+      - title: "Jamaica Information Service: Black History in Roots Reggae Music"
+        url: "https://jis.gov.jm/jamaica/black-history-in-roots-reggae-music/"
+        quote: "Reggae riddims—with their emphasis on the downbeat on two and four—evolved from the signature “one drop” style mastered by Carleton Barrett"
+      - title: "Jamaica Information Service: Reggae"
+        url: "https://jis.gov.jm/jamaica/reggae/"
+        quote: "the chunking sound of the rhythm guitar that comes at the end of measures"
+
+  - id: dub
+    name: Dub and versioning
+    nameRu: Даб и версии
+    what: >-
+      A way of remaking a record at the mixing desk. Jamaican engineers took
+      the rhythm track of a reggae song, pushed the drums and bass to the
+      front, dropped the voice and instruments in and out and drowned them in
+      echo and reverb. The remix as a new version, made for sound systems,
+      passed into hip-hop, jungle and electronic music.
+    whatRu: >-
+      Способ заново собрать пластинку за микшерным пультом. Ямайские звукорежиссёры
+      брали ритм-трек песни регги, выводили вперёд барабаны и бас, то убирали,
+      то возвращали голос и инструменты и топили их в эхе и реверберации.
+      Ремикс как новая версия, сделанная для саунд-систем, перешёл в хип-хоп,
+      джангл и электронную музыку.
+    origin: [reggae]
+    sources:
+      - title: "Jamaica Information Service: Reggae"
+        url: "https://jis.gov.jm/jamaica/reggae/"
+        quote: "(The drum and bass became the foundation of a new instrumental music, dub.)"
+      - title: "Bob Marley official site: History"
+        url: "https://www.bobmarley.com/history/"
+        quote: "dub, the reggae offshoot where the drum and bass foundation is moved to the forefront"
+      - title: "University of Edinburgh Research Explorer: King Tubby’s Dub Style"
+        url: "https://www.pure.ed.ac.uk/ws/portalfiles/portal/15441495/Tubbys_Dub_Style.pdf"
+        quote: "Concentrating on the individual tools used for delay, reverberation and filtering, the routing and signal path of the studio as a whole is traced"
+      - title: "Mixmag: How Jamaican soundsystem culture changed dance music forever"
+        url: "https://mixmag.net/feature/how-jamaican-soundsystem-culture-changed-dance-music-forever"
+        quote: "From jungle/drum ’n’ bass to garage, grime and dubstep, the spirit of Jamaican soundsystems is unmistakable"
+
+  - id: breakbeat
+    name: The break
+    nameRu: Брейк
+    what: >-
+      The few bars of a record where the band drops out and only drums and
+      percussion play. At Bronx parties DJ Kool Herc found that dancers waited
+      for these breaks, put two copies of a funk record on two turntables and
+      switched between them so the break ran on. Looped breaks became the
+      floor of hip-hop, jungle and drum and bass.
+    whatRu: >-
+      Несколько тактов пластинки, где оркестр замолкает и играют только
+      барабаны и перкуссия. На вечеринках в Бронксе DJ Kool Herc заметил, что
+      танцоры ждут именно этих брейков, поставил две копии фанковой пластинки
+      на два проигрывателя и переключался между ними, чтобы брейк длился и
+      длился. Зацикленные брейки стали полом хип-хопа, джангла и драм-н-бейса.
+    origin: [hip-hop, funk, amen-break]
+    sources:
+      - title: "Contemporary Black Biography, via Encyclopedia.com: Kool Herc"
+        url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/kool-herc"
+        quote: "Herc also gave birth to the breakbeat by playing two copies of the same record on different turntables. He would find the most danceable section of the record and manipulate it between each turntable so that it appeared to repeat endlessly."
+      - title: "Smithsonian American Art Museum: A Short Discussion of Hip-Hop and Art"
+        url: "https://americanart.si.edu/blog/short-discussion-hip-hop-art-and-their-entanglement"
+        quote: "DJ Kool Herc—known as the father of hip-hop—synthesized the genre by incorporating breakbeats and elements of R&B and soul in 1973."
+      - title: "Engadget: Amen break crowdfunding campaign"
+        url: "https://www.engadget.com/2015/02/20/amen-break-sample-crowdfunding-campaign/"
+        quote: "become a mainstay of early hip hop, before being sped up and chopped to become the breakbeat that defined jungle, drum 'n' bass and techno music"
+
+  - id: sampling
+    name: Sampling
+    nameRu: Сэмплирование
+    what: >-
+      Building new music out of pieces of existing recordings: a drum break, a
+      bass line, a horn stab, a voice. What hip-hop DJs did by hand with two
+      turntables, samplers and computers did digitally from the 1980s, and
+      funk and soul records became the raw material of hip-hop, house, pop and
+      rock.
+    whatRu: >-
+      Строить новую музыку из кусков существующих записей: барабанного брейка,
+      басовой линии, удара духовых, голоса. То, что хип-хоп-диджеи делали
+      руками на двух проигрывателях, с 1980-х сэмплеры и компьютеры стали
+      делать в цифре, и пластинки фанка и соула превратились в сырьё для
+      хип-хопа, хауса, поп-музыки и рока.
+    origin: [hip-hop, amen-break]
+    sources:
+      - title: "Encyclopedia of African-American Culture and History, via Encyclopedia.com: Rap Music"
+        url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-popular-and-jazz/rap-music"
+        quote: "the art of sampling, the digital reproduction of prerecorded sounds—musical or vocal—in whole or fragmentary units anywhere throughout an entire soundtrack"
+      - title: "Carnegie Hall, Timeline of African American Music: Rap/Hip-Hop"
+        url: "https://timeline.carnegiehall.org/genres/rap-hip-hop"
+        quote: "Synthesizers, drum machines, and computers became the primary instruments and eventually sampled materials from various sources, especially funk, provided the foundation for new songs."
+
+  - id: rap-flow
+    name: Rap flow
+    nameRu: Рэп-флоу
+    what: >-
+      Rhymed speech delivered in rhythm over a beat. Flow is how a rapper
+      places syllables, accents and rhymes against the bar: on the beat or
+      across it, in short bursts or long chains. It joins the African American
+      art of rhymed talk and toasts with the Jamaican deejay toasting over
+      records.
+    whatRu: >-
+      Рифмованная речь, ритмично уложенная на бит. Флоу — это то, как рэпер
+      расставляет слоги, акценты и рифмы относительно такта: в долю или
+      поперёк неё, короткими очередями или длинными цепочками. В нём сошлись
+      афроамериканское искусство рифмованной речи и «тостов» и ямайская
+      традиция диджеев, «тостующих» поверх пластинок.
+    origin: [hip-hop, reggae]
+    sources:
+      - title: "Kyle Adams: On the Metrical Techniques of Flow in Rap Music (Music Theory Online 15.5)"
+        url: "https://mtosmt.org/issues/mto.09.15.5/mto.09.15.5.adams.php"
+        quote: "As used in this article, “flow” describes all of the rhythmical and articulative features of a rapper’s delivery of the lyrics."
+      - title: "Carnegie Hall, Timeline of African American Music: Rap/Hip-Hop"
+        url: "https://timeline.carnegiehall.org/genres/rap-hip-hop"
+        quote: "Rap is original poetry recited in rhythm and rhyme over prerecorded instrumental tracks."
+      - title: "Carnegie Hall, Timeline of African American Music: Musical Exchange Across the Black Atlantic"
+        url: "https://timeline.carnegiehall.org/stories/musical-exchange-across-the-black-atlantic"
+        quote: "a fusion of African American traditions of verbal improvisation with Jamaican traditions of “toasting” over prerecorded music"
