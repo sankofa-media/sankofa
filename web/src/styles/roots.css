@@ -1064,3 +1064,126 @@ a.rt-who:hover b {
     display: none;
   }
 }
+/* Element names are written for use inside a sentence; a heading starts with a capital. */
+.ep h3::first-letter,
+.rm-info > b::first-letter {
+  text-transform: uppercase;
+}
+
+/* A main line the route follows */
+.rt-line {
+  margin: 12px 0 6px;
+  padding: 16px 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(227, 171, 61, 0.35);
+  background: linear-gradient(180deg, rgba(227, 171, 61, 0.08), rgba(227, 171, 61, 0.02));
+}
+.rt-line small {
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+.rt-line h4 {
+  margin: 4px 0 4px;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 24px;
+}
+.rt-line-path,
+.rt-line-also {
+  margin: 0 0 8px;
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  color: var(--ink-3);
+}
+.rt-line-text {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: 17.5px;
+  line-height: 1.55;
+  max-width: 40em;
+}
+.rt-line-src summary {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--ink-3);
+  cursor: pointer;
+}
+.rm-info .rt-line-text {
+  font-size: 15.5px;
+}
+@media (max-width: 760px) {
+  .rm-info.path:not(.open) .rt-line {
+    display: none;
+  }
+}
+
+/* A step that passed on no musical element: a thin dotted connector */
+.rt-row:has(.rt-link.bare)::before {
+  width: 0;
+  margin-left: 0;
+  background: none;
+  border-left: 2px dotted rgba(227, 171, 61, 0.7);
+  opacity: 1;
+}
+.rt-link.bare .rt-verb em {
+  color: var(--ink-2);
+}
+.rt-bare {
+  display: inline-block;
+  margin: 0 0 8px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  border: 1px dashed var(--line-2);
+  font-family: var(--font-sans);
+  font-size: 12.5px;
+  color: var(--ink-3);
+}
+.rt-tie {
+  margin: 0 0 10px;
+  font-family: var(--font-display);
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  max-width: 36em;
+}
+.rt-fact a {
+  color: inherit;
+}
+.rt-line:not(.open) .rt-line-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.rt-line-more {
+  margin: -4px 0 10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  color: var(--gold);
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+.rt-line-more:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+.ep-steps-lede {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--ink-2);
+  margin: 0 0 6px;
+}
+.ep-steps {
+  margin: 0 0 14px;
+  padding-left: 18px;
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.5;
+}

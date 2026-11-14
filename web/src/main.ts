@@ -15,7 +15,7 @@ import { buildStory } from './views/story';
 import { localizeStatics, RU_TITLE_FIX } from './lib/statics';
 import { loadMediaManifest } from './lib/media';
 import { EMPTY_LISTEN, type ListenFile } from './lib/listen';
-import { EMPTY_CARD_LINKS, EMPTY_ELEMENTS, type CardLinksFile, type ElementsFile } from './lib/elements';
+import { rootsExtras } from './lib/elements';
 import { watchTypography } from './lib/typo';
 import { Drawer, renderBook, renderCard } from './views/card';
 import { Atlas } from './views/atlas';
@@ -70,22 +70,17 @@ async function start(): Promise<void> {
   let cardsFile: CardsFile;
   let chaptersFile: ChaptersFile;
   let listenFile: ListenFile;
-  let elementsFile: ElementsFile;
-  let cardLinksFile: CardLinksFile;
   navLegend(current);
   // The language switch needs no data, so it works while the cards load.
   document.querySelectorAll<HTMLElement>('[data-lang-switch]').forEach((b) => b.addEventListener('click', () => switchLang(lang() === 'ru' ? 'en' : 'ru')));
   // Let the static cover paint before the 1 MB of cards competes for the wire.
   await new Promise<void>((r) => requestAnimationFrame(() => setTimeout(r, 0)));
   try {
-    [cardsFile, chaptersFile, listenFile, elementsFile, cardLinksFile] = await Promise.all([
+    [cardsFile, chaptersFile, listenFile] = await Promise.all([
       load<CardsFile>('data/cards.json'),
       load<ChaptersFile>('data/chapters.json'),
       // Listening is an extra: the museum opens without it.
       load<ListenFile>('data/listen.json').catch(() => EMPTY_LISTEN),
-      // So are the roots' elements and the why of genre-to-genre steps.
-      load<ElementsFile>('data/elements.json').catch(() => EMPTY_ELEMENTS),
-      load<CardLinksFile>('data/card-links.json').catch(() => EMPTY_CARD_LINKS),
       loadMediaManifest(),
     ]);
   } catch (e) {
@@ -121,8 +116,8 @@ async function start(): Promise<void> {
     },
     chapters,
     listen: listenFile,
-    elements: { elements: elementsFile.elements ?? [] },
-    cardLinks: { links: cardLinksFile.links ?? [], unexplained: cardLinksFile.unexplained ?? [] },
+    // The roots' elements, genre-to-genre steps and lines come with the cards.
+    ...rootsExtras(cardsFile),
     edition: held,
     media: (file) => `media/${file}`,
     openCard(id, opts = {}) {

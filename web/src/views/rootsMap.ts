@@ -111,9 +111,9 @@ export class RootsMap {
       );
       this.head.append(this.elBar);
     }
-    this.reader = new RouteReader({ app, byId: this.byId, cardLinks: cardLinkIndex(app.cardLinks), elements: this.elements, colors: this.colors, onElement: (id) => this.filterElement(id) }, true);
+    this.reader = new RouteReader({ app, byId: this.byId, cardLinks: cardLinkIndex(app.cardLinks), elements: this.elements, colors: this.colors, lines: app.lines, onElement: (id) => this.filterElement(id) }, true);
     this.el = h('section.rmap', { 'aria-label': pick({ en: 'The music map', ru: 'Карта музыки' }), tabindex: '-1' }, bar, this.head, this.stage, legend, this.info);
-    this.panel = new ElementPanel(app, this.byId, this.el);
+    this.panel = new ElementPanel(app, this.byId, this.el, app.cardLinks.links);
     this.panel.onArtist = (id) => {
       this.panel.close();
       this.focusOn(id);
@@ -459,6 +459,7 @@ export class RootsMap {
       ...(((lang() === 'ru' && a.storyRu) || a.story) ? [h('p.rm-story', {}, (lang() === 'ru' && a.storyRu) || a.story!)] : []),
       ...(heard ? [h('button.btn.primary.rt-playroute', { type: 'button', onclick: () => this.reader.playRoute() }, svgIcon('wave'), pick({ en: 'Play the route', ru: 'Слушать маршрут' }))] : []),
       ...(summary ? [summary] : []),
+      ...[this.reader.lineBox()].filter((x): x is HTMLElement => !!x),
     ];
   }
 

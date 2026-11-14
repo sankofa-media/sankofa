@@ -36,38 +36,11 @@ export function fixtureRoots(): Artist[] {
   return all;
 }
 
-interface ElementsFixture {
-  elements: unknown[];
-  carries: Record<string, object>;
-  cardCarries: Record<string, string[]>;
-}
-
-export function fixtureElements(): ElementsFixture {
-  return parse(readFileSync(join(process.cwd(), 'fixtures', 'elements.yaml'), 'utf8'));
-}
-
-/**
- * Serve the placeholder roots (web/fixtures/roots) and/or the placeholder
- * elements of music (web/fixtures/elements.yaml, laid over the links).
- */
-export async function serveFixtureRoots(page: Page, opts: { roots?: boolean; elements?: boolean } = { roots: true }): Promise<void> {
-  const fx = opts.elements ? fixtureElements() : undefined;
+export async function serveFixtureRoots(page: Page): Promise<void> {
+  const roots = fixtureRoots();
   await page.route('**/data/cards.json', async (route) => {
     const res = await route.fetch();
     const data = await res.json();
-    const roots: { id: string; links: { to: string }[] }[] = opts.roots ? fixtureRoots() : data.roots;
-    if (fx) for (const a of roots) for (const l of a.links) Object.assign(l, fx.carries[`${a.id}>${l.to}`] ?? {});
     await route.fulfill({ response: res, json: { ...data, roots } });
   });
-  if (!fx) return;
-  await page.route('**/data/elements.json', (route) => route.fulfill({ json: { elements: fx.elements } }));
-  await page.route('**/data/card-links.json', async (route) => {
-    const res = await route.fetch();
-    const data = await res.json();
-    for (const l of data.links) l.carries = fx.cardCarries[`${l.from}>${l.to}`] ?? l.carries;
-    await route.fulfill({ response: res, json: data });
-  });
 }
-
-/** The real roots with the placeholder elements of music laid over them. */
-export const serveFixtureElements = (page: Page) => serveFixtureRoots(page, { elements: true });

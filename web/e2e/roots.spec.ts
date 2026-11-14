@@ -1,7 +1,6 @@
 // Roots read as routes: the overview, forks, the link before each station,
 // elements of music (placeholder layer), and the music map's path panel.
 import { expect, test, type Page } from '@playwright/test';
-import { serveFixtureElements } from './support/roots';
 
 test.beforeEach(async ({ page }) => {
   await page.addInitScript(() => {
@@ -65,14 +64,6 @@ test('each link says why before the next station, in readable type', async ({ pa
   const claim = page.locator('.rt-link .rt-claim').first();
   await expect(claim).toBeVisible();
   expect(parseFloat(await claim.evaluate((e) => getComputedStyle(e).fontSize))).toBeGreaterThanOrEqual(16);
-  // Genre-to-genre steps carry a sentence from the cards.
-  await page.goto('about:blank');
-  await page.goto('/#view=roots&artist=aquarium');
-  await page.locator('.rt-mstop[data-ref="card:rhythm-and-blues"]').click();
-  const lineage = page.locator('.rt-link.k-lineage').first();
-  await expect(lineage.locator('.rt-verb')).toContainText('grew out of');
-  await expect(lineage.locator('.rt-claim')).not.toBeEmpty();
-  await expect(lineage.locator('.rt-rests a')).toBeAttached();
 });
 
 test('Russian reads the routes in Russian', async ({ page }) => {
@@ -83,38 +74,60 @@ test('Russian reads the routes in Russian', async ({ page }) => {
   await expect(page.locator('.rt-playroute')).toHaveText(/Слушать маршрут/);
 });
 
-test('elements of music run along the route and explain themselves', async ({ page }) => {
-  await serveFixtureElements(page);
+test('elements of music run along the route; steps that carry none look different', async ({ page }) => {
   await page.goto('/#view=roots&artist=led-zeppelin');
   const threads = page.locator('.rt-threads');
   await expect(threads).toContainText('Along this line travelled');
-  await expect(threads.locator('.rt-el')).toContainText(['Blue notes']);
+  // The summary names only elements that links of this route really carry.
+  const summary = await threads.locator('.rt-el').evaluateAll((els) => els.map((e) => e.getAttribute('data-el')));
+  const carried = await page.locator('.rt-link:not(.bare) .rt-el').evaluateAll((els) => els.map((e) => e.getAttribute('data-el')));
+  expect(summary.length).toBeGreaterThan(0);
+  for (const id of summary) expect(carried).toContain(id);
   // The thread runs on the overview beside the lit line, and by the reading.
   expect(await page.locator('.rt-mthread').count()).toBeGreaterThan(0);
   expect(await page.locator('.rt-rail').count()).toBeGreaterThan(0);
-  // A link leads with what was passed on; the song or fact is the evidence beneath.
-  const link = page.locator('.rt-link').first();
-  await expect(link.locator('.rt-how')).toContainText('Blue notes');
-  await expect(link.locator('.rt-claim.evidence small')).toHaveText('The evidence');
-  // The origin card says where the element comes from.
-  await expect(page.locator('.rt-cardst[data-ref="card:blues"] .rt-origin').first()).toContainText('Blue notes');
+  // Plant's admiration for Howlin' Wolf passed on no element: a dotted connector, said so.
+  const bare = page.locator('.rt-link.bare').first();
+  await expect(bare.locator('.rt-bare')).toHaveText(/No\smusical\selement\snamed/);
+  expect(await bare.evaluate((e) => getComputedStyle(e.closest('.rt-row')!, '::before').borderLeftStyle)).toBe('dotted');
+  // A carrying link leads with what was passed on; the fact is the evidence beneath.
+  const full = page.locator('.rt-link:not(.bare)').first();
+  await expect(full.locator('.rt-how')).not.toBeEmpty();
+  await expect(full.locator('.rt-claim.evidence small').first()).toBeAttached();
+  // The route belongs to a main line, told as a whole.
+  await expect(page.locator('.rt-line h4')).toHaveText('The blues line');
+  await page.locator('.rt-line-more').click();
+  await expect(page.locator('.rt-line')).toHaveClass(/open/);
   // An element opens its explainer: what, where from, who carries it.
-  await threads.locator('.rt-el').first().click();
+  await page.locator('.rt-elindex [data-el="blue-notes"]').click();
   const panel = page.locator('.roots .ep');
   await expect(panel).toBeVisible();
   await expect(panel.locator('h3')).toHaveText('Blue notes');
-  await expect(panel.locator('.ep-origin a')).toHaveText('The blues');
-  await expect(panel.locator('.ep-artists')).toContainText('Led Zeppelin');
+  expect(await panel.locator('.ep-origin a').count()).toBeGreaterThan(0);
+  // Blue notes travel between the museum's genres, not along artists' links.
+  await expect(panel.locator('.ep-steps')).toContainText('Work songs and field hollers → The blues');
   await page.keyboard.press('Escape');
   await expect(panel).toBeHidden();
-  // The index lists every element with the number of routes that carry it.
-  await expect(page.locator('.rt-elindex .rt-el')).toHaveCount(6);
+  await page.locator('.rt-elindex [data-el="slide-guitar"]').click();
+  expect(await panel.locator('.ep-artists li').count()).toBeGreaterThan(0);
+  await page.keyboard.press('Escape');
+  await expect(panel).toBeHidden();
+  expect(await page.locator('.rt-elindex .rt-el').count()).toBeGreaterThan(10);
+});
+
+test('genre-to-genre steps say what they carried, from the cards', async ({ page }) => {
+  await page.goto('/#view=roots&artist=aquarium');
+  await page.locator('.rt-mstop[data-ref="card:rhythm-and-blues"]').click();
+  const lineage = page.locator('.rt-link.k-lineage').first();
+  await expect(lineage.locator('.rt-verb')).toContainText('grew out of');
+  await expect(lineage.locator('.rt-how, .rt-tie').first()).not.toBeEmpty();
+  expect(await lineage.locator('.rt-fact a[data-card]').count()).toBeGreaterThan(0);
 });
 
 test('the music map filters by an element', async ({ page }) => {
-  await serveFixtureElements(page);
   await page.goto('/#view=roots-map');
-  await expect(page.locator('.rm-els .rt-el')).toHaveCount(6);
+  await expect(page.locator('.rm-els .rt-el').first()).toBeVisible();
+  expect(await page.locator('.rm-els .rt-el').count()).toBeGreaterThan(10);
   await page.locator('.rm-els [data-el="blue-notes"]').click();
   await expect(page.locator('.rmap.lit')).toBeAttached();
   await expect(page.locator('.rm-els [data-el="blue-notes"]')).toHaveAttribute('aria-pressed', 'true');
@@ -125,7 +138,7 @@ test('the music map filters by an element', async ({ page }) => {
   await page.locator('.rm-input').press('Enter');
   await expect(page.locator('.rm-els [data-el="blue-notes"]')).toHaveAttribute('aria-pressed', 'false');
   await expect(page.locator('.rm-path-head > b')).toHaveText('Led Zeppelin');
-  await expect(page.locator('.rm-info .rt-threads')).toContainText('Blue notes');
+  await expect(page.locator('.rm-info .rt-line h4')).toHaveText('The blues line');
 });
 
 test('labels on the phone map are at least 12px and do not overlap when a path is lit', async ({ page }, info) => {

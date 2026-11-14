@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { Artist, LineageCard } from '../src/lib/roots';
 import { bestVia, coreRoutes, subset, elementReach, forksOf, layoutRoutes, routeSet, routeThrough, segShape, stepsOf, threadsOf } from '../src/lib/routes';
-import { cardLinkIndex, parseCardLinks, parseElements } from '../src/lib/elements';
+import { cardLinkIndex, linesOf, rootsExtras } from '../src/lib/elements';
 
 const src = [{ title: 'a', url: 'https://a' }, { title: 'b', url: 'https://b' }];
 const art = (id: string, links: { to: string; kind?: string; carries?: string[] }[], paths: string[][]): Artist =>
@@ -77,13 +77,18 @@ describe('routes', () => {
 });
 
 describe('steps and threads', () => {
-  const links = cardLinkIndex(parseCardLinks('links:\n- {from: x, to: y, claim: "X grew from Y.", carries: [blue]}\nunexplained:\n- {from: x, to: z}\n'));
-  const elements = new Map(parseElements('elements:\n- {id: riff, name: The riff, origin: [x]}\n- {id: blue, name: Blue notes, origin: [card:y]}\n- {name: nameless}\n').elements.map((e) => [e.id, e]));
+  // As exported, with a nameless element and a link without an end that must be left out.
+  const extras = rootsExtras({
+    rootsElements: [{ id: 'riff', name: 'The riff', origin: ['x'] }, { id: 'blue', name: 'Blue notes', origin: ['card:y'] }, { name: 'nameless' }],
+    rootsCardLinks: [{ from: 'x', to: 'y', how: 'X grew from Y.', carries: ['blue'] }, { from: 'x' }],
+  });
+  const links = cardLinkIndex(extras.cardLinks);
+  const elements = new Map(extras.elements.elements.map((e) => [e.id, e]));
 
   it('gives each step its link or its card-to-card why', () => {
     const steps = stepsOf(['a', 'b', 'card:x', 'card:y'], byId, links);
     expect(steps.map((s) => s.kind)).toEqual(['cover', 'scene', 'lineage']);
-    expect(steps[2].cardLink?.claim).toBe('X grew from Y.');
+    expect(steps[2].cardLink?.how).toBe('X grew from Y.');
     expect(stepsOf(['a', 'b', 'card:x', 'card:z'], byId, links)[2].cardLink).toBeUndefined();
   });
 
@@ -121,5 +126,26 @@ describe('the overview draws the artist chains, not every genre branch', () => {
     expect(sub.nodes).toEqual(['a', 'b', 'c', 'card:x', 'card:y']);
     expect(sub.edges).toHaveLength(5);
     expect(sub.depth.get('card:y')).toBe(3);
+  });
+});
+
+describe('the roots extras as exported', () => {
+  it('tolerates a document without them', () => {
+    const e = rootsExtras({});
+    expect(e.elements.elements).toEqual([]);
+    expect(e.cardLinks.links).toEqual([]);
+    expect(e.lines).toEqual([]);
+    expect(rootsExtras({ rootsElements: 'nonsense', rootsLines: [{ id: 'x' }] }).lines).toEqual([]);
+  });
+  it('finds the lines a route follows by the cards it shares with them', () => {
+    const { lines } = rootsExtras({
+      rootsLines: [
+        { id: 'blues', name: 'The blues line', path: ['work-songs', 'spirituals', 'blues', 'rock-n-roll'], overview: 'o', sources: [] },
+        { id: 'gospel', name: 'The gospel line', path: ['spirituals', 'gospel'], overview: 'o', sources: [] },
+      ],
+    });
+    expect(linesOf(['a', 'card:rock-n-roll', 'card:blues', 'card:work-songs'], lines).map((l) => l.id)).toEqual(['blues']);
+    expect(linesOf(['a', 'card:gospel', 'card:spirituals', 'card:work-songs'], lines).map((l) => l.id)).toEqual(['gospel', 'blues']);
+    expect(linesOf(['a', 'card:gospel'], lines)).toEqual([]);
   });
 });

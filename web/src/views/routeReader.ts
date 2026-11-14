@@ -11,7 +11,7 @@ import { eraColor } from '../lib/atlasModel';
 import { recordingFor } from '../lib/listen';
 import { mediaSrc } from '../lib/media';
 import { placeName, quotes, type Artist } from '../lib/roots';
-import type { CardLink, MusicElement } from '../lib/elements';
+import { linesOf, type CardLink, type Line, type MusicElement } from '../lib/elements';
 import { forksOf, stepsOf, threadsOf, type RouteSet, type RouteStep, type StepKind, type Thread } from '../lib/routes';
 import { miniPlayer, type Track } from './miniPlayer';
 
@@ -21,6 +21,7 @@ export interface RouteCtx {
   cardLinks: Map<string, CardLink>;
   elements: Map<string, MusicElement>;
   colors: Map<string, string>;
+  lines: Line[];
   onElement: (id: string) => void;
 }
 
@@ -130,10 +131,52 @@ export class RouteReader {
     );
   }
 
+  /** The main line this route follows, told as a whole: what travelled along it and how. */
+  lineBox(): HTMLElement | null {
+    const [line, ...also] = linesOf(this.route, this.ctx.lines);
+    if (!line) return null;
+    const L = lang();
+    const name = (l: Line) => (L === 'ru' && l.nameRu) || l.name;
+    const els = (line.elements ?? []).filter((id) => this.ctx.elements.has(id));
+    return h(
+      'section.rt-line',
+      { 'aria-label': name(line) },
+      h('small', {}, pick({ en: 'This route follows a main line', ru: 'Этот маршрут идёт по главной линии' })),
+      h('h4', {}, name(line)),
+      h('p.rt-line-path', {}, line.path.map((c) => this.name(`card:${c}`)).join(' → ')),
+      h('p.rt-line-text', { id: `rt-line-${line.id}` }, (L === 'ru' && line.overviewRu) || line.overview),
+      h(
+        'button.rt-line-more',
+        {
+          type: 'button',
+          'aria-expanded': 'false',
+          'aria-controls': `rt-line-${line.id}`,
+          onclick: (e: Event) => {
+            const b = e.currentTarget as HTMLElement;
+            const open = b.closest('.rt-line')!.classList.toggle('open');
+            b.setAttribute('aria-expanded', String(open));
+            b.textContent = open ? pick({ en: 'Less', ru: 'Свернуть' }) : pick({ en: 'Read the whole line', ru: 'Читать о линии целиком' });
+          },
+        },
+        pick({ en: 'Read the whole line', ru: 'Читать о линии целиком' }),
+      ),
+      els.length ? h('p.rt-carried', {}, ...els.map((id) => this.elChip(id))) : null,
+      also.length ? h('p.rt-line-also', {}, pick({ en: 'It also crosses: ', ru: 'Пересекает и другие: ' }), also.map(name).join(', ')) : null,
+      line.sources.length
+        ? h(
+            'details.rt-line-src',
+            {},
+            h('summary', {}, pick({ en: 'Sources', ru: 'Источники' })),
+            h('ol.rt-src', {}, line.sources.map((src) => h('li', {}, h('a', { href: src.url, rel: 'noopener', target: '_blank' }, src.title)))),
+          )
+        : null,
+    );
+  }
+
   private elChip(id: string, note?: string): HTMLElement {
     return h(
       'button.rt-el',
-      { type: 'button', style: `--ec:${this.ctx.colors.get(id) ?? 'var(--gold)'}`, 'aria-label': pick({ en: `${this.elName(id)}: what it is and where it comes from`, ru: `${this.elName(id)}: что это и откуда` }), onclick: () => this.ctx.onElement(id) },
+      { type: 'button', 'data-el': id, style: `--ec:${this.ctx.colors.get(id) ?? 'var(--gold)'}`, 'aria-label': pick({ en: `${this.elName(id)}: what it is and where it comes from`, ru: `${this.elName(id)}: что это и откуда` }), onclick: () => this.ctx.onElement(id) },
       h('i', { 'aria-hidden': 'true' }),
       this.elName(id),
       note ? h('small', {}, note) : null,
@@ -281,27 +324,36 @@ export class RouteReader {
       const a = this.ctx.byId.get(s.from);
       if (a && isGroup(a)) verb = pick({ en: 'through its member', ru: 'участник группы' });
     }
-    const how = (L === 'ru' && (l?.howRu || cl?.howRu)) || l?.how || cl?.how;
-    const claim = l ? quotes((L === 'ru' && l.claimRu) || l.claim, L) : cl ? quotes((L === 'ru' && cl.claimRu) || cl.claim, L) : '';
+    const how = (L === 'ru' && (l?.howRu || cl?.howRu)) || l?.how || cl?.how || '';
+    const claim = l ? quotes((L === 'ru' && l.claimRu) || l.claim, L) : '';
     const what = l?.what ? quotes((L === 'ru' && l.whatRu) || l.what, L) : '';
     const carried = s.carries.filter((id) => this.ctx.elements.has(id));
-    const lead = how
-      ? h('p.rt-how', {}, how)
-      : carried.length
-        ? h('p.rt-how', {}, pick({ en: 'Passed on: ', ru: 'Передано: ' }), ...carried.flatMap((id, k) => [k ? ', ' : '', this.elChip(id)]))
-        : null;
-    const sources = l?.sources ?? [];
+    // A step that passed on no musical element (a cover, admiration, a
+    // childhood in church) is a personal tie: a thin dotted connector, its
+    // sentence in ordinary type.
+    const bare = !carried.length;
+    const lead = how ? h(bare ? 'p.rt-tie' : 'p.rt-how', {}, how) : !bare ? h('p.rt-how', {}, pick({ en: 'Passed on: ', ru: 'Передано: ' }), ...carried.flatMap((id, k) => [k ? ', ' : '', this.elChip(id)])) : null;
+    const facts = cl?.facts ?? [];
+    const sources = l?.sources ?? cl?.sources ?? [];
     return h(
-      `div.rt-link.k-${s.kind}`,
+      `div.rt-link.k-${s.kind}${bare ? '.bare' : ''}`,
       { 'data-step': String(i) },
       L === 'ru'
         ? h('p.rt-verb', {}, h('span', {}, from), ' → ', h('span', {}, to), ' — ', h('em', {}, verb))
         : h('p.rt-verb', {}, h('span', {}, from), ' ', h('em', {}, verb), ' ', h('span', {}, to)),
+      bare ? h('p.rt-bare', {}, pick({ en: 'No musical element named for this step', ru: 'Для этого шага музыкальный элемент не назван' })) : null,
       lead,
-      how && carried.length ? h('p.rt-carried', {}, ...carried.map((id) => this.elChip(id))) : null,
+      how && !bare ? h('p.rt-carried', {}, ...carried.map((id) => this.elChip(id))) : null,
       claim ? h(`p.rt-claim${lead ? '.evidence' : ''}`, {}, lead ? h('small', {}, pick({ en: 'The evidence', ru: 'Свидетельство' })) : null, claim) : null,
       what && what !== claim ? h('p.rt-what', {}, what) : null,
-      cl?.rests && s.kind === 'lineage' ? h('p.rt-rests', {}, pick({ en: 'As the museum card says', ru: 'Так говорит карточка музея' }), ': ', h('a', { href: `#focus=${cl.rests.card}`, 'data-card': cl.rests.card }, this.name(`card:${cl.rests.card}`))) : null,
+      ...facts.map((f) =>
+        h(
+          'p.rt-claim.evidence.rt-fact',
+          {},
+          h('small', {}, pick({ en: 'As the museum card says', ru: 'Так говорит карточка музея' }), ' · ', h('a', { href: `#focus=${f.card}`, 'data-card': f.card }, this.name(`card:${f.card}`))),
+          quotes(f.quote, 'en'),
+        ),
+      ),
       sources.length ? h('ol.rt-src', { 'aria-label': pick({ en: 'Sources', ru: 'Источники' }) }, sources.map((src) => h('li', {}, h('a', { href: src.url, rel: 'noopener', target: '_blank' }, src.title)))) : null,
     );
   }

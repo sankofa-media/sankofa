@@ -84,8 +84,8 @@ export class Roots {
     this.elements = new Map(app.elements.elements.map((e) => [e.id, e]));
     this.colors = elementColors(app.elements);
     this.reach = elementReach(artists, app.elements.elements);
-    this.reader = new RouteReader({ app, byId: this.byId, cardLinks: cardLinkIndex(app.cardLinks), elements: this.elements, colors: this.colors, onElement: (id) => this.openElement(id) });
-    this.panel = new ElementPanel(app, this.byId, this.el);
+    this.reader = new RouteReader({ app, byId: this.byId, cardLinks: cardLinkIndex(app.cardLinks), elements: this.elements, colors: this.colors, lines: app.lines, onElement: (id) => this.openElement(id) });
+    this.panel = new ElementPanel(app, this.byId, this.el, app.cardLinks.links);
     this.renderSuggestions();
   }
 
@@ -243,7 +243,7 @@ export class Roots {
       overview.replaceChildren(
         metro({ rs, current: this.reader.current, name: (x) => this.refName(x), threads: this.reader.threadList, colors: this.colors, vertical: window.innerWidth < 760, onPick: (ref) => this.pickStation(rs, ref) }),
       );
-      summary.replaceChildren(...[this.reader.summary()].filter((x): x is HTMLElement => !!x));
+      summary.replaceChildren(...[this.reader.summary(), this.reader.lineBox()].filter((x): x is HTMLElement => !!x));
       const heard = this.reader.tracks().length;
       bar.replaceChildren(
         ...[h(
@@ -355,7 +355,7 @@ export class Roots {
             {},
             h(
               'button.rt-el',
-              { type: 'button', style: `--ec:${this.colors.get(e.id)}`, onclick: () => this.openElement(e.id) },
+              { type: 'button', 'data-el': e.id, style: `--ec:${this.colors.get(e.id)}`, onclick: () => this.openElement(e.id) },
               h('i', { 'aria-hidden': 'true' }),
               (lang() === 'ru' && e.nameRu) || e.name,
               h('small', {}, String(this.reach.get(e.id)?.routes ?? 0)),

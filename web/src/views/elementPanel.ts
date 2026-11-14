@@ -5,7 +5,7 @@ import type { App } from '../app';
 import { h, svgIcon } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
 import type { Artist } from '../lib/roots';
-import type { MusicElement } from '../lib/elements';
+import type { CardLink, MusicElement } from '../lib/elements';
 
 export interface ElementInfo {
   element: MusicElement;
@@ -28,6 +28,7 @@ export class ElementPanel {
     private app: App,
     private byId: Map<string, Artist>,
     host: HTMLElement,
+    private cardLinks: CardLink[] = [],
   ) {
     this.body = h('div.ep-body');
     this.el = h(
@@ -82,6 +83,17 @@ export class ElementPanel {
               : null,
           )
         : null,
+      ...(() => {
+        // Where it travels between the museum's own genres.
+        const steps = this.cardLinks.filter((l) => l.carries?.includes(e.id));
+        const title = (id: string) => this.app.set.get(id)?.title ?? id;
+        return steps.length
+          ? [
+              h('p.ep-steps-lede', {}, pick({ en: 'Between the museum’s genres it travels along:', ru: 'Между жанрами музея он проходит по шагам:' })),
+              h('ul.ep-steps', {}, steps.map((l) => h('li', {}, `${title(l.to)} → ${title(l.from)}`))),
+            ]
+          : [];
+      })(),
       e.sources.length ? h('ol.rt-src', { 'aria-label': pick({ en: 'Sources', ru: 'Источники' }) }, e.sources.map((s) => h('li', {}, h('a', { href: s.url, rel: 'noopener', target: '_blank' }, s.title)))) : null,
       ].filter((x): x is HTMLElement => !!x));
     this.el.hidden = false;
