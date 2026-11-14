@@ -1,0 +1,176 @@
+# Ledger of the element-carrying deepening of Roots.
+# Goal: give artists whose only routes to the museum cards ran through
+# anecdote links (a cover, admiration, a church childhood) a documented link
+# that carries a musical element. Anecdote links were kept. Quotes are
+# verbatim from the opened sources.
+description: >-
+  Before this pass 32 of 90 artists had no route to a museum card on which
+  every step carries an element; 67 of 148 links carried none. This pass adds
+  nine element-carrying links and upgrades one, so that 68 artists have such a
+  route. For each link: the element tags and the passages that support them.
+  `remaining` lists the artists whose only honest connection is still an
+  anecdote, with what was searched. `independentCheck` records the separate
+  checker's verdicts and what was applied.
+added:
+  - from: the-beatles
+    to: root:chuck-berry
+    kind: influence
+    carries: [riff]
+    sources:
+      - title: 'Skidmore College, Gordon Thompson: “I Saw Her Standing There” (course notes quoting McCartney in Miles, Many Years From Now, 1997)'
+        url: https://thompsong.domains.skidmore.edu/dept/courses/mu220/campus/08-Lennon-McCartney/2-Songwriting/60br082a.html
+        quote: 'I played exactly the same notes as he did [Chuck Berry''s "I''m Talking about You" (1961)] and it fitted our number perfectly.'
+      - title: 'MusicRadar: Paul McCartney on his favourite basses, key lines and influential players (Tony Bacon, 1994)'
+        url: https://www.musicradar.com/news/classic-interview-paul-mccartney-on-his-favourite-basses-key-lines-and-influential-players
+        quote: 'I could just learn [sings I Saw Her Standing There bass-line], nicked from Chuck Berry as I’m sure you know, I’m Talking About You. I’ve given him credit, though.'
+    note: Two separate McCartney statements (1997 book interview, 1994 magazine interview). Chuck Berry’s own route to card:rhythm-and-blues carries riff.
+  - from: the-rolling-stones
+    to: card:blues
+    kind: influence
+    carries: [slide-guitar]
+    sources:
+      - title: 'Classic Rock (Louder): The Rolling Stones’ blues roots in the early 1960s'
+        url: https://www.loudersound.com/features/rolling-stones-blues-roots-early-1960s
+        quote: 'working for untold hours on his slide technique and soaking up records by Elmore James, Robert Johnson and Howlin’ Wolf'
+      - title: 'uDiscover Music: Why Brian Jones was so important to the Rolling Stones'
+        url: https://www.udiscovermusic.com/stories/just-why-was-brian-jones-so-important-to-the-rolling-stones
+        quote: 'Brian became obsessed with the blues, practicing slide guitar while listening to Elmore James and Robert Johnson records.'
+    note: 'Both sources name Jones’s slide on “Little Red Rooster”: “Jones’s exquisite slide guitar” (Louder); “his slide guitar on “I’m a King Bee,” “Little Red Rooster,” and “No Expectations”” (uDiscover).'
+  - from: led-zeppelin
+    to: root:howlin-wolf
+    kind: influence
+    carries: [riff]
+    sources:
+      - title: 'Guitar World: John Paul Jones — Black Dog lesson'
+        url: https://www.guitarworld.com/lessons/song-lessons/john-paul-jones-black-dog-lesson
+        quote: 'I was inspired to write the Black Dog riff after learning an old blues riff in E from the Muddy Waters album, Electric Mud . [ Ed. note: Jones later retracted this , citing Howlin’ Wolf’s Smokestack Lightning as his inspiration for the riff. ]'
+      - title: 'Guitar Player: Jimmy Page on Led Zeppelin’s “Black Dog”'
+        url: https://www.guitarplayer.com/music/jimmy-page-on-led-zeppelins-black-dog
+        quote: 'But in 2007, Jones clarified that he’d actually meant to credit the repeating riff in Howlin’ Wolf’s “Smokestack Lightning” as his inspiration.'
+    note: Jones’s own retraction appeared in Mojo (December 2007); both sources report it independently. Iron Maiden’s riff-carrying cover of Led Zeppelin now continues through this link.
+  - from: david-bowie
+    to: root:james-brown
+    kind: influence
+    carries: [groove]
+    sources:
+      - title: 'The Line of Best Fit: Carlos Alomar on David Bowie'
+        url: https://www.thelineofbestfit.com/features/longread/carlos-alomar-on-david-bowie-he-was-a-transitional-generational-artist
+        quote: 'I happen to like funky stuff and I’d come from that James Brown school of three guitar players locked perfectly in a perfect rhythm; so instead of playing one part with everything in it, I just broke up all my little ideas into being those three James Brown guitar players.'
+      - title: 'Far Out: The song that inspired David Bowie and John Lennon’s “Fame” (quoting Alomar to The Intercept, 2020)'
+        url: https://faroutmagazine.co.uk/the-song-that-inspired-david-bowie-and-john-lennons-fame/
+        quote: 'Taking from my past history of working with James Brown, I decided to approach it like that.'
+    note: Two separate Alomar interviews. The step runs through Alomar, who is not in the collection.
+  - from: the-clash
+    to: card:reggae
+    kind: producer
+    carries: [dub]
+    sources:
+      - title: 'Spectrum Culture: Discography — The Clash, Sandinista!'
+        url: https://spectrumculture.com/2016/03/03/discography-the-clash-sandinista/
+        quote: 'Thanks to the Jamaican reggae legend and producer, Mikey Dread, Sandinista! features a large amount of dub-inspired songs, straight reggae songs and dub remixes.'
+      - title: 'Gigwise: Mikey Dread 1954–2008'
+        url: https://gigwise.com/features/41679/Mikey-Dread-1954-2008
+        quote: 'Best known in the UK as producer of the Clash, Jamaican born Mikey Dread'
+      - title: 'Ken Hunt: Michael “Mikey Dread” Campbell (1954–2008)'
+        url: https://kenhunt.doruzka.com/?p=64
+        quote: 'he bridged the gap between reggae and punk, notably through his work with The Clash on their 1980 Bankrobber single, the US album Black Market Clash (1980) and their marvellously sprawling, spiky and self-indulgent Sandinista!'
+    note: 'Spectrum Culture also: “tracks like “Silicone on Sapphire” and “Version Pardner,” both dub remixes of “Washington Bullets” and “Junco Partner,” see the band embracing the tradition of remixes popular in dub music.”'
+  - from: charles-mingus
+    to: card:gospel
+    kind: influence
+    carries: [call-and-response]
+    sources:
+      - title: 'OUPblog: A holding corporation called old America — Charles Mingus’ religious multitudes'
+        url: https://blog.oup.com/?p=94894
+        quote: 'complex antiphonal work, trading phrases back and forth in a knowing echo of the call-and-response dialogism of African-American music; and a use of guttural, vocalic textures that connected New Orleans to the avant-garde. Mingus shouted encouragement to his bandmates, the stage his pulpit.'
+      - title: 'First Things: Holiness, folk culture, and the African-American experience'
+        url: https://firstthings.com/blogs/firstthoughts/2014/02/holiness-folk-culture-and-the-african-american-experience
+        quote: 'Indeed, they are so filled with the call-and-response dynamic of holiness worship that many Pentecostals and holiness folks would recognize Mingus’ shouts and call outs immediately.'
+    note: 'First Things also: “going to the holiness church with his mother”. OUPblog: Mingus described “Wednesday Night Prayer Meeting” as a sound from his childhood, where parishioners “sing and shout and do a little Holy Rolling.”'
+  - from: bessie-smith
+    to: card:blues
+    kind: scene
+    carries: [twelve-bar-blues, improvisation]
+    sources:
+      - title: 'NPR: How Bessie Smith influenced a century of popular music (2019)'
+        url: https://www.npr.org/2019/08/05/747738120/how-bessie-smith-influenced-a-century-of-popular-music
+        quote: 'The repeated lines and consistent chord changes inherent to the classic 12-bar structure can feel static to contemporary listeners, but even in the 1920s, there were listeners who found Smith''s Southern blues too slow.'
+      - title: 'Alona Sagee: Bessie Smith — “Down Hearted Blues” and “Gulf Coast Blues” revisited, Popular Music 26/1 (Cambridge University Press, 2007)'
+        url: https://www.cambridge.org/core/journals/popular-music/article/bessie-smith-down-hearted-blues-and-gulf-coast-blues-revisited/AD6C34C4BC8AC400BBF941F08F473E28
+        quote: 'although Bessie''s phrases display some similarities with each other, they constantly vary in imaginative ways, matching her with true jazz improvisers.'
+    note: 'NPR also: “Working within the framework of the blues, she varies her inflection and phrasing to convey an idea or a feeling.” twelve-bar-blues rests on NPR, improvisation on Sagee (abstract) and NPR.'
+  - from: the-velvet-underground
+    to: root:marvin-gaye
+    kind: interpolation
+    carries: [riff]
+    sources: &hitchhike
+      - title: 'Aidan Levy: The Velvet Underground & Nico — Library of Congress'
+        url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf
+        quote: 'That R&B influence would manifest in songs like “There She Goes Again,” with the intro sampling Marvin Gaye’s “Hitch Hike.”'
+      - title: 'Far Out: “There She Goes Again” — the Lou Reed song inspired by Marvin Gaye'
+        url: https://faroutmagazine.co.uk/lou-reed-song-inspired-by-marvin-gaye/
+        quote: 'the introduction to the song that Reed wrote sounds remarkably like Gaye’s tune, with the same rhythmic pattern being applied in the opening guitar chords as is done in the horns of ‘Hitch Hike’.'
+    note: Levy’s “sampling” is loose wording; the band replayed the figure, so the kind is interpolation.
+  - from: lou-reed
+    to: root:marvin-gaye
+    kind: interpolation
+    carries: [riff]
+    sources: *hitchhike
+upgraded:
+  - from: lou-reed
+    to: root:ornette-coleman
+    kind: influence
+    carries: [improvisation]
+    was: 'carries: [] (the earlier second check dropped improvisation: the quotes then showed only listening and Reed’s inability to play like Coleman)'
+    sources:
+      - title: 'Aidan Levy: The Velvet Underground & Nico — Library of Congress'
+        url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf
+        quote: '“European Son,” Reed said, channeled “Ornette Coleman on the guitar.”'
+      - title: 'Far Out: Ornette Coleman — Lou Reed’s greatest influence (added source)'
+        url: https://faroutmagazine.co.uk/ornette-coleman-lou-reeds-greatest-influence/
+        quote: 'Reed would later admit that his guitar solo on the final song ‘European Son’ was his attempt at trying to write something in the same vein as what Coleman would have done.'
+remaining:
+  - artist: adele
+    why: 'Searched for a named device from Etta James or gospel. Adele calls “Rolling in the Deep” “gospel disco”, a genre label, not a device; no source says what she took from James.'
+  - artist: albert-ayler
+    why: 'The spirituals link is a melodic debt (hymn-like themes, church vibrato) that is not among the sixteen elements; no source says from whom he took free improvisation.'
+  - artist: arthur-crudup
+    why: Only the gospel childhood is documented on the opened sources; no source tied a device to it.
+  - artist: billie-eilish
+    why: 'Her only link is admiration for the Beatles; no device from a Black tradition is documented, so none was added.'
+  - artist: bob-dylan
+    why: 'The debut-album liner notes say he fretted “In My Time of Dyin’” with a lipstick holder, “giving it the clangy virility of the primitive country blues men” — a slide device, but only one source (the notes, reproduced on several sites) was found.'
+  - artist: christina-aguilera
+    why: 'Her melisma is often compared to gospel singers, but no interview names where she learned it; Etta James appears only as an admired voice.'
+  - artist: coldplay
+    why: 'The only link is an interpolation of a Kraftwerk riff; Kraftwerk’s synth line is not a riff from a Black tradition.'
+  - artist: creedence-clearwater-revival
+    why: No source naming a specific device Fogerty took from Little Richard or Screamin’ Jay Hawkins was found.
+  - artist: deep-purple
+    why: 'Jon Lord names Jimmy Smith as “an immense influence”, but the Hammond organ sound is not one of the elements, and no source documents a specific transfer.'
+  - artist: dolly-parton
+    why: The only link is a Beatles cover; her church singing was in a white Pentecostal congregation.
+  - artist: george-mccrae
+    why: Choir in childhood only; the groove of “Rock Your Baby” was made by its writer-producers, not documented as McCrae’s.
+  - artist: janis-joplin
+    why: 'Sources say her style was “heavily influenced by older black blues singers” such as Bessie Smith, without naming a device.'
+  - artist: jimmy-cliff
+    why: Church singing and early ska singles are documented, but no source describes the rhythm he took.
+  - artist: junior-murvin
+    why: Production by Perry and the reggae scene are documented; the falsetto’s model is not documented with two sources.
+  - artist: mashina-vremeni
+    why: Admiration for the Beatles only.
+  - artist: mumiy-troll
+    why: A tribute cover of Aquarium only.
+  - artist: nirvana
+    why: 'A cover of Lead Belly’s version; the sources show repertoire, not a device.'
+  - artist: oasis
+    why: A Beatles cover only.
+  - artist: radiohead
+    why: 'Yorke tried to copy the handclaps of Mingus’s “Freedom” in “Pyramid Song” but erased them; the swing feel is not attributed to Mingus by the sources.'
+  - artist: taylor-swift
+    why: An Earth, Wind & Fire cover only.
+  - artist: the-libertines
+    why: Mick Jones produced their debut; the Clash’s reggae and dub do not pass through that step.
+  - artist: van-morrison
+    why: 'Mahalia Jackson and Ray Charles records are named as early inspiration, without a specific device.'
