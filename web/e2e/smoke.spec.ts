@@ -555,7 +555,7 @@ test('roots unwind past the card, name the kind of each link and what was borrow
   await page.goto('about:blank');
   await page.goto('/#view=roots&artist=television&lang=ru');
   await expect(page.locator('.r-story')).toContainText('[заглушка]');
-  await expect(page.locator('.rt-verb em').first()).toContainText('под влиянием');
+  await expect(page.locator('.rt-verb em').first()).toHaveText('влияние');
 
   await page.goto('about:blank');
   await page.goto('/#view=roots');

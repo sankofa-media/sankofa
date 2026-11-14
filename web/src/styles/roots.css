@@ -981,6 +981,7 @@ a.rt-who:hover b {
   gap: 6px 10px;
 }
 .rm-elbar-lede {
+  white-space: nowrap;
   font-family: var(--font-sans);
   font-size: 13px;
   color: var(--ink-3);

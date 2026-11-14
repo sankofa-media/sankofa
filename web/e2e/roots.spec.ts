@@ -78,8 +78,8 @@ test('each link says why before the next station, in readable type', async ({ pa
 test('Russian reads the routes in Russian', async ({ page }) => {
   await page.goto('/#view=roots&artist=ed-sheeran&lang=ru');
   await expect(page.locator('.rt-overview h3')).toHaveText('Все маршруты к музею');
-  await expect(page.locator('.rt-fork p').first()).toHaveText(/Здесь\sлиния\sрасходится\s—\sчерез\s/);
-  await expect(page.locator('.rt-verb em').first()).toHaveText('под влиянием');
+  await expect(page.locator('.rt-fork p').first()).toHaveText(/^Здесь\sлиния\sрасходится\.\sДальше\s—\s.+\sили\s.+\.$/);
+  await expect(page.locator('.rt-verb').first()).toHaveText(/^Эд\sШиран\s→\sЭминем\s—\sвлияние$/);
   await expect(page.locator('.rt-playroute')).toHaveText(/Слушать маршрут/);
 });
 

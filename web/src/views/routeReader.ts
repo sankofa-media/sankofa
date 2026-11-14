@@ -26,19 +26,20 @@ export interface RouteCtx {
 
 /** The kind of a step as words between two names: "Led Zeppelin covered the blues". */
 export const VERB: Record<StepKind, { en: string; ru: string }> = {
-  // Russian: words that agree with neither name, since a name may be a man,
-  // a woman, a band or a genre.
-  influence: { en: 'was influenced by', ru: 'под влиянием' },
-  cover: { en: 'covered', ru: 'перепевая' },
-  sample: { en: 'sampled', ru: 'сэмплируя' },
-  interpolation: { en: 'interpolated', ru: 'переигрывая' },
-  member: { en: 'played in the band of', ru: 'в составе ансамбля' },
-  producer: { en: 'was produced by', ru: 'с продюсером' },
-  scene: { en: 'was rooted in', ru: 'корнями в' },
-  teacher: { en: 'learned from', ru: 'учась у' },
-  collaboration: { en: 'played with', ru: 'играя вместе с' },
-  lineage: { en: 'grew out of', ru: 'вырастая из' },
-  unknown: { en: 'leads to', ru: 'дальше' },
+  // English joins the two names with a verb. Russian names the step after
+  // them («Эд Ширан → Эминем — влияние»): a verb between two names would
+  // need cases and genders the names do not give.
+  influence: { en: 'was influenced by', ru: 'влияние' },
+  cover: { en: 'covered', ru: 'кавер-версия' },
+  sample: { en: 'sampled', ru: 'сэмпл' },
+  interpolation: { en: 'interpolated', ru: 'интерполяция' },
+  member: { en: 'played in the band of', ru: 'игра в ансамбле' },
+  producer: { en: 'was produced by', ru: 'работа с продюсером' },
+  scene: { en: 'was rooted in', ru: 'общая сцена' },
+  teacher: { en: 'learned from', ru: 'ученичество' },
+  collaboration: { en: 'played with', ru: 'совместная игра' },
+  lineage: { en: 'grew out of', ru: 'жанровые корни' },
+  unknown: { en: 'leads to', ru: 'связь' },
 };
 
 /** A group, not a person: one year (founding) and a name that is not a person's. */
@@ -248,7 +249,7 @@ export class RouteReader {
     return h(
       'div.rt-fork',
       { role: 'group', 'aria-label': pick({ en: 'The line splits here', ru: 'Здесь линия расходится' }) },
-      h('p', {}, pick({ en: `Here the line splits — via ${or(names, 'or')}.`, ru: `Здесь линия расходится — через ${or(names, 'или')}.` })),
+      h('p', {}, pick({ en: `Here the line splits — via ${or(names, 'or')}.`, ru: `Здесь линия расходится. Дальше — ${or(names, 'или')}.` })),
       h(
         'div.rt-fork-ways',
         {},
@@ -261,7 +262,7 @@ export class RouteReader {
               'data-next': o.next,
               onclick: () => k && this.select(o.route, this.route[at]),
             },
-            pick({ en: `via ${this.name(o.next)}`, ru: `через ${this.name(o.next)}` }),
+            pick({ en: `via ${this.name(o.next)}`, ru: `→ ${this.name(o.next)}` }),
           ),
         ),
       ),
@@ -278,7 +279,7 @@ export class RouteReader {
     let verb = pick(VERB[s.kind]);
     if (s.kind === 'member') {
       const a = this.ctx.byId.get(s.from);
-      if (a && isGroup(a)) verb = pick({ en: 'through its member', ru: 'через участника' });
+      if (a && isGroup(a)) verb = pick({ en: 'through its member', ru: 'участник группы' });
     }
     const how = (L === 'ru' && (l?.howRu || cl?.howRu)) || l?.how || cl?.how;
     const claim = l ? quotes((L === 'ru' && l.claimRu) || l.claim, L) : cl ? quotes((L === 'ru' && cl.claimRu) || cl.claim, L) : '';
@@ -293,7 +294,9 @@ export class RouteReader {
     return h(
       `div.rt-link.k-${s.kind}`,
       { 'data-step': String(i) },
-      h('p.rt-verb', {}, h('span', {}, from), ' ', h('em', {}, verb), ' ', h('span', {}, to)),
+      L === 'ru'
+        ? h('p.rt-verb', {}, h('span', {}, from), ' → ', h('span', {}, to), ' — ', h('em', {}, verb))
+        : h('p.rt-verb', {}, h('span', {}, from), ' ', h('em', {}, verb), ' ', h('span', {}, to)),
       lead,
       how && carried.length ? h('p.rt-carried', {}, ...carried.map((id) => this.elChip(id))) : null,
       claim ? h(`p.rt-claim${lead ? '.evidence' : ''}`, {}, lead ? h('small', {}, pick({ en: 'The evidence', ru: 'Свидетельство' })) : null, claim) : null,
