@@ -9,6 +9,8 @@ export type View = 'descent' | 'listen' | 'atlas' | 'engine' | 'roots' | 'roots-
 export interface Route {
   point: Point;
   ch?: string;
+  /** the step of the chapter being read, kept across a language or copy switch */
+  step?: number;
   view?: View;
   /** the artist the roots view is rooted on */
   artist?: string;
@@ -23,13 +25,17 @@ export function parseRoute(hash: string): Route {
   const view = v === 'descent' || v === 'listen' || v === 'atlas' || v === 'engine' || v === 'roots' || v === 'roots-map' || isMechView(v) ? v : undefined;
   const artist = q.get('artist') ?? undefined;
   const item = q.get('item') ?? undefined;
-  return { point: safeParse(s), ch: q.get('ch') ?? undefined, view, ...(artist ? { artist } : {}), ...(item ? { item } : {}) };
+  const ch = q.get('ch') ?? undefined;
+  const st = q.get('step');
+  const step = ch && st && /^\d{1,3}$/.test(st) ? Number(st) : undefined;
+  return { point: safeParse(s), ch, view, ...(step !== undefined ? { step } : {}), ...(artist ? { artist } : {}), ...(item ? { item } : {}) };
 }
 
 /** The fragment for a route: atlas keys as Go writes them, museum keys after. */
 export function formatRoute(r: Route): string {
   const extra: string[] = [];
   if (r.ch) extra.push('ch=' + goQueryEscape(r.ch));
+  if (r.ch && r.step !== undefined) extra.push('step=' + r.step);
   if (r.view) extra.push('view=' + r.view);
   if (r.artist) extra.push('artist=' + goQueryEscape(r.artist));
   if (r.item) extra.push('item=' + goQueryEscape(r.item));

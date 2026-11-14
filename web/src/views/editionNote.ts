@@ -38,6 +38,8 @@ export function switchEdition(to: 'm' | 'f'): void {
   if (here && !/(^|[#&])view=/.test(location.hash)) {
     const q = new URLSearchParams(location.hash.slice(1));
     q.set('ch', here.ch);
+    if (here.step >= 0) q.set('step', String(here.step));
+    else q.delete('step');
     history.replaceState(null, '', `#${q.toString()}`);
   }
   location.reload();
