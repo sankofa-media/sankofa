@@ -42,16 +42,6 @@ spec:
   selector: {app: griot-pg}
   ports: [{name: https, port: 443, targetPort: 8443}, {name: metrics, port: 9090}, {name: audit, port: 9444}]
 ---
-# Phase 1 used the node's disk: a PVC of the default (replicated) class never
-# attached. This one uses the kubevirt class.
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata: {name: griot-sqlite, namespace: griot-bench}
-spec:
-  accessModes: [ReadWriteOnce]
-  storageClassName: kubevirt
-  resources: {requests: {storage: 10Gi}}
----
 apiVersion: apps/v1
 kind: Deployment
 metadata: {name: griot-sqlite, namespace: griot-bench}
@@ -62,7 +52,18 @@ spec:
   template:
     metadata: {labels: {app: griot-sqlite, griot: bench}}
     spec:
-      securityContext: {fsGroup: 65532}
+      # OnRootMismatch: the shared volume is not re-chowned on every start,
+      # which would leave PostgreSQL's data directory group-writable.
+      securityContext: {fsGroup: 65532, fsGroupChangePolicy: OnRootMismatch}
+      # SQLite on a real persistent volume. On the stand a third volume in the
+      # cluster never attaches (default and kubevirt classes alike, the
+      # underlying claim stays pending), so it shares PostgreSQL's volume in
+      # its own directory, on the same node (ReadWriteOnce is per node).
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - topologyKey: kubernetes.io/hostname
+              labelSelector: {matchLabels: {app: postgres}}
       containers:
         - name: griot
           image: IMAGE
@@ -72,7 +73,7 @@ spec:
                  --retention=0, --retain-every=1m]
           ports: [{name: https, containerPort: 8443}, {name: metrics, containerPort: 9090}]
           readinessProbe: {httpGet: {path: /readyz, port: https, scheme: HTTPS}}
-          volumeMounts: [{name: pki, mountPath: /pki}, {name: serving, mountPath: /serving}, {name: data, mountPath: /data}]
+          volumeMounts: [{name: pki, mountPath: /pki}, {name: serving, mountPath: /serving}, {name: data, mountPath: /data, subPath: griot-sqlite}]
           resources: {requests: {cpu: 50m, memory: 256Mi}, limits: {memory: 1536Mi}}
         # The bench binary next to the SQLite file: samples metrics, and
         # `kubectl exec ... griot-bench retain --store sqlite --dsn /data/memory.db`
@@ -80,12 +81,12 @@ spec:
         - name: bench
           image: BENCH_IMAGE
           args: [metrics, --urls=http://localhost:9090/metrics, --every=10s, --duration=24h]
-          volumeMounts: [{name: data, mountPath: /data}]
+          volumeMounts: [{name: data, mountPath: /data, subPath: griot-sqlite}]
           resources: {requests: {cpu: 10m, memory: 64Mi}, limits: {memory: 512Mi}}
       volumes:
         - {name: pki, secret: {secretName: vapi-pki}}
         - {name: serving, secret: {secretName: griot-serving}}
-        - {name: data, persistentVolumeClaim: {claimName: griot-sqlite}}
+        - {name: data, persistentVolumeClaim: {claimName: postgres}}
 ---
 apiVersion: v1
 kind: Service
