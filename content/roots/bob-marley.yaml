@@ -7,30 +7,72 @@ place: {"name": "Nine Mile, Jamaica", "lat": 18.298, "lon": -77.278}
 placeRu: "Найн-Майл, Ямайка"
 genre: "Reggae"
 genreRu: "регги"
-story: "Lee “Scratch” Perry paired the Wailers with Aston and Carlton Barrett on bass and drums. Their work together helped define roots reggae."
-storyRu: "Ли «Скрэтч» Перри объединил The Wailers с Астоном и Карлтоном Барреттами на басу и барабанах. Совместная работа помогла определить звучание рутс-регги."
+story: "Bob Marley and the Wailers began as a vocal trio whose soulful harmonies were modelled above all on Curtis Mayfield and the Impressions. With them Marley took the brisk offbeat of ska and rocksteady, slowed it, deepened the groove and filled it with Rastafarian lyrics of resistance — and co-created reggae."
+storyRu: "Боб Марли и The Wailers начинали как вокальное трио, чьи проникновенные гармонии строились прежде всего по образцу Кёртиса Мейфилда и The Impressions. Вместе с ними Марли взял бодрый слабый такт ска и рокстеди, замедлил его, углубил грув, наполнил растафарианскими песнями сопротивления — и стал одним из создателей регги."
 links:
-  - to: "root:lee-scratch-perry"
-    kind: "producer"
-    claim: "Lee “Scratch” Perry helped the Wailers develop their sound by pairing them with bassist Aston Barrett and drummer Carlton Barrett."
-    claimRu: "Ли «Скрэтч» Перри помог The Wailers выработать своё звучание, объединив их с басистом Астоном Барреттом и барабанщиком Карлтоном Барреттом."
-    sources:
-      - title: "Bob Marley estate: History"
-        url: "https://www.bobmarley.com/history/"
-      - title: "The Cambridge Companion to Pop and Rock: Bob Marley profile"
-        url: "https://www.some.ox.ac.uk/wp-content/uploads/2022/08/14.-Guibalt-2001-World-music.pdf"
-    carries: []
-    how: Perry, a pioneer of dub, paired the Wailers with the Barrett brothers’ drums and bass; the sources describe the production, not an element the Wailers took from him.
-    howRu: Перри, один из создателей даба, свёл Wailers с барабанами и басом братьев Барретт; источники описывают продюсерскую работу, а не элемент, который Wailers у него переняли.
   - to: "card:reggae"
-    kind: "scene"
-    claim: "The Wailers’ work with Lee “Scratch” Perry helped define roots reggae."
-    claimRu: "Работа The Wailers с Ли «Скрэтчем» Перри помогла определить звучание рутс-регги."
-    sources:
-      - title: "Bob Marley estate: History"
-        url: "https://www.bobmarley.com/history/"
-      - title: "The Cambridge Companion to Pop and Rock: Bob Marley profile"
-        url: "https://www.some.ox.ac.uk/wp-content/uploads/2022/08/14.-Guibalt-2001-World-music.pdf"
-    carries: ["reggae-offbeat"]
-    how: The Wailers’ work with Perry helped define the reggae rhythm that grew out of ska’s offbeat.
-    howRu: Работа Wailers с Перри помогла определить ритм регги, выросший из офбита ска.
+    kind: "style"
+    scope: "career"
+    how: "Marley slowed the brisk offbeat of ska and rocksteady, added syncopation and deep grooves, and set earworm melodies to Rastafarian, political lyrics — the roots reggae he co-created."
+    howRu: "Марли замедлил бодрый слабый такт ска и рокстеди, добавил синкопы и глубокий грув и положил на него цепкие мелодии с растафарианскими, политическими словами — так он стал одним из создателей рутс-регги."
+    carries: ["reggae-offbeat", "groove"]
+    dimensions: ["rhythm", "melody-vocal", "image"]
+    evidence:
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "The Rock & Roll Hall of Fame describes how Marley slowed ska and rocksteady and added syncopation and deep grooves."
+        textRu: "Зал славы рок-н-ролла описывает, как Марли замедлил ска и рокстеди и добавил синкопы и глубокий грув."
+        source:
+          title: "Rock & Roll Hall of Fame: Bob Marley (1994)"
+          url: "https://rockhall.com/inductees/bob-marley/"
+          quote: "Bob Marley took the dance-oriented briskness of ‘60s ska and rocksteady, slowed the tempo, and added syncopation and deep grooves, co-creating the distinctly Jamaican genre known as reggae."
+      - type: "critics"
+        dimensions: ["melody-vocal", "image"]
+        text: "The same page points to his earworm melodies carrying songs of social justice, Rastafari and resistance."
+        textRu: "Там же отмечены его цепкие мелодии, нёсшие песни о социальной справедливости, растафарианстве и сопротивлении."
+        source:
+          title: "Rock & Roll Hall of Fame: Bob Marley (1994)"
+          url: "https://rockhall.com/inductees/bob-marley/"
+          quote: "Throughout the ‘70s, his earworm melodies helped propel increasingly political songs featuring themes of social justice, Rastafarianism, and resistance."
+      - type: "analysis"
+        dimensions: ["rhythm", "image"]
+        text: "The official history traces reggae from ska’s offbeat accent and names Rastafarian lyrics as essential to its development."
+        textRu: "Официальная история выводит регги из акцента ска на слабую долю и называет растафарианские тексты необходимой частью его становления."
+        source:
+          title: "Bob Marley official site: History"
+          url: "https://www.bobmarley.com/history/"
+          quote: "A local interpretation of American soul and R&B, with an irresistible accent on the offbeat, ska exerted a widespread influence on poor Jamaican youth while offering a welcomed escape from their otherwise harsh realities."
+  - to: "style:soul"
+    kind: "influence"
+    scope: "career"
+    how: "The Wailers’ vocal sound — soulful close harmonies and a spiritual, socially minded voice — was modelled above all on Curtis Mayfield and the Impressions."
+    howRu: "Вокальное звучание The Wailers — проникновенные плотные гармонии и одухотворённый, обращённый к людям голос — строилось прежде всего по образцу Кёртиса Мейфилда и The Impressions."
+    carries: ["gospel-vocal"]
+    dimensions: ["melody-vocal"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The official history says the Wailers’ soulful harmonies were influenced primarily by Curtis Mayfield and the Impressions."
+        textRu: "Официальная история говорит, что проникновенные гармонии The Wailers сложились прежде всего под влиянием Кёртиса Мейфилда и The Impressions."
+        source:
+          title: "Bob Marley official site: History"
+          url: "https://www.bobmarley.com/history/"
+          quote: "With their soulful harmonies, influenced primarily by American vocal group Curtis Mayfield and the Impressions, and lyrics that echoed the struggles facing Jamaica’s poor"
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "Fellow singer Junior Murvin, asked about Mayfield, said Mayfield came “spiritually and musically” to Marley and to him."
+        textRu: "Певец Джуниор Мёрвин на вопрос о Мейфилде ответил, что тот пришёл к Марли и к нему самому «духовно и музыкально»."
+        source:
+          title: "Rebelbase: Junior Murvin interview (2004)"
+          url: "https://rebelbase.be/interviews/detail/junior-murvin---handelsbeurs-102004"
+          quote: "He was an American type roots singer. All black men come from the same root, so spiritually and musically Curtis Mayfield came to Bob and to me."
+notes:
+  - period: "1970–1971 (Soul Rebels, Soul Revolution)"
+    who: "Lee “Scratch” Perry"
+    role: "producer"
+    what: "Perry paired the Wailers with the Barrett brothers’ rhythm section and pushed Marley towards a more spiritual delivery and a bass-dominated sound."
+    whatRu: "Перри свёл The Wailers с ритм-секцией братьев Барретт и подтолкнул Марли к более одухотворённой подаче и звучанию, где главенствует бас."
+    source:
+      title: "The Guardian (Peter Mason): Lee ‘Scratch’ Perry obituary (2021)"
+      url: "https://www.theguardian.com/music/2021/aug/29/lee-scratch-perry-obituary"
+      quote: "Urged on by Perry to take a more spiritual approach, he copied some of Perry’s vocal phrasing, built a new, bass-dominated sound"

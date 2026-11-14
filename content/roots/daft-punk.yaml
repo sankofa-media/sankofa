@@ -6,32 +6,95 @@ place: {"name": "Paris", "lat": 48.8566, "lon": 2.3522}
 placeRu: "Париж"
 genre: "French house"
 genreRu: "французский хаус"
-story: "Daft Punk named Chicago house musicians as teachers. In “Harder, Better, Faster, Stronger”, Edwin Birdsong’s “Cola Bottle Baby” supplied a sampled foundation."
-storyRu: "Daft Punk назвали музыкантов чикаго-хауса своими учителями. Основой «Harder, Better, Faster, Stronger» стал сэмпл из «Cola Bottle Baby» Эдвина Бёрдсонга."
+story: "Daft Punk built their music on Chicago house and Detroit techno: on “Teachers” they shouted out the pioneers they owed their art to, and Chicago’s Paul Johnson recalled they told him he was one of the reasons they started making house. Their debut Homework minted French house — rude 4/4 house heavy with the filter effect and sidechained drums — and from Discovery on they resurrected disco."
+storyRu: "Daft Punk построили свою музыку на чикаго-хаусе и детройт-техно: в треке «Teachers» они перечислили первопроходцев, которым обязаны своим искусством, а чикагский продюсер Пол Джонсон вспоминал, что, по их словам, он был одной из причин, по которым они взялись за хаус. Их дебют «Homework» отчеканил французский хаус — грубый хаус на четыре четверти с фильтром и «дышащими» от сайдчейна барабанами, — а начиная с «Discovery» они воскресили диско."
 links:
   - to: "card:chicago-house"
     kind: "influence"
-    claim: "On 'Teachers', Daft Punk named Chicago house musicians among their influences."
-    claimRu: "В «Teachers» Daft Punk назвали музыкантов чикаго-хауса среди тех, кто на них повлиял."
-    sources:
-      - title: "Complex: A Guide to Daft Punk"
-        url: "https://www.complex.com/music/a/david-drake/a-guide-to-daft-punk"
-      - title: "Rolling Stone: Paul Johnson, Celebrated Chicago House Producer, Dead at 50"
-        url: "https://au.rollingstone.com/music/music-news/paul-johnson-dead-28588/"
+    scope: "career"
+    how: "Daft Punk learned house from Chicago and Detroit: the steady 4/4 jacking groove and the aesthetics and sonic grit of the US Midwest, honouring its producers on “Teachers” and naming Paul Johnson a reason they started making house."
+    howRu: "Daft Punk учились хаусу у Чикаго и Детройта: ровный джекинг-грув на четыре четверти, эстетика и шершавый звук американского Среднего Запада; его продюсерам они воздали должное в «Teachers», а Пола Джонсона назвали одной из причин, по которым взялись за хаус."
     carries: ["groove", "sampling"]
-    how: 'Daft Punk worked in the Chicago house method: looping filtered pieces of disco records over a four-on-the-floor beat.'
-    howRu: 'Daft Punk работали по методу чикаго-хауса: зацикливали отфильтрованные фрагменты диско-пластинок поверх бита «четыре в пол».'
-  - to: "root:edwin-birdsong"
-    kind: "sample"
-    claim: "Daft Punk built “Harder, Better, Faster, Stronger” around a sample of Edwin Birdsong’s “Cola Bottle Baby”."
-    claimRu: "Daft Punk построили «Harder, Better, Faster, Stronger» вокруг сэмпла из «Cola Bottle Baby» Эдвина Бёрдсонга."
-    what: "The instrumental groove of Edwin Birdsong's 1979 'Cola Bottle Baby', used as the backing of 'Harder, Better, Faster, Stronger'."
-    whatRu: "Инструментальный грув из записи «Cola Bottle Baby» Эдвина Бёрдсонга 1979 года, положенный в основу «Harder, Better, Faster, Stronger»."
-    sources:
-      - title: "Resident Advisor: Edwin Birdsong obituary"
-        url: "https://ra.co/news/43130"
-      - title: "Radio Milwaukee: Sample, Better, Faster, Stronger"
-        url: "https://radiomilwaukee.org/2013-05-23/sample-better-faster-stronger"
-    carries: ["sampling"]
-    how: 'Sampling: Daft Punk built a hit on a recording of a Black funk musician.'
-    howRu: 'Сэмплирование: Daft Punk построили хит на записи чернокожего фанк-музыканта.'
+    dimensions: ["rhythm", "sound"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Gabriel Szatan writes that Homework was full of the sound of the US Midwest, and that on “Teachers” they named their debts to Chicago and Detroit house and techno pioneers."
+        textRu: "Габриэл Сатан пишет, что «Homework» был полон звука американского Среднего Запада, а в «Teachers» они назвали свои долги первопроходцам хауса и техно из Чикаго и Детройта."
+        source:
+          title: "The Guardian (Gabriel Szatan): How Daft Punk pushed pop forward (2021)"
+          url: "https://www.theguardian.com/music/2021/feb/26/how-daft-punk-pushed-pop-forward-skrillex-erol-alkan"
+          quote: "On Homework’s Teachers, they shout out a roll call of elite innovators to whom they owe their art: the intergalactic audacity of George Clinton, the low-end thump of Dr Dre, and numerous pioneers of house and techno from Chicago and Detroit."
+      - type: "testimony"
+        dimensions: ["sound"]
+        text: "Chicago producer Paul Johnson recalled that the duo told him he was one of the reasons they started to make house."
+        textRu: "Чикагский продюсер Пол Джонсон вспоминал, что дуэт называл его одной из причин, по которым они начали делать хаус."
+        source:
+          title: "The Guardian (Gabriel Szatan): How Daft Punk pushed pop forward (2021)"
+          url: "https://www.theguardian.com/music/2021/feb/26/how-daft-punk-pushed-pop-forward-skrillex-erol-alkan"
+          quote: "They told me I personally was one of the reasons they started to make house – shit was pretty damn touching."
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "Larry Fitzmaurice calls Homework a how-to for house music, built track by track on the steady 4/4."
+        textRu: "Ларри Фицморис называет «Homework» пособием по хаусу, где почти каждый трек вырастает из ровного ритма на четыре четверти."
+        source:
+          title: "Pitchfork (Larry Fitzmaurice): Daft Punk — Homework"
+          url: "https://pitchfork.com/reviews/albums/daft-punk-homework/"
+          quote: "Homework practically represents a how-to for understanding and listening to house music. Nearly every track opens with a single sonic element—more often than not, that steady 4/4 rhythm inextricably tied to house music"
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "Rolling Stone says Paul Johnson’s Chicago house inspired Daft Punk."
+        textRu: "Rolling Stone пишет, что чикагский хаус Пола Джонсона вдохновил Daft Punk."
+        source:
+          title: "Rolling Stone (Elias Leight, Emily Blake): Paul Johnson, Celebrated Chicago House Producer, Dead at 50 (2021)"
+          url: "https://au.rollingstone.com/music/music-news/paul-johnson-dead-28588/"
+          quote: "Pioneering Chicago artist created vigorous and tuneful tracks that inspired the likes of Daft Punk"
+  - to: "style:french-house"
+    kind: "style"
+    scope: "career"
+    how: "Daft Punk minted French house on Homework: rude, brutalist house heavy on the filter effect, with sidechain-compressed drums punching through the mix."
+    howRu: "Daft Punk отчеканили французский хаус на «Homework»: грубый, брутальный хаус, насыщенный фильтром, с барабанами, которые благодаря сайдчейн-компрессии пробивают микс."
+    carries: ["groove", "sampling"]
+    dimensions: ["sound", "rhythm"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "rhythm"]
+        text: "Alexis Petridis describes the style minted on Homework: house heavy on the filter effect and sidechain-compressed drums."
+        textRu: "Алексис Петридис описывает стиль, отчеканенный на «Homework»: хаус с обилием фильтра и барабанами на сайдчейн-компрессии."
+        source:
+          title: "The Guardian (Alexis Petridis): Daft Punk were the most influential pop musicians of the 21st century (2021)"
+          url: "https://www.theguardian.com/music/2021/feb/23/daft-punk-were-the-most-influential-pop-musicians-of-the-21st-century"
+          quote: "The style Thomas Bangalter and Guy-Manuel de Homem-Christo minted on their 1997 debut album Homework – house music heavy on the filter effect, which involved the bass or treble on the track gradually fading in and out, mimicking a DJ playing with the equalisation on a mixer; drums treated with sidechain compression"
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Pitchfork contrasts Homework’s rude, brutalist house with the rest of the French electronic music of the time."
+        textRu: "Pitchfork противопоставляет грубый, брутальный хаус «Homework» остальной французской электронике того времени."
+        source:
+          title: "Pitchfork (Larry Fitzmaurice): Daft Punk — Homework"
+          url: "https://pitchfork.com/reviews/albums/daft-punk-homework/"
+          quote: "from sturdy discotheque designs to jazzy, downtempo excursions—music that sounded miles away from Homework’s rude, brutalist house music."
+  - to: "style:disco"
+    kind: "influence"
+    scope: "period"
+    period: "2001–2013 (Discovery to Random Access Memories)"
+    how: "From Discovery onwards Daft Punk resurrected disco, celebrating its pioneers such as Nile Rodgers and Giorgio Moroder on Random Access Memories."
+    howRu: "Начиная с «Discovery» Daft Punk воскресили диско, а на «Random Access Memories» отдали дань его первопроходцам — Найлу Роджерсу и Джорджо Мородеру."
+    carries: ["groove"]
+    dimensions: ["sound"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "David Drake writes that disco figures heavily in Daft Punk’s musical DNA."
+        textRu: "Дэвид Дрейк пишет, что диско занимает важное место в музыкальной ДНК Daft Punk."
+        source:
+          title: "Complex (David Drake): A guide to Daft Punk (2013)"
+          url: "https://www.complex.com/music/a/david-drake/a-guide-to-daft-punk"
+          quote: "as have their forefathers in disco—the style that figures heavily in Daft Punk’s musical DNA."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Petridis credits them with resurrecting disco, soft rock and 80s R&B."
+        textRu: "Петридис считает, что они воскресили диско, софт-рок и ритм-н-блюз 1980-х."
+        source:
+          title: "The Guardian (Alexis Petridis): Daft Punk were the most influential pop musicians of the 21st century (2021)"
+          url: "https://www.theguardian.com/music/2021/feb/23/daft-punk-were-the-most-influential-pop-musicians-of-the-21st-century"
+          quote: "By resurrecting disco, soft rock and 80s R&B, and bringing spectacle to the world of dance music, the French duo changed the course of pop music again and again"

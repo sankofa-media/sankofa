@@ -14,18 +14,70 @@ place:
 placeRu: "Канзас-Сити, Канзас"
 genre: Bebop
 genreRu: бибоп
-story: Charlie Parker learned his craft in Kansas City’s jazz scene. Its bands and clubs were his apprenticeship.
-storyRu: Чарли Паркер учился своему ремеслу на джазовой сцене Канзас-Сити. Школой для него стали местные ансамбли и клубы.
+story: "Charlie Parker came up in Kansas City jazz, where the blues soaked everything and Lester Young was his idol and model of a light, quick tone. Working over the chords of “Cherokee”, he began playing the higher intervals of each chord as melody, and out of that bebop was born."
+storyRu: "Чарли Паркер вырос в джазе Канзас-Сити, где всё было пропитано блюзом, а кумиром и образцом лёгкого, быстрого звука был для него Лестер Янг. Разбирая гармонию «Cherokee», он стал играть мелодию на верхних ступенях аккордов — так родился бибоп."
 links:
-  - to: card:jazz
-    kind: scene
-    claim: Charlie Parker’s musical apprenticeship took place in Kansas City’s jazz bands and clubs.
-    claimRu: Чарли Паркер учился музыке, играя в джазовых ансамблях и клубах Канзас-Сити.
-    sources:
-      - title: 'Ed Komara: Ko Ko — Library of Congress'
-        url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/ko-ko.pdf
-      - title: 'C.J. Janovy: Kansas City’s Charlie Parker History Tour — KCUR'
-        url: https://www.kcur.org/arts-life/2016-08-29/kansas-citys-charlie-parker-history-tour-requires-a-guide-and-imagination
-    carries: ["improvisation"]
-    how: Parker learned the jazz soloist’s craft of improvising over chord changes in Kansas City’s bands.
-    howRu: Паркер освоил ремесло джазового солиста — импровизацию по гармонии — в оркестрах Канзас-Сити.
+  - to: "card:jazz"
+    kind: "style"
+    scope: "career"
+    how: "Parker formed his voice in Kansas City jazz: a thin, coarse, blues-singer’s tone modelled on Lester Young, vocalized blues phrasing and the swing soloist’s craft learned in the city’s bands."
+    howRu: "Паркер сложился в джазе Канзас-Сити: тонкий, шершавый звук блюзового певца по образцу Лестера Янга, блюзовая «говорящая» фразировка и ремесло солиста свинга, усвоенное в местных оркестрах."
+    carries: ["swing", "improvisation"]
+    dimensions: ["sound", "melody-vocal", "harmony-form", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "melody-vocal", "harmony-form"]
+        text: "Kevin Whitehead hears in Parker a blues singer’s tone modelled on Lester Young, and blues phrasing and form that stayed close to his heart."
+        textRu: "Кевин Уайтхед слышит у Паркера звук блюзового певца по образцу Лестера Янга, а также блюзовую фразировку и форму, которые всегда оставались ему близки."
+        source:
+          title: "NPR, Fresh Air (Kevin Whitehead): Charlie Parker, Born 100 Years Ago, Made Jazz Complexities Sound Deceptively Easy (2020)"
+          url: "https://www.npr.org/2020/08/28/906215959/charlie-parker-born-100-years-ago-made-jazz-complexities-sound-deceptively-easy"
+          quote: "Charlie Parker's tone, by contrast, is thin and coarse, more blues singer than Broadway. His Kansas City elder Lester Young was a role model there."
+      - type: "listening"
+        dimensions: ["sound", "performance"]
+        text: "As a teenager Parker slipped out to Kansas City clubs to hear his idol Lester Young and the bands of Count Basie and Bennie Moten."
+        textRu: "Подростком Паркер тайком бегал в клубы Канзас-Сити слушать своего кумира Лестера Янга и оркестры Каунта Бейси и Бенни Мотена."
+        source:
+          title: "National Jazz Archive: Charlie Parker — myth and mayhem (2020)"
+          url: "https://nationaljazzarchive.org.uk/posts/articles/2020/08/charlie-parker---myth-and-mayhem"
+          quote: "While still at school, Charlie had joined a local band and was influenced by bands he saw in Kansas City including those led by pianists Count Basie and local hero Bennie Moten."
+      - type: "analysis"
+        dimensions: ["performance"]
+        text: "Ed Komara traces Parker’s signature piece to his apprenticeship in Kansas City bands."
+        textRu: "Эд Комара выводит главную пьесу Паркера из его ученичества в оркестрах Канзас-Сити."
+        source:
+          title: "Library of Congress, National Recording Registry (Ed Komara): “Ko Ko” — Charlie Parker (2002)"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/ko-ko.pdf"
+          quote: "“Ko Ko” was Charlie Parker’s signature jazz piece, conceived during his apprenticeship with Kansas City bands and hatched in the after-hours clubs of New York City."
+  - to: "style:bebop"
+    kind: "style"
+    scope: "career"
+    how: "Parker is a founder of bebop: melodies built on the upper intervals of the chords over fast-moving changes, at breakneck tempo yet with every note given its full value against the 4/4 swing."
+    howRu: "Паркер — один из создателей бибопа: мелодия на верхних ступенях аккордов поверх быстро сменяющейся гармонии, в головокружительном темпе, но так, что каждая нота звучит полностью на фоне свинга на четыре четверти."
+    carries: ["improvisation", "swing"]
+    dimensions: ["harmony-form", "rhythm", "melody-vocal"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["harmony-form"]
+        text: "Parker told Down Beat that bebop was born when he began using the higher intervals of a chord as the melody line."
+        textRu: "Паркер рассказывал Down Beat, что бибоп родился, когда он стал строить мелодию на верхних ступенях аккорда."
+        source:
+          title: "Library of Congress, National Recording Registry (Ed Komara): “Ko Ko” — Charlie Parker (2002)"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/ko-ko.pdf"
+          quote: "Working over “Cherokee” with Fleet, Charlie found that by using higher intervals of a chord as a melody line and backing them with appropriately related changes, he could play this thing he had been “hearing.” Fleet picked it up behind him and bop was born."
+      - type: "analysis"
+        dimensions: ["rhythm"]
+        text: "Komara shows how Parker refined the style by reconciling his even eighth notes with swing time."
+        textRu: "Комара показывает, как Паркер оттачивал стиль, примиряя ровные восьмые со свингом."
+        source:
+          title: "Library of Congress, National Recording Registry (Ed Komara): “Ko Ko” — Charlie Parker (2002)"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/ko-ko.pdf"
+          quote: "But playing those tones in an even 8/8 meter sometimes clashes with the 4/4 swing time. Minimizing those clashes helped further towards refining the style that he was conceiving."
+      - type: "critics"
+        dimensions: ["rhythm", "melody-vocal"]
+        text: "Whitehead credits Parker with helping to introduce bebop and redefining jazz velocity with pithy melodic figures."
+        textRu: "Уайтхед считает, что Паркер помог ввести в джаз бибоп и задал джазу новую скорость, а его мелодические фигуры были сжаты и точны."
+        source:
+          title: "NPR, Fresh Air (Kevin Whitehead): Charlie Parker, Born 100 Years Ago, Made Jazz Complexities Sound Deceptively Easy (2020)"
+          url: "https://www.npr.org/2020/08/28/906215959/charlie-parker-born-100-years-ago-made-jazz-complexities-sound-deceptively-easy"
+          quote: "More blues singer than Broadway, the Bird helped introduce bebop to jazz — and along the way redefined jazz velocity with his scrappy sound and pithy melodic figures."

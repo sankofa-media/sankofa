@@ -14,30 +14,70 @@ place:
 placeRu: "Форт-Уэрт, Техас"
 genre: Free jazz
 genreRu: фри-джаз
-story: Ornette Coleman’s early work was in rhythm-and-blues bands. His later improvisations loosened jazz’s reliance on fixed chord changes.
-storyRu: Орнетт Коулман начинал в ритм-н-блюзовых ансамблях. В позднейших импровизациях он ослабил зависимость джаза от заданной последовательности аккордов.
+story: "Ornette Coleman learned to play in Texas blues and rhythm-and-blues bands, and his keening, blues-based alto kept the shuffles, stomps and hollers of that music. He freed improvisation from fixed chord patterns, called his method harmolodics and, with the collective improvisation of Free Jazz, gave the style its name."
+storyRu: "Орнетт Коулман учился играть в техасских блюзовых и ритм-н-блюзовых оркестрах, и его пронзительный, блюзовый альт сохранил шаффлы, стомпы и кличи этой музыки. Он освободил импровизацию от заданных аккордовых схем, назвал свой метод гармолодикой и коллективной импровизацией альбома «Free Jazz» дал стилю имя."
 links:
-  - to: card:rhythm-and-blues
-    kind: scene
-    claim: Ornette Coleman gained his earliest performing experience in rhythm-and-blues bands.
-    claimRu: Первый сценический опыт Орнетт Коулман получил в ритм-н-блюзовых ансамблях.
-    sources:
-      - &id001
-        title: 'National Endowment for the Arts: Ornette Coleman'
-        url: https://www.arts.gov/honors/jazz/ornette-coleman
-      - &id002
-        title: 'Dave Oliphant: Ornette Coleman — Texas State Historical Association'
-        url: https://www.tshaonline.org/handbook/entries/coleman-ornette
-    carries: []
-    how: Coleman served his apprenticeship in R&B bands; the sources record the setting, not a specific element.
-    howRu: Коулман прошёл школу в ритм-н-блюзовых составах; источники фиксируют среду, а не конкретный приём.
-  - to: card:jazz
-    kind: influence
-    claim: Ornette Coleman developed a jazz approach that freed improvisation from fixed chord progressions.
-    claimRu: Орнетт Коулман выработал подход к джазу, освобождавший импровизацию от заданной последовательности аккордов.
-    sources:
-      - *id001
-      - *id002
+  - to: "card:blues"
+    kind: "influence"
+    scope: "career"
+    how: "Coleman’s alto kept the blues he played in Texas blues and R&B bands: a keening, blues-based, vocal cry, with shuffles, stomps and hollers under the innovations of tone and tonality."
+    howRu: "Альт Коулмана сохранил блюз, который он играл в техасских блюзовых и ритм-н-блюзовых оркестрах: пронзительный, блюзовый, «голосовой» плач, а под новизной тембра и тональности — шаффлы, стомпы и кличи."
+    carries: ["blue-notes"]
+    dimensions: ["melody-vocal", "rhythm", "sound"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal", "rhythm"]
+        text: "A. B. Spellman, quoted in the Handbook of Texas, hears shuffles, stomps, hollers and blues beneath Coleman’s innovations."
+        textRu: "А. Б. Спеллман, которого цитирует «Справочник Техаса», слышит под новшествами Коулмана шаффлы, стомпы, кличи и блюз."
+        source:
+          title: "Texas State Historical Association, Handbook of Texas (Dave Oliphant): Coleman, Ornette"
+          url: "https://www.tshaonline.org/handbook/entries/coleman-ornette"
+          quote: "Once past his radical innovations in tone and tonality, one can hear shuffles, stomps, hollers, and certainly blues in his music."
+      - type: "analysis"
+        dimensions: ["sound", "melody-vocal"]
+        text: "Oliphant describes Coleman’s freer, blues-based, keening way of playing in the blues bands he toured with."
+        textRu: "Олифант описывает свободную, блюзовую, пронзительную манеру Коулмана в блюзовых оркестрах, с которыми он гастролировал."
+        source:
+          title: "Texas State Historical Association, Handbook of Texas (Dave Oliphant): Coleman, Ornette"
+          url: "https://www.tshaonline.org/handbook/entries/coleman-ornette"
+          quote: "During Coleman’s tours with the minstrel and blues bands, the leaders of those groups, other band members, and the public criticized his freer, blues-based, keening mode of playing, which his trumpeter Don Cherry later compared to a horse’s whinny."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "The NEA notes that his blues roots were always evident and that he started out in rhythm-and-blues bands."
+        textRu: "Национальный фонд искусств США отмечает, что блюзовые корни в его игре слышны всегда и что начинал он в ритм-н-блюзовых оркестрах."
+        source:
+          title: "National Endowment for the Arts: Ornette Coleman — NEA Jazz Master"
+          url: "https://www.arts.gov/honors/jazz/ornette-coleman"
+          quote: "While experimenting with time and tone, his strong blues roots were always evident."
+  - to: "style:free-jazz"
+    kind: "style"
+    scope: "career"
+    how: "Coleman founded free jazz: improvisation escaping fixed chord patterns, harmolodics built on melody and harmony rather than chord structure, pianoless groups and continuous collective improvisation."
+    howRu: "Коулман основал фри-джаз: импровизация, вырвавшаяся из заданных аккордовых схем, гармолодика, построенная на мелодии и гармонии, а не на последовательности аккордов, ансамбли без фортепиано и сплошная коллективная импровизация."
     carries: ["improvisation"]
-    how: Coleman freed jazz improvisation from fixed chord patterns, up to a whole album of collective improvisation.
-    howRu: Коулман освободил джазовую импровизацию от заданных аккордовых схем — вплоть до целого альбома коллективной импровизации.
+    dimensions: ["harmony-form", "performance", "sound"]
+    evidence:
+      - type: "critics"
+        dimensions: ["harmony-form", "performance"]
+        text: "The NEA describes his escape from chord patterns and the double-quartet collective improvisation of Free Jazz."
+        textRu: "Национальный фонд искусств описывает его уход от аккордовых схем и коллективную импровизацию двойного квартета в «Free Jazz»."
+        source:
+          title: "National Endowment for the Arts: Ornette Coleman — NEA Jazz Master"
+          url: "https://www.arts.gov/honors/jazz/ornette-coleman"
+          quote: "Perhaps the most controversial of this series of albums was Free Jazz, recorded with a double quartet as essentially one continuous collective improvisation, which influenced avant-garde recordings in the 1960s and 1970s."
+      - type: "analysis"
+        dimensions: ["harmony-form"]
+        text: "Oliphant explains harmolodics as an emphasis on harmony and melody rather than traditional chord structure."
+        textRu: "Олифант объясняет гармолодику как упор на гармонию и мелодию вместо привычной последовательности аккордов."
+        source:
+          title: "Texas State Historical Association, Handbook of Texas (Dave Oliphant): Coleman, Ornette"
+          url: "https://www.tshaonline.org/handbook/entries/coleman-ornette"
+          quote: "developing Coleman’s form of jazz to which he gave the name “harmolodics,” from its emphasis on harmony and melody rather than on the traditional chord structure."
+      - type: "analysis"
+        dimensions: ["sound"]
+        text: "His groups dropped the piano as too chord-bound."
+        textRu: "Его ансамбли отказались от фортепиано как от слишком привязанного к аккордам инструмента."
+        source:
+          title: "Texas State Historical Association, Handbook of Texas (Dave Oliphant): Coleman, Ornette"
+          url: "https://www.tshaonline.org/handbook/entries/coleman-ornette"
+          quote: "subsequent recordings by his groups eliminated the piano as too restrictive in its chord-based tendencies"

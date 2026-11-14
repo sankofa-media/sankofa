@@ -7,18 +7,54 @@ place: {"name": "Bronx, New York", "lat": 40.8448, "lon": -73.8648}
 placeRu: "Бронкс, Нью-Йорк"
 genre: "Hip-hop"
 genreRu: "хип-хоп"
-story: "The Bronx DJ scene was the starting point for Ultramagnetic MCs. Ced Gee carried that experience into rapping and production built from samples."
-storyRu: "Отправной точкой для Ultramagnetic MCs стала диджейская сцена Бронкса. Сед Джи перенёс этот опыт в рэп и продюсирование на основе сэмплов."
+story: "Ultramagnetic MCs grew up in the Bronx of park jams and crews, learning from MCs who had already changed rap’s vocals, from Cold Crush to Rakim. On Critical Beatdown (1988) Kool Keith swapped simple rhyme schemes for dense, off-kilter flows, while Ced Gee, a DJ turned producer, played the SP-1200 sampler as an instrument, flipping heavy funk records."
+storyRu: "Ultramagnetic MCs выросли в Бронксе уличных вечеринок и рэп-команд и учились у эмси, которые уже изменили подачу рэпа, — от Cold Crush до Ракима. На «Critical Beatdown» (1988) Кул Кит сменил простые рифмовки на плотный, причудливый флоу, а Сед Джи, диджей, ставший продюсером, играл на сэмплере SP-1200 как на инструменте, перекраивая тяжёлый фанк."
 links:
   - to: "card:hip-hop"
-    kind: "scene"
-    claim: "Ultramagnetic MCs grew out of Bronx DJ culture, with Ced Gee moving from DJing into rap and sample-based production."
-    claimRu: "Ultramagnetic MCs выросли из диджейской культуры Бронкса: Сед Джи перешёл от диджеинга к рэпу и продюсированию на основе сэмплов."
-    sources:
-      - title: "SPIN: When Hip Hop Went Ultra — Ced Gee and Kool Keith interview"
-        url: "https://www.spinmagazine.com/2023/11/ultramagnetic-mcs-interview/"
-      - title: "Ced Gee: Official biography"
-        url: "https://www.cedgee.com/about/"
-    carries: ["sampling"]
-    how: Ultramagnetic MCs were among the first to play the sampler as an instrument.
-    howRu: Ultramagnetic MCs одними из первых стали играть на сэмплере как на инструменте.
+    kind: "style"
+    scope: "career"
+    how: "Ultramagnetic carried Bronx hip-hop into its second chapter: dense, off-kilter flows in place of simple rhyme schemes, and a sampler played as an instrument over chopped heavy funk records, out of DJ and crew culture."
+    howRu: "Ultramagnetic вывели бронксовский хип-хоп во вторую главу: плотный, причудливый флоу вместо простых рифмовок и сэмплер как полноценный инструмент поверх нарезанного тяжёлого фанка — всё это из диджейской и командной культуры."
+    carries: ["rap-flow", "sampling", "breakbeat"]
+    dimensions: ["melody-vocal", "sound", "rhythm"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "SPIN calls Critical Beatdown a new-school classic that replaced simple rhyme schemes with dense flows and off-kilter lyrics."
+        textRu: "SPIN называет «Critical Beatdown» классикой новой школы, сменившей простые рифмовки на плотный флоу и причудливые тексты."
+        source:
+          title: "SPIN (Jonathan Rowe): Ultramagnetic MC’s interview (2023)"
+          url: "https://www.spinmagazine.com/2023/11/ultramagnetic-mcs-interview/"
+          quote: "a singular new-school rap classic that swapped the era’s popular blueprint of simple rhyme schemes and common deliveries for deft, dense flows and off-kilter lyrics."
+      - type: "critics"
+        dimensions: ["sound", "rhythm"]
+        text: "SPIN credits the group as the first to use a sampler as an instrument, with Ced Gee flipping heavy funk samples on the SP-1200."
+        textRu: "SPIN считает группу первой, кто использовал сэмплер как инструмент: Сед Джи перекраивал тяжёлые фанковые сэмплы на SP-1200."
+        source:
+          title: "SPIN (Jonathan Rowe): Ultramagnetic MC’s interview (2023)"
+          url: "https://www.spinmagazine.com/2023/11/ultramagnetic-mcs-interview/"
+          quote: "Ultramagnetic are also widely credited as the first hip hop group to use a sampler as an instrument, rather than just a simple rhythm tool."
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "Kool Keith named MC Shan, Rakim, the Treacherous Three and Cold Crush among the MCs who influenced the group’s new mode."
+        textRu: "Кул Кит назвал MC Shan, Ракима, Treacherous Three и Cold Crush среди эмси, повлиявших на новую манеру группы."
+        source:
+          title: "SPIN (Jonathan Rowe): Ultramagnetic MC’s interview (2023)"
+          url: "https://www.spinmagazine.com/2023/11/ultramagnetic-mcs-interview/"
+          quote: "MC Shan, Rakim and the Treacherous Three were really the first to ever change the vocals, you know what I’m saying?"
+      - type: "testimony"
+        dimensions: ["sound"]
+        text: "Keith said that while making songs he bought funk records rather than rap — Con Funk Shun, Slave, Dazz Band."
+        textRu: "Кит говорил, что, когда делал песни, покупал не рэп, а фанк — Con Funk Shun, Slave, Dazz Band."
+        source:
+          title: "SPIN (Jonathan Rowe): Ultramagnetic MC’s interview (2023)"
+          url: "https://www.spinmagazine.com/2023/11/ultramagnetic-mcs-interview/"
+          quote: "I really bought a lot of funk records when I was making songs, I got a lot of Con Funk Shun, Slave, Dazz Band."
+      - type: "testimony"
+        dimensions: ["sound", "rhythm"]
+        text: "Ced Gee’s own biography describes him as a DJ first, then a pioneer of the SP-1200 drum machine in hip-hop production."
+        textRu: "Собственная биография Седа Джи говорит, что сначала он был диджеем, а потом одним из первопроходцев драм-машины SP-1200 в хип-хоп-продакшне."
+        source:
+          title: "Ced Gee official site: About"
+          url: "https://www.cedgee.com/about/"
+          quote: "Ced comes from a very musical family as his first love was Dee Jaying then the drum machine, the EMU SP1200 to which he pioneered"

@@ -6,30 +6,86 @@ place: {"name": "Düsseldorf", "lat": 51.2277, "lon": 6.7735}
 placeRu: "Дюссельдорф"
 genre: "Electronic music"
 genreRu: "электронная музыка"
-story: "Kraftwerk’s electronic music also drew on funk. James Brown was among the band’s influences."
-storyRu: "Электронная музыка Kraftwerk опиралась и на фанк. Среди тех, кто повлиял на группу, — Джеймс Браун."
+story: "Kraftwerk built a regimented electronic pop on drum machines, vocoders and synthesizers that became the groundwork of synth-pop. Florian Schneider told Juan Atkins the band was hugely influenced by James Brown, Ralf Hütter hears in rhythm machines the core of funk, and Karl Bartos says he brought Brown’s funky beats in more and more from the late 1970s — the American rhythm under the European melody that Detroit and the Bronx heard."
+storyRu: "Kraftwerk построили строгий электронный поп на драм-машинах, вокодерах и синтезаторах, ставший основой синти-попа. Флориан Шнайдер рассказывал Хуану Аткинсу, что группа испытала огромное влияние Джеймса Брауна, Ральф Хюттер слышит в ритм-машинах самую суть фанка, а Карл Бартос говорит, что с конца 1970-х всё больше вносил фанковые биты Брауна, — американский ритм под европейской мелодией, который услышали Детройт и Бронкс."
 links:
-  - to: "card:funk"
-    kind: "influence"
-    claim: "James Brown's funk was an influence on Kraftwerk."
-    claimRu: "На Kraftwerk повлиял фанк Джеймса Брауна."
-    sources:
-      - title: "The Quietus: Karl Bartos Interviewed — Kraftwerk and the Birth of the Modern"
-        url: "https://thequietus.com/interviews/karl-bartos-interviewed-kraftwerk-and-the-birth-of-the-modern/"
-      - title: "Croatian Encyclopedia: Kraftwerk"
-        url: "https://enciklopedija.hr/clanak/kraftwerk"
-    carries: ["groove"]
-    how: Kraftwerk took the funky beats of James Brown into their electronic music.
-    howRu: Kraftwerk перенесли фанковые биты Джеймса Брауна в свою электронную музыку.
   - to: "root:james-brown"
     kind: "influence"
-    claim: "James Brown's funk was an influence on Kraftwerk."
-    claimRu: "На Kraftwerk повлиял фанк Джеймса Брауна."
-    sources:
-      - title: "The Quietus: Karl Bartos Interviewed — Kraftwerk and the Birth of the Modern"
-        url: "https://thequietus.com/interviews/karl-bartos-interviewed-kraftwerk-and-the-birth-of-the-modern/"
-      - title: "Croatian Encyclopedia: Kraftwerk"
-        url: "https://enciklopedija.hr/clanak/kraftwerk"
+    scope: "career"
+    how: "Kraftwerk drew on James Brown’s funk for their rhythm: funky, repetitive drum patterns played by machines under European melodies — according to Karl Bartos increasingly from the late 1970s, from Trans-Europe Express on."
+    howRu: "Kraftwerk опирались на фанк Джеймса Брауна в ритме: фанковые, повторяющиеся барабанные рисунки, сыгранные машинами под европейскими мелодиями, — по словам Карла Бартоса, всё больше с конца 1970-х, начиная с «Trans-Europe Express»."
     carries: ["groove"]
-    how: Kraftwerk took the funky beats of James Brown into their electronic music.
-    howRu: Kraftwerk перенесли фанковые биты Джеймса Брауна в свою электронную музыку.
+    dimensions: ["rhythm"]
+    evidence:
+      - type: "listening"
+        dimensions: ["rhythm"]
+        text: "Juan Atkins recalls Florian Schneider telling him that Kraftwerk were hugely influenced by James Brown."
+        textRu: "Хуан Аткинс вспоминает, как Флориан Шнайдер рассказал ему, что Kraftwerk испытали огромное влияние Джеймса Брауна."
+        source:
+          title: "Telekom Electronic Beats: Juan Atkins on Kraftwerk"
+          url: "https://electronicbeats.net/juan-atkins-about-kraftwerk"
+          quote: "We met up behind the Detroit stage and chatted a bit and I was really surprised to learn that Kraftwerk were hugely influenced by James Brown."
+      - type: "testimony"
+        dimensions: ["rhythm"]
+        text: "Karl Bartos says he grew up with James Brown’s funky beats and brought them into the music more and more from the late 1970s."
+        textRu: "Карл Бартос говорит, что вырос на фанковых битах Джеймса Брауна и с конца 1970-х всё больше вносил их в музыку группы."
+        source:
+          title: "The Quietus: Karl Bartos Interviewed — Kraftwerk and the Birth of the Modern"
+          url: "https://thequietus.com/interviews/karl-bartos-interviewed-kraftwerk-and-the-birth-of-the-modern/"
+          quote: "I was growing up with the funky beats of James Brown and I brought them in more and more. Not during Autobahn or Radioactivity but more and more during the late 70s. We took some black beats into our music and this was very attractive to the black musicians and the black audiences in the States."
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "Jude Rogers writes that the band got inspired by James Brown’s funk."
+        textRu: "Джуд Роджерс пишет, что группу вдохновлял фанк Джеймса Брауна."
+        source:
+          title: "The Guardian (Jude Rogers): Why Kraftwerk are still the world’s most influential band (2013)"
+          url: "https://www.theguardian.com/music/2013/jan/27/kraftwerk-most-influential-electronic-band-tate"
+          quote: "The band's songs started to feature words in different languages; they got inspired by James Brown's funk, and even punk"
+      - type: "testimony"
+        dimensions: ["rhythm"]
+        text: "Ralf Hütter says the dynamics of electronic rhythm machines are a strong element of funk."
+        textRu: "Ральф Хюттер говорит, что динамика электронных ритм-машин — сильная составляющая фанка."
+        source:
+          title: "The Guardian: Kraftwerk’s Ralf Hütter — ‘Music is about intensity … the rest is just noise’ (2017)"
+          url: "https://www.theguardian.com/music/2017/jun/15/kraftwerk-ralf-hutter-music-about-intensity-the-rest-is-just-noise"
+          quote: "“But also the dynamics of electronic rhythm machines is a very strong element in what is called funk music or urban music. Electronics is very connecting.”"
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "Exclaim! hears Trans-Europe Express (1977) open by turning train noise into a funky drum pattern."
+        textRu: "Exclaim! слышит, как «Trans-Europe Express» (1977) открывается шумом поезда, превращающимся в фанковый барабанный рисунок."
+        source:
+          title: "Exclaim!: Kraftwerk — Days of Future Past"
+          url: "https://exclaim.ca/music/article/kraftwerk-days_of_future_past"
+          quote: "It becomes the title track of their new album, which opens by morphing train noises into a funky drum pattern and creating a disco staple."
+  - to: "style:synth-pop"
+    kind: "style"
+    scope: "career"
+    how: "Kraftwerk laid the groundwork of synth-pop: songs built entirely from synthesizers, drum machines and vocoded voices, with regimented pulses and a formal, robotic image that synth-pop bands copied."
+    howRu: "Kraftwerk заложили основу синти-попа: песни целиком из синтезаторов, драм-машин и голосов через вокодер, строгая пульсация и формальный, «роботизированный» образ, который переняли синти-поп-группы."
+    carries: ["groove"]
+    dimensions: ["sound", "rhythm", "image"]
+    evidence:
+      - type: "critics"
+        dimensions: ["rhythm", "sound"]
+        text: "Exclaim! says Autobahn’s regimented hypno-pulses laid the groundwork for electro-funk, ambient and synth-pop."
+        textRu: "Exclaim! пишет, что строгая гипнотическая пульсация «Autobahn» заложила основу электро-фанка, эмбиента и синти-попа."
+        source:
+          title: "Exclaim!: Kraftwerk — Days of Future Past"
+          url: "https://exclaim.ca/music/article/kraftwerk-days_of_future_past"
+          quote: "the album's regimented hypno-pulses lay the groundwork for electro-funk, ambient, and synth-pop."
+      - type: "critics"
+        dimensions: ["image"]
+        text: "Rob Bowman’s Hall of Fame essay notes their groomed, formal image, which many synth-pop bands followed."
+        textRu: "Эссе Роба Боумена для Зала славы отмечает их ухоженный, формальный образ, которому затем следовали многие синти-поп-группы."
+        source:
+          title: "Rock & Roll Hall of Fame (Rob Bowman): Kraftwerk induction essay (2021)"
+          url: "https://rockhall25.wpenginepowered.com/wp-content/uploads/2025/10/Kraftwerk_26746_RNRHF_2021_Highres-11.pdf"
+          quote: "Schneider cut his hair short and began adopting a neatly groomed, highly formalized appearance and manner. The rest of the band followed suit, as would many synth pop bands in the following decade."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Marcus Barnes lists early synth pop among the scenes that grew from Kraftwerk’s blueprint."
+        textRu: "Маркус Барнс называет ранний синти-поп среди сцен, выросших из образца Kraftwerk."
+        source:
+          title: "The Guardian (Marcus Barnes): From Germany to Detroit and back — how Kraftwerk forged an industrial exchange (2020)"
+          url: "https://www.theguardian.com/music/2020/may/25/from-germany-to-detroit-and-back-how-kraftwerk-forged-an-industrial-exchange"
+          quote: "New wave, early synth pop, the new romantics, London’s Blitz kids, OMD, David Bowie, Gary Numan, Visage, Depeche Mode, Soft Cell"

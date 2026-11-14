@@ -7,18 +7,62 @@ place: {"name": "Kingston, Jamaica", "lat": 17.9712, "lon": -76.7936}
 placeRu: "Кингстон, Ямайка"
 genre: "Dub"
 genreRu: "даб"
-story: "King Tubby made existing Jamaican rhythm tracks into material for new music. By removing and returning parts and adding echo, he helped develop dub."
-storyRu: "Кинг Табби превращал готовые ямайские ритм-треки в материал для новой музыки. Убирая и возвращая партии и добавляя эхо, он развивал даб."
+story: "King Tubby came from Jamaica’s sound-system culture: his Hometown Hi-Fi played American rhythm and blues and was the first to unleash reverb on its dancers. In his front-room studio he remixed reggae rhythm tracks with delay, reverb and filters, testing each mix on his own sound system, and turned dub into an art form."
+storyRu: "Кинг Табби вышел из ямайской культуры саунд-систем: его Hometown Hi-Fi крутил американский ритм-н-блюз и первым обрушил на танцующих реверберацию. В студии, устроенной в гостиной, он пересводил ритм-треки регги с задержкой, реверберацией и фильтрами, проверяя каждый микс на собственной саунд-системе, — и превратил даб в искусство."
 links:
-  - to: "card:reggae"
-    kind: "scene"
-    claim: "King Tubby developed dub by remixing Jamaican rhythm tracks, dropping parts in and out and adding echo."
-    claimRu: "Кинг Табби развивал даб, заново сводя ямайские ритм-треки: убирал и возвращал отдельные партии и добавлял эхо."
-    sources:
-      - title: "David Katz: King Tubby — a beginner’s guide (FACT)"
-        url: "https://factmag.com/2015/05/19/king-tubby-beginners-guide-dub-reggae"
-      - title: "Sean Williams: Tubby’s Dub Style (2012)"
-        url: "https://www.pure.ed.ac.uk/ws/portalfiles/portal/15441495/Tubbys_Dub_Style.pdf"
+  - to: "style:dub"
+    kind: "style"
+    scope: "career"
+    how: "Tubby created dub as an art of the mixing desk: reggae rhythm tracks stripped, with parts dropped in and out, and drenched in delay, reverb and his “Big Knob” high-pass filter, mixed as a live performance and tested on his sound system."
+    howRu: "Табби создал даб как искусство микшерного пульта: ритм-треки регги раздеты до основы, партии то исчезают, то возвращаются, всё залито задержкой, реверберацией и его фильтром высоких частот «Большая ручка», а сам микс — живое выступление, проверенное на саунд-системе."
     carries: ["dub"]
-    how: 'King Tubby invented dub as a studio art: remixing rhythm tracks, dropping parts out and adding echo and reverb.'
-    howRu: 'Кинг Табби создал даб как студийное искусство: пересводил ритм-треки, выключал партии и добавлял эхо и реверберацию.'
+    dimensions: ["sound", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "David Katz describes how Tubby added delay and reverb to version B-sides in his remix studio, creating dub."
+        textRu: "Дэвид Кац описывает, как Табби в своей студии добавлял задержку и реверберацию к инструментальным версиям на обороте синглов — так появился даб."
+        source:
+          title: "FACT (David Katz): A beginner’s guide to King Tubby, the producer who turned dub into an art form (2015)"
+          url: "https://factmag.com/2015/05/19/king-tubby-beginners-guide-dub-reggae"
+          quote: "Things definitely stepped up a notch after Bunny Lee helped Tubby acquire an obsolete MCI mixing desk from Dynamic Sounds in 1971, leading Tubby to turn the front room at 18 Dromilly Avenue into a remix studio, adding delay and reverb to the ‘version’ B-sides he was mixing, thus creating dub as we now know it."
+      - type: "analysis"
+        dimensions: ["sound", "performance"]
+        text: "Sean Williams analyses Tubby’s tools — delay, reverb, filtering — and shows that running a sound system shaped his mixing style."
+        textRu: "Шон Уильямс разбирает инструменты Табби — задержку, реверберацию, фильтры — и показывает, что работа с саунд-системой сформировала его манеру сведения."
+        source:
+          title: "Sean Williams, University of Edinburgh: Tubby’s dub style — the live art of record production (2012)"
+          url: "https://www.pure.ed.ac.uk/ws/portalfiles/portal/15441495/Tubbys_Dub_Style.pdf"
+          quote: "Running the sound system was therefore a key factor in the evolution of his mixing style."
+  - to: "card:reggae"
+    kind: "style"
+    scope: "career"
+    how: "Tubby worked inside Jamaican reggae and its sound-system culture: his Hometown Hi-Fi played American R&B, was the first to bring reverb to the dance, and his remixes reshaped reggae itself."
+    howRu: "Табби работал внутри ямайского регги и его культуры саунд-систем: его Hometown Hi-Fi крутил американский ритм-н-блюз, первым принёс реверберацию на танцы, а его ремиксы изменили само регги."
+    carries: ["reggae-offbeat", "dub"]
+    dimensions: ["sound", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "performance"]
+        text: "Katz says Tubby’s sound system was the first to unleash reverb on the public."
+        textRu: "Кац пишет, что саунд-система Табби первой обрушила реверберацию на публику."
+        source:
+          title: "FACT (David Katz): A beginner’s guide to King Tubby, the producer who turned dub into an art form (2015)"
+          url: "https://factmag.com/2015/05/19/king-tubby-beginners-guide-dub-reggae"
+          quote: "His sound system was also the first to unleash reverb on the general public — a major sonic innovation at the time."
+      - type: "analysis"
+        dimensions: ["performance"]
+        text: "Williams places Tubby in the Jamaican sound-system tradition, as builder and operator of Home Town Hi-Fi."
+        textRu: "Уильямс помещает Табби в традицию ямайских саунд-систем — как создателя и хозяина Home Town Hi-Fi."
+        source:
+          title: "Sean Williams, University of Edinburgh: Tubby’s dub style — the live art of record production (2012)"
+          url: "https://www.pure.ed.ac.uk/ws/portalfiles/portal/15441495/Tubbys_Dub_Style.pdf"
+          quote: "Tubby was originally an electrical engineer and crucially, in the mid 1960s, built and ran the celebrated Tubby's Home Town Hi-Fi sound system."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Katz counts Tubby among the Jamaican visionaries who changed the shape of reggae."
+        textRu: "Кац причисляет Табби к ямайским провидцам, изменившим облик регги."
+        source:
+          title: "FACT (David Katz): A beginner’s guide to King Tubby, the producer who turned dub into an art form (2015)"
+          url: "https://factmag.com/2015/05/19/king-tubby-beginners-guide-dub-reggae"
+          quote: "Tubby was one of a handful of Jamaican visionaries whose innovations not only changed the shaped of reggae in unprecedented ways"
