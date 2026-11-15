@@ -1,0 +1,936 @@
+# Second, independent check (2026-11-14) of content/ledger/expand-c25.yaml.
+# Every cited URL was reopened with curl; Britannica, Roger Ebert and similar pages were read from
+# archive.org snapshots. Quotes are copied from the fetched page text.
+# verdict: confirmed | corrected (card wording or sources changed) | refuted | unconfirmed (removed).
+# Independence: Al Jazeera and allAfrica (RFI) share agency copy; Exclaim! and the BBC piece in The Star
+# both rest on AFP; Robin Denselow's Guardian and Songlines pieces are one author; the ASC Leiden page on
+# Cissé says it is copied from Wikipedia and was dropped; Rotten Tomatoes (distributor synopsis) was dropped.
+# The ledger was rewritten to match the corrected cards, so 'fact' below is the fact as it now stands.
+entries:
+
+  # ---------------- soul-train ----------------
+  - card: soul-train
+    fact: "Soul Train premiered on WCIU-TV in Chicago on 17 August 1970 as a local show"
+    verdict: confirmed
+    sources:
+      - {title: "WNIJ (Northern Public Radio): This week in Illinois history, Soul Train premieres (2021)", url: "https://www.northernpublicradio.org/wnij-news/2021-08-16/this-week-in-illinois-history-soul-train-premieres-august-17-1970", quote: "On Aug. 17, 1970, \"Soul Train\" premiered on WCIU-TV in Chicago."}
+      - {title: "Contemporary Black Biography (Encyclopedia.com): Cornelius, Don 1936–", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/cornelius-don-1936", quote: "On August 17, 1970, the very first Soul Train premiered on WCIU-TV Channel 26."}
+    note: ""
+  - card: soul-train
+    fact: "Cornelius sold tyres and insurance and worked as a Chicago police officer before broadcasting"
+    verdict: confirmed
+    sources:
+      - {title: "Contemporary Black Biography (Encyclopedia.com): Cornelius, Don 1936–", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/cornelius-don-1936", quote: "so I sold tires, cars, and insurance."}
+      - {title: "WNIJ (Northern Public Radio): This week in Illinois history, Soul Train premieres (2021)", url: "https://www.northernpublicradio.org/wnij-news/2021-08-16/this-week-in-illinois-history-soul-train-premieres-august-17-1970", quote: "Cornelius worked as a journalist, insurance salesman and police officer"}
+    note: ""
+  - card: soul-train
+    fact: "He was an announcer and news reporter at WVON radio"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Don Cornelius (archived 2024)", url: "https://www.britannica.com/biography/Don-Cornelius", quote: "working as a disc jockey, announcer, and news reporter for the radio station WVON"}
+      - {title: "Contemporary Black Biography (Encyclopedia.com): Cornelius, Don 1936–", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/cornelius-don-1936", quote: "In 1966 he landed a part-time job as an announcer with WVON in Chicago."}
+    note: ""
+  - card: soul-train
+    fact: "He then worked as a news and sports reporter at the UHF station WCIU"
+    verdict: confirmed
+    sources:
+      - {title: "Television Academy: Cool Train Running", url: "https://www.televisionacademy.com/node/595701", quote: "while employed as a news and sports reporter at Chicago UHF station WCIU"}
+      - {title: "Encyclopaedia Britannica: Don Cornelius (archived 2024)", url: "https://www.britannica.com/biography/Don-Cornelius", quote: "hosting the news and sports program A Black’s View of the News on the Chicago station WCIU"}
+    note: ""
+  - card: soul-train
+    fact: "Cornelius paid for the pilot / the show with his own money (wow and body)"
+    verdict: confirmed
+    sources:
+      - {title: "Arionne Nettles, WBEZ Chicago: The history of Soul Train (2023)", url: "https://www.wbez.org/stories/history-of-soul-train-tv-show-chicago/01829b6c-5b73-42bd-8cb3-2b39ac8951b8", quote: "Don used $400 of his own money to produce the pilot."}
+      - {title: "WNIJ (Northern Public Radio): This week in Illinois history, Soul Train premieres (2021)", url: "https://www.northernpublicradio.org/wnij-news/2021-08-16/this-week-in-illinois-history-soul-train-premieres-august-17-1970", quote: "who hosted the show and funded it with his own money"}
+    note: "WBEZ and WNIJ agree he paid with his own money. Contemporary Black Biography says the $400 paid for his broadcasting course, so WBEZ's sum is not used; the card names no sum."
+  - card: soul-train
+    fact: "George Johnson of Johnson Products, a Black-owned hair-products maker, backed the show"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Soul Train (archived 2024)", url: "https://www.britannica.com/topic/Soul-Train", quote: "George Johnson, founder and president of Johnson Products Company (a Black-owned hair-product manufacturer), whose support enabled the program to move into national syndication in 1971"}
+      - {title: "Contemporary Black Biography (Encyclopedia.com): Cornelius, Don 1936–", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/cornelius-don-1936", quote: "He found the perfect primary sponsor in George Johnson, president of Johnson Products"}
+    note: ""
+  - card: soul-train
+    fact: "National syndication began on 2 October 1971"
+    verdict: confirmed
+    sources:
+      - {title: "Television Academy: Cool Train Running", url: "https://www.televisionacademy.com/node/595701", quote: "get it syndicated weekly on a handful of other stations across the country, beginning on October 2, 1971"}
+      - {title: "Contemporary Black Biography (Encyclopedia.com): Cornelius, Don 1936–", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/cornelius-don-1936", quote: "Soul Train went on the air October 2, 1971, and was aired once a week."}
+    note: ""
+  - card: soul-train
+    fact: "Production moved to Los Angeles"
+    verdict: confirmed
+    sources:
+      - {title: "Television Academy: Cool Train Running", url: "https://www.televisionacademy.com/node/595701", quote: "inspiring Cornelius to move Soul Train to Los Angeles for its second season"}
+      - {title: "WNIJ (Northern Public Radio): This week in Illinois history, Soul Train premieres (2021)", url: "https://www.northernpublicradio.org/wnij-news/2021-08-16/this-week-in-illinois-history-soul-train-premieres-august-17-1970", quote: "Cornelius moved production of his hit show from Chicago to Los Angeles."}
+    note: "Contemporary Black Biography also places the national show at Metromedia Studios, Hollywood, from 2 October 1971."
+  - card: soul-train
+    fact: "The Soul Train Line: two rows of dancers with an aisle down which pairs danced (wow and body)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Don Cornelius (archived 2024)", url: "https://www.britannica.com/biography/Don-Cornelius", quote: "the “Soul Train Line,” which featured two dancers strutting down the space together between two lines of dancers"}
+      - {title: "Television Academy: Cool Train Running", url: "https://www.televisionacademy.com/node/595701", quote: "Dancers queued up in two rows with a corridor down the middle"}
+    note: ""
+  - card: soul-train
+    fact: "Cornelius signed off wishing love, peace and soul"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Don Cornelius (archived 2024)", url: "https://www.britannica.com/biography/Don-Cornelius", quote: "his signature sign-off: “We wish you love, peace, and soul.”"}
+      - {title: "Television Academy: Cool Train Running", url: "https://www.televisionacademy.com/node/595701", quote: "As always, in parting, we wish you love, peace and SOUL!"}
+    note: ""
+  - card: soul-train
+    fact: "He stepped down as host in 1993 and kept producing; new episodes ended in 2006"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Don Cornelius (archived 2024)", url: "https://www.britannica.com/biography/Don-Cornelius", quote: "Cornelius retired as host of Soul Train in 1993 but continued to produce new installments until 2006."}
+      - {title: "Television Academy: Cool Train Running", url: "https://www.televisionacademy.com/node/595701", quote: "in 1993, he decided it was time to step away from regular hosting duties ... Production on new episodes of Soul Train eventually ended in 2006"}
+    note: ""
+  - card: soul-train
+    fact: "One of the longest-running syndicated programmes in American television"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Soul Train (archived 2024)", url: "https://www.britannica.com/topic/Soul-Train", quote: "it was one of the longest-running syndicated programs in American television history"}
+      - {title: "WNIJ (Northern Public Radio): This week in Illinois history, Soul Train premieres (2021)", url: "https://www.northernpublicradio.org/wnij-news/2021-08-16/this-week-in-illinois-history-soul-train-premieres-august-17-1970", quote: "making it one of the longest-running syndicated shows in television history"}
+    note: ""
+  - card: soul-train
+    fact: "Cornelius took his own life in 2012"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Don Cornelius (archived 2024)", url: "https://www.britannica.com/biography/Don-Cornelius", quote: "he died of a self-inflicted gunshot wound in 2012"}
+      - {title: "Television Academy: Cool Train Running", url: "https://www.televisionacademy.com/node/595701", quote: "Four years later, he died of a self-inflicted gunshot wound [after selling the franchise in 2008]"}
+    note: ""
+  - card: soul-train
+    fact: "The show presented young Black Americans' dance, fashion and hairstyles nationally"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Don Cornelius (archived 2024)", url: "https://www.britannica.com/biography/Don-Cornelius", quote: "youthful African American fashions, hairstyles, and dance moves"}
+      - {title: "Encyclopaedia Britannica: Soul Train (archived 2024)", url: "https://www.britannica.com/topic/Soul-Train", quote: "the first to prominently feature African American musical acts and dancers"}
+    note: ""
+
+  # ---------------- combahee-statement ----------------
+  - card: combahee-statement
+    fact: "The statement is dated April 1977"
+    verdict: confirmed
+    sources:
+      - {title: "The Combahee River Collective Statement (April 1977), reprint in Yale American Studies reader", url: "https://americanstudies.yale.edu/sites/default/files/files/Keyword%20Coalition_Readings.pdf", quote: "[1] This statement is dated April 1977."}
+      - {title: "Mariana Brandman, Massachusetts Women's History", url: "https://www.mawomenshistory.org/resources/articles/combahee-river-collective-pioneers-intersectional-feminism", quote: "In April 1977, the CRC issued 'The Combahee River Collective Statement.'"}
+    note: ""
+  - card: combahee-statement
+    fact: "The collective was a Black feminist group in Boston formed in 1974"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Combahee River Collective (archived 2024)", url: "https://www.britannica.com/topic/Combahee-River-Collective", quote: "Black, feminist, lesbian, socialist group primarily based in Boston ... operated from 1974 to 1980"}
+      - {title: "Keeanga-Yamahtta Taylor, The New Yorker (2020)", url: "https://www.newyorker.com/news/our-columnists/until-black-women-are-free-none-of-us-will-be-free", quote: "The Combahee River Collective formed in Boston, in 1974"}
+    note: ""
+  - card: combahee-statement
+    fact: "Its members responded to racism in the feminist movement and sexism in Black political groups"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Combahee River Collective (archived 2024)", url: "https://www.britannica.com/topic/Combahee-River-Collective", quote: "[racism] within the feminist movement and sexism and homophobia within the civil rights movement"}
+      - {title: "Keeanga-Yamahtta Taylor, The New Yorker (2020)", url: "https://www.newyorker.com/news/our-columnists/until-black-women-are-free-none-of-us-will-be-free", quote: "The women of the C.R.C. drew on their experiences in Black, male-dominated organizations."}
+    note: ""
+  - card: combahee-statement
+    fact: "They broke away from the Boston chapter of the National Black Feminist Organization"
+    verdict: confirmed
+    sources:
+      - {title: "Keeanga-Yamahtta Taylor, The New Yorker (2020)", url: "https://www.newyorker.com/news/our-columnists/until-black-women-are-free-none-of-us-will-be-free", quote: "The group broke from the Boston chapter of the National Black Feminist Organization"}
+      - {title: "Encyclopaedia Britannica: Combahee River Collective (archived 2024)", url: "https://www.britannica.com/topic/Combahee-River-Collective", quote: "The Combahee River Collective started as a breakaway group from the National Black Feminist Organization."}
+    note: ""
+  - card: combahee-statement
+    fact: "Founders: Barbara Smith, her sister Beverly Smith and Demita Frazier"
+    verdict: confirmed
+    sources:
+      - {title: "Mariana Brandman, Massachusetts Women's History", url: "https://www.mawomenshistory.org/resources/articles/combahee-river-collective-pioneers-intersectional-feminism", quote: "In 1974, sisters Barbara and Beverly Smith and Demita Frazier founded the CRC."}
+      - {title: "Marian Jones, The Nation: oral history (2021)", url: "https://www.thenation.com/article/society/combahee-river-collective-oral-history/", quote: "the collective’s founders—Demita Frazier, Beverly Smith, and Barbara Smith"}
+    note: ""
+  - card: combahee-statement
+    fact: "Demita Frazier had been a member of the Black Panther Party in Chicago"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Combahee River Collective (archived 2024)", url: "https://www.britannica.com/topic/Combahee-River-Collective", quote: "cofounder Demita Frazier, who was an active member of the Chicago Black Panther Party"}
+      - {title: "Keeanga-Yamahtta Taylor, The New Yorker (2020)", url: "https://www.newyorker.com/news/our-columnists/until-black-women-are-free-none-of-us-will-be-free", quote: "Demita Frazier had been a member of the Black Panther Party in Ch[icago]"}
+    note: ""
+  - card: combahee-statement
+    fact: "The name came from a book Barbara Smith owned about Tubman's Combahee River raid"
+    verdict: confirmed
+    sources:
+      - {title: "Arielle Gray, WBUR (2019)", url: "https://www.wbur.org/news/2019/06/10/boston-combahee-river-collective-intersectional-black-feminism", quote: "They took their name, the Combahee River Collective, from a book Smith owned detailing the historic raid on Combahee River"}
+      - {title: "Marian Jones, The Nation: oral history (2021)", url: "https://www.thenation.com/article/society/combahee-river-collective-oral-history/", quote: "There was a little book that I had the opportunity to find and read, which talks about and describes Harriet Tubman’s raid on the Combahee River."}
+    note: ""
+  - card: combahee-statement
+    fact: "The name honoured Tubman and signalled that liberation required political action (wow and body)"
+    verdict: confirmed
+    sources:
+      - {title: "Keeanga-Yamahtta Taylor, The New Yorker (2020)", url: "https://www.newyorker.com/news/our-columnists/until-black-women-are-free-none-of-us-will-be-free", quote: "by naming the group after the Combahee River Raid, they were both honoring Harriet Tubman and indicating that liberation required political action"}
+      - {title: "Mariana Brandman, Massachusetts Women's History", url: "https://www.mawomenshistory.org/resources/articles/combahee-river-collective-pioneers-intersectional-feminism", quote: "They chose the name to honor and draw inspiration from Harriet Tubman's 1863 Combahee River raid"}
+    note: ""
+  - card: combahee-statement
+    fact: "The statement was written for Zillah Eisenstein's anthology"
+    verdict: confirmed
+    sources:
+      - {title: "Marian Jones, The Nation: oral history (2021)", url: "https://www.thenation.com/article/society/combahee-river-collective-oral-history/", quote: "the statement was written for a book, Zillah Eisenstein’s Capitalist Patriarchy and the Case for Socialist Feminism"}
+      - {title: "The Combahee River Collective Statement (April 1977), reprint in Yale American Studies reader", url: "https://americanstudies.yale.edu/sites/default/files/files/Keyword%20Coalition_Readings.pdf", quote: "\"The Combahee River Collective Statement,\" copyright © 1978 by Zillah Eisenstein."}
+    note: ""
+  - card: combahee-statement
+    fact: "It describes the major systems of oppression as interlocking"
+    verdict: confirmed
+    sources:
+      - {title: "The Combahee River Collective Statement (April 1977), reprint in Yale American Studies reader", url: "https://americanstudies.yale.edu/sites/default/files/files/Keyword%20Coalition_Readings.pdf", quote: "the major systems of oppression are interlocking"}
+      - {title: "Encyclopaedia Britannica: Combahee River Collective (archived 2024)", url: "https://www.britannica.com/topic/Combahee-River-Collective", quote: "coined terms such as identity politics and interlocking oppression"}
+    note: ""
+  - card: combahee-statement
+    fact: "It named its approach identity politics, with the quoted sentence; it put the phrase into circulation (wow and body)"
+    verdict: confirmed
+    sources:
+      - {title: "The Combahee River Collective Statement (April 1977), reprint in Yale American Studies reader", url: "https://americanstudies.yale.edu/sites/default/files/files/Keyword%20Coalition_Readings.pdf", quote: "This focusing upon our own oppression is embodied in the concept of identity politics. We believe that the most profound and potentially most radical politics come directly out of our own identity"}
+      - {title: "Marian Jones, The Nation: oral history (2021)", url: "https://www.thenation.com/article/society/combahee-river-collective-oral-history/", quote: "They coined the term “identity politics” to describe their unique position as Black women"}
+    note: ""
+  - card: combahee-statement
+    fact: "In 1979, during a series of murders of Black women in Boston, the collective issued pamphlets about the killings"
+    verdict: confirmed
+    sources:
+      - {title: "Arielle Gray, WBUR (2019)", url: "https://www.wbur.org/news/2019/06/10/boston-combahee-river-collective-intersectional-black-feminism", quote: "In 1979, the collective was spurred to action when 12 black women were murdered in Boston within the span of five months. This series of pamphlets was created by the Combahee River Collective"}
+      - {title: "Mariana Brandman, Massachusetts Women's History", url: "https://www.mawomenshistory.org/resources/articles/combahee-river-collective-pioneers-intersectional-feminism", quote: "In 1979, when 11 Black women and one white woman in Boston were found murdered in the span of five months ... The CRC also produced a pamphlet"}
+    note: ""
+  - card: combahee-statement
+    fact: "The collective marched in protest in 1979"
+    verdict: confirmed
+    sources:
+      - {title: "Mariana Brandman, Massachusetts Women's History", url: "https://www.mawomenshistory.org/resources/articles/combahee-river-collective-pioneers-intersectional-feminism", quote: "On April 28, 1979, together with other local progressive groups, they organized a 500-person march"}
+      - {title: "Keeanga-Yamahtta Taylor, The New Yorker (2020)", url: "https://www.newyorker.com/news/our-columnists/until-black-women-are-free-none-of-us-will-be-free", quote: "The members of the Combahee River Collective march down Massachusetts Avenue, Boston, at a 1979 memorial for murdered women of color."}
+    note: ""
+  - card: combahee-statement
+    fact: "The group stopped meeting around 1980 (see dispute)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Combahee River Collective (archived 2024)", url: "https://www.britannica.com/topic/Combahee-River-Collective", quote: "operated from 1974 to 1980"}
+      - {title: "Arielle Gray, WBUR (2019)", url: "https://www.wbur.org/news/2019/06/10/boston-combahee-river-collective-intersectional-black-feminism", quote: "The collective met regularly between 1974 to 1981."}
+    note: "Britannica 1974-1980; The New Yorker 'disbanded, in 1980'; WBUR 1974-1981; The Nation oral history: space at the Women's Center until spring 1981. Dispute line is accurate."
+  - card: combahee-statement
+    fact: "Identity politics became one of the most argued-over terms in American politics"
+    verdict: confirmed
+    sources:
+      - {title: "Keeanga-Yamahtta Taylor, The New Yorker (2020)", url: "https://www.newyorker.com/news/our-columnists/until-black-women-are-free-none-of-us-will-be-free", quote: "the C.R.C. pioneered the notion of “identity politics,” perhaps one of the most controversial and misunderstood terms in all of U.S. politics"}
+      - {title: "Encyclopaedia Britannica: Combahee River Collective (archived 2024)", url: "https://www.britannica.com/topic/Combahee-River-Collective", quote: "[terms] that have become popular lenses through which to understand political constituencies’ needs and preferences"}
+    note: ""
+
+  # ---------------- losing-ground ----------------
+  - card: losing-ground
+    fact: "Losing Ground is a 1982 feature by Kathleen Collins, one of the first Black women to direct a narrative feature"
+    verdict: confirmed
+    sources:
+      - {title: "Yale Library: Film Archive awarded Film Foundation grant to restore Kathleen Collins masterwork (2022)", url: "https://library.yale.edu/news/film-archive-awarded-film-foundation-grant-restore-kathleen-collins-masterwork", quote: "Losing Ground, the 1982 masterwork of the late Kathleen Collins ... One of the first Black women to direct a narrative feature film"}
+      - {title: "The Hollywood Reporter: National Film Registry 2020 (Library of Congress descriptions)", url: "https://www.hollywoodreporter.com/news/the-dark-knight-a-clockwork-orange-and-the-joy-luck-club-enter-national-film-registry", quote: "One of the first features directed by an African American woman"}
+    note: ""
+  - card: losing-ground
+    fact: "Sara (Seret Scott), a philosophy professor, researches the philosophical and religious meaning of ecstatic experience (wow and body)"
+    verdict: confirmed
+    sources:
+      - {title: "Yale Library: Film Archive awarded Film Foundation grant to restore Kathleen Collins masterwork (2022)", url: "https://library.yale.edu/news/film-archive-awarded-film-foundation-grant-restore-kathleen-collins-masterwork", quote: "stars Seret Scott as Sara Rogers, a professor of philosophy researching the philosophical and religious meaning of the “ecstatic experience”"}
+      - {title: "The Hollywood Reporter: National Film Registry 2020 (Library of Congress descriptions)", url: "https://www.hollywoodreporter.com/news/the-dark-knight-a-clockwork-orange-and-the-joy-luck-club-enter-national-film-registry", quote: "Sara (Seret Scott), an African American philosophy professor ... struggles to research the philosophical and religious meaning of ecstatic experience"}
+    note: ""
+  - card: losing-ground
+    fact: "Her husband Victor, a painter (Bill Gunn), has sold a painting to a museum and rents a house in the country; their summer idyll grows complicated"
+    verdict: corrected
+    sources:
+      - {title: "Yale Library: Film Archive awarded Film Foundation grant to restore Kathleen Collins masterwork (2022)", url: "https://library.yale.edu/news/film-archive-awarded-film-foundation-grant-restore-kathleen-collins-masterwork", quote: "Bill Gunn as her artist husband Victor, who rents a house in the country to celebrate his sale of a painting to a museum"}
+      - {title: "The Hollywood Reporter: National Film Registry 2020 (Library of Congress descriptions)", url: "https://www.hollywoodreporter.com/news/the-dark-knight-a-clockwork-orange-and-the-joy-luck-club-enter-national-film-registry", quote: "whose artist husband, Victor (Bill Gunn), rents a country house for a month to celebrate a recent museum sale. The couple’s summer idyll becomes complicated"}
+    note: "'For the summer' was not supported (the Library of Congress says a month); the card now says he rents a house in the country and keeps 'summer idyll' from the LoC description."
+  - card: losing-ground
+    fact: "Sara seeks to study ecstasy and to discover it for herself; the marriage unravels"
+    verdict: confirmed
+    sources:
+      - {title: "The Hollywood Reporter: National Film Registry 2020 (Library of Congress descriptions)", url: "https://www.hollywoodreporter.com/news/the-dark-knight-a-clockwork-orange-and-the-joy-luck-club-enter-national-film-registry", quote: "as Sara struggles to research the philosophical and religious meaning of ecstatic experience … and to discover it for herself"}
+      - {title: "Jourdain Searles, Hyperallergic (2022)", url: "https://hyperallergic.com/743670/kathleen-collins-losing-ground/", quote: "through her studies, she finds herself and her marriage unraveling"}
+    note: ""
+  - card: losing-ground
+    fact: "In 1982 the film had its premiere but was not picked up for theatrical distribution (wow and body)"
+    verdict: corrected
+    sources:
+      - {title: "Yale Library: Film Archive awarded Film Foundation grant to restore Kathleen Collins masterwork (2022)", url: "https://library.yale.edu/news/film-archive-awarded-film-foundation-grant-restore-kathleen-collins-masterwork", quote: "Losing Ground was premiered in June, 1982, at the Irvington, New York Town Hall Theater. It was not released theatrically"}
+      - {title: "Jourdain Searles, Hyperallergic (2022)", url: "https://hyperallergic.com/743670/kathleen-collins-losing-ground/", quote: "In 1982, when Kathleen Collins’s Losing Ground (her second feature) premiered at festivals, it was not picked up for theatrical distribution."}
+    note: "Yale says it premiered at the Irvington Town Hall Theater, Hyperallergic says at festivals; the card now says only that it premiered. 'Collins struggled to find money and distribution' rested on Yale alone and was removed."
+  - card: losing-ground
+    fact: "Collins died in 1988 at 46 and her work went largely unseen for years"
+    verdict: confirmed
+    sources:
+      - {title: "Yale Library: Film Archive awarded Film Foundation grant to restore Kathleen Collins masterwork (2022)", url: "https://library.yale.edu/news/film-archive-awarded-film-foundation-grant-restore-kathleen-collins-masterwork", quote: "whose work was largely unseen for decades after her death in 1988 at the age of 46"}
+      - {title: "Jourdain Searles, Hyperallergic (2022)", url: "https://hyperallergic.com/743670/kathleen-collins-losing-ground/", quote: "Since she died of breast cancer at just 46 in 1988, a good deal of this work went unreleased for years"}
+    note: ""
+  - card: losing-ground
+    fact: "Her daughter Nina Collins raised money to restore the film and worked with Milestone Films to release it; the restored film came back to the screen in 2015 (wow and body)"
+    verdict: corrected
+    sources:
+      - {title: "Yale Library: Film Archive awarded Film Foundation grant to restore Kathleen Collins masterwork (2022)", url: "https://library.yale.edu/news/film-archive-awarded-film-foundation-grant-restore-kathleen-collins-masterwork", quote: "Nina Collins raised funding for a partial restoration of her mother’s film and worked with Milestone Films to release it. ... In 2015, Milestone showed Losing Ground at a Lincoln Center Film Festival to great acclaim."}
+      - {title: "Jourdain Searles, Hyperallergic (2022)", url: "https://hyperallergic.com/743670/kathleen-collins-losing-ground/", quote: "The movie was restored in 2015 thanks to efforts by Collins’s daughter, Nina, with a physical release from Milestone Films coming the following year."}
+    note: "Yale calls the 2015 work a partial restoration (a full one was funded in 2022), so 'the restoration was completed in 2015' became 'the restored film came back to the screen in 2015'."
+  - card: losing-ground
+    fact: "Added to the National Film Registry in 2020"
+    verdict: confirmed
+    sources:
+      - {title: "Jourdain Searles, Hyperallergic (2022)", url: "https://hyperallergic.com/743670/kathleen-collins-losing-ground/", quote: "In 2020, it was added to the National Film Registry."}
+      - {title: "The Hollywood Reporter: National Film Registry 2020 (Library of Congress descriptions)", url: "https://www.hollywoodreporter.com/news/the-dark-knight-a-clockwork-orange-and-the-joy-luck-club-enter-national-film-registry", quote: "Kathleen Collins’ Losing Ground (1982) [among the 2020 National Film Registry selections]"}
+    note: ""
+  - card: losing-ground
+    fact: "A film by and about a Black woman intellectual"
+    verdict: confirmed
+    sources:
+      - {title: "Jourdain Searles, Hyperallergic (2022)", url: "https://hyperallergic.com/743670/kathleen-collins-losing-ground/", quote: "a film made by and about a Black intellectual woman in a complicated marriage"}
+    note: ""
+
+  # ---------------- dbc-pirate ----------------
+  - card: dbc-pirate
+    fact: "DBC was an unlicensed (pirate) London station of the early 1980s"
+    verdict: confirmed
+    sources:
+      - {title: "Apiento, Test Pressing (2009)", url: "https://testpressing.org/magazine/dread-broadcasting-corp", quote: "the first black music pirate station in the UK"}
+      - {title: "Lloyd Bradley, Red Bull Music Academy Daily (2018)", url: "https://daily.redbullmusicacademy.com/2018/04/a-tribute-to-dbc-lepke", quote: "pretty much every weekend during the early 1980s ... the advantages of being illegal"}
+    note: "RBMA (Lloyd Bradley, former DBC presenter and author of Sounds Like London) calls it a pirate station; Test Pressing calls it the first black music pirate station in the UK. The Wire adds that Lepke was arrested and the main transmitter confiscated."
+  - card: dbc-pirate
+    fact: "Reggae had little airtime on British radio; Lepke wanted more exposure for Black music"
+    verdict: confirmed
+    sources:
+      - {title: "The Wire: Dread Broadcasting Corporation founder Lepke has died (2018)", url: "https://www.thewire.co.uk/news/50350/dread-broadcasting-corporation-founder-lepke-has-died", quote: "So exposure for reggae music was only about a couple of hours a week, if that. ... a need for black music to get more exposure"}
+      - {title: "AM/FM (amfm.org.uk): DBC, The Dread Broadcasting Corporation", url: "https://www.amfm.org.uk/pirates/dbc-dread-broadcasting-corporation.html", quote: "Founder Lepke was frustrated at how reggae was shunted off into just a few token hours on the legal stations"}
+    note: "AM/FM added as the second independent source in place of DX Archive's general phrasing."
+  - card: dbc-pirate
+    fact: "Its founder was Leroy Anderson, known as Lepke"
+    verdict: confirmed
+    sources:
+      - {title: "The Wire: Dread Broadcasting Corporation founder Lepke has died (2018)", url: "https://www.thewire.co.uk/news/50350/dread-broadcasting-corporation-founder-lepke-has-died", quote: "Born Leroy Anderson, Lepke was the brother of radio presenter Ranking Miss P."}
+      - {title: "Lloyd Bradley, Red Bull Music Academy Daily (2018)", url: "https://daily.redbullmusicacademy.com/2018/04/a-tribute-to-dbc-lepke", quote: "Lepke, AKA Leroy George Anderson, set up the Dread Broadcast Corporation in 1981"}
+    note: ""
+  - card: dbc-pirate
+    fact: "In 1981 he acquired a medium-wave transmitter and strung its aerial up in his back garden in Neasden, north-west London (wow and body; see dispute)"
+    verdict: corrected
+    sources:
+      - {title: "The Wire: Dread Broadcasting Corporation founder Lepke has died (2018)", url: "https://www.thewire.co.uk/news/50350/dread-broadcasting-corporation-founder-lepke-has-died", quote: "In 1981 he acquired a medium wave transmitter from a friend ... Lepke took it [the transmitter] away and strung it up in his back garden in Neasden"}
+      - {title: "AM/FM (amfm.org.uk): DBC, The Dread Broadcasting Corporation", url: "https://www.amfm.org.uk/pirates/dbc-dread-broadcasting-corporation.html", quote: "He acquired a medium wave transmitter and in the autumn of 1980 began broadcasts from his home in Neasden."}
+    note: "'From a friend' rests only on a recollection quoted by The Wire and was dropped. Neasden is supported by The Wire and AM/FM (Stephen Hebditch's pirate-radio history site); Bradley confirms the back-garden mast. AM/FM dates the first broadcasts to autumn 1980, so the dispute line now names it."
+  - card: dbc-pirate
+    fact: "DBC is remembered as Britain's first Black-owned radio station; The Wire called it the first in Europe (wow and body)"
+    verdict: corrected
+    sources:
+      - {title: "AM/FM (amfm.org.uk): DBC, The Dread Broadcasting Corporation", url: "https://www.amfm.org.uk/pirates/dbc-dread-broadcasting-corporation.html", quote: "DBC was Britain's first black-owned radio station."}
+      - {title: "The Wire: Dread Broadcasting Corporation founder Lepke has died (2018)", url: "https://www.thewire.co.uk/news/50350/dread-broadcasting-corporation-founder-lepke-has-died", quote: "DBC (a play on the name BBC) was the first black owned radio station in Europe"}
+    note: "Card said 'first Black music pirate station', which only Test Pressing supports. Now 'first Black-owned radio station' (AM/FM; The Wire says first in Europe)."
+  - card: dbc-pirate
+    fact: "Reggae was its core, alongside R&B, soul, funk and African music"
+    verdict: corrected
+    sources:
+      - {title: "Lloyd Bradley, Red Bull Music Academy Daily (2018)", url: "https://daily.redbullmusicacademy.com/2018/04/a-tribute-to-dbc-lepke", quote: "complemented by an R&B and ska show, soul ’n’ funk, African music and calypso, all treated with the same respect and seriousness as the station’s bedrock roots reggae"}
+      - {title: "AM/FM (amfm.org.uk): DBC, The Dread Broadcasting Corporation", url: "https://www.amfm.org.uk/pirates/dbc-dread-broadcasting-corporation.html", quote: "it carried a wide range of black music styles. There were Dr Martin and Smiley with rhythm & blues ... G.T. and E.D. with soul and funk, Gus Dada Africa with African music"}
+    note: "Calypso appears only in Bradley's piece and was dropped; R&B, soul, funk and African music are in both Bradley and AM/FM."
+  - card: dbc-pirate
+    fact: "The station later moved to FM"
+    verdict: confirmed
+    sources:
+      - {title: "DX Archive: Dread Broadcasting Corporation / JBC", url: "https://www.dxarchive.com/landbased_uk_london_dbc-jbc.html", quote: "The station later moved to FM"}
+      - {title: "Lloyd Bradley, Red Bull Music Academy Daily (2018)", url: "https://daily.redbullmusicacademy.com/2018/04/a-tribute-to-dbc-lepke", quote: "those we could reach across most of London when we went FM"}
+    note: ""
+  - card: dbc-pirate
+    fact: "Its jingle: tune in if yuh rankin'"
+    verdict: confirmed
+    sources:
+      - {title: "Lloyd Bradley, Red Bull Music Academy Daily (2018)", url: "https://daily.redbullmusicacademy.com/2018/04/a-tribute-to-dbc-lepke", quote: "Tune in if yuh rankin’…"}
+      - {title: "Apiento, Test Pressing (2009)", url: "https://testpressing.org/magazine/dread-broadcasting-corp", quote: "As Lepke said: 'tune in if yu rankin'."}
+    note: "Bradley quotes the jingle; Test Pressing quotes Lepke saying it. Test Pressing is an interview-based music-press piece, the weaker of the two."
+  - card: dbc-pirate
+    fact: "When DBC stopped, some of its DJs carried on as JBC"
+    verdict: confirmed
+    sources:
+      - {title: "The Wire: Dread Broadcasting Corporation founder Lepke has died (2018)", url: "https://www.thewire.co.uk/news/50350/dread-broadcasting-corporation-founder-lepke-has-died", quote: "Once DBC stopped transmitting some of its DJs joined JBC."}
+      - {title: "DX Archive: Dread Broadcasting Corporation / JBC", url: "https://www.dxarchive.com/landbased_uk_london_dbc-jbc.html", quote: "following closure around 1984, some of the presenters carried on the station under the name JBC"}
+    note: ""
+  - card: dbc-pirate
+    fact: "Lepke died in March 2018"
+    verdict: confirmed
+    sources:
+      - {title: "The Wire: Dread Broadcasting Corporation founder Lepke has died (2018)", url: "https://www.thewire.co.uk/news/50350/dread-broadcasting-corporation-founder-lepke-has-died", quote: "DJ Lepke, founder of Dread Broadcasting Corporation (DBC), died on 14 March. [published 25 March 2018]"}
+      - {title: "Lloyd Bradley, Red Bull Music Academy Daily (2018)", url: "https://daily.redbullmusicacademy.com/2018/04/a-tribute-to-dbc-lepke", quote: "when Leroy passed away in late March of this year [April 2018]"}
+    note: ""
+
+  # ---------------- rivers-of-babylon ----------------
+  - card: rivers-of-babylon
+    fact: "Rivers of Babylon is a reggae song by the Melodians of Kingston, a group that included Brent Dowe and McNaughton, made with the producer Leslie Kong; sources give 1967 or 1971 (see dispute)"
+    verdict: corrected
+    sources:
+      - {title: "Tony Cummings, Cross Rhythms: Rivers of Babylon, the unlikely history of a pop hit based on Psalm 137 (2013)", url: "https://www.crossrhythms.co.uk/articles/music/Rivers_Of_Babylon_The_unlikely_history_of_a_pop_hit_based_on_Psalm_137/50257/p1/", quote: "in 1967 the group took the song \"Rivers Of Babylon\" to record producer Leslie Kong ... it was The Melodians’ Brent Dowe and Trevor McNaughton who claimed composer credits"}
+      - {title: "Michael Garnice, Library of Congress NRR essay: The Harder They Come", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/The-Harder-They-Come_Garnice.pdf", quote: "“Rivers of Babylon,” from 1971, is by vocal duo The Melodians (Brent Dowe and James McNaughton), again backed by The Dynamites and Leslie Kong"}
+    note: "'At the turn of the 1970s' contradicted the 1967 date in the dispute; the body now says sources give 1967 or 1971. The composer-credit sentence was removed (Cross Rhythms alone)."
+  - card: rivers-of-babylon
+    fact: "Rastafari was popular among Kingston's musicians by then"
+    verdict: confirmed
+    sources:
+      - {title: "Cross Rhythms: Rivers of Babylon, the unlikely history of a pop hit based on Psalm 137", url: "https://www.crossrhythms.co.uk/articles/music/Rivers_Of_Babylon_The_unlikely_history_of_a_pop_hit_based_on_Psalm_137/50257/p1/", quote: "proved particularly popular among the rocksteady and reggae musicians who by the 1960s were performing and recording regularly in Kingston, Jamaica"}
+      - {title: "Encyclopaedia Britannica: Bob Marley (archived 2024)", url: "https://www.britannica.com/biography/Bob-Marley", quote: "the Wailers’ Rastafari faith, a creed popular among the impoverished people of the Caribbean"}
+    note: ""
+  - card: rivers-of-babylon
+    fact: "Its words adapt Psalm 137 and Psalm 19:14 (wow and body)"
+    verdict: confirmed
+    sources:
+      - {title: "Michael Garnice, Library of Congress NRR essay: The Harder They Come", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/The-Harder-They-Come_Garnice.pdf", quote: "these sentiments are expressed by adapting from the Bible passages Psalm 19:14 and Psalm 137:1"}
+      - {title: "Cross Rhythms: Rivers of Babylon, the unlikely history of a pop hit based on Psalm 137", url: "https://www.crossrhythms.co.uk/articles/music/Rivers_Of_Babylon_The_unlikely_history_of_a_pop_hit_based_on_Psalm_137/50257/p1/", quote: "Another Scripture, Psalm 19 verse 14 \"Let the words of my mouth and the meditation of my heart be acceptable in thy sight,\" were used for another verse"}
+    note: ""
+  - card: rivers-of-babylon
+    fact: "Rastafarians, drawing on the Babylonian captivity, saw people of African descent in the Americas as exiles in Babylon longing for freedom"
+    verdict: corrected
+    sources:
+      - {title: "Encyclopaedia Britannica: Rastafari (archived 2026)", url: "https://www.britannica.com/topic/Rastafari", quote: "Drawing from Old Testament stories, especially the Israelites’ enslavement in Exodus and their exile from Palestine in the Babylonian Captivity, Rastas “overstand” ... people of African descent in the Americas and around the world to be “exiles in Babylon.”"}
+      - {title: "Tony Cummings, Cross Rhythms: Rivers of Babylon, the unlikely history of a pop hit based on Psalm 137 (2013)", url: "https://www.crossrhythms.co.uk/articles/music/Rivers_Of_Babylon_The_unlikely_history_of_a_pop_hit_based_on_Psalm_137/50257/p1/", quote: "\"By the rivers of Babylon\", according to Rastafarians' imaginative interpretation, refers to living in a repressive society and the longing for freedom, just like the Israelites in captivity"}
+    note: "'Babylon is any oppressive or unjust government, and in Jamaica the police' rested on Cross Rhythms alone (the LoC essay speaks only of Rastafarian beliefs and social justice) and was replaced by the exile reading, which Britannica's Rastafari entry supports."
+  - card: rivers-of-babylon
+    fact: "In the Melodians' hands the lament became a song of Rastafarian faith (wow: Rastafarian reggae song)"
+    verdict: corrected
+    sources:
+      - {title: "Tony Cummings, Cross Rhythms: Rivers of Babylon, the unlikely history of a pop hit based on Psalm 137 (2013)", url: "https://www.crossrhythms.co.uk/articles/music/Rivers_Of_Babylon_The_unlikely_history_of_a_pop_hit_based_on_Psalm_137/50257/p1/", quote: "The Melodians' recording of \"Rivers Of Babylon\" became a hit in Jamaica and was seen as something of a Rastafarian anthem."}
+      - {title: "Michael Garnice, Library of Congress NRR essay: The Harder They Come", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/The-Harder-They-Come_Garnice.pdf", quote: "Such lyrics were concerned with Rastafarian religious beliefs and issues of social justice."}
+    note: "'Came to be heard as a Rastafarian anthem' rested on Cross Rhythms alone; the card now says it became a song of Rastafarian faith, which both sources support."
+  - card: rivers-of-babylon
+    fact: "It reached audiences abroad on The Harder They Come soundtrack (1972)"
+    verdict: confirmed
+    sources:
+      - {title: "Cross Rhythms: Rivers of Babylon, the unlikely history of a pop hit based on Psalm 137", url: "https://www.crossrhythms.co.uk/articles/music/Rivers_Of_Babylon_The_unlikely_history_of_a_pop_hit_based_on_Psalm_137/50257/p1/", quote: "The group’s recording finally found something of an international audience when used in the reggae orientated crime film starring Jimmy Cliff, The Harder They Come which came out in 1972."}
+      - {title: "Michael Garnice, Library of Congress NRR essay: The Harder They Come", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/The-Harder-They-Come_Garnice.pdf", quote: "[the song is discussed as a track of] “The Harder They Come”--Jimmy Cliff, et.al. (1972)"}
+    note: ""
+  - card: rivers-of-babylon
+    fact: "In 1978 Frank Farian had his group Boney M record it"
+    verdict: confirmed
+    sources:
+      - {title: "Cross Rhythms: Rivers of Babylon, the unlikely history of a pop hit based on Psalm 137", url: "https://www.crossrhythms.co.uk/articles/music/Rivers_Of_Babylon_The_unlikely_history_of_a_pop_hit_based_on_Psalm_137/50257/p1/", quote: "It was in 1978 though that the song found an international pop audience when producer Frank Farian got his studio creation Boney M to cover the song."}
+      - {title: "Encyclopaedia Britannica: Boney M (archived 2024)", url: "https://www.britannica.com/topic/Boney-M", quote: "Boney M, a foursome from the Caribbean (via Britain and the Netherlands) brought together by German producer Frank Farian"}
+    note: ""
+  - card: rivers-of-babylon
+    fact: "Boney M's version entered the UK chart on 29 April 1978, reached number one on 13 May, 40 weeks on chart (wow: UK number one)"
+    verdict: confirmed
+    sources:
+      - {title: "Official Charts: Rivers of Babylon / Brown Girl in the Ring, chart history", url: "https://officialcharts.com/songs/boney-m-rivers-of-babylonbrown-girl-in-the-ring", quote: "Peak position 1 ... First Chart Date 29/04/1978 ... 40 weeks - 29/04/1978 to 27/01/1979 ... 13/05/1978 peak"}
+      - {title: "Cross Rhythms: Rivers of Babylon, the unlikely history of a pop hit based on Psalm 137", url: "https://www.crossrhythms.co.uk/articles/music/Rivers_Of_Babylon_The_unlikely_history_of_a_pop_hit_based_on_Psalm_137/50257/p1/", quote: "In 1978 the Germany-based pop disco group Boney M made number one in the UK charts with \"Rivers Of Babylon\""}
+    note: "Dates and weeks come from the Official Charts Company archive (a primary chart record); Cross Rhythms independently confirms the 1978 UK number one."
+
+  # ---------------- yeke-yeke ----------------
+  - card: yeke-yeke
+    fact: "Ye ke ye ke is a 1987 single by Mory Kante, singer and kora player from Guinea"
+    verdict: confirmed
+    sources:
+      - {title: "The New York Times (2020), quoted by ArtsJournal", url: "https://artsjournal.org/?p=224110", quote: "[His] 1987 single “Yé Ké Yé Ké” was a hit"}
+      - {title: "Calum Slingerland, Exclaim! (2020)", url: "https://exclaim.ca/music/article/african_music_star_mory_kant_dies_at_70", quote: "known internationally for 1987 hit \"Yé ké yé ké\""}
+    note: ""
+  - card: yeke-yeke
+    fact: "The kora is the West African harp of the griots, hereditary musicians whose songs carry news and history; Kante was born into a griot family (wow and body)"
+    verdict: confirmed
+    sources:
+      - {title: "The New York Times (2020), quoted by ArtsJournal", url: "https://artsjournal.org/?p=224110", quote: "[He] came from a family of griots, the dynastic West African musicians whose songs carry news and chronicle history ... the kora, the traditional griot’s harp"}
+      - {title: "Robin Denselow, The Guardian obituary (2020), via Yahoo News", url: "https://sg.news.yahoo.com/mory-kant-obituary-163911795.html", quote: "Kanté came from a jali or griot family of hereditary musicians and historians ... the kora, the ancient west African harp"}
+    note: ""
+  - card: yeke-yeke
+    fact: "He was sent to Mali to continue his training"
+    verdict: confirmed
+    sources:
+      - {title: "Calum Slingerland, Exclaim! (2020)", url: "https://exclaim.ca/music/article/african_music_star_mory_kant_dies_at_70", quote: "At age seven, he was sent to Mali to learn vocals and the kora harp"}
+      - {title: "Robin Denselow, The Guardian obituary (2020), via Yahoo News", url: "https://sg.news.yahoo.com/mory-kant-obituary-163911795.html", quote: "at 15 was sent to Bamako, the Malian capital, to live with his aunt ... Here he continued his griot education"}
+    note: ""
+  - card: yeke-yeke
+    fact: "In Bamako he joined the Rail Band and took over as lead singer when Salif Keita left"
+    verdict: confirmed
+    sources:
+      - {title: "Calum Slingerland, Exclaim! (2020)", url: "https://exclaim.ca/music/article/african_music_star_mory_kant_dies_at_70", quote: "Kanté would join Mali’s Rail Band in 1971, becoming the group’s vocalist upon the departure of Salif Keita"}
+      - {title: "Robin Denselow, The Guardian obituary (2020), via Yahoo News", url: "https://sg.news.yahoo.com/mory-kant-obituary-163911795.html", quote: "Salif Keita was their star vocalist, and Kanté was hired to play the balafon and guitar"}
+    note: ""
+  - card: yeke-yeke
+    fact: "He later settled in Paris"
+    verdict: confirmed
+    sources:
+      - {title: "Calum Slingerland, Exclaim! (2020)", url: "https://exclaim.ca/music/article/african_music_star_mory_kant_dies_at_70", quote: "He would make a move to Paris in 1980"}
+      - {title: "Robin Denselow, The Guardian obituary (2020), via Yahoo News", url: "https://sg.news.yahoo.com/mory-kant-obituary-163911795.html", quote: "in 1984 he moved to Paris, where he eventually achieved his goal"}
+    note: "Exclaim! gives 1980, the Guardian 1984; the card says only 'later'."
+  - card: yeke-yeke
+    fact: "The song was released as a single from Akwaba Beach"
+    verdict: confirmed
+    sources:
+      - {title: "Calum Slingerland, Exclaim! (2020)", url: "https://exclaim.ca/music/article/african_music_star_mory_kant_dies_at_70", quote: "Released as a single from his third studio album, Akwaba Beach"}
+    note: "Songlines (Denselow) is independent of Exclaim!; the Guardian, by the same author, is not used here."
+  - card: yeke-yeke
+    fact: "He played an amplified kora with the instruments of Western pop (wow: plugged in the kora)"
+    verdict: confirmed
+    sources:
+      - {title: "The New York Times (2020), quoted by ArtsJournal", url: "https://artsjournal.org/?p=224110", quote: "he electrified the kora, the traditional griot’s harp, and he fused African music with styles and instruments from Western pop"}
+      - {title: "Robin Denselow, The Guardian obituary (2020), via Yahoo News", url: "https://sg.news.yahoo.com/mory-kant-obituary-163911795.html", quote: "Kanté played an amplified version of the instrument, which was matched against a stomping bass line, brass, drums"}
+    note: ""
+  - card: yeke-yeke
+    fact: "He was nicknamed the electronic griot"
+    verdict: confirmed
+    sources:
+      - {title: "Calum Slingerland, Exclaim! (2020)", url: "https://exclaim.ca/music/article/african_music_star_mory_kant_dies_at_70", quote: "earning himself the nickname \"the electronic griot.\""}
+      - {title: "The Star (Kenya), from BBC (2020)", url: "https://www.the-star.co.ke/news/2020-05-23-mory-kant-african-music-star-who-sang-yk-yk-dies-aged-70/", quote: "he had been nicknamed \"the electronic griot\""}
+    note: "The Guardian and Songlines (Denselow) say 'electric griot'."
+  - card: yeke-yeke
+    fact: "A hit first in Africa and then across Europe"
+    verdict: confirmed
+    sources:
+      - {title: "The New York Times (2020), quoted by ArtsJournal", url: "https://artsjournal.org/?p=224110", quote: "was a hit, first in Africa and then across Europe"}
+      - {title: "Calum Slingerland, Exclaim! (2020)", url: "https://exclaim.ca/music/article/african_music_star_mory_kant_dies_at_70", quote: "became a top five hit in France, Switzerland, Germany and the Netherlands"}
+    note: ""
+  - card: yeke-yeke
+    fact: "First African single to sell more than a million copies (wow and body)"
+    verdict: confirmed
+    sources:
+      - {title: "The New York Times (2020), quoted by ArtsJournal", url: "https://artsjournal.org/?p=224110", quote: "It became the first African single to sell more than a million copies"}
+      - {title: "Calum Slingerland, Exclaim! (2020)", url: "https://exclaim.ca/music/article/african_music_star_mory_kant_dies_at_70", quote: "the song was the first African single to sell more than one million copies"}
+    note: ""
+  - card: yeke-yeke
+    fact: "Kante died in Conakry in May 2020, aged 70"
+    verdict: confirmed
+    sources:
+      - {title: "Calum Slingerland, Exclaim! (2020)", url: "https://exclaim.ca/music/article/african_music_star_mory_kant_dies_at_70", quote: "Published May 22, 2020 ... he passed in Conakry, Guinea ... He was 70."}
+      - {title: "The Star (Kenya), from BBC (2020)", url: "https://www.the-star.co.ke/news/2020-05-23-mory-kant-african-music-star-who-sang-yk-yk-dies-aged-70/", quote: "Kanté died in hospital on Friday in the capital, Conakry, aged 70 [2020-05-23]"}
+    note: "Exclaim! and the BBC both rely on AFP's call to his son and count as one source; the Guardian obituary (born 1950, died 22 May 2020, aged 70, home in Conakry) is the independent second."
+
+  # ---------------- yeelen ----------------
+  - card: yeelen
+    fact: "Yeelen's title means brightness or light"
+    verdict: confirmed
+    sources:
+      - {title: "Sarah Jilani, ArtReview (2025)", url: "https://artreview.com/malian-filmmaker-souleymane-cisse-1940-2025-taught-us-how-to-see-obituary-sarah-jilani-opinion-african-cinema", quote: "Translating as ‘Brightness’ or ‘Light’"}
+      - {title: "Festival de Cannes: Yeelen", url: "https://www.festival-cannes.com/f/yeelen/", quote: "YEELEN (LA LUMIÈRE)"}
+    note: ""
+  - card: yeelen
+    fact: "A 1987 feature by the Malian Souleymane Cisse drawn from Bambara legends (wow and body)"
+    verdict: confirmed
+    sources:
+      - {title: "Al Jazeera (2025)", url: "https://www.aljazeera.com/news/2025/2/20/mali-filmmaker-souleymane-cisse-father-of-african-cinema-dies-at-age-84", quote: "“Yeelen” (“Brightness”), which draws on legends from west Africa’s Bambara people"}
+      - {title: "Ministère de la Culture: Hommage de Rachida Dati à Souleymane Cissé (2025)", url: "https://www.culture.gouv.fr/presse/communiques-de-presse/hommage-de-madame-rachida-dati-ministre-de-la-culture-a-monsieur-souleymane-cisse", quote: "Yeelen (La Lumière) mêlant quête initiatique et traditions bambaras"}
+    note: "Al Jazeera and allAfrica (RFI) share agency wording and count as one source."
+  - card: yeelen
+    fact: "Cissé was born in 1940 in what is now Mali, then a French colony"
+    verdict: corrected
+    sources:
+      - {title: "Sarah Jilani, ArtReview (2025)", url: "https://artreview.com/malian-filmmaker-souleymane-cisse-1940-2025-taught-us-how-to-see-obituary-sarah-jilani-opinion-african-cinema", quote: "Born in 1940 in Bamako under French colonial rule"}
+      - {title: "Ministère de la Culture: Hommage de Rachida Dati à Souleymane Cissé (2025)", url: "https://www.culture.gouv.fr/presse/communiques-de-presse/hommage-de-madame-rachida-dati-ministre-de-la-culture-a-monsieur-souleymane-cisse", quote: "Né en 1940 au Mali"}
+    note: "'Born in Bamako' rests on ArtReview alone; now 'born in 1940 in what is now Mali, then a French colony'."
+  - card: yeelen
+    fact: "He studied film at the state film institute in Moscow"
+    verdict: confirmed
+    sources:
+      - {title: "Sarah Jilani, ArtReview (2025)", url: "https://artreview.com/malian-filmmaker-souleymane-cisse-1940-2025-taught-us-how-to-see-obituary-sarah-jilani-opinion-african-cinema", quote: "a free filmmaking education at the Gerasimov Institute of Cinematography in Moscow (VGIK)"}
+      - {title: "CNC: Souleymane Cissé, disparition d'une légende du cinéma africain (2025)", url: "https://www.cnc.fr/cinema/actualites/souleymane-cisse-disparition-dune-legende-du-cinema-africain_2347072", quote: "Souleymane Cissé part alors se former à l’Institut national de la cinématographie de Moscou dont il ressort diplômé en 1969"}
+    note: ""
+  - card: yeelen
+    fact: "His earlier features dealt with work, power and youth in modern Mali"
+    verdict: corrected
+    sources:
+      - {title: "Ministère de la Culture: Hommage de Rachida Dati à Souleymane Cissé (2025)", url: "https://www.culture.gouv.fr/presse/communiques-de-presse/hommage-de-madame-rachida-dati-ministre-de-la-culture-a-monsieur-souleymane-cisse", quote: "Avec Baara (Le Travail) en 1978 ... Finyé (Le Vent) en 1982, un portrait saisissant de la jeunesse malienne"}
+      - {title: "Sarah Jilani, ArtReview (2025)", url: "https://artreview.com/malian-filmmaker-souleymane-cisse-1940-2025-taught-us-how-to-see-obituary-sarah-jilani-opinion-african-cinema", quote: "His second feature Baara (1978) ... Baara – Bambara for ‘Work’ ... The incendiary films of the late pioneer of African cinema do not merely critique power ... the student activists [of Finye]"}
+    note: "The African Studies Centre Leiden page states that it is taken from Wikipedia and was removed from the card's sources; ArtReview replaces it."
+  - card: yeelen
+    fact: "Plot: Nianankoro seeks the magic powers his sorcerer father refuses to pass on for fear of an equal; the father pursues him (wow and body)"
+    verdict: corrected
+    sources:
+      - {title: "CNC: Souleymane Cissé, disparition d'une légende du cinéma africain (2025)", url: "https://www.cnc.fr/cinema/actualites/souleymane-cisse-disparition-dune-legende-du-cinema-africain_2347072", quote: "l’histoire d’un jeune homme qui entreprend un long voyage à travers le Mali pour acquérir les pouvoirs magiques de la tradition Bambara que son père refuse de lui donner, par peur de le voir devenir son égal"}
+      - {title: "New York State Writers Institute, University at Albany: Film notes, Yeelen", url: "https://www.albany.edu/writers-inst/webpages4/filmnotes/fns05n4.html", quote: "His father, Soma, a priest who has become corrupted from exposure to the soul-changing power of his magic, pursues him"}
+    note: "The pursuit (wow: 'pursued by his sorcerer father') had no source in the original ledger; Sight and Sound (1988) and the Albany film notes now support it."
+  - card: yeelen
+    fact: "Set across the landscapes of the Sahel"
+    verdict: confirmed
+    sources:
+      - {title: "Sarah Jilani, ArtReview (2025)", url: "https://artreview.com/malian-filmmaker-souleymane-cisse-1940-2025-taught-us-how-to-see-obituary-sarah-jilani-opinion-african-cinema", quote: "vast Sahelian la[ndscapes]"}
+      - {title: "Festival de Cannes: Yeelen", url: "https://www.festival-cannes.com/f/yeelen/", quote: "Une sécheresse atroce sévit dans tout le Sahel."}
+    note: ""
+  - card: yeelen
+    fact: "It won the Jury Prize at Cannes in 1987 (wow and body)"
+    verdict: confirmed
+    sources:
+      - {title: "Festival de Cannes: Yeelen", url: "https://www.festival-cannes.com/f/yeelen/", quote: "Prix du Jury (Ex-aequo) 1987"}
+      - {title: "CNC: Souleymane Cissé, disparition d'une légende du cinéma africain (2025)", url: "https://www.cnc.fr/cinema/actualites/souleymane-cisse-disparition-dune-legende-du-cinema-africain_2347072", quote: "Il y est reparti couronné du prix du Jury, présidé par Yves Montand, pour Yeelen (La Lumière) en 1987"}
+    note: "ASC Leiden (Wikipedia-based) replaced by the CNC and the Ministry of Culture."
+  - card: yeelen
+    fact: "Cisse was the first filmmaker from sub-Saharan Africa to win a prize at Cannes (wow and body; see dispute)"
+    verdict: confirmed
+    sources:
+      - {title: "CNC: Souleymane Cissé, disparition d'une légende du cinéma africain (2025)", url: "https://www.cnc.fr/cinema/actualites/souleymane-cisse-disparition-dune-legende-du-cinema-africain_2347072", quote: "film qui fit de lui le premier cinéaste d’Afrique subsaharienne à être primé au Festival de Cannes en 1987"}
+      - {title: "Melody Chironda, allAfrica (2025)", url: "https://allafrica.com/stories/202502200398.html", quote: "the first Black African director to win a feature film award at the Cannes Film Festival"}
+    note: "The dispute was removed: its 'first African film' side came from the ASC Leiden page, which is copied from Wikipedia."
+  - card: yeelen
+    fact: "In 2023 the Directors' Fortnight gave him the Carrosse d'Or"
+    verdict: confirmed
+    sources:
+      - {title: "Ministère de la Culture: Hommage de Rachida Dati à Souleymane Cissé (2025)", url: "https://www.culture.gouv.fr/presse/communiques-de-presse/hommage-de-madame-rachida-dati-ministre-de-la-culture-a-monsieur-souleymane-cisse", quote: "En 2023, la Quinzaine des cinéastes lui avait remis le prestigieux prix du Carrosse d’or"}
+      - {title: "Al Jazeera (2025)", url: "https://www.aljazeera.com/news/2025/2/20/mali-filmmaker-souleymane-cisse-father-of-african-cinema-dies-at-age-84", quote: "In 2023, Cannes honoured him again with the Carrosse d’Or"}
+    note: ""
+  - card: yeelen
+    fact: "He died at a clinic in Bamako in February 2025, aged 84"
+    verdict: confirmed
+    sources:
+      - {title: "Melody Chironda, allAfrica, from RFI (2025)", url: "https://allafrica.com/stories/202502200398.html", quote: "died at a Bamako clinic aged 84 [20 February 2025]"}
+      - {title: "Sarah Jilani, ArtReview (2025)", url: "https://artreview.com/malian-filmmaker-souleymane-cisse-1940-2025-taught-us-how-to-see-obituary-sarah-jilani-opinion-african-cinema", quote: "His death on Wednesday at a clinic in Bamako, Mali at the age of eighty-four"}
+    note: "ASC Leiden removed."
+  - card: yeelen
+    fact: "Just before he was due in Ouagadougou to chair the FESPACO jury"
+    verdict: confirmed
+    sources:
+      - {title: "Sarah Jilani, ArtReview (2025)", url: "https://artreview.com/malian-filmmaker-souleymane-cisse-1940-2025-taught-us-how-to-see-obituary-sarah-jilani-opinion-african-cinema", quote: "Cissé had been due to fly to Burkina Faso capital’s Ouagadougou the very next day to chair the jury at the 29th edition of FESPACO"}
+      - {title: "CNC: Souleymane Cissé, disparition d'une légende du cinéma africain (2025)", url: "https://www.cnc.fr/cinema/actualites/souleymane-cisse-disparition-dune-legende-du-cinema-africain_2347072", quote: "décédé à 84 ans, trois jours avant qu’il ne prenne la présidence du jury « fiction long métrage » du 29e Fespaco à Ouagadougou"}
+    note: "ArtReview (due to fly the next day) and the CNC (three days before taking up the jury presidency) do not contradict each other; the timing half of the dispute was removed."
+
+  # ---------------- rappers-delight ----------------
+  - card: rappers-delight
+    fact: "Rapper's Delight (1979) by the Sugarhill Gang carried rap onto the pop charts"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: The Sugarhill Gang (archived 2024)", url: "https://www.britannica.com/topic/the-Sugarhill-Gang", quote: "“Rapper’s Delight” (1979), which was the first rap song to achieve mainstream success on the pop charts"}
+      - {title: "Kim Bellware, The Washington Post via The Spokesman-Review (2023)", url: "https://spokesman.com/stories/2023/aug/08/the-unlikely-origins-of-rappers-delight-hip-hops-f", quote: "It was the first time a rap song had crossed over to major mainstream success."}
+    note: ""
+  - card: rappers-delight
+    fact: "Hip-hop then lived at parties and on street corners in New York"
+    verdict: confirmed
+    sources:
+      - {title: "Bo Emerson, Atlanta Journal-Constitution (2020)", url: "https://www.ajc.com/entertainment/music/rapper-delight-1979-song-introduced-rap-mass-audience/53RFZotbExCc2GDI1w6VpK", quote: "Hip-hop was happening, in dance halls, at high school gyms and on street corners in Queens, Brooklyn and the Bronx."}
+      - {title: "Encyclopaedia Britannica: The Sugarhill Gang (archived 2024)", url: "https://www.britannica.com/topic/the-Sugarhill-Gang", quote: "hip-hop, a musical and cultural movement that originated in the Black urban underground scene"}
+    note: ""
+  - card: rappers-delight
+    fact: "Sylvia and Joe Robinson faced bankruptcy as All Platinum collapsed (wow and body)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: The Sugarhill Gang (archived 2024)", url: "https://www.britannica.com/topic/the-Sugarhill-Gang", quote: "Faced with impending financial bankruptcy, the Robinsons dissolved their All Platinum label and reorganized it as Sugar Hill Records"}
+      - {title: "Kim Bellware, The Washington Post via The Spokesman-Review (2023)", url: "https://spokesman.com/stories/2023/aug/08/the-unlikely-origins-of-rappers-delight-hip-hops-f", quote: "the 43-year-old Robinson and her husband, Joe, were facing bankruptcy after the collapse of their label, All Platinum Records"}
+    note: ""
+  - card: rappers-delight
+    fact: "Sylvia Robinson was a record-business veteran"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Sugar Hill Records (archived 2024)", url: "https://www.britannica.com/topic/Sugar-Hill-Records", quote: "Launched in 1979 by industry veterans Sylvia and Joe Robinson"}
+      - {title: "Encyclopaedia Britannica: The Sugarhill Gang (archived 2024)", url: "https://www.britannica.com/topic/the-Sugarhill-Gang", quote: "Robinson, formerly half of rhythm and blues (R&B) duo Mickey & Sylvia, was the founder of All Platinum Records"}
+    note: ""
+  - card: rappers-delight
+    fact: "Sugar Hill Records was based in Englewood, New Jersey, and named after a Harlem neighbourhood"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Sugar Hill Records (archived 2024)", url: "https://www.britannica.com/topic/Sugar-Hill-Records", quote: "Sugar Hill Records, based in Englewood, New Jersey, was named after the upmarket section of Harlem"}
+      - {title: "Kim Bellware, The Washington Post via The Spokesman-Review (2023)", url: "https://spokesman.com/stories/2023/aug/08/the-unlikely-origins-of-rappers-delight-hip-hops-f", quote: "christening them the Sugarhill Gang – named after a wealthy neighborhood in Harlem ... Jersey-based producer Sylvia Robinson"}
+    note: ""
+  - card: rappers-delight
+    fact: "Robinson assembled three unknowns: Wonder Mike, Master Gee and Big Bank Hank (wow and body)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: The Sugarhill Gang (archived 2024)", url: "https://www.britannica.com/topic/the-Sugarhill-Gang", quote: "The group was formed in Englewood, New Jersey, in 1979 when record producer Sylvia Robinson decided to put together a group ... None of the group members had professionally rapped before"}
+      - {title: "Kim Bellware, The Washington Post via The Spokesman-Review (2023)", url: "https://spokesman.com/stories/2023/aug/08/the-unlikely-origins-of-rappers-delight-hip-hops-f", quote: "For Sugarhill Gang members Big Bank Hank, Wonder Mike and Master Gee, their whirlwind origin story started outside a New Jersey pizza parlor"}
+    note: ""
+  - card: rappers-delight
+    fact: "She found Big Bank Hank working at a pizza parlour in Englewood"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: The Sugarhill Gang (archived 2024)", url: "https://www.britannica.com/topic/the-Sugarhill-Gang", quote: "Big Bank Hank worked at a pizza parlor in Englewood, where the auditions took place."}
+      - {title: "Kim Bellware, The Washington Post via The Spokesman-Review (2023)", url: "https://spokesman.com/stories/2023/aug/08/the-unlikely-origins-of-rappers-delight-hip-hops-f", quote: "Robinson discovered Henry “Big Bank Hank” Jackson when he was rapping over tapes while working at the Crispy Crust pizza joint in Englewood."}
+    note: ""
+  - card: rappers-delight
+    fact: "Recorded in a single take"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: The Sugarhill Gang (archived 2024)", url: "https://www.britannica.com/topic/the-Sugarhill-Gang", quote: "recorded their first song, “Rapper’s Delight,” in the summer of 1979 in one take"}
+      - {title: "Kim Bellware, The Washington Post via The Spokesman-Review (2023)", url: "https://spokesman.com/stories/2023/aug/08/the-unlikely-origins-of-rappers-delight-hip-hops-f", quote: "it was laid down in a single take"}
+    note: ""
+  - card: rappers-delight
+    fact: "Over the bass line of Chic's Good Times (wow and body)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: The Sugarhill Gang (archived 2024)", url: "https://www.britannica.com/topic/the-Sugarhill-Gang", quote: "Chic’s “Good Times,” supplied the bass line that underlies the rest of “Rapper’s Delight.”"}
+      - {title: "Eric Reese, Library of Congress NRR essay: Rapper's Delight", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RappersDelight.pdf", quote: "the song opened with Bernard Edward’s distinctive bass line from Chic’s “Good Times,”"}
+    note: ""
+  - card: rappers-delight
+    fact: "Some of Hank's rhymes were written by Grandmaster Caz, who was left off the credits"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: The Sugarhill Gang (archived 2024)", url: "https://www.britannica.com/topic/the-Sugarhill-Gang", quote: "upon the single’s release, the credits listed only Robinson and the three group members, leaving off Grandmaster Caz, Love De-Luxe, and Chic"}
+      - {title: "Kim Bellware, The Washington Post via The Spokesman-Review (2023)", url: "https://spokesman.com/stories/2023/aug/08/the-unlikely-origins-of-rappers-delight-hip-hops-f", quote: "Curtis Brown, better known as Grandmaster Caz or Casanova Fly, wasn’t so lucky. ... Jackson asked Caz to write some rhymes for him"}
+    note: ""
+  - card: rappers-delight
+    fact: "Not the first rap record, but the first in the pop Top 40, at number 36 on the Hot 100 (wow and body)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: The Sugarhill Gang (archived 2024)", url: "https://www.britannica.com/topic/the-Sugarhill-Gang", quote: "reached number 4 on the Hot Soul Singles chart in the United States and number 36 on the Billboard Hot 100 chart ... Although it was not the first rap single, it was the first to cross over to the pop charts"}
+      - {title: "Encyclopaedia Britannica: Sugar Hill Records (archived 2024)", url: "https://www.britannica.com/topic/Sugar-Hill-Records", quote: "“Rapper’s Delight” (1979) by the Sugarhill Gang was the first to make the Top 40"}
+    note: ""
+  - card: rappers-delight
+    fact: "Rodgers and Edwards threatened to sue and won a songwriting credit"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: The Sugarhill Gang (archived 2024)", url: "https://www.britannica.com/topic/the-Sugarhill-Gang", quote: "Nile Rodgers, and bassist, Bernard Edwards, threatened legal action ... The songwriting credit for “Rapper’s Delight” was changed to include their names"}
+      - {title: "Kim Bellware, The Washington Post via The Spokesman-Review (2023)", url: "https://spokesman.com/stories/2023/aug/08/the-unlikely-origins-of-rappers-delight-hip-hops-f", quote: "Rodgers and Chic bassist Bernard Edwards threatened to sue, eventually settling and receiving songwriting credits"}
+    note: ""
+  - card: rappers-delight
+    fact: "An estimated 14 million copies sold (see dispute)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: The Sugarhill Gang (archived 2024)", url: "https://www.britannica.com/topic/the-Sugarhill-Gang", quote: "The recording went on to sell an estimated 14 million copies"}
+      - {title: "Kim Bellware, The Washington Post via The Spokesman-Review (2023)", url: "https://spokesman.com/stories/2023/aug/08/the-unlikely-origins-of-rappers-delight-hip-hops-f", quote: "selling 14 million records"}
+    note: ""
+  - card: rappers-delight
+    fact: "Added to the National Recording Registry in 2011"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: The Sugarhill Gang (archived 2024)", url: "https://www.britannica.com/topic/the-Sugarhill-Gang", quote: "In 2011 the U.S. Library of Congress added “Rapper’s Delight” to the National Recording Registry"}
+      - {title: "Eric Reese, Library of Congress NRR essay: Rapper's Delight", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RappersDelight.pdf", quote: "“Rapper’s Delight”-- Sugarhill Gang (1979) Added to the National Registry: 2011"}
+    note: ""
+
+  # ---------------- redemption-song ----------------
+  - card: redemption-song
+    fact: "Redemption Song is a song from Uprising (1980), the last album Marley released in his lifetime"
+    verdict: corrected
+    sources:
+      - {title: "Jon Tattrie, The Canadian Encyclopedia (2017)", url: "https://thecanadianencyclopedia.ca/en/article/the-african-nova-scotian-roots-of-bob-marleys-redemption-song", quote: "“Redemption Song,” the final track on what would be his final album, Uprising"}
+      - {title: "Encyclopaedia Britannica: Bob Marley (archived 2026)", url: "https://www.britannica.com/biography/Bob-Marley", quote: "Uprising (1980), and the posthumous Confrontation (1983) ... died May 11, 1981"}
+    note: "'Closing track' rests on the Canadian Encyclopedia alone and was dropped; 'last album released in his lifetime' is supported by Tattrie and Britannica (Uprising 1980, Marley died 1981, Confrontation posthumous)."
+  - card: redemption-song
+    fact: "Garvey, a Jamaican, founded the UNIA in 1914 to promote Black pride and unity"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Marcus Garvey (archived 2024)", url: "https://www.britannica.com/biography/Marcus-Garvey", quote: "he founded (August 1, 1914) the Universal Negro Improvement and Conservation Association and African Communities League, usually called the Universal Negro Improvement Association (UNIA) ... his gospel of Black pride"}
+      - {title: "Jon Tattrie, The Canadian Encyclopedia (2017)", url: "https://thecanadianencyclopedia.ca/en/article/the-african-nova-scotian-roots-of-bob-marleys-redemption-song", quote: "Marcus Garvey was a Jamaican civil rights leader ... emphasized Black pride and called on the African diaspora to unite in Africa ... Garvey founded the Universal Negro Improvement Association (UNIA) in 1914."}
+    note: ""
+  - card: redemption-song
+    fact: "UNIA branches spread far beyond Jamaica"
+    verdict: confirmed
+    sources:
+      - {title: "Jon Tattrie, The Canadian Encyclopedia (2017)", url: "https://thecanadianencyclopedia.ca/en/article/the-african-nova-scotian-roots-of-bob-marleys-redemption-song", quote: "UNIA halls quickly opened around the world, including in Canada."}
+      - {title: "Encyclopaedia Britannica: Marcus Garvey (archived 2024)", url: "https://www.britannica.com/biography/Marcus-Garvey", quote: "Garvey went to the United States (1916) and soon established branches of the UNIA in Harlem and the other principal ghettos of the North."}
+    note: ""
+  - card: redemption-song
+    fact: "In 1918 a UNIA branch opened at Glace Bay, Cape Breton, Nova Scotia"
+    verdict: confirmed
+    sources:
+      - {title: "Jon Tattrie, The Canadian Encyclopedia (2017)", url: "https://thecanadianencyclopedia.ca/en/article/the-african-nova-scotian-roots-of-bob-marleys-redemption-song", quote: "In 1918, the migrants set up one of Canada’s first UNIA halls in Glace Bay, Nova Scotia."}
+      - {title: "Canadian Press, CBC News (2016)", url: "https://www.cbc.ca/1.3763564", quote: "The UNIA location established in Glace Bay in 1918 is the only one left in Canada."}
+    note: ""
+  - card: redemption-song
+    fact: "By 1937 the movement had dwindled and Garvey had been deported from the US"
+    verdict: confirmed
+    sources:
+      - {title: "Jon Tattrie, The Canadian Encyclopedia (2017)", url: "https://thecanadianencyclopedia.ca/en/article/the-african-nova-scotian-roots-of-bob-marleys-redemption-song", quote: "By the 1930s, Garvey’s movement had dwindled and he had been deported from the United States."}
+      - {title: "Encyclopaedia Britannica: Marcus Garvey (archived 2024)", url: "https://www.britannica.com/biography/Marcus-Garvey", quote: "in 1927 his sentence was commuted by U.S. Pres. Calvin Coolidge, and he was deported as an undesirable alien. He was never able to revive the movement abroad"}
+    note: ""
+  - card: redemption-song
+    fact: "On 1 October 1937, on a speaking tour, he spoke to Sydney's UNIA members at Menelik Hall (wow and body)"
+    verdict: confirmed
+    sources:
+      - {title: "Jon Tattrie, The Canadian Encyclopedia (2017)", url: "https://thecanadianencyclopedia.ca/en/article/the-african-nova-scotian-roots-of-bob-marleys-redemption-song", quote: "In 1937, he set out on what would be his final speaking tour. ... On 1 October, Sydney’s mayor introduced him to a full house at Menelik Hall."}
+      - {title: "Paul H. Williams, The Gleaner (2025)", url: "https://jamaica-gleaner.com/article/news/20251016/marcus-garvey-greatest-black-man-ever", quote: "On his last night in Canada, October 1, 1937, in Sydney, Nova Scotia, he gave a speech"}
+    note: ""
+  - card: redemption-song
+    fact: "At Menelik Hall he spoke the quoted lines on mental slavery (wow and body)"
+    verdict: corrected
+    sources:
+      - {title: "Jon Tattrie, The Canadian Encyclopedia (2017)", url: "https://thecanadianencyclopedia.ca/en/article/the-african-nova-scotian-roots-of-bob-marleys-redemption-song", quote: "Towards the end, he spoke these lines: We are going to emancipate ourselves from mental slavery because whilst others might free the body, none but ourselves can free the mind."}
+      - {title: "Toronto Public Library blog (2014)", url: "https://blogs.tpl.ca/arts_culture/2014/02/bob-marleys-redemption-song-the-canadian-connection/", quote: "“We are going to emancipate ourselves from mental slavery because whilst others might free the body, none but ourselves can free the mind."}
+    note: "Quote text matches in the Canadian Encyclopedia and the TPL blog (CBC gives the opening and close). 'Towards the end' was Tattrie's alone and was dropped."
+  - card: redemption-song
+    fact: "Garvey died in London in 1940"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Marcus Garvey (archived 2024)", url: "https://www.britannica.com/biography/Marcus-Garvey", quote: "Marcus Garvey (born August 17, 1887, St. Ann’s Bay, Jamaica—died June 10, 1940, London"}
+      - {title: "Paul H. Williams, The Gleaner (2025)", url: "https://jamaica-gleaner.com/article/news/20251016/marcus-garvey-greatest-black-man-ever", quote: "Marcus Mosiah Garvey died on June 10, 1940 at age 52. He was buried in St Mary’s Catholic Cemetery in London."}
+    note: ""
+  - card: redemption-song
+    fact: "Marley followed the Rastafari faith"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Bob Marley (archived 2024)", url: "https://www.britannica.com/biography/Bob-Marley", quote: "A revolution in Jamaican identity was also forged through the Wailers’ Rastafari faith"}
+      - {title: "Jon Tattrie, The Canadian Encyclopedia (2017)", url: "https://thecanadianencyclopedia.ca/en/article/the-african-nova-scotian-roots-of-bob-marleys-redemption-song", quote: "[Marley] converted to Rastafarianism and often used language from Garvey"}
+    note: ""
+  - card: redemption-song
+    fact: "Marley turned the passage into the song's central lyric"
+    verdict: confirmed
+    sources:
+      - {title: "Jon Tattrie, The Canadian Encyclopedia (2017)", url: "https://thecanadianencyclopedia.ca/en/article/the-african-nova-scotian-roots-of-bob-marleys-redemption-song", quote: "there is no question that Marley turned portions of that speech into the central lyric of “Redemption Song”: “Emancipate yourselves from mental slavery/None but ourselves can free our minds.”"}
+      - {title: "Canadian Press, CBC News (2016)", url: "https://www.cbc.ca/1.3763564", quote: "Marley paraphrased those words in 1980’s Redemption Song."}
+    note: ""
+
+  # ---------------- moolaade ----------------
+  - card: moolaade
+    fact: "Moolaade is a 2004 film written and directed by Ousmane Sembene of Senegal"
+    verdict: confirmed
+    sources:
+      - {title: "Festival de Cannes: Moolaadé", url: "https://www.festival-cannes.com/f/moolaade/", quote: "Réalisé par : Ousmane SEMBENE Année de production : 2004 Pays : Sénégal ... Ousmane SEMBENE Scénario / Dialogues"}
+      - {title: "Encyclopaedia Britannica: Ousmane Sembène (archived 2024)", url: "https://www.britannica.com/biography/Ousmane-Sembene", quote: "Moolaadé (2004; “Protection”) ... [Ousmane Sembène] was a Senegalese w[riter and film director]"}
+    note: ""
+  - card: moolaade
+    fact: "It is about the cutting of girls in a village, called purification"
+    verdict: confirmed
+    sources:
+      - {title: "Festival de Cannes: Moolaadé", url: "https://www.festival-cannes.com/f/moolaade/", quote: "quatre fillettes se sauvent de la Purification = Excision"}
+      - {title: "Roger Ebert, Chicago Sun-Times: Moolaadé (2004), read from archive.org", url: "https://www.rogerebert.com/reviews/moolaade-2004", quote: "But men, who in their wisdom assume control over women's bodies, insist on purification."}
+    note: "Rotten Tomatoes (a distributor synopsis) replaced by Roger Ebert's review."
+  - card: moolaade
+    fact: "Its title means protection"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Ousmane Sembène (archived 2024)", url: "https://www.britannica.com/biography/Ousmane-Sembene", quote: "Moolaadé (2004; “Protection”)"}
+      - {title: "Claske Dijkema, Irénées (2008)", url: "http://www.irenees.net/bdf_fiche-documentation-579_en.html", quote: "The four other girls seek « magical protection » (moolaadé)"}
+    note: ""
+  - card: moolaade
+    fact: "Collé, a mother, had years earlier kept her daughter from the ritual"
+    verdict: corrected
+    sources:
+      - {title: "Festival de Cannes: Moolaadé", url: "https://www.festival-cannes.com/f/moolaade/", quote: "Collé Gallo Ardo Sy, mère, excisée avait soustrait son unique fille de la Purification."}
+      - {title: "Roger Ebert, Chicago Sun-Times: Moolaadé (2004), read from archive.org", url: "https://www.rogerebert.com/reviews/moolaade-2004", quote: "Colle (Fatoumata Coulibaly), the second of four wives of a powerful man, has refused to let her daughter be cut."}
+    note: "'Who was cut herself' and 'only daughter' rest on the Cannes synopsis alone and were removed."
+  - card: moolaade
+    fact: "Four girls flee the ceremony and ask Collé for moolaadé, a magical protection; she grants it (wow and body)"
+    verdict: corrected
+    sources:
+      - {title: "Festival de Cannes: Moolaadé", url: "https://www.festival-cannes.com/f/moolaade/", quote: "quatre fillettes se sauvent de la Purification = Excision, et demandent à Collé Ardo Sy le Moolaadé"}
+      - {title: "Roger Ebert, Chicago Sun-Times: Moolaadé (2004), read from archive.org", url: "https://www.rogerebert.com/reviews/moolaade-2004", quote: "Now six girls flee from a purification ritual, and four of them seek refuge with her. Colle agrees to help them, and invokes \"moolaade\""}
+    note: "Rotten Tomatoes replaced by Ebert."
+  - card: moolaade
+    fact: "The village is thrown into turmoil and the elders are outraged"
+    verdict: corrected
+    sources:
+      - {title: "Festival de Cannes: Moolaadé", url: "https://www.festival-cannes.com/f/moolaade/", quote: "Le village est en ébullition: deux valeurs s’affrontent: droit d’asile et l’antique tradition d’exciser les fillettes."}
+      - {title: "Roger Ebert, Chicago Sun-Times: Moolaadé (2004), read from archive.org", url: "https://www.rogerebert.com/reviews/moolaade-2004", quote: "the ineffectual debates of the council of men, who deplore Colle's action but have been checkmated by the invocation of moolaade"}
+    note: "Rotten Tomatoes replaced by Ebert ('council of men ... deplore Colle's action')."
+  - card: moolaade
+    fact: "In retaliation the men take away the women's radios"
+    verdict: corrected
+    sources:
+      - {title: "Roger Ebert, Chicago Sun-Times: Moolaadé (2004), read from archive.org", url: "https://www.rogerebert.com/reviews/moolaade-2004", quote: "All of the radios in the village are collected and thrown onto a big pile near the mosque"}
+      - {title: "Claske Dijkema, Irénées (2008)", url: "http://www.irenees.net/bdf_fiche-documentation-579_en.html", quote: "This shift takes place when the men take away women’s radio’s, rallying them behind one cause."}
+    note: "Rotten Tomatoes replaced by Ebert; BFI programme notes also describe the confiscation."
+  - card: moolaade
+    fact: "It won the Un Certain Regard prize at Cannes in 2004 (wow and body)"
+    verdict: confirmed
+    sources:
+      - {title: "Festival de Cannes: Moolaadé", url: "https://www.festival-cannes.com/f/moolaade/", quote: "MOOLAADE Ousmane SEMBENE 2004 Un Certain Regard Prix Un Certain Regard - Fondation Groupama Gan pour le Cinéma 2004"}
+      - {title: "Encyclopaedia Britannica: Ousmane Sembène (archived 2024)", url: "https://www.britannica.com/biography/Ousmane-Sembene", quote: "Moolaadé (2004; “Protection”), which received the prize for Un Certain Regard at Cannes"}
+    note: ""
+  - card: moolaade
+    fact: "Sembene was the maker of Black Girl (La Noire de..., 1966)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Ousmane Sembène (archived 2024)", url: "https://www.britannica.com/biography/Ousmane-Sembene", quote: "His 1966 feature film, La Noire de… ( Black Girl )"}
+      - {title: "Festival de Cannes: Cannes Classics, La Noire de... (2015)", url: "https://www.festival-cannes.com/en/2015/cannes-classics-la-noire-deblack-girl-a-look-back-at-the-origins-of-african-film/", quote: "La Noire de…(Black Girl), released in 1966 and awarded the Prix Jean Vigo ... Ousmane Sembène explored these themes"}
+    note: ""
+  - card: moolaade
+    fact: "It was shot in a village in Burkina Faso"
+    verdict: confirmed
+    sources:
+      - {title: "Claske Dijkema, Irénées (2008)", url: "http://www.irenees.net/bdf_fiche-documentation-579_en.html", quote: "The film is set in a colourful Burkina Faso village dotted with immense, man-tall anthills, and a mosque made from clay"}
+      - {title: "African Film Festival New York: The Making of Moolaadé", url: "https://africanfilmny.org/?p=5391", quote: "The shooting of Moolaadé took place in a small remote village in Burkina Faso"}
+    note: "New fact added to the body; the BFI notes reprint Sembène's interview naming Djerisso, the only source for the village name."
+  - card: moolaade
+    fact: "Collé grants the protection by stretching a coloured cord across the entrance to her compound; no one dares to step over it"
+    verdict: confirmed
+    sources:
+      - {title: "Claske Dijkema, Irénées (2008)", url: "http://www.irenees.net/bdf_fiche-documentation-579_en.html", quote: "Moolaadé is indicated by a coloured rope. But no one would dare step over and fetch the children."}
+      - {title: "BFI Southbank, Rebel Cinema: Ousmane Sembène at 100, Moolaadé programme notes (2023)", url: "https://bfidatadigipres.github.io/rebel%20cinema%3Cbr%3Eousmane%20semb%C3%A8ne%20at%20100/2023/08/28/moolaade", quote: "she’s able to grant them impregnable sanctuary simply by stringing a multicoloured cord a few inches off the ground across the entrance to her courtyard"}
+    note: "New fact added to the body to give the protection a concrete form."
+  - card: moolaade
+    fact: "Collé's husband whips her in public; she does not give in"
+    verdict: confirmed
+    sources:
+      - {title: "Claske Dijkema, Irénées (2008)", url: "http://www.irenees.net/bdf_fiche-documentation-579_en.html", quote: "Her husband’s relatives persuade him to whip her in public into revoking. ... Colle does not give in on her principles"}
+      - {title: "BFI Southbank, Rebel Cinema: Ousmane Sembène at 100, Moolaadé programme notes (2023)", url: "https://bfidatadigipres.github.io/rebel%20cinema%3Cbr%3Eousmane%20semb%C3%A8ne%20at%20100/2023/08/28/moolaade", quote: "And when Colle’s husband Ciré publicly flogs her"}
+    note: "New fact added to the body; it closes the thread of Collé's refusal."
+  - card: moolaade
+    fact: "Sembene died in 2007"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Ousmane Sembène (archived 2024)", url: "https://www.britannica.com/biography/Ousmane-Sembene", quote: "died June 9/10, 2007, Dakar, Seneg."}
+      - {title: "Festival de Cannes: Cannes Classics, La Noire de... (2015)", url: "https://www.festival-cannes.com/en/2015/cannes-classics-la-noire-deblack-girl-a-look-back-at-the-origins-of-african-film/", quote: "Almost eight years after Ousmane Sembène’s death [published May 2015]"}
+    note: ""
+
+
+  # ---------------- removed from the ledger ----------------
+  - card: rivers-of-babylon
+    fact: "Brent Dowe and Trevor McNaughton took the composer credit"
+    verdict: unconfirmed
+    sources:
+      - {title: "Tony Cummings, Cross Rhythms (2013)", url: "https://www.crossrhythms.co.uk/articles/music/Rivers_Of_Babylon_The_unlikely_history_of_a_pop_hit_based_on_Psalm_137/50257/p1/", quote: "it was The Melodians' Brent Dowe and Trevor McNaughton who claimed composer credits"}
+      - {title: "Michael Garnice, Library of Congress NRR essay: The Harder They Come", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/The-Harder-They-Come_Garnice.pdf", quote: "by vocal duo The Melodians (Brent Dowe and James McNaughton)"}
+    note: "The LoC essay names the two singers but says nothing of the credit, so the credit rests on one source. Sentence removed; the names stay, with the first-name discrepancy in the dispute."
+
+
+unledgered:
+  - card: soul-train
+    fact: "Front matter: WCIU-TV point in Chicago"
+    verdict: corrected
+    sources:
+      - {title: "Television Academy: Cool Train Running", url: "https://www.televisionacademy.com/node/595701", quote: "Children who wanted to get on the program after school would have to go to the Chicago Board of Trade building, where it was produced."}
+      - {title: "Arionne Nettles, WBEZ Chicago (2023)", url: "https://www.wbez.org/stories/history-of-soul-train-tv-show-chicago/01829b6c-5b73-42bd-8cb3-2b39ac8951b8", quote: "young people lined up around the block of the Chicago Board of Trade building to be part of the first airing of this new dance show. They'd pack the tiny WCIU studio"}
+    note: "Coordinates moved from 41.8786, -87.6359 (Wacker Drive) to the Board of Trade Building, 141 W Jackson Blvd (41.8781, -87.6324)."
+  - card: moolaade
+    fact: "Front matter: main place 'Djerisso, Burkina Faso' at 11.2167, -4.5333"
+    verdict: corrected
+    sources:
+      - {title: "BFI Southbank, Rebel Cinema: Moolaadé programme notes (2023)", url: "https://bfidatadigipres.github.io/rebel%20cinema%3Cbr%3Eousmane%20semb%C3%A8ne%20at%20100/2023/08/28/moolaade", quote: "Why did you choose Burkina Faso and Djerisso?"}
+      - {title: "African Film Festival New York: The Making of Moolaadé", url: "https://africanfilmny.org/?p=5391", quote: "The shooting of Moolaadé took place in a small remote village in Burkina Faso"}
+    note: "Only the production-notes interview names Djerisso, and no gazetteer lookup (OpenStreetMap) confirmed the coordinates (the nearest match, Diérisso in Léraba province, is about 90 km away). The place is now 'Burkina Faso' at the country's centre (12.2383, -1.5616); RU 'Буркина-Фасо'."
+  - card: moolaade
+    fact: "Collé 'who was cut herself'; 'her only daughter'"
+    verdict: unconfirmed
+    sources:
+      - {title: "Festival de Cannes: Moolaadé", url: "https://www.festival-cannes.com/f/moolaade/", quote: "Collé Gallo Ardo Sy, mère, excisée avait soustrait son unique fille de la Purification."}
+      - {title: "Roger Ebert (2004)", url: "https://www.rogerebert.com/reviews/moolaade-2004", quote: "has refused to let her daughter be cut"}
+    note: "Both details are in the Cannes synopsis alone; removed from EN and RU."
+  - card: losing-ground
+    fact: "Collins struggled to find money and distribution for her work"
+    verdict: unconfirmed
+    sources:
+      - {title: "Yale Library (2022)", url: "https://library.yale.edu/news/film-archive-awarded-film-foundation-grant-restore-kathleen-collins-masterwork", quote: "she struggled to get funding and distribution for her work"}
+      - {title: "Jourdain Searles, Hyperallergic (2022)", url: "https://hyperallergic.com/743670/kathleen-collins-losing-ground/", quote: "Ignored and undistributed upon its debut in 1982"}
+    note: "Hyperallergic speaks of this film only, not her work in general. Sentence removed."
+  - card: dbc-pirate
+    fact: "Body: the transmitter came 'from a friend'; calypso among the station's genres"
+    verdict: unconfirmed
+    sources:
+      - {title: "The Wire (2018)", url: "https://www.thewire.co.uk/news/50350/dread-broadcasting-corporation-founder-lepke-has-died", quote: "In 1981 he acquired a medium wave transmitter from a friend"}
+      - {title: "Lloyd Bradley, RBMA Daily (2018)", url: "https://daily.redbullmusicacademy.com/2018/04/a-tribute-to-dbc-lepke", quote: "soul 'n' funk, African music and calypso"}
+    note: "Each detail has one source only (AM/FM lists the genres without calypso and the transmitter without a friend). Both removed."
+  - card: dbc-pirate
+    fact: "Dispute: start date 1980 or 1981"
+    verdict: corrected
+    sources:
+      - {title: "AM/FM (amfm.org.uk)", url: "https://www.amfm.org.uk/pirates/dbc-dread-broadcasting-corporation.html", quote: "in the autumn of 1980 began broadcasts from his home in Neasden"}
+      - {title: "Lloyd Bradley, RBMA Daily (2018)", url: "https://daily.redbullmusicacademy.com/2018/04/a-tribute-to-dbc-lepke", quote: "set up the Dread Broadcast Corporation in 1981"}
+    note: "AM/FM added to the 1980 side of the dispute (EN and RU)."
+  - card: redemption-song
+    fact: "Body: a 'small' UNIA branch in Cape Breton"
+    verdict: refuted
+    sources:
+      - {title: "Jon Tattrie, The Canadian Encyclopedia (2017)", url: "https://thecanadianencyclopedia.ca/en/article/the-african-nova-scotian-roots-of-bob-marleys-redemption-song", quote: "On 1 October, Sydney's mayor introduced him to a full house at Menelik Hall."}
+      - {title: "University of Ottawa, Black Canadian History Exhibit: Menelik Hall", url: "https://omeka.uottawa.ca/mathieu-black-canadian-history-exhibit/items/show/39", quote: "In the hall Marcus Garvey gave his \"the work that has been done\" speech in 1937 to members of the Sydney branch of the UNIA."}
+    note: "No source calls the branch small, and the hall was full; 'small' removed (EN 'small', RU 'маленьким')."
+  - card: combahee-statement
+    fact: "Body: Barbara Smith owned a small book about Tubman's 1863 raid"
+    verdict: confirmed
+    sources:
+      - {title: "Marian Jones, The Nation (2021)", url: "https://www.thenation.com/article/society/combahee-river-collective-oral-history/", quote: "There was a little book that I had the opportunity to find and read, which talks about and describes Harriet Tubman's raid on the Combahee River."}
+      - {title: "Encyclopaedia Britannica: Combahee River Collective (archived 2026)", url: "https://www.britannica.com/topic/Combahee-River-Collective", quote: "named the organization after the raid organized by Harriet Tubman on the Combahee River on June 2, 1863"}
+    note: ""
+  - card: moolaade
+    fact: "Front matter and body: Moolaadé is a Senegalese production"
+    verdict: confirmed
+    sources:
+      - {title: "Festival de Cannes: Moolaadé", url: "https://www.festival-cannes.com/f/moolaade/", quote: "Pays : Sénégal"}
+      - {title: "Encyclopaedia Britannica: Ousmane Sembène (archived 2026)", url: "https://www.britannica.com/biography/Ousmane-Sembene", quote: "was a Senegalese writer and film director"}
+    note: ""
+  - card: yeelen
+    fact: "Body: Yeelen turned from the present to myth"
+    verdict: confirmed
+    sources:
+      - {title: "Sarah Jilani, ArtReview (2025)", url: "https://artreview.com/malian-filmmaker-souleymane-cisse-1940-2025-taught-us-how-to-see-obituary-sarah-jilani-opinion-african-cinema", quote: "to move forward: to the realm of West African myth and historical memory"}
+      - {title: "Ministère de la Culture (2025)", url: "https://www.culture.gouv.fr/presse/communiques-de-presse/hommage-de-madame-rachida-dati-ministre-de-la-culture-a-monsieur-souleymane-cisse", quote: "Yeelen (La Lumière) mêlant quête initiatique et traditions bambaras"}
+    note: ""
+  - card: rappers-delight
+    fact: "Front matter: Englewood, New Jersey"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: The Sugarhill Gang (archived 2026)", url: "https://www.britannica.com/topic/the-Sugarhill-Gang", quote: "The group was formed in Englewood, New Jersey, in 1979"}
+      - {title: "Kim Bellware, The Washington Post via The Spokesman-Review (2023)", url: "https://spokesman.com/stories/2023/aug/08/the-unlikely-origins-of-rappers-delight-hip-hops-f", quote: "working at the Crispy Crust pizza joint in Englewood"}
+    note: ""
+  - card: yeke-yeke
+    fact: "Front matter: Paris, Bamako, Conakry"
+    verdict: confirmed
+    sources:
+      - {title: "Robin Denselow, The Guardian obituary (2020), via Yahoo News", url: "https://sg.news.yahoo.com/mory-kant-obituary-163911795.html", quote: "at 15 was sent to Bamako ... in 1984 he moved to Paris ... He had homes in both Paris and in the Guinean capital, Conakry"}
+      - {title: "Calum Slingerland, Exclaim! (2020)", url: "https://exclaim.ca/music/article/african_music_star_mory_kant_dies_at_70", quote: "he passed in Conakry, Guinea ... He would make a move to Paris in 1980"}
+    note: ""

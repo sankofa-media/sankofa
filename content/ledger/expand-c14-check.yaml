@@ -1,0 +1,889 @@
+# Second, independent check of batch c14 (2026-11-14). Every ledger page reopened (Britannica and visitcostarica.com through archive.org snapshots);
+# each quote searched in the fetched text, ignoring punctuation and spacing. Independence: the three Harpelle works count as one source;
+# the two Trinidad Guardian pieces count as one; Stabroek News could not be opened (site offline, archive refused) and was dropped.
+entries:
+  - card: mary-fields
+    fact: "Star route mail was carried by private contractors paid by the Post Office, by stagecoach"
+    verdict: confirmed
+    sources:
+      - {title: "National Park Service, Katherine Crawford-Lackey: Mary Fields", url: "https://www.nps.gov/people/mary-fields.htm", quote: "A carrier was an independent contractor who used a stagecoach to deliver the mail."}
+      - {title: "American Battlefield Trust: Mary Fields", url: "https://www.battlefields.org/learn/biographies/mary-fields", quote: "Fields was an independent contractor who carried and delivered mail by using a stagecoach"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: mary-fields
+    fact: "Mary Fields was born enslaved in Tennessee around 1832"
+    verdict: confirmed
+    sources:
+      - {title: "National Park Service, Katherine Crawford-Lackey: Mary Fields", url: "https://www.nps.gov/people/mary-fields.htm", quote: "Born enslaved in Tennessee in the early 1830s"}
+      - {title: "Britannica: Mary Fields", url: "https://www.britannica.com/biography/Mary-Fields", quote: "Mary Fields (born 1832?, Hickman county, Tennessee ... Fields was born into slavery."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: mary-fields
+    fact: "Little of her early life was recorded"
+    verdict: confirmed
+    sources:
+      - {title: "National Park Service, Katherine Crawford-Lackey: Mary Fields", url: "https://www.nps.gov/people/mary-fields.htm", quote: "we know little about Mary's early years"}
+      - {title: "Britannica: Mary Fields", url: "https://www.britannica.com/biography/Mary-Fields", quote: "Little is known of her early life"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: mary-fields
+    fact: "In the 1870s she worked for the Ursuline nuns at their convent in Toledo, Ohio"
+    verdict: confirmed
+    sources:
+      - {title: "National Park Service, Katherine Crawford-Lackey: Mary Fields", url: "https://www.nps.gov/people/mary-fields.htm", quote: "Mary arrived in Toledo by train in 1870 and worked for the nuns at the convent"}
+      - {title: "Britannica: Mary Fields", url: "https://www.britannica.com/biography/Mary-Fields", quote: "In the late 1870s, she became a housekeeper at the Ursuline Convent in Toledo , Ohio"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: mary-fields
+    fact: "Around 1885 she moved to St. Peter's Mission outside Cascade, Montana"
+    verdict: confirmed
+    sources:
+      - {title: "National Park Service, Katherine Crawford-Lackey: Mary Fields", url: "https://www.nps.gov/people/mary-fields.htm", quote: "We know that Mary moved to Montana in 1885"}
+      - {title: "Britannica: Mary Fields", url: "https://www.britannica.com/biography/Mary-Fields", quote: "St. Peter's Mission outside Cascade, Montana ... about 1885 ... Fields relocated to Montana."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: mary-fields
+    fact: "At the mission she gardened, did repairs and hauled supplies, work then counted as men's"
+    verdict: confirmed
+    sources:
+      - {title: "Britannica: Mary Fields", url: "https://www.britannica.com/biography/Mary-Fields", quote: "Fields worked for the mission, doing maintenance and repair work as well as gardening and laundry, and she was also responsible for ferrying in supplies"}
+      - {title: "National Park Service, Katherine Crawford-Lackey: Mary Fields", url: "https://www.nps.gov/people/mary-fields.htm", quote: "By cultivating a large garden ... She also coordinated the delivery of supplies to the isolated mission. ... took on physically laborious jobs customarily done by men."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: mary-fields
+    fact: "After rumours of a gunfight the bishop ordered the nuns to dismiss her"
+    verdict: confirmed
+    sources:
+      - {title: "National Park Service, Katherine Crawford-Lackey: Mary Fields", url: "https://www.nps.gov/people/mary-fields.htm", quote: "rumors spread in the nearby town of Cascade that she had engaged in a duel. The local bishop responsible for the mission banned her from St. Peter's."}
+      - {title: "Britannica: Mary Fields", url: "https://www.britannica.com/biography/Mary-Fields", quote: "She may have gotten into a gunfight ... the bishop of the Montana diocese ordered the convent to dismiss Fields."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: mary-fields
+    fact: "In 1895 she won the mail contract between Cascade and St. Peter's Mission"
+    verdict: confirmed
+    sources:
+      - {title: "National Park Service, Katherine Crawford-Lackey: Mary Fields", url: "https://www.nps.gov/people/mary-fields.htm", quote: "In 1895, Mary obtained a contract to be a Star Route Carrier ... Mary's route ran between St. Peter's Mission and the town of Cascade."}
+      - {title: "Britannica: Mary Fields", url: "https://www.britannica.com/biography/Mary-Fields", quote: "In 1895 Fields acquired the postal service contract for mail between Cascade and St. Peter's Mission."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: mary-fields
+    fact: "She was in her sixties and kept the route for eight years, in all weathers"
+    verdict: confirmed
+    sources:
+      - {title: "National Park Service, Katherine Crawford-Lackey: Mary Fields", url: "https://www.nps.gov/people/mary-fields.htm", quote: "She delivered the mail for eight years without missing a day of work. ... Even though she was well into her 60s"}
+      - {title: "Britannica: Mary Fields", url: "https://www.britannica.com/biography/Mary-Fields", quote: "She worked for the postal service for eight years"}
+      - {title: "American Battlefield Trust: Mary Fields", url: "https://www.battlefields.org/learn/biographies/mary-fields", quote: "she drove her stagecoach over all terrains, whether there be rain or shine"}
+    note: "NPS also: \"When the snow was too deep to drive the stagecoach, Mary trekked the route with snowshoes\"; supports \"rain and snow\" with ABT."
+  - card: mary-fields
+    fact: "She was the first African American woman to hold a star route contract"
+    verdict: confirmed
+    sources:
+      - {title: "National Park Service, Katherine Crawford-Lackey: Mary Fields", url: "https://www.nps.gov/people/mary-fields.htm", quote: "She was the first African American woman and the second woman to receive a Star Route contract"}
+      - {title: "Britannica: Mary Fields", url: "https://www.britannica.com/biography/Mary-Fields", quote: "the first African American woman to become a U.S. postal service star (contract) route mail carrier"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: mary-fields
+    fact: "Her reliability earned her the nickname Stagecoach Mary"
+    verdict: confirmed
+    sources:
+      - {title: "Britannica: Mary Fields", url: "https://www.britannica.com/biography/Mary-Fields", quote: "Her dedication and reliability on this difficult and often dangerous route earned her the sobriquet Stagecoach Mary."}
+      - {title: "American Battlefield Trust: Mary Fields", url: "https://www.battlefields.org/learn/biographies/mary-fields", quote: "Fields' success as a Star Route Carrier landed her the nickname “Stagecoach Mary”"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: mary-fields
+    fact: "Later she ran a laundry in Cascade and died there in 1914"
+    verdict: confirmed
+    sources:
+      - {title: "National Park Service, Katherine Crawford-Lackey: Mary Fields", url: "https://www.nps.gov/people/mary-fields.htm", quote: "After retiring from her postal route, Mary established her own laundry business in town. She died in 1914 and is buried in Cascade."}
+      - {title: "Britannica: Mary Fields", url: "https://www.britannica.com/biography/Mary-Fields", quote: "Thereafter, she operated a laundry service ... died December 5, 1914, Cascade county, Montana"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: pura-belpre
+    fact: "In 1920 Belpré, a university student from Cidra, Puerto Rico, came to New York for her sister's wedding and stayed"
+    verdict: confirmed
+    sources:
+      - {title: "Centro de Estudios Puertorriqueños, Hunter College: Pura Belpré", url: "https://web.archive.org/web/20160426175348/http://centropr.hunter.cuny.edu/voices/puertoricanwriters/pura-belpre", quote: "Belpré was born in Cidra, Puerto Rico. ... in 1920 she interrupted her studies in order to attend her sister Elisa's wedding in New York."}
+      - {title: "Will Guzmán, BlackPast.org: Pura Belpré (1903-1982)", url: "https://www.blackpast.org/african-american-history/pura-belpre-1903-1982/", quote: "She enrolled at the University of Puerto Rico, Río Piedras for a year before traveling to Harlem to attend her sister's wedding where afterwards she decided to remain"}
+      - {title: "EBSCO Research Starters: Pura Belpré", url: "https://ebsco.com/research-starters/history/pura-belpre", quote: "she immigrated to New York City in August, 1920 ... She planned to attend her older sister's wedding"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: pura-belpre
+    fact: "She first worked in the garment industry"
+    verdict: confirmed
+    sources:
+      - {title: "Centro de Estudios Puertorriqueños, Hunter College: Pura Belpré", url: "https://web.archive.org/web/20160426175348/http://centropr.hunter.cuny.edu/voices/puertoricanwriters/pura-belpre", quote: "Like many of the Puerto Rican women who came to New York at that time, Belpré's first job was in the garment industry."}
+      - {title: "American Folklore Society, Notable Folklorists of Color: Pura Belpré", url: "https://notablefolkloristsofcolor.org/?p=934", quote: "Travelling to New York City in 1920, she left her university studies behind and briefly worked in the garment industry."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: pura-belpre
+    fact: "In 1921 the 135th Street branch of the NYPL in Harlem hired her as a Spanish-speaking assistant; she was the first Puerto Rican the library hired"
+    verdict: confirmed
+    sources:
+      - {title: "Centro de Estudios Puertorriqueños, Hunter College: Pura Belpré", url: "https://web.archive.org/web/20160426175348/http://centropr.hunter.cuny.edu/voices/puertoricanwriters/pura-belpre", quote: "a position as Hispanic Assistant in a branch of the public library at 135th Street in Harlem. Belpré became the first Puerto Rican to be hired by the New York Public Library (NYPL)."}
+      - {title: "Will Guzmán, BlackPast.org: Pura Belpré (1903-1982)", url: "https://www.blackpast.org/african-american-history/pura-belpre-1903-1982/", quote: "In 1921, the New York Public Library (NYPL) hired Belpré as an assistant at the 135th Street Branch"}
+      - {title: "EBSCO Research Starters: Pura Belpré", url: "https://ebsco.com/research-starters/history/pura-belpre", quote: "In May, 1921, Belpré was asked by librarian Ernestine Rose to become the Spanish-speaking assistant at the 135th Street branch"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: pura-belpre
+    fact: "Her early work at the branch with Black, Puerto Rican and immigrant readers took place during the Harlem Renaissance"
+    verdict: confirmed
+    sources:
+      - {title: "EBSCO Research Starters: Pura Belpré", url: "https://ebsco.com/research-starters/history/pura-belpre", quote: "Thoughtful examination of Belpré's early library work with black, Purerto Rican, and immigrant populations during the Harlem Renaissance."}
+      - {title: "Victoria Núñez, Centro Journal 21:1 (2009)", url: "https://www.redalyc.org/pdf/377/37721248003.pdf", quote: "Remembering Pura Belpré's Early Career at the 135th Street New York Public Library: Interracial Cooperation and Puerto Rican Settlement During the Harlem Renaisance"}
+      - {title: "Will Guzmán, BlackPast.org: Pura Belpré (1903-1982)", url: "https://www.blackpast.org/african-american-history/pura-belpre-1903-1982/", quote: "The Harlem Renaissance increased the creative literary output ... and Belpré witnessed the early stages of what is now the Schomburg Center"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: pura-belpre
+    fact: "In a storytelling class she wrote her first story, Pérez and Martina, about a mouse and a cockroach, based on a Puerto Rican folktale"
+    verdict: confirmed
+    sources:
+      - {title: "Centro de Estudios Puertorriqueños, Hunter College: Pura Belpré", url: "https://web.archive.org/web/20160426175348/http://centropr.hunter.cuny.edu/voices/puertoricanwriters/pura-belpre", quote: "The first story she wrote in a story-telling course, Pérez and Martina, a love story between a cockroach and a mouse"}
+      - {title: "EBSCO Research Starters: Pura Belpré", url: "https://ebsco.com/research-starters/history/pura-belpre", quote: "While taking a storytelling class under librarian Mary Gould Davis, Belpré was encouraged to write her first folktale—a love story from her native Puerto Rico about Pérez the mouse and Martina the cockroach."}
+      - {title: "Neda Ulaby, NPR (2016)", url: "https://www.npr.org/2016/09/08/492957864/how-nycs-first-puerto-rican-librarian-brought-spanish-to-the-shelves", quote: "Perez y Martina, a story based on a Puerto Rican folktale"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: pura-belpre
+    fact: "It was published in 1932, the first Puerto Rican folktale published in the United States"
+    verdict: confirmed
+    sources:
+      - {title: "EBSCO Research Starters: Pura Belpré", url: "https://ebsco.com/research-starters/history/pura-belpre", quote: "In 1932, Pérez and Martina: A Portorican Folk Tale was published by Frederick Warne, becoming the first Puerto Rican folktale to be published in the United States."}
+      - {title: "Will Guzmán, BlackPast.org: Pura Belpré (1903-1982)", url: "https://www.blackpast.org/african-american-history/pura-belpre-1903-1982/", quote: "Pérez y Martina (1932), the first US-published Puerto Rican folktale"}
+    note: "EBSCO and BlackPast independent. Centro itself says more cautiously \"one of the earliest books published in English by a Puerto Rican\"."
+  - card: pura-belpre
+    fact: "She ran bilingual story hours and travelled the city telling tales in Spanish and English with puppets"
+    verdict: confirmed
+    sources:
+      - {title: "Neda Ulaby, NPR (2016)", url: "https://www.npr.org/2016/09/08/492957864/how-nycs-first-puerto-rican-librarian-brought-spanish-to-the-shelves", quote: "Belpré traveled all over the city, from the Bronx to the Lower East Side, telling stories with puppets in Spanish and English."}
+      - {title: "Centro de Estudios Puertorriqueños, Hunter College: Pura Belpré", url: "https://web.archive.org/web/20160426175348/http://centropr.hunter.cuny.edu/voices/puertoricanwriters/pura-belpre", quote: "instituting bilingual story hours"}
+      - {title: "EBSCO Research Starters: Pura Belpré", url: "https://ebsco.com/research-starters/history/pura-belpre", quote: "conducting puppet shows and sharing bilingual stories with children"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: pura-belpre
+    fact: "In 1943 she married Clarence Cameron White, an African American violinist and composer"
+    verdict: confirmed
+    sources:
+      - {title: "Centro de Estudios Puertorriqueños, Hunter College: Pura Belpré", url: "https://web.archive.org/web/20160426175348/http://centropr.hunter.cuny.edu/voices/puertoricanwriters/pura-belpre", quote: "the African-American composer and violinist, Clarence Cameron White. They were married on December 26, 1943"}
+      - {title: "American Folklore Society, Notable Folklorists of Color: Pura Belpré", url: "https://notablefolkloristsofcolor.org/?p=934", quote: "In 1943, Belpré married Clarence Cameron White, an African American composer, conductor, violinist, and musicologist."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: pura-belpre
+    fact: "She later left the library to travel with her husband and write"
+    verdict: confirmed
+    sources:
+      - {title: "Centro de Estudios Puertorriqueños, Hunter College: Pura Belpré", url: "https://web.archive.org/web/20160426175348/http://centropr.hunter.cuny.edu/voices/puertoricanwriters/pura-belpre", quote: "Belpré resigned her position to go on tour with her husband and to devote herself to writing."}
+      - {title: "EBSCO Research Starters: Pura Belpré", url: "https://ebsco.com/research-starters/history/pura-belpre", quote: "two years later Belpré resigned from the library to travel around the country with her husband."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: pura-belpre
+    fact: "After his death in 1960 she returned to the library"
+    verdict: confirmed
+    sources:
+      - {title: "Centro de Estudios Puertorriqueños, Hunter College: Pura Belpré", url: "https://web.archive.org/web/20160426175348/http://centropr.hunter.cuny.edu/voices/puertoricanwriters/pura-belpre", quote: "In 1960, White died of cancer and Belpré returned to part-time work in the library as the Spanish Children's Specialist."}
+      - {title: "Will Guzmán, BlackPast.org: Pura Belpré (1903-1982)", url: "https://www.blackpast.org/african-american-history/pura-belpre-1903-1982/", quote: "Belpré resigned her position in 1945 to focus on her writing and resumed her NYPL employment in 1960"}
+    note: "New entry: the card now closes the library thread (Centro and BlackPast both record her return in 1960)."
+  - card: pura-belpre
+    fact: "She died in 1982"
+    verdict: confirmed
+    sources:
+      - {title: "Neda Ulaby, NPR (2016)", url: "https://www.npr.org/2016/09/08/492957864/how-nycs-first-puerto-rican-librarian-brought-spanish-to-the-shelves", quote: "Belpré, who died in 1982"}
+      - {title: "Will Guzmán, BlackPast.org: Pura Belpré (1903-1982)", url: "https://www.blackpast.org/african-american-history/pura-belpre-1903-1982/", quote: "Pura Belpré died on July 1, 1982"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: pura-belpre
+    fact: "Since 1996 the ALA has given the Pura Belpré Award to Latino writers and illustrators of children's books celebrating Latino culture"
+    verdict: confirmed
+    sources:
+      - {title: "American Library Association: The Pura Belpré Award", url: "https://www.ala.org/alsc/awardsgrants/bookmedia/belpre", quote: "The Pura Belpré Award, established in 1996, is presented annually to a Latino/Latina writer and illustrator whose work best portrays, affirms, and celebrates the Latino cultural experience"}
+      - {title: "EBSCO Research Starters: Pura Belpré", url: "https://ebsco.com/research-starters/history/pura-belpre", quote: "the Pura Belpré Awards were established in 1996 to honor outstanding Latino authors and illustrators of children's literature."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: olive-morris
+    fact: "In late-1960s Brixton Black residents faced police harassment and a housing crisis that hit them hardest"
+    verdict: confirmed
+    sources:
+      - {title: "English Heritage: Morris, Olive (1952–1979)", url: "https://www.english-heritage.org.uk/visit/blue-plaques/olive-morris/", quote: "a community defence borne from years of police harassment ... a solution to the housing crisis in Brixton during this period, which was particularly hard for black people."}
+      - {title: "Remembering Olive Collective biography, libcom.org", url: "https://libcom.org/article/morris-olive-elaine-1952-1979", quote: "there was increased tension between police and the community ... as well as discrimination around housing and employment."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: olive-morris
+    fact: "Olive Morris was born in Harewood, Jamaica, in 1952 and came to south London at nine to join her parents"
+    verdict: confirmed
+    sources:
+      - {title: "English Heritage: Morris, Olive (1952–1979)", url: "https://www.english-heritage.org.uk/visit/blue-plaques/olive-morris/", quote: "Olive Morris was born in Harewood, Jamaica, on 26 June 1952. ... In 1961, she and her brother moved to Lavender Hill in south London to join their parents"}
+      - {title: "Remembering Olive Collective biography, libcom.org", url: "https://libcom.org/article/morris-olive-elaine-1952-1979", quote: "born on 26th June 1952 in Harewood, St Catherine's, Jamaica. When she was nine years old, she, and her brother, Basil, ... joined her mother and father in Lavender Hill, south London."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: olive-morris
+    fact: "In November 1969, aged 17, she intervened in the arrest of a Nigerian diplomat in Brixton, was beaten and racially abused, convicted and given a suspended sentence"
+    verdict: confirmed
+    sources:
+      - {title: "English Heritage: Morris, Olive (1952–1979)", url: "https://www.english-heritage.org.uk/visit/blue-plaques/olive-morris/", quote: "In November 1969, aged 17, Morris was arrested in Brixton, bundled into a police van, beaten, racially abused ... Clement Gomwalk, First Secretary to the Nigerian High Commission ... sentenced to three months' imprisonment, suspended for three years."}
+      - {title: "Remembering Olive Collective biography, libcom.org", url: "https://libcom.org/article/morris-olive-elaine-1952-1979", quote: "she intervened into the arrest of a Nigerian diplomat for a parking offence in Brixton in November 1969. She was physically assaulted and racially abused by the police ... given a three month suspended sentence"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: olive-morris
+    fact: "She joined the youth section of the British Black Panther movement"
+    verdict: confirmed
+    sources:
+      - {title: "English Heritage: Morris, Olive (1952–1979)", url: "https://www.english-heritage.org.uk/visit/blue-plaques/olive-morris/", quote: "Around 1969, Morris joined the Youth Section and Sisters' Collective of the British Black Panther movement"}
+      - {title: "Remembering Olive Collective biography, libcom.org", url: "https://libcom.org/article/morris-olive-elaine-1952-1979", quote: "Olive became a member of the youth section of the Black Panther Movement"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: olive-morris
+    fact: "In 1973 she and Liz Obi squatted 121 Railton Road"
+    verdict: confirmed
+    sources:
+      - {title: "English Heritage: Morris, Olive (1952–1979)", url: "https://www.english-heritage.org.uk/visit/blue-plaques/olive-morris/", quote: "In the winter of 1972–3, Morris squatted with Liz Obi at 121 Railton Road."}
+      - {title: "Remembering Olive Collective biography, libcom.org", url: "https://libcom.org/article/morris-olive-elaine-1952-1979", quote: "squatted 121 Railton Road , in Brixton with Liz in 1973."}
+      - {title: "University of Bristol: Remembering Olive Morris and the Black Women's Movement", url: "https://bristol.ac.uk/history/public-engagement/blackhistory/snapshots2021/morris", quote: "In 1973, she squatted at 121 Railton Road, Brixton"}
+    note: "EH gives winter 1972-3; the card's dispute covers it."
+  - card: olive-morris
+    fact: "The squat became an organising centre for community groups and later housed Sabarr, a Black community bookshop"
+    verdict: confirmed
+    sources:
+      - {title: "Remembering Olive Collective biography, libcom.org", url: "https://libcom.org/article/morris-olive-elaine-1952-1979", quote: "The squat became an organising centre for community groups ... as well as housing Sabarr Bookshop, which was one of the first Black community bookshops."}
+      - {title: "University of Bristol: Remembering Olive Morris and the Black Women's Movement", url: "https://bristol.ac.uk/history/public-engagement/blackhistory/snapshots2021/morris", quote: "which eventually became an organising centre for community activism. It went on to house the first Black community bookshop, Sabarr."}
+      - {title: "English Heritage: Morris, Olive (1952–1979)", url: "https://www.english-heritage.org.uk/visit/blue-plaques/olive-morris/", quote: "those who set up Sabarr, a radical self-help bookshop and community space, to re-squat the property."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: olive-morris
+    fact: "She was a founding member of the Brixton Black Women's Group"
+    verdict: confirmed
+    sources:
+      - {title: "English Heritage: Morris, Olive (1952–1979)", url: "https://www.english-heritage.org.uk/visit/blue-plaques/olive-morris/", quote: "Morris was a founding member of the Brixton Black Women's Group (BBWG)."}
+      - {title: "Remembering Olive Collective biography, libcom.org", url: "https://libcom.org/article/morris-olive-elaine-1952-1979", quote: "Olive was also a founding member of the Brixton Black Women's Group"}
+      - {title: "University of Bristol: Remembering Olive Morris and the Black Women's Movement", url: "https://bristol.ac.uk/history/public-engagement/blackhistory/snapshots2021/morris", quote: "She was one of the founders of the 'Organisation for Women of Asian and African Descent' and the 'Brixton Black Women's Group'."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: olive-morris
+    fact: "She studied at Manchester University"
+    verdict: confirmed
+    sources:
+      - {title: "English Heritage: Morris, Olive (1952–1979)", url: "https://www.english-heritage.org.uk/visit/blue-plaques/olive-morris/", quote: "In 1974, she began a social science degree at Manchester University."}
+      - {title: "University of Bristol: Remembering Olive Morris and the Black Women's Movement", url: "https://bristol.ac.uk/history/public-engagement/blackhistory/snapshots2021/morris", quote: "As a student at the University of Manchester"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: olive-morris
+    fact: "In 1978, with Stella Dadzie and others, she founded the Organisation of Women of African and Asian Descent"
+    verdict: confirmed
+    sources:
+      - {title: "English Heritage: Morris, Olive (1952–1979)", url: "https://www.english-heritage.org.uk/visit/blue-plaques/olive-morris/", quote: "With Stella Dadzie and others, she founded the Organization of Women of African and Asian Descent (OWAAD) in 1978."}
+      - {title: "Remembering Olive Collective biography, libcom.org", url: "https://libcom.org/article/morris-olive-elaine-1952-1979", quote: "Olive, along with Stella Dadzie and other women, founded the Organisation of Women of African and Asian Descent (OWAAD) in February 1978."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: olive-morris
+    fact: "Back in Brixton she worked at the community law centre, campaigning against the sus laws, which let police arrest anyone suspected of being about to commit a crime"
+    verdict: confirmed
+    sources:
+      - {title: "English Heritage: Morris, Olive (1952–1979)", url: "https://www.english-heritage.org.uk/visit/blue-plaques/olive-morris/", quote: "she worked in Brixton Community Law Centre's juvenile department, campaigning against the 'sus' laws, under which police could arrest anyone they suspected might be about to commit a crime."}
+      - {title: "Remembering Olive Collective biography, libcom.org", url: "https://libcom.org/article/morris-olive-elaine-1952-1979", quote: "working in the juvenile department of the Brixton Community Law Centre where she was involved in the campaign to scrap the SUS laws."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: olive-morris
+    fact: "She died of non-Hodgkin's lymphoma on 12 July 1979, aged 27"
+    verdict: confirmed
+    sources:
+      - {title: "English Heritage: Morris, Olive (1952–1979)", url: "https://www.english-heritage.org.uk/visit/blue-plaques/olive-morris/", quote: "She was eventually diagnosed with non-Hodgkin's lymphoma, and she died, aged 27, on 12 July 1979"}
+      - {title: "Remembering Olive Collective biography, libcom.org", url: "https://libcom.org/article/morris-olive-elaine-1952-1979", quote: "diagnosed with non-Hodgkinson's lymphoma ... She died on July 12th 1979 at St Thomas' Hospital at the age of 27"}
+      - {title: "Lambeth Council: Brixton 'folk hero' Olive Morris commemorated by Google (2020)", url: "https://love.lambeth.gov.uk/brixton-folk-hero-olive-morris-commemorated-by-google", quote: "Olive, who died aged just 27 in 1979"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: olive-morris
+    fact: "121 Railton Road remained a squat until 1999"
+    verdict: confirmed
+    sources:
+      - {title: "English Heritage: Morris, Olive (1952–1979)", url: "https://www.english-heritage.org.uk/visit/blue-plaques/olive-morris/", quote: "At its final eviction in 1999, it was said to have been the longest-running squat in Britain."}
+      - {title: "Remembering Olive Collective biography, libcom.org", url: "https://libcom.org/article/morris-olive-elaine-1952-1979", quote: "121 Railton Road was a social centre and a centre for the squatting movement until it was closed in 1999"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: olive-morris
+    fact: "Brixton voted to put her on its local currency, the Brixton Pound"
+    verdict: confirmed
+    sources:
+      - {title: "Remembering Olive Collective biography, libcom.org", url: "https://libcom.org/article/morris-olive-elaine-1952-1979", quote: "Olive was chosen by popular vote as one of the historical figures to feature on a local currency, the Brixton Pound."}
+      - {title: "University of Bristol: Remembering Olive Morris and the Black Women's Movement", url: "https://bristol.ac.uk/history/public-engagement/blackhistory/snapshots2021/morris", quote: "Morris was voted to feature on the Brixton Pound."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: felix-eboue
+    fact: "In June 1940 colonial governors had to choose between the armistice and de Gaulle's call to fight on"
+    verdict: confirmed
+    sources:
+      - {title: "Ordre de la Libération: Félix Éboué", url: "https://www.ordredelaliberation.fr/fr/compagnons/felix-eboue", quote: "L'effondrement de juin 1940 ... refusant l'idée de l'armistice, câble, dès le 29 juin, au gouverneur général Boisson sa détermination à maintenir le Tchad dans la guerre."}
+      - {title: "Ministère des Armées, Chemins de mémoire: Félix Eboué", url: "https://www.defense.gouv.fr/chemins-memoire/histoire-memoires/personnalites/personnalites-lettre-e-lettre-m/felix-eboue", quote: "Le 6 juin 1940, la nouvelle de la défaite des armées françaises et de l'armistice parviennent à Fort-Lamy. ... A Brazzaville, après avoir hésité, Boisson, gouverneur général de FA.E.F, fait allégeance au maréchal Pétain."}
+    note: "Defense quote had a sentence omitted without a marker; '...' added. Fact unchanged."
+  - card: felix-eboue
+    fact: "Éboué was a Black colonial administrator, born in Cayenne, French Guiana, in 1884"
+    verdict: confirmed
+    sources:
+      - {title: "Britannica: Félix Éboué", url: "https://www.britannica.com/biography/Felix-Eboue", quote: "Félix Éboué (born Dec. 26, 1884, Cayenne , French Guiana ... was a black colonial administrator"}
+      - {title: "Fondation pour la mémoire de l'esclavage: Félix Éboué", url: "https://memoire-esclavage.org/biographies/felix-eboue", quote: "Né en 1884 à Cayenne, ce Guyanais était issu de grands-parents qui avaient subi l'esclavage avant 1848."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: felix-eboue
+    fact: "He spent some twenty years in Ubangi-Shari (Central African Republic), learning local languages and writing on them and the peoples"
+    verdict: confirmed
+    sources:
+      - {title: "Ordre de la Libération: Félix Éboué", url: "https://www.ordredelaliberation.fr/fr/compagnons/felix-eboue", quote: "durant les vingt années qu'il passe en Oubangui ... Il écrit parallèlement plusieurs ouvrages sur le langage et les peuples d'Oubangui."}
+      - {title: "Ministère des Armées, Chemins de mémoire: Félix Eboué", url: "https://www.defense.gouv.fr/chemins-memoire/histoire-memoires/personnalites/personnalites-lettre-e-lettre-m/felix-eboue", quote: "son affectation ... en 1909 dans l'Oubangui-Chari (aujourd'hui la République Centrafricaine) ... s'initie aux langues locales"}
+      - {title: "Britannica: Félix Éboué", url: "https://www.britannica.com/biography/Felix-Eboue", quote: "sent to Ubangi-Shari (now the Central African Republic), where he spent most of his career."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: felix-eboue
+    fact: "In 1936 he became governor of Guadeloupe"
+    verdict: confirmed
+    sources:
+      - {title: "Britannica: Félix Éboué", url: "https://www.britannica.com/biography/Felix-Eboue", quote: "finally (1936) he was made a full governor in Guadeloupe"}
+      - {title: "Ministère des Armées, Chemins de mémoire: Félix Eboué", url: "https://www.defense.gouv.fr/chemins-memoire/histoire-memoires/personnalites/personnalites-lettre-e-lettre-m/felix-eboue", quote: "il est chargé, en septembre 1936, d'appliquer la politique du Front Populaire en Guadeloupe."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: felix-eboue
+    fact: "In 1938 he was moved to Chad"
+    verdict: confirmed
+    sources:
+      - {title: "Britannica: Félix Éboué", url: "https://www.britannica.com/biography/Felix-Eboue", quote: "his transfer in July 1938 to Chad"}
+      - {title: "Ordre de la Libération: Félix Éboué", url: "https://www.ordredelaliberation.fr/fr/compagnons/felix-eboue", quote: "En juillet 1938 il est rappelé en France et nommé gouverneur de 2e classe au Tchad."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: felix-eboue
+    fact: "On 29 June 1940 he cabled his superior that Chad would stay in the war, and made contact with de Gaulle"
+    verdict: confirmed
+    sources:
+      - {title: "Ordre de la Libération: Félix Éboué", url: "https://www.ordredelaliberation.fr/fr/compagnons/felix-eboue", quote: "câble, dès le 29 juin, au gouverneur général Boisson sa détermination à maintenir le Tchad dans la guerre ... prend contact avec le général de Gaulle dès le début du mois de juillet."}
+      - {title: "Fondation pour la mémoire de l'esclavage: Félix Éboué", url: "https://memoire-esclavage.org/biographies/felix-eboue", quote: "Le 29 juin, il câble sa détermination à maintenir le Tchad dans la guerre et prend contact avec de Gaulle."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: felix-eboue
+    fact: "On 26 August 1940 at Fort-Lamy (N'Djamena) he proclaimed Chad's rallying to Free France"
+    verdict: confirmed
+    sources:
+      - {title: "Fondation pour la mémoire de l'esclavage: Félix Éboué", url: "https://memoire-esclavage.org/biographies/felix-eboue", quote: "Le 26 août 1940, à Fort-Lamy (actuelle N'Djamena, capitale du Tchad) il proclame le ralliement officiel du Tchad au Général de Gaulle."}
+      - {title: "Ordre de la Libération: Félix Éboué", url: "https://www.ordredelaliberation.fr/fr/compagnons/felix-eboue", quote: "Le 26 août 1940 le Tchad rallie officiellement la France libre par décision unanime du gouverneur Eboué"}
+      - {title: "Ministère des Armées, Chemins de mémoire: Félix Eboué", url: "https://www.defense.gouv.fr/chemins-memoire/histoire-memoires/personnalites/personnalites-lettre-e-lettre-m/felix-eboue", quote: "Le 26, une proclamation annonce le ralliement du Tchad à la France Libre."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: felix-eboue
+    fact: "Cameroon, Congo and Ubangi-Shari soon followed Chad (also wow)"
+    verdict: corrected
+    sources:
+      - {title: "Fondation pour la mémoire de l'esclavage: Félix Éboué", url: "https://memoire-esclavage.org/biographies/felix-eboue", quote: "Cette décision entraîne dans la foulée le ralliement du Cameroun, du Congo-Brazzaville et de l'Oubangui-Chari"}
+      - {title: "Ordre de la Libération: Félix Éboué", url: "https://www.ordredelaliberation.fr/fr/compagnons/felix-eboue", quote: "donnant un exemple immédiatement suivi par la quasi totalité des territoires de l'AEF (Congo - Oubangui-Chari) et du Cameroun."}
+      - {title: "Britannica: Félix Éboué", url: "https://www.britannica.com/biography/Felix-Eboue", quote: "the key figure in rallying to General de Gaulle that strategically located colony as well as all of French Equatorial Africa."}
+    note: "Wow said \"the rest of French Equatorial Africa followed him\"; Cameroon was not part of AEF and Gabon was taken by force only in November 1940. Ordre says \"la quasi totalité\". Wow now names Cameroon, Congo and Ubangi-Shari, as the body does."
+  - card: felix-eboue
+    fact: "In November 1940 de Gaulle made him governor-general of French Equatorial Africa"
+    verdict: confirmed
+    sources:
+      - {title: "Ordre de la Libération: Félix Éboué", url: "https://www.ordredelaliberation.fr/fr/compagnons/felix-eboue", quote: "le 12 novembre 1940, gouverneur général de l'Afrique équatoriale française."}
+      - {title: "Britannica: Félix Éboué", url: "https://www.britannica.com/biography/Felix-Eboue", quote: "de Gaulle named him governor-general over the entire federation"}
+      - {title: "Fondation pour la mémoire de l'esclavage: Félix Éboué", url: "https://memoire-esclavage.org/biographies/felix-eboue", quote: "Le général de Gaulle le nomme gouverneur général de l'Afrique équatoriale française"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: felix-eboue
+    fact: "In early 1944 de Gaulle opened the Brazzaville conference on the future of France's African territories in Éboué's capital"
+    verdict: confirmed
+    sources:
+      - {title: "Ministère des Armées, Chemins de mémoire: Félix Eboué", url: "https://www.defense.gouv.fr/chemins-memoire/histoire-memoires/personnalites/personnalites-lettre-e-lettre-m/felix-eboue", quote: "Le 30 janvier 1944, le chef de la France Libre ouvre à Brazzaville une conférence sur l'avenir des territoires français d'Afrique."}
+      - {title: "Britannica: Félix Éboué", url: "https://www.britannica.com/biography/Felix-Eboue", quote: "further honoured him in 1944 by holding the Brazzaville Conference (to discuss postwar colonial reforms) in Éboué's capital."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: felix-eboue
+    fact: "He died in Cairo on 17 May 1944"
+    verdict: confirmed
+    sources:
+      - {title: "Britannica: Félix Éboué", url: "https://www.britannica.com/biography/Felix-Eboue", quote: "died May 17, 1944, Cairo , Egypt"}
+      - {title: "Ordre de la Libération: Félix Éboué", url: "https://www.ordredelaliberation.fr/fr/compagnons/felix-eboue", quote: "le 17 mai 1944, Félix Éboué rend son dernier souffle."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: felix-eboue
+    fact: "In May 1949 his remains were placed in the Panthéon, France's pantheon of heroes"
+    verdict: confirmed
+    sources:
+      - {title: "Ordre de la Libération: Félix Éboué", url: "https://www.ordredelaliberation.fr/fr/compagnons/felix-eboue", quote: "Le 20 mai 1949, il est inhumé au Panthéon."}
+      - {title: "Ministère des Armées, Chemins de mémoire: Félix Eboué", url: "https://www.defense.gouv.fr/chemins-memoire/histoire-memoires/personnalites/personnalites-lettre-e-lettre-m/felix-eboue", quote: "Le 19 mai 1949, les cendres de Félix Eboué sont transférées au Panthéon à Paris."}
+      - {title: "Britannica: Félix Éboué", url: "https://www.britannica.com/biography/Felix-Eboue", quote: "in 1949 he became the only black to be buried in France's Panthéon of heroes in Paris"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: gerty-archimede
+    fact: "Guadeloupe was a French colony when she began her legal career"
+    verdict: confirmed
+    sources:
+      - {title: "Le Monde du Droit: Gerty Archimède, une voix ultramarine pour l'égalité (2026)", url: "https://www.lemondedudroit.fr/on-en-parle/105858-gerty-archimede-une-voix-ultramarine-pour-legalite.html", quote: "une femme noire accédait, dans une colonie - expression de l'époque - à une profession judiciaire"}
+      - {title: "Fondation pour la mémoire de l'esclavage: Gerty Archimède", url: "https://memoire-esclavage.org/biographies/gerty-archimede", quote: "la loi du 19 mars 1946 vient d'ériger en départements français la Guadeloupe ... qui étaient auparavant des colonies."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: gerty-archimede
+    fact: "She was born in Morne-à-l'Eau in 1909"
+    verdict: confirmed
+    sources:
+      - {title: "Fondation pour la mémoire de l'esclavage: Gerty Archimède", url: "https://memoire-esclavage.org/biographies/gerty-archimede", quote: "Elle naît le 26 avril 1909 à Morne-à-l'Eau (Guadeloupe)"}
+      - {title: "RCI Guadeloupe: Gerty Archimède, emblème de la femme guadeloupéenne (2019)", url: "https://rci.fm/guadeloupe/infos/Culture/Gerty-Archimede-embleme-de-la-femme-guadeloupeenne", quote: "une mornalienne née un 26 avril 1909 à Morne à L'eau"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: gerty-archimede
+    fact: "In 1939 she became the first woman admitted to the Guadeloupe bar and the first woman lawyer in the French Antilles"
+    verdict: confirmed
+    sources:
+      - {title: "RCI Guadeloupe: Gerty Archimède, emblème de la femme guadeloupéenne (2019)", url: "https://rci.fm/guadeloupe/infos/Culture/Gerty-Archimede-embleme-de-la-femme-guadeloupeenne", quote: "qui devient, en 1939, la première femme inscrite au barreau de Guadeloupe."}
+      - {title: "Cour d'appel de Basse-Terre: La Justice écrit son histoire sur les murs", url: "https://www.cours-appel.justice.fr/basse-terre/ca-de-basse-terre-la-justice-ecrit-son-histoire-sur-les-murs", quote: "elle intègre l'avocature en 1939, faisant d'elle la première femme avocate des Antilles françaises."}
+      - {title: "Fondation pour la mémoire de l'esclavage: Gerty Archimède", url: "https://memoire-esclavage.org/biographies/gerty-archimede", quote: "passe l'examen du barreau en 1939 et devient ... la première avocate noire de France et la première femme avocate des Antilles françaises."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: gerty-archimede
+    fact: "By several accounts she was the first Black woman lawyer in France"
+    verdict: confirmed
+    sources:
+      - {title: "Fondation pour la mémoire de l'esclavage: Gerty Archimède", url: "https://memoire-esclavage.org/biographies/gerty-archimede", quote: "devient à l'orée de la Seconde Guerre mondiale, la première avocate noire de France"}
+      - {title: "Le Monde du Droit: Gerty Archimède, une voix ultramarine pour l'égalité (2026)", url: "https://www.lemondedudroit.fr/on-en-parle/105858-gerty-archimede-une-voix-ultramarine-pour-legalite.html", quote: "Première femme inscrite au barreau de Guadeloupe en 1939, première avocate noire française"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: gerty-archimede
+    fact: "She made her name in criminal defence"
+    verdict: confirmed
+    sources:
+      - {title: "RCI Guadeloupe: Gerty Archimède, emblème de la femme guadeloupéenne (2019)", url: "https://rci.fm/guadeloupe/infos/Culture/Gerty-Archimede-embleme-de-la-femme-guadeloupeenne", quote: "Ses paires saluent ses talents d'avocate pénaliste."}
+      - {title: "Le Monde du Droit: Gerty Archimède, une voix ultramarine pour l'égalité (2026)", url: "https://www.lemondedudroit.fr/on-en-parle/105858-gerty-archimede-une-voix-ultramarine-pour-legalite.html", quote: "gagna rapidement la réputation d'une excellente pénaliste."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: gerty-archimede
+    fact: "In 1945 she was elected to Guadeloupe's general council"
+    verdict: confirmed
+    sources:
+      - {title: "Cour d'appel de Basse-Terre: La Justice écrit son histoire sur les murs", url: "https://www.cours-appel.justice.fr/basse-terre/ca-de-basse-terre-la-justice-ecrit-son-histoire-sur-les-murs", quote: "En 1945, elle est élue conseillère générale, membre du Parti communiste, puis députée de la Guadeloupe."}
+      - {title: "RCI Guadeloupe: Gerty Archimède, emblème de la femme guadeloupéenne (2019)", url: "https://rci.fm/guadeloupe/infos/Culture/Gerty-Archimede-embleme-de-la-femme-guadeloupeenne", quote: "Gerty Archimède sera élue conseillère général en 1945 puis députée en 1946."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: gerty-archimede
+    fact: "In 1946 she was elected deputy for Guadeloupe as a Communist"
+    verdict: confirmed
+    sources:
+      - {title: "Fondation pour la mémoire de l'esclavage: Gerty Archimède", url: "https://memoire-esclavage.org/biographies/gerty-archimede", quote: "En 1946, elle se présente sous l'étiquette communiste aux élections législatives en Guadeloupe ... Elle est élue députée"}
+      - {title: "Le Monde du Droit: Gerty Archimède, une voix ultramarine pour l'égalité (2026)", url: "https://www.lemondedudroit.fr/on-en-parle/105858-gerty-archimede-une-voix-ultramarine-pour-legalite.html", quote: "Sous l'étiquette du Parti communiste français (PCF) ... En 1946, elle devint députée de la Guadeloupe"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: gerty-archimede
+    fact: "In the Assembly she worked to open the judicial professions to women"
+    verdict: confirmed
+    sources:
+      - {title: "Fondation pour la mémoire de l'esclavage: Gerty Archimède", url: "https://memoire-esclavage.org/biographies/gerty-archimede", quote: "elle présente en 1947 le projet de loi permettant aux femmes d'investir diverses professions judiciaires."}
+      - {title: "Le Monde du Droit: Gerty Archimède, une voix ultramarine pour l'égalité (2026)", url: "https://www.lemondedudroit.fr/on-en-parle/105858-gerty-archimede-une-voix-ultramarine-pour-legalite.html", quote: "milita pour ... l'accès des femmes aux professions judiciaires"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: gerty-archimede
+    fact: "She founded the Guadeloupe branch of the Union of French Women, which became the Union of Guadeloupean Women"
+    verdict: confirmed
+    sources:
+      - {title: "Fondation pour la mémoire de l'esclavage: Gerty Archimède", url: "https://memoire-esclavage.org/biographies/gerty-archimede", quote: "en ouvrant notamment en 1948 une branche de l'Union des femmes françaises. Avec l'Union des femmes guadeloupéennes, elle défend les droits des femmes"}
+      - {title: "Cour d'appel de Basse-Terre: La Justice écrit son histoire sur les murs", url: "https://www.cours-appel.justice.fr/basse-terre/ca-de-basse-terre-la-justice-ecrit-son-histoire-sur-les-murs", quote: "Elle est par ailleurs à l'origine du premier mouvement féministe de la Guadeloupe ayant permis l'avènement de l'Union des femmes guadeloupéennes."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: gerty-archimede
+    fact: "She became bâtonnière, head of the Guadeloupe bar"
+    verdict: confirmed
+    sources:
+      - {title: "Fondation pour la mémoire de l'esclavage: Gerty Archimède", url: "https://memoire-esclavage.org/biographies/gerty-archimede", quote: "Gerty Archimède en assurera la présidence comme bâtonnière entre 1967 et 1970."}
+      - {title: "Le Monde du Droit: Gerty Archimède, une voix ultramarine pour l'égalité (2026)", url: "https://www.lemondedudroit.fr/on-en-parle/105858-gerty-archimede-une-voix-ultramarine-pour-legalite.html", quote: "Gerty Archimède, bâtonnière de l'ordre des avocats de Guadeloupe"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: gerty-archimede
+    fact: "She defended Angela Davis when Davis and her companions were detained by French authorities in Guadeloupe"
+    verdict: confirmed
+    sources:
+      - {title: "Fondation pour la mémoire de l'esclavage: Gerty Archimède", url: "https://memoire-esclavage.org/biographies/gerty-archimede", quote: "En 1969, elle défend la militante africaine-américaine, Angela Davis, contre les douanes françaises qui l'avaient arrêtée avec ses camarades alors qu'elle était de passage en escale en Guadeloupe."}
+      - {title: "RCI Guadeloupe: Gerty Archimède, emblème de la femme guadeloupéenne (2019)", url: "https://rci.fm/guadeloupe/infos/Culture/Gerty-Archimede-embleme-de-la-femme-guadeloupeenne", quote: "pour faire libérer la militante noire américaine, Angéla Davis dont le bateau avait été arraisonné au large de la Guadeloupe."}
+      - {title: "Cour d'appel de Basse-Terre: La Justice écrit son histoire sur les murs", url: "https://www.cours-appel.justice.fr/basse-terre/ca-de-basse-terre-la-justice-ecrit-son-histoire-sur-les-murs", quote: "celui concernant Angela Davis qu'elle défend."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: gerty-archimede
+    fact: "She died in 1980"
+    verdict: confirmed
+    sources:
+      - {title: "Fondation pour la mémoire de l'esclavage: Gerty Archimède", url: "https://memoire-esclavage.org/biographies/gerty-archimede", quote: "Elle s'éteint le 15 août 1980"}
+      - {title: "Black Women Radicals: Gerty Archimède", url: "https://blackwomenradicals.com/database-source/gerty-archimede", quote: "Gerty Archimède (April 26, 1909-August 15, 1980)"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: limon-afro-costa-ricans
+    fact: "In the 1870s Costa Rica built a railway from the coffee-growing Central Valley to Limón and brought in Jamaican workers to build it"
+    verdict: confirmed
+    sources:
+      - {title: "Costa Rica Tourism Board: Historical walks through Limón", url: "https://visitcostarica.com/things-to-do/culture/historical-walks/limon", quote: "In 1871, in order to facilitate coffee exportation, governor Tomas Guardia tried to have a railway built that connected the Central Valley to the Port of Limon ... in December 1872 when the first boat arrived from Kingston Jamaica carrying with it workers from Jamaica."}
+      - {title: "The Tico Times: Puerto Viejo and its fight to preserve its culture", url: "https://ticotimes.net/2022/02/03/puerto-viejo-deep-dive-cancun-crossroads-preserving-culture-forged-by-hardship", quote: "Costa Rica loosened its ban to welcome Jamaican laborers in the 1870s, when the country needed a workforce to construct its new rail line"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: limon-afro-costa-ricans
+    fact: "The line reached San José in 1890"
+    verdict: confirmed
+    sources:
+      - {title: "Britannica: Limón, Costa Rica", url: "https://www.britannica.com/place/Limon-Costa-Rica", quote: "A railroad through very difficult terrain finally joined Limón and San José , the national capital, in 1890."}
+      - {title: "Costa Rica Tourism Board: Historical walks through Limón", url: "https://visitcostarica.com/things-to-do/culture/historical-walks/limon", quote: "finally on December 7, 1890, the first railway was inaugurated"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: limon-afro-costa-ricans
+    fact: "Many workers stayed; United Fruit banana plantations along the tracks drew more West Indians"
+    verdict: confirmed
+    sources:
+      - {title: "Britannica: Limón, Costa Rica", url: "https://www.britannica.com/place/Limon-Costa-Rica", quote: "The banana industry was developed along the tracks ... from 1900 to the 1930s the United Fruit Company dominated the area. African and Chinese immigrants who came to work on the Atlantic Railroad and the banana plantations"}
+      - {title: "The Tico Times: Puerto Viejo and its fight to preserve its culture", url: "https://ticotimes.net/2022/02/03/puerto-viejo-deep-dive-cancun-crossroads-preserving-culture-forged-by-hardship", quote: "By the project's conclusion, many of the black immigrants had settled permanently in Limón. Large numbers of Afro-Costa Ricans then proceeded to work on the Caribbean banana plantations of the United Fruit Company"}
+      - {title: "Ronald N. Harpelle, Identity in Transition (2000)", url: "https://sojourners.lakeheadu.ca/pubs/article1.html", quote: "between 1891 and 1911 alone close to 43,000 Jamaicans made their way to Costa Rica to work on the banana plantations."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: limon-afro-costa-ricans
+    fact: "Limón's West Indians lived in English, attended Protestant churches and joined the UNIA"
+    verdict: corrected
+    sources:
+      - {title: "Ronald N. Harpelle, Identity in Transition (2000)", url: "https://sojourners.lakeheadu.ca/pubs/article1.html", quote: "They lived their lives in English, attended Protestant churches, and participated organizations like the Universal Negro Improvement Association."}
+      - {title: "Costa Rica Tourism Board: Historical walks through Limón", url: "https://visitcostarica.com/things-to-do/culture/historical-walks/limon", quote: "The construction came about from interest from the Jamaican Baptist congregation undertaking religious missions to the Black community"}
+      - {title: "Ronald N. Harpelle, The Americas 56:3 (2000)", url: "https://www.cambridge.org/core/journals/americas/article/racism-and-nationalism-in-the-creation-of-costa-ricas-pacific-coast-banana-enclave/A6FB2AE8DE1E20CAB704A10B280AAB9B", quote: "The government closed English schools ... a well-established immigrant community."}
+      - {title: "The Tico Times: The people building a fire for the future of UNIA/Liberty Hall in Limón (2016)", url: "https://ticotimes.net/2016/05/02/people-building-fire-future-unialiberty-hall-limon", quote: "23 branches of the UNIA were established in Limón and the surrounding Caribbean coast."}
+    note: "The three Harpelle works are one author and count as one source; Tico Times (2016) added for the UNIA in Limón, Costa Rica Tourism Board for the Protestant (Baptist) churches; Tico Times (2022, already in ledger) lists English as the coast's language."
+  - card: limon-afro-costa-ricans
+    fact: "Many West Indians in Limón, even those born in Costa Rica, were not recognised as citizens"
+    verdict: corrected
+    sources:
+      - {title: "Ronald N. Harpelle, Identity in Transition (2000)", url: "https://sojourners.lakeheadu.ca/pubs/article1.html", quote: "the West Indians who became citizens were still a minority in the community in 1950."}
+      - {title: "Delfino.cr: 16 de julio de 1955, el inicio de la Costa Rica para todos (2025)", url: "https://delfino.cr/2025/07/16-de-julio-de-1955-el-inicio-de-la-costa-rica-para-todos", quote: "Esta legislación fue aprobada pensando en las miles de personas nacidas en Costa Rica de padres antillanos a quienes el Estado no reconocía como ciudadanos."}
+    note: "Was \"Most West Indians were not Costa Rican citizens\", supported only by Harpelle (one author). Reworded to what Harpelle and Delfino.cr both support. EN and RU changed."
+  - card: limon-afro-costa-ricans
+    fact: "When disease drove United Fruit to the Pacific coast, the 1934 banana contract barred 'people of colour' from working for the company there"
+    verdict: confirmed
+    sources:
+      - {title: "Ronald N. Harpelle, The Americas 56:3 (2000)", url: "https://www.cambridge.org/core/journals/americas/article/racism-and-nationalism-in-the-creation-of-costa-ricas-pacific-coast-banana-enclave/A6FB2AE8DE1E20CAB704A10B280AAB9B", quote: "the signing of the 1934 banana contract between the government of Costa Rica and the United Fruit Company ... prohibiting “people of colour” from working for United Fruit on the Pacific coast."}
+      - {title: "Ronald N. Harpelle, Identity in Transition (2000)", url: "https://sojourners.lakeheadu.ca/pubs/article1.html", quote: "The spread of disease on the Atlantic coast was the reason United Fruit sought to establish new plantations on the Pacific coast. ... \"people of colour\" were prohibited from working for the company on the Pacific Coast."}
+      - {title: "Ariana Fernández, Delfino.cr: Un 10 de diciembre de 1934 y otro de 1948 (2025)", url: "https://delfino.cr/2025/12/un-10-de-diciembre-de-1934-y-otro-de-1948", quote: "un 10 de diciembre de 1934 se aprobó la legislación N.º 31 que prohibía a la industria bananera, en su artículo N.º 5, emplear a gente “de color” en sus plantaciones del Pacífico."}
+      - {title: "Britannica: Costa Rica, People", url: "https://www.britannica.com/place/Costa-Rica/People", quote: "when Panama disease hit the banana crop on the Atlantic coast and operations shifted to the Pacific coast"}
+    note: "Harpelle counts once; Delfino.cr (Fernández) gives the 1934 law and its art. 5; Britannica added for the disease and the shift to the Pacific (it dates the law 1935)."
+  - card: limon-afro-costa-ricans
+    fact: "The ban fell in 1949, and the law that ended it also granted Black Costa Ricans civil and political rights"
+    verdict: corrected
+    sources:
+      - {title: "Delfino.cr: 16 de julio de 1955 (2025)", url: "https://delfino.cr/2025/07/16-de-julio-de-1955-el-inicio-de-la-costa-rica-para-todos", quote: "La Ley No. 836 del 4 de noviembre de 1949 derogó la prohibición de contratar a \"gente de color\" en las bananeras del Pacífico y les otorgó derechos civiles, políticos y económicos."}
+      - {title: "Britannica: Costa Rica, People", url: "https://www.britannica.com/place/Costa-Rica/People", quote: "It was not until 1949 that the government abolished what was in effect Costa Rica's version of apartheid and allowed black residents of Limón to travel, enter the Valle Central region, and become citizens."}
+    note: "Extended with the civil and political rights granted by Law 836 (1949); both quotes found. The sentence on the failed court challenge was removed (see removed)."
+  - card: limon-afro-costa-ricans
+    fact: "The story of a law barring Black people from travelling inland is a myth; there was only de facto discrimination and the Pacific job ban"
+    verdict: confirmed
+    sources:
+      - {title: "Ronald N. Harpelle, Journal of Latin American Studies 25:1 (1993)", url: "https://www.cambridge.org/core/journals/journal-of-latin-american-studies/article/social-and-political-integration-of-west-indians-in-costa-rica-193050/5C4603B99B326C37BA14C271ECE2D3B7", quote: "contrary to popular belief, there was never any legislation prohibiting people of African descent from going inland from Limón."}
+      - {title: "Ariana Fernández, Delfino.cr: Un 10 de diciembre de 1934 y otro de 1948 (2025)", url: "https://delfino.cr/2025/12/un-10-de-diciembre-de-1934-y-otro-de-1948", quote: "Así nació el mito de que las personas afrodescendientes ... no podían pasar de Turrialba y “cruzar” hacia el Valle Central. Nunca existió una legislación que prohibiera tal cosa"}
+      - {title: "The Tico Times: Puerto Viejo and its fight to preserve its culture", url: "https://ticotimes.net/2022/02/03/puerto-viejo-deep-dive-cancun-crossroads-preserving-culture-forged-by-hardship", quote: "“massive migration by blacks to the Central Valley was prohibited through de facto discrimination,” though it is a “historical myth” that this was codified in law."}
+    note: "Harpelle and Delfino.cr (Fernández) independent; Tico Times quotes a historian."
+  - card: limon-afro-costa-ricans
+    fact: "Limón's mix of peoples, languages and music sets it apart from other Costa Rican cities"
+    verdict: confirmed
+    sources:
+      - {title: "Britannica: Limón, Costa Rica", url: "https://www.britannica.com/place/Limon-Costa-Rica", quote: "have contributed to Limón's multiethnic flavour, which is unlike that of any other city in Costa Rica."}
+      - {title: "The Tico Times: Puerto Viejo and its fight to preserve its culture", url: "https://ticotimes.net/2022/02/03/puerto-viejo-deep-dive-cancun-crossroads-preserving-culture-forged-by-hardship", quote: "different languages (English and Mekatelyu), different music (Reggae and Calypso), different architecture (Victorian and Caribbean mix) and different customs."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: victoria-santa-cruz
+    fact: "She is regarded as the mother of Afro-Peruvian dance / a leading cultural icon of African descent"
+    verdict: confirmed
+    sources:
+      - {title: "Zachary McFerren, BlackPast.org: Victoria Eugenia Santa Cruz Gamarra", url: "https://www.blackpast.org/global-african-history/victoria-eugenia-santa-cruz-gamarra-1922-2014/", quote: "is widely considered the mother of Afro-Peruvian dance."}
+      - {title: "AWARE: Victoria Santa Cruz", url: "https://awarewomenartists.com/en/artiste/victoria-santa-cruz/", quote: "solidifying her as one of the most prominent cultural icons of African descent in Latin America"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: victoria-santa-cruz
+    fact: "Born in Lima in 1922, eighth of ten children"
+    verdict: confirmed
+    sources:
+      - {title: "Hammer Museum, Radical Women: Victoria Santa Cruz", url: "https://hammer.ucla.edu/radical-women/artists/victoria-santa-cruz", quote: "In 1922 Victoria Santa Cruz was born in Lima as the eighth of ten children"}
+      - {title: "Zachary McFerren, BlackPast.org: Victoria Eugenia Santa Cruz Gamarra", url: "https://www.blackpast.org/global-african-history/victoria-eugenia-santa-cruz-gamarra-1922-2014/", quote: "Born in Lima, Peru, on October 27, 1922, she was the eighth of ten children."}
+    note: "The front-matter place \"La Victoria, Lima\" rested on RPP alone; changed to Lima (see unledgered)."
+  - card: victoria-santa-cruz
+    fact: "Her father was a playwright; her mother danced zamacueca and marinera"
+    verdict: confirmed
+    sources:
+      - {title: "Biblioteca Nacional del Perú: Victoria Santa Cruz (2023)", url: "https://www.bnp.gob.pe/?p=29378", quote: "Hija de Nicomedes Santa Cruz Aparicio (escritor y dramaturgo) y Victoria Gamarra (bailarina de zamacueca y marinera)."}
+      - {title: "RPP Noticias: Los gloriosos 90 años de Victoria Santa Cruz", url: "https://rpp.pe/lima/actualidad/los-gloriosos-90-anos-de-nuestra-folclorista-negra-victoria-santa-cruz-noticia-535037", quote: "su padre fue dramaturgo y su madre gran bailarina de zamacueca y marinera"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: victoria-santa-cruz
+    fact: "In 1958 she and her younger brother Nicomedes founded Cumanana, Peru's first Black theatre company"
+    verdict: confirmed
+    sources:
+      - {title: "Hammer Museum, Radical Women: Victoria Santa Cruz", url: "https://hammer.ucla.edu/radical-women/artists/victoria-santa-cruz", quote: "In 1958, together with her younger brother Nicomedes, she cofounded the first black theater company in Peru, Cumanana"}
+      - {title: "AWARE: Victoria Santa Cruz", url: "https://awarewomenartists.com/en/artiste/victoria-santa-cruz/", quote: "Santa Cruz co-founded and co-directed Cumanana, Peru's first Black theatre company, with her brother Nicomedes Santa Cruz (1925–1992)."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: victoria-santa-cruz
+    fact: "She developed a method of recovering culture through inner rhythm and 'ancestral memory'"
+    verdict: confirmed
+    sources:
+      - {title: "Hammer Museum, Radical Women: Victoria Santa Cruz", url: "https://hammer.ucla.edu/radical-women/artists/victoria-santa-cruz", quote: "During her time with Cumanana, Santa Cruz began to develop her pedagogical method of self-discovery and recuperation of culture based on internal rhythm and what she called ancestral memory."}
+      - {title: "AWARE: Victoria Santa Cruz", url: "https://awarewomenartists.com/en/artiste/victoria-santa-cruz/", quote: "a training method of self-rediscovery and reconnection with African cultural roots through inner cadence and “ memoria ancestral ” [ancestral memory]"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: victoria-santa-cruz
+    fact: "She studied theatre and choreography in Paris"
+    verdict: confirmed
+    sources:
+      - {title: "Hammer Museum, Radical Women: Victoria Santa Cruz", url: "https://hammer.ucla.edu/radical-women/artists/victoria-santa-cruz", quote: "she studied theater and choreography in Paris at the Université du Théâtre des Nations and École Supérieur des Études Chorégraphiques"}
+      - {title: "Biblioteca Nacional del Perú: Victoria Santa Cruz (2023)", url: "https://www.bnp.gob.pe/?p=29378", quote: "viajó a París para estudiar en la Universidad del Teatro de las Naciones y en la Escuela Superior de Estudios Coreográficos"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: victoria-santa-cruz
+    fact: "She founded Teatro y Danzas Negras del Perú, which performed in Lima theatres and on television"
+    verdict: confirmed
+    sources:
+      - {title: "Hammer Museum, Radical Women: Victoria Santa Cruz", url: "https://hammer.ucla.edu/radical-women/artists/victoria-santa-cruz", quote: "she founded the group Teatro y Danzas Negras del Perú, which performed in Lima and on Peruvian television"}
+      - {title: "Biblioteca Nacional del Perú: Victoria Santa Cruz (2023)", url: "https://www.bnp.gob.pe/?p=29378", quote: "funda la compañía “Teatro y Danzas Negras del Perú”, realizando presentaciones en teatros nacionales, así como en televisión."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: victoria-santa-cruz
+    fact: "The company represented Peru at the 1968 Mexico City Olympics festivities"
+    verdict: confirmed
+    sources:
+      - {title: "Biblioteca Nacional del Perú: Victoria Santa Cruz (2023)", url: "https://www.bnp.gob.pe/?p=29378", quote: "Este grupo representó al Perú en las festividades con ocasión de los Juegos Olímpicos de México 1968"}
+      - {title: "AWARE: Victoria Santa Cruz", url: "https://awarewomenartists.com/en/artiste/victoria-santa-cruz/", quote: "performing nationally and internationally, including at the 1968 Summer Olympics in Mexico City"}
+      - {title: "RPP Noticias: Los gloriosos 90 años de Victoria Santa Cruz", url: "https://rpp.pe/lima/actualidad/los-gloriosos-90-anos-de-nuestra-folclorista-negra-victoria-santa-cruz-noticia-535037", quote: "nos representó en los Juegos Olímpicos de México 1968"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: victoria-santa-cruz
+    fact: "She re-created Afro-Peruvian dances such as landó and zamacueca"
+    verdict: confirmed
+    sources:
+      - {title: "Hammer Museum, Radical Women: Victoria Santa Cruz", url: "https://hammer.ucla.edu/radical-women/artists/victoria-santa-cruz", quote: "During the late 1960s Santa Cruz re-created such seminal Afro-Peruvian dance forms as landó and zamacueca ."}
+      - {title: "Zachary McFerren, BlackPast.org: Victoria Eugenia Santa Cruz Gamarra", url: "https://www.blackpast.org/global-african-history/victoria-eugenia-santa-cruz-gamarra-1922-2014/", quote: "These performances re-energized Afro-Peruvian dance forms such as the zamacueca and landu"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: victoria-santa-cruz
+    fact: "From 1973 to 1982 she directed the National Folklore Ensemble"
+    verdict: confirmed
+    sources:
+      - {title: "RPP Noticias: Los gloriosos 90 años de Victoria Santa Cruz", url: "https://rpp.pe/lima/actualidad/los-gloriosos-90-anos-de-nuestra-folclorista-negra-victoria-santa-cruz-noticia-535037", quote: "En 1973, fue designada directora del Conjunto Nacional de Folclore del Instituto Nacional de Cultura (INC) , cargo en el que se mantuvo hasta 1982."}
+      - {title: "AWARE: Victoria Santa Cruz", url: "https://awarewomenartists.com/en/artiste/victoria-santa-cruz/", quote: "In 1973, she founded and directed the Conjunto Nacional de Folklore ... After ending her tenure in 1982"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: victoria-santa-cruz
+    fact: "She then taught at Carnegie Mellon University in Pittsburgh until 1999"
+    verdict: confirmed
+    sources:
+      - {title: "AWARE: Victoria Santa Cruz", url: "https://awarewomenartists.com/en/artiste/victoria-santa-cruz/", quote: "moved to Pittsburgh (USA) to teach at Carnegie Mellon, retiring as Professor Emerita in 1999."}
+      - {title: "Zachary McFerren, BlackPast.org: Victoria Eugenia Santa Cruz Gamarra", url: "https://www.blackpast.org/global-african-history/victoria-eugenia-santa-cruz-gamarra-1922-2014/", quote: "From 1982 to 1999, she was a professor of drama at Carnegie Mellon University in Pittsburgh, Pennsylvania."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: victoria-santa-cruz
+    fact: "In 1978 she performed Me gritaron negra ('They shouted Black girl! at me'), a poem moving from insult and shame to pride"
+    verdict: confirmed
+    sources:
+      - {title: "AWARE: Victoria Santa Cruz", url: "https://awarewomenartists.com/en/artiste/victoria-santa-cruz/", quote: "her seminal spoken-word poem ¡Me Gritaron Negra! [They Shouted 'Black Girl!' at Me, 1978]."}
+      - {title: "Zachary McFerren, BlackPast.org: Victoria Eugenia Santa Cruz Gamarra", url: "https://www.blackpast.org/global-african-history/victoria-eugenia-santa-cruz-gamarra-1922-2014/", quote: "in 1978, she performed one of the most impactful poems of her time, Me gritaron negra, which explored her transition from shame to pride in her race."}
+      - {title: "RPP Noticias: Los gloriosos 90 años de Victoria Santa Cruz", url: "https://rpp.pe/lima/actualidad/los-gloriosos-90-anos-de-nuestra-folclorista-negra-victoria-santa-cruz-noticia-535037", quote: "Escribió “Me gritaron Negra\" hermoso poema reivindicatorio de los negros."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: victoria-santa-cruz
+    fact: "She died in Lima in 2014 and lay in state at the national museum"
+    verdict: confirmed
+    sources:
+      - {title: "Hammer Museum, Radical Women: Victoria Santa Cruz", url: "https://hammer.ucla.edu/radical-women/artists/victoria-santa-cruz", quote: "She died in 2014 in Lima and, in recognition of her contributions, was laid in state at the Museo de la Nación there."}
+      - {title: "AWARE: Victoria Santa Cruz", url: "https://awarewomenartists.com/en/artiste/victoria-santa-cruz/", quote: "Santa Cruz died in Lima in 2014 and was honoured with a lying-in-state at the National Museum."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: audrey-jeffers
+    fact: "Many poor schoolchildren in Port of Spain needed free meals"
+    verdict: confirmed
+    sources:
+      - {title: "National Trust of Trinidad and Tobago: 2 Outstanding Women in Trinidad and Tobago Heritage", url: "https://nationaltrust.tt/?p=12337", quote: "the Coterie opened a “Breakfast Shed” in Port of Spain to provide hot meals for underprivileged children."}
+      - {title: "Women's Activism NYC: Audrey Jeffers", url: "https://www.womensactivism.nyc/stories/9804", quote: "the Coterie of Social Workers (COSW), which supplied poor school children with free lunches."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: audrey-jeffers
+    fact: "Born in 1898 into a well-off Black family of Trinidad's small propertied class"
+    verdict: corrected
+    sources:
+      - {title: "National Trust of Trinidad and Tobago: 2 Outstanding Women in Trinidad and Tobago Heritage", url: "https://nationaltrust.tt/?p=12337", quote: "Audrey Lane Jeffers (12th February 1898 – 24th June 1968) ... She came from a comfortable upper middle-class Afro-Trinidadian family"}
+      - {title: "Rhoda E. Reddock, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/jeffers-audrey", quote: "Born to parents of Trinidad and Tobago's small, black property-owning class"}
+    note: "\"Born in Port of Spain\" and \"her father was a lawyer\" came from the National Trust page alone (Reddock names neither); removed. Kept the well-off Black propertied family, supported by both. Stabroek News is offline (site unavailable, no archive) and was dropped everywhere."
+  - card: audrey-jeffers
+    fact: "As a teenager she went to London to study social science"
+    verdict: confirmed
+    sources:
+      - {title: "National Trust of Trinidad and Tobago: 2 Outstanding Women in Trinidad and Tobago Heritage", url: "https://nationaltrust.tt/?p=12337", quote: "went to England at the age of 15 to continue her studies. There, Jeffers pursued a diploma in social science at Alexander College in North London"}
+      - {title: "Rhoda E. Reddock, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/jeffers-audrey", quote: "proceeding to London in 1913 to complete a diploma in social science at Alexander College, North Finchley."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: audrey-jeffers
+    fact: "During WWI she worked among West African troops and set up a West African Soldiers' Fund"
+    verdict: confirmed
+    sources:
+      - {title: "National Trust of Trinidad and Tobago: 2 Outstanding Women in Trinidad and Tobago Heritage", url: "https://nationaltrust.tt/?p=12337", quote: "During World War I, Jeffers worked among West African troops and set up a West African Soldiers' Fund"}
+      - {title: "Rhoda E. Reddock, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/jeffers-audrey", quote: "During World War I she served among the West African troops and through the West India Committee organized a West African Soldiers Fund"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: audrey-jeffers
+    fact: "Back home (1920) she founded the Coterie of Social Workers in 1921"
+    verdict: confirmed
+    sources:
+      - {title: "National Trust of Trinidad and Tobago: 2 Outstanding Women in Trinidad and Tobago Heritage", url: "https://nationaltrust.tt/?p=12337", quote: "On her return to Trinidad in 1920 ... In 1921, Jeffers established the Coterie of Social Workers in Port of Spain."}
+      - {title: "Rhoda E. Reddock, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/jeffers-audrey", quote: "Upon her return to Trinidad and Tobago in 1920 ... in 1921 she founded ... the Coterie of Social Workers (COSW)."}
+      - {title: "Women's Activism NYC: Audrey Jeffers", url: "https://www.womensactivism.nyc/stories/9804", quote: "In 1921, she established the Coterie of Social Workers (COSW)"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: audrey-jeffers
+    fact: "The Coterie's Breakfast Shed gave free meals to poor schoolchildren"
+    verdict: confirmed
+    sources:
+      - {title: "National Trust of Trinidad and Tobago: 2 Outstanding Women in Trinidad and Tobago Heritage", url: "https://nationaltrust.tt/?p=12337", quote: "the Coterie opened a “Breakfast Shed” in Port of Spain to provide hot meals for underprivileged children."}
+      - {title: "Women's Activism NYC: Audrey Jeffers", url: "https://www.womensactivism.nyc/stories/9804", quote: "supplied poor school children with free lunches. COSW later opened the first “Breakfast Shed”"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: audrey-jeffers
+    fact: "The Coterie opened a home for blind girls in 1928 and a hostel for working girls in 1935"
+    verdict: confirmed
+    sources:
+      - {title: "National Trust of Trinidad and Tobago: 2 Outstanding Women in Trinidad and Tobago Heritage", url: "https://nationaltrust.tt/?p=12337", quote: "In 1928, the coterie set up the St Mary's Home for Blind Girls, the Maud Reeves Hostel for Working Girls in 1935"}
+      - {title: "Rhoda E. Reddock, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/jeffers-audrey", quote: "the establishment of the St. Mary's Home for Blind Girls and Women in 1928, the Maud Reeves Hostel for Working Girls in 1935"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: audrey-jeffers
+    fact: "The Coterie pressed for jobs for educated Black women, a girls' scholarship and a women's police force"
+    verdict: confirmed
+    sources:
+      - {title: "Rhoda E. Reddock, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/jeffers-audrey", quote: "The conference's recommendations included the introduction of a girl's open scholarship for higher education, the establishment of a women's police force, and increased employment for educated black women."}
+      - {title: "Women's Activism NYC: Audrey Jeffers", url: "https://www.womensactivism.nyc/stories/9804", quote: "Jeffers pushed for more employment opportunities for educated Black women, the introduction of a scholarship for girls, and the establishment of a Women's Police Force"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: audrey-jeffers
+    fact: "In 1936 the Coterie hosted a conference of women social workers from the British West Indies and British Guiana in Port of Spain"
+    verdict: confirmed
+    sources:
+      - {title: "National Trust of Trinidad and Tobago: 2 Outstanding Women in Trinidad and Tobago Heritage", url: "https://nationaltrust.tt/?p=12337", quote: "In 1936, the coterie hosted a conference of British West Indies and British Guiana Women Social Workers."}
+      - {title: "Rhoda E. Reddock, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/jeffers-audrey", quote: "In May the Coterie hosted the First Conference of British West Indies and British Guiana Women Social Workers in Port of Spain"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: audrey-jeffers
+    fact: "In 1936 she became the first woman elected to the Port of Spain city council"
+    verdict: confirmed
+    sources:
+      - {title: "National Trust of Trinidad and Tobago: 2 Outstanding Women in Trinidad and Tobago Heritage", url: "https://nationaltrust.tt/?p=12337", quote: "In that same year, Jeffers became the first woman elected to Port of Spain's City Council"}
+      - {title: "Rhoda E. Reddock, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/jeffers-audrey", quote: "In October, after a challenge to her eligibility, Jeffers became the first woman elected to the Port of Spain Municipal Council."}
+    note: "National Trust and Reddock independent; the Stabroek News source could not be opened and was removed."
+  - card: audrey-jeffers
+    fact: "In 1946 she became the first woman appointed (nominated) to the Legislative Council"
+    verdict: confirmed
+    sources:
+      - {title: "Rhoda E. Reddock, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/jeffers-audrey", quote: "In 1946 she would become the first woman nominated to the Legislative Council ."}
+      - {title: "Women's Activism NYC: Audrey Jeffers", url: "https://www.womensactivism.nyc/stories/9804", quote: "her becoming the first woman to be nominated to the Legislative Council in 1946."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: audrey-jeffers
+    fact: "She died in 1968"
+    verdict: confirmed
+    sources:
+      - {title: "National Trust of Trinidad and Tobago: 2 Outstanding Women in Trinidad and Tobago Heritage", url: "https://nationaltrust.tt/?p=12337", quote: "(12 th February 1898 – 24 th June 1968)"}
+      - {title: "Rhoda E. Reddock, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/jeffers-audrey", quote: "February 12, 1896 June 24, 1968"}
+      - {title: "Women's Activism NYC: Audrey Jeffers", url: "https://www.womensactivism.nyc/stories/9804", quote: "Audrey Jeffers 1898 - 1968"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: spiritual-baptists
+    fact: "The Spiritual Baptist faith arose in Trinidad in the 19th century, blending Protestant Christianity with West African practices"
+    verdict: confirmed
+    sources:
+      - {title: "Obeah Histories: Shouters Prohibition Ordinance, Trinidad 1917", url: "https://obeahhistories.org/shouters-prohibition-ordinance/", quote: "The 'Shouters' practiced a form of Christianity that had developed out of religious revivals in the nineteenth century, and drew deeply on West African religious practices."}
+      - {title: "Tourism Trinidad: Spiritual Baptist Liberation Day", url: "https://visittrinidad.tt/festivals/spiritual-baptist-liberation-day", quote: "The Spiritual Shouter Baptist faith is indigenous to Trinidad and Tobago, comprising elements of Protestant Christianity and West African doctrines and rituals."}
+      - {title: "Trinidad Guardian: More than emancipation", url: "https://www.guardian.co.tt/article/more-than-emancipation-spiritual-baptist-faith-born-out-of-african-tradition-and-struggle-6.2.2637916.2d1c2c913d", quote: "Out of those struggles emerged the Spiritual Baptist faith, a uniquely Caribbean expression of Christianity that blended Protestant teachings with African spiritual traditions."}
+    note: "Obeah Histories dates it to 19th-century revivals; Guardian places its emergence after emancipation (1838)."
+  - card: spiritual-baptists
+    fact: "Its worship uses bells, hand-clapping, foot-stamping, loud singing and shouting"
+    verdict: confirmed
+    sources:
+      - {title: "Office of the President of Trinidad and Tobago: Message on Spiritual Baptist Liberation Day 2020", url: "https://otp.tt/message-on-spiritual-baptist-liberation-day-2020", quote: "the bell ringing, hand clapping and foot stomping which were affronts to colonial sensibilities"}
+      - {title: "Trinidad Guardian editorial: Let the bells of freedom ring (2024)", url: "https://www.guardian.co.tt/opinion/let-the-bells-of-freedom-ring-6.2.1962834.717b91496f", quote: "their distinctive style of worship, with bell ringing, stamping of feet, shouting, dancing and singing loudly"}
+    note: "OTP and Guardian independent; both quotes found."
+  - card: spiritual-baptists
+    fact: "Critics called them Shouters"
+    verdict: confirmed
+    sources:
+      - {title: "Obeah Histories: Shouters Prohibition Ordinance, Trinidad 1917", url: "https://obeahhistories.org/shouters-prohibition-ordinance/", quote: "Complaints about 'Shouters' appeared in Trinidadian newspapers as early as the 1890s."}
+      - {title: "Tourism Trinidad: Spiritual Baptist Liberation Day", url: "https://visittrinidad.tt/festivals/spiritual-baptist-liberation-day", quote: "Baptists decided to use the term Spiritual Baptists instead of Shouter Baptists, to gain respect for their religion."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: spiritual-baptists
+    fact: "Among its roots are the Baptist congregations of the Merikins, Black American veterans of the War of 1812 settled in south Trinidad"
+    verdict: confirmed
+    sources:
+      - {title: "Trinidad Guardian: More than emancipation", url: "https://www.guardian.co.tt/article/more-than-emancipation-spiritual-baptist-faith-born-out-of-african-tradition-and-struggle-6.2.2637916.2d1c2c913d", quote: "Its growth in Trinidad was strengthened by the arrival of the Merikins—freed Black American soldiers who fought alongside the British during the War of 1812 and later settled in south Trinidad. Their Baptist beliefs merged with African customs"}
+      - {title: "National Archives of Trinidad and Tobago: The Story of the Merikens in Trinidad (2015)", url: "https://nationalarchivestt.wordpress.com/2015/08/14/the-story-of-the-merikens-in-trinidad/", quote: "“ Africanisms versus Orthodoxy: The Baptist Missionary Society, the “Meriken” Baptists ... ” ... owed their military origin to the War of 1812 ... settled in the underdeveloped deep south of Southern Trinidad."}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: spiritual-baptists
+    fact: "The colonial authorities regarded the worship as too noisy and too African"
+    verdict: corrected
+    sources:
+      - {title: "Trinidad Guardian editorial: Let the bells of freedom ring (2024)", url: "https://www.guardian.co.tt/opinion/let-the-bells-of-freedom-ring-6.2.1962834.717b91496f", quote: "regarded as “too noisy” and “too African” by the powers that be"}
+      - {title: "Office of the President of Trinidad and Tobago: Message on Spiritual Baptist Liberation Day 2020", url: "https://otp.tt/message-on-spiritual-baptist-liberation-day-2020", quote: "the prejudice associated with fundamentally African customs and rituals had remained. Now, the bell ringing, hand clapping and foot stomping which were affronts to colonial sensibilities"}
+    note: "The two Trinidad Guardian pieces are one publisher and count once; second source replaced by the Office of the President message. Fact unchanged."
+  - card: spiritual-baptists
+    fact: "The Shouters Prohibition Ordinance came into force on 28 November 1917"
+    verdict: confirmed
+    sources:
+      - {title: "Obeah Histories: Shouters Prohibition Ordinance, Trinidad 1917", url: "https://obeahhistories.org/shouters-prohibition-ordinance/", quote: "Commencement 28th November, 1917 ... This Ordinance may be cited as the Shouters Prohibition Ordinance."}
+      - {title: "Trinidad Guardian editorial: Let the bells of freedom ring (2024)", url: "https://www.guardian.co.tt/opinion/let-the-bells-of-freedom-ring-6.2.1962834.717b91496f", quote: "November 28, 1917, marked the beginning of dark days of repression and prosecution when the Shouters' Prohibition Ordinance was passed"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: spiritual-baptists
+    fact: "It outlawed holding, attending or taking part in a Shouters' meeting of two or more, indoors or out, day or night; keeping a Shouters' house; initiating anyone"
+    verdict: confirmed
+    sources:
+      - {title: "Obeah Histories: Shouters Prohibition Ordinance, Trinidad 1917", url: "https://obeahhistories.org/shouters-prohibition-ordinance/", quote: "A “Shouters' meeting” means a meeting or gathering of two or more persons, whether indoors or in the open air ... It shall be an offence for any person to hold or to take part in or to attend any Shouters' meeting ... at any time of the day or night. ... It shall be an offence to erect or to maintain any Shouters' house or to shut up any person in any Shouters' house for the purpose of initiating"}
+      - {title: "Office of the President of Trinidad and Tobago: Message on Spiritual Baptist Liberation Day 2020", url: "https://otp.tt/message-on-spiritual-baptist-liberation-day-2020", quote: "banning members of the Spiritual Baptist community from congregating, erecting a place of worship or otherwise practising their beliefs"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: spiritual-baptists
+    fact: "For 34 years believers faced the police, the courts and heavy fines"
+    verdict: corrected
+    sources:
+      - {title: "Office of the President of Trinidad and Tobago: Message on Spiritual Baptist Liberation Day 2020", url: "https://otp.tt/message-on-spiritual-baptist-liberation-day-2020", quote: "for thirty-four years, denied them freedom of worship ... Adherents braved the repression of the police, the sanction of the courts"}
+      - {title: "Obeah Histories: Shouters Prohibition Ordinance, Trinidad 1917", url: "https://obeahhistories.org/shouters-prohibition-ordinance/", quote: "Any person guilty of an offence under this Ordinance shall be liable, on summary conviction, to a fine of two hundred and forty dollars."}
+      - {title: "Trinidad Guardian editorial: Let the bells of freedom ring (2024)", url: "https://www.guardian.co.tt/opinion/let-the-bells-of-freedom-ring-6.2.1962834.717b91496f", quote: "For the next 34 years ... Anyone caught in any of these activities was liable, upon conviction, to a hefty fine"}
+    note: "\"Prison with hard labour\" appears only in the Guardian editorial; the ordinance text on Obeah Histories gives a fine of 240 dollars only. Now \"the police, the courts and heavy fines\". EN and RU changed."
+  - card: spiritual-baptists
+    fact: "In the 1930s Tubal Uriah 'Buzz' Butler called for repeal; Elton George Griffith carried on the campaign"
+    verdict: confirmed
+    sources:
+      - {title: "Obeah Histories: Shouters Prohibition Ordinance, Trinidad 1917", url: "https://obeahhistories.org/shouters-prohibition-ordinance/", quote: "In the 1930s the labour leader Uriah 'Buzz' Butler called for religious freedom, including the repeal of the Ordinance, and his campaign was taken up in the 1940s by Elton George Griffith, a prominent Spiritual Baptist preacher."}
+      - {title: "Office of the President of Trinidad and Tobago: Message on Spiritual Baptist Liberation Day 2020", url: "https://otp.tt/message-on-spiritual-baptist-liberation-day-2020", quote: "Tubal Uriah Butler and Elton George Griffith were but two of the many, who were relentless in their pursuit of justice"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: spiritual-baptists
+    fact: "The ordinance was repealed on 30 March 1951"
+    verdict: confirmed
+    sources:
+      - {title: "Office of the President of Trinidad and Tobago: Message on Spiritual Baptist Liberation Day 2020", url: "https://otp.tt/message-on-spiritual-baptist-liberation-day-2020", quote: "on 30 March 1951, the Shouter Prohibition Ordinance was repealed."}
+      - {title: "Trinidad Guardian: More than emancipation", url: "https://www.guardian.co.tt/article/more-than-emancipation-spiritual-baptist-faith-born-out-of-african-tradition-and-struggle-6.2.2637916.2d1c2c913d", quote: "The ordinance was finally repealed on March 30, 1951"}
+      - {title: "Tourism Trinidad: Spiritual Baptist Liberation Day", url: "https://visittrinidad.tt/festivals/spiritual-baptist-liberation-day", quote: "the Bill to repeal the ordinance was passed on 30 March 1951"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: spiritual-baptists
+    fact: "In 1996 the Panday government made 30 March a public holiday, Spiritual Shouter Baptist Liberation Day"
+    verdict: confirmed
+    sources:
+      - {title: "Obeah Histories: Shouters Prohibition Ordinance, Trinidad 1917", url: "https://obeahhistories.org/shouters-prohibition-ordinance/", quote: "In 1996 the government of Trinidad and Tobago made the anniversary of the law's repeal a national holiday, 'Spiritual Shouter Baptist Liberation Day'."}
+      - {title: "Trinidad Guardian editorial: Let the bells of freedom ring (2024)", url: "https://www.guardian.co.tt/opinion/let-the-bells-of-freedom-ring-6.2.1962834.717b91496f", quote: "A landmark moment for the faith occurred 28 years ago when, spearheaded by the late Basdeo Panday, Shouter Baptist Liberation Day became a public holiday"}
+    note: "Both quotes found in the fetched pages; sources independent."
+  - card: spiritual-baptists
+    fact: "On the holiday bells ring across the country"
+    verdict: confirmed
+    sources:
+      - {title: "Trinidad Guardian editorial: Let the bells of freedom ring (2024)", url: "https://www.guardian.co.tt/opinion/let-the-bells-of-freedom-ring-6.2.1962834.717b91496f", quote: "All across T&T today, with joyous bell ringing, singing and dancing, Spiritual Baptists will celebrate their hard-won freedom to worship."}
+      - {title: "Tourism Trinidad: Spiritual Baptist Liberation Day", url: "https://visittrinidad.tt/festivals/spiritual-baptist-liberation-day", quote: "The holiday is marked with processions, Church services, musical performancesperformances, and religious observances."}
+    note: "Both quotes found in the fetched pages; sources independent."
+removed:
+  - card: limon-afro-costa-ricans
+    fact: "Afro-Costa Rican citizens argued the ban could not apply to them and lost in court"
+    verdict: unconfirmed
+    sources:
+      - {title: "Ronald N. Harpelle, Identity in Transition (2000)", url: "https://sojourners.lakeheadu.ca/pubs/article1.html", quote: "They argued that the constitution guaranteed them equality under the law and that Article 5 discriminated against citizens of colour ... The civil court challenge failed"}
+      - {title: "Ronald N. Harpelle, Journal of Latin American Studies 25:1 (1993)", url: "https://www.cambridge.org/core/journals/journal-of-latin-american-studies/article/social-and-political-integration-of-west-indians-in-costa-rica-193050/5C4603B99B326C37BA14C271ECE2D3B7", quote: "Afro-Costa Ricans argued that the provisions of the 1934 banana contract that excluded them from working on the Pacific coast should not apply to citizens of colour."}
+    note: "Both sources are by the same historian; a search found no independent account. Sentence removed from EN and RU."
+  - card: audrey-jeffers
+    fact: "In the 1940s she did not support universal adult suffrage"
+    verdict: unconfirmed
+    sources:
+      - {title: "Rhoda E. Reddock, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/jeffers-audrey", quote: "One blot on Jeffers's career was her failure to support universal adult suffrage in 1946."}
+    note: "The second source (Stabroek News, 2023) could not be opened; the National Trust 'Right to Vote' page and the UWI IGDS page (not reachable) did not supply it; remaining hits were blogs or Wikipedia. Sentence and the closing 'where her vision stopped' removed from EN and RU; the closing line now ends on what was verified."
+  - card: audrey-jeffers
+    fact: "Born in Port of Spain; her father was a lawyer"
+    verdict: unconfirmed
+    sources:
+      - {title: "National Trust of Trinidad and Tobago: 2 Outstanding Women in Trinidad and Tobago Heritage", url: "https://nationaltrust.tt/?p=12337", quote: "Her father, Henry Jeffers was an established lawyer and three term member of the Port of Spain City Council."}
+    note: "Single source; removed."
+  - card: spiritual-baptists
+    fact: "Imprisonment with hard labour"
+    verdict: unconfirmed
+    sources:
+      - {title: "Trinidad Guardian editorial: Let the bells of freedom ring (2024)", url: "https://www.guardian.co.tt/opinion/let-the-bells-of-freedom-ring-6.2.1962834.717b91496f", quote: "liable, upon conviction, to a hefty fine or imprisonment with hard labour."}
+    note: "The ordinance text (Obeah Histories, s. 8) names only a fine of 240 dollars. Removed."
+unledgered:
+  - card: victoria-santa-cruz
+    fact: "Main place: La Victoria district, Lima (front matter)"
+    verdict: corrected
+    sources:
+      - {title: "RPP Noticias: Los gloriosos 90 años de Victoria Santa Cruz", url: "https://rpp.pe/lima/actualidad/los-gloriosos-90-anos-de-nuestra-folclorista-negra-victoria-santa-cruz-noticia-535037", quote: "nacida en La Victoria en el seno de una familia muy ligada a la cultura"}
+      - {title: "Biblioteca Nacional del Perú: Victoria Santa Cruz (2023)", url: "https://www.bnp.gob.pe/?p=29378", quote: "Victoria Eugenia Santa Cruz Gamarra nació en Lima un 27 de octubre de 1922."}
+    note: "Only RPP names the district; place changed to Lima (-12.0464, -77.0428) in EN and RU."
+  - card: victoria-santa-cruz
+    fact: "Dispute: founding of Teatro y Danzas Negras del Perú given as 1966, 1967 or 1968"
+    verdict: confirmed
+    sources:
+      - {title: "Zachary McFerren, BlackPast.org", url: "https://www.blackpast.org/global-african-history/victoria-eugenia-santa-cruz-gamarra-1922-2014/", quote: "Teatro y Danzas Negras del Perú, a group that Santa Cruz founded in 1966"}
+      - {title: "AWARE: Victoria Santa Cruz", url: "https://awarewomenartists.com/en/artiste/victoria-santa-cruz/", quote: "founded the troupe Teatro y Danzas Negros del Perú [Peru's Black Theatre and Dances] in 1967"}
+      - {title: "Biblioteca Nacional del Perú: Victoria Santa Cruz (2023)", url: "https://www.bnp.gob.pe/?p=29378", quote: "Retornó al país y en 1968 funda la compañía"}
+    note: "All three dates found."
+  - card: victoria-santa-cruz
+    fact: "Further: Ritmo: el eterno organizador (2004); Feldman, Black Rhythms of Peru (2006); Odin Teatret film (1978)"
+    verdict: confirmed
+    sources:
+      - {title: "Hammer Museum, Radical Women: Victoria Santa Cruz", url: "https://hammer.ucla.edu/radical-women/artists/victoria-santa-cruz", quote: "Santa Cruz Gamarra, Victoria. Ritmo: El eterno organizador. Lima: COPÉand Departamento de Relaciones Públicas de PetroPerú, 2004."}
+      - {title: "AWARE: Victoria Santa Cruz", url: "https://awarewomenartists.com/en/artiste/victoria-santa-cruz/", quote: "Excerpt from Victoria – Black and Woman, Directed by Torgeir Wethal, Odin Teatret Film, 1978"}
+    note: "Feldman's book is cited in the Hammer bibliography (Wesleyan University Press)."
+  - card: pura-belpre
+    fact: "Dispute: birth date 2 February 1899, 2 December 1901 or 2 February 1903"
+    verdict: confirmed
+    sources:
+      - {title: "Centro de Estudios Puertorriqueños, Hunter College: Pura Belpré", url: "https://web.archive.org/web/20160426175348/http://centropr.hunter.cuny.edu/voices/puertoricanwriters/pura-belpre", quote: "There is a discrepancy in her date of birth which is variously cited as February 2, 1899, December 2, 1901, or February 2,1903."}
+      - {title: "Will Guzmán, BlackPast.org", url: "https://www.blackpast.org/african-american-history/pura-belpre-1903-1982/", quote: "was born on February 2, 1903 in Cidra, Puerto Rico"}
+    note: "Centro (c. 1899) and BlackPast (1903) disagree, confirming the dispute."
+  - card: felix-eboue
+    fact: "Front matter edition: m, pair: antilles-republic"
+    verdict: corrected
+    sources: []
+    note: "No card antilles-republic exists in content/cards and no plan file names it; set edition: both and removed pair."
+  - card: gerty-archimede
+    fact: "Front matter edition: f, pair: antilles-republic"
+    verdict: corrected
+    sources: []
+    note: "As for felix-eboue: pair card does not exist; edition: both."
+  - card: gerty-archimede
+    fact: "Further: Angela Davis, An Autobiography (1974)"
+    verdict: corrected
+    sources:
+      - {title: "Fondation pour la mémoire de l'esclavage: Gerty Archimède", url: "https://memoire-esclavage.org/biographies/gerty-archimede", quote: "DANSOKO TOURE, Katia, Le jour où...Gerty Archimède est venue en aide à Angela Davis, La grande série de l'été (32/37) publié le 22 août 2021, Libération"}
+    note: "Not shown that the autobiography covers the Guadeloupe episode; replaced by the Libération article the Fondation cites."
+  - card: gerty-archimede
+    fact: "Further: Musée Gerty-Archimède, Basse-Terre (Maison des Illustres)"
+    verdict: confirmed
+    sources:
+      - {title: "Fondation pour la mémoire de l'esclavage: Gerty Archimède", url: "https://memoire-esclavage.org/biographies/gerty-archimede", quote: "une maison à Basse-Terre qui devient en 1984, le musée Gerty-Archimède, labellisé en 2012 \"Maison des Illustres\""}
+      - {title: "Le Monde du Droit (2026)", url: "https://www.lemondedudroit.fr/on-en-parle/105858-gerty-archimede-une-voix-ultramarine-pour-legalite.html", quote: "Sa maison est devenue le musée Gerty‑Archimède, labellisé « Maison des Illustres » par le ministère de la Culture."}
+    note: "Confirmed."
+  - card: mary-fields
+    fact: "Further: St. Peter's Mission on the National Register of Historic Places"
+    verdict: confirmed
+    sources:
+      - {title: "National Park Service: Mary Fields", url: "https://www.nps.gov/people/mary-fields.htm", quote: "St. Peter's Mission in Montana, now a historic site listed on the National Register of Historic Places"}
+    note: "Reading pointer, not a body fact; NPS is the register's keeper."
+  - card: olive-morris
+    fact: "Further: blue plaque 2024; Lambeth Archives IV/279; The Heart of the Race (1985)"
+    verdict: confirmed
+    sources:
+      - {title: "English Heritage: Morris, Olive", url: "https://www.english-heritage.org.uk/visit/blue-plaques/olive-morris/", quote: "Plaque erected in 2024"}
+      - {title: "Remembering Olive Collective, libcom.org", url: "https://libcom.org/article/morris-olive-elaine-1952-1979", quote: "Reference IV/279, Lambeth Archives, Minet Library, Lambeth, London"}
+    note: "libcom also cites Bryan, Dadzie & Scafe, Heart of the Race (1985, Virago). Wow 'she was dead at 27' reworded to 'she died at 27' (tone)."
+  - card: audrey-jeffers
+    fact: "Further: Audrey Jeffers House (Briarend); dispute 1898 vs 1896"
+    verdict: confirmed
+    sources:
+      - {title: "National Trust of Trinidad and Tobago: The Right to Vote", url: "https://nationaltrust.tt/the-right-to-vote/", quote: "Her home, Briarend, still stands on Sweet Briar Road, St. Clair. It is a Listed Property of Interest by the National Trust"}
+      - {title: "Rhoda E. Reddock, via Encyclopedia.com", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/jeffers-audrey", quote: "February 12, 1896"}
+    note: "National Trust gives 12 February 1898; dispute stands."
+  - card: limon-afro-costa-ricans
+    fact: "Dispute: Britannica on residence laws vs. Harpelle"
+    verdict: confirmed
+    sources:
+      - {title: "Britannica: Costa Rica, People", url: "https://www.britannica.com/place/Costa-Rica/People", quote: "for many years residence laws restricted them to the Caribbean coast"}
+      - {title: "Ariana Fernández, Delfino.cr (2025)", url: "https://delfino.cr/2025/12/un-10-de-diciembre-de-1934-y-otro-de-1948", quote: "Nunca existió una legislación que prohibiera tal cosa"}
+    note: "Dispute accurately stated."

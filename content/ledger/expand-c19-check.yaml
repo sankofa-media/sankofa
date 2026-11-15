@@ -1,0 +1,987 @@
+# Second, independent check (2026-11-14) of content/ledger/expand-c19.yaml (batch c19).
+# Every cited URL was reopened by curl and each quote matched by script against the fetched text (ignoring spacing
+# and punctuation; '...' joins fragments). OpenEdition (EJAS) blocks curl and was read with WebFetch.
+# Not reachable and therefore NOT counted: Britannica (all five pages), Library of Congress (two pages), IBDB, MoMA,
+# Smarthistory (Cloudflare/403 to curl, WebFetch and archive.org). Facts that leaned on them were re-sourced or removed.
+# Independence: the three Museum of Broadcast Communications (Encyclopedia of Radio) entries count as ONE source;
+# all Phillips Collection pages count as ONE; Encyclopedia.com Gale pages each count as one Gale source.
+# verdict: confirmed | corrected (card wording or sources changed) | refuted | unconfirmed (removed from the card).
+entries:
+  - card: circus-1936
+    fact: "Circus (Tsirk) is a 1936 Soviet musical comedy directed by Grigori Aleksandrov"
+    verdict: confirmed
+    sources:
+      - {title: "Sasha Razor, The Only One Left: A Conversation with James Lloydovich Patterson About Grigori Aleksandrov's Circus, Los Angeles Review of Books (2020)", url: "https://lareviewofbooks.org/article/the-only-one-left-a-conversation-with-james-lloydovich-patterson-about-grigori-aleksandrovs-circus", quote: "best known for his role in Circus [ Tsirk ] (1936), a beloved musical comedy directed by Grigori Aleksandrov"}
+      - {title: "Gerald McCausland, Circus (USSR, 1936), New East Film Symposium, University of Pittsburgh", url: "https://neweastcinema.pitt.edu/?p=5211", quote: "Grigorii Aleksandrov's Circus is one of the most successful and enduring works of Soviet cinema"}
+    note: "LARB quote re-copied verbatim (original ledger quote dropped the bracketed Tsirk)."
+  - card: circus-1936
+    fact: "It became one of the best-loved Soviet films"
+    verdict: confirmed
+    sources:
+      - {title: "Gerald McCausland, Circus (USSR, 1936), New East Film Symposium, University of Pittsburgh", url: "https://neweastcinema.pitt.edu/?p=5211", quote: "Upon its release in 1936, it immediately became a favorite with both the political elite and mass audiences"}
+      - {title: "Sasha Razor, The Only One Left: A Conversation with James Lloydovich Patterson About Grigori Aleksandrov's Circus, Los Angeles Review of Books (2020)", url: "https://lareviewofbooks.org/article/the-only-one-left-a-conversation-with-james-lloydovich-patterson-about-grigori-aleksandrovs-circus", quote: "a beloved musical comedy directed by Grigori Aleksandrov"}
+    note: ""
+  - card: circus-1936
+    fact: "Lyubov Orlova plays Marion Dixon, an American circus performer who flees racist persecution because her son is Black"
+    verdict: confirmed
+    sources:
+      - {title: "Gerald McCausland, Circus (USSR, 1936), New East Film Symposium, University of Pittsburgh", url: "https://neweastcinema.pitt.edu/?p=5211", quote: "It chronicles the journey of Marion Dixon"}
+      - {title: "Gerald McCausland, Circus (USSR, 1936), New East Film Symposium, University of Pittsburgh", url: "https://neweastcinema.pitt.edu/?p=5211", quote: "from the USA to the USSR, from racist persecution to multi-ethnic tolerance"}
+      - {title: "Radio Liberty (Radio Svoboda), Sergei Yurienen: \"Tsirk\"", url: "https://www.svoboda.org/a/24204619.html", quote: "мать черного младенца"}
+    note: ""
+  - card: circus-1936
+    fact: "Jimmy was played by three-year-old James Patterson"
+    verdict: confirmed
+    sources:
+      - {title: "Sasha Razor, The Only One Left: A Conversation with James Lloydovich Patterson About Grigori Aleksandrov's Circus, Los Angeles Review of Books (2020)", url: "https://lareviewofbooks.org/article/the-only-one-left-a-conversation-with-james-lloydovich-patterson-about-grigori-aleksandrovs-circus", quote: "In 1936, three-year-old James starred in"}
+      - {title: "Mac Carey, This DC poet was once the USSR's biggest kid actor, Washingtonian (2022)", url: "https://www.washingtonian.com/2022/05/10/this-dc-poet-was-once-the-ussrs-biggest-kid-actor", quote: "When Patterson was three years old, he starred in the Russian film Circus"}
+    note: ""
+  - card: circus-1936
+    fact: "His father Lloyd Patterson came to the USSR in 1932 with a group of Black Americans, drawn by the promise of racial equality"
+    verdict: confirmed
+    sources:
+      - {title: "Sasha Razor, The Only One Left: A Conversation with James Lloydovich Patterson About Grigori Aleksandrov's Circus, Los Angeles Review of Books (2020)", url: "https://lareviewofbooks.org/article/the-only-one-left-a-conversation-with-james-lloydovich-patterson-about-grigori-aleksandrovs-circus", quote: "Lloyd Patterson arrived in the Soviet Union in 1932 as part of a group of 21 Black artists, actors, and intellectuals"}
+      - {title: "Mac Carey, This DC poet was once the USSR's biggest kid actor, Washingtonian (2022)", url: "https://www.washingtonian.com/2022/05/10/this-dc-poet-was-once-the-ussrs-biggest-kid-actor", quote: "emigrated with other Black intellectuals in the 1930s, drawn by the promise of supposed Soviet racial equality"}
+    note: ""
+  - card: circus-1936
+    fact: "His mother, Vera Aralova, was a Soviet theatre artist"
+    verdict: confirmed
+    sources:
+      - {title: "Sasha Razor, The Only One Left: A Conversation with James Lloydovich Patterson About Grigori Aleksandrov's Circus, Los Angeles Review of Books (2020)", url: "https://lareviewofbooks.org/article/the-only-one-left-a-conversation-with-james-lloydovich-patterson-about-grigori-aleksandrovs-circus", quote: "Vera Aralova, a Soviet theater artist and fashion designer"}
+      - {title: "Radio Liberty (Radio Svoboda), Sergei Yurienen: \"Tsirk\"", url: "https://www.svoboda.org/a/24204619.html", quote: "театральной художницы Веры Ипполитовны Араловой"}
+    note: ""
+  - card: circus-1936
+    fact: "In the finale the audience sings the child a lullaby and Solomon Mikhoels, holding him, sings a verse in Yiddish"
+    verdict: confirmed
+    sources:
+      - {title: "Sasha Razor, The Only One Left: A Conversation with James Lloydovich Patterson About Grigori Aleksandrov's Circus, Los Angeles Review of Books (2020)", url: "https://lareviewofbooks.org/article/the-only-one-left-a-conversation-with-james-lloydovich-patterson-about-grigori-aleksandrovs-circus", quote: "Solomon Mikhoels, who was also in the film, holding you in the final scene and singing a Yiddish lullaby"}
+      - {title: "Radio Liberty (Radio Svoboda), Sergei Yurienen: \"Tsirk\"", url: "https://www.svoboda.org/a/24204619.html", quote: "Колыбельную на идиш Джиму Паттерсону поет Соломон Михоэлс"}
+      - {title: "Radio Liberty (Radio Svoboda), Sergei Yurienen: \"Tsirk\"", url: "https://www.svoboda.org/a/24204619.html", quote: "И когда в фильме зрители укачивают ребенка, они поют колыбельную на всех языках, включая, между прочим, идиш."}
+    note: "LARB quote re-copied verbatim."
+  - card: circus-1936
+    fact: "James graduated from the Nakhimov naval school in Riga and served in the Black Sea Fleet"
+    verdict: confirmed
+    sources:
+      - {title: "Sasha Razor, The Only One Left: A Conversation with James Lloydovich Patterson About Grigori Aleksandrov's Circus, Los Angeles Review of Books (2020)", url: "https://lareviewofbooks.org/article/the-only-one-left-a-conversation-with-james-lloydovich-patterson-about-grigori-aleksandrovs-circus", quote: "James Patterson graduated from Riga Nakhimov Naval Academy in 1951 and served in the Black Sea Fleet"}
+      - {title: "Mac Carey, This DC poet was once the USSR's biggest kid actor, Washingtonian (2022)", url: "https://www.washingtonian.com/2022/05/10/this-dc-poet-was-once-the-ussrs-biggest-kid-actor", quote: "became a sailor with the Soviet Black Sea Fleet"}
+      - {title: "Radio Liberty (Radio Svoboda), Sergei Yurienen: \"Tsirk\"", url: "https://www.svoboda.org/a/24204619.html", quote: "будущий нахимовец, старший лейтенант подводного флота"}
+    note: ""
+  - card: circus-1936
+    fact: "He became a poet, a member of the Soviet Writers' Union"
+    verdict: confirmed
+    sources:
+      - {title: "Sasha Razor, The Only One Left: A Conversation with James Lloydovich Patterson About Grigori Aleksandrov's Circus, Los Angeles Review of Books (2020)", url: "https://lareviewofbooks.org/article/the-only-one-left-a-conversation-with-james-lloydovich-patterson-about-grigori-aleksandrovs-circus", quote: "became a member the Soviet Writers’ Union"}
+      - {title: "Radio Liberty (Radio Svoboda), Sergei Yurienen: \"Tsirk\"", url: "https://www.svoboda.org/a/24204619.html", quote: "а затем советский поэт с главной темой - дружба России и Африки"}
+      - {title: "Mac Carey, This DC poet was once the USSR's biggest kid actor, Washingtonian (2022)", url: "https://www.washingtonian.com/2022/05/10/this-dc-poet-was-once-the-ussrs-biggest-kid-actor", quote: "He also had a long career as a poet."}
+    note: "LARB quote re-copied verbatim."
+  - card: circus-1936
+    fact: "After the Soviet collapse he and his mother moved to Washington, D.C."
+    verdict: confirmed
+    sources:
+      - {title: "Sasha Razor, The Only One Left: A Conversation with James Lloydovich Patterson About Grigori Aleksandrov's Circus, Los Angeles Review of Books (2020)", url: "https://lareviewofbooks.org/article/the-only-one-left-a-conversation-with-james-lloydovich-patterson-about-grigori-aleksandrovs-circus", quote: "James Patterson and his mother immigrated to the United States, settling in Washington, DC, in 1995"}
+      - {title: "Mac Carey, This DC poet was once the USSR's biggest kid actor, Washingtonian (2022)", url: "https://www.washingtonian.com/2022/05/10/this-dc-poet-was-once-the-ussrs-biggest-kid-actor", quote: "Following the collapse of the Soviet Union, Patterson—then in his sixties—and his mother moved to DC"}
+    note: ""
+  - card: circus-1936
+    fact: "The film was propaganda against American racism"
+    verdict: confirmed
+    sources:
+      - {title: "Radio Liberty (Radio Svoboda), Sergei Yurienen: \"Tsirk\"", url: "https://www.svoboda.org/a/24204619.html", quote: "Конечно, это был выпад и против Америки, и пропаганда"}
+      - {title: "Gerald McCausland, Circus (USSR, 1936), New East Film Symposium, University of Pittsburgh", url: "https://neweastcinema.pitt.edu/?p=5211", quote: "from racist persecution to multi-ethnic tolerance"}
+    note: ""
+  - card: treemonisha
+    fact: "Treemonisha is a three-act opera by Scott Joplin, who wrote both libretto and music"
+    verdict: corrected
+    sources:
+      - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/", quote: "Scott Joplin composed the music and wrote the libretto for the opera Treemonisha"}
+      - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera", quote: "Joplin wrote the story and libretto to Treemonisha"}
+      - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera", quote: "three acts with overture, preludes, arias"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Replaced by LAPL."
+  - card: treemonisha
+    fact: "Joplin wrote Maple Leaf Rag and The Entertainer"
+    verdict: corrected
+    sources:
+      - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/", quote: "ragtime compositions such as “The Entertainer” and “Maple Leaf Rag.”"}
+      - {title: "Theodore Albrecht, Joplin, Scott, Handbook of Texas Online", url: "https://www.tshaonline.org/handbook/entries/joplin-scott", quote: "rags, including Maple Leaf , The Entertainer"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Replaced by Handbook of Texas."
+  - card: treemonisha
+    fact: "He was born in north-east Texas and lived in New York"
+    verdict: corrected
+    sources:
+      - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/", quote: "Born in northeastern Texas, Joplin spent his formative years in Texarkana"}
+      - {title: "Theodore Albrecht, Joplin, Scott, Handbook of Texas Online", url: "https://www.tshaonline.org/handbook/entries/joplin-scott", quote: "born about 1867 possibly at Caves Spring, near Linden in Northeast Texas"}
+      - {title: "Theodore Albrecht, Joplin, Scott, Handbook of Texas Online", url: "https://www.tshaonline.org/handbook/entries/joplin-scott", quote: "until he settled down there permanently in 1911"}
+      - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/", quote: "a musician who sometimes stayed at the same address as Joplin in New York"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Card now says 'born in' (both sources), not 'grew up in'."
+  - card: treemonisha
+    fact: "No company would stage it; in 1911 he published the piano-vocal score at his own expense"
+    verdict: corrected
+    sources:
+      - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera", quote: "a three-act opera was deemed too risky a venture for production by contemporary companies"}
+      - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera", quote: "Joplin published the piano-vocal score at his own expense in 1911"}
+      - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/", quote: "had invested in the 1911 publication of Treemonisha and did not find financial support for staging the opera"}
+    note: "'Publishers wanted his rags, not an opera' rests on LAPL alone and was removed; Britannica not counted."
+  - card: treemonisha
+    fact: "The opera is set on a plantation in Arkansas near Texarkana"
+    verdict: confirmed
+    sources:
+      - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/", quote: "The scene of the Opera is laid on a plantation somewhere in the State of Arkansas, Northeast of the Town of Texarkana"}
+      - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera", quote: "adopted and raised by a couple on a plantation in Texarkana"}
+    note: "The year 1884 (CALS only) is not in the card."
+  - card: treemonisha
+    fact: "A couple take in a foundling girl and name her Treemonisha"
+    verdict: corrected
+    sources:
+      - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/", quote: "One day, Monisha found a baby under a tree and they named her Treemonisha."}
+      - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera", quote: "has been adopted and raised by a couple"}
+      - {title: "Encyclopedia.com (Gale reference entries): Scott Joplin", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/scott-joplin", quote: "a folk story about an orphaned girl (the title character)"}
+    note: "Library of Congress page (Cloudflare) could not be opened and is not counted. 'Under a tree' rests on CALS alone, so the card now says 'a foundling girl'."
+  - card: treemonisha
+    fact: "She is the only educated person in her community; conjurers who profit from superstition kidnap her; she is rescued and becomes leader"
+    verdict: confirmed
+    sources:
+      - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/", quote: "Treemonisha, the only educated member of the community, calls him out."}
+      - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/", quote: "Treemonisha is a threat to the conjurers who profit from superstition."}
+      - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera", quote: "Treemonisha is kidnapped by a conjurer who is fearful that the educated Treemonisha poses a threat to his influence over the community"}
+      - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera", quote: "Education triumphs over superstition once Treemonisha is rescued and returns to the community as their leader."}
+    note: "Library of Congress page (Cloudflare) could not be opened and is not counted. Two remaining sources suffice."
+  - card: treemonisha
+    fact: "Joplin believed education was the way forward for Black Americans, and here a young woman carries that belief"
+    verdict: corrected
+    sources:
+      - {title: "Theodore Albrecht, Joplin, Scott, Handbook of Texas Online", url: "https://www.tshaonline.org/handbook/entries/joplin-scott", quote: "Joplin had a strong conviction that the key to success for African Americans was education, and this was a common theme in his works."}
+      - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera", quote: "by placing a female character as the leader of the community, Joplin reflects contemporary progressive thought"}
+      - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/", quote: "In the end, Treemonisha is recognized as the leader of her community."}
+    note: "Original 'education for women as much as men' rested on the Library of Congress page, which could not be opened; reworded."
+  - card: treemonisha
+    fact: "Joplin could not raise the money for a staging"
+    verdict: corrected
+    sources:
+      - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/", quote: "did not find financial support for staging the opera"}
+      - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera", quote: "Treemonisha was never staged in his lifetime"}
+    note: "Library of Congress page (Cloudflare) could not be opened and is not counted. Sentence merged into the first paragraph to keep length."
+  - card: treemonisha
+    fact: "In 1915 he played it at the piano for possible backers; nothing followed"
+    verdict: confirmed
+    sources:
+      - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera", quote: "an unsuccessful reading for potential backers in 1915, with Joplin playing the piano part"}
+      - {title: "Theodore Albrecht, Joplin, Scott, Handbook of Texas Online", url: "https://www.tshaonline.org/handbook/entries/joplin-scott", quote: "mounted unsuccessfully early in 1915"}
+      - {title: "Encyclopedia.com (Gale reference entries): Scott Joplin", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/scott-joplin", quote: "There was a threadbare performance of Treemonisha in 1915"}
+    note: ""
+  - card: treemonisha
+    fact: "He died in a Manhattan state hospital in April 1917"
+    verdict: confirmed
+    sources:
+      - {title: "Theodore Albrecht, Joplin, Scott, Handbook of Texas Online", url: "https://www.tshaonline.org/handbook/entries/joplin-scott", quote: "he entered the Manhattan State Hospital, where he died on April 1, 1917"}
+      - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/", quote: "died on April 1, 1917, at Manhattan State Hospital"}
+    note: ""
+  - card: treemonisha
+    fact: "A 1970s revival of interest in Joplin brought it back"
+    verdict: corrected
+    sources:
+      - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera", quote: "As a result of the renewed interest in Joplin Treemonisha was given its first fully staged performance"}
+      - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/", quote: "Joplin’s music suddenly became popular and widely known after being featured in the motion picture The Sting"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Replaced by CALS."
+  - card: treemonisha
+    fact: "The Atlanta Symphony gave the first full staging in 1972"
+    verdict: corrected
+    sources:
+      - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera", quote: "its first fully staged performance over 60 years after its composition, in a semi-professional concert production by the Atlanta Symphony in 1972"}
+      - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/", quote: "On January 28, 1972, there was a premiere performance of Treemonisha at the Atlanta Symphony Hall’s Memorial Arts Center."}
+    note: "Katherine Dunham as director rested only on Britannica and the Library of Congress, neither of which could be opened; removed."
+  - card: treemonisha
+    fact: "Houston Grand Opera produced it in 1975"
+    verdict: corrected
+    sources:
+      - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera", quote: "Houston Grand Opera gave the opera its professional public premiere in 1975"}
+      - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/", quote: "Treemonisha was performed on a larger scale by the Houston Grand Opera in 1975."}
+    note: "Library of Congress page (Cloudflare) could not be opened and is not counted. Replaced by CALS."
+  - card: treemonisha
+    fact: "In 1976 Joplin received a posthumous Pulitzer Prize for it (59 years after his 1917 death)"
+    verdict: confirmed
+    sources:
+      - {title: "Theodore Albrecht, Joplin, Scott, Handbook of Texas Online", url: "https://www.tshaonline.org/handbook/entries/joplin-scott", quote: "In 1976 Joplin was posthumously awarded a Pulitzer Prize for Treemonisha"}
+      - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera", quote: "he was awarded a posthumous Pulitzer Prize in 1976"}
+      - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/", quote: "Scott Joplin was awarded a special Pulitzer Prize in 1976"}
+    note: ""
+  - card: treemonisha
+    fact: "It waited about sixty years for a stage"
+    verdict: corrected
+    sources:
+      - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera", quote: "first fully staged performance over 60 years after its composition"}
+      - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/", quote: "On January 28, 1972, there was a premiere performance of Treemonisha"}
+    note: "Library of Congress page (Cloudflare) could not be opened and is not counted. CALS gives the 1911 publication and the 1972 premiere."
+  - card: treemonisha
+    fact: "dispute: Britannica counts one semi-public performance; LAPL adds a 1913 New Jersey production"
+    verdict: unconfirmed
+    sources:
+      - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera", quote: "Besides a small-scale production in 1913 in New Jersey, and an unsuccessful reading for potential backers in 1915"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. The disputed 1913 production rests on LAPL alone; the dispute field was removed."
+  - card: the-crisis
+    fact: "The Crisis is the magazine of the NAACP"
+    verdict: corrected
+    sources:
+      - {title: "Dzanouni, Le Dantec-Lowry and Parfait, From One Crisis to the Other, European Journal of American Studies 11-1 (2016)", url: "https://journals.openedition.org/ejas/11432", quote: "a monthly publication meant to help in the fight for full civil rights"}
+      - {title: "Modernist Journals Project (Brown University and University of Tulsa): The Crisis, 1910–1922", url: "https://modjourn.org/journal/crisis/", quote: "Du Bois founded The Crisis in 1910, as the house magazine of the fledgling NAACP"}
+      - {title: "Neal Caren (ed.), Dare You Fight (UNC Chapel Hill): Voice of a Movement", url: "https://www.dareyoufight.org/background.html", quote: "The Crisis grew out of the NAACP"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. EJAS read via WebFetch (OpenEdition blocks curl). Replaced Britannica by the Modernist Journals Project."
+  - card: the-crisis
+    fact: "The first issue appeared in November 1910, edited by Du Bois, who said it would show the danger of race prejudice"
+    verdict: corrected
+    sources:
+      - {title: "Neal Caren (ed.), Dare You Fight (UNC Chapel Hill): Voice of a Movement", url: "https://www.dareyoufight.org/background.html", quote: "The first issue appeared on November 1, 1910"}
+      - {title: "Neal Caren (ed.), Dare You Fight (UNC Chapel Hill): Voice of a Movement", url: "https://www.dareyoufight.org/background.html", quote: "those facts and arguments which show the danger of race prejudice"}
+      - {title: "Modernist Journals Project (Brown University and University of Tulsa): The Crisis, 1910–1922", url: "https://modjourn.org/journal/crisis/", quote: "by bearing witness to “the danger of race prejudice”"}
+      - {title: "Modernist Journals Project (Brown University and University of Tulsa): The Crisis, 1910–1922", url: "https://modjourn.org/journal/crisis/", quote: "1 (1910-11-01)"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Replaced by the Modernist Journals Project (issue list and mission)."
+  - card: the-crisis
+    fact: "The Crisis denounced lynching consistently"
+    verdict: confirmed
+    sources:
+      - {title: "Dzanouni, Le Dantec-Lowry and Parfait, From One Crisis to the Other, European Journal of American Studies 11-1 (2016)", url: "https://journals.openedition.org/ejas/11432", quote: "The Crisis consistently denounced lynching and the October 1919 issue was devoted to this question."}
+      - {title: "Neal Caren (ed.), Dare You Fight (UNC Chapel Hill): Voice of a Movement", url: "https://www.dareyoufight.org/background.html", quote: "He documented lynching by name and number."}
+    note: "Dare You Fight quote replaced: the original one (Mary Turner) is not in the page."
+  - card: the-crisis
+    fact: "By 1919 monthly circulation passed 100,000"
+    verdict: corrected
+    sources:
+      - {title: "Neal Caren (ed.), Dare You Fight (UNC Chapel Hill): Voice of a Movement", url: "https://www.dareyoufight.org/background.html", quote: "By 1919, monthly circulation exceeded 100,000"}
+      - {title: "Dzanouni, Le Dantec-Lowry and Parfait, From One Crisis to the Other, European Journal of American Studies 11-1 (2016)", url: "https://journals.openedition.org/ejas/11432", quote: "proudly announced a circulation of 104,000 for the June 1919 issue"}
+      - {title: "Modernist Journals Project (Brown University and University of Tulsa): The Crisis, 1910–1922", url: "https://modjourn.org/journal/crisis/", quote: "within nine years, when its circulation peaked at about 100,000"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. EJAS and MJP counted instead."
+  - card: the-crisis
+    fact: "Jessie Redmon Fauset was literary editor from 1919 to 1926"
+    verdict: corrected
+    sources:
+      - {title: "Neal Caren (ed.), Dare You Fight (UNC Chapel Hill): Voice of a Movement", url: "https://www.dareyoufight.org/background.html", quote: "Jessie Redmon Fauset, the magazine’s literary editor from 1919 to 1926"}
+      - {title: "Dzanouni, Le Dantec-Lowry and Parfait, From One Crisis to the Other, European Journal of American Studies 11-1 (2016)", url: "https://journals.openedition.org/ejas/11432", quote: "in 1919 Jessie Fauset became the literary editor for The Crisis ... until she left in 1926"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. EJAS counted instead (via WebFetch)."
+  - card: the-crisis
+    fact: "Fauset sought out and promoted Hughes, Cullen and Toomer, and the magazine printed them"
+    verdict: corrected
+    sources:
+      - {title: "Neal Caren (ed.), Dare You Fight (UNC Chapel Hill): Voice of a Movement", url: "https://www.dareyoufight.org/background.html", quote: "identified and promoted new talent: Langston Hughes, Countee Cullen, Jean Toomer"}
+      - {title: "Modernist Journals Project (Brown University and University of Tulsa): The Crisis, 1910–1922", url: "https://modjourn.org/journal/crisis/", quote: "Among the notable authors who published in The Crisis during the MJP years is Jessie Fauset ... Countee Cullen ... Langston Hughes ... Jean Toomer"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Card no longer says she 'found' them; it says she sought out and promoted them and the magazine printed them."
+  - card: the-crisis
+    fact: "In 1921 The Crisis printed Hughes's \"The Negro Speaks of Rivers\" (also wow)"
+    verdict: corrected
+    sources:
+      - {title: "Neal Caren (ed.), Dare You Fight (UNC Chapel Hill): Voice of a Movement", url: "https://www.dareyoufight.org/background.html", quote: "Hughes gained early recognition when The Crisis published “The Negro Speaks of Rivers” in 1921."}
+      - {title: "\"The Negro Speaks of Rivers\", Poetry for Students (Gale), via Encyclopedia.com", url: "https://encyclopedia.com/arts/educational-magazines/negro-speaks-rivers", quote: "Crisis magazine first published Hughes’ “The Negro Speaks of Rivers” in 1921."}
+    note: "Library of Congress page could not be opened; replaced by Gale's Poetry for Students entry."
+  - card: the-crisis
+    fact: "In 1919 The Crisis announced The Brownies' Book, launched by Du Bois and Fauset in 1920"
+    verdict: confirmed
+    sources:
+      - {title: "Dzanouni, Le Dantec-Lowry and Parfait, From One Crisis to the Other, European Journal of American Studies 11-1 (2016)", url: "https://journals.openedition.org/ejas/11432", quote: "had actually been announced in the issue of August 1919, on page 223"}
+      - {title: "Jonda McNair and Rudine Sims Bishop, The Enduring Legacy of The Brownies' Book, The Horn Book (2018)", url: "https://www.hbook.com/story/great-heroic-beautiful-enduring-legacy-brownies-book", quote: "In the October 1919 Crisis Du Bois and his collaborators"}
+      - {title: "University of Nebraska–Lincoln, The Tar Baby and the Tomahawk: The Brownies' Book", url: "https://childlit.unl.edu/topics/edi.brownies.html", quote: "The magazine ran from January 1920 to December 1921 under the editorship of W."}
+    note: ""
+  - card: the-crisis
+    fact: "Du Bois edited it for its first 24 years and resigned in 1934"
+    verdict: corrected
+    sources:
+      - {title: "Dzanouni, Le Dantec-Lowry and Parfait, From One Crisis to the Other, European Journal of American Studies 11-1 (2016)", url: "https://journals.openedition.org/ejas/11432", quote: "edited the Crisis from its creation until 1934"}
+      - {title: "Neal Caren (ed.), Dare You Fight (UNC Chapel Hill): Voice of a Movement", url: "https://www.dareyoufight.org/background.html", quote: "For twenty-four years, Du Bois made The Crisis the toothache of American democracy."}
+      - {title: "Neal Caren (ed.), Dare You Fight (UNC Chapel Hill): Voice of a Movement", url: "https://www.dareyoufight.org/background.html", quote: "Du Bois resigned on June 26."}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. EJAS and Dare You Fight suffice."
+  - card: the-crisis
+    fact: "For Harlem Renaissance writers it was a main door into print"
+    verdict: corrected
+    sources:
+      - {title: "Neal Caren (ed.), Dare You Fight (UNC Chapel Hill): Voice of a Movement", url: "https://www.dareyoufight.org/background.html", quote: "The Crisis became a launching pad for Black writers."}
+      - {title: "Dzanouni, Le Dantec-Lowry and Parfait, From One Crisis to the Other, European Journal of American Studies 11-1 (2016)", url: "https://journals.openedition.org/ejas/11432", quote: "Practically every Negro author writing today found his first audience through the pages of The Crisis."}
+      - {title: "Modernist Journals Project (Brown University and University of Tulsa): The Crisis, 1910–1922", url: "https://modjourn.org/journal/crisis/", quote: "is deservedly recognized as an important crucible for the Harlem Renaissance"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. EJAS (quoting the NAACP's 1926 report) and MJP counted instead."
+  - card: brownies-book
+    fact: "The Brownies' Book was a monthly for African American children, January 1920 – December 1921"
+    verdict: confirmed
+    sources:
+      - {title: "University of Nebraska–Lincoln, The Tar Baby and the Tomahawk: The Brownies' Book", url: "https://childlit.unl.edu/topics/edi.brownies.html", quote: "a monthly magazine specifically written for African American children"}
+      - {title: "Jonda McNair and Rudine Sims Bishop, The Enduring Legacy of The Brownies' Book, The Horn Book (2018)", url: "https://www.hbook.com/story/great-heroic-beautiful-enduring-legacy-brownies-book", quote: "The magazine, which existed from January 1920 to December 1921"}
+    note: ""
+  - card: brownies-book
+    fact: "It was announced in The Crisis in 1919"
+    verdict: confirmed
+    sources:
+      - {title: "Jonda McNair and Rudine Sims Bishop, The Enduring Legacy of The Brownies' Book, The Horn Book (2018)", url: "https://www.hbook.com/story/great-heroic-beautiful-enduring-legacy-brownies-book", quote: "In the October 1919 Crisis Du Bois and his collaborators"}
+      - {title: "Dzanouni, Le Dantec-Lowry and Parfait, From One Crisis to the Other, European Journal of American Studies 11-1 (2016)", url: "https://journals.openedition.org/ejas/11432", quote: "had actually been announced in the issue of August 1919, on page 223"}
+    note: ""
+  - card: brownies-book
+    fact: "Du Bois edited it with Dill as business manager and Fauset as literary editor"
+    verdict: confirmed
+    sources:
+      - {title: "University of Nebraska–Lincoln, The Tar Baby and the Tomahawk: The Brownies' Book", url: "https://childlit.unl.edu/topics/edi.brownies.html", quote: "Augustus Granville Dill (who served as business manager) and Jessie Fauset (as literary editor in 1920 and managing editor in 1921)"}
+      - {title: "Jonda McNair and Rudine Sims Bishop, The Enduring Legacy of The Brownies' Book, The Horn Book (2018)", url: "https://www.hbook.com/story/great-heroic-beautiful-enduring-legacy-brownies-book", quote: "Augustus Granville Dill, who served as business manager; and Jessie Redmon Fauset, who was the literary editor"}
+    note: ""
+  - card: brownies-book
+    fact: "Its first aim: being colored is a normal, beautiful thing; another, the history and achievements of the race"
+    verdict: confirmed
+    sources:
+      - {title: "Jonda McNair and Rudine Sims Bishop, The Enduring Legacy of The Brownies' Book, The Horn Book (2018)", url: "https://www.hbook.com/story/great-heroic-beautiful-enduring-legacy-brownies-book", quote: "(a) To make colored children realize that being “colored” is a normal, beautiful thing. (b) To make them familiar with the history and achievements of the Negro race."}
+      - {title: "University of Nebraska–Lincoln, The Tar Baby and the Tomahawk: The Brownies' Book", url: "https://childlit.unl.edu/topics/edi.brownies.html", quote: "It celebrated African American identity, urged racial pride"}
+    note: "The aims are quoted from the Horn Book's transcription of the October 1919 Crisis; UNL supports their thrust."
+  - card: brownies-book
+    fact: "It celebrated Black identity, urged racial pride (and encouraged readers toward leadership)"
+    verdict: corrected
+    sources:
+      - {title: "University of Nebraska–Lincoln, The Tar Baby and the Tomahawk: The Brownies' Book", url: "https://childlit.unl.edu/topics/edi.brownies.html", quote: "It celebrated African American identity, urged racial pride, and encouraged its young readers to aspire to positions of leadership within their communities."}
+      - {title: "Jonda McNair and Rudine Sims Bishop, The Enduring Legacy of The Brownies' Book, The Horn Book (2018)", url: "https://www.hbook.com/story/great-heroic-beautiful-enduring-legacy-brownies-book", quote: "imbue children with a sense of racial pride"}
+    note: "Identity and pride confirmed; 'encouraged readers toward leadership' rests on UNL alone and was removed from EN and RU."
+  - card: brownies-book
+    fact: "Issues mixed stories, poems, games and African folk tales with readers' contributions"
+    verdict: confirmed
+    sources:
+      - {title: "University of Nebraska–Lincoln, The Tar Baby and the Tomahawk: The Brownies' Book", url: "https://childlit.unl.edu/topics/edi.brownies.html", quote: "comprised of stories (folktales, fantasies, as well as more realistic stories), poems, games, articles on current events, and photographs of and letters from young readers"}
+      - {title: "Jonda McNair and Rudine Sims Bishop, The Enduring Legacy of The Brownies' Book, The Horn Book (2018)", url: "https://www.hbook.com/story/great-heroic-beautiful-enduring-legacy-brownies-book", quote: "The February 1920 Brownies' Book presented retellings of African Folklore."}
+      - {title: "Jonda McNair and Rudine Sims Bishop, The Enduring Legacy of The Brownies' Book, The Horn Book (2018)", url: "https://www.hbook.com/story/great-heroic-beautiful-enduring-legacy-brownies-book", quote: "The magazine also published material submitted by readers"}
+    note: ""
+  - card: brownies-book
+    fact: "A teenage Langston Hughes contributed; in 1921 it printed his poems, later his stories"
+    verdict: confirmed
+    sources:
+      - {title: "University of Nebraska–Lincoln, The Tar Baby and the Tomahawk: The Brownies' Book", url: "https://childlit.unl.edu/topics/edi.brownies.html", quote: "In 1921, the magazine became the first to publish Hughes’s poetry."}
+      - {title: "University of Nebraska–Lincoln, The Tar Baby and the Tomahawk: The Brownies' Book", url: "https://childlit.unl.edu/topics/edi.brownies.html", quote: "Hughes also contributed nonfiction pieces, a play, and a short story"}
+      - {title: "Jonda McNair and Rudine Sims Bishop, The Enduring Legacy of The Brownies' Book, The Horn Book (2018)", url: "https://www.hbook.com/story/great-heroic-beautiful-enduring-legacy-brownies-book", quote: "a teenaged Langston Hughes contributed poems, stories, and games"}
+    note: ""
+  - card: brownies-book
+    fact: "It lasted 24 issues"
+    verdict: confirmed
+    sources:
+      - {title: "Dzanouni, Le Dantec-Lowry and Parfait, From One Crisis to the Other, European Journal of American Studies 11-1 (2016)", url: "https://journals.openedition.org/ejas/11432", quote: "contributed regularly throughout its 24 issues, in 1920-21"}
+      - {title: "University of Nebraska–Lincoln, The Tar Baby and the Tomahawk: The Brownies' Book", url: "https://childlit.unl.edu/topics/edi.brownies.html", quote: "The magazine ran from January 1920 to December 1921"}
+    note: "UNL gives a monthly run of 24 months."
+  - card: brownies-book
+    fact: "It was among the first sustained efforts to write for Black children"
+    verdict: confirmed
+    sources:
+      - {title: "University of Nebraska–Lincoln, The Tar Baby and the Tomahawk: The Brownies' Book", url: "https://childlit.unl.edu/topics/edi.brownies.html", quote: "It was the first sustained effort to create a body of writing that exclusively addressed the needs of African American children."}
+      - {title: "Jonda McNair and Rudine Sims Bishop, The Enduring Legacy of The Brownies' Book, The Horn Book (2018)", url: "https://www.hbook.com/story/great-heroic-beautiful-enduring-legacy-brownies-book", quote: "one of the first substantial periodicals created specifically for the “children of the sun.”"}
+    note: ""
+  - card: brownies-book
+    fact: "Its promise that Black children could be great, heroic or beautiful runs through African American children's books today"
+    verdict: confirmed
+    sources:
+      - {title: "Jonda McNair and Rudine Sims Bishop, The Enduring Legacy of The Brownies' Book, The Horn Book (2018)", url: "https://www.hbook.com/story/great-heroic-beautiful-enduring-legacy-brownies-book", quote: "Both the magazine and much of contemporary African American children’s literature convey the important idea that black children can indeed be great, heroic, and beautiful."}
+      - {title: "University of Nebraska–Lincoln, The Tar Baby and the Tomahawk: The Brownies' Book", url: "https://childlit.unl.edu/topics/edi.brownies.html", quote: "The Brownies’ Book was instrumental in promoting future African American children’s literature."}
+    note: ""
+  - card: in-dahomey
+    fact: "In Dahomey opened on Broadway in 1903"
+    verdict: corrected
+    sources:
+      - {title: "Gallatin Galleries, New York University: Transformation! exhibition texts", url: "https://wp.nyu.edu/gallatingalleries/?p=15811", quote: "February 18–April 4, 1903 at the New York Theater In Dahomey was first performed on Broadway in February 1903"}
+      - {title: "Encyclopedia.com (Gale reference entries): Bert Williams", url: "https://www.encyclopedia.com/people/literature-and-arts/theater-biographies/bert-williams", quote: "brought them international acclaim, from appearances on Broadway to a command performance at Buckingham Palace"}
+      - {title: "London Museum: In Dahomey programme, Shaftesbury Theatre, 1903", url: "https://londonmuseum.org.uk/collections/v/object-547796/in-dahomey", quote: "The musical 'In Dahomey' transferred from New York to London in May 1903."}
+    note: "IBDB and Britannica blocked (Cloudflare) and not counted. The theatre name and the month rest on NYU alone; card now says 'on Broadway in 1903' and the place is 'Broadway, New York'."
+  - card: in-dahomey
+    fact: "Music by Will Marion Cook, lyrics by Paul Laurence Dunbar"
+    verdict: corrected
+    sources:
+      - {title: "Gallatin Galleries, New York University: Transformation! exhibition texts", url: "https://wp.nyu.edu/gallatingalleries/?p=15811", quote: "featuring music by Will Marion Cook and lyrics by Paul Laurence Dunbar"}
+      - {title: "Encyclopedia.com (Gale reference entries): Bert Williams", url: "https://www.encyclopedia.com/people/literature-and-arts/theater-biographies/bert-williams", quote: "composed by the black songwriter Will Marion Cook, with some contributions by the poet Paul Lawrence Dunbar"}
+    note: "IBDB not counted; replaced by Gale."
+  - card: in-dahomey
+    fact: "Its stars were Bert Williams and George Walker and the cast was entirely Black"
+    verdict: corrected
+    sources:
+      - {title: "London Museum: In Dahomey programme, Shaftesbury Theatre, 1903", url: "https://londonmuseum.org.uk/collections/v/object-547796/in-dahomey", quote: "Among them was the comedy dance team of Bert Williams and George Walker."}
+      - {title: "Encyclopedia.com (Gale reference entries): Bert Williams", url: "https://www.encyclopedia.com/people/literature-and-arts/theater-biographies/bert-williams", quote: "premiered pioneer all-black production, In Dahomey"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. LM's 'entirely Black' line is in the full description; Gale counted as the second source."
+  - card: in-dahomey
+    fact: "Williams worked in blackface inside minstrelsy, playing a bumbling clown, a stock role built on racist stereotypes"
+    verdict: corrected
+    sources:
+      - {title: "Encyclopedia.com (Gale reference entries): Bert Williams", url: "https://www.encyclopedia.com/people/literature-and-arts/theater-biographies/bert-williams", quote: "Williams often portrayed, in writer Ann Charters ’ words, “ the awkward, stubbornly bumbling clown ”"}
+      - {title: "Encyclopedia.com (Gale reference entries): Bert Williams", url: "https://www.encyclopedia.com/people/literature-and-arts/theater-biographies/bert-williams", quote: "wore blackface makeup over his own black face to conform to the racist theatrical stereotypes of the era"}
+      - {title: "Gallatin Galleries, New York University: Transformation! exhibition texts", url: "https://wp.nyu.edu/gallatingalleries/?p=15811", quote: "Throughout his career, Bert Williams performed in blackface, though not exclusively."}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Wording changed from 'slow-witted ... standard, if racist' (Britannica) to the Gale/NYU description; 'to Walker's dandy' (Gale only) dropped."
+  - card: in-dahomey
+    fact: "It was the first Broadway musical written and performed by African Americans, and a success"
+    verdict: corrected
+    sources:
+      - {title: "Gallatin Galleries, New York University: Transformation! exhibition texts", url: "https://wp.nyu.edu/gallatingalleries/?p=15811", quote: "In Dahomey is significant as it was the first musical on Broadway written and performed by African Americans."}
+      - {title: "Encyclopedia.com (Gale reference entries): Bert Williams", url: "https://www.encyclopedia.com/people/literature-and-arts/theater-biographies/bert-williams", quote: "No prior production had relied as thoroughly on black creative talent as did In Dahomey , and none had succeeded as well in reaching white as well as black audiences."}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Replaced by Gale."
+  - card: in-dahomey
+    fact: "In May 1903 the company took it to the Shaftesbury Theatre, London"
+    verdict: confirmed
+    sources:
+      - {title: "Jeffrey Green, historian: \"In Dahomey\", London, 1903", url: "https://jeffreygreen.co.uk/in-dahomey-london-1903", quote: "In Dahomey opened at the Shaftesbury Theatre, London on 16 May 1903."}
+      - {title: "London Museum: In Dahomey programme, Shaftesbury Theatre, 1903", url: "https://londonmuseum.org.uk/collections/v/object-547796/in-dahomey", quote: "The musical 'In Dahomey' transferred from New York to London in May 1903."}
+    note: ""
+  - card: in-dahomey
+    fact: "Londoners expected the cakewalk, and Williams and Walker's version caused a sensation in dance halls"
+    verdict: corrected
+    sources:
+      - {title: "Jeffrey Green, historian: \"In Dahomey\", London, 1903", url: "https://jeffreygreen.co.uk/in-dahomey-london-1903", quote: "Audiences expected the 1890s cakewalk dance and the management added it in mid-June."}
+      - {title: "London Museum: In Dahomey programme, Shaftesbury Theatre, 1903", url: "https://londonmuseum.org.uk/collections/v/object-547796/in-dahomey", quote: "Their version of the 'Cakewalk' and 'Buck and Wing' caused a sensation in London dancehalls."}
+    note: "Each half rests on one source; card now says only what both support: London audiences came for the cakewalk and Williams and Walker danced it. Wow reworded likewise."
+  - card: in-dahomey
+    fact: "A shortened version was given as a command performance for the king at Buckingham Palace"
+    verdict: confirmed
+    sources:
+      - {title: "Jeffrey Green, historian: \"In Dahomey\", London, 1903", url: "https://jeffreygreen.co.uk/in-dahomey-london-1903", quote: "a truncated version had been presented to the king at Buckingham Palace on 27 June"}
+      - {title: "London Museum: In Dahomey programme, Shaftesbury Theatre, 1903", url: "https://londonmuseum.org.uk/collections/v/object-547796/in-dahomey", quote: "A royal command performance of the musical at Buckingham Palace secured the show's success"}
+      - {title: "Encyclopedia.com (Gale reference entries): Bert Williams", url: "https://www.encyclopedia.com/people/literature-and-arts/theater-biographies/bert-williams", quote: "gave private performance for King of England , 1903"}
+    note: "Britannica not opened, so the dispute built on it (date) was removed; Green and Gale both put it in 1903."
+  - card: in-dahomey
+    fact: "It then toured Britain into 1904"
+    verdict: confirmed
+    sources:
+      - {title: "Jeffrey Green, historian: \"In Dahomey\", London, 1903", url: "https://jeffreygreen.co.uk/in-dahomey-london-1903", quote: "it toured to Scotland in mid-1904"}
+      - {title: "London Museum: In Dahomey programme, Shaftesbury Theatre, 1903", url: "https://londonmuseum.org.uk/collections/v/object-547796/in-dahomey", quote: "it subsequently toured Britain"}
+    note: ""
+  - card: in-dahomey
+    fact: "Williams and Walker went on to Bandanna Land in 1908"
+    verdict: corrected
+    sources:
+      - {title: "Gallatin Galleries, New York University: Transformation! exhibition texts", url: "https://wp.nyu.edu/gallatingalleries/?p=15811", quote: "Sons of Ham (1900), In Dahomey (1903), and Bandanaland (1908)"}
+      - {title: "Encyclopedia.com (Gale reference entries): Bert Williams", url: "https://www.encyclopedia.com/people/literature-and-arts/theater-biographies/bert-williams", quote: "premiered shows Abyssinia 1906, Bandanna Land 1908"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Gale counted instead."
+  - card: in-dahomey
+    fact: "In Dahomey set a standard for Black performance on the London stage lasting into the 1920s"
+    verdict: unconfirmed
+    sources:
+      - {title: "Jeffrey Green, historian: \"In Dahomey\", London, 1903", url: "https://jeffreygreen.co.uk/in-dahomey-london-1903", quote: "The show set a standard for black dance/song/acting that lasted into the 1920s"}
+    note: "Jeffrey Green alone; the London Museum quote does not say this. Replaced by 'a landmark of Black theatre' (Gale: 'In Dahomey was a landmark in African-American theater history'; NYU: 'In Dahomey is significant')."
+  - card: the-harp-savage
+    fact: "The Harp was made by Augusta Savage for the 1939 New York World's Fair"
+    verdict: confirmed
+    sources:
+      - {title: "Smithsonian American Art Museum: Augusta Savage", url: "https://americanart.si.edu/artist/augusta-savage-4269", quote: "was commissioned by the New York World's Fair of 1939 to create a sculpture"}
+      - {title: "The Studio Museum in Harlem: Augusta Savage", url: "https://studiomuseum.org/artists/augusta-savage", quote: "One of only four women and the only Black woman to receive a commission for the 1939 New York World’s Fair"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Studio Museum counted instead."
+  - card: the-harp-savage
+    fact: "Savage was born in Green Cove Springs, Florida, in 1892"
+    verdict: corrected
+    sources:
+      - {title: "Smithsonian American Art Museum: Augusta Savage", url: "https://americanart.si.edu/artist/augusta-savage-4269", quote: "Born Augusta Christine Fells in Green Cove Springs, Florida, on February 29, 1892"}
+      - {title: "University of Pennsylvania, Weitzman School: Augusta Savage (1892–1962)", url: "https://architecture.sas.upenn.edu/node/947", quote: "Augusta Savage (1892 - 1962)"}
+      - {title: "University of Pennsylvania, Weitzman School: Augusta Savage (1892–1962)", url: "https://architecture.sas.upenn.edu/node/947", quote: "Born in Green Cove Springs, Florida, a brick-making town"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Penn counted instead."
+  - card: the-harp-savage
+    fact: "She opened a studio school in Harlem in 1932"
+    verdict: corrected
+    sources:
+      - {title: "Smithsonian American Art Museum: Augusta Savage", url: "https://americanart.si.edu/artist/augusta-savage-4269", quote: "Following her return to New York in 1932, Savage established the Savage Studio of Arts and Crafts"}
+      - {title: "University of Pennsylvania, Weitzman School: Augusta Savage (1892–1962)", url: "https://architecture.sas.upenn.edu/node/947", quote: "Savage returned to Harlem in 1932 where she opened the Savage Studio of Arts and Crafts"}
+      - {title: "The Phillips Collection, Jacob Lawrence: The Migration Series, chronology", url: "https://lawrencemigration.phillipscollection.org/artist/chronology", quote: "1932 Artist Augusta Savage opens the Savage School of Arts and Crafts in Harlem."}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. SAAM and Penn counted."
+  - card: the-harp-savage
+    fact: "In 1934 she became the first African American member of the National Association of Women Painters and Sculptors"
+    verdict: unconfirmed
+    sources:
+      - {title: "Smithsonian American Art Museum: Augusta Savage", url: "https://americanart.si.edu/artist/augusta-savage-4269", quote: "In 1934 she became the first African-American member of the National Association of Women Painters and Sculptors."}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Only SAAM remains; removed from EN and RU."
+  - card: the-harp-savage
+    fact: "In 1937 she became the first director of the Harlem Community Art Center"
+    verdict: corrected
+    sources:
+      - {title: "Smithsonian American Art Museum: Augusta Savage", url: "https://americanart.si.edu/artist/augusta-savage-4269", quote: "She was appointed the first director of the Harlem Community Art Center"}
+      - {title: "The Studio Museum in Harlem: Augusta Savage", url: "https://studiomuseum.org/artists/augusta-savage", quote: "leading to the establishment of the Harlem Community Art Center in 1937, with Savage as its first director"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Studio Museum counted instead."
+  - card: the-harp-savage
+    fact: "She championed Black artists in the federal art projects and helped the young Jacob Lawrence into one"
+    verdict: corrected
+    sources:
+      - {title: "Smithsonian American Art Museum: Augusta Savage", url: "https://americanart.si.edu/artist/augusta-savage-4269", quote: "was instrumental in getting the Works Progress Administration to include black artists in its Federal Art Project"}
+      - {title: "The Studio Museum in Harlem: Augusta Savage", url: "https://studiomuseum.org/artists/augusta-savage", quote: "championing of Black artists"}
+      - {title: "The Phillips Collection, Jacob Lawrence: The Migration Series, chronology", url: "https://lawrencemigration.phillipscollection.org/artist/chronology", quote: "With the assistance of Augusta Savage , is accepted into the WPA/FAP easel division."}
+      - {title: "Encyclopedia.com (Gale reference entries): Jacob Lawrence", url: "https://www.encyclopedia.com/people/literature-and-arts/american-art-biographies/jacob-lawrence", quote: "He also met Augusta Savage , a community-minded sculptor who got him a job with the WPA ’ s Federal Arts Project in 1939."}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Reworded; Lawrence detail now rests on Phillips and Gale."
+  - card: the-harp-savage
+    fact: "Theme from Lift Every Voice and Sing by James Weldon Johnson"
+    verdict: confirmed
+    sources:
+      - {title: "Smithsonian American Art Museum: Augusta Savage", url: "https://americanart.si.edu/artist/augusta-savage-4269", quote: "Inspired by the lyrics of James Weldon Johnson's poem Lift Every Voice and Sing"}
+      - {title: "University of Pennsylvania, Weitzman School: Augusta Savage (1892–1962)", url: "https://architecture.sas.upenn.edu/node/947", quote: "inspired by the song written by NAACP leader, James Weldon Johnson"}
+    note: ""
+  - card: the-harp-savage
+    fact: "She named it Lift Every Voice and Sing; the fair called it The Harp"
+    verdict: confirmed
+    sources:
+      - {title: "University of Pennsylvania, Weitzman School: Augusta Savage (1892–1962)", url: "https://architecture.sas.upenn.edu/node/947", quote: "In this piece, which was renamed \"The Harp\" by the World's Fair Commission"}
+      - {title: "The Studio Museum in Harlem: Augusta Savage", url: "https://studiomuseum.org/artists/augusta-savage", quote: "Savage created Lift Every Voice and Sing (also known as T he Harp )"}
+    note: "Studio Museum quote re-copied (page splits 'The')."
+  - card: the-harp-savage
+    fact: "It stood sixteen feet high, in plaster"
+    verdict: confirmed
+    sources:
+      - {title: "Smithsonian American Art Museum: Augusta Savage", url: "https://americanart.si.edu/artist/augusta-savage-4269", quote: "the sixteen-foot sculpture"}
+      - {title: "The Studio Museum in Harlem: Augusta Savage", url: "https://studiomuseum.org/artists/augusta-savage", quote: "a sixteen-foot plaster sculpture"}
+    note: ""
+  - card: the-harp-savage
+    fact: "Twelve Black singers in graduated heights formed the strings; the hand of God the sounding board"
+    verdict: confirmed
+    sources:
+      - {title: "Smithsonian American Art Museum: Augusta Savage", url: "https://americanart.si.edu/artist/augusta-savage-4269", quote: "a group of twelve stylized black singers in graduated heights that symbolized the strings of the harp. The sounding board was formed by the hand and arm of God"}
+      - {title: "University of Pennsylvania, Weitzman School: Augusta Savage (1892–1962)", url: "https://architecture.sas.upenn.edu/node/947", quote: "the soundboard of the harp is formed by the hand of God, the strings formed by the choir members robes, and the twelve singers"}
+    note: ""
+  - card: the-harp-savage
+    fact: "There was no money to cast it in bronze, and it was destroyed after the fair"
+    verdict: confirmed
+    sources:
+      - {title: "University of Pennsylvania, Weitzman School: Augusta Savage (1892–1962)", url: "https://architecture.sas.upenn.edu/node/947", quote: "it was destroyed at the conclusion of the fair, as Savage did not have enough money to have it cast in bronze"}
+      - {title: "The Studio Museum in Harlem: Augusta Savage", url: "https://studiomuseum.org/artists/augusta-savage", quote: "a sixteen-foot plaster sculpture that was destroyed following the close of the Fair"}
+    note: ""
+  - card: the-harp-savage
+    fact: "Many of her other works were lost for lack of funds"
+    verdict: corrected
+    sources:
+      - {title: "The Studio Museum in Harlem: Augusta Savage", url: "https://studiomuseum.org/artists/augusta-savage", quote: "She had very few financial resources, which directly contributed to the loss of many of her sculptures."}
+      - {title: "University of Pennsylvania, Weitzman School: Augusta Savage (1892–1962)", url: "https://architecture.sas.upenn.edu/node/947", quote: "Although little of her work survives today"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Penn counted; 'plaster' dropped from 'other plaster works'."
+  - card: the-harp-savage
+    fact: "She died in New York in 1962"
+    verdict: corrected
+    sources:
+      - {title: "Smithsonian American Art Museum: Augusta Savage", url: "https://americanart.si.edu/artist/augusta-savage-4269", quote: "born Green Cove Springs, FL 1892-died New York City 1962"}
+      - {title: "University of Pennsylvania, Weitzman School: Augusta Savage (1892–1962)", url: "https://architecture.sas.upenn.edu/node/947", quote: "Savage moved to Saugerties, New York where she lived and worked as an artist, activist, and educator until she died, in 1962"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. SAAM gives New York City, Penn Saugerties, New York; the card says only 'in New York'."
+  - card: the-harp-savage
+    fact: "She is remembered as a teacher of a generation of Harlem artists"
+    verdict: confirmed
+    sources:
+      - {title: "The Studio Museum in Harlem: Augusta Savage", url: "https://studiomuseum.org/artists/augusta-savage", quote: "Savage taught hundreds of young people, including Gwendolyn Knight and Norman Lewis"}
+      - {title: "University of Pennsylvania, Weitzman School: Augusta Savage (1892–1962)", url: "https://architecture.sas.upenn.edu/node/947", quote: "Some of her notable students included the young Jacob Lawrence, Gwendolyn Knight, Norman Lewis"}
+    note: ""
+  - card: migration-series
+    fact: "Sixty small tempera paintings by Jacob Lawrence, 1940–41"
+    verdict: corrected
+    sources:
+      - {title: "Lee Rosenbaum, CultureGrrl, ArtsJournal (April 2015)", url: "https://www.artsjournal.com/culturegrrl/2015/04/one-way-ticket-lawrences-migration-series-should-remain-whole-after-momas-showing-with-video.html", quote: "the 60 small tempera paintings chronicling the movement of millions of African-Americans from South to North"}
+      - {title: "Jacob and Gwendolyn Knight Lawrence Foundation: About Jacob Lawrence", url: "https://jacobandgwenlawrence.org/jacob-lawrence/", quote: "painted in bright tempera paints on small hardboard panels"}
+      - {title: "The Phillips Collection: The Great American Epic (exhibition, 2008)", url: "https://www.phillipscollection.org/events/2008-05-03-exhibition-lawrence-migration-series", quote: "Panel 1: During World War I there was a great migration north by southern African Americans (1940–41)"}
+    note: "Smarthistory and Britannica blocked; Lawrence Foundation counted."
+  - card: migration-series
+    fact: "It tells the Great Migration of Black Southerners to Northern cities beginning in WWI"
+    verdict: corrected
+    sources:
+      - {title: "The Phillips Collection, Jacob Lawrence: The Migration Series, introduction", url: "https://lawrencemigration.phillipscollection.org/the-migration-series", quote: "weaving together 60 same-sized panels into one grand epic statement"}
+      - {title: "Jacob and Gwendolyn Knight Lawrence Foundation: About Jacob Lawrence", url: "https://jacobandgwenlawrence.org/jacob-lawrence/", quote: "depicts the flight of millions of African Americans from the rural South to the urban North during and after the first World War"}
+      - {title: "Encyclopedia.com (Gale reference entries): Jacob Lawrence", url: "https://www.encyclopedia.com/people/literature-and-arts/american-art-biographies/jacob-lawrence", quote: "depicting the movement of rural southern blacks to the industrial North in search of work during World War I"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Original Phillips quote not found on the introduction page; Foundation and Gale counted."
+  - card: migration-series
+    fact: "First caption: During the World War there was a great migration north by southern Negroes"
+    verdict: unconfirmed
+    sources:
+      - {title: "The Phillips Collection: The Great American Epic (exhibition, 2008)", url: "https://www.phillipscollection.org/events/2008-05-03-exhibition-lawrence-migration-series", quote: "Panel 1: During World War I there was a great migration north by southern African Americans"}
+    note: "Smarthistory (only source for the 1941 wording) blocked; Phillips gives the revised wording. Quote removed from EN and RU."
+  - card: migration-series
+    fact: "Lawrence was born in Atlantic City, New Jersey, in 1917"
+    verdict: corrected
+    sources:
+      - {title: "The Phillips Collection, Jacob Lawrence: The Migration Series, chronology", url: "https://lawrencemigration.phillipscollection.org/artist/chronology", quote: "1917 September 7: Jacob Armstead Lawrence is born in Atlantic City, New Jersey"}
+      - {title: "Encyclopedia.com (Gale reference entries): Jacob Lawrence", url: "https://www.encyclopedia.com/people/literature-and-arts/american-art-biographies/jacob-lawrence", quote: "Jacob Armstead Lawrence was born September 7, 1917, in Atlantic City , New Jersey ."}
+      - {title: "Jacob and Gwendolyn Knight Lawrence Foundation: About Jacob Lawrence", url: "https://jacobandgwenlawrence.org/jacob-lawrence/", quote: "Jacob Armstead Lawrence was born in 1917 in Atlantic City, New Jersey."}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Gale and Foundation counted."
+  - card: migration-series
+    fact: "In Harlem he studied under Charles Alston at the Harlem Art Workshop and came to know Augusta Savage"
+    verdict: corrected
+    sources:
+      - {title: "The Phillips Collection, Jacob Lawrence: The Migration Series, chronology", url: "https://lawrencemigration.phillipscollection.org/artist/chronology", quote: "continues to study with Charles Alston at the WPA Harlem Art Workshop"}
+      - {title: "Encyclopedia.com (Gale reference entries): Jacob Lawrence", url: "https://www.encyclopedia.com/people/literature-and-arts/american-art-biographies/jacob-lawrence", quote: "Lawrence later took classes with him and Henry Bannarn at the Harlem Art Workshop"}
+      - {title: "The Phillips Collection: People on the Move (exhibition, 2016)", url: "https://phillipscollection.org/events/2016-09-10-exhibition-migration-series", quote: "Through such mentors as artist Charles Alston, sculptor Augusta Savage"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Gale counted."
+  - card: migration-series
+    fact: "A Julius Rosenwald Fund grant let him take on the subject"
+    verdict: corrected
+    sources:
+      - {title: "The Phillips Collection, Jacob Lawrence: The Migration Series, chronology", url: "https://lawrencemigration.phillipscollection.org/artist/chronology", quote: "Awarded a $1,500 fellowship from the Julius Rosenwald Fund to complete a series of paintings"}
+      - {title: "Barbara Earl Thomas, Jacob Lawrence & Gwendolyn Knight, BlackPast.org (2007)", url: "https://blackpast.org/african-american-history/lawrence-jacob-1917-2000-lawrence-gwendolyn-knight-1913-2005", quote: "In 1940 Jacob Lawrence was awarded a Julius Rosenwald Fellowship to complete his Migration of the Negro Series ."}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. BlackPast counted."
+  - card: migration-series
+    fact: "He wrote a caption for each panel and conceived the sixty as one unit"
+    verdict: confirmed
+    sources:
+      - {title: "The Phillips Collection, Jacob Lawrence: The Migration Series, introduction", url: "https://lawrencemigration.phillipscollection.org/the-migration-series", quote: "Like the storyboards of a film, he saw the panels as one unit"}
+      - {title: "Lee Rosenbaum, CultureGrrl, ArtsJournal (April 2015)", url: "https://www.artsjournal.com/culturegrrl/2015/04/one-way-ticket-lawrences-migration-series-should-remain-whole-after-momas-showing-with-video.html", quote: "He had conceived it as a unit and insisted it be kept that way."}
+      - {title: "Jacob and Gwendolyn Knight Lawrence Foundation: About Jacob Lawrence", url: "https://jacobandgwenlawrence.org/jacob-lawrence/", quote: "all of which are accompanied by captions"}
+    note: ""
+  - card: migration-series
+    fact: "He was 23"
+    verdict: confirmed
+    sources:
+      - {title: "The Phillips Collection: The Great American Epic (exhibition, 2008)", url: "https://www.phillipscollection.org/events/2008-05-03-exhibition-lawrence-migration-series", quote: "Lawrence was just 23 when he created this masterpiece of narrative painting"}
+      - {title: "Lee Rosenbaum, CultureGrrl, ArtsJournal (April 2015)", url: "https://www.artsjournal.com/culturegrrl/2015/04/one-way-ticket-lawrences-migration-series-should-remain-whole-after-momas-showing-with-video.html", quote: "within months of their completion by the precocious 23-year-old"}
+    note: ""
+  - card: migration-series
+    fact: "Shown at the Downtown Gallery in New York in late 1941"
+    verdict: corrected
+    sources:
+      - {title: "The Phillips Collection, Jacob Lawrence: The Migration Series, chronology", url: "https://lawrencemigration.phillipscollection.org/artist/chronology", quote: "arranges for the series to be featured in Downtown Gallery's exhibition American Negro Art: Nineteenth and Twentieth Centuries , which opens at the end of the year"}
+      - {title: "Encyclopedia.com (Gale reference entries): Jacob Lawrence", url: "https://www.encyclopedia.com/people/literature-and-arts/american-art-biographies/jacob-lawrence", quote: "was displayed at New York City ’ s Downtown Gallery in 1941"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Gale counted."
+  - card: migration-series
+    fact: "In 1942 MoMA bought the thirty even-numbered panels and the Phillips the odd-numbered"
+    verdict: confirmed
+    sources:
+      - {title: "The Phillips Collection: The Great American Epic (exhibition, 2008)", url: "https://www.phillipscollection.org/events/2008-05-03-exhibition-lawrence-migration-series", quote: "The Phillips Collection purchased the odd numbered panels and the Museum of Modern Art acquired the 30 even numbered panels"}
+      - {title: "Lee Rosenbaum, CultureGrrl, ArtsJournal (April 2015)", url: "https://www.artsjournal.com/culturegrrl/2015/04/one-way-ticket-lawrences-migration-series-should-remain-whole-after-momas-showing-with-video.html", quote: "In the 1942, within months of their completion by the precocious 23-year-old, the 60 small tempera paintings ... were divvied up by the Museum of Modern Art (which bought the even-numbered panels) and the Phillips Collection in Washington (the odd-numbered panels)"}
+    note: ""
+  - card: migration-series
+    fact: "The halves were reunited in Washington in 2008 and at MoMA in 2015"
+    verdict: corrected
+    sources:
+      - {title: "The Phillips Collection: People on the Move (exhibition, 2016)", url: "https://phillipscollection.org/events/2016-09-10-exhibition-migration-series", quote: "reuniting the Phillips’s odd-numbered panels with the Museum of Modern Art’s even-numbered panels from their split acquisition in 1942"}
+      - {title: "Lee Rosenbaum, CultureGrrl, ArtsJournal (April 2015)", url: "https://www.artsjournal.com/culturegrrl/2015/04/one-way-ticket-lawrences-migration-series-should-remain-whole-after-momas-showing-with-video.html", quote: "Should Remain Whole after MoMA’s Showing"}
+    note: "MoMA page blocked; each year rests on one source. Card now says only that the halves come together for exhibitions."
+  - card: migration-series
+    fact: "Flat, bright colour; one of the great narrative works of American painting"
+    verdict: corrected
+    sources:
+      - {title: "Jacob and Gwendolyn Knight Lawrence Foundation: About Jacob Lawrence", url: "https://jacobandgwenlawrence.org/jacob-lawrence/", quote: "painted in bright tempera paints"}
+      - {title: "The Phillips Collection: The Great American Epic (exhibition, 2008)", url: "https://www.phillipscollection.org/events/2008-05-03-exhibition-lawrence-migration-series", quote: "this masterpiece of narrative painting, which uses vivid patterns and colors"}
+      - {title: "Encyclopedia.com (Gale reference entries): Jacob Lawrence", url: "https://www.encyclopedia.com/people/literature-and-arts/american-art-biographies/jacob-lawrence", quote: "in brilliant colors and bold designs"}
+    note: "Britannica (403/Cloudflare to curl, WebFetch and archive.org) could not be opened and is not counted. Foundation and Gale counted."
+  - card: mbube
+    fact: "Mbube means lion in Zulu"
+    verdict: confirmed
+    sources:
+      - {title: "Owen Dean, Copyright in the Courts: The Return of the Lion, WIPO Magazine (2006)", url: "https://wipo.int/web/wipo-magazine/articles/copyright-in-the-courts-the-return-of-the-lion-35180", quote: "He called the song Mbube , Zulu for lion."}
+      - {title: "CBC News: South African family settles 'Lion Sleeps Tonight' lawsuit (2006)", url: "https://www.cbc.ca/news/entertainment/south-african-family-settles-lion-sleeps-tonight-lawsuit-1.607085", quote: "originally called Mbube (or Lion , in Zulu)"}
+    note: ""
+  - card: mbube
+    fact: "Solomon Linda, a Zulu migrant worker, recorded it in Johannesburg in 1939 with the Evening Birds"
+    verdict: confirmed
+    sources:
+      - {title: "Owen Dean, Copyright in the Courts: The Return of the Lion, WIPO Magazine (2006)", url: "https://wipo.int/web/wipo-magazine/articles/copyright-in-the-courts-the-return-of-the-lion-35180", quote: "In 1939, a Zulu migrant worker and entertainer who called himself Solomon Linda stood before a microphone in Johannesburg's first recording studio"}
+      - {title: "David Browne, 'The Lion Sleeps Tonight': The Ongoing Saga, Rolling Stone (2019)", url: "https://www.rollingstone.com/music/music-features/lion-sleeps-tonight-lion-king-update-879663/", quote: "After Linda and his group the Evening Birds released “Mbube” in 1939"}
+    note: ""
+  - card: mbube
+    fact: "Linda improvised a falsetto line"
+    verdict: confirmed
+    sources:
+      - {title: "Owen Dean, Copyright in the Courts: The Return of the Lion, WIPO Magazine (2006)", url: "https://wipo.int/web/wipo-magazine/articles/copyright-in-the-courts-the-return-of-the-lion-35180", quote: "improvising falsetto vocal lines against a rolling, driving vocal chant"}
+      - {title: "David Browne, 'The Lion Sleeps Tonight': The Ongoing Saga, Rolling Stone (2019)", url: "https://www.rollingstone.com/music/music-features/lion-sleeps-tonight-lion-king-update-879663/", quote: "featuring Linda’s beguiling falsetto lilt"}
+    note: ""
+  - card: mbube
+    fact: "Gallo released it and it became a hit in South Africa"
+    verdict: confirmed
+    sources:
+      - {title: "Owen Dean, Copyright in the Courts: The Return of the Lion, WIPO Magazine (2006)", url: "https://wipo.int/web/wipo-magazine/articles/copyright-in-the-courts-the-return-of-the-lion-35180", quote: "the recording of Mbube released by Gallo Records, already a good seller in South Africa"}
+      - {title: "CBC News: South African family settles 'Lion Sleeps Tonight' lawsuit (2006)", url: "https://www.cbc.ca/news/entertainment/south-african-family-settles-lion-sleeps-tonight-lawsuit-1.607085", quote: "It became a hit throughout South Africa."}
+    note: ""
+  - card: mbube
+    fact: "Linda signed his rights over to the record company"
+    verdict: confirmed
+    sources:
+      - {title: "Owen Dean, Copyright in the Courts: The Return of the Lion, WIPO Magazine (2006)", url: "https://wipo.int/web/wipo-magazine/articles/copyright-in-the-courts-the-return-of-the-lion-35180", quote: "Solomon Linda had assigned his worldwide copyright in Mbube to the Gallo Record Company for a consideration of 10 shillings."}
+      - {title: "CBC News: South African family settles 'Lion Sleeps Tonight' lawsuit (2006)", url: "https://www.cbc.ca/news/entertainment/south-african-family-settles-lion-sleeps-tonight-lawsuit-1.607085", quote: "Linda and his wife had sold the rights to his song to a local company in 1939"}
+    note: ""
+  - card: mbube
+    fact: "In the early 1950s Pete Seeger misheard the Zulu words and called it Wimoweh; the Weavers charted it"
+    verdict: confirmed
+    sources:
+      - {title: "David Browne, 'The Lion Sleeps Tonight': The Ongoing Saga, Rolling Stone (2019)", url: "https://www.rollingstone.com/music/music-features/lion-sleeps-tonight-lion-king-update-879663/", quote: "Mishearing the lyric and assuming it was a folk song, he changed the title to “Wimoweh,” recorded it with the Weavers in 1952, and mainlined Linda’s melody onto the pop charts."}
+      - {title: "Owen Dean, Copyright in the Courts: The Return of the Lion, WIPO Magazine (2006)", url: "https://wipo.int/web/wipo-magazine/articles/copyright-in-the-courts-the-return-of-the-lion-35180", quote: "which he called Wimoweh (a corruption of the Zulu lyrics"}
+      - {title: "CBC News: South African family settles 'Lion Sleeps Tonight' lawsuit (2006)", url: "https://www.cbc.ca/news/entertainment/south-african-family-settles-lion-sleeps-tonight-lawsuit-1.607085", quote: "In the 1950s, the tune was adapted and covered by Pete Seeger's group the Weavers"}
+    note: ""
+  - card: mbube
+    fact: "In 1961 new lyrics made it The Lion Sleeps Tonight, a number one for the Tokens"
+    verdict: confirmed
+    sources:
+      - {title: "David Browne, 'The Lion Sleeps Tonight': The Ongoing Saga, Rolling Stone (2019)", url: "https://www.rollingstone.com/music/music-features/lion-sleeps-tonight-lion-king-update-879663/", quote: "the New York group the Tokens wanted to morph “Wimoweh” into a pop song with fresh lyrics ... what became “The Lion Sleeps Tonight,” a Number One hit in 1961"}
+      - {title: "CBC News: South African family settles 'Lion Sleeps Tonight' lawsuit (2006)", url: "https://www.cbc.ca/news/entertainment/south-african-family-settles-lion-sleeps-tonight-lawsuit-1.607085", quote: "1960s group the Tokens"}
+      - {title: "Owen Dean, Copyright in the Courts: The Return of the Lion, WIPO Magazine (2006)", url: "https://wipo.int/web/wipo-magazine/articles/copyright-in-the-courts-the-return-of-the-lion-35180", quote: "as The Lion Sleeps Tonight . In this form the song became a major hit"}
+    note: ""
+  - card: mbube
+    fact: "It later went into Disney's The Lion King"
+    verdict: confirmed
+    sources:
+      - {title: "Owen Dean, Copyright in the Courts: The Return of the Lion, WIPO Magazine (2006)", url: "https://wipo.int/web/wipo-magazine/articles/copyright-in-the-courts-the-return-of-the-lion-35180", quote: "Then in the mid-1990s it was incorporated into the Disney musical The Lion King ."}
+      - {title: "CBC News: South African family settles 'Lion Sleeps Tonight' lawsuit (2006)", url: "https://www.cbc.ca/news/entertainment/south-african-family-settles-lion-sleeps-tonight-lawsuit-1.607085", quote: "the song was used in Walt Disney's international hit The Lion King , released in 1994"}
+    note: ""
+  - card: mbube
+    fact: "More than 150 artists have recorded it"
+    verdict: confirmed
+    sources:
+      - {title: "Owen Dean, Copyright in the Courts: The Return of the Lion, WIPO Magazine (2006)", url: "https://wipo.int/web/wipo-magazine/articles/copyright-in-the-courts-the-return-of-the-lion-35180", quote: "More than 150 different artists have recorded it"}
+      - {title: "CBC News: South African family settles 'Lion Sleeps Tonight' lawsuit (2006)", url: "https://www.cbc.ca/news/entertainment/south-african-family-settles-lion-sleeps-tonight-lawsuit-1.607085", quote: "then more than 150 artists worldwide"}
+    note: ""
+  - card: mbube
+    fact: "Linda received almost nothing and died in poverty in 1962"
+    verdict: confirmed
+    sources:
+      - {title: "CBC News: South African family settles 'Lion Sleeps Tonight' lawsuit (2006)", url: "https://www.cbc.ca/news/entertainment/south-african-family-settles-lion-sleeps-tonight-lawsuit-1.607085", quote: "He died in poverty in 1962."}
+      - {title: "David Browne, 'The Lion Sleeps Tonight': The Ongoing Saga, Rolling Stone (2019)", url: "https://www.rollingstone.com/music/music-features/lion-sleeps-tonight-lion-king-update-879663/", quote: "Linda, who died in 1962, would belatedly receive a co-writing credit"}
+      - {title: "David Browne, 'The Lion Sleeps Tonight': The Ongoing Saga, Rolling Stone (2019)", url: "https://www.rollingstone.com/music/music-features/lion-sleeps-tonight-lion-king-update-879663/", quote: "For decades, Linda barely received any compensation"}
+      - {title: "Owen Dean, Copyright in the Courts: The Return of the Lion, WIPO Magazine (2006)", url: "https://wipo.int/web/wipo-magazine/articles/copyright-in-the-courts-the-return-of-the-lion-35180", quote: "He died in 1962, leaving a wife, Regina, and four children."}
+    note: ""
+  - card: mbube
+    fact: "A Rolling Stone exposé by Rian Malan described his daughters' poverty, and the family sued in South Africa"
+    verdict: confirmed
+    sources:
+      - {title: "Owen Dean, Copyright in the Courts: The Return of the Lion, WIPO Magazine (2006)", url: "https://wipo.int/web/wipo-magazine/articles/copyright-in-the-courts-the-return-of-the-lion-35180", quote: "journalist Rian Malan wrote an article for Rolling Stone magazine exposing the machinations which had taken place"}
+      - {title: "Owen Dean, Copyright in the Courts: The Return of the Lion, WIPO Magazine (2006)", url: "https://wipo.int/web/wipo-magazine/articles/copyright-in-the-courts-the-return-of-the-lion-35180", quote: "the Linda daughters ... were living in abject poverty in South Africa"}
+      - {title: "David Browne, 'The Lion Sleeps Tonight': The Ongoing Saga, Rolling Stone (2019)", url: "https://www.rollingstone.com/music/music-features/lion-sleeps-tonight-lion-king-update-879663/", quote: "As South African journalist Rian Malan laid out in his deeply reported RS exposé"}
+      - {title: "CBC News: South African family settles 'Lion Sleeps Tonight' lawsuit (2006)", url: "https://www.cbc.ca/news/entertainment/south-african-family-settles-lion-sleeps-tonight-lawsuit-1.607085", quote: "Linda's three surviving daughters and 10 grandchildren live in poverty in Johannesburg's Soweto township."}
+    note: ""
+  - card: mbube
+    fact: "They invoked an imperial copyright rule returning rights to the estate 25 years after death"
+    verdict: confirmed
+    sources:
+      - {title: "Owen Dean, Copyright in the Courts: The Return of the Lion, WIPO Magazine (2006)", url: "https://wipo.int/web/wipo-magazine/articles/copyright-in-the-courts-the-return-of-the-lion-35180", quote: "where an author assigned his copyright during his lifetime, 25 years after his death the copyright reverted to the Executor of his estate"}
+      - {title: "CBC News: South African family settles 'Lion Sleeps Tonight' lawsuit (2006)", url: "https://www.cbc.ca/news/entertainment/south-african-family-settles-lion-sleeps-tonight-lawsuit-1.607085", quote: "according to copyright law in the British Commonwealth at the time, the rights to the song were to revert back to the composer's heirs 25 years after his death"}
+    note: ""
+  - card: mbube
+    fact: "They attached Disney's South African trademarks"
+    verdict: confirmed
+    sources:
+      - {title: "Owen Dean, Copyright in the Courts: The Return of the Lion, WIPO Magazine (2006)", url: "https://wipo.int/web/wipo-magazine/articles/copyright-in-the-courts-the-return-of-the-lion-35180", quote: "\"attaching\" some 200 registered trade marks owned by Walt Disney Enterprises in South Africa"}
+      - {title: "CBC News: South African family settles 'Lion Sleeps Tonight' lawsuit (2006)", url: "https://www.cbc.ca/news/entertainment/south-african-family-settles-lion-sleeps-tonight-lawsuit-1.607085", quote: "the family won a court order to attach more than 240 Disney trademarks registered in South Africa"}
+    note: "Counts differ (about 200 vs more than 240); the card gives no number."
+  - card: mbube
+    fact: "In 2006 they settled with Abilene Music; Linda credited as co-composer; heirs got past and future royalties"
+    verdict: confirmed
+    sources:
+      - {title: "CBC News: South African family settles 'Lion Sleeps Tonight' lawsuit (2006)", url: "https://www.cbc.ca/news/entertainment/south-african-family-settles-lion-sleeps-tonight-lawsuit-1.607085", quote: "music publishing house Abilene Music — a decision that is \"a great victory for the Linda family.\""}
+      - {title: "Owen Dean, Copyright in the Courts: The Return of the Lion, WIPO Magazine (2006)", url: "https://wipo.int/web/wipo-magazine/articles/copyright-in-the-courts-the-return-of-the-lion-35180", quote: "Solomon Linda is acknowledged as a co-composer of The Lion Sleeps Tonight"}
+      - {title: "David Browne, 'The Lion Sleeps Tonight': The Ongoing Saga, Rolling Stone (2019)", url: "https://www.rollingstone.com/music/music-features/lion-sleeps-tonight-lion-king-update-879663/", quote: "would belatedly receive a co-writing credit on “The Lion Sleeps Tonight,” and his family would be handed a lump sum for past royalties and a cut of future revenue"}
+    note: ""
+  - card: all-negro-hour
+    fact: "The All-Negro Hour first aired on WSBC Chicago on 3 November 1929"
+    verdict: confirmed
+    sources:
+      - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: Cooper, Jack L.", url: "https://www.museum.tv/radio-encyclopedia-3/cooper-jack-l", quote: "On 3 November 1929 at 5:00 P.M., Cooper launched The All-Negro Hour"}
+      - {title: "TeachRock: Pioneers of Early Black Radio", url: "https://teachrock.org/wp-content/uploads/Pioneers-of-Early-Black-Radio.pdf", quote: "On November 3, 1929, white-owned radio station WSBC in Chicago premiered “The All-Negro Hour,”"}
+    note: ""
+  - card: all-negro-hour
+    fact: "Radio then had Black singers but no Black announcers or hosts"
+    verdict: confirmed
+    sources:
+      - {title: "TeachRock: Pioneers of Early Black Radio", url: "https://teachrock.org/wp-content/uploads/Pioneers-of-Early-Black-Radio.pdf", quote: "But while Black artists often appeared in early radio broadcasts, radio shows did not have Black announcers, actors, or masters of ceremonies."}
+      - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: Cooper, Jack L.", url: "https://www.museum.tv/radio-encyclopedia-3/cooper-jack-l", quote: "the only time he ever heard blacks on radio was when they were singing, never speaking"}
+    note: ""
+  - card: all-negro-hour
+    fact: "Jack L. Cooper was born in 1888"
+    verdict: confirmed
+    sources:
+      - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: Cooper, Jack L.", url: "https://www.museum.tv/radio-encyclopedia-3/cooper-jack-l", quote: "Born in Memphis, Tennessee, 18 September 1888."}
+      - {title: "Willie Brenc, Jack Leroy Cooper (1888–1970), BlackPast.org", url: "https://blackpast.org/aah/cooper-jack-leroy-1888-1970", quote: "Jack Leroy Cooper (1888-1970)"}
+    note: ""
+  - card: all-negro-hour
+    fact: "He had been a boxer and vaudeville song-and-dance man"
+    verdict: confirmed
+    sources:
+      - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: Cooper, Jack L.", url: "https://www.museum.tv/radio-encyclopedia-3/cooper-jack-l", quote: "Boxed in 160 amateur bouts"}
+      - {title: "Willie Brenc, Jack Leroy Cooper (1888–1970), BlackPast.org", url: "https://blackpast.org/aah/cooper-jack-leroy-1888-1970", quote: "Cooper began his entertainment career as a dancer and comic on the Theater Owners Booking Association"}
+    note: ""
+  - card: all-negro-hour
+    fact: "He wrote on the theatre for the Chicago Defender"
+    verdict: confirmed
+    sources:
+      - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: Cooper, Jack L.", url: "https://www.museum.tv/radio-encyclopedia-3/cooper-jack-l", quote: "In 1924 he was covering the theater scene for the Chicago Defender"}
+      - {title: "Willie Brenc, Jack Leroy Cooper (1888–1970), BlackPast.org", url: "https://blackpast.org/aah/cooper-jack-leroy-1888-1970", quote: "the position of assistant theater editor at the influential Chicago Defender"}
+    note: ""
+  - card: all-negro-hour
+    fact: "The paper sent him to Washington in the mid-1920s, where he began in radio on WCAP"
+    verdict: confirmed
+    sources:
+      - {title: "Willie Brenc, Jack Leroy Cooper (1888–1970), BlackPast.org", url: "https://blackpast.org/aah/cooper-jack-leroy-1888-1970", quote: "the newspaper selected him to help open up its new Washington, D.C."}
+      - {title: "Willie Brenc, Jack Leroy Cooper (1888–1970), BlackPast.org", url: "https://blackpast.org/aah/cooper-jack-leroy-1888-1970", quote: "Later that year, the producer of a show on WCAP in Washington, D.C., hired Cooper"}
+      - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: African-Americans in Radio", url: "https://www.museum.tv/radio-encyclopedia/african-americans-in-radio", quote: "While on assignment in Washington in 1925, Cooper began writing, producing, and starring in his own black vaudeville show on WCAP."}
+    note: "The three Museum of Broadcast Communications entries are one publisher (Encyclopedia of Radio) and count as ONE source."
+  - card: all-negro-hour
+    fact: "Back in Chicago he sought a station for a show by Black people for Black listeners; Silverstein's WSBC, selling time to immigrant groups, agreed"
+    verdict: confirmed
+    sources:
+      - {title: "Willie Brenc, Jack Leroy Cooper (1888–1970), BlackPast.org", url: "https://blackpast.org/aah/cooper-jack-leroy-1888-1970", quote: "In 1929, Joseph Silverstein, owner of WSBC, a low-power station that catered mainly to Chicago's large immigrant population, agreed to air Cooper's The All-Negro Hour ."}
+      - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: Cooper, Jack L.", url: "https://www.museum.tv/radio-encyclopedia-3/cooper-jack-l", quote: "He returned to Chicago determined to produce radio programming by black people for black people."}
+    note: ""
+  - card: all-negro-hour
+    fact: "The show was weekly and offered music, comedy and serial sketches"
+    verdict: confirmed
+    sources:
+      - {title: "TeachRock: Pioneers of Early Black Radio", url: "https://teachrock.org/wp-content/uploads/Pioneers-of-Early-Black-Radio.pdf", quote: "featured music, comedy, and Richard Durham, Harsh Research Collection serial dramas"}
+      - {title: "Willie Brenc, Jack Leroy Cooper (1888–1970), BlackPast.org", url: "https://blackpast.org/aah/cooper-jack-leroy-1888-1970", quote: "Cooper developed an idea for a weekly variety show"}
+      - {title: "Willie Brenc, Jack Leroy Cooper (1888–1970), BlackPast.org", url: "https://blackpast.org/aah/cooper-jack-leroy-1888-1970", quote: "focused on live music and vaudeville comedy but gradually incorporated the comedy serials"}
+    note: "TeachRock's sentence is broken in the PDF text by a photo caption; ledger quote re-copied as extracted. BlackPast and TeachRock are independent."
+  - card: all-negro-hour
+    fact: "In 1932 a performer walked out over pay; Cooper played records into a microphone and kept doing so"
+    verdict: unconfirmed
+    sources:
+      - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: Cooper, Jack L.", url: "https://www.museum.tv/radio-encyclopedia-3/cooper-jack-l", quote: "One Sunday evening in 1932, The All-Negro Hour's pianist walked out on the show at the last minute to protest Cooper's refusal to give her a pay raise."}
+      - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: Black-Oriented Radio", url: "https://www.museum.tv/radio-encyclopedia-2/black-oriented-radio", quote: "Cooper began playing records and talking between them when a local musician's union demanded that his pianist go on strike."}
+      - {title: "Willie Brenc, Jack Leroy Cooper (1888–1970), BlackPast.org", url: "https://blackpast.org/aah/cooper-jack-leroy-1888-1970", quote: "Cooper popularized playing records on the radio."}
+    note: "The three Museum of Broadcast Communications entries are one publisher (Encyclopedia of Radio) and count as ONE source. The walk-out story rests on that one publisher, which itself gives two versions. Card now says he took to playing records and popularised it (BlackPast; Radio Hall of Fame: 'a variety of disc jockey programs'), and the dispute records the two MBC versions."
+  - card: all-negro-hour
+    fact: "He took to playing records on the air and did much to popularise the practice"
+    verdict: corrected
+    sources:
+      - {title: "Willie Brenc, Jack Leroy Cooper (1888–1970), BlackPast.org", url: "https://blackpast.org/aah/cooper-jack-leroy-1888-1970", quote: "Cooper popularized playing records on the radio."}
+      - {title: "Radio Hall of Fame: Jack L. Cooper", url: "https://www.radiohalloffame.com/jack-l-cooper", quote: "with a variety of disc jockey programs that played an eclectic blend of black music"}
+    note: "Replaces the single-publisher walk-out story; how it began is in the dispute field."
+  - card: all-negro-hour
+    fact: "He is remembered as America's first Black disc jockey"
+    verdict: corrected
+    sources:
+      - {title: "Willie Brenc, Jack Leroy Cooper (1888–1970), BlackPast.org", url: "https://blackpast.org/aah/cooper-jack-leroy-1888-1970", quote: "Cooper is widely acknowledged as the first African American radio broadcaster."}
+      - {title: "Radio Hall of Fame: Jack L. Cooper", url: "https://www.radiohalloffame.com/jack-l-cooper", quote: "Cooper is considered to be the first African-American radio announcer in America."}
+    note: "'First Black disc jockey' rests on MBC alone; card and wow now say 'first African American radio announcer', supported by BlackPast and the Radio Hall of Fame."
+  - card: all-negro-hour
+    fact: "By the late 1940s over 40 hours a week on four Chicago stations"
+    verdict: confirmed
+    sources:
+      - {title: "Willie Brenc, Jack Leroy Cooper (1888–1970), BlackPast.org", url: "https://blackpast.org/aah/cooper-jack-leroy-1888-1970", quote: "By the late 1940s, Cooper produced over 40 hours of radio each week on four radio stations."}
+      - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: Cooper, Jack L.", url: "https://www.museum.tv/radio-encyclopedia-3/cooper-jack-l", quote: "By 1947 Jack L. Cooper Presentations was producing programs on Chicago's WSBC, WHFC, WBEE, and WAAF."}
+    note: "'He built an empire' sentence removed to fit length."
+  - card: all-negro-hour
+    fact: "He died in Chicago in 1970"
+    verdict: confirmed
+    sources:
+      - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: Cooper, Jack L.", url: "https://www.museum.tv/radio-encyclopedia-3/cooper-jack-l", quote: "Died in Chicago, 12 January 1970."}
+      - {title: "Willie Brenc, Jack Leroy Cooper (1888–1970), BlackPast.org", url: "https://blackpast.org/aah/cooper-jack-leroy-1888-1970", quote: "Jack L. Cooper died on January 12, 1970 in Chicago."}
+    note: ""
+  - card: all-negro-hour
+    fact: "His model led to stations such as WDIA Memphis, which in 1949 put an all-Black staff on air"
+    verdict: confirmed
+    sources:
+      - {title: "TeachRock: Pioneers of Early Black Radio", url: "https://teachrock.org/wp-content/uploads/Pioneers-of-Early-Black-Radio.pdf", quote: "In 1949, station WDIA in Memphis, Tennessee, became the first to employ an all-Black on-air announcing staff."}
+      - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: Cooper, Jack L.", url: "https://www.museum.tv/radio-encyclopedia-3/cooper-jack-l", quote: "WDIA in Memphis, the first all-black-appeal station in America (1949) would be the culmination of what Cooper had begun in the late 1920s."}
+    note: ""
+  - card: tropiques
+    fact: "Tropiques was a cultural review published in Fort-de-France, Martinique, 1941–1945"
+    verdict: confirmed
+    sources:
+      - {title: "Brown University Library, Liberation Journals Index: Tropiques", url: "https://library.brown.edu/liberation/aboutJournals.php?journ=8", quote: "Tropiques , whose eleven issues appeared between 1941-1945"}
+      - {title: "Katerina Gonzalez Seligmann, Tropiques, Revolutionary Papers", url: "https://revolutionarypapers.org/?p=305", quote: "Tropiques (Fort de France, Martinique, 1941-1945)"}
+      - {title: "Paul-Louis Biondi, Tropiques, Surrealism at One Hundred, Princeton University Library", url: "https://dpul.princeton.edu/surrealism-at-one-hundred/feature/tropiques", quote: "With fourteen issues between 1941 and 1945"}
+    note: "Issue counts differ (eleven vs fourteen); the card gives none."
+  - card: tropiques
+    fact: "Martinique was ruled for Vichy by Admiral Georges Robert under heavy censorship"
+    verdict: confirmed
+    sources:
+      - {title: "Paul-Louis Biondi, Tropiques, Surrealism at One Hundred, Princeton University Library", url: "https://dpul.princeton.edu/surrealism-at-one-hundred/feature/tropiques", quote: "Under Admiral Georges Robert, the Vichy high commissioner to the Antilles, heavy censorship was enforced"}
+      - {title: "Anny Dominique Curtius, Tropiques: Le dialogue créole écopoétique, Présence Africaine 189 (2014)", url: "https://lllc.uiowa.edu/sites/lllc.uiowa.edu/files/2025-06/Tropiques%20Le%20dialogue%20e%CC%81copoe%CC%81tique%20d%27Aime%CC%81%20et%20Suzanne%20Ce%CC%81saire.pdf", quote: "la quasi- dictature de l'Amiral Robert, représentant du gouvernement de Vichy de 1939 à 1943 en Martinique"}
+      - {title: "Katerina Gonzalez Seligmann, Tropiques, Revolutionary Papers", url: "https://revolutionarypapers.org/?p=305", quote: "subject to Vichy censorship for half-run"}
+    note: ""
+  - card: tropiques
+    fact: "Founders included Aimé Césaire, his wife Suzanne Césaire and René Ménil"
+    verdict: confirmed
+    sources:
+      - {title: "Paul-Louis Biondi, Tropiques, Surrealism at One Hundred, Princeton University Library", url: "https://dpul.princeton.edu/surrealism-at-one-hundred/feature/tropiques", quote: "While her husband, Aimé Césaire, saw surrealism as a poetic tool"}
+      - {title: "Katerina Gonzalez Seligmann, Tropiques, Revolutionary Papers", url: "https://revolutionarypapers.org/?p=305", quote: "Editorial Collective: Aimé Césaire, Suzanne Césaire, René Ménil"}
+    note: ""
+  - card: tropiques
+    fact: "They wanted Martinique to have its own literature and thought"
+    verdict: confirmed
+    sources:
+      - {title: "Paul-Louis Biondi, Tropiques, Surrealism at One Hundred, Princeton University Library", url: "https://dpul.princeton.edu/surrealism-at-one-hundred/feature/tropiques", quote: "the journal saw them as tools towards the realization of a project of Martinican literary and cultural production"}
+      - {title: "Anny Dominique Curtius, Tropiques: Le dialogue créole écopoétique, Présence Africaine 189 (2014)", url: "https://lllc.uiowa.edu/sites/lllc.uiowa.edu/files/2025-06/Tropiques%20Le%20dialogue%20e%CC%81copoe%CC%81tique%20d%27Aime%CC%81%20et%20Suzanne%20Ce%CC%81saire.pdf", quote: "alors il faut créer les esthétiques et philosophies qui peuvent foisonner ailleurs mais pas en Martinique"}
+    note: "Princeton quote re-copied verbatim."
+  - card: tropiques
+    fact: "Vichy favoured folklore and tradition; the review wrote within it, using ellipsis and camouflage to critique colonialism"
+    verdict: corrected
+    sources:
+      - {title: "Paul-Louis Biondi, Tropiques, Surrealism at One Hundred, Princeton University Library", url: "https://dpul.princeton.edu/surrealism-at-one-hundred/feature/tropiques", quote: "in order to couch their own anti-colonial critiques and a literary and political resistance"}
+      - {title: "Paul-Louis Biondi, Tropiques, Surrealism at One Hundred, Princeton University Library", url: "https://dpul.princeton.edu/surrealism-at-one-hundred/feature/tropiques", quote: "examining the cultural afflictions arising on the island from centuries of colonialism"}
+      - {title: "Anny Dominique Curtius, Tropiques: Le dialogue créole écopoétique, Présence Africaine 189 (2014)", url: "https://lllc.uiowa.edu/sites/lllc.uiowa.edu/files/2025-06/Tropiques%20Le%20dialogue%20e%CC%81copoe%CC%81tique%20d%27Aime%CC%81%20et%20Suzanne%20Ce%CC%81saire.pdf", quote: "une esthétique de l'évitement, de l'ellipse et du camouflage doit être façonnée"}
+    note: "Vichy's mandated 'authenticity, tradition, and folklore' rests on Princeton alone (citing Jennings); that clause and the closing 'wanted its colonial subjects picturesque' were removed. The camouflage strategy is confirmed."
+  - card: tropiques
+    fact: "Contents included local and folk poetry, landscapes, an ethnographer and European writers"
+    verdict: confirmed
+    sources:
+      - {title: "Paul-Louis Biondi, Tropiques, Surrealism at One Hundred, Princeton University Library", url: "https://dpul.princeton.edu/surrealism-at-one-hundred/feature/tropiques", quote: "focusing on local and folkloric poetry or critical discussions of Western figures like Leo Frobenius , a German ethnographer"}
+      - {title: "Katerina Gonzalez Seligmann, Tropiques, Revolutionary Papers", url: "https://revolutionarypapers.org/?p=305", quote: "mostly literary publication including French literary works alongside local work"}
+      - {title: "Anny Dominique Curtius, Tropiques: Le dialogue créole écopoétique, Présence Africaine 189 (2014)", url: "https://lllc.uiowa.edu/sites/lllc.uiowa.edu/files/2025-06/Tropiques%20Le%20dialogue%20e%CC%81copoe%CC%81tique%20d%27Aime%CC%81%20et%20Suzanne%20Ce%CC%81saire.pdf", quote: "« Le grand camouflage » où le paysage caribéen"}
+    note: ""
+  - card: tropiques
+    fact: "Suzanne Césaire wrote on surrealism; after Breton passed through Martinique in 1941 she published \"André Breton, poète\""
+    verdict: confirmed
+    sources:
+      - {title: "Paul-Louis Biondi, Tropiques, Surrealism at One Hundred, Princeton University Library", url: "https://dpul.princeton.edu/surrealism-at-one-hundred/feature/tropiques", quote: "writing two essays – “André Breton, poète” (1941) and “1943: le surréalisme et nous” (1943)"}
+      - {title: "Brown University Library, Liberation Journals Index: Tropiques", url: "https://library.brown.edu/liberation/aboutJournals.php?journ=8", quote: "including an essay on André Breton after his brief stay on the island"}
+      - {title: "Anny Dominique Curtius, Tropiques: Le dialogue créole écopoétique, Présence Africaine 189 (2014)", url: "https://lllc.uiowa.edu/sites/lllc.uiowa.edu/files/2025-06/Tropiques%20Le%20dialogue%20e%CC%81copoe%CC%81tique%20d%27Aime%CC%81%20et%20Suzanne%20Ce%CC%81saire.pdf", quote: "En avril 1941, des intellectuels et artistes européens dont André Breton, André Masson, Claude Lévi-Strauss, et le Cubain Wifredo Lam font escale en Martinique."}
+    note: ""
+  - card: tropiques
+    fact: "In May 1943 Lieutenant Bayle, a Vichy naval officer, banned it"
+    verdict: corrected
+    sources:
+      - {title: "Anny Dominique Curtius, Tropiques: Le dialogue créole écopoétique, Présence Africaine 189 (2014)", url: "https://lllc.uiowa.edu/sites/lllc.uiowa.edu/files/2025-06/Tropiques%20Le%20dialogue%20e%CC%81copoe%CC%81tique%20d%27Aime%CC%81%20et%20Suzanne%20Ce%CC%81saire.pdf", quote: "le lieutenant de vaisseau Bayle, lorsqu'il interdit la parution de Tropique s le 10 mai 1943"}
+      - {title: "Brown University Library, Liberation Journals Index: Tropiques", url: "https://library.brown.edu/liberation/aboutJournals.php?journ=8", quote: "The journal was censored in 1943 by Lieutenant de Vaisseau Bayle"}
+    note: "'In charge of censorship' is not in either source (Curtius: 'chef du service d'information'); reworded to 'a Vichy naval officer'. Curtius quote re-copied as extracted from the PDF."
+  - card: tropiques
+    fact: "It returned after Vichy rule fell and ran until 1945"
+    verdict: confirmed
+    sources:
+      - {title: "Brown University Library, Liberation Journals Index: Tropiques", url: "https://library.brown.edu/liberation/aboutJournals.php?journ=8", quote: "only resumed publication after the fall of Vichy"}
+      - {title: "Paul-Louis Biondi, Tropiques, Surrealism at One Hundred, Princeton University Library", url: "https://dpul.princeton.edu/surrealism-at-one-hundred/feature/tropiques", quote: "With fourteen issues between 1941 and 1945"}
+    note: ""
+unledgered:
+  - card: circus-1936
+    fact: "Lloyd Patterson came 'like Oliver Golden' (cross-link)"
+    verdict: confirmed
+    note: "Oliver Golden card exists; the claim is limited to sharing the promise of racial equality, which the sourced facts above support for Patterson."
+  - card: circus-1936
+    fact: "Circus was filmed 'in the Stalin years' and is set in a Moscow circus"
+    verdict: confirmed
+    note: "Date 1936 (LARB, Pitt); Moscow setting: Pitt ('from the USA to the USSR') and LARB (Moscow-born child actor, Mosfilm)."
+  - card: treemonisha
+    fact: "wow: first fully staged in 1972; Pulitzer 1976, 59 years after his death"
+    verdict: confirmed
+    note: "LAPL and CALS (1972); TSHA, LAPL, CALS (1976); death 1917 per TSHA and CALS."
+  - card: treemonisha
+    fact: "further: Houston Grand Opera 1975 production recorded by Deutsche Grammophon"
+    verdict: confirmed
+    note: "Reading suggestion, not a body claim; production year per LAPL and CALS."
+  - card: treemonisha
+    fact: "edition f / pair black-stage with in-dahomey (m)"
+    verdict: confirmed
+    note: "Pair present in batch."
+  - card: the-crisis
+    fact: "It found readers fast"
+    verdict: confirmed
+    note: "MJP: 'reached a truly national audience within nine years'; Dare You Fight: circulation from 1,000 to over 100,000 by 1919."
+  - card: the-crisis
+    fact: "Du Bois launched it (wow)"
+    verdict: confirmed
+    note: "MJP: 'Du Bois founded The Crisis in 1910'; Dare You Fight: 'Du Bois laid out his vision in the first issue'."
+  - card: brownies-book
+    fact: "wow: started 1920 by Du Bois and Fauset; 24 issues; printed a teenage Hughes"
+    verdict: confirmed
+    note: "See entries above."
+  - card: in-dahomey
+    fact: "Original dispute on the Buckingham Palace date (Green vs Britannica)"
+    verdict: unconfirmed
+    note: "Britannica could not be opened; Green (27 June 1903) and Gale (1903) agree; dispute removed from EN and RU."
+  - card: in-dahomey
+    fact: "Abyssinia (1906) added during rewrite"
+    verdict: unconfirmed
+    note: "Gale only; not kept in the card."
+  - card: the-harp-savage
+    fact: "She was by then a central figure in Harlem art"
+    verdict: confirmed
+    note: "SAAM: 'became an influential teacher in Harlem'; Studio Museum: 'created a radical model for engaging with the arts in Harlem'."
+  - card: the-harp-savage
+    fact: "Place: New York World's Fair, Flushing Meadows, Queens"
+    verdict: confirmed
+    note: "SAAM and Studio Museum (1939 New York World's Fair); coordinates checked for Flushing Meadows."
+  - card: migration-series
+    fact: "Made in Harlem; came of age in Harlem"
+    verdict: confirmed
+    note: "Phillips chronology (studio at 33 West 125th Street; Harlem Art Workshop) and BlackPast (studio at 33 West 125th street; moved to New York City at thirteen); Gale ('Discovered Art in Harlem')."
+  - card: migration-series
+    fact: "Added: Gwendolyn Knight, who became his wife, prepared the panels with him and helped write the captions"
+    verdict: confirmed
+    note: "Phillips chronology: 'completing them with the assistance of Gwendolyn Knight , who prepares the gesso panels and helps write the captions'; BlackPast: 'devoted time to help Jacob prepare the boards (for the Migration Series)'; Lawrence Foundation: 'assisting him in writing the captions'; Gale: 'married Gwendolyn Clarine Knight (a painter), July 24, 1941'."
+  - card: mbube
+    fact: "It took almost seventy years for his name to return to it"
+    verdict: confirmed
+    note: "Arithmetic: 1939 recording (WIPO, RS) to 2006 settlement (CBC, WIPO) = 67 years."
+  - card: mbube
+    fact: "Places Johannesburg and New York"
+    verdict: confirmed
+    note: "Johannesburg (WIPO, CBC); the Tokens a New York group (RS)."
+  - card: all-negro-hour
+    fact: "Original dispute (pianist vs key performer; DJ vs announcer)"
+    verdict: corrected
+    note: "Rewritten to record the two MBC accounts (pianist refused a raise / union strike), both read on the MBC pages; the body says the story is told in more than one way."
+  - card: tropiques
+    fact: "Closing: under a regime that wanted its colonial subjects picturesque"
+    verdict: unconfirmed
+    note: "Princeton only; replaced by 'under a censor's eye' (Princeton, Curtius, Revolutionary Papers on censorship)."
+  - card: tropiques
+    fact: "Places: Fort-de-France"
+    verdict: confirmed
+    note: "Brown and Revolutionary Papers; Curtius (Ménil's sister's shop in Fort-de-France)."

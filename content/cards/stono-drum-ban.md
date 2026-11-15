@@ -24,6 +24,8 @@ sources:
   - {title: "Google Arts & Culture: Tap Dance Is Timeless", url: "https://artsandculture.google.com/story/dAWh62nmpiwMJA"}
   - {title: "Oxford Business Group: The story of the steel drum in Trinidad and Tobago (2015)", url: "https://oxfordbusinessgroup.com/reports/trinidad-tobago/2015-report/economy/the-story-of-the-steel-drum-in-trinidad-and-tobago"}
   - {title: "Discover Trinidad and Tobago: The steelpan", url: "https://www.discovertnt.com/articles/Trinidad/Steelbands/136/3/19"}
+media:
+  - {type: "image", file: "stono-drum-ban.jpg", caption: "Site of the Stono Rebellion beside Highway 17, South Carolina; photograph, 23 January 2013.", credit: "ProfReader", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Stono_Rebellion_site_-_Jan_23_2013.jpg"}
 ---
 In 1739 South Carolina was a British colony with an enslaved Black majority, and Spanish Florida promised freedom to those who reached it.
 

@@ -1,0 +1,533 @@
+# Expansion batch c13 (2026-11-13): every fact in the bodies and wow lines of the c13 cards,
+# with at least two independent sources and a supporting quote from each.
+# Quotes marked [WebFetch extract] or [paraphrased] came through a summarising fetch; re-open those pages before reuse.
+# Revised 2026-11-14 after the second check (expand-c13-check.yaml): corrected entries carry the checker's verbatim quotes.
+# Revised 2026-11-14 after the second check (expand-c13-check.yaml): corrected entries carry the checker's verbatim quotes.
+# Dropped: liwa-gulf (only one opened independent scholarly source, Sebiane 2017; al-Harthy 2012 not reachable),
+#          afro-abkhazians (only one substantive opened source, abkhazworld.com; Blakely and English not reachable).
+
+- card: dido-belle
+  fact: "Dido Elizabeth Belle was born in 1761"
+  sources:
+    - {title: "English Heritage: Dido Belle (Kenwood)", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history/dido-belle/", quote: "Dido Elizabeth Belle (1761–1804) was raised as part of an aristocratic family in Georgian Britain"}
+    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "Elizabeth Belle, referred to as Belle, was born around the month of June in 1761"}
+- card: dido-belle
+  fact: "Her father was the naval officer John Lindsay, Mansfield's nephew"
+  sources:
+    - {title: "Scone Palace: Dido Elizabeth Belle", url: "https://www.scone-palace.co.uk/dido-belle", quote: "Lindsay was the nephew of the First Earl of Mansfield"}
+    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "Her father, John Lindsay, was a young British naval officer and nephew of Lord Mansfield"}
+- card: dido-belle
+  fact: "Her mother, Maria Belle, was an enslaved woman"
+  sources:
+    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "her mother, whose name is believed to be Maria Bell, was a slave in the West Indies"}
+    - {title: "Scone Palace: Dido Elizabeth Belle", url: "https://www.scone-palace.co.uk/dido-belle", quote: "On board was a Cuban slave, Maria Belle, whom he fell in love with and brought home to London"}
+    - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/", quote: "She was the daughter of a teenage slave and a Royal Navy officer"}
+- card: dido-belle
+  fact: "Lord Mansfield was Lord Chief Justice and lived at Kenwood House on Hampstead Heath in north London"
+  sources:
+    - {title: "English Heritage: Dido Belle (Kenwood)", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history/dido-belle/", quote: "Dido spent much of her life at Kenwood House on Hampstead Heath in north London. She lived there with her great-uncle William Murray, 1st Earl of Mansfield, the Lord Chief Justice"}
+    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "Lord Mansfield, was at the time the Lord Chief Justice of England and Wales"}
+- card: dido-belle
+  fact: "From about 1766 she grew up at Kenwood with her cousin Lady Elizabeth Murray"
+  sources:
+    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "John Lindsay in 1766 requested that Belle be entrusted to his uncle, Lord Mansfield, who was already raising his young great-niece, Elizabeth Murray"}
+    - {title: "English Heritage: Dido Belle (Kenwood)", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history/dido-belle/", quote: "Elizabeth was also brought up in the care of Lord Mansfield at Kenwood after her mother’s death in 1766"}
+- card: dido-belle
+  fact: "She was educated as a gentlewoman"
+  sources:
+    - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/", quote: "Elizabeth seems to have been raised as a gentlewoman, learning to read, write and entertain"}
+    - {title: "Scone Palace: Dido Elizabeth Belle", url: "https://www.scone-palace.co.uk/dido-belle", quote: "Growing up at Kenwood House, London, Dido was well educated and treated as one of the family"}
+    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "While in the household she received an education"}
+- card: dido-belle
+  fact: "As an adult she ran Kenwood's dairy and poultry yard"
+  sources:
+    - {title: "English Heritage: Dido Belle (Kenwood)", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history/dido-belle/", quote: "Dido also supervised Kenwood's dairy and poultry yard, a common hobby for genteel women at the time"}
+    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "As an adult she managed the estate's dairy and poultry yards"}
+- card: dido-belle
+  fact: "She helped her great-uncle with his letters"
+  sources:
+    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "helped Lord Mansfield with his correspondence, a task normally assigned a male secretary or clerk"}
+    - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/", quote: "she worked as a secretary or scribe for Lord Mansfield in his later years"}
+    - {title: "Scone Palace: Dido Elizabeth Belle", url: "https://www.scone-palace.co.uk/dido-belle", quote: "she also sometimes acted as secretary to her great-uncle, the Earl"}
+- card: dido-belle
+  fact: "In the Somerset case of 1772 Mansfield ruled that an enslaved man could not be forcibly sent out of England"
+  sources:
+    - {title: "English Heritage: Dido Belle (Kenwood)", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history/dido-belle/", quote: "Lord Mansfield ruled that slavers could not forcibly send any slaves in England out of the country"}
+    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "the Sommersett Case in 1772 where he ruled that English law did not sanction slavery in Great Britain"}
+- card: dido-belle
+  fact: "In 1783 Mansfield presided over the Zong insurance case"
+  sources:
+    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "the Zong Massacre Case (1783) where he ruled in favor of insurers"}
+    - {title: "Understanding Slavery Initiative: The Zong", url: "https://understandingslavery.com/casestudy/the-zong/", quote: "on 22 May 1783, Lord Mansfield and Justices Wills and Buller agreed with the underwriters and decided that there should be a new trial"}
+- card: dido-belle
+  fact: "In the late 1770s a painter portrayed the two cousins side by side (date given as c.1776, 1778 or 1779)"
+  sources:
+    - {title: "English Heritage: Dido Belle (Kenwood)", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history/dido-belle/", quote: "The only known portrait of Dido Belle, showing her with her cousin and close companion, Lady Elizabeth Murray, at Kenwood in about 1776"}
+    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "Dido Elizabeth Belle is best known for the 1779 painting of her alongside her cousin, Lady Elizabeth Murray"}
+    - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/", quote: "Portrait of Dido Elizabeth Belle Lindsay and Lady Elizabeth Murray, 1778"}
+- card: dido-belle
+  fact: "Mansfield died in 1793"
+  sources:
+    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "finally leaving the estate upon the death of Lord Mansfield in 1793"}
+    - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/", quote: "Dido lived at Kenwood until the death of her great-uncle in 1793"}
+- card: dido-belle
+  fact: "His will confirmed Dido's freedom"
+  sources:
+    - {title: "English Heritage: Dido Belle (Kenwood)", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history/dido-belle/", quote: "in his will of 1782 he made sure to protect his niece's rights, stating that Dido was a free woman"}
+    - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/", quote: "Lord Mansfield made a specific provision to 'free' Dido in his will"}
+- card: dido-belle
+  fact: "The will left her £500 and an annuity of £100"
+  sources:
+    - {title: "English Heritage: Dido Belle (Kenwood)", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history/dido-belle/", quote: "left her an annuity of £100 and a lump sum of £500"}
+    - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/", quote: "He also bequeathed her a lump sum of £500, as well as an annuity of £100"}
+    - {title: "Scone Palace: Dido Elizabeth Belle", url: "https://www.scone-palace.co.uk/dido-belle", quote: "eventually left her £500 in his will"}
+- card: dido-belle
+  fact: "Later in 1793 she married John Davinier, a Frenchman"
+  sources:
+    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "On December 5, 1793 she married John Davinier, a French gentleman's steward"}
+    - {title: "Scone Palace: Dido Elizabeth Belle", url: "https://www.scone-palace.co.uk/dido-belle", quote: "Dido met and married John Davinier, a young man of French extraction, in 1793"}
+    - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/", quote: "Less than 9 months after the death of her benefactor, Dido married John Davinier, a Frenchman"}
+- card: dido-belle
+  fact: "They had three sons"
+  sources:
+    - {title: "English Heritage: Dido Belle (Kenwood)", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history/dido-belle/", quote: "the couple went on to have three sons – twin boys, Charles and John, baptised in 1795, and then another son, William Thomas, baptised in 1800"}
+    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "The couple had three children, twins Charles and John, baptized in 1795, and William Thomas"}
+- card: dido-belle
+  fact: "She died in 1804, aged 43"
+  sources:
+    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "Dido Elizabeth Belle Davinier died in 1804. Her approximate age at the time of her death was 43"}
+    - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/", quote: "Dido died in 1804, aged 43"}
+    - {title: "Scone Palace: Dido Elizabeth Belle", url: "https://www.scone-palace.co.uk/dido-belle", quote: "She died aged only 43 in 1804"}
+- card: dido-belle
+  fact: "The portrait is now attributed to the Scottish painter David Martin"
+  sources:
+    - {title: "Scone Palace: Dido Elizabeth Belle", url: "https://www.scone-palace.co.uk/dido-belle", quote: "it was discovered to be by the young Scot, David Martin"}
+    - {title: "English Heritage: Dido Belle (Kenwood)", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history/dido-belle/", quote: "The artist, David Martin, seems to portray a moment caught"}
+- card: dido-belle
+  fact: "The original hangs at Scone Palace in Scotland"
+  sources:
+    - {title: "English Heritage: Dido Belle (Kenwood)", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history/dido-belle/", quote: "Kenwood now displays a photographic reproduction while the original can be seen at Scone Palace"}
+    - {title: "Scone Palace: Dido Elizabeth Belle", url: "https://www.scone-palace.co.uk/dido-belle", quote: "Now father and daughter are re-united on the walls of the Ambassador's Room"}
+- card: dido-belle
+  fact: "It is one of the first paintings to show a Black woman as the equal of a white one"
+  sources:
+    - {title: "Scone Palace: Dido Elizabeth Belle", url: "https://www.scone-palace.co.uk/dido-belle", quote: "the painting is acknowledged to be one of the first ever to represent a black woman as the social equal of a white one"}
+    - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/", quote: "In it, the two women are depicted as equals. This was highly unusual"}
+- card: gustav-badin
+  fact: "He was born around 1747, probably on Saint Croix in the Caribbean"
+  sources:
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "f., antagligen 1747, på ön S:t Croix i Västindien"}
+    - {title: "Nationalmuseum press release: Badin exhibition opening at Nationalmuseum on 19 February (2026)", url: "https://www.mynewsdesk.com/nationalmuseum/pressreleases/badin-exhibition-opening-at-nationalmuseum-on-19-february-3430407", quote: "Badin was probably born enslaved in 1747, seven years after Sergel, in what was then the Danish colony of St Croix"}
+- card: gustav-badin
+  fact: "His original name was Couschi"
+  sources:
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Adolph Ludvig Gustaf Fredric Albert Couschi Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "Hans släktnamn var egentligen Coichi eller Couschi"}
+    - {title: "Världskulturmuseerna: Member of the royal court, 18th century", url: "https://www.varldskulturmuseerna.se/en/projects/afrika-pagar/the-history-of-afro-swedes/member-of-the-royal-court-18th-century/", quote: "Badin, known originally as Couschi"}
+- card: gustav-badin
+  fact: "Around 1760 he was brought to Sweden and given to Queen Lovisa Ulrika"
+  sources:
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "skänktes 1761 till Lovisa Ulrika"}
+    - {title: "Nationalmuseum press release: Badin exhibition opening at Nationalmuseum on 19 February (2026)", url: "https://www.mynewsdesk.com/nationalmuseum/pressreleases/badin-exhibition-opening-at-nationalmuseum-on-19-february-3430407", quote: "in the summer of 1760, Badin was “donated” as a “gift” to Lovisa Ulrika, Queen of Sweden"}
+- card: gustav-badin
+  fact: "The queen first let him grow up in freedom, without the usual upbringing, as an experiment"
+  sources:
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "Drottningen experimenterade först med att låta den livlige gossen uppväxa i frihet, utan någon egentlig uppfostran"}
+    - {title: "Hofberg et al., Svenskt biografiskt handlexikon (1906): Badin (Couschi)", url: "https://runeberg.org/sbh/badin.html", quote: "beslöt att göra ett experiment i uppfostringsväg med det svarta naturbarnet. Han skulle nämligen helt och hållet lämnas åt sin egen »goda natur»"}
+- card: gustav-badin
+  fact: "He was later given religious instruction"
+  sources:
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "åtnjöt bl. a. kristendomsundervisning"}
+    - {title: "Miranda Bryant, The Guardian (11 April 2026)", url: "https://www.theguardian.com/world/2026/apr/11/sweden-gustav-badin-exhibition-18th-century-black-diarist", quote: "He had a Christian education and learned to write"}
+- card: gustav-badin
+  fact: "In December 1768 he was baptised in the palace chapel with the royal family as godparents and took the names Adolf Ludvig Gustav Fredrik Albert from them"
+  sources:
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "Han döptes 11 dec. 1768 i slottskapellet, varvid den kungliga familjens medlemmar stodo faddrar och han erhöll sina många dopnamn"}
+    - {title: "Edvard Matz, Populär Historia: Badin – ett experiment i fri uppfostran", url: "https://popularhistoria.se/sveriges-historia/1700-talet/badin-ett-experiment-i-fri-uppfostran", quote: "Den 11 december 1768 döptes Badin, nu omkring 18 år gammal, i slottskapellet. Hela den kungliga familjen så när som på hertig Karl var faddrar"}
+- card: gustav-badin
+  fact: "He served the queen until her death in 1782 and then Princess Sofia Albertina"
+  sources:
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "Så länge Lovisa Ulrika levde, var han i hennes tjänst och övergick sedan i prinsessan Sofia Albertinas"}
+    - {title: "Edvard Matz, Populär Historia: Badin – ett experiment i fri uppfostran", url: "https://popularhistoria.se/sveriges-historia/1700-talet/badin-ett-experiment-i-fri-uppfostran", quote: "Efter änkedrottningens död var det prinsessan Sofia Albertina som Badin mest höll sig till"}
+- card: gustav-badin
+  fact: "He danced and acted on stage"
+  sources:
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "anställd som dansör och harlekin vid den franska trupp, som uppträdde i Bollhuset"}
+    - {title: "Miranda Bryant, The Guardian (11 April 2026)", url: "https://www.theguardian.com/world/2026/apr/11/sweden-gustav-badin-exhibition-18th-century-black-diarist", quote: "later became involved in dance and theatre"}
+- card: gustav-badin
+  fact: "He joined the Freemasons and Par Bricole"
+  sources:
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "medlem av frimurarorden, timmermansorden, Par Bricole m. fl."}
+    - {title: "Tove Karlsson, Populär Historia: Badin – drottningens slavpojke blev ansedd man (2020)", url: "https://popularhistoria.se/sveriges-historia/kungar-drottningar/hovet/badin-drottningens-slavpojke-blev-ansedd-man", quote: "Frimurarorden, Timmermansorden, Par Bricole, Sveaorden, Arla Coldinuorden, och Neptuniorden"}
+- card: gustav-badin
+  fact: "He married twice"
+  sources:
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "Gift 1) med Elisabet Svart; 2) med Magdalena Eleonora Norell"}
+    - {title: "Hofberg et al., Svenskt biografiskt handlexikon (1906): Badin (Couschi)", url: "https://runeberg.org/sbh/badin.html", quote: "Gift två gånger, men barnlös"}
+- card: gustav-badin
+  fact: "He collected a large private library"
+  sources:
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "efterlämnade en ganska rik boksamling"}
+    - {title: "Miranda Bryant, The Guardian (11 April 2026)", url: "https://www.theguardian.com/world/2026/apr/11/sweden-gustav-badin-exhibition-18th-century-black-diarist", quote: "he left behind diaries, a vast book collection, private letters and an autobiography"}
+- card: gustav-badin
+  fact: "A notebook of his is kept at Uppsala University Library"
+  sources:
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "En anteckningsbok av B. ... förvaras i Uppsala universitetsbibliotek (sign. X. 252 a)"}
+    - {title: "Edvard Matz, Populär Historia: Badin – ett experiment i fri uppfostran", url: "https://popularhistoria.se/sveriges-historia/1700-talet/badin-ett-experiment-i-fri-uppfostran", quote: "en anteckningsbok av blandat innehåll som i dag finns i Uppsala universitetsbibliotek"}
+- card: gustav-badin
+  fact: "He died in Stockholm in March 1822, a free man"
+  sources:
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "d 18 mars 1822 i Stockholm"}
+    - {title: "Tove Karlsson, Populär Historia: Badin – drottningens slavpojke blev ansedd man (2020)", url: "https://popularhistoria.se/sveriges-historia/kungar-drottningar/hovet/badin-drottningens-slavpojke-blev-ansedd-man", quote: "I mars 1822 avled Badin efter en tids sjukdom, drygt 70 år gammal"}
+- card: fanny-eaton
+  fact: "Fanny Eaton was born in Jamaica in 1835"
+  sources:
+    - {title: "Annette Wickham, Royal Academy of Arts: Fanny Eaton at the Royal Academy (2022)", url: "https://www.royalacademy.org.uk/article/fanny-eaton-jamaican-model-royal-academy", quote: "Born in 1835 in Surrey, Jamaica"}
+    - {title: "Stephanie Roberts, Amgueddfa Cymru - Museum Wales: Fanny Eaton, the Jamaican-born model in Millais' Jephthah (2014)", url: "https://museum.wales/blog/834/Fanny-Eaton-the-Jamaican-born-model-in-Millais-Jephthah-", quote: "Fanny was born in Jamaica in 1835"}
+    - {title: "Hammersmith & Fulham Council: Original Black supermodel gets blue plaque in Shepherds Bush (2022)", url: "https://www.lbhf.gov.uk/articles/news/2022/11/original-black-supermodel-gets-blue-plaque-shepherds-bush", quote: "Born in Jamaica in 1835"}
+- card: fanny-eaton
+  fact: "Her mother was Matilda Foster, thought to have been born into slavery"
+  sources:
+    - {title: "Annette Wickham, Royal Academy of Arts: Fanny Eaton at the Royal Academy (2022)", url: "https://www.royalacademy.org.uk/article/fanny-eaton-jamaican-model-royal-academy", quote: "it is thought that Eaton's mother, Matilda Foster, was born into enslavement"}
+    - {title: "Stephanie Roberts, Amgueddfa Cymru - Museum Wales: Fanny Eaton, the Jamaican-born model in Millais' Jephthah (2014)", url: "https://museum.wales/blog/834/Fanny-Eaton-the-Jamaican-born-model-in-Millais-Jephthah-", quote: "working as a servant in London where she lived with her mother Matilda Foster"}
+    - {title: "Shola von Reynolds, AnOther: Fanny Eaton, the Black Pre-Raphaelite muse that time forgot", url: "https://www.anothermag.com/art-photography/8453/fanny-eaton-the-black-pre-raphaelite-muse-that-time-forgot", quote: "Born in Jamaica in 1835, Eaton was the daughter of an ex-slave"}
+- card: fanny-eaton
+  fact: "In the 1840s mother and daughter came to London, where she worked as a domestic servant"
+  sources:
+    - {title: "Annette Wickham, Royal Academy of Arts: Fanny Eaton at the Royal Academy (2022)", url: "https://www.royalacademy.org.uk/article/fanny-eaton-jamaican-model-royal-academy", quote: "Eaton moved to the UK with her mother in the 1840s and initially worked as a domestic servant"}
+    - {title: "Shola von Reynolds, AnOther: Fanny Eaton, the Black Pre-Raphaelite muse that time forgot", url: "https://www.anothermag.com/art-photography/8453/fanny-eaton-the-black-pre-raphaelite-muse-that-time-forgot", quote: "She came to London in the 1840s and began modelling in her twenties"}
+    - {title: "Stephanie Roberts, Amgueddfa Cymru - Museum Wales: Fanny Eaton, the Jamaican-born model in Millais' Jephthah (2014)", url: "https://museum.wales/blog/834/Fanny-Eaton-the-Jamaican-born-model-in-Millais-Jephthah-", quote: "by 1851 was working as a servant in London where she lived with her mother Matilda Foster"}
+- card: fanny-eaton
+  fact: "She married a cab driver, James Eaton, and they had ten children"
+  sources:
+    - {title: "Annette Wickham, Royal Academy of Arts: Fanny Eaton at the Royal Academy (2022)", url: "https://www.royalacademy.org.uk/article/fanny-eaton-jamaican-model-royal-academy", quote: "In 1857 she married, or lived with, a coach driver named James Eaton, and together they had ten children"}
+    - {title: "Hammersmith & Fulham Council: Original Black supermodel gets blue plaque in Shepherds Bush (2022)", url: "https://www.lbhf.gov.uk/articles/news/2022/11/original-black-supermodel-gets-blue-plaque-shepherds-bush", quote: "she married a cabbie and settled in London ... Fanny and James had 10 children"}
+- card: fanny-eaton
+  fact: "In the late 1850s she began to sit for artists and the income helped the family"
+  sources:
+    - {title: "Annette Wickham, Royal Academy of Arts: Fanny Eaton at the Royal Academy (2022)", url: "https://www.royalacademy.org.uk/article/fanny-eaton-jamaican-model-royal-academy", quote: "It was in the late 1850s that Eaton's career as an artist's model took off ... her income from modelling would have helped to support her growing family"}
+    - {title: "Stephanie Roberts, Amgueddfa Cymru - Museum Wales: Fanny Eaton, the Jamaican-born model in Millais' Jephthah (2014)", url: "https://museum.wales/blog/834/Fanny-Eaton-the-Jamaican-born-model-in-Millais-Jephthah-", quote: "The earliest studies of Fanny that we know of are pencil studies drawn in 1859 by Simeon Solomon"}
+- card: fanny-eaton
+  fact: "Simeon Solomon was among the first to draw her"
+  sources:
+    - {title: "Stephanie Roberts, Amgueddfa Cymru - Museum Wales: Fanny Eaton, the Jamaican-born model in Millais' Jephthah (2014)", url: "https://museum.wales/blog/834/Fanny-Eaton-the-Jamaican-born-model-in-Millais-Jephthah-", quote: "The earliest studies of Fanny that we know of are pencil studies drawn in 1859 by Simeon Solomon"}
+    - {title: "Annette Wickham, Royal Academy of Arts: Fanny Eaton at the Royal Academy (2022)", url: "https://www.royalacademy.org.uk/article/fanny-eaton-jamaican-model-royal-academy", quote: "The first painting that Eaton modelled to be exhibited at the Royal Academy was Simeon Solomon's The Mother of Moses"}
+- card: fanny-eaton
+  fact: "Rebecca Solomon painted her"
+  sources:
+    - {title: "Annette Wickham, Royal Academy of Arts: Fanny Eaton at the Royal Academy (2022)", url: "https://www.royalacademy.org.uk/article/fanny-eaton-jamaican-model-royal-academy", quote: "A favourite of artists including John Everett Millais , Dante Gabriel Rossetti , Rebecca Solomon , Simeon Solomon"}
+    - {title: "Stephanie Roberts, Amgueddfa Cymru - Museum Wales: Fanny Eaton, the Jamaican-born model in Millais' Jephthah (2014)", url: "https://museum.wales/blog/834/Fanny-Eaton-the-Jamaican-born-model-in-Millais-Jephthah-", quote: "Artists named are Frederick Sandys, Albert Moore and Rebecca Solomon [WebFetch summary of the page]"}
+    - {title: "Shola von Reynolds, AnOther: Fanny Eaton, the Black Pre-Raphaelite muse that time forgot", url: "https://www.anothermag.com/art-photography/8453/fanny-eaton-the-black-pre-raphaelite-muse-that-time-forgot", quote: "Eaton sat for Simeon and Rebecca Solomon, among others [WebFetch summary]"}
+- card: fanny-eaton
+  fact: "Rossetti admired her beauty"
+  sources:
+    - {title: "Shola von Reynolds, AnOther: Fanny Eaton, the Black Pre-Raphaelite muse that time forgot", url: "https://www.anothermag.com/art-photography/8453/fanny-eaton-the-black-pre-raphaelite-muse-that-time-forgot", quote: "In 1865 Rossetti praises her beauty in a letter to another artist, Ford Madox Brown"}
+    - {title: "Stephanie Roberts, Amgueddfa Cymru - Museum Wales: Fanny Eaton, the Jamaican-born model in Millais' Jephthah (2014)", url: "https://museum.wales/blog/834/Fanny-Eaton-the-Jamaican-born-model-in-Millais-Jephthah-", quote: "Dante Gabriel Rossetti compared her to the Pre-Raphaelite 'stunner' Jane Morris"}
+- card: fanny-eaton
+  fact: "She posed for students at the Royal Academy"
+  sources:
+    - {title: "Annette Wickham, Royal Academy of Arts: Fanny Eaton at the Royal Academy (2022)", url: "https://www.royalacademy.org.uk/article/fanny-eaton-jamaican-model-royal-academy", quote: "Documents in our Archive also reveal that she occasionally worked as a life model for the RA Schools in the 1860s"}
+    - {title: "Hammersmith & Fulham Council: Original Black supermodel gets blue plaque in Shepherds Bush (2022)", url: "https://www.lbhf.gov.uk/articles/news/2022/11/original-black-supermodel-gets-blue-plaque-shepherds-bush", quote: "supplementing the family's income by modelling at the Royal Academy"}
+- card: fanny-eaton
+  fact: "In 1867 she sat for Millais's Jephthah"
+  sources:
+    - {title: "Annette Wickham, Royal Academy of Arts: Fanny Eaton at the Royal Academy (2022)", url: "https://www.royalacademy.org.uk/article/fanny-eaton-jamaican-model-royal-academy", quote: "It is possible that Millais chose Eaton who went on to model for his painting Jephthah in 1867"}
+    - {title: "Stephanie Roberts, Amgueddfa Cymru - Museum Wales: Fanny Eaton, the Jamaican-born model in Millais' Jephthah (2014)", url: "https://museum.wales/blog/834/Fanny-Eaton-the-Jamaican-born-model-in-Millais-Jephthah-", quote: "one of the models for John Everett Millais' Jephthah (1867)"}
+- card: fanny-eaton
+  fact: "In the 1870s the modelling stopped; later she worked as a cook for a family on the Isle of Wight"
+  sources:
+    - {title: "Annette Wickham, Royal Academy of Arts: Fanny Eaton at the Royal Academy (2022), via Wayback", url: "https://web.archive.org/web/2024/https://www.royalacademy.org.uk/article/fanny-eaton-jamaican-model-royal-academy", quote: "Eaton herself stopped modelling around this time [the 1870s] and became a seamstress. She moved to the Isle of Wight to work for a family"}
+    - {title: "Shola von Reynolds, AnOther (2016)", url: "https://www.anothermag.com/art-photography/8453/fanny-eaton-the-black-pre-raphaelite-muse-that-time-forgot", quote: "a census finds her working as a domestic cook on the Isle of Wight at the age of 63"}
+- card: fanny-eaton
+  fact: "She died in London in 1924"
+  sources:
+    - {title: "Hammersmith & Fulham Council: Original Black supermodel gets blue plaque in Shepherds Bush (2022)", url: "https://www.lbhf.gov.uk/articles/news/2022/11/original-black-supermodel-gets-blue-plaque-shepherds-bush", quote: "a blue plaque on the building in Bassein Park Road where she died in 1924"}
+    - {title: "Jan Marsh: Fanny Eaton latest (2017)", url: "https://janmarsh.blogspot.com/2017/02/fanny-eaton-latest.html", quote: "She died on 4 March 1924, aged 89 ... Margravine Road cemetery in Hammersmith"}
+- card: fanny-eaton
+  fact: "The art of her day usually built its ideal of beauty on white faces; she became one of the faces of Pre-Raphaelite art"
+  sources:
+    - {title: "Annette Wickham, Royal Academy of Arts: Fanny Eaton at the Royal Academy (2022), via Wayback", url: "https://web.archive.org/web/2024/https://www.royalacademy.org.uk/article/fanny-eaton-jamaican-model-royal-academy", quote: "images of idealised beauty in British art typically focussed on whiteness"}
+    - {title: "Shola von Reynolds, AnOther (2016)", url: "https://www.anothermag.com/art-photography/8453/fanny-eaton-the-black-pre-raphaelite-muse-that-time-forgot", quote: "an era of famously rigid beauty standards invariably heightened by intense racial prejudices"}
+- card: fanny-eaton
+  fact: "Her portraits hang in collections far from London"
+  sources:
+    - {title: "Annette Wickham, Royal Academy of Arts: Fanny Eaton at the Royal Academy (2022)", url: "https://www.royalacademy.org.uk/article/fanny-eaton-jamaican-model-royal-academy", quote: "you can see her on the walls of museums and galleries across the world"}
+    - {title: "Stephanie Roberts, Amgueddfa Cymru - Museum Wales: Fanny Eaton, the Jamaican-born model in Millais' Jephthah (2014)", url: "https://museum.wales/blog/834/Fanny-Eaton-the-Jamaican-born-model-in-Millais-Jephthah-", quote: "Fanny Eaton, the Jamaican-born model in Millais' Jephthah [post of National Museum Cardiff, which holds Jephthah]"}
+- card: birchtown
+  fact: "The British promised freedom to enslaved people who escaped from the rebels and joined them"
+  sources:
+    - {title: "Channon Oyeniran, The Canadian Encyclopedia: Black Loyalists in British North America", url: "https://thecanadianencyclopedia.ca/en/article/black-loyalists-in-british-north-america", quote: "Sir Henry Clinton, issued the Philipsburg proclamation, which said that any Black person who deserted the colonists' side and joined the British would receive “freedom and a farm”"}
+    - {title: "James W. St G. Walker, Dictionary of Canadian Biography: King, Boston", url: "http://www.biographi.ca/en/bio/king_boston_5E.html", quote: "Waring adhered to the rebels, which meant that if King could flee to the British he would gain freedom"}
+- card: birchtown
+  fact: "In 1783 thousands of Black Loyalists were shipped from New York to Nova Scotia"
+  sources:
+    - {title: "James W. St G. Walker, Dictionary of Canadian Biography: King, Boston", url: "http://www.biographi.ca/en/bio/king_boston_5E.html", quote: "Between 26 April and 30 Nov. 1783, 3,000 black loyalists were shipped to Nova Scotia"}
+    - {title: "Channon Oyeniran, The Canadian Encyclopedia: Black Loyalists in British North America", url: "https://thecanadianencyclopedia.ca/en/article/black-loyalists-in-british-north-america", quote: "Approximately 3,000 Black Loyalists departed New York in 81 ships heading to Nova Scotia between April and November of 1783"}
+- card: birchtown
+  fact: "They carried certificates of freedom signed by General Samuel Birch"
+  sources:
+    - {title: "James W. St G. Walker, Dictionary of Canadian Biography: King, Boston", url: "http://www.biographi.ca/en/bio/king_boston_5E.html", quote: "Issued with certificates guaranteeing their freedom by Brigadier-General Samuel Birch, the city commandant"}
+    - {title: "Black Loyalist Heritage Society: Samuel Birch", url: "https://blackloyalist.com/cdc/people/influential/birch.htm", quote: "He personally signed most of the Certificates of Freedom held by the Black Loyalists"}
+- card: birchtown
+  fact: "A site near Shelburne was laid out for them and named Birchtown after Birch"
+  sources:
+    - {title: "James W. St G. Walker, Dictionary of Canadian Biography: King, Boston", url: "http://www.biographi.ca/en/bio/king_boston_5E.html", quote: "At a discreet six miles from Shelburne, surveyor Benjamin Marston* laid out a separate town-site for the blacks ... Birchtown, named for their New York protector"}
+    - {title: "Black Loyalist Heritage Society: Samuel Birch", url: "https://blackloyalist.com/cdc/people/influential/birch.htm", quote: "Birchtown in Shelburne was named in his honour"}
+    - {title: "Black Loyalist Heritage Society: Birchtown", url: "https://blackloyalist.com/cdc/communities/birchtown.htm", quote: "Birchtown is located about 7 km northwest of Shelburne on Shelburne Harbour"}
+- card: birchtown
+  fact: "By January 1784 Birchtown had about 1,500 people, the largest free Black settlement in North America"
+  sources:
+    - {title: "James W. St G. Walker, Dictionary of Canadian Biography: King, Boston", url: "http://www.biographi.ca/en/bio/king_boston_5E.html", quote: "A muster held in January 1784 showed that Birchtown, with a population of 1,521 blacks, was the largest free black settlement in North America"}
+    - {title: "Black Loyalist Heritage Society: Birchtown", url: "https://blackloyalist.com/cdc/communities/birchtown.htm", quote: "at its peak it was the largest community of free blacks in the world outside of Africa ... It's population swelled to somewhere between 1500 and 2000 people"}
+- card: birchtown
+  fact: "Boston King, a carpenter who escaped slavery near Charleston, arrived with his wife in August 1783"
+  sources:
+    - {title: "James W. St G. Walker, Dictionary of Canadian Biography: King, Boston", url: "http://www.biographi.ca/en/bio/king_boston_5E.html", quote: "Boston King was born a slave on Richard Waring's plantation near Charleston ... apprenticed as a carpenter ... embarked with his wife on L'Abondance ... King arrived there on 27 August"}
+    - {title: "Black Loyalist Heritage Society: Boston King", url: "https://blackloyalist.com/cdc/people/religious/king.htm", quote: "Boston King was born as a slave near Charleston, South Carolina ... King was evacuated to Birchtown with the first wave of refugees"}
+- card: birchtown
+  fact: "In Birchtown King became a Methodist preacher"
+  sources:
+    - {title: "James W. St G. Walker, Dictionary of Canadian Biography: King, Boston", url: "http://www.biographi.ca/en/bio/king_boston_5E.html", quote: "For the next few years King preached in black settlements from Shelburne to Halifax"}
+    - {title: "Black Loyalist Heritage Society: Boston King", url: "https://blackloyalist.com/cdc/people/religious/king.htm", quote: "he began preaching among the people in Birchtown and Shelburne"}
+- card: birchtown
+  fact: "Land grants were slow and small"
+  sources:
+    - {title: "Channon Oyeniran, The Canadian Encyclopedia: Black Loyalists in British North America", url: "https://thecanadianencyclopedia.ca/en/article/black-loyalists-in-british-north-america", quote: "In Birchtown in 1787, the first Black people finally received their land grants, four years after their arrival. However, it was far less acreage than their White counterparts received"}
+    - {title: "James W. St G. Walker, Dictionary of Canadian Biography: King, Boston", url: "http://www.biographi.ca/en/bio/king_boston_5E.html", quote: "the delay in granting farms forced them to continue to labour in Shelburne"}
+- card: birchtown
+  fact: "In July 1784 white Loyalists rioted in Shelburne and tore down Black homes"
+  sources:
+    - {title: "Channon Oyeniran, The Canadian Encyclopedia: Black Loyalists in British North America", url: "https://thecanadianencyclopedia.ca/en/article/black-loyalists-in-british-north-america", quote: "One event against Black people began on 26 July 1784 and lasted for about 10 days. The Shelburne race riots saw black property destroyed"}
+    - {title: "Black Loyalist Heritage Society: Prejudice", url: "https://blackloyalist.com/cdc/story/prejudice/prejudice.htm", quote: "in the summer of 1784, when they rampaged through the streets of Shelburne, beating blacks, tearing down their houses"}
+    - {title: "James W. St G. Walker, Dictionary of Canadian Biography: King, Boston", url: "http://www.biographi.ca/en/bio/king_boston_5E.html", quote: "the hostility of white workers, who launched a riot in July 1784"}
+- card: birchtown
+  fact: "King later recalled the famine of 1789 and the 'poverty and distress' around him"
+  sources:
+    - {title: "James W. St G. Walker, Dictionary of Canadian Biography: King, Boston", url: "http://www.biographi.ca/en/bio/king_boston_5E.html", quote: "King, appalled by the “poverty and distress” around him"}
+    - {title: "Black Loyalist Heritage Society: Boston King", url: "https://blackloyalist.com/cdc/people/religious/king.htm", quote: "This was 1789, the year of the great famine. King left a harrowing account of his struggle to survive the winter"}
+- card: birchtown
+  fact: "In 1791 John Clarkson of the Sierra Leone Company came recruiting"
+  sources:
+    - {title: "Black Loyalist Heritage Society: Mission to America", url: "https://blackloyalist.com/cdc/story/exodus/mission.htm", quote: "John Clarkson traveled to Halifax in 1791 to recruit Blacks for the settlement in Sierra Leone"}
+    - {title: "James W. St G. Walker, Dictionary of Canadian Biography: King, Boston", url: "http://www.biographi.ca/en/bio/king_boston_5E.html", quote: "in 1791 he joined other prominent Nova Scotia blacks ... in assisting John Clarkson of the Sierra Leone Company to recruit emigrants"}
+- card: birchtown
+  fact: "On 15 January 1792 a fleet of fifteen ships left Halifax for Sierra Leone"
+  sources:
+    - {title: "Black Loyalist Heritage Society: Mission to America", url: "https://blackloyalist.com/cdc/story/exodus/mission.htm", quote: "The emigrants had to travel to Halifax to board the ships ... The fleet left for Sierra Leone on 15 Jan 1792"}
+    - {title: "James W. St G. Walker, Dictionary of Canadian Biography: King, Boston", url: "http://www.biographi.ca/en/bio/king_boston_5E.html", quote: "A fleet of 15 ships ... left Nova Scotia for Sierra Leone in January 1792"}
+- card: birchtown
+  fact: "Many Birchtown people left and the Black Loyalists built Freetown; Birchtown largely emptied though some families stayed"
+  sources:
+    - {title: "Historic Sites and Monuments Board of Canada, plaque 'The Black Loyalists at Birchtown' (1996), text via UELAC", url: "https://uelac.ca/?p=8789", quote: "The population declined in 1792 when many Black Loyalists, frustrated by their treatment in the Maritimes, emigrated to Sierra Leone"}
+    - {title: "Black Loyalist Heritage Society: Birchtown", url: "https://blackloyalist.com/cdc/communities/birchtown.htm", quote: "After the Sierra Leone exodus, Birchtown was largely depopulated ... About 50 families remained"}
+    - {title: "Channon Oyeniran, The Canadian Encyclopedia: Black Loyalists in British North America", url: "https://thecanadianencyclopedia.ca/en/article/black-loyalists-in-british-north-america", quote: "In 1792, approximately 1,200 Black Loyalists set sail for Sierra Leone to establish the new colony of Freetown"}
+    - {title: "James W. St G. Walker, Dictionary of Canadian Biography: King, Boston", url: "http://www.biographi.ca/en/bio/king_boston_5E.html", quote: "After arriving in Freetown, Violet King succumbed to a fever epidemic"}
+- card: birchtown
+  fact: "The HSMBC calls Birchtown the largest and most influential Black Loyalist settlement"
+  sources:
+    - {title: "Historic Sites and Monuments Board of Canada, plaque 'The Black Loyalists at Birchtown' (1996), text via UELAC", url: "https://uelac.ca/?p=8789", quote: "Birchtown, founded in 1783 was the largest and most influential of these settlements"}
+    - {title: "Channon Oyeniran, The Canadian Encyclopedia: Black Loyalists in British North America", url: "https://thecanadianencyclopedia.ca/en/article/black-loyalists-in-british-north-america", quote: "Birchtown shortly became one of the most populated settlements of Black people (free and enslaved) outside of Africa"}
+- card: tiger-bay
+  fact: "From the 19th century seafarers from Somalia, Yemen, other parts of Africa and the Caribbean settled in Tiger Bay (Butetown), Cardiff"
+  sources:
+    - {title: "Black Cultural Archives: Cardiff, Migration & Employment", url: "https://blackculturalarchives.org/the-history-cardiff", quote: "From the 19th century, Somali, Yemeni, African, and Caribbean seafarers settled in Tiger Bay"}
+    - {title: "BBC Legacies: Somali community, South East Wales", url: "https://www.bbc.co.uk/legacies/immig_emig/wales/w_se/article_2.shtml", quote: "They were originally drawn to Cardiff as seamen at the end of the 19th century"}
+- card: tiger-bay
+  fact: "It became one of the first multicultural communities in Britain"
+  sources:
+    - {title: "Black Cultural Archives: Cardiff, Migration & Employment", url: "https://blackculturalarchives.org/the-history-cardiff", quote: "creating one of Britain's first multicultural dockside communities"}
+    - {title: "Jessey Clarke and Deleshia Clarke, Dictionary of Welsh Biography: Campbell, Rachel Elizabeth (Betty) (1934-2017)", url: "https://biography.wales/article/s14-CAMP-ELI-1934", quote: "Butetown was one of the UK's first multicultural communities"}
+- card: tiger-bay
+  fact: "After WWI demobilised soldiers returned to a scarcity of jobs; in June 1919 race riots broke out in British port cities including Cardiff, targeting Black and minority residents"
+  sources:
+    - {title: "The National Archives (UK): 1919 race riots (Wayback)", url: "https://web.archive.org/web/2023/https://www.nationalarchives.gov.uk/education/resources/1919-race-riots/", quote: "the demobilisation of troops caused severe post-war competition for jobs ... the rioting and attacks on black and minority ethnic communities in British port cities"}
+    - {title: "Museum Cardiff Youth Forum, Museum Wales: Remembering the 1919 Cardiff Race Riots (2019)", url: "https://museum.wales/blog/2030/Remembering-the-1919-Cardiff-Race-Riots/", quote: "the mass rioting which began on the 11th of June 1919 ... they were jealous of ‘foreign’ men who they felt had taken over their jobs"}
+- card: tiger-bay
+  fact: "Betty Campbell (born Rachel Elizabeth Johnson) was born in Butetown in 1934"
+  sources:
+    - {title: "Jessey Clarke and Deleshia Clarke, Dictionary of Welsh Biography: Campbell, Rachel Elizabeth (Betty) (1934-2017)", url: "https://biography.wales/article/s14-CAMP-ELI-1934", quote: "Betty Campbell was born Rachel Elizabeth Johnson on 6 November 1934 at 6 Maria Street, Butetown, Cardiff"}
+    - {title: "Angela V. John, Women's History Network: A statue for the past, present and future: making space for Betty Campbell (2021)", url: "https://womenshistorynetwork.org/a-statue-for-the-past-present-and-future-making-space-for-betty-campbell-by-angela-v-john/", quote: "Betty Campbell MBE (1934-2017) ... She was born and lived her entire life in Cardiff's multi-racial Butetown"}
+- card: tiger-bay
+  fact: "Her grammar-school headmistress told her becoming a teacher was impossible"
+  sources:
+    - {title: "Jessey Clarke and Deleshia Clarke, Dictionary of Welsh Biography: Campbell, Rachel Elizabeth (Betty) (1934-2017)", url: "https://biography.wales/article/s14-CAMP-ELI-1934", quote: "despite being told by a headmistress that the prospect of a black teacher was impossible"}
+    - {title: "Angela V. John, Women's History Network: A statue for the past, present and future: making space for Betty Campbell (2021)", url: "https://womenshistorynetwork.org/a-statue-for-the-past-present-and-future-making-space-for-betty-campbell-by-angela-v-john/", quote: "When she had the temerity to suggest to her headteacher that she would like to become a teacher, she was told that her problems would be insurmountable"}
+- card: tiger-bay
+  fact: "In 1973 she became head of Mount Stuart Primary in Butetown, the first Black headteacher in Wales"
+  sources:
+    - {title: "Angela V. John, Women's History Network: A statue for the past, present and future: making space for Betty Campbell (2021)", url: "https://womenshistorynetwork.org/a-statue-for-the-past-present-and-future-making-space-for-betty-campbell-by-angela-v-john/", quote: "In 1973 she became a dedicated head teacher at Butetown's Mount Stuart Primary School"}
+    - {title: "Black Cultural Archives: Cardiff, Migration & Employment", url: "https://blackculturalarchives.org/the-history-cardiff", quote: "1973 – Betty Campbell becomes Wales' first Black headteacher"}
+    - {title: "Jessey Clarke and Deleshia Clarke, Dictionary of Welsh Biography: Campbell, Rachel Elizabeth (Betty) (1934-2017)", url: "https://biography.wales/article/s14-CAMP-ELI-1934", quote: "When she became Wales's first black head teacher at Mount Stuart in the 1970s"}
+- card: tiger-bay
+  fact: "She taught pupils about slavery, Black history and apartheid"
+  sources:
+    - {title: "Jessey Clarke and Deleshia Clarke, Dictionary of Welsh Biography: Campbell, Rachel Elizabeth (Betty) (1934-2017)", url: "https://biography.wales/article/s14-CAMP-ELI-1934", quote: "she began teaching children about slavery, black history and the system of apartheid"}
+    - {title: "Black Cultural Archives: Cardiff, Migration & Employment", url: "https://blackculturalarchives.org/the-history-cardiff", quote: "teaching children about slavery, apartheid, and Black resilience"}
+- card: tiger-bay
+  fact: "She helped launch Black History Month in Wales"
+  sources:
+    - {title: "Jessey Clarke and Deleshia Clarke, Dictionary of Welsh Biography: Campbell, Rachel Elizabeth (Betty) (1934-2017)", url: "https://biography.wales/article/s14-CAMP-ELI-1934", quote: "In 2007 she played a key role in the launch of Black History Month Wales"}
+    - {title: "Black Cultural Archives: Cardiff, Migration & Employment", url: "https://blackculturalarchives.org/the-history-cardiff", quote: "Campbell helped establish Black History Month in Wales"}
+- card: tiger-bay
+  fact: "In September 2021 her statue was unveiled in Central Square, Cardiff"
+  sources:
+    - {title: "Jessey Clarke and Deleshia Clarke, Dictionary of Welsh Biography: Campbell, Rachel Elizabeth (Betty) (1934-2017)", url: "https://biography.wales/article/s14-CAMP-ELI-1934", quote: "In September 2021 a statue of her by the sculptor Eve Shepherd was unveiled outside the BBC headquarters in Central Square, Cardiff"}
+    - {title: "Angela V. John, Women's History Network: A statue for the past, present and future: making space for Betty Campbell (2021)", url: "https://womenshistorynetwork.org/a-statue-for-the-past-present-and-future-making-space-for-betty-campbell-by-angela-v-john/", quote: "the statue of Betty Campbell MBE ... unveiled in Cardiff's new Central Square"}
+- card: tiger-bay
+  fact: "It is the first outdoor statue of a named Black person in Wales"
+  sources:
+    - {title: "Black Cultural Archives: Cardiff, Migration & Employment", url: "https://blackculturalarchives.org/the-history-cardiff", quote: "her statue, unveiled in 2021, was the first of any named Black person in an outdoor public space in Wales"}
+    - {title: "Angela V. John, Women's History Network: A statue for the past, present and future: making space for Betty Campbell (2021)", url: "https://womenshistorynetwork.org/a-statue-for-the-past-present-and-future-making-space-for-betty-campbell-by-angela-v-john/", quote: "it's the first outdoor statue of a named woman in Wales and the first statue of a named black person"}
+- card: coincoin
+  fact: "Natchitoches was a French colonial post founded by Louis Juchereau de St. Denis; around 1742 Coincoin was born into slavery in his household"
+  sources:
+    - {title: "NPS Cane River itinerary: Maison de Marie Thérèse Coincoin (Wayback)", url: "https://web.archive.org/web/2020/https://www.nps.gov/nr/travel/caneriver/MAI.HTM", quote: "born an African slave into the household of Natchitoches’ founder, Louis Juchereau de St. Denis, around 1742"}
+    - {title: "Cane River National Heritage Area: Marie Thérèse Coincoin", url: "https://www.canerivernha.org/node/63", quote: "a slave owned by founder of Natchitoches Louis Juchereau de St. Denis"}
+- card: coincoin
+  fact: "She was leased out to Claude Thomas Pierre Metoyer, a French-born merchant"
+  sources:
+    - {title: "National Park Service, Cane River National Heritage Area itinerary: Maison de Marie Thérèse Coincoin Museum (Wayback snapshot)", url: "https://web.archive.org/web/2020/https://www.nps.gov/nr/travel/caneriver/MAI.HTM", quote: "Marie Thérèse was leased out to a young French-born merchant and local militia member named Claude Thomas Pierre Metoyer"}
+    - {title: "Elizabeth Shown Mills, 64 Parishes: Marie Thérèse Coincoin", url: "https://64parishes.org/entry/marie-therese-coincoin", quote: "In 1767 she was rented to the French bachelor Claude Thomas Pierre Metoyer [WebFetch extract]"}
+- card: coincoin
+  fact: "Their relationship lasted some twenty years and produced ten children"
+  sources:
+    - {title: "National Park Service, Cane River National Heritage Area itinerary: Maison de Marie Thérèse Coincoin Museum (Wayback snapshot)", url: "https://web.archive.org/web/2020/https://www.nps.gov/nr/travel/caneriver/MAI.HTM", quote: "The two entered into a liaison that spanned two decades and produced ten children"}
+    - {title: "Elizabeth Shown Mills, 64 Parishes: Marie Thérèse Coincoin", url: "https://64parishes.org/entry/marie-therese-coincoin", quote: "She bore him ten more children [WebFetch extract]"}
+- card: coincoin
+  fact: "Metoyer bought her and set her free"
+  sources:
+    - {title: "National Park Service, Cane River National Heritage Area itinerary: Maison de Marie Thérèse Coincoin Museum (Wayback snapshot)", url: "https://web.archive.org/web/2020/https://www.nps.gov/nr/travel/caneriver/MAI.HTM", quote: "Metoyer purchased and immediately freed Marie Thérèse in 1778"}
+    - {title: "Elizabeth Shown Mills, 64 Parishes: Marie Thérèse Coincoin", url: "https://64parishes.org/entry/marie-therese-coincoin", quote: "Metoyer bought her freedom after she was punished for those pregnancies [WebFetch extract]"}
+- card: coincoin
+  fact: "On her own land at Cedar Bend she grew tobacco"
+  sources:
+    - {title: "National Park Service, Cane River National Heritage Area itinerary: Maison de Marie Thérèse Coincoin Museum (Wayback snapshot)", url: "https://web.archive.org/web/2020/https://www.nps.gov/nr/travel/caneriver/MAI.HTM", quote: "Marie Thérèse began cultivating tobacco on her small plantation"}
+    - {title: "Elizabeth Shown Mills, Demythicizing History: Marie Thérèse Coincoin, Louisiana History 53:4 (2012)", url: "https://www.historicpathways.com/download/Demythicizing-LHfall12-ocr.pdf", quote: "There, at what is now called Cedar Bend on the Cote Joyeuse ... Coincoin planted tobacco"}
+- card: coincoin
+  fact: "In 1792 she sent a cargo of tobacco downriver to New Orleans"
+  sources:
+    - {title: "National Park Service, Cane River National Heritage Area itinerary: Maison de Marie Thérèse Coincoin Museum (Wayback snapshot)", url: "https://web.archive.org/web/2020/https://www.nps.gov/nr/travel/caneriver/MAI.HTM", quote: "by 1792 had accrued enough product to ship to New Orleans"}
+    - {title: "Elizabeth Shown Mills, Demythicizing History: Marie Thérèse Coincoin, Louisiana History 53:4 (2012)", url: "https://www.historicpathways.com/download/Demythicizing-LHfall12-ocr.pdf", quote: "In 1792, Coincoin and Pierre Metoyer together sent a gabarre and a bateau to New Orleans, laden with skins, barrels of oil, and tobacco"}
+- card: coincoin
+  fact: "Her son Louis Metoyer developed Melrose, long credited by legend to her"
+  sources:
+    - {title: "Elizabeth Shown Mills, 64 Parishes: Marie Thérèse Coincoin", url: "https://64parishes.org/entry/marie-therese-coincoin", quote: "developed by Coincoin's son Louis Metoyer but often misattributed to her [WebFetch extract]"}
+    - {title: "Morgan, MacDonald and Handley, Economics and Authenticity, The George Wright Forum 23:1 (2006)", url: "http://www.georgewright.org/231morgan.pdf", quote: "Nardini (1972) asserted that Coincoin never owned Melrose; did not build Yucca, Africa, or Ghana houses ... That her son alone was involved with the construction of Yucca"}
+    - {title: "Elizabeth Shown Mills, Demythicizing History: Marie Thérèse Coincoin, Louisiana History 53:4 (2012)", url: "https://www.historicpathways.com/download/Demythicizing-LHfall12-ocr.pdf", quote: "Melrose, Home of Jean-Baptiste Louis Metoyer, built 1832"}
+- card: coincoin
+  fact: "Before the Civil War her descendants were among the wealthiest families of African descent in the South"
+  sources:
+    - {title: "Morgan, MacDonald and Handley, Economics and Authenticity, The George Wright Forum 23:1 (2006)", url: "http://www.georgewright.org/231morgan.pdf", quote: "their descendants became one of the South's wealthiest antebellum families of African descent"}
+    - {title: "National Park Service, Cane River National Heritage Area itinerary: Maison de Marie Thérèse Coincoin Museum (Wayback snapshot)", url: "https://web.archive.org/web/2020/https://www.nps.gov/nr/travel/caneriver/MAI.HTM", quote: "a family that by the 1830s were the richest people of color in the United States"}
+- card: coincoin
+  fact: "She came to own some sixteen enslaved people"
+  sources:
+    - {title: "Morgan, MacDonald and Handley, Economics and Authenticity, The George Wright Forum 23:1 (2006)", url: "http://www.georgewright.org/231morgan.pdf", quote: "MarieThérèse's intensive plantation period, when she accumulated some 16 slaves"}
+    - {title: "Elizabeth Shown Mills, 64 Parishes: Marie Thérèse Coincoin", url: "https://64parishes.org/entry/marie-therese-coincoin", quote: "By her death she held sixteen enslaved people [WebFetch extract]"}
+- card: coincoin
+  fact: "She died around 1816"
+  sources:
+    - {title: "Elizabeth Shown Mills, Demythicizing History, Louisiana History 53:4 (2012)", url: "https://www.historicpathways.com/download/Demythicizing-LHfall12-ocr.pdf", quote: "Marie Therese Coincoin (1742-1816): Cane River Slave, Slave Owner, and Paradox"}
+    - {title: "The Historic New Orleans Collection: Cane River Collection", url: "https://www.hnoc.org/publications/first-draft/cane-river-collection-glimpse-19th-century-black-creole-life", quote: "descendants of Marie Thérèse Coincoin (1742–1816)"}
+- card: coincoin
+  fact: "Her descendants still live along the Cane River"
+  sources:
+    - {title: "Morgan, MacDonald and Handley, Economics and Authenticity, The George Wright Forum 23:1 (2006)", url: "http://www.georgewright.org/231morgan.pdf", quote: "Cane River is home to the descendents of this original"}
+    - {title: "National Park Service, Cane River National Heritage Area itinerary: Maison de Marie Thérèse Coincoin Museum (Wayback snapshot)", url: "https://web.archive.org/web/2020/https://www.nps.gov/nr/travel/caneriver/MAI.HTM", quote: "She and her Metoyer descendants formed one of the main branches of the Cane River Creole community"}
+- card: kotomisi
+  fact: "The koto ensemble consists of a full skirt (koto), a short jacket (yaki) and a headscarf (angisa)"
+  sources:
+    - {title: "Daan van Dartel, Wereldmuseum Amsterdam: Fashion and heritage from Surinam", url: "https://amsterdam.wereldmuseum.nl/en/collection-stories/fashion-and-heritage-from-surinam", quote: "Afro-Surinamese women wearing magnificent headscarves (angisa), voluminous skirts (koto) and wide, protruding jackets (yaki)"}
+    - {title: "NOS: Dit is de betekenis achter de kleurrijke kleding op Keti Koti (1 July 2025)", url: "https://nos.nl/l/2573157", quote: "Het jasje heet een yaki, een kort jasje ... Ook de rok heet een koto"}
+- card: kotomisi
+  fact: "In the Netherlands it is worn on 1 July for Keti Koti"
+  sources:
+    - {title: "Daan van Dartel, Wereldmuseum Amsterdam: Fashion and heritage from Surinam", url: "https://amsterdam.wereldmuseum.nl/en/collection-stories/fashion-and-heritage-from-surinam", quote: "who walk through Amsterdam on July 1st on their way to the Oosterpark. Every year the festival of Keti Koti (broken chains) is celebrated there"}
+    - {title: "NOS: Dit is de betekenis achter de kleurrijke kleding op Keti Koti (1 July 2025)", url: "https://nos.nl/l/2573157", quote: "Op Keti Koti, de jaarlijkse viering van de afschaffing van de slavernij, dragen veel mensen deze kleurrijke outfit: de koto"}
+- card: kotomisi
+  fact: "Keti Koti, the 'breaking of the chains', marks the Dutch law of 1 July 1863 that abolished slavery"
+  sources:
+    - {title: "Eerste Kamer der Staten-Generaal: Nederlands slavernijverleden herdacht (1 July 2025)", url: "https://www.eerstekamer.nl/nieuws/20250701/nederlands_slavernijverleden", quote: "Op 1 juli 1863 nam Nederland een wet aan die de afschaffing van de slavernij regelde ... op 1 juli het 'verbreken van de ketenen' gevierd tijdens het Keti Koti Festival"}
+    - {title: "Daan van Dartel, Wereldmuseum Amsterdam: Fashion and heritage from Surinam", url: "https://amsterdam.wereldmuseum.nl/en/collection-stories/fashion-and-heritage-from-surinam", quote: "the festival of Keti Koti (broken chains) is celebrated there, the abolition of slavery on that day in 1863"}
+- card: kotomisi
+  fact: "A koto must have volume, built with starch and layered skirts"
+  sources:
+    - {title: "Daan van Dartel, Wereldmuseum Amsterdam: Fashion and heritage from Surinam", url: "https://amsterdam.wereldmuseum.nl/en/collection-stories/fashion-and-heritage-from-surinam", quote: "The skirts stand out with starch but often because several skirts are also worn underneath. A koto should have lots of volume"}
+    - {title: "NOS: Dit is de betekenis achter de kleurrijke kleding op Keti Koti (1 July 2025)", url: "https://nos.nl/l/2573157", quote: "Dat is een kussen op de rug voor meer volume aan de achterkant"}
+- card: kotomisi
+  fact: "The angisa is starched until it is stiff like paper and can be folded into shapes"
+  sources:
+    - {title: "NOS: Dit is de betekenis achter de kleurrijke kleding op Keti Koti (1 July 2025)", url: "https://nos.nl/l/2573157", quote: "Door een stijfproces gaat de doek als papier aanvoelen en kan de doek in verschillende vormen worden vastgezet"}
+    - {title: "Daan van Dartel, Wereldmuseum Amsterdam: A headscarf with a secret language", url: "https://amsterdam.wereldmuseum.nl/en/collection-stories/a-headscarf-with-a-secret-language", quote: "With these square starched headscarves women in Surinam could pass messages to each other"}
+- card: kotomisi
+  fact: "Women used the folds to send messages to one another"
+  sources:
+    - {title: "Daan van Dartel, Wereldmuseum Amsterdam: A headscarf with a secret language", url: "https://amsterdam.wereldmuseum.nl/en/collection-stories/a-headscarf-with-a-secret-language", quote: "women in Surinam could pass messages to each other, express their mood or even invite a lover"}
+    - {title: "NOS: Dit is de betekenis achter de kleurrijke kleding op Keti Koti (1 July 2025)", url: "https://nos.nl/l/2573157", quote: "Door de angisa op een bepaalde manier te knopen, konden vrouwen toch boodschappen naar elkaar versturen"}
+- card: kotomisi
+  fact: "One fold is called 'Let them talk'"
+  sources:
+    - {title: "Daan van Dartel, Wereldmuseum Amsterdam: A headscarf with a secret language", url: "https://amsterdam.wereldmuseum.nl/en/collection-stories/a-headscarf-with-a-secret-language", quote: "The way this angisa is folded is called let them talk"}
+    - {title: "NOS: Dit is de betekenis achter de kleurrijke kleding op Keti Koti (1 July 2025)", url: "https://nos.nl/l/2573157", quote: "Je hebt bijvoorbeeld de Let-Them-Talk en Meet-Me-At-The-Corner"}
+- card: kotomisi
+  fact: "Another fold, with a protruding point, tells a lover to meet on the corner"
+  sources:
+    - {title: "Daan van Dartel, Wereldmuseum Amsterdam: A headscarf with a secret language", url: "https://amsterdam.wereldmuseum.nl/en/collection-stories/a-headscarf-with-a-secret-language", quote: "Wait for me on the corner is the message of this way of folding, which can be seen by the protruding point. It's a message to a lover"}
+    - {title: "NOS: Dit is de betekenis achter de kleurrijke kleding op Keti Koti (1 July 2025)", url: "https://nos.nl/l/2573157", quote: "Je hebt bijvoorbeeld de Let-Them-Talk en Meet-Me-At-The-Corner"}
+- card: kotomisi
+  fact: "When motor cars arrived they inspired a new fold very wide at the back, the oto baka"
+  sources:
+    - {title: "Daan van Dartel, Wereldmuseum Amsterdam: A headscarf with a secret language", url: "https://amsterdam.wereldmuseum.nl/en/collection-stories/a-headscarf-with-a-secret-language", quote: "cars appeared on the scene, an inspiration for the oto-baka style, an angisa that is very wide at the back"}
+    - {title: "NOS: Dit is de betekenis achter de kleurrijke kleding op Keti Koti (2025)", url: "https://nos.nl/l/2573157", quote: "Zo werd de Oto Baka, gebaseerd op de bumper van een auto"}
+- card: kotomisi
+  fact: "The origin of the koto and angisa is disputed"
+  sources:
+    - {title: "Daan van Dartel, Wereldmuseum Amsterdam: Fashion and heritage from Surinam", url: "https://amsterdam.wereldmuseum.nl/en/collection-stories/fashion-and-heritage-from-surinam", quote: "This story persists in more recent publications too but where it comes from isn't known"}
+    - {title: "NOS: Dit is de betekenis achter de kleurrijke kleding op Keti Koti (1 July 2025)", url: "https://nos.nl/l/2573157", quote: "wijst op onderzoek van Christine van Russel-Henar waarin naar voren komt dat de angisa niet tijdens maar juist na de slavernijperiode ontstond"}
+- card: siddi
+  fact: "The Sidis are Indians of African ancestry"
+  sources:
+    - {title: "Jazmin Graves, Through the Eyes of the Lyre: A Transoceanic Perspective on the Sidi Sufi Devotional Tradition of Western India", url: "https://sai.columbia.edu/sites/default/files/content/Graves%20-%20Through%20the%20Eyes%20of%20the%20Lyre.pdf", quote: "the veneration of African Sufi saints by Sidis, Indians of African ancestry, at shrines throughout Mumbai and Gujarat"}
+    - {title: "Apsara Media (Amy Catlin-Jairazbhoy): Sidi African Indians", url: "https://apsara-media.com/sidimaterials.html", quote: "The Sidis of Gujarat are a Sufi community of East African origin"}
+- card: siddi
+  fact: "Their forebears crossed the Indian Ocean from eastern Africa to western India over many centuries, many as captives of the slave trade"
+  sources:
+    - {title: "Apsara Media (Amy Catlin-Jairazbhoy): Sidi African Indians", url: "https://apsara-media.com/sidimaterials.html", quote: "Sidis descend from Africans who sailed across the Indian Ocean to the west coast of India over many centuries"}
+    - {title: "Jazmin Graves, Through the Eyes of the Lyre: A Transoceanic Perspective on the Sidi Sufi Devotional Tradition of Western India", url: "https://sai.columbia.edu/sites/default/files/content/Graves%20-%20Through%20the%20Eyes%20of%20the%20Lyre.pdf", quote: "This route is associated with the intra- and inter-continental African slave trade and its dispersal of African peoples"}
+    - {title: "Joydip Mitra, Newslaundry: Finding George Floyd in Gujarat (2021)", url: "https://www.newslaundry.com/2021/10/30/finding-george-floyd-in-gujarat-a-day-in-the-life-of-the-siddi-community", quote: "About 5.5 million African slaves were brought eastward [WebFetch extract]"}
+- card: siddi
+  fact: "They live in Gujarat, Mumbai and other parts of western India"
+  sources:
+    - {title: "Jazmin Graves, Through the Eyes of the Lyre: A Transoceanic Perspective on the Sidi Sufi Devotional Tradition of Western India", url: "https://sai.columbia.edu/sites/default/files/content/Graves%20-%20Through%20the%20Eyes%20of%20the%20Lyre.pdf", quote: "at shrines throughout Mumbai and Gujarat"}
+    - {title: "Apsara Media (Amy Catlin-Jairazbhoy): Sidi African Indians", url: "https://apsara-media.com/sidimaterials.html", quote: "came to India eight centuries ago and made Gujarat their home"}
+- card: siddi
+  fact: "Most Gujarati Sidis are Muslims of the Sufi tradition"
+  sources:
+    - {title: "Neeraj Gupta, The Quint: In photos, lost legacy of Gujarat's African-origin Siddi tribe (2017)", url: "https://www.thequint.com/photos/a-community-of-african-origin-is-living-deep-inside-the-gir-forest-in-gujarat", quote: "While most of the villagers are Muslims"}
+    - {title: "Apsara Media (Amy Catlin-Jairazbhoy): Sidi African Indians", url: "https://apsara-media.com/sidimaterials.html", quote: "The Sidis of Gujarat are a Sufi community"}
+    - {title: "Joydip Mitra, Newslaundry: Finding George Floyd in Gujarat (2021)", url: "https://www.newslaundry.com/2021/10/30/finding-george-floyd-in-gujarat-a-day-in-the-life-of-the-siddi-community", quote: "The Siddis turned to Islam under their captors and then, influenced by Bawa Ghor, took to its Sufi tradition [WebFetch extract]"}
+- card: siddi
+  fact: "Their devotion centres on Bava Gor, an African saint who in their tradition came to India long ago"
+  sources:
+    - {title: "Apsara Media (Amy Catlin-Jairazbhoy): Sidi African Indians", url: "https://apsara-media.com/sidimaterials.html", quote: "singing songs to their black Sufi saint, Bava Gor"}
+    - {title: "Joydip Mitra, Newslaundry: Finding George Floyd in Gujarat (2021)", url: "https://www.newslaundry.com/2021/10/30/finding-george-floyd-in-gujarat-a-day-in-the-life-of-the-siddi-community", quote: "said to have migrated to Surat in the 14th century from Sudan [WebFetch extract]"}
+    - {title: "Jazmin Graves, Through the Eyes of the Lyre: A Transoceanic Perspective on the Sidi Sufi Devotional Tradition of Western India", url: "https://sai.columbia.edu/sites/default/files/content/Graves%20-%20Through%20the%20Eyes%20of%20the%20Lyre.pdf", quote: "Bava Ghor marched with a retinue of soldiers along the Makran coast and through Sindh until he reached Gujarat"}
+- card: siddi
+  fact: "At his shrines they perform goma, also called dhammal: songs and dances in honour of Bava Gor and the other Sidi saints"
+  sources:
+    - {title: "Jazmin Graves, Through the Eyes of the Lyre, Columbia SAI", url: "https://sai.columbia.edu/sites/default/files/content/Graves%20-%20Through%20the%20Eyes%20of%20the%20Lyre.pdf", quote: "song-dance performances called goma or dhammal, which honor God, the Prophet, and Sufi saints, especially the Sidi ancestor-saints"}
+    - {title: "Apsara Media (Amy Catlin-Jairazbhoy): Sidi African Indians", url: "https://apsara-media.com/sidimaterials.html", quote: "Sidi men and women perform sacred music and dance during rituals in the shrines to Bava Gor"}
+- card: siddi
+  fact: "Their music keeps African styles, rhythms and instruments blended with Indian ones"
+  sources:
+    - {title: "Apsara Media (Amy Catlin-Jairazbhoy): Sidi African Indians", url: "https://apsara-media.com/sidimaterials.html", quote: "Their native African music styles, melodic and rhythmic structures, lyrics and musical instruments have mingled with local influences"}
+    - {title: "Jazmin Graves, Through the Eyes of the Lyre: A Transoceanic Perspective on the Sidi Sufi Devotional Tradition of Western India", url: "https://sai.columbia.edu/sites/default/files/content/Graves%20-%20Through%20the%20Eyes%20of%20the%20Lyre.pdf", quote: "incorporates both South Asian and African influences"}
+- card: siddi
+  fact: "Jambur is a Sidi village in the Gir forest"
+  sources:
+    - {title: "Joydip Mitra, Newslaundry (2021)", url: "https://www.newslaundry.com/2021/10/30/finding-george-floyd-in-gujarat-a-day-in-the-life-of-the-siddi-community", quote: "In Gir region, Jambur is the biggest Siddi village"}
+    - {title: "Neeraj Gupta, The Quint (2017)", url: "https://www.thequint.com/photos/a-community-of-african-origin-is-living-deep-inside-the-gir-forest-in-gujarat", quote: "a village called Jambur, bordering the dense forests of Gir"}
+- card: siddi
+  fact: "Families tell different origin stories; some say the Nawab of Junagadh brought their ancestors to the Gir and gave them land"
+  sources:
+    - {title: "Joydip Mitra, Newslaundry (2021)", url: "https://www.newslaundry.com/2021/10/30/finding-george-floyd-in-gujarat-a-day-in-the-life-of-the-siddi-community", quote: "The Nawab rehabilitated them to the wilderness of Gir, allotting them farming lands"}
+    - {title: "Neeraj Gupta, The Quint (2017)", url: "https://www.thequint.com/photos/a-community-of-african-origin-is-living-deep-inside-the-gir-forest-in-gujarat", quote: "they are the descendants of Africans that the Nawab of Junagad brought to the Gir forest to hunt lions"}

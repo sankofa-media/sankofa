@@ -1,0 +1,715 @@
+# Second, independent check (2026-11-14) of content/ledger/expand-c12.yaml.
+# Every source was re-downloaded and each quote below was matched against the fetched text.
+# Britannica blocks bots (Cloudflare): read via web.archive.org snapshots of Oct-Nov 2026.
+# openedition.org (Ramsey) and discoverpuertorico.com read via web.archive.org snapshots.
+# verdict: confirmed | corrected (card wording or sources changed) | refuted | unconfirmed (removed from the card).
+# Independence rulings:
+#  - The two argentina.gob.ar notes (Ministry of Culture monument note, banknote note) = one source; Infobae, Mindef, BCRA and InfoLEG are each independent.
+#  - UNESCO's Villa Mella text derives from the nomination prepared by the Museo del Hombre Dominicano team (the MHD page says so; UNESCO credits MHD), so UNESCO + MHD = ONE source. Independent: Tejeda Ortiz (Acento), Afropop Worldwide, Diario Libre, Historia General del Pueblo Dominicano.
+#  - Murphy's Britannica article and Murphy's Encyclopedia of Religion article = same author; used together only where a third, independent source (the Supreme Court opinion) agrees. The Supreme Court opinion cites the Encyclopedia of Religion in places, so it is used for facts it states on the record (persecution, exiles, ordinances).
+#  - NATT blog (Lovell Francis) and the NATT exhibition PDF = one source (same publisher); Weiss, NALIS and Britannica are independent.
+#  - RCI's two pages = one source; Outremers360's two pages = one source; Outremers360's 2026 text repeats Le Routard's wording on St Lawrence and 1916, so Outremers360 (2026) + Le Routard = one source; Outremers360 (2024, Eline Ulysse) is a different text.
+#  - Discover Puerto Rico (official destination organisation) is used only where Fiet or another source agrees.
+entries:
+# ---------------- remedios-del-valle ----------------
+- card: remedios-del-valle
+  fact: "María Remedios del Valle was a Black woman born in Buenos Aires (1766 per the Ministry of Culture; 1766–67 per other accounts)"
+  verdict: confirmed
+  sources:
+    - {title: "Argentina.gob.ar (Ministerio de Cultura): Un monumento para María Remedios del Valle (2022)", url: "https://www.argentina.gob.ar/noticias/un-monumento-para-maria-remedios-del-valle", quote: "Nació en Buenos Aires en 1766. De origen afrodescendiente"}
+    - {title: "Adrián Pignatelli, Infobae (8 November 2020)", url: "https://www.infobae.com/sociedad/2020/11/08/la-dura-historia-de-remedios-del-valle-lucho-por-la-independencia-fue-herida-tomada-prisionera-y-termino-pidiendo-limosna/", quote: "nació en la ciudad de Buenos Aires entre 1766 y 1767"}
+  note: "Mindef also: 'nacida en Buenos Aires ... era negra'. Year kept as a dispute."
+- card: remedios-del-valle
+  fact: "In 1810 she followed the Army of the North with her husband and two sons, one of them adopted"
+  verdict: confirmed
+  sources:
+    - {title: "Ministerio de Defensa, Las mujeres y sus luchas en la historia argentina (2006), archived PDF", url: "https://web.archive.org/web/20101218061651/http://mindef.gov.ar/image/Libros%2520index/libro%2520mujeres.pdf", quote: "se incorporó al ejército auxiliar para las provincias del norte el 6 de julio de 1810, con su marido y dos hijos, uno adoptado"}
+    - {title: "Adrián Pignatelli, Infobae (8 November 2020)", url: "https://www.infobae.com/sociedad/2020/11/08/la-dura-historia-de-remedios-del-valle-lucho-por-la-independencia-fue-herida-tomada-prisionera-y-termino-pidiendo-limosna/", quote: "en el que estaban enrolados su marido y sus dos hijos, uno de ellos adoptado, se les unió"}
+  note: ""
+- card: remedios-del-valle
+  fact: "She tended the wounded and fought at Tucumán and Salta and in the 1813 defeats at Vilcapugio and Ayohuma"
+  verdict: confirmed
+  sources:
+    - {title: "Ministerio de Defensa, Las mujeres y sus luchas en la historia argentina (2006), archived PDF", url: "https://web.archive.org/web/20101218061651/http://mindef.gov.ar/image/Libros%2520index/libro%2520mujeres.pdf", quote: "Participó en las acciones de Desaguadero, Tucumán, Salta, Vilcapugio y Ayohuma como combatiente"}
+    - {title: "Argentina.gob.ar (Ministerio de Cultura): Un monumento para María Remedios del Valle (2022)", url: "https://www.argentina.gob.ar/noticias/un-monumento-para-maria-remedios-del-valle", quote: "en las victorias de Tucumán y Salta (1812 y 1813), y en las derrotas de Vilcapugio y Ayohuma (1813)"}
+  note: "Tending the wounded: argmon 'cuidado y atención de soldados'; Mindef 'servir en los hospitales de sangre'."
+- card: remedios-del-valle
+  fact: "Manuel Belgrano gave her the rank of captain"
+  verdict: corrected
+  sources:
+    - {title: "Argentina.gob.ar (Ministerio de Cultura): Un monumento para María Remedios del Valle (2022)", url: "https://www.argentina.gob.ar/noticias/un-monumento-para-maria-remedios-del-valle", quote: "Belgrano le confirió el grado de capitana del Ejército"}
+    - {title: "Adrián Pignatelli, Infobae (8 November 2020)", url: "https://www.infobae.com/sociedad/2020/11/08/la-dura-historia-de-remedios-del-valle-lucho-por-la-independencia-fue-herida-tomada-prisionera-y-termino-pidiendo-limosna/", quote: "Su admiración por su valentía lo llevó a nombrarla capitana del ejército"}
+    - {title: "Ley 26.852, InfoLEG (archived 2026)", url: "http://web.archive.org/web/20260922040003/https://servicios.infoleg.gob.ar/infolegInternet/anexos/210000-214999/214825/norma.htm", quote: "a quien el General Manuel Belgrano le confirió el grado de Capitana por su arrojo y valor en el campo de batalla"}
+  note: "Ledger's two argentina.gob.ar pages are one publisher; Infobae and the text of Law 26,852 added. Card unchanged."
+- card: remedios-del-valle
+  fact: "Taken prisoner after Ayohuma, she helped patriot prisoners escape and was flogged in public for nine days"
+  verdict: confirmed
+  sources:
+    - {title: "Ministerio de Defensa, Las mujeres y sus luchas en la historia argentina (2006), archived PDF", url: "https://web.archive.org/web/20101218061651/http://mindef.gov.ar/image/Libros%2520index/libro%2520mujeres.pdf", quote: "Aprovechó para ayudar a huir a varios jefes patriotas y fue condenada a la pena de azotes. Durante nueve días fue flagelada públicamente"}
+    - {title: "Adrián Pignatelli, Infobae (8 November 2020)", url: "https://www.infobae.com/sociedad/2020/11/08/la-dura-historia-de-remedios-del-valle-lucho-por-la-independencia-fue-herida-tomada-prisionera-y-termino-pidiendo-limosna/", quote: "Asistió a los maltrechos prisioneros patriotas, y a algunos los ayudó a escaparse. Fue castigada ... a ser azotada durante nueve días"}
+  note: ""
+- card: remedios-del-valle
+  fact: "She escaped and returned to the army"
+  verdict: confirmed
+  sources:
+    - {title: "Ministerio de Defensa, Las mujeres y sus luchas en la historia argentina (2006), archived PDF", url: "https://web.archive.org/web/20101218061651/http://mindef.gov.ar/image/Libros%2520index/libro%2520mujeres.pdf", quote: "logró huir y volvió al ejército para pelear o para servir en los hospitales de sangre"}
+    - {title: "Adrián Pignatelli, Infobae (8 November 2020)", url: "https://www.infobae.com/sociedad/2020/11/08/la-dura-historia-de-remedios-del-valle-lucho-por-la-independencia-fue-herida-tomada-prisionera-y-termino-pidiendo-limosna/", quote: "Cuando logró fugarse, estuvo en las filas de Martín Miguel de Güemes"}
+  note: ""
+- card: remedios-del-valle
+  fact: "The war took her husband and both sons"
+  verdict: confirmed
+  sources:
+    - {title: "Ministerio de Defensa, Las mujeres y sus luchas en la historia argentina (2006), archived PDF", url: "https://web.archive.org/web/20101218061651/http://mindef.gov.ar/image/Libros%2520index/libro%2520mujeres.pdf", quote: "Había perdido marido e hijos en la guerra"}
+    - {title: "Adrián Pignatelli, Infobae (8 November 2020)", url: "https://www.infobae.com/sociedad/2020/11/08/la-dura-historia-de-remedios-del-valle-lucho-por-la-independencia-fue-herida-tomada-prisionera-y-termino-pidiendo-limosna/", quote: "Su esposo y sus dos hijos murieron en combate"}
+  note: ""
+- card: remedios-del-valle
+  fact: "Back in Buenos Aires she lived by begging, until General Juan José Viamonte, who had known her on campaign, spoke for her"
+  verdict: confirmed
+  sources:
+    - {title: "Ministerio de Defensa, Las mujeres y sus luchas en la historia argentina (2006), archived PDF", url: "https://web.archive.org/web/20101218061651/http://mindef.gov.ar/image/Libros%2520index/libro%2520mujeres.pdf", quote: "El general Juan José Viamonte, que la conoció durante las campañas de la independencia, informó favorablemente"}
+    - {title: "Adrián Pignatelli, Infobae (8 November 2020)", url: "https://www.infobae.com/sociedad/2020/11/08/la-dura-historia-de-remedios-del-valle-lucho-por-la-independencia-fue-herida-tomada-prisionera-y-termino-pidiendo-limosna/", quote: "Juan José Viamonte, fue quien la descubrió en la ciudad de Buenos Aires mendigando"}
+  note: "Begging: Mindef 'tuvo que recurrir a la mendicidad'."
+- card: remedios-del-valle
+  fact: "She was granted a captain's pay, then the rank of sergeant major of cavalry"
+  verdict: confirmed
+  sources:
+    - {title: "Ministerio de Defensa, Las mujeres y sus luchas en la historia argentina (2006), archived PDF", url: "https://web.archive.org/web/20101218061651/http://mindef.gov.ar/image/Libros%2520index/libro%2520mujeres.pdf", quote: "con el sueldo de capitán de infantería. En 1829 fue ascendida a “sargenta mayor de caballería”"}
+    - {title: "Argentina.gob.ar (Ministerio de Cultura): Un monumento para María Remedios del Valle (2022)", url: "https://www.argentina.gob.ar/noticias/un-monumento-para-maria-remedios-del-valle", quote: "le concedió el cargo de sargento mayor de caballería en 1829"}
+  note: "Infobae also: 'se le otorgó un sueldo correspondiente al de capitán de infantería'."
+- card: remedios-del-valle
+  fact: "She took the name Remedios Rosas in gratitude to the governor Juan Manuel de Rosas"
+  verdict: confirmed
+  sources:
+    - {title: "Ministerio de Defensa, Las mujeres y sus luchas en la historia argentina (2006), archived PDF", url: "https://web.archive.org/web/20101218061651/http://mindef.gov.ar/image/Libros%2520index/libro%2520mujeres.pdf", quote: "Rosas la destinó a la plana mayor activa, por lo cual ella, en agradecimiento, tomó el nombre de Remedios Rosas"}
+    - {title: "Adrián Pignatelli, Infobae (8 November 2020)", url: "https://www.infobae.com/sociedad/2020/11/08/la-dura-historia-de-remedios-del-valle-lucho-por-la-independencia-fue-herida-tomada-prisionera-y-termino-pidiendo-limosna/", quote: "En agradecimiento, ella le pidió permiso y se cambió el apellido, incorporando el de Rosas"}
+  note: ""
+- card: remedios-del-valle
+  fact: "An army register of 8 November 1847 notes her death"
+  verdict: confirmed
+  sources:
+    - {title: "Ministerio de Defensa, Las mujeres y sus luchas en la historia argentina (2006), archived PDF", url: "https://web.archive.org/web/20101218061651/http://mindef.gov.ar/image/Libros%2520index/libro%2520mujeres.pdf", quote: "En la del 8 de noviembre de 1847 una nota reza: “Baja. El mayor de caballería Da. Remedios Rosas falleció.”"}
+    - {title: "Adrián Pignatelli, Infobae (8 November 2020)", url: "https://www.infobae.com/sociedad/2020/11/08/la-dura-historia-de-remedios-del-valle-lucho-por-la-independencia-fue-herida-tomada-prisionera-y-termino-pidiendo-limosna/", quote: "Su necrológica se resumió en un registro del ejército, fechado el 8 de noviembre de 1847"}
+  note: ""
+- card: remedios-del-valle
+  fact: "By Law 26,852 Argentina keeps 8 November as the National Day of Afro-Argentines in her honour"
+  verdict: corrected
+  sources:
+    - {title: "Ley 26.852, InfoLEG (archived 2026)", url: "http://web.archive.org/web/20260922040003/https://servicios.infoleg.gob.ar/infolegInternet/anexos/210000-214999/214825/norma.htm", quote: "Institúyese el día 8 de noviembre como “Día Nacional de los/as afroargentinos/as y de la cultura afro” en conmemoración de María Remedios del Valle"}
+    - {title: "Adrián Pignatelli, Infobae (8 November 2020)", url: "https://www.infobae.com/sociedad/2020/11/08/la-dura-historia-de-remedios-del-valle-lucho-por-la-independencia-fue-herida-tomada-prisionera-y-termino-pidiendo-limosna/", quote: "En su homenaje, desde 2013, el 8 de noviembre es el día del afroargentino y de la cultura afro"}
+  note: "The two argentina.gob.ar notes are one publisher; the law's own text (InfoLEG, archived; the live normativa page returns HTTP 500) added as primary source for the number."
+- card: remedios-del-valle
+  fact: "Her portrait appears on banknotes beside Belgrano's"
+  verdict: confirmed
+  sources:
+    - {title: "Argentina.gob.ar: Heroínas y héroes ... vuelven a ilustrar los billetes (2022)", url: "https://www.argentina.gob.ar/noticias/heroinas-y-heroes-de-nuestra-historia-vuelven-ilustrar-los-billetes-de-pesos-argentinos", quote: "María Remedios del Valle y Manuel Belgrano ($500)"}
+    - {title: "BCRA: nuevos billetes de 10.000 y 20.000 pesos (archived 2025)", url: "https://web.archive.org/web/20250611160705/https://www.bcra.gob.ar/Noticias/nuevos-billetes-10-y-20mil.asp", quote: "El billete de $10.000 tendrá las imágenes de Manuel Belgrano y de María Remedios del Valle"}
+  note: "Planned $500 note (2022) and issued $10,000 note (BCRA); both pair her with Belgrano."
+# ---------------- mary-seacole ----------------
+- card: mary-seacole
+  fact: "Mary Seacole was born in Kingston, Jamaica, in 1805 to a Scottish soldier and a free Black Jamaican 'doctress' who cared for invalids at her boarding house"
+  verdict: confirmed
+  sources:
+    - {title: "Britannica: Mary Seacole (archived 31 Oct 2026)", url: "http://web.archive.org/web/20261031001736/https://www.britannica.com/biography/Mary-Seacole", quote: "Mary Seacole (born 1805, Kingston, Jamaica—died May 14, 1881, London"}
+    - {title: "Mary Seacole, Wonderful Adventures (1857), Project Gutenberg", url: "https://www.gutenberg.org/cache/epub/23031/pg23031.txt", quote: "I was born in the town of Kingston, in the island of Jamaica"}
+    - {title: "London Museum: Mary Seacole", url: "https://www.londonmuseum.org.uk/collections/london-stories/mary-seacole-doctress-crimean-war/", quote: "born Mary Jane Grant in Jamaica in 1805 to a Scottish army father and a Creole mother"}
+  note: "Mother's boarding house: Britannica 'provided care for invalids at her boardinghouse'; memoir 'My mother kept a boarding-house in Kingston, and was ... an admirable doctress'."
+- card: mary-seacole
+  fact: "She learned Creole herbal healing from her mother and called herself a 'doctress'"
+  verdict: confirmed
+  sources:
+    - {title: "London Museum: Mary Seacole", url: "https://www.londonmuseum.org.uk/collections/london-stories/mary-seacole-doctress-crimean-war/", quote: "“doctress”, a word she used to describe the traditional Creole herbal healing work she learned from her mother in Jamaica"}
+    - {title: "Mary Seacole, Wonderful Adventures (1857), Project Gutenberg", url: "https://www.gutenberg.org/cache/epub/23031/pg23031.txt", quote: "the ambition to become a doctress early took firm root in my mind"}
+  note: ""
+- card: mary-seacole
+  fact: "She nursed yellow fever patients in Jamaica and cholera victims in Panama"
+  verdict: confirmed
+  sources:
+    - {title: "Britannica: Mary Seacole (archived 31 Oct 2026)", url: "http://web.archive.org/web/20261031001736/https://www.britannica.com/biography/Mary-Seacole", quote: "she gained further nursing experience during a cholera epidemic in Panama , and, after returning to Jamaica , she cared for yellow fever victims"}
+    - {title: "Mary Seacole, Wonderful Adventures (1857), Project Gutenberg", url: "https://www.gutenberg.org/cache/epub/23031/pg23031.txt", quote: "the yellow fever never made a more determined effort to exterminate the English in Jamaica than it did in that dreadful year"}
+  note: "London Museum also: cholera outbreak at Cruces (New Granada, now Panama)."
+- card: mary-seacole
+  fact: "In 1854, amid reports of soldiers left without care in the Crimean War, she offered to serve as an army nurse and was refused, which she attributed to prejudice"
+  verdict: confirmed
+  sources:
+    - {title: "Britannica: Mary Seacole (archived 31 Oct 2026)", url: "http://web.archive.org/web/20261031001736/https://www.britannica.com/biography/Mary-Seacole", quote: "Seacole was in London in 1854 when reports of the lack of necessities and breakdown of nursing care for soldiers in the Crimean War began to be made public. Despite her experience, her offers to serve as an army nurse were refused, and she attributed her rejection to racial prejudice"}
+    - {title: "London Museum: Mary Seacole", url: "https://www.londonmuseum.org.uk/collections/london-stories/mary-seacole-doctress-crimean-war/", quote: "her attempt to apply in-person at the War Office to serve as a war nurse was unsuccessful"}
+  note: "Reports also in the memoir: 'Then we knew that the hospitals were full to suffocation'. LM quotes her question about 'duskier skin'."
+- card: mary-seacole
+  fact: "She resolved to go 'upon my own responsibility and at my own cost'"
+  verdict: confirmed
+  sources:
+    - {title: "Mary Seacole, Wonderful Adventures (1857), Project Gutenberg", url: "https://www.gutenberg.org/cache/epub/23031/pg23031.txt", quote: "If in no other way, then would I upon my own responsibility and at my own cost"}
+    - {title: "London Museum: Mary Seacole", url: "https://www.londonmuseum.org.uk/collections/london-stories/mary-seacole-doctress-crimean-war/", quote: "Undeterred, Seacole funded her own trip to the Crimea in 1855"}
+  note: ""
+- card: mary-seacole
+  fact: "In 1855, with Thomas Day, a relative of her late husband, she set up the British Hotel near Balaclava, selling food, supplies and medicines to the army"
+  verdict: confirmed
+  sources:
+    - {title: "London Museum: Mary Seacole", url: "https://www.londonmuseum.org.uk/collections/london-stories/mary-seacole-doctress-crimean-war/", quote: "She and Thomas Day, a relative of her late husband, set up the so-called British Hotel near where fighting had been in Balaclava"}
+    - {title: "Britannica: Mary Seacole (archived 31 Oct 2026)", url: "http://web.archive.org/web/20261031001736/https://www.britannica.com/biography/Mary-Seacole", quote: "In 1855, with the help of a relative of her husband, she went to Crimea as a sutler, setting up the British Hotel to sell food, supplies, and medicines to the troops"}
+  note: ""
+- card: mary-seacole
+  fact: "She went to the front to tend the wounded, who called her 'Mother Seacole'"
+  verdict: confirmed
+  sources:
+    - {title: "London Museum: Mary Seacole", url: "https://www.londonmuseum.org.uk/collections/london-stories/mary-seacole-doctress-crimean-war/", quote: "she also visited the battlefront to care for wounded soldiers ... “appreciate[d] ‘Mother’ Seacole, as she is affectionately called”"}
+    - {title: "Mary Seacole, Wonderful Adventures (1857), Project Gutenberg", url: "https://www.gutenberg.org/cache/epub/23031/pg23031.txt", quote: "There were few officers of the 97th to whom Mother Seacole was not well known"}
+  note: "Britannica: 'a familiar figure at the transfer points for casualties from the front'."
+- card: mary-seacole
+  fact: "Peace left her with unsold stock and debts, and she was declared bankrupt"
+  verdict: confirmed
+  sources:
+    - {title: "London Museum: Mary Seacole", url: "https://www.londonmuseum.org.uk/collections/london-stories/mary-seacole-doctress-crimean-war/", quote: "Seacole and Day were left with leftover stocks of food and equipment – and outstanding debts. Soon after Seacole returned to England, she was declared bankrupt"}
+    - {title: "Britannica: Mary Seacole (archived 31 Oct 2026)", url: "http://web.archive.org/web/20261031001736/https://www.britannica.com/biography/Mary-Seacole", quote: "At the war’s end she returned to England destitute and was declared bankrupt"}
+  note: ""
+- card: mary-seacole
+  fact: "Her memoir Wonderful Adventures of Mrs Seacole in Many Lands came out in 1857 and became a bestseller"
+  verdict: confirmed
+  sources:
+    - {title: "Britannica: Mary Seacole (archived 31 Oct 2026)", url: "http://web.archive.org/web/20261031001736/https://www.britannica.com/biography/Mary-Seacole", quote: "In 1857 her autobiography, Wonderful Adventures of Mrs. Seacole in Many Lands , was published and became a best seller"}
+    - {title: "London Museum: Mary Seacole", url: "https://www.londonmuseum.org.uk/collections/london-stories/mary-seacole-doctress-crimean-war/", quote: "Still, her Wonderful Adventures was a bestseller"}
+  note: ""
+- card: mary-seacole
+  fact: "She died in London in 1881, was forgotten, and is now widely recognised again; a statue stands at St Thomas' Hospital"
+  verdict: corrected
+  sources:
+    - {title: "London Museum: Mary Seacole", url: "https://www.londonmuseum.org.uk/collections/london-stories/mary-seacole-doctress-crimean-war/", quote: "Seacole died in London in 1881 ... Though well-loved in her time, Seacole was lost to history after her death ... A statue commemorating her stands outside St Thomas’ Hospital in Lambeth"}
+    - {title: "Britannica: Mary Seacole (archived 31 Oct 2026)", url: "http://web.archive.org/web/20261031001736/https://www.britannica.com/biography/Mary-Seacole", quote: "After her death she fell into obscurity but in 2004 took first place in the 100 Great Black Britons poll"}
+    - {title: "Mary Seacole Trust", url: "https://www.maryseacoletrust.org.uk/", quote: "a statue of Mary was unveiled at St Thomas’ Hospital in London, opposite the Houses of Parliament, in June 2016"}
+  note: "Ledger had the statue on the London Museum only; Mary Seacole Trust added as second source for the 'further' item."
+# ---------------- haitian-vodou ----------------
+- card: haitian-vodou
+  fact: "Vodou grew up in colonial Saint-Domingue among enslaved people from Dahomey and other African lands, under Catholic pressure"
+  verdict: confirmed
+  sources:
+    - {title: "Elizabeth A. McAlister, Britannica: Vodou (archived 7 Nov 2026)", url: "http://web.archive.org/web/20261107232449/https://www.britannica.com/topic/Vodou", quote: "by the descendants of the Dahomean , Kongo , Yoruba , and other ethnic groups who had been enslaved and transported to colonial Saint-Domingue ... and partly Christianized by Roman Catholic missionaries"}
+    - {title: "Encyclopedia of Occultism and Parapsychology: Voudou, Encyclopedia.com", url: "https://www.encyclopedia.com/science/encyclopedias-almanacs-transcripts-and-maps/voudou", quote: "The dominant group came from Dahomey ... The plantation owners in Haiti attempted to impose Catholicism on the slave population"}
+  note: "Britannica puts the Christianising in the 16th and 17th centuries; card's start year 1700 is an approximation, not stated in the body."
+- card: haitian-vodou
+  fact: "Its name comes from a Fon/Dahomean word for spirit or god"
+  verdict: confirmed
+  sources:
+    - {title: "Elizabeth A. McAlister, Britannica: Vodou (archived 7 Nov 2026)", url: "http://web.archive.org/web/20261107232449/https://www.britannica.com/topic/Vodou", quote: "The word Vodou means “spirit” or “deity” in the Fon language of the African kingdom of Dahomey"}
+    - {title: "Leslie G. Desmangles, The Faces of the Gods (1992), excerpt on Corbett's Haiti list (archived)", url: "https://web.archive.org/web/20210301160256/http://www.hartford-hwp.com/archives/43a/123.html", quote: "a distortion of the Dahomean (or Beninois) word vodu (meaning god or spirit )"}
+  note: ""
+- card: haitian-vodou
+  fact: "Believers hold that God rules the world with the help of the lwa, served with prayers, songs and offerings"
+  verdict: confirmed
+  sources:
+    - {title: "Elizabeth A. McAlister, Britannica: Vodou (archived 7 Nov 2026)", url: "http://web.archive.org/web/20261107232449/https://www.britannica.com/topic/Vodou", quote: "the spirits were made by God to help him govern humanity and the natural world ... to offer prayers and perform various devotional rites"}
+    - {title: "Encyclopedia of Occultism and Parapsychology: Voudou, Encyclopedia.com", url: "https://www.encyclopedia.com/science/encyclopedias-almanacs-transcripts-and-maps/voudou", quote: "In Haiti that deity came to be known as le Bon Diei (the Good God) ... under him were a number of greater and lesser deities"}
+  note: "Songs/offerings: Britannica 'prayer, song, dance, and gesture'; Gale 'sacrifice of various animals'."
+- card: haitian-vodou
+  fact: "Priests are oungan (men) and manbo (women); branches include Rada and Petwo"
+  verdict: confirmed
+  sources:
+    - {title: "Elizabeth A. McAlister, Britannica: Vodou (archived 7 Nov 2026)", url: "http://web.archive.org/web/20261107232449/https://www.britannica.com/topic/Vodou", quote: "local hierarchies of priestesses or priests ( manbo and oungan ) ... branches of the religion include Rada, Daome, Ibo, Nago, Dereal, Manding, Petwo, and Kongo"}
+    - {title: "Encyclopedia of Occultism and Parapsychology: Voudou, Encyclopedia.com", url: "https://www.encyclopedia.com/science/encyclopedias-almanacs-transcripts-and-maps/voudou", quote: "conducted by male ( oungan ) and female ( manbo ) priests ... those of African origin (the Rada) and those of Haitian origin (P é tro)"}
+  note: ""
+- card: haitian-vodou
+  fact: "At ceremonies danced to drums a spirit may take possession of a devotee"
+  verdict: confirmed
+  sources:
+    - {title: "Elizabeth A. McAlister, Britannica: Vodou (archived 7 Nov 2026)", url: "http://web.archive.org/web/20261107232449/https://www.britannica.com/topic/Vodou", quote: "these acts exhibit the incarnate presence of the lwa within the entranced devotee"}
+    - {title: "Encyclopedia of Occultism and Parapsychology: Voudou, Encyclopedia.com", url: "https://www.encyclopedia.com/science/encyclopedias-almanacs-transcripts-and-maps/voudou", quote: "lively dancing with drum accompaniment, and the possession of priests or others in attendance by loas"}
+  note: ""
+- card: haitian-vodou
+  fact: "The spirits took on the faces of Catholic saints; Danbala is honoured on St Patrick's Day, 17 March"
+  verdict: confirmed
+  sources:
+    - {title: "Elizabeth A. McAlister, Britannica: Vodou (archived 7 Nov 2026)", url: "http://web.archive.org/web/20261107232449/https://www.britannica.com/topic/Vodou", quote: "Danbala on St. Patrick’s Day , March 17"}
+    - {title: "Encyclopedia of Occultism and Parapsychology: Voudou, Encyclopedia.com", url: "https://www.encyclopedia.com/science/encyclopedias-almanacs-transcripts-and-maps/voudou", quote: "One of the means by which Voudou survived was in the identification of the loas with various Catholic saints ... Damballah with Saint Patrick"}
+  note: "Gale names St Patrick without the date; the date of St Patrick's Day is not in question."
+- card: haitian-vodou
+  fact: "For generations Haitian law punished Vodou rites, and a 1935 decree against superstitious practices tightened the ban"
+  verdict: confirmed
+  sources:
+    - {title: "Kate Ramsey, Gradhiva 1 (2005) (archived 12 Nov 2026)", url: "http://web.archive.org/web/20261112101023/https://journals.openedition.org/gradhiva/352", quote: "The 1835 and 1864 Haitian penal codes banned «le vaudoux» ... this regime was reformulated and tightened ... by President Sténio Vincent’s 1935 décret-loi against «les pratiques superstitieuses»"}
+    - {title: "ICLRS (BYU): Republic of Haiti, Law and Religion Overview", url: "https://www.iclrs.org/?p=8808", quote: "historically its practices have faced persecution within Haitian society ... The decree law of September 5, 1935 on superstitious beliefs"}
+  note: ""
+- card: haitian-vodou
+  fact: "The Catholic Church joined the campaigns against Vodou"
+  verdict: confirmed
+  sources:
+    - {title: "Kate Ramsey, Gradhiva 1 (2005) (archived 12 Nov 2026)", url: "http://web.archive.org/web/20261112101023/https://journals.openedition.org/gradhiva/352", quote: "subject to US Marine, Protestant missionary, Catholic Church, and Haitian state offensives"}
+    - {title: "ICLRS (BYU): Republic of Haiti, Law and Religion Overview", url: "https://www.iclrs.org/?p=8808", quote: "Institutional Catholicism and the Haitian elite were known to degrade its traditional beliefs and practices"}
+  note: ""
+- card: haitian-vodou
+  fact: "In April 2003 President Aristide recognised Vodou as a religion on a par with others, letting its priests perform legally binding ceremonies such as marriages"
+  verdict: confirmed
+  sources:
+    - {title: "BBC News: Haiti makes voodoo official (2003)", url: "http://news.bbc.co.uk/2/hi/americas/2985627.stm", quote: "only now has it been recognised as a religion on a par with others ... Jean-Bertrand Aristide, took the decision earlier in April which means that voodoo ceremonies such as marriages now have equal standing"}
+    - {title: "ICLRS (BYU): Republic of Haiti, Law and Religion Overview", url: "https://www.iclrs.org/?p=8808", quote: "In 2003, President Jean-Bertrand Aristide granted Vodou official recognition, authorizing Vodou priests to perform civil ceremonies such as marriages"}
+  note: ""
+# ---------------- soup-joumou ----------------
+- card: soup-joumou
+  fact: "Soup joumou is made from joumou (turban squash, giraumon) with meat, vegetables and hot peppers"
+  verdict: confirmed
+  sources:
+    - {title: "Saeed Kamali Dehghan, The Guardian (17 Dec 2021)", url: "https://www.theguardian.com/global-development/2021/dec/17/culture-in-a-bowl-haitis-joumou-soup-awarded-protected-status-by-unesco", quote: "Joumou soup, made from turban squash (joumou), meat, potatoes, malanga, yams, turnips and chilli"}
+    - {title: "UNESCO ICH: Joumou soup", url: "https://ich.unesco.org/en/RL/joumou-soup-01853", quote: "Joumou or giraumon soup is a traditional Haitian pumpkin soup made with vegetables, plantains, meat, pasta and spices"}
+    - {title: "NPR Weekend Edition (18 Dec 2021)", url: "https://www.npr.org/2021/12/18/1065477169/haitian-soup-joumou-awarded-protected-cultural-heritage-status-by-unesco", quote: "a hearty blend of pumpkin, potatoes, squash, beef, chili peppers and other things"}
+  note: ""
+- card: soup-joumou
+  fact: "In colonial Saint-Domingue the enslaved cooked it for their owners, and it was reserved for the owners"
+  verdict: confirmed
+  sources:
+    - {title: "UNESCO ICH: Joumou soup", url: "https://ich.unesco.org/en/RL/joumou-soup-01853", quote: "Originally reserved for slave owners"}
+    - {title: "Saeed Kamali Dehghan, The Guardian (17 Dec 2021)", url: "https://www.theguardian.com/global-development/2021/dec/17/culture-in-a-bowl-haitis-joumou-soup-awarded-protected-status-by-unesco", quote: "originally cooked by enslaved African people for their owners in Haiti"}
+    - {title: "NPR Weekend Edition (18 Dec 2021)", url: "https://www.npr.org/2021/12/18/1065477169/haitian-soup-joumou-awarded-protected-cultural-heritage-status-by-unesco", quote: "the soup was prepared by slaves for hundreds of years. And they could never taste it"}
+  note: ""
+- card: soup-joumou
+  fact: "Since independence on 1 January 1804 Haitians eat it every 1 January, Independence Day, as a symbol of freedom"
+  verdict: confirmed
+  sources:
+    - {title: "UNESCO ICH: Joumou soup", url: "https://ich.unesco.org/en/RL/joumou-soup-01853", quote: "is prepared and consumed specifically on the first of January – Haiti’s Independence Day ... a symbol of their newly acquired freedom"}
+    - {title: "Saeed Kamali Dehghan, The Guardian (17 Dec 2021)", url: "https://www.theguardian.com/global-development/2021/dec/17/culture-in-a-bowl-haitis-joumou-soup-awarded-protected-status-by-unesco", quote: "Since Haiti’s independence in 1804, joumou soup has become the national symbol of liberation from slavery, and is traditionally eaten on 1 January"}
+  note: ""
+- card: soup-joumou
+  fact: "In December 2021 UNESCO inscribed it on the Representative List; Haiti's first entry"
+  verdict: confirmed
+  sources:
+    - {title: "UNESCO ICH: Joumou soup", url: "https://ich.unesco.org/en/RL/joumou-soup-01853", quote: "Inscribed in 2021 ( 16.COM ) on the Representative List of the Intangible Cultural Heritage of Humanity"}
+    - {title: "Saeed Kamali Dehghan, The Guardian (17 Dec 2021)", url: "https://www.theguardian.com/global-development/2021/dec/17/culture-in-a-bowl-haitis-joumou-soup-awarded-protected-status-by-unesco", quote: "It is Haiti’s first inclusion on the list"}
+    - {title: "NPR Weekend Edition (18 Dec 2021)", url: "https://www.npr.org/2021/12/18/1065477169/haitian-soup-joumou-awarded-protected-cultural-heritage-status-by-unesco", quote: "this is the first time that any cultural item from Haiti has received the designation"}
+  note: "December: Guardian of 17 Dec 2021 ('on Thursday added'), NPR of 18 Dec."
+- card: soup-joumou
+  fact: "Haiti's ambassador to UNESCO, Dominique Dupuy, was visibly moved when the decision was announced"
+  verdict: corrected
+  sources:
+    - {title: "Saeed Kamali Dehghan, The Guardian (17 Dec 2021)", url: "https://www.theguardian.com/global-development/2021/dec/17/culture-in-a-bowl-haitis-joumou-soup-awarded-protected-status-by-unesco", quote: "the country’s Unesco ambassador, Dominique Dupuy, cried as the announcement was made"}
+    - {title: "NPR Weekend Edition (18 Dec 2021)", url: "https://www.npr.org/2021/12/18/1065477169/haitian-soup-joumou-awarded-protected-cultural-heritage-status-by-unesco", quote: "You were visibly emotional when you accepted this award for Haiti"}
+  note: "Only the Guardian says she wept; NPR says 'visibly emotional'. Card now says 'was visibly moved' (RU: «не смогла скрыть волнения»)."
+- card: soup-joumou
+  fact: "It became a national symbol of liberation and dignity"
+  verdict: confirmed
+  sources:
+    - {title: "UNESCO ICH: Joumou soup", url: "https://ich.unesco.org/en/RL/joumou-soup-01853", quote: "an expression of their dignity and resilience"}
+    - {title: "Saeed Kamali Dehghan, The Guardian (17 Dec 2021)", url: "https://www.theguardian.com/global-development/2021/dec/17/culture-in-a-bowl-haitis-joumou-soup-awarded-protected-status-by-unesco", quote: "a symbol of hope and dignity for the world’s first black-led republic"}
+  note: ""
+# ---------------- regla-de-ocha ----------------
+- card: regla-de-ocha
+  fact: "Santería took shape in Cuba in the nineteenth century when hundreds of thousands of Yoruba were enslaved and shipped there"
+  verdict: confirmed
+  sources:
+    - {title: "Joseph M. Murphy, Britannica: Santería (archived 7 Nov 2026)", url: "http://web.archive.org/web/20261107232312/https://www.britannica.com/topic/Santeria", quote: "Santería was brought to Cuba by the people of the Yoruban nations of West Africa , who were enslaved in great numbers in the first decades of the 19th century"}
+    - {title: "Church of the Lukumi Babalu Aye v. Hialeah, 508 U.S. 520 (1993), LII", url: "https://www.law.cornell.edu/supremecourt/text/508/520", quote: "the Santeria religion, which originated in the nineteenth century. When hundreds of thousands of members of the Yoruba people were brought as slaves"}
+  note: "The Court's 'from eastern Africa' is an error; the card follows Britannica (West Africa)."
+- card: regla-de-ocha
+  fact: "In Cuba it absorbed Catholic elements; devotees expressed devotion to the orishas through images of Catholic saints, hence 'the way of the saints'"
+  verdict: confirmed
+  sources:
+    - {title: "Joseph M. Murphy, Britannica: Santería (archived 7 Nov 2026)", url: "http://web.archive.org/web/20261107232312/https://www.britannica.com/topic/Santeria", quote: "The name “Santería” derives from the correspondences made by some devotees between the Yoruba deities called orisha s and the saints ( santos )"}
+    - {title: "Church of the Lukumi Babalu Aye v. Hialeah, 508 U.S. 520 (1993), LII", url: "https://www.law.cornell.edu/supremecourt/text/508/520", quote: "absorbed significant elements of Roman Catholicism. The resulting syncretion, or fusion, is Santeria, \"the way of the saints.\" The Cuban Yoruba express their devotion to spirits, called orishas, through the iconography of Catholic saints"}
+  note: ""
+- card: regla-de-ocha
+  fact: "It is also known as the Yoruba or Lukumí religion"
+  verdict: corrected
+  sources:
+    - {title: "Joseph M. Murphy, Britannica: Santería (archived 7 Nov 2026)", url: "http://web.archive.org/web/20261107232312/https://www.britannica.com/topic/Santeria", quote: "Many contemporary practitioners call the tradition \"the religion of the orishas\" or the \"Lukumi religion.\""}
+    - {title: "Jacques Leclerc, Cuba, CEFAN, Université Laval", url: "https://www.axl.cefan.ulaval.ca/amsudant/cuba.htm", quote: "La religion yorouba, plus connue à Cuba sous le nom de Santería"}
+  note: "The clause 'after the name by which the Yoruba were known in Cuba' rested on Britannica alone and was removed (EN and RU). The two names themselves stand: Britannica for Lukumí; Leclerc for 'Yoruba religion' (Leclerc also: 'le lucumi ... qu'on appelle parfois à Cuba le yorouba')."
+- card: regla-de-ocha
+  fact: "Its heart is a personal bond with the orishas kept through offerings, sometimes animal sacrifice, and initiation"
+  verdict: confirmed
+  sources:
+    - {title: "Joseph M. Murphy, Britannica: Santería (archived 7 Nov 2026)", url: "http://web.archive.org/web/20261107232312/https://www.britannica.com/topic/Santeria", quote: "Santería is based upon the development of personal relationships through divination , sacrifice , initiation, and mediumship"}
+    - {title: "Church of the Lukumi Babalu Aye v. Hialeah, 508 U.S. 520 (1993), LII", url: "https://www.law.cornell.edu/supremecourt/text/508/520", quote: "The basis of the Santeria religion is the nurture of a personal relation with the orishas, and one of the principal forms of devotion is an animal sacrifice"}
+  note: ""
+- card: regla-de-ocha
+  fact: "In Cuba the faith was persecuted and practised in secret"
+  verdict: corrected
+  sources:
+    - {title: "Church of the Lukumi Babalu Aye v. Hialeah, 508 U.S. 520 (1993), LII", url: "https://www.law.cornell.edu/supremecourt/text/508/520", quote: "Santeria adherents faced widespread persecution in Cuba, so the religion and its rituals were practiced in secret"}
+    - {title: "Joseph M. Murphy, Encyclopedia of Religion (1987): Santería, Encyclopedia.com", url: "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/santeria", quote: "the tradition of secrecy that santeros have maintained in order to survive a history of oppression and misunderstanding"}
+  note: "Ledger's Britannica 'quote' was only the title of a linked Brown University page, not Britannica text; replaced by Murphy's Encyclopedia of Religion article."
+- card: regla-de-ocha
+  fact: "After the revolution of 1959 Cuban exiles carried it to the United States"
+  verdict: confirmed
+  sources:
+    - {title: "Joseph M. Murphy, Britannica: Santería (archived 7 Nov 2026)", url: "http://web.archive.org/web/20261107232312/https://www.britannica.com/topic/Santeria", quote: "From the Cuban Revolution of 1959 to the early 21st century, nearly one million Cubans left the island, bringing Orisha religion to cities throughout the Americas, particularly Miami and New York"}
+    - {title: "Church of the Lukumi Babalu Aye v. Hialeah, 508 U.S. 520 (1993), LII", url: "https://www.law.cornell.edu/supremecourt/text/508/520", quote: "The religion was brought to this Nation most often by exiles from the Cuban revolution"}
+  note: ""
+- card: regla-de-ocha
+  fact: "Hialeah passed ordinances targeting the sacrifices of the Church of the Lukumi Babalu Aye; in 1993 the Supreme Court unanimously struck them down"
+  verdict: confirmed
+  sources:
+    - {title: "Church of the Lukumi Babalu Aye v. Hialeah, 508 U.S. 520 (1993), LII", url: "https://www.law.cornell.edu/supremecourt/text/508/520", quote: "The ordinances' texts and operation demonstrate that they are not neutral, but have as their object the suppression of Santeria's central element, animal sacrifice"}
+    - {title: "Joseph M. Murphy, Britannica: Santería (archived 7 Nov 2026)", url: "http://web.archive.org/web/20261107232312/https://www.britannica.com/topic/Santeria", quote: "In 1993 the U.S. Supreme Court unanimously upheld the right of devotees to practice the controversial rite of animal sacrifice"}
+    - {title: "Oyez API: 91-948", url: "https://api.oyez.org/cases/1992/91-948", quote: "The ordinances singled out the activities of the Santeria faith ... decisions: majority_vote 9, minority_vote 0"}
+  note: ""
+# ---------------- congos-villa-mella ----------------
+- card: congos-villa-mella
+  fact: "The Brotherhood of the Holy Spirit of the Congos of Villa Mella was founded (UNESCO: sixteenth century) by enslaved Africans and people of mixed descent; Holy Spirit brotherhoods go back to colonial times"
+  verdict: corrected
+  sources:
+    - {title: "UNESCO ICH: Brotherhood of the Holy Spirit of the Congos of Villa Mella", url: "https://ich.unesco.org/en/RL/cultural-space-of-the-brotherhood-of-the-holy-spirit-of-the-congos-of-villa-mella-00006", quote: "was founded in the sixteenth century by African slaves and people of mixed origin"}
+    - {title: "Afropop Worldwide: Feature: Afro-Dominicana (2009)", url: "https://afropop.org/articles/feature-afro-dominicana", quote: "The cofradia is thought to be directly descended from the religious-fraternal organizations of enslaved Africans during the Colonial Period"}
+    - {title: "Museo del Hombre Dominicano page (archived 2010)", url: "https://web.archive.org/web/20101002000603/http://www8.svsu.edu/~kerman/MHD/Patrimonio/congos.htm", quote: "se remonta desde los tiempos coloniales hasta la actualidad. Cofradías como las del Espíritu Santo existen desde el 1503"}
+  note: "UNESCO and MHD are one source (MHD's team wrote the nomination). The sixteenth-century date stays only as UNESCO's attributed view and in the dispute; colonial roots among enslaved Africans are independently supported by Afropop and Tejeda ('El colapso de la economía azucarera permitió que los esclavizados africanos ... Muchos de ellos ocuparon tierras identificadas hoy como de Villa Mella')."
+- card: congos-villa-mella
+  fact: "It joins Catholic and African traditions"
+  verdict: corrected
+  sources:
+    - {title: "Museo del Hombre Dominicano page (archived 2010)", url: "https://web.archive.org/web/20101002000603/http://www8.svsu.edu/~kerman/MHD/Patrimonio/congos.htm", quote: "La Cofradía es un hecho cultural histórico que integra sincréticamente expresiones católicas y africanas"}
+    - {title: "Dagoberto Tejeda Ortiz, Acento (2 June 2026)", url: "https://acento.com.do/cultura/los-congos-la-unesco-y-el-25-aniversario-9689754.html", quote: "Lo de Pentecostés y lo del Espíritu Santo fue mitología posterior, interpretación con incidencia en lo imaginario popular y valores religiosos católicos"}
+  note: "'Open to all regardless of sex or origin' rested on UNESCO+MHD only (one underlying text) and was removed from EN and RU."
+- card: congos-villa-mella
+  fact: "Its musicians play hand drums called congos, attributed to the Holy Spirit, who appeared with them in Villa Mella"
+  verdict: confirmed
+  sources:
+    - {title: "UNESCO ICH: Brotherhood of the Holy Spirit of the Congos of Villa Mella", url: "https://ich.unesco.org/en/RL/cultural-space-of-the-brotherhood-of-the-holy-spirit-of-the-congos-of-villa-mella-00006", quote: "The Brotherhood musicians play instruments called congos. These congos, the origin of which is attributed to the Holy Spirit, are hand-drums"}
+    - {title: "Dagoberto Tejeda Ortiz, Acento (2 June 2026)", url: "https://acento.com.do/cultura/los-congos-la-unesco-y-el-25-aniversario-9689754.html", quote: "los congos con su Palo Mayor, su Palo Menor, ambos de un tronco ahuecado con dos parches, tocados con las manos ... la \"entrega\" de los instrumentos musicales, sus cantos y sus bailes por el Espíritu Santo es la versión última"}
+  note: "Card states the Holy Spirit origin as the brotherhood's belief; Tejeda's view that it is a later legend added to the dispute."
+- card: congos-villa-mella
+  fact: "It celebrates the feast of the Holy Spirit and plays at members' funeral rites: the ninth day and the later Banco ceremony"
+  verdict: confirmed
+  sources:
+    - {title: "Adalberto de la Rosa, Diario Libre (12 Feb 2022)", url: "https://www.diariolibre.com/actualidad/ciudad/2022/02/12/se-pierde-la-tradicion-de-los-congos-de-villa-mella/1636121", quote: "Los compañeros se reúnen para hacer las ceremonias que son los 9 días, cabo de año, banco"}
+    - {title: "Afropop Worldwide: Feature: Afro-Dominicana (2009)", url: "https://afropop.org/articles/feature-afro-dominicana", quote: "The music is most often played for the funeral rites of Cofradia members ... After death, congos music is played for a nine-night novena"}
+    - {title: "Historia General del Pueblo Dominicano VI, p. 752 (Academia Dominicana de la Historia)", url: "https://hgpdvol6.academiadominicanahistoria.org.do/752/", quote: "the annual festival of a Villa Mella mutual-aid society called La Cofradía de los Congos del Espíritu Santo. This author once attended a banco ritual commemorating a funeral"}
+  note: "Holy Spirit feast: UNESCO 'celebrated at Pentecost' + HGPD 'annual festival'."
+- card: congos-villa-mella
+  fact: "UNESCO proclaimed it a Masterpiece of the Oral and Intangible Heritage of Humanity in 2001"
+  verdict: confirmed
+  sources:
+    - {title: "UNESCO ICH: Brotherhood of the Holy Spirit of the Congos of Villa Mella", url: "https://ich.unesco.org/en/RL/cultural-space-of-the-brotherhood-of-the-holy-spirit-of-the-congos-of-villa-mella-00006", quote: "Inscribed in 2008 ( 3.COM ) on the Representative List ... (originally proclaimed in 2001)"}
+    - {title: "Afropop Worldwide: Feature: Afro-Dominicana (2009)", url: "https://afropop.org/articles/feature-afro-dominicana", quote: "The congos were recognized by UNESCO in 2001"}
+    - {title: "Dagoberto Tejeda Ortiz, Acento (2 June 2026)", url: "https://acento.com.do/cultura/los-congos-la-unesco-y-el-25-aniversario-9689754.html", quote: "fueron incluidos en el listado mundial de los patrimonios orales e intangibles de la Unesco en el 2001"}
+  note: ""
+- card: congos-villa-mella
+  fact: "UNESCO warned that urban growth, migration, unemployment and prejudice threaten it; members still complain the state does too little to help"
+  verdict: corrected
+  sources:
+    - {title: "UNESCO ICH: Brotherhood of the Holy Spirit of the Congos of Villa Mella", url: "https://ich.unesco.org/en/RL/cultural-space-of-the-brotherhood-of-the-holy-spirit-of-the-congos-of-villa-mella-00006", quote: "Today, the acceleration of urban growth, migration, unemployment and the standardization of values is reinforcing prejudices"}
+    - {title: "Adalberto de la Rosa, Diario Libre (12 Feb 2022)", url: "https://www.diariolibre.com/actualidad/ciudad/2022/02/12/se-pierde-la-tradicion-de-los-congos-de-villa-mella/1636121", quote: "Critican la falta de apoyo de las autoridades de cultura"}
+    - {title: "Afropop Worldwide: Feature: Afro-Dominicana (2009)", url: "https://afropop.org/articles/feature-afro-dominicana", quote: "the government has been criticized for not doing enough to support the group"}
+  note: "Card no longer presents UNESCO and MHD as two warnings (same text); it attributes the threats to UNESCO and adds the independently reported complaint about state support."
+# ---------------- samana-americans ----------------
+- card: samana-americans
+  fact: "In the 1820s Haiti ruled the whole island of Hispaniola"
+  verdict: confirmed
+  sources:
+    - {title: "Weeks & Ramirez Zabala, The Samana Americans, Expedition 47:1 (2005)", url: "https://www.penn.museum/sites/expedition/the-samana-americans/", quote: "which then occupied the entire Caribbean island of Hispaniola"}
+    - {title: "Martha Ellen Davis, BAGN 129 (2011), archived PDF", url: "https://web.archive.org/web/20151225030905/http://www.bagn.academiahistoria.org.do/boletines/boletin129/BAGN_2011_No_129-09.pdf", quote: "sobre la inmigración de afroamericanos a la isla Española en 1824-25, entonces Haití"}
+  note: ""
+- card: samana-americans
+  fact: "In 1824–25 free Black Americans from the mid-Atlantic coast of the US emigrated to Haiti"
+  verdict: confirmed
+  sources:
+    - {title: "Weeks & Ramirez Zabala, The Samana Americans, Expedition 47:1 (2005)", url: "https://www.penn.museum/sites/expedition/the-samana-americans/", quote: "In August 1824, African-Americans from Philadelphia and other U.S. coastal cities ... accepted the offer"}
+    - {title: "Martha Ellen Davis, BAGN 129 (2011), archived PDF", url: "https://web.archive.org/web/20151225030905/http://www.bagn.academiahistoria.org.do/boletines/boletin129/BAGN_2011_No_129-09.pdf", quote: "la región atlántica central de Estados Unidos (1824-25)"}
+  note: ""
+- card: samana-americans
+  fact: "They brought the African Methodist Episcopal Church with them"
+  verdict: confirmed
+  sources:
+    - {title: "Martha Ellen Davis, BAGN 129 (2011), archived PDF", url: "https://web.archive.org/web/20151225030905/http://www.bagn.academiahistoria.org.do/boletines/boletin129/BAGN_2011_No_129-09.pdf", quote: "La obra protestante fue iniciada en Samaná con la llegada del reverendo Isaac Miller, de la iglesia Africana Metodista Episcopal, quien llegó como inmigrante afro-norteamericano en 1824"}
+    - {title: "Weeks & Ramirez Zabala, The Samana Americans, Expedition 47:1 (2005)", url: "https://www.penn.museum/sites/expedition/the-samana-americans/", quote: "Several denominations are represented, including Evangelical, Pentecostal, Church of God, African Methodist Episcopal"}
+  note: ""
+- card: samana-americans
+  fact: "The Samaná settlement held, its families together around Protestant churches"
+  verdict: confirmed
+  sources:
+    - {title: "Weeks & Ramirez Zabala, The Samana Americans, Expedition 47:1 (2005)", url: "https://www.penn.museum/sites/expedition/the-samana-americans/", quote: "held together culturally by religious beliefs, a common language ... and struc­turally by their church organization ... Most are Protestants"}
+    - {title: "Martha Ellen Davis, BAGN 129 (2011), archived PDF", url: "https://web.archive.org/web/20151225030905/http://www.bagn.academiahistoria.org.do/boletines/boletin129/BAGN_2011_No_129-09.pdf", quote: "la obra pastoral y misionera de la iglesia Africana Metodista Episcopal (refundada en Samaná en 1899) y la Metodista Wesleyana ... ha seguido hasta hoy"}
+  note: ""
+- card: samana-americans
+  fact: "English remained the language of home for generations"
+  verdict: confirmed
+  sources:
+    - {title: "Weeks & Ramirez Zabala, The Samana Americans, Expedition 47:1 (2005)", url: "https://www.penn.museum/sites/expedition/the-samana-americans/", quote: "American English has always been the preferred language in the home"}
+    - {title: "Martha Ellen Davis, BAGN 129 (2011), archived PDF", url: "https://web.archive.org/web/20151225030905/http://www.bagn.academiahistoria.org.do/boletines/boletin129/BAGN_2011_No_129-09.pdf", quote: "la historia oral heredada de sus padres en su lengua materna, el inglés"}
+  note: ""
+- card: samana-americans
+  fact: "Descendants still carry North American surnames such as Willmore"
+  verdict: confirmed
+  sources:
+    - {title: "Weeks & Ramirez Zabala, The Samana Americans, Expedition 47:1 (2005)", url: "https://www.penn.museum/sites/expedition/the-samana-americans/", quote: "North American surnames, including uncommon ones such as Willmore and Vanderhorst"}
+    - {title: "Martha Ellen Davis, BAGN 129 (2011), archived PDF", url: "https://web.archive.org/web/20151225030905/http://www.bagn.academiahistoria.org.do/boletines/boletin129/BAGN_2011_No_129-09.pdf", quote: "conocí al Reverendo Nehemiah, Nehemías, Willmore (1909-1987) en el Barrio Willmore"}
+  note: ""
+# ---------------- merikins ----------------
+- card: merikins
+  fact: "When the British fleet entered Chesapeake Bay in the War of 1812, enslaved people from Maryland and Virginia, later Georgia, escaped to its ships"
+  verdict: confirmed
+  sources:
+    - {title: "John McNish Weiss, The Corps of Colonial Marines (archived 2018)", url: "https://web.archive.org/web/20180208143724/http://www.mcnishandweiss.co.uk/history/colonialmarines.html", quote: "Recruited by the British first in Maryland and Virginia and later in Georgia ... men, women and children rowed out perilously into the Chesapeake Bay by canoe to reach the squadron"}
+    - {title: "NALIS: The Merikins, Free Black Settlers 1815–1816 (archived)", url: "https://web.archive.org/web/2016id_/http://www.nalis.gov.tt/Research/SubjectGuide/TheMerikinsFreeBlackSettlers18151816/tabid/563/Default.aspx?PageContentMode=1", quote: "They were recruited mainly from Chesapeake Bay, shores of Virginia and Maryland, as well as from the coast of Georgia"}
+  note: ""
+- card: merikins
+  fact: "Many men enlisted in the Corps of Colonial Marines, six companies who fought against their former masters"
+  verdict: confirmed
+  sources:
+    - {title: "John McNish Weiss, The Corps of Colonial Marines (archived 2018)", url: "https://web.archive.org/web/20180208143724/http://www.mcnishandweiss.co.uk/history/colonialmarines.html", quote: "the six Black companies became the 3rd Battalion Colonial Marines ... took up arms against their ex-masters as a disciplined military unit"}
+    - {title: "NALIS: The Merikins, Free Black Settlers 1815–1816 (archived)", url: "https://web.archive.org/web/2016id_/http://www.nalis.gov.tt/Research/SubjectGuide/TheMerikinsFreeBlackSettlers18151816/tabid/563/Default.aspx?PageContentMode=1", quote: "they were recruited into a total of six (6) military companies"}
+  note: ""
+- card: merikins
+  fact: "After the war they were garrisoned in Bermuda and refused transfer to the West India Regiments, holding Britain to the promise of free settlement"
+  verdict: confirmed
+  sources:
+    - {title: "John McNish Weiss, The Corps of Colonial Marines (archived 2018)", url: "https://web.archive.org/web/20180208143724/http://www.mcnishandweiss.co.uk/history/colonialmarines.html", quote: "garrisoned in Bermuda on Ireland Island ... When transfer to the West India Regiments was proposed and the men again rejected the idea ... Their persistent intransigence finally led the British government to offer to place them in Trinidad as independent farmers"}
+    - {title: "NATT: Our African Legacy, Roots and Routes", url: "https://h.natt.gov.tt/sites/default/files/Our_African_Legacy_Roots_and_Routes.pdf", quote: "the soldiers were temporarily settled in the garrison at Bermuda where they were offered a choice of either serving in the West India Regiment or being settled as free men in a British colony. Vehemently refusing the former"}
+  note: "The 'bargain': Cochrane's proclamation of 2 April 1814, printed by NALIS: 'with a view of entering into His Majesty’s Service, or of being received as Free Settlers into some of His Majesty’s Colonies'."
+- card: merikins
+  fact: "In 1815 and 1816 more than seven hundred men, women and children were landed in Trinidad"
+  verdict: confirmed
+  sources:
+    - {title: "John McNish Weiss, The Corps of Colonial Marines (archived 2018)", url: "https://web.archive.org/web/20180208143724/http://www.mcnishandweiss.co.uk/history/colonialmarines.html", quote: "In 1815 and 1816 Trinidad welcomed over seven hundred free Black American settlers"}
+    - {title: "Lovell Francis, National Archives of Trinidad and Tobago blog (2015)", url: "https://nationalarchivestt.wordpress.com/2015/08/14/the-story-of-the-merikens-in-trinidad/", quote: "in the years 1815-1816, 544 men, 83 women and 85 children of African origin arrived as freed people"}
+  note: "NATT PDF ('over 700') is the same publisher as the NATT blog."
+- card: merikins
+  fact: "Most people of African descent in Trinidad stayed enslaved until 1838"
+  verdict: corrected
+  sources:
+    - {title: "Lovell Francis, National Archives of Trinidad and Tobago blog (2015)", url: "https://nationalarchivestt.wordpress.com/2015/08/14/the-story-of-the-merikens-in-trinidad/", quote: "the vast majority of persons of their hue and ethnicity were still uncomfortably ensconced in chattel servitude until 1838"}
+    - {title: "Britannica: Trinidad and Tobago, History (archived 5 Nov 2026)", url: "http://web.archive.org/web/20261105024335/https://www.britannica.com/place/Trinidad-and-Tobago/History", quote: "Slavery was abolished in two stages between 1834 and 1838"}
+  note: "Ledger's two NATT items are one publisher; Britannica added."
+- card: merikins
+  fact: "They were settled around the mission of Savanna Grande, now Princes Town, each company in its own village; the area is still called the Company Villages"
+  verdict: confirmed
+  sources:
+    - {title: "John McNish Weiss, The Corps of Colonial Marines (archived 2018)", url: "https://web.archive.org/web/20180208143724/http://www.mcnishandweiss.co.uk/history/colonialmarines.html", quote: "around the Mission of Savanna Grande , now Princes Town , mostly within the area known since then as The Company Villages"}
+    - {title: "NALIS: The Merikins, Free Black Settlers 1815–1816 (archived)", url: "https://web.archive.org/web/2016id_/http://www.nalis.gov.tt/Research/SubjectGuide/TheMerikinsFreeBlackSettlers18151816/tabid/563/Default.aspx?PageContentMode=1", quote: "They were settled in the South of Trinidad, in the Naparima District/Savanna Grande (now Princes Town). Many of the “Merikin” Company Villages have completely changed their original names"}
+  note: "Each company its own village: NATT PDF 'The village names were based on the naval companies'; Weiss names Fourth, Fifth, Sixth Company villages."
+- card: merikins
+  fact: "The land was forested"
+  verdict: confirmed
+  sources:
+    - {title: "Lovell Francis, National Archives of Trinidad and Tobago blog (2015)", url: "https://nationalarchivestt.wordpress.com/2015/08/14/the-story-of-the-merikens-in-trinidad/", quote: "carving thriving communities out of heavily forested land"}
+    - {title: "NALIS: The Merikins, Free Black Settlers 1815–1816 (archived)", url: "https://web.archive.org/web/2016id_/http://www.nalis.gov.tt/Research/SubjectGuide/TheMerikinsFreeBlackSettlers18151816/tabid/563/Default.aspx?PageContentMode=1", quote: "It is famous for its mixed farming and large virgin forest areas such as Cata Hill"}
+  note: ""
+- card: merikins
+  fact: "They were called Merikins, a Creole rendering of 'American'"
+  verdict: confirmed
+  sources:
+    - {title: "Lovell Francis, National Archives of Trinidad and Tobago blog (2015)", url: "https://nationalarchivestt.wordpress.com/2015/08/14/the-story-of-the-merikens-in-trinidad/", quote: "eventually dubbed Merikens, a Creole rendering of the word American"}
+    - {title: "NALIS: The Merikins, Free Black Settlers 1815–1816 (archived)", url: "https://web.archive.org/web/2016id_/http://www.nalis.gov.tt/Research/SubjectGuide/TheMerikinsFreeBlackSettlers18151816/tabid/563/Default.aspx?PageContentMode=1", quote: "they meant to say that I am American but instead they said I am “Merikin”"}
+  note: ""
+# ---------------- loiza-vejigantes ----------------
+- card: loiza-vejigantes
+  fact: "Loíza, on Puerto Rico's north-east coast, is the island's centre of African heritage"
+  verdict: confirmed
+  sources:
+    - {title: "Lowell Fiet, Masked Enigmas, ReVista (Harvard)", url: "https://revista.drclas.harvard.edu/masked-enigmas", quote: "Loíza’s African-Puerto Rican population base and the Fiestas of Santiago Apóstol ... make that locality the seat of African cultural influence in Puerto Rico"}
+    - {title: "Comboni Missionaries: Puerto Rico, Dancing People", url: "https://www.combonimissionaries.co.uk/?p=6823", quote: "the Saint James feast held in Loiza, a village that combines Spanish culture and African traditions"}
+  note: "North-east coast: Fiet 'in Loíza, on the northeast coast'; Comboni 'north-eastern beach of Puerto Rico'."
+- card: loiza-vejigantes
+  fact: "Every July Loíza keeps the Fiestas of Santiago Apóstol, St James, warrior saint of Spain said to have driven out the Moors"
+  verdict: confirmed
+  sources:
+    - {title: "Lowell Fiet, Masked Enigmas, ReVista (Harvard)", url: "https://revista.drclas.harvard.edu/masked-enigmas", quote: "celebrated annually from July 25 to 28 ... The warrior St. James is the patron saint of Spain, credited with appearing miraculously to help drive the Moors from the Iberian peninsula"}
+    - {title: "Cesiach López Maldonado, Primera Hora (29 July 2017)", url: "https://www.primerahora.com/entretenimiento/ph-mas-coge-calle/notas/se-monta-la-fiesta-en-loiza/", quote: "Se dice que Santiago, durante la conquista medieval europea, decapitaba a los moros, por eso su apodo de “Santiago Mata Moros”"}
+  note: ""
+- card: loiza-vejigantes
+  fact: "Legend: a small carved image of the saint was found among the roots of a cork tree at Las Carreras outside the town"
+  verdict: confirmed
+  sources:
+    - {title: "Lowell Fiet, Masked Enigmas, ReVista (Harvard)", url: "https://revista.drclas.harvard.edu/masked-enigmas", quote: "the legend says, that fishermen found the carved wooden image of Santiago Apóstol (now Santiago of the Children) under a cork tree"}
+    - {title: "Cesiach López Maldonado, Primera Hora (29 July 2017)", url: "https://www.primerahora.com/entretenimiento/ph-mas-coge-calle/notas/se-monta-la-fiesta-en-loiza/", quote: "en el sector Las Carreras apareció entre un hueco en las raíces de un centenario árbol de corcho, una talla religiosa de un santo montado a caballo"}
+  note: ""
+- card: loiza-vejigantes
+  fact: "The legend's date is disputed: around 1830 (Fiet) or 1600 (Primera Hora)"
+  verdict: confirmed
+  sources:
+    - {title: "Lowell Fiet, Masked Enigmas, ReVista (Harvard)", url: "https://revista.drclas.harvard.edu/masked-enigmas", quote: "The date usually cited for the discovery is around 1830"}
+    - {title: "Cesiach López Maldonado, Primera Hora (29 July 2017)", url: "https://www.primerahora.com/entretenimiento/ph-mas-coge-calle/notas/se-monta-la-fiesta-en-loiza/", quote: "Según la historia, que data de 1600"}
+  note: "Kept as a dispute; card years [1830] follow Fiet."
+- card: loiza-vejigantes
+  fact: "Three images, St James of the Men, of the Women and of the Children, are carried in procession on 26, 27 and 28 July"
+  verdict: confirmed
+  sources:
+    - {title: "Lowell Fiet, Masked Enigmas, ReVista (Harvard)", url: "https://revista.drclas.harvard.edu/masked-enigmas", quote: "Santiago of the Men (July 26), Santiago of the Women (July 27) and “Santiaguito” or Santiago of the Children (July 28)"}
+    - {title: "Cesiach López Maldonado, Primera Hora (29 July 2017)", url: "https://www.primerahora.com/entretenimiento/ph-mas-coge-calle/notas/se-monta-la-fiesta-en-loiza/", quote: "Los días siguiente (26, 27 y 28 de julio) le tocaba el turno a la procesión de los santos, Santiago el de los Hombres, Santiago el de las Mujeres y Santiago el de los Niños"}
+  note: ""
+- card: loiza-vejigantes
+  fact: "Masked characters: Caballeros, Locas (men dressed as women), ragged Viejos and devilish vejigantes"
+  verdict: confirmed
+  sources:
+    - {title: "Lowell Fiet, Masked Enigmas, ReVista (Harvard)", url: "https://revista.drclas.harvard.edu/masked-enigmas", quote: "devilish Vejigantes , fancy-dressed Spaniards or Caballeros , cross-dressed Locas ... and tattered Viejos or Old Men"}
+    - {title: "Comboni Missionaries: Puerto Rico, Dancing People", url: "https://www.combonimissionaries.co.uk/?p=6823", quote: "The vejigante image is the antithesis of the caballero figure, it represents evil, the devil that S. James must fight"}
+  note: "Discover Puerto Rico also: 'the Locas , men dressed as crazy women'."
+- card: loiza-vejigantes
+  fact: "Ponce's vejigante masks are papier-mâché; Loíza's are carved from coconut and crowned with horns"
+  verdict: confirmed
+  sources:
+    - {title: "Lowell Fiet, Masked Enigmas, ReVista (Harvard)", url: "https://revista.drclas.harvard.edu/masked-enigmas", quote: "the Vejigante of pre-Lenten Carnival in Ponce, on the south coast, with its paper-maché mask, and the Vejigante ... in Loíza ... with its mask carved from coconut husks"}
+    - {title: "Cesiach López Maldonado, Primera Hora (29 July 2017)", url: "https://www.primerahora.com/entretenimiento/ph-mas-coge-calle/notas/se-monta-la-fiesta-en-loiza/", quote: "la máscara era de coco"}
+  note: "Horns: Discover Puerto Rico 'long, thin wooden horns arranged like a crown'; Comboni 'has horns on the front or on the side of the mask'."
+- card: loiza-vejigantes
+  fact: "The masks are said to bring the ancestors back from the other world"
+  verdict: confirmed
+  sources:
+    - {title: "Lowell Fiet, Masked Enigmas, ReVista (Harvard)", url: "https://revista.drclas.harvard.edu/masked-enigmas", quote: "it evokes the egungun quality of calling forth the ancestors and allowing them to return"}
+    - {title: "Discover Puerto Rico: The Vejigante Mask (archived 11 Jan 2026)", url: "http://web.archive.org/web/20260111233220/https://www.discoverpuertorico.com/article/vejigante-mask-symbol-puerto-rican-heritage", quote: "These masks are said to symbolize ancestors returning from the other world"}
+  note: "Discover Puerto Rico attributes this to the scholar quoted (Aguilar); accepted together with Fiet."
+- card: loiza-vejigantes
+  fact: "Local carvers make them, among them Castor Ayala and his family"
+  verdict: confirmed
+  sources:
+    - {title: "Lowell Fiet, Masked Enigmas, ReVista (Harvard)", url: "https://revista.drclas.harvard.edu/masked-enigmas", quote: "The artist Castor Ayala solidified the classical mask style in the 1950s, 60s, and 70s. His son Raúl"}
+    - {title: "Museo de las Américas: La cultura loiceña ...", url: "https://museolasamericas.org/en/la-cultura-loicena-en-tiempos-de-las-fiestas-en-honor-a-santiago-apostol", quote: "Castor y Carlos Ayala, Celele Pizarro, Félix Cepeda, Pedro Laviera, Raúl Ayala"}
+  note: ""
+# ---------------- fete-des-cuisinieres ----------------
+- card: fete-des-cuisinieres
+  fact: "The Fête des Cuisinières takes place each August in Pointe-à-Pitre, Guadeloupe"
+  verdict: confirmed
+  sources:
+    - {title: "RCI Guadeloupe: Fête des Cuisinières en Guadeloupe (2026)", url: "https://rci.fm/guadeloupe/infos/Informations-pratiques/Fete-des-Cuisinieres-en-Guadeloupe-lincontournable-evenement-culturel", quote: "Chaque mois d'août, Pointe-à-Pitre se pare de madras et de couleurs pour célébrer la Fête des Cuisinières"}
+    - {title: "Outremers360: Fête des Cuisinières 2026, 110 ans", url: "https://outremers360.com/bassin-atlantique-appli/fete-des-cuisinieres-de-guadeloupe-2026-110-ans-au-service-de-la-promotion-de-la-gastronomie-creole-et-de-sa-transmission", quote: "aura lieu le samedi 8 août 2026 ... défilé en costumes traditionnels dans les rues de Pointe-à-Pitre en musique"}
+  note: ""
+- card: fete-des-cuisinieres
+  fact: "It goes back to 1916, when cooks founded a mutual society to pay for decent funerals; their association still organises it"
+  verdict: corrected
+  sources:
+    - {title: "RCI Guadeloupe: Fête des Cuisinières en Guadeloupe (2026)", url: "https://rci.fm/guadeloupe/infos/Informations-pratiques/Fete-des-Cuisinieres-en-Guadeloupe-lincontournable-evenement-culturel", quote: "La Fête des Cuisinières est organisée depuis 1916 par l'Association des cuisinières de Guadeloupe. À l'origine ... une véritable mutuelle ... afin de garantir des obsèques dignes à leurs membres"}
+    - {title: "Le Routard: Fête des cuisinières à Pointe-à-Pitre", url: "https://www.routard.com/fr/agenda/a/fete-des-cuisinieres-a-pointe-a-pitre", quote: "cette fête commémore surtout la création en 1916 de la 1e mutuelle des cuisinières, une tontine destinés à financer un enterrement digne"}
+    - {title: "Eline Ulysse, Outremers360: 108e édition (2024)", url: "https://outremers360.com/bassin-atlantique-appli/la-ronde-des-cuisinieres-dans-les-rues-de-pointe-a-pitre-le-10-aout-prochain-pour-la-108eme-edition-de-la-fete-des-cuisinieres", quote: "Sous l’impulsion de leur association présidée aujourd’hui par le sémillant Rony Théophile"}
+  note: "'Organised ever since' rested on RCI alone; card now says the association still organises it (RCI + Outremers360 2024)."
+- card: fete-des-cuisinieres
+  fact: "It falls on the Saturday nearest 10 August, St Lawrence's day"
+  verdict: confirmed
+  sources:
+    - {title: "RCI Guadeloupe: Fête des Cuisinières en Guadeloupe (2026)", url: "https://rci.fm/guadeloupe/infos/Informations-pratiques/Fete-des-Cuisinieres-en-Guadeloupe-lincontournable-evenement-culturel", quote: "elle se tient le samedi le plus proche du 10 août, jour de la Saint-Laurent, saint patron des cuisiniers et des rôtisseurs"}
+    - {title: "Le Routard: Fête des cuisinières à Pointe-à-Pitre", url: "https://www.routard.com/fr/agenda/a/fete-des-cuisinieres-a-pointe-a-pitre", quote: "Le samedi le plus proche du 10 août"}
+  note: ""
+- card: fete-des-cuisinieres
+  fact: "St Lawrence, patron of cooks, was burned on a gridiron for refusing to hand over church money"
+  verdict: confirmed
+  sources:
+    - {title: "Eline Ulysse, Outremers360: 108e édition (2024)", url: "https://outremers360.com/bassin-atlantique-appli/la-ronde-des-cuisinieres-dans-les-rues-de-pointe-a-pitre-le-10-aout-prochain-pour-la-108eme-edition-de-la-fete-des-cuisinieres", quote: "Saint-Laurent de Rome, supplicié (brûlé à petit feu sur un gril) pour avoir refusé de céder les deniers de l’église réservés aux pauvres à l’empereur Valérien"}
+    - {title: "Le Routard: Fête des cuisinières à Pointe-à-Pitre", url: "https://www.routard.com/fr/agenda/a/fete-des-cuisinieres-a-pointe-a-pitre", quote: "Saint Laurent était un prêtre qui fut brûlé sur un grill parce qu’il refusait de céder les bien de l’église à l’État"}
+  note: "Outremers360 (2026) repeats Le Routard verbatim, so it is not counted separately; the 2024 Outremers360 text is different. Card keeps 'tradition says'."
+- card: fete-des-cuisinieres
+  fact: "Mass at the church of St Peter and St Paul, where cooks have dishes and utensils blessed in flowered baskets"
+  verdict: corrected
+  sources:
+    - {title: "RCI Guadeloupe: Fête des Cuisinières en Guadeloupe (2026)", url: "https://rci.fm/guadeloupe/infos/Informations-pratiques/Fete-des-Cuisinieres-en-Guadeloupe-lincontournable-evenement-culturel", quote: "Les cuisinières y font bénir leurs plats et leurs ustensiles, soigneusement disposés dans des paniers fleuris au pied de l'autel"}
+    - {title: "Le Routard: Fête des cuisinières à Pointe-à-Pitre", url: "https://www.routard.com/fr/agenda/a/fete-des-cuisinieres-a-pointe-a-pitre", quote: "Elles vont faire bénir leurs plats, soigneusement alignés au pied de l’autel dans des paniers agrémentés de fleurs"}
+  note: "Building: the church of Saint-Pierre-et-Saint-Paul (Outremers360 2026 'l’église Saint-Pierre – Saint Paul de Pointe-à-Pitre'; RCI 2026 'l'église Saint-Pierre-et-St-Paul'). It is not Guadeloupe's cathedral; 'cathedral' changed to 'church' in EN and RU."
+- card: fete-des-cuisinieres
+  fact: "They parade in Creole dress with madras, jewellery and embroidered aprons bearing St Lawrence's gridiron"
+  verdict: confirmed
+  sources:
+    - {title: "RCI Guadeloupe: Fête des Cuisinières en Guadeloupe (2026)", url: "https://rci.fm/guadeloupe/infos/Informations-pratiques/Fete-des-Cuisinieres-en-Guadeloupe-lincontournable-evenement-culturel", quote: "robe créole, madras, coiffe, tablier brodé du gril de saint Laurent et bijoux créoles"}
+    - {title: "Le Routard: Fête des cuisinières à Pointe-à-Pitre", url: "https://www.routard.com/fr/agenda/a/fete-des-cuisinieres-a-pointe-a-pitre", quote: "parées de leurs plus beaux bijoux et portant un tablier sur lequel est brodé leur emblème : le gril de saint Laurent"}
+  note: ""
+- card: fete-des-cuisinieres
+  fact: "A banquet with music and dancing ends the day"
+  verdict: confirmed
+  sources:
+    - {title: "RCI Guadeloupe: Fête des Cuisinières en Guadeloupe (2026)", url: "https://rci.fm/guadeloupe/infos/Informations-pratiques/Fete-des-Cuisinieres-en-Guadeloupe-lincontournable-evenement-culturel", quote: "La journée se conclut par un banquet traditionnel où sont mises à l'honneur les spécialités créoles ... une ambiance dansante"}
+    - {title: "Le Routard: Fête des cuisinières à Pointe-à-Pitre", url: "https://www.routard.com/fr/agenda/a/fete-des-cuisinieres-a-pointe-a-pitre", quote: "Un grand repas suivi d’un bal conclut les réjouissances"}
+  note: "Ledger's pair (Outremers360 2026 + Routard) shares one text; RCI added."
+- card: fete-des-cuisinieres
+  fact: "In 2026 it reached its 110th edition, with the mass held in front of the town hall because the church was under repair"
+  verdict: confirmed
+  sources:
+    - {title: "Outremers360: Fête des Cuisinières 2026, 110 ans", url: "https://outremers360.com/bassin-atlantique-appli/fete-des-cuisinieres-de-guadeloupe-2026-110-ans-au-service-de-la-promotion-de-la-gastronomie-creole-et-de-sa-transmission", quote: "pour célébrer sa 110 ème édition ... Une cérémonie religieuse qui, pour cause de travaux, va avoir lieu devant l’hôtel de ville"}
+    - {title: "RCI Guadeloupe: 110e anniversaire (2026)", url: "https://rci.fm/guadeloupe/infos/Culture/110e-anniversaire-de-la-fete-des-Cuisinieres-les-jeunes-reprennent-le-flambeau", quote: "La messe s’est déroulée sur la place de la mairie de Point-à-Pitre et non à l'église Saint-Pierre-et-St-Paul, car l'église est en travaux"}
+  note: ""
+- card: fete-des-cuisinieres
+  fact: "The festival pays tribute to women passing on Creole cooking"
+  verdict: confirmed
+  sources:
+    - {title: "RCI Guadeloupe: Fête des Cuisinières en Guadeloupe (2026)", url: "https://rci.fm/guadeloupe/infos/Informations-pratiques/Fete-des-Cuisinieres-en-Guadeloupe-lincontournable-evenement-culturel", quote: "l'événement rend hommage au rôle central des femmes dans la transmission du patrimoine culinaire créole"}
+    - {title: "Outremers360: Fête des Cuisinières 2026, 110 ans", url: "https://outremers360.com/bassin-atlantique-appli/fete-des-cuisinieres-de-guadeloupe-2026-110-ans-au-service-de-la-promotion-de-la-gastronomie-creole-et-de-sa-transmission", quote: "met à l’honneur la gastronomie créole et le travail de transmission des femmes guadeloupéennes"}
+  note: ""
+unledgered:
+- card: remedios-del-valle
+  fact: "Front matter: further 'Monument ... Plazoleta Alfonso Castelao, Buenos Aires (2022)'"
+  verdict: confirmed
+  sources:
+    - {title: "Argentina.gob.ar (Ministerio de Cultura): Un monumento para María Remedios del Valle (2022)", url: "https://www.argentina.gob.ar/noticias/un-monumento-para-maria-remedios-del-valle", quote: "realizará el emplazamiento del monumento para honrar su figura en la plazoleta Alfonso Castelao, ubicada en Bernardo de Irigoyen y Estados Unidos, CABA"}
+  note: "Primary announcement of the monument (8 November 2022); a further-reading pointer, not a body fact."
+- card: mary-seacole
+  fact: "Body: in 1854 Britain went to war with Russia in Crimea"
+  verdict: confirmed
+  sources:
+    - {title: "London Museum: Mary Seacole", url: "https://www.londonmuseum.org.uk/collections/london-stories/mary-seacole-doctress-crimean-war/", quote: "around the time Britain entered the war with Russia in 1854"}
+    - {title: "Mary Seacole, Wonderful Adventures (1857), Project Gutenberg", url: "https://www.gutenberg.org/cache/epub/23031/pg23031.txt", quote: "war had been declared against Russia, and we were all anxiously expecting news of a descent upon the Crimea"}
+  note: ""
+- card: mary-seacole
+  fact: "Front matter: Balaclava 44.50, 33.60; Kingston 17.97, -76.79"
+  verdict: confirmed
+  sources:
+    - {title: "London Museum: Mary Seacole", url: "https://www.londonmuseum.org.uk/collections/london-stories/mary-seacole-doctress-crimean-war/", quote: "set up the so-called British Hotel near where fighting had been in Balaclava"}
+  note: "Coordinates checked against the towns' positions; fine for an atlas point."
+- card: haitian-vodou
+  fact: "Cross-links [[haitian-revolution]] and [[haitian-creole]] exist"
+  verdict: confirmed
+  sources:
+  note: "Both card files present in content/cards."
+- card: regla-de-ocha
+  fact: "Front matter: further 'Lydia Cabrera, El monte (Havana, 1954)'"
+  verdict: corrected
+  sources:
+    - {title: "Duke University Press / Project MUSE: Cabrera, El Monte (2023)", url: "https://muse.jhu.edu/book/111816", quote: "First published in Cuba in 1954 and appearing here in English for the first time, Lydia Cabrera’s El Monte"}
+    - {title: "University of Miami Libraries: Lydia Cabrera guide", url: "https://guides.library.miami.edu/lydiacabrera", quote: "The result was El Monte (The Forest or The Wilderness), published in 1954"}
+  note: "Havana as the place of publication was not found in two sources; changed to '(Cuba, 1954)' in EN and RU."
+- card: regla-de-ocha
+  fact: "Cross-links [[lucumi]] and [[candomble]] exist"
+  verdict: confirmed
+  sources:
+  note: "Both card files present."
+- card: congos-villa-mella
+  fact: "Dispute addition: Tejeda Ortiz calls the Holy Spirit story a later legend"
+  verdict: confirmed
+  sources:
+    - {title: "Dagoberto Tejeda Ortiz, Acento (2 June 2026)", url: "https://acento.com.do/cultura/los-congos-la-unesco-y-el-25-aniversario-9689754.html", quote: "la \"entrega\" de los instrumentos musicales, sus cantos y sus bailes por el Espíritu Santo es la versión última para definir lo que conocemos hoy como los Congos"}
+  note: "Attributed opinion of a named anthropologist; quoted from his own article."
+- card: congos-villa-mella
+  fact: "Front matter: further 'Carlos Hernández Soto, Kalunga eh! Los Congos de Villa Mella (Santo Domingo, 2004)'"
+  verdict: confirmed
+  sources:
+    - {title: "Open Library: Kalunga eh! los Congos de Villa Mella", url: "https://openlibrary.org/works/OL12431893W", quote: "Kalunga eh! los Congos de Villa Mella ... 2004 ... Santo Domingo, República Dominicana ... Editorial Letra Gráfica"}
+    - {title: "Dagoberto Tejeda Ortiz, Acento (2 June 2026)", url: "https://acento.com.do/cultura/los-congos-la-unesco-y-el-25-aniversario-9689754.html", quote: "aún en las investigaciones más trascendentes como las de Aída Cartagena P. y Carlos Hernández"}
+  note: "Bibliographic pointer."
+- card: congos-villa-mella
+  fact: "RU: place name spelled «Вилья-Меллы» in title and further, «Вилья-Мелья» in places"
+  verdict: corrected
+  sources:
+  note: "Unified to «Вилья-Мелья» (gen. «Вилья-Мельи»), the regular rendering of Spanish ll."
+- card: samana-americans
+  fact: "RU: 'the AME church' rendered as «методистская епископальная церковь»"
+  verdict: corrected
+  sources:
+  note: "Restored the full name «Африканская методистская епископальная церковь»; last sentence of RU smoothed."
+- card: merikins
+  fact: "Body: two centuries on, their descendants still bear the name"
+  verdict: confirmed
+  sources:
+    - {title: "John McNish Weiss, The Corps of Colonial Marines (archived 2018)", url: "https://web.archive.org/web/20180208143724/http://www.mcnishandweiss.co.uk/history/colonialmarines.html", quote: "The community founded by the American Settlers, the Merikens , maintains and celebrates its identity and memory today"}
+    - {title: "NALIS: The Merikins, Free Black Settlers 1815–1816 (archived)", url: "https://web.archive.org/web/2016id_/http://www.nalis.gov.tt/Research/SubjectGuide/TheMerikinsFreeBlackSettlers18151816/tabid/563/Default.aspx?PageContentMode=1", quote: "Notable Merikins and Merikin Descendants ... MERIKIN DESCENDANTS One Merikin descendant, who still has the 16 acres of land which was granted to his original ancestor"}
+  note: ""
+- card: merikins
+  fact: "Front matter: further 'John McNish Weiss, The Merikens: Free Black American Settlers in Trinidad, 1815–16 (London, 2002)'"
+  verdict: confirmed
+  sources:
+    - {title: "NATT: Our African Legacy, Roots and Routes", url: "https://h.natt.gov.tt/sites/default/files/Our_African_Legacy_Roots_and_Routes.pdf", quote: "Weiss, John Mc Nish. The Merikins: Free Black American Settlers in Trinidad 1815-16, London: McNish and Weiss, 2002"}
+    - {title: "Lovell Francis, National Archives of Trinidad and Tobago blog (2015)", url: "https://nationalarchivestt.wordpress.com/2015/08/14/the-story-of-the-merikens-in-trinidad/", quote: "The Merikens: Free Black American Settlers in Trinidad – John McNish Weiss"}
+  note: "Both NATT, one publisher; bibliographic pointer only."
+- card: loiza-vejigantes
+  fact: "Wow: the three images are carried to the cork tree where the first was found"
+  verdict: corrected
+  sources:
+    - {title: "Lowell Fiet, Masked Enigmas, ReVista (Harvard)", url: "https://revista.drclas.harvard.edu/masked-enigmas", quote: "with devotees carrying the saints on their shoulders on Route 187 for nearly three miles to the neighborhood of Las Carreras. It was there, the legend says, that fishermen found the carved wooden image"}
+  note: "Only Fiet places the procession's end at the tree; wow rewritten to 'carries in procession three images of St James, a saint said to have been found among the roots of a cork tree' (Fiet + Primera Hora), EN and RU."
+- card: loiza-vejigantes
+  fact: "Front matter: further 'Museo de las Américas, Old San Juan: vejigante masks from Loíza'"
+  verdict: corrected
+  sources:
+    - {title: "Museo de las Américas: La cultura loiceña ...", url: "https://museolasamericas.org/en/la-cultura-loicena-en-tiempos-de-las-fiestas-en-honor-a-santiago-apostol", quote: "La exposición La cultura loiceña en tiempos de las fiestas en honor a Santiago Apóstol exhibe una extraordinaria colección de máscaras de vejigantes"}
+  note: "A temporary exhibition, not shown to be on permanent display; item removed from EN and RU further."
+- card: soup-joumou
+  fact: "Body: 1 January 1804 Haiti declared independence after the Haitian Revolution"
+  verdict: confirmed
+  sources:
+    - {title: "Saeed Kamali Dehghan, The Guardian (17 Dec 2021)", url: "https://www.theguardian.com/global-development/2021/dec/17/culture-in-a-bowl-haitis-joumou-soup-awarded-protected-status-by-unesco", quote: "Since Haiti’s independence in 1804"}
+    - {title: "UNESCO ICH: Joumou soup", url: "https://ich.unesco.org/en/RL/joumou-soup-01853", quote: "Haitians took ownership of the soup when they gained independence from France"}
+  note: ""
+- card: fete-des-cuisinieres
+  fact: "Front matter: Pointe-à-Pitre 16.2411, -61.5331; years [1916]"
+  verdict: confirmed
+  sources:
+    - {title: "RCI Guadeloupe: Fête des Cuisinières en Guadeloupe (2026)", url: "https://rci.fm/guadeloupe/infos/Informations-pratiques/Fete-des-Cuisinieres-en-Guadeloupe-lincontournable-evenement-culturel", quote: "Une tradition guadeloupéenne née en 1916"}
+  note: ""

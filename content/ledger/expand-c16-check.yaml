@@ -1,0 +1,809 @@
+# Second, independent fact-check of batch c16 (2026-11-14).
+# Every source page was reopened (direct or web.archive.org); quotes were matched against the fetched text. PDF/OCR quotes (Cunin, Will South, Morel latin-1, Arsenal sheet) match up to OCR spacing.
+# CubaNet (cubanet.org/?p=306208) returned 403 and has no archive snapshot: all its uses were replaced or the facts removed.
+entries:
+  - card: pareja-calling-of-matthew
+    fact: "Painters' guilds did not admit enslaved people; enslaved and formerly enslaved people were barred from becoming professional painters"
+    verdict: confirmed
+    sources:
+      - {title: "Metropolitan Museum of Art: Velázquez, Juan de Pareja, catalogue entry", url: "https://web.archive.org/web/2024/https://www.metmuseum.org/art/collection/search/437869", quote: "guilds did not permit enslaved members"}
+      - {title: "Smarthistory: Juan de Pareja, The Calling of Saint Matthew", url: "https://web.archive.org/web/2024/https://smarthistory.org/juan-de-pareja-the-calling-of-st-matthew/", quote: "where Afro-Hispanic enslaved people and formerly enslaved people were forbidden from becoming professional painters"}
+  - card: pareja-calling-of-matthew
+    fact: "Pareja was born in Antequera near Málaga to a mother of African descent"
+    verdict: confirmed
+    sources:
+      - {title: "Metropolitan Museum of Art: Velázquez, Juan de Pareja, catalogue entry", url: "https://web.archive.org/web/2024/https://www.metmuseum.org/art/collection/search/437869", quote: "Pareja was born around 1608 in Antequera, in the province of Malaga ... his mother was most likely an African-descended, enslaved woman living in Antequera"}
+      - {title: "Robert Fikes, BlackPast: Juan de Pareja (ca. 1606-1670)", url: "https://www.Blackpast.org/gah/pareja-juan-de-1606-1670", quote: "born in the region of Andalusia, Spain, either in Seville or the much smaller city of Antequera 82 miles southeast, reputedly to a female of African descent"}
+  - card: pareja-calling-of-matthew
+    fact: "Pareja was for years an enslaved assistant in Velázquez's household and workshop"
+    verdict: corrected
+    sources:
+      - {title: "Metropolitan Museum of Art: Velázquez, Juan de Pareja, catalogue entry", url: "https://web.archive.org/web/2024/https://www.metmuseum.org/art/collection/search/437869", quote: "a man of African descent born in southern Spain who was enslaved in Velázquez’s studio and household for at least two decades"}
+      - {title: "Apollo: Juan de Pareja, Afro-Hispanic Painter (2023)", url: "https://apollo-magazine.com/juan-de-pareja-met-museum-new-york/", quote: "Pareja was an enslaved assistant in Velázquez’s household and workshop for more than two decades"}
+    note: "Card now says household and workshop; Met catalogue added as independent second source."
+  - card: pareja-calling-of-matthew
+    fact: "Velázquez was painter to King Philip IV"
+    verdict: corrected
+    sources:
+      - {title: "Smarthistory: Juan de Pareja, The Calling of Saint Matthew", url: "https://web.archive.org/web/2024/https://smarthistory.org/juan-de-pareja-the-calling-of-st-matthew/", quote: "where he portrays himself within the court of King Philip IV of Spain"}
+      - {title: "Metropolitan Museum of Art: Velázquez, Juan de Pareja, catalogue entry", url: "https://web.archive.org/web/2024/https://www.metmuseum.org/art/collection/search/437869", quote: "The main purpose of the trip was to buy paintings and sculptures for King Philip IV of Spain"}
+    note: "'court painter' softened to 'painter to King Philip IV': both sources tie him to the king's service, neither uses the court-painter title in the quoted text."
+  - card: pareja-calling-of-matthew
+    fact: "Pareja travelled with Velázquez to Italy (the year 1649 dropped from the card: only the Met gives it)"
+    verdict: corrected
+    sources:
+      - {title: "Metropolitan Museum of Art: Velázquez, Juan de Pareja, catalogue entry", url: "https://web.archive.org/web/2024/https://www.metmuseum.org/art/collection/search/437869", quote: "in 1649, Pareja accompanied Velázquez to Italy"}
+      - {title: "Robert Fikes, BlackPast: Juan de Pareja (ca. 1606-1670)", url: "https://www.Blackpast.org/gah/pareja-juan-de-1606-1670", quote: "Pareja traveled with Velázquez to Italy"}
+    note: "Year 1649 removed from the card: of independent sources only the Met gives it (the Met press release is the same publisher; the AEA review only places the portrait in Rome in 1650)."
+  - card: pareja-calling-of-matthew
+    fact: "In Rome in 1650 Velázquez painted Pareja's portrait, acclaimed when shown at the Pantheon"
+    verdict: confirmed
+    sources:
+      - {title: "Apollo: Juan de Pareja, Afro-Hispanic Painter (2023)", url: "https://apollo-magazine.com/juan-de-pareja-met-museum-new-york/", quote: "not long after painting his portrait, which met with acclaim when it was exhibited in the Pantheon in Rome in March that year"}
+      - {title: "Karen Chernick, The Art Newspaper (2023)", url: "https://www.theartnewspaper.com/2023/03/29/juan-de-pareja-from-slave-to-old-master", quote: "since it first left the artist’s makeshift studio in Rome in 1650. When it made its public debut, in the Pantheon"}
+  - card: pareja-calling-of-matthew
+    fact: "In 1650 Velázquez signed the act freeing Pareja; it took full effect in 1654"
+    verdict: corrected
+    sources:
+      - {title: "Metropolitan Museum of Art: Velázquez, Juan de Pareja, catalogue entry", url: "https://web.archive.org/web/2024/https://www.metmuseum.org/art/collection/search/437869", quote: "Montagu published the 1650 document in which Velázquez granted freedom to Juan de Pareja, which was to go into effect in 1654"}
+      - {title: "Smarthistory: Juan de Pareja, The Calling of Saint Matthew", url: "https://web.archive.org/web/2024/https://smarthistory.org/juan-de-pareja-the-calling-of-st-matthew/", quote: "eleven years after Diego Velázquez freed him from enslavement in Rome in November of 1650"}
+    note: "'November' removed from the card: only Smarthistory gives the month; the Met speaks of the 1650 document."
+  - card: pareja-calling-of-matthew
+    fact: "As a free man Pareja built his own career as a painter in Madrid"
+    verdict: confirmed
+    sources:
+      - {title: "Smarthistory: Juan de Pareja, The Calling of Saint Matthew", url: "https://web.archive.org/web/2024/https://smarthistory.org/juan-de-pareja-the-calling-of-st-matthew/", quote: "After attaining his freedom from enslavement, Pareja forged an independent career, painting religious works and portraits"}
+      - {title: "Karen Chernick, The Art Newspaper (2023)", url: "https://www.theartnewspaper.com/2023/03/29/juan-de-pareja-from-slave-to-old-master", quote: "He then worked as a painter until he died in Madrid in 1670"}
+  - card: pareja-calling-of-matthew
+    fact: "In 1661 he finished The Calling of Saint Matthew, 225 x 325 cm, in the Prado"
+    verdict: confirmed
+    sources:
+      - {title: "Metropolitan Museum of Art: The Calling of Saint Matthew (loan record)", url: "https://web.archive.org/web/2024/https://www.metmuseum.org/art/collection/search/846784", quote: "Date: 1661 Medium: Oil on canvas Dimensions: 88 9/16 in. × 10 ft. 7 15/16 in. (225 × 325 cm) ... Credit Line: Museo Nacional del Prado, Madrid"}
+      - {title: "Smarthistory: Juan de Pareja, The Calling of Saint Matthew", url: "https://web.archive.org/web/2024/https://smarthistory.org/juan-de-pareja-the-calling-of-st-matthew/", quote: "Juan de Pareja, The Calling of Saint Matthew , 1661, oil on canvas, 225 x 325 cm (Museo Nacional del Prado, Madrid)"}
+  - card: pareja-calling-of-matthew
+    fact: "Pareja painted himself at the far left, looking at the viewer"
+    verdict: confirmed
+    sources:
+      - {title: "Metropolitan Museum of Art: press release, Juan de Pareja (2023)", url: "https://web.archive.org/web/2023/https://www.metmuseum.org/press/exhibitions/2023/juan-de-pareja", quote: "which includes a self-portrait on the far left"}
+      - {title: "Smarthistory: Juan de Pareja, The Calling of Saint Matthew", url: "https://web.archive.org/web/2024/https://smarthistory.org/juan-de-pareja-the-calling-of-st-matthew/", quote: "He is the only one who connects directly with the viewer ... The man who connects directly with the viewer is a self-portrait of the artist, Juan de Pareja"}
+  - card: pareja-calling-of-matthew
+    fact: "His self-portrait repeats the pose and attire of Velázquez's portrait of him"
+    verdict: confirmed
+    sources:
+      - {title: "Karen Chernick, The Art Newspaper (2023)", url: "https://www.theartnewspaper.com/2023/03/29/juan-de-pareja-from-slave-to-old-master", quote: "his full-length self portrait 11 years later in The Calling of Saint Matthew (1661), in a similar pose and attire"}
+      - {title: "Smarthistory: Juan de Pareja, The Calling of Saint Matthew", url: "https://web.archive.org/web/2024/https://smarthistory.org/juan-de-pareja-the-calling-of-st-matthew/", quote: "it is clear that Pareja follows Velázquez’s template of depicting the Afro-Hispanic man as a Spanish gentleman"}
+  - card: pareja-calling-of-matthew
+    fact: "He holds a slip of paper with his name and the year 1661"
+    verdict: confirmed
+    sources:
+      - {title: "Smarthistory: Juan de Pareja, The Calling of Saint Matthew", url: "https://web.archive.org/web/2024/https://smarthistory.org/juan-de-pareja-the-calling-of-st-matthew/", quote: "In his hand, he holds a piece of paper which contains his signature, “Juan de Pareja made this,” and the date of the painting"}
+      - {title: "Robert Fikes, BlackPast: Juan de Pareja (ca. 1606-1670)", url: "https://www.Blackpast.org/gah/pareja-juan-de-1606-1670", quote: "holding a slip of paper that reads “Juan de Pareja in the year 1661.”"}
+  - card: pareja-calling-of-matthew
+    fact: "His face in the self-portrait is lighter than in Velázquez's portrait"
+    verdict: confirmed
+    sources:
+      - {title: "Smarthistory: Juan de Pareja, The Calling of Saint Matthew", url: "https://web.archive.org/web/2024/https://smarthistory.org/juan-de-pareja-the-calling-of-st-matthew/", quote: "Pareja’s skin appears much lighter in his own work"}
+      - {title: "Borja Franco Llopis, Archivo Español de Arte 96 (2023)", url: "https://doi.org/10.3989/aearte.2023.46", quote: "con el rostro más blanquecino con el que el propio Pareja se autorretrata en la Vocación de San Mateo (1661"}
+  - card: pareja-calling-of-matthew
+    fact: "Pareja died in Madrid in 1670"
+    verdict: confirmed
+    sources:
+      - {title: "Karen Chernick, The Art Newspaper (2023)", url: "https://www.theartnewspaper.com/2023/03/29/juan-de-pareja-from-slave-to-old-master", quote: "He then worked as a painter until he died in Madrid in 1670"}
+      - {title: "Metropolitan Museum of Art: The Calling of Saint Matthew (loan record)", url: "https://web.archive.org/web/2024/https://www.metmuseum.org/art/collection/search/846784", quote: "Juan de Pareja (Spanish, Antequera 1606–1670 Madrid)"}
+  - card: pareja-calling-of-matthew
+    fact: "He was long known mostly as the subject of Velázquez's portrait"
+    verdict: confirmed
+    sources:
+      - {title: "Metropolitan Museum of Art: Juan de Pareja, Afro-Hispanic Painter (exhibition)", url: "https://web.archive.org/web/2024/https://www.metmuseum.org/exhibitions/juan-de-pareja", quote: "Largely known today as the subject of The Met’s iconic portrait by Diego"}
+      - {title: "Smarthistory: Juan de Pareja, The Calling of Saint Matthew", url: "https://web.archive.org/web/2024/https://smarthistory.org/juan-de-pareja-the-calling-of-st-matthew/", quote: "Ironically, this artist is known mostly through a portrait of him by the great Spanish painter, Diego Velázquez"}
+  - card: pareja-calling-of-matthew
+    fact: "In 2023 the Met held his first exhibition, with the Saint Matthew lent from the Prado"
+    verdict: confirmed
+    sources:
+      - {title: "Karen Chernick, The Art Newspaper (2023)", url: "https://www.theartnewspaper.com/2023/03/29/juan-de-pareja-from-slave-to-old-master", quote: "The first institutional exhibition devoted to him, Juan de Pareja: Afro-Hispanic Painter ... At an impressive 11ft-wide, this ambitious multi-figure painting loaned from Madrid’s Museo Nacional del Prado"}
+      - {title: "Metropolitan Museum of Art: press release, Juan de Pareja (2023)", url: "https://web.archive.org/web/2023/https://www.metmuseum.org/press/exhibitions/2023/juan-de-pareja", quote: "First Major Exhibition on Afro-Hispanic Painter Juan de Pareja ... On display are The Calling of Saint Matthew (Museo Nacional del Prado)"}
+  - card: banjo-lesson
+    fact: "Tanner was born in Pittsburgh in 1859"
+    verdict: confirmed
+    sources:
+      - {title: "Smithsonian American Art Museum: Henry Ossawa Tanner", url: "https://americanart.si.edu/artist/henry-ossawa-tanner-4742", quote: "Tanner was born on June 21, 1859, in Pittsburgh, Pennsylvania"}
+      - {title: "Robert Fikes, BlackPast: Henry Ossawa Tanner (1859-1937)", url: "https://www.blackpast.org/african-american-history/tanner-henry-ossawa-1859-1937/", quote: "born in Pittsburgh, Pennsylvania on June 21, 1859"}
+  - card: banjo-lesson
+    fact: "He was the son of a prominent churchman"
+    verdict: confirmed
+    sources:
+      - {title: "Robert Fikes, BlackPast: Henry Ossawa Tanner (1859-1937)", url: "https://www.blackpast.org/african-american-history/tanner-henry-ossawa-1859-1937/", quote: "was the son of a prominent cleric"}
+      - {title: "Will South, Henry Ossawa Tanner: Painter of the Spirit (Weatherspoon Art Museum, 2006)", url: "https://web.archive.org/web/20070126135743/http://weatherspoon.uncg.edu/uploads/TannerArticle.pdf", quote: "Surely the example of the artist's own father, Bishop Tanner, an effective leader for the cause of social justice"}
+  - card: banjo-lesson
+    fact: "He grew up in Philadelphia and studied under Thomas Eakins there"
+    verdict: confirmed
+    sources:
+      - {title: "Britannica: Henry Ossawa Tanner", url: "https://www.britannica.com/biography/Henry-Ossawa-Tanner", quote: "After a childhood spent largely in Philadelphia ... In 1880 Tanner began two years of formal study under Thomas Eakins at Philadelphia’s prestigious Pennsylvania Academy of the Fine Arts"}
+      - {title: "Smithsonian American Art Museum: Henry Ossawa Tanner", url: "https://americanart.si.edu/artist/henry-ossawa-tanner-4742", quote: "There he studied with a group of master professors including Thomas Eakins"}
+  - card: banjo-lesson
+    fact: "In 1891 he went to Paris and enrolled at the Académie Julian"
+    verdict: confirmed
+    sources:
+      - {title: "Britannica: Henry Ossawa Tanner", url: "https://www.britannica.com/biography/Henry-Ossawa-Tanner", quote: "Tanner traveled to Paris in 1891 to enroll at the Académie Julian"}
+      - {title: "Robert Fikes, BlackPast: Henry Ossawa Tanner (1859-1937)", url: "https://www.blackpast.org/african-american-history/tanner-henry-ossawa-1859-1937/", quote: "in 1891 when, with the assistance of two benefactors, he set off for Paris, France and enrolled in the Académie Julian"}
+  - card: banjo-lesson
+    fact: "In 1893, in poor health, he returned to Philadelphia"
+    verdict: confirmed
+    sources:
+      - {title: "Will South, Henry Ossawa Tanner: Painter of the Spirit (Weatherspoon Art Museum, 2006)", url: "https://web.archive.org/web/20070126135743/http://weatherspoon.uncg.edu/uploads/TannerArticle.pdf", quote: "Tanner left Paris in 1893, once again suffering from ill health ... The artist's turn to African-American subject matter upon his return to Philadelphia"}
+      - {title: "Britannica: Henry Ossawa Tanner", url: "https://www.britannica.com/biography/Henry-Ossawa-Tanner", quote: "He returned to the United States in 1893"}
+  - card: banjo-lesson
+    fact: "Popular images of the Black banjo player showed a carefree, comic stereotype ('mostly drawn by white artists' dropped: the NHC statement is about its own sample of seven images)"
+    verdict: corrected
+    sources:
+      - {title: "National Humanities Center: The \"Negro banjo player\", images from the 19th century", url: "https://nationalhumanitiescenter.org/pds/maai2/identity/text4/text4read.htm", quote: "seven images of the \"Negro banjo player,\" most depicting the common stereotype of a benign carefree black man engaged in trivial leisure. The first six images were created by white men"}
+      - {title: "Will South, Henry Ossawa Tanner: Painter of the Spirit (Weatherspoon Art Museum, 2006)", url: "https://web.archive.org/web/20070126135743/http://weatherspoon.uncg.edu/uploads/TannerArticle.pdf", quote: "being back in a country where stereotypical images of African-Americans went unanswered"}
+    note: "'Mostly drawn by white artists' removed: NHC states that six of its own seven chosen images were by white men, which is not a general claim."
+  - card: banjo-lesson
+    fact: "The Banjo Lesson (1893) shows an elderly man teaching a boy to play the banjo"
+    verdict: confirmed
+    sources:
+      - {title: "Robert Fikes, BlackPast: Henry Ossawa Tanner (1859-1937)", url: "https://www.blackpast.org/african-american-history/tanner-henry-ossawa-1859-1937/", quote: "The Banjo Lesson , one of his best known works, which featured an elderly black man instructing a boy to play the banjo"}
+      - {title: "Smithsonian American Art Museum: Henry Ossawa Tanner", url: "https://americanart.si.edu/artist/henry-ossawa-tanner-4742", quote: "two of his most important works depicting African-American subjects, The Banjo Lesson of 1893"}
+  - card: banjo-lesson
+    fact: "The painting treats its subject with dignity rather than as a joke"
+    verdict: confirmed
+    sources:
+      - {title: "National Humanities Center: The \"Negro banjo player\", images from the 19th century", url: "https://nationalhumanitiescenter.org/pds/maai2/identity/text4/text4read.htm", quote: "How does Henry Ossawa Tanner return dignity and identity to this image in his 1893 painting The Banjo Lesson ?"}
+      - {title: "Hampton University Museum: collections", url: "https://web.archive.org/web/2023id_/https://home.hamptonu.edu/msm/", quote: "It reflects Tanner’s conscious commitment to depicting African American in a compassionate manner"}
+  - card: banjo-lesson
+    fact: "In 1894 it was accepted at the Paris Salon, the most prestigious juried exhibition"
+    verdict: confirmed
+    sources:
+      - {title: "Hampton University Museum: collections", url: "https://web.archive.org/web/2023id_/https://home.hamptonu.edu/msm/", quote: "In 1894, The Banjo Lesson was admitted into the Paris Salon, the most prestigious annual juried exhibition in the city"}
+      - {title: "Will South, Henry Ossawa Tanner: Painter of the Spirit (Weatherspoon Art Museum, 2006)", url: "https://web.archive.org/web/20070126135743/http://weatherspoon.uncg.edu/uploads/TannerArticle.pdf", quote: "the French Salon, to which The Banjo Lesson was accepted in 1894"}
+  - card: banjo-lesson
+    fact: "In 1894 it went to the Hampton Institute, whose museum still owns it"
+    verdict: confirmed
+    sources:
+      - {title: "Hampton University Museum: collections", url: "https://web.archive.org/web/2023id_/https://home.hamptonu.edu/msm/", quote: "bought the painting and donated it to Hampton in November of 1894"}
+      - {title: "Will South, Henry Ossawa Tanner: Painter of the Spirit (Weatherspoon Art Museum, 2006)", url: "https://web.archive.org/web/20070126135743/http://weatherspoon.uncg.edu/uploads/TannerArticle.pdf", quote: "A plan is now afoot to present the “Bagpipe Lesson” to Hampton Institute"}
+  - card: banjo-lesson
+    fact: "Tanner returned to France, won international fame with religious paintings and never returned to American subjects"
+    verdict: confirmed
+    sources:
+      - {title: "Smithsonian American Art Museum: Henry Ossawa Tanner", url: "https://americanart.si.edu/artist/henry-ossawa-tanner-4742", quote: "Working in France after 1891, Henry Ossawa Tanner achieved an international reputation largely through his religious paintings"}
+      - {title: "Will South, Henry Ossawa Tanner: Painter of the Spirit (Weatherspoon Art Museum, 2006)", url: "https://web.archive.org/web/20070126135743/http://weatherspoon.uncg.edu/uploads/TannerArticle.pdf", quote: "Though Tanner never returned to American subject matter"}
+  - card: banjo-lesson
+    fact: "He died in Paris in 1937"
+    verdict: confirmed
+    sources:
+      - {title: "Smithsonian American Art Museum: Henry Ossawa Tanner", url: "https://americanart.si.edu/artist/henry-ossawa-tanner-4742", quote: "born Pittsburgh, PA 1859-died Paris, France 1937"}
+      - {title: "Robert Fikes, BlackPast: Henry Ossawa Tanner (1859-1937)", url: "https://www.blackpast.org/african-american-history/tanner-henry-ossawa-1859-1937/", quote: "Henry Ossawa Tanner died in Paris on May 25, 1937"}
+  - card: banjo-lesson
+    fact: "The Banjo Lesson is his best-known painting"
+    verdict: confirmed
+    sources:
+      - {title: "Hampton University Museum: collections", url: "https://web.archive.org/web/2023id_/https://home.hamptonu.edu/msm/", quote: "The Banjo Lesson is Tanner’s most famous painting"}
+      - {title: "Robert Fikes, BlackPast: Henry Ossawa Tanner (1859-1937)", url: "https://www.blackpast.org/african-american-history/tanner-henry-ossawa-1859-1937/", quote: "The Banjo Lesson , one of his best known works"}
+  - card: powers-bible-quilt
+    fact: "Harriet Powers was born into slavery near Athens, Georgia, on 29 October 1837"
+    verdict: confirmed
+    sources:
+      - {title: "National Museum of American History: Harriet Powers's Bible Quilt", url: "https://americanhistory.si.edu/collections/nmah_556462", quote: "Harriet Powers was born a slave near Athens, Georgia, on October 29, 1837"}
+      - {title: "Ashley Callahan, New Georgia Encyclopedia: Harriet Powers (1837-1910)", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/harriet-powers-1837-1910/", quote: "Powers was born into slavery near Athens on October 29, 1837"}
+  - card: powers-bible-quilt
+    fact: "After the Civil War she and her husband owned a small farm in Clarke County"
+    verdict: confirmed
+    sources:
+      - {title: "National Museum of American History: Harriet Powers's Bible Quilt", url: "https://americanhistory.si.edu/collections/nmah_556462", quote: "Some time after the Civil War, they became landowners ... a negro woman, who lives in the country on a little farm whereon she and husband make a respectable living"}
+      - {title: "Ashley Callahan, New Georgia Encyclopedia: Harriet Powers (1837-1910)", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/harriet-powers-1837-1910/", quote: "lived more than half her life in Clarke County , mainly in Sandy Creek and Buck Branch"}
+  - card: powers-bible-quilt
+    fact: "Her quilts were pictorial, made with appliqué"
+    verdict: confirmed
+    sources:
+      - {title: "Ashley Callahan, New Georgia Encyclopedia: Harriet Powers (1837-1910)", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/harriet-powers-1837-1910/", quote: "Powers’s quilts are remarkable for their bold use of applique for storytelling"}
+      - {title: "Museum of Fine Arts, Boston: Harriet Powers, Pictorial quilt (64.619)", url: "https://collections.mfa.org/objects/116166", quote: "Cotton plain weave, pieced, appliqued, embroidered, and quilted"}
+  - card: powers-bible-quilt
+    fact: "Around 1886 she finished a quilt of Bible scenes from Adam and Eve to the Crucifixion"
+    verdict: confirmed
+    sources:
+      - {title: "National Museum of American History: Harriet Powers's Bible Quilt", url: "https://americanhistory.si.edu/collections/nmah_556462", quote: "Briefly, the subjects are Adam and Eve in the Garden of Eden ... the crucifixion"}
+      - {title: "Ashley Callahan, New Georgia Encyclopedia: Harriet Powers (1837-1910)", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/harriet-powers-1837-1910/", quote: "Harriet Powers finished her Bible Quilt around 1886 in Athens"}
+  - card: powers-bible-quilt
+    fact: "She showed it at a cotton fair in Athens in 1886, where the artist Jennie Smith saw it"
+    verdict: confirmed
+    sources:
+      - {title: "National Museum of American History: Harriet Powers's Bible Quilt", url: "https://americanhistory.si.edu/collections/nmah_556462", quote: "She exhibited it at the Athens Cotton Fair of 1886 where it captured the imagination of Jennie Smith, a young internationally-trained local artist"}
+      - {title: "Ashley Callahan, New Georgia Encyclopedia: Harriet Powers (1837-1910)", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/harriet-powers-1837-1910/", quote: "The first of the Powers quilts was displayed in 1886 at a cotton fair in Athens, where Jennie Smith, an artist and art teacher at the Lucy Cobb Institute"}
+  - card: powers-bible-quilt
+    fact: "Powers at first refused to sell"
+    verdict: confirmed
+    sources:
+      - {title: "National Museum of American History: Harriet Powers's Bible Quilt", url: "https://americanhistory.si.edu/collections/nmah_556462", quote: "I offered to buy it, but it was not for sale at any price."}
+      - {title: "Ashley Callahan, New Georgia Encyclopedia: Harriet Powers (1837-1910)", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/harriet-powers-1837-1910/", quote: "Smith remained in touch with Powers, however, and five years later Powers, having financial difficulties, agreed to sell"}
+  - card: powers-bible-quilt
+    fact: "In hard times she sold it for five dollars"
+    verdict: confirmed
+    sources:
+      - {title: "National Museum of American History: Harriet Powers's Bible Quilt", url: "https://americanhistory.si.edu/collections/nmah_556462", quote: "Mrs. Powers, at the urging of her husband because of hard times, offered to sell the quilt ... She offered it for ten dollars--but--I only had five to give"}
+      - {title: "Ashley Callahan, New Georgia Encyclopedia: Harriet Powers (1837-1910)", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/harriet-powers-1837-1910/", quote: "Powers, having financial difficulties, agreed to sell the quilt for five dollars"}
+  - card: powers-bible-quilt
+    fact: "Before parting with it she explained every scene and Smith recorded her words"
+    verdict: confirmed
+    sources:
+      - {title: "National Museum of American History: Harriet Powers's Bible Quilt", url: "https://americanhistory.si.edu/collections/nmah_556462", quote: "but only after explaining each of the eleven panels of the design, which Jennie Smith recorded"}
+      - {title: "Ashley Callahan, New Georgia Encyclopedia: Harriet Powers (1837-1910)", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/harriet-powers-1837-1910/", quote: "At the time of the sale Powers explained the imagery in the squares, and Smith recorded the descriptions"}
+  - card: powers-bible-quilt
+    fact: "Her second quilt, of the 1890s, sets Bible stories beside remembered events, among them the falling of the stars on 13 November 1833, when people thought the end had come (the 1780 dark day and the 1895 frost dropped: only the MFA record gives them)"
+    verdict: corrected
+    sources:
+      - {title: "Museum of Fine Arts, Boston: Harriet Powers, Pictorial quilt (64.619)", url: "https://collections.mfa.org/objects/116166", quote: "8. The falling of the stars on Nov. 13, 1833. The people were frightened and thought that the end had come"}
+      - {title: "National Geographic: This Black artist's vibrant quilts inspired generations of U.S. artisans", url: "https://www.nationalgeographic.com/history/history-magazine/article/black-artist-woman-art-quilts-harriet-powers", quote: "The square, Powers wrote, shows “[t]he falling of the stars on November 13, 1833. The people were fright and thought that the end had come"}
+    note: "1780 dark day and February 1895 frost removed (MFA record only); 1833 falling stars confirmed by MFA and National Geographic."
+  - card: powers-bible-quilt
+    fact: "In 1898 the wives of Atlanta University faculty gave it to Charles Cuthbert Hall, chairman of the university's trustees"
+    verdict: confirmed
+    sources:
+      - {title: "Museum of Fine Arts, Boston: Harriet Powers, Pictorial quilt (64.619)", url: "https://collections.mfa.org/objects/116166", quote: "Reverend Charles Cuthbert Hall received this quilt as a gift from a group of “faculty ladies” at Atlanta University in 1898"}
+      - {title: "Ashley Callahan, New Georgia Encyclopedia: Harriet Powers (1837-1910)", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/harriet-powers-1837-1910/", quote: "the faculty wives presented the quilt to the Reverend Charles Cuthbert Hall of New York in 1898, while he was serving as the chairman of the board of trustees at Atlanta University"}
+  - card: powers-bible-quilt
+    fact: "Powers died on 1 January 1910; the date was found recently on her gravestone in Athens"
+    verdict: confirmed
+    sources:
+      - {title: "National Museum of American History: Harriet Powers's Bible Quilt", url: "https://americanhistory.si.edu/collections/nmah_556462", quote: "The date of Harriet's death, Jan. 1, 1910, was recently discovered on her gravestone in Athen's Gospel Pilgrim Cemetery"}
+      - {title: "Ashley Callahan, New Georgia Encyclopedia: Harriet Powers (1837-1910)", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/harriet-powers-1837-1910/", quote: "The headstone, which was uncovered at the historic Gospel Pilgrim Cemetery in Athens, reveals that Powers died on January 1, 1910"}
+  - card: powers-bible-quilt
+    fact: "The first quilt is in the Smithsonian's National Museum of American History, the second in the Museum of Fine Arts, Boston"
+    verdict: confirmed
+    sources:
+      - {title: "Ashley Callahan, New Georgia Encyclopedia: Harriet Powers (1837-1910)", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/harriet-powers-1837-1910/", quote: "One is part of the National Museum of American History collection at the Smithsonian Institution ... The second quilt is in the Museum of Fine Arts in Boston"}
+      - {title: "Museum of Fine Arts, Boston: Harriet Powers, Pictorial quilt (64.619)", url: "https://collections.mfa.org/objects/116166", quote: "Bequest of Maxim Karolik Accession Number 64.619"}
+    note: "NMAH quote is only the page title; the NGE and MFA records carry the fact."
+  - card: powers-bible-quilt
+    fact: "For both quilts Powers's own explanations of the scenes survive"
+    verdict: confirmed
+    sources:
+      - {title: "Museum of Fine Arts, Boston: Harriet Powers, Pictorial quilt (64.619)", url: "https://collections.mfa.org/objects/116166", quote: "This quilt (together with Powers's descriptions and small portrait photograph) was presented ... The following are Powers' descriptions of all fifteen blocks"}
+      - {title: "National Museum of American History: Harriet Powers's Bible Quilt", url: "https://americanhistory.si.edu/collections/nmah_556462", quote: "explaining each of the eleven panels of the design, which Jennie Smith recorded"}
+  - card: swing-low
+    fact: "Swing Low, Sweet Chariot is an African American spiritual"
+    verdict: confirmed
+    sources:
+      - {title: "Public Domain Review: First recording of Swing Low, Sweet Chariot (1909)", url: "https://publicdomainreview.org/collections/first-recording-of-swing-low-sweet-chariot-1909/", quote: "the popular African American spiritual “Swing Low, Sweet Chariot”"}
+      - {title: "Encyclopedia of Oklahoma History and Culture: Willis, Uncle Wallace and Aunt Minerva", url: "https://www.okhistory.org/publications/enc/entry?entry=WI018", quote: "Composers of spirituals, “Uncle Wallace” and “Aunt Minerva” Willis were enslaved"}
+  - card: swing-low
+    fact: "The most cited account traces it to Wallace Willis in Indian Territory (Oklahoma) in the mid-nineteenth century"
+    verdict: confirmed
+    sources:
+      - {title: "Public Domain Review: First recording of Swing Low, Sweet Chariot (1909)", url: "https://publicdomainreview.org/collections/first-recording-of-swing-low-sweet-chariot-1909/", quote: "One often cited source is Wallis Willis (known as “Uncle Wallace”), a Choctaw freedman in the old Indian Territory in what is now Choctaw County, in Oklahoma"}
+      - {title: "Encyclopedia of Oklahoma History and Culture: Willis, Uncle Wallace and Aunt Minerva", url: "https://www.okhistory.org/publications/enc/entry?entry=WI018", quote: "were enslaved in the old Choctaw Nation area of Oklahoma during the mid-nineteenth century"}
+  - card: swing-low
+    fact: "Wallace and Minerva Willis were enslaved by Britt Willis, a Choctaw, who hired them out to Spencer Academy, a Choctaw boys' school"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopedia of Oklahoma History and Culture: Willis, Uncle Wallace and Aunt Minerva", url: "https://www.okhistory.org/publications/enc/entry?entry=WI018", quote: "A Choctaw named Britt Willis owned them ... Willis hired them periodically to Spencer Academy, a Choctaw boys’ school"}
+      - {title: "History News Network: Historian discovers he is descended from the slave couple that wrote Swing Low", url: "https://www.historynewsnetwork.org/article/29245", quote: "Brit Willis rented the couple out to Spencer Academy for Choctaw boys near Doaksville"}
+  - card: swing-low
+    fact: "In the evenings they sang their own songs to the students"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopedia of Oklahoma History and Culture: Willis, Uncle Wallace and Aunt Minerva", url: "https://www.okhistory.org/publications/enc/entry?entry=WI018", quote: "Minerva would sing along with him when they were asked to perform the songs for the students in the evenings"}
+      - {title: "History News Network: Historian discovers he is descended from the slave couple that wrote Swing Low", url: "https://www.historynewsnetwork.org/article/29245", quote: "where the Willises entertained students by singing Sweet Chariot and other original Willis spirituals"}
+  - card: swing-low
+    fact: "Superintendent Alexander Reid passed the songs to the Fisk Jubilee Singers"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopedia of Oklahoma History and Culture: Willis, Uncle Wallace and Aunt Minerva", url: "https://www.okhistory.org/publications/enc/entry?entry=WI018", quote: "Alexander Reid came to the academy as the superintendent ... Reid gave six songs to the group, including “Swing Low, Sweet Chariot,”"}
+      - {title: "History News Network: Historian discovers he is descended from the slave couple that wrote Swing Low", url: "https://www.historynewsnetwork.org/article/29245", quote: "The song so moved the headmaster that he sent it to the Fisk Jubilee Singers in Nashville"}
+  - card: swing-low
+    fact: "In 1871 the Fisk Jubilee Singers began a fund-raising tour for their university"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopedia of Oklahoma History and Culture: Willis, Uncle Wallace and Aunt Minerva", url: "https://www.okhistory.org/publications/enc/entry?entry=WI018", quote: "In 1871 the Jubilee Singers of Fisk University began a fund-raising tour for education work among the freedmen"}
+      - {title: "Public Domain Review: First recording of Swing Low, Sweet Chariot (1909)", url: "https://publicdomainreview.org/collections/first-recording-of-swing-low-sweet-chariot-1909/", quote: "the original Fisk Jubilee Singers, who toured in the interest of the university from 1871-1878"}
+  - card: swing-low
+    fact: "Reid heard the Jubilee Singers at a concert in New Jersey, wrote down the Willis songs and passed them on ('no musical training' dropped: one source only)"
+    verdict: corrected
+    sources:
+      - {title: "Public Domain Review: First recording of Swing Low, Sweet Chariot (1909)", url: "https://publicdomainreview.org/collections/first-recording-of-swing-low-sweet-chariot-1909/", quote: "he noted it down and shared it, along with several other spirituals, with the Jubilee Singers when he heard them at a concert in New Jersey"}
+      - {title: "Encyclopedia of Oklahoma History and Culture: Willis, Uncle Wallace and Aunt Minerva", url: "https://www.okhistory.org/publications/enc/entry?entry=WI018", quote: "Reid had no musical education and therefore resorted to writing down the words and singing the songs over and over to the eleven members of the group until the music was firmly fixed in memory"}
+    note: "'No musical training, sang the songs over and over' removed (Oklahoma encyclopedia only); concert in New Jersey and writing the songs down confirmed by OHS and Public Domain Review."
+  - card: swing-low
+    fact: "The Jubilee Singers made the song famous"
+    verdict: confirmed
+    sources:
+      - {title: "Public Domain Review: First recording of Swing Low, Sweet Chariot (1909)", url: "https://publicdomainreview.org/collections/first-recording-of-swing-low-sweet-chariot-1909/", quote: "it came to popular attention by finding itself part of the repertoire of The Fisk Jubilee Singers in the 1870s"}
+      - {title: "History News Network: Historian discovers he is descended from the slave couple that wrote Swing Low", url: "https://www.historynewsnetwork.org/article/29245", quote: "When the Fisk singers took Sweet Chariot on tour, Queen Victoria was visibly impressed, Burge says, which fueled the song's popularity"}
+  - card: swing-low
+    fact: "It became the song of English rugby; on 19 March 1988 Twickenham sang it after Chris Oti's hat-trick against Ireland"
+    verdict: confirmed
+    sources:
+      - {title: "World Rugby Museum: Swing Low Uncovered (2020)", url: "https://worldrugbymuseum.com/from-the-vaults/twickenham-stadium/swing-low-uncovered", quote: "England had lost five out of six games at Twickenham prior to Oti suddenly helping them to victory against Ireland on 19th March 1988 ... The story goes that, inspired by a hat-trick of tries from wing Chris Oti, the Twickenham crowd spontaneously broke into song"}
+      - {title: "Johnny Watterson, The Irish Times (2015)", url: "https://www.irishtimes.com/sport/other-sports/never-dull-between-england-and-ireland-1.2120265", quote: "He scored the first hat-trick in the championship at Twickenham since 1924, his performance prompting an unlikely chorus of 'Swing Low, Sweet Chariot' from a section of fans"}
+  - card: swing-low
+    fact: "In June 2020, amid Black Lives Matter protests, the RFU began a review of the song, saying many fans were unaware of its origins"
+    verdict: confirmed
+    sources:
+      - {title: "Gerard Meagher, The Irish Times (2020)", url: "https://www.irishtimes.com/sport/rugby/international/england-fans-may-be-urged-to-stop-singing-swing-low-due-to-slavery-link-1.4282495", quote: "The English Rugby Football Union is conducting a review into the use of Swing Low, Sweet Chariot by England supporters, admitting that many of them are unaware of its origins as a song about slavery"}
+      - {title: "RTÉ Sport (2020)", url: "https://rte.ie/sport/rugby/2020/0618/1148305-england-fans-singing-of-swing-low-under-review-by-rfu", quote: "The Swing Low, Sweet Chariot song has long been part of the culture of rugby and is sung by many who have no awareness of its origins or sensitivities ... the recent Black Lives Matter protests"}
+  - card: swing-low
+    fact: "(dispute) Some date the song's Twickenham debut to the 1987 Middlesex Sevens"
+    verdict: confirmed
+    sources:
+      - {title: "World Rugby Museum: Swing Low Uncovered (2020)", url: "https://worldrugbymuseum.com/from-the-vaults/twickenham-stadium/swing-low-uncovered", quote: "'Swing Low, Sweet Chariot' debuted at Twickenham, not in March 1988 after all, but in the previous summer of 1987 at the Middlesex Sevens tournament"}
+      - {title: "RTÉ Sport (2020)", url: "https://rte.ie/sport/rugby/2020/0618/1148305-england-fans-singing-of-swing-low-under-review-by-rfu", quote: "'Swing Low' is first believed to have been sung at Twickenham when Martin 'Chariots' Offiah ... was playing in the 1987 Middlesex Sevens tournament"}
+  - card: swing-low
+    fact: "(dispute) Another tradition ties the chorus to the rescue of Ella Sheppard and her enslaved mother (John Wesley Work's name dropped: one source only)"
+    verdict: corrected
+    sources:
+      - {title: "Public Domain Review: First recording of Swing Low, Sweet Chariot (1909)", url: "https://publicdomainreview.org/collections/first-recording-of-swing-low-sweet-chariot-1909/", quote: "John W. Work claimed that the spiritual “burst forth” from the anguished soul of Sarah Hannah Sheppard, the mother of Ella Sheppard of Fisk Jubilee Singer fame"}
+      - {title: "PBS American Experience: Ella Sheppard", url: "https://www.pbs.org/wgbh/americanexperience/features/singers-sheppard", quote: "The chorus of \"Swing Low, Sweet Chariot\" -- a song Ella would later teach the Jubilee Singers -- has been attributed to the words of an elder that came to her rescue"}
+    note: "Dispute rewritten: John Wesley Work named only by Public Domain Review; the Sheppard tradition itself is in PDR and PBS."
+  - card: lift-every-voice
+    fact: "In 1900 James Weldon Johnson was principal of the segregated Stanton School in Jacksonville ('which he had attended himself' dropped: one source only)"
+    verdict: corrected
+    sources:
+      - {title: "Composers Datebook (YourClassical): The Brothers Johnson write an anthem", url: "https://www.yourclassical.org/episode/2011/02/12/the-brothers-johnson-write-an-anthem", quote: "Stanton was a segregated school for African-American children, and was the school that its principal, James Weldon Johnson, had himself attended"}
+      - {title: "NAACP: Lift Every Voice and Sing", url: "https://www.naacp.org/naacp-history-lift-evry-voice-and-sing/", quote: "A choir of 500 schoolchildren at the segregated Stanton School, where James Weldon Johnson was principal"}
+    note: "'Which he had attended himself' removed: YourClassical only."
+  - card: lift-every-voice
+    fact: "He was asked to contribute to the school's celebration of Lincoln's birthday, 12 February"
+    verdict: confirmed
+    sources:
+      - {title: "Composers Datebook (YourClassical): The Brothers Johnson write an anthem", url: "https://www.yourclassical.org/episode/2011/02/12/the-brothers-johnson-write-an-anthem", quote: "the principal of Stanton Elementary in Jacksonville, Florida was asked to give a Lincoln's Day speech to his students"}
+      - {title: "Bill Delaney, The Jaxson: The history of 'Lift Ev'ry Voice and Sing' (2024)", url: "https://www.thejaxsonmag.com/article/the-history-of-lift-evry-voice-and-sing/", quote: "Johnson had been approached by a group of young men organizing a celebration for Abraham Lincoln’s birthday ... to be held on February 12, 1900 at Stanton"}
+  - card: lift-every-voice
+    fact: "James Weldon Johnson wrote the poem and his brother John Rosamond Johnson, composer and pianist, set it to music"
+    verdict: confirmed
+    sources:
+      - {title: "NAACP: Lift Every Voice and Sing", url: "https://www.naacp.org/naacp-history-lift-evry-voice-and-sing/", quote: "a hymn written as a poem by NAACP leader James Weldon Johnson in 1900. His brother, John Rosamond Johnson (1873-1954), composed the music for the lyrics"}
+      - {title: "Composers Datebook (YourClassical): The Brothers Johnson write an anthem", url: "https://www.yourclassical.org/episode/2011/02/12/the-brothers-johnson-write-an-anthem", quote: "enlisted the aid of his brother, John Rosamond Johnson, who was a composer"}
+  - card: lift-every-voice
+    fact: "On 12 February 1900 a chorus of 500 schoolchildren sang it for the first time"
+    verdict: confirmed
+    sources:
+      - {title: "Bill Delaney, The Jaxson: The history of 'Lift Ev'ry Voice and Sing' (2024)", url: "https://www.thejaxsonmag.com/article/the-history-of-lift-evry-voice-and-sing/", quote: "On February 12, 1900, James Weldon Johnson's song 'Lift Ev'ry Voice and Sing' was sung for the first time by a choir of Jacksonville children"}
+      - {title: "NPR: Lift Every Voice and Sing, the story behind the Black national anthem (2018)", url: "https://www.npr.org/2018/08/16/638324920/lift-every-voice-and-sing-the-story-behind-the-black-national-anthem", quote: "was first performed in 1900, at a segregated school in Jacksonville, Fla. , by a group of 500 children celebrating the anniversary of the birth of President Lincoln"}
+  - card: lift-every-voice
+    fact: "The verses move from rejoicing in liberty to the memory of suffering ('Stony the road we trod') and on to the road ahead"
+    verdict: confirmed
+    sources:
+      - {title: "NAACP: Lift Every Voice and Sing", url: "https://www.naacp.org/naacp-history-lift-evry-voice-and-sing/", quote: "Ring with the harmonies of Liberty ... Stony the road we trod, Bitter the chastening rod"}
+      - {title: "NPR: Lift Every Voice and Sing, the story behind the Black national anthem (2018)", url: "https://www.npr.org/2018/08/16/638324920/lift-every-voice-and-sing-the-story-behind-the-black-national-anthem", quote: "The second verse reminds us to never forget the suffering and obstacles of the past: Stony the road we trod ... The third and final stanza is about the challenges of the future"}
+  - card: lift-every-voice
+    fact: "Johnson more or less forgot the song, but the children kept singing it"
+    verdict: confirmed
+    sources:
+      - {title: "Composers Datebook (YourClassical): The Brothers Johnson write an anthem", url: "https://www.yourclassical.org/episode/2011/02/12/the-brothers-johnson-write-an-anthem", quote: "The song was a great success on February 12th, 1900, and then was pretty much forgotten by Johnson—but not by the children who sang it"}
+      - {title: "Bill Delaney, The Jaxson: The history of 'Lift Ev'ry Voice and Sing' (2024)", url: "https://www.thejaxsonmag.com/article/the-history-of-lift-evry-voice-and-sing/", quote: "But as Johnson was later pleasantly surprised to learn, for the children of the choir, the song proved unforgettable"}
+  - card: lift-every-voice
+    fact: "It spread through Black churches and schools across the South and beyond"
+    verdict: confirmed
+    sources:
+      - {title: "Bill Delaney, The Jaxson: The history of 'Lift Ev'ry Voice and Sing', page 2 (2024)", url: "https://www.thejaxsonmag.com/article/the-history-of-lift-evry-voice-and-sing-page-2", quote: "“Lift Ev’ry Voice and Sing” became popular in black churches, schools, and celebrations across the South and beyond"}
+      - {title: "Composers Datebook (YourClassical): The Brothers Johnson write an anthem", url: "https://www.yourclassical.org/episode/2011/02/12/the-brothers-johnson-write-an-anthem", quote: "The song spread across the country, and soon became the unofficial National Anthem of Black America"}
+  - card: lift-every-voice
+    fact: "In 1905 Booker T. Washington endorsed it and in 1919 the NAACP adopted it as its official song"
+    verdict: confirmed
+    sources:
+      - {title: "NPR: Lift Every Voice and Sing, the story behind the Black national anthem (2018)", url: "https://www.npr.org/2018/08/16/638324920/lift-every-voice-and-sing-the-story-behind-the-black-national-anthem", quote: "In 1905, Booker T. Washington endorsed it, and in 1919, it became the official song of the NAACP"}
+      - {title: "Bill Delaney, The Jaxson: The history of 'Lift Ev'ry Voice and Sing', page 2 (2024)", url: "https://www.thejaxsonmag.com/article/the-history-of-lift-evry-voice-and-sing-page-2", quote: "Washington endorsed the song, and in 1919, the NAACP adopted it as the organization’s official song"}
+  - card: lift-every-voice
+    fact: "It came to be called the Negro National Anthem"
+    verdict: confirmed
+    sources:
+      - {title: "NPR: Lift Every Voice and Sing, the story behind the Black national anthem (2018)", url: "https://www.npr.org/2018/08/16/638324920/lift-every-voice-and-sing-the-story-behind-the-black-national-anthem", quote: "Two key events led to its being named the Negro National Anthem"}
+      - {title: "Encyclopedia of Black Studies (SAGE): Lift Every Voice and Sing", url: "https://sk.sagepub.com/ency/edvol/embed/blackstudies/chpt/lift-every-voice-sing", quote: "This song became known as the “Negro National Anthem.”"}
+  - card: lift-every-voice
+    fact: "It was a rallying song of the civil rights movement of the 1950s and 1960s"
+    verdict: corrected
+    sources:
+      - {title: "NAACP: Lift Every Voice and Sing", url: "https://www.naacp.org/naacp-history-lift-evry-voice-and-sing/", quote: "prominently used as a rallying cry during the Civil Rights Movement of the 1950s and 1960s"}
+      - {title: "Bill Delaney, The Jaxson: The history of 'Lift Ev'ry Voice and Sing', page 2 (2024)", url: "https://www.thejaxsonmag.com/article/the-history-of-lift-evry-voice-and-sing-page-2", quote: "The song found renewed popularity during the Civil Rights Movement of the 1950s and ’60s"}
+    note: "NPR quote did not support the claim (it says the song faded late in the movement); replaced with The Jaxson."
+  - card: lift-every-voice
+    fact: "In 2009 Joseph Lowery quoted it in his benediction at Barack Obama's inauguration"
+    verdict: confirmed
+    sources:
+      - {title: "NPR: Lift Every Voice and Sing, the story behind the Black national anthem (2018)", url: "https://www.npr.org/2018/08/16/638324920/lift-every-voice-and-sing-the-story-behind-the-black-national-anthem", quote: "Joseph Lowery gave the benediction at President Barack Obama's first inauguration, and began by quoting the song's third verse nearly verbatim"}
+      - {title: "Bill Delaney, The Jaxson: The history of 'Lift Ev'ry Voice and Sing', page 2 (2024)", url: "https://www.thejaxsonmag.com/article/the-history-of-lift-evry-voice-and-sing-page-2", quote: "in 2008, Reverend Joseph Lowery recited some of the lines in his benediction at President Barack Obama’s inauguration"}
+    note: "The Jaxson misdates the inauguration to 2008; NPR gives Obama's first inauguration (2009). Card year 2009 is right."
+  - card: afro-turks
+    fact: "In the nineteenth century enslaved Africans were brought to the Ottoman Empire"
+    verdict: confirmed
+    sources:
+      - {title: "Ekrem Eddy Güzeldere, Qantara.de: The fate of the Afro-Turks, nothing left but the colour", url: "https://web.archive.org/web/2016/http://en.qantara.de/Nothing-Left-But-the-Colour/19701c20987i0p9/index.html", quote: "The Afro-Turks, whose ancestors came to the Ottoman Empire as slaves in the nineteenth century"}
+      - {title: "Ayla Jean Yackley, Al-Monitor (2020)", url: "https://web.archive.org/web/20210801135824/https://www.al-monitor.com/originals/2020/06/turkey-united-states-afro-turks-join-outcry-george-floyd.html", quote: "many of them descendants of slaves brought to the Ottoman Empire"}
+  - card: afro-turks
+    fact: "Many worked on cotton and tobacco farms around İzmir"
+    verdict: confirmed
+    sources:
+      - {title: "Ayla Jean Yackley, Al-Monitor (2020)", url: "https://web.archive.org/web/20210801135824/https://www.al-monitor.com/originals/2020/06/turkey-united-states-afro-turks-join-outcry-george-floyd.html", quote: "forebears who labored in Aegean cotton and tobacco fields in the 1800s"}
+      - {title: "BBC: Turkey's little-known African community (2016), via MyJoyOnline", url: "https://web.archive.org/web/20161113105609/http://www.myjoyonline.com/world/2016/September-7th/turkeys-little-known-african-community.php", quote: "where many slave families were sent to work on the cotton fields near the port of old Smyrna (modern day Izmir)"}
+  - card: afro-turks
+    fact: "Freed people were settled in villages near İzmir and in Aydın province, a few of which are still largely Black"
+    verdict: confirmed
+    sources:
+      - {title: "Ekrem Eddy Güzeldere, Qantara.de: The fate of the Afro-Turks, nothing left but the colour", url: "https://web.archive.org/web/2016/http://en.qantara.de/Nothing-Left-But-the-Colour/19701c20987i0p9/index.html", quote: "As a result, for many years there were homogenous \"African\" villages in Aydin"}
+      - {title: "Ayla Jean Yackley, Al-Monitor (2020)", url: "https://web.archive.org/web/20210801135824/https://www.al-monitor.com/originals/2020/06/turkey-united-states-afro-turks-join-outcry-george-floyd.html", quote: "the authorities intercepted captives at Izmir’s ports and settled them as immigrants in villages, a handful of which remain majority-Black"}
+  - card: afro-turks
+    fact: "Their descendants are estimated at up to 100,000 and are known as Afro-Turks"
+    verdict: confirmed
+    sources:
+      - {title: "Ayla Jean Yackley, Al-Monitor (2020)", url: "https://web.archive.org/web/20210801135824/https://www.al-monitor.com/originals/2020/06/turkey-united-states-afro-turks-join-outcry-george-floyd.html", quote: "Often called Afro-Turks ... Doguluer estimated there are between 25,000 and 100,000"}
+      - {title: "BBC: Turkey's little-known African community (2016), via MyJoyOnline", url: "https://web.archive.org/web/20161113105609/http://www.myjoyonline.com/world/2016/September-7th/turkeys-little-known-african-community.php", quote: "Although some estimates put the number of Afro Turks as high as 100,000"}
+  - card: afro-turks
+    fact: "Neighbours have long called them 'Arabs'"
+    verdict: confirmed
+    sources:
+      - {title: "BBC: Turkey's little-known African community (2016), via MyJoyOnline", url: "https://web.archive.org/web/20161113105609/http://www.myjoyonline.com/world/2016/September-7th/turkeys-little-known-african-community.php", quote: "Afro Turks are referred to in apparently friendly social circles as “Arab”, a term which has been traditionally used in Turkey for anyone dark enough to be either Arab or African"}
+      - {title: "Ekrem Eddy Güzeldere, Qantara.de: The fate of the Afro-Turks, nothing left but the colour", url: "https://web.archive.org/web/2016/http://en.qantara.de/Nothing-Left-But-the-Colour/19701c20987i0p9/index.html", quote: "her family suddenly announced, \"The Arab isn't going to get any o"}
+  - card: afro-turks
+    fact: "Each spring they held the Calf Festival (Dana Bayramı), kept since the nineteenth century in and around İzmir"
+    verdict: confirmed
+    sources:
+      - {title: "Ekrem Eddy Güzeldere, Qantara.de: The fate of the Afro-Turks, nothing left but the colour", url: "https://web.archive.org/web/2016/http://en.qantara.de/Nothing-Left-But-the-Colour/19701c20987i0p9/index.html", quote: "The Sixth Spring Festival is really the Sixth Festival of the Calf, the traditional celebration of the Afro-Turks, which they've been celebrating since the nineteenth century in and around Izmir"}
+      - {title: "BBC: Turkey's little-known African community (2016), via MyJoyOnline", url: "https://web.archive.org/web/20161113105609/http://www.myjoyonline.com/world/2016/September-7th/turkeys-little-known-african-community.php", quote: "the Calf Festival (Dana Bayramı), an Afro Turk festival ... Originally this was an annual tradition ... among the African slave community during the days of the Ottoman Empire"}
+  - card: afro-turks
+    fact: "The festival stopped: banned in 1924 by one account, died out in the 1960s by another"
+    verdict: confirmed
+    sources:
+      - {title: "Ekrem Eddy Güzeldere, Qantara.de: The fate of the Afro-Turks, nothing left but the colour", url: "https://web.archive.org/web/2016/http://en.qantara.de/Nothing-Left-But-the-Colour/19701c20987i0p9/index.html", quote: "In 1924, the Turkish republic banned the celebration"}
+      - {title: "BBC: Turkey's little-known African community (2016), via MyJoyOnline", url: "https://web.archive.org/web/20161113105609/http://www.myjoyonline.com/world/2016/September-7th/turkeys-little-known-african-community.php", quote: "In the 1960s the practice died out"}
+  - card: afro-turks
+    fact: "Mustafa Olpak's family came from Kenya by way of Crete"
+    verdict: confirmed
+    sources:
+      - {title: "BBC: Turkey's little-known African community (2016), via MyJoyOnline", url: "https://web.archive.org/web/20161113105609/http://www.myjoyonline.com/world/2016/September-7th/turkeys-little-known-african-community.php", quote: "Mustafa Olpak, a 61-year-old local Afro-Turk who managed to trace his heritage to Kenya, via Crete"}
+      - {title: "Ayla Jean Yackley, Al-Monitor (2020)", url: "https://web.archive.org/web/20210801135824/https://www.al-monitor.com/originals/2020/06/turkey-united-states-afro-turks-join-outcry-george-floyd.html", quote: "writing a 2005 memoir that explored his family’s passage from Kenya to Greece and on to Turkey"}
+  - card: afro-turks
+    fact: "He wrote a memoir in 2005 that opens: 'The first generation lives it, the second denies it, the third researches it'"
+    verdict: confirmed
+    sources:
+      - {title: "renk. Magazin: Afrotürken – Im toten Winkel der Geschichte", url: "https://renk-magazin.de/afrotuerken-im-toten-winkel-der-geschichte/", quote: "Olpak veröffentliche 2005 mit „Kenya-Girit-İstanbul: Köle Kıyısından İnsan Biyografileri“ ... Olpaks Buch beginnt mit den Worten: „Birinci kuşak yaşar, İkinci kuşak reddeder, Üçüncü kuşak araştırır… Ben Mustafa Olpak.“"}
+      - {title: "Ekrem Eddy Güzeldere, Qantara.de: The fate of the Afro-Turks, nothing left but the colour", url: "https://web.archive.org/web/2016/http://en.qantara.de/Nothing-Left-But-the-Colour/19701c20987i0p9/index.html", quote: "In Olpak's autobiography, he wrote, \"The first generation has the experiences, the second generation denies them, and the third generation researches into them.\""}
+  - card: afro-turks
+    fact: "In 2006 Olpak founded an Afro-Turkish association in Ayvalık"
+    verdict: confirmed
+    sources:
+      - {title: "Ekrem Eddy Güzeldere, Qantara.de: The fate of the Afro-Turks, nothing left but the colour", url: "https://web.archive.org/web/2016/http://en.qantara.de/Nothing-Left-But-the-Colour/19701c20987i0p9/index.html", quote: "The Association of Afro-Turks was founded in 2006 by Mustafa Olpak in Ayvalik"}
+      - {title: "renk. Magazin: Afrotürken – Im toten Winkel der Geschichte", url: "https://renk-magazin.de/afrotuerken-im-toten-winkel-der-geschichte/", quote: "war 2006 ... Afrikalılar Kültür ve Dayanışma Derneği von Mustafa Olpak gegründet worden, zunächst mit Sitz in Ayvalık"}
+  - card: afro-turks
+    fact: "In 2007 the association revived the festival"
+    verdict: confirmed
+    sources:
+      - {title: "Ekrem Eddy Güzeldere, Qantara.de: The fate of the Afro-Turks, nothing left but the colour", url: "https://web.archive.org/web/2016/http://en.qantara.de/Nothing-Left-But-the-Colour/19701c20987i0p9/index.html", quote: "it was not until 2007 that the event could be re-established by the Association of Afro-Turks"}
+      - {title: "Ayla Jean Yackley, Al-Monitor (2020)", url: "https://web.archive.org/web/20210801135824/https://www.al-monitor.com/originals/2020/06/turkey-united-states-afro-turks-join-outcry-george-floyd.html", quote: "An annual highlight is the Calf Festival , once celebrated by slaves and revived in 2007"}
+  - card: afro-turks
+    fact: "Within a few years it drew hundreds of people"
+    verdict: confirmed
+    sources:
+      - {title: "Ekrem Eddy Güzeldere, Qantara.de: The fate of the Afro-Turks, nothing left but the colour", url: "https://web.archive.org/web/2016/http://en.qantara.de/Nothing-Left-But-the-Colour/19701c20987i0p9/index.html", quote: "the sixth turned into a big event with 400 participants"}
+      - {title: "Ayla Jean Yackley, Al-Monitor (2020)", url: "https://web.archive.org/web/20210801135824/https://www.al-monitor.com/originals/2020/06/turkey-united-states-afro-turks-join-outcry-george-floyd.html", quote: "Each spring hundreds of residents, both Black and white, don African-style masks and dress to dance in a parade"}
+  - card: afro-turks
+    fact: "Olpak has died; the festival continues every spring"
+    verdict: confirmed
+    sources:
+      - {title: "Ayla Jean Yackley, Al-Monitor (2020)", url: "https://web.archive.org/web/20210801135824/https://www.al-monitor.com/originals/2020/06/turkey-united-states-afro-turks-join-outcry-george-floyd.html", quote: "The late activist Mustafa Olpak ... An annual highlight is the Calf Festival"}
+      - {title: "renk. Magazin: Afrotürken – Im toten Winkel der Geschichte", url: "https://renk-magazin.de/afrotuerken-im-toten-winkel-der-geschichte/", quote: "Olpak, sicherlich der bekannteste afrotürkische Repräsentant der Gegenwart, starb am 3."}
+  - card: afro-turks
+    fact: "Ottoman slavery has been little studied; Afro-Turks now work with researchers to record their history"
+    verdict: confirmed
+    sources:
+      - {title: "Ekrem Eddy Güzeldere, Qantara.de: The fate of the Afro-Turks, nothing left but the colour", url: "https://web.archive.org/web/2016/http://en.qantara.de/Nothing-Left-But-the-Colour/19701c20987i0p9/index.html", quote: "Slavery in the Ottoman Empire has been little researched"}
+      - {title: "Ayla Jean Yackley, Al-Monitor (2020)", url: "https://web.archive.org/web/20210801135824/https://www.al-monitor.com/originals/2020/06/turkey-united-states-afro-turks-join-outcry-george-floyd.html", quote: "are working with researchers to record their underdocumented history"}
+  - card: palenqueras
+    fact: "San Basilio de Palenque, south-east of Cartagena, began as a refuge built by people who escaped slavery"
+    verdict: confirmed
+    sources:
+      - {title: "UNESCO ICH: Cultural space of Palenque de San Basilio", url: "https://ich.unesco.org/en/RL/cultural-space-of-palenque-de-san-basilio-00102", quote: "located in the foothills of the Montes de María, southeast of the regional capital, Cartagena. Palenque de San Basilio was one of the walled communities called palenques, which were founded by escaped slaves as a refuge"}
+      - {title: "El Heraldo: Palenqueras se 'toman' con sus poncheras el Centro Histórico (2019)", url: "https://www.elheraldo.co/bolivar/2019/03/27/palenqueras-se-toman-con-sus-poncheras-el-centro-historico-612556/", quote: "las mujeres del primer pueblo libre de América, Palenque de San Basilio"}
+  - card: palenqueras
+    fact: "For generations its women have come to Cartagena's old city to sell fruit and coconut sweets"
+    verdict: confirmed
+    sources:
+      - {title: "Aldair Zamora, El Heraldo (2023)", url: "https://www.elheraldo.co/cultura/2023/01/23/palenqueras-un-legado-cultural-que-sostienen-en-la-palangana-972447/", quote: "Desde hace mucho tiempo, las palenqueras llegan hasta el Centro Histórico de Cartagena con trajes coloridos para vender frutas y cocadas"}
+      - {title: "El Universal: Alcaldía de Cartagena logra acuerdos con palenqueras (2019)", url: "https://www.eluniversal.com.co/cartagena/2019/03/26/alcaldia-de-cartagena-logra-acuerdos-con-palenqueras/", quote: "Las palenqueras somos más que un vestido, tenemos más de 50 años trabajando vendiendo frutas y dulces"}
+  - card: palenqueras
+    fact: "They carry a basin on the head"
+    verdict: confirmed
+    sources:
+      - {title: "Elisabeth Cunin, Etnicidad, género y territorio en Cartagena de Indias, Revista Virajes", url: "https://revistasojs.ucaldas.edu.co/index.php/virajes/article/download/5893/5930/11311", quote: "Con una palangana de frutas sobre la cabeza, ella recorre las calles de Cartagena"}
+      - {title: "John Montaño, El Tiempo (2019)", url: "https://www.eltiempo.com/colombia/otras-ciudades/palequeras-piden-derecho-a-trabajar-y-protestaran-en-cartagena-341686", quote: "esas mujeres que recorren las calles de Cartagena con una palangana en la cabeza vendiendo fruta"}
+  - card: palenqueras
+    fact: "They wear colourful dresses"
+    verdict: confirmed
+    sources:
+      - {title: "Aldair Zamora, El Heraldo (2023)", url: "https://www.elheraldo.co/cultura/2023/01/23/palenqueras-un-legado-cultural-que-sostienen-en-la-palangana-972447/", quote: "con trajes coloridos para vender frutas y cocadas"}
+      - {title: "Elisabeth Cunin, Etnicidad, género y territorio en Cartagena de Indias, Revista Virajes", url: "https://revistasojs.ucaldas.edu.co/index.php/virajes/article/download/5893/5930/11311", quote: "vestida con un traje folklórico para la ocasión"}
+  - card: palenqueras
+    fact: "They announce their wares with a loud cry"
+    verdict: confirmed
+    sources:
+      - {title: "Elisabeth Cunin, Etnicidad, género y territorio en Cartagena de Indias, Revista Virajes", url: "https://revistasojs.ucaldas.edu.co/index.php/virajes/article/download/5893/5930/11311", quote: "anunciando su presencia con una voz fuerte, convertida en signo de reconocimiento: \"papaya, maracuyá, mandarina\""}
+      - {title: "Aldair Zamora, El Heraldo (2023)", url: "https://www.elheraldo.co/cultura/2023/01/23/palenqueras-un-legado-cultural-que-sostienen-en-la-palangana-972447/", quote: "La inigualable voz de las palenqueras vendiendo las cocadas en cualquier calle del Caribe"}
+  - card: palenqueras
+    fact: "The palenquera became the emblem of Cartagena"
+    verdict: confirmed
+    sources:
+      - {title: "Elisabeth Cunin, Etnicidad, género y territorio en Cartagena de Indias, Revista Virajes", url: "https://revistasojs.ucaldas.edu.co/index.php/virajes/article/download/5893/5930/11311", quote: "No hay una guía turística, un catálogo promocional o una imagen de Cartagena, que no haga referencia a la palenquera"}
+      - {title: "Adriaan Alsema, Colombia Reports (2019)", url: "https://colombiareports.com/cartagenas-iconic-fruit-sellers-furious-after-police-insists-on-clamping-down-on-street-vendors/", quote: "Dozens of iconic “palenquera” fruit sellers took to the streets in Cartagena"}
+  - card: palenqueras
+    fact: "The city speaks of the women as its living heritage"
+    verdict: confirmed
+    sources:
+      - {title: "El Universal: Alcaldía de Cartagena logra acuerdos con palenqueras (2019)", url: "https://www.eluniversal.com.co/cartagena/2019/03/26/alcaldia-de-cartagena-logra-acuerdos-con-palenqueras/", quote: "El alcalde de Cartagena, Pedrito Pereira manifestó que las palenqueras son un patrimonio vivo de la ciudad y siempre serán respetadas"}
+      - {title: "Aldair Zamora, El Heraldo (2023)", url: "https://www.elheraldo.co/cultura/2023/01/23/palenqueras-un-legado-cultural-que-sostienen-en-la-palangana-972447/", quote: "las decenas de palenqueras se convirtieron con el pasar del tiempo en patrimonios vivos de Cartagena y la región Caribe"}
+  - card: palenqueras
+    fact: "In March 2019 police and public-space officials, applying the new police code, evicted Angelina Cassiani from her spot on Plaza de Bolívar, where she had sold fruit for twenty years, and confiscated her basin"
+    verdict: confirmed
+    sources:
+      - {title: "El Heraldo: Palenqueras se 'toman' con sus poncheras el Centro Histórico (2019)", url: "https://www.elheraldo.co/bolivar/2019/03/27/palenqueras-se-toman-con-sus-poncheras-el-centro-historico-612556/", quote: "Angelina Cassiani, a quien la policía desalojó el pasado viernes de su puesto de venta de hace 20 años en la Plaza de Bolívar, y le decomisó su ponchera llena de frutas, a pesar de su reclamo y lágrimas, porque ocupaba el espacio público"}
+      - {title: "John Montaño, El Tiempo (2019)", url: "https://www.eltiempo.com/colombia/otras-ciudades/palequeras-piden-derecho-a-trabajar-y-protestaran-en-cartagena-341686", quote: "la palenquera tradicional del Parque de Bolívar que la semana pasada fue objeto de un operativo por parte de oficina de espacio público de la ciudad y de la Policía Metropolitana de Cartagena, quienes le aplicaron el más reciente código de policía"}
+  - card: palenqueras
+    fact: "On 26 March 2019 dozens of palenqueras marched through the historic centre with their basins"
+    verdict: confirmed
+    sources:
+      - {title: "Adriaan Alsema, Colombia Reports (2019)", url: "https://colombiareports.com/cartagenas-iconic-fruit-sellers-furious-after-police-insists-on-clamping-down-on-street-vendors/", quote: "Mar 26, 2019 ... Dozens of iconic “palenquera” fruit sellers took to the streets in Cartagena on Tuesday"}
+      - {title: "John Montaño, El Tiempo (2019)", url: "https://www.eltiempo.com/colombia/otras-ciudades/palequeras-piden-derecho-a-trabajar-y-protestaran-en-cartagena-341686", quote: "Unas 60 palenqueras ... se toman este martes la Plaza de la Aduana y varias calles del Centro Histórico para exigir el derecho al trabajo"}
+  - card: palenqueras
+    fact: "They demanded respect and exemption from the police code"
+    verdict: confirmed
+    sources:
+      - {title: "El Heraldo: Palenqueras se 'toman' con sus poncheras el Centro Histórico (2019)", url: "https://www.elheraldo.co/bolivar/2019/03/27/palenqueras-se-toman-con-sus-poncheras-el-centro-historico-612556/", quote: "exigir un trato digno por parte de la Policía Metropolitana de Cartagena y que a ellas no se les aplique el Código Nacional de Convivencia de la Policía"}
+      - {title: "John Montaño, El Tiempo (2019)", url: "https://www.eltiempo.com/colombia/otras-ciudades/palequeras-piden-derecho-a-trabajar-y-protestaran-en-cartagena-341686", quote: "Pedimos respeto por nosotras y exigimos que se estudie otra vez ese código de policía"}
+  - card: palenqueras
+    fact: "Years later they still walk the old city with their basins selling fruit"
+    verdict: confirmed
+    sources:
+      - {title: "Aldair Zamora, El Heraldo (2023)", url: "https://www.elheraldo.co/cultura/2023/01/23/palenqueras-un-legado-cultural-que-sostienen-en-la-palangana-972447/", quote: "Desde hace mucho tiempo, las palenqueras llegan hasta el Centro Histórico de Cartagena con trajes coloridos para vender frutas y cocadas"}
+      - {title: "El Universal: Alcaldía de Cartagena logra acuerdos con palenqueras (2019)", url: "https://www.eluniversal.com.co/cartagena/2019/03/26/alcaldia-de-cartagena-logra-acuerdos-con-palenqueras/", quote: "No existe ninguna orden que impida el ingreso de las palenqueras al Centro histórico"}
+  - card: marielle-franco
+    fact: "Complexo da Maré is a cluster of favelas in Rio where violence and police raids are frequent"
+    verdict: confirmed
+    sources:
+      - {title: "Los Angeles Times (2018)", url: "https://www.latimes.com/world/la-fg-brazil-marielle-franco-20180315-story.html", quote: "grew up in the Mare complex of favelas , or slums, where violence and police incursions are frequent"}
+      - {title: "Dom Phillips, The Guardian (18 March 2018)", url: "https://www.theguardian.com/world/2018/mar/18/marielle-franco-brazil-favelas-mourn-death-champion", quote: "The shooting of a black, gay councillor has dealt a new blow to communities oppressed by gangs"}
+  - card: marielle-franco
+    fact: "Marielle Franco grew up in Maré"
+    verdict: confirmed
+    sources:
+      - {title: "Julia Carneiro, BBC News (2018)", url: "https://www.bbc.com/news/world-latin-america-43484449", quote: "she had grown up in Complexo da Maré"}
+      - {title: "Dom Phillips, The Guardian (18 March 2018)", url: "https://www.theguardian.com/world/2018/mar/18/marielle-franco-brazil-favelas-mourn-death-champion", quote: "it was business as usual in the Maré favela where she grew up"}
+  - card: marielle-franco
+    fact: "She raised a daughter on her own"
+    verdict: corrected
+    sources:
+      - {title: "Dom Phillips, The Guardian (18 March 2018)", url: "https://www.theguardian.com/world/2018/mar/18/marielle-franco-brazil-favelas-mourn-death-champion", quote: "Franco fought for the rights of women, single mothers like herself ... At 19, she became pregnant and had a daughter"}
+      - {title: "The Intercept (2018)", url: "https://theintercept.com/2018/03/19/just-as-u-s-media-does-with-mlk-brazils-media-now-trying-to-whitewash-and-exploit-marielle-francos-political-radicalism/", quote: "from poverty, deprivation, and single motherhood at 19 as a black woman in a favela"}
+    note: "Al Jazeera only names her daughter; replaced with The Intercept ('single motherhood at 19')."
+  - card: marielle-franco
+    fact: "After a friend was killed by a stray bullet in a police–traffickers shootout she turned to activism"
+    verdict: confirmed
+    sources:
+      - {title: "Dom Phillips, The Guardian (18 March 2018)", url: "https://www.theguardian.com/world/2018/mar/18/marielle-franco-brazil-favelas-mourn-death-champion", quote: "She became militant after a friend was killed by a stray bullet in a shootout between police and gang members"}
+      - {title: "Los Angeles Times (2018)", url: "https://www.latimes.com/world/la-fg-brazil-marielle-franco-20180315-story.html", quote: "an outspoken defender of human rights since a stray bullet killed a friend during a shootout between police and drug traffickers in 2005"}
+  - card: marielle-franco
+    fact: "She won a university scholarship and earned a master's degree"
+    verdict: confirmed
+    sources:
+      - {title: "Dom Phillips, The Guardian (18 March 2018)", url: "https://www.theguardian.com/world/2018/mar/18/marielle-franco-brazil-favelas-mourn-death-champion", quote: "the classes that helped her get a scholarship at Rio’s prestigious Pontifical Catholic University"}
+      - {title: "Julia Carneiro, BBC News (2018)", url: "https://www.bbc.com/news/world-latin-america-43484449", quote: "Despite her humble origins, Ms Franco made it into university, getting a masters degree"}
+  - card: marielle-franco
+    fact: "In 2016, in her first election, she won a city council seat for the Socialism and Liberty Party with the fifth-highest vote"
+    verdict: confirmed
+    sources:
+      - {title: "Julia Carneiro, BBC News (2018)", url: "https://www.bbc.com/news/world-latin-america-43484449", quote: "Two years ago, Ms Franco was elected Rio city councillor, the very first time she had run for office ... The left-wing Party for Socialism and Liberty (PSOL) she was a member of ... the councillor who won the fifth most votes in Rio in 2016"}
+      - {title: "Los Angeles Times (2018)", url: "https://www.latimes.com/world/la-fg-brazil-marielle-franco-20180315-story.html", quote: "Franco defied the odds and won the fifth-highest vote count of any city councilor when she was elected in 2016"}
+  - card: marielle-franco
+    fact: "She was a gay Black woman"
+    verdict: confirmed
+    sources:
+      - {title: "Dom Phillips, The Guardian (18 March 2018)", url: "https://www.theguardian.com/world/2018/mar/18/marielle-franco-brazil-favelas-mourn-death-champion", quote: "the murder of black, gay Rio councillor Marielle Franco"}
+      - {title: "The Intercept (2018)", url: "https://theintercept.com/2018/03/19/just-as-u-s-media-does-with-mlk-brazils-media-now-trying-to-whitewash-and-exploit-marielle-francos-political-radicalism/", quote: "A black, leftist lesbian from the sprawling Maré favela"}
+  - card: marielle-franco
+    fact: "She spoke for women, single mothers, LGBT people and favela residents"
+    verdict: confirmed
+    sources:
+      - {title: "Dom Phillips, The Guardian (18 March 2018)", url: "https://www.theguardian.com/world/2018/mar/18/marielle-franco-brazil-favelas-mourn-death-champion", quote: "Franco fought for the rights of women, single mothers like herself, gay people and favela residents"}
+      - {title: "Los Angeles Times (2018)", url: "https://www.latimes.com/world/la-fg-brazil-marielle-franco-20180315-story.html", quote: "she defended the city’s marginalized communities, stood up for human rights"}
+  - card: marielle-franco
+    fact: "In February 2018 she became rapporteur of a commission monitoring the federal intervention in Rio's public security"
+    verdict: confirmed
+    sources:
+      - {title: "Amnesty International (2018)", url: "https://www.amnesty.org/en/latest/news/2018/03/brazil-authorities-must-investigate-the-killing-of-human-rights-defender-marielle-franco/", quote: "Two weeks ago, she was appointed rapporteur for a special commission that the city council created to monitor the ongoing federal intervention in Rio de Janeiro and the militarization of public security"}
+      - {title: "Los Angeles Times (2018)", url: "https://www.latimes.com/world/la-fg-brazil-marielle-franco-20180315-story.html", quote: "Last month, Franco was named rapporteur of a special commission that was to serve as a watchdog over a controversial federal intervention in Rio’s public security"}
+  - card: marielle-franco
+    fact: "On the night of 14 March 2018 she and her driver Anderson Gomes were shot dead in their car"
+    verdict: confirmed
+    sources:
+      - {title: "Julia Carneiro, BBC News (2018)", url: "https://www.bbc.com/news/world-latin-america-43484449", quote: "On 14 March, Ms Franco was being driven home from an event promoting black empowerment when a car pulled alongside hers and shots were fired ... her driver, Anderson Gomes, was also killed"}
+      - {title: "Al Jazeera (Reuters/AP, 2026)", url: "https://www.aljazeera.com/news/2026/2/26/brazils-supreme-court-imposes-steep-sentences-for-marielle-franco-murder", quote: "On March 14, 2018, after an evening debate in Rio de Janeiro, a car pulled alongside the vehicle carrying Franco and Gomes"}
+  - card: marielle-franco
+    fact: "Tens of thousands marched across Brazil chanting 'Marielle presente!'"
+    verdict: confirmed
+    sources:
+      - {title: "Dom Phillips, The Guardian (18 March 2018)", url: "https://www.theguardian.com/world/2018/mar/18/marielle-franco-brazil-favelas-mourn-death-champion", quote: "tens of thousands of people thronged streets across Brazil to express their anger"}
+      - {title: "Julia Carneiro, BBC News (2018)", url: "https://www.bbc.com/news/world-latin-america-43484449", quote: "crowds took to the streets in the city centre shouting \"Marielle presente!\" (Marielle is here!)"}
+  - card: marielle-franco
+    fact: "In 2024 former police officers Ronnie Lessa and Élcio de Queiroz were sentenced to 78 and 59 years"
+    verdict: confirmed
+    sources:
+      - {title: "Tiago Rogero, The Guardian (2024)", url: "https://www.theguardian.com/world/2024/oct/31/marielle-franco-brazil-murder-former-police-officers-sentenced", quote: "Ronnie Lessa and Élcio de Queiroz sentenced to 78 and 59 years over 2018 murder"}
+      - {title: "Al Jazeera (Reuters/AP, 2026)", url: "https://www.aljazeera.com/news/2026/2/26/brazils-supreme-court-imposes-steep-sentences-for-marielle-franco-murder", quote: "Lessa and Queiroz were sentenced to 78 and 59 years in prison in October 2024"}
+  - card: marielle-franco
+    fact: "In February 2026 the Supreme Federal Court convicted the Brazão brothers of ordering the murder, over militia land interests, and sentenced each to 76 years"
+    verdict: confirmed
+    sources:
+      - {title: "MercoPress (2026)", url: "https://en.mercopress.com/2026/02/26/brazil-braz-o-brothers-sentenced-to-76-years-for-ordering-marielle-franco-killing", quote: "Brazil’s Supreme Federal Court (STF) on Wednesday convicted brothers Domingos Inácio Brazão and João Francisco Inácio Brazão — known as Chiquinho — of ordering the 2018 assassination ... The court imposed 76 years and three months in prison on each brother"}
+      - {title: "Buenos Aires Times (2026)", url: "https://www.batimes.com.ar/news/latin-america/76-years-in-prison-for-the-people-who-conceived-marielle-francos-murder.phtml", quote: "ruling that the crime was ordered to protect militia-linked land interests ... sentenced brothers Domingos Brazão and Chiquinho Brazão to 76 years in prison"}
+  - card: marielle-franco
+    fact: "Her sister Anielle Franco is Brazil's minister for racial equality"
+    verdict: confirmed
+    sources:
+      - {title: "MercoPress (2026)", url: "https://en.mercopress.com/2026/02/26/brazil-braz-o-brothers-sentenced-to-76-years-for-ordering-marielle-franco-killing", quote: "Marielle’s sister, Anielle Franco — Brazil’s minister for racial equality"}
+      - {title: "Buenos Aires Times (2026)", url: "https://www.batimes.com.ar/news/latin-america/76-years-in-prison-for-the-people-who-conceived-marielle-francos-murder.phtml", quote: "Her sister, Anielle Franco, now Brazil’s racial equality minister"}
+  - card: sarraounia-film
+    fact: "In 1899 a French column under captains Voulet and Chanoine marched east across present-day Niger towards Lake Chad, killing as it went"
+    verdict: confirmed
+    sources:
+      - {title: "Eromo Egbejule, The Guardian (2025)", url: "https://www.theguardian.com/world/2025/jul/15/france-willingness-discuss-reparations-niger", quote: "In 1899, French officers led by the captains Paul Voulet and Julien Chanoine marched tirailleurs – as the African soldiers under their command were known – through communities in present-day Niger"}
+      - {title: "Jacques Morel, Calendrier des crimes de la France outre-mer: 2 mai 1899", url: "https://web.archive.org/web/20120324034536/http://jacques.morel67.pagesperso-orange.fr/ccfo/crimcol/node49.html", quote: "La mission Voulet-Chanoine en route vers le Tchad sème la mort sur son passage"}
+  - card: sarraounia-film
+    fact: "At Birni-N'Konni the column carried out a massacre"
+    verdict: confirmed
+    sources:
+      - {title: "Eromo Egbejule, The Guardian (2025)", url: "https://www.theguardian.com/world/2025/jul/15/france-willingness-discuss-reparations-niger", quote: "In Birni-N’Konni alone, an estimated 400 people were massacred in a day"}
+      - {title: "Jacques Morel, Calendrier des crimes de la France outre-mer: 2 mai 1899", url: "https://web.archive.org/web/20120324034536/http://jacques.morel67.pagesperso-orange.fr/ccfo/crimcol/node49.html", quote: "2 mai 1899: Massacre de Birni-N'Konni (Soudan - Niger)"}
+  - card: sarraounia-film
+    fact: "When Paris sent Colonel Klobb to take command, Voulet had him shot"
+    verdict: confirmed
+    sources:
+      - {title: "Eromo Egbejule, The Guardian (2025)", url: "https://www.theguardian.com/world/2025/jul/15/france-willingness-discuss-reparations-niger", quote: "When Paris dispatched Col Jean-François Klobb to replace Voulet in July that year and end the bloodletting, the superior officer was shot to death by soldiers acting on the latter’s instructions"}
+      - {title: "Jacques Morel, Calendrier des crimes de la France outre-mer: 2 mai 1899", url: "https://web.archive.org/web/20120324034536/http://jacques.morel67.pagesperso-orange.fr/ccfo/crimcol/node49.html", quote: "Le 14 juillet 1899 à Dankori, Voulet fait tuer le colonel Klobb envoyé pour prendre le commandement de la colonne"}
+  - card: sarraounia-film
+    fact: "Sarraounia, queen of the Azna, fought the French column ('when most neighbours made deals' dropped: Criterion only)"
+    verdict: corrected
+    sources:
+      - {title: "Criterion Channel: Sarraounia", url: "https://www.criterionchannel.com/sarraounia", quote: "the titular Azna queen (Aï Keïta), a revered leader who inspires her people to fight the French army when most of the surrounding tribes have made deals with the invaders or joined their forces"}
+      - {title: "Harvard Film Archive: Sarraounia (2023)", url: "https://harvardfilmarchive.org/calendar/sarraounia-2023-04", quote: "meets on its path the indomitable and incomparable strategist Queen Sarraounia of the Azna, who bravely resists their incursion"}
+    note: "'When most neighbours made deals with the invaders' removed (Criterion only); card now says she fought back."
+  - card: sarraounia-film
+    fact: "Med Hondo, Mauritanian-born and working in France, adapted Abdoulaye Mamani's novel"
+    verdict: confirmed
+    sources:
+      - {title: "IndieWire (2019)", url: "https://www.indiewire.com/2019/03/med-hondo-dead-african-cinema-1202048352/", quote: "Born in Mauritania in 1936, Hondo moved to France in the late 1950s ... based on Nigerien writer Abdoulaye Mamani’s novel of the same name"}
+      - {title: "Criterion Channel: Sarraounia", url: "https://www.criterionchannel.com/sarraounia", quote: "Mauritanian French director Med Hondo shifted to a more realistic, epic style to adapt Abdoulaye Mamani’s SARRAOUNIA"}
+  - card: sarraounia-film
+    fact: "Shooting in Niger was blocked"
+    verdict: confirmed
+    sources:
+      - {title: "Internationales Forum des Jungen Films, Berlin 1987: Sarraounia, catalogue sheet (interview with Med Hondo)", url: "https://www.arsenal-berlin.de/assets/Legacy/katalog_blaetter/19_1987_Sarraounia.pdf", quote: "Tatsache jedenfalls ist, daß der Niger einen Rückzieher gemacht hat"}
+      - {title: "Jacques Morel, Calendrier des crimes de la France outre-mer: 2 mai 1899", url: "https://web.archive.org/web/20120324034536/http://jacques.morel67.pagesperso-orange.fr/ccfo/crimcol/node49.html", quote: "Med Hondo , Sarraounia , film France/Burkina Faso, 1986, interdit de tournage au Niger"}
+    note: "Added Hondo's own 1987 Berlin Forum interview as an independent source; HFA notes and Film Comment are probably by the same author (Aboubakar Sanogo)."
+  - card: sarraounia-film
+    fact: "Thomas Sankara, Burkina Faso's revolutionary president and a cinephile, stepped in and the film was shot in Burkina Faso"
+    verdict: confirmed
+    sources:
+      - {title: "Internationales Forum des Jungen Films, Berlin 1987: Sarraounia, catalogue sheet (interview with Med Hondo)", url: "https://www.arsenal-berlin.de/assets/Legacy/katalog_blaetter/19_1987_Sarraounia.pdf", quote: "ich habe Hauptmann Sankara aufgesucht und ihm sowie den Mitgliedern seiner Regierung die Sachlage geschildert ... Hier, in Burkina Faso, dem früheren Obervolta, wo der größte Teil der Dreharbeiten vonstatten geht"}
+      - {title: "Harvard Film Archive: Sarraounia (2023)", url: "https://harvardfilmarchive.org/calendar/sarraounia-2023-04", quote: "The film owes much of its existence to the late Captain Thomas Sankara, former Head of State of Burkina Faso and a committed cinephile"}
+    note: "HFA notes and Film Comment likely share an author, so Hondo's 1987 Berlin Forum interview is used as the independent second source."
+  - card: sarraounia-film
+    fact: "Aï Keïta played the queen; Jean-Roger Milo and Féodor Atkine played Voulet and Chanoine"
+    verdict: confirmed
+    sources:
+      - {title: "Criterion Channel: Sarraounia", url: "https://www.criterionchannel.com/sarraounia", quote: "French commanders Captain Paul Voulet (Jean-Roger Milo) and Lieutenant Julien Chanoine (Féodor Atkine) ... Starring Aï Keïta"}
+      - {title: "Harvard Film Archive: Sarraounia (2023)", url: "https://harvardfilmarchive.org/calendar/sarraounia-2023-04", quote: "With Aï Keïta, Jean-Roger Milo, Féodor Atkine"}
+  - card: sarraounia-film
+    fact: "The film shows the horrors of colonial conquest without flinching"
+    verdict: confirmed
+    sources:
+      - {title: "Criterion Channel: Sarraounia", url: "https://www.criterionchannel.com/sarraounia", quote: "a historical novel about the Battle of Lougou that unflinchingly depicts the horrors of colonial occupation and conflict"}
+      - {title: "Harvard Film Archive: Sarraounia (2023)", url: "https://harvardfilmarchive.org/calendar/sarraounia-2023-04", quote: "to chronicle the unspeakably gory violence of colonial conquest"}
+  - card: sarraounia-film
+    fact: "In 1987 it won the Golden Stallion of Yennenga at FESPACO in Ouagadougou"
+    verdict: confirmed
+    sources:
+      - {title: "AllAfrica: interview with Aï Keïta Yara (2001)", url: "https://allafrica.com/stories/200102260050.html", quote: "won the coveted Yennenga Stallion award for best film in 1987 at FESPACO, the prestigious pan African festival of film and television held every two years in Ouagadougou"}
+      - {title: "Aboubakar Sanogo, Film Comment (2020)", url: "https://www.filmcomment.com/article/by-any-means-necessary-med-hondo/", quote: "the Golden Yennenga Stallion in Ouagadougou for Sarraounia (1986)"}
+  - card: sarraounia-film
+    fact: "Hondo died in Paris in 2019"
+    verdict: confirmed
+    sources:
+      - {title: "IndieWire (2019)", url: "https://www.indiewire.com/2019/03/med-hondo-dead-african-cinema-1202048352/", quote: "Med Hondo ... a founding father of African cinema, died Saturday morning in Paris"}
+      - {title: "Aboubakar Sanogo, Harvard Film Archive: Med Hondo and the Indocile Image", url: "https://harvardfilmarchive.org/programs/med-hondo-and-the-indocile-image", quote: "On March 2, 2019, on the closing day of the 50th anniversary of FESPACO ... Med Hondo passed away in a hospital in Paris"}
+  - card: sarraounia-film
+    fact: "The Harvard Film Archive and Ciné-Archives restored the film"
+    verdict: confirmed
+    sources:
+      - {title: "Aboubakar Sanogo, Harvard Film Archive: Med Hondo and the Indocile Image", url: "https://harvardfilmarchive.org/programs/med-hondo-and-the-indocile-image", quote: "In collaboration with Ciné-Archives in Paris, the Harvard Film Archive ... oversaw the digital restoration of West Indies and Sarraounia"}
+      - {title: "RFI, La marche du monde: L'Histoire africaine selon Med Hondo (2023)", url: "https://www.rfi.fr/fr/podcasts/la-marche-du-monde/20230702-l-histoire-africaine-selon-med-hondo", quote: "le coffret DVD des trois films restaurés de Med Hondo « Soleil O, West Indies et Sarraounia »"}
+    note: "Further-list item corrected: Soleil Ô was not restored by HFA and Ciné-Archives (HFA restored West Indies and Sarraounia)."
+  - card: la-ultima-cena
+    fact: "The Last Supper was made in Cuba in 1976 by Tomás Gutiérrez Alea"
+    verdict: confirmed
+    sources:
+      - {title: "La Biennale di Venezia: La última cena (2021)", url: "https://labiennale.org/en/node/8552", quote: "LA ÚLTIMA CENA by Tomás Gutiérrez Alea ... Cuba, 1976, 113’"}
+      - {title: "BBC Four Cinema: The Last Supper (2002), archived", url: "https://web.archive.org/web/20021001142816/http://www.bbc.co.uk/bbcfour/cinema/features/the-last-supper.shtml", quote: "THE LAST SUPPER (LA ULTIMA CENA) Tomás Gutiérrez Alea, Cuba, 1976"}
+    note: "CubaNet dropped; Biennale and BBC Four suffice."
+  - card: la-ultima-cena
+    fact: "It is set during Holy Week on a sugar plantation near Havana at the end of the eighteenth century"
+    verdict: corrected
+    sources:
+      - {title: "BBC Four Cinema: The Last Supper (2002), archived", url: "https://web.archive.org/web/20021001142816/http://www.bbc.co.uk/bbcfour/cinema/features/the-last-supper.shtml", quote: "In the 18th century, the wealthy owner of a sprawling Havana sugar plantation gives in to a misguided whim. As Holy Week approaches"}
+      - {title: "Flavio Fiorani, Sentarse a la mesa del Señor: La última cena de Tomás Gutiérrez Alea, Saggi/Ensayos 6 (2011)", url: "https://dialnet.unirioja.es/descarga/articulo/4944033.pdf", quote: "los hechos que aquí se relatan tuvieron lugar en un ingenio de la Habana durante una Semana Santa a finales del siglo XVIII"}
+    note: "Re-sourced without CubaNet; Holy Week added (BBC Four, Fiorani)."
+  - card: la-ultima-cena
+    fact: "The island's sugar boom then ran on the labour of enslaved Africans"
+    verdict: confirmed
+    sources:
+      - {title: "Flavio Fiorani, Sentarse a la mesa del Señor: La última cena de Tomás Gutiérrez Alea, Saggi/Ensayos 6 (2011)", url: "https://dialnet.unirioja.es/descarga/articulo/4944033.pdf", quote: "finales del siglo XVIII, en el que se produce la “revolución plantadora cubana” (Moreno Fraginals 1995: 166), a saber, el poderoso impulso a la producción azucarera"}
+      - {title: "BBC Four Cinema: The Last Supper (2002), archived", url: "https://web.archive.org/web/20021001142816/http://www.bbc.co.uk/bbcfour/cinema/features/the-last-supper.shtml", quote: "a dozen downtrodden slaves"}
+    note: "Fiorani is one source here; BBC Four supports the enslaved workforce."
+  - card: la-ultima-cena
+    fact: "The historian Manuel Moreno Fraginals advised on the film, and its story starts from a real event"
+    verdict: corrected
+    sources:
+      - {title: "Flavio Fiorani, Sentarse a la mesa del Señor: La última cena de Tomás Gutiérrez Alea, Saggi/Ensayos 6 (2011)", url: "https://dialnet.unirioja.es/descarga/articulo/4944033.pdf", quote: "Asesores: Manuel Moreno Fraginals, Rogelio Martínez Furé, Nitza Villapol"}
+      - {title: "La Biennale di Venezia: La última cena (2021)", url: "https://labiennale.org/en/node/8552", quote: "The film’s initial idea was inspired by a single paragraph by historian Manuel Moreno Fraginal’s voluminous economic essay El ingenio (1964)"}
+    note: "CubaNet could not be opened (403, no archive), so it was removed everywhere. 'The idea came from El ingenio' is Biennale only; card now says Moreno Fraginals advised on the film (Fiorani's credits) and the story has a real model (Biennale, BBC Four, Fiorani)."
+  - card: la-ultima-cena
+    fact: "One Holy Thursday a Count of Casa Bayona washed the feet of twelve of his slaves and sat down to eat with them"
+    verdict: corrected
+    sources:
+      - {title: "La Biennale di Venezia: La última cena (2021)", url: "https://labiennale.org/en/node/8552", quote: "the Count of Casa Bayona, who to ease his conscience, washed the feet of twelve of his slaves on Holy Thursday and invited them to dine with him"}
+      - {title: "Luis Bay Sevilla, La Semana Santa habanera en el siglo XIX, Diario de la Marina (1947)", url: "https://www.cubangenclub.org/wp-content/uploads/2021/04/La-Semana-Santa-Habanera-en-el-Siglo-XIX.pdf", quote: "en un día de Jueves Santo uno de los Condes de Casa Bayona se prestó a realizar en señal de humildad esta ceremonia, lavándole, al efecto, los pies a doce de sus esclavos"}
+    note: "'To ease his conscience' removed (Biennale only)."
+  - card: la-ultima-cena
+    fact: "In the film the count casts himself as Christ and twelve bewildered men as his apostles"
+    verdict: corrected
+    sources:
+      - {title: "BBC Four Cinema: The Last Supper (2002), archived", url: "https://web.archive.org/web/20021001142816/http://www.bbc.co.uk/bbcfour/cinema/features/the-last-supper.shtml", quote: "appointing himself as Christ and a dozen downtrodden slaves as the apostles ... the bemused slaves"}
+      - {title: "Lia Gomez-Lang, Sounds and Colours (2022)", url: "https://soundsandcolours.com/articles/cuba/cinema-restored-the-last-supper-at-the-barbican-68442/", quote: "its Count recreates the Biblical Last Supper with twelve of the plantations slaves and naturally himself in the position of Jesus Christ"}
+    note: "'Washes and kisses the feet' removed from the film description (BBC Four only once CubaNet is gone)."
+  - card: la-ultima-cena
+    fact: "At the table he holds forth for almost an hour, mixing Christian teaching with justifications for owning slaves"
+    verdict: corrected
+    sources:
+      - {title: "La Biennale di Venezia: La última cena (2021)", url: "https://labiennale.org/en/node/8552", quote: "The remarkable dinner sequence is the structural core of the film: almost an hour"}
+      - {title: "Lia Gomez-Lang, Sounds and Colours (2022)", url: "https://soundsandcolours.com/articles/cuba/cinema-restored-the-last-supper-at-the-barbican-68442/", quote: "the Count’s theatrical speech and conversations dart between Christian teachings, mythology and justifications for owning slaves. Lasting almost an hour"}
+    note: "Re-sourced without CubaNet; detail about his speech added from Sounds and Colours, matched by Fiorani's account of the sermon."
+  - card: la-ultima-cena
+    fact: "The men take his words seriously; on Good Friday they rise up"
+    verdict: corrected
+    sources:
+      - {title: "BBC Four Cinema: The Last Supper (2002), archived", url: "https://web.archive.org/web/20021001142816/http://www.bbc.co.uk/bbcfour/cinema/features/the-last-supper.shtml", quote: "the impact of the meal reverberates on Good Friday when the slaves rebel"}
+      - {title: "Lia Gomez-Lang, Sounds and Colours (2022)", url: "https://soundsandcolours.com/articles/cuba/cinema-restored-the-last-supper-at-the-barbican-68442/", quote: "a deranged, pious speech with the hopes of enlightening his slaves, but in fact spurring an epic rebellion"}
+    note: "'Seize the overseer' removed (BBC Four only)."
+  - card: la-ultima-cena
+    fact: "The count crushes the revolt and has his 'apostles' beheaded"
+    verdict: corrected
+    sources:
+      - {title: "BBC Four Cinema: The Last Supper (2002), archived", url: "https://web.archive.org/web/20021001142816/http://www.bbc.co.uk/bbcfour/cinema/features/the-last-supper.shtml", quote: "The revolt incurs the wrath of their master, who unleashes the dogs and orders his 'apostles' beheaded"}
+      - {title: "Flavio Fiorani, Sentarse a la mesa del Señor: La última cena de Tomás Gutiérrez Alea, Saggi/Ensayos 6 (2011)", url: "https://dialnet.unirioja.es/descarga/articulo/4944033.pdf", quote: "cuando la revuelta ha sido aplastada y las cabezas de los insurgentes clavadas en once postes"}
+    note: "Replaced 'brutal repression' (CubaNet) with the beheading of the rebels: BBC Four and Fiorani."
+  - card: la-ultima-cena
+    fact: "The film is an allegory of the religious hypocrisy of slave society"
+    verdict: confirmed
+    sources:
+      - {title: "La Biennale di Venezia: La última cena (2021)", url: "https://labiennale.org/en/node/8552", quote: "La ùltima cena, an ironic allegory of the religious hypocrisy of eighteenth-century colonial society"}
+      - {title: "Flavio Fiorani, Sentarse a la mesa del Señor: La última cena de Tomás Gutiérrez Alea, Saggi/Ensayos 6 (2011)", url: "https://dialnet.unirioja.es/descarga/articulo/4944033.pdf", quote: "Puesta en escena de la experiencia de la esclavitud por medio de una alegoría política"}
+  - card: la-ultima-cena
+    fact: "Restored, it is again shown at festivals and in cinemas in Europe, from Venice to the Barbican"
+    verdict: confirmed
+    sources:
+      - {title: "La Biennale di Venezia: La última cena (2021)", url: "https://labiennale.org/en/node/8552", quote: "Restored by ICAIC and Academy Film Archive ... Cinema Classici Fuori Mostra ... Teatro Piccolo Arsenale"}
+      - {title: "Lia Gomez-Lang, Sounds and Colours (2022)", url: "https://soundsandcolours.com/articles/cuba/cinema-restored-the-last-supper-at-the-barbican-68442/", quote: "As part of the Barbican’s bi-monthly film strand in restoration of global art cinema, Tomás Gutiérrez Alea‘s Cuban classic ‘The Last Supper’"}
+    note: "Barbican added to the card from Sounds and Colours."
+unledgered:
+  - {card: pareja-calling-of-matthew, claim: "wow: 'his largest canvas'", verdict: refuted, action: "No source says it is his largest work; wow now names the painting instead."}
+  - {card: pareja-calling-of-matthew, claim: "Enslaved people worked in noble households in Golden Age Spain", verdict: unconfirmed, action: "Removed; opening now states only the guild ban (Met, Smarthistory)."}
+  - {card: pareja-calling-of-matthew, claim: "dispute: status before 1650 and birth year 1606 / ca. 1608", verdict: confirmed, sources: ["Met 437869: 'Pareja was born around 1608' / 'he was unquestionably an enslaved person'", "BlackPast (Fikes): 'In fact, Pareja was a free person'", "Met 846784: 'Antequera 1606–1670 Madrid'"], action: "'notarial act of November 1650' changed to 'of 1650'."}
+  - {card: banjo-lesson, claim: "dispute: shown at the 1893 Columbian Exposition (BlackPast)", verdict: confirmed, sources: ["BlackPast: 'In 1893, at the World’s Columbian Exposition in Chicago, Illinois, he exhibited The Banjo Lesson'"], action: "Kept as an attributed claim."}
+  - {card: banjo-lesson, claim: "dispute: scholars doubted it hung at the 1894 Salon; Tanner's May 1894 letter", verdict: unconfirmed, action: "Removed: only Will South's essay reports it."}
+  - {card: banjo-lesson, claim: "an elderly man holds the instrument steady", verdict: unconfirmed, action: "Changed to 'teaches a boy to play' (BlackPast, SAAM)."}
+  - {card: banjo-lesson, claim: "Tanner soon returned to France for good", verdict: confirmed, sources: ["Will South: 'Tanner was drawn back to Paris'", "BlackPast: 'allowed him to return to Paris'"]}
+  - {card: powers-bible-quilt, claim: "only two quilts survive ('second surviving quilt')", verdict: confirmed, sources: ["NGE: 'only two of her quilts ... survive today'", "NMAH and MFA records of the two quilts"]}
+  - {card: swing-low, claim: "'A century later' (1871 to 1988)", verdict: corrected, action: "Now 'More than a century later'."}
+  - {card: afro-turks, claim: "further: Ahmet Polat, Afro Turks (photobook, 2010)", verdict: unconfirmed, action: "Replaced with Güzeldere's Qantara.de article."}
+  - {card: afro-turks, claim: "wow: 'Descendants ... once greeted spring'", verdict: corrected, action: "BBC and Qantara describe the festival as kept by the enslaved community itself; wow now says Africans enslaved in the Ottoman Empire and their children."}
+  - {card: palenqueras, claim: "years: [1990, 2019]", verdict: refuted, action: "Nothing in the card or sources is tied to 1990; years set to [2019], redundant moment removed."}
+  - {card: marielle-franco, claim: "Maré is in northern Rio", verdict: unconfirmed, action: "'northern' removed (BBC mentions northern Rio only for her parents' flat). RU: Lessa spelt Лесса."}
+  - {card: sarraounia-film, claim: "further: Soleil Ô restored by HFA and Ciné-Archives", verdict: refuted, action: "HFA restored West Indies and Sarraounia; further item now lists West Indies only."}
+  - {card: la-ultima-cena, claim: "wow: count washes feet in the film; 'real count's act of piety'", verdict: corrected, action: "Wow rewritten from confirmed facts: the real count washed the feet of twelve men he enslaved (Biennale, Bay Sevilla, Fiorani); in the film they rise up on Good Friday (BBC Four, Sounds and Colours)."}

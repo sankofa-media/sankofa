@@ -1,0 +1,629 @@
+# Batch c29 (2026-11-14), revised after the independent check in expand-c29-check.yaml: facts in card bodies and wow lines, each with two or more independent sources and a verbatim quote.
+# Quotes from encyclopediavirginia.org and theodorerooseveltcenter.org were taken through WebFetch (the sites refuse plain curl); the rest from the fetched page text.
+# Dropped details (single-sourced): Walker's coin banks for children and the "of any race" claim (kept only as dispute); Just's "first American at the Kaiser Wilhelm Institute" and pancreatic cancer; Henson built the sledges, Hubbard Medal date (sources disagree: 1988 vs 2000); Taylor's 1895 move date and autobiography year (1928 vs 1929); Rhineland Saarbrücken trial and Erwin Rieger's story; Ota Benga's tobacco-factory work and Gordon's quotation; Nancy Green's medal, bandana and church membership; Owens's horse races and 1972 quotation; the Davis account of the "lunch" spin and the Tillman threat; Weber v. Freed (1915) and the 1916 border projection.
+
+# maggie-lena-walker
+- card: maggie-lena-walker
+  fact: "Maggie Lena Mitchell was born in Richmond, Virginia, on 15 July 1864"
+  sources:
+    - {title: "National Women's History Museum: Maggie Lena Walker", url: "https://www.womenshistory.org/education-resources/biographies/maggie-lena-walker", quote: "Walker was born to enslaved parents on July 15, 1864 in Richmond, Virginia."}
+    - {title: "Encyclopedia Virginia: Maggie Lena Walker", url: "https://encyclopediavirginia.org/entries/walker-maggie-lena-1864-1934/", quote: "Maggie Lena Mitchell was born on July 15, 1864 in Richmond, Virginia."}
+- card: maggie-lena-walker
+  fact: "Her mother had been enslaved"
+  sources:
+    - {title: "National Women's History Museum: Maggie Lena Walker", url: "https://www.womenshistory.org/education-resources/biographies/maggie-lena-walker", quote: "Walker was born to enslaved parents"}
+    - {title: "Encyclopedia Virginia: Maggie Lena Walker", url: "https://encyclopediavirginia.org/entries/walker-maggie-lena-1864-1934/", quote: "Her mother, Elizabeth Draper, was a former enslaved woman"}
+- card: maggie-lena-walker
+  fact: "After the family lost its breadwinner her mother took in laundry and the girl delivered the clean clothes"
+  sources:
+    - {title: "National Park Service: Maggie Lena Walker", url: "https://www.nps.gov/mawa/learn/historyculture/maggie-lena-walker.htm", quote: "After the untimely death of William Mitchell in 1876, Maggie's mother supported the family by working as a laundress and young Maggie helped by delivering the clean clothes."}
+    - {title: "Encyclopedia Virginia: Maggie Lena Walker", url: "https://encyclopediavirginia.org/entries/walker-maggie-lena-1864-1934/", quote: "As a way for the family to provide for themselves, Maggie's mother began a small laundry business."}
+- card: maggie-lena-walker
+  fact: "She would found a bank in the segregated South"
+  sources:
+    - {title: "National Women's History Museum: Maggie Lena Walker", url: "https://www.womenshistory.org/education-resources/biographies/maggie-lena-walker", quote: "The bank was a powerful representation of black self-help in the segregated South."}
+    - {title: "National Park Service: Maggie Lena Walker", url: "https://www.nps.gov/mawa/learn/historyculture/maggie-lena-walker.htm", quote: "She was the first African American woman in the United States to found a bank ."}
+- card: maggie-lena-walker
+  fact: "As a teenager she joined the Independent Order of St. Luke, a Black benevolent society that helped the sick and elderly"
+  sources:
+    - {title: "National Park Service: Maggie Lena Walker", url: "https://www.nps.gov/mawa/learn/historyculture/maggie-lena-walker.htm", quote: "When she was a teenager, Maggie Mitchell joined the local council of the Independent Order of St. Luke."}
+    - {title: "National Women's History Museum: Maggie Lena Walker", url: "https://www.womenshistory.org/education-resources/biographies/maggie-lena-walker", quote: "When Walker was 14, she joined the Independent Order of St. Luke's, an African American benevolent organization that helped the sick and elderly in Richmond."}
+- card: maggie-lena-walker
+  fact: "She taught school for a few years before devoting herself to the order"
+  sources:
+    - {title: "National Park Service: Maggie Lena Walker", url: "https://www.nps.gov/mawa/learn/historyculture/maggie-lena-walker.htm", quote: "After graduation she taught grade school for three years."}
+    - {title: "National Women's History Museum: Maggie Lena Walker", url: "https://www.womenshistory.org/education-resources/biographies/maggie-lena-walker", quote: "upon graduation, began teaching. She stepped down from teaching after she married"}
+- card: maggie-lena-walker
+  fact: "In 1902 she started the order's newspaper, the St. Luke Herald"
+  sources:
+    - {title: "National Park Service: Maggie Lena Walker", url: "https://www.nps.gov/mawa/learn/historyculture/maggie-lena-walker.htm", quote: "In 1902 Mrs. Walker established a newspaper, The St. Luke Herald"}
+    - {title: "National Women's History Museum: Maggie Lena Walker", url: "https://www.womenshistory.org/education-resources/biographies/maggie-lena-walker", quote: "In 1902, she began publishing the organization's newspaper, The St. Luke Herald."}
+- card: maggie-lena-walker
+  fact: "In 1903 she founded the St. Luke Penny Savings Bank, became its president and was the first African American woman in the US to charter a bank"
+  sources:
+    - {title: "National Park Service: Maggie Lena Walker", url: "https://www.nps.gov/mawa/learn/historyculture/maggie-lena-walker.htm", quote: "Mrs. Walker served as the bank's first president, which earned her the recognition of being the first African American woman to charter a bank in the United States."}
+    - {title: "Encyclopedia Virginia: Maggie Lena Walker", url: "https://encyclopediavirginia.org/entries/walker-maggie-lena-1864-1934/", quote: "Maggie Lena Walker charters Saint Luke Penny Savings Bank and serves as president until 1929."}
+    - {title: "National Women's History Museum: Maggie Lena Walker", url: "https://www.womenshistory.org/education-resources/biographies/maggie-lena-walker", quote: "In 1903, she founded the St. Luke Penny Savings Bank. Walker was the first woman of any race to charter a bank in the United States."}
+- card: maggie-lena-walker
+  fact: "The next year (1904) the family bought a house in Jackson Ward, a district that exemplifies African American entrepreneurship"
+  sources:
+    - {title: "Encyclopedia Virginia: Maggie Lena Walker", url: "https://encyclopediavirginia.org/entries/walker-maggie-lena-1864-1934/", quote: "In 1904 the Walkers bought a home in Richmond's Jackson Ward neighborhood."}
+    - {title: "National Park Service: Maggie Lena Walker", url: "https://www.nps.gov/mawa/learn/historyculture/maggie-lena-walker.htm", quote: "They are valuable in understanding the 1904–1934 period of her occupancy. ... Her community of Jackson Ward, a National Historic Landmark District, continues to exemplify the success of African American entrepreneurship."}
+- card: maggie-lena-walker
+  fact: "By 1928 she was in a wheelchair but remained head of the bank and the order"
+  sources:
+    - {title: "National Park Service: Maggie Lena Walker", url: "https://www.nps.gov/mawa/learn/historyculture/maggie-lena-walker.htm", quote: "by 1928 she was using a wheelchair. Despite her physical limitations she remained actively committed to her life's work including chairman of the bank and leader of the Independent Order of St. Luke until her death"}
+    - {title: "Encyclopedia Virginia: Maggie Lena Walker", url: "https://encyclopediavirginia.org/entries/walker-maggie-lena-1864-1934/", quote: "Maggie Lena Walker is confined to a wheelchair by paralysis."}
+    - {title: "National Women's History Museum: Maggie Lena Walker", url: "https://www.womenshistory.org/education-resources/biographies/maggie-lena-walker", quote: "After an illness in 1928, Walker was forced to use a wheelchair. Although limited in movement, Walker remained a leader"}
+- card: maggie-lena-walker
+  fact: "In 1930, in the Depression, she merged the bank with two other Richmond banks into the Consolidated Bank and Trust Company"
+  sources:
+    - {title: "Encyclopedia Virginia: Maggie Lena Walker", url: "https://encyclopediavirginia.org/entries/walker-maggie-lena-1864-1934/", quote: "She did this by merging it with two other banks to create the Consolidated Bank and Trust Company in 1930."}
+    - {title: "National Park Service: Maggie Lena Walker", url: "https://www.nps.gov/mawa/learn/historyculture/maggie-lena-walker.htm", quote: "when the bank merged with two other Richmond banks to become The Consolidated Bank and Trust Company"}
+- card: maggie-lena-walker
+  fact: "She died on 15 December 1934"
+  sources:
+    - {title: "National Park Service: Maggie Lena Walker", url: "https://www.nps.gov/mawa/learn/historyculture/maggie-lena-walker.htm", quote: "until her death on December 15,1934"}
+    - {title: "Encyclopedia Virginia: Maggie Lena Walker", url: "https://encyclopediavirginia.org/entries/walker-maggie-lena-1864-1934/", quote: "Maggie Lena Walker died on December 15, 1934, of gangrene caused by diabetes."}
+- card: maggie-lena-walker
+  fact: "Her Jackson Ward house is now kept by the National Park Service"
+  sources:
+    - {title: "National Park Service: Maggie Lena Walker", url: "https://www.nps.gov/mawa/learn/historyculture/maggie-lena-walker.htm", quote: "The Walker family owned the home until 1979, when it was purchased by the National Park Service."}
+    - {title: "National Women's History Museum: Maggie Lena Walker", url: "https://www.womenshistory.org/education-resources/biographies/maggie-lena-walker", quote: "Walker's house in Richmond has since been designated a National Historic Site by the National Park Service."}
+
+# ernest-everett-just
+- card: ernest-everett-just
+  fact: "In 1909 he began research at the Marine Biological Laboratory at Woods Hole and returned summer after summer"
+  sources:
+    - {title: "Embryo Project Encyclopedia: Ernest Everett Just", url: "https://embryo.asu.edu/pages/ernest-everett-just-1883-1941", quote: "involved in research at the Marine Biological Laboratory (MBL) at Woods Hole, Massachusetts"}
+    - {title: "Encyclopedia of African-American Culture and History: Just, Ernest", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/just-ernest", quote: "an activity he looked forward to doing each summer at the MBL as a welcome respite from his heavy teaching"}
+- card: ernest-everett-just
+  fact: "He was born in Charleston, South Carolina, on 14 August 1883"
+  sources:
+    - {title: "Embryo Project Encyclopedia: Ernest Everett Just", url: "https://embryo.asu.edu/pages/ernest-everett-just-1883-1941", quote: "Just was born in Charleston, South Carolina, on 14 August 1883"}
+    - {title: "BlackPast: Ernest Everett Just", url: "https://www.blackpast.org/african-american-history/just-ernest-everett-1883-1941/", quote: "Born on August 14, 1883, in Charleston, South Carolina"}
+- card: ernest-everett-just
+  fact: "He graduated from Dartmouth in 1907 magna cum laude"
+  sources:
+    - {title: "Embryo Project Encyclopedia: Ernest Everett Just", url: "https://embryo.asu.edu/pages/ernest-everett-just-1883-1941", quote: "He graduated from Dartmouth in 1907, the only \"magna cum laude\" in his class"}
+    - {title: "BlackPast: Ernest Everett Just", url: "https://www.blackpast.org/african-american-history/just-ernest-everett-1883-1941/", quote: "he graduated magna cum laude in biology with a minor in history in 1907"}
+- card: ernest-everett-just
+  fact: "That autumn he began teaching English at Howard University, and soon moved to biology"
+  sources:
+    - {title: "Embryo Project Encyclopedia: Ernest Everett Just", url: "https://embryo.asu.edu/pages/ernest-everett-just-1883-1941", quote: "joined the English faculty at Howard University, Washington, DC in the fall of that same year."}
+    - {title: "BlackPast: Ernest Everett Just", url: "https://www.blackpast.org/african-american-history/just-ernest-everett-1883-1941/", quote: "Just accepted a position at Howard University as an instructor of rhetoric and English. In 1910, he joined the Department of Biology"}
+- card: ernest-everett-just
+  fact: "He studied the fertilisation and development of the eggs of marine animals"
+  sources:
+    - {title: "Encyclopedia of African-American Culture and History: Just, Ernest", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/just-ernest", quote: "the essential biochemical catalyst in the fertilization of the egg by the sperm ... Basic Methods for Experiments on Eggs of Marine Animals"}
+    - {title: "BlackPast: Ernest Everett Just", url: "https://www.blackpast.org/african-american-history/just-ernest-everett-1883-1941/", quote: "recognized worldwide for his work unlocking the role of the cell surface in the development of organisms ... Basic Methods for Experiments on Eggs of Marine Mammals (1922)"}
+- card: ernest-everett-just
+  fact: "In 1915 the NAACP made him the first recipient of the Spingarn Medal"
+  sources:
+    - {title: "Embryo Project Encyclopedia: Ernest Everett Just", url: "https://embryo.asu.edu/pages/ernest-everett-just-1883-1941", quote: "In 1915 Just was the first to receive the Spingarn Medal"}
+    - {title: "Encyclopedia of African-American Culture and History: Just, Ernest", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/just-ernest", quote: "In 1915 Just was awarded the NAACP's first Spingarn Medal"}
+- card: ernest-everett-just
+  fact: "In 1916 the University of Chicago gave him a doctorate"
+  sources:
+    - {title: "Embryo Project Encyclopedia: Ernest Everett Just", url: "https://embryo.asu.edu/pages/ernest-everett-just-1883-1941", quote: "the University of Chicago awarding Just his PhD degree in experimental embryology in 1916."}
+    - {title: "BlackPast: Ernest Everett Just", url: "https://www.blackpast.org/african-american-history/just-ernest-everett-1883-1941/", quote: "He earned a doctorate in zoology in 1916."}
+- card: ernest-everett-just
+  fact: "No white American university would hire him; he could hope to teach only at a Black college"
+  sources:
+    - {title: "BlackPast: Ernest Everett Just", url: "https://www.blackpast.org/african-american-history/just-ernest-everett-1883-1941/", quote: "Despite his Ph.D., he could not find work at any White universities in America, so Just moved to Europe"}
+    - {title: "Embryo Project Encyclopedia: Ernest Everett Just", url: "https://embryo.asu.edu/pages/ernest-everett-just-1883-1941", quote: "With little hope of ever being able to teach anywhere but a black college"}
+- card: ernest-everett-just
+  fact: "From 1929 he worked in Europe, first at the Stazione Zoologica in Naples"
+  sources:
+    - {title: "Embryo Project Encyclopedia: Ernest Everett Just", url: "https://embryo.asu.edu/pages/ernest-everett-just-1883-1941", quote: "In 1929 Just made his first trip to Europe and worked at Anton Dohrn's Stazione Zoologica in Naples."}
+    - {title: "Encyclopedia of African-American Culture and History: Just, Ernest", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/just-ernest", quote: "His first excursion, in 1929, took him to Italy, where he worked for seven months at the Stazione Zoologica in Naples."}
+- card: ernest-everett-just
+  fact: "He worked at the Kaiser Wilhelm Institute for Biology in Berlin"
+  sources:
+    - {title: "Embryo Project Encyclopedia: Ernest Everett Just", url: "https://embryo.asu.edu/pages/ernest-everett-just-1883-1941", quote: "In 1930 Just was invited to the Kaiser Wilhelm Institute in Berlin"}
+    - {title: "Encyclopedia of African-American Culture and History: Just, Ernest", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/just-ernest", quote: "He worked primarily at the Stazione Zoologica; the Kaiser-Wilhelm Institut für Biologie in Berlin; and the Station Biologique in Roscoff, France."}
+    - {title: "BlackPast: Ernest Everett Just", url: "https://www.blackpast.org/african-american-history/just-ernest-everett-1883-1941/", quote: "He was the first American to be invited to conduct research at the Kaiser Wilhelm Institute in Berlin, Germany, in 1930"}
+- card: ernest-everett-just
+  fact: "He worked at the marine station at Roscoff in Brittany"
+  sources:
+    - {title: "Encyclopedia of African-American Culture and History: Just, Ernest", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/just-ernest", quote: "and the Station Biologique in Roscoff, France."}
+    - {title: "BlackPast: Ernest Everett Just", url: "https://www.blackpast.org/african-american-history/just-ernest-everett-1883-1941/", quote: "was working at the Station Biologique in Roscoff, France, when the Germans invaded the country."}
+- card: ernest-everett-just
+  fact: "In 1939 he published The Biology of the Cell Surface, arguing that the cell surface plays a fundamental role in development"
+  sources:
+    - {title: "Encyclopedia of African-American Culture and History: Just, Ernest", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/just-ernest", quote: "The book was published under the title Biology of the Cell Surface in 1939. Its thesis, that the ectoplasm or cell surface has a fundamental role in development"}
+    - {title: "BlackPast: Ernest Everett Just", url: "https://www.blackpast.org/african-american-history/just-ernest-everett-1883-1941/", quote: "two influential books, Basic Methods for Experiments on Eggs of Marine Mammals (1922) and Biology of the Cell Surface (1939)"}
+    - {title: "Embryo Project Encyclopedia: Ernest Everett Just", url: "https://embryo.asu.edu/pages/ernest-everett-just-1883-1941", quote: "In 1939 he published two books"}
+- card: ernest-everett-just
+  fact: "When Germany invaded France in 1940 he was briefly interned, then released and returned to the United States"
+  sources:
+    - {title: "Encyclopedia of African-American Culture and History: Just, Ernest", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/just-ernest", quote: "In 1940 Just was interned briefly in France following the German invasion and then released to return to America"}
+    - {title: "BlackPast: Ernest Everett Just", url: "https://www.blackpast.org/african-american-history/just-ernest-everett-1883-1941/", quote: "Ernest Just was captured and held briefly in a prisoner-of-war camp until rescued by the U.S. State Department and brought back to the U.S. in 1940."}
+- card: ernest-everett-just
+  fact: "He died in Washington on 27 October 1941"
+  sources:
+    - {title: "BlackPast: Ernest Everett Just", url: "https://www.blackpast.org/african-american-history/just-ernest-everett-1883-1941/", quote: "Ernest Everett Just died in Washington, D.C., on October 27, 1941."}
+    - {title: "Embryo Project Encyclopedia: Ernest Everett Just", url: "https://embryo.asu.edu/pages/ernest-everett-just-1883-1941", quote: "Just died of pancreatic cancer on 27 October 1941."}
+
+# matthew-henson
+- card: matthew-henson
+  fact: "Peary spent nearly two decades (18 years) trying to reach the Pole, with Henson as his companion"
+  sources:
+    - {title: "Arlington National Cemetery: Matthew Alexander Henson", url: "https://www.arlingtoncemetery.mil/explore/notable-graves/explorers/matthew-henson", quote: "Henson and Peary had been attempting to reach the Pole for the past 18 years."}
+    - {title: "Bowdoin College, Peary-MacMillan Arctic Museum: Matthew Henson", url: "https://www.bowdoin.edu/arctic-museum/educational-resources/arctic-biographies/henson.html", quote: "those who labored alongside Henson during his eighteen year Arctic career"}
+- card: matthew-henson
+  fact: "Henson was born in 1866 in Charles County, Maryland"
+  sources:
+    - {title: "Arlington National Cemetery: Matthew Alexander Henson", url: "https://www.arlingtoncemetery.mil/explore/notable-graves/explorers/matthew-henson", quote: "Matthew Henson was born in Charles County, Maryland in 1866."}
+    - {title: "Encyclopedia of African-American Culture and History: Henson, Matthew A.", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/henson-matthew", quote: "Matthew Alexander Henson was born in rural Charles County, Maryland, the son of freeborn sharecroppers."}
+- card: matthew-henson
+  fact: "He was orphaned young"
+  sources:
+    - {title: "Arlington National Cemetery: Matthew Alexander Henson", url: "https://www.arlingtoncemetery.mil/explore/notable-graves/explorers/matthew-henson", quote: "Both died during Henson's childhood."}
+    - {title: "Encyclopedia of African-American Culture and History: Henson, Matthew A.", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/henson-matthew", quote: "When he was still a young child both of his parents died"}
+- card: matthew-henson
+  fact: "At twelve he went to sea as a cabin boy and on board learned to read and write"
+  sources:
+    - {title: "Arlington National Cemetery: Matthew Alexander Henson", url: "https://www.arlingtoncemetery.mil/explore/notable-graves/explorers/matthew-henson", quote: "At the age of 12, he went to work as a cabin boy on a merchant ship ... Aboard the ship for six years, he learned how to read, write and navigate."}
+    - {title: "Bowdoin College, Peary-MacMillan Arctic Museum: Matthew Henson", url: "https://www.bowdoin.edu/arctic-museum/educational-resources/arctic-biographies/henson.html", quote: "he went to sea at age twelve as cabin boy aboard the Katie Hines"}
+    - {title: "National Geographic, James Edward Mills (2014)", url: "https://www.nationalgeographic.com/adventure/article/the-legacy-of-arctic-explorer-matthew-henson", quote: "Henson received an education, learned a variety of technical skills, became a competent sailor"}
+- card: matthew-henson
+  fact: "Peary met him in a hat shop where Henson worked as a clerk and hired him as valet for a survey in Nicaragua"
+  sources:
+    - {title: "Arlington National Cemetery: Matthew Alexander Henson", url: "https://www.arlingtoncemetery.mil/explore/notable-graves/explorers/matthew-henson", quote: "while working as a clerk in a Washington, D.C. hat shop, he met Commander Robert E. Peary, who was planning a surveying expedition to Nicaragua. Upon learning of Henson's sailing and navigation experience, Peary hired him as a valet."}
+    - {title: "Bowdoin College, Peary-MacMillan Arctic Museum: Matthew Henson", url: "https://www.bowdoin.edu/arctic-museum/educational-resources/arctic-biographies/henson.html", quote: "when Henson's employer at a hat shop recommended him to Peary as a valet on Peary's surveying expedition to Nicaragua."}
+- card: matthew-henson
+  fact: "He joined Peary on seven Arctic expeditions"
+  sources:
+    - {title: "Arlington National Cemetery: Matthew Alexander Henson", url: "https://www.arlingtoncemetery.mil/explore/notable-graves/explorers/matthew-henson", quote: "accompanied him on seven Arctic expeditions between 1891 and 1909."}
+    - {title: "Bowdoin College, Peary-MacMillan Arctic Museum: Matthew Henson", url: "https://www.bowdoin.edu/arctic-museum/educational-resources/arctic-biographies/henson.html", quote: "After Nicaragua he accompanied Peary on seven Arctic expeditions"}
+- card: matthew-henson
+  fact: "In Greenland he learned the Inuit language and became the expedition's best dog-sledge driver, driving like the Inuit"
+  sources:
+    - {title: "Encyclopedia of African-American Culture and History: Henson, Matthew A.", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/henson-matthew", quote: "While surveying Greenland Henson grew close to the native Inuits, learned the Inuit language, became the expedition's most able dogsled driver"}
+    - {title: "Bowdoin College, Peary-MacMillan Arctic Museum: Matthew Henson", url: "https://www.bowdoin.edu/arctic-museum/educational-resources/arctic-biographies/henson.html", quote: "Of Peary's crew, only Henson was fluent in Inuktitut, and could drive a sledge with native prowess."}
+- card: matthew-henson
+  fact: "He spoke Inuktitut fluently"
+  sources:
+    - {title: "Bowdoin College, Peary-MacMillan Arctic Museum: Matthew Henson", url: "https://www.bowdoin.edu/arctic-museum/educational-resources/arctic-biographies/henson.html", quote: "Of Peary's crew, only Henson was fluent in Inuktitut"}
+    - {title: "National Geographic, James Edward Mills (2014)", url: "https://www.nationalgeographic.com/adventure/article/the-legacy-of-arctic-explorer-matthew-henson", quote: "He was fluent in the Inuit language and established a rapport with the native people of the region."}
+- card: matthew-henson
+  fact: "On 6 April 1909 Peary, Henson and four Inuit men reached what they took to be the Pole"
+  sources:
+    - {title: "Arlington National Cemetery: Matthew Alexander Henson", url: "https://www.arlingtoncemetery.mil/explore/notable-graves/explorers/matthew-henson", quote: "On April 6, 1909, U.S. citizens Matthew Alexander Henson and Robert Edwin Peary , and four Inuit assistants, became the first human beings to set foot on the North Pole."}
+    - {title: "Encyclopedia of African-American Culture and History: Henson, Matthew A.", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/henson-matthew", quote: "On April 6, 1909, Peary, Henson, and four Eskimos became the first people to reach the North Pole."}
+- card: matthew-henson
+  fact: "Henson said he reached the camp at the Pole first, ahead of Peary"
+  sources:
+    - {title: "Arlington National Cemetery: Matthew Alexander Henson", url: "https://www.arlingtoncemetery.mil/explore/notable-graves/explorers/matthew-henson", quote: "According to Henson, he was the first of the group to reach the North Pole."}
+    - {title: "National Geographic, Anna Brendle (2003)", url: "https://www.nationalgeographic.com/culture/article/profile-african-american-north-pole-explorer-matthew-henson", quote: "On April 6, 1909, Henson arrived at Camp Jesup, 89°47', 45 minutes ahead of Peary, concluding by dead reckoning that he had reached the Pole."}
+- card: matthew-henson
+  fact: "The fame went to Peary; Henson received little recognition"
+  sources:
+    - {title: "Arlington National Cemetery: Matthew Alexander Henson", url: "https://www.arlingtoncemetery.mil/explore/notable-graves/explorers/matthew-henson", quote: "Compared to Peary, however, he received relatively little immediate recognition for his part in the 1909 expedition to the North Pole."}
+    - {title: "Encyclopedia of African-American Culture and History: Henson, Matthew A.", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/henson-matthew", quote: "Henson was largely unrecognized by the white public as the codiscoverer of the North Pole."}
+- card: matthew-henson
+  fact: "He published A Negro Explorer at the North Pole in 1912"
+  sources:
+    - {title: "Arlington National Cemetery: Matthew Alexander Henson", url: "https://www.arlingtoncemetery.mil/explore/notable-graves/explorers/matthew-henson", quote: "In 1912, Henson published an account of his experiences, \"A Negro Explorer at the North Pole,\""}
+    - {title: "Bowdoin College, Peary-MacMillan Arctic Museum: Matthew Henson", url: "https://www.bowdoin.edu/arctic-museum/educational-resources/arctic-biographies/henson.html", quote: "Matthew Henson published his own account of the North Pole trip, A Negro Explorer at the North Pole (1912)"}
+- card: matthew-henson
+  fact: "He spent the rest of his working life as a clerk at the Customs House in New York"
+  sources:
+    - {title: "Arlington National Cemetery: Matthew Alexander Henson", url: "https://www.arlingtoncemetery.mil/explore/notable-graves/explorers/matthew-henson", quote: "He spent the remainder of his career in obscurity, working as a clerk at the U.S. Customs House in New York City."}
+    - {title: "Bowdoin College, Peary-MacMillan Arctic Museum: Matthew Henson", url: "https://www.bowdoin.edu/arctic-museum/educational-resources/arctic-biographies/henson.html", quote: "he passed the remainder of his working years with much less fanfare as a messenger and clerk at the Customs House in New York City."}
+- card: matthew-henson
+  fact: "Honours came late; President Eisenhower received him at the White House"
+  sources:
+    - {title: "Arlington National Cemetery: Matthew Alexander Henson", url: "https://www.arlingtoncemetery.mil/explore/notable-graves/explorers/matthew-henson", quote: "Late in his life, Henson received some long-overdue honors ... Presidents Harry S. Truman and Dwight D. Eisenhower welcomed him to the White House."}
+    - {title: "Bowdoin College, Peary-MacMillan Arctic Museum: Matthew Henson", url: "https://www.bowdoin.edu/arctic-museum/educational-resources/arctic-biographies/henson.html", quote: "With his wife Lucy, Henson was honored at the White House by President Eisenhower."}
+    - {title: "Encyclopedia of African-American Culture and History: Henson, Matthew A.", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/henson-matthew", quote: "in 1954, a year before his death, he was received at the White House by President Eisenhower."}
+- card: matthew-henson
+  fact: "He died in 1955 and was buried in Woodlawn Cemetery, New York"
+  sources:
+    - {title: "Arlington National Cemetery: Matthew Alexander Henson", url: "https://www.arlingtoncemetery.mil/explore/notable-graves/explorers/matthew-henson", quote: "After his death in 1955, Matthew Henson was buried at New York's Woodlawn Cemetery."}
+    - {title: "Encyclopedia of African-American Culture and History: Henson, Matthew A.", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/henson-matthew", quote: "When Henson died in 1955, his wife was unable to afford a burial site and he was buried in a shared grave in Woodlawn Cemetery in New York."}
+- card: matthew-henson
+  fact: "On 6 April 1988 he and his wife Lucy were reburied at Arlington near Peary"
+  sources:
+    - {title: "Arlington National Cemetery: Matthew Alexander Henson", url: "https://www.arlingtoncemetery.mil/explore/notable-graves/explorers/matthew-henson", quote: "On April 6, 1988, the remains of Matthew Henson and his wife were transported to Washington, D.C., where they were buried near the gravesite of Admiral Peary"}
+    - {title: "Encyclopedia of African-American Culture and History: Henson, Matthew A.", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/henson-matthew", quote: "In 1988 his remains were moved to Arlington National Cemetery and buried next to those of Peary."}
+    - {title: "National Geographic, Anna Brendle (2003)", url: "https://www.nationalgeographic.com/culture/article/profile-african-american-north-pole-explorer-matthew-henson", quote: "In 1988, Matthew Henson and his wife were reinterred at the Arlington National Cemetery alongside Peary."}
+- card: matthew-henson
+  fact: "(dispute) Peary's claim was contested from the start by Frederick Cook; in 1988 National Geographic published Wally Herbert's article questioning whether Peary reached the Pole"
+  sources:
+    - {title: "Encyclopedia of African-American Culture and History: Henson, Matthew A.", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/henson-matthew", quote: "Peary was confronted with the news that Frederick Cook had claimed to have reached the North Pole one year earlier. Thus began a protracted and bitter public controversy over the veracity of each man's claim."}
+    - {title: "National Geographic, Anna Brendle (2003)", url: "https://www.nationalgeographic.com/culture/article/profile-african-american-north-pole-explorer-matthew-henson", quote: "National Geographic magazine writer Wally Herbert, in his September 1988 article \"Commander Robert E. Peary: Did He Reach the Pole?\""}
+    - {title: "Christian Science Monitor (27 March 1989)", url: "https://csmonitor.com/1989/0327/dpear-f1.html", quote: "That attitude changed in 1988 when the magazine published an article by British explorer Wally Herbert - who trekked to the pole in 1969 - concluding that Peary fell short by 30 to 60 miles"}
+
+# major-taylor
+- card: major-taylor
+  fact: "In the 1890s bicycle racing was one of the most popular sports"
+  sources:
+    - {title: "Indiana State Library, Hoosier State Chronicles (2014)", url: "https://blog.newspapers.library.in.gov/2014/08/", quote: "Around the turn of the twentieth century, the sport of bicycle racing had the same feverish popularity as the Indianapolis 500 race"}
+    - {title: "Major Taylor Association (Worcester Telegram & Gazette)", url: "https://www.majortaylorassociation.org/whirlwind.shtml", quote: "just as bicycling's popularity surged"}
+- card: major-taylor
+  fact: "Marshall Taylor was born in Indianapolis in 1878"
+  sources:
+    - {title: "BlackPast: Marshall \"Major\" Taylor", url: "https://www.blackpast.org/african-american-history/taylor-marshall-w-1878-1948/", quote: "November 26, 1878 in Indianapolis, Indiana to Gilbert Taylor"}
+    - {title: "Indiana State Library, Hoosier State Chronicles (2014)", url: "https://blog.newspapers.library.in.gov/2014/08/", quote: "Marshall Walter \"Major\" Taylor (1878-1932)"}
+- card: major-taylor
+  fact: "As a boy he did bicycle stunts outside a bike shop in a military uniform, which gave him the name Major"
+  sources:
+    - {title: "Major Taylor Association (Worcester Telegram & Gazette)", url: "https://www.majortaylorassociation.org/whirlwind.shtml", quote: "Marshall W. Taylor was nicknamed \"Major\" as a youth because he wore a military uniform when he performed bicycling stunts outside an Indianapolis bike shop."}
+    - {title: "Indiana State Library, Hoosier State Chronicles (2014)", url: "https://blog.newspapers.library.in.gov/2014/08/", quote: "the Hay and Willits Bicycle Shop started to pay him to perform bicycle stunts in front of their store while dressed in a military uniform as a promotional draw."}
+- card: major-taylor
+  fact: "Louis 'Birdie' Munger took him on, and Taylor followed him to Worcester, where he found a friendlier atmosphere"
+  sources:
+    - {title: "Major Taylor Association (Worcester Telegram & Gazette)", url: "https://www.majortaylorassociation.org/whirlwind.shtml", quote: "By the time Munger decided to set up a factory in Worcester -- in part to take advantage of the biking boom, but also to find a more tolerant atmosphere for his black protege"}
+    - {title: "Indiana State Library, Hoosier State Chronicles (2014)", url: "https://blog.newspapers.library.in.gov/2014/08/", quote: "Marshall accepted an invitation from Louis Munger to move to Worcester, Massachusetts"}
+- card: major-taylor
+  fact: "Races in the South barred him and white riders did not want him in the field"
+  sources:
+    - {title: "Indiana State Library, Hoosier State Chronicles (2014)", url: "https://blog.newspapers.library.in.gov/2014/08/", quote: "Racing events in the South barred Marshall from participation ... white cyclists who did not want to compete against an African American"}
+    - {title: "BlackPast: Marshall \"Major\" Taylor", url: "https://www.blackpast.org/african-american-history/taylor-marshall-w-1878-1948/", quote: "Taylor was not allowed to compete because of racial discrimination"}
+    - {title: "Major Taylor Association (Worcester Telegram & Gazette)", url: "https://www.majortaylorassociation.org/whirlwind.shtml", quote: "white riders were understandably angered by his racing prowess"}
+- card: major-taylor
+  fact: "In 1899 in Montreal he won the world one-mile sprint championship, only the second Black world champion in any sport, after George Dixon"
+  sources:
+    - {title: "Major Taylor Association (Worcester Telegram & Gazette)", url: "https://www.majortaylorassociation.org/whirlwind.shtml", quote: "The next year he won the world championship at a 1-mile race in Montreal ... He was the second black world champion in any sport, following bantamweight boxer George Dixon's title fights in 1890-91"}
+    - {title: "BlackPast: Marshall \"Major\" Taylor", url: "https://www.blackpast.org/african-american-history/taylor-marshall-w-1878-1948/", quote: "in 1899, after setting a number of world records, Taylor won the World Sprint Championship in Montreal, Quebec, Canada. This achievement made him only the second black athlete to hold a title in any sport."}
+    - {title: "Indiana State Library, Hoosier State Chronicles (2014)", url: "https://blog.newspapers.library.in.gov/2014/08/", quote: "In August 1899 he won the world championship in the one-mile race in Montreal"}
+- card: major-taylor
+  fact: "A devout Baptist, he would not race on Sundays and went to Europe only in 1901"
+  sources:
+    - {title: "Major Taylor Association (Worcester Telegram & Gazette)", url: "https://www.majortaylorassociation.org/whirlwind.shtml", quote: "For years, he resisted invitations to race in Europe because he refused to race on Sundays. He finally signed a European contract in 1901"}
+    - {title: "Indiana State Library, Hoosier State Chronicles (2014)", url: "https://blog.newspapers.library.in.gov/2014/08/", quote: "In 1901, Marshall traveled to Europe to compete ... who had up until then refused to participate in races on Sundays because of his religious convictions. Marshall was a committed Baptist"}
+- card: major-taylor
+  fact: "In Europe he beat every European champion who raced him"
+  sources:
+    - {title: "Major Taylor Association (Worcester Telegram & Gazette)", url: "https://www.majortaylorassociation.org/whirlwind.shtml", quote: "was welcomed as a hero in France and proceeded to beat every European champion."}
+    - {title: "BlackPast: Marshall \"Major\" Taylor", url: "https://www.blackpast.org/african-american-history/taylor-marshall-w-1878-1948/", quote: "In 1901, Taylor had an exceptional European tour, where he defeated every European champion who challenged him."}
+- card: major-taylor
+  fact: "He retired in 1910"
+  sources:
+    - {title: "BlackPast: Marshall \"Major\" Taylor", url: "https://www.blackpast.org/african-american-history/taylor-marshall-w-1878-1948/", quote: "Retiring from racing in 1910"}
+    - {title: "Indiana State Library, Hoosier State Chronicles (2014)", url: "https://blog.newspapers.library.in.gov/2014/08/", quote: "Marshall retired in 1910 at 32 years old."}
+- card: major-taylor
+  fact: "He lost his fortune and ended up in Chicago selling his self-published autobiography"
+  sources:
+    - {title: "Major Taylor Association (Worcester Telegram & Gazette)", url: "https://www.majortaylorassociation.org/whirlwind.shtml", quote: "illness sapped Taylor's fortune in the 1920s. Impoverished and estranged from his wife, Taylor headed to Chicago in 1930. He stayed at the YMCA and tried to sell copies of his self-published autobiography."}
+    - {title: "Indiana State Library, Hoosier State Chronicles (2014)", url: "https://blog.newspapers.library.in.gov/2014/08/", quote: "had lost the earnings that he had made as one of the best-paid athletes during his prime. In poor health, he worked to sell copies of his autobiography"}
+- card: major-taylor
+  fact: "He died in 1932 at 53 in the charity ward of Cook County Hospital, Chicago, and was buried in an unmarked grave"
+  sources:
+    - {title: "Major Taylor Association (Worcester Telegram & Gazette)", url: "https://www.majortaylorassociation.org/whirlwind.shtml", quote: "he died in 1932 in the charity ward of Cook County Hospital at age 53. He was buried in an unmarked pauper's grave."}
+    - {title: "BlackPast: Marshall \"Major\" Taylor", url: "https://www.blackpast.org/african-american-history/taylor-marshall-w-1878-1948/", quote: "Marshall W. Taylor died on June 21, 1932 in Chicago, Illinois at Cook County Hospital. He was 53 at the time of his death, impoverished and was buried in an unmarked grave."}
+- card: major-taylor
+  fact: "In 1948 former racers, with money from Frank Schwinn, moved him to a marked grave"
+  sources:
+    - {title: "BlackPast: Marshall \"Major\" Taylor", url: "https://www.blackpast.org/african-american-history/taylor-marshall-w-1878-1948/", quote: "In 1948, a group of pro bike racers with money donated by Frank Schwinn of the Schwinn Bicycle Co. had his remains ex"}
+    - {title: "Indiana State Library, Hoosier State Chronicles (2014)", url: "https://blog.newspapers.library.in.gov/2014/08/", quote: "His grave went unmarked until 1948 when a group of former cyclists solicited money from Frank Schwinn, owner of Schwinn Bicycle Company, for the funds necessary to exhume Marshall's remains"}
+
+# rhineland-sterilisation
+- card: rhineland-sterilisation
+  fact: "After the First World War France occupied the Rhineland until 1930"
+  sources:
+    - {title: "USHMM Holocaust Encyclopedia: The Nazi Persecution of Black People in Germany", url: "https://encyclopedia.ushmm.org/content/en/article/afro-germans-during-the-holocaust", quote: "the large Allied military occupation of the Rhineland (1918–1930)"}
+    - {title: "Paul Weindling, Am J Public Health 2022", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8802574/", quote: "an occupation that lasted in phases from December 1, 1918, until June 30, 1930."}
+- card: rhineland-sterilisation
+  fact: "A large part of the French troops came from the colonies, many from Africa (and some from Asia)"
+  sources:
+    - {title: "Jüdische Allgemeine (epd), 2023", url: "https://www.juedische-allgemeine.de/allgemein/die-vergessenen-ns-opfer", quote: "Einen erheblichen Teil der Soldaten stellten Männer aus den französischen Kolonien"}
+    - {title: "USHMM Holocaust Encyclopedia", url: "https://encyclopedia.ushmm.org/content/en/article/afro-germans-during-the-holocaust", quote: "their fathers were mostly French colonial soldiers ... While many of these soldiers were North African or Asian, in public discourse they were all racialized as Black."}
+    - {title: "Deutsches Ärzteblatt, Gisela Tascher (2016)", url: "https://www.aerzteblatt.de/archiv/175272/", quote: "Beziehungen deutscher Frauen zu französischen Besatzungssoldaten aus den afrikanischen Kolonien"}
+    - {title: "Paul Weindling, Am J Public Health 2022", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8802574/", quote: "Mixed-race African German and Vietnamese German children were born around 1921, when troops drawn from the French colonial empire occupied the Rhineland."}
+- card: rhineland-sterilisation
+  fact: "German women had children with some of these soldiers"
+  sources:
+    - {title: "USHMM Holocaust Encyclopedia", url: "https://encyclopedia.ushmm.org/content/en/article/afro-germans-during-the-holocaust", quote: "Their mothers were white German women and their fathers were mostly French colonial soldiers"}
+    - {title: "Paul Weindling, Am J Public Health 2022", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8802574/", quote: "These children had been fathered by French colonial soldiers in the post‒World War I occupation of the German Rhineland"}
+- card: rhineland-sterilisation
+  fact: "A nationalist campaign denounced the colonial troops as a disgrace and the press gave the children a demeaning name"
+  sources:
+    - {title: "Bundeszentrale für politische Bildung: Schwarze Deutsche im Nationalsozialismus", url: "https://www.bpb.de/themen/zeit-kulturgeschichte/afrikanische-diaspora/59383/schwarze-deutsche-im-nationalsozialismus/", quote: "Diese Kampagne hatte Folgen für die Afrikaner ... Anfeindungen aufgrund der Schmachkampagnen"}
+    - {title: "Deutsches Ärzteblatt, Gisela Tascher (2016)", url: "https://www.aerzteblatt.de/archiv/175272/", quote: "Schon in den 1920er Jahren wurden die Beziehungen deutscher Frauen zu französischen Besatzungssoldaten aus den afrikanischen Kolonien skandalisiert."}
+    - {title: "USHMM Holocaust Encyclopedia", url: "https://encyclopedia.ushmm.org/content/en/article/afro-germans-during-the-holocaust", quote: "The German press referred to them using the derogatory label"}
+    - {title: "Paul Weindling, Am J Public Health 2022", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8802574/", quote: "The nationalist right popularized the term \"bastard\" as part of a racist campaign against the children."}
+- card: rhineland-sterilisation
+  fact: "Most of the children were German citizens through their mothers"
+  sources:
+    - {title: "USHMM Holocaust Encyclopedia", url: "https://encyclopedia.ushmm.org/content/en/article/afro-germans-during-the-holocaust", quote: "Most had German citizenship from their unmarried mothers."}
+    - {title: "Deutsches Ärzteblatt, Gisela Tascher (2016), quoting the 1947 trial records", url: "https://www.aerzteblatt.de/archiv/175272/", quote: "Es handelte sich hierbei um Personen, die aus einem Geschlechtsverkehr zwischen deutschen Mädchen und Mitgliedern ausländischer Besatzungstruppen ... stammten und die deutsche Staatsangehörige waren."}
+- card: rhineland-sterilisation
+  fact: "Already under the Weimar Republic officials considered sterilising the children"
+  sources:
+    - {title: "Paul Weindling, Am J Public Health 2022", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8802574/", quote: "German state officials had considered compulsory sterilization of the mixed-race children as early as 1927."}
+    - {title: "Jüdische Allgemeine (epd), 2023", url: "https://www.juedische-allgemeine.de/allgemein/die-vergessenen-ns-opfer", quote: "Und bereits Beamte der Weimarer Republik prüften eine zwangsweise Sterilisation der Kinder, verwarfen die Idee aber."}
+- card: rhineland-sterilisation
+  fact: "In 1937, on a secret order from Hitler, the Gestapo took the sterilisations in hand"
+  sources:
+    - {title: "Deutsches Ärzteblatt, Gisela Tascher (2016)", url: "https://www.aerzteblatt.de/archiv/175272/", quote: "Im Frühjahr 1937 ordnete der Reichsminister des Innern auf der Grundlage eines streng geheimen „Führerbefehls“ von Adolf Hitler ... die Sterilisation ... im Rahmen einer geheimen Sonderaktion der Gestapo an (4). Daraufhin wurde für diesen Auftrag bei der Gestapo in Berlin die „Sonderkommission 3“ gebildet"}
+    - {title: "Eugenics Archive (University of Alberta), timeline 1937", url: "https://eugenicsarchive.ca/discover/timeline/517300d9eed5c60000000026", quote: "Adolf Hitler orders the sterilization of the Rheinlandbastarde"}
+    - {title: "Herrmann and Braun, Kritische Justiz 2010", url: "https://doi.org/10.5771/0023-4834-2010-3-338", quote: "die in von der „Sonderkommission 3“ in einer geheimen, vom Reichskanzleramt beschlossenen Aktion im Jahr 1937 zwangssterilisiert wurden."}
+    - {title: "USHMM Holocaust Encyclopedia", url: "https://encyclopedia.ushmm.org/content/en/article/afro-germans-during-the-holocaust", quote: "In the 1930s, a secret Gestapo program coordinated the forced sterilization of the multiracial children in the Rhineland."}
+- card: rhineland-sterilisation
+  fact: "Commissions including anthropologists examined the teenagers"
+  sources:
+    - {title: "Deutsches Ärzteblatt, Gisela Tascher (2016)", url: "https://www.aerzteblatt.de/archiv/175272/", quote: "Im Reichsgebiet bildete man drei Kommissionen, die von Beamten der Gestapo geleitet wurden ... gehörten den Kommissionen „anthropologische Gutachter“ an"}
+    - {title: "Paul Weindling, Am J Public Health 2022", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8802574/", quote: "In all, 385 \"mixed race\" children aged 13 to 16 years were sterilized in 1937. They were subjected to psychological, anthropological, and genetic evaluations."}
+- card: rhineland-sterilisation
+  fact: "Hundreds were sterilised (at least 385 by the end of 1937; the epd report in Jüdische Allgemeine estimates 600–800 victims)"
+  sources:
+    - {title: "USHMM Holocaust Encyclopedia", url: "https://encyclopedia.ushmm.org/content/en/article/afro-germans-during-the-holocaust", quote: "doctors forcibly sterilized at least 385 children and teenagers by the end of 1937."}
+    - {title: "Paul Weindling, Am J Public Health 2022", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8802574/", quote: "persuaded the Nazi public health authorities to sterilize 385 of them."}
+    - {title: "Herrmann and Braun, Kritische Justiz 2010", url: "https://doi.org/10.5771/0023-4834-2010-3-338", quote: "wie die etwa 400 bis 800 Kinder von deutschen Frauen und farbigen Angehörigen französischer oder amerikanischer Soldaten"}
+    - {title: "Jüdische Allgemeine (epd), 2023", url: "https://www.juedische-allgemeine.de/allgemein/die-vergessenen-ns-opfer", quote: "Schätzungsweise 600 bis 800 nach dem Ersten Weltkrieg geborene Kinder wurden Opfer der geheim gehaltenen Sterilisationskampagne"}
+- card: rhineland-sterilisation
+  fact: "The sterilisations were illegal even under the Nazis' 1933 sterilisation law"
+  sources:
+    - {title: "Herrmann and Braun, Kritische Justiz 2010", url: "https://doi.org/10.5771/0023-4834-2010-3-338", quote: "Diese Aktion war auch nach dem GzVeN illegal, denn dieses sah keine Indikation aus Gründen der „Rasse“ vor."}
+    - {title: "Jüdische Allgemeine (epd), 2023", url: "https://www.juedische-allgemeine.de/allgemein/die-vergessenen-ns-opfer", quote: "die selbst nach den Gesetzen des NS-Staates in den meisten Fällen illegal war."}
+    - {title: "USHMM Holocaust Encyclopedia", url: "https://encyclopedia.ushmm.org/content/en/article/afro-germans-during-the-holocaust", quote: "Because there was no legal basis for their sterilization, their families were pressured to consent to the procedure."}
+- card: rhineland-sterilisation
+  fact: "Hans Hauck, born in Frankfurt in 1920 to a German mother and an Algerian father, was among them"
+  sources:
+    - {title: "Paul Weindling, Am J Public Health 2022", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8802574/", quote: "Hans Hauck was born in Frankfurt am Main on August 10, 1920, as the son of an Algerian soldier and a German mother. He joined the Hitler Youth in 1933. But he was summoned for sterilization."}
+    - {title: "Black Central Europe: Hans Hauck", url: "https://blackcentraleurope.com/biographies/hans-hauck-elizabeth-dulle/", quote: "One such individual was Hans Hauck, who was born in Frankfurt in 1920 to a German mother and Algerian father. ... where he would be involuntarily sterilized"}
+- card: rhineland-sterilisation
+  fact: "He had to sign a pledge not to marry or have sex"
+  sources:
+    - {title: "Paul Weindling, Am J Public Health 2022", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8802574/", quote: "He had to sign a declaration that he would not marry or have sexual relations."}
+    - {title: "Black Central Europe: Hans Hauck", url: "https://blackcentraleurope.com/biographies/hans-hauck-elizabeth-dulle/", quote: "Hauck then signed an agreement pledging not to marry or have any sexual relations"}
+- card: rhineland-sterilisation
+  fact: "He later served in the German army and was a Soviet prisoner of war until 1949"
+  sources:
+    - {title: "Paul Weindling, Am J Public Health 2022", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8802574/", quote: "Later, Hauck fulfilled his patriotic ambition by joining the German army. 22 He felt well treated while he was a Soviet prisoner of war until 1949"}
+    - {title: "Black Central Europe: Hans Hauck", url: "https://blackcentraleurope.com/biographies/hans-hauck-elizabeth-dulle/", quote: "Hauck later joined the German Wehrmacht on his second attempt ... was a captive of the Soviet Army from 1945-1949."}
+- card: rhineland-sterilisation
+  fact: "After the war most victims received no compensation"
+  sources:
+    - {title: "Paul Weindling, Am J Public Health 2022", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8802574/", quote: "None of the 385 received compensation from the German state, either as victims of coerced sterilization or as victims of Nazi medical research."}
+    - {title: "Jüdische Allgemeine (epd), 2023", url: "https://www.juedische-allgemeine.de/allgemein/die-vergessenen-ns-opfer", quote: "In den meisten Fällen seien die Kinder der französischen Kolonialsoldaten gar nicht entschädigt worden, sagt Tilentzidis"}
+- card: rhineland-sterilisation
+  fact: "Hauck was one of the very few who spoke publicly about it, in interviews late in life"
+  sources:
+    - {title: "Paul Weindling, Am J Public Health 2022", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8802574/", quote: "One victim has reflected on his experiences, remembering in three public interviews the terror of the procedures ... Apart from Hans Hauck, very few are known by name"}
+    - {title: "Black Central Europe: Hans Hauck", url: "https://blackcentraleurope.com/biographies/hans-hauck-elizabeth-dulle/", quote: "In an interview recorded late in his life, Hauck recalls the day his grandmother took him to the health office"}
+
+# ota-benga-1906
+- card: ota-benga-1906
+  fact: "Around 1900 putting people on show was a popular entertainment in Europe and at American world's fairs"
+  sources:
+    - {title: "USHMM Holocaust Encyclopedia", url: "https://encyclopedia.ushmm.org/content/en/article/afro-germans-during-the-holocaust", quote: "They were a popular form of entertainment in nineteenth and early twentieth century Europe."}
+    - {title: "Encyclopedia Virginia, Ted Delaney: Ota Benga", url: "https://encyclopediavirginia.org/entries/benga-ota-ca-1883-1916/", quote: "from Central Africa to the United States to appear in an exhibit at the Saint Louis World's Fair."}
+- card: ota-benga-1906
+  fact: "Ota Benga, a young Mbuti man from the Congo, was brought to the US in 1904 by Samuel Verner for the St. Louis World's Fair"
+  sources:
+    - {title: "Encyclopedia Virginia, Ted Delaney: Ota Benga", url: "https://encyclopediavirginia.org/entries/benga-ota-ca-1883-1916/", quote: "Samuel Phillips Verner, the former Presbyterian missionary who brought Benga to the United States ... A member of the Mbuti people"}
+    - {title: "Wildlife Conservation Society: Understanding Our History", url: "https://www.wcs.org/understanding-our-history", quote: "Samuel Verner, who first forcibly brought Ota Benga to the United States in 1904 to be displayed at the St Louis World's Fair"}
+    - {title: "NBC News (2020)", url: "https://www.nbcnews.com/news/us-news/bronx-zoo-operator-apologizes-racist-display-african-man-1906-n1235457", quote: "a young Central African man from the Mbuti people in the present-day Democratic Republic of Congo"}
+- card: ota-benga-1906
+  fact: "In September 1906 Verner brought him to the Bronx Zoo, which lodged him in the Monkey House; crowds came to stare"
+  sources:
+    - {title: "Wildlife Conservation Society: Understanding Our History", url: "https://www.wcs.org/understanding-our-history", quote: "and then brought him to the Bronx Zoo in September 1906 ... Bronx Zoo officials, led by Director William Hornaday, put Ota Benga on display in the zoo's Monke[y House]"}
+    - {title: "Encyclopedia Virginia, Ted Delaney: Ota Benga", url: "https://encyclopediavirginia.org/entries/benga-ota-ca-1883-1916/", quote: "lodged in the Monkey House, ostensibly to feed and care for the animals there."}
+    - {title: "The Guardian, Pamela Newkirk (2015)", url: "https://www.theguardian.com/world/2015/jun/03/the-man-who-was-caged-in-a-zoo", quote: "crowds of up to 500 people at a time had gathered around the cage to gawk at the diminutive Ota Benga"}
+- card: ota-benga-1906
+  fact: "Black ministers led by the Rev. James H. Gordon campaigned against the exhibit and ended it that month"
+  sources:
+    - {title: "The Guardian, Pamela Newkirk (2015)", url: "https://www.theguardian.com/world/2015/jun/03/the-man-who-was-caged-in-a-zoo", quote: "a small group of ministers, led by the Reverend James H Gordon ... Finally, on the afternoon of Friday 28 September, 20 days after he first went on display – Benga quietly left the zoo"}
+    - {title: "Wildlife Conservation Society: Understanding Our History", url: "https://www.wcs.org/understanding-our-history", quote: "outrage from local Black ministers quickly brought the disgraceful incident to an end and the Reverend James Gordon arranged for Ota Benga to stay at an orphanage he directed in Weeksville, Brooklyn."}
+    - {title: "Encyclopedia Virginia, Ted Delaney: Ota Benga", url: "https://encyclopediavirginia.org/entries/benga-ota-ca-1883-1916/", quote: "The Colored Baptist Ministers Conference of New York City led a campaign against the exhibition."}
+- card: ota-benga-1906
+  fact: "He went from the zoo to the Howard Colored Orphan Asylum, run by Gordon in Brooklyn"
+  sources:
+    - {title: "Encyclopedia Virginia, Ted Delaney: Ota Benga", url: "https://encyclopediavirginia.org/entries/benga-ota-ca-1883-1916/", quote: "delivered Benga to the Howard Colored Orphan Asylum in Brooklyn"}
+    - {title: "The Guardian, Pamela Newkirk (2015)", url: "https://www.theguardian.com/world/2015/jun/03/the-man-who-was-caged-in-a-zoo", quote: "He was taken to the Howard Coloure[d Orphan Asylum] ... Reverend Gordon publicly offered to house Benga at his own orphanage for black children."}
+- card: ota-benga-1906
+  fact: "In January 1910 he moved to Lynchburg, Virginia, to study at a Black seminary and college"
+  sources:
+    - {title: "Encyclopedia Virginia, Ted Delaney: Ota Benga", url: "https://encyclopediavirginia.org/entries/benga-ota-ca-1883-1916/", quote: "In January 1910, at age twenty-six, Ota Benga moved to Lynchburg to attend Virginia Theological Seminary and College."}
+    - {title: "The Guardian, Pamela Newkirk (2015)", url: "https://www.theguardian.com/world/2015/jun/03/the-man-who-was-caged-in-a-zoo", quote: "In January 1910, Ota Benga was sent to Lynchburg , Virginia ... he was sent to the Lynchburg Theological Seminary and College, a school noted for its all-black faculty and staff"}
+- card: ota-benga-1906
+  fact: "He longed to go home and could not; in 1916 he took his own life"
+  sources:
+    - {title: "The Guardian, Pamela Newkirk (2015)", url: "https://www.theguardian.com/world/2015/jun/03/the-man-who-was-caged-in-a-zoo", quote: "Many had noticed his darkening disposition, his all-consuming longing to go home."}
+    - {title: "Wildlife Conservation Society: Understanding Our History", url: "https://www.wcs.org/understanding-our-history", quote: "Robbed of his humanity and unable to return home, Ota Benga tragically took his life a decade later."}
+    - {title: "Encyclopedia Virginia, Ted Delaney: Ota Benga", url: "https://encyclopediavirginia.org/entries/benga-ota-ca-1883-1916/", quote: "On March 20, 1916, Benga died by suicide in a stable behind Josephine Anderson's house."}
+- card: ota-benga-1906
+  fact: "In July 2020 the Wildlife Conservation Society, which runs the zoo, apologised and put its records online"
+  sources:
+    - {title: "Wildlife Conservation Society: Understanding Our History", url: "https://www.wcs.org/understanding-our-history", quote: "First, we apologize for and condemn the treatment of a young Central African from the Mbuti people ... Today, we are making all known records we have related to Ota Benga available online"}
+    - {title: "NBC News, David K. Li (31 July 2020)", url: "https://www.nbcnews.com/news/us-news/bronx-zoo-operator-apologizes-racist-display-african-man-1906-n1235457", quote: "The operator of the venerable Bronx Zoo ... has apologized for two \"unconscionable\" racist episodes in its past, including placing an African man on display in a monkey house in 1906."}
+
+# aunt-jemima
+- card: aunt-jemima
+  fact: "At the end of the 1880s a mill in St. Joseph, Missouri, invented a ready-mixed pancake flour branded Aunt Jemima"
+  sources:
+    - {title: "Food Dive, Megan Poinski (2021)", url: "https://www.fooddive.com/news/aunt-jemima-rebrands-as-pearl-milling-company/594827/", quote: "The former Pearl Milling Company, located in St. Joseph, Missouri, invented the self-rising pancake mix and branded it as Aunt Jemima in 1889."}
+    - {title: "NPR (10 February 2021)", url: "https://www.npr.org/2021/02/10/966166648/aunt-jemima-has-a-new-name-pearl-milling-company", quote: "Pearl Milling Company was founded in 1888 in St. Joseph, Missouri, and according to a PepsiCo statement, it created the self-rising pancake mix that became known as Aunt Jemima."}
+- card: aunt-jemima
+  fact: "The name was taken from the racist minstrel stage"
+  sources:
+    - {title: "NPR, Alina Selyukh (17 June 2020)", url: "https://www.npr.org/2020/06/17/879104818/aunt-jemima-brand-to-change-name-remove-image-that-quaker-says-is-based-on-a-raci", quote: "Old Aunt Jemima originated as a song of field slaves that was later performed at minstrel shows."}
+    - {title: "Food Dive (2021)", url: "https://www.fooddive.com/news/aunt-jemima-rebrands-as-pearl-milling-company/594827/", quote: "The idea for the Aunt Jemima character was originally taken from a minstrel show."}
+    - {title: "Kentucky Historical Society", url: "https://apps.legislature.ky.gov/LegislativeMoments/moments14RS/web/legislative%20moment%2044.pdf", quote: "Although Aunt Jemima was a character based on racist minstrel shows"}
+- card: aunt-jemima
+  fact: "The R.T. Davis Milling Company bought the brand and hired Nancy Green to play the character"
+  sources:
+    - {title: "Kentucky Historical Society", url: "https://apps.legislature.ky.gov/LegislativeMoments/moments14RS/web/legislative%20moment%2044.pdf", quote: "In 1890, the R.T. Davis Milling Co. hired Green to be the real-life spokeswoman for its newly acquired ready-mixed, selfrising pancake flour, Aunt Jemima."}
+    - {title: "Food Dive (2021)", url: "https://www.fooddive.com/news/aunt-jemima-rebrands-as-pearl-milling-company/594827/", quote: "Rutt and Underwood later sold the recipe to R.T. Davis Milling Company, which hired Nancy Green to portray Aunt Jemima at the 1893 World's Columbian Exhibition in Chicago."}
+- card: aunt-jemima
+  fact: "Nancy Green was born enslaved in Kentucky in 1834"
+  sources:
+    - {title: "Kentucky Historical Society", url: "https://apps.legislature.ky.gov/LegislativeMoments/moments14RS/web/legislative%20moment%2044.pdf", quote: "Nancy Green was born a slave in 1834, in Mount Sterling, Ky."}
+    - {title: "WBEZ Chicago (NPR), 19 June 2020", url: "https://www.npr.org/local/309/2020/06/19/880918717/the-fight-to-commemorate-nancy-green-the-woman-who-played-the-original-aunt-jemima", quote: "According to a 1923 obituary in the Chicago Defender , Green was born into slavery in Montgomery County, Ky., in 1834"}
+- card: aunt-jemima
+  fact: "Her first appearance was at the 1893 World's Columbian Exposition in Chicago, where she cooked pancakes"
+  sources:
+    - {title: "Kentucky Historical Society", url: "https://apps.legislature.ky.gov/LegislativeMoments/moments14RS/web/legislative%20moment%2044.pdf", quote: "Green's first appearance as Aunt Jemima occurred at the 1893 World's Columbian Exposition in Chicago. There, donning a red bandana and apron, she made pancakes with the premixed flour."}
+    - {title: "WBEZ Chicago (NPR), 19 June 2020", url: "https://www.npr.org/local/309/2020/06/19/880918717/the-fight-to-commemorate-nancy-green-the-woman-who-played-the-original-aunt-jemima", quote: "News stories about the 1893 World's Fair in Chicago described Green standing next to the world's largest flour barrel, making pancake[s]"}
+- card: aunt-jemima
+  fact: "After the fair she was offered a lifetime contract and played the role until her death in 1923"
+  sources:
+    - {title: "Kentucky Historical Society", url: "https://apps.legislature.ky.gov/LegislativeMoments/moments14RS/web/legislative%20moment%2044.pdf", quote: "Green received a medal from the exposition and a lifetime contract offer with the Davis Milling Co. Green continued to portray Aunt Jemima until her death in 1923."}
+    - {title: "WBEZ Chicago (NPR), 19 June 2020", url: "https://www.npr.org/local/309/2020/06/19/880918717/the-fight-to-commemorate-nancy-green-the-woman-who-played-the-original-aunt-jemima", quote: "After the fair, Green was offered a lifetime ... She was later hired to play the role for the pancake company until her death."}
+- card: aunt-jemima
+  fact: "Off the stage she gave her time and standing to charity and to causes in Chicago"
+  sources:
+    - {title: "Kentucky Historical Society", url: "https://apps.legislature.ky.gov/LegislativeMoments/moments14RS/web/legislative%20moment%2044.pdf", quote: "Green used her stature as a spokeswoman to work on antipoverty initiatives and equal rights activism in Chicago."}
+    - {title: "WBEZ Chicago (NPR), 19 June 2020", url: "https://www.npr.org/local/309/2020/06/19/880918717/the-fight-to-commemorate-nancy-green-the-woman-who-played-the-original-aunt-jemima", quote: "Through the Defender obituary, Williams said she learned Green was a philanthropist and ministry leader."}
+- card: aunt-jemima
+  fact: "In 1972 Betye Saar reclaimed the figure in The Liberation of Aunt Jemima, the work that made her name"
+  sources:
+    - {title: "NPR: Life Is a Collage for Artist Betye Saar (2006)", url: "https://www.npr.org/templates/story/story.php?storyId=6688207", quote: "\"The Liberation of Aunt Jemima\" -- a broom-toting, gun-wielding African-American woman -- established the reputation of artist Betye Saar. That was in 1972."}
+    - {title: "Hammer Museum: Betye Saar", url: "https://hammer.ucla.edu/now-dig-this/artists/betye-saar/", quote: "whose lasting influence was secured by her iconic reclamation of the Aunt Jemima figure in works such as The Liberation of Aunt Jemima (1972)"}
+- card: aunt-jemima
+  fact: "In June 2020 Quaker Oats admitted the brand's origins lay in a racial stereotype and said it would change it"
+  sources:
+    - {title: "NPR, Alina Selyukh (17 June 2020)", url: "https://www.npr.org/2020/06/17/879104818/aunt-jemima-brand-to-change-name-remove-image-that-quaker-says-is-based-on-a-raci", quote: "\"We recognize Aunt Jemima's origins are based on a racial stereotype,\" parent company Quaker Foods says, announcing plans to change the brand's logo and name."}
+    - {title: "Food Dive (2021)", url: "https://www.fooddive.com/news/aunt-jemima-rebrands-as-pearl-milling-company/594827/", quote: "When PepsiCo announced it was rebranding Aunt Jemima, the company said it would work with consumers, employees, cultural and subject matter experts"}
+- card: aunt-jemima
+  fact: "In February 2021 the brand became Pearl Milling Company after the original mill; new boxes with a mill instead of a face were due in shops in June"
+  sources:
+    - {title: "Food Dive (2021)", url: "https://www.fooddive.com/news/aunt-jemima-rebrands-as-pearl-milling-company/594827/", quote: "will be rebranded as Pearl Milling Company, PepsiCo announced Tuesday ... But instead of a picture of a Black woman, the label will now feature a drawing of an old-fashioned mill on the banks of a river. The new packages are expected to reach shelves in June."}
+    - {title: "NPR (10 February 2021)", url: "https://www.npr.org/2021/02/10/966166648/aunt-jemima-has-a-new-name-pearl-milling-company", quote: "Quaker Oats will replace the 130-year-old Aunt Jemima brand and logo in June, one year after it announced plans to do so."}
+
+# owens-berlin-1936
+- card: owens-berlin-1936
+  fact: "The Nazi government meant the 1936 Berlin Olympics to showcase its idea of Aryan supremacy"
+  sources:
+    - {title: "History.com, Christopher Klein: 10 Things You May Not Know About Jesse Owens", url: "https://www.history.com/articles/10-things-you-may-not-know-about-jesse-owens", quote: "Although Adolf Hitler intended the 1936 Berlin Games to be a showcase for the Nazi ideology of Aryan racial supremacy"}
+    - {title: "NPS, Home of FDR: The 1936 Berlin Olympics", url: "https://www.nps.gov/hofr/blogs/the-1936-berlin-olympics-and-the-controversy-of-u-s-participation.htm", quote: "destroyed any attempt Germany had at proving white supremacy through the Games."}
+    - {title: "USHMM: The Nazi Olympics Berlin 1936: African American Voices", url: "https://encyclopedia.ushmm.org/content/en/article/the-nazi-olympics-berlin-1936-african-american-voices-and-jim-crow-america", quote: "the emphasis on \"Aryan\" supremacy at the core of Nazi racial views"}
+- card: owens-berlin-1936
+  fact: "The US team included 18 African Americans"
+  sources:
+    - {title: "USHMM: The Nazi Olympics Berlin 1936: African American Voices", url: "https://encyclopedia.ushmm.org/content/en/article/the-nazi-olympics-berlin-1936-african-american-voices-and-jim-crow-america", quote: "Owens was one of the 18 African Americans (16 men and 2 women) who c[ompeted]"}
+    - {title: "NPS, Home of FDR", url: "https://www.nps.gov/hofr/blogs/the-1936-berlin-olympics-and-the-controversy-of-u-s-participation.htm", quote: "any of the 18 African Americans who competed in Berlin."}
+- card: owens-berlin-1936
+  fact: "Owens, a sprinter and long jumper, won four gold medals: 100 m, 200 m, long jump and 4×100 m relay"
+  sources:
+    - {title: "USHMM: The Nazi Olympics Berlin 1936: African American Voices", url: "https://encyclopedia.ushmm.org/content/en/article/the-nazi-olympics-berlin-1936-african-american-voices-and-jim-crow-america", quote: "Owens won gold medals in the 100-meter dash, 200-meter dash, broad (long) jump, and the 4x100-meter rel[ay]"}
+    - {title: "History.com, Christopher Klein", url: "https://www.history.com/articles/10-things-you-may-not-know-about-jesse-owens", quote: "Owens captured gold in the 100 meters, long jump, 200 meters and 4×100 meter relay"}
+    - {title: "NPS, Home of FDR", url: "https://www.nps.gov/hofr/blogs/the-1936-berlin-olympics-and-the-controversy-of-u-s-participation.htm", quote: "Record breaking American sprinter and long jumper Jesse Owens, an African American, won four gold medals"}
+- card: owens-berlin-1936
+  fact: "A story spread that an enraged Hitler refused to shake his hand; Hitler did not shake it, but Owens said they exchanged congratulatory waves (the snub is mostly legend)"
+  sources:
+    - {title: "History.com, Christopher Klein", url: "https://www.history.com/articles/10-things-you-may-not-know-about-jesse-owens", quote: "a myth arose that Hitler, enraged at the triumph of an African American, refused to congratulate Owens on his victories because he failed to shake his hand. However, the press reported that the German leader gave the American sprinter a \"friendly little Nazi salute,\" and Owens said that the two exchanged congratulatory waves."}
+    - {title: "NPS, Home of FDR", url: "https://www.nps.gov/hofr/blogs/the-1936-berlin-olympics-and-the-controversy-of-u-s-participation.htm", quote: "Hitler reportedly, only shook hands with German and Finnish medalist winners, leading many to believe that he snubbed Owens ... Years later, Owens recalled that the two had only \"exchanged congratulatory waves\"."}
+- card: owens-berlin-1936
+  fact: "Roosevelt never invited him to the White House or publicly acknowledged his victories; Owens said the president, not Hitler, snubbed him and did not even send a telegram"
+  sources:
+    - {title: "History.com, Christopher Klein", url: "https://www.history.com/articles/10-things-you-may-not-know-about-jesse-owens", quote: "it was the conduct of Roosevelt—who never invited Owens to the White House or acknowledged his triumphs—that disappointed the Olympic champion. \"Hitler didn't snub me—it was our president who snubbed me,\" ... \"The president didn't even send me a telegram.\""}
+    - {title: "NPS, Home of FDR", url: "https://www.nps.gov/hofr/blogs/the-1936-berlin-olympics-and-the-controversy-of-u-s-participation.htm", quote: "But Owens felt more neglected by FDR than Hitler, saying, \"that the president didn't even send a telegram\" or publicly acknowledge him"}
+- card: owens-berlin-1936
+  fact: "Back home Olympic victory did not bring work, and Owens struggled for money"
+  sources:
+    - {title: "USHMM: The Nazi Olympics Berlin 1936: African American Voices", url: "https://encyclopedia.ushmm.org/content/en/article/the-nazi-olympics-berlin-1936-african-american-voices-and-jim-crow-america", quote: "And Olympic victories did not translate into professional opportunities."}
+    - {title: "History.com, Christopher Klein", url: "https://www.history.com/articles/10-things-you-may-not-know-about-jesse-owens", quote: "In spite of his fame on his return from Berlin, Owens struggled for money"}
+
+# booker-t-dinner-1901
+- card: booker-t-dinner-1901
+  fact: "Booker T. Washington was born into slavery in Virginia"
+  sources:
+    - {title: "National Park Service: Booker T. Washington National Monument", url: "https://www.nps.gov/bowa/index.htm", quote: "Booker T. Washington was born a slave in April 1856 on the 207-acre farm of James Burroughs."}
+    - {title: "Theodore Roosevelt Center: Booker T. Washington", url: "https://www.theodorerooseveltcenter.org/encyclopedia/race-ethnicity-and-gender/booker-t-washington", quote: "Born into slavery in Virginia, Washington fought hard after the Civil War for an education."}
+- card: booker-t-dinner-1901
+  fact: "After the Civil War he became head of the Tuskegee Institute in Alabama"
+  sources:
+    - {title: "National Park Service: Booker T. Washington National Monument", url: "https://www.nps.gov/bowa/index.htm", quote: "After the Civil War, Washington became the first principal of Tuskegee Normal and Industrial School."}
+    - {title: "Florida Historical Quarterly, John K. Severn (1975)", url: "https://stars.library.ucf.edu/fhq/vol54/iss3/5", quote: "Booker T. Washington, president of Tuskegee Institute in Alabama and the most influential black leader in America"}
+- card: booker-t-dinner-1901
+  fact: "In 1895 he gave his most famous speech at the Atlanta Exposition"
+  sources:
+    - {title: "National Park Service: Booker T. Washington National Monument", url: "https://www.nps.gov/bowa/index.htm", quote: "The Atlanta Exposition Speech of 1895 Read the text of Booker T. Washington's most famous speecch."}
+    - {title: "Theodore Roosevelt Center: Booker T. Washington", url: "https://www.theodorerooseveltcenter.org/encyclopedia/race-ethnicity-and-gender/booker-t-washington", quote: "Despite advocating accommodation with white society in his 1895 Atlanta Compromise address,"}
+- card: booker-t-dinner-1901
+  fact: "By 1901 he was the most influential Black leader in the US"
+  sources:
+    - {title: "Florida Historical Quarterly, John K. Severn (1975)", url: "https://stars.library.ucf.edu/fhq/vol54/iss3/5", quote: "the most influential black leader in America"}
+    - {title: "American Heritage, Frederic D. O'Brien (2001)", url: "https://www.americanheritage.com/1901-100-years-ago-0", quote: "Booker T. Washington, the nation's foremost black leader"}
+- card: booker-t-dinner-1901
+  fact: "Roosevelt valued his knowledge of Southern politics and consulted him on the Republican Party and federal appointments in the South"
+  sources:
+    - {title: "Theodore Roosevelt Center: Booker T. Washington", url: "https://www.theodorerooseveltcenter.org/encyclopedia/race-ethnicity-and-gender/booker-t-washington", quote: "for the purpose of talking over the situation of the Republican Party in the South ... understanding of Southern politics was useful to President Roosevelt"}
+    - {title: "American Heritage, Frederic D. O'Brien (2001)", url: "https://www.americanheritage.com/1901-100-years-ago-0", quote: "The purpose of the dinner had been to discuss federal appointments in the South. ... Roosevelt had solicited Washington's advice on choosing candidates"}
+- card: booker-t-dinner-1901
+  fact: "On the evening of 16 October 1901 Washington dined at the White House with Roosevelt and his family"
+  sources:
+    - {title: "American Heritage, Frederic D. O'Brien (2001)", url: "https://www.americanheritage.com/1901-100-years-ago-0", quote: "On October 16, Booker T. Washington, the nation's foremost black leader, dined at the White House with President Theodore Roosevelt and his family."}
+    - {title: "Florida Historical Quarterly, John K. Severn (1975)", url: "https://stars.library.ucf.edu/fhq/vol54/iss3/5", quote: "a dinner he attended as the guest of President Theodore Roosevelt in the White House on the evening of October 16, 1901."}
+    - {title: "Theodore Roosevelt Center: Booker T. Washington", url: "https://www.theodorerooseveltcenter.org/encyclopedia/race-ethnicity-and-gender/booker-t-washington", quote: "On that night, Washington dined with the Roosevelt family."}
+- card: booker-t-dinner-1901
+  fact: "When word got out, white Southerners reacted with fury"
+  sources:
+    - {title: "American Heritage, Frederic D. O'Brien (2001)", url: "https://www.americanheritage.com/1901-100-years-ago-0", quote: "When word of the meal got out, Southern whites reacted with fury."}
+    - {title: "Theodore Roosevelt Center: Booker T. Washington", url: "https://www.theodorerooseveltcenter.org/encyclopedia/race-ethnicity-and-gender/booker-t-washington", quote: "The next day, a firestorm of vitriol broke out from Southern whites who called for Roosevelt's impeachment."}
+- card: booker-t-dinner-1901
+  fact: "Newspapers ran inflammatory articles and cartoons"
+  sources:
+    - {title: "NPR, Talk of the Nation (2012)", url: "https://www.npr.org/2012/05/14/152684575/teddy-roosevelts-shocking-dinner-with-washington", quote: "News of the dinner became the subject of inflammatory articles and cartoons"}
+    - {title: "American Heritage, Frederic D. O'Brien (2001)", url: "https://www.americanheritage.com/1901-100-years-ago-0", quote: "The Macon Telegraph invoked a familiar specter: \"A dinner given by one man to another in the home and privacy of his family means that the guest or his son may woo and win the host's daughter.\""}
+- card: booker-t-dinner-1901
+  fact: "Washington received threats against his life"
+  sources:
+    - {title: "American Heritage, Frederic D. O'Brien (2001)", url: "https://www.americanheritage.com/1901-100-years-ago-0", quote: "Both Roosevelt and Washington received death threats."}
+    - {title: "NPR, Talk of the Nation (2012)", url: "https://www.npr.org/2012/05/14/152684575/teddy-roosevelts-shocking-dinner-with-washington", quote: "an assassin was hired to go to Tuskegee to kill Booker T. Washington. He was pursued wherever he went."}
+- card: booker-t-dinner-1901
+  fact: "The reaction shook Roosevelt"
+  sources:
+    - {title: "Theodore Roosevelt Center: Booker T. Washington", url: "https://www.theodorerooseveltcenter.org/encyclopedia/race-ethnicity-and-gender/booker-t-washington", quote: "This stunned Roosevelt."}
+    - {title: "American Heritage, Frederic D. O'Brien (2001)", url: "https://www.americanheritage.com/1901-100-years-ago-0", quote: "Although the president was shaken by the white Southern reaction"}
+- card: booker-t-dinner-1901
+  fact: "Roosevelt kept consulting Washington but never invited him back to the White House"
+  sources:
+    - {title: "Theodore Roosevelt Center: Booker T. Washington", url: "https://www.theodorerooseveltcenter.org/encyclopedia/race-ethnicity-and-gender/booker-t-washington", quote: "While he continued to consult Washington, Roosevelt never invited him back to the White House."}
+    - {title: "American Heritage, Frederic D. O'Brien (2001)", url: "https://www.americanheritage.com/1901-100-years-ago-0", quote: "Still, Roosevelt never again dined with an African-American at the White House."}
+
+# sims-act-1912
+- card: sims-act-1912
+  fact: "By 1910 prize-fight films were a profitable business and a big fight film could earn a fortune"
+  sources:
+    - {title: "Motion Picture Herald, 20 July 1940 (transcribed)", url: "https://bigvriotsquad.blogspot.com/2019/04/us-prize-fight-ban-off-rko-takes-over.html", quote: "The fight film business continued until adverse reaction followed the Jack Johnson-Jim Jeffries fight at Reno on July 4, 1910. The Johnson-Jeffries film grossed, according to reports, $300,000"}
+    - {title: "Oregon Theater Project: Prize-Fight Film Censorship", url: "https://oregontheaterproject.uoregon.edu/node/604", quote: "the profit would substantially outweigh the state fine ... with Harper's Bazaar predicting the fight film would make at least $1,000,000"}
+- card: sims-act-1912
+  fact: "Jack Johnson was the first Black heavyweight champion"
+  sources:
+    - {title: "Reason, Jesse Walker (2018)", url: "https://reason.com/2018/05/25/jack-johnson-fight-films/", quote: "Johnson, the first black heavyweight boxing champion"}
+    - {title: "Oregon Theater Project", url: "https://oregontheaterproject.uoregon.edu/node/604", quote: "Johnson was the first Black undefeated heavyweight champion of America."}
+- card: sims-act-1912
+  fact: "The retired white champion James J. Jeffries came back to take the title, hailed as the 'Great White Hope'"
+  sources:
+    - {title: "Oregon Theater Project", url: "https://oregontheaterproject.uoregon.edu/node/604", quote: "Jeffries was white and a retired heavyweight champion, but chose to get back in the ring in an attempt to defeat Johnson."}
+    - {title: "Reason, Jesse Walker (2018)", url: "https://reason.com/2018/05/25/jack-johnson-fight-films/", quote: "After Johnson's 1910 victory over James J. Jeffries (the so-called \"great white hope\")"}
+- card: sims-act-1912
+  fact: "On 4 July 1910 in Reno, Nevada, Johnson beat Jeffries"
+  sources:
+    - {title: "Motion Picture Herald, 20 July 1940 (transcribed)", url: "https://bigvriotsquad.blogspot.com/2019/04/us-prize-fight-ban-off-rko-takes-over.html", quote: "the Jack Johnson-Jim Jeffries fight at Reno on July 4, 1910"}
+    - {title: "Oregon Theater Project", url: "https://oregontheaterproject.uoregon.edu/node/604", quote: "On July 4th, 1910, Johnson knocked out Jeffries in the 15th round ... Photo from Johnson-Jeffries Boxing Match in Reno, Nevada, 1910"}
+- card: sims-act-1912
+  fact: "Race riots followed and many states and cities banned screenings of the fight film"
+  sources:
+    - {title: "Oregon Theater Project", url: "https://oregontheaterproject.uoregon.edu/node/604", quote: "Johnson's victory was promptly followed by race riots ... in 1910, numerous states and cities banned the screening of the Johnson-Jeffries fight"}
+    - {title: "Motion Picture Herald, 20 July 1940 (transcribed)", url: "https://bigvriotsquad.blogspot.com/2019/04/us-prize-fight-ban-off-rko-takes-over.html", quote: "But in some places exhibition of the film occasioned race-riots"}
+    - {title: "Reason, Jesse Walker (2018)", url: "https://reason.com/2018/05/25/jack-johnson-fight-films/", quote: "anti-black and anti-boxing crusaders blocked local screenings of a film that showed the match."}
+    - {title: "Library of Congress Research Guides: Jack Johnson vs. James Jeffries", url: "https://guides.loc.gov/chronicling-america-johnson-vs-jeffries", quote: "Johnson's victory in the 15th round ignites both celebrations and race riots in cities across the nation."}
+- card: sims-act-1912
+  fact: "The Sims Act of 31 July 1912 made carrying fight films across state lines a crime"
+  sources:
+    - {title: "Motion Picture Herald, 20 July 1940 (transcribed)", url: "https://bigvriotsquad.blogspot.com/2019/04/us-prize-fight-ban-off-rko-takes-over.html", quote: "On July 31, 1912 Congress passed the Sims bill which made interstate traffic in fight films unlawful."}
+    - {title: "Reason, Jesse Walker (2018)", url: "https://reason.com/2018/05/25/jack-johnson-fight-films/", quote: "In 1912, citing the same motion picture, Congress passed the Sims Act, which banned the transport of fight films over state lines."}
+    - {title: "Weber v. Freed, 239 U.S. 325 (1915)", url: "https://www.law.cornell.edu/supremecourt/text/239/325", quote: "The act of July 31, 1912 (§ 1, chap. 263, 37 Stat. at L. 240 ...), makes it unlawful 'to bring or to cause to be brought into the United States from abroad, any film or other pictorial representation of any prize fight"}
+    - {title: "Oregon Theater Project", url: "https://oregontheaterproject.uoregon.edu/node/604", quote: "in 1912, the Sims Act was passed, which prohibited the interstate distribution of prize-fighting films"}
+- card: sims-act-1912
+  fact: "Distributors broke the law openly, paying fines and moving films across state lines anyway"
+  sources:
+    - {title: "Motion Picture Herald, 20 July 1940 (transcribed)", url: "https://bigvriotsquad.blogspot.com/2019/04/us-prize-fight-ban-off-rko-takes-over.html", quote: "it was openly violated, in many instances. When independent distributors were caught crossing state lines with fight films they were often compelled to pay a $1,000 fine but usually went right on with the distribution"}
+    - {title: "Oregon Theater Project", url: "https://oregontheaterproject.uoregon.edu/node/604", quote: "continued to illegally distribute these prize-fight films across state lines and make a decent profit doing so."}
+- card: sims-act-1912
+  fact: "The ban was repealed only in 1940, after 28 years"
+  sources:
+    - {title: "Motion Picture Herald, 20 July 1940 (transcribed)", url: "https://bigvriotsquad.blogspot.com/2019/04/us-prize-fight-ban-off-rko-takes-over.html", quote: "From July 31, 1912 when the Sims act forbidding interstate commerce in fight films was passed until July 1, 1940 when it was repealed ... During the 28 years"}
+    - {title: "Oregon Theater Project", url: "https://oregontheaterproject.uoregon.edu/node/604", quote: "the Sims Act was not repealed until the 1940s"}
+- card: sims-act-1912
+  fact: "It was one of the earliest US battles over film censorship"
+  sources:
+    - {title: "Reason, Jesse Walker (2018)", url: "https://reason.com/2018/05/25/jack-johnson-fight-films/", quote: "The boxer also became a central figure in one of the earliest battles over movie censorship ."}
+    - {title: "Oregon Theater Project (citing Orbach, Prizefighting and the Birth of Movie Censorship)", url: "https://oregontheaterproject.uoregon.edu/node/604", quote: "the relationship between racism and film censorship in the United States, and the accomplishments of Jack Johnson must not be shrouded."}
