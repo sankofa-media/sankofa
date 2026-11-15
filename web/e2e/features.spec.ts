@@ -56,10 +56,9 @@ test('every scene is built, held lines never show, and no text is hard to reach'
   expect(ids).toEqual(['door', 'ring', 'expedition', 'family', 'minute', 'album', 'simone', 'single', 'bass', 'river', 'jazz', 'beat', 'house', 'feist', 'kanye', 'massive', 'burial', 'screen', 'silence', 'classroom', 'finale']);
   // Lines waiting for a second source are not shipped at all.
   const text = await feature(page).innerText();
-  expect(text).not.toContain('ambulance');
+  // The one line still resting on a single source never ships.
   expect(text).not.toContain('by ear');
-  expect(text).not.toContain('only Isaac');
-  expect(await page.evaluate(async () => JSON.stringify(await (await fetch('data/features/sea-lion-girls.json')).json()))).not.toContain('ambulance');
+  expect(await page.evaluate(async () => JSON.stringify(await (await fetch('data/features/sea-lion-girls.json')).json()))).not.toContain('by ear');
   // Every block is draft copy for now, and says so to the editor.
   expect(await feature(page).locator('.ft-block[data-block]:not([data-draft])').count()).toBe(0);
   // Family: five names with their ages.

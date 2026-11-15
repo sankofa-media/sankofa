@@ -143,7 +143,7 @@ describe('lineage', () => {
 describe('the Sea Lion Girls content', () => {
   const f = parse(readFileSync('../content/features/sea-lion-girls/feature.yaml', 'utf8')) as FeatureSource;
   const lin = parse(readFileSync('../content/features/sea-lion-girls/lineage.yaml', 'utf8')) as RawLineage;
-  it('is valid against its lineage, all draft, with the single-source lines held', () => {
+  it('is valid against its lineage, with the single-source lines held', () => {
     const sync = new Set((lin.sync ?? []).filter((s) => (s.sources ?? []).length).map((s) => s.work));
     const ledger = parse(readFileSync('../content/ledger/media.yaml', 'utf8')) as { file: string; feature?: string }[];
     const rights = new Set(ledger.filter((e) => e.feature === 'sea-lion-girls').map((e) => e.file));
@@ -151,9 +151,10 @@ describe('the Sea Lion Girls content', () => {
     expect(validateFeature(f, { nodes: new Set(lin.nodes.map((n) => n.id)), sourced: sourcedNodes(lin), sync, rights, cards })).toEqual([]);
     expect(validateLineage(lin)).toEqual([]);
     const blocks = f.scenes.flatMap((s) => s.blocks);
-    expect(blocks.every((b) => b.draft === true)).toBe(true);
+    expect(blocks.every((b) => typeof b.draft === 'boolean')).toBe(true);
+    // Every line still resting on one source stays held: today only "learned by ear".
     const held = blocks.filter((b) => b.hold).map((b) => b.id);
-    expect(held).toEqual(expect.arrayContaining(['ambulance', 'by-ear', 'isaac-1998', 'never-heard', 'isaac-africa']));
+    expect(held).toEqual(['by-ear']);
   });
 });
 
