@@ -82,3 +82,35 @@ describe('the built countries file', () => {
     expect(brazil.cards.find((x) => x.id === 'candomble')).toMatchObject({ main: true, places: [0] });
   });
 });
+
+describe('countries in the reader’s copy', async () => {
+  const { CardSet } = await import('../src/lib/cards');
+  const { countriesInCopy, countryCopy } = await import('../src/lib/countries');
+  const card = (id: string, years: number[], extra: object = {}) =>
+    ({ id, kind: 'event', title: id, wow: '', years, places: [{ name: `${id}-a`, lat: 0, lon: 0 }, { name: `${id}-b`, lat: 1, lon: 1 }], zoom: 3, books: [], body: '', sources: [], ...extra }) as never;
+  const set = new CardSet([
+    card('late', [1950]),
+    card('early', [1600, 1700]),
+    card('song-m', [1800], { edition: 'm', pair: 'song' }),
+    card('song-f', [1800], { edition: 'f', pair: 'song' }),
+  ]);
+  const file = {
+    countries: [
+      { id: 'zeta', iso: '1', name: { en: 'Zeta', ru: 'Альфа' }, cards: [{ id: 'late', places: [1], main: false }, { id: 'early', places: [0], main: true }, { id: 'song-m', places: [0], main: true }] },
+      { id: 'alpha', iso: '2', name: { en: 'Alpha', ru: 'Яблоко' }, cards: [{ id: 'song-f', places: [0], main: true }] },
+    ],
+  };
+
+  it('lists a country’s cards in time order, with its own places', () => {
+    const rows = countryCopy(set, 'm', file.countries[0]);
+    expect(rows.map((r) => r.card.id)).toEqual(['early', 'song-m', 'late']);
+    expect(rows[2].places.map((p) => p.name)).toEqual(['late-b']);
+    expect(rows[2].main).toBe(false);
+  });
+
+  it('counts only the reader’s copy, and sorts by the reader’s language', () => {
+    expect(countriesInCopy(set, 'm', file, 'en').map((x) => [x.country.id, x.n])).toEqual([['zeta', 3]]);
+    expect(countriesInCopy(set, 'f', file, 'en').map((x) => [x.country.id, x.n])).toEqual([['alpha', 1], ['zeta', 2]]);
+    expect(countriesInCopy(set, 'f', file, 'ru').map((x) => x.country.id)).toEqual(['zeta', 'alpha']);
+  });
+});

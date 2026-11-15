@@ -53,3 +53,21 @@ describe('route', () => {
     expect(parseRoute('view=nope').view).toBeUndefined();
   });
 });
+
+describe('atlas by country', () => {
+  it('keeps the mode and the country next to the atlas point', () => {
+    const r = parseRoute('#zoom=3&atlas=countries&country=brazil&lang=ru');
+    expect(r.atlas).toBe('countries');
+    expect(r.country).toBe('brazil');
+    expect(r.point).toEqual({ zoom: 3, lang: 'ru' });
+    expect(screenOf(r)).toBe('atlas');
+    expect(formatRoute({ point: { zoom: 3 }, atlas: 'countries', country: 'brazil' })).toBe('zoom=3&atlas=countries&country=brazil');
+    expect(formatRoute({ point: {}, atlas: 'countries' })).toBe('atlas=countries');
+  });
+
+  it('ignores a country without the mode, and a malformed one', () => {
+    expect(parseRoute('country=brazil').country).toBeUndefined();
+    expect(parseRoute('atlas=countries&country=%3Cb%3E').country).toBeUndefined();
+    expect(parseRoute('atlas=elsewhere').atlas).toBeUndefined();
+  });
+});

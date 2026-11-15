@@ -16,6 +16,10 @@ export interface Route {
   artist?: string;
   /** the document or object a mechanics view opens on */
   item?: string;
+  /** the atlas grouped by present-day country (atlas=countries) */
+  atlas?: 'countries';
+  /** the country the atlas shows, by its id in content/countries.yaml */
+  country?: string;
 }
 
 export function parseRoute(hash: string): Route {
@@ -28,7 +32,18 @@ export function parseRoute(hash: string): Route {
   const ch = q.get('ch') ?? undefined;
   const st = q.get('step');
   const step = ch && st && /^\d{1,3}$/.test(st) ? Number(st) : undefined;
-  return { point: safeParse(s), ch, view, ...(step !== undefined ? { step } : {}), ...(artist ? { artist } : {}), ...(item ? { item } : {}) };
+  const atlas = q.get('atlas') === 'countries' ? ('countries' as const) : undefined;
+  const country = atlas && /^[a-z0-9-]{1,64}$/.test(q.get('country') ?? '') ? q.get('country')! : undefined;
+  return {
+    point: safeParse(s),
+    ch,
+    view,
+    ...(step !== undefined ? { step } : {}),
+    ...(artist ? { artist } : {}),
+    ...(item ? { item } : {}),
+    ...(atlas ? { atlas } : {}),
+    ...(country ? { country } : {}),
+  };
 }
 
 /** The fragment for a route: atlas keys as Go writes them, museum keys after. */
@@ -39,12 +54,15 @@ export function formatRoute(r: Route): string {
   if (r.view) extra.push('view=' + r.view);
   if (r.artist) extra.push('artist=' + goQueryEscape(r.artist));
   if (r.item) extra.push('item=' + goQueryEscape(r.item));
+  if (r.atlas) extra.push('atlas=' + r.atlas);
+  if (r.atlas && r.country) extra.push('country=' + goQueryEscape(r.country));
   return [formatFragment(r.point), ...extra].filter(Boolean).join('&');
 }
 
 /** Which screen a route opens. */
 export function screenOf(r: Route): View | 'story' {
   if (r.view) return r.view;
+  if (r.atlas) return 'atlas';
   if (!r.ch && (r.point.path?.length || r.point.from || r.point.place || r.point.zoom)) return 'atlas';
   return 'story';
 }
