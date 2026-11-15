@@ -224,6 +224,9 @@ test('a dictionary link opens its card over the longread; closing it returns to 
   // An explicit [[jazz]] link in the stop's text.
   const link = scene(page, 'jazz').locator('[data-block="text"] a.xref[data-card="jazz"]');
   await expect(link).toBeVisible();
+  // Let the scroll that brings the link into view settle before the card opens.
+  await link.scrollIntoViewIfNeeded();
+  await page.waitForTimeout(300);
   await link.click();
   await expect(page.locator('.drawer.on article.card[data-card-id="jazz"]')).toBeVisible();
   const top = await page.locator('.ft-sheet').evaluate((el) => el.scrollTop);
@@ -246,6 +249,8 @@ test('in Russian the links open the Russian card in place, and the scene stays',
   await expect.poll(() => page.url()).toContain('scene=single');
   const link = scene(page, 'single').locator('[data-block="two-sides"] a.xref[data-card="mississippi-goddam"]');
   await expect(link).toHaveText('«Mississippi Goddam»');
+  await link.scrollIntoViewIfNeeded();
+  await page.waitForTimeout(300);
   await link.click();
   await expect(page.locator('.drawer.on article.card[data-card-id="mississippi-goddam"]')).toBeVisible();
   const at = page.url().match(/scene=([a-z-]+)/)?.[1];
