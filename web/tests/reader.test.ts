@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it } from 'vitest';
 import { appendPath, clearPath, edition, readPath, recordVisit } from '../src/lib/reader';
-import { atlasLayers, readerCards } from '../src/lib/atlasModel';
+import { atlasLayers, chapterCopy } from '../src/lib/atlasModel';
 import { CardSet } from '../src/lib/cards';
 import type { Card } from '../src/lib/types';
 
@@ -65,21 +65,29 @@ describe('atlas levels', () => {
     mk('jacobs', 4, { edition: 'f', pair: 'p', years: [1813, 1897] }),
   ]);
 
-  it('keeps only the reader copy of paired cards', () => {
-    expect(readerCards(set, 'f').map((c) => c.id)).not.toContain('douglass');
-    expect(readerCards(set, 'f').map((c) => c.id)).toContain('jacobs');
+  it('maps both cards of a pair, whichever copy is held', () => {
+    const ids = atlasLayers(set, { level: 4 }).points.map((p) => p.id);
+    expect(ids).toContain('douglass');
+    expect(ids).toContain('jacobs');
+  });
+
+  it('a chapter tells the reader’s half of a pair', () => {
+    const ch = { id: 'v3', cards: ['douglass', 'jacobs'] };
+    const v3 = new CardSet([mk('douglass', 4, { edition: 'm', pair: 'p', era: 'v3' }), mk('jacobs', 4, { edition: 'f', pair: 'p', era: 'v3' })]);
+    expect(chapterCopy(v3, 'f', ch).map((c) => c.id)).toEqual(['jacobs']);
+    expect(chapterCopy(v3, 'm', ch).map((c) => c.id)).toEqual(['douglass']);
   });
 
   it('generalises: zoom 1 shows movements, not people', () => {
-    const l = atlasLayers(set, { level: 1, edition: 'm' });
+    const l = atlasLayers(set, { level: 1 });
     expect(l.routes.some((r) => r.id === 'mv:great-migration')).toBe(true);
     expect(l.points.find((p) => p.id === 'tharpe')!.minor).toBe(true);
     expect(l.points.find((p) => p.id === 'great-migration')!.minor).toBe(false);
   });
 
   it('zoom 2 aggregates regions, zoom 3 draws genres spreading', () => {
-    expect(atlasLayers(set, { level: 2, edition: 'm' }).regions.length).toBeGreaterThan(0);
-    const l3 = atlasLayers(set, { level: 3, edition: 'm' });
+    expect(atlasLayers(set, { level: 2 }).regions.length).toBeGreaterThan(0);
+    const l3 = atlasLayers(set, { level: 3 });
     expect(l3.routes.some((r) => r.id === 'card:blues')).toBe(true);
     expect(l3.regions).toEqual([]);
     expect(l3.points.find((p) => p.id === 'tharpe')!.minor).toBe(true);
@@ -90,32 +98,32 @@ describe('atlas levels', () => {
       mk('spirituals', 3, { kind: 'genre', places: [{ name: 'Georgia', lat: 32.6, lon: -83.4 }] }),
       mk('gospel', 3, { kind: 'genre', roots: ['spirituals'], places: [{ name: 'Chicago', lat: 41.88, lon: -87.63 }] }),
     ]);
-    const r = atlasLayers(g, { level: 3, edition: 'm' }).routes.find((x) => x.id === 'roots:gospel');
+    const r = atlasLayers(g, { level: 3 }).routes.find((x) => x.id === 'roots:gospel');
     expect(r?.legs[0].from).toEqual([-83.4, 32.6]);
   });
 
   it('zoom 4 shows people, zoom 5 single documents', () => {
-    expect(atlasLayers(set, { level: 4, edition: 'm' }).points.find((p) => p.id === 'tharpe')!.minor).toBe(false);
-    expect(atlasLayers(set, { level: 4, edition: 'm' }).points.find((p) => p.id === 'record')!.minor).toBe(true);
-    expect(atlasLayers(set, { level: 5, edition: 'm' }).points.find((p) => p.id === 'record')!.minor).toBe(false);
+    expect(atlasLayers(set, { level: 4 }).points.find((p) => p.id === 'tharpe')!.minor).toBe(false);
+    expect(atlasLayers(set, { level: 4 }).points.find((p) => p.id === 'record')!.minor).toBe(true);
+    expect(atlasLayers(set, { level: 5 }).points.find((p) => p.id === 'record')!.minor).toBe(false);
   });
 
   it('time brushing filters cards and movements', () => {
-    const l = atlasLayers(set, { level: 1, from: 1800, to: 1850, edition: 'm' });
+    const l = atlasLayers(set, { level: 1, from: 1800, to: 1850 });
     expect(l.points.find((p) => p.id === 'tharpe')!.out).toBe(true);
     expect(l.routes.some((r) => r.id === 'mv:great-migration')).toBe(false);
     expect(l.routes.some((r) => r.id === 'mv:middle-passage')).toBe(true);
   });
 
   it('a focused card is always shown with its route', () => {
-    const l = atlasLayers(set, { level: 1, focus: 'tharpe', edition: 'm' });
+    const l = atlasLayers(set, { level: 1, focus: 'tharpe' });
     const p = l.points.find((x) => x.id === 'tharpe')!;
     expect(p.focus && !p.minor).toBe(true);
     expect(l.routes.some((r) => r.id === 'card:tharpe' && r.flow)).toBe(true);
   });
 
-  it('a shared path brings in the other copy', () => {
-    const l = atlasLayers(set, { level: 4, edition: 'f', lit: ['douglass'] }, [set.get('douglass')!]);
-    expect(l.points.some((p) => p.id === 'douglass')).toBe(true);
+  it('a shared path lights its cards', () => {
+    const l = atlasLayers(set, { level: 4, lit: ['douglass'] });
+    expect(l.points.find((p) => p.id === 'douglass')!.lit).toBe(true);
   });
 });

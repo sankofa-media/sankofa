@@ -17,9 +17,13 @@ func tr(s string) string {
 }
 
 var ru = map[string]string{
-	"Further":                                "Дальше",
-	"Further:":                               "Дальше:",
-	"in the other copy":                      "в другом экземпляре",
+	"Further":  "Дальше",
+	"Further:": "Дальше:",
+
+	// The line on a card of a pair.
+	"In the other copy this theme is told through ": "В другом экземпляре эту тему рассказывает ",
+	"In your copy this theme is told through ":      "В вашем экземпляре эту тему рассказывает ",
+
 	"Sources":                                "Источники",
 	"Carries":                                "Передано",
 	"rhythm":                                 "ритм",

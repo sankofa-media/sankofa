@@ -39,6 +39,7 @@ Rules:
 - No generalising: every card has a place and a time.
 - `sankofa content lint content/` must pass.
 - A paragraph of the body (or of a chapter) that starts with `{male} ` or `{female} ` is read only in that copy of the museum; unmarked paragraphs are read in both. A translation must mark the same paragraphs.
+- Both copies hold the whole dictionary: every card, `edition: m` and `f` included, is on the atlas, in the countries, the index and the search of either copy, and a link opens exactly the card it names. The copies differ in content: `{male}`/`{female}` paragraphs, and pairs. A pair (one `m` and one `f` card sharing `pair`) decides which of the two stories a chapter tells in each copy; each card of a pair names the other one.
 
 # Chapter format
 

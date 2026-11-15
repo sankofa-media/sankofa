@@ -1,5 +1,5 @@
 import type { Card, Chapter, Book } from './lib/types';
-import { CardSet, linkTarget, segments, when } from './lib/cards';
+import { CardSet, segments, when } from './lib/cards';
 import { type Point } from './lib/fragment';
 import { placeKey } from './lib/cards';
 import { lang } from './lib/i18n';
@@ -26,8 +26,8 @@ export interface App {
   lines: Line[];
   edition: 'm' | 'f';
   media(file: string): string;
-  /** Open a card over the current view. `asked` is what the link pointed to. */
-  openCard(id: string, opts?: { exact?: boolean; push?: boolean; via?: 'index' }): void;
+  /** Open exactly this card over the current view, in either copy. */
+  openCard(id: string, opts?: { push?: boolean }): void;
   closeCard(): void;
   openAtlas(p: Point, push?: boolean): void;
   openBook(): void;
@@ -50,12 +50,11 @@ export function cardPoint(c: Card): Point {
 export const EDITION_NAME = { m: 'male copy', f: 'female copy' } as const;
 
 /**
- * A link to a card that opens it in place. The reader's copy decides which
- * card it is: an m/f card swaps for its pair, as [[links]] always have, and
- * the card then says that the other copy tells another story here.
+ * A link to a card that opens it in place: always the very card it names,
+ * whichever copy the reader holds, since the whole dictionary is in both.
  */
 export function cardLink(app: App, id: string, text: string): HTMLElement {
-  const target = linkTarget(app.set, id, app.edition);
+  const target = app.set.get(id);
   if (!target) return h('span.xref.missing', { title: t('This card is not written yet') }, text);
   const book: Book | undefined = target.books[0];
   return h(`a.xref.${book ?? 'heirs'}`, { href: `#focus=${id}`, 'data-card': id, title: `${target.title}: ${target.wow}` }, text);

@@ -18,6 +18,7 @@ import (
 
 func dictCmd() *cobra.Command {
 	var plain, index bool
+	var copyFlag string
 	c := &cobra.Command{
 		Use:   "dict [CARD]",
 		Short: "Read the dictionary: follow links between cards, endlessly",
@@ -31,7 +32,11 @@ r random card, o show the atlas link, q quit.
 Printed (--plain, or into a pipe), links read "Sun Ra✶ [sun-ra]": the id in
 brackets is the card to open next. On a terminal the words are also a
 hyperlink to the card in the museum (--museum-url, SANKOFA_MUSEUM_URL).
---index prints every entry from A to Z in the language of --lang.`,
+--index prints every entry from A to Z in the language of --lang.
+
+Both copies hold the whole dictionary, and a link opens the very card it
+names. A card's {male}/{female} paragraphs are read in your copy, or in the
+one --edition names (m or f) for this reading only.`,
 		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			s, err := loadCards(cmd)
@@ -42,9 +47,13 @@ hyperlink to the card in the museum (--museum-url, SANKOFA_MUSEUM_URL).
 			if err != nil {
 				return err
 			}
+			ed, err := readingCopy(copyFlag, st.Edition)
+			if err != nil {
+				return err
+			}
 			out := cmd.OutOrStdout()
 			if index {
-				printIndex(out, s, st.Edition, linkStyle{tty: isTerminal(out)})
+				printIndex(out, s, linkStyle{tty: isTerminal(out)})
 				return nil
 			}
 			start := ""
@@ -53,18 +62,17 @@ hyperlink to the card in the museum (--museum-url, SANKOFA_MUSEUM_URL).
 			} else {
 				start = unreadCard(s, st)
 			}
-			c := s.ForEdition(start, st.Edition)
+			c := s.ByID[start]
 			if c == nil {
 				return fmt.Errorf("no card %q", start)
 			}
-			c = s.Resolved(c)
 			if plain || !isTerminal(cmd.OutOrStdout()) {
 				st.Visit(c.ID)
 				_ = st.Save()
-				printCard(out, s, c, isTerminal(out))
+				printCard(out, s, s.Resolved(c), ed, isTerminal(out))
 				return nil
 			}
-			m := newDictModel(s, st, c)
+			m := newDictModelIn(s, st, c, ed)
 			if _, err := tea.NewProgram(m, tea.WithAltScreen()).Run(); err != nil {
 				return err
 			}
@@ -73,6 +81,7 @@ hyperlink to the card in the museum (--museum-url, SANKOFA_MUSEUM_URL).
 	}
 	c.Flags().BoolVar(&plain, "plain", false, "print the card instead of opening the reader")
 	c.Flags().BoolVar(&index, "index", false, "print every entry of the dictionary from A to Z")
+	c.Flags().StringVar(&copyFlag, "edition", "", "the copy to read the cards in, m or f (default: your copy)")
 	c.AddCommand(pathCmd())
 	return c
 }
@@ -97,10 +106,14 @@ func pathCmd() *cobra.Command {
 	})
 	c.AddCommand(&cobra.Command{
 		Use:   "import URL",
-		Short: "Walk someone else's path: it may hold the other edition's voice",
+		Short: "Walk someone else's path, read in your own copy",
 		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			s, err := loadCards(cmd)
+			if err != nil {
+				return err
+			}
+			st, err := reader.Load()
 			if err != nil {
 				return err
 			}
@@ -110,7 +123,7 @@ func pathCmd() *cobra.Command {
 			}
 			for _, id := range p.Path {
 				if c := s.ByID[id]; c != nil {
-					printCard(cmd.OutOrStdout(), s, c, isTerminal(cmd.OutOrStdout()))
+					printCard(cmd.OutOrStdout(), s, s.Resolved(c), st.Edition, isTerminal(cmd.OutOrStdout()))
 					fmt.Fprintln(cmd.OutOrStdout())
 				}
 			}
@@ -120,11 +133,43 @@ func pathCmd() *cobra.Command {
 	return c
 }
 
+// readingCopy is the copy a reading uses: the one --edition names, else the
+// reader's own.
+func readingCopy(flag, held string) (string, error) {
+	switch flag {
+	case "":
+		return held, nil
+	case "m", "male", "м":
+		return card.EditionMale, nil
+	case "f", "female", "ж":
+		return card.EditionFemale, nil
+	}
+	return "", fmt.Errorf("--edition wants m or f, not %q", flag)
+}
+
+// pairLine names, on a card of a pair, the card that tells the same theme in
+// the other copy; seen from the other copy it names the reader's own card.
+func pairLine(s *card.Set, c *card.Card, edition string, st linkStyle) string {
+	p := s.Partner(c.ID)
+	if p == nil || (c.Edition != card.EditionMale && c.Edition != card.EditionFemale) {
+		return ""
+	}
+	lead := "In the other copy this theme is told through "
+	if c.Edition != edition {
+		lead = "In your copy this theme is told through "
+	}
+	q := "“" + p.Title + "”"
+	if lang == "ru" {
+		q = "«" + p.Title + "»"
+	}
+	return tr(lead) + renderLinks(s, "[["+p.ID+"|"+q+"]]", st) + "."
+}
+
 // unreadCard picks a card the reader has not opened yet.
 func unreadCard(s *card.Set, st *reader.State) string {
 	var fresh []string
 	for _, id := range s.Order {
-		if !st.Seen(id) && s.ByID[id].Edition == card.EditionBoth {
+		if !st.Seen(id) {
 			fresh = append(fresh, id)
 		}
 	}
@@ -161,10 +206,11 @@ func yearsOf(c *card.Card) string {
 	return ""
 }
 
-// printCard renders a card as text. Links print as their words and the id
-// of the card they open; with osc (a terminal) the words are OSC 8 links
-// to the card in the museum and the ids are dim.
-func printCard(w io.Writer, s *card.Set, c *card.Card, osc bool) {
+// printCard renders a card as text, as the given copy reads it. Links print
+// as their words and the id of the card they open; with osc (a terminal) the
+// words are OSC 8 links to the card in the museum and the ids are dim.
+func printCard(w io.Writer, s *card.Set, c *card.Card, edition string, osc bool) {
+	c = c.ForCopy(edition)
 	place := ""
 	if len(c.Places) > 0 {
 		place = c.Places[0].Name
@@ -172,6 +218,9 @@ func printCard(w io.Writer, s *card.Set, c *card.Card, osc bool) {
 	st := linkStyle{tty: osc}
 	fmt.Fprintf(w, "%s %s\n%s · %s · %s\n\n%s\n\n", booksOf(c), c.Title, yearsOf(c), place, tr(c.Kind), c.Wow)
 	fmt.Fprintln(w, wrap(renderLinks(s, c.Body, st), 78))
+	if line := pairLine(s, c, edition, st); line != "" {
+		fmt.Fprintln(w, "\n"+wrap(line, 78))
+	}
 	if c.Dispute != "" {
 		fmt.Fprintf(w, "\n%s%s\n", tr("Disputed: "), renderLinks(s, c.Dispute, st))
 	}
@@ -224,10 +273,12 @@ var (
 )
 
 type dictModel struct {
-	set      *card.Set
-	st       *reader.State
-	cur      *card.Card
-	back     []*card.Card
+	set *card.Set
+	st  *reader.State
+	// edition is the copy the cards are read in: the reader's, or --edition.
+	edition  string
+	cur      *card.Card // the card as this copy reads it
+	back     []string   // ids of the cards behind it
 	sel      int
 	width    int
 	height   int
@@ -241,16 +292,25 @@ type dictModel struct {
 }
 
 func newDictModel(s *card.Set, st *reader.State, c *card.Card) *dictModel {
-	m := &dictModel{set: s, st: st, width: 80}
+	return newDictModelIn(s, st, c, st.Edition)
+}
+
+func newDictModelIn(s *card.Set, st *reader.State, c *card.Card, edition string) *dictModel {
+	m := &dictModel{set: s, st: st, edition: edition, width: 80}
 	m.open(c, false)
 	return m
 }
 
+// open shows exactly this card (a link never swaps it for its pair), as the
+// reader's copy reads it.
 func (m *dictModel) open(c *card.Card, push bool) {
 	if push && m.cur != nil {
-		m.back = append(m.back, m.cur)
+		m.back = append(m.back, m.cur.ID)
 	}
-	m.cur = m.set.Resolved(c)
+	if raw := m.set.ByID[c.ID]; raw != nil {
+		c = raw
+	}
+	m.cur = m.set.Resolved(c).ForCopy(m.edition)
 	m.sel = 0
 	m.showLink = false
 	m.st.Visit(c.ID)
@@ -282,31 +342,33 @@ func (m *dictModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			}
 		case "enter":
 			if len(links) > 0 {
-				if t := m.set.ForEdition(links[m.sel].Target, m.st.Edition); t != nil {
+				if t := m.set.ByID[links[m.sel].Target]; t != nil {
 					m.open(t, true)
 				}
 			}
 		case "backspace", "b":
 			if n := len(m.back); n > 0 {
-				prev := m.back[n-1]
+				prev := m.set.ByID[m.back[n-1]]
 				m.back = m.back[:n-1]
-				m.open(prev, false)
+				if prev != nil {
+					m.open(prev, false)
+				}
 			}
 		case "r":
-			m.open(m.set.ForEdition(unreadCard(m.set, m.st), m.st.Edition), true)
+			m.open(m.set.ByID[unreadCard(m.set, m.st)], true)
 		case "/", "i":
 			m.index, m.query, m.pick = true, "", 0
 		case "e":
-			if m.st.Edition == card.EditionMale {
-				m.st.Edition = card.EditionFemale
+			// Trade the copy: the same card stays open, read in the other copy.
+			if m.edition == card.EditionMale {
+				m.edition = card.EditionFemale
 			} else {
-				m.st.Edition = card.EditionMale
+				m.edition = card.EditionMale
 			}
+			m.st.Edition = m.edition
 			_ = m.st.Save()
-			if m.cur.Pair != "" {
-				m.open(m.set.ForEdition(m.cur.ID, m.st.Edition), false)
-			}
-			m.note = tr("Your copy is now") + ": " + editionName(m.st.Edition)
+			m.open(m.cur, false)
+			m.note = tr("Your copy is now") + ": " + editionName(m.edition)
 		case "o":
 			m.showLink = !m.showLink
 		}
@@ -320,9 +382,6 @@ func (m *dictModel) matches() []*card.Card {
 	var out []*card.Card
 	for _, id := range m.set.Order {
 		c := m.set.ByID[id]
-		if c.Edition != card.EditionBoth && c.Edition != m.st.Edition {
-			continue
-		}
 		hay := strings.ToLower(c.Title + " " + c.Places[0].Name + " " + tr(c.Kind) + " " + yearsOf(c))
 		if q == "" || strings.Contains(hay, q) {
 			out = append(out, c)
@@ -426,6 +485,9 @@ func (m *dictModel) View() string {
 	body := wrap(sb.String(), m.width-4)
 	body = styleMarks(body)
 	b.WriteString(body + "\n")
+	if line := pairLine(m.set, c, m.edition, linkStyle{}); line != "" {
+		b.WriteString("\n" + stMeta.Render(wrap(line, m.width-4)) + "\n")
+	}
 
 	if c.Dispute != "" {
 		b.WriteString("\n" + stWow.Render(tr("Disputed: ")) + wrap(c.Dispute, m.width-14) + "\n")
@@ -445,7 +507,7 @@ func (m *dictModel) View() string {
 		b.WriteString("\n" + stFooter.Render(tr("Atlas: ")) + atlas.Hyperlink(true, u, u) + "\n")
 	}
 	ed := tr("male")
-	if m.st.Edition == card.EditionFemale {
+	if m.edition == card.EditionFemale {
 		ed = tr("female")
 	}
 	if m.note != "" {

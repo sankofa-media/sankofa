@@ -36,7 +36,7 @@ export function closeCache(): void {
 
 /** A found thing, as it comes out of a container or lies in a drawer. */
 export function artifactFigure(app: App, f: CabinetFile, a: Artifact, opts: { full?: boolean } = {}): HTMLElement {
-  const cards = a.cards.map((id) => app.set.forEdition(id, app.edition) ?? app.set.get(id)).filter((c): c is NonNullable<typeof c> => !!c);
+  const cards = a.cards.map((id) => app.set.get(id)).filter((c): c is NonNullable<typeof c> => !!c);
   const drawer = f.drawers.find((d) => d.id === a.drawer);
   return h(
     `article.cb-find${opts.full ? '.cb-find-full' : ''}`,

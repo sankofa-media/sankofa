@@ -150,8 +150,8 @@ func sortIndex(cs []*card.Card, l string) {
 }
 
 // printIndex prints every card under its letter, with its years, its kind
-// and its id; cards of the other copy are marked.
-func printIndex(w io.Writer, s *card.Set, edition string, st linkStyle) {
+// and its id. Both copies hold the whole dictionary, so no card is marked.
+func printIndex(w io.Writer, s *card.Set, st linkStyle) {
 	var cs []*card.Card
 	for _, id := range s.Order {
 		cs = append(cs, s.ByID[id])
@@ -174,10 +174,6 @@ func printIndex(w io.Writer, s *card.Set, edition string, st linkStyle) {
 		if st.tty {
 			ref = "\x1b[2m" + ref + "\x1b[22m"
 		}
-		other := ""
-		if c.Edition != card.EditionBoth && c.Edition != "" && edition != "" && c.Edition != edition {
-			other = " · " + tr("in the other copy")
-		}
-		fmt.Fprintf(w, "  %s · %s · %s%s %s\n", title, yearsOf(c), tr(c.Kind), other, ref)
+		fmt.Fprintf(w, "  %s · %s · %s %s\n", title, yearsOf(c), tr(c.Kind), ref)
 	}
 }

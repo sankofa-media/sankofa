@@ -4,14 +4,14 @@ import type { App } from '../app';
 import type { Point } from '../lib/fragment';
 import { terminalCommand } from '../lib/fragment';
 import { copyText, h, svgIcon, toast } from '../lib/dom';
-import { atlasLayers, eraColor, readerCards } from '../lib/atlasModel';
+import { atlasLayers, eraColor } from '../lib/atlasModel';
 import { formatYears, span } from '../lib/cards';
 import { ERAS, type Card } from '../lib/types';
 import { GeoMap, LEVEL_K, LEVEL_NAMES } from './map';
 import { Timeline } from './timeline';
 import { showTip, hideTip } from './tip';
 import { chapterLabel, count, lang, pick, t } from '../lib/i18n';
-import { countriesInCopy, countryCopy, countryPoints, type CountriesFile, type Country } from '../lib/countries';
+import { countriesWithCards, countryCards, countryPoints, type CountriesFile, type Country } from '../lib/countries';
 import { loadJson } from '../lib/loadJson';
 
 /** The atlas's own keys next to the shared point (lib/route.ts). */
@@ -134,7 +134,7 @@ export class Atlas {
       onHover: (id, ev) => this.hover(id, ev),
     });
     this.stage.prepend(this.map.svg.node()!);
-    const cards = readerCards(this.app.set, this.app.edition);
+    const cards = this.app.set.all();
     this.timeline = new Timeline(this.timeHost, cards, this.eras(), {
       compact: true,
       brush: true,
@@ -296,7 +296,7 @@ export class Atlas {
     const map = this.map;
     map.ready.then(() => {
       if (!c) return map.flyTo(-28, 18, 1, dur);
-      const pts = countryCopy(this.app.set, this.app.edition, c).flatMap((r) => r.places.slice(0, 1)).map((p) => [p.lon, p.lat] as [number, number]);
+      const pts = countryCards(this.app.set, c).flatMap((r) => r.places.slice(0, 1)).map((p) => [p.lon, p.lat] as [number, number]);
       if (pts.length) map.fit(pts, LEVEL_K[2], dur);
     });
   }
@@ -328,7 +328,7 @@ export class Atlas {
     const at = this.mode === 'countries' ? (this.chosenRows().find((r) => r.card.id === id)?.places[0] ?? c.places[0]) : c.places[0];
     this.map?.flyTo(at.lon, at.lat, k, 1300);
     this.emit();
-    this.app.openCard(id, { exact: !!this.p.path?.includes(id), push: false });
+    this.app.openCard(id, { push: false });
   }
 
   unfocus(): void {
@@ -350,7 +350,7 @@ export class Atlas {
 
   /** The place with the most cards around it at this level: where a fresh atlas opens. */
   private densest(): [number, number] | undefined {
-    const layers = atlasLayers(this.app.set, { level: this.level, from: this.p.from, to: this.p.to, edition: this.app.edition });
+    const layers = atlasLayers(this.app.set, { level: this.level, from: this.p.from, to: this.p.to });
     const pts = layers.visible.map((c) => [c.places[0].lon, c.places[0].lat] as [number, number]);
     const r = [0, 30, 12, 8, 5][this.level - 1] ?? 8;
     let best: [number, number] | undefined;
@@ -369,7 +369,7 @@ export class Atlas {
   private nearestContent(): [number, number] | undefined {
     if (!this.map) return undefined;
     const [lon, lat] = this.map.center();
-    const layers = atlasLayers(this.app.set, { level: this.level, from: this.p.from, to: this.p.to, edition: this.app.edition });
+    const layers = atlasLayers(this.app.set, { level: this.level, from: this.p.from, to: this.p.to });
     const here = layers.visible.filter((c) => c.zoom >= Math.min(this.level, 4));
     const pool = here.length ? here : layers.visible;
     let best: [number, number] | undefined;
@@ -404,14 +404,14 @@ export class Atlas {
 
   private chosenRows() {
     const c = this.chosen();
-    return c ? countryCopy(this.app.set, this.app.edition, c) : [];
+    return c ? countryCards(this.app.set, c) : [];
   }
 
   private drawCountries(): void {
     const map = this.map!;
     const file = this.countries;
     const c = this.chosen();
-    const list = file ? countriesInCopy(this.app.set, this.app.edition, file, lang()) : [];
+    const list = file ? countriesWithCards(this.app.set, file, lang()) : [];
     map.setCountries(file ? { lit: new Set(list.map((x) => x.country.iso)), on: c?.iso, names: new Map(list.map((x) => [x.country.iso, x.country.name[lang()]])) } : null);
     const rows = this.chosenRows();
     map.setPoints(
@@ -487,7 +487,7 @@ export class Atlas {
   }
 
   private renderCountryList(file: CountriesFile): void {
-    const list = countriesInCopy(this.app.set, this.app.edition, file, lang());
+    const list = countriesWithCards(this.app.set, file, lang());
     const items = list.map(({ country, n }) =>
       h(
         'li',
@@ -529,8 +529,7 @@ export class Atlas {
     const path = this.pathCards();
     const layers = atlasLayers(
       this.app.set,
-      { level: this.level, from: this.p.from, to: this.p.to, focus: this.p.focus, edition: this.app.edition, lit: path.map((c) => c.id) },
-      path,
+      { level: this.level, from: this.p.from, to: this.p.to, focus: this.p.focus, lit: path.map((c) => c.id) },
     );
     if (path.length > 1) {
       layers.routes.push({
@@ -554,7 +553,7 @@ export class Atlas {
     const when = this.p.from ? formatYears(this.p.to ? [this.p.from, this.p.to] : [this.p.from]) : t('1300 – today');
     // One sentence, not a stat row.
     const n = layers.points.filter((p) => !p.out).length;
-    const mine = readerCards(this.app.set, this.app.edition).length;
+    const mine = this.app.set.all().length;
     this.when.textContent = pick({ en: `${n} of ${count(mine, 'card', 'en')} have a place on the map, ${when}.`, ru: `На карте ${n} из ${count(mine, 'cardOf', 'ru')}, ${when}.` });
     this.renderPathbar(path);
     this.renderList(layers.points.filter((p) => !p.out).map((p) => this.app.set.get(p.id)).filter((c): c is Card => !!c));

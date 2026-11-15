@@ -188,7 +188,7 @@ func walked(s *card.Set, path []string, from, to string) (int, bool) {
 
 func linksTo(s *card.Set, c *card.Card, id string) bool {
 	for _, l := range c.Links() {
-		if l.Target == id || s.ForEdition(l.Target, card.EditionMale).ID == id || s.ForEdition(l.Target, card.EditionFemale).ID == id {
+		if l.Target == id {
 			return true
 		}
 	}

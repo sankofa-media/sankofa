@@ -5,7 +5,6 @@ import type { App } from '../app';
 import { cardTable, cardYaml } from '../lib/cardYaml';
 import { copyText, h, svgIcon, toast } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
-import { readerCards } from '../lib/atlasModel';
 import { readPath } from '../lib/reader';
 import { weaveIds } from '../lib/weave';
 
@@ -136,7 +135,7 @@ export class Engine {
     this.tryHost = h('div.e-try');
     const cards = app.set.all();
     const raw = cards.map((c) => app.raw(c.id) ?? c);
-    const mine = readerCards(app.set, app.edition).length;
+    const mine = cards.length;
     const bar = h(
       'header.d-bar',
       {},
@@ -181,8 +180,8 @@ export class Engine {
           'p',
           {},
           pick({
-            en: `Your copy of the museum holds ${count(mine, 'card', 'en')}; each is a Card object of the API group sankofa.kuberoot.dev. Griot, the cluster’s memory, loads them from the content repository; the museum and the terminal read the same objects.`,
-            ru: `В вашем экземпляре музея ${count(mine, 'card', 'ru')}; каждая — объект Card из группы API sankofa.kuberoot.dev. Griot, память кластера, загружает их из репозитория с карточками, а музей и терминал читают одни и те же объекты.`,
+            en: `The museum holds ${count(mine, 'card', 'en')}, the same in both copies; each is a Card object of the API group sankofa.kuberoot.dev. Griot, the cluster’s memory, loads them from the content repository; the museum and the terminal read the same objects.`,
+            ru: `В музее ${count(mine, 'card', 'ru')}, и все они есть в обоих экземплярах; каждая — объект Card из группы API sankofa.kuberoot.dev. Griot, память кластера, загружает их из репозитория с карточками, а музей и терминал читают одни и те же объекты.`,
           }),
         ),
         h('div.e-count', { 'aria-hidden': 'true' }, h('b', {}, String(mine)), h('span', {}, pick({ en: 'Card objects', ru: 'объектов Card' }))),

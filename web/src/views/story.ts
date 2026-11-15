@@ -7,7 +7,7 @@ import { ERAS } from '../lib/types';
 import { formatYears, KIND_LABEL, links, when } from '../lib/cards';
 import { bookMarks, h, reducedMotion, revealOnScroll } from '../lib/dom';
 import { chapterLabel, chapterNumber, lang, pick, t } from '../lib/i18n';
-import { chapterCopy, eraColor, isNonPlace, readerCards } from '../lib/atlasModel';
+import { chapterCopy, eraColor, isNonPlace } from '../lib/atlasModel';
 import { MOVEMENTS, movementText } from '../lib/movements';
 import { colourOf, mediaSrc, progressive } from '../lib/media';
 import type { Media } from '../lib/types';
@@ -562,7 +562,7 @@ function runScrolly(app: App, ch: Chapter, el: HTMLElement, graphic: HTMLElement
 
 function finale(app: App): HTMLElement {
   const host = h('div.timeline-wrap');
-  const cards = readerCards(app.set, app.edition);
+  const cards = app.set.all();
   const sec = h(
     'section.finale',
     { id: 'atlas-intro', 'aria-labelledby': 'finale-title' },

@@ -1,4 +1,6 @@
-// The two copies, said plainly: what differs, which one you hold, a switch to
+// The two copies, said plainly: both hold the whole dictionary; they tell the
+// same themes with a man's and a woman's view, so some cards read differently
+// and some chapter steps tell another story. Which one you hold, a switch to
 // the other, and the list of pairs straight from the cards.
 import type { App } from '../app';
 import { h, reducedMotion } from '../lib/dom';
@@ -11,6 +13,7 @@ import type { Card } from '../lib/types';
 const SHOWN = 3;
 const EN_NUM = ['no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
 const RU_IN = ['ни в одном месте', 'в одном месте', 'в двух местах', 'в трёх местах', 'в четырёх местах', 'в пяти местах', 'в шести местах', 'в семи местах', 'в восьми местах', 'в девяти местах', 'в десяти местах'];
+const COPY_PARAGRAPH = /(^|\n)\s*\{(male|female)\}\s/;
 const RU_ALL = ['', 'Единственная пара', 'Обе пары', 'Все три пары', 'Все четыре пары', 'Все пять пар', 'Все шесть пар', 'Все семь пар', 'Все восемь пар', 'Все девять пар', 'Все десять пар'];
 
 export interface Pair {
@@ -19,7 +22,7 @@ export interface Pair {
   f: Card;
 }
 
-/** Cards that exist only in one copy, matched by `pair`. */
+/** The m/f cards, matched by `pair`: one theme, a story for each copy's chapter. */
 export function editionPairs(app: Pick<App, 'set'>): Pair[] {
   const by = new Map<string, Partial<Pair>>();
   for (const c of app.set.all()) {
@@ -53,6 +56,8 @@ export function editionNote(app: App): HTMLElement {
   const mine = app.edition;
   const other: 'm' | 'f' = mine === 'f' ? 'm' : 'f';
   const n = pairs.length;
+  // Cards whose own text differs between the copies ({male}/{female} paragraphs).
+  const varied = app.set.all().some((c) => COPY_PARAGRAPH.test(app.raw(c.id)?.body ?? ''));
   // Every pair from the data, in each copy's own words.
   // Names come from the cards themselves, so a new pair needs no code here.
   const name = (c: Card) => (ru ? `«${c.title}»` : c.inline || c.title.replace(/^The /, 'the '));
@@ -66,8 +71,8 @@ export function editionNote(app: App): HTMLElement {
       ? `${names.slice(0, SHOWN).join(', ')} ${ru ? `и ещё ${rest} ${pluralRu(rest, ['историю', 'истории', 'историй'])}` : `and ${rest} more stories`}`
       : join(names);
   const text = ru
-    ? `Как у Павича, у музея два экземпляра — мужской и женский. Они расходятся ${RU_IN[n] ?? `в ${n} местах`}: одну и ту же тему там рассказывают разные истории. У вас — ${mine === 'f' ? 'женский' : 'мужской'}; в нём вы прочтёте: ${own}.`
-    : `Like Pavić’s dictionary, this museum has two copies, a male and a female one. They differ in ${EN_NUM[n] ?? n} places, where the same theme is told through a different story. Yours is the ${mine === 'f' ? 'female' : 'male'} copy; in it you read ${own}.`;
+    ? `Как у Павича, у музея два экземпляра — мужской и женский. В каждом весь словарь: любая карточка открывается в обоих. Темы у них одни и те же, но в одном они увидены глазами мужчины, в другом — глазами женщины: ${varied ? 'иные карточки читаются в них по-разному, а ' : ''}${RU_IN[n] ?? `в ${n} местах`} глава рассказывает свою тему через другую историю. У вас — ${mine === 'f' ? 'женский' : 'мужской'}; в его главах вы прочтёте: ${own}.`
+    : `Like Pavić’s dictionary, this museum has two copies, a male and a female one. Each holds the whole dictionary: every card opens in both. They tell the same themes, one with a man’s view and one with a woman’s: ${varied ? 'some cards read differently in each, and ' : ''}in ${EN_NUM[n] ?? n} places a chapter tells its theme through another story. Yours is the ${mine === 'f' ? 'female' : 'male'} copy; in its chapters you read ${own}.`;
 
   const list = h(
     'ol.ed-pairs',
@@ -111,19 +116,27 @@ export function editionNote(app: App): HTMLElement {
   );
 }
 
-/** A card of either copy, opened as it is (not swapped for the reader's own). */
+/** A card of a pair; the reader's own half is marked in the list. */
 export function pairLink(app: App, c: Card, label?: string): HTMLElement {
+  return h('a', { href: `#focus=${c.id}`, 'data-card': c.id, class: c.edition === app.edition ? 'mine' : 'other' }, label ?? c.title);
+}
+
+/**
+ * On a card of a pair, one quiet line naming the card that tells the same
+ * theme in the other copy. Seen from the other copy, the line names the
+ * reader's own card instead, so it is true whichever copy is held.
+ */
+export function pairLine(app: App, c: Card): HTMLElement | null {
+  if (c.edition !== 'm' && c.edition !== 'f') return null;
+  const p = app.set.partner(c.id);
+  if (!p) return null;
+  const mine = c.edition === app.edition;
+  const link = pairLink(app, p, lang() === 'ru' ? `«${p.title}»` : `“${p.title}”`);
   return h(
-    'a',
-    {
-      href: `#focus=${c.id}`,
-      class: c.edition === app.edition ? 'mine' : 'other',
-      onclick: (e: Event) => {
-        e.preventDefault();
-        e.stopPropagation();
-        app.openCard(c.id, { exact: true });
-      },
-    },
-    label ?? c.title,
+    'p.pair-line',
+    {},
+    mine ? pick({ en: 'In the other copy this theme is told through ', ru: 'В другом экземпляре эту тему рассказывает ' }) : pick({ en: 'In your copy this theme is told through ', ru: 'В вашем экземпляре эту тему рассказывает ' }),
+    link,
+    '.',
   );
 }

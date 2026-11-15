@@ -1693,8 +1693,13 @@ button {
   margin: 0 0 20px;
   background: var(--bg-2);
 }
-.notice.edition {
-  border-left-color: var(--indigo);
+.pair-line {
+  margin: 0 0 20px;
+  font-size: 0.92em;
+  color: var(--ink-2);
+}
+.pair-line a {
+  color: var(--gold);
 }
 .notice b {
   font-weight: 600;

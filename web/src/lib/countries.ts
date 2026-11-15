@@ -1,10 +1,9 @@
 // Present-day countries for the atlas's "Countries" mode. The build assigns
 // every card place to a country (lib/countryAssign.ts, run by
-// scripts/build-countries.ts); the museum reads the result per copy.
-import type { Card, Edition, Place } from './types';
+// scripts/build-countries.ts); both copies read the whole result.
+import type { Card, Place } from './types';
 import type { CardSet } from './cards';
 import { span } from './cards';
-import { readerCards } from './atlasModel';
 
 export interface Bilingual {
   en: string;
@@ -47,13 +46,12 @@ export interface CountryEntry {
 }
 
 /**
- * One country's cards in the reader's copy, in time order (by the start of
- * each card's years, then by title).
+ * One country's cards (the whole dictionary, in either copy), in time order
+ * (by the start of each card's years, then by title).
  */
-export function countryCopy(set: CardSet, edition: Exclude<Edition, 'both'> | '', country: Country): CountryEntry[] {
-  const mine = new Set(readerCards(set, edition).map((c) => c.id));
+export function countryCards(set: CardSet, country: Country): CountryEntry[] {
   return country.cards
-    .filter((cc) => mine.has(cc.id))
+    .filter((cc) => set.get(cc.id))
     .map((cc) => {
       const card = set.get(cc.id)!;
       return { card, places: cc.places.map((i) => card.places[i]).filter(Boolean), main: cc.main };
@@ -66,11 +64,10 @@ export interface CountryCount {
   n: number;
 }
 
-/** The countries with cards in the reader's copy, by name in the reader's language. */
-export function countriesInCopy(set: CardSet, edition: Exclude<Edition, 'both'> | '', file: CountriesFile, lang: 'en' | 'ru'): CountryCount[] {
-  const mine = new Set(readerCards(set, edition).map((c) => c.id));
+/** The countries with cards, by name in the reader's language. */
+export function countriesWithCards(set: CardSet, file: CountriesFile, lang: 'en' | 'ru'): CountryCount[] {
   return file.countries
-    .map((country) => ({ country, n: country.cards.filter((cc) => mine.has(cc.id)).length }))
+    .map((country) => ({ country, n: country.cards.filter((cc) => set.get(cc.id)).length }))
     .filter((x) => x.n > 0)
     .sort((a, b) => a.country.name[lang].localeCompare(b.country.name[lang], lang));
 }

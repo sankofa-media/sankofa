@@ -567,20 +567,21 @@ func (s *Set) Backlinks(id string) []string {
 	return out
 }
 
-// ForEdition resolves a card for a reader's edition: an m/f card is swapped
-// for its pair when the reader holds the other copy.
-func (s *Set) ForEdition(id, edition string) *Card {
+// Partner returns the other card of an m/f pair: the card that tells the
+// same theme in the other copy. Both copies hold the whole dictionary, so a
+// link never swaps one for the other; the pair only says which story each
+// copy's chapter tells.
+func (s *Set) Partner(id string) *Card {
 	c := s.ByID[id]
-	if c == nil || c.Edition == EditionBoth || c.Edition == edition || edition == "" {
-		return c
+	if c == nil || c.Pair == "" {
+		return nil
 	}
 	for _, oid := range s.Order {
-		o := s.ByID[oid]
-		if o.Pair == c.Pair && o.ID != c.ID {
+		if o := s.ByID[oid]; o.Pair == c.Pair && o.ID != c.ID {
 			return o
 		}
 	}
-	return c
+	return nil
 }
 
 // Resolved returns a copy of the card whose bare [[id]] links carry the

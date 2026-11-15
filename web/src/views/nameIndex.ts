@@ -1,7 +1,7 @@
 // The name index (#view=index): every entry of the dictionary from A to Z in
 // the reader's language, with a letter bar, a filter and the kinds of card.
-// Each entry opens its card in place; cards of the other copy are listed
-// too and marked, as the other copy is everywhere in the museum.
+// Each entry opens its card in place. Both copies hold the whole dictionary,
+// so every card is listed alike, whichever copy the reader holds.
 import type { App } from '../app';
 import { h } from '../lib/dom';
 import { formatYears, KIND_LABEL } from '../lib/cards';
@@ -13,7 +13,7 @@ const KINDS = ['person', 'genre', 'place', 'work', 'event', 'object', 'media', '
 
 export function nameIndex(app: App): HTMLElement {
   const l = lang();
-  const all = indexEntries(app.set.all(), l, app.edition, app.raw);
+  const all = indexEntries(app.set.all(), l, app.raw);
   const kinds = new Set<string>();
   let query = '';
 
@@ -56,11 +56,10 @@ export function nameIndex(app: App): HTMLElement {
       'li',
       {},
       h(
-        `a.ix-entry${e.foreign ? '.foreign' : ''}`,
-        { href: `#focus=${e.id}`, 'data-card': e.id, ...(e.foreign ? { 'data-exact': 'index' } : {}) },
+        'a.ix-entry',
+        { href: `#focus=${e.id}`, 'data-card': e.id },
         h('span.ix-title', {}, e.title),
         h('span.ix-meta', {}, [formatYears(e.years), t(KIND_LABEL[e.kind] ?? e.kind)].filter(Boolean).join(' · ')),
-        e.foreign ? h('span.ix-other', {}, pick({ en: 'in the other copy', ru: 'в другом экземпляре' })) : null,
         h('span.ix-wow', {}, e.wow),
       ),
     );

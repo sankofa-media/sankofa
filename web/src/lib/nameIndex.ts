@@ -13,8 +13,6 @@ export interface IndexEntry {
   kind: string;
   years: number[];
   wow: string;
-  /** The card is in the other copy of the museum. */
-  foreign: boolean;
   letter: string;
   key: string;
 }
@@ -59,7 +57,7 @@ export function compareTitles(a: string, b: string, l: Lang): number {
 }
 
 /** Every card as an index entry, in order. `raw` gives the English title. */
-export function indexEntries(cards: Card[], l: Lang, edition: 'm' | 'f', raw: (id: string) => Card | undefined = () => undefined): IndexEntry[] {
+export function indexEntries(cards: Card[], l: Lang, raw: (id: string) => Card | undefined = () => undefined): IndexEntry[] {
   return cards
     .map((c) => ({
       id: c.id,
@@ -68,7 +66,6 @@ export function indexEntries(cards: Card[], l: Lang, edition: 'm' | 'f', raw: (i
       kind: c.kind,
       years: c.years,
       wow: c.wow,
-      foreign: !!c.edition && c.edition !== 'both' && c.edition !== edition,
       letter: letterOf(c.title, l),
       key: fold(sortTitle(c.title, l)),
     }))

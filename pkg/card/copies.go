@@ -40,6 +40,34 @@ func CopyParagraphs(body, edition string) []string {
 	return out
 }
 
+// ForCopy returns the card as a reader of one copy reads it: in its body and
+// in every translation's body, the other copy's {male}/{female} paragraphs are
+// dropped and the reader's own lose their marker. An unmarked card comes back
+// as it is.
+func (c *Card) ForCopy(edition string) *Card {
+	if edition != EditionMale && edition != EditionFemale {
+		return c
+	}
+	out := *c
+	out.Body = copyBody(c.Body, edition)
+	if len(c.Translations) > 0 {
+		out.Translations = make(map[string]*Translation, len(c.Translations))
+		for lang, t := range c.Translations {
+			tt := *t
+			tt.Body = copyBody(t.Body, edition)
+			out.Translations[lang] = &tt
+		}
+	}
+	return &out
+}
+
+func copyBody(body, edition string) string {
+	if !strings.Contains(body, MarkerMale) && !strings.Contains(body, MarkerFemale) {
+		return body
+	}
+	return strings.Join(CopyParagraphs(body, edition), "\n\n")
+}
+
 // Words counts the words of prose with link markup replaced by its text.
 func Words(text string) int {
 	return len(strings.Fields((&Card{Body: text}).PlainBody()))

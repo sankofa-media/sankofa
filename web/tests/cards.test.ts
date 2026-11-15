@@ -51,15 +51,6 @@ describe('links', () => {
 });
 
 describe('editions', () => {
-  it('resolves paired cards to the reader edition like ForEdition', () => {
-    expect(set.forEdition('douglass', 'f')!.id).toBe('jacobs');
-    expect(set.forEdition('douglass', 'm')!.id).toBe('douglass');
-    expect(set.forEdition('jacobs', 'm')!.id).toBe('douglass');
-    expect(set.forEdition('zong', 'f')!.id).toBe('zong');
-    expect(set.forEdition('douglass', '')!.id).toBe('douglass');
-    expect(set.forEdition('nope', 'f')).toBeUndefined();
-  });
-
   it('finds the other copy', () => {
     expect(set.partner('jacobs')!.id).toBe('douglass');
     expect(set.partner('zong')).toBeUndefined();
@@ -130,9 +121,9 @@ describe('the moment a card is about', () => {
 
   it('places the atlas pin at the moment, in place and in time', () => {
     const set = new CardSet([smalls]);
-    const at1862 = atlasLayers(set, { level: 4, from: 1860, to: 1865, edition: '' });
+    const at1862 = atlasLayers(set, { level: 4, from: 1860, to: 1865 });
     expect(at1862.points[0]).toMatchObject({ lon: -79.9, lat: 32.8, out: false });
-    const at1900 = atlasLayers(set, { level: 4, from: 1900, to: 1910, edition: '' });
+    const at1900 = atlasLayers(set, { level: 4, from: 1900, to: 1910 });
     expect(at1900.points[0].out).toBe(true);
   });
 

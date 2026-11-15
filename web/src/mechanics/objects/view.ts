@@ -138,7 +138,7 @@ function elementName(app: App, id: string): string {
 
 /** The label of an object: which element, where and when, who, where next; and its roads. */
 function label(app: App, l: ObjectLabel): HTMLElement {
-  const cardsHere = l.cards.map((id) => app.set.forEdition(id, app.edition) ?? app.set.get(id)).filter((c): c is NonNullable<typeof c> => !!c);
+  const cardsHere = l.cards.map((id) => app.set.get(id)).filter((c): c is NonNullable<typeof c> => !!c);
   const threads = l.elements.filter((id) => app.elements.elements.some((e) => e.id === id));
   return h(
     'div.mx-label',

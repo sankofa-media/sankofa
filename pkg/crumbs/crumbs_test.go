@@ -21,9 +21,9 @@ func TestPrefersUnreadAndLinked(t *testing.T) {
 	if got := p.Next().ID; got != "b" {
 		t.Fatalf("want linked unread b, got %s", got)
 	}
-	for i := 0; i < 10; i++ {
-		if c := p.Next(); c.ID == "d" {
-			t.Fatal("edition cards are never crumbs")
-		}
+	// Both copies hold the whole dictionary: a card of a pair is a crumb too.
+	q := &Picker{Set: s, Seen: func(id string) bool { return id != "d" }}
+	if got := q.Next().ID; got != "d" {
+		t.Fatalf("want the unread paired card d, got %s", got)
 	}
 }

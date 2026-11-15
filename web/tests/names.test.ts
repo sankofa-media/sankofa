@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { existsSync, readFileSync } from 'node:fs';
 import YAML from 'yaml';
 import { buildNames, compileLexicon, deriveNames, linkSegments, unlinked, type NameSource } from '../src/lib/names';
-import { CardSet, linkTarget } from '../src/lib/cards';
+import { CardSet } from '../src/lib/cards';
 import type { Card } from '../src/lib/types';
 
 const src = (id: string, kind: string, title: string, ru?: string, extra: Partial<NameSource> = {}): NameSource => ({ id, kind, title, translations: ru ? { ru: { title: ru } } : undefined, ...extra });
@@ -100,10 +100,11 @@ describe('names', () => {
 describe('links and the two copies', () => {
   const card = (c: Partial<Card> & { id: string }): Card => ({ kind: 'person', title: c.id, wow: '', years: [1800], places: [], zoom: 4, books: ['voices'], sources: [], body: '', edition: 'both', ...c });
   const set = new CardSet([card({ id: 'douglass-covey', edition: 'm', pair: 'p' }), card({ id: 'jacobs-garret', edition: 'f', pair: 'p' }), card({ id: 'sun-ra' })]);
-  it('a link to a card of the other copy opens its pair in the reader’s copy, as [[links]] do', () => {
-    expect(linkTarget(set, 'douglass-covey', 'f')?.id).toBe('jacobs-garret');
-    expect(linkTarget(set, 'douglass-covey', 'm')?.id).toBe('douglass-covey');
-    expect(linkTarget(set, 'sun-ra', 'f')?.id).toBe('sun-ra');
-    expect(linkTarget(set, 'nobody', 'f')).toBeUndefined();
+  it('a link names its card in either copy; the pair only points to the other telling', () => {
+    expect(set.get('douglass-covey')?.id).toBe('douglass-covey');
+    expect(set.get('jacobs-garret')?.id).toBe('jacobs-garret');
+    expect(set.partner('douglass-covey')?.id).toBe('jacobs-garret');
+    expect(set.partner('jacobs-garret')?.id).toBe('douglass-covey');
+    expect(set.partner('sun-ra')).toBeUndefined();
   });
 });
