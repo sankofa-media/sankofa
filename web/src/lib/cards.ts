@@ -3,32 +3,8 @@ import { BOOK_SYMBOLS } from './types';
 import { slug } from './fragment';
 import { localizeCredit, t } from './i18n';
 
-// Same expression as pkg/card linkRe.
-const LINK_RE = /\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]/g;
-
-export type Segment = { text: string } | { target: string; text: string; explicit: boolean };
-
-/** Split text into plain runs and [[links]], in order. */
-export function segments(text: string): Segment[] {
-  const out: Segment[] = [];
-  let last = 0;
-  for (const m of text.matchAll(LINK_RE)) {
-    const start = m.index ?? 0;
-    if (start > last) out.push({ text: text.slice(last, start) });
-    out.push({ target: m[1], text: m[2] ?? m[1], explicit: m[2] !== undefined });
-    last = start + m[0].length;
-  }
-  if (last < text.length) out.push({ text: text.slice(last) });
-  return out;
-}
-
-export function links(text: string): string[] {
-  return [...text.matchAll(LINK_RE)].map((m) => m[1]);
-}
-
-export function plain(text: string): string {
-  return text.replace(LINK_RE, (_, id: string, t?: string) => t ?? id);
-}
+export { links, plain, segments, type Segment } from './links';
+import { links } from './links';
 
 export class CardSet {
   readonly byId = new Map<string, Card>();
@@ -87,6 +63,14 @@ export class CardSet {
     }
     return partial;
   }
+}
+
+/**
+ * The card a link to `id` opens in a copy: an m/f card swaps for its pair,
+ * so a link always opens a card of the reader's own copy when there is one.
+ */
+export function linkTarget(set: CardSet, id: string, edition: Edition | ''): Card | undefined {
+  return set.forEdition(id, edition) ?? set.get(id);
 }
 
 export function bookSymbols(books: Book[] | undefined): string {
