@@ -15,7 +15,7 @@ import YAML from 'yaml';
 import { buildChecks, pairContext, type ContextRound, type Ledgers, type MediaEntry } from '../src/mechanics/checks/model.ts';
 import { validateDoc, type Doc } from '../src/mechanics/docs/model.ts';
 import { LABEL_FIELDS, parsePattern, validateLabel, type ObjectLabel, type ObjectsFile } from '../src/mechanics/objects/model.ts';
-import { parseProse, type ProseFile } from '../src/mechanics/guide/model.ts';
+import { cardLinks, parseProse, type ProseFile } from '../src/mechanics/guide/model.ts';
 import { validateCabinet, type CabinetFile, type Fact } from '../src/mechanics/cabinet/model.ts';
 
 const [src, out] = process.argv.slice(2);
@@ -245,6 +245,19 @@ function prose(base: string): ProseFile | null {
 }
 for (const base of ['guide', 'dedication']) {
   const p = prose(base);
+  for (const [l, doc] of Object.entries(p ?? {})) {
+    if (typeof doc !== 'object') continue;
+    const bad = cardLinks(doc).filter((id) => !cards.has(id));
+    if (bad.length) {
+      console.error(`${base}${l === 'ru' ? '.ru' : ''}.md: links to unknown cards: ${bad.join(', ')}`);
+      process.exit(1);
+    }
+    // The dedication stays as it was written: no links in it.
+    if (base === 'dedication' && cardLinks(doc).length) {
+      console.error(`${base}${l === 'ru' ? '.ru' : ''}.md: the dedication carries no card links`);
+      process.exit(1);
+    }
+  }
   if (p) write(`${base}.json`, p);
   else rmSync(join(out, `${base}.json`), { force: true });
 }

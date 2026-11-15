@@ -1,7 +1,14 @@
 // The guide and the dedication are Markdown files in content/. They are
 // turned into a few plain blocks at build time and rendered without HTML.
 
-export type Inline = { t: 'text'; s: string } | { t: 'em'; s: string } | { t: 'strong'; s: string } | { t: 'link'; s: string; href: string } | { t: 'unseen'; s: string };
+export type Inline =
+  | { t: 'text'; s: string }
+  | { t: 'em'; s: string }
+  | { t: 'strong'; s: string }
+  | { t: 'link'; s: string; href: string }
+  | { t: 'unseen'; s: string }
+  /** [[id|words]]: a link to a card of the dictionary */
+  | { t: 'card'; s: string; id: string; em?: boolean };
 export type Block = { type: 'h2' | 'h3' | 'p'; inline: Inline[] } | { type: 'quote'; inline: Inline[] };
 
 export interface ProseDoc {
@@ -28,7 +35,8 @@ function frontMatter(src: string): { title?: string; body: string } {
 const stripTags = (s: string) => s.replace(/<\/?[a-zA-Z][^>]*>/g, '');
 
 /**
- * Inline Markdown: *em*, **strong**, [text](href). The one piece of HTML let
+ * Inline Markdown: *em*, **strong**, [text](href), and card links as in the
+ * cards, [[id|words]]. The one piece of HTML let
  * through is <span class="unseen">…</span>; any other tag is removed.
  */
 export function parseInline(s: string): Inline[] {
@@ -45,17 +53,27 @@ export function parseInline(s: string): Inline[] {
 
 function markdown(s: string): Inline[] {
   const out: Inline[] = [];
-  const re = /\*\*([^*]+)\*\*|\*([^*]+)\*|_([^_]+)_|\[([^\]]+)\]\(([^)\s]+)\)/g;
+  const re = /\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]|\*\*([^*]+)\*\*|\*([^*]+)\*|_([^_]+)_|\[([^\]]+)\]\(([^)\s]+)\)/g;
   let last = 0;
   for (let m = re.exec(s); m; m = re.exec(s)) {
     if (m.index > last) out.push({ t: 'text', s: s.slice(last, m.index) });
-    if (m[1]) out.push({ t: 'strong', s: m[1] });
-    else if (m[2] ?? m[3]) out.push({ t: 'em', s: (m[2] ?? m[3])! });
-    else out.push({ t: 'link', s: m[4], href: m[5] });
+    if (m[1]) out.push({ t: 'card', id: m[1], s: m[2] ?? m[1] });
+    else if (m[3]) out.push({ t: 'strong', s: m[3] });
+    else if (m[4] ?? m[5]) {
+      // *[[id|A Title]]*: a link to a card whose name is set in italics.
+      const card = /^\[\[([a-z0-9-]+)(?:\|([^\]]+))?\]\]$/.exec((m[4] ?? m[5])!);
+      out.push(card ? { t: 'card', id: card[1], s: card[2] ?? card[1], em: true } : { t: 'em', s: (m[4] ?? m[5])! });
+    }
+    else out.push({ t: 'link', s: m[6], href: m[7] });
     last = m.index + m[0].length;
   }
   if (last < s.length) out.push({ t: 'text', s: s.slice(last) });
   return out;
+}
+
+/** The cards a document links to. */
+export function cardLinks(doc: ProseDoc): string[] {
+  return doc.blocks.flatMap((b) => b.inline.flatMap((x) => (x.t === 'card' ? [x.id] : [])));
 }
 
 export function parseProse(src: string): ProseDoc {

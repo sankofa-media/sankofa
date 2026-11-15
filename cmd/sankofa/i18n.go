@@ -19,6 +19,7 @@ func tr(s string) string {
 var ru = map[string]string{
 	"Further":                                "Дальше",
 	"Further:":                               "Дальше:",
+	"in the other copy":                      "в другом экземпляре",
 	"Sources":                                "Источники",
 	"Carries":                                "Передано",
 	"rhythm":                                 "ритм",

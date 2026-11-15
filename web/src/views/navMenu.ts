@@ -14,6 +14,7 @@ const HINTS: Record<string, { en: string; ru: string }> = {
   book: { en: 'The cards you have opened, kept in this browser', ru: 'Открытые вами карточки — хранятся в этом браузере' },
   workshop: { en: 'The elements music is made of, to play', ru: 'Элементы, из которых сделана музыка, — на них можно играть' },
   cabinet: { en: 'What you find hidden around the museum', ru: 'Всё, что вы найдёте спрятанным по музею' },
+  index: { en: 'Every name in the dictionary, from A to Z', ru: 'Все имена словаря — от А до Я' },
   guide: { en: 'What is where, and how the facts were checked', ru: 'Что где лежит и как проверяли факты' },
   dedication: { en: 'Whom this museum is for', ru: 'Кому посвящён этот музей' },
 };

@@ -20,6 +20,8 @@ import { hideInCard, hideInStory, workshopDrawer } from './cabinet/hide';
 import type { CabinetFile } from './cabinet/model';
 import { stopAll, watchPage } from '../lib/sound';
 import { inLang, prose } from './guide/view';
+import { weave, weaveLive } from '../lib/weave';
+import { nameIndex } from '../views/nameIndex';
 import './mechanics.css';
 
 export interface MechHooks {
@@ -41,11 +43,15 @@ const KICKER: Record<MechView, { en: string; ru: string }> = {
   method: { en: 'How we checked', ru: 'Как мы проверяли' },
   guide: { en: 'How to read this museum', ru: 'Как читать этот музей' },
   dedication: { en: 'Dedication', ru: 'Посвящение' },
+  index: { en: 'Index', ru: 'Указатель' },
 };
 
 export function installMechanics(app: App, hooks: MechHooks): Mechanics {
   watchPage();
   const sheet = new Sheet('mx-view');
+  // The dictionary runs through every room but two: the dedication is left as
+  // it was written, and the index is nothing but links already.
+  weaveLive(app, sheet.body, () => (sheet.el.dataset.view === 'dedication' || sheet.el.dataset.view === 'index' ? null : {}));
   let view: MechView | null = null;
   let current: DeskView | null = null;
   let returnCard: string | undefined;
@@ -122,11 +128,14 @@ export function installMechanics(app: App, hooks: MechHooks): Mechanics {
         documents: String(docs?.documents.length ?? 0),
         objects: String(OBJECT_KEYS.filter((k) => o?.[k]).length),
       };
-      const body = doc ? prose(doc, values) : null;
+      const body = doc ? prose(doc, values, 'mx-prose', app) : null;
       // Where the guide first speaks of the agents, say who they are.
       const about = body ? [...body.querySelectorAll('p')].find((p) => /\bagents?\b|агент/i.test(p.textContent ?? '')) : undefined;
       about?.after(agentsNote());
       ready(doc ? h('article.mx-guide', {}, h('header.mx-head', {}, h('h2', {}, doc.title ?? pick(KICKER.guide))), body) : null, doc?.title ?? pick(KICKER.guide));
+    } else if (v === 'index') {
+      returnCard = undefined;
+      ready(nameIndex(app), pick(KICKER.index));
     } else if (v === 'dedication') {
       returnCard = undefined;
       const doc = inLang(await data.dedication());
@@ -259,16 +268,18 @@ export function cardExtras(app: App, c: Card): HTMLElement {
       if (b) parts.push(b);
     }
     host.replaceChildren(...parts);
+    weave(app, host, { exclude: [c.id] });
   }).catch(() => undefined);
   return host;
 }
 
 /** The "How we checked" panel of a card. */
-export function cardChecks(_app: App, c: Card): HTMLElement {
+export function cardChecks(app: App, c: Card): HTMLElement {
   const host = h('div.mx-card-checks');
   void data.checks().then((f) => {
     const p = checksPanel(c, f?.cards[c.id]);
     if (p) host.replaceChildren(p);
+    weave(app, host, { exclude: [c.id] });
   }).catch(() => undefined);
   return host;
 }

@@ -4,6 +4,7 @@
 #   web/public/data/chapters.json  (chapter Markdown -> JSON)
 #   web/public/data/countries.json (cards by present-day country)
 #   web/public/data/listen.json    (recordings to listen to)
+#   web/public/data/names.json     (every card's names, content/aliases.yaml)
 #   web/public/media/              (content/media)
 # Content comes from content/ when it has chapters; otherwise from the
 # placeholder set in web/fixtures/. Override with SANKOFA_CONTENT=<dir>.
@@ -43,6 +44,9 @@ echo "media: $(ls web/public/media | wc -l | tr -d ' ') files"
 node "$web/scripts/build-media.ts" web/public/media web/public/data/media.json
 # Documents, working objects, how we checked, the guide and the dedication.
 node "$web/scripts/build-mechanics.ts" "$src" web/public/data
+# The dictionary's names, for linking mentions of cards in the museum's own
+# text, and the report of mentions still unlinked (dist/link-gaps.txt).
+node "$web/scripts/build-names.ts" "$src" web/public/data web/index.html dist/link-gaps.txt
 # The public, read-only visitor kubeconfig (hack/stand/visitor-kubeconfig.sh),
 # offered in the engine room when the stand has produced one.
 if [ -f dist/visitor.kubeconfig ]; then

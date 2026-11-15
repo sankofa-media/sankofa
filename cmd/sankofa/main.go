@@ -7,6 +7,8 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
+
+	"github.com/tym83/sankofa/pkg/atlas"
 )
 
 func main() {
@@ -18,6 +20,12 @@ func main() {
 	}
 	root.PersistentFlags().String("content", envOr("SANKOFA_CONTENT", ""), "read cards from a local content directory instead of the cluster")
 	root.PersistentFlags().StringVar(&lang, "lang", envOr("SANKOFA_LANG", "en"), "language of the cards: en or ru")
+	museum := root.PersistentFlags().String("museum-url", os.Getenv("SANKOFA_MUSEUM_URL"), "the museum's address for card links (default "+atlas.DefaultBase+")")
+	root.PersistentPreRun = func(*cobra.Command, []string) {
+		if *museum != "" {
+			_ = os.Setenv("SANKOFA_MUSEUM_URL", *museum)
+		}
+	}
 	kubeFlags.AddFlags(root.PersistentFlags())
 	root.AddCommand(contentCmd(), dictCmd(), tellCmd(), fetchCmd(), diffCmd(), obituariesCmd(), creditsCmd(), genreCmd(), questCmd(), crumbCmd(), waitCmd(), atlasCmd(), storyCmd(), kgotlaCmd(), editionCmd(), rootsCmd())
 	if err := root.Execute(); err != nil {

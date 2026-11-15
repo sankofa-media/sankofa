@@ -2,6 +2,7 @@ import './styles/main.css';
 import './styles/roots.css';
 import './styles/countries.css';
 import type { App } from './app';
+import { cardLink } from './app';
 import type { CardsFile, ChaptersFile } from './lib/types';
 import { ERAS } from './lib/types';
 import { holdScroll, placeTop, rememberPlace, takePlace } from './lib/place';
@@ -30,6 +31,8 @@ import { RootsMap } from './views/rootsMap';
 import { installMechanics } from './mechanics';
 import { installNavMenu, navReady, setBookCount } from './views/navMenu';
 import { isMechView } from './mechanics/views';
+import { compileLexicon, type NamesFile } from './lib/names';
+import { setLexicon, weaveLive } from './lib/weave';
 
 async function load<T>(url: string): Promise<T> {
   // The cover paints first; the data comes at a lower priority, with a
@@ -79,18 +82,21 @@ async function start(): Promise<void> {
   let cardsFile: CardsFile;
   let chaptersFile: ChaptersFile;
   let listenFile: ListenFile;
+  let namesFile: NamesFile | null;
   installNavMenu(document.querySelector<HTMLElement>('.nav')!);
   // The language switch needs no data, so it works while the cards load.
   document.querySelectorAll<HTMLElement>('[data-lang-switch]').forEach((b) => b.addEventListener('click', () => switchLang(lang() === 'ru' ? 'en' : 'ru')));
   // Let the static cover paint before the 1 MB of cards competes for the wire.
   await new Promise<void>((r) => requestAnimationFrame(() => setTimeout(r, 0)));
   try {
-    [cardsFile, chaptersFile, listenFile] = await Promise.all([
+    [cardsFile, chaptersFile, listenFile, , namesFile] = await Promise.all([
       load<CardsFile>('data/cards.json'),
       load<ChaptersFile>('data/chapters.json'),
       // Listening is an extra: the museum opens without it.
       load<ListenFile>('data/listen.json').catch(() => EMPTY_LISTEN),
       loadMediaManifest(),
+      // The dictionary's names: without them, only the marked links link.
+      load<NamesFile>('data/names.json').catch(() => null),
     ]);
   } catch (e) {
     loading.remove();
@@ -116,6 +122,7 @@ async function start(): Promise<void> {
   const chapters = sortChapters(chaptersFile.chapters.map((c) => splitStepMarks(chapterForEdition(localizeChapter(foldStepMarks(c), current), held)))).map((c) => ({ ...c, title: RU_TITLE_FIX[c.title] ?? c.title }));
   // One name per release: every era label is the chapter's own title.
   for (const e of ERAS) e.label = chapters.find((c) => c.id === e.id)?.title ?? e.label;
+  if (namesFile) setLexicon(compileLexicon(namesFile[current], current));
   const cardDrawer = new Drawer(t('Card'));
   const bookDrawer = new Drawer(t('Your book'));
   const pathListeners: ((p: string[]) => void)[] = [];
@@ -147,7 +154,7 @@ async function start(): Promise<void> {
       if (!c) return;
       bookDrawer.close(true);
       const foreign = c.edition !== 'both' && c.edition !== app.edition;
-      cardDrawer.show(renderCard(app, c, { asked: !exact ? asked : undefined, foreign }));
+      cardDrawer.show(renderCard(app, c, { asked: !exact ? asked : undefined, foreign, via: opts.via }));
       const next = reader.recordVisit(c.id);
       pathListeners.forEach((l) => l(next));
       route = { ...route, point: { ...route.point, focus: c.id } };
@@ -286,6 +293,7 @@ async function start(): Promise<void> {
       if (isLang(to) && to !== lang()) switchLang(to);
     }),
   );
+  linkCover(app);
   buildStory(app, document.getElementById('story')!);
   // Documents, working objects, how we checked, the guide and the dedication.
   const mech = installMechanics(app, {
@@ -297,6 +305,13 @@ async function start(): Promise<void> {
       writeRoute(route, push);
     },
   });
+  // The dictionary runs through the rooms whose text comes from data.
+  weaveLive(app, engine.el);
+  weaveLive(app, roots.el);
+  weaveLive(app, rootsMap.el);
+  weaveLive(app, listen.el);
+  const countries = atlas.el.querySelector('.atlas-countries');
+  if (countries) weaveLive(app, countries);
   watchTypography(current);
   trackChapters(app);
   loading.remove();
@@ -381,7 +396,8 @@ async function start(): Promise<void> {
     const a = (e.target as Element).closest<HTMLElement>('[data-card]');
     if (a) {
       e.preventDefault();
-      app.openCard(a.dataset.card!);
+      // data-exact: this very card, even from the other copy (the index lists both).
+      app.openCard(a.dataset.card!, a.dataset.exact !== undefined ? { exact: true, via: a.dataset.exact === 'index' ? 'index' : undefined } : {});
       return;
     }
     const ch = (e.target as Element).closest<HTMLElement>('a[data-chapter]');
@@ -429,6 +445,21 @@ async function start(): Promise<void> {
   apply(true);
   // Only now may a menu entry chosen during loading open its view.
   navReady();
+}
+
+/**
+ * The cover and the opening are static HTML, so their names are linked by
+ * hand as <a data-card>; once the cards are here, those links get the book
+ * and the one-line wow of the card they open, like every other link.
+ */
+function linkCover(app: App): void {
+  document.querySelectorAll<HTMLAnchorElement>('.cover a[data-card], .opener a[data-card]').forEach((a) => {
+    const id = a.dataset.card!;
+    if (!app.set.get(id)) return;
+    const l = cardLink(app, id, a.textContent ?? '');
+    l.classList.add(...[...a.classList].filter((c) => c !== 'xref'));
+    a.replaceWith(l);
+  });
 }
 
 function scrollToChapter(id: string): void {
