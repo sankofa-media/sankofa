@@ -216,7 +216,20 @@ describe('the Sea Lion Girls content', () => {
     expect(validateFeature(f, { nodes: new Set(lin.nodes.map((n) => n.id)), sourced: sourcedNodes(lin), sync, rights, cards, artFiles, ledger: all })).toEqual([]);
     // The approved illustrations: every scene redrawn so far has its layers, generated and with alt fields.
     const drawn = f.scenes.filter((s) => s.art).map((s) => s.id);
-    expect(drawn).toEqual(['door', 'expedition', 'album', 'simone', 'river', 'classroom', 'finale']);
+    expect(drawn).toEqual(['door', 'ring', 'expedition', 'family', 'minute', 'album', 'simone', 'river', 'classroom', 'finale']);
+    // Hands drawn on their own layer clap; figures with holes for those hands do not breathe away from them.
+    for (const id of ['ring', 'minute']) {
+      const layers = f.scenes.find((s) => s.id === id)!.art!.layers;
+      const hands = layers.find((l) => l.role === 'hands')!;
+      expect(hands, id).toBeDefined();
+      for (const l of layers.filter((x) => x !== hands && x.depth !== 3)) {
+        expect(l.depth, `${id} ${l.file}`).toBe(hands.depth);
+        expect(l.role, `${id} ${l.file}`).toBeUndefined();
+      }
+    }
+    // The minute's alt text never says which sister is which.
+    const minuteAlt = JSON.stringify(f.scenes.find((s) => s.id === 'minute')!.art!.layers.map((l) => l.alt));
+    expect(minuteAlt).not.toMatch(/Christine|Katherine|Кристин|Кэтрин/);
     expect(f.scenes.every((s) => !s.art || s.art.generated === true)).toBe(true);
     expect(sceneArtFiles(f).every((file) => artFiles.has(file))).toBe(true);
     expect(f.ui?.['art-credit']).toMatchObject({ en: 'Illustrations generated, edited by the museum', ru: 'Иллюстрации созданы нейросетью, отобраны музеем' });
