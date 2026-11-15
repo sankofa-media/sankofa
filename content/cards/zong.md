@@ -53,7 +53,7 @@ In March 1783 a jury at London's Guildhall found for the owners. On the insurers
 
 Outrage over the killings fed the abolition society founded in 1787, and abolitionists went on to make the slave ship itself an image in the [[brookes|Brookes]] print.
 
-{male} In 1789 Equiano published his own story, The Interesting Narrative, and toured Britain and Ireland with it; it became a best-seller. A man once sold as cargo had made his own words evidence against the trade.
+{male} In 1789 [[equiano|Equiano]] published his own story, The Interesting Narrative, and toured Britain and Ireland with it; it became a best-seller. A man once sold as cargo had made his own words evidence against the trade.
 
 {female} In 2008 M. NourbeSe Philip, a Tobago-born poet and former Toronto lawyer, published Zong!. She allowed herself only the words of the two-page case report, Gregson v. Gilbert, and broke them apart across the page so that the document that counted people as cargo would remember them.
 

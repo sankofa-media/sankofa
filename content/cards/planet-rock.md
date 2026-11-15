@@ -29,6 +29,6 @@ media:
 ---
 "Planet Rock" is a [[hip-hop|hip-hop]] record made in New York in 1982 from a German band's music and a Japanese drum machine. Afrika Bambaataa, a Bronx DJ and founder of the Universal Zulu Nation, cut it with producer Arthur Baker for Tom Silverman's new label, Tommy Boy.
 
-Bambaataa already played Kraftwerk's "Trans-Europe Express" in his sets, and the beat of "Numbers" went in too; they rebuilt both on a Roland TR-808. Kraftwerk were angry, and Tommy Boy paid them a dollar for every copy. The record became one of hip-hop's earliest hits and most influential tracks.
+Bambaataa already played Kraftwerk's "Trans-Europe Express" in his sets, and the beat of "Numbers" went in too; they rebuilt both on a Roland TR-808. Kraftwerk were angry, and Tommy Boy paid them a dollar for every copy. The record became one of [[hip-hop|hip-hop]]'s earliest hits and most influential tracks.
 
 From 2016 several men accused Bambaataa of abusing them as boys; he denied it, was never criminally charged and stepped down as head of the Zulu Nation. In 2025 he lost a civil suit by default. He died in 2026.

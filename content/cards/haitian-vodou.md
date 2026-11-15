@@ -24,7 +24,7 @@ sources:
 media:
   - {type: "image", file: "haitian-vodou.jpg", caption: "An antique Haitian Vodou ceremonial drum in the Ethnological Museum, Berlin, photographed in 2010.", credit: "Thom Quine", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Antique_Haitian_Vodou_ceremonial_drum.jpg"}
 ---
-Vodou is the religion that grew up in colonial Saint-Domingue, today Haiti, among enslaved people brought from Dahomey and other African lands, whom Catholic missionaries and masters tried to make Christian. Its name comes from a word for "spirit" or "god" in Fon, the language of Dahomey. Believers hold that God, the creator, rules the world with the help of the lwa, spirits served with prayers, songs and offerings. Priests are called oungan if men and manbo if women; branches such as Rada and Petwo keep different rites. At ceremonies danced to drums, a spirit may take possession of a devotee.
+Vodou is the religion that grew up in colonial Saint-Domingue, today Haiti, among enslaved people brought from [[aro-and-dahomey|Dahomey]] and other African lands, whom Catholic missionaries and masters tried to make Christian. Its name comes from a word for "spirit" or "god" in Fon, the language of Dahomey. Believers hold that God, the creator, rules the world with the help of the lwa, spirits served with prayers, songs and offerings. Priests are called oungan if men and manbo if women; branches such as Rada and Petwo keep different rites. At ceremonies danced to drums, a spirit may take possession of a devotee.
 
 The spirits survived by taking on the faces of Catholic saints. Danbala, for one, is honoured on St Patrick's Day, 17 March.
 

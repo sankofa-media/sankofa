@@ -25,7 +25,7 @@ sources:
 media:
   - {type: "image", file: "hepsters-dictionary.jpg", caption: "Context for the Hepster's Dictionary: Cab Calloway photographed by Carl Van Vechten in 1933; Library of Congress.", credit: "Carl Van Vechten / Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Cab_Calloway_LCCN2004662659.jpg"}
 ---
-Jive was the slang of the musicians and entertainers of 1930s Harlem, the talk of its jazz scene. In it Harlem itself was "the Apple", the big town, the main stem.
+Jive was the slang of the musicians and entertainers of 1930s Harlem, the talk of its [[jazz|jazz]] scene. In it Harlem itself was "the Apple", the big town, the main stem.
 
 Cab Calloway, born in 1907, was a bandleader and singer whose 1931 recording of "Minnie the Moocher" sold more than a million copies. In 1938 he published Cab Calloway's Cat-ologue: A Hepster's Dictionary, which translated the talk of Harlem's bandstands for a wider public. With it he became the first known African American to publish a book and call it a dictionary.
 

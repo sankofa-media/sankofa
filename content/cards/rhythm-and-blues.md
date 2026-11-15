@@ -61,7 +61,7 @@ chart took the new name.
 of a bandleader. He started with the Rabbit Foot Minstrels, then sang and
 played saxophone for Chick Webb until Webb fired him in 1938 for trying to take
 Ella Fitzgerald into a band of his own. His small Tympany Five
-recorded "Caldonia" and "Ain't Nobody Here but Us Chickens", and his records topped the charts for 113 weeks in all. Rock and roll pushed
+recorded "Caldonia" and "Ain't Nobody Here but Us Chickens", and his records topped the charts for 113 weeks in all. [[rock-n-roll|Rock and roll]] pushed
 him aside in the 1950s, but Chuck Berry, James Brown and Ray Charles named him
 as an influence. He died in Los Angeles in 1975; in 1987 he entered the Rock
 and Roll Hall of Fame.

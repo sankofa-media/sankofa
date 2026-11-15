@@ -37,7 +37,7 @@ media:
 ---
 Funk is dance music built on a groove: a short, syncopated pattern that bass
 and drums repeat over and over, while guitar, horns and keyboards play as
-rhythm instruments too, each adding its own pattern. Where rhythm and blues
+rhythm instruments too, each adding its own pattern. Where [[rhythm-and-blues|rhythm and blues]]
 leaned on the backbeat, two and four, James Brown put the weight on the first
 beat of the bar, "the one". Credit for its birth goes above all to Brown and
 his band; "Papa's Got a Brand New Bag" (1965) is counted among the first funk
@@ -45,7 +45,7 @@ records, and Sly Stone blurred it with rock and soul.
 
 A few bars of drumming became one of the most reused sounds in music. Clyde
 Stubblefield's short solo on James Brown's "Funky Drummer" (1970), recorded
-in 1969 at the King studios in Cincinnati, has been sampled on hundreds of songs, hip-hop above
+in 1969 at the King studios in Cincinnati, has been sampled on hundreds of songs, [[hip-hop|hip-hop]] above
 all, including Public Enemy's "Fight the Power" (1989). He received very
 little in royalties; when he was fighting cancer, Prince paid $90,000 of his
 medical bills. He died in 2017, aged 73. Funk also

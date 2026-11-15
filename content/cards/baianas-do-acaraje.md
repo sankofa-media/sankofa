@@ -24,6 +24,6 @@ media:
 ---
 Acarajé is a fritter of beans ground on a stone and fried in dendê, palm oil, sold on the streets of Salvador da Bahia by women called baianas de acarajé. The recipe came from the Gulf of Benin in West Africa. In colonial Salvador enslaved and freed African women made the fritters and sold them through the streets, carrying them on trays and in baskets.
 
-In Candomblé the acarajé belongs to the orixás Xangô and Oyá, also called Iansã, and the first sellers were women initiated into the religion, many of them daughters of Iansã.
+In [[candomble|Candomblé]] the acarajé belongs to the orixás Xangô and Oyá, also called Iansã, and the first sellers were women initiated into the religion, many of them daughters of Iansã.
 
 In 2002 the baianas' association, the Ilê Axé Opô Afonjá terreiro and the Centre for Afro-Oriental Studies of the Federal University of Bahia asked for the acarajé to be protected. What Brazil's heritage institute IPHAN inscribed in 2005 was not a recipe but a trade: "the traditional practice of producing and selling, on a tray, the so-called baiana foods, made with dendê oil and linked to the cult of the orixás". The listing became an argument too: baianas accuse evangelical vendors who sell a "little Jesus cake" and refuse the traditional dress of erasing the fritter's African religion. Since 2010, 25 November has been the National Day of the Baiana de Acarajé.

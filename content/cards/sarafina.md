@@ -30,7 +30,7 @@ media:
 ---
 Sarafina! is a musical by the South African playwright Mbongeni Ngema, first staged in 1987 at the Market Theatre in Johannesburg. Apartheid was still the law, and Nelson Mandela was in his third decade in prison. The show goes back to 16 June 1976, when thousands of schoolchildren in Soweto rose against the apartheid school system.
 
-Ngema wrote the book, the music and the lyrics and directed the production; the jazz trumpeter Hugh Masekela worked with him on the score. The story follows a Soweto schoolgirl, Sarafina, who inspires her classmates to fight segregation. The title role went to Leleti Khumalo.
+Ngema wrote the book, the music and the lyrics and directed the production; the [[jazz|jazz]] trumpeter Hugh Masekela worked with him on the score. The story follows a Soweto schoolgirl, Sarafina, who inspires her classmates to fight segregation. The title role went to Leleti Khumalo.
 
 In 1987 Lincoln Center Theater brought the Johannesburg company to New York, and in 1988 the show opened on Broadway. It earned Tony nominations, and in 1992 it became a film with Whoopi Goldberg. Mandela walked free on 11 February 1990. Ngema died in a car crash in 2023.
 

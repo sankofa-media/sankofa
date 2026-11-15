@@ -26,7 +26,7 @@ sources:
 media:
   - {type: "image", file: "kilwa-kisiwani.jpg", caption: "The eighteenth-century Makutani Palace on Kilwa Kisiwani Island, Tanzania, photographed in 2017.", credit: "David Stanley", license: "CC BY 2.0", url: "https://commons.wikimedia.org/wiki/File:Kilwa_Kisiwani_Palace_(33433637294).jpg"}
 ---
-Kilwa Kisiwani is a small island off the coast of southern Tanzania. From around the 10th century a Swahili trading city grew there, and by the 13th and 14th centuries it was one of the great ports of the East African coast, a link in the Indian Ocean trade that ran from the African interior to Arabia, India and beyond.
+Kilwa Kisiwani is a small island off the coast of southern Tanzania. From around the 10th century a [[swahili|Swahili]] trading city grew there, and by the 13th and 14th centuries it was one of the great ports of the East African coast, a link in the Indian Ocean trade that ran from the African interior to Arabia, India and beyond.
 
 The traveller Ibn Battuta sailed in during the early 1330s and found a very fine, well-built town. The ruins of its Great Mosque, once roofed entirely with domes and vaults, still stand, as do those of Husuni Kubwa, a great palace of the 14th century. And Kilwa struck its own copper coins.
 

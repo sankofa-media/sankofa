@@ -28,7 +28,7 @@ sources:
 media:
   - {type: "image", file: "revue-negre.jpg", caption: "Italo Orsi's poster for La Revue nègre at the Théâtre de l'Étoile, 1925.", credit: "Italo Orsi", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Orsi_-_Th%C3%A9%C3%A2tre_de_l%27%C3%89toile._La_Revue_n%C3%A8gre.jpg"}
 ---
-La Revue nègre was a music-hall show performed entirely by Black American artists, and it opened at the Théâtre des Champs-Élysées in Paris on 2 October 1925. It was the modernist house where Diaghilev's Ballets Russes had premiered Stravinsky's Rite of Spring in 1913. Paris in 1925 was mad about jazz and about African art. The American producer Caroline Dudley Reagan assembled the troupe: twelve musicians, among them Sidney Bechet, and eight chorus dancers.
+La Revue nègre was a music-hall show performed entirely by Black American artists, and it opened at the Théâtre des Champs-Élysées in Paris on 2 October 1925. It was the modernist house where Diaghilev's Ballets Russes had premiered Stravinsky's Rite of Spring in 1913. Paris in 1925 was mad about [[jazz|jazz]] and about African art. The American producer Caroline Dudley Reagan assembled the troupe: twelve musicians, among them Sidney Bechet, and eight chorus dancers.
 
 One of the dancers was Josephine Baker, born in St. Louis in 1906, who had danced in the chorus of the touring [[shuffle-along|Shuffle Along]]. Her "Danse sauvage", the wild dance, was the sensation of the night. The staging fed Paris's fantasy of "primitive" Africa, and Baker played with the racist stereotype while staying in command of it. Paul Colin's posters, cubist in their distortions, turned her silhouette into an Art Deco icon.
 

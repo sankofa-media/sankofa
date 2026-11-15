@@ -23,7 +23,7 @@ sources:
 media:
   - {type: "image", file: "kotomisi.jpg", caption: "A doll in kotomisi dress, made in 1824; Wereldmuseum collection, formerly Tropenmuseum.", credit: "Collectie Wereldmuseum (v/h Tropenmuseum), part of the National Museum of World Cultures, A-6195d", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Tropenmuseum_Royal_Tropical_Institute_Objectnumber_A-6195d_Pop_in_kotomisi_kostuum.jpg"}
 ---
-The koto is the festive dress of Afro-Surinamese women: a full skirt, also called the koto, a short jacket, the yaki, and a square headscarf, the angisa. It took shape in Suriname, and in the Netherlands it comes out every 1 July for Keti Koti, the "breaking of the chains", which marks the Dutch law of 1 July 1863 that abolished slavery. A koto must have volume, built up with starch and with skirts worn one over another.
+The koto is the festive dress of Afro-Surinamese women: a full skirt, also called the koto, a short jacket, the yaki, and a square headscarf, the angisa. It took shape in Suriname, and in the Netherlands it comes out every 1 July for [[keti-koti|Keti Koti]], the "breaking of the chains", which marks the Dutch law of 1 July 1863 that abolished slavery. A koto must have volume, built up with starch and with skirts worn one over another.
 
 The angisa is where the dress speaks. Starched until it handles like paper, the cloth can be folded into shapes, and women used those shapes to send messages to one another. One fold is called "Let them talk". Another, with a point sticking out, tells a lover to meet on the corner. When motor cars arrived, they inspired a new fold, very wide at the back: the oto baka.
 

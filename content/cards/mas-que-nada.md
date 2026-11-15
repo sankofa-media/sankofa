@@ -27,7 +27,7 @@ sources:
 media:
   - {type: "image", file: "mas-que-nada.jpg", caption: "Context: Jorge Ben Jor performing at Live Earth, 2007.", credit: "Luan Torreira", license: "CC BY 2.0", url: "https://commons.wikimedia.org/wiki/File:Jorge_Ben_Jor_at_Live_Earth.jpg"}
 ---
-"Mas que nada" is a samba by the Rio singer and guitarist Jorge Ben. In the early 1960s, at the start of his career, he sang his own songs in the nightclubs of the Beco das Garrafas, an alley in Copacabana, among them one called the Bottles.
+"Mas que nada" is a [[samba|samba]] by the Rio singer and guitarist Jorge Ben. In the early 1960s, at the start of his career, he sang his own songs in the nightclubs of the Beco das Garrafas, an alley in Copacabana, among them one called the Bottles.
 
 Its tune had a past. In 1958 the music the arranger José Prates had written for Brasiliana, a touring dance show put together by the producer Miecio Askanasy, came out on an album, Tam... Tam... Tam...! One of its tracks, "Nanã Imborô", Jorge Ben reshaped into his song.
 

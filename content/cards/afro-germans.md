@@ -25,7 +25,7 @@ media:
 ---
 In 1980s West Germany, Black Germans mostly grew up isolated, in white surroundings, with no community to turn to. The words others used for them were colonial-era labels and insults.
 
-In 1984 the Black American poet Audre Lorde came to teach at the Free University in West Berlin. Among her students and friends were young Black German women, and she urged them to write their own history. Katharina Oguntoye, May Opitz, later known as May Ayim, and the white German feminist Dagmar Schultz gathered the stories of Black German women. Farbe bekennen, "showing our colours", came out in 1986, the first book of its kind in Germany: Afro-Germans describing, in their own words, the racism of everyday life. Its authors also gave the community new names for itself, Afro-German and Black German.
+In 1984 the Black American poet Audre Lorde came to teach at the Free University in West Berlin. Among her students and friends were young Black German women, and she urged them to write their own history. Katharina Oguntoye, May Opitz, later known as [[may-ayim|May Ayim]], and the white German feminist Dagmar Schultz gathered the stories of Black German women. Farbe bekennen, "showing our colours", came out in 1986, the first book of its kind in Germany: Afro-Germans describing, in their own words, the racism of everyday life. Its authors also gave the community new names for itself, Afro-German and Black German.
 
 The book set a movement going and brought together Black Germans who had never met. A year earlier, in 1985, Black Germans had founded the Initiative Schwarze Deutsche, the ISD, and in 1986 Black German women founded ADEFRA. The book reached readers abroad as Showing Our Colors.
 

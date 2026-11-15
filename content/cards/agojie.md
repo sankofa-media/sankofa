@@ -23,10 +23,10 @@ sources:
 media:
   - {type: "image", file: "agojie.jpg", caption: "Illustration of the Dahomey Amazons in The History of Dahomey, 1793.", credit: "Archibald Dalziel, The History of Dahomey (1793)", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Dahomey_Amazons_1793.png"}
 ---
-Dahomey, a kingdom in what is now Benin ruled from Abomey, was a regional power in the eighteenth and nineteenth centuries. Its army included an elite corps of women soldiers, known in the Fon language by several names, among them Agojie. Europeans who met them compared them to the Amazons of Greek myth, and that colonial label stuck.
+[[aro-and-dahomey|Dahomey]], a kingdom in what is now Benin ruled from Abomey, was a regional power in the eighteenth and nineteenth centuries. Its army included an elite corps of women soldiers, known in the Fon language by several names, among them Agojie. Europeans who met them compared them to the Amazons of Greek myth, and that colonial label stuck.
 
 How the corps began is debated. Tradition credits Queen Hangbe, who reigned in the early 1700s, but women hunters and warriors may be older than that. By the 1800s the Agojie were renowned fighters, and they guarded the king.
 
 They also served the kingdom's trade in people. Dahomey's wars and raids took captives from neighbouring peoples, and the women soldiers took part. One of those captured in 1860 was a young man named Kossola, later Cudjo Lewis, who told [[hurston|Zora Neale Hurston]] how women warriors played a large part in the attack on his town; he was shipped to Alabama on the [[clotilda|Clotilda]]. Their raids were part of [[aro-and-dahomey|the African side of the trade]].
 
-In the 1890s King Behanzin resisted French expansion and Dahomey went to war with France. When Behanzin, the last king of Dahomey, surrendered in 1894, the corps came to an end. In 2022 the film The Woman King brought the Agojie to screens worldwide.
+In the 1890s King Behanzin resisted French expansion and [[aro-and-dahomey|Dahomey]] went to war with France. When Behanzin, the last king of Dahomey, surrendered in 1894, the corps came to an end. In 2022 the film The Woman King brought the Agojie to screens worldwide.
