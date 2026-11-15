@@ -17,7 +17,7 @@ import (
 )
 
 func dictCmd() *cobra.Command {
-	var plain bool
+	var plain, index bool
 	c := &cobra.Command{
 		Use:   "dict [CARD]",
 		Short: "Read the dictionary: follow links between cards, endlessly",
@@ -26,7 +26,12 @@ Links are marked with the book they lead to: ❝ voices, ▤ archives, ✶ heirs
 
 Keys: tab/shift+tab select a link, enter follow it, backspace go back,
 / or i the index with search, e trade your copy (male/female edition),
-r random card, o show the atlas link, q quit.`,
+r random card, o show the atlas link, q quit.
+
+Printed (--plain, or into a pipe), links read "Sun Ra✶ [sun-ra]": the id in
+brackets is the card to open next. On a terminal the words are also a
+hyperlink to the card in the museum (--museum-url, SANKOFA_MUSEUM_URL).
+--index prints every entry from A to Z in the language of --lang.`,
 		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			s, err := loadCards(cmd)
@@ -36,6 +41,11 @@ r random card, o show the atlas link, q quit.`,
 			st, err := reader.Load()
 			if err != nil {
 				return err
+			}
+			out := cmd.OutOrStdout()
+			if index {
+				printIndex(out, s, st.Edition, linkStyle{tty: isTerminal(out)})
+				return nil
 			}
 			start := ""
 			if len(args) == 1 {
@@ -51,7 +61,7 @@ r random card, o show the atlas link, q quit.`,
 			if plain || !isTerminal(cmd.OutOrStdout()) {
 				st.Visit(c.ID)
 				_ = st.Save()
-				printCard(cmd.OutOrStdout(), s, c, false)
+				printCard(out, s, c, isTerminal(out))
 				return nil
 			}
 			m := newDictModel(s, st, c)
@@ -62,6 +72,7 @@ r random card, o show the atlas link, q quit.`,
 		},
 	}
 	c.Flags().BoolVar(&plain, "plain", false, "print the card instead of opening the reader")
+	c.Flags().BoolVar(&index, "index", false, "print every entry of the dictionary from A to Z")
 	c.AddCommand(pathCmd())
 	return c
 }
@@ -99,7 +110,7 @@ func pathCmd() *cobra.Command {
 			}
 			for _, id := range p.Path {
 				if c := s.ByID[id]; c != nil {
-					printCard(cmd.OutOrStdout(), s, c, false)
+					printCard(cmd.OutOrStdout(), s, c, isTerminal(cmd.OutOrStdout()))
 					fmt.Fprintln(cmd.OutOrStdout())
 				}
 			}
@@ -150,30 +161,24 @@ func yearsOf(c *card.Card) string {
 	return ""
 }
 
-// printCard renders a card as plain text, with OSC 8 links when asked.
+// printCard renders a card as text. Links print as their words and the id
+// of the card they open; with osc (a terminal) the words are OSC 8 links
+// to the card in the museum and the ids are dim.
 func printCard(w io.Writer, s *card.Set, c *card.Card, osc bool) {
 	place := ""
 	if len(c.Places) > 0 {
 		place = c.Places[0].Name
 	}
+	st := linkStyle{tty: osc}
 	fmt.Fprintf(w, "%s %s\n%s · %s · %s\n\n%s\n\n", booksOf(c), c.Title, yearsOf(c), place, tr(c.Kind), c.Wow)
-	body := c.Body
-	for _, l := range c.Links() {
-		t := s.ByID[l.Target]
-		sym := ""
-		if t != nil && len(t.Books) > 0 {
-			sym = card.BookSymbols[t.Books[0]]
-		}
-		body = strings.Replace(body, c.Body[l.Start:l.End], l.Text+sym, 1)
-	}
-	fmt.Fprintln(w, wrap(body, 78))
+	fmt.Fprintln(w, wrap(renderLinks(s, c.Body, st), 78))
 	if c.Dispute != "" {
-		fmt.Fprintf(w, "\n%s%s\n", tr("Disputed: "), c.Dispute)
+		fmt.Fprintf(w, "\n%s%s\n", tr("Disputed: "), renderLinks(s, c.Dispute, st))
 	}
 	if len(c.Further) > 0 {
 		fmt.Fprintln(w, "\n"+tr("Further:"))
 		for _, f := range c.Further {
-			fmt.Fprintln(w, "  ·", f)
+			fmt.Fprintln(w, "  ·", renderLinks(s, f, st))
 		}
 	}
 	fmt.Fprintln(w, "\n"+tr("Sources:"))
@@ -190,7 +195,7 @@ func wrap(s string, width int) string {
 		words := strings.Fields(para)
 		line := ""
 		for _, w := range words {
-			if line != "" && lipgloss.Width(line)+1+lipgloss.Width(w) > width {
+			if line != "" && visibleWidth(line)+1+visibleWidth(w) > width {
 				out = append(out, line)
 				line = w
 				continue
