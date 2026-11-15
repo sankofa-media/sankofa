@@ -26,6 +26,6 @@ WHOD went on the air in 1948 in Homestead, a town just outside Pittsburgh. It ca
 
 Among its first voices was Mary Dee Dudley, believed to have been the first Black woman to work as a disc jockey in the United States. Alongside her, Porky Chedwick played the records of Black musicians that he had been collecting for years, and in the late 1940s the little Homestead station was where Pittsburgh heard Black music and Black news on the air.
 
-In 1956 the station took the call letters WAMO and switched to country music. It did not stay country: WAMO went on to become the best-known Black station in Pittsburgh, a rhythm-and-blues force for decades.
+In 1956 the station took the call letters WAMO and switched to country music. It did not stay country: WAMO went on to become the best-known Black station in Pittsburgh, a [[rhythm-and-blues|rhythm-and-blues]] force for decades.
 
 A station built for the city's many immigrant communities gave a Black woman a microphone of her own in 1948, and Black radio in Pittsburgh began from that small start.

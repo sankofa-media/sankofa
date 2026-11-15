@@ -20,6 +20,9 @@ func TestStepLabel(t *testing.T) {
 		{in: "{at Oyo · 1949 The drums.", bad: true},
 		{in: "{at  · 1949} The drums.", bad: true},
 		{in: "{at A · B · C} x", bad: true},
+		{in: "{at [[oyo|Oyo]] · 1949} The drums.", bad: true},
+		{in: "{female} {at Oyo · [[y|1949]]} The drums.", bad: true},
+		{in: "{at Oyo · 1949} The [[drums|drums]].", label: "Oyo · 1949", text: "The [[drums|drums]]."},
 		{in: "{at National Conservatory of Music, East 17th Street, New York · 1892} x", bad: true},
 	} {
 		label, text, err := stepLabel(tc.in)

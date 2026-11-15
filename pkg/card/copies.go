@@ -68,6 +68,24 @@ func copyBody(body, edition string) string {
 	return strings.Join(CopyParagraphs(body, edition), "\n\n")
 }
 
+// LinkInLabel reports whether a paragraph's step label, the `{at Place · Year}`
+// after an optional copy marker, carries a [[card link]]. A label is a caption
+// beside the step, not text: the museum shows it plain, so a link there would
+// show its markup or vanish, and the mention belongs in the paragraph itself.
+func LinkInLabel(p string) bool {
+	for _, m := range []string{MarkerMale, MarkerFemale} {
+		p = strings.TrimPrefix(p, m)
+	}
+	if !strings.HasPrefix(p, "{at ") {
+		return false
+	}
+	end := strings.Index(p, "}")
+	if end < 0 {
+		end = len(p)
+	}
+	return strings.Contains(p[:end], "[[")
+}
+
 // Words counts the words of prose with link markup replaced by its text.
 func Words(text string) int {
 	return len(strings.Fields((&Card{Body: text}).PlainBody()))

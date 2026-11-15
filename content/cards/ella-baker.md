@@ -25,7 +25,7 @@ sources:
   - {title: "SNCC Digital Gateway: Fannie Lou Hamer", url: "https://snccdigital.org/people/fannie-lou-hamer/"}
   - {title: "Stanford King Institute: Hamer, Fannie Lou", url: "https://kinginstitute.stanford.edu/hamer-fannie-lou"}
 ---
-Ella Baker was born in Norfolk, Virginia, in 1903, the granddaughter of people born into slavery. In the late 1930s and the 1940s she worked for the National Association for the Advancement of Colored People, rising to director of branches. Later she ran the Atlanta headquarters of Martin Luther King Jr.'s new Southern Christian Leadership Conference.
+Ella Baker was born in Norfolk, Virginia, in 1903, the granddaughter of people born into slavery. In the late 1930s and the 1940s she worked for the National Association for the Advancement of Colored People, rising to director of branches. Later she ran the Atlanta headquarters of [[martin-luther-king|Martin Luther King Jr]].'s new Southern Christian Leadership Conference.
 
 In early 1960 Black students began sitting in at whites-only lunch counters, and the sit-ins spread across the South. Baker called the young activists to a conference at Shaw University in Raleigh over Easter weekend in April. King hoped they would form a student wing of his organisation. Baker urged them to stay independent, and they founded the Student Nonviolent Coordinating Committee. Writing up the meeting, she said the sit-ins were about "something much bigger than a hamburger or even a giant-sized Coke" and praised the students' "group-centered leadership".
 

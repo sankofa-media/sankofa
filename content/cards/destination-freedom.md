@@ -22,7 +22,7 @@ sources:
 ---
 Destination Freedom was a weekly radio drama that went out from WMAQ in Chicago on Sunday mornings, from 27 June 1948 to August 1950. On the radio of the day, Black performers were heard mostly in comedy that recycled minstrel stereotypes.
 
-Its writer, Richard Durham, was born in rural Mississippi in 1917 and came to Chicago with his family in 1923, in the Great Migration. He learned to write for radio in the WPA Writers' Project, worked as a reporter for the [[chicago-defender|Chicago Defender]] and had already created Here Comes Tomorrow, the first radio soap opera about a Black family. In Destination Freedom he dramatised Black lives as a fight for freedom: Crispus Attucks, Frederick Douglass and Harriet Tubman, and the Black stars of his own day.
+Its writer, Richard Durham, was born in rural Mississippi in 1917 and came to Chicago with his family in 1923, in the Great Migration. He learned to write for radio in the WPA Writers' Project, worked as a reporter for the [[chicago-defender|Chicago Defender]] and had already created Here Comes Tomorrow, the first radio soap opera about a Black family. In Destination Freedom he dramatised Black lives as a fight for freedom: Crispus Attucks, [[douglass-covey|Frederick Douglass]] and Harriet Tubman, and the Black stars of his own day.
 
 The station kept the right of final approval over his scripts and often insisted on changes. The series ran for just over two years. Durham went on writing for radio and television until his death in 1984.
 

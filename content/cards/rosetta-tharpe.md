@@ -29,7 +29,7 @@ sources:
 media:
   - {type: "image", file: "rosetta-tharpe.jpg", caption: "Sister Rosetta Tharpe with her guitar, publicity photograph, 1938", credit: "James J. Kriegsmann", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Sister_Rosetta_Tharpe_(1938_publicity_photo_with_guitar).jpg"}
 ---
-Sister Rosetta Tharpe, born in 1915 in Cotton Plant, Arkansas, was a Pentecostal gospel singer and guitarist whom rock and roll later called its godmother. As a child she performed beside her mother, an evangelist.
+Sister Rosetta Tharpe, born in 1915 in Cotton Plant, Arkansas, was a Pentecostal [[gospel|gospel]] singer and guitarist whom [[rock-n-roll|rock and roll]] later called its godmother. As a child she performed beside her mother, an evangelist.
 
 In the fall of 1938 she walked onto the stage of the Cotton Club in Manhattan, and that year she made her first Decca records, among them "Rock Me", and sang at John Hammond's From Spirituals to Swing concert at Carnegie Hall. With Sammy Price she released "Strange Things Happening Every Day", a number two on the "race" chart. In 1951 she married for the third time before a sold-out baseball stadium in Washington, playing electric guitar from the outfield.
 

@@ -51,9 +51,9 @@ sources:
 media:
   - {type: "image", file: "afrobeat.jpg", caption: "Fela Kuti on stage, promotional photograph distributed by Celluloid Records, 1986", credit: "Unknown photographer, distributed by Celluloid Records; scan via Wikimedia Commons", license: "Public domain (US: published 1986 without copyright notice)", url: "https://commons.wikimedia.org/wiki/File:Fela_Kuti_circa_1986.jpg"}
 ---
-Afrobeat is long, hypnotic dance music from Lagos. A big band builds a trance-like groove that can fill an LP side; horns punch riffs over the drums, and Fela Kuti sings and preaches in Pidgin English while a chorus answers. It joined highlife and jazz to the drive of James Brown's funk, made for the dance floor and for arguing with power.
+Afrobeat is long, hypnotic dance music from Lagos. A big band builds a trance-like groove that can fill an LP side; horns punch riffs over the drums, and Fela Kuti sings and preaches in Pidgin English while a chorus answers. It joined [[highlife|highlife]] and [[jazz|jazz]] to the drive of James Brown's [[funk|funk]], made for the dance floor and for arguing with power.
 
-In 1969 Fela's band ended up broke in Los Angeles, where the activist Sandra Izsadore gave him The Autobiography of Malcolm X and told him about the Black Panthers.
+In 1969 Fela's band ended up broke in Los Angeles, where the activist Sandra Izsadore gave him The Autobiography of [[malcolm-x|Malcolm X]] and told him about the Black Panthers.
 
 {male} At home the music ran on the drums of Tony Allen, a self-taught Lagos drummer and former radio engineer. Fela heard him in 1964; they recorded more than thirty albums, and Fela said that without Tony Allen there would be no afrobeat. The politics had a price: after the album Zombie mocked the army, about a thousand soldiers razed Fela's Kalakuta Republic commune in 1977 and threw his mother from a window, and she died of her injuries. Allen left at the end of the 1970s after rows over royalties, settled in Paris and played on worldwide; Brian Eno called him perhaps the greatest drummer who has ever lived. He died in Paris in 2020.
 

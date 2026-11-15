@@ -27,7 +27,7 @@ sources:
   - {title: "Stanford King Institute: Jackson, Mahalia", url: "https://kinginstitute.stanford.edu/jackson-mahalia"}
   - {title: "64 Parishes: Mahalia Jackson", url: "https://64parishes.org/entry/mahalia-jackson"}
 ---
-"Take My Hand, Precious Lord" is a [[gospel|gospel]] song: a hymn in the blues-inflected church style Thomas A. Dorsey was building in Chicago in the early 1930s. Dorsey had made his name in the blues as "Georgia Tom", playing for Ma Rainey. In August 1932 he left his pregnant wife, Nettie, to sing at a revival in St. Louis. A telegram called him home: she had died in childbirth, and their son died the next day.
+"Take My Hand, Precious Lord" is a [[gospel|gospel]] song: a hymn in the [[blues|blues]]-inflected church style Thomas A. Dorsey was building in Chicago in the early 1930s. Dorsey had made his name in the blues as "Georgia Tom", playing for Ma Rainey. In August 1932 he left his pregnant wife, Nettie, to sing at a revival in St. Louis. A telegram called him home: she had died in childbirth, and their son died the next day.
 
 On the Saturday after her death, with his friend Theodore Frye, he sat down at a piano. He took an old hymn tune by George Allen, sung to "Must Jesus Bear the Cross Alone", and set new words to it: a tired, weak, worn man asking to be led through the storm and the night.
 

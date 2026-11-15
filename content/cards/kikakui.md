@@ -26,7 +26,7 @@ sources:
 ---
 Kikakui, or Ki-ka-ku, is a syllabary for Mende, a language of Sierra Leone. Each sign stands for a whole syllable, a consonant together with its vowel, and the lines run from right to left, a mark of the Arabic script that its Muslim makers knew.
 
-Most accounts credit a first set of signs to Mohamed Turay. His student Kisimi Kamara reworked and enlarged it around 1921, until it held some 195 signs; some traditions name Kamara alone as the inventor. Its syllabic plan owes much to the older [[vai-script|Vai script]] of neighbouring Liberia.
+Most accounts credit a first set of signs to Mohamed Turay. His student Kisimi Kamara reworked and enlarged it around 1921, until it held some 195 signs; some traditions name Kamara alone as the inventor. Its syllabic plan owes much to the older [[vai-script|Vai script]] of neighbouring [[liberia|Liberia]].
 
 Through the 1920s and 1930s the script spread beyond the Barri chiefdom. Schools opened to teach it, Kamara ran one himself, and Kikakui became a popular way to write letters and keep records in a script of the Mende's own.
 

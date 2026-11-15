@@ -22,7 +22,7 @@ sources:
 media:
   - {type: "image", file: "palenquero.jpg", caption: "Context for the Palenquero language: San Basilio de Palenque, Colombia; photograph, 1 December 2007.", credit: "kosmel bonfante", license: "CC BY 3.0", url: "https://commons.wikimedia.org/wiki/File:San_basilio_de_palenque_-_panoramio_(2).jpg"}
 ---
-Palenquero, which its speakers simply call "lengua", "the language", is spoken in San Basilio de Palenque, a village some 60 kilometres from Cartagena, Colombia. Most of its words come from Spanish, but its grammar does not: it bears the stamp of Central African Bantu languages, above all Kikongo, spoken by many of the village's founders. It is the only Spanish-based creole on the South American mainland.
+Palenquero, which its speakers simply call "lengua", "the language", is spoken in [[san-basilio-de-palenque|San Basilio de Palenque]], a village some 60 kilometres from Cartagena, Colombia. Most of its words come from Spanish, but its grammar does not: it bears the stamp of Central African Bantu languages, above all Kikongo, spoken by many of the village's founders. It is the only Spanish-based creole on the South American mainland.
 
 In the 17th century people who escaped slavery around Cartagena built fortified refuges in the hinterland, called palenques. San Basilio grew out of one of them, as [[palmares|Palmares]] had grown from runaways in Brazil.
 

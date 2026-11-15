@@ -28,7 +28,7 @@ Brazil abolished slavery in 1888, but in São Paulo, the booming coffee state, t
 
 O Clarim, soon renamed O Clarim d'Alvorada, "The Dawn Bugle", first appeared on 6 January 1924. Its founders were two young Black men, Jayme de Aguiar and José Correia Leite. At first it printed poems and society news. In 1928 its masthead changed to "News, literature and combat", and Correia Leite took charge of the paper.
 
-The paper read the Black press of the United States, including the [[chicago-defender|Chicago Defender]] and Marcus Garvey's Negro World. It campaigned to honour the Mãe Preta, the Black nursemaid of Brazilian homes, and argued that Black Brazilians had helped build the nation and deserved recognition as its citizens.
+The paper read the Black press of the United States, including the [[chicago-defender|Chicago Defender]] and Marcus Garvey's [[negro-world|Negro World]]. It campaigned to honour the Mãe Preta, the Black nursemaid of Brazilian homes, and argued that Black Brazilians had helped build the nation and deserved recognition as its citizens.
 
 Its campaigns helped prepare the Frente Negra Brasileira, founded in 1931. But the Clarim group, led by Correia Leite, soon broke with the Frente, whose leaders it accused of authoritarianism. The quarrel ended the paper in the early 1930s; a revival in 1940 is known from a single issue.
 

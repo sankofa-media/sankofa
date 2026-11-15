@@ -24,7 +24,7 @@ media:
 ---
 During the American Civil War some of the Union's best information on the Confederacy came from Black people, enslaved and free. In 1999 a CIA study by P. K. Rose gathered their stories under the title "Black Dispatches".
 
-In Richmond, the Confederate capital, the Unionist Elizabeth Van Lew ran a spy ring, and free and enslaved Black Richmonders were among its most vital members. One of them was Mary Jane Richards. Born enslaved in the Van Lew household around 1840, she was sent north to school, sailed to Liberia in 1855 and came back to Richmond in 1860. In April 1861 she married Wilson Bowser. In the war she served in Van Lew's network, which helped Union prisoners and later passed military intelligence to the Union army.
+In Richmond, the Confederate capital, the Unionist Elizabeth Van Lew ran a spy ring, and free and enslaved Black Richmonders were among its most vital members. One of them was Mary Jane Richards. Born enslaved in the Van Lew household around 1840, she was sent north to school, sailed to [[liberia|Liberia]] in 1855 and came back to Richmond in 1860. In April 1861 she married Wilson Bowser. In the war she served in Van Lew's network, which helped Union prisoners and later passed military intelligence to the Union army.
 
 In 1911 Van Lew's niece told Harper's Magazine about a spy called "Mary Elizabeth Bowser" who had worked inside Jefferson Davis's own residence. Historians later showed the name and most details to be wrong and traced the real woman: after the war Mary Jane Richards spoke in New York as "Richmonia Richards" and taught freed people in Freedmen's Bureau schools.
 

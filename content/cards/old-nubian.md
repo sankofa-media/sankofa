@@ -26,7 +26,7 @@ media:
 ---
 Old Nubian is the written language of medieval Christian Nubia, the Nile kingdoms of what is now southern Egypt and northern Sudan. It is an ancient form of the Nubian still spoken along the river, closest to today's Nobiin, and belongs to the Nilo-Saharan family. Its texts run from the late 8th century to the 14th.
 
-Nubians wrote it in the Coptic alphabet, which itself came from Greek. Coptic had no letters for some Nubian sounds, so scribes added their own, and a few of them were taken from the old [[meroitic-script|Meroitic script]] of the kingdom of Kush. Old Nubian also has punctuation of its own, including a full stop and separate marks for direct and indirect questions.
+Nubians wrote it in the [[coptic|Coptic]] alphabet, which itself came from Greek. Coptic had no letters for some Nubian sounds, so scribes added their own, and a few of them were taken from the old [[meroitic-script|Meroitic script]] of the kingdom of Kush. Old Nubian also has punctuation of its own, including a full stop and separate marks for direct and indirect questions.
 
 Most surviving texts are Christian writings translated from Greek; others are documents of everyday business. As Islam spread along the Nile and Arabic took hold, Nubians stopped writing their language, and its alphabet fell silent.
 

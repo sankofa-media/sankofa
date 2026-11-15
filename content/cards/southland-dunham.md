@@ -26,7 +26,7 @@ sources:
 media:
   - {type: "image", file: "southland-dunham.jpg", caption: "Context for Southland: dancer and choreographer Katherine Dunham, photographed 25 January 1956; Library of Congress.", credit: "Phyllis Twachtman / New York World-Telegram & Sun; Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Katherine_Dunham_ppmsca.05792.jpg"}
 ---
-Southland is a ballet about lynching that the American dancer and choreographer Katherine Dunham created in 1951, when the United States wanted its culture abroad to show only a flattering picture of the country. It was commissioned by the Symphony of Chile and premiered in Santiago. The story is set in the American South: a white woman falsely accuses a Black man of rape, and he is lynched. Julie Belafonte, who danced the accuser, later recalled how hard it was for her to play the part.
+Southland is a ballet about lynching that the American dancer and choreographer [[dunham-esplanada-1950|Katherine Dunham]] created in 1951, when the United States wanted its culture abroad to show only a flattering picture of the country. It was commissioned by the Symphony of Chile and premiered in Santiago. The story is set in the American South: a white woman falsely accuses a Black man of rape, and he is lynched. Julie Belafonte, who danced the accuser, later recalled how hard it was for her to play the part.
 
 US embassy officials in Santiago objected, and Southland was performed there only once. In 1953 Dunham staged it again during her season in Paris, then dropped it from her repertoire. When the State Department began sending American dance companies abroad, starting with José Limón's in 1954, it did not support Dunham's, and some historians link this to Southland.
 

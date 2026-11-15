@@ -23,7 +23,7 @@ sources:
   - {title: "Encyclopaedia Britannica: Bob Marley", url: "https://www.britannica.com/biography/Bob-Marley"}
   - {title: "Encyclopaedia Britannica: Rastafari", url: "https://www.britannica.com/topic/Rastafari"}
 ---
-"Rivers of Babylon" is a reggae song by the Melodians, a vocal group from Kingston, Jamaica, that included Brent Dowe and McNaughton. They made it with the producer Leslie Kong in the years when [[pinnacle-rastafari|Rastafari]] had taken hold among Kingston's musicians; sources disagree on whether that was 1967 or 1971. Its words adapt two psalms. Psalm 137 is the lament of the exiled Hebrews who sat by the rivers of Babylon and wept when they remembered Zion; Psalm 19:14 supplies the prayer that the words of the mouth and the meditation of the heart be acceptable.
+"Rivers of Babylon" is a [[reggae|reggae]] song by the Melodians, a vocal group from Kingston, Jamaica, that included Brent Dowe and McNaughton. They made it with the producer Leslie Kong in the years when [[pinnacle-rastafari|Rastafari]] had taken hold among Kingston's musicians; sources disagree on whether that was 1967 or 1971. Its words adapt two psalms. Psalm 137 is the lament of the exiled Hebrews who sat by the rivers of Babylon and wept when they remembered Zion; Psalm 19:14 supplies the prayer that the words of the mouth and the meditation of the heart be acceptable.
 
 Rastafarians, drawing on the story of the Babylonian captivity, saw people of African descent in the Americas as exiles in Babylon, longing for freedom as the Israelites had. In the Melodians' hands the old lament of captives became a song of Rastafarian faith.
 

@@ -27,7 +27,7 @@ media:
 ---
 In 1900 Paris held a world's fair, the Exposition Universelle, and the
 American section included a Negro Exhibit, put together by Thomas J.
-Calloway, W. E. B. Du Bois, Booker T. Washington and Daniel Murray of the
+Calloway, W. E. B. Du Bois, [[booker-t-dinner-1901|Booker T. Washington]] and Daniel Murray of the
 Library of Congress. Its job was to show the economic and social progress
 of African Americans in the decades since emancipation.
 

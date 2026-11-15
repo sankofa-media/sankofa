@@ -31,4 +31,4 @@ In the eighteenth century Brazil's diamonds came from one closely guarded distri
 
 They lived together as a couple for some seventeen years without marrying and had thirteen children. She sent her daughters to the convent school at Macaúbas, owned houses, jewels and enslaved people, and belonged to four religious brotherhoods. In 1771 Fernandes sailed for Portugal over a family inheritance and never came back; she kept her standing. When she died in 1796 she was buried, as her will asked, under the floor of the church of São Francisco, one of her brotherhoods.
 
-In 1868 a local memoirist recast her as a coarse, graceless woman who lorded it over Tejuco, and the 1976 film Xica da Silva turned her into a seductress. The documents show neither: a freedwoman using the few openings the system allowed to raise her children into the elite.
+In 1868 a local memoirist recast her as a coarse, graceless woman who lorded it over Tejuco, and the 1976 film [[xica-da-silva-film|Xica da Silva]] turned her into a seductress. The documents show neither: a freedwoman using the few openings the system allowed to raise her children into the elite.

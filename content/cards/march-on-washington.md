@@ -25,6 +25,6 @@ media:
 ---
 On 28 August 1963 the March on Washington for Jobs and Freedom gathered at the Lincoln Memorial. The idea belonged to A. Philip Randolph, founder of the Brotherhood of Sleeping Car Porters. In 1941 his threat of a march had pushed President Franklin Roosevelt to order an end to discrimination in the defence industry, and Randolph called the march off. Twenty-two years later he revived it, with his long-time partner Bayard Rustin as its organiser.
 
-The demands were concrete: a strong civil rights bill, jobs and fair employment, desegregated schools. Some 250,000 people came. The SNCC chairman John Lewis agreed to cut the sharpest lines of his draft at the request of allies, but what he said was still sharp. Near the end Martin Luther King Jr. delivered the speech remembered as "I Have a Dream".
+The demands were concrete: a strong civil rights bill, jobs and fair employment, desegregated schools. Some 250,000 people came. The SNCC chairman John Lewis agreed to cut the sharpest lines of his draft at the request of allies, but what he said was still sharp. Near the end [[martin-luther-king|Martin Luther King Jr]]. delivered the speech remembered as "I Have a Dream".
 
 The bill the marchers demanded became the [[civil-rights-act-1964|Civil Rights Act of 1964]] the following summer. Randolph's old threat had come true at last, and the movement had shown that it could fill the capital peacefully.

@@ -20,7 +20,7 @@ sources:
 media:
   - {type: "image", file: "lucumi.jpg", caption: "Context: religious goods associated with Santería for sale in Havana, 2015.", credit: "Ji-Elle", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:La_Havane-Vente_d%27articles_religieux-Santer%C3%ADa_(2).jpg"}
 ---
-Lucumí, also called Anagó, is the ritual language of Cuba's Lucumí religion, better known as Santería. It comes from Yoruba, the language of the Yoruba peoples of West Africa, and in Cuba it is sometimes simply called Yoruba. Nobody speaks it as a mother tongue. It lives in worship: in the prayers to the orishas, the Yoruba deities, and in the songs that go with the music and dance of the ceremonies.
+Lucumí, also called Anagó, is the ritual language of Cuba's Lucumí religion, better known as [[regla-de-ocha|Santería]]. It comes from Yoruba, the language of the Yoruba peoples of West Africa, and in Cuba it is sometimes simply called Yoruba. Nobody speaks it as a mother tongue. It lives in worship: in the prayers to the orishas, the Yoruba deities, and in the songs that go with the music and dance of the ceremonies.
 
 It came to Cuba with enslaved Africans who spoke Yoruba and carried the religion of their homeland across the ocean. In Cuba their faith absorbed Catholic elements, and their language survived not as everyday speech but as sacred words, the language of the temple rather than of the kitchen.
 

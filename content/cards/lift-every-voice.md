@@ -26,6 +26,6 @@ In 1900 James Weldon Johnson was principal of the Stanton School in Jacksonville
 
 Johnson wrote a poem, and his brother John Rosamond Johnson, a composer and pianist, set it to music. On 12 February 1900 a chorus of 500 schoolchildren sang "Lift Every Voice and Sing" for the first time. Its verses move from rejoicing in liberty to the memory of suffering, "Stony the road we trod", and on to the road still ahead.
 
-Johnson soon more or less forgot the song. The children did not: they kept singing it, and it spread through Black churches and schools across the South and beyond. In 1905 Booker T. Washington endorsed it, and in 1919 the NAACP adopted it as its official song. It came to be called the Negro National Anthem.
+Johnson soon more or less forgot the song. The children did not: they kept singing it, and it spread through Black churches and schools across the South and beyond. In 1905 [[booker-t-dinner-1901|Booker T. Washington]] endorsed it, and in 1919 the NAACP adopted it as its official song. It came to be called the Negro National Anthem.
 
 It became a rallying song of the civil rights movement of the 1950s and 1960s, and in 2009 the civil rights leader Joseph Lowery quoted its lines in his benediction at Barack Obama's inauguration.

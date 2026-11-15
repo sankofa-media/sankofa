@@ -468,6 +468,18 @@ func (s *Set) Validate() []error {
 		for _, e := range ProseErrors(c.Body) {
 			bad(c, "%s", e)
 		}
+		for i, p := range Paragraphs(c.Body) {
+			if LinkInLabel(p) {
+				bad(c, "paragraph %d: a card link inside the {at} label; link in the text instead", i+1)
+			}
+		}
+		for lang, t := range c.Translations {
+			for i, p := range Paragraphs(t.Body) {
+				if LinkInLabel(p) {
+					bad(c, "%s translation paragraph %d: a card link inside the {at} label; link in the text instead", lang, i+1)
+				}
+			}
+		}
 		for lang, t := range c.Translations {
 			for _, e := range ProseErrors(t.Body) {
 				bad(c, "%s translation: %s", lang, e)

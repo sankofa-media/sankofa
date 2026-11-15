@@ -26,7 +26,7 @@ sources:
 media:
   - {type: "image", file: "soul-makossa.jpg", caption: "Context for Soul Makossa: Manu Dibango at the Les Escales festival in Saint-Nazaire, France; 26 July 2019.", credit: "Selbymay", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:LesEscales2019ManuDibango_03_(cropped).jpg"}
 ---
-"Soul Makossa" is a 1972 track by Manu Dibango, a saxophonist born in Douala, Cameroon, who mixed his country's makossa dance rhythm with funk. That year Cameroon's football team played in the Africa Cup of Nations, and Dibango recorded a song in its support, "Hymne de la 8e Coupe d'Afrique des Nations". "Soul Makossa" was its B-side, and at first the single drew little interest.
+"Soul Makossa" is a 1972 track by Manu Dibango, a saxophonist born in Douala, Cameroon, who mixed his country's makossa dance rhythm with [[funk|funk]]. That year Cameroon's football team played in the Africa Cup of Nations, and Dibango recorded a song in its support, "Hymne de la 8e Coupe d'Afrique des Nations". "Soul Makossa" was its B-side, and at first the single drew little interest.
 
 In New York, the DJ David Mancuso found the single in a Brooklyn shop selling imports and played it at the Loft, his dance parties. Dancers loved it; the radio DJ Frankie Crocker put it on WBLS, and demand exploded. The record had no American distribution, so local bands rushed out cover versions until Atlantic released the original. In 1973 it reached number 35 on the Billboard Hot 100: a record from Cameroon, carried up the American charts by the dance floor.
 

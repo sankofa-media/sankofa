@@ -18,7 +18,7 @@ sources:
   - {title: "Alex Bellos, Puzzle Monday: A Divine Script From the Congo, Atlas Obscura (archived)", url: "http://web.archive.org/web/20251225101142/https://www.atlasobscura.com/articles/puzzles-mandombe-congo-language"}
   - {title: "Simon Ager, Omniglot: Mandombe", url: "https://omniglot.com/writing/mandombe.htm"}
 ---
-Mandombe is a script made in the Democratic Republic of the Congo for its own languages, Kikongo, Lingala and Swahili among them. Its name means "for the Blacks". It is written from left to right in blocks, each block a syllable. Every sign is built from two angular shapes, mirror images that look like a 5 and a 2; turning a shape tells one consonant from another.
+Mandombe is a script made in the Democratic Republic of the Congo for its own languages, Kikongo, Lingala and [[swahili|Swahili]] among them. Its name means "for the Blacks". It is written from left to right in blocks, each block a syllable. Every sign is built from two angular shapes, mirror images that look like a 5 and a 2; turning a shape tells one consonant from another.
 
 In 1978 David Wabeladio Payi, then about twenty, dreamed that Simon Kimbangu, the prophet of the Kimbanguist church, came to him. Afterwards, looking at the brick wall of his room, he saw the 5 and the 2 in the joints between the bricks, and from those two shapes he worked out the whole script.
 

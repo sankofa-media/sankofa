@@ -23,8 +23,8 @@ sources:
   - {title: "Unicode Consortium: Unicode 7.0.0 (released 16 June 2014)", url: "https://www.unicode.org/versions/Unicode7.0.0/"}
   - {title: "SIL International, Writing Systems Information (formerly ScriptSource): Bassa Vah", url: "https://writingsystems.info/scrlang/scripts/bass/"}
 ---
-Bassa Vah is an alphabet for Bassa, a tonal language of Liberia. It is written from left to right and has 23 consonants, 7 vowels and 5 tone marks. The tone marks are written inside the vowel letters themselves.
+Bassa Vah is an alphabet for Bassa, a tonal language of [[liberia|Liberia]]. It is written from left to right and has 23 consonants, 7 vowels and 5 tone marks. The tone marks are written inside the vowel letters themselves.
 
-Its modern form is owed to Thomas Flo Lewis, a Bassa from Liberia who studied in Syracuse, New York, at the start of the 20th century. While he was there he had texts in the script printed on local presses, and he is credited with bringing it into print and spreading it. Where he learned it is a mystery. Bassa tradition says an older system of signs had lived on among Bassa people enslaved in the Americas, and that Lewis met their descendants on his travels; little documentary evidence supports the story.
+Its modern form is owed to Thomas Flo Lewis, a Bassa from [[liberia|Liberia]] who studied in Syracuse, New York, at the start of the 20th century. While he was there he had texts in the script printed on local presses, and he is credited with bringing it into print and spreading it. Where he learned it is a mystery. Bassa tradition says an older system of signs had lived on among Bassa people enslaved in the Americas, and that Lewis met their descendants on his travels; little documentary evidence supports the story.
 
 Lewis died in 1935, but the alphabet outlived him. In June 2014 Bassa Vah entered the Unicode Standard in version 7.0, and it now stands there beside other scripts that West Africans made for their own languages, among them [[vai-script|Vai]] and [[kikakui|Mende Kikakui]].

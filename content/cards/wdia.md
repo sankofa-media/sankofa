@@ -28,6 +28,6 @@ WDIA was a small radio station in Memphis, Tennessee, one of the new stations th
 
 Its white owners, Bert Ferguson and John R. Pepper, decided to aim at the city's Black listeners. Ferguson hired Nat D. Williams, a history teacher at Booker T. Washington High School who had run the amateur nights at the Palace Theater on Beale Street since 1935. That year Williams became the first Black radio announcer in Memphis.
 
-His afternoon programme brought the station money, and the owners added one Black programme after another, rhythm and blues and gospel, until the whole schedule was filled. By the summer of 1949 WDIA was the first station in the United States with an entire on-air staff of Black disc jockeys. Among them, by 1949, was a young bluesman, B.B. King. The station itself stayed in white hands.
+His afternoon programme brought the station money, and the owners added one Black programme after another, [[rhythm-and-blues|rhythm and blues]] and [[gospel|gospel]], until the whole schedule was filled. By the summer of 1949 WDIA was the first station in the United States with an entire on-air staff of Black disc jockeys. Among them, by 1949, was a young bluesman, B.B. King. The station itself stayed in white hands.
 
 WDIA showed that a whole station could be built for Black listeners: full-time Black-oriented radio was born in Memphis.
