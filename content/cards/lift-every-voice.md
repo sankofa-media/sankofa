@@ -19,6 +19,8 @@ sources:
   - {title: "Bill Delaney, The Jaxson: The history of 'Lift Ev'ry Voice and Sing' (2024)", url: "https://www.thejaxsonmag.com/article/the-history-of-lift-evry-voice-and-sing/"}
   - {title: "Composers Datebook (YourClassical): The Brothers Johnson write an anthem", url: "https://www.yourclassical.org/episode/2011/02/12/the-brothers-johnson-write-an-anthem"}
   - {title: "Encyclopedia of Black Studies (SAGE): Lift Every Voice and Sing", url: "https://sk.sagepub.com/ency/edvol/embed/blackstudies/chpt/lift-every-voice-sing"}
+media:
+  - {type: "image", file: "lift-every-voice.jpg", caption: "Cover of the sheet music for Lift Every Voice and Sing, published by Edward B. Marks Music Company, New York, 1921.", credit: "James Weldon Johnson and J. Rosamond Johnson / Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Lift_Every_Voice_and_Sing_1921_sheet_music_cover.jpg"}
 ---
 In 1900 James Weldon Johnson was principal of the Stanton School in Jacksonville, Florida, a segregated school for Black children. For Abraham Lincoln's birthday, 12 February, he was asked to provide something for a celebration at the school.
 

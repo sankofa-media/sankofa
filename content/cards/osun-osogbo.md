@@ -19,6 +19,8 @@ sources:
   - {title: "Encyclopaedia Britannica: Osogbo", url: "https://www.britannica.com/place/Osogbo"}
   - {title: "Wolfgang Denk, Obituary: Susanne Wenger, Susanne Wenger Foundation", url: "https://susannewengerfoundation.at/en/obituary-susanne-wenger"}
   - {title: "Adunni Olorisha Trust: Who was Susanne Wenger / Àdùnní Olórìṣà?, Google Arts & Culture", url: "https://artsandculture.google.com/story/who-was-susanne-wenger-%C3%80d%C3%B9nn%C3%AD-ol%C3%B3r%C3%AC%E1%B9%A3%C3%A0-the-osun-osogbo-grove/IAXBGVfmA6LkIA?hl=en"}
+media:
+  - {type: "image", file: "osun-osogbo.jpg", caption: "Sunset over the Osun River near the suspension bridge at Osun-Osogbo; 13 January 2016.", credit: "Inyang Effiong", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:OsunOsogbo_Shrine_Sunset_over_the_Osun_River.jpg"}
 ---
 Osogbo, the capital of Nigeria's Osun State, lies on the Osun River. In the town lies a dense forest, one of the last patches of primary high forest in southern Nigeria, held to be the home of Osun, the Yoruba river goddess. Every Yoruba town once had such a grove; this is the largest to survive. The town's founding story binds its first ruler, Laro, to the goddess and to the fish of her river.
 

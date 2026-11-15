@@ -17,6 +17,8 @@ sources:
   - {title: "UNESCO Intangible Cultural Heritage: Joumou soup", url: "https://ich.unesco.org/en/RL/joumou-soup-01853"}
   - {title: "Saeed Kamali Dehghan, Culture in a bowl: Haiti's joumou soup awarded protected status by Unesco, The Guardian (17 December 2021)", url: "https://www.theguardian.com/global-development/2021/dec/17/culture-in-a-bowl-haitis-joumou-soup-awarded-protected-status-by-unesco"}
   - {title: "NPR Weekend Edition: Haitian soup joumou awarded protected cultural heritage status by UNESCO (18 December 2021)", url: "https://www.npr.org/2021/12/18/1065477169/haitian-soup-joumou-awarded-protected-cultural-heritage-status-by-unesco"}
+media:
+  - {type: "image", file: "soup-joumou.jpg", caption: "A pot of soup joumou, the traditional Haitian pumpkin soup; photograph, 9 July 2018.", credit: "Lëa-Kim Châteauneuf", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Soup_joumou.jpg"}
 ---
 Soup joumou is a Haitian soup made from joumou, a turban squash also called giraumon, cooked with meat, vegetables and hot peppers. In colonial Saint-Domingue it was a dish for the masters: enslaved Africans cooked it for the people who owned them, and it was reserved for the owners' table.
 

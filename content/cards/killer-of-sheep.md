@@ -20,6 +20,8 @@ sources:
   - {title: "Doug Cummings, UCLA Film & Television Archive, L.A. Rebellion: Killer of Sheep", url: "https://www.cinema.ucla.edu/la-rebellion/films/killer-sheep"}
   - {title: "Howie Movshovitz, NPR: Long-Lost Classic 'Killer of Sheep' Hits Theaters (29 March 2007)", url: "https://www.npr.org/transcripts/9213673"}
   - {title: "Milestone Films: Killer of Sheep", url: "https://milestonefilms.com/products/killer-of-sheep"}
+media:
+  - {type: "image", file: "killer-of-sheep.jpg", caption: "Context: Charles Burnett, photographed by Studio Harcourt in Paris, 2008.", credit: "Studio Harcourt Paris", license: "CC BY 3.0", url: "https://commons.wikimedia.org/wiki/File:BURNETT_Charles-24x30-2008.jpg"}
 ---
 Killer of Sheep is a feature film that Charles Burnett made while he was a student at the UCLA film school, shooting it in black and white on 16 mm film over spare weekends from the early 1970s and finishing it in 1977. It is set in Watts, a Black neighbourhood of South Los Angeles.
 

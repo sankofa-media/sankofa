@@ -23,6 +23,8 @@ sources:
   - {title: "Jean-Paul Jean, La Cour de cassation et l'esclavage (AHJUCAF, La Rochelle, 2020)", url: "https://www.ahjucaf.org/sites/default/files/inline-files/La%20Rochelle%20JP%20Jean%20esclavage%20.pdf"}
   - {title: "BnF France-Amériques: Slave and slaveries", url: "https://heritage.bnf.fr/france-ameriques/en/slave-and-slaveries-0"}
   - {title: "Sasha Turner, H-France Forum 21 (2026): review of Miranda Spieler, Slaves in Paris", url: "https://h-france.net/h-france-forum/volume-21-2026/issue-1-review-2-turner/"}
+media:
+  - {type: "image", file: "free-soil-france.jpg", caption: "Context: Louis X in a miniature from the Life of Saint Louis, about 1330–1340.", credit: "Unknown artist / Bibliothèque nationale de France, Gallica", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Ludv%C3%ADk_X.png"}
 ---
 In eighteenth-century France a maxim older than the colonies still had force: no one is a slave in France, and an enslaved person who touches French soil becomes free. Lawyers traced it to an edict of Louis X in 1315. Meanwhile France's Caribbean colonies ran on slave labour, and planters returning home brought enslaved servants with them.
 

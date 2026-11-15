@@ -6,6 +6,8 @@ further:
   - "Aretha Franklin, I Never Loved a Man the Way I Love You (Atlantic, 1967)"
   - "Otis Redding, Otis Blue: Otis Redding Sings Soul (Volt/Stax, 1965)"
   - "Джонатан Гулд, «Отис Реддинг: незаконченная жизнь» (Otis Redding: An Unfinished Life, 2017)"
+captions:
+  - "К песне «Respect»: Арета Франклин выступает в Nokia Theater в Далласе, Техас, 21 апреля 2007 года."
 ---
 «Respect» («Уважение») — соул-песня, которая начиналась как требование мужчины, а стала одним из гимнов Америки 1960-х. Отис Реддинг написал её и выпустил в 1965 году на лейбле Stax; у него уважения от своей женщины требует мужчина.
 

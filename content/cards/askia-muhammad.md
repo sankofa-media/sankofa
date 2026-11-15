@@ -20,6 +20,8 @@ sources:
   - {title: "Encyclopedia of World Biography: Askia Muhammad Ture (Gale, via Encyclopedia.com)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/askia-muhammad-ture"}
   - {title: "Ousmane Kane, Askiya Muhammad (r. 1493–1529), Encyclopedia of Islam and the Muslim World (via Encyclopedia.com)", url: "https://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/askiya-muhammad-r-1493-1529"}
   - {title: "UNESCO World Heritage Centre: Tomb of Askia", url: "https://whc.unesco.org/en/list/1139/"}
+media:
+  - {type: "image", file: "askia-muhammad.jpg", caption: "The Tomb of Askia, an earthen building in Mali; the source does not specify the photograph's date.", credit: "Taguelmoust", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Askia.jpg"}
 ---
 In the late 15th century the Songhai empire, centred on Gao on the middle Niger, was the great power of the western Sahel. Its great conqueror, Sonni Ali, died in 1492. In April 1493 Muhammad Ture defeated Ali's son and heir, Sonni Baru, took the throne and adopted the title askia; it became the name of his dynasty.
 

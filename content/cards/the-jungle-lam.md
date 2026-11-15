@@ -23,6 +23,8 @@ sources:
   - {title: "Tate Modern: Wifredo Lam (exhibition, 2016–2017)", url: "https://www.tate.org.uk/whats-on/tate-modern/wifredo-lam"}
   - {title: "ARTnews: Wifredo Lam at MoMA, a great show for a misunderstood Surrealist", url: "https://www.artnews.com/art-news/reviews/wifredo-lam-moma-retrospective-surrealism-review-1234761241/"}
   - {title: "Arte al Día: Wifredo Lam, When I Don't Sleep, I Dream, retrospective at MoMA (2026)", url: "https://www.artealdia.com/Reviews/WIFREDO-LAM-WHEN-I-DON-T-SLEEP-I-DREAM-RETROSPECTIVE-AT-MoMA"}
+media:
+  - {type: "image", file: "the-jungle-lam.jpg", caption: "Context for The Jungle: Wifredo Lam interviewed by Manuel Carbonell at Union Radio television in Havana, Cuba, 1952.", credit: "Manuel Carbonell / Beaux Arts Gallery", license: "CC BY 3.0", url: "https://commons.wikimedia.org/wiki/File:Carbonell_and_Wifrido_Lam_durning_an_interview_at_Union_Radio_television_station,_Havana_Cuba,_1952.jpg"}
 ---
 The Jungle is a large painting by the Cuban artist Wifredo Lam. He was born in 1902 in Sagua la Grande, the son of a Chinese immigrant father and a mother of African and Spanish descent. In 1938 he reached Paris and met Picasso, and soon he joined André Breton's Surrealists. The war drove him out: in 1941 he sailed from Marseille and made his way back to Havana.
 

@@ -21,6 +21,8 @@ sources:
   - {title: "SNCC Digital Gateway: Fannie Lou Hamer", url: "https://snccdigital.org/people/fannie-lou-hamer/"}
   - {title: "Lisa K. Speer, Mississippi Encyclopedia: Fannie Lou Hamer", url: "https://mississippiencyclopedia.org/entries/fannie-lou-hamer/"}
   - {title: "Stanford King Institute: Hamer, Fannie Lou", url: "https://kinginstitute.stanford.edu/hamer-fannie-lou"}
+media:
+  - {type: "image", file: "fannie-lou-hamer.jpg", caption: "Fannie Lou Hamer at the Democratic National Convention, Atlantic City, New Jersey, August 1964.", credit: "Warren K. Leffler / Library of Congress; restoration by Adam Cuerden", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Fannie_Lou_Hamer_1964-08-22.jpg"}
 ---
 Fannie Lou Hamer was born in Mississippi in 1917, the youngest of twenty children of sharecroppers, and grew up on a cotton plantation in Sunflower County. She left school after the sixth grade. For nearly two decades she and her husband, Perry, worked on a plantation outside Ruleville, where she kept the time books.
 

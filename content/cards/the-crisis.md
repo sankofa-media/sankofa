@@ -21,6 +21,8 @@ sources:
   - {title: "\"The Negro Speaks of Rivers\", Poetry for Students (Gale), via Encyclopedia.com", url: "https://encyclopedia.com/arts/educational-magazines/negro-speaks-rivers"}
   - {title: "University of Nebraska–Lincoln, The Tar Baby and the Tomahawk: The Brownies' Book", url: "https://childlit.unl.edu/topics/edi.brownies.html"}
   - {title: "Jonda McNair and Rudine Sims Bishop, To Be Great, Heroic or Beautiful: The Enduring Legacy of The Brownies' Book, The Horn Book (2018)", url: "https://www.hbook.com/story/great-heroic-beautiful-enduring-legacy-brownies-book"}
+media:
+  - {type: "image", file: "the-crisis.jpg", caption: "Cover of The Crisis, volume 19, number 1, November 1919; National Museum of African American History and Culture.", credit: "Cornelius Marion Battey / Smithsonian National Museum of African American History and Culture", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:The_Crisis_Vol._19_No._1,_November_1919_NMAAHC-2012.84.4.jpg"}
 ---
 The Crisis is the magazine of the National Association for the Advancement of Colored People (NAACP), the American civil rights organisation. Its first issue came out in November 1910, edited by [[du-bois-infographics|W. E. B. Du Bois]], who wrote that it would show "the danger of race prejudice".
 

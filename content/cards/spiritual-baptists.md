@@ -21,6 +21,8 @@ sources:
   - {title: "Trinidad Guardian: More than emancipation: Spiritual Baptist faith born out of African tradition and struggle", url: "https://www.guardian.co.tt/article/more-than-emancipation-spiritual-baptist-faith-born-out-of-african-tradition-and-struggle-6.2.2637916.2d1c2c913d"}
   - {title: "Tourism Trinidad: Spiritual Baptist Liberation Day", url: "https://visittrinidad.tt/festivals/spiritual-baptist-liberation-day"}
   - {title: "National Archives of Trinidad and Tobago: The Story of the Merikens in Trinidad (2015)", url: "https://nationalarchivestt.wordpress.com/2015/08/14/the-story-of-the-merikens-in-trinidad/"}
+media:
+  - {type: "image", file: "spiritual-baptists.jpg", caption: "Tantarian Spiritual Baptist Church in Stoke Newington, London; 10 February 2017. A contextual view of the faith's diaspora.", credit: "N Chadwick", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Stoke_Newington_Tantarian_Spiritual_Baptist_Church_-_geograph.org.uk_-_5376574.jpg"}
 ---
 The Spiritual Baptists are a faith born in Trinidad in the 19th century. They join Protestant Christianity with West African ways of worship: bells, hand-clapping, foot-stamping, loud singing and shouting. Their critics called them Shouters. Among their roots are the Baptist congregations of the [[merikins|Merikins]], Black American veterans of the War of 1812 who settled in south Trinidad.
 

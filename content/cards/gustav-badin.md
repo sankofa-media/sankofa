@@ -27,6 +27,8 @@ sources:
   - {title: "Edvard Matz, Populär Historia: Badin – ett experiment i fri uppfostran", url: "https://popularhistoria.se/sveriges-historia/1700-talet/badin-ett-experiment-i-fri-uppfostran"}
   - {title: "Tove Karlsson, Populär Historia: Badin – drottningens slavpojke blev ansedd man (2020)", url: "https://popularhistoria.se/sveriges-historia/kungar-drottningar/hovet/badin-drottningens-slavpojke-blev-ansedd-man"}
   - {title: "Miranda Bryant, The Guardian: Swedish exhibition explores life of 18th-century Black diarist (11 April 2026)", url: "https://www.theguardian.com/world/2026/apr/11/sweden-gustav-badin-exhibition-18th-century-black-diarist"}
+media:
+  - {type: "image", file: "gustav-badin.jpg", caption: "Gustav Badin, a portrait by Jakob Björck after Gustav Lundberg's 1776 pastel.", credit: "Jakob Björck, after Gustav Lundberg", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Gustav_Badin.jpg"}
 ---
 Around 1760 the Swedish court acquired an unusual new member. A boy named Couschi, born around 1747, probably on the Caribbean island of Saint Croix, was brought to Stockholm and given to Queen Lovisa Ulrika.
 

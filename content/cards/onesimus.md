@@ -21,6 +21,8 @@ sources:
   - {title: "Mass Moments (Mass Humanities): Dr. Boylston Experiments with Smallpox Inoculation, June 26, 1721", url: "https://www.massmoments.org/moment-details/dr-boylston-experiments-with-smallpox-inoculation.html"}
   - {title: "College of Physicians of Philadelphia, History of Vaccines: Black History Month: Onesimus Spreads Wisdom That Saves Lives of Bostonians During a Smallpox Epidemic", url: "https://www.historyofvaccines.org/blog/black-history-month-onesimus-spreads-wisdom-that-saves-lives-of-bostonians-during-a-smallpox-epidemic/"}
   - {title: "Erin Blakemore, History.com: How an Enslaved African Man in Boston Helped Save Generations from Smallpox", url: "https://www.history.com/articles/smallpox-vaccine-onesimus-slave-cotton-mather"}
+media:
+  - {type: "image", file: "onesimus.jpg", caption: "Context for Onesimus: Peter Pelham's 1728 portrait of Cotton Mather, the minister who enslaved him; Metropolitan Museum of Art.", credit: "Peter Pelham / Metropolitan Museum of Art", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Cottonus_Matheris_(Cotton_Mather)_MET_MM4158.jpg"}
 ---
 Colonial Boston was a Puritan town in which a church congregation could buy a man as a gift for its pastor. In 1706 the congregation of the minister Cotton Mather bought him an enslaved West African man, and Mather named him Onesimus. Asked about smallpox, Onesimus said he had "undergone an Operation, which had given him something of the Small-Pox, and would forever preserve him from it". The practice, he said, was common among his people, whom Mather wrote down as the "Guramantese". In 1716 Mather described it in a letter to the Royal Society in London.
 

@@ -23,6 +23,8 @@ sources:
   - {title: "United Nations: International Day for the Elimination of Racial Discrimination", url: "https://www.un.org/en/observances/end-racism-day"}
   - {title: "UN Press: Signing of South Africa's new constitution, statement by the Secretary-General, 10 December 1996", url: "https://press.un.org/en/1996/19961210.sgsm6127.html"}
   - {title: "Government of South Africa: Public holidays", url: "https://www.gov.za/about-sa/public-holidays"}
+media:
+  - {type: "image", file: "sharpeville-1960.jpg", caption: "Graves of the 69 people killed in the Sharpeville massacre, Phelindaba Cemetery, South Africa; 8 February 2017.", credit: "Andrew Hall", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Sharpeville_Massacre_Graves,_Phelindaba_Cemetery,_Sharpeville,_Vereeniging,_South_Africa.jpg"}
 ---
 Sharpeville is a Black township in South Africa. Under apartheid, the pass laws forced Black South Africans to carry identity documents at all times, and police could check them whenever they liked. In 1960 the Pan Africanist Congress, a recent breakaway from the ANC, called on people to leave their passes at home on 21 March, go to police stations and offer themselves for arrest.
 

@@ -20,6 +20,8 @@ sources:
   - {title: "Michael Coveney, The Guardian: Athol Fugard obituary (2025)", url: "https://www.theguardian.com/stage/2025/mar/09/athol-fugard-obituary"}
   - {title: "Adam Hetrick, Playbill: Tony Winners Kani and Ntshona Return to BAM in Sizwe Banzi Is Dead (2008)", url: "https://playbill.com/article/tony-winners-kani-and-ntshona-return-to-bam-in-sizwe-banzi-is-dead-com-148131"}
   - {title: "Playbill Vault: Sizwe Banzi Is Dead, Edison Theatre (1974)", url: "https://playbill.com/production/sizwe-banzi-is-dead-edison-theatre-vault-0000013406"}
+media:
+  - {type: "image", file: "sizwe-banzi.jpg", caption: "Context for Sizwe Banzi Is Dead: John Kani at Tashas in Rosebank, Johannesburg; 8 December 2023.", credit: "Bobbyshabangu", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Dr_John_Kani.jpg"}
 ---
 Under apartheid, the pass laws decided where a Black South African could live and work, and a stamp in his passbook could take both away. In Port Elizabeth two actors of the Serpent Players company, John Kani and Winston Ntshona, worked with the playwright Athol Fugard, and in 1972 the three of them devised a play about those laws: Sizwe Banzi Is Dead.
 

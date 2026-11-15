@@ -22,6 +22,8 @@ sources:
   - {title: "American Heritage, John Steele Gordon: The Miracle That Was Show Boat (2007)", url: "https://www.americanheritage.com/content/miracle-was-show-boat"}
   - {title: "NPR 100: Show Boat (2000)", url: "https://www.npr.org/2000/04/17/1073053/npr-100-i-showboat-i"}
   - {title: "NSW Teachers Federation: House party recalls historic first gig (2020)", url: "https://www.nswtf.org.au/news/2020/11/09/house-party-recalls-historic-first-gig/"}
+media:
+  - {type: "image", file: "ol-man-river-robeson.jpg", caption: "Context for Ol' Man River: Paul Robeson photographed by Gordon Parks, June 1942.", credit: "Gordon Parks / Office of War Information; source crop by Beyond My Ken", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Paul_Robeson_1942_crop.jpg"}
 ---
 "Ol' Man River" is sung by Joe, a Black character, in Show Boat, the 1927 Broadway musical by Jerome Kern and Oscar Hammerstein II. An early script already pencils in Paul Robeson, the singer and actor, for the part of Joe, but he was not available for the Broadway premiere. He took the part in London in 1928 and in the 1932 Broadway revival.
 

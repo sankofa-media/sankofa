@@ -26,6 +26,8 @@ sources:
   - {title: "Apollo: Juan de Pareja, Afro-Hispanic Painter (review, 2023)", url: "https://apollo-magazine.com/juan-de-pareja-met-museum-new-york/"}
   - {title: "Robert Fikes, BlackPast: Juan de Pareja (ca. 1606–1670)", url: "https://www.blackpast.org/gah/pareja-juan-de-1606-1670"}
   - {title: "Borja Franco Llopis, review of Juan de Pareja. Afro-hispanic painter, Archivo Español de Arte 96 (2023)", url: "https://doi.org/10.3989/aearte.2023.46"}
+media:
+  - {type: "image", file: "pareja-calling-of-matthew.jpg", caption: "The Calling of Saint Matthew by Juan de Pareja, 1661; Museo del Prado, Madrid.", credit: "Juan de Pareja / Museo del Prado", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Pareja-vocacion_mateo.jpg"}
 ---
 In Golden Age Spain painting was a trade the guilds did not open to enslaved people. Juan de Pareja, born in Antequera near Málaga to a mother of African descent, spent years as the enslaved assistant in the household and workshop of Diego Velázquez, painter to King Philip IV.
 

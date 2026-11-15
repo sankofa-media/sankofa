@@ -22,6 +22,8 @@ sources:
   - {title: "John K. Thornton, Kimpa Vita (D), Dictionary of African Christian Biography", url: "https://dacb.org/stories/congo/kimpa3-vita/"}
   - {title: "Letter of Afonso I to João III (1526), trans. John K. Thornton, in Dunn and Willoughby, Panorama: A World History, vol. 2, Source 3.1", url: "https://res.cloudinary.com/bloomsbury-online-resources/image/upload/v1786707560/Panorama%20-%20A%20World%20History/Volume%202/Primary%20Source%20Documents/Source_3.1_Volume_2.pdf"}
   - {title: "Religion and Slavery: A Letter from King Afonso I to King João III, 1526 (letters of 6 July and 18 October 1526)", url: "https://religionandslavery.org/ps%3A-afonso-i-to-portugal"}
+media:
+  - {type: "image", file: "afonso-kongo-letters.jpg", caption: "Context for Afonso I's letters: a map of the Kingdom of Kongo published by Jodocus Hondius, circa 1630, after Afonso's lifetime.", credit: "Jodocus Hondius, publisher", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Mercator_Congo_map.jpg"}
 ---
 Afonso I, born Mvemba a Nzinga, ruled the kingdom of Kongo in the first half of the 16th century from Mbanza Kongo, later São Salvador, in today's Angola. His father, King Nzinga a Nkuwu, had been baptised João I in 1491, after Kongo's first contacts with Portugal. Afonso made Catholicism the state religion, built churches and schools, and sent young nobles to study in Lisbon.
 

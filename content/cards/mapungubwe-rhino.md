@@ -25,6 +25,8 @@ sources:
   - {title: "SANParks: Mapungubwe National Park, natural and cultural history", url: "https://www.sanparks.org/parks/mapungubwe/explore/natural-cultural-history"}
   - {title: "UNESCO World Heritage Centre: Mapungubwe Cultural Landscape", url: "https://whc.unesco.org/en/list/1099/"}
   - {title: "Government Gazette No. 24155 (6 December 2002): Warrant instituting the Order of Mapungubwe", url: "https://www.gov.za/sites/default/files/gcis_document/201409/24155e0.pdf"}
+media:
+  - {type: "image", file: "mapungubwe-rhino.jpg", caption: "The golden rhinoceros in the Mapungubwe Collection, South Africa, photographed in 2016.", credit: "Sian Tiley-Nel / University of Pretoria Museums", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:UP_rhino.JPG"}
 ---
 Mapungubwe Hill rises near the point where the Shashe River joins the Limpopo, where South Africa, Botswana and Zimbabwe now meet. In the 13th century it was the capital of a kingdom that traded gold and ivory towards the Indian Ocean. Its rulers lived on top of the hill, walled off from the commoners below, and were buried there with gold.
 

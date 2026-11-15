@@ -23,6 +23,8 @@ sources:
   - {title: "Stadscuratorium Amsterdam: Nationaal Monument Slavernijverleden, Erwin de Vries, 2002", url: "https://stadscuratorium.nl/en/collectie/nationaal-monument-slavernijverleden-national-slavery-monument/"}
   - {title: "NL Times: Full English text of King Willem-Alexander's speech apologizing for history of slavery (1 July 2023)", url: "https://nltimes.nl/2023/07/01/full-english-text-king-willem-alexanders-speech-apologizing-history-slavery-0"}
   - {title: "Christian Science Monitor (AP): Dutch king apologizes for Netherlands' role in slavery on abolition anniversary (1 July 2023)", url: "https://www.csmonitor.com/World/Europe/2023/0701/Dutch-king-apologizes-for-Netherlands-role-in-slavery-on-abolition-anniversary"}
+media:
+  - {type: "image", file: "keti-koti.jpg", caption: "A Keti Koti cake competition at Theater Rotterdam, 1 July 2023.", credit: "Donald Trung Quoc Don", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Keti_Koti_Cake_Off,_Rotterdam-Centrum,_Rotterdam_(2023)_03.jpg"}
 ---
 Keti Koti, "the chains are broken", is 1 July, the day on which Suriname and the Netherlands mark the end of slavery in the Dutch colonies of the Atlantic. On 1 July 1863 the Netherlands abolished slavery in Suriname and on its Caribbean islands, one of the last colonial powers to do so.
 

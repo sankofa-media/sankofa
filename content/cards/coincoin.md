@@ -23,6 +23,8 @@ sources:
   - {title: "David W. Morgan, Kevin C. MacDonald and Fiona J. L. Handley, Economics and Authenticity: A Collision of Interpretations in Cane River National Heritage Area, The George Wright Forum 23:1 (2006)", url: "http://www.georgewright.org/231morgan.pdf"}
   - {title: "The Historic New Orleans Collection: Cane River Collection", url: "https://www.hnoc.org/publications/first-draft/cane-river-collection-glimpse-19th-century-black-creole-life"}
   - {title: "Cane River National Heritage Area: Marie Thérèse Coincoin", url: "https://www.canerivernha.org/node/63"}
+media:
+  - {type: "image", file: "coincoin.jpg", caption: "Context: Melrose Plantation, photographed on 18 May 2005.", credit: "Z28scrambler", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Melrose_Plantation.JPG"}
 ---
 Natchitoches, on the Red River in Louisiana, was a French colonial post founded by Louis Juchereau de St. Denis. Around 1742 a girl later known as Marie Thérèse Coincoin was born into slavery in his household.
 

@@ -5,6 +5,8 @@ places: ["Берлин"]
 further:
   - "Катарина Огунтойе, Май Опиц (Айим) и Дагмар Шульц (ред.), «Farbe bekennen: афронемецкие женщины по следам своей истории» (Farbe bekennen: Afro-deutsche Frauen auf den Spuren ihrer Geschichte; Orlanda Frauenverlag, 1986); по-английски — Showing Our Colors: Afro-German Women Speak Out"
   - "Тиффани Н. Флорвил, «Мобилизуя чёрную Германию: афронемецкие женщины и рождение транснационального движения» (Mobilizing Black Germany: Afro-German Women and the Making of a Transnational Movement; University of Illinois Press, 2020)"
+captions:
+  - "Джейми Ширер, член правления Инициативы чернокожих людей в Германии (ISD), на снимке 8 июля 2017 года."
 ---
 В Западной Германии 1980-х годов чёрные немцы росли, как правило, в одиночестве, среди белых, без общины, к которой можно было бы прибиться. Окружающие называли их колониальными ярлыками и оскорблениями.
 

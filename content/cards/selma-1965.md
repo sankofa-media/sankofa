@@ -20,6 +20,8 @@ sources:
   - {title: "National Park Service: Selma to Montgomery National Historic Trail, History & Culture", url: "https://www.nps.gov/semo/learn/historyculture/index.htm"}
   - {title: "National Archives, Center for Legislative Archives: Congress and the Voting Rights Act of 1965", url: "https://www.archives.gov/legislative/features/voting-rights-1965"}
   - {title: "U.S. Department of Justice: History of Federal Voting Rights Laws", url: "https://www.justice.gov/crt/history-federal-voting-rights-laws"}
+media:
+  - {type: "image", file: "selma-1965.jpg", caption: "Context for the Selma marches: the Edmund Pettus Bridge and Selma, Alabama, photographed 13 July 2016.", credit: "DXR", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:View_of_Edmund_Pettus_Bridge,_Selma_AL_20160713_1.jpg"}
 ---
 In 1965 only about 2 per cent of Black residents of Dallas County, Alabama, were on the voting rolls. In the county seat, Selma, local activists, SNCC and Martin Luther King Jr.'s Southern Christian Leadership Conference ran a voting-rights campaign from January and met mass arrests by Sheriff Jim Clark. On 18 February, at a night march in nearby Marion, a state trooper shot Jimmie Lee Jackson; he died eight days later.
 

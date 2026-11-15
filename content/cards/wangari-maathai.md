@@ -23,6 +23,8 @@ sources:
   - {title: "Encyclopaedia Britannica: Wangari Maathai", url: "https://www.britannica.com/biography/Wangari-Maathai"}
   - {title: "Goldman Environmental Prize: Wangari Maathai (1991)", url: "https://www.goldmanprize.org/recipient/wangari-maathai/"}
   - {title: "Right Livelihood: Wangari Maathai (1984)", url: "https://rightlivelihood.org/the-change-makers/find-a-laureate/wangari-maathai/"}
+media:
+  - {type: "image", file: "wangari-maathai.jpg", caption: "Wangari Maathai in Nairobi, Kenya; 28 August 2006.", credit: "Fredrick Onyango", license: "CC BY 2.0", url: "https://commons.wikimedia.org/wiki/File:Wangari_Maathai_in_Nairobi.jpg"}
 ---
 Wangari Maathai was born in 1940 in Nyeri, in central Kenya. She studied biology in the United States, in Kansas and Pittsburgh, and in 1971 the University of Nairobi awarded her a doctorate, which made her the first woman in East and Central Africa to earn one. She went on to chair the university's department of veterinary anatomy.
 

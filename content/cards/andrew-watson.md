@@ -23,6 +23,8 @@ sources:
   - {title: "BBC Sport, Andrew Aloia: Andrew Watson, the 'most influential' black footballer for decades lost to history (2021)", url: "https://www.bbc.co.uk/sport/football/58841184"}
   - {title: "BBC Sport: Scotland's first black player (2004)", url: "https://news.bbc.co.uk/sport2/hi/football/internationals/scotland/3751759.stm"}
   - {title: "Black History Month UK: Andrew Watson, first black international footballer", url: "https://www.blackhistorymonth.org.uk/article/section/sporting-heroes/andrew-watson-first-black-international-footballer/"}
+media:
+  - {type: "image", file: "andrew-watson.jpg", caption: "Andrew Watson, top centre, with the Scottish team that played England at Hampden Park on 11 March 1882.", credit: "Unknown photographer", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Andrew_Watson_Footballer.jpg"}
 ---
 In the late 1870s the strongest football club in Scotland was Queen's Park of Glasgow. Andrew Watson was born in Demerara, in British Guiana, in 1856 or 1857, the son of Peter Miller, a Scot in the colony's sugar business, and a local woman, Rose Watson. His father sent him to Britain as a boy; he went to school in Halifax and London, and in 1875 moved to Glasgow to study natural philosophy, mathematics and engineering at the university.
 

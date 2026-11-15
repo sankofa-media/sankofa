@@ -26,6 +26,8 @@ sources:
   - {title: "South African History Online: 16 June 1976, Soweto Uprising", url: "https://www.sahistory.org.za/article/june-16-soweto-youth-uprising"}
   - {title: "South African History Online: Nelson Rolihlahla Mandela", url: "https://www.sahistory.org.za/people/nelson-rolihlahla-mandela"}
   - {title: "The Nobel Prize: Nelson Mandela, biographical", url: "https://www.nobelprize.org/prizes/peace/1993/mandela/biographical/"}
+media:
+  - {type: "image", file: "sarafina.jpg", caption: "Context for Sarafina!: Miriam Makeba photographed by Paul Weinberg, 20 July 1991.", credit: "Paul Weinberg", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Miriam_makeba_01.jpg"}
 ---
 Sarafina! is a musical by the South African playwright Mbongeni Ngema, first staged in 1987 at the Market Theatre in Johannesburg. Apartheid was still the law, and Nelson Mandela was in his third decade in prison. The show goes back to 16 June 1976, when thousands of schoolchildren in Soweto rose against the apartheid school system.
 

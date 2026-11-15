@@ -18,6 +18,8 @@ sources:
   - {title: "Ley 70 de 1993 (27 August 1993), Secretaría General del Senado de la República de Colombia", url: "http://www.secretariasenado.gov.co/senado/basedoc/ley_0070_1993.html"}
   - {title: "Universidad de los Andes, Ximena Peña, María Alejandra Vélez et al.: Impacto de la titulación colectiva a las comunidades negras del Pacífico colombiano, Notas de Política 26 (2016)", url: "https://gobierno.uniandes.edu.co/wp-content/uploads/NP-26.pdf"}
   - {title: "Foro Nacional Ambiental, Enrique Sánchez and Valeria Velandia: Foro Pacífico, Territorios colectivos de comunidades negras (2024)", url: "https://foronacionalambiental.org.co/wp-content/uploads/2024/06/Policy-Pacifico-Territorios-Colectivos.pdf"}
+media:
+  - {type: "image", file: "afro-colombian-law-70.jpg", caption: "Context: Afro-Colombian children, photographed on 14 January 2004; not a scene of the adoption of Law 70.", credit: "Alejandra Quintero Sinisterra", license: "CC BY 2.0", url: "https://commons.wikimedia.org/wiki/File:Afro_Colombianos_by_Alejandra_Quintero_Sinisterra.png"}
 ---
 Colombia's Pacific lowlands, the rainforest of the Chocó and the coast south towards Ecuador, are home to rural Black communities who live along the rivers. Slavery in Colombia ended in 1851, but for well over a century afterwards the land these communities lived on counted in law as vacant state land, and they owned none of it.
 

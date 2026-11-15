@@ -19,6 +19,8 @@ sources:
   - {title: "Olivier Keller, The fables of Ishango, or the irresistible temptation of mathematical fiction, BibNum (2010)", url: "http://www.bibnum.education.fr/sites/default/files/ishango-analysis_v2.pdf"}
   - {title: "Vladimir Pletser, Does the Ishango Bone Indicate Knowledge of the Base 12? (2012), arXiv:1204.1019", url: "https://arxiv.org/pdf/1204.1019"}
   - {title: "Vladimir Pletser and Dirk Huylebrouck, Contradictions and narrowness of views in \"The fables of Ishango\", answers and updates (2016), arXiv:1607.00860", url: "https://arxiv.org/pdf/1607.00860.pdf"}
+media:
+  - {type: "image", file: "ishango-bone.jpg", caption: "The Ishango bone, an Upper Palaeolithic bone tool and possible mathematical device, photographed in 2022.", credit: "Joeykentin", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Ishango_bone_(cropped).jpg"}
 ---
 The Ishango bone is a small handle of bone, about ten centimetres long, found at Ishango, in the east of what is now the Democratic Republic of the Congo, close to the border with Uganda. The Belgian archaeologist Jean de Heinzelin dug it up in the 1950s, and it is dated to more than 20,000 years ago. A splinter of quartz fixed in one end shows that it once held a cutting edge.
 

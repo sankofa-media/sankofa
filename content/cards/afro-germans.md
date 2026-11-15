@@ -20,6 +20,8 @@ sources:
   - {title: "Literary Hub, Gabrielle Hickmon: What Audre Lorde Learned in Berlin About Afro-German Identity (2019)", url: "https://lithub.com/what-audre-lorde-learned-in-berlin-about-afro-german-identity"}
   - {title: "taz: Schwarze Menschen sind immer noch unsichtbar (interview with Katharina Oguntoye)", url: "https://taz.de/!5373455/"}
   - {title: "Initiative Schwarze Menschen in Deutschland: Über uns", url: "https://isdonline.de/ueber-uns/"}
+media:
+  - {type: "image", file: "afro-germans.jpg", caption: "Jamie Schearer, a board member of the Initiative of Black People in Germany (ISD), photographed 8 July 2017.", credit: "Stephan Röhl / Heinrich-Böll-Stiftung", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Jamie_Schearer_(36284679081).jpg"}
 ---
 In 1980s West Germany, Black Germans mostly grew up isolated, in white surroundings, with no community to turn to. The words others used for them were colonial-era labels and insults.
 

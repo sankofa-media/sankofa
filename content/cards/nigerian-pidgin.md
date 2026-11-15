@@ -25,6 +25,8 @@ sources:
   - {title: "BBC Media Centre: BBC World Service launches first of 12 new language services (21 August 2017), as reproduced by SWLing Post", url: "https://swling.com/blog/2017/08/bbc-world-service-launches-first-of-12-new-language-services/"}
   - {title: "WBUR Here & Now: Nigerian Pidgin Among New Languages Reaching BBC World Service Listeners (2018)", url: "https://www.wbur.org/hereandnow/2018/03/13/nigerian-pidgin-bbc-world-service"}
   - {title: "Encyclopaedia Britannica: Ken Saro-Wiwa (archived)", url: "http://web.archive.org/web/20260917134558/https://www.britannica.com/biography/Ken-Saro-Wiwa"}
+media:
+  - {type: "image", file: "nigerian-pidgin.jpg", caption: "Founding members of the Nigerian Pidgin Wikimedians at a meetup, 6 November 2021.", credit: "Samatics", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Nigerian_pidgin_Wikimedians_meet_up_02.jpg"}
 ---
 Nigerian Pidgin, which linguists increasingly call Naija, is the common tongue of Nigeria. Its vocabulary is mostly English, and people learn it at home or in the street to talk with neighbours of other peoples. With an estimated 75 million speakers it is the most widely spoken language in the country, yet it has no official status, and for generations people dismissed it as "Broken English".
 

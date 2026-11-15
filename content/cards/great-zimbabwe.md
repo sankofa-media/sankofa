@@ -22,6 +22,8 @@ sources:
   - {title: "South African History Online: Zimbabwe", url: "https://sahistory.org.za/place/zimbabwe"}
   - {title: "Innocent Pikirayi, Peter Garlake (1934-2011), Great Zimbabwe and the politics of the past in Zimbabwe, Azania (2012)", url: "https://repository.up.ac.za/handle/2263/32165"}
   - {title: "The Zimbabwean: Dr Peter Garlake, archaeologist who ended the myth that whites built Great Zimbabwe (January 2012)", url: "https://www.thezimbabwean.co/2012/01/dr-peter-garlake-archaeologist-who/"}
+media:
+  - {type: "image", file: "great-zimbabwe.jpg", caption: "Great Zimbabwe's Great Enclosure and adjoining ruins, viewed from the Hill Fort, 2015.", credit: "Janice Bell", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Great-zim-aerial-looking-West.JPG"}
 ---
 Great Zimbabwe stands near today's Masvingo, on the plateau between the Zambezi and the Limpopo. Its name comes from Shona words for stone buildings, and it is the largest of the many stone-walled towns of that country. Ancestors of the Shona built its walls mainly between about 1250 and 1450, when it was the capital of a powerful kingdom and home to more than ten thousand people. Gold went out towards the Swahili ports of the Indian Ocean coast; Chinese and Persian ceramics and coins from Kilwa came back and have been found in the ruins.
 

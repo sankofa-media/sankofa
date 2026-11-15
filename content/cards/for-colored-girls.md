@@ -30,6 +30,8 @@ sources:
   - {title: "Helen Shaw, Vulture: Review: Shange's for colored girls... at the Public Theater (2019)", url: "https://www.vulture.com/2019/10/review-shanges-for-colored-girls-at-the-public-theater.html"}
   - {title: "Associated Press via Los Angeles Times: Ntozake Shange ... dies at 70 (28 October 2018)", url: "https://www.latimes.com/entertainment/movies/la-me-ntozake-shange-20181028-story.html"}
   - {title: "Anya Ryan, The Guardian: for colored girls ... review, Yard Theatre, London (10 September 2026)", url: "https://www.theguardian.com/stage/2026/sep/10/for-colored-girls-who-have-considered-suicide-when-the-rainbow-is-enuf-review-yard-theatre-london"}
+media:
+  - {type: "image", file: "for-colored-girls.jpg", caption: "Context: Ntozake Shange at the Women's Center, Barnard College, November 1978.", credit: "Barnard College Archives", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Ntozake_Shange,_Reid_Lecture,_Women_Issues_Luncheon,_Women%27s_Center,_November_1978.jpg"}
 ---
 Ntozake Shange was born Paulette Williams in Trenton, New Jersey, in 1948. She studied at Barnard College and then at the University of Southern California, and in those years she took a new name: Ntozake, "she who comes with her own things", and Shange, "she who walks like a lion".
 

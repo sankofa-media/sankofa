@@ -21,6 +21,8 @@ sources:
   - {title: "Library of Congress Country Studies: Ethiopia (1991), The Restoration of the Solomonic Line", url: "http://countrystudies.us/ethiopia/8.htm"}
   - {title: "Library of Congress Country Studies: Ethiopia (1991), The Establishment of the Derg", url: "http://countrystudies.us/ethiopia/28.htm"}
   - {title: "Encyclopaedia Britannica: Haile Selassie I", url: "https://www.britannica.com/biography/Haile-Selassie-I"}
+media:
+  - {type: "image", file: "kebra-nagast.jpg", caption: "A page from Hugues Le Roux's French translation of excerpts from the Kebra Nagast, in a 1904–1908 collection; Bibliothèque nationale de France.", credit: "Hugues Le Roux / Bibliothèque nationale de France", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Ethiopie._%22Magda,_reine_de_Saba._Extraits_du_%22Keubra_Neuguest%22_ou_%22La_Gloire_des_Rois%22,_traduit_du_gu%C3%A8ze_en_fran%C3%A7ais_par_Hugues_Le_Roux,_1904_(91_f._multigraphi%C3%A9es),_et_du_fran%C3%A7ais_en_anglais_par..._-_btv1b10891662n_(076_of_209).jpg"}
 ---
 The Kebra Nagast, "The Glory of the Kings", is a book in Ge'ez, the classical language of Ethiopia, written down in the early 14th century. Its heart is an old story retold: the Queen of Sheba travels to King Solomon in Jerusalem, and their son Menelik becomes king of Ethiopia and brings the Ark of the Covenant from Jerusalem to [[aksum-obelisk|Aksum]].
 

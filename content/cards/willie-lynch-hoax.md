@@ -22,6 +22,8 @@ sources:
   - {title: "Anne Cleëster Taylor, email to Samuel Winslow and Lee Bailey on researching the narrative, University of Missouri-St. Louis (archived)", url: "https://web.archive.org/web/20070808191222/http://www.umsl.edu/services/library/blackstudies/winbail.htm"}
   - {title: "Mike Adams, The Baltimore Sun: In search of 'Willie' Lynch (22 February 1998)", url: "https://www.baltimoresun.com/1998/02/22/in-search-of-willie-lynch-sometimes-the-truth-can-be-found-in-myth-fiction-even-in-a-lie/"}
   - {title: "Matt Giles, Longreads: The Enduring Legacy of the Willie Lynch Hoax (2018)", url: "https://longreads.com/2018/05/02/the-enduring-legacy-of-the-willie-lynch-hoax/"}
+media:
+  - {type: "image", file: "willie-lynch-hoax.jpg", caption: "Evidence of the hoax's circulation: Sergeant Charles Smith lecturing about the Willie Lynch letter in Mosul, Iraq, 24 February 2008. The original source caption incorrectly treats the letter as authentic.", credit: "Sgt. Patrick Lair / U.S. Army", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Soldiers_in_Mosul_celebrate_African_American_history_080226-A--001.jpg"}
 ---
 The "Willie Lynch speech" claims to be a talk given in 1712 on the bank of the James River in Virginia by William Lynch, a slave owner from the West Indies. He tells Virginia's planters that they can control the people they enslave by keeping them divided and setting them against one another. The text is a fake.
 

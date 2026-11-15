@@ -19,6 +19,8 @@ sources:
   - {title: "Franklin D. Roosevelt Presidential Library: Eleanor Roosevelt and Marian Anderson", url: "https://www.fdrlibrary.org/anderson"}
   - {title: "US House of Representatives, History, Art & Archives: The Congressional Gold Medal for Singer Marian Anderson", url: "https://history.house.gov/Historical-Highlights/1951-2000/The-Congressional-Gold-Medal-for-singer-Marian-Anderson/"}
   - {title: "Zanice Bond, BlackPast: Marian Anderson (1897-1993)", url: "https://www.blackpast.org/african-american-history/anderson-marian-1897-1993/"}
+media:
+  - {type: "image", file: "marian-anderson-1939.jpg", caption: "Marian Anderson performing with pianist Kosti Vehanen at the Lincoln Memorial, 9 April 1939.", credit: "US Information Agency / National Archives, 306-NT-965B-4", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:MarianAndersonLincolnMemorial.png"}
 ---
 In 1939 the colour line still ran through the concert halls of Washington, D.C. Marian Anderson, a contralto acclaimed across Europe, had already sung at the White House. Her concert in the capital that spring needed the largest hall in town, Constitution Hall, which belonged to the Daughters of the American Revolution, an all-white heritage society. The hall did not allow Black performers on its stage, and the DAR refused to make an exception.
 

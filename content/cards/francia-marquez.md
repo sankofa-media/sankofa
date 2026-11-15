@@ -20,6 +20,8 @@ sources:
   - {title: "Colombia Reports: Francia Marquez", url: "https://colombiareports.com/francia-marquez/"}
   - {title: "The Ecologist: Hope for Colombia? (15 September 2022)", url: "https://theecologist.org/2022/sep/15/hope-colombia"}
   - {title: "Atlanta Black Star: Former maid, activist is Colombia's first Black vice president (23 June 2022)", url: "https://atlantablackstar.com/2022/06/23/from-resistance-to-power-former-maid-activist-is-colombias-first-black-vice-president/"}
+media:
+  - {type: "image", file: "francia-marquez.jpg", caption: "Francia Márquez Mina in a CLACSO TV interview, 5 November 2021.", credit: "CLACSO TV", license: "CC BY 3.0", url: "https://commons.wikimedia.org/wiki/File:Francia_Marquez_Mina.jpg"}
 ---
 Francia Márquez was born in 1981 in Yolombó, in the municipality of Suárez in Colombia's Cauca mountains. The Afro-Colombian families of the area have farmed and mined gold by hand for generations. She became an activist at 13, when a dam project threatened her community. Pregnant at 16, she left school and supported her child by small-scale gold mining and later by working as a maid.
 

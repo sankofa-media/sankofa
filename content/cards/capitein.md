@@ -22,6 +22,8 @@ sources:
   - {title: "Dictionary of African Christian Biography: Capitein, Jacobus (A)", url: "https://dacb.org/stories/ghana/capitein-jacobus/"}
   - {title: "Dictionary of African Christian Biography: Capitein, Jacobus (C)", url: "https://dacb.org/stories/ghana/capitein-jacobus3/"}
   - {title: "Jos Damen, Leiden University, Top 450: The story of Jacobus Capitein", url: "https://top450.universiteitleiden.nl/en/items/het-verhaal-van-jacobus-capitein"}
+media:
+  - {type: "image", file: "capitein.jpg", caption: "Jacobus Capitein, an engraving by Pieter Tanjé, 1742; Rijksmuseum collection.", credit: "Pieter Tanjé / Rijksmuseum, RP-P-1903-A-23405", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Portret_van_predikant_Jacobus_Elisa_Johannes_Capitein,_RP-P-1903-A-23405.jpg"}
 ---
 In the early eighteenth century the Dutch West India Company held the castle of Elmina on the Gold Coast, today's Ghana. A boy born on that coast around 1717 was sold into slavery at about seven. The slave trader Arnold Steenhart gave him to a friend, the Company man Jacob van Goch, and in 1728 van Goch took him to Middelburg in the Netherlands, where slavery did not exist. The boy was called Jacobus Capitein.
 

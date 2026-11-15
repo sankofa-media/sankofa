@@ -22,6 +22,8 @@ sources:
   - {title: "Military History Journal (South African Military History Society), vol. 16 no. 3: Thaba Bosiu", url: "https://www.samilitaryhistory.org/vol163ds.html"}
   - {title: "Sebinane Lekoekoe (Lesotho National Archives), The day in memory and honour of King Moshoeshoe I, Archive and Public Culture, University of Cape Town (2012)", url: "https://humanities.uct.ac.za/node/338409"}
   - {title: "Molapatene Ramusi, Manthatisi, Encyclopaedia Africana Dictionary of African Biography", url: "https://encyclopaediaafricana.com/?p=16544"}
+media:
+  - {type: "image", file: "moshoeshoe.jpg", caption: "Grave of King Moshoeshoe I atop Thaba Bosiu, Lesotho; photograph, 15 July 2011.", credit: "Marduk", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Grave_of_King_Moshoeshoe_I.jpg"}
 ---
 In the 1820s southern Africa's high veld was torn by the wars and forced migrations that the Sotho call the Lifaqane, the Mfecane in Zulu. Moshoeshoe, born Lepoqo about 1786 at Menkhoaneng in what is now northern Lesotho, then led only a small band of followers. He took the name Moshoeshoe after a successful raid: it imitates the sound of a razor.
 

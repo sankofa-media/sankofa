@@ -24,6 +24,8 @@ sources:
   - {title: "Victoria and Albert Museum: Jahangir shooting at the head of Malik Ambar, drawing, IM.284-1914", url: "https://collections.vam.ac.uk/item/O405533/"}
   - {title: "Google Arts & Culture (Freer Gallery of Art): Jahangir Shooting the Head of Malik Ambar, inscribed (later) to Abu'l-Hasan", url: "https://artsandculture.google.com/asset/jahangir-shooting-the-head-of-malik-ambar-artist-inscribed-later-to-abu-l-hasan/MgEbl8sQcIMS5g"}
   - {title: "LACMA: Emperor Jahangir Triumphing Over Poverty, M.75.4.28 (curatorial notes)", url: "https://collections.lacma.org/object/34094"}
+media:
+  - {type: "image", file: "malik-ambar.jpg", caption: "Malik Ambar, a portrait by Hashim, about 1624–1625.", credit: "Hashim / Victoria and Albert Museum", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Malik_amber_ahmadnager_hi.jpg"}
 ---
 From the sixteenth century the sultanates of the Deccan, in central India, bought enslaved Africans from the Ethiopian highlands, known as Habshis, as soldiers and servants. Malik Ambar was one of them. Born Chapu in Ethiopia in 1548, he was sold at the Red Sea port of Mocha and taken to Baghdad, where a merchant educated him, brought him up a Muslim and named him Ambar.
 

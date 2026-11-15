@@ -21,6 +21,8 @@ sources:
   - {title: "National Air and Space Museum: How Bessie Coleman broke barriers to make history (Gabrielle Barone, 2018)", url: "https://airandspace.si.edu/stories/editorial/how-bessie-coleman-broke-barriers-make-history"}
   - {title: "National Women's History Museum: Bessie Coleman", url: "https://www.womenshistory.org/education-resources/biographies/bessie-coleman"}
   - {title: "Encyclopaedia Britannica: Bessie Coleman", url: "https://www.britannica.com/biography/Bessie-Coleman"}
+media:
+  - {type: "image", file: "bessie-coleman.jpg", caption: "Bessie Coleman, circa 1922; photograph by Dove & Porter, Miriam Matthews Photograph Collection, UCLA Library.", credit: "Dove & Porter / UCLA Library", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Bessie_Coleman,_c1922.jpg"}
 ---
 Around 1920 a Black woman from Texas could not get into an American flying school. Bessie Coleman, born in 1892, one of thirteen children, had moved to Chicago and worked as a manicurist; the schools she applied to turned her down because of her race and her sex. With help and advice from Robert S. Abbott, publisher of the [[chicago-defender|Chicago Defender]], she learned French and in 1920 went to France. At the Caudron brothers' school at Le Crotoy she learned to fly, and on 15 June 1921 the Fédération Aéronautique Internationale granted her its licence. She was the first African American woman to hold a pilot's licence.
 

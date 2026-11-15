@@ -31,6 +31,8 @@ sources:
   - {title: "CNC: Sarah Maldoror, pionnière du cinéma panafricain (2020)", url: "https://www.cnc.fr/cinema/actualites/deces-de-sarah-maldoror-pionniere-du-cinema-panafricain_1154672"}
   - {title: "Centre Pompidou: Sarah Maldoror, cinema as a form of combat", url: "https://www.centrepompidou.fr/en/pompidou-plus/magazine/article/sarah-maldoror-cinema-as-a-form-of-combat"}
   - {title: "African Film Festival New York: Sarah Maldoror", url: "https://africanfilmny.org/directors/sarah-maldoror/"}
+media:
+  - {type: "image", file: "sambizanga.jpg", caption: "Context for Sambizanga: director Sarah Maldoror, photographed 16 March 2009.", credit: "karim amar", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Sarah_Maldoror.jpg"}
 ---
 In 1961 Angola was a Portuguese colony on the brink of a war of independence, and Sambizanga, a district of Luanda, was home to many of the activists organising against colonial rule. Sambizanga, the 1972 film named after it, follows Domingos Xavier and his wife Maria. The colonial police take Domingos away. In prison he is beaten repeatedly and refuses to name his comrades. Maria, her baby on her back, walks from one prison to the next looking for him, until she learns that he has been beaten to death.
 

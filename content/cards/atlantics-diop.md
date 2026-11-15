@@ -31,6 +31,8 @@ sources:
   - {title: "Festival de Cannes: Touki Bouki, Cannes Classics 2008", url: "https://www.festival-cannes.com/en/f/touki-bouki/"}
   - {title: "Margarita Landazuri, TCM: Touki Bouki", url: "https://www.tcm.com/articles/770468/touki-bouki"}
   - {title: "Antoinette Isama, OkayAfrica: Cannes 2019: Mati Diop Snags Grand Prix Award (28 May 2019)", url: "https://www.okayafrica.com/cannes-2019-mati-diop-snags-grand-prix-award-and-a-netflix-acquisition-for-atlantique/193689"}
+media:
+  - {type: "image", file: "atlantics-diop.jpg", caption: "Context: director Mati Diop at the Berlinale, 18 February 2024.", credit: "Elena Ternovaja", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Mati_Diop_at_Berlinale_2024-2.jpg"}
 ---
 In 2009 the French-Senegalese filmmaker Mati Diop made a short documentary in Dakar, Atlantiques, about young men setting out in a small fishing boat for Spain in search of work. Ten years later the same subject became her first feature, and this time she turned to the women who stay behind.
 

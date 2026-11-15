@@ -19,6 +19,8 @@ sources:
   - {title: "Jacques Leclerc, Aruba, L'aménagement linguistique dans le monde, CEFAN, Université Laval", url: "https://www.axl.cefan.ulaval.ca/amsudant/aruba.htm"}
   - {title: "Aruba, Landsverordening officiële talen (2003), text reproduced by CEFAN, Université Laval", url: "https://axl.cefan.ulaval.ca/amsudant/aruba-loi-off-2003.htm"}
   - {title: "Netherlands Antilles, Landsverordening officiële talen of 28 March 2007, Overheid.nl", url: "https://lokaleregelgeving.overheid.nl/CVDR10499"}
+media:
+  - {type: "image", file: "papiamento.jpg", caption: "Viola Heutger speaking at Fundacion Lanta Papiamento's conference for International Mother Language Day, University of Aruba; 25 February 2022.", credit: "Caribiana", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Conference_Fundacion_Lanta_Papiamento_16_41_01_311000.jpeg"}
 ---
 Papiamento is the creole language of Aruba, Bonaire and Curaçao, three Dutch-ruled islands in the southern Caribbean. Its words come mostly from Portuguese and Spanish, with a later layer of Dutch. The Dutch took the islands in the 1630s, and Curaçao became a depot for enslaved Africans, most of them sold on to the Spanish colonies nearby. Among the enslaved and the people around them a new language formed. Where exactly it began is still argued: some linguists trace it to the Portuguese creoles of West Africa, others to Spanish.
 

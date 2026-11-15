@@ -20,6 +20,8 @@ sources:
   - {title: "London Museum: Mary Seacole, humanitarian, herbalist, 'Mother' to sons at war", url: "https://www.londonmuseum.org.uk/collections/london-stories/mary-seacole-doctress-crimean-war/"}
   - {title: "Britannica: Mary Seacole", url: "https://www.britannica.com/biography/Mary-Seacole"}
   - {title: "Mary Seacole, Wonderful Adventures of Mrs. Seacole in Many Lands (1857), Project Gutenberg", url: "https://www.gutenberg.org/ebooks/23031"}
+media:
+  - {type: "image", file: "mary-seacole.jpg", caption: "Mary Seacole, painted by Albert Charles Challen, about 1869; National Portrait Gallery, London.", credit: "Albert Charles Challen / National Portrait Gallery", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Seacole_-_Challen.jpg"}
 ---
 Mary Seacole was born in Kingston, Jamaica, in 1805, the daughter of a Scottish soldier and a free Black Jamaican woman who healed the sick at her boarding house. From her mother she learned Creole herbal medicine, and she called herself a "doctress". She nursed yellow fever patients in Jamaica and cholera victims in Panama.
 

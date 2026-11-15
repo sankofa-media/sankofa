@@ -23,6 +23,8 @@ sources:
   - {title: "Encyclopaedia Britannica: Charles Richard Drew", url: "https://www.britannica.com/biography/Charles-Richard-Drew"}
   - {title: "Jessie Kratz, US National Archives, Pieces of History: Charles Drew, a pioneer in blood transfusions (2023)", url: "https://prologue.blogs.archives.gov/?p=35631"}
   - {title: "Library of Congress, Headlines and Heroes: Dr. Charles R. Drew, blood bank pioneer (2021)", url: "https://blogs.loc.gov/headlinesandheroes/2021/02/dr-charles-r-drew-blood-bank-pioneer/"}
+media:
+  - {type: "image", file: "charles-drew.jpg", caption: "Charles Drew's entry in Dunbar High School's yearbook, 1922.", credit: "Uncredited yearbook photographer / National Library of Medicine", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Charles_Richard_Drew_-_Dunbar_HS_Yearbook_Entry_(1922).png"}
 ---
 Charles Drew was born in Washington, D.C., in 1904. He studied at Amherst College and at McGill University in Montreal, and in 1940 Columbia University gave him a doctorate in medical science for a thesis called "Banked Blood". He was the first African American to earn that degree at Columbia.
 

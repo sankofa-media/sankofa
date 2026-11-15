@@ -25,6 +25,8 @@ sources:
   - {title: "YourClassical, Composers Datebook: W. G. Still's all-star lineup (31 March 2009)", url: "https://www.yourclassical.org/episode/2009/03/31/w-g-stills-all-star-lineup"}
   - {title: "Encyclopaedia Britannica: William Grant Still", url: "https://www.britannica.com/biography/William-Grant-Still"}
   - {title: "Chris Goertzen, Mississippi Encyclopedia: William Grant Still", url: "https://mississippiencyclopedia.org/entries/william-grant-still/"}
+media:
+  - {type: "image", file: "troubled-island.jpg", caption: "Context for Troubled Island: composer William Grant Still, photographed by Carl Van Vechten in 1949; Library of Congress.", credit: "Carl Van Vechten / Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_William_Grant_Still_LCCN2004663595.jpg"}
 ---
 By the late 1930s William Grant Still, born in Woodville, Mississippi, in 1895 and raised in Little Rock, Arkansas, had already made history in American classical music. His Afro-American Symphony was the first symphony by an African American played by a major orchestra, and in 1936, leading the Los Angeles Philharmonic, he became the first African American to conduct a major American orchestra.
 

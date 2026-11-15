@@ -24,6 +24,8 @@ sources:
   - {title: "Rolling Stone: Little Richard, 20 Essential Songs — Tutti-Frutti (1955)", url: "https://www.rollingstone.com/music/music-lists/little-richard-20-essential-songs-15792/tutti-frutti-1955-209077/"}
   - {title: "Rolling Stone: Pat Boone Remembers Little Richard (2020)", url: "https://www.rollingstone.com/music/music-features/pat-boone-little-richard-997029/"}
   - {title: "PBS American Masters: Little Richard biography and career timeline", url: "https://www.pbs.org/wnet/americanmasters/little-richard-biography-and-career-timeline/27612/"}
+media:
+  - {type: "image", file: "tutti-frutti.jpg", caption: "Context for Tutti Frutti: Little Richard performing at the University of Texas Forty Acres Festival, March 2007.", credit: "Anna Bleker", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Little_Richard_in_2007.jpg"}
 ---
 "Tutti Frutti" is the 1955 record that announced [[rock-n-roll|rock and roll]] with a single shout: "A wop bop a loo bop, a lop bam boom!" Little Richard, born Richard Penniman in Macon, Georgia, had been making records since the early 1950s without much notice. In September 1955 he was at J&M Studio in New Orleans for Specialty Records, with the producer Robert "Bumps" Blackwell, and the session was going nowhere.
 

@@ -26,6 +26,8 @@ sources:
   - {title: "AFI Catalog of Feature Films: Daughters of the Dust (1991)", url: "https://catalog.afi.com/Catalog/moviedetails/59221"}
   - {title: "Yale University Library, Film Notes: Daughters of the Dust", url: "https://web.library.yale.edu/film/notes/fn00079"}
   - {title: "Susan Cohen, Charleston City Paper: Twenty years later, Julie Dash's film Daughters of the Dust continues to inspire (14 September 2011)", url: "https://charlestoncitypaper.com/?p=54033"}
+media:
+  - {type: "image", file: "daughters-of-the-dust.jpg", caption: "Hairstylist Pamela Ferrell on the set of Daughters of the Dust, Saint Helena Island, South Carolina, 1989.", credit: "Pamela Ferrell and family", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Pamela_Ferrell_on_set_Film_Daughters_of_the_Dust_in_1989.png"}
 ---
 On the Sea Islands off South Carolina and Georgia, the descendants of enslaved Africans kept a culture of their own long after slavery ended: the [[gullah|Gullah]]. Julie Dash grew up far from the islands, in New York, but in a household where that culture was alive. Her father was Gullah.
 

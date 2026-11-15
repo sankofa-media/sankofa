@@ -24,6 +24,8 @@ sources:
   - {title: "University of Ottawa, Black Canadian History Exhibit: Menelik Hall (after Keating and Beaton, Whitney Pier Historical Society, 1993)", url: "https://omeka.uottawa.ca/mathieu-black-canadian-history-exhibit/items/show/39"}
   - {title: "Encyclopaedia Britannica: Marcus Garvey", url: "https://www.britannica.com/biography/Marcus-Garvey"}
   - {title: "Encyclopaedia Britannica: Bob Marley", url: "https://www.britannica.com/biography/Bob-Marley"}
+media:
+  - {type: "image", file: "redemption-song.jpg", caption: "Context for Redemption Song: Bob Marley performing at Dalymount Park, Dublin, 6 July 1980.", credit: "Eddie Mallin", license: "CC BY 2.0", url: "https://commons.wikimedia.org/wiki/File:Bob-Marley.jpg"}
 ---
 "Redemption Song" is a song from Uprising, the 1980 album that was the last Bob Marley released in his lifetime, and its best-known lines come from a speech given in Canada 43 years earlier.
 

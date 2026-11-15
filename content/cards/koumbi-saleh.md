@@ -23,6 +23,8 @@ sources:
   - {title: "UNESCO World Heritage Centre, Tentative List: Site archéologique de Koumbi Saleh", url: "https://whc.unesco.org/en/tentativelists/1546/"}
   - {title: "Susan Keech McIntosh, review of Berthier, Recherches archéologiques sur la capitale de l'empire de Ghana, Journal of African History 41 (2000)", url: "https://doi.org/10.1017/S0021853700227734"}
 dispute: "UNESCO's tentative listing treats Koumbi Saleh as the capital of Ghana, but Britannica calls its identification with the capital al-Bakri described tentative."
+media:
+  - {type: "image", file: "koumbi-saleh.jpg", caption: "An inscribed shale tablet from Koumbi Saleh in the National Museum, Nouakchott, photographed in 2020.", credit: "Clemens Schmillen", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:NouakchottNationalMuseum2.jpg"}
 ---
 Ghana, called Wagadu by its own rulers and unrelated to the modern republic, was the first of the great trading empires of the western Sahel. By the end of the 8th century its fame had reached North Africa. Its Soninke kings stood between the Saharan salt traders to the north and the gold of the south, and North Africans called it the land of gold.
 

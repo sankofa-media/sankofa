@@ -21,6 +21,8 @@ sources:
   - {title: "The Heritage Portal, Daluxolo Moloantoa: The Missionary Beginnings of Nkosi Sikelel' iAfrika (2017)", url: "https://www.theheritageportal.co.za/article/missionary-beginnings-nkosi-sikelel-iafrika"}
   - {title: "African Studies Centre Leiden: Enoch Sontonga", url: "https://www.ascleiden.nl/content/library-weekly/enoch-sontonga"}
   - {title: "Nkwazi Magazine, Mutale Chisulo: Sound Familiar? The Story Behind Zambia's National Anthem (2025)", url: "https://stg.nkwazimagazine.com/p-data-block-keygg1c0sound-familiar-the-story-behind-zambias-national-anthemp/"}
+media:
+  - {type: "image", file: "nkosi-sikelel-iafrika.jpg", caption: "Context for Nkosi Sikelel' iAfrika: its composer Enoch Sontonga, circa 1900; Durban History Museum.", credit: "Unknown photographer / Durban History Museum", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:EnochSontonga.jpg"}
 ---
 "Nkosi Sikelel' iAfrika", "God bless Africa", is a hymn in Xhosa written in 1897 by Enoch Sontonga, a teacher and choirmaster at a Methodist mission school near Johannesburg. He wrote it for his school choir; most accounts credit him with the tune as well, though some say he borrowed an existing hymn melody. Sontonga died in 1905, and the hymn travelled on without him: the poet Samuel Mqhayi added seven more stanzas in Xhosa, and the choir of John Dube's Ohlange Institute in Natal made it popular.
 

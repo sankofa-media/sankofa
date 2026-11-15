@@ -22,6 +22,8 @@ sources:
   - {title: "Library of Congress: Complete National Film Registry listing", url: "https://www.loc.gov/programs/national-film-preservation-board/film-registry/complete-national-film-registry-listing/"}
   - {title: "TCM: Carmen Jones (1954)", url: "https://www.tcm.com/articles/musical/114175/carmen-jones-1954"}
   - {title: "Encyclopedia of World Biography (Gale), via Encyclopedia.com: Dorothy Dandridge", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/dorothy-dandridge"}
+media:
+  - {type: "image", file: "carmen-jones.jpg", caption: "Context: Muriel Rahn in the original Broadway production of Carmen Jones, photographed by Carl Van Vechten, 29 February 1944; not a still from the 1954 film.", credit: "Carl Van Vechten / Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Muriel_Rahn_as_Carmen_Jones.jpg"}
 ---
 Carmen Jones is a Hollywood musical of 1954 with an all-Black cast. It began on Broadway in 1943, when Oscar Hammerstein II rewrote Bizet's opera Carmen for Black performers, keeping the music: Carmen now worked in a parachute factory in the wartime South, and Don José became a soldier named Joe.
 

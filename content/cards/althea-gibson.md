@@ -20,6 +20,8 @@ sources:
   - {title: "International Tennis Hall of Fame: Althea Gibson", url: "https://www.tennisfame.com/hall-of-famers/inductees/althea-gibson"}
   - {title: "Zanice Bond, BlackPast: Althea Gibson (1927-2003)", url: "https://www.blackpast.org/african-american-history/gibson-althea-1927-2003/"}
   - {title: "Encyclopaedia Britannica: Althea Gibson", url: "https://www.britannica.com/biography/Althea-Gibson"}
+media:
+  - {type: "image", file: "althea-gibson.jpg", caption: "Althea Gibson, photographed by Carl Van Vechten in 1958.", credit: "Carl Van Vechten / Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Althea_Gibson_LCCN2004662913.jpg"}
 ---
 In the 1940s major American tennis was closed to Black players, who competed in their own American Tennis Association. Althea Gibson, born in 1927 to sharecroppers in Silver, South Carolina, grew up in Harlem, where at twelve she won the New York City women's paddle-tennis championship. Neighbours and members of Harlem's Cosmopolitan Tennis Club paid for her junior membership, and from 1947 she won ten ATA national titles in a row.
 

@@ -24,6 +24,8 @@ sources:
   - {title: "Ebrahim Mahomed Mahida, History of Muslims in South Africa: 1700–1799, South African History Online", url: "https://www.sahistory.org.za/archive/history-muslims-south-africa-1700-1799-ebrahim-mahomed-mahida"}
   - {title: "South African History Online: Cape Malay", url: "https://sahistory.org.za/article/cape-malay"}
   - {title: "Shamiega Chaudhari, Madrasahs, resistance and the creation and preservation of Arabic Afrikaans, Daily Maverick (17 July 2025)", url: "https://www.dailymaverick.co.za/opinionista/2025-07-17-madrasahs-resistance-and-the-creation-and-preservation-of-arabic-afrikaans"}
+media:
+  - {type: "image", file: "arabic-afrikaans.jpg", caption: "A political pamphlet calling people to vote, written in Arabic Afrikaans, 1872.", credit: "Unknown author; collection of Dr S. Jeppie", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Arabisch-Afrikaans.jpg"}
 ---
 Arabic Afrikaans is Afrikaans written in the Arabic alphabet. In the nineteenth century the Muslims of the Cape used it to write their everyday language for religious teaching. Arabic had no signs for many Afrikaans sounds, above all its vowels, so scholars and teachers bent its letters and vowel marks to fit a language they were not made for.
 

@@ -27,6 +27,8 @@ sources:
   - {title: "Library of Virginia, Dictionary of Virginia Biography: Elizabeth Key", url: "https://www.lva.virginia.gov/collections/dvb/bio/key-elizabeth-fl-1655-1660"}
   - {title: "Nicholas Radburn, USC Dornsife: A digital archive of slave voyages (2017)", url: "https://dornsife.usc.edu/news/stories/a-digital-archive-of-slave-voyages-details-the-largest-forced-migration-in-history/"}
   - {title: "Literary Hub: How empirical databases have changed our understanding of early American slavery", url: "https://lithub.com/how-empirical-databases-have-changed-our-understanding-of-early-american-slavery/"}
+media:
+  - {type: "image", file: "slave-word-and-systems.jpg", caption: "Context for historical slavery: the old slave market at Zanzibar, reproduced in A. E. M. Anderson-Morshead's The History of the Universities' Mission to Central Africa, 1859–1909, published in 1909.", credit: "A. E. M. Anderson-Morshead, The History of the Universities' Mission to Central Africa (1909)", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Anderson-Morshead_1909_The_Old_Slave_Market,_Zanzibar_historyofuniver00ande_0492.jpg"}
 ---
 The English word "slave", Middle English sclave, came through Old French esclave from Medieval Latin sclavus, which first meant "Slav". So many Slavs were enslaved in early medieval central Europe that their name came to mean an owned person. Europeans were still captured later: from the fifteenth to the eighteenth century raiders from the Black Sea steppe seized people in the lands of Poland, Lithuania, Ukraine and Russia and sold them through Caffa in Crimea to markets across the Ottoman Empire.
 

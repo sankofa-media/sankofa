@@ -21,6 +21,8 @@ sources:
   - {title: "University at Buffalo, Mathematicians of the African Diaspora: Martha Euphemia Lofton Haynes (with Ken Feil's Washington Post obituary, 1 August 1980)", url: "https://www.math.buffalo.edu/mad/PEEPS/haynes.euphemia.lofton.html"}
   - {title: "Hobson v. Hansen, 269 F. Supp. 401 (D.D.C., 19 June 1967), Caselaw Access Project", url: "https://static.case.law/f-supp/269/cases/0401-01.json"}
   - {title: "University of the District of Columbia: Women's History Month, Euphemia Lofton Haynes (2017)", url: "https://www.udc.edu/news/2017/03/womens-history-month-euphemia-lofton-haynes"}
+media:
+  - {type: "image", file: "euphemia-lofton-haynes.jpg", caption: "Euphemia Lofton, later Haynes, in the Smith College class book, 1914.", credit: "Unknown photographer / Smith College Class Book of 1914", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Euphemia_Lofton_Smith_College_1914.jpg"}
 ---
 Euphemia Lofton Haynes was born in Washington, D.C., in 1890. She graduated from Smith College in 1914 and then taught in the city's public schools for 47 years, from first-grade classes to Dunbar High School, where she chaired the mathematics department. In 1930 she founded the mathematics department at Miner Teachers College, today the University of the District of Columbia.
 

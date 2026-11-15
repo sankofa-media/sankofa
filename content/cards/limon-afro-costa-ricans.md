@@ -27,6 +27,8 @@ sources:
   - {title: "The Tico Times: The people building a fire for the future of UNIA/Liberty Hall in Limón (2016)", url: "https://ticotimes.net/2016/05/02/people-building-fire-future-unialiberty-hall-limon"}
   - {title: "Delfino.cr: 16 de julio de 1955, el inicio de la Costa Rica para todos (2025)", url: "https://delfino.cr/2025/07/16-de-julio-de-1955-el-inicio-de-la-costa-rica-para-todos"}
   - {title: "Ariana Fernández, Un 10 de diciembre de 1934 y otro de 1948, Delfino.cr (2025)", url: "https://delfino.cr/2025/12/un-10-de-diciembre-de-1934-y-otro-de-1948"}
+media:
+  - {type: "image", file: "limon-afro-costa-ricans.jpg", caption: "A street by the market in Puerto Limón, Costa Rica, 2015.", credit: "Balou46", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Avenida_am_Markt,_puerto_Lim%C3%B3n,_Costa_Rica.jpg"}
 ---
 Puerto Limón is Costa Rica's port on the Caribbean. In the 1870s the government set out to build a railway from the coffee-growing Central Valley down to Limón, and to do it, it brought in workers from Jamaica. The line reached San José only in 1890. Many workers stayed, and the banana plantations that the United Fruit Company spread along the tracks drew more West Indians still.
 

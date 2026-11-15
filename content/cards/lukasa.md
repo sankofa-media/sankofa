@@ -19,6 +19,8 @@ sources:
   - {title: "Juliet Moss, Lukasa (Memory Board) (Luba peoples), Smarthistory (2015)", url: "https://smarthistory.org/lukasa-memory-board-luba-peoples/"}
   - {title: "Allen Memorial Art Museum, Oberlin College: Lukasa (Memory Board), 2017.10.10", url: "https://allenartcollection.oberlin.edu/objects/37935/lukasa-memory-board"}
   - {title: "Encyclopaedia Britannica: Luba", url: "https://www.britannica.com/topic/Luba-people"}
+media:
+  - {type: "image", file: "lukasa.jpg", caption: "A Luba lukasa memory board, late nineteenth or early twentieth century; Brooklyn Museum.", credit: "Brooklyn Museum, 76.20.4", license: "CC BY 3.0", url: "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_76.20.4_Lukasa_Memory_Board.jpg"}
 ---
 The Luba kingdom grew up in what is now the southern Democratic Republic of the Congo, and from the 16th century until colonial rule it was one of the most powerful states of central Africa. Its history was not kept in books. It was recited, and the lukasa was the reciter's instrument.
 

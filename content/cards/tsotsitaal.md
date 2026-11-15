@@ -21,6 +21,8 @@ sources:
   - {title: "South African History Online: Gangsterism in Sophiatown (2011)", url: "https://www.sahistory.org.za/article/gangsterism-sophiatown"}
   - {title: "South African History Online: Music and culture as forms of resistance (2011)", url: "https://www.sahistory.org.za/article/music-and-culture-forms-resistance"}
   - {title: "SABC News: Tsotsitaal has been part of the heritage of some Gauteng townships (24 September 2021)", url: "https://www.sabcnews.com/sabcnews/?p=684872"}
+media:
+  - {type: "image", file: "tsotsitaal.jpg", caption: "Context for Sophiatown's history: the derelict Church of Christ the King in 1972, after the forced removals of 1955.", credit: "Martinvl", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Nave_of_Christ_the_King,_Sophiatown,_1972.JPG"}
 ---
 Tsotsitaal is the street slang of South Africa's townships, an argot spoken above all by young men, for whom it is the sign of being streetwise. Its name means "tsotsi language": the tsotsis were the young gangsters of Johannesburg. It took shape in the 1940s in the city's mixed townships, above all Sophiatown, where people of many languages lived side by side, and its first base was a non-standard Afrikaans.
 

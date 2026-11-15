@@ -18,6 +18,8 @@ sources:
   - {title: "Caribbean Beat, Krista Thompson: Junkanoo rush (2006)", url: "https://www.caribbean-beat.com/issue-82/junkanoo-rush"}
   - {title: "TIME / Made by History, Sasha C. Wells: What to Know About the History of Junkanoo", url: "https://time.com/7202192/junkanoo-holiday-history/"}
   - {title: "HistoryMiami Museum, South Florida Folklife: Bahamas Junkanoo Revue", url: "https://historymiami.org/?p=3006"}
+media:
+  - {type: "image", file: "bahamas-junkanoo.jpg", caption: "A Junkanoo parade in Nassau, Bahamas, 1988.", credit: "Rüdiger Stehn", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Bahamas_1988_(127)_New_Providence_Junkanoo_(23562387456).jpg"}
 ---
 Junkanoo is the great street masquerade of Nassau, in the Bahamas. Groups of masked dancers in huge costumes of crepe paper over cardboard parade down Bay Street on Boxing Day and New Year's Day, to goatskin drums, cowbells, whistles and brass. Its old name was John Canoe.
 

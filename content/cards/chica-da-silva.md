@@ -24,6 +24,8 @@ sources:
   - {title: "Tribunal de Justiça de Minas Gerais (Memória do Judiciário): Chica da Silva, contexto histórico", url: "https://www.tjmg.jus.br/portal-tjmg/noticias/chica-da-silva/contexto-historico.htm"}
   - {title: "Tribunal de Justiça de Minas Gerais: Chica da Silva, a construção do mito", url: "https://www.tjmg.jus.br/portal-tjmg/noticias/chica-da-silva/construcao-do-mito.htm"}
   - {title: "Tribunal de Justiça de Minas Gerais: Chica da Silva, o testamento", url: "https://www.tjmg.jus.br/portal-tjmg/noticias/chica-da-silva/o-testamento.htm"}
+media:
+  - {type: "image", file: "chica-da-silva.jpg", caption: "The courtyard of Chica da Silva's house in Diamantina, Minas Gerais, Brazil, 2017.", credit: "Tissiana de A. de Souza", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Quintal_da_Casa_de_Chica_da_Silva.jpg"}
 ---
 In the eighteenth century Brazil's diamonds came from one closely guarded district of Minas Gerais, run from the village of Tejuco, today's Diamantina. Francisca da Silva was born into slavery nearby, in Milho Verde, in the early 1730s, the daughter of Maria da Costa, an African woman brought from the Mina Coast, and a Portuguese man. In 1753 she was bought by João Fernandes de Oliveira, who ran the diamond contract, and he soon freed her.
 

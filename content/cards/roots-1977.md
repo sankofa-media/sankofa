@@ -21,6 +21,8 @@ sources:
   - {title: "J. B. Bird, Museum of Broadcast Communications, Encyclopedia of Television: Roots (archived)", url: "https://web.archive.org/web/2016/http://www.museum.tv/eotv/roots.htm"}
   - {title: "Jessie Kratz, National Archives, Pieces of History: The \"Roots\" of Genealogy at the National Archives (22 February 2019)", url: "https://prologue.blogs.archives.gov/2019/02/22/the-roots-of-genealogy-at-the-national-archives/"}
   - {title: "Barbara Maranzani, History.com: Remembering Roots", url: "https://www.history.com/articles/remembering-roots"}
+media:
+  - {type: "image", file: "roots-1977.jpg", caption: "Context for Roots: LeVar Burton at the Disney Social Media Moms Celebration, Disneyland Hotel; 12 April 2014.", credit: "Sam Howzit", license: "CC BY 2.0", url: "https://commons.wikimedia.org/wiki/File:LeVar_Burton_-_13911818300.jpg"}
 ---
 Roots was a television miniseries made from Alex Haley's 1976 book about his own family. Haley had spent years in archives tracing his ancestry back to Kunta Kinte, a young man captured in the Gambia and carried to America in slavery, and the story followed his descendants down the generations to emancipation. LeVar Burton played the young Kunta.
 

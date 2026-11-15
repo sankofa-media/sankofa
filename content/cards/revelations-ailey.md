@@ -21,6 +21,8 @@ sources:
   - {title: "Alvin Ailey American Dance Theater: Our Story", url: "https://ailey.org/our-story"}
   - {title: "Alvin Ailey American Dance Theater: Revelations (repertory)", url: "https://ailey.org/repertory/revelations"}
   - {title: "PBS American Masters: Alvin Ailey, biography and timeline", url: "https://www.pbs.org/wnet/americanmasters/alvin-ailey-biography-and-timeline/19856"}
+media:
+  - {type: "image", file: "revelations-ailey.jpg", caption: "Context for Revelations: choreographer Alvin Ailey, photographed by Carl Van Vechten on 22 March 1955; Library of Congress.", credit: "Carl Van Vechten / Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Alvin_Ailey_Ellington_career.jpg"}
 ---
 Alvin Ailey was born in 1931 in Rogers, a small town in Texas, to a single teenage mother. The two of them lived by picking cotton, washing clothes and domestic work in one Texas town after another, and the boy went to Baptist church. During the Second World War mother and son moved to Los Angeles, where Ailey found modern dance in the company of the choreographer Lester Horton.
 

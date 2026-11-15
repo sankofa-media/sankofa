@@ -16,6 +16,8 @@ sources:
   - {title: "ICOMOS, Advisory Body Evaluation: The Stone Circles of Senegambia, No. 1226 (2006)", url: "https://whc.unesco.org/archive/advisory_body_evaluation/1226.pdf"}
   - {title: "Governments of The Gambia and Senegal, Nomination file: Stone Circles of Senegambia (2005)", url: "https://whc.unesco.org/uploads/nominations/1226.pdf"}
   - {title: "World Heritage Committee, Decisions of the 30th session, Decision 30 COM 8B.32 (2006)", url: "https://whc.unesco.org/archive/2006/whc06-30com-19e.pdf"}
+media:
+  - {type: "image", file: "senegambian-stone-circles.jpg", caption: "Stone circles at Wassu, The Gambia; photograph, 6 June 2006.", credit: "shaunamullally", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Wassu_Stone_Cirles_shaunamullally_02.jpg"}
 ---
 Along the Gambia River, in what are now Senegal and The Gambia, stand more than a thousand megalithic monuments: rings of upright stones set beside burial mounds, spread along some 350 kilometres of the river. Excavations date the sites from about the third century BCE to the sixteenth century CE, so people kept raising them for more than fifteen hundred years.
 

@@ -20,6 +20,8 @@ sources:
   - {title: "Valentina Fraiz and Eduardo Magossi, Revista Pesquisa FAPESP: Revolts intensified repression of enslaved people (November 2025)", url: "https://revistapesquisa.fapesp.br/en/revolts-intensified-repression-of-enslaved-people/"}
   - {title: "Encyclopedia of African-American Culture and History (Encyclopedia.com): Malê Rebellion", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/male-rebellion"}
   - {title: "Tribunal de Justiça do Estado da Bahia: O Tribunal da Relação da Bahia e a Revolta dos Malês", url: "https://www.tjba.jus.br/portal/o-tribunal-da-relacao-da-bahia-e-a-revolta-dos-males/"}
+media:
+  - {type: "image", file: "males-revolt-1835.jpg", caption: "Context for Salvador in 1835: Johann Moritz Rugendas's engraving San Salvador, showing a capoeira gathering; from Voyage pittoresque dans le Brésil. This depicts social life, not the Malê revolt.", credit: "Johann Moritz Rugendas", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Capoeira_in_Bahia_1835.jpg"}
 ---
 In 1835 the Brazilian city of Salvador da Bahia ran on enslaved African labour, much of it in the streets: porters, tradesmen and vendors who handed their owners a share of what they earned. Among them were Muslims, and most of the Muslim rebels were Yoruba speakers, called Nagô in Bahia. In Bahia the Muslims were called malês. They met to pray and to learn to write passages of the Qur'an.
 

@@ -24,6 +24,8 @@ sources:
   - {title: "BBC Correspondent: Who Killed Lumumba? (transcript, 2000)", url: "https://news.bbc.co.uk/hi/english/static/audio_video/programmes/correspondent/transcripts/974745.txt"}
   - {title: "New York Public Library research guide: Patrice Lumumba, biography", url: "https://libguides.nypl.org/lumumba/biography"}
   - {title: "NPR Morning Edition: Belgian Apology (15 February 2002)", url: "https://www.npr.org/2002/02/15/1138123/belgian-apology"}
+media:
+  - {type: "image", file: "lumumba-tooth.jpg", caption: "Context: Patrice Lumumba, portrait dated 27 December 1960; not a photograph of the return of his remains.", credit: "Unknown photographer / Anefo, Nationaal Archief", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Patrice_Lumumba,_1960.jpg"}
 ---
 Patrice Lumumba led the Belgian Congo to independence on 30 June 1960 and became its first prime minister. At the handover, with King Baudouin listening, he spoke bluntly of the contempt and violence Congolese had suffered under Belgian rule. Within months he was deposed and jailed, and in January 1961 he was flown to the breakaway province of Katanga and shot by a firing squad.
 

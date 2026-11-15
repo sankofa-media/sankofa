@@ -22,6 +22,8 @@ sources:
   - {title: "Román Gutiérrez Olivares (CNDH): Alcances de la reforma constitucional en materia de los pueblos afromexicanos (16 August 2019)", url: "https://escuelapueblosindigenas.cndh.org.mx/assets/doc/Ponencias/P-Roman-M9.pdf"}
   - {title: "Cámara de Diputados: Reformas constitucionales turnadas a las legislaturas estatales, artículo 2° (DOF 9 August 2019)", url: "https://www.diputados.gob.mx/LeyesBiblio/votos/20190628_art2.htm"}
   - {title: "Elia Avendaño Villafuerte, Implicaciones jurídicas de la inclusión de los pueblos y comunidades afromexicanas en la Constitución Federal, UNAM (2019)", url: "https://www.nacionmulticultural.unam.mx/secciones/devenir-PIAPI/Elia-Avendanio-20190905.pdf"}
+media:
+  - {type: "image", file: "costa-chica.jpg", caption: "The Minga character in the Dance of the Cowboys, Costa Chica, Oaxaca, 2020.", credit: "Sabina Varela Turcott", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Danza_de_los_vaqueros,_Costa_Chica,_Oaxaca.jpg"}
 ---
 The Costa Chica, the "short coast", is the stretch of Mexico's Pacific shore that runs south-east from Acapulco in Guerrero into Oaxaca. With Veracruz on the Gulf coast, it is one of the two heartlands of Black Mexico. Their ancestors were Africans brought by the Spanish in slavery from the 16th century; many worked the colonial cattle ranches of the coast.
 

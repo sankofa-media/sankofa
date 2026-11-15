@@ -24,6 +24,8 @@ sources:
   - {title: "Archaeology (Archaeological Institute of America): Rock art in southern Africa dated (6 April 2017)", url: "https://archaeology.org/news/2017/04/06/170406-rock-art-dated/"}
   - {title: "Sarah Wild, Dreams of the Stone Age dated for first time in southern Africa, Nature 545 (2017)", url: "https://www.nature.com/articles/545014a"}
   - {title: "Adelphine Bonneau et al., The earliest directly dated rock paintings from southern Africa: new AMS radiocarbon dates, Antiquity 91 (2017)", url: "https://doi.org/10.15184/aqy.2016.271"}
+media:
+  - {type: "image", file: "san-rock-art.jpg", caption: "San rock art near Steynsdrop, south of Barberton, South Africa; photographed 31 March 2012.", credit: "LefaLeRona", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:San_Rock_Art_in_Steynsdrop_Near_Barberton.png"}
 ---
 San rock art is the painting and engraving of southern Africa's hunter-gatherers on the walls of rock shelters, made over thousands of years. Direct radiocarbon dating of carbon-black paint puts the oldest dated paintings, in south-eastern Botswana, at between about 5,700 and 4,400 years old. The Tsodilo Hills in the Kalahari, a World Heritage Site since 2001, hold more than 4,500 rock paintings. In the uKhahlamba-Drakensberg mountains, the eland stands at the centre of the art.
 

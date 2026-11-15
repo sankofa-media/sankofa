@@ -24,6 +24,8 @@ sources:
   - {title: "OUPblog, Joanna Dee Das: Katherine Dunham: the artist as activist (2017)", url: "https://blog.oup.com/2017/06/katherine-dunham-artist-activist/"}
   - {title: "CBS Colorado: Dunham's 'Southland' Finally Has Its U.S. Premiere (2012)", url: "https://www.cbsnews.com/colorado/news/katherine-dunhams-southland-finally-has-its-u-s-premiere"}
   - {title: "5280, Daliah Singer: Cleo Parker Robinson Dance Ensemble Revives \"Southland\" (2012)", url: "https://5280.com/cleo-parker-robinson-dance-ensemble-revives-southland"}
+media:
+  - {type: "image", file: "southland-dunham.jpg", caption: "Context for Southland: dancer and choreographer Katherine Dunham, photographed 25 January 1956; Library of Congress.", credit: "Phyllis Twachtman / New York World-Telegram & Sun; Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Katherine_Dunham_ppmsca.05792.jpg"}
 ---
 Southland is a ballet about lynching that the American dancer and choreographer Katherine Dunham created in 1951, when the United States wanted its culture abroad to show only a flattering picture of the country. It was commissioned by the Symphony of Chile and premiered in Santiago. The story is set in the American South: a white woman falsely accuses a Black man of rape, and he is lynched. Julie Belafonte, who danced the accuser, later recalled how hard it was for her to play the part.
 

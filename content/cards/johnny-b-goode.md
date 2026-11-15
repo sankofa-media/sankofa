@@ -26,6 +26,8 @@ sources:
   - {title: "Melanie Davis, American Songwriter: On This Day in 1958, Chuck Berry Recorded This Signature Song (6 January 2026)", url: "https://americansongwriter.com/on-this-day-in-1958-chuck-berry-recorded-this-signature-song-half-inspired-by-his-mother-and-with-radio-friendly-edits/"}
   - {title: "Contemporary Musicians (Encyclopedia.com): Berry, Chuck", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/chuck-berry"}
   - {title: "NASA Jet Propulsion Laboratory: NASA Spacecraft Embarks on Historic Journey Into Interstellar Space (12 September 2013)", url: "https://www.jpl.nasa.gov/news/nasa-spacecraft-embarks-on-historic-journey-into-interstellar-space/"}
+media:
+  - {type: "image", file: "johnny-b-goode.jpg", caption: "Context: Chuck Berry in Brunnsparken, Örebro, Sweden, 2007.", credit: "Håkan Henriksson", license: "CC BY 3.0", url: "https://commons.wikimedia.org/wiki/File:Chuck-berry-2007-07-18.jpg"}
 ---
 In 1958 [[rock-n-roll|rock and roll]] was still a new sound, and Chuck Berry, a guitarist from St. Louis, wrote his own hits for Chess Records in Chicago. "Johnny B. Goode", released that year, rose to No. 8 on the American charts.
 

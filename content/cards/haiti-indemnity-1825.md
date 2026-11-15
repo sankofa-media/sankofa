@@ -19,6 +19,8 @@ sources:
   - {title: "UN News: Haiti's 'ransom': calls for restitution two centuries after France imposed independence debt (17 April 2025)", url: "https://news.un.org/en/story/2025/04/1162406"}
   - {title: "The New York Times, Historical data on Haiti's double debt (GitHub, nytimes/haiti-debt)", url: "https://github.com/nytimes/haiti-debt"}
   - {title: "PBS NewsHour: Hundreds of years after Haiti paid to be free from slavery, the costs are still being felt (2022)", url: "https://www.pbs.org/newshour/show/hundreds-of-years-after-haiti-paid-to-be-free-from-slavery-the-costs-are-still-being-felt"}
+media:
+  - {type: "image", file: "haiti-indemnity-1825.jpg", caption: "The first page of Charles X's ordinance on Haiti's independence debt, 17 April 1825; French National Archives.", credit: "Archives nationales (France), A//1108/B", license: "CC BY 4.0", url: "https://commons.wikimedia.org/wiki/File:Ordonnance_Charles_X_17_avril_1825_page_1.jpg"}
 ---
 In 1804 the formerly enslaved people of the French colony of Saint-Domingue declared their independence as Haiti, the outcome of the [[haitian-revolution|Haitian Revolution]]. France did not recognise the new state.
 

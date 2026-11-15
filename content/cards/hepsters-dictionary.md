@@ -22,6 +22,8 @@ sources:
   - {title: "Barry Popik, Cab Calloway's \"Hepster's Dictionary\" (1938, 1944)", url: "https://barrypopik.com/blog/cab_calloway"}
   - {title: "Britannica: Cab Calloway (archived September 2026)", url: "http://web.archive.org/web/20260909185351/https://www.britannica.com/biography/Cab-Calloway"}
   - {title: "Indiana State Library blog: How to be hep to the jive with Cab Calloway", url: "https://blog.library.in.gov/tag/cab-calloway/"}
+media:
+  - {type: "image", file: "hepsters-dictionary.jpg", caption: "Context for the Hepster's Dictionary: Cab Calloway photographed by Carl Van Vechten in 1933; Library of Congress.", credit: "Carl Van Vechten / Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Cab_Calloway_LCCN2004662659.jpg"}
 ---
 Jive was the slang of the musicians and entertainers of 1930s Harlem, the talk of its jazz scene. In it Harlem itself was "the Apple", the big town, the main stem.
 

@@ -26,6 +26,8 @@ sources:
   - {title: "Gabrielle Hickmon, What Audre Lorde Learned in Berlin About Afro-German Identity, Literary Hub (10 December 2019)", url: "https://lithub.com/what-audre-lorde-learned-in-berlin-about-afro-german-identity"}
   - {title: "The Berliner: The American poet who started the Afro-German movement (24 November 2020)", url: "https://www.the-berliner.com/politics/lorde-afro-german/"}
   - {title: "CARMAH, Humboldt-Universität: Decolonising Berlin's Streets", url: "https://www.carmah.berlin/reflections/decolonising-berlins-streets"}
+media:
+  - {type: "image", file: "may-ayim.jpg", caption: "May-Ayim-Ufer in Berlin-Kreuzberg, 2 July 2013; a contextual view of the embankment named after May Ayim.", credit: "Fridolin freudenfett (Peter Kuley)", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Kreuzberg_May-Ayim-Ufer.JPG"}
 ---
 May Ayim was a poet, educator and activist, one of the founders of the Afro-German movement. She was born in Hamburg in 1960 to a German mother and a Ghanaian father. In 1984 she moved to West Berlin, where she met the American poet Audre Lorde, who was urging Afro-German women to make themselves seen.
 

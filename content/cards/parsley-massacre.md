@@ -18,6 +18,8 @@ dispute: "Whether soldiers actually used the word perejil as a test, and how wid
 sources:
   - {title: "Encyclopaedia Britannica: Parsley Massacre", url: "https://www.britannica.com/event/Parsley-Massacre"}
   - {title: "NPR, Marlon Bishop and Tatiana Fernandez: 80 years on, Dominicans and Haitians revisit painful memories of Parsley Massacre (2017), via MPR News", url: "https://www.mprnews.org/story/2017/10/08/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre"}
+media:
+  - {type: "image", file: "parsley-massacre.jpg", caption: "Context for the 1937 massacre: the Dajabón–Ouanaminthe border between the Dominican Republic and Haiti, photographed 18 April 2005.", credit: "Fran Afonso from Islas Canarias", license: "CC BY 2.0", url: "https://commons.wikimedia.org/wiki/File:Frontera_Dajab%C3%B3n_-_Ouanaminthe._Fran_Afonso_(9710562817).jpg"}
 ---
 In the 1930s the border between the Dominican Republic and Haiti existed mostly on paper. A treaty had fixed the line in the middle of the decade, but the people of the borderland, Dominican and Haitian, still traded, worked and married across it. The dictator Rafael Trujillo wanted the border under Dominican control and the Haitians gone from it.
 

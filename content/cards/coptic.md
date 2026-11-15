@@ -20,6 +20,8 @@ sources:
   - {title: "Erin Blakemore, How the Rosetta Stone unlocked the secrets of ancient civilizations, National Geographic", url: "https://www.nationalgeographic.com/history/article/how-the-rosetta-stone-unlocked-the-secrets-of-ancient-civilizations"}
   - {title: "Foy Scalf, The Rosetta Stone: Unlocking the Ancient Egyptian Language, American Research Center in Egypt", url: "https://arce.org/?p=2468"}
   - {title: "German National Library (DNB), Media history: Jean-François Champollion", url: "https://mediengeschichte.dnb.de/DBSMZBN/Content/EN/SoundsSymbolsScript/01-champollion-jean-francois-en.html"}
+media:
+  - {type: "image", file: "coptic.jpg", caption: "A Coptic liturgical codex, seventeenth–eighteenth century; Metropolitan Museum of Art.", credit: "Metropolitan Museum of Art", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Coptic_Liturgical_Codex_MET_DP100664.jpg"}
 ---
 Coptic is the last stage of the language of ancient Egypt and its youngest written form. Earlier Egyptian had been written in hieroglyphs and in the cursive hieratic and Demotic scripts, but by the second century CE written Demotic no longer matched the spoken language and was falling out of use. Instead Egyptian came to be written in the Greek alphabet, the script in which Egypt's government and its Christian church worked. For sounds that Greek lacked they added six or seven letters, depending on the dialect, taken from Demotic, and Greek words became an important part of the vocabulary.
 

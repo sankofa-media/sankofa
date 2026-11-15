@@ -26,6 +26,8 @@ sources:
   - {title: "Kai Kresse and Clarissa Vierke, Swahili language and literature as resources for Indian Ocean studies, History Compass (2022)", url: "https://epub.uni-bayreuth.de/6697/1/History%20Compass%20-%202022%20-%20Kresse%20-%20Swahili%20language%20and%20literature%20as%20resources%20for%20Indian%20Ocean%20studies.pdf"}
   - {title: "Abdelhakim Belhacel and Fu'ad Al-Qaisi, Un projet d'alliance entre Kilwa et la France, Afriques (2025)", url: "https://journals.openedition.org/afriques/5159"}
   - {title: "Ann Biersteker, Manuscript Cultures 17 (2021), University of Hamburg CSMC", url: "https://www.csmc.uni-hamburg.de/publications/mc/files/articles/mc17-biersteker.pdf"}
+media:
+  - {type: "image", file: "ajami.jpg", caption: "Context for Ajami, writing African languages in Arabic script: an eighteenth-century Harari legal manuscript, Kitāb al-Farā'id; digitized by the Hill Museum & Manuscript Library.", credit: "ʻAbd al-Raḥmān ʻArāshī et al.; digitization: Hill Museum & Manuscript Library", license: "CC BY 4.0", url: "https://commons.wikimedia.org/wiki/File:Kit%C4%81b_Al_Far%C4%81%27id-_%CA%BBAbd_al-Ra%E1%B8%A5m%C4%81n_%CA%BBAr%C4%81sh%C4%AB_et_al-_Harari_Legal_Manuscript_18th_Century.png"}
 ---
 Ajami is the name for African languages written in a modified Arabic script, with the letters adapted to render their sounds. For centuries people across West and East Africa have used it to write about a dozen languages, among them Wolof, Hausa, Mandinka and Swahili, and not only scholars: poets wrote verse in it, and ordinary people used it for business records and daily notes. The oldest firmly dated Swahili writing on paper, letters from [[swahili|Kilwa]] in 1711, is Ajami.
 

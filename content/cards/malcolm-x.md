@@ -25,6 +25,8 @@ sources:
   - {title: "Ryland West, New York Law Journal: Two Men Convicted of Killing Malcolm X Are Cleared After 55 Years (2021)", url: "https://law.com/newyorklawjournal/2021/11/18/two-men-convicted-of-killing-malcolm-x-are-cleared-after-55-years"}
   - {title: "Innocence Project: Khalil Islam", url: "https://innocenceproject.org/cases/khalil-islam/"}
   - {title: "NPR, News & Notes: 'Our Ghana' at 50 (2007)", url: "https://www.npr.org/2007/03/06/7728721/our-ghana-at-50"}
+media:
+  - {type: "image", file: "malcolm-x.jpg", caption: "Malcolm X, photographed by Ed Ford on 12 March 1964.", credit: "Ed Ford / New York World-Telegram and Sun collection, Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Malcolm_X_NYWTS_2a.jpg"}
 ---
 Malcolm X was born Malcolm Little in Omaha, Nebraska, on 19 May 1925. His father died when he was six, killed, the family believed, by white supremacists. In 1946 Malcolm was sent to prison in Massachusetts for burglary, and there he joined the Nation of Islam. Released in 1952, he gave up his surname as a "slave name" and took an X. By the late 1950s he was the movement's leading spokesman, and his views stood in sharp contrast to the nonviolence of [[martin-luther-king|Martin Luther King Jr.]]
 

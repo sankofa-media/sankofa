@@ -22,6 +22,8 @@ sources:
   - {title: "Ana Martins, BlackPast: O Clarim da Alvorada (1924-1932)", url: "https://blackpast.org/global-african-history/o-clarim-da-alvorada-1924-1932"}
   - {title: "Fundação Perseu Abramo: Frente Negra Brasileira, gestando um projeto político para o Brasil", url: "https://fpabramo.org.br/frente-negra-brasileira-gestando-um-projeto-politico-para-o-brasil-2/"}
   - {title: "Encyclopedia of Latin American History and Culture, via Encyclopedia.com: Frente Negra Brasileira", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/frente-negra-brasileira"}
+media:
+  - {type: "image", file: "clarim-dalvorada.jpg", caption: "O Clarim da Alvorada, 1929; copy in the São Paulo State Public Archive.", credit: "O Clarim da Alvorada / Arquivo Público do Estado de São Paulo, KU19290203", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:O_Clarim_da_Alvorada_(Documento_KU19290203),_Arquivo_P%C3%BAblico_do_Estado_de_S%C3%A3o_Paulo.jpg"}
 ---
 Brazil abolished slavery in 1888, but in São Paulo, the booming coffee state, the government subsidised European immigrants to take the work, and freed people and their children were pushed to the margins. The city's Black social clubs printed their own papers.
 

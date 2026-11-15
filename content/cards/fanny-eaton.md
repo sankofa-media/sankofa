@@ -23,6 +23,8 @@ sources:
   - {title: "Shola von Reynolds, AnOther: Fanny Eaton, the Black Pre-Raphaelite muse that time forgot", url: "https://www.anothermag.com/art-photography/8453/fanny-eaton-the-black-pre-raphaelite-muse-that-time-forgot"}
   - {title: "Hammersmith & Fulham Council: Original Black supermodel gets blue plaque in Shepherds Bush (2022)", url: "https://www.lbhf.gov.uk/articles/news/2022/11/original-black-supermodel-gets-blue-plaque-shepherds-bush"}
   - {title: "Jan Marsh: Fanny Eaton latest (2017)", url: "https://janmarsh.blogspot.com/2017/02/fanny-eaton-latest.html"}
+media:
+  - {type: "image", file: "fanny-eaton.jpg", caption: "Fanny Eaton, a graphite portrait by Simeon Solomon, 1860; Metropolitan Museum of Art.", credit: "Simeon Solomon / Metropolitan Museum of Art", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Fanny_Eaton_MET_DP890054.jpg"}
 ---
 In mid-Victorian London the Pre-Raphaelite painters and their circle needed models for biblical and literary scenes. Fanny Eaton was born in Jamaica in 1835; her mother, Matilda Foster, is thought to have been born into slavery. In the 1840s mother and daughter came to London, where Fanny worked as a domestic servant. She married a cab driver, James Eaton, and they had ten children.
 

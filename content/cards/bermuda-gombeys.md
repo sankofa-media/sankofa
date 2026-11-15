@@ -16,6 +16,8 @@ further:
 sources:
   - {title: "Smithsonian Center for Folklife and Cultural Heritage: Bermuda Connections, Arts of Performance (pp. 125-146)", url: "https://folklife-media.si.edu/docs/folklife/education_exhibits/resources/Bermuda_Connections_125_146.pdf"}
   - {title: "National Geographic, Bob Krist: Behind the Mask in Bermuda (2015)", url: "https://www.nationalgeographic.com/travel/article/gombeys-behind-the-mask-in-bermuda"}
+media:
+  - {type: "image", file: "bermuda-gombeys.jpg", caption: "Gombey dancers in Kings Square, St George's, Bermuda, 2004.", credit: "Captain-tucker", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Gombey_dancers_Bermuda.JPG"}
 ---
 The Gombeys are Bermuda's masked street dancers. A troupe moves through the streets behind its drummers, the dancers in bright costumes set with mirrors and in masks that hide every face. "Gombey" is a Bantu word for rhythm, and the tradition mixes West African, British, Caribbean and Native American elements.
 

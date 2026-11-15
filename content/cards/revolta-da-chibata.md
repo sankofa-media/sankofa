@@ -18,6 +18,8 @@ sources:
   - {title: "Agência Senado, Arquivo S: Há 110 anos, marujos denunciaram chibata na Marinha e racismo no Brasil pós-abolição (Ricardo Westin, 2020)", url: "https://www12.senado.leg.br/noticias/especiais/arquivo-s/em-1910-marujos-denunciaram-chibata-na-marinha-e-racismo-no-brasil-pos-abolicao"}
   - {title: "FGV CPDOC, Atlas Histórico do Brasil: Revolta da Chibata (Beatriz Coelho Silva)", url: "https://atlas.fgv.br/verbetes/revolta-da-chibata"}
   - {title: "Presidência da República: Lei nº 11.756, de 23 de julho de 2008", url: "https://www.planalto.gov.br/ccivil_03/_ato2007-2010/2008/lei/l11756.htm"}
+media:
+  - {type: "image", file: "revolta-da-chibata.jpg", caption: "João Cândido reads the Revolt of the Lash manifesto beside another sailor, 1910.", credit: "Unknown photographer", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Jo%C3%A3o_C%C3%A2ndido_lendo_o_manifesto_da_Revolta_da_Chibata.jpg"}
 ---
 In 1910, two decades after abolition, the lash was still a punishment in Brazil's navy. The sailors were almost all Black or of mixed race, the officers white. On the night of 22 November 1910, in Guanabara Bay, sailors led by João Cândido took over the battleship Minas Gerais, killing several officers including her captain, and the São Paulo and other ships joined them. The rebels trained their guns on Rio de Janeiro and sent President Hermes da Fonseca an ultimatum: abolish the lash, or the capital would be shelled.
 

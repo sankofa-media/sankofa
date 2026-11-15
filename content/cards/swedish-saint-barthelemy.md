@@ -24,6 +24,8 @@ sources:
   - {title: "SweCarCol: Finding aids and history of the archive", url: "https://swecarcol.ub.uu.se/info/findingaids?lang=en"}
   - {title: "Contested Histories: Saint Barthélemy and its forgotten past", url: "https://contestedhistories.org/uncategorized/saint-barthelemy-and-its-forgotten-past/"}
   - {title: "Victor Wilson, Contraband Trade under Swedish Colours: St. Barthélemy's Moment in the Sun, 1793–1815, Itinerario 43:2 (2019), abstract", url: "https://www.cambridge.org/core/journals/itinerario/article/contraband-trade-under-swedish-colours-st-barthelemys-moment-in-the-sun-17931815/56143BB45BF408E235CE4CA4C2829218"}
+media:
+  - {type: "image", file: "swedish-saint-barthelemy.jpg", caption: "Samuel Fahlberg's map of Gustavia, Saint-Barthélemy, dated 18 October 1799; National Archives of Sweden.", credit: "Samuel Fahlberg / National Archives of Sweden", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Gustavia_1799.jpg"}
 ---
 In 1784 Sweden acquired from France the small island of Saint-Barthélemy in the Lesser Antilles. It made the town of Gustavia a free port, and during the wars of 1793–1815 the town boomed as a neutral market where merchants of every flag did business.
 

@@ -19,6 +19,8 @@ sources:
   - {title: "C. C. Aguolu and L. E. Aguolu: Nnamdi Azikiwe, a Force in Library Development in Nigeria, World Libraries 7:2 (1997)", url: "http://web.archive.org/web/2010/http://www.worlib.org/vol07no2/aguolu_v07n2.shtml"}
   - {title: "BBC World Service, The Story of Africa: Chapter 7", url: "https://www.bbc.co.uk/worldservice/africa/features/storyofafrica/13chapter7.shtml"}
   - {title: "Nigerian Observer: Centenary anniversary, life and times of a national hero, Chief Anthony Enahoro (2023)", url: "https://nigerianobservernews.com/2023/07/centenary-anniversary-life-and-times-of-a-national-hero-chief-anthony-enahoro/"}
+media:
+  - {type: "image", file: "west-african-pilot.jpg", caption: "Context for the West African Pilot: Nnamdi Azikiwe with Uche Ehwa at an official function in Nigeria, after 1972; African Studies Centre Leiden.", credit: "H.F.J.M. Crebolder / African Studies Centre Leiden", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:ASC_Leiden_-_NSAG_-_Crebolder_1_-_003_-_%22Dr._Zik._Nig._Gov._Gen.%22_Nnamdi_Azikiwe_at_an_official_function_in_Nigeria_-_after_1972.tif"}
 ---
 The West African Pilot was a newspaper launched in Lagos in 1937, when Nigeria was still a British colony. Its founder, Nnamdi Azikiwe, known as Zik, had studied in the United States and then spent three years in Accra, in the Gold Coast, editing the new African Morning Post. Back home, he started the Pilot, and around it he built a string of papers in other towns, among them the Southern Nigerian Defender in Ibadan. All of them argued for the same thing: independence from British rule.
 

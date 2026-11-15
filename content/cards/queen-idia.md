@@ -20,6 +20,8 @@ sources:
   - {title: "Festac: Idia Tales – Three Takes and a Mask, Chimurenga Chronic", url: "https://chimurengachronic.co.za/?p=18676"}
   - {title: "Isabel Eiser, Ikone einer Debatte: Eine Rezeptionsgeschichte der Benin-Bronzen, bpb Aus Politik und Zeitgeschichte (2021)", url: "https://www.bpb.de/apuz/nigeria-2021/337818/eine-rezeptionsgeschichte-der-benin-bronzen"}
   - {title: "Kovie Biakolo, A Delicate Repair, The New York Review of Books (2026)", url: "https://www.nybooks.com/online/2026/10/04/a-delicate-repair-benin-bronzes/"}
+media:
+  - {type: "image", file: "queen-idia.jpg", caption: "Context for Queen Idia: a Benin bronze head of a queen mother, early sixteenth century; Ethnologisches Museum, Berlin.", credit: "Bin im Garten", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Afrikaabteilung_in_Ethnological_Museum_Berlin_29.JPG"}
 ---
 Idia lived in the kingdom of Benin, in what is now southern Nigeria, at the start of the sixteenth century. Her son Esigie, then oba, fought wars that expanded the kingdom, and Benin remembers Idia as the force behind his campaigns, a woman who went to war herself. To honour her, Esigie created a new title, Iyoba, queen mother, and Idia was the first to hold it.
 

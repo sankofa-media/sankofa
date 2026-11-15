@@ -19,6 +19,8 @@ sources:
   - {title: "Unicode Consortium: Unicode 4.1.0", url: "https://www.unicode.org/versions/Unicode4.1.0/"}
   - {title: "Richard Ishida, Tamazight (Tifinagh) orthography notes (2026)", url: "https://r12a.github.io/scripts/tfng/zgh"}
   - {title: "Encyclopaedia Britannica: tifinagh", url: "https://www.britannica.com/topic/Tifinagh"}
+media:
+  - {type: "image", file: "tifinagh.jpg", caption: "A Moroccan pupil's notebook in Tifinagh from Imouzzer Marmoucha; photograph, 9 January 2023.", credit: "Mounir Neddi", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Notebook_of_a_Moroccan_student_from_Imouzzer_Marmoucha_(Tifinagh).jpg"}
 ---
 Tifinagh is the alphabet of the Amazigh, or Berber, languages of North Africa and the Sahara. Its earliest forms are known from ancient inscriptions across North Africa, and those inscriptions had no fixed direction: they ran left to right, right to left, and sometimes vertically, from the bottom up.
 

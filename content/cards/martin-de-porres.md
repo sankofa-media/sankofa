@@ -19,6 +19,8 @@ sources:
   - {title: "Encyclopaedia Britannica: Saint Martin de Porres", url: "https://www.britannica.com/biography/Saint-Martin-de-Porres"}
   - {title: "Franciscan Media: Saint Martin de Porres", url: "https://www.franciscanmedia.org/saint-of-the-day/saint-martin-de-porres/"}
   - {title: "John XXIII: Homily at the canonisation of Martin de Porres, 6 May 1962 (Vatican)", url: "https://www.vatican.va/content/john-xxiii/la/homilies/1962/documents/hf_j-xxiii_hom_19620506_martino-porres.html"}
+media:
+  - {type: "image", file: "martin-de-porres.jpg", caption: "Saint Martin de Porres, an anonymous seventeenth-century painting in the Monastery of Santa Rosa de las Monjas, Lima.", credit: "Unknown artist / Monastery of Santa Rosa de las Monjas, Lima", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:San_Martin_de_Porres_huaycan.jpg"}
 ---
 Martín de Porres was born in 1579 in Lima, in the Spanish Viceroyalty of Peru. His father was a Spanish nobleman and his mother a free Black woman; they never married, and the father abandoned the family. Martín grew up poor, carrying the double stigma of illegitimate birth and mixed race. As a boy he was apprenticed to a barber-surgeon and learned to let blood and prepare medicines.
 

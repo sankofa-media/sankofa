@@ -22,6 +22,8 @@ sources:
   - {title: "The Ford / LA Phil: Les Ballets Africains", url: "https://www.theford.com/musicdb/artists/478/les-ballets-africains"}
   - {title: "Camp Boiro Memorial (webGuinée): Keita Fodeba, 1921–1969", url: "https://web.archive.org/web/20190530184336/http://www.campboiro.org:80/victimes/keita_fodeba.html"}
   - {title: "Library of Congress Country Studies via GlobalSecurity: Guinea, Internal Insecurity", url: "https://www.globalsecurity.org/military/world/africa/gn-history-43.htm"}
+media:
+  - {type: "image", file: "ballets-africains.jpg", caption: "An African ensemble led by Fodéba Keïta performing at the Kongresshalle in Leipzig, 16 November 1951.", credit: "Roger Rössing and Renate Rössing / Deutsche Fotothek", license: "CC BY-SA 3.0 de", url: "https://commons.wikimedia.org/wiki/File:Fotothek_df_roe-neg_0006215_001_Auftritt_eines_afrikanischen_Ensembles_unter_der.jpg"}
 ---
 In the early 1950s Paris was the capital of the empire that ruled Guinea, and movements for African independence were gathering strength. Among the Africans in the city was Fodéba Keïta, a Guinean poet and dancer. With the guitarist Facély Kanté he built a company that brought African music, dance and storytelling onto the stage: Les Ballets Africains. Through the 1950s it toured abroad.
 

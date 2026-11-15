@@ -21,6 +21,8 @@ sources:
   - {title: "Lucilene Reginaldo, Rosários dos pretos, «São Benedito de Quissama», Studia Historica. Historia Moderna 38 (2016)", url: "https://revistas.usal.es/uno/index.php/Studia_Historica/article/download/shhmo2016381123151/14889"}
   - {title: "Ana da Cunha, Lisbon inaugurates street signs about African history, Mensagem de Lisboa (13 January 2024)", url: "https://amensagem.pt/2024/01/13/lisbon-inaugurates-street-signs-african-history/"}
   - {title: "Rute Barbedo, Lisboa ganha 20 placas e uma estátua para lembrar cinco séculos de presença africana, Time Out Lisboa (10 January 2024)", url: "https://www.timeout.pt/lisboa/pt/noticias/lisboa-ganha-20-placas-e-uma-estatua-para-lembrar-cinco-seculos-de-presenca-africana-011024"}
+media:
+  - {type: "image", file: "mocambo-lisbon.jpg", caption: "Context for Lisbon's Mocambo district: Rua do Poço dos Negros, photographed 18 December 2017.", credit: "Sergei Gussev", license: "CC BY 2.0", url: "https://commons.wikimedia.org/wiki/File:Lisboa_-i---i-_(27367681719).jpg"}
 ---
 In the 1440s Portuguese ships began landing captives from West Africa on the beach at Lagos, in the Algarve. Within a few decades Lisbon had become the main port through which enslaved Africans entered Portugal, and by the sixteenth century about one Lisboan in ten was Black, enslaved or free.
 

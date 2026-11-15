@@ -20,6 +20,8 @@ sources:
   - {title: "Jacques Leclerc, Haïti, L'aménagement linguistique dans le monde, CEFAN, Université Laval", url: "https://www.axl.cefan.ulaval.ca/amsudant/haiti.htm"}
   - {title: "Constitution of Haiti 1987 (rev. 2012), Constitute Project", url: "https://www.constituteproject.org/constitution/Haiti_2012"}
   - {title: "Nick Nesbitt, Sonthonax's Proclamation, Island Luminous, Florida International University", url: "https://islandluminous.fiu.edu/part02-slide03.html"}
+media:
+  - {type: "image", file: "haitian-creole.jpg", caption: "A Haitian Creole editing event at Drip, 8 December 2024.", credit: "Mollystarkdean", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:The_Haitian_Creole_Edit-a-thon_at_Drip.jpg"}
 ---
 Haitian Creole, Kreyòl, is the language of Haiti, and the language every Haitian speaks; only a small minority also speaks French well. Most of its words come from French, but it is a language in its own right. It grew in Saint-Domingue, the French plantation colony on the western part of Hispaniola, among the enslaved Africans brought to work its plantations.
 

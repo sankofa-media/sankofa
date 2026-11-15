@@ -20,6 +20,8 @@ sources:
   - {title: "Artlink: Ulli Beier (1922-2011)", url: "https://www.artlink.com.au/articles/3644/ulli-beier/"}
   - {title: "OlongoAfrica: Presenting the Digitized Black Orpheus Journals (23 March 2025)", url: "https://olongoafrica.com/presenting-the-digitized-black-orpheus-journals/"}
   - {title: "Jagravi Dave, Brittle Paper: Black Orpheus Journal Now Publicly Available as a Digital Archive (7 April 2025)", url: "https://brittlepaper.com/2025/04/black-orpheus-journal-now-publicly-available-as-a-digital-archive/"}
+media:
+  - {type: "image", file: "black-orpheus-journal.jpg", caption: "Context for Black Orpheus: one of its editors, Wole Soyinka, lecturing at Stockholm Public Library, 4 October 2018.", credit: "Frankie Fouganthin", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Wole_Soyinka_in_2018.jpg"}
 ---
 Black Orpheus was a literary journal founded in 1957 in Ibadan, Nigeria, a few years before independence, when African writing in English was still a thin stream. Its founder, Ulli Beier, was a German who had come to Ibadan's university college to teach phonetics; another German, Janheinz Jahn, was with him at the start. The journal printed poetry, fiction, art and criticism, and its early issues carried translations of the French-language writers of the Négritude movement.
 

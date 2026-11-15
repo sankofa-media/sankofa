@@ -24,6 +24,8 @@ sources:
   - {title: "BBC News, Justin Parkinson: The significance of Sarah Baartman (2016)", url: "https://www.bbc.com/news/magazine-35240987"}
   - {title: "The Guardian, Chris McGreal: Coming home (21 February 2002)", url: "https://www.theguardian.com/education/2002/feb/21/internationaleducationnews.highereducation"}
   - {title: "The Guardian, David Hearst: African woman going home after 200 years (30 April 2002)", url: "https://www.theguardian.com/world/2002/apr/30/education.arts"}
+media:
+  - {type: "image", file: "baartman-return.jpg", caption: "Sarah Baartman's grave at Hankey, Eastern Cape, South Africa; photograph dated 27 December 2006.", credit: "Nick Roux (NJR ZA)", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:South_Africa-Hankey-Sarah_Baartmans_grave.jpg"}
 ---
 Sara Baartman was a Khoekhoe woman, born around 1789 near the Gamtoos River in what is now South Africa's Eastern Cape. Orphaned young, she was working as a servant in Cape Town when an English ship's surgeon, William Dunlop, and Hendrik Cezar, in whose household she worked, took her to London in 1810 on a contract she could not read.
 

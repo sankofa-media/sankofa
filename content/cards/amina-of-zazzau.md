@@ -18,6 +18,8 @@ sources:
   - {title: "Amina of Zaria, Encyclopedia of World Biography (Gale), via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/amina-zaria"}
   - {title: "H. R. Palmer (trans.), The Kano Chronicle, Journal of the Royal Anthropological Institute 38 (1908)", url: "https://archive.org/details/sim_royal-anthropological-institute-of-great-britain-ireland_1908_38"}
   - {title: "Abd al-Qadir ibn Mustafa (Dan Tafa), Rawdat al-Afkaar, trans. Muhammad Shareef (Sankore Institute, 1991)", url: "http://siiasi.org/wp-content/uploads/2014/12/English-Rawd-al-Afkaar.pdf"}
+media:
+  - {type: "image", file: "amina-of-zazzau.jpg", caption: "Context: an entrance to the Zazzau palace in Zaria, photographed on 28 July 2021.", credit: "Anasskoko", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Zazzau_palace_02.jpg"}
 ---
 Zazzau, today Zaria in northern Nigeria, was one of the city-states of Hausaland. Its most famous ruler is Amina, a queen who by most accounts lived in the 16th century.
 

@@ -21,6 +21,8 @@ sources:
   - {title: "Encyclopaedia Britannica: Fasilides", url: "https://www.britannica.com/biography/Fasilides"}
   - {title: "Princeton Alumni Weekly: A saint's life, in old manuscripts (20 March 2013)", url: "https://paw.princeton.edu/article/saints-life-old-manuscripts"}
   - {title: "Wendy Laura Belcher: The Life and Struggles of Our Mother Walatta Petros", url: "https://wendybelcher.com/african-literature/walatta-petros/"}
+media:
+  - {type: "image", file: "walatta-petros.jpg", caption: "Walatta Petros in a manuscript created in 1716–1721, formerly in her monastery at Qwarata on Lake Tana, Ethiopia.", credit: "Unknown manuscript artist", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Ethiopian_Saint_Walatta_Petros,_painted_in_1721.tif"}
 ---
 In the early 1600s Ethiopia's emperor Susenyos, won over by Jesuit missionaries, embraced Roman Catholicism and pressed his court to give up the country's ancient Orthodox Church. Walatta Petros, a noblewoman born in the 1590s, was the wife of one of his leading counsellors.
 

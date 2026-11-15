@@ -19,6 +19,8 @@ dispute: "John McLeod dates the Habshi seizure of Bengal's throne to 1487, Akank
 sources:
   - {title: "BlackPast, John McLeod: Who are the Siddis? A Brief Introduction to the 800-Year African Experience in India (2024)", url: "https://blackpast.org/global-african-history/who-are-the-sidis-a-brief-introduction-to-the-800-year-african-experience-in-india/"}
   - {title: "JSTOR Daily, Akanksha Singh: The Habshi Dynasty of India (2023)", url: "https://daily.jstor.org/the-habshis-dynasty-of-india/"}
+media:
+  - {type: "image", file: "siddi-of-karnataka.jpg", caption: "A Siddi farmer in fields in the Yellapur area, Karnataka, India; 23 January 2012.", credit: "Pushkarv", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Siddi_Farmer.jpg"}
 ---
 The Siddi are Indians of African descent. For centuries they were called Habshi, from the Arabic for Abyssinian; today most live in Karnataka and Gujarat, with smaller groups in Andhra Pradesh and elsewhere. Many of their ancestors reached India enslaved, carried across the Indian Ocean by traders. In India's kingdoms, though, enslaved Africans could rise: some became generals, ministers and kingmakers.
 

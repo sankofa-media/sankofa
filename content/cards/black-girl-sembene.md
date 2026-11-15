@@ -20,6 +20,8 @@ sources:
   - {title: "Festival de Cannes: Cannes Classics, La Noire de... (Black Girl), a look back at the origins of African film (2015)", url: "https://www.festival-cannes.com/en/2015/cannes-classics-la-noire-deblack-girl-a-look-back-at-the-origins-of-african-film/"}
   - {title: "Marcia Landy, Jump Cut no. 27: Political allegory and engaged cinema, Sembène's Black Girl", url: "https://www.ejumpcut.org/archive/onlinessays/JC27folder/BlackGirlLandy.html"}
   - {title: "Encyclopaedia Britannica: Ousmane Sembène", url: "https://www.britannica.com/biography/Ousmane-Sembene"}
+media:
+  - {type: "image", file: "black-girl-sembene.jpg", caption: "Context: Ousmane Sembène visiting Berlin on 18 November 1987.", credit: "Günter Prust", license: "CC BY 3.0", url: "https://commons.wikimedia.org/wiki/File:Ousmane_Semb%C3%A8ne_(1987)_by_Guenter_Prust.jpg"}
 ---
 Black Girl is a feature film made in 1966 in Senegal, a country only recently independent of France. Its director, Ousmane Sembène, had been a soldier in the Second World War and a docker and union militant in Marseille, taught himself to write and published novels, and then studied film in Moscow. He based his first feature on one of his own short stories.
 

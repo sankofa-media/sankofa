@@ -22,6 +22,8 @@ sources:
   - {title: "Duke University Press: Lydia Cabrera, El Monte (2023), via Project MUSE", url: "https://muse.jhu.edu/book/111816"}
   - {title: "Oyez: Church of Lukumi Babalu Aye v. City of Hialeah (1993)", url: "https://www.oyez.org/cases/1992/91-948"}
   - {title: "Jacques Leclerc, Cuba, L'aménagement linguistique dans le monde, CEFAN, Université Laval", url: "https://www.axl.cefan.ulaval.ca/amsudant/cuba.htm"}
+media:
+  - {type: "image", file: "regla-de-ocha.jpg", caption: "Women practising Santería in Havana, Cuba; photograph, 21 December 2022.", credit: "Wolfgang Sauber", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Havanna_-_Santeria_Frauen.jpg"}
 ---
 Santería is a religion of African origin that took shape in Cuba in the nineteenth century, when hundreds of thousands of Yoruba people from West Africa were enslaved and shipped to the island. In Cuba their faith absorbed elements of Catholicism. Devotees expressed their love for the orishas, the Yoruba deities, through the images of Catholic saints, and the religion got its Spanish name, "the way of the saints". It is also known as the Yoruba or [[lucumi|Lukumí]] religion.
 

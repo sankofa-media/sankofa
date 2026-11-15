@@ -20,6 +20,8 @@ sources:
   - {title: "The NewsHawks: Justice John Philip Watermeyer and the trial of Mbuya Nehanda (2 June 2021)", url: "https://thenewshawks.com/long-read-justice-john-philip-watermeyer-and-the-trial-of-mbuya-nehanda"}
   - {title: "Associated Press, Farai Mutsaka: Zimbabwe unveils statue honoring anti-colonialist heroine (25 May 2021)", url: "https://www.clickorlando.com/news/world/2021/05/25/zimbabwe-unveils-statue-honoring-anti-colonialist-heroine/"}
   - {title: "Webber Ndoro, The Preservation of Great Zimbabwe: Your Monument Our Shrine, ICCROM Conservation Studies 4 (2005)", url: "https://www.iccrom.org/sites/default/files/publications/2019-11/iccrom_ics04_zimbabwe_en.pdf"}
+media:
+  - {type: "image", file: "nehanda.jpg", caption: "Nehanda Nyakasikana, at left, and Sekuru Kaguvi after their capture, 1897.", credit: "Unknown British photographer", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Nehanda_Nyakasikana_et_Sekuru_Kaguvi.jpg"}
 ---
 In the 1890s the British South Africa Company of Cecil Rhodes occupied the Zimbabwe plateau, seizing land and cattle and imposing taxes. Among the Shona, the spirits of great ancestors spoke through mediums. Charwe, who lived in the Mazowe valley, was the medium of Nehanda, a mhondoro, or royal ancestral spirit.
 

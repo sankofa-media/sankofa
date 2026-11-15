@@ -24,6 +24,8 @@ sources:
   - {title: "Athletics Australia: Brisbane teen Gout Gout breaks Australia's longest standing athletics record (2024)", url: "https://www.athletics.com.au/news/brisbane-teen-gout-gout-breaks-australias-longest-record-/"}
   - {title: "World Athletics: Gout breaks Australian 200m record (7 December 2024)", url: "https://worldathletics.org/news/report/gout-australia-oceania-200m-record-bolt-world-age-16-best"}
   - {title: "Erin Blakemore, History.com: the 1968 Olympics protest and Peter Norman", url: "https://www.history.com/articles/1968-mexico-city-olympics-black-power-protest-backlash"}
+media:
+  - {type: "image", file: "mexico-1968-salute.jpg", caption: "Context for the 1968 Olympic salute: Tommie Smith at a marathon expo, photographed 1 December 2007.", credit: "Chamber of Fear", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Tommie_Smith.jpg"}
 ---
 At the 1968 Mexico City Olympics, Tommie Smith and John Carlos, Black sprinters from San José State in California, won gold and bronze in the 200 metres. Smith ran 19.83 seconds, a world record. Between them, in silver, was the Australian Peter Norman.
 

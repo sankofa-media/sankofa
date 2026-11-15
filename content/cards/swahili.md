@@ -23,6 +23,8 @@ sources:
   - {title: "UNESCO: World Kiswahili Language Day", url: "https://www.unesco.org/en/days/kiswahili-language"}
   - {title: "UN Information Centre Nairobi: UN General Assembly recognizes Kiswahili Language Day (2024)", url: "https://www.un.org/en/unis-nairobi/un-general-assembly-recognizes-kiswahili-language-day"}
   - {title: "UN Africa Renewal: Kiswahili is a language that speaks to both past and present", url: "https://africarenewal.un.org/en/magazine/kiswahili-language-speaks-both-past-and-present"}
+media:
+  - {type: "image", file: "swahili.jpg", caption: "Ustadh Mau's Swahili Muslim Library in Lamu, Kenya; 16 March 2018.", credit: "AnnachiaraRaia", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Ustadh_Mau%27s_Swahili_Muslim_Library_03.jpg"}
 ---
 Swahili, or Kiswahili, is a Bantu language of the East African coast. Its grammar belongs to the great Bantu family of Africa, while its vocabulary carries the traces of centuries of trade across the Indian Ocean, above all a great many words taken from Arabic. For centuries it was written in Arabic script, and the oldest Swahili writing on paper that can be firmly dated comes from the early eighteenth century.
 

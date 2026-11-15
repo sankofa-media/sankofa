@@ -19,6 +19,8 @@ sources:
   - {title: "The Columbia Encyclopedia, 6th ed.: Ethiopic (via Encyclopedia.com)", url: "https://www.encyclopedia.com/literature-and-arts/language-linguistics-and-literary-terms/language-and-linguistics/ethiopic"}
   - {title: "The Unicode Standard 17.0, chapter 19.1: Ethiopic", url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/"}
   - {title: "Stuart Munro-Hay, Aksum: An African Civilisation of Late Antiquity (Edinburgh University Press, 1991)", url: "https://web.archive.org/web/20030501053851/http://www.dskmariam.org/artsandlitreature/litreature/pdf/aksum.pdf"}
+media:
+  - {type: "image", file: "geez-script.jpg", caption: "An illuminated Ethiopian Gospel of the Amhara people, late fourteenth–early fifteenth century; Metropolitan Museum of Art, accession 1998.66. Context for the Ge'ez manuscript tradition.", credit: "Amhara manuscript artists / Metropolitan Museum of Art", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Illuminated_Gospel_MET_hb_1998.66_av3.jpg"}
 ---
 The Ge'ez script, also called Ethiopic, is the writing of Ethiopia and Eritrea. Each of its letters stands for a consonant, and small marks attached to the letter turn it into a syllable with a particular vowel, so a single letter has a whole family of forms. Unlike its Arabian parent, it runs left to right.
 

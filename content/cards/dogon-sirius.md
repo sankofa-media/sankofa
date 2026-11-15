@@ -24,6 +24,8 @@ sources:
   - {title: "Encyclopaedia Britannica: Dogon", url: "https://www.britannica.com/topic/Dogon"}
   - {title: "CREM-CNRS sound archives: 3e jour du Sigi à Yugo Dogoru (collection Cérémonie du Sigi au Mali, mission Rouget 1967)", url: "https://archives.crem-cnrs.fr/archives/items/CNRSMH_I_1974_019_006_02/"}
   - {title: "Mamadou Tapily, A Malian journalist, a fabled festival, and a search for truth in a time of crisis, The New Humanitarian, republished by The African Mirror (2025)", url: "https://theafricanmirror.africa/human-rights/a-malian-journalist-a-fabled-festival-and-a-search-for-truth-in-a-time-of-crisis/"}
+media:
+  - {type: "image", file: "dogon-sirius.jpg", caption: "Context: rooftops of a Dogon village near the Bandiagara escarpment, Mali, 2006.", credit: "David Sessoms", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Dogon_village_rooftops_by_David_Sessoms.jpg"}
 ---
 The Dogon of Mali live along the Bandiagara escarpment, a towering cliff with villages set into its rock face. Every sixty years they hold the Sigui, a cycle of ceremonies of death and renewal; the last began in 1967.
 

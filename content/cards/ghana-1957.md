@@ -26,6 +26,8 @@ sources:
   - {title: "Office of the Historian, U.S. Department of State: Sudan", url: "https://history.state.gov/countries/sudan"}
   - {title: "African Studies Centre Leiden: Infosheets on the 17 African countries that gained independence in 1960", url: "https://ascleiden.nl/news/infosheets-17-african-countries-gained-independence-1960"}
   - {title: "Katherine Everett, Emily Hardick, Damarius Johnson, Origins (Ohio State University): The Year of Africa", url: "https://origins.osu.edu/article/year-of-africa-1960-rumba-pan-africanism-Kariba"}
+media:
+  - {type: "image", file: "ghana-1957.jpg", caption: "Richard and Pat Nixon with Ghana's finance minister K. A. Gbedemah during the independence celebrations, 1957.", credit: "US federal government / National Archives", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Nixons_in_Ghana_1957.jpg"}
 ---
 On 6 March 1957 the British colony of the Gold Coast, in West Africa, became the independent nation of Ghana, hailed as the first colony south of the Sahara to break free. Its leader was Kwame Nkrumah. He had studied at Lincoln University and the University of Pennsylvania, and in 1949 he founded the Convention People's Party to demand self-government. The British imprisoned him in 1950. In 1951 his party won the colony's general election in a landslide, he was released from prison to lead the government, and in 1952 he became prime minister.
 

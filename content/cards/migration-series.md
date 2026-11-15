@@ -24,6 +24,8 @@ sources:
   - {title: "Jacob and Gwendolyn Knight Lawrence Foundation: About Jacob Lawrence", url: "https://jacobandgwenlawrence.org/jacob-lawrence/"}
   - {title: "The Phillips Collection: People on the Move, Jacob Lawrence's Migration Series (exhibition, 2016)", url: "https://phillipscollection.org/events/2016-09-10-exhibition-migration-series"}
   - {title: "Lee Rosenbaum, One-Way Ticket: Lawrence's Migration Series Should Remain Whole, CultureGrrl, ArtsJournal (April 2015)", url: "https://www.artsjournal.com/culturegrrl/2015/04/one-way-ticket-lawrences-migration-series-should-remain-whole-after-momas-showing-with-video.html"}
+media:
+  - {type: "image", file: "migration-series.jpg", caption: "Context: Jacob Lawrence, photographed by Carl Van Vechten in 1941.", credit: "Carl Van Vechten / Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Jacob_Lawrence_LCCN2004663191.jpg"}
 ---
 The Migration Series is a set of sixty small tempera paintings by Jacob Lawrence, made in Harlem in 1940–41. It tells the story of the Great Migration, the movement of Black Southerners to the cities of the North that began during the First World War.
 

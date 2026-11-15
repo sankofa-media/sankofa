@@ -22,6 +22,8 @@ sources:
   - {title: "Angela V. John, Women's History Network: A statue for the past, present and future: making space for Betty Campbell (2021)", url: "https://womenshistorynetwork.org/a-statue-for-the-past-present-and-future-making-space-for-betty-campbell-by-angela-v-john/"}
   - {title: "BBC Legacies: Somali community, South East Wales", url: "https://www.bbc.co.uk/legacies/immig_emig/wales/w_se/article_2.shtml"}
   - {title: "Museum Cardiff Youth Forum, Amgueddfa Cymru – Museum Wales: Remembering the 1919 Cardiff Race Riots (2019)", url: "https://museum.wales/blog/2030/Remembering-the-1919-Cardiff-Race-Riots/"}
+media:
+  - {type: "image", file: "tiger-bay.jpg", caption: "Bute Street in Butetown, Cardiff; 24 October 2009. A contextual view of the Tiger Bay neighbourhood.", credit: "Jaggery / Geograph Britain and Ireland", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:One-sided_Bute_Street,_Cardiff_-_geograph.org.uk_-_1966126.jpg"}
 ---
 Butetown, the dock district of Cardiff better known as Tiger Bay, was where the sea brought the world to Wales. From the nineteenth century seafarers from Somalia, Yemen, other parts of Africa and the Caribbean settled there, and the neighbourhood became one of the first multicultural communities in Britain.
 

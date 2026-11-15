@@ -22,6 +22,8 @@ sources:
   - {title: "University of Pittsburgh, Voices Across Time: St. Louis Blues", url: "https://voices.pitt.edu/TeachersGuide/Unit%206/StLouisBlues.htm"}
   - {title: "Tennessee Encyclopedia, Teresa Biddle-Douglass: William Christopher \"W. C.\" Handy", url: "https://tennesseeencyclopedia.net/entries/william-christopher-handy/"}
   - {title: "Encyclopaedia Britannica: W.C. Handy", url: "https://www.britannica.com/biography/W-C-Handy"}
+media:
+  - {type: "image", file: "st-louis-blues.jpg", caption: "Sheet-music cover for W. C. Handy's St. Louis Blues, published in 1914.", credit: "W. C. Handy / Pace & Handy Music Co.", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:St._Louis_Blues_cover.jpg"}
 ---
 "St. Louis Blues" is a song W. C. Handy published in 1914, when the blues was moving from Southern performers onto printed sheet music. Handy, a bandleader born in Florence, Alabama, had made his home in Memphis. In the early 1890s, as a young musician on the road, he had been stranded in St. Louis without money, and the hard times there went into the song, which opens with the line "I hate to see de evenin' sun go down". He also gave the blues a section in the rhythm of the tango.
 

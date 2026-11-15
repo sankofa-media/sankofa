@@ -18,6 +18,8 @@ further:
 sources:
   - {title: "Getty News: The Black Gondoliers of Renaissance Venice", url: "https://www.getty.edu/news/the-black-gondoliers-of-renaissance-venice"}
   - {title: "Frances Hisgen, Teaching Medieval Slavery and Captivity: The Miracle of the Relic of the True Cross on the Rialto Bridge", url: "https://medievalslavery.org/?p=3691"}
+media:
+  - {type: "image", file: "enslaved-in-renaissance-italy.jpg", caption: "An African boatman in a detail of Vittore Carpaccio's Miracle of the Relic of the Cross at the Ponte di Rialto, Venice, about 1496.", credit: "Vittore Carpaccio; Commons derivative", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Vittore_Carpaccio_-_Miracle_of_the_Relic_of_the_Cross_at_the_Ponte_di_Rialto,_c._1496_(d%C3%A9tail).png"}
 ---
 At the end of the fifteenth century Venice was one of the great trading cities of the Mediterranean, and the Rialto was its commercial heart. In the mid-1490s Vittore Carpaccio painted the Miracle of the Relic of the Cross at the Rialto Bridge, now in the Gallerie dell'Accademia. The canvas is crowded with daily life: Venetians in their finery, merchants from many lands, gondolas on the Grand Canal. Among the gondoliers are Black Africans.
 

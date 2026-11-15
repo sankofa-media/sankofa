@@ -22,6 +22,8 @@ sources:
   - {title: "Encyclopaedia Britannica: Léopold Senghor", url: "https://www.britannica.com/biography/Leopold-Senghor"}
   - {title: "Académie française: Léopold Sédar Senghor", url: "https://www.academie-francaise.fr/les-immortels/leopold-sedar-senghor"}
   - {title: "Valeria Marino: « Black flowers » : surréalisme(s), révolte(s) et revues francophones, CoSMo 27 (2025)", url: "https://ojs.unito.it/index.php/COSMO/article/view/13092/10598"}
+media:
+  - {type: "image", file: "etudiant-noir.jpg", caption: "Context: Aimé Césaire, photographed in 2003.", credit: "Jean Baptiste Devaux", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Aime_Cesaire_2003_(cropped).jpg"}
 ---
 L'Étudiant noir, "The Black Student", was a small paper published in Paris in 1935 by students from France's colonies. It grew out of L'Étudiant martiniquais, the bulletin of the Association of Martinican Students. With the new name came a new horizon: the paper now spoke for Black students from the Caribbean and from Africa together, and the young Martinican Aimé Césaire was at its heart.
 

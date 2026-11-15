@@ -21,6 +21,8 @@ sources:
   - {title: "Kate Ramsey, Prohibition, persecution, performance: anthropology and the penalization of vodou in mid-20th-century Haiti, Gradhiva 1 (2005)", url: "https://journals.openedition.org/gradhiva/352"}
   - {title: "International Center for Law and Religion Studies (BYU): Republic of Haiti, Law and Religion Overview", url: "https://www.iclrs.org/?p=8808"}
   - {title: "BBC News: Haiti makes voodoo official (30 April 2003)", url: "http://news.bbc.co.uk/2/hi/americas/2985627.stm"}
+media:
+  - {type: "image", file: "haitian-vodou.jpg", caption: "An antique Haitian Vodou ceremonial drum in the Ethnological Museum, Berlin, photographed in 2010.", credit: "Thom Quine", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Antique_Haitian_Vodou_ceremonial_drum.jpg"}
 ---
 Vodou is the religion that grew up in colonial Saint-Domingue, today Haiti, among enslaved people brought from Dahomey and other African lands, whom Catholic missionaries and masters tried to make Christian. Its name comes from a word for "spirit" or "god" in Fon, the language of Dahomey. Believers hold that God, the creator, rules the world with the help of the lwa, spirits served with prayers, songs and offerings. Priests are called oungan if men and manbo if women; branches such as Rada and Petwo keep different rites. At ceremonies danced to drums, a spirit may take possession of a devotee.
 

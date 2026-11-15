@@ -22,6 +22,8 @@ sources:
   - {title: "Robin Denselow, Songlines: Guinean musician Mory Kanté has died aged 70 (2020)", url: "https://songlines.co.uk/news/guinean-musician-mory-kante-has-died-aged-70"}
   - {title: "Calum Slingerland, Exclaim!: African music star Mory Kanté dies at 70 (2020)", url: "https://exclaim.ca/music/article/african_music_star_mory_kant_dies_at_70"}
   - {title: "The Star (Kenya), from BBC: Mory Kanté, African music star who sang Yéké Yéké, dies aged 70 (2020)", url: "https://www.the-star.co.ke/news/2020-05-23-mory-kant-african-music-star-who-sang-yk-yk-dies-aged-70/"}
+media:
+  - {type: "image", file: "yeke-yeke.jpg", caption: "Context for Yé ké yé ké: Mory Kanté at the J Awards in Guinea, 6 December 2019.", credit: "Aboubacarkhoraa", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Mory_Kant%C3%A9.jpg"}
 ---
 "Yé ké yé ké" is a 1987 dance single by Mory Kanté, a singer and kora player from Guinea. The kora is the West African harp of the griots, hereditary musicians whose songs carry news and history, and Kanté was born into a griot family.
 

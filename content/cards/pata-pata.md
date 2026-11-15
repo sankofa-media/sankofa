@@ -24,6 +24,8 @@ sources:
   - {title: "Megan Iacobini de Fazio, Bandcamp Daily: Album of the Day, Miriam Makeba, Pata Pata (2019)", url: "https://daily.bandcamp.com/2019/09/30/miriam-makeba-pata-pata-review/"}
   - {title: "John Eyles, All About Jazz: Miriam Makeba, Pata Pata (2019)", url: "https://www.allaboutjazz.com/pata-pata-miriam-makeba-strut-records-review-by-john-eyles"}
   - {title: "Bruce Lindsay, Jazz Journal: Miriam Makeba, Pata Pata (2019)", url: "https://jazzjournal.co.uk/?p=14042"}
+media:
+  - {type: "image", file: "pata-pata.jpg", caption: "Context for Pata Pata: Miriam Makeba photographed by Paul Weinberg, 20 July 1991.", credit: "Paul Weinberg", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Miriam_makeba_01.jpg"}
 ---
 "Pata Pata" is a song Miriam Makeba brought from Johannesburg, and in 1967 it became an American hit. Makeba, born in Johannesburg in 1932, sang in the 1950s with an all-woman group, the Skylarks, and with them she first recorded the song at home, in a country governed by apartheid.
 

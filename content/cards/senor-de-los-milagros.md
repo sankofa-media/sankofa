@@ -19,6 +19,8 @@ sources:
   - {title: "Universidad Ricardo Palma: 1 de octubre, mes morado (2016)", url: "https://www.urp.edu.pe/pdf/id/14618/n/1-octubre-mes-morado.pdf"}
   - {title: "El Comercio (Lima): Señor de los Milagros, un viaje a sus orígenes telúricos (2025), with Carlos Piccone, PUCP", url: "https://elcomercio.pe/somos/historias/senor-de-los-milagros-un-viaje-a-sus-origenes-teluricos-y-de-una-devocion-que-permanece-intacta-durante-siglos-noticia/"}
   - {title: "Ministerio de Cultura del Perú: Señor de los Milagros (document)", url: "https://cdn.www.gob.pe/uploads/document/file/1400159/Cultura.pdf.pdf"}
+media:
+  - {type: "image", file: "senor-de-los-milagros.jpg", caption: "The Señor de los Milagros mural in the Sanctuary of Las Nazarenas, Lima, Peru; photograph, 15 March 2013.", credit: "Rodrigoardiles", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Mural_del_Se%C3%B1or_de_los_Milagros_pintado_en_el_Santuario_de_Las_Nazarenas_en_Lima_(Per%C3%BA).jpg"}
 ---
 Pachacamilla, on the western edge of seventeenth-century Lima, was a neighbourhood of Black and Indigenous people. Around 1651, by a tradition backed by documents, an enslaved man from Angola painted Christ on the cross on an adobe wall there. On 13 November 1655 an earthquake shook Lima and Callao and brought down buildings across the city, but the wall with the painted Christ stayed standing, and people began to gather before it.
 

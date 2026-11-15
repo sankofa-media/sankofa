@@ -23,6 +23,8 @@ sources:
   - {title: "Spacefacts: Arnaldo Tamayo Méndez, cosmonaut biography", url: "https://www.spacefacts.de/bios/international/english/tamayo-mendez_arnaldo.htm"}
   - {title: "History Hit: Arnaldo Tamayo Méndez, Cuba's Forgotten Cosmonaut", url: "https://www.historyhit.com/arnaldo-tamayo-mendez-cubas-forgotten-cosmonaut/"}
   - {title: "Encyclopaedia Britannica: Guion Bluford", url: "https://www.britannica.com/biography/Guion-Bluford"}
+media:
+  - {type: "image", file: "tamayo-mendez.jpg", caption: "Arnaldo Tamayo Méndez at an autograph session in Berlin with Sigmund Jähn, 28 July 2018.", credit: "Escla", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Arnaldo_Tamayo_Berlin_2018.jpg"}
 ---
 Arnaldo Tamayo Méndez was born in Guantánamo, in eastern Cuba, in 1942. Orphaned as a small child and adopted, he grew up poor; from the age of 13 he worked as a shoeshine boy and a carpenter's helper. After the revolution of 1959 he joined the Cuban air force and became a fighter pilot.
 

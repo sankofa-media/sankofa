@@ -23,6 +23,8 @@ sources:
   - {title: "Câmara dos Deputados: Constituição de 1988, publicação original (art. 5, XLII)", url: "https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-publicacaooriginal-1-pl.html"}
   - {title: "Encyclopaedia Britannica: Katherine Dunham", url: "https://www.britannica.com/biography/Katherine-Dunham"}
   - {title: "BlackPast, Erica Anderson: Katherine Dunham (1909–2006) (2007)", url: "https://blackpast.org/african-american-history/dunham-katherine-1909-2006/"}
+media:
+  - {type: "image", file: "dunham-esplanada-1950.jpg", caption: "Context: Katherine Dunham, photographed on 25 January 1956; not the 1950 hotel incident.", credit: "Phyllis Twachtman / New York World-Telegram and Sun collection, Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Katherine_Dunham_ppmsca.05792.jpg"}
 ---
 In 1950 Brazil had never written segregation into law, and many Brazilians believed that racism was an American problem rather than their own, though slavery had ended there only in 1888. That year the American dancer, choreographer and anthropologist Katherine Dunham, who had built her art on fieldwork among the dances of the Caribbean, came to São Paulo to perform at the Municipal Theatre. The Esplanada, the luxury hotel next door, refused to give her a room because she was Black.
 

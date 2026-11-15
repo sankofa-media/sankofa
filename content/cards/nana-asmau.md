@@ -18,6 +18,8 @@ sources:
   - {title: "Beverly B. Mack and Jean Boyd, One Woman's Jihad (2000), excerpts in Women in World History, Roy Rosenzweig Center for History and New Media", url: "https://chnm.gmu.edu/wwh/p/214.html"}
   - {title: "Library of Congress Name Authority: Asma'u, Nana, 1793-1865 (with notes from the Dictionary of African Biography and Aisha Ahmed's anthology)", url: "https://id.loc.gov/authorities/names/n87887697.html"}
   - {title: "Open Library: Collected works of Nana Asma'u, daughter of Usman dan Fodiyo, (1793-1864) (Michigan State University Press, 1997)", url: "https://openlibrary.org/search?q=collected+works+of+nana+asma%27u"}
+media:
+  - {type: "image", file: "nana-asmau.jpg", caption: "Nana Asma'u's poem Fa'inna ma'al Asur Yasuran, dated 18 April 1822; SOAS Library, Special Collections.", credit: "Nana Asma'u (1793–1864)", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Poem_by_Nana_Asma%27u.jpg"}
 ---
 Nana Asma'u was born in 1793 as a daughter of Usman dan Fodio, a Muslim scholar who led a reform movement in what is now northern Nigeria. His jihad, a long series of military campaigns, created the Sokoto Caliphate.
 

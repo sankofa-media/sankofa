@@ -15,6 +15,8 @@ further:
 sources:
   - {title: "John M. Weeks and Virginia Ramirez Zabala, The Samana Americans, Expedition 47:1 (Penn Museum, 2005)", url: "https://www.penn.museum/sites/expedition/the-samana-americans/"}
   - {title: "Martha Ellen Davis, La historia de los inmigrantes afro-americanos y sus iglesias en Samaná, Boletín del Archivo General de la Nación 129 (2011)", url: "https://web.archive.org/web/20151225030905/http://www.bagn.academiahistoria.org.do/boletines/boletin129/BAGN_2011_No_129-09.pdf"}
+media:
+  - {type: "image", file: "samana-americans.jpg", caption: "Funeral procession in Santa Bárbara de Samaná, Dominican Republic; 7 January 2001. A contextual view of community life.", credit: "Caballero1967", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Funeral_in_Saman%C3%A1.JPG"}
 ---
 The Samaná Americans are a community on the Samaná peninsula in the north-east of the Dominican Republic. Their story begins in the 1820s, when the whole island of Hispaniola was ruled by Haiti, the Black republic born of revolution.
 

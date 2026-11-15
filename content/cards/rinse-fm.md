@@ -19,5 +19,7 @@ sources:
   - {title: "Building: Pirate DJ silenced in rooftop radio purge (22 April 2005)", url: "https://www.building.co.uk/pirate-dj-silenced-in-rooftop-radio-purge/3050083.article"}
   - {title: "Dummy: The Dummy guide to Rinse FM", url: "https://dmy.co/features/the-dummy-guide-to-rinse-fm/"}
   - {title: "RadioToday: Ofcom awards London licences", url: "https://radiotoday.co.uk/2010/06/ofcom-rejects-16-applications/"}
+media:
+  - {type: "image", file: "rinse-fm.jpg", caption: "Khadejia hosting on Rinse FM; photograph dated 21 March 2022.", credit: "Khadejia", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Khadejia_Hosting_Rinse.jpg"}
 ---
 Rinse FM is a London radio station that began as a pirate. In 1994, on Notting Hill Carnival weekend, 16-year-old Geeneus and his friends Slimzee, Target and Wiley set up decks and an aerial in a council-flat kitchen in Tower Hamlets. For years its transmitters sat on the tower blocks of Bow and were moved from block to block while the DTI, later Ofcom, tore them down. In 2005 Slimzee was served an ASBO that banned him for five years from the roofs of the borough's taller blocks. Through it all Rinse carried jungle, built on breaks like [[amen-break|the Amen break]], into garage, grime and dubstep, and started a record label that launched the singer Katy B. In June 2010 Ofcom granted the old outlaw a community licence; in 2024 the station turned thirty.

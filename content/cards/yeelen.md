@@ -24,6 +24,8 @@ sources:
   - {title: "Melody Chironda, allAfrica: Souleymane Cisse, father of African cinema, dies (2025)", url: "https://allafrica.com/stories/202502200398.html"}
   - {title: "Sight and Sound (BFI): Souleymane Cissé's Yeelen reviewed in 1988", url: "https://www.bfi.org.uk/sight-and-sound/reviews/souleymane-cisses-yeelen-reviewed-1988"}
   - {title: "New York State Writers Institute, University at Albany: Film notes, Yeelen", url: "https://www.albany.edu/writers-inst/webpages4/filmnotes/fns05n4.html"}
+media:
+  - {type: "image", file: "yeelen.jpg", caption: "Context for Yeelen: director Souleymane Cissé with a film reel at the Cines del Sur festival in Granada, Spain, 2009.", credit: "Cines del Sur Granada Film Festival", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Souleymane_Ciss%C3%A9_with_film_reel.jpg"}
 ---
 Yeelen, whose title means "brightness" or "light", is a 1987 feature film by the Malian director Souleymane Cissé, drawn from the legends of the Bambara people. Cissé was born in 1940 in what is now Mali, then a French colony, and studied film at the state film institute in Moscow. His earlier features had looked at work, power and youth in modern Mali.
 

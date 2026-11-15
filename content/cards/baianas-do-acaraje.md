@@ -19,6 +19,8 @@ sources:
   - {title: "IPHAN: Parecer técnico de reavaliação do Ofício das Baianas de Acarajé (2021)", url: "https://www.gov.br/iphan/pt-br/assuntos/noticias/aberta-consulta-publica-sobre-quatro-tres-bens-culturais/oficio-da-baianas-de-acaraje-sei_iphan-2956233-parecer-tecnico.pdf/@@download/file"}
   - {title: "Debora Simões de Souza Mendel: O Ofício das Baianas de Acarajé, Patrimônio e Memória (UNESP, 2019)", url: "https://pem.assis.unesp.br/index.php/pem/article/download/3264/2574/13805"}
   - {title: "Governo da Bahia: Ipac revalida registro especial do ofício das baianas de acarajé (2024)", url: "https://www.ba.gov.br/comunicacao/2024/11/noticias/ipac-revalida-registro-especial-do-oficio-das-baianas-de-acaraje-neste-sabado-23"}
+media:
+  - {type: "image", file: "baianas-do-acaraje.jpg", caption: "Three baianas cooking at a street food stall in Rio de Janeiro, 2024.", credit: "DiegoL569", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Baianas_do_Acaraj%C3%A9.jpg"}
 ---
 Acarajé is a fritter of beans ground on a stone and fried in dendê, palm oil, sold on the streets of Salvador da Bahia by women called baianas de acarajé. The recipe came from the Gulf of Benin in West Africa. In colonial Salvador enslaved and freed African women made the fritters and sold them through the streets, carrying them on trays and in baskets.
 

@@ -22,6 +22,8 @@ sources:
   - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/"}
   - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/"}
   - {title: "Understanding Slavery Initiative: The Zong", url: "https://understandingslavery.com/casestudy/the-zong/"}
+media:
+  - {type: "image", file: "dido-belle.jpg", caption: "Dido Elizabeth Belle and Lady Elizabeth Murray, painted by David Martin, about 1778; Scone Palace, Scotland.", credit: "David Martin", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Dido_Elizabeth_Belle.jpg"}
 ---
 Kenwood House, on Hampstead Heath in north London, was in the 1760s the home of Lord Mansfield, Lord Chief Justice of England. From about 1766 two of his great-nieces grew up there together. One was Lady Elizabeth Murray. The other was Dido Elizabeth Belle, born in 1761 to Mansfield's nephew, the naval officer John Lindsay, and Maria Belle, an enslaved woman.
 

@@ -26,6 +26,8 @@ sources:
   - {title: "Glottolog: Decker, Kendall D. 2006, The song of Kriol", url: "https://glottolog.org/resource/reference/id/308160"}
   - {title: "Cubola: Kriol-Inglish Dikshineri (Kriol-English Dictionary)", url: "https://www.cubola.com/books/p/kriol-inglish-dikshineri-kriol-english-dictionary"}
   - {title: "Encyclopedia of World Cultures, Edmund T. Gordon: Creoles of Nicaragua (via Encyclopedia.com)", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/creoles-nicaragua"}
+media:
+  - {type: "image", file: "belize-kriol.jpg", caption: "A notice in Creole and a road sign on Caye Caulker, Belize, 2008.", credit: "Bernard DUPONT", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Creole_Notice_and_Roadsign_-_Caye_Caulker,_Belize.jpg"}
 ---
 Kriol is the creole language of Belize, on the Caribbean coast of Central America. Most of its words come from English, but its grammar follows African patterns. It is the language of Belize's Creole people and also the one Belizeans of other backgrounds use with one another. Its nearest relatives are the English creoles of the western Caribbean, such as [[jamaican-patois|Jamaican Patois]].
 

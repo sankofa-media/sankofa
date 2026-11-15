@@ -22,6 +22,8 @@ sources:
   - {title: "Customs House Museum & Cultural Center: Shattering Barriers, 60 years later, Wilma Rudolph's Olympic gold medal runs still inspire", url: "https://customshousemuseum.org/news/shattering-barriers-60-years-later-wilma-rudolphs-olympic-gold-medal-runs-still-inspire/"}
   - {title: "Encyclopedia.com: Rudolph, Wilma Glodean", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/rudolph-wilma-glodean-1"}
   - {title: "BlackPast: Wilma Rudolph (1940-1994)", url: "https://www.blackpast.org/african-american-history/rudolph-wilma-1940-1994/"}
+media:
+  - {type: "image", file: "wilma-rudolph.jpg", caption: "Wilma Rudolph poses under an umbrella for photographers at Schiphol Airport, 15 September 1960; Dutch National Archives.", credit: "Henk Lindeboom / Anefo / Nationaal Archief", license: "CC BY-SA 3.0 nl", url: "https://commons.wikimedia.org/wiki/File:Wilma_Rudolph_1960.jpg"}
 ---
 Wilma Rudolph was born on 23 June 1940 in St. Bethlehem, near Clarksville, Tennessee, the twentieth of twenty-two children. As a small child she survived scarlet fever and polio and had to wear a brace on her leg; a doctor said she would never walk again. Her family took turns massaging the leg, and her mother rode with her on segregated buses to Nashville for treatment. By eleven she was playing basketball, and Ed Temple, the women's track coach at Tennessee State University, spotted her on the court. At sixteen she won a relay bronze at the 1956 Olympics in Melbourne.
 

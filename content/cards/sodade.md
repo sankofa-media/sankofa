@@ -25,6 +25,8 @@ sources:
   - {title: "UNESCO: Morna, musical practice of Cabo Verde", url: "https://ich.unesco.org/en/RL/morna-musical-practice-of-cabo-verde-01469"}
   - {title: "Encyclopaedia Britannica: Cesaria Evora", url: "https://web.archive.org/web/20230921142323/https://www.britannica.com/biography/Cesaria-Evora"}
   - {title: "Garth Cartwright, The Guardian: Cesária Évora obituary (17 December 2011)", url: "https://www.theguardian.com/music/2011/dec/17/cesaria-evora"}
+media:
+  - {type: "image", file: "sodade.jpg", caption: "Context for Sodade: Cesária Évora performing, 26 April 2008.", credit: "Silvio Tanaka", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Ces%C3%A1ria_%C3%89vora_2008.jpg"}
 ---
 Morna is the song form of Cape Verde, the archipelago off the coast of West Africa. Its verses turn on love, departure, separation, longing and the sea, and in 2019 UNESCO inscribed it as intangible heritage of humanity. Today it is sung mostly in [[kriolu|Kriolu]], the islands' Creole.
 

@@ -19,6 +19,8 @@ sources:
   - {title: "Parks Canada: Viola Desmond (1914-1965), National Historic Person", url: "https://parks.canada.ca/culture/designation/personnage-person/viola-desmond"}
   - {title: "Province of Nova Scotia: Late Viola Desmond Granted Apology, Free Pardon (15 April 2010)", url: "https://novascotia.ca/news/smr/2010-04-15-pardon.asp"}
   - {title: "Bank of Canada: New vertical $10 bank note featuring iconic Canadian Viola Desmond now in circulation (19 November 2018)", url: "https://www.bankofcanada.ca/2018/11/new-vertical-10-bank-note-featuring-iconic-canadian-viola-desmond/"}
+media:
+  - {type: "image", file: "viola-desmond.jpg", caption: "Context for Viola Desmond's stand against segregation: the former Roseland Theatre in New Glasgow, Nova Scotia; 3 September 2021.", credit: "Dan Conlin", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Roselandtheater1.jpg"}
 ---
 In the 1940s Black Nova Scotians routinely met racism, from segregated schools to segregated cinemas. Viola Desmond, born in Halifax in 1914, had trained as a beautician in Montreal and New York, since few schools in Canada would take a Black student, and ran her own beauty studio and school in Halifax, selling products made for Black women.
 

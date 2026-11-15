@@ -23,6 +23,8 @@ sources:
   - {title: "Women's History Network: Una Marson 1905-65", url: "https://womenshistorynetwork.org/una-marson-1905-65/"}
   - {title: "The Guardian: Henry Swanzy obituary (20 March 2004)", url: "https://www.theguardian.com/news/2004/mar/20/guardianobituaries"}
   - {title: "Philip Nanton, Caribbean Beat 63 (2003): London calling", url: "https://www.caribbean-beat.com/issue-63/london-calling"}
+media:
+  - {type: "image", file: "caribbean-voices.jpg", caption: "Context for Caribbean Voices: the building bearing Una Marson's commemorative plaque at 33 Mill Lane, West Hampstead, London; 15 March 2025.", credit: "Spudgun67", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:UNA_MARSON_-_The_Mansions_33_Mill_Lane_West_Hampstead_NW6_1NY.jpg"}
 ---
 In the Second World War West Indians came to Britain to serve in the forces and to work in factories, and the BBC, which broadcast to the whole Empire, gave them a way to talk to home. Its programme Calling the West Indies carried servicemen's personal messages and requests home.
 

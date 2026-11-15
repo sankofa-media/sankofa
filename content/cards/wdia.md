@@ -21,6 +21,8 @@ sources:
   - {title: "Mississippi Blues Trail: B.B. King Birthplace", url: "https://msbluestrail.org/blues-trail-markers/b-b-king-birthplace"}
   - {title: "Willie Brenc, BlackPast.org: Jack Leroy Cooper (1888–1970) (2013)", url: "https://blackpast.org/aah/cooper-jack-leroy-1888-1970"}
   - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (1897–1977) (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/"}
+media:
+  - {type: "image", file: "wdia.jpg", caption: "The WDIA–WHRK building in Memphis, Tennessee; 3 August 2013.", credit: "Thomas R. Machnitzki", license: "CC BY 3.0", url: "https://commons.wikimedia.org/wiki/File:WDIA_WHRK_building_Memphis_TN_2013-08-03_002.jpg"}
 ---
 WDIA was a small radio station in Memphis, Tennessee, one of the new stations that went on the air in the city after the Second World War. Black programmes had been heard on American radio since Chicago's [[all-negro-hour|All-Negro Hour]] of 1929, but no station had given its whole day to Black listeners, and in 1948 WDIA was failing.
 

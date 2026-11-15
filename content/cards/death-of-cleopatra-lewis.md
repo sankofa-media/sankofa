@@ -25,6 +25,8 @@ sources:
   - {title: "Hyperallergic: The Decades-Long Quest to Find and Honor Edmonia Lewis's Grave", url: "https://hyperallergic.com/434881/edmonia-lewis-grave/"}
   - {title: "Forest Park Review, 1 February 2022: How Forest Park and Cicero saved Cleopatra", url: "https://www.forestparkreview.com/2022/02/01/how-forest-park-and-cicero-saved-cleopatra/"}
   - {title: "ArtsATL: Said in Stone at Georgia Museum reclaims the remarkable career of sculptor Edmonia Lewis", url: "https://www.artsatl.org/said-in-stone-at-georgia-museum-reclaims-the-remarkable-career-of-sculptor-edmonia-lewis/"}
+media:
+  - {type: "image", file: "death-of-cleopatra-lewis.jpg", caption: "The Death of Cleopatra, Edmonia Lewis's 1876 sculpture, at the Smithsonian American Art Museum; photograph by Caroline Léna Becker.", credit: "Edmonia Lewis (sculpture); Caroline Léna Becker (photograph)", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:The_Death_of_Cleopatra.JPG"}
 ---
 In 1876 the United States marked a hundred years of independence with the Centennial Exhibition in Philadelphia. Among the works sent over from Rome was a marble Cleopatra by Edmonia Lewis, the daughter of a Black father and an Ojibwe mother. At Oberlin College in Ohio, Lewis had been accused of poisoning two white classmates and beaten by a white mob; in 1865 she moved to Rome and began to carve marble.
 

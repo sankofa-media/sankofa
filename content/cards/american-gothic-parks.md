@@ -22,6 +22,8 @@ sources:
   - {title: "National Archives, Prologue (Summer 1997): Pioneering photographers", url: "https://www.archives.gov/publications/prologue/1997/summer/pioneering-photographers"}
   - {title: "Jovonna Jones, Southern Cultures 28:2 (2022): Walking with Ella Watson", url: "https://www.southerncultures.org/article/walking-with-ella-watson/"}
   - {title: "Kansas Historical Society, Kansapedia: Gordon Parks", url: "https://www.kansashistory.gov/kansapedia/gordon-parks/12165"}
+media:
+  - {type: "image", file: "american-gothic-parks.jpg", caption: "Ella Watson in Gordon Parks's photograph American Gothic, August 1942.", credit: "Gordon Parks / Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Gordon_Parks_-_American_Gothic_full.jpg"}
 ---
 In 1942 Gordon Parks, a self-taught photographer born in Fort Scott, Kansas, in 1912, came to Washington, D.C., to work for the photography section of the Farm Security Administration. The capital was segregated, and within days Parks met there, as he later put it, a bigotry and discrimination he had never expected to experience.
 

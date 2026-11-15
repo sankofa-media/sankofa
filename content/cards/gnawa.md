@@ -24,6 +24,8 @@ sources:
   - {title: "Songlines: Celebrating 25 editions of the Gnawa festival in Essaouira", url: "https://songlines.co.uk/features/celebrating-25-editions-of-the-gnawa-festival-in-essaouira"}
   - {title: "Nate Chinen, Pianist Randy Weston, an eloquent spokesman for jazz's bond with African culture, dies at 92, WBGO (2018)", url: "https://www.wbgo.org/music/2018-09-01/pianist-randy-weston-an-eloquent-spokesman-for-jazzs-bond-with-african-culture-dies-at-92"}
   - {title: "Lucy Ilado, Morocco: Gnawa music now on UNESCO heritage list, Music in Africa (2019)", url: "https://musicinafrica.net/magazine/morocco-gnawa-music-now-unesco-heritage-list"}
+media:
+  - {type: "image", file: "gnawa.jpg", caption: "Gnawa musicians and dancers in Jemaa el-Fnaa square, Marrakesh, 2019.", credit: "Lucyin", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Marakech_muzikeus_danseus_gnawas.jpg"}
 ---
 Gnawa is the music and healing ritual of a Sufi brotherhood in Morocco. The Gnawa descend from sub-Saharan Africans brought to Morocco, mostly as slaves, by the 16th century at the latest, and their songs invoke ancestors, saints and spirits.
 

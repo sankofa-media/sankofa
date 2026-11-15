@@ -20,6 +20,8 @@ sources:
   - {title: "Susan Keech McIntosh, Igbo-Ukwu at 50: A Symposium on Recent Archaeological Research and Analyses, African Archaeological Review (2022)", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9640786/"}
   - {title: "Smarthistory: Igbo-Ukwu", url: "https://smarthistory.org/igbo-ukwu/"}
 dispute: "Shaw's radiocarbon dates pointed to the 9th century CE; the dating of the finds has been debated ever since and is still called controversial."
+media:
+  - {type: "image", file: "igbo-ukwu.jpg", caption: "A ninth-century bronze staff head shaped like a coiled snake, from Igbo-Ukwu; National Museum, Onikan, Lagos, photographed in 2013.", credit: "Ochiwar", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Bronze_ornamental_staff_head,_9th_century,_Igbo-Ukwu.JPG"}
 ---
 Igbo-Ukwu is a town in the lower Niger region of southeastern Nigeria. Around the 9th century CE a wealthy society here, ancestors of today's Igbo, cast bronzes of startling refinement: ritual vessels, pendants, a crown, staff ornaments, all covered in fine decoration. Made by the lost-wax method in leaded bronze, they are the earliest artistic castings known from sub-Saharan Africa.
 

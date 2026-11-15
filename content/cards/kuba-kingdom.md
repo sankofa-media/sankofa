@@ -33,6 +33,8 @@ sources:
   - {title: "Minneapolis Institute of Art: Panel, Kuba (object 60556)", url: "https://collections.artsmia.org/art/60556"}
   - {title: "Palmer Museum of Art, Penn State, African Brilliance: catalogue 36, Kuba textile", url: "https://exhibitions.psu.edu/s/african-brilliance/page/catalogue-36"}
   - {title: "Michael C. Carlos Museum, Emory University: Kuba textiles", url: "https://digitalprojects.carlos.emory.edu/exhibits/show/objects-for-personal-use-and-a/textiles/about"}
+media:
+  - {type: "image", file: "kuba-kingdom.jpg", caption: "Raffia cloth from the Kuba kingdom, about 1909; Honolulu Museum of Art, photographed in 2013.", credit: "Hiart / Honolulu Museum of Art", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Raffia_cloth,_Kuba_kingdom,_c._1909,_HMA.JPG"}
 ---
 The Kuba kingdom lay in what is now the Democratic Republic of the Congo, and its oral tradition remembers Shyaam, a king of the 17th century. It was a highly ranked court society, and rank showed in dress and regalia, from small raffia hats to belts and pendants. Kuba designs had names, the interlace was called imbol, and the same motifs passed from cloth to carved wood.
 
