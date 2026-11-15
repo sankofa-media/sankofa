@@ -24,6 +24,8 @@ sources:
   - {title: "Bill Kossler, St. Croix Source: Events mark Emancipation Day (2013)", url: "https://visourcearchives.com/content/2013/07/02/events-mark-emancipation-day/"}
   - {title: "Lill-Ann Körber, Traveling to 'Caribbean Sweden', Rethinking Scandinavia (Lund, 2018)", url: "https://journals.lub.lu.se/rs/article/download/22314/19906?inline=1"}
   - {title: "Aarhus University, Danish History, module 6: The Danish realm", url: "https://cas.au.dk/en/danish-history/modules/module-6-from-absolutist-composite-state-to-nation-state-1814-1914/translate-to-english-1-det-danske-rige"}
+media:
+  - {type: "image", file: "danish-west-indies-1792.jpg", caption: "Context: Christian VII of Denmark in a portrait by Alexander Roslin, 1772.", credit: "Alexander Roslin", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Christian_VII_1772_by_Roslin.jpg"}
 ---
 From 1672 Denmark–Norway held Caribbean colonies: St Thomas, then St John in 1718 and St Croix in 1733. Their sugar was grown by enslaved Africans, and ships under the Danish flag carried more than 100,000 captives across the Atlantic from Danish forts on the West African coast.
 

@@ -24,6 +24,8 @@ sources:
   - {title: "Ministère de la Culture: Hommage de Rachida Dati à Souleymane Cissé (2025)", url: "https://www.culture.gouv.fr/presse/communiques-de-presse/hommage-de-madame-rachida-dati-ministre-de-la-culture-a-monsieur-souleymane-cisse"}
   - {title: "Melody Chironda, allAfrica: Souleymane Cisse, father of African cinema, dies (2025)", url: "https://allafrica.com/stories/202502200398.html"}
   - {title: "African Studies Centre Leiden: Souleymane Cissé (2025)", url: "https://www.ascleiden.nl/content/library-weekly/souleymane-cisse"}
+media:
+  - {type: "image", file: "yeelen.jpg", caption: "Context for Yeelen: director Souleymane Cissé with a film reel at the Cines del Sur festival in Granada, Spain, 2009.", credit: "Cines del Sur Granada Film Festival", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Souleymane_Ciss%C3%A9_with_film_reel.jpg"}
 ---
 Yeelen, whose title means "brightness" or "light", is a 1987 feature film by the Malian director Souleymane Cissé, drawn from the legends of the Bambara people. Cissé was born in 1940 in Bamako, under French colonial rule, and studied film at the state film institute in Moscow. His earlier features had looked at work, power and youth in modern Mali.
 

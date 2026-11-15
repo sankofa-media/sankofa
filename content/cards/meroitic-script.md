@@ -21,6 +21,8 @@ sources:
   - {title: "Satzinger, Some Peculiarities of Greek and Coptic Epigraphy from Nubia (2004)", url: "https://homepage.univie.ac.at/helmut.satzinger/Texte/EpigrNubia.pdf"}
   - {title: "New Lines Magazine: In Egypt and Sudan, Nubians Are Trying To Bring an Alphabet Back From the Dead", url: "https://newlinesmag.com/spotlight/in-egypt-and-sudan-nubians-are-trying-to-bring-an-alphabet-back-from-the-dead/"}
   - {title: "F. Ll. Griffith, Karanòg: The Meroitic Inscriptions of Shablul and Karanòg (1911), full text", url: "https://archive.org/stream/karangmeroitic00grifuoft/karangmeroitic00grifuoft_djvu.txt"}
+media:
+  - {type: "image", file: "meroitic-script.jpg", caption: "A sandstone stela inscribed in Meroitic, British Museum, EA1650; photograph, 2024.", credit: "Mike Peel (www.mikepeel.net)", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:At_the_British_Museum_2024_318.jpg"}
 ---
 Meroitic is the writing of the kingdom of Kush, whose capital Meroë stood on the Nile in what is now Sudan, some 200 km from Khartoum. It appeared around 200 BCE and stayed in use until after the fall of Meroë in the 4th century CE. It had two forms: hieroglyphs modelled on Egyptian ones, kept for royal and religious monuments, and a cursive derived from Egyptian demotic, used for almost everything else. Each has 23 signs, usually written right to left, with dots between words and phrases. It is an alphasyllabary: a consonant sign carries an inherent a unless a vowel sign follows it.
 

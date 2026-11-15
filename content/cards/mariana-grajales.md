@@ -23,6 +23,8 @@ sources:
   - {title: "EcuRed: Mariana Grajales", url: "https://web.archive.org/web/20230610100855/https://www.ecured.cu/Mariana_Grajales"}
   - {title: "Cubadebate: Mariana Grajales Cuello, símbolo de la mujer cubana (12 July 2026)", url: "http://www.cubadebate.cu/especiales/2026/07/12/mariana-grajales-cuello-simbolo-de-la-mujer-cubana/"}
   - {title: "Jorge Risquet Valdés, Mariana Grajales, manos para acariciar a quien le habla de la patria, Cubadebate (2018)", url: "http://www.cubadebate.cu/especiales/2018/07/12/archivo-cd-mariana-grajales-manos-para-acariciar-a-quien-le-habla-de-la-patria/"}
+media:
+  - {type: "image", file: "mariana-grajales.jpg", caption: "Commemoration of Mariana Grajales: a temporary sign bearing her name on Rue de Franche-Comté, beside one honouring Lamya Essemlali; 21 April 2019.", credit: "Okhjon", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Rue_de_Franche-Comt%C3%A9_Mariana_Grajales_Lamya_Essemlali.jpg"}
 ---
 Mariana Grajales was a free woman of colour from Santiago de Cuba, the daughter of parents who had come from Santo Domingo. In her lifetime Cuba was Spain's richest colony, a sugar island worked by enslaved Africans, where free Black families lived under constant suspicion. Her birth year is disputed: 1815 in Cuban records, 1808 in other accounts.
 

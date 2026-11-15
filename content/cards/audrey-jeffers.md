@@ -22,6 +22,8 @@ sources:
   - {title: "Rhoda E. Reddock, Jeffers, Audrey, Encyclopedia of African-American Culture and History (Gale, 2005), via Encyclopedia.com", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/jeffers-audrey"}
   - {title: "Women's Activism NYC: Audrey Jeffers", url: "https://www.womensactivism.nyc/stories/9804"}
   - {title: "Stabroek News, In the Diaspora: We must hasten slowly (2023)", url: "https://stabroeknews.com/2023/04/03/features/in-the-diaspora/we-must-hasten-slowly"}
+media:
+  - {type: "image", file: "audrey-jeffers.jpg", caption: "Context: a view towards the Gulf of Paria from the Audrey Jeffers Highway, Trinidad, 22 March 2015.", credit: "Chris Fitzpatrick", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Audrey_Jeffers_Highway_Trinidad.JPG"}
 ---
 In Port of Spain, capital of colonial Trinidad, many children went to school hungry. Audrey Jeffers was born there in 1898, into a well-off family; her father was a lawyer. As a teenager she went to London to study social science, and during the First World War she worked among West African troops and raised a West African Soldiers' Fund.
 

@@ -24,6 +24,8 @@ sources:
   - {title: "Trinity College Dublin: Skeletons in mass Portuguese burial site belonged to African slaves", url: "https://www.tcd.ie/news_events/articles/skeletons-in-mass-portuguese-burial-site-belonged-to-african-slaves"}
   - {title: "Aurora Almada e Santos, Presence of African people in Portugal at the time of the trade of enslaved people, MANIFEST project (2023)", url: "https://www.projectmanifest.eu/wp-content/uploads/2023/06/Presence-of-African-people-in-Portugal-at-the-time-of-the-trade-of-enslaved-people.pdf"}
   - {title: "Yesenia Barragan, Uncovering Lisbon's Forgotten History of Slavery, Black Perspectives (AAIHS, 2017)", url: "https://www.aaihs.org/uncovering-lisbons-forgotten-history-of-slavery/"}
+media:
+  - {type: "image", file: "lagos-1444.jpg", caption: "The building known as Mercado de Escravos on Praça Infante D. Henrique, Lagos, Portugal; 10 August 2015. A contextual view of the site.", credit: "Norbert Nagel", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Arcaded_facade_of_Mercado_de_Escravos_-_Lagos_-_2015-08-10.jpg"}
 ---
 In 1444 Lançarote de Freitas, a tax official close to Prince Henry of Portugal, led six caravels from Lagos, a port on the Algarve coast, to the Arguin coast of today's Mauritania. Raids there took 235 people.
 

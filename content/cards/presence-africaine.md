@@ -20,6 +20,8 @@ sources:
   - {title: "Présence Africaine Éditions: La Maison d'édition (history and founder)", url: "http://www.presenceafricaine.com/info/8-maison-d-edition"}
   - {title: "Présence Africaine Éditions: Exposition Congrès 56 (2026)", url: "https://www.presenceafricaine.com/agenda/evenements/exposition-congres-56"}
   - {title: "Université Paris 1 Panthéon-Sorbonne: Colloque « Dans le sillage de Présence Africaine » (2026)", url: "https://www.pantheonsorbonne.fr/evenements/dans-le-sillage-de-presence-africaine"}
+media:
+  - {type: "image", file: "presence-africaine.jpg", caption: "Historian Elikia M'Bokolo at a Présence Africaine event; photograph dated 2019.", credit: "Azaromérique", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Elikia_M%27bokolo_at_the_70_year_anniversary_of_the_journal_Pr%C3%A9sence_Africaine.jpg"}
 ---
 Présence Africaine is a review and a publishing house in Paris, founded by Alioune Diop. Diop was born in Saint-Louis, Senegal, in 1910. He studied classics in Algiers and then at the Sorbonne, and from 1943 he taught in French schools. After the war he spent a short time in politics, in Senegal and in France.
 

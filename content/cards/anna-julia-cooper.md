@@ -21,6 +21,8 @@ sources:
   - {title: "National Women's History Museum: Anna Julia Cooper", url: "https://www.womenshistory.org/education-resources/biographies/anna-julia-cooper"}
   - {title: "Encyclopaedia Britannica: Anna Julia Cooper", url: "https://www.britannica.com/biography/Anna-Julia-Cooper"}
   - {title: "BlackPast, Tyina Steptoe: Anna Julia Haywood Cooper (1858–1964) (2007)", url: "https://www.blackpast.org/african-american-history/cooper-anna-julia-haywood-1858-1964/"}
+media:
+  - {type: "image", file: "anna-julia-cooper.jpg", caption: "Anna Julia Cooper, portrait from her book A Voice from the South, 1892.", credit: "Anonymous photographer or engraver; A Voice from the South (1892), Internet Archive", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Anna_Julia_Cooper_1892.tif"}
 ---
 Anna Julia Haywood was born enslaved in Raleigh, North Carolina, in 1858; her mother was enslaved, and her father was probably the man who held them. Emancipation brought new schools for freed people, and as a child she entered one of them, Saint Augustine's in Raleigh. There she noticed that boys were steered into harder courses than girls; she spent the rest of her life fighting for the education of Black women.
 

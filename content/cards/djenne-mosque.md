@@ -20,6 +20,8 @@ sources:
   - {title: "AFP via Arab News: Ancient Malian city celebrates annual replastering of mosque (14 June 2025)", url: "https://www.arabnews.pk/node/2604511/world"}
   - {title: "Zamani Project (University of Cape Town): Great Mosque of Djenné", url: "https://zamaniproject.org/site-mali-djenne-great-mosque.html"}
   - {title: "Félix Dubois, Timbuctoo the Mysterious (London, 1896), full text", url: "https://archive.org/stream/timbuctoomysteri00duborich/timbuctoomysteri00duborich_djvu.txt"}
+media:
+  - {type: "image", file: "djenne-mosque.jpg", caption: "The Great Mosque of Djenné, Mali, 2007.", credit: "BluesyPete", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:MaliDjenn%C3%A9Mosqu%C3%A9e.JPG"}
 ---
 Djenné, in central Mali, stands on low hillocks that keep it above the river's seasonal floods. It is one of the oldest towns of sub-Saharan Africa: people lived beside it, at Djenné-Djeno, from about 250 BCE. The town grew rich as a market on the trans-Saharan gold trade and became a centre of Muslim learning. Its Great Mosque is the largest mud-brick building in the world.
 

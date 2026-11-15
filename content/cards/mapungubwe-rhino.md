@@ -22,6 +22,8 @@ sources:
   - {title: "South African History Online: Mapungubwe", url: "https://www.sahistory.org.za/place/mapungubwe"}
   - {title: "Jeff Guy, The Beginnings of Globalisation (South African History Online, Ancient Civilizations and Global Trade, chapter 2)", url: "https://sahistory.org.za/archive/book-1-ancient-civilizations-and-global-trade-chapter-2-beginnings-globalisation-jeff-guy"}
   - {title: "Government Gazette No. 24155 (6 December 2002): Warrant instituting the Order of Mapungubwe", url: "https://www.gov.za/sites/default/files/gcis_document/201409/24155e0.pdf"}
+media:
+  - {type: "image", file: "mapungubwe-rhino.jpg", caption: "The golden rhinoceros in the Mapungubwe Collection, South Africa, photographed in 2016.", credit: "Sian Tiley-Nel / University of Pretoria Museums", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:UP_rhino.JPG"}
 ---
 Mapungubwe Hill rises near the point where the Shashe River joins the Limpopo, where South Africa, Botswana and Zimbabwe now meet. In the 13th century it was the capital of a kingdom that traded gold and ivory towards the Indian Ocean. Its rulers lived on top of the hill, walled off from the commoners below, and were buried there with gold.
 

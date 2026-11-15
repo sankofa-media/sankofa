@@ -22,6 +22,8 @@ sources:
   - {title: "Nadine Cohodas, Library of Congress, National Recording Registry: \"Mississippi Goddam\", Nina Simone (1964)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/MississippiGoddam.pdf"}
   - {title: "Ruth Feldstein, History News Network: Nina Simone, the antidote to the \"We Shall Overcome\" myth of the civil rights movement", url: "https://www.historynewsnetwork.org/article/154884"}
   - {title: "Encyclopaedia Britannica: Nina Simone", url: "https://www.britannica.com/biography/Nina-Simone"}
+media:
+  - {type: "image", file: "mississippi-goddam.jpg", caption: "Context: Nina Simone, photographed by Ron Kroon, 14 December 1965.", credit: "Ron Kroon / Anefo; restoration by Bammesk", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Nina_Simone_1965_-_restoration1.jpg"}
 ---
 "Mississippi Goddam" is a protest song, and it sounds like a cheerful show tune. Nina Simone, a classically trained pianist who had made her name as a nightclub singer, wrote it in September 1963, straight after a Ku Klux Klan bomb killed four Black girls at the 16th Street Baptist Church in Birmingham, Alabama. She later said that she sat down and the whole song came at once, and that singing it felt like firing ten bullets back at the bombers.
 

@@ -22,6 +22,8 @@ sources:
   - {title: "Letaba Herald (The Citizen), Anwen Mojela: Battle for Modjadji 'rain' throne continues (20 February 2023)", url: "https://www.citizen.co.za/letaba-herald/news-headlines/local-news/2023/02/20/battle-for-modjadji-rain-throne-continues/"}
   - {title: "SABC News, Pimani Baloyi: 'No legal basis to deny Queen Masalanabo her recognition as monarch' (3 September 2026)", url: "https://www.sabcnews.com/sabcnews/no-legal-basis-to-deny-queen-masalanabo-her-recognition-as-monarch/"}
   - {title: "Scrolla.Africa: Queen Modjadji's court win means no Balobedu child enters adulthood without her say (3 June 2026)", url: "https://scrolla.africa/queen-modjadjis-court-win-means-no-balobedu-child-enters-adulthood-without-her-say/"}
+media:
+  - {type: "image", file: "rain-queen.jpg", caption: "Rain Queen Makobo Constance Modjadji VI at her coronation at the KheThakong royal court, Limpopo; April 2003.", credit: "MichaelStreatonPhotography", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Rain_Queen_Makobo_Constance_Modjadji_VI.jpg"}
 ---
 The Balobedu, or Lobedu, live in the hills around Modjadjiskloof in Limpopo, in north-eastern South Africa. Their hereditary ruler, the Modjadji, a queen, has long been famous across the region as a maker of rain. In the 1930s the anthropologists Eileen and Jack Krige lived among the Lobedu, and in 1943 they published their study of them, The Realm of a Rain-Queen.
 

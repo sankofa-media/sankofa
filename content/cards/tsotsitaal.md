@@ -18,6 +18,8 @@ sources:
   - {title: "Thabo Ditsele and Ellen Hurst, Travelling terms and local innovations: The tsotsitaal of the North West province, South Africa, Literator 37:2 (2016)", url: "https://literator.org.za/index.php/literator/article/view/1274/2133"}
   - {title: "Ellen Hurst, Style, structure and function in Cape Town Tsotsitaal, PhD thesis, University of Cape Town (2008)", url: "https://open.uct.ac.za/bitstream/handle/11427/10934/thesis_hum_2008_hurst_e.pdf?sequence=1"}
   - {title: "Mail & Guardian: Memories of majietas (26 June 2003)", url: "https://mg.co.za/article/2003-06-26-memories-of-majietas"}
+media:
+  - {type: "image", file: "tsotsitaal.jpg", caption: "Context for Sophiatown's history: the derelict Church of Christ the King in 1972, after the forced removals of 1955.", credit: "Martinvl", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Nave_of_Christ_the_King,_Sophiatown,_1972.JPG"}
 ---
 Tsotsitaal is the street speech of South Africa's townships. Linguists call it a style rather than a separate language: a fast-changing slang vocabulary laid over an everyday local language, spoken mostly by young urban men as a sign of being streetwise. It first took shape in the 1940s in the mixed townships of Johannesburg, above all Sophiatown, where people of many languages lived side by side, and its earliest base was a non-standard Afrikaans.
 

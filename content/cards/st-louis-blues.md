@@ -20,6 +20,8 @@ sources:
   - {title: "JazzStandards.com: St. Louis Blues (1914)", url: "https://www.jazzstandards.com/compositions-0/stlouisblues.htm"}
   - {title: "NPR, Margaret Howze: The NPR 100: 'St. Louis Blues' (2000)", url: "https://www.npr.org/2000/01/16/1069234/st-louis-blues"}
   - {title: "University of Pittsburgh, Voices Across Time: St. Louis Blues", url: "https://voices.pitt.edu/TeachersGuide/Unit%206/StLouisBlues.htm"}
+media:
+  - {type: "image", file: "st-louis-blues.jpg", caption: "Sheet-music cover for W. C. Handy's St. Louis Blues, published in 1914.", credit: "W. C. Handy / Pace & Handy Music Co.", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:St._Louis_Blues_cover.jpg"}
 ---
 "St. Louis Blues" is a song W. C. Handy published in 1914, when the blues was moving from Southern performers onto printed sheet music. Handy, a bandleader born in Florence, Alabama, was working in Memphis. In 1892 a vocal quartet he toured with had run out of money and been stranded in St. Louis, and the song's opening line, "I hate to see de evenin' sun go down", came from those days: anyone who had slept on the cobbles by the river there, he wrote, would understand the complaint. He also played a trick on the dancers. The tango was in vogue, so he gave the blues a tango section.
 

@@ -20,6 +20,8 @@ sources:
   - {title: "National Park Service: March on Washington for Jobs and Freedom", url: "https://www.nps.gov/articles/march-on-washington.htm"}
   - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/"}
   - {title: "National Archives: Civil Rights Act (1964)", url: "https://www.archives.gov/milestone-documents/civil-rights-act"}
+media:
+  - {type: "image", file: "march-on-washington.jpg", caption: "Martin Luther King Jr. and Mathew Ahmann at the March on Washington, 28 August 1963.", credit: "Rowland Scherman / National Archives; restoration by Adam Cuerden", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Civil_Rights_March_on_Washington,_D.C._(Dr._Martin_Luther_King,_Jr._and_Mathew_Ahmann_in_a_crowd.)_-_NARA_-_542015_-_Restoration.jpg"}
 ---
 On 28 August 1963 the March on Washington for Jobs and Freedom gathered at the Lincoln Memorial. The idea belonged to A. Philip Randolph, founder of the Brotherhood of Sleeping Car Porters. In 1941 his threat of a march had pushed President Franklin Roosevelt to order an end to discrimination in the defence industry, and Randolph called the march off. Twenty-two years later he revived it, with his long-time partner Bayard Rustin as its organiser.
 

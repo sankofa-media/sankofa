@@ -20,6 +20,8 @@ sources:
   - {title: "Arturo García Jiménez, El significado de la Hermandad de los Negritos de Sevilla, Meer (2025)", url: "https://www.meer.com/es/97905-el-significado-de-la-hermandad-de-los-negritos-de-sevilla"}
   - {title: "Tamar Herzog, How Did Early-Modern Slaves in Spain Disappear? The Antecedents, Republics of Letters 3:1 (Stanford, 2012)", url: "https://shc.stanford.edu/arcade/publications/rofl/issues/volume-3-issue-1/how-did-early-modern-slaves-spain-disappear"}
   - {title: "Eduardo Corona Pérez, Aproximación a la mortalidad infantil de los esclavos en Sevilla (1620-1650) (2020)", url: "https://dialnet.unirioja.es/descarga/articulo/7714225.pdf"}
+media:
+  - {type: "image", file: "black-seville.jpg", caption: "Christ of the Foundation, carved by Andrés de Ocampo in 1622, in the Negritos brotherhood's chapel in Seville; photograph, 2022.", credit: "Jl FilpoC; sculpture by Andrés de Ocampo, polychromy by Pablo Legot", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Sant%C3%ADsimo_Cristo_de_la_Fundaci%C3%B3n,_Hermandad_de_los_Negritos_(Sevilla).jpg"}
 ---
 In the sixteenth century Seville was one of the largest centres of slavery in Spain and a busy slave market. In the mid-sixteenth century enslaved people made up about 7.4 per cent of the inhabitants recorded in its census.
 

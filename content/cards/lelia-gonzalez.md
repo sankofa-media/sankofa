@@ -22,6 +22,8 @@ sources:
   - {title: "Samantha Azambuja, O que é amefricanidade?, Sesc São Paulo (2022)", url: "http://web.archive.org/web/20260310091912/https://www.sescsp.org.br/editorial/amefricanidade/"}
   - {title: "Instituto Odara: Gonzalez, Lélia. A categoria político-cultural de amefricanidade (introduction and text)", url: "http://web.archive.org/web/20260214201454/https://institutoodara.org.br/public/gonzalez-lelia-a-categoria-politico-cultural-de-amefricanidade-tempo-brasileiro-rio-de-janeiro-v-92-n-93-p-69-82-jan-jun-1988b-p-69-82/"}
   - {title: "Brasil de Fato: Em SP, Angela Davis pede valorização de feministas negras brasileiras (20 October 2019)", url: "https://www.brasildefato.com.br/2019/10/20/em-sp-angela-davis-pede-valorizacao-de-feministas-negras-brasileiras"}
+media:
+  - {type: "image", file: "lelia-gonzalez.jpg", caption: "Commemoration of Lélia Gonzalez: inauguration of a building named after her, 30 September 2015; photograph from UNDP Brazil.", credit: "Fábio Donato / PNUD Brasil", license: "CC BY 2.0", url: "https://commons.wikimedia.org/wiki/File:Inaugura%C3%A7%C3%A3o_edif%C3%ADcio_L%C3%A9lia_Gonzalez_(21662269399).jpg"}
 ---
 Lélia Gonzalez was a Brazilian anthropologist and activist, born in Belo Horizonte in 1935, the second-youngest of eighteen children of a Black railway worker and a domestic worker of Indigenous descent. Brazil liked to call itself a "racial democracy", and she spent her life taking that myth apart.
 

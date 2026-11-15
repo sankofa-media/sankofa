@@ -25,6 +25,8 @@ sources:
   - {title: "Bezirksamt Friedrichshain-Kreuzberg: Eine Straße für Audre Lorde", url: "https://www.berlin.de/ba-friedrichshain-kreuzberg/ueber-den-bezirk/ehrungen-und-auszeichnungen/strassenbenennungen/artikel.1386238.php"}
   - {title: "Open Library: Farbe bekennen / Showing Our Colours (first published 1986)", url: "https://openlibrary.org/works/OL9079311W"}
   - {title: "CARMAH, Humboldt-Universität: Decolonising Berlin's Streets", url: "https://www.carmah.berlin/reflections/decolonising-berlins-streets"}
+media:
+  - {type: "image", file: "may-ayim.jpg", caption: "May-Ayim-Ufer in Berlin-Kreuzberg, 2 July 2013; a contextual view of the embankment named after May Ayim.", credit: "Fridolin freudenfett (Peter Kuley)", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Kreuzberg_May-Ayim-Ufer.JPG"}
 ---
 May Ayim was a poet, educator and activist, one of the founders of the Afro-German movement. She was born in Hamburg in 1960 to a German mother and a Ghanaian father. In 1984 she moved to West Berlin, where she met the American poet Audre Lorde, who was urging Afro-German women to make themselves seen.
 

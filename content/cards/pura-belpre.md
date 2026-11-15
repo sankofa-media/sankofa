@@ -25,6 +25,8 @@ sources:
   - {title: "American Folklore Society, Notable Folklorists of Color: Pura Belpré", url: "https://notablefolkloristsofcolor.org/?p=934"}
   - {title: "Victoria Núñez, Remembering Pura Belpré's Early Career at the 135th Street New York Public Library: Interracial Cooperation and Puerto Rican Settlement During the Harlem Renaissance, Centro Journal 21:1 (2009)", url: "https://www.redalyc.org/pdf/377/37721248003.pdf"}
   - {title: "American Library Association: The Pura Belpré Award", url: "https://www.ala.org/alsc/awardsgrants/bookmedia/belpre"}
+media:
+  - {type: "image", file: "pura-belpre.jpg", caption: "Context for Pura Belpré's legacy: the 2023 Pura Belpré Award ceremony.", credit: "AKL121", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Pura_Belpr%C3%A9_Award_Ceremony_%22Celebraci%C3%B3n%22_2023.jpg"}
 ---
 In 1920 Pura Belpré, a university student from Cidra, Puerto Rico, came to New York for her sister's wedding and stayed. Like many Puerto Rican women in the city, she first worked in the garment industry. In 1921 the 135th Street branch of the New York Public Library, in the middle of Harlem, took her on as a Spanish-speaking assistant: she was the first Puerto Rican the library hired. The Harlem Renaissance was under way around her branch, and she worked there with Black, Puerto Rican and immigrant readers alike.
 

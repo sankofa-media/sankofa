@@ -23,6 +23,8 @@ sources:
   - {title: "Chiamaka Ozulumba, ThisDay: Unpacking the themes of colonialism and duty in Death and the King's Horseman (2021)", url: "https://web.archive.org/web/20210604100323/https://www.thisdaylive.com/index.php/2021/06/04/unpacking-the-themes-of-colonialism-and-duty-in-death-and-the-kings-horseman/"}
   - {title: "NobelPrize.org: Wole Soyinka, Biographical (Nobel Prize in Literature 1986)", url: "https://www.nobelprize.org/prizes/literature/1986/soyinka/biographical/"}
   - {title: "Royal Exchange Theatre, Manchester: Death and the King's Horseman, British premiere (1990)", url: "https://web.archive.org/web/20030119152230/http://www.royalexchange.co.uk/history/1990/DEATH%20AND%20THE%20KINGS%20HORSEMAN.htm"}
+media:
+  - {type: "image", file: "death-and-the-kings-horseman.jpg", caption: "Context: Wole Soyinka lecturing at Stockholm Public Library, 4 October 2018.", credit: "Frankie Fouganthin", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Wole_Soyinka_in_2018.jpg"}
 ---
 In the Yoruba kingdom of Oyo, in what is now western Nigeria, custom required that when the king died, his horseman, the Elesin, would end his own life and follow his master into the world of the dead. In the 1940s, under British colonial rule, a district officer stepped in to stop one horseman from doing so. Wole Soyinka turned the episode into Death and the King's Horseman, written in 1975 while he was a fellow at Churchill College, Cambridge.
 

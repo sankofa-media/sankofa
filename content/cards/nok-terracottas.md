@@ -22,6 +22,8 @@ sources:
   - {title: "Peter Breunig and Nicole Rupp, Outline of a New Research Project on the Nok Culture of Central Nigeria, Nyame Akuma 73 (2010)", url: "https://static1.squarespace.com/static/5bd0e66f8d97400eb0099556/t/5bddff4c8a922de6f7b1a874/1541275468604/Nyame+Akuma+Issue+073-breunig.pdf"}
   - {title: "Julie Dunne, Alexa Höhn et al., Making the invisible visible: tracing the origins of plants in West African cuisine (University of Bristol)", url: "https://research-information.bris.ac.uk/ws/portalfiles/portal/313538950/NOK_plant_paper_final_version_re_reviewer_comments.pdf"}
 dispute: "Fagg's early dating put Nok at around 500 BCE; the Frankfurt project's radiocarbon dates place the first figurines around 900 BCE."
+media:
+  - {type: "image", file: "nok-terracottas.jpg", caption: "Terracotta figure of a rider on horseback, Nok culture; photograph uploaded in March 2006, date of photography not stated.", credit: "Amer Ghandour", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:A_man_ride_a_horse,Nok_terracotta_figurine.jpg"}
 ---
 In central Nigeria, people of what archaeologists call the Nok culture made fired-clay figures of people and animals during the first millennium BCE. They are the earliest large figurative sculptures known in Africa outside Egypt. Most show people with elaborate hairstyles, and their eyes are pierced right through.
 

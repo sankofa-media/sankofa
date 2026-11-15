@@ -23,6 +23,8 @@ sources:
   - {title: "Jonathan Gould, CBC q: Monterey Pop at 50, the day Otis Redding became a legend (book excerpt, 2017)", url: "https://www.cbc.ca/radio/q/monterey-pop-at-50-the-day-otis-redding-became-a-legend-1.4162924"}
   - {title: "Encyclopaedia Britannica: Aretha Franklin", url: "https://www.britannica.com/biography/Aretha-Franklin"}
   - {title: "Encyclopaedia Britannica: Otis Redding", url: "https://www.britannica.com/biography/Otis-Redding"}
+media:
+  - {type: "image", file: "respect.jpg", caption: "Context for Respect: Aretha Franklin performing at the Nokia Theater in Dallas, Texas, 21 April 2007.", credit: "Ryan Arrowsmith", license: "CC BY 2.5", url: "https://commons.wikimedia.org/wiki/File:Arethafranklin.jpg"}
 ---
 "Respect" is a soul song that began as a man's demand and became one of the anthems of 1960s America. Otis Redding wrote it and released it in 1965 on the Stax label; in his version it is the man who asks his woman for respect.
 

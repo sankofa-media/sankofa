@@ -21,6 +21,8 @@ sources:
   - {title: "IMPO (Uruguay): Ley N° 18.059 (2006)", url: "https://www.impo.com.uy/bases/leyes/18059-2006"}
   - {title: "Ministerio de Educación y Cultura (Uruguay): Día Nacional del Candombe, la Cultura Afrouruguaya y la Equidad Racial (2020)", url: "https://www.gub.uy/ministerio-educacion-cultura/comunicacion/noticias/dia-nacional-del-candombe-cultura-afrouruguaya-equidad-racial"}
   - {title: "Luis Jure: El repique del candombe, Escuela Universitaria de Música, Universidad de la República (archived)", url: "https://web.archive.org/web/20110929144457/http://www.eumus.edu.uy/docentes/jure/perico/perico.html"}
+media:
+  - {type: "image", file: "candombe-montevideo.jpg", caption: "Candombe performed in the streets of Montevideo, Uruguay, 2011.", credit: "Larrycox54", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Candombe_Montevideo_Uruguay.jpg"}
 ---
 Candombe is the drumming of Montevideo's Afro-Uruguayan community, rooted in the southern districts of Sur and Palermo and in neighbouring Cordón. It is played on three drums: the chico, the repique and the piano, the largest and deepest. Their names stand both for three sizes and for the three different parts each plays in the rhythm. Together the drums make a llamada, a drum call that marches through the streets.
 

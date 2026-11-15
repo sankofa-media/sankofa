@@ -19,6 +19,8 @@ sources:
   - {title: "Encyclopedia of World Cultures, Edmund T. Gordon: Creoles of Nicaragua (via Encyclopedia.com)", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/creoles-nicaragua"}
   - {title: "BlackPast, Kayomi Wada: Bluefields, Nicaragua (ca. 1650- ) (2010)", url: "https://blackpast.org/global-african-history/bluefields-nicaragua/"}
   - {title: "UNESCO Intangible Cultural Heritage: Language, dance and music of the Garifuna", url: "https://ich.unesco.org/en/RL/language-dance-and-music-of-the-garifuna-00001"}
+media:
+  - {type: "image", file: "nicaragua-miskitu-creoles.jpg", caption: "Context for Nicaragua's Caribbean coast: fish market in Bluefields, December 2023.", credit: "Ridiculopathy", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Fish_market,_Bluefields,_Nicaragua_11.jpg"}
 ---
 Nicaragua's Caribbean coast, long called the Mosquito Coast, is a world apart from the Spanish-speaking Pacific side of the country. Its largest Black community lives in and around the port of Bluefields. They are Creoles: Afro-Caribbean Nicaraguans who speak an English-based creole as their first language.
 

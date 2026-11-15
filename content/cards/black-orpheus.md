@@ -23,6 +23,8 @@ sources:
   - {title: "Eli Kooris, The Austin Chronicle: Black Orpheus (16 August 2002)", url: "https://www.austinchronicle.com/screens/video-reviews-11713359/"}
   - {title: "Marcello Campos, Jornal do Comércio (Porto Alegre), 29 October 2026: Breno Mello, do futebol porto-alegrense à fama internacional no cinema", url: "https://www.jornaldocomercio.com/especiais/reportagem-cultural/2026/10/1268526-breno-mello-do-futebol-porto-alegrense-a-fama-internacional-no-cinema.html"}
   - {title: "Vanessa McMahon, filmfestivals.com: Looking back at cinema's greatest moments, Black Orpheus (2012)", url: "https://mail.filmfestivals.com/blog/vanessa_mcmahon/looking_back_cinemas_greatest_moments_black_orpheus_orfeu_negro_1959"}
+media:
+  - {type: "image", file: "black-orpheus.jpg", caption: "Helmuth Ellgaard's German poster for Black Orpheus, 1959.", credit: "Helmuth Ellgaard / Ellgaard family archive", license: "CC BY 3.0", url: "https://commons.wikimedia.org/wiki/File:Orfeu_Negro,_1959.jpg"}
 ---
 Black Orpheus, a 1959 film, moves the Greek myth of Orpheus and Eurydice to Rio de Janeiro at Carnival. It grew out of Orfeu da Conceição, a play by the Brazilian poet Vinicius de Moraes, and was directed by the Frenchman Marcel Camus. Orfeu is a tram driver on a hillside favela; he falls for the doomed Eurydice, played by Marpessa Dawn, and, like Orpheus, follows her into the world of the dead.
 

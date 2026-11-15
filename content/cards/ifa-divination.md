@@ -23,6 +23,8 @@ sources:
   - {title: "Encyclopedia of African Religion (SAGE, 2009): Orunmila", url: "https://sk.sagepub.com/ency/edvol/embed/africanreligion/chpt/orunmila"}
   - {title: "Encyclopedia of African Religion (SAGE, 2009): Babalawo", url: "https://sk.sagepub.com/ency/edvol/embed/africanreligion/chpt/babalawo"}
   - {title: "Glory Oluchi Onyekwusi, Tracing the Origins of Ifá Divination and Its Surprising Parallels with Modern Binary Code, Art Africa (2025)", url: "https://art.africa/art-africa-curatorial-space/news/tracing-the-origins-of-ifa-divination-and-its-surprising-parallels-with-modern-binary-code/"}
+media:
+  - {type: "image", file: "ifa-divination.jpg", caption: "Ikin Orossi divination objects, photographed in May 2008.", credit: "Toluaye", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Jogo_de_Ikin_Orossi.JPG"}
 ---
 Ifá is the divination system of the Yoruba of south-western Nigeria, also practised by their descendants in the Americas and the Caribbean. It takes its name from Ifá, also called Orunmila, the Yoruba deity of wisdom. Ifá is consulted whenever an important decision has to be made, by a person or by a whole community. Its priest, the babalawo, does not fall into trance: he reads signs.
 

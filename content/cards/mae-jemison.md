@@ -11,7 +11,8 @@ places:
 zoom: 4
 era: v7
 books: [heirs]
-edition: both
+edition: f
+pair: into-orbit
 further:
   - "Star Trek: The Next Generation, season 6, episode 24, Second Chances (1993)"
   - "Mae Jemison, Find Where the Wind Goes: Moments from My Life (2001)"
@@ -21,6 +22,8 @@ sources:
   - {title: "Jessie Kratz, US National Archives, Pieces of History: Mae Jemison, First Black Woman in Space (2020)", url: "https://prologue.blogs.archives.gov/?p=31196"}
   - {title: "Allison Lantero, US Department of Energy: Astronaut Mae Jemison (2016)", url: "https://www.energy.gov/node/1626656"}
   - {title: "BBC Sky at Night Magazine: Mae Jemison, the first African American woman in space", url: "https://www.skyatnightmagazine.com/space-missions/mae-jemison-biography/"}
+media:
+  - {type: "image", file: "mae-jemison.jpg", caption: "Mae Jemison, official NASA portrait, 1 July 1992.", credit: "NASA, S92-40463", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Mae_Carol_Jemison.jpg"}
 ---
 Mae Jemison was born in Decatur, Alabama, in 1956 and grew up on the South Side of Chicago. She finished high school at 16 and went to Stanford, graduating in 1977 in chemical engineering and in African American studies, and dancing all the while. She qualified as a doctor at Cornell in 1981 and then served as a Peace Corps medical officer in West Africa, for Sierra Leone and Liberia, looking after Peace Corps volunteers and US embassy staff.
 

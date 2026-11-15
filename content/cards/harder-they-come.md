@@ -23,6 +23,8 @@ sources:
   - {title: "Jamaica Gleaner, The Classics: Sunday Gleaner, 10 October 1948, 'Rhyging' killed by police (reprint, 2021)", url: "https://jamaica-gleaner.com/article/esponsored/20211014/jamaicas-most-wanted-ivanhoe-rhyging-martin-killed-police"}
   - {title: "Encyclopaedia Britannica: Jimmy Cliff", url: "https://www.britannica.com/biography/Jimmy-Cliff"}
   - {title: "IRIE Magazine: The Harder They Come (1972)", url: "https://www.iriemag.com/magazine/summer-2026/the-harder-they-come/"}
+media:
+  - {type: "image", file: "harder-they-come.jpg", caption: "Context: Jimmy Cliff performing at the Festival du Bout du Monde in Crozon, France, 2012.", credit: "Thesupermat", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Jimmy_Cliff_-_Festival_du_Bout_du_Monde_2012_-_022.jpg"}
 ---
 The Harder They Come is a Jamaican feature film of 1972, directed by Perry Henzell. The ska and reggae singer Jimmy Cliff plays Ivan, a young man from the countryside who comes to Kingston to be a singer. He records a song, a greedy record producer cheats him, and he slides into crime; after a shoot-out with the police he becomes a hunted man.
 

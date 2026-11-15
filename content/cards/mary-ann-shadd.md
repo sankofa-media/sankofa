@@ -21,6 +21,8 @@ sources:
   - {title: "Jason H. Silverman: Shadd, Mary Ann Camberton (Cary), Dictionary of Canadian Biography", url: "https://www.biographi.ca/en/bio/shadd_mary_ann_camberton_12E.html"}
   - {title: "Adrienne Shadd: Mary Ann Shadd, The Canadian Encyclopedia", url: "https://www.thecanadianencyclopedia.ca/en/article/mary-ann-shadd"}
   - {title: "National Park Service: Mary Ann Shadd Cary", url: "https://www.nps.gov/people/mary-ann-shadd-cary.htm"}
+media:
+  - {type: "image", file: "mary-ann-shadd.jpg", caption: "Mary Ann Shadd Cary, portrait dated 1855–1860; Library and Archives Canada.", credit: "Library and Archives Canada; unknown photographer", license: "CC BY 2.0", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Mary_Ann_Shadd_Cary.jpg"}
 ---
 Mary Ann Shadd was born free in 1823 in Wilmington, Delaware, a slave state, the eldest child of an abolitionist family whose home sheltered people escaping slavery. In 1850 the Fugitive Slave Act let slave-catchers reach into the free North, and Black Americans began to leave for Canada. In 1851 Shadd followed them to Windsor, in Canada West, and opened a school for the children of refugees.
 

@@ -22,6 +22,8 @@ sources:
   - {title: "Documenting the American South (UNC): The History of Mary Prince, summary", url: "https://docsouth.unc.edu/neh/prince/summary.html"}
   - {title: "Documenting the American South (UNC): The History of Mary Prince, full text (1831)", url: "https://docsouth.unc.edu/neh/prince/prince.html"}
   - {title: "Bermuda Biographies: Mary Prince", url: "https://bermudabiographies.bm/Biographies/Biography-MaryPrince.html"}
+media:
+  - {type: "image", file: "mary-prince.jpg", caption: "A London site associated with Mary Prince, photographed in 2020.", credit: "Megalit", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Mary_Prince_site_London.jpg"}
 ---
 Mary Prince was born into slavery around 1788 at Brackish Pond in Bermuda, a British colony. Britain had outlawed the slave trade in 1807, but in its colonies people stayed property until the Abolition Act of 1833. Prince was sold from owner to owner: to the salt ponds of Turks Island, back to Bermuda, and then to John Wood, a merchant in Antigua. There, in December 1826, she married Daniel James, a free carpenter, in the Moravian church.
 

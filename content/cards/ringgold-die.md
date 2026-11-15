@@ -19,6 +19,8 @@ sources:
   - {title: "The Art Story: Faith Ringgold, artworks and biography", url: "https://www.theartstory.org/artist/ringgold-faith/"}
   - {title: "Hyperallergic: The fantastic life of Faith Ringgold (2018)", url: "https://hyperallergic.com/477794/the-fantastic-life-of-faith-ringgold/"}
   - {title: "Arwa Mahdawi, The Guardian: The quilts that made America quake (2019)", url: "https://www.theguardian.com/artanddesign/2019/jun/04/faith-ringgold-new-york-artist-serpentine-gallery-london"}
+media:
+  - {type: "image", file: "ringgold-die.jpg", caption: "Context for Die: artist Faith Ringgold at the Brooklyn Museum symposium We Wanted a Revolution, 21 April 2017.", credit: "Brooklyn Museum", license: "CC BY 3.0", url: "https://commons.wikimedia.org/wiki/File:Faith_Ringgold,_April_2017-2.jpg"}
 ---
 American People Series #20: Die is an oil painting that Faith Ringgold made in New York in 1967. Born in Harlem in 1930, she was then working through her American People series, canvases on race in America, while riots broke out in city after city.
 

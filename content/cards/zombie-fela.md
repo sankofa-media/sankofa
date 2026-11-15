@@ -26,6 +26,8 @@ sources:
   - {title: "Dennis Ade Peter, OkayAfrica: \"Zombie\" is Fela Kuti's greatest protest song (2026)", url: "https://www.okayafrica.com/zombie-is-fela-kutis-greatest-protest-song/1440729"}
   - {title: "Encyclopaedia Britannica: Funmilayo Ransome-Kuti", url: "https://www.britannica.com/biography/Funmilayo-Ransome-Kuti"}
   - {title: "Scroll.in: The art of resistance, Zombie by Fela Kuti", url: "https://scroll.in/article/948202/the-art-of-resistance-zombie-by-fela-kuti-questions-repressive-governments"}
+media:
+  - {type: "image", file: "zombie-fela.jpg", caption: "Context for Zombie: Fela Kuti with Waïpa, 1970.", credit: "MOI MEME / Waïpa Saberty", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:WA%C3%8FPA_FELA_KUTI.JPG"}
 ---
 "Zombie" is an [[afrobeat|afrobeat]] track that Fela Kuti released with his band Africa 70 in 1976, when Nigeria was ruled by the military. Over a driving groove and blaring horns, its zombie, who turns, stops and thinks only when told to, is a soldier of the Nigerian army.
 

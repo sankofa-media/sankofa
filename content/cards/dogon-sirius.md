@@ -24,6 +24,8 @@ sources:
   - {title: "UNESCO World Heritage Centre: Cliff of Bandiagara (Land of the Dogons)", url: "https://whc.unesco.org/en/list/516"}
   - {title: "CNRS Images: Jean Rouch, anthropologist and filmmaker (Sigui films)", url: "https://images.cnrs.fr/en/archives/jean-rouch-anthropologist-filmmaker"}
   - {title: "Mamadou Tapily, A Malian journalist, a fabled festival, and a search for truth in a time of crisis, The New Humanitarian, republished by The African Mirror (2025)", url: "https://theafricanmirror.africa/human-rights/a-malian-journalist-a-fabled-festival-and-a-search-for-truth-in-a-time-of-crisis/"}
+media:
+  - {type: "image", file: "dogon-sirius.jpg", caption: "Context: rooftops of a Dogon village near the Bandiagara escarpment, Mali, 2006.", credit: "David Sessoms", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Dogon_village_rooftops_by_David_Sessoms.jpg"}
 ---
 The Dogon of Mali live along the Bandiagara escarpment, a towering cliff with villages set into its rock face. Every sixty years they hold the Sigui, a cycle of ceremonies that honours the dead and marks the passing of one generation to the next; the last began in 1967.
 

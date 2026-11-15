@@ -23,6 +23,8 @@ sources:
   - {title: "Library of Congress, Ragtime collection: Treemonisha", url: "https://www.loc.gov/collections/ragtime/articles-and-essays/treemonisha/"}
   - {title: "CALS Encyclopedia of Arkansas: Treemonisha", url: "https://encyclopediaofarkansas.net/entries/treemonisha-12200/"}
   - {title: "Alan Westby, Scott Joplin, Treemonisha and American Opera, Los Angeles Public Library (2017)", url: "https://www.lapl.org/collections-resources/blogs/lapl/scott-joplin-treemonisha-and-american-opera"}
+media:
+  - {type: "image", file: "treemonisha.jpg", caption: "Cover of Scott Joplin's opera Treemonisha, self-published in New York City in 1911; Library of Congress.", credit: "Scott Joplin / Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Treemonisha_cover.jpg"}
 ---
 Treemonisha is an opera in three acts by Scott Joplin, the composer of "Maple Leaf Rag" and "The Entertainer", who had grown up in north-east Texas and settled in New York. He wrote words and music. Publishers wanted his rags, not an opera, so in 1911 he printed the piano-vocal score at his own expense.
 

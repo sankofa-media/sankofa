@@ -24,6 +24,8 @@ sources:
   - {title: "AFP Relaxnews via Free Malaysia Today: How 'Soul Makossa' became Manu Dibango's biggest hit (2020)", url: "https://www.freemalaysiatoday.com/category/leisure/2020/03/25/how-soul-makossa-became-manu-dibangos-biggest-hit"}
   - {title: "The Irish Times: Rihanna, Jacko sued (2009)", url: "https://www.irishtimes.com/culture/rihanna-jacko-sued-1.694292"}
   - {title: "Billboard: Manu Dibango chart history, Hot 100", url: "https://www.billboard.com/artist/manu-dibango/chart-history/hsi/"}
+media:
+  - {type: "image", file: "soul-makossa.jpg", caption: "Context for Soul Makossa: Manu Dibango at the Les Escales festival in Saint-Nazaire, France; 26 July 2019.", credit: "Selbymay", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:LesEscales2019ManuDibango_03_(cropped).jpg"}
 ---
 "Soul Makossa" is a 1972 track by Manu Dibango, a saxophonist born in Douala, Cameroon, who mixed his country's makossa dance rhythm with funk. That year Cameroon's football team played in the Africa Cup of Nations, and Dibango was commissioned to record a song for it, "Hymne de la 8e Coupe d'Afrique des Nations". "Soul Makossa" was its B-side, and at first the single drew little interest.
 

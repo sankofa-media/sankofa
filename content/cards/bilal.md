@@ -20,6 +20,8 @@ sources:
   - {title: "Barry Hoberman, The First Muezzin, Saudi Aramco World, July/August 1983", url: "https://archive.aramcoworld.com/issue/198304/the.first.muezzin.htm"}
   - {title: "Ibn Ishaq, The Life of Muhammad, translated by A. Guillaume (Internet Archive)", url: "https://archive.org/details/GuillaumeATheLifeOfMuhammad"}
   - {title: "Encyclopaedia Britannica: Bilāl ibn Rabah (archived)", url: "http://web.archive.org/web/20260412005755/https://www.britannica.com/biography/Bilal-ibn-Rabah"}
+media:
+  - {type: "image", file: "bilal.jpg", caption: "Context for Bilal's remembrance: the Bilal bin Rabbah Mosque in Medina, Saudi Arabia; 22 May 2025.", credit: "Diego Delso", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Mezquita_Bilal_bin_Rabbah,_Medina,_Arabia_Saudita,_2025-05-22,_DD_04.jpg"}
 ---
 Bilal ibn Rabah lived in Mecca in the early seventh century, a trading town where a merchant named Muhammad had begun to preach one God. Bilal's parents came from Abyssinia, today's Ethiopia, and he himself was enslaved. He was one of the very first people in Mecca to follow the new faith.
 

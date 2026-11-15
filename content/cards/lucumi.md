@@ -17,6 +17,8 @@ sources:
   - {title: "Jacques Leclerc, Cuba, L'aménagement linguistique dans le monde, CEFAN, Université Laval", url: "https://www.axl.cefan.ulaval.ca/amsudant/cuba.htm"}
   - {title: "Britannica: Lydia Cabrera (archived September 2025)", url: "http://web.archive.org/web/20250930135909/https://www.britannica.com/biography/Lydia-Cabrera"}
   - {title: "Glottolog reference record: Cabrera, Lydia. 1957. Anagó: vocabulario lucumi, el Yoruba que se habla en Cuba", url: "https://glottolog.org/resource/reference/id/149317"}
+media:
+  - {type: "image", file: "lucumi.jpg", caption: "Context: religious goods associated with Santería for sale in Havana, 2015.", credit: "Ji-Elle", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:La_Havane-Vente_d%27articles_religieux-Santer%C3%ADa_(2).jpg"}
 ---
 Lucumí, also called Anagó, is the ritual language of Cuba's Lucumí religion, better known as Santería. It comes from Yoruba, the language of the Yoruba peoples of West Africa, and in Cuba it is sometimes simply called Yoruba. Nobody speaks it as a mother tongue. It lives in worship: in the prayers to the orishas, the Yoruba deities, and in the songs that go with the music and dance of the ceremonies.
 

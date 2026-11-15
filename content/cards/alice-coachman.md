@@ -19,6 +19,8 @@ sources:
   - {title: "Lisa A. Ennis, New Georgia Encyclopedia: Alice Coachman (1923-2014)", url: "https://www.georgiaencyclopedia.org/articles/sports-outdoor-recreation/alice-coachman-1923-2014/"}
   - {title: "BBC News: US black female gold Olympian Alice Coachman Davis dies (15 July 2014)", url: "https://www.bbc.com/news/world-us-canada-28309527"}
   - {title: "Alan Greenblatt, NPR Code Switch: Why An African-American Sports Pioneer Remains Obscure (19 July 2014)", url: "https://www.npr.org/blogs/codeswitch/2014/07/19/332665921/why-an-african-american-sports-pioneer-remains-obscure"}
+media:
+  - {type: "image", file: "alice-coachman.jpg", caption: "Context: Alice Coachman Elementary School in Albany, Georgia, photographed on 7 November 2015.", credit: "Michael Rivera", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Alice_Coachman_Elementary_School.JPG"}
 ---
 In the segregated South of the 1930s a Black girl who wanted to jump had nowhere to train: public sports grounds were closed to her. Alice Coachman, born in Albany, Georgia, in 1923, the fifth of ten children, trained anyway. She ran barefoot and practised the high jump over ropes and sticks, although her father wanted her to sit on the porch and be ladylike. A teacher and an aunt took her side, and Tuskegee Institute in Alabama took her in. From 1939 she won the national high-jump title year after year.
 

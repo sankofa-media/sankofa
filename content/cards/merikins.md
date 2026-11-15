@@ -18,6 +18,8 @@ sources:
   - {title: "Lovell Francis, The story of the Merikens in Trinidad, National Archives of Trinidad and Tobago (2015)", url: "https://nationalarchivestt.wordpress.com/2015/08/14/the-story-of-the-merikens-in-trinidad/"}
   - {title: "National Archives of Trinidad and Tobago: Our African Legacy, Roots and Routes", url: "https://h.natt.gov.tt/sites/default/files/Our_African_Legacy_Roots_and_Routes.pdf"}
   - {title: "NALIS, National Library of Trinidad and Tobago: The Merikins, Free Black Settlers 1815–1816 (archived)", url: "https://web.archive.org/web/2016id_/http://www.nalis.gov.tt/Research/SubjectGuide/TheMerikinsFreeBlackSettlers18151816/tabid/563/Default.aspx?PageContentMode=1"}
+media:
+  - {type: "image", file: "merikins.jpg", caption: "Archaeologists discuss the Prospect Site with Merikin descendants visiting from Trinidad, 14 July 2022.", credit: "USDA Forest Service Photography", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Archeologists_discuss_the_Prospect_Site_with_Merikin_descendants_visiting_from_Trinidad_(20220714-FS-NP-003).jpg"}
 ---
 The Merikins are a community in the south of Trinidad descended from African Americans who won their freedom in the War of 1812, fought between Britain and the United States. When the British fleet came into Chesapeake Bay, enslaved people from Maryland and Virginia, and later from Georgia, escaped to its ships. Many of the men enlisted in the Corps of Colonial Marines, six companies that fought against their former masters.
 

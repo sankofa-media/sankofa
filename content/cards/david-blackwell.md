@@ -22,6 +22,8 @@ sources:
   - {title: "MacTutor History of Mathematics (St Andrews): David Harold Blackwell", url: "https://mathshistory.st-andrews.ac.uk/Biographies/Blackwell/"}
   - {title: "William Grimes, The New York Times: David Blackwell, Scholar of Probability, Dies at 91 (17 July 2010)", url: "https://www.nytimes.com/2010/07/17/education/17blackwell.html"}
   - {title: "Encyclopaedia Britannica: David Blackwell", url: "https://www.britannica.com/biography/David-Blackwell"}
+media:
+  - {type: "image", file: "david-blackwell.jpg", caption: "David Blackwell in Berkeley, California, 1999.", credit: "George M. Bergman", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:David_Blackwell_1999_(re-scanned,_cropped).jpg"}
 ---
 David Blackwell was born in 1919 in Centralia, Illinois, the son of a railway worker. In 1941, at 22, he finished a doctorate on Markov chains at the University of Illinois and won a Rosenwald fellowship to the Institute for Advanced Study in Princeton. Fellows of the Institute usually enjoyed the hospitality of Princeton University next door, but the university had never had a Black student, and because of his race it denied Blackwell what others were given.
 

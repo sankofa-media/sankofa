@@ -26,6 +26,8 @@ sources:
   - {title: "Oyez: Shelby County v. Holder (2013)", url: "https://www.oyez.org/cases/2012/12-96"}
   - {title: "Stanford King Institute: March on Washington for Jobs and Freedom", url: "https://kinginstitute.stanford.edu/march-washington-jobs-and-freedom"}
   - {title: "Oyez: Harper v. Virginia Board of Elections (1966)", url: "https://www.oyez.org/cases/1965/48"}
+media:
+  - {type: "image", file: "civil-rights-act-1964.jpg", caption: "President Lyndon B. Johnson signs the Civil Rights Act as Martin Luther King Jr. and others look on, 2 July 1964.", credit: "Cecil Stoughton / White House Press Office, Lyndon B. Johnson Presidential Library", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Lyndon_Johnson_signing_Civil_Rights_Act,_July_2,_1964.jpg"}
 ---
 Two laws, signed in Washington thirteen months apart, outlawed segregation in American public life and tore down the legal barriers to the Black vote. In June 1963 President John F. Kennedy sent Congress a broad civil rights bill, and in August the [[march-on-washington|March on Washington]] rallied behind it. After Kennedy's assassination, Lyndon B. Johnson pressed it on. Southern senators tried to talk it to death in a filibuster until the minority leader, Everett Dirksen, gathered enough Republican votes to cut off debate.
 

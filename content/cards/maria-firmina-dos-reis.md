@@ -21,6 +21,8 @@ sources:
   - {title: "Luciana Martins Diogo and Ana Paula Cavalcanti Simioni: Da sujeição à subjetivação, Opiniães (USP, 2017)", url: "https://revistas.usp.br/opiniaes/article/download/122553/129554/256315"}
   - {title: "Patricia Fernanda Massetti de Lima: A mente de uma maranhense transgressora, RICS (UFMA, 2020)", url: "https://cajapio.ufma.br/index.php/ricultsociedade/article/download/13908/7541/41769"}
   - {title: "LabGen, Universidade Federal Fluminense: Apresentando Firmina (2021)", url: "https://labgen.uff.br/wp-content/uploads/sites/77/2021/08/Maria-Firmina-dos-Reis.pdf"}
+media:
+  - {type: "image", file: "maria-firmina-dos-reis.jpg", caption: "The title page of the first edition of Maria Firmina dos Reis's novel Úrsula, 1859.", credit: "Maria Firmina dos Reis; first edition, San' Luiz", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Ursula_Maria_Firmina_dos_Reis.jpg"}
 ---
 Maria Firmina dos Reis was born in São Luís, in the Brazilian province of Maranhão, in 1822 or 1825 — the records disagree — in an empire where slavery would last until 1888. She grew up with relatives in the small town of Guimarães, and in 1847 she won a public examination to teach primary school there.
 

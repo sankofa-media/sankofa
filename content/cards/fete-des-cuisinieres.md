@@ -18,6 +18,8 @@ sources:
   - {title: "RCI Guadeloupe: Fête des Cuisinières en Guadeloupe, l'incontournable événement culturel gratuit de l'été (2026)", url: "https://rci.fm/guadeloupe/infos/Informations-pratiques/Fete-des-Cuisinieres-en-Guadeloupe-lincontournable-evenement-culturel"}
   - {title: "RCI Guadeloupe: 110e anniversaire de la fête des Cuisinières (2026)", url: "https://rci.fm/guadeloupe/infos/Culture/110e-anniversaire-de-la-fete-des-Cuisinieres-les-jeunes-reprennent-le-flambeau"}
   - {title: "Le Routard: Fête des cuisinières à Pointe-à-Pitre", url: "https://www.routard.com/fr/agenda/a/fete-des-cuisinieres-a-pointe-a-pitre"}
+media:
+  - {type: "image", file: "fete-des-cuisinieres.jpg", caption: "The Festival of the Cooks in Pointe-à-Pitre, Guadeloupe; source photograph dated 8 September 2015.", credit: "Mum / Mobeye", license: "CC BY 4.0", url: "https://commons.wikimedia.org/wiki/File:Mobeye-%C3%89t%C3%A9DesVilles-Guadeloupe-828.jpg"}
 ---
 The Fête des Cuisinières, the Festival of the Cooks, takes place every August in Pointe-à-Pitre, the main city of Guadeloupe, a French island in the Caribbean. It goes back to 1916, when the island's women cooks founded a mutual society: its members paid in so that each of them could be given a decent funeral. Their association has organised the festival ever since.
 

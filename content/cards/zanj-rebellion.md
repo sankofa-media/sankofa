@@ -20,6 +20,8 @@ sources:
   - {title: "BlackPast, Omar H. Ali: Islam and the African Diaspora in the Indian Ocean World", url: "https://blackpast.org/global-african-history/islam-and-african-diaspora-indian-ocean-world/"}
   - {title: "Arab Reform Initiative, Saad Salloum: In the Footsteps of Martin Luther King (2020)", url: "https://www.arab-reform.net/publication/in-the-footsteps-of-martin-luther-king-will-we-witness-a-revolution-against-racial-discrimination-in-the-middle-east/"}
   - {title: "NPR, Corey Flintoff: Black Iraqis In Basra Face Racism (2008)", url: "https://www.npr.org/2008/12/03/96977550/black-iraqis-in-basra-face-racism"}
+media:
+  - {type: "image", file: "zanj-rebellion.jpg", caption: "Geographical context for the Zanj rebellion: marshes in southern Iraq, photographed 3 April 2015.", credit: "Almendilawi", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Marshes_in_southern_Iraq.jpeg"}
 ---
 In the ninth century Basra, in southern Iraq, was a city of the Abbasid caliphate. Around it lay salt marshes that landowners wanted turned into farmland, and the work was done by thousands of enslaved Africans, known as the Zanj, who dug away the salty crust of the soil.
 

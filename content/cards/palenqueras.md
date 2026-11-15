@@ -23,6 +23,8 @@ sources:
   - {title: "El Heraldo: Palenqueras se 'toman' con sus poncheras el Centro Histórico (2019)", url: "https://www.elheraldo.co/bolivar/2019/03/27/palenqueras-se-toman-con-sus-poncheras-el-centro-historico-612556/"}
   - {title: "Adriaan Alsema, Colombia Reports: Cartagena's iconic fruit sellers furious after police insist on clamping down on street vendors (2019)", url: "https://colombiareports.com/cartagenas-iconic-fruit-sellers-furious-after-police-insists-on-clamping-down-on-street-vendors/"}
   - {title: "El Universal: Alcaldía de Cartagena logra acuerdos con palenqueras (2019)", url: "https://www.eluniversal.com.co/cartagena/2019/03/26/alcaldia-de-cartagena-logra-acuerdos-con-palenqueras/"}
+media:
+  - {type: "image", file: "palenqueras.jpg", caption: "Palenqueras in Plaza de Bolívar, Cartagena de Indias, Colombia; 2 November 2019.", credit: "Mariordo (Mario Roberto Durán Ortiz)", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Palenqueras_Catedral_Cartagena_CTG_11_2019_2067.jpg"}
 ---
 [[san-basilio-de-palenque|San Basilio de Palenque]], in the hills south-east of Cartagena de Indias, began as a refuge built by people who escaped slavery. For generations its women have come to the walled old city of Cartagena to sell: fruit and coconut sweets in a wide basin balanced on the head, colourful dresses, and a loud cry announcing what they carry.
 

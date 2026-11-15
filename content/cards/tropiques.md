@@ -19,6 +19,8 @@ sources:
   - {title: "Paul-Louis Biondi, Tropiques, in Surrealism at One Hundred, Princeton University Library", url: "https://dpul.princeton.edu/surrealism-at-one-hundred/feature/tropiques"}
   - {title: "Anny Dominique Curtius, Tropiques: Le dialogue créole écopoétique d'Aimé et Suzanne Césaire, Présence Africaine 189 (2014), pp. 141–151", url: "https://lllc.uiowa.edu/sites/lllc.uiowa.edu/files/2025-06/Tropiques%20Le%20dialogue%20e%CC%81copoe%CC%81tique%20d%27Aime%CC%81%20et%20Suzanne%20Ce%CC%81saire.pdf"}
   - {title: "Katerina Gonzalez Seligmann, Tropiques, Revolutionary Papers", url: "https://revolutionarypapers.org/?p=305"}
+media:
+  - {type: "image", file: "tropiques.jpg", caption: "Context for Tropiques: its co-founder Aimé Césaire, photographed 19 November 2003; source portrait crop.", credit: "Jean Baptiste Devaux", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Aime_Cesaire_2003_(cropped).jpg"}
 ---
 Tropiques was a cultural review published in Fort-de-France, Martinique, from 1941 to 1945. When it began, the island was ruled for Vichy France by Admiral Georges Robert, under heavy censorship. Its founders included Aimé Césaire, his wife Suzanne Césaire and René Ménil, young Martinican intellectuals who wanted their island to have its own literature and thought.
 

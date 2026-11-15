@@ -18,6 +18,8 @@ sources:
   - {title: "Cape Argus: Earliest human drawing found on Western Cape's doorstep (13 September 2018)", url: "https://capeargus.co.za/news/2018-09-13-earliest-human-drawing-found-on-western-capes-doorstep"}
   - {title: "Associated Press, Malcolm Ritter: 'Hashtag' called world's oldest known drawing (via The Columbian, 20 September 2018)", url: "https://columbian.com/news/2018/sep/20/hashtag-called-worlds-oldest-known-drawing"}
   - {title: "NPR (via KPBS): Researchers discover ancient hashtag (12 September 2018)", url: "https://www.kpbs.org/news/2018/sep/12/researchers-discover-ancient-hashtag"}
+media:
+  - {type: "image", file: "blombos-cave.jpg", caption: "An engraved ochre stone from Blombos Cave, with a tracing of the marks dated to about 70,000 years ago; photograph, 2013.", credit: "Chris S. Henshilwood", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Blombo.jpg"}
 ---
 Blombos Cave lies on the southern coast of South Africa, about 300 kilometres east of Cape Town. Its layers, left by early Homo sapiens between about 100,000 and 70,000 years ago, have yielded shell beads, new kinds of stone tools and pieces of ochre, an iron-rich red earth, engraved with cross-hatched lines.
 

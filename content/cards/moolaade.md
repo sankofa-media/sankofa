@@ -21,6 +21,8 @@ sources:
   - {title: "Claske Dijkema, Irénées: Moolaadé, an African film about ending excision in a small village (2008)", url: "http://www.irenees.net/bdf_fiche-documentation-579_en.html"}
   - {title: "Rotten Tomatoes: Moolaadé (2004), synopsis", url: "https://www.rottentomatoes.com/m/moolaade"}
   - {title: "Festival de Cannes: Cannes Classics, La Noire de... (Black Girl), a look back at the origins of African film (2015)", url: "https://www.festival-cannes.com/en/2015/cannes-classics-la-noire-deblack-girl-a-look-back-at-the-origins-of-african-film/"}
+media:
+  - {type: "image", file: "moolaade.jpg", caption: "Context for Moolaadé: director Ousmane Sembène visiting Berlin, 18 November 1987.", credit: "Günter Prust", license: "CC BY 3.0", url: "https://commons.wikimedia.org/wiki/File:Ousmane_Semb%C3%A8ne_(1987)_by_Guenter_Prust.jpg"}
 ---
 Moolaadé is a 2004 film written and directed by the Senegalese Ousmane Sembène, maker of [[black-girl-sembene|Black Girl]], about the cutting of girls in a West African village, a ritual the villagers call purification. Its title means protection.
 

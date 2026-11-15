@@ -18,6 +18,8 @@ sources:
   - {title: "University of Nebraska–Lincoln, The Tar Baby and the Tomahawk: The Brownies' Book", url: "https://childlit.unl.edu/topics/edi.brownies.html"}
   - {title: "Jonda McNair and Rudine Sims Bishop, To Be Great, Heroic or Beautiful: The Enduring Legacy of The Brownies' Book, The Horn Book (2018)", url: "https://www.hbook.com/story/great-heroic-beautiful-enduring-legacy-brownies-book"}
   - {title: "Lamia Dzanouni, Hélène Le Dantec-Lowry and Claire Parfait, From One Crisis to the Other, European Journal of American Studies 11-1 (2016)", url: "https://journals.openedition.org/ejas/11432"}
+media:
+  - {type: "image", file: "brownies-book.jpg", caption: "Cover of the first issue of The Brownies' Book, January 1920; Library of Congress.", credit: "Du Bois and Dill Publishers / Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:The_Brownies%27_Book_Volume_01,_Issue_01_cover.jpg"}
 ---
 The Brownies' Book was a monthly magazine for African American children that ran from January 1920 to December 1921. It was announced in [[the-crisis|The Crisis]], the NAACP magazine, in 1919. W. E. B. Du Bois edited it, with Augustus Granville Dill as business manager and Jessie Redmon Fauset as literary editor.
 

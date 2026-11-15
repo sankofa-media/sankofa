@@ -23,6 +23,8 @@ sources:
   - {title: "Address by the Curator, National Museum Ile-Ife, Frobenius Institute exhibition (PDF)", url: "https://frobenius-institut.de/images/stories/Ausstellungen/Nigeria/speech%20adesina.pdf"}
   - {title: "Lost in Space? Reconstructing Frank Willett's excavations at Ita Yemoo, Ile-Ife, Afrique: Archéologie & Arts 17 (2021)", url: "https://journals.openedition.org/aaa/3328"}
   - {title: "James Kline, Leo Frobenius, EBSCO Research Starters (2024)", url: "https://ebsco.com/research-starters/history/leo-frobenius"}
+media:
+  - {type: "image", file: "ife-heads.jpg", caption: "A brass head of an Ooni from Ife, fourteenth or early fifteenth century; British Museum, photographed in 2019.", credit: "Vassil", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:British_Museum_Room_25_Head_of_a_king_Ife_17022019_5147.jpg"}
 ---
 Ile-Ife, in southwestern Nigeria, is for the Yoruba the place where the world and the first humans were made, and the seat of their sacred kingship: its king, the Ooni, traces his line to the god Oduduwa. Between about the 12th and 15th centuries Ife was a rich city-state whose artists made naturalistic sculpture in terracotta, stone and copper alloys.
 

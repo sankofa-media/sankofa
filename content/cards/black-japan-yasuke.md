@@ -19,6 +19,8 @@ sources:
   - {title: "BlackPast, Robert Fikes: Yasuke (ca. 1555-?) (2016)", url: "https://blackpast.org/global-african-history/yasuke-1555/"}
   - {title: "Samurai Museum Berlin: Yasuke, Japan's First African Samurai?", url: "https://samuraimuseum.de/en/?p=52665"}
   - {title: "Encyclopaedia Britannica, Thomas Lockley: Yasuke", url: "https://www.britannica.com/biography/Yasuke"}
+media:
+  - {type: "image", file: "black-japan-yasuke.jpg", caption: "Context: a sumo match in a detail of the Sumo Entertainment Folding Screen, about 1605; this is not an identified portrait of Yasuke.", credit: "Unknown artist; Katsuragi City Museum exhibition catalogue (2007)", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Black_sumo_wrestler_in_17th_century.jpg"}
 ---
 In the late sixteenth century Japan was ending a century of civil war, and the warlord Oda Nobunaga was close to uniting the country. In 1579 the Italian Jesuit Alessandro Valignano landed on an inspection tour, and with him came a tall African man, his bodyguard or servant. His birth name is lost; the Japanese knew him as Yasuke.
 

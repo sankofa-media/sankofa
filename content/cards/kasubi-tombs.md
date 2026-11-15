@@ -21,6 +21,8 @@ sources:
   - {title: "Daily Monitor / AFP: UNESCO removes Uganda tombs from endangered heritage list (September 2023)", url: "https://www.monitor.co.ug/uganda/news/national/unesco-removes-uganda-tombs-from-endangered-heritage-list-4367036"}
   - {title: "The Observer (Kampala), Ashley Aisha Aine: A tour of the refurbished Kasubi tombs (21 December 2024)", url: "https://observer.ug/lifestyle-entertainment/a-tour-of-the-refurbished-kasubi-tombs-ahead-of-their-official-reopening/"}
   - {title: "The Observer (Kampala), Ernest Jjingo: Kasubi tombs to reopen to the public this December (3 September 2023)", url: "https://observer.ug/business/kasubi-tombs-reopen-to-the-public-this-december-after-13-years-of-reconstruction/"}
+media:
+  - {type: "image", file: "kasubi-tombs.jpg", caption: "The Kasubi Tombs in Kampala, Uganda, 2007.", credit: "Not not phil", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Kampala_Kasubi_Tombs.jpg"}
 ---
 Buganda is an old kingdom in what is now Uganda, ruled by kings called kabakas. In 1882 Kabaka Mutesa I built his palace on Kasubi Hill, in what is now Kampala. When he died in 1884 he was buried inside it, breaking with the custom that each king lay in a place of his own. Three successors joined him: Mwanga II, Daudi Chwa II and Mutesa II.
 

@@ -22,6 +22,8 @@ sources:
   - {title: "PBS American Masters: The story behind Billie Holiday's Strange Fruit", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-billie-holidays-strange-fruit/17738"}
   - {title: "Library of Congress blog: The Power of a Poem (2015)", url: "https://blogs.loc.gov/loc/2015/04/the-power-of-a-poem/"}
   - {title: "Biography.com: Billie Holiday and Strange Fruit", url: "https://www.biography.com/news/billie-holiday-strange-fruit"}
+media:
+  - {type: "image", file: "strange-fruit.jpg", caption: "Context for Strange Fruit: Billie Holiday at the Downbeat club, New York City, circa February 1947.", credit: "William P. Gottlieb / Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Billie_Holiday,_Downbeat,_New_York,_N.Y.,_ca._Feb._1947_(William_P._Gottlieb_04251).jpg"}
 ---
 "Strange Fruit" is a song against lynching, the killing of Black Americans by white mobs, and it began as a poem. Its author, Abel Meeropol, was a Jewish high-school teacher from the Bronx who wrote as Lewis Allan. He was haunted by a photograph of the August 1930 lynching of two Black teenagers, Thomas Shipp and Abram Smith, in Marion, Indiana: their bodies hang from a tree above a white crowd. His poem, first called "Bitter Fruit", appeared in 1937 in The New York Teacher, a union magazine, and he set it to music himself.
 

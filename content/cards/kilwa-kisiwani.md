@@ -23,6 +23,8 @@ sources:
   - {title: "Archaeology (Archaeological Institute of America): African Coins Could Rewrite Australia's Past (21 May 2013)", url: "https://archaeology.org/news/2013/05/21/130521-australia-coins-kilwa/"}
   - {title: "Australian Geographic, Karen Young: Ancient coins could redraft Australian history (28 May 2013)", url: "https://australiangeographic.com.au/?p=12992"}
   - {title: "Medievalists.net: African coins found in northern Australia (Indiana University release)", url: "https://www.medievalists.net/?p=41395"}
+media:
+  - {type: "image", file: "kilwa-kisiwani.jpg", caption: "The eighteenth-century Makutani Palace on Kilwa Kisiwani Island, Tanzania, photographed in 2017.", credit: "David Stanley", license: "CC BY 2.0", url: "https://commons.wikimedia.org/wiki/File:Kilwa_Kisiwani_Palace_(33433637294).jpg"}
 ---
 Kilwa Kisiwani is a small island off the coast of southern Tanzania. From around the 10th century a Swahili trading city grew there, and by the 13th and 14th centuries it was one of the great ports of the East African coast, a link in the Indian Ocean trade that ran from the African interior to Arabia, India and beyond. Gold from inland passed through its hands.
 

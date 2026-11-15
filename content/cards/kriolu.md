@@ -18,6 +18,8 @@ sources:
   - {title: "Jacques Leclerc, Cap-Vert, L'aménagement linguistique dans le monde, CEFAN, Université Laval", url: "https://www.axl.cefan.ulaval.ca/afrique/Cap-Vert.htm"}
   - {title: "Britannica: Cabo Verde (archived November 2026)", url: "http://web.archive.org/web/20261101220245/https://www.britannica.com/place/Cabo-Verde"}
   - {title: "UNESCO World Heritage Centre: Cidade Velha, Historic Centre of Ribeira Grande (archived 2026)", url: "http://web.archive.org/web/20261109073934/https://whc.unesco.org/en/list/1310/"}
+media:
+  - {type: "image", file: "kriolu.jpg", caption: "The cover of Eugénio Tavares's Mornas — cantigas crioulas, Luanda edition, 1969.", credit: "Eugénio Tavares; Liga dos Amigos de Cabo Verde; scan by Otimarte", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:0LivroET.jpg"}
 ---
 Kriolu is the creole language of Cape Verde, an archipelago in the Atlantic off the coast of Senegal. It was forged from Portuguese and the languages of West Africa, and it is one of the oldest creole languages still spoken. Almost every Cape Verdean speaks it as a first language, and it varies from island to island. Portuguese remains the only official language, but everyday life is lived in Kriolu.
 

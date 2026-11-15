@@ -18,6 +18,8 @@ sources:
   - {title: "S. Jonathan Bass, Encyclopedia of Alabama: \"Letter from Birmingham Jail\" (2007, updated 2025)", url: "https://encyclopediaofalabama.org/article/letter-from-birmingham-jail/"}
   - {title: "American Heritage 67:1 (Winter 2022): \"I Am in Birmingham Because Injustice is Here\"", url: "https://americanheritage.com/node/133442"}
   - {title: "Leonard Greene, The Dominion Post (syndicated from the New York Daily News): MLK's 'Letter From Birmingham Jail' resonates 60 years later (2023)", url: "https://www.dominionpost.com/?p=286645"}
+media:
+  - {type: "image", file: "letter-from-birmingham-jail.jpg", caption: "A marker at the site where Martin Luther King Jr. was jailed in Birmingham; photograph, 2024.", credit: "BakedintheHole", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:MLK_JAIL_MARKER.jpg"}
 ---
 In April 1963 local activists in Birmingham, Alabama, and [[martin-luther-king|Martin Luther King]]'s Southern Christian Leadership Conference began a campaign of sit-ins, pickets and marches against the city's segregation laws. A court injunction banned the protests. On Good Friday, 12 April, King marched anyway and was arrested.
 

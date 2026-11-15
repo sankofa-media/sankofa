@@ -22,6 +22,8 @@ sources:
   - {title: "The Free Womb Project: Portugal, 1773", url: "https://thefreewombproject.com/portugal-2/"}
   - {title: "The Free Womb Project: Introductory essay", url: "https://thefreewombproject.com/introductory-essay/"}
   - {title: "Yesenia Barragan, Uncovering Lisbon's Forgotten History of Slavery, Black Perspectives (AAIHS, 2017)", url: "https://www.aaihs.org/uncovering-lisbons-forgotten-history-of-slavery/"}
+media:
+  - {type: "image", file: "pombal-1761.jpg", caption: "Context for the 1761 decree: the Marquis of Pombal in a detail of the 1766 portrait by Louis-Michel van Loo and Joseph Vernet; Museu de Lisboa.", credit: "Louis-Michel van Loo and Joseph Vernet / Museu de Lisboa", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Marques_de_Pombal.jpg"}
 ---
 For three centuries Portugal brought enslaved Africans into the kingdom itself, first through [[lagos-1444|Lagos]] and then through Lisbon. On 19 September 1761 a royal alvará of King José I, issued under his minister Sebastião José de Carvalho e Melo, the future Marquis of Pombal, forbade ships from Africa, America and Asia to land any Black man or woman in Portugal. Anyone brought in from six months after its publication was to be "freed and manumitted" without any further letter or document.
 

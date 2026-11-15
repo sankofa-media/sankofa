@@ -22,6 +22,8 @@ sources:
   - {title: "Kim Bellware, The Washington Post (via The Spokesman-Review): The unlikely origins of Rapper's Delight, hip-hop's first mainstream hit (2023)", url: "https://spokesman.com/stories/2023/aug/08/the-unlikely-origins-of-rappers-delight-hip-hops-f"}
   - {title: "Eric Reese, Library of Congress National Recording Registry: Rapper's Delight (essay)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RappersDelight.pdf"}
   - {title: "Bo Emerson, The Atlanta Journal-Constitution: Rapper's Delight, 1979 song introduced rap to a mass audience (2020)", url: "https://www.ajc.com/entertainment/music/rapper-delight-1979-song-introduced-rap-mass-audience/53RFZotbExCc2GDI1w6VpK"}
+media:
+  - {type: "image", file: "rappers-delight.jpg", caption: "Context for Rapper's Delight: the Sugarhill Gang at Gateway Celebrity Fight Night in Phoenix, Arizona; 1 April 2023.", credit: "Gage Skidmore from Surprise, AZ, United States of America", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:The_Sugarhill_Gang_(52790148289).jpg"}
 ---
 "Rapper's Delight" is a 1979 single by the Sugarhill Gang, the record that carried [[hip-hop]] from the parties and street corners of New York onto the American pop charts. It was the idea of Sylvia Robinson, a record-business veteran who, with her husband Joe, faced bankruptcy as their label All Platinum collapsed. They reorganised it as Sugar Hill Records, based in Englewood, New Jersey, and named after a Harlem neighbourhood.
 

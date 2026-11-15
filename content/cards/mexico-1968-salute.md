@@ -21,6 +21,8 @@ sources:
   - {title: "Encyclopaedia Britannica: John Carlos", url: "https://www.britannica.com/biography/John-Carlos"}
   - {title: "Australian Olympic Committee: Peter Norman", url: "https://olympics.com.au/olympians/peter-norman/"}
   - {title: "Athletics Australia Hall of Fame: Peter Norman (Paul Jenes)", url: "https://www.athletics.com.au/hall-of-fame/peter-norman/"}
+media:
+  - {type: "image", file: "mexico-1968-salute.jpg", caption: "Context for the 1968 Olympic salute: Tommie Smith at a marathon expo, photographed 1 December 2007.", credit: "Chamber of Fear", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Tommie_Smith.jpg"}
 ---
 At the Mexico City Olympics in October 1968, Tommie Smith and John Carlos, Black sprinters from San José State in California, won gold and bronze in the 200 metres. Smith ran 19.83 seconds, a world record and the first 200 metres under 20 seconds. Between them, in silver, was the Australian Peter Norman.
 

@@ -37,6 +37,8 @@ sources:
   - {title: "Rebecca J. Scott, Abolição gradual e a dinâmica da emancipação dos escravos em Cuba, 1868-86, Estudos Econômicos (USP)", url: "https://revistas.usp.br/ee/article/download/157405/152765/346616"}
   - {title: "Câmara dos Deputados: Confira a íntegra da Lei Áurea", url: "https://www.camara.leg.br/noticias/64000-confira-a-integra-da-lei-aurea/"}
   - {title: "Hannah Foster, Luis Gama (1830–1882), BlackPast.org (2014)", url: "https://www.blackpast.org/global-african-history/gama-luis-1830-1882/"}
+media:
+  - {type: "image", file: "abolition-in-europe.jpg", caption: "Staffordshire earthenware figure commemorating British abolition, 1833–1834; photographed at the Victoria and Albert Museum in February 2010.", credit: "David Jackson", license: "CC BY-SA 2.0 uk", url: "https://commons.wikimedia.org/wiki/File:BLW_Freed_Slave,_marking_the_abolition_of_Slavery_in_the_British_Empire.jpg"}
 ---
 Europe's empires did not end slavery at a stroke. They did it one by one over almost a century, usually in two steps, first the trade and then slavery itself, and usually with the owners' losses in mind.
 

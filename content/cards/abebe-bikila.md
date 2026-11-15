@@ -21,6 +21,8 @@ sources:
   - {title: "World Athletics, Heritage: Abebe Bikila's 1960 Olympic marathon victory (Steve Landells)", url: "https://worldathletics.org/news/feature/abebe-bikila-1960-olympic-marathon-victory"}
   - {title: "Encyclopaedia Britannica: Abebe Bikila", url: "https://www.britannica.com/biography/Abebe-Bikila"}
   - {title: "International Olympic Committee, Olympics.com: Abebe Bikila", url: "https://www.olympics.com/en/athletes/abebe-bikila"}
+media:
+  - {type: "image", file: "abebe-bikila.jpg", caption: "Abebe Bikila in Amsterdam, 22 September 1968.", credit: "Jack de Nijs for Anefo", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Abebe_Bikila_1968c.jpg"}
 ---
 Abebe Bikila was born on 7 August 1932 in the village of Jato in Ethiopia, on the very day the Los Angeles Olympic marathon was run. As a young man he joined Emperor Haile Selassie's Imperial Bodyguard, and the Swedish coach Onni Niskanen, made him a marathon runner. Hardly anyone outside Ethiopia knew his name when he lined up in Rome in 1960, without shoes.
 

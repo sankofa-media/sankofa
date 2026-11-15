@@ -21,6 +21,8 @@ sources:
   - {title: "Indiana Historical Society, Famous Hoosiers: Madam C. J. Walker", url: "https://indianahistory.org/education/educator-resources/famous-hoosiers/madam-c-j-walker/"}
   - {title: "National Women's History Museum, Debra Michals: Madam C. J. Walker (2015)", url: "https://www.womenshistory.org/education-resources/biographies/madam-cj-walker"}
   - {title: "Encyclopaedia Britannica, A'Lelia Bundles: Madam C. J. Walker", url: "https://www.britannica.com/money/Madam-C-J-Walker"}
+media:
+  - {type: "image", file: "madam-cj-walker.jpg", caption: "Madam C. J. Walker, photographed by Addison N. Scurlock, about 1914.", credit: "Addison N. Scurlock; restoration by Adam Cuerden", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Madam_C._J._Walker_by_Addison_N._Scurlock.jpg"}
 ---
 Around 1900 scalp disease, poor diet and poor hygiene left many Black American women with brittle hair and hair loss. Sarah Breedlove was born on 23 December 1867 near Delta, Louisiana, on the cotton plantation where her parents had been enslaved. Orphaned at seven and married at fourteen, she was widowed in 1887 with a small daughter, Lelia, and moved to St Louis, where her brothers were barbers and she worked as a laundress.
 

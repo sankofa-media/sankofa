@@ -21,6 +21,8 @@ sources:
   - {title: "Rijksoverheid: Speech of State Secretary Alexandra van Huffelen at the rehabilitation of Tula (5 October 2023)", url: "https://www.rijksoverheid.nl/documenten/toespraken/2023/10/05/speech-staatssecretaris-alexandra-van-huffelen-ter-gelegenheid-van-de-rehabilitatie-van-tula"}
   - {title: "DutchNews.nl: Dutch state rehabilitates leader of 1795 revolt against slavery (3 October 2023)", url: "https://www.dutchnews.nl/2023/10/dutch-state-rehabilitates-leader-of-1795-revolt-against-slavery"}
   - {title: "Curaçao History: 1795 Tula", url: "https://www.curacaohistory.com/detail/1795-tula"}
+media:
+  - {type: "image", file: "tula.jpg", caption: "Father Jacobus Schinck's account of his conversation with Tula during the uprising, dated 7 September 1795; National Archives of the Netherlands.", credit: "Jacobus Schinck / Nationaal Archief", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:NL-HaNA_1.05.12.01_105_0001_11.2a.jpg"}
 ---
 In 1795, French revolutionary armies helped turn the Netherlands into the Batavian Republic, and France had already abolished slavery in its colonies. News of the French Revolution and of the uprising in Saint-Domingue reached the Dutch island of Curaçao. Tula, enslaved on the Knip plantation, drew the obvious conclusion.
 

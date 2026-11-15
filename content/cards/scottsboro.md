@@ -20,6 +20,8 @@ sources:
   - {title: "Encyclopedia of Alabama: Scottsboro Trials", url: "https://encyclopediaofalabama.org/article/scottsboro-trials/"}
   - {title: "PBS American Experience, Scottsboro: An American Tragedy: timeline", url: "https://www.pbs.org/wgbh/americanexperience/features/scottsboronine-black-youth-arrested-for-assault/"}
   - {title: "BBC News: Alabama posthumously pardons three Scottsboro Boys (21 November 2013)", url: "https://www.bbc.co.uk/news/world-us-canada-25046096"}
+media:
+  - {type: "image", file: "scottsboro.jpg", caption: "The Scottsboro Boys Museum in Scottsboro, Alabama; photograph, 28 March 2010.", credit: "Carol M. Highsmith / Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Scottsboro_boys_museum_in_Scottsboro,_Alabama_LCCN2010638301.tif"}
 ---
 In the Great Depression young Americans with no money rode freight trains in search of work. On 25 March 1931 a fight broke out between Black and white youths on a freight crossing Jackson County, Alabama. The train was stopped at Paint Rock, and nine Black youths, the youngest 13, were arrested. Two white women found aboard, Victoria Price and Ruby Bates, fearing charges of their own, accused them of rape.
 

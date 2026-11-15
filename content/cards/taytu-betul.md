@@ -20,6 +20,8 @@ sources:
   - {title: "Fentahun Tiruneh, Taytu Betul: The Cunning Empress of Ethiopia, Library of Congress, 4 Corners of the World (9 March 2022)", url: "https://blogs.loc.gov/international-collections/2022/03/taytu-betul-the-cunning-empress-of-ethiopia/"}
   - {title: "DW African Roots: Taytu Betul, Ethiopia's strategic empress (10 June 2021)", url: "https://www.dw.com/en/taytu-betul-ethiopias-strategic-empress-african-roots/a-57010781"}
   - {title: "Amber N. Wiley, The New Flower: Addis Ababa and the Project of African Modernity, Society of Architectural Historians (2014)", url: "https://www.sah.org/publications/sah-blog/sah-blog/2014/12/04/the-new-flower-addis-ababa-and-the-project-of-african-modernity"}
+media:
+  - {type: "image", file: "taytu-betul.jpg", caption: "Empress Taytu Betul in a portrait published in 1900; Bibliothèque nationale de France.", credit: "Étienne-Gabriel Bocourt / Bibliothèque nationale de France", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Taytu_Betul_of_Ethiopia.png"}
 ---
 Taytu Betul was born into an aristocratic Ethiopian family in the middle of the 19th century. She was church-educated and could read and write. After four earlier marriages she married Menelik, then king of Shewa, and when he became emperor in 1889 she became empress beside him. Together they enlarged the empire, through alliances and also by conquest of lands to the south.
 

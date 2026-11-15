@@ -20,6 +20,8 @@ sources:
   - {title: "Britannica: Black Seminoles (archived August 2026)", url: "http://web.archive.org/web/20260805040057/https://www.britannica.com/topic/Black-Seminoles"}
   - {title: "Kevin Mulroy, John Horse (ca. 1812–1882), BlackPast.org", url: "https://www.blackpast.org/?p=62190"}
   - {title: "Texas Standard: The cross-border cultural heritage of Black Seminoles can be found in cuisine (2023)", url: "https://texasstandard.org/stories/black-seminoles-texas-mexico-mascogos-cuisine-sofkee-tacos-texas/"}
+media:
+  - {type: "image", file: "black-seminoles.jpg", caption: "Abraham, a Black Seminole leader, in an engraving by N. Orr published in 1848.", credit: "N. Orr; John T. Sprague, The Origin, Progress, and Conclusion of the Florida War (1848)", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Abraham-black-sem.jpg"}
 ---
 In Florida, free Black people and people escaping slavery found refuge among the Seminoles, a Native nation, and joined forces with them. They became known as Black Seminoles, or Seminole Maroons.
 

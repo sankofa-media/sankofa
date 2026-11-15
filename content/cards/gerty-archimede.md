@@ -22,6 +22,8 @@ sources:
   - {title: "RCI Guadeloupe: Gerty Archimède, emblème de la femme guadeloupéenne (2019)", url: "https://rci.fm/guadeloupe/infos/Culture/Gerty-Archimede-embleme-de-la-femme-guadeloupeenne"}
   - {title: "Le Monde du Droit: Gerty Archimède, une voix ultramarine pour l'égalité (2026)", url: "https://www.lemondedudroit.fr/on-en-parle/105858-gerty-archimede-une-voix-ultramarine-pour-legalite.html"}
   - {title: "Black Women Radicals: Gerty Archimède", url: "https://blackwomenradicals.com/database-source/gerty-archimede"}
+media:
+  - {type: "image", file: "gerty-archimede.jpg", caption: "Context for Gerty Archimède's remembrance: Rue Gerty-Archimède in Paris, 26 May 2021.", credit: "Chabe01", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Rue_Gerty_Archim%C3%A8de_-_Paris_XII_(FR75)_-_2021-05-26_-_1.jpg"}
 ---
 Guadeloupe was still a French colony when Gerty Archimède, born in Morne-à-l'Eau in 1909, took up the law. In 1939, on the eve of the Second World War, she became the first woman admitted to the bar in Guadeloupe, the first woman lawyer in the French Antilles and, by several accounts, the first Black woman lawyer in France. She soon made her name in criminal defence.
 

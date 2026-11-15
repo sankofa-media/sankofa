@@ -19,6 +19,8 @@ sources:
   - {title: "Apsara Media (Amy Catlin-Jairazbhoy): Sidi African Indians, Sidi Goma: Black Sufis of Gujarat", url: "https://apsara-media.com/sidimaterials.html"}
   - {title: "Joydip Mitra, Newslaundry: Finding George Floyd in Gujarat, a day in the life of the Siddi community (2021)", url: "https://www.newslaundry.com/2021/10/30/finding-george-floyd-in-gujarat-a-day-in-the-life-of-the-siddi-community"}
   - {title: "Neeraj Gupta, The Quint: In photos, lost legacy of Gujarat's African-origin Siddi tribe (2017)", url: "https://www.thequint.com/photos/a-community-of-african-origin-is-living-deep-inside-the-gir-forest-in-gujarat"}
+media:
+  - {type: "image", file: "siddi.jpg", caption: "Context for the Siddi: the Sidi Saiyyed Mosque in Ahmedabad, India; 28 November 2013.", credit: "Bernard Gagnon", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Sidi_Saiyyed_Mosque,_Ahmedabad.jpg"}
 ---
 The Sidis, or Siddis, are Indians of African ancestry. Their forebears crossed the Indian Ocean from eastern Africa to the west coast of India over many centuries, many of them as captives of the slave trade. In Gujarat, Mumbai and other parts of western India their descendants built communities of their own.
 

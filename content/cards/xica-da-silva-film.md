@@ -26,6 +26,8 @@ sources:
   - {title: "Margarida Maria Adamatti, Crítica de cinema e patrulha ideológica: o caso Xica da Silva de Carlos Diegues, Revista Famecos 23:3 (2016)", url: "https://www.redalyc.org/pdf/4955/495553928008.pdf"}
   - {title: "Francisco das C. (ANPUH): Reações na (à) cultura visual, racialização e humilhação no Brasil dos anos 1970", url: "https://anpuh.org.br/uploads/anais-simposios/pdf/2019-01/1548856594_1d4c00fc67c9734ba04006b5dc07ab0b.pdf"}
   - {title: "Projeto História (PUC-SP): article on Xica da Silva in film and television", url: "https://revistas.pucsp.br/index.php/revph/article/download/66066/45613/222091"}
+media:
+  - {type: "image", file: "xica-da-silva-film.jpg", caption: "Context for Xica da Silva: Cacá Diegues with Maurice Carlos Capovilla and Ronaldo Correia de Brito at the Order of Cultural Merit ceremony, São Paulo; 5 November 2013.", credit: "Elisabete Alves / Ministério da Cultura, Brazil", license: "CC BY 2.0", url: "https://commons.wikimedia.org/wiki/File:Maurice_Carlos_Capovilla,_Ronaldo_Correia_de_Brito_e_Cac%C3%A1_Diegues_-_Ordem_do_M%C3%A9rito_Cultural_2013_(10706137173).jpg"}
 ---
 In the eighteenth century the diamond contractor João Fernandes de Oliveira held the monopoly on diamonds around Tejuco, today's Diamantina, in Minas Gerais. [[chica-da-silva|Chica da Silva]], born enslaved, was freed by him and lived with him as his partner, and her story grew into a Brazilian legend.
 

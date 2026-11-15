@@ -22,6 +22,8 @@ sources:
   - {title: "Remembering Olive Collective: Morris, Olive Elaine 1952-1979 (republished by libcom.org, 2017)", url: "https://libcom.org/article/morris-olive-elaine-1952-1979"}
   - {title: "University of Bristol, Department of History: Remembering Olive Morris and the Black Women's Movement (2021)", url: "https://bristol.ac.uk/history/public-engagement/blackhistory/snapshots2021/morris"}
   - {title: "Lambeth Council: Brixton 'folk hero' Olive Morris commemorated by Google (2020)", url: "https://love.lambeth.gov.uk/brixton-folk-hero-olive-morris-commemorated-by-google"}
+media:
+  - {type: "image", file: "olive-morris.jpg", caption: "Context for Olive Morris: the house bearing her commemorative plaque at 121 Railton Road, Brixton, London; 12 November 2024.", credit: "Spudgun67", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:OLIVE_MORRIS_plaque_location_-_121_Railton_Road_Brixton_London_SE24_0LR.jpg"}
 ---
 In late-1960s Brixton, in south London, Black residents lived with years of police harassment and a housing crisis that hit them hardest. Olive Morris was born in Harewood, Jamaica, in 1952 and came to south London at nine to join her parents. In November 1969, at seventeen, she stepped in when police in Brixton arrested a Nigerian diplomat. Officers beat her and racially abused her; she was convicted and given a suspended prison sentence. She joined the youth section of the British Black Panther movement.
 

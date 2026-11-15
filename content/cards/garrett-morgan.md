@@ -25,6 +25,8 @@ sources:
   - {title: "Carnegie Hero Fund Commission: Shedding light on the complicated case of Black inventor Garrett Morgan (Jewels Phraner, 2021)", url: "https://carnegiehero.org/behind-the-scenes-shedding-light-on-the-complicated-case-of-black-inventor-garrett-morgan"}
   - {title: "Google Patents: US1475024A, Traffic signal", url: "https://patents.google.com/patent/US1475024A/en"}
   - {title: "Google Patents: US1113675A, Breathing device", url: "https://patents.google.com/patent/US1113675A/en"}
+media:
+  - {type: "image", file: "garrett-morgan.jpg", caption: "Context for Garrett Morgan: the vacant site of his former house on Harlem Avenue, Cleveland, Ohio; 15 December 2014.", credit: "Nyttend", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Garrett_Morgan_House_site.jpg"}
 ---
 Garrett Morgan was born in Paris, Kentucky, in 1877 to parents who had been enslaved. At fourteen he left the family farm for Cincinnati and paid a tutor out of his wages; in 1895 he moved to Cleveland, where he repaired sewing machines, opened a clothing business and sold a hair-straightening cream he had stumbled on while treating sewing needles. Moved, it is said, by the Triangle shirtwaist fire of 1911, he designed a hood whose tube drew cleaner air from near the floor, and patented it in 1914. When fire chiefs balked at buying from a Black inventor, he hired white actors to demonstrate it.
 

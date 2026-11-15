@@ -3,12 +3,11 @@ id: tamayo-mendez
 kind: person
 title: Arnaldo Tamayo Méndez
 wow: "The first person of African descent in space was not American: an Afro-Cuban fighter pilot who had shined shoes as an orphaned boy flew a Soviet Soyuz to the Salyut 6 station in September 1980."
-years: [1942]
+years: [1980]
 places:
   - {name: "Star City, near Moscow", lat: 55.8780, lon: 38.1080}
   - {name: "Guantánamo, Cuba", lat: 20.1444, lon: -75.2092}
 zoom: 4
-moment: {year: 1980}
 era: v7
 books: [heirs]
 edition: m
@@ -22,6 +21,8 @@ sources:
   - {title: "EcuRed: Arnaldo Tamayo Méndez", url: "https://www.ecured.cu/Arnaldo_Tamayo_M%C3%A9ndez"}
   - {title: "Spacefacts: Arnaldo Tamayo Méndez, cosmonaut biography", url: "https://www.spacefacts.de/bios/international/english/tamayo-mendez_arnaldo.htm"}
   - {title: "Inverse: How a Cuban Air Force pilot became the first Black man in space (2021)", url: "https://www.inverse.com/science/arnaldo-tamayo-mendez-space-flight-anniversary"}
+media:
+  - {type: "image", file: "tamayo-mendez.jpg", caption: "Arnaldo Tamayo Méndez at an autograph session in Berlin with Sigmund Jähn, 28 July 2018.", credit: "Escla", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Arnaldo_Tamayo_Berlin_2018.jpg"}
 ---
 Arnaldo Tamayo Méndez was born in Guantánamo, in eastern Cuba, in 1942. Orphaned as a small child, he was adopted at the age of one and grew up poor; as a boy he worked as a shoeshine. After the revolution of 1959 he joined the Cuban air force and became a fighter pilot.
 

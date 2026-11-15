@@ -22,6 +22,8 @@ sources:
   - {title: "Stewart Burns, Encyclopedia of Alabama: Montgomery Bus Boycott", url: "https://encyclopediaofalabama.org/article/montgomery-bus-boycott/"}
   - {title: "NobelPrize.org: Martin Luther King Jr. – Biographical", url: "https://www.nobelprize.org/prizes/peace/1964/king/biographical/"}
   - {title: "National Park Service: Birth Home, Martin Luther King, Jr. National Historical Park", url: "https://www.nps.gov/malu/planyourvisit/birth-home.htm"}
+media:
+  - {type: "image", file: "montgomery-bus-boycott.jpg", caption: "Commemoration of the Montgomery bus boycott: Representative Terri Sewell speaks at its sixtieth anniversary event, 4 December 2015.", credit: "Office of Representative Terri Sewell / U.S. Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Terri_Sewell_speaks_at_an_event_for_the_60th_anniversary_of_the_Montgomery_Bus_Boycott.jpg"}
 ---
 In 1955 the city buses of Montgomery, Alabama, were segregated by law, and Black passengers could be ordered to give up their seats to white riders. The Women's Political Council, Black professional women led by the college teacher Jo Ann Robinson, had warned the mayor in 1954 that a boycott might come. Earlier in 1955 police arrested fifteen-year-old Claudette Colvin and eighteen-year-old Mary Louise Smith for keeping their seats. On 1 December Rosa Parks refused too and was arrested.
 

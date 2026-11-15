@@ -26,6 +26,8 @@ sources:
   - {title: "Britannica: Florence Mills", url: "https://www.britannica.com/biography/Florence-Mills"}
   - {title: "Zakiya Adair, BlackPast: Florence Mills (1896-1927)", url: "https://www.blackpast.org/african-american-history/mills-florence-1896-1927/"}
   - {title: "Britannica: Josephine Baker", url: "https://www.britannica.com/biography/Josephine-Baker"}
+media:
+  - {type: "image", file: "shuffle-along.jpg", caption: "Sheet-music cover for Love Will Find a Way from Shuffle Along, 1921.", credit: "Unknown cover artist; music by Eubie Blake, lyrics by Noble Sissle", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Shuffle_Along_-_Love_Will_Find_a_Way.jpg"}
 ---
 Shuffle Along was a musical comedy written, composed and performed by Black artists, and it opened in New York on 23 May 1921, at the 63rd Street Music Hall. The comedians Flournoy Miller and Aubrey Lyles wrote the book, a farce about two crooked candidates for mayor of "Jimtown"; Eubie Blake wrote the music and Noble Sissle the lyrics. No show wholly by Black artists had been a success on Broadway for about a decade.
 

@@ -20,6 +20,8 @@ sources:
   - {title: "Zarina Patel, Mekatilili: local heroine, translated by Neil Carrier (Open University, Ferguson Centre for African and Asian Studies)", url: "https://university.open.ac.uk/arts/research/ferguson-centre/node/254"}
   - {title: "University of California Press: Cynthia Brantley, The Giriama and Colonial Resistance in Kenya, 1800-1920 (book description)", url: "https://www.ucpress.edu/books/the-giriama-and-colonial-resistance-in-kenya-1800-1920/pdf"}
   - {title: "Lauren Brown, Mekatilili wa Menza and the Giriama War, History Matters, University of Sheffield (2 March 2021)", url: "https://historymatters.sites.sheffield.ac.uk/blog-archive/2021/mekatilili-wa-menza-and-the-giriama-war"}
+media:
+  - {type: "image", file: "mekatilili.jpg", caption: "Context: participants in the Mekatilili wa Menza Cultural Festival at Shakahola, Kilifi County, 2026.", credit: "Mmaua1", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:A_section_of_participants_of_Mekatilili_wa_Menza_Cultural_festival_at_Shakahola,_Kilifi_County.jpg"}
 ---
 The Giriama live in the hinterland of Kenya's coast, where they farmed and traded. Early in the 20th century, under British rule, the colonial authorities wanted them as labour for the plantations Europeans were developing along the coast, and demanded hut tax.
 

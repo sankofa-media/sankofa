@@ -28,6 +28,8 @@ sources:
   - {title: "2 Kings 19:9, King James Version (Bible Gateway)", url: "https://www.biblegateway.com/passage/?search=2+Kings+19%3A9&version=KJV"}
   - {title: "Lipscomb University Lanier Center for Archaeology: Nuri Necropolis", url: "https://archaeology.lipscomb.edu/excavations/nuri-archaeological-expedition/nuri-necropolis"}
   - {title: "James K. Hoffmeier, Judah's African Ally: Taharqa and the Kingdom of Cush, Biblical Archaeology Review (Summer 2025)", url: "https://library.biblicalarchaeology.org/article/judahs-african-ally-taharqa-and-the-kingdom-of-cush/"}
+media:
+  - {type: "image", file: "taharqa.jpg", caption: "Sculpted portrait of Taharqa in the Kerma Museum, Sudan; photograph dated 14 June 2020.", credit: "Matthias Gehricke", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Taharqa_portrait,_Kerma_Museum.jpg"}
 ---
 In the 8th century BC the kings of Kush, a Nubian kingdom on the Middle Nile in today's Sudan, turned the tables on Egypt and ruled it as its 25th Dynasty. Taharqa reigned from 690 to 664 BC, and the Bible remembers him as "Tirhakah king of Ethiopia".
 

@@ -20,6 +20,8 @@ sources:
   - {title: "UNESCO Publishing: The Women Soldiers of Dahomey", url: "https://shop.unesco.org/en/products/the-women-soldiers-of-dahomey"}
   - {title: "NPR via MPR News (2018): Barracoon", url: "https://www.mprnews.org/story/2018/05/08/npr-books-barracoon"}
   - {title: "Encyclopedia of Alabama: Cudjo Lewis", url: "https://encyclopediaofalabama.org/?p=15143"}
+media:
+  - {type: "image", file: "agojie.jpg", caption: "Illustration of the Dahomey Amazons in The History of Dahomey, 1793.", credit: "Archibald Dalziel, The History of Dahomey (1793)", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Dahomey_Amazons_1793.png"}
 ---
 Dahomey, a kingdom in what is now Benin ruled from Abomey, was a regional power in the eighteenth and nineteenth centuries. Its army included an elite corps of women soldiers, known in the Fon language by several names, among them Agojie and Mino. Europeans who met them compared them to the Amazons of Greek myth, and that colonial label stuck.
 

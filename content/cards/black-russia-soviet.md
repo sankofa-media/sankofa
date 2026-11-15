@@ -21,6 +21,8 @@ sources:
   - {title: "Constantin Katsakioris, Des cadres pour une Afrique socialiste: l'Université Patrice Lumumba et la formation des étudiants africains (1960-1991), Revue d'Histoire Contemporaine de l'Afrique (2021)", url: "https://oap.unige.ch/journals/rhca/article/view/variakatsakioris"}
   - {title: "RUDN University: History", url: "https://www.rudn.ru/about/history"}
   - {title: "Constantin Katsakioris, Schools and Professors Abroad, Prague Papers on the History of International Relations 1-2/2021", url: "https://praguepapers.ff.cuni.cz/wp-content/uploads/sites/16/2022/12/Constantin_Katsakioris_19-31.pdf"}
+media:
+  - {type: "image", file: "black-russia-soviet.jpg", caption: "Context for Black students in the Soviet Union: the Peoples' Friendship University in Moscow, photographed 16 May 2007.", credit: "A.Savin, Wikipedia", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:RUDN.jpg"}
 ---
 In 1960, as one African colony after another became independent, the Soviet Union competed with the West for the loyalty of the new states. Education was one of its weapons. On 5 February 1960 the Soviet government decided to found a new university in Moscow to train specialists for the countries of Asia, Africa and Latin America: the Peoples' Friendship University. In February 1961, after the murder of the Congolese prime minister Patrice Lumumba, it was given his name.
 

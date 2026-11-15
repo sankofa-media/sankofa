@@ -23,6 +23,8 @@ sources:
   - {title: "British Museum: The Meroë Head, 1911,0901.1 (curator's comments)", url: "https://www.britishmuseum.org/collection/object/G_1911-0901-1"}
   - {title: "Kai Mora, The Nubian Queen Who Fought Back Caesar's Army, HISTORY (2022)", url: "https://www.history.com/articles/nubian-queen-amanirenas-roman-army"}
   - {title: "Joshua J. Mark, The Meroe Head, World History Encyclopedia (2012)", url: "https://www.worldhistory.org/article/186/the-meroe-head/"}
+media:
+  - {type: "image", file: "amanirenas.jpg", caption: "A Kushite queen in a relief from pyramid Bar. 4, attributed by several scholars to Amanirenas; drawing by Karl Richard Lepsius, before 1884.", credit: "Karl Richard Lepsius, Denkmaeler aus Aegypten und Aethiopien", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Bar_4_Kush_queen_(Lepsius).jpg"}
 ---
 In the 20s BC Kush, the Nubian kingdom on the Middle Nile that had once ruled Egypt under [[taharqa|Taharqa]], had its capital at Meroë. Its ruling queens bore the title kandake, which Greek and Roman writers turned into "Candace". When Augustus defeated Antony and Cleopatra and made Egypt a Roman province, Rome became Kush's neighbour.
 

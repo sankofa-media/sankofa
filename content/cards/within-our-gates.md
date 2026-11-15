@@ -21,6 +21,8 @@ sources:
   - {title: "Smithsonian Magazine: Watch the oldest-known surviving film by an African-American director", url: "https://www.smithsonianmag.com/smart-news/watch-oldest-known-surviving-film-african-american-director-180962035/"}
   - {title: "Britannica: Oscar Micheaux", url: "https://www.britannica.com/biography/Oscar-Micheaux"}
   - {title: "Blackbird (VCU): Oscar Micheaux's Within Our Gates", url: "https://blackbird.vcu.edu/v14n1/gallery/micheaux_o/micheaux.shtml"}
+media:
+  - {type: "image", file: "within-our-gates.jpg", caption: "Advertisement for Oscar Micheaux's Within Our Gates, published 10 July 1920.", credit: "Micheaux Book & Film Company", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Within_Our_Gates_1920_newspaper_ad.jpg"}
 ---
 Within Our Gates is a silent drama of 1920 and the oldest known surviving feature film by an African American director. Oscar Micheaux, born in 1884 in Metropolis, Illinois, had been a Pullman porter and a South Dakota homesteader, then wrote a book about it, The Homesteader. When a Black film company sought the rights, he filmed it himself.
 

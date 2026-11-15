@@ -19,6 +19,8 @@ sources:
   - {title: "Marion Goldman, BlackPast: Alvin Ailey (1931-1989)", url: "https://www.blackpast.org/african-american-history/ailey-alvin-1931-1989/"}
   - {title: "Jacob's Pillow Dance Interactive: Alvin Ailey American Dance Theater, \"I Wanna Be Ready\" from Revelations", url: "https://danceinteractive.jacobspillow.org/alvin-ailey/i-wanna-be-ready-from-revelations/"}
   - {title: "Alvin Ailey American Dance Theater: Our Story", url: "https://ailey.org/our-story"}
+media:
+  - {type: "image", file: "revelations-ailey.jpg", caption: "Context for Revelations: choreographer Alvin Ailey, photographed by Carl Van Vechten on 22 March 1955; Library of Congress.", credit: "Carl Van Vechten / Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Alvin_Ailey_Ellington_career.jpg"}
 ---
 Alvin Ailey was born in 1931 in Rogers, a small town in Texas, to a single teenage mother. The two of them lived by picking cotton, washing clothes and domestic work in one Texas town after another, and the boy went to Baptist church. During the Second World War mother and son moved to Los Angeles, where Ailey found modern dance in the company of the choreographer Lester Horton.
 

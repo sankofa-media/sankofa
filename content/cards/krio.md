@@ -16,6 +16,8 @@ further:
 sources:
   - {title: "Malcolm Awadajin Finney, Krio, APiCS Online, survey 15", url: "https://apics-online.info/surveys/15"}
   - {title: "Jacques Leclerc, Sierra Leone, L'aménagement linguistique dans le monde, CEFAN, Université Laval", url: "https://www.axl.cefan.ulaval.ca/afrique/sierra_leone.htm"}
+media:
+  - {type: "image", file: "krio.jpg", caption: "Context: a Krio woman wearing a printed dress and matching head tie, photographed in 2024.", credit: "ODC-SIERRA-LEONE", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:A_krio_woman.jpg"}
 ---
 Krio is the English-based creole of Sierra Leone. Only about one person in ten speaks it as a mother tongue, yet most of the country uses it as a common language between peoples. English remains the official language and the language of prestige.
 

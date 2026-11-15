@@ -19,6 +19,8 @@ sources:
   - {title: "Yesenia Barragan, Uncovering Lisbon's Forgotten History of Slavery, Black Perspectives (AAIHS)", url: "https://www.aaihs.org/uncovering-lisbons-forgotten-history-of-slavery/"}
   - {title: "Aurora Almada e Santos, Presence of African people in Portugal at the time of the trade of enslaved people, MANIFEST project (2023)", url: "https://www.projectmanifest.eu/wp-content/uploads/2023/06/Presence-of-African-people-in-Portugal-at-the-time-of-the-trade-of-enslaved-people.pdf"}
   - {title: "Lucilene Reginaldo, Rosários dos pretos, «São Benedito de Quissama», Studia Historica. Historia Moderna 38 (2016)", url: "https://revistas.usal.es/uno/index.php/Studia_Historica/article/download/shhmo2016381123151/14889"}
+media:
+  - {type: "image", file: "mocambo-lisbon.jpg", caption: "Context for Lisbon's Mocambo district: Rua do Poço dos Negros, photographed 18 December 2017.", credit: "Sergei Gussev", license: "CC BY 2.0", url: "https://commons.wikimedia.org/wiki/File:Lisboa_-i---i-_(27367681719).jpg"}
 ---
 In the 1440s Portuguese ships began landing captives from West Africa on the beach at Lagos, in the Algarve. Within a few decades Lisbon had become the main port through which enslaved Africans entered Portugal, and by the sixteenth century about one Lisboan in ten was Black, enslaved or free.
 

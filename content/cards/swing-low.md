@@ -24,6 +24,8 @@ sources:
   - {title: "Johnny Watterson, The Irish Times: Never dull between England and Ireland (2015)", url: "https://www.irishtimes.com/sport/other-sports/never-dull-between-england-and-ireland-1.2120265"}
   - {title: "Gerard Meagher, The Irish Times: England fans may be urged to stop singing Swing Low due to slavery link (2020)", url: "https://www.irishtimes.com/sport/rugby/international/england-fans-may-be-urged-to-stop-singing-swing-low-due-to-slavery-link-1.4282495"}
   - {title: "RTÉ: England fans singing of 'Swing Low' under review by RFU (2020)", url: "https://rte.ie/sport/rugby/2020/0618/1148305-england-fans-singing-of-swing-low-under-review-by-rfu"}
+media:
+  - {type: "image", file: "swing-low.jpg", caption: "Context for Swing Low, Sweet Chariot: the Fisk Jubilee Singers performing at the National Medal of Arts awards ceremony in 2008.", credit: "U.S. federal government / National Endowment for the Arts", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Fisk_Jubilee_Singers_2008_National_Medal_of_Arts_awards_ceremony.jpg"}
 ---
 "Swing Low, Sweet Chariot" is a [[spirituals|spiritual]], one of the sacred songs of enslaved African Americans. The account most often cited takes it to Indian Territory, today Oklahoma, in the mid-nineteenth century. Wallace Willis and his wife Minerva were enslaved by Britt Willis, a Choctaw, who hired them out to Spencer Academy, a school for Choctaw boys. In the evenings the couple sang their own songs to the pupils.
 

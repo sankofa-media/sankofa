@@ -19,6 +19,8 @@ sources:
   - {title: "Open Library: Black dispatches, P. K. Rose (CIA, 1999)", url: "https://openlibrary.org/search?q=black+dispatches+rose"}
   - {title: "National Park Service, Richmond National Battlefield Park: Mary Jane Richards", url: "https://home.nps.gov/rich/learn/historyculture/mary-jane-richards.htm"}
   - {title: "American Battlefield Trust: Mary Jane Richards", url: "https://www.battlefields.org/node/499"}
+media:
+  - {type: "image", file: "black-dispatches.jpg", caption: "Context: Harriet Tubman, photographed by Horatio Seymour Squyer, about 1885.", credit: "Horatio Seymour Squyer / National Portrait Gallery", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Harriet_Tubman_(circa_1885).jpg"}
 ---
 During the American Civil War some of the Union's best information on the Confederacy came from Black people, enslaved and free. In 1999 a CIA study by P. K. Rose gathered their stories under the title "Black Dispatches".
 

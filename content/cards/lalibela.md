@@ -19,6 +19,8 @@ sources:
   - {title: "David Phillipson, Lalibela, Ethiopia: Rock-Hewn Churches, Current World Archaeology 18 (2006)", url: "https://world-archaeology.com/features/lalibela-ethiopa-rock-hewn-churches"}
   - {title: "Marie-Laure Derat et al., The rock-cut churches of Lalibela and the cave church of Washa Mika'el, Antiquity 95 (2021), abstract", url: "https://www.cambridge.org/core/journals/antiquity/article/abs/rockcut-churches-of-lalibela-and-the-cave-church-of-washa-mikael-troglodytism-and-the-christianisation-of-the-ethiopian-highlands/DC1B8FC2A2221141A7E648F9B9219755"}
   - {title: "Rock-cut stratigraphy: sequencing the Lalibela churches, Antiquity (Cambridge University Press), abstract", url: "https://www.cambridge.org/core/journals/antiquity/article/rockcut-stratigraphy-sequencing-the-lalibela-churches/B53C45E7808B62840E6C5BF3F6380B88"}
+media:
+  - {type: "image", file: "lalibela.jpg", caption: "Sunset at the Church of Saint George, Lalibela, Ethiopia, 2019.", credit: "Thomas Fuhrmann / SnowmanStudios", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Ethiopia_-_sunset_at_Church_of_Saint_George,_Lalibela_01.jpg"}
 ---
 Lalibela is a town high in the mountains of northern Ethiopia and one of the great pilgrimage places of the Ethiopian Orthodox Church. It bears the name of Lalibela, a medieval king of the Zagwe dynasty, and tradition holds that he set out to make here a new Jerusalem.
 

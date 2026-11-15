@@ -23,6 +23,8 @@ sources:
   - {title: "Matthew Wright, The Arts Desk: CD: Sonzeira, Tam Tam Tam Reimagined (2016)", url: "https://theartsdesk.com/new-music/cd-sonzeira-tam-tam-tam-reimagined"}
   - {title: "Sounds and Colours: José Prates' incredibly rare Brazilian classic Tam…Tam…Tam…! reissued", url: "https://soundsandcolours.com/articles/brazil/jose-prates-incredibly-rare-brazilian-classic-tamtamtam-reissued-26911/"}
   - {title: "Trunk Records: Tam...Tam...Tam...! (reissue notes)", url: "https://trunkrecords.com/releases/tamtamtam_14/tamtamtam.php"}
+media:
+  - {type: "image", file: "mas-que-nada.jpg", caption: "Context: Jorge Ben Jor performing at Live Earth, 2007.", credit: "Luan Torreira", license: "CC BY 2.0", url: "https://commons.wikimedia.org/wiki/File:Jorge_Ben_Jor_at_Live_Earth.jpg"}
 ---
 "Mas que nada" is a samba by the Rio singer and guitarist Jorge Ben. In the early 1960s, at the start of his career, he sang his own songs in the nightclubs of the Beco das Garrafas, a short alley in Copacabana, among them one called the Bottles.
 

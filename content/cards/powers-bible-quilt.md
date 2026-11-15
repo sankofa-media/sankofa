@@ -20,6 +20,8 @@ sources:
   - {title: "National Museum of American History: Harriet Powers's Bible Quilt, 1885–1886", url: "https://americanhistory.si.edu/collections/nmah_556462"}
   - {title: "Museum of Fine Arts, Boston: Harriet Powers, Pictorial quilt, 1895–98 (64.619)", url: "https://collections.mfa.org/objects/116166"}
   - {title: "Ashley Callahan, New Georgia Encyclopedia: Harriet Powers (1837–1910)", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/harriet-powers-1837-1910/"}
+media:
+  - {type: "image", file: "powers-bible-quilt.jpg", caption: "Context for Harriet Powers's Bible Quilt: her later Pictorial Quilt, 1895–1898, in the Museum of Fine Arts, Boston.", credit: "Harriet Powers / Museum of Fine Arts, Boston / Google Art Project", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Harriet_Powers_-_Pictorial_quilt_-_Google_Art_Project.jpg"}
 ---
 Harriet Powers was born into slavery near Athens, Georgia, on 29 October 1837. After the Civil War she and her husband owned a small farm in Clarke County, and she made pictorial quilts: scenes cut from cotton and appliquéd onto cloth.
 

@@ -21,6 +21,8 @@ sources:
   - {title: "Armando Alexandre Castro: Irmãs de fé: tradição e turismo no recôncavo baiano, Caderno Virtual de Turismo (2010)", url: "https://www.ivt.coppe.ufrj.br/caderno/article/download/476/259/1317"}
   - {title: "Luana Verena Nascimento Machado: Poder feminino e identidade na Irmandade da Boa Morte, master's dissertation, UFRB (2013)", url: "https://www1.ufrb.edu.br/pgcienciassociais/images/documentos/Dissertações/CD_DISSEluana.pdf"}
   - {title: "Secretaria de Cultura da Bahia: Festa da Irmandade de Nossa Senhora da Boa Morte (2025)", url: "https://www.ba.gov.br/cultura/noticias/2025-08/63424/autoridades-da-cultura-participam-da-festa-da-irmandade-de-nossa-senhora-da"}
+media:
+  - {type: "image", file: "boa-morte-sisterhood.jpg", caption: "The Boa Morte festival in Cachoeira, Bahia, 2017.", credit: "Tatiana Azeviche / Setur, Turismo Bahia", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:Festa_da_Irmandade_da_Boa_Morte._Foto-_Tatiana_Azeviche-Setur_(35786219673).jpg"}
 ---
 The Sisterhood of Our Lady of the Good Death is a Catholic confraternity of older Black women in Cachoeira, a river town in the Recôncavo of Bahia. It is said to have been founded around 1820 by African women near the Barroquinha church in Salvador and to have moved to Cachoeira in the following years. According to its tradition, the sisters raised money to buy letters of freedom for the enslaved and made sure that every member would have a proper burial.
 

@@ -20,6 +20,8 @@ sources:
   - {title: "Gender in the World Food Economy: Inequitable Transformation of Haiti's Food Economy, Frontiers in Communication (2022)", url: "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2022.755994/full"}
   - {title: "Global Press Journal: Haiti's Women Food Suppliers Face Mounting Pressures", url: "https://globalpressjournal.com/americas/haiti/haitis-women-food-suppliers-face-mounting-pressures/"}
   - {title: "Buala: Markets and Margins, an interview with Etant Dupain", url: "https://www.buala.org/en/face-to-face/markets-and-margins-an-interview-with-etant-dupain"}
+media:
+  - {type: "image", file: "madan-sara.jpg", caption: "Context for Haitian market women's work: women setting up a roadside market in Port-au-Prince, 20 January 2010.", credit: "Fred W. Baker III / U.S. Department of Defense", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Roadside_market_in_Port-au-Prince_2010-01-20_1.jpg"}
 ---
 In Haiti the madan sara are the women traders who move the country's food from the countryside to the towns. A sara buys beans, vegetables or fruit from farmers at the farm gate or in village markets, often with cash advanced before the harvest, and carries the load to bigger markets: above all to Port-au-Prince and its great Croix-des-Bossales market. Haitians call these women the poto mitan, the centre post, of the national economy.
 

@@ -17,6 +17,8 @@ sources:
   - {title: "AP via Stars and Stripes: France's Macron acknowledges 1944 killings of West African troops was a massacre (29 November 2024)", url: "https://www.stripes.com/theaters/europe/2024-11-29/france-macron-west-african-troops-massacre-16004214.html"}
   - {title: "Damian Zane, BBC News: France admits colonial 'massacre', says Senegal's leader (29 November 2024)", url: "https://www.bbc.com/news/articles/cvg725vk174o"}
   - {title: "Armelle Mabon, La tragédie de Thiaroye, symbole du déni d'égalité, Hommes et Migrations 1235 (2002)", url: "https://www.persee.fr/doc/homig_1142-852x_2002_num_1235_1_3780"}
+media:
+  - {type: "image", file: "thiaroye-1944.jpg", caption: "Context for the site of the 1944 massacre: roadside market stalls in Thiaroye near Dakar, Senegal; photograph dated 2005.", credit: "KDVP", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Thiaroye.jpg"}
 ---
 The tirailleurs sénégalais were France's colonial infantry, recruited across French West Africa. When Germany invaded France in 1940, they fought in its defence, and many were taken prisoner and spent the war in German camps in occupied France. Freed in 1944, they were shipped home and held at the military camp of Thiaroye, about fifteen kilometres from Dakar.
 

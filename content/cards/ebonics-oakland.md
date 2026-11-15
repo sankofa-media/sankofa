@@ -21,6 +21,8 @@ sources:
   - {title: "Black Issues in Higher Education / Diverse: Oakland amends Ebonics resolution (1997, archived)", url: "http://web.archive.org/web/20250709101656/https://www.diverseeducation.com/home/article/15083590/oakland-amends-ebonics-resolution-oakland-school-board"}
   - {title: "Linguistic Society of America: LSA Resolution on the Oakland \"Ebonics\" Issue (archived)", url: "http://web.archive.org/web/20240225224101/https://www.linguisticsociety.org/resource/lsa-resolution-oakland-ebonics-issue"}
   - {title: "John R. Rickford, The Ebonics controversy in my backyard: A sociolinguist's experiences and reflections", url: "https://web.stanford.edu/~rickford/papers/EbonicsInMyBackyard.html"}
+media:
+  - {type: "image", file: "ebonics-oakland.jpg", caption: "Context: Oakland High School in Oakland, California, 2023; not the 1996 school-board meeting.", credit: "Mx. Granger", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Oakland_High_School_3.jpg"}
 ---
 African American English is the English spoken by many African Americans. Linguists call its everyday form African American Vernacular English; the name Ebonics joins "ebony" and "phonics". It is a dialect with consistent rules of its own, and some of them mark distinctions that standard English does not. "Billy don't be telling lies" uses an unchanging be to say that something happens again and again, which "Billy don't tell lies" does not quite say.
 

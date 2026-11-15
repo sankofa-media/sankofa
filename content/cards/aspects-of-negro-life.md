@@ -21,6 +21,8 @@ sources:
   - {title: "Britannica: Aaron Douglas", url: "https://www.britannica.com/biography/Aaron-Douglas"}
   - {title: "Modernist Journals Project (Davidson College): Fire!!", url: "https://modernistmagazines.org/american/fire/"}
   - {title: "Princeton University Library Graphic Arts: FIRE!! Devoted to Younger Negro Artists", url: "https://graphicarts.princeton.edu/2020/02/02/fire-devoted-to-younger-negro-artists/"}
+media:
+  - {type: "image", file: "aspects-of-negro-life.jpg", caption: "Context for Aspects of Negro Life: the Schomburg Center for Research in Black Culture, 515 Malcolm X Boulevard, Harlem; photograph, March 2014.", credit: "Beyond My Ken", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:NYPL_Schomburg_Center_for_Research_in_Black_Culture.jpg"}
 ---
 Aspects of Negro Life is a cycle of four murals that Aaron Douglas painted in 1934 for the 135th Street branch of the New York Public Library in Harlem, today the Schomburg Center for Research in Black Culture. The commission came through a federal New Deal art programme. Douglas, born in Topeka, Kansas, in 1899, was the leading artist-illustrator of the Harlem Renaissance; he had drawn the cover of the magazine [[fire-1926|FIRE!!]].
 

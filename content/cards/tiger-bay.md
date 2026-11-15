@@ -20,6 +20,8 @@ sources:
   - {title: "The National Archives (UK): 1919 race riots (education resource)", url: "https://www.nationalarchives.gov.uk/education/resources/1919-race-riots/"}
   - {title: "Jessey Clarke and Deleshia Clarke, Dictionary of Welsh Biography: Campbell, Rachel Elizabeth (Betty) (1934-2017)", url: "https://biography.wales/article/s14-CAMP-ELI-1934"}
   - {title: "Angela V. John, Women's History Network: A statue for the past, present and future: making space for Betty Campbell (2021)", url: "https://womenshistorynetwork.org/a-statue-for-the-past-present-and-future-making-space-for-betty-campbell-by-angela-v-john/"}
+media:
+  - {type: "image", file: "tiger-bay.jpg", caption: "Bute Street in Butetown, Cardiff; 24 October 2009. A contextual view of the Tiger Bay neighbourhood.", credit: "Jaggery / Geograph Britain and Ireland", license: "CC BY-SA 2.0", url: "https://commons.wikimedia.org/wiki/File:One-sided_Bute_Street,_Cardiff_-_geograph.org.uk_-_1966126.jpg"}
 ---
 Butetown, the dock district of Cardiff better known as Tiger Bay, was where the sea brought the world to Wales. From the nineteenth century seafarers from Somalia, Yemen, Africa and the Caribbean settled there, and the neighbourhood became one of the first multicultural communities in Britain.
 

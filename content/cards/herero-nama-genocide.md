@@ -22,6 +22,8 @@ sources:
   - {title: "Federal Foreign Office (Germany): Foreign Minister Maas on the conclusion of negotiations with Namibia, 28 May 2021", url: "https://www.auswaertiges-amt.de/en/newsroom/news/-/2463598"}
   - {title: "Al Jazeera: Germany recognises colonial-era massacres in Namibia as genocide (28 May 2021)", url: "https://www.aljazeera.com/news/2021/5/28/germany-recognises-colonial-era-massacres-in-namibia-as-genocide"}
   - {title: "BBC News: Germany officially recognises colonial-era Namibia genocide (28 May 2021)", url: "https://www.bbc.com/news/world-europe-57279008"}
+media:
+  - {type: "image", file: "herero-nama-genocide.jpg", caption: "Context: Hendrik Witbooi at Gibeon; the source dates the portrait to 1892–1894 or earlier.", credit: "Unknown photographer / Dove Collection, Colonial Picture Archive, Frankfurt", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Hendrik_Witbooi_(cropped).jpg"}
 ---
 Germany took what is now Namibia in 1884 and called it German South West Africa. Settlers took the land and cattle of the Herero and the Nama, herding peoples. In 1904 the Herero rose against German rule, and the Nama soon followed.
 

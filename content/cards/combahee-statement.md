@@ -22,6 +22,8 @@ sources:
   - {title: "Mariana Brandman, Massachusetts Women's History: The Combahee River Collective, Pioneers of Intersectional Feminism", url: "https://www.mawomenshistory.org/resources/articles/combahee-river-collective-pioneers-intersectional-feminism"}
   - {title: "Arielle Gray, WBUR: Boston's Combahee River Collective (2019)", url: "https://www.wbur.org/news/2019/06/10/boston-combahee-river-collective-intersectional-black-feminism"}
   - {title: "Marian Jones, The Nation: An Oral History of the Combahee River Collective (2021)", url: "https://www.thenation.com/article/society/combahee-river-collective-oral-history/"}
+media:
+  - {type: "image", file: "combahee-statement.jpg", caption: "Context for the Combahee River Collective Statement: Barbara Smith at the National Women's Studies Association conference, 17 November 2017.", credit: "Shalor (Wiki Ed)", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Barbara_Smith_at_NWSA_2017.jpg"}
 ---
 The Combahee River Collective Statement is a manifesto dated April 1977, written by a group of Black feminists in Boston who felt passed over twice: by a women's movement blind to racism and by Black political groups blind to sexism.
 

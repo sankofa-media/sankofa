@@ -19,6 +19,8 @@ sources:
   - {title: "UNESCO World Heritage Centre: Valongo Wharf Archaeological Site", url: "https://whc.unesco.org/en/list/1548/"}
   - {title: "Getty: An Antidote for Social Amnesia. The Memory Space of the Cais do Valongo", url: "https://www.getty.edu/news/an-antidote-for-social-amnesia-the-memory-space-of-the-cais-do-valongo"}
   - {title: "Archaeology magazine (Archaeological Institute of America): Rio de Janeiro, Brazil — Empress and Valongo Wharf", url: "https://archaeology.org/issues/march-april-2013/off-the-grid/rio-de-janeiro-brazil-empress-valongo-wharf/"}
+media:
+  - {type: "image", file: "cais-do-valongo.jpg", caption: "The Valongo and Imperatriz wharves, photographed in 2012.", credit: "Halley Pacheco de Oliveira", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Cais_do_Valongo_e_da_Imperatriz.jpg"}
 ---
 Over three centuries Brazil took in more enslaved Africans than any other country in the Americas, some four million people. In 1811 Rio de Janeiro built a stone wharf at Valongo, on the city's harbour, for landing them. Around it stood warehouses, markets, a quarantine station and a cemetery. Over the next two decades somewhere between half a million and a million captives came ashore on its stones.
 

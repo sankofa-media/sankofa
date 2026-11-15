@@ -21,6 +21,8 @@ sources:
   - {title: "Middle East Eye: Reading Nubian: books for a new generation", url: "https://www.middleeasteye.net/discover/nubian-sudan-egypt-books-discovering-language-new-generation"}
   - {title: "New Lines Magazine: In Egypt and Sudan, Nubians Are Trying To Bring an Alphabet Back From the Dead", url: "https://newlinesmag.com/spotlight/in-egypt-and-sudan-nubians-are-trying-to-bring-an-alphabet-back-from-the-dead/"}
   - {title: "Vincent W. J. van Gerven Oei, A note on the Old Nubian morpheme -ⲁ, in Nubian Voices II (Journal of Juristic Papyrology Supplement 27, Warsaw, 2015)", url: "https://hcommons.org/deposits/objects/hc:13212/datastreams/CONTENT/content"}
+media:
+  - {type: "image", file: "old-nubian.jpg", caption: "Old Nubian biblical text on parchment, ninth–tenth century, from Qasr Ibrim, Egypt; British Museum, photographed 22 July 2016.", credit: "Osama Shukir Muhammed Amin FRCP(Glasg)", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Parchment_page_of_the_Bible,_part_of_the_New_Testament_(Corinthians_and_Hebrews)_in_written_in_Old_Nubian._9th-10_century_CE._From_Qasr_Ibrahim,_Egypt._British_Museum.jpg"}
 ---
 Old Nubian is the written language of medieval Christian Nubia, the Nile kingdoms of what is now southern Egypt and northern Sudan. It is an ancient form of the Nubian still spoken along the river, closest to today's Nobiin, and belongs to the Nilo-Saharan family. Its texts run from the late 8th century to the 14th.
 

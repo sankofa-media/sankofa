@@ -17,6 +17,8 @@ sources:
   - {title: "Isma'il Kushkush, 'Afro-Palestinians' forge a unique identity in Israel, Associated Press (12 January 2017)", url: "https://web.archive.org/web/20201123100313/https://apnews.com/article/f6bf554b21d04b56be9d6385fbf36d31"}
   - {title: "Joharah Baker, The African-Palestinians: Muslim pilgrims who never went home, The New Arab (26 December 2014)", url: "https://web.archive.org/web/20161117211421/https://www.alaraby.co.uk/english/indepth/34fef3d6-30c8-4940-91d5-bc1f0b1dfa3f"}
   - {title: "Yasser Qous, The Africans of Jerusalem: alienation and counter-alienation, Goethe-Institut Perspektiven", url: "https://web.archive.org/web/20201019110111/https://www.goethe.de/prj/ruy/en/mig/21447452.html"}
+media:
+  - {type: "image", file: "african-quarter-jerusalem.jpg", caption: "The African Centre in Jerusalem's Old City, 18 May 2010.", credit: "Deror Avi", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:African_Centre,_Old_Town,_East_Jerusalem.jpg"}
 ---
 In the Old City of Jerusalem, right beside the Council Gate, one of the entrances to the al-Aqsa mosque compound, stand two massive medieval buildings that the Ottomans turned into prisons. They are home to a small community of Afro-Palestinians: a few hundred people, around fifty families.
 

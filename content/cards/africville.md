@@ -19,6 +19,8 @@ sources:
   - {title: "Jon Tattrie, Africville, The Canadian Encyclopedia (2014, last edited 2025)", url: "https://www.thecanadianencyclopedia.ca/en/article/africville"}
   - {title: "Matthew McRae, The story of Africville, Canadian Museum for Human Rights (2017, updated 2023)", url: "https://humanrights.ca/story/the-story-of-africville"}
   - {title: "Halifax Regional Municipality: Africville", url: "https://www.halifax.ca/about-halifax/diversity-inclusion/african-nova-scotian-affairs/africville"}
+media:
+  - {type: "image", file: "africville.jpg", caption: "Africville monument, Seaview Park and the A. Murray MacKay Bridge in Halifax, Nova Scotia, 26 September 2009.", credit: "Letterofmarque", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Africville_and_bridge.jpg"}
 ---
 Africville was a Black village on the southern shore of Bedford Basin, at the northern edge of Halifax, Nova Scotia. Black people who reached Nova Scotia after the American Revolution and the War of 1812, many of them formerly enslaved, were pushed onto the poorest land. In 1848 two Black settlers, William Brown and William Arnold, bought land on the basin, and the Seaview African United Baptist Church became the heart of the village that grew there.
 

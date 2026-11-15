@@ -20,6 +20,8 @@ sources:
   - {title: "Daan van Dartel, Wereldmuseum Amsterdam: A headscarf with a secret language", url: "https://amsterdam.wereldmuseum.nl/en/collection-stories/a-headscarf-with-a-secret-language"}
   - {title: "Eerste Kamer der Staten-Generaal: Nederlands slavernijverleden herdacht (1 July 2025)", url: "https://www.eerstekamer.nl/nieuws/20250701/nederlands_slavernijverleden"}
   - {title: "NOS: Dit is de betekenis achter de kleurrijke kleding op Keti Koti (1 July 2025)", url: "https://nos.nl/l/2573157"}
+media:
+  - {type: "image", file: "kotomisi.jpg", caption: "A doll in kotomisi dress, made in 1824; Wereldmuseum collection, formerly Tropenmuseum.", credit: "Collectie Wereldmuseum (v/h Tropenmuseum), part of the National Museum of World Cultures, A-6195d", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Tropenmuseum_Royal_Tropical_Institute_Objectnumber_A-6195d_Pop_in_kotomisi_kostuum.jpg"}
 ---
 The koto is the festive dress of Afro-Surinamese women: a full skirt, also called the koto, a short jacket, the yaki, and a square headscarf, the angisa. It took shape in Suriname, and in the Netherlands it comes out every 1 July for Keti Koti, the "breaking of the chains", which marks the Dutch law of 1 July 1863 that abolished slavery. A koto must have volume, built up with starch and with skirts worn one over another.
 

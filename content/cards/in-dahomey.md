@@ -24,6 +24,8 @@ sources:
   - {title: "Jeffrey Green, historian: \"In Dahomey\", London, 1903", url: "https://jeffreygreen.co.uk/in-dahomey-london-1903"}
   - {title: "London Museum: In Dahomey, Shaftesbury Theatre programme, 1903 (object 2001.69/37)", url: "https://londonmuseum.org.uk/collections/v/object-547796/in-dahomey"}
   - {title: "Gallatin Galleries, New York University: Transformation! exhibition texts", url: "https://wp.nyu.edu/gallatingalleries/?p=15811"}
+media:
+  - {type: "image", file: "in-dahomey.jpg", caption: "Hattie McIntosh, George Walker, Aida Overton Walker, Bert Williams and Lottie Williams performing the cakewalk in In Dahomey, 1903.", credit: "The Playgoer (1903) / New York Public Library, Billy Rose Theatre Division", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:In_Dahomey,_Cakewalk.jpg"}
 ---
 In Dahomey is a musical comedy that opened on Broadway, at the New York Theatre, in 1903, with music by Will Marion Cook and lyrics by the poet Paul Laurence Dunbar. Its stars were the comedy team of Bert Williams and George Walker, and every member of its cast was Black.
 

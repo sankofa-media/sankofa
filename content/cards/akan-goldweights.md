@@ -16,6 +16,8 @@ further:
 sources:
   - {title: "T. F. Garrard, introduction to Christine Fox, Asante Brass Casting (Cambridge African Studies Centre, 1988)", url: "https://www.african.cam.ac.uk/system/files/documents/asante.pdf"}
   - {title: "Christina Griffith, The Asante Gold Weights, Expedition Magazine 61:2, Penn Museum (2019)", url: "https://www.penn.museum/sites/expedition/the-asante-gold-weights/"}
+media:
+  - {type: "image", file: "akan-goldweights.jpg", caption: "Akan goldweights, including an animal-head weight; photograph, 16 March 2013.", credit: "Didier Descouens", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Akan_Gold_Weight_MHNT_bovid_head.jpg"}
 ---
 In the forests of what are now Ghana and Côte d'Ivoire, the Akan peoples paid in gold dust, and kept doing so until the end of the nineteenth century. Every purchase meant weighing the dust on small scales against weights of brass, and the units came from the Islamic world, through the gold trade with Muslim merchants from the north.
 

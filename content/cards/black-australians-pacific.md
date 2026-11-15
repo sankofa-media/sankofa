@@ -19,6 +19,8 @@ sources:
   - {title: "Cassandra Pybus, Revolution, Rum and Marronage: The Pernicious American Spirit at Port Jackson, Zeitschrift für Australienstudien 32 (2018)", url: "https://australienstudien.org/ZfA/2018%2032/ZfA_32-2018_17-27_Pybus.pdf"}
   - {title: "SBS The Feed, Ahmed Yussuf: Did you know there were 12 Africans on the First Fleet? (2020)", url: "https://www.sbs.com.au/news/the-feed/did-you-know-there-were-12-africans-on-the-first-fleet"}
   - {title: "University of Western Australia, Jane Lydon: Casting a spotlight on the Black convicts of African descent who helped shape Australia (2024)", url: "https://www.uwa.edu.au/news/article/2024/november/casting-a-spotlight-on-the-black-convicts-of-african-descent-who-helped-shape-australia"}
+media:
+  - {type: "image", file: "black-australians-pacific.jpg", caption: "Context: the First Fleet entering Port Jackson on 27 January 1788; a drawing by William Bradley, about 1802.", credit: "William Bradley / State Library of New South Wales", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:First_Fleet_entering_Sydney_1788_Bradley.jpg"}
 ---
 In January 1788 the First Fleet arrived from Britain to found a penal colony at Sydney Cove. Among its convicts were at least ten people of African descent, [[john-caesar|John Caesar]], later called Australia's first bushranger, among them. Most had come from America: they were among the enslaved people who ran to the British during the American Revolution, and after the war many ended up in England, where they were convicted and sentenced to transportation.
 

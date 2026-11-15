@@ -20,6 +20,8 @@ sources:
   - {title: "Stanford King Institute: Browder v. Gayle", url: "https://kinginstitute.stanford.edu/browder-v-gayle-352-us-903"}
   - {title: "Michael Carlson, The Guardian: Claudette Colvin obituary (21 January 2026)", url: "https://www.theguardian.com/us-news/2026/jan/21/claudette-colvin-obituary"}
   - {title: "Phillip Hoose, Publishers Weekly: Remembering Claudette Colvin (26 February 2026)", url: "https://www.publishersweekly.com/pw/by-topic/childrens/childrens-industry-news/article/99785-remembering-claudette-colvin.html"}
+media:
+  - {type: "image", file: "claudette-colvin.jpg", caption: "Claudette Colvin interviewed by Marion Woods at the San Francisco Public Library, 15 January 2005.", credit: "San Francisco Public Library", license: "CC BY 3.0", url: "https://commons.wikimedia.org/wiki/File:Claudette_Colvin_2005.png"}
 ---
 In 1955 the city buses of Montgomery, Alabama, were segregated by law, and Black riders could be ordered to the back to make room for white ones. On 2 March, Claudette Colvin, a 15-year-old high-school student, was riding home when the driver told her to give up her seat to a white woman. She refused, saying she had paid her fare and it was her constitutional right. Two police officers hauled her off the bus, her schoolbooks flying, and handcuffed her. She later said she felt Harriet Tubman and Sojourner Truth pressing down on her, keeping her in her seat.
 

@@ -23,6 +23,8 @@ sources:
   - {title: "National Park Service, Coronado National Memorial: Fray Marcos de Niza", url: "https://www.nps.gov/coro/learn/historyculture/fray-marcos-de-niza.htm"}
   - {title: "Saudi Aramco World (March/April 2002): Esteban of Azemmour and His New World Adventures", url: "https://archive.aramcoworld.com/issue/200202/esteban.of.azemmour.and.his.new.world.adventures.htm"}
   - {title: "Britannica: Esteban (archived June 2025)", url: "http://web.archive.org/web/20250612211617/https://www.britannica.com/biography/Esteban"}
+media:
+  - {type: "image", file: "estevanico.jpg", caption: "Context: Azemmour seen from the Oum Er-Rbia River, 2009.", credit: "Yaroslav Blanter", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Azemmour_from_Oum_Er-Rbia.jpg"}
 ---
 In the 1520s Spain was trying to claim the lands around the Gulf of Mexico. Estevanico, also called Esteban, came from Azemmour on Morocco's Atlantic coast and was enslaved by a Spanish gentleman, Andrés Dorantes. In 1528 he landed in Florida with Dorantes as part of the expedition of Pánfilo de Narváez.
 

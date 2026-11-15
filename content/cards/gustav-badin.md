@@ -21,6 +21,8 @@ dispute: "His birth year is uncertain: Svenskt biografiskt lexikon gives probabl
 sources:
   - {title: "C. Forsstrand, Svenskt biografiskt lexikon, vol. 2 (1920): Adolph Ludvig Gustaf Fredric Albert Couschi Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973"}
   - {title: "Världskulturmuseerna (Swedish National Museums of World Culture): Member of the royal court, 18th century", url: "https://www.varldskulturmuseerna.se/en/projects/afrika-pagar/the-history-of-afro-swedes/member-of-the-royal-court-18th-century/"}
+media:
+  - {type: "image", file: "gustav-badin.jpg", caption: "Gustav Badin, a portrait by Jakob Björck after Gustav Lundberg's 1776 pastel.", credit: "Jakob Björck, after Gustav Lundberg", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Gustav_Badin.jpg"}
 ---
 Around 1760 the Swedish court acquired an unusual new member. A boy named Couschi, born about 1750, probably on the Caribbean island of Saint Croix, was brought to Stockholm and given to Queen Lovisa Ulrika.
 

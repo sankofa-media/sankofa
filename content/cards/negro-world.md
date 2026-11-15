@@ -24,6 +24,8 @@ sources:
   - {title: "The National Archives (UK) blog: Garveyism, a letter from the black working class", url: "https://blog.nationalarchives.gov.uk/garveyism-a-letter-from-the-black-working-class"}
   - {title: "JSTOR Daily: Marcus Garvey's journey began in Central America", url: "https://daily.jstor.org/marcus-garveys-journey-began-in-central-america"}
   - {title: "University of Illinois Library, Black Literature collection record: Marcus Garvey", url: "https://bibleaves.library.illinois.edu/catalog/CC_X08856"}
+media:
+  - {type: "image", file: "negro-world.jpg", caption: "Front page of Negro World, 31 July 1920; New York Public Library.", credit: "Negro World / New York Public Library", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:NegroWorld-July31-1920.jpg"}
 ---
 The Negro World was the weekly newspaper of Marcus Garvey's Universal Negro Improvement Association (UNIA), published in Harlem from 1918 to 1933. Garvey, born in Jamaica in 1887, had founded the UNIA there in 1914 and moved to the United States in 1916. From Harlem he preached Black pride, an independent Black economy and a Black-governed nation in Africa, and the Negro World was his voice.
 

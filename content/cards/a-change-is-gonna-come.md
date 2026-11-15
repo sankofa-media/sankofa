@@ -23,6 +23,8 @@ sources:
   - {title: "NPR (via WUSF): Sam Cooke and the song that 'almost scared him' (2014)", url: "https://www.wusf.org/2014-02-01/sam-cooke-and-the-song-that-almost-scared-him"}
   - {title: "B.G. Rhule, Library of Congress, National Recording Registry: \"A Change Is Gonna Come\", Sam Cooke (1964)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/AChangeIsGonnaCome.pdf"}
   - {title: "Encyclopaedia Britannica: Sam Cooke", url: "https://www.britannica.com/biography/Sam-Cooke"}
+media:
+  - {type: "image", file: "a-change-is-gonna-come.jpg", caption: "Context: Sam Cooke's grave in the Garden of Honor, Forest Lawn, Glendale, 9 October 2014.", credit: "Arthur Dark", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Sam_Cooke_Grave.JPG"}
 ---
 "A Change Is Gonna Come" is a soul ballad of 1964 and one of the anthems of the civil rights movement. Its author, Sam Cooke, had moved from [[gospel|gospel]] to pop stardom with "You Send Me" in 1957. In 1963 Bob Dylan's "Blowin' in the Wind" struck him: he felt a Black man should have written a song like that.
 

@@ -22,6 +22,8 @@ sources:
   - {title: "University of Pennsylvania, Weitzman School of Design: Augusta Savage (1892–1962)", url: "https://architecture.sas.upenn.edu/node/947"}
   - {title: "The Phillips Collection, Jacob Lawrence: The Migration Series, chronology", url: "https://lawrencemigration.phillipscollection.org/artist/chronology"}
   - {title: "Encyclopaedia Britannica: Jacob Lawrence", url: "https://www.britannica.com/biography/Jacob-Lawrence"}
+media:
+  - {type: "image", file: "the-harp-savage.jpg", caption: "Context for The Harp: sculptor Augusta Savage, photographed between 1935 and 1947; U.S. National Archives.", credit: "U.S. federal government / National Archives and Records Administration", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Augusta_Savage,_H-HNE-20-87.jpg"}
 ---
 The Harp was a sculpture by Augusta Savage, made for the New York World's Fair of 1939 in Flushing Meadows, Queens. Savage, born in Green Cove Springs, Florida, in 1892, was by then a central figure in Harlem art. She had opened her own studio school in 1932, became in 1934 the first African American member of the National Association of Women Painters and Sculptors, and in 1937 became the first director of the Harlem Community Art Center. She also fought to get Black artists into the federal art projects of the Depression, and helped young painters such as [[migration-series|Jacob Lawrence]] in.
 

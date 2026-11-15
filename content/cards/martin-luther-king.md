@@ -32,6 +32,8 @@ sources:
   - {title: "Stanford King Institute: March on Washington for Jobs and Freedom", url: "https://kinginstitute.stanford.edu/march-washington-jobs-and-freedom"}
   - {title: "Stanford King Institute: Voting Rights Act of 1965", url: "https://kinginstitute.stanford.edu/voting-rights-act-1965"}
   - {title: "New Georgia Encyclopedia: Martin Luther King Jr. (1929-1968)", url: "https://www.georgiaencyclopedia.org/articles/history-archaeology/martin-luther-king-jr-1929-1968/"}
+media:
+  - {type: "image", file: "martin-luther-king.jpg", caption: "Martin Luther King Jr. at a press conference, 26 March 1964.", credit: "Marion S. Trikosko / Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Martin_Luther_King_press_conference_01269u_edit.jpg"}
 ---
 Martin Luther King Jr. was born in Atlanta on 15 January 1929 as Michael; his name was changed to Martin later. His maternal grandfather and then his father were pastors of Ebenezer Baptist Church there. After theological study in Pennsylvania and Boston he became pastor of Dexter Avenue Baptist Church in Montgomery, Alabama, in 1954.
 

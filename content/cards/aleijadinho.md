@@ -22,6 +22,8 @@ sources:
   - {title: "Edward A. Riedinger: Antônio Francisco Lisboa, EBSCO Research Starters (2024)", url: "https://ebsco.com/research-starters/history/antonio-francisco-lisboa"}
   - {title: "UNESCO World Heritage Centre: Sanctuary of Bom Jesus do Congonhas", url: "https://whc.unesco.org/en/list/334/"}
   - {title: "Agência Gov (EBC): Conheça Congonhas, onde a principal obra de Aleijadinho se tornou Patrimônio Mundial da Unesco (2026)", url: "https://agenciagov.ebc.com.br/noticias/202608/conheca-congonhas-mg-onde-a-principal-obra-de-aleijadinho-se-tornou-patrimonio-mundial-da-unesco"}
+media:
+  - {type: "image", file: "aleijadinho.jpg", caption: "The sanctuary and Aleijadinho's Twelve Prophets in Congonhas, Minas Gerais, Brazil, photographed on 12 January 2026.", credit: "Rkieferbaum", license: "CC BY-SA 4.0", url: "https://commons.wikimedia.org/wiki/File:Doze_profetas_de_Aleijadinho_-_Congonhas_-_20260112173137.jpg"}
 ---
 In the eighteenth century the gold of Minas Gerais filled Brazil's mining towns with churches, and the most celebrated sculptor and architect among their builders was Antônio Francisco Lisboa. He was born in Vila Rica, today's Ouro Preto, probably in 1738, the son of the Portuguese architect Manuel Francisco Lisboa and an African woman.
 

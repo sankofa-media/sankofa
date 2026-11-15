@@ -21,6 +21,8 @@ sources:
   - {title: "Stefan Jakobielski, The Wizard of Faras (interview), Academia, Polish Academy of Sciences, 4/44 (2014)", url: "https://www.czasopisma.pan.pl//Content/126642/PDF/6_ACADEMIA_EN_4_44_2014_Jakobielski_The_Wizard.pdf"}
   - {title: "Embassy of Poland in South Africa (gov.pl): Treasures of Africa in the heart of Poland", url: "https://www.gov.pl/web/southafrica/treasures-of-africa-in-the-heart-of-poland"}
   - {title: "Popular Archaeology: Artifacts of Christian Nubia Revealed", url: "https://popular-archaeology.com/article/artifacts-of-christian-nubia-revealed/"}
+media:
+  - {type: "image", file: "faras-cathedral.jpg", caption: "Bishop Petros with Saint Peter, a wall painting from Faras, 974–997; National Museum in Warsaw.", credit: "Unknown artist / National Museum in Warsaw, Google Art Project", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Faras_-_Bishop_Petros_with_Saint_Peter_-_Google_Art_Project.jpg"}
 ---
 Faras, the ancient Pachoras, stood on the Nile near today's border between Sudan and Egypt. It was a leading town of Nobadia, a Nubian kingdom whose rulers became Christian in the 6th century. Early in the 8th century a cathedral was built there, and from then until the 14th century its walls were painted with saints, archangels and Nubia's own bishops.
 

@@ -27,6 +27,8 @@ sources:
   - {title: "Eromo Egbejule, The Guardian: France signals willingness to discuss reparations for colonial massacres in Niger (2025)", url: "https://www.theguardian.com/world/2025/jul/15/france-willingness-discuss-reparations-niger"}
   - {title: "AllAfrica: interview with Aï Keïta Yara (2001)", url: "https://allafrica.com/stories/200102260050.html"}
   - {title: "RFI, La marche du monde: L'Histoire africaine selon Med Hondo (2023)", url: "https://www.rfi.fr/fr/podcasts/la-marche-du-monde/20230702-l-histoire-africaine-selon-med-hondo"}
+media:
+  - {type: "image", file: "sarraounia-film.jpg", caption: "Context for Sarraounia: director Med Hondo at the Cineteca di Bologna in 2017; frame from Réda Zine's video.", credit: "Réda Zine (YouTube user: @MrAfnorock)", license: "CC BY 4.0", url: "https://commons.wikimedia.org/wiki/File:Med_hondo.png"}
 ---
 In 1899 a French column under the captains Paul Voulet and Julien Chanoine marched east across what is now Niger towards Lake Chad, killing as it went; at Birni-N'Konni it carried out a massacre. When Paris sent Colonel Jean-François Klobb to take command, Voulet had him shot. On its path stood Sarraounia, queen of the Azna, who chose to fight when most of her neighbours made deals with the invaders.
 

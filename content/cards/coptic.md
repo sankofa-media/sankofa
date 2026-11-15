@@ -21,6 +21,8 @@ sources:
   - {title: "Foy Scalf, The Rosetta Stone: Unlocking the Ancient Egyptian Language, American Research Center in Egypt", url: "https://arce.org/?p=2468"}
   - {title: "German National Library (DNB), Media history: Jean-François Champollion", url: "https://mediengeschichte.dnb.de/DBSMZBN/Content/EN/SoundsSymbolsScript/01-champollion-jean-francois-en.html"}
   - {title: "Encyclopaedia Britannica: Jean-François Champollion", url: "https://www.britannica.com/biography/Jean-Francois-Champollion"}
+media:
+  - {type: "image", file: "coptic.jpg", caption: "A Coptic liturgical codex, seventeenth–eighteenth century; Metropolitan Museum of Art.", credit: "Metropolitan Museum of Art", license: "CC0", url: "https://commons.wikimedia.org/wiki/File:Coptic_Liturgical_Codex_MET_DP100664.jpg"}
 ---
 Coptic is the final stage of the language of ancient Egypt, spoken from about the second century CE. Earlier Egyptian had been written in hieroglyphs and in the cursive hieratic and Demotic scripts. But written Demotic no longer matched the spoken language, and Egypt's Christians, for whom Greek was the language of their faith, wrote Egyptian in the Greek alphabet instead. For sounds that Greek lacked they added seven letters taken from Demotic. They also borrowed many Greek words for religious ideas.
 

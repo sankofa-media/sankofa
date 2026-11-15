@@ -20,6 +20,8 @@ sources:
   - {title: "Zakiya Adair, BlackPast: Florence Mills (1896-1927)", url: "https://www.blackpast.org/african-american-history/mills-florence-1896-1927/"}
   - {title: "Contemporary Black Biography (via Encyclopedia.com): Mills, Florence 1896–1927", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/mills-florence-1896-1927"}
   - {title: "Bill Egan, FlorenceMills.com: Biography", url: "http://www.florencemills.com/biography.htm"}
+media:
+  - {type: "image", file: "blackbirds-1926.jpg", caption: "Florence Mills in costume for Blackbirds of 1926, 1926.", credit: "Unknown photographer / New York Public Library", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Florence_Mills_-_Blackbirds_of_1926.jpg"}
 ---
 Blackbirds was an all-Black revue built around the singer and dancer Florence Mills, and in 1926 it carried her from Harlem to Paris and then to the London Pavilion on Piccadilly Circus. Mills, born in Washington, D.C., in 1896, had become a star in [[shuffle-along|Shuffle Along]] in 1921. She already knew London: in 1923, in the revue Dover Street to Dixie, audiences there had given her an ovation before every song.
 

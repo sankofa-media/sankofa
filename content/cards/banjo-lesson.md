@@ -25,6 +25,8 @@ sources:
   - {title: "Britannica: Henry Ossawa Tanner", url: "https://www.britannica.com/biography/Henry-Ossawa-Tanner"}
   - {title: "Robert Fikes, BlackPast: Henry Ossawa Tanner (1859–1937)", url: "https://www.blackpast.org/african-american-history/tanner-henry-ossawa-1859-1937/"}
   - {title: "National Humanities Center, The Making of African American Identity: The \"Negro banjo player\", images from the 19th century", url: "https://nationalhumanitiescenter.org/pds/maai2/identity/text4/text4read.htm"}
+media:
+  - {type: "image", file: "banjo-lesson.jpg", caption: "The Banjo Lesson by Henry Ossawa Tanner, 1893; Hampton University Museum.", credit: "Henry Ossawa Tanner / Hampton University Museum", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Henry_Ossawa_Tanner_-_The_Banjo_Lesson.jpg"}
 ---
 Henry Ossawa Tanner was born in Pittsburgh in 1859, the son of a prominent churchman, grew up in Philadelphia and studied painting there under Thomas Eakins. In 1891 he left for Paris and the Académie Julian. Two years later, in poor health, he came back to Philadelphia, to a country whose popular pictures of a Black man with a [[banjo|banjo]] were mostly drawn by white artists: a carefree figure of fun, made to be laughed at.
 

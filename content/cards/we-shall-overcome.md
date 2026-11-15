@@ -27,6 +27,8 @@ sources:
   - {title: "The American Presidency Project: Lyndon B. Johnson, Special Message to the Congress: The American Promise (15 March 1965)", url: "https://www.presidency.ucsb.edu/documents/special-message-the-congress-the-american-promise"}
   - {title: "Miller Center: March 15, 1965: Speech Before Congress on Voting Rights", url: "https://millercenter.org/the-presidency/presidential-speeches/march-15-1965-speech-congress-voting-rights"}
   - {title: "Charleston Magazine: Overcoming at the Cigar Factory", url: "https://charlestonmag.com/features/overcoming_at_the_cigar_factory"}
+media:
+  - {type: "image", file: "we-shall-overcome.jpg", caption: "Context for We Shall Overcome: folk singer Pete Seeger photographed by Fred Palumbo in 1955; Library of Congress.", credit: "Fred Palumbo / New York World-Telegram & Sun; Library of Congress", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Pete_Seeger_NYWTS.jpg"}
 ---
 "We Shall Overcome" is the anthem of the American civil rights movement, and its modern version was born on a picket line in Charleston, South Carolina. On 22 October 1945 more than a thousand workers at the American Tobacco Company's cigar factory walked out, demanding higher pay. Black and white strikers picketed through the winter. One of the Black strikers, Lucille Simmons, took an old hymn and turned "I" into "we": "We will overcome." The song came to close each day of picketing, and the strikers added verses such as "We will win our rights".
 

@@ -21,6 +21,8 @@ sources:
   - {title: "Mario de Valdes y Cocom, The Blurred Racial Lines of Famous Families: The Medici, PBS Frontline", url: "https://www.pbs.org/wgbh/pages/frontline/shows/secret/famous/mediciupdate.html"}
   - {title: "EUIdeas (European University Institute): Who was Giulia de Medici? Finding a Black presence in Renaissance Florence", url: "https://euideas.eui.eu/who-was-giulia-de-medici-finding-a-black-presence-in-renaissance-florence"}
   - {title: "Walters Art Museum: Pontormo, Portrait of Maria Salviati de' Medici and Giulia de' Medici, about 1539 (archived)", url: "http://web.archive.org/web/20260713025250/https://art.thewalters.org/object/37.596/"}
+media:
+  - {type: "image", file: "alessandro-de-medici.jpg", caption: "Alessandro de' Medici, painted by Bronzino between 1555 and 1565; Uffizi Gallery, Florence.", credit: "Bronzino; Uffizi Gallery / Web Gallery of Art", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Angelo_Bronzino_-_Alessandro_de%27_Medici_-_WGA3243.jpg"}
 ---
 In the early sixteenth century Florence still called itself a republic, though the Medici banking family had long ruled it from behind the scenes and avoided princely titles. Alessandro de' Medici was born around 1511, the illegitimate son of a servant in the Medici household, usually identified as Simonetta da Collevecchio. Officially his father was Lorenzo de' Medici, Duke of Urbino; many believed it was Giulio de' Medici, the future Pope Clement VII.
 

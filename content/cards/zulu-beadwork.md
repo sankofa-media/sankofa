@@ -17,6 +17,8 @@ sources:
   - {title: "Museums Victoria Collections: Northern Nguni Zulu Beadwork – Courtship Meanings", url: "https://collections.museumsvictoria.com.au/articles/16600"}
   - {title: "Horniman Museum and Gardens: Zulu beadwork pin, HC.1999.1024", url: "https://horniman.ac.uk/object/HC.1999.1024"}
   - {title: "Victoria and Albert Museum: Necklace, Xhosa or Zulu-speaking peoples, South Africa, 1850–1900 (O351)", url: "https://collections.vam.ac.uk/item/O351/necklace-unknown"}
+media:
+  - {type: "image", file: "zulu-beadwork.jpg", caption: "Context for Zulu beadwork: a nineteenth-century udlwedlwe staff with a female figure wearing beadwork, Brooklyn Museum, X968.", credit: "Brooklyn Museum", license: "CC BY 3.0", url: "https://commons.wikimedia.org/wiki/File:Brooklyn_Museum_X968_Staff_with_Female_Figure_Udlwedlwe_(2).jpg"}
 ---
 In the region now called KwaZulu-Natal, in South Africa, Zulu girls and women made beadwork that spoke. Beading was women's work. In the late 19th century, as tiny European glass beads became plentiful through trade, beadwork took on a role in courtship. Its colours and shapes could tell whether a woman was single, promised or married, and where she came from.
 

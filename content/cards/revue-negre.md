@@ -25,6 +25,8 @@ sources:
   - {title: "Internet Broadway Database: Shuffle Along (1921)", url: "https://www.ibdb.com/broadway-production/shuffle-along-9073"}
   - {title: "Hérodote.net: 2 octobre 1925, Joséphine Baker lance la Revue nègre", url: "https://www.herodote.net/almanach-ID-3598.php"}
   - {title: "Ordre de la Libération: Joséphine Freda Baker", url: "https://www.ordredelaliberation.fr/fr/medailles/josephine-freda-baker"}
+media:
+  - {type: "image", file: "revue-negre.jpg", caption: "Italo Orsi's poster for La Revue nègre at the Théâtre de l'Étoile, 1925.", credit: "Italo Orsi", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Orsi_-_Th%C3%A9%C3%A2tre_de_l%27%C3%89toile._La_Revue_n%C3%A8gre.jpg"}
 ---
 La Revue nègre was a music-hall show performed entirely by Black American artists, and it opened at the Théâtre des Champs-Élysées in Paris on 2 October 1925. It was the modernist house where Diaghilev's Ballets Russes had premiered Stravinsky's Rite of Spring in 1913. Paris in 1925 was mad about jazz and about African art. The American producer Caroline Dudley Reagan assembled the troupe in New York: twelve musicians, among them the clarinettist and saxophonist Sidney Bechet, and eight chorus dancers.
 
