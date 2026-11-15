@@ -260,6 +260,22 @@ test('in Russian, everything visible is Russian', async ({ page }) => {
   await expect(scene(page, 'session-day').locator('.fc-lens-btn[data-lens="botnick"]')).toHaveText('Брюс Ботник');
 });
 
+test('the songs play their official recordings in the docked player', async ({ page }) => {
+  await open(page, '#view=feature&item=forever-changes&scene=the-red-telephone');
+  await expect.poll(() => page.url()).toContain('scene=the-red-telephone');
+  for (const id of ['alone-again-or', 'old-man', 'you-set-the-scene']) await expect(scene(page, id).locator('.fc-play')).toHaveCount(1);
+  await expect(feature(page).locator('.fc-no-player')).toHaveCount(0);
+  const play = scene(page, 'the-red-telephone').locator('.fc-play');
+  await expect(play).toHaveAttribute('data-play', 'm_j0qicK9mc');
+  await play.scrollIntoViewIfNeeded();
+  await play.click();
+  await expect(page.locator('.mp')).toBeVisible();
+  await expect(page.locator('.mp-now b')).toContainText('The Red Telephone');
+  await goToScene(page, 'echoes');
+  await expect(scene(page, 'echoes').locator('.fc-play')).toHaveCount(3);
+  await expect(scene(page, 'echoes').locator('.fc-play[data-play="VOzHnbwZIUo"]')).toContainText('The Damned');
+});
+
 test('the chapter menu goes to a chapter', async ({ page }) => {
   await open(page);
   await sheet(page).locator('.fc-menu-btn').click();

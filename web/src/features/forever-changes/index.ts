@@ -15,6 +15,8 @@ import { lensPane } from './lenses';
 import { LeeMode, type LeeChapter } from './lee/mode';
 import { isPhone, LeePin, qrSvg } from './lee/pin';
 import { wantsLee } from './lee/url';
+import { ECHOES, SONGS, type Official } from './recordings';
+import { miniPlayer } from '../../views/miniPlayer';
 import '../engine/engine.css';
 import './forever-changes.css';
 
@@ -146,7 +148,8 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         const song = sc.song as Song | undefined;
         const visions = (sc.visions as string[] | undefined) ?? [];
         const stage = stageOf(sc, () => (sc.id === 'the-red-telephone' ? h('div.ft-stack', {}, art.song(visions[0], song?.n ?? 0), watch.el) : art.song(visions[0], song?.n ?? 0)));
-        const el = scene(sc, stage, { after: [h('p.ft-none.fc-no-player', {}, kit.ui('no-recording'))] });
+        const rec = SONGS[sc.id];
+        const el = scene(sc, stage, { after: [rec ? playButton(rec) : h('p.ft-none.fc-no-player', {}, kit.ui('no-recording'))] });
         el.dataset.side = song?.side ?? '';
         if (sc.id === 'live-and-let-live') scatter(el);
         return el;
@@ -158,7 +161,9 @@ export function mount(ctx: FeatureContext): FeatureInstance {
       case 'end':
         return scene(sc, null, { screens: 1.4, long: false });
       case 'echoes':
-        return scene(sc, stageOf(sc, () => art.echoes()));
+        return scene(sc, stageOf(sc, () => art.echoes()), {
+          after: [h('div.fc-plays', {}, h('p.fc-plays-label', {}, pick({ en: 'Official recordings', ru: 'Официальные записи' })), ...ECHOES.map((r) => playButton(r, `${r.artist}, ${r.year}`)))],
+        });
       case 'lee': {
         const open = h('button.btn.primary.fc-lee-go', { type: 'button' }, kit.ui('lee-open'));
         open.addEventListener('click', () => openLee());
@@ -169,6 +174,18 @@ export function mount(ctx: FeatureContext): FeatureInstance {
       default:
         return null;
     }
+  };
+
+  // ---------- the official recordings, in the museum's docked player ----------
+  const playButton = (r: Official, label?: string): HTMLElement => {
+    const b = h(
+      'button.btn.primary.ft-play.fc-play',
+      { type: 'button', 'data-play': r.youtube, 'aria-label': pick({ en: `Play “${r.title}”, ${r.artist}, ${r.year}`, ru: `Слушать «${r.title}», ${r.artist}, ${r.year}` }) },
+      h('span', { 'aria-hidden': 'true' }, '▶'),
+      label ?? pick({ en: 'Play', ru: 'Слушать' }),
+    );
+    b.addEventListener('click', () => miniPlayer().play([{ ref: `feature:${r.youtube}`, label: `${r.artist} · ${r.title.replace(/ \(.*\)$/, '')}`, rec: { source: 'youtube', kind: 'official', youtube: r.youtube, title: r.title, channel: r.channel } }], 0));
+    return b;
   };
 
   // ---------- the Arthur Lee mode, pinned ----------
