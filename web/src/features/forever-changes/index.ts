@@ -162,7 +162,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         return scene(sc, null, { screens: 1.4, long: false });
       case 'echoes':
         return scene(sc, stageOf(sc, () => art.echoes()), {
-          after: [h('div.fc-plays', {}, h('p.fc-plays-label', {}, pick({ en: 'Official recordings', ru: 'Официальные записи' })), ...ECHOES.map((r) => playButton(r, `${r.artist}, ${r.year}`)))],
+          after: [h('div.fc-plays', {}, h('p.fc-plays-label', {}, pick({ en: 'Official recordings', ru: 'Официальные записи' })), ...ECHOES.map((r) => playButton(r, r.year ? `${r.artist}, ${r.year}` : r.artist)))],
         });
       case 'lee': {
         const open = h('button.btn.primary.fc-lee-go', { type: 'button' }, kit.ui('lee-open'));
@@ -180,7 +180,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
   const playButton = (r: Official, label?: string): HTMLElement => {
     const b = h(
       'button.btn.primary.ft-play.fc-play',
-      { type: 'button', 'data-play': r.youtube, 'aria-label': pick({ en: `Play “${r.title}”, ${r.artist}, ${r.year}`, ru: `Слушать «${r.title}», ${r.artist}, ${r.year}` }) },
+      { type: 'button', 'data-play': r.youtube, 'aria-label': pick({ en: `Play “${r.title}”, ${r.artist}${r.year ? `, ${r.year}` : ''}`, ru: `Слушать «${r.title}», ${r.artist}${r.year ? `, ${r.year}` : ''}` }) },
       h('span', { 'aria-hidden': 'true' }, '▶'),
       label ?? pick({ en: 'Play', ru: 'Слушать' }),
     );

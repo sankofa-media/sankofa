@@ -14,7 +14,8 @@ export interface Official {
   /** The title as the upload names it. */
   title: string;
   artist: string;
-  year: number;
+  /** Absent when the release year is not confirmed. */
+  year?: number;
   /** oEmbed author_name. */
   channel: string;
   /** oEmbed author_url's channel id or handle. */
@@ -67,7 +68,6 @@ export const ECHOES: Official[] = [
     youtube: 'RZkkbFUB-x0',
     title: 'Alone Again Or (Official Audio)',
     artist: 'Calexico',
-    year: 2003,
     channel: 'Calexico',
     channelId: '@CasaDeCalexico',
     verified: 'oEmbed author_name "Calexico", author_url youtube.com/@CasaDeCalexico (the band\'s own channel); from the Feast of Wire 20th Anniversary Deluxe Edition',
