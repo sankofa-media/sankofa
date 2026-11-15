@@ -68,7 +68,7 @@ const album: Render = (kit, sc) => kit.section(sc, { stage: art.album(kit.text(s
 const simone: Render = (kit, sc) => {
   const n = kit.node(sc.nodes?.[0] ?? '');
   // The drawing at the piano develops into the photograph, when there is a cleared one.
-  const photo = kit.photo(sc.art);
+  const photo = kit.photo(sc.photo);
   const stage = photo ? h('figure.ft-photo', {}, develop(art.piano(), { src: photo.src, alt: photo.alt }, 0.25, 0.7), h('figcaption.ft-credit', {}, photo.credit)) : art.piano();
   return kit.section(sc, { stage, after: [n ? kit.playButton(n) : null] });
 };

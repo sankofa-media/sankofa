@@ -18,8 +18,19 @@ dek:
 reading: { en: "35–45 minutes, with sound", ru: "35–45 минут, со звуком" }
 lineage: lineage.yaml
 
-# Pictures. Generated art needs no label; a real photo needs a rights entry in
-# content/ledger/media.yaml (source page, licence wording, checksum).
+# Real photos. A photo needs a rights entry in content/ledger/media.yaml
+# (source page, licence wording, checksum); a scene shows one with `photo:`.
+#
+# Generated illustrations are a scene's `art:`: layers in art/ next to this
+# file, back to front, marked `generated: true` and never put in the photo
+# ledger. They carry no caption of their own; the finale's closing credits
+# say once that they are generated (ui.art-credit). Each layer has alt text
+# in English and Russian, or alt: "" when it is decorative; `depth` is its
+# parallax in pixels, role `figure` breathes, `state` shows it only while the
+# picture is in that state, `open` swings it open over a stretch of the
+# scene, `fit` registers it on the canvas (percent, scale). Sources: the art
+# contact sheet (door v2 and its finale porch and light, expedition v2, album
+# v1, piano v1, classroom v2, river v1), WebP at 1600 px.
 art:
   - id: simone-1965
     kind: photo
@@ -123,11 +134,20 @@ ui:
   branch-simone: { en: "Simone’s branch", ru: "Ветвь Симон", draft: true }
   show-flashes: { en: "Show the three claps", ru: "Показать три хлопка", draft: true }
   play-together: { en: "Clap together", ru: "Хлопнуть вместе", draft: true }
+  art-credit: { en: "Illustrations generated, edited by the museum", ru: "Иллюстрации созданы нейросетью, отобраны музеем" }
   filmstrip: { en: "On screen, year by year", ru: "На экране, год за годом", draft: true }
 
 scenes:
   - id: door
     kind: door
+    art: &door-art
+      generated: true
+      layers:
+        - { file: door-house.webp, depth: 6, alt: { en: "A small wooden house in rural Mississippi, spring 1939", ru: "Небольшой деревянный дом в сельском Миссисипи, весна 1939 года" } }
+        - { file: door-porch.webp, depth: 10, state: closed, alt: { en: "Its porch, the front door closed", ru: "Крыльцо, входная дверь закрыта" } }
+        - { file: door-porch-open.webp, depth: 10, state: open, alt: { en: "Its porch, the front door ajar", ru: "Крыльцо, входная дверь приоткрыта" } }
+        - { file: door-light.webp, depth: 10, state: open, alt: "" }
+        - { file: door-tree.webp, depth: 18, alt: "" }
     blocks:
       - { id: when, role: kicker, draft: true, en: "May 13, 1939. Byhalia, Mississippi", ru: "13 мая 1939 года. Байхейлия, Миссисипи" }
       - id: why-knock
@@ -161,6 +181,17 @@ scenes:
 
   - id: expedition
     kind: expedition
+    art:
+      generated: true
+      layers:
+        - { file: expedition-road.webp, depth: 4, alt: { en: "A dirt road through low fields", ru: "Грунтовая дорога среди низких полей" } }
+        - { file: expedition-ambulance.webp, depth: 10, alt: { en: "An old army ambulance turned into a recording studio on wheels", ru: "Старая армейская санитарная машина, превращённая в студию на колёсах" } }
+        - file: expedition-machine.webp
+          depth: 10
+          open: "0.12 0.4"
+          pivot: "63.3 59.4"
+          fit: { x: 7.04, y: 0, scale: 0.73 }
+          alt: { en: "Its back doors open on a machine that cuts sound onto discs", ru: "Задние двери открыты, внутри аппарат, режущий звук на диски" }
     blocks:
       - { id: kicker, role: kicker, draft: true, en: "The expedition", ru: "Экспедиция" }
       - id: why
@@ -222,6 +253,16 @@ scenes:
 
   - id: album
     kind: album
+    art:
+      generated: true
+      layers:
+        - { file: album-table.webp, depth: 3, alt: "" }
+        - { file: album-sleeves.webp, depth: 8, alt: { en: "An open album of 78-rpm records, its sleeves fanned out", ru: "Раскрытый альбом пластинок на 78 оборотов, конверты веером" } }
+        - file: album-disc.webp
+          depth: 12
+          role: spin
+          spin: { x: 57.4, y: 69.19, ratio: 0.52, tilt: -5, face: [ 57.17, 71.4, 26.4, 19.9 ] }
+          alt: { en: "One shellac disc with a blank red label", ru: "Шеллачная пластинка с пустой красной наклейкой" }
     nodes: [ afs-l4-1942 ]
     blocks:
       - { id: kicker, role: kicker, draft: true, en: "1942", ru: "1942" }
@@ -246,7 +287,13 @@ scenes:
   - id: simone
     kind: simone
     nodes: [ simone-1964 ]
-    art: simone-1965
+    photo: simone-1965
+    art:
+      generated: true
+      layers:
+        - { file: piano-stage.webp, depth: 3, alt: "" }
+        - { file: piano-grand.webp, depth: 8, alt: { en: "A grand piano on a dark stage", ru: "Рояль на тёмной сцене" } }
+        - { file: piano-figure.webp, depth: 12, role: figure, pivot: "34 88", alt: { en: "A woman at the piano, upright, her hands on the keys", ru: "Женщина за роялем, прямая, руки на клавишах" } }
     blocks:
       - { id: kicker, role: kicker, draft: true, en: "1964", ru: "1964" }
       - id: version
@@ -317,6 +364,11 @@ scenes:
 
   - id: river
     kind: river
+    art:
+      generated: true
+      aspect: "1 / 3"
+      layers:
+        - { file: river-ink.webp, alt: "" }
     blocks:
       - { id: kicker, role: kicker, draft: true, en: "The river", ru: "Река" }
       - id: intro
@@ -449,6 +501,12 @@ scenes:
 
   - id: classroom
     kind: classroom
+    art:
+      generated: true
+      layers:
+        - { file: classroom-room.webp, depth: 4, alt: { en: "A school music room, seen from its doorway", ru: "Музыкальный класс в школе, вид из дверей" } }
+        - { file: classroom-children.webp, depth: 9, role: figure, pivot: "50 80", fit: { x: -2.5 }, alt: { en: "Children standing in a circle, clapping", ru: "Дети стоят в кругу и хлопают" } }
+        - { file: classroom-teacher.webp, depth: 13, role: figure, pivot: "86 88", fit: { x: 3.19, y: 1.63, scale: 0.96 }, alt: { en: "Their teacher keeps the beat beside a small speaker", ru: "Учительница отбивает ритм рядом с небольшой колонкой" } }
     blocks:
       - { id: kicker, role: kicker, draft: true, en: "The classroom", ru: "Класс" }
       - id: text
@@ -460,6 +518,8 @@ scenes:
 
   - id: finale
     kind: finale
+    # The same house: its door opens as the story closes.
+    art: *door-art
     nodes: [ shipp-1939 ]
     blocks:
       - id: together

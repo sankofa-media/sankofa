@@ -40,6 +40,46 @@ export interface Art {
   credit?: Bi;
 }
 
+/**
+ * One layer of a scene's generated illustration: a transparent image on the
+ * scene's canvas, stacked in order (first is furthest back).
+ */
+export interface ArtLayer {
+  /** A file in content/features/<id>/art. */
+  file: string;
+  /** Parallax: how many pixels the layer travels through the scene (0 is still). */
+  depth?: number;
+  /** figure: breathes slightly; spin: turns slowly in its own plane (see `spin`). */
+  role?: ArtRole;
+  /** What it shows for a screen reader, or "" for a decorative layer. Required either way. */
+  alt: Bi | '';
+  /** Shown only while the picture is in this state (a door closed or open). */
+  state?: string;
+  /** Appears over this part of the scene's progress, swinging open from its pivot: "from to". */
+  open?: string;
+  /** Registration on the canvas, in percent of its width and height, and a scale. */
+  fit?: { x?: number; y?: number; scale?: number };
+  /** The point the layer breathes or opens around, in percent: "x y". */
+  pivot?: string;
+  /**
+   * For a disc seen at an angle: the centre it turns about (percent), the
+   * ratio of its axes, its tilt (degrees), and the face that turns, an
+   * ellipse [cx, cy, rx, ry] in percent (the rim stays still).
+   */
+  spin?: { x: number; y: number; ratio: number; tilt?: number; face?: [number, number, number, number] };
+}
+
+export type ArtRole = 'figure' | 'spin';
+export const ART_ROLES: readonly ArtRole[] = ['figure', 'spin'];
+
+/** A scene's illustration: generated layers, marked as generated (they never enter the photo-rights ledger). */
+export interface SceneArt {
+  generated: true;
+  /** The canvas, "w / h" (3 / 2 when not given). */
+  aspect?: string;
+  layers: ArtLayer[];
+}
+
 export interface Scene {
   id: string;
   /** Which mechanic the feature module renders for it (door, minute, river…). */
@@ -47,6 +87,10 @@ export interface Scene {
   blocks: Block[];
   /** Lineage nodes the scene plays or shows. */
   nodes?: string[];
+  /** A real photo from the feature's art list (its id). */
+  photo?: string;
+  /** The scene's generated illustration. */
+  art?: SceneArt;
   /** Anything else the scene's mechanic reads (figures, flashes, frames…). */
   [extra: string]: unknown;
 }
@@ -124,6 +168,48 @@ export interface ValidateContext {
   sync?: Set<string>;
   /** Dictionary card ids, for [[id|words]] links in the text. */
   cards?: Set<string>;
+  /** Files in the feature's art folder. */
+  artFiles?: Set<string>;
+  /** Every file named in the media ledger, cleared or not. */
+  ledger?: Set<string>;
+}
+
+const ART_FILE = /^[a-z0-9]+(?:-[a-z0-9]+)*\.(?:webp|png|jpg)$/;
+const RANGE = /^\s*(0|1|0?\.\d+)\s+(0|1|0?\.\d+)\s*$/;
+
+/** Every art file the feature's scenes use, for the build to ship. */
+export function sceneArtFiles(f: FeatureSource): string[] {
+  return [...new Set(f.scenes.flatMap((s) => (s.art?.layers ?? []).map((l) => l.file)))];
+}
+
+/** Problems with a scene's generated illustration. */
+export function validateSceneArt(art: unknown, ctx: ValidateContext = {}, photos: Set<string> = new Set()): string[] {
+  const errs: string[] = [];
+  const a = art as SceneArt;
+  if (!a || typeof a !== 'object' || Array.isArray(a)) return ['art must be { generated: true, layers: [...] }'];
+  if (a.generated !== true) errs.push('art must be marked generated: true (a real photo goes in the feature\'s art list, with its rights)');
+  if (a.aspect !== undefined && !/^\d+(\.\d+)?\s*\/\s*\d+(\.\d+)?$/.test(a.aspect)) errs.push(`art aspect ${JSON.stringify(a.aspect)} is not "w / h"`);
+  if (!Array.isArray(a.layers) || a.layers.length === 0) return [...errs, 'art has no layers'];
+  for (const l of a.layers) {
+    const at = `art layer ${l?.file ?? '?'}`;
+    if (typeof l?.file !== 'string' || !ART_FILE.test(l.file)) {
+      errs.push(`${at}: file must be a lowercase name ending in .webp, .png or .jpg`);
+      continue;
+    }
+    if (ctx.artFiles && !ctx.artFiles.has(l.file)) errs.push(`${at}: no such file in the feature's art folder`);
+    if (ctx.ledger?.has(l.file) || photos.has(l.file)) errs.push(`${at}: generated art must not be in the photo-rights ledger or the photo list`);
+    if (!('alt' in l)) errs.push(`${at}: needs alt (en and ru), or alt: "" when it is decorative`);
+    else if (l.alt !== '' && !bi(l.alt)) errs.push(`${at}: alt needs en and ru, or "" when decorative`);
+    if (l.depth !== undefined && !(typeof l.depth === 'number' && l.depth >= 0 && l.depth <= 80)) errs.push(`${at}: depth must be 0..80 pixels`);
+    if (l.role !== undefined && !ART_ROLES.includes(l.role)) errs.push(`${at}: unknown role ${JSON.stringify(l.role)}`);
+    if (l.role === 'spin' && !(l.spin && [l.spin.x, l.spin.y, l.spin.ratio].every((v) => typeof v === 'number') && l.spin.ratio > 0 && l.spin.ratio <= 1)) errs.push(`${at}: a spinning layer needs spin: { x, y, ratio (0..1] }`);
+    if (l.spin?.face !== undefined && !(Array.isArray(l.spin.face) && l.spin.face.length === 4 && l.spin.face.every((v) => typeof v === 'number'))) errs.push(`${at}: spin.face must be [cx, cy, rx, ry] in percent`);
+    if (l.state !== undefined && !isFeatureId(l.state)) errs.push(`${at}: state must be a slug`);
+    if (l.open !== undefined && !RANGE.test(l.open)) errs.push(`${at}: open must be "from to" between 0 and 1`);
+    if (l.pivot !== undefined && !/^\s*-?\d+(\.\d+)?\s+-?\d+(\.\d+)?\s*$/.test(l.pivot)) errs.push(`${at}: pivot must be "x y" in percent`);
+    for (const k of ['x', 'y', 'scale'] as const) if (l.fit?.[k] !== undefined && typeof l.fit[k] !== 'number') errs.push(`${at}: fit.${k} must be a number`);
+  }
+  return errs;
 }
 
 /** Problems with a feature's content; empty when it may be built. */
@@ -136,6 +222,7 @@ export function validateFeature(f: FeatureSource, ctx: ValidateContext = {}): st
   for (const [k, v] of Object.entries(f.ui ?? {})) if (!bi(v)) errs.push(`ui.${k} needs en and ru`);
   for (const a of f.art ?? []) {
     if (a.kind === 'photo' && !(a.rights && ctx.rights?.has(a.rights))) errs.push(`art ${a.id}: a real photo needs a rights entry in the media ledger`);
+    if (a.kind === 'generated' && ctx.ledger?.has(a.file)) errs.push(`art ${a.id}: generated art must not be in the photo-rights ledger`);
     if (a.kind !== 'photo' && a.kind !== 'generated') errs.push(`art ${a.id}: kind must be photo or generated`);
     if (a.kind === 'photo' && !(bi(a.alt) && bi(a.credit))) errs.push(`art ${a.id}: a real photo needs alt and credit in en and ru`);
   }
@@ -144,13 +231,15 @@ export function validateFeature(f: FeatureSource, ctx: ValidateContext = {}): st
     return errs;
   }
   const sceneIds = new Set<string>();
+  const photos = new Set((f.art ?? []).filter((a) => a.kind === 'photo').map((a) => a.file));
   for (const s of f.scenes) {
     const at = `scene ${s.id ?? '?'}`;
     if (!isFeatureId(s.id)) errs.push(`${at}: id is not a slug`);
     else if (sceneIds.has(s.id)) errs.push(`${at}: duplicate id`);
     sceneIds.add(s.id);
     if (!s.kind) errs.push(`${at}: no kind`);
-    if (s.art !== undefined && !(f.art ?? []).some((a) => a.id === s.art)) errs.push(`${at}: art ${String(s.art)} is not in the feature's art list`);
+    if (s.photo !== undefined && !(f.art ?? []).some((a) => a.id === s.photo && a.kind === 'photo')) errs.push(`${at}: photo ${String(s.photo)} is not a photo in the feature's art list`);
+    if (s.art !== undefined) errs.push(...validateSceneArt(s.art, ctx, photos).map((e) => `${at}: ${e}`));
     const blocks = Array.isArray(s.blocks) ? s.blocks : [];
     const blockIds = new Set<string>();
     for (const b of blocks) {

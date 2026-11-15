@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readdirSync, readFileSync } from 'node:fs';
 import { parse } from 'yaml';
-import { clapAngle, FlashGate, formatClock, parseClock, publishFeature, sceneAt, sceneProgress, validateFeature, windowed, type FeatureSource } from '../src/features/model';
+import { clapAngle, FlashGate, formatClock, parseClock, publishFeature, sceneArtFiles, sceneAt, sceneProgress, validateFeature, validateSceneArt, windowed, type FeatureSource, type SceneArt } from '../src/features/model';
 import { branches, compileLineage, layoutRiver, playableOf, sourcedNodes, validateLineage, youtubeId, type RawLineage } from '../src/features/lineage';
 
 const bi = (en: string, ru: string) => ({ en, ru });
@@ -66,12 +66,12 @@ describe('feature validation', () => {
     const f = base();
     f.scenes[0].blocks[0].en = 'Hello [[jazz]] and [[nowhere|there]]';
     f.art = [{ id: 'p', kind: 'photo', file: 'p.jpg', rights: 'p.jpg' }];
-    f.scenes[1].art = 'missing';
+    f.scenes[1].photo = 'missing';
     const errs = validateFeature(f, { cards: new Set(['jazz']), rights: new Set(['p.jpg']) }).join('\n');
     expect(errs).toMatch(/card that does not exist: nowhere/);
     expect(errs).not.toMatch(/: jazz/);
     expect(errs).toMatch(/art p: a real photo needs alt and credit/);
-    expect(errs).toMatch(/scene two: art missing is not in the feature's art list/);
+    expect(errs).toMatch(/scene two: photo missing is not a photo in the feature's art list/);
   });
   it('a scene with only held text has nothing to show', () => {
     const f = base();
@@ -87,6 +87,69 @@ describe('feature validation', () => {
     expect(errs).toMatch(/ghost does not exist/);
     expect(errs).toMatch(/art p: a real photo needs a rights entry/);
     expect(errs).not.toMatch(/art g/);
+  });
+});
+
+describe('scene illustrations', () => {
+  const layers = (): SceneArt => ({
+    generated: true,
+    layers: [
+      { file: 'door-house.webp', depth: 6, alt: bi('A house', 'Дом') },
+      { file: 'door-tree.webp', alt: '' },
+      { file: 'door-porch.webp', state: 'closed', open: '0.1 0.4', pivot: '50 60', fit: { x: 2, scale: 0.9 }, alt: bi('A porch', 'Крыльцо') },
+      { file: 'album-disc.webp', role: 'spin', spin: { x: 57, y: 72, ratio: 0.5 }, alt: '' },
+    ],
+  });
+  const ctx = { artFiles: new Set(['door-house.webp', 'door-tree.webp', 'door-porch.webp', 'album-disc.webp']), ledger: new Set(['nina.jpg']) };
+  it('a sound layered picture passes, and the build ships each file once', () => {
+    expect(validateSceneArt(layers(), ctx)).toEqual([]);
+    const f = base();
+    f.scenes[0].art = layers();
+    f.scenes[1].art = { generated: true, layers: [{ file: 'door-house.webp', alt: '' }] };
+    expect(validateFeature(f, ctx)).toEqual([]);
+    expect(sceneArtFiles(f)).toEqual(['door-house.webp', 'door-tree.webp', 'door-porch.webp', 'album-disc.webp']);
+    expect(publishFeature(f).data.scenes[0].art?.layers).toHaveLength(4);
+  });
+  it('every layer exists and has alt text, or says it is decorative', () => {
+    const a = layers();
+    a.layers[0].file = 'door-gone.webp';
+    delete (a.layers[1] as { alt?: unknown }).alt;
+    a.layers[2].alt = { en: 'A porch', ru: '' };
+    const errs = validateSceneArt(a, ctx).join('\n');
+    expect(errs).toMatch(/door-gone.webp: no such file/);
+    expect(errs).toMatch(/door-tree.webp: needs alt/);
+    expect(errs).toMatch(/door-porch.webp: alt needs en and ru/);
+    expect(validateSceneArt({ ...layers(), layers: [] }, ctx).join()).toMatch(/no layers/);
+    expect(validateSceneArt('door.png', ctx).join()).toMatch(/generated: true, layers/);
+  });
+  it('generated art is marked generated and never mixed into the photo ledger', () => {
+    const unmarked = { ...layers(), generated: false } as unknown as SceneArt;
+    expect(validateSceneArt(unmarked, ctx).join()).toMatch(/must be marked generated: true/);
+    const a = layers();
+    a.layers[0].file = 'nina.jpg';
+    const errs = validateSceneArt(a, { ...ctx, artFiles: new Set([...ctx.artFiles, 'nina.jpg']) }).join();
+    expect(errs).toMatch(/nina.jpg: generated art must not be in the photo-rights ledger/);
+    // A photo of the feature's own list cannot be passed off as a layer either.
+    const f = base();
+    f.art = [{ id: 'p', kind: 'photo', file: 'door-house.webp', rights: 'door-house.webp', alt: bi('x', 'х'), credit: bi('c', 'к') }, { id: 'g', kind: 'generated', file: 'nina.jpg' }];
+    f.scenes[0].art = layers();
+    const all = validateFeature(f, { ...ctx, rights: new Set(['door-house.webp']) }).join('\n');
+    expect(all).toMatch(/scene one: art layer door-house.webp: generated art must not be in the photo-rights ledger/);
+    expect(all).toMatch(/art g: generated art must not be in the photo-rights ledger/);
+  });
+  it('depths, roles, states, windows and spins are checked', () => {
+    const a = layers();
+    a.layers[0].depth = 500;
+    a.layers[1].role = 'dance' as never;
+    a.layers[2].state = 'Open Wide';
+    a.layers[2].open = 'soon';
+    a.layers[3].spin = undefined;
+    const errs = validateSceneArt(a, ctx).join('\n');
+    expect(errs).toMatch(/depth must be 0..80/);
+    expect(errs).toMatch(/unknown role "dance"/);
+    expect(errs).toMatch(/state must be a slug/);
+    expect(errs).toMatch(/open must be "from to"/);
+    expect(errs).toMatch(/spinning layer needs spin/);
   });
 });
 
@@ -148,7 +211,15 @@ describe('the Sea Lion Girls content', () => {
     const ledger = parse(readFileSync('../content/ledger/media.yaml', 'utf8')) as { file: string; feature?: string }[];
     const rights = new Set(ledger.filter((e) => e.feature === 'sea-lion-girls').map((e) => e.file));
     const cards = new Set(readdirSync('../content/cards').filter((x) => !/\.[a-z]{2}\.md$/.test(x)).map((x) => x.replace(/\.md$/, '')));
-    expect(validateFeature(f, { nodes: new Set(lin.nodes.map((n) => n.id)), sourced: sourcedNodes(lin), sync, rights, cards })).toEqual([]);
+    const artFiles = new Set(readdirSync('../content/features/sea-lion-girls/art'));
+    const all = new Set(ledger.map((e) => e.file));
+    expect(validateFeature(f, { nodes: new Set(lin.nodes.map((n) => n.id)), sourced: sourcedNodes(lin), sync, rights, cards, artFiles, ledger: all })).toEqual([]);
+    // The approved illustrations: every scene redrawn so far has its layers, generated and with alt fields.
+    const drawn = f.scenes.filter((s) => s.art).map((s) => s.id);
+    expect(drawn).toEqual(['door', 'expedition', 'album', 'simone', 'river', 'classroom', 'finale']);
+    expect(f.scenes.every((s) => !s.art || s.art.generated === true)).toBe(true);
+    expect(sceneArtFiles(f).every((file) => artFiles.has(file))).toBe(true);
+    expect(f.ui?.['art-credit']).toMatchObject({ en: 'Illustrations generated, edited by the museum', ru: 'Иллюстрации созданы нейросетью, отобраны музеем' });
     expect(validateLineage(lin)).toEqual([]);
     const blocks = f.scenes.flatMap((s) => s.blocks);
     expect(blocks.every((b) => typeof b.draft === 'boolean')).toBe(true);
