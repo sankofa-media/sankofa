@@ -16,6 +16,7 @@ import { isCalm, onCalm, setCalm } from './calm';
 import { ClapCircle } from './circle';
 import { BEAT, clap, ClapBed, knock } from './clap';
 import { inkDefs, LivingInk } from './ink';
+import { layered, type Picture } from './layers';
 import { Scroller } from './scroll';
 
 const TEXT_TAG: Record<string, string> = { kicker: 'p.ft-kicker', title: 'h2.ft-title', lede: 'p.ft-lede', text: 'p.ft-text', caption: 'p.ft-caption', line: 'p.ft-line', quote: 'p.ft-quote', note: 'p.ft-note' };
@@ -181,7 +182,12 @@ export class Kit {
     this.ctx.root.classList.toggle('is-calm', on);
     this.calmBtn.setAttribute('aria-pressed', String(on));
     if (on) this.scroller?.revealAll();
-    for (const el of this.sceneEls) this.ink.draw(el, Number(el.dataset.p ?? 0));
+    // Redraw every scene where it stands, and let its mechanics settle too (a door that opens, a river grown).
+    for (const el of this.sceneEls) {
+      const p = Number(el.dataset.p ?? 0);
+      this.ink.draw(el, p);
+      this.progress.get(el.dataset.scene!)?.(p, el);
+    }
   }
 
   get calm(): boolean {
@@ -255,6 +261,17 @@ export class Kit {
   credit(n: LineageNode): HTMLElement | null {
     if (n.play?.source !== 'audio') return null;
     return h('p.ft-credit', { 'data-credit': n.id }, this.ui('loc-credit'), ' ', n.link ? h('a', { href: n.link, target: '_blank', rel: 'noopener noreferrer' }, this.ui('loc-item')) : null);
+  }
+
+  /** A scene's generated illustration as layers (null when it has none yet). */
+  art(sc: Scene, opts: { state?: string; overlay?: Node | null } = {}): Picture | null {
+    if (!sc.art?.layers?.length) return null;
+    return layered(sc.art, (file) => this.ctx.app.media(`features/${this.ctx.data.id}/${file}`), { name: sc.id, ...opts });
+  }
+
+  /** Whether any scene shows generated art (the closing credits say so once). */
+  get generated(): boolean {
+    return this.ctx.data.scenes.some((sc) => sc.art?.generated);
   }
 
   /** A real photo from the feature's art list (cleared by the build), or null. */

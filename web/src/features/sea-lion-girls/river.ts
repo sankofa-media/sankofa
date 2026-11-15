@@ -3,11 +3,12 @@
 // docked player. Stops along it are cards for one or a few versions.
 import { h } from '../../lib/dom';
 import type { Kit } from '../engine/kit';
+import type { Picture } from '../engine/layers';
 import { s } from '../engine/ink';
 import { CATEGORIES, layoutRiver, type Category, type LineageNode } from '../lineage';
 import { glyph } from './art';
 
-export function river(kit: Kit): { el: HTMLElement; grow(p: number): void } {
+export function river(kit: Kit, backdrop: Picture | null = null): { el: HTMLElement; grow(p: number): void } {
   const nodes = kit.ctx.data.lineage?.nodes ?? [];
   const lay = layoutRiver(nodes);
   const byId = new Map(nodes.map((n) => [n.id, n]));
@@ -46,7 +47,9 @@ export function river(kit: Kit): { el: HTMLElement; grow(p: number): void } {
     });
     return b;
   });
-  const field = h('div.rv-field', { style: `--rows:${lay.rows}` }, edges, ...buttons);
+  // The drawn river runs behind the tree, as long as it is.
+  backdrop?.el.classList.add('rv-art');
+  const field = h('div.rv-field', { style: `--rows:${lay.rows}` }, backdrop?.el ?? null, edges, ...buttons);
   const filters: Category[] = [...CATEGORIES];
   const fbtn = (c: Category | 'all') =>
     h('button.btn.rv-filter', { type: 'button', 'data-filter': c, 'aria-pressed': String(c === 'all'), onclick: () => filter(c) }, kit.ui(`filter-${c}`));

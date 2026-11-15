@@ -6,6 +6,7 @@
 //   data-fade="from to"  an element that appears over that part
 //   data-depth="px"      a parallax layer, shifted by up to that many pixels
 //   data-develop="from to" a photo developing out of its drawing (or back)
+//   data-open="from to"  a layer of a picture swinging open (--open, 0..1)
 // Real photos may be layered into a drawing only with their rights recorded
 // (content/ledger/media.yaml, checked by the build); generated art needs no
 // label. Calm mode shows every drawing finished and still.
@@ -120,6 +121,7 @@ interface Parts {
   fade: [Element & ElementCSSInlineStyle, number, number][];
   depth: [Element & ElementCSSInlineStyle, number][];
   develop: [Element & ElementCSSInlineStyle, number, number][];
+  open: [Element & ElementCSSInlineStyle, number, number][];
 }
 
 const range = (v: string | undefined): [number, number] => {
@@ -151,6 +153,7 @@ export class LivingInk {
         fade: [...scene.querySelectorAll<HTMLElement>('[data-fade]')].map((e) => [e, ...range(e.dataset.fade)]),
         depth: [...scene.querySelectorAll<HTMLElement>('[data-depth]')].map((e) => [e, Number(e.dataset.depth) || 0]),
         develop: [...scene.querySelectorAll<HTMLElement>('[data-develop]')].map((e) => [e, ...range(e.dataset.develop)]),
+        open: [...scene.querySelectorAll<HTMLElement>('[data-open]')].map((e) => [e, ...range(e.dataset.open)]),
       };
       this.parts.set(scene, p);
     }
@@ -170,6 +173,7 @@ export class LivingInk {
     for (const [el, a, b] of parts.fade) el.style.opacity = String(calm ? 1 : windowed(p, a, b));
     for (const [el, d] of parts.depth) el.style.transform = calm ? '' : `translateY(${((0.5 - p) * d).toFixed(1)}px)`;
     for (const [el, a, b] of parts.develop) el.style.setProperty('--develop', String(calm ? 1 : windowed(p, a, b)));
+    for (const [el, a, b] of parts.open) el.style.setProperty('--open', String(calm ? 1 : windowed(p, a, b)));
   }
 
   dispose(): void {
@@ -181,13 +185,15 @@ export class LivingInk {
  * A photo developing out of its drawing: the drawing on top fades as the
  * photo comes up underneath. `photo` must be a file the build cleared
  * (a rights entry in the media ledger); without one, the drawing stays alone.
+ * The drawing may be ink or a layered illustration.
  */
-export function develop(draw: SVGSVGElement, photo: { src: string; alt: string } | null, from = 0.3, to = 0.8): HTMLElement {
+export function develop(draw: Element, photo: { src: string; alt: string } | null, from = 0.3, to = 0.8): HTMLElement {
   const box = document.createElement('div');
   box.className = 'ink-develop';
   box.dataset.develop = `${from} ${to}`;
   if (photo) {
     const img = document.createElement('img');
+    img.className = 'ink-photo';
     img.src = photo.src;
     img.alt = photo.alt;
     img.loading = 'lazy';

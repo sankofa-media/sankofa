@@ -7,7 +7,8 @@ import { audioContext } from '../../lib/sound';
 import type { FeatureContext, FeatureInstance } from '../host';
 import { FlashGate, parseClock, formatClock, type Figure, type Frame, type Scene } from '../model';
 import { BEAT, clap } from '../engine/clap';
-import { develop, drawing, ink, s, sketch } from '../engine/ink';
+import { blot, develop, drawing, ink, s, sketch } from '../engine/ink';
+import type { Picture } from '../engine/layers';
 import { Kit, watchYouTubeTime } from '../engine/kit';
 import * as art from './art';
 import { river, stop, syncYear } from './river';
@@ -16,14 +17,26 @@ import './sea-lion-girls.css';
 
 type Render = (kit: Kit, sc: Scene) => HTMLElement;
 
+/** The scene's generated layers, or the placeholder drawing until it has them. */
+const picture = (kit: Kit, sc: Scene, placeholder: () => Element, opts: Parameters<Kit['art']>[1] = {}): Element => kit.art(sc, opts)?.el ?? placeholder();
+
+/** The house: its layered picture with a door that opens, or the drawn placeholder. */
+function house(kit: Kit, sc: Scene): { el: Element; open(on: boolean): void } {
+  const pic: Picture | null = kit.art(sc, { state: 'closed' });
+  if (pic) return { el: pic.el, open: (on) => pic.setState(on ? 'open' : 'closed') };
+  const d = art.door();
+  return { el: d, open: (on) => d.classList.toggle('open', on) };
+}
+
 const door: Render = (kit, sc) => {
-  const drawingEl = art.door();
+  const home = house(kit, sc);
+  const drawingEl = home.el;
   const opened = h('div.ft-opened', { 'aria-live': 'polite' });
   const btn = h('button.btn.primary.ft-knock', { type: 'button' }, kit.ui('knock')) as HTMLButtonElement;
   btn.addEventListener('click', () => {
     kit.unlock(true);
     kit.ctx.root.dataset.knocked = '';
-    drawingEl.classList.add('open');
+    home.open(true);
     btn.disabled = true;
     btn.textContent = kit.ui('knocked');
     opened.replaceChildren(kit.block(sc.blocks.find((b) => b.id === 'opened')!));
@@ -38,10 +51,15 @@ const ringScene: Render = (kit, sc) => {
   hear.addEventListener('click', () => kit.setSound(kit.audio !== 'on'));
   const sync = () => hear.setAttribute('aria-pressed', String(kit.audio === 'on'));
   new MutationObserver(sync).observe(kit.ctx.root, { attributes: true, attributeFilter: ['data-audio'] });
-  return kit.section(sc, { stage: art.ring(), after: [hear] });
+  return kit.section(sc, { stage: picture(kit, sc, () => art.ring()), after: [hear] });
 };
 
-const expedition: Render = (kit, sc) => kit.section(sc, { stage: art.expedition(kit.text(sc.id, 'byhalia')) });
+const expedition: Render = (kit, sc) => {
+  // Where the road leads: a pin on the horizon with the place's name above it.
+  const place = kit.text(sc.id, 'byhalia');
+  const overlay = drawing('0 0 1600 1067', 'art-over', ink(sketch([[150, 634], [146, 560], [150, 500]], 44, 2), 0.05, 0.3, { class: 'ink-line red route' }), blot(150, 636, 7, 'red'), art.label(96, 482, place, 'ink-label place', '0.2 0.35'));
+  return kit.section(sc, { stage: picture(kit, sc, () => art.expedition(place), { overlay }) });
+};
 
 const family: Render = (kit, sc) => {
   const figs = (sc.figures as Figure[]) ?? [];
@@ -51,25 +69,38 @@ const family: Render = (kit, sc) => {
     {},
     ...figs.map((f, i) => h(`li${f.lead ? '.lead' : ''}`, { 'data-figure': f.id, 'data-fade': `${0.1 + i * 0.1} ${0.3 + i * 0.1}` }, h('b', {}, pick(f.name)), h('span', {}, [f.age ? String(f.age) : '', f.role ? pick(f.role) : ''].filter(Boolean).join(' · ')))),
   );
-  return kit.section(sc, { stage: h('div.ft-stack', {}, art.porch(heights, figs.map((f) => !!f.lead)), list), screens: 2.4 });
+  return kit.section(sc, { stage: h('div.ft-stack', {}, picture(kit, sc, () => art.porch(heights, figs.map((f) => !!f.lead))), list), screens: 2.4 });
 };
 
 const minute: Render = (kit, sc) => {
   const loc = kit.node(sc.nodes?.[0] ?? '');
   return kit.section(sc, {
-    stage: art.minute(),
+    stage: picture(kit, sc, () => art.minute()),
     after: [loc ? kit.playButton(loc, kit.ui('play-1939')) : null, loc ? kit.credit(loc) : null, h('p.ft-hint', {}, kit.ui('clap-hint'))],
     screens: 2.6,
   });
 };
 
-const album: Render = (kit, sc) => kit.section(sc, { stage: art.album(kit.text(sc.id, 'label-paris'), kit.text(sc.id, 'label-washington')), screens: 2.4 });
+const album: Render = (kit, sc) => {
+  const paris = kit.text(sc.id, 'label-paris');
+  const washington = kit.text(sc.id, 'label-washington');
+  // Across the empty paper above the album: Washington to Paris, in red ink.
+  const overlay = drawing(
+    '0 0 1600 1067',
+    'art-over',
+    ink(sketch([[170, 300], [520, 170], [900, 140], [1230, 190], [1440, 290]], 96, 4), 0.45, 0.95, { class: 'ink-line red route' }),
+    art.label(110, 360, washington, 'ink-label place', '0.4 0.55'),
+    art.label(1330, 360, paris, 'ink-label place', '0.85 1'),
+  );
+  return kit.section(sc, { stage: picture(kit, sc, () => art.album(paris, washington), { overlay }), screens: 2.4 });
+};
 
 const simone: Render = (kit, sc) => {
   const n = kit.node(sc.nodes?.[0] ?? '');
   // The drawing at the piano develops into the photograph, when there is a cleared one.
   const photo = kit.photo(sc.photo);
-  const stage = photo ? h('figure.ft-photo', {}, develop(art.piano(), { src: photo.src, alt: photo.alt }, 0.25, 0.7), h('figcaption.ft-credit', {}, photo.credit)) : art.piano();
+  const drawn = picture(kit, sc, () => art.piano());
+  const stage = photo ? h('figure.ft-photo', {}, develop(drawn, { src: photo.src, alt: photo.alt }, 0.25, 0.7), h('figcaption.ft-credit', {}, photo.credit)) : drawn;
   return kit.section(sc, { stage, after: [n ? kit.playButton(n) : null] });
 };
 
@@ -102,7 +133,7 @@ const single: Render = (kit, sc) => {
 const textScene: Render = (kit, sc) => kit.section(sc, { stage: art.page() });
 
 const riverScene: Render = (kit, sc) => {
-  const r = river(kit);
+  const r = river(kit, kit.art(sc));
   kit.onProgress(sc.id, (p) => r.grow(p));
   const el = kit.section(sc, { after: [r.el], screens: 1 });
   el.classList.add('ft-long');
@@ -178,7 +209,7 @@ const filmstrip: Render = (kit, sc) => {
 
 const silence: Render = (kit, sc) => kit.section(sc, { screens: 2 });
 
-const classroom: Render = (kit, sc) => kit.section(sc, { stage: art.classroom(), screens: 2.2 });
+const classroom: Render = (kit, sc) => kit.section(sc, { stage: picture(kit, sc, () => art.classroom()), screens: 2.2 });
 
 const finale: Render = (kit, sc) => {
   const credit = kit.text('single', 'credit');
@@ -190,9 +221,11 @@ const finale: Render = (kit, sc) => {
     h('span.fn-old', { 'data-develop': '0.15 0.5' }, credit),
     h('div.fn-new', { 'data-develop': '0.3 0.75' }, ...lines.map((b) => h('span', {}, pick(b)))),
   );
-  const doorEl = art.door();
-  doorEl.classList.add('open', 'fn-door');
-  kit.onProgress(sc.id, (p) => doorEl.classList.toggle('open', kit.calm ? false : p < 0.85));
+  // The door of the first scene, closed until the reader is well into the
+  // finale, then open with the light behind it (open at once in calm mode).
+  const home = house(kit, sc);
+  home.el.classList.add('fn-door');
+  kit.onProgress(sc.id, (p) => home.open(kit.calm || p > 0.3));
   const together = h('button.btn.primary.fn-together', { type: 'button' }, kit.ui('play-together'));
   together.addEventListener('click', () => {
     const loc = kit.node(sc.nodes?.[0] ?? '');
@@ -200,7 +233,8 @@ const finale: Render = (kit, sc) => {
     playTogether(kit);
   });
   const loc = kit.node(sc.nodes?.[0] ?? '');
-  return kit.section(sc, { stage: h('div.ft-stack', {}, label, doorEl), skip: lines.map((b) => b.id), after: [together, loc ? kit.credit(loc) : null], screens: 3 });
+  const artCredit = kit.generated ? h('p.ft-credit.ft-art-credit', {}, kit.ui('art-credit')) : null;
+  return kit.section(sc, { stage: h('div.ft-stack', {}, label, home.el), skip: lines.map((b) => b.id), after: [together, loc ? kit.credit(loc) : null, artCredit], screens: 3 });
 };
 
 /** Four bars of the reader's claps (where they fell on the circle) and the children's, over the 1939 voices. */
