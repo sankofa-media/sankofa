@@ -20,6 +20,10 @@ function onEscape(e: KeyboardEvent): void {
   closeCache();
 }
 
+// Going somewhere else in the museum (a link, Back) leaves the dialog behind.
+window.addEventListener('hashchange', () => closeCache());
+window.addEventListener('popstate', () => closeCache());
+
 export function closeCache(): void {
   if (!open) return;
   const { el, back } = open;
