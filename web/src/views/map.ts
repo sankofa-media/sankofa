@@ -43,6 +43,15 @@ export interface MapPoint {
   aria?: string;
 }
 
+/** A factoid with a place: a small light dot, quieter than a card's marker. */
+export interface MapFact {
+  id: string;
+  lon: number;
+  lat: number;
+  aria: string;
+  on?: boolean;
+}
+
 export interface MapRoute {
   id: string;
   legs: Leg[];
@@ -81,6 +90,8 @@ interface Options {
   detail?: 'low' | 'high';
   frame?: [[number, number], [number, number]]; // lon/lat corners of the home view
   onPoint?: (id: string) => void;
+  /** A click (or Enter) on a factoid's dot. */
+  onFact?: (id: string, el: Element) => void;
   onRegion?: (r: MapRegion) => void;
   onHover?: (id: string | null, ev?: MouseEvent) => void;
   onLevel?: (level: number) => void;
@@ -114,6 +125,7 @@ export class GeoMap {
   private gRoutes: Selection<SVGGElement, unknown, null, undefined>;
   private gRegions: Selection<SVGGElement, unknown, null, undefined>;
   private gPoints: Selection<SVGGElement, unknown, null, undefined>;
+  private gFacts: Selection<SVGGElement, unknown, null, undefined>;
   private gNums: Selection<SVGGElement, unknown, null, undefined>;
   private points: MapPoint[] = [];
   private routes: MapRoute[] = [];
@@ -151,6 +163,8 @@ export class GeoMap {
     this.gZoom = this.svg.append('g');
     this.gRoutes = this.svg.append('g').attr('class', 'routes');
     this.gRegions = this.svg.append('g').attr('class', 'regions');
+    // Factoid dots lie under the cards' markers, never over them.
+    this.gFacts = this.svg.append('g').attr('class', 'facts');
     this.gPoints = this.svg.append('g').attr('class', 'points');
     this.gNums = this.svg.append('g').attr('class', 'nums');
 
@@ -383,6 +397,34 @@ export class GeoMap {
     this.placeLabels();
   }
 
+  setFacts(facts: MapFact[]): void {
+    const sel = this.gFacts
+      .selectAll<SVGGElement, MapFact>('g.fact')
+      .data(facts, (d) => d.id)
+      .join((enter) => {
+        const g = enter.append('g').attr('class', 'fact');
+        // A wider, invisible target: the dot itself is small on purpose.
+        g.append('circle').attr('class', 'hit').attr('r', 9);
+        g.append('circle').attr('class', 'fdot').attr('r', 2.2);
+        if (this.opts.interactive) {
+          g.attr('tabindex', 0).attr('role', 'button');
+          g.on('click', (ev: MouseEvent, d) => {
+            ev.stopPropagation();
+            this.opts.onFact?.(d.id, ev.currentTarget as Element);
+          });
+          g.on('keydown', (ev: KeyboardEvent, d) => {
+            if (ev.key === 'Enter' || ev.key === ' ') {
+              ev.preventDefault();
+              this.opts.onFact?.(d.id, ev.currentTarget as Element);
+            }
+          });
+        }
+        return g;
+      });
+    sel.attr('class', (d) => `fact${d.on ? ' on' : ''}`).attr('data-fact', (d) => d.id).attr('aria-label', (d) => d.aria);
+    this.renderOverlay();
+  }
+
   setRoutes(routes: MapRoute[], animate = true): void {
     const prev = new Map(this.routes.map((r) => [r.id, r.progress ?? 1]));
     this.routes = routes.map((r) => ({ ...r, progress: animate && !reducedMotion() ? (prev.get(r.id) ?? 0) : 1 }));
@@ -561,6 +603,10 @@ export class GeoMap {
   }
 
   private renderOverlay(): void {
+    this.gFacts.selectAll<SVGGElement, MapFact>('g.fact').attr('transform', (d) => {
+      const [x, y] = this.xy(d.lon, d.lat);
+      return `translate(${x.toFixed(1)},${y.toFixed(1)})`;
+    });
     this.gPoints.selectAll<SVGGElement, MapPoint>('g.pt').attr('transform', (d) => {
       const [x, y] = this.xy(d.lon, d.lat);
       return `translate(${x.toFixed(1)},${y.toFixed(1)})`;
