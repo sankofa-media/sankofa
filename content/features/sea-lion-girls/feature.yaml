@@ -137,7 +137,6 @@ ui:
   travelled: { en: "What travelled", ru: "Что перешло", draft: true }
   branch-girls: { en: "The girls’ branch", ru: "Ветвь девочек", draft: true }
   branch-simone: { en: "Simone’s branch", ru: "Ветвь Симон", draft: true }
-  show-flashes: { en: "Show the three claps", ru: "Показать три хлопка", draft: true }
   play-together: { en: "Clap together", ru: "Хлопнуть вместе", draft: true }
   art-credit: { en: "Illustrations generated, edited by the museum", ru: "Иллюстрации созданы нейросетью, отобраны музеем" }
   filmstrip: { en: "On screen, year by year", ru: "На экране, год за годом", draft: true }
@@ -602,7 +601,6 @@ scenes:
   - id: massive
     kind: flashes
     nodes: [ paradise-circus-2010, gui-boratto-2010, post-ghostpoet-2023 ]
-    flashes: [ "1:49", "2:37", "3:21" ]
     threads: [ simone-1964, shipp-1939 ]
     blocks:
       - id: kicker
@@ -613,8 +611,8 @@ scenes:
       - id: text
         role: text
         draft: false
-        en: "In 2010 the Bristol band Massive Attack released “Paradise Circus”. At 1:49, 2:37 and 3:21 Nina Simone’s claps from “See-Line Woman” sound under the song: we found them by laying the two recordings over each other. Press “Show the three claps”, and from each clap a line of ink will run back to 1964 and then to 1939."
-        ru: "В 2010 году бристольская группа Massive Attack выпустила «Paradise Circus». На 1:49, 2:37 и 3:21 под песней звучат хлопки Нины Симон из «See-Line Woman»: мы нашли их, наложив две записи друг на друга. Нажмите «Показать три хлопка», и от каждого из них линия туши протянется назад, к 1964 году, а потом к 1939-му."
+        en: "In 2010 the Bristol band Massive Attack released “Paradise Circus”. Through the whole song runs the clap from Nina Simone’s “See-Line Woman”. While the track plays, a line of ink pulses with that clap and runs back along the river: to Simone’s record of 1964, and from it to the sisters’ minute of 1939."
+        ru: "В 2010 году бристольская группа Massive Attack выпустила «Paradise Circus». Через всю песню проходит хлопок из «See-Line Woman» Нины Симон. Пока трек звучит, линия туши пульсирует в такт этому хлопку и тянется назад по реке — к пластинке Симон 1964 года, а от неё к минуте сестёр Шипп 1939 года."
       - id: on
         role: text
         draft: false
