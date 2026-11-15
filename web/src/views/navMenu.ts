@@ -15,6 +15,7 @@ const HINTS: Record<string, { en: string; ru: string }> = {
   fact: { en: 'One checked fact at random, with its sources', ru: 'Случайный проверенный факт — с источниками' },
   workshop: { en: 'The elements music is made of, to play', ru: 'Элементы, из которых сделана музыка, — на них можно играть' },
   cabinet: { en: 'What you find hidden around the museum', ru: 'Всё, что вы найдёте спрятанным по музею' },
+  features: { en: 'Long stories to read and hear, scene by scene', ru: 'Большие истории со звуком — сцена за сценой' },
   index: { en: 'Every name in the dictionary, from A to Z', ru: 'Все имена словаря — от А до Я' },
   guide: { en: 'What is where, and how the facts were checked', ru: 'Что где лежит и как проверяли факты' },
   dedication: { en: 'Whom this museum is for', ru: 'Кому посвящён этот музей' },
@@ -29,6 +30,7 @@ function keyOf(b: HTMLElement): string | undefined {
   if (b.matches('[data-open-engine]')) return 'engine';
   if (b.matches('[data-open-book]')) return 'book';
   if (b.matches('[data-open-fact]')) return 'fact';
+  if (b.matches('[data-features]')) return 'features';
   return b.dataset.mech;
 }
 

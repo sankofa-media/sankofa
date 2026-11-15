@@ -1,0 +1,33 @@
+# Special projects: multimedia longreads told in scenes.
+# Each feature is a folder next to this file (feature.yaml, its data files).
+# `order` is the order of the list; a folder not named here is not built.
+# `ui` holds the labels of the engine itself (shared by every feature).
+order:
+  - sea-lion-girls
+
+ui:
+  list-kicker: {en: "Features", ru: "Спецпроекты"}
+  list-title: {en: "Special projects", ru: "Спецпроекты"}
+  list-dek:
+    en: "Long stories to read and to listen to, one scene at a time."
+    ru: "Большие истории, которые читают и слушают — сцена за сценой."
+  open: {en: "Begin", ru: "Начать"}
+  back: {en: "All features", ru: "Все спецпроекты"}
+  close: {en: "Close", ru: "Закрыть"}
+  calm: {en: "Calm mode", ru: "Спокойный режим"}
+  calm-hint:
+    en: "Still drawings, no moving ink"
+    ru: "Неподвижные рисунки, тушь не движется"
+  sound: {en: "Sound", ru: "Звук"}
+  sound-on: {en: "Clap on", ru: "Хлопок включён"}
+  sound-off: {en: "Clap off", ru: "Хлопок выключен"}
+  scenes: {en: "Scenes", ru: "Сцены"}
+  scene: {en: "Scene", ru: "Сцена"}
+  draft:
+    en: "Draft text: the final version is being written."
+    ru: "Черновой текст: окончательная версия пишется."
+  loading: {en: "Loading…", ru: "Загружается…"}
+  error:
+    en: "This feature could not be loaded. Try again."
+    ru: "Не удалось загрузить спецпроект. Попробуйте ещё раз."
+  retry: {en: "Try again", ru: "Попробовать ещё раз"}
