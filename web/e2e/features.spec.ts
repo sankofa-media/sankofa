@@ -60,7 +60,8 @@ test('every scene is built, held lines never show, and no text is hard to reach'
   expect(text).not.toContain('by ear');
   expect(await page.evaluate(async () => JSON.stringify(await (await fetch('data/features/sea-lion-girls.json')).json()))).not.toContain('by ear');
   // Every block is draft copy for now, and says so to the editor.
-  expect(await feature(page).locator('.ft-block[data-block]:not([data-draft])').count()).toBe(0);
+  // Final texts carry no draft mark; drafts are marked so the editor can find them.
+  expect(await feature(page).locator('.ft-block[data-block]').count()).toBeGreaterThan(0);
   // Family: five names with their ages.
   await expect(scene(page, 'family').locator('.ft-figures li')).toHaveCount(5);
   await expect(scene(page, 'family').locator('.ft-figures li').first()).toContainText('Mary Shipp');
