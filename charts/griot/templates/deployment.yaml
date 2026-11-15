@@ -119,6 +119,7 @@ spec:
             {{- if $sqlite }}
             - {name: memory, mountPath: /var/lib/griot}
             {{- end }}
+            - {name: tmp, mountPath: /tmp}
       volumes:
         - name: serving
           secret: {secretName: {{ $name }}-serving}
@@ -130,6 +131,9 @@ spec:
         - name: memory
           persistentVolumeClaim: {claimName: {{ $name }}-memory}
         {{- end }}
+        # SQLite needs a writable temp directory for VACUUM; the root filesystem is read-only.
+        - name: tmp
+          emptyDir: {sizeLimit: 2Gi}
 ---
 apiVersion: v1
 kind: Service
