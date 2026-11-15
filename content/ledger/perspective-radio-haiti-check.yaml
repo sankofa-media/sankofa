@@ -1,0 +1,139 @@
+# Second, independent check (2026-11-15) of content/ledger/perspective-radio-haiti.yaml
+# and the body of content/cards/radio-haiti.md / .ru.md. Every cited URL was reopened
+# (curl or WebFetch; Duke archives.lib.duke.edu guides via the Wayback Machine because
+# of a bot wall); quotes are copied from the fetched text.
+# verdict: confirmed | corrected (card wording or sources changed) | refuted | unconfirmed (removed).
+# "(unledgered)" marks body claims the first ledger did not record.
+- card: radio-haiti
+  fact: "Jean Dominique had trained as an agronomist"
+  verdict: confirmed
+  sources:
+    - {title: "Duke Today (2014)", url: "https://today.duke.edu/2014/04/radiohaitiarchives", quote: "Dominique was an out-of-work agronomist who, to get a job, became involved in a rural, all-music radio station."}
+    - {title: "Haiti Support Group: Dominique, Jean", url: "https://haitisupportgroup.org/dominique-jean/", quote: "Dominique trained as an agronomist."}
+  note: ""
+- card: radio-haiti
+  fact: "He took the side of the peasantry and the poor; the station championed the stories of the landless"
+  verdict: confirmed
+  sources:
+    - {title: "Haiti Support Group", url: "https://haitisupportgroup.org/dominique-jean/", quote: "But he soon aligned himself with the peasantry and the poor"}
+    - {title: "The World (2022)", url: "https://theworld.org/stories/2022/05/04/radio-haiti-archives-find-home-duke-university", quote: "Over four decades, Dominique's station, Radio Haiti-Inter, championed the stories of the poor and landless"}
+  note: ""
+- card: radio-haiti
+  fact: "The station carried microphones into the countryside"
+  verdict: confirmed
+  sources:
+    - {title: "Duke Today (2014)", url: "https://today.duke.edu/2014/04/radiohaitiarchives", quote: "because we could bring microphones to rural areas"}
+    - {title: "Haiti Support Group", url: "https://haitisupportgroup.org/dominique-jean/", quote: "He encouraged reports from the countryside"}
+  note: "NEH quote in the first ledger (interviews with farmers) also supports it."
+- card: radio-haiti
+  fact: "Radio Haïti-Inter was the first station to give the news in Creole"
+  verdict: confirmed
+  sources:
+    - {title: "Duke Today (2014)", url: "https://today.duke.edu/2014/04/radiohaitiarchives", quote: "It was the first radio station to deliver news and commentary in Creole, the language most people there speak"}
+    - {title: "Haiti Support Group", url: "https://haitisupportgroup.org/dominique-jean/", quote: "starting the first systematic broadcasting in Creole, the country's main language"}
+  note: "Women's eNews agrees: 'The station began the first broadcasts in Creole'."
+- card: radio-haiti
+  fact: "(unledgered) Creole is the language most Haitians speak"
+  verdict: confirmed
+  sources:
+    - {title: "Duke Today (2014)", url: "https://today.duke.edu/2014/04/radiohaitiarchives", quote: "the language most people there speak"}
+    - {title: "NEH: Voices of Change", url: "https://www.neh.gov/divisions/preservation/featured-project/tune-in-tuesdays-voices-change-preserving-radio-haiti", quote: "Haitian Creole (a language spoken by 90% of the Haitian population)"}
+  note: "Added to the ledger."
+- card: radio-haiti
+  fact: "(unledgered) Dominique bought the station in Port-au-Prince and ran it with Michèle Montas, his wife and co-anchor"
+  verdict: corrected
+  sources:
+    - {title: "The World (2022)", url: "https://theworld.org/stories/2022/05/04/radio-haiti-archives-find-home-duke-university", quote: "Jean Dominique was gunned down outside the radio station he owned and ran in Port Au-Prince"}
+    - {title: "Duke Today (2014)", url: "https://today.duke.edu/2014/04/radiohaitiarchives", quote: "Michele Montas, station co-anchor and widow of Jean Dominique"}
+  note: "Duke Today describes the station he joined as 'a rural, all-music radio station', so 'bought it in Port-au-Prince' was reworded to 'bought it and ran it in Port-au-Prince'. Purchase year differs (1970 Duke Today, 1971 Haiti Support Group, 1960s The World); the dispute field now lists 1971 too. Body gives no year."
+- card: radio-haiti
+  fact: "(unledgered) The Duvalier dictatorship raided the station on 28 November 1980 and the couple went into exile"
+  verdict: confirmed
+  sources:
+    - {title: "Duke University Libraries: Radio Haiti papers (collection guide)", url: "https://archives.lib.duke.edu/catalog/radiohaitipapers", quote: "until 28 November 1980, when Jean-Claude Duvalier's government cracked down on the independent press and human rights activists. Radio Haiti was ransacked, and the station's journalists were arrested then exiled."}
+    - {title: "Christian Science Monitor (2007)", url: "https://www.csmonitor.com/2007/0227/p20s01-wogi.html", quote: "They fled into exile twice – in 1981 when the Duvalier regime destroyed the radio station"}
+  note: "Duke blog (2015) and NEH also give 28 November 1980; Duke blog: Dominique 'went into exile with Michèle Montas in New York'. Added to the ledger."
+- card: radio-haiti
+  fact: "(female) In the 1980 raid Montas was jailed for several days and put on a plane to Miami without a passport"
+  verdict: corrected
+  sources:
+    - {title: "Women's eNews (2004)", url: "https://womensenews.org/2004/05/montas-kept-risking-it-all-haiti/", quote: "Montas was held in prison for several days, stripped to her underwear and listened to the cries of her reporters, as they were tortured in the next cell."}
+    - {title: "Haiti Support Group", url: "https://haitisupportgroup.org/dominique-jean/", quote: "his wife, Michèle Montas, and other Haiti Inter staff were arrested and deported by the regime"}
+  note: "'Several days', 'Miami' and 'without a passport' appear only in Women's eNews (Afrotoronto 2008 says 'expulsed to the United States', no Miami or passport). Body now: jailed along with the station's reporters, who were tortured, then expelled to the United States (Duke blog: 'imprisoned, tortured, and expelled'). First ledger's HSG quote was not verbatim; fixed. The paragraph was moved to follow the raid sentence so the female copy reads in order."
+- card: radio-haiti
+  fact: "(unledgered) When Duvalier fled in 1986, tens of thousands met them at home, and they rebuilt the station with money raised from Haitians"
+  verdict: corrected
+  sources:
+    - {title: "Duke Rubenstein Library blog (2015)", url: "https://blogs.library.duke.edu/rubenstein/2015/11/20/radio-haiti-you-are-the-rain-if-you-didnt-fall-we-could-not-bloom-repression-and-remembrance-on-november-28/", quote: "many thousands of people ... received them at the airport ... With assistance from the Haitian people – many of whom, though very poor, gave what little money they could afford — the station reopened in 1986."}
+    - {title: "Potomitan: The Agronomist (Charlot Lucien)", url: "https://potomitan.info/vedrine/dominique.php", quote: "They returned in 1986 and, with the support of the population, rebuilt the radio and reconstructed their team."}
+  note: "'Tens of thousands' rests on Women's eNews alone ('a crowd of about 60,000 greeted them at the airport'); Duke blog and Potomitan say 'thousands'. 'Money raised' is Duke blog only. Body now: 'thousands met them at the airport, and they rebuilt the station with the help of ordinary Haitians'. Added to the ledger."
+- card: radio-haiti
+  fact: "(unledgered) After the 1991 coup they fled again, returning in 1994"
+  verdict: confirmed
+  sources:
+    - {title: "Haiti Support Group", url: "https://haitisupportgroup.org/dominique-jean/", quote: "only to leave again in 1991 when the army seized power. He came back in 1994, after that regime fell too."}
+    - {title: "Women's eNews (2004)", url: "https://womensenews.org/2004/05/montas-kept-risking-it-all-haiti/", quote: "With Aristide's restoration in 1994, Montas and her husband returned"}
+  note: "Duke papers guide: exile 'from 1991 to 1994'; the station itself reopened in 1995, which the body does not claim otherwise. Added to the ledger."
+- card: radio-haiti
+  fact: "On 3 April 2000 Dominique was shot dead outside the station with its guard, Jean-Claude Louissaint"
+  verdict: confirmed
+  sources:
+    - {title: "Amnesty International UK (2001)", url: "https://www.amnesty.org.uk/press-releases/haiti-killing-jean-dominique-must-not-go-unpunished", quote: "Jean Dominique was shot dead on 3 April 2000 by unknown assailants who waited for him outside the courtyard of his radio station, Radio Haiti Inter. Station guard Jean Claude Louissaint was killed with him."}
+    - {title: "The Nation (2001)", url: "https://www.thenation.com/?p=78618", quote: "he and Jean Claude Louissaint, a watchman at their radio station, were gunned down in the station's parking lot"}
+  note: "CPJ (April 2000) and Haiti Support Group agree."
+- card: radio-haiti
+  fact: "(unledgered) Who ordered the killing was never established"
+  verdict: corrected
+  sources:
+    - {title: "The World (2022)", url: "https://theworld.org/stories/2022/05/04/radio-haiti-archives-find-home-duke-university", quote: "No one knows exactly who was behind the assasination"}
+    - {title: "IPI (2014)", url: "https://ipi.media/amid-new-evidence-ipi-and-acm-push-for-justice-for-murdered-haiti-journalist/", quote: "recommending the indictment of nine persons accused of participating in Dominique's killing, including the alleged mastermind, former Senator Mirlande Libérus Pavert"}
+  note: "A 2014 judge's report named an alleged mastermind (RSF 2014 and CPJ 2014 agree), so 'never established' was sharpened to 'has never been established in court'. Added to the ledger."
+- card: radio-haiti
+  fact: "(male) Montas kept his station on air until threats closed it in 2003"
+  verdict: confirmed
+  sources:
+    - {title: "Christian Science Monitor (2007)", url: "https://www.csmonitor.com/2007/0227/p20s01-wogi.html", quote: "Montas kept the station going after the murder, but finally shut it down for good in 2003 after her bodyguard was killed and the death threats multiplied."}
+    - {title: "The World (2022)", url: "https://theworld.org/stories/2022/05/04/radio-haiti-archives-find-home-duke-university", quote: "attacks and threats forced her to eventually shut the station down in 2003."}
+  note: ""
+- card: radio-haiti
+  fact: "(female) After the murder Montas ran the station"
+  verdict: confirmed
+  sources:
+    - {title: "CPJ (December 2002)", url: "https://cpj.org/2002/12/gunmen-attack-radio-station-director/", quote: "Montas has run the station ever since, serving as anchor of the daily newscast."}
+    - {title: "CPJ: Attacks on the Press 2003", url: "https://cpj.org/2004/03/attacks-on-the-press-2003-haiti/", quote: "Michèle Montas, who has run Radio Haïti-Inter since his death"}
+  note: ""
+- card: radio-haiti
+  fact: "(female) She opened with 'Bonjour, Jean', as she had while he was alive; every day she greeted him and counted the days since"
+  verdict: confirmed
+  sources:
+    - {title: "The Nation (2001)", url: "https://www.thenation.com/?p=78618", quote: "A month after Dominique's death, Montas reopened Radio Haiti Inter, starting her first solo broadcast with her habitual greeting to Dominique, \"Bonjour, Jean.\""}
+    - {title: "WNYC On the Media (2003)", url: "https://wnycstudios.org/podcasts/otm/segments/130495-sounds-of-silence", quote: "Every day I've been saying good morning to my husband, every day counting the number of days since he was assassinated."}
+  note: "First ledger's Nation quote was a paraphrase; replaced with the verbatim sentence."
+- card: radio-haiti
+  fact: "(female) On Christmas Day 2002 gunmen at her house killed her bodyguard, Maxime Séide"
+  verdict: confirmed
+  sources:
+    - {title: "CPJ (December 2002)", url: "https://cpj.org/2002/12/gunmen-attack-radio-station-director/", quote: "The gunmen then opened fire, killing security guard Maxim Séide, 26, who died at the scene."}
+    - {title: "RSF (2002)", url: "https://rsf.org/fr/tentative-dassassinat-de-la-directrice-de-radio-ha%C3%AFti-inter", quote: "Le 25 décembre 2002, entre 17h30 et 18 heures, deux hommes armés se sont présentés devant la maison de Michèle Montas"}
+  note: "CPJ spells 'Maxim', RSF and SIP 'Maxime'; card keeps 'Maxime'."
+- card: radio-haiti
+  fact: "(female) On 22 February 2003 she took the station off the air: 'We have already lost three lives, we refuse to lose more.'"
+  verdict: confirmed
+  sources:
+    - {title: "RSF (2003)", url: "https://rsf.org/fr/radio-ha%C3%AFti-inter-cesse-d%C3%A9mettre", quote: "Radio Haïti Inter cesserait ses émissions à partir du samedi 22 février en raison de nombreuses menaces: \"Nous avons déjà perdu trois vies, nous refusons d'en perdre davantage.\""}
+    - {title: "SIP-IAPA (2003)", url: "https://en.sipiapa.org/notas/1125926-haiti", quote: "On February 22, Michel Montas ... closed the station because of constant threats and obvious dangers to her journalists. Montas said we have already lost three lives and we refuse to lose more."}
+  note: "CPJ Attacks on the Press 2003 also gives February 22."
+- card: radio-haiti
+  fact: "(female) In exile she became, in 2007, spokesperson for UN Secretary-General Ban Ki-moon"
+  verdict: confirmed
+  sources:
+    - {title: "UN News (2 January 2007)", url: "https://news.un.org/en/story/2007/01/204862", quote: "Secretary-General Ban Ki-moon's new spokesperson, Michele Montas"}
+    - {title: "Christian Science Monitor (27 February 2007)", url: "https://www.csmonitor.com/2007/0227/p20s01-wogi.html", quote: "is settling in to her new role as spokesperson for the UN secretary general."}
+  note: "UN News: 'Attempts to kill Ms. Montas twice forced her into exile'."
+- card: radio-haiti
+  fact: "The station's tapes are open online at Duke"
+  verdict: confirmed
+  sources:
+    - {title: "WUNC (2015)", url: "https://www.wunc.org/show/the-state-of-things/2015-02-25/bringing-back-radio-haiti-a-station-that-told-the-overlooked-stories", quote: "Montas decided to donate this archive to Duke University who has digitized the tapes and made them available on the web."}
+    - {title: "NEH: Voices of Change", url: "https://www.neh.gov/divisions/preservation/featured-project/tune-in-tuesdays-voices-change-preserving-radio-haiti", quote: "Duke University is preserving and making accessible the comprehensive audio and written archives of Radio Haiti"}
+  note: "Duke Today 2014 states the plan; WUNC states it was done."

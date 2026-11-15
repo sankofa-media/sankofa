@@ -1,0 +1,182 @@
+# Second, independent check (2026-11-15) of content/ledger/perspective-emmett-till.yaml
+# and the body of content/cards/emmett-till.md / .ru.md. Every cited URL was reopened
+# (curl, text extracted; TIME via WebFetch) and each quote below was matched verbatim
+# in the fetched text. verdict: confirmed | corrected (card wording or sources changed) |
+# refuted | unconfirmed (removed from the card). Entries whose fact starts with
+# "(unledgered)" check claims in the card the first ledger did not record.
+# Jackson Free Press (2015) and its Mississippi Free Press repost are one source; the
+# duplicate ?p=114168 entry in the card's sources was removed. Yahoo/ADN copies of the
+# Washington Post article count once.
+- card: emmett-till
+  fact: "Emmett Till, fourteen, left Chicago in August 1955 to visit family in the Mississippi Delta"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: Emmett Till (biography)", url: "https://www.nps.gov/people/emmett-till.htm", quote: "Emmett Louis Till, a 14-year-old from Chicago, was kidnapped and lynched while visiting family on summer vacation in Mississippi in August 1955."}
+    - {title: "SNCC Digital Gateway: Emmett Till murdered, August 1955", url: "https://snccdigital.org/?p=106", quote: "Emmett “Bobo” Till had taken a train from his home in Chicago, Illinois to visit his great uncle, Moses Wright, in Mississippi."}
+  note: "PBS timeline adds the dates (left 20 August, arrived 21 August)."
+- card: emmett-till
+  fact: "On 24 August 1955 he stopped at Bryant's store in Money"
+  verdict: confirmed
+  sources:
+    - {title: "SNCC Digital Gateway", url: "https://snccdigital.org/?p=106", quote: "On the evening of August 24, 1955, after spending most of the morning and afternoon picking cotton, Till and a carload of boys drove to Bryant’s Grocery and Meat Market in nearby Money"}
+    - {title: "Biography.com: Emmett Till", url: "https://www.biography.com/crime/emmett-till", quote: "Three days after arriving in Money, Mississippi — on August 24, 1955 — Till and a group of teenagers entered"}
+  note: ""
+- card: emmett-till
+  fact: "Four nights later (28 August) Roy Bryant and J. W. Milam took him from his great-uncle's house"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: Emmett Till (biography)", url: "https://www.nps.gov/people/emmett-till.htm", quote: "Roy Bryant and his half-brother J.W. Milam drove to the home of Mose Wright to find Emmett on Sunday, August 28 around 2:00 am."}
+    - {title: "HISTORY: Emmett Till murderers make magazine confession", url: "https://www.history.com/this-day-in-history/january-24/emmett-till-murderers-make-magazine-confession", quote: "In the early hours of August 28, Roy Bryant and his half-brother, J.W. Milam, abducted Emmett Till from his great-uncle’s home."}
+  note: "MCIR (Jerry Mitchell) uses the same phrase: 'Four nights later'."
+- card: emmett-till
+  fact: "His body was found in the Tallahatchie River"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: Emmett Till (biography)", url: "https://www.nps.gov/people/emmett-till.htm", quote: "on August 31, a body was observed floating in the Tallahatchie River near Graball Landing"}
+    - {title: "HISTORY: Emmett Till murderers make magazine confession", url: "https://www.history.com/this-day-in-history/january-24/emmett-till-murderers-make-magazine-confession", quote: "On August 31, Till’s decomposed body was found in the Tallahatchie River."}
+  note: ""
+- card: emmett-till
+  fact: "The great-uncle, Moses Wright, was a 64-year-old sharecropper and preacher"
+  verdict: confirmed
+  sources:
+    - {title: "PBS American Experience: Moses and Elizabeth Wright", url: "https://www.pbs.org/wgbh/americanexperience/features/emmett-biography-moses-and-elizabeth-wright", quote: "Wright, called \"Preacher,\" was a minister as well as a sharecropper."}
+    - {title: "SNCC Digital Gateway", url: "https://snccdigital.org/?p=106", quote: "The 64-year-old sharecropper begged the two white men"}
+  note: "PBS also gives the age ('Wright said that he was 64'); NPS confirms the nickname 'Preacher'."
+- card: emmett-till
+  fact: "Milam threatened to kill Wright if he talked; Wright went to the sheriff the same day"
+  verdict: corrected
+  sources:
+    - {title: "NPS: Emmett Till (biography)", url: "https://www.nps.gov/people/emmett-till.htm", quote: "Milam threatened to kill Wright if he were to tell on him and Bryant. ... he alerted the Leflore County sheriff later that day after Emmett failed to return."}
+    - {title: "Mississippi Free Press (Jackson Free Press, 2015)", url: "https://www.mississippifreepress.org/remembering-emmett-till-a-boy-who-changed-america/", quote: "Mose Wright reported the abduction to the sheriff’s department on Sunday morning"}
+  note: "Card wording stands. Ledger corrected: the Washington Post quote ('did not hesitate') is about his testimony, not the report to the sheriff, and Biography.com gives no day; replaced with JFP (Sunday = 28 August) and MCIR for the threat ('if he talked, he would be killed')."
+- card: emmett-till
+  fact: "The trial in Sumner opened on 19 September 1955"
+  verdict: confirmed
+  sources:
+    - {title: "NMAAHC Searchable Museum", url: "https://www.searchablemuseum.com/emmett-till/", quote: "The trial of Roy Bryant and J. W. Milam began on September 19, 1955, in front of an all-white jury."}
+    - {title: "PBS American Experience: timeline", url: "https://www.pbs.org/wgbh/americanexperience/features/till-timeline/", quote: "September 19, 1955 The kidnapping and murder trial of J. W. Milam and Roy Bryant opens in Sumner, Mississippi"}
+  note: "Biography.com and NPS agree."
+- card: emmett-till
+  fact: "At the trial Wright stood up and pointed at Milam, then at Bryant"
+  verdict: confirmed
+  sources:
+    - {title: "SNCC Digital Gateway", url: "https://snccdigital.org/?p=106", quote: "Wright told the jury, “Thar he,” pointing first at Milam and then to Bryant."}
+    - {title: "PBS American Experience: J. W. Milam and Roy Bryant", url: "https://www.pbs.org/wgbh/americanexperience/features/emmett-trial-jw-milam-and-roy-bryant", quote: "He stood up in court and pointed out Milam and Bryant as the men who came to his home and took Emmett at gunpoint."}
+  note: "PBS timeline dates it to 21 September."
+- card: emmett-till
+  fact: "In Mississippi a Black man almost never accused white men in court"
+  verdict: confirmed
+  sources:
+    - {title: "Biography.com: Emmett Till", url: "https://www.biography.com/crime/emmett-till", quote: "At the time, it was almost unheard of for Black people to openly accuse white people in court."}
+    - {title: "PBS American Experience: timeline", url: "https://www.pbs.org/wgbh/americanexperience/features/till-timeline/", quote: "Moses Wright, Emmett Till's great uncle, does the unthinkable -- he accuses two white men in open court."}
+  note: "JFP agrees ('a black-to-white gesture that was unheard of in the Jim Crow South')."
+- card: emmett-till
+  fact: "Soon after the verdict Wright moved his family north, to Chicago"
+  verdict: corrected
+  sources:
+    - {title: "Mississippi Free Press (Jackson Free Press, 2015)", url: "https://www.mississippifreepress.org/remembering-emmett-till-a-boy-who-changed-america/", quote: "The jury of 12 white men came back with a “not guilty” verdict a little over an hour after deliberation started. Mose Wright took his family and moved north almost immediately."}
+    - {title: "PBS American Experience: Moses and Elizabeth Wright", url: "https://www.pbs.org/wgbh/americanexperience/features/emmett-biography-moses-and-elizabeth-wright", quote: "After the trial, Moses fled to join his wife in Chicago, leaving behind his 1941 Ford and his cotton blooming in the fields."}
+  note: "'the Chicago suburbs' rested on JFP alone (PBS says Chicago); card now says 'to Chicago' / «в Чикаго». The Washington Post's 'Wright fled Mississippi that night' (right after testifying) differs on timing and was dropped from the ledger entry; PBS adds he came back in November for the grand jury."
+- card: emmett-till
+  fact: "Six decades earlier Ida B. Wells gathered the figures on lynching (A Red Record, 1895)"
+  verdict: confirmed
+  sources:
+    - {title: "National Women's History Museum: Ida B. Wells-Barnett", url: "https://www.womenshistory.org/education-resources/biographies/ida-b-wells-barnett", quote: "provided the history and statistical data on the lynching of African Americans"}
+    - {title: "Library of Congress: Headlines and Heroes", url: "https://blogs.loc.gov/headlinesandheroes/2020/02/ida-b-wells-and-the-activism-of-investigative-journalism/", quote: "In early 1895 she published her book, A Red Record. ... included updated statistics"}
+  note: "1895 to 1955 is sixty years."
+- card: emmett-till
+  fact: "His mother, Mamie Till-Mobley, wanted the world to see"
+  verdict: confirmed
+  sources:
+    - {title: "Monument Lab", url: "https://monumentlab.com/bulletin/looking-for-emmett-and-mamie-in-chicago", quote: "She wanted the world beyond the thousands who would attend Emmett’s funeral and viewing to know"}
+    - {title: "Jerry Mitchell, Mississippi Center for Investigative Reporting (2021)", url: "https://www.mississippicir.org/perspective/carolyn-bryant-lied-about-emmett-till-did-author-tim-tyson-lie-too", quote: "She told me that she left her son’s casket open because “I wanted the world to see what I had seen.”"}
+  note: "TIME (opened via WebFetch) has 'Let the people see what I've seen.'; MCIR added to the ledger as a direct interview."
+- card: emmett-till
+  fact: "The sheriff hurried to bury the body; she had it brought home to Chicago"
+  verdict: confirmed
+  sources:
+    - {title: "NMAAHC Searchable Museum", url: "https://www.searchablemuseum.com/emmett-till/", quote: "the local sheriff hurried to bury Emmett Till. But Till relatives intervened to stop him, and at Mamie Till’s behest her son’s body was brought back to Chicago."}
+    - {title: "NPS: Emmett Till (biography)", url: "https://www.nps.gov/people/emmett-till.htm", quote: "The sheriff ordered that Emmett’s body be promptly buried, but before it could be, Mamie Till-Mobley was alerted and insisted that his body be returned to Chicago."}
+  note: ""
+- card: emmett-till
+  fact: "She held an open-casket funeral at Roberts Temple"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: Emmett Till (biography)", url: "https://www.nps.gov/people/emmett-till.htm", quote: "open-casket funeral for Emmett at Roberts Temple Church of God in Christ from September 3-6"}
+    - {title: "PBS American Experience: timeline", url: "https://www.pbs.org/wgbh/americanexperience/features/till-timeline/", quote: "Emmett Till's body is taken to Chicago's Roberts Temple Church of God for viewing and funeral services. Emmett's mother decides to have an open casket funeral."}
+  note: "Biography.com agrees."
+- card: emmett-till
+  fact: "She let Jet photographer David Jackson take pictures, printed in September"
+  verdict: confirmed
+  sources:
+    - {title: "AP via theGrio (2022)", url: "https://thegrio.com/2022/10/31/emmett-till-images-have-multigenerational-impact-on-artists/", quote: "Till-Mobley handpicked Jet photographer David Jackson"}
+    - {title: "Monument Lab", url: "https://monumentlab.com/bulletin/looking-for-emmett-and-mamie-in-chicago", quote: "She chose a Black photographer, David Jackson, to take pictures of Emmett's body and allowed those images to be printed on the cover of Jet magazine on September 15, 1955"}
+  note: "Month needed a second source (HISTORY gives none): PBS timeline ('September 15, 1955 Jet magazine ... publishes photographs') and NMAAHC ('In Jet’s September 15, 1955, issue') added."
+- card: emmett-till
+  fact: "At the trial she testified that the body was her son's, against claims that it was not"
+  verdict: corrected
+  sources:
+    - {title: "DeNeen L. Brown, The Washington Post (2022)", url: "https://www.adn.com/nation-world/2022/10/15/how-emmett-tills-mother-defied-threats-to-her-life-and-fought-for-justice/", quote: "One of the most powerful moments in the trial belonged to Till-Mobley, when she identified her son by the ring he was wearing, which had belonged to his father."}
+    - {title: "Mississippi Free Press (Jackson Free Press, 2015)", url: "https://www.mississippifreepress.org/remembering-emmett-till-a-boy-who-changed-america/", quote: "calling Mamie down from Chicago as a key witness in the trial to counter a false rumor out that the body wasn’t Till’s."}
+  note: "Card said she identified him 'by his father's ring' 'when the trial opened' on 19 September. The ring identification at trial is in the Washington Post only (PBS, Biography.com, HISTORY and JFP credit Moses Wright with identifying the body by the ring), and she testified later in the trial, not on the opening day. Rewritten without the ring and without tying it to the opening day; Black Enterprise ('The defense argued that the mutilated body ... was not Till’s') added for the defence claim."
+- card: emmett-till
+  fact: "She spoke against injustice across the country until she died in 2003"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: Emmett Till (biography)", url: "https://www.nps.gov/people/emmett-till.htm", quote: "She was an advocate against racist violence and injustice until her death in 2003."}
+    - {title: "PBS American Experience: Mamie Till Mobley", url: "https://www.pbs.org/wgbh/americanexperience/features/emmett-biography-mamie-till-mobley/", quote: "Mamie took her fight to the people and gave speeches to overflowing crowds across the country."}
+  note: "Washington Post: 'Before she died on Jan. 6, 2003'."
+- card: emmett-till
+  fact: "An all-white jury acquitted both men in about an hour"
+  verdict: confirmed
+  sources:
+    - {title: "SNCC Digital Gateway", url: "https://snccdigital.org/?p=106", quote: "The all-white jury’s verdict came after 68 minutes of deliberation"}
+    - {title: "PBS American Experience: timeline", url: "https://www.pbs.org/wgbh/americanexperience/features/till-timeline/", quote: "Milam and Bryant are acquitted of murdering Emmett Till after the jury deliberates only 67 minutes."}
+  note: "67 vs 68 minutes; 'about an hour' covers both."
+- card: emmett-till
+  fact: "In January 1956, safe from retrial, they sold their confession to Look"
+  verdict: confirmed
+  sources:
+    - {title: "HISTORY: Emmett Till murderers make magazine confession", url: "https://www.history.com/this-day-in-history/january-24/emmett-till-murderers-make-magazine-confession", quote: "On January 24, 1956, Look magazine publishes the confessions of J.W. Milam and Roy Bryant ... The two killers were paid a reported $4,000 for their participation in the article."}
+    - {title: "Biography.com: Emmett Till", url: "https://www.biography.com/crime/emmett-till", quote: "Protected by double jeopardy laws, they told the whole story of how they kidnapped and killed Till to Look magazine for $4,000."}
+  note: "HNN (Beito): 'Milam and Bryant, safely acquitted after their trial in September, had proudly confessed'."
+- card: emmett-till
+  fact: "In December 1955 Rosa Parks refused to give up her bus seat; she later said she had thought of Emmett Till"
+  verdict: confirmed
+  sources:
+    - {title: "HISTORY: New book sheds light on the murder of Emmett Till", url: "https://www.history.com/articles/new-book-sheds-light-on-the-murder-of-emmett-till-the-civil-rights-movement", quote: "As Parks later said of her actions that day, “I thought of Emmett Till, and when the bus driver ordered me to move to the back, I just couldn’t move.”"}
+    - {title: "NMAAHC Searchable Museum", url: "https://www.searchablemuseum.com/emmett-till/", quote: "I thought about Emmett Till, and I could not go back. Rosa Parks"}
+  note: "HISTORY dates the refusal 'December 5' (that was the boycott's start); NPS: Rosa Parks added for the month: 'Parks' arrest on December 1, 1955 launched the Montgomery Bus Boycott'. 'December 1955' is right either way."
+- card: emmett-till
+  fact: "In 2022 a law in his name made lynching a federal hate crime"
+  verdict: confirmed
+  sources:
+    - {title: "Public Law 117-107", url: "https://www.congress.gov/117/plaws/publ107/PLAW-117publ107.htm", quote: "To amend section 249 of title 18, United States Code, to specify lynching as a hate crime act."}
+    - {title: "PBS NewsHour (2023)", url: "https://www.pbs.org/newshour/politics/biden-will-establish-a-national-monument-for-emmett-till-black-teen-lynched-in-1955", quote: "In March 2022, Biden signed the Emmett Till Anti-Lynching Act into law."}
+  note: "Public law page reads 'Mar. 29, 2022'."
+- card: emmett-till
+  fact: "In 2023 the church, the courthouse and the river landing became a national monument to Emmett and his mother"
+  verdict: corrected
+  sources:
+    - {title: "NPS: monument proclamation", url: "https://www.nps.gov/till/learn/management/presidential-proclamation.htm", quote: "Establishment of the Emmett Till and Mamie Till-Mobley National Monument ... July 25, 2023"}
+    - {title: "PBS NewsHour (2023)", url: "https://www.pbs.org/newshour/politics/biden-will-establish-a-national-monument-for-emmett-till-black-teen-lynched-in-1955", quote: "The monument to Till and his mother will include three sites in the two states."}
+  note: "Facts confirmed. Wording changed from 'to mother and son' to 'to Emmett and his mother' («Эммету и его матери»): the male copy never introduces the mother, so the bare 'mother' was a loose thread there."
+- card: emmett-till
+  fact: "(unledgered) Wow line: open coffin, Jet photographs, acquittal in about an hour, confession sold to Look"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: Emmett Till (biography)", url: "https://www.nps.gov/people/emmett-till.htm", quote: "open-casket funeral for Emmett at Roberts Temple Church of God in Christ"}
+    - {title: "Biography.com: Emmett Till", url: "https://www.biography.com/crime/emmett-till", quote: "they told the whole story of how they kidnapped and killed Till to Look magazine for $4,000."}
+  note: "Each element is covered by the entries above."
+- card: emmett-till
+  fact: "(unledgered) Dispute field: Tyson's reported recantation is not on his tapes, her family denies it, the Justice Department in 2021 cited inconsistencies in his account; the Look confession concealed others involved"
+  verdict: confirmed
+  sources:
+    - {title: "U.S. Department of Justice: Emmett Till, notice to close file (2021)", url: "https://www.justice.gov/crt/case-document/emmett-till-notice-close-file-0", quote: "the key statements Bryant-Donham reportedly made to him recanting her previous testimony were neither recorded nor transcribed. ... Moreover, Tyson gave inconsistent explanations of whether there had ever been a recording of the admission"}
+    - {title: "Jerry Mitchell, Mississippi Center for Investigative Reporting (2021)", url: "https://www.mississippicir.org/perspective/carolyn-bryant-lied-about-emmett-till-did-author-tim-tyson-lie-too", quote: "She and her family have denied that she ever recanted. ... the journalist who wrote the article helped conceal the names of the other killers."}
+  note: "HNN (Beito) on Look: 'Huie strongly implied that they were the only perpetrators'. DOJ notice added to the card's sources."
+- card: emmett-till
+  fact: "(structure) Copies, word limit, translation"
+  verdict: confirmed
+  sources: []
+  note: "Both copies read as complete stories (shared frame; Moses Wright's testimony and flight north in the male copy, Mamie Till-Mobley's open casket, testimony and campaign in the female copy; shared outcome and legacy). Words per copy after fixes: EN male 217, female 220 (limit 220); RU male 205, female 216. .ru.md marks the same paragraphs (both, male, female, both, male, female, both) and carries the same corrections. Lint: 456 cards OK."

@@ -1,0 +1,196 @@
+# Second, independent check of content/cards/zong.md / zong.ru.md and
+# content/ledger/perspective-zong.yaml (2026-11-15). Every source quoted below was opened by the checker.
+# Not counted: Trevor Burnard (journals.openedition.org, blocked by a bot filter, not opened);
+# insurance.museum/?p=17318 is the same page as the John Lane article and counts once;
+# the esclh blog post reproduces Palgrave's publisher description and is counted as that description.
+# Fixes: "in July" dropped from the Sharp/Admiralty sentence (EN and RU); RU "чем полагалось" -> "чем был рассчитан";
+# new sources added to the card and ledger for Toronto, Ireland, the transcript, the Brookes print, memory.
+# Word count per copy after fixes: EN male 217, female 218 (limit 220); RU male 200, female 199.
+# Paragraph marks match between .md and .ru.md: shared, shared, {male}, shared, {male}, {female}, {female}.
+# Both copies read as complete stories: shared frame (voyage, verdict, appeal, no prosecution, abolition);
+# male: Equiano brings the case to Sharp, Sharp fails, Equiano's own book becomes testimony;
+# female: Philip turns the case report into a poem of remembrance, read aloud each year.
+- card: zong
+  copy: both
+  fact: "The Liverpool-owned Zong overshot Jamaica in late 1781"
+  verdict: confirmed
+  sources:
+    - {title: "Understanding Slavery Initiative: The Zong", url: "https://understandingslavery.com/casestudy/the-zong/", quote: "the Liverpool owners of the ship ... mistaking Jamaica for the French colony of St Domingue (later Haiti) and overshot Jamaica. Between 29 November and 1 December"}
+    - {title: "Insurance Museum: John Lane, The Zong Massacre", url: "https://insurance.museum/history-article-the-zong-massacre-1781-an-insurers-perspective", quote: "owned by a consortium of wealthy merchants and slave owners from Liverpool ... They had made navigational errors by mistaking Jamaica for the French colony of Saint-Dominique"}
+  note: "Was not in the perspective ledger; added. Krikler also: 'the ship missed Jamaica owing to the Captain's navigational error'."
+- card: zong
+  copy: both
+  fact: "The ship carried about twice as many captives as it was built for; its master was Luke Collingwood"
+  verdict: confirmed
+  sources:
+    - {title: "London Museum: The Zong massacre trial", url: "https://londonmuseum.org.uk/collections/london-stories/zong-massacre-trial/", quote: "It was twice the number the ship was designed for. ... The ship's master, Luke Collingwood"}
+    - {title: "Insurance Museum: John Lane, The Zong Massacre", url: "https://insurance.museum/history-article-the-zong-massacre-1781-an-insurers-perspective", quote: "This number was around twice that for which the ship was safely designed for ... The Captain of the Zong, Luke Collingwood"}
+  note: "Ledgered in context-b.yaml; re-opened."
+- card: zong
+  copy: both
+  fact: "The crew threw more than 130 Africans into the sea"
+  verdict: confirmed
+  sources:
+    - {title: "Understanding Slavery Initiative: The Zong", url: "https://understandingslavery.com/casestudy/the-zong/", quote: "three groups, totalling 132 people, were thrown to their deaths from the Zong"}
+    - {title: "London Museum: The Zong massacre trial", url: "https://londonmuseum.org.uk/collections/london-stories/zong-massacre-trial/", quote: "the crew threw 130 of the Africans into the water, killing all of them"}
+  note: "The card's dispute field is justified: Insurance Museum and Jamaica Observer give 122 thrown plus 10 who jumped ('throw overboard 122 enslaved people ... a further 10 enslaved people jumped overboard'); CBC gives 133."
+- card: zong
+  copy: both
+  fact: "Some were thrown overboard after rain had refilled the water the crew later claimed was running out"
+  verdict: confirmed
+  sources:
+    - {title: "Jeremy Krikler, International Review of Social History (2012)", url: "https://www.cambridge.org/core/journals/international-review-of-social-history/article/chain-of-murder-in-the-slave-trade-a-wider-context-of-the-zong-massacre/B94B605F1EDD131DD125DB6CB73DFA89", quote: "some of the murders had taken place after rain had restocked the ship with water"}
+    - {title: "Insurance Museum: John Lane, The Zong Massacre", url: "https://insurance.museum/history-article-the-zong-massacre-1781-an-insurers-perspective", quote: "rain had fallen before the third and final jettison of enslaved people"}
+  note: "London Museum: 'The ship's crew later claimed that their drinking water was running out'."
+- card: zong
+  copy: both
+  fact: "The owners claimed the dead on insurance as lost cargo"
+  verdict: confirmed
+  sources:
+    - {title: "London Museum: The Zong massacre trial", url: "https://londonmuseum.org.uk/collections/london-stories/zong-massacre-trial/", quote: "The enslavers had insured their \"cargo\", so they claimed compensation for the loss."}
+    - {title: "Understanding Slavery Initiative: The Zong", url: "https://understandingslavery.com/casestudy/the-zong/", quote: "the Liverpool owners of the ship, the Zong, had sued the ship's underwriters for the value of 132 Africans lost"}
+  note: ""
+- card: zong
+  copy: both
+  fact: "In March 1783 a jury at London's Guildhall found for the owners"
+  verdict: confirmed
+  sources:
+    - {title: "London Museum: The Zong massacre trial", url: "https://londonmuseum.org.uk/collections/london-stories/zong-massacre-trial/", quote: "A trial was held in March 1783 at the Guildhall in central London to settle the dispute. The ship owners won the first case, but the verdict was appealed."}
+    - {title: "Understanding Slavery Initiative: The Zong", url: "https://understandingslavery.com/casestudy/the-zong/", quote: "The jury decided that the underwriters were obliged, under law, to pay."}
+  note: ""
+- card: zong
+  copy: both
+  fact: "On the insurers' appeal in May, Lord Mansfield said the case was the same as if horses had been thrown overboard"
+  verdict: confirmed
+  sources:
+    - {title: "Insurance Museum: John Lane, The Zong Massacre", url: "https://insurance.museum/history-article-the-zong-massacre-1781-an-insurers-perspective", quote: "He stated that the jury, \"had no doubt (though it shocks one very much) that the Case of Slaves was the same as if Horses had been thrown overboard.\""}
+    - {title: "CBC Radio IDEAS (2021), quoting James Walvin", url: "https://www.cbc.ca/lite/story/1.6266570", quote: "\"[Mansfield] said, 'As much as it shocks one, it is the same as horses being thrown overboard',\""}
+  note: "Mansfield framed it as the jury's view he accepted; the card's wording matches Walvin's reading. May date: Understanding Slavery, 'That hearing, which took place on 21–22 May 1783'. Burnard not opened (bot filter)."
+- card: zong
+  copy: both
+  fact: "Mansfield granted a new trial; there is no evidence it was held"
+  verdict: confirmed
+  sources:
+    - {title: "Insurance Museum: John Lane, The Zong Massacre", url: "https://insurance.museum/history-article-the-zong-massacre-1781-an-insurers-perspective", quote: "Lord Mansfield ordered a new trial. There is no record of this ever taking place"}
+    - {title: "London Museum: The Zong massacre trial", url: "https://londonmuseum.org.uk/collections/london-stories/zong-massacre-trial/", quote: "A second trial seems to have never happened, meaning we don't know how the case was settled."}
+  note: "Understanding Slavery also: 'decided that there should be a new trial'."
+- card: zong
+  copy: both
+  fact: "No one was ever charged with murder"
+  verdict: confirmed
+  sources:
+    - {title: "London Museum: The Zong massacre trial", url: "https://londonmuseum.org.uk/collections/london-stories/zong-massacre-trial/", quote: "But nobody was ever prosecuted for the murders."}
+    - {title: "Jamaica Observer (2017)", url: "https://jamaicaobserver.com/2017/08/05/the-zong-massacre", quote: "efforts by Sharp and others, including legendary freed slave and freedom activist Olaudah Equiano ... to bring criminal charges failed"}
+  note: ""
+- card: zong
+  copy: male
+  fact: "Equiano had bought his own freedom in 1766"
+  verdict: confirmed
+  sources:
+    - {title: "London Museum: Olaudah Equiano, writer and abolitionist", url: "https://www.londonmuseum.org.uk/collections/london-stories/olaudah-equiano-writer-abolitionist/", quote: "his freedom, which he purchased from one of his enslavers Robert King in 1766 for £40"}
+    - {title: "Brycchan Carey: Equiano biography", url: "https://brycchancarey.com/equiano/biog.htm", quote: "after three years, in 1766, he saved up £40, the price of his own freedom"}
+  note: ""
+- card: zong
+  copy: male
+  fact: "Equiano carried news of the verdict to Granville Sharp"
+  verdict: confirmed
+  sources:
+    - {title: "Understanding Slavery Initiative: The Zong", url: "https://understandingslavery.com/casestudy/the-zong/", quote: "On 19 March 1783, the African Olaudah Equiano called on anti-slavery campaigner Granville Sharp ... Three days earlier, a legal case in London had heard"}
+    - {title: "HISTORY UK: Olaudah Equiano and the Zong massacre", url: "https://www.history.co.uk/article/olaudah-equiano-and-the-zong-massacre", quote: "On hearing of the Zong trial, Equiano brought it to the attention of Granville Sharp"}
+  note: "HISTORY.com also: 'Olaudah Equiano told the abolitionist Granville Sharp of the Zong affair'."
+- card: zong
+  copy: male
+  fact: "Sharp had the May hearing taken down"
+  verdict: corrected
+  sources:
+    - {title: "Understanding Slavery Initiative: The Zong", url: "https://understandingslavery.com/casestudy/the-zong/", quote: "That hearing, which took place on 21–22 May 1783, was recorded at Granville Sharp's request."}
+    - {title: "Andrew Lyall, Granville Sharp's Cases on Slavery (Hart, 2017), publisher's description", url: "https://www.barnesandnoble.com/w/granville-sharps-cases-on-slavery-andrew-lyall/1124893061", quote: "The unpublished materials are mostly verbatim transcripts made by shorthand writers commissioned by Granville Sharp"}
+  note: "Card text stands. Ledger corrected: the Burnard quote was a bracketed paraphrase from a page the checker could not open, and RMG says only that Sharp's volume holds 'a transcript of court proceedings'; replaced Burnard with Lyall's description."
+- card: zong
+  copy: male
+  fact: "Sharp then asked the Admiralty to try the crew for murder; nothing came of it"
+  verdict: corrected
+  sources:
+    - {title: "Palgrave Macmillan description of Michelle Faubert, Granville Sharp's Uncovered Letter and the Zong Massacre (2018)", url: "https://esclh.blogspot.com/2018/10/book-michelle-faubert-granville-sharps.html", quote: "In the letter, Sharp demands that the Admiralty bring murder charges against the crew of the Zong"}
+    - {title: "Jamaica Observer (2017)", url: "https://jamaicaobserver.com/2017/08/05/the-zong-massacre", quote: "a draft of a letter intended for the British Admiralty demanding criminal action against officers and crew of the Zong ... nor was there ever a reply or acknowledgement"}
+  note: "The card said 'in July'. Only the RMG catalogue gives the date ('letter to the Lords Commissioners of the Admiralty dated 2 July 1783'); no second source found, so 'in July' was removed from EN and RU. 'Nothing came of it': Understanding Slavery '(he failed)'; Insurance Museum 'was unsuccessful'."
+- card: zong
+  copy: both
+  fact: "Outrage over the killings fed the abolition society founded in 1787"
+  verdict: confirmed
+  sources:
+    - {title: "Understanding Slavery Initiative: The Zong", url: "https://understandingslavery.com/casestudy/the-zong/", quote: "a direct line of descent from outrage at the Zong affair in 1783 to the founding of the Abolition Society in 1787"}
+    - {title: "HISTORY.com: Zong slave ship trial", url: "https://history.com/this-day-in-history/zong-slave-ship-trial", quote: "A few months after the Zong trial ... the Society for the Abolition of the Slave Trade was founded four years later."}
+  note: "London Museum's quote in the ledger does not give 1787; HISTORY.com added as the second source."
+- card: zong
+  copy: both
+  fact: "Abolitionists went on to make the slave ship an image in the Brookes print"
+  verdict: confirmed
+  sources:
+    - {title: "Royal Museums Greenwich: The slave ship 'Brooks'", url: "https://www.rmg.co.uk/collections/objects/rmgc-object-254938", quote: "In 1788, abolitionists in Britain commissioned a drawing of how people were squeezed on board the 'Brooks'"}
+    - {title: "Understanding Slavery Initiative: Description of a slave ship", url: "https://understandingslavery.com/?p=547", quote: "the Committee of the Abolition of Slavery used it to inform and shock the public"}
+  note: "Was not in the perspective ledger; added."
+- card: zong
+  copy: male
+  fact: "In 1789 Equiano published The Interesting Narrative; it became a best-seller"
+  verdict: confirmed
+  sources:
+    - {title: "London Museum: Olaudah Equiano, writer and abolitionist", url: "https://www.londonmuseum.org.uk/collections/london-stories/olaudah-equiano-writer-abolitionist/", quote: "Equiano first published his autobiography in Fitzrovia, London, on 24 March 1789. ... It became a British best-seller."}
+    - {title: "HISTORY UK: Olaudah Equiano and the Zong massacre", url: "https://www.history.co.uk/article/olaudah-equiano-and-the-zong-massacre", quote: "His autobiography, published in 1789, became a bestseller"}
+  note: ""
+- card: zong
+  copy: male
+  fact: "Equiano toured Britain and Ireland with the book"
+  verdict: confirmed
+  sources:
+    - {title: "Brycchan Carey: Equiano biography", url: "https://brycchancarey.com/equiano/biog.htm", quote: "he vigorously promoted it by going on lecture tours around England, Scotland, Wales, and Ireland"}
+    - {title: "Dublin Inquirer: Olaudah Equiano's Irish Friends", url: "https://www.dublininquirer.com/donal-olaudah-equiano-s-irish-friends/", quote: "\"in May 1791 I sailed from Liverpool to Dublin where I was very kindly received, and from thence to Cork, and then travelled over many counties in Ireland\""}
+  note: "London Museum's 'across the country' does not mention Ireland; Dublin Inquirer and Ulster Historical Foundation ('visited Ireland in 1791-2') added."
+- card: zong
+  copy: female
+  fact: "M. NourbeSe Philip was born in Tobago"
+  verdict: confirmed
+  sources:
+    - {title: "Academy of American Poets", url: "https://poets.org/poet/m-nourbese-philip", quote: "M. NourbeSe Philip was born in Tobago."}
+    - {title: "Wesleyan University Press author site", url: "https://nourbesephilip.site.wesleyan.edu/", quote: "Born in Tobago, she now resides in Toronto, Ontario."}
+  note: ""
+- card: zong
+  copy: female
+  fact: "Philip is a former Toronto lawyer"
+  verdict: confirmed
+  sources:
+    - {title: "McGill Faculty of Law", url: "https://mcgill.ca/law/node/8889", quote: "Before devoting her time to writing, she practiced law for seven years in Toronto."}
+    - {title: "The Canadian Encyclopedia: Marlene NourbeSe Philip", url: "https://thecanadianencyclopedia.ca/en/article/marlene-nourbese-philip", quote: "She practised law in Toronto for a nearly a decade ... In 1983, she decided to give up her law practice"}
+  note: "Ledger sources gave Toronto only via McGill; Canadian Encyclopedia added. Length of practice differs (seven years vs nearly a decade); the card gives none."
+- card: zong
+  copy: female
+  fact: "Zong! was published in 2008"
+  verdict: confirmed
+  sources:
+    - {title: "Academy of American Poets", url: "https://poets.org/poet/m-nourbese-philip", quote: "Zong! (Wesleyan University Press, 2008)"}
+    - {title: "The Canadian Encyclopedia", url: "https://thecanadianencyclopedia.ca/en/article/marlene-nourbese-philip", quote: "Zong! (The Mercury Press, 2008)"}
+  note: "Mercury Press in Canada, Wesleyan in the US; both 2008."
+- card: zong
+  copy: female
+  fact: "She used only the words of the two-page case report Gregson v. Gilbert, broken apart across the page"
+  verdict: confirmed
+  sources:
+    - {title: "CBC Radio IDEAS (2021)", url: "https://www.cbc.ca/lite/story/1.6266570", quote: "\"The two page document contains some 500-plus different words. I decided that I would lock myself in that text and only use the words that appear in that case report\" ... The resulting poem shows the words, syllables, and letters of the case report cast across pages."}
+    - {title: "McGill Faculty of Law", url: "https://mcgill.ca/law/node/8889", quote: "Zong! is a book length poem composed entirely from the words of the infamous case report, Gregson v. Gilbert (1783)."}
+  note: "Set Speaks (the author's own statement): 'relies entirely on a two-page court report, Gregson vs. Gilbert'."
+- card: zong
+  copy: female
+  fact: "The poem remakes the report so that it remembers the dead"
+  verdict: corrected
+  sources:
+    - {title: "CBC Radio IDEAS (2021)", url: "https://www.cbc.ca/lite/story/1.6266570", quote: "ripping apart and reconfiguring the language in a way that remembers those who died"}
+    - {title: "AALBC: M. NourbeSe Philip", url: "https://aalbc.com/authors/M.-NourbeSe-Philip", quote: "Zong! is both a memorial and a radical commentary on the ways in which the law and language have been complicit in the horrors of slavery."}
+  note: "Card text stands. The ledger's Wesleyan quote ('excavates the legal text') does not support remembrance; AALBC added."
+- card: zong
+  copy: female
+  fact: "The killings began on 29 November; each year around that date readers gather to read the poem aloud together"
+  verdict: confirmed
+  sources:
+    - {title: "CBC Radio IDEAS (2021)", url: "https://www.cbc.ca/lite/story/1.6266570", quote: "Each year, on or around November 29th, readers of Zong! gather to perform a 'durational reading' of the text. ... Beginning on November 29, 1781, the Zong's crew threw 133 Africans overboard"}
+    - {title: "M. NourbeSe Philip: Set Speaks, backstory", url: "https://www.setspeaks.com/backstory/", quote: "MNP has hosted a collective reading, international in scope, in which she and an audience read the work together on the anniversary of the event, November 29, 1781."}
+  note: "Start date also in Understanding Slavery: 'Between 29 November and 1 December'."

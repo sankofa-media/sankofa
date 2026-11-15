@@ -1,0 +1,176 @@
+# Second, independent check of the perspective rewrite of gullah (2026-11-15).
+# Every source below was opened by the checker; quotes were matched verbatim against the fetched page text
+# (Smithsonian Magazine itself is read through the Bunk History reprint of the same article, counted once).
+# Edits applied: male "rowed" -> "took ... by rowboat" (sources say he transported or ferried them, not that he rowed);
+# male "Others had found no African trace" -> "Earlier scholars heard only imperfect English" (second source added);
+# female "to make children dance" -> "to amuse the children" (only Facing South mentions dancing);
+# sources list: University of Chicago Magazine year 2011 -> 2010; Joyner (Smithsonian, 1988) added.
+# Word counts after edits (EN): male 234, female 233 (limit 235 for a language card). Lint passes for gullah.
+- card: gullah
+  copy: both
+  fact: "Gullah grew among enslaved West and Central Africans on the rice, Sea Island cotton and indigo plantations of coastal South Carolina and Georgia"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: Gullah Geechee Cultural Heritage Corridor", url: "https://www.nps.gov/guge/index.htm", quote: "descendants of West and Central Africans who were enslaved and bought to the lower Atlantic states of North Carolina, South Carolina, Florida, and Georgia to work on the coastal rice, Sea Island cotton and indigo plantations."}
+    - {title: "Kenyon College: American Language, African Roots", url: "https://digital.kenyon.edu/gullah_language.html", quote: "The list of tribes that scholars believe the Gullah people descended from"}
+  note: "Kenyon lists West African (Mandingo, Wolof, Akan) and Central African (Makongo, Kimbundu) groups; the plantation crops rest on NPS and the earlier explainers-check entry (NPS + Smithsonian Folkways SFW40258)."
+- card: gullah
+  copy: both
+  fact: "Its words are mostly English, its grammar is not simply English, and it keeps African words"
+  verdict: confirmed
+  sources:
+    - {title: "Smithsonian Folkways SFW40258 liner notes", url: "https://folkways-media.si.edu/docs/folkways/artwork/SFW40258.pdf", quote: "Although Gullah borrows its lexicon from English, its grammatical structure actually lies in West African languages such as Igbo, Yoruba, Efik, Twi, and others."}
+    - {title: "Kenyon College: American Language, African Roots", url: "https://digital.kenyon.edu/gullah_language.html", quote: "Some of the main differences between Gullah and American English involve verb tense, naming, and singular and plural nouns."}
+  note: "African words: Folkstreams 'entire African words found in Gullah conversations'."
+- card: gullah
+  copy: both
+  fact: "Outsiders long dismissed Gullah as broken English"
+  verdict: confirmed
+  sources:
+    - {title: "College of Charleston: Word, Shout, Song exhibition (2012)", url: "https://today.cofc.edu/2012/01/04/college-to-host-word-shout-song-lorenzo-dow-turner-connecting-community-through-language/", quote: "whose speech was dismissed as \"baby talk\" and \"bad English.\""}
+    - {title: "Kenyon College: American Language, African Roots", url: "https://digital.kenyon.edu/gullah_language.html", quote: "Americans might still consider Gullah merely broken English, if not for Lorenzo Dow Turner."}
+  note: ""
+- card: gullah
+  copy: both
+  fact: "In 1933 at Harris Neck, Georgia, Lorenzo Dow Turner recorded Amelia Dawley singing a song"
+  verdict: confirmed
+  sources:
+    - {title: "Indiana University Libraries: Dow Turner Collections", url: "https://libraries.indiana.edu/dow-turner", quote: "A Mende song by Amelia Dawley. July 31, 1933. Harris Neck, Georgia."}
+    - {title: "Harris Neck Land Trust: Amelia's Song", url: "https://harrisnecklandtrust.org/amelias-song", quote: "In 1933 African American linguist Lorenzo Turner and musicologist Lydia Parish visited Harris Neck"}
+  note: "Facing South (1997) says 'In 1932, Turner ... recorded Dawley'. The dated archival record at Indiana (which holds the recording) settles it; this is a press slip rather than a scholarly dispute, so the dispute field stays empty."
+- card: gullah
+  copy: both
+  fact: "The song had five lines and was in a language Dawley did not know"
+  verdict: confirmed
+  sources:
+    - {title: "California Newsreel: The Language You Cry In", url: "https://newsreel.org/video/THE-LANGUAGE-YOU-CRY-IN", quote: "a five-line song he learned from a woman living in a remote Georgia fishing village, Amelia Dawley. Although Amelia did not know the meaning of the syllables in the song"}
+    - {title: "Harris Neck Land Trust: Amelia's Song", url: "https://harrisnecklandtrust.org/amelias-song", quote: "in a language unknown to Mrs. Dawley"}
+  note: "Five lines also in Facing South: 'She has a five-line song that is essentially the same as Jabati's song'."
+- card: gullah
+  copy: both
+  fact: "The song was in Mende, a language of Sierra Leone"
+  verdict: confirmed
+  sources:
+    - {title: "California Newsreel: The Language You Cry In", url: "https://newsreel.org/video/THE-LANGUAGE-YOU-CRY-IN", quote: "a Sierra Leonean graduate student in the U.S. recognized it as Mende, his native tongue."}
+    - {title: "Indiana University Libraries: Dow Turner Collections", url: "https://libraries.indiana.edu/dow-turner", quote: "A Mende song by Amelia Dawley."}
+  note: ""
+- card: gullah
+  copy: male
+  fact: "Turner first heard Gullah in the summer of 1929 at South Carolina State College"
+  verdict: confirmed
+  sources:
+    - {title: "University of Chicago Magazine: Lorenzo Dow Turner, PhD'26 (2010)", url: "https://magazine.uchicago.edu/1012/features/legacy.shtml", quote: "While teaching summer school at South Carolina State College in 1929, Turner listened as two students spoke what sounded like broken English."}
+    - {title: "American Folklore Society, Notable Folklorists of Color: Lorenzo Dow Turner", url: "https://notablefolkloristsofcolor.org/portfolio/lorenzo-dow-turner/", quote: "During summer 1929, while teaching at South Carolina State College, Dr. Turner heard Black students"}
+  note: "The card's source list dated the Chicago article 2011; the page is the November-December 2010 issue (© 2010). Corrected in the card."
+- card: gullah
+  copy: male
+  fact: "Earlier scholars heard only imperfect English in Gullah; Turner heard words that were not English"
+  verdict: corrected
+  sources:
+    - {title: "University of Chicago Magazine (2010)", url: "https://magazine.uchicago.edu/1012/features/legacy.shtml", quote: "Other linguists had studied it before, but they determined that it contained no vestiges of African languages."}
+    - {title: "Charles Joyner, Afro-American Folklife Scholarship: A Case Study of the Sea Islands (Smithsonian, 1988)", url: "https://folklife-media.si.edu/docs/festival/program-book-articles/FESTBK1988_19.pdf", quote: "argued that the speech of Black Sea Islanders was the imperfect result of the attempt of \"savage and primitive\" people to acquire the complex language of a more \"highly civilized\" race."}
+  note: "Card said 'Others had found no African trace in it'; only the Chicago magazine says that in so many words (Kenyon and College of Charleston describe Turner's finding, not his predecessors). Reworded to what both sources state; 'words that were not English' is in Chicago and Kenyon ('many Gullah words did not have any English precursors')."
+- card: gullah
+  copy: male
+  fact: "He took island speakers by rowboat to the mainland, where there was electricity for his hundred-pound recorder"
+  verdict: corrected
+  sources:
+    - {title: "University of Chicago Magazine (2010)", url: "https://magazine.uchicago.edu/1012/features/legacy.shtml", quote: "he had to transport the participants by rowboat to the mainland, where there was electricity for the recorder."}
+    - {title: "Kenyon College: American Language, African Roots", url: "https://digital.kenyon.edu/gullah_language.html", quote: "He often had to ferry islanders back to Charleston, as many islands did not have the electricity required to run his cumbersome, hundred pound recording device."}
+  note: "Card said 'He rowed'; neither source says Turner rowed himself. Reworded (RU: «переправлял на вёсельной лодке»)."
+- card: gullah
+  copy: male
+  fact: "Africanisms in the Gullah Dialect (1949) traced thousands of Gullah words and names to African languages"
+  verdict: confirmed
+  sources:
+    - {title: "Folkstreams: Dr. Lorenzo Turner and the Gullah Language", url: "https://www.folkstreams.net/contexts/dr-lorenzo-turner-and-the-gullah-language", quote: "In his book, Turner listed nearly 4,000 items of African language origin"}
+    - {title: "Charles Joyner (Smithsonian, 1988)", url: "https://folklife-media.si.edu/docs/festival/program-book-articles/FESTBK1988_19.pdf", quote: "Lorenzo Dow Turner, on the other hand, suggested in his Africanisms in the Gullah Dialect (1949) that thousands of African words persisted in Gullah"}
+  note: "Also Newsreel ('more than 3000 names and words') and Folkways ('more than 300 African loanwords and 4,000 personal names'). Most of the thousands are personal names, which 'words and names' covers."
+- card: gullah
+  copy: male
+  fact: "The book showed that slavery had not erased the memory of Africa"
+  verdict: confirmed
+  sources:
+    - {title: "University of Chicago Magazine (2010)", url: "https://magazine.uchicago.edu/1012/features/legacy.shtml", quote: "\"Until then it was pretty much thought that all of the African knowledge and everything had been erased by slavery. Turner showed that was not true,\""}
+    - {title: "Indiana University Libraries: Dow Turner Collections", url: "https://libraries.indiana.edu/dow-turner", quote: "Turner proved that there were significant cultural retentions of African cultures among African Americans."}
+  note: ""
+- card: gullah
+  copy: male
+  fact: "In 1990, following Turner's recording, Joseph Opala and Cynthia Schmidt found Baindu Jabati in Senehun Ngola still singing the song"
+  verdict: confirmed
+  sources:
+    - {title: "Smithsonian Magazine via Bunk History (Joshua Kagavi, 2024)", url: "https://bunkhistory.org/resources/how-the-memory-of-a-song-reunited-two-women-separated-by-the-trans-atlantic-slave-trade", quote: "In 1990, the researchers traveled around the country's Pujehun District, playing the song for villagers"}
+    - {title: "College of Charleston: Word, Shout, Song exhibition (2012)", url: "https://today.cofc.edu/2012/01/04/college-to-host-word-shout-song-lorenzo-dow-turner-connecting-community-through-language/", quote: "scholars Joseph Opala, Tazieff Schmidt, and Cynthia Koroma who, in 1990, realized a song passed down through generations connected the Mende people of Sierra Leone to their American kin in Georgia."}
+  note: "Smithsonian: 'they found a small village, Senehun Ngola, and a woman named Baindu Jabati who astonished them by singing a nearly identical version of the song.' Facing South dates only the finding of the recording (1989) and gives no year for the trip; it does not contradict 1990. College of Charleston garbles the first names (Tazieff Schmidt, Cynthia Koroma) but confirms the year and team."
+- card: gullah
+  copy: female
+  fact: "The song came down through women; Dawley learned it from her mother"
+  verdict: confirmed
+  sources:
+    - {title: "Harris Neck Land Trust: Amelia's Song", url: "https://harrisnecklandtrust.org/amelias-song", quote: "a song that had been taught to her by her mother."}
+    - {title: "Facing South: Ties That Bind (1997)", url: "https://facingsouth.org/1997/05/ties-bind", quote: "Amelia Dawley got it from her mother, Tawba Shaw, and her grandmother, Catherine, both born in slavery."}
+  note: "Newsreel: 'the song was passed down by women on both sides.'"
+- card: gullah
+  copy: female
+  fact: "In the Georgia family the song was sung to amuse the children"
+  verdict: corrected
+  sources:
+    - {title: "Facing South: Ties That Bind (1997)", url: "https://facingsouth.org/1997/05/ties-bind", quote: "They used it to entertain the children. To make them dance."}
+    - {title: "California Newsreel: The Language You Cry In", url: "https://newsreel.org/video/THE-LANGUAGE-YOU-CRY-IN", quote: "Though transformed in plantation culture to a children's rhyme"}
+  note: "Card said 'to make children dance'; dancing appears only in Facing South (Harris Neck Land Trust and Smithsonian do not mention it). Reworded to the children's use both sources share (RU: «этой песней забавляли детей»)."
+- card: gullah
+  copy: female
+  fact: "Among the Mende it was a funeral song, and women preside over funerals"
+  verdict: confirmed
+  sources:
+    - {title: "Facing South: Ties That Bind (1997)", url: "https://facingsouth.org/1997/05/ties-bind", quote: "Women in the Mende culture preside over funerals and births."}
+    - {title: "California Newsreel: The Language You Cry In", url: "https://newsreel.org/video/THE-LANGUAGE-YOU-CRY-IN", quote: "Her grandmother taught her the song because birth and death rites are women's responsibilities in Mende culture."}
+  note: "Funeral song: Newsreel 'a dirge performed during a graveside ceremony'; Harris Neck 'sung in Senehun Ngola by women as they prepared the body of a loved one for burial.'"
+- card: gullah
+  copy: female
+  fact: "In 1990 Cynthia Schmidt, searching southern Sierra Leone with Joseph Opala and Tazieff Koroma, played the recording in Senehun Ngola and Baindu Jabati sang along"
+  verdict: confirmed
+  sources:
+    - {title: "Facing South: Ties That Bind (1997)", url: "https://facingsouth.org/1997/05/ties-bind", quote: "Finally, Schmidt came upon Baindu Jabati. When Schmidt played a tape recording of the song, Jabati sang along."}
+    - {title: "California Newsreel: The Language You Cry In", url: "https://newsreel.org/video/THE-LANGUAGE-YOU-CRY-IN", quote: "Opala joined with ethnomusicologist Cynthia Schmidt and Sierra Leonean linguist Tazieff Koroma in an arduous search"}
+  note: "Year 1990 and southern Sierra Leone (Pujehun District) from Smithsonian via Bunk History and College of Charleston, see the male entry."
+- card: gullah
+  copy: female
+  fact: "Jabati's grandmother taught her the song and foretold that it would one day bring her lost kin"
+  verdict: confirmed
+  sources:
+    - {title: "California Newsreel: The Language You Cry In", url: "https://newsreel.org/video/THE-LANGUAGE-YOU-CRY-IN", quote: "At the same time she made the uncanny prediction that there would be a return of lost kinsman and that Baindu would recognize them through this song."}
+    - {title: "Harris Neck Land Trust: Amelia's Song", url: "https://harrisnecklandtrust.org/amelias-song", quote: "Bendu's grandmother had told her that this song, which had been passed down in her village from mother to daughter for centuries, would one day reunite her to long-lost relatives."}
+  note: "Smithsonian gives a compatible saying: 'those who sing this song are my brothers and sisters.'"
+- card: gullah
+  copy: female
+  fact: "In the civil war rebels razed the village and held Jabati captive"
+  verdict: confirmed
+  sources:
+    - {title: "Facing South: Ties That Bind (1997)", url: "https://facingsouth.org/1997/05/ties-bind", quote: "Within a few years, Senehun Ngola was burned and flattened. Jabati, apparently the last person in the country who knew the Mende funeral song, was captured and held by rebels."}
+    - {title: "Smithsonian Magazine via Bunk History (2024)", url: "https://bunkhistory.org/resources/how-the-memory-of-a-song-reunited-two-women-separated-by-the-trans-atlantic-slave-trade", quote: "During the conflict, Jabati was enslaved by rebels, who killed several of her family members and razed her village."}
+  note: ""
+- card: gullah
+  copy: both
+  fact: "In 1997 Dawley's daughter Mary Moran came to Senehun Ngola and was received with jubilation"
+  verdict: confirmed
+  sources:
+    - {title: "California Newsreel: The Language You Cry In", url: "https://newsreel.org/video/THE-LANGUAGE-YOU-CRY-IN", quote: "Finally in 1997, Mary Moran and her family could travel and, after a painful visit to Bunce Island, were received with jubilation in Senehum Ngola."}
+    - {title: "Facing South: Ties That Bind (1997)", url: "https://facingsouth.org/1997/05/ties-bind", quote: "During the lengthy, musical welcoming procession — reserved for local chiefs and visiting VIPs — hundreds swarmed through the hot, dusty village of Senehun Ngola to greet Moran and her family."}
+  note: "Harris Neck Land Trust: 'In 1997 Amelia's daughter, Mary Moran ... were invited to Sierra Leone'."
+- card: gullah
+  copy: both
+  fact: "The two women sang the song together, and the film The Language You Cry In (1998) shows the meeting"
+  verdict: confirmed
+  sources:
+    - {title: "Harris Neck Land Trust: Amelia's Song", url: "https://harrisnecklandtrust.org/amelias-song", quote: "Mary and Bendu Jabati met and sang this song together for the first time."}
+    - {title: "Smithsonian Magazine via Bunk History (2024)", url: "https://bunkhistory.org/resources/how-the-memory-of-a-song-reunited-two-women-separated-by-the-trans-atlantic-slave-trade", quote: "By 1997, the war had eased enough for Moran to travel to Senehun Ngola, where her meeting with Jabati was recorded for The Language You Cry In ."}
+  note: "Film year and directors (Alvaro Toepke and Angel Serrano, 1998) from Newsreel: 'Producer/Directors: Alvaro Toepke and Angel Serrano' ... '52 minutes, 1998'."
+- card: gullah
+  copy: both
+  fact: "Gullah is still spoken"
+  verdict: confirmed
+  sources:
+    - {title: "Folkstreams: Dr. Lorenzo Turner and the Gullah Language", url: "https://www.folkstreams.net/contexts/dr-lorenzo-turner-and-the-gullah-language", quote: "can be heard, even today, in the subtlest forms and nuances of Gullah speech"}
+    - {title: "Kenyon College: American Language, African Roots", url: "https://digital.kenyon.edu/gullah_language.html", quote: "The language's continued use is a story of victory."}
+  note: "Carried over from context-a-check; re-opened, both quotes present."

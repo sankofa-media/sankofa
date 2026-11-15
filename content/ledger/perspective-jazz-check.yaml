@@ -1,0 +1,154 @@
+# Second, independent check of jazz.md / jazz.ru.md (2026-11-15). Every source below was opened by the checker.
+# Word counts per copy (EN): male 216, female 235 (genre limit 235). Both copies read as complete stories.
+# .ru.md marks the same {male}/{female} paragraphs. RU edits: "Первая линия" (misleading: in New Orleans the "first line"
+# is the parade band) -> "Три духовых"; "звездой-солистом у" -> "где он стал главным солистом оркестра".
+- fact: "Jazz emerged in New Orleans around 1900"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: A New Orleans Jazz History", url: "https://www.nps.gov/jazz/learn/historyculture/jazz_history.htm", quote: "Just after the beginning of the new century, jazz began to emerge."}
+    - {title: "Carnegie Hall Timeline: New Orleans-style jazz", url: "https://timeline.carnegiehall.org/genres/new-orleans-style-jazz", quote: "At the turn of the 20th century, many of New Orleans' early jazz musicians began their professional careers"}
+  note: ""
+- fact: "Mainly among Black and Creole musicians"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: A New Orleans Jazz History", url: "https://www.nps.gov/jazz/learn/historyculture/jazz_history.htm", quote: "representing the highly-skilled \"Frenchmen\" or Creoles of color"}
+    - {title: "Carnegie Hall Timeline: New Orleans-style jazz", url: "https://timeline.carnegiehall.org/genres/new-orleans-style-jazz", quote: "The cross-influences of these African-derived cultures mixed with those of Creoles"}
+  note: "Opening paragraph, outside the perspective ledger; checked anyway."
+- fact: "Out of ragtime, the blues, spirituals and brass-band marches"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: A New Orleans Jazz History", url: "https://www.nps.gov/jazz/learn/historyculture/jazz_history.htm", quote: "a broad musical revolution encompassing ragtime, blues, spirituals, marches"}
+    - {title: "Carnegie Hall Timeline: New Orleans-style jazz", url: "https://timeline.carnegiehall.org/genres/new-orleans-style-jazz", quote: "draws from several sources: ragtime, blues, marches (syncopated brass bands)"}
+  note: "Carnegie also names spirituals in Bolden's music: \"incorporating blues and spirituals\"."
+- fact: "A front line of cornet, clarinet and trombone improvised together over a rhythm section"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: A New Orleans Jazz History", url: "https://www.nps.gov/jazz/learn/historyculture/jazz_history.htm", quote: "usually a front line of cornet, clarinet, and trombone with a rhythm section of guitar, bass, and drums"}
+    - {title: "Bruce Boyd Raeburn, Traditional New Orleans Jazz, 64 Parishes", url: "https://64parishes.org/entry/traditional-new-orleans-jazz", quote: "a front line usually consisting of cornet (or trumpet), clarinet, and trombone engaging in polyphony"}
+  note: ""
+- fact: "Played for dances, parades and funerals"
+  verdict: confirmed
+  sources:
+    - {title: "Carnegie Hall Timeline: New Orleans-style jazz", url: "https://timeline.carnegiehall.org/genres/new-orleans-style-jazz", quote: "New Orleans jazz is primarily dance music. ... to extend songs for dancers and in parades"}
+    - {title: "NPS: A New Orleans Jazz History", url: "https://www.nps.gov/jazz/learn/historyculture/jazz_history.htm", quote: "including brass band funerals and dances, to the New Orleans black community"}
+  note: ""
+- fact: "Its roots ran back to Congo Square, where enslaved Africans gathered on Sundays to drum, sing and dance"
+  verdict: confirmed
+  sources:
+    - {title: "64 Parishes: Congo Square, Freddi Williams Evans", url: "https://64parishes.org/entry/congo-square", quote: "the gatherings of enslaved Africans on Sunday afternoons ... The rhythms and variations played in Congo Square are found at the core of early New Orleans jazz compositions"}
+    - {title: "New Orleans Historical: Congo Square", url: "https://neworleanshistorical.org/items/show/745", quote: "By 1817 New Orleans city laws had restricted gatherings of enslaved people to Sunday afternoons in Congo Square."}
+  note: "New Orleans Historical warns against the 'birthplace of jazz' myth; the card says 'roots', which 64 Parishes and Raeburn (ring shouts at Place Congo) support."
+- fact: "Buddy Bolden, a cornetist, was the first king of jazz"
+  verdict: corrected
+  sources:
+    - {title: "NPS: Charles 'Buddy' Bolden", url: "https://www.nps.gov/jazz/learn/historyculture/bolden.htm", quote: "there was never a recording made of the first king of jazz"}
+    - {title: "Bruce Boyd Raeburn, Traditional New Orleans Jazz, 64 Parishes", url: "https://64parishes.org/entry/traditional-new-orleans-jazz", quote: "the band led by Buddy Bolden, the first cornet king of jazz"}
+  note: "Card text stands. Ledger corrected: the LoC quote says 'first man of jazz', not 'king'; replaced with Raeburn."
+- fact: "Bolden was committed to an asylum in 1907"
+  verdict: corrected
+  sources:
+    - {title: "LoC Now See Hear!: The Elusive Buddy Bolden", url: "https://blogs.loc.gov/now-see-hear/2014/11/the-elusive-buddy-bolden/", quote: "In June of 1907 was committed to the Louisiana State Insane Asylum at Jackson, Louisiana"}
+    - {title: "James Karst, Buddy Bolden's Blues, 64 Parishes", url: "https://64parishes.org/buddy-boldens-blues", quote: "In 1907, the very year that Bolden was sent away"}
+  note: "Card text stands. Ledger quote from Karst was about his March 1907 arrest, not the committal; replaced with the direct statement."
+- fact: "Bolden left no known recording"
+  verdict: confirmed
+  sources:
+    - {title: "LoC Now See Hear!: The Elusive Buddy Bolden", url: "https://blogs.loc.gov/now-see-hear/2014/11/the-elusive-buddy-bolden/", quote: "no sound recording of him exists!"}
+    - {title: "NPS: Charles 'Buddy' Bolden", url: "https://www.nps.gov/jazz/learn/historyculture/bolden.htm", quote: "there was never a recording made of the first king of jazz"}
+  note: ""
+- fact: "Photo: Buddy Bolden, about 1905, unknown photographer, from Willie Cornish's collection, public domain"
+  verdict: confirmed
+  sources:
+    - {title: "Wikimedia Commons: Buddy Bolden 001", url: "https://commons.wikimedia.org/wiki/File:Buddy_Bolden_001.png", quote: "Buddy Bolden circa 1905 ... from personal collection of trombonist Willie Cornish"}
+    - {title: "LoC Now See Hear!: The Elusive Buddy Bolden", url: "https://blogs.loc.gov/now-see-hear/2014/11/the-elusive-buddy-bolden/", quote: "According to the band's trombonist Willy Cornish"}
+  note: "LoC dates the band photo 'ca. 1903'; Commons 'circa 1905'. 'About' covers it; media caption, not body."
+- fact: "The first jazz record, \"Livery Stable Blues\" (1917), was made by the white Original Dixieland Jass Band from New Orleans"
+  verdict: confirmed
+  sources:
+    - {title: "LoC Folklife Today: The Painful Birth of Blues and Jazz", url: "https://blogs.loc.gov/folklife/2017/02/birth-of-blues-and-jazz/", quote: "generally acknowledged as the first recording of jazz ... a recording of a white band performing an African American genre"}
+    - {title: "The Irish Times: Remembering the real 'inventors of jazz'", url: "https://www.irishtimes.com/culture/music/remembering-the-real-inventors-of-jazz-1.3144305", quote: "The Original Dixieland Jazz Band (ODJB) consisted of five white musicians from New Orleans"}
+  note: "NPS: 'a recording of \"Livery Stable Blues\" for Victor in February 1917'. Irish Times: issued March 1917 with 'Livery Stable Blues' on side two."
+- fact: "The band claimed to have invented jazz rather than credit its Black teachers"
+  verdict: confirmed
+  sources:
+    - {title: "LoC Folklife Today: The Painful Birth of Blues and Jazz", url: "https://blogs.loc.gov/folklife/2017/02/birth-of-blues-and-jazz/", quote: "far from crediting the New Orleans African American musicians they learned from, these young musicians claimed to have \"invented\" jazz."}
+    - {title: "American Heritage: The Diamond Jubilee of Jazz", url: "https://www.americanheritage.com/diamond-jubilee-jazz", quote: "So LaRocca not only said he wrote them all but claimed he had invented jazz."}
+  note: "A Closer Walk (WWOZ) adds: 'his denial of the debt he owed to African American musicians'."
+- fact: "In 1920 Mamie Smith's \"Crazy Blues\" showed that Black artists' records would sell"
+  verdict: corrected
+  sources:
+    - {title: "NPR: Mamie Smith and the Birth of the Blues Market", url: "https://text.npr.org/6473116", quote: "Until 1920, no black singer had been recorded doing a blues song. ... It sold 10,000 recordings the first week and 75,000 within a month."}
+    - {title: "Encyclopedia of African-American Culture and History via Encyclopedia.com: Smith, Mamie", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/smith-mamie", quote: "inaugurated the \"race music\" industry, which marketed blues and jazz specifically for African-American audiences"}
+  note: "Card text stands. Ledger NPR quote lacked the year and the sales; replaced."
+- fact: "The Chicago Defender urged Black Southerners north"
+  verdict: confirmed
+  sources:
+    - {title: "New Georgia Encyclopedia: Robert Sengstacke Abbott", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/robert-sengstacke-abbott-1868-1940/", quote: "encouraged southern Blacks to move north after World War I"}
+    - {title: "NPR via WFAE (2019)", url: "https://www.wfae.org/2019-07-10/chicago-defender-ends-print-edition-to-continue-as-an-online-only-newspaper", quote: "Black Southerners by the tens of thousands harkened to Abbott's call to go north."}
+  note: ""
+- fact: "{male} In New Orleans Louis Armstrong took lessons from the city's top cornetist, King Oliver"
+  verdict: corrected
+  sources:
+    - {title: "Encyclopedia.com: Louis Armstrong", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/louis-armstrong", quote: "he scrounged up the money to continue lessons with one of his musical idols, Joe \"King\" Oliver."}
+    - {title: "Louis Armstrong House Museum, West End Blog: Joe Oliver The King", url: "https://www.louisarmstronghouse.org/?p=3607", quote: "I guess I was about 14. Joe gave me cornet lessons"}
+  note: "Card text stands. LAHM biography says only 'Mentored by the city's top cornetist' (supports 'top cornetist', not 'lessons'); a second source for lessons added to ledger and card sources."
+- fact: "{male} In 1922 Oliver sent for him to join his band in Chicago"
+  verdict: confirmed
+  sources:
+    - {title: "Louis Armstrong House Museum: Biography", url: "https://www.louisarmstronghouse.org/biography/", quote: "In 1922, King Oliver sent for Armstrong to join his band in Chicago."}
+    - {title: "Encyclopedia.com (Baker's): Louis Armstrong", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/louis-armstrong", quote: "Armstrong left New Orleans in August 1922 to join King Oliver's Creole Jazz Band at the Lincoln Gardens Café in Chicago."}
+  note: ""
+- fact: "{male} After a year in New York with Fletcher Henderson, Armstrong returned in 1925 to record under his own name"
+  verdict: confirmed
+  sources:
+    - {title: "Louis Armstrong House Museum: Biography", url: "https://www.louisarmstronghouse.org/biography/", quote: "Armstrong returned to Chicago in 1925 and began making records under his own name for the first time."}
+    - {title: "Encyclopedia.com (Baker's): Louis Armstrong", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/louis-armstrong", quote: "returning to Chicago in November 1925 to play in his wife's band ... Armstrong made his first recording as a leader, \"My Heart,\" on Nov. 12, 1925."}
+  note: "Baker's says 'more than a year' with Henderson; 'a year' is a fair rounding."
+- fact: "The Hot Five and Hot Seven turned jazz from an ensemble music into a soloist's art"
+  verdict: corrected
+  sources:
+    - {title: "Louis Armstrong House Museum: Biography", url: "https://www.louisarmstronghouse.org/biography/", quote: "Armstrong's improvised solos transformed jazz from an ensemble-based music into a soloist's art"}
+    - {title: "Encyclopedia of African-American Culture and History via Encyclopedia.com: Louis Armstrong", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/louis-armstrong", quote: "they showed that jazz was becoming a soloist's art."}
+  note: "Card text stands. The NPS quote in the ledger was indirect; replaced with Encyclopedia.com."
+- fact: "{female} Lil Hardin, a Memphis pianist trained at Fisk University"
+  verdict: confirmed
+  sources:
+    - {title: "Women in World History via Encyclopedia.com: Armstrong, Lil Hardin", url: "https://encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/armstrong-lil-hardin-1898-1971", quote: "Lillian Hardin was born in Memphis, Tennessee, in 1898. ... She entered Fisk University while still in her teens."}
+    - {title: "Memphis Music Hall of Fame: Lil Hardin Armstrong", url: "https://memphismusichalloffame.com/inductee/lilhardinarmstrong/", quote: "at Fisk University in Nashville"}
+  note: "LAHM blog: 'received a certificate from Fisk University'."
+- fact: "{female} She joined King Oliver's Creole Jazz Band in Chicago in 1921"
+  verdict: confirmed
+  sources:
+    - {title: "Women in World History via Encyclopedia.com: Armstrong, Lil Hardin", url: "https://encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/armstrong-lil-hardin-1898-1971", quote: "By 1921, Lil was pianist for trumpet player Joe \"King\" Oliver's Creole Jazz Band at the Royal Gardens."}
+    - {title: "Memphis Music Hall of Fame: Lil Hardin Armstrong", url: "https://memphismusichalloffame.com/inductee/lilhardinarmstrong/", quote: "In 1921, Lil joined King Oliver's Creole Jazz Band at the Dreamland"}
+  note: "Sources differ on the venue (Royal Gardens vs Dreamland); the card names none."
+- fact: "{female} In 1924 she married its second cornetist, Louis Armstrong"
+  verdict: confirmed
+  sources:
+    - {title: "LoC In the Muse: Remembering Lil Hardin Armstrong", url: "https://blogs.loc.gov/music/2019/02/remembering-lil-hardin-armstrong/", quote: "She married Louis Armstrong on February 4, 1924"}
+    - {title: "Memphis Music Hall of Fame: Lil Hardin Armstrong", url: "https://memphismusichalloffame.com/inductee/lilhardinarmstrong/", quote: "The wedding took place February 5, 1924 ... wasting his time playing second cornet to Oliver"}
+  note: "Day differs (4 vs 5 February); the card gives only the year."
+- fact: "{female} She persuaded him to leave Oliver for New York, as Fletcher Henderson's star soloist"
+  verdict: confirmed
+  sources:
+    - {title: "NPS: A New Orleans Jazz History", url: "https://www.nps.gov/jazz/learn/historyculture/jazz_history.htm", quote: "In 1924, Lil Hardin (who became Mrs. Armstrong in that year) persuaded Louis to join Fletcher Henderson as a star soloist in New York."}
+    - {title: "Memphis Music Hall of Fame: Lil Hardin Armstrong", url: "https://memphismusichalloffame.com/inductee/lilhardinarmstrong/", quote: "she then packed him off for a job with Fletcher Henderson's band in New York"}
+  note: "Encyclopedia.com (EAACH): 'encouraged by his second wife, Lil Hardin, Armstrong joined the jazz orchestra of Fletcher Henderson'."
+- fact: "{female} A year later he was back, making the Hot Five records; she played piano"
+  verdict: confirmed
+  sources:
+    - {title: "LoC In the Muse: Remembering Lil Hardin Armstrong", url: "https://blogs.loc.gov/music/2019/02/remembering-lil-hardin-armstrong/", quote: "She also appeared as pianist with Louis on his justly famous Hot Five recordings"}
+    - {title: "Women in World History via Encyclopedia.com: Armstrong, Lil Hardin", url: "https://encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/armstrong-lil-hardin-1898-1971", quote: "in 1925 it was Louis' move to Lil's band that launched his independent success. ... Lil was both pianist and musical director"}
+  note: ""
+- fact: "{female} She wrote tunes such as \"Struttin' with Some Barbecue\""
+  verdict: confirmed
+  sources:
+    - {title: "LoC In the Muse: Remembering Lil Hardin Armstrong", url: "https://blogs.loc.gov/music/2019/02/remembering-lil-hardin-armstrong/", quote: "writer of some of his enduring classics, such as \"Struttin' with Some Barbecue,\""}
+    - {title: "Women in World History via Encyclopedia.com: Armstrong, Lil Hardin", url: "https://encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/armstrong-lil-hardin-1898-1971", quote: "including \"Struttin' With Some Barbecue,\" ... are the works of Lil Armstrong"}
+  note: "Memphis Music Hall of Fame agrees."
+- fact: "{female} She died in 1971 at a concert in his memory"
+  verdict: corrected
+  sources:
+    - {title: "Women in World History via Encyclopedia.com: Armstrong, Lil Hardin", url: "https://encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/armstrong-lil-hardin-1898-1971", quote: "on August 27, she was performing at a Louis Armstrong memorial concert in Chicago"}
+    - {title: "Memphis Music Hall of Fame: Lil Hardin Armstrong", url: "https://memphismusichalloffame.com/inductee/lilhardinarmstrong/", quote: "during a televised performance paying tribute to her love"}
+  note: "Card text stands. The LAHM blog quote in the ledger gives no year; replaced with Memphis HoF (27 August 1971)."

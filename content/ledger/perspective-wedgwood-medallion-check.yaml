@@ -1,0 +1,136 @@
+# Second, independent check of the wedgwood-medallion perspective rewrite (2026-11-15).
+# Every source below was opened by the checker. Quotes marked [...] are condensed.
+# Corrections applied to the card (.md and .ru.md) and to perspective-wedgwood-medallion.yaml:
+#  - "Clarkson asked him for as many as he could spare" rested on the V&A article alone;
+#    replaced by "received a whole consignment" (Clarkson 1808 + V&A object record).
+#  - "a leading abolitionist" -> "a committed abolitionist" (V&A + Hunt).
+#  - "Men set the cameos into ... snuffboxes" -> "Some set ..." (sources say "some", not men).
+#  - "a curate's wife" -> "a clergyman's wife" (curate only attested for 1807).
+#  - Brookes sentence was missing from the ledger; added with two sources.
+# Word counts per copy after fixes: EN male 173, female 219; RU male 157, female 218. Lint: 456 cards OK.
+- fact: "In 1787 the abolition committee adopted the kneeling-man image as its seal"
+  verdict: confirmed
+  sources:
+    - {title: "Victoria and Albert Museum: The Wedgwood anti-slavery medallion", url: "https://www.vam.ac.uk/articles/the-wedgwood-anti-slavery-medallion", quote: "a seal commissioned by the Committee for the Abolition of the Slave Trade on 5 July 1787"}
+    - {title: "Oberlin College Library: The Kneeling Slave", url: "https://oberlincollegelibrary.org/speccoll/exhibits/show/subjectsoffreedom/kneeling", quote: "adopted in 1787 as the official seal for the Society for the Abolition of the Slave Trade in England"}
+  note: ""
+- fact: "Granville Sharp was among the founders of the 1787 committee"
+  verdict: confirmed
+  sources:
+    - {title: "Brycchan Carey: Granville Sharp", url: "https://brycchancarey.com/abolition/sharp.htm", quote: "In 1787, he was one of the committee of people, mostly Quakers, who set up the Society"}
+    - {title: "The Clapham Society: Granville Sharp", url: "https://claphamsociety.com/article/24-granville-sharp/", quote: "In 1787 he was one of the twelve founding signatories to The Society for the Abolition of the Slave Trade."}
+  note: ""
+- fact: "That same year Wedgwood had it made in jasperware, probably modelled by William Hackwood"
+  verdict: confirmed
+  sources:
+    - {title: "Victoria and Albert Museum: The Wedgwood anti-slavery medallion", url: "https://www.vam.ac.uk/articles/the-wedgwood-anti-slavery-medallion", quote: "sculpted in 1787, probably by William Hackwood, Wedgwood's best modeller"}
+    - {title: "American Philosophical Society: Anti-Slavery Medallion", url: "https://www.amphilsoc.org/item-detail/anti-slavery-medallion", quote: "William Hackwood and Josiah Wedgwood [...] c. 1787 [...] Ceramic jasperware"}
+  note: "Historic Deerfield also gives Hackwood, 1787."
+- fact: "Wedgwood, a committed abolitionist, gave the cameos away"
+  verdict: corrected
+  sources:
+    - {title: "Thomas Clarkson, History of the Abolition (1808), vol. II, Project Gutenberg", url: "https://www.gutenberg.org/ebooks/12507", quote: "Mr. Wedgwood made a liberal donation of these, when finished, among his friends."}
+    - {title: "Tristram Hunt, The Radical Potter (2021), excerpt in Literary Hub", url: "https://lithub.com/how-the-potter-josiah-wedgwood-created-an-iconic-abolitionist-medallion/", quote: "Together with his political hero Major John Cartwright, Wedgwood was elected on to the Committee."}
+  note: "Was 'a leading abolitionist'; neither source says leading. Free distribution also in V&A ('distributed for free') and Historic Deerfield ('distribute them freely as did Wedgwood')."
+- fact: "Thomas Clarkson received a whole consignment of the cameos"
+  verdict: corrected
+  sources:
+    - {title: "Thomas Clarkson, History of the Abolition (1808), vol. II, Project Gutenberg", url: "https://www.gutenberg.org/ebooks/12507", quote: "I received from him no less than five hundred of them myself."}
+    - {title: "Victoria and Albert Museum, object record 414:1304-1885", url: "https://collections.vam.ac.uk/item/O79580", quote: "Wedgwood is known to have sent consignments to both the American statesman Benjamin Franklin [...] and Thomas Clarkson"}
+  note: "Was 'asked him for as many as he could spare': only the V&A article quotes that letter; no second independent source found (Margolin, Hunt, thepotteries.org checked). Fitzwilliam record giving 500 could not be opened (TLS error), so the number stays out of the text."
+- fact: "In 1788 a batch reached Benjamin Franklin in Philadelphia"
+  verdict: confirmed
+  sources:
+    - {title: "Victoria and Albert Museum: The Wedgwood anti-slavery medallion", url: "https://www.vam.ac.uk/articles/the-wedgwood-anti-slavery-medallion", quote: "In 1788, Wedgwood sent a batch to future Founding Father Benjamin Franklin"}
+    - {title: "Oberlin College Library: The Kneeling Slave", url: "https://oberlincollegelibrary.org/speccoll/exhibits/show/subjectsoffreedom/kneeling", quote: "In 1788, a consignment of the cameos was shipped to Benjamin Franklin in Philadelphia."}
+  note: ""
+- fact: "Franklin wrote back that the figure 'may have an Effect equal to that of the best written Pamphlet'"
+  verdict: confirmed
+  sources:
+    - {title: "American Philosophical Society: Anti-Slavery Medallion", url: "https://www.amphilsoc.org/item-detail/anti-slavery-medallion", quote: "may have an Effect equal to that of the best written Pamphlet, in procuring Favour to those oppressed People."}
+    - {title: "Historic Deerfield: Wedgwood's anti-slavery medallion", url: "https://www.historic-deerfield.org/2020-9-21-wedgwoods-anti-slavery-medallion/", quote: "the best written Pamphlet in procuring Favour to these oppressed People"}
+  note: ""
+- fact: "Some set the cameos into the lids of their snuffboxes"
+  verdict: corrected
+  sources:
+    - {title: "Thomas Clarkson, History of the Abolition (1808), vol. II, Project Gutenberg", url: "https://www.gutenberg.org/ebooks/12507", quote: "Some had them inlaid in gold on the lid of their snuff-boxes."}
+    - {title: "Historic Deerfield: Wedgwood's anti-slavery medallion", url: "https://www.historic-deerfield.org/2020-9-21-wedgwoods-anti-slavery-medallion/", quote: "used them to decorate snuff boxes"}
+  note: "Was 'Men set...'; no source specifies men. The V&A article quotes the same Clarkson passage, so it is not counted separately."
+- fact: "The Brookes print, a plan of captives packed into a ship's hull, was the medallion's partner in the campaign"
+  verdict: confirmed
+  sources:
+    - {title: "Royal Museums Greenwich: Plan and Sections of a Slave Ship ['Brooks']", url: "https://www.rmg.co.uk/collections/objects/rmgc-object-254967", quote: "It just shows a single plan image of slaves packed into a hull"}
+    - {title: "Understanding Slavery Initiative: Description of a slave ship, about 1788", url: "https://understandingslavery.com/artefact/description-of-a-slave-ship-about-1788/", quote: "Over 7000 posters of the plan were printed and distributed to promote the abolition campaign."}
+  note: "Was missing from the ledger; added."
+- fact: "On 8 April 1825 women met at Lucy Townsend's home in West Bromwich and founded Britain's first women's anti-slavery society"
+  verdict: confirmed
+  sources:
+    - {title: "Anna Wood, Fairmount Folio (Wichita State University)", url: "https://journals.wichita.edu/index.php/ff/article/view/149", quote: "On April 8, 1825, in the home of Lucy Townsend, the wife of an Anglican clergyman, forty four women gathered to establish the first women's anti-slavery society in Britain."}
+    - {title: "West Bromwich Local History Society: Lucy Townsend", url: "https://www.westbromwichhistory.com/people-places/lucy-townsend-abolitionist/", quote: "On April 8th, 1825 Lucy Townsend held a meeting at her home in West Bromwich"}
+  note: "V&A also: 'the first anti-slavery society for women in 1825'."
+- fact: "Lucy Townsend was a clergyman's wife"
+  verdict: corrected
+  sources:
+    - {title: "Anna Wood, Fairmount Folio (Wichita State University)", url: "https://journals.wichita.edu/index.php/ff/article/view/149", quote: "the wife of an Anglican clergyman"}
+    - {title: "West Bromwich Local History Society: Lucy Townsend", url: "https://www.westbromwichhistory.com/people-places/lucy-townsend-abolitionist/", quote: "She married Rev. Charles Townsend, curate of West Bromwich in 1807."}
+  note: "Was 'a curate's wife'; curacy is attested for 1807 only, so the wording now follows what both sources share."
+- fact: "Elizabeth Heyrick was among the society's founders"
+  verdict: confirmed
+  sources:
+    - {title: "Mimi Sheller, Humanity Journal (2014), note 36", url: "https://humanityjournal.org/issue2-2/bleeding-humanity-and-gendered-embodiments-from-antislavery-sugar-boycotts-to-ethical-consumers/", quote: "including Lucy Townsend, Elizabeth Heyrick, Mary Lloyd"}
+    - {title: "Story of Leicester (Leicester City Council): Elizabeth Heyrick and Susannah Watts", url: "https://storyofleicester.info/city-stories/elizabeth-heyrick-susannah-watts", quote: "appointed Treasurer at the inaugural meeting of the Birmingham Female Society"}
+  note: "West Bromwich Local History Society: 'A committee was formed with Elizabeth Heyrick as treasurer'."
+- fact: "Heyrick demanded immediate abolition, not the gradualism most male campaigners favoured"
+  verdict: confirmed
+  sources:
+    - {title: "Story of Leicester (Leicester City Council)", url: "https://storyofleicester.info/city-stories/elizabeth-heyrick-susannah-watts", quote: "as opposed to the gradual abolition favoured by most male abolitionists"}
+    - {title: "Ira V. Brown, Pennsylvania History 45 (1978)", url: "https://journals.psu.edu/phj/article/view/24363", quote: "Elizabeth Heyrick, had suggested as early as 1824 that the reformers' goal should be \"immediate, not gradual abolition\""}
+  note: "Wood (Fairmount Folio, full PDF): Parliament favoured 'gradual' emancipation; 'The women's societies of Great Britain declared that this was not good enough.'"
+- fact: "The society urged a boycott of slave-grown sugar"
+  verdict: confirmed
+  sources:
+    - {title: "West Bromwich Local History Society: Lucy Townsend", url: "https://www.westbromwichhistory.com/people-places/lucy-townsend-abolitionist/", quote: "They began a systematic promotion to boycott slave-grown sugar."}
+    - {title: "Mimi Sheller, Humanity Journal (2014)", url: "https://humanityjournal.org/issue2-2/bleeding-humanity-and-gendered-embodiments-from-antislavery-sugar-boycotts-to-ethical-consumers/", quote: "That this Society, convinced that abstinence from the use of slave cultivated sugar,"}
+  note: ""
+- fact: "In 1826 the society's first report showed the kneeling figure as a woman: 'Am I Not a Woman and a Sister?'"
+  verdict: confirmed
+  sources:
+    - {title: "Yale Center for British Art: Fob seal", url: "https://collections.britishart.yale.edu/catalog/alma:99127018103408651", quote: "Its first known usage dates to 1826, when it appeared on the cover of the First report of the Ladies' Society"}
+    - {title: "Mimi Sheller, Humanity Journal (2014)", url: "https://humanityjournal.org/issue2-2/bleeding-humanity-and-gendered-embodiments-from-antislavery-sugar-boycotts-to-ethical-consumers/", quote: "On the cover of their first report, published in 1826, they employed the female version of the supplicant slave emblem [...] with the motto “Am I not a woman and a sister.”"}
+  note: ""
+- fact: "By 1833 there were over seventy women's anti-slavery societies in Britain"
+  verdict: confirmed
+  sources:
+    - {title: "Anna Wood, Fairmount Folio (full PDF)", url: "https://journals.wichita.edu/index.php/ff/article/view/149", quote: "Between 1825 and 1833, seventythree women's organizations were formed throughout the British Isles."}
+    - {title: "West Bromwich Local History Society: Lucy Townsend", url: "https://www.westbromwichhistory.com/people-places/lucy-townsend-abolitionist/", quote: "Very soon there was a network of over seventy anti-slavery women's groups throughout the country."}
+  note: ""
+- fact: "Parliament abolished the British slave trade in 1807"
+  verdict: confirmed
+  sources:
+    - {title: "Victoria and Albert Museum: The Wedgwood anti-slavery medallion", url: "https://www.vam.ac.uk/articles/the-wedgwood-anti-slavery-medallion", quote: "In 1807, the abolition of the slave trade finally took place"}
+    - {title: "The National Archives (UK)", url: "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/georgians/1833-abolition-of-slavery-act-and-compensation-claims/", quote: "the 1807 Abolition of the Slave Trade Act"}
+  note: "Ledger V&A quote extended to include the year."
+- fact: "An act freeing enslaved people in British colonies took effect in 1834"
+  verdict: confirmed
+  sources:
+    - {title: "Victoria and Albert Museum", url: "https://www.vam.ac.uk/articles/the-wedgwood-anti-slavery-medallion", quote: "It was not until 1834 that the emancipation of enslaved people occurred in British colonies"}
+    - {title: "The National Archives (UK)", url: "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/georgians/1833-abolition-of-slavery-act-and-compensation-claims/", quote: "When the Act came into effect on 1 August 1834"}
+  note: ""
+- fact: "From the early 1830s the kneeling woman headed the 'Ladies Department' of the Boston Liberator"
+  verdict: confirmed
+  sources:
+    - {title: "Ira V. Brown, Pennsylvania History 45 (1978), PDF p. 1", url: "https://journals.psu.edu/phj/article/view/24363", quote: "began to include a \"Ladies' Department\" in the Liberator early in 1832. It was headed by a woodcut of the famous Wedgwood medallion depicting a female slave in chains"}
+    - {title: "Virginia Tech, Digital History Reader, Module 04", url: "https://dhr.history.vt.edu/modules/us/mod04_women/index.html", quote: "The Liberator, a radical abolitionist journal published in Boston by activist William Lloyd Garrison [...] initiated a column called \"Ladies Department\""}
+  note: ""
+- fact: "The image was made by white campaigners for white readers, and the kneeling figure threatened no one"
+  verdict: confirmed
+  sources:
+    - {title: "Winterthur Museum: Re-presenting Black Womanhood", url: "https://stories.winterthur.org/re-presentingblackwomanhood-abolition", quote: "created by white activists primarily for white audiences"}
+    - {title: "Virginia Tech, Digital History Reader, Module 04", url: "https://dhr.history.vt.edu/modules/us/mod04_women/index.html", quote: "she did not threaten their status; she merely asked for their help."}
+  note: ""
+- fact: "Calling an enslaved woman a sister was radical for white American women and led many to claim rights of their own"
+  verdict: confirmed
+  sources:
+    - {title: "Virginia Tech, Digital History Reader, Module 04", url: "https://dhr.history.vt.edu/modules/us/mod04_women/index.html", quote: "unconventional, if not radical, for white women in the 1830s"}
+    - {title: "Ira V. Brown, Pennsylvania History 45 (1978)", url: "https://journals.psu.edu/phj/article/view/24363", quote: "The political experience women gained through participation in this crusade [...] served as important roots of American feminism."}
+  note: ""

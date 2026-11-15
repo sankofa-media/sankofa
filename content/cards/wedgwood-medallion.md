@@ -7,11 +7,15 @@ years: [1787, 1838]
 places:
   - {name: "Etruria, Stoke-on-Trent", lat: 53.0270, lon: -2.1960}
   - {name: Philadelphia, lat: 39.9526, lon: -75.1652}
+  - {name: West Bromwich, lat: 52.5187, lon: -1.9945}
+  - {name: Boston, lat: 42.3601, lon: -71.0589}
 zoom: 5
 era: v1
 books: [archives, heirs]
 further:
   - "Victoria and Albert Museum, Wedgwood anti-slavery medallions, WE.7830-2014 and 414:1304-1885"
+  - "Clare Midgley, Women Against Slavery: The British Campaigns, 1780–1870 (1992)"
+  - "Virginia Tech, Digital History Reader: How Did Abolitionism Lead to the Struggle for Women's Rights?"
 sources:
   - {title: "Victoria and Albert Museum: Wedgwood anti-slavery medallion", url: "https://www.vam.ac.uk/articles/the-wedgwood-anti-slavery-medallion"}
   - {title: "Walters Art Museum: Anti-Slavery Cameo", url: "https://art.thewalters.org/object/48.2597/"}
@@ -21,11 +25,27 @@ sources:
   - {title: "The National Archives (UK): The 1833 Abolition of Slavery Act and compensation claims", url: "https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/georgians/1833-abolition-of-slavery-act-and-compensation-claims/"}
   - {title: "Brycchan Carey: Granville Sharp (1735–1813)", url: "https://brycchancarey.com/abolition/sharp.htm"}
   - {title: "The Clapham Society: Granville Sharp", url: "https://claphamsociety.com/article/24-granville-sharp/"}
+  - {title: "Oberlin College Library: The Kneeling Slave", url: "https://oberlincollegelibrary.org/speccoll/exhibits/show/subjectsoffreedom/kneeling"}
+  - {title: "American Philosophical Society: Anti-Slavery Medallion", url: "https://www.amphilsoc.org/item-detail/anti-slavery-medallion"}
+  - {title: "Anna Wood, The Writings of Ladies' Abolitionist Societies in Britain, 1825–1833, Fairmount Folio (Wichita State University)", url: "https://journals.wichita.edu/index.php/ff/article/view/149"}
+  - {title: "West Bromwich Local History Society: Lucy Townsend, abolitionist", url: "https://www.westbromwichhistory.com/people-places/lucy-townsend-abolitionist/"}
+  - {title: "Mimi Sheller, Bleeding Humanity and Gendered Embodiments, Humanity Journal (2014)", url: "https://humanityjournal.org/issue2-2/bleeding-humanity-and-gendered-embodiments-from-antislavery-sugar-boycotts-to-ethical-consumers/"}
+  - {title: "Yale Center for British Art: Fob seal, with motto \"Am I not a woman and a sister?\"", url: "https://collections.britishart.yale.edu/catalog/alma:99127018103408651"}
+  - {title: "Story of Leicester (Leicester City Council): Elizabeth Heyrick and Susannah Watts", url: "https://storyofleicester.info/city-stories/elizabeth-heyrick-susannah-watts"}
+  - {title: "Ira V. Brown, \"Am I Not a Woman and a Sister?\" The Anti-Slavery Convention of American Women, Pennsylvania History (1978)", url: "https://journals.psu.edu/phj/article/view/24363"}
+  - {title: "Virginia Tech, Digital History Reader, Module 04: How Did Abolitionism Lead to the Struggle for Women's Rights?", url: "https://dhr.history.vt.edu/modules/us/mod04_women/index.html"}
+  - {title: "Winterthur Museum: Re-presenting Black Womanhood, abolition", url: "https://stories.winterthur.org/re-presentingblackwomanhood-abolition"}
+  - {title: "Victoria and Albert Museum: Medallion (Emancipation Badge), 414:1304-1885", url: "https://collections.vam.ac.uk/item/O79580"}
+  - {title: "Tristram Hunt, The Radical Potter (2021), excerpt in Literary Hub", url: "https://lithub.com/how-the-potter-josiah-wedgwood-created-an-iconic-abolitionist-medallion/"}
 media:
   - {type: "image", file: "wedgwood-medallion.jpg", caption: "Anti-slavery medallion, Josiah Wedgwood factory, attributed to William Hackwood, about 1787. Walters Art Museum", credit: "Photograph: Walters Art Museum, via Wikimedia Commons", license: "CC BY-SA 3.0", url: "https://commons.wikimedia.org/wiki/File:Wedgwood_-_Anti-Slavery_Medallion_-_Walters_482597.jpg"}
 ---
-Long before protest badges, people in Britain wore a ceramic cameo given away free: a kneeling Black man in chains asking "Am I Not a Man and a Brother?" In 1787 the new Committee for the Abolition of the Slave Trade, whose founders included [[granville-sharp|Granville Sharp]], adopted the image as its seal.
+Long before protest badges, people in Britain wore a ceramic cameo given away free: a kneeling Black man in chains asking "Am I Not a Man and a Brother?" In 1787 the new Committee for the Abolition of the Slave Trade, whose founders included [[granville-sharp|Granville Sharp]], adopted the image as its seal. That same year the potter Josiah Wedgwood had it made in jasperware, probably modelled by William Hackwood.
 
-The potter Josiah Wedgwood, a leading abolitionist, had it made in jasperware that same year, probably modelled by William Hackwood, and gave the cameos away. In 1788 he sent a batch to Benjamin Franklin in Philadelphia. People set them into snuffbox lids and jewellery, turning a political argument into something to wear.
+{male} Wedgwood, a committed abolitionist, gave the cameos away. The campaigner Thomas Clarkson received a whole consignment. In 1788 a batch reached Benjamin Franklin in Philadelphia, who wrote back that the figure "may have an Effect equal to that of the best written Pamphlet". Some set the cameos into the lids of their snuffboxes, turning a political argument into something to carry. Its partner in the campaign was the [[brookes|Brookes]] print, a plan of captives packed into a slave ship's hull.
 
-Its partner in the campaign was the [[brookes|Brookes]] print, a plan of captives packed into a slave ship's hull. The campaign won: Parliament abolished the British slave trade in 1807, and an act freeing enslaved people in British colonies took effect in 1834.
+{female} On 8 April 1825 women met at the West Bromwich home of Lucy Townsend, a clergyman's wife, and founded Britain's first women's anti-slavery society. Founder Elizabeth Heyrick demanded immediate abolition, not the gradualism most male campaigners favoured. The society urged a boycott of slave-grown sugar, and in 1826 its first report showed the kneeling figure as a woman: "Am I Not a Woman and a Sister?" By 1833 there were over seventy such societies.
+
+The campaign won: Parliament abolished the British slave trade in 1807, and an act freeing enslaved people in British colonies took effect in 1834.
+
+{female} The kneeling woman crossed the Atlantic: from the early 1830s she headed the "Ladies Department" of the Boston Liberator. Drawn by white campaigners for white readers, she threatened no one. Yet calling an enslaved woman a sister was radical for white American women, and led many to claim rights of their own.
