@@ -88,6 +88,8 @@ export interface CardContext {
   asked?: Card;
   /** The card came from someone else's path and is not in the reader's copy. */
   foreign?: boolean;
+  /** How a card of the other copy was reached: the index lists both copies. */
+  via?: 'index';
 }
 
 export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElement {
@@ -122,7 +124,9 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
         'div.notice.edition',
         {},
         h('b', {}, t('From the other copy.') + ' '),
-        t("You hold the {edition}; this page reached you through another reader's path.", { edition: edition(app.edition) }),
+        ctx.via === 'index'
+          ? pick({ en: `You hold the ${edition(app.edition)}; the index lists the pages of both copies.`, ru: `У вас ${edition(app.edition)}; указатель перечисляет страницы обоих экземпляров.` })
+          : t("You hold the {edition}; this page reached you through another reader's path.", { edition: edition(app.edition) }),
         partner ? ' ' + t('Its counterpart in your copy is') + ' ' : '',
         partner ? h('a', { href: `#focus=${partner.id}`, 'data-card': partner.id }, partner.title) : '',
         partner ? '.' : '',

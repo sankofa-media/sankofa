@@ -7,6 +7,7 @@ import { copyText, h, svgIcon, toast } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
 import { readerCards } from '../lib/atlasModel';
 import { readPath } from '../lib/reader';
+import { weaveIds } from '../lib/weave';
 
 interface Mechanism {
   name: string;
@@ -230,6 +231,7 @@ export class Engine {
     });
     document.body.append(this.el);
     this.renderTry(false);
+    weaveIds(app, this.el);
   }
 
   private probed = false;
@@ -284,6 +286,7 @@ export class Engine {
       ),
       term(`$ kubectl get card ${c.id} -o yaml\n${cardYaml(c)}`, true),
     );
+    weaveIds(this.app, this.yamlHost);
   }
 
   private renderTry(hasConfig: boolean): void {
@@ -302,5 +305,6 @@ export class Engine {
       ...(hasConfig ? [h('a.btn.primary', { href: 'visitor.kubeconfig', download: 'visitor.kubeconfig' }, pick({ en: 'Download the visitor kubeconfig', ru: 'Скачать kubeconfig посетителя' }))] : []),
       term(cmds, true),
     );
+    weaveIds(this.app, this.tryHost);
   }
 }

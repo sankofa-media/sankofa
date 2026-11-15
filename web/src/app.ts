@@ -27,7 +27,7 @@ export interface App {
   edition: 'm' | 'f';
   media(file: string): string;
   /** Open a card over the current view. `asked` is what the link pointed to. */
-  openCard(id: string, opts?: { exact?: boolean; push?: boolean }): void;
+  openCard(id: string, opts?: { exact?: boolean; push?: boolean; via?: 'index' }): void;
   closeCard(): void;
   openAtlas(p: Point, push?: boolean): void;
   openBook(): void;

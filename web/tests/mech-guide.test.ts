@@ -3,7 +3,7 @@ import { cpSync, existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync } from
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
-import { fill, parseInline, parseProse } from '../src/mechanics/guide/model';
+import { cardLinks, fill, parseInline, parseProse } from '../src/mechanics/guide/model';
 
 describe('guide and dedication prose', () => {
   it('reads the title from front matter and turns paragraphs into blocks', () => {
@@ -82,5 +82,17 @@ describe('the dedication page', () => {
     } finally {
       rmSync(tmp, { recursive: true, force: true });
     }
+  });
+});
+
+describe('card links in the guide', () => {
+  it('reads [[id|words]] as a link to a card, also set in italics', () => {
+    expect(parseInline('a page of [[equiano|Equiano]] and *[[freedoms-journal|Freedom’s Journal]]*')).toEqual([
+      { t: 'text', s: 'a page of ' },
+      { t: 'card', id: 'equiano', s: 'Equiano' },
+      { t: 'text', s: ' and ' },
+      { t: 'card', id: 'freedoms-journal', s: 'Freedom’s Journal', em: true },
+    ]);
+    expect(cardLinks(parseProse('# T\n\nSee [[sun-ra]].\n\n## [[zong|not in a heading]]'))).toEqual(['sun-ra', 'zong']);
   });
 });
