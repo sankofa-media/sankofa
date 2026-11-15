@@ -1,6 +1,9 @@
 package card
 
-import "testing"
+import (
+	"strings"
+	"testing"
+)
 
 func TestCopyParagraphs(t *testing.T) {
 	body := "Both read this.\n\n{male} Only men read [[robert-smalls|this]].\n\n{female} Only women read this one, which is longer.\n\nBoth again."
@@ -35,5 +38,31 @@ func TestForCopy(t *testing.T) {
 	plain := &Card{ID: "y", Body: "One.\n\nTwo."}
 	if plain.ForCopy(EditionFemale).Body != plain.Body || c.ForCopy("") != c {
 		t.Fatal("an unmarked card, or no copy, reads as it is")
+	}
+}
+
+func TestLinkInLabel(t *testing.T) {
+	for p, want := range map[string]bool{
+		"{at [[oyo|Oyo]] · 1949} The drums.":           true,
+		"{female} {at Oyo · [[y1949]]} The drums.":     true,
+		"{at Oyo · 1949} The [[drums|drums]].":         false,
+		"[[oyo|Oyo]] {at nothing} is not a label.":     false,
+		"{male} Plain text with [[sun-ra|Sun Ra]].":    false,
+		"{at [[oyo|Oyo]] unclosed label and the text.": true,
+	} {
+		if got := LinkInLabel(p); got != want {
+			t.Errorf("%q: got %v, want %v", p, got, want)
+		}
+	}
+}
+
+func TestValidateRejectsLinkInLabel(t *testing.T) {
+	b := mk(t, "b", "", "", "x")
+	if errs := set(mk(t, "a", "", "", "{at Oyo · 1949} Hello [[b|friend]]."), b).Validate(); len(errs) != 0 {
+		t.Fatalf("a link in the text is fine: %v", errs)
+	}
+	errs := set(mk(t, "a", "", "", "{at [[b|Oyo]] · 1949} Hello."), b).Validate()
+	if len(errs) != 1 || !strings.Contains(errs[0].Error(), "{at} label") {
+		t.Fatalf("a link in the label must fail: %v", errs)
 	}
 }

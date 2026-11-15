@@ -380,6 +380,8 @@ func stepLabel(p string) (label, text string, err error) {
 	switch {
 	case strings.ContainsAny(label, "{"):
 		return label, text, fmt.Errorf("label %q holds a brace", label)
+	case card.LinkInLabel(p):
+		return label, text, fmt.Errorf("label %q holds a card link: link in the text, not the label", label)
 	case len(parts) > 2:
 		return label, text, fmt.Errorf("label %q has %d parts, want Place · Year", label, len(parts))
 	case utf8.RuneCountInString(label) > maxLabelRunes:
