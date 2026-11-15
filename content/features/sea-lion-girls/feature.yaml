@@ -327,6 +327,39 @@ scenes:
         draft: false
         en: "Clap with them: tap the circle or press the space bar in time. Each clap stays on the circle as a drop of ink, and the circle will stay with you until the end of the story."
         ru: "Хлопайте вместе с ними: касайтесь круга или нажимайте пробел в такт. Каждый хлопок останется на круге каплей туши, а сам круг будет с вами до конца истории."
+  - id: words
+    kind: text
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: The words
+        ru: Слова
+      - id: heard
+        role: text
+        draft: false
+        en: "Listen closely to the 1939 recording and you will not hear a sea lion in it. The sisters sing “See lie woman, see lie”, and the woman of the game drinks coffee and drinks tea. They are the words of a playground: sounds that drive the game along more than they tell a story."
+        ru: "Если внимательно вслушаться в запись 1939 года, никакой «морской львицы» в ней не окажется. Сёстры поют «See lie woman, see lie», а женщина из игры пьёт кофе и пьёт чай. Это слова школьного двора: звуки, которые ведут игру, а не рассказывают историю."
+      - id: spelling
+        role: text
+        draft: false
+        en: "“Sea Lion Woman” is how the words looked once they were written down, and the sisters later spelled them that way too. Herbert Halpert, who made the recording, called that spelling “a beautiful example of folk etymology”: when a phrase no longer means anything, people hear in it something they know, such as a sea lion."
+        ru: "«Sea Lion Woman» — так эти слова выглядели, когда их записали на бумаге, и так же их потом писали сами сёстры. Герберт Халперт, сделавший запись, назвал такое написание «прекрасным примером народной этимологии»: когда фраза уже ничего не значит, люди слышат в ней что-то знакомое, например морского льва."
+      - id: lying
+        role: text
+        draft: false
+        en: Other listeners heard another word in it. As early as 1942 the booklet of the Library of Congress album asked in a footnote whether “see lie” might be “see lyin’”, a lying woman, a gossip. Nobody has ever settled it, and the game never needed it settled.
+        ru: Другие слушатели слышали в этих словах иное. Ещё в 1942 году в буклете альбома Библиотеки Конгресса в сноске спрашивали, не «see lyin’» ли это — «лгунья», сплетница. Никто так и не решил этот вопрос, и самой игре решать его было не нужно.
+      - id: simone
+        role: text
+        draft: false
+        en: By the time the song reached Nina Simone, the woman of the game had changed. In Simone’s “See-Line Woman” she is “dressed in red” and makes “a man lose his head”. The playground chant had turned into a song about a woman men lose their heads over, and the woman who drank coffee and tea was gone.
+        ru: Пока песня шла к Нине Симон, женщина из игры изменилась. В «See-Line Woman» у Симон она «одета в красное» и «сводит мужчину с ума». Дворовая считалка превратилась в песню о женщине, из-за которой мужчины теряют голову, а женщина, пившая кофе и чай, исчезла.
+      - id: together
+        role: line
+        draft: false
+        en: "So even the song’s name went its own way: “See lie” in the sisters’ mouths, “Sea Lion” on paper, “See-Line” on Simone’s record."
+        ru: "Так своей дорогой ушло даже название: «See lie» в устах сестёр, «Sea Lion» на бумаге, «See-Line» на пластинке Симон."
 
   - id: album
     kind: album
