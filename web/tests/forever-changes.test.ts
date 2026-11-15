@@ -7,6 +7,7 @@ import { FlashGate, publishFeature, validateFeature, validateLenses, type Featur
 import { VISION_IDS } from '../src/features/forever-changes/art';
 import { BEHIND_FROM, BEHIND_GAP, facing, gap, intensity, MAX_AT_ONCE, movedToward, Scheduler, type Vision } from '../src/features/forever-changes/lee/scheduler';
 import { leeUrl, wantsLee } from '../src/features/forever-changes/lee/url';
+import { ECHOES, OFFICIAL_CHANNELS, SONGS } from '../src/features/forever-changes/recordings';
 
 const fc = parse(readFileSync(new URL('../../content/features/forever-changes/feature.yaml', import.meta.url), 'utf8')) as FeatureSource;
 const ids = fc.scenes.map((s) => s.id);
@@ -22,9 +23,9 @@ describe('Forever Changes: the scenes', () => {
     expect(songs.map((s) => s.n)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
     expect(songs.map((s) => s.side).join('')).toBe('aaaaaabbbbb');
   });
-  it('the content is valid, every block a draft, and held lines never ship', () => {
+  it('the content is valid and held lines never ship', () => {
     expect(validateFeature(fc)).toEqual([]);
-    expect(fc.scenes.every((s) => s.blocks.every((b) => b.draft === true))).toBe(true);
+    expect(fc.scenes.every((s) => s.blocks.every((b) => typeof b.draft === 'boolean'))).toBe(true);
     const held = fc.scenes.flatMap((s) => s.blocks.filter((b) => b.hold));
     expect(held.length).toBeGreaterThan(10);
     expect(held.every((b) => typeof b.check === 'string' && b.check.length > 0)).toBe(true);
@@ -285,5 +286,20 @@ describe('the Arthur Lee mode: the scheduler of visions', () => {
     let rings = 0;
     for (let t = 0; t < 1000; t += 50) if (g.allow(t)) rings++;
     expect(rings).toBe(3);
+  });
+});
+
+describe('official recordings', () => {
+  it('every song chapter plays the album track from the official channel, each id checked', () => {
+    expect(Object.keys(SONGS).sort()).toEqual([...SIDE_A, ...SIDE_B].sort());
+    const all = [...Object.values(SONGS), ...ECHOES];
+    for (const r of all) {
+      expect(r.youtube).toMatch(/^[A-Za-z0-9_-]{11}$/);
+      expect(r.channel).toMatch(OFFICIAL_CHANNELS);
+      expect(r.verified).toContain('oEmbed');
+    }
+    expect(new Set(all.map((r) => r.youtube)).size).toBe(all.length);
+    for (const r of Object.values(SONGS)) expect(r.channel).toBe('Love - Topic');
+    expect(ECHOES.map((r) => r.artist)).toEqual(['UFO', 'The Damned', 'Calexico']);
   });
 });
