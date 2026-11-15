@@ -675,7 +675,7 @@ test('the copy switch flips a paired card at once, and the pairs list links both
   await expect(page.locator('.notice.edition')).toContainText('This story belongs to the other copy');
   await page.goto('/');
   const note = page.locator('.opener .ed-note:visible');
-  await expect(note).toContainText(/Yours\sis\sthe\sfemale\scopy;\sin\sit\syou\sread\s.*Harriet\sJacobs/);
+  await expect(note).toContainText(/Yours\sis\sthe\sfemale\scopy;\sin\sit\syou\sread\s/);
   // The note names the reader's own stories, never both copies' (the list is behind a button).
   await expect(note.locator('p').first()).not.toContainText('Frederick Douglass');
   // The pairs come from the data: count them there.
@@ -683,10 +683,13 @@ test('the copy switch flips a paired card at once, and the pairs list links both
     const d = await (await fetch('data/cards.json')).json();
     return new Set(d.cards.filter((c: { edition?: string; pair?: string }) => c.edition === 'm' || c.edition === 'f').map((c: { pair?: string }) => c.pair)).size;
   });
-  const words = ['', 'one', 'Both', 'three', 'four', 'five', 'six'];
-  await note.getByRole('button', { name: pairs === 2 ? 'Both pairs' : `All ${words[pairs]} pairs` }).click();
+  const words = ['', 'one', 'Both', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+  const said = words[pairs] ?? String(pairs);
+  if (pairs > 4) await expect(note).toContainText(`and ${pairs - 3} more stories`);
+  await note.getByRole('button', { name: pairs === 2 ? 'Both pairs' : `All ${said} pairs` }).click();
   await expect(note.locator('.ed-pairs li')).toHaveCount(pairs);
-  await expect(note).toContainText(`They differ in ${words[pairs]} places`);
+  await expect(note.locator('.ed-pairs')).toContainText('Harriet Jacobs');
+  await expect(note).toContainText(`They differ in ${said} places`);
   await note.getByRole('button', { name: 'Open the male copy' }).click();
   await expect(page.locator('.opener .ed-note:visible')).toContainText(/Yours\sis\sthe\smale\scopy/);
   await page.goto('/#focus=jacobs-garret');

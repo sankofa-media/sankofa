@@ -27,7 +27,7 @@ import { Engine } from './views/engine';
 import { Roots } from './views/roots';
 import { RootsMap } from './views/rootsMap';
 import { installMechanics } from './mechanics';
-import { installNavMenu, setBookCount } from './views/navMenu';
+import { installNavMenu, navReady, setBookCount } from './views/navMenu';
 import { isMechView } from './mechanics/views';
 
 async function load<T>(url: string): Promise<T> {
@@ -415,6 +415,8 @@ async function start(): Promise<void> {
   window.addEventListener('popstate', () => apply(false));
   window.addEventListener('hashchange', () => apply(false));
   apply(true);
+  // Only now may a menu entry chosen during loading open its view.
+  navReady();
 }
 
 function scrollToChapter(id: string): void {

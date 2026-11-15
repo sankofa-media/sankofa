@@ -2,11 +2,13 @@
 // the other, and the list of pairs straight from the cards.
 import type { App } from '../app';
 import { h, reducedMotion } from '../lib/dom';
-import { lang, pick } from '../lib/i18n';
+import { lang, pick, pluralRu } from '../lib/i18n';
 import { setEdition } from '../lib/reader';
 import { rememberPlace } from '../lib/place';
 import type { Card } from '../lib/types';
 
+/** Stories named in the note before the rest are counted. */
+const SHOWN = 3;
 const EN_NUM = ['no', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
 const RU_IN = ['ни в одном месте', 'в одном месте', 'в двух местах', 'в трёх местах', 'в четырёх местах', 'в пяти местах', 'в шести местах', 'в семи местах', 'в восьми местах', 'в девяти местах', 'в десяти местах'];
 const RU_ALL = ['', 'Единственная пара', 'Обе пары', 'Все три пары', 'Все четыре пары', 'Все пять пар', 'Все шесть пар', 'Все семь пар', 'Все восемь пар', 'Все девять пар', 'Все десять пар'];
@@ -56,7 +58,13 @@ export function editionNote(app: App): HTMLElement {
   const name = (c: Card) => (ru ? `«${c.title}»` : c.inline || c.title.replace(/^The /, 'the '));
   const join = (xs: string[]) => (xs.length > 1 ? `${xs.slice(0, -1).join(', ')} ${ru ? 'и' : 'and'} ${xs[xs.length - 1]}` : xs.join(''));
   // Only the reader's own stories are named: the other copy stays a door, not a summary.
-  const own = join(pairs.map((p) => name(p[mine])));
+  // With many pairs, three names and a count: the whole list is behind the button.
+  const names = pairs.map((p) => name(p[mine]));
+  const rest = names.length - SHOWN;
+  const own =
+    rest > 1
+      ? `${names.slice(0, SHOWN).join(', ')} ${ru ? `и ещё ${rest} ${pluralRu(rest, ['историю', 'истории', 'историй'])}` : `and ${rest} more stories`}`
+      : join(names);
   const text = ru
     ? `Как у Павича, у музея два экземпляра — мужской и женский. Они расходятся ${RU_IN[n] ?? `в ${n} местах`}: одну и ту же тему там рассказывают разные истории. У вас — ${mine === 'f' ? 'женский' : 'мужской'}; в нём вы прочтёте: ${own}.`
     : `Like Pavić’s dictionary, this museum has two copies, a male and a female one. They differ in ${EN_NUM[n] ?? n} places, where the same theme is told through a different story. Yours is the ${mine === 'f' ? 'female' : 'male'} copy; in it you read ${own}.`;

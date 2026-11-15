@@ -39,6 +39,17 @@ export function bookCount(n: number, l = lang()): string {
   return `${n} ${n === 1 ? 'card' : 'cards'}`;
 }
 
+// The menu is up while the cards still load; an entry chosen then is kept
+// and carried out once the museum is ready, instead of being lost.
+let ready = false;
+let pending: HTMLElement | undefined;
+export function navReady(): void {
+  ready = true;
+  const b = pending;
+  pending = undefined;
+  b?.click();
+}
+
 export function installNavMenu(nav: HTMLElement): void {
   const actions = nav.querySelector<HTMLElement>('.nav-actions');
   if (!actions || actions.querySelector('.nav-menu-btn')) return;
@@ -60,7 +71,8 @@ export function installNavMenu(nav: HTMLElement): void {
         'data-entry': key,
         onclick: () => {
           close();
-          b.click();
+          if (ready) b.click();
+          else pending = b;
         },
       },
       h('span.nav-sheet-ic', { 'aria-hidden': 'true' }, ...(svg ? [svg as unknown as HTMLElement] : [])),
