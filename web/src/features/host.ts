@@ -43,6 +43,7 @@ export interface FeatureModule {
 /** Every feature's code, loaded on demand: the main bundle holds only these loaders. */
 const MODULES: Record<string, () => Promise<FeatureModule>> = {
   'sea-lion-girls': () => import('./sea-lion-girls/index'),
+  'forever-changes': () => import('./forever-changes/index'),
 };
 
 import type { FeatureHooks, Features } from './index';
