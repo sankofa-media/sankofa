@@ -5,6 +5,8 @@
 //   data/checks.json     content/ledger/* joined per card, with totals
 //   data/guide.json      content/guide.md, content/guide.ru.md
 //   data/dedication.json content/dedication.md / .ru.md (absent: no file)
+//   data/cabinet.json    content/cabinet/*.yaml, facts from ledger/cabinet.yaml,
+//                        image rights from ledger/media-cabinet.yaml (or media.yaml)
 // Usage: node scripts/build-mechanics.ts <content-dir> <data-dir>
 import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
@@ -12,8 +14,9 @@ import { join } from 'node:path';
 import YAML from 'yaml';
 import { buildChecks, pairContext, type ContextRound, type Ledgers, type MediaEntry } from '../src/mechanics/checks/model.ts';
 import { validateDoc, type Doc } from '../src/mechanics/docs/model.ts';
-import { parsePattern, type ObjectsFile } from '../src/mechanics/objects/model.ts';
+import { LABEL_FIELDS, parsePattern, validateLabel, type ObjectLabel, type ObjectsFile } from '../src/mechanics/objects/model.ts';
 import { parseProse, type ProseFile } from '../src/mechanics/guide/model.ts';
+import { validateCabinet, type CabinetFile, type Fact } from '../src/mechanics/cabinet/model.ts';
 
 const [src, out] = process.argv.slice(2);
 if (!src || !out) {
@@ -76,32 +79,117 @@ for (const f of existsSync(docDir) ? readdirSync(docDir).filter((x) => x.endsWit
   documents.push(d);
 }
 
-// Objects.
+// The Workshop's objects: each an element of music, with its label.
 const objSrc = yaml<Record<string, Record<string, unknown>>>(join(src, 'objects.yaml'), {});
 const objects: ObjectsFile = { version: 1 };
+const elementIds = new Set(yaml<{ elements?: { id: string }[] }>(join(src, 'roots', 'elements.yaml'), {}).elements?.map((e) => e.id) ?? []);
 const raw = (id: string) => (existsSync(join(src, 'cards', id + '.md')) ? read(join(src, 'cards', id + '.md')) : '');
+const intro = objSrc.intro as { en?: string; ru?: string } | undefined;
+if (intro) {
+  if (!intro.en?.trim() || !intro.ru?.trim()) errors.push('objects.yaml: intro needs English and Russian');
+  else objects.intro = { en: intro.en.trim(), ru: intro.ru.trim() };
+}
+/** The label of an object, checked; undefined (with errors noted) when it is broken. */
+const label = (key: string): ObjectLabel | undefined => {
+  const o = objSrc[key] as Partial<ObjectLabel> | undefined;
+  const errs = validateLabel(key, o, { cards, elements: elementIds });
+  if (errs.length) {
+    errors.push(...errs.map((e) => `objects.yaml: ${e}`));
+    return undefined;
+  }
+  const out = { elements: o!.elements!, cards: o!.cards! } as ObjectLabel;
+  for (const f of LABEL_FIELDS) out[f] = { en: o![f]!.en.trim(), ru: o![f]!.ru.trim() };
+  return out;
+};
 if (objSrc.gramophone) {
   const g = objSrc.gramophone as { card: string; audio: string; rpm?: number };
+  const l = label('gramophone');
   if (!cards.has(g.card)) errors.push(`objects.yaml: gramophone card ${g.card} does not exist`);
   else if (!media.has(g.audio)) errors.push(`objects.yaml: ${g.audio} is not in content/media`);
   else if (!raw(g.card).includes(`"${g.audio}"`)) errors.push(`objects.yaml: ${g.audio} is not among the media of card ${g.card}`);
-  else objects.gramophone = { card: g.card, audio: g.audio, rpm: g.rpm ?? 78 };
+  else if (l) objects.gramophone = { card: g.card, audio: g.audio, rpm: g.rpm ?? 78, ...l };
 }
-for (const key of ['tr808', 'amen'] as const) {
+for (const key of ['tr808', 'amen', 'clave'] as const) {
   const o = objSrc[key] as { card: string; tempo: number; pattern: Record<string, string> } | undefined;
   if (!o) continue;
   if (!cards.has(o.card)) {
     errors.push(`objects.yaml: ${key} card ${o.card} does not exist`);
     continue;
   }
+  const l = label(key);
   try {
     const pattern = parsePattern(o.pattern);
-    if (key === 'tr808') objects.tr808 = { card: o.card, tempo: o.tempo, pattern };
-    // Its recording is the card's entry in listen.yaml; a `youtube` copy here is ignored.
-    else objects.amen = { card: o.card, tempo: o.tempo, pattern };
+    // The Amen break's recording is the card's entry in listen.yaml; a `youtube` copy here is ignored.
+    if (l) objects[key] = { card: o.card, tempo: o.tempo, pattern, ...l };
   } catch (e) {
     errors.push(`objects.yaml: ${key}: ${(e as Error).message}`);
   }
+}
+if (objSrc.call) {
+  const c = objSrc.call as { card: string };
+  const l = label('call');
+  if (!cards.has(c.card)) errors.push(`objects.yaml: call card ${c.card} does not exist`);
+  else if (l) objects.call = { card: c.card, ...l };
+}
+
+// The Cabinet of Curiosities. Every image needs a rights record whose checksum
+// matches the file; every text its facts in the ledger; every hiding place
+// must exist, down to the words a cache is hidden in.
+const cabDir = join(src, 'cabinet');
+let cabinet: CabinetFile | null = null;
+if (existsSync(join(cabDir, 'cabinet.yaml'))) {
+  const base = yaml<Partial<CabinetFile>>(join(cabDir, 'cabinet.yaml'), {});
+  cabinet = {
+    version: 1,
+    intro: base.intro!,
+    drawers: base.drawers ?? [],
+    keys: base.keys ?? [],
+    caches: yaml<{ caches?: CabinetFile['caches'] }>(join(cabDir, 'caches.yaml'), {}).caches ?? [],
+    artifacts: yaml<{ artifacts?: CabinetFile['artifacts'] }>(join(cabDir, 'artifacts.yaml'), {}).artifacts ?? [],
+  };
+  const cabRights = new Set<string>();
+  const cabLedger = yaml<MediaEntry[]>(join(ledger, 'media-cabinet.yaml'), []);
+  for (const e of [...cabLedger, ...mediaLedger]) {
+    const fp = join(mediaDir, e.file);
+    if (!existsSync(fp)) continue;
+    if (!e.url || !e.license || !e.license_wording || !e.sha256) {
+      if (cabLedger.includes(e)) errors.push(`media-cabinet.yaml: ${e.file} needs url, license, license_wording and sha256`);
+      continue;
+    }
+    const sum = createHash('sha256').update(readFileSync(fp)).digest('hex');
+    if (e.sha256 === sum) cabRights.add(e.file);
+    else if (cabLedger.includes(e)) errors.push(`media-cabinet.yaml: ${e.file} sha256 is ${sum}, the ledger says ${e.sha256}`);
+  }
+  const facts = yaml<Fact[]>(join(ledger, 'cabinet.yaml'), []);
+  const body = (p: string) => (existsSync(p) ? read(p).replace(/^---\n[\s\S]*?\n---\n/, '') : '');
+  const errs = validateCabinet(cabinet, {
+    cards,
+    chapters: new Set(existsSync(join(src, 'chapters')) ? readdirSync(join(src, 'chapters')).filter((f) => /^[a-z0-9-]+\.md$/.test(f)).map((f) => f.replace(/\.md$/, '')) : []),
+    objects: new Set(Object.keys(objects).filter((k) => k !== 'version' && k !== 'intro')),
+    media,
+    rights: cabRights,
+    text: (kind, id, l) => body(join(src, kind === 'card' ? 'cards' : 'chapters', `${id}${l === 'ru' ? '.ru' : ''}.md`)),
+    facts,
+  });
+  errors.push(...errs.map((e) => `cabinet: ${e}`));
+  // What the reader sees: sizes of the pictures, and the sources behind each text.
+  const sources: Record<string, { title: string; url: string }[]> = {};
+  for (const f of facts)
+    for (const x of f.sources) {
+      if (!x.url || x.url.startsWith('card:')) continue;
+      const list = (sources[f.id] ??= []);
+      if (!list.some((y) => y.url === x.url)) list.push({ title: x.title, url: x.url });
+    }
+  cabinet.sources = sources;
+  cabinet.artifacts = cabinet.artifacts.map((a) => {
+    let size = {};
+    try {
+      size = jpegSize(join(mediaDir, a.image));
+    } catch {
+      /* reported above when the file is missing */
+    }
+    return { ...a, ...size, sources: sources[`artifact:${a.id}`] ?? [] };
+  });
 }
 
 if (errors.length) {
@@ -110,6 +198,8 @@ if (errors.length) {
 }
 write('documents.json', { version: 1, documents });
 write('objects.json', objects);
+if (cabinet) write('cabinet.json', cabinet);
+else rmSync(join(out, 'cabinet.json'), { force: true });
 
 // How we checked. The context rewrite: every context-<x>.yaml (the writer's
 // facts with sources) beside its context-<x>-check.yaml (the second check).
@@ -159,4 +249,4 @@ for (const base of ['guide', 'dedication']) {
   else rmSync(join(out, `${base}.json`), { force: true });
 }
 
-console.log(`${documents.length} documents, ${Object.keys(objects).length - 1} objects, checks for ${checks.totals.cards} cards (${checks.totals.facts} facts, ${checks.totals.context.kept} from the context rewrite) -> ${out}`);
+console.log(`${documents.length} documents, ${cabinet ? `${cabinet.caches.length} caches with ${cabinet.artifacts.length} artifacts, ` : ''}${Object.keys(objects).filter((k) => k !== "version" && k !== "intro").length} objects, checks for ${checks.totals.cards} cards (${checks.totals.facts} facts, ${checks.totals.context.kept} from the context rewrite) -> ${out}`);

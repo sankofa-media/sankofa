@@ -110,3 +110,52 @@ export const KIT_ACOUSTIC: Record<string, Voice> = {
     noiseHit(ctx, out, t, 0.3 * l, 1.2, [{ type: 'highpass', f: 4200 }]);
   },
 };
+
+/** Hand percussion for the clave: the sticks, two congas and a bell. */
+export const KIT_CLAVE: Record<string, Voice> = {
+  clave: (ctx, out, t, l = 1) => {
+    tone(ctx, out, t, 'sine', 2500, 2380, 0.02, 0.55 * l, 0.06);
+    noiseHit(ctx, out, t, 0.12 * l, 0.012, [{ type: 'bandpass', f: 3200, q: 3 }]);
+  },
+  conga: (ctx, out, t, l = 1) => {
+    tone(ctx, out, t, 'sine', 360, 330, 0.03, 0.55 * l, 0.22);
+    noiseHit(ctx, out, t, 0.1 * l, 0.02, [{ type: 'bandpass', f: 1500, q: 1 }]);
+  },
+  tumba: (ctx, out, t, l = 1) => tone(ctx, out, t, 'sine', 210, 190, 0.04, 0.7 * l, 0.34),
+  bell: (ctx, out, t, l = 1) => metal(ctx, out, t, 0.1 * l, 0.16, 3400, 900, [587, 845]),
+};
+
+/**
+ * A sung syllable for call and response: a voice-like tone (a sawtooth through
+ * two formant filters) with a little vibrato. `pitch` in Hz, `dur` in seconds.
+ */
+export function sing(ctx: AudioContext, out: AudioNode, when: number, pitch: number, dur: number, level = 0.5, formants: [number, number] = [700, 1150]): void {
+  const o = ctx.createOscillator();
+  o.type = 'sawtooth';
+  o.frequency.setValueAtTime(pitch * 0.97, when);
+  o.frequency.exponentialRampToValueAtTime(pitch, when + 0.06);
+  const vib = ctx.createOscillator();
+  vib.frequency.value = 5.2;
+  const depth = ctx.createGain();
+  depth.gain.value = pitch * 0.012;
+  vib.connect(depth);
+  depth.connect(o.frequency);
+  const g = ctx.createGain();
+  g.gain.setValueAtTime(0.0001, when);
+  g.gain.exponentialRampToValueAtTime(level, when + 0.04);
+  g.gain.setValueAtTime(level, when + Math.max(0.05, dur - 0.08));
+  g.gain.exponentialRampToValueAtTime(0.0001, when + dur);
+  for (const f of formants) {
+    const bp = ctx.createBiquadFilter();
+    bp.type = 'bandpass';
+    bp.frequency.value = f;
+    bp.Q.value = 6;
+    o.connect(bp);
+    bp.connect(g);
+  }
+  g.connect(out);
+  o.start(when);
+  vib.start(when);
+  o.stop(when + dur + 0.05);
+  vib.stop(when + dur + 0.05);
+}

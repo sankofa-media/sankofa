@@ -3,7 +3,8 @@ import { join } from 'node:path';
 import YAML from 'yaml';
 import { describe, expect, it } from 'vitest';
 import { parseListen } from '../src/lib/listen';
-import { clearPattern, formatTime, GROOVE, hits, parsePattern, parseSteps, patternLength, radiusAtTime, stepSeconds, timeAtRadius, toggle } from '../src/mechanics/objects/model';
+import { answerTiming, clearPattern, flipClave, formatTime, GROOVE, hits, parsePattern, parseSteps, patternLength, radiusAtTime, stepSeconds, timeAtRadius, toggle, validateLabel } from '../src/mechanics/objects/model';
+import { existsSync } from 'node:fs';
 
 describe('working objects: patterns', () => {
   it('reads steps, ignoring bar separators', () => {
@@ -59,5 +60,39 @@ describe('working objects: the needle', () => {
   it('formats time', () => {
     expect(formatTime(0)).toBe('0:00');
     expect(formatTime(211.9)).toBe('3:31');
+  });
+});
+
+describe('the Workshop: every object is an element, with its story', () => {
+  const content = join(__dirname, '../../content');
+  const o = YAML.parse(readFileSync(join(content, 'objects.yaml'), 'utf8'));
+  const elements = new Set((YAML.parse(readFileSync(join(content, 'roots/elements.yaml'), 'utf8')).elements as { id: string }[]).map((e) => e.id));
+  const cards = { has: (id: string) => existsSync(join(content, 'cards', `${id}.md`)) } as Set<string>;
+  it('has an intro in both languages', () => {
+    expect(o.intro.en.length).toBeGreaterThan(200);
+    expect(o.intro.ru.length).toBeGreaterThan(200);
+  });
+  for (const key of ['gramophone', 'tr808', 'amen', 'clave', 'call'])
+    it(`${key}: names its element and cards, and says where, who and where next in English and Russian`, () => {
+      expect(validateLabel(key, o[key], { cards, elements })).toEqual([]);
+    });
+  it('a label with an unknown element or no Russian is refused', () => {
+    const bad = { ...o.clave, elements: ['kazoo'], next: { en: 'On', ru: '' } };
+    const errs = validateLabel('clave', bad, { cards, elements }).join('\n');
+    expect(errs).toMatch(/kazoo/);
+    expect(errs).toMatch(/next has no Russian/);
+  });
+  it('the clave is five strokes, three then two, and turns round', () => {
+    const p = parsePattern(o.clave.pattern);
+    expect(p.clave.filter(Boolean)).toHaveLength(5);
+    expect(p.clave.slice(0, 8).filter(Boolean)).toHaveLength(3);
+    const two = flipClave(p.clave);
+    expect(two.slice(0, 8).filter(Boolean)).toHaveLength(2);
+    expect(flipClave(two)).toEqual(p.clave);
+  });
+  it('an answer is on the beat within a quarter of a second', () => {
+    expect(answerTiming(2, 2.1)).toBe('on');
+    expect(answerTiming(2, 1.5)).toBe('early');
+    expect(answerTiming(2, 2.6)).toBe('late');
   });
 });

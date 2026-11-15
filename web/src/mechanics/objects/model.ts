@@ -6,12 +6,73 @@ export interface Pattern {
   [voice: string]: boolean[];
 }
 
+export interface L {
+  en: string;
+  ru: string;
+}
+
+/** The label every Workshop object carries: the element it lets you touch, and its story. */
+export interface ObjectLabel {
+  /** element ids (content/roots/elements.yaml); the first is the one you touch */
+  elements: string[];
+  /** card ids the story rests on */
+  cards: string[];
+  name: L;
+  /** the element, as this object shows it */
+  what: L;
+  /** where and when */
+  when: L;
+  /** who made it */
+  who: L;
+  /** where it went next */
+  next: L;
+}
+
 export interface ObjectsFile {
   version: 1;
-  gramophone?: { card: string; audio: string; rpm: number; caption?: string; credit?: string; license?: string; url?: string };
-  tr808?: { card: string; tempo: number; pattern: Pattern };
+  /** what the elements are and why the music of the Atlantic world rests on them */
+  intro?: L;
+  gramophone?: { card: string; audio: string; rpm: number; caption?: string; credit?: string; license?: string; url?: string } & ObjectLabel;
+  tr808?: { card: string; tempo: number; pattern: Pattern } & ObjectLabel;
   /** The Amen break's official recording comes from data/listen.json, by its card. */
-  amen?: { card: string; tempo: number; pattern: Pattern };
+  amen?: { card: string; tempo: number; pattern: Pattern } & ObjectLabel;
+  clave?: { card: string; tempo: number; pattern: Pattern } & ObjectLabel;
+  call?: { card: string } & ObjectLabel;
+}
+
+export const LABEL_FIELDS = ['name', 'what', 'when', 'who', 'next'] as const;
+
+/** What is wrong with an object's label: unknown elements or cards, a missing translation. */
+export function validateLabel(key: string, o: Partial<ObjectLabel> | undefined, known: { cards: Set<string>; elements: Set<string> }): string[] {
+  const errs: string[] = [];
+  if (!o) return [`${key}: no label`];
+  if (!o.elements?.length) errs.push(`${key}: names no element`);
+  for (const e of o.elements ?? []) if (!known.elements.has(e)) errs.push(`${key}: element ${e} is not in roots/elements.yaml`);
+  if (!o.cards?.length) errs.push(`${key}: names no card`);
+  for (const c of o.cards ?? []) if (!known.cards.has(c)) errs.push(`${key}: card ${c} does not exist`);
+  for (const f of LABEL_FIELDS) {
+    const v = o[f] as L | undefined;
+    if (!v?.en?.trim()) errs.push(`${key}: ${f} has no English`);
+    if (!v?.ru?.trim()) errs.push(`${key}: ${f} has no Russian`);
+  }
+  return errs;
+}
+
+/**
+ * A call-and-response round: the leader's call, then the group's answer, and
+ * how the answer the reader gives lands against the beat it was due on.
+ * Times in seconds from the start of the round.
+ */
+export function answerTiming(due: number, at: number, window = 0.25): 'early' | 'on' | 'late' {
+  if (at < due - window) return 'early';
+  if (at > due + window) return 'late';
+  return 'on';
+}
+
+/** The son clave in either direction: 3–2 is the pattern as written, 2–3 its halves swapped. */
+export function flipClave(steps: boolean[]): boolean[] {
+  const half = steps.length / 2;
+  return [...steps.slice(half), ...steps.slice(0, half)];
 }
 
 /** "x..x|x..." -> booleans; `|` only separates bars for the eye. */

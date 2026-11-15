@@ -51,11 +51,11 @@ test('on a phone the scan pans and zooms to the line being read', async ({ page,
   await expect.poll(async () => paper.evaluate((el) => el.style.transform)).not.toBe(t1);
 });
 
-test('the shelf of objects: one sound at a time, keyboard steps, a video only on request', async ({ page }) => {
+test('the Workshop: one sound at a time, keyboard steps, a video only on request', async ({ page }) => {
   const asked: string[] = [];
   page.on('request', (r) => asked.push(r.url()));
-  await page.goto('/#view=objects');
-  await expect(sheet(page).locator('.mx-object')).toHaveCount(3);
+  await page.goto('/#view=workshop');
+  await expect(sheet(page).locator('.mx-object')).toHaveCount(5);
   const machine = sheet(page).locator('.mx-obj-tr808 .mx-machine');
   const play = machine.locator('.mx-play');
   await play.click();

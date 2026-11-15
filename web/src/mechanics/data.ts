@@ -5,6 +5,7 @@ import type { ChecksFile } from './checks/model';
 import type { DocsFile } from './docs/model';
 import type { ObjectsFile } from './objects/model';
 import type { ProseFile } from './guide/model';
+import type { CabinetFile } from './cabinet/model';
 import { loadJson } from '../lib/loadJson';
 
 const cache = new Map<string, Promise<unknown>>();
@@ -26,6 +27,8 @@ export function resetData(): void {
 
 export const documents = () => load<DocsFile>('documents');
 export const objects = () => load<ObjectsFile>('objects');
+/** null when the content has no cabinet. */
+export const cabinet = () => load<CabinetFile>('cabinet');
 export const checks = () => load<ChecksFile>('checks');
 export const guide = () => load<ProseFile>('guide');
 /** null when the content has no dedication. */

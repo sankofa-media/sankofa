@@ -1,0 +1,297 @@
+# The caches: containers hidden across the museum, each with its own history.
+# hidden: card-image (x/y in % of the picture), card-text or chapter-step
+# (the words it hides in, per language), workshop (the drawer under an object).
+# lock/gives: keys (cabinet.yaml). contents: per copy of the museum (both, m, f).
+caches:
+  - id: sea-chest
+    kind: chest
+    name:
+      en: A Black sailor's sea chest
+      ru: Сундучок чернокожего моряка
+    place:
+      en: Philadelphia and the Atlantic
+      ru: Филадельфия и Атлантика
+    time:
+      en: "1810"
+      ru: 1810 год
+    story:
+      en: "Among a Black sailor's things, few were worth as much as a single sheet of paper. In 1796
+        Congress created the seaman's protection certificate to keep American sailors from being
+        seized into the British navy; for a man of color it was also proof that he was free. Sailors
+        kept the certificates themselves, while the sworn proofs filed to obtain them stayed in
+        customs records now held by the National Archives. A borrowed certificate could open a road
+        too: in 1838 Frederick Douglass walked to freedom with one."
+      ru: "Среди вещей чернокожего моряка мало что стоило дороже одного листа бумаги. В 1796 году Конгресс
+        ввёл охранное свидетельство моряка, чтобы американских матросов не забирали силой в
+        британский флот; чернокожему оно к тому же доказывало, что он свободен. Сами свидетельства
+        моряки держали при себе, а показания под присягой, поданные ради их получения, оставались в
+        таможенных делах, которые теперь хранит Национальный архив США. Чужое свидетельство тоже
+        могло открыть дорогу: в 1838 году с таким, взятым взаймы, ушёл на свободу Фредерик Дуглас."
+    hidden:
+      at: card-image
+      card: equiano
+      x: 60
+      y: 49
+    contents:
+      both:
+        - seamens-protection-dunbar
+      m:
+        - equiano-bahama-banks
+      f:
+        - seacole-british-hotel
+    cards:
+      - equiano
+      - mary-seacole
+      - paul-cuffe
+      - douglass-covey
+  - id: box-brown-box
+    kind: box
+    name:
+      en: Henry Box Brown's box
+      ru: Ящик Генри «Бокса» Брауна
+    place:
+      en: Richmond, Virginia, to Philadelphia
+      ru: Из Ричмонда (Виргиния) в Филадельфию
+    time:
+      en: March 1849
+      ru: март 1849 года
+    story:
+      en: On 23 March 1849 friends in Richmond, Virginia, sealed Henry Brown into a wooden box and sent it
+        by rail to Philadelphia. About twenty-six hours later the box was opened at the office of
+        the Pennsylvania Anti-Slavery Society, and Brown rose out of it alive and free. William
+        Still was among the witnesses.
+      ru: 23 марта 1849 года друзья в Ричмонде (Виргиния) запечатали Генри Брауна в деревянный ящик и
+        отправили поездом в Филадельфию. Примерно через двадцать шесть часов ящик вскрыли в конторе
+        Пенсильванского антирабовладельческого общества, и Браун поднялся из него живым и свободным.
+        Среди свидетелей был Уильям Стилл.
+    hidden:
+      at: chapter-step
+      chapter: v2
+      anchor:
+        en: logged hundreds of fugitives
+        ru: вносил в журнал сотни беглецов
+    gives:
+      - brass-key
+    contents:
+      both:
+        - box-brown-resurrection
+        - box-brown-narrative-1849
+    cards:
+      - underground-railroad-myths
+  - id: pullman-grip
+    kind: grip
+    name:
+      en: A Pullman porter's grip
+      ru: Саквояж пульмановского проводника
+    place:
+      en: Chicago and the southbound trains
+      ru: Чикаго и поезда, идущие на юг
+    time:
+      en: 1917–1919
+      ru: 1917–1919
+    story:
+      en: A grip like those Black Pullman porters carried out of Chicago on trains bound south. In their
+        luggage rode bundles of the Chicago Defender, the weekly that called Southerners north and
+        named 15 May 1917 the day of the Great Northern Drive. Some Southern towns tried to stop its
+        sale; the porters smuggled it in anyway, and by 1918 it sold 125,000 copies.
+      ru: Такой саквояж чернокожий проводник пульмановского вагона брал в рейс из Чикаго на юг. В багаже
+        ехали пачки «Чикаго дефендер» — еженедельника, который звал южан на Север и назначил на 15
+        мая 1917 года «Великий поход на Север». Некоторые южные города пытались запретить его
+        продажу, но проводники всё равно провозили газету, и к 1918 году она расходилась тиражом 125
+        000 экземпляров.
+    hidden:
+      at: card-text
+      card: chicago-defender
+      anchor:
+        en: Pullman porters
+        ru: проводники пульмановских вагонов
+    contents:
+      both:
+        - negro-migration-during-the-war
+        - pullman-porter-union-station
+    cards:
+      - chicago-defender
+      - migration-series
+  - id: windrush-suitcase
+    kind: suitcase
+    name:
+      en: A Windrush passenger's suitcase
+      ru: Чемодан пассажира «Уиндраша»
+    place:
+      en: From the Caribbean to Tilbury, Essex
+      ru: С Карибских островов в Тилбери, Эссекс
+    time:
+      en: June 1948
+      ru: июнь 1948 года
+    story:
+      en: A suitcase like those carried ashore at Tilbury on 22 June 1948, when HMT Empire Windrush docked
+        with passengers from the Caribbean. Some were men who had served in the RAF during the war
+        and were coming back, Sam King among them. Those with nowhere to go, 236 by the official
+        count, were put up in the deep wartime shelter under Clapham South Tube station.
+      ru: С такими чемоданами сходили на берег в Тилбери 22 июня 1948 года, когда к причалу подошёл
+        «Эмпайр Уиндраш» с пассажирами с Карибских островов. Некоторые из них в войну служили в
+        Королевских ВВС и теперь возвращались — среди них Сэм Кинг. Тех, кому некуда было идти, — по
+        официальному счёту 236 человек — поселили в глубоком бомбоубежище военных лет под станцией
+        метро «Клэпем-Саут».
+    hidden:
+      at: card-text
+      card: windrush-scandal
+      anchor:
+        en: to Tilbury
+        ru: в Тилбери
+    contents:
+      both:
+        - empire-windrush
+      m:
+        - sam-king-plaque
+      f:
+        - clapham-south-shelter
+    cards:
+      - windrush-scandal
+      - claudia-jones
+  - id: record-crate
+    kind: crate
+    name:
+      en: A Bronx DJ's record crate
+      ru: Ящик с пластинками диджея из Бронкса
+    place:
+      en: 1520 Sedgwick Avenue, the Bronx
+      ru: Седжвик-авеню, 1520, Бронкс
+    time:
+      en: 11 August 1973
+      ru: 11 августа 1973 года
+    story:
+      en: A crate of records like the one Clive Campbell, DJ Kool Herc, brought to the recreation room of
+        1520 Sedgwick Avenue on 11 August 1973. His sister Cindy was throwing a party to pay for
+        back-to-school clothes and handed out invitations on index cards. He played mostly funk and
+        soul, and stretched the drum breaks with a trick he called the merry-go-round.
+      ru: С таким ящиком пластинок Клайв Кэмпбелл, он же диджей Кул Херк, спустился 11 августа 1973 года в
+        комнату отдыха дома 1520 по Седжвик-авеню. Его сестра Синди устраивала вечеринку, чтобы
+        заработать на одежду к школе, и раздавала приглашения на учётных карточках. Херк ставил в
+        основном фанк и соул и растягивал барабанные брейки приёмом, который называл «каруселью».
+    hidden:
+      at: workshop
+      object: amen
+    contents:
+      both:
+        - 1520-sedgwick-avenue
+        - kool-herc-hunts-point
+    cards:
+      - hip-hop
+      - cindy-campbell
+      - amen-break
+  - id: griot-bag
+    kind: bag
+    name:
+      en: A jeli's bag
+      ru: Сумка джели
+    place:
+      en: The court of Mansa Sulayman, Mali
+      ru: Двор мансы Сулеймана, Мали
+    time:
+      en: 1352–1353
+      ru: 1352–1353
+    story:
+      en: A bag like one a jeli, a Mande griot, might have carried at the court of Mali. In 1352 the
+        Moroccan traveller Ibn Battuta reached the capital of Mansa Sulayman and watched the court
+        interpreter Dugha play an instrument made of reeds with small calabashes beneath it. On
+        feast days poets in feathered bird costumes recited before the sultan.
+      ru: Такую сумку мог носить при дворе Мали джели — гриот народов манде. В 1352 году марокканский
+        путешественник Ибн Баттута добрался до столицы мансы Сулеймана и видел, как придворный
+        толмач Дуга играет на инструменте из тростника с маленькими тыквами-калебасами внизу. По
+        праздникам перед султаном читали стихи поэты в костюмах птиц из перьев.
+    hidden:
+      at: card-image
+      card: sunjata
+      x: 47
+      y: 80
+    contents:
+      both:
+        - mandinka-kora
+        - malinke-bala
+    cards:
+      - sunjata
+      - talking-drums
+      - yeke-yeke
+  - id: schomburg-box
+    kind: archive-box
+    name:
+      en: Arturo Schomburg's archive box
+      ru: Архивная коробка Артуро Шомбурга
+    place:
+      en: 135th Street branch of the New York Public Library, Harlem, New York
+      ru: Отделение Нью-Йоркской публичной библиотеки на 135-й улице, Гарлем, Нью-Йорк
+    time:
+      en: "1926"
+      ru: 1926 год
+    story:
+      en: "Arturo Alfonso Schomburg, a Puerto Rican of African descent living in New York, spent his life
+        collecting books, pamphlets, manuscripts and prints by and about people of African descent,
+        and not only in the United States. In 1926 the New York Public Library bought his collection
+        for $10,000 with a grant from the Carnegie Corporation: 2,932 volumes and 1,124 pamphlets,
+        with prints and manuscripts besides. It went to the library's 135th Street branch in Harlem,
+        where it became the Division of Negro Literature, History and Prints."
+      ru: "Артуро Альфонсо Шомбург, пуэрториканец африканского происхождения, живший в Нью-Йорке, всю
+        жизнь собирал книги, брошюры, рукописи и гравюры, написанные людьми африканского
+        происхождения или рассказывающие о них, — и не только в Соединённых Штатах. В 1926 году
+        Нью-Йоркская публичная библиотека купила его собрание за 10 000 долларов на грант Корпорации
+        Карнеги: 2932 тома и 1124 брошюры, а ещё гравюры и рукописи. Собрание отправилось в
+        отделение библиотеки на 135-й улице в Гарлеме и стало там особым отделом литературы, истории и гравюр, посвящённых чернокожим."
+    hidden:
+      at: chapter-step
+      chapter: v5
+      anchor:
+        en: Latin verse
+        ru: латинские стихи
+    gives:
+      - iron-key
+    contents:
+      both:
+        - schomburg-portrait
+        - wheatley-poems-1773
+        - juan-latino-austriad
+    cards:
+      - phillis-wheatley
+      - juan-latino
+  - id: inventors-strongbox
+    kind: strongbox
+    name:
+      en: The Patent Office strongbox
+      ru: Несгораемый ящик Патентного ведомства
+    place:
+      en: United States Patent Office, Washington, D.C.
+      ru: Патентное ведомство США, Вашингтон
+    time:
+      en: 1877–1913
+      ru: 1877–1913 годы
+    story:
+      en: "The records of the United States Patent Office noted an inventor's nationality but never his or
+        her race, so no one could simply count the patents granted to Black inventors. Henry E.
+        Baker, who joined the office in Washington as a copyist in 1877 and rose to assistant
+        examiner, set out to do it by hand: he sent letter after letter to patent attorneys, company
+        owners, newspaper editors and Black community leaders asking for names. In 1913 he reported
+        some 800 patents verified as belonging to Black inventors. This box keeps three such
+        patents, from the electric lamp to the front door."
+      ru: "В записях Патентного ведомства США отмечали, из какой страны изобретатель, но никогда не
+        отмечали его расу, поэтому сосчитать патенты чернокожих изобретателей было попросту нельзя.
+        Генри Э. Бейкер, пришедший в вашингтонское ведомство переписчиком в 1877 году и
+        дослужившийся до помощника эксперта, взялся сделать это вручную: письмо за письмом он
+        рассылал патентным поверенным, владельцам компаний, редакторам газет и лидерам чернокожих
+        общин и просил назвать имена. В 1913 году он сообщил примерно о 800 проверенных патентах
+        чернокожих изобретателей. В этом ящике хранятся три таких патента — от электрической лампы
+        до входной двери."
+    hidden:
+      at: card-image
+      card: lewis-latimer
+      x: 73
+      y: 29
+    lock: iron-key
+    contents:
+      both:
+        - latimer-carbons-patent
+        - morgan-traffic-signal-patent
+        - brown-home-security-patent
+    cards:
+      - lewis-latimer
+      - garrett-morgan
+      - marie-van-brittan-brown

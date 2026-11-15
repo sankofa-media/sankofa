@@ -11,7 +11,7 @@ import { editionNote, pairLink } from './editionNote';
 import { cardYaml } from '../lib/cardYaml';
 import { mediaSrc } from '../lib/media';
 import { paragraphsOf } from '../lib/paragraphs';
-import { cardChecks, cardExtras } from '../mechanics';
+import { cardCaches, cardChecks, cardExtras } from '../mechanics';
 import { listenBlock } from './player';
 import { stopWithin } from '../lib/sound';
 
@@ -237,7 +237,9 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
       )
     : null;
 
-  return h('article.card', { 'data-label': [chapterLabel(c.era), KIND_LABEL[c.kind] ?? c.kind].filter(Boolean).join(' · '), 'data-card-id': c.id, 'aria-labelledby': 'card-title', lang: c.textLang && c.textLang !== lang() ? c.textLang : undefined }, media, body);
+  const article = h('article.card', { 'data-label': [chapterLabel(c.era), KIND_LABEL[c.kind] ?? c.kind].filter(Boolean).join(' · '), 'data-card-id': c.id, 'aria-labelledby': 'card-title', lang: c.textLang && c.textLang !== lang() ? c.textLang : undefined }, media, body);
+  cardCaches(app, c, article);
+  return article;
 }
 
 export function renderBook(app: App, path: string[], actions: { share(): void; replay(): void; clear(): void }): HTMLElement {

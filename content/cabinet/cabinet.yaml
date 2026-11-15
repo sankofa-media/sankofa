@@ -1,0 +1,103 @@
+# The Cabinet of Curiosities: the cabinet itself, its drawers and its keys.
+# Caches (the containers hidden across the museum) are in caches.yaml, the
+# things they hold in artifacts.yaml. Facts behind every story and note:
+# content/ledger/cabinet.yaml; image rights: content/ledger/media-cabinet.yaml.
+# The build (web/scripts/build-mechanics.ts) refuses a cabinet with dangling
+# references, missing translations, facts without two sources or images
+# without a rights record.
+intro:
+  en: >-
+    In Milorad Pavić’s novel The Writing Box every drawer of a small box
+    holds a story together with the things that belong to it. Gogol’s
+    Plyushkin kept a heap of everything he ever picked up, and the princes of
+    old Europe kept kunstkammers, rooms of rarities. This cabinet is yours.
+    Things are hidden across the museum: on a picture, in a word, in a drawer
+    of the Workshop. Each lies in a chest, a box or a suitcase with a history
+    of its own; open it, and what was inside comes here. Some drawers are locked, and their
+    keys lie elsewhere.
+  ru: >-
+    В романе Милорада Павича «Ящик для письменных принадлежностей» в
+    каждом его отделении лежит история вместе с вещами, которые ей
+    принадлежат. Гоголевский Плюшкин хранил в куче всё, что когда-либо
+    подобрал, а государи старой Европы заводили кунсткамеры — палаты редкостей.
+    Этот кабинет — ваш. Вещи спрятаны по всему музею: на картинке, в слове, в
+    ящике Мастерской. Каждая лежит в сундучке, коробке или чемодане, у
+    которых своя история; откройте — и то, что было внутри, перейдёт сюда. Некоторые ящики заперты, а
+    ключи от них лежат в другом месте.
+
+drawers:
+  - id: letters
+    label: {en: Letters, ru: Письма}
+  - id: seas
+    label: {en: Seas, ru: Моря}
+  - id: seals
+    label: {en: Seals and patents, ru: Печати и патенты}
+  - id: voices
+    label: {en: Voices, ru: Голоса}
+  - id: underground
+    label: {en: Underground, ru: Подполье}
+    lock: brass-key
+    intro:
+      en: This drawer is hidden because its papers were once dangerous. William Still,
+        who chaired the Vigilance Committee of the Pennsylvania Anti-Slavery
+        Society, wrote down the name of each person who escaped through
+        Philadelphia, and at times hid his journal in a nearby cemetery for fear of
+        being charged under the Fugitive Slave Act of 1850. After slavery ended, he
+        published his records.
+      ru: Этот ящик потайной, потому что его бумаги когда-то были опасны. Уильям
+        Стилл, возглавлявший Комитет бдительности Пенсильванского
+        антирабовладельческого общества, записывал имя каждого, кто бежал через
+        Филадельфию, и порой прятал свой журнал на соседнем кладбище — боялся, что
+        его обвинят по Закону о беглых рабах 1850 года. Когда рабство было отменено,
+        он опубликовал свои записи.
+    contents:
+      - still-underground-rail-road
+      - still-twenty-eight-fugitives
+  - id: honest
+    label: {en: Where these things came from, ru: Откуда эти вещи}
+    intro:
+      en: "European cabinets of curiosities, and the museums that grew out of them,
+        gathered the world into rooms, and some of what came from Africa was taken
+        by force. In February 1897 British troops took Benin City and seized the
+        brass plaques and statues of the royal palace; many were shared out among
+        officers as booty and later sold to museums. Now some of them are going
+        back: in December 2022 the city of Cologne signed over to Nigeria all 92
+        Benin works in its museum. This drawer keeps such things in the open, out of
+        respect for the people who made them."
+      ru: "Европейские кабинеты редкостей и выросшие из них музеи собирали весь мир
+        под одной крышей, и кое-что из привезённого из Африки было взято силой. В
+        феврале 1897 года британские войска захватили Бенин-Сити и забрали латунные
+        пластины и статуи из королевского дворца; многие из них разделили между
+        офицерами как трофеи, а потом продали музеям. Теперь часть этих вещей
+        возвращается: в декабре 2022 года Кёльн передал Нигерии право собственности
+        на все 92 бенинские работы из своего музея. Этот ящик ничего не прячет — из
+        уважения к тем, кто эти вещи создал."
+    contents:
+      - museum-wormianum
+      - benin-warrior-plaque
+      - cologne-benin-transfer
+  - id: heap
+    label: {en: Plyushkin’s corner, ru: Угол Плюшкина}
+    intro:
+      en: >-
+        Everything you find lands here first, unsorted, the way Plyushkin
+        piled up whatever he came across. Pick through the heap, look at each
+        thing closely and put it away in its drawer. A few things belong in
+        no drawer at all; they stay in the heap.
+      ru: >-
+        Всё найденное сначала попадает сюда, неразобранным, — так Плюшкин
+        сваливал в кучу всё, что попадалось ему на пути. Переберите кучу,
+        рассмотрите каждую вещь и уберите её в свой ящик. Кое-что не годится
+        ни в один ящик — оно остаётся в куче.
+
+keys:
+  - id: brass-key
+    name: {en: A small brass key, ru: Маленький латунный ключ}
+    note:
+      en: It is too small for a door. Somewhere there is a drawer with no label.
+      ru: Для двери он слишком мал. Где-то есть ящик без надписи.
+  - id: iron-key
+    name: {en: A heavy iron key, ru: Тяжёлый железный ключ}
+    note:
+      en: A key for a strongbox, with a paper tag that has lost its writing.
+      ru: Ключ от несгораемого ящика, с бумажной биркой, надпись на которой стёрлась.

@@ -1,0 +1,68 @@
+# Facts on the Workshop's labels (content/objects.yaml). A label restates its
+# cards (card:<id>, already checked with their own sources) and its elements
+# (element:<id> in content/roots/elements.yaml, two sources each). Facts that
+# are on neither carry two independent sources here, each opened on the date
+# given, with the passage the fact rests on.
+- object: gramophone
+  rests_on: [card:crazy-blues, element:blue-notes, element:twelve-bar-blues]
+- object: tr808
+  rests_on: [card:planet-rock, card:chicago-house, element:groove]
+- object: amen
+  rests_on: [card:amen-break, element:breakbeat, element:sampling]
+- object: call
+  rests_on: [card:work-songs, element:call-and-response]
+- object: clave
+  rests_on: [card:independance-cha-cha, element:polyrhythm]
+  facts:
+    - claim: The clave is both a pair of wooden sticks and the rhythmic pattern played on them; in Spanish the word also means "key".
+      sources:
+        - title: "Library of Congress, Families blog: Getting a Feel for Clave (2021)"
+          url: https://blogs.loc.gov/families/2021/07/getting-a-feel-for-clave-jazz/
+          quote: refers both to a rhythmic pattern and a percussion instrument
+          opened: '2026-11-14'
+        - title: "Mehmet Vurkaç, A Cross-Cultural Grammar for Temporal Harmony in Afro-Latin Musics, Current Musicology 94 (Columbia University, 2012)"
+          url: https://journals.library.columbia.edu/index.php/currentmusicology/article/download/5234/2473/9143
+          quote: "(1) claves, the instrument; (2) clave in the harmonic sense, as in “the key of C major” (in Spanish); and (3) a small family of patterns"
+          opened: '2026-11-14'
+    - claim: In Cuban music the clave is the rhythmic anchor that the other parts keep time against.
+      sources:
+        - title: "Mehmet Vurkaç, Current Musicology 94 (2012)"
+          url: https://journals.library.columbia.edu/index.php/currentmusicology/article/download/5234/2473/9143
+          quote: Clave is typically identified as the rhythmic anchor of Cuban music.
+          opened: '2026-11-14'
+        - title: "Carnegie Hall, Timeline of African American Music: Caribbean and Latin Connections in Jazz (Paul Austerlitz)"
+          url: https://timeline.carnegiehall.org/stories/caribbean-and-latin-connections-in-jazz
+          quote: the key elements, such as the clave rhythm, of Afro-Cuban music
+          opened: '2026-11-14'
+    - claim: The clave pattern descends from African rhythmic traditions brought to the Americas with the slave trade.
+      sources:
+        - title: "Library of Congress, Families blog: Getting a Feel for Clave (2021)"
+          url: https://blogs.loc.gov/families/2021/07/getting-a-feel-for-clave-jazz/
+          quote: The clave rhythm is directly descendant from African rhythmic traditions
+          opened: '2026-11-14'
+        - title: "Mehmet Vurkaç, Current Musicology 94 (2012)"
+          url: https://journals.library.columbia.edu/index.php/currentmusicology/article/download/5234/2473/9143
+          quote: this pattern–as–concept was brought to the Americas with the transatlantic slave trade
+          opened: '2026-11-14'
+    - claim: In New York in the early 1940s Machito and his Afro-Cubans, with Mario Bauzá, blended jazz with Cuban rhythms and stayed tied to the clave; Bauzá credited Machito with bringing the clave to the United States.
+      sources:
+        - title: "Carnegie Hall, Timeline of African American Music: Caribbean and Latin Connections in Jazz (Paul Austerlitz)"
+          url: https://timeline.carnegiehall.org/stories/caribbean-and-latin-connections-in-jazz
+          quote: In 1941, Bauzá joined forces with singer and maraca player Frank “Machito” Grillo to form Machito and his Afro-Cubans
+          opened: '2026-11-14'
+        - title: "Encyclopedia of Latin American History and Culture, via Encyclopedia.com: Machito (1909–1984), Andrew J. Kirkendall"
+          url: https://encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/machito-1909-1984
+          quote: credited Machito with having introduced the clave to the United States
+          opened: '2026-11-14'
+      note: >-
+        The two sources date the band's founding 1941 and 1940; the label says
+        "the early 1940s". Carnegie Hall: "their jazz forays always remained
+        tied to the key elements, such as the clave rhythm, of Afro-Cuban
+        music"; Encyclopedia.com: "artful blending of jazz instrumentation and
+        Cuban rhythms".
+    - claim: Congolese rumba grew out of Cuban records.
+      sources:
+        - title: "card:independance-cha-cha"
+          url: card:independance-cha-cha
+          quote: the dance music of Léopoldville that had grown out of Cuban records
+          opened: '2026-11-14'

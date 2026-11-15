@@ -756,7 +756,7 @@ test('on a phone the top bar is a labelled menu that names every way in', async 
   await menu.click();
   const sheet = page.locator('.nav-sheet');
   await expect(sheet).toBeVisible();
-  for (const name of ['Descend', 'Atlas', 'Listen', 'Roots', 'Engine room', 'Your book', 'Objects', 'Guide']) await expect(sheet.locator('.nav-sheet-item b', { hasText: name }).first()).toBeVisible();
+  for (const name of ['Descend', 'Atlas', 'Listen', 'Roots', 'Engine room', 'Your book', 'Workshop', 'Cabinet', 'Guide']) await expect(sheet.locator('.nav-sheet-item b', { hasText: name }).first()).toBeVisible();
   // Every entry says in a line what it is.
   expect(await sheet.locator('.nav-sheet-item small').count()).toBeGreaterThanOrEqual(8);
   await sheet.locator('[data-entry="atlas"]').click();

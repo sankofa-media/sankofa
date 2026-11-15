@@ -1,39 +1,28 @@
-// The working objects as the reader meets them: on their cards, and together
-// on the shelf. Every sentence here restates its card; the sounds are the
-// card's own recording or synthesized in the browser.
+// The Workshop: working objects as the reader meets them, on their cards and
+// together on the bench. Each object is an element of music that travels
+// between styles; its label (content/objects.yaml) says which, where and when,
+// who made it and where it went next, and links its thread in Roots and its
+// cards. The sounds are the card's own recording or synthesized in the browser.
 import type { App } from '../../app';
 import { h } from '../../lib/dom';
 import { pick } from '../../lib/i18n';
 import { drumMachine } from './drummachine';
 import { gramophone } from './gramophone';
-import type { ObjectsFile } from './model';
+import type { ObjectLabel, ObjectsFile } from './model';
 import { pads } from './pads';
-import { KIT_808, KIT_ACOUSTIC } from './voices';
+import { KIT_808, KIT_ACOUSTIC, KIT_CLAVE } from './voices';
+import { callResponse } from './callresponse';
+import { flipClave } from './model';
 import { listenBlock } from '../../views/player';
 
-type Key = 'gramophone' | 'tr808' | 'amen';
-export const OBJECT_KEYS: Key[] = ['gramophone', 'tr808', 'amen'];
+export type Key = 'gramophone' | 'tr808' | 'amen' | 'clave' | 'call';
+export const OBJECT_KEYS: Key[] = ['gramophone', 'tr808', 'amen', 'clave', 'call'];
 
-const NAMES: Record<Key, { en: string; ru: string }> = {
-  gramophone: { en: 'The gramophone', ru: 'Граммофон' },
-  tr808: { en: 'The drum machine', ru: 'Драм-машина' },
-  amen: { en: 'The Amen pads', ru: 'Пэды Amen' },
-};
-
-const STORY: Record<Key, { en: string; ru: string }> = {
-  gramophone: {
-    en: 'On 10 August 1920 Mamie Smith recorded Perry Bradford’s “Crazy Blues” with her Jazz Hounds, and the record opened the “race records” market. This is that recording.',
-    ru: '10 августа 1920 года Мейми Смит записала со своими Jazz Hounds песню Перри Брэдфорда «Crazy Blues», и эта пластинка открыла рынок «расовых пластинок». Здесь звучит та самая запись.',
-  },
-  tr808: {
-    en: 'For “Planet Rock” in 1982, Afrika Bambaataa and Arthur Baker rebuilt Kraftwerk’s music on a Roland TR-808. Here every voice is synthesized in your browser, in the manner of that machine.',
-    ru: 'Для «Planet Rock» в 1982 году Африка Бамбаатаа и Артур Бейкер пересобрали музыку Kraftwerk на Roland TR-808. Здесь каждый голос синтезирует ваш браузер, на манер той машины.',
-  },
-  amen: {
-    en: 'Gregory C. Coleman’s drum break on the Winstons’ 1969 B-side “Amen, Brother” became one of the most sampled recordings ever. The recording is not ours to copy: these drums are synthesized, and the pattern is a re-creation.',
-    ru: 'Барабанный брейк Грегори К. Коулмана на стороне Б сингла The Winstons «Amen, Brother» (1969) стал одной из самых сэмплируемых записей в истории. Копировать саму запись мы не вправе: эти барабаны синтезированы, а рисунок воссоздан заново.',
-  },
-};
+/** A drawer under an object on the bench (the cabinet hides things in some). */
+let drawerHook: ((key: Key) => HTMLElement | null) | undefined;
+export function setWorkshopDrawers(f: (key: Key) => HTMLElement | null): void {
+  drawerHook = f;
+}
 
 function instrument(app: App, key: Key, o: ObjectsFile, where: 'card' | 'shelf'): HTMLElement | null {
   if (key === 'gramophone' && o.gramophone) {
@@ -96,6 +85,43 @@ function instrument(app: App, key: Key, o: ObjectsFile, where: 'card' | 'shelf')
       // the card's own listening block already offers it.
       where === 'shelf' ? recording(app, o.amen.card) : null,
     );
+  if (key === 'clave' && o.clave) {
+    const voices = [
+      { key: 'clave', short: 'CL', name: { en: 'Clave', ru: 'Клаве' } },
+      { key: 'bell', short: 'BL', name: { en: 'Bell', ru: 'Колокол' } },
+      { key: 'conga', short: 'CG', name: { en: 'Conga', ru: 'Конга' } },
+      { key: 'tumba', short: 'TU', name: { en: 'Low conga', ru: 'Низкая конга' } },
+    ];
+    const machine = (two: boolean) =>
+      drumMachine({
+        id: 'clave',
+        kit: KIT_CLAVE,
+        pattern: two ? { ...o.clave!.pattern, clave: flipClave(o.clave!.pattern.clave) } : o.clave!.pattern,
+        bpm: o.clave!.tempo,
+        label: two ? { en: 'Son clave, 2–3', ru: 'Сон-клаве, 2–3' } : { en: 'Son clave, 3–2', ru: 'Сон-клаве, 3–2' },
+        presetName: {
+          en: 'The preset is the son clave, a traditional pattern of five strokes, over a simple conga part written for this museum.',
+          ru: 'Заготовка — сон-клаве, традиционный рисунок из пяти ударов, поверх простой партии конги, написанной для этого музея.',
+        },
+        voices,
+      });
+    const host = h('div.mx-clave', {});
+    let two = false;
+    const dir = h('button.btn.mx-clave-flip', { type: 'button', 'aria-pressed': 'false' }, pick({ en: 'Turn it round: 2–3', ru: 'Развернуть: 2–3' }));
+    dir.addEventListener('click', () => {
+      two = !two;
+      dir.setAttribute('aria-pressed', String(two));
+      dir.textContent = two ? pick({ en: 'Turn it back: 3–2', ru: 'Вернуть: 3–2' }) : pick({ en: 'Turn it round: 2–3', ru: 'Развернуть: 2–3' });
+      host.querySelector('.mx-machine')?.replaceWith(machine(two));
+    });
+    host.append(
+      h('p.mx-hint', {}, pick({ en: 'Three strokes, then two: the clave is heard as a question and an answer. Turned round, the same five strokes start with the two.', ru: 'Три удара, потом два: клаве звучит как вопрос и ответ. Если развернуть её, те же пять ударов начнутся с двух.' })),
+      dir,
+      machine(false),
+    );
+    return host;
+  }
+  if (key === 'call' && o.call) return callResponse();
   return null;
 }
 
@@ -104,25 +130,66 @@ function recording(app: App, card: string): HTMLElement | null {
   return r ? listenBlock(r, { heading: pick({ en: 'The original recording', ru: 'Оригинальная запись' }) }) : null;
 }
 
-function cardOf(o: ObjectsFile, key: Key): string | undefined {
-  return o[key]?.card;
+/** The element names of an object, in the reader's language. */
+function elementName(app: App, id: string): string {
+  const e = app.elements.elements.find((x) => x.id === id);
+  return e ? pick({ en: e.name, ru: e.nameRu ?? e.name }) : id;
 }
 
-/** One object, as a section: what it is, the instrument, and its card. */
+/** The label of an object: which element, where and when, who, where next; and its roads. */
+function label(app: App, l: ObjectLabel): HTMLElement {
+  const cardsHere = l.cards.map((id) => app.set.forEdition(id, app.edition) ?? app.set.get(id)).filter((c): c is NonNullable<typeof c> => !!c);
+  const threads = l.elements.filter((id) => app.elements.elements.some((e) => e.id === id));
+  return h(
+    'div.mx-label',
+    {},
+    h(
+      'dl.mx-label-list',
+      {},
+      h('dt', {}, pick({ en: 'Where and when', ru: 'Где и когда' })),
+      h('dd', {}, pick(l.when)),
+      h('dt', {}, pick({ en: 'Who made it', ru: 'Кто это сделал' })),
+      h('dd', {}, pick(l.who)),
+      h('dt', {}, pick({ en: 'Where it went next', ru: 'Куда это пошло дальше' })),
+      h('dd', {}, pick(l.next)),
+    ),
+    h(
+      'div.mx-roads',
+      {},
+      threads.length
+        ? h(
+            'p.mx-threads',
+            {},
+            h('span', {}, pick({ en: 'Its thread in Roots: ', ru: 'Его нить в «Корнях»: ' })),
+            ...threads.flatMap((id, i) => [i ? ', ' : '', h('a.mx-thread', { href: `#view=roots&item=${id}`, 'data-roots-element': id }, elementName(app, id))]),
+          )
+        : null,
+      cardsHere.length ? h('p.mx-cardlinks', {}, h('span', {}, pick({ en: 'Cards: ', ru: 'Карточки: ' })), ...cardsHere.flatMap((c, i) => [i ? ' · ' : '', h('a', { href: `#focus=${c.id}`, 'data-card': c.id }, c.title)])) : null,
+    ),
+  );
+}
+
+/** One object, as a section: the element it lets you touch, the instrument, its label. */
 export function objectBlock(app: App, o: ObjectsFile, key: Key, where: 'card' | 'shelf'): HTMLElement | null {
   const inst = instrument(app, key, o, where);
-  if (!inst) return null;
-  const card = cardOf(o, key);
-  const c = card ? app.set.get(card) : undefined;
+  const l = o[key];
+  if (!inst || !l) return null;
+  const first = l.elements[0];
+  const drawer = where === 'shelf' ? drawerHook?.(key) : null;
   return h(
     `section.mx-object.mx-obj-${key}`,
     { id: `object-${key}`, 'aria-labelledby': `object-${key}-${where}` },
-    h('div.mx-object-head', {}, h('div.kicker', {}, pick({ en: 'Working object', ru: 'Действующий предмет' })), h(where === 'card' ? 'h3' : 'h2', { id: `object-${key}-${where}` }, pick(NAMES[key]))),
-    h('p.mx-object-text', {}, pick(STORY[key])),
+    h(
+      'div.mx-object-head',
+      {},
+      h('div.kicker', {}, pick({ en: 'Element', ru: 'Элемент' }), ': ', first ? elementName(app, first) : ''),
+      h(where === 'card' ? 'h3' : 'h2', { id: `object-${key}-${where}` }, pick(l.name)),
+    ),
+    h('p.mx-object-text', {}, pick(l.what)),
     inst,
-    where === 'shelf' && c
-      ? h('a.mx-more', { href: `#focus=${c.id}`, 'data-card': c.id }, pick({ en: `Read the card: ${c.title} →`, ru: `Читать карточку: ${c.title} →` }))
-      : h('a.mx-more', { href: `#view=objects&item=${key}`, 'data-mech': 'objects', 'data-item': key }, pick({ en: 'All working objects →', ru: 'Все действующие предметы →' })),
+    where === 'shelf' ? label(app, l) : null,
+    where === 'card' ? h('a.mx-more', { href: `#view=workshop&item=${key}`, 'data-mech': 'workshop', 'data-item': key }, pick({ en: 'Its story in the Workshop →', ru: 'Его история — в Мастерской →' })) : null,
+    drawer,
   );
 }
 
@@ -130,7 +197,7 @@ export function objectKeyForCard(o: ObjectsFile, card: string): Key | undefined 
   return OBJECT_KEYS.find((k) => o[k]?.card === card);
 }
 
-/** The shelf: every object, one after another. */
+/** The Workshop: why these elements, then every object, one after another. */
 export function shelf(app: App, o: ObjectsFile): HTMLElement {
   return h(
     'div.mx-shelf',
@@ -138,13 +205,14 @@ export function shelf(app: App, o: ObjectsFile): HTMLElement {
     h(
       'header.mx-head',
       {},
-      h('h2', {}, pick({ en: 'Working objects', ru: 'Действующие предметы' })),
+      h('h2', {}, pick({ en: 'The Workshop', ru: 'Мастерская' })),
+      o.intro ? h('p.mx-lede', {}, pick(o.intro)) : null,
       h(
-        'p.mx-lede',
+        'p.mx-hint',
         {},
         pick({
-          en: 'Three instruments from the cards, to play rather than to look at. Sound starts only when you press something, and only one plays at a time.',
-          ru: 'Три инструмента из карточек — на них играют, а не разглядывают. Звук появляется, только когда вы что-то нажмёте, и одновременно звучит что-то одно.',
+          en: 'Sound starts only when you press something, and only one thing plays at a time.',
+          ru: 'Звук появляется, только когда вы что-то нажмёте, и одновременно звучит что-то одно.',
         }),
       ),
     ),
