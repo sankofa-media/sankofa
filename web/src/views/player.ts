@@ -65,9 +65,7 @@ export function listenBlock(r: Recording, opts: ListenOpts = {}): HTMLElement {
         referrerpolicy: 'strict-origin-when-cross-origin',
       });
     } else if (r.audio) {
-      const a = h('audio.lb-audio', { controls: true, autoplay: true, src: r.start ? `${r.audio}#t=${r.start}` : r.audio }) as HTMLAudioElement;
-      adopt(a);
-      media = a;
+      media = audioFor(r);
     } else return;
     claim(id, unload, el);
     stage.replaceChildren(media);
@@ -82,6 +80,46 @@ export function listenBlock(r: Recording, opts: ListenOpts = {}): HTMLElement {
   el.addEventListener('lb-play', play);
   el.addEventListener('lb-unload', () => playing() === id && unload());
   return el;
+}
+
+/**
+ * The element for a direct audio file: its caption tracks as real <track>
+ * elements and, for an excerpt, a stop at its end. Playing again after the
+ * end, or from before the excerpt, starts it over from its beginning.
+ */
+function audioFor(r: Recording): HTMLAudioElement {
+  const a = h(
+    'audio.lb-audio',
+    { controls: true, autoplay: true, src: r.start ? `${r.audio}#t=${r.start}` : r.audio! },
+    ...(r.tracks ?? []).map((tr) => h('track', { kind: 'captions', src: tr.src, srclang: tr.lang, label: tr.label, ...(tr.default ? { default: '' } : {}) })),
+  ) as HTMLAudioElement;
+  adopt(a);
+  // A seek asked for before the file is ready lands once it is.
+  a.addEventListener('loadedmetadata', () => {
+    const at = a.dataset.seek ? Number(a.dataset.seek) : r.start;
+    delete a.dataset.seek;
+    if (at) a.currentTime = at;
+  });
+  if (r.end !== undefined) {
+    const start = r.start ?? 0;
+    const end = r.end;
+    a.addEventListener('timeupdate', () => {
+      if (a.currentTime >= end) a.pause();
+    });
+    a.addEventListener('play', () => {
+      if (a.currentTime >= end - 0.05 || a.currentTime < start - 0.5) a.currentTime = start;
+    });
+  }
+  return a;
+}
+
+/** Move a loaded audio block to `t` seconds and keep it sounding. */
+export function seekBlock(el: HTMLElement, t: number): void {
+  const a = el.querySelector<HTMLAudioElement>('audio');
+  if (!a) return;
+  if (a.readyState < 1) a.dataset.seek = String(t);
+  a.currentTime = t;
+  if (a.paused) void a.play().catch(() => undefined);
 }
 
 /** Pause or resume a loaded block (YouTube through its iframe API, audio directly). */
