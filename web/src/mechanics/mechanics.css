@@ -2031,3 +2031,16 @@ html.cb-modal-open body {
 .cover-credit .xref {
   color: inherit;
 }
+
+/* The dedication's photograph: quiet, above the text. */
+.mx-ded-photo {
+  margin: 0 auto 28px;
+  max-width: min(320px, 70vw);
+}
+.mx-ded-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 2px;
+  filter: saturate(0.9);
+}

@@ -1,5 +1,7 @@
 ---
 title: Dedication
+photo: udler.jpg
+photoAlt: Irina Mikhailovna Udler with flowers
 ---
 This project is dedicated to my academic supervisor, Irina Mikhailovna Udler. For many years she studied the slave narrative, above all the work of Olaudah Equiano, and she was one of the leading scholars of the subject in the world. She also remained for me a model of the academic way of doing research: thoroughness, objectivity and, in the good sense, an obsession with scholarship and with her own subject. She was a wonderful teacher, and "the Udler list" is still a byword among philologists in Chelyabinsk.
 

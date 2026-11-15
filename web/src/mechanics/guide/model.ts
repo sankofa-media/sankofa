@@ -13,6 +13,8 @@ export type Block = { type: 'h2' | 'h3' | 'p'; inline: Inline[] } | { type: 'quo
 
 export interface ProseDoc {
   title?: string;
+  /** A photograph above the text: a file in media/ and its alt text. */
+  photo?: { file: string; alt: string };
   blocks: Block[];
 }
 
@@ -22,13 +24,13 @@ export interface ProseFile {
   ru?: ProseDoc;
 }
 
-/** Front matter: only `title:` is read. */
-function frontMatter(src: string): { title?: string; body: string } {
+/** Front matter: `title:`, and `photo:` with `photoAlt:` are read. */
+function frontMatter(src: string): { title?: string; photo?: { file: string; alt: string }; body: string } {
   const m = /^---\n([\s\S]*?)\n---\n?/.exec(src);
   if (!m) return { body: src };
-  const t = /^title:\s*(.+)$/m.exec(m[1]);
-  const title = t?.[1].trim().replace(/^(["'])(.*)\1$/, '$2');
-  return { title, body: src.slice(m[0].length) };
+  const field = (k: string) => new RegExp(`^${k}:\\s*(.+)$`, 'm').exec(m[1])?.[1].trim().replace(/^(["'])(.*)\1$/, '$2');
+  const file = field('photo');
+  return { title: field('title'), ...(file ? { photo: { file, alt: field('photoAlt') ?? '' } } : {}), body: src.slice(m[0].length) };
 }
 
 /** Raw HTML is not rendered: tags are dropped and their text kept. */
@@ -77,7 +79,7 @@ export function cardLinks(doc: ProseDoc): string[] {
 }
 
 export function parseProse(src: string): ProseDoc {
-  const { title, body } = frontMatter(src.replace(/\r\n/g, '\n'));
+  const { title, photo, body } = frontMatter(src.replace(/\r\n/g, '\n'));
   const blocks: Block[] = [];
   let h1: string | undefined;
   for (const para of body.split(/\n\s*\n/)) {
@@ -95,7 +97,7 @@ export function parseProse(src: string): ProseDoc {
     }
     blocks.push({ type: 'p', inline: parseInline(p.replace(/\s*\n\s*/g, ' ')) });
   }
-  return { title: title ?? h1, blocks };
+  return { title: title ?? h1, ...(photo ? { photo } : {}), blocks };
 }
 
 /**

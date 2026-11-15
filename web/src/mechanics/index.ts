@@ -139,7 +139,7 @@ export function installMechanics(app: App, hooks: MechHooks): Mechanics {
     } else if (v === 'dedication') {
       returnCard = undefined;
       const doc = inLang(await data.dedication());
-      ready(doc ? h('article.mx-dedication', {}, doc.title ? h('h2', {}, doc.title) : null, prose(doc, {}, 'mx-ded-prose')) : null, doc?.title ?? pick(KICKER.dedication));
+      ready(doc ? h('article.mx-dedication', {}, doc.title ? h('h2', {}, doc.title) : null, doc.photo ? h('figure.mx-ded-photo', {}, h('img', { src: `media/${doc.photo.file}`, alt: doc.photo.alt, loading: 'lazy', decoding: 'async' })) : null, prose(doc, {}, 'mx-ded-prose')) : null, doc?.title ?? pick(KICKER.dedication));
     }
   };
 
