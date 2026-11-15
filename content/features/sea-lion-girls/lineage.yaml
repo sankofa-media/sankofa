@@ -1,0 +1,749 @@
+# Sea Lion Woman / See-Line Woman — verified lineage
+# Compiled 2026-11-15. Every node below has >= 2 independent sources that were actually opened.
+# Quotes are verbatim and short. "Discogs" quotes are taken from the Discogs public API JSON
+# (api.discogs.com) for the cited release; the URL given is the human-readable release page.
+# Items that failed the two-source rule are in unconfirmed.md, not here.
+
+nodes:
+
+  - id: trad-ring-game
+    title: "Sea Lion Woman (traditional ring game / playground song)"
+    artist: "African American children, oral tradition (origin unknown)"
+    year: null
+    kind: original
+    parents: []
+    influences_in:
+      - "African American ring-play / game-song tradition: call-and-response, ring or line formation, syncopated handclapping and foot-stomping (Carnegie Hall Timeline of African American Music: 'The singing employs call-and-response structure and repetitive choruses also associated with African musical practices.'; Association for Cultural Equity lesson: 'roles for a leader and group in both the singing and playing of the game')"
+      - "Song-specific analysis (Kodály Center, Univ. of Redlands): pentatonic, tone set s,l,drm; form AAAB; form type call-response"
+      - "Older roots before 1939: NOT established by any authoritative source opened (see influences.md)"
+    afterlife:
+      - "Taught in US school music classrooms as a pentatonic call-and-response song (Kodály Center collection; GAMEPLAN Orff curriculum, Kriske/DeLelles) — see top-level 'afterlife'"
+    what_travelled: "The call-and-response frame: a leader sings a line, the group answers with the title phrase ('Sea lion'). This is the cell every later version keeps."
+    playable_url: null
+    sources:
+      - title: "Library of Congress, Songs of America — Children's Songs (essay)"
+        url: "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/traditional/childrens-songs/"
+        quote: "was an African American ring game song"
+      - title: "CREM-CNRS archive (Musée de l'Homme copy of LoC Album IV), item record"
+        url: "https://archives.crem-cnrs.fr/archives/items/CNRSMH_E_1948_001_016_005_005"
+        quote: "\"Negro children's games\""
+    note: "No source fixes an origin date or place. Title spellings vary (Sea Lion, See-Line, C-Line, She-Lyin'). One scholar (W. Jason Miller) reads it as a song about sex workers greeting sailors in port; this is an interpretation, single-authored — see people.md."
+
+  - id: shipp-1939
+    title: "Old Uncle Rabbit and Sea Lion Woman"
+    artist: "Katherine Shipp and Christine (Christeen) Shipp; recorded by Herbert Halpert"
+    year: 1939
+    kind: field-recording
+    parents: [trad-ring-game]
+    influences_in: ["trad-ring-game (learned by ear within the family, per NPR 1998)"]
+    afterlife:
+      - "The Kodály Center's teaching entry cites this exact disc as its source: 'Library of Congress AFS 3008 B3. Collected by Herbert Halpert.'"
+      - "Teachers play this LoC recording in class (GAMEPLAN teacher blog, 2011)"
+      - "Direct source for Feist (2007) and The General's Daughter (1999)"
+    what_travelled: "The earliest surviving sound of the song: two voices, unaccompanied, barely a minute long — the title refrain answered line by line, the coffee/tea verse, the rhythm later artists clap to."
+    playable_url: "https://www.loc.gov/item/ihas.200196570/"
+    playable_audio_direct: "https://tile.loc.gov/storage-services/public/afc/afcihas-200196570/200196570.mp3"
+    archive_ids: "AFS 03008 A01 and B03; collection AFC 1939/005 (Herbert Halpert 1939 Southern States Recording Expedition)"
+    sources:
+      - title: "Library of Congress item record ihas.200196570 (JSON view)"
+        url: "https://www.loc.gov/item/ihas.200196570/"
+        quote: "Halpert, Herbert (Recordist); Shipp, Katherine (Singer); Shipp, Christine (Singer)"
+      - title: "Stephen Wade, The Beautiful Music All Around Us (Univ. of Illinois Press, 2012), ch. 4 abstract"
+        url: "https://academic.oup.com/illinois-scholarship-online/book/30553/chapter/257923174"
+        quote: "Christine and Katherine also recorded the piece \"Sea Lion Woman.\""
+      - title: "Discogs — A Treasury of Library of Congress Field Recordings (Rounder CD 1500, 1997), notes"
+        url: "https://www.discogs.com/release/1367582-Various-A-Treasury-Of-Library-Of-Congress-Field-Recordings"
+        quote: "Track 6 rec. 13/5/1939 Byhalia, MS."
+      - title: "NPR, 'Shipp Family Singers' (July 10, 1998)"
+        url: "https://www.npr.org/1998/07/10/1034287/shipp-family-singers"
+        quote: "One of the groups they recorded was the Shipp family from Byhalia."
+    note: "Date 13 May 1939 (Wade; Rounder notes). Ages on that day: Christine 20, Katherine 18 (Wade). The LoC record itself carries no date; the CREM copy gives only '1939'."
+
+  - id: afs-l4-1942
+    title: "Afro-American Blues and Game Songs (LoC Album IV / AFS L4), track 'Sea Lion Woman'"
+    artist: "Katherine Shipp, Christeen Shipp (ed. Alan Lomax)"
+    year: 1942
+    kind: field-recording
+    parents: [shipp-1939]
+    what_travelled: "First publication of the Shipp recording, as a Library of Congress 78-rpm album set; it put the girls' voices on the same album as the first recordings of McKinley Morganfield (Muddy Waters)."
+    playable_url: null
+    sources:
+      - title: "Discogs — Afro-American Blues And Game Songs, The Library Of Congress AAFS L4"
+        url: "https://www.discogs.com/release/5239619-Various-Afro-American-Blues-And-Game-Songs"
+        quote: "Originally released as a 78rpm set in 1942."
+      - title: "CREM-CNRS archive, collection record for the 78-rpm album"
+        url: "https://archives.crem-cnrs.fr/archives/items/CNRSMH_E_1948_001_016_005_005"
+        quote: "Album IV : Afro-American Blues and Game Songs : from the Archive of American Folk Song [5 Disques]"
+    note: "The Discogs tracklist places B6 'Old Uncle Rabbit' and B7 'Sea Lion Woman' (Shipp) on the same LP as A10/A11 by McKinley Morganfield. The CREM copy (collection code E_1948) shows a set had reached the Paris Musée de l'Homme by 1948."
+
+  - id: rounder-treasury-1997
+    title: "A Treasury of Library of Congress Field Recordings (Rounder CD 1500), track 6 'Sea Lion Woman'"
+    artist: "Christine and Katherine Shipp; compiled and annotated by Stephen Wade"
+    year: 1997
+    kind: field-recording
+    parents: [shipp-1939]
+    what_travelled: "Reissue that returned the Shipp recording to circulation and became the licensed source for the 1999 film use."
+    playable_url: null
+    sources:
+      - title: "Discogs — Rounder CD 1500 credits"
+        url: "https://www.discogs.com/release/1367582-Various-A-Treasury-Of-Library-Of-Congress-Field-Recordings"
+        quote: "Stephen Wade — Compilation Producer, Liner Notes; Herbert Halpert — Recorded By 6, 11, 23"
+      - title: "TriQuarterly review of Wade's book (which grew out of the CD)"
+        url: "https://www.triquarterly.org/the-latest-word/reviews/beautiful-music-all-around-us-stephen-wade"
+        quote: "barely a minute in length but as strong as an ox and playful as a sprite"
+    note: "TriQuarterly confirms the 1997 Rounder release as the basis of the book."
+
+  - id: shes-began-to-lie-1999
+    title: "She Began To Lie (The General's Daughter, opening track) + 'She Began To Lie (Re-mix)'"
+    artist: "Christine and Katherine Shipp; produced/adapted by Greg Hale Jones (remix with Russell Ziecker)"
+    year: 1999
+    kind: remix
+    parents: [rounder-treasury-1997]
+    what_travelled: "Excerpts of the actual 1939 voices, re-produced as film score. The remix track is on the album only, not in the film."
+    playable_url: "https://www.youtube.com/watch?v=di6K-3kS94Y"
+    playable_note: "Auto-generated 'Release - Topic' upload of 'She Began To Lie' (label-delivered)."
+    sources:
+      - title: "Discogs — The General's Daughter (Music From The Motion Picture), Milan 74321 69474-2"
+        url: "https://www.discogs.com/release/5821308-Carter-Burwell-The-Generals-Daughter-Music-From-The-Motion-Picture"
+        quote: "Track 1 [and track 20] contains excerpts of \"Sea Lion Woman\" performed by Christine and Katherine Shipp."
+      - title: "Library of Congress, Songs of America — Children's Songs"
+        url: "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/traditional/childrens-songs/"
+        quote: "was featured in the 1999 Paramount film, The General's Daughter"
+    note: "Discogs promo CD (Milan MLAB 35885-1) adds: 'Track # 1 does not appear in the film' and credits the Shipp source 'courtesy of Rounder Records'."
+
+  - id: simone-1964
+    title: "See-Line Woman"
+    artist: "Nina Simone"
+    year: 1964
+    kind: cover
+    parents: [shipp-1939]
+    influences_in:
+      - "Shipp field recording / folk song via George H. Bass (writer credit) and, per W. Jason Miller (single author), Langston Hughes's suggestion"
+      - "Simone's classical training: Bach-centred study, Juilliard 1950, Curtis rejection (PBS American Masters; National Women's History Museum). PBS: 'a strong Bach influence can clearly be heard in Simone's improvisations' — a general statement, not about this track"
+      - "Album personnel (official ninasimone.com credits): Rudy Stevenson flute, Lisle Atkinson percussion, Bobby Hamilton drums; Hal Mooney producer. Per-track assignment to B3 not confirmed"
+    style_changes: "Kept the refrain and leader/answer; added syncopated handclaps and percussion, renamed it 'See-Line Woman' (Eats, Drinks & Leaves, Tim Cooper 2023) and made it a staged, rhythm-driven piece — the template most later versions copy"
+    afterlife: ["Template for nearly every later cover; officially remixed in 2002, 2022, 2026; sampled 2008"]
+    what_travelled: "Title (respelled), the leader/answer refrain, the verse frame; Simone's arrangement turned a playground chant into a percussion-driven performance piece. Writer credit went to George Houston Bass, arranger credit to Simone."
+    playable_url: "https://www.youtube.com/watch?v=E17-0CuPb64"
+    playable_note: "'Nina Simone - See-Line Woman (Audio)', Nina Simone Official Artist Channel."
+    album: "Broadway-Blues-Ballads (Philips PHM 200-148 / PHS 600-148), side B track 3"
+    sources:
+      - title: "Discogs — Broadway - Blues - Ballads, Philips PHM 200-148"
+        url: "https://www.discogs.com/release/2660605-Nina-Simone-Broadway-Blues-Ballads"
+        quote: "B3 See-Line Woman 2:20 — Nina Simone: Arranged By; George Houston Bass: Written-By"
+      - title: "MusicBrainz — work 'See-Line Woman' (writers; based on 'Sea Lion Woman'; recording date)"
+        url: "https://musicbrainz.org/work/09d6eb01-320c-33b6-85ca-00cd836e0a0a"
+        quote: "writer: George Bass; writer: Nina Simone; based on: Sea Lion Woman; recording begin 1964-03-21"
+      - title: "W. Jason Miller (NC State), 'The forgotten story behind Nina Simone and Langston Hughes' collaboration', The Conversation, 2026-10-03"
+        url: "https://theconversationus.substack.com/p/the-forgotten-story-behind-nina-simone"
+        quote: "Simone performed the song, \"See-Line Woman,\" for the first time at a March 21, 1964, concert in Carnegie Hall"
+    note: "Album producer: Hal Mooney (Discogs). Album-level personnel per Discogs master notes: Rudy Stevenson (flute), Lisle Atkinson (percussion), Bobby Hamilton (drums); arrangers Hal Mooney and Horace Ott for other tracks — B3 is credited to Simone. Date conflict: MusicBrainz/Presto give a 21 March 1964 recording date, the same day as the Carnegie Hall concert Miller cites — see unconfirmed.md."
+
+  - id: simone-single-1964
+    title: "Mississippi Goddam / Sea Lion Woman (Philips 40216)"
+    artist: "Nina Simone"
+    year: 1964
+    kind: cover
+    parents: [simone-1964]
+    what_travelled: "The children's song went out to radio as the flip side of Simone's protest anthem."
+    playable_url: null
+    sources:
+      - title: "Discogs — Nina Simone, Mississippi *%??**&% (Philips 40216, US, July 1964)"
+        url: "https://www.discogs.com/release/4985266-Nina-Simone-Mississippi-"
+        quote: "B Sea Lion Woman — George Houston Bass: Written-By"
+      - title: "Backlash Blues (W. Jason Miller), 1964 timeline"
+        url: "https://www.backlash-blues.com/timeline"
+        quote: "\"See-Line Woman\" was released in mid-July of 1964 as the B Side to \"Mississippi Goddam.\""
+    note: "On this label the title is printed 'Sea Lion Woman', the folk spelling. A separate A-side single followed: Philips 40376 (1965), 'See-Line Woman' b/w 'I Love Your Lovin' Ways' (Discogs release 2329066) — single-sourced, kept as a note."
+
+  - id: lateef-1967
+    title: "See Line Woman"
+    artist: "Yusef Lateef Quartet"
+    year: 1967
+    kind: cover
+    parents: [simone-1964]
+    style_changes: "Jazz quartet treatment (Lateef on flute/reeds and vocal, Hugh Lawson piano, Cecil McBee bass, Roy Brooks drums, Sylvia Shemwell tambourine — jazzdisco.org); the song becomes a modal-jazz vehicle"
+    what_travelled: "The Simone spelling and the song as a jazz vehicle, three years after Simone. Recorded NYC 1 June 1967; Sylvia Shemwell on tambourine; issued on The Complete Yusef Lateef (Atlantic 1499, 1968)."
+    playable_url: "https://www.youtube.com/watch?v=WEPP3yNFU6c"
+    playable_note: "'Yusef Lateef - Topic' (auto-generated, label-delivered)."
+    sources:
+      - title: "Discogs — The Complete Yusef Lateef (master)"
+        url: "https://www.discogs.com/master/145291-Yusef-Lateef-The-Complete-Yusef-Lateef"
+        quote: "See Line Woman 6:23"
+      - title: "jazzdisco.org — Yusef Lateef discography, session 670601"
+        url: "https://www.jazzdisco.org/yusef-lateef/discography/"
+        quote: "NYC, June 1, 1967 ... 4. See Line Woman"
+    note: "Parent inferred from the 'See Line' spelling, which originates with Simone's record; no Lateef statement found. Some listings spell it 'Sea Line Woman' and credit it as traditional."
+
+  - id: easybeats-1967
+    title: "See Line Woman"
+    artist: "The Easybeats"
+    year: 1967
+    kind: cover
+    parents: [simone-1964]
+    style_changes: "British-produced beat-group version (producer Shel Talmy, arr. Vanda & Young; Pop Archives); credited 'Traditional'"
+    what_travelled: "The song crossed into British-recorded beat music: credited 'Traditional, arr. Harry Vanda – George Young', produced by Shel Talmy, on Good Friday (UK) / Friday On My Mind (US)."
+    playable_url: null
+    sources:
+      - title: "Discogs — The Easybeats, Good Friday (master)"
+        url: "https://www.discogs.com/master/165138-The-Easybeats-Good-Friday"
+        quote: "See Line Woman — Vanda & Young: Arranged By; Traditional: Written-By"
+      - title: "Pop Archives (Australia) — The Easybeats, See Line Woman"
+        url: "https://poparchives.com.au/the-easybeats/see-line-woman/"
+        quote: "Nina Simone's version was the first popular recording of this traditionally sourced song."
+    note: "Parent = Simone is inferred from the 'See Line' title; neither source says the band learned it from her."
+
+  - id: songstress-1997
+    title: "See Line Woman (See Line Woman Vocal / The Organ Grind / Muted Relaxation / Random Dub)"
+    artist: "The Songstress (production: Jerome Sydenham and Kerri Chandler)"
+    year: 1997
+    kind: interpolation
+    parents: [simone-1964]
+    style_changes: "Deep-house: the refrain looped as a chant over a four-on-the-floor groove, multiple club mixes (Vocal, Organ Grind, Dub); NOW Toronto calls Chandler's a 'house reworking'"
+    afterlife: ["Licensed onto many house compilations 1998–2013; third-generation remixes ('99 Presence, Full Intention, DEA) single-sourced"]
+    what_travelled: "Simone's song into New York/New Jersey deep house: the refrain becomes a loopable chant over a four-on-the-floor kick. Writer credit stays with George Houston Bass. Ibadan Records IRC 005."
+    playable_url: "https://www.youtube.com/watch?v=RjE9mzdPuPo"
+    playable_note: "'See Line Woman (Vocal Mix)', Songstress - Topic (auto-generated)."
+    sources:
+      - title: "Discogs — The Songstress, See Line Woman (Ibadan IRC 005, 1997)"
+        url: "https://www.discogs.com/release/14535-The-Songstress-See-Line-Woman"
+        quote: "Jerome Sydenham And Kerri Chandler — Producer; George Houston Bass — Written-By"
+      - title: "NOW Magazine (Toronto), Tim Perlich, 'Discs', 2002-05-09"
+        url: "https://nowtoronto.com/music/album-reviews/discs-265"
+        quote: "(though Kerri Chandler beat them to it two years ago)"
+    note: "Whether the vocal is a re-sing by an uncredited 'Songstress' or a lift of Simone's voice is not settled by any source opened — kind set to 'interpolation' conservatively; see unconfirmed.md. Widely relicensed (Future Funk 6, Real Ibiza, Kaoz Theory, LateNightTales/Cinematic Orchestra 2010 per Discogs)."
+
+  - id: maw-remix-2002
+    title: "See-Line Woman (Masters At Work Remix)"
+    artist: "Nina Simone, remixed by Masters At Work (Louie Vega, Kenny 'Dope' Gonzalez)"
+    year: 2002
+    kind: remix
+    parents: [simone-1964]
+    style_changes: "Uses Simone's own master; Masters At Work extend it to a 10-minute house track (Verve // Remixed); NOW Toronto: 'the Masters at Work house reworking'"
+    what_travelled: "Simone's own vocal and percussion stems, extended (10:04 on the vinyl) into a house track; the label-sanctioned entry of the song into club canon."
+    playable_url: "https://www.youtube.com/watch?v=X9HwpD63coI"
+    playable_note: "'Nina Simone - See-Line Woman (Masters At Work Remix / Visualizer)', Nina Simone Official Artist Channel."
+    sources:
+      - title: "Discogs — Verve // Remixed (Verve 314 589 606-1, 2002)"
+        url: "https://www.discogs.com/release/915977-Various-Verve--Remixed"
+        quote: "E1 See-Line Woman (Masters At Work Remix) 10:04 — Masters At Work: Remix"
+      - title: "NOW Magazine (Toronto), Tim Perlich, 2002-05-09"
+        url: "https://nowtoronto.com/music/album-reviews/discs-265"
+        quote: "the Masters at Work house reworking of Nina Simone's See-Line Woman"
+    note: "Discogs also lists 'See Line Woman' on Masters At Work, Stop And Listen 5 (2000) — possibly an earlier circulation; unresolved."
+
+  - id: crawford-sample-2006
+    title: "See Line Woman"
+    artist: "Randy Crawford & Joe Sample"
+    year: 2006
+    kind: cover
+    parents: [simone-1964]
+    style_changes: "Soul-jazz duo setting; Crawford (NPR): 'very modern, but real, as in keeping with the old school'; male-voice answer to her lead keeps the call-and-response"
+    what_travelled: "The song as adult soul-jazz: Crawford says Sample set it 'very modern, but real'. Album Feeling Good (PRA/Universal, 2006; US 2007)."
+    playable_url: "https://www.youtube.com/watch?v=PCoDdZRXV3s"
+    playable_note: "'Joe Sample - Topic' (auto-generated)."
+    sources:
+      - title: "Discogs — Randy Crawford/Joe Sample, Feeling Good (master)"
+        url: "https://www.discogs.com/master/75069"
+        quote: "See Line Woman 4:58 — George Houston Bass: Written-By"
+      - title: "NPR, All Things Considered, interview with Randy Crawford and Joe Sample (transcript 7812291)"
+        url: "https://www.npr.org/transcripts/7812291"
+        quote: "We decided to put that in a more, much more modern vein."
+    note: null
+
+  - id: feist-sealion-2007
+    title: "Sealion (a.k.a. Sea Lion Woman)"
+    artist: "Feist"
+    year: 2007
+    kind: cover
+    parents: [shipp-1939, simone-1964]
+    style_changes: "Indie-pop; 'a squad of clapping, chanting backup vocalists' (Inquirer) restores the group answer and handclaps of the playground form; Feist frames it as 'a half cover of the little girls' (NPR)"
+    afterlife: ["Grey's Anatomy OST Vol. 3 (2007); Heated Rivalry ep. 1 (2025)"]
+    what_travelled: "Feist took from both ends of the chain: she calls it 'a half cover of the little girls' and names Simone's version; the clapping, chanting group answer comes back to the foreground. Only cover on The Reminder (Arts & Crafts/Cherrytree, 2007)."
+    playable_url: "https://www.youtube.com/watch?v=AFxKw4EOtbU"
+    playable_note: "'Sealion', FeistMusic Official Artist Channel. Also BBC Music: Later... with Jools Holland (2008) https://www.youtube.com/watch?v=Q_HNjEMi_io"
+    sources:
+      - title: "NPR, Weekend Edition (host John Ydstie), 'The Way You Look at Feist...', 2007-06-16, transcript"
+        url: "https://www.npr.org/transcripts/11115052"
+        quote: "kind of a half cover of the little girls"
+      - title: "Philadelphia Inquirer, Dan DeLuca, 2007-04-29"
+        url: "https://www.inquirer.com/philly/columnists/dan_deluca/20070429_This_one_should_thrust_Feist_forth.html"
+        quote: "a public-domain song identified most closely with Nina Simone"
+      - title: "Discogs — Polaris Music Prize 2007 Nominees (credits on 'Sealion')"
+        url: "https://www.discogs.com/master/2267299"
+        quote: "Sealion 3:41 — Feist: Written-By; George Houston Bass: Written-By"
+    note: "Feist's live album Look At What The Light Did Now (2010) credits 'Written-By [Elements From]' George Houston Bass and Nina Simone (Discogs)."
+
+  - id: chromeo-sealion-2007
+    title: "Sealion (Chromeo Remix)"
+    artist: "Feist, remixed by Chromeo"
+    year: 2007
+    kind: remix
+    parents: [feist-sealion-2007]
+    what_travelled: "Third generation: a remix of Feist's version."
+    playable_url: null
+    sources:
+      - title: "Discogs — Arts & Crafts Sampler Vol 4 (master)"
+        url: "https://www.discogs.com/master/1491634"
+        quote: "Sealion (Chromeo Remix) 3:33"
+    note: "ONLY ONE SOURCE — listed here for tree completeness, flagged; also in unconfirmed.md. Remove from the verified count."
+    verified: false
+
+  - id: kanye-bad-news-2008
+    title: "Bad News"
+    artist: "Kanye West"
+    year: 2008
+    kind: sample
+    parents: [simone-1964]
+    style_changes: "Takes the percussion bed ('tribal rhythm' — TV One, 2016) of Simone's master and sets it under 808 drum-machine and Auto-Tune vocal; the theme (a faithless lover) is kept and turned to first person"
+    what_travelled: "The drum/percussion bed of Simone's recording, slowed and set under 808s and Auto-Tune; the song's subject (a faithless lover) carried over as theme."
+    playable_url: "https://www.youtube.com/watch?v=1BlH1JZBeXI"
+    playable_note: "'Bad News', Kanye West Official Artist Channel (auto-generated art track)."
+    album: "808s & Heartbreak (Roc-A-Fella, 2008), track 9"
+    sources:
+      - title: "Discogs — 808s & Heartbreak, Roc-A-Fella B0012198-01, liner credits"
+        url: "https://www.discogs.com/release/5518324-Kanye-West-808s-Heartbreak"
+        quote: "\"Bad News\" contains a sample of the recording \"See Line Woman\" as performed by Nina Simone."
+      - title: "DJBooth, 'How Kanye West Took Much More From Nina Simone Than Samples', 2017-08-10"
+        url: "https://djbooth.net/features/2017-08-10-kanye-west-nina-simone-samples/"
+        quote: "Sampled on 'Bad News.'"
+    note: "OWNER'S MEMORY — Kanye: CORRECT. The sample is officially cleared and printed in the liner notes ('Used under licence from Universal Music Enterprises ... Written by George Bass'). Kanye's other Simone samples are different songs: 'Strange Fruit' -> 'Blood on the Leaves' (2013), 'Do What You Gotta Do' -> 'Famous' (2016), 'Sinnerman' -> Talib Kweli 'Get By' (Kanye production) — per DJBooth headers."
+
+  - id: xiu-xiu-2013
+    title: "See Line Woman"
+    artist: "Xiu Xiu"
+    year: 2013
+    kind: cover
+    parents: [simone-1964]
+    style_changes: "Experimental/noise-pop inside an all-Simone tribute album; louder, abrasive delivery (SLUG: 'more upbeat and familiar')"
+    what_travelled: "Part of an all-Simone covers album (Nina, Graveface, street date 2013-12-02); the refrain kept, the arrangement made abrasive."
+    playable_url: "https://www.youtube.com/watch?v=xzAvLngNavo"
+    playable_note: "'Release - Topic' auto-generated upload."
+    sources:
+      - title: "Discogs — Xiu Xiu, Nina (master)"
+        url: "https://www.discogs.com/master/622415"
+        quote: "See Line Woman — George Houston Bass: Written-By [Uncredited]"
+      - title: "SLUG Magazine review, Cody Hudson, 2013-12-31"
+        url: "https://www.slugmag.com/?p=4132"
+        quote: "the highlight of the album is the more upbeat and familiar \"See Line Woman,\""
+    note: null
+
+  - id: mvula-holland-2014
+    title: "See-Line Woman"
+    artist: "Jools Holland & His Rhythm & Blues Orchestra with Laura Mvula"
+    year: 2014
+    kind: cover
+    parents: [simone-1964]
+    style_changes: "Big-band R&B (horns, congas) with Mvula; reviewer hears 'her own African influences'"
+    what_travelled: "Big-band horns and congas around the refrain; album Sirens Of Song."
+    playable_url: null
+    sources:
+      - title: "Discogs — Sirens Of Song (master)"
+        url: "https://www.discogs.com/master/775877"
+        quote: "See-Line Woman 3:41 — Jools Holland, Laura Mvula; George Houston Bass: Written-By"
+      - title: "Renowned for Sound review, Angus Fitz-Bugden"
+        url: "https://renownedforsound.com/?p=47635"
+        quote: "brings her own African influences to See Line Woman"
+    note: null
+
+  - id: far-cry-6-2021
+    title: "See-Line Woman (Cover)"
+    artist: "credited to Yolanda Castillo (in-game radio, Far Cry 6)"
+    year: 2021
+    kind: cover
+    parents: [simone-1964]
+    what_travelled: "Recorded for the fictional Caribbean island of Yara as an 'alt-history' radio cover; the song reached a video-game audience."
+    playable_url: null
+    sources:
+      - title: "Discogs — Far Cry 6: Original Game Soundtrack (master)"
+        url: "https://www.discogs.com/master/2862709"
+        quote: "See-Line Woman (Cover) — Yolanda Castillo: Performer"
+      - title: "Bleeding Cool, 'Ubisoft Music Releases Digital Album Far Cry 6: The Music Of Yara', 2021-10-09"
+        url: "https://bleedingcool.com/games/ubisoft-music-releases-digital-album-far-cry-6-the-music-of-yara"
+        quote: "16. See-Line Woman – Yolanda Castillo"
+    note: "Whether 'Yolanda Castillo' is a real singer's name or an in-world persona was not established."
+
+  - id: riton-2022
+    title: "See-Line Woman (Riton Remix)"
+    artist: "Nina Simone, remixed by Riton"
+    year: 2022
+    kind: remix
+    parents: [simone-1964]
+    what_travelled: "Official label remix of Simone's master; compilation Feeling Good: Her Greatest Hits and Remixes (Verve, 2022-02-11)."
+    playable_url: null
+    sources:
+      - title: "Universal Music Canada press release"
+        url: "https://www.universalmusic.ca/press-releases/nina-simone-feeling-good-her-greatest-hits-remixes-out-today"
+        quote: "See-Line Woman – Riton Remix (4:02)"
+      - title: "MusicBrainz recording 'See-Line Woman (Riton remix)'"
+        url: "https://musicbrainz.org/recording/36da8861-5c8a-4fde-a966-549a624d7a47"
+        quote: "first-release-date 2022-02-11; release: Feeling Good (Her Greatest Hits & Remixes)"
+    note: null
+
+  - id: ponder-dessner-2025
+    title: "See-Line Woman"
+    artist: "Danielle Ponder & Bryce Dessner"
+    year: 2025
+    kind: cover
+    parents: [simone-1964]
+    what_travelled: "Billed as a cover of Simone's version; opens The Accountant 2 (Amazon MGM / Warner Bros., 2025)."
+    playable_url: "https://www.youtube.com/watch?v=EjGUZkKl_Nk"
+    playable_note: "WaterTower Music (Verified label channel)."
+    sources:
+      - title: "Film Music Reporter, 'The Accountant 2 Soundtrack Album Details', 2025-04-17"
+        url: "https://filmmusicreporter.com/2025/04/17/the-accountant-2-soundtrack-album-details/"
+        quote: "a cover version of Nina Simone's See-Line Woman performed by Danielle Ponder"
+      - title: "Vague Visages, The Accountant 2 soundtrack guide, 2025-06-23"
+        url: "https://vaguevisages.com/2025/06/23/the-accountant-2-soundtrack-amazon-songs/"
+        quote: "scores the opening bingo sequence"
+    note: null
+
+  - id: mochakk-2026
+    title: "See-Line Woman (Mochakk Mix)"
+    artist: "Nina Simone, remixed by Mochakk"
+    year: 2026
+    kind: remix
+    parents: [simone-1964]
+    style_changes: "Club remix that keeps Simone's vocal as the core (Beatportal)"
+    what_travelled: "Simone's vocal kept at the centre, re-grooved for current club play; part of Verve's 'Year of Nina', collected on Verve Remixed // Nina Simone (2026-10-16)."
+    playable_url: "https://www.youtube.com/watch?v=dRYvm-sFgfU"
+    playable_note: "Nina Simone Official Artist Channel (also an edit/visualizer: https://www.youtube.com/watch?v=rnm_Vt2GsZc)."
+    sources:
+      - title: "Beatportal, Cameron Holbrook, 2026-05-15"
+        url: "https://www.beatportal.com/articles/1411706-mochakks-club-ready-remix-of-nina-simones-iconic-see-line-woman-has-landed"
+        quote: "When I got the opportunity to remix Nina Simone's \"See-Line Woman,\" I was so honored."
+      - title: "uDiscover Music, Verve Remixed // Nina Simone announcement"
+        url: "https://www.udiscovermusic.com/?p=2766024"
+        quote: "See-Line Woman (Mochakk Mix)"
+    note: null
+
+  - id: tillery-1997
+    title: "See Line Woman"
+    artist: "Linda Tillery and the Cultural Heritage Choir"
+    year: 1997
+    kind: cover
+    parents: [simone-1964, afs-l4-1942]
+    what_travelled: "The song returned to a community-choir, a cappella-rooted African American heritage setting."
+    style_changes: "Heritage vocal ensemble 'bringing traditional forms of African American culture to the stage' (singers.com). Album Front Porch Music (EarthBeat! R2 72881) also sings 'Gon' Knock John Booker', 'All Hid?' and 'Rosie' — all three also on the 1942 LoC Album IV that first issued the Shipp recording (observation from the two Discogs tracklists)."
+    playable_url: null
+    sources:
+      - title: "Discogs — Front Porch Music (1997)"
+        url: "https://www.discogs.com/release/5044421-Linda-Tillery-And-The-Cultural-Heritage-Choir-Front-Porch-Music"
+        quote: "4 See Line Woman"
+      - title: "Singers.com — Linda Tillery and the Cultural Heritage Choir"
+        url: "https://www.singers.com/world/culturalheritage.html"
+        quote: "bringing traditional forms of African American culture to the stage"
+    note: "Parent: the 'See Line' spelling points to Simone; the surrounding repertoire points to the LoC Album IV. Neither link is stated by the group in sources opened."
+
+  - id: paradise-circus-2010
+    title: "Paradise Circus"
+    artist: "Massive Attack feat. Hope Sandoval"
+    year: 2010
+    kind: sample
+    status: confirmed-by-owner
+    verified: true
+    decision: "Owner (2026-11-15): it samples Nina Simone's See-Line Woman (handclaps and some of her voice). Supported by WhoSampled and New Vinyl Villain; no official credit."
+    parents: [simone-1964]
+    what_travelled: "Samples from Simone's 'See-Line Woman': the handclaps and a trace of her voice (owner, by ear; WhoSampled also lists the sample)."
+    playable_url: "https://www.youtube.com/watch?v=6hUkyKBsGtQ"
+    playable_note: "'Paradise Circus', Massive Attack Official Artist Channel."
+    album: "Heligoland (Virgin CDV3070, 2010-02-05), track 7"
+    claims_for:
+      - who: "WhoSampled (community database) — seen ONLY as search snippets; page returned 403/Cloudflare"
+        url: "https://www.whosampled.com/sample/74718/Massive-Attack-Paradise-Circus-Nina-Simone-See-Line-Woman/"
+        says: "Sample of 'See-Line Woman' (1964), element: drums, appears at 0:00 (snippet). No claps or vocal listed."
+      - who: "The New Vinyl Villain (blog), guest post by 'Strictly Rockers', 2016-05-12"
+        url: "https://thenewvinylvillain.com/2016/05/12/an-imaginary-compilation-album-75-massive-attack/"
+        quote: "It features a drum sample from Nina Simone's 'See Line Woman' and was used as the theme to BBC1's 'Luther'."
+      - who: "Musician Wages (content site, likely derivative)"
+        url: "https://www.musicianwages.com/the-meaning-behind-the-song-paradise-circus-by-massive-attack-2/"
+        quote: "The track also features a sample from Nina Simone's “See-Line Woman,” which adds a unique texture to the song."
+    claims_against:
+      - who: "Official track credits, Silva Screen 'Luther' soundtrack booklet (SILCD1434), licensed from Virgin/Universal"
+        url: "https://www.silvascreen.com/wp-content/uploads/SILCD1434-Luther-DigitalBooklet_V2.pdf"
+        quote: "Written by Robert Del Naja / Grant Marshall / Hope Sandoval / Stew Jackson / Dan Brown ... Drums: Gerhardt ‘Jerry’ Fuchs"
+      - who: "Discogs — Heligoland credits (UK/EU CD 2531311 and 7 further pressings checked): no Simone/Bass writer credit, no sample note"
+        url: "https://www.discogs.com/release/2531311-Massive-Attack-Heligoland"
+        quote: "Paradise Circus — Hope Sandoval: Vocals, Written-By; Dan Brown: Written-By; Stew Jackson: Written-By"
+      - who: "NPR 'First Listen: Massive Attack, Heligoland', 2010-01-31 — album-level method, quoting Robert Del Naja"
+        url: "https://www.npr.org/2010/01/31/123026141/first-listen-massive-attack-heligoland"
+        quote: "Instead of sampling others, as they did on previous efforts, the two now record and reconstruct from their own instruments"
+      - who: "Same NPR piece, Del Naja's words"
+        quote: "using small loops of a part, as opposed to sampling, say, something from an obscure '70s funk tune."
+    claps_in_track:
+      - who: "NME review of Heligoland"
+        url: "https://www.nme.com/reviews/massive-attack/11054"
+        quote: "breathes Sandoval, over handclaps and chimes"
+      - who: "The Line of Best Fit, Gina Louise, 2010-02-26"
+        url: "https://www.thelineofbestfit.com/reviews/albums/massive-attack-heligoland-25398"
+        quote: "layered over piano melodies and naïve hand clapping"
+      - who: "Songfacts"
+        url: "https://www.songfacts.com/facts/massive-attack/paradise-circus"
+        quote: "contributes vocals to this track over handclaps and a minimalist chord progression"
+      - note: "Claps are confirmed to be IN the track by three sources; none says where they come from."
+    note: "Owner decision recorded above (status confirmed-by-owner). Research record: supporting sources are WhoSampled and blogs; the official credits name no Simone/Bass and NPR 2010 reports the band stopped sampling others — kept here for transparency. The live drummer Jerry Fuchs died 8 Nov 2009, three months before the album came out (Exclaim 2009-11-08: 'died early Sunday morning (November 8) from injuries sustained in a five-storey fall inside a broken elevator shaft'; UPI 2009-11-09: 'Drummer Jerry Fuchs, 34')."
+
+  - id: gui-boratto-2010
+    title: "Paradise Circus (Gui Boratto Remix)"
+    artist: "Massive Attack, remixed by Gui Boratto"
+    year: 2010
+    kind: remix
+    parents: [paradise-circus-2010]
+    what_travelled: "Third generation (if the Simone link holds): Sandoval vocal and the track, rebuilt as 8-minute melodic techno; free download via RCRD LBL."
+    playable_url: null
+    sources:
+      - title: "Discogs — Paradise Circus (Gui Boratto Remix), RCRD LBL 2010"
+        url: "https://www.discogs.com/release/2131474-Massive-Attack-Paradise-Circus-Gui-Boratto-Remix"
+        quote: "Paradise Circus (Gui Boratto Remix) 8:08 — Free Download At RcrdLbl"
+      - title: "The FADER, 2010-02-25"
+        url: "https://www.thefader.com/2010/02/25/massive-attack-f-hope-sandoval-of-mazzy-star-paradise-circus-gui-boratto-remix-mp3"
+        quote: "sounds like they are working on their nerves"
+    note: "A claim that this remix scored a 2010 Lincoln car commercial (Songfacts, per search snippet) was not confirmed."
+
+  - id: breakage-2010
+    title: "Paradise Circus (Breakage's Tight Rope Remix)"
+    artist: "Massive Attack, remixed by Breakage"
+    year: 2010
+    kind: remix
+    parents: [paradise-circus-2010]
+    what_travelled: "Bass-music remix from the official Heligoland remix promo."
+    playable_url: null
+    sources:
+      - title: "Discogs — Massive Attack, Remixes (Virgin promo CDr, 2010)"
+        url: "https://www.discogs.com/release/3651871-Massive-Attack-Remixes"
+        quote: "Paradise Circus (Breakage's Tight Rope Remix) 4:47"
+      - title: "MusicBrainz — work 'Paradise Circus', recording list"
+        url: "https://musicbrainz.org/work/dafa419b-cc44-3a88-ac8e-9f73b2713053"
+        quote: "Paradise Circus (Breakage’s Tight Rope remix)"
+    note: "Two community databases; acceptable but thin."
+
+  - id: burial-2011
+    title: "Paradise Circus (Burial rework), B-side of 'Four Walls / Paradise Circus'"
+    artist: "Massive Attack vs Burial"
+    year: 2011
+    kind: remix
+    parents: [paradise-circus-2010]
+    what_travelled: "A 12-minute Burial rework; Discogs notes it also samples 'let love flower' from Massive Attack's own 'Psyche'. The Vinyl Factory VF034, 1,000 numbered copies, 2011-10-24."
+    playable_url: null
+    sources:
+      - title: "Discogs — Four Walls / Paradise Circus (The Vinyl Factory VF034)"
+        url: "https://www.discogs.com/release/3184385-Massive-Attack-Vs-Burial-Four-Walls-Paradise-Circus"
+        quote: "Track B contains a sample (\"let love flower\") from Massive Attack's song Psyche."
+      - title: "Beats Per Minute, 2011-10-18"
+        url: "https://beatsperminute.com/listen-massive-attack-burial-paradise-circus/"
+        quote: "a 12-minute Burial rework of Massive Attack’s “Paradise Circus,”"
+    note: null
+
+  - id: post-ghostpoet-2023
+    title: "Paradise Circus (Fallen Sun Version)"
+    artist: "POST (Grant 'Daddy G' Marshall & Stew Jackson) feat. Ghostpoet"
+    year: 2023
+    kind: cover
+    parents: [paradise-circus-2010]
+    what_travelled: "Massive Attack members re-record their own song with a male voice for the Netflix film Luther: The Fallen Sun."
+    playable_url: null
+    sources:
+      - title: "Film Music Reporter, 2023-02-24"
+        url: "https://filmmusicreporter.com/2023/02/24/new-version-of-paradise-circus-from-luther-the-fallen-sun-released/"
+        quote: "produced and performed by by POST (Massive Attack’s Grant “Daddy G” Marshall & Stew Jackson) feat. Ghostpoet"
+      - title: "Discogs — Post, Ghostpoet: Paradise Circus (Fallen Sun Version), Netflix, 2023-02-24"
+        url: "https://www.discogs.com/release/26753339"
+        quote: "Paradise Circus (Fallen Sun Version) 5:20"
+    note: null
+
+  - id: marquis-hawkes-2012
+    title: "Sealion Woman"
+    artist: "Marquis Hawkes"
+    year: 2012
+    kind: interpolation
+    parents: [trad-ring-game]
+    what_travelled: "Ghetto/raw house track built around a sung rendition of the folk tune (Cabrini Green EP, Dixon Avenue Basement Jams DABJ-1202)."
+    playable_url: null
+    sources:
+      - title: "Discogs — Marquis Hawkes, Cabrini Green"
+        url: "https://www.discogs.com/release/3870100-Marquis-Hawkes-Cabrini-Green"
+        quote: "B2 Sealion Woman"
+      - title: "Resident Advisor review, Jordan Rothlein, 2012-11-20"
+        url: "https://ra.co/reviews/11963"
+        quote: "blisteringly paced and melody-free save a sassy rendition of the American folk tune"
+    note: "Parent unresolved: RA calls it a rendition of the folk tune; WhoSampled (snippet only) says it samples Simone's recording ('multiple elements'). Kept under the folk root until settled."
+
+  - id: meshell-2012
+    title: "See Line Woman"
+    artist: "Meshell Ndegeocello (feat. Tracy Wannomae, flute/soprano sax)"
+    year: 2012
+    kind: cover
+    parents: [simone-1964]
+    what_travelled: "Part of an all-Simone tribute album (Pour une Âme Souveraine, Naïve, 2012); writers credited Bass and Simone."
+    playable_url: null
+    sources:
+      - title: "Discogs — Pour Une Âme Souveraine (master)"
+        url: "https://www.discogs.com/master/480166"
+        quote: "See Line Woman 5:51 — Tracy Wannomae: Featuring, Soprano Saxophone, Flute; George Houston Bass, Nina Simone: Written-By"
+      - title: "No Treble, 2016-01-09"
+        url: "https://www.notreble.com/buzz/2016/01/09/meshell-ndegeocello-see-line-woman/"
+        quote: "Here's Meshell and her band performing 'See Line Woman'"
+    note: "Promoted from unconfirmed in the generations sweep."
+
+  - id: atjazz-2021
+    title: "See-Line Woman"
+    artist: "Atjazz feat. Dominique Fils-Aimé"
+    year: 2021
+    kind: cover
+    parents: [simone-1964]
+    what_travelled: "Deep-house remake with new vocal by Dominique Fils-Aimé; credited 'Written by Nina Simone'; the label notes cite the 1964 Mississippi Goddam B-side. Foliage FNV001."
+    playable_url: "https://atjazz.bandcamp.com/album/see-line-woman-karizma-remixes"
+    sources:
+      - title: "Atjazz Bandcamp — See-Line Woman (Karizma Remixes)"
+        url: "https://atjazz.bandcamp.com/album/see-line-woman-karizma-remixes"
+        quote: "It was the singles B-side that brings us here today with a truly wonderful remake of SEE-LINE WOMAN"
+      - title: "Discogs — Atjazz Feat. Dominique Fils-Aimé, See-Line Woman (Foliage FNV001, 2021)"
+        url: "https://www.discogs.com/release/20987047"
+        quote: "Dominique Fils-Aimé: Vocals; Nina Simone: Written-By"
+    note: "The writer credit names Simone (not Bass) — a credit drift worth noting."
+
+  - id: karizma-2021
+    title: "See-Line Woman (Karizma's Last 1ne Dub / Dubstrumental)"
+    artist: "Atjazz feat. Dominique Fils-Aimé, remixed by Karizma"
+    year: 2021
+    kind: remix
+    parents: [atjazz-2021]
+    what_travelled: "Third generation: Baltimore house producer's dub of the Atjazz remake."
+    playable_url: "https://atjazz.bandcamp.com/album/see-line-woman-karizma-remixes"
+    sources:
+      - title: "Atjazz Bandcamp"
+        url: "https://atjazz.bandcamp.com/album/see-line-woman-karizma-remixes"
+        quote: "Remixed by Karizma"
+      - title: "Discogs FNV001"
+        url: "https://www.discogs.com/release/20987047"
+        quote: "B1 See Line Woman (Karizma Last 1ne Dub) — Karizma: Remix"
+    note: null
+
+sync:
+
+  - work: "The General's Daughter"
+    type: film
+    year: 1999
+    version_used: "Shipp sisters, 1939 (as 'She Began To Lie', adapted by Greg Hale Jones) — node shes-began-to-lie-1999"
+    scene: "Opening track of the soundtrack album; scene placement not documented in sources opened."
+    sources:
+      - title: "Library of Congress, Songs of America — Children's Songs"
+        url: "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/traditional/childrens-songs/"
+        quote: "was featured in the 1999 Paramount film, The General's Daughter"
+      - title: "Discogs — The General's Daughter soundtrack (Milan)"
+        url: "https://www.discogs.com/release/5821308-Carter-Burwell-The-Generals-Daughter-Music-From-The-Motion-Picture"
+        quote: "Track 20 not contained in the motion picture."
+
+  - work: "Grey's Anatomy, Original Soundtrack Vol. 3 (series soundtrack album)"
+    type: series
+    year: 2007
+    version_used: "Feist, 'Sealion'"
+    scene: "On the official soundtrack album (Hollywood Records, Sept 2007); the specific episode/scene was NOT confirmed."
+    sources:
+      - title: "Discogs — Grey's Anatomy - Original Soundtrack 3 (master)"
+        url: "https://www.discogs.com/master/163063"
+        quote: "Sealion 3:41 — Feist"
+      - title: "The Daily Cardinal, Caissa Casarez, 2007-09-17"
+        url: "https://www.dailycardinal.com/article/2007/09/songs-on-latest-greys-soundtrack-fit-the-mood-of-the-television-show"
+        quote: "Feist's \"Sealion Woman,\""
+
+  - work: "Far Cry 6"
+    type: game
+    year: 2021
+    version_used: "'See-Line Woman (Cover)', Yolanda Castillo — node far-cry-6-2021"
+    scene: "In-game radio song (per soundtrack framing); exact in-game placement not documented."
+    sources:
+      - title: "Discogs — Far Cry 6: Original Game Soundtrack"
+        url: "https://www.discogs.com/master/2862709"
+        quote: "See-Line Woman (Cover)"
+      - title: "Bleeding Cool, 2021-10-09"
+        url: "https://bleedingcool.com/games/ubisoft-music-releases-digital-album-far-cry-6-the-music-of-yara"
+        quote: "16. See-Line Woman – Yolanda Castillo"
+
+  - work: "The Accountant 2"
+    type: film
+    year: 2025
+    version_used: "Danielle Ponder & Bryce Dessner — node ponder-dessner-2025"
+    scene: "Opening bingo sequence."
+    sources:
+      - title: "Film Music Reporter, 2025-04-17"
+        url: "https://filmmusicreporter.com/2025/04/17/the-accountant-2-soundtrack-album-details/"
+        quote: "Track 1 is \"See-Line Woman – Danielle Ponder & Bryce Dessner (4:53)\""
+      - title: "Vague Visages, 2025-06-23"
+        url: "https://vaguevisages.com/2025/06/23/the-accountant-2-soundtrack-amazon-songs/"
+        quote: "scores the opening bingo sequence"
+
+  - work: "Heated Rivalry (Crave/HBO Max), episode 1 'Rookies'"
+    type: series
+    year: 2025
+    version_used: "Feist, 'Sealion'"
+    scene: "Episode 1 — the hotel rendezvous sequence (Ilya going to see Shane for the first time); creator Jacob Tierney chose it for its 'nervous energy' and was unsure he could afford it."
+    sources:
+      - title: "Rolling Stone (Canada), Brenna Ehrlich, 2026-01-09, interview with creator Jacob Tierney"
+        url: "https://ca.rollingstone.com/that-horny-era-appropriate-soundtrack-was-pivotal-to-heated-rivalry-says-creator/"
+        quote: "I just felt like it had the right nervous energy song for that moment."
+      - title: "Spinning Platters, 'Eat All: The Songs of Heated Rivalry: Episode 1', 2026-03-31 (blog)"
+        url: "https://spinningplatters.com/eat-all-the-songs-of-heated-rivalry-episode-1/"
+        quote: "it’s a take on Nina Simone’s “See Line Woman,” ... as Shane waits nervously in his hotel room for Ilya"
+    note: "Second source is a music blog; acceptable but weaker than press."
+
+  - work: "Luther (BBC One), opening titles, Series 1–3"
+    type: series
+    year: 2010
+    version_used: "Massive Attack 'Paradise Circus' — link to Sea Lion Woman confirmed by owner, no official credit (node paradise-circus-2010)"
+    scene: "Opening title theme."
+    sources:
+      - title: "Silva Screen, Luther: Songs & Score booklet (SILCD1434)"
+        url: "https://www.silvascreen.com/wp-content/uploads/SILCD1434-Luther-DigitalBooklet_V2.pdf"
+        quote: "OPENING THEME [SERIES 1, 2 AND 3] MASSIVE ATTACK PARADISE CIRCUS"
+      - title: "Songfacts — Paradise Circus"
+        url: "https://www.songfacts.com/facts/massive-attack/paradise-circus"
+        quote: "the opening/title theme across Series 1, 2, and 3 of Luther"
+    note: "Composer Paul Englishby in the booklet: they 'knew was our theme the second we heard its romantic, seditious opening line.'"
+
+  - work: "Luther: The Fallen Sun (Netflix)"
+    type: film
+    year: 2023
+    version_used: "POST feat. Ghostpoet, 'Paradise Circus (Fallen Sun Version)' — node post-ghostpoet-2023"
+    scene: "Not documented in sources opened."
+    sources:
+      - title: "Film Music Reporter, 2023-02-24"
+        url: "https://filmmusicreporter.com/2023/02/24/new-version-of-paradise-circus-from-luther-the-fallen-sun-released/"
+        quote: "will premiere on March 10 on Netflix"
+      - title: "Discogs 26753339 (label: Netflix)"
+        url: "https://www.discogs.com/release/26753339"
+        quote: "Paradise Circus (Fallen Sun Version)"
+
+# Top-level: how the song lives now (non-recording afterlife). Two sources each unless flagged.
+afterlife:
+  - context: "US school music education (Kodály and Orff classrooms)"
+    detail: "Catalogued for teaching as a pentatonic call-and-response song (tone set s,l,drm; form AAAB), citing the Shipp disc; listed in the GAMEPLAN Grade 5 Orff curriculum; teachers play the LoC recording to pupils."
+    sources:
+      - title: "American Folk Song Collection, Kodály Center at the University of Redlands — 'Sea Lion Woman'"
+        url: "https://kodalycollection.org/song.cfm?id=645&title=Sea+Lion+Woman"
+        quote: "Form Type: Call-response"
+      - title: "West Music — GAMEPLAN Grade 5 Curriculum Book (Jeff Kriske, Randy DeLelles)"
+        url: "https://www.westmusic.com/gameplan-grade-5-curriculum-book-833957"
+        quote: "Sambalele, Sea Lion Woman, Skin and Bones"
+      - title: "GamePlan teacher blog (RaeAnna Goss), March 2011"
+        url: "https://gameplanmusic.blogspot.com/"
+        quote: "Sea Lion Woman lesson - the kids LOVED this!"
+    note: "The Kodály entry also cites Erdei & Komlós (eds.), 150 American Folk Songs to Sing, Read and Play (Boosey & Hawkes, 1974) — inclusion in that book not independently confirmed."
+  - context: "Community / heritage choirs"
+    detail: "Linda Tillery and the Cultural Heritage Choir (node tillery-1997)."
+    sources:
+      - title: "Discogs — Front Porch Music"
+        url: "https://www.discogs.com/release/5044421-Linda-Tillery-And-The-Cultural-Heritage-Choir-Front-Porch-Music"
+        quote: "See Line Woman"
+      - title: "Singers.com"
+        url: "https://www.singers.com/world/culturalheritage.html"
+        quote: "\"See Line Woman\""
+  - context: "Clubs and DJ culture"
+    detail: "A recurring house/club track since 1997 (Songstress), 2002 (MAW), 2022 (Riton), 2026 (Mochakk; Verve 'Year of Nina')."
+    sources: "see nodes songstress-1997, maw-remix-2002, riton-2022, mochakk-2026"
+  - context: "Concert dance"
+    detail: "UNCONFIRMED: Hampton University Terpsichorean Dance Company pieces to Simone's version (Spring 2023, Fall 2024) — YouTube uploads only."
+    sources: []
+  - context: "Published choral octavos, festivals"
+    detail: "NOT FOUND in publisher catalogues searched (J.W. Pepper etc.) or festival listings. Do not claim."
+    sources: []
