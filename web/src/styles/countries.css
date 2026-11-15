@@ -1,0 +1,224 @@
+/* ---------- atlas: Time / Countries ---------- */
+.atlas-mode {
+  display: inline-flex;
+  flex: none;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  padding: 2px;
+  font-family: var(--font-sans);
+}
+.atlas-mode button {
+  border: 0;
+  background: transparent;
+  color: var(--ink-2);
+  font: inherit;
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  min-height: 30px;
+}
+.atlas-mode button:hover {
+  color: var(--ink);
+}
+.atlas-mode button[aria-pressed='true'] {
+  background: var(--gold);
+  color: #16120a;
+}
+
+/* In Countries mode the time controls step aside. */
+.atlas.countries .levels,
+.atlas.countries .legend,
+.atlas.countries .pathbar,
+.atlas.countries .atlas-time,
+.atlas.countries .atlas-list {
+  display: none;
+}
+.atlas-countries {
+  display: none;
+}
+.atlas.countries .atlas-countries {
+  display: block;
+  position: absolute;
+  z-index: 3;
+  left: var(--gutter);
+  top: calc(var(--nav-h) + 16px);
+  bottom: 16px;
+  width: min(380px, 34vw);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: var(--glass-2, var(--glass));
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 18px 20px;
+  font-family: var(--font-sans);
+}
+
+.geo .country {
+  fill: var(--gold);
+  fill-opacity: 0.1;
+  stroke: var(--gold);
+  stroke-opacity: 0.35;
+  stroke-width: 0.6;
+  vector-effect: non-scaling-stroke;
+  cursor: pointer;
+  transition: fill-opacity 0.3s;
+}
+.geo .country:hover {
+  fill-opacity: 0.22;
+}
+.geo .country.on {
+  fill-opacity: 0.32;
+  stroke-opacity: 0.9;
+  stroke-width: 1.2;
+}
+
+.cn-head h3 {
+  margin: 0 0 4px;
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+.cn-head h3:focus {
+  outline: none;
+}
+.cn-head h3:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+.cn-why,
+.cn-count {
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: var(--ink-2);
+  line-height: 1.45;
+}
+.cn-about {
+  margin: 0 0 14px;
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--ink);
+}
+.cn-find {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 2px 0 10px;
+  padding: 8px 10px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line-2);
+  border-radius: 6px;
+}
+.cn-list,
+.cn-cards {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.cn-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 9px 2px;
+  font: inherit;
+  font-size: 15px;
+  color: var(--ink);
+  cursor: pointer;
+}
+.cn-item:hover,
+.cn-card:hover {
+  background: var(--gold-soft);
+}
+.cn-item .n {
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+.cn-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0 0 10px -4px;
+  padding: 4px 8px 4px 4px;
+  border: 0;
+  border-radius: 4px;
+  background: none;
+  font: inherit;
+  font-size: 13px;
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.cn-back svg {
+  width: 14px;
+  height: 14px;
+}
+.cn-back:hover {
+  color: var(--ink);
+}
+.cn-card {
+  display: grid;
+  grid-template-columns: 78px 1fr;
+  gap: 2px 10px;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  padding: 9px 2px;
+  font: inherit;
+  color: var(--ink);
+  cursor: pointer;
+}
+.cn-card[aria-current='true'] {
+  background: var(--gold-soft);
+}
+.cn-card .y {
+  grid-row: span 2;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--era);
+  padding-top: 3px;
+}
+.cn-card b {
+  font-family: var(--font-display);
+  font-weight: 450;
+  font-size: 16px;
+  line-height: 1.25;
+}
+.cn-card .pl {
+  font-size: 12px;
+  color: var(--ink-3);
+}
+
+/* Phones: the panel reads under the small map, like the time list. */
+@media (max-width: 720px) {
+  .atlas-mode button {
+    padding: 4px 9px;
+    font-size: 12px;
+  }
+  .atlas.countries .atlas-countries {
+    position: static;
+    width: auto;
+    border: 0;
+    border-top: 1px solid var(--border);
+    border-radius: 0;
+    background: var(--bg);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    padding: 12px 16px 24px;
+    min-height: 0;
+  }
+  .cn-head h3 {
+    font-size: 20px;
+  }
+}

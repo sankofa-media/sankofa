@@ -1,5 +1,6 @@
 import './styles/main.css';
 import './styles/roots.css';
+import './styles/countries.css';
 import type { App } from './app';
 import type { CardsFile, ChaptersFile } from './lib/types';
 import { ERAS } from './lib/types';
@@ -261,9 +262,9 @@ async function start(): Promise<void> {
     route = { point: {}, ch: chapterNow ?? undefined };
     writeRoute(route, false);
   };
-  atlas.onChange = (p) => {
-    route = { point: p };
-    writeRoute(route, false);
+  atlas.onChange = (p, view, push) => {
+    route = { point: p, ...view };
+    writeRoute(route, push ?? false);
   };
   atlas.onClose = () => {
     atlas.close();
@@ -393,7 +394,7 @@ async function start(): Promise<void> {
     else if (screen === 'roots-map') rootsMap.open();
     else if (isMechView(screen)) mech.open(screen, route.item);
     else if (screen === 'descent') descent.open(route.point.from, route.point.zoom);
-    else if (screen === 'atlas') atlas.open(route.point);
+    else if (screen === 'atlas') atlas.open(route.point, { atlas: route.atlas, country: route.country });
     else if (route.ch && (initial || route.ch !== chapterNow)) {
       // After a language or copy switch, come back to the same step; a plain
       // chapter link opens at the chapter's top. Either way the place is held

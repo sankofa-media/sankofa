@@ -72,3 +72,25 @@ export function countriesInCopy(set: CardSet, edition: Exclude<Edition, 'both'> 
     .filter((x) => x.n > 0)
     .sort((a, b) => a.country.name[lang].localeCompare(b.country.name[lang], lang));
 }
+
+/**
+ * Where each of a country's cards stands on the map: at its first place in
+ * that country, cards sharing a spot spread on a small spiral (tighter as the
+ * map zooms in) so each stays clickable.
+ */
+export function countryPoints(rows: CountryEntry[], level: number): { card: Card; lon: number; lat: number }[] {
+  const step = 2.2 / [1, 2.2, 4.6, 9, 18][Math.max(1, Math.min(5, level)) - 1];
+  const seen = new Map<string, number>();
+  return rows
+    .filter((r) => r.places.length)
+    .map((r) => {
+      const p = r.places[0];
+      const key = `${p.lon.toFixed(1)},${p.lat.toFixed(1)}`;
+      const i = seen.get(key) ?? 0;
+      seen.set(key, i + 1);
+      if (!i) return { card: r.card, lon: p.lon, lat: p.lat };
+      const a = i * 2.4;
+      const d = step * Math.sqrt(i);
+      return { card: r.card, lon: p.lon + Math.cos(a) * d, lat: p.lat + Math.sin(a) * d * 0.8 };
+    });
+}
