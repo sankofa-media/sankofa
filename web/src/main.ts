@@ -334,6 +334,17 @@ async function start(): Promise<void> {
       roots.open(ra.dataset.artistRoots);
       return;
     }
+    // An element's thread in Roots, from the Workshop and elsewhere.
+    const re = (e.target as Element).closest<HTMLElement>('[data-roots-element]');
+    if (re) {
+      e.preventDefault();
+      cardDrawer.close(true);
+      closeOverlays('roots');
+      route = { point: {}, view: 'roots', item: re.dataset.rootsElement };
+      writeRoute(route, true);
+      roots.open(undefined, re.dataset.rootsElement);
+      return;
+    }
     const ro = (e.target as Element).closest<HTMLElement>('[data-roots]');
     if (ro) {
       e.preventDefault();
@@ -389,7 +400,7 @@ async function start(): Promise<void> {
     closeOverlays(screen);
     if (screen === 'listen') listen.open();
     else if (screen === 'engine') engine.open();
-    else if (screen === 'roots') roots.open(route.artist);
+    else if (screen === 'roots') roots.open(route.artist, route.item);
     else if (screen === 'roots-map') rootsMap.open();
     else if (isMechView(screen)) mech.open(screen, route.item);
     else if (screen === 'descent') descent.open(route.point.from, route.point.zoom);

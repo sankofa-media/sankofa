@@ -36,9 +36,11 @@ The museum runs on a real Kubernetes cluster, and the listening room lets you he
 
 Every card is also an object in that cluster, and the cluster's own machinery is named after the culture it serves: Griot remembers the life of every object, Kgotla holds a council before anything protected is deleted, Polyrhythm spreads scheduled jobs across free beats. The engine room shows the card you opened last as the cluster stores it, and explains how a visitor can read the museum's cluster with a read-only account.
 
-## Documents and objects
+## Documents, the Workshop and the cabinet
 
-Some cards open onto a primary document lying on a desk, such as a page of Equiano, of Douglass, of Jacobs, the first issue of *Freedom's Journal*. As you read, the lines in question are outlined on the scan and explained one by one. There are {{documents}} documents so far, each reached from its card. Other cards carry a working object, something to play rather than look at: a turntable with a 1920 record, a drum machine, a set of drum pads. The shelf of objects in the top bar gathers them in one place. Sound starts only when you press something, and only one thing plays at a time.
+Some cards open onto a primary document lying on a desk, such as a page of Equiano, of Douglass, of Jacobs, the first issue of *Freedom's Journal*. As you read, the lines in question are outlined on the scan and explained one by one. There are {{documents}} documents so far, each reached from its card. Other cards carry a working object, something to play rather than look at. The Workshop in the top bar gathers them, {{objects}} so far, each one an element that music carries from style to style: the record that lets music travel without people, the rhythm a machine keeps, the break and the sample, the clave, call and response. Each says where and when it was made, by whom, where it went next, and which thread of Roots it follows. Sound starts only when you press something, and only one thing plays at a time.
+
+The museum also has hidden caches. What you find in them goes into your own Cabinet of Curiosities, kept in your browser like your book; nothing you need to read the museum lies only there.
 
 ## How we checked
 

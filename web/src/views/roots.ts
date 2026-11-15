@@ -93,14 +93,16 @@ export class Roots {
     return this.el.classList.contains('open');
   }
 
-  open(artist?: string): void {
+  /** Open on an artist's chain, or with an element of music explained (#view=roots&item=<element>). */
+  open(artist?: string, element?: string): void {
     this.el.classList.add('open');
     document.body.classList.add('locked');
     if (artist) this.show(artist);
     else if (!this.current) {
       this.renderEmpty();
-      requestAnimationFrame(() => this.input.focus({ preventScroll: true }));
+      if (!element) requestAnimationFrame(() => this.input.focus({ preventScroll: true }));
     }
+    if (element && this.elements.has(element)) requestAnimationFrame(() => this.openElement(element));
   }
 
   close(): void {

@@ -11,10 +11,13 @@ import { mediaSrc } from '../lib/media';
 import { editionPairs } from '../views/editionNote';
 import * as data from './data';
 import { Sheet } from './sheet';
-import { isMechView, type MechView } from './views';
+import { canonicalView, isMechView, type MechView } from './views';
 import { desk, type DeskView } from './docs/view';
 import { agentsNote, checksPanel, methodPage } from './checks/view';
-import { objectBlock, objectKeyForCard, OBJECT_KEYS, shelf } from './objects/view';
+import { objectBlock, objectKeyForCard, OBJECT_KEYS, setWorkshopDrawers, shelf } from './objects/view';
+import { cabinetView } from './cabinet/view';
+import { hideInCard, hideInStory, workshopDrawer } from './cabinet/hide';
+import type { CabinetFile } from './cabinet/model';
 import { stopAll, watchPage } from '../lib/sound';
 import { inLang, prose } from './guide/view';
 import './mechanics.css';
@@ -32,7 +35,9 @@ export interface Mechanics {
 
 const KICKER: Record<MechView, { en: string; ru: string }> = {
   document: { en: 'Document on the desk', ru: 'Документ на столе' },
-  objects: { en: 'Working objects', ru: 'Действующие предметы' },
+  workshop: { en: 'The Workshop', ru: 'Мастерская' },
+  objects: { en: 'The Workshop', ru: 'Мастерская' },
+  cabinet: { en: 'Cabinet of Curiosities', ru: 'Кабинет редкостей' },
   method: { en: 'How we checked', ru: 'Как мы проверяли' },
   guide: { en: 'How to read this museum', ru: 'Как читать этот музей' },
   dedication: { en: 'Dedication', ru: 'Посвящение' },
@@ -92,11 +97,17 @@ export function installMechanics(app: App, hooks: MechHooks): Mechanics {
       ready(dv.el, pick(d.title));
       current = dv;
       requestAnimationFrame(() => dv.update());
-    } else if (v === 'objects') {
+    } else if (v === 'workshop' || v === 'objects') {
       returnCard = undefined;
-      const o = await data.objects();
-      ready(o ? shelf(app, o) : null, pick(KICKER.objects));
+      const [o, cab] = await Promise.all([data.objects(), data.cabinet().catch(() => null)]);
+      setWorkshopDrawers((key) => workshopDrawer(app, cab, key));
+      ready(o ? shelf(app, o) : null, pick(KICKER.workshop));
       if (item && OBJECT_KEYS.includes(item as never)) requestAnimationFrame(() => document.getElementById(`object-${item}`)?.scrollIntoView({ block: 'start' }));
+    } else if (v === 'cabinet') {
+      returnCard = undefined;
+      const c = await data.cabinet();
+      if (my !== token) return;
+      ready(c ? cabinetView(app, c) : null, pick(KICKER.cabinet));
     } else if (v === 'method') {
       returnCard = undefined;
       const c = await data.checks();
@@ -127,8 +138,11 @@ export function installMechanics(app: App, hooks: MechHooks): Mechanics {
     get isOpen() {
       return sheet.isOpen;
     },
-    open(v, item) {
-      if (view === v && sheet.isOpen && v !== 'document' && v !== 'objects') return;
+    open(asked, item) {
+      // An old name opens the new room, and the link says so from then on.
+      const v = canonicalView(asked);
+      if (v !== asked) hooks.navigate(v, item, false);
+      if (view === v && sheet.isOpen && v !== 'document' && v !== 'workshop') return;
       view = v;
       stopAll();
       void show(v, item);
@@ -143,12 +157,25 @@ export function installMechanics(app: App, hooks: MechHooks): Mechanics {
     const v = a.dataset.mech;
     if (!isMechView(v)) return;
     e.preventDefault();
-    hooks.navigate(v, a.dataset.item, true);
+    hooks.navigate(canonicalView(v), a.dataset.item, true);
     mech.open(v, a.dataset.item);
   });
 
   decorate();
+  // The caches hidden in the chapters, once the cabinet's data is here.
+  void data
+    .cabinet()
+    .then((c) => c && hideInStory(app, c))
+    .catch(() => undefined);
   return mech;
+}
+
+/** The caches hidden on a card: on its picture, in its words. */
+export function cardCaches(app: App, c: Card, article: HTMLElement): void {
+  void data
+    .cabinet()
+    .then((f: CabinetFile | null) => f && hideInCard(app, f, c, article))
+    .catch(() => undefined);
 }
 
 /** Links into the story: a "?" by the copy switch, the end of the story, a footer. */
@@ -176,7 +203,8 @@ function decorate(): void {
         'nav',
         {},
         h('a', { href: '#view=guide', 'data-mech': 'guide' }, pick({ en: 'How to read this museum', ru: 'Как читать этот музей' })),
-        h('a', { href: '#view=objects', 'data-mech': 'objects' }, pick({ en: 'Working objects', ru: 'Действующие предметы' })),
+        h('a', { href: '#view=workshop', 'data-mech': 'workshop' }, pick({ en: 'The Workshop', ru: 'Мастерская' })),
+        h('a', { href: '#view=cabinet', 'data-mech': 'cabinet' }, pick({ en: 'Cabinet of Curiosities', ru: 'Кабинет редкостей' })),
         h('a', { href: '#view=method', 'data-mech': 'method' }, pick({ en: 'How we checked', ru: 'Как мы проверяли' })),
         ded,
       ),

@@ -1,8 +1,8 @@
 // What the reader keeps in their own browser: the edition they hold, the path
-// they walked, the theme. The server knows nothing about visitors.
+// they walked, the theme, what they found for their cabinet. The server knows nothing about visitors.
 import type { Edition } from './types';
 
-const K = { edition: 'sankofa.edition', path: 'sankofa.path', theme: 'sankofa.theme' };
+const K = { edition: 'sankofa.edition', path: 'sankofa.path', theme: 'sankofa.theme', cabinet: 'sankofa.cabinet' };
 const MAX_PATH = 200;
 
 function read(key: string): string | null {
@@ -64,4 +64,13 @@ export function setTheme(t: Theme): void {
 /** Hold the other copy from now on (the page is rebuilt by the caller). */
 export function setEdition(e: Exclude<Edition, 'both'>): void {
   write(K.edition, e);
+}
+
+/** The reader's cabinet as stored (JSON); null when there is none yet or storage is closed. */
+export function readCabinet(): string | null {
+  return read(K.cabinet);
+}
+
+export function writeCabinet(json: string): void {
+  write(K.cabinet, json);
 }
