@@ -121,8 +121,10 @@ at a pole or in Antarctica counts for none.
   (`places[0]`) is the card's home on the map as before.
 - Overseas departments and territories follow Natural Earth: Guadeloupe and
   Martinique count with France, Puerto Rico, Bermuda or Curaçao are their own entries.
-- Where Natural Earth's de facto line differs from internationally recognised
-  borders (Crimea), `areas` in `content/countries.yaml` decides.
+- Territories whose status is disputed (Crimea, Jerusalem) are listed under no
+  state: they are entries of their own with `disputed: true`, the atlas says their
+  status is disputed and paints them in no state's colour; `areas` in
+  `content/countries.yaml` draws their boxes.
 - When the outline puts a border town on the wrong side, or a place names a
   region rather than a point ("West and Central Africa"), add an entry to
   `overrides` in `content/countries.yaml`: `{card, place, country}` with the

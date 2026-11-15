@@ -5,16 +5,21 @@
 #   feature id). `name` in English and Russian is required; `about` is the short
 #   header, and every fact in it is sourced in content/ledger/countries.yaml.
 #   A country without a sourced header shows only its name and card count.
-# areas: places inside a box go to a country regardless of the map's de facto
-#   line (internationally recognised borders, as in UN General Assembly resolutions).
+# areas: places inside a box go to the named entry regardless of the map's line.
+#   Territories whose status is disputed are not assigned to any state: they are
+#   entries of their own with `disputed: true` and a synthetic `iso` that matches
+#   no map outline, so the map paints them in no state's colour.
 # overrides: one card place, by its English name, to a country id or `none`.
 #   For border towns the 1:50m outlines put on the wrong side, and for places
 #   that name a region rather than a point.
 
 areas:
-  - country: ukraine
-    why: Crimea (UN General Assembly resolution 68/262); Natural Earth draws it with Russia
+  - country: crimea
+    why: disputed territory; listed under no state
     box: [32.4, 44.3, 36.7, 46.3]   # [west, south, east, north]
+  - country: jerusalem
+    why: disputed territory; listed under no state
+    box: [35.10, 31.70, 35.30, 31.88]
 overrides:
   - {card: mapungubwe-rhino, place: "Mapungubwe Hill, Limpopo, South Africa", country: south-africa}
   - {card: parsley-massacre, place: "Ouanaminthe, Haiti", country: haiti}
@@ -23,6 +28,8 @@ overrides:
   - {card: siddi-of-karnataka, place: "Gaur, Bengal", country: india}
   - {card: work-songs, place: "West and Central Africa", country: none}
 countries:
+  - {id: crimea, iso: "x-crimea", disputed: true, name: {en: "Crimea", ru: "Крым"}}
+  - {id: jerusalem, iso: "x-jerusalem", disputed: true, name: {en: "Jerusalem", ru: "Иерусалим"}}
   - {id: algeria, iso: "012", name: {en: "Algeria", ru: "Алжир"}}
   - id: angola
     iso: "024"
