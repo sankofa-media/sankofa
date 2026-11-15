@@ -1,6 +1,7 @@
 import './styles/main.css';
 import './styles/roots.css';
 import './styles/countries.css';
+import './styles/factoids.css';
 import type { App } from './app';
 import { cardLink } from './app';
 import type { CardsFile, ChaptersFile } from './lib/types';
@@ -33,6 +34,8 @@ import { installNavMenu, navReady, setBookCount } from './views/navMenu';
 import { isMechView } from './mechanics/views';
 import { compileLexicon, type NamesFile } from './lib/names';
 import { setLexicon, weaveLive } from './lib/weave';
+import { Facts, usableFactoids, type FactoidsFile } from './lib/factoids';
+import { FactPanel } from './views/factoid';
 
 async function load<T>(url: string): Promise<T> {
   // The cover paints first; the data comes at a lower priority, with a
@@ -129,8 +132,16 @@ async function start(): Promise<void> {
   let route = readRoute();
   let chapterNow: string | null = null;
 
+  // Factoids are an extra, like listening: they arrive after the cards and
+  // fill the views that wait for them; without them the museum is whole.
+  const facts = new Facts();
+  void loadJson<FactoidsFile>('data/factoids.json', { priority: 'low', timeout: 20_000 })
+    .then((f) => facts.fill(usableFactoids(f)))
+    .catch(() => facts.fill([]));
+
   const app: App = {
     set,
+    facts,
     raw: (id) => rawCards.get(id),
     openEngine(push = true) {
       cardDrawer.close(true);
@@ -286,6 +297,12 @@ async function start(): Promise<void> {
   };
 
   setupNav(app, atlas);
+  const factPanel = new FactPanel(app);
+  const factBtn = document.querySelector<HTMLElement>('.nav [data-open-fact]');
+  if (factBtn) {
+    factBtn.title = pick({ en: 'A random fact from the archive', ru: 'Случайный факт из архива' });
+    factBtn.addEventListener('click', () => factPanel.toggle());
+  }
   document.querySelectorAll<HTMLAnchorElement>('[data-set-lang]').forEach((a) =>
     a.addEventListener('click', (e) => {
       e.preventDefault();

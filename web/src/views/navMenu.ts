@@ -12,6 +12,7 @@ const HINTS: Record<string, { en: string; ru: string }> = {
   roots: { en: 'Trace an artist back to these stories', ru: 'Проследить исполнителя до этих историй' },
   engine: { en: 'How the museum runs on Kubernetes', ru: 'Как музей устроен на Kubernetes' },
   book: { en: 'The cards you have opened, kept in this browser', ru: 'Открытые вами карточки — хранятся в этом браузере' },
+  fact: { en: 'One checked fact at random, with its sources', ru: 'Случайный проверенный факт — с источниками' },
   workshop: { en: 'The elements music is made of, to play', ru: 'Элементы, из которых сделана музыка, — на них можно играть' },
   cabinet: { en: 'What you find hidden around the museum', ru: 'Всё, что вы найдёте спрятанным по музею' },
   index: { en: 'Every name in the dictionary, from A to Z', ru: 'Все имена словаря — от А до Я' },
@@ -27,6 +28,7 @@ function keyOf(b: HTMLElement): string | undefined {
   if (b.matches('[data-open-roots]')) return 'roots';
   if (b.matches('[data-open-engine]')) return 'engine';
   if (b.matches('[data-open-book]')) return 'book';
+  if (b.matches('[data-open-fact]')) return 'fact';
   return b.dataset.mech;
 }
 
