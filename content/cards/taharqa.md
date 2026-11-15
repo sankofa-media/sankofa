@@ -27,12 +27,11 @@ sources:
   - {title: "British Museum: Sphinx of Taharqo, EA1770 (curator's comments)", url: "https://www.britishmuseum.org/collection/object/Y_EA1770"}
   - {title: "2 Kings 19:9, King James Version (Bible Gateway)", url: "https://www.biblegateway.com/passage/?search=2+Kings+19%3A9&version=KJV"}
   - {title: "Lipscomb University Lanier Center for Archaeology: Nuri Necropolis", url: "https://archaeology.lipscomb.edu/excavations/nuri-archaeological-expedition/nuri-necropolis"}
-  - {title: "James K. Hoffmeier, Judah's African Ally: Taharqa and the Kingdom of Cush, Biblical Archaeology Review (Summer 2025)", url: "https://library.biblicalarchaeology.org/article/judahs-african-ally-taharqa-and-the-kingdom-of-cush/"}
 ---
 In the 8th century BC the kings of Kush, a Nubian kingdom on the Middle Nile in today's Sudan, turned the tables on Egypt and ruled it as its 25th Dynasty. Taharqa reigned from 690 to 664 BC, and the Bible remembers him as "Tirhakah king of Ethiopia".
 
 His holy mountain was Jebel Barkal, a flat-topped sandstone hill about 100 metres high, where the god Amun was believed to dwell. At its foot Taharqa built a temple to the goddess Mut, its rear halls cut into the rock. On the summit of the sheer pinnacle that rises beside the cliff, his workmen carved an inscription in his name; the holes of their scaffolding are still in the stone, and three centuries later King Nastasen restored the monument.
 
-In 671 BC the Assyrian king Esarhaddon took Memphis, and Taharqa retreated south. He was buried in a large pyramid at Nuri, across the Nile from Barkal, and later kings of Kush were buried around him. His statues were found in a pit beside Barkal's great temple.
+In 671 BC the Assyrian king Esarhaddon took Memphis, and Taharqa retreated south. He was buried in a large pyramid at nearby Nuri, and later kings of Kush were buried around him. His statues were found in a pit beside Barkal's great temple.
 
 Kush outlived the loss of Egypt by centuries: it was still strong enough to fight Rome under [[amanirenas|Queen Amanirenas]]. Since 2003 Jebel Barkal and Nuri have been a UNESCO World Heritage Site.

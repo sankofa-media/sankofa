@@ -22,8 +22,8 @@ sources:
 ---
 The Sidis, or Siddis, are Indians of African ancestry. Their forebears crossed the Indian Ocean from eastern Africa to the west coast of India over many centuries, many of them as captives of the slave trade. In Gujarat, Mumbai and other parts of western India their descendants built communities of their own.
 
-Most Gujarati Sidis are Muslims of the Sufi tradition, and their devotion centres on Bava Gor, an African saint who, in their tradition, came to India long ago. At his shrines in Gujarat the Sidis perform goma, also called dhammal: songs and dances that honour God, the Prophet and the saints, above all the Sidi ancestor-saints. Their music keeps African styles, rhythms and instruments, blended over the centuries with Indian ones.
+Most Gujarati Sidis are Muslims of the Sufi tradition, and their devotion centres on Bava Gor, an African saint who, in their tradition, came to India long ago. At his shrines in Gujarat the Sidis perform goma, also called dhammal: songs and dances in honour of Bava Gor and the other Sidi saints. Their music keeps African styles, rhythms and instruments, blended over the centuries with Indian ones.
 
-In the Gir forest, the largest Sidi village is Jambur. Families there tell different stories of how they came: some say their ancestors served in the army of the Nawab of Junagadh, who settled them on the land.
+In the Gir forest lies the Sidi village of Jambur. Families there tell different stories of how they came: some say the Nawab of Junagadh brought their ancestors to the Gir and gave them land.
 
 Goma is a living crossroads of the Indian Ocean: a Sufi rite of Gujarat, sung in India, that still carries music brought across the sea from Africa.

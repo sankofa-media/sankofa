@@ -21,10 +21,9 @@ sources:
   - {title: "National Trust of Trinidad and Tobago: Five Things You Should Know About the Coterie of Social Workers and its Founder, Audrey Jeffers (2021)", url: "https://nationaltrust.tt/?p=18083"}
   - {title: "Rhoda E. Reddock, Jeffers, Audrey, Encyclopedia of African-American Culture and History (Gale, 2005), via Encyclopedia.com", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/jeffers-audrey"}
   - {title: "Women's Activism NYC: Audrey Jeffers", url: "https://www.womensactivism.nyc/stories/9804"}
-  - {title: "Stabroek News, In the Diaspora: We must hasten slowly (2023)", url: "https://stabroeknews.com/2023/04/03/features/in-the-diaspora/we-must-hasten-slowly"}
 ---
-In Port of Spain, capital of colonial Trinidad, many children went to school hungry. Audrey Jeffers was born there in 1898, into a well-off family; her father was a lawyer. As a teenager she went to London to study social science, and during the First World War she worked among West African troops and raised a West African Soldiers' Fund.
+In Port of Spain, capital of colonial Trinidad, many children went to school hungry. Audrey Jeffers was born in 1898 into a well-off Black family of Trinidad's small propertied class. As a teenager she went to London to study social science, and during the First World War she worked among West African troops and raised a West African Soldiers' Fund.
 
 Back home, in 1921 she founded the Coterie of Social Workers. Its Breakfast Shed in Port of Spain gave free meals to poor schoolchildren. The Coterie went on to open a home for blind girls in 1928 and a hostel for working girls in 1935, and it pressed for jobs for educated Black women, a scholarship for girls and a women's police force. In 1936 it brought women social workers from across the British West Indies and British Guiana to Port of Spain for a conference.
 
-The same year she became the first woman elected to the Port of Spain city council, and in 1946 the first woman appointed to the colony's Legislative Council. Her politics had limits: in the 1940s she did not support the vote for all adults. She died in 1968. Her life shows how far a Black woman could rise in colonial Trinidad through social work, and where her vision stopped.
+The same year she became the first woman elected to the Port of Spain city council, and in 1946 the first woman appointed to the colony's Legislative Council. She died in 1968. Her life shows how far a Black woman could rise in colonial Trinidad through social work.

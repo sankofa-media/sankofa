@@ -13,7 +13,7 @@ edition: both
 further:
   - "P. K. Rose, Black Dispatches: Black American Contributions to Union Intelligence During the Civil War (CIA Center for the Study of Intelligence, 1999)"
   - "National Park Service, Richmond National Battlefield Park: Mary Jane Richards, a Black Union spy in Richmond"
-dispute: "The CIA study of 1999 still tells the older story of 'Mary Elizabeth Bowser' working as a servant in Jefferson Davis's residence and reporting what she overheard. The National Park Service and the American Battlefield Trust, drawing on later research, call that account false: the woman was Mary Jane Richards, and her exact work for the spy ring is unknown."
+dispute: "The CIA study of 1999 still tells the older story of 'Mary Elizabeth Bowser' working as a servant in the Confederate \"White House\" and overhearing valuable information. The National Park Service and the American Battlefield Trust, drawing on later research, reject most of that account: the spy was real, but her name was Mary Jane Richards, and the story of her service in Davis's house is not supported."
 sources:
   - {title: "P. K. Rose, Black Dispatches: Black American Contributions to Union Intelligence During the Civil War, CIA Center for the Study of Intelligence", url: "https://www.cia.gov/resources/csi/static/Black-Dispatches.pdf"}
   - {title: "Open Library: Black dispatches, P. K. Rose (CIA, 1999)", url: "https://openlibrary.org/search?q=black+dispatches+rose"}

@@ -24,7 +24,7 @@ sources:
   - {title: "The Guardian: Henry Swanzy obituary (20 March 2004)", url: "https://www.theguardian.com/news/2004/mar/20/guardianobituaries"}
   - {title: "Philip Nanton, Caribbean Beat 63 (2003): London calling", url: "https://www.caribbean-beat.com/issue-63/london-calling"}
 ---
-In the Second World War West Indians came to Britain to serve in the forces and to work in factories, and the BBC, which broadcast to the whole Empire, gave them a way to talk to home. Its programme Calling the West Indies carried personal messages, music and stories of war work.
+In the Second World War West Indians came to Britain to serve in the forces and to work in factories, and the BBC, which broadcast to the whole Empire, gave them a way to talk to home. Its programme Calling the West Indies carried servicemen's personal messages and requests home.
 
 Its producer was Una Marson, born in 1905 in the parish of St Elizabeth, Jamaica, the daughter of a Baptist minister. She was already a poet and playwright, with two books of verse and a play staged in Jamaica, when she joined the BBC in 1941, the first Black woman on its staff. Her love of poetry led her to start Caribbean Voices, a weekly slot for writing from the islands.
 

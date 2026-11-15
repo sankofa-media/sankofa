@@ -18,6 +18,7 @@ sources:
   - {title: "Tim Maggs and Aron Mazel, A survey of the rock art in the Natal Drakensberg (Bradshaw Foundation Rock Art Network)", url: "https://bradshawfoundation.com/rockartnetwork/maggs_mazel.php"}
   - {title: "South African History Online: Rock art in South Africa", url: "https://sahistory.org.za/node/16832"}
   - {title: "UNESCO World Heritage Centre: Tsodilo", url: "https://whc.unesco.org/en/list/1021/"}
+  - {title: "ICOMOS, Advisory Body Evaluation No. 1021: Tsodilo (2001)", url: "https://whc.unesco.org/archive/advisory_body_evaluation/1021.pdf"}
   - {title: "UNESCO World Heritage Centre: Maloti-Drakensberg Park", url: "https://whc.unesco.org/en/list/985/"}
   - {title: "Your Botswana: Tsodilo Hills celebrates 20 years as World Heritage Site", url: "https://yourbotswana.com/tsodilo-hills-celebrates-20-years-as-world-heritage-site/"}
   - {title: "Archaeology (Archaeological Institute of America): Rock art in southern Africa dated (6 April 2017)", url: "https://archaeology.org/news/2017/04/06/170406-rock-art-dated/"}

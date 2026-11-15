@@ -1,16 +1,13 @@
-# Ledger for expansion batch c06: one entry per fact in card bodies and wow lines, each with two or more independent sources.
+# Ledger for expansion batch c06: one entry per fact in card bodies and wow lines, each with two or more independent sources (revised after the second fact-check, see expand-c06-check.yaml).
 - card: walatta-petros
   fact: "Emperor Susenyos, persuaded by the Jesuits, embraced Roman Catholicism and pressed it on his court in the early 17th century."
   sources:
     - title: "Wendy Laura Belcher, Walatta Petros (B), Dictionary of African Christian Biography"
       url: "https://dacb.org/stories/ethiopia/walatta-petros2/"
       quote: "the Jesuits persuaded King Susənyos (1572-1632) to proclaim Roman Catholicism the faith of the land"
-    - title: "Library of Congress Country Studies: Ethiopia (1991), Growth of Regional Muslim States"
-      url: "http://countrystudies.us/ethiopia/10.htm"
+    - title: "Library of Congress Country Studies: Ethiopia (1991), Contact with European Christendom"
+      url: "https://countrystudies.us/ethiopia/12.htm"
       quote: "Susenyos (reigned 1607- 32), after a particularly fierce battle between adherents of the two faiths, abdicated in 1632"
-    - title: "Belaynesh Michael, Walata Petros, Encyclopaedia Africana Dictionary of African Biography (1977), via DACB"
-      url: "https://dacb.org/stories/ethiopia/walata-petros/"
-      quote: "the anti-Catholic struggle waged by Ethiopian Monophysites (believers in the doctrine that the human and divine elements in Jesus Christ were unified by a single nature) during the reign of Emperor Susneyos (1607-32)"
 - card: walatta-petros
   fact: "Walatta Petros was a noblewoman born in the 1590s."
   sources:
@@ -38,18 +35,15 @@
     - title: "Wendy Laura Belcher, Walatta Petros (B), Dictionary of African Christian Biography"
       url: "https://dacb.org/stories/ethiopia/walatta-petros2/"
       quote: "she again determined to leave her husband, starving herself until he let her go. She immediately went to a monastery on Lake Ṭana and became a nun"
-    - title: "Wendy Laura Belcher: The Life and Struggles of Our Mother Walatta Petros"
-      url: "https://wendybelcher.com/african-literature/walatta-petros/"
-      quote: "risked her life by leaving her husband, who supported the conversion effort, and leading the struggle against the Jesuits"
 - card: walatta-petros
   fact: "She was summoned before the court and resisted Jesuit efforts to convert her."
   sources:
     - title: "Belaynesh Michael, Walata Petros, Encyclopaedia Africana Dictionary of African Biography (1977), via DACB"
       url: "https://dacb.org/stories/ethiopia/walata-petros/"
-      quote: "Walata Petros and her disciples refused all efforts by the Catholic Patriarch, Bishop Affonso Mendez, and others to convert them to Catholicism"
+      quote: "The anti-Catholic activities of Walata Petros and her followers led Susneyos to summon them to court to answer charges brought against them... refused all efforts by the Catholic Patriarch, Bishop Affonso Mendez, and others to convert them to Catholicism"
     - title: "Wendy Laura Belcher, Walatta Petros (B), Dictionary of African Christian Biography"
       url: "https://dacb.org/stories/ethiopia/walatta-petros2/"
-      quote: "this time she was sentenced to spending Saturdays with the Jesuits, as the head of the mission, Afonso Mendes, worked to convert her. When this was unsuccessful, the king banished her"
+      quote: "The angry king again called her before the court, and this time she was sentenced to spending Saturdays with the Jesuits, as the head of the mission, Afonso Mendes, worked to convert her."
 - card: walatta-petros
   fact: "She was banished to the western borderlands, where she founded the first of seven religious communities."
   sources:
@@ -80,12 +74,12 @@
 - card: walatta-petros
   fact: "In 1632 Susenyos gave up the struggle and abdicated; Fasiladas restored Orthodoxy and the Jesuits were expelled."
   sources:
-    - title: "Library of Congress Country Studies: Ethiopia (1991), Growth of Regional Muslim States"
-      url: "http://countrystudies.us/ethiopia/10.htm"
+    - title: "Library of Congress Country Studies: Ethiopia (1991), Contact with European Christendom"
+      url: "https://countrystudies.us/ethiopia/12.htm"
       quote: "abdicated in 1632 in favor of his son, Fasiladas (reigned 1632-67), to spare the country further bloodshed. The expulsion of the Jesuits and all Roman Catholic missionaries followed."
-    - title: "Belaynesh Michael, Walata Petros, Encyclopaedia Africana Dictionary of African Biography (1977), via DACB"
-      url: "https://dacb.org/stories/ethiopia/walata-petros/"
-      quote: "In 1632, Susneyos finally abandoned the bitter struggle to impose the Roman Catholic faith in Ethiopia... The new emperor restored the Ethiopian Monophysite faith"
+    - title: "Encyclopaedia Britannica: Fasilides"
+      url: "https://www.britannica.com/biography/Fasilides"
+      quote: "Fasilides succeeded to the throne on the abdication of Susenyos (1632)... expelled Catholic missionaries"
 - card: walatta-petros
   fact: "Honoured as a heroine, she went on teaching and founding communities after 1632."
   sources:
@@ -113,9 +107,6 @@
     - title: "Princeton Alumni Weekly: A saint's life, in old manuscripts (2013)"
       url: "https://paw.princeton.edu/article/saints-life-old-manuscripts"
       quote: "they are among the 12 copies of the original 1672 biography (now lost)"
-    - title: "Wendy Laura Belcher: The Life and Struggles of Our Mother Walatta Petros"
-      url: "https://wendybelcher.com/african-literature/walatta-petros/"
-      quote: "The Life and Struggles of Our Mother Walatta Petros (1672)... After her death, her disciples wrote this book"
 - card: walatta-petros
   fact: "About a dozen manuscript copies survive and the Life has been translated into English."
   sources:
@@ -158,9 +149,9 @@
     - title: "Library of Congress Country Studies: Ethiopia (1991), The Restoration of the Solomonic Line"
       url: "http://countrystudies.us/ethiopia/8.htm"
       quote: "its scions claimed descent not only from Aksum but also from King Solomon of ancient Israel... Yekuno Amlak's accession thus came to be seen as the legitimate \"restoration\" of the Solomonic line"
-    - title: "Encyclopaedia Britannica: Kebra Negast"
-      url: "https://www.britannica.com/topic/Kebra-Negast"
-      quote: "relates the birth of Menelik... who became the king of Ethiopia... provided a basis for Ethiopian national unity through the Solomonic dynasty"
+    - title: "Encyclopaedia Britannica: Solomonid dynasty"
+      url: "https://www.britannica.com/topic/Solomonid-dynasty"
+      quote: "line of Ethiopian emperors who, according to tradition, were descended from Menilek I, the son of Solomon and the Queen of Sheba (Makeda). Until Haile Selassie I was deposed in 1974, their rule was supposed to have been continuous but for two periods, the reign of the Zagwe dynasty (12th–13th century)"
 - card: kebra-nagast
   fact: "The Kebra Nagast gave the Solomonic genealogy its classic written form and turned the legend into a national epic."
   sources:
@@ -180,14 +171,14 @@
       url: "https://www.britannica.com/topic/Solomonid-dynasty"
       quote: "continuous but for two periods, the reign of the Zagwe dynasty (12th–13th century) and the reign of Tewodros II (1855–68)"
 - card: kebra-nagast
-  fact: "The last emperor, Haile Selassie, was deposed by the military on 12 September 1974."
+  fact: "The last emperor, Haile Selassie, was deposed by the military in 1974."
   sources:
     - title: "Library of Congress Country Studies: Ethiopia (1991), The Establishment of the Derg"
       url: "http://countrystudies.us/ethiopia/28.htm"
       quote: "the Derg formally deposed Haile Selassie on September 12 and imprisoned him"
     - title: "Encyclopaedia Britannica: Haile Selassie I"
       url: "https://www.britannica.com/biography/Haile-Selassie-I"
-      quote: "Haile Selassie I (born Tafari Makonnen) was the emperor of Ethiopia from 1930 to 1974... for being overthrown in 1974"
+      quote: "segments of the army to mutiny. They deposed Haile Selassie and established a provisional military government , the Derg"
 - card: kilwa-kisiwani
   fact: "Kilwa Kisiwani is an island off the coast of southern Tanzania where a Swahili trading city grew from around the 10th century."
   sources:
@@ -207,15 +198,6 @@
       url: "https://www.britannica.com/place/Kilwa"
       quote: "it became one of the most active commercial centers on the east coast of Africa"
 - card: kilwa-kisiwani
-  fact: "Gold from the interior passed through Kilwa's trade."
-  sources:
-    - title: "UNESCO World Heritage Centre: Ruins of Kilwa Kisiwani and Ruins of Songo Mnara"
-      url: "https://whc.unesco.org/en/list/144/"
-      quote: "gold and ivory from the hinterland was traded for silver, carnelians, perfumes, Persian faience and Chinese porcelain"
-    - title: "Ibn Battuta, Travels in Asia and Africa, trans. H. A. R. Gibb, Internet Medieval Sourcebook"
-      url: "https://sourcebooks.fordham.edu/source/1354-ibnbattuta.asp"
-      quote: "I was told by a merchant that the town of Sufala lies a fortnight's journey [south] from Kulwa and that gold dust is brought to Sufala"
-- card: kilwa-kisiwani
   fact: "Ibn Battuta visited Kilwa in the early 1330s and praised it as a fine, well-built town."
   sources:
     - title: "UNESCO World Heritage Centre: Ruins of Kilwa Kisiwani and Ruins of Songo Mnara"
@@ -224,11 +206,8 @@
     - title: "Ibn Battuta, Travels in Asia and Africa, trans. H. A. R. Gibb, Internet Medieval Sourcebook"
       url: "https://sourcebooks.fordham.edu/source/1354-ibnbattuta.asp"
       quote: "Kulwa is a very fine and substantially built town"
-    - title: "Encyclopaedia Britannica: Ibn Battuta"
-      url: "https://www.britannica.com/biography/Ibn-Battuta"
-      quote: "visiting the trading city-states as far as Kilwa (Tanzania). His return journey took him ... back to Mecca in 1332"
 - card: kilwa-kisiwani
-  fact: "The Great Mosque, with domes and vaults, still stands, as do the ruins of the 14th-century palace Husuni Kubwa."
+  fact: "The ruins of the Great Mosque, once roofed entirely with domes and vaults, still stand, as do those of the 14th-century palace Husuni Kubwa."
   sources:
     - title: "UNESCO World Heritage Centre: Ruins of Kilwa Kisiwani and Ruins of Songo Mnara"
       url: "https://whc.unesco.org/en/list/144/"
@@ -242,18 +221,12 @@
     - title: "UNESCO World Heritage Centre: Ruins of Kilwa Kisiwani and Ruins of Songo Mnara"
       url: "https://whc.unesco.org/en/list/144/"
       quote: "Kilwa Kisiwani minted its own currency in the 11th to 14th centuries."
-    - title: "Archaeology (AIA): African Coins Could Rewrite Australia's Past (2013)"
+    - title: "Archaeology (AIA): African Coins Could Rewrite Australia's Past (2013), courtesy IUPUI"
       url: "https://archaeology.org/news/2013/05/21/130521-australia-coins-kilwa/"
       quote: "five 1,000-year-old copper coins thought to have been minted in the former Kilwa sultanate"
-    - title: "Australian Geographic: Ancient coins could redraft Australian history (2013)"
-      url: "https://australiangeographic.com.au/?p=12992"
-      quote: "the copper coins, which were not used outside of East Africa, probably held very little monetary value in Kilwa"
 - card: kilwa-kisiwani
   fact: "In 1944 Australian serviceman Maurie Isenberg found five Kilwa copper coins and four Dutch coins on the Wessel Islands off Arnhem Land."
   sources:
-    - title: "Archaeology (AIA): African Coins Could Rewrite Australia's Past (2013)"
-      url: "https://archaeology.org/news/2013/05/21/130521-australia-coins-kilwa/"
-      quote: "In 1944, while stationed on Australia's Wessel Islands, soldier Maurie Isenberg discovered five 1,000-year-old copper coins"
     - title: "Australian Geographic: Ancient coins could redraft Australian history (2013)"
       url: "https://australiangeographic.com.au/?p=12992"
       quote: "five ancient African coins discovered on a beach in Arnhem Land in 1944... The Kilwa coins were discovered alongside four Dutch coins"
@@ -261,18 +234,18 @@
       url: "https://www.medievalists.net/?p=41395"
       quote: "Four of the coins were identified as Dutch East India Company coins... The other five coins... were African coins from the once flourishing Kilwa Sultanate"
 - card: kilwa-kisiwani
-  fact: "The coins were identified only decades later."
+  fact: "They turned out to be coins of the Kilwa sultanate."
   sources:
-    - title: "Archaeology (AIA): African Coins Could Rewrite Australia's Past (2013)"
-      url: "https://archaeology.org/news/2013/05/21/130521-australia-coins-kilwa/"
-      quote: "Isenberg marked the spot where he found the coins on a map, and in 1979, donated them to an Australian museum."
+    - title: "Australian Geographic: Ancient coins could redraft Australian history (2013)"
+      url: "https://australiangeographic.com.au/?p=12992"
+      quote: "The five coins, found by RAAF serviceman Morry Isenberg on the Northern Territory's Wessel Islands, hail from the medieval sultanate of Kilwa"
     - title: "Medievalists.net: Indiana University release on Kilwa coins in Australia"
       url: "https://www.medievalists.net/?p=41395"
-      quote: "he placed them in an airtight tin, where they remained until 1979, when he sent the coins off to have them identified"
+      quote: "Four of the coins were identified as Dutch East India Company coins... The other five coins... were African coins from the once flourishing Kilwa Sultanate"
 - card: kilwa-kisiwani
   fact: "How the coins reached Australia is unknown: a shipwreck or an old trade route are possibilities."
   sources:
-    - title: "Archaeology (AIA): African Coins Could Rewrite Australia's Past (2013)"
+    - title: "Archaeology (AIA): African Coins Could Rewrite Australia's Past (2013), courtesy IUPUI"
       url: "https://archaeology.org/news/2013/05/21/130521-australia-coins-kilwa/"
       quote: "The coins may have washed ashore from a shipwreck, or there may have been maritime trading routes linking east Africa, Arabia, India, and the Spice Islands to Australia"
     - title: "Australian Geographic: Ancient coins could redraft Australian history (2013)"
@@ -287,9 +260,6 @@
     - title: "UNESCO World Heritage Centre: Ruins of Kilwa Kisiwani and Ruins of Songo Mnara"
       url: "https://whc.unesco.org/en/list/144/"
       quote: "In the 16th century, the Portuguese established a fort on Kilwa Kisiwani and the decline of the two islands began."
-    - title: "Medievalists.net: Indiana University release on Kilwa coins in Australia"
-      url: "https://www.medievalists.net/?p=41395"
-      quote: "the once flourishing Kilwa Sultanate, now a World Heritage ruin south of Zanzibar in Tanzania"
 - card: kasubi-tombs
   fact: "In 1882 Kabaka Mutesa I built a palace on Kasubi Hill, in today's Kampala."
   sources:
@@ -299,21 +269,15 @@
     - title: "The Observer (Kampala): A tour of the refurbished Kasubi tombs (2024)"
       url: "https://observer.ug/lifestyle-entertainment/a-tour-of-the-refurbished-kasubi-tombs-ahead-of-their-official-reopening/"
       quote: "The palace was established in 1882 by Kabaka Mutesa I who was the 30th king of Buganda."
-    - title: "Daily Monitor: Uganda loses key heritage site (2010)"
-      url: "https://www.monitor.co.ug/uganda/news/national/uganda-loses-key-heritage-site-1470842"
-      quote: "Kasubi was initially the palace for Kabaka Mutesa I (1835-1884)"
 - card: kasubi-tombs
-  fact: "When he died in 1884 Mutesa I was buried in his palace, breaking with tradition."
+  fact: "When he died in 1884 Mutesa I was buried in his palace, which became the royal burial ground."
   sources:
+    - title: "UNESCO World Heritage Centre: Tombs of Buganda Kings at Kasubi"
+      url: "https://whc.unesco.org/en/list/1022/"
+      quote: "the former palace of the Kabakas of Buganda, built in 1882 and converted into the royal burial ground in 1884"
     - title: "Daily Monitor: Uganda loses key heritage site (2010)"
       url: "https://www.monitor.co.ug/uganda/news/national/uganda-loses-key-heritage-site-1470842"
-      quote: "Kabaka Mutesa I (1835-1884), who was buried at his palace, thereby breaking the tradition of being buried in his former palace"
-    - title: "The Observer (Kampala): A tour of the refurbished Kasubi tombs (2024)"
-      url: "https://observer.ug/lifestyle-entertainment/a-tour-of-the-refurbished-kasubi-tombs-ahead-of-their-official-reopening/"
-      quote: "Kabaka Muteesa I was the first king of Buganda to be buried at Kasubi. He ruled Buganda from 1856 to 1884."
-    - title: "UNESCO World Heritage Centre: Kasubi removed from the List of World Heritage in Danger (2023)"
-      url: "https://whc.unesco.org/en/news/2607/"
-      quote: "built in 1882 and transformed into a royal cemetery in 1884"
+      quote: "Kasubi was initially the palace for Kabaka Mutesa I (1835-1884), who was buried at his palace"
 - card: kasubi-tombs
   fact: "Three successors were buried there too: Mwanga II, Daudi Chwa II and Mutesa II."
   sources:
@@ -329,9 +293,9 @@
     - title: "UNESCO World Heritage Centre: Tombs of Buganda Kings at Kasubi"
       url: "https://whc.unesco.org/en/list/1022/"
       quote: "The main tomb building, which is circular and surmounted by a dome, is a major example of an architectural achievement that was raised with use of vegetal materials comprised of wooden poles, spear grass, reeds and wattle."
-    - title: "The Observer (Kampala): A tour of the refurbished Kasubi tombs (2024)"
-      url: "https://observer.ug/lifestyle-entertainment/a-tour-of-the-refurbished-kasubi-tombs-ahead-of-their-official-reopening/"
-      quote: "it is a pack of culture, tradition and norms with every reed, bark cloth, thatching grass and pole that went into it"
+    - title: "Daily Monitor: Uganda loses key heritage site (2010)"
+      url: "https://www.monitor.co.ug/uganda/news/national/uganda-loses-key-heritage-site-1470842"
+      quote: "four previous Kabakas (kings) of Buganda Kingdom were buried in the dome-shaped main building named Muzibu Azaala Mpanga"
 - card: kasubi-tombs
   fact: "A bark-cloth curtain screens the 'forest' where the kings lie; only a few, the widows of the kabakas among them, may pass."
   sources:
@@ -351,26 +315,23 @@
       url: "https://www.monitor.co.ug/uganda/news/national/unesco-removes-uganda-tombs-from-endangered-heritage-list-4367036"
       quote: "the tombs were declared a UNESCO World Heritage Site in 2001"
 - card: kasubi-tombs
-  fact: "Fire destroyed the main house on the evening of 16 March 2010."
+  fact: "Fire destroyed the main house on 16 March 2010."
   sources:
     - title: "The Observer (Kampala): A tour of the refurbished Kasubi tombs (2024)"
       url: "https://observer.ug/lifestyle-entertainment/a-tour-of-the-refurbished-kasubi-tombs-ahead-of-their-official-reopening/"
       quote: "The tombs were obliterated by fire on March, 16, 2010 at around 8:30 pm"
-    - title: "Daily Monitor / AFP: UNESCO removes Uganda tombs from endangered heritage list (2023)"
-      url: "https://www.monitor.co.ug/uganda/news/national/unesco-removes-uganda-tombs-from-endangered-heritage-list-4367036"
-      quote: "Fire destroys Kasubi tombs National Mar 16, 2010... But a 2010 fire devastated the site"
-    - title: "UNESCO World Heritage Centre: Kasubi removed from the List of World Heritage in Danger (2023)"
-      url: "https://whc.unesco.org/en/news/2607/"
-      quote: "In 2010, a violent fire devastated the Tombs of the Kings of Buganda at Kasubi"
+    - title: "Daily Monitor: Uganda loses key heritage site (2010)"
+      url: "https://www.monitor.co.ug/uganda/news/national/uganda-loses-key-heritage-site-1470842"
+      quote: "The Kasubi tombs, which were torched Tuesday by a mysterious fire"
 - card: kasubi-tombs
   fact: "After the fire UNESCO placed Kasubi on the List of World Heritage in Danger."
   sources:
     - title: "UNESCO World Heritage Centre: Kasubi removed from the List of World Heritage in Danger (2023)"
       url: "https://whc.unesco.org/en/news/2607/"
       quote: "The site was then placed on the List of World Heritage in Danger"
-    - title: "Daily Monitor / AFP: UNESCO removes Uganda tombs from endangered heritage list (2023)"
-      url: "https://www.monitor.co.ug/uganda/news/national/unesco-removes-uganda-tombs-from-endangered-heritage-list-4367036"
-      quote: "it was placed on the danger list while reconstruction began with the help of international funding"
+    - title: "The Observer (Kampala), Ernest Jjingo: Kasubi tombs to reopen to the public this December (3 September 2023)"
+      url: "https://observer.ug/business/kasubi-tombs-reopen-to-the-public-this-december-after-13-years-of-reconstruction/"
+      quote: "Following the fire, the United Nations Educational, Scientific and Cultural Organization (UNESCO) included Kasubi tombs on llst of world heritages in danger."
 - card: kasubi-tombs
   fact: "The rebuilding used traditional materials and passed building skills to a younger generation."
   sources:
@@ -380,18 +341,15 @@
     - title: "The Observer (Kampala): A tour of the refurbished Kasubi tombs (2024)"
       url: "https://observer.ug/lifestyle-entertainment/a-tour-of-the-refurbished-kasubi-tombs-ahead-of-their-official-reopening/"
       quote: "it is a pack of culture, tradition and norms with every reed, bark cloth, thatching grass and pole that went into it"
-    - title: "UNESCO World Heritage Centre: Tombs of Buganda Kings at Kasubi"
-      url: "https://whc.unesco.org/en/list/1022/"
-      quote: "the cultural traditions associated with building in poles, spear grass, reeds and wattle are still vibrant and will allow the recreation of this tomb building"
 - card: kasubi-tombs
-  fact: "Reconstruction was completed in summer 2023 with a fire-fighting system and trained volunteer firefighters."
+  fact: "By 2023 the main house had been rebuilt, with a fire-fighting system and volunteer firefighters trained among the community."
   sources:
     - title: "UNESCO World Heritage Centre: Kasubi removed from the List of World Heritage in Danger (2023)"
       url: "https://whc.unesco.org/en/news/2607/"
       quote: "This reconstruction programme was completed in the summer of 2023... the introduction of a sophisticated fire-fighting system and the training of volunteer fire-fighters from the local community"
-    - title: "Daily Monitor / AFP: UNESCO removes Uganda tombs from endangered heritage list (2023)"
-      url: "https://www.monitor.co.ug/uganda/news/national/unesco-removes-uganda-tombs-from-endangered-heritage-list-4367036"
-      quote: "It was completed in the summer of 2023... the establishment of an advanced fire-fighting system and the training of volunteer firefighters among residents"
+    - title: "The Observer (Kampala), Ernest Jjingo: Kasubi tombs to reopen to the public this December (3 September 2023)"
+      url: "https://observer.ug/business/kasubi-tombs-reopen-to-the-public-this-december-after-13-years-of-reconstruction/"
+      quote: "the kingdom has now installed firefighting equipment around the tomb premises... as well as training all the people who live within the tombs on how to use these equipment in case of a fire outbreak"
 - card: kasubi-tombs
   fact: "On 12 September 2023 the site was removed from the danger list."
   sources:
@@ -419,9 +377,6 @@
     - title: "Nancie L. Gonzalez, Garifuna, Encyclopedia of World Cultures"
       url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/garifuna"
       quote: "Today they live in some sixty settlements on the coastline between Gracias a Dios in Nicaragua and Dangriga, Belize... Many have emigrated to the United States"
-    - title: "Smithsonian Folklife Festival 2013: Garifuna"
-      url: "https://festival.si.edu/2013/one-world-many-voices/language-communities/garifuna/smithsonian"
-      quote: "Today, they live primarily in Honduras, Guatemala, Belize, Nicaragua, St. Vincent, and the United States."
 - card: garifuna
   fact: "The Garifuna are of mixed indigenous Caribbean and African origin."
   sources:
@@ -458,9 +413,6 @@
     - title: "Nancie L. Gonzalez, Garifuna, Encyclopedia of World Cultures"
       url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/garifuna"
       quote: "In 1797 those with the darkest skin color, (termed \"Black Carib\") mostly resident on Saint Vincent, were forcibly removed from that island and sent to Spanish Honduras."
-    - title: "UNESCO ICH: Language, dance and music of the Garifuna"
-      url: "https://ich.unesco.org/en/RL/language-dance-and-music-of-the-garifuna-00001"
-      quote: "the Garifuna settled along the Atlantic coast of Central America after being forced to flee from the Caribbean island of Saint Vincent in the eighteenth century"
 - card: garifuna
   fact: "In 2001 UNESCO's first proclamation of nineteen Masterpieces of the Oral and Intangible Heritage of Humanity included the language, dance and music of the Garifuna."
   sources:
@@ -470,9 +422,6 @@
     - title: "UNESCO ICH: Language, dance and music of the Garifuna"
       url: "https://ich.unesco.org/en/RL/language-dance-and-music-of-the-garifuna-00001"
       quote: "Inscribed in 2008 ( 3.COM ) on the Representative List of the Intangible Cultural Heritage of Humanity (originally proclaimed in 2001)"
-    - title: "Smithsonian Folklife Festival 2013: Garifuna"
-      url: "https://festival.si.edu/2013/one-world-many-voices/language-communities/garifuna/smithsonian"
-      quote: "UNESCO proclaimed Garifuna language, dance, and music a Masterpiece of the Oral and Intangible Heritage of Humanity in 2001."
 - card: garifuna
   fact: "UNESCO warned that migration, discrimination and the language's near absence from schools threatened it."
   sources:
@@ -483,21 +432,18 @@
       url: "https://www.theartnewspaper.com/2001/12/01/masterpieces-of-oral-and-intangible-heritage-of-humanity-a-new-list-by-unesco"
       quote: "Their language (a blend of African and Caribbean) is taught in only one Belizean village."
 - card: saramaccan
-  fact: "Saramaccan is a creole spoken by the Saramaka and Matawai maroons of Suriname, whose villages lie on the upper Suriname River."
+  fact: "Saramaccan is a creole spoken in the rainforest interior of Suriname by two maroon peoples, the Saramaka and the Matawai."
   sources:
+    - title: "Encyclopaedia Britannica, Salikoko S. Mufwene: Saramaccan"
+      url: "https://www.britannica.com/topic/Saramaccan"
+      quote: "Saramaccan , creole language spoken by the Saramaccan and Matawai peoples of Suriname"
     - title: "APiCS Online: Saramaccan"
       url: "https://apics-online.info/surveys/3"
-      quote: "Saramaccan is a maroon creole language spoken in Surinam... Saramaccan dialects are spoken by the Saramaccan and Matawai tribes."
-    - title: "Encyclopaedia Britannica: Saramaccan"
-      url: "https://www.britannica.com/topic/Saramaccan"
-      quote: "creole language spoken by the Saramaccan and Matawai peoples of Suriname"
-    - title: "Inter-American Court of Human Rights: Saramaka People v. Suriname, judgment of 28 November 2007"
-      url: "https://www.corteidh.or.cr/docs/casos/articulos/seriec_172_ing.pdf"
-      quote: "spread over 63 communities on the Upper Suriname River"
+      quote: "Saramaccan dialects are spoken by the Saramaccan and Matawai tribes."
 - card: saramaccan
   fact: "Its foundation is the English of the colonists who held Suriname from 1651 to 1667."
   sources:
-    - title: "Encyclopaedia Britannica: Saramaccan"
+    - title: "Encyclopaedia Britannica, Salikoko S. Mufwene: Saramaccan"
       url: "https://www.britannica.com/topic/Saramaccan"
       quote: "its foundations lie in the nonstandard varieties of English spoken by British colonists who controlled Suriname from 1651 to 1667"
     - title: "APiCS Online: Saramaccan"
@@ -506,7 +452,7 @@
 - card: saramaccan
   fact: "A large share of its vocabulary is Portuguese."
   sources:
-    - title: "Encyclopaedia Britannica: Saramaccan"
+    - title: "Encyclopaedia Britannica, Salikoko S. Mufwene: Saramaccan"
       url: "https://www.britannica.com/topic/Saramaccan"
       quote: "Portuguese words make up almost 40 percent of its vocabulary"
     - title: "APiCS Online: Saramaccan"
@@ -515,7 +461,7 @@
 - card: saramaccan
   fact: "Much of its grammar is African."
   sources:
-    - title: "Encyclopaedia Britannica: Saramaccan"
+    - title: "Encyclopaedia Britannica, Salikoko S. Mufwene: Saramaccan"
       url: "https://www.britannica.com/topic/Saramaccan"
       quote: "having a greater proportion of syntactic patterns that reflect the influence of the African substrate languages"
     - title: "APiCS Online: Saramaccan"
@@ -524,7 +470,7 @@
 - card: saramaccan
   fact: "It uses pitch: high and low tones distinguish words, as in West African languages."
   sources:
-    - title: "Encyclopaedia Britannica: Saramaccan"
+    - title: "Encyclopaedia Britannica, Salikoko S. Mufwene: Saramaccan"
       url: "https://www.britannica.com/topic/Saramaccan"
       quote: "Saramaccan also preserves an African system of pitches or tones , with a high pitch (marked by an acute accent) distinguished from a low pitch"
     - title: "APiCS Online: Saramaccan"
@@ -533,7 +479,7 @@
 - card: saramaccan
   fact: "Portuguese-speaking Jewish planters arrived in the 1660s with enslaved people."
   sources:
-    - title: "Encyclopaedia Britannica: Saramaccan"
+    - title: "Encyclopaedia Britannica, Salikoko S. Mufwene: Saramaccan"
       url: "https://www.britannica.com/topic/Saramaccan"
       quote: "Shortly before the Dutch took over the colony in 1667, 200 Portuguese-speaking Jews from Brazil emigrated with their slaves"
     - title: "APiCS Online: Saramaccan"
@@ -542,24 +488,21 @@
 - card: saramaccan
   fact: "The language formed on plantations; people escaped into the interior and built autonomous communities."
   sources:
-    - title: "Encyclopaedia Britannica: Saramaccan"
+    - title: "Encyclopaedia Britannica, Salikoko S. Mufwene: Saramaccan"
       url: "https://www.britannica.com/topic/Saramaccan"
       quote: "it was plantations that provided the requisite and sufficient conditions for the emergence of this creole... escapees from among the enslaved must have taken the plantation varieties into the Maroon colonies"
     - title: "Inter-American Court of Human Rights: Saramaka People v. Suriname, judgment of 28 November 2007"
       url: "https://www.corteidh.or.cr/docs/casos/articulos/seriec_172_ing.pdf"
       quote: "Their ancestors escaped to the interior regions of the country where they established autonomous communities."
-    - title: "APiCS Online: Saramaccan"
-      url: "https://apics-online.info/surveys/3"
-      quote: "1690–1695 the first mass escapes of slaves to form the Saramaccan tribe, in particular from Jewish plantations"
 - card: saramaccan
   fact: "Saramaccan split away from the coastal plantation creole (Sranan)."
   sources:
     - title: "APiCS Online: Saramaccan"
       url: "https://apics-online.info/surveys/3"
       quote: "Saramaccan and Nengee arouse out of Surinam's most important plantation creole, Sranan"
-    - title: "APiCS Online: Sranan (Winford and Plag)"
-      url: "https://apics-online.info/surveys/2"
-      quote: "Modern Sranan is a direct continuation of this early contact language while the maroon creoles split off from it after their founders escaped from the Surinamese plantations"
+    - title: "Encyclopaedia Britannica, Salikoko S. Mufwene: Saramaccan"
+      url: "https://www.britannica.com/topic/Saramaccan"
+      quote: "escapees from among the enslaved must have taken the plantation varieties into the Maroon colonies"
 - card: saramaccan
   fact: "In 1762 the Dutch signed a peace treaty with the Saramaka."
   sources:
@@ -581,7 +524,7 @@
 - card: saramaccan
   fact: "Like Papiamento, Saramaccan is a creole that uses tone."
   sources:
-    - title: "Encyclopaedia Britannica: Saramaccan"
+    - title: "Encyclopaedia Britannica, Salikoko S. Mufwene: Saramaccan"
       url: "https://www.britannica.com/topic/Saramaccan"
       quote: "Like Papiamentu , Saramaccan also preserves an African system of pitches or tones"
     - title: "APiCS Online: Papiamentu"
@@ -605,9 +548,6 @@
     - title: "John M. Lipski, The 'new' Palenquero (2012)"
       url: "https://johnlipski.github.io/newpal.pdf"
       quote: "fled to the partially forested interior some 60 km to the south"
-    - title: "UNESCO ICH: Cultural space of Palenque de San Basilio"
-      url: "https://ich.unesco.org/en/RL/cultural-space-of-palenque-de-san-basilio-00102"
-      quote: "The village of Palenque de San Basilio... is located in the foothills of the Montes de María, southeast of the regional capital, Cartagena."
 - card: palenquero
   fact: "Its vocabulary is mostly Spanish but its grammar bears the stamp of Bantu languages, above all Kikongo, spoken by many founders."
   sources:
@@ -617,9 +557,6 @@
     - title: "APiCS Online, Armin Schwegler: Palenquero"
       url: "https://apics-online.info/surveys/48"
       quote: "the core of its population consisted of Kikongo speakers... Its daily lexicon is almost entirely Spanish-based"
-    - title: "John M. Lipski, The 'new' Palenquero (2012)"
-      url: "https://johnlipski.github.io/newpal.pdf"
-      quote: "strongly influenced by Kikongo... many of the founders were speakers of Central African Bantu languages, particularly Kikongo"
 - card: palenquero
   fact: "It is the only Spanish-based creole on the South American mainland."
   sources:
@@ -647,9 +584,6 @@
     - title: "APiCS Online, Armin Schwegler: Palenquero"
       url: "https://apics-online.info/surveys/48"
       quote: "Throughout much of the 20th century, its creole was heavily stigmatized... Between 1970 and 2000 this led younger generations to abandon Palenquero in favour of Spanish."
-    - title: "UNESCO ICH: Cultural space of Palenque de San Basilio"
-      url: "https://ich.unesco.org/en/RL/cultural-space-of-palenque-de-san-basilio-00102"
-      quote: "Outside Palenque, inhabitants are commonly subjected to discrimination and ethnic stereotyping"
 - card: palenquero
   fact: "Linguists predicted the language's death, but young Palenqueros took it up again as a sign of pride."
   sources:
@@ -676,7 +610,7 @@
       quote: "Palenque has been a bilingual (Spanish/ Palenquero ) community for about three hundred years."
     - title: "John M. Lipski, The 'new' Palenquero (2012)"
       url: "https://johnlipski.github.io/newpal.pdf"
-      quote: "although the community was still bilingual"
+      quote: "Ever since that time the community has been bilingual, with the Palenquero language deliberately maintained and taught to succeeding generations... preserved for more than three hundred years"
 - card: black-dispatches
   fact: "Black people, enslaved and free, were among the Union's best sources of intelligence on the Confederacy."
   sources:
@@ -694,7 +628,7 @@
       quote: "Black Dispatches: Black American Contributions to Union Intelligence During the Civil War... P. K. Rose"
     - title: "Open Library: Black dispatches, P. K. Rose (CIA, 1999)"
       url: "https://openlibrary.org/search?q=black+dispatches+rose"
-      quote: "\"author_name\":[\"P. K. Rose\"],\"first_publish_year\":1999,\"publisher\":[\"CIA\"],\"title\":\"Black dispatches\""
+      quote: "\"author_name\":[\"P. K. Rose\"]... \"first_publish_year\":1999... \"title\":\"Black dispatches\""
 - card: black-dispatches
   fact: "Elizabeth Van Lew ran a Union spy ring in Richmond in which free and enslaved Black people were vital members."
   sources:
@@ -776,60 +710,42 @@
     - title: "National Park Service, Richmond NBP: Mary Jane Richards"
       url: "https://home.nps.gov/rich/learn/historyculture/mary-jane-richards.htm"
       quote: "St. John's Church recorded the marriage of Wilson Bowser... By 1867, Richards appears in the records of the Freedmen's Bureau"
-    - title: "American Battlefield Trust: Mary Jane Richards"
-      url: "https://www.battlefields.org/node/499"
-      quote: "On May 17, 1846, Mary Jane was baptized in St. John's Church"
 - card: bassa-vah
   fact: "Bassa Vah is an alphabet for Bassa, a tonal language of Liberia, written left to right with 23 consonants, 7 vowels and 5 tone marks."
   sources:
     - title: "The Unicode Standard 17.0, chapter 19: Bassa Vah"
       url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/"
       quote: "The Bassa Vah script is used for the tonal Bassa language of Liberia... Modern Bassa Vah is a simple alphabetic script, written from left to right, consisting of 23 consonants, 7 vowels, and 5 tone marks."
-    - title: "Michael Everson and Charles Riley: Final proposal for encoding the Bassa Vah script (2010)"
-      url: "https://www.unicode.org/L2/L2010/10382r-n3941r-bassavah.pdf"
-      quote: "Bassa Vah is a simple alphabetic script, written from left to right. Vowels in Bassa Vah are written as letters with obligatory diacritical marks which indicate the tone of the vowel."
+    - title: "SIL International, Writing Systems Information (formerly ScriptSource): Bassa Vah"
+      url: "https://writingsystems.info/scrlang/scripts/bass/"
+      quote: "the script consists of 23 consonants and 7 vowels... This is done by means of 5 tone marks, which are written inside the vowel characters."
 - card: bassa-vah
-  fact: "Tone marks sit inside each vowel letter and are obligatory; a word without its tone is misspelled."
+  fact: "The tone marks are written inside the vowel letters."
   sources:
-    - title: "Michael Everson and Charles Riley: Final proposal for encoding the Bassa Vah script (2010)"
-      url: "https://www.unicode.org/L2/L2010/10382r-n3941r-bassavah.pdf"
-      quote: "These marks are positioned on the interior of the largest partially or wholly enclosed space of each vowel glyph... Because the tone is obligatory (a Bassa word is misspelled without it)"
     - title: "The Unicode Standard 17.0, chapter 19: Bassa Vah"
       url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/"
       quote: "the vowel letters are always written with tone marks; these marks are placed in a central open area of each vowel glyph"
+    - title: "SIL International, Writing Systems Information (formerly ScriptSource): Bassa Vah"
+      url: "https://writingsystems.info/scrlang/scripts/bass/"
+      quote: "This is done by means of 5 tone marks, which are written inside the vowel characters."
 - card: bassa-vah
   fact: "Its modern form is owed to Thomas Flo Lewis, a Bassa from Liberia who studied in Syracuse, New York, in the early 20th century."
   sources:
     - title: "Michael Everson and Charles Riley: Final proposal for encoding the Bassa Vah script (2010)"
       url: "https://www.unicode.org/L2/L2010/10382r-n3941r-bassavah.pdf"
       quote: "The Vah script of the Bassa owes most of its development and current form to Thomas Flo Lewis... Dr Lewis, a Bassa from Liberia, studied in Syracuse for several years."
-    - title: "Charles Riley, Encoding the Bassa Vah script of Liberia, The Digital Orientalist (2018)"
-      url: "https://digitalorientalist.com/2018/11/12/encoding-the-bassa-vah-script-of-liberia/"
-      quote: "a formalization of the script by Dr. Thomas Flo Lewis... He was a medical student from Liberia studying in Syracuse, New York."
     - title: "Melvin Barrolle, SYLFF final report (2012)"
       url: "https://www.sylff.org/pdf/fellows/2011_mb_34.pdf"
-      quote: "Thomas Lewis admitted to the Syracuse University Post-Herald that his birthdate... was unknown to him. H estimated that he was \"between 27 and 28\" years of age in 1907."
+      quote: "Based on archival records, this was done during his time at Syracuse University."
 - card: bassa-vah
-  fact: "From around 1907 he had type made and printed texts in the script."
+  fact: "While in Syracuse he had texts in the script printed, and he is credited with bringing it into print and spreading it."
   sources:
     - title: "Michael Everson and Charles Riley: Final proposal for encoding the Bassa Vah script (2010)"
       url: "https://www.unicode.org/L2/L2010/10382r-n3941r-bassavah.pdf"
       quote: "who worked with the typesetting of it beginning as early as 1907, producing various texts in the script through at least the 1930's"
-    - title: "Charles Riley, Encoding the Bassa Vah script of Liberia, The Digital Orientalist (2018)"
-      url: "https://digitalorientalist.com/2018/11/12/encoding-the-bassa-vah-script-of-liberia/"
-      quote: "He made use of the printing presses at Lyman Brothers in Syracuse."
-    - title: "The Unicode Standard 17.0, chapter 19: Bassa Vah"
-      url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/"
-      quote: "he also arranged for the production of a typesetting machine and primers for Vah"
-- card: bassa-vah
-  fact: "Back in Liberia he taught the script to students."
-  sources:
-    - title: "The Unicode Standard 17.0, chapter 19: Bassa Vah"
-      url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/"
-      quote: "on his return to Liberia promoted education in the script"
-    - title: "Michael Everson and Charles Riley: Final proposal for encoding the Bassa Vah script (2010)"
-      url: "https://www.unicode.org/L2/L2010/10382r-n3941r-bassavah.pdf"
-      quote: "He returned for some time to Liberia in the 1910's and 1920's, and... taught many students"
+    - title: "Melvin Barrolle, SYLFF final report (2012)"
+      url: "https://www.sylff.org/pdf/fellows/2011_mb_34.pdf"
+      quote: "Lewis began working on rendering the script as a syllabary with the assistance of a printing press. Based on archival records, this was done during his time at Syracuse University."
 - card: bassa-vah
   fact: "Tradition holds that an older sign system survived among Bassa enslaved in the Americas and that Lewis met their descendants; documentary proof is lacking."
   sources:
@@ -839,9 +755,6 @@
     - title: "Melvin Barrolle, SYLFF final report (2012)"
       url: "https://www.sylff.org/pdf/fellows/2011_mb_34.pdf"
       quote: "Allegedly, Lewis serendipitously encountered descendants of the Bassa peoples (whose ancestors were captured and taken to that region for forced labor) in the region who had managed to preserve the script in its rudimentary form."
-    - title: "Michael Everson and Charles Riley: Final proposal for encoding the Bassa Vah script (2010)"
-      url: "https://www.unicode.org/L2/L2010/10382r-n3941r-bassavah.pdf"
-      quote: "an older code of pictograms that was in use among the Bassa, for which there is little supporting documentary evidence"
 - card: bassa-vah
   fact: "Lewis died in 1935."
   sources:
@@ -852,25 +765,7 @@
       url: "https://digitalorientalist.com/2018/11/12/encoding-the-bassa-vah-script-of-liberia/"
       quote: "it may have originated with Lewis, who died in 1935"
 - card: bassa-vah
-  fact: "The texts he printed survive only as rare fragments."
-  sources:
-    - title: "Charles Riley, Encoding the Bassa Vah script of Liberia, The Digital Orientalist (2018)"
-      url: "https://digitalorientalist.com/2018/11/12/encoding-the-bassa-vah-script-of-liberia/"
-      quote: "Most of the texts that are known in the Bassa Vah script are fragmentary and incomplete"
-    - title: "Michael Everson and Charles Riley: Final proposal for encoding the Bassa Vah script (2010)"
-      url: "https://www.unicode.org/L2/L2010/10382r-n3941r-bassavah.pdf"
-      quote: "There is evidence of texts being produced in both places, although it is not known whether any of the texts from this period (1907-ca.1935) still exist."
-- card: bassa-vah
-  fact: "The alphabet was kept up by Bassa teachers and scholars in Liberia and abroad."
-  sources:
-    - title: "Michael Everson and Charles Riley: Final proposal for encoding the Bassa Vah script (2010)"
-      url: "https://www.unicode.org/L2/L2010/10382r-n3941r-bassavah.pdf"
-      quote: "Since 1959, the script has been promoted through the Bassa Vah Association and United Bassa Organizations in the Americas (UNIBOA), and by individuals including Karnga, Dr Joseph M. N. Gbadyu, Dr Syrulwa Somah, and Varnie N'jola Karmo"
-    - title: "Charles Riley, Encoding the Bassa Vah script of Liberia, The Digital Orientalist (2018)"
-      url: "https://digitalorientalist.com/2018/11/12/encoding-the-bassa-vah-script-of-liberia/"
-      quote: "held in private hands by the elder Abba Karnga and the late Joseph Gbadyu... Varnie Karmo of Indiana"
-- card: bassa-vah
-  fact: "Bassa Vah entered the Unicode Standard in version 7.0 in June 2014, alongside other African scripts such as Mende Kikakui and Vai."
+  fact: "Bassa Vah entered the Unicode Standard in version 7.0 in June 2014."
   sources:
     - title: "Unicode Consortium: Unicode 7.0.0"
       url: "https://www.unicode.org/versions/Unicode7.0.0/"
@@ -878,9 +773,6 @@
     - title: "Charles Riley, Encoding the Bassa Vah script of Liberia, The Digital Orientalist (2018)"
       url: "https://digitalorientalist.com/2018/11/12/encoding-the-bassa-vah-script-of-liberia/"
       quote: "The final version of the standardized Bassa Vah character repertoire was voted on and added to the 7.0 release of the Unicode Standard in June of 2014."
-    - title: "The Unicode Standard 17.0, chapter 19: Bassa Vah"
-      url: "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/"
-      quote: "Vai is a syllabic script used for the Vai language in Liberia and Sierra Leone... Modern Bassa Vah is an alphabetic script developed early in the 20th century. Mende Kikakui is a right-to-left script used for writing Mende."
 - card: sranan-tongo
   fact: "Sranan Tongo is the common language of Suriname, spoken by almost everyone as a first or second language."
   sources:
@@ -905,9 +797,6 @@
     - title: "Encyclopaedia Britannica: Sranan"
       url: "https://www.britannica.com/topic/Sranan"
       quote: "the ultimate origins of Sranan lie in the nonstandard varieties of English spoken by colonists... although at all times under heavy Dutch influence... both were equally influenced by the African languages spoken by slaves"
-    - title: "APiCS Online: Early Sranan"
-      url: "https://apics-online.info/surveys/1"
-      quote: "multiple historical documents in and on the languages of the enslaved people of African descent in Suriname"
     - title: "APiCS Online: Saramaccan"
       url: "https://apics-online.info/surveys/3"
       quote: "1660–1665 Sranan creolized from Caribbean Plantation Pidgin English"
@@ -930,17 +819,14 @@
       url: "https://www.britannica.com/topic/Sranan"
       quote: "during the period of English control (1651–67)"
 - card: sranan-tongo
-  fact: "In 1667 the Dutch seized the colony and most English planters left."
+  fact: "In 1667 the Dutch seized the colony."
   sources:
-    - title: "APiCS Online: Early Sranan"
-      url: "https://apics-online.info/surveys/1"
-      quote: "In February 1667, Abraham Crijnsen seized control of the colony on behalf of Zealand... mass departure of the English and Irish planters"
-    - title: "APiCS Online: Saramaccan"
-      url: "https://apics-online.info/surveys/3"
-      quote: "1668–1675 80% of the English colonists leave with around 1400 slaves"
     - title: "Encyclopaedia Britannica: Sranan"
       url: "https://www.britannica.com/topic/Sranan"
       quote: "When the Dutch took over Suriname in 1667"
+    - title: "APiCS Online: Early Sranan"
+      url: "https://apics-online.info/surveys/1"
+      quote: "In February 1667, Abraham Crijnsen seized control of the colony on behalf of Zealand... mass departure of the English and Irish planters"
 - card: sranan-tongo
   fact: "The Dutch kept the English-based vernacular as the language for communicating with the enslaved."
   sources:
@@ -956,9 +842,9 @@
     - title: "APiCS Online: Sranan (Winford and Plag)"
       url: "https://apics-online.info/surveys/2"
       quote: "the maroon creoles split off from it after their founders escaped from the Surinamese plantations"
-    - title: "APiCS Online: Saramaccan"
-      url: "https://apics-online.info/surveys/3"
-      quote: "Saramaccan and Nengee arouse out of Surinam's most important plantation creole, Sranan"
+    - title: "Encyclopaedia Britannica, Salikoko S. Mufwene: Saramaccan"
+      url: "https://www.britannica.com/topic/Saramaccan"
+      quote: "escapees from among the enslaved must have taken the plantation varieties into the Maroon colonies"
 - card: sranan-tongo
   fact: "Sranan long had less prestige than Dutch but has become a symbol of Surinamese identity and national language."
   sources:

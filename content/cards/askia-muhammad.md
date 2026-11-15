@@ -27,4 +27,4 @@ He made Islam the religion of the state. In 1496 he set off on pilgrimage to Mec
 
 His sons ended his reign. In 1528, old and nearly blind, he was deposed and his eldest son took the throne as Askia Musa; later the old man was exiled to an island in the Niger. In 1537 another son, Ismail, came to power and brought him back to Gao, where he died in 1538.
 
-He was buried in Gao beneath the earthen pyramid he had built, which still stands. His reign is told in two chronicles, the Tarikh al-Sudan and the Tarikh al-Fattash, from the same world of learning as the [[timbuktu-manuscripts|Timbuktu manuscripts]].
+He was buried in Gao beneath the earthen pyramid he had built, which still stands. His reign is told in two chronicles of the Songhai world, the Tarikh al-Sudan and the Tarikh al-Fattash.

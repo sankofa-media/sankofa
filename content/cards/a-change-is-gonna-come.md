@@ -2,7 +2,7 @@
 id: a-change-is-gonna-come
 kind: work
 title: "\"A Change Is Gonna Come\" (Sam Cooke, 1964)"
-wow: "Turned away from a Shreveport Holiday Inn despite a reservation and jailed for disturbing the peace, Sam Cooke wrote a song that came to him whole; its single was issued only after he was shot dead."
+wow: "Turned away from a Shreveport Holiday Inn despite a reservation and jailed for disturbing the peace, Sam Cooke wrote a song that came to him almost as in a dream; its single was issued only after he was shot dead."
 years: [1963, 1964]
 places:
   - {name: "Shreveport, Louisiana", lat: 32.5252, lon: -93.7502}
@@ -28,6 +28,6 @@ sources:
 
 In the autumn of 1963, on a Southern tour, Cooke arrived at a Holiday Inn in Shreveport, Louisiana, where he had booked rooms. He and his party were turned away. Cooke protested angrily, and he and his companions were arrested for disturbing the peace.
 
-Within a month or two he had the song. It came to him almost whole, and he gave the arranger René Hall a free hand: strings, horns and timpani, like a film score. It appeared on the album Ain't That Good News in March 1964. In December, just before it was due out as a single, Cooke was shot dead at a motel in Los Angeles. The single came out after his death.
+Within a month or two he had the song. He told friends it had come to him almost as in a dream, and he gave the arranger René Hall a free hand: strings, horns and timpani, like a film score. It appeared on the album Ain't That Good News in March 1964. In December, just before it was due out as a single, Cooke was shot dead at a motel in Los Angeles. The single came out after his death.
 
 The movement took up the song at once, and its slow promise that change will come has outlived its singer.

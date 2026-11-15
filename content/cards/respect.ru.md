@@ -1,7 +1,7 @@
 ---
 title: "«Respect» (Арета Франклин, 1967)"
 wow: "Отис Реддинг написал её как требование мужчины; Арета Франклин с сестрой Кэролин превратили его в требование женщины, добавили «sock it to me» и вывели песню на первое место. Реддинг сказал публике на фестивале, что девушка отняла у него песню."
-places: ["Студия Atlantic Recording, Нью-Йорк", "Монтерей, Калифорния"]
+places: ["Нью-Йорк", "Монтерей, Калифорния"]
 further:
   - "Aretha Franklin, I Never Loved a Man the Way I Love You (Atlantic, 1967)"
   - "Otis Redding, Otis Blue: Otis Redding Sings Soul (Volt/Stax, 1965)"

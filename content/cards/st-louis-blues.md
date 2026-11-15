@@ -2,7 +2,7 @@
 id: st-louis-blues
 kind: work
 title: "\"St. Louis Blues\" (W. C. Handy, 1914)"
-wow: "A Memphis bandleader tucked a tango into a blues to fool the dancers, and it became one of the most recorded songs in history."
+wow: "A Memphis bandleader put a tango into a blues, and it became one of the most recorded songs in history."
 years: [1914, 1925]
 places:
   - {name: "Memphis, Tennessee", lat: 35.1390, lon: -90.0510}
@@ -20,7 +20,9 @@ sources:
   - {title: "JazzStandards.com: St. Louis Blues (1914)", url: "https://www.jazzstandards.com/compositions-0/stlouisblues.htm"}
   - {title: "NPR, Margaret Howze: The NPR 100: 'St. Louis Blues' (2000)", url: "https://www.npr.org/2000/01/16/1069234/st-louis-blues"}
   - {title: "University of Pittsburgh, Voices Across Time: St. Louis Blues", url: "https://voices.pitt.edu/TeachersGuide/Unit%206/StLouisBlues.htm"}
+  - {title: "Tennessee Encyclopedia, Teresa Biddle-Douglass: William Christopher \"W. C.\" Handy", url: "https://tennesseeencyclopedia.net/entries/william-christopher-handy/"}
+  - {title: "Encyclopaedia Britannica: W.C. Handy", url: "https://www.britannica.com/biography/W-C-Handy"}
 ---
-"St. Louis Blues" is a song W. C. Handy published in 1914, when the blues was moving from Southern performers onto printed sheet music. Handy, a bandleader born in Florence, Alabama, was working in Memphis. In 1892 a vocal quartet he toured with had run out of money and been stranded in St. Louis, and the song's opening line, "I hate to see de evenin' sun go down", came from those days: anyone who had slept on the cobbles by the river there, he wrote, would understand the complaint. He also played a trick on the dancers. The tango was in vogue, so he gave the blues a tango section.
+"St. Louis Blues" is a song W. C. Handy published in 1914, when the blues was moving from Southern performers onto printed sheet music. Handy, a bandleader born in Florence, Alabama, had made his home in Memphis. In the early 1890s, as a young musician on the road, he had been stranded in St. Louis without money, and the hard times there went into the song, which opens with the line "I hate to see de evenin' sun go down". He also gave the blues a section in the rhythm of the tango.
 
-No publisher took the song, so Handy and Harry Pace brought it out through their own firm, Pace & Handy. Sales were modest at first; from around 1921 it became an immense hit. In 1925 Bessie Smith recorded it with Louis Armstrong on cornet, and their slow version set the standard. The song became one of the most recorded compositions in history, and Handy became known as the "Father of the Blues". It carried the [[blues|blues]] from Memphis into dance bands and [[jazz|jazz]] years before [[crazy-blues|"Crazy Blues"]] opened the record market to Black blues singers in 1920.
+Unable to find a publisher for his songs, Handy had gone into business with Harry Pace, and their own firm, Pace & Handy, brought the song out. In 1925 Bessie Smith recorded it with Louis Armstrong on cornet, and their slow version set the standard. The song became one of the most recorded compositions in history, and Handy became known as the "Father of the Blues". Published six years before [[crazy-blues|"Crazy Blues"]] opened the record market to Black blues singers in 1920, it carried the [[blues|blues]] into dance bands and [[jazz|jazz]].

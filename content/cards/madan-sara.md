@@ -2,7 +2,7 @@
 id: madan-sara
 kind: object
 title: The Madan Sara
-wow: "Haiti's madan sara, market women named after a chattering bird, buy food at the farm gate and ride it to the city on top of the trucks: the 'centre post' of the country's economy."
+wow: "Haiti's madan sara, market women named after a chattering bird, buy food at the farm gate and ride it to the city on trucks: the 'centre post' of the country's economy."
 years: [1950]
 places:
   - {name: "Croix-des-Bossales market, Port-au-Prince, Haiti", lat: 18.5547, lon: -72.3403}
@@ -21,8 +21,8 @@ sources:
   - {title: "Global Press Journal: Haiti's Women Food Suppliers Face Mounting Pressures", url: "https://globalpressjournal.com/americas/haiti/haitis-women-food-suppliers-face-mounting-pressures/"}
   - {title: "Buala: Markets and Margins, an interview with Etant Dupain", url: "https://www.buala.org/en/face-to-face/markets-and-margins-an-interview-with-etant-dupain"}
 ---
-In Haiti the madan sara are the women traders who move the country's food from the countryside to the towns. A sara buys beans, vegetables or fruit from farmers at the farm gate or in village markets, often with cash advanced before the harvest, and carries the load to bigger markets: above all to Port-au-Prince and its great Croix-des-Bossales market. Haitians call these women the poto mitan, the centre post, of the national economy.
+In Haiti the madan sara are the women traders who move the country's food from the countryside to the towns. A sara buys beans, vegetables or fruit from farmers at the farm gate or in village markets, often with cash advanced before the harvest, and carries the load to bigger markets: above all to Port-au-Prince and its great Croix-des-Bossales market. Haitians call these women the poto mitan, the centre post, of the national economy. In the 1950s the American anthropologist Sidney Mintz became the first scholar to study Haiti's market system closely, and the sara stood at its centre.
 
-Their name comes from a small bird that never stops chattering, and the women, too, carry news and gossip from place to place along with the produce. The familiar picture is a woman riding high on a truck among sacks of produce, and some sara rent a whole truck together to reach the mountain villages.
+Their name comes from a small bird that never stops chattering, and the women, too, carry news and gossip from place to place along with the produce. Many ride to market on trucks among their sacks, and some sara rent a whole truck together to reach the mountain villages.
 
-Their trade has grown harder. Since tariffs were cut in the 1990s, cheap imported food, rice above all, has undercut the local harvests they carry. Gangs now stop the trucks on the roads and "tax" or rob the sara in the markets of Port-au-Prince, and many no longer go to the capital. They still keep much of Haiti fed.
+Their trade has grown harder. Since Haiti cut its import tariffs, cheap imported food, rice above all, has undercut the local harvests they carry. Gangs now stop the trucks on the roads and "tax" or rob the sara in the markets of Port-au-Prince, and many no longer go to the capital. They still keep much of Haiti fed.

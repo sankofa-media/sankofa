@@ -2,7 +2,7 @@
 id: ife-heads
 kind: work
 title: The Ife heads
-wow: "In 1938 an accidental dig beside the king's palace in Ife turned up about eighteen cast heads, in a city whose art had already convinced a German explorer that he had found Atlantis."
+wow: "In 1938 an accidental dig beside the king's palace in Ife turned up a cache of cast heads, in a city whose art had already convinced a German explorer that he had found Atlantis."
 years: [1300, 1938]
 places:
   - {name: "Wunmonije Compound, Ile-Ife, Nigeria", lat: 7.4824, lon: 4.5603}
@@ -28,6 +28,6 @@ Ile-Ife, in southwestern Nigeria, is for the Yoruba the place where the world an
 
 In 1910 the German ethnographer Leo Frobenius dug at Ife. Faced with the beauty of what he found, he decided that such work could only descend from Atlantis, the lost island of Greek legend.
 
-In 1938, digging in the Wunmonije compound near the Ooni's palace, people struck metal by accident. It was a cache of cast heads; in the end about eighteen came from that one spot. The finds caused a sensation in Europe, where many at first assumed that African artists could not have made them.
+In 1938, digging in the Wunmonije compound near the Ooni's palace, people struck metal by accident. It was a cache of cast metal heads; some eighteen such heads from Ife are known today. The finds caused a sensation in Europe, where many at first assumed that African artists could not have made them.
 
-Later excavations dated Ife's sculpture to the 12th–15th centuries and settled the question: it was the work of Ife's own artists. The heads forced Europeans to rethink Africa's place in the history of art.
+Later excavations dated Ife's sculpture to the 12th–15th centuries and settled the question: the heads were the work of Ife's own artists. The heads forced Europeans to rethink Africa's place in the history of art.

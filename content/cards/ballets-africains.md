@@ -27,4 +27,4 @@ In the early 1950s Paris was the capital of the empire that ruled Guinea, and mo
 
 When Guinea became independent in 1958, the government of President Ahmed Sékou Touré made the troupe's artists state employees, and it became the young republic's national ensemble. Its drummers, dancers and acrobats went on to tour the world from New York to Moscow as the face of a new African state. Keïta, meanwhile, became one of Touré's ministers.
 
-The ending is dark. In 1969 the regime, claiming to have uncovered a plot, arrested more than a thousand people, and Keïta, by then a former minister, was among them. He was put to death in prison that same year. The company outlived its founder and kept touring the world for decades, carrying the songs and dances of Guinea to audiences on every continent.
+The ending is dark. In 1969 the regime, claiming to have uncovered a plot, arrested more than a thousand people, and Keïta, by then a former minister, was among them. He died in detention that same year. The company outlived its founder and kept touring the world for decades, carrying the songs and dances of Guinea to audiences on every continent.

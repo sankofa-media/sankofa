@@ -19,7 +19,7 @@ sources:
   - {title: "LACMA: Opon Ifa (Ifa Divination Tray), AC1993.220.6, curatorial notes", url: "https://collections.lacma.org/object/66580"}
   - {title: "Saint Louis Art Museum: Divination Tray (opon Ifá), 145:1996, notes", url: "https://www.slam.org/collection/objects/29099/"}
   - {title: "Encyclopedia of African Religion (SAGE, 2009): Ikin", url: "https://sk.sagepub.com/ency/edvol/embed/africanreligion/chpt/ikin"}
-  - {title: "Encyclopedia of African Religion (SAGE, 2009): Ifa", url: "https://sk.sagepub.com/ency/edvol/embed/africanreligion/chpt/ifa"}
+  - {title: "Duke University, The Sacred Arts of the Black Atlantic (CAAAR collection): Cuban Santería/Ocha and Palo", url: "https://sacredart.caaar.duke.edu/religions/cuban-santeria-ocha-and-palo/"}
   - {title: "Encyclopedia of African Religion (SAGE, 2009): Orunmila", url: "https://sk.sagepub.com/ency/edvol/embed/africanreligion/chpt/orunmila"}
   - {title: "Encyclopedia of African Religion (SAGE, 2009): Babalawo", url: "https://sk.sagepub.com/ency/edvol/embed/africanreligion/chpt/babalawo"}
   - {title: "Glory Oluchi Onyekwusi, Tracing the Origins of Ifá Divination and Its Surprising Parallels with Modern Binary Code, Art Africa (2025)", url: "https://art.africa/art-africa-curatorial-space/news/tracing-the-origins-of-ifa-divination-and-its-surprising-parallels-with-modern-binary-code/"}
@@ -30,4 +30,4 @@ The babalawo casts sixteen sacred palm nuts, the ikin, or throws a divining chai
 
 Each odu opens onto its own verses, the ese, which the babalawo chants in poetic language to the person seeking guidance.
 
-The system crossed the Atlantic: Ifá guides believers in Cuban [[lucumi|Santería]] and Brazilian [[candomble|Candomblé]]. In 2005 UNESCO proclaimed it a Masterpiece of the Oral and Intangible Heritage of Humanity.
+The system crossed the Atlantic: it is consulted across the Americas and the Caribbean, and in Cuba its diviners serve alongside the priests of [[lucumi|Santería]]. In 2005 UNESCO proclaimed it a Masterpiece of the Oral and Intangible Heritage of Humanity.

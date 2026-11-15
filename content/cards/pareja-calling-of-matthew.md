@@ -2,7 +2,7 @@
 id: pareja-calling-of-matthew
 kind: work
 title: "Juan de Pareja, The Calling of Saint Matthew (1661)"
-wow: "Freed by Velázquez, whose enslaved assistant he had been, Juan de Pareja painted himself into his largest canvas, holding a slip of paper with his name and the year 1661."
+wow: "Freed by Velázquez, whose enslaved assistant he had been, Juan de Pareja painted himself into The Calling of Saint Matthew, holding a slip of paper with his name and the year 1661."
 years: [1661]
 places:
   - {name: "Museo del Prado, Madrid", lat: 40.4138, lon: -3.6921}
@@ -15,7 +15,7 @@ edition: both
 further:
   - "Diego Velázquez, Juan de Pareja (1650), Metropolitan Museum of Art, New York"
   - "Juan de Pareja, Afro-Hispanic Painter, exhibition catalogue (Metropolitan Museum of Art, 2023)"
-dispute: "Pareja's status before 1650 is debated: the Metropolitan Museum and Smarthistory follow the notarial act of November 1650 in which Velázquez freed him, while Robert Fikes (BlackPast) argues he was already free. His birth year is given as 1606 or about 1608."
+dispute: "Pareja's status before 1650 is debated: the Metropolitan Museum and Smarthistory follow the notarial act of 1650 by which Velázquez freed him, while Robert Fikes (BlackPast) argues he was already free. His birth year is given as 1606 or about 1608."
 sources:
   - {title: "Metropolitan Museum of Art: Velázquez, Juan de Pareja (ca. 1608–1670), catalogue entry", url: "https://www.metmuseum.org/art/collection/search/437869"}
   - {title: "Metropolitan Museum of Art: Juan de Pareja, The Calling of Saint Matthew (loan record)", url: "https://www.metmuseum.org/art/collection/search/846784"}
@@ -27,9 +27,9 @@ sources:
   - {title: "Robert Fikes, BlackPast: Juan de Pareja (ca. 1606–1670)", url: "https://www.blackpast.org/gah/pareja-juan-de-1606-1670"}
   - {title: "Borja Franco Llopis, review of Juan de Pareja. Afro-hispanic painter, Archivo Español de Arte 96 (2023)", url: "https://doi.org/10.3989/aearte.2023.46"}
 ---
-In Golden Age Spain enslaved people worked in noble households and in artists' workshops, and painting was a trade the guilds did not open to them. Juan de Pareja, born in Antequera near Málaga to a mother of African descent, spent years as the enslaved assistant of Diego Velázquez, court painter to King Philip IV.
+In Golden Age Spain painting was a trade the guilds did not open to enslaved people. Juan de Pareja, born in Antequera near Málaga to a mother of African descent, spent years as the enslaved assistant in the household and workshop of Diego Velázquez, painter to King Philip IV.
 
-In 1649 he went with his master to Italy. In Rome in 1650 Velázquez painted his portrait, which drew acclaim when it was shown at the Pantheon, and that November he signed the act that freed Pareja; it took full effect in 1654.
+He went with his master to Italy. In Rome in 1650 Velázquez painted his portrait, which drew acclaim when it was shown at the Pantheon, and that same year he signed the act that freed Pareja; it took full effect in 1654.
 
 A free man, Pareja made his own career as a painter in Madrid. In 1661 he finished The Calling of Saint Matthew, a canvas more than three metres wide, now in the Prado. At the far left, looking straight at the viewer, stands Pareja himself, in the pose and dress Velázquez had once given him, holding a slip of paper with his name and the year. His face here is lighter than in Velázquez's portrait.
 

@@ -27,6 +27,6 @@ sources:
 
 The bright, bouncing melody runs against lyrics that name Alabama and Mississippi, list the fears of Black Southerners and refuse the advice to "go slow". In 1964 she recorded it live at Carnegie Hall in New York. On stage she told audiences that she meant every word of it.
 
-Not everyone wanted to hear it. Simone said some listeners broke the record and sent the pieces back to her label, calling it bad taste. She kept changing the second line to fit the news, singing of Selma after the [[selma-1965|marchers were beaten]] in 1965.
+Not everyone wanted to hear it. Simone said some listeners broke the record and sent the pieces back to her label, calling it bad taste. Later she changed the second line to fit the news, singing of Selma after the [[selma-1965|marchers were beaten]] in 1965.
 
 The song turned an elegant nightclub star into one of the voices of the movement, and it still names its targets out loud.

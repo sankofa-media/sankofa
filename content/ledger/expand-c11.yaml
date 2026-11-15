@@ -1,4 +1,5 @@
 # Batch c11 (2026-11-13): facts in card bodies and wow lines, each with two or more independent sources and a verbatim quote.
+# Second check (2026-11-14): see expand-c11-check.yaml; facts below corrected to match it.
 # No cards dropped. Web search quota ran out mid-run; remaining sources were fetched by known URL.
 
 - card: mary-prince
@@ -19,6 +20,7 @@
 - card: mary-prince
   fact: "In December 1826 she married Daniel James, a free carpenter, in the Moravian church"
   sources:
+    - {title: "Mary Prince: The History of Mary Prince (London, 1831), full text, Documenting the American South", url: "https://docsouth.unc.edu/neh/prince/prince.html", quote: "We were joined in marriage, about Christmas 1826, in the Moravian Chapel at Spring Gardens"}
     - {title: "Bermuda Biographies: Mary Prince", url: "https://bermudabiographies.bm/Biographies/Biography-MaryPrince.html", quote: "In December 1826 she married a free Black man Daniel James, a widowed carpenter, in the Moravian Church"}
     - {title: "Documenting the American South (UNC): The History of Mary Prince, summary", url: "https://docsouth.unc.edu/neh/prince/summary.html", quote: "a free carpenter and cooper named Daniel James, whom she married in December of 1826"}
 - card: mary-prince
@@ -47,7 +49,7 @@
     - {title: "Documenting the American South (UNC): The History of Mary Prince, full text (1831)", url: "https://docsouth.unc.edu/neh/prince/prince.html", quote: "I have been a slave--I have felt what a slave feels, and I know what a slave knows"}
     - {title: "London Museum: The life story of Mary Prince", url: "https://www.londonmuseum.org.uk/collections/london-stories/the-life-story-of-mary-prince", quote: "I have felt what a slave feels, and I know what a slave knows"}
 - card: mary-prince
-  fact: "Her History (1831) was the first life story of a Black woman published in Britain"
+  fact: "Her History (1831) was the first account by a woman of her own life in slavery to be published in Britain"
   sources:
     - {title: "London Museum: The life story of Mary Prince", url: "https://www.londonmuseum.org.uk/collections/london-stories/the-life-story-of-mary-prince", quote: "It was the first narrative of a Black woman to be published in Britain."}
     - {title: "Bermuda Biographies: Mary Prince", url: "https://bermudabiographies.bm/Biographies/Biography-MaryPrince.html", quote: "Bermudian National Hero Mary Prince was the first woman to publish an account of her life in slavery."}
@@ -60,6 +62,7 @@
 - card: mary-prince
   fact: "Two libel suits followed; she testified in both; Wood won his case"
   sources:
+    - {title: "Royal Museums Greenwich: Who was Mary Prince?", url: "https://rmg.co.uk/stories/topics/who-was-mary-prince", quote: "Surviving court records show that Mary appeared as a witness on both occasions."}
     - {title: "Royal Museums Greenwich: Who was Mary Prince?", url: "https://rmg.co.uk/stories/topics/who-was-mary-prince", quote: "Mary’s book was at the centre of two court cases"}
     - {title: "Royal Museums Greenwich: Who was Mary Prince?", url: "https://rmg.co.uk/stories/topics/who-was-mary-prince", quote: "Although Woods won his case against Pringle and was awarded £25 in damages"}
     - {title: "Bermuda Biographies: Mary Prince", url: "https://bermudabiographies.bm/Biographies/Biography-MaryPrince.html", quote: "Prince, aged 45, by then half blind and in poor health, gave evidence at both trials"}
@@ -72,6 +75,7 @@
 - card: maria-firmina-dos-reis
   fact: "She was born in São Luís, Maranhão, in 1822 or 1825 (sources disagree)"
   sources:
+    - {title: "Ingrid Meurer: Maria Firmina dos Reis, Mulheres na Filosofia (Unicamp, 2024)", url: "https://www.blogs.unicamp.br/mulheresnafilosofia/wp-content/uploads/sites/178/2024/07/Verbete-Maria-Firmina-dos-Reis-PDF.docx.pdf", quote: "nasceu na cidade de São Luís do Maranhão no dia 11 de março de 1822"}
     - {title: "Luciana Martins Diogo and Ana Paula Cavalcanti Simioni: Da sujeição à subjetivação, Opiniães (USP, 2017)", url: "https://revistas.usp.br/opiniaes/article/download/122553/129554/256315", quote: "Maria Firmina dos Reis, nascida em onze de outubro de 1825 em São Luís"}
     - {title: "Ingrid Meurer: Maria Firmina dos Reis, Mulheres na Filosofia (Unicamp, 2024)", url: "https://www.blogs.unicamp.br/mulheresnafilosofia/wp-content/uploads/sites/178/2024/07/Verbete-Maria-Firmina-dos-Reis-PDF.docx.pdf", quote: "Ela foi batizada em 21 de dezembro de 1825"}
     - {title: "Patricia Fernanda Massetti de Lima: A mente de uma maranhense transgressora, RICS (UFMA, 2020)", url: "https://cajapio.ufma.br/index.php/ricultsociedade/article/download/13908/7541/41769", quote: "justificar por este Juiso que nasceo no dia 11 de Março do anno de 1822"}
@@ -83,6 +87,7 @@
 - card: maria-firmina-dos-reis
   fact: "She grew up with relatives in Guimarães"
   sources:
+    - {title: "LabGen, Universidade Federal Fluminense: Apresentando Firmina (2021)", url: "https://labgen.uff.br/wp-content/uploads/sites/77/2021/08/Maria-Firmina-dos-Reis.pdf", quote: "Infância Guimarães/MA - tia, avó, irmã e prima"}
     - {title: "Patricia Fernanda Massetti de Lima: A mente de uma maranhense transgressora, RICS (UFMA, 2020)", url: "https://cajapio.ufma.br/index.php/ricultsociedade/article/download/13908/7541/41769", quote: "tia materna, mudou-se para o município de Guimarães"}
     - {title: "Ingrid Meurer: Maria Firmina dos Reis, Mulheres na Filosofia (Unicamp, 2024)", url: "https://www.blogs.unicamp.br/mulheresnafilosofia/wp-content/uploads/sites/178/2024/07/Verbete-Maria-Firmina-dos-Reis-PDF.docx.pdf", quote: "viveu a maior parte de sua vida com sua família extensa"}
 - card: maria-firmina-dos-reis
@@ -138,6 +143,7 @@
 - card: maria-firmina-dos-reis
   fact: "The novel was forgotten until researchers brought it back; a facsimile appeared in 1975"
   sources:
+    - {title: "Luciana Martins Diogo and Ana Paula Cavalcanti Simioni: Da sujeição à subjetivação, Opiniães (USP, 2017)", url: "https://revistas.usp.br/opiniaes/article/download/122553/129554/256315", quote: "2ª ed., Impressão fac-similar. [prólogo de Horácio de Almeida]. Rio de Janeiro: Gráfica Olímpica Editora LTDA, 1975"}
     - {title: "Ingrid Meurer: Maria Firmina dos Reis, Mulheres na Filosofia (Unicamp, 2024)", url: "https://www.blogs.unicamp.br/mulheresnafilosofia/wp-content/uploads/sites/178/2024/07/Verbete-Maria-Firmina-dos-Reis-PDF.docx.pdf", quote: "A segunda edição foi resultado da digitalização desse livro (um fac-símile), e foi publicada em 1975"}
     - {title: "LabGen, Universidade Federal Fluminense: Apresentando Firmina (2021)", url: "https://labgen.uff.br/wp-content/uploads/sites/77/2021/08/Maria-Firmina-dos-Reis.pdf", quote: "Em 1975, José Nascimento Morais Filho publica a versão atualizada do texto"}
     - {title: "Patricia Fernanda Massetti de Lima: A mente de uma maranhense transgressora, RICS (UFMA, 2020)", url: "https://cajapio.ufma.br/index.php/ricultsociedade/article/download/13908/7541/41769", quote: "O resgate e renascimento de seu nome para as letras foram obras de José Nascimento de Morais Filho (1975)"}
@@ -154,6 +160,7 @@
 - card: mary-ann-shadd
   fact: "Eldest child of an abolitionist family whose home sheltered people escaping slavery"
   sources:
+    - {title: "Eli Yarhi: Mary Ann Shadd, Encyclopaedia Britannica", url: "https://www.britannica.com/biography/Mary-Ann-Shadd-Cary", quote: "was the eldest of 13 children"}
     - {title: "Jason H. Silverman: Shadd, Mary Ann Camberton (Cary), Dictionary of Canadian Biography", url: "https://www.biographi.ca/en/bio/shadd_mary_ann_camberton_12E.html", quote: "The eldest child of a prominent black abolitionist"}
     - {title: "Adrienne Shadd: Mary Ann Shadd, The Canadian Encyclopedia", url: "https://www.thecanadianencyclopedia.ca/en/article/mary-ann-shadd", quote: "Their home was a stop on the Underground Railroad"}
     - {title: "National Park Service: Mary Ann Shadd Cary", url: "https://www.nps.gov/people/mary-ann-shadd-cary.htm", quote: "Shadd and her family actively helped freedom seekers"}
@@ -214,8 +221,9 @@
     - {title: "Adrienne Shadd: Mary Ann Shadd, The Canadian Encyclopedia", url: "https://www.thecanadianencyclopedia.ca/en/article/mary-ann-shadd", quote: "She was hired by Dr. Martin Delany to recruit Black soldiers during the Civil War"}
     - {title: "National Park Service: Mary Ann Shadd Cary", url: "https://www.nps.gov/people/mary-ann-shadd-cary.htm", quote: "Cary returned to the U.S. to help recruit soldiers for the Union Army."}
 - card: mary-ann-shadd
-  fact: "She taught in Washington, studied law at Howard University and was one of the first Black women to practise law"
+  fact: "She taught in Washington, studied law at Howard University and in 1883 became one of the first Black women to earn a law degree"
   sources:
+    - {title: "Eli Yarhi: Mary Ann Shadd, Encyclopaedia Britannica", url: "https://www.britannica.com/biography/Mary-Ann-Shadd-Cary", quote: "In 1883 she became one of the first Black women to complete a law degree."}
     - {title: "Jason H. Silverman: Shadd, Mary Ann Camberton (Cary), Dictionary of Canadian Biography", url: "https://www.biographi.ca/en/bio/shadd_mary_ann_camberton_12E.html", quote: "Supporting herself by teaching, she would eventually receive a law degree from Howard University in 1883."}
     - {title: "National Park Service: Mary Ann Shadd Cary", url: "https://www.nps.gov/people/mary-ann-shadd-cary.htm", quote: "she enrolled in the first class of Howard University Law School located in Washington, DC"}
     - {title: "Adrienne Shadd: Mary Ann Shadd, The Canadian Encyclopedia", url: "https://www.thecanadianencyclopedia.ca/en/article/mary-ann-shadd", quote: "she later went on to study and practise law in Washington D.C., being one of the first Black women to do so"}
@@ -227,6 +235,7 @@
 - card: aleijadinho
   fact: "Antônio Francisco Lisboa was born in Vila Rica (Ouro Preto), probably in 1738"
   sources:
+    - {title: "Encyclopedia of Latin American History and Culture (Gale): Aleijadinho (c. 1738–1814), via Encyclopedia.com", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/aleijadinho-c-1738-1814", quote: "Aleijadinho (Antônio Francisco Lisbôa; b. ca. 1738; d. 18 November 1814), Brazilian architect and sculptor. Born in the provincial capital of Villa Rica do Ouro Prêto"}
     - {title: "Encyclopaedia Britannica: Aleijadinho", url: "https://www.britannica.com/biography/Aleijadinho", quote: "Aleijadinho (born August 9, 1738?, Villa Rica [now Ouro Prêto], Brazil"}
     - {title: "Edward A. Riedinger: Antônio Francisco Lisboa, EBSCO Research Starters (2024)", url: "https://ebsco.com/research-starters/history/antonio-francisco-lisboa", quote: "Lisboa worked primarily and initially in Vila Rica, the capital of the captaincy of Minas Gerais. The name of the city changed to Ouro Preto"}
 - card: aleijadinho
@@ -240,8 +249,9 @@
     - {title: "Encyclopaedia Britannica: Aleijadinho", url: "https://www.britannica.com/biography/Aleijadinho", quote: "was a prolific and influential Brazilian sculptor and architect"}
     - {title: "Edward A. Riedinger: Antônio Francisco Lisboa, EBSCO Research Starters (2024)", url: "https://ebsco.com/research-starters/history/antonio-francisco-lisboa", quote: "was a preeminent Brazilian High Baroque sculptor for and designer of churches and their interiors"}
 - card: aleijadinho
-  fact: "A disease, possibly leprosy, deformed his limbs and gave him his nickname 'little cripple'"
+  fact: "A disease, variously described as leprosy, syphilis or something else, deformed his limbs and gave him his nickname 'little cripple'"
   sources:
+    - {title: "Encyclopedia of Latin American History and Culture (Gale): Aleijadinho (c. 1738–1814), via Encyclopedia.com", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/aleijadinho-c-1738-1814", quote: "a debilitating and painful disease that has been variously described as leprosy, syphilis, or a viral influenza contracted in 1777"}
     - {title: "Encyclopaedia Britannica: Aleijadinho", url: "https://www.britannica.com/biography/Aleijadinho", quote: "led to the deformation of his limbs (his sobriquet means “Little Cripple”)"}
     - {title: "Edward A. Riedinger: Antônio Francisco Lisboa, EBSCO Research Starters (2024)", url: "https://ebsco.com/research-starters/history/antonio-francisco-lisboa", quote: "the appearance in 1777 of the symptoms of a disabling disease, which may have been leprosy"}
     - {title: "Edward A. Riedinger: Antônio Francisco Lisboa, EBSCO Research Starters (2024)", url: "https://ebsco.com/research-starters/history/antonio-francisco-lisboa", quote: "means “little cripple,”"}
@@ -251,14 +261,16 @@
     - {title: "Encyclopaedia Britannica: Aleijadinho", url: "https://www.britannica.com/biography/Aleijadinho", quote: "He eventually lost the use of his hands, but he continued working with tools strapped to his arms"}
     - {title: "Edward A. Riedinger: Antônio Francisco Lisboa, EBSCO Research Starters (2024)", url: "https://ebsco.com/research-starters/history/antonio-francisco-lisboa", quote: "he lost the use of his extremities, so he had to be carried about by his slaves, who also secured sculpting instruments to his hands"}
 - card: aleijadinho
-  fact: "In the late 1790s he made life-size cedar figures of the Passion for the chapels at Congonhas"
+  fact: "In 1796–1799 he made life-size wooden figures of the Passion for the chapels at Congonhas, his masterpiece"
   sources:
+    - {title: "Encyclopedia of Latin American History and Culture (Gale): Aleijadinho (c. 1738–1814), via Encyclopedia.com", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/aleijadinho-c-1738-1814", quote: "This last church is a pilgrimage site graced by Aleijadinho's magnum opus, sixty-six wooden life-size figures that comprise an incomplete set of the stations of the cross (1796–1799)"}
     - {title: "Edward A. Riedinger: Antônio Francisco Lisboa, EBSCO Research Starters (2024)", url: "https://ebsco.com/research-starters/history/antonio-francisco-lisboa", quote: "From 1795 to 1799, working in wood, he produced six sanctuaries or chapels with scenes of the Way of the Cross"}
     - {title: "Edward A. Riedinger: Antônio Francisco Lisboa, EBSCO Research Starters (2024)", url: "https://ebsco.com/research-starters/history/antonio-francisco-lisboa", quote: "six chapels holding life-size painted figures carved in cedar wood"}
     - {title: "UNESCO World Heritage Centre: Sanctuary of Bom Jesus do Congonhas", url: "https://whc.unesco.org/en/list/334/", quote: "the polychrome wooden sculptures depicting scenes of Christ’s Passion housed in the chapels"}
 - card: aleijadinho
   fact: "Between 1800 and 1805 he carved the twelve soapstone prophets on the stairway parapets"
   sources:
+    - {title: "Encyclopedia of Latin American History and Culture (Gale): Aleijadinho (c. 1738–1814), via Encyclopedia.com", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/aleijadinho-c-1738-1814", quote: "twelve remarkable soapstone statues of the Old Testament prophets (1800–1805)"}
     - {title: "Edward A. Riedinger: Antônio Francisco Lisboa, EBSCO Research Starters (2024)", url: "https://ebsco.com/research-starters/history/antonio-francisco-lisboa", quote: "From 1800 to 1805, working in stone, he produced statues of twelve prophets."}
     - {title: "Agência Gov (EBC): Conheça Congonhas, onde a principal obra de Aleijadinho se tornou Patrimônio Mundial da Unesco (2026)", url: "https://agenciagov.ebc.com.br/noticias/202608/conheca-congonhas-mg-onde-a-principal-obra-de-aleijadinho-se-tornou-patrimonio-mundial-da-unesco", quote: "12 Profetas: esculturas em pedra-sabão, produzidas por Aleijadinho entre 1800 e 1805"}
     - {title: "UNESCO World Heritage Centre: Sanctuary of Bom Jesus do Congonhas", url: "https://whc.unesco.org/en/list/334/", quote: "carrying on its parapets statues of the twelve prophets in soapstone"}
@@ -294,8 +306,9 @@
     - {title: "Tribunal de Justiça de Minas Gerais (Memória do Judiciário): Chica da Silva, contexto histórico", url: "https://www.tjmg.jus.br/portal-tjmg/noticias/chica-da-silva/contexto-historico.htm", quote: "nascida no então Arraial de Milho Verde, na Vila do Príncipe do Serro Frio, filha do militar branco Antônio Caetano de Sá e de Maria da Costa, que foi trazida ao Brasil, como escravizada, da Costa da Mina"}
     - {title: "Júnia Ferreira Furtado: Chica da Silva, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/chica-da-silva", quote: "Maria da Costa, who was born in the Costa da Mina"}
 - card: chica-da-silva
-  fact: "In 1753 João Fernandes de Oliveira, newly arrived to run the royal diamond contract, bought her and freed her that December"
+  fact: "In 1753 João Fernandes de Oliveira, who ran the diamond contract, bought her and soon freed her"
   sources:
+    - {title: "Revista Pesquisa FAPESP: Chica da Silva sem X (no. 93, November 2003)", url: "https://revistapesquisa.fapesp.br/chica-da-silva-sem-x/", quote: "comprada e alforriada pelo contratador de diamantes João Fernandes de Oliveira"}
     - {title: "Júnia Ferreira Furtado: Chica da Silva, Enslaved: Peoples of the Historical Slave Trade", url: "https://enslaved.org/fullStory/16-23-92874/", quote: "In 1753, Chica was bought by João Fernandes de Oliveira, who had just arrived in Tejuco to administer the lucrative diamond contract won by his father. Chica and Fernandes soon began a long-term relationship and he granted her freedom that December."}
     - {title: "Júnia Ferreira Furtado: Chica da Silva, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/chica-da-silva", quote: "Soon afterward, in December of the same year, he granted Chica her freedom."}
     - {title: "Tribunal de Justiça de Minas Gerais (Memória do Judiciário): Chica da Silva, contexto histórico", url: "https://www.tjmg.jus.br/portal-tjmg/noticias/chica-da-silva/contexto-historico.htm", quote: "O encontro, em 1753, entre a jovem e João Fernandes de Oliveira, contratador de diamantes"}
@@ -315,7 +328,7 @@
     - {title: "Júnia Ferreira Furtado: Chica da Silva, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/chica-da-silva", quote: "She was also the owner of many slaves and of a house near those of the important local people."}
     - {title: "Tribunal de Justiça de Minas Gerais: Chica da Silva, o testamento", url: "https://www.tjmg.jus.br/portal-tjmg/noticias/chica-da-silva/o-testamento.htm", quote: "Entre os bens que lista, estão joias, peças com diamantes, ouro, casas e um significativo número de escravizados."}
 - card: chica-da-silva
-  fact: "She belonged to the leading brotherhoods, including those for whites"
+  fact: "She belonged to four religious brotherhoods"
   sources:
     - {title: "Júnia Ferreira Furtado: Chica da Silva, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/chica-da-silva", quote: "her children belonged to the principal brotherhoods, whether of white, brown, or black people"}
     - {title: "Tribunal de Justiça de Minas Gerais: Chica da Silva, o testamento", url: "https://www.tjmg.jus.br/portal-tjmg/noticias/chica-da-silva/o-testamento.htm", quote: "uma das quatro irmandades à qual ela pertencia"}
@@ -327,19 +340,22 @@
     - {title: "Júnia Ferreira Furtado: Chica da Silva, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/chica-da-silva", quote: "he had to return to Portugal in 1771 to resolve family disputes over the paternal inheritance and never returned"}
     - {title: "Tribunal de Justiça de Minas Gerais: Chica da Silva, o testamento", url: "https://www.tjmg.jus.br/portal-tjmg/noticias/chica-da-silva/o-testamento.htm", quote: "quando o contratador de diamantes partiu para Portugal para resolver questões relacionadas à herança deixada pelo pai"}
 - card: chica-da-silva
-  fact: "She died in 1796 and was buried in São Francisco, whose brotherhood was for the white elite"
+  fact: "She died in 1796 and, as her will asked, was buried under the floor of the church of São Francisco, one of her brotherhoods"
   sources:
     - {title: "Júnia Ferreira Furtado: Chica da Silva, Enslaved: Peoples of the Historical Slave Trade", url: "https://enslaved.org/fullStory/16-23-92874/", quote: "February 15, 1796 Chica dies and is buried at the Igreja de São Francisco (Church of Saint Francis of Assisi), whose brotherhood was normally reserved for the local white elite."}
     - {title: "Tribunal de Justiça de Minas Gerais: Chica da Silva, o testamento", url: "https://www.tjmg.jus.br/portal-tjmg/noticias/chica-da-silva/o-testamento.htm", quote: "Nos assoalhos do interior da Igreja de São Francisco de Assis, uma das quatro irmandades à qual ela pertencia, Francisca foi enterrada"}
     - {title: "Tribunal de Justiça de Minas Gerais: Chica da Silva, a construção do mito", url: "https://www.tjmg.jus.br/portal-tjmg/noticias/chica-da-silva/construcao-do-mito.htm", quote: "publicado em 1868, portanto, mais de sete décadas depois da morte dela, ocorrida em 1796"}
 - card: chica-da-silva
-  fact: "In 1868 a memoirist portrayed her as coarse and graceless"
+  fact: "In 1868 a memoirist portrayed her as coarse, graceless and domineering over Tejuco"
   sources:
+    - {title: "Júnia Ferreira Furtado: Chica da Silva, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/chica-da-silva", quote: "The myth of Chica da Silva began to be built up by a nineteenth-century memorialist of Diamantina"}
+    - {title: "Tribunal de Justiça de Minas Gerais: Chica da Silva, a construção do mito", url: "https://www.tjmg.jus.br/portal-tjmg/noticias/chica-da-silva/construcao-do-mito.htm", quote: "Dominadora do Tejuco, com a influência e o poder do amante"}
     - {title: "Júnia Ferreira Furtado: Chica da Silva, Enslaved: Peoples of the Historical Slave Trade", url: "https://enslaved.org/fullStory/16-23-92874/", quote: "1868 Joaquim Felício dos Santos, a memorialist from the city of Diamantina, begins to construct the mythical figure of Chica"}
     - {title: "Tribunal de Justiça de Minas Gerais: Chica da Silva, a construção do mito", url: "https://www.tjmg.jus.br/portal-tjmg/noticias/chica-da-silva/construcao-do-mito.htm", quote: "de “feições grosseiras, alta corpulenta, trazia a cabeça raspada e coberta com uma cabeleira anelada (...); não possuía graças, não possuía beleza, não possuía espírito."}
 - card: chica-da-silva
   fact: "The 1976 film Xica da Silva made her a seductress"
   sources:
+    - {title: "Revista Pesquisa FAPESP: Chica da Silva sem X (no. 93, November 2003)", url: "https://revistapesquisa.fapesp.br/chica-da-silva-sem-x/", quote: "O Cinema Novo viu na negra que dominava brancos com seu sexo uma musa libertária. Em 1976"}
     - {title: "Tribunal de Justiça de Minas Gerais: Chica da Silva, a construção do mito", url: "https://www.tjmg.jus.br/portal-tjmg/noticias/chica-da-silva/construcao-do-mito.htm", quote: "o filme “Xica da Silva”, de 1976, do cineasta Cacá Diegues, que popularizou Chica da Silva e solidificou uma imagem distorcida da personagem real"}
     - {title: "Júnia Ferreira Furtado: Chica da Silva, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/chica-da-silva", quote: "in the cinema with the film Xica da Silva , directed by Cac á Diegues, in 1976"}
 - card: chica-da-silva
@@ -366,13 +382,14 @@
     - {title: "IPAC (Instituto do Patrimônio Artístico e Cultural da Bahia): Estado inaugura Centro Cultural Irmandade da Boa Morte (2014)", url: "https://www.ba.gov.br/ipac/noticias/estado-inaugura-centro-cultural-irmandade-da-boa-morte-em-cachoeira-nesta-sexta-15", quote: "tinham como objetivos angariar fundos para a compra de cartas de alforria; assegurar a cada uma das integrantes da Irmandade um enterro adequado"}
     - {title: "Luana Verena Nascimento Machado: Poder feminino e identidade na Irmandade da Boa Morte, master's dissertation, UFRB (2013)", url: "https://www1.ufrb.edu.br/pgcienciassociais/images/documentos/Dissertações/CD_DISSEluana.pdf", quote: "tinham por objetivo auxiliar na compra de alforria de seus irmãos escravos, ofertarem um enterro digno"}
 - card: boa-morte-sisterhood
-  fact: "Most of its documents were lost, damaged or stolen; its history relies on oral memory"
+  fact: "Its early records are scarce: many documents were lost, damaged or stolen and the founders' names are uncertain; its history relies on the sisters' memory"
   sources:
     - {title: "Armando Alexandre Castro: Irmãs de fé: tradição e turismo no recôncavo baiano, Caderno Virtual de Turismo (2010)", url: "https://www.ivt.coppe.ufrj.br/caderno/article/download/476/259/1317", quote: "Boa parte dos documentos relativos à pesquisa e pertencentes à Irmandade da Boa Morte foi perdida, danificada e roubada."}
     - {title: "Luana Verena Nascimento Machado: Poder feminino e identidade na Irmandade da Boa Morte, master's dissertation, UFRB (2013)", url: "https://www1.ufrb.edu.br/pgcienciassociais/images/documentos/Dissertações/CD_DISSEluana.pdf", quote: "Os nomes das irmãs fundadoras da irmandade da Boa Morte são cercados de incertezas no meio acadêmico."}
 - card: boa-morte-sisterhood
-  fact: "Candidates must be mature women past forty or fifty"
+  fact: "Only older women are admitted"
   sources:
+    - {title: "Secretaria de Cultura da Bahia: Festa da Irmandade de Nossa Senhora da Boa Morte (2025)", url: "https://www.ba.gov.br/cultura/noticias/2025-08/63424/autoridades-da-cultura-participam-da-festa-da-irmandade-de-nossa-senhora-da", quote: "um diálogo muito respeitoso com as senhoras da Irmandade"}
     - {title: "Armando Alexandre Castro: Irmãs de fé: tradição e turismo no recôncavo baiano, Caderno Virtual de Turismo (2010)", url: "https://www.ivt.coppe.ufrj.br/caderno/article/download/476/259/1317", quote: "acima de 40/50 anos"}
     - {title: "Luana Verena Nascimento Machado: Poder feminino e identidade na Irmandade da Boa Morte, master's dissertation, UFRB (2013)", url: "https://www1.ufrb.edu.br/pgcienciassociais/images/documentos/Dissertações/CD_DISSEluana.pdf", quote: "as irmãs de bolsa, aspirantes a irmã da boa morte que passam por uma observação de três anos"}
 - card: boa-morte-sisterhood
@@ -460,7 +477,7 @@
     - {title: "Biblioteca Nacional del Perú: La BNP conserva y protege documentos sobre el Señor de los Milagros (2023)", url: "https://www.bnp.gob.pe/?p=30923", quote: "El 13 de noviembre de 1655, un terremoto sacudió Lima y Callao, dejando muertos y trayendo abajo diferentes construcciones de ese entonces. No obstante, la pared de adobe con el Cristo pintado en ella se mantuvo en pie. Desde ese momento, empezaron las reuniones y peregrinaciones"}
     - {title: "Universidad Ricardo Palma: 1 de octubre, mes morado (2016)", url: "https://www.urp.edu.pe/pdf/id/14618/n/1-octubre-mes-morado.pdf", quote: "el muro de la ermita subsistió al terremoto de 1655"}
 - card: senor-de-los-milagros
-  fact: "In 1671 the viceroy was asked to have it erased; up to three attempts failed"
+  fact: "In 1671 the church authorities asked the viceroy to have it erased; up to three attempts failed"
   sources:
     - {title: "Biblioteca Nacional del Perú: La BNP conserva y protege documentos sobre el Señor de los Milagros (2023)", url: "https://www.bnp.gob.pe/?p=30923", quote: "Las autoridades religiosas, en el año de 1671, solicitaron al virrey Pedro Fernández de Castro (Conde de Lemos) que se borre la imagen y que se prohíban las reuniones en torno a ella. Se cuenta que hubo hasta tres intentos por borrar la pintura, pero ninguno pudo concretarse."}
     - {title: "Universidad Ricardo Palma: 1 de octubre, mes morado (2016)", url: "https://www.urp.edu.pe/pdf/id/14618/n/1-octubre-mes-morado.pdf", quote: "se dio el mandato de borrar la imagen del muro en setiembre de 1671 durante el gobierno del virrey Conde de Lemos, sin que pudieran lograrlo a pesar de ser varios los intentos"}
@@ -471,13 +488,13 @@
     - {title: "Biblioteca Nacional del Perú: La BNP conserva y protege documentos sobre el Señor de los Milagros (2023)", url: "https://www.bnp.gob.pe/?p=30923", quote: "El 14 de septiembre de 1671 se ofreció la primera misa"}
     - {title: "Universidad Ricardo Palma: 1 de octubre, mes morado (2016)", url: "https://www.urp.edu.pe/pdf/id/14618/n/1-octubre-mes-morado.pdf", quote: "La primera misa se celebró junto a la imagen pintada en el muro el 14 de setiembre de 1671."}
 - card: senor-de-los-milagros
-  fact: "After the October 1687 earthquake Sebastián de Antuñano had an oil copy painted and carried in the first procession"
+  fact: "After the October 1687 earthquake Sebastián de Antuñano had a copy painted and carried in the first procession"
   sources:
     - {title: "Biblioteca Nacional del Perú: La BNP conserva y protege documentos sobre el Señor de los Milagros (2023)", url: "https://www.bnp.gob.pe/?p=30923", quote: "En octubre de 1687, un violento terremoto remeció Lima y Callao, pero la imagen del Cristo de Pachacamilla se mantuvo en pie. Por esta razón, Sebastián de Antuñano (gran impulsor de la devoción al Señor de los Milagros) mandó sacar una copia de la imagen al óleo, realizando la primera procesión por las calles de Lima."}
     - {title: "El Comercio (Lima): Señor de los Milagros, un viaje a sus orígenes telúricos (2025), with Carlos Piccone, PUCP", url: "https://elcomercio.pe/somos/historias/senor-de-los-milagros-un-viaje-a-sus-origenes-teluricos-y-de-una-devocion-que-permanece-intacta-durante-siglos-noticia/", quote: "tras el terremoto de 1687, el devoto Sebastián de Antuñano mandó a pintar una copia y con ella se dio origen a la primera procesión del Señor de los Milagros"}
     - {title: "Universidad Ricardo Palma: 1 de octubre, mes morado (2016)", url: "https://www.urp.edu.pe/pdf/id/14618/n/1-octubre-mes-morado.pdf", quote: "El 20 de octubre de 1687, con motivo de un nuevo terremoto, una copia de la imagen que Antuñano poseía, fue sacada en procesión"}
 - card: senor-de-los-milagros
-  fact: "The wall now stands at the high altar of the Las Nazarenas sanctuary"
+  fact: "The Las Nazarenas sanctuary grew up around the wall, which stands where its high altar is"
   sources:
     - {title: "Biblioteca Nacional del Perú: La BNP conserva y protege documentos sobre el Señor de los Milagros (2023)", url: "https://www.bnp.gob.pe/?p=30923", quote: "donde hoy se encuentra el altar mayor del Santuario de Las Nazarenas"}
     - {title: "Universidad Ricardo Palma: 1 de octubre, mes morado (2016)", url: "https://www.urp.edu.pe/pdf/id/14618/n/1-octubre-mes-morado.pdf", quote: "el muro pintado en 1651, motivo de creación del templo y monasterio de las Nazarenas"}
@@ -488,7 +505,7 @@
     - {title: "El Comercio (Lima): Señor de los Milagros, un viaje a sus orígenes telúricos (2025), with Carlos Piccone, PUCP", url: "https://elcomercio.pe/somos/historias/senor-de-los-milagros-un-viaje-a-sus-origenes-teluricos-y-de-una-devocion-que-permanece-intacta-durante-siglos-noticia/", quote: "El Señor de los Milagros continuará tiñendo de morado todo lo que resta del mes de octubre"}
     - {title: "Ministerio de Cultura del Perú: Señor de los Milagros (document)", url: "https://cdn.www.gob.pe/uploads/document/file/1400159/Cultura.pdf.pdf", quote: "el color morado"}
 - card: senor-de-los-milagros
-  fact: "Its first devotees were Afro-Peruvians and Indigenous people; it is Peru's most important religious feast"
+  fact: "Its first devotees were Afro-Peruvians and Indigenous people; today millions of the faithful join the processions"
   sources:
     - {title: "El Comercio (Lima): Señor de los Milagros, un viaje a sus orígenes telúricos (2025), with Carlos Piccone, PUCP", url: "https://elcomercio.pe/somos/historias/senor-de-los-milagros-un-viaje-a-sus-origenes-teluricos-y-de-una-devocion-que-permanece-intacta-durante-siglos-noticia/", quote: "Sus primeros devotos fueron “afroperuanos e indígenas del entorno"}
     - {title: "El Comercio (Lima): Señor de los Milagros, un viaje a sus orígenes telúricos (2025), with Carlos Piccone, PUCP", url: "https://elcomercio.pe/somos/historias/senor-de-los-milagros-un-viaje-a-sus-origenes-teluricos-y-de-una-devocion-que-permanece-intacta-durante-siglos-noticia/", quote: "la celebración religiosa más importante del Perú"}
@@ -499,7 +516,7 @@
     - {title: "Encyclopaedia Britannica: Saint Martin de Porres", url: "https://www.britannica.com/biography/Saint-Martin-de-Porres", quote: "born 1579, Lima , Viceroyalty of Peru [now in Peru]—died November 3, 1639, Lima"}
     - {title: "Franciscan Media: Saint Martin de Porres", url: "https://www.franciscanmedia.org/saint-of-the-day/saint-martin-de-porres/", quote: "(December 9, 1579 – November 3, 1639)"}
 - card: martin-de-porres
-  fact: "His father was a Spanish nobleman and his mother a free Black woman from Panama; unmarried; father abandoned the family"
+  fact: "His father was a Spanish nobleman and his mother a free Black woman; unmarried; father abandoned the family"
   sources:
     - {title: "Encyclopaedia Britannica: Saint Martin de Porres", url: "https://www.britannica.com/biography/Saint-Martin-de-Porres", quote: "Born of a liaison between a Spanish grandee and a free Black woman and later abandoned by his father"}
     - {title: "Franciscan Media: Saint Martin de Porres", url: "https://www.franciscanmedia.org/saint-of-the-day/saint-martin-de-porres/", quote: "He was the son of a freed woman of Panama, probably black but also possibly of indigenous stock, and a Spanish grandee of Lima, Peru. His parents never married each other."}
@@ -559,8 +576,9 @@
     - {title: "UNESCO Intangible Cultural Heritage: Candombe and its socio-cultural space, a community practice", url: "https://ich.unesco.org/en/RL/candombe-and-its-socio-cultural-space-a-community-practice-00182", quote: "The practice of the candombe begins around communal fires as people gather to tune their drums"}
     - {title: "Luis Jure: El repique del candombe, Escuela Universitaria de Música, Universidad de la República (archived)", url: "https://web.archive.org/web/20110929144457/http://www.eumus.edu.uy/docentes/jure/perico/perico.html", quote: "el tambor no necesita ser templado a fuego"}
 - card: candombe-montevideo
-  fact: "The playing is handed down within families of African descent"
+  fact: "The playing is handed down within families of African descent; sons take up the drums after their fathers"
   sources:
+    - {title: "Luis Jure: El repique del candombe, Escuela Universitaria de Música, Universidad de la República (archived)", url: "https://web.archive.org/web/20110929144457/http://www.eumus.edu.uy/docentes/jure/perico/perico.html", quote: "Luis \"Mocambo\" Quirós (hijo de Rubén), Fernando \"Hurón\" Silva, y Daniel Gradín (hijo de Tito)"}
     - {title: "UNESCO Intangible Cultural Heritage: Candombe and its socio-cultural space, a community practice", url: "https://ich.unesco.org/en/RL/candombe-and-its-socio-cultural-space-a-community-practice-00182", quote: "Transmitted within families of African descent"}
     - {title: "Luis Jure: El repique del candombe, Escuela Universitaria de Música, Universidad de la República (archived)", url: "https://web.archive.org/web/20110929144457/http://www.eumus.edu.uy/docentes/jure/perico/perico.html", quote: "Eduardo \"Cacho\" Giménez (padre de Malumba, a quien mencionáramos arriba)"}
 - card: candombe-montevideo

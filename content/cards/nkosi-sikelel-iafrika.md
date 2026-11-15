@@ -14,14 +14,16 @@ pair: freedom-anthems
 further:
   - "South African Government: National anthem (history, words, sheet music)"
   - "South African History Online: Enoch Mankayi Sontonga"
+dispute: "Sources differ on the melody: most credit Sontonga with composing it, while others hold that he set his words to Joseph Parry's hymn tune \"Aberystwyth\"."
 sources:
   - {title: "South African History Online: Enoch Mankayi Sontonga", url: "https://sahistory.org.za/people/enoch-mankayi-sontonga"}
   - {title: "South African Government: National anthem", url: "https://www.gov.za/about-sa/national-symbols/national-anthem"}
   - {title: "The Heritage Portal, Daluxolo Moloantoa: The Missionary Beginnings of Nkosi Sikelel' iAfrika (2017)", url: "https://www.theheritageportal.co.za/article/missionary-beginnings-nkosi-sikelel-iafrika"}
+  - {title: "African Studies Centre Leiden: Enoch Sontonga", url: "https://www.ascleiden.nl/content/library-weekly/enoch-sontonga"}
   - {title: "Nkwazi Magazine, Mutale Chisulo: Sound Familiar? The Story Behind Zambia's National Anthem (2025)", url: "https://stg.nkwazimagazine.com/p-data-block-keygg1c0sound-familiar-the-story-behind-zambias-national-anthemp/"}
 ---
-"Nkosi Sikelel' iAfrika", "God bless Africa", is a hymn in Xhosa composed in 1897 by Enoch Sontonga, a teacher and choirmaster at a Methodist mission school near Johannesburg. He wrote it for his school choir. Sontonga died in 1905, and the hymn travelled on without him: the poet Samuel Mqhayi added seven more stanzas in Xhosa, and the choir of John Dube's Ohlange Institute in Natal made it popular.
+"Nkosi Sikelel' iAfrika", "God bless Africa", is a hymn in Xhosa written in 1897 by Enoch Sontonga, a teacher and choirmaster at a Methodist mission school near Johannesburg. He wrote it for his school choir; most accounts credit him with the tune as well, though some say he borrowed an existing hymn melody. Sontonga died in 1905, and the hymn travelled on without him: the poet Samuel Mqhayi added seven more stanzas in Xhosa, and the choir of John Dube's Ohlange Institute in Natal made it popular.
 
-In 1912 the song closed the founding meeting of the South African Native National Congress, the future African National Congress. In 1923 it was recorded in London, and by 1925 it was the ANC's official closing anthem. Its melody crossed borders: at independence in 1964 Zambia set the words of its new anthem to it, and Tanzania's anthem is sung to the same tune.
+In 1912 the song closed the founding meeting of the South African Native National Congress, the future African National Congress. In 1923 it was recorded in London, and by 1925 it was the ANC's official closing anthem. Its melody crossed borders: in the 1960s newly independent Zambia set words of its own to it, and Tanzania sings its anthem to the same tune.
 
-In 1994, as South Africa held its first democratic elections, the country gave itself two national anthems: Sontonga's hymn and "Die Stem", the official anthem since 1957. Under the 1996 constitution a shortened version combining the two became a single anthem. A hymn written for schoolchildren became the voice of a whole country.
+In 1994, as South Africa held its first democratic elections, the country gave itself two national anthems: Sontonga's hymn and "Die Stem", the anthem of the old South Africa. Under the 1996 constitution a shortened version combining the two became a single anthem. A hymn written for schoolchildren became the voice of a whole country.

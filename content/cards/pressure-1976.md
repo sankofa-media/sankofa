@@ -25,7 +25,7 @@ sources:
 ---
 Pressure is a feature film about Black London in the 1970s, when a generation born in Britain to Caribbean families was coming of age. Its director, Horace Ové, grew up in Belmont, a district of Port of Spain in Trinidad, and came to Britain in 1960 to study painting and photography. He photographed leaders of the Black Power movement and filmed James Baldwin talking to students at the West Indian Students' Centre. Then, with the Trinidad-born novelist Samuel Selvon, he wrote Pressure.
 
-Funded by the British Film Institute's Production Board and shot on the streets of Ladbroke Grove in west London, it follows Tony, a British-born sixteen-year-old played by Herbert Norville. He is at odds with his conservative Trinidad-born parents and hopes to be accepted in white Britain; he looks for work and meets polite rejection, then follows his older brother Colin into Black Power, and the film shows the police violence that follows.
+Funded by the British Film Institute's Production Board and shot on the streets of Ladbroke Grove in west London, it follows Tony, a British-born teenager played by Herbert Norville. He is caught between his Trinidad-born parents and white Britain, where he hopes to be accepted; he looks for work and meets polite rejection, then follows his older brother into Black Power, and the film shows the police violence that follows.
 
 Pressure premiered at the London Film Festival in 1975, the first feature film made by a Black director in Britain. Then it was held back for about two years, and the reasons are still argued over.
 

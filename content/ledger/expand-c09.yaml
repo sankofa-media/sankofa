@@ -1,5 +1,5 @@
 # Ledger for expansion batch c09: one entry per fact used in card bodies and wow lines,
-# each with two independent sources and a verbatim quote.
+# each with two independent sources and a verbatim quote. Revised after the second check (expand-c09-check.yaml).
 - card: mocambo-lisbon
   fact: "In the 1440s Portuguese ships began landing West African captives at Lagos in the Algarve"
   sources:
@@ -31,10 +31,11 @@
     - {title: "Yesenia Barragan, Black Perspectives (AAIHS)", url: "https://www.aaihs.org/uncovering-lisbons-forgotten-history-of-slavery/", quote: "Mocambo was named after the Kimbundu (an Angolan language) word for 'hideout'"}
     - {title: "Aurora Almada e Santos, MANIFEST project (2023)", url: "https://www.projectmanifest.eu/wp-content/uploads/2023/06/Presence-of-African-people-in-Portugal-at-the-time-of-the-trade-of-enslaved-people.pdf", quote: "named after an Angolan word meaning small village or place of refuge"}
 - card: mocambo-lisbon
-  fact: "Bodies of enslaved Africans were thrown into a pit, remembered in the name Rua do Poço dos Negros, in what was once Mocambo"
+  fact: "Bodies of enslaved Africans were thrown into a pit, remembered in the street name Rua do Poço dos Negros"
   sources:
-    - {title: "Yesenia Barragan, Black Perspectives (AAIHS)", url: "https://www.aaihs.org/uncovering-lisbons-forgotten-history-of-slavery/", quote: "Beneath the pavement of today's Rua do Poço dos Negros (Street of the Blacks' Pit) lies a mass burial pit of enslaved Africans in what used to be Mocambo."}
+    - {title: "Yesenia Barragan, Black Perspectives (AAIHS)", url: "https://www.aaihs.org/uncovering-lisbons-forgotten-history-of-slavery/", quote: "Beneath the pavement of today's Rua do Poço dos Negros (Street of the Blacks' Pit) lies a mass burial pit of enslaved Africans"}
     - {title: "Aurora Almada e Santos, MANIFEST project (2023)", url: "https://www.projectmanifest.eu/wp-content/uploads/2023/06/Presence-of-African-people-in-Portugal-at-the-time-of-the-trade-of-enslaved-people.pdf", quote: "King D. Manuel I instructed the construction of the Poço dos Negros (Pit of the Blacks) where the bodies of deceased slaves were thrown"}
+    - {title: "Ana da Cunha, Lisbon inaugurates street signs about African history, Mensagem de Lisboa (2024)", url: "https://amensagem.pt/2024/01/13/lisbon-inaugurates-street-signs-african-history/", quote: "Over time, street names started to emerge that commemorated this forgotten population: Queen of the Congo, Preta Constança, Poço dos Negros ... the Poço dos Negros, a pit where the bodies of unbaptized enslaved people were thrown during the Manueline era"}
 
 - card: cais-do-valongo
   fact: "Over three centuries Brazil took in more enslaved Africans than any other country in the Americas, some four million"
@@ -63,7 +64,7 @@
     - {title: "Getty", url: "https://www.getty.edu/news/an-antidote-for-social-amnesia-the-memory-space-of-the-cais-do-valongo", quote: "The pé de moleque was covered in granite blocks in 1843 for the arrival of Empress Teresa Cristina ... The Cais do Valongo was renamed the Cais da Imperatriz (Empress Wharf)"}
     - {title: "Archaeology magazine (AIA)", url: "https://archaeology.org/issues/march-april-2013/off-the-grid/rio-de-janeiro-brazil-empress-valongo-wharf/", quote: "Empress Wharf (Cais da Imperatriz), so named to commemorate the arrival of Princess Teresa Cristina of the Two Sicilies to marry Emperor Dom Pedro II in 1843. Beneath it was another site, Valongo Wharf"}
 - card: cais-do-valongo
-  fact: "Later landfill buried the wharves"
+  fact: "Later both wharves were buried under the earth of the growing city"
   sources:
     - {title: "Getty", url: "https://www.getty.edu/news/an-antidote-for-social-amnesia-the-memory-space-of-the-cais-do-valongo", quote: "The wharf was completely covered again in 1911 as part of the urban renovation"}
     - {title: "UNESCO World Heritage Centre", url: "https://whc.unesco.org/en/list/1548/", quote: "Its earthen cover for the past 168 years has enabled this sensitive site to be preserved"}
@@ -83,10 +84,11 @@
     - {title: "UNESCO World Heritage Centre", url: "https://whc.unesco.org/en/list/1548/", quote: "The lowest of these with floor pavings in pé de moleque style represents the remains of the Valongo Wharf ... built ... directly on the sand of the beach"}
     - {title: "Getty", url: "https://www.getty.edu/news/an-antidote-for-social-amnesia-the-memory-space-of-the-cais-do-valongo", quote: "Stones of irregular shape and size were arranged in a layer of sand"}
 - card: cais-do-valongo
-  fact: "Tens of thousands of objects belonging to or taken from the captives were found: charms/amulets, rings, stones used in African worship, cowrie shells (also wow)"
+  fact: "Thousands of objects belonging to or taken from the captives were found: amulets, rings, shells and objects of African worship"
   sources:
-    - {title: "Archaeology magazine (AIA)", url: "https://archaeology.org/issues/march-april-2013/off-the-grid/rio-de-janeiro-brazil-empress-valongo-wharf/", quote: "Tens of thousands of objects were unearthed, many of which were either taken from slaves, or lost or hidden by them. The finds include delicate bracelets, rings woven from vegetable fiber, charms, lumps of amethyst and stones used in African worship, and cowrie shells, then common currency in Africa."}
+    - {title: "Archaeology magazine (AIA)", url: "https://archaeology.org/issues/march-april-2013/off-the-grid/rio-de-janeiro-brazil-empress-valongo-wharf/", quote: "Tens of thousands of objects were unearthed, many of which were either taken from slaves, or lost or hidden by them. The finds include delicate bracelets, rings woven from vegetable fiber, charms, lumps of amethyst and stones used in African worship, and cowrie shells"}
     - {title: "Getty", url: "https://www.getty.edu/news/an-antidote-for-social-amnesia-the-memory-space-of-the-cais-do-valongo", quote: "archeologists uncovered thousands of objects that belonged to the African slaves, such as amulets, rings, ceramics, smoking pipes, horns and shells, and copper coins"}
+    - {title: "Juliana Barbassa (Associated Press), Brazil's leap forward unearths a painful history, via Artdaily (2012)", url: "https://artdaily.com/news/54440/Brazil-s-leap-forward-unearths-a-painful-history--archaeologists-are-digging-up-fragments-", quote: "Many of the artifacts are amulets or religious objects linked to the idea of shielding the body, Lima said."}
 - card: cais-do-valongo
   fact: "In 2017 UNESCO made Valongo a World Heritage Site as the most important physical trace of the arrival of enslaved Africans in the Americas (also wow)"
   sources:
@@ -143,10 +145,10 @@
     - {title: "National Park Service: Fray Marcos de Niza", url: "https://www.nps.gov/coro/learn/historyculture/fray-marcos-de-niza.htm", quote: "They reported that Esteban and many of his Indian companions had been killed at the Zuni pueblo of Háwikuh"}
     - {title: "Rick Hendricks, Encyclopedia of Latin American History and Culture", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/esteban-1539", quote: "Esteban and a number of Indian allies ranged far ahead of Niza ... He was killed at Hawikuh, the southernmost of the six Zuni pueblos."}
 - card: estevanico
-  fact: "The circumstances of his death are debated; Spanish reports blamed his conduct (dispute)"
+  fact: "The circumstances of his death are debated; no Spaniard was with him at the end (dispute)"
   sources:
-    - {title: "Donald E. Chipman, Handbook of Texas Online", url: "https://www.tshaonline.org/handbook/entries/estevanico", quote: "Coronado, upon reaching Hawikuh one year later in 1540, reported to the viceroy that 'Estevanico's death could be blamed on his cruelties and assaults on Indian women.'"}
-    - {title: "National Park Service: Fray Marcos de Niza", url: "https://www.nps.gov/coro/learn/historyculture/fray-marcos-de-niza.htm", quote: "Scholars have been debating what happened next ever since."}
+    - {title: "National Park Service: Fray Marcos de Niza", url: "https://www.nps.gov/coro/learn/historyculture/fray-marcos-de-niza.htm", quote: "two of the Indians who had gone with Esteban returned to Marcos, bloody and distraught ... Scholars have been debating what happened next ever since."}
+    - {title: "Rick Hendricks, Encyclopedia of Latin American History and Culture", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/esteban-1539", quote: "Esteban and a number of Indian allies ranged far ahead of Niza"}
 - card: estevanico
   fact: "A year later, in 1540, Coronado's expedition followed the friar's reports north"
   sources:
@@ -167,7 +169,8 @@
   fact: "John Caesar, of African parentage, possibly born on Madagascar, came as a First Fleet convict (also wow)"
   sources:
     - {title: "Australian Dictionary of Biography", url: "https://adb.anu.edu.au/biography/caesar-john-black-12829", quote: "John Black Caesar (c.1763-1796), convict and bushranger of unknown African parentage, may have been born on Madagascar."}
-    - {title: "City of Parramatta", url: "https://historyandheritage.cityofparramatta.nsw.gov.au/blog/2017/06/28/bushrangers-in-parramatta-part-1", quote: "One of the earliest documented absconders was First Fleet convict John Caesar who came to be known as Black Caesar. Thought to have been born in Madagascar"}
+    - {title: "City of Parramatta", url: "https://historyandheritage.cityofparramatta.nsw.gov.au/blog/2017/06/28/bushrangers-in-parramatta-part-1", quote: "First Fleet convict John Caesar who came to be known as Black Caesar ... Thought to have been born in Madagascar"}
+    - {title: "Dictionary of Sydney: Caesar, John", url: "https://dictionaryofsydney.org/person/caesar_john", quote: "West Indian who fled to England to escape plantation slavery only to be transported."}
 - card: john-caesar
   fact: "In England he was convicted of theft and sentenced to seven years' transportation"
   sources:
@@ -184,7 +187,7 @@
     - {title: "Australian Dictionary of Biography", url: "https://adb.anu.edu.au/biography/caesar-john-black-12829", quote: "on 22 December Caesar escaped in a stolen canoe, again taking a gun ... on 31 January 1790 he returned to camp"}
     - {title: "City of Parramatta", url: "https://historyandheritage.cityofparramatta.nsw.gov.au/blog/2017/06/28/bushrangers-in-parramatta-part-1", quote: "In December 1789 ... Caesar stole a canoe from Garden Island but gave himself up a month later at Rosehill."}
 - card: john-caesar
-  fact: "A 1790 death sentence was commuted and he was sent to Norfolk Island"
+  fact: "In 1790 he was sent to Norfolk Island"
   sources:
     - {title: "City of Parramatta", url: "https://historyandheritage.cityofparramatta.nsw.gov.au/blog/2017/06/28/bushrangers-in-parramatta-part-1", quote: "In March 1790 he received a death sentence which was commuted to serving his original term in Norfolk Island."}
     - {title: "Australian Dictionary of Biography", url: "https://adb.anu.edu.au/biography/caesar-john-black-12829", quote: "On 4 March Governor Phillip sent Caesar in the Supply to Norfolk Island."}
@@ -217,7 +220,7 @@
   fact: "He is remembered as Australia's first bushranger (also wow)"
   sources:
     - {title: "Australian Dictionary of Biography", url: "https://adb.anu.edu.au/biography/caesar-john-black-12829", quote: "led a gang of absconders and vagabonds in the Port Jackson area—becoming Australia's first bushranger"}
-    - {title: "City of Parramatta: Bushrangers in Parramatta, part 1", url: "https://historyandheritage.cityofparramatta.nsw.gov.au/blog/2017/06/28/bushrangers-in-parramatta-part-1", quote: "One of the earliest documented absconders was First Fleet convict John Caesar who came to be known as Black Caesar"}
+    - {title: "Dictionary of Sydney: Caesar, John", url: "https://dictionaryofsydney.org/person/caesar_john", quote: "As a convict his hunger drove him to regularly escape from custody and he was to become Australia's first bushranger."}
 
 - card: tula
   fact: "In 1795 the Netherlands became the Batavian Republic under French revolutionary influence, and France had abolished slavery"
@@ -236,10 +239,10 @@
     - {title: "DutchNews.nl", url: "https://www.dutchnews.nl/2023/10/dutch-state-rehabilitates-leader-of-1795-revolt-against-slavery", quote: "Tula was one of a group of 50 captive slaves who downed tools on the Kenepa plantation on August 17, 1795"}
     - {title: "Curaçao History: 1795 Tula", url: "https://www.curacaohistory.com/detail/1795-tula", quote: "Tula was a slave field worker on plantation 'Knip' ... his slaves, 'refuse to do service (...)', 17 August 1795."}
 - card: tula
-  fact: "They marched across the island, freeing prisoners on the way"
+  fact: "They set off toward Willemstad, freeing prisoners on the way"
   sources:
     - {title: "DutchNews.nl", url: "https://www.dutchnews.nl/2023/10/dutch-state-rehabilitates-leader-of-1795-revolt-against-slavery", quote: "marched towards the island's capital, Willemstad, to demand their freedom"}
-    - {title: "Curaçao History: 1795 Tula", url: "https://www.curacaohistory.com/detail/1795-tula", quote: "Did I do wrong by releasing 22 of my brothers from their confinement, which they were unjustly thrown into?"}
+    - {title: "Curaçao History: 1795 Tula (with Nationaal Archief Curaçao)", url: "https://www.curacaohistory.com/detail/1795-tula", quote: "Did I do wrong by releasing 22 of my brothers from their confinement, which they were unjustly thrown into?"}
     - {title: "Rijksoverheid: Speech of State Secretary Van Huffelen", url: "https://www.rijksoverheid.nl/documenten/toespraken/2023/10/05/speech-staatssecretaris-alexandra-van-huffelen-ter-gelegenheid-van-de-rehabilitatie-van-tula", quote: "Deed ik er fout aan om tweeëntwintig broeders uit de gevangenis te bevrijden, waar ze ten onrechte in zaten?"}
 - card: tula
   fact: "The colony sent the priest Jacobus Schinck to negotiate; Tula told him they wished no one harm, sought only freedom, and argued that French Black people were freed and Holland was under the French (also wow)"
@@ -273,16 +276,16 @@
     - {title: "Rijksoverheid: Nederland rehabiliteert Curaçaose verzetsheld Tula", url: "https://www.rijksoverheid.nl/actueel/nieuws/2023/10/05/nederland-rehabiliteert-curacaose-verzetsheld-tula", quote: "is Tula in dat jaar door de Curaçaose regering officieel uitgeroepen tot nationale held van Curaçao"}
     - {title: "DutchNews.nl", url: "https://www.dutchnews.nl/2023/10/dutch-state-rehabilitates-leader-of-1795-revolt-against-slavery", quote: "The government of Curacao has recognised Tula as a national hero since 2010"}
 - card: tula
-  fact: "In October 2023, 228 years after his death, the Dutch government formally rehabilitated Tula (also wow)"
+  fact: "On 3 October 2023, 228 years to the day after his execution, the Dutch government formally rehabilitated Tula (also wow)"
   sources:
     - {title: "Rijksoverheid: Nederland rehabiliteert Curaçaose verzetsheld Tula", url: "https://www.rijksoverheid.nl/actueel/nieuws/2023/10/05/nederland-rehabiliteert-curacaose-verzetsheld-tula", quote: "228 jaar na de dag van zijn dood krijgt Tula eerherstel van de Nederlandse regering."}
-    - {title: "DutchNews.nl", url: "https://www.dutchnews.nl/2023/10/dutch-state-rehabilitates-leader-of-1795-revolt-against-slavery", quote: "The leader of a slave uprising on the island of Curacao is being formally rehabilitated by the Dutch government, 228 years after he was put to death."}
+    - {title: "DutchNews.nl", url: "https://www.dutchnews.nl/2023/10/dutch-state-rehabilitates-leader-of-1795-revolt-against-slavery", quote: "Later on Tuesday Alexandra van Huffelen, junior minister for kingdom relations, will proclaim the decree of rehabiltation at a ceremony in Curacao"}
 
 - card: carlota-lucumi
   fact: "Among the enslaved Africans of the Matanzas sugar estates were people from Yoruba lands, called Lucumí in Cuba"
   sources:
-    - {title: "Eugene Godfried, Carlota: Lukumí/Yoruba Woman Fighter for Liberation (AfroCubaWeb, 2006)", url: "http://www.afrocubaweb.com/carlota.htm", quote: "We use the denomination lukumi/yoruba when referring to Carlota and others"}
-    - {title: "Myra Ann Houser, Avenging Carlota in Africa (2015)", url: "https://web.archive.org/web/20240606093414/https://scholarlycommons.obu.edu/cgi/viewcontent.cgi?article=1041&context=articles", quote: "Ferminia, Carlota, and their companions Eduardo, a Fula; Narciso and Felipe, Lucumis"}
+    - {title: "Myra Ann Houser, Avenging Carlota in Africa (2015)", url: "https://web.archive.org/web/20240606093414/https://scholarlycommons.obu.edu/cgi/viewcontent.cgi?article=1041&context=articles", quote: "Carlota was considered Lucumi, a word designating Yoruba-speaking and groups in Cuba."}
+    - {title: "Eugene Godfried, AfroCubaWeb (2006)", url: "http://www.afrocubaweb.com/carlota.htm", quote: "We use the denomination lukumi/yoruba when referring to Carlota and others"}
 - card: carlota-lucumi
   fact: "Carlota, a Lucumí woman enslaved at the Triunvirato mill in Matanzas, was a leader of the rising of 5 November 1843 (also wow)"
   sources:
@@ -296,7 +299,7 @@
 - card: carlota-lucumi
   fact: "The rebels set fire to buildings, killed overseers and moved from estate to estate, freeing others (also wow: across the mills)"
   sources:
-    - {title: "Myra Ann Houser, Avenging Carlota in Africa (2015)", url: "https://web.archive.org/web/20240606093414/https://scholarlycommons.obu.edu/cgi/viewcontent.cgi?article=1041&context=articles", quote: "killing the mayoral and his assistant and setting several buildings on fire before moving on to nearby mills. After setting fires and killing overseers on several other plantations"}
+    - {title: "Myra Ann Houser, Avenging Carlota in Africa (2015)", url: "https://web.archive.org/web/20240606093414/https://scholarlycommons.obu.edu/cgi/viewcontent.cgi?article=1041&context=articles", quote: "killing the mayoral and his assistant and setting several buildings on fire before moving on to nearby mills ... After setting fires and killing overseers on several other plantations"}
     - {title: "Eugene Godfried, AfroCubaWeb (2006)", url: "http://www.afrocubaweb.com/carlota.htm", quote: "Together they broke the chains of their brothers and sisters in the areas known as Sabanilla del Encomendador, Guanbana, Santa Ana"}
 - card: carlota-lucumi
   fact: "The governor's troops hunted them down; Carlota was killed and her body torn apart"
@@ -314,37 +317,36 @@
     - {title: "Myra Ann Houser, Avenging Carlota in Africa (2015)", url: "https://web.archive.org/web/20240606093414/https://scholarlycommons.obu.edu/cgi/viewcontent.cgi?article=1041&context=articles", quote: "That same year, during the La Escalera events, slave owners and authorities began a brutal and systematic repression of suspected leaders in various uprisings."}
     - {title: "Eugene Godfried, AfroCubaWeb (2006)", url: "http://www.afrocubaweb.com/carlota.htm", quote: "The year 1844 became known as the 'year of the lashes', because of the many cases of bloody repression against descendants of Africans both enslaved and freed men and women."}
 - card: carlota-lucumi
-  fact: "Revolutionary Cuba made Carlota a symbol of women's resistance"
+  fact: "Revolutionary Cuba later made Carlota a national symbol of rebellion against oppression"
   sources:
-    - {title: "Myra Ann Houser, Avenging Carlota in Africa (2015)", url: "https://web.archive.org/web/20240606093414/https://scholarlycommons.obu.edu/cgi/viewcontent.cgi?article=1041&context=articles", quote: "Carlota quickly became the symbol for feminine strength against a brutal system"}
-    - {title: "Tania Díaz Castro, La historia censurada de la esclava Carlota (CubaNet, 2017)", url: "https://www.cubanet.org/la-historia-censurada-de-la-esclava-carlota/", quote: "Los de hoy, la han declarado 'patrimonio cubano de rebeldía contra la opresión', 'símbolo de la mujer cubana revolucionaria'"}
+    - {title: "Myra Ann Houser, Avenging Carlota in Africa (2015)", url: "https://web.archive.org/web/20240606093414/https://scholarlycommons.obu.edu/cgi/viewcontent.cgi?article=1041&context=articles", quote: "Matanzas Province’s Triumvirato Rebellion became an important symbol in this struggle ... Carlota quickly became the symbol for feminine strength against a brutal system"}
+    - {title: "Eugene Godfried, AfroCubaWeb (2006)", url: "http://www.afrocubaweb.com/carlota.htm", quote: "Carlota’s liberation struggle is part of the Cuban heritage of rebellion against oppression. Thus her name has been enshrined as a symbol"}
 - card: carlota-lucumi
   fact: "Cuba's military mission to Angola in the mid-1970s was named Operation Carlota in her honour (also wow: more than 130 years later)"
   sources:
     - {title: "Granma (2015)", url: "http://www.granma.cu/cuba/2015-11-05/celebran-acto-central-por-el-aniversario-40-de-la-operacion-carlota", quote: "La misión militar cubana en Angola se denominó Operación Carlota, en honor a la esclava rebelde del ingenio Triunvirato ... 40 aniversario del inicio de la Operación Carlota"}
-    - {title: "Myra Ann Houser, Avenging Carlota in Africa (2015)", url: "https://web.archive.org/web/20240606093414/https://scholarlycommons.obu.edu/cgi/viewcontent.cgi?article=1041&context=articles", quote: "Cuba named its 1974 military mission in Angola 'Operation Carlota' after the enslaved Lucumi woman who served as a leader in it"}
+    - {title: "Myra Ann Houser, Avenging Carlota in Africa (2015)", url: "https://web.archive.org/web/20240606093414/https://scholarlycommons.obu.edu/cgi/viewcontent.cgi?article=1041&context=articles", quote: "Cuba named its 1974 military mission in Angola “Operation Carlota” ... after the enslaved Lucumi woman who served as a leader in it"}
 
 - card: black-seminoles
   fact: "In Florida free Black people and people escaping slavery found refuge among and allied with the Seminoles, becoming known as Black Seminoles or Seminole Maroons (also wow)"
   sources:
     - {title: "Britannica: Black Seminoles", url: "http://web.archive.org/web/20260805040057/https://www.britannica.com/topic/Black-Seminoles", quote: "The Black Seminoles were a group of free blacks and runaway slaves (also known as maroons) who allied with the Seminole Indians in Florida"}
-    - {title: "Kevin Mulroy, John Horse (ca. 1812–1882), BlackPast.org", url: "https://www.blackpast.org/?p=62190", quote: "John Horse ... was the dominant personality in Seminole Maroon affairs for half a century ... by 1826 he was living in his owner's village near Tampa Bay, Florida"}
+    - {title: "Tracé Etienne-Gray, Black Seminole Indians, Handbook of Texas Online (TSHA)", url: "https://www.tshaonline.org/handbook/entries/black-seminole-indians", quote: "Runaways turned to the Seminoles for protection and asylum from slave hunters."}
 - card: black-seminoles
   fact: "When the US set out to remove the Seminoles west, Black Seminoles fought the US Army in the Second Seminole War, 1835–1842 (also wow)"
   sources:
     - {title: "Britannica: Black Seminoles", url: "http://web.archive.org/web/20260805040057/https://www.britannica.com/topic/Black-Seminoles", quote: "During the Second Seminole War (1835–1842), they fiercely fought against the U.S. Army"}
     - {title: "Kevin Mulroy, BlackPast.org", url: "https://www.blackpast.org/?p=62190", quote: "During the Second Seminole War, 1835-42, he initially led Maroons against U.S. forces in Florida"}
 - card: black-seminoles
-  fact: "John Horse led Maroon fighters in Florida, then in 1837 accepted removal to Indian Territory (Oklahoma) on a promise of freedom"
+  fact: "John Horse led Maroon fighters in Florida; the army offered the Maroons freedom if they surrendered, and in 1837 he agreed to move west to Indian Territory"
   sources:
-    - {title: "Kevin Mulroy, BlackPast.org", url: "https://www.blackpast.org/?p=62190", quote: "offered the promise of freedom, he agreed to surrender and relocate west with the Seminoles in March 1837"}
-    - {title: "Britannica: Black Seminoles", url: "http://web.archive.org/web/20260805040057/https://www.britannica.com/topic/Black-Seminoles", quote: "After the Second Seminole War (1835-1842), most Seminoles and Black Seminoles were resettled in Oklahoma"}
+    - {title: "Kevin Mulroy, BlackPast.org", url: "https://www.blackpast.org/?p=62190", quote: "he initially led Maroons against U.S. forces in Florida, but, offered the promise of freedom, he agreed to surrender and relocate west with the Seminoles in March 1837"}
+    - {title: "Tracé Etienne-Gray, Black Seminole Indians, Handbook of Texas Online (TSHA)", url: "https://www.tshaonline.org/handbook/entries/black-seminole-indians", quote: "the United States Army initiated a policy, devised by Gen. Thomas S. Jesup, to divide the two races by offering the maroons their freedom if they surrendered"}
 - card: black-seminoles
-  fact: "In Indian Territory their freedom was fragile and they feared re-enslavement"
+  fact: "In Indian Territory their freedom was fragile: under Creek rule many risked being sold back into slavery"
   sources:
+    - {title: "Tracé Etienne-Gray, Black Seminole Indians, Handbook of Texas Online (TSHA)", url: "https://www.tshaonline.org/handbook/entries/black-seminole-indians", quote: "the army refused to support the maroons' claims of freedom and insisted that they return to Seminole rule, which often meant being sold to Creek or White slaveowners"}
     - {title: "Kevin Mulroy, BlackPast.org", url: "https://www.blackpast.org/?p=62190", quote: "Fearing that his family, and his fellow Maroons would be reenslaved"}
-    - {title: "Britannica: Black Seminoles", url: "http://web.archive.org/web/20260805040057/https://www.britannica.com/topic/Black-Seminoles", quote: "many Black Seminoles were resettled in Oklahoma by 1845, but they faced subjugation by the Creek Indians"}
-    - {title: "Texas Standard (2023)", url: "https://texasstandard.org/stories/black-seminoles-texas-mexico-mascogos-cuisine-sofkee-tacos-texas/", quote: "Mascogos are descendants of Black Seminoles who escaped from slavery in the mid-1800s"}
 - card: black-seminoles
   fact: "In 1849 John Horse led his people with Seminole allies into Mexico (also wow)"
   sources:
@@ -352,10 +354,10 @@
     - {title: "Texas Standard (2023)", url: "https://texasstandard.org/stories/black-seminoles-texas-mexico-mascogos-cuisine-sofkee-tacos-texas/", quote: "Black Seminole leader John Horse and about 180 Black Seminoles staged a mass escape in 1849 to northern Mexico"}
     - {title: "Britannica: Black Seminoles", url: "http://web.archive.org/web/20260805040057/https://www.britannica.com/topic/Black-Seminoles", quote: "In 1849, many Black Seminoles relocated to Coahuila, Mexico, and were known as Mascogos."}
 - card: black-seminoles
-  fact: "Mexico gave them land at El Nacimiento in Coahuila in exchange for guarding the frontier, and called them Mascogos (also wow)"
+  fact: "Mexico gave them land in Coahuila, eventually at El Nacimiento, in exchange for guarding the frontier against Comanche and Apache raiders, and called them Mascogos (also wow)"
   sources:
-    - {title: "Kevin Mulroy, BlackPast.org", url: "https://www.blackpast.org/?p=62190", quote: "Naming Horse's followers Mascogos, the Mexicans in 1852 gave the Maroons, Seminoles, and a band of Southern Kickapoos separate land grants at Nacimiento to establish military colonies. In exchange for land, tools, and livestock, the immigrants agreed to fight against Apache and Comanche raiders."}
-    - {title: "Texas Standard (2023)", url: "https://texasstandard.org/stories/black-seminoles-texas-mexico-mascogos-cuisine-sofkee-tacos-texas/", quote: "The Mexican government welcomed the Seminole allies as border guards on the frontier, and they settled in Nacimiento, Coahuila."}
+    - {title: "Kevin Mulroy, BlackPast.org", url: "https://www.blackpast.org/?p=62190", quote: "Naming Horse’s followers Mascogos, the Mexicans in 1852 gave the Maroons, Seminoles, and a band of Southern Kickapoos separate land grants at Nacimiento to establish military colonies. In exchange for land, tools, and livestock, the immigrants agreed to fight against Apache and Comanche raiders."}
+    - {title: "Tracé Etienne-Gray, Black Seminole Indians, Handbook of Texas Online (TSHA)", url: "https://www.tshaonline.org/handbook/entries/black-seminole-indians", quote: "In desperate need of people to patrol the Texas-Coahuila border for Comanches and Apaches, the Mexican government offered the maroons ... a joint grant of land ... The maroons, now referred to as Mascogos ... move both the maroons and the Seminoles to a tract of land at the Hacienda de Nacimiento"}
 - card: black-seminoles
   fact: "Some later returned to Texas; descendants live today in Texas, Oklahoma and Coahuila, including at El Nacimiento (also wow)"
   sources:
@@ -371,7 +373,7 @@
 - card: saamaka
   fact: "Their ancestors were enslaved Africans who escaped into the interior and built autonomous communities (also wow: freed themselves)"
   sources:
-    - {title: "Inter-American Court of Human Rights", url: "https://www.corteidh.or.cr/docs/casos/articulos/seriec_172_ing.pdf", quote: "whose ancestors were African slaves forcibly taken to Suriname during the European colonization in the 17th century. Their ancestors escaped to the interior regions of the country where they established autonomous communities."}
+    - {title: "Inter-American Court of Human Rights", url: "https://www.corteidh.or.cr/docs/casos/articulos/seriec_172_ing.pdf", quote: "whose ancestors were African slaves forcibly taken to Suriname during the European colonization in the 17th century ... Their ancestors escaped to the interior regions of the country where they established autonomous communities."}
     - {title: "Richard Price, Cultural Survival", url: "https://www.culturalsurvival.org/news/saramaka-people-v-suriname-human-rights-victory-and-its-messy-aftermath", quote: "the Saamaka People - some 55,000 descendants of self-liberated African slaves"}
 - card: saamaka
   fact: "In 1762 the Dutch signed a peace treaty with the Saamaka (also wow)"
@@ -382,7 +384,7 @@
   fact: "They live in villages along the (Upper) Suriname River and govern themselves by their own customary law"
   sources:
     - {title: "Richard Price, Cultural Survival", url: "https://www.culturalsurvival.org/news/saramaka-people-v-suriname-human-rights-victory-and-its-messy-aftermath", quote: "Saamakas managed to organize their more than sixty villages strung out along the Suriname River ... they regulate themselves, at least partially, by their own norms, customs, and/or traditions"}
-    - {title: "Inter-American Court of Human Rights", url: "https://www.corteidh.or.cr/docs/casos/articulos/seriec_172_ing.pdf", quote: "on behalf of the Saramaka people of the Upper Suriname River ... regulating themselves, at least partially, by their own norms, customs, and/or traditions"}
+    - {title: "Inter-American Court of Human Rights", url: "https://www.corteidh.or.cr/docs/casos/articulos/seriec_172_ing.pdf", quote: "on behalf of the Saramaka people of the Upper Suriname River ... regulating themselves, at least partially, by their own norms, customs, and traditions"}
 - card: saamaka
   fact: "In the 1990s the state granted logging and mining concessions on Saamaka land"
   sources:
@@ -396,7 +398,7 @@
 - card: saamaka
   fact: "In 2000 Saamaka leaders petitioned the Inter-American Commission on Human Rights"
   sources:
-    - {title: "Inter-American Court of Human Rights", url: "https://www.corteidh.or.cr/docs/casos/articulos/seriec_172_ing.pdf", quote: "petition No. 12.338 presented to the Secretariat of the Commission on October 27, 2000 by the Association of Saramaka Authorities ... and twelve Saramaka captains"}
+    - {title: "Inter-American Court of Human Rights", url: "https://www.corteidh.or.cr/docs/casos/articulos/seriec_172_ing.pdf", quote: "petition No. 12.338 presented to the Secretariat of the Commission on ... October 27, 2000 by the Association of Saramaka Authorities ... and twelve Saramaka captains"}
     - {title: "Richard Price, Cultural Survival", url: "https://www.culturalsurvival.org/news/saramaka-people-v-suriname-human-rights-victory-and-its-messy-aftermath", quote: "In 2000, they petitioned the Inter-American Commission for Human Rights, eventually leading to their 2007 victory before the Court."}
 - card: saamaka
   fact: "On 28 November 2007 the Inter-American Court ruled Suriname had violated their rights and ordered it to delimit, demarcate and grant collective title to their territory, per customary law and after consultation (also wow)"
@@ -462,7 +464,7 @@
     - {title: "Fondation pour la mémoire de l'esclavage", url: "https://memoire-esclavage.org/tcpdf/403", quote: "le 26 septembre 2020, la mairie de Paris a inauguré un jardin portant son nom dans le 17ème arrondissement"}
     - {title: "Ville de Paris", url: "https://www.paris.fr/pages/un-jardin-en-hommage-a-la-resistance-contre-l-esclavagisme-10901", quote: "dans le jardin du 17 e qui porte déjà son nom, renommé et inauguré en septembre 2020"}
 - card: solitude
-  fact: "On 10 May 2022 her bronze statue was unveiled in Paris, the first statue of a Black woman in the city (also wow)"
+  fact: "On 10 May 2022 her statue was unveiled in Paris, the first statue of a Black woman in the city (also wow)"
   sources:
     - {title: "Ville de Paris", url: "https://www.paris.fr/pages/un-jardin-en-hommage-a-la-resistance-contre-l-esclavagisme-10901", quote: "Avec cette statue, inaugurée le 10 mai 2022 ... C'est aussi la première statue d'une femme noire dans Paris."}
     - {title: "Outremers360 (2022)", url: "https://outremers360.com/bassin-atlantique-appli/histoire-il-y-a-220-ans-etait-suppliciee-la-mulatresse-solitude-figure-emblematique-de-la-resistance-a-lesclavage-en-guadeloupe", quote: "C'est la première femme noire à avoir une statue à Paris ... Le monument a été inauguré cette année, le 10 mai"}
@@ -470,11 +472,10 @@
 - card: sarah-ann-gill
   fact: "Barbadian planters saw Methodist missionaries, who preached equality before God, as allies of the British anti-slavery campaign"
   sources:
-    - {title: "Bridwell Library, SMU: An Unfinished Bible Translation from Barbados", url: "https://bridwell.omeka.net/exhibits/show/earlymethodists/authorsreaders/shrewsbury", quote: "he did preach the equality of all humanity before God. This angered the local slave owners, who feared a rebellion."}
-    - {title: "Phyllis Haigh, Dissenting Missionaries, Public Opinion and the British Press (Sheffield Hallam University, 2020)", url: "https://shura.shu.ac.uk/27167/1/Haigh_2020_MPhil_DissentingMissionariesPublic.pdf", quote: "anti-missionary hostilities in Barbados because of the white islanders' belief that Shrewsbury was in league with the British abolitionists"}
-    - {title: "Barbados Advocate: Sarah Ann Gill's Pastor lecture (Alan Cobley), archived", url: "https://web.archive.org/web/20150207093957/http://www.barbadosadvocate.com/newsitem.asp?more=local&NewsID=17571", quote: "local Whites blamed abolitionists and missionaries on spreading a message of equality before God among the slaves in the region"}
+    - {title: "Bridwell Library, SMU", url: "https://bridwell.omeka.net/exhibits/show/earlymethodists/authorsreaders/shrewsbury", quote: "he did preach the equality of all humanity before God. This angered the local slave owners, who feared a rebellion."}
+    - {title: "Gordon Robert Haigh, Dissenting Missionaries, Public Opinion and the Campaign Against British Colonial Slavery, 1831-1834 (Sheffield Hallam University, 2019)", url: "https://shura.shu.ac.uk/27167/1/Haigh_2020_MPhil_DissentingMissionariesPublic.pdf", quote: "anti- missionary hostilities in Barbados because of the white islanders' belief that Shrewsbury was in league with the British abolitionists"}
 - card: sarah-ann-gill
-  fact: "Sarah Ann Gill, born 1795, was a free woman of colour and a devout Methodist in Bridgetown (also wow: woman of colour)"
+  fact: "Sarah Ann Gill, born 1795, was a free woman of colour and a devout Methodist in Barbados (also wow: woman of colour)"
   sources:
     - {title: "Parliament of Barbados, Museum of Parliament", url: "https://www.barbadosparliament.com/page_content/show_content/61", quote: "The Right Excellent Sarah Ann Gill (1795–1866)"}
     - {title: "Caribbean National Weekly (2022)", url: "https://www.caribbeannationalweekly.com/posts/sarah-ann-gill-held-firm-to-her-beliefs", quote: "Born February 16, 1795, Gill was a social and religious leader in Barbados during the era of slavery. She was born to a black mother and a white father"}
@@ -515,3 +516,23 @@
   sources:
     - {title: "Parliament of Barbados, Museum of Parliament", url: "https://www.barbadosparliament.com/page_content/show_content/61", quote: "In 1998, Barbados chose ten National Heroes. ... The Right Excellent Sarah Ann Gill (1795–1866)"}
     - {title: "Barbados Advocate: Gill a trailblazer, archived", url: "https://web.archive.org/web/20120226124953/http://www.barbadosadvocate.com/newsitem.asp?more=local&NewsID=10024", quote: "THIS country's lone female national hero, the Right Excellent Sarah Ann Gill ... She is truly deserving of the honour bestowed upon her in 1998 by the Barbados Government"}
+- card: mocambo-lisbon
+  fact: "In January 2024 Lisbon put up plaques about five centuries of African presence; the one on Rua do Poço dos Negros explains its name"
+  sources:
+    - {title: "Rute Barbedo, Lisboa ganha 20 placas e uma estátua para lembrar cinco séculos de presença africana, Time Out Lisboa (2024)", url: "https://www.timeout.pt/lisboa/pt/noticias/lisboa-ganha-20-placas-e-uma-estatua-para-lembrar-cinco-seculos-de-presenca-africana-011024", quote: "No Poço dos Negros, a placa vai, de certa forma, explicar o nome da rua."}
+    - {title: "Ana da Cunha, Lisbon inaugurates street signs about African history, Mensagem de Lisboa (2024)", url: "https://amensagem.pt/2024/01/13/lisbon-inaugurates-street-signs-african-history/", quote: "They were created based on the rare sources that allow the reconstruction of African influence in the city ... Rua do Poço dos Negros"}
+- card: saamaka
+  fact: "They have a language of their own, Saramaccan"
+  sources:
+    - {title: "Inter-American Court of Human Rights: Saramaka People v. Suriname (2007)", url: "https://www.corteidh.or.cr/docs/casos/articulos/seriec_172_ing.pdf", quote: "finance two radio broadcasts, in the Saramaka language"}
+    - {title: "Richard Price, Cultural Survival", url: "https://www.culturalsurvival.org/news/saramaka-people-v-suriname-human-rights-victory-and-its-messy-aftermath", quote: "their own language, religion, kinship and legal system"}
+- card: estevanico
+  fact: "In the 1520s Spain set out to take possession of Florida"
+  sources:
+    - {title: "Saudi Aramco World (2002)", url: "https://archive.aramcoworld.com/issue/200202/esteban.of.azemmour.and.his.new.world.adventures.htm", quote: "Narváez took formal possession of La Florida on May 1 of that year."}
+    - {title: "Rick Hendricks, Encyclopedia of Latin American History and Culture", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/esteban-1539", quote: "fellow survivors of Pánfilo de Narváez's ill-fated expedition to Florida"}
+- card: sarah-ann-gill
+  fact: "In the 1820s Barbados was a slave colony governed by its planters"
+  sources:
+    - {title: "Barbados Advocate: Heroes on Stage, archived", url: "https://web.archive.org/web/20120226125006/http://www.barbadosadvocate.com/newsitem.asp?more=local&NewsID=9818", quote: "she was persecuted by the slave owners of the colony, and the government they dominated"}
+    - {title: "Gordon Robert Haigh (2019)", url: "https://shura.shu.ac.uk/27167/1/Haigh_2020_MPhil_DissentingMissionariesPublic.pdf", quote: "the planters and colonial administrations believed that the missionaries were in league with the British abolitionists"}

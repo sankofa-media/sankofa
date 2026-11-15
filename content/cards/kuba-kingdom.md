@@ -5,7 +5,7 @@ title: The Kuba kingdom and its raffia cloth
 wow: "In the Kuba kingdom men wove the raffia and women embroidered it into velvety plush, in cloths shown at funerals and buried with the dead."
 years: [1625, 1900]
 places:
-  - {name: "Nsheng (Mushenge), Kasai, DR Congo", lat: -4.9667, lon: 21.4333}
+  - {name: "Nsheng (Mushenge), Kasai, DR Congo", lat: -4.5210, lon: 21.3116}
 zoom: 3
 era: v0
 books: [heirs]
@@ -34,8 +34,8 @@ sources:
   - {title: "Palmer Museum of Art, Penn State, African Brilliance: catalogue 36, Kuba textile", url: "https://exhibitions.psu.edu/s/african-brilliance/page/catalogue-36"}
   - {title: "Michael C. Carlos Museum, Emory University: Kuba textiles", url: "https://digitalprojects.carlos.emory.edu/exhibits/show/objects-for-personal-use-and-a/textiles/about"}
 ---
-The Kuba kingdom lay in what is now the Democratic Republic of the Congo and took its shape in the 17th century, under kings remembered in oral tradition such as Shyaam. It was a highly ranked court society, and rank showed in dress and regalia, from small raffia hats to belts and pendants. Kuba designs had names, the interlace was called imbol, and the same motifs passed from cloth to carved wood.
+The Kuba kingdom lay in what is now the Democratic Republic of the Congo, and its oral tradition remembers Shyaam, a king of the 17th century. It was a highly ranked court society, and rank showed in dress and regalia, from small raffia hats to belts and pendants. Kuba designs had names, the interlace was called imbol, and the same motifs passed from cloth to carved wood.
 
-The kingdom's most prized art was raffia cloth, and making it took both sexes. Men set up the looms and wove small square panels of palm-leaf fibre. Women decorated them with embroidery and appliqué, and the finest panels were worked in cut pile, a tufted stitch trimmed into a surface like velvet. A woman's ceremonial skirt might be sewn by several women of one family, each adding a section, and its appliqué shapes often sit where the cloth had small holes to cover.
+Its most prestigious art was raffia cloth, and making it took both sexes. Men set up the looms and wove small square panels of palm-leaf fibre. Women decorated them with embroidery and appliqué, and the finest panels were worked in cut pile, a tufted stitch trimmed into a surface like velvet. A woman's ceremonial skirt might be sewn by several women of one family, each adding a section, and its appliqué shapes often sit where the cloth had small holes to cover.
 
-These cloths were worn on ceremonial occasions, above all at funerals, laid out around the dead and then wrapped round the body or buried with it, while royal masks danced the founding of the kingdom. Kuba families still keep such cloths, show them at funerals and bury them with important adults, the way [[kente]] remains a living cloth in Ghana.
+These cloths were worn on ceremonial occasions, above all at funerals, where relatives brought them to be displayed and then wrapped round the body or buried with it. At court, royal masks danced the founding of the kingdom. Kuba families still keep such cloths, show them at funerals and bury them with important adults, the way [[kente]] remains a living cloth in Ghana.

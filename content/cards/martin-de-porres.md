@@ -20,7 +20,7 @@ sources:
   - {title: "Franciscan Media: Saint Martin de Porres", url: "https://www.franciscanmedia.org/saint-of-the-day/saint-martin-de-porres/"}
   - {title: "John XXIII: Homily at the canonisation of Martin de Porres, 6 May 1962 (Vatican)", url: "https://www.vatican.va/content/john-xxiii/la/homilies/1962/documents/hf_j-xxiii_hom_19620506_martino-porres.html"}
 ---
-Martín de Porres was born in 1579 in Lima, in the Spanish Viceroyalty of Peru. His father was a Spanish nobleman and his mother a free Black woman from Panama; they never married, and the father abandoned the family. Martín grew up poor, carrying the double stigma of illegitimate birth and mixed race. As a boy he was apprenticed to a barber-surgeon and learned to let blood, dress wounds and prepare medicines.
+Martín de Porres was born in 1579 in Lima, in the Spanish Viceroyalty of Peru. His father was a Spanish nobleman and his mother a free Black woman; they never married, and the father abandoned the family. Martín grew up poor, carrying the double stigma of illegitimate birth and mixed race. As a boy he was apprenticed to a barber-surgeon and learned to let blood and prepare medicines.
 
 As a teenager he began to serve the Dominican friars of Lima as a lay helper; only years later was he received as a full lay brother. He worked in the infirmary, the kitchen and the laundry, handed out food and alms to the city's poor, cared for Africans newly brought in as slaves and raised money for the dowries of poor girls. His kindness reached the animals too: he kept stray cats and dogs and excused the mice in the kitchen.
 

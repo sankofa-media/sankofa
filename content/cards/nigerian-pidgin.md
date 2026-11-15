@@ -30,6 +30,6 @@ Nigerian Pidgin, which linguists increasingly call Naija, is the common tongue o
 
 It grew on the coast. The Portuguese arrived in the fifteenth century, and English followed. Freed people returning from the Americas added to the mix, and in the nineteenth century so did the [[krio|Krio]] of Sierra Leone. In Warri and Sapele, in the Niger Delta, children have learned it as their first language for generations.
 
-Writers took it seriously long before officials did. In 1985 Ken Saro-Wiwa published Sozaboy, a novel told in pidgin and subtitled A Novel in Rotten English. In August 2017 the BBC World Service launched a news service in Pidgin, based in Lagos, as the first new language of its biggest expansion since the 1940s.
+Writers took it seriously long before officials did. In 1985 Ken Saro-Wiwa published Sozaboy, a novel told in pidgin and subtitled A Novel in Rotten English. In August 2017 the BBC World Service launched a news service in Pidgin, the first new language of its biggest expansion since the 1940s.
 
 Naija is a language Nigerians made for themselves, without schools or the state, and today it is what lets people of different peoples across the country understand one another.

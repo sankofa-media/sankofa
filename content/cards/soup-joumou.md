@@ -22,6 +22,6 @@ Soup joumou is a Haitian soup made from joumou, a turban squash also called gira
 
 On 1 January 1804, after the [[haitian-revolution|Haitian Revolution]], Haiti declared its independence, and the soup changed hands. Ever since, Haitians have cooked and eaten it on 1 January, Independence Day, as a sign of the freedom they won.
 
-In December 2021 UNESCO inscribed joumou soup on its Representative List of the Intangible Cultural Heritage of Humanity. It was Haiti's first entry on the list, and the country's ambassador to UNESCO, Dominique Dupuy, wept as the decision was announced.
+In December 2021 UNESCO inscribed joumou soup on its Representative List of the Intangible Cultural Heritage of Humanity. It was Haiti's first entry on the list, and the country's ambassador to UNESCO, Dominique Dupuy, was visibly moved when the decision was announced.
 
 A dish that once marked the line between owner and owned became a national symbol of liberation and dignity, shared every New Year's Day as a taste of freedom.

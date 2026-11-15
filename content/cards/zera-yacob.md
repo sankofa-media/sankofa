@@ -14,7 +14,7 @@ pair: ethiopia-voices
 further:
   - "Ralph Lee, Mehari Worku and Wendy Laura Belcher (trans.), The Hatata Inquiries: Two Texts of Seventeenth-Century African Philosophy from Ethiopia (De Gruyter, 2023, open access)"
   - "Claude Sumner, Classical Ethiopian Philosophy (1985)"
-dispute: "The authorship of the Hatata is contested. The Italian orientalist Carlo Conti Rossini argued in the 1920s that the Capuchin missionary Giusto da Urbino forged it; Claude Sumner and later scholars defend it as an Ethiopian work of the 17th century, and new archival research keeps the case open."
+dispute: "The authorship of the Hatata is contested. The Italian orientalist Carlo Conti Rossini argued in 1920 that the Capuchin missionary Giusto da Urbino forged it; Claude Sumner and later scholars defend it as an Ethiopian work of the 17th century, and new archival research keeps the case open."
 sources:
   - {title: "Dag Herbjørnsrud, Yacob and Amo: Africa's precursors to Locke, Hume and Kant, Aeon", url: "https://aeon.co/essays/yacob-and-amo-africas-precursors-to-locke-hume-and-kant"}
   - {title: "Anna Franchin, Hatata, Internazionale (9 January 2024)", url: "https://www.internazionale.it/notizie/anna-franchin/2024/01/09/hatata-zera-yacob"}

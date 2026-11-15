@@ -19,10 +19,10 @@ sources:
   - {title: "Associated Press via CNN: Artist Betye Saar, whose work reflected Black identity, has died at 99 (2026)", url: "https://www.cnn.com/2026/07/27/style/betye-saar-artist-death"}
   - {title: "Hammer Museum, Now Dig This! Art and Black Los Angeles 1960–1980: Betye Saar", url: "https://hammer.ucla.edu/now-dig-this/artists/betye-saar/"}
 ---
-The Liberation of Aunt Jemima is a small assemblage, a box about the size of a shoebox, that Betye Saar made in Los Angeles in 1972. Saar, born in the city in 1926, was a mother of three who had come to art late, and in the years of Black Power she had begun building works out of found objects.
+The Liberation of Aunt Jemima is an assemblage built in a box that Betye Saar made in Los Angeles in 1972. Saar, born in the city in 1926, had trained in design and was raising three daughters; through the 1960s she turned to assemblage, after a show of Joseph Cornell's boxes at the Pasadena Art Museum sent her out collecting objects to set in boxes of her own.
 
-For years she had been collecting memorabilia that demeaned Black people, above all the "mammy", a smiling servant figure from the minstrel stage. Saar took one such smiling figurine, set it in the box and armed it with a rifle and a hand grenade. The servant made to smile for others became a fighter.
+Among the things she gathered were demeaning images of Black people, above all the "mammy", the smiling Black servant figure of American kitsch. Saar took one such smiling figurine, set it in the box and armed it with a rifle and a hand grenade. The servant made to smile for others became a fighter.
 
-The work made her name and opened a long series in which Saar took such objects and turned them against what they had been made to say.
+The work made her name and opened a long series in which Saar reclaimed such derogatory images and turned them against what they had been made to say.
 
 The box showed that a stereotype need not be hidden away: it could be taken back and made to fight.

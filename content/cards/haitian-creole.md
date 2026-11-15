@@ -2,7 +2,7 @@
 id: haitian-creole
 kind: language
 title: Haitian Creole (Kreyòl)
-wow: "In 1793 the proclamations freeing the enslaved of Saint-Domingue were printed in Kreyòl; in 1987 Haiti's constitution named it the language that unites all Haitians."
+wow: "In 1793 the proclamation freeing the enslaved of Saint-Domingue was translated into Kreyòl and posted across the colony; in 1987 Haiti's constitution named it the language that unites all Haitians."
 years: [1793, 1987]
 places:
   - {name: "Port-au-Prince, Haiti", lat: 18.5944, lon: -72.3074}
@@ -23,8 +23,8 @@ sources:
 ---
 Haitian Creole, Kreyòl, is the language of Haiti, and the language every Haitian speaks; only a small minority also speaks French well. Most of its words come from French, but it is a language in its own right. It grew in Saint-Domingue, the French plantation colony on the western part of Hispaniola, among the enslaved Africans brought to work its plantations.
 
-Some of its first important texts were revolutionary. In 1793, with the colony in revolt, the French commissioner Sonthonax freed the enslaved of the north on 29 August, and the commissioners' proclamations were printed in Kreyòl as well as in French.
+Some of its first important texts were revolutionary. In 1793, with the colony in revolt, the French commissioner Sonthonax proclaimed the freedom of the enslaved on 29 August, and his proclamation was translated into Kreyòl and posted across the colony.
 
 Independence came on 1 January 1804, yet it was a constitution of 1918 that made French the official language. Kreyòl entered the classroom only in 1979, when a law allowed it to be used in schools. The 1987 constitution then declared: "All Haitians are united by a common language: Creole". It named Creole and French the official languages, and called for an academy for Creole.
 
-Even so, most official texts are still written in French. Kreyòl, whose early printed texts announced freedom during the [[haitian-revolution|Haitian Revolution]], remains above all the language of the people.
+Even so, most official texts are still written in French. Kreyòl, whose early texts announced freedom during the [[haitian-revolution|Haitian Revolution]], remains above all the language of the people.

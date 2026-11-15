@@ -17,12 +17,12 @@ dispute: "Her birth and death years vary between sources: most give 1793 and 186
 sources:
   - {title: "Beverly B. Mack and Jean Boyd, One Woman's Jihad (2000), excerpts in Women in World History, Roy Rosenzweig Center for History and New Media", url: "https://chnm.gmu.edu/wwh/p/214.html"}
   - {title: "Library of Congress Name Authority: Asma'u, Nana, 1793-1865 (with notes from the Dictionary of African Biography and Aisha Ahmed's anthology)", url: "https://id.loc.gov/authorities/names/n87887697.html"}
-  - {title: "Jean Boyd and Beverly B. Mack, Collected Works of Nana Asma'u (Michigan State University Press, 1997), JSTOR", url: "https://www.jstor.org/stable/10.14321/j.ctt7ztbqh"}
+  - {title: "Open Library: Collected works of Nana Asma'u, daughter of Usman dan Fodiyo, (1793-1864) (Michigan State University Press, 1997)", url: "https://openlibrary.org/search?q=collected+works+of+nana+asma%27u"}
 ---
-Nana Asma'u was born in 1793 as a daughter of Usman dan Fodio, a Muslim scholar who led a reform movement in what is now northern Nigeria. His jihad, a long series of military campaigns, created the Sokoto Caliphate, and Asma'u grew up in its learned household.
+Nana Asma'u was born in 1793 as a daughter of Usman dan Fodio, a Muslim scholar who led a reform movement in what is now northern Nigeria. His jihad, a long series of military campaigns, created the Sokoto Caliphate.
 
 She became a scholar in her own right. She spoke Fulfulde, Hausa, Arabic and Tamasheq and wrote poems in the first three. She saw the jihad's battles herself and turned them into long poems of history, and her reputation as a scholar travelled far beyond Sokoto.
 
-Her boldest work was a school without walls. She trained women teachers, called jajis, who travelled out to teach other women, often in their own homes, far from her compound. Her poems, easy to memorise and chant, were their lesson plans, and the women who learned from them formed a movement known as the 'yan taru.
+Her boldest work was a school without walls. She trained women teachers, called jajis, who travelled out to teach other women, often secluded women in their own homes. Her poems, easy to memorise and chant, were their lesson plans, and the network of teachers and learners became known as the 'yan taru.
 
 She died in 1864, or 1865 by some accounts, after a life of some seventy years. In 1997 her collected works were published in English. They are a rare record: a nineteenth-century African woman setting down her own history and building a network of literate women.

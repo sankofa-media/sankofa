@@ -28,4 +28,4 @@ Then the Mfecane wars reached the high veld. The Hlubi, themselves driven from t
 
 In 1824, with Sekonyela now at her side, she besieged [[moshoeshoe|Moshoeshoe]] at Butha-Buthe, and he left for the mountain of Thaba Bosiu. That same year she handed power to her son. The Batlokwa settled in the Caledon valley, in what is now Lesotho, and she lived out her days in a hilltop stronghold there.
 
-For about a decade, in years of war across the high veld, a woman ruled the Batlokwa.
+Through the worst years of war on the high veld, a woman ruled the Batlokwa.

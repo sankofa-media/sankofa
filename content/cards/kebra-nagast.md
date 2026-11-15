@@ -26,6 +26,6 @@ The Kebra Nagast, "The Glory of the Kings", is a book in Ge'ez, the classical la
 
 The book served a dynasty that was still young. Around 1270 a noble named Yekuno Amlak overthrew the last Zagwe king and took the throne. His line called itself Solomonic: its kings claimed descent from Solomon and Sheba through the ancient rulers of Aksum, and so cast their victory as a restoration rather than a seizure. The Kebra Nagast gave that genealogy its classic written form and turned the legend into something close to a national epic.
 
-The claim outlived the men who first made it. For seven centuries almost every Ethiopian king traced his right to rule back to Yekuno Amlak, and through him to Solomon and the Queen of Sheba. The last of them, Emperor Haile Selassie, was deposed by the military on 12 September 1974.
+The claim outlived the men who first made it. For seven centuries almost every Ethiopian king traced his right to rule back to Yekuno Amlak, and through him to Solomon and the Queen of Sheba. The last of them, Emperor Haile Selassie, was deposed by the military in 1974.
 
 In its pages it was an African kingdom, not Jerusalem, that kept the Ark of the Covenant, and a single book lent a crown its authority for seven hundred years.

@@ -28,4 +28,4 @@ In the 1960s the Aswan High Dam was about to flood the valley, and UNESCO appeal
 
 Sudan and Poland divided the finds between them. Sixty-seven paintings went to the National Museum in Warsaw, and the rest to the Sudan National Museum in Khartoum. Faras itself went under the reservoir.
 
-The Warsaw Faras Gallery is Europe's only permanent display of medieval Nubian painting and the largest collection a Polish museum has ever brought back from an excavation abroad. Its Nubian bishops, painted in an African cathedral a thousand years ago, now look out from a wall in Warsaw.
+The Warsaw Faras Gallery holds Europe's largest collection of medieval Nubian art. Its Nubian bishops, painted in an African cathedral a thousand years ago, now look out from a wall in Warsaw.

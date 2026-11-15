@@ -24,4 +24,4 @@ Papiamento is the creole language of Aruba, Bonaire and Curaçao, three Dutch-ru
 
 The islands write it in two ways. Aruba spells by origin, so "five" is cinco, as in Spanish; Curaçao and Bonaire spell by sound, so the same word is sinku. Even the name changes: Papiamento on Aruba, Papiamentu on the other two islands.
 
-For a long time Dutch alone was the language of government. In 2003 Aruba made Papiamento an official language beside Dutch, and in 2007 the Netherlands Antilles made Papiamentu official together with Dutch and English. The language that enslaved people built became a language of law.
+For a long time Dutch was the language of government and law. In 2003 Aruba made Papiamento an official language beside Dutch, and in 2007 the Netherlands Antilles made Papiamentu official together with Dutch and English. The language that enslaved people built became a language of law.

@@ -26,6 +26,6 @@ sources:
 ---
 The Harder They Come is a Jamaican feature film of 1972, directed by Perry Henzell. The ska and reggae singer Jimmy Cliff plays Ivan, a young man from the countryside who comes to Kingston to be a singer. He records a song, a greedy record producer cheats him, and he slides into crime; after a shoot-out with the police he becomes a hunted man.
 
-Ivan was drawn from a real man. Ivanhoe Martin, known as Rhygin, escaped from prison, and in 1948, after a string of shootings, he became the object of what was then called the biggest manhunt the island had known. It ended in October 1948 on Lime Cay, a small island off Port Royal, where police shot him dead. Many poor Kingstonians saw him as a folk hero.
+Ivan was drawn from a real man. Ivanhoe Martin, known as Rhygin, escaped from prison, and in 1948, after a string of shootings, he became the object of what was then called the biggest manhunt the island had known. It ended in October 1948 on Lime Cay, a small island off Port Royal, where police shot him dead. Many ordinary Jamaicans saw him as a folk hero.
 
 The film's songs did as much as its story. Cliff sang the title song, and the film and its soundtrack are credited with introducing [[reggae|reggae]] to audiences far beyond Jamaica. The film made Cliff an international star.

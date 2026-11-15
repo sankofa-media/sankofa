@@ -5,7 +5,6 @@ title: "Julia (1968–1971)"
 wow: "In 1968 NBC built a prime-time series around a Black woman playing a widowed nurse, not a maid, and the man behind it had once written for Beulah."
 years: [1968, 1971]
 places:
-  - {name: "NBC, Burbank, California", lat: 34.1808, lon: -118.3090}
   - {name: "Los Angeles", lat: 34.0522, lon: -118.2437}
 zoom: 4
 era: v6
@@ -20,6 +19,7 @@ sources:
   - {title: "Herbie J. Pilato, Television Academy: Julia Set the Standard (2021)", url: "https://www.televisionacademy.com/features/news/online-originals/julia-set-standard"}
   - {title: "Television Academy: Diahann Carroll, Emmy Awards and Nominations", url: "https://www.televisionacademy.com/bios/diahann-carroll"}
   - {title: "Golden Globes: Diahann Carroll", url: "https://goldenglobes.com/person/diahann-carroll/"}
+  - {title: "Margalit Fox, The New York Times: Diahann Carroll, Patrician Star of 'Julia' and 'Dynasty,' Dies at 84 (2019)", url: "https://www.nytimes.com/2019/10/04/arts/television/diahann-carroll-dead.html"}
 ---
 By the late 1960s American network television had almost no Black stars at the centre of its series. The Black-led shows of the early 1950s, among them Beulah and Amos 'n' Andy, had dealt in stereotypes and had long left the air, and the parts open to Black women on screen were mostly maids and nannies. Julia, a half-hour series that NBC launched in September 1968, broke that pattern.
 

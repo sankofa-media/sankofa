@@ -2,7 +2,7 @@
 id: garay
 kind: script
 title: Garay alphabet
-wow: "In 1961 Assane Faye gave Wolof an alphabet that runs right to left like Arabic yet has capital letters, each set apart by a swash."
+wow: "In 1961 Assane Faye gave Wolof an alphabet that runs right to left like Arabic, yet has capital and small letters like Latin."
 years: [1961, 2024]
 places:
   - {name: "Senegal", lat: 14.6928, lon: -17.4467}
@@ -24,10 +24,10 @@ sources:
   - {title: "Script Encoding Initiative, UC Berkeley: Scripts encoded in Unicode", url: "https://linguistics.berkeley.edu/sei/scripts-encoded.html"}
   - {title: "Unicode Consortium: Unicode release dates", url: "https://www.unicode.org/history/publicationdates.html"}
 ---
-Garay is an alphabet for Wolof, a language of Senegal. Wolof has long been written in two other ways: officially in Latin letters, and in Wolofal, an adaptation of the Arabic script. Garay is a third, made for Wolof itself. Its lines run from right to left, and its consonants and vowel signs follow the Arabic model, so that anyone who had learned some Arabic script would find it familiar.
+Garay is an alphabet for Wolof, a language of Senegal. Wolof was first written in Wolofal, an adaptation of the Arabic script, and is officially written in Latin letters. Garay is a third way, made for Wolof itself. Its lines run from right to left and it follows the Arabic model, with twenty-five consonant letters, one of them a carrier for vowels, and four basic vowel signs.
 
-Assane Faye made it in Senegal and published it in January 1961. Its surprise is capital letters: every consonant has a capital and a small form, and the capital is usually set apart by a swash, a flourish to one side of the letter. For decades Faye taught the alphabet himself, to a few hundred people, and he used it to write out a Quran with a Wolof translation between the lines.
+Assane Faye made it in Senegal in 1961. Its surprise is case: the letters come in capital and small forms, as in Latin, though the script runs the Arabic way. For decades Faye taught the alphabet himself, to hundreds of people, and wrote his manuscripts in it: textbooks, among them a course in modern mathematics, and a Wolof translation of the Quran.
 
-Garay never replaced Latin letters, and its readers are still counted in hundreds. But in 2024 Unicode encoded it in version 16.0, more than sixty years after it first appeared.
+Garay never replaced Latin letters. But in 2024 Unicode encoded it in version 16.0, more than sixty years after it first appeared.
 
 That step means a Wolof alphabet designed in Senegal can now be typed, printed and searched on any phone or computer.

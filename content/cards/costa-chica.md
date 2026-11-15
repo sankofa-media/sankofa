@@ -3,12 +3,11 @@ id: costa-chica
 kind: place
 title: The Costa Chica of Guerrero and Oaxaca
 wow: "On Mexico's Pacific coast the descendants of enslaved Africans could not count themselves as Black in a national survey until 2015; in 2019 the constitution finally named Afro-Mexican peoples as part of the nation."
-years: [1550, 2019]
+years: [2015, 2019]
 places:
   - {name: "Costa Chica (Cuajinicuilapa, Guerrero), Mexico", lat: 16.4719, lon: -98.4153}
   - {name: "Pinotepa Nacional, Oaxaca, Mexico", lat: 16.3417, lon: -98.0539}
 zoom: 3
-moment: {year: 2015}
 era: v7
 books: [heirs]
 edition: both
@@ -24,7 +23,7 @@ sources:
   - {title: "Cámara de Diputados: Reformas constitucionales turnadas a las legislaturas estatales, artículo 2° (DOF 9 August 2019)", url: "https://www.diputados.gob.mx/LeyesBiblio/votos/20190628_art2.htm"}
   - {title: "Elia Avendaño Villafuerte, Implicaciones jurídicas de la inclusión de los pueblos y comunidades afromexicanas en la Constitución Federal, UNAM (2019)", url: "https://www.nacionmulticultural.unam.mx/secciones/devenir-PIAPI/Elia-Avendanio-20190905.pdf"}
 ---
-The Costa Chica, the "short coast", is the stretch of Mexico's Pacific shore that runs south-east from Acapulco in Guerrero into Oaxaca. It is home to most of Mexico's Afro-Mexicans. Their ancestors were Africans brought by the Spanish in slavery from the 16th century; many worked the colonial cattle ranches of the coast.
+The Costa Chica, the "short coast", is the stretch of Mexico's Pacific shore that runs south-east from Acapulco in Guerrero into Oaxaca. With Veracruz on the Gulf coast, it is one of the two heartlands of Black Mexico. Their ancestors were Africans brought by the Spanish in slavery from the 16th century; many worked the colonial cattle ranches of the coast.
 
 Modern Mexico long left them out of its picture of the nation and did not count them. Away from the coast Afro-Mexicans were often taken for foreigners in their own country.
 

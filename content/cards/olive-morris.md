@@ -2,7 +2,7 @@
 id: olive-morris
 kind: person
 title: Olive Morris
-wow: "In 1973 she squatted an empty flat at 121 Railton Road in Brixton; it became a centre of Black organising and a Black bookshop, and she was dead at 27."
+wow: "In 1973 she squatted an empty flat at 121 Railton Road in Brixton; it became a centre of Black organising and a Black bookshop, and she died at 27."
 years: [1952, 1979]
 places:
   - {name: "121 Railton Road, Brixton, London", lat: 51.4567, lon: -0.1066}

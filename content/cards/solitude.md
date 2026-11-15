@@ -3,7 +3,7 @@ id: solitude
 kind: person
 title: Solitude of Guadeloupe
 wow: "Captured while pregnant in the 1802 fight against Napoleon's return of slavery to Guadeloupe, she was executed the day after giving birth; in 2022 she became the first Black woman with a statue in Paris."
-years: [1772, 1802]
+years: [1802]
 places:
   - {name: "Les Abymes, Guadeloupe", lat: 16.2711, lon: -61.5047}
   - {name: "Jardin Solitude, Place du Général-Catroux, Paris", lat: 48.8826, lon: 2.3087}
@@ -14,7 +14,7 @@ books: [archives, heirs]
 edition: both
 further:
   - "André Schwarz-Bart, La Mulâtresse Solitude (novel, 1972)"
-  - "Auguste Lacour, Histoire de la Guadeloupe (1855–1858)"
+  - "Auguste Lacour, Histoire de la Guadeloupe (nineteenth century)"
 dispute: "Almost nothing about her life before 1802 is documented: her birth around 1772 and her mother's story come from André Schwarz-Bart's novel, not from records."
 sources:
   - {title: "Fondation pour la mémoire de l'esclavage: Solitude", url: "https://memoire-esclavage.org/tcpdf/403"}
@@ -27,4 +27,4 @@ Among those who took up arms was a woman known as Solitude, a few months pregnan
 
 That is nearly all the record holds. Her story survived through oral testimony that the historian Auguste Lacour wrote down in the nineteenth century, and in 1972 André Schwarz-Bart's novel La Mulâtresse Solitude gave her a full, imagined life.
 
-The novel brought her out of oblivion. In 1999 the town of Les Abymes in Guadeloupe raised a statue to her, in 2020 Paris named a garden after her, and on 10 May 2022 a bronze statue of Solitude was unveiled there, the first statue of a Black woman in Paris.
+The novel brought her out of oblivion. In 1999 the town of Les Abymes in Guadeloupe raised a statue to her, in 2020 Paris named a garden after her, and on 10 May 2022 a statue of Solitude was unveiled there, the first statue of a Black woman in Paris.

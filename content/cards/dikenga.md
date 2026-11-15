@@ -20,6 +20,8 @@ sources:
   - {title: "DAACS (Digital Archaeological Archive of Comparative Slavery): Colonoware", url: "https://new.daacs.org/?p=238"}
   - {title: "Kara Ann Morrow, Bakongo Afterlife and Cosmological Direction: Translation of African Culture into North Florida Cemeteries, Athanor XX", url: "https://journals.flvc.org/athanor/article/download/126599/126087/207232"}
   - {title: "National Gallery of Art: The Four Moments of the Sun: Kongo Art in Two Worlds (1981)", url: "https://www.nga.gov/exhibitions/1981/kongo.html"}
+  - {title: "J. W. Joseph, African American Archaeology, New Georgia Encyclopedia (2009)", url: "https://www.georgiaencyclopedia.org/articles/history-archaeology/african-american-archaeology/"}
+  - {title: "Seattle Art Museum: Long Steps Never Broke a Back, Kongo cosmogram panel", url: "https://www1.seattleartmuseum.org/Exhibit/Archive/longsteps/f2.htm"}
   - {title: "Christopher Espenshade, A River of Doubt: Marked Colonoware, Underwater Sampling, and Questions of Inference (ScholarWorks UMass)", url: "https://scholarworks.umass.edu/server/api/core/bitstreams/e6975976-00a2-4461-80f3-455dd0d69cbd/content"}
   - {title: "Leland Ferguson, Comments on Espenshade's A River of Doubt (ScholarWorks UMass)", url: "https://hdl.handle.net/20.500.14394/843"}
   - {title: "Historical Archaeology 45:2 (2011), forum: Crosses to Bear: Cross Marks as African Symbols in Southern Pottery", url: "https://rd.springer.com/journal/41636/volumes-and-issues/45-2"}
@@ -28,4 +30,4 @@ Among the Bakongo of Africa's south-west coast, the people of the old Kongo king
 
 On the other side of the Atlantic, archaeologists in South Carolina cataloguing colonoware, the handmade earthenware used by enslaved people, noticed crosses scratched into the bottoms of some bowls. Most of the marked pieces came not from the slave quarters but from the rivers nearby. Leland Ferguson and colleagues came to see that the marks resembled Kongo cosmograms and argued that the bowls had served in rituals like those of Kongo priests, perhaps to hold sacred medicines.
 
-Other archaeologists have pushed back, and the reading is still argued over. The debate turns on a question that matters far beyond one county: whether a cross scratched into a kitchen bowl can carry a whole cosmology across the Atlantic.
+Other archaeologists have pushed back, and the reading is still argued over. The debate turns on a question that matters far beyond South Carolina: whether a cross scratched into a kitchen bowl can carry a whole cosmology across the Atlantic.

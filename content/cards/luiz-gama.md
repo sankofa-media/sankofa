@@ -10,8 +10,7 @@ places:
 zoom: 4
 era: v2
 books: [voices]
-edition: m
-pair: the-law
+edition: both
 further:
   - "Lígia Fonseca Ferreira (ed.), Com a palavra, Luiz Gama"
   - "Luiz Gama, Primeiras trovas burlescas (1859)"

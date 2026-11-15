@@ -1,12 +1,16 @@
 # Expansion batch c15 (2026-11-13): every fact in the bodies and wow lines of the c15 cards,
 # with at least two independent sources and a verbatim quote from each (whitespace normalised;
 # quotes from PDFs keep the extraction's spacing).
+# Revised 2026-11-14 after the second check (content/ledger/expand-c15-check.yaml).
 - card: lelia-gonzalez
   fact: "Lélia Gonzalez was a Brazilian anthropologist and activist, born in Belo Horizonte in 1935, died 1994"
   sources:
     - {title: "Juliana S. Bartholomeu, Lélia Gonzalez, Enciclopédia de Antropologia, Universidade de São Paulo (2019)", url: "https://ea.fflch.usp.br/autor/lelia-gonzalez", quote: "Intelectual e ativista negra, Lélia de Almeida Gonzalez (1935-1994)"}
     - {title: "El País Brasil: Lélia Gonzalez, onipresente (25 October 2020)", url: "https://brasil.elpais.com/cultura/2020-10-25/lelia-gonzalez-onipresente.html", quote: "Lélia Gonzalez (Belo Horizonte, 1935-1994)"}
     - {title: "Luiza Bairros, Lembrando Lélia Gonzalez (1994), via Geledés", url: "https://www.geledes.org.br/lembrando-lelia-gonzalez-por-luiza-bairros/", quote: "nasceu em 1º de fevereiro de 1935"}
+    - {title: "Juliana S. Bartholomeu, Lélia Gonzalez, Enciclopédia de Antropologia, Universidade de São Paulo (2019)", url: "https://ea.fflch.usp.br/autor/lelia-gonzalez", quote: "Lélia migra de Belo Horizonte para o Rio de Janeiro em 1942"}
+    - {title: "Juliana S. Bartholomeu, Lélia Gonzalez, Enciclopédia de Antropologia, Universidade de São Paulo (2019)", url: "https://ea.fflch.usp.br/autor/lelia-gonzalez", quote: "Realiza mestrado em comunicação social e doutorado em antropologia"}
+    - {title: "Samantha Azambuja, O que é amefricanidade?, Sesc São Paulo (2022)", url: "http://web.archive.org/web/20260310091912/https://www.sescsp.org.br/editorial/amefricanidade/", quote: "Para a antropóloga, é importante ultrapassar uma visão romantizada da África"}
 - card: lelia-gonzalez
   fact: "She was the second-youngest of eighteen children"
   sources:
@@ -41,6 +45,7 @@
     - {title: "El País Brasil: Lélia Gonzalez, onipresente (25 October 2020)", url: "https://brasil.elpais.com/cultura/2020-10-25/lelia-gonzalez-onipresente.html", quote: "o Movimento Negro Unificado (MNU) , lançado em 1978"}
     - {title: "Juliana S. Bartholomeu, Lélia Gonzalez, Enciclopédia de Antropologia, Universidade de São Paulo (2019)", url: "https://ea.fflch.usp.br/autor/lelia-gonzalez", quote: "a autora participa da luta de resistência à ditadura, na origem do Movimento Negro Unificado (MNU)"}
     - {title: "Luiza Bairros, Lembrando Lélia Gonzalez (1994), via Geledés", url: "https://www.geledes.org.br/lembrando-lelia-gonzalez-por-luiza-bairros/", quote: "Conheci Lélia Gonzalez quando entrei para o Movimento Negro Unificado/MNU em 1979. Ela era membro da Comissão Executiva Nacional"}
+    - {title: "Luiza Bairros, Lembrando Lélia Gonzalez (1994), via Geledés", url: "https://www.geledes.org.br/lembrando-lelia-gonzalez-por-luiza-bairros/", quote: "culminou na fundação do Movimento Negro Unificado/MNU em 18 de junho de 1978 ... Lélia participou ativamente deste processo"}
 - card: lelia-gonzalez
   fact: "Inside the MNU she spoke up for Black women"
   sources:
@@ -53,6 +58,7 @@
     - {title: "Juliana S. Bartholomeu, Lélia Gonzalez, Enciclopédia de Antropologia, Universidade de São Paulo (2019)", url: "https://ea.fflch.usp.br/autor/lelia-gonzalez", quote: "a presença do “r” no lugar do “l” (quando se diz “framengo”, por exemplo) pode remeter à ausência da letra \"l\" em certos idiomas africanos do tronco linguístico bantu"}
     - {title: "Cláudia Pons Cardoso, Amefricanizando o feminismo: o pensamento de Lélia Gonzalez, Revista Estudos Feministas 22:3 (2014)", url: "https://www.redalyc.org/pdf/381/38132698015.pdf", quote: "aquilo que chamo de pretoguês e que nada mais é do que marca de africanização do português falado no Brasil"}
     - {title: "Cláudia Pons Cardoso, Amefricanizando o feminismo: o pensamento de Lélia Gonzalez, Revista Estudos Feministas 22:3 (2014)", url: "https://www.redalyc.org/pdf/381/38132698015.pdf", quote: "É engraçado como eles [sociedade branca elitista] gozam a gente quando a gente diz que é Framengo. Chamam a gente de ignorante"}
+    - {title: "Cláudia Pons Cardoso, Amefricanizando o feminismo: o pensamento de Lélia Gonzalez, Revista Estudos Feministas 22:3 (2014)", url: "https://www.redalyc.org/pdf/381/38132698015.pdf", quote: "a presença desse r no lugar do l nada mais é do que a marca lingüística de um idioma africano, no qual o l inexiste"}
 - card: lelia-gonzalez
   fact: "In a 1988 essay she proposed Amefricanity, the Black experience of the whole continent visible in revolts and free settlements such as quilombos, palenques and maroon communities"
   sources:
@@ -72,18 +78,19 @@
     - {title: "Grajales, Mariana (1808–1893), Women in World History: A Biographical Encyclopedia, via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/grajales-mariana-1808-1893", quote: "Her parents, free blacks José and Teresa Grajales , had been among the flood of immigrants who had entered Cuba from strife-torn Santo Domingo"}
     - {title: "EcuRed: Mariana Grajales", url: "https://web.archive.org/web/20230610100855/https://www.ecured.cu/Mariana_Grajales", quote: "Nació en Santiago de Cuba , Oriente , el 12 de julio de 1815 de padres dominicanos"}
 - card: mariana-grajales
-  fact: "Her birth year is disputed: 1815 in Cuban records (baptismal register), 1808 in other accounts"
+  fact: "Her birth year is disputed: 1815 in Cuban accounts (and Stubbs), 1808 in others"
   sources:
-    - {title: "EcuRed: Mariana Grajales", url: "https://web.archive.org/web/20230610100855/https://www.ecured.cu/Mariana_Grajales", quote: "El nacimiento en esa fecha aparece inscrito en el libro de bautismo de la parroquia santiaguera de Santo Tomás"}
     - {title: "Cubadebate: Mariana Grajales Cuello, símbolo de la mujer cubana (12 July 2026)", url: "http://www.cubadebate.cu/especiales/2026/07/12/mariana-grajales-cuello-simbolo-de-la-mujer-cubana/", quote: "Santiago de Cuba vio nacer el 12 de julio de 1815"}
+    - {title: "Jean Stubbs, Grajales Cuello, Mariana, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/grajales-cuello-mariana", quote: "She was born a free woman of color in 1815"}
     - {title: "Grajales, Mariana (1808–1893), Women in World History: A Biographical Encyclopedia, via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/grajales-mariana-1808-1893", quote: "Born in Santiago de Cuba, on June 26, 1808"}
     - {title: "Luis Escamilla, Mariana Grajales Cuello (1808-1893), BlackPast.org (2009)", url: "https://www.blackpast.org/global-african-history/grajales-cuello-mariana-1808-1893/", quote: "Born on June 26, 1808 in the city of Santiago de Cuba"}
 - card: mariana-grajales
-  fact: "Cuba was Spain's richest colony, a sugar island worked by enslaved Africans, where free Black families lived under suspicion"
+  fact: "Cuba was a Spanish colony built on sugar and the labour of enslaved Africans, where free Black families lived under suspicion"
   sources:
-    - {title: "Grajales, Mariana (1808–1893), Women in World History: A Biographical Encyclopedia, via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/grajales-mariana-1808-1893", quote: "As Spain's most prosperous possession in the New World"}
+    - {title: "Grajales, Mariana (1808–1893), Women in World History: A Biographical Encyclopedia, via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/grajales-mariana-1808-1893", quote: "Throughout the 19th century, sugar dominated the economic life of the Spanish colony of Cuba"}
+    - {title: "Grajales, Mariana (1808–1893), Women in World History: A Biographical Encyclopedia, via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/grajales-mariana-1808-1893", quote: "between 1800 and 1865 the Spanish permitted the transport of at least a half-million African slaves to the island"}
+    - {title: "Jean Stubbs, Grajales Cuello, Mariana, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/grajales-cuello-mariana", quote: "with the rapid expansion of sugar and slavery and a growing \"fear of the black\" on the part of the white planter class"}
     - {title: "Grajales, Mariana (1808–1893), Women in World History: A Biographical Encyclopedia, via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/grajales-mariana-1808-1893", quote: "As free blacks, they were members of a stigmatized group that was under constant surveillance by police and informers"}
-    - {title: "Jean Stubbs, Grajales Cuello, Mariana, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/grajales-cuello-mariana", quote: "They saw a relative erosion of their position, however, with the rapid expansion of sugar and slavery and a growing \"fear of the black\" on the part of the white planter class"}
 - card: mariana-grajales
   fact: "She raised thirteen children, four from her first marriage and nine with Marcos Maceo"
   sources:
@@ -91,16 +98,19 @@
     - {title: "Luis Escamilla, Mariana Grajales Cuello (1808-1893), BlackPast.org (2009)", url: "https://www.blackpast.org/global-african-history/grajales-cuello-mariana-1808-1893/", quote: "Here, Mariana gave birth to nine children, adding to the four that she had from a previous marriage"}
     - {title: "Grajales, Mariana (1808–1893), Women in World History: A Biographical Encyclopedia, via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/grajales-mariana-1808-1893", quote: "bringing the total to thirteen"}
 - card: mariana-grajales
-  fact: "The family lived on farms outside Santiago; the eldest Maceo son, Antonio, was born in 1845"
+  fact: "The family lived on farms outside Santiago; their son Antonio was born there in 1845"
   sources:
+    - {title: "Grajales, Mariana (1808–1893), Women in World History: A Biographical Encyclopedia, via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/grajales-mariana-1808-1893", quote: "The new and expanded family moved to \"La Esperanza\" (\"Hope\"), Maceo's farm in the Majaguabo district"}
     - {title: "Grajales, Mariana (1808–1893), Women in World History: A Biographical Encyclopedia, via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/grajales-mariana-1808-1893", quote: "In June 1845, Mariana gave birth to a son, Antonio de la Caridad Maceo"}
-    - {title: "EcuRed: Mariana Grajales", url: "https://web.archive.org/web/20230610100855/https://www.ecured.cu/Mariana_Grajales", quote: "El matrimonio fue a vivir a la finca que tenía Marcos en Majaguabo, San Luis , y en 1845 nació el primogénito: Antonio Maceo"}
     - {title: "Luis Escamilla, Mariana Grajales Cuello (1808-1893), BlackPast.org (2009)", url: "https://www.blackpast.org/global-african-history/grajales-cuello-mariana-1808-1893/", quote: "subsequently lived at La Delicia, in Majaguabo, San Luis"}
+    - {title: "Jean Stubbs, Grajales Cuello, Mariana, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/grajales-cuello-mariana", quote: "General Antonio Maceo (1845 – 1896)"}
 - card: mariana-grajales
   fact: "When war for independence broke out in 1868 she had the men of the family kneel before a crucifix and swear to free Cuba or die"
   sources:
     - {title: "Grajales, Mariana (1808–1893), Women in World History: A Biographical Encyclopedia, via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/grajales-mariana-1808-1893", quote: "The men kneeled while she made them swear \"before Christ, who was the first liberal man to appear on earth,\" that they would all fight to free the nation or give their lives for it"}
     - {title: "EcuRed: Mariana Grajales", url: "https://web.archive.org/web/20230610100855/https://www.ecured.cu/Mariana_Grajales", quote: "Mariana rebosando de alegría hace jurar a sus hijos de rodillas y frente a un crucifijo de Cristo… \"Juremos libertar a la Patria o morir por ella\""}
+    - {title: "Grajales, Mariana (1808–1893), Women in World History: A Biographical Encyclopedia, via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/grajales-mariana-1808-1893", quote: "Mariana went into the house and returned with her crucifix"}
+    - {title: "Cubadebate: Mariana Grajales Cuello, símbolo de la mujer cubana (12 July 2026)", url: "http://www.cubadebate.cu/especiales/2026/07/12/mariana-grajales-cuello-simbolo-de-la-mujer-cubana/", quote: "hizo a sus hijos jurar ante Cristo: “Libertar la Patria ó morir por ella”"}
 - card: mariana-grajales
   fact: "Marcos Maceo was killed in 1869 and several of her sons fell"
   sources:
@@ -109,12 +119,14 @@
     - {title: "EcuRed: Mariana Grajales", url: "https://web.archive.org/web/20230610100855/https://www.ecured.cu/Mariana_Grajales", quote: "Miguel cayó junto a su hermano Fermín, en Cascorro, con grado de teniente coronel; Julio, siendo subteniente, murió heroicamente en la acción de Nuevo Mundo"}
     - {title: "Grajales, Mariana (1808–1893), Women in World History: A Biographical Encyclopedia, via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/grajales-mariana-1808-1893", quote: "Within months, Mariana Grajales received word that Justo, one of her eldest sons, had been ambushed and shot"}
 - card: mariana-grajales
-  fact: "She followed the rebel camps into the mountains and nursed the wounded"
+  fact: "She followed the rebel camps through the bush and nursed the wounded"
   sources:
     - {title: "Jean Stubbs, Grajales Cuello, Mariana, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/grajales-cuello-mariana", quote: "ran base camps, tending the wounded and seeing to the provision of food and clothing"}
     - {title: "Luis Escamilla, Mariana Grajales Cuello (1808-1893), BlackPast.org (2009)", url: "https://www.blackpast.org/global-african-history/grajales-cuello-mariana-1808-1893/", quote: "She established and ran a hospital for wounded soldiers"}
     - {title: "EcuRed: Mariana Grajales", url: "https://web.archive.org/web/20230610100855/https://www.ecured.cu/Mariana_Grajales", quote: "curó heridos en los hospitales de campaña"}
     - {title: "Cubadebate: Mariana Grajales Cuello, símbolo de la mujer cubana (12 July 2026)", url: "http://www.cubadebate.cu/especiales/2026/07/12/mariana-grajales-cuello-simbolo-de-la-mujer-cubana/", quote: "donde instaló hospitales de sangre"}
+    - {title: "Grajales, Mariana (1808–1893), Women in World History: A Biographical Encyclopedia, via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/grajales-mariana-1808-1893", quote: "the revolutionary forces eluded capture by living in the jungle. Despite her age, Mariana joined the rebels"}
+    - {title: "Cubadebate: Mariana Grajales Cuello, símbolo de la mujer cubana (12 July 2026)", url: "http://www.cubadebate.cu/especiales/2026/07/12/mariana-grajales-cuello-simbolo-de-la-mujer-cubana/", quote: "se mantuvo en la manigua durante toda la Guerra de los Diez Años"}
 - card: mariana-grajales
   fact: "José Martí wrote that a fighter who trembled before the enemy saw Maceo's mother in her kerchief and stopped trembling"
   sources:
@@ -126,6 +138,8 @@
     - {title: "Luis Escamilla, Mariana Grajales Cuello (1808-1893), BlackPast.org (2009)", url: "https://www.blackpast.org/global-african-history/grajales-cuello-mariana-1808-1893/", quote: "Mariana went into exile in Jamaica in 1878"}
     - {title: "Jean Stubbs, Grajales Cuello, Mariana, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/grajales-cuello-mariana", quote: "she died in 1893 in exile in Kingston, Jamaica"}
     - {title: "EcuRed: Mariana Grajales", url: "https://web.archive.org/web/20230610100855/https://www.ecured.cu/Mariana_Grajales", quote: "Kingston , 27 de noviembre de 1893"}
+    - {title: "Jean Stubbs, Grajales Cuello, Mariana, Encyclopedia of African-American Culture and History (2005), via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/grajales-cuello-mariana", quote: "The family was given a Spanish amnesty and escort to sail from Santiago to Kingston, Jamaica. From 1878"}
+    - {title: "Grajales, Mariana (1808–1893), Women in World History: A Biographical Encyclopedia, via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/grajales-mariana-1808-1893", quote: "died in exile in Kingston, Jamaica, on November 28, 1893"}
 - card: mariana-grajales
   fact: "In 1923 her remains were brought home to Santa Ifigenia cemetery in Santiago"
   sources:
@@ -149,11 +163,10 @@
     - {title: "Matthew McRae, The story of Africville, Canadian Museum for Human Rights (2017, updated 2023)", url: "https://humanrights.ca/story/the-story-of-africville", quote: "Africville was a primarily Black community located on the south shore of the Bedford Basin, on the outskirts of Halifax"}
     - {title: "Halifax Regional Municipality: Africville", url: "https://www.halifax.ca/about-halifax/diversity-inclusion/african-nova-scotian-affairs/africville", quote: "Located on the southern shore of the Bedford Basin"}
 - card: africville
-  fact: "Black people who reached Nova Scotia after the American Revolution and the War of 1812, many formerly enslaved, were pushed onto the poorest land"
+  fact: "Among the first families on that shore were Black refugees of the War of 1812, many formerly enslaved"
   sources:
+    - {title: "Jon Tattrie, Africville, The Canadian Encyclopedia (2014, last edited 2025)", url: "https://www.thecanadianencyclopedia.ca/en/article/africville", quote: "It is likely that several Black families lived in the area, earning it the nickname “African Village.” They were a mix of formerly enslaved people, Maroons, and Black refugees from the War of 1812"}
     - {title: "Matthew McRae, The story of Africville, Canadian Museum for Human Rights (2017, updated 2023)", url: "https://humanrights.ca/story/the-story-of-africville", quote: "after the American Revolution and the War of 1812 – large groups of Black settlers began to arrive in the province. Many of them were formerly enslaved people"}
-    - {title: "Matthew McRae, The story of Africville, Canadian Museum for Human Rights (2017, updated 2023)", url: "https://humanrights.ca/story/the-story-of-africville", quote: "Black settlers were pushed to the margins of society and forced to live on the most inhospitable land"}
-    - {title: "Jon Tattrie, Africville, The Canadian Encyclopedia (2014, last edited 2025)", url: "https://www.thecanadianencyclopedia.ca/en/article/africville", quote: "They were a mix of formerly enslaved people, Maroons, and Black refugees from the War of 1812"}
 - card: africville
   fact: "In 1848 William Brown and William Arnold, Black settlers, bought land there"
   sources:
@@ -166,6 +179,7 @@
     - {title: "Jon Tattrie, Africville, The Canadian Encyclopedia (2014, last edited 2025)", url: "https://www.thecanadianencyclopedia.ca/en/article/africville", quote: "The church was called “the beating heart of Africville”"}
     - {title: "Matthew McRae, The story of Africville, Canadian Museum for Human Rights (2017, updated 2023)", url: "https://humanrights.ca/story/the-story-of-africville", quote: "the Seaview United Baptist Church, which was Africville’s spiritual and social centre"}
     - {title: "Halifax Regional Municipality: Africville", url: "https://www.halifax.ca/about-halifax/diversity-inclusion/african-nova-scotian-affairs/africville", quote: "the Seaview United Baptist Church, the spiritual and social focal point of Africville"}
+    - {title: "Jon Tattrie, Africville, The Canadian Encyclopedia (2014, last edited 2025)", url: "https://www.thecanadianencyclopedia.ca/en/article/africville", quote: "in 1849 Seaview African United Baptist Church was opened to serve the village’s 80 residents"}
 - card: africville
   fact: "Residents paid city taxes but Halifax never gave them running water or sewers"
   sources:
@@ -178,17 +192,18 @@
     - {title: "Matthew McRae, The story of Africville, Canadian Museum for Human Rights (2017, updated 2023)", url: "https://humanrights.ca/story/the-story-of-africville", quote: "The City compounded the problem by building many undesirable developments in and around Africville, including an infectious disease hospital, a prison and a dump"}
     - {title: "Halifax Regional Municipality: Africville", url: "https://www.halifax.ca/about-halifax/diversity-inclusion/african-nova-scotian-affairs/africville", quote: "the development of an infectious disease hospital, a prison, and the relocation of the city dump near Africville in 1955"}
 - card: africville
-  fact: "In 1964 the council decided to relocate the residents"
+  fact: "In 1964 the city began moving the residents out"
   sources:
-    - {title: "Matthew McRae, The story of Africville, Canadian Museum for Human Rights (2017, updated 2023)", url: "https://humanrights.ca/story/the-story-of-africville", quote: "In January 1964, Halifax City Council voted to authorize the relocation of Africville residents"}
     - {title: "Halifax Regional Municipality: Africville", url: "https://www.halifax.ca/about-halifax/diversity-inclusion/african-nova-scotian-affairs/africville", quote: "In July 1964, the city purchased the first of the Africville properties"}
     - {title: "Jon Tattrie, Africville, The Canadian Encyclopedia (2014, last edited 2025)", url: "https://www.thecanadianencyclopedia.ca/en/article/africville", quote: "The first land was expropriated in 1964"}
+    - {title: "Matthew McRae, The story of Africville, Canadian Museum for Human Rights (2017, updated 2023)", url: "https://humanrights.ca/story/the-story-of-africville", quote: "In January 1964, Halifax City Council voted to authorize the relocation of Africville residents"}
 - card: africville
   fact: "Houses were bulldozed as families left and some residents were moved with belongings in city garbage trucks"
   sources:
     - {title: "Matthew McRae, The story of Africville, Canadian Museum for Human Rights (2017, updated 2023)", url: "https://humanrights.ca/story/the-story-of-africville", quote: "The City demolished homes as soon as they were vacated"}
     - {title: "Matthew McRae, The story of Africville, Canadian Museum for Human Rights (2017, updated 2023)", url: "https://humanrights.ca/story/the-story-of-africville", quote: "Africville resident Dorothy Carvery was moved from her home by a City of Halifax garbage truck"}
     - {title: "Jon Tattrie, Africville, The Canadian Encyclopedia (2014, last edited 2025)", url: "https://www.thecanadianencyclopedia.ca/en/article/africville", quote: "Halifax brought in dump trucks to move residents and their possessions"}
+    - {title: "Jon Tattrie, Africville, The Canadian Encyclopedia (2014, last edited 2025)", url: "https://www.thecanadianencyclopedia.ca/en/article/africville", quote: "Homes were bulldozed lot by lot over the next five years"}
 - card: africville
   fact: "The church was demolished in the middle of the night in 1967 (date within 1967 disputed)"
   sources:
@@ -222,6 +237,7 @@
     - {title: "The Gleaner: Pinnacle, a story of a new religion and persecution (16 December 2022)", url: "https://past.jamaica-gleaner.com/article/news/20221216/pinnacle-story-new-religion-and-persecution", quote: "he set up the first Rastafarian village in Jamaica on 400 acres at Sligoville, St Catherine"}
     - {title: "Jérémie Kroubo Dagnini, Rastafari: Alternative Religion and Resistance against 'White' Christianity, Études caribéennes 12 (2009)", url: "https://web.archive.org/web/2022/https://journals.openedition.org/etudescaribeennes/3665", quote: "in the hills of St. Catherine, five miles from Sligoville, on a property of some 485 acres known as Pinnacle"}
     - {title: "The Immanent Frame (SSRC): Rastafari women's early-twentieth-century world-making (2022)", url: "http://tif.ssrc.org/2022/04/01/rastafari-womens-early-twentieth-century-world-making/", quote: "Pinnacle in Sligoville, St. Catherine, Jamaica was the first Rastafari commune"}
+    - {title: "The Gleaner: Pinnacle, a story of a new religion and persecution (16 December 2022)", url: "https://past.jamaica-gleaner.com/article/news/20221216/pinnacle-story-new-religion-and-persecution", quote: "The settlement was called The Pinnacle because of its high hilltop elevation"}
 - card: pinnacle-rastafari
   fact: "Jamaica was then a British colony"
   sources:
@@ -241,11 +257,13 @@
     - {title: "The Gleaner: Pinnacle, a story of a new religion and persecution (16 December 2022)", url: "https://past.jamaica-gleaner.com/article/news/20221216/pinnacle-story-new-religion-and-persecution", quote: "He saw Selassie as the great Black Messiah"}
     - {title: "Jamaica Observer: Leonard Howell and the struggles that he fought (31 January 2014)", url: "https://www.jamaicaobserver.com/2014/01/31/leonard-howell-and-the-struggles-that-he-fought/", quote: "Howell began preaching that Emperor Haile Salessie I of Ethiopia was the black messiah"}
     - {title: "Jérémie Kroubo Dagnini, Rastafari: Alternative Religion and Resistance against 'White' Christianity, Études caribéennes 12 (2009)", url: "https://web.archive.org/web/2022/https://journals.openedition.org/etudescaribeennes/3665", quote: "On 2 November 1930, Ras Tafari Makonnen"}
+    - {title: "The Gleaner: Pinnacle, a story of a new religion and persecution (16 December 2022)", url: "https://past.jamaica-gleaner.com/article/news/20221216/pinnacle-story-new-religion-and-persecution", quote: "On that day, Ras Tafari Makonnen was crowned Emperor Haile Selassie I of Ethiopia"}
 - card: pinnacle-rastafari
   fact: "The colonial courts jailed him for sedition"
   sources:
     - {title: "The Gleaner: Pinnacle, a story of a new religion and persecution (16 December 2022)", url: "https://past.jamaica-gleaner.com/article/news/20221216/pinnacle-story-new-religion-and-persecution", quote: "He was charged and sent to prison for sedition"}
     - {title: "Jamaica Observer: Leonard Howell and the struggles that he fought (31 January 2014)", url: "https://www.jamaicaobserver.com/2014/01/31/leonard-howell-and-the-struggles-that-he-fought/", quote: "He went on trial on March 13, 1934 and was successfully prosecuted"}
+    - {title: "Jérémie Kroubo Dagnini, Rastafari: Alternative Religion and Resistance against 'White' Christianity, Études caribéennes 12 (2009)", url: "https://web.archive.org/web/2022/https://journals.openedition.org/etudescaribeennes/3665", quote: "Between 1934 and 1939, he was imprisoned for three years"}
 - card: pinnacle-rastafari
   fact: "Out of prison, in 1940, he founded Pinnacle on several hundred acres of hill land"
   sources:
@@ -276,12 +294,15 @@
     - {title: "The Gleaner: Pinnacle, a story of a new religion and persecution (16 December 2022)", url: "https://past.jamaica-gleaner.com/article/news/20221216/pinnacle-story-new-religion-and-persecution", quote: "In 1954, government militia invaded Pinnacle and completely destroyed the village"}
     - {title: "The Gleaner: Pinnacle, a story of a new religion and persecution (16 December 2022)", url: "https://past.jamaica-gleaner.com/article/news/20221216/pinnacle-story-new-religion-and-persecution", quote: "Yet, Pinnacle never really got back to its heyday"}
     - {title: "Jérémie Kroubo Dagnini, Rastafari: Alternative Religion and Resistance against 'White' Christianity, Études caribéennes 12 (2009)", url: "https://web.archive.org/web/2022/https://journals.openedition.org/etudescaribeennes/3665", quote: "until it was completely destroyed in June 1958"}
+    - {title: "Shamara Wyllie Alhassan, Rastafari women's early-twentieth-century world-making, The Immanent Frame (SSRC, 2022)", url: "http://tif.ssrc.org/2022/04/01/rastafari-womens-early-twentieth-century-world-making/", quote: "After one of the last police raids on Pinnacle, where the government burnt down the school, the bakery, and the houses and destroyed the farms"}
+    - {title: "Shamara Wyllie Alhassan, Rastafari women's early-twentieth-century world-making, The Immanent Frame (SSRC, 2022)", url: "http://tif.ssrc.org/2022/04/01/rastafari-womens-early-twentieth-century-world-making/", quote: "who lived at Pinnacle until it was destroyed in 1958"}
 - card: pinnacle-rastafari
   fact: "Its people scattered, many to West Kingston, and the faith spread through the island and the world"
   sources:
     - {title: "Jérémie Kroubo Dagnini, Rastafari: Alternative Religion and Resistance against 'White' Christianity, Études caribéennes 12 (2009)", url: "https://web.archive.org/web/2022/https://journals.openedition.org/etudescaribeennes/3665", quote: "“an estimated two thousand of its residents took refuge in Kingston [which contributed to spreading the religion through Jamaican society]"}
     - {title: "Jamaica Observer: Leonard Howell and the struggles that he fought (31 January 2014)", url: "https://www.jamaicaobserver.com/2014/01/31/leonard-howell-and-the-struggles-that-he-fought/", quote: "resulted in the displacement of many of Howell’s followers who went to live in various parts of the island including St Thomas, Clarendon and the West Kingston in area known as ‘Dungle’ or ‘Back-a-Wall’"}
     - {title: "The Gleaner: Pinnacle, a story of a new religion and persecution (16 December 2022)", url: "https://past.jamaica-gleaner.com/article/news/20221216/pinnacle-story-new-religion-and-persecution", quote: "the movement continues to grow in Jamaica and many parts of the world"}
+    - {title: "Shamara Wyllie Alhassan, Rastafari women's early-twentieth-century world-making, The Immanent Frame (SSRC, 2022)", url: "http://tif.ssrc.org/2022/04/01/rastafari-womens-early-twentieth-century-world-making/", quote: "she and other members of the commune moved into the depressed areas of Kingston"}
 - card: madan-sara
   fact: "Madan sara are Haitian women traders who move food from the countryside to the towns, especially Port-au-Prince"
   sources:
@@ -289,10 +310,10 @@
     - {title: "Caroline Shenaz Hossein, Black women in the marketplace: everyday gender-based risks against Haiti's madan saras (women traders), Work Organisation, Labour & Globalisation 9:2 (2015)", url: "https://caroline-hossein.squarespace.com/s/workorgalaboglob920036.pdf", quote: "madan saras bring fresh produce from the rural areas to city people"}
     - {title: "Global Press Journal: Haiti's Women Food Suppliers Face Mounting Pressures", url: "https://globalpressjournal.com/americas/haiti/haitis-women-food-suppliers-face-mounting-pressures/", quote: "The Madan Sara provide a vital service by collecting farmers’ produce and selling it in urban"}
 - card: madan-sara
-  fact: "A sara often buys with cash or credit advanced before the harvest"
+  fact: "A sara often buys with cash advanced before the harvest"
   sources:
-    - {title: "Timothy T. Schwartz, Just What is a Madan Sara, Schwartz Research Group", url: "http://timothyschwartzhaiti.com/just-what-is-a-madan-sara/", quote: "Can these women leverage their small amount of capital to make below market purchases before the crop is ready to harvest?"}
-    - {title: "Gender in the World Food Economy: Inequitable Transformation of Haiti's Food Economy, Frontiers in Communication (2022)", url: "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2022.755994/full", quote: "buying and selling food goods, sharing political, agricultural, and health information, and extending credit"}
+    - {title: "Timothy T. Schwartz, Just What is a Madan Sara, Schwartz Research Group", url: "http://timothyschwartzhaiti.com/just-what-is-a-madan-sara/", quote: "loans to farmers ahead of the harvest to obtain discounts 30 to 50 percent below the final farmgate price"}
+    - {title: "Caroline Shenaz Hossein, Black women in the marketplace: everyday gender-based risks against Haiti's madan saras (women traders), Work Organisation, Labour & Globalisation 9:2 (2015)", url: "https://caroline-hossein.squarespace.com/s/workorgalaboglob920036.pdf", quote: "they also may be able to give credit or small loans to farmers and can pre-order large quantities for major markets in Port-au-Prince"}
 - card: madan-sara
   fact: "Many bring their goods to the Croix-des-Bossales market in Port-au-Prince"
   sources:
@@ -315,23 +336,31 @@
     - {title: "Caroline Shenaz Hossein, Black women in the marketplace: everyday gender-based risks against Haiti's madan saras (women traders), Work Organisation, Labour & Globalisation 9:2 (2015)", url: "https://caroline-hossein.squarespace.com/s/workorgalaboglob920036.pdf", quote: "Madan saras who travel long distances and bring news and gossip"}
     - {title: "Gender in the World Food Economy: Inequitable Transformation of Haiti's Food Economy, Frontiers in Communication (2022)", url: "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2022.755994/full", quote: "These women travel to remote mountain areas, buying and selling food goods, sharing political, agricultural, and health information"}
 - card: madan-sara
-  fact: "The familiar picture is a woman riding on a truck among sacks of produce; some rent a whole truck together to reach mountain villages"
+  fact: "Many ride to market on trucks among their sacks; some rent a whole truck together to reach mountain villages"
   sources:
     - {title: "Timothy T. Schwartz, Just What is a Madan Sara, Schwartz Research Group", url: "http://timothyschwartzhaiti.com/just-what-is-a-madan-sara/", quote: "The image that comes to most minds is of a large woman sitting on top of a bus or truck ensconced in sacks of produce"}
+    - {title: "Global Press Journal: Haiti's Women Food Suppliers Face Mounting Pressures", url: "https://globalpressjournal.com/americas/haiti/haitis-women-food-suppliers-face-mounting-pressures/", quote: "There were a few others with me on the truck the first time I took the risk of crossing Martissant"}
     - {title: "Timothy T. Schwartz, Just What is a Madan Sara, Schwartz Research Group", url: "http://timothyschwartzhaiti.com/just-what-is-a-madan-sara/", quote: "There are those who rent an entire truck"}
-    - {title: "Gender in the World Food Economy: Inequitable Transformation of Haiti's Food Economy, Frontiers in Communication (2022)", url: "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2022.755994/full", quote: "“I rent a large truck with two other Madan Sara and we travel up to the mountain where we trade food, news, and credit with cultivators.”"}
+    - {title: "Gender in the World Food Economy: Inequitable Transformation of Haiti's Food Economy, Frontiers in Communication (2022)", url: "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2022.755994/full", quote: "I rent a large truck with two other Madan Sara and we travel up to the mountain where we trade food, news, and credit with cultivators."}
 - card: madan-sara
-  fact: "Since tariffs were cut in the 1990s, cheap imported food, especially rice, has undercut local harvests"
+  fact: "Since Haiti cut its import tariffs, cheap imported food, especially rice, has undercut local harvests"
   sources:
     - {title: "Buala: Markets and Margins, an interview with Etant Dupain", url: "https://www.buala.org/en/face-to-face/markets-and-margins-an-interview-with-etant-dupain", quote: "When President Clinton forced Haiti to reduce tariffs in 1994, it single-handedly destroyed Haiti’s ability to produce local rice"}
     - {title: "Gender in the World Food Economy: Inequitable Transformation of Haiti's Food Economy, Frontiers in Communication (2022)", url: "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2022.755994/full", quote: "With decreasing prices for agricultural exports and removal of import tariffs during SAPs, the Haitian business elite expanded"}
-    - {title: "Gender in the World Food Economy: Inequitable Transformation of Haiti's Food Economy, Frontiers in Communication (2022)", url: "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2022.755994/full", quote: "As businessmen increase food importation, Madan Sara are forced to participate in the distribution of cheaper imports to meet consumer demands and to neglect the distribution of local production"}
+    - {title: "Gender in the World Food Economy: Inequitable Transformation of Haiti's Food Economy, Frontiers in Communication (2022)", url: "https://www.frontiersin.org/journals/communication/articles/10.3389/fcomm.2022.755994/full", quote: "foreign imported food rose to account for 60 percent of all food consumed in Haiti and 80 percent of all rice"}
 - card: madan-sara
   fact: "Gangs stop trucks on the roads and tax or rob the sara in Port-au-Prince markets; many no longer go to the capital"
   sources:
     - {title: "Timothy T. Schwartz, Just What is a Madan Sara, Schwartz Research Group", url: "http://timothyschwartzhaiti.com/just-what-is-a-madan-sara/", quote: "Gangs fight for control of the major urban markets precisely so they can “tax” the madan sara and resellers, something that, as seen earlier, has become so severe in recent years in Port-au-Prince that many madan sara no longer go to the capital"}
     - {title: "Timothy T. Schwartz, Just What is a Madan Sara, Schwartz Research Group", url: "http://timothyschwartzhaiti.com/just-what-is-a-madan-sara/", quote: "it is often during transport that madan sara are robbed and/or taxed"}
     - {title: "Global Press Journal: Haiti's Women Food Suppliers Face Mounting Pressures", url: "https://globalpressjournal.com/americas/haiti/haitis-women-food-suppliers-face-mounting-pressures/", quote: "“We were stopped by heavily armed bandits but were able to continue our route once the driver had paid them."}
+    - {title: "Global Press Journal: Haiti's Women Food Suppliers Face Mounting Pressures", url: "https://globalpressjournal.com/americas/haiti/haitis-women-food-suppliers-face-mounting-pressures/", quote: "roadblocks and gangs that demand payment to pass. Those who attempt the journey soon discover it isn’t worth the risk"}
+- card: madan-sara
+  fact: "In the 1950s Sidney Mintz became the first scholar to study Haiti's market system closely, with the sara at its centre"
+  sources:
+    - {title: "Timothy T. Schwartz, Just What is a Madan Sara, Schwartz Research Group", url: "http://timothyschwartzhaiti.com/just-what-is-a-madan-sara/", quote: "The first social scientist to systematically study the internal Haitian market system from the perspective of modern economic theory was US anthropologist Sidney Mintz (1957, 1959, 1960a, 1960b, 1961a, 1961b)"}
+    - {title: "Timothy T. Schwartz, Just What is a Madan Sara, Schwartz Research Group", url: "http://timothyschwartzhaiti.com/just-what-is-a-madan-sara/", quote: "Scholars paid special attention to the pivotal role madan sara paid in the informal Haitian economy"}
+    - {title: "Caroline Shenaz Hossein, Black women in the marketplace: everyday gender-based risks against Haiti's madan saras (women traders), Work Organisation, Labour & Globalisation 9:2 (2015)", url: "https://caroline-hossein.squarespace.com/s/workorgalaboglob920036.pdf", quote: "Sidney Mintz (2010) has documented the risks faced by madan saras since the 1950s"}
 - card: madan-sara
   fact: "They still keep much of Haiti fed"
   sources:
@@ -345,16 +374,16 @@
     - {title: "Buenos Aires Times (AFP): Colombia's first black vice-president brings green focus (June 2022)", url: "https://www.batimes.com.ar/news/latin-america/colombias-first-black-vice-president-brings-green-focus.phtml", quote: "Originally from the small settlement of Yolombo in the Cauca Mountains of southwest Colombia"}
     - {title: "Goldman Environmental Prize: Francia Márquez (2018)", url: "https://www.goldmanprize.org/recipient/francia-marquez/", quote: "was born in Yolombo, a village in the Cauca region"}
 - card: francia-marquez
-  fact: "Afro-Colombians there descend from Africans enslaved to work the colonial mines and have long farmed and panned for gold along the Ovejas"
+  fact: "The Afro-Colombian families of the area have farmed and mined gold by hand for generations"
   sources:
-    - {title: "Goldman Environmental Prize: Francia Márquez (2018)", url: "https://www.goldmanprize.org/recipient/francia-marquez/", quote: "a population that originally was brought as slaves from Africa to work in Colombia’s colonial mines and haciendas"}
     - {title: "Goldman Environmental Prize: Francia Márquez (2018)", url: "https://www.goldmanprize.org/recipient/francia-marquez/", quote: "The Afro-Colombian community has practiced agriculture and artisanal mining for generations, using pickaxes and panning for gold nuggets in the Ovejas River"}
-    - {title: "Buenos Aires Times (AFP): Colombia's first black vice-president brings green focus (June 2022)", url: "https://www.batimes.com.ar/news/latin-america/colombias-first-black-vice-president-brings-green-focus.phtml", quote: "Afro-Colombians were originally brought to the region as slaves from Africa to work in colonial-era mines"}
+    - {title: "The Ecologist: Hope for Colombia? (15 September 2022)", url: "https://theecologist.org/2022/sep/15/hope-colombia", quote: "Her lineage is deeply rooted within Afro-Colombian artisanal gold mining in her ancestral town of La Tomba"}
 - card: francia-marquez
   fact: "She became an activist at 13 when a dam threatened her community"
   sources:
     - {title: "Goldman Environmental Prize: Francia Márquez (2018)", url: "https://www.goldmanprize.org/recipient/francia-marquez/", quote: "She first became an activist at 13, when construction of a dam threatened her community"}
     - {title: "Buenos Aires Times (AFP): Colombia's first black vice-president brings green focus (June 2022)", url: "https://www.batimes.com.ar/news/latin-america/colombias-first-black-vice-president-brings-green-focus.phtml", quote: "she became an activist at the age of 13 when the construction of a dam threatened her community"}
+    - {title: "Colombia Reports: Francia Marquez", url: "https://colombiareports.com/francia-marquez/", quote: "Marquez began defending her territory when she was 13 and her community opposed plans to build a hydroelectric dam near the family home"}
 - card: francia-marquez
   fact: "Pregnant at 16, she left school and worked in small-scale gold mining and later as a maid"
   sources:
@@ -363,11 +392,11 @@
     - {title: "Atlanta Black Star: Former maid, activist is Colombia's first Black vice president (23 June 2022)", url: "https://atlantablackstar.com/2022/06/23/from-resistance-to-power-former-maid-activist-is-colombias-first-black-vice-president/", quote: "Pregnant at 16, she started working in gold mines and later became a live-in maid"}
     - {title: "The Ecologist: Hope for Colombia? (15 September 2022)", url: "https://theecologist.org/2022/sep/15/hope-colombia", quote: "Having become a single parent at 16 years old, Márquez became a miner herself to support her family"}
 - card: francia-marquez
-  fact: "In 2014 illegal miners brought backhoes to the Ovejas near La Toma, dug open pits and poisoned the river with mercury"
+  fact: "Illegal gold miners moved onto the Ovejas near La Toma with heavy machinery and poisoned it with mercury"
   sources:
-    - {title: "Goldman Environmental Prize: Francia Márquez (2018)", url: "https://www.goldmanprize.org/recipient/francia-marquez/", quote: "In 2014, illegal miners began operating 14 backhoes on the banks of the Ovejas River near La Toma"}
-    - {title: "Goldman Environmental Prize: Francia Márquez (2018)", url: "https://www.goldmanprize.org/recipient/francia-marquez/", quote: "They cleared forests and dug deep open pits"}
+    - {title: "Goldman Environmental Prize: Francia Márquez (2018)", url: "https://www.goldmanprize.org/recipient/francia-marquez/", quote: "illegal miners began operating 14 backhoes on the banks of the Ovejas River near La Toma"}
     - {title: "Goldman Environmental Prize: Francia Márquez (2018)", url: "https://www.goldmanprize.org/recipient/francia-marquez/", quote: "Illegal miners used mercury and cyanide to extract the gold from dirt and rock. These toxic chemicals flowed directly into the Ovejas River"}
+    - {title: "The Ecologist: Hope for Colombia? (15 September 2022)", url: "https://theecologist.org/2022/sep/15/hope-colombia", quote: "When they refused to budge, government forces used explosives to remove the mining equipment"}
     - {title: "Buenos Aires Times (AFP): Colombia's first black vice-president brings green focus (June 2022)", url: "https://www.batimes.com.ar/news/latin-america/colombias-first-black-vice-president-brings-green-focus.phtml", quote: "illegal gold mining was having in those rural communities where rivers were being poisoned with mercury"}
 - card: francia-marquez
   fact: "She organised the women of La Toma; in November 2014 80 women marched for ten days to Bogotá"
@@ -387,9 +416,11 @@
     - {title: "Goldman Environmental Prize: Francia Márquez (2018)", url: "https://www.goldmanprize.org/recipient/francia-marquez/", quote: "resulting in the removal of all illegal miners and equipment from her community"}
     - {title: "Buenos Aires Times (AFP): Colombia's first black vice-president brings green focus (June 2022)", url: "https://www.batimes.com.ar/news/latin-america/colombias-first-black-vice-president-brings-green-focus.phtml", quote: "Her action resulted in the removal of all illegal miners and equipment"}
     - {title: "Otis Alexander, Francia Márquez (1981- ), BlackPast.org (2024)", url: "https://www.blackpast.org/global-african-history/francia-marquez-1981/", quote: "for the removal of all illegal gold miners and equipment from La Toma"}
+    - {title: "The Ecologist: Hope for Colombia? (15 September 2022)", url: "https://theecologist.org/2022/sep/15/hope-colombia", quote: "The government agreed and ordered the mining company to leave"}
 - card: francia-marquez
-  fact: "Threats forced her to leave her home for Cali"
+  fact: "Death threats forced her to leave the region"
   sources:
+    - {title: "Colombia Reports: Francia Marquez", url: "https://colombiareports.com/francia-marquez/", quote: "was forced to flee the region after a protest against illegal mining her northern Cauca triggered death threats from the paramilitaries"}
     - {title: "Goldman Environmental Prize: Francia Márquez (2018)", url: "https://www.goldmanprize.org/recipient/francia-marquez/", quote: "She was forced to move to Cali for her safety"}
     - {title: "Buenos Aires Times (AFP): Colombia's first black vice-president brings green focus (June 2022)", url: "https://www.batimes.com.ar/news/latin-america/colombias-first-black-vice-president-brings-green-focus.phtml", quote: "led to threats which forced her to flee in 2015"}
 - card: francia-marquez
@@ -418,11 +449,10 @@
     - {title: "Isma'il Kushkush, 'Afro-Palestinians' forge a unique identity in Israel, Associated Press (12 January 2017)", url: "https://web.archive.org/web/20201123100313/https://apnews.com/article/f6bf554b21d04b56be9d6385fbf36d31", quote: "old buildings that were originally built in the 10th century for the city’s poor. Made later into prisons by the Ottomans"}
     - {title: "Joharah Baker, The African-Palestinians: Muslim pilgrims who never went home, The New Arab (26 December 2014)", url: "https://web.archive.org/web/20161117211421/https://www.alaraby.co.uk/english/indepth/34fef3d6-30c8-4940-91d5-bc1f0b1dfa3f", quote: "some 450 people live in two compounds, both abutting one of the main entrances to the Aqsa Mosque"}
 - card: african-quarter-jerusalem
-  fact: "The community numbers a few hundred people, around fifty families"
+  fact: "The community numbers a few hundred people"
   sources:
     - {title: "Ilan Ben Zion, The Old City's African secret, The Times of Israel (6 April 2014)", url: "https://web.archive.org/web/20191006220909/https://www.timesofisrael.com/the-old-citys-african-secret/", quote: "Today, it numbers 350 staunchly Palestinian members"}
     - {title: "Joharah Baker, The African-Palestinians: Muslim pilgrims who never went home, The New Arab (26 December 2014)", url: "https://web.archive.org/web/20161117211421/https://www.alaraby.co.uk/english/indepth/34fef3d6-30c8-4940-91d5-bc1f0b1dfa3f", quote: "At present, some 450 people live in two compounds"}
-    - {title: "Isma'il Kushkush, 'Afro-Palestinians' forge a unique identity in Israel, Associated Press (12 January 2017)", url: "https://web.archive.org/web/20201123100313/https://apnews.com/article/f6bf554b21d04b56be9d6385fbf36d31", quote: "home to a little-known community of nearly 50 Arab families of African descent"}
 - card: african-quarter-jerusalem
   fact: "Most descend from African Muslim pilgrims from Chad, Sudan, Nigeria and Senegal who went to Mecca and on to al-Aqsa"
   sources:
@@ -430,19 +460,21 @@
     - {title: "Joharah Baker, The African-Palestinians: Muslim pilgrims who never went home, The New Arab (26 December 2014)", url: "https://web.archive.org/web/20161117211421/https://www.alaraby.co.uk/english/indepth/34fef3d6-30c8-4940-91d5-bc1f0b1dfa3f", quote: "Africans from countries such as Chad, Sudan, Nigeria and Senegal, trekked across continents to perform the original Muslim pilgrimage of the Haj - first to Mecca, then to al-Aqsa"}
     - {title: "Ilan Ben Zion, The Old City's African secret, The Times of Israel (6 April 2014)", url: "https://web.archive.org/web/20191006220909/https://www.timesofisrael.com/the-old-citys-african-secret/", quote: "the descendants of Africans from Nigeria, Senegal, Sudan and Chad who made the pilgrimage to Mecca"}
 - card: african-quarter-jerusalem
-  fact: "Some arrived before 1948 and could not return when war closed the borders; others came as volunteers to fight in 1948"
+  fact: "Some came before the war of 1948 and stayed; others came as volunteers to fight in 1948"
   sources:
     - {title: "Joharah Baker, The African-Palestinians: Muslim pilgrims who never went home, The New Arab (26 December 2014)", url: "https://web.archive.org/web/20161117211421/https://www.alaraby.co.uk/english/indepth/34fef3d6-30c8-4940-91d5-bc1f0b1dfa3f", quote: "Africans who made the long trip from Africa to Jerusalem prior to 1947 soon realised they had picked one of the most tumultuous times"}
-    - {title: "Joharah Baker, The African-Palestinians: Muslim pilgrims who never went home, The New Arab (26 December 2014)", url: "https://web.archive.org/web/20161117211421/https://www.alaraby.co.uk/english/indepth/34fef3d6-30c8-4940-91d5-bc1f0b1dfa3f", quote: "were unable to return to their homelands and the families they had left behind"}
+    - {title: "Ilan Ben Zion, The Old City's African secret, The Times of Israel (6 April 2014)", url: "https://web.archive.org/web/20191006220909/https://www.timesofisrael.com/the-old-citys-african-secret/", quote: "then visited Jerusalem, married Arab women and stayed"}
     - {title: "Ilan Ben Zion, The Old City's African secret, The Times of Israel (6 April 2014)", url: "https://web.archive.org/web/20191006220909/https://www.timesofisrael.com/the-old-citys-african-secret/", quote: "Others joined the Arab Liberation Army to fight the nascent State of Israel in 1948"}
     - {title: "Isma'il Kushkush, 'Afro-Palestinians' forge a unique identity in Israel, Associated Press (12 January 2017)", url: "https://web.archive.org/web/20201123100313/https://apnews.com/article/f6bf554b21d04b56be9d6385fbf36d31", quote: "Others came with The Arab Salvation Army, an army of volunteers that fought on the Arab side in the 1948 war"}
 - card: african-quarter-jerusalem
-  fact: "Many worked as guards at the mosque compound and the Islamic trust that owns the buildings let them live there"
+  fact: "Many worked as guards at the mosque compound and, after 1929, the Islamic trust that owns the buildings let them live there"
   sources:
     - {title: "Isma'il Kushkush, 'Afro-Palestinians' forge a unique identity in Israel, Associated Press (12 January 2017)", url: "https://web.archive.org/web/20201123100313/https://apnews.com/article/f6bf554b21d04b56be9d6385fbf36d31", quote: "the buildings were handed over to the Old City’s Islamic trusteeship during the British Mandate, which rented them to members of the African community because many served as guards or servants at the Al-Aqsa Mosque"}
     - {title: "Ilan Ben Zion, The Old City's African secret, The Times of Israel (6 April 2014)", url: "https://web.archive.org/web/20191006220909/https://www.timesofisrael.com/the-old-citys-african-secret/", quote: "they often served as guards at the Al-Aqsa Mosque compound"}
     - {title: "Ilan Ben Zion, The Old City's African secret, The Times of Israel (6 April 2014)", url: "https://web.archive.org/web/20191006220909/https://www.timesofisrael.com/the-old-citys-african-secret/", quote: "Its residents pay a largely symbolic rent to the Islamic Waqf, which still owns the property"}
     - {title: "Joharah Baker, The African-Palestinians: Muslim pilgrims who never went home, The New Arab (26 December 2014)", url: "https://web.archive.org/web/20161117211421/https://www.alaraby.co.uk/english/indepth/34fef3d6-30c8-4940-91d5-bc1f0b1dfa3f", quote: "the Islamic Waqf, the caretaker of Muslim holy sites and grounds, allowed the pious Muslim Africans"}
+    - {title: "Yasser Qous, The Africans of Jerusalem: alienation and counter-alienation, Goethe-Institut Perspektiven", url: "https://web.archive.org/web/20201019110111/https://www.goethe.de/prj/ruy/en/mig/21447452.html", quote: "After 1929, both ribats were used as homes for the African Jerusalemites"}
+    - {title: "Yasser Qous, The Africans of Jerusalem: alienation and counter-alienation, Goethe-Institut Perspektiven", url: "https://web.archive.org/web/20201019110111/https://www.goethe.de/prj/ruy/en/mig/21447452.html", quote: "At the end of the Ottoman era, specifically between 1898 and 1914, the two ribats were used as prisons by the Ottoman authorities"}
 - card: african-quarter-jerusalem
   fact: "The men married Palestinian women and their children grew up Palestinian"
   sources:
@@ -532,16 +564,17 @@
     - {title: "Bobby Vaughn, Mexico's Black heritage: the Costa Chica of Guerrero and Oaxaca, MexConnect (1998)", url: "https://www.mexconnect.com/articles/1937-mexico-s-black-heritage-the-costa-chica-of-guerrero-and-oaxaca/", quote: "The Costa Chica is a 200-mile-long coastal region beginning just southeast of Acapulco, Guerrero, and ending near the town of Puerto Angel, Oaxaca"}
     - {title: "Arlene Gregorius, The black people 'erased from history', BBC News (10 April 2016)", url: "https://www.bbc.com/news/magazine-35981727", quote: "Black Mexicans have been living in the Costa Chica area, on the Pacific coast of Oaxaca"}
 - card: costa-chica
-  fact: "It is home to most of Mexico's Afro-Mexicans"
+  fact: "With Veracruz on the Gulf coast, it is one of the two heartlands of Black Mexico"
   sources:
-    - {title: "Minority Rights Group International: Afro-Mexicans", url: "https://web.archive.org/web/2024/https://minorityrights.org/communities/afro-mexicans/", quote: "The majority of Mexico’s contemporary African descendant population lives in the Costa Chica region"}
-    - {title: "Arlene Gregorius, The black people 'erased from history', BBC News (10 April 2016)", url: "https://www.bbc.com/news/magazine-35981727", quote: "But outside the Costa Chica area there is little awareness of their existence"}
+    - {title: "Bobby Vaughn, Mexico's Black heritage: the Costa Chica of Guerrero and Oaxaca, MexConnect (1998)", url: "https://www.mexconnect.com/articles/1937-mexico-s-black-heritage-the-costa-chica-of-guerrero-and-oaxaca/", quote: "The Costa Chica (“Short Coast” in Spanish) is one of two regions in Mexico with significant Black communities, the other being the state of Veracruz on the Gulf coast"}
+    - {title: "Minority Rights Group International: Afro-Mexicans", url: "https://web.archive.org/web/2024/https://minorityrights.org/communities/afro-mexicans/", quote: "Although Veracruz is thought to have the largest black population in Mexico due to its history as an important slave port, this is no longer the case. The majority of Mexico’s contemporary African descendant population lives in the Costa Chica region"}
 - card: costa-chica
   fact: "Their ancestors were Africans brought by the Spanish in slavery from the 16th century; many worked cattle ranches"
   sources:
     - {title: "Arlene Gregorius, The black people 'erased from history', BBC News (10 April 2016)", url: "https://www.bbc.com/news/magazine-35981727", quote: "since their ancestors were brought from Africa as slaves in the 16th Century. Colonial Spanish cattle ranchers often used them as foremen"}
     - {title: "Minority Rights Group International: Afro-Mexicans", url: "https://web.archive.org/web/2024/https://minorityrights.org/communities/afro-mexicans/", quote: "Spanish authorities were responsible for the forced migration of an estimated 200,000 or more enslaved Africans to Mexico"}
     - {title: "Minority Rights Group International: Afro-Mexicans", url: "https://web.archive.org/web/2024/https://minorityrights.org/communities/afro-mexicans/", quote: "working on cattle ranches and sugar plantations"}
+    - {title: "Minority Rights Group International: Afro-Mexicans", url: "https://web.archive.org/web/2024/https://minorityrights.org/communities/afro-mexicans/", quote: "During the three centuries of Spanish conquest and rule, Spanish authorities were responsible for the forced migration of an estimated 200,000 or more enslaved Africans to Mexico"}
 - card: costa-chica
   fact: "Modern Mexico long left them out of its picture of the nation and did not count them"
   sources:
@@ -554,9 +587,14 @@
     - {title: "Minority Rights Group International: Afro-Mexicans", url: "https://web.archive.org/web/2024/https://minorityrights.org/communities/afro-mexicans/", quote: "As Afro-Mexicans increasingly migrate d from the Costa Chica, where they are highly concentrated, to other parts of Mexico, they we re often mistaken for immigrants from Belize or Cuba"}
     - {title: "Arlene Gregorius, The black people 'erased from history', BBC News (10 April 2016)", url: "https://www.bbc.com/news/magazine-35981727", quote: "\"The police made me sing the national anthem three times, because they wouldn't believe I was Mexican,\""}
 - card: costa-chica
+  fact: "Afro-Mexicans pushed for recognition, and the 2015 survey was a first result"
+  sources:
+    - {title: "Arlene Gregorius, The black people 'erased from history', BBC News (10 April 2016)", url: "https://www.bbc.com/news/magazine-35981727", quote: "The activists' efforts have born some fruit. The 2015 interim census for the first time gave respondents the option to identify themselves as black"}
+    - {title: "Minority Rights Group International: Afro-Mexicans", url: "https://web.archive.org/web/2024/https://minorityrights.org/communities/afro-mexicans/", quote: "Several organizations also emerged to reclaim Afro-Mexican traditions, for example the annual Encounter of Black Populations"}
+- card: costa-chica
   fact: "In 2015 a national survey first let people identify as Black, Afro-Mexican or of African descent: 1.38 million, 1.2 per cent"
   sources:
-    - {title: "INEGI: Encuesta Intercensal 2015, principales resultados", url: "https://www.inegi.org.mx/contenidos/programas/intercensal/2015/doc/eic_2015_presentacion.pdf", quote: "¿(NOMBRE) 1.2% 51.0% se considera negra(o), es decir, afromexicana(o) o"}
+    - {title: "INEGI: Encuesta Intercensal 2015, principales resultados", url: "https://www.inegi.org.mx/contenidos/programas/intercensal/2015/doc/eic_2015_presentacion.pdf", quote: "se considera negra(o), es decir, afromexicana(o) o afrodescendiente?"}
     - {title: "INEGI: Encuesta Intercensal 2015, principales resultados", url: "https://www.inegi.org.mx/contenidos/programas/intercensal/2015/doc/eic_2015_presentacion.pdf", quote: "1 381 853"}
     - {title: "Arlene Gregorius, The black people 'erased from history', BBC News (10 April 2016)", url: "https://www.bbc.com/news/magazine-35981727", quote: "An interim census in 2015 indicated a black population of 1.4 million, or 1.2% of the Mexican population"}
     - {title: "Minority Rights Group International: Afro-Mexicans", url: "https://web.archive.org/web/2024/https://minorityrights.org/communities/afro-mexicans/", quote: "The 2015 preliminary survey to the 2020 census allowed Afro-Mexicans to self-identify for the first ti me and recorded a total of 1.4 million (1.2 per cent of the population)"}
@@ -589,21 +627,25 @@
   sources:
     - {title: "Freie Universität Berlin: The literary remains of May Ayim are in the University Archives (26 April 2023)", url: "https://www.fu-berlin.de/en/featured-stories/people/2023/may-ayim-archive/index.html", quote: "In 1984 she moved to West Berlin, where she met Audre Lorde"}
     - {title: "Bezirksamt Friedrichshain-Kreuzberg: Eine Straße für Audre Lorde", url: "https://www.berlin.de/ba-friedrichshain-kreuzberg/ueber-den-bezirk/ehrungen-und-auszeichnungen/strassenbenennungen/artikel.1386238.php", quote: "hielt sich bis 1992 oft in Kreuzberg auf, wo sie sich für afro-deutsche Frauen und deren Sichtbarkeit engagierte"}
+    - {title: "Gabrielle Hickmon, What Audre Lorde Learned in Berlin About Afro-German Identity, Literary Hub (10 December 2019)", url: "https://lithub.com/what-audre-lorde-learned-in-berlin-about-afro-german-identity", quote: "During her course and poetry workshop in 1984, Lorde connected with and mentored Black German women, among them May Ayim Opitz"}
+    - {title: "The Berliner: The American poet who started the Afro-German movement (24 November 2020)", url: "https://www.the-berliner.com/politics/lorde-afro-german/", quote: "Hamburg-born poet May Ayim, a regular at Lorde’s lectures"}
+    - {title: "The Berliner: The American poet who started the Afro-German movement (24 November 2020)", url: "https://www.the-berliner.com/politics/lorde-afro-german/", quote: "talk to them and encourage them to make themselves audible"}
 - card: may-ayim
   fact: "In 1986 she published Farbe bekennen with Katharina Oguntoye and Dagmar Schultz; English edition Showing Our Colors: Afro-German Women Speak Out"
   sources:
     - {title: "Tiffany Florvil, Writing on the Legacy of May Ayim, Black Perspectives, AAIHS (3 June 2022)", url: "https://www.aaihs.org/writing-on-the-legacy-of-may-ayim/", quote: "an edited volume based on her thesis that she co-edited with Katharina Oguntoye and Dagmar Schultz in 1986"}
     - {title: "Freie Universität Berlin: The literary remains of May Ayim are in the University Archives (26 April 2023)", url: "https://www.fu-berlin.de/en/featured-stories/people/2023/may-ayim-archive/index.html", quote: "Together with Katharina Oguntoye and Dagmar Schultz she published the volume Farbe bekennen. Afro-deutsche Frauen auf den Spuren ihrer Geschichte"}
     - {title: "Freie Universität Berlin: The literary remains of May Ayim are in the University Archives (26 April 2023)", url: "https://www.fu-berlin.de/en/featured-stories/people/2023/may-ayim-archive/index.html", quote: "The book was translated and published in English as Showing Our Colors: Afro-German Women Speak Out"}
-    - {title: "Open Library: Farbe bekennen / Showing Our Colours (first published 1986)", url: "https://openlibrary.org/works/OL9079311W", quote: "\"first_publish_year\":1986"}
+    - {title: "Gabrielle Hickmon, What Audre Lorde Learned in Berlin About Afro-German Identity, Literary Hub (10 December 2019)", url: "https://lithub.com/what-audre-lorde-learned-in-berlin-about-afro-german-identity", quote: "Farbe Bekennen , in English, Showing Our Colors: Afro-German Women Speak Out in 1986"}
 - card: may-ayim
   fact: "She co-founded the Initiative of Black People in Germany and helped bring the self-description 'Afro-German' into use"
   sources:
     - {title: "Freie Universität Berlin: The literary remains of May Ayim are in the University Archives (26 April 2023)", url: "https://www.fu-berlin.de/en/featured-stories/people/2023/may-ayim-archive/index.html", quote: "The term was largely coined by the poet, teacher, and activist May Ayim"}
     - {title: "Senate of Berlin, answer to written question 18/18585: Das May-Ayim-Ufer als Lernort und Begegnungsstätte (2019)", url: "https://kleineanfragen.de/berlin/18/18585-das-may-ayim-ufer-als-lernort-und-begegnungsstaette.pdf", quote: "Sie war Gründungsmitglied der »Initiative Schwarze Menschen in Deutschland« (ISD) und maßgeblich an der Prägung und Einführung der Selbstbezeichnung »afrodeutsch« beteiligt"}
     - {title: "Tiffany Florvil, Writing on the Legacy of May Ayim, Black Perspectives, AAIHS (3 June 2022)", url: "https://www.aaihs.org/writing-on-the-legacy-of-may-ayim/", quote: "fellow co-founder of the Black German organization Initiative of Black Germans ( Initiative Schwarze Deutsche ) or ISD"}
+    - {title: "Gabrielle Hickmon, What Audre Lorde Learned in Berlin About Afro-German Identity, Literary Hub (10 December 2019)", url: "https://lithub.com/what-audre-lorde-learned-in-berlin-about-afro-german-identity", quote: "Founded in 1985 by May Ayim, Katharina Oguntoye, and other Afro-Germans, the Initiative Schwarze Deutsche (ISD)"}
 - card: may-ayim
-  fact: "Her work traced a line from German colonialism through Nazism to everyday racism"
+  fact: "Her work traced a line from German colonialism to the racism of her own day"
   sources:
     - {title: "Senate of Berlin, answer to written question 18/18585: Das May-Ayim-Ufer als Lernort und Begegnungsstätte (2019)", url: "https://kleineanfragen.de/berlin/18/18585-das-may-ayim-ufer-als-lernort-und-begegnungsstaette.pdf", quote: "beschrieb rassistische Phänomene, die vom deutschen Kolonialismus über die Zeit des Nationalsozialismus bis heute fortwirken"}
     - {title: "Daniel Bauche (ISD): Postkolonialer Aktivismus, die Erinnerung an den deutschen Kolonialismus, Phase 2 no. 37 (2010)", url: "https://isdonline.de/wp-content/uploads/2010/10/Bauche-Postkolonialer-Aktivismus-die-Erinnerung-an-dt.-Kolonialismus.pdf", quote: "deren politische, dichterische und wissenschaftliche Arbeit darauf zielte, die Kontinuitäten zwischen deutschem Kolonialismus und aktuellem Rassismus aufzuzeigen"}
@@ -629,6 +671,7 @@
     - {title: "Daniel Bauche (ISD): Postkolonialer Aktivismus, die Erinnerung an den deutschen Kolonialismus, Phase 2 no. 37 (2010)", url: "https://isdonline.de/wp-content/uploads/2010/10/Bauche-Postkolonialer-Aktivismus-die-Erinnerung-an-dt.-Kolonialismus.pdf", quote: "Als die Straße 1895 den Namen des brandenburgischen Oﬃziers Otto Friedrich von der Groeben erhielt"}
     - {title: "Daniel Bauche (ISD): Postkolonialer Aktivismus, die Erinnerung an den deutschen Kolonialismus, Phase 2 no. 37 (2010)", url: "https://isdonline.de/wp-content/uploads/2010/10/Bauche-Postkolonialer-Aktivismus-die-Erinnerung-an-dt.-Kolonialismus.pdf", quote: "Mit dem Straßennamen wurde von der Groeben als Begründer der Handelskolonie Großfriedrichsburg geehrt, die Brandenburg-Preußen an der Wende vom 17. zum 18. Jahrhundert an der Küste des heutigen Ghana unterhielt"}
     - {title: "Hadija Haruna, Straßenumbenennung: Das Gröbenufer ist Geschichte, Der Tagesspiegel (27 February 2010)", url: "https://www.tagesspiegel.de/berlin/strassenumbenennung-das-groebenufer-ist-geschichte/1691980.html", quote: "Ein brandenburgisch-preußischer Kolonialpionier wird abgeschraubt"}
+    - {title: "Daniel Bauche (ISD): Postkolonialer Aktivismus, die Erinnerung an den deutschen Kolonialismus, Phase 2 no. 37 (2010)", url: "https://isdonline.de/wp-content/uploads/2010/10/Bauche-Postkolonialer-Aktivismus-die-Erinnerung-an-dt.-Kolonialismus.pdf", quote: "Damit, so machte der Kaiser in der Rede zum Festakt deutlich, konnte von der Groeben als früher deutscher Kolonialpionier gelten"}
 - card: may-ayim
   fact: "It was the first Berlin street with a colonial name to be renamed"
   sources:

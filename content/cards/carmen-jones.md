@@ -21,6 +21,7 @@ sources:
   - {title: "Cornell Cinema: Carmen Jones", url: "https://cinema.cornell.edu/carmen-jones"}
   - {title: "Library of Congress: Complete National Film Registry listing", url: "https://www.loc.gov/programs/national-film-preservation-board/film-registry/complete-national-film-registry-listing/"}
   - {title: "TCM: Carmen Jones (1954)", url: "https://www.tcm.com/articles/musical/114175/carmen-jones-1954"}
+  - {title: "Encyclopedia of World Biography (Gale), via Encyclopedia.com: Dorothy Dandridge", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/dorothy-dandridge"}
 ---
 Carmen Jones is a Hollywood musical of 1954 with an all-Black cast. It began on Broadway in 1943, when Oscar Hammerstein II rewrote Bizet's opera Carmen for Black performers, keeping the music: Carmen now worked in a parachute factory in the wartime South, and Don José became a soldier named Joe.
 

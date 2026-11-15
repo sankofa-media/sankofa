@@ -5,7 +5,7 @@ title: The Lord of Miracles
 wow: "Lima's great October processions follow a Christ that an enslaved Angolan painted on an adobe wall around 1651 — a wall that earthquakes, and three attempts to erase it, failed to bring down."
 years: [1651]
 places:
-  - {name: "Las Nazarenas (Pachacamilla), Lima", lat: -12.0519, lon: -77.0283}
+  - {name: "Las Nazarenas (Pachacamilla), Lima", lat: -12.0488, lon: -77.0366}
 zoom: 4
 era: v4
 books: [heirs]
@@ -22,6 +22,6 @@ sources:
 ---
 Pachacamilla, on the western edge of seventeenth-century Lima, was a neighbourhood of Black and Indigenous people. Around 1651, by a tradition backed by documents, an enslaved man from Angola painted Christ on the cross on an adobe wall there. On 13 November 1655 an earthquake shook Lima and Callao and brought down buildings across the city, but the wall with the painted Christ stayed standing, and people began to gather before it.
 
-The church authorities were not pleased. In 1671 the viceroy was asked to have the image erased and the gatherings banned; there were as many as three attempts to wipe the painting off, and none succeeded. On 14 September 1671 the first mass was said beside the wall. In October 1687 another violent earthquake struck, the image survived again, and a devotee, Sebastián de Antuñano, had a copy painted in oil and carried it through the streets: the first procession of the Lord of Miracles.
+The church authorities were not pleased. In 1671 they asked the viceroy to have the image erased; there were as many as three attempts to wipe the painting off, and none succeeded. On 14 September 1671 the first mass was said beside the wall. In October 1687, after another violent earthquake, a devotee, Sebastián de Antuñano, had a copy of the image painted and carried it through the streets: the first procession of the Lord of Miracles.
 
-The wall now stands behind the high altar of the Las Nazarenas sanctuary. Every October, the "purple month", processions carry the Christ through Lima, and its first devotees, Afro-Peruvians and Indigenous neighbours, have been joined by the whole country: it is Peru's most important religious feast.
+The sanctuary and convent of Las Nazarenas grew up around the wall, which now stands where its high altar is. Every October, the "purple month", processions carry the Christ through Lima, and its first devotees, Afro-Peruvians and Indigenous neighbours, have been joined by millions of the faithful.

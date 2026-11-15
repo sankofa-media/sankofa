@@ -1,5 +1,6 @@
 # Batch c17 (2026-11-13): facts in card bodies and wow lines, each with two or more independent sources and a quote.
 # Dropped: aleijadinho-prophets (duplicate of existing card aleijadinho, which already covers the twelve prophets of Congonhas).
+# Second check (2026-11-14): see expand-c17-check.yaml; facts dropped from cards removed here, corrected facts restated.
 
 - card: death-of-cleopatra-lewis
   fact: "The 1876 Centennial Exhibition in Philadelphia marked the US centenary and Lewis's Cleopatra was shown there, sent from Rome"
@@ -7,10 +8,11 @@
     - {title: "Smithsonian Magazine: The Object at Hand (September 1996)", url: "https://web.archive.org/web/20210120191919/https://www.smithsonianmag.com/arts-culture/the-object-at-hand-4-121205387/", quote: "A highlight of Lewis' career came in 1876 when she, along with other expatriates in Rome, sent works to the Centennial Exposition."}
     - {title: "National Women's History Museum: Edmonia Lewis", url: "https://www.womenshistory.org/education-resources/biographies/edmonia-lewis", quote: "In 1876, she shipped the sculpture across the Atlantic to Philadelphia so it could be considered for display in the Centennial Exhibition."}
 - card: death-of-cleopatra-lewis
-  fact: "Lewis was the daughter of a Black father and an Ojibwe (Chippewa) mother"
+  fact: "Lewis was the daughter of a Black father and an Ojibwe (Chippewa/Mississauga) mother"
   sources:
     - {title: "Smithsonian American Art Museum: Edmonia Lewis", url: "https://americanart.si.edu/artist/edmonia-lewis-2914", quote: "Her father was Black, and her mother was Chippewa (Ojibwa) Indian."}
-    - {title: "Smithsonian Magazine: The Object at Hand (September 1996)", url: "https://web.archive.org/web/20210120191919/https://www.smithsonianmag.com/arts-culture/the-object-at-hand-4-121205387/", quote: "the daughter of a black father and a part-Ojibwa mother"}
+    - {title: "ArtsATL: Said in Stone at Georgia Museum reclaims the remarkable career of sculptor Edmonia Lewis", url: "https://www.artsatl.org/said-in-stone-at-georgia-museum-reclaims-the-remarkable-career-of-sculptor-edmonia-lewis/", quote: "Lewis was the daughter of a free Black father and a mother of Mississauga Anishinaabe heritage."}
+    - {title: "Hyperallergic: The Decades-Long Quest to Find and Honor Edmonia Lewis's Grave", url: "https://hyperallergic.com/434881/edmonia-lewis-grave/", quote: "Orphaned as a girl, she was “reared among the Indians” — her mother’s Ojibwe relations — and given the name Wildfire."}
 - card: death-of-cleopatra-lewis
   fact: "At Oberlin she was accused of poisoning two white classmates and beaten by a white mob"
   sources:
@@ -20,32 +22,34 @@
   fact: "In 1865 she moved to Rome and began to work in marble"
   sources:
     - {title: "Smithsonian American Art Museum: Edmonia Lewis", url: "https://americanart.si.edu/artist/edmonia-lewis-2914", quote: "Moving to Rome in 1865, she became involved with a group of American women sculptors and began to work in marble."}
-    - {title: "Smithsonian Magazine: The Object at Hand (September 1996)", url: "https://web.archive.org/web/20210120191919/https://www.smithsonianmag.com/arts-culture/the-object-at-hand-4-121205387/", quote: "The following year, with proceeds from sales of plaster copies of the Shaw bust, Lewis sailed for Rome to pursue her career."}
+    - {title: "ArtsATL: Said in Stone at Georgia Museum reclaims the remarkable career of sculptor Edmonia Lewis", url: "https://www.artsatl.org/said-in-stone-at-georgia-museum-reclaims-the-remarkable-career-of-sculptor-edmonia-lewis/", quote: "When Edmonia Lewis arrived in Italy in 1865, she was determined to forge her own artistic identity."}
 - card: death-of-cleopatra-lewis
-  fact: "The statue shows Cleopatra just after death, enthroned, still crowned, the asp in her hand"
+  fact: "Unlike other sculptors' Cleopatras contemplating suicide, Lewis showed the queen in the moment after death"
   sources:
-    - {title: "Smithsonian American Art Museum: The Death of Cleopatra (1994.17)", url: "https://americanart.si.edu/artwork/death-cleopatra-33878", quote: "Here, Edmonia Lewis portrayed Cleopatra in the moment after her death, wearing her royal attire, in majestic repose on a throne."}
-    - {title: "Smithsonian Magazine: The Object at Hand (September 1996)", url: "https://web.archive.org/web/20210120191919/https://www.smithsonianmag.com/arts-culture/the-object-at-hand-4-121205387/", quote: "Lewis portrayed Cleopatra seated on her throne, still crowned, her head and left arm hanging with the weight that comes when breathing stops."}
+    - {title: "Smithsonian American Art Museum: The Death of Cleopatra (1994.17)", url: "https://americanart.si.edu/artwork/death-cleopatra-33878", quote: "Unlike her contemporaries who often depicted an idealized Cleopatra merely contemplating suicide, Lewis showed the queen’s death more realistically, after the asp’s venom had taken hold"}
+    - {title: "ArtsATL: Said in Stone at Georgia Museum reclaims the remarkable career of sculptor Edmonia Lewis", url: "https://www.artsatl.org/said-in-stone-at-georgia-museum-reclaims-the-remarkable-career-of-sculptor-edmonia-lewis/", quote: "The Death of Cleopatra (1876), a dramatically realistic marble depiction of the Egyptian queen at the moment of her death."}
 - card: death-of-cleopatra-lewis
-  fact: "In Philadelphia the statue drew crowds and caused a stir"
+  fact: "In Philadelphia its realism caused a stir"
   sources:
-    - {title: "Smithsonian Magazine: The Object at Hand (September 1996)", url: "https://web.archive.org/web/20210120191919/https://www.smithsonianmag.com/arts-culture/the-object-at-hand-4-121205387/", quote: "\" The Death of Cleopatra excites more admiration and gathers larger crowds around it than any other work of art in the vast collection of Memorial Hall.\""}
     - {title: "National Women's History Museum: Edmonia Lewis", url: "https://www.womenshistory.org/education-resources/biographies/edmonia-lewis", quote: "the sculpture created a stir for its realism"}
+    - {title: "ArtsATL: Said in Stone at Georgia Museum reclaims the remarkable career of sculptor Edmonia Lewis", url: "https://www.artsatl.org/said-in-stone-at-georgia-museum-reclaims-the-remarkable-career-of-sculptor-edmonia-lewis/", quote: "Celebrated at the 1876 Centennial Exposition in Philadelphia, where it drew attention for its dramatic realism"}
 - card: death-of-cleopatra-lewis
-  fact: "Gambler 'Blind John' Condon set it over the grave of his racehorse named Cleopatra"
+  fact: "Chicago gambler 'Blind John' Condon set it over the grave of his racehorse named Cleopatra"
   sources:
     - {title: "Smithsonian Magazine: The Object at Hand (September 1996)", url: "https://web.archive.org/web/20210120191919/https://www.smithsonianmag.com/arts-culture/the-object-at-hand-4-121205387/", quote: "the sculpture was acquired by a notorious gambler and racehorse owner, \"Blind John\" Condon, who installed it atop the grave of his favorite horse, Cleopatra."}
-    - {title: "ArtsATL: Said in Stone at Georgia Museum reclaims the remarkable career of sculptor Edmonia Lewis", url: "https://www.artsatl.org/said-in-stone-at-georgia-museum-reclaims-the-remarkable-career-of-sculptor-edmonia-lewis/", quote: "It eventually resurfaced in Chicago, where it had been painted and repurposed as a grave marker for a racehorse named Cleopatra"}
+    - {title: "Forest Park Review, 1 February 2022: How Forest Park and Cicero saved Cleopatra", url: "https://www.forestparkreview.com/2022/02/01/how-forest-park-and-cicero-saved-cleopatra/", quote: "Gambler and Harlem Race Track owner “Blind John” Condon acquired the statue and placed it as a grave marker for his award winning filly, Cleopatra."}
 - card: death-of-cleopatra-lewis
   fact: "The grave was at his race track in Forest Park, Illinois, near Chicago"
   sources:
     - {title: "Smithsonian Magazine: The Object at Hand (September 1996)", url: "https://web.archive.org/web/20210120191919/https://www.smithsonianmag.com/arts-culture/the-object-at-hand-4-121205387/", quote: "The grave was in front of the grandstand of his Harlem Race Track in the Chicago suburb of Forest Park."}
+    - {title: "Forest Park Review, 1 February 2022: How Forest Park and Cicero saved Cleopatra", url: "https://www.forestparkreview.com/2022/02/01/how-forest-park-and-cicero-saved-cleopatra/", quote: "Gambler and Harlem Race Track owner “Blind John” Condon acquired the statue"}
     - {title: "National Women's History Museum: Edmonia Lewis", url: "https://www.womenshistory.org/education-resources/biographies/edmonia-lewis", quote: "Death of Cleopatra  was found covered in graffiti and paint in Forest Park, a Chicago suburb."}
 - card: death-of-cleopatra-lewis
-  fact: "It outlasted the track, a wartime Navy plant and a post office, and a Cicero fire inspector took charge of it"
+  fact: "It stayed on the site after the track closed and through a wartime Navy plant until a post office was built there; then a Cicero fire inspector took charge of it"
   sources:
-    - {title: "Smithsonian Magazine: The Object at Hand (September 1996)", url: "https://web.archive.org/web/20210120191919/https://www.smithsonianmag.com/arts-culture/the-object-at-hand-4-121205387/", quote: "The statue remained on the spot after the racetrack became a golf course and then a World War II torpedo plant, but when a U.S. Postal Service facility was built on the site in the early 1970s, Cleopatra was hauled off to a contractor's storage yard in nearby Cicero. As it lay there deteriorating, it was spotted by Harold Adams, a local fire inspector."}
     - {title: "Ron Grossman, Chicago Tribune, 20 June 1988 (reprinted by Marilyn Richardson)", url: "https://marilynrichardson.art/category/cleopatra/", quote: "the latest in a string of caretakers dating to the turn of the century, including a racetrack owner, the Navy, the post office and a Cicero firefighter."}
+    - {title: "Smithsonian Magazine: The Object at Hand (September 1996)", url: "https://web.archive.org/web/20210120191919/https://www.smithsonianmag.com/arts-culture/the-object-at-hand-4-121205387/", quote: "The statue remained on the spot after the racetrack became a golf course and then a World War II torpedo plant, but when a U.S. Postal Service facility was built on the site in the early 1970s, Cleopatra was hauled off to a contractor's storage yard in nearby Cicero. As it lay there deteriorating, it was spotted by Harold Adams, a local fire inspector."}
+    - {title: "Forest Park Review, 1 February 2022: How Forest Park and Cicero saved Cleopatra", url: "https://www.forestparkreview.com/2022/02/01/how-forest-park-and-cicero-saved-cleopatra/", quote: "In the mid-1980’s, firefighter Harold Adams, a Cicero Boy Scout troop leader, contacted Dr."}
 - card: death-of-cleopatra-lewis
   fact: "In 1988 Marilyn Richardson found it in a mall storeroom, painted, among Christmas decorations"
   sources:
@@ -55,6 +59,7 @@
   fact: "In 1994 the Historical Society of Forest Park gave it to the Smithsonian American Art Museum, where it is on view"
   sources:
     - {title: "Smithsonian American Art Museum: The Death of Cleopatra (1994.17)", url: "https://americanart.si.edu/artwork/death-cleopatra-33878", quote: "Gift of the Historical Society of Forest Park, Illinois, 1994.17"}
+    - {title: "Forest Park Review, 1 February 2022: How Forest Park and Cicero saved Cleopatra", url: "https://www.forestparkreview.com/2022/02/01/how-forest-park-and-cicero-saved-cleopatra/", quote: "later to be donated to the National Museum of American Art of the Smithsonian in 1994."}
     - {title: "National Women's History Museum: Edmonia Lewis", url: "https://www.womenshistory.org/education-resources/biographies/edmonia-lewis", quote: "It was donated to the Smithsonian in the early 1990s and now welcomes visitors to the museum’s third floor galleries."}
 - card: death-of-cleopatra-lewis
   fact: "It is the most famous work of Lewis"
@@ -65,14 +70,14 @@
   fact: "Lewis was the first sculptor of African American and Native American descent to win international recognition"
   sources:
     - {title: "Smithsonian American Art Museum: Edmonia Lewis", url: "https://americanart.si.edu/artist/edmonia-lewis-2914", quote: "Edmonia Lewis was the first sculptor of African American and Native American (Mississauga) descent to achieve international recognition."}
-    - {title: "Hyperallergic: The Decades-Long Quest to Find and Honor Edmonia Lewis's Grave", url: "https://hyperallergic.com/434881/edmonia-lewis-grave/", quote: "The first black sculptress to gain fame on both sides of the Atlantic"}
+    - {title: "National Women's History Museum: Edmonia Lewis", url: "https://www.womenshistory.org/education-resources/biographies/edmonia-lewis", quote: "Edmonia Lewis is considered the first professional BIPOC sculptor in the United States and the first to achieve international acclaim."}
 - card: death-of-cleopatra-lewis
   fact: "Dispute: birth year 1844 vs about 1840"
   sources:
     - {title: "Smithsonian American Art Museum: Edmonia Lewis", url: "https://americanart.si.edu/artist/edmonia-lewis-2914", quote: "born Greenbush (now Rensselaer), NY 1844-died London, England 1907"}
     - {title: "Smithsonian Magazine: The Object at Hand (September 1996)", url: "https://web.archive.org/web/20210120191919/https://www.smithsonianmag.com/arts-culture/the-object-at-hand-4-121205387/", quote: "Born about 1840, the daughter of a black father and a part-Ojibwa mother"}
 - card: sodade
-  fact: "Morna is the song genre of Cape Verde; its themes include love, departure, separation, longing and the sea"
+  fact: "Morna is the song form of Cape Verde; its themes include love, departure, separation, longing and the sea"
   sources:
     - {title: "UNESCO: Morna, musical practice of Cabo Verde", url: "https://ich.unesco.org/en/RL/morna-musical-practice-of-cabo-verde-01469", quote: "The lyric poetry can be improvised, with topics including love, departure, separation, reunion, longing, the ocean and the motherland."}
     - {title: "Beatriz Ramalho da Silva, Al Jazeera: The story of morna (2021)", url: "https://www.aljazeera.com/features/2021/5/23/morna-the-music-of-displacement-and-return", quote: "While morna covers a variety of themes, it is distinct for the way in which it depicts the experience of migration, speaking of love, the yearning for the homeland and for those who leave."}
@@ -92,10 +97,10 @@
     - {title: "PAM (Pan African Music): Cesária Évora, memories of a journey", url: "https://pan-african-music.com/en/?p=95099", quote: "’Sodade’ is a song composed on the island of San Nicolau"}
     - {title: "A Semana (Praia), 4 April 2007: Morreu Armando Zeferino Soares, pai da morna Sodade", url: "https://web.archive.org/web/20071031040759/http://www.asemana.cv/article.php3?id_article=23465", quote: "Morreu ontem, na sua ilha natal de S. Nicolau, Armando Zeferino Soares, autor da célebre morna “Sodade”"}
 - card: sodade
-  fact: "In the 1950s islanders left on labour contracts for the cocoa and coffee plantations of São Tomé"
+  fact: "In the 1950s islanders left on labour contracts for the cocoa plantations of São Tomé"
   sources:
     - {title: "Beatriz Ramalho da Silva, Al Jazeera: The story of morna (2021)", url: "https://www.aljazeera.com/features/2021/5/23/morna-the-music-of-displacement-and-return", quote: "It was 1954, and she had been given a contract to work picking coffee, coconut and cocoa at a plantation."}
-    - {title: "PAM (Pan African Music): Cesária Évora, memories of a journey", url: "https://pan-african-music.com/en/?p=95099", quote: "which evokes the departure of Cape Verdeans to the island of Sao Tomè to cultivate cocoa."}
+    - {title: "Vladimir Cagnolari, PAM (Pan African Music): Cesária Évora, memories of a journey (2021)", url: "https://pan-african-music.com/en/?p=95099", quote: "which evokes the departure of Cape Verdeans to the island of Sao Tomè to cultivate cocoa. These people left in a forced manner, they had no money so they had no choice but to sign these contracts"}
     - {title: "A Semana (Praia), 4 April 2007: Morreu Armando Zeferino Soares, pai da morna Sodade", url: "https://web.archive.org/web/20071031040759/http://www.asemana.cv/article.php3?id_article=23465", quote: "um grupo de conterrâneos que iriam emigrar para S. Tomé e Príncipe, nos anos cinquenta."}
 - card: sodade
   fact: "Emigrants were seen off at the boats with songs, return being uncertain"
@@ -123,20 +128,21 @@
     - {title: "Garth Cartwright, The Guardian: Cesária Évora obituary (17 December 2011)", url: "https://www.theguardian.com/music/2011/dec/17/cesaria-evora", quote: "After becoming an orphan, Évora made a living from the age of 15 by singing in bars."}
     - {title: "Encyclopaedia Britannica: Cesaria Evora", url: "https://web.archive.org/web/20230921142323/https://www.britannica.com/biography/Cesaria-Evora", quote: "by the time she was a young adult, she routinely performed in the bars of her hometown of Mindelo."}
 - card: sodade
-  fact: "She performed barefoot and her first album was called The Barefoot Diva"
+  fact: "She performed barefoot, and in 1988 her album The Barefoot Diva brought her to notice in France"
   sources:
-    - {title: "Encyclopaedia Britannica: Cesaria Evora", url: "https://web.archive.org/web/20230921142323/https://www.britannica.com/biography/Cesaria-Evora", quote: "La Diva aux pieds nus (“The Barefoot Diva,” the nickname based on her fondness for going without shoes)"}
-    - {title: "Garth Cartwright, The Guardian: Cesária Évora obituary (17 December 2011)", url: "https://www.theguardian.com/music/2011/dec/17/cesaria-evora", quote: "Her 1988 debut album, La Diva aux Pieds Nus (The Barefoot Diva)"}
+    - {title: "Encyclopaedia Britannica: Cesaria Evora", url: "https://web.archive.org/web/20230921142323/https://www.britannica.com/biography/Cesaria-Evora", quote: "With da Silva’s assistance, she garnered attention in France in 1988 with her album La Diva aux pieds nus (“The Barefoot Diva,” the nickname based on her fondness for going without shoes)."}
+    - {title: "Garth Cartwright, The Guardian: Cesária Évora obituary (17 December 2011)", url: "https://www.theguardian.com/music/2011/dec/17/cesaria-evora", quote: "Her 1988 debut album, La Diva aux Pieds Nus (The Barefoot Diva), and a 1990 follow-up featured an electronic pop sound unsuited to Évora."}
+    - {title: "Vladimir Cagnolari, PAM (Pan African Music): Cesária Évora, memories of a journey (2021)", url: "https://pan-african-music.com/en/?p=95099", quote: "she went in with them, and just after the entrance she took them off and sang barefoot"}
 - card: sodade
   fact: "Miss Perfumado (1992) made her famous in Europe"
   sources:
     - {title: "Encyclopaedia Britannica: Cesaria Evora", url: "https://web.archive.org/web/20230921142323/https://www.britannica.com/biography/Cesaria-Evora", quote: "The positive response generated by the 1992 release of Miss perfumado earned her widespread popularity in Europe"}
     - {title: "Garth Cartwright, The Guardian: Cesária Évora obituary (17 December 2011)", url: "https://www.theguardian.com/music/2011/dec/17/cesaria-evora", quote: "Miss Perfumado (1992) was backed by a BMG campaign that helped it sell more than 300,000 copies in France."}
 - card: sodade
-  fact: "Sodade became the album's best-known song"
+  fact: "Sodade was the song of Miss Perfumado that broke through"
   sources:
-    - {title: "Beatriz Ramalho da Silva, Al Jazeera: The story of morna (2021)", url: "https://www.aljazeera.com/features/2021/5/23/morna-the-music-of-displacement-and-return", quote: "Sodade became one of the most recognised tracks in the 1992 Grammy-nominated album, “Miss Perfumado”"}
-    - {title: "PAM (Pan African Music): Cesária Évora, memories of a journey", url: "https://pan-african-music.com/en/?p=95099", quote: "the song “Sodade”, present on the album Miss Perfumado (1992), exploded"}
+    - {title: "Vladimir Cagnolari, PAM (Pan African Music): Cesária Évora, memories of a journey (2021)", url: "https://pan-african-music.com/en/?p=95099", quote: "Two years later, the song “Sodade”, present on the album Miss Perfumado (1992), exploded, cementing her status in the musical landscape for good."}
+    - {title: "Beatriz Ramalho da Silva, Al Jazeera: The story of morna (2021)", url: "https://www.aljazeera.com/features/2021/5/23/morna-the-music-of-displacement-and-return", quote: "Sodade became one of the most recognised tracks in the 1992 Grammy-nominated album, “Miss Perfumado”, which marked Évora’s commercial breakthrough."}
 - card: sodade
   fact: "Évora died in Mindelo in 2011"
   sources:
@@ -163,45 +169,42 @@
     - {title: "Dicionário Cravo Albin da MPB: Jorge Ben Jor", url: "https://dicionariompb.com.br/artista/jorge-ben-jor/", quote: "Em seguida, apresentou-se no Bottles, também no Beco das Garrafas, cantando e tocando músicas de sua autoria."}
     - {title: "The Guardian (2019): will.i.am and Sérgio Mendes, how we made Mas Que Nada", url: "https://www.theguardian.com/music/2019/apr/22/william-sergio-mendes-on-how-we-made-mas-que-nada-black-eyed-peas", quote: "I first heard it when I was working in Bottles Bar in Copacabana . This guy called Jorge Ben came in and played this song he’d written ."}
 - card: mas-que-nada
-  fact: "In 1958 José Prates recorded 'Nanã Imborô' on Tam...Tam...Tam...!, later reshaped by Jorge Ben into Mas que nada"
+  fact: "José Prates's music for Brasiliana came out on the 1958 album Tam...Tam...Tam...!; its track 'Nanã Imborô' was reshaped by Jorge Ben into Mas que nada"
   sources:
     - {title: "Sounds and Colours: José Prates' rare Brazilian classic Tam…Tam…Tam…! reissued", url: "https://soundsandcolours.com/articles/brazil/jose-prates-incredibly-rare-brazilian-classic-tamtamtam-reissued-26911/", quote: "by José Prates and Miecio Askanasy, an LP that came out all the way back in 1958 and which, in “Nana Imborô” contains the track that would be later shaped by Jorge Ben into “Mas Que Nada”."}
-    - {title: "Matthew Wright, The Arts Desk: CD: Sonzeira, Tam Tam Tam Reimagined (2016)", url: "https://theartsdesk.com/new-music/cd-sonzeira-tam-tam-tam-reimagined", quote: "“Nana Imboro” is the place to start, a song that Jorge Ben transformed into “Mas Que Nada”"}
+    - {title: "Matthew Wright, The Arts Desk: CD: Sonzeira, Tam Tam Tam Reimagined (2016)", url: "https://theartsdesk.com/new-music/cd-sonzeira-tam-tam-tam-reimagined", quote: "When the show toured Europe in 1958, the tracks were released as an album."}
+    - {title: "Trunk Records: Tam...Tam...Tam...! (reissue notes)", url: "https://trunkrecords.com/releases/tamtamtam_14/tamtamtam.php", quote: "This little LP began in 1958."}
 - card: mas-que-nada
   fact: "The album was music for Brasiliana, a touring dance show produced by Miecio Askanasy"
   sources:
     - {title: "Matthew Wright, The Arts Desk: CD: Sonzeira, Tam Tam Tam Reimagined (2016)", url: "https://theartsdesk.com/new-music/cd-sonzeira-tam-tam-tam-reimagined", quote: "Little-known Brazilian arranger José Prates created the music recorded on Tam...Tam...Tam...! in the early 1950s to accompany a touring dance show."}
     - {title: "Trunk Records: Tam...Tam...Tam...! (reissue notes)", url: "https://trunkrecords.com/releases/tamtamtam_14/tamtamtam.php", quote: "It was part of a global touring show called “Brasiliana” put together by Polish producer Miecio Askanasy."}
 - card: mas-que-nada
-  fact: "In 1963 he sang Mas que nada as guest vocalist on organist Zé Maria's album"
+  fact: "He first recorded Mas que nada as a guest singer on organist Zé Maria's album (1962 or 1963)"
   sources:
     - {title: "Dicionário Cravo Albin da MPB: Jorge Ben Jor", url: "https://dicionariompb.com.br/artista/jorge-ben-jor/", quote: "realizou sua primeira participação em estúdio, atuando como “crooner” nas faixas “Mas que nada” e “Por causa de você, menina”, ambas de sua autoria, incluídas no LP “Tudo azul”, de Zé Maria."}
-    - {title: "Marcos Henrique do Amaral, O Samba Esquema Novo no interlúdio entre bossa nova e MPB, Revista SEDA 7:15 (2023)", url: "https://revistaseda.org/index.php/seda/article/download/134/131/414", quote: "Continental no disco de Zé Maria."}
+    - {title: "Marcos Henrique do Amaral, O Samba Esquema Novo no interlúdio entre bossa nova e MPB, Revista SEDA 7:15 (2023)", url: "https://revistaseda.org/index.php/seda/article/download/134/131/414", quote: "um ano antes, o artista registrara suas primeiras experiências como compositor e como crooner no disco Tudo Azul, do organista Zé Maria, lançado pela Continental."}
 - card: mas-que-nada
   fact: "In 1963 it appeared on his first LP Samba Esquema Novo on Philips"
   sources:
     - {title: "Dicionário Cravo Albin da MPB: Jorge Ben Jor", url: "https://dicionariompb.com.br/artista/jorge-ben-jor/", quote: "Nesse mesmo ano, gravou seu primeiro LP, “Samba esquema novo”, contendo essas duas canções"}
     - {title: "Marcos Henrique do Amaral, O Samba Esquema Novo no interlúdio entre bossa nova e MPB, Revista SEDA 7:15 (2023)", url: "https://revistaseda.org/index.php/seda/article/download/134/131/414", quote: "1963 marca o debute fonográfico de Jorge Duílio Lima de Menezes, Jorge Ben a partir daquele ano: o disco Samba Esquema Novo."}
 - card: mas-que-nada
-  fact: "Sérgio Mendes first heard Ben play it in Copacabana"
-  sources:
-    - {title: "The Guardian (2019): will.i.am and Sérgio Mendes, how we made Mas Que Nada", url: "https://www.theguardian.com/music/2019/apr/22/william-sergio-mendes-on-how-we-made-mas-que-nada-black-eyed-peas", quote: "I first heard it when I was working in Bottles Bar in Copacabana ."}
-    - {title: "Rolling Stone: Eartha Kitt introduces Sergio Mendes and Brasil '66, Mas Que Nada", url: "https://www.rollingstone.com/music/music-latin/sergio-mendes-brasil-66-mas-que-nada-eartha-kitt-1967-731124/", quote: "His most popular recording, “Mas Que Nada,” was originally penned and performed by singer-guitarist Jorge Ben, a former member of Mendes’ band."}
-- card: mas-que-nada
   fact: "Mendes moved to the US and recorded it in 1966 with Brasil '66 on their debut for Herb Alpert's A&M"
   sources:
     - {title: "Rolling Stone: Eartha Kitt introduces Sergio Mendes and Brasil '66, Mas Que Nada", url: "https://www.rollingstone.com/music/music-latin/sergio-mendes-brasil-66-mas-que-nada-eartha-kitt-1967-731124/", quote: "Mendes made a home in the United States where, with the help of Herb Alpert and his home label A&M Records, Mendes would assemble a band of Americans and Brazilian exiles called Brasil ’66."}
     - {title: "The Guardian (2019): will.i.am and Sérgio Mendes, how we made Mas Que Nada", url: "https://www.theguardian.com/music/2019/apr/22/william-sergio-mendes-on-how-we-made-mas-que-nada-black-eyed-peas", quote: "I put a band together called Brasil ’66."}
 - card: mas-que-nada
-  fact: "The song became a US hit after radio play"
+  fact: "The song became a US hit, then a global one"
   sources:
     - {title: "The Guardian (2019): will.i.am and Sérgio Mendes, how we made Mas Que Nada", url: "https://www.theguardian.com/music/2019/apr/22/william-sergio-mendes-on-how-we-made-mas-que-nada-black-eyed-peas", quote: "Once it was played on the radio, it became a huge hit in the US, and the rest of the world followed."}
     - {title: "Dicionário Cravo Albin da MPB: Jorge Ben Jor", url: "https://dicionariompb.com.br/artista/jorge-ben-jor/", quote: "“Mas que nada” e “Chove chuva”, por Sergio Mendes, que chegaram às paradas de sucesso norte-americanas"}
+    - {title: "Matthew Wright, The Arts Desk: CD: Sonzeira, Tam Tam Tam Reimagined (2016)", url: "https://theartsdesk.com/new-music/cd-sonzeira-tam-tam-tam-reimagined", quote: "a song that Jorge Ben transformed into “Mas Que Nada”, which Sergio Mendes then made a global hit."}
 - card: mas-que-nada
-  fact: "Forty years later (2006) Mendes recorded it with the Black Eyed Peas and it became a worldwide success again"
+  fact: "Forty years later (2006) Mendes recorded it with the Black Eyed Peas and it became a hit again"
   sources:
     - {title: "The Guardian (2019): will.i.am and Sérgio Mendes, how we made Mas Que Nada", url: "https://www.theguardian.com/music/2019/apr/22/william-sergio-mendes-on-how-we-made-mas-que-nada-black-eyed-peas", quote: "Then, 40 years later, Mas Que Nada became a worldwide success all over again with the Black Eyed Peas’ version ."}
-    - {title: "Rolling Stone: Eartha Kitt introduces Sergio Mendes and Brasil '66, Mas Que Nada", url: "https://www.rollingstone.com/music/music-latin/sergio-mendes-brasil-66-mas-que-nada-eartha-kitt-1967-731124/", quote: "Mendes later re-recorded his hit in  2006 with the Black Eyed Peas"}
+    - {title: "Official Charts Company: Mas Que Nada, Sergio Mendes / Black Eyed Peas (2006)", url: "https://www.officialcharts.com/search/singles/mas%20que%20nada/", quote: "2 4 J u n 2 0 0 6 MAS QUE NADA SERGIO MENDES/ BLACK EYED PEAS Peak: 6 , Weeks: 12"}
 - card: clarim-dalvorada
   fact: "After abolition (1888) São Paulo subsidised mass European immigration, leaving freed people at the margins"
   sources:
@@ -211,7 +214,7 @@
   fact: "São Paulo's Black social clubs produced their own papers"
   sources:
     - {title: "Encyclopedia of Latin American History and Culture, via Encyclopedia.com: Frente Negra Brasileira", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/frente-negra-brasileira", quote: "Afro-Brazilians came to constitute a community of their own, with social clubs sponsoring activities such as dances, athletics, excursions, and newsletters."}
-    - {title: "Ana Martins, BlackPast: O Clarim da Alvorada (1924-1932)", url: "https://blackpast.org/global-african-history/o-clarim-da-alvorada-1924-1932", quote: "Part of a larger black press movement in the city of São Paulo, from about 1915"}
+    - {title: "Maria Cláudia Cardoso Ferreira: O jornal O Clarim d'Alvorada no pós-abolição, ANPUH (2011)", url: "https://anpuh.org.br/uploads/anais-simposios/pdf/2019-01/1548856711_44f3cef198b92a091287a9f49a561cc6.pdf", quote: "„A Pérola‟, do Clube Dançante 15 de Novembro (1912)"}
 - card: clarim-dalvorada
   fact: "First issue 6 January 1924, originally titled O Clarim"
   sources:
@@ -228,10 +231,11 @@
     - {title: "Flávio Thales Ribeiro Francisco: Um novo abolicionismo para a ascensão na nação da Mãe Preta, Antíteses 10:19 (2017)", url: "https://www.uel.br/revistas/uel/index.php/antiteses/article/download/23554/21270", quote: "de criar uma folha para a publicação de textos literários de escritores que circulavam entre os espaços da “elite negra”"}
     - {title: "Renan Rosa dos Santos: Pela integração negra, a trajetória do jornal O Clarim da Alvorada (1924-1932), ANPUH-SP (2020)", url: "https://www.encontro2020.sp.anpuh.org/resources/anais/14/anpuh-sp-erh2020/1600109480_ARQUIVO_7e61e4fa3599d43c5e37b820d8f97c53.pdf", quote: "o jornal tinha como subtítulo “órgão literário, noticióso e humorístico”"}
 - card: clarim-dalvorada
-  fact: "In 1928, under Correia Leite, the masthead became 'For the interest of Black men: news, literature and combat'"
+  fact: "In 1928 the masthead changed to 'News, literature and combat' and Correia Leite took charge of the paper"
   sources:
-    - {title: "Maria Cláudia Cardoso Ferreira: O jornal O Clarim d'Alvorada no pós-abolição, ANPUH (2011)", url: "https://anpuh.org.br/uploads/anais-simposios/pdf/2019-01/1548856711_44f3cef198b92a091287a9f49a561cc6.pdf", quote: "o subtítulo do ‘Clarim (...)’ passa a ser, ‘Pelo interesse dos Homens Pretos – Noticióso, Literário e de Combate’."}
-    - {title: "Renan Rosa dos Santos: Pela integração negra, a trajetória do jornal O Clarim da Alvorada (1924-1932), ANPUH-SP (2020)", url: "https://www.encontro2020.sp.anpuh.org/resources/anais/14/anpuh-sp-erh2020/1600109480_ARQUIVO_7e61e4fa3599d43c5e37b820d8f97c53.pdf", quote: "a segunda fase, entre 1928 e 1932 trata-se de um período no qual o jornal adota abertamente uma postura mais combativa"}
+    - {title: "Renan Rosa dos Santos: Pela integração negra, a trajetória do jornal O Clarim da Alvorada (1924-1932), ANPUH-SP (2020)", url: "https://www.encontro2020.sp.anpuh.org/resources/anais/14/anpuh-sp-erh2020/1600109480_ARQUIVO_7e61e4fa3599d43c5e37b820d8f97c53.pdf", quote: "se manteria até janeiro 1928, momento a partir do qual o jornal passou a intitular-se “Noticioso Literário e de Combate”"}
+    - {title: "Renan Rosa dos Santos: Pela integração negra, a trajetória do jornal O Clarim da Alvorada (1924-1932), ANPUH-SP (2020)", url: "https://www.encontro2020.sp.anpuh.org/resources/anais/14/anpuh-sp-erh2020/1600109480_ARQUIVO_7e61e4fa3599d43c5e37b820d8f97c53.pdf", quote: "José Correia Leite, co-fundador d’O Clarim da Alvorada e redator responsável pelo jornal a partir de agosto de 1928"}
+    - {title: "Maria Cláudia Cardoso Ferreira: O jornal O Clarim d'Alvorada no pós-abolição, ANPUH (2011)", url: "https://anpuh.org.br/uploads/anais-simposios/pdf/2019-01/1548856711_44f3cef198b92a091287a9f49a561cc6.pdf", quote: "foi naquele momento que Correia Leite assumiu a liderança do tablóide com o posto de “redator responsável”"}
 - card: clarim-dalvorada
   fact: "It read the US Black press, including the Chicago Defender and Garvey's Negro World"
   sources:
@@ -253,12 +257,7 @@
     - {title: "Ana Martins, BlackPast: O Clarim da Alvorada (1924-1932)", url: "https://blackpast.org/global-african-history/o-clarim-da-alvorada-1924-1932", quote: "the foundations planted by Clarim enabled the formation, in 1931, of Frente Negra Brasileira"}
     - {title: "Renan Rosa dos Santos: Pela integração negra, a trajetória do jornal O Clarim da Alvorada (1924-1932), ANPUH-SP (2020)", url: "https://www.encontro2020.sp.anpuh.org/resources/anais/14/anpuh-sp-erh2020/1600109480_ARQUIVO_7e61e4fa3599d43c5e37b820d8f97c53.pdf", quote: "as experiências acumuladas pelos militantes que produziam O Clarim da Alvorada contribuíram para a articulação da Frente Negra Brasileira em 1931"}
 - card: clarim-dalvorada
-  fact: "Correia Leite took part in founding the Frente"
-  sources:
-    - {title: "Renan Rosa dos Santos: Pela integração negra, a trajetória do jornal O Clarim da Alvorada (1924-1932), ANPUH-SP (2020)", url: "https://www.encontro2020.sp.anpuh.org/resources/anais/14/anpuh-sp-erh2020/1600109480_ARQUIVO_7e61e4fa3599d43c5e37b820d8f97c53.pdf", quote: "também participou das articulações que resultaram na criação da Frente Negra Brasileira, em 1931, sendo considerado um dos fundadores da organização."}
-    - {title: "Ana Martins, BlackPast: O Clarim da Alvorada (1924-1932)", url: "https://blackpast.org/global-african-history/o-clarim-da-alvorada-1924-1932", quote: "Clarim co-founder Leite in particular, always mindful of the importance of political mobilization, organized a Congress of Black Youth"}
-- card: clarim-dalvorada
-  fact: "The Clarim group soon broke with the Frente's authoritarian leaders"
+  fact: "The Clarim group, led by Correia Leite, soon broke with the Frente, whose leaders it accused of authoritarianism"
   sources:
     - {title: "Fundação Perseu Abramo: Frente Negra Brasileira, gestando um projeto político para o Brasil", url: "https://fpabramo.org.br/frente-negra-brasileira-gestando-um-projeto-politico-para-o-brasil-2/", quote: "Logo no seu início, o grupo do jornal Clarim da Alvorada, de José Correia Leite, rompeu com a Frente Negra."}
     - {title: "Flávio Thales Ribeiro Francisco: Um novo abolicionismo para a ascensão na nação da Mãe Preta, Antíteses 10:19 (2017)", url: "https://www.uel.br/revistas/uel/index.php/antiteses/article/download/23554/21270", quote: "quando começou a questionar o autoritarismo das lideranças da Frente Negra Brasileira (1931-1937)"}
@@ -268,7 +267,7 @@
     - {title: "Flávio Thales Ribeiro Francisco: Um novo abolicionismo para a ascensão na nação da Mãe Preta, Antíteses 10:19 (2017)", url: "https://www.uel.br/revistas/uel/index.php/antiteses/article/download/23554/21270", quote: "O Clarim da Alvorada somente encerrou suas atividades em 1932, quando começou a questionar o autoritarismo das lideranças da Frente Negra Brasileira (1931-1937) e teve a redação empastelada pela milícia da organização negra recém-formada."}
     - {title: "Maria Cláudia Cardoso Ferreira: O jornal O Clarim d'Alvorada no pós-abolição, ANPUH (2011)", url: "https://anpuh.org.br/uploads/anais-simposios/pdf/2019-01/1548856711_44f3cef198b92a091287a9f49a561cc6.pdf", quote: "Em 1933, após desavença com militantes da Frente Negra O Clarim d' Alvorada é extinto, só voltando a existir em 1940"}
 - card: clarim-dalvorada
-  fact: "A 1940 revival produced a single issue"
+  fact: "A 1940 revival is known from a single issue"
   sources:
     - {title: "Renan Rosa dos Santos: Pela integração negra, a trajetória do jornal O Clarim da Alvorada (1924-1932), ANPUH-SP (2020)", url: "https://www.encontro2020.sp.anpuh.org/resources/anais/14/anpuh-sp-erh2020/1600109480_ARQUIVO_7e61e4fa3599d43c5e37b820d8f97c53.pdf", quote: "com a publicação em 1940, após oito anos de hiato, mas esse acabou sendo o único número publicado."}
     - {title: "Maria Cláudia Cardoso Ferreira: O jornal O Clarim d'Alvorada no pós-abolição, ANPUH (2011)", url: "https://anpuh.org.br/uploads/anais-simposios/pdf/2019-01/1548856711_44f3cef198b92a091287a9f49a561cc6.pdf", quote: "Na Biblioteca consta apenas o exemplar que a inaugura, com a data de 28/09/1940,ano I n.º 1."}
@@ -285,18 +284,20 @@
 - card: black-orpheus
   fact: "Orfeu is a tram driver"
   sources:
-    - {title: "Dennis Hevesi, The New York Times: Breno Mello, 76, Star of 'Orpheus,' Dies (2008)", url: "https://www.nytimes.com/2008/09/06/movies/06mello.html", quote: "A trolley-car motorman and gifted guitarist"}
     - {title: "Eli Kooris, The Austin Chronicle: Black Orpheus (2002)", url: "https://www.austinchronicle.com/screens/video-reviews-11713359/", quote: "Orfeo (Mello) is a trolley car driver in downtown Rio"}
+    - {title: "Roberto Muggiati, Gazeta do Povo (Curitiba), 13 May 2009: O mito grego em ritmo de bossa nova", url: "https://www.gazetadopovo.com.br/caderno-g/o-mito-grego-em-ritmo-de-bossa-nova-bkostw571owob2awq2252gnym/", quote: "encantou o mundo com sua atuação como condutor de bonde e violonista nas horas vagas."}
 - card: black-orpheus
   fact: "The story is set in a favela"
   sources:
     - {title: "Brown University Library, Brazil: Five Centuries of Change: Black Orpheus", url: "https://library.brown.edu/create/fivecenturiesofchange/chapters/chapter-6/black-orpheus/", quote: "It was the first internationally acclaimed film to take place entirely in a favela"}
     - {title: "Festival de Cannes: Interview with Amir Labaki about Black Orpheus (2021)", url: "https://www.festival-cannes.com/en/2021/interview-with-amir-labaki-about-black-orpheus-orfeu-negro-the-1959-palme-d-or/", quote: "the poor, sensual and colourful favelas"}
 - card: black-orpheus
-  fact: "Eurydice is played by Marpessa Dawn and is doomed; Orfeu follows her to the dead (morgue/underworld)"
+  fact: "Eurydice is played by Marpessa Dawn; as in the myth, Orfeu follows her into the world of the dead"
   sources:
-    - {title: "Dennis Hevesi, The New York Times: Breno Mello, 76, Star of 'Orpheus,' Dies (2008)", url: "https://www.nytimes.com/2008/09/06/movies/06mello.html", quote: "he becomes enthralled with the beautiful, doomed Eurydice, played by Marpessa Dawn. ... Eventually, Orfeu finds her in the morgue."}
+    - {title: "Eli Kooris, The Austin Chronicle: Black Orpheus (2002)", url: "https://www.austinchronicle.com/screens/video-reviews-11713359/", quote: "Orfeo (Mello) is a trolley car driver in downtown Rio who falls in love at first sight with Eurydice (Dawn, the director’s wife)."}
     - {title: "Eli Kooris, The Austin Chronicle: Black Orpheus (2002)", url: "https://www.austinchronicle.com/screens/video-reviews-11713359/", quote: "In the Greek myth, Eurydice is killed from the bite of a viper and Orpheus goes to the underworld to retrieve her soul and bring her back to life. This is well-paralleled in Black Orpheus ."}
+    - {title: "Roberto Muggiati, Gazeta do Povo (Curitiba), 13 May 2009: O mito grego em ritmo de bossa nova", url: "https://www.gazetadopovo.com.br/caderno-g/o-mito-grego-em-ritmo-de-bossa-nova-bkostw571owob2awq2252gnym/", quote: "O Orfeu desta Eurídice de sangue afro-filipino foi interpretado por Breno de Mello"}
+    - {title: "Festival de Cannes: Interview with Amir Labaki about Black Orpheus (2021)", url: "https://www.festival-cannes.com/en/2021/interview-with-amir-labaki-about-black-orpheus-orfeu-negro-the-1959-palme-d-or/", quote: "the myth of Orpheus and Eurydice, transposed to Rio de Janeiro by the French director"}
 - card: black-orpheus
   fact: "Almost the whole cast was Black"
   sources:
@@ -305,18 +306,19 @@
 - card: black-orpheus
   fact: "Orfeu was played by Breno Mello, a footballer from Porto Alegre"
   sources:
-    - {title: "Dennis Hevesi, The New York Times: Breno Mello, 76, Star of 'Orpheus,' Dies (2008)", url: "https://www.nytimes.com/2008/09/06/movies/06mello.html", quote: "died on July 14 in Porto Alegre, Brazil, his hometown. ... returned to soccer because, he said, the Brazilian film industry was not rich enough to support him."}
+    - {title: "Roberto Muggiati, Gazeta do Povo (Curitiba), 13 May 2009: O mito grego em ritmo de bossa nova", url: "https://www.gazetadopovo.com.br/caderno-g/o-mito-grego-em-ritmo-de-bossa-nova-bkostw571owob2awq2252gnym/", quote: "O Orfeu desta Eurídice de sangue afro-filipino foi interpretado por Breno de Mello, gaúcho de Porto Alegre, que antes de se tornar ator foi jogador de futebol, no Renner gaúcho, depois no Fluminense carioca."}
     - {title: "Marcello Campos, Jornal do Comércio (Porto Alegre), 29 October 2026: Breno Mello", url: "https://www.jornaldocomercio.com/especiais/reportagem-cultural/2026/10/1268526-breno-mello-do-futebol-porto-alegrense-a-fama-internacional-no-cinema.html", quote: "Breno Mello: do futebol porto-alegrense à fama internacional no cinema"}
 - card: black-orpheus
   fact: "Songs by Jobim and Bonfá, incl. Manhã de Carnaval and A Felicidade, carried bossa nova worldwide"
   sources:
-    - {title: "Dennis Hevesi, The New York Times: Breno Mello, 76, Star of 'Orpheus,' Dies (2008)", url: "https://www.nytimes.com/2008/09/06/movies/06mello.html", quote: "“Black Orpheus” became renowned for its soundtrack by the bossa nova legends Antonio Carlos Jobim and Luiz Bonfá, with songs like “Manhã de Carnaval” and “A Felicidade.”"}
+    - {title: "Roberto Muggiati, Gazeta do Povo (Curitiba), 13 May 2009: O mito grego em ritmo de bossa nova", url: "https://www.gazetadopovo.com.br/caderno-g/o-mito-grego-em-ritmo-de-bossa-nova-bkostw571owob2awq2252gnym/", quote: "E a bela \"Manhã de Carnaval\" tornou-se uma das músicas mais executadas em todo o mundo."}
+    - {title: "Vanessa McMahon, filmfestivals.com: Looking back, Black Orpheus (2012)", url: "https://mail.filmfestivals.com/blog/vanessa_mcmahon/looking_back_cinemas_greatest_moments_black_orpheus_orfeu_negro_1959", quote: "The film is accompanied by a timeless Bossa Nova soundtrack composed by musicians Antônio Carlos Jobim and Luiz Bonfá."}
     - {title: "Eli Kooris, The Austin Chronicle: Black Orpheus (2002)", url: "https://www.austinchronicle.com/screens/video-reviews-11713359/", quote: "Soundtrack composers Antonio Carlos Jobim and Luis Bonfa introduced the style of bossa nova to popular culture"}
 - card: black-orpheus
   fact: "It won the 1959 Palme d'Or"
   sources:
-    - {title: "Dennis Hevesi, The New York Times: Breno Mello, 76, Star of 'Orpheus,' Dies (2008)", url: "https://www.nytimes.com/2008/09/06/movies/06mello.html", quote: "It won the Palme d’Or at the 1959 Cannes Film Festival"}
     - {title: "Brown University Library, Brazil: Five Centuries of Change: Black Orpheus", url: "https://library.brown.edu/create/fivecenturiesofchange/chapters/chapter-6/black-orpheus/", quote: "as well as the Palme d’Or, the highest recognition at the 1959 Cannes Film Festival."}
+    - {title: "Festival de Cannes: Interview with Amir Labaki about Black Orpheus (2021)", url: "https://www.festival-cannes.com/en/2021/interview-with-amir-labaki-about-black-orpheus-orfeu-negro-the-1959-palme-d-or/", quote: "a magnificent 1959 Palme d'Or that has been re-released this year at Cannes Classics"}
 - card: black-orpheus
   fact: "It won the Oscar for best foreign-language film, credited to France"
   sources:
@@ -335,13 +337,13 @@
 - card: black-orpheus
   fact: "Breno Mello died in his home town Porto Alegre in 2008"
   sources:
-    - {title: "Dennis Hevesi, The New York Times: Breno Mello, 76, Star of 'Orpheus,' Dies (2008)", url: "https://www.nytimes.com/2008/09/06/movies/06mello.html", quote: "died on July 14 in Porto Alegre, Brazil, his hometown."}
+    - {title: "Roberto Muggiati, Gazeta do Povo (Curitiba), 13 May 2009: O mito grego em ritmo de bossa nova", url: "https://www.gazetadopovo.com.br/caderno-g/o-mito-grego-em-ritmo-de-bossa-nova-bkostw571owob2awq2252gnym/", quote: "Breno morreu em 15 de julho de 2008, em Porto Alegre"}
     - {title: "Marcello Campos, Jornal do Comércio (Porto Alegre), 29 October 2026: Breno Mello", url: "https://www.jornaldocomercio.com/especiais/reportagem-cultural/2026/10/1268526-breno-mello-do-futebol-porto-alegrense-a-fama-internacional-no-cinema.html", quote: "a biografia do porto-alegrense Breno Mello (1931-2008)"}
 - card: black-orpheus
   fact: "The film is remembered above all for its music, which introduced bossa nova abroad"
   sources:
     - {title: "Eli Kooris, The Austin Chronicle: Black Orpheus (2002)", url: "https://www.austinchronicle.com/screens/video-reviews-11713359/", quote: "Camus’ picture is known more for what it changed in the world of music than for what it changed in the world of celluloid"}
-    - {title: "Dennis Hevesi, The New York Times: Breno Mello, 76, Star of 'Orpheus,' Dies (2008)", url: "https://www.nytimes.com/2008/09/06/movies/06mello.html", quote: "“Black Orpheus” became renowned for its soundtrack by the bossa nova legends"}
+    - {title: "Vanessa McMahon, filmfestivals.com: Looking back, Black Orpheus (2012)", url: "https://mail.filmfestivals.com/blog/vanessa_mcmahon/looking_back_cinemas_greatest_moments_black_orpheus_orfeu_negro_1959", quote: "it not only brought Brazil Carnival life to the public eye but also the lyrical bittersweet tunes of Bossa Nova music to the mass public ear"}
 - card: the-jungle-lam
   fact: "Lam was born in 1902 in Sagua la Grande, Cuba"
   sources:
@@ -379,10 +381,10 @@
     - {title: "Solomon R. Guggenheim Museum: Wifredo Lam, biography", url: "https://web.archive.org/web/20060106103849/http://www.guggenheimcollection.org/site/artist_bio_83.html", quote: "by the end of 1942 he had begun his powerful painting Jungle."}
     - {title: "ARTnews: Wifredo Lam at MoMA, a great show for a misunderstood Surrealist", url: "https://www.artnews.com/art-news/reviews/wifredo-lam-moma-retrospective-surrealism-review-1234761241/", quote: "his iconic 1942–43 painting La jungla (The Jungle)"}
 - card: the-jungle-lam
-  fact: "Gouache on paper, about 2.4 m high"
+  fact: "Painted on paper mounted on canvas, about 2.4 m high"
   sources:
-    - {title: "Museum of Modern Art collection: The Jungle (140.1945)", url: "https://web.archive.org/web/2023/https://www.moma.org/collection/works/34666", quote: "Medium Gouache on paper on canvas Dimensions 94 1/4 x 90 1/2\" (239.4 x 229.9 cm)"}
-    - {title: "MoMA Learning: Wifredo Lam, The Jungle, 1943", url: "https://web.archive.org/web/20230128123805/https://www.moma.org/learn/moma_learning/wifredo-lam-the-jungle-1943/", quote: "Gouache on paper mounted on canvas, 94 1/4 x 90 1/2\" (239.4 x 229.9 cm)"}
+    - {title: "Museum of Modern Art collection: The Jungle (140.1945)", url: "https://web.archive.org/web/2023/https://www.moma.org/collection/works/34666", quote: "Gouache on paper on canvas Dimensions 94 1/4 x 90 1/2\" (239.4 x 229.9 cm)"}
+    - {title: "Arte al Día: Wifredo Lam retrospective at MoMA (2026)", url: "https://www.artealdia.com/Reviews/WIFREDO-LAM-WHEN-I-DON-T-SLEEP-I-DREAM-RETROSPECTIVE-AT-MoMA", quote: "La jungla (The Jungle), 1942-43. Oil and charcoal on paper mounted on canvas, 7’10 ¼” × 7’6 ½” (239.4 × 229.9 cm)."}
 - card: the-jungle-lam
   fact: "Hybrid part-human, part-animal figures stand among stalks of sugar cane"
   sources:
@@ -399,7 +401,7 @@
     - {title: "ARTnews: Wifredo Lam at MoMA, a great show for a misunderstood Surrealist", url: "https://www.artnews.com/art-news/reviews/wifredo-lam-moma-retrospective-surrealism-review-1234761241/", quote: "La jungla does not depict just any jungle but one in the Antilles"}
     - {title: "MoMA Learning: Wifredo Lam, The Jungle, 1943", url: "https://web.archive.org/web/20230128123805/https://www.moma.org/learn/moma_learning/wifredo-lam-the-jungle-1943/", quote: "Lam painted The Jungle during a flowering of interest in Afro-Cuban traditions"}
 - card: the-jungle-lam
-  fact: "It was first seen in New York at the Pierre Matisse Gallery"
+  fact: "Lam showed in New York at the Pierre Matisse Gallery, where The Jungle was first seen"
   sources:
     - {title: "Arte al Día: Wifredo Lam retrospective at MoMA (2026)", url: "https://www.artealdia.com/Reviews/WIFREDO-LAM-WHEN-I-DON-T-SLEEP-I-DREAM-RETROSPECTIVE-AT-MoMA", quote: "his second at the Pierre Matisse Gallery where his now famous paintings La jungla ( The Jungle ), La mañana verde (The Green Morning ), and La silla ( The Chair ) (all 1943) were first seen in New York."}
     - {title: "Solomon R. Guggenheim Museum: Wifredo Lam, biography", url: "https://web.archive.org/web/20060106103849/http://www.guggenheimcollection.org/site/artist_bio_83.html", quote: "Between 1942 and 1950, the artist exhibited regularly at the Pierre Matisse Gallery in New York."}
@@ -409,9 +411,9 @@
     - {title: "Museum of Modern Art collection: The Jungle (140.1945)", url: "https://web.archive.org/web/2023/https://www.moma.org/collection/works/34666", quote: "Credit Inter-American Fund Object number 140.1945"}
     - {title: "ARTnews: Wifredo Lam at MoMA, a great show for a misunderstood Surrealist", url: "https://www.artnews.com/art-news/reviews/wifredo-lam-moma-retrospective-surrealism-review-1234761241/", quote: "a prized possession of MoMA’s since 1945."}
 - card: the-jungle-lam
-  fact: "It is a landmark of Surrealism"
+  fact: "It is one of Lam's most famous paintings"
   sources:
-    - {title: "ARTnews: Wifredo Lam at MoMA, a great show for a misunderstood Surrealist", url: "https://www.artnews.com/art-news/reviews/wifredo-lam-moma-retrospective-surrealism-review-1234761241/", quote: "a landmark of the Surrealist movement"}
+    - {title: "ARTnews: Wifredo Lam at MoMA, a great show for a misunderstood Surrealist", url: "https://www.artnews.com/art-news/reviews/wifredo-lam-moma-retrospective-surrealism-review-1234761241/", quote: "his iconic 1942–43 painting La jungla (The Jungle), a landmark of the Surrealist movement"}
     - {title: "Arte al Día: Wifredo Lam retrospective at MoMA (2026)", url: "https://www.artealdia.com/Reviews/WIFREDO-LAM-WHEN-I-DON-T-SLEEP-I-DREAM-RETROSPECTIVE-AT-MoMA", quote: "his now famous paintings La jungla ( The Jungle )"}
 - card: pressure-1976
   fact: "Pressure portrays a generation of Black Britons born to Caribbean families, coming of age in 1970s London"
@@ -454,22 +456,24 @@
     - {title: "Ashley Clark, BFI: Horace Ové obituary (2023)", url: "https://www.bfi.org.uk/news/horace-ove-obituary-director-who-opened-door-black-british-filmmaking", quote: "filmed in vivid, neorealism-inspired style on the streets of west London’s Ladbroke Grove"}
     - {title: "Peter Bradshaw, The Guardian: Pressure review (2023)", url: "https://www.theguardian.com/film/2023/nov/02/pressure-review-horace-ove-rerelease", quote: "the grimness of west London’s pre-gentrified Ladbroke Grove is revealed in dreamlike, deep-focus, pinsharp detail."}
 - card: pressure-1976
-  fact: "It follows Tony, British-born, 16, played by Herbert Norville"
+  fact: "It follows Tony, a British-born teenager played by Herbert Norville"
   sources:
     - {title: "Ashley Clark, BFI: Horace Ové obituary (2023)", url: "https://www.bfi.org.uk/news/horace-ove-obituary-director-who-opened-door-black-british-filmmaking", quote: "16-year-old Tony (Herbert Norville)"}
     - {title: "Barbican: ScreenTalks Archive, Horace Ové on Pressure", url: "https://www.barbican.org.uk/read-watch-listen/screentalks-archive-horace-ove-on-pressure", quote: "Herbert Norville stars as the family's youngest son, British-born Tony"}
+    - {title: "The Guardian: Horace Ové, pioneer of black British cinema (2023)", url: "https://www.theguardian.com/film/2023/oct/24/horace-ove-black-british-cinema-bfi-radical-vision", quote: "Pressure depicted a black English teenager in 1970s London, the son of a family from Trinidad"}
 - card: pressure-1976
-  fact: "Tony is at odds with his conservative Trinidad-born parents and hopes to be accepted in white Britain"
+  fact: "Tony is caught between his Trinidad-born parents and white Britain, where he hopes to be accepted"
   sources:
-    - {title: "Ashley Clark, BFI: Horace Ové obituary (2023)", url: "https://www.bfi.org.uk/news/horace-ove-obituary-director-who-opened-door-black-british-filmmaking", quote: "at odds with his religious conservative Trinidad-born parents"}
+    - {title: "The Guardian: Horace Ové, pioneer of black British cinema (2023)", url: "https://www.theguardian.com/film/2023/oct/24/horace-ove-black-british-cinema-bfi-radical-vision", quote: "the son of a family from Trinidad, unsettled between two cultures"}
     - {title: "Peter Bradshaw, The Guardian: Pressure review (2023)", url: "https://www.theguardian.com/film/2023/nov/02/pressure-review-horace-ove-rerelease", quote: "the shy and sweet-natured Tony (Herbert Norville), who is still earnestly applying for jobs and hoping to be accepted in the white mainstream."}
+    - {title: "Ashley Clark, BFI: Horace Ové obituary (2023)", url: "https://www.bfi.org.uk/news/horace-ove-obituary-director-who-opened-door-black-british-filmmaking", quote: "at odds with his religious conservative Trinidad-born parents"}
 - card: pressure-1976
   fact: "He looks for work and meets polite rejection"
   sources:
     - {title: "Peter Bradshaw, The Guardian: Pressure review (2023)", url: "https://www.theguardian.com/film/2023/nov/02/pressure-review-horace-ove-rerelease", quote: "His very presence causes pressure, a weird miasma of smiling unease among the entire staff as he is ushered into the manager’s office for the interview"}
     - {title: "Barbican: ScreenTalks Archive, Horace Ové on Pressure", url: "https://www.barbican.org.uk/read-watch-listen/screentalks-archive-horace-ove-on-pressure", quote: "who grows more and more disillusioned as he faces unemployment."}
 - card: pressure-1976
-  fact: "He follows his older brother Colin into Black Power"
+  fact: "He follows his older brother (Colin) into Black Power; the card no longer names him"
   sources:
     - {title: "Barbican: ScreenTalks Archive, Horace Ové on Pressure", url: "https://www.barbican.org.uk/read-watch-listen/screentalks-archive-horace-ove-on-pressure", quote: "Alienated from his white friends, he follows his older brother into the Black Power movement."}
     - {title: "Peter Bradshaw, The Guardian: Pressure review (2023)", url: "https://www.theguardian.com/film/2023/nov/02/pressure-review-horace-ove-rerelease", quote: "he gets caught up in crime as well as Colin’s political world"}
@@ -526,10 +530,10 @@
     - {title: "David Hendy, BBC History, 100 Voices: Caribbean Voices", url: "https://www.bbc.co.uk/historyofthebbc/100-voices/people-nation-empire/caribbean-voices/", quote: "it was only natural for it now to provide a forum in which serving men and women from the islands could send messages to their friends and families back home."}
     - {title: "The Guardian: Henry Swanzy obituary (2004)", url: "https://www.theguardian.com/news/2004/mar/20/guardianobituaries", quote: "through which West Indian servicemen, based in London, could keep in touch with home."}
 - card: caribbean-voices
-  fact: "Calling the West Indies carried personal messages, music and war-work stories"
+  fact: "Calling the West Indies carried servicemen's personal messages and requests home"
   sources:
-    - {title: "David Hendy, BBC History, 100 Voices: Caribbean Voices", url: "https://www.bbc.co.uk/historyofthebbc/100-voices/people-nation-empire/caribbean-voices/", quote: "The programme’s characteristic mixture of personal messages, warming music, and uplifting tales of dedicated war-work"}
-    - {title: "BBC News: Sir Lenny Henry on Una Marson's forgotten legacy (2022)", url: "https://www.bbc.co.uk/news/entertainment-arts-63215113", quote: "The show incorporated personal messages, war-time tales, interviews and music."}
+    - {title: "David Hendy, BBC History, 100 Voices: Caribbean Voices", url: "https://www.bbc.co.uk/historyofthebbc/100-voices/people-nation-empire/caribbean-voices/", quote: "it was only natural for it now to provide a forum in which serving men and women from the islands could send messages to their friends and families back home."}
+    - {title: "Philip Nanton, Caribbean Beat 63 (2003): London calling", url: "https://www.caribbean-beat.com/issue-63/london-calling", quote: "a letter-request show for lonely West Indians in the armed forces, far from home."}
 - card: caribbean-voices
   fact: "Its producer was Una Marson"
   sources:
@@ -553,10 +557,9 @@
 - card: caribbean-voices
   fact: "She joined the BBC in 1941, the first Black woman on its staff"
   sources:
-    - {title: "Women's History Network: Una Marson 1905-65", url: "https://womenshistorynetwork.org/una-marson-1905-65/", quote: "three years later she became the first black woman to be employed by the BBC."}
-    - {title: "National Library of Jamaica: Una Maud Marson (1905-1965)", url: "https://nlj.gov.jm/project/una-maud-marson-1905-1965/", quote: "Miss Marson began working at the British Broadcasting Corporation (BBC) and was the first black female broadcaster to work there."}
     - {title: "David Hendy, BBC History, 100 Voices: Caribbean Voices", url: "https://www.bbc.co.uk/historyofthebbc/100-voices/people-nation-empire/caribbean-voices/", quote: "Marson joined the BBC full-time in March 1941"}
-    - {title: "BBC News: Sir Lenny Henry on Una Marson's forgotten legacy (2022)", url: "https://www.bbc.co.uk/news/entertainment-arts-63215113", quote: "Her big turning point was being hired by the BBC Empire Service in 1941"}
+    - {title: "Women's History Network: Una Marson 1905-65", url: "https://womenshistorynetwork.org/una-marson-1905-65/", quote: "In 1938, Marson moved back to London and three years later she became the first black woman to be employed by the BBC."}
+    - {title: "National Library of Jamaica: Una Maud Marson (1905-1965)", url: "https://nlj.gov.jm/project/una-maud-marson-1905-1965/", quote: "Miss Marson began working at the British Broadcasting Corporation (BBC) and was the first black female broadcaster to work there."}
 - card: caribbean-voices
   fact: "She started Caribbean Voices, a weekly feature for Caribbean writing"
   sources:
@@ -570,15 +573,17 @@
     - {title: "The Guardian: Henry Swanzy obituary (2004)", url: "https://www.theguardian.com/news/2004/mar/20/guardianobituaries", quote: "by 1946, when she returned to Jamaica and Swanzy took over as producer."}
     - {title: "BBC News: Sir Lenny Henry on Una Marson's forgotten legacy (2022)", url: "https://www.bbc.co.uk/news/entertainment-arts-63215113", quote: "the BBC assisted her passage back to Jamaica."}
 - card: caribbean-voices
-  fact: "Swanzy ran it as a workshop with criticism; writers were paid to read on air"
+  fact: "Swanzy ran it as a workshop with criticism; writers were paid and booked to read on air"
   sources:
     - {title: "The Guardian: Henry Swanzy obituary (2004)", url: "https://www.theguardian.com/news/2004/mar/20/guardianobituaries", quote: "Under his editorship, Caribbean Voices took the form of a creative workshop around the craft of writing, in which writers were offered encouragement and informed criticism."}
+    - {title: "Philip Nanton, Caribbean Beat 63 (2003): London calling", url: "https://www.caribbean-beat.com/issue-63/london-calling", quote: "He offered writers three invaluable things: encouragement; payment, if their contribution was used; and criticism of their material."}
     - {title: "David Hendy, BBC History, 100 Voices: Caribbean Voices", url: "https://www.bbc.co.uk/historyofthebbc/100-voices/people-nation-empire/caribbean-voices/", quote: "Swanzy, acutely aware of their financial struggles, would also supplement their earnings by booking them as on-air readers for the series."}
 - card: caribbean-voices
   fact: "Walcott, Naipaul, Lamming, Selvon and Brathwaite were heard there before they became famous"
   sources:
-    - {title: "The Guardian: Henry Swanzy obituary (2004)", url: "https://www.theguardian.com/news/2004/mar/20/guardianobituaries", quote: "Derek Walcott and VS Naipaul, both Nobel prize-winners, were among those whose work was first broadcast ... So, too, were Wilson Harris, George Lamming, Edward Kamau Brathwaite and Andrew Salkey."}
-    - {title: "Philip Nanton, Caribbean Beat 63 (2003): London calling", url: "https://www.caribbean-beat.com/issue-63/london-calling", quote: "notably the Nobel Prize-winners Derek Walcott of St Lucia and Trinidad-born V.S. Naipaul; but also George Lamming and Kamau Brathwaite from Barbados; Sam Selvon, again from Trinidad"}
+    - {title: "The Guardian: Henry Swanzy obituary (2004)", url: "https://www.theguardian.com/news/2004/mar/20/guardianobituaries", quote: "Derek Walcott and VS Naipaul, both Nobel prize-winners, were among those whose work was first broadcast - and critically discussed - during Swanzy's years as editor."}
+    - {title: "Philip Nanton, Caribbean Beat 63 (2003): London calling", url: "https://www.caribbean-beat.com/issue-63/london-calling", quote: "notably the Nobel Prize-winners Derek Walcott of St Lucia and Trinidad-born V."}
+    - {title: "David Hendy, BBC History, 100 Voices: Caribbean Voices", url: "https://www.bbc.co.uk/historyofthebbc/100-voices/people-nation-empire/caribbean-voices/", quote: "After Selvon’s poem, the script shows Henry Swanzy closing the programme"}
 - card: caribbean-voices
   fact: "Marson died in 1965"
   sources:
@@ -605,10 +610,10 @@
     - {title: "Júnia Ferreira Furtado: Chica da Silva, via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/chica-da-silva", quote: "This slave woman became legendary for her relationship with the diamond contractor"}
     - {title: "Tribunal de Justiça de Minas Gerais: Chica da Silva, a construção do mito", url: "https://www.tjmg.jus.br/portal-tjmg/noticias/chica-da-silva/construcao-do-mito.htm", quote: "o mito se ancora de alguma forma no passado, mas não corresponde ao que Francisca da Silva foi."}
 - card: xica-da-silva-film
-  fact: "In 1976 Cacá Diegues made the film from João Felício dos Santos's novel"
+  fact: "In 1976 Cacá Diegues made the film, written with João Felício dos Santos"
   sources:
+    - {title: "Festival de Cannes: Xica da Silva", url: "https://www.festival-cannes.com/en/films/xica-da-silva", quote: "Joao Felício DOS SANTOS Screenplay"}
     - {title: "Projeto História (PUC-SP): Xica da Silva in film and television", url: "https://revistas.pucsp.br/index.php/revph/article/download/66066/45613/222091", quote: "o romance de João Felício dos Santos inspirou a filme homônimo dirigido por Cacá Diegues, filmado e lançado no mesmo ano de publicação livro, em 1976."}
-    - {title: "Festival de Cannes: Xica da Silva", url: "https://www.festival-cannes.com/en/films/xica-da-silva", quote: "Directed by : Carlos DIEGUES Year of production: 1976 ... Joao Felício DOS SANTOS Screenplay"}
 - card: xica-da-silva-film
   fact: "Zezé Motta played Xica"
   sources:
@@ -617,24 +622,26 @@
 - card: xica-da-silva-film
   fact: "In the film the contractor falls for the enslaved Xica and makes her Diamond Queen until the king sends an emissary"
   sources:
-    - {title: "Festival de Cannes: Xica da Silva", url: "https://www.festival-cannes.com/en/films/xica-da-silva", quote: "He made her the Diamond Queen and honors her every wish ... But the Portuguese king will send an emissary to the colony to put an end to Xica’s power."}
-    - {title: "Papo de Cinema: Xica da Silva restaurado em 4K (2026)", url: "https://www.papodecinema.com.br/noticias/xica-da-silva/", quote: "João Fernandes, representante da Coroa Portuguesa, apaixona-se por Xica e a transforma na Rainha do Diamante"}
+    - {title: "Festival de Cannes: Xica da Silva", url: "https://www.festival-cannes.com/en/films/xica-da-silva", quote: "He made her the Diamond Queen and honors her every wish"}
+    - {title: "Festival de Cannes: Xica da Silva", url: "https://www.festival-cannes.com/en/films/xica-da-silva", quote: "But the Portuguese king will send an emissary to the colony to put an end to Xica’s power."}
+    - {title: "Papo de Cinema: Xica da Silva restaurado em 4K (2026)", url: "https://www.papodecinema.com.br/noticias/xica-da-silva/", quote: "Alertado pelos inimigos do casal, o rei de Portugal envia um emissário para impedir que cresça o poder de Xica na colônia."}
 - card: xica-da-silva-film
   fact: "Jorge Ben wrote the title song"
   sources:
     - {title: "Dicionário Cravo Albin da MPB: Jorge Ben Jor", url: "https://dicionariompb.com.br/artista/jorge-ben-jor/", quote: "“Xica da Silva”, essa última composta para a trilha sonora do filme homônimo, de Cacá Diégues."}
     - {title: "Festival de Cannes: Xica da Silva", url: "https://www.festival-cannes.com/en/films/xica-da-silva", quote: "Music Jorge BEN"}
 - card: xica-da-silva-film
-  fact: "It was the biggest box-office success of Diegues's career"
+  fact: "It was a huge box-office hit, the biggest of Diegues's career"
   sources:
-    - {title: "Papo de Cinema: Xica da Silva restaurado em 4K (2026)", url: "https://www.papodecinema.com.br/noticias/xica-da-silva/", quote: "tornou-se o maior sucesso comercial da carreira de Cacá Diegues"}
-    - {title: "O Liberal: 'Xica da Silva' volta aos cinemas em versão restaurada (2026)", url: "https://www.oliberal.com/cultura/xica-da-silva-volta-aos-cinemas-em-versao-restaurada-e-tem-destaque-na-cineop-1.1139103", quote: "O longa se tornou o maior sucesso de bilheteria da carreira de Cacá Diegues"}
+    - {title: "Margarida Maria Adamatti, Crítica de cinema e patrulha ideológica: o caso Xica da Silva, Revista Famecos 23:3 (2016)", url: "https://www.redalyc.org/pdf/4955/495553928008.pdf", quote: "Diferente dos comentários da imprensa alternativa, Xica foi um grande sucesso de público."}
     - {title: "Projeto História (PUC-SP): Xica da Silva in film and television", url: "https://revistas.pucsp.br/index.php/revph/article/download/66066/45613/222091", quote: "Sucesso de bilheteria, Xica da Silva apostou na faceta subversiva da personagem"}
+    - {title: "Papo de Cinema: Xica da Silva restaurado em 4K (2026)", url: "https://www.papodecinema.com.br/noticias/xica-da-silva/", quote: "tornou-se o maior sucesso comercial da carreira de Cacá Diegues"}
+    - {title: "Diario de Pernambuco, July 2026: Há uma Zezé Motta antes e outra depois", url: "https://www.diariodepernambuco.com.br/viver/2026/07/11718797-ha-uma-zeze-motta-antes-e-outra-depois-diz-atriz-de-xica-da-silva-de-volta-em-cartaz-apos-50-anos.html", quote: "Ele trouxe esse carnaval para dentro do longa, que se tornou o seu maior sucesso comercial"}
 - card: xica-da-silva-film
-  fact: "It made Motta a star"
+  fact: "Her Xica made Motta famous"
   sources:
     - {title: "Dicionário Cravo Albin da MPB: Zezé Motta", url: "https://dicionariompb.com.br/artista/zeze-motta/", quote: "“Xica da Silva”, filme que a consagrou internacionalmente e pelo qual recebeu vários prêmios"}
-    - {title: "Papo de Cinema: Xica da Silva restaurado em 4K (2026)", url: "https://www.papodecinema.com.br/noticias/xica-da-silva/", quote: "protagonizado por Zezé Motta"}
+    - {title: "Diario de Pernambuco, July 2026: Há uma Zezé Motta antes e outra depois", url: "https://www.diariodepernambuco.com.br/viver/2026/07/11718797-ha-uma-zeze-motta-antes-e-outra-depois-diz-atriz-de-xica-da-silva-de-volta-em-cartaz-apos-50-anos.html", quote: "\"Há uma Zezé antes e outra depois dele\""}
 - card: xica-da-silva-film
   fact: "In October 1976 Opinião devoted four pages to the film"
   sources:
@@ -657,7 +664,7 @@
     - {title: "Tribunal de Justiça de Minas Gerais: Chica da Silva, a construção do mito", url: "https://www.tjmg.jus.br/portal-tjmg/noticias/chica-da-silva/construcao-do-mito.htm", quote: "Esta obra retoma o roteiro que inspirou o filme “Xica da Silva”, de 1976, do cineasta Cacá Diegues, que popularizou Chica da Silva e solidificou uma imagem distorcida da personagem real."}
     - {title: "Projeto História (PUC-SP): Xica da Silva in film and television", url: "https://revistas.pucsp.br/index.php/revph/article/download/66066/45613/222091", quote: "O filme Xica da Silva (1976) e a novela Xica da Silva (1996–1997) a representam como uma mulata sedutora"}
 - card: xica-da-silva-film
-  fact: "In 2026 a 4K restoration from the original negative returned the film to Brazilian cinemas"
+  fact: "In 2026 a 4K restoration returned the film to Brazilian cinemas"
   sources:
-    - {title: "O Liberal: 'Xica da Silva' volta aos cinemas em versão restaurada (2026)", url: "https://www.oliberal.com/cultura/xica-da-silva-volta-aos-cinemas-em-versao-restaurada-e-tem-destaque-na-cineop-1.1139103", quote: "A obra foi restaurada a partir do negativo original e retorna ao circuito comercial brasileiro no dia 16 de julho"}
     - {title: "Papo de Cinema: Xica da Silva restaurado em 4K (2026)", url: "https://www.papodecinema.com.br/noticias/xica-da-silva/", quote: "acaba de ganhar um trailer inédito de sua versão restaurada em 4K , antecipando o relançamento nacional"}
+    - {title: "Diario de Pernambuco, July 2026: Há uma Zezé Motta antes e outra depois", url: "https://www.diariodepernambuco.com.br/viver/2026/07/11718797-ha-uma-zeze-motta-antes-e-outra-depois-diz-atriz-de-xica-da-silva-de-volta-em-cartaz-apos-50-anos.html", quote: "retorna às salas — como a do Cinema da Fundação, no Recife — em versão restaurada em 4K, através da Sessão Vitrine Petrobras."}

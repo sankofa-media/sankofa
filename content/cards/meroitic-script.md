@@ -28,4 +28,4 @@ The script was cracked around 1910 by the British Egyptologist Francis Llewellyn
 
 The search for its relatives has narrowed: some linguists now place Meroitic in the Eastern Sudanic branch of Nilo-Saharan, close to Nubian. After Meroë fell, Christian Nubians wrote their own language, [[old-nubian|Old Nubian]], in an alphabet that borrowed a few letters from Meroitic.
 
-Meroitic is the oldest written language of Africa south of the Sahara, the voice of one of its earliest kingdoms.
+Its signs can be read aloud today; what they say is still waiting to be understood.

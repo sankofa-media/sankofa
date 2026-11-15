@@ -19,12 +19,12 @@ sources:
   - {title: "RCI Guadeloupe: 110e anniversaire de la fête des Cuisinières (2026)", url: "https://rci.fm/guadeloupe/infos/Culture/110e-anniversaire-de-la-fete-des-Cuisinieres-les-jeunes-reprennent-le-flambeau"}
   - {title: "Le Routard: Fête des cuisinières à Pointe-à-Pitre", url: "https://www.routard.com/fr/agenda/a/fete-des-cuisinieres-a-pointe-a-pitre"}
 ---
-The Fête des Cuisinières, the Festival of the Cooks, takes place every August in Pointe-à-Pitre, the main city of Guadeloupe, a French island in the Caribbean. It goes back to 1916, when the island's women cooks founded a mutual society: its members paid in so that each of them could be given a decent funeral. Their association has organised the festival ever since.
+The Fête des Cuisinières, the Festival of the Cooks, takes place every August in Pointe-à-Pitre, the main city of Guadeloupe, a French island in the Caribbean. It goes back to 1916, when the island's women cooks founded a mutual society: its members paid in so that each of them could be given a decent funeral. Their association still organises the festival.
 
 It falls on the Saturday nearest 10 August, the feast of St Lawrence, patron saint of cooks, a Roman martyr who, tradition says, was burned on a gridiron for refusing to hand over the church's money.
 
-The day begins with mass at the cathedral of St Peter and St Paul, where the cooks have their dishes and utensils blessed in baskets decked with flowers. Then they parade through the streets in Creole dress: madras headscarves, jewellery and embroidered aprons that bear St Lawrence's gridiron. A banquet with music and dancing ends the day.
+The day begins with mass at the church of St Peter and St Paul, where the cooks have their dishes and utensils blessed in baskets decked with flowers. Then they parade through the streets in Creole dress: madras headscarves, jewellery and embroidered aprons that bear St Lawrence's gridiron. A banquet with music and dancing ends the day.
 
-In 2026 the festival reached its 110th edition; with the cathedral under repair, the mass was said in front of the town hall.
+In 2026 the festival reached its 110th edition; with the church under repair, the mass was said in front of the town hall.
 
 A burial society of working women grew into one of Guadeloupe's best-loved festivals, a yearly tribute to the women who pass Creole cooking from one generation to the next.

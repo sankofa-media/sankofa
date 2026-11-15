@@ -1,163 +1,188 @@
 # Expansion batch c08: one entry per fact in card bodies and wow lines, each with >=2 independent sources and a verbatim quote.
+# Revised after the second check (expand-c08-check.yaml): unconfirmed facts removed, corrected facts reworded, new facts added.
 - card: "kikakui"
   fact: "Kikakui is a syllabary for Mende, written right to left"
   sources:
-    - {"title": "Everson and Tuchscherer, Revised proposal for encoding the Mende script, N4167 (2012)", "url": "https://www.unicode.org/L2/L2012/12023-n4167-mende.pdf", "quote": "Mende is a syllabary, written from right to left."}
-    - {"title": "Omniglot: Mende syllabary (Kikakui)", "url": "https://www.omniglot.com/writing/kikakui.htm", "quote": "Writing direction : right to left in horizontal lines."}
+    - {"title": "Michael Everson and Konrad Tuchscherer, Revised proposal for encoding the Mende script, N4167 (2012)", "url": "https://www.unicode.org/L2/L2012/12023-n4167-mende.pdf", "quote": "Mende is a syllabary, written from right to left."}
+    - {"title": "Simon Ager, Omniglot: Mende syllabary (Kikakui)", "url": "https://www.omniglot.com/writing/kikakui.htm", "quote": "Writing direction : right to left in horizontal lines."}
 - card: "kikakui"
-  fact: "Mende is spoken in Sierra Leone and Liberia"
+  fact: "Mende is a language of Sierra Leone"
   sources:
-    - {"title": "Everson and Tuchscherer, Revised proposal for encoding the Mende script, N4167 (2012)", "url": "https://www.unicode.org/L2/L2012/12023-n4167-mende.pdf", "quote": "The Mende and the Vai speak related Mande languages and are neighbors in Sierra Leone and Liberia."}
-    - {"title": "SIL Writing Systems (formerly ScriptSource): Mende Kikakui", "url": "https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Mend", "quote": "for writing the Sierra Leonean language, Mende, spoken by almost 1.5 million people"}
+    - {"title": "SIL Writing Systems (formerly ScriptSource): Mende Kikakui", "url": "https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Mend", "quote": "for writing the Sierra Leonean language, Mende"}
+    - {"title": "The Unicode Standard 17.0, chapter 19.8: Mende Kikakui", "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/", "quote": "The Mende Kikakui script is used for the Mende language of Sierra Leone."}
 - card: "kikakui"
-  fact: "Right-to-left direction linked to Arabic script known to its makers"
+  fact: "Right-to-left direction is a sign of the Arabic script its Muslim makers knew"
   sources:
-    - {"title": "SIL Writing Systems (formerly ScriptSource): Mende Kikakui", "url": "https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Mend", "quote": "attributed to Kamara's Islamic heritage and familiarity with the Arabic script, also written from right to left"}
-    - {"title": "Everson and Tuchscherer, Revised proposal for encoding the Mende script, N4167 (2012)", "url": "https://www.unicode.org/L2/L2012/12023-n4167-mende.pdf", "quote": "Mohamed Turay, an Islamic scholar in the Sierra Leonean town of Maka"}
+    - {"title": "SIL Writing Systems (formerly ScriptSource): Mende Kikakui", "url": "https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Mend", "quote": "It is the only West African syllabary to be written from right to left, which is attributed to Kamara's Islamic heritage and familiarity with the Arabic script, also written from right to left."}
+    - {"title": "Arthur Abraham, Kisimi Kamara, Encyclopaedia Africana", "url": "https://encyclopaediaafricana.com/?p=13540", "quote": "it is written from right to left, another sign of Arabic influence"}
 - card: "kikakui"
-  fact: "Named after the sounds of its first three signs ki, ka, ku"
+  fact: "Most accounts credit first signs to Mohamed Turay; his student Kisimi Kamara reworked and enlarged it around 1921 to some 195 signs; some traditions name Kamara alone"
   sources:
-    - {"title": "Everson and Tuchscherer, Revised proposal for encoding the Mende script, N4167 (2012)", "url": "https://www.unicode.org/L2/L2012/12023-n4167-mende.pdf", "quote": "also called \"Kikakui\" for the first three characters in the system"}
-    - {"title": "The Unicode Standard 17.0, chapter 19", "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/", "quote": "It is named Kikakui after the sound of its first three characters."}
+    - {"title": "SIL Writing Systems (formerly ScriptSource): Mende Kikakui", "url": "https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Mend", "quote": "The Mende (also called Kikakui) script was devised by Mohammed Turay ... It was modified by one of Turay's students, Kisimi Kamara, in 1921 to produce the form currently used. It is an abugida; each of the 195 symbols represents a consonant with an inherent vowel."}
+    - {"title": "Michael Everson and Konrad Tuchscherer, Revised proposal for encoding the Mende script, N4167 (2012)", "url": "https://www.unicode.org/L2/L2012/12023-n4167-mende.pdf", "quote": "devised around 1917 by Mohamed Turay ... and further developed by his son-in-law and student, Kisimi Kamara"}
+    - {"title": "Arthur Abraham, Kisimi Kamara, Encyclopaedia Africana", "url": "https://encyclopaediaafricana.com/?p=13540", "quote": "is famous for having invented the Mende script of syllabary, the KiKaKu, in about 1921 ... In all, there are 195 semantics ... Some traditions, however, cast doubt on the validity of ascribing the invention to Kisimi Kamara."}
+    - {"title": "Simon Ager, Omniglot: Mende syllabary (Kikakui)", "url": "https://www.omniglot.com/writing/kikakui.htm", "quote": "The Mende syllabary was invented in 1921 by Kisimi Kamara (ca. 1890-1962) of Sierra Leone. ... Number of symbols: 195"}
 - card: "kikakui"
-  fact: "First signs by Mohamed Turay (c. 1917); student Kisimi Kamara reworked and enlarged it in the early 1920s to nearly two hundred signs"
+  fact: "Its syllabic plan owes much to the older Vai script of Liberia"
   sources:
-    - {"title": "Everson and Tuchscherer, Revised proposal for encoding the Mende script, N4167 (2012)", "url": "https://www.unicode.org/L2/L2012/12023-n4167-mende.pdf", "quote": "devised around 1917 by Mohamed Turay ... further developed by his son-in-law and student, Kisimi Kamara ... an additional 150 syllabic characters to Turay's original 42"}
-    - {"title": "SIL Writing Systems (formerly ScriptSource): Mende Kikakui", "url": "https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Mend", "quote": "It was modified by one of Turay's students, Kisimi Kamara, in 1921 to produce the form currently used. ... each of the 195 symbols"}
+    - {"title": "Michael Everson and Konrad Tuchscherer, Revised proposal for encoding the Mende script, N4167 (2012)", "url": "https://www.unicode.org/L2/L2012/12023-n4167-mende.pdf", "quote": "the syllabic blueprint for the script was unquestionably influenced from the neighboring Vai, who possessed a similarly organized script by 1832 or 1833"}
+    - {"title": "SIL Writing Systems (formerly ScriptSource): Mende Kikakui", "url": "https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Mend", "quote": "It is generally believed that the inventors also had some knowledge of the Vai script of Liberia, as the two scripts share significant similarities both in form and in origin."}
 - card: "kikakui"
-  fact: "Many signs close in form to the Vai script of Liberia"
+  fact: "Through the 1920s and 1930s it spread beyond the Barri chiefdom; schools taught it, Kamara ran one; it became a popular way to write letters and keep records"
   sources:
-    - {"title": "SIL Writing Systems (formerly ScriptSource): Mende Kikakui", "url": "https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Mend", "quote": "some knowledge of the Vai script of Liberia, as the two scripts share significant similarities both in form and in origin"}
-    - {"title": "Everson and Tuchscherer, Revised proposal for encoding the Mende script, N4167 (2012)", "url": "https://www.unicode.org/L2/L2012/12023-n4167-mende.pdf", "quote": "the syllabic blueprint for the script was unquestionably influenced from the neighboring Vai"}
-- card: "kikakui"
-  fact: "From the 1920s Kamara spread it beyond his chiefdom; for two decades used for letters and records"
-  sources:
-    - {"title": "Everson and Tuchscherer, Revised proposal for encoding the Mende script, N4167 (2012)", "url": "https://www.unicode.org/L2/L2012/12023-n4167-mende.pdf", "quote": "efforts to promote the script outside of the Barri chiefdom ... beginning in the 1920s ... The script was used for record-keeping and correspondence"}
-    - {"title": "Omniglot: Mende syllabary (Kikakui)", "url": "https://www.omniglot.com/writing/kikakui.htm", "quote": "During the 1920s and 1930s he ran a school in Potoru to teach Ki-ka-ku. The syllabary became a popular method of keeping records and writing letters."}
+    - {"title": "Michael Everson and Konrad Tuchscherer, Revised proposal for encoding the Mende script, N4167 (2012)", "url": "https://www.unicode.org/L2/L2012/12023-n4167-mende.pdf", "quote": "efforts to promote the script outside of the Barri chiefdom, in southern and eastern Sierra Leone, beginning in the 1920s ... The script was used for record-keeping and correspondence"}
+    - {"title": "Simon Ager, Omniglot: Mende syllabary (Kikakui)", "url": "https://www.omniglot.com/writing/kikakui.htm", "quote": "During the 1920s and 1930s he ran a school in Potoru to teach Ki-ka-ku . The syllabary became a popular method of keeping records and writing letters."}
+    - {"title": "Arthur Abraham, Kisimi Kamara, Encyclopaedia Africana", "url": "https://encyclopaediaafricana.com/?p=13540", "quote": "it became a fashionable way of communicating with friends on all kinds of subjects. Schools were opened to teach only the KiKaKu."}
 - card: "kikakui"
   fact: "In the 1940s the British Protectorate Literacy Bureau in Bo taught Mende in Latin letters and Kikakui fell out of use"
   sources:
-    - {"title": "Everson and Tuchscherer, Revised proposal for encoding the Mende script, N4167 (2012)", "url": "https://www.unicode.org/L2/L2012/12023-n4167-mende.pdf", "quote": "In the 1940s, however, the British established the Protectorate Literacy Bureau in Bo, and a Latin orthography for Mende was taught. This contributed to the gradual disuse"}
-    - {"title": "Omniglot: Mende syllabary (Kikakui)", "url": "https://www.omniglot.com/writing/kikakui.htm", "quote": "During the 1940s the British set up the Protectorate Literacy Bureau in Bo ... usage of Kisimi's syllabary gradually diminished"}
+    - {"title": "Michael Everson and Konrad Tuchscherer, Revised proposal for encoding the Mende script, N4167 (2012)", "url": "https://www.unicode.org/L2/L2012/12023-n4167-mende.pdf", "quote": "In the 1940s, however, the British established the Protectorate Literacy Bureau in Bo, and a Latin orthography for Mende was taught. This contributed to the gradual disuse of the Mende script."}
+    - {"title": "Simon Ager, Omniglot: Mende syllabary (Kikakui)", "url": "https://www.omniglot.com/writing/kikakui.htm", "quote": "During the 1940s the British set up the Protectorate Literacy Bureau in Bo with the aim of teaching the Mende people to read and write with a version of the Latin alphabet. As a result, usage of Kisimi's syllabary gradually diminished"}
 - card: "kikakui"
   fact: "Encoded in Unicode 7.0 in 2014"
   sources:
-    - {"title": "Unicode Consortium: Unicode 7.0.0", "url": "https://www.unicode.org/versions/Unicode7.0.0/", "quote": "Mende Kikakui ... 1E800..1E8DF Mende Kikakui"}
     - {"title": "Script Encoding Initiative, UC Berkeley: Scripts encoded in Unicode", "url": "https://linguistics.berkeley.edu/sei/scripts-encoded.html", "quote": "Mende Kikakui 7.0 L2/12-023 Michael Everson"}
     - {"title": "Unicode Consortium: Unicode release dates", "url": "https://www.unicode.org/history/publicationdates.html", "quote": "7.0.0 2014 June 16"}
+- card: "kikakui"
+  fact: "Its name is Kikakui or Ki-ka-ku"
+  sources:
+    - {"title": "Simon Ager, Omniglot: Mende syllabary (Kikakui)", "url": "https://www.omniglot.com/writing/kikakui.htm", "quote": "Kisimi claimed he was inspired in a dream to create the Mende syllabary, which he called Ki-ka-ku ."}
+    - {"title": "Arthur Abraham, Kisimi Kamara, Encyclopaedia Africana", "url": "https://encyclopaediaafricana.com/?p=13540", "quote": "the Mende script of syllabary, the KiKaKu"}
+- card: "kikakui"
+  fact: "Its makers were Muslims who knew Arabic script"
+  sources:
+    - {"title": "Michael Everson and Konrad Tuchscherer, Revised proposal for encoding the Mende script, N4167 (2012)", "url": "https://www.unicode.org/L2/L2012/12023-n4167-mende.pdf", "quote": "Mohamed Turay, an Islamic scholar in the Sierra Leonean town of Maka"}
+    - {"title": "Arthur Abraham, Kisimi Kamara, Encyclopaedia Africana", "url": "https://encyclopaediaafricana.com/?p=13540", "quote": "He was an Arabic scholar"}
+- card: "kikakui"
+  fact: "Only a few hundred people write it today"
+  sources:
+    - {"title": "Michael Everson and Konrad Tuchscherer, Revised proposal for encoding the Mende script, N4167 (2012)", "url": "https://www.unicode.org/L2/L2012/12023-n4167-mende.pdf", "quote": "Konrad Tuchscherer estimates that writers in the script today continue to number in the hundreds"}
+    - {"title": "SIL Writing Systems (formerly ScriptSource): Mende Kikakui", "url": "https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Mend", "quote": "is now estimated to be used by fewer than 500 people"}
 - card: "garay"
   fact: "Garay is an alphabet for Wolof of Senegal, right to left, on the Arabic model"
   sources:
     - {"title": "Anshuman Pandey, Introducing the Wolof Alphabet of Assane Faye, N4044 (2011)", "url": "https://www.unicode.org/L2/L2011/11181-faye-wolof.pdf", "quote": "The script is based upon the Arabic model and is written linearly from right-to-left."}
-    - {"title": "Omniglot: Wolof", "url": "https://www.omniglot.com/writing/wolof.htm", "quote": "This alphabet is written from right to left and is modelled loosely on the Arabic script."}
+    - {"title": "Simon Ager, Omniglot: Wolof", "url": "https://www.omniglot.com/writing/wolof.htm", "quote": "This alphabet is written from right to left and is modelled loosely on the Arabic script."}
 - card: "garay"
-  fact: "Wolof officially written in Latin letters and also in Wolofal (Arabic script)"
+  fact: "Wolof was first written in Wolofal and is officially written in Latin letters"
   sources:
-    - {"title": "Anshuman Pandey, Introducing the Wolof Alphabet of Assane Faye, N4044 (2011)", "url": "https://www.unicode.org/L2/L2011/11181-faye-wolof.pdf", "quote": "The official script in Senegal for Wolof is Latin, although the Wolofal script (an Arabic-based script written in the 'Ajami' style) is also used."}
-    - {"title": "Omniglot: Wolof", "url": "https://www.omniglot.com/writing/wolof.htm", "quote": "Wolof was first written with a version of the Arabic script known as Wolofal"}
+    - {"title": "Anshuman Pandey, Introducing the Wolof Alphabet of Assane Faye, N4044 (2011)", "url": "https://www.unicode.org/L2/L2011/11181-faye-wolof.pdf", "quote": "The official script in Senegal for Wolof is Latin, although the Wolofal script (an Arabic-based script written in the ‘Ajami’ style) is also used."}
+    - {"title": "Simon Ager, Omniglot: Wolof", "url": "https://www.omniglot.com/writing/wolof.htm", "quote": "Wolof was first written with a version of the Arabic script known as Wolofal ... The Wolof orthography using the Latin alphabet was standardised in 1974 and is the official script for Wolof in Senegal."}
 - card: "garay"
-  fact: "Designed to be familiar to anyone who knows Arabic script"
+  fact: "Created by Assane Faye in 1961"
   sources:
-    - {"title": "Michael Everson, Preliminary proposal for encoding the Garay script, N4261 (2012)", "url": "https://www.unicode.org/L2/L2012/12139-n4261-garay.pdf", "quote": "Faye designed Garay to be easy to learn, familiar to anyone who had lea[rned the Arabic script]"}
-    - {"title": "The Unicode Standard 17.0, chapter 19", "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/", "quote": "The script is designed to be easy to learn and use by people familiar with the Arabic script."}
-- card: "garay"
-  fact: "Created by Assane Faye and published in January 1961"
-  sources:
+    - {"title": "SIL Writing Systems (formerly ScriptSource): Garay", "url": "https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Gara", "quote": "The Garay (also called Wolof) alphabet was created by Assane Faye in 1961 for writing the Wolof language"}
+    - {"title": "Simon Ager, Omniglot: Wolof", "url": "https://www.omniglot.com/writing/wolof.htm", "quote": "Wolof is also sometimes written with the Garay alphabet which was devised by Assane Faye, a Senegalese artist, in 1961."}
     - {"title": "Anshuman Pandey, Introducing the Wolof Alphabet of Assane Faye, N4044 (2011)", "url": "https://www.unicode.org/L2/L2011/11181-faye-wolof.pdf", "quote": "The Wolof alphabet was created by Assane Faye. Its official date of origin is January 1961."}
-    - {"title": "SIL Writing Systems (formerly ScriptSource): Garay", "url": "https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Gara", "quote": "created by Assane Faye in 1961 for writing the Wolof language"}
 - card: "garay"
-  fact: "Consonants have capital and small forms; capitals set apart by a swash"
+  fact: "Its letters come in capital and small forms"
   sources:
     - {"title": "Michael Everson, Preliminary proposal for encoding the Garay script, N4261 (2012)", "url": "https://www.unicode.org/L2/L2012/12139-n4261-garay.pdf", "quote": "is a casing script, where capital letters are generally distinguished by a swash distinguishing them from the small letters"}
-    - {"title": "The Unicode Standard 17.0, chapter 19", "url": "https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-19/", "quote": "The consonant letters are bicameral. ... They are generally distinguished from lowercase letters by a swash."}
-    - {"title": "Rovenchak, Faye and Riley, Consideration of the encoding of Garay, L2/22-048 (2022)", "url": "https://www.unicode.org/L2/L2022/22048-garay-script.pdf", "quote": "U+10D54 GARAY CAPITAL LETTER BA ... U+10D74 GARAY SMALL LETTER BA"}
+    - {"title": "Andrij Rovenchak, Abdou Souleye Faye and Charles L. Riley, Consideration of the encoding of Garay, L2/22-048 (2022)", "url": "https://www.unicode.org/L2/L2022/22048-garay-script.pdf", "quote": "10D50;GARAY CAPITAL LETTER A;Lu;0;R;;;;;N;;;;10D70;"}
+    - {"title": "Simon Ager, Omniglot: Wolof", "url": "https://www.omniglot.com/writing/wolof.htm", "quote": "Each consonant has two forms"}
 - card: "garay"
-  fact: "Faye taught it informally for decades to a few hundred people"
+  fact: "For decades Faye taught it himself to hundreds of people"
   sources:
-    - {"title": "SIL Writing Systems (formerly ScriptSource): Garay", "url": "https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Gara", "quote": "Assane Faye had been offering lessons in the script to hundreds of people over the years"}
-    - {"title": "Michael Everson, Preliminary proposal for encoding the Garay script, N4261 (2012)", "url": "https://www.unicode.org/L2/L2012/12139-n4261-garay.pdf", "quote": "The user community for Garay is small at present, some 200 people ... taught informally for more than fifty years"}
+    - {"title": "SIL Writing Systems (formerly ScriptSource): Garay", "url": "https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Gara", "quote": "He reported that Assane Faye had been offering lessons in the script to hundreds of people over the years"}
+    - {"title": "Michael Everson, Preliminary proposal for encoding the Garay script, N4261 (2012)", "url": "https://www.unicode.org/L2/L2012/12139-n4261-garay.pdf", "quote": "The user community for Garay is small at present, some 200 people ... The script has been taught informally for more than fifty years since its invention."}
 - card: "garay"
-  fact: "A Quran with interlinear Wolof translation in Garay exists"
+  fact: "Faye made a Wolof translation of the Quran in Garay"
   sources:
-    - {"title": "Michael Everson, Preliminary proposal for encoding the Garay script, N4261 (2012)", "url": "https://www.unicode.org/L2/L2012/12139-n4261-garay.pdf", "quote": "there exists also a Qur'ān with interlinear text giving the translation into Wolof using Garay script"}
+    - {"title": "Michael Everson, Preliminary proposal for encoding the Garay script, N4261 (2012)", "url": "https://www.unicode.org/L2/L2012/12139-n4261-garay.pdf", "quote": "there exists also a Qur‘ān with interlinear text giving the translation into Wolof using Garay script"}
     - {"title": "SIL Writing Systems (formerly ScriptSource): Garay", "url": "https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Gara", "quote": "translated the Koran using it"}
 - card: "garay"
   fact: "Encoded in Unicode 16.0 in 2024"
   sources:
     - {"title": "Script Encoding Initiative, UC Berkeley: Scripts encoded in Unicode", "url": "https://linguistics.berkeley.edu/sei/scripts-encoded.html", "quote": "Garay 16.0 L2/16-069 Michael Everson"}
     - {"title": "Unicode Consortium: Unicode release dates", "url": "https://www.unicode.org/history/publicationdates.html", "quote": "16.0.0 2024 September 10"}
+- card: "garay"
+  fact: "Twenty-five consonant letters, one a carrier for vowels, and four basic vowel signs"
+  sources:
+    - {"title": "Anshuman Pandey, Introducing the Wolof Alphabet of Assane Faye, N4044 (2011)", "url": "https://www.unicode.org/L2/L2011/11181-faye-wolof.pdf", "quote": "25 consonant letters (including a ‘vowel-carrier’ letter), 4 basic vowel signs"}
+    - {"title": "SIL Writing Systems (formerly ScriptSource): Garay", "url": "https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Gara", "quote": "The script is written from right to left using twenty-five consonant letters (including a ‘vowel-carrier’), four basic vowel signs"}
+- card: "garay"
+  fact: "His manuscripts include textbooks, among them a mathematics course"
+  sources:
+    - {"title": "Michael Everson, Preliminary proposal for encoding the Garay script, N4261 (2012)", "url": "https://www.unicode.org/L2/L2012/12139-n4261-garay.pdf", "quote": "Among the manuscripts Faye has written out include textbooks, folktales, and maps"}
+    - {"title": "Andrij Rovenchak, Abdou Souleye Faye and Charles L. Riley, Consideration of the encoding of Garay, L2/22-048 (2022)", "url": "https://www.unicode.org/L2/L2022/22048-garay-script.pdf", "quote": "Source: Assane Faye's manuscript Mathematique moderne. Cours secondaire, premier anné"}
+- card: "garay"
+  fact: "Garay never replaced Latin letters"
+  sources:
+    - {"title": "SIL Writing Systems (formerly ScriptSource): Garay", "url": "https://scriptsource.org/cms/scripts/page.php?item_id=script_detail&key=Gara", "quote": "the Wolof language is normally written with the Latin script"}
+    - {"title": "Simon Ager, Omniglot: Wolof", "url": "https://www.omniglot.com/writing/wolof.htm", "quote": "Wolof is also sometimes written with the Garay alphabet"}
 - card: "bouabre-bete-script"
   fact: "Pictograms matched to Bété syllables, meant for any language"
   sources:
-    - {"title": "MoMA, Frédéric Bruly Bouabré: World Unbound, gallery texts (2022)", "url": "https://press.moma.org/wp-content/uploads/2022/03/5-Bouabre_SectionTexts.pdf", "quote": "matched spoken syllables in the Bété language with pictograms ... could be applied not only to Bété but to other languages as well"}
-    - {"title": "Collection de l'Art Brut, Lausanne: Bruly Bouabré, Frédéric", "url": "https://artbrut.ch/en/artists/bruly-bouabre-frederic", "quote": "an inventory of sounds that could be used to transcribe all of the world's languages"}
+    - {"title": "Museum of Modern Art, Frédéric Bruly Bouabré: World Unbound, gallery texts (2022)", "url": "https://press.moma.org/wp-content/uploads/2022/03/5-Bouabre_SectionTexts.pdf", "quote": "He developed a writing system in which he matched spoken syllables in the Bété language with pictograms—glyph-like renderings of things from real life. The artist believed that this system could be applied not only to Bété but to other languages as well."}
+    - {"title": "Collection de l'Art Brut, Lausanne: Bruly Bouabré, Frédéric", "url": "https://artbrut.ch/en/artists/bruly-bouabre-frederic", "quote": "This unique, \"universal\" alphabet made up an inventory of sounds that could be used to transcribe all of the world's languages."}
     - {"title": "Raw Vision: Frédéric Bruly Bouabré, Self-Taught Encyclopaedist (2010)", "url": "https://rawvision.com/blogs/articles/articles-frederic-bruly-bouabre-self-taught-encyclopaedist", "quote": "The resulting syllabary can be used in all languages"}
 - card: "bouabre-bete-script"
   fact: "Sign counts differ between sources (448, 440, 401, 449 drawings)"
   sources:
-    - {"title": "Raw Vision: Frédéric Bruly Bouabré, Self-Taught Encyclopaedist (2010)", "url": "https://rawvision.com/blogs/articles/articles-frederic-bruly-bouabre-self-taught-encyclopaedist", "quote": "an alphabet consisting of 448 monosyllabic pictograms"}
-    - {"title": "Le Temps: L'artiste encyclopédiste Frédéric Bruly Bouabré est décédé (2014)", "url": "https://www.letemps.ch/culture/lartiste-encyclopediste-frederic-bruly-bouabre-decede-chez-lui-abidjan-91-ans", "quote": "Soit 440 pictogrammes monosyllabiques"}
+    - {"title": "Raw Vision: Frédéric Bruly Bouabré, Self-Taught Encyclopaedist (2010)", "url": "https://rawvision.com/blogs/articles/articles-frederic-bruly-bouabre-self-taught-encyclopaedist", "quote": "creating an alphabet consisting of 448 monosyllabic pictograms"}
+    - {"title": "Le Temps: L'artiste encyclopédiste Frédéric Bruly Bouabré est décédé chez lui, à Abidjan, à 91 ans (29 January 2014)", "url": "https://www.letemps.ch/culture/lartiste-encyclopediste-frederic-bruly-bouabre-decede-chez-lui-abidjan-91-ans", "quote": "Soit 440 pictogrammes monosyllabiques pour représenter les phonèmes."}
     - {"title": "Collection de l'Art Brut, Lausanne: Bruly Bouabré, Frédéric", "url": "https://artbrut.ch/en/artists/bruly-bouabre-frederic", "quote": "composed of 401 monosyllabic pictograms"}
-    - {"title": "MoMA, Frédéric Bruly Bouabré: World Unbound, gallery texts (2022)", "url": "https://press.moma.org/wp-content/uploads/2022/03/5-Bouabre_SectionTexts.pdf", "quote": "The series consists of 449 drawings"}
+    - {"title": "Museum of Modern Art, Frédéric Bruly Bouabré: World Unbound, gallery texts (2022)", "url": "https://press.moma.org/wp-content/uploads/2022/03/5-Bouabre_SectionTexts.pdf", "quote": "The series consists of 449 drawings"}
 - card: "bouabre-bete-script"
   fact: "Born 1923 in Zéprégühé into the Bété people"
   sources:
-    - {"title": "Contemporary And: Frédéric Bruly Bouabré (1923–2014)", "url": "https://contemporaryand.com/en/c-and-magazine/texts/frederic-bruly-bouabre-1923-2014", "quote": "born in 1923 in Zéprégühé"}
+    - {"title": "Contemporary And (C&): Frédéric Bruly Bouabré (1923–2014)", "url": "https://contemporaryand.com/en/c-and-magazine/texts/frederic-bruly-bouabre-1923-2014", "quote": "Ivorian Frédéric Bruly Bouabré was born in 1923 in Zéprégühé."}
     - {"title": "Collection de l'Art Brut, Lausanne: Bruly Bouabré, Frédéric", "url": "https://artbrut.ch/en/artists/bruly-bouabre-frederic", "quote": "Born in Zéprégüé, Côte d'Ivoire, Frédéric Bruly Bouabré (1923–2014) belonged to the Bété people"}
 - card: "bouabre-bete-script"
   fact: "Sailor in the French navy in WWII, then clerk in the colonial administration in Senegal"
   sources:
-    - {"title": "Collection de l'Art Brut, Lausanne: Bruly Bouabré, Frédéric", "url": "https://artbrut.ch/en/artists/bruly-bouabre-frederic", "quote": "called up as a sailor in the French West African Navy and landed in Dakar in 1941. At the end of the Second World War he stayed on in Senegal, where he worked as a clerk"}
-    - {"title": "Le Temps: L'artiste encyclopédiste Frédéric Bruly Bouabré est décédé (2014)", "url": "https://www.letemps.ch/culture/lartiste-encyclopediste-frederic-bruly-bouabre-decede-chez-lui-abidjan-91-ans", "quote": "Enrôlé dans la marine pendant la Seconde Guerre mondiale, il devient ensuite fonctionnaire de l'administration coloniale."}
+    - {"title": "Collection de l'Art Brut, Lausanne: Bruly Bouabré, Frédéric", "url": "https://artbrut.ch/en/artists/bruly-bouabre-frederic", "quote": "he was called up as a sailor in the French West African Navy and landed in Dakar in 1941. At the end of the Second World War he stayed on in Senegal, where he worked as a clerk until 1957."}
+    - {"title": "Le Temps: L'artiste encyclopédiste Frédéric Bruly Bouabré est décédé chez lui, à Abidjan, à 91 ans (29 January 2014)", "url": "https://www.letemps.ch/culture/lartiste-encyclopediste-frederic-bruly-bouabre-decede-chez-lui-abidjan-91-ans", "quote": "Enrôlé dans la marine pendant la Seconde Guerre mondiale, il devient ensuite fonctionnaire de l'administration coloniale."}
 - card: "bouabre-bete-script"
   fact: "On 11 March 1948, on his way to work, he saw seven coloured suns circling in the sky"
   sources:
-    - {"title": "Raw Vision: Frédéric Bruly Bouabré, Self-Taught Encyclopaedist (2010)", "url": "https://rawvision.com/blogs/articles/articles-frederic-bruly-bouabre-self-taught-encyclopaedist", "quote": "In Dakar, on March 11th of the year 1948 ... on his way to work one day, he suddenly saw seven differently coloured suns orbiting in the sky"}
+    - {"title": "Raw Vision: Frédéric Bruly Bouabré, Self-Taught Encyclopaedist (2010)", "url": "https://rawvision.com/blogs/articles/articles-frederic-bruly-bouabre-self-taught-encyclopaedist", "quote": "In Dakar, on March 11th of the year 1948 ... on his way to work one day, he suddenly saw seven differently coloured suns orbiting in the sky."}
     - {"title": "Collection de l'Art Brut, Lausanne: Bruly Bouabré, Frédéric", "url": "https://artbrut.ch/en/artists/bruly-bouabre-frederic", "quote": "On his way to work on 11 March 1948 Bouabré had a vision"}
-    - {"title": "Le Temps: L'artiste encyclopédiste Frédéric Bruly Bouabré est décédé (2014)", "url": "https://www.letemps.ch/culture/lartiste-encyclopediste-frederic-bruly-bouabre-decede-chez-lui-abidjan-91-ans", "quote": "un jour de mars 1948, il avait vu le ciel s'ouvrir et sept soleils colorés décrire «un cercle de beauté»"}
+    - {"title": "Le Temps: L'artiste encyclopédiste Frédéric Bruly Bouabré est décédé chez lui, à Abidjan, à 91 ans (29 January 2014)", "url": "https://www.letemps.ch/culture/lartiste-encyclopediste-frederic-bruly-bouabre-decede-chez-lui-abidjan-91-ans", "quote": "un jour de mars 1948, il avait vu le ciel s’ouvrir et sept soleils colorés décrire «un cercle de beauté autour de leur Mère-Soleil»"}
 - card: "bouabre-bete-script"
-  fact: "He took the name Cheik Nadro and set out to record and pass on all his knowledge, starting with a script for his people"
+  fact: "He took the name Cheik Nadro and set out to record and pass on all his knowledge; in 1956 he began a script for his people"
   sources:
-    - {"title": "Raw Vision: Frédéric Bruly Bouabré, Self-Taught Encyclopaedist (2010)", "url": "https://rawvision.com/blogs/articles/articles-frederic-bruly-bouabre-self-taught-encyclopaedist", "quote": "Adopting the name Cheik Nadro-le-Révélateur ... To that end, he invented a 'Bété alphabet'"}
-    - {"title": "The Digital Orientalist: An Ivorian innovation, the Bété script (2019)", "url": "https://digitalorientalist.com/2019/01/08/an-ivorian-innovation-the-bete-script/", "quote": "who called himself \"Cheikh Nadro\""}
+    - {"title": "Raw Vision: Frédéric Bruly Bouabré, Self-Taught Encyclopaedist (2010)", "url": "https://rawvision.com/blogs/articles/articles-frederic-bruly-bouabre-self-taught-encyclopaedist", "quote": "Adopting the name Cheik Nadro-le-Révélateur (the Revealer) ... Begun in 1956, and completed during the first three months of 1958, his alphabet was published that same year"}
+    - {"title": "Charles Riley, An Ivorian innovation: the Bété script, The Digital Orientalist (2019)", "url": "https://digitalorientalist.com/2019/01/08/an-ivorian-innovation-the-bete-script/", "quote": "who called himself “Cheikh Nadro” ... the script Bouabré was inspired to invent in 1956 for Bété and other languages"}
     - {"title": "Collection de l'Art Brut, Lausanne: Bruly Bouabré, Frédéric", "url": "https://artbrut.ch/en/artists/bruly-bouabre-frederic", "quote": "henceforth his encyclopaedic mission was to note down and pass on all the knowledge granted him"}
 - card: "bouabre-bete-script"
   fact: "Thousands of small cards in ballpoint and coloured pencil, each framed by a handwritten caption, gathered as Knowledge of the World"
   sources:
-    - {"title": "Le Temps: L'artiste encyclopédiste Frédéric Bruly Bouabré est décédé (2014)", "url": "https://www.letemps.ch/culture/lartiste-encyclopediste-frederic-bruly-bouabre-decede-chez-lui-abidjan-91-ans", "quote": "des milliers de petits dessins ... avec des stylos bille et des crayons de couleur ... Chacun d'eux est encadré d'une sorte de légende écrite à la main. Réunis sous le titre Connaissance du monde"}
+    - {"title": "Le Temps: L'artiste encyclopédiste Frédéric Bruly Bouabré est décédé chez lui, à Abidjan, à 91 ans (29 January 2014)", "url": "https://www.letemps.ch/culture/lartiste-encyclopediste-frederic-bruly-bouabre-decede-chez-lui-abidjan-91-ans", "quote": "des milliers de petits dessins nés de ces observations, il les réalisait dans sa modeste cour, avec des stylos bille et des crayons de couleur sur des cartons de 10 x 15 cm. Chacun d’eux est encadré d’une sorte de légende écrite à la main. Réunis sous le titre Connaissance du monde"}
     - {"title": "Collection de l'Art Brut, Lausanne: Bruly Bouabré, Frédéric", "url": "https://artbrut.ch/en/artists/bruly-bouabre-frederic", "quote": "drawing shapes with a black or blue ballpoint, then colouring them in with pencil. Each drawing is framed with a caption"}
-    - {"title": "MoMA, Frédéric Bruly Bouabré: World Unbound, gallery texts (2022)", "url": "https://press.moma.org/wp-content/uploads/2022/03/5-Bouabre_SectionTexts.pdf", "quote": "Bouabré termed these surveys \"connaissance du monde,\" or \"knowledge of the world,\""}
+    - {"title": "Museum of Modern Art, Frédéric Bruly Bouabré: World Unbound, gallery texts (2022)", "url": "https://press.moma.org/wp-content/uploads/2022/03/5-Bouabre_SectionTexts.pdf", "quote": "Bouabré termed these surveys “connaissance du monde,” or “knowledge of the world,”"}
 - card: "bouabre-bete-script"
   fact: "After Magiciens de la terre (Paris, 1989) museums worldwide invited him"
   sources:
-    - {"title": "Le Temps: L'artiste encyclopédiste Frédéric Bruly Bouabré est décédé (2014)", "url": "https://www.letemps.ch/culture/lartiste-encyclopediste-frederic-bruly-bouabre-decede-chez-lui-abidjan-91-ans", "quote": "présenté dans l'exposition de Jean-Hubert Martin Magiciens de la terre, à Paris en 1989, l'artiste est invité dans les musées internationaux"}
-    - {"title": "Contemporary And: Frédéric Bruly Bouabré (1923–2014)", "url": "https://contemporaryand.com/en/c-and-magazine/texts/frederic-bruly-bouabre-1923-2014", "quote": "participating in major shows such as Les Magiciens de la Terre (1989), Documenta XI (2002)"}
+    - {"title": "Le Temps: L'artiste encyclopédiste Frédéric Bruly Bouabré est décédé chez lui, à Abidjan, à 91 ans (29 January 2014)", "url": "https://www.letemps.ch/culture/lartiste-encyclopediste-frederic-bruly-bouabre-decede-chez-lui-abidjan-91-ans", "quote": "présenté dans l’exposition de Jean-Hubert Mar­tin Magiciens de la terre, à Paris en 1989, l’artiste est invité dans les musées internationaux"}
+    - {"title": "Contemporary And (C&): Frédéric Bruly Bouabré (1923–2014)", "url": "https://contemporaryand.com/en/c-and-magazine/texts/frederic-bruly-bouabre-1923-2014", "quote": "participating in major shows such as Les Magiciens de la Terre (1989), Documenta XI (2002) and in the core exhibition of the Venice Biennale in 2013"}
 - card: "bouabre-bete-script"
   fact: "Died in Abidjan on 28 January 2014, aged about 91"
   sources:
-    - {"title": "Contemporary And: Frédéric Bruly Bouabré (1923–2014)", "url": "https://contemporaryand.com/en/c-and-magazine/texts/frederic-bruly-bouabre-1923-2014", "quote": "Bouabré died aged 91 on January 28, 2014."}
-    - {"title": "Le Temps: L'artiste encyclopédiste Frédéric Bruly Bouabré est décédé (2014)", "url": "https://www.letemps.ch/culture/lartiste-encyclopediste-frederic-bruly-bouabre-decede-chez-lui-abidjan-91-ans", "quote": "Frédéric Bruly Bouabré est décédé chez lui à Abidjan, ce mardi, à 91 ans. Ou à peu près."}
+    - {"title": "Contemporary And (C&): Frédéric Bruly Bouabré (1923–2014)", "url": "https://contemporaryand.com/en/c-and-magazine/texts/frederic-bruly-bouabre-1923-2014", "quote": "Bouabré died aged 91 on January 28, 2014."}
+    - {"title": "Le Temps: L'artiste encyclopédiste Frédéric Bruly Bouabré est décédé chez lui, à Abidjan, à 91 ans (29 January 2014)", "url": "https://www.letemps.ch/culture/lartiste-encyclopediste-frederic-bruly-bouabre-decede-chez-lui-abidjan-91-ans", "quote": "Frédéric Bruly Bouabré est décédé chez lui à Abidjan, ce mardi, à 91 ans. Ou à peu près."}
 - card: "mandombe"
   fact: "Script from the DRC for Kikongo, Lingala, Swahili; name means \"for the Blacks\""
   sources:
-    - {"title": "Rovenchak, Pasch, Riley and Wazi, Proposal for encoding the Mandombe script, L2/16-077 (2016)", "url": "https://www.unicode.org/L2/L2016/16077-mandombe.pdf", "quote": "Mandombe, which means \"for the Blacks\" ... first designed to write Kikongo and Lingala"}
-    - {"title": "Alex Bellos, Puzzle Monday: A Divine Script From the Congo, Atlas Obscura (archived)", "url": "http://web.archive.org/web/20251225101142/https://www.atlasobscura.com/articles/puzzles-mandombe-congo-language", "quote": "Mandombe—it means \"for the Blacks\"—is used to write Lingala, Kikongo ya leta, and Swahili"}
+    - {"title": "Rovenchak, Pasch, Riley and Wazi, Proposal for encoding the Mandombe script, L2/16-077 (2016)", "url": "https://www.unicode.org/L2/L2016/16077-mandombe.pdf", "quote": "Mandombe (…), which means “for the Blacks”, is a modern African script ... It was first designed to write Kikongo and Lingala"}
+    - {"title": "Alex Bellos, Puzzle Monday: A Divine Script From the Congo, Atlas Obscura (archived)", "url": "http://web.archive.org/web/20251225101142/https://www.atlasobscura.com/articles/puzzles-mandombe-congo-language", "quote": "Mandombe—it means “for the Blacks”—is used to write Lingala, Kikongo ya leta, and Swahili"}
+    - {"title": "Simon Ager, Omniglot: Mandombe", "url": "https://omniglot.com/writing/mandombe.htm", "quote": "It is intended to write the national languages of the Congo: Kikongo, Lingala, Tshiluba and Swahili."}
 - card: "mandombe"
   fact: "Written left to right in syllable blocks; signs built from mirrored 5 and 2 shapes; orientation distinguishes consonants"
   sources:
-    - {"title": "Rovenchak, Pasch, Riley and Wazi, Proposal for encoding the Mandombe script, L2/16-077 (2016)", "url": "https://www.unicode.org/L2/L2016/16077-mandombe.pdf", "quote": "Mandombe is written left to right. ... A sign orientation is used as a distinguishing feature."}
-    - {"title": "Alex Bellos, Puzzle Monday: A Divine Script From the Congo, Atlas Obscura (archived)", "url": "http://web.archive.org/web/20251225101142/https://www.atlasobscura.com/articles/puzzles-mandombe-congo-language", "quote": "each block represents a syllable ... Each symbol contains either the \"5\" or \"2\" shape (mirror images of each other)"}
-    - {"title": "Omniglot: Mandombe", "url": "https://omniglot.com/writing/mandombe.htm", "quote": "The orientation of consonants indicates the sounds they represent"}
+    - {"title": "Rovenchak, Pasch, Riley and Wazi, Proposal for encoding the Mandombe script, L2/16-077 (2016)", "url": "https://www.unicode.org/L2/L2016/16077-mandombe.pdf", "quote": "Mandombe is written left to right. Structurally, the script is an abugida or an alphasyllabary. A sign orientation is used as a distinguishing feature."}
+    - {"title": "Alex Bellos, Puzzle Monday: A Divine Script From the Congo, Atlas Obscura (archived)", "url": "http://web.archive.org/web/20251225101142/https://www.atlasobscura.com/articles/puzzles-mandombe-congo-language", "quote": "It is a syllabary, meaning that each block represents a syllable, usually a consonant and a vowel together. Each symbol contains either the “5” or “2” shape (mirror images of each other), in addition to other angular lines"}
+    - {"title": "Simon Ager, Omniglot: Mandombe", "url": "https://omniglot.com/writing/mandombe.htm", "quote": "The orientation of consonants indicates the sounds they represent"}
 - card: "mandombe"
   fact: "In 1978 Wabeladio Payi (about 20) dreamed of Simon Kimbangu, then saw the 5 and 2 in his brick wall"
   sources:
-    - {"title": "Alex Bellos, Puzzle Monday: A Divine Script From the Congo, Atlas Obscura (archived)", "url": "http://web.archive.org/web/20251225101142/https://www.atlasobscura.com/articles/puzzles-mandombe-congo-language", "quote": "In 1978, the 21-year-old ... looked at the brick wall of his home, saw the shapes of a \"5\" and a \"2\" ... Payi had a dream in which the prophet Simon Kimbangu came to him"}
-    - {"title": "Rovenchak, Pasch, Riley and Wazi, Proposal for encoding the Mandombe script, L2/16-077 (2016)", "url": "https://www.unicode.org/L2/L2016/16077-mandombe.pdf", "quote": "invented in 1978 by David Wabeladio Payi (*15.07.1957 – †04.04.2013) ... based on the observation of the uncoated portion of the brick wall of the inventor's room"}
+    - {"title": "Alex Bellos, Puzzle Monday: A Divine Script From the Congo, Atlas Obscura (archived)", "url": "http://web.archive.org/web/20251225101142/https://www.atlasobscura.com/articles/puzzles-mandombe-congo-language", "quote": "In 1978, the 21-year-old car mechanic looked at the brick wall of his home, saw the shapes of a “5” and a “2” in the contours between the bricks ... On the night of March 13, 1978, Payi had a dream in which the prophet Simon Kimbangu came to him. ... It was just after the return from this pilgrimage that Payi found himself confronted with that fateful brick wall."}
+    - {"title": "Rovenchak, Pasch, Riley and Wazi, Proposal for encoding the Mandombe script, L2/16-077 (2016)", "url": "https://www.unicode.org/L2/L2016/16077-mandombe.pdf", "quote": "invented in 1978 by David Wabeladio Payi (*15.07.1957 – †04.04.2013) ... These shapes are based on the observation of the uncoated portion of the brick wall of the inventor’s room."}
 - card: "mandombe"
   fact: "He became a Kimbanguist and taught the script as professor at the Kimbanguist university in Kinshasa"
   sources:
-    - {"title": "Rovenchak, Pasch, Riley and Wazi, Proposal for encoding the Mandombe script, L2/16-077 (2016)", "url": "https://www.unicode.org/L2/L2016/16077-mandombe.pdf", "quote": "a member of the Kimbanguist church. He was given a professorship at the Kimbanguist University in Kinshasa, where he taught the script"}
-    - {"title": "Alex Bellos, Puzzle Monday: A Divine Script From the Congo, Atlas Obscura (archived)", "url": "http://web.archive.org/web/20251225101142/https://www.atlasobscura.com/articles/puzzles-mandombe-congo-language", "quote": "became a Kimbanguist after his revelatory dream ... became a professor at Simon Kimbangu University, where he taught classes in his invention"}
+    - {"title": "Rovenchak, Pasch, Riley and Wazi, Proposal for encoding the Mandombe script, L2/16-077 (2016)", "url": "https://www.unicode.org/L2/L2016/16077-mandombe.pdf", "quote": "The inventor, David Wabeladio Payi was a member of the Kimbanguist church. He was given a professorship at the Kimbanguist University in Kinshasa, where he taught the script to numerous students."}
+    - {"title": "Alex Bellos, Puzzle Monday: A Divine Script From the Congo, Atlas Obscura (archived)", "url": "http://web.archive.org/web/20251225101142/https://www.atlasobscura.com/articles/puzzles-mandombe-congo-language", "quote": "was brought up Catholic but became a Kimbanguist after his revelatory dream ... Payi eventually became a professor at Simon Kimbangu University, where he taught classes in his invention."}
 - card: "mandombe"
   fact: "Honorary doctorate from the University of Kinshasa in 2011; died 2013"
   sources:
@@ -166,275 +191,283 @@
 - card: "mandombe"
   fact: "Taught in Kimbanguist writing centres and schools in both Congos and Angola; thousands of users"
   sources:
-    - {"title": "Alex Bellos, Puzzle Monday: A Divine Script From the Congo, Atlas Obscura (archived)", "url": "http://web.archive.org/web/20251225101142/https://www.atlasobscura.com/articles/puzzles-mandombe-congo-language", "quote": "taught at Kimbanguist primary and secondary schools in the DRC, the Republic of the Congo and Angola ... understood by up to 10,000 people"}
-    - {"title": "Rovenchak, Pasch, Riley and Wazi, Proposal for encoding the Mandombe script, L2/16-077 (2016)", "url": "https://www.unicode.org/L2/L2016/16077-mandombe.pdf", "quote": "The number of active Mandombe users is five to six thousand in Africa"}
-    - {"title": "Omniglot: Mandombe", "url": "https://omniglot.com/writing/mandombe.htm", "quote": "Mandombe is taught is schools run by the Kimbanguist church in Angola, the Republic of the Congo, and the DRC."}
+    - {"title": "Alex Bellos, Puzzle Monday: A Divine Script From the Congo, Atlas Obscura (archived)", "url": "http://web.archive.org/web/20251225101142/https://www.atlasobscura.com/articles/puzzles-mandombe-congo-language", "quote": "communities have set up their own script-learning centers called CENA ... Mandombe is also taught at Kimbanguist primary and secondary schools in the DRC, the Republic of the Congo and Angola ... now understood by up to 10,000 people"}
+    - {"title": "Rovenchak, Pasch, Riley and Wazi, Proposal for encoding the Mandombe script, L2/16-077 (2016)", "url": "https://www.unicode.org/L2/L2016/16077-mandombe.pdf", "quote": "The number of active Mandombe users is five to six thousand in Africa and a few hundred in diasporas."}
+    - {"title": "Simon Ager, Omniglot: Mandombe", "url": "https://omniglot.com/writing/mandombe.htm", "quote": "Mandombe is taught is schools run by the Kimbanguist church in Angola, the Republic of the Congo, and the DRC."}
 - card: "bilal"
   fact: "Bilal's parents were from Abyssinia; he was enslaved"
   sources:
-    - {"title": "Encyclopaedia Britannica: adhan (archived)", "url": "http://web.archive.org/web/20261101115118/https://www.britannica.com/topic/adhan", "quote": "A formerly enslaved man whose parents were from Abyssinia (modern Ethiopia)"}
-    - {"title": "Ibn Ishaq, The Life of Muhammad, tr. A. Guillaume (Internet Archive)", "url": "https://archive.org/details/GuillaumeATheLifeOfMuhammad", "quote": "His father's name was Ribah and his mother was Hamama ... being slave born"}
-    - {"title": "Barry Hoberman, The First Muezzin, Saudi Aramco World (1983)", "url": "https://archive.aramcoworld.com/issue/198304/the.first.muezzin.htm", "quote": "Bilal ibn Rabah, an Ethiopian"}
+    - {"title": "Encyclopaedia Britannica: adhan (archived)", "url": "http://web.archive.org/web/20261101115118/https://www.britannica.com/topic/adhan", "quote": "A formerly enslaved man whose parents were from Abyssinia (modern Ethiopia )"}
+    - {"title": "Ibn Ishaq, The Life of Muhammad, tr. A. Guillaume (Internet Archive full text)", "url": "https://archive.org/details/GuillaumeATheLifeOfMuhammad", "quote": "Bilal, who was afterwards freed by Abu Bakr but at that time belonged to one of B. Jumah, being slave born"}
+    - {"title": "Barry Hoberman, The First Muezzin, Saudi Aramco World, July/August 1983", "url": "https://archive.aramcoworld.com/issue/198304/the.first.muezzin.htm", "quote": "Bilal ibn Rabah, an Ethiopian, was born in Makkah sometime in the late sixth century, of very humble parentage"}
 - card: "bilal"
   fact: "One of the first in Mecca to follow Muhammad"
   sources:
-    - {"title": "Barry Hoberman, The First Muezzin, Saudi Aramco World (1983)", "url": "https://archive.aramcoworld.com/issue/198304/the.first.muezzin.htm", "quote": "one of the first inhabitants of Makkah to accept the religion that a local merchant named Muhammad ... began to preach"}
-    - {"title": "Encyclopaedia Britannica: adhan (archived)", "url": "http://web.archive.org/web/20261101115118/https://www.britannica.com/topic/adhan", "quote": "he was the second person after Abū Bakr to become a follower"}
+    - {"title": "Barry Hoberman, The First Muezzin, Saudi Aramco World, July/August 1983", "url": "https://archive.aramcoworld.com/issue/198304/the.first.muezzin.htm", "quote": "was one of the first inhabitants of Makkah to accept the religion that a local merchant named Muhammad - the Prophet - began to preach there around the year 610"}
+    - {"title": "Encyclopaedia Britannica: adhan (archived)", "url": "http://web.archive.org/web/20261101115118/https://www.britannica.com/topic/adhan", "quote": "tradition holds that, outside of Muhammad’s family, he was the second person after Abū Bakr to become a follower"}
 - card: "bilal"
   fact: "His master Umayya ibn Khalaf laid him in the valley under a great rock to make him deny Muhammad; he refused; Abu Bakr freed him"
   sources:
-    - {"title": "Ibn Ishaq, The Life of Muhammad, tr. A. Guillaume (Internet Archive)", "url": "https://archive.org/details/GuillaumeATheLifeOfMuhammad", "quote": "Umayya b. Khalaf ... used to bring him out at the hottest part of the day and throw him on his back in the open valley and have a great rock put on his chest"}
-    - {"title": "Barry Hoberman, The First Muezzin, Saudi Aramco World (1983)", "url": "https://archive.aramcoworld.com/issue/198304/the.first.muezzin.htm", "quote": "Bilal, however, would not renounce Islam and eventually Abu Bakr ... rescued him"}
+    - {"title": "Ibn Ishaq, The Life of Muhammad, tr. A. Guillaume (Internet Archive full text)", "url": "https://archive.org/details/GuillaumeATheLifeOfMuhammad", "quote": "Umayya b. Khalaf ... used to bring him out at the hottest part of the day and throw him on his back in the open valley and have a great rock put on his chest; then he would say to him, ‘You will stay here till you die or deny Muhammad ... Bilal, who was afterwards freed by Abu Bakr"}
+    - {"title": "Barry Hoberman, The First Muezzin, Saudi Aramco World, July/August 1983", "url": "https://archive.aramcoworld.com/issue/198304/the.first.muezzin.htm", "quote": "Bilal, however, would not renounce Islam and eventually Abu Bakr, later the most distinguished of the Prophet's Companions and the first Caliph, rescued him."}
 - card: "bilal"
   fact: "After a follower's dream about calling to prayer, Muhammad chose Bilal for his more penetrating voice; first muezzin"
   sources:
-    - {"title": "Ibn Ishaq, The Life of Muhammad, tr. A. Guillaume (Internet Archive)", "url": "https://archive.org/details/GuillaumeATheLifeOfMuhammad", "quote": "he should go with Bilal and communicate it to him so that he might call to prayer thus, for he had a more penetrating voice"}
-    - {"title": "Encyclopaedia Britannica: adhan (archived)", "url": "http://web.archive.org/web/20261101115118/https://www.britannica.com/topic/adhan", "quote": "Abd Allāh ibn Zayd dreamed ... The first person to utter the adhān, and therefore the first muezzin, was Bilāl ibn Rabāḥ"}
+    - {"title": "Ibn Ishaq, The Life of Muhammad, tr. A. Guillaume (Internet Archive full text)", "url": "https://archive.org/details/GuillaumeATheLifeOfMuhammad", "quote": "that he should go with Bilal and communicate it to him so that he might call to prayer thus, for he had a more penetrating voice."}
+    - {"title": "Encyclopaedia Britannica: adhan (archived)", "url": "http://web.archive.org/web/20261101115118/https://www.britannica.com/topic/adhan", "quote": "dreamed that the faithful should be summoned by a crier from a mosque’s roof. The first person to utter the adhān , and therefore the first muezzin, was Bilāl ibn Rabāḥ."}
 - card: "bilal"
   fact: "At the conquest of Mecca in 630 he gave the call at the Kaaba"
   sources:
-    - {"title": "Encyclopaedia Britannica: adhan (archived)", "url": "http://web.archive.org/web/20261101115118/https://www.britannica.com/topic/adhan", "quote": "After the conquest of Mecca in 630, Bilāl is said to have called the adhān from atop the Kaaba"}
-    - {"title": "Ibn Ishaq, The Life of Muhammad, tr. A. Guillaume (Internet Archive)", "url": "https://archive.org/details/GuillaumeATheLifeOfMuhammad", "quote": "when the apostle entered the Ka'ba in the year of the conquest in company with Bilal he ordered him to call the people to prayer"}
-    - {"title": "Barry Hoberman, The First Muezzin, Saudi Aramco World (1983)", "url": "https://archive.aramcoworld.com/issue/198304/the.first.muezzin.htm", "quote": "January, 630 ... ascended to the top of the Ka'ba to call the believers to prayer"}
+    - {"title": "Encyclopaedia Britannica: adhan (archived)", "url": "http://web.archive.org/web/20261101115118/https://www.britannica.com/topic/adhan", "quote": "After the conquest of Mecca in 630, Bilāl is said to have called the adhān from atop the Kaaba ."}
+    - {"title": "Barry Hoberman, The First Muezzin, Saudi Aramco World, July/August 1983", "url": "https://archive.aramcoworld.com/issue/198304/the.first.muezzin.htm", "quote": "Bilal's finest hour came in January, 630 ... After the Muslim forces had captured Makkah, the Prophets muezzin ascended to the top of the Ka'ba to call the believers to prayer"}
 - card: "bilal"
   fact: "He went to Syria with the Muslim armies and stayed there"
   sources:
-    - {"title": "Barry Hoberman, The First Muezzin, Saudi Aramco World (1983)", "url": "https://archive.aramcoworld.com/issue/198304/the.first.muezzin.htm", "quote": "at some point Bilal accompanied the Muslim armies to Syria and that he died there"}
-    - {"title": "Ibn Ishaq, The Life of Muhammad, tr. A. Guillaume (Internet Archive)", "url": "https://archive.org/details/GuillaumeATheLifeOfMuhammad", "quote": "Bilal had gone there and remained as a combatant"}
+    - {"title": "Barry Hoberman, The First Muezzin, Saudi Aramco World, July/August 1983", "url": "https://archive.aramcoworld.com/issue/198304/the.first.muezzin.htm", "quote": "What seems clear is that at some point Bilal accompanied the Muslim armies to Syria and that he died there between 638 and 642"}
+    - {"title": "Ibn Ishaq, The Life of Muhammad, tr. A. Guillaume (Internet Archive full text)", "url": "https://archive.org/details/GuillaumeATheLifeOfMuhammad", "quote": "When 'Umar compiled the registers in Syria Bilal had gone there and remained as a combatant."}
 - card: "tsotsitaal"
-  fact: "Tsotsitaal is a style or register rather than a separate language, used mostly by young urban men"
+  fact: "Tsotsitaal is the street slang (argot) of the townships, spoken above all by young men as a sign of being streetwise"
   sources:
-    - {"title": "Ditsele and Hurst, Travelling terms and local innovations, Literator 37:2 (2016)", "url": "https://literator.org.za/index.php/literator/article/view/1274/2133", "quote": "should not be described as a language, but instead as a style or register ... expressing male youth culture"}
-    - {"title": "Ellen Hurst, PhD thesis on Cape Town Tsotsitaal, University of Cape Town (2008)", "url": "https://open.uct.ac.za/bitstream/handle/11427/10934/thesis_hum_2008_hurst_e.pdf?sequence=1", "quote": "The speakers (for the most part male within the thesis data) define themselves in the sense of a particular masculinity, which involves being 'streetwise'"}
+    - {"title": "Mail & Guardian: Memories of majietas (26 June 2003)", "url": "https://mg.co.za/article/2003-06-26-memories-of-majietas", "quote": "Tsotsitaal is an argot, the lingua franca for urban black folk in the Fifties and Sixties."}
+    - {"title": "Thabo Ditsele and Ellen Hurst, Travelling terms and local innovations, Literator 37:2 (2016)", "url": "https://literator.org.za/index.php/literator/article/view/1274/2133", "quote": "Mesthrie and Hurst ( 2013 :125) describe it as ‘essentially a highly stylised slang register of an urban form of language, expressing male youth culture"}
+    - {"title": "SABC News: Tsotsitaal has been part of the heritage of some Gauteng townships (24 September 2021)", "url": "https://www.sabcnews.com/sabcnews/?p=684872", "quote": "This was mainly the youth language ... Tsotsitaal was regarded as the language of the streetwise"}
 - card: "tsotsitaal"
   fact: "Emerged in the 1940s in Johannesburg's mixed townships, above all Sophiatown, on an Afrikaans base"
   sources:
-    - {"title": "Ditsele and Hurst, Travelling terms and local innovations, Literator 37:2 (2016)", "url": "https://literator.org.za/index.php/literator/article/view/1274/2133", "quote": "it first emerged in the mixed townships of Johannesburg, such as Sophiatown, in the 1940s ... the earliest instantiation of tsotsitaal from Sophiatown did indeed have an Afrikaans syntactic base"}
-    - {"title": "Ellen Hurst, PhD thesis on Cape Town Tsotsitaal, University of Cape Town (2008)", "url": "https://open.uct.ac.za/bitstream/handle/11427/10934/thesis_hum_2008_hurst_e.pdf?sequence=1", "quote": "Tsotsitaal was first observed in Sophiatown in the 1940S (Glaser 2000: 50)"}
-    - {"title": "Mail & Guardian: Memories of majietas (2003)", "url": "https://mg.co.za/article/2003-06-26-memories-of-majietas", "quote": "he grew up speaking Tsotsitaal outside the corner shops of Sophiatown"}
+    - {"title": "Thabo Ditsele and Ellen Hurst, Travelling terms and local innovations, Literator 37:2 (2016)", "url": "https://literator.org.za/index.php/literator/article/view/1274/2133", "quote": "it first emerged in the mixed townships of Johannesburg, such as Sophiatown, in the 1940s ... the earliest instantiation of tsotsitaal from Sophiatown did indeed have an Afrikaans syntactic base"}
+    - {"title": "SABC News: Tsotsitaal has been part of the heritage of some Gauteng townships (24 September 2021)", "url": "https://www.sabcnews.com/sabcnews/?p=684872", "quote": "The urban language originated in Sophiatown in Johannesburg in the 1940s."}
+    - {"title": "South African History Online: Gangsterism in Sophiatown (2011)", "url": "https://www.sahistory.org.za/article/gangsterism-sophiatown", "quote": "Gangsters were city-bred and spoke a mixture of Afrikaans and English, known as tsotsitaal."}
 - card: "tsotsitaal"
-  fact: "Vocabulary largely from Afrikaans, the bosses' language, with meanings and word order twisted"
+  fact: "Vocabulary largely from Afrikaans, the bosses' language, mixed with English; speakers kept reshaping words and inventing new ones"
   sources:
-    - {"title": "Mail & Guardian: Memories of majietas (2003)", "url": "https://mg.co.za/article/2003-06-26-memories-of-majietas", "quote": "Much of it was borrowed from Afrikaans, but on the streets of \"Sof'Town,\" they played around with the meaning and order of the words until they had broken up the baas-taal"}
-    - {"title": "Ellen Hurst, PhD thesis on Cape Town Tsotsitaal, University of Cape Town (2008)", "url": "https://open.uct.ac.za/bitstream/handle/11427/10934/thesis_hum_2008_hurst_e.pdf?sequence=1", "quote": "the Afrikaans base of Tsotsitaal in Sophiatown held symbolic power for its speakers due to the dominant position of white Afrikaners"}
+    - {"title": "Mail & Guardian: Memories of majietas (26 June 2003)", "url": "https://mg.co.za/article/2003-06-26-memories-of-majietas", "quote": "Much of it was borrowed from Afrikaans, but on the streets of “Sof’Town,” they played around with the meaning and order of the words until they had broken up the baas-taal ."}
+    - {"title": "Ellen Hurst, Style, structure and function in Cape Town Tsotsitaal, PhD thesis, University of Cape Town (2008)", "url": "https://open.uct.ac.za/bitstream/handle/11427/10934/thesis_hum_2008_hurst_e.pdf?sequence=1", "quote": "Molamu (1995) argues that the Mrikaans [Afrikaans] base of Tsotsitaal in Sophiatown held symbolic power for its speakers due to the dominant position of white Mrikaners"}
+    - {"title": "South African History Online: Gangsterism in Sophiatown (2011)", "url": "https://www.sahistory.org.za/article/gangsterism-sophiatown", "quote": "Tsotsis or gangsters spoke tsotsitaal which was a mixture of Afrikaans and English, but also borrowed heavily from American slang."}
 - card: "tsotsitaal"
   fact: "Words taken from American gangster films"
   sources:
-    - {"title": "Mail & Guardian: Memories of majietas (2003)", "url": "https://mg.co.za/article/2003-06-26-memories-of-majietas", "quote": "lines from films like Street with No Name and Scarface"}
-    - {"title": "Ellen Hurst, PhD thesis on Cape Town Tsotsitaal, University of Cape Town (2008)", "url": "https://open.uct.ac.za/bitstream/handle/11427/10934/thesis_hum_2008_hurst_e.pdf?sequence=1", "quote": "the heavy influence of American gangster movies in Sophiatown"}
+    - {"title": "Mail & Guardian: Memories of majietas (26 June 2003)", "url": "https://mg.co.za/article/2003-06-26-memories-of-majietas", "quote": "lines from films like Street with No Name and Scarface"}
+    - {"title": "South African History Online: Music and culture as forms of resistance (2011)", "url": "https://www.sahistory.org.za/article/music-and-culture-forms-resistance", "quote": "Gangsters of Sophiatown not only adopted the styles of gangsters in American movies, but also used the language. Lines from movies were incorporated into the slang of the day - tsotsitaal ."}
+    - {"title": "Ellen Hurst, Style, structure and function in Cape Town Tsotsitaal, PhD thesis, University of Cape Town (2008)", "url": "https://open.uct.ac.za/bitstream/handle/11427/10934/thesis_hum_2008_hurst_e.pdf?sequence=1", "quote": "the heavy influence of American gangster movies in Sophiatown at the time of the Tsotsi gangs"}
 - card: "tsotsitaal"
-  fact: "Meant to exclude outsiders; in the 1940s hardly any white person understood it"
+  fact: "Meant to shut outsiders out"
   sources:
-    - {"title": "Ellen Hurst, PhD thesis on Cape Town Tsotsitaal, University of Cape Town (2008)", "url": "https://open.uct.ac.za/bitstream/handle/11427/10934/thesis_hum_2008_hurst_e.pdf?sequence=1", "quote": "In the 1940S, very few white people spoke or understood Tsotsitaal (Molamu 1995)"}
-    - {"title": "Mail & Guardian: Memories of majietas (2003)", "url": "https://mg.co.za/article/2003-06-26-memories-of-majietas", "quote": "\"It was a secret language meant to exclude the state apparatus,\" says Molamu"}
-    - {"title": "Ditsele and Hurst, Travelling terms and local innovations, Literator 37:2 (2016)", "url": "https://literator.org.za/index.php/literator/article/view/1274/2133", "quote": "lexical variation with anti-language intentions"}
+    - {"title": "Mail & Guardian: Memories of majietas (26 June 2003)", "url": "https://mg.co.za/article/2003-06-26-memories-of-majietas", "quote": "“It was a secret language meant to exclude the state apparatus,” says Molamu."}
+    - {"title": "Thabo Ditsele and Ellen Hurst, Travelling terms and local innovations, Literator 37:2 (2016)", "url": "https://literator.org.za/index.php/literator/article/view/1274/2133", "quote": "tsotsitaal is a linguistic phenomenon common to many South African urban townships, which is constituted primarily by lexical variation with anti-language intentions"}
 - card: "tsotsitaal"
   fact: "In the 1950s Sophiatown was cleared under the Group Areas Act and its people moved to townships such as Soweto"
   sources:
-    - {"title": "Ditsele and Hurst, Travelling terms and local innovations, Literator 37:2 (2016)", "url": "https://literator.org.za/index.php/literator/article/view/1274/2133", "quote": "the Group Areas Act (No. 41 of 1950) ... As a result of forced removals, generations of people who were born in ... Sophiatown (before they were relocated to black townships, such as Soweto)"}
-    - {"title": "Ellen Hurst, PhD thesis on Cape Town Tsotsitaal, University of Cape Town (2008)", "url": "https://open.uct.ac.za/bitstream/handle/11427/10934/thesis_hum_2008_hurst_e.pdf?sequence=1", "quote": "townships which were populated by the forced removals of Sophiatown in the 1950S"}
-    - {"title": "Mail & Guardian: Memories of majietas (2003)", "url": "https://mg.co.za/article/2003-06-26-memories-of-majietas", "quote": "his family was moved under the Group Areas Act from Die Kas to Moroka, in Soweto"}
+    - {"title": "Thabo Ditsele and Ellen Hurst, Travelling terms and local innovations, Literator 37:2 (2016)", "url": "https://literator.org.za/index.php/literator/article/view/1274/2133", "quote": "the Group Areas Act (No. 41 of 1950) ... As a result of forced removals, generations of people who were born in the Johannesburg suburb of Sophiatown (before they were relocated to black townships, such as Soweto)"}
+    - {"title": "Mail & Guardian: Memories of majietas (26 June 2003)", "url": "https://mg.co.za/article/2003-06-26-memories-of-majietas", "quote": "By 1962 Molamu’s grandfather’s old house in Sophiatown had been demolished, and his family was moved under the Group Areas Act from Die Kas to Moroka, in Soweto."}
 - card: "tsotsitaal"
   fact: "Their children built tsotsitaal on urban Zulu or Sotho; versions such as iscamtho spread across South Africa"
   sources:
-    - {"title": "Ditsele and Hurst, Travelling terms and local innovations, Literator 37:2 (2016)", "url": "https://literator.org.za/index.php/literator/article/view/1274/2133", "quote": "their offspring ... spoke either an urban isiZulu-based tsotsitaal ... or an urban Sesotho-based tsotsitaal ... alternative names include flaaitaal, iscamtho"}
-    - {"title": "Ellen Hurst, PhD thesis on Cape Town Tsotsitaal, University of Cape Town (2008)", "url": "https://open.uct.ac.za/bitstream/handle/11427/10934/thesis_hum_2008_hurst_e.pdf?sequence=1", "quote": "the Zulu-based variety may have later evolved into Iscamtho (Glaser 2000: 108)"}
+    - {"title": "Thabo Ditsele and Ellen Hurst, Travelling terms and local innovations, Literator 37:2 (2016)", "url": "https://literator.org.za/index.php/literator/article/view/1274/2133", "quote": "whilst their offspring who were born in black townships spoke either an urban isiZulu-based tsotsitaal ... or an urban Sesotho-based tsotsitaal ... it first emerged in the mixed townships of Johannesburg ... and subsequently spread to other parts of South Africa"}
+    - {"title": "Mail & Guardian: Memories of majietas (26 June 2003)", "url": "https://mg.co.za/article/2003-06-26-memories-of-majietas", "quote": "He loves it that a new generation have created their own lingua franca, s’camto , on the streets of Soweto."}
+    - {"title": "SABC News: Tsotsitaal has been part of the heritage of some Gauteng townships (24 September 2021)", "url": "https://www.sabcnews.com/sabcnews/?p=684872", "quote": "Tsotsitaal includes Iscamtho and Flaitaal ... When you go to Pretoria for example, ispitori is localized."}
 - card: "tsotsitaal"
   fact: "Louis Molamu published a dictionary of the language of Sophiatown in 2003"
   sources:
-    - {"title": "Ditsele and Hurst, Travelling terms and local innovations, Literator 37:2 (2016)", "url": "https://literator.org.za/index.php/literator/article/view/1274/2133", "quote": "Molamu, L., 2003, Tsotsi-Taal: A dictionary of the language of Sophiatown, University of South Africa, Pretoria."}
-    - {"title": "Mail & Guardian: Memories of majietas (2003)", "url": "https://mg.co.za/article/2003-06-26-memories-of-majietas", "quote": "Molamu has finally published Tsotsitaal: A Dictionary of the Language of Sophiatown (Unisa Press)"}
-- card: "sheng"
-  fact: "Sheng is an age-marked urban form of Kenyan Swahili with words from English and other languages"
+    - {"title": "Thabo Ditsele and Ellen Hurst, Travelling terms and local innovations, Literator 37:2 (2016)", "url": "https://literator.org.za/index.php/literator/article/view/1274/2133", "quote": "Molamu, L., 2003, Tsotsi-Taal: A dictionary of the language of Sophiatown, University of South Africa, Pretoria."}
+    - {"title": "Mail & Guardian: Memories of majietas (26 June 2003)", "url": "https://mg.co.za/article/2003-06-26-memories-of-majietas", "quote": "Molamu has finally published Tsotsitaal: A Dictionary of the Language of Sophiatown (Unisa Press)."}
+- card: "tsotsitaal"
+  fact: "The name means 'tsotsi language'; tsotsis were young Johannesburg gangsters"
   sources:
-    - {"title": "Chege Githiora, Sheng: Peer Language, Swahili Dialect or Emerging Creole?, JACS 15:2 (2002)", "url": "https://lists.kictanet.or.ke/pipermail/kictanet/attachments/20120227/4bc26f31/attachment.pdf", "quote": "Sheng is an age-marked, urban dialect of Kenyan Swahili whose outer form is pidgin-like ... English is also an important source of many loan words in Sheng"}
+    - {"title": "Ellen Hurst, Style, structure and function in Cape Town Tsotsitaal, PhD thesis, University of Cape Town (2008)", "url": "https://open.uct.ac.za/bitstream/handle/11427/10934/thesis_hum_2008_hurst_e.pdf?sequence=1", "quote": "The second root, taal, means 'language' in Afrikaans, and the full word Tsotsitaal simply means 'Tsotsi language'."}
+    - {"title": "South African History Online: Gangsterism in Sophiatown (2011)", "url": "https://www.sahistory.org.za/article/gangsterism-sophiatown", "quote": "Tsotsis or gangsters were the small-time criminals. ... A young tsotsi could easily earn as much as R10 a day"}
+- card: "sheng"
+  fact: "Sheng is a young urban form of Kenyan Swahili with words from English and the city's home languages, Luo and Gikuyu among them"
+  sources:
+    - {"title": "Chege Githiora, Sheng: Peer Language, Swahili Dialect or Emerging Creole?, Journal of African Cultural Studies 15:2 (2002)", "url": "https://lists.kictanet.or.ke/pipermail/kictanet/attachments/20120227/4bc26f31/attachment.pdf", "quote": "Sheng is an age-marked,urbandialect of Kenyan Swahili ... it draws from the phonology, morphology and lexicon of Kenyan languages spoken in the city such as, but not restrictedto, Luo, Gikuiyi, Masai, Luhya ... English is also an important source of many loan words in Sheng."}
     - {"title": "Peter Githinji, Strategies for Identifying Sheng, Multilingual Margins 9:1 (2022)", "url": "https://epubs.ac.za/index.php/mm/article/download/1398/993/3093", "quote": "Sheng as a social dialect of Swahili"}
-    - {"title": "Mary Spyropoulos, Sheng: Some Preliminary Investigations, JASO 18:1 (1987)", "url": "https://ora.ox.ac.uk/objects/uuid:8ebb5fa1-62e7-4d86-9d85-238b54938499/files/rq524jp937", "quote": "a hybrid language comprised of components from all these levels emerged in Nairobi's Eastlands"}
+    - {"title": "Mary Spyropoulos, Sheng: Some Preliminary Investigations into a Recently Emerged Nairobi Street Language, JASO 18:1 (1987)", "url": "https://ora.ox.ac.uk/objects/uuid:8ebb5fa1-62e7-4d86-9d85-238b54938499/files/rq524jp937", "quote": "while their parents remained linguistically, culturally and associationally Kikuyu, Luo etc."}
 - card: "sheng"
-  fact: "\"msee\" means man/person"
+  fact: "New words appear all the time and old ones acquire new meanings"
   sources:
-    - {"title": "Chege Githiora, Sheng: Peer Language, Swahili Dialect or Emerging Creole?, JACS 15:2 (2002)", "url": "https://lists.kictanet.or.ke/pipermail/kictanet/attachments/20120227/4bc26f31/attachment.pdf", "quote": "msee n mwanamme man"}
-    - {"title": "Peter Githinji, Strategies for Identifying Sheng, Multilingual Margins 9:1 (2022)", "url": "https://epubs.ac.za/index.php/mm/article/download/1398/993/3093", "quote": "msee [msε:] person"}
-- card: "sheng"
-  fact: "Words constantly shift meaning; code excludes outsiders"
-  sources:
-    - {"title": "Chege Githiora, Sheng: Peer Language, Swahili Dialect or Emerging Creole?, JACS 15:2 (2002)", "url": "https://lists.kictanet.or.ke/pipermail/kictanet/attachments/20120227/4bc26f31/attachment.pdf", "quote": "rapid lexical innovations are constantly taking place ... semantic games aimed at excluding 'outsiders'"}
-    - {"title": "Peter Githinji, Strategies for Identifying Sheng, Multilingual Margins 9:1 (2022)", "url": "https://epubs.ac.za/index.php/mm/article/download/1398/993/3093", "quote": "a lexeme ... already in existent in donor languages is assigned new meanings"}
+    - {"title": "Chege Githiora, Sheng: Peer Language, Swahili Dialect or Emerging Creole?, Journal of African Cultural Studies 15:2 (2002)", "url": "https://lists.kictanet.or.ke/pipermail/kictanet/attachments/20120227/4bc26f31/attachment.pdf", "quote": "lexical innovations are constantlytaking place"}
+    - {"title": "Peter Githinji, Strategies for Identifying Sheng, Multilingual Margins 9:1 (2022)", "url": "https://epubs.ac.za/index.php/mm/article/download/1398/993/3093", "quote": "Sheng’s versatility is manifested in its ever-changing nature, especially at the lexical level ... the semantic expansion where a lexeme already in existent in donor languages is assigned new meanings"}
 - card: "sheng"
   fact: "The name is read as Swahili plus English"
   sources:
-    - {"title": "Mary Spyropoulos, Sheng: Some Preliminary Investigations, JASO 18:1 (1987)", "url": "https://ora.ox.ac.uk/objects/uuid:8ebb5fa1-62e7-4d86-9d85-238b54938499/files/rq524jp937", "quote": "the term 'Sheng' has been coined from a combination of the letters 'S' and 'h' in Swahili, and the 'eng' of English"}
-    - {"title": "Peter Githinji, Strategies for Identifying Sheng, Multilingual Margins 9:1 (2022)", "url": "https://epubs.ac.za/index.php/mm/article/download/1398/993/3093", "quote": "its name is coined from Swahili English Slang"}
+    - {"title": "Mary Spyropoulos, Sheng: Some Preliminary Investigations into a Recently Emerged Nairobi Street Language, JASO 18:1 (1987)", "url": "https://ora.ox.ac.uk/objects/uuid:8ebb5fa1-62e7-4d86-9d85-238b54938499/files/rq524jp937", "quote": "It has been suggested that the term 'Sheng' has been coined from a combination of the letters 'S' and 'h' in Swahili, and the 'eng' of English"}
+    - {"title": "Peter Githinji, Strategies for Identifying Sheng, Multilingual Margins 9:1 (2022)", "url": "https://epubs.ac.za/index.php/mm/article/download/1398/993/3093", "quote": "Mazrui (1995) and (Abdulaziz & Osinde, 1997) have claimed that its name is coined from Swahili English Slang"}
 - card: "sheng"
-  fact: "Grew up in Eastlands, colonial-era estates for African workers, among children of mixed-language families"
+  fact: "Grew up in Eastlands, colonial-era estates for African workers, from the mix of many peoples' home languages with Swahili and English"
   sources:
-    - {"title": "Chege Githiora, Sheng: Peer Language, Swahili Dialect or Emerging Creole?, JACS 15:2 (2002)", "url": "https://lists.kictanet.or.ke/pipermail/kictanet/attachments/20120227/4bc26f31/attachment.pdf", "quote": "a section of the city that emerged during the colonial period as a reserved area for African workers ... there is a high consensus that this is where Sheng emerged"}
-    - {"title": "Mary Spyropoulos, Sheng: Some Preliminary Investigations, JASO 18:1 (1987)", "url": "https://ora.ox.ac.uk/objects/uuid:8ebb5fa1-62e7-4d86-9d85-238b54938499/files/rq524jp937", "quote": "It is possible that the children of these workers first started to create Sheng ... the 'mother' or ethnic tongue ... Kiswahili ... English, taught in schools"}
+    - {"title": "Chege Githiora, Sheng: Peer Language, Swahili Dialect or Emerging Creole?, Journal of African Cultural Studies 15:2 (2002)", "url": "https://lists.kictanet.or.ke/pipermail/kictanet/attachments/20120227/4bc26f31/attachment.pdf", "quote": "the Eastlands, a section of the city that emerged duringthe colonial period as a reserved area for African workersliving in the city. Some also call it the 'ghetto' and there is a high consensus that this is where Sheng emerged"}
+    - {"title": "Mary Spyropoulos, Sheng: Some Preliminary Investigations into a Recently Emerged Nairobi Street Language, JASO 18:1 (1987)", "url": "https://ora.ox.ac.uk/objects/uuid:8ebb5fa1-62e7-4d86-9d85-238b54938499/files/rq524jp937", "quote": "Three languages, operating on three different levels, may be identified in the Eastlands. The first is the 'mother' or ethnic tongue ... the second is Kiswahili ... and the third is English ... It is no wonder, then, that a hybrid language comprised of components from all these levels emerged"}
 - card: "sheng"
   fact: "Date of origin disputed (Spyropoulos 1987: thirty or forty years; post-1963 migrants)"
   sources:
-    - {"title": "Mary Spyropoulos, Sheng: Some Preliminary Investigations, JASO 18:1 (1987)", "url": "https://ora.ox.ac.uk/objects/uuid:8ebb5fa1-62e7-4d86-9d85-238b54938499/files/rq524jp937", "quote": "Over the last thirty or forty years, a street language has been developing in Nairobi"}
-    - {"title": "Chege Githiora, Sheng: Peer Language, Swahili Dialect or Emerging Creole?, JACS 15:2 (2002)", "url": "https://lists.kictanet.or.ke/pipermail/kictanet/attachments/20120227/4bc26f31/attachment.pdf", "quote": "it was probably the early immigrants in Nairobi after national independence in 1963 ... our research revealed competing claims about Sheng's specific origins"}
+    - {"title": "Mary Spyropoulos, Sheng: Some Preliminary Investigations into a Recently Emerged Nairobi Street Language, JASO 18:1 (1987)", "url": "https://ora.ox.ac.uk/objects/uuid:8ebb5fa1-62e7-4d86-9d85-238b54938499/files/rq524jp937", "quote": "Over the last thirty or forty years, a street language has been developing in Nairobi"}
+    - {"title": "Chege Githiora, Sheng: Peer Language, Swahili Dialect or Emerging Creole?, Journal of African Cultural Studies 15:2 (2002)", "url": "https://lists.kictanet.or.ke/pipermail/kictanet/attachments/20120227/4bc26f31/attachment.pdf", "quote": "She adds, however, that it was probablythe early immigrantsin Nairobi after nationalindependencein 1963 ... our research revealed competing claims about Sheng's specific origins"}
 - card: "sheng"
-  fact: "Spread via shoeshine boys, hawkers, parking boys (who watch cars for tips), then to wealthier youth and private-school pupils"
+  fact: "Spread through the street economy, among hawkers and street children, then, carried by music, to young people of every class, private-school pupils included"
   sources:
-    - {"title": "Mary Spyropoulos, Sheng: Some Preliminary Investigations, JASO 18:1 (1987)", "url": "https://ora.ox.ac.uk/objects/uuid:8ebb5fa1-62e7-4d86-9d85-238b54938499/files/rq524jp937", "quote": "shoe-shine boys, curio-sellers, hawkers and parking boys ... spoken by many children attending some of the private and most prestigious schools in Nairobi"}
-    - {"title": "Chege Githiora, Sheng: Peer Language, Swahili Dialect or Emerging Creole?, JACS 15:2 (2002)", "url": "https://lists.kictanet.or.ke/pipermail/kictanet/attachments/20120227/4bc26f31/attachment.pdf", "quote": "Its spread away from Eastlands to become a street language was through the informal sector, e.g. shoeshine boys, curio sellers, hawkers and parking boys ... some upper class adolescents we interviewed claimed to speak the code"}
+    - {"title": "Chege Githiora, Sheng: Peer Language, Swahili Dialect or Emerging Creole?, Journal of African Cultural Studies 15:2 (2002)", "url": "https://lists.kictanet.or.ke/pipermail/kictanet/attachments/20120227/4bc26f31/attachment.pdf", "quote": "Eastlanders and members of the informal sector (e.g. street hawkers, street children and market sellers, etc.) remain the large critical mass of Sheng speakers. ... 'Rapping' and singing in Sheng is currentlyenjoying great success among the youth across all socio-economic classes of Nairobi."}
+    - {"title": "Mary Spyropoulos, Sheng: Some Preliminary Investigations into a Recently Emerged Nairobi Street Language, JASO 18:1 (1987)", "url": "https://ora.ox.ac.uk/objects/uuid:8ebb5fa1-62e7-4d86-9d85-238b54938499/files/rq524jp937", "quote": "shoe-shine boys, curio-sellers, hawkers and parking boys ... it has become a fashionable or 'hip' language among many of the more well-to-do youth of Nairobi. For example, Sheng, or a local version of it, is spoken by many children attending some of the private and most prestigious schools in Nairobi."}
 - card: "sheng"
-  fact: "By the early 2000s heard in markets, homes, radio, TV, advertising, and spreading to other towns and rural areas"
+  fact: "By the early 2000s heard on radio and television and spreading to other towns and the countryside"
   sources:
-    - {"title": "Chege Githiora, Sheng: Peer Language, Swahili Dialect or Emerging Creole?, JACS 15:2 (2002)", "url": "https://lists.kictanet.or.ke/pipermail/kictanet/attachments/20120227/4bc26f31/attachment.pdf", "quote": "speaking Sheng in the marketplace, in the streets and even at home. The code has also found plenty of space in local television and radio ... advertisements ... its influence can be felt in other towns and rural areas of Kenya"}
-    - {"title": "Peter Githinji, Strategies for Identifying Sheng, Multilingual Margins 9:1 (2022)", "url": "https://epubs.ac.za/index.php/mm/article/download/1398/993/3093", "quote": "the proliferation of enabling communication media has increased its reach to every corner of the country"}
+    - {"title": "Chege Githiora, Sheng: Peer Language, Swahili Dialect or Emerging Creole?, Journal of African Cultural Studies 15:2 (2002)", "url": "https://lists.kictanet.or.ke/pipermail/kictanet/attachments/20120227/4bc26f31/attachment.pdf", "quote": "The code has also found plenty of space in local television and radio ... its influence can be felt in other towns and rural areas of Kenya, especially among the youth."}
+    - {"title": "Peter Githinji, Strategies for Identifying Sheng, Multilingual Margins 9:1 (2022)", "url": "https://epubs.ac.za/index.php/mm/article/download/1398/993/3093", "quote": "a mixed urban and youth code that originated from Nairobi but has now spread to various urban centers in Kenya ... the proliferation of enabling communication media has increased its reach to every corner of the country"}
 - card: "ebonics-oakland"
   fact: "AAE / AAVE / Ebonics is the dialect spoken by many African Americans"
   sources:
-    - {"title": "Salikoko Mufwene, Encyclopaedia Britannica: Ebonics (archived)", "url": "http://web.archive.org/web/20250327162147/https://www.britannica.com/topic/Ebonics", "quote": "Ebonics, dialect of American English spoken by a large proportion of African Americans ... Also called: African American Vernacular English (AAVE)"}
-    - {"title": "Linguistic Society of America: Resolution on the Oakland Ebonics Issue (archived)", "url": "http://web.archive.org/web/20240225224101/https://www.linguisticsociety.org/resource/lsa-resolution-oakland-ebonics-issue", "quote": "The variety known as \"Ebonics,\" \"African American Vernacular English\" (AAVE), and \"Vernacular Black English\""}
+    - {"title": "Salikoko S. Mufwene, Encyclopaedia Britannica: Ebonics (archived)", "url": "http://web.archive.org/web/20250327162147/https://www.britannica.com/topic/Ebonics", "quote": "Ebonics , dialect of American English spoken by a large proportion of African Americans . ... Also called: African American Vernacular English (AAVE)"}
+    - {"title": "Linguistic Society of America: LSA Resolution on the Oakland \"Ebonics\" Issue (archived)", "url": "http://web.archive.org/web/20240225224101/https://www.linguisticsociety.org/resource/lsa-resolution-oakland-ebonics-issue", "quote": "The variety known as \"Ebonics,\" \"African American Vernacular English\" (AAVE), and \"Vernacular Black English\""}
 - card: "ebonics-oakland"
   fact: "\"Ebonics\" combines ebony and phonics"
   sources:
-    - {"title": "Education Week: Oakland Board Revises Ebonics Resolution (1997)", "url": "https://www.edweek.org/education/oakland-board-revises-ebonics-resolution/1997/01", "quote": "ebonics--a combination of the words \"ebony\" and \"phonics\""}
-    - {"title": "Oakland Board of Education resolution of 18 December 1996, full text (LINGUIST List)", "url": "https://listserv.linguistlist.org/pipermail/linguist/1997-January/003675.html", "quote": "\"Ebonics\" (literally Black sounds)"}
+    - {"title": "Education Week: Oakland Board Revises Ebonics Resolution (22 January 1997)", "url": "https://www.edweek.org/education/oakland-board-revises-ebonics-resolution/1997/01", "quote": "ebonics--a combination of the words “ebony” and “phonics,” also known as black English"}
+    - {"title": "Oakland Board of Education resolution of 18 December 1996, full text (LINGUIST List, January 1997)", "url": "https://listserv.linguistlist.org/pipermail/linguist/1997-January/003675.html", "quote": "a language described in various scholarly approaches as ``Ebonics'' (literally Black sounds)"}
 - card: "ebonics-oakland"
   fact: "It is systematic and rule-governed, not broken English"
   sources:
-    - {"title": "Linguistic Society of America: Resolution on the Oakland Ebonics Issue (archived)", "url": "http://web.archive.org/web/20240225224101/https://www.linguisticsociety.org/resource/lsa-resolution-oakland-ebonics-issue", "quote": "is systematic and rule-governed like all natural speech varieties ... Characterizations of Ebonics as \"slang,\" ... or \"broken English\" are incorrect and demeaning"}
-    - {"title": "Oakland Board of Education resolution of 18 December 1996, full text (LINGUIST List)", "url": "https://listserv.linguistlist.org/pipermail/linguist/1997-January/003675.html", "quote": "systematic, rule governed and predictable patterns exist in the grammar of African-American"}
-    - {"title": "John R. Rickford, Ebonics Notes and Discussion (1996)", "url": "https://web.stanford.edu/~rickford/ebonics/EbonicsExamples.html", "quote": "As with all spoken languages, AAVE is extremely regular, rule-governed, and systematic."}
+    - {"title": "Linguistic Society of America: LSA Resolution on the Oakland \"Ebonics\" Issue (archived)", "url": "http://web.archive.org/web/20240225224101/https://www.linguisticsociety.org/resource/lsa-resolution-oakland-ebonics-issue", "quote": "Characterizations of Ebonics as \"slang,\" \"mutant,\" \" lazy,\" \"defective,\" \"ungrammatical,\" or \"broken English\" are incorrect and demeaning."}
+    - {"title": "John R. Rickford, Ebonics Notes and Discussion (December 1996)", "url": "https://web.stanford.edu/~rickford/ebonics/EbonicsExamples.html", "quote": "As with all spoken languages, AAVE is extremely regular, rule-governed, and systematic."}
 - card: "ebonics-oakland"
-  fact: "Invariant be marks repeated events (\"Billy don't be telling lies\")"
+  fact: "Invariant habitual be gives \"Billy don't be telling lies\" a different meaning from \"Billy don't tell lies\": it describes a repeated process"
   sources:
-    - {"title": "Salikoko Mufwene, Encyclopaedia Britannica: Ebonics (archived)", "url": "http://web.archive.org/web/20250327162147/https://www.britannica.com/topic/Ebonics", "quote": "consuetudinal or invariant be, such as \"Billy don't be telling lies\" (different in meaning from \"Billy don't tell lies,\" because it refers to repeated processes"}
-    - {"title": "John R. Rickford, Ebonics Notes and Discussion (1996)", "url": "https://web.stanford.edu/~rickford/ebonics/EbonicsExamples.html", "quote": "invariant habitual \"be\""}
+    - {"title": "Salikoko S. Mufwene, Encyclopaedia Britannica: Ebonics (archived)", "url": "http://web.archive.org/web/20250327162147/https://www.britannica.com/topic/Ebonics", "quote": "consuetudinal or invariant be , such as “Billy don’t be telling lies” (different in meaning from “Billy don’t tell lies,” because it refers to repeated processes rather than to a repeated activity)"}
+    - {"title": "John R. Rickford, Ebonics Notes and Discussion (December 1996)", "url": "https://web.stanford.edu/~rickford/ebonics/EbonicsExamples.html", "quote": "and invariant habitual \"be\" (a form which has clear parallels with and possible derivations from creole \"does be\""}
 - card: "ebonics-oakland"
   fact: "On 18 December 1996 Oakland's board unanimously adopted the African American Task Force's resolution"
   sources:
-    - {"title": "Oakland Board of Education resolution of 18 December 1996, full text (LINGUIST List)", "url": "https://listserv.linguistlist.org/pipermail/linguist/1997-January/003675.html", "quote": "adopted unanimously by the Oakland School Board on December 18, 1996 ... ADOPTING THE REPORT AND RECOMMENDATIONS OF THE AFRICAN-AMERICAN TASK FORCE"}
-    - {"title": "Education Week: Oakland Board Revises Ebonics Resolution (1997)", "url": "https://www.edweek.org/education/oakland-board-revises-ebonics-resolution/1997/01", "quote": "a district task force ... wrote the original resolution that the board adopted unanimously on Dec. 18"}
+    - {"title": "Oakland Board of Education resolution of 18 December 1996, full text (LINGUIST List, January 1997)", "url": "https://listserv.linguistlist.org/pipermail/linguist/1997-January/003675.html", "quote": "This is the complete text of the Ebonics resolution, and accompanying police statement, adopted unanimously by the Oakland School Board on December 18, 1996. ... RESOLUTION OF THE BOARD OF EDUCATION ADOPTING THE REPORT AND RECOMMENDATIONS OF THE AFRICAN-AMERICAN TASK FORCE"}
+    - {"title": "Education Week: Oakland Board Revises Ebonics Resolution (22 January 1997)", "url": "https://www.edweek.org/education/oakland-board-revises-ebonics-resolution/1997/01", "quote": "Members of a district task force created to recommend ways to improve education for Oakland’s African-American students wrote the original resolution that the board adopted unanimously on Dec. 18."}
 - card: "ebonics-oakland"
   fact: "It recognised Ebonics as primary language, called it genetically based and not English, promised teaching in it and in English"
   sources:
-    - {"title": "Oakland Board of Education resolution of 18 December 1996, full text (LINGUIST List)", "url": "https://listserv.linguistlist.org/pipermail/linguist/1997-January/003675.html", "quote": "genetically-based and not a dialect of English ... the predominantly primary language of African American students ... instruction ... in their primary language and in English"}
-    - {"title": "Education Week: Oakland Board Revises Ebonics Resolution (1997)", "url": "https://www.edweek.org/education/oakland-board-revises-ebonics-resolution/1997/01", "quote": "it no longer suggests that ebonics is \"genetically based\" ... It no longer calls for students to be taught in their \"primary language\" of ebonics"}
+    - {"title": "Oakland Board of Education resolution of 18 December 1996, full text (LINGUIST List, January 1997)", "url": "https://listserv.linguistlist.org/pipermail/linguist/1997-January/003675.html", "quote": "these studies have also demonstrated that African Language Systems are genetically-based and not a dialect of English ... in instructing African American children both in their primary language and in English"}
+    - {"title": "Diverse / Black Issues in Higher Education: Oakland amends Ebonics resolution (1997, archived)", "url": "http://web.archive.org/web/20250709101656/https://www.diverseeducation.com/home/article/15083590/oakland-amends-ebonics-resolution-oakland-school-board", "quote": "Excised from the resolution are: statements referring to African Language Systems being “genetically based;” statements implying that Ebonics is the “primary language” of all African American students; and wording that led readers of the initial resolution to conclude that students would be taught in Ebonics."}
 - card: "ebonics-oakland"
   fact: "A national debate followed"
   sources:
-    - {"title": "Education Week: Oakland Board Revises Ebonics Resolution (1997)", "url": "https://www.edweek.org/education/oakland-board-revises-ebonics-resolution/1997/01", "quote": "sparked a national debate on black English and black student achievement"}
-    - {"title": "John R. Rickford, The Ebonics controversy in my backyard", "url": "https://web.stanford.edu/~rickford/papers/EbonicsInMyBackyard.html", "quote": "The controversy which erupted from the Oakland School Board's December 18 resolution"}
+    - {"title": "Education Week: Oakland Board Revises Ebonics Resolution (22 January 1997)", "url": "https://www.edweek.org/education/oakland-board-revises-ebonics-resolution/1997/01", "quote": "sparked a national debate on black English and black student achievement"}
+    - {"title": "John R. Rickford, The Ebonics controversy in my backyard: A sociolinguist's experiences and reflections", "url": "https://web.stanford.edu/~rickford/papers/EbonicsInMyBackyard.html", "quote": "This resolution, in turn, was used by Oakland to defend itself against its many critics, and was widely reported on and cited in the media."}
 - card: "ebonics-oakland"
   fact: "On 3 January 1997 the LSA resolved it is systematic and rule-governed and Oakland's decision linguistically and pedagogically sound"
   sources:
-    - {"title": "Linguistic Society of America: Resolution on the Oakland Ebonics Issue (archived)", "url": "http://web.archive.org/web/20240225224101/https://www.linguisticsociety.org/resource/lsa-resolution-oakland-ebonics-issue", "quote": "3 January 1997: Approved by members attending the 71st Annual Business Meeting ... linguistically and pedagogically sound"}
-    - {"title": "John R. Rickford, The Ebonics controversy in my backyard", "url": "https://web.stanford.edu/~rickford/papers/EbonicsInMyBackyard.html", "quote": "unanimously approved ... the \"systematic and rule governed and systematic nature of Ebonics,\" and pronounced the Oakland school board's decision ... \"linguistically and pedagogically"}
+    - {"title": "Linguistic Society of America: LSA Resolution on the Oakland \"Ebonics\" Issue (archived)", "url": "http://web.archive.org/web/20240225224101/https://www.linguisticsociety.org/resource/lsa-resolution-oakland-ebonics-issue", "quote": "3 January 1997: Approved by members attending the 71st Annual Business Meeting, Chicago Sheraton ... the Oakland School Board's decision to recognize the vernacular of African American students in teaching them Standard English is linguistically and pedagogically sound."}
+    - {"title": "John R. Rickford, The Ebonics controversy in my backyard: A sociolinguist's experiences and reflections", "url": "https://web.stanford.edu/~rickford/papers/EbonicsInMyBackyard.html", "quote": "pronounced the Oakland school board's decision to take it into account in teaching Standard English \"linguistically and pedagogically sound.\""}
 - card: "ebonics-oakland"
   fact: "On 15 January 1997 the board unanimously revised it, dropping \"genetically based\" and teaching in Ebonics but keeping the standard English goal"
   sources:
-    - {"title": "Education Week: Oakland Board Revises Ebonics Resolution (1997)", "url": "https://www.edweek.org/education/oakland-board-revises-ebonics-resolution/1997/01", "quote": "voted unanimously to adopt the revised wording at a special board meeting on Jan. 15"}
-    - {"title": "Diverse / Black Issues in Higher Education: Oakland amends Ebonics resolution (1997, archived)", "url": "http://web.archive.org/web/20250709101656/https://www.diverseeducation.com/home/article/15083590/oakland-amends-ebonics-resolution-oakland-school-board", "quote": "voted unanimously on January 15 to support an amended version ... Excised from the resolution are: statements referring to African Language Systems being \"genetically based;\" ... upholds the district's intent to ... master standard English"}
+    - {"title": "Education Week: Oakland Board Revises Ebonics Resolution (22 January 1997)", "url": "https://www.edweek.org/education/oakland-board-revises-ebonics-resolution/1997/01", "quote": "the district’s seven-member school board voted unanimously to adopt the revised wording at a special board meeting on Jan. 15. ... it no longer suggests that ebonics is “genetically based.”"}
+    - {"title": "Diverse / Black Issues in Higher Education: Oakland amends Ebonics resolution (1997, archived)", "url": "http://web.archive.org/web/20250709101656/https://www.diverseeducation.com/home/article/15083590/oakland-amends-ebonics-resolution-oakland-school-board", "quote": "The seven-member Oakland School Board voted unanimously on January 15 to support an amended version ... The newly-amended resolution upholds the district’s intent to implement an academic program aimed at helping African American students acquire and master standard English language skills."}
 - card: "ebonics-oakland"
   fact: "Later in January 1997 Oakland's superintendent and linguists testified at a Senate subcommittee hearing"
   sources:
-    - {"title": "John R. Rickford, The Ebonics controversy in my backyard", "url": "https://web.stanford.edu/~rickford/papers/EbonicsInMyBackyard.html", "quote": "joined educators from Oakland (including Superintendent Carolyn Getridge) in providing pro-Ebonics testimony at the US Senate Hearing on Ebonics on January 23, 1997"}
-    - {"title": "Diverse / Black Issues in Higher Education: Oakland amends Ebonics resolution (1997, archived)", "url": "http://web.archive.org/web/20250709101656/https://www.diverseeducation.com/home/article/15083590/oakland-amends-ebonics-resolution-oakland-school-board", "quote": "At the hearing, chaired by Sen. Arlen Specter (R-Pa.), Carolyn Getridge, superintendent of the Oakland school system, said"}
+    - {"title": "John R. Rickford, The Ebonics controversy in my backyard: A sociolinguist's experiences and reflections", "url": "https://web.stanford.edu/~rickford/papers/EbonicsInMyBackyard.html", "quote": "joined educators from Oakland (including Superintendent Carolyn Getridge) in providing pro-Ebonics testimony at the US Senate Hearing on Ebonics on January 23, 1997. ... chaired by Senator Arlen Specter, Chairman of the Senate Appropriations Subcommittee on Labor, Health and Human Services and Education"}
+    - {"title": "Diverse / Black Issues in Higher Education: Oakland amends Ebonics resolution (1997, archived)", "url": "http://web.archive.org/web/20250709101656/https://www.diverseeducation.com/home/article/15083590/oakland-amends-ebonics-resolution-oakland-school-board", "quote": "At the hearing, chaired by Sen. Arlen Specter (R-Pa.), Carolyn Getridge, superintendent of the Oakland school system, said the school board should be commended"}
+- card: "ebonics-oakland"
+  fact: "Its tense system marks distinctions standard English lacks"
+  sources:
+    - {"title": "John R. Rickford, Ebonics Notes and Discussion (December 1996)", "url": "https://web.stanford.edu/~rickford/ebonics/EbonicsExamples.html", "quote": "It is the complex tense-aspect system of AAVE which distinguishes it most strikingly from SE"}
+    - {"title": "Salikoko S. Mufwene, Encyclopaedia Britannica: Ebonics (archived)", "url": "http://web.archive.org/web/20250327162147/https://www.britannica.com/topic/Ebonics", "quote": "consuetudinal or invariant be ... and (9) the use of steady to indicate persistence"}
 - card: "nigerian-pidgin"
   fact: "Called Naija by researchers"
   sources:
     - {"title": "IFRA-Nigeria: NaijaSynCor (archived)", "url": "http://web.archive.org/web/20251212162302/https://ifra-nigeria.org/former-research-programs/naijasyncor", "quote": "NaijaSynCor (A Corpus-based Macro-Syntactic Study of Naija, aka Nigerian Pidgin)"}
-    - {"title": "Eriata Oribhabor, Lingua Franca: From Nigerian Pidgin to Naija Languej, Jalada (2016)", "url": "https://jaladaafrica.org/2016/05/30/lingua-franca-from-nigerian-pidgin-to-naija-languej-by-eriata-oribhabor/", "quote": "a new name should be given to the language ... thus NAIJA LANGUEJ"}
+    - {"title": "Eriata Oribhabor, Lingua Franca: From Nigerian Pidgin to Naija Languej, Jalada 04 (2016)", "url": "https://jaladaafrica.org/2016/05/30/lingua-franca-from-nigerian-pidgin-to-naija-languej-by-eriata-oribhabor/", "quote": "Lingua Franca: From Nigerian Pidgin to Naija Languej"}
 - card: "nigerian-pidgin"
   fact: "Vocabulary mostly English"
   sources:
-    - {"title": "Nicholas Faraclas, Nigerian Pidgin, APiCS Online structure dataset 17", "url": "https://apics-online.info/contributions/17", "quote": "Major lexifier: English"}
-    - {"title": "WBUR Here & Now: Nigerian Pidgin Among New Languages Reaching BBC World Service Listeners (2018)", "url": "https://www.wbur.org/hereandnow/2018/03/13/nigerian-pidgin-bbc-world-service", "quote": "Pidgin takes inspiration from Portuguese ... English, the enduring colonial-era language"}
+    - {"title": "Nicholas Faraclas, Nigerian Pidgin, APiCS Online, structure dataset 17", "url": "https://apics-online.info/contributions/17", "quote": "Major lexifier: English"}
+    - {"title": "WBUR Here & Now: Nigerian Pidgin Among New Languages Reaching BBC World Service Listeners (2018)", "url": "https://www.wbur.org/hereandnow/2018/03/13/nigerian-pidgin-bbc-world-service", "quote": "Pidgin takes inspiration from Portuguese, the first European language to reach Nigeria's shores, English, the enduring colonial-era language"}
 - card: "nigerian-pidgin"
-  fact: "Learned to talk across ethnic lines"
+  fact: "Learned at home or in the street to talk across ethnic lines"
   sources:
-    - {"title": "Nicholas Faraclas, Nigerian Pidgin, APiCS Online survey 17", "url": "https://apics-online.info/surveys/17", "quote": "it is learned informally as a second language in one or a number of venues for interethnic contact"}
-    - {"title": "Eriata Oribhabor, Lingua Franca: From Nigerian Pidgin to Naija Languej, Jalada (2016)", "url": "https://jaladaafrica.org/2016/05/30/lingua-franca-from-nigerian-pidgin-to-naija-languej-by-eriata-oribhabor/", "quote": "in use in Nigeria by Nigerians irrespective of tribal or religious affiliation"}
+    - {"title": "Nicholas Faraclas, Nigerian Pidgin, APiCS Online, survey 17", "url": "https://apics-online.info/surveys/17", "quote": "For those who do not learn Nigerian Pidgin as one of their first languages, it is learned informally as a second language in one or a number of venues for interethnic contact, such as marketplaces and workplaces"}
+    - {"title": "Eriata Oribhabor, Lingua Franca: From Nigerian Pidgin to Naija Languej, Jalada 04 (2016)", "url": "https://jaladaafrica.org/2016/05/30/lingua-franca-from-nigerian-pidgin-to-naija-languej-by-eriata-oribhabor/", "quote": "Nigerian pidgin is the most popular form of communication in use in Nigeria by Nigerians irrespective of tribal or religious affiliation"}
 - card: "nigerian-pidgin"
   fact: "About 75 million speakers; most widely spoken language in Nigeria"
   sources:
-    - {"title": "Nicholas Faraclas, Nigerian Pidgin, APiCS Online structure dataset 17", "url": "https://apics-online.info/contributions/17", "quote": "With over 75 million speakers, Nigerian Pidgin has become by far the most widely spoken and fastest growing language in Nigeria today."}
-    - {"title": "BBC Media Centre: BBC World Service launches first of 12 new language services (2017), via SWLing Post", "url": "https://swling.com/blog/2017/08/bbc-world-service-launches-first-of-12-new-language-services/", "quote": "Pidgin is spoken by an estimated 75m people in Nigeria alone"}
-    - {"title": "IFRA-Nigeria: NaijaSynCor (archived)", "url": "http://web.archive.org/web/20251212162302/https://ifra-nigeria.org/former-research-programs/naijasyncor", "quote": "Naija is spoken by over 75 million speakers"}
+    - {"title": "Nicholas Faraclas, Nigerian Pidgin, APiCS Online, structure dataset 17", "url": "https://apics-online.info/contributions/17", "quote": "With over 75 million speakers, Nigerian Pidgin has become by far the most widely spoken and fastest growing language in Nigeria today."}
+    - {"title": "BBC Media Centre: BBC World Service launches first of 12 new language services (21 August 2017), as reproduced by SWLing Post", "url": "https://swling.com/blog/2017/08/bbc-world-service-launches-first-of-12-new-language-services/", "quote": "Pidgin is spoken by an estimated 75m people in Nigeria alone"}
+    - {"title": "IFRA-Nigeria: NaijaSynCor (archived)", "url": "http://web.archive.org/web/20251212162302/https://ifra-nigeria.org/former-research-programs/naijasyncor", "quote": "where Naija is spoken by over 75 million speakers"}
 - card: "nigerian-pidgin"
   fact: "No official status; long called Broken English"
   sources:
-    - {"title": "Nicholas Faraclas, Nigerian Pidgin, APiCS Online survey 17", "url": "https://apics-online.info/surveys/17", "quote": "no overt prestige ... no more status in the consciousness of most Nigerians beyond that of \"Broken English\""}
-    - {"title": "Eriata Oribhabor, Lingua Franca: From Nigerian Pidgin to Naija Languej, Jalada (2016)", "url": "https://jaladaafrica.org/2016/05/30/lingua-franca-from-nigerian-pidgin-to-naija-languej-by-eriata-oribhabor/", "quote": "preceded by different nomenclatures such as \"Broken English\" ... still being regarded as an unofficial means of communication"}
+    - {"title": "Nicholas Faraclas, Nigerian Pidgin, APiCS Online, survey 17", "url": "https://apics-online.info/surveys/17", "quote": "no overt prestige, few public advocates, no standardized orthography or grammar, little in the way of written literature, and no more status in the consciousness of most Nigerians beyond that of “Broken English”"}
+    - {"title": "Eriata Oribhabor, Lingua Franca: From Nigerian Pidgin to Naija Languej, Jalada 04 (2016)", "url": "https://jaladaafrica.org/2016/05/30/lingua-franca-from-nigerian-pidgin-to-naija-languej-by-eriata-oribhabor/", "quote": "The nomenclature called Nigerian Pidgin was preceded by different nomenclatures such as “Broken English” ... it is still being regarded as an unofficial means of communication in the country"}
 - card: "nigerian-pidgin"
   fact: "Portuguese arrived in the 15th century, then English"
   sources:
-    - {"title": "Nicholas Faraclas, Nigerian Pidgin, APiCS Online survey 17", "url": "https://apics-online.info/surveys/17", "quote": "from the arrival of the Portuguese in the 15th century ... 15th and 16th-century Portuguese mercenaries serving under African commanders in the armies of Benin City"}
+    - {"title": "Nicholas Faraclas, Nigerian Pidgin, APiCS Online, survey 17", "url": "https://apics-online.info/surveys/17", "quote": "from the arrival of the Portuguese in the 15th century to the declaration of protectorates by the British and the French in the late 19th and early 20th centuries"}
     - {"title": "WBUR Here & Now: Nigerian Pidgin Among New Languages Reaching BBC World Service Listeners (2018)", "url": "https://www.wbur.org/hereandnow/2018/03/13/nigerian-pidgin-bbc-world-service", "quote": "Portuguese, the first European language to reach Nigeria's shores, English, the enduring colonial-era language"}
 - card: "nigerian-pidgin"
   fact: "Freed people returning from the Americas contributed"
   sources:
-    - {"title": "Nicholas Faraclas, Nigerian Pidgin, APiCS Online survey 17", "url": "https://apics-online.info/surveys/17", "quote": "influences from Afro-Caribbean pidgins and creoles spoken by slaves repatriated to the West Coast of Africa from the end of the 18th century onward"}
-    - {"title": "WBUR Here & Now: Nigerian Pidgin Among New Languages Reaching BBC World Service Listeners (2018)", "url": "https://www.wbur.org/hereandnow/2018/03/13/nigerian-pidgin-bbc-world-service", "quote": "Jamaican patois imported by former slaves returning to the continent"}
+    - {"title": "Nicholas Faraclas, Nigerian Pidgin, APiCS Online, survey 17", "url": "https://apics-online.info/surveys/17", "quote": "influences from Afro-Caribbean pidgins and creoles spoken by slaves repatriated to the West Coast of Africa from the end of the 18th century onward"}
+    - {"title": "WBUR Here & Now: Nigerian Pidgin Among New Languages Reaching BBC World Service Listeners (2018)", "url": "https://www.wbur.org/hereandnow/2018/03/13/nigerian-pidgin-bbc-world-service", "quote": "as well as Jamaican patois imported by former slaves returning to the continent"}
 - card: "nigerian-pidgin"
   fact: "Krio of Sierra Leone influenced it in the 19th century"
   sources:
-    - {"title": "Malcolm Awadajin Finney, Krio, APiCS Online survey 15", "url": "https://apics-online.info/surveys/15", "quote": "later exported to other regions in West Africa during the era of colonization in the 19th century, where it influenced varieties such as ... Nigerian Pidgin"}
-    - {"title": "Nicholas Faraclas, Nigerian Pidgin, APiCS Online survey 17", "url": "https://apics-online.info/surveys/17", "quote": "descendants of these repatriated slaves who became the \"shock troops\" ... closely related dialects ... (Sierra Leone Krio"}
+    - {"title": "Malcolm Awadajin Finney, Krio, APiCS Online, survey 15", "url": "https://apics-online.info/surveys/15", "quote": "Creole English was later exported to other regions in West Africa during the era of colonization in the 19th century, where it influenced varieties such as Cameroon Pidgin English (see Schröder ) and Nigerian Pidgin (see Faraclas )."}
+    - {"title": "Nicholas Faraclas, Nigerian Pidgin, APiCS Online, survey 17", "url": "https://apics-online.info/surveys/17", "quote": "influences of the descendants of these repatriated slaves who became the “shock troops” (soldiers, missionaries, colonial officials) who played a crucial role in enabling the British ... to finally colonize West Africa ... from the 19th century onward"}
 - card: "nigerian-pidgin"
   fact: "First language for generations in Warri and Sapele"
   sources:
-    - {"title": "Nicholas Faraclas, Nigerian Pidgin, APiCS Online survey 17", "url": "https://apics-online.info/surveys/17", "quote": "For several generations, Nigerian Pidgin has been the first language ... in and around the south-central Nigerian cities of Warri and Sapele"}
-    - {"title": "The Guardian (Nigeria): Shey Nigerian Pidgin Fit Be Official Language? (archived)", "url": "http://web.archive.org/web/20250722162736/https://guardian.ng/life/shey-nigerian-pidgin-fit-be-official-language/", "quote": "widely spoken in Warri where she was born, and it serves as the first language in some communities in the Niger Delta"}
-    - {"title": "Eriata Oribhabor, Lingua Franca: From Nigerian Pidgin to Naija Languej, Jalada (2016)", "url": "https://jaladaafrica.org/2016/05/30/lingua-franca-from-nigerian-pidgin-to-naija-languej-by-eriata-oribhabor/", "quote": "Its origins lie in the Niger Delta areas (Warri, Sapele, Port-Harcourt etc) where it has effectively creolized"}
+    - {"title": "Nicholas Faraclas, Nigerian Pidgin, APiCS Online, survey 17", "url": "https://apics-online.info/surveys/17", "quote": "For several generations, Nigerian Pidgin has been the first language, or one of the first languages, learned by millions of people in speech communities in and around the south-central Nigerian cities of Warri and Sapele"}
+    - {"title": "Eriata Oribhabor, Lingua Franca: From Nigerian Pidgin to Naija Languej, Jalada 04 (2016)", "url": "https://jaladaafrica.org/2016/05/30/lingua-franca-from-nigerian-pidgin-to-naija-languej-by-eriata-oribhabor/", "quote": "Its origins lie in the Niger Delta areas (Warri, Sapele, Port-Harcourt etc) where it has effectively creolized."}
+    - {"title": "The Guardian (Nigeria): Shey Nigerian Pidgin Fit Be Official Language? (archived)", "url": "http://web.archive.org/web/20250722162736/https://guardian.ng/life/shey-nigerian-pidgin-fit-be-official-language/", "quote": "The language is widely spoken in Warri where she was born, and it serves as the first language in some communities in the Niger Delta."}
 - card: "nigerian-pidgin"
   fact: "Ken Saro-Wiwa's Sozaboy (1985), in pidgin, subtitled A Novel in Rotten English"
   sources:
-    - {"title": "Encyclopaedia Britannica: Ken Saro-Wiwa (archived)", "url": "http://web.archive.org/web/20260917134558/https://www.britannica.com/biography/Ken-Saro-Wiwa", "quote": "Sozaboy (both 1985); the latter, written in pidgin English"}
-    - {"title": "Eriata Oribhabor, Lingua Franca: From Nigerian Pidgin to Naija Languej, Jalada (2016)", "url": "https://jaladaafrica.org/2016/05/30/lingua-franca-from-nigerian-pidgin-to-naija-languej-by-eriata-oribhabor/", "quote": "Ken Saro Wiwa (Sozaboy: A Novel In Rotten English, Saro Press)"}
+    - {"title": "Encyclopaedia Britannica: Ken Saro-Wiwa (archived)", "url": "http://web.archive.org/web/20260917134558/https://www.britannica.com/biography/Ken-Saro-Wiwa", "quote": "His first novels were Songs in a Time of War and Sozaboy (both 1985); the latter, written in pidgin English, satirized corruption in Nigerian society."}
+    - {"title": "Eriata Oribhabor, Lingua Franca: From Nigerian Pidgin to Naija Languej, Jalada 04 (2016)", "url": "https://jaladaafrica.org/2016/05/30/lingua-franca-from-nigerian-pidgin-to-naija-languej-by-eriata-oribhabor/", "quote": "‘‘Rotten English’’ which was made popular by the late Ken Saro Wiwa (Sozaboy: A Novel In Rotten English, Saro Press)"}
 - card: "nigerian-pidgin"
-  fact: "BBC launched Pidgin news service in August 2017 in Lagos, first of its biggest expansion since the 1940s"
+  fact: "BBC launched Pidgin news service in August 2017, first of its biggest expansion since the 1940s"
   sources:
-    - {"title": "BBC Media Centre: BBC World Service launches first of 12 new language services (2017), via SWLing Post", "url": "https://swling.com/blog/2017/08/bbc-world-service-launches-first-of-12-new-language-services/", "quote": "The BBC World Service today launched the first new language service in its biggest expansion since the 1940s. A digital Pidgin service for West Africa is being launched today."}
-    - {"title": "WBUR Here & Now: Nigerian Pidgin Among New Languages Reaching BBC World Service Listeners (2018)", "url": "https://www.wbur.org/hereandnow/2018/03/13/nigerian-pidgin-bbc-world-service", "quote": "presenter Princess Igho Williams gets ready to broadcast in Pidgin in Lagos, on Aug. 18, 2017. In August 2017, the British media giant launched an online portal entirely in Pidgin"}
-    - {"title": "The Guardian (Nigeria): Shey Nigerian Pidgin Fit Be Official Language? (archived)", "url": "http://web.archive.org/web/20250722162736/https://guardian.ng/life/shey-nigerian-pidgin-fit-be-official-language/", "quote": "In 2017, the BBC World Service started Pidgin digital platforms"}
+    - {"title": "BBC Media Centre: BBC World Service launches first of 12 new language services (21 August 2017), as reproduced by SWLing Post", "url": "https://swling.com/blog/2017/08/bbc-world-service-launches-first-of-12-new-language-services/", "quote": "The BBC World Service today launched the first new language service in its biggest expansion since the 1940s. A digital Pidgin service for West Africa is being launched today."}
+    - {"title": "WBUR Here & Now: Nigerian Pidgin Among New Languages Reaching BBC World Service Listeners (2018)", "url": "https://www.wbur.org/hereandnow/2018/03/13/nigerian-pidgin-bbc-world-service", "quote": "presenter Princess Igho Williams gets ready to broadcast in Pidgin in Lagos, on Aug. 18, 2017. In August 2017, the British media giant launched an online portal entirely in Pidgin ... The BBC World Service is undergoing its largest expansion since 1941"}
 - card: "alessandro-de-medici"
   fact: "Florence was nominally a republic; the Medici avoided princely titles"
   sources:
-    - {"title": "John T. Scott, Was the Black Prince Black?, Los Angeles Review of Books", "url": "https://lareviewofbooks.org/article/was-the-black-prince-black-and-other-historical-questions", "quote": "Tired of pretending not to be princes in their pseudo-republic"}
-    - {"title": "Mario de Valdes y Cocom, The Medici, PBS Frontline", "url": "https://www.pbs.org/wgbh/pages/frontline/shows/secret/famous/mediciupdate.html", "quote": "the family had assiduously avoided such honorifics so as not to appear insensitive to the republican aspirations of the population"}
+    - {"title": "John T. Scott, Was the Black Prince Black? And Other Historical Questions, Los Angeles Review of Books (2016)", "url": "https://lareviewofbooks.org/article/was-the-black-prince-black-and-other-historical-questions", "quote": "Tired of pretending not to be princes in their pseudo-republic"}
+    - {"title": "Mario de Valdes y Cocom, The Blurred Racial Lines of Famous Families: The Medici, PBS Frontline", "url": "https://www.pbs.org/wgbh/pages/frontline/shows/secret/famous/mediciupdate.html", "quote": "even though the family had assiduously avoided such honorifics so as not to appear insensitive to the republican aspirations of the population"}
 - card: "alessandro-de-medici"
   fact: "Born around 1511, illegitimate son of a Medici household servant identified as Simonetta da Collevecchio"
   sources:
-    - {"title": "John T. Scott, Was the Black Prince Black?, Los Angeles Review of Books", "url": "https://lareviewofbooks.org/article/was-the-black-prince-black-and-other-historical-questions", "quote": "born about 1511 or 1512, the illegitimate offspring of Lorenzo de' Medici and a servant apparently working in the Medici household, tentatively identified as a certain Simonetta from Collevecchio"}
-    - {"title": "Saint Louis Art Museum: Alessandro de' Medici (127:2024)", "url": "https://www.slam.org/collection/objects/73003/", "quote": "His mother, Simonetta da Collevecchio, was a servant of the Medici family"}
-    - {"title": "EUIdeas: Who was Giulia de Medici?", "url": "https://euideas.eui.eu/who-was-giulia-de-medici-finding-a-black-presence-in-renaissance-florence", "quote": "Alessandro de Medici (1511–1537)"}
+    - {"title": "John T. Scott, Was the Black Prince Black? And Other Historical Questions, Los Angeles Review of Books (2016)", "url": "https://lareviewofbooks.org/article/was-the-black-prince-black-and-other-historical-questions", "quote": "Alessandro de’ Medici was born about 1511 or 1512, the illegitimate offspring of Lorenzo de’ Medici and a servant apparently working in the Medici household, tentatively identified as a certain Simonetta from Collevecchio."}
+    - {"title": "Saint Louis Art Museum: Alessandro de' Medici, Florentine workshop, 1570s (object 127:2024)", "url": "https://www.slam.org/collection/objects/73003/", "quote": "His mother, Simonetta da Collevecchio, was a servant of the Medici family"}
 - card: "alessandro-de-medici"
   fact: "Father officially Lorenzo, Duke of Urbino; many thought Giulio de' Medici (Clement VII)"
   sources:
-    - {"title": "John T. Scott, Was the Black Prince Black?, Los Angeles Review of Books", "url": "https://lareviewofbooks.org/article/was-the-black-prince-black-and-other-historical-questions", "quote": "rumored to be the illegitimate son of Giulio de' Medici ... elected as Pope Clement VII"}
-    - {"title": "Mario de Valdes y Cocom, The Medici, PBS Frontline", "url": "https://www.pbs.org/wgbh/pages/frontline/shows/secret/famous/mediciupdate.html", "quote": "reported to be the son of the late Lorenzo dei Medici, Duke of Urbino, but the affection shown him by Clement VII, gave strength to the general opinion that the Pope was his father"}
+    - {"title": "John T. Scott, Was the Black Prince Black? And Other Historical Questions, Los Angeles Review of Books (2016)", "url": "https://lareviewofbooks.org/article/was-the-black-prince-black-and-other-historical-questions", "quote": "Alessandro was also rumored to be the illegitimate son of Giulio de’ Medici ... be elected as Pope Clement VII"}
+    - {"title": "Mario de Valdes y Cocom, The Blurred Racial Lines of Famous Families: The Medici, PBS Frontline", "url": "https://www.pbs.org/wgbh/pages/frontline/shows/secret/famous/mediciupdate.html", "quote": "[Alessandro] was reported to be the son of the late Lorenzo dei Medici, Duke of Urbino, but the affection shown him by Clement VII, gave strength to the general opinion that the Pope was his father."}
 - card: "alessandro-de-medici"
   fact: "Some contemporaries called his mother a slave; he was nicknamed il Moro"
   sources:
-    - {"title": "Mario de Valdes y Cocom, The Medici, PBS Frontline", "url": "https://www.pbs.org/wgbh/pages/frontline/shows/secret/famous/mediciupdate.html", "quote": "specifically identified as a \"slave\" by the historians Bernardo Segni and Giovanni Cambi, both contemporaries"}
-    - {"title": "John T. Scott, Was the Black Prince Black?, Los Angeles Review of Books", "url": "https://lareviewofbooks.org/article/was-the-black-prince-black-and-other-historical-questions", "quote": "Whisperings that the illegitimate Alessandro was the son of a \"Moorish slave\" ... Alessandro himself, was sometimes referred to as a \"Moor.\""}
-    - {"title": "Saint Louis Art Museum: Alessandro de' Medici (127:2024)", "url": "https://www.slam.org/collection/objects/73003/", "quote": "He was nicknamed \"Il Moro,\" meaning \"The Moor,\""}
+    - {"title": "Mario de Valdes y Cocom, The Blurred Racial Lines of Famous Families: The Medici, PBS Frontline", "url": "https://www.pbs.org/wgbh/pages/frontline/shows/secret/famous/mediciupdate.html", "quote": "Besides her being specifically identified as a \"slave\" by the historians Bernardo Segni and Giovanni Cambi, both contemporaries of the Duke's"}
+    - {"title": "John T. Scott, Was the Black Prince Black? And Other Historical Questions, Los Angeles Review of Books (2016)", "url": "https://lareviewofbooks.org/article/was-the-black-prince-black-and-other-historical-questions", "quote": "Whisperings that the illegitimate Alessandro was the son of a “Moorish slave” ... Alessandro’s purported mother, and indeed Alessandro himself, was sometimes referred to as a “Moor.”"}
+    - {"title": "Saint Louis Art Museum: Alessandro de' Medici, Florentine workshop, 1570s (object 127:2024)", "url": "https://www.slam.org/collection/objects/73003/", "quote": "He was nicknamed “Il Moro,” meaning “The Moor,” a name for those with non-white heritage."}
 - card: "alessandro-de-medici"
   fact: "\"Moor\" was ambiguous; some see his mother as a peasant from Lazio"
   sources:
-    - {"title": "John T. Scott, Was the Black Prince Black?, Los Angeles Review of Books", "url": "https://lareviewofbooks.org/article/was-the-black-prince-black-and-other-historical-questions", "quote": "\"Moor\" might refer to someone we would recognize as \"black,\" but it also would be used for an Arab or Berber ... a person of dark complexion"}
-    - {"title": "Mario de Valdes y Cocom, The Medici, PBS Frontline", "url": "https://www.pbs.org/wgbh/pages/frontline/shows/secret/famous/mediciupdate.html", "quote": "\"the text of a letter that she wrote to her son in 1529 suggests that she was an Italian peasant from Lazio.\""}
-    - {"title": "EUIdeas: Who was Giulia de Medici?", "url": "https://euideas.eui.eu/who-was-giulia-de-medici-finding-a-black-presence-in-renaissance-florence", "quote": "his mother, Simonetta da Collevecchio, who is understood to be freed from enslavement, was, after all, still a peasant"}
+    - {"title": "John T. Scott, Was the Black Prince Black? And Other Historical Questions, Los Angeles Review of Books (2016)", "url": "https://lareviewofbooks.org/article/was-the-black-prince-black-and-other-historical-questions", "quote": "“Moor” might refer to someone we would recognize as “black,” but it also would be used for an Arab or Berber or some other person from North Africa ... Indeed, the term was used for a person of dark complexion"}
+    - {"title": "Mario de Valdes y Cocom, The Blurred Racial Lines of Famous Families: The Medici, PBS Frontline", "url": "https://www.pbs.org/wgbh/pages/frontline/shows/secret/famous/mediciupdate.html", "quote": "\"Some scholars have claimed that Alessandro's mother was a North African slave. This cannot be confirmed, however, and the text of a letter that she wrote to her son in 1529 suggests that she was an Italian peasant from Lazio.\""}
+    - {"title": "EUIdeas (European University Institute): Who was Giulia de Medici?", "url": "https://euideas.eui.eu/who-was-giulia-de-medici-finding-a-black-presence-in-renaissance-florence", "quote": "his mother, Simonetta da Collevecchio, who is understood to be freed from enslavement, was, after all, still a peasant"}
 - card: "alessandro-de-medici"
   fact: "A pope-emperor bargain made him first hereditary Duke of Florence in the early 1530s"
   sources:
-    - {"title": "John T. Scott, Was the Black Prince Black?, Los Angeles Review of Books", "url": "https://lareviewofbooks.org/article/was-the-black-prince-black-and-other-historical-questions", "quote": "a deal between the pope and the emperor the following year made Alessandro the first hereditary duke of Florence"}
-    - {"title": "Mario de Valdes y Cocom, The Medici, PBS Frontline", "url": "https://www.pbs.org/wgbh/pages/frontline/shows/secret/famous/mediciupdate.html", "quote": "the bargain Clement struck with the Emperor Charles V in 1529 to have Alessandro created Duke of Florence"}
-    - {"title": "Saint Louis Art Museum: Alessandro de' Medici (127:2024)", "url": "https://www.slam.org/collection/objects/73003/", "quote": "Alessandro was named the first duke of Florence in 1530"}
+    - {"title": "John T. Scott, Was the Black Prince Black? And Other Historical Questions, Los Angeles Review of Books (2016)", "url": "https://lareviewofbooks.org/article/was-the-black-prince-black-and-other-historical-questions", "quote": "a deal between the pope and the emperor the following year made Alessandro the first hereditary duke of Florence. Alessandro ruled Florence from 1531"}
+    - {"title": "Mario de Valdes y Cocom, The Blurred Racial Lines of Famous Families: The Medici, PBS Frontline", "url": "https://www.pbs.org/wgbh/pages/frontline/shows/secret/famous/mediciupdate.html", "quote": "Hence the bargain Clement struck with the Emperor Charles V in 1529 to have Alessandro created Duke of Florence"}
+    - {"title": "Saint Louis Art Museum: Alessandro de' Medici, Florentine workshop, 1570s (object 127:2024)", "url": "https://www.slam.org/collection/objects/73003/", "quote": "Alessandro was named the first duke of Florence in 1530"}
 - card: "alessandro-de-medici"
   fact: "Murdered by his cousin Lorenzino on 6 January 1537"
   sources:
-    - {"title": "John T. Scott, Was the Black Prince Black?, Los Angeles Review of Books", "url": "https://lareviewofbooks.org/article/was-the-black-prince-black-and-other-historical-questions", "quote": "Alessandro was assassinated on January 6, 1537 ... lured by his perfidious cousin Lorenzino de' Medici"}
-    - {"title": "Saint Louis Art Museum: Alessandro de' Medici (127:2024)", "url": "https://www.slam.org/collection/objects/73003/", "quote": "assassinated by his cousin in 1537"}
+    - {"title": "John T. Scott, Was the Black Prince Black? And Other Historical Questions, Los Angeles Review of Books (2016)", "url": "https://lareviewofbooks.org/article/was-the-black-prince-black-and-other-historical-questions", "quote": "Alessandro was assassinated on January 6, 1537 ... lured by his perfidious cousin Lorenzino de’ Medici"}
+    - {"title": "Saint Louis Art Museum: Alessandro de' Medici, Florentine workshop, 1570s (object 127:2024)", "url": "https://www.slam.org/collection/objects/73003/", "quote": "and then assassinated by his cousin in 1537"}
 - card: "alessandro-de-medici"
   fact: "His daughter Giulia was taken in by Maria Salviati, mother of Cosimo I; Pontormo painted them together"
   sources:
-    - {"title": "Walters Art Museum: Pontormo, Portrait of Maria Salviati de' Medici and Giulia de' Medici (archived)", "url": "http://web.archive.org/web/20260713025250/https://art.thewalters.org/object/37.596/", "quote": "The little girl holding her hand here is surely Giulia, a Medici relative who was left in Maria's care after the murder of the child's father, Duke Alessandro de' Medici ... mother of Cosimo I"}
-    - {"title": "EUIdeas: Who was Giulia de Medici?", "url": "https://euideas.eui.eu/who-was-giulia-de-medici-finding-a-black-presence-in-renaissance-florence", "quote": "The child, Giulia de Medici (circa 1535–1600), was left under the custody of Alessandro's cousin, Maria Salviati, whose own child Cosimo I de Medici"}
+    - {"title": "Walters Art Museum: Pontormo, Portrait of Maria Salviati de' Medici and Giulia de' Medici (archived)", "url": "http://web.archive.org/web/20260713025250/https://art.thewalters.org/object/37.596/", "quote": "the mother of Cosimo I (1519–1574), grand duke of Tuscany. The little girl holding her hand here is surely Giulia, a Medici relative who was left in Maria’s care after the murder of the child’s father, Duke Alessandro de’ Medici"}
+    - {"title": "EUIdeas (European University Institute): Who was Giulia de Medici?", "url": "https://euideas.eui.eu/who-was-giulia-de-medici-finding-a-black-presence-in-renaissance-florence", "quote": "The child, Giulia de Medici (circa 1535–1600), was left under the custody of Alessandro’s cousin, Maria Salviati"}
+- card: "alessandro-de-medici"
+  fact: "The girl was later painted over and reappeared when the panel was cleaned in 1937"
+  sources:
+    - {"title": "Walters Art Museum: Pontormo, Portrait of Maria Salviati de' Medici and Giulia de' Medici (archived)", "url": "http://web.archive.org/web/20260713025250/https://art.thewalters.org/object/37.596/", "quote": "The child was painted over sometime during the 19th century—apparently to sell the painting as the portrait of a childless woman—but was rediscovered in 1937 when the painting was cleaned."}
+    - {"title": "EUIdeas (European University Institute): Who was Giulia de Medici?", "url": "https://euideas.eui.eu/who-was-giulia-de-medici-finding-a-black-presence-in-renaissance-florence", "quote": "Imagine the shock of the restorer when in 1937, in the process of removing the nineteenth-century overpaint, a child became visible in the portrait of Maria Salviati"}

@@ -23,11 +23,12 @@ sources:
   - {title: "Senate of Berlin, answer to written question 18/18585: Das May-Ayim-Ufer als Lernort und Begegnungsstätte (2019)", url: "https://kleineanfragen.de/berlin/18/18585-das-may-ayim-ufer-als-lernort-und-begegnungsstaette.pdf"}
   - {title: "Bezirksamt Friedrichshain-Kreuzberg / FHXB Museum: Gedenken neu denken", url: "https://www.gedenktafeln-in-berlin.de/tafeln_content/tafeln/Gedenken_neu_denken.pdf"}
   - {title: "Bezirksamt Friedrichshain-Kreuzberg: Eine Straße für Audre Lorde", url: "https://www.berlin.de/ba-friedrichshain-kreuzberg/ueber-den-bezirk/ehrungen-und-auszeichnungen/strassenbenennungen/artikel.1386238.php"}
-  - {title: "Open Library: Farbe bekennen / Showing Our Colours (first published 1986)", url: "https://openlibrary.org/works/OL9079311W"}
+  - {title: "Gabrielle Hickmon, What Audre Lorde Learned in Berlin About Afro-German Identity, Literary Hub (10 December 2019)", url: "https://lithub.com/what-audre-lorde-learned-in-berlin-about-afro-german-identity"}
+  - {title: "The Berliner: The American poet who started the Afro-German movement (24 November 2020)", url: "https://www.the-berliner.com/politics/lorde-afro-german/"}
   - {title: "CARMAH, Humboldt-Universität: Decolonising Berlin's Streets", url: "https://www.carmah.berlin/reflections/decolonising-berlins-streets"}
 ---
 May Ayim was a poet, educator and activist, one of the founders of the Afro-German movement. She was born in Hamburg in 1960 to a German mother and a Ghanaian father. In 1984 she moved to West Berlin, where she met the American poet Audre Lorde, who was urging Afro-German women to make themselves seen.
 
-In 1986, with Katharina Oguntoye and Dagmar Schultz, she published Farbe bekennen, "Showing Our Colours": Afro-German women on the trail of their own history, told in their own voices. She co-founded the Initiative of Black People in Germany and helped bring the self-description "Afro-German" into use. Her poems and essays traced a line from German colonialism through Nazism to everyday racism. In 1996, at 36, she took her own life in Berlin.
+In 1986, with Katharina Oguntoye and Dagmar Schultz, she published Farbe bekennen, "Showing Our Colors": Afro-German women on the trail of their own history, told in their own voices. She co-founded the Initiative of Black People in Germany and helped bring the self-description "Afro-German" into use. Her poems and essays traced a line from German colonialism to the racism of her own day. In 1996, at 36, she took her own life in Berlin.
 
 On 27 February 2010 the Kreuzberg district renamed a stretch of the Spree bank after her. Since 1895 it had been the Gröbenufer, after Otto Friedrich von der Groeben, honoured by the Kaiser as a colonial pioneer for building the Brandenburg fort of Gross-Friedrichsburg on the coast of today's Ghana. It was the first Berlin street with a colonial name to be renamed.

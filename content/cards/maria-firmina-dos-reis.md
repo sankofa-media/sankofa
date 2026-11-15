@@ -15,7 +15,7 @@ edition: both
 further:
   - "Maria Firmina dos Reis, Úrsula (São Luís, 1859; facsimile 1975)"
   - "Maria Firmina dos Reis, \"A Escrava\" (Revista Maranhense, 1887)"
-dispute: "Her birth year is uncertain: older biographies give 11 October 1825; a 1847 court record of her birth, found in the archives of Maranhão, gives 11 March 1822, and she was baptised in December 1825. Sources also disagree on whether her mother was Black or white and on who her father was."
+dispute: "Her birth year is uncertain: older biographies give 11 October 1825; an 1847 petition to the church court of Maranhão to fix her birth date gives 11 March 1822, and she was baptised in December 1825. Sources also disagree on whether her mother was Black or white and on who her father was."
 sources:
   - {title: "Ingrid Meurer: Maria Firmina dos Reis, Mulheres na Filosofia (Unicamp, 2024)", url: "https://www.blogs.unicamp.br/mulheresnafilosofia/wp-content/uploads/sites/178/2024/07/Verbete-Maria-Firmina-dos-Reis-PDF.docx.pdf"}
   - {title: "Luciana Martins Diogo and Ana Paula Cavalcanti Simioni: Da sujeição à subjetivação, Opiniães (USP, 2017)", url: "https://revistas.usp.br/opiniaes/article/download/122553/129554/256315"}

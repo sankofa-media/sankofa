@@ -21,6 +21,6 @@ sources:
 ---
 Blombos Cave lies on the southern coast of South Africa, about 300 kilometres east of Cape Town. Its layers, left by early Homo sapiens between about 100,000 and 70,000 years ago, have yielded shell beads, new kinds of stone tools and pieces of ochre, an iron-rich red earth, engraved with cross-hatched lines.
 
-The team led by Christopher Henshilwood sifted through thousands of stone flakes from those layers. The archaeologist Luca Pollarolo picked out one small piece of silcrete, broken off a grindstone on which ochre had been ground, that carried red marks. Microscopes and chemical tests showed that someone had drawn them with an ochre crayon about 73,000 years ago: six lines crossed by three others.
+The team led by Christopher Henshilwood sifted through thousands of stone flakes from those layers. The archaeologist Luca Pollarolo picked out one small piece of silcrete, broken off a grindstone on which ochre had been ground, that carried red marks. Microscopic study showed that someone had drawn them with an ochre crayon about 73,000 years ago: six lines crossed by three others.
 
 The flake, catalogued as L13, was published in Nature in 2018. Its pattern looks like a hashtag, and it is older by at least 30,000 years than any drawing known before. It shows that people in southern Africa were making signs on different surfaces with different techniques tens of thousands of years earlier than the first known drawings elsewhere, and it belongs beside the [[ishango-bone|Ishango bone]] among the first marks of African minds.

@@ -2,7 +2,7 @@
 id: afro-turks
 kind: event
 title: "The Afro-Turks and the Calf Festival"
-wow: "Descendants of Africans enslaved in the Ottoman Empire once greeted spring around İzmir with a Calf Festival; in 2007 their descendants brought it back."
+wow: "Africans enslaved in the Ottoman Empire and their children once greeted spring around İzmir with a Calf Festival; in 2007 their descendants brought it back."
 years: [1924, 2007]
 places:
   - {name: "İzmir", lat: 38.4237, lon: 27.1428}
@@ -13,7 +13,7 @@ books: [heirs]
 edition: both
 further:
   - "Mustafa Olpak, Kenya–Girit–İstanbul: Köle Kıyısından İnsan Biyografileri (2005)"
-  - "Ahmet Polat, Afro Turks (photobook, 2010)"
+  - "Ekrem Eddy Güzeldere, The fate of the Afro-Turks: nothing left but the colour, Qantara.de"
 dispute: "Accounts differ on how the old festival ended: Qantara.de says the Turkish republic banned it in 1924, while a BBC report says the custom died out in the 1960s."
 sources:
   - {title: "Ekrem Eddy Güzeldere, Qantara.de: The fate of the Afro-Turks, nothing left but the colour", url: "https://web.archive.org/web/2016/http://en.qantara.de/Nothing-Left-But-the-Colour/19701c20987i0p9/index.html"}

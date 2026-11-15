@@ -5,7 +5,7 @@ title: Victoria Santa Cruz
 wow: "She revived old Afro-Peruvian dances on the stage, took them to the 1968 Mexico City Olympics and answered a racial taunt with the poem 'Me gritaron negra'."
 years: [1922, 2014]
 places:
-  - {name: "La Victoria, Lima", lat: -12.0656, lon: -77.0306}
+  - {name: "Lima", lat: -12.0464, lon: -77.0428}
   - {name: "Mexico City", lat: 19.4326, lon: -99.1332}
 zoom: 4
 moment: {year: 1968, place: 1}

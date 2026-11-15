@@ -25,7 +25,7 @@ sources:
 ---
 In the 1950s the parts open to Black actresses in American theatre were mostly maids, nannies and mammies. Alice Childress, born in Charleston, South Carolina, in 1916 and raised in Harlem, knew those parts from the inside: she began as an actor and then turned to writing plays herself.
 
-Trouble in Mind opened off-Broadway in 1955. It takes place in the rehearsal room of a Broadway-bound play against lynching, created by white men. Its heroine, the veteran actress Wiletta Mayer, plays along at first. As rehearsals go on, her frustration builds, until she turns on the white director and tells him what the play, for all its good intentions, is making its Black actors be.
+Trouble in Mind opened off-Broadway in 1955. It takes place in the rehearsal room of a Broadway-bound play against lynching, the work of white creators. Its heroine, the veteran actress Wiletta Mayer, plays along at first. As rehearsals go on, her frustration builds, until she turns on the white director and tells him what the play, for all its good intentions, is making its Black actors be.
 
 The reviews were good, and in 1957 producers proposed to move the play to Broadway, but they asked Childress to change the ending, Wiletta's cutting monologue. She refused, and the transfer never happened. Had it gone ahead, she would have been the first Black woman playwright on Broadway; that distinction went to Lorraine Hansberry's [[raisin-in-the-sun|A Raisin in the Sun]] in 1959.
 

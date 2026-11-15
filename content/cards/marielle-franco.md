@@ -28,7 +28,7 @@ sources:
   - {title: "MercoPress: Brazil, Brazão brothers sentenced to 76 years for ordering Marielle Franco killing (2026)", url: "https://en.mercopress.com/2026/02/26/brazil-braz-o-brothers-sentenced-to-76-years-for-ordering-marielle-franco-killing"}
   - {title: "Buenos Aires Times: 76 years in prison for alleged masterminds behind Marielle Franco's murder (2026)", url: "https://www.batimes.com.ar/news/latin-america/76-years-in-prison-for-the-people-who-conceived-marielle-francos-murder.phtml"}
 ---
-Complexo da Maré, a cluster of favelas in northern Rio de Janeiro, is a place where violence and police raids are frequent. Marielle Franco grew up there and raised a daughter on her own. After a friend was killed by a stray bullet in a shootout between police and traffickers, she turned to activism, won a university scholarship and earned a master's degree.
+Complexo da Maré, a cluster of favelas in Rio de Janeiro, is a place where violence and police raids are frequent. Marielle Franco grew up there and raised a daughter on her own. After a friend was killed by a stray bullet in a shootout between police and traffickers, she turned to activism, won a university scholarship and earned a master's degree.
 
 In 2016, in her first election, she won a seat on the city council for the small left-wing Socialism and Liberty Party with the fifth-highest vote. A gay Black woman, she spoke for women, single mothers, LGBT people and favela residents. In February 2018 she became rapporteur of a commission monitoring the federal military intervention in Rio's policing.
 

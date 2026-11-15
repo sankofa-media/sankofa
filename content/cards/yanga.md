@@ -11,8 +11,7 @@ zoom: 4
 moment: {year: 1609}
 era: v2
 books: [archives]
-edition: m
-pair: free-ground
+edition: both
 further:
   - "Jane G. Landers and Barry M. Robinson (eds.), Slaves, Subjects, and Subversives: Blacks in Colonial Latin America (2006)"
   - "Statue of Gaspar Yanga, main square of Yanga, Veracruz"
@@ -24,4 +23,4 @@ sources:
   - {title: "El Universal: Afro-descendants, Mexico's forgotten third root", url: "https://www.eluniversal.com.mx/english/afro-descendants-mexicos-forgotten-third-root/"}
   - {title: "Arturo Jiménez, Yanga, símbolo de negritud y libertad, La Jornada (2 August 2004)", url: "https://estatico.jornada.com.mx/2004/08/02/04080202.pdf"}
 ---
-In the late sixteenth century the port of Veracruz was the gateway through which enslaved Africans reached New Spain, and many were put to work on the sugar estates of the Gulf coast. Around 1570 Gaspar Yanga, an enslaved man said to be of royal African descent, escaped with followers into the mountains near Córdoba and founded a palenque, a settlement of people who had freed themselves. For almost forty years it farmed its own land, and its fighters raided Spanish convoys on the royal road between Veracruz and Mexico City. In 1609 the viceroy, Luis de Velasco, sent troops to wipe it out. Both sides lost heavily, but the maroons could not be beaten. Yanga then offered peace on eleven conditions: freedom for everyone who had lived in the settlement before 1608, a town governed by Yanga and his heirs, and no Spaniards living inside it. In return he promised tribute, armed service to the king and the return of future runaways. In 1618 the Spanish recognised the town as San Lorenzo de los Negros, later also called San Lorenzo de Cerralvo. Since 1932 it has carried its founder's name, Yanga, and his statue stands in its square. Mexico remembers him as "the first liberator of the Americas".
+In the late sixteenth century the port of Veracruz was the gateway through which enslaved Africans reached New Spain, and many were put to work on the sugar estates of the Gulf coast. Around 1570 Gaspar Yanga, an enslaved man said to be of royal African descent, escaped with followers into the mountains near Córdoba and founded a palenque, a settlement of people who had freed themselves. For almost forty years it held out beyond Spanish reach, and its fighters raided Spanish convoys on the royal road between Veracruz and Mexico City. In 1609 the viceroy, Luis de Velasco, sent troops to wipe it out. The maroons could not be beaten. Yanga then offered peace on eleven conditions: freedom for everyone who had lived in the settlement before 1608, a town governed by Yanga and his heirs, and no Spaniards living inside it. In return he promised tribute, armed service to the king and a promise to take in no new runaways. In 1618 the Spanish recognised the town as San Lorenzo de los Negros, later also called San Lorenzo de Cerralvo. Since 1932 it has carried its founder's name, Yanga, and his statue stands in its square. Mexico remembers him as "the first liberator of the Americas".

@@ -1,6 +1,8 @@
 # Expansion batch c13 (2026-11-13): every fact in the bodies and wow lines of the c13 cards,
 # with at least two independent sources and a supporting quote from each.
 # Quotes marked [WebFetch extract] or [paraphrased] came through a summarising fetch; re-open those pages before reuse.
+# Revised 2026-11-14 after the second check (expand-c13-check.yaml): corrected entries carry the checker's verbatim quotes.
+# Revised 2026-11-14 after the second check (expand-c13-check.yaml): corrected entries carry the checker's verbatim quotes.
 # Dropped: liwa-gulf (only one opened independent scholarly source, Sebiane 2017; al-Harthy 2012 not reachable),
 #          afro-abkhazians (only one substantive opened source, abkhazworld.com; Blakely and English not reachable).
 
@@ -21,16 +23,15 @@
     - {title: "Scone Palace: Dido Elizabeth Belle", url: "https://www.scone-palace.co.uk/dido-belle", quote: "On board was a Cuban slave, Maria Belle, whom he fell in love with and brought home to London"}
     - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/", quote: "She was the daughter of a teenage slave and a Royal Navy officer"}
 - card: dido-belle
-  fact: "Lord Mansfield was Lord Chief Justice and lived at Kenwood House in Hampstead, then just outside London"
+  fact: "Lord Mansfield was Lord Chief Justice and lived at Kenwood House on Hampstead Heath in north London"
   sources:
-    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "The Earl, also known as Lord Mansfield, was at the time the Lord Chief Justice of England and Wales"}
-    - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/", quote: "Dido was brought to his stately home, Kenwood , just outside the city of London at the time"}
+    - {title: "English Heritage: Dido Belle (Kenwood)", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history/dido-belle/", quote: "Dido spent much of her life at Kenwood House on Hampstead Heath in north London. She lived there with her great-uncle William Murray, 1st Earl of Mansfield, the Lord Chief Justice"}
+    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "Lord Mansfield, was at the time the Lord Chief Justice of England and Wales"}
 - card: dido-belle
   fact: "From about 1766 she grew up at Kenwood with her cousin Lady Elizabeth Murray"
   sources:
-    - {title: "English Heritage: Dido Belle (Kenwood)", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history/dido-belle/", quote: "from about 1766 they agreed to accommodate their niece, Anne Murray, and two great-nieces, Elizabeth Murray and Dido Elizabeth Belle"}
     - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "John Lindsay in 1766 requested that Belle be entrusted to his uncle, Lord Mansfield, who was already raising his young great-niece, Elizabeth Murray"}
-    - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/", quote: "She was raised by William Murray alongside his other great-niece, Lady Elizabeth Murray"}
+    - {title: "English Heritage: Dido Belle (Kenwood)", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history/dido-belle/", quote: "Elizabeth was also brought up in the care of Lord Mansfield at Kenwood after her mother’s death in 1766"}
 - card: dido-belle
   fact: "She was educated as a gentlewoman"
   sources:
@@ -56,8 +57,8 @@
 - card: dido-belle
   fact: "In 1783 Mansfield presided over the Zong insurance case"
   sources:
-    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "the Zong Massacre Case (1783) where he ruled in favor of insurers who refused to pay a ship captain"}
-    - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/", quote: "Mansfield presided over two key cases in the late 18th century: the Zong massacre and the case of James Somerset"}
+    - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "the Zong Massacre Case (1783) where he ruled in favor of insurers"}
+    - {title: "Understanding Slavery Initiative: The Zong", url: "https://understandingslavery.com/casestudy/the-zong/", quote: "on 22 May 1783, Lord Mansfield and Justices Wills and Buller agreed with the underwriters and decided that there should be a new trial"}
 - card: dido-belle
   fact: "In the late 1770s a painter portrayed the two cousins side by side (date given as c.1776, 1778 or 1779)"
   sources:
@@ -89,7 +90,7 @@
 - card: dido-belle
   fact: "They had three sons"
   sources:
-    - {title: "English Heritage: Dido Belle (Kenwood)", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history/dido-belle/", quote: "Three sons: twin boys Charles and John, baptised in 1795, and William Thomas [paraphrased summary of the page]"}
+    - {title: "English Heritage: Dido Belle (Kenwood)", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history/dido-belle/", quote: "the couple went on to have three sons – twin boys, Charles and John, baptised in 1795, and then another son, William Thomas, baptised in 1800"}
     - {title: "Ayodale Braimah, BlackPast: Dido Elizabeth Belle (1761-1804)", url: "https://www.blackpast.org/global-african-history/belle-dido-elizabeth-1761-1804/", quote: "The couple had three children, twins Charles and John, baptized in 1795, and William Thomas"}
 - card: dido-belle
   fact: "She died in 1804, aged 43"
@@ -98,11 +99,10 @@
     - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/", quote: "Dido died in 1804, aged 43"}
     - {title: "Scone Palace: Dido Elizabeth Belle", url: "https://www.scone-palace.co.uk/dido-belle", quote: "She died aged only 43 in 1804"}
 - card: dido-belle
-  fact: "The portrait was long credited to Johann Zoffany and is now attributed to David Martin"
+  fact: "The portrait is now attributed to the Scottish painter David Martin"
   sources:
-    - {title: "Scone Palace: Dido Elizabeth Belle", url: "https://www.scone-palace.co.uk/dido-belle", quote: "The portrait of Dido and Elizabeth was believed until recently to have been painted by Johann Zoffany. But during a visit by the BBC's Fake or Fortune in 2018 it was discovered to be by the young Scot, David Martin"}
+    - {title: "Scone Palace: Dido Elizabeth Belle", url: "https://www.scone-palace.co.uk/dido-belle", quote: "it was discovered to be by the young Scot, David Martin"}
     - {title: "English Heritage: Dido Belle (Kenwood)", url: "https://www.english-heritage.org.uk/visit/places/kenwood/history/dido-belle/", quote: "The artist, David Martin, seems to portray a moment caught"}
-    - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/", quote: "a portrait painted of her and her cousin, Lady Elizabeth, by the Scottish artist David Martin"}
 - card: dido-belle
   fact: "The original hangs at Scone Palace in Scotland"
   sources:
@@ -114,10 +114,10 @@
     - {title: "Scone Palace: Dido Elizabeth Belle", url: "https://www.scone-palace.co.uk/dido-belle", quote: "the painting is acknowledged to be one of the first ever to represent a black woman as the social equal of a white one"}
     - {title: "History Hit: 10 Facts About Dido Belle", url: "https://www.historyhit.com/facts-about-dido-belle/", quote: "In it, the two women are depicted as equals. This was highly unusual"}
 - card: gustav-badin
-  fact: "He was born probably on Saint Croix in the Caribbean, around 1747-1750"
+  fact: "He was born around 1747, probably on Saint Croix in the Caribbean"
   sources:
-    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Adolph Ludvig Gustaf Fredric Albert Couschi Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "f., antagligen 1747, på ön S:t Croix i Västindien"}
-    - {title: "Världskulturmuseerna: Member of the royal court, 18th century", url: "https://www.varldskulturmuseerna.se/en/projects/afrika-pagar/the-history-of-afro-swedes/member-of-the-royal-court-18th-century/", quote: "Badin, known originally as Couschi, was born around 1750 - probably on the Caribbean island of Saint Croix"}
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "f., antagligen 1747, på ön S:t Croix i Västindien"}
+    - {title: "Nationalmuseum press release: Badin exhibition opening at Nationalmuseum on 19 February (2026)", url: "https://www.mynewsdesk.com/nationalmuseum/pressreleases/badin-exhibition-opening-at-nationalmuseum-on-19-february-3430407", quote: "Badin was probably born enslaved in 1747, seven years after Sergel, in what was then the Danish colony of St Croix"}
 - card: gustav-badin
   fact: "His original name was Couschi"
   sources:
@@ -126,58 +126,58 @@
 - card: gustav-badin
   fact: "Around 1760 he was brought to Sweden and given to Queen Lovisa Ulrika"
   sources:
-    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Adolph Ludvig Gustaf Fredric Albert Couschi Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "kom till Sverige i slutet av 1750- eller början av 1760-talet och skänktes 1761 till Lovisa Ulrika"}
-    - {title: "Världskulturmuseerna: Member of the royal court, 18th century", url: "https://www.varldskulturmuseerna.se/en/projects/afrika-pagar/the-history-of-afro-swedes/member-of-the-royal-court-18th-century/", quote: "joining the Swedish court around 1760 . He worked for the Swedish Queen Lovisa Ulrika"}
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "skänktes 1761 till Lovisa Ulrika"}
+    - {title: "Nationalmuseum press release: Badin exhibition opening at Nationalmuseum on 19 February (2026)", url: "https://www.mynewsdesk.com/nationalmuseum/pressreleases/badin-exhibition-opening-at-nationalmuseum-on-19-february-3430407", quote: "in the summer of 1760, Badin was “donated” as a “gift” to Lovisa Ulrika, Queen of Sweden"}
 - card: gustav-badin
   fact: "The queen first let him grow up in freedom, without the usual upbringing, as an experiment"
   sources:
-    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Adolph Ludvig Gustaf Fredric Albert Couschi Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "Drottningen experimenterade först med att låta den livlige gossen uppväxa i frihet, utan någon egentlig uppfostran"}
-    - {title: "Världskulturmuseerna: Member of the royal court, 18th century", url: "https://www.varldskulturmuseerna.se/en/projects/afrika-pagar/the-history-of-afro-swedes/member-of-the-royal-court-18th-century/", quote: "Gustav had a free upbringing, inspired by the French philosopher Rosseau's book 'Émile'"}
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "Drottningen experimenterade först med att låta den livlige gossen uppväxa i frihet, utan någon egentlig uppfostran"}
+    - {title: "Hofberg et al., Svenskt biografiskt handlexikon (1906): Badin (Couschi)", url: "https://runeberg.org/sbh/badin.html", quote: "beslöt att göra ett experiment i uppfostringsväg med det svarta naturbarnet. Han skulle nämligen helt och hållet lämnas åt sin egen »goda natur»"}
 - card: gustav-badin
   fact: "He was later given religious instruction"
   sources:
-    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Adolph Ludvig Gustaf Fredric Albert Couschi Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "åtnjöt bl. a. kristendomsundervisning"}
-    - {title: "Världskulturmuseerna: Member of the royal court, 18th century", url: "https://www.varldskulturmuseerna.se/en/projects/afrika-pagar/the-history-of-afro-swedes/member-of-the-royal-court-18th-century/", quote: "He was taught the Christian faith"}
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "åtnjöt bl. a. kristendomsundervisning"}
+    - {title: "Miranda Bryant, The Guardian (11 April 2026)", url: "https://www.theguardian.com/world/2026/apr/11/sweden-gustav-badin-exhibition-18th-century-black-diarist", quote: "He had a Christian education and learned to write"}
 - card: gustav-badin
   fact: "In December 1768 he was baptised in the palace chapel with the royal family as godparents and took the names Adolf Ludvig Gustav Fredrik Albert from them"
   sources:
-    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Adolph Ludvig Gustaf Fredric Albert Couschi Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "Han döptes 11 dec. 1768 i slottskapellet, varvid den kungliga familjens medlemmar stodo faddrar och han erhöll sina många dopnamn"}
-    - {title: "Världskulturmuseerna: Member of the royal court, 18th century", url: "https://www.varldskulturmuseerna.se/en/projects/afrika-pagar/the-history-of-afro-swedes/member-of-the-royal-court-18th-century/", quote: "baptized in the Royal Chapel of Drottningholm Palace in December 1768. The royal family attended as Godparents. He got his many first names - Adolf Ludvig Gustav Fredrik Albert - after them"}
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "Han döptes 11 dec. 1768 i slottskapellet, varvid den kungliga familjens medlemmar stodo faddrar och han erhöll sina många dopnamn"}
+    - {title: "Edvard Matz, Populär Historia: Badin – ett experiment i fri uppfostran", url: "https://popularhistoria.se/sveriges-historia/1700-talet/badin-ett-experiment-i-fri-uppfostran", quote: "Den 11 december 1768 döptes Badin, nu omkring 18 år gammal, i slottskapellet. Hela den kungliga familjen så när som på hertig Karl var faddrar"}
 - card: gustav-badin
-  fact: "He served the queen until her death and then Princess Sofia Albertina"
+  fact: "He served the queen until her death in 1782 and then Princess Sofia Albertina"
   sources:
-    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Adolph Ludvig Gustaf Fredric Albert Couschi Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "Så länge Lovisa Ulrika levde, var han i hennes tjänst och övergick sedan i prinsessan Sofia Albertinas"}
-    - {title: "Världskulturmuseerna: Member of the royal court, 18th century", url: "https://www.varldskulturmuseerna.se/en/projects/afrika-pagar/the-history-of-afro-swedes/member-of-the-royal-court-18th-century/", quote: "He worked close to the Queen and, following her death, to Princess Sofia Albertina"}
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "Så länge Lovisa Ulrika levde, var han i hennes tjänst och övergick sedan i prinsessan Sofia Albertinas"}
+    - {title: "Edvard Matz, Populär Historia: Badin – ett experiment i fri uppfostran", url: "https://popularhistoria.se/sveriges-historia/1700-talet/badin-ett-experiment-i-fri-uppfostran", quote: "Efter änkedrottningens död var det prinsessan Sofia Albertina som Badin mest höll sig till"}
 - card: gustav-badin
-  fact: "He danced and acted on the stage"
+  fact: "He danced and acted on stage"
   sources:
-    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Adolph Ludvig Gustaf Fredric Albert Couschi Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "Under åren 1769–70 skall han ha varit anställd som dansör och harlekin vid den franska trupp, som uppträdde i Bollhuset"}
-    - {title: "Världskulturmuseerna: Member of the royal court, 18th century", url: "https://www.varldskulturmuseerna.se/en/projects/afrika-pagar/the-history-of-afro-swedes/member-of-the-royal-court-18th-century/", quote: "He participated in court life, danced ballet, and played theatre"}
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "anställd som dansör och harlekin vid den franska trupp, som uppträdde i Bollhuset"}
+    - {title: "Miranda Bryant, The Guardian (11 April 2026)", url: "https://www.theguardian.com/world/2026/apr/11/sweden-gustav-badin-exhibition-18th-century-black-diarist", quote: "later became involved in dance and theatre"}
 - card: gustav-badin
   fact: "He joined the Freemasons and Par Bricole"
   sources:
-    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Adolph Ludvig Gustaf Fredric Albert Couschi Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "medlem av frimurarorden, timmermansorden, Par Bricole m. fl."}
-    - {title: "Världskulturmuseerna: Member of the royal court, 18th century", url: "https://www.varldskulturmuseerna.se/en/projects/afrika-pagar/the-history-of-afro-swedes/member-of-the-royal-court-18th-century/", quote: "a respected member of the Svea Orden, Timmermansorden (the Carpenter's Order), Par Bricole, and the Order of Freemasons"}
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "medlem av frimurarorden, timmermansorden, Par Bricole m. fl."}
+    - {title: "Tove Karlsson, Populär Historia: Badin – drottningens slavpojke blev ansedd man (2020)", url: "https://popularhistoria.se/sveriges-historia/kungar-drottningar/hovet/badin-drottningens-slavpojke-blev-ansedd-man", quote: "Frimurarorden, Timmermansorden, Par Bricole, Sveaorden, Arla Coldinuorden, och Neptuniorden"}
 - card: gustav-badin
   fact: "He married twice"
   sources:
-    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Adolph Ludvig Gustaf Fredric Albert Couschi Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "Gift 1) med Elisabet Svart; 2) med Magdalena Eleonora Norell"}
-    - {title: "Världskulturmuseerna: Member of the royal court, 18th century", url: "https://www.varldskulturmuseerna.se/en/projects/afrika-pagar/the-history-of-afro-swedes/member-of-the-royal-court-18th-century/", quote: "Gustav Badin married twice"}
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "Gift 1) med Elisabet Svart; 2) med Magdalena Eleonora Norell"}
+    - {title: "Hofberg et al., Svenskt biografiskt handlexikon (1906): Badin (Couschi)", url: "https://runeberg.org/sbh/badin.html", quote: "Gift två gånger, men barnlös"}
 - card: gustav-badin
   fact: "He collected a large private library"
   sources:
-    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Adolph Ludvig Gustaf Fredric Albert Couschi Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "efterlämnade en ganska rik boksamling"}
-    - {title: "Världskulturmuseerna: Member of the royal court, 18th century", url: "https://www.varldskulturmuseerna.se/en/projects/afrika-pagar/the-history-of-afro-swedes/member-of-the-royal-court-18th-century/", quote: "He built up an extensive private library"}
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "efterlämnade en ganska rik boksamling"}
+    - {title: "Miranda Bryant, The Guardian (11 April 2026)", url: "https://www.theguardian.com/world/2026/apr/11/sweden-gustav-badin-exhibition-18th-century-black-diarist", quote: "he left behind diaries, a vast book collection, private letters and an autobiography"}
 - card: gustav-badin
   fact: "A notebook of his is kept at Uppsala University Library"
   sources:
-    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Adolph Ludvig Gustaf Fredric Albert Couschi Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "En anteckningsbok av B. från början av 1800-talet ... förvaras i Uppsala universitetsbibliotek (sign. X. 252 a)"}
-    - {title: "Världskulturmuseerna: Member of the royal court, 18th century", url: "https://www.varldskulturmuseerna.se/en/projects/afrika-pagar/the-history-of-afro-swedes/member-of-the-royal-court-18th-century/", quote: "He also wrote a diary which is today preserved at Uppsala University Library"}
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "En anteckningsbok av B. ... förvaras i Uppsala universitetsbibliotek (sign. X. 252 a)"}
+    - {title: "Edvard Matz, Populär Historia: Badin – ett experiment i fri uppfostran", url: "https://popularhistoria.se/sveriges-historia/1700-talet/badin-ett-experiment-i-fri-uppfostran", quote: "en anteckningsbok av blandat innehåll som i dag finns i Uppsala universitetsbibliotek"}
 - card: gustav-badin
-  fact: "He died in Stockholm in March 1822"
+  fact: "He died in Stockholm in March 1822, a free man"
   sources:
-    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Adolph Ludvig Gustaf Fredric Albert Couschi Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "d 18 mars 1822 i Stockholm"}
-    - {title: "Världskulturmuseerna: Member of the royal court, 18th century", url: "https://www.varldskulturmuseerna.se/en/projects/afrika-pagar/the-history-of-afro-swedes/member-of-the-royal-court-18th-century/", quote: "In March 1822, he was buried in the Katarina Church Cemetery in Stockholm"}
+    - {title: "C. Forsstrand, Svenskt biografiskt lexikon vol. 2 (1920): Badin", url: "https://sok.riksarkivet.se/sbl/artikel/18973", quote: "d 18 mars 1822 i Stockholm"}
+    - {title: "Tove Karlsson, Populär Historia: Badin – drottningens slavpojke blev ansedd man (2020)", url: "https://popularhistoria.se/sveriges-historia/kungar-drottningar/hovet/badin-drottningens-slavpojke-blev-ansedd-man", quote: "I mars 1822 avled Badin efter en tids sjukdom, drygt 70 år gammal"}
 - card: fanny-eaton
   fact: "Fanny Eaton was born in Jamaica in 1835"
   sources:
@@ -233,20 +233,20 @@
     - {title: "Annette Wickham, Royal Academy of Arts: Fanny Eaton at the Royal Academy (2022)", url: "https://www.royalacademy.org.uk/article/fanny-eaton-jamaican-model-royal-academy", quote: "It is possible that Millais chose Eaton who went on to model for his painting Jephthah in 1867"}
     - {title: "Stephanie Roberts, Amgueddfa Cymru - Museum Wales: Fanny Eaton, the Jamaican-born model in Millais' Jephthah (2014)", url: "https://museum.wales/blog/834/Fanny-Eaton-the-Jamaican-born-model-in-Millais-Jephthah-", quote: "one of the models for John Everett Millais' Jephthah (1867)"}
 - card: fanny-eaton
-  fact: "Later she worked as a cook for a family on the Isle of Wight"
+  fact: "In the 1870s the modelling stopped; later she worked as a cook for a family on the Isle of Wight"
   sources:
-    - {title: "Annette Wickham, Royal Academy of Arts: Fanny Eaton at the Royal Academy (2022)", url: "https://www.royalacademy.org.uk/article/fanny-eaton-jamaican-model-royal-academy", quote: "She moved to the Isle of Wight to work for a family before returning to London"}
-    - {title: "Shola von Reynolds, AnOther: Fanny Eaton, the Black Pre-Raphaelite muse that time forgot", url: "https://www.anothermag.com/art-photography/8453/fanny-eaton-the-black-pre-raphaelite-muse-that-time-forgot", quote: "Much later a census finds her working as a domestic cook on the Isle of Wight at the age of 63"}
+    - {title: "Annette Wickham, Royal Academy of Arts: Fanny Eaton at the Royal Academy (2022), via Wayback", url: "https://web.archive.org/web/2024/https://www.royalacademy.org.uk/article/fanny-eaton-jamaican-model-royal-academy", quote: "Eaton herself stopped modelling around this time [the 1870s] and became a seamstress. She moved to the Isle of Wight to work for a family"}
+    - {title: "Shola von Reynolds, AnOther (2016)", url: "https://www.anothermag.com/art-photography/8453/fanny-eaton-the-black-pre-raphaelite-muse-that-time-forgot", quote: "a census finds her working as a domestic cook on the Isle of Wight at the age of 63"}
 - card: fanny-eaton
   fact: "She died in London in 1924"
   sources:
     - {title: "Hammersmith & Fulham Council: Original Black supermodel gets blue plaque in Shepherds Bush (2022)", url: "https://www.lbhf.gov.uk/articles/news/2022/11/original-black-supermodel-gets-blue-plaque-shepherds-bush", quote: "a blue plaque on the building in Bassein Park Road where she died in 1924"}
     - {title: "Jan Marsh: Fanny Eaton latest (2017)", url: "https://janmarsh.blogspot.com/2017/02/fanny-eaton-latest.html", quote: "She died on 4 March 1924, aged 89 ... Margravine Road cemetery in Hammersmith"}
 - card: fanny-eaton
-  fact: "British art of her day focused its ideal of beauty on white faces; she became one of the faces of Pre-Raphaelite art"
+  fact: "The art of her day usually built its ideal of beauty on white faces; she became one of the faces of Pre-Raphaelite art"
   sources:
-    - {title: "Annette Wickham, Royal Academy of Arts: Fanny Eaton at the Royal Academy (2022)", url: "https://www.royalacademy.org.uk/article/fanny-eaton-jamaican-model-royal-academy", quote: "becoming an influential model at a time when images of idealised beauty in British art typically focussed on whiteness"}
-    - {title: "Hammersmith & Fulham Council: Original Black supermodel gets blue plaque in Shepherds Bush (2022)", url: "https://www.lbhf.gov.uk/articles/news/2022/11/original-black-supermodel-gets-blue-plaque-shepherds-bush", quote: "a muse to the Pre-Raphaelite artists and acclaimed as one of the most beautiful people in Victorian Britain"}
+    - {title: "Annette Wickham, Royal Academy of Arts: Fanny Eaton at the Royal Academy (2022), via Wayback", url: "https://web.archive.org/web/2024/https://www.royalacademy.org.uk/article/fanny-eaton-jamaican-model-royal-academy", quote: "images of idealised beauty in British art typically focussed on whiteness"}
+    - {title: "Shola von Reynolds, AnOther (2016)", url: "https://www.anothermag.com/art-photography/8453/fanny-eaton-the-black-pre-raphaelite-muse-that-time-forgot", quote: "an era of famously rigid beauty standards invariably heightened by intense racial prejudices"}
 - card: fanny-eaton
   fact: "Her portraits hang in collections far from London"
   sources:
@@ -327,10 +327,10 @@
     - {title: "Historic Sites and Monuments Board of Canada, plaque 'The Black Loyalists at Birchtown' (1996), text via UELAC", url: "https://uelac.ca/?p=8789", quote: "Birchtown, founded in 1783 was the largest and most influential of these settlements"}
     - {title: "Channon Oyeniran, The Canadian Encyclopedia: Black Loyalists in British North America", url: "https://thecanadianencyclopedia.ca/en/article/black-loyalists-in-british-north-america", quote: "Birchtown shortly became one of the most populated settlements of Black people (free and enslaved) outside of Africa"}
 - card: tiger-bay
-  fact: "From the 19th century Somali, Yemeni, African and Caribbean seafarers settled in Tiger Bay (Butetown), Cardiff"
+  fact: "From the 19th century seafarers from Somalia, Yemen, other parts of Africa and the Caribbean settled in Tiger Bay (Butetown), Cardiff"
   sources:
     - {title: "Black Cultural Archives: Cardiff, Migration & Employment", url: "https://blackculturalarchives.org/the-history-cardiff", quote: "From the 19th century, Somali, Yemeni, African, and Caribbean seafarers settled in Tiger Bay"}
-    - {title: "The National Archives (UK): 1919 race riots, education resource (Wayback snapshot)", url: "https://web.archive.org/web/2023/https://www.nationalarchives.gov.uk/education/resources/1919-race-riots/", quote: "Students could research how men from Yemen and the Caribbean came to settle in port cities like Cardiff and Liverpool"}
+    - {title: "BBC Legacies: Somali community, South East Wales", url: "https://www.bbc.co.uk/legacies/immig_emig/wales/w_se/article_2.shtml", quote: "They were originally drawn to Cardiff as seamen at the end of the 19th century"}
 - card: tiger-bay
   fact: "It became one of the first multicultural communities in Britain"
   sources:
@@ -339,8 +339,8 @@
 - card: tiger-bay
   fact: "After WWI demobilised soldiers returned to a scarcity of jobs; in June 1919 race riots broke out in British port cities including Cardiff, targeting Black and minority residents"
   sources:
-    - {title: "The National Archives (UK): 1919 race riots, education resource (Wayback snapshot)", url: "https://web.archive.org/web/2023/https://www.nationalarchives.gov.uk/education/resources/1919-race-riots/", quote: "At the end of the First World War, the demobilisation of troops caused severe post-war competition for jobs. The perception that foreigners were 'stealing' jobs was one of the triggers for the rioting and attacks on black and minority ethnic communities in British port cities"}
-    - {title: "Black Cultural Archives: Cardiff, Migration & Employment", url: "https://blackculturalarchives.org/the-history-cardiff", quote: "Cardiff witnessed race riots in 1911 and 1919"}
+    - {title: "The National Archives (UK): 1919 race riots (Wayback)", url: "https://web.archive.org/web/2023/https://www.nationalarchives.gov.uk/education/resources/1919-race-riots/", quote: "the demobilisation of troops caused severe post-war competition for jobs ... the rioting and attacks on black and minority ethnic communities in British port cities"}
+    - {title: "Museum Cardiff Youth Forum, Museum Wales: Remembering the 1919 Cardiff Race Riots (2019)", url: "https://museum.wales/blog/2030/Remembering-the-1919-Cardiff-Race-Riots/", quote: "the mass rioting which began on the 11th of June 1919 ... they were jealous of ‘foreign’ men who they felt had taken over their jobs"}
 - card: tiger-bay
   fact: "Betty Campbell (born Rachel Elizabeth Johnson) was born in Butetown in 1934"
   sources:
@@ -380,9 +380,8 @@
 - card: coincoin
   fact: "Natchitoches was a French colonial post founded by Louis Juchereau de St. Denis; around 1742 Coincoin was born into slavery in his household"
   sources:
-    - {title: "National Park Service, Cane River National Heritage Area itinerary: Maison de Marie Thérèse Coincoin Museum (Wayback snapshot)", url: "https://web.archive.org/web/2020/https://www.nps.gov/nr/travel/caneriver/MAI.HTM", quote: "Marie Thérèse Coincoin was born an African slave into the household of Natchitoches' founder, Louis Juchereau de St. Denis, around 1742"}
-    - {title: "Elizabeth Shown Mills, Demythicizing History: Marie Thérèse Coincoin, Louisiana History 53:4 (2012)", url: "https://www.historicpathways.com/download/Demythicizing-LHfall12-ocr.pdf", quote: "Her parents were African-born slaves belonging to the post commandant"}
-    - {title: "Elizabeth Shown Mills, 64 Parishes: Marie Thérèse Coincoin", url: "https://64parishes.org/entry/marie-therese-coincoin", quote: "At her birth in 1742, Louisiana was a French colony [WebFetch extract]"}
+    - {title: "NPS Cane River itinerary: Maison de Marie Thérèse Coincoin (Wayback)", url: "https://web.archive.org/web/2020/https://www.nps.gov/nr/travel/caneriver/MAI.HTM", quote: "born an African slave into the household of Natchitoches’ founder, Louis Juchereau de St. Denis, around 1742"}
+    - {title: "Cane River National Heritage Area: Marie Thérèse Coincoin", url: "https://www.canerivernha.org/node/63", quote: "a slave owned by founder of Natchitoches Louis Juchereau de St. Denis"}
 - card: coincoin
   fact: "She was leased out to Claude Thomas Pierre Metoyer, a French-born merchant"
   sources:
@@ -427,8 +426,8 @@
 - card: coincoin
   fact: "She died around 1816"
   sources:
-    - {title: "Elizabeth Shown Mills, Demythicizing History: Marie Thérèse Coincoin, Louisiana History 53:4 (2012)", url: "https://www.historicpathways.com/download/Demythicizing-LHfall12-ocr.pdf", quote: "Marie Therese Coincoin (1742-1816): Cane River Slave, Slave Owner, and Paradox"}
-    - {title: "Morgan, MacDonald and Handley, Economics and Authenticity, The George Wright Forum 23:1 (2006)", url: "http://www.georgewright.org/231morgan.pdf", quote: "the documents that do exist place Marie-Thérèse on her own plantation in 1816"}
+    - {title: "Elizabeth Shown Mills, Demythicizing History, Louisiana History 53:4 (2012)", url: "https://www.historicpathways.com/download/Demythicizing-LHfall12-ocr.pdf", quote: "Marie Therese Coincoin (1742-1816): Cane River Slave, Slave Owner, and Paradox"}
+    - {title: "The Historic New Orleans Collection: Cane River Collection", url: "https://www.hnoc.org/publications/first-draft/cane-river-collection-glimpse-19th-century-black-creole-life", quote: "descendants of Marie Thérèse Coincoin (1742–1816)"}
 - card: coincoin
   fact: "Her descendants still live along the Cane River"
   sources:
@@ -475,10 +474,10 @@
     - {title: "Daan van Dartel, Wereldmuseum Amsterdam: A headscarf with a secret language", url: "https://amsterdam.wereldmuseum.nl/en/collection-stories/a-headscarf-with-a-secret-language", quote: "Wait for me on the corner is the message of this way of folding, which can be seen by the protruding point. It's a message to a lover"}
     - {title: "NOS: Dit is de betekenis achter de kleurrijke kleding op Keti Koti (1 July 2025)", url: "https://nos.nl/l/2573157", quote: "Je hebt bijvoorbeeld de Let-Them-Talk en Meet-Me-At-The-Corner"}
 - card: kotomisi
-  fact: "When motor cars arrived a fold very wide at the back appeared, named oto baka after the back of a car"
+  fact: "When motor cars arrived they inspired a new fold very wide at the back, the oto baka"
   sources:
-    - {title: "Daan van Dartel, Wereldmuseum Amsterdam: A headscarf with a secret language", url: "https://amsterdam.wereldmuseum.nl/en/collection-stories/a-headscarf-with-a-secret-language", quote: "At the beginning of the twentieth century cars appeared on the scene, an inspiration for the oto-baka style, an angisa that is very wide at the back"}
-    - {title: "NOS: Dit is de betekenis achter de kleurrijke kleding op Keti Koti (1 July 2025)", url: "https://nos.nl/l/2573157", quote: "Zo werd de Oto Baka, gebaseerd op de bumper van een auto, op een gegeven moment de meest gedragen stijl"}
+    - {title: "Daan van Dartel, Wereldmuseum Amsterdam: A headscarf with a secret language", url: "https://amsterdam.wereldmuseum.nl/en/collection-stories/a-headscarf-with-a-secret-language", quote: "cars appeared on the scene, an inspiration for the oto-baka style, an angisa that is very wide at the back"}
+    - {title: "NOS: Dit is de betekenis achter de kleurrijke kleding op Keti Koti (2025)", url: "https://nos.nl/l/2573157", quote: "Zo werd de Oto Baka, gebaseerd op de bumper van een auto"}
 - card: kotomisi
   fact: "The origin of the koto and angisa is disputed"
   sources:
@@ -513,23 +512,22 @@
     - {title: "Joydip Mitra, Newslaundry: Finding George Floyd in Gujarat (2021)", url: "https://www.newslaundry.com/2021/10/30/finding-george-floyd-in-gujarat-a-day-in-the-life-of-the-siddi-community", quote: "said to have migrated to Surat in the 14th century from Sudan [WebFetch extract]"}
     - {title: "Jazmin Graves, Through the Eyes of the Lyre: A Transoceanic Perspective on the Sidi Sufi Devotional Tradition of Western India", url: "https://sai.columbia.edu/sites/default/files/content/Graves%20-%20Through%20the%20Eyes%20of%20the%20Lyre.pdf", quote: "Bava Ghor marched with a retinue of soldiers along the Makran coast and through Sindh until he reached Gujarat"}
 - card: siddi
-  fact: "At his shrines they perform goma, also called dhammal: songs and dances honouring God, the Prophet and the saints, especially the Sidi ancestor-saints"
+  fact: "At his shrines they perform goma, also called dhammal: songs and dances in honour of Bava Gor and the other Sidi saints"
   sources:
-    - {title: "Jazmin Graves, Through the Eyes of the Lyre: A Transoceanic Perspective on the Sidi Sufi Devotional Tradition of Western India", url: "https://sai.columbia.edu/sites/default/files/content/Graves%20-%20Through%20the%20Eyes%20of%20the%20Lyre.pdf", quote: "The jikr feature in song-dance performances called goma or dhammal, which honor God, the Prophet, and Sufi saints, especially the Sidi ancestor-saints"}
+    - {title: "Jazmin Graves, Through the Eyes of the Lyre, Columbia SAI", url: "https://sai.columbia.edu/sites/default/files/content/Graves%20-%20Through%20the%20Eyes%20of%20the%20Lyre.pdf", quote: "song-dance performances called goma or dhammal, which honor God, the Prophet, and Sufi saints, especially the Sidi ancestor-saints"}
     - {title: "Apsara Media (Amy Catlin-Jairazbhoy): Sidi African Indians", url: "https://apsara-media.com/sidimaterials.html", quote: "Sidi men and women perform sacred music and dance during rituals in the shrines to Bava Gor"}
-    - {title: "Joydip Mitra, Newslaundry: Finding George Floyd in Gujarat (2021)", url: "https://www.newslaundry.com/2021/10/30/finding-george-floyd-in-gujarat-a-day-in-the-life-of-the-siddi-community", quote: "Dhamal, a ritual performed at Bawa Ghor's dargah [WebFetch extract]"}
 - card: siddi
   fact: "Their music keeps African styles, rhythms and instruments blended with Indian ones"
   sources:
     - {title: "Apsara Media (Amy Catlin-Jairazbhoy): Sidi African Indians", url: "https://apsara-media.com/sidimaterials.html", quote: "Their native African music styles, melodic and rhythmic structures, lyrics and musical instruments have mingled with local influences"}
     - {title: "Jazmin Graves, Through the Eyes of the Lyre: A Transoceanic Perspective on the Sidi Sufi Devotional Tradition of Western India", url: "https://sai.columbia.edu/sites/default/files/content/Graves%20-%20Through%20the%20Eyes%20of%20the%20Lyre.pdf", quote: "incorporates both South Asian and African influences"}
 - card: siddi
-  fact: "Jambur in the Gir forest is the largest Sidi village"
+  fact: "Jambur is a Sidi village in the Gir forest"
   sources:
-    - {title: "Joydip Mitra, Newslaundry: Finding George Floyd in Gujarat (2021)", url: "https://www.newslaundry.com/2021/10/30/finding-george-floyd-in-gujarat-a-day-in-the-life-of-the-siddi-community", quote: "Jambur is the biggest Siddi village, located deep within the forest [WebFetch extract]"}
-    - {title: "Neeraj Gupta, The Quint: In photos, lost legacy of Gujarat's African-origin Siddi tribe (2017)", url: "https://www.thequint.com/photos/a-community-of-african-origin-is-living-deep-inside-the-gir-forest-in-gujarat", quote: "a village called Jambur, bordering the dense forests of Gir. The village gives you a feel of being in Africa, thanks to the African origin of the villagers"}
+    - {title: "Joydip Mitra, Newslaundry (2021)", url: "https://www.newslaundry.com/2021/10/30/finding-george-floyd-in-gujarat-a-day-in-the-life-of-the-siddi-community", quote: "In Gir region, Jambur is the biggest Siddi village"}
+    - {title: "Neeraj Gupta, The Quint (2017)", url: "https://www.thequint.com/photos/a-community-of-african-origin-is-living-deep-inside-the-gir-forest-in-gujarat", quote: "a village called Jambur, bordering the dense forests of Gir"}
 - card: siddi
-  fact: "Families tell different origin stories; some say their ancestors served the Nawab of Junagadh, who settled them on the land"
+  fact: "Families tell different origin stories; some say the Nawab of Junagadh brought their ancestors to the Gir and gave them land"
   sources:
-    - {title: "Joydip Mitra, Newslaundry: Finding George Floyd in Gujarat (2021)", url: "https://www.newslaundry.com/2021/10/30/finding-george-floyd-in-gujarat-a-day-in-the-life-of-the-siddi-community", quote: "The Nawab rehabilitated them to the wilderness of Gir, allotting them farming lands [WebFetch extract]"}
-    - {title: "Neeraj Gupta, The Quint: In photos, lost legacy of Gujarat's African-origin Siddi tribe (2017)", url: "https://www.thequint.com/photos/a-community-of-african-origin-is-living-deep-inside-the-gir-forest-in-gujarat", quote: "According to a few old women, they are the descendants of Africans that the Nawab of Junagad brought to the Gir forest to hunt lions"}
+    - {title: "Joydip Mitra, Newslaundry (2021)", url: "https://www.newslaundry.com/2021/10/30/finding-george-floyd-in-gujarat-a-day-in-the-life-of-the-siddi-community", quote: "The Nawab rehabilitated them to the wilderness of Gir, allotting them farming lands"}
+    - {title: "Neeraj Gupta, The Quint (2017)", url: "https://www.thequint.com/photos/a-community-of-african-origin-is-living-deep-inside-the-gir-forest-in-gujarat", quote: "they are the descendants of Africans that the Nawab of Junagad brought to the Gir forest to hunt lions"}

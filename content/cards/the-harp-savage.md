@@ -17,14 +17,13 @@ further:
   - "James Weldon Johnson and J. Rosamond Johnson, \"Lift Every Voice and Sing\" (1900)"
 sources:
   - {title: "Smithsonian American Art Museum: Augusta Savage", url: "https://americanart.si.edu/artist/augusta-savage-4269"}
-  - {title: "Encyclopaedia Britannica: Augusta Savage", url: "https://www.britannica.com/biography/Augusta-Savage"}
   - {title: "The Studio Museum in Harlem: Augusta Savage", url: "https://studiomuseum.org/artists/augusta-savage"}
   - {title: "University of Pennsylvania, Weitzman School of Design: Augusta Savage (1892–1962)", url: "https://architecture.sas.upenn.edu/node/947"}
   - {title: "The Phillips Collection, Jacob Lawrence: The Migration Series, chronology", url: "https://lawrencemigration.phillipscollection.org/artist/chronology"}
-  - {title: "Encyclopaedia Britannica: Jacob Lawrence", url: "https://www.britannica.com/biography/Jacob-Lawrence"}
+  - {title: "Encyclopedia.com (Gale reference entries): Jacob Lawrence", url: "https://www.encyclopedia.com/people/literature-and-arts/american-art-biographies/jacob-lawrence"}
 ---
-The Harp was a sculpture by Augusta Savage, made for the New York World's Fair of 1939 in Flushing Meadows, Queens. Savage, born in Green Cove Springs, Florida, in 1892, was by then a central figure in Harlem art. She had opened her own studio school in 1932, became in 1934 the first African American member of the National Association of Women Painters and Sculptors, and in 1937 became the first director of the Harlem Community Art Center. She also fought to get Black artists into the federal art projects of the Depression, and helped young painters such as [[migration-series|Jacob Lawrence]] in.
+The Harp was a sculpture by Augusta Savage, made for the New York World's Fair of 1939 in Flushing Meadows, Queens. Savage, born in Green Cove Springs, Florida, in 1892, was by then a central figure in Harlem art. She had opened her own studio school in 1932, and in 1937 she became the first director of the Harlem Community Art Center. She championed Black artists in the federal art projects of the Depression and helped the young [[migration-series|Jacob Lawrence]] into one.
 
 The fair commissioned a sculpture from her. She took its theme from "Lift Every Voice and Sing", the song by James Weldon Johnson, and named the work after it; the fair called it The Harp. It stood sixteen feet high, in plaster. Twelve Black singers in graduated heights formed the strings, and the hand of God formed the sounding board.
 
-When the fair closed, Savage had no money to cast it in bronze, and the harp of singing people was destroyed. Many of her other plaster works were lost the same way, for want of funds. She died in New York in 1962, remembered above all as a teacher of a generation of Harlem artists.
+When the fair closed, Savage had no money to cast it in bronze, and the harp of singing people was destroyed. Many of her other works were lost the same way, for want of funds. She died in New York in 1962, remembered above all as a teacher of a generation of Harlem artists.

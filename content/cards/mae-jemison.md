@@ -24,6 +24,6 @@ sources:
 ---
 Mae Jemison was born in Decatur, Alabama, in 1956 and grew up on the South Side of Chicago. She finished high school at 16 and went to Stanford, graduating in 1977 in chemical engineering and in African American studies, and dancing all the while. She qualified as a doctor at Cornell in 1981 and then served as a Peace Corps medical officer in West Africa, for Sierra Leone and Liberia, looking after Peace Corps volunteers and US embassy staff.
 
-In 1987 NASA chose her as one of 15 new astronauts from some 2,000 applicants. On 12 September 1992 she flew on the space shuttle Endeavour, on STS-47, a joint mission with Japan, and became the first African American woman in space. As a child she had found her role model in Star Trek's Lieutenant Uhura, so she opened her shifts in orbit with Uhura's line: "Hailing frequencies open."
+In 1987 NASA chose her as one of 15 new astronauts from some 2,000 applicants. On 12 September 1992 she flew on the space shuttle Endeavour, on STS-47, a joint mission with Japan, and became the first African American woman in space. She had long been a devoted Star Trek fan, so she opened her shifts in orbit with the call of the show's Lieutenant Uhura: "Hailing frequencies open."
 
 STS-47 was her only flight; she left NASA in 1993. That same year, invited by LeVar Burton, she appeared on Star Trek: The Next Generation as Lieutenant Palmer. In 2012 her foundation took on the 100 Year Starship project, which aims to make human travel to another star possible within a century.

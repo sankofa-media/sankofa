@@ -24,6 +24,6 @@ sources:
 ---
 Candombe is the drumming of Montevideo's Afro-Uruguayan community, rooted in the southern districts of Sur and Palermo and in neighbouring Cordón. It is played on three drums: the chico, the repique and the piano, the largest and deepest. Their names stand both for three sizes and for the three different parts each plays in the rhythm. Together the drums make a llamada, a drum call that marches through the streets.
 
-Before a call the drummers gather around a fire to heat the skins and bring them into tune. The playing is handed down in families of African descent, and fathers and sons drum in the same lines. Each neighbourhood has its own way of playing: the deep beat of the piano tells the districts apart even as the call brings them together.
+Before a call the drummers gather around a fire to heat the skins and bring them into tune. The playing is handed down in families of African descent, and sons take up the drums after their fathers. Each neighbourhood has its own way of playing: the deep beat of the piano tells the districts apart even as the call brings them together.
 
 In 2006 Uruguay made 3 December the National Day of Candombe, Afro-Uruguayan Culture and Racial Equity, a day, in the words of the law, for valuing the contribution of people of African descent to the building of the nation. The same law describes candombe as the playing of the chico, repique and piano, with its dance and song, "created by Afro-Uruguayans from their ancestral African legacy".

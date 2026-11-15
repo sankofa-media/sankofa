@@ -20,8 +20,10 @@ sources:
   - {title: "The National Archives (UK): 1919 race riots (education resource)", url: "https://www.nationalarchives.gov.uk/education/resources/1919-race-riots/"}
   - {title: "Jessey Clarke and Deleshia Clarke, Dictionary of Welsh Biography: Campbell, Rachel Elizabeth (Betty) (1934-2017)", url: "https://biography.wales/article/s14-CAMP-ELI-1934"}
   - {title: "Angela V. John, Women's History Network: A statue for the past, present and future: making space for Betty Campbell (2021)", url: "https://womenshistorynetwork.org/a-statue-for-the-past-present-and-future-making-space-for-betty-campbell-by-angela-v-john/"}
+  - {title: "BBC Legacies: Somali community, South East Wales", url: "https://www.bbc.co.uk/legacies/immig_emig/wales/w_se/article_2.shtml"}
+  - {title: "Museum Cardiff Youth Forum, Amgueddfa Cymru – Museum Wales: Remembering the 1919 Cardiff Race Riots (2019)", url: "https://museum.wales/blog/2030/Remembering-the-1919-Cardiff-Race-Riots/"}
 ---
-Butetown, the dock district of Cardiff better known as Tiger Bay, was where the sea brought the world to Wales. From the nineteenth century seafarers from Somalia, Yemen, Africa and the Caribbean settled there, and the neighbourhood became one of the first multicultural communities in Britain.
+Butetown, the dock district of Cardiff better known as Tiger Bay, was where the sea brought the world to Wales. From the nineteenth century seafarers from Somalia, Yemen, other parts of Africa and the Caribbean settled there, and the neighbourhood became one of the first multicultural communities in Britain.
 
 The First World War ended in a scramble for work as demobilised soldiers came home. In June 1919 race riots broke out in British port cities, Cardiff among them, and the anger over jobs turned on the Black and minority residents of the docks.
 

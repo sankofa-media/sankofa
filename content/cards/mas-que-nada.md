@@ -2,7 +2,7 @@
 id: mas-que-nada
 kind: work
 title: "Mas que nada"
-wow: "Jorge Ben reshaped a chant from a 1958 Brazilian touring dance show into a samba, and it went round the world twice: with Sérgio Mendes in 1966 and with the Black Eyed Peas in 2006."
+wow: "Jorge Ben reshaped a track from a 1958 album of music for a Brazilian touring dance show into a samba, and it went round the world twice: with Sérgio Mendes in 1966 and with the Black Eyed Peas in 2006."
 years: [1963, 2006]
 places:
   - {name: "Beco das Garrafas, Copacabana, Rio de Janeiro", lat: -22.9663, lon: -43.1838}
@@ -23,11 +23,12 @@ sources:
   - {title: "Matthew Wright, The Arts Desk: CD: Sonzeira, Tam Tam Tam Reimagined (2016)", url: "https://theartsdesk.com/new-music/cd-sonzeira-tam-tam-tam-reimagined"}
   - {title: "Sounds and Colours: José Prates' incredibly rare Brazilian classic Tam…Tam…Tam…! reissued", url: "https://soundsandcolours.com/articles/brazil/jose-prates-incredibly-rare-brazilian-classic-tamtamtam-reissued-26911/"}
   - {title: "Trunk Records: Tam...Tam...Tam...! (reissue notes)", url: "https://trunkrecords.com/releases/tamtamtam_14/tamtamtam.php"}
+  - {title: "Official Charts Company: Mas Que Nada, Sergio Mendes / Black Eyed Peas (2006)", url: "https://www.officialcharts.com/search/singles/mas%20que%20nada/"}
 ---
-"Mas que nada" is a samba by the Rio singer and guitarist Jorge Ben. In the early 1960s, at the start of his career, he sang his own songs in the nightclubs of the Beco das Garrafas, a short alley in Copacabana, among them one called the Bottles.
+"Mas que nada" is a samba by the Rio singer and guitarist Jorge Ben. In the early 1960s, at the start of his career, he sang his own songs in the nightclubs of the Beco das Garrafas, an alley in Copacabana, among them one called the Bottles.
 
-Its chant had a past. In 1958 the arranger José Prates recorded "Nanã Imborô" for Tam... Tam... Tam...!, music for Brasiliana, a touring dance show put together by the producer Miecio Askanasy. Jorge Ben reshaped that track into his song.
+Its tune had a past. In 1958 the music the arranger José Prates had written for Brasiliana, a touring dance show put together by the producer Miecio Askanasy, came out on an album, Tam... Tam... Tam...! One of its tracks, "Nanã Imborô", Jorge Ben reshaped into his song.
 
-In 1963 he sang "Mas que nada" as a guest vocalist on an album by the organist Zé Maria, then put it on his own first LP, Samba Esquema Novo, for Philips. The pianist Sérgio Mendes, who first heard Ben play it in Copacabana, moved to the United States and recorded it in 1966 with his new band, Brasil '66, on their debut for Herb Alpert's A&M label. Played on American radio, the song became a hit.
+He first recorded "Mas que nada" as a guest singer on an album by the organist Zé Maria, and in 1963 he put it on his own first LP, Samba Esquema Novo, for Philips. The pianist Sérgio Mendes moved to the United States and recorded it in 1966 with his new band, Brasil '66, on their debut for Herb Alpert's A&M label, and the song became an American hit and then a global one.
 
-Forty years later Mendes recorded it again, this time with the Black Eyed Peas, and "Mas que nada" travelled the world a second time.
+Forty years later Mendes recorded it again, this time with the Black Eyed Peas, and "Mas que nada" became a hit around the world a second time.

@@ -23,8 +23,8 @@ sources:
 ---
 Djenné, in central Mali, stands on low hillocks that keep it above the river's seasonal floods. It is one of the oldest towns of sub-Saharan Africa: people lived beside it, at Djenné-Djeno, from about 250 BCE. The town grew rich as a market on the trans-Saharan gold trade and became a centre of Muslim learning. Its Great Mosque is the largest mud-brick building in the world.
 
-The building is little more than a century old. In the 19th century, under the Fulani ruler Seku Amadu, the town's old mosque was left in ruins. In 1906–07, with Djenné under French rule, the mosque was rebuilt in the local earthen style. Its upkeep is in the hands of Djenné's masons, the barey, who hand their craft down from generation to generation.
+The building is little more than a century old. In the 19th century, under the Fulani ruler Seku Amadu, the town's old mosque was left in ruins. In 1906–07, with Djenné under French rule, the mosque was rebuilt in the local earthen style. Its upkeep is led by Djenné's own masons.
 
-Mud does not survive the Sahel rains on its own, so every year, before the rainy season, thousands of people replaster the mosque. Women and girls carry water to mix the mud; men and boys climb the walls and spread the new layer. UNESCO listed the old town as World Heritage in 1988 and, because of the armed conflict in central Mali, put it on its danger list in 2016. The replastering has gone on regardless.
+A fresh coat of mud shields the walls from the violent Sahel rains, so every year, before the rainy season, thousands of people replaster the mosque. Women and girls carry water to mix the mud; men and boys climb the walls and spread the new layer. UNESCO listed the old town as World Heritage in 1988 and, because of the armed conflict in central Mali, put it on its danger list in 2016. The replastering has gone on regardless.
 
 It is a monument kept alive not by a museum but by its town.

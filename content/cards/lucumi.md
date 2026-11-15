@@ -22,4 +22,4 @@ Lucumí, also called Anagó, is the ritual language of Cuba's Lucumí religion, 
 
 It came to Cuba with enslaved Africans who spoke Yoruba and carried the religion of their homeland across the ocean. In Cuba their faith absorbed Catholic elements, and their language survived not as everyday speech but as sacred words, the language of the temple rather than of the kitchen.
 
-In 1957 Lydia Cabrera published in Havana her dictionary Anagó: vocabulario lucumí, subtitled "the Yoruba spoken in Cuba". Lucumí shows that a language can outlive its last native speakers, kept alive by the people who pray in it. The same Yoruba tradition is practised in Brazil, where [[candomble|Candomblé]] keeps its own sacred language in the same way.
+In 1957 Lydia Cabrera published in Havana her dictionary Anagó: vocabulario lucumí, subtitled "the Yoruba spoken in Cuba". Lucumí shows that a language can outlive its last native speakers, kept alive by the people who pray in it. The orishas are worshipped in Brazil too, where [[candomble|Candomblé]] likewise keeps a ritual language of its own.

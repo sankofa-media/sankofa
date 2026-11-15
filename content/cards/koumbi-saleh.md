@@ -2,7 +2,7 @@
 id: koumbi-saleh
 kind: place
 title: Koumbi Saleh and the Ghana Empire
-wow: "An 11th-century geographer described Ghana's capital as two towns: twelve mosques for the Muslim merchants, and six miles away the king's court, guarded by dogs in gold collars."
+wow: "An 11th-century geographer described Ghana's capital as two towns: twelve mosques for the Muslim merchants, and six miles away the king's court, guarded by dogs in collars of gold and silver."
 years: [800, 1240]
 places:
   - {name: "Koumbi Saleh, Hodh Ech Chargui, Mauritania", lat: 15.7667, lon: -8.0}
@@ -26,8 +26,8 @@ dispute: "UNESCO's tentative listing treats Koumbi Saleh as the capital of Ghana
 ---
 Ghana, called Wagadu by its own rulers and unrelated to the modern republic, was the first of the great trading empires of the western Sahel. By the end of the 8th century its fame had reached North Africa. Its Soninke kings stood between the Saharan salt traders to the north and the gold of the south, and North Africans called it the land of gold.
 
-In the 11th century the Andalusian geographer al-Bakri described its capital. It was two towns on a plain. One belonged to Muslim merchants and had twelve mosques; the king's town lay six miles away, with houses all the way between. The king held audience in a pavilion, ten horses in gold-embroidered cloth around it, and at its door lay dogs of fine breed in collars of gold and silver.
+In the 11th century the Andalusian geographer al-Bakri described its capital. It was two towns on a plain. One belonged to Muslim merchants and had twelve mosques; the king's town lay six miles away, with houses all the way between. The king held audience in a pavilion, ten horses in gold-embroidered cloth around it, and dogs of fine breed in collars of gold and silver guarded its door.
 
-The ruins of Koumbi Saleh, in southeastern Mauritania, are taken to be that capital, though the identification remains tentative. Archaeologists have dug there in campaigns across the 20th century, uncovering a large stone-built town.
+The ruins of Koumbi Saleh, in southeastern Mauritania, are taken to be that capital, though the identification remains tentative. Archaeologists have dug there in campaigns across the 20th century, uncovering the remains of a large town.
 
 Ghana weakened in the late 11th century in a long struggle with the Almoravids, then fell to the Soso. When [[sunjata|Sunjata]] defeated the Soso, power passed to his new empire of Mali, and the town was abandoned in the 13th century.

@@ -20,7 +20,7 @@ sources:
   - {title: "Composers Datebook (YourClassical): The Brothers Johnson write an anthem", url: "https://www.yourclassical.org/episode/2011/02/12/the-brothers-johnson-write-an-anthem"}
   - {title: "Encyclopedia of Black Studies (SAGE): Lift Every Voice and Sing", url: "https://sk.sagepub.com/ency/edvol/embed/blackstudies/chpt/lift-every-voice-sing"}
 ---
-In 1900 James Weldon Johnson was principal of the Stanton School in Jacksonville, Florida, the segregated school for Black children he had once attended himself. For Abraham Lincoln's birthday, 12 February, he was asked to provide something for a celebration at the school.
+In 1900 James Weldon Johnson was principal of the Stanton School in Jacksonville, Florida, a segregated school for Black children. For Abraham Lincoln's birthday, 12 February, he was asked to provide something for a celebration at the school.
 
 Johnson wrote a poem, and his brother John Rosamond Johnson, a composer and pianist, set it to music. On 12 February 1900 a chorus of 500 schoolchildren sang "Lift Every Voice and Sing" for the first time. Its verses move from rejoicing in liberty to the memory of suffering, "Stony the road we trod", and on to the road still ahead.
 

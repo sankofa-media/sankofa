@@ -22,8 +22,8 @@ sources:
 ---
 Tropiques was a cultural review published in Fort-de-France, Martinique, from 1941 to 1945. When it began, the island was ruled for Vichy France by Admiral Georges Robert, under heavy censorship. Its founders included Aimé Césaire, his wife Suzanne Césaire and René Ménil, young Martinican intellectuals who wanted their island to have its own literature and thought.
 
-The regime favoured folklore and local tradition in its colonies, and on the surface the review gave it just that: local and folk poetry, Caribbean landscapes, essays on ethnography and on European writers. Underneath, by ellipsis and camouflage, the editors wrote about what centuries of colonial rule had done to the island and its people. Suzanne Césaire wrote about surrealism. After André Breton passed through Martinique in 1941, she published an essay on him, "André Breton, poète".
+On the surface the review offered what a censor could pass: local and folk poetry, the Caribbean landscape, essays on an ethnographer and on European writers. Underneath, by ellipsis and camouflage, the editors wrote about what centuries of colonial rule had done to the island and its people. Suzanne Césaire wrote about surrealism. After André Breton passed through Martinique in 1941, she published an essay on him, "André Breton, poète".
 
-The camouflage did not hold for ever. In May 1943 Lieutenant Bayle, the Vichy officer in charge of censorship, banned the review. It came back after Vichy rule on the island fell, and ran until 1945.
+The camouflage did not hold for ever. In May 1943 a Vichy naval officer, Lieutenant Bayle, banned the review. It came back after Vichy rule on the island fell, and ran until 1945.
 
-In the middle of a world war, under a regime that wanted its colonial subjects picturesque, a slim island review worked out how Martinique could speak for itself.
+In the middle of a world war, under a censor's eye, a slim island review worked out how Martinique could speak for itself.

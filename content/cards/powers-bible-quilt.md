@@ -20,11 +20,12 @@ sources:
   - {title: "National Museum of American History: Harriet Powers's Bible Quilt, 1885–1886", url: "https://americanhistory.si.edu/collections/nmah_556462"}
   - {title: "Museum of Fine Arts, Boston: Harriet Powers, Pictorial quilt, 1895–98 (64.619)", url: "https://collections.mfa.org/objects/116166"}
   - {title: "Ashley Callahan, New Georgia Encyclopedia: Harriet Powers (1837–1910)", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/harriet-powers-1837-1910/"}
+  - {title: "National Geographic: This Black artist's vibrant quilts inspired generations of U.S. artisans", url: "https://www.nationalgeographic.com/history/history-magazine/article/black-artist-woman-art-quilts-harriet-powers"}
 ---
 Harriet Powers was born into slavery near Athens, Georgia, on 29 October 1837. After the Civil War she and her husband owned a small farm in Clarke County, and she made pictorial quilts: scenes cut from cotton and appliquéd onto cloth.
 
 Around 1886 she finished a quilt of Bible scenes, from Adam and Eve to the Crucifixion, and showed it at a cotton fair in Athens. Jennie Smith, a local artist, wanted to buy it. Powers would not sell. Some years later, in hard times, she agreed to part with it for five dollars, but first she explained every scene, and Smith wrote her words down.
 
-Her second surviving quilt, made in the 1890s, sets Bible stories beside things Georgians remembered: a "dark day" in 1780, the falling of the stars on 13 November 1833, when people thought the end had come, and a killing frost in February 1895. In 1898 the wives of Atlanta University professors gave it to Charles Cuthbert Hall, a minister who chaired the university's board.
+Her second surviving quilt, made in the 1890s, sets Bible stories beside events people still remembered, among them the night of 13 November 1833, when the stars fell from the sky and people thought the end had come. In 1898 the wives of Atlanta University professors gave it to Charles Cuthbert Hall, a minister who chaired the university's board.
 
 Powers died on 1 January 1910; the date was found only recently on her gravestone in Athens. Her first quilt is now in the Smithsonian's National Museum of American History, the second in the Museum of Fine Arts, Boston; for both, her own explanations of the scenes survive.

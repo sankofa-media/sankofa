@@ -11,11 +11,10 @@ zoom: 4
 moment: {year: 1946}
 era: v6
 books: [archives]
-edition: f
-pair: antilles-republic
+edition: both
 further:
   - "Musée Gerty-Archimède, Basse-Terre (Maison des Illustres)"
-  - "Angela Davis, An Autobiography (1974)"
+  - "Katia Dansoko Touré, Le jour où... Gerty Archimède est venue en aide à Angela Davis, Libération (22 August 2021)"
 sources:
   - {title: "Fondation pour la mémoire de l'esclavage: Gerty Archimède", url: "https://memoire-esclavage.org/biographies/gerty-archimede"}
   - {title: "Cour d'appel de Basse-Terre: La Justice écrit son histoire sur les murs", url: "https://www.cours-appel.justice.fr/basse-terre/ca-de-basse-terre-la-justice-ecrit-son-histoire-sur-les-murs"}

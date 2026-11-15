@@ -2,8 +2,8 @@
 id: tifinagh
 kind: script
 title: Tifinagh
-wow: "An alphabet descended from ancient Libyan inscriptions survived among the Tuareg of the Sahara, and its modern form is now taught in Moroccan schools."
-years: [-200]
+wow: "An alphabet first carved in ancient North African inscriptions survived among the Tuareg of the Sahara, and its modern form is now taught in Moroccan schools."
+years: [1960]
 places:
   - {name: "Tamanrasset, Ahaggar, Algeria", lat: 22.785, lon: 5.5228}
   - {name: "Rabat, Morocco", lat: 34.0209, lon: -6.8416}
@@ -20,9 +20,9 @@ sources:
   - {title: "Richard Ishida, Tamazight (Tifinagh) orthography notes (2026)", url: "https://r12a.github.io/scripts/tfng/zgh"}
   - {title: "Encyclopaedia Britannica: tifinagh", url: "https://www.britannica.com/topic/Tifinagh"}
 ---
-Tifinagh is the alphabet of the Amazigh, or Berber, languages of North Africa and the Sahara. Its oldest relative is the ancient Libyan script, known from inscriptions across North Africa and related to the alphabet of the Phoenicians. Those early inscriptions had no fixed direction: they ran left to right, right to left, and sometimes vertically, from the bottom up.
+Tifinagh is the alphabet of the Amazigh, or Berber, languages of North Africa and the Sahara. Its earliest forms are known from ancient inscriptions across North Africa, and those inscriptions had no fixed direction: they ran left to right, right to left, and sometimes vertically, from the bottom up.
 
-The old script survived above all among the Tuareg, the people of the Sahara's interior, who still use it today. In Tuareg hands it remains largely an alphabet of consonants, with most vowels left for the reader to supply.
+The old script survived above all among the Tuareg, the people of the Sahara's interior, who still use it today.
 
 In the twentieth century the script was reworked for the Berber languages of Morocco and Algeria. This Neo-Tifinagh is a full alphabet in which every vowel is written, and it runs from left to right. Morocco adopted a standard version to unify the spelling of its Berber languages, and Tifinagh is now taught in Moroccan schools. The script also has a block of its own in the Unicode standard, so it can be typed and read on any computer.
 

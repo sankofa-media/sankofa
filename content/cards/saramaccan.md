@@ -22,7 +22,7 @@ sources:
   - {title: "Inter-American Court of Human Rights: Case of the Saramaka People v. Suriname, judgment of 28 November 2007", url: "https://www.corteidh.or.cr/docs/casos/articulos/seriec_172_ing.pdf"}
   - {title: "Northeastern University School of Law, CGLJ: IACtHR confirms indigenous peoples' land and access to information rights (2016)", url: "https://cgljresourcehub.law.northeastern.edu/2016/02/12/iacthr-confirms-indigenous-peoples-land-and-access-to-information-rights/"}
 ---
-Saramaccan is a creole language spoken by the Saramaka and Matawai peoples of Suriname, maroons whose villages line the upper Suriname River. Its foundation is the English of the colonists who held Suriname from 1651 to 1667, but a large share of its words are Portuguese, and much of its grammar is African. It uses pitch as West African languages do: whether a syllable is said high or low can change a word.
+Saramaccan is a creole language spoken in the rainforest interior of Suriname by two maroon peoples, the Saramaka and the Matawai. Its foundation is the English of the colonists who held Suriname from 1651 to 1667, but a large share of its words are Portuguese, and much of its grammar is African. It uses pitch as West African languages do: whether a syllable is said high or low can change a word.
 
 The Portuguese came from Portuguese-speaking Jewish planters who arrived in Suriname in the 1660s with the people they enslaved. The language took shape on such plantations, and people escaped from them into the rainforest of the interior, where they built free communities of their own. There their speech split away from the plantation creole of the coast and went its own way.
 

@@ -2,7 +2,7 @@
 id: felix-eboue
 kind: person
 title: Félix Éboué
-wow: "On 26 August 1940 the Black governor of Chad, born in French Guiana, declared for de Gaulle's Free France, and the rest of French Equatorial Africa followed him."
+wow: "On 26 August 1940 the Black governor of Chad, born in French Guiana, declared for de Gaulle's Free France, and Cameroon, Congo and Ubangi-Shari soon followed him."
 years: [1884, 1944]
 places:
   - {name: "Fort-Lamy (N'Djamena), Chad", lat: 12.1348, lon: 15.0557}
@@ -12,8 +12,7 @@ zoom: 4
 moment: {year: 1940}
 era: v6
 books: [archives]
-edition: m
-pair: antilles-republic
+edition: both
 further:
   - "Musée de l'Ordre de la Libération, Paris: Félix Éboué, Companion of the Liberation"
   - "Félix Éboué's tomb in the crypt of the Panthéon, Paris"

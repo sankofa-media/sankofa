@@ -23,8 +23,8 @@ sources:
 ---
 The Haya live in Buhaya, on the western shore of Lake Victoria in north-western Tanzania. They smelted their own iron until cheap European-made tools ended the craft in the early 20th century. By the 1970s only very old people still remembered how it was done.
 
-The anthropologist Peter Schmidt had come to record Haya oral history. With the metallurgist Donald Avery he asked the elders to smelt again, and in 1976, working from memory, they built a traditional furnace and fired it. Clay pipes carried the blast from the bellows into the furnace, so that the air was heated before it reached the fire, and the smelt produced steel.
+The anthropologist Peter Schmidt had come to record Haya oral history. With the metallurgist Donald Avery he asked the elders to smelt again, and in 1976, working from memory, they built a traditional furnace and fired it. Clay blowpipes carried the blast from the bellows into the furnace; Schmidt and Avery concluded that the air was heated on its way to the fire, and the smelts they watched in 1976 and 1979 produced steel.
 
-From 1977 excavations near Kemondo Bay uncovered furnaces of the same kind dated to the first centuries AD. In Science in 1978 Schmidt and Avery argued that the Haya and their forebears had practised iron smelting based on preheating 1,500 to 2,000 years ago, and had made carbon steel.
+From 1977 excavations near Kemondo Bay uncovered furnaces much like it, dated to the first centuries AD. In Science in 1978 Schmidt and Avery argued that the Haya and their forebears had practised iron smelting based on preheating 1,500 to 2,000 years ago, and had made carbon steel.
 
 The claim went against a history of iron-making long written from European evidence. It put a lake shore in Tanzania into the story of metallurgy, and it came from elders who kept a technology alive in memory after it had stopped being used.

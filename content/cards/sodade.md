@@ -26,10 +26,10 @@ sources:
   - {title: "Encyclopaedia Britannica: Cesaria Evora", url: "https://web.archive.org/web/20230921142323/https://www.britannica.com/biography/Cesaria-Evora"}
   - {title: "Garth Cartwright, The Guardian: Cesária Évora obituary (17 December 2011)", url: "https://www.theguardian.com/music/2011/dec/17/cesaria-evora"}
 ---
-Morna is the slow song of Cape Verde, the archipelago off the coast of West Africa. Its verses turn on love, departure, separation, longing and the sea, and in 2019 UNESCO inscribed it as intangible heritage of humanity. Today it is sung mostly in [[kriolu|Kriolu]], the islands' Creole.
+Morna is the song form of Cape Verde, the archipelago off the coast of West Africa. Its verses turn on love, departure, separation, longing and the sea, and in 2019 UNESCO inscribed it as intangible heritage of humanity. Today it is sung mostly in [[kriolu|Kriolu]], the islands' Creole.
 
-"Sodade" is a morna from the island of São Nicolau. In the 1950s islanders left on labour contracts for the cocoa and coffee plantations of São Tomé, far to the south, and families saw them off at the boats with songs, because no one knew who would come back. Armando Zeferino Soares, a São Nicolau trader, is credited with this one. Who showed you the long road, it asks, the road to São Tomé?
+"Sodade" is a morna from the island of São Nicolau. In the 1950s islanders left on labour contracts for the cocoa plantations of São Tomé, far to the south, and families saw them off at the boats with songs, because no one knew who would come back. Armando Zeferino Soares, a São Nicolau trader, is credited with this one. Who showed you the long road, it asks, the road to São Tomé?
 
-Decades later it found its voice. Cesária Évora, born in the port of Mindelo in 1941, had sung in its bars since her youth; she performed without shoes, and her first album was called The Barefoot Diva. Her 1992 album Miss Perfumado made her famous in Europe, and "Sodade" became its best-known song.
+Decades later it found its voice. Cesária Évora, born in the port of Mindelo in 1941, had sung in its bars since her youth; she performed without shoes, and in 1988 an album called The Barefoot Diva brought her to notice in France. Her 1992 album Miss Perfumado made her famous in Europe, and "Sodade" was the song that broke through.
 
 Évora died in Mindelo in 2011. The song she carried abroad is still a farewell from one island to the plantations of another, a particular Cape Verdean departure that listeners far beyond the islands now know by heart.

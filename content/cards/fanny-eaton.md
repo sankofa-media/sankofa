@@ -28,6 +28,6 @@ In mid-Victorian London the Pre-Raphaelite painters and their circle needed mode
 
 In the late 1850s she began to sit for artists, and the extra money helped the family. Simeon Solomon was among the first to draw her; Rebecca Solomon painted her too, and Dante Gabriel Rossetti admired her beauty. She also posed for the students of the Royal Academy. In 1867 she sat for John Everett Millais's Jephthah.
 
-Then the modelling stopped. She went back to domestic work, later as a cook for a family on the Isle of Wight, and she died in London in 1924.
+In the 1870s the modelling stopped. She later worked as a cook for a family on the Isle of Wight, and she died in London in 1924.
 
-The art of her day built its ideal of beauty almost entirely on white faces. A Jamaican-born mother of ten, working between the kitchen and the studio, became one of the faces of the movement, and her portraits now hang in collections far from London.
+The art of her day usually built its ideal of beauty on white faces. A Jamaican-born mother of ten, working between the kitchen and the studio, became one of the faces of the movement, and her portraits now hang in collections far from London.

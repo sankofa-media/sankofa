@@ -17,11 +17,12 @@ dispute: "Her dates differ between sources: the Encyclopaedia Africana entry giv
 sources:
   - {title: "Belaynesh Michael, Walata Petros, Encyclopaedia Africana Dictionary of African Biography (1977), reprinted in the Dictionary of African Christian Biography", url: "https://dacb.org/stories/ethiopia/walata-petros/"}
   - {title: "Wendy Laura Belcher, Walatta Petros (B), Dictionary of African Christian Biography", url: "https://dacb.org/stories/ethiopia/walatta-petros2/"}
-  - {title: "Library of Congress Country Studies: Ethiopia (1991), Growth of Regional Muslim States", url: "http://countrystudies.us/ethiopia/10.htm"}
+  - {title: "Library of Congress Country Studies: Ethiopia (1991), Contact with European Christendom", url: "https://countrystudies.us/ethiopia/12.htm"}
+  - {title: "Encyclopaedia Britannica: Fasilides", url: "https://www.britannica.com/biography/Fasilides"}
   - {title: "Princeton Alumni Weekly: A saint's life, in old manuscripts (20 March 2013)", url: "https://paw.princeton.edu/article/saints-life-old-manuscripts"}
   - {title: "Wendy Laura Belcher: The Life and Struggles of Our Mother Walatta Petros", url: "https://wendybelcher.com/african-literature/walatta-petros/"}
 ---
-In the early 1600s Ethiopia's emperor Susenyos, won over by Portuguese Jesuits, embraced Roman Catholicism and pressed his court to give up the country's ancient Orthodox Church. Walatta Petros, a noblewoman born in the 1590s, was the wife of one of his leading counsellors.
+In the early 1600s Ethiopia's emperor Susenyos, won over by Jesuit missionaries, embraced Roman Catholicism and pressed his court to give up the country's ancient Orthodox Church. Walatta Petros, a noblewoman born in the 1590s, was the wife of one of his leading counsellors.
 
 As the campaign hardened, she left her husband to become a nun and joined the resistance. Summoned before the court, she held out against every Jesuit attempt to convert her, and the emperor banished her to the western borderlands. Even there people gathered round her, and she founded the first of seven religious communities. At her side throughout was another nun, Ehete Kristos, her constant companion. Allowed back to the Lake Tana region, she founded more communities there.
 

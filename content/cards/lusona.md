@@ -27,4 +27,4 @@ The drawings went with stories. A storyteller traced the figure as he told a fab
 
 When mathematicians looked closely, they found method. The mathematician Paulus Gerdes showed that the drawers valued symmetry and the single line as ideals, and that families of sona follow construction rules. In the simplest family, the plaited mat, the number of separate loops a grid needs equals the greatest common divisor of its rows and columns, the quantity computed by Euclid's algorithm.
 
-In 2023 UNESCO added sona to its list of humanity's intangible heritage. Like the [[lukasa|Luba memory boards]] further north, they turn remembering into a pattern, here one that a single finger can draw.
+In 2023 UNESCO added sona to its list of humanity's intangible heritage. Like the [[lukasa|Luba memory boards]] to the north-east, they turn remembering into a pattern, here one that a single finger can draw.

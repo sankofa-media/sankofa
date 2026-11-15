@@ -12,8 +12,8 @@ era: v2
 books: [archives]
 edition: both
 further:
-  - "Francis Blackman, National Heroine of Barbados: Sarah Ann Gill (Methodist Church of Barbados, 1998)"
-  - "James Street Methodist Church, Bridgetown"
+  - "Museum of Parliament and National Heroes Gallery, Parliament Buildings, Bridgetown"
+  - "Bridwell Library, Southern Methodist University: An Unfinished Bible Translation from Barbados (William J. Shrewsbury)"
 sources:
   - {title: "Parliament of Barbados, Museum of Parliament: National Heroes", url: "https://www.barbadosparliament.com/page_content/show_content/61"}
   - {title: "Caribbean National Weekly: Sarah Ann Gill held firm to her beliefs (2022)", url: "https://www.caribbeannationalweekly.com/posts/sarah-ann-gill-held-firm-to-her-beliefs"}
@@ -22,9 +22,9 @@ sources:
   - {title: "Barbados Advocate: Heroes on Stage, Sarah Ann Gill (UWI Cave Hill), archived", url: "https://web.archive.org/web/20120226125006/http://www.barbadosadvocate.com/newsitem.asp?more=local&NewsID=9818"}
   - {title: "Barbados Advocate: Sarah Ann Gill's Pastor, Hero or Villain? (Alan Cobley lecture), archived", url: "https://web.archive.org/web/20150207093957/http://www.barbadosadvocate.com/newsitem.asp?more=local&NewsID=17571"}
   - {title: "Bridwell Library, Southern Methodist University: An Unfinished Bible Translation from Barbados (William J. Shrewsbury)", url: "https://bridwell.omeka.net/exhibits/show/earlymethodists/authorsreaders/shrewsbury"}
-  - {title: "Phyllis Haigh, Dissenting Missionaries, Public Opinion and the British Press (MPhil thesis, Sheffield Hallam University, 2020)", url: "https://shura.shu.ac.uk/27167/1/Haigh_2020_MPhil_DissentingMissionariesPublic.pdf"}
+  - {title: "Gordon Robert Haigh, Dissenting Missionaries, Public Opinion and the Campaign Against British Colonial Slavery, 1831–1834 (MPhil thesis, Sheffield Hallam University, 2019)", url: "https://shura.shu.ac.uk/27167/1/Haigh_2020_MPhil_DissentingMissionariesPublic.pdf"}
 ---
-In the 1820s Barbados was a sugar colony ruled by its planters, and many of them saw Methodist missionaries, who preached that all people were equal before God, as agents of the British campaign against slavery. Sarah Ann Gill, born in 1795, was a free woman of colour and a devoted Methodist in Bridgetown. At 28 she was already a widow.
+In the 1820s Barbados was a slave colony governed by its planters, and many of them saw Methodist missionaries, who preached that all people were equal before God, as agents of the British campaign against slavery. Sarah Ann Gill, born in 1795, was a free woman of colour and a devoted Methodist on the island. At 28 she was already a widow.
 
 In October 1823 a mob of white slave owners destroyed the Methodist chapel in Bridgetown, and the missionary William Shrewsbury fled with his wife to St Vincent. Gill opened her own house for worship instead. For that she was threatened again and again. She was brought before the authorities for holding illegal meetings, and she answered by going on with the services.
 

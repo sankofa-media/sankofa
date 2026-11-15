@@ -23,8 +23,8 @@ sources:
   - {title: "Documenting the American South (UNC): The History of Mary Prince, full text (1831)", url: "https://docsouth.unc.edu/neh/prince/prince.html"}
   - {title: "Bermuda Biographies: Mary Prince", url: "https://bermudabiographies.bm/Biographies/Biography-MaryPrince.html"}
 ---
-Mary Prince was born into slavery around 1788 at Brackish Pond in Bermuda, a British colony. Britain had outlawed the slave trade in 1807, but in its colonies people stayed property until the Abolition Act of 1833. Prince was sold from owner to owner: to the salt ponds of Turks Island, back to Bermuda, and then to John Wood, a merchant in Antigua. There, in December 1826, she married Daniel James, a free carpenter, in the Moravian church.
+Mary Prince was born into slavery around 1788 at Brackish Pond in Bermuda, a British colony. Britain had outlawed the slave trade in 1807, but in its colonies people stayed property until the Abolition Act of 1833. Prince was sold from owner to owner: to the salt ponds of Turks Island, back to Bermuda, and then to John Wood of Antigua. There, in December 1826, she married Daniel James, a free carpenter, in the Moravian church.
 
 In 1828 the Woods brought her to London. They refused to let her buy her freedom, and she knew that going back to Antigua meant going back to slavery. In November she walked out of their house and found her way to the Anti-Slavery Society. In the household of its secretary, Thomas Pringle, she dictated her life to the writer Susanna Strickland: "I have been a slave — I have felt what a slave feels, and I know what a slave knows."
 
-The History of Mary Prince (1831) was the first life story of a Black woman published in Britain, and it was printed three times that year. Two libel suits followed. She testified in both, and Wood won his. After 1833 she vanishes from the record.
+The History of Mary Prince (1831) was the first account by a woman of her own life in slavery to be published in Britain, and it was printed three times that year. Two libel suits followed. She testified in both, and Wood won his. After 1833 she vanishes from the record.

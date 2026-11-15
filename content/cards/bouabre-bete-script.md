@@ -23,11 +23,11 @@ sources:
   - {title: "Le Temps: L'artiste encyclopédiste Frédéric Bruly Bouabré décède chez lui, à Abidjan, à 91 ans (2014)", url: "https://www.letemps.ch/culture/lartiste-encyclopediste-frederic-bruly-bouabre-decede-chez-lui-abidjan-91-ans"}
   - {title: "Museum of Modern Art, Frédéric Bruly Bouabré: World Unbound, gallery texts (2022)", url: "https://press.moma.org/wp-content/uploads/2022/03/5-Bouabre_SectionTexts.pdf"}
   - {title: "Contemporary And (C&): Frédéric Bruly Bouabré (1923–2014)", url: "https://contemporaryand.com/en/c-and-magazine/texts/frederic-bruly-bouabre-1923-2014"}
-  - {title: "The Digital Orientalist: An Ivorian innovation, the Bété script (2019)", url: "https://digitalorientalist.com/2019/01/08/an-ivorian-innovation-the-bete-script/"}
+  - {title: "Charles Riley, An Ivorian innovation: the Bété script, The Digital Orientalist (2019)", url: "https://digitalorientalist.com/2019/01/08/an-ivorian-innovation-the-bete-script/"}
 ---
 The Bété syllabary is a script of small pictures, each matched to a spoken syllable of Bété, a language of Côte d'Ivoire. Its signs are pictograms, small renderings of things from real life, and its maker meant it to write not only Bété but any language in the world. It counts several hundred signs, and sources do not agree on the exact number.
 
-Frédéric Bruly Bouabré was born into the Bété people in Zéprégühé in 1923. During the Second World War he served as a sailor in the French navy, then stayed in Senegal as a clerk in the colonial administration. On 11 March 1948, on his way to work, he saw seven coloured suns circling in the sky. He took the name Cheik Nadro and set out to record and pass on everything he knew, beginning with a writing system for his own people.
+Frédéric Bruly Bouabré was born into the Bété people in Zéprégühé in 1923. During the Second World War he served as a sailor in the French navy, then stayed in Senegal as a clerk in the colonial administration. On 11 March 1948, on his way to work, he saw seven coloured suns circling in the sky. He took the name Cheik Nadro and set out to record and pass on everything he knew, and in 1956 he began a writing system for his own people.
 
 For the rest of his life he drew. Thousands of small cards in ballpoint pen and coloured pencil, each framed by a handwritten caption, became his Knowledge of the World. After the exhibition Magiciens de la terre in Paris in 1989, museums around the world invited him. He died in Abidjan on 28 January 2014, at about 91.
 

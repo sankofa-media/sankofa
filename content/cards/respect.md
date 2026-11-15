@@ -5,7 +5,7 @@ title: "\"Respect\" (Aretha Franklin, 1967)"
 wow: "Otis Redding wrote it as a man's demand; Aretha Franklin and her sister Carolyn turned it into a woman's, added \"sock it to me\", and took it to number one. Redding told a festival crowd that a girl had taken his song away."
 years: [1965, 1967]
 places:
-  - {name: "Atlantic Recording Studios, New York", lat: 40.7589, lon: -73.9851}
+  - {name: "New York", lat: 40.7128, lon: -74.0060}
   - {name: "Monterey, California", lat: 36.6002, lon: -121.8947}
 zoom: 5
 moment: {year: 1967}

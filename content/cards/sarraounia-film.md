@@ -16,7 +16,7 @@ edition: f
 pair: screen-revolts
 further:
   - "Abdoulaye Mamani, Sarraounia (novel, 1980)"
-  - "Med Hondo, Soleil Ô (1970) and West Indies (1979), restored with Sarraounia by the Harvard Film Archive and Ciné-Archives"
+  - "Med Hondo, West Indies (1979), restored with Sarraounia by the Harvard Film Archive and Ciné-Archives"
 sources:
   - {title: "Harvard Film Archive: Sarraounia (2023 screening notes)", url: "https://harvardfilmarchive.org/calendar/sarraounia-2023-04"}
   - {title: "Aboubakar Sanogo, Harvard Film Archive: Med Hondo and the Indocile Image (2023)", url: "https://harvardfilmarchive.org/programs/med-hondo-and-the-indocile-image"}
@@ -26,9 +26,10 @@ sources:
   - {title: "Jacques Morel, Calendrier des crimes de la France outre-mer: 2 mai 1899, massacre de Birni-N'Konni", url: "https://web.archive.org/web/20120324034536/http://jacques.morel67.pagesperso-orange.fr/ccfo/crimcol/node49.html"}
   - {title: "Eromo Egbejule, The Guardian: France signals willingness to discuss reparations for colonial massacres in Niger (2025)", url: "https://www.theguardian.com/world/2025/jul/15/france-willingness-discuss-reparations-niger"}
   - {title: "AllAfrica: interview with Aï Keïta Yara (2001)", url: "https://allafrica.com/stories/200102260050.html"}
+  - {title: "Internationales Forum des Jungen Films, Berlin 1987: Sarraounia, catalogue sheet with an interview with Med Hondo", url: "https://www.arsenal-berlin.de/assets/Legacy/katalog_blaetter/19_1987_Sarraounia.pdf"}
   - {title: "RFI, La marche du monde: L'Histoire africaine selon Med Hondo (2023)", url: "https://www.rfi.fr/fr/podcasts/la-marche-du-monde/20230702-l-histoire-africaine-selon-med-hondo"}
 ---
-In 1899 a French column under the captains Paul Voulet and Julien Chanoine marched east across what is now Niger towards Lake Chad, killing as it went; at Birni-N'Konni it carried out a massacre. When Paris sent Colonel Jean-François Klobb to take command, Voulet had him shot. On its path stood Sarraounia, queen of the Azna, who chose to fight when most of her neighbours made deals with the invaders.
+In 1899 a French column under the captains Paul Voulet and Julien Chanoine marched east across what is now Niger towards Lake Chad, killing as it went; at Birni-N'Konni it carried out a massacre. When Paris sent Colonel Jean-François Klobb to take command, Voulet had him shot. On its path stood Sarraounia, queen of the Azna, and she fought back.
 
 Sarraounia is the film Med Hondo, a Mauritanian-born director working in France, made from Abdoulaye Mamani's novel about her. Shooting in Niger was blocked. Thomas Sankara, Burkina Faso's revolutionary president and a passionate film lover, stepped in, and the film was shot in Burkina Faso. Aï Keïta played the queen, Jean-Roger Milo and Féodor Atkine the French captains.
 

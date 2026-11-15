@@ -21,6 +21,6 @@ In the forests of what are now Ghana and Côte d'Ivoire, the Akan peoples paid i
 
 For some five centuries, from around 1400, Akan casters made these weights by the lost-wax method: a model was shaped in wax and coated in clay, the wax melted out in the fire, and molten brass poured into the hollow it left. The earliest weights were geometric, close copies of Islamic types. Later ones became miniature sculptures of animals, people and objects, and the great majority of them call to mind Akan proverbs, so a purse of weights carried a store of sayings.
 
-One of them shows a bird with its head turned to look backwards, the Sankofa bird of [[adinkra|adinkra signs]], "go back and get it".
+One of them shows a bird with its head turned to look backwards, the Sankofa bird of [[adinkra|adinkra signs]], whose proverb says it is not forbidden to look back and take it.
 
-The weights fell out of use when the colonial Gold Coast moved to British money around 1900. Huge numbers survive, many of them in museums. Each is a working tool and a small sculpture, and the figurative ones are pocket-sized lessons in Akan thought.
+The weights fell out of use when the colonial Gold Coast moved to British money around 1900. Huge numbers survive, many of them in museums. Each is a working tool and a small sculpture, and the figurative ones are pocket lessons in Akan thought.

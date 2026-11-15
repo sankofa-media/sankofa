@@ -9,8 +9,7 @@ places:
 zoom: 4
 era: v2
 books: [heirs]
-edition: f
-pair: free-ground
+edition: both
 further:
   - "Nicole Willson, Unmaking the Tricolore: Catherine Flon, Material Testimony and Occluded Narratives of Female-Led Resistance, Slavery & Abolition (2019)"
 dispute: "Her existence is contested: the historian Philippe Girard holds that archival sources support few details of the flag story and doubts that she existed; Nicole Willson argues that at least one woman, if not several, must have made the flag."

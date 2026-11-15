@@ -2,7 +2,7 @@
 id: loiza-vejigantes
 kind: object
 title: Loíza and the vejigantes
-wow: "Every July an Afro-Puerto Rican town carries three images of St James to the cork tree where legend says the first was found, while devils in carved coconut masks dance before them."
+wow: "Every July an Afro-Puerto Rican town carries in procession three images of St James, a saint said to have been found among the roots of a cork tree, while devils in carved coconut masks dance before them."
 years: [1830]
 places:
   - {name: "Loíza, Puerto Rico", lat: 18.4313, lon: -65.8802}
@@ -12,7 +12,6 @@ books: [heirs]
 edition: both
 further:
   - "Lowell Fiet, Masked Enigmas: The Vejigante of the Fiestas of Santiago Apóstol in Loíza, Puerto Rico, ReVista (Harvard, 2014)"
-  - "Museo de las Américas, Old San Juan: vejigante masks from Loíza"
 dispute: "The date of the legend is uncertain: Lowell Fiet gives around 1830 for the finding of the image, while a Primera Hora account dates the story to 1600."
 sources:
   - {title: "Lowell Fiet, Masked Enigmas: The Vejigante of the Fiestas of Santiago Apóstol in Loíza, ReVista, Harvard Review of Latin America (2014)", url: "https://revista.drclas.harvard.edu/masked-enigmas"}

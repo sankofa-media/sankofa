@@ -19,7 +19,7 @@ sources:
   - {title: "Inter-American Court of Human Rights: Case of the Saramaka People v. Suriname, Judgment of November 28, 2007", url: "https://www.corteidh.or.cr/docs/casos/articulos/seriec_172_ing.pdf"}
   - {title: "Richard Price, Saramaka People v. Suriname: A Human Rights Victory and Its Messy Aftermath, Cultural Survival Quarterly", url: "https://www.culturalsurvival.org/news/saramaka-people-v-suriname-human-rights-victory-and-its-messy-aftermath"}
 ---
-The Saamaka, long written Saramaka, are one of six Maroon peoples of Suriname. Their ancestors were Africans enslaved on the colony's plantations who escaped into the rainforest of the interior and built free, self-governing communities. In 1762 the Dutch signed a peace treaty with them. Today they live in villages along the Suriname River and govern themselves by their own customary law. They speak [[saramaccan|Saramaccan]].
+The Saamaka, long written Saramaka, are one of six Maroon peoples of Suriname. Their ancestors were Africans enslaved in the Dutch colony who escaped into the forested interior and built free, self-governing communities. In 1762 the Dutch signed a peace treaty with them. Today they live in villages along the Suriname River and govern themselves by their own customary law. They have a language of their own, [[saramaccan|Saramaccan]].
 
 The modern state of Suriname, however, treated their land as its own. In the 1990s it granted logging and mining concessions there. Silvi Adjako, a Saamaka farmer, watched a foreign logging company destroy her gardens; the Saamaka decided to fight in court.
 

@@ -24,6 +24,6 @@ sources:
 ---
 The Sisterhood of Our Lady of the Good Death is a Catholic confraternity of older Black women in Cachoeira, a river town in the Recôncavo of Bahia. It is said to have been founded around 1820 by African women near the Barroquinha church in Salvador and to have moved to Cachoeira in the following years. According to its tradition, the sisters raised money to buy letters of freedom for the enslaved and made sure that every member would have a proper burial.
 
-Most of its papers were lost, damaged or stolen over the years, so much of its history lives in the memory of the sisters themselves. A candidate must be a mature woman, past forty or fifty, and many sisters are also initiates or leaders of Candomblé houses: they belong both to the church and to the terreiro.
+Its early records are scarce: many papers were lost, damaged or stolen, and even the names of the founders are uncertain, so much of its history lives in the memory of the sisters themselves. Only older women are admitted, and many sisters are also initiates or leaders of Candomblé houses: they belong both to the church and to the terreiro.
 
 Every August, around the feast of the Assumption, the sisters fill the streets of Cachoeira with masses and processions for Our Lady of the Good Death, the Virgin at the hour of her death and her rise to heaven. In 2010 the state of Bahia registered the feast as part of its intangible heritage.

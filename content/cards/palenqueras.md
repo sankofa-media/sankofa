@@ -3,12 +3,11 @@ id: palenqueras
 kind: object
 title: "The palenqueras of Cartagena"
 wow: "Women from a village founded by escaped slaves carry fruit through Cartagena in basins on their heads and became the city's emblem; in 2019, when police took one vendor's basin, dozens marched with theirs."
-years: [1990, 2019]
+years: [2019]
 places:
   - {name: "Old City, Cartagena de Indias", lat: 10.4236, lon: -75.5503}
   - {name: "San Basilio de Palenque, Bolívar", lat: 10.1036, lon: -75.2006}
 zoom: 3
-moment: {year: 2019}
 era: v7
 books: [heirs]
 edition: both

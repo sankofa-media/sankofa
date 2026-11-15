@@ -14,7 +14,7 @@ edition: both
 further:
   - "Leonard Howell, The Promised Key"
   - "Jérémie Kroubo Dagnini, Rastafari: Alternative Religion and Resistance against 'White' Christianity, Études caribéennes 12 (2009)"
-dispute: "The date of Pinnacle's end is given differently: The Gleaner and the Jamaica Observer describe the police raid of 1954 that destroyed the village, while Jérémie Kroubo Dagnini, following Hélène Lee, dates its complete destruction to June 1958."
+dispute: "The date of Pinnacle's end is given differently: The Gleaner and the Jamaica Observer describe the police raid of 1954 that destroyed the village, while the historians Jérémie Kroubo Dagnini and Shamara Wyllie Alhassan date its final destruction to 1958 (Dagnini: June 1958)."
 sources:
   - {title: "The Gleaner: Pinnacle, a story of a new religion and persecution (16 December 2022)", url: "https://past.jamaica-gleaner.com/article/news/20221216/pinnacle-story-new-religion-and-persecution"}
   - {title: "Jamaica Observer: Leonard Howell and the struggles that he fought (31 January 2014)", url: "https://www.jamaicaobserver.com/2014/01/31/leonard-howell-and-the-struggles-that-he-fought/"}
@@ -25,4 +25,4 @@ Pinnacle was a hilltop settlement near Sligoville in St Catherine, Jamaica, and 
 
 Out of prison, in 1940, he founded Pinnacle on several hundred acres of hill land. Hundreds of people followed him there and lived by their own work: they farmed, kept livestock, grew ganja, sold their surplus and needed little from the outside world. The authorities saw a threat. Police raided the commune again and again, and Howell was arrested many times.
 
-In 1954 the police came up the hill, arrested residents and burned the houses. Pinnacle never recovered. Its people scattered, many to the slums of West Kingston, and the faith the state had tried to stamp out spread through the island and from there to the world.
+In 1954 the police came up the hill, arrested residents and burned the houses. Pinnacle never recovered, and some historians date its final destruction to 1958. Its people scattered, many to the slums of West Kingston, and the faith the state had tried to stamp out spread through the island and from there to the world.

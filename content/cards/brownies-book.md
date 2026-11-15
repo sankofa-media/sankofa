@@ -21,7 +21,7 @@ sources:
 ---
 The Brownies' Book was a monthly magazine for African American children that ran from January 1920 to December 1921. It was announced in [[the-crisis|The Crisis]], the NAACP magazine, in 1919. W. E. B. Du Bois edited it, with Augustus Granville Dill as business manager and Jessie Redmon Fauset as literary editor.
 
-In The Crisis of October 1919 they set out its aims. The first was "to make colored children realize that being 'colored' is a normal, beautiful thing"; another was to make them familiar with the history and achievements of their people. The magazine celebrated Black identity, urged racial pride and encouraged its readers to aim at leadership.
+In The Crisis of October 1919 they set out its aims. The first was "to make colored children realize that being 'colored' is a normal, beautiful thing"; another was to make them familiar with the history and achievements of their people. The magazine celebrated Black identity and urged racial pride.
 
 Each issue mixed stories, poems, games and African folk tales with work sent in by the children themselves. A teenage Langston Hughes was one of those young contributors: in 1921 the magazine printed his poems, and later his stories.
 

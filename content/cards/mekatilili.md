@@ -2,7 +2,7 @@
 id: mekatilili
 kind: person
 title: Mekatilili wa Menza
-wow: "Exiled to the far west of Kenya for rallying the Giriama against forced labour, she escaped in 1914 and came back to the coast."
+wow: "Exiled to the far west of Kenya for rallying the Giriama against forced labour, she was back on the coast within months and the Giriama rose in 1914."
 years: [1913, 1919]
 places:
   - {name: "Giriama country, Kilifi County, Kenya", lat: -3.6000, lon: 39.7000}
@@ -14,7 +14,7 @@ edition: both
 further:
   - "Cynthia Brantley, The Giriama and Colonial Resistance in Kenya, 1800-1920 (1981)"
   - "The annual Mekatilili festival on the Kenyan coast"
-dispute: "Accounts differ on details: Zarina Patel dates her first arrest to 17 October 1913, the Kenya Yearbook places it after a confrontation in November 1913, and oral histories cited by the University of Sheffield's History Matters blog say she was released from Kisii rather than escaping."
+dispute: "Accounts differ on details: Zarina Patel and the University of Sheffield's History Matters blog date her first arrest to 17 October 1913, the Kenya Yearbook places it after a confrontation in November 1913, and oral histories cited by that blog say she was released from Kisii rather than escaping."
 sources:
   - {title: "Kenya Yearbook Editorial Board: Mekatilili wa Menza, matriarch of Kenya's liberation war (2022)", url: "https://sectors.kenyayearbook.go.ke/?p=2240"}
   - {title: "Zarina Patel, Mekatilili: local heroine, translated by Neil Carrier (Open University, Ferguson Centre for African and Asian Studies)", url: "https://university.open.ac.uk/arts/research/ferguson-centre/node/254"}

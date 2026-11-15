@@ -1,0 +1,817 @@
+# Second, independent check (2026-11-14) of content/ledger/expand-c02.yaml.
+# Every cited URL was reopened by curl; pages blocking bots (Britannica, UNESCO WHC, British Museum, Met,
+# Smarthistory, NPS, NGA, MOFA, Wenger Foundation) were read in archived/cached full-HTML captures; van Beek 1991
+# was read in a JSTOR PDF copy. Every kept quote was found (ignoring spacing, punctuation, OCR noise) in the fetched text.
+# Unreachable and therefore not counted: BAR (Hoffmeier 2025), World History Encyclopedia (Mark 2012), CNRS Images (Rouch).
+# verdict: confirmed | corrected (card wording or sources changed) | refuted | unconfirmed (removed from the card).
+entries:
+  - card: taharqa
+    fact: "From the 8th century BC kings of Kush, a Nubian kingdom in today's Sudan, ruled Egypt as its 25th Dynasty"
+    verdict: confirmed
+    sources:
+      - {title: "British Museum: Sphinx of Taharqo EA1770, curator's comments", url: "https://www.britishmuseum.org/collection/object/Y_EA1770", quote: "In the eighth century BC they turned the tables on Egypt and acquired control of Upper Egypt, extending full control over the whole of the land at the beginning of the reign of Shabaka"}
+      - {title: "Allen and Hill, Egypt in the Third Intermediate Period, Met Heilbrunn Timeline", url: "https://www.metmuseum.org/toah/hd/tipd/hd_tipd.htm", quote: "an independent native dynasty began to rule Nubia, or Kush, from Napata in what is now the Sudan ... This begins Dynasty 25, or the Kushite Period"}
+    note: ""
+  - card: taharqa
+    fact: "Taharqa reigned 690-664 BC (also wow: he ruled all of Egypt)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Taharqa", url: "https://www.britannica.com/biography/Taharqa", quote: "Taharqa (flourished 7th century bce ) was the fourth king (reigned 690–664 bce ) of the 25th dynasty of ancient Egypt"}
+      - {title: "Kendall and Mohamed, Sudan's Holy Mountain: Jebel Barkal and Its Temples (NCAM, 2022)", url: "https://history.org.uk/files/download/28107/1704705744/Sudan_Holy_Mountain_Jebel_Barkal_and_its_Temples.pdf", quote: "Taharqo (690–664 BC), the penultimate and greatest king of the 25th Dynasty"}
+    note: ""
+  - card: taharqa
+    fact: "The Bible names him 'Tirhakah king of Ethiopia' (also wow)"
+    verdict: corrected
+    sources:
+      - {title: "2 Kings 19:9, KJV (Bible Gateway)", url: "https://www.biblegateway.com/passage/?search=2+Kings+19%3A9&version=KJV", quote: "Tirhakah king of Ethiopia, Behold, he is come out to fight against thee"}
+      - {title: "Encyclopaedia Britannica: Taharqa", url: "https://www.britannica.com/biography/Taharqa", quote: "Also called: Tirhaka"}
+    note: "BAR article (library.biblicalarchaeology.org) returned 403 and was not opened; replaced by Britannica's 'Also called: Tirhaka'."
+  - card: taharqa
+    fact: "Jebel Barkal is a flat-topped sandstone hill about 100 m high"
+    verdict: confirmed
+    sources:
+      - {title: "UNESCO WHC: Gebel Barkal and the Sites of the Napatan Region", url: "https://whc.unesco.org/en/list/1073", quote: "buried near the 100m high, flat-topped sandstone rock"}
+      - {title: "Brigitte Gratien (CNRS), Le djebel Barkal et le temple à Amon, Clio", url: "https://www.clio.fr/BIBLIOTHEQUE/pdf/pdf_le_djebel_barkal_et_le_temple_a_amon.pdf", quote: "une table de grès ferrugineux d'une centaine de mètres de hauteur"}
+    note: ""
+  - card: taharqa
+    fact: "The god Amun was believed to dwell in Jebel Barkal"
+    verdict: confirmed
+    sources:
+      - {title: "Kendall and Mohamed, Sudan's Holy Mountain: Jebel Barkal and Its Temples (NCAM, 2022)", url: "https://history.org.uk/files/download/28107/1704705744/Sudan_Holy_Mountain_Jebel_Barkal_and_its_Temples.pdf", quote: "believing the hill to be occupied by a primeval form of their state god Amun of Karnak"}
+      - {title: "Brigitte Gratien (CNRS), Le djebel Barkal et le temple à Amon, Clio", url: "https://www.clio.fr/BIBLIOTHEQUE/pdf/pdf_le_djebel_barkal_et_le_temple_a_amon.pdf", quote: "C'est là que réside Amon de Napata auquel fut dédié un temple dès le début du Nouvel Empire"}
+    note: ""
+  - card: taharqa
+    fact: "Taharqa built a temple to Mut at the foot of Barkal, its rear halls cut into the rock"
+    verdict: confirmed
+    sources:
+      - {title: "Kendall and Mohamed, Sudan's Holy Mountain: Jebel Barkal and Its Temples (NCAM, 2022)", url: "https://history.org.uk/files/download/28107/1704705744/Sudan_Holy_Mountain_Jebel_Barkal_and_its_Temples.pdf", quote: "B 300: Temple of the goddess Mut (“Mother”), also built by Taharqo ... which was cut into the cliff just to the left (west) of the pinnacle base"}
+      - {title: "Brigitte Gratien (CNRS), Le djebel Barkal et le temple à Amon, Clio", url: "https://www.clio.fr/BIBLIOTHEQUE/pdf/pdf_le_djebel_barkal_et_le_temple_a_amon.pdf", quote: "dédié à la déesse Mout, par Taharqa ... L'arrière du temple, à partir de la deuxième salle hypostyle, est creusé dans le djebel"}
+    note: ""
+  - card: taharqa
+    fact: "An inscription of Taharqa was carved on the summit of the Barkal pinnacle; scaffolding holes survive; King Nastasen restored it (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Kendall and Mohamed, Sudan's Holy Mountain: Jebel Barkal and Its Temples (NCAM, 2022)", url: "https://history.org.uk/files/download/28107/1704705744/Sudan_Holy_Mountain_Jebel_Barkal_and_its_Temples.pdf", quote: "a monument, which Taharqo placed on the virtually inaccessible summit of the Jebel Barkal pinnacle ... Holes cut in the opposing rock walls ... The panel inscription names two kings, Taharqo and Nastasen (late fourth century BC), indicating that the original monument was rebuilt and restored by the later king"}
+      - {title: "Brigitte Gratien (CNRS), Le djebel Barkal et le temple à Amon, Clio", url: "https://www.clio.fr/BIBLIOTHEQUE/pdf/pdf_le_djebel_barkal_et_le_temple_a_amon.pdf", quote: "une inscription de Taharqa (-690/-664) y fut d'ailleurs découverte ainsi que les trous d'un échafaudage, et une autre inscription du roi Nastasen qui le restaure à la fin du IVe siècle av. J.-C."}
+    note: ""
+  - card: taharqa
+    fact: "In 671 BC Esarhaddon of Assyria took Memphis and Taharqa retreated south"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Esarhaddon", url: "https://www.britannica.com/biography/Esarhaddon", quote: "until 671, when he seized Memphis and defeated the Egyptian king Taharqa , who fled south"}
+      - {title: "Allen and Hill, Egypt in the Third Intermediate Period, Met Heilbrunn Timeline", url: "https://www.metmuseum.org/toah/hd/tipd/hd_tipd.htm", quote: "were broken by an Assyrian invasion in ca. 671 B.C. The current pharaoh, Taharqo, retreated south"}
+    note: ""
+  - card: taharqa
+    fact: "Taharqa was buried in a large pyramid at nearby Nuri"
+    verdict: corrected
+    sources:
+      - {title: "Encyclopaedia Britannica: Taharqa", url: "https://www.britannica.com/biography/Taharqa", quote: "he fled south to Nubia , where he died and was buried in a large pyramid at Nuri"}
+      - {title: "Kendall and Mohamed, Sudan's Holy Mountain: Jebel Barkal and Its Temples (NCAM, 2022)", url: "https://history.org.uk/files/download/28107/1704705744/Sudan_Holy_Mountain_Jebel_Barkal_and_its_Temples.pdf", quote: "Nuri, 10 km upstream and on the opposite bank, is the site of the pyramid of Taharqo (690–664 BC)"}
+    note: "Body said Nuri lies 'across the Nile from Barkal'; only Kendall says 'opposite bank'. Reworded to 'nearby Nuri' (Clio: 'dans le voisinage')."
+  - card: taharqa
+    fact: "Later kings of Kush were buried around him at Nuri"
+    verdict: confirmed
+    sources:
+      - {title: "Kendall and Mohamed, Sudan's Holy Mountain: Jebel Barkal and Its Temples (NCAM, 2022)", url: "https://history.org.uk/files/download/28107/1704705744/Sudan_Holy_Mountain_Jebel_Barkal_and_its_Temples.pdf", quote: "The cemetery was founded by Taharqo about 664 BC and was used for the next four centuries by 19 of his successors and some 53 queens"}
+      - {title: "Brigitte Gratien (CNRS), Le djebel Barkal et le temple à Amon, Clio", url: "https://www.clio.fr/BIBLIOTHEQUE/pdf/pdf_le_djebel_barkal_et_le_temple_a_amon.pdf", quote: "il se fit enterrer dans le voisinage, suivi en cela par d'autres rois et leurs familles, d'où la très belle série de pyramides"}
+    note: ""
+  - card: taharqa
+    fact: "Statues of Taharqa were found in a pit (cache) beside Barkal's great temple B 500"
+    verdict: confirmed
+    sources:
+      - {title: "Kendall and Mohamed, Sudan's Holy Mountain: Jebel Barkal and Its Temples (NCAM, 2022)", url: "https://history.org.uk/files/download/28107/1704705744/Sudan_Holy_Mountain_Jebel_Barkal_and_its_Temples.pdf", quote: "Reisner, by pure chance, discovered a hoard of ten granite royal statues, representing ... Taharqo and four of his five successors ... The larger statue pit at Jebel Barkal, 20 m northeast of the NE end of the first pylon of B 500"}
+      - {title: "Brigitte Gratien (CNRS), Le djebel Barkal et le temple à Amon, Clio", url: "https://www.clio.fr/BIBLIOTHEQUE/pdf/pdf_le_djebel_barkal_et_le_temple_a_amon.pdf", quote: "D'une cachette au nord du premier pylône du temple B 500, on exhuma des statues ... des rois Taharqa, Senkamanisken, Anlamani, Aspelta"}
+    note: ""
+  - card: taharqa
+    fact: "Kush outlived the loss of Egypt by centuries"
+    verdict: confirmed
+    sources:
+      - {title: "Kendall and Mohamed, Sudan's Holy Mountain: Jebel Barkal and Its Temples (NCAM, 2022)", url: "https://history.org.uk/files/download/28107/1704705744/Sudan_Holy_Mountain_Jebel_Barkal_and_its_Temples.pdf", quote: "their heirs continued to preside over a southern kingdom that would last for another millennium"}
+      - {title: "UNESCO WHC: Gebel Barkal and the Sites of the Napatan Region", url: "https://whc.unesco.org/en/list/1073", quote: "testimony to the Napatan (900 to 270 BC) and Meroitic (270 BC to 350 AD) cultures, of the second kingdom of Kush"}
+    note: ""
+  - card: taharqa
+    fact: "Jebel Barkal and Nuri are a UNESCO World Heritage Site since 2003"
+    verdict: confirmed
+    sources:
+      - {title: "UNESCO WHC: Gebel Barkal and the Sites of the Napatan Region", url: "https://whc.unesco.org/en/list/1073", quote: "The sites (Gebel Barkal, Kurru, Nuri, Sanam and Zuma) ... Date of Inscription: 2003"}
+      - {title: "Lipscomb University Lanier Center for Archaeology: Nuri Necropolis", url: "https://archaeology.lipscomb.edu/excavations/nuri-archaeological-expedition/nuri-necropolis", quote: "UNESCO World Heritage: Since 2003, Nuri (together with Jebel Barkal and other Napatan sites) has been recognized as part of a World Heritage landscape."}
+    note: ""
+  - card: amanirenas
+    fact: "Kush had its capital at Meroë in the 20s BC"
+    verdict: confirmed
+    sources:
+      - {title: "British Museum: The Meroë Head 1911,0901.1, curator's comments", url: "https://www.britishmuseum.org/collection/object/G_1911-0901-1", quote: "buried beneath the steps of a native temple dedicated to Victory at the Kushite capital Meroë"}
+      - {title: "Kai Mora, The Nubian Queen Who Fought Back Caesar's Army, HISTORY (2022)", url: "https://www.history.com/articles/nubian-queen-amanirenas-roman-army", quote: "the people of Meroë—the capital of Kush"}
+    note: ""
+  - card: amanirenas
+    fact: "Kushite ruling queens bore the title kandake, rendered Candace by Greek and Roman writers"
+    verdict: confirmed
+    sources:
+      - {title: "Kai Mora, The Nubian Queen Who Fought Back Caesar's Army, HISTORY (2022)", url: "https://www.history.com/articles/nubian-queen-amanirenas-roman-army", quote: "her role as Kandake , or female ruler, was not unusual in the region"}
+      - {title: "Strabo, Geography 17.1.54 (Loeb, LacusCurtius)", url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Strabo/17A3*.html", quote: "the generals of Queen Candacê, who was ruler of the Aethiopians in my time"}
+    note: ""
+  - card: amanirenas
+    fact: "Augustus defeated Antony and Cleopatra and took Egypt as a Roman province"
+    verdict: corrected
+    sources:
+      - {title: "British Museum: The Meroë Head 1911,0901.1, curator's comments", url: "https://www.britishmuseum.org/collection/object/G_1911-0901-1", quote: "In 31 BC Augustus defeated Mark Antony and Cleopatra at the battle of Actium and took possession of Egypt, which became a Roman province."}
+      - {title: "Kai Mora, The Nubian Queen Who Fought Back Caesar's Army, HISTORY (2022)", url: "https://www.history.com/articles/nubian-queen-amanirenas-roman-army", quote: "the political landscape changed when Roman forces under Augustus seized control of Egypt from Mark Antony and Cleopatra"}
+    note: "World History Encyclopedia blocked (403), not opened; replaced by HISTORY."
+  - card: amanirenas
+    fact: "In 25 BC, while part of the Roman force was away in Arabia, the Kushites took Syene, Elephantine and Philae, enslaved the inhabitants and pulled down statues of Augustus (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Strabo, Geography 17.1.54 (Loeb, LacusCurtius)", url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Strabo/17A3*.html", quote: "emboldened by the fact that a part of the Roman force in Aegypt had been drawn away with Ælius Gallus ... took Syenê and Elephantinê and Philae, and enslaved the inhabitants, and also pulled down the statues of Caesar"}
+      - {title: "British Museum: The Meroë Head 1911,0901.1, curator's comments", url: "https://www.britishmuseum.org/collection/object/G_1911-0901-1", quote: "an invading Kushite army looted many of them when they raided Roman forts and settlements in Upper Egypt in 25 BC"}
+    note: ""
+  - card: amanirenas
+    fact: "Strabo, a contemporary, described the queen as 'a masculine sort of woman, and blind in one eye'"
+    verdict: confirmed
+    sources:
+      - {title: "Strabo, Geography 17.1.54 (Loeb, LacusCurtius)", url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Strabo/17A3*.html", quote: "Queen Candacê, who was ruler of the Aethiopians in my time — a masculine sort of woman, and blind in one eye"}
+      - {title: "Kai Mora, The Nubian Queen Who Fought Back Caesar's Army, HISTORY (2022)", url: "https://www.history.com/articles/nubian-queen-amanirenas-roman-army", quote: "Strabo famously describes Amanirenas as a “masculine woman with one eye destroyed.”"}
+    note: ""
+  - card: amanirenas
+    fact: "The prefect Petronius struck back and razed Napata"
+    verdict: confirmed
+    sources:
+      - {title: "Strabo, Geography 17.1.54 (Loeb, LacusCurtius)", url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Strabo/17A3*.html", quote: "Petronius attacked and captured Napata too, from which her son had fled, and rased it to the ground"}
+      - {title: "Cassius Dio, Roman History 54.5 (Loeb, LacusCurtius)", url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/54*.html", quote: "took Napata, their capital, among other cities. This place was razed to the ground"}
+    note: ""
+  - card: amanirenas
+    fact: "Her forces attacked again; envoys reached Augustus at Samos, obtained what they asked, and the tribute was cancelled"
+    verdict: confirmed
+    sources:
+      - {title: "Strabo, Geography 17.1.54 (Loeb, LacusCurtius)", url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Strabo/17A3*.html", quote: "Meantime Candacê marched against the garrison with many thousands of men ... they went to Samos ... And when the ambassadors had obtained everything they pled for, he even remitted the tributes"}
+      - {title: "Kai Mora, The Nubian Queen Who Fought Back Caesar's Army, HISTORY (2022)", url: "https://www.history.com/articles/nubian-queen-amanirenas-roman-army", quote: "Amanirenas sent emissaries to Samos to negotiate with Augustus, where he granted Amanirenas two important concessions. The first was the cancellation of the tax"}
+    note: ""
+  - card: amanirenas
+    fact: "Most of the looted statues were returned"
+    verdict: corrected
+    sources:
+      - {title: "British Museum: The Meroë Head 1911,0901.1, curator's comments", url: "https://www.britishmuseum.org/collection/object/G_1911-0901-1", quote: "Most were later returned as a result of negotiations between the Meroitic Queen Candace and the Roman general Petronius."}
+      - {title: "Strabo, Geography 17.1.54 (Loeb, LacusCurtius)", url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Strabo/17A3*.html", quote: "she sent ambassadors to treat for friendship and offered to give back the captives and the statues brought from Syenê"}
+    note: "WHE not opened; Strabo (offer to return the statues) added as second source beside the BM curator's comment."
+  - card: amanirenas
+    fact: "One bronze head of Augustus was buried beneath the steps of a temple to Victory at Meroë, apparently so captors would tread on it (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "British Museum: The Meroë Head 1911,0901.1, curator's comments", url: "https://www.britishmuseum.org/collection/object/G_1911-0901-1", quote: "this head remained buried beneath the steps of a native temple dedicated to Victory at the Kushite capital Meroë. It seems likely that it was torn from a statue and placed there deliberately so as to be permanently below the feet of its Meroitic captors."}
+      - {title: "Kai Mora, The Nubian Queen Who Fought Back Caesar's Army, HISTORY (2022)", url: "https://www.history.com/articles/nubian-queen-amanirenas-roman-army", quote: "a bronze head of Augustus Caesar found buried beneath the steps of a temple dedicated to Victory at the Kushite capital Meroë ... deliberately placed at the feet of its captors"}
+    note: "HISTORY's wording follows the BM text closely; BM object record (findspot field) and HISTORY kept, but treat as near one source if a third becomes available."
+  - card: amanirenas
+    fact: "Archaeologists later dug the head up; it is in the British Museum"
+    verdict: corrected
+    sources:
+      - {title: "British Museum: The Meroë Head 1911,0901.1, curator's comments", url: "https://www.britishmuseum.org/collection/object/G_1911-0901-1", quote: "Excavated by: Prof John Garstang ... Museum number 1911,0901.1"}
+      - {title: "Kai Mora, The Nubian Queen Who Fought Back Caesar's Army, HISTORY (2022)", url: "https://www.history.com/articles/nubian-queen-amanirenas-roman-army", quote: "a bronze head of Augustus Caesar found buried beneath the steps of a temple dedicated to Victory ... Bronze head of Augustus Caesar from Meroë, Sudan, from the British Museums collection"}
+    note: "Garstang's name and 'early 20th century' rested on the BM page alone (WHE unopened); body now says only that archaeologists dug it up and that it is in the British Museum."
+  - card: amanirenas
+    fact: "Dispute: Roman sources name only 'Candace'; identification with Amanirenas is modern, and Strabo's account is questioned"
+    verdict: confirmed
+    sources:
+      - {title: "Kai Mora, The Nubian Queen Who Fought Back Caesar's Army, HISTORY (2022)", url: "https://www.history.com/articles/nubian-queen-amanirenas-roman-army", quote: "The main written account of the war is a text completed around 21 B.C. called Geographical Sketches by the Greek historian Strabo ... some historians question that account"}
+      - {title: "Cassius Dio, Roman History 54.5 (Loeb, LacusCurtius)", url: "https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Cassius_Dio/54*.html", quote: "with Candace as their leader"}
+    note: ""
+  - card: faras-cathedral
+    fact: "Faras (Pachoras) was a leading town of Nobadia, whose rulers became Christian in the 6th century"
+    verdict: confirmed
+    sources:
+      - {title: "National Museum in Warsaw: Faras Gallery", url: "https://www.mnw.art.pl/en/collections/permanent-galleries/faras-gallery/", quote: "the cathedral in the city of Faras, a large urban centre in the Medieval kingdom of Nobadia ... Nobadian rulers ... converted to Christianity around 548 AD"}
+      - {title: "Popular Archaeology: Artifacts of Christian Nubia Revealed", url: "https://popular-archaeology.com/article/artifacts-of-christian-nubia-revealed/", quote: "Faras (formerly Pachoras), a city that was an important administrative and cultural center of the medieval African kingdom of Nobadia ... Christian period (ca. mid-6th-14th centuries)"}
+    note: ""
+  - card: faras-cathedral
+    fact: "A cathedral was built at Faras early in the 8th century"
+    verdict: confirmed
+    sources:
+      - {title: "National Museum in Warsaw: Faras Gallery", url: "https://www.mnw.art.pl/en/collections/permanent-galleries/faras-gallery/", quote: "Polish archaeologists taking part in the Nubia Campaign discovered the subsequent 8th century cathedral"}
+      - {title: "Stefan Jakobielski, The Wizard of Faras, Academia PAS 4/44 (2014)", url: "https://www.czasopisma.pan.pl//Content/126642/PDF/6_ACADEMIA_EN_4_44_2014_Jakobielski_The_Wizard.pdf", quote: "Bishop Paulos had built the cathedrol ... in the year 707"}
+    note: ""
+  - card: faras-cathedral
+    fact: "Its walls were painted from the 8th to the 14th century with saints, archangels and Nubian bishops (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "National Museum in Warsaw: Faras Gallery", url: "https://www.mnw.art.pl/en/collections/permanent-galleries/faras-gallery/", quote: "religious-themed paintings created in the 8th to 14th centuries"}
+      - {title: "Popular Archaeology: Artifacts of Christian Nubia Revealed", url: "https://popular-archaeology.com/article/artifacts-of-christian-nubia-revealed/", quote: "Its walls were decorated with magnificent mural paintings on religious themes, dating from the 8th-14th centuries ... The depictions of saints, archangels and Nubian bishops"}
+    note: ""
+  - card: faras-cathedral
+    fact: "The Aswan High Dam threatened to flood the area and UNESCO appealed for the rescue of Nubia's monuments (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Stefan Jakobielski, The Wizard of Faras, Academia PAS 4/44 (2014)", url: "https://www.czasopisma.pan.pl//Content/126642/PDF/6_ACADEMIA_EN_4_44_2014_Jakobielski_The_Wizard.pdf", quote: "In 1958, UNESCO made an appeal to rescue the monuments of Nubia"}
+      - {title: "National Museum in Warsaw: Faras Gallery", url: "https://www.mnw.art.pl/en/collections/permanent-galleries/faras-gallery/", quote: "The Nubia Campaign was an extensive international mission to preserve ancient legacies threatened by flooding from the imminent construction of the Aswan High Dam"}
+    note: ""
+  - card: faras-cathedral
+    fact: "A Polish mission led by Kazimierz Michałowski dug at Faras 1961-1964 and uncovered the cathedral"
+    verdict: confirmed
+    sources:
+      - {title: "gov.pl (Embassy of Poland in South Africa): Treasures of Africa in the heart of Poland", url: "https://www.gov.pl/web/southafrica/treasures-of-africa-in-the-heart-of-poland", quote: "Under the auspices of UNESCO, in the years 1961-1964, Poles conducted excavations ... It was headed by prof. Kazimierz Michałowski"}
+      - {title: "Stefan Jakobielski, The Wizard of Faras, Academia PAS 4/44 (2014)", url: "https://www.czasopisma.pan.pl//Content/126642/PDF/6_ACADEMIA_EN_4_44_2014_Jakobielski_The_Wizard.pdf", quote: "You worked with Prof. Kazimierz Michalowski on the Faras excavations in 1961-64 ... When digging, he came across the wall of the cathedral."}
+    note: ""
+  - card: faras-cathedral
+    fact: "More than a hundred paintings were taken off the walls"
+    verdict: confirmed
+    sources:
+      - {title: "Stefan Jakobielski, The Wizard of Faras, Academia PAS 4/44 (2014)", url: "https://www.czasopisma.pan.pl//Content/126642/PDF/6_ACADEMIA_EN_4_44_2014_Jakobielski_The_Wizard.pdf", quote: "The removal of around 120 paintings."}
+      - {title: "Popular Archaeology: Artifacts of Christian Nubia Revealed", url: "https://popular-archaeology.com/article/artifacts-of-christian-nubia-revealed/", quote: "Over 120 paintings were preserved, 67 of which are today in the collection of the National Museum in Warsaw."}
+    note: ""
+  - card: faras-cathedral
+    fact: "Among them is Bishop Petros with Saint Peter, painted 974-997"
+    verdict: confirmed
+    sources:
+      - {title: "Popular Archaeology: Artifacts of Christian Nubia Revealed", url: "https://popular-archaeology.com/article/artifacts-of-christian-nubia-revealed/", quote: "BISHOP PETROS WITH SAINT PETER  Sudan, Faras, AD 974–997"}
+      - {title: "Stefan Jakobielski, The Wizard of Faras, Academia PAS 4/44 (2014)", url: "https://www.czasopisma.pan.pl//Content/126642/PDF/6_ACADEMIA_EN_4_44_2014_Jakobielski_The_Wizard.pdf", quote: "Bishop Petros with St. Peter. Sudan, Faras, 974-997. Tempera on mud plaster"}
+    note: ""
+  - card: faras-cathedral
+    fact: "Sudan and Poland divided the finds"
+    verdict: confirmed
+    sources:
+      - {title: "gov.pl (Embassy of Poland in South Africa): Treasures of Africa in the heart of Poland", url: "https://www.gov.pl/web/southafrica/treasures-of-africa-in-the-heart-of-poland", quote: "the governments of both countries offered to the countries that offered to conduct excavations half of the future finds"}
+      - {title: "Stefan Jakobielski, The Wizard of Faras, Academia PAS 4/44 (2014)", url: "https://www.czasopisma.pan.pl//Content/126642/PDF/6_ACADEMIA_EN_4_44_2014_Jakobielski_The_Wizard.pdf", quote: "apart from the 50:50 divide of the finds under Sudanese law"}
+    note: ""
+  - card: faras-cathedral
+    fact: "67 paintings went to the National Museum in Warsaw, the rest to the Sudan National Museum in Khartoum (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "gov.pl (Embassy of Poland in South Africa): Treasures of Africa in the heart of Poland", url: "https://www.gov.pl/web/southafrica/treasures-of-africa-in-the-heart-of-poland", quote: "including 67 paintings ... The rest of the discoveries went to the Sudanese National Museum in Khartoum."}
+      - {title: "National Museum in Warsaw: Faras Gallery", url: "https://www.mnw.art.pl/en/collections/permanent-galleries/faras-gallery/", quote: "Today, 67 of the paintings reside in the National Museum in Warsaw ... including those residing today in the Sudan National Museum in Khartoum"}
+    note: ""
+  - card: faras-cathedral
+    fact: "Faras itself went under the reservoir"
+    verdict: confirmed
+    sources:
+      - {title: "Stefan Jakobielski, The Wizard of Faras, Academia PAS 4/44 (2014)", url: "https://www.czasopisma.pan.pl//Content/126642/PDF/6_ACADEMIA_EN_4_44_2014_Jakobielski_The_Wizard.pdf", quote: "the main thing that needed to be done before the site was flooded by the Nile was to rescue the paintings"}
+      - {title: "National Museum in Warsaw: Faras Gallery", url: "https://www.mnw.art.pl/en/collections/permanent-galleries/faras-gallery/", quote: "the imminent construction of the Aswan High Dam in Egypt and the resulting formation of the artificial reservoir, Lake Nasser"}
+    note: ""
+  - card: faras-cathedral
+    fact: "The Warsaw Faras Gallery holds Europe's largest collection of medieval Nubian art"
+    verdict: corrected
+    sources:
+      - {title: "gov.pl (Embassy of Poland in South Africa): Treasures of Africa in the heart of Poland", url: "https://www.gov.pl/web/southafrica/treasures-of-africa-in-the-heart-of-poland", quote: "remains unique in the world to this day, as well as the largest and richest collection of medieval Nubian monuments in Europe"}
+      - {title: "National Museum in Warsaw: Faras Gallery", url: "https://www.mnw.art.pl/en/collections/permanent-galleries/faras-gallery/", quote: "the only permanent exhibition in Europe featuring Medieval Nubian paintings"}
+    note: "'Only permanent display in Europe' and 'largest collection a Polish museum ever acquired' rested on MNW and a Popular Archaeology copy of the MNW press text (one source). Rewritten as 'Europe's largest collection of medieval Nubian art' (gov.pl + MNW)."
+  - card: gnawa
+    fact: "Gnawa is the music and healing ritual of a Sufi brotherhood in Morocco"
+    verdict: confirmed
+    sources:
+      - {title: "UNESCO ICH: Gnawa", url: "https://ich.unesco.org/en/RL/gnawa-01170", quote: "Gnawa is first and foremost a Sufi brotherhood music ... therapeutic rituals mixing the secular with the sacred"}
+      - {title: "Vanessa Barisch, A Sufi tradition on the world stage, Qantara.de (2025)", url: "https://qantara.de/en/article/moroccan-gnawa-festival-sufi-tradition-world-stage", quote: "the once marginalised Sufi tradition is now internationally renowned"}
+    note: ""
+  - card: gnawa
+    fact: "The Gnawa descend from sub-Saharan Africans brought to Morocco mostly as slaves, by the 16th century at the latest (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Deborah Kapchan, Possessing Gnawa Culture, Music & Anthropology 7 (2002)", url: "https://www2.umbc.edu/MA/index/number7/kapchan/kap_00.htm", quote: "The Gnawa, a group of sub-Saharan Africans who came to Morocco mostly as slaves in the 15th and 16th centuries"}
+      - {title: "UNESCO ICH: Gnawa", url: "https://ich.unesco.org/en/RL/gnawa-01170", quote: "Originally practised by groups and individuals from slavery and the slave trade dating back to at least the 16th century"}
+    note: ""
+  - card: gnawa
+    fact: "Gnawa songs invoke ancestors, saints and spirits"
+    verdict: confirmed
+    sources:
+      - {title: "UNESCO ICH: Gnawa", url: "https://ich.unesco.org/en/RL/gnawa-01170", quote: "lyrics with a generally religious content, invoking ancestors and spirits"}
+      - {title: "Deborah Kapchan, Possessing Gnawa Culture, Music & Anthropology 7 (2002)", url: "https://www2.umbc.edu/MA/index/number7/kapchan/kap_00.htm", quote: "only invocations to the different saints and spirits recognized by the Gnawa – Sidi Bilal, Abdulqadr Jilani"}
+    note: ""
+  - card: gnawa
+    fact: "The maalem plays the guembri, a three-string bass lute; singers play qraqeb, heavy metal castanets (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Deborah Kapchan, Possessing Gnawa Culture, Music & Anthropology 7 (2002)", url: "https://www2.umbc.edu/MA/index/number7/kapchan/kap_00.htm", quote: "heavy metal castanets ( qraqab , pl.) and the bass melodies provided by the ginbri , a three-stringed instrument"}
+      - {title: "Afropop Worldwide: Field Report, Gnawa World Music Festival in Essaouira, part 1", url: "https://afropop.org/articles/field-report-the-gnawa-world-music-festival-in-essaouira-part-1", quote: "one maalem after the other, followed by his kouyous (singers who play the big metal castanets called krakeb ) ... the three-string guembri"}
+    note: ""
+  - card: gnawa
+    fact: "The lila is an all-night ceremony of trance in which the possessed are healed (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Deborah Kapchan, Possessing Gnawa Culture, Music & Anthropology 7 (2002)", url: "https://www2.umbc.edu/MA/index/number7/kapchan/kap_00.htm", quote: "The Gnawa heal those afflicted with spirit possession in Morocco through an all-night ceremony (called a lila )"}
+      - {title: "UNESCO ICH: Gnawa", url: "https://ich.unesco.org/en/RL/gnawa-01170", quote: "practise a therapeutic possession ritual through all-night rhythm and trance ceremonies"}
+    note: ""
+  - card: gnawa
+    fact: "The Gnawa were long a marginalised group in Morocco"
+    verdict: confirmed
+    sources:
+      - {title: "Vanessa Barisch, A Sufi tradition on the world stage, Qantara.de (2025)", url: "https://qantara.de/en/article/moroccan-gnawa-festival-sufi-tradition-world-stage", quote: "the Gnawa were a marginalised group, originally brought to Morocco through the trans-Saharan slave trade"}
+      - {title: "Deborah Kapchan, Possessing Gnawa Culture, Music & Anthropology 7 (2002)", url: "https://www2.umbc.edu/MA/index/number7/kapchan/kap_00.htm", quote: "Their identity as former slaves, as well as their syncretic religious practices within the context of Islam, differentiates them from the majority of Moroccans."}
+    note: ""
+  - card: gnawa
+    fact: "Randy Weston, Brooklyn jazz pianist who toured Africa for the State Department, settled in Morocco at the end of the 1960s, drawn by Gnawa music (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Nate Chinen, Pianist Randy Weston ... dies at 92, WBGO (2018)", url: "https://www.wbgo.org/music/2018-09-01/pianist-randy-weston-an-eloquent-spokesman-for-jazzs-bond-with-african-culture-dies-at-92", quote: "Weston made his first visit to the African continent in 1961, as part of a tour for the U.S. State Department ... After a third visit in 1967, he decided to move to Morocco, finding deep spiritual resonance in the traditional music of the Gnawa ... Born in Brooklyn"}
+      - {title: "Deborah Kapchan, Possessing Gnawa Culture, Music & Anthropology 7 (2002)", url: "https://www2.umbc.edu/MA/index/number7/kapchan/kap_00.htm", quote: "Randy Weston ... ever since Weston visited Tangier for the first time in 1969 ... on a tour of several African nations at this time, a project funded by the State Department"}
+    note: ""
+  - card: gnawa
+    fact: "Gnawa groups gather every June in Essaouira for a festival on the harbour square"
+    verdict: confirmed
+    sources:
+      - {title: "Vanessa Barisch, A Sufi tradition on the world stage, Qantara.de (2025)", url: "https://qantara.de/en/article/moroccan-gnawa-festival-sufi-tradition-world-stage", quote: "Qraqeb players at the \"Gnaoua and World Music Festival\" in June ... He performed at the opening in Moulay Hassan Square on the harbour"}
+      - {title: "Songlines: Celebrating 25 editions of the Gnawa festival in Essaouira", url: "https://songlines.co.uk/features/celebrating-25-editions-of-the-gnawa-festival-in-essaouira", quote: "At the end of June, the annual Gnawa festival in Essaouira, Morocco celebrated its 25th edition"}
+    note: ""
+  - card: gnawa
+    fact: "Women play the guembri; Asmaa Hamzaoui leads the all-female band Bnat Timbouktou"
+    verdict: confirmed
+    sources:
+      - {title: "Afropop Worldwide: Gnawa Festival", url: "https://afropop.org/articles/gnawa-festival", quote: "Hamzaoui fronts an all-female band of kouyous called Bnat Tombouctou (Daughters of Timbuktu) ... Her father, Maalem Rachid Hamzaoui, began to teach her the guembri at the age of 7"}
+      - {title: "Songlines: Celebrating 25 editions of the Gnawa festival in Essaouira", url: "https://songlines.co.uk/features/celebrating-25-editions-of-the-gnawa-festival-in-essaouira", quote: "the Casablanca maâlema Asmâa Hamzaoui around ten years ago with her all-female group, Bnat Timbouktou (Daughters of Timbuktu)"}
+    note: ""
+  - card: gnawa
+    fact: "UNESCO inscribed Gnawa in 2019; it is regarded as part of Morocco's identity"
+    verdict: confirmed
+    sources:
+      - {title: "UNESCO ICH: Gnawa", url: "https://ich.unesco.org/en/RL/gnawa-01170", quote: "Inscribed in 2019 ( 14.COM ) on the Representative List ... Gnawa culture is now considered as part of Morocco’s multifaceted culture and identity"}
+      - {title: "Lucy Ilado, Morocco: Gnawa music now on UNESCO heritage list, Music in Africa (2019)", url: "https://musicinafrica.net/magazine/morocco-gnawa-music-now-unesco-heritage-list", quote: "Morocco’s Gnawa musical culture has been included on the UNESCO list of Intangible Cultural Heritage of Humanity ... Gnawa is considered as a central part of Morocco’s multifaceted culture and identity"}
+    note: ""
+  - card: osun-osogbo
+    fact: "Osogbo is the capital of Osun State, on the Osun River"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Osogbo", url: "https://www.britannica.com/place/Osogbo", quote: "Osogbo , town, capital of Osun state, southwestern Nigeria . Lying along the Osun (Oshun) River"}
+      - {title: "UNESCO WHC: Osun-Osogbo Sacred Grove", url: "https://whc.unesco.org/en/list/1118", quote: "Osun-Osogbo, in the heart of Osogbo, the capital of Osun State"}
+    note: ""
+  - card: osun-osogbo
+    fact: "The grove is one of the last remnants of primary high forest in southern Nigeria, abode of the river goddess Osun"
+    verdict: confirmed
+    sources:
+      - {title: "UNESCO WHC: Osun-Osogbo Sacred Grove", url: "https://whc.unesco.org/en/list/1118", quote: "one of the last remnants of primary high forest in southern Nigeria ... Through the forest meanders the river Osun, the spiritual abode of the river goddess Osun"}
+      - {title: "ICOMOS Advisory Body Evaluation No 1118 (2005)", url: "https://whc.unesco.org/archive/advisory_body_evaluation/1118.pdf", quote: "The dense forest of the Osun Sacred Grove, on the outskirts of Osogbo, some of the last remnants of primary high forest in southern Nigeria, are the abode of Osun"}
+    note: "ICOMOS quote corrected to the verbatim text."
+  - card: osun-osogbo
+    fact: "Every Yoruba town once had a sacred grove; Osun-Osogbo is the largest surviving"
+    verdict: corrected
+    sources:
+      - {title: "UNESCO WHC: Osun-Osogbo Sacred Grove", url: "https://whc.unesco.org/en/list/1118", quote: "A century ago there were many sacred groves in Yorubaland: every town had one ... is the largest sacred grove to have survived"}
+      - {title: "ICOMOS Advisory Body Evaluation No 1118 (2005)", url: "https://whc.unesco.org/archive/advisory_body_evaluation/1118.pdf", quote: "All Yoruba towns once had Sacred Groves, areas of virgin forest reserved for the worship of the gods. Unlike other Yoruba towns whose sacred Groves have atrophied, or disappeared"}
+    note: "Body said groves stood 'outside their walls' (no source in English; only unesco.nl Dutch text, same publisher). Reworded to 'Every Yoruba town once had such a grove'. ICOMOS quote corrected to verbatim."
+  - card: osun-osogbo
+    fact: "The founding story ties the first ruler Laro (Larooye) to the goddess and the fish of the river"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Osogbo", url: "https://www.britannica.com/place/Osogbo", quote: "Laro, one of the town’s founders, who, according to legend , fed the fish of the Osun River"}
+      - {title: "ICOMOS Advisory Body Evaluation No 1118 (2005)", url: "https://whc.unesco.org/archive/advisory_body_evaluation/1118.pdf", quote: "a pact between Larooye, the founder of Osogbo, and Osun ... The fish in the river are said to have been used by the goddess Osun as messengers"}
+    note: ""
+  - card: osun-osogbo
+    fact: "By the 1950s the shrines were neglected and crumbling"
+    verdict: confirmed
+    sources:
+      - {title: "ICOMOS Advisory Body Evaluation No 1118 (2005)", url: "https://whc.unesco.org/archive/advisory_body_evaluation/1118.pdf", quote: "By the 1950s the combined political and religious changes were having a marked detrimental effect on the Grove: ... shrines were becoming neglected"}
+      - {title: "Adunni Olorisha Trust: Who was Susanne Wenger?, Google Arts & Culture", url: "https://artsandculture.google.com/story/who-was-susanne-wenger-%C3%80d%C3%B9nn%C3%AD-ol%C3%B3r%C3%AC%E1%B9%A3%C3%A0-the-osun-osogbo-grove/IAXBGVfmA6LkIA?hl=en", quote: "rebuilding shrines which had been destroyed by termites and were on the brink of collapse"}
+    note: ""
+  - card: osun-osogbo
+    fact: "Susanne Wenger, Austrian artist, came to Nigeria with her husband Ulli Beier and was initiated as a Yoruba priestess (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Wolfgang Denk, Obituary: Susanne Wenger, Susanne Wenger Foundation", url: "https://susannewengerfoundation.at/en/obituary-susanne-wenger", quote: "she met and married Ulli Beier ... she arrived in West Africa in 1950 ... was initiated as a priestess"}
+      - {title: "Adunni Olorisha Trust: Who was Susanne Wenger?, Google Arts & Culture", url: "https://artsandculture.google.com/story/who-was-susanne-wenger-%C3%80d%C3%B9nn%C3%AD-ol%C3%B3r%C3%AC%E1%B9%A3%C3%A0-the-osun-osogbo-grove/IAXBGVfmA6LkIA?hl=en", quote: "Austrian born Susanne Wenger ... met Ulli Beier ... traveled over-land to Ìbàdàn, Nigeria ... initiation into the traditional Yorùbá religion"}
+    note: ""
+  - card: osun-osogbo
+    fact: "With local craftsmen who grew into artists (New Sacred Art), she rebuilt shrines and raised giant new ones in threatened spaces (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Adunni Olorisha Trust: Who was Susanne Wenger?, Google Arts & Culture", url: "https://artsandculture.google.com/story/who-was-susanne-wenger-%C3%80d%C3%B9nn%C3%AD-ol%C3%B3r%C3%AC%E1%B9%A3%C3%A0-the-osun-osogbo-grove/IAXBGVfmA6LkIA?hl=en", quote: "together with a group of local artisans she started rebuilding shrines ... These artisans evolved into artists and a new movement was formed: The New Sacred Art Movement"}
+      - {title: "ICOMOS Advisory Body Evaluation No 1118 (2005)", url: "https://whc.unesco.org/archive/advisory_body_evaluation/1118.pdf", quote: "new sculptures have been erected in the place of old ones and giant, immovable ones created in threatened spaces in the Grove by Suzanne Wenger and the New Sacred Art artists"}
+    note: ""
+  - card: osun-osogbo
+    fact: "The art staked out the grove against encroachment by the town (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "ICOMOS Advisory Body Evaluation No 1118 (2005)", url: "https://whc.unesco.org/archive/advisory_body_evaluation/1118.pdf", quote: "in a way that staked out the Grove and acted as a powerful force against encroachment of the sacred spaces"}
+      - {title: "Adunni Olorisha Trust: Who was Susanne Wenger?, Google Arts & Culture", url: "https://artsandculture.google.com/story/who-was-susanne-wenger-%C3%80d%C3%B9nn%C3%AD-ol%C3%B3r%C3%AC%E1%B9%A3%C3%A0-the-osun-osogbo-grove/IAXBGVfmA6LkIA?hl=en", quote: "The art they created in the groves has served to protect the 75 hectares from the encroaching town dwellings"}
+    note: ""
+  - card: osun-osogbo
+    fact: "Part of the grove became a national monument in 1965"
+    verdict: confirmed
+    sources:
+      - {title: "ICOMOS Advisory Body Evaluation No 1118 (2005)", url: "https://whc.unesco.org/archive/advisory_body_evaluation/1118.pdf", quote: "In 1965 part of the Grove was declared a national monument."}
+      - {title: "Adunni Olorisha Trust: Who was Susanne Wenger?, Google Arts & Culture", url: "https://artsandculture.google.com/story/who-was-susanne-wenger-%C3%80d%C3%B9nn%C3%AD-ol%C3%B3r%C3%AC%E1%B9%A3%C3%A0-the-osun-osogbo-grove/IAXBGVfmA6LkIA?hl=en", quote: "The area was declared a National Monument as early as 1965"}
+    note: ""
+  - card: osun-osogbo
+    fact: "UNESCO World Heritage Site in 2005"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Osogbo", url: "https://www.britannica.com/place/Osogbo", quote: "The Osun-Osogbo Sacred Grove ... was designated a UNESCO World Heritage site in 2005."}
+      - {title: "Wolfgang Denk, Obituary: Susanne Wenger, Susanne Wenger Foundation", url: "https://susannewengerfoundation.at/en/obituary-susanne-wenger", quote: "In 2005, the Sacred Groves of Oshogbo ... was registered as a UNESCO World Heritage Site"}
+    note: ""
+  - card: osun-osogbo
+    fact: "Wenger died in 2009"
+    verdict: corrected
+    sources:
+      - {title: "Wolfgang Denk, Obituary: Susanne Wenger, Susanne Wenger Foundation", url: "https://susannewengerfoundation.at/en/obituary-susanne-wenger", quote: "Susanne Wenger died on the 12th January 2009 at the age of 93 in her adopted hometown of Oshogbo, Nigeria."}
+      - {title: "Adunni Olorisha Trust: Who was Susanne Wenger?, Google Arts & Culture", url: "https://artsandculture.google.com/story/who-was-susanne-wenger-%C3%80d%C3%B9nn%C3%AD-ol%C3%B3r%C3%AC%E1%B9%A3%C3%A0-the-osun-osogbo-grove/IAXBGVfmA6LkIA?hl=en", quote: "Susanne Wenger died on the 12th January 2009."}
+    note: "'In Osogbo' rested on the Wenger Foundation obituary alone; place dropped. The obituary URL /en/node/106 now 404s; read via its archived copy, canonical /en/obituary-susanne-wenger."
+  - card: osun-osogbo
+    fact: "Each August a festival honours the goddess, with offerings to Osun at the river; regular worship continues in the grove"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Osogbo", url: "https://www.britannica.com/place/Osogbo", quote: "the goddess Osun ... are honoured at an annual festival in the town in August"}
+      - {title: "ICOMOS Advisory Body Evaluation No 1118 (2005)", url: "https://whc.unesco.org/archive/advisory_body_evaluation/1118.pdf", quote: "The procession winds its way first to the main Osun-Osogbo shrine and then to the river where a calabash of sacrifices is offered to the Osun goddess"}
+    note: ""
+  - card: dogon-sirius
+    fact: "The Dogon of Mali live along the Bandiagara escarpment, a towering cliff with villages in its face"
+    verdict: corrected
+    sources:
+      - {title: "Mamadou Tapily, A Malian journalist, a fabled festival ... (The New Humanitarian / The African Mirror, 2025)", url: "https://theafricanmirror.africa/human-rights/a-malian-journalist-a-fabled-festival-and-a-search-for-truth-in-a-time-of-crisis/", quote: "the Bandiagara escarpment – a towering cliff where small villages are nestled into the rocky face"}
+      - {title: "Encyclopaedia Britannica: Dogon", url: "https://www.britannica.com/topic/Dogon", quote: "the majority of them live in the rocky hills, mountains, and plateaus of the Bandiagara Escarpment ... Characteristic Dogon cliff village on the Bandiagara Escarpment"}
+    note: "UNESCO WHC 516 blocked (403); replaced by Britannica: Dogon (archived copy)."
+  - card: dogon-sirius
+    fact: "Every sixty years the Dogon hold the Sigui, a cycle of ceremonies of death and renewal; the last began in 1967"
+    verdict: corrected
+    sources:
+      - {title: "CREM-CNRS sound archives: 3e jour du Sigi à Yugo Dogoru (mission Rouget 1967)", url: "https://archives.crem-cnrs.fr/archives/items/CNRSMH_I_1974_019_006_02/", quote: "3er jour du Sigi à Yugo Dogoru ... Collection Cérémonie du Sigi au Mali, mission Rouget 1967 Recording date Jan. 1, 1967 - Dec. 31, 1967"}
+      - {title: "Walter E. A. van Beek, Dogon Restudied, Current Anthropology 32:2 (1991)", url: "https://www.jstor.org/stable/2743639", quote: "The mask complex, with its grand rituals of first burial (ny yana), mask festivals (dama), and the 60-year festival sigu ... It centres around questions of death, fertility, and complementarity."}
+    note: "CNRS Images page unreachable. 'Honours the dead / passing of a generation' rested on one journalist; rewritten as 'a cycle of ceremonies of death and renewal'. 1967 confirmed by the CREM-CNRS archive record of the Sigi at Yugo Dogoru, 1967."
+  - card: dogon-sirius
+    fact: "Marcel Griaule worked among the Dogon from 1931, later with Germaine Dieterlen"
+    verdict: confirmed
+    sources:
+      - {title: "Walter E. A. van Beek, Dogon Restudied, Current Anthropology 32:2 (1991)", url: "https://www.jstor.org/stable/2743639", quote: "Griaule published on the Dogon from the early thirties (the Dakar-Djibouti expedition of 1931-33 ...) ... a major work co-authored by Germaine Dieterlen"}
+      - {title: "Bernard R. Ortiz de Montellano, The Dogon People Revisited, Skeptical Inquirer (1996)", url: "https://cdn.centerforinquiry.org/wp-content/uploads/sites/29/1996/11/22165027/p39.pdf", quote: "Griaule and Dieterlen, who studied the Dogon from 1931 to 1952"}
+    note: ""
+  - card: dogon-sirius
+    fact: "In 1950 Griaule and Dieterlen reported that the Dogon named a companion of Sirius, po tolo, invisible to the naked eye, and credited it with enormous mass (also wow)"
+    verdict: corrected
+    sources:
+      - {title: "Bernard R. Ortiz de Montellano, The Dogon People Revisited, Skeptical Inquirer (1996)", url: "https://cdn.centerforinquiry.org/wp-content/uploads/sites/29/1996/11/22165027/p39.pdf", quote: "the research of two French anthropologists, Marcel Griaule and Germaine Dieterlen (1950, 1965) ... the Dogon also name a companion star, po tolo ... and describe its density and rotational characteristics ... a star that cannot be seen without a telescope"}
+      - {title: "Walter E. A. van Beek, Dogon Restudied, Current Anthropology 32:2 (1991)", url: "https://www.jstor.org/stable/2743639", quote: "the central star system around Sirius (Griaule and Dieterlen 1950b) of which po tolo, identified as Sirius B, is central ... the purported knowledge of the mass of Sirius B"}
+    note: "'Described its density' rested on Ortiz de Montellano (Skepdic copies him). Reworded to 'credited it with enormous mass' (van Beek: 'purported knowledge of the mass of Sirius B')."
+  - card: dogon-sirius
+    fact: "In 1976 Robert Temple's The Sirius Mystery argued that amphibious beings from Sirius taught the Dogon (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Bernard R. Ortiz de Montellano, The Dogon People Revisited, Skeptical Inquirer (1996)", url: "https://cdn.centerforinquiry.org/wp-content/uploads/sites/29/1996/11/22165027/p39.pdf", quote: "In 1976 Robert Temple published The Sirius Mystery ... It was Temple (1976 ...) who argued that the Dogon learned all this from amphibious beings from a superior civilization in the Sirius system"}
+      - {title: "Robert T. Carroll, Dogon and Sirius, The Skeptic's Dictionary", url: "https://www.skepdic.com/dogon.html", quote: "According to Robert Temple ( The Sirius Mystery ), the Dogon had contact with some ugly, amphibious extraterrestrials, the Nommos"}
+    note: "Skeptical Inquirer OCR reads 'die' for 'the'; text matches."
+  - card: dogon-sirius
+    fact: "In 1991 van Beek's restudy found the Dogon know Sirius as a star (the brightest), but no one outside Griaule's informants had heard of po tolo and no one had heard Sirius was double (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Walter E. A. van Beek, Dogon Restudied, Current Anthropology 32:2 (1991)", url: "https://www.jstor.org/stable/2743639", quote: "The Dogon, of course, know Sirius as a star (it is after all the brightest in the sky) ... No Dogon outside the circle of Griaule’s informants had ever heard of sigu tolo or pé tolo ... no one, even within the circle of Griaule informants, had ever heard or understood that Sirius was a double star"}
+      - {title: "eHRAF (Yale): Dogon Restudied, abstract", url: "https://ehrafworldcultures.yale.edu/cultures/fa16/documents/031", quote: "Van Beek was unable to corroborate in the field Marcel Griaule's epic monographs ... the Dogon he interviewed do not attribute nearly as much significance to ... the star Sirus as did Griaule"}
+    note: ""
+  - card: dogon-sirius
+    fact: "Stars matter little in Dogon ritual"
+    verdict: confirmed
+    sources:
+      - {title: "Walter E. A. van Beek, Dogon Restudied, Current Anthropology 32:2 (1991)", url: "https://www.jstor.org/stable/2743639", quote: "Knowledge of the stars is not important either in daily life or in ritual."}
+      - {title: "Bernard R. Ortiz de Montellano, The Dogon People Revisited, Skeptical Inquirer (1996)", url: "https://cdn.centerforinquiry.org/wp-content/uploads/sites/29/1996/11/22165027/p39.pdf", quote: "Knowledge of the stars is not important either in daily life or in ritual."}
+    note: ""
+  - card: dogon-sirius
+    fact: "Van Beek suggested Griaule, in long sessions with one main informant, read his own knowledge of Sirius into the answers"
+    verdict: confirmed
+    sources:
+      - {title: "Bernard R. Ortiz de Montellano, The Dogon People Revisited, Skeptical Inquirer (1996)", url: "https://cdn.centerforinquiry.org/wp-content/uploads/sites/29/1996/11/22165027/p39.pdf", quote: "Van Beek points out that Griaule's data was developed in long, intense sessions with one primary informant, Ambara ... Griaule probably reinterpreted statements from his informant in the light of his own knowledge about Sirius"}
+      - {title: "Robert T. Carroll, Dogon and Sirius, The Skeptic's Dictionary", url: "https://www.skepdic.com/dogon.html", quote: "Griaule, who based his account on an interview with one person, Ambara, and an interpreter ... Griaule's account may reflect his own interests more than that of the Dogon"}
+    note: "Ortiz de Montellano summarises van Beek in his own words; Carroll (Skeptic's Dictionary) independently describes the single-informant method."
+  - card: dogon-sirius
+    fact: "Dispute: van Beek's restudy was contested by Calame-Griaule and others argued knowledge could have faded"
+    verdict: confirmed
+    sources:
+      - {title: "eHRAF (Yale): Calame-Griaule, On the Dogon Restudied, abstract", url: "https://ehrafworldcultures.yale.edu/cultures/fa16/documents/032", quote: "Geneviève Calame-Griaule's response to Walter van Beek's article ... She turns the table on van Beek and questions his own ethnographic methods and informants"}
+      - {title: "eHRAF (Yale): Dogon Restudied, abstract", url: "https://ehrafworldcultures.yale.edu/cultures/fa16/documents/031", quote: "Mary Douglas argues that the esoteric and occult knowledge of Dogon elders related in Griaule's work could easily have been lost over the last fifty years"}
+    note: ""
+  - card: dogon-sirius
+    fact: "Sixty years after 1967, the next Sigui is due around 2027"
+    verdict: corrected
+    sources:
+      - {title: "Mamadou Tapily, A Malian journalist, a fabled festival ... (The New Humanitarian / The African Mirror, 2025)", url: "https://theafricanmirror.africa/human-rights/a-malian-journalist-a-fabled-festival-and-a-search-for-truth-in-a-time-of-crisis/", quote: "The last one began in 1967, which means the next is scheduled in just two years."}
+      - {title: "Encyclopaedia Britannica: Dogon", url: "https://www.britannica.com/topic/Dogon", quote: "Dogon religious life is heightened every 60 years by a ceremony called the sigui"}
+    note: "Phrase 'honouring the dead of a whole generation' removed; 2027 = 1967 + 60 (Britannica: every 60 years; Tapily: next in two years, written 2025)."
+  - card: ifa-divination
+    fact: "Ifá is the Yoruba divination system, also practised by the diaspora in the Americas and the Caribbean"
+    verdict: confirmed
+    sources:
+      - {title: "UNESCO ICH: Ifa divination system", url: "https://ich.unesco.org/en/RL/ifa-divination-system-00146", quote: "is practiced among Yoruba communities and by the African diaspora in the Americas and the Caribbean"}
+      - {title: "LACMA: Opon Ifa, AC1993.220.6, curatorial notes", url: "https://collections.lacma.org/object/66580", quote: "The Ifa divination system offers guidance to members of Yoruba societies both in Nigeria and Afro-American religions such as Santería and Candomblé."}
+    note: ""
+  - card: ifa-divination
+    fact: "Ifá is named after Ifá/Orunmila, deity of wisdom"
+    verdict: confirmed
+    sources:
+      - {title: "UNESCO ICH: Ifa divination system", url: "https://ich.unesco.org/en/RL/ifa-divination-system-00146", quote: "The word Ifa refers to the mystical figure Ifa or Orunmila, regarded by the Yoruba as the deity of wisdom and intellectual development."}
+      - {title: "Encyclopedia of African Religion (SAGE): Orunmila", url: "https://sk.sagepub.com/ency/edvol/embed/africanreligion/chpt/orunmila", quote: "Orunmila is the Yoruba deity of wisdom, knowledge, and omniscience"}
+    note: ""
+  - card: ifa-divination
+    fact: "Ifá is consulted for important decisions, individual or collective"
+    verdict: confirmed
+    sources:
+      - {title: "UNESCO ICH: Ifa divination system", url: "https://ich.unesco.org/en/RL/ifa-divination-system-00146", quote: "The Ifa divination system is applied whenever an important individual or collective decision has to be made."}
+      - {title: "Encyclopedia of African Religion (SAGE): Babalawo", url: "https://sk.sagepub.com/ency/edvol/embed/africanreligion/chpt/babalawo", quote: "turn to divination on a daily basis and, therefore, to Ifa in Yorubaland for guidance and advice on all kinds of issues, trivial or critical"}
+    note: ""
+  - card: ifa-divination
+    fact: "The babalawo does not rely on trance or mediumship but reads/interprets signs"
+    verdict: confirmed
+    sources:
+      - {title: "UNESCO ICH: Ifa divination system", url: "https://ich.unesco.org/en/RL/ifa-divination-system-00146", quote: "Ifa divination does not rely on a person having oracular powers but rather on a system of signs that are interpreted by a diviner, the Ifa priest or babalawo"}
+      - {title: "Encyclopedia of African Religion (SAGE): Babalawo", url: "https://sk.sagepub.com/ency/edvol/embed/africanreligion/chpt/babalawo", quote: "It takes, however, a person specially and carefully trained to decipher Ifa's messages to the humans"}
+    note: ""
+  - card: ifa-divination
+    fact: "The babalawo casts sixteen sacred palm nuts (ikin) or a divining chain (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopedia of African Religion (SAGE): Ikin", url: "https://sk.sagepub.com/ency/edvol/embed/africanreligion/chpt/ikin", quote: "Ikin are the 16 palm nuts used to form binary sets of data during the divination process"}
+      - {title: "UNESCO ICH: Ifa divination system", url: "https://ich.unesco.org/en/RL/ifa-divination-system-00146", quote: "determined by the babalawo using sacred palm-nuts and a divination chain"}
+    note: ""
+  - card: ifa-divination
+    fact: "Results are marked in powder on a wooden tray, opon Ifá; a tapper strikes the tray to open the session (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Saint Louis Art Museum: Divination Tray (opon Ifá), 145:1996", url: "https://www.slam.org/collection/objects/29099/", quote: "his tray (\"opon Ifa\") and his tapper (\"iroke Ifa\"). To initiate a divination session, the babalawo strikes the point of the tapper several times against the tray ... make markings on the tray that record the results of a series of palm nut or seedpod castings"}
+      - {title: "LACMA: Opon Ifa, AC1993.220.6, curatorial notes", url: "https://collections.lacma.org/object/66580", quote: "A diviner known as a babalawo uses a wood tray with powder to mark the patterns"}
+    note: ""
+  - card: ifa-divination
+    fact: "The marks are of two kinds, so the system is described as binary"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopedia of African Religion (SAGE): Ikin", url: "https://sk.sagepub.com/ency/edvol/embed/africanreligion/chpt/ikin", quote: "Ikin are the 16 palm nuts used to form binary sets of data"}
+      - {title: "Glory Oluchi Onyekwusi, Ifá Divination and Binary Code, Art Africa (2025)", url: "https://art.africa/art-africa-curatorial-space/news/tracing-the-origins-of-ifa-divination-and-its-surprising-parallels-with-modern-binary-code/", quote: "A single mark (|) can be read as “open” or “odd.” A double mark (||) can be read as “closed” or “even.” That’s it—two possible states."}
+    note: ""
+  - card: ifa-divination
+    fact: "There are 256 possible signs, the odu (also title and wow)"
+    verdict: confirmed
+    sources:
+      - {title: "UNESCO ICH: Ifa divination system", url: "https://ich.unesco.org/en/RL/ifa-divination-system-00146", quote: "The Ifa literary corpus, called odu, consists of 256 parts ... Each of the 256 odu has its specific divination signature"}
+      - {title: "LACMA: Opon Ifa, AC1993.220.6, curatorial notes", url: "https://collections.lacma.org/object/66580", quote: "The diviner identifies one of 256 patterns associated with a specific verse"}
+    note: ""
+  - card: ifa-divination
+    fact: "Each odu has verses (ese) which the babalawo chants to the person seeking guidance (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "UNESCO ICH: Ifa divination system", url: "https://ich.unesco.org/en/RL/ifa-divination-system-00146", quote: "subdivided into verses called ese ... are chanted by the priests in poetic language"}
+      - {title: "LACMA: Opon Ifa, AC1993.220.6, curatorial notes", url: "https://collections.lacma.org/object/66580", quote: "then chants the verse to participants to consider in the context of their personal need for guidance"}
+    note: ""
+  - card: ifa-divination
+    fact: "Ifá is consulted across the Americas and the Caribbean; in Cuba Ifá diviners serve alongside Santería priests"
+    verdict: corrected
+    sources:
+      - {title: "LACMA: Opon Ifa, AC1993.220.6, curatorial notes", url: "https://collections.lacma.org/object/66580", quote: "Afro-American religions such as Santería and Candomblé"}
+      - {title: "Duke University, The Sacred Arts of the Black Atlantic: Cuban Santería/Ocha and Palo", url: "https://sacredart.caaar.duke.edu/religions/cuban-santeria-ocha-and-palo/", quote: "Most of the Cuban and Cuban-American sacred objects in the CAAAR Collection were made for santeros, or initiates of Santería, which African-restorationist believers prefer to call “Ocha,” and and babalaos, experts in the prestigious Ifá divination system."}
+    note: "Candomblé rested on LACMA alone; removed with the [[candomble]] link. Santería confirmed by LACMA + Duke CAAAR; Americas/Caribbean by UNESCO."
+  - card: ifa-divination
+    fact: "UNESCO proclaimed Ifá a Masterpiece of the Oral and Intangible Heritage of Humanity in 2005"
+    verdict: confirmed
+    sources:
+      - {title: "UNESCO ICH: Ifa divination system", url: "https://ich.unesco.org/en/RL/ifa-divination-system-00146", quote: "Inscribed in 2008 ( 3.COM ) on the Representative List ... (originally proclaimed in 2005)"}
+      - {title: "Ministry of Foreign Affairs of Japan: third Proclamation of Masterpieces (2005), list", url: "https://www.mofa.go.jp/mofaj/gaiko/culture/kyoryoku/unesco/isan/mukei2/kousyo_sen_03.html", quote: "第3回ユネスコ「人類の口承及び無形遺産に関する傑作の宣言」一覧 ... Nigeria Ifa divination system in Nigeria"}
+    note: ""
+  - card: lusona
+    fact: "Sona (singular lusona) are drawings made by the Chokwe and neighbours in eastern Angola and neighbouring Zambia and Congo"
+    verdict: confirmed
+    sources:
+      - {title: "UNESCO ICH: Sona, drawings and geometric figures on sand", url: "https://ich.unesco.org/en/RL/sona-drawings-and-geometric-figures-on-sand-01994", quote: "Sona refers to drawings and geometric figures on sand. Practised by the Lunda Cokwe and neighbouring peoples in eastern Angola"}
+      - {title: "Darrah Chavey, Strip Symmetry Groups of African Sona Designs, Bridges 2010", url: "https://static1.bridgesmathart.org/2010/cdrom/proceedings/69/paper_69.pdf", quote: "The sona drawings of the Chokwe people of Angola/Congo ... their sona (singular “lusona”) drawings"}
+    note: ""
+  - card: lusona
+    fact: "Sona are not an alphabet for sounds but signs made for telling"
+    verdict: confirmed
+    sources:
+      - {title: "Tim Brookes, Sona, Atlas of Endangered Alphabets", url: "https://www.endangeredalphabets.net/alphabets/sona/", quote: "If we define writing as an organized series of visual symbols that represent the basic sounds of a language, the sona sand designs ... push that definition so far it finds itself utterly out of its depth"}
+      - {title: "UNESCO ICH: Sona, drawings and geometric figures on sand", url: "https://ich.unesco.org/en/RL/sona-drawings-and-geometric-figures-on-sand-01994", quote: "The figures and drawings are viewed as a means of transmitting stories, knowledge and collective memory"}
+    note: ""
+  - card: lusona
+    fact: "The drawer smooths the sand, presses a grid of equidistant dots with fingertips, then draws a line around the dots (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Ivars Peterson, Sand Drawings and Mirror Curves, Science News (2001)", url: "https://www.sciencenews.org/article/sand-drawings-and-mirror-curves", quote: "The storyteller would clean and smooth the ground, then use his fingertips to press into the sand a rectangular grid of equidistant dots. As he talked, he would trace a winding line among the dots."}
+      - {title: "UNESCO ICH: Sona, drawings and geometric figures on sand", url: "https://ich.unesco.org/en/RL/sona-drawings-and-geometric-figures-on-sand-01994", quote: "Practitioners mark reference points on a wet floor covered in sand using their index finger and pinkie, then trace lines around these points."}
+    note: ""
+  - card: lusona
+    fact: "Often the line is a single unbroken closed line (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Ivars Peterson, Sand Drawings and Mirror Curves, Science News (2001)", url: "https://www.sciencenews.org/article/sand-drawings-and-mirror-curves", quote: "More often than not, he would draw the line in one continuous motion to create a closed loop."}
+      - {title: "Darrah Chavey, Strip Symmetry Groups of African Sona Designs, Bridges 2010", url: "https://static1.bridgesmathart.org/2010/cdrom/proceedings/69/paper_69.pdf", quote: "a grid of dots with a curve passing through the grid ... to form a single continuous curve"}
+    note: ""
+  - card: lusona
+    fact: "Storytellers drew sona while telling fables; they served as memory aids"
+    verdict: confirmed
+    sources:
+      - {title: "Ivars Peterson, Sand Drawings and Mirror Curves, Science News (2001)", url: "https://www.sciencenews.org/article/sand-drawings-and-mirror-curves", quote: "To accompany the telling of a story or recounting of a fable, men of the Chokwe people ... traditionally made sand drawings, called sona , to illustrate the tale. These highly stylized geometric illustrations also served as memory aids."}
+      - {title: "UNESCO ICH: Sona, drawings and geometric figures on sand", url: "https://ich.unesco.org/en/RL/sona-drawings-and-geometric-figures-on-sand-01994", quote: "a means of transmitting stories, knowledge and collective memory to new generations"}
+    note: ""
+  - card: lusona
+    fact: "The line could stand for a fence, a river or a path; the dots for figures of the story"
+    verdict: confirmed
+    sources:
+      - {title: "Tim Brookes, Sona, Atlas of Endangered Alphabets", url: "https://www.endangeredalphabets.net/alphabets/sona/", quote: "The drawn line may represent a river, a fence, a wall, a journey ... sometimes the dots themselves are enlarged or altered, becoming characters in the story"}
+      - {title: "Ivars Peterson, Sand Drawings and Mirror Curves, Science News (2001)", url: "https://www.sciencenews.org/article/sand-drawings-and-mirror-curves", quote: "a rabbit, positioned at point B, discovers a salt mine (point A). Immediately, a lion (point C) ... The rabbit ... makes a fence to isolate the mine"}
+    note: ""
+  - card: lusona
+    fact: "Paulus Gerdes showed symmetry and monolinearity were cultural values and families of sona follow construction rules"
+    verdict: confirmed
+    sources:
+      - {title: "Demaine, Demaine, Taslakian and Toussaint, Sand drawings and Gaussian graphs, J. Mathematics and the Arts (2007)", url: "https://erikdemaine.org/papers/Sona_JMA/paper.pdf", quote: "Paulus Gerdes ... divides these drawings into classes based on the dimensions of the grid of dots and their method of construction, and studies monolinearity and symmetry as cultural values"}
+      - {title: "Darrah Chavey, Strip Symmetry Groups of African Sona Designs, Bridges 2010", url: "https://static1.bridgesmathart.org/2010/cdrom/proceedings/69/paper_69.pdf", quote: "The conclusion of Gerdes [8], where chapter 3 is titled “Symmetry and Monolinearity as Cultural Values,” is that symmetry and monolinearity are both strongly desired features"}
+    note: ""
+  - card: lusona
+    fact: "In plaited-mat designs the number of loops equals the gcd of rows and columns, Euclid's algorithm (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Ivars Peterson, Sand Drawings and Mirror Curves, Science News (2001)", url: "https://www.sciencenews.org/article/sand-drawings-and-mirror-curves", quote: "For a plaited mat design on an m by n rectangular array, you would need as many curves as the greatest common divisor of m and n"}
+      - {title: "Demaine, Demaine, Taslakian and Toussaint, Sand drawings and Gaussian graphs, J. Mathematics and the Arts (2007)", url: "https://erikdemaine.org/papers/Sona_JMA/paper.pdf", quote: "One such algorithm uses Euclid’s algorithm for computing the greatest common divisor of two natural numbers."}
+    note: ""
+  - card: lusona
+    fact: "UNESCO inscribed sona in 2023"
+    verdict: confirmed
+    sources:
+      - {title: "UNESCO ICH: Sona, drawings and geometric figures on sand", url: "https://ich.unesco.org/en/RL/sona-drawings-and-geometric-figures-on-sand-01994", quote: "Inscribed in 2023 ( 18.COM ) on the Representative List of the Intangible Cultural Heritage of Humanity"}
+      - {title: "Forbes Portugal: Desenhos Sona de Angola admitidos na lista da UNESCO (2023)", url: "https://www.forbespt.com/desenhos-sona-de-angola-admitidos-na-lista-de-patrimonio-cultural-imaterial-da-unesco", quote: "Os desenhos geométricos na areia, que fazem parte da tradição Sona, da cultura dos Tchokwe, em Angola, foram inscritos na lista de Património Cultural Imaterial da UNESCO"}
+    note: ""
+  - card: lukasa
+    fact: "The Luba kingdom, in the southern DR Congo, was a powerful central African state from the 16th century until colonial rule"
+    verdict: confirmed
+    sources:
+      - {title: "Juliet Moss, Lukasa (Memory Board), Smarthistory (2015)", url: "https://smarthistory.org/lukasa-memory-board-luba-peoples/", quote: "The Luba Kingdom of the Democratic Republic of Congo was a very powerful and influential presence from the sixteenth to the early twentieth centuries in central Africa."}
+      - {title: "Encyclopaedia Britannica: Luba", url: "https://www.britannica.com/topic/Luba-people", quote: "the beginnings of the empire emerging by the 14th century. In the 16th and 17th centuries, most of the Luba were ruled by a paramount chief ... The Luba empire was fragmented by Belgian colonization"}
+    note: ""
+  - card: lukasa
+    fact: "Luba history was recited from memory with the lukasa"
+    verdict: confirmed
+    sources:
+      - {title: "Juliet Moss, Lukasa (Memory Board), Smarthistory (2015)", url: "https://smarthistory.org/lukasa-memory-board-luba-peoples/", quote: "in the Luba Kingdom of the Democratic Republic of Congo, history was traditionally performed—not read ... The master who has the skill and knowledge to read the lukasa will utilize it as a mnemonic device"}
+      - {title: "Allen Memorial Art Museum, Oberlin: Lukasa 2017.10.10", url: "https://allenartcollection.oberlin.edu/objects/37935/lukasa-memory-board", quote: "This helped them to recite ancestral lineages, describe the territorial boundaries of local chiefdoms, and recall the founding and history of the kingdom."}
+    note: ""
+  - card: lukasa
+    fact: "A lukasa is a hand-held wooden board, narrow at the centre to fit the palm (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Juliet Moss, Lukasa (Memory Board), Smarthistory (2015)", url: "https://smarthistory.org/lukasa-memory-board-luba-peoples/", quote: "Each lukasa is different but small enough to hold in the left hand ... The board is narrower at the center making it easy to hold."}
+      - {title: "The Metropolitan Museum of Art: Memory Board (Lukasa)", url: "https://www.metmuseum.org/art/collection/search/690570", quote: "Lukasa , or memory boards, are hand-held wooden objects"}
+    note: ""
+  - card: lukasa
+    fact: "It is studded with beads, shells and pegs or carved with signs (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "The Metropolitan Museum of Art: Memory Board (Lukasa)", url: "https://www.metmuseum.org/art/collection/search/690570", quote: "many lukasa utilize a system of denotation based on masses of shells and beads affixed to their wooden surfaces, this example communicates its content through incised designs"}
+      - {title: "Juliet Moss, Lukasa (Memory Board), Smarthistory (2015)", url: "https://smarthistory.org/lukasa-memory-board-luba-peoples/", quote: "touching and feeling the beads, shells, and pegs to recount history"}
+    note: ""
+  - card: lukasa
+    fact: "Configurations of large and small beads, lines and clusters stand for chiefs, places and events"
+    verdict: confirmed
+    sources:
+      - {title: "Juliet Moss, Lukasa (Memory Board), Smarthistory (2015)", url: "https://smarthistory.org/lukasa-memory-board-luba-peoples/", quote: "The lukasa is typically arranged with large beads surrounded by smaller beads or a line of beads, the configuration of which dictates certain kinds of information."}
+      - {title: "The Metropolitan Museum of Art: Memory Board (Lukasa)", url: "https://www.metmuseum.org/art/collection/search/690570", quote: "human faces represent chiefs, historical figures, and mbudye members. The rectangular, circular, and ovoid elements denote organizing features within the chief's compound"}
+    note: ""
+  - card: lukasa
+    fact: "Lukasa belonged to the Mbudye, which kept and interpreted the kingdom's history and held political weight"
+    verdict: confirmed
+    sources:
+      - {title: "The Metropolitan Museum of Art: Memory Board (Lukasa)", url: "https://www.metmuseum.org/art/collection/search/690570", quote: "Mbudye is a council of men and women charged with sustaining and interpreting the political and historical principles of the Luba state ... mbudye provide a counterbalance to the power of kings and chiefs"}
+      - {title: "Allen Memorial Art Museum, Oberlin: Lukasa 2017.10.10", url: "https://allenartcollection.oberlin.edu/objects/37935/lukasa-memory-board", quote: "high-level initiates of the Mbudye society, who wielded substantial political influence in the Luba Kingdom"}
+    note: ""
+  - card: lukasa
+    fact: "Only members at the top of the Mbudye could read a lukasa (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "The Metropolitan Museum of Art: Memory Board (Lukasa)", url: "https://www.metmuseum.org/art/collection/search/690570", quote: "Only those at the apex of the association can decipher and interpret the lukasa 's intricate designs and motifs."}
+      - {title: "Allen Memorial Art Museum, Oberlin: Lukasa 2017.10.10", url: "https://allenartcollection.oberlin.edu/objects/37935/lukasa-memory-board", quote: "only high-level initiates of the Mbudye society ... can speak to their meaning"}
+    note: ""
+  - card: lukasa
+    fact: "The reader held it in one hand and traced it with the fingers of the other, reciting founding, king list and chiefdom boundaries (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Juliet Moss, Lukasa (Memory Board), Smarthistory (2015)", url: "https://smarthistory.org/lukasa-memory-board-luba-peoples/", quote: "The board is “read” by touching its surface with the right forefinger ... recitation of the names of the royal Luba line"}
+      - {title: "Allen Memorial Art Museum, Oberlin: Lukasa 2017.10.10", url: "https://allenartcollection.oberlin.edu/objects/37935/lukasa-memory-board", quote: "an Mbudye member would trace their fingers over the lukasa’s beads, bumps, and incisions. This helped them to recite ancestral lineages, describe the territorial boundaries of local chiefdoms, and recall the founding and history of the kingdom."}
+    note: ""
+  - card: lukasa
+    fact: "The kingdom broke up under Belgian colonial rule"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Luba", url: "https://www.britannica.com/topic/Luba-people", quote: "The Luba empire was fragmented by Belgian colonization"}
+      - {title: "Juliet Moss, Lukasa (Memory Board), Smarthistory (2015)", url: "https://smarthistory.org/lukasa-memory-board-luba-peoples/", quote: "a very powerful and influential presence from the sixteenth to the early twentieth centuries"}
+    note: ""
+  - card: lukasa
+    fact: "Lukasa boards are in museums in New York and Ohio"
+    verdict: confirmed
+    sources:
+      - {title: "The Metropolitan Museum of Art: Memory Board (Lukasa)", url: "https://www.metmuseum.org/art/collection/search/690570", quote: "Memory Board (Lukasa) Luba 19th–20th century ... The Metropolitan Museum of Art"}
+      - {title: "Allen Memorial Art Museum, Oberlin: Lukasa 2017.10.10", url: "https://allenartcollection.oberlin.edu/objects/37935/lukasa-memory-board", quote: "Allen Memorial Art Museum, Oberlin, OH ... Object number 2017.10.10"}
+    note: ""
+  - card: lukasa
+    fact: "Each board is unique"
+    verdict: confirmed
+    sources:
+      - {title: "The Metropolitan Museum of Art: Memory Board (Lukasa)", url: "https://www.metmuseum.org/art/collection/search/690570", quote: "Each board's design is unique"}
+      - {title: "Juliet Moss, Lukasa (Memory Board), Smarthistory (2015)", url: "https://smarthistory.org/lukasa-memory-board-luba-peoples/", quote: "Each lukasa is different"}
+    note: ""
+  - card: dikenga
+    fact: "Bakongo priests of Africa's south-west coast drew the cosmos as a cross: one line the boundary between living and dead, the other the path of power from below to above (also wow)"
+    verdict: corrected
+    sources:
+      - {title: "Leland Ferguson, Magic Bowls, NPS African American Heritage and Ethnography", url: "https://www.nps.gov/ethnography/aah/aaheritage/lowCountry_furthRdg4.htm", quote: "depictions of the cosmos traditional among Bakongo priests from the southwest coast of Africa ... a simple cross with one line representing the boundary between the living world and that of the dead, and the other representing the path of power from below to above"}
+      - {title: "Kara Ann Morrow, Bakongo Afterlife and Cosmological Direction, Athanor XX", url: "https://journals.flvc.org/athanor/article/download/126599/126087/207232", quote: "This cross is known as the Kongo yowa ... The horizontal line marks the water boundary between ntoto (earth) and mpemba"}
+    note: "DAACS paraphrases Ferguson 1992 (same underlying text); replaced by Morrow (Kongo yowa, horizontal line = water boundary)."
+  - card: dikenga
+    fact: "The living world is imagined as a mountain over water, the land of the dead"
+    verdict: confirmed
+    sources:
+      - {title: "Leland Ferguson, Magic Bowls, NPS African American Heritage and Ethnography", url: "https://www.nps.gov/ethnography/aah/aaheritage/lowCountry_furthRdg4.htm", quote: "Bakongo philosophers explain the land of the living as a mountain over a watery barrier separating this world from the land of the dead beneath."}
+      - {title: "Kara Ann Morrow, Bakongo Afterlife and Cosmological Direction, Athanor XX", url: "https://journals.flvc.org/athanor/article/download/126599/126087/207232", quote: "The N’Kongo ... thought of the earth as a mountain over a body of water which is the land of the dead, called Mpemba."}
+    note: ""
+  - card: dikenga
+    fact: "The sun rises over the living, sets into the water, lights the land of the dead at night and rises again: birth, death and rebirth"
+    verdict: confirmed
+    sources:
+      - {title: "Leland Ferguson, Magic Bowls, NPS African American Heritage and Ethnography", url: "https://www.nps.gov/ethnography/aah/aaheritage/lowCountry_furthRdg4.htm", quote: "Each day the sun rises over the earth and proceeds ... across the sky to set in the water. Then, during earthly nighttime, the sun illuminates the underside of the universe, the land of the dead, until it rises again ... representing the continuity of life: birth, death, and rebirth"}
+      - {title: "Seattle Art Museum: Long Steps Never Broke a Back, Kongo cosmogram panel", url: "https://www1.seattleartmuseum.org/Exhibit/Archive/longsteps/f2.htm", quote: "The first position is the sun at six in the morning, the second at the zenith of the day, the third setting at six in the afternoon, then the fourth at midnigh"}
+    note: "Seattle Art Museum panel (four positions of the sun, midnight) added."
+  - card: dikenga
+    fact: "The sign is called the Kongo cosmogram, linked to the four moments of the sun"
+    verdict: corrected
+    sources:
+      - {title: "Seattle Art Museum: Long Steps Never Broke a Back, Kongo cosmogram panel", url: "https://www1.seattleartmuseum.org/Exhibit/Archive/longsteps/f2.htm", quote: "Dikenga is from the verb kenga ... The first position is the sun at six in the morning, the second at the zenith of the day, the third setting at six in the afternoon, then the fourth at midnigh"}
+      - {title: "J. W. Joseph, African American Archaeology, New Georgia Encyclopedia (2009)", url: "https://www.georgiaencyclopedia.org/articles/history-archaeology/african-american-archaeology/", quote: "particularly the Bakonogo Cosmogram or dikenga dia Kongo"}
+    note: "The name 'dikenga' was unsourced; Seattle Art Museum and New Georgia Encyclopedia (J. W. Joseph) added. NGA page only names the exhibition."
+  - card: dikenga
+    fact: "South Carolina archaeologists cataloguing colonoware noticed crosses scratched into the bottoms of bowls (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Leland Ferguson, Magic Bowls, NPS African American Heritage and Ethnography", url: "https://www.nps.gov/ethnography/aah/aaheritage/lowCountry_furthRdg4.htm", quote: "While cataloging thousands of Colono Ware sherds, South Carolina archaeologists began noticing marks on the bases of some bowls. Most of these marks were simple crosses."}
+      - {title: "DAACS: Colonoware", url: "https://new.daacs.org/?p=238", quote: "these infrequently occurring marks, located on the bases of colonoware bowls in particular"}
+    note: ""
+  - card: dikenga
+    fact: "Colonoware is handmade earthenware used by enslaved people"
+    verdict: confirmed
+    sources:
+      - {title: "DAACS: Colonoware", url: "https://new.daacs.org/?p=238", quote: "Enslaved individuals used colonoware on a daily basis for cooking, transport, and storage purposes."}
+      - {title: "Leland Ferguson, Magic Bowls, NPS African American Heritage and Ethnography", url: "https://www.nps.gov/ethnography/aah/aaheritage/lowCountry_furthRdg4.htm", quote: "the exclusive archaeological association of marks with handbuilt earthenware bowls ... slaves were using large amounts of European ware as well as Colono Ware"}
+    note: ""
+  - card: dikenga
+    fact: "Most marked pieces came from rivers rather than slave quarters (also wow)"
+    verdict: corrected
+    sources:
+      - {title: "Leland Ferguson, Magic Bowls, NPS African American Heritage and Ethnography", url: "https://www.nps.gov/ethnography/aah/aaheritage/lowCountry_furthRdg4.htm", quote: "Although marked pieces had been found around former slave quarters, most were picked up in adjacent rivers."}
+      - {title: "Christopher Espenshade, A River of Doubt (ScholarWorks UMass)", url: "https://scholarworks.umass.edu/server/api/core/bitstreams/e6975976-00a2-4461-80f3-455dd0d69cbd/content", quote: "the fact that most of these vessels were recovered from underwater contexts"}
+    note: "Both sources were Ferguson's own; Espenshade (critic) added as independent source."
+  - card: dikenga
+    fact: "Ferguson and colleagues linked the marks to Kongo cosmograms and argued the bowls served in Kongo-like rituals, perhaps holding medicines"
+    verdict: corrected
+    sources:
+      - {title: "Leland Ferguson, Magic Bowls, NPS African American Heritage and Ethnography", url: "https://www.nps.gov/ethnography/aah/aaheritage/lowCountry_furthRdg4.htm", quote: "called my attention to the similarity of the marks to Bakongo cosmograms ... suggests an interpretation of the bowls as receptacles in a ritual similar to those involving minkisi"}
+      - {title: "J. W. Joseph, African American Archaeology, New Georgia Encyclopedia (2009)", url: "https://www.georgiaencyclopedia.org/articles/history-archaeology/african-american-archaeology/", quote: "Archaeologist Leland Ferguson has examined cross marks found on colonoware pottery and believes that cross-marked vessels were used in African rituals and in the preparation of healing medicines."}
+    note: "DAACS paraphrased Ferguson; replaced by New Georgia Encyclopedia (J. W. Joseph)."
+  - card: dikenga
+    fact: "The reading is contested (dispute: Espenshade; Ferguson concedes he suggested rather than proved)"
+    verdict: confirmed
+    sources:
+      - {title: "Christopher Espenshade, A River of Doubt (ScholarWorks UMass)", url: "https://scholarworks.umass.edu/server/api/core/bitstreams/e6975976-00a2-4461-80f3-455dd0d69cbd/content", quote: "In this essay, I argue that marked Colonoware bowl fragments recovered from rivers in coastal South Carolina do not support an inference that African Americans engaged in waterside spiritual ceremonies"}
+      - {title: "Leland Ferguson, Comments on Espenshade's A River of Doubt (ScholarWorks UMass)", url: "https://hdl.handle.net/20.500.14394/843", quote: "I agree with Christopher Espenshade: I did not prove \"an association of marked Colonoware bowls with riverside ritual in 18th century South Carolina;\" ... I did, however, strongly suggest that to have been the case."}
+    note: ""
+unledgered:
+  - card: taharqa
+    fact: "Nuri lies across the Nile from Barkal"
+    verdict: unconfirmed
+    note: "Kendall only ('opposite bank'); reworded to 'nearby Nuri'."
+  - card: taharqa
+    fact: "Nastasen restored the pinnacle monument three centuries later"
+    verdict: confirmed
+    note: "Kendall: Nastasen late fourth century BC; Clio: 'à la fin du IVe siècle av. J.-C.'; Taharqa 690–664 BC."
+  - card: amanirenas
+    fact: "Strabo wrote in her lifetime"
+    verdict: confirmed
+    note: "Strabo: 'ruler of the Aethiopians in my time'; HISTORY: text completed around 21 BC."
+  - card: amanirenas
+    fact: "Garstang found the head early in the 20th century"
+    verdict: unconfirmed
+    note: "BM only (WHE unopened); removed from the body and from card sources (WHE)."
+  - card: faras-cathedral
+    fact: "Faras Gallery: Europe's only permanent display / largest collection ever brought back by a Polish museum"
+    verdict: unconfirmed
+    note: "MNW + its own press text on Popular Archaeology; replaced by gov.pl-supported wording."
+  - card: gnawa
+    fact: "Weston was from Brooklyn"
+    verdict: confirmed
+    note: "WBGO 'Born in Brooklyn'; Kapchan quotes the maalem: 'came all the way from Brooklyn'."
+  - card: gnawa
+    fact: "The Essaouira festival is held on the harbour square"
+    verdict: confirmed
+    note: "Qantara 'Moulay Hassan Square on the harbour'; Afropop 'Place Moulay Hassan ... Essaouira's historic port'."
+  - card: osun-osogbo
+    fact: "The grove lies on the edge of the town"
+    verdict: corrected
+    note: "UNESCO says 'in the heart of Osogbo', ICOMOS 'on the outskirts'; reworded to 'In the town lies a dense forest'."
+  - card: osun-osogbo
+    fact: "Yoruba groves stood outside town walls"
+    verdict: unconfirmed
+    note: "Removed; UNESCO and ICOMOS say every town had one."
+  - card: dogon-sirius
+    fact: "Sigui honours the dead of a whole generation"
+    verdict: unconfirmed
+    note: "Single journalist source; removed."
+  - card: dogon-sirius
+    fact: "Further: Sigui films 1967–1974"
+    verdict: corrected
+    note: "End year unverified; further item now reads 'begun in 1967' (CREM-CNRS 1967 record)."
+  - card: ifa-divination
+    fact: "Ifá in Brazilian Candomblé"
+    verdict: unconfirmed
+    note: "LACMA only; removed together with the [[candomble]] link."
+  - card: lusona
+    fact: "The Luba lie 'further north' of the Chokwe"
+    verdict: corrected
+    note: "Upemba (lat −8.6, lon 26.4) lies north-east of Lunda (−9.7, 20.4); now 'to the north-east'."
+  - card: dikenga
+    fact: "The cosmogram is called dikenga"
+    verdict: confirmed
+    note: "Seattle Art Museum: 'Dikenga is from the verb kenga'; New Georgia Encyclopedia: 'Bakonogo Cosmogram or dikenga dia Kongo'."
+  - card: dikenga
+    fact: "The debate matters 'far beyond one county'"
+    verdict: corrected
+    note: "No county is named anywhere in the card; now 'far beyond South Carolina'."
