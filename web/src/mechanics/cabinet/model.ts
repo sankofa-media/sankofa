@@ -99,6 +99,8 @@ export const HEAP = 'heap';
 export interface Fact {
   /** cache:<id>, artifact:<id> or drawer:<id> */
   id: string;
+  /** `image`: what a picture shows, which its own source page states */
+  about?: 'image';
   claim: string;
   sources: { title: string; url: string; quote: string; opened?: string }[];
 }
@@ -166,7 +168,9 @@ export function validateCabinet(f: CabinetFile, k: Known): string[] {
     // Two sources from one site are one source; a museum card was checked on its own.
     const hosts = new Set(strong.map((s) => host(s.url)));
     const fromCard = strong.some((s) => s.url.startsWith('card:'));
-    if (!fromCard && hosts.size < 2) errs.push(`ledger: ${fact.id}: "${fact.claim.slice(0, 60)}" needs two independent sources with quotes (Wikipedia does not count)`);
+    // What a picture shows rests on the picture's own source page.
+    const ofImage = fact.about === 'image' && strong.length >= 1;
+    if (!fromCard && !ofImage && hosts.size < 2) errs.push(`ledger: ${fact.id}: "${fact.claim.slice(0, 60)}" needs two independent sources with quotes (Wikipedia does not count)`);
     for (const s of fact.sources) if (s.url.startsWith('card:') && !k.cards.has(s.url.slice(5))) errs.push(`ledger: ${fact.id}: card ${s.url.slice(5)} does not exist`);
     const [kind, id] = fact.id.split(':');
     const ok = kind === 'artifact' ? art.has(id) : kind === 'cache' ? f.caches.some((c) => c.id === id) : kind === 'drawer' ? drawers.has(id) : false;
@@ -176,7 +180,7 @@ export function validateCabinet(f: CabinetFile, k: Known): string[] {
   for (const d of f.drawers) {
     if (!filled(d.label)) errs.push(`drawer ${d.id}: label needs English and Russian`);
     if (d.intro && !filled(d.intro)) errs.push(`drawer ${d.id}: intro needs English and Russian`);
-    if (d.intro && !factsBy.has(`drawer:${d.id}`)) errs.push(`drawer ${d.id}: its intro has no facts in the ledger`);
+    if (d.intro && d.id !== HEAP && !factsBy.has(`drawer:${d.id}`)) errs.push(`drawer ${d.id}: its intro has no facts in the ledger`);
     if (d.lock && !keys.has(d.lock)) errs.push(`drawer ${d.id}: key ${d.lock} does not exist`);
     for (const a of d.contents ?? []) if (!art.has(a)) errs.push(`drawer ${d.id}: artifact ${a} does not exist`);
   }
