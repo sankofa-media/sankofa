@@ -463,6 +463,7 @@ export class Atlas {
         {},
         h('h3', { tabindex: '-1' }, c.name[lang()]),
         h('p.cn-count', {}, rows.length ? `${count(rows.length, 'card')} · ${range}` : pick({ en: 'No cards in your copy of the museum.', ru: 'В вашем экземпляре музея карточек нет.' })),
+        c.disputed ? h('p.cn-disputed', {}, pick({ en: 'Its status is disputed; the museum lists it under no state.', ru: 'Статус этой территории оспаривается; музей не относит её ни к одному государству.' })) : null,
         c.about ? h('p.cn-about', {}, c.about[lang()]) : null,
       ),
       h(

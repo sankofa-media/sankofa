@@ -19,6 +19,8 @@ interface Entry {
   iso: string;
   name: { en: string; ru: string };
   about?: { en: string; ru: string };
+  /** A territory whose status is disputed: listed under no state. */
+  disputed?: boolean;
 }
 
 const [cardsPath, yamlPath, outPath] = process.argv.slice(2);
@@ -104,7 +106,7 @@ if (errors.length) {
 const countries = [...tally.entries()]
   .map(([iso, list]) => {
     const e = byIso.get(iso)!;
-    return { id: e.id, iso, name: e.name, ...(e.about ? { about: e.about } : {}), cards: list };
+    return { id: e.id, iso, name: e.name, ...(e.disputed ? { disputed: true } : {}), ...(e.about ? { about: e.about } : {}), cards: list };
   })
   .sort((a, b) => a.id.localeCompare(b.id));
 writeFileSync(outPath, JSON.stringify({ countries }) + '\n');

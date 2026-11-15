@@ -27,6 +27,8 @@ export interface Country {
   name: Bilingual;
   /** The short header; absent when it could not be sourced. */
   about?: Bilingual;
+  /** A territory whose status is disputed, listed under no state. */
+  disputed?: boolean;
   cards: CountryCard[];
 }
 

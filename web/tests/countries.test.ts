@@ -66,8 +66,9 @@ describe('the built countries file', () => {
   });
 
   it('follows content/countries.yaml where the outlines are wrong', () => {
-    // Crimea is Ukraine; border towns stand on their own side.
-    expect(of('mary-seacole')).toEqual(['jamaica', 'ukraine', 'united-kingdom']);
+    // Disputed territories stand under no state; border towns stand on their own side.
+    expect(of('mary-seacole')).toEqual(['crimea', 'jamaica', 'united-kingdom']);
+    expect(of('african-quarter-jerusalem')).toEqual(['jerusalem']);
     expect(of('mapungubwe-rhino')).toEqual(['south-africa']);
     expect(of('parsley-massacre')).toEqual(['dominican-republic', 'haiti']);
     expect(of('gannibal')).toContain('cameroon');
