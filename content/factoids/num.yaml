@@ -12,13 +12,13 @@
   gender: none
   region: europe
   sources:
-  - title: 'Goldsmiths, University of London: Windrush passenger list'
-    url: https://www.gold.ac.uk/windrush/passenger-list/
-    quote: 1,027 individual landing cards representing each passenger who arrived on the MV Empire Windrush at Tilbury docks on 22 June 1948.
-  - title: 'UK Home Office: Bringing a Piece of Home'
-    url: https://assets.publishing.service.gov.uk/media/67b4b2e24a80c6718b55bf43/Bringing-a-Piece-of-Home.pdf
-    quote: According to the ship's official passenger list, there were 1,027 people on board
-  status: drafted
+    - title: 'Goldsmiths, University of London: Windrush passenger list'
+      url: https://www.gold.ac.uk/windrush/passenger-list/
+      quote: 1,027 individual landing cards representing each passenger who arrived on the MV Empire Windrush at Tilbury docks on 22 June 1948.
+    - title: 'UK Home Office: Bringing a Piece of Home'
+      url: https://assets.publishing.service.gov.uk/media/67b4b2e24a80c6718b55bf43/Bringing-a-Piece-of-Home.pdf
+      quote: According to the ship's official passenger list, there were 1,027 people on board
+  status: checked
 - id: fx-num-0004
   cat: num
   en: Black Brazilians, recorded as “preta”, accounted for 10.2% of Brazil's population in IBGE's 2022 census.
@@ -32,10 +32,10 @@
   gender: none
   region: latam
   sources:
-  - title: 'IBGE: Censo Demográfico 2022, Identificação étnico-racial da população'
-    url: https://biblioteca.ibge.gov.br/visualizacao/periodicos/3105/cd_2022_etnico_racial.pdf
-    quote: população de cor ou raça preta, de 7,6%, em 2010, para 10,2%, em 2022
-  - title: 'Antonio Sérgio Alfredo Guimarães: Race and color in contemporary Brazil, Table 1, Black row, 2022 column'
-    url: https://revistas.usp.br/ra/pt_BR/article/download/221938/213049/752607
-    quote: Black 19.7 14.6 14.6 11 8.7 5.9 5 6.2 7.6 10.2
-  status: drafted
+    - title: 'IBGE: Censo Demográfico 2022, Identificação étnico-racial da população'
+      url: https://biblioteca.ibge.gov.br/visualizacao/periodicos/3105/cd_2022_etnico_racial.pdf
+      quote: população de cor ou raça preta, de 7,6%, em 2010, para 10,2%, em 2022
+    - title: 'Antonio Sérgio Alfredo Guimarães: Race and color in contemporary Brazil, Table 1, Black row, 2022 column'
+      url: https://revistas.usp.br/ra/pt_BR/article/download/221938/213049/752607
+      quote: Black 19.7 14.6 14.6 11 8.7 5.9 5 6.2 7.6 10.2
+  status: checked

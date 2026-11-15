@@ -8,27 +8,7 @@
   gender: "none"
   region: "africa"
   sources: [ { "title": "V&A: A history of Asante gold", "url": "https://www.vam.ac.uk/articles/a-history-of-asante-gold-at-the-vanda", "quote": "In 2024, 17 items of Asante gold court regalia in the V&A’s collection went on show in Kumasi" }, { "title": "Museums Association: Asante gold loans", "url": "https://www.museumsassociation.org/museums-journal/news/2024/01/va-and-british-museum-to-loan-asante-gold-to-ghana/", "quote": "The V&A is lending 17 items in total" } ]
-  status: "drafted"
-- id: "fx-obj-0004"
-  cat: "obj"
-  en: "The British Museum selected fifteen Asante objects for a three-year loan to Kumasi's Manhyia Palace Museum in 2024."
-  ru: "В 2024 году Британский музей выделил пятнадцать предметов Асанте для передачи на три года дворцовому музею Манхия в Кумаси."
-  year: 2024
-  place: { "name": "Kumasi", "lat": 6.6885, "lon": -1.6244 }
-  cards: []
-  gender: "none"
-  region: "africa"
-  sources:
-    - title: 'British Museum: Asante regalia loan announcement, 25 January 2024'
-      url: >-
-        https://www.britishmuseum.org/sites/default/files/2024-01/Asante_regalia_to_be_displayed_in_Ghana_for_first_time_in_150_years.pdf
-      quote: 15 items from the British Museum are planned for loan to the Manhyia Palace Museum
-    - title: 'Museums Association: Asante gold loans'
-      url: >-
-        https://www.museumsassociation.org/museums-journal/news/2024/01/va-and-british-museum-to-loan-asante-gold-to-ghana/
-      quote: >-
-        15 objects have been selected by the Manhyia Palace Museum from the British Museum’s collection.
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0005"
   cat: "obj"
   en: "UCLA's Fowler Museum permanently returned seven royal objects to Ghana's Asante kingdom in 2024."
@@ -48,7 +28,7 @@
         https://www.theartnewspaper.com/2024/02/05/fowler-museum-los-angeles-asante-repatriation-ghana
       quote: >-
         The Fowler Museum at UCLA has repatriated seven artefacts that were taken during the Sagrenti War of 1874
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0007"
   cat: "obj"
   en: "The Netherlands' 2025 restitution of Benin objects combined 113 pieces from the state collection with six owned by Rotterdam."
@@ -67,7 +47,7 @@
       url: https://rotterdam.wereldmuseum.nl/en/restitution-benin-bronzes-returning-home-nigeria
       quote: >-
         113 of the objects were part of the Dutch State Collection, while the remaining six are given back by the Municipality of Rotterdam.
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0008"
   cat: "obj"
   en: "The Smithsonian transferred ownership of twenty-nine Benin artworks to Nigeria in 2022."
@@ -89,7 +69,7 @@
         https://www.theartnewspaper.com/2022/10/11/benin-bronzes-us-museum-collections-repatriated-nigeria
       quote: >-
         assume ownership of 29 artefacts that were deaccessioned earlier this year from the Smithsonian collections
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0009"
   cat: "obj"
   en: "Aberdeen University bought its Benin royal head at auction in 1957, decades before deciding to return it to Nigeria."
@@ -100,11 +80,11 @@
   gender: "m"
   region: "europe"
   sources: [ { "title": "University of Aberdeen: Benin bronze to return", "url": "https://aberdeenuni-newsroom.prgloo.com/news/benin-bronze-to-return", "quote": "The bronze sculpture depicting an Oba (king) of Benin was acquired by the University in 1957 at an auction" }, { "title": "The Art Newspaper: Aberdeen bronze acquisition and valuation", "url": "https://www.theartnewspaper.com/2021/04/29/scottish-university-claims-benin-bronze-bought-for-pound750-is-worth-pound500000but-is-that-now-really-the-case", "quote": "Aberdeen University’s Benin bronze, which is being restituted to Nigeria, was bought at Sotheby’s in 1957 for £750." } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0010"
   cat: "obj"
-  en: "The 1779 double portrait of Dido Belle and Elizabeth Murray belongs to the Earl of Mansfield's collection at Scone Palace."
-  ru: "Двойной портрет Дайдо Белль и Элизабет Мюррей 1779 года принадлежит собранию графа Мэнсфилда во дворце Скон."
+  en: "The 1779 double portrait of Lady Elizabeth Murray and Dido Belle hangs in Scone Palace's Ambassador's Room."
+  ru: "Двойной портрет леди Элизабет Мюррей и Дайдо Белль 1779 года висит в Посольской комнате дворца Скон."
   year: 1779
   place: { "name": "Scone Palace, Perth", "lat": 56.422, "lon": -3.439 }
   cards: [ "dido-belle" ]
@@ -119,11 +99,11 @@
       url: >-
         https://www.english-heritage.org.uk/siteassets/home/learn/teaching-resources/lady-elizabeth-and-dido-belle-sources_kenwood-teachers-kit.pdf
       quote: DOUBLE PORTRAIT (1779)
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0011"
   cat: "obj"
-  en: "Velázquez painted his enslaved assistant Juan de Pareja in Italy in 1650, creating the portrait now held by the Metropolitan Museum."
-  ru: "В 1650 году Веласкес написал в Италии портрет своего порабощённого помощника Хуана де Парехи, ныне хранящийся в Метрополитен-музее."
+  en: "Velázquez painted Juan de Pareja in Rome in 1650; the portrait is now in the Metropolitan Museum."
+  ru: "В 1650 году в Риме Веласкес написал портрет Хуана де Парехи, ныне хранящийся в Метрополитен-музее."
   year: 1650
   place: { "name": "Rome", "lat": 41.9028, "lon": 12.4964 }
   cards: [ "pareja-calling-of-matthew" ]
@@ -137,7 +117,7 @@
       url: https://fashionhistory.fitnyc.edu/1650-velazquez-juan-de-pareja/
       quote: >-
         He executed this portrait while he and de Pareja were in Italy to paint Pope Innocent X in 1650
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0012"
   cat: "obj"
   en: "Marie-Guillemine Benoist's portrait of a Black woman, painted in 1800, is preserved in the Louvre."
@@ -155,11 +135,11 @@
       url: >-
         https://www.culture.gouv.fr/thematiques/musees/Les-musees-en-France/les-collections-des-musees-de-france/decouvrir-les-collections/les-femmes-artistes-sortent-de-leur-reserve/icones/Benoist-Marie-Guillemine
       quote: Marie-Guillemine Benoist, Portrait d'une femme noire, 1800, Paris, musée du Louvre
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0013"
   cat: "obj"
-  en: "Ashley's Sack resurfaced at a flea market in 2007 before its buyer donated it to Middleton Place."
-  ru: "«Мешок Эшли» обнаружился на блошином рынке в 2007 году, после чего покупательница передала его музею Миддлтон-Плейс."
+  en: "Ashley's Sack surfaced at a flea market in Springfield, Tennessee, in 2007."
+  ru: "В 2007 году «Мешок Эшли» обнаружился на блошином рынке в Спрингфилде, штат Теннесси."
   year: 2007
   place: { "name": "Tennessee", "lat": 36.16, "lon": -86.78 }
   cards: []
@@ -174,11 +154,11 @@
       url: >-
         https://www.neh.gov/sites/default/files/Ashley%27s%20Sack%20%28African-American%20History%29.pdf
       quote: discovered in 2007 by a flea market shopper in a bin of rags and old fabrics.
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0014"
   cat: "obj"
-  en: "Edmonia Lewis's marble Forever Free, dated 1867, pairs a standing man with a kneeling woman and belongs to Howard University's collection."
-  ru: "Мраморная композиция Эдмонии Льюис «Свободны навеки» 1867 года изображает стоящего мужчину и коленопреклонённую женщину и принадлежит собранию Говардского университета."
+  en: "Edmonia Lewis's marble Forever Free (1867) belongs to the Howard University Gallery of Art in Washington, D.C."
+  ru: "Мраморная скульптура Эдмонии Льюис «Свободны навеки» (1867) хранится в художественной галерее Говардского университета в Вашингтоне."
   year: 1867
   place: { "name": "Washington", "lat": 38.9227, "lon": -77.0194 }
   cards: [ "death-of-cleopatra-lewis" ]
@@ -191,7 +171,7 @@
     - title: 'University of California Press: Unforgettables, excerpt'
       url: https://content.ucpress.edu/title/9780520385559/9780520385559_unforgettables.pdf
       quote: Edmonia Lewis, Forever Free, 1867.
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0015"
   cat: "obj"
   en: Yale holds Joanna Boyce Wells's 1861 oil study of Jamaican-born model Fanny Eaton.
@@ -210,11 +190,11 @@
     - title: 'The Victorian Web: Study of Fanny Eaton, by Joanna Boyce Wells'
       url: https://www.victorianweb.org/painting/wellsjb/paintings/2.html
       quote: 1861 Oil on paper laid to linen
-  status: "drafted"
+  status: "unverified"
 - id: "fx-obj-0016"
   cat: "obj"
-  en: "Camille Silvy photographed Sarah Forbes Bonetta on 15 September 1862, producing albumen portraits preserved by London's National Portrait Gallery."
-  ru: "15 сентября 1862 года Камиль Сильви сфотографировал Сару Форбс Бонетту: альбуминовые отпечатки хранятся в лондонской Национальной портретной галерее."
+  en: "Camille Silvy photographed Sarah Forbes Bonetta on 15 September 1862, producing albumen prints."
+  ru: "15 сентября 1862 года Камиль Сильви сфотографировал Сару Форбс Бонетту, сделав альбуминовые отпечатки."
   year: 1862
   place: { "name": "London", "lat": 51.5074, "lon": -0.1278 }
   cards: []
@@ -228,11 +208,11 @@
     - title: 'English Heritage: Portrait of Queen Victoria''s African goddaughter'
       url: https://www.english-heritage.org.uk/about/search-news/pr-sarah-forbes-bonetta/
       quote: Sarah Forbes Bonetta (Sarah Davies), by Camille Silvy, albumen print, 15 September 1862
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0017"
   cat: "obj"
-  en: "Albert Charles Challen's 1869 portrait of Mary Seacole is painted in oil on a wooden panel, now in London's National Portrait Gallery."
-  ru: "Портрет Мэри Сикол, написанный Альбертом Чарльзом Чалленом в 1869 году, выполнен маслом на деревянной панели и хранится в лондонской Национальной портретной галерее."
+  en: "Albert Charles Challen's 1869 portrait of Mary Seacole is painted in oil on panel."
+  ru: "Портрет Мэри Сикол, написанный Альбертом Чарльзом Чалленом в 1869 году, выполнен маслом на дереве."
   year: 1869
   place: { "name": "London", "lat": 51.5074, "lon": -0.1278 }
   cards: [ "mary-seacole" ]
@@ -245,7 +225,7 @@
     - title: 'English Heritage: Mary Seacole'
       url: https://www.english-heritage.org.uk/visit/blue-plaques/mary-seacole/
       quote: Mary Seacole in an 1869 portait by Albert Charles Challen.
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0018"
   cat: "obj"
   en: "Queen Victoria gave Harriet Tubman a shawl around 1897, now displayed in the National Museum of African American History and Culture."
@@ -264,7 +244,7 @@
       url: https://www.searchablemuseum.com/harriet-tubmans-shawl/
       quote: >-
         In 1897, England’s Queen Victoria showed her admiration for Harriet Tubman when she gifted her with this shawl.
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0019"
   cat: "obj"
   en: "The Henry Ford bought the Rosa Parks bus at an online auction in 2001."
@@ -281,7 +261,7 @@
     - title: 'National Bus Trader: The Rosa Parks Bus'
       url: https://busmag.com/wp-content/uploads/2019/02/RPBus.pdf
       quote: In late October of 2001 saw Robert Lifson offer the bus through MastroNet.
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0020"
   cat: "obj"
   en: "Harriet Powers's Pictorial Quilt, completed by 1898, survives in Boston's Museum of Fine Arts."
@@ -292,7 +272,7 @@
   gender: "f"
   region: "us"
   sources: [ { "title": "Museum of Fine Arts, Boston: Pictorial quilt", "url": "https://artsandculture.google.com/asset/pictorial-quilt/ZwFBUaPbXHr2FA", "quote": "Harriet Powers 1895 - 1898" }, { "title": "US Postal Service: Harriet Powers stamps", "url": "https://about.usps.com/newsroom/national-releases/2026/0213ma-harriet-powers-stamps-to-be-issued-feb-28.pdf", "quote": "completed in 1898, remained in the Hall family for 62 years." } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0021"
   cat: "obj"
   en: >-
@@ -312,11 +292,11 @@
       url: >-
         https://newarkmuseumart.org/wp-content/uploads/2022/04/Identity-Equity-Curriculum-Guide.pdf
       quote: Edmonia Lewis, Hiawatha, 1868 Marble, 4 x
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0022"
   cat: "obj"
-  en: "Faith Ringgold's 1988 Tar Beach combines painted canvas with a fabric border in a story quilt held by the Guggenheim."
-  ru: "В «Пляже на крыше» 1988 года Фейт Рингголд соединила живопись на холсте с тканевой каймой: это одеяло-рассказ хранится в музее Гуггенхайма."
+  en: "Faith Ringgold's 1988 Tar Beach combines oil paint on canvas with printed fabric, ink and thread."
+  ru: "В «Пляже на крыше» 1988 года Фейт Рингголд соединила масло на холсте с набивной тканью, тушью и нитью."
   year: 1988
   place: { "name": "New York", "lat": 40.783, "lon": -73.959 }
   cards: [ "ringgold-die" ]
@@ -330,11 +310,11 @@
       url: >-
         https://www.museepicassoparis.fr/sites/default/files/2025-06/DP%20Faith%20Ringgold%20UK.pdf
       quote: 1988 Huile, toile, tissu imprimé, encre, fil
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0023"
   cat: "obj"
-  en: "Wedgwood's 1787 antislavery medallion turned a kneeling, shackled Black man into a ceramic emblem of the abolition campaign."
-  ru: "Антирабовладельческий медальон Веджвуда 1787 года превратил изображение коленопреклонённого чернокожего в цепях в керамическую эмблему борьбы за отмену рабства."
+  en: "In 1787, Josiah Wedgwood produced a ceramic medallion for the London Abolition Committee supporting abolition of the slave trade."
+  ru: "В 1787 году Джозайя Веджвуд выпустил для Лондонского комитета аболиционистов керамический медальон в поддержку отмены работорговли."
   year: 1787
   place: { "name": "Staffordshire", "lat": 53, "lon": -2.18 }
   cards: []
@@ -349,7 +329,7 @@
       url: https://www.vam.ac.uk/articles/the-wedgwood-anti-slavery-medallion/
       quote: >-
         In 1787, entrepreneurial potter Josiah Wedgwood (1730 – 95) produced a ceramic medallion in support of the abolition of the slave trade.
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0024"
   cat: "obj"
   en: "In 1788 British abolitionists commissioned the Brookes diagram, showing how people were squeezed aboard the slave ship."
@@ -360,11 +340,11 @@
   gender: "none"
   region: "europe"
   sources: [ { "title": "Royal Museums Greenwich: The slave ship Brooks", "url": "https://www.rmg.co.uk/collections/objects/rmgc-object-254938", "quote": "In 1788, abolitionists in Britain commissioned a drawing of how people were squeezed on board the ‘Brooks’" }, { "title": "Institute of Historical Research: The Brookes", "url": "https://archives.history.ac.uk/1807commemorated/exhibitions/museums/brookes.html", "quote": "First designed in Plymouth in 1788 and published in December 1788" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0025"
   cat: "obj"
   en: "An ivory horn from Kongo appeared in Cosimo de' Medici's 1553 inventory."
-  ru: "Резной рог из слоновой кости, изготовленный в Конго, значится в описи имущества Козимо Медичи 1553 года."
+  ru: "Рог из слоновой кости, изготовленный в Конго, значится в описи имущества Козимо I Медичи 1553 года."
   year: 1553
   place: { "name": "Florence", "lat": 43.7696, "lon": 11.2558 }
   cards: [ "afonso-kongo-letters" ]
@@ -377,7 +357,7 @@
     - title: 'Jeu de Paume, Sylvie Kandé: Sammy Baloji'
       url: https://jeudepaume.org/en/palm/sammy-baloji-constructing-a-shared-off-field/
       quote: an olifant from Kongo, listed in a 1553 inventory as belonging to Cosimo I de Medici.
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0027"
   cat: "obj"
   en: "The Shrine of Taharqa at Oxford's Ashmolean Museum was built around 680 BCE for the temple complex at Kawa in Nubia."
@@ -388,7 +368,7 @@
   gender: "m"
   region: "africa"
   sources: [ { "title": "Ashmolean Museum: Dynastic Egypt and Sudan gallery", "url": "https://ashmolean.org/ancient-egypt-and-nubia-gallery", "quote": "It was originally built around 680 BCE as part of the temple complex at Kawa in Nubia" }, { "title": "University of Southampton: Digital Imaging of Artefacts", "url": "https://www.southampton.ac.uk/~km2/papers/seals2018.pdf", "quote": "Shrine of Taharqa from Kawa, Sudan. c.680 BC. AN1936.661. Ashmolean Museum." } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0028"
   cat: "obj"
   en: "Amanishakheto's gold treasure, discovered in her Meroë pyramid in 1834, is divided principally between museums in Berlin and Munich."
@@ -406,7 +386,7 @@
     - title: 'Sudan and Nubia: Following the footprints of a jackal from Meroe to London'
       url: https://www.sudarchrs.org.uk/resources/publications/?attachment_id=1774
       quote: the bulk of the treasure was sold by Ferlini to the Berlin and Munich museums
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0029"
   cat: "obj"
   en: "The British Museum's Akan drum was collected in Virginia around 1730 before entering Hans Sloane's collection in England."
@@ -417,11 +397,11 @@
   gender: "none"
   region: "us"
   sources: [ { "title": "British Museum: Collecting and empire, large print guide", "url": "https://www.britishmuseum.org/sites/default/files/2024-10/Collecting_and_empire_large_print_guide.pdf", "quote": "Around 1730, a Reverend Clerk acquired the drum in Virginia" }, { "title": "Benjamina Efua Dadzie and Kwan Pa: The Akan Drum", "url": "https://100histories100worlds.org/the-akan-drum/", "quote": "Akan drum, collected in Virginia in ca. 1730, brought to England upon the request of Sir Hans Sloane." } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0030"
   cat: "obj"
-  en: "Lubaina Himid's 2004 installation Naming the Money gives names and stories to one hundred life-size painted figures."
-  ru: "В инсталляции «Назвать деньги» 2004 года Лубайна Химид наделила именами и историями сто расписных фигур в человеческий рост."
+  en: "Lubaina Himid's 2004 installation Naming the Money is made up of 100 life-size painted cut-out figures."
+  ru: "Инсталляция Лубайны Химид «Назвать деньги» 2004 года состоит из ста расписных фигур в человеческий рост."
   year: 2004
   place: { "name": "Newcastle upon Tyne", "lat": 54.9783, "lon": -1.6178 }
   cards: []
@@ -436,7 +416,7 @@
       url: https://www.ncl.ac.uk/press/articles/archive/2018/11/lubainahimidtalk/
       quote: >-
         Naming the Money was made up of 100 life size, cut outs painted, collaged and surrounded by an operatic soundtrack
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0031"
   cat: "obj"
   en: "France restituted twenty-six royal treasures to Benin, signing the transfer of ownership on 9 November 2021."
@@ -447,7 +427,7 @@
   gender: "none"
   region: "africa"
   sources: [ { "title": "Government of Benin: Cabinet meeting, 10 November 2021", "url": "https://sgg.gouv.bj/cm/2021-11-10/", "quote": "la cérémonie officielle de restitution, par la République française, de 26 œuvres relevant des trésors royaux de notre pays." }, { "title": "University of Geneva, Art-Law Centre: Trésor de Béhanzin", "url": "https://plone.unige.ch/art-adr/cases-affaires/tresor-de-behanzin-2013-france-et-benin/fiche-2013-tresor-de-behanzin-2013-france-et-benin", "quote": "Le 9 novembre 2021, les vingt-six objets sont restitués par la signature de l’acte de transfert de propriété" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0032"
   cat: "obj"
   en: "An August 2022 agreement transferred ownership of 512 Benin objects from Berlin's Ethnological Museum to Nigeria."
@@ -467,7 +447,7 @@
         https://kulturstaatsminister.de/aufarbeiten-und-erinnern/kolonialismus/rueckgaben-und-kooperation
       quote: >-
         im August 2022 das Eigentum an allen 512 Benin-Bronzen aus der Sammlung des Ethnologischen Museums an Nigeria übertragen hat.
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0033"
   cat: "obj"
   en: "A sphinx carved around 680 BCE portrays the Kushite king Taharqa and is preserved in the British Museum."
@@ -478,7 +458,7 @@
   region: "africa"
   cards: [ "taharqa" ]
   sources: [ { "title": "British Museum: Sphinx of Taharqo", "url": "https://artsandculture.google.com/asset/sphinx-of-taharqo/WQF4PEPuQjlvHg?hl=en", "quote": "Date Created: -680/-680" }, { "title": "University at Buffalo: Taharqo as a sphinx", "url": "https://digital.lib.buffalo.edu/items/show/34902", "quote": "ca. 680 BCE" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0034"
   cat: "obj"
   en: "John Garstang excavated the British Museum's bronze head of Augustus at Meroë in 1910."
@@ -497,7 +477,7 @@
       url: >-
         https://www.britishmuseum.org/sites/default/files/2021-06/Egypt_Sudan_Newsletter_2020-2021.pdf
       quote: had been found by John Garstang in 1910, under the doorway of a small temple.
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0035"
   cat: "obj"
   en: "Oxford University's council supported Nigeria's claim for ninety-seven Benin objects in June 2022."
@@ -516,7 +496,7 @@
       url: >-
         https://www.independent.co.uk/news/uk/cambridge-oxford-benin-british-cambridge-university-b2134339.html
       quote: The claim with Oxford is for 97 objects
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0036"
   cat: "obj"
   en: "Cambridge's museum identified 116 Benin artefacts for return to Nigeria in 2022."
@@ -535,11 +515,11 @@
         https://www.museumsassociation.org/museums-journal/news/2022/12/trinity-college-dublin-to-work-with-islanders-on-return-of-stolen-skulls/
       quote: >-
         The Charity Commission this week approved the transfer of 116 items to Nigeria's ownership.
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0037"
   cat: "obj"
   en: "Sonia Boyce's 2022 installation Feeling Her Way brings together the voices of five Black female musicians."
-  ru: "В инсталляции Сони Бойс Feeling Her Way 2022 года звучат голоса пяти чернокожих исполнительниц."
+  ru: "В инсталляции Сони Бойс «Feeling Her Way» 2022 года звучат голоса пяти чернокожих исполнительниц."
   year: 2022
   place: { "name": "Venice", "lat": 45.429, "lon": 12.36 }
   gender: "f"
@@ -554,7 +534,7 @@
         https://www.britishcouncil.org/about/press/british-council-unveils-feeling-her-way-sonia-boyce-obe-ra-59th-international-art
       quote: >-
         Boyce’s installation Feeling Her Way immerses visitors in the collaborative dynamism of five Black female musicians
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0038"
   cat: "obj"
   en: "Jesus College, Cambridge, returned its Benin bronze cockerel statue on 27 October 2021."
@@ -565,7 +545,7 @@
   region: "europe"
   cards: []
   sources: [ { "title": "Jesus College: Benin Bronze return", "url": "https://www.jesus.cam.ac.uk/articles/jesus-college-returns-benin-bronze-world-first", "quote": "Posted on: 27 October 2021" }, { "title": "Chris Willis Pickup and Kieran John: The Benin Bronze and charity law", "url": "https://www.civilsociety.co.uk/finance/the-benin-bronze-and-the-ex-gratia-principle.html", "quote": "On 27 October 2021, Jesus College at the University of Cambridge returned a bronze cockerel statue" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0039"
   cat: "obj"
   en: "El Anatsui's 2003 Old Man's Cloth, held by the Harn Museum, is made from aluminium bottle caps and copper wire."
@@ -576,7 +556,7 @@
   region: "africa"
   cards: []
   sources: [ { "title": "El Anatsui: Old Man's Cloth", "url": "https://elanatsui.art/artworks/el-anatsui-old-mans-cloth-2003", "quote": "Old Man's Cloth, 2003, Aluminium (liquor bottle caps) and copper wire" }, { "title": "Harn Museum: Contemporary Ghanaian artists", "url": "https://harn.ufl.edu/resources/contemporary-ghanaian-artists-and-recent-harn-acquisitions/", "quote": "El Anatsui, Old Man’s Cloth, 2003, Aluminum and copper wire" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0040"
   cat: "obj"
   en: "Yinka Shonibare's 2001 installation The Swing (after Fragonard) reimagines the Rococo painting as a swinging mannequin."
@@ -587,7 +567,7 @@
   region: "europe"
   cards: []
   sources: [ { "title": "DACS: The Swing (after Fragonard)", "url": "https://www.dacs.org.uk/artwork/the-swing-after-fragonard-2001-58980", "quote": "The Swing (after Fragonard), 2001" }, { "title": "UCLA: African Arts, Autumn 2001", "url": "https://www.international.ucla.edu/africa/article/927", "quote": "On the cover of the Autumn 2001 issue of African Arts (Volume 34, Number 3), a mannequin leans back in a swing" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0041"
   cat: "obj"
   en: "Edmonia Lewis's Death of Cleopatra was donated to the Smithsonian American Art Museum in 1994."
@@ -598,7 +578,7 @@
   region: "us"
   cards: [ "death-of-cleopatra-lewis" ]
   sources: [ { "title": "Smithsonian American Art Museum: Edmonia Lewis", "url": "https://artsandculture.google.com/story/xwVh3NKm3VagLg", "quote": "donated it to the Smithsonian American Art Museum in 1994." }, { "title": "Yale National Initiative: Edmonia Lewis teaching unit", "url": "https://teachers.yale.edu/download/units/14_01_10.pdf", "quote": "It was then given to the Smithsonian National Museum of American Art in 1994 where it was restored." } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0042"
   cat: "obj"
   en: "Belkis Ayón's 1991 print La cena measures three metres across and was made using collagraphy."
@@ -615,7 +595,7 @@
     - title: 'Universidad Miguel Hernández: SIPADI, 2021'
       url: https://sipadi.umh.es/files/2021/10/2021-Publicacio%CC%81n-SIPADI-UMH-_-baja.pdf
       quote: La cena. Colografía, 138 x 300 cm, 1991
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0043"
   cat: "obj"
   en: "Chris Ofili's 1998 painting No Woman, No Cry incorporates elephant dung and belongs to Tate."
@@ -626,7 +606,7 @@
   region: "europe"
   cards: []
   sources: [ { "title": "Tate Britain / Google Arts & Culture: No Woman, No Cry", "url": "https://artsandculture.google.com/story/no-woman-no-cry/VgVRiDcm4LVA6w?hl=en", "quote": "No Woman, No Cry No Woman, No Cry (1998) by Chris Ofili" }, { "title": "New Museum: Chris Ofili, Night and Day checklist", "url": "https://d2b8urneelikat.cloudfront.net/media/collectiveaccess/images/1/1/4/50268_ca_object_representations_media_11414_original.pdf", "quote": "No Woman, No Cry, 1998 Acrylic, oil, polyester resin, pencil, paper collage, glitter, map pins, and elephant dung on linen" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0044"
   cat: "obj"
   en: "Augusta Savage modelled Gamin in 1929, a portrait bust reportedly based on her nephew."
@@ -644,7 +624,7 @@
       url: https://www.clevelandart.org/art/2003.40
       quote: >-
         It was long thought that the image was a generic figure; however, recent research reveals that it depicts her nephew.
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0045"
   cat: "obj"
   en: "Wifredo Lam's monumental 1943 painting The Jungle was made with gouache on paper mounted on canvas."
@@ -662,7 +642,7 @@
       url: >-
         https://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-art-history-ced-content-area-4-later-europe-and-americas.pdf
       quote: The Jungle. Wifredo Lam. 1943 C.E. Gouache on paper mounted on canvas.
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0046"
   cat: "obj"
   en: "Wangechi Mutu created four bronze female figures for the Metropolitan Museum's exterior niches in 2019."
@@ -681,7 +661,7 @@
       url: https://nmwa.org/blog/art-fix-friday/art-fix-friday-august-30-2019/
       quote: >-
         Four bronze female figures will be installed in the building’s exterior niches facing Fifth Avenue
-  status: "drafted"
+  status: "checked"
 - id: "fx-obj-0047"
   cat: "obj"
   en: "Paa Joe's sculptural coffins reached Paris's Centre Pompidou in the 1989 exhibition Magiciens de la Terre."
@@ -692,4 +672,4 @@
   region: "europe"
   cards: []
   sources: [ { "title": "Royal Ontario Museum: Paa Joe coffin", "url": "https://artsandculture.google.com/asset/coffin-paa-joe/_QHDKwtM984UAw?hl=en", "quote": "exhibited internationally in 1989 during the Magiciens de la Terre at the Centre Pomidou" }, { "title": "Superhouse: Paa Joe, Celestial City", "url": "https://www.superhouse.us/exhibitions/paa-joe-celestial-city", "quote": "the renowned exhibition Les Magiciens de la Terre at the Centre Pompidou (Paris, France) in 1989" } ]
-  status: "drafted"
+  status: "checked"

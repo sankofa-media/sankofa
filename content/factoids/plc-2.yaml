@@ -8,7 +8,7 @@
   gender: "f"
   region: "europe"
   sources: [ { "title": "Ville de Paris: Promenade Jane-et-Paulette-Nardal", "url": "https://www.paris.fr/lieux/promenade-jane-et-paulette-nardal-19528", "quote": "Les sœurs Jane et Paulette Nardal, femmes de Lettres, sont nées en Martinique." }, { "title": "French dry-stone industry federation: Promenade Jane and Paulette Nardal", "url": "https://www.pierre-paysage.fr/wp-content/uploads/2020/06/FFPPS-fiche-chantier-Paris.pdf", "quote": "Jane & Paulette Nardal - Paris, 2019" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0004"
   cat: "plc"
   en: "South Africa gazetted Brandfort's new name, Winnie Mandela, in August 2021."
@@ -19,40 +19,40 @@
   gender: "f"
   region: "africa"
   sources: [ { "title": "South African Cabinet: Statement, 18 August 2021", "url": "https://dirco.gov.za/statement-on-the-virtual-cabinet-meeting-of-wednesday-18-august-2021/", "quote": "Cabinet welcomed the renaming of Brandfort in the Free State to Winnie Mandela" }, { "title": "Daily Maverick: Brandfort, place of hollow forgetting and shallow remembering", "url": "https://www.dailymaverick.co.za/article/2021-10-10-brandfort-place-of-hollow-forgetting-and-shallow-remembering/", "quote": "In August 2021, Nathi Mthethwa, Minister of Sport, Arts and Culture, gazetted the name change of Brandfort to Winnie Mandela." } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0005"
   cat: "plc"
-  en: "Johannesburg's William Nicol Drive became Winnie Mandela Drive in September 2023."
-  ru: "В сентябре 2023 года йоханнесбургская улица Уильяма Никола получила имя Уинни Манделы."
+  en: "Johannesburg renamed William Nicol Drive in Sandton after Winnie Mandela in September 2023."
+  ru: "В сентябре 2023 года улицу Уильяма Никола в йоханнесбургском Сэндтоне переименовали в честь Уинни Манделы."
   year: 2023
   place: { "name": "Winnie Mandela Drive, Sandton", "lat": -26.1, "lon": 28.03 }
   cards: []
   gender: "f"
   region: "africa"
   sources: [ { "title": "City of Johannesburg: William Nicole Drive renamed Winnie Mandela in historic tribute, 27 September 2023", "url": "https://joburg.org.za/media_/Newsroom/Pages/2023%20News%20Articles/September/William-Nicole-Drive-renamed-Winnie-Mandela-in-historic-tribute.aspx", "quote": "The renaming ceremony took place on Tuesday, 26 September" }, { "title": "South African Cabinet: Statement, 27 September 2023", "url": "https://www.gcis.gov.za/newsroom/media-releases/statement-cabinet-meeting-wednesday-27-september-2023", "quote": "Cabinet noted the renaming of William Nicol Drive in Sandton to Winnie Mandela Avenue" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0006"
   cat: "plc"
   en: "Johannesburg General Hospital was renamed after Charlotte Maxeke in 2008."
-  ru: "В 2008 году главная больница Йоханнесбурга получила имя Шарлотты Максеке."
+  ru: "В 2008 году Йоханнесбургской больнице общего профиля присвоили имя Шарлотты Максеке."
   year: 2008
   place: { "name": "Charlotte Maxeke Johannesburg Academic Hospital", "lat": -26.175, "lon": 28.043 }
   cards: []
   gender: "f"
   region: "africa"
   sources: [ { "title": "Rosebank Killarney Gazette: A walk down Charlotte Maxeke Hospital heritage lane", "url": "https://www.citizen.co.za/rosebank-killarney-gazette/news-headlines/2020/10/12/a-walk-down-charlotte-maxeke-hospital-heritage-lane/", "quote": "in 2008 September during Heritage Month, the hospital was renamed Charlotte Maxeke Johannesburg Academic Hospital" }, { "title": "Unfinished promise of infrastructure post-apartheid, p. 4", "url": "https://repository.up.ac.za/bitstreams/77d0e340-014a-49a5-9b0c-8864b10fc08d/download", "quote": "Renamed on Heritage Day in 2008 after Charlotte Makgomo Maxeke" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0007"
   cat: "plc"
-  en: "Paris's floating Joséphine Baker swimming pool was built on the Seine in 2006."
-  ru: "В 2006 году на Сене в Париже построили плавучий бассейн имени Жозефины Бейкер."
+  en: "Paris's Joséphine Baker swimming pool was built and inaugurated in 2006."
+  ru: "Парижский бассейн имени Жозефины Бейкер построили и открыли в 2006 году."
   year: 2006
   place: { "name": "Piscine Joséphine-Baker, Paris", "lat": 48.8366, "lon": 2.3764 }
   cards: []
   gender: "f"
   region: "europe"
   sources: [ { "title": "SEMAPA: Paris Rive Gauche walking guide", "url": "https://www.semapa.fr/wp-content/uploads/2024/01/Parcours-En-Bd-1.pdf", "quote": "JOSÉPHINE-BAKER SWIMMING POOL Construction: 2006" }, { "title": "VINCI Construction: Annual report 2006, p. 28", "url": "https://www.vinci.com/publi/vinci_construction/vinci-construction06-fr.pdf", "quote": "France) a été inaugurée en juillet 2006." } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0008"
   cat: "plc"
   en: "New York City's Shirley Chisholm State Park opened in July 2019 on the former Penn and Fountain landfills."
@@ -65,7 +65,7 @@
   sources:
     - { "title": "National Park Service: Shirley Chisholm State Park Opens in NYC", "url": "https://www.nps.gov/articles/shirley-chisholm-state-park.htm", "quote": "On July 2, 2019, New York Governor Andrew M. Cuomo announced the opening" }
     - { "title": "Angelina Nelson, Epicenter NYC: Shirley Chisholm State Park", "url": "https://epicenter-nyc.com/day-tripping-shirley-chisholm-state-park/", "quote": "Shirley Chisholm State Park opened in July 2019 after the Penn and Fountain Landfills were transformed" }
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0009"
   cat: "plc"
   en: "São Vicente's airport in Cape Verde took singer Cesária Évora's name in 2012."
@@ -78,7 +78,7 @@
   sources:
     - { "title": "VINCI Airports: São Vicente Airport", "url": "https://vinci-airports.com/en/our-airports/cabo-verde/sao-vicente-airport/", "quote": "São Vicente International Airport, formerly São Pedro Airport, named Cesária Évora International Airport in 2012" }
     - { "title": "INECO: Itransporte 50, airport master plans", "url": "https://www.revistaitransporte.com/wp-content/uploads/2016/02/2014_50i.pdf", "quote": "In March 2012, the airport, also known as São Pedro, was renamed after the late singer Cesária Évora" }
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0010"
   cat: "plc"
   en: "South Africa's former Cacadu district publicly launched its new Sarah Baartman name in 2015."
@@ -91,7 +91,7 @@
   sources:
     - { "title": "Kouga Municipality: Provincial Heritage Day celebrations, 25 September 2015", "url": "https://www.kouga.gov.za/news/kouga-hosts-provincial-heritage-day-celebrations", "quote": "25 Sep 2015 … the former Cacadu District Municipality officially launch its new name" }
     - { "title": "Eskom: Blanco-Droerivier Social Impact Assessment, p. 31", "url": "https://www.eskom.co.za/eia/tx/wp-content/uploads/migrated/blancodroerivier/FEIR-Appendices-3/Appendix%204.8%20-%20Social%20Assessment%20Report.pdf", "quote": "The Cacadu District Municipality was renamed Sarah Baartman Municipality on 24 September 2015." }
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0011"
   cat: "plc"
   en: "In 2018, the University of Cape Town approved renaming its Memorial Hall after Sarah Baartman."
@@ -102,7 +102,7 @@
   gender: "f"
   region: "africa"
   sources: [ { "title": "University of Cape Town: Renaming Memorial Hall Sarah Baartman Hall", "url": "https://www.news.uct.ac.za/article/-2018-12-13-renaming-memorial-hall-sarah-baartman-hall", "quote": "8 December 2018, Council made the historic decision to rename Memorial Hall after Khoi heroine Sarah Baartman." }, { "title": "Voice of the Cape: UCT Renames Sarah Baartman Hall (2025)", "url": "https://vocfm.co.za/uct-renames-sarah-baartman-hall-in-official-ceremony/", "quote": "a historic decision made by the UCT Council in 2018 to rename the Jameson Memorial Hall in her honor." } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0012"
   cat: "plc"
   en: "Bermuda renamed Devonshire Bay Park after abolitionist Mary Prince in 2020."
@@ -115,7 +115,7 @@
   sources:
     - { "title": "Bermuda Human Rights Commission: Annual Report 2020, p. 35", "url": "https://humanrights.bm/wp-content/uploads/2021/07/HRCAR2020FINupdateJuly16.pdf", "quote": "on 31 July 2020 with the renaming of Devonshire Bay Park to Mary Prince Emancipation Park" }
     - { "title": "Bermuda Tourism Authority: Mary Prince Emancipation Park", "url": "https://www.gotobermuda.com/listings/natural-wonders/mary-prince-emancipation-park", "quote": "Renamed in 2020 to honour Bermudian national hero and celebrated abolitionist Mary Prince" }
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0013"
   cat: "plc"
   en: "Lusaka's airport was renamed after Kenneth Kaunda in 2011."
@@ -126,7 +126,7 @@
   gender: "m"
   region: "africa"
   sources: [ { "title": "Chilala and Hang’ombe: Eponymic Place Names in Zambia (2020)", "url": "https://journals.unza.zm/index.php/JLSS/article/download/442/394/", "quote": "The airport was renamed after Kenneth Kaunda" }, { "title": "National Assembly of Zambia: Parliamentary debates, 13 March 2012", "url": "https://www.parliament.gov.zm/node/1127", "quote": "He named the Kenneth Kaunda International Airport at Lusaka." } ]
-  status: "drafted"
+  status: "unverified"
 - id: "fx-plc-0014"
   cat: "plc"
   en: "Livingstone's airport took independence leader Harry Mwaanga Nkumbula's name in 2011."
@@ -137,7 +137,7 @@
   gender: "m"
   region: "africa"
   sources: [ { "title": "Chilala and Hang’ombe: Eponymic Place Names in Zambia (2020)", "url": "https://journals.unza.zm/index.php/JLSS/article/download/442/394/", "quote": "It was renamed Harry Mwaanga Nkumbula" }, { "title": "National Assembly of Zambia: Parliamentary debates, 13 March 2012", "url": "https://www.parliament.gov.zm/node/1127", "quote": "Harry Mwaanga Nkumbula, formerly Livingstone and Simon" } ]
-  status: "drafted"
+  status: "unverified"
 - id: "fx-plc-0015"
   cat: "plc"
   en: "Ndola's airport was renamed after Simon Mwansa Kapwepwe in 2011."
@@ -148,7 +148,7 @@
   gender: "m"
   region: "africa"
   sources: [ { "title": "Chilala and Hang’ombe: Eponymic Place Names in Zambia (2020)", "url": "https://journals.unza.zm/index.php/JLSS/article/download/442/394/", "quote": "Until 2011, when it was renamed in honour" }, { "title": "National Assembly of Zambia: Parliamentary debates, 13 March 2012", "url": "https://www.parliament.gov.zm/node/1127", "quote": "Simon Mwansa Kapwepwe, formerly Ndola, by His Excellency" } ]
-  status: "drafted"
+  status: "unverified"
 - id: "fx-plc-0016"
   cat: "plc"
   en: "Harare's international airport was renamed after Robert Gabriel Mugabe in 2017."
@@ -159,7 +159,7 @@
   gender: "m"
   region: "africa"
   sources: [ { "title": "Xinhua: Harare airport officially renamed, 9 November 2017", "url": "https://www.xinhuanet.com/english/2017-11/09/c_136740493.htm", "quote": "the Harare International Airport, was on Thursday renamed Robert Gabriel Mugabe International Airport" }, { "title": "BBC via The Standard: Zimbabwe renames Harare airport after Robert Mugabe (2017)", "url": "https://www.standardmedia.co.ke/amp/business/africa/article/2001259843/zimbabwe-renames-harare-airport-after-robert-mugabe", "quote": "Harare International Airport has been renamed after Zimbabwe's current President, Robert Mugabe." } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0017"
   cat: "plc"
   en: "Senegal's Blaise Diagne International Airport opened in December 2017."
@@ -172,7 +172,7 @@
   sources:
     - { "title": "African Airlines Association: 2022 AGA catalogue, airport operator profile", "url": "https://afraa.org/wp-content/uploads/2022/12/AGA_Catalogue_2022.pdf", "quote": "Blaise Diagne International Airport was inaugurated on December 07th, 2017." }
     - { "title": "Jason Holland, Moodie Davitt Report: Senegal’s Blaise Diagne International Airport officially opens, 7 December 2017", "url": "https://moodiedavittreport.com/senegals-blaise-diagne-international-airport-officially-opens/", "quote": "7 December 2017 … Blaise Diagne International Airport is being officially opened today (7 December)" }
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0018"
   cat: "plc"
   en: "Martinique's airport received poet Aimé Césaire's name in 2007."
@@ -183,7 +183,7 @@
   gender: "m"
   region: "caribbean"
   sources: [ { "title": "Martinique Aimé Césaire Airport: General information", "url": "https://www.martinique.aeroport.fr/informations-generales/", "quote": "2007 : Changement de dénomination de l’aéroport" }, { "title": "IGN Édugéo: Martinique teaching booklet", "url": "https://www.edugeo.fr/uploads/teaching-book/file/3870afa0dd6366a8ae4f61645ea34365.pdf", "quote": "Le 15 janvier 2007, par arrêté du ministre des transports, de l’équipement, du tourisme" } ]
-  status: "drafted"
+  status: "unverified"
 - id: "fx-plc-0019"
   cat: "plc"
   en: "Barbados's Seawell Airport was renamed after Grantley Adams in 1976."
@@ -194,7 +194,7 @@
   gender: "m"
   region: "caribbean"
   sources: [ { "title": "Grantley Adams International Airport: History", "url": "https://gaia.bb/general-information/history/", "quote": "completed in 1976. Later that same year, the airport was renamed" }, { "title": "Central Bank of Barbados: 2022-series $100 note", "url": "https://www.centralbank.org.bb/banknotes/2022-series-1/50-polymer-note-1", "quote": "Originally called Seawell Airport, it was renamed in honour of the Right Excellent Sir Grantley Adams in 1976." } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0020"
   cat: "plc"
   en: "Port-au-Prince's international airport took Toussaint Louverture's name in 2003."
@@ -205,18 +205,18 @@
   gender: "m"
   region: "caribbean"
   sources: [ { "title": "Haiti Aeronautical Information Service: AIC 2003 A05/03", "url": "https://sites.google.com/view/ais-haiti/aic", "quote": "Since April 14 2003, Port-au-Prince international airport name has been changed to Aeroport International Toussaint Louverture (AITL)" }, { "title": "L'Harmattan: Mission en Haïti, p. 13", "url": "https://api.pageplace.de/preview/DT0400.9782140007187_A45665571/preview-9782140007187_A45665571.pdf", "quote": "rebaptisé Toussaint Louverture en 2003" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0021"
   cat: "plc"
-  en: "Durban's King Shaka International Airport began operating on 1 May 2010."
-  ru: "Международный аэропорт имени короля Чаки близ Дурбана начал работу 1 мая 2010 года."
+  en: "King Shaka International Airport began operating on 1 May 2010."
+  ru: "Международный аэропорт имени короля Чаки начал работу 1 мая 2010 года."
   year: 2010
   place: { "name": "King Shaka International Airport, La Mercy", "lat": -29.6144, "lon": 31.1164 }
   cards: []
   gender: "m"
   region: "africa"
   sources: [ { "title": "South African Department of Transport: Minister Ndebele on King Shaka Airport", "url": "https://www.gov.za/news/media-statements/minister-ndebele-king-shaka-airport-02-may-2010", "quote": "1 May 2010 as the airport commenced its first day of operations." }, { "title": "Association for Project Management: King Shaka International Airport, Turner & Townsend", "url": "https://www.apm.org.uk/resources/find-a-resource/case-studies/case-study-king-shaka-international-airport-turner-townsend/", "quote": "King Shaka International Airport (KSIA) opened on 1 May 2010" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0022"
   cat: "plc"
   en: "Port Elizabeth's airport was renamed after Khoi leader Dawid Stuurman in 2021."
@@ -227,7 +227,7 @@
   gender: "m"
   region: "africa"
   sources: [ { "title": "South African Government: Transformation of our heritage landscape, 25 February 2021", "url": "https://www.gov.za/news/media-statements/sport-arts-and-culture-transformation-our-heritage-landscape-25-feb-2021", "quote": "The Port Elizabeth International Airport is now known as the Chief Dawid Stuurman International Airport." }, { "title": "Shadley Nash, Algoa FM: Mthetwa approves new names for PE and PE Airport, 23 February 2021", "url": "https://www.algoafm.co.za/local/mthetwa-approves-new-names-for-pe-and-pe-airport", "quote": "23 Feb 2021 … The PE International Airport will change to the Chief Dawid Stuurman International Airport" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0023"
   cat: "plc"
   en: "NASA announced in 2020 that its Washington headquarters would bear engineer Mary W. Jackson's name."
@@ -238,18 +238,18 @@
   gender: "f"
   region: "us"
   sources: [ { "title": "NASA: Mary W. Jackson building naming ceremony", "url": "https://www.nasa.gov/news-release/nasa-celebrates-hidden-figure-mary-w-jackson-with-building-naming-ceremony/", "quote": "On June 24, 2020, NASA announced its intent to name the building" }, { "title": "US House Science Committee: Chairwoman Johnson applauds renaming NASA Headquarters", "url": "https://democrats-science.house.gov/news/press-releases/chairwoman-johnson-applauds-renaming-nasa-headquarters-after-first-african-american-female-engineer-mary-w-jackson", "quote": "June 25, 2020 … the NASA headquarters building in Washington, DC, would be renamed after Mary W. Jackson" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0024"
   cat: "plc"
-  en: "NASA opened its Katherine G. Johnson Computational Research Facility in Hampton, Virginia, in September 2017."
-  ru: "В сентябре 2017 года НАСА открыло в Хэмптоне, штат Виргиния, центр вычислительных исследований имени Кэтрин Джонсон."
+  en: "NASA dedicated the Katherine G. Johnson Computational Research Facility at its Langley Research Center in Virginia in September 2017."
+  ru: "В сентябре 2017 года в Исследовательском центре Лэнгли НАСА в Виргинии открыли центр вычислительных исследований имени Кэтрин Джонсон."
   year: 2017
   place: { "name": "NASA Langley Research Center, Hampton", "lat": 37.092, "lon": -76.381 }
   cards: [ "katherine-johnson" ]
   gender: "f"
   region: "us"
   sources: [ { "title": "NASA Langley: Katherine Johnson Computational Research Facility officially opens", "url": "https://www.nasa.gov/centers-and-facilities/ivv/nasa-langleys-katherine-johnson-computational-research-facility-officially-opens/", "quote": "Sep 23, 2017 … The Katherine G. Johnson Computational Research Facility, or CRF, was dedicated Sept. 22" }, { "title": "Liberty Science Center: Katherine Johnson facility, 25 September 2017", "url": "https://lsc.org/news-and-social/news/katherine-johnson-new-nasa-facility", "quote": "The Katherine G. Johnson Computational Research Facility opened last Friday within NASA's Langley Research Center in Virginia" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0025"
   cat: "plc"
   en: "NASA's software verification facility in Fairmont, West Virginia, was renamed after Katherine Johnson in 2019."
@@ -260,7 +260,7 @@
   gender: "f"
   region: "us"
   sources: [ { "title": "NASA: Facility renamed in honor of Katherine Johnson", "url": "https://www.nasa.gov/news-release/nasa-renames-facility-in-honor-of-hidden-figure-katherine-johnson/", "quote": "Feb 22, 2019 … as the Katherine Johnson Independent Verification and Validation Facility" }, { "title": "West Virginia MetroNews, archived by Senator Capito: Katherine Johnson continuing to influence young minds", "url": "https://www.capito.senate.gov/news/in-the-news/nasas-katherine-johnson-continuing-to-influence-young-minds-of-west-virginia", "quote": "Validation Facility was renamed Tuesday to honor the career of Greenbrier County native Katherine Johnson." } ]
-  status: "drafted"
+  status: "unverified"
 - id: "fx-plc-0026"
   cat: "plc"
   en: "Houston's Johnson Space Center named a building for Dorothy Vaughan and the women of Apollo in 2024."
@@ -273,7 +273,7 @@
   sources:
     - { "title": "NASA: Dorothy Vaughan Center dedicated to women of Apollo", "url": "https://www.nasa.gov/general/nasa-johnson-dedicates-dorothy-vaughan-center-to-women-of-apollo/", "quote": "the “Dorothy Vaughan Center in Honor of the Women of Apollo” on July 19, 2024" }
     - { "title": "Peter Warren and Elizabeth Conley, Houston Chronicle: NASA dedicates building to Dorothy Vaughan", "url": "https://www.houstonchronicle.com/news/houston-texas/trending/article/dorothy-vaughan-johnson-space-center-19577783.php", "quote": "The newly named “Dorothy Vaughan Center in Honor of Women of Apollo” building at Johnson Space Center on Friday, July 19, 2024" }
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0027"
   cat: "plc"
   en: "Seattle opened a park named after chemist Alice Ball in 2019."
@@ -286,7 +286,7 @@
   sources:
     - { "title": "Seattle Parks and Recreation: Alice Ball Park ribbon cutting", "url": "https://parkways.seattle.gov/2019/06/07/community-invited-to-celebrate-alice-ball-park-join-us-for-community-ribbon-cutting-on-june-14/", "quote": "the opening of Alice Ball Park with the community. Please join us on Friday, June 14, 2019" }
     - { "title": "HistoryLink: Alice Augusta Ball", "url": "https://historylink.org/File/23522", "quote": "In 2019 … honored her memory and accomplishments by creating a park in her name" }
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0028"
   cat: "plc"
   en: "Sojourner Truth State Park opened on former industrial land beside New York's Hudson River in 2022."
@@ -299,7 +299,7 @@
   sources:
     - { "title": "Scenic Hudson: New Sojourner Truth State Park opens", "url": "https://www.scenichudson.org/news/new-sojourner-truth-state-park-opens-in-ulster-county/", "quote": "April 28, 2022 … the opening of Sojourner Truth State Park along the Hudson River shoreline" }
     - { "title": "Tighe & Bond: Sojourner Truth State Park site restoration", "url": "https://www.tighebond.com/project/quarry-waters-industrial-landscape-restoration/", "quote": "resulted in the Sojourner Truth State Park and was dedicated in the spring of 2022" }
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0029"
   cat: "plc"
   en: "Chicago ceremonially unveiled Ida B. Wells Drive's street signs in February 2019."
@@ -312,7 +312,7 @@
   sources:
     - { "title": "Ida B. Wells Memorial Foundation: Honors", "url": "https://ibwfoundation.org/honors", "quote": "2019 … February 11 - Ida B. Wells Drive street sign unveiling ceremony" }
     - { "title": "Linda Zabors, Honorary Chicago: Ida B Wells Drive official street unveiling", "url": "https://www.honorarychicago.com/blog/ida-b-wells-drive-official-street-unveiling", "quote": "February 11, 2019 was the ceremonial unveiling of the street signs honoring Ida B. Wells" }
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0031"
   cat: "plc"
   en: "Glasgow renamed St George's Place as Nelson Mandela Place on 16 June 1986."
@@ -325,18 +325,18 @@
   sources:
     - { "title": "Anti-Apartheid Movement Archives: Mandela Place, Glasgow", "url": "https://www.aamarchives.org/archive/campaigns/free-mandela/pic8635-mandela-place,-glasgow.html", "quote": "St George’s Place in central Glasgow was renamed Nelson Mandela Place on 16 June 1986." }
     - { "title": "Glasgow Life: Golden Z report", "url": "https://www.glasgowlife.org.uk/media/vf4fg004/golden-z-report.pdf", "quote": "Formerly known as St. George’s Place it was renamed in 1986" }
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0032"
   cat: "plc"
-  en: "Berlin renamed a street after philosopher Anton Wilhelm Amo in August 2025, replacing a racist colonial name."
-  ru: "В августе 2025 года берлинская улица получила имя философа Антона Вильгельма Амо взамен расистского названия колониальной эпохи."
+  en: "Berlin renamed a street and its underground station Anton-Wilhelm-Amo-Straße in August 2025."
+  ru: "В августе 2025 года улица и станция метро в Берлине получили название Антон-Вильгельм-Амо-штрассе."
   year: 2025
   place: { "name": "Anton-Wilhelm-Amo-Straße, Berlin", "lat": 52.511, "lon": 13.386 }
   cards: []
   gender: "m"
   region: "europe"
   sources: [ { "title": "Mitte Museum: Naming, honoring, questioning", "url": "https://www.mittemuseum.de/en/culture-of-remembrance/2021/naming-honoring-questioning-street-names-in-berlin-mitte", "quote": "the street and the underground station were renamed Anton-Wilhelm-Amo-Straße in August 2025" }, { "title": "Deutsche Welle: Berlin street renaming", "url": "https://amp.dw.com/en/berlin-racist-street-name-change-stopped-again-mohrenstra%C3%9Fe-anton-wilhelm-amo-stra%C3%9Fe/a-73280857", "quote": "The renaming of the street was made official on August 23" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0033"
   cat: "plc"
   en: "Jamaica's Accompong is named after its founder and dates from the 1739 peace treaty that gave land to the Maroons."
@@ -349,7 +349,7 @@
   sources:
     - { "title": "Jamaica National Heritage Trust: Accompong", "url": "https://www.jnht.com/site_accompong.php", "quote": "named after its founder Accompong … in 1739 when land was given to the Maroons as part of a Peace Treaty" }
     - { "title": "Sharlene Hendricks, Jamaica Observer: Accompong", "url": "https://www.jamaicaobserver.com/2012/11/19/accompong/", "quote": "The village was named after its founder, Accompong … Founded in 1739 after signing a Treaty with the British" }
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0034"
   cat: "plc"
   en: "Paris renamed the Solférino footbridge after Senegalese poet and president Léopold Sédar Senghor in 2006."
@@ -360,7 +360,7 @@
   gender: "m"
   region: "europe"
   sources: [ { "title": "City of Paris: Municipal Bulletin, 16 June 2006", "url": "https://cdn.paris.fr/paris/2020/02/26/2e44539c927476d54338a1412bc2bf7d.pdf", "quote": "Substitution de la dénomination « Passerelle Léopold Sédar Senghor » à celle de « passerelle Solférino » … (Arrêté du 19 mai 2006)" }, { "title": "French Civil Engineering Association: Passerelle Léopold Sédar Senghor", "url": "https://www.afgc.asso.fr/history-heritage/passerelle-leopold-sedar-senghor-a-paris/", "quote": "elle a été rebaptisée passerelle Léopold Sédar Senghor le 9 octobre 2006." } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0035"
   cat: "plc"
   en: "Dakar's university took the name of historian Cheikh Anta Diop on 30 March 1987."
@@ -373,18 +373,18 @@
   sources:
     - { "title": "Université Cheikh Anta Diop: Historique", "url": "https://www.ucad.sn/index.php/node/96", "quote": "le changement de dénomination de l’Université de Dakar, qui devient Université Cheikh Anta Diop de Dakar le 30 mars 1987" }
     - { "title": "Camara and Bodian: Islam in the academic sphere in Senegal, Contemporary Islam (2016)", "url": "https://d-nb.info/110353632X/34", "quote": "On March 30, 1987, the University of Dakar was named “Cheikh Anta Diop University of Dakar” (UCAD)." }
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0036"
   cat: "plc"
-  en: "Paris opened a garden named for Brazilian councillor Marielle Franco near Gare de l'Est in 2019."
-  ru: "В 2019 году в Париже у Восточного вокзала открылся сад имени бразильского муниципального депутата Мариэлле Франко."
+  en: "Paris inaugurated a garden in honour of Marielle Franco on 21 September 2019."
+  ru: "21 сентября 2019 года в Париже открыли сад в честь Мариэлле Франко."
   year: 2019
   place: { "name": "Jardin Marielle-Franco, Paris", "lat": 48.878, "lon": 2.358 }
   cards: [ "marielle-franco" ]
   gender: "f"
   region: "europe"
   sources: [ { "title": "Paris 10th arrondissement: Jardin Marielle Franco", "url": "https://mairie10.paris.fr/pages/bien-dans-mon-jardin-rendez-vous-le-25-mai-pour-re-decouvrir-le-jardin-marielle-franco-26958", "quote": "Créé et aménagé en 2019, le jardin Marielle Franco" }, { "title": "Memorial da Resistência: Nenhum Direito a Menos", "url": "https://memorialdaresistenciasp.org.br/nenhum-direito-a-menos-2016-2019/", "quote": "Em 21 de setembro de 2019, um jardim foi inaugurado em sua homenagem, em Paris" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0037"
   cat: "plc"
   en: "New Orleans renamed its airport after Louis Armstrong in 2001, his birth centenary."
@@ -397,7 +397,7 @@
   sources:
     - { "title": "Louis Armstrong New Orleans International Airport: History", "url": "https://flymsy.com/passengers/history/", "quote": "In August 2001, the Airport’s name was changed to the Louis Armstrong New Orleans International Airport" }
     - { "title": "New Orleans & Company: Louis Armstrong", "url": "https://www.neworleans.com/things-to-do/music/history-and-traditions/louis-armstrong/", "quote": "In 2001, his centennial year, New Orleans International Airport was renamed Louis Armstrong International Airport after him" }
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0038"
   cat: "plc"
   en: "Moscow's Peoples' Friendship University received Patrice Lumumba's name in February 1961, after the Congolese leader's assassination."
@@ -408,18 +408,18 @@
   gender: "m"
   region: "russia-ussr"
   sources: [ { "title": "RUDN University: History", "url": "https://eng.rudn.ru/about/history/", "quote": "On 22nd February, 1961, the RUDN University was named after Patrice Lumumba" }, { "title": "Constantin Katsakioris: The Lumumba University in Moscow, Journal of Global History (2019)", "url": "https://www.cambridge.org/core/journals/journal-of-global-history/article/lumumba-university-in-moscow-higher-education-for-a-sovietthird-world-alliance-196091/8720DF55AA0CEBC782EC8B215AC08D47", "quote": "Rechristened ‘Patrice Lumumba’ in February 1961, after the assassinated Congolese leader" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0039"
   cat: "plc"
-  en: "Seattle celebrated Jimi Hendrix Park's grand opening in June 2017, near the guitarist's childhood home."
-  ru: "В июне 2017 года в Сиэтле торжественно открыли парк Джими Хендрикса неподалёку от дома, где гитарист провёл детство."
+  en: "Seattle celebrated the grand opening of Jimi Hendrix Park on 17 June 2017."
+  ru: "17 июня 2017 года в Сиэтле торжественно открыли парк Джими Хендрикса."
   year: 2017
   place: { "name": "Jimi Hendrix Park, Seattle", "lat": 47.589, "lon": -122.301 }
   cards: []
   gender: "m"
   region: "us"
   sources: [ { "title": "Seattle Parks and Recreation: Jimi Hendrix Park grand opening", "url": "https://parkways.seattle.gov/2017/06/12/jimi-hendrix-park-celebrates-grand-opening-june-17-join-us-free-day-music/", "quote": "the grand opening celebration of Jimi Hendrix Park on June 17, 2017" }, { "title": "The Business Times: Jimi Hendrix Park finally opens in his hometown", "url": "https://www.businesstimes.com.sg/lifestyle/jimi-hendrix-park-finally-opens-his-hometown", "quote": "Jimi Hendrix Park, which was formally christened in 2006 but did not open until last Saturday" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0040"
   cat: "plc"
   en: "A New York park opposite United Nations headquarters received diplomat Ralph Bunche's name in 1979."
@@ -442,7 +442,7 @@
         },
       { "title": "Jay Shockley, NYC LGBTQ Historic Sites Project: Bayard Rustin Plaque", "url": "https://www.nyclgbtsites.org/site/bayard-rustin-plaque/", "quote": "Ralph Bunche Park, opposite the United Nations building, was named in 1979 for diplomat Ralph Johnson Bunche" }
     ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0041"
   cat: "plc"
   en: "Washington State law renamed King County in honour of Martin Luther King Jr., approved on 19 April 2005."
@@ -455,7 +455,7 @@
   sources:
     - { "title": "Washington State Legislature: Chapter 90, Laws of 2005", "url": "https://lawfilesext.leg.wa.gov/biennium/2005-06/Pdf/Bills/Session%20Laws/Senate/5332.SL.pdf", "quote": "King county is renamed in honor of the Reverend Doctor Martin Luther King, Jr. … Approved by the Governor April 19, 2005." }
     - { "title": "Patrick McRoberts, HistoryLink: King County naming", "url": "https://historylink.org/File/678", "quote": "On April 19, 2005 … King County was officially renamed in honor of Martin Luther King Jr." }
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0045"
   cat: "plc"
   en: "Washington, D.C.'s Martin Luther King Jr. Memorial Library officially opened on 21 August 1972."
@@ -468,7 +468,7 @@
   sources:
     - { "title": "DC Public Library: History", "url": "https://www.dclibrary.org/about-us/dc-public-library-history", "quote": "In 1972 … replaced by the large, modern Martin Luther King Jr. Memorial Library" }
     - { "title": "Historic American Buildings Survey: Martin Luther King Jr. Memorial Library, HABS DC-887", "url": "https://tile.loc.gov/storage-services/master/pnp/habshaer/dc/dc1100/dc1186/data/dc1186data.pdf", "quote": "officially opened on August 21, 1972" }
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0046"
   cat: "plc"
   en: "Burkina Faso renamed Ouaga II University after Thomas Sankara in 2020."
@@ -481,7 +481,7 @@
   sources:
     - { "title": "Thomas Sankara University: Strategic plan 2022–2026", "url": "https://www.uts.bf/wp-content/uploads/2022/02/Plan-Strategique-2022-2026-de-lUTS.pdf", "quote": "renommée Université Thomas SANKARA (UTS) par décret … du 16 septembre 2020" }
     - { "title": "Sidwaya: Interview with Adjima Thiombiano, university president", "url": "https://www.sidwaya.info/adjima-thiombiano-president-de-luniversite-thomas-sankara-nous-allons-travailler-sur-leveil-des-consciences/", "quote": "La cérémonie d’inauguration et de baptême de l’Université Thomas-Sankara (UTS) aura lieu, ce jeudi 15 octobre 2020." }
-  status: "drafted"
+  status: "checked"
 - id: "fx-plc-0047"
   cat: "plc"
   en: "A public school named after Canadian civil rights pioneer Viola Desmond opened in Milton, Ontario, in September 2018."
@@ -494,4 +494,4 @@
   sources:
     - { "title": "Halton District School Board: Long-Term Accommodation Plan 2020–2021", "url": "https://www.hdsb.ca/media/ci2nxlnc/ltap20202021-all.pdf", "quote": "Viola Desmond (ERA 127) opens Sept 2018." }
     - { "title": "Strategy4 project record: Viola Desmond Public School, Milton", "url": "https://strategy4.ca/projects-milton10school.php", "quote": "Viola Desmond Public School – Milton … The project opened for class in September 2018." }
-  status: "drafted"
+  status: "checked"

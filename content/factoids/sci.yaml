@@ -1,30 +1,25 @@
 ---
 - id: fx-sci-0004
   cat: sci
-  en: Anton Wilhelm Amo examined the mind–body problem in his 1734 dissertation at
-    Wittenberg.
-  ru: Антон Вильгельм Амо исследовал соотношение души и тела в диссертации, защищённой
-    в Виттенберге в 1734 году.
+  en: Anton Wilhelm Amo examined the mind–body problem in his 1734 dissertation at Wittenberg.
+  ru: Антон Вильгельм Амо исследовал соотношение души и тела в диссертации, защищённой в Виттенберге в 1734 году.
   year: 1734
   place:
     name: Wittenberg
     lat: 51.8664
     lon: 12.6484
   cards:
-  - amo
+    - amo
   gender: m
   region: europe
   sources:
-  - title: 'American Philosophical Association: Anton Wilhelm Amo: The African Philosopher
-      in 18th Century Europe'
-    url: https://blog.apaonline.org/2018/02/08/anton-wilhelm-amo-the-african-philosopher-in-18th-europe/
-    quote: On the 16th of April, 1734, at the University of Wittenberg, he defended
-      his dissertation
-  - title: 'University of Halle: Kunst trifft Erinnerungskultur: Neue Ausstellung
-      zu Amo an der MLU'
-    url: https://pressemitteilungen.pr.uni-halle.de/index.php?modus=pmanzeige&pm_id=5651
-    quote: In Wittenberg schrieb er 1734 seine Dissertation über das "Leib-Seele-Problem".
-  status: drafted
+    - title: 'American Philosophical Association: Anton Wilhelm Amo: The African Philosopher in 18th Century Europe'
+      url: https://blog.apaonline.org/2018/02/08/anton-wilhelm-amo-the-african-philosopher-in-18th-europe/
+      quote: On the 16th of April, 1734, at the University of Wittenberg, he defended his dissertation
+    - title: 'University of Halle: Kunst trifft Erinnerungskultur: Neue Ausstellung zu Amo an der MLU'
+      url: https://pressemitteilungen.pr.uni-halle.de/index.php?modus=pmanzeige&pm_id=5651
+      quote: In Wittenberg schrieb er 1734 seine Dissertation über das "Leib-Seele-Problem".
+  status: checked
 - id: fx-sci-0005
   cat: sci
   en: Alice Ball became the first woman to earn a chemistry master's degree at the College of Hawaiʻi in 1915.
@@ -35,14 +30,14 @@
     lat: 21.3099
     lon: -157.8581
   cards:
-  - alice-ball
+    - alice-ball
   gender: f
   region: us
   sources:
-  - title: 'UNSW Sydney: Alice Ball'
-    url: https://www.unsw.edu.au/science/about-us/equity-diversity-inclusion/belonging-in-science/science-history-profiles/alice-ball
-    quote: the first woman and African American to graduate with a Master of Chemistry at the University of Hawaii (UH) in 1915
-  - title: 'University of Hawaiʻi: Cultivating a UH legacy'
-    url: https://www.hawaii.edu/news/2020/03/02/cultivating-a-uh-legacy/
-    quote: She was the first woman to earn a master’s degree in chemistry and the school’s first African American female chemistry instructor.
-  status: drafted
+    - title: 'UNSW Sydney: Alice Ball'
+      url: https://www.unsw.edu.au/science/about-us/equity-diversity-inclusion/belonging-in-science/science-history-profiles/alice-ball
+      quote: the first woman and African American to graduate with a Master of Chemistry at the University of Hawaii (UH) in 1915
+    - title: 'University of Hawaiʻi: Cultivating a UH legacy'
+      url: https://www.hawaii.edu/news/2020/03/02/cultivating-a-uh-legacy/
+      quote: She was the first woman to earn a master’s degree in chemistry and the school’s first African American female chemistry instructor.
+  status: checked

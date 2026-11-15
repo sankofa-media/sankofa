@@ -1,62 +1,53 @@
 ---
 - id: fx-hon-0001
   cat: hon
-  en: Jamaican reggae joined UNESCO's Representative List of the Intangible Cultural
-    Heritage of Humanity in 2018.
-  ru: Ямайское регги вошло в Репрезентативный список нематериального культурного наследия
-    человечества ЮНЕСКО в 2018 году.
+  en: Jamaican reggae joined UNESCO's Representative List of the Intangible Cultural Heritage of Humanity in 2018.
+  ru: Ямайское регги вошло в Репрезентативный список нематериального культурного наследия человечества ЮНЕСКО в 2018 году.
   year: 2018
   place:
     name: Kingston, Jamaica
     lat: 17.9712
     lon: -76.7936
   cards:
-  - reggae
+    - reggae
   gender: none
   region: caribbean
   sources:
-  - title: 'The Guardian: UN adds reggae music to list of international cultural treasures'
-    url: >-
-      https://www.theguardian.com/music/2018/nov/29/un-adds-reggae-music-to-list-of-international-cultural-treasures
-    quote: >-
-      The UN has added reggae music to its list of international cultural treasures worthy of
-      protection and promotion.
-  - title: 'Jamaica National Commission for UNESCO: Awards/Inscriptions of Designations'
-    url: https://jncunesco.gov.jm/awards-inscriptions-of-designations/
-    quote: >-
-      Reggae Music of Jamaica inscribed on UNESCO Intangible Cultural Heritage of Humanity List
-      (ICH), December 2018
-  status: drafted
+    - title: 'The Guardian: UN adds reggae music to list of international cultural treasures'
+      url: >-
+        https://www.theguardian.com/music/2018/nov/29/un-adds-reggae-music-to-list-of-international-cultural-treasures
+      quote: >-
+        The UN has added reggae music to its list of international cultural treasures worthy of protection and promotion.
+    - title: 'Jamaica National Commission for UNESCO: Awards/Inscriptions of Designations'
+      url: https://jncunesco.gov.jm/awards-inscriptions-of-designations/
+      quote: >-
+        Reggae Music of Jamaica inscribed on UNESCO Intangible Cultural Heritage of Humanity List (ICH), December 2018
+  status: checked
 - id: fx-hon-0004
   cat: hon
-  en: Nigerian playwright Wole Soyinka became the first Black African Nobel laureate
-    in literature in 1986.
-  ru: Нигерийский драматург Воле Шойинка в 1986 году стал первым чернокожим африканским
-    лауреатом Нобелевской премии по литературе.
+  en: Nigerian playwright Wole Soyinka became the first Black African Nobel laureate in literature in 1986.
+  ru: Нигерийский драматург Воле Шойинка в 1986 году стал первым чернокожим африканским лауреатом Нобелевской премии по литературе.
   year: 1986
   place:
     name: Stockholm
     lat: 59.3293
     lon: 18.0686
   cards:
-  - death-and-the-kings-horseman
+    - death-and-the-kings-horseman
   gender: m
   region: europe
   sources:
-  - title: 'Bibliotheca Alexandrina: Wole Soyinka (biography drawn from Britannica)'
-    url: https://www.bibalex.org/libraries/Presentation/Static/Soyinka_Wole_eng_1107.pdf
-    quote: Soyinka was the first black African to be awarded the Nobel Prize for Literature
-      in 1986.
-  - title: 'Churchill College, Cambridge: Professor Wole Soyinka'
-    url: https://www.chu.cam.ac.uk/fellows/professor-wole-soyinka/
-    quote: He became the first African to be awarded the Nobel Prize in Literature
-      in 1986
-  status: drafted
+    - title: 'Bibliotheca Alexandrina: Wole Soyinka (biography drawn from Britannica)'
+      url: https://www.bibalex.org/libraries/Presentation/Static/Soyinka_Wole_eng_1107.pdf
+      quote: Soyinka was the first black African to be awarded the Nobel Prize for Literature in 1986.
+    - title: 'Churchill College, Cambridge: Professor Wole Soyinka'
+      url: https://www.chu.cam.ac.uk/fellows/professor-wole-soyinka/
+      quote: He became the first African to be awarded the Nobel Prize in Literature in 1986
+  status: checked
 - id: fx-hon-0005
   cat: hon
   en: American novelist Toni Morrison received the Nobel Prize in Literature in 1993.
-  ru: Американская писательница Тони Моррисон получила Нобелевскую премию по литературе
-    в 1993 году.
+  ru: Американская писательница Тони Моррисон получила Нобелевскую премию по литературе в 1993 году.
   year: 1993
   place:
     name: Stockholm
@@ -66,22 +57,19 @@
   gender: f
   region: europe
   sources:
-  - title: 'National Endowment for the Arts: Beloved'
-    url: https://www.arts.gov/initiatives/nea-big-read/beloved
-    quote: Morrison was awarded the Nobel Prize in Literature in 1993
-  - title: 'Penguin Random House: Beloved'
-    url: >-
-      https://www.penguinrandomhouse.com/books/117647/beloved-pulitzer-prize-winner-by-toni-morrison/
-    quote: >-
-      She received the National Book Critics Circle Award, the Pulitzer Prize, and in 1993 the
-      Nobel Prize in Literature.
-  status: drafted
+    - title: 'National Endowment for the Arts: Beloved'
+      url: https://www.arts.gov/initiatives/nea-big-read/beloved
+      quote: Morrison was awarded the Nobel Prize in Literature in 1993
+    - title: 'Penguin Random House: Beloved'
+      url: >-
+        https://www.penguinrandomhouse.com/books/117647/beloved-pulitzer-prize-winner-by-toni-morrison/
+      quote: >-
+        She received the National Book Critics Circle Award, the Pulitzer Prize, and in 1993 the Nobel Prize in Literature.
+  status: checked
 - id: fx-hon-0006
   cat: hon
-  en: Toni Morrison's novel Beloved won the 1988 Pulitzer Prize for fiction in the
-    United States.
-  ru: Роман Тони Моррисон «Возлюбленная» получил в США Пулитцеровскую премию за художественную
-    прозу в 1988 году.
+  en: Toni Morrison's novel Beloved won the 1988 Pulitzer Prize for fiction in the United States.
+  ru: Роман Тони Моррисон «Возлюбленная» получил в США Пулитцеровскую премию за художественную прозу в 1988 году.
   year: 1988
   place:
     name: New York
@@ -91,41 +79,38 @@
   gender: f
   region: us
   sources:
-  - title: 'National Endowment for the Arts: Beloved'
-    url: https://www.arts.gov/initiatives/nea-big-read/beloved
-    quote: Beloved won the 1988 Pulitzer Prize for Fiction.
-  - title: 'Penguin Random House: Beloved book resume'
-    url: https://assets.penguinrandomhouse.com/book-resumes/MorrisonToni_Beloved.pdf
-    quote: Winner of the 1988 Pulitzer Prize
-  status: drafted
+    - title: 'National Endowment for the Arts: Beloved'
+      url: https://www.arts.gov/initiatives/nea-big-read/beloved
+      quote: Beloved won the 1988 Pulitzer Prize for Fiction.
+    - title: 'Penguin Random House: Beloved book resume'
+      url: https://assets.penguinrandomhouse.com/book-resumes/MorrisonToni_Beloved.pdf
+      quote: Winner of the 1988 Pulitzer Prize
+  status: checked
 - id: fx-hon-0007
   cat: hon
   en: Great Zimbabwe's stone city joined UNESCO's World Heritage List in 1986.
-  ru: Каменный город Большой Зимбабве вошёл в Список всемирного наследия ЮНЕСКО в
-    1986 году.
+  ru: Каменный город Большой Зимбабве вошёл в Список всемирного наследия ЮНЕСКО в 1986 году.
   year: 1986
   place:
     name: Great Zimbabwe
     lat: -20.2675
     lon: 30.9333
   cards:
-  - great-zimbabwe
+    - great-zimbabwe
   gender: none
   region: africa
   sources:
-  - title: 'South African History Online: Constructing heritage and heritage resources'
-    url: https://sahistory.org.za/article/constructing-heritage-and-heritage-resources
-    quote: Great Zimbabwe was declared a World Heritage Site in 1986.
-  - title: 'National Museums and Monuments of Zimbabwe: World Heritage Sites'
-    url: https://www.nmmz.co.zw/world-heritage-sites/
-    quote: 'Great Zimbabwe National Monument Year of Inscription: 1986'
-  status: drafted
+    - title: 'South African History Online: Constructing heritage and heritage resources'
+      url: https://sahistory.org.za/article/constructing-heritage-and-heritage-resources
+      quote: Great Zimbabwe was declared a World Heritage Site in 1986.
+    - title: 'National Museums and Monuments of Zimbabwe: World Heritage Sites'
+      url: https://www.nmmz.co.zw/world-heritage-sites/
+      quote: 'Great Zimbabwe National Monument Year of Inscription: 1986'
+  status: checked
 - id: fx-hon-0008
   cat: hon
-  en: Le Morne, a refuge for escaped enslaved people in Mauritius, became a UNESCO
-    World Heritage site in 2008.
-  ru: Ле-Морн, убежище беглецов из рабства на Маврикии, в 2008 году стал объектом
-    всемирного наследия ЮНЕСКО.
+  en: Le Morne Cultural Landscape in Mauritius was inscribed on UNESCO's World Heritage List in 2008.
+  ru: Культурный ландшафт Ле-Морн на Маврикии вошёл в Список всемирного наследия ЮНЕСКО в 2008 году.
   year: 2008
   place:
     name: Le Morne, Mauritius
@@ -135,77 +120,67 @@
   gender: none
   region: africa
   sources:
-  - title: 'UNESCO: Le Morne Brabant Mountain, Google Arts and Culture'
-    url: >-
-      https://artsandculture.google.com/asset/le-morne-brabant-mountain-le-morne-cultural-landscape/8QHIj6VCY3yibQ
-    quote: >-
-      Inscribed on the World Heritage List in 2008, Le Morne Cultural Landscape is a rugged mountain
-  - title: >-
-      Mauritius Ministry of Arts and Culture: Le Morne: A new dawn for a UNESCO World Heritage
-      Site
-    url: https://culture.govmu.org/mach/?p=6982
-    quote: Le Morne, cultural landscape which is inscribed on UNESCO’s World Heritage List since
-      2008
-  status: drafted
+    - title: 'UNESCO: Le Morne Brabant Mountain, Google Arts and Culture'
+      url: >-
+        https://artsandculture.google.com/asset/le-morne-brabant-mountain-le-morne-cultural-landscape/8QHIj6VCY3yibQ
+      quote: >-
+        Inscribed on the World Heritage List in 2008, Le Morne Cultural Landscape is a rugged mountain
+    - title: >-
+        Mauritius Ministry of Arts and Culture: Le Morne: A new dawn for a UNESCO World Heritage Site
+      url: https://culture.govmu.org/mach/?p=6982
+      quote: Le Morne, cultural landscape which is inscribed on UNESCO’s World Heritage List since 2008
+  status: checked
 - id: fx-hon-0009
   cat: hon
-  en: Bahia's samba de roda entered UNESCO's Representative List of the Intangible
-    Cultural Heritage of Humanity in 2008.
-  ru: Самба-де-рода из Баии вошла в Репрезентативный список нематериального культурного
-    наследия человечества ЮНЕСКО в 2008 году.
+  en: Bahia's samba de roda entered UNESCO's Representative List of the Intangible Cultural Heritage of Humanity in 2008.
+  ru: Самба-де-рода из Баии вошла в Репрезентативный список нематериального культурного наследия человечества ЮНЕСКО в 2008 году.
   year: 2008
   place:
     name: Salvador, Bahia
     lat: -12.9714
     lon: -38.5014
   cards:
-  - samba
+    - samba
   gender: none
   region: latam
   sources:
-  - title: 'CECIERJ: Cultura Brasileira'
-    url: https://canal.cecierj.edu.br/082018/01898e8795f14c5f2446469df7c9ed8d.pdf
-    quote: Inscritos na Lista representativa do patrimônio cultural imaterial da humanidade
-  - title: 'IPHAN: Reconhecimento do Samba de Roda do Estado da Bahia pela Unesco'
-    url: >-
-      https://bcr.iphan.gov.br/acoes-de-salvaguarda/reconhecimento-do-samba-de-roda-do-estado-da-bahia-pela-unesco-como-obra-prima-do-patrimonio-oral-e-imaterial-da-humanidade-e-posterior-incorporacao-a-lista-representativa/
-    quote: >-
-      Em 2008, foi incorporado à Lista Representativa do Patrimônio Cultural Imaterial da Humanidade.
-  status: drafted
+    - title: 'CECIERJ: Cultura Brasileira'
+      url: https://canal.cecierj.edu.br/082018/01898e8795f14c5f2446469df7c9ed8d.pdf
+      quote: Inscritos na Lista representativa do patrimônio cultural imaterial da humanidade
+    - title: 'IPHAN: Reconhecimento do Samba de Roda do Estado da Bahia pela Unesco'
+      url: >-
+        https://bcr.iphan.gov.br/acoes-de-salvaguarda/reconhecimento-do-samba-de-roda-do-estado-da-bahia-pela-unesco-como-obra-prima-do-patrimonio-oral-e-imaterial-da-humanidade-e-posterior-incorporacao-a-lista-representativa/
+      quote: >-
+        Em 2008, foi incorporado à Lista Representativa do Patrimônio Cultural Imaterial da Humanidade.
+  status: checked
 - id: fx-hon-0010
   cat: hon
-  en: Uruguay established December 3 as National Candombe, Afro-Uruguayan Culture
-    and Racial Equity Day in 2006.
-  ru: В 2006 году Уругвай объявил 3 декабря Национальным днём кандомбе, афроуругвайской
-    культуры и расового равенства.
+  en: Uruguay established December 3 as National Candombe, Afro-Uruguayan Culture and Racial Equity Day in 2006.
+  ru: В 2006 году Уругвай объявил 3 декабря Национальным днём кандомбе, афроуругвайской культуры и расового равенства.
   year: 2006
   place:
     name: Montevideo
     lat: -34.9011
     lon: -56.1645
   cards:
-  - candombe-montevideo
+    - candombe-montevideo
   gender: none
   region: latam
   sources:
-  - title: 'Uruguay, IMPO: Ley N° 18059'
-    url: https://www.impo.com.uy/bases/leyes/18059-2006
-    quote: nacional del candombe, la cultura afrouruguaya y la equidad racial
-  - title: >-
-      Uruguay Ministry of Education and Culture: Día Nacional del Candombe, la Cultura Afrouruguaya
-      y la Equidad Racial
-    url: >-
-      https://www.gub.uy/ministerio-educacion-cultura/comunicacion/noticias/dia-nacional-del-candombe-cultura-afrouruguaya-equidad-racial
-    quote: >-
-      Desde el 2006, cada 3 de diciembre se celebra el Día Nacional del Candombe, la Cultura Afrouruguaya
-      y la Equidad Racial.
-  status: drafted
+    - title: 'Uruguay, IMPO: Ley N° 18059'
+      url: https://www.impo.com.uy/bases/leyes/18059-2006
+      quote: nacional del candombe, la cultura afrouruguaya y la equidad racial
+    - title: >-
+        Uruguay Ministry of Education and Culture: Día Nacional del Candombe, la Cultura Afrouruguaya y la Equidad Racial
+      url: >-
+        https://www.gub.uy/ministerio-educacion-cultura/comunicacion/noticias/dia-nacional-del-candombe-cultura-afrouruguaya-equidad-racial
+      quote: >-
+        Desde el 2006, cada 3 de diciembre se celebra el Día Nacional del Candombe, la Cultura Afrouruguaya y la Equidad Racial.
+  status: checked
 - id: fx-hon-0011
   cat: hon
-  en: Zimbabwe's Matobo Hills entered UNESCO's World Heritage List under cultural
-    criteria in 2003.
-  ru: Холмы Матобо в Зимбабве вошли в Список всемирного наследия ЮНЕСКО по культурным
-    критериям в 2003 году.
+  en: Zimbabwe's Matobo Hills entered UNESCO's World Heritage List under cultural criteria in 2003.
+  ru: Холмы Матобо в Зимбабве вошли в Список всемирного наследия ЮНЕСКО по культурным критериям в 2003 году.
   year: 2003
   place:
     name: Matobo Hills, Zimbabwe
@@ -215,19 +190,17 @@
   gender: none
   region: africa
   sources:
-  - title: 'Croatian Encyclopedia: Matobo'
-    url: https://www.enciklopedija.hr/clanak/matobo
-    quote: nalazi se od 2003. na UNESCO-ovu popisu zaštićene svjetske kulturne baštine
-  - title: 'National Museums and Monuments of Zimbabwe: World Heritage Sites'
-    url: https://www.nmmz.co.zw/world-heritage-sites/
-    quote: 'Matobo Hills Year of Inscription: 2003'
-  status: drafted
+    - title: 'Croatian Encyclopedia: Matobo'
+      url: https://www.enciklopedija.hr/clanak/matobo
+      quote: nalazi se od 2003. na UNESCO-ovu popisu zaštićene svjetske kulturne baštine
+    - title: 'National Museums and Monuments of Zimbabwe: World Heritage Sites'
+      url: https://www.nmmz.co.zw/world-heritage-sites/
+      quote: 'Matobo Hills Year of Inscription: 2003'
+  status: unverified
 - id: fx-hon-0012
   cat: hon
-  en: Liberian peace activist Leymah Gbowee received the Nobel Peace Prize in 2011
-    for helping end her country's civil war.
-  ru: Либерийская активистка Лейма Гбови получила Нобелевскую премию мира в 2011 году
-    за участие в прекращении гражданской войны в своей стране.
+  en: Liberian activist Leymah Gbowee won the 2011 Nobel Peace Prize for leading the Women of Liberia Mass Action for Peace.
+  ru: В 2011 году либерийская активистка Лейма Гбови получила Нобелевскую премию мира за руководство движением «Женщины Либерии — массовые действия за мир».
   year: 2011
   place:
     name: Oslo
@@ -237,22 +210,19 @@
   gender: f
   region: europe
   sources:
-  - title: 'Nobel Prize: Leymah Gbowee facts'
-    url: https://www.nobelprize.org/prizes/peace/2011/gbowee/facts/
-    quote: >-
-      Leymah Gbowee was awarded the Nobel Peace Prize for her non-violent efforts to promote peace
-  - title: 'Gbowee Peace Foundation Africa: Our team'
-    url: https://gboweepeaceafrica.org/our-team-direct
-    quote: >-
-      2011 Nobel Peace Prize laureate for her leadership of the Women of Liberia Mass Action for
-      Peace
-  status: drafted
+    - title: 'Nobel Prize: Leymah Gbowee facts'
+      url: https://www.nobelprize.org/prizes/peace/2011/gbowee/facts/
+      quote: >-
+        Leymah Gbowee was awarded the Nobel Peace Prize for her non-violent efforts to promote peace
+    - title: 'Gbowee Peace Foundation Africa: Our team'
+      url: https://gboweepeaceafrica.org/our-team-direct
+      quote: >-
+        2011 Nobel Peace Prize laureate for her leadership of the Women of Liberia Mass Action for Peace
+  status: checked
 - id: fx-hon-0013
   cat: hon
-  en: Gorée Island joined UNESCO's World Heritage List in 1978 as a place of remembrance
-    of the Atlantic slave trade.
-  ru: Остров Горе вошёл в Список всемирного наследия ЮНЕСКО в 1978 году как место
-    памяти об атлантической работорговле.
+  en: Gorée Island joined UNESCO's World Heritage List in 1978 as a place of remembrance of the Atlantic slave trade.
+  ru: Остров Горе вошёл в Список всемирного наследия ЮНЕСКО в 1978 году как место памяти об атлантической работорговле.
   year: 1978
   place:
     name: Gorée Island, Senegal
@@ -262,35 +232,32 @@
   gender: none
   region: africa
   sources:
-  - title: 'Croatian Encyclopedia: Gorée'
-    url: https://www.enciklopedija.hr/clanak/goree
-    quote: Od 1978. otok je na UNESCO-ovu popisu svjetske kulturne baštine.
-  - title: 'ALIPH Foundation: Réhabilitation du musée de la Mer de Gorée'
-    url: >-
-      https://www.aliph-foundation.org/fr/nos-actions/rehabilitation-of-the-sea-museum-in-goree-initial-steps
-    quote: des 12 premiers sites inscrits en 1978 sur la liste du patrimoine mondial de l’UNESCO.
-  status: drafted
+    - title: 'Croatian Encyclopedia: Gorée'
+      url: https://www.enciklopedija.hr/clanak/goree
+      quote: Od 1978. otok je na UNESCO-ovu popisu svjetske kulturne baštine.
+    - title: 'ALIPH Foundation: Réhabilitation du musée de la Mer de Gorée'
+      url: >-
+        https://www.aliph-foundation.org/fr/nos-actions/rehabilitation-of-the-sea-museum-in-goree-initial-steps
+      quote: des 12 premiers sites inscrits en 1978 sur la liste du patrimoine mondial de l’UNESCO.
+  status: unverified
 - id: fx-hon-0014
   cat: hon
-  en: Timbuktu's mosques and sacred places entered UNESCO's World Heritage List in
-    1988, recognising the city's intellectual and spiritual heritage.
-  ru: Мечети и святыни Тимбукту вошли в Список всемирного наследия ЮНЕСКО в 1988 году
-    как свидетельства интеллектуального и духовного наследия города.
+  en: Timbuktu's mosques and sacred places entered UNESCO's World Heritage List in 1988, recognising the city's intellectual and spiritual heritage.
+  ru: Мечети и святыни Тимбукту вошли в Список всемирного наследия ЮНЕСКО в 1988 году как свидетельства интеллектуального и духовного наследия города.
   year: 1988
   place:
     name: Timbuktu, Mali
     lat: 16.7733
     lon: -2.9994
   cards:
-  - timbuktu-manuscripts
+    - timbuktu-manuscripts
   gender: none
   region: africa
   sources:
-  - title: 'Croatian Encyclopedia: Timbuktu'
-    url: https://www.enciklopedija.hr/clanak/timbuktu
-    quote: Timbuktu je od 1988. na UNESCO-ovu popisu svjetske kulturne baštine.
-  - title: 'International Criminal Court: Al Mahdi reparations order, 17 August 2017, paragraph
-      21'
-    url: https://www.icc-cpi.int/sites/default/files/CourtRecords/CR2017_05117.PDF
-    quote: Timbuktu was inscribed on the World Heritage List in 1988
-  status: drafted
+    - title: 'Croatian Encyclopedia: Timbuktu'
+      url: https://www.enciklopedija.hr/clanak/timbuktu
+      quote: Timbuktu je od 1988. na UNESCO-ovu popisu svjetske kulturne baštine.
+    - title: 'International Criminal Court: Al Mahdi reparations order, 17 August 2017, paragraph 21'
+      url: https://www.icc-cpi.int/sites/default/files/CourtRecords/CR2017_05117.PDF
+      quote: Timbuktu was inscribed on the World Heritage List in 1988
+  status: unverified

@@ -9,7 +9,7 @@
   region: "europe"
   sources: [ { "title": "UK Government: Population of England and Wales, 2021 census, ethnicity table", "url": "https://www.ethnicity-facts-figures.service.gov.uk/uk-population-by-ethnicity/national-and-regional-populations/population-of-england-and-wales/latest/", "quote": "Black African 2.5 1,488,387" }, { "title": "Robinson, Williams and Preece: UK Housing Review 2024, Table 1.2.1 (2021)", "url": "https://www.cih.org/media/cv4lhqni/ukhr-2024full-version.pdf", "quote": "Black African 1,488,387" } ]
   note: "The sources independently present and discuss the same ONS census data; these are census categories, not inferred ancestry."
-  status: "drafted"
+  status: "checked"
 - id: "fx-num-0006"
   cat: "num"
   en: "England and Wales's 2021 census counted 623,115 residents in the “Black Caribbean” ethnic category."
@@ -21,7 +21,7 @@
   region: "europe"
   sources: [ { "title": "UK Government: Population of England and Wales, 2021 census, ethnicity table", "url": "https://www.ethnicity-facts-figures.service.gov.uk/uk-population-by-ethnicity/national-and-regional-populations/population-of-england-and-wales/latest/", "quote": "Black Caribbean 1.0 623,115" }, { "title": "Robinson, Williams and Preece: UK Housing Review 2024, Table 1.2.1 (2021)", "url": "https://www.cih.org/media/cv4lhqni/ukhr-2024full-version.pdf", "quote": "Black Caribbean 623,115" } ]
   note: "The sources independently present and discuss the same ONS census data; these are census categories, not inferred ancestry."
-  status: "drafted"
+  status: "checked"
 - id: "fx-num-0007"
   cat: "num"
   en: "England and Wales's 2021 census counted 297,781 residents in the “Other Black” ethnic category."
@@ -33,7 +33,7 @@
   region: "europe"
   sources: [ { "title": "UK Government: Population of England and Wales, 2021 census, ethnicity table", "url": "https://www.ethnicity-facts-figures.service.gov.uk/uk-population-by-ethnicity/national-and-regional-populations/population-of-england-and-wales/latest/", "quote": "Black other 0.5 297,781" }, { "title": "Robinson, Williams and Preece: UK Housing Review 2024, Table 1.2.1 (2021)", "url": "https://www.cih.org/media/cv4lhqni/ukhr-2024full-version.pdf", "quote": "Black other 297,781" } ]
   note: "The sources independently present and discuss the same ONS census data; these are census categories, not inferred ancestry."
-  status: "drafted"
+  status: "checked"
 - id: "fx-num-0008"
   cat: "num"
   en: "England and Wales's 2021 census counted 249,593 residents in the “Mixed White/Black African” ethnic category."
@@ -45,7 +45,7 @@
   region: "europe"
   sources: [ { "title": "UK Government: Population of England and Wales, 2021 census, ethnicity table", "url": "https://www.ethnicity-facts-figures.service.gov.uk/uk-population-by-ethnicity/national-and-regional-populations/population-of-england-and-wales/latest/", "quote": "Mixed White/Black African 0.4 249,593" }, { "title": "Robinson, Williams and Preece: UK Housing Review 2024, Table 1.2.1 (2021)", "url": "https://www.cih.org/media/cv4lhqni/ukhr-2024full-version.pdf", "quote": "Mixed White/Black African 249,593" } ]
   note: "The sources independently present and discuss the same ONS census data; these are census categories, not inferred ancestry."
-  status: "drafted"
+  status: "checked"
 - id: "fx-num-0009"
   cat: "num"
   en: "England and Wales's 2021 census counted 513,040 residents in the “Mixed White/Black Caribbean” ethnic category."
@@ -57,7 +57,7 @@
   region: "europe"
   sources: [ { "title": "UK Government: Population of England and Wales, 2021 census, ethnicity table", "url": "https://www.ethnicity-facts-figures.service.gov.uk/uk-population-by-ethnicity/national-and-regional-populations/population-of-england-and-wales/latest/", "quote": "Mixed White/Black Caribbean 0.9 513,040" }, { "title": "Robinson, Williams and Preece: UK Housing Review 2024, Table 1.2.1 (2021)", "url": "https://www.cih.org/media/cv4lhqni/ukhr-2024full-version.pdf", "quote": "Mixed White/Black Caribbean 513,040" } ]
   note: "The sources independently present and discuss the same ONS census data; these are census categories, not inferred ancestry."
-  status: "drafted"
+  status: "checked"
 - id: fx-num-0010
   cat: num
   en: Brazil's 1872 census classified 19.7% of the population as Black (“preta”).
@@ -78,7 +78,7 @@
       url: https://revistas.usp.br/ra/pt_BR/article/download/221938/213049/752607
       quote: Black 19.7 14.6 14.6 11 8.7 5.9 5 6.2 7.6 10.2
   note: Table excerpts use normalized whitespace. Census categories and enumeration methods changed over time; no claim of self-identification is made.
-  status: drafted
+  status: checked
 - id: fx-num-0011
   cat: num
   en: Brazil's 1890 census classified 14.6% of the population as Black (“preta”).
@@ -99,7 +99,7 @@
       url: https://revistas.usp.br/ra/pt_BR/article/download/221938/213049/752607
       quote: Black 19.7 14.6 14.6 11 8.7 5.9 5 6.2 7.6 10.2
   note: Table excerpts use normalized whitespace. Census categories and enumeration methods changed over time; no claim of self-identification is made.
-  status: drafted
+  status: checked
 - id: fx-num-0012
   cat: num
   en: Brazil's 1940 census classified 14.6% of the population as Black (“preta”).
@@ -120,7 +120,7 @@
       url: https://revistas.usp.br/ra/pt_BR/article/download/221938/213049/752607
       quote: Black 19.7 14.6 14.6 11 8.7 5.9 5 6.2 7.6 10.2
   note: Table excerpts use normalized whitespace. Census categories and enumeration methods changed over time; no claim of self-identification is made.
-  status: drafted
+  status: checked
 - id: fx-num-0013
   cat: num
   en: Brazil's 1950 census classified 11.0% of the population as Black (“preta”).
@@ -141,7 +141,7 @@
       url: https://revistas.usp.br/ra/pt_BR/article/download/221938/213049/752607
       quote: Black 19.7 14.6 14.6 11 8.7 5.9 5 6.2 7.6 10.2
   note: Table excerpts use normalized whitespace. Census categories and enumeration methods changed over time; no claim of self-identification is made.
-  status: drafted
+  status: checked
 - id: fx-num-0014
   cat: num
   en: Brazil's 1960 census classified 8.7% of the population as Black (“preta”).
@@ -162,7 +162,7 @@
       url: https://revistas.usp.br/ra/pt_BR/article/download/221938/213049/752607
       quote: Black 19.7 14.6 14.6 11 8.7 5.9 5 6.2 7.6 10.2
   note: Table excerpts use normalized whitespace. Census categories and enumeration methods changed over time; no claim of self-identification is made.
-  status: drafted
+  status: checked
 - id: fx-num-0015
   cat: num
   en: Canada's 2001 census counted 662,215 Black residents.
@@ -183,7 +183,7 @@
       url: https://www.torontomu.ca/content/dam/diversity/reports/state-of-black-economics/DI-FSC_State-of-Black-Economics-Report-2025.pdf
       quote: 'Growth of the Black population in Canada: Total numbers and percentage of the overall population, 2001–2021 2,000,000 4.3% 5% 3.5% 1,547,865 4% 1,500,000 2.9% 2.5% 1,198,540 2.2% 3% 1,000,000 945,665 783,795 2% 662,215'
   note: Canada is coded global because the prescribed region enum has no Canada/North America value. Short numeric excerpts refer to the explicitly labelled census chart or paragraph.
-  status: drafted
+  status: checked
 - id: fx-num-0016
   cat: num
   en: Black residents represented 2.5% of Canada's population in the 2006 census.
@@ -204,7 +204,7 @@
       url: https://www.torontomu.ca/content/dam/diversity/reports/state-of-black-economics/DI-FSC_State-of-Black-Economics-Report-2025.pdf
       quote: 'Growth of the Black population in Canada: Total numbers and percentage of the overall population, 2001–2021 2,000,000 4.3% 5% 3.5% 1,547,865 4% 1,500,000 2.9% 2.5% 1,198,540 2.2% 3% 1,000,000 945,665 783,795 2% 662,215'
   note: Canada is coded global because the prescribed region enum has no Canada/North America value. Short numeric excerpts refer to the explicitly labelled census chart or paragraph.
-  status: drafted
+  status: checked
 - id: fx-num-0017
   cat: num
   en: Canada's 2011 National Household Survey counted 945,665 Black residents.
@@ -225,7 +225,7 @@
       url: https://www.torontomu.ca/content/dam/diversity/reports/state-of-black-economics/DI-FSC_State-of-Black-Economics-Report-2025.pdf
       quote: 'Growth of the Black population in Canada: Total numbers and percentage of the overall population, 2001–2021 2,000,000 4.3% 5% 3.5% 1,547,865 4% 1,500,000 2.9% 2.5% 1,198,540 2.2% 3% 1,000,000 945,665 783,795 2% 662,215'
   note: Canada is coded global because the prescribed region enum has no Canada/North America value. Short numeric excerpts refer to the explicitly labelled census chart or paragraph.
-  status: drafted
+  status: checked
 - id: fx-num-0018
   cat: num
   en: Black residents represented 3.5% of Canada's population in the 2016 census.
@@ -246,7 +246,7 @@
       url: https://www.torontomu.ca/content/dam/diversity/reports/state-of-black-economics/DI-FSC_State-of-Black-Economics-Report-2025.pdf
       quote: 'Growth of the Black population in Canada: Total numbers and percentage of the overall population, 2001–2021 2,000,000 4.3% 5% 3.5% 1,547,865 4% 1,500,000 2.9% 2.5% 1,198,540 2.2% 3% 1,000,000 945,665 783,795 2% 662,215'
   note: Canada is coded global because the prescribed region enum has no Canada/North America value. Short numeric excerpts refer to the explicitly labelled census chart or paragraph.
-  status: drafted
+  status: checked
 - id: fx-num-0019
   cat: num
   en: Black residents represented 4.3% of Canada's population in the 2021 census.
@@ -267,7 +267,7 @@
       url: https://www.torontomu.ca/content/dam/diversity/reports/state-of-black-economics/DI-FSC_State-of-Black-Economics-Report-2025.pdf
       quote: Canada’s Black population has been growing steadily, reaching 1.5 million in 2021 (4.3% of the total population)
   note: Canada is coded global because the prescribed region enum has no Canada/North America value. Short numeric excerpts refer to the explicitly labelled census chart or paragraph.
-  status: drafted
+  status: checked
 - id: "fx-num-0020"
   cat: "num"
   en: "The median age of Black Canadians was 30.2 years in Statistics Canada's 2021 census."
@@ -279,7 +279,7 @@
   region: "global"
   sources: [ { "title": "Domey and Patsiurko, Statistics Canada: The Diversity of the Black Populations in Canada, 2021", "url": "https://www150.statcan.gc.ca/n1/pub/89-657-x/89-657-x2024005-eng.htm", "quote": "median age of 30.2 years" }, { "title": "Cukier et al., Toronto Metropolitan University: State of Black Economics Report 2025, pp. 6–7", "url": "https://www.torontomu.ca/content/dam/diversity/reports/state-of-black-economics/DI-FSC_State-of-Black-Economics-Report-2025.pdf", "quote": "median age of 30.2" } ]
   note: "Canada is coded global because the prescribed region enum has no Canada/North America value. Short numeric excerpts refer to the explicitly labelled census chart or paragraph."
-  status: "drafted"
+  status: "checked"
 - id: "fx-num-0022"
   cat: "num"
   en: "Children under 15 comprised 26.1% of Canada's Black population in Statistics Canada's 2021 census."
@@ -291,29 +291,7 @@
   region: "global"
   sources: [ { "title": "Domey and Patsiurko, Statistics Canada: The Diversity of the Black Populations in Canada, 2021", "url": "https://www150.statcan.gc.ca/n1/pub/89-657-x/89-657-x2024005-eng.htm", "quote": "Total Black populations 26.1" }, { "title": "Cukier et al., Toronto Metropolitan University: State of Black Economics Report 2025, pp. 6–7", "url": "https://www.torontomu.ca/content/dam/diversity/reports/state-of-black-economics/DI-FSC_State-of-Black-Economics-Report-2025.pdf", "quote": "under 15 (26.1%)" } ]
   note: "Canada is coded global because the prescribed region enum has no Canada/North America value. Short numeric excerpts refer to the explicitly labelled census chart or paragraph."
-  status: "drafted"
-- id: fx-num-0024
-  cat: num
-  en: In June 1948, 539 Empire Windrush passengers had last lived in Jamaica.
-  ru: В июне 1948 года 539 пассажиров «Эмпайр Уиндраш» прибыли с Ямайки, где жили перед отплытием.
-  year: 1948
-  date: '1948-06-22'
-  place:
-    name: Tilbury, Essex
-    lat: 51.4574
-    lon: 0.3575
-  cards:
-    - windrush-scandal
-  gender: none
-  region: europe
-  sources:
-    - title: 'UK Home Office: Bringing a Piece of Home'
-      url: https://assets.publishing.service.gov.uk/media/67b4b2e24a80c6718b55bf43/Bringing-a-Piece-of-Home.pdf
-      quote: 539 gave their last country of residence as Jamaica
-    - title: 'Royal Museums Greenwich: History of the Windrush'
-      url: https://www.rmg.co.uk/stories/ocean/history-empire-windrush
-      quote: Jamaica was the most popular country of origin (539 people)
-  status: drafted
+  status: "checked"
 - id: fx-num-0025
   cat: num
   en: The 1790 United States census recorded 158 enslaved people in New Hampshire.
@@ -334,7 +312,7 @@
       url: https://www.gutenberg.org/cache/epub/40679/pg40679-images.html
       quote: New Hampshire, 141,111 630 158 141,899
   note: The figures are historical census counts, not modern estimates; table quotations retain adjacent columns or rows for context.
-  status: drafted
+  status: checked
 - id: fx-num-0026
   cat: num
   en: The 1790 United States census recorded 948 enslaved people in Rhode Island.
@@ -355,7 +333,7 @@
       url: https://encompass.rihs.org/rhode-island-slavery-and-the-slave-trade/rhode-island-slavery-and-the-slave-trade/
       quote: The first Federal census in 1790 reported 948 enslaved people in Rhode Island
   note: The figures are historical census counts, not modern estimates; table quotations retain adjacent columns or rows for context.
-  status: drafted
+  status: checked
 - id: fx-num-0027
   cat: num
   en: The 1790 United States census recorded 2,764 enslaved people in Connecticut.
@@ -376,7 +354,7 @@
       url: https://civiced.sas.rutgers.edu/conflict-resolution/volume-one-the-colonial-period-through-reconstruction/563-the-federal-convention-1787
       quote: Connecticut 237,946 2,764 1.2%
   note: The figures are historical census counts, not modern estimates; table quotations retain adjacent columns or rows for context.
-  status: drafted
+  status: checked
 - id: fx-num-0028
   cat: num
   en: The 1790 United States census recorded 21,324 enslaved people in New York.
@@ -397,7 +375,7 @@
       url: https://www.gutenberg.org/cache/epub/40679/pg40679-images.html
       quote: New York, 314,142 4,654 21,324 340,120
   note: The figures are historical census counts, not modern estimates; table quotations retain adjacent columns or rows for context.
-  status: drafted
+  status: checked
 - id: fx-num-0029
   cat: num
   en: The 1790 United States census recorded 11,423 enslaved people in New Jersey.
@@ -418,7 +396,7 @@
       url: https://www.gutenberg.org/cache/epub/40679/pg40679-images.html
       quote: New Jersey, 169,954 2,762 11,423 184,139
   note: The figures are historical census counts, not modern estimates; table quotations retain adjacent columns or rows for context.
-  status: drafted
+  status: checked
 - id: fx-num-0030
   cat: num
   en: The 1790 United States census recorded 8,887 enslaved people in Delaware.
@@ -439,7 +417,7 @@
       url: https://www.gutenberg.org/cache/epub/40679/pg40679-images.html
       quote: Delaware, 46,310 3,899 8,887 59,096 Maryland, 208,649 8,043 103,036 319,728
   note: The figures are historical census counts, not modern estimates; table quotations retain adjacent columns or rows for context.
-  status: drafted
+  status: checked
 - id: fx-num-0031
   cat: num
   en: The 1790 United States census recorded 103,036 enslaved people in Maryland.
@@ -460,7 +438,7 @@
       url: https://www.gutenberg.org/cache/epub/40679/pg40679-images.html
       quote: Maryland, 208,649 8,043 103,036 319,728 Virginia, 442,115 12,765 293,427 748,307
   note: The figures are historical census counts, not modern estimates; table quotations retain adjacent columns or rows for context.
-  status: drafted
+  status: checked
 - id: fx-num-0032
   cat: num
   en: The 1790 United States census recorded 12,430 enslaved people in Kentucky.
@@ -481,7 +459,7 @@
       url: https://heritage.ky.gov/Documents/2010-14KYStateHPPlan.pdf
       quote: In 1790, Kentucky had a population of 73,677, including 61,133 Euro-Americans, 12,430 slaves, and 114 free blacks.
   note: The figures are historical census counts, not modern estimates; table quotations retain adjacent columns or rows for context.
-  status: drafted
+  status: checked
 - id: fx-num-0033
   cat: num
   en: The 1790 United States census recorded 100,572 enslaved people in North Carolina.
@@ -502,7 +480,7 @@
       url: https://www.gutenberg.org/cache/epub/40679/pg40679-images.html
       quote: North Carolina, 288,204 4,975 100,572 393,751 South Carolina, 140,178 1,801
   note: The figures are historical census counts, not modern estimates; table quotations retain adjacent columns or rows for context.
-  status: drafted
+  status: checked
 - id: fx-num-0034
   cat: num
   en: The 1790 United States census recorded 29,264 enslaved people in Georgia.
@@ -523,7 +501,7 @@
       url: https://www.gutenberg.org/cache/epub/40679/pg40679-images.html
       quote: Carolina, 140,178 1,801 107,094 249,073 Georgia, 52,886 398 29,264 82,548
   note: The figures are historical census counts, not modern estimates; table quotations retain adjacent columns or rows for context.
-  status: drafted
+  status: checked
 - id: "fx-num-0035"
   cat: "num"
   en: "Mexico's 2020 INEGI census counted 2,576,213 people identifying as Afro-Mexican or Afro-descendant."
@@ -534,7 +512,7 @@
   gender: "none"
   region: "latam"
   sources: [ { "title": "INEGI: 2020 census, national results, p. 60", "url": "https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/702825198060.pdf", "quote": "afrodescendientes suman 2 576 213" }, { "title": "CNDH: Personas afrodescendientes en México, p. 18", "url": "https://appweb.cndh.org.mx/biblioteca/archivos/pdfs/PA_Mx.pdf", "quote": "se contabilizaron 2 576 213" } ]
-  status: "drafted"
+  status: "checked"
 - id: "fx-num-0036"
   cat: "num"
   en: "Women comprised 50.4% of Mexico's Afro-descendant population in INEGI's 2020 census."
@@ -545,7 +523,7 @@
   gender: "f"
   region: "latam"
   sources: [ { "title": "INEGI: 2020 census, national results, p. 60", "url": "https://www.inegi.org.mx/contenidos/productos/prod_serv/contenidos/espanol/bvinegi/productos/nueva_estruc/702825198060.pdf", "quote": "La proporción de mujeres (50.4%)" }, { "title": "Jazmín Aguilar Rangel, Wilson Center: Afrodescendientes en México", "url": "https://diplomacy21-adelphi.wilsoncenter.org/article/infografia-afrodescendientes-en-mexico", "quote": "50.4% son mujeres" } ]
-  status: "drafted"
+  status: "checked"
 - id: fx-num-0037
   cat: num
   en: In INEGI's 2020 census, 8.6% of Guerrero's residents identified as Afro-Mexican or Afro-descendant.
@@ -566,7 +544,7 @@
     - title: 'Lina Rosa Berrio Palomo, CIESAS: La población afrodescendiente y la pandemia de Covid-19 en México'
       url: https://ichan.ciesas.edu.mx/la-poblacion-afrodescendiente-y-la-pandemia-de-covid-19-en-mexico/
       quote: según el Censo 2020 (8.6% en Guerrero y 4.7% en Oaxaca)
-  status: drafted
+  status: checked
 - id: fx-num-0038
   cat: num
   en: In INEGI's 2020 census, 4.7% of Oaxaca's residents identified as Afro-Mexican or Afro-descendant.
@@ -587,7 +565,7 @@
     - title: 'Lina Rosa Berrio Palomo, CIESAS: La población afrodescendiente y la pandemia de Covid-19 en México'
       url: https://ichan.ciesas.edu.mx/la-poblacion-afrodescendiente-y-la-pandemia-de-covid-19-en-mexico/
       quote: según el Censo 2020 (8.6% en Guerrero y 4.7% en Oaxaca)
-  status: drafted
+  status: checked
 - id: fx-num-0039
   cat: num
   en: Afro-Ecuadorians constituted 7.2% of Ecuador's population in INEC's 2010 census.
@@ -607,11 +585,11 @@
     - title: 'ECLAC: Introducción a la desigualdad de las personas afrodescendientes, Table X.1'
       url: https://igualdad.cepal.org/sites/default/files/2022-02/DB_intro_afro_es.pdf
       quote: Ecuador, 2010 1 041,6 7,2
-  status: drafted
+  status: unverified
 - id: fx-num-0040
   cat: num
-  en: Afro-descendants comprised 7.8% of Costa Rica's population in the 2011 census, combining its Black and mixed African-descent categories.
-  ru: По переписи 2011 года, чернокожие жители Коста-Рики и жители смешанного африканского происхождения вместе составляли 7,8% населения.
+  en: Afro-descendants made up 7.8% of Costa Rica's population in the 2011 census.
+  ru: По переписи 2011 года, люди африканского происхождения составляли 7,8% населения Коста-Рики.
   year: 2011
   place:
     name: Costa Rica
@@ -628,7 +606,7 @@
     - title: 'ECLAC: Introducción a la desigualdad de las personas afrodescendientes, Table X.1'
       url: https://igualdad.cepal.org/sites/default/files/2022-02/DB_intro_afro_es.pdf
       quote: Costa Rica, 2011 334,4 7,8
-  status: drafted
+  status: checked
 - id: "fx-num-0041"
   cat: "num"
   en: "Peru's 2017 INEI census counted 828,894 people who self-identified as Afro-Peruvian."
@@ -639,7 +617,7 @@
   gender: "none"
   region: "latam"
   sources: [ { "title": "INEI: La Autoidentificación Étnica, p. 16", "url": "https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1642/libro.pdf", "quote": "828 mil 894 personas se autoidentificaron como afroperuanas/os" }, { "title": "Rosario Cosar, Observatorio de la Educación Peruana: Invisibilización de la población afroperuana", "url": "https://obepe.org/ods/invisibilizacion-de-la-poblacion-afroperuana-en-la-educacion-peruana/", "quote": "828 894 personas afroperuanas" } ]
-  status: "drafted"
+  status: "checked"
 - id: fx-num-0042
   cat: num
   en: Brazil's 1980 census classified 5.9% of the population as Black (“preta”).
@@ -659,7 +637,7 @@
     - title: 'Antonio Sérgio Alfredo Guimarães: Race and color in contemporary Brazil, Table 1, Black row'
       url: https://revistas.usp.br/ra/pt_BR/article/download/221938/213049/752607
       quote: Black 19.7 14.6 14.6 11 8.7 5.9 5 6.2 7.6 10.2
-  status: drafted
+  status: checked
 - id: fx-num-0043
   cat: num
   en: Brazil's 1991 census classified 5.0% of the population as Black (“preta”).
@@ -679,11 +657,11 @@
     - title: 'Antonio Sérgio Alfredo Guimarães: Race and color in contemporary Brazil, Table 1, Black row'
       url: https://revistas.usp.br/ra/pt_BR/article/download/221938/213049/752607
       quote: Black 19.7 14.6 14.6 11 8.7 5.9 5 6.2 7.6 10.2
-  status: drafted
+  status: checked
 - id: fx-num-0045
   cat: num
-  en: Women held 48.8% of Rwanda's Chamber of Deputies seats after the 2003 election, according to the Inter-Parliamentary Union.
-  ru: После выборов 2003 года женщины занимали 48,8% мест в Палате депутатов Руанды, по данным Межпарламентского союза.
+  en: Women held 39 of 80 seats, or 48.8%, in Rwanda's Chamber of Deputies after the 2003 election.
+  ru: После выборов 2003 года женщины занимали 39 из 80 мест — 48,8% — в Палате депутатов Руанды.
   year: 2003
   place:
     name: Kigali, Rwanda
@@ -699,11 +677,11 @@
     - title: 'National Institute of Statistics of Rwanda: Gender Statistics 2021, Figure 39'
       url: https://statistics.gov.rw/sites/default/files/documents/2025-02/National_Gender_Statistics_Report_2021.pdf
       quote: 'Figure 39: Rwanda Parliament, chamber of Deputies, from 1990 to 2021 82.9 86 77 51.2 63.7 61.3 61.3 56.3 48.8 43.7 36.3 38.7 38.7 17.1 23 14 1990 1994 2001 2003 2008 2013 2018 2021'
-  status: drafted
+  status: checked
 - id: fx-num-0046
   cat: num
-  en: Women held 56.3% of Rwanda's Chamber of Deputies seats after the 2008 election, according to the Inter-Parliamentary Union.
-  ru: После выборов 2008 года женщины занимали 56,3% мест в Палате депутатов Руанды, по данным Межпарламентского союза.
+  en: Women held 56.3% of Rwanda's Chamber of Deputies seats after the 2008 election.
+  ru: После выборов 2008 года женщины занимали 56,3% мест в Палате депутатов Руанды.
   year: 2008
   place:
     name: Kigali, Rwanda
@@ -719,11 +697,11 @@
     - title: 'National Institute of Statistics of Rwanda: Gender Statistics 2021, Figure 39'
       url: https://statistics.gov.rw/sites/default/files/documents/2025-02/National_Gender_Statistics_Report_2021.pdf
       quote: 'Figure 39: Rwanda Parliament, chamber of Deputies, from 1990 to 2021 82.9 86 77 51.2 63.7 61.3 61.3 56.3 48.8 43.7 36.3 38.7 38.7 17.1 23 14 1990 1994 2001 2003 2008 2013 2018 2021'
-  status: drafted
+  status: checked
 - id: fx-num-0047
   cat: num
-  en: Women held 61.3% of Rwanda's Chamber of Deputies seats after the 2018 election, according to the Inter-Parliamentary Union.
-  ru: После выборов 2018 года женщины занимали 61,3% мест в Палате депутатов Руанды, по данным Межпарламентского союза.
+  en: Women held 61.3% of Rwanda's Chamber of Deputies seats after the 2018 election.
+  ru: После выборов 2018 года женщины занимали 61,3% мест в Палате депутатов Руанды.
   year: 2018
   place:
     name: Kigali, Rwanda
@@ -739,11 +717,11 @@
     - title: 'National Institute of Statistics of Rwanda: Gender Statistics 2021, Figure 39'
       url: https://statistics.gov.rw/sites/default/files/documents/2025-02/National_Gender_Statistics_Report_2021.pdf
       quote: 'Figure 39: Rwanda Parliament, chamber of Deputies, from 1990 to 2021 82.9 86 77 51.2 63.7 61.3 61.3 56.3 48.8 43.7 36.3 38.7 38.7 17.1 23 14 1990 1994 2001 2003 2008 2013 2018 2021'
-  status: drafted
+  status: checked
 - id: fx-num-0048
   cat: num
-  en: Women held 63.8% of Rwanda's Chamber of Deputies seats after the 2024 election, according to the Inter-Parliamentary Union.
-  ru: После выборов 2024 года женщины занимали 63,8% мест в Палате депутатов Руанды, по данным Межпарламентского союза.
+  en: Women held 63.8% of Rwanda's Chamber of Deputies seats after the 2024 election.
+  ru: После выборов 2024 года женщины занимали 63,8% мест в Палате депутатов Руанды.
   year: 2024
   place:
     name: Kigali, Rwanda
@@ -759,7 +737,7 @@
     - title: 'UN Women Rwanda: 2024 legislative results'
       url: https://rwanda.un.org/en/282783-rwanda-reaffirms-its-unwavering-commitment-gender-equality-638-cent-women-chamber-deputies
       quote: 63.8 per cent of seats in 2024
-  status: drafted
+  status: checked
 - id: "fx-num-0049"
   cat: "num"
   en: "About 20,000 women marched in protest against the pass laws on 9 August 1956."
@@ -770,7 +748,7 @@
   gender: "f"
   region: "africa"
   sources: [ { "title": "South African History Online: The 1956 Women's March", "url": "https://sahistory.org.za/article/1956-womens-march-pretoria-9-august", "quote": "On 9 August 1956, 20,000 women staged a march" }, { "title": "Ahmed Kathrada Foundation: 1956 Izimbokodo commemoration", "url": "https://www.kathradafoundation.org/2026/03/06/help-name-the-20000-women-who-marched-in-1956-add-their-names-to-the-roll-call-of-honour/", "quote": "On 9 August 1956, approximately 20 000 women marched in protest against the pass laws" } ]
-  status: "drafted"
+  status: "checked"
 - id: fx-num-0050
   cat: num
   en: Black Africans constituted 81.4% of South Africa's population in Statistics South Africa's 2022 census.
@@ -790,7 +768,7 @@
     - title: 'South African Government News Agency: Census 2022, 10 October 2023'
       url: https://www.sanews.gov.za/south-africa/sa-population-grows-517-million-62-million
       quote: Black Africans remain the dominant population group at 81.4%
-  status: drafted
+  status: checked
 - id: fx-num-0051
   cat: num
   en: South Africa's African National Congress won 62.65% of the national vote in 1994.
@@ -810,7 +788,7 @@
     - title: 'University of Notre Dame: Peace Accords Matrix'
       url: https://peaceaccords.nd.edu/provision/constitutional-reform-interim-constitution-accord
       quote: 62.65% of the votes, or 252 seats
-  status: drafted
+  status: checked
 - id: fx-num-0052
   cat: num
   en: South Africa's African National Congress won 66.35% of the national vote in 1999.
@@ -830,7 +808,7 @@
     - title: 'Electoral Commission of South Africa: National Elections 1999, Detailed Results'
       url: https://results.elections.org.za/home/NPEPublicReports/1/Detailed%20Results/National.pdf
       quote: AFRICAN NATIONAL CONGRESS ANC 10,601,330 66.35 %
-  status: drafted
+  status: checked
 - id: fx-num-0053
   cat: num
   en: South Africa's African National Congress won 69.69% of the national vote in 2004.
@@ -850,7 +828,7 @@
     - title: 'South African History Online: 2004 election results'
       url: https://sahistory.org.za/sites/default/files/election_results_2004.pdf
       quote: 10,880,915 69.69% 279
-  status: drafted
+  status: checked
 - id: fx-num-0054
   cat: num
   en: South Africa's African National Congress won 65.90% of the national vote in 2009.
@@ -870,31 +848,11 @@
     - title: 'SAnews: ANC wins 2009 General Elections'
       url: https://www.sanews.gov.za/south-africa/anc-wins-2009-general-elections-1
       quote: 65.90 percent of the votes
-  status: drafted
-- id: fx-num-0055
-  cat: num
-  en: Elizabeth Keckly bought freedom for herself and her son for $1,200 in 1855.
-  ru: В 1855 году Элизабет Кекли выкупила свободу для себя и сына за 1 200 долларов.
-  year: 1855
-  place:
-    name: St. Louis
-    lat: 38.627
-    lon: -90.199
-  cards: []
-  gender: f
-  region: us
-  sources:
-    - title: 'National Women''s History Museum: Charity is Ever Kind'
-      url: https://www.womenshistory.org/articles/charity-ever-kind
-      quote: her and her son’s freedom for $1,200
-    - title: 'White House Historical Association: Elizabeth Keckly'
-      url: https://www.whitehousehistory.org/from-slavery-to-the-white-house-the-extraordinary-life-of-elizabeth-keckly
-      quote: Garland agreed to accept $1,200 for Elizabeth and George.
-  status: drafted
+  status: checked
 - id: fx-num-0056
   cat: num
-  en: In 1862, Elizabeth Keckly secured $200 from Mary Lincoln for relief of people escaping slavery.
-  ru: В 1862 году Элизабет Кекли получила от Мэри Линкольн 200 долларов на помощь людям, бежавшим из рабства.
+  en: In November 1862, Mary Lincoln gave Elizabeth Keckly $200.
+  ru: В ноябре 1862 года Мэри Линкольн дала Элизабет Кекли 200 долларов.
   year: 1862
   place:
     name: Washington, DC
@@ -910,7 +868,7 @@
     - title: 'White House Historical Association: Mary Lincoln''s November 1862 letter'
       url: https://www.whitehousehistory.org/from-slavery-to-the-white-house-the-extraordinary-life-of-elizabeth-keckly
       quote: the privilege of investing $200 her, in bed covering
-  status: drafted
+  status: checked
 - id: fx-num-0057
   cat: num
   en: Harriet Tubman's monthly federal pension rose to $20 in 1899.
@@ -930,11 +888,11 @@
     - title: 'National Park Service: Harriet Tubman''s Auburn Home'
       url: https://home.nps.gov/hart/learn/historyculture/tubman-residence.htm
       quote: Harriet finally receiving $20 a month in 1899 for her work as a Civil War nurse.
-  status: drafted
+  status: checked
 - id: fx-num-0059
   cat: num
-  en: Mary McLeod Bethune started her Daytona Beach school with $1.50 in 1904.
-  ru: В 1904 году Мэри Маклеод Бетьюн открыла школу в Дейтона-Бич, располагая всего полутора долларами.
+  en: On October 3, 1904, Mary McLeod Bethune started her school with $1.50 and five girls.
+  ru: 3 октября 1904 года Мэри Маклеод Бетьюн открыла школу, располагая полутора долларами и пятью ученицами.
   year: 1904
   place:
     name: Daytona Beach
@@ -950,7 +908,7 @@
     - title: 'Joe Henderson, United Methodist Church: Dr. Mary Bethune''s legacy'
       url: https://www.umc.org/content/dr-mary-bethunes-legacy-finding-diamonds-in-the-rough-bcf
       quote: She had $1.50 in working capital.
-  status: drafted
+  status: checked
 - id: fx-num-0060
   cat: num
   en: In 1792, 1,196 Black Loyalists left Nova Scotia for Sierra Leone.
@@ -970,28 +928,7 @@
     - title: 'Heirloom Series, Library and Archives Canada: The Black Loyalists'
       url: https://epe.lac-bac.gc.ca/100/205/301/ic/cdc/heirloom_series/volume6/248-251.htm?nodisclaimer=1
       quote: Within a couple of months, 1196 had signed up
-  status: drafted
-- id: fx-num-0061
-  cat: num
-  en: In 1838, France reduced Haiti's imposed independence indemnity to 90 million francs.
-  ru: В 1838 году Франция снизила навязанную Гаити плату за независимость до 90 миллионов франков.
-  year: 1838
-  place:
-    name: Port-au-Prince
-    lat: 18.594
-    lon: -72.307
-  cards:
-    - haiti-indemnity-1825
-  gender: none
-  region: caribbean
-  sources:
-    - title: 'Gusti-Klara Gaillard-Pourchet, BnF: Haiti''s independence debt'
-      url: https://heritage.bnf.fr/france-ameriques/en/haitis-independence-debt-slave-unit-account-1794-1922
-      quote: The total indemnity was renegotiated downwards (to 90 million francs), and its payment spread over 30 annual instalments
-    - title: 'Organization of American States: Reparations speech, 2015'
-      url: https://www.oas.org/en/media_center/speech.asp?sCodigo=15-0088
-      quote: was reduced to 90 million francs.
-  status: drafted
+  status: checked
 - id: fx-num-0062
   cat: num
   en: The 1790 US census recorded 8,043 free Black residents in Maryland.
@@ -1011,27 +948,7 @@
     - title: 'George Ticknor Curtis: History of the Constitution, volume II (1858), p. 55'
       url: https://www.gutenberg.org/cache/epub/40679/pg40679-images.html
       quote: Maryland, 208,649 8,043 103,036 319,728 Virginia, 442,115 12,765 293,427 748,307
-  status: drafted
-- id: fx-num-0063
-  cat: num
-  en: SlaveVoyages estimates about 10.7 million enslaved Africans survived the Atlantic crossing to the Americas by 1866.
-  ru: По оценке SlaveVoyages, за время трансатлантической работорговли до 1866 года около 10,7 миллиона порабощённых африканцев пережили океанский переход в Америку.
-  year: 1866
-  place:
-    name: Atlantic Ocean
-    lat: 0
-    lon: -30
-  cards: []
-  gender: none
-  region: global
-  sources:
-    - title: 'National Endowment for the Humanities: The Transatlantic Slave Trade Database'
-      url: https://www.neh.gov/project/transatlantic-slave-trade-database
-      quote: About 10.7 million people survived the horrors of the Middle Passage
-    - title: 'Henry Louis Gates Jr., PBS: How Many Slaves Landed in the U.S.?'
-      url: https://www.pbs.org/wnet/african-americans-many-rivers-to-cross/history/how-many-slaves-landed-in-the-us/
-      quote: 10.7 million survived the dreaded Middle Passage, disembarking in North America, the Caribbean and South America.
-  status: drafted
+  status: checked
 - id: "fx-num-0064"
   cat: "num"
   en: "Olaudah Equiano bought his freedom for £40 in 1766."
@@ -1042,7 +959,7 @@
   gender: "m"
   region: "caribbean"
   sources: [ { "title": "Equal Justice Initiative: Olaudah Equiano", "url": "https://eji.org/report/transatlantic-slave-trade/origins/sidebar/olaudah-equiano/", "quote": "Olaudah Equiano purchased his freedom for 40 British pounds." }, { "title": "London Museum: Olaudah Equiano, Writer and abolitionist", "url": "https://www.londonmuseum.org.uk/collections/london-stories/olaudah-equiano-writer-abolitionist/", "quote": "Robert King in 1766 for £40" } ]
-  status: "drafted"
+  status: "checked"
 - id: fx-num-0065
   cat: num
   en: INEGI's 2020 census counted 296,264 Afro-descendant residents in the State of Mexico.
@@ -1062,7 +979,7 @@
     - title: 'Jazmin Aguilar Rangel, Wilson Center: Afrodescendientes en Mexico'
       url: https://diplomacy21-adelphi.wilsoncenter.org/article/infografia-afrodescendientes-en-mexico
       quote: 296,264 en el Estado de México
-  status: drafted
+  status: checked
 - id: fx-num-0066
   cat: num
   en: INEGI's 2020 census counted 215,435 Afro-descendant residents in the state of Veracruz.
@@ -1082,7 +999,7 @@
     - title: 'Jazmin Aguilar Rangel, Wilson Center: Afrodescendientes en Mexico'
       url: https://diplomacy21-adelphi.wilsoncenter.org/article/infografia-afrodescendientes-en-mexico
       quote: 215,435 en Veracruz de Ignacio de la Llave
-  status: drafted
+  status: checked
 - id: fx-num-0067
   cat: num
   en: INEGI's 2020 census counted 139,676 Afro-descendant residents in Jalisco.
@@ -1102,7 +1019,7 @@
     - title: 'Jazmin Aguilar Rangel, Wilson Center: Afrodescendientes en Mexico'
       url: https://diplomacy21-adelphi.wilsoncenter.org/article/infografia-afrodescendientes-en-mexico
       quote: 186,914 en Ciudad de México y 139,676 en Jalisco.
-  status: drafted
+  status: checked
 - id: fx-num-0068
   cat: num
   en: Argentina's 2010 INDEC census estimated 149,493 self-identified Afro-descendants living in private households.
@@ -1122,7 +1039,7 @@
     - title: 'Hector Perez Brignoli: America Latina en la transicion demografica, chapter 6, table 6.3'
       url: https://www.teseopress.com/americalatinaenlatransiciondemografica/chapter/capitulo-6-migraciones-diasporas-y-transicion/
       quote: Argentina 37 2010 149.493 0,4 Bolivia Sin datos
-  status: drafted
+  status: checked
 - id: "fx-num-0070"
   cat: "num"
   en: "Britain's 1833 abolition legislation allocated £20 million to compensate enslavers."
@@ -1133,7 +1050,7 @@
   gender: "none"
   region: "europe"
   sources: [ { "title": "Michael Anson and Michael D. Bennett, Bank of England: The collection of slavery compensation, 1835-43", "url": "https://www.bankofengland.co.uk/working-paper/2022/the-collection-of-slavery-compensation-1835-43", "quote": "compensation package of £20 million to slave-owners" }, { "title": "HM Treasury: FOI2018/00186, 31 January 2018", "url": "https://assets.publishing.service.gov.uk/media/5a7d78a6e5274a676d53243f/FOI2018-00186_-_Slavery_Abolition_Act_1833_-_pdf_for_disclosure_log__003_.pdf", "quote": "The Government used £20 million to fund the Slavery Abolition Act 1833." } ]
-  status: "drafted"
+  status: "checked"
 - id: fx-num-0071
   cat: num
   en: Haiti borrowed 30 million francs in 1825 to meet France's first independence-indemnity payment.
@@ -1154,7 +1071,7 @@
     - title: 'Organization of American States: Reparations speech, 2015'
       url: https://www.oas.org/en/media_center/speech.asp?sCodigo=15-0088
       quote: the first payment of 30 million francs
-  status: drafted
+  status: checked
 - id: fx-num-0072
   cat: num
   en: The 1790 US census recorded 4,654 free Black residents in New York.
@@ -1174,7 +1091,7 @@
     - title: 'George Ticknor Curtis: History of the Constitution, volume II (1858), p. 55'
       url: https://www.gutenberg.org/cache/epub/40679/pg40679-images.html
       quote: New York, 314,142 4,654 21,324 340,120
-  status: drafted
+  status: checked
 - id: fx-num-0073
   cat: num
   en: The 1790 US census recorded 2,762 free Black residents in New Jersey.
@@ -1194,7 +1111,7 @@
     - title: 'George Ticknor Curtis: History of the Constitution, volume II (1858), p. 55'
       url: https://www.gutenberg.org/cache/epub/40679/pg40679-images.html
       quote: New Jersey, 169,954 2,762 11,423 184,139
-  status: drafted
+  status: checked
 - id: fx-num-0074
   cat: num
   en: The 1790 US census recorded 6,537 free Black residents in Pennsylvania.
@@ -1214,7 +1131,7 @@
     - title: 'George Ticknor Curtis: History of the Constitution, volume II (1858), p. 55'
       url: https://www.gutenberg.org/cache/epub/40679/pg40679-images.html
       quote: Pennsylvania, 424,099 6,537 3,737 434,373 Delaware, 46,310 3,899 8,887 59,096
-  status: drafted
+  status: checked
 - id: fx-num-0075
   cat: num
   en: The 1810 US census counted 7,843 free Black residents in New Jersey.
@@ -1234,7 +1151,7 @@
     - title: 'Princeton University: Proceedings of a Meeting Held at Princeton, New Jersey, July 14, 1824'
       url: https://slavery.princeton.edu/uploads/Proceedings-of-a-Meeting-Held-at-Princeton.pdf
       quote: The free blacks are estimated at 7,843 in 1810, and at 12,460 in 1820
-  status: drafted
+  status: checked
 - id: fx-num-0076
   cat: num
   en: The 1820 US census counted 12,460 free Black residents in New Jersey.
@@ -1254,7 +1171,7 @@
     - title: 'Rutgers University: Slavery and the Underground Railroad in New Jersey, 1820 census table'
       url: https://civiced.sas.rutgers.edu/nj-lessons/secondary/secondary-article/478-slavery-and-the-underground-railroad-in-new-jersey
       quote: 'Total State 273,736 7,557 12,460 From: 1820 Census Records'
-  status: drafted
+  status: checked
 - id: fx-num-0077
   cat: num
   en: The 1790 US census recorded 114 free Black residents in Kentucky.
@@ -1274,7 +1191,7 @@
     - title: 'Wendy Wheatcraft, Kentucky Heritage Council: 2010-2014 State Historic Preservation Plan, p. 57'
       url: https://heritage.ky.gov/Documents/2010-14KYStateHPPlan.pdf
       quote: 114 free blacks
-  status: drafted
+  status: checked
 - id: fx-num-0078
   cat: num
   en: The 1790 US census recorded 630 free Black residents in New Hampshire.
@@ -1294,7 +1211,7 @@
     - title: 'George Ticknor Curtis: History of the Constitution, volume II (1858), p. 55'
       url: https://www.gutenberg.org/cache/epub/40679/pg40679-images.html
       quote: New Hampshire, 141,111 630 158 141,899
-  status: drafted
+  status: checked
 - id: fx-num-0079
   cat: num
   en: The 1790 US census recorded 5,463 free Black residents in Massachusetts.
@@ -1314,4 +1231,4 @@
     - title: 'George Ticknor Curtis: History of the Constitution, volume II (1858), p. 55'
       url: https://www.gutenberg.org/cache/epub/40679/pg40679-images.html
       quote: Massachusetts, 373,254 5,463 . . . 378,717 Rhode Island,
-  status: drafted
+  status: checked
