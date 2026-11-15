@@ -1869,3 +1869,176 @@ html.cb-modal-open body {
 .cb-heaped {
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.45);
 }
+
+/* ---------- the name index ---------- */
+.ix-tools {
+  display: grid;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.ix-filter {
+  font: inherit;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  width: 100%;
+  max-width: 30rem;
+  box-sizing: border-box;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--line-2);
+  background: var(--bg-2);
+  color: var(--ink);
+}
+.ix-filter:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+.ix-kinds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.ix-chip {
+  font-family: var(--font-sans);
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--line-2);
+  background: transparent;
+  color: var(--ink-2);
+  cursor: pointer;
+}
+.ix-chip[aria-pressed='true'] {
+  background: var(--gold-soft);
+  border-color: var(--gold);
+  color: var(--ink);
+}
+.ix-chip:focus-visible,
+.ix-letter:focus-visible,
+.ix-entry:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+.ix-count {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  color: var(--ink-3);
+}
+.ix-letters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 10px 0;
+  margin-bottom: 18px;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+.ix-letter {
+  min-width: 34px;
+  min-height: 34px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+  color: var(--ink);
+  cursor: pointer;
+}
+.ix-letter:hover:not(:disabled) {
+  background: var(--gold-soft);
+}
+.ix-letter.ix-gap {
+  margin-left: 18px;
+}
+.ix-letter:disabled {
+  color: var(--ink-3);
+  opacity: 0.45;
+  cursor: default;
+}
+.ix-group {
+  break-inside: avoid;
+  margin-bottom: 22px;
+}
+.ix-head {
+  font-size: 30px;
+  font-weight: 330;
+  margin: 0 0 6px;
+  color: var(--gold);
+  scroll-margin-top: 72px;
+}
+.ix-head:focus {
+  outline: none;
+}
+.ix-list {
+  columns: 2 22rem;
+  column-gap: 40px;
+}
+.ix-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.ix-entry {
+  display: block;
+  padding: 6px 0;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+.ix-title {
+  display: block;
+  font-size: 17px;
+  line-height: 1.3;
+}
+.ix-entry:hover .ix-title {
+  color: var(--gold);
+}
+.ix-meta,
+.ix-other {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  color: var(--ink-3);
+}
+.ix-other {
+  margin-left: 8px;
+  padding: 1px 7px;
+  border: 1px dashed var(--line-2);
+  border-radius: 999px;
+}
+.ix-entry.foreign .ix-title {
+  font-style: italic;
+  color: var(--ink-2);
+}
+/* The wow comes up on hover and on keyboard focus; a screen reader hears it always. */
+.ix-wow {
+  display: block;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--ink-2);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.2s, opacity 0.2s;
+}
+.ix-entry:hover .ix-wow,
+.ix-entry:focus-visible .ix-wow {
+  max-height: 8em;
+  opacity: 1;
+  margin-top: 4px;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ix-wow {
+    transition: none;
+  }
+}
+
+/* Names linked in terminals and on the cover keep the text's own colour. */
+.term .term-card {
+  color: inherit;
+}
+.cover .xref,
+.cover-credit .xref {
+  color: inherit;
+}
