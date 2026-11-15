@@ -1,0 +1,151 @@
+# Second, independent check of content/cards/blues.md / blues.ru.md and
+# content/ledger/perspective-blues.yaml (2026-11-15). Every source quoted below was opened
+# by the checker. The New York Times obituary (2019) could not be opened (paywall/blocked)
+# and is not counted; the visitmississippi.org copy of the Blues Trail marker is the same
+# text as msbluestrail.org and is counted once. The shared explainer paragraph is covered
+# by explainers-check.yaml; its corrected wording is what the card carries.
+# Word count per copy after fixes: male 222, female 235 (genre limit 235).
+- card: blues
+  copy: male
+  fact: "Around 1903 W. C. Handy led an orchestra in Clarksdale, Mississippi, playing dances for white and Black audiences"
+  verdict: confirmed
+  sources:
+    - {title: "National Park Service: W. C. Handy", url: "https://www.nps.gov/locations/lowermsdeltaregion/wc-handy.htm", quote: "In 1903, he moved to Clarksdale, Mississippi, to direct the Colored Knights of Pythias, an entourage that performed for both whites and blacks."}
+    - {title: "Mississippi Blues Trail: W.C. Handy Encounters the Blues", url: "https://msbluestrail.org/?p=487", quote: "Handy, who led an orchestra in Clarksdale from 1903 to 1905, traveled throughout the Delta and beyond, playing dances for both white and African American audiences"}
+  note: ""
+- card: blues
+  copy: male
+  fact: "Waiting for a train at Tutwiler, he heard a man press a knife to his guitar strings and sing \"Goin' where the Southern cross' the Dog\""
+  verdict: confirmed
+  sources:
+    - {title: "National Park Service: W. C. Handy", url: "https://www.nps.gov/locations/lowermsdeltaregion/wc-handy.htm", quote: "In 1903, while waiting for a train at a station in Tutwiler, Mississippi, Handy heard a black musician playing a guitar with a knife. The man was singing about going Where The Southern Crosses The Dog"}
+    - {title: "Mississippi Blues Trail: W.C. Handy Encounters the Blues", url: "https://msbluestrail.org/?p=487", quote: "he heard a man playing slide guitar with a knife and singing “Goin’ where the Southern cross’ the Dog.”"}
+  note: "The marker notes Handy never gave an exact date; the card's \"Around 1903\" fits."
+- card: blues
+  copy: male
+  fact: "Handy called it the weirdest music he had ever heard"
+  verdict: confirmed
+  sources:
+    - {title: "National Park Service: W. C. Handy", url: "https://www.nps.gov/locations/lowermsdeltaregion/wc-handy.htm", quote: "Handy recalled \"it was the weirdest music I'd ever heard.\""}
+    - {title: "Mississippi Blues Trail (quoting Father of the Blues, 1941)", url: "https://msbluestrail.org/?p=487", quote: "The singer repeated the line three times, accompanying himself on the guitar with the weirdest music I ever heard."}
+  note: ""
+- card: blues
+  copy: male
+  fact: "He began to work such country songs into his own music"
+  verdict: confirmed
+  sources:
+    - {title: "Mississippi Blues Trail: W.C. Handy Encounters the Blues", url: "https://msbluestrail.org/?p=487", quote: "he began to incorporate blues into his repertoire only after hearing the Tutwiler guitarist and a string band in Cleveland, Mississippi"}
+    - {title: "National Park Service: W. C. Handy", url: "https://www.nps.gov/locations/lowermsdeltaregion/wc-handy.htm", quote: "The influence of rural song forms on the classically trained Handy would find its celebrated outlet in his published work."}
+  note: ""
+- card: blues
+  copy: male
+  fact: "In 1912 \"The Memphis Blues\" made his name across the country"
+  verdict: confirmed
+  sources:
+    - {title: "Tennessee Encyclopedia: William Christopher \"W. C.\" Handy", url: "https://tennesseeencyclopedia.net/entries/william-christopher-handy/", quote: "Handy's 1912 publication of 'The Memphis Blues,' the first published blues composition, gained him national attention"}
+    - {title: "National Park Service: W. C. Handy", url: "https://www.nps.gov/locations/lowermsdeltaregion/wc-handy.htm", quote: "In 1912, \"Mr. Crump\" was given new lyrics and published as \"The Memphis Blues,\" firmly establishing Handy's name in the white-dominated music publishing industry."}
+  note: ""
+- card: blues
+  copy: male
+  fact: "\"St. Louis Blues\" became his most popular song"
+  verdict: confirmed
+  sources:
+    - {title: "Mississippi Blues Trail: W.C. Handy Encounters the Blues", url: "https://msbluestrail.org/?p=487", quote: "including “Memphis Blues,” “Yellow Dog Blues,” “Beale Street Blues,” and, most popularly, the classic “St. Louis Blues.”"}
+    - {title: "National Park Service: W. C. Handy", url: "https://www.nps.gov/locations/lowermsdeltaregion/wc-handy.htm", quote: "\"St. Louis Blues\" in particular had phenomenal sales success, garnering worldwide acclaim"}
+  note: "The Tennessee Encyclopedia quote in the ledger (\"later inspired his most famous work\") could not be found on the page; replaced with a sentence that is there."
+- card: blues
+  copy: male
+  fact: "Because his published blues grew from the sounds of the Delta, Handy became known as the \"Father of the Blues\", the title of his 1941 autobiography"
+  verdict: confirmed
+  sources:
+    - {title: "Mississippi Blues Trail: W.C. Handy Encounters the Blues", url: "https://msbluestrail.org/?p=487", quote: "became known as the “Father of the Blues” after he based many of his popular orchestrations on the sounds he heard in the Delta"}
+    - {title: "National Park Service: W. C. Handy", url: "https://www.nps.gov/locations/lowermsdeltaregion/wc-handy.htm", quote: "Self-anointed as the \"Father of the Blues\" in his 1941 autobiography"}
+  note: "Tennessee Encyclopedia independently ties the title to folk sources: \"“Father of the Blues,” ... with the black folk music of his heritage into the unique twelve-bar harmonic structure.\""
+- card: blues
+  copy: female
+  fact: "Gertrude Pridgett was a singer from Columbus, Georgia"
+  verdict: confirmed
+  sources:
+    - {title: "Women in World History: Rainey, Ma (1886-1939), via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/rainey-ma-1886-1939", quote: "Born Gertrude Malissa Nix Pridgett on April 26, 1886, in Columbus, Georgia"}
+    - {title: "New Georgia Encyclopedia: Gertrude \"Ma\" Rainey", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/gertrude-ma-rainey-1886-1939/", quote: "She grew up in a poor family in Columbus"}
+  note: ""
+- card: blues
+  copy: female
+  fact: "In 1902, touring Missouri with a tent show, a young woman came to the tent and sang a sad song about a lover who had gone"
+  verdict: corrected
+  sources:
+    - {title: "Women in World History: Rainey, Ma (1886-1939), via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/rainey-ma-1886-1939", quote: "Ma Rainey once claimed that she had \"discovered\" the blues when a young girl in a Missouri town in which she was appearing in 1902 came to her with a sad, poignant song about a lover who had disappeared."}
+    - {title: "Jas Obrecht, quoting John W. Work, American Negro Songs (1940)", url: "https://jasobrecht.blogspot.com/2010/08/ma-rainey-mother-of-blues.html", quote: "\"She tells of a girl from the town,\" Work wrote in American Negro Songs, 1940, \"who came to the tent one morning and began to sing about the 'man' who had left her.\""}
+  note: "The episode is known only from Rainey's own account, which the sources present as her claim. The card now says she \"later recalled\" it (EN and RU), and \"a lover who had gone\" became \"a man who had left her\" after Work. Universalis independently gives 1902 and Missouri: \"En 1902, dans une petite ville du Missouri, elle entend pour la première fois le genre de musique qui va devenir le blues.\""
+- card: blues
+  copy: female
+  fact: "Gertrude learned it by heart and made it her encore"
+  verdict: corrected
+  sources:
+    - {title: "Women in World History: Rainey, Ma (1886-1939), via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/rainey-ma-1886-1939", quote: "Ma said she learned the song by heart, began using it as part of her act's encore"}
+    - {title: "Jas Obrecht, quoting John W. Work, American Negro Songs (1940)", url: "https://jasobrecht.blogspot.com/2010/08/ma-rainey-mother-of-blues.html", quote: "Ma Rainey became so interested in it that she learned the song from the visitor ... and used it soon afterward in her act as an encore."}
+  note: "\"By heart\" rests on one source; shortened to \"learned it\" (also needed for the word limit)."
+- card: blues
+  copy: female
+  fact: "She performed as Ma Rainey after marrying Will Rainey in 1904"
+  verdict: confirmed
+  sources:
+    - {title: "Women in World History: Rainey, Ma (1886-1939), via Encyclopedia.com", url: "https://www.encyclopedia.com/women/encyclopedias-almanacs-transcripts-and-maps/rainey-ma-1886-1939", quote: "adopted the professional name Ma Rainey after marrying William \"Pa\" Rainey (1904)"}
+    - {title: "New Georgia Encyclopedia: Gertrude \"Ma\" Rainey", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/gertrude-ma-rainey-1886-1939/", quote: "in 1904 she met and married her husband, William “Pa” Rainey, who was a minstrel show manager"}
+  note: ""
+- card: blues
+  copy: female
+  fact: "As Ma Rainey she gathered such songs across the South and brought them onto the vaudeville stage"
+  verdict: confirmed
+  sources:
+    - {title: "Ballad of America: Blues Queens and Race Records in the 1920s", url: "https://balladofamerica.org/blues-queens-and-race-records-in-the-1920s/", quote: "For a decade, Rainey had been adapting the folk blues she encountered in the South and incorporating it into her stage act with great success"}
+    - {title: "New Georgia Encyclopedia: Gertrude \"Ma\" Rainey", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/gertrude-ma-rainey-1886-1939/", quote: "Ma Rainey was one of the first women to incorporate blues into minstrel and vaudeville stage shows"}
+  note: "The NYT quotes the ledger used for this fact were replaced, since the NYT page could not be opened."
+- card: blues
+  copy: female
+  fact: "Mamie Smith's \"Crazy Blues\" of 1920 opened the record market to Black women singers"
+  verdict: confirmed
+  sources:
+    - {title: "Library of Congress, Songs of America: Blues", url: "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/popular-songs-of-the-day/blues/", quote: "In 1920, African-American singer Mamie Smith's \"Crazy Blues,\" a song about frustrated love reached a national audience, and started a vogue for women blues singers in band settings."}
+    - {title: "NPR: Mamie Smith and the Birth of the Blues Market (2006)", url: "https://text.npr.org/6473116", quote: "Mamie Smith was the first black vocalist to record the blues. The song was \"Crazy Blues,\" and it became a hit."}
+  note: "NY 1920s also: \"The so-called \"race record\" market had blown open in 1920 with the unexpected commercial success of \"Crazy Blues\"\"."
+- card: blues
+  copy: female
+  fact: "In December 1923 Paramount began recording Rainey as the \"Mother of the Blues\""
+  verdict: confirmed
+  sources:
+    - {title: "New Georgia Encyclopedia: Gertrude \"Ma\" Rainey", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/gertrude-ma-rainey-1886-1939/", quote: "In December 1923 Rainey began a five-year association with Paramount"}
+    - {title: "Jas Obrecht: Ma Rainey, Mother of the Blues", url: "https://jasobrecht.blogspot.com/2010/08/ma-rainey-mother-of-blues.html", quote: "In December 1923, when she made the leap from minstrel star to recording artist, 38-year-old Ma Rainey was already considered an old-timer."}
+  note: "The billing: Women in World History, \"Discovered at Last! Ma Rainey, Mother of the Blues!\"; New Georgia Encyclopedia, \"Styled as the “Mother of the Blues,”\"."
+- card: blues
+  copy: female
+  fact: "The women of her songs answered mistreatment instead of waiting on a man"
+  verdict: confirmed
+  sources:
+    - {title: "Jeff Todd Titon, The Blues, via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/blues", quote: "In some of their blues, Rainey and Smith sang about strong, independent women who put an end to mistreatment."}
+    - {title: "Publishers Weekly: review of Angela Y. Davis, Blues Legacies and Black Feminism", url: "https://publishersweekly.com/9780679450054", quote: "the most frequent stance assumed by the women in these songs is independence and assertiveness--indeed defiance--bordering on and sometimes erupting into violence."}
+  note: "NYT quote replaced (page not opened)."
+- card: blues
+  copy: female
+  fact: "Bessie Smith had learned from Rainey on tour"
+  verdict: confirmed
+  sources:
+    - {title: "Ballad of America: Blues Queens and Race Records in the 1920s", url: "https://balladofamerica.org/blues-queens-and-race-records-in-the-1920s/", quote: "Rainey, who would become known as \"Mother of the Blues,\" mentored the younger, less-experienced Smith in matters of stage presence, style, and life on the road."}
+    - {title: "New Georgia Encyclopedia: Gertrude \"Ma\" Rainey", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/gertrude-ma-rainey-1886-1939/", quote: "In 1912 the young Bessie Smith joined her troupe in Chattanooga, Tennessee."}
+  note: ""
+- card: blues
+  copy: female
+  fact: "Bessie Smith made her first records for Columbia that year (1923)"
+  verdict: confirmed
+  sources:
+    - {title: "Ballad of America: Blues Queens and Race Records in the 1920s", url: "https://balladofamerica.org/blues-queens-and-race-records-in-the-1920s/", quote: "In May 1923, Bessie Smith made her first recordings for Columbia."}
+    - {title: "NY 1920s, Roger Kimmel Smith: 15 February 1923", url: "https://www.ny1920.com/feb-15-1923", quote: "One hundred years ago today … Bessie Smith made her first recordings in the Columbia phonograph studio"}
+  note: "The two differ on the month; the card gives only the year, which both support."
+- card: blues
+  copy: both
+  fact: "The blues grew out of work songs, field hollers and spirituals, and passed on into jazz, gospel and rock and roll"
+  verdict: confirmed
+  sources:
+    - {title: "Carnegie Hall Timeline of African American Music: Rural/Folk Blues", url: "https://timeline.carnegiehall.org/genres/rural-folk-blues", quote: "The three-line rural blues form emerged out of African American work songs, field calls and protest songs, game songs and social songs, spirituals, and folk ballads."}
+    - {title: "Jeff Todd Titon, The Blues, via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/blues", quote: "Its influence on jazz, gospel music, theater music, rock, soul, hip-hop, and almost every form of popular music since the 1920s has been enormous."}
+  note: "Carnegie also: \"A direct path can be traced from the most ancient blues form up through rhythm & blues, rock & roll\"."

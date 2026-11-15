@@ -1,0 +1,177 @@
+# Second, independent check (2026-11-15) of content/ledger/perspective-haitian-revolution.yaml
+# and content/cards/haitian-revolution.md / haitian-revolution.ru.md. Every cited URL was reopened;
+# web quotes are copied from the fetched page text, Internet Archive quotes from the _djvu.txt OCR
+# (OCR misreadings corrected). The FME page quotes Madiou on the trial and execution, so there
+# Madiou and Ardouin are the two sources.
+# verdict: confirmed | corrected (card wording or sources changed) | refuted | unconfirmed (removed).
+# Entries whose fact starts with "(unledgered)" check claims the first ledger did not record.
+# Word count per copy (limit 220, event card): EN male 203, female 218; RU male 190, female 218.
+# Both .md and .ru.md mark the same paragraphs ({male} 2nd, {female} 3rd; 1st and 4th shared).
+- card: haitian-revolution
+  fact: "Saint-Domingue, France's colony, was in 1789 the richest in the Americas"
+  verdict: confirmed
+  sources:
+    - {title: "Stewart R. King, Haitian Revolution, IESS via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/haitian-revolution", quote: "was the richest colony in the Americas in 1789."}
+    - {title: "Colonial Williamsburg, Slavery and Remembrance: Haiti", url: "https://slaveryandremembrance.org/articles/article/?id=A0111", quote: "to be the wealthiest colony in the French empire and, perhaps, the richest colony in the world."}
+  note: ""
+- card: haitian-revolution
+  fact: "Its sugar and coffee were grown by hundreds of thousands of enslaved Africans"
+  verdict: confirmed
+  sources:
+    - {title: "Stewart R. King, IESS via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/haitian-revolution", quote: "Almost half a million slaves toiled on its sugar, coffee, indigo, and cotton plantations."}
+    - {title: "Colonial Williamsburg: Haiti", url: "https://slaveryandremembrance.org/articles/article/?id=A0111", quote: "French owners imported almost 800,000 Africans to the colony"}
+  note: ""
+- card: haitian-revolution
+  fact: "In August 1791, after a ceremony at Bois Caïman, the enslaved rose"
+  verdict: confirmed
+  sources:
+    - {title: "Colonial Williamsburg: Haiti", url: "https://slaveryandremembrance.org/articles/article/?id=A0111", quote: "After a ceremony at Bois Caïman, the rebellion began in August 1791."}
+    - {title: "Stewart R. King, IESS via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/haitian-revolution", quote: "The slaves rose up the fourth week of August 1791"}
+  note: "The FME page also: 'en août 1791, lorsque les esclaves de Saint-Domingue se soulèvent'."
+- card: haitian-revolution
+  fact: "Under Toussaint Louverture they fought off Spanish and British armies"
+  verdict: confirmed
+  sources:
+    - {title: "Colonial Williamsburg: Haiti", url: "https://slaveryandremembrance.org/articles/article/?id=A0111", quote: "the rebels fought off British and Spanish attacks"}
+    - {title: "BnF France-Amériques: Toussaint Louverture, Destiny and Contradictions", url: "https://heritage.bnf.fr/france-ameriques/en/toussaint-louverture-destiny-and-contradictions", quote: "Louverture and his troops played a crucial role in the struggle against the Spanish and British"}
+  note: ""
+- card: haitian-revolution
+  fact: "In 1802 Napoleon's army under Charles Leclerc tried to restore slavery"
+  verdict: confirmed
+  sources:
+    - {title: "Colonial Williamsburg: Haiti", url: "https://slaveryandremembrance.org/articles/article/?id=A0111", quote: "1802 and attempted to restore slavery"}
+    - {title: "Fondation pour la mémoire de l'esclavage: Sanite Bélair", url: "https://memoire-esclavage.org/tcpdf/747", quote: "contre l’expédition napoléonienne menée par le général Leclerc venue rétablir l’esclavage dans la colonie de Saint-Domingue"}
+  note: "BnF (Toussaint) adds Leclerc's landing 'in early 1802'."
+- card: haitian-revolution
+  fact: "Toussaint was born into slavery"
+  verdict: confirmed
+  sources:
+    - {title: "BnF France-Amériques: Toussaint Louverture", url: "https://heritage.bnf.fr/france-ameriques/en/toussaint-louverture-destiny-and-contradictions", quote: "Born into slavery in the French colony of Saint-Domingue around 1740"}
+    - {title: "C. L. R. James, The Black Jacobins (1963), Internet Archive", url: "https://archive.org/details/clr-james-the-black-jacobins", quote: "As a slave he was called Toussaint Bréda."}
+  note: ""
+- card: haitian-revolution
+  fact: "He had become the colony's governor and given it a constitution of his own"
+  verdict: confirmed
+  sources:
+    - {title: "BnF France-Amériques: Toussaint Louverture", url: "https://heritage.bnf.fr/france-ameriques/en/toussaint-louverture-destiny-and-contradictions", quote: "he was the lawfully appointed governor of Saint-Domingue ... issuing a constitution of his own"}
+    - {title: "C. L. R. James, The Black Jacobins; Ardouin, Études, vol. 5", url: "https://archive.org/details/tudessurlhisto05ardo", quote: "He confirmed Toussaint in his post as Commander-in-Chief and Governor (James) / établi par T. Louverture lui-même, dans sa constitution de 1801 (Ardouin)"}
+  note: "Governor: BnF + James; constitution: BnF + Ardouin."
+- card: haitian-revolution
+  fact: "In June 1802 Leclerc's men seized him and put him on a ship for France"
+  verdict: confirmed
+  sources:
+    - {title: "BnF France-Amériques: Toussaint Louverture", url: "https://heritage.bnf.fr/france-ameriques/en/toussaint-louverture-destiny-and-contradictions", quote: "was taken prisoner in June 1802 and deported to France"}
+    - {title: "C. L. R. James, The Black Jacobins", url: "https://archive.org/details/clr-james-the-black-jacobins", quote: "On June 7th General Brunet wrote to Toussaint asking for a meeting ... They rushed the family on board a frigate which was waiting in the harbour of Le Cap and embarked them for France."}
+  note: "First ledger's James quote did not give the month; the June 7th passage added to the ledger."
+- card: haitian-revolution
+  fact: "On board he said they had cut down only the trunk of the tree of liberty, which would grow again from the roots, for they were numerous and deep"
+  verdict: corrected
+  sources:
+    - {title: "C. L. R. James, The Black Jacobins", url: "https://archive.org/details/clr-james-the-black-jacobins", quote: "As Toussaint stepped on board the boat he spoke to Savary the captain ... “In overthrowing me, you have cut down in San Domingo only the trunk of the tree of liberty. It will spring up again by the roots for they are numerous and deep.”"}
+    - {title: "John R. Beard, The Life of Toussaint L'Ouverture (1853)", url: "https://archive.org/details/lifeoftoussaintl00bear", quote: "It is related that, in fixing, for the last time, his straining eyes on the mountains ... Toussaint L'Ouverture exclaimed, \" They have only felled the trunk of the tree (of the freedom of the blacks); branches will sprout, for the roots are numerous and deep.\""}
+  note: "Beard places the words on the departing ship, not at the moment of boarding; card changed from 'As he stepped aboard' to 'On board' (RU «Уже на борту»), which both sources support."
+- card: haitian-revolution
+  fact: "He was held without trial in the Fort de Joux in the Jura mountains and died there in April 1803"
+  verdict: confirmed
+  sources:
+    - {title: "BnF France-Amériques: Toussaint Louverture", url: "https://heritage.bnf.fr/france-ameriques/en/toussaint-louverture-destiny-and-contradictions", quote: "Denied a trial, he was confined in the Fort de Joux in the Jura mountains, where he died in April 1803"}
+    - {title: "C. L. R. James, The Black Jacobins", url: "https://archive.org/details/clr-james-the-black-jacobins", quote: "Toussaint was imprisoned in the Fort-de-Joux, situated in the Jura mountains ... Bonaparte did not murder Toussaint judicially because he feared the repercussions in San Domingo of a trial ... Toussaint died on April 7th, 1803"}
+  note: ""
+- card: haitian-revolution
+  fact: "Sanité Bélair was married to Toussaint's nephew Charles Bélair"
+  verdict: confirmed
+  sources:
+    - {title: "Fondation pour la mémoire de l'esclavage: Sanite Bélair", url: "https://memoire-esclavage.org/tcpdf/747", quote: "épousa en 1796 Charles Bélair, neveu, aide de camp et lieutenant de Toussaint Louverture"}
+    - {title: "C. L. R. James, The Black Jacobins", url: "https://archive.org/details/clr-james-the-black-jacobins", quote: "Toussaint’s favourite was his nephew, Charles Belair ... Sanite, his wife, hated them"}
+  note: ""
+- card: haitian-revolution
+  fact: "When Charles rose against Leclerc in August 1802, she fought at his side"
+  verdict: confirmed
+  sources:
+    - {title: "Thomas Madiou, Histoire d'Haïti, vol. 2 (1847)", url: "https://archive.org/details/histoiredhaiti02madi", quote: "Charles Bélair prit les armes dans les mornes des Verrettes et de l’Arcahaie au mois d’Août 1802."}
+    - {title: "C. L. R. James, The Black Jacobins", url: "https://archive.org/details/clr-james-the-black-jacobins", quote: "In August Charles Belair ... joined the insurrection ... Belair and Sanite came, for the women were now fighting side by side with the men."}
+  note: "FME also: 'elle participe aux côtés de son époux aux combats de 1802'."
+- card: haitian-revolution
+  fact: "In September 1802 they were taken"
+  verdict: confirmed
+  sources:
+    - {title: "Thomas Madiou, Histoire d'Haïti, vol. 2", url: "https://archive.org/details/histoiredhaiti02madi", quote: "Il fut arrêté en Septembre. Le 10 Septembre 1802 (23 Fructidor, an 10), Dessalines annonça à Leclerc son arrestation."}
+    - {title: "Beaubrun Ardouin, Études sur l'histoire d'Haïti, vol. 5", url: "https://archive.org/details/tudessurlhisto05ardo", quote: "Tandis que Faustin Répussard capturait Madame Charles Bélair ... Charles Bélair se décida à venir se livrer ... Heureux de cette capture, Dessalines adressa la lettre suivante au capitaine-général : ... le 23 fructidor, an X (10 septembre)."}
+  note: "How they were taken differs (James: lured to an interview by Dessalines; Ardouin/FME: Sanité captured, Charles surrendered); the neutral 'they were taken' is right."
+- card: haitian-revolution
+  fact: "Dessalines, then a general in Leclerc's service, sent them to Le Cap"
+  verdict: confirmed
+  sources:
+    - {title: "Beaubrun Ardouin, Études, vol. 5", url: "https://archive.org/details/tudessurlhisto05ardo", quote: "Ils furent envoyés à la Petite-Rivière, auprès de Dessalines ... qui les fit escorter aux Gonaïves, d'où ils furent envoyés au Cap ... Le général de division Dessalines, au capitaine-général Leclerc."}
+    - {title: "C. L. R. James, The Black Jacobins", url: "https://archive.org/details/clr-james-the-black-jacobins", quote: "these black and Mulatto generals continued to fight for Leclerc ... Dessalines arrested them both and sent them to Leclerc."}
+  note: ""
+- card: haitian-revolution
+  fact: "She was also accused of having a sick young white man killed"
+  verdict: corrected
+  sources:
+    - {title: "Beaubrun Ardouin, Études, vol. 5", url: "https://archive.org/details/tudessurlhisto05ardo", quote: "Ce secrétaire de Charles Bélair était un jeune blanc qui tomba malade. Sous prétexte qu'elle ne pouvait continuer à en prendre soin, Sannite ... le fit sacrifier par des soldats de la 8e"}
+    - {title: "Fondation pour la mémoire de l'esclavage: Sanite Bélair", url: "https://memoire-esclavage.org/tcpdf/747", quote: "Un des chefs d’accusation retenu contre Sanite concernait l’exécution d’un jeune blanc ... déclara hautement qu’elle ne voulait pas donner des soins plus longtemps"}
+  note: "Both sources say 'jeune blanc' (young white man), not that he was French; card changed 'Frenchman' to 'white man' (RU «больного белого юношу»)."
+- card: haitian-revolution
+  fact: "She was sentenced, as a woman, to be beheaded; Charles, as a soldier, to be shot"
+  verdict: confirmed
+  sources:
+    - {title: "Thomas Madiou, Histoire d'Haïti, vol. 2", url: "https://archive.org/details/histoiredhaiti02madi", quote: "La commission considérant le grade militaire de Charles et le sexe de Sannitte, son épouse, condamna le dit Bélair à être fusillé, et la dite Sannitte, sa femme, à être décapitée."}
+    - {title: "Beaubrun Ardouin, Études, vol. 5", url: "https://archive.org/details/tudessurlhisto05ardo", quote: "Charles Bélair ... à être fusillé en sa qualité de militaire, et Sannite, son épouse, comme complice et vu son sexe, à être décapitée."}
+  note: ""
+- card: haitian-revolution
+  fact: "On 5 October 1802 she urged him to die bravely, refused the blindfold, would not bow to the block, and was shot"
+  verdict: confirmed
+  sources:
+    - {title: "Thomas Madiou, Histoire d'Haïti, vol. 2", url: "https://archive.org/details/histoiredhaiti02madi", quote: "Dans l'après midi du 13 Vendémiaire (5 Octobre) ... la voix de son épouse qui l'exhortait à mourir en brave ... Sannitte refusa de se laisser bander les yeux. Le bourreau, malgré ses efforts, ne put la courber contre le billot. L'officier qui commandait le détachement fut obligé de la faire fusiller."}
+    - {title: "Beaubrun Ardouin, Études, vol. 5", url: "https://archive.org/details/tudessurlhisto05ardo", quote: "ou 5 octobre 1802. Dans la journée même, il reçut son exécution derrière le cimetière du Cap ... Son épouse ... l'exhorta à mourir en brave ... Lorsqu'on voulut lui bander les yeux, elle s'y refusa : on ne put davantage la contraindre à subir le supplice de la décapitation ; il fallut la fusiller comme son mari."}
+  note: "Ardouin's OCR reads '15 vendémiaire an XI' but equates it to 5 October 1802; 13 vendémiaire XI is 5 October."
+- card: haitian-revolution
+  fact: "Haiti's ten-gourde note of 2004 bears her portrait"
+  verdict: confirmed
+  sources:
+    - {title: "Haitian American Museum of Chicago: Haitian Banknotes", url: "https://hamoc.libraryhost.com/items/show/1180", quote: "(10 gourdes, 2004, Sanite Belair in mint condition)"}
+    - {title: "Banknotes.com: Haiti 10 Gourdes 2004-2012", url: "https://www.banknotes.com/ht272.htm", quote: "Obverse: Lieutenant Mme Suzanne Sanite Belair (1781 - 1802). Battle scene."}
+  note: "Both are collector/collection records, not the issuing bank; the British Museum record C_2017-4086-1 (bicentenary issue) returned 403 and BRH has no page found. Uncontested."
+- card: haitian-revolution
+  fact: "Late in 1803 the rebels under Dessalines beat the French, and on 1 January 1804 he proclaimed Haiti"
+  verdict: confirmed
+  sources:
+    - {title: "Colonial Williamsburg: Haiti", url: "https://slaveryandremembrance.org/articles/article/?id=A0111", quote: "Under the new leadership of Jean-Jacques Dessalines, the rebellion finally defeated French forces in late 1803. On January 1, 1804, Dessalines announced the new nation of Haiti"}
+    - {title: "Stewart R. King, IESS via Encyclopedia.com", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/haitian-revolution", quote: "final defeat of the French forces at Vertières on November 18, 1803. The new commander of the Haitian forces, Jean-Jacques Dessalines ... declared Haitian independence on January 1, 1804"}
+  note: ""
+- card: haitian-revolution
+  fact: "In 1825 France demanded 150 million francs for the former colonists, later cut to 90 million"
+  verdict: confirmed
+  sources:
+    - {title: "BnF: Gaillard-Pourchet, Haiti’s independence debt", url: "https://heritage.bnf.fr/france-ameriques/en/haitis-independence-debt-slave-unit-account-1794-1922", quote: "in 1825, France recognises the sovereignty ... in return for compensation to be paid to the ex-property owning colonists ... The total indemnity to be settled amounted to 150 million francs ... renegotiated downwards (to 90 million francs)"}
+    - {title: "New York Times: Historical data on Haiti’s debt", url: "https://github.com/nytimes/haiti-debt", quote: "This debt, which began in 1825, includes the indemnity that France demanded from Haiti to compensate former colonists ... the 150-million-franc indemnity, which was later reduced to 90 million francs."}
+  note: "Also supports the wow line."
+- card: haitian-revolution
+  fact: "Haiti borrowed in France to pay and repaid that loan only in 1888"
+  verdict: confirmed
+  sources:
+    - {title: "BnF: Gaillard-Pourchet, Haiti’s independence debt", url: "https://heritage.bnf.fr/france-ameriques/en/haitis-independence-debt-slave-unit-account-1794-1922", quote: "it had to take out a loan in November, 1825 of 30 million francs on the French market ... The external loans of 1825 and 1875 are, respectively, paid off in 1887-88"}
+    - {title: "New York Times: Historical data on Haiti’s debt", url: "https://github.com/nytimes/haiti-debt", quote: "Haiti borrowed 30 million francs from a consortium of banks ... in 1825 ... in 1887, it said that it had paid off the loan — though a final, small amount of interest and late fees was paid the next year."}
+  note: ""
+- card: haitian-revolution
+  fact: "Maroons had held out in the hills of Brazil (Palmares) and Jamaica"
+  verdict: confirmed
+  sources:
+    - {title: "Reis and Gomes, Quilombo, Cultural Survival Quarterly; Flávio Gomes, Palmares, via Encyclopedia.com", url: "https://www.culturalsurvival.org/publications/cultural-survival-quarterly/quilombo-brazilian-maroons-during-slavery", quote: "Its several constituent settlements were located on the Serra da Barriga, a mountain chain (CSQ) / The mountains of the area were considered an ideal location for captives to take refuge (Encyclopedia.com)"}
+    - {title: "Colonial Williamsburg: Nanny; Jamaica Information Service: Nanny of the Maroons", url: "https://jis.gov.jm/information/heroes/nanny-of-the-maroons/", quote: "sought refuge from a brutal slave society in the mountains of Jamaica (CW) / the British troops who attempted to penetrate the mountains to overpower them (JIS)"}
+  note: "Brazil: CSQ + Encyclopedia.com; Jamaica: CW + JIS; both pairs independent."
+- card: haitian-revolution
+  fact: "(unledgered) Media caption: print published by Bonneville, around 1800"
+  verdict: corrected
+  sources:
+    - {title: "Wikimedia Commons: Portrait de Toussaint Louverture, à cheval", url: "https://commons.wikimedia.org/wiki/File:Portrait_de_Toussaint_Louverture,_%C3%A0_cheval1.jpg", quote: "Publié chez Chez Bonneville, rue Jacques, N° 195. ... Date: Unknown date ... digital ID btv1b8413164j"}
+    - {title: "Gallica btv1b8413164j", url: "https://gallica.bnf.fr/ark:/12148/btv1b8413164j", quote: "(blocked by Cloudflare, not read)"}
+  note: "Bonneville and Gallica ID confirmed; no date given, so 'around 1800' removed from the EN and RU captions."
+- card: haitian-revolution
+  fact: "(unledgered) Further reading: James 1938, NYT The Ransom May 2022, Buck-Morss 2009"
+  verdict: confirmed
+  sources:
+    - {title: "New York Times: Historical data on Haiti’s debt", url: "https://github.com/nytimes/haiti-debt", quote: "https://www.nytimes.com/2022/05/20/world/haiti-history-colonized-france.html"}
+    - {title: "C. L. R. James, The Black Jacobins (1963), Internet Archive", url: "https://archive.org/details/clr-james-the-black-jacobins", quote: "The Black Jacobins: Toussaint L'Ouverture and the San Domingo Revolution"}
+  note: "Bibliographic pointers, not body claims; 1938 first edition and Buck-Morss 2009 (University of Pittsburgh Press) are standard."

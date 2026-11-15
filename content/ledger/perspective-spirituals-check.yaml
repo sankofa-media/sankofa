@@ -1,0 +1,252 @@
+# Second, independent check (2026-11-15) of content/ledger/perspective-spirituals.yaml.
+# Every cited URL was reopened (curl, page text extracted); quotes are copied from the fetched text.
+# verdict: confirmed | corrected (card wording or sources changed) | refuted | unconfirmed (removed).
+# Card word count after the check: male copy 235, female copy 235 (limit 235 for a genre card).
+- card: spirituals
+  copy: both
+  fact: "Spirituals are religious folk songs made by enslaved African Americans in the American South"
+  verdict: confirmed
+  sources:
+    - {title: "Library of Congress, African American Spirituals: Introduction", url: "https://guides.loc.gov/spirituals-folklife", quote: "The term \"Negro spiritual\" refers to a genre of religious folksongs created and sung by enslaved peoples of African descent in the American South."}
+    - {title: "Digital History, University of Houston: Spirituals", url: "https://www.digitalhistory.uh.edu/active_learning/explorations/spirituals/spirituals_menu.cfm", quote: "In the decades before the Civil War, enslaved African Americans created diverse forms of music, including work songs, field hollers, and spirituals"}
+  note: ""
+- card: spirituals
+  copy: both
+  fact: "They most likely arose from the late eighteenth century"
+  verdict: corrected
+  sources:
+    - {title: "Angela M. S. Nelson, Christian History 31 (1991)", url: "https://christianhistoryinstitute.org/magazine/article/golden-age-of-hymns-spirituals", quote: "Many scholars believe, however, that the spiritual originated in the late eighteenth century."}
+    - {title: "Carnegie Hall Timeline: Folk Spiritual", url: "https://timeline.carnegiehall.org/genres/folk-spiritual", quote: "The spiritual began emerging in conjunction with camp meetings associated with the Second Awakening. This revival movement dominated religious life in the American frontier from the 1780s to the 1830s"}
+  note: "The first ledger's Digital History quote dates conversions to Christianity, not the songs; replaced in the ledger by the Carnegie Hall passage. Card wording unchanged."
+- card: spirituals
+  copy: both
+  fact: "They were made from Bible stories, hymns and African ways of singing"
+  verdict: corrected
+  sources:
+    - {title: "Angela M. S. Nelson, Christian History 31 (1991)", url: "https://christianhistoryinstitute.org/magazine/article/golden-age-of-hymns-spirituals", quote: "The spirituals sung in these meetings drew from hymns, the Bible, and African styles of singing."}
+    - {title: "Carnegie Hall Timeline: Folk Spiritual", url: "https://timeline.carnegiehall.org/genres/folk-spiritual", quote: "The spiritual draws from African music and European psalms and hymns"}
+  note: "Digital History covered only the Bible; Carnegie Hall added to the ledger for hymns and African music."
+- card: spirituals
+  copy: both
+  fact: "A leader improvised a line and the others answered (call and response)"
+  verdict: confirmed
+  sources:
+    - {title: "Carnegie Hall Timeline: Folk Spiritual", url: "https://timeline.carnegiehall.org/genres/folk-spiritual", quote: "The soloist improvises a line to which the other singers respond"}
+    - {title: "Library of Congress, African American Spirituals: Introduction", url: "https://guides.loc.gov/spirituals-folklife", quote: "spirituals are structured in a way that allows for repetition and call-and-response delivery between a leader's statement and a chorus's refrain"}
+  note: ""
+- card: spirituals
+  copy: both
+  fact: "Work songs used the same call and response"
+  verdict: corrected
+  sources:
+    - {title: "Carnegie Hall Timeline: Work Songs, Field/Street Calls, Satirical and Protest Songs", url: "https://timeline.carnegiehall.org/genres/work-songs-field-street-calls-satirical-protest-songs", quote: "Many work crews had song leaders who improvised a line, to which the others responded with a refrain."}
+    - {title: "National Humanities Center, The Making of African American Identity: Work songs", url: "https://nationalhumanitiescenter.org/pds/maai/community/text2/text2read.htm", quote: "Here we listen to three African American work songs derivative of antebellum field songs, each audio clip accompanied by a separate webpage of lyrics. Two are call-and-response songs"}
+  note: "The Smithsonian Folkways PDF (12 MB, text not extractable) could not be read; replaced by the National Humanities Center page, added to card sources."
+- card: spirituals
+  copy: both
+  fact: "In the ring shout worshippers shuffled round in a circle"
+  verdict: corrected
+  sources:
+    - {title: "Allen, Ware and Garrison, Slave Songs of the United States (1867), introduction, Documenting the American South, UNC", url: "https://docsouth.unc.edu/church/allen/allen.html", quote: "all stand up in the middle of the floor, and when the 'sperichil' is struck up, begin first walking and by-and-by shuffling round, one after the other, in a ring."}
+    - {title: "College of Charleston, Lowcountry Digital History Initiative, Hidden Voices: Spiritual practices", url: "https://ldhi.library.cofc.edu/exhibits/show/hidden-voices/enslaved-womens-cultural-lives/enslaved-women-and-religion/spiritual-practices", quote: "Ring shout was a communal practice among enslaved women and men which involved dancing in a counterclockwise circle and singing."}
+  note: "The Christian History quote is the same 1867 description that Allen prints (one text). The Carnegie Hall 'counterclockwise circle' sentence is not in the Folk Spiritual page text, only in a site-wide feature embedded in its script data. Both replaced in the ledger; LDHI added to card sources."
+- card: spirituals
+  copy: both
+  fact: "Songs of the Hebrews in Egypt and of Canaan spoke of the singers' own bondage and hope of freedom"
+  verdict: confirmed
+  sources:
+    - {title: "Carnegie Hall Timeline: Folk Spiritual", url: "https://timeline.carnegiehall.org/genres/folk-spiritual", quote: "In their songs, the enslaved recreated stories about the oppressed Hebrew people, the cruel Egyptians, the Red Sea, and the land of Canaan to reflect their oppression, their treatment by whites, and their desire for freedom respectively."}
+    - {title: "Yolanda Y. Smith, Christian History 62 (1999)", url: "https://christianhistoryinstitute.org/magazine/article/he-still-wid-us-jesus", quote: "Inspired by God’s actions on behalf of the children of Israel in Egypt, slaves firmly believed that God would deliver them from their bondage."}
+  note: ""
+- card: spirituals
+  copy: male
+  fact: "Frederick Douglass was born enslaved in Maryland"
+  verdict: confirmed
+  sources:
+    - {title: "Frederick Douglass Papers Project: Douglass timeline", url: "https://frederickdouglasspapersproject.com/page/douglass-timeline", quote: "born sometime in February at Holme Hill Farm plantation at Tuckahoe, near the town of Easton, Talbot County, on the eastern shore of Maryland."}
+    - {title: "National Park Service, Frederick Douglass NHS", url: "https://www.nps.gov/frdo/learn/historyculture/frederickdouglass.htm", quote: "born into slavery on the Eastern Shore of Maryland in February 1818."}
+  note: ""
+- card: spirituals
+  copy: male
+  fact: "As a boy he heard the songs of people walking to the Great House Farm of the Lloyd plantation"
+  verdict: confirmed
+  sources:
+    - {title: "Douglass, Narrative (1845), Documenting the American South, UNC", url: "https://docsouth.unc.edu/neh/douglass/douglass.html", quote: "The slaves selected to go to the Great House Farm, for the monthly allowance for themselves and their fellow-slaves, were peculiarly enthusiastic. While on their way, they would make the dense old woods, for miles around, reverberate with their wild songs"}
+    - {title: "Frederick Douglass Papers Project: Douglass timeline", url: "https://frederickdouglasspapersproject.com/page/douglass-timeline", quote: "1824 Sent to live in the home of his master Aaron Anthony, overseer of the Wye Plantation of the powerful Lloyd family."}
+  note: "The George Mason page reprints the Narrative passage (same text, counted once)."
+- card: spirituals
+  copy: male
+  fact: "He missed their meaning then: \"I was myself within the circle\""
+  verdict: confirmed
+  sources:
+    - {title: "Douglass, Narrative (1845), Documenting the American South, UNC", url: "https://docsouth.unc.edu/neh/douglass/douglass.html", quote: "I did not, when a slave, understand the deep meaning of those rude and apparently incoherent songs. I was myself within the circle; so that I neither saw nor heard as those without might see and hear."}
+    - {title: "Digital History, University of Houston: Spirituals", url: "https://www.digitalhistory.uh.edu/active_learning/explorations/spirituals/spirituals_menu.cfm", quote: "I did not, when a slave, understand the deep meaning of those songs. They told a tale of woe which was then altogether beyond my feeble comprehension"}
+  note: "The quoted phrase itself rests on the primary text; Digital History independently attributes the 'did not understand' passage to Douglass."
+- card: spirituals
+  copy: male
+  fact: "In 1836 he and his friends plotted to run away, and the plot failed"
+  verdict: confirmed
+  sources:
+    - {title: "Frederick Douglass Papers Project: Douglass timeline", url: "https://frederickdouglasspapersproject.com/page/douglass-timeline", quote: "1836 Led a failed escape plan from the farm of William Freeland."}
+    - {title: "House Divided, Dickinson College: Frederick Douglass", url: "https://hd.housedivided.dickinson.edu/node/15954", quote: "Before long, he and his pupils had plotted to escape to the free state of Pennsylvania, but this too was discovered."}
+  note: ""
+- card: spirituals
+  copy: male
+  fact: "While plotting they sang of Canaan: \"We meant to reach the north, and the north was our Canaan\""
+  verdict: confirmed
+  sources:
+    - {title: "Douglass, My Bondage and My Freedom (1855), Documenting the American South, UNC", url: "https://docsouth.unc.edu/neh/douglass55/douglass55.html", quote: "A keen observer might have detected in our repeated singing of \"O Canaan, sweet Canaan, I am bound for the land of Canaan,\" something more than a hope of reaching heaven. We meant to reach the north --and the north was our Canaan"}
+    - {title: "Tufts University Libraries, Douglass exhibition: Slave Songs of the United States", url: "https://omeka.library.tufts.edu/exhibits/show/douglass-olafsson/musical-inspirations/slave-songs-of-the-united-stat", quote: "We meant to reach the North, and the North was our Canaan."}
+  note: "In My Bondage the singing sits in the account of the Freeland escape plot ('our contemplated escape'), so the 1836 link is the author's own."
+- card: spirituals
+  copy: male
+  fact: "He escaped in 1838"
+  verdict: confirmed
+  sources:
+    - {title: "National Park Service, Frederick Douglass NHS", url: "https://www.nps.gov/frdo/learn/historyculture/frederickdouglass.htm", quote: "On September 3, 1838, with the ticket in hand, he boarded a northbound train dressed as a sailor."}
+    - {title: "House Divided, Dickinson College: Frederick Douglass", url: "https://hd.housedivided.dickinson.edu/node/15954", quote: "Frederick escaped from slavery in September 1838."}
+  note: ""
+- card: spirituals
+  copy: male
+  fact: "In the North he was astonished that the singing was taken for contentment; Narrative (1845): \"Slaves sing most when they are most unhappy\""
+  verdict: confirmed
+  sources:
+    - {title: "Douglass, Narrative (1845), Documenting the American South, UNC", url: "https://docsouth.unc.edu/neh/douglass/douglass.html", quote: "I have often been utterly astonished, since I came to the north, to find persons who could speak of the singing, among slaves, as evidence of their contentment and happiness. It is impossible to conceive of a greater mistake. Slaves sing most when they are most unhappy."}
+    - {title: "Digital History, University of Houston: Spirituals", url: "https://www.digitalhistory.uh.edu/active_learning/explorations/spirituals/spirituals_menu.cfm", quote: "I have often been utterly astonished, since I came to the north, to find persons who could speak of the singing, among slaves, as evidence of their contentment and happiness. It is impossible to conceive of a greater mistake. Slaves sing most when they are most unhappy."}
+  note: "The DocSouth text carries a 'Page 15' page marker inside the sentence; the wording matches."
+- card: spirituals
+  copy: male
+  fact: "Every tone was \"a testimony against slavery\""
+  verdict: confirmed
+  sources:
+    - {title: "Douglass, Narrative (1845), Documenting the American South, UNC", url: "https://docsouth.unc.edu/neh/douglass/douglass.html", quote: "Every tone was a testimony against slavery, and a prayer to God for deliverance from chains."}
+    - {title: "Digital History, University of Houston: Spirituals", url: "https://www.digitalhistory.uh.edu/active_learning/explorations/spirituals/spirituals_menu.cfm", quote: "Every tone was a testimony against slavery and a prayer to God for deliverance from chains"}
+  note: ""
+- card: spirituals
+  copy: male
+  fact: "\"Follow the Drinking Gourd\", told as a sung escape map, was first printed in 1928"
+  verdict: corrected
+  sources:
+    - {title: "Joel Bresler, Follow the Drinking Gourd: A Cultural History", url: "http://www.followthedrinkinggourd.org/", quote: "The American folksong Follow the Drinking Gourd was first published in 1928. The Drinking Gourd song was supposedly used by an Underground Railroad operative to encode escape instructions and a map."}
+    - {title: "Internet Archive: Follow de Drinkin' Gou'd, Publications of the Texas Folk-Lore Society VII (1928)", url: "https://archive.org/details/followdedrinking0000unse", quote: "FOLLOW DE DRINKIN' GOU'D. Publications of the Texas Folk-Lore Society. Number VII. by J. Frank Dobie Publication date 1928 Publisher Texas Folk-Lore Society Austin, Texas"}
+  note: "Ledger quote for the Internet Archive item replaced by the page text (the old one was a paraphrase of metadata)."
+- card: spirituals
+  copy: female
+  fact: "Ella Sheppard was born enslaved in 1851"
+  verdict: confirmed
+  sources:
+    - {title: "Tennessee State University Library: Ella Sheppard (Moore)", url: "https://ww2.tnstate.edu/library/digital/sheppard.htm", quote: "Ella Sheppard was born on February 4, 1851, in Nashville, Tennessee. ... the slave mistress sold Ella to Simon Sheppard for $350."}
+    - {title: "Public Domain Review: First recording of Swing Low, Sweet Chariot (1909)", url: "https://publicdomainreview.org/collection/first-recording-of-swing-low-sweet-chariot-1909", quote: "Sarah gave birth to Ella on a Tennessee plantation in 1851."}
+  note: "PBS and Cincinnati Public Radio agree (father 'purchased her freedom')."
+- card: spirituals
+  copy: female
+  fact: "In despair her mother ran with her to the river to drown them both; an old woman stopped her"
+  verdict: corrected
+  sources:
+    - {title: "PBS American Experience: Ella Sheppard", url: "https://www.pbs.org/wgbh/americanexperience/features/singers-sheppard", quote: "\"In agony of soul and despair,\" her mother ran to the river with her, intending to drown little Ella and herself. The chorus of \"Swing Low, Sweet Chariot\" -- a song Ella would later teach the Jubilee Singers -- has been attributed to the words of an elder that came to her rescue."}
+    - {title: "Public Domain Review: First recording of Swing Low, Sweet Chariot (1909)", url: "https://publicdomainreview.org/collection/first-recording-of-swing-low-sweet-chariot-1909", quote: "she resolutely set out for the Cumberland River, intent on drowning both herself and her daughter. She was stopped by an “old mammy” who cautioned Sarah to “let de chariot of de Lord swing low.”"}
+  note: "The card said she 'would sooner have jumped into the river than see her a slave': that is TSU's report of a threat, while PBS and PDR describe an actual run to the river with other motives (spying; a threatened sale). Card now states only what two sources share. The slur-adjacent word in PDR's quote is described, not reproduced, in the card ('an old woman')."
+- card: spirituals
+  copy: female
+  fact: "Her father bought Ella for $350; her mother stayed enslaved in Mississippi"
+  verdict: confirmed
+  sources:
+    - {title: "PBS American Experience: Ella Sheppard", url: "https://www.pbs.org/wgbh/americanexperience/features/singers-sheppard", quote: "Ella's father was permitted to purchase the three-year-old girl for $350 and take her to Nashville. Her mother, however, was forced to remain a slave in Mississippi."}
+    - {title: "Tennessee State University Library: Ella Sheppard (Moore)", url: "https://ww2.tnstate.edu/library/digital/sheppard.htm", quote: "the slave mistress sold Ella to Simon Sheppard for $350. Ella remained in Nashville with her father when the mother was taken to Mississippi."}
+  note: ""
+- card: spirituals
+  copy: female
+  fact: "Only years later did Ella find her mother"
+  verdict: confirmed
+  sources:
+    - {title: "PBS American Experience: Ella Sheppard", url: "https://www.pbs.org/wgbh/americanexperience/features/singers-sheppard", quote: "with whom she'd been reunited when she was fifteen and had supported ever since"}
+    - {title: "Tennessee State University Library: Ella Sheppard (Moore)", url: "https://ww2.tnstate.edu/library/digital/sheppard.htm", quote: "Eventually, she located her mother and a sister in Mississippi and brought them to Nashville."}
+  note: "Wording shortened to fit the word limit (the 'care for her' clause dropped)."
+- card: spirituals
+  copy: female
+  fact: "She was a pianist trained in Cincinnati"
+  verdict: confirmed
+  sources:
+    - {title: "PBS American Experience: Ella Sheppard", url: "https://www.pbs.org/wgbh/americanexperience/features/singers-sheppard", quote: "In Cincinnati, Ella started school, studied piano, and took voice lessons"}
+    - {title: "Tennessee State University Library: Ella Sheppard (Moore)", url: "https://ww2.tnstate.edu/library/digital/sheppard.htm", quote: "Ella Sheppard attended a colored school and studied music in Cincinnati. Ella demonstrated such exceptional musical talent that her father bought a piano and paid for private music lessons."}
+  note: ""
+- card: spirituals
+  copy: female
+  fact: "She became Fisk's first Black teacher"
+  verdict: confirmed
+  sources:
+    - {title: "PBS American Experience: Ella Sheppard", url: "https://www.pbs.org/wgbh/americanexperience/features/singers-sheppard", quote: "When he invited her to be an assistant music teacher a year later, \"Miss Sheppard\" became Fisk's first black instructor."}
+    - {title: "Tennessee State University Library: Ella Sheppard (Moore)", url: "https://ww2.tnstate.edu/library/digital/sheppard.htm", quote: "Ella became the music teacher at Fisk University--the only black staff member at the school before 1875."}
+  note: "TSU says 'only black staff member before 1875', which entails 'first'."
+- card: spirituals
+  copy: female
+  fact: "On 6 October 1871 she set out with students who would sing the school out of debt"
+  verdict: confirmed
+  sources:
+    - {title: "Fisk University: History", url: "https://www.fisk.edu/about/history/", quote: "a group of traveling students who set out from Nashville on October 6, 1871, taking the entire contents of the University treasury with them for travel expenses, praying that through their music they could somehow raise enough money to keep the doors of their debt-ridden school open."}
+    - {title: "Tennessee State University Library: Ella Sheppard (Moore)", url: "https://ww2.tnstate.edu/library/digital/sheppard.htm", quote: "Ella Sheppard became one of nine singers selected by White to form the group of singers. She served as pianist and assistant trainer. ... On October 6, 1871, the group went on tour."}
+  note: "American Heritage quotes Sheppard with the same date."
+- card: spirituals
+  copy: female
+  fact: "Sheppard: \"We did not dream of ever using them in public\"; they \"were associated with slavery and the dark past\""
+  verdict: confirmed
+  sources:
+    - {title: "Andrew Ward, They Brought the Jubilee, American Heritage 51:4 (2000)", url: "https://www.americanheritage.com/they-brought-jubilee", quote: "“We did not dream of ever using them in public,” explained White’s African-American assistant Ella Sheppard. “They were associated with slavery and the dark past, and represented the things to be forgotten.”"}
+    - {title: "PBS American Experience: Ella Sheppard", url: "https://www.pbs.org/wgbh/americanexperience/features/singers-sheppard", quote: "Sheppard later noted that, not long before this time, they did not dream of ever singing the spirituals in public due to their sacred content and their association with dark memories of slavery."}
+  note: ""
+- card: spirituals
+  copy: female
+  fact: "Audiences responded most to the spirituals, and Sheppard added more to the repertoire"
+  verdict: corrected
+  sources:
+    - {title: "PBS American Experience: Ella Sheppard", url: "https://www.pbs.org/wgbh/americanexperience/features/singers-sheppard", quote: "The public’s unexpected appreciation of this music, however, made Sheppard suddenly responsible for learning as many spirituals as she could and incorporating them into the singers’ repertoire as they traveled."}
+    - {title: "Tennessee Encyclopedia: Jubilee Singers of Fisk University", url: "https://tennesseeencyclopedia.net/entries/jubilee-singers-of-fisk-university/", quote: "As a result of the enthusiastic response to the spirituals–or slave songs, as they were often called–a larger portion of each performance began to be devoted to spirituals"}
+  note: "Tennessee Encyclopedia quote in the ledger was stitched from fragments; replaced with the continuous sentence. Card wording unchanged."
+- card: spirituals
+  copy: female
+  fact: "Among them was \"Swing Low, Sweet Chariot\", whose chorus one account traces to the old woman who stopped her mother at the river"
+  verdict: corrected
+  sources:
+    - {title: "PBS American Experience: Ella Sheppard", url: "https://www.pbs.org/wgbh/americanexperience/features/singers-sheppard", quote: "The chorus of \"Swing Low, Sweet Chariot\" -- a song Ella would later teach the Jubilee Singers -- has been attributed to the words of an elder that came to her rescue."}
+    - {title: "Public Domain Review: First recording of Swing Low, Sweet Chariot (1909)", url: "https://publicdomainreview.org/collection/first-recording-of-swing-low-sweet-chariot-1909", quote: "Another, more dramatic, origin story is also told: John W. Work claimed that the spiritual “burst forth” from the anguished soul of Sarah Hannah Sheppard, the mother of Ella Sheppard of Fisk Jubilee Singer fame."}
+  note: "The card said she 'learned it from her mother'; only American Heritage (Ward) says so ('songs her mother had taught her'), PBS attributes the chorus to an elder's words instead. Card now gives the account both PBS and PDR report and keeps 'one account', since PDR also cites the Wallace Willis origin. Ward still supports that Sheppard brought the song in."
+- card: spirituals
+  copy: both
+  fact: "In 1873 the Fisk Jubilee Singers sang for Queen Victoria"
+  verdict: corrected
+  sources:
+    - {title: "National Geographic: The Fisk Jubilee Singers", url: "https://www.nationalgeographic.com/history/article/the-fisk-jubilee-singers-amazing-story-from-slavery-to-stardom", quote: "A large portrait of the original Singers (background) was a gift from Queen Victoria following a command performance for Her Majesty in 1873."}
+    - {title: "Tennessee Encyclopedia: Jubilee Singers of Fisk University", url: "https://tennesseeencyclopedia.net/entries/jubilee-singers-of-fisk-university/", quote: "In 1873 the Jubilee Singers and George White boarded a ship for England for a successful British tour. Their numerous performances created a storm of approval and culminated in a performance for Queen Victoria."}
+  note: "Tennessee Encyclopedia quote in the ledger was a paraphrase; replaced with page text. Fact unchanged."
+- card: spirituals
+  copy: both
+  fact: "Their tours paid for Jubilee Hall, still standing on the campus"
+  verdict: confirmed
+  sources:
+    - {title: "Fisk University: History", url: "https://www.fisk.edu/about/history/", quote: "raised funds that preserved their University and permitted construction of Jubilee Hall, the South's first permanent structure built for the education of black students. As a designated National Historical Landmark, today, Jubilee Hall remains the dramatic focal point of Fisk's campus."}
+    - {title: "Andrew Ward, They Brought the Jubilee, American Heritage 51:4 (2000)", url: "https://www.americanheritage.com/they-brought-jubilee", quote: "by the time of their return to Nashville in 1874 they had raised another fifty thousand dollars for the construction of Jubilee Hall, the first permanent building on Fisk’s new campus."}
+  note: ""
+- card: spirituals
+  copy: both
+  fact: "Harry T. Burleigh carried spirituals into the concert hall"
+  verdict: confirmed
+  sources:
+    - {title: "Carnegie Hall Timeline: Spiritual as Art Song", url: "https://timeline.carnegiehall.org/genres/spiritual-as-art-song", quote: "in 1916, when composer-arranger-and concert artist Harry T. Burleigh (1866–1949) published his arrangements of folk spirituals for solo voice and piano accompaniment"}
+    - {title: "Hymnology Archive: Harry T. Burleigh", url: "https://hymnologyarchive.com/harry-t-burleigh", quote: "Negro singer who wrote the music for more than 50 spirituals and composed more than 200 songs"}
+  note: ""
+- card: spirituals
+  copy: both
+  fact: "Spirituals fed the blues"
+  verdict: confirmed
+  sources:
+    - {title: "Carnegie Hall Timeline: Rural/Folk Blues", url: "https://timeline.carnegiehall.org/genres/rural-folk-blues", quote: "The three-line rural blues form emerged out of African American work songs, field calls and protest songs, game songs and social songs, spirituals, and folk ballads."}
+    - {title: "South Carolina Encyclopedia: Spirituals", url: "https://www.scencyclopedia.org/sce/?p=14978", quote: "Gospel and blues draw significantly from early African American spirituals."}
+  note: ""
+- card: spirituals
+  copy: both
+  fact: "Spirituals fed gospel"
+  verdict: confirmed
+  sources:
+    - {title: "Carnegie Hall Timeline: Folk Spiritual", url: "https://timeline.carnegiehall.org/genres/folk-spiritual", quote: "The folk spiritual later evolved into Concert Spirituals, Rural Gospel, Spiritual as Art Song, and Freedom Songs."}
+    - {title: "South Carolina Encyclopedia: Spirituals", url: "https://www.scencyclopedia.org/sce/?p=14978", quote: "Gospel and blues draw significantly from early African American spirituals."}
+  note: ""

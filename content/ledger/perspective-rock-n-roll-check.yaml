@@ -1,0 +1,204 @@
+# Second, independent check (2026-11-15) of content/ledger/perspective-rock-n-roll.yaml
+# and content/cards/rock-n-roll.md / rock-n-roll.ru.md. Every cited URL was reopened;
+# quotes are copied from the fetched page or PDF text.
+# verdict: confirmed | corrected (card wording or sources changed) |
+#          refuted | unconfirmed (removed from the card).
+# Entries whose fact starts with "(unledgered)" check claims the first ledger did not record.
+# Word count per copy (limit 235, genre card): EN male 231, female 232; RU male 212, female 212.
+# Both copies read as complete stories (frame, story, outcome); RU marks the same paragraphs.
+- card: rock-n-roll
+  fact: "Rock and roll ran on an aggressive beat, loud electric guitar, saxophone solos and pounding piano, and grew out of rhythm and blues"
+  verdict: confirmed
+  sources:
+    - {title: "Carnegie Hall, Timeline of African American Music: Rock 'n' Roll", url: "https://timeline.carnegiehall.org/genres/rock-n-roll", quote: "characterized by an aggressive beat and prominent electric guitars, saxophone solos, and pumping pianos"}
+    - {title: "Encyclopedia of African-American Culture and History, via Encyclopedia.com: Rhythm and Blues", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues", quote: "In the early 1950s, rock and roll — originally a euphemism for sex — was virtually synonymous with rhythm and blues."}
+  note: "Case Western ECH also: 'rock expanded from its R&B base'."
+- card: rock-n-roll
+  fact: "(unledgered) The phrase was old blues slang for sex"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Cleveland History: Freed, Alan", url: "https://case.edu/ech/articles/f/freed-alan", quote: "Mintz and Freed called the music Rock 'n' Roll (believed to be an old blues reference to sex)"}
+    - {title: "Encyclopedia of African-American Culture and History, via Encyclopedia.com: Rhythm and Blues", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues", quote: "rock and roll — originally a euphemism for sex"}
+  note: "Added to the ledger."
+- card: rock-n-roll
+  fact: "In 1951 in Cleveland the DJ Alan Freed began playing rhythm and blues and calling it rock and roll"
+  verdict: corrected
+  sources:
+    - {title: "Encyclopedia of Cleveland History: Freed, Alan", url: "https://case.edu/ech/articles/f/freed-alan", quote: "In 1951 Freed was hired to host a classical music program on Cleveland’s WJW-Radio ... with Freed spinning rhythm-and-blues records by black musicians. ... Mintz and Freed called the music Rock 'n' Roll"}
+    - {title: "Carnegie Hall, Timeline of African American Music: Rock 'n' Roll", url: "https://timeline.carnegiehall.org/genres/rock-n-roll", quote: "in 1951, Cleveland disc jockey Alan Freed began calling his rhythm and blues radio show “Moondog’s Rock and Roll Party.”"}
+  note: "Card text unchanged. The ledger's second source (uDiscover) speaks of Freed's Brooklyn Paramount shows in New York, not Cleveland or 1951, and its quote was partly paraphrased; replaced with Carnegie Hall."
+- card: rock-n-roll
+  fact: "(unledgered) Fats Domino of New Orleans: \"What they call rock 'n' roll is rhythm and blues\""
+  verdict: confirmed
+  sources:
+    - {title: "Carnegie Hall, Timeline of African American Music: Rock 'n' Roll", url: "https://timeline.carnegiehall.org/genres/rock-n-roll", quote: "In 1965 Fats Domino said, “What they call rock ‘n’ roll is rhythm and blues. I’ve been playing it for 15 years in New Orleans.”"}
+    - {title: "American Masters, Fats Domino and the Birth of Rock n Roll, documentary transcript, PBS", url: "https://pbswisconsin.org/watch/american-masters/american-masters-fats-domino-and-birth-rock-n-roll/", quote: "Well, what they call rock 'n' roll now is rhythm and blues. I've been playin' for 15 years in New Orleans."}
+  note: "Added to the ledger."
+- card: rock-n-roll
+  fact: "In March 1951 Ike Turner's Kings of Rhythm recorded \"Rocket 88\" at Sam Phillips's studio in Memphis"
+  verdict: confirmed
+  sources:
+    - {title: "Library of Congress: Steve Propes on Rocket 88", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Rocket-88_Propes.pdf", quote: "created in a March 5, 1951 session at Sam Phillips’ legendary Memphis Recording Service studio. Piano player Ike Turner showed up with his Kings of Rhythm"}
+    - {title: "Blues Foundation Hall of Fame: Rocket 88", url: "https://www.blues.org/award-search/rocket-88-is-one-of-many-blues-a", quote: "Recorded March 5, 1951, at Memphis Recording Service, Memphis, Tennessee."}
+  note: "The Mississippi Blues Trail gives March 7 (after Guralnick); the month agrees, so the card rightly says only March."
+- card: rock-n-roll
+  fact: "The band were young men from Clarksdale, Mississippi, who came up Highway 61 to Memphis"
+  verdict: confirmed
+  sources:
+    - {title: "Mississippi Blues Trail: Rocket \"88\" marker, Lyon", url: "https://msbluestrail.org/?p=452", quote: "The band that traveled up Highway 61 to make the record in Memphis consisted of Ike Turner, Jackie Brenston, Raymond Hill, Willie Kizart ... and Willie “Bad Boy” Sims, all aged 17 to 20."}
+    - {title: "Library of Congress: Steve Propes on Rocket 88", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Rocket-88_Propes.pdf", quote: "During the 61-mile trip from Clarksdale, Mississippi to Memphis"}
+  note: ""
+- card: rock-n-roll
+  fact: "On it: Turner's piano, two saxophones, drums and a guitar with a distorted buzz"
+  verdict: confirmed
+  sources:
+    - {title: "Library of Congress: Steve Propes on Rocket 88", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Rocket-88_Propes.pdf", quote: "Ike Turner, piano; Willie Kizart, electric guitar; Willie Sims, drums; Raymond Hill, tenor sax, and Brenston, tenor sax and vocals ... Kizart’s loud and accidentally fuzz-toned guitar"}
+    - {title: "Mississippi Blues Trail: Rocket \"88\" marker, Lyon", url: "https://msbluestrail.org/?p=452", quote: "many historians opine that the distorted buzz in the guitar sound ... qualified it as the first example of rock ‘n’ roll"}
+  note: "Blues Foundation gives the same line-up; Wooster listening guide: 'Drums, electrical guitar, 2 saxophones'."
+- card: rock-n-roll
+  fact: "Chess issued the record under the name of Jackie Brenston, Turner's saxophonist, who sang it; Turner's name was not on it"
+  verdict: corrected
+  sources:
+    - {title: "Blues Foundation Hall of Fame: Rocket 88", url: "https://www.blues.org/award-search/rocket-88-is-one-of-many-blues-a", quote: "turned the mike over to one of his saxophonists, Jackie Brenston ... presented the results to Chess Records as one single by Ike Turner and his Kings of Rhythm and another by Jackie Brenston and his Delta Cats"}
+    - {title: "Library of Congress: Steve Propes on Rocket 88", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Rocket-88_Propes.pdf", quote: "Turner couldn’t have been pleased his name was missing from the label without credit to the Kings of Rhythm"}
+  note: "Was 'Chess Records credited it to Jackie Brenston'. Blues Foundation and Blues Trail say Phillips presented the tape to Chess under Brenston's name, so the credit was not Chess's decision; reworded to 'Chess Records issued it under the name of ... who sang it' (RU: «выпустил запись под именем ...»)."
+- card: rock-n-roll
+  fact: "It became Chess Records' first number one on the rhythm and blues chart"
+  verdict: confirmed
+  sources:
+    - {title: "Mississippi Blues Trail: Rocket \"88\" marker, Lyon", url: "https://msbluestrail.org/?p=452", quote: "it was also the first No. 1 rhythm & blues hit for Chicago-based Chess Records"}
+    - {title: "Blues Foundation Hall of Fame: Rocket 88", url: "https://www.blues.org/award-search/rocket-88-is-one-of-many-blues-a", quote: "reaching No. 1 on the R&B charts (Chess Records' first chart-topper)"}
+  note: ""
+- card: rock-n-roll
+  fact: "Brenston went out on his own and never had another hit"
+  verdict: confirmed
+  sources:
+    - {title: "Mississippi Blues Trail: Rocket \"88\" marker, Lyon", url: "https://msbluestrail.org/?p=452", quote: "taking off on his own to tour the country in 1951-1952, but he sold his rights to “Rocket ‘88’” to Phillips and never had another hit"}
+    - {title: "Bear Family Records: Jackie Brenston", url: "https://www.bear-family.com/brenston-jackie/?c=128563", quote: "His further Chess records, cut with Phineas Newborn Sr.'s band in Memphis and then in Chicago, went nowhere"}
+  note: ""
+- card: rock-n-roll
+  fact: "In the end Brenston went back to Turner's band as a sideman"
+  verdict: corrected
+  sources:
+    - {title: "Mississippi Blues Trail: Rocket \"88\" marker, Lyon", url: "https://msbluestrail.org/?p=452", quote: "He finally rejoined Turner’s band as a sideman in St. Louis."}
+    - {title: "Bear Family Records: Jackie Brenston", url: "https://www.bear-family.com/brenston-jackie/?c=128563", quote: "so by the mid-'50s Jackie was back with the Kings of Rhythm"}
+  note: "Was 'by the mid-1950s was back in Turner's band'. Only Bear Family gives 'mid-'50s'; the Blues Trail gives no date. The date was dropped; the return itself has two sources."
+- card: rock-n-roll
+  fact: "In 1952 Phillips started his own label, Sun"
+  verdict: confirmed
+  sources:
+    - {title: "Tennessee Encyclopedia: Sun Records", url: "https://tennesseeencyclopedia.net/entries/sun-records/", quote: "By 1952, Phillips had tired of recording hits for other firms. ... He started his own record company, turning to the name “Sun”"}
+    - {title: "Encyclopedia of Alabama: Sam Phillips", url: "https://encyclopediaofalabama.org/article/sam-phillips/", quote: "In 1952, he renamed his label Sun Records and that March released the first single on the label"}
+  note: ""
+- card: rock-n-roll
+  fact: "In 1954, in the same studio, Phillips recorded Elvis Presley"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Alabama: Sam Phillips", url: "https://encyclopediaofalabama.org/article/sam-phillips/", quote: "On July 5, 1954, in Phillips's recording studio, a young Tennessee truck driver named Elvis Presley picked up a guitar"}
+    - {title: "Blues Foundation Hall of Fame: Rocket 88", url: "https://www.blues.org/award-search/rocket-88-is-one-of-many-blues-a", quote: "Producer Sam Phillips recorded it at his Memphis Recording Service, where Elvis Presley would launch his recording career three years later"}
+  note: "Blues Foundation added because it, unlike Tennessee Encyclopedia, ties Presley to the same studio."
+- card: rock-n-roll
+  fact: "Sister Rosetta Tharpe grew up singing beside her mother, an evangelist"
+  verdict: confirmed
+  sources:
+    - {title: "Central Arkansas Library System, Encyclopedia of Arkansas: Sister Rosetta Tharpe", url: "https://encyclopediaofarkansas.net/entries/sister-rosetta-tharpe-1781/", quote: "Katie Bell Nubin Atkins—an evangelist, singer, and mandolin player ... she was an added attraction at her mother’s church services"}
+    - {title: "Gayle Wald: Why We Keep Rediscovering the Flamboyant Godmother of Rock", url: "https://whatitmeanstobeamerican.org/encounters/why-we-keep-rediscovering-the-flamboyant-godmother-of-rock/", quote: "With her mother, an evangelist, she came of age as a singer and instrumentalist"}
+  note: ""
+- card: rock-n-roll
+  fact: "In 1938 she made her first Decca records, among them \"Rock Me\""
+  verdict: confirmed
+  sources:
+    - {title: "PBS American Masters: Timeline, the years of Sister Rosetta Tharpe", url: "https://www.pbs.org/wnet/americanmasters/timeline-the-years-of-sister-rosetta-tharpe/2487/", quote: "Rosetta records her first Decca sides, including “Rock Me,” a version of Thomas A. ’Dorsey’s “Hide Me in Thy Bosom.”"}
+    - {title: "Central Arkansas Library System, Encyclopedia of Arkansas: Sister Rosetta Tharpe", url: "https://encyclopediaofarkansas.net/entries/sister-rosetta-tharpe-1781/", quote: "Tharpe was signed to Decca Records in 1938 and was successful immediately. Versions of ... “Hide Me in Thy Bosom,” released as “Rock Me,” were smash hits"}
+  note: "PBS entry sits under the 1938 heading."
+- card: rock-n-roll
+  fact: "In 1938 she took gospel into New York nightclubs"
+  verdict: corrected
+  sources:
+    - {title: "Gayle Wald: Why We Keep Rediscovering the Flamboyant Godmother of Rock", url: "https://whatitmeanstobeamerican.org/encounters/why-we-keep-rediscovering-the-flamboyant-godmother-of-rock/", quote: "She ultimately gained bigger fame in 1938, when she began appearing on the stages of prominent New York nightclubs"}
+    - {title: "PBS American Masters: Timeline, the years of Sister Rosetta Tharpe", url: "https://www.pbs.org/wnet/americanmasters/timeline-the-years-of-sister-rosetta-tharpe/2487/", quote: "1938 – “Sister Rosetta Tharpe” joins the cast of the fall 1938 Cotton Club Revue"}
+  note: "Card text unchanged. The ledger's second source, the Rock Hall induction essay, is 'Written By Gayle Wald', the same author as the first source; replaced with the PBS timeline."
+- card: rock-n-roll
+  fact: "She later played electric guitar"
+  verdict: confirmed
+  sources:
+    - {title: "PBS American Masters: Timeline, the years of Sister Rosetta Tharpe", url: "https://www.pbs.org/wnet/americanmasters/timeline-the-years-of-sister-rosetta-tharpe/2487/", quote: "upwards of 20,000 paying fans, who cheer as bride plays electric guitar from center field"}
+    - {title: "Gayle Wald: Why We Keep Rediscovering the Flamboyant Godmother of Rock", url: "https://whatitmeanstobeamerican.org/encounters/why-we-keep-rediscovering-the-flamboyant-godmother-of-rock/", quote: "playing electric guitar from the outfield while wearing a white wedding gown"}
+  note: "Rock Hall blurb ('trusty Gibson Les Paul Custom') also agrees."
+- card: rock-n-roll
+  fact: "Rock would call her its godmother"
+  verdict: confirmed
+  sources:
+    - {title: "Gayle Wald: Why We Keep Rediscovering the Flamboyant Godmother of Rock", url: "https://whatitmeanstobeamerican.org/encounters/why-we-keep-rediscovering-the-flamboyant-godmother-of-rock/", quote: "are proclaiming Tharpe the “godmother” of rock"}
+    - {title: "PBS American Masters: Timeline, the years of Sister Rosetta Tharpe", url: "https://www.pbs.org/wnet/americanmasters/timeline-the-years-of-sister-rosetta-tharpe/2487/", quote: "Sister Rosetta Tharpe -- \"The Godmother of Rock and Roll\""}
+  note: ""
+- card: rock-n-roll
+  fact: "In August 1952 Big Mama Thornton recorded \"Hound Dog\", written for her by Jerry Leiber and Mike Stoller"
+  verdict: confirmed
+  sources:
+    - {title: "Michael Sporke, Library of Congress: Hound Dog", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/HoundDog.pdf", quote: "On 13 August 1952, Willie Mae Thornton ... recorded, with Johnny Otis and his orchestra ... “Hound Dog.” ... Mike Stoller and Jerry Lieber wrote “Hound Dog” especially for Big Mama."}
+    - {title: "Encyclopedia of Alabama: Willie Mae 'Big Mama' Thornton", url: "https://encyclopediaofalabama.org/?p=15700", quote: "In August, at a recording session in southwest Los Angeles, she was approached by the young songwriting team of Jerry Leiber and Mike Stoller ... They offered her a 12-bar blues vocal called \"Hound Dog,\""}
+  note: "HISTORY also: 'write something, especially for Thornton'. Yale notes Otis and Thornton later claimed a share; credited authors are Leiber and Stoller, which the card states."
+- card: rock-n-roll
+  fact: "In 1953 it topped the rhythm and blues chart"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Alabama: Willie Mae 'Big Mama' Thornton", url: "https://encyclopediaofalabama.org/?p=15700", quote: "was released nationwide in 1953 and soon topped the R&B charts"}
+    - {title: "Rock & Roll Hall of Fame: Big Mama Thornton", url: "https://www.rockhall.com/inductees/big-mama-thornton", quote: "Thornton’s hit No. 1 R&B, sold half a million"}
+  note: "Yale: released January 1953, seven weeks at number one."
+- card: rock-n-roll
+  fact: "Elvis Presley's 1956 version became an international hit"
+  verdict: confirmed
+  sources:
+    - {title: "Yale University Library, OHAM exhibit: Big Mama Thornton part 2", url: "https://onlineexhibits.library.yale.edu/s/ohamstruggles/page/bmt2", quote: "In 1956, Elvis Presley released his own version of “Hound Dog,” which became an international hit."}
+    - {title: "Michael Sporke, Library of Congress: Hound Dog", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/HoundDog.pdf", quote: "by 1956, the rock ‘n’ roll age was already universal. Elvis Presley recorded “Hound Dog” to international acclaim."}
+  note: ""
+- card: rock-n-roll
+  fact: "For the rest of her life she told how he grew rich on her song, while she, as she put it in 1974, made zero"
+  verdict: confirmed
+  sources:
+    - {title: "Michael Sporke, Library of Congress: Hound Dog", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/HoundDog.pdf", quote: "Big Mama Thornton would, for the rest of her life, tell how Elvis got rich and famous with “her” song."}
+    - {title: "Yale University Library, OHAM exhibit: Big Mama Thornton part 2", url: "https://onlineexhibits.library.yale.edu/s/ohamstruggles/page/bmt2", quote: "When Connor and Neff asked Thornton about Presley’s version of “Hound Dog” in 1974, she stated, “Although Elvis Presley made a million, a billion, and I made zero,…I was still pushing.”"}
+  note: "Encyclopedia of Alabama: 'Thornton received only $500' while Presley's version brought him 'considerable financial reward'."
+- card: rock-n-roll
+  fact: "The Rock and Roll Hall of Fame inducted Tharpe in 2018"
+  verdict: confirmed
+  sources:
+    - {title: "Rock and Roll Hall of Fame: Sister Rosetta Tharpe", url: "https://www.rockhall.com/inductees/sister-rosetta-tharpe", quote: "Inducted: 2018 Category: Musical Influence"}
+    - {title: "Central Arkansas Library System, Encyclopedia of Arkansas: Sister Rosetta Tharpe", url: "https://encyclopediaofarkansas.net/entries/sister-rosetta-tharpe-1781/", quote: "In 2018, Tharpe was inducted into the Rock and Roll Hall of Fame in the Early Influence category"}
+  note: ""
+- card: rock-n-roll
+  fact: "The Rock and Roll Hall of Fame inducted Thornton in 2024"
+  verdict: confirmed
+  sources:
+    - {title: "Rock & Roll Hall of Fame: Big Mama Thornton", url: "https://www.rockhall.com/inductees/big-mama-thornton", quote: "Inducted: 2024"}
+    - {title: "Variety: Rock Hall 2024 inductees", url: "https://au.variety.com/2024/awards/news/rock-hall-2024-inductees-cher-jimmy-buffett-mary-j-blige-dave-matthews-peter-frampton-foreigner-13515/", quote: "Musical Influence Award: Alexis Korner John Mayall Big Mama Thornton"}
+  note: ""
+- card: rock-n-roll
+  fact: "White singers built careers on covers of Black records"
+  verdict: confirmed
+  sources:
+    - {title: "Carnegie Hall, Timeline of African American Music: Rock 'n' Roll", url: "https://timeline.carnegiehall.org/genres/rock-n-roll", quote: "Several established and/or advanced their careers in rock ‘n’ roll by covering the recordings of Black artists"}
+    - {title: "American Masters, Fats Domino and the Birth of Rock n Roll, documentary transcript, PBS", url: "https://pbswisconsin.org/watch/american-masters/american-masters-fats-domino-and-birth-rock-n-roll/", quote: "a fellow by the name of Pat Boone comin' out with your record next week. ... He did it all right. It sold a lot of records."}
+  note: "The ledger's second source (LoC Hound Dog, on Thornton and Presley) is about one cover, not careers built on covers; replaced with the PBS transcript."
+- card: rock-n-roll
+  fact: "(unledgered) By the mid-1950s the name rock and roll meant mostly white musicians"
+  verdict: unconfirmed
+  sources:
+    - {title: "Encyclopedia of African-American Culture and History, via Encyclopedia.com: Rhythm and Blues", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues", quote: "By the mid-1950s, as more and more white teenagers began to listen to rhythm and blues, the scope of the term rock and roll expanded and was primarily applied to white musicians"}
+    - {title: "Carnegie Hall, Timeline of African American Music: Rock 'n' Roll", url: "https://timeline.carnegiehall.org/genres/rock-n-roll", quote: "by the end of the 1960s, the majority of musicians and fans associated with the music were white"}
+  note: "Only one source dates it to the mid-1950s; Carnegie Hall puts it at the end of the 1960s. Removed; replaced in EN and RU with a sourced example: 'in 1955 Pat Boone covered Domino's \"Ain't That a Shame\"' (next entry)."
+- card: rock-n-roll
+  fact: "(new) In 1955 Pat Boone covered Fats Domino's \"Ain't That a Shame\""
+  verdict: confirmed
+  sources:
+    - {title: "uDiscover Music: Fats Domino", url: "https://www.udiscovermusic.com/artists/fats-domino", quote: "In May 1955 it entered the R&B charts ... Its progress on the main Billboard chart was hampered by a cover version by Mr Vanilla, Pat Boone"}
+    - {title: "American Masters, Fats Domino and the Birth of Rock n Roll, documentary transcript, PBS", url: "https://pbswisconsin.org/watch/american-masters/american-masters-fats-domino-and-birth-rock-n-roll/", quote: "Pat Boone comin' out with your record next week ... While \"Ain't That a Shame\" was burning up the 1955 R&B and pop charts"}
+  note: "Boone's No. 1 is stated only by uDiscover, so the card does not claim it."
+- card: rock-n-roll
+  fact: "(unledgered) wow and dispute: \"Rocket 88\" is often called the first rock and roll single; the claim is debated, with the Rock Hall and the New Rolling Stone Encyclopedia allowing it and 1940s records by Tharpe and Roy Brown named as earlier"
+  verdict: confirmed
+  sources:
+    - {title: "Saturday Evening Post: The Very First Rock and Roll Song", url: "https://www.saturdayeveningpost.com/2021/03/the-very-first-rock-and-roll-song/", quote: "the Rock and Roll Hall of Fame and The New Rolling Stone Encyclopedia of Rock and Roll allow that this is probably the case ... Sister Rosetta Tharpe’s “Strange Things Happening Every Day” from 1944"}
+    - {title: "Library of Congress: Steve Propes on Rocket 88", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Rocket-88_Propes.pdf", quote: "Nowadays ‘Rocket “88”’ is often billed as the first rock and roll record, but rock and roll was the product of a gradual evolution and there are earlier competitors for this distinction."}
+  note: "Roy Brown ('Good Rocking Tonight', 1947) is named in the Saturday Evening Post; Blues Foundation: 'one of many blues and R&B singles cited in retrospect as the first rock 'n' roll record'. Carnegie Hall: 'credited to its vocalist Jackie Brenston' supports the wow line."

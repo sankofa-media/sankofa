@@ -1,0 +1,192 @@
+# Second, independent check (2026-11-15) of content/ledger/perspective-rhythm-and-blues.yaml
+# and content/cards/rhythm-and-blues.md / rhythm-and-blues.ru.md. Every cited URL was reopened
+# (Rock Hall, NPR x2, Encyclopedia.com x4, Carnegie Hall x3, Smithsonian PDF, BlackPast,
+# Encyclopedia of Arkansas, Blues Foundation, Western News, Chicago Sun-Times, Case Western ECH,
+# AP via Taipei Times); quotes are copied from the fetched page text.
+# verdict: confirmed | corrected (card wording or sources changed) | refuted | unconfirmed (removed).
+# "(unledgered)" marks body/wow claims the first ledger did not record.
+# Word count per copy after fixes (limit 235, genre card): EN male 226, female 234; RU male 202, female 214.
+# Both copies read as complete stories: shared frame (sound, the Billboard renaming), then Jordan
+# (rise, eclipse, legacy) or Brown (rise, exploitation, fight, restitution), then shared outcome.
+# .ru.md marks the same paragraphs ({male} 3rd, {female} 4th).
+- card: rhythm-and-blues
+  fact: "Rhythm and blues was the dance music of Black urban America after the Second World War"
+  verdict: corrected
+  sources:
+    - {title: "Carnegie Hall Timeline: Rhythm & Blues", url: "https://timeline.carnegiehall.org/genres/rhythm-blues", quote: "Rhythm and blues is a form of Black dance music that has its origins in the post-World War II era"}
+    - {title: "Encyclopedia of African-American Culture and History: Rhythm and Blues", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues", quote: "R&B reflected the confluence of jazz, blues, gospel, and vocal-harmony group music that took place in cities such as New York, Detroit, Chicago, Memphis, Philadelphia, and New Orleans after World War II."}
+  note: "The card said R&B was the dance music only 'into the early 1950s', which contradicts its own years (to 1960), Ruth Brown's 1950s hits and the mid-1960s soul line. 'Early 1950s' belongs to the jump-combo style (Carnegie) and was moved to the next sentence."
+- card: rhythm-and-blues
+  fact: "Swing orchestras shrank to small jump bands"
+  verdict: confirmed
+  sources:
+    - {title: "Carnegie Hall Timeline: Rhythm & Blues", url: "https://timeline.carnegiehall.org/genres/rhythm-blues", quote: "Former swing band members reduced the 12–16-member ensemble to a seven- or eight-piece group"}
+    - {title: "Mark Puryear, Smithsonian Folklife Festival (2011)", url: "https://folkways-media.si.edu/docs/festival/2011/festival-program-book-rnb.pdf", quote: "One important stylistic prototype in the development of R&B was jump blues [...] Jordan was a former member of Chick Webb's swing band [...] Jordan's group, a combo ranging in number from six to seven musicians"}
+  note: "Smithsonian quote in the first ledger is genuine but weak; the combo-size passage is stronger."
+- card: rhythm-and-blues
+  fact: "Jump bands kept the twelve-bar blues"
+  verdict: unconfirmed
+  sources:
+    - {title: "Carnegie Hall Timeline: Rhythm & Blues", url: "https://timeline.carnegiehall.org/genres/rhythm-blues", quote: "The up-tempo style known as \"jump blues\" is characterized by a 12-bar blues structure"}
+  note: "The first ledger attributed this exact sentence to the Smithsonian PDF; it is not there (it is Carnegie Hall's text), so only one source remained. Encyclopedia of African-American Culture and the Smithsonian PDF do not say it of jump bands; Britannica blocked. 'the twelve-bar blues' removed from EN and RU."
+- card: rhythm-and-blues
+  fact: "Boogie-woogie bass, shuffle beat, saxophone out front"
+  verdict: corrected
+  sources:
+    - {title: "Carnegie Hall Timeline: Rhythm & Blues", url: "https://timeline.carnegiehall.org/genres/rhythm-blues", quote: "retained the boogie-woogie foundation, the shuffle beat, and the riffing horn patterns from swing. [...] boogie-woogie bass line, shuffle rhythms [...] solo alto saxophone"}
+    - {title: "Mark Puryear, Smithsonian Folklife Festival (2011)", url: "https://folkways-media.si.edu/docs/festival/2011/festival-program-book-rnb.pdf", quote: "incorporating the shuffle rhythm, boogie-woogie bass lines, and short horn patterns or riffs. [...] The saxophone was one of the first instruments to take prominence as a lead instrumental voice in R&B ensembles"}
+  note: "Ledger sources fixed (misattributed quote replaced with real Smithsonian text)."
+- card: rhythm-and-blues
+  fact: "Drums hit hard on the backbeat, two and four"
+  verdict: corrected
+  sources:
+    - {title: "Carnegie Hall Timeline: Rhythm & Blues", url: "https://timeline.carnegiehall.org/genres/rhythm-blues", quote: "substituted for swing rhythms and heavy backbeats on 2 and 4"}
+    - {title: "Mark Puryear, Smithsonian Folklife Festival (2011)", url: "https://folkways-media.si.edu/docs/festival/2011/festival-program-book-rnb.pdf", quote: "from blues shuffles with a back beat to boogie-woogie"}
+  note: "Heavy backbeat confirmed (also NPR: 'backbeat-heavy sound'); 'two and four' only in Carnegie Hall, removed ('вторую и четвёртую доли' removed in RU)."
+- card: rhythm-and-blues
+  fact: "Vocal groups brought close harmony from church"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of African-American Culture and History", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues", quote: "dozens of important vocal groups, starting with the \"bird groups,\" drew heavily from the gospel tradition"}
+    - {title: "Mark Puryear, Smithsonian Folklife Festival (2011)", url: "https://folkways-media.si.edu/docs/festival/2011/festival-program-book-rnb.pdf", quote: "Rhythm and blues singers, often strongly influenced by gospel singing traditions, typically perform [...] in groups where four to five members sing in harmony with a lead vocalist."}
+  note: "Carnegie (jubilee quartets) also supports."
+- card: rhythm-and-blues
+  fact: "Billboard filed these records as \"Race\" until Wexler proposed \"rhythm and blues\"; in 1949 the chart took the new name"
+  verdict: confirmed
+  sources:
+    - {title: "NPR Forebears: Ruth Brown (2017)", url: "https://text.npr.org/559070707", quote: "It was 1949 when Billboard changed the name of its \"Race Music\" category to \"Rhythm and Blues\""}
+    - {title: "Mark Puryear, Smithsonian Folklife Festival (2011)", url: "https://folkways-media.si.edu/docs/festival/2011/festival-program-book-rnb.pdf", quote: "The term R&B was first used as a music category label in 1949 in the entertainment magazine Billboard. Coined by then-music journalist and later Atlantic Records executive Jerry Wexler"}
+  note: "Carnegie and Encyclopedia of African-American Culture also give 1949. Contemporary Authors says '1949 or 1950' and an AP obituary 'late 1940s' — imprecision, not contradiction; no dispute field."
+- card: rhythm-and-blues
+  fact: "Wexler was a young writer on Billboard's charts (wow: 'a young writer editing its charts')"
+  verdict: corrected
+  sources:
+    - {title: "AP obituary via Taipei Times (2008)", url: "https://www.taipeitimes.com/News/world/archives/2008/08/17/2003420595", quote: "Wexler landed a job writing for Billboard magazine in the late 1940s [...] There he coined the term \"rhythm and blues\" for the magazine's black music charts; previously, they were listed under \"race records.\""}
+    - {title: "Contemporary Authors via Encyclopedia.com", url: "https://www.encyclopedia.com/arts/educational-magazines/wexler-jerry-1917-2008-gerald-wexler", quote: "Wexler was working as a writer for the trade magazine Billboard at the time"}
+  note: "'Writer at Billboard' and 'for its Black music chart' confirmed (also Carnegie). 'Young' (he was 32) and 'editing its charts' found in no source opened: removed from body and wow in EN and RU."
+- card: rhythm-and-blues
+  fact: "Louis Jordan was born in 1908 in Brinkley, Arkansas, the son of a bandleader"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Arkansas", url: "https://encyclopediaofarkansas.net/entries/louis-thomas-jordan-1685/", quote: "Louis Jordan was born on July 8, 1908, in Brinkley (Monroe County). His father [...] James Aaron Jordan, led the Brinkley Brass Band"}
+    - {title: "NPR: Louis Jordan, Jukebox King (2008)", url: "https://www.npr.org/2008/03/04/87905064/louis-jordan-jukebox-king", quote: "Born in tiny Brinkley, Ark. in 1908, Jordan learned to play the saxophone from his father, a bandleader"}
+  note: ""
+- card: rhythm-and-blues
+  fact: "He started with the Rabbit Foot Minstrels"
+  verdict: confirmed
+  sources:
+    - {title: "NPR (2008)", url: "https://www.npr.org/2008/03/04/87905064/louis-jordan-jukebox-king", quote: "After playing with the Rabbit Foot Minstrels as a youth"}
+    - {title: "Contemporary Musicians via Encyclopedia.com", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/louis-jordan", quote: "His first professional engagement was with Fat Chappelle's Rabbit Foot Minstrels"}
+  note: ""
+- card: rhythm-and-blues
+  fact: "He sang and played saxophone for Chick Webb"
+  verdict: confirmed
+  sources:
+    - {title: "Contemporary Musicians via Encyclopedia.com", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/louis-jordan", quote: "Webb hired Jordan as a singer, sideman, and announcer."}
+    - {title: "Mark Puryear, Smithsonian Folklife Festival (2011)", url: "https://folkways-media.si.edu/docs/festival/2011/festival-program-book-rnb.pdf", quote: "Jordan was a former member of Chick Webb's swing band"}
+  note: "Jordan as saxophonist and singer: NPR, Arkansas."
+- card: rhythm-and-blues
+  fact: "Webb fired him in 1938 for trying to take Ella Fitzgerald into a band of his own"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Arkansas", url: "https://encyclopediaofarkansas.net/entries/louis-thomas-jordan-1685/", quote: "In 1938, Jordan was fired by Webb for trying to convince Fitzgerald and others to join his new band."}
+    - {title: "NPR (2008)", url: "https://www.npr.org/2008/03/04/87905064/louis-jordan-jukebox-king", quote: "when he tried to leave the group, with singer Ella Fitzgerald and two others in tow, Webb fired him."}
+  note: "Year: Arkansas; CM 'In the summer of 1938, Jordan left Webb's orchestra'."
+- card: rhythm-and-blues
+  fact: "His small Tympany Five recorded \"Caldonia\" and \"Ain't Nobody Here but Us Chickens\""
+  verdict: confirmed
+  sources:
+    - {title: "Contemporary Musicians via Encyclopedia.com", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/louis-jordan", quote: "Following his 1945 million-seller \"Caldonia,\" Jordan and the Tympany Five continued to score hits, among them [...] \"Nobody Here But Us Chickens,\""}
+    - {title: "Encyclopedia of Arkansas", url: "https://encyclopediaofarkansas.net/entries/louis-thomas-jordan-1685/", quote: "The small size of Jordan's Tympany Five made it innovative structurally and musically in the Big Band era."}
+  note: "Carnegie: Tympany Five model 'heard in \"Caldonia\" (1945)'; Arkansas lists 'Ain't Nobody Here But Us Chickens'."
+- card: rhythm-and-blues
+  fact: "His records topped the charts for 113 weeks in all"
+  verdict: confirmed
+  sources:
+    - {title: "Rock & Roll Hall of Fame: Louis Jordan", url: "https://www.rockhall.com/inductees/louis-jordan", quote: "Louis Jordan topped the R&B charts for a total of one hundred thirteen weeks"}
+    - {title: "Blues Foundation: Louis Jordan", url: "https://www.blues.org/award-search/louis-jordan-was-the-most-popula", quote: "His 18 No. 1 hits on the race and R&B charts spent a total of 113 weeks in the top slot"}
+  note: ""
+- card: rhythm-and-blues
+  fact: "Rock and roll pushed him aside in the 1950s; Chuck Berry, James Brown and Ray Charles named him as an influence"
+  verdict: confirmed
+  sources:
+    - {title: "NPR (2008)", url: "https://www.npr.org/2008/03/04/87905064/louis-jordan-jukebox-king", quote: "rock 'n' roll had captured the world's attention, and Jordan's jumping R&B became a thing of the past. [...] Chuck Berry, James Brown and Ray Charles all cited Jordan's influence on their work."}
+    - {title: "Encyclopedia of Arkansas", url: "https://encyclopediaofarkansas.net/entries/louis-thomas-jordan-1685/", quote: "slow his record sales as R&B and rock and roll emerged. [...] A host of prominent musicians claim his influence, including Ray Charles, James Brown, Bo Diddley, and Chuck Berry."}
+  note: ""
+- card: rhythm-and-blues
+  fact: "He died in Los Angeles in 1975; in 1987 he entered the Rock and Roll Hall of Fame"
+  verdict: confirmed
+  sources:
+    - {title: "Contemporary Musicians via Encyclopedia.com", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/louis-jordan", quote: "he returned home to Los Angeles, where he died on February 4, 1975. [...] In 1987 Jordan was inducted into the Rock and Roll Hall of Fame."}
+    - {title: "Rock & Roll Hall of Fame: Louis Jordan", url: "https://www.rockhall.com/inductees/louis-jordan", quote: "Inducted: 1987 Category: Musical Influence"}
+  note: "Arkansas also: 'he died in Los Angeles, California'."
+- card: rhythm-and-blues
+  fact: "Ruth Brown was born in Portsmouth, Virginia, in 1928 and sang in her father's church choir"
+  verdict: confirmed
+  sources:
+    - {title: "BlackPast", url: "https://www.blackpast.org/african-american-history/brown-ruth-1928-2006/", quote: "Brown was born in Portsmouth, Virginia, on January 12, 1928."}
+    - {title: "NPR Forebears (2017)", url: "https://text.npr.org/559070707", quote: "She started singing at four years old in her father's church choir in Portsmouth, Va."}
+  note: "Contemporary Musicians: born Portsmouth 1928, father a choir director."
+- card: rhythm-and-blues
+  fact: "A car crash on her way to join Atlantic in New York kept her in hospital almost a year"
+  verdict: confirmed
+  sources:
+    - {title: "Contemporary Musicians via Encyclopedia.com", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/ruth-brown", quote: "Brown was on her way to New York to begin recording when she was involved in a car accident that left her hospitalized for close to a year."}
+    - {title: "NPR Forebears (2017)", url: "https://text.npr.org/559070707", quote: "A serious auto accident kept her from performing that show, and she spent a year in the hospital"}
+  note: "Trimmed 'for' to meet the word limit."
+- card: rhythm-and-blues
+  fact: "\"So Long\" in 1949 and \"Teardrops from My Eyes\" in 1950; Atlantic became \"The House that Ruth Built\""
+  verdict: confirmed
+  sources:
+    - {title: "NPR Forebears (2017)", url: "https://text.npr.org/559070707", quote: "In 1949 she recorded \"So Long\" for Atlantic [...] Her second hit, 1950's \"Teardrops From My Eyes,\" went to No. 1. [...] Atlantic soon became known as \"The House that Ruth Built.\""}
+    - {title: "Rock & Roll Hall of Fame: Ruth Brown", url: "https://www.rockhall.com/inductees/ruth-brown", quote: "They called Atlantic \"the house that Ruth built\" for good reason—her two dozen hits put the budding company on the map."}
+  note: "Dates also Sun-Times (So Long, 25 May 1949) and BlackPast (Teardrops, 1950)."
+- card: rhythm-and-blues
+  fact: "She saw no royalties; after leaving Atlantic in the early 1960s she drove a bus and cleaned houses"
+  verdict: confirmed
+  sources:
+    - {title: "BlackPast", url: "https://www.blackpast.org/african-american-history/brown-ruth-1928-2006/", quote: "Brown left Atlantic Records in the early 1960s [...] She held a series of low-paying jobs as a floor scrubber and bus driver."}
+    - {title: "Contemporary Musicians via Encyclopedia.com", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/ruth-brown", quote: "she worked as a bus driver, a teacher for the mentally retarded, and a house cleaner"}
+  note: "Royalties: Western News ('would not see a dime in royalties from the label until the 1980s') and Sun-Times ('had not received a royalty check since the early 1960s'). NPR: 'When Atlantic ended their professional relationship in the early 1960s'."
+- card: rhythm-and-blues
+  fact: "The label said she owed it money; she fought back; Atlantic wrote off her and her contemporaries' debts and paid back royalties"
+  verdict: confirmed
+  sources:
+    - {title: "BlackPast", url: "https://www.blackpast.org/african-american-history/brown-ruth-1928-2006/", quote: "Because she spoke out, Atlantic waived unrecouped debts held by Brown and thirty-five other musicians of her era and agreed to pay twenty years' worth of retroactive royalties."}
+    - {title: "Chicago Sun-Times (2006)", url: "https://chicago.suntimes.com/news/2006/11/24/18584697/ruth-brown-s-rainbow", quote: "Atlantic pledged to erase all negative balances claimed against older artists and recalcuate royalties from 1970 to the present."}
+  note: "Claimed debt: Contemporary Black Biography ('claimed she owed them $30,000 in studio fees')."
+- card: rhythm-and-blues
+  fact: "Atlantic helped found the Rhythm and Blues Foundation"
+  verdict: confirmed
+  sources:
+    - {title: "BlackPast", url: "https://www.blackpast.org/african-american-history/brown-ruth-1928-2006/", quote: "Atlantic also contributed almost $2 million to start the Rhythm and Blues Foundation"}
+    - {title: "Western News (2015)", url: "https://news.westernu.ca/2015/11/professor-explores-label-exploitation-of-a-generation-of-rb-artists/", quote: "the company paid more than $2 million to form the Rhythm and Blues Foundation"}
+  note: "Amounts differ ($1.5m CBB vs ~$2m), so the card rightly gives none. NPR says Brown herself helped found it in 1988; consistent with 'helped'."
+- card: rhythm-and-blues
+  fact: "On Broadway she won a Tony for Black and Blue"
+  verdict: confirmed
+  sources:
+    - {title: "NPR Forebears (2017)", url: "https://text.npr.org/559070707", quote: "a Tony-award winning performance in Black And Blue"}
+    - {title: "Contemporary Musicians via Encyclopedia.com", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/ruth-brown", quote: "Her performance in Broadway's Black and Blue won her a Tony Award for Best Actress in a Musical"}
+  note: ""
+- card: rhythm-and-blues
+  fact: "(unledgered) Out of R&B, the blues and gospel came rock and roll"
+  verdict: confirmed
+  sources:
+    - {title: "Carnegie Hall Timeline: Rock 'n' Roll", url: "https://timeline.carnegiehall.org/genres/rock-n-roll", quote: "Rock 'n' Roll was the inevitable clash of African American rhythm and blues with elements of swing, boogie-woogie, urban blues"}
+    - {title: "Case Western Reserve, Encyclopedia of Cleveland History: Rock & Roll", url: "https://case.edu/ech/articles/r/rock-roll", quote: "few would disagree that it emanates primarily from a handful of traditionally Black styles: blues, jazz, and gospel."}
+  note: "Added to the ledger."
+- card: rhythm-and-blues
+  fact: "(unledgered) Out of R&B, the blues and gospel came funk"
+  verdict: confirmed
+  sources:
+    - {title: "Carnegie Hall Timeline: Funk", url: "https://timeline.carnegiehall.org/genres/funk", quote: "Funk is an instrumental and vocal genre of dance music popularized in the 1970s that embraces many styles from the jazz, blues, rhythm and blues, soul jazz, gospel, and rock traditions."}
+    - {title: "Encyclopedia of African-American Culture and History", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues", quote: "In the mid-to-late 1960s a new style known as funk [...] began to dominate the rhythm-andblues charts."}
+  note: "PBS Sound Field page yields no text quote; replaced in the ledger by Carnegie Funk. Added to the ledger and card sources."
+- card: rhythm-and-blues
+  fact: "By the mid-1960s R&B had helped give rise to soul"
+  verdict: confirmed
+  sources:
+    - {title: "Carnegie Hall Timeline: Rhythm & Blues", url: "https://timeline.carnegiehall.org/genres/rhythm-blues", quote: "In the mid-1960s, the combo style transformed into a new sound labeled \"soul.\""}
+    - {title: "Encyclopedia of African-American Culture and History", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/rhythm-and-blues", quote: "By 1964 black popular music had acquired a new name: soul music."}
+  note: ""

@@ -16,6 +16,7 @@ roots: [blues, gospel, rhythm-and-blues]
 further:
   - "Jackie Brenston and His Delta Cats (Ike Turner's Kings of Rhythm), \"Rocket 88\" (1951)"
   - "Chuck Berry, \"Maybellene\"; Little Richard, \"Tutti Frutti\""
+  - "Sister Rosetta Tharpe, \"Rock Me\" (Decca, 1938); Big Mama Thornton, \"Hound Dog\" (Peacock, 1953)"
 dispute: "\"Rocket 88\" as the first rock and roll record is debated: the Rock and Roll Hall of Fame and The New Rolling Stone Encyclopedia of Rock & Roll allow it, while writers also point to 1940s records by Rosetta Tharpe and Roy Brown."
 sources:
   - {title: "Library of Congress: Steve Propes on Rocket 88", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Rocket-88_Propes.pdf"}
@@ -33,11 +34,27 @@ sources:
   - {title: "Case Western Reserve University, Encyclopedia of Cleveland History: Rock & Roll", url: "https://case.edu/ech/articles/r/rock-roll"}
   - {title: "American Masters, Fats Domino and the Birth of Rock n Roll, documentary transcript, PBS", url: "https://pbswisconsin.org/watch/american-masters/american-masters-fats-domino-and-birth-rock-n-roll/"}
   - {title: "Prof. Freeze, MUSC-21600 The Art of Rock Music: Rocket 88 listening guide, College of Wooster", url: "https://theartofrockmusic.voices.wooster.edu/wp-content/uploads/sites/180/2015/01/Rocket-88-Jackie-Brenston-1951.pdf"}
+  - {title: "Mississippi Blues Trail: Rocket \"88\" marker, Lyon", url: "https://msbluestrail.org/?p=452"}
+  - {title: "Bear Family Records: Jackie Brenston", url: "https://www.bear-family.com/brenston-jackie/?c=128563"}
+  - {title: "Encyclopedia of Alabama: Sam Phillips", url: "https://encyclopediaofalabama.org/article/sam-phillips/"}
+  - {title: "Tennessee Encyclopedia: Sun Records", url: "https://tennesseeencyclopedia.net/?p=1664"}
+  - {title: "PBS American Masters: Timeline, the years of Sister Rosetta Tharpe", url: "https://www.pbs.org/wnet/americanmasters/timeline-the-years-of-sister-rosetta-tharpe/2487/"}
+  - {title: "Rock and Roll Hall of Fame: Sister Rosetta Tharpe", url: "https://www.rockhall.com/inductees/sister-rosetta-tharpe"}
+  - {title: "Central Arkansas Library System, Encyclopedia of Arkansas: Sister Rosetta Tharpe", url: "https://encyclopediaofarkansas.net/entries/sister-rosetta-tharpe-1781/"}
+  - {title: "Gayle Wald: Why We Keep Rediscovering the Flamboyant Godmother of Rock", url: "https://whatitmeanstobeamerican.org/encounters/why-we-keep-rediscovering-the-flamboyant-godmother-of-rock/"}
+  - {title: "Michael Sporke, Library of Congress: Hound Dog", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/HoundDog.pdf"}
+  - {title: "Encyclopedia of Alabama: Willie Mae 'Big Mama' Thornton", url: "https://encyclopediaofalabama.org/?p=15700"}
+  - {title: "HISTORY: Hound Dog is recorded for the first time", url: "https://www.history.com/this-day-in-history/august-13/hound-dog-is-recorded-for-the-first-time-by-big-mama-thornton"}
+  - {title: "Yale University Library, OHAM exhibit: Big Mama Thornton part 2", url: "https://onlineexhibits.library.yale.edu/s/ohamstruggles/page/bmt2"}
+  - {title: "Rock & Roll Hall of Fame: Big Mama Thornton", url: "https://www.rockhall.com/inductees/big-mama-thornton"}
+  - {title: "Variety: Rock Hall 2024 inductees", url: "https://au.variety.com/2024/awards/news/rock-hall-2024-inductees-cher-jimmy-buffett-mary-j-blige-dave-matthews-peter-frampton-foreigner-13515/"}
 media:
   - {type: "image", file: "rock-n-roll.jpg", caption: "Chuck Berry, publicity photograph, 1957", credit: "Universal Attractions (management)", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Chuck_Berry_1957.jpg"}
 ---
-Rock and roll, the loud teenage dance music of 1950s America, grew out of rhythm and blues. Young white listeners found the records of Black musicians, and the music was sold to Black and white teenagers alike; the phrase itself was old blues slang for sex. "What they call rock 'n' roll is rhythm and blues," said Fats Domino of New Orleans. It ran on an aggressive beat and loud electric guitar, with saxophone solos and pounding piano.
+Rock and roll, the loud teenage dance music of 1950s America, grew out of rhythm and blues: an aggressive beat, loud electric guitar, saxophone solos and pounding piano; the phrase was old blues slang for sex. In 1951 in Cleveland the DJ Alan Freed began playing rhythm and blues and calling it rock and roll. "What they call rock 'n' roll is rhythm and blues," said Fats Domino of New Orleans.
 
-The record often called the first rock and roll single was credited to the singer, not the band. In March 1951 Ike Turner's Kings of Rhythm cut "Rocket 88", a song about an Oldsmobile, at Sam Phillips's studio in Memphis: Turner's piano, two saxophones, drums and a guitar with a distorted buzz. Chess Records credited it to Jackie Brenston, Turner's saxophonist, and that June it topped Billboard's rhythm and blues chart. That year in Cleveland the DJ Alan Freed began playing rhythm and blues and calling it rock and roll.
+{male} The record often called the first rock and roll single was credited to the singer, not the band. In March 1951 Ike Turner's Kings of Rhythm, young men from Clarksdale, Mississippi, drove up Highway 61 to Sam Phillips's studio in Memphis and cut "Rocket 88": Turner's piano, two saxophones, drums and a guitar with a distorted buzz. Chess Records issued it under the name of Jackie Brenston, Turner's saxophonist, who sang it, and it became the label's first rhythm and blues number one; Turner's name was not on it. Brenston went out on his own, never had another hit and in the end went back to Turner's band as a sideman. In 1952 Phillips started his own label, Sun, and in 1954, in the same studio, he recorded Elvis Presley.
 
-Labels aimed separate versions at white buyers, and white singers built careers on covers of Black records. By the mid-1950s the name meant mostly white musicians such as Elvis Presley, though Black musicians stayed at its heart. Under it all lay the [[blues|blues]], [[gospel|gospel]], [[rhythm-and-blues|rhythm and blues]], [[rosetta-tharpe|Sister Rosetta Tharpe]]'s guitar and [[big-mama-thornton|Willie Mae "Big Mama" Thornton]]'s "Hound Dog".
+{female} The sound was in a woman's hands before it had a name. [[rosetta-tharpe|Sister Rosetta Tharpe]] grew up singing beside her mother, an evangelist; in 1938 she made her first Decca records, among them "Rock Me", and took gospel into New York nightclubs. She later played electric guitar, and rock would call her its godmother. In August 1952 [[big-mama-thornton|Willie Mae "Big Mama" Thornton]] recorded "Hound Dog", written for her by Jerry Leiber and Mike Stoller; in 1953 it topped the rhythm and blues chart. Elvis Presley's 1956 version became an international hit; for the rest of her life she told how he grew rich on her song, while she, as she put it in 1974, made zero. The Rock and Roll Hall of Fame inducted Tharpe in 2018 and Thornton in 2024.
+
+White singers built careers on covers of Black records: in 1955 Pat Boone covered Domino's "Ain't That a Shame". Under it all lay the [[blues|blues]], [[gospel|gospel]] and [[rhythm-and-blues|rhythm and blues]].

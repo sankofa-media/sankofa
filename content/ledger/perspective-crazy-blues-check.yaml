@@ -1,0 +1,165 @@
+# Second, independent check (2026-11-15) of content/cards/crazy-blues.md, .ru.md and
+# content/ledger/perspective-crazy-blues.yaml. Every cited URL was reopened with curl (DAHR via its
+# 2020-10-29 Wayback snapshot, the live site returns 403); quotes were matched verbatim by script,
+# ignoring spacing and punctuation ('...' joins fragments). The Folkways notes are a two-column OCR scan
+# and were matched by eye. Independence: copies of one text count once; the Staten Island Advance reprint
+# on jazzpromoservices.com counts as the Advance.
+# Word count per copy: EN male 205, female 203 (limit 220); RU male 190, female 180. Both copies mark the
+# same paragraphs in .md and .ru.md; each reads context -> story -> outcome -> significance.
+# The closing "Their line runs from Mamie Smith to Big Mama Thornton" is an editorial cross-reference, not a factual claim.
+# verdict: confirmed | corrected (card wording or sources changed) | refuted | unconfirmed (removed from the card).
+entries:
+  - card: crazy-blues
+    fact: "On 10 August 1920 Mamie Smith recorded \"Crazy Blues\" with a band of Black musicians, billed as her Jazz Hounds"
+    verdict: confirmed
+    sources:
+      - {title: "Library of Congress, National Recording Registry essay (Ed Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "on August 10, 1920, Mamie Smith with a group of African American musicians recorded \"Crazy Blues\""}
+      - {title: "Ballad of America: Blues Queens and Race Records in the 1920s", url: "https://balladofamerica.org/blues-queens-and-race-records-in-the-1920s/", quote: "Smith returned to the studio on August 10 to record two more Bradford compositions. This time, a band of black jazz musicians backed her up."}
+    note: "Ledger quote from Ballad of America joined two sentences without an ellipsis; fixed."
+  - card: crazy-blues
+    fact: "It was recorded in New York and released by OKeh in the autumn of 1920 as OKeh 4169"
+    verdict: corrected
+    sources:
+      - {title: "Discography of American Historical Recordings (UC Santa Barbara): OKeh matrix S-7529", url: "https://adp.library.ucsb.edu/index.php/matrix/detail/2000199808/S-7529-Crazy_blues", quote: "8/10/1920 New York, New York C Master OKeh 4169"}
+      - {title: "Library of Congress, National Recording Registry essay (Ed Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "and that fall it was released on OKeh 4169"}
+    note: "\"Recorded in New York\" had no source in the ledger; DAHR and NY1920 (\"at Okeh Studios, 25 West 45th Street; the songs would appear that November\") added to the ledger and card sources. LoC also gives \"November 1920\"."
+  - card: crazy-blues
+    fact: "The song was Perry Bradford's \"Harlem Blues\" under a new title"
+    verdict: confirmed
+    sources:
+      - {title: "Library of Congress, National Recording Registry essay (Ed Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "recorded \"Crazy Blues\" (which was how \"Harlem Blues\" was retitled)"}
+      - {title: "EBSCO Research Starters: Perry Bradford", url: "https://ebsco.com/research-starters/history/perry-bradford", quote: "encouraged Bradford to lobby for her to record his \"Harlem Blues\" (which became known as \"Crazy Blues\")"}
+    note: "Paraphrased EBSCO quote replaced with the verbatim sentence."
+  - card: crazy-blues
+    fact: "The record showed the industry an overlooked market and began the \"race records\" business"
+    verdict: confirmed
+    sources:
+      - {title: "Ballad of America: Blues Queens and Race Records in the 1920s", url: "https://balladofamerica.org/blues-queens-and-race-records-in-the-1920s/", quote: "Bradford's experiment was an overwhelming success, awakening the entertainment industry to a vast potential market."}
+      - {title: "Encyclopedia of African-American Culture and History (Gale): Smith, Mamie", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/smith-mamie", quote: "\"Crazy Blues\" also inaugurated the \"race music\" industry"}
+    note: "NPR (2006) agrees: \"opened the door for a brand new market known from the 1920s to the 1940s as \"race records.\"\""
+  - card: crazy-blues
+    fact: "Through the 1920s companies hurried to record Black women singing the blues, and jazz followed them onto disc"
+    verdict: corrected
+    sources:
+      - {title: "Library of Congress, National Recording Registry essay (Ed Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "igniting the women blues singers trend across the recording industry through the end of the 1920s"}
+      - {title: "DNAinfo New York (2014): Blues singer's unmarked grave gets headstone", url: "https://www.dnainfo.com/new-york/20141217/richmond-town/blues-singers-unmarked-grave-gets-headstone-thanks-writers-campaign", quote: "prompted other companies to record other blues and jazz artists in the '20s and early '30s"}
+    note: "The ledger's Ballad of America quote for the jazz half did not say that jazz followed onto disc; replaced with Gale (\"marketed blues and jazz\") and DNAinfo. Card text unchanged."
+  - card: crazy-blues
+    fact: "Bradford came up through Black minstrel and vaudeville troupes and settled in New York as a songwriter and pianist"
+    verdict: confirmed
+    sources:
+      - {title: "Library of Congress, National Recording Registry essay (Ed Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "beginning as an entertainer in a minstrel troupe in 1907 and arriving to New York in 1910 as a composer, pianist and hustler"}
+      - {title: "EBSCO Research Starters: Perry Bradford", url: "https://ebsco.com/research-starters/history/perry-bradford", quote: "struck out on his own as an actor and pianist with various black vaudeville troupes"}
+    note: "Sources disagree on the year he settled in New York (LoC 1910, Folkways 1918); the card gives no year."
+  - card: crazy-blues
+    fact: "From 1918 to 1920 he badgered the executives of Victor, Columbia and OKeh to take a chance on his singers"
+    verdict: confirmed
+    sources:
+      - {title: "EBSCO Research Starters: Perry Bradford", url: "https://ebsco.com/research-starters/history/perry-bradford", quote: "expended great effort from 1918 to 1920 badgering executives of the Columbia, Victor, and Okeh recording companies to take a chance on his singers"}
+      - {title: "David A. Jansen, Perry Bradford: Pioneer of the Blues, Folkways FJ 2863 notes", url: "https://folkways-media.si.edu/docs/folkways/artwork/FW02863.pdf", quote: "For almost two years, Perry waged a one-man campaign to get the major record companies - Victor and Columbia - to record female Blues singers."}
+    note: "Folkways quote is OCR, de-garbled."
+  - card: crazy-blues
+    fact: "Victor tested Mamie Smith and passed"
+    verdict: confirmed
+    sources:
+      - {title: "Library of Congress, National Recording Registry essay (Ed Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "led to an audition with Victor Records, during which she sang another Bradford song, \"That Thing Called Love\" to piano accompaniment, that led to nowhere"}
+      - {title: "The Syncopated Times (2020): Perry Bradford, Fred Hager, and Mamie Smith's Crazy Blues", url: "https://syncopatedtimes.com/perry-bradford-fred-hager-and-mamie-smiths-crazy-blues/", quote: "He brought in Mamie to Victor to make a test record of \"That Thing Called Love,\" but after the test was done King insisted that they already had a substantial recording of the song."}
+    note: ""
+  - card: crazy-blues
+    fact: "Fred Hager, OKeh's recording director, said yes"
+    verdict: confirmed
+    sources:
+      - {title: "Library of Congress, National Recording Registry essay (Ed Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "Undeterred, Bradford got the ear of Fred Hager, the recording director for OKeh Records."}
+      - {title: "David A. Jansen, Perry Bradford: Pioneer of the Blues, Folkways FJ 2863 notes", url: "https://folkways-media.si.edu/docs/folkways/artwork/FW02863.pdf", quote: "Persistence paid off ... when he finally sold Fred Hager on the idea of using Mamie to sing his two Blues songs."}
+    note: "Folkways quote is OCR, de-garbled; Folkways calls the February songs \"Blues songs\", but LoC and Ballad of America both say they were not blues, which the card follows."
+  - card: crazy-blues
+    fact: "White correspondents had warned Hager against recording Black performers"
+    verdict: confirmed
+    sources:
+      - {title: "Library of Congress, National Recording Registry essay (Ed Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "having already received some warnings from whites not to work with African American musicians--he took the plunge"}
+      - {title: "The Syncopated Times (2020): Perry Bradford, Fred Hager, and Mamie Smith's Crazy Blues", url: "https://syncopatedtimes.com/perry-bradford-fred-hager-and-mamie-smiths-crazy-blues/", quote: "he was receiving many hateful letters from white communities"}
+    note: "Syncopated quote extended so it shows the letters (\"correspondents\")."
+  - card: crazy-blues
+    fact: "Smith's first session, in February 1920, held two Bradford songs that were not blues; sales led Hager to want a blues next"
+    verdict: confirmed
+    sources:
+      - {title: "Library of Congress, National Recording Registry essay (Ed Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "He scheduled a recording session in February 1920 ... The resulting release on OKeh 4113 were encouraging enough for Hager to record Smith in a blues for the follow-up session."}
+      - {title: "Ballad of America: Blues Queens and Race Records in the 1920s", url: "https://balladofamerica.org/blues-queens-and-race-records-in-the-1920s/", quote: "On February 14, 1920, Smith, backed by an all-white orchestra, recorded two non-blues compositions by Bradford. Okeh issued them, and sales numbers showed promise."}
+    note: ""
+  - card: crazy-blues
+    fact: "Bradford told the story in his autobiography Born with the Blues (1965)"
+    verdict: confirmed
+    sources:
+      - {title: "Library of Congress, National Recording Registry essay (Ed Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "what Bradford recounts in his own autobiography, \"Born With The Blues\" (New York: Oak, 1965)"}
+      - {title: "The Syncopated Times (2020): Perry Bradford, Fred Hager, and Mamie Smith's Crazy Blues", url: "https://syncopatedtimes.com/perry-bradford-fred-hager-and-mamie-smiths-crazy-blues/", quote: "In 1965, Perry Bradford, Mamie Smith's booking agent, wrote a book ... This book is called Born with the Blues"}
+    note: "Ledger quotes replaced: the old ones did not carry the year."
+  - card: crazy-blues
+    fact: "Bradford died in New York in 1970"
+    verdict: corrected
+    sources:
+      - {title: "EBSCO Research Starters: Perry Bradford", url: "https://ebsco.com/research-starters/history/perry-bradford", quote: "Bradford died in 1970 in New York."}
+      - {title: "Library of Congress, National Recording Registry essay (Ed Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "Perry Bradford (1895-1970)"}
+    note: "Only EBSCO gives the place; LoC and Gale give only the year. Card now reads \"died in 1970\" (EN and RU)."
+  - card: crazy-blues
+    fact: "Smith was born in Cincinnati"
+    verdict: confirmed
+    sources:
+      - {title: "Library of Congress, National Recording Registry essay (Ed Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "Born in Cincinnati, Ohio, she hit the road at age 10 as one of Four Dancing Mitchells."}
+      - {title: "Encyclopedia of African-American Culture and History (Gale): Smith, Mamie", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/smith-mamie", quote: "It is generally conceded that she was born in Cincinnati, Ohio"}
+    note: ""
+  - card: crazy-blues
+    fact: "As a child she toured with the Four Dancing Mitchells and came to New York as a chorus dancer with the Smart Set, a Black vaudeville troupe"
+    verdict: confirmed
+    sources:
+      - {title: "Library of Congress, National Recording Registry essay (Ed Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "As a teenager, she joined the troupe The Smart Set as a chorus dancer, and her travels eventually landed her in Harlem"}
+      - {title: "Encyclopedia of African-American Culture and History (Gale): Smith, Mamie", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/smith-mamie", quote: "came to New York the next year with the Smart Set, a black vaudeville troupe"}
+    note: ""
+  - card: crazy-blues
+    fact: "In Harlem she turned from dancer to singer"
+    verdict: confirmed
+    sources:
+      - {title: "Library of Congress, National Recording Registry essay (Ed Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "landed her in Harlem, having made a successful transition from dancer to singer"}
+      - {title: "Ballad of America: Blues Queens and Race Records in the 1920s", url: "https://balladofamerica.org/blues-queens-and-race-records-in-the-1920s/", quote: "a black vaudeville and cabaret singer from Harlem named Mamie Smith"}
+    note: ""
+  - card: crazy-blues
+    fact: "\"Crazy Blues\" made her a star who toured, recorded and later appeared in films"
+    verdict: confirmed
+    sources:
+      - {title: "Library of Congress, National Recording Registry essay (Ed Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "The \"Crazy Blues\" record made Mamie Smith a national star"}
+      - {title: "Encyclopedia of African-American Culture and History (Gale): Smith, Mamie", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/smith-mamie", quote: "Smith became wealthy, lived lavishly, and toured and recorded frequently"}
+    note: "Films: LoC \"appearances in films and \"soundies\" through 1942\"; Gale \"film career began in 1929 with Jailhouse Blues\"."
+  - card: crazy-blues
+    fact: "She died poor in 1946"
+    verdict: confirmed
+    sources:
+      - {title: "Library of Congress, National Recording Registry essay (Ed Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "She died on August 16, 1946, poor enough to have been buried in a communal grave."}
+      - {title: "DNAinfo New York (2014): Blues singer's unmarked grave gets headstone", url: "https://www.dnainfo.com/new-york/20141217/richmond-town/blues-singers-unmarked-grave-gets-headstone-thanks-writers-campaign", quote: "Smith died penniless and alone on Sept. 16, 1946, in Harlem."}
+    note: "Day and month conflict (16 Aug vs 16 Sep); the card gives only the year. CBS says she died on Staten Island, others Harlem; the card gives no place of death."
+  - card: crazy-blues
+    fact: "She was buried in an unmarked grave in Frederick Douglass Memorial Park on Staten Island"
+    verdict: confirmed
+    sources:
+      - {title: "CBS New York (2013): Effort under way to honor NYC blues singer Mamie Smith", url: "https://www.cbsnews.com/newyork/news/effort-underway-to-honor-nyc-blues-singer-mamie-smith/", quote: "in an unmarked mass grave at Frederick Douglass Memorial Park"}
+      - {title: "Staten Island Advance (2014), reprint", url: "https://jazzpromoservices.com/?p=3173", quote: "The long-unmarked Oakwood gravesite of chart-topping blues singer Mamie Smith (1883-1946) finally received a fondly inscribed headstone ... in Frederick Douglass Memorial Park, 3201 Amboy Road."}
+    note: ""
+  - card: crazy-blues
+    fact: "In 2014 a campaign by the music writer Michael Cala gave the grave a headstone"
+    verdict: confirmed
+    sources:
+      - {title: "DNAinfo New York (2014): Blues singer's unmarked grave gets headstone", url: "https://www.dnainfo.com/new-york/20141217/richmond-town/blues-singers-unmarked-grave-gets-headstone-thanks-writers-campaign", quote: "A groundbreaking blues singer whose body lay in an unmarked Staten Island grave has been given a headstone thanks to a writer's fundraising campaign."}
+      - {title: "Staten Island Advance (2014), reprint", url: "https://jazzpromoservices.com/?p=3173", quote: "The campaign to identify Smith's final resting place began last year when Grasmere music journalist Michael Cala ... launched a fundraising effort"}
+    note: "Paraphrased Advance quote replaced with verbatim text. Dedication: Saturday 13 September 2014."
+  - card: crazy-blues
+    fact: "wow: the singer cut \"one blues side\" in August 1920"
+    verdict: corrected
+    sources:
+      - {title: "Ballad of America: Blues Queens and Race Records in the 1920s", url: "https://balladofamerica.org/blues-queens-and-race-records-in-the-1920s/", quote: "Smith returned to the studio on August 10 to record two more Bradford compositions."}
+      - {title: "NY1920: Mamie Smith records \"Crazy Blues\" at Okeh Studios", url: "https://www.ny1920.com/aug-10", quote: "For the August 10 date Smith and Bradford pushed the envelope, choosing two Bradford compositions with strong blues elements"}
+    note: "Both sides of the August session had blues elements, so \"one blues side\" overstates; wow now reads \"recorded a blues in August 1920\" (RU: «записала в августе 1920 года блюз»)."
+  - card: crazy-blues
+    fact: "dispute: sales figures differ between accounts"
+    verdict: confirmed
+    sources:
+      - {title: "NPR (2006): Mamie Smith and the Birth of the Blues Market", url: "https://www.npr.org/2006/11/11/6473116/mamie-smith-and-the-birth-of-the-blues-market", quote: "It sold 10,000 recordings the first week and 75,000 within a month."}
+      - {title: "Library of Congress, National Recording Registry essay (Ed Komara)", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/CrazyBlues.pdf", quote: "reportedly selling 75,000 copies during its first two months of release"}
+    note: "Sources positively contradict (one month vs two), so the dispute field is justified. The Staten Island Advance repeats \"shipped one million copies\" without a source."
