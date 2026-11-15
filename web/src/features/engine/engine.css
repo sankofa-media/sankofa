@@ -266,12 +266,106 @@
   grid-area: 1 / 1;
   width: 100%;
 }
-.ink-develop img {
+.ink-develop > .ink-photo {
   opacity: var(--develop, 0);
   object-fit: cover;
 }
-.ink-develop svg {
+.ink-develop > :not(.ink-photo) {
   opacity: calc(1 - var(--develop, 0) * 0.85);
+}
+
+/* Layered illustrations (layers.ts): generated layers on one paper canvas. */
+@property --spin {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+.ft-art {
+  --ft-art-paper: #f3ead8;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--ft-art-paper);
+  max-height: calc(100svh - var(--nav-h) - 6vh);
+}
+.ft-stage > .ft-art,
+.ft-stack > .ft-art {
+  /* Clear of the text column, as tall as the screen allows: an opaque picture under text would hide it. */
+  width: min(58vw, 860px, 100vw - 2 * var(--gutter) - 31rem - 32px, (100svh - var(--nav-h) - 6vh) * 1.5);
+}
+.ft-art > .al,
+.ft-art > svg {
+  position: absolute;
+  inset: 0;
+}
+.ft-art > svg {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+}
+.ft-art .al {
+  transform-origin: var(--pivot, 50% 100%);
+  /* Each layer is wiped in like wet ink when its scene is reached, back to front. */
+  mask-image: linear-gradient(100deg, #000 42%, transparent 58%);
+  mask-size: 260% 100%;
+  mask-repeat: no-repeat;
+  mask-position: 100% 0;
+  transition: mask-position 1.8s var(--ease) calc(0.15s + var(--i, 0) * 0.28s);
+}
+.ft-scene.reached .ft-art .al {
+  mask-position: 0 0;
+}
+.ft-art img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  translate: var(--x, 0) var(--y, 0);
+  scale: var(--k, 1);
+  user-select: none;
+}
+/* A layer with a state shows only while the picture is in it. */
+.ft-art .al[data-state] img {
+  opacity: 0;
+  transition: opacity 1.2s var(--ease);
+}
+.ft-art .al[data-state='open'] img {
+  transition-duration: 1.6s;
+}
+.ft-art[data-state='open'] .al[data-state='open'] img,
+.ft-art[data-state='closed'] .al[data-state='closed'] img {
+  opacity: 1;
+}
+/* A figure breathes (the individual scale property leaves the parallax transform alone). */
+.ft-art .al[data-role='figure'] {
+  animation: ft-breathe-layer 5.5s ease-in-out infinite;
+}
+@keyframes ft-breathe-layer {
+  50% {
+    scale: 1.008;
+  }
+}
+/* A layer swinging open from its pivot over a stretch of the scene. */
+.ft-art .al[data-open] {
+  scale: calc(0.2 + 0.8 * var(--open, 1)) 1;
+  opacity: min(1, calc(var(--open, 1) * 3));
+}
+/* A disc seen at an angle turns in its own plane, inside its still rim. */
+.ft-art .al-face {
+  position: absolute;
+  inset: 0;
+}
+.ft-art .al[data-role='spin'] .al-face img,
+.ft-art .al[data-role='spin'] > img:only-child {
+  transform-origin: var(--cx) var(--cy);
+  transform: rotate(var(--tilt)) scaleY(var(--ratio)) rotate(var(--spin)) scaleY(calc(1 / var(--ratio))) rotate(calc(-1 * var(--tilt)));
+  animation: ft-spin 48s linear infinite;
+}
+@keyframes ft-spin {
+  to {
+    --spin: 360deg;
+  }
 }
 .ft-stack {
   display: grid;
@@ -391,6 +485,13 @@ body.mp-on .cc[data-place='corner'] {
 }
 
 /* Calm mode: finished, still drawings; text without waiting. */
+.is-calm .ft-art .al,
+.is-calm .ft-art img,
+.is-calm .ft-art .al[data-role='spin'] img {
+  mask-image: none;
+  animation: none;
+  transition: none;
+}
 .is-calm .ink-breathe,
 .is-calm .cc.flash .cc-ring {
   animation: none;
@@ -411,8 +512,18 @@ body.mp-on .cc[data-place='corner'] {
   transition: none;
 }
 @media (prefers-reduced-motion: reduce) {
-  .ink-breathe {
+  .ink-breathe,
+  .ft-art .al,
+  .ft-art img,
+  .ft-art .al[data-role='spin'] img {
     animation: none;
+  }
+  .ft-art .al {
+    mask-image: none;
+  }
+  .ft-art .al,
+  .ft-art img {
+    transition: none;
   }
   .ft-block,
   .cc,
@@ -431,6 +542,10 @@ body.mp-on .cc[data-place='corner'] {
   }
   .ink {
     max-height: 46svh;
+  }
+  .ft-stage > .ft-art,
+  .ft-stack > .ft-art {
+    width: min(100%, calc(46svh * 1.5));
   }
   .ft-flow {
     padding-top: 52svh;

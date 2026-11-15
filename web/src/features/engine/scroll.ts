@@ -2,7 +2,8 @@
 // the screen; on every frame the reader scrolls, each of those gets its
 // progress (0..1) as the CSS variable --p and through `onProgress`, and the
 // scene under the reading line becomes the current one. Text blocks reveal
-// once, when they come into view.
+// once, when they come into view. Pictures load as their scene comes near:
+// an <img data-src> gets its src then, not with the page.
 import { sceneAt, sceneProgress } from '../model';
 
 export interface ScrollerOptions {
@@ -11,6 +12,14 @@ export interface ScrollerOptions {
   scenes: HTMLElement[];
   onProgress?(scene: HTMLElement, p: number): void;
   onCurrent?(scene: HTMLElement, index: number): void;
+}
+
+/** Give a scene's waiting pictures their files. */
+export function load(scene: Element): void {
+  scene.querySelectorAll<HTMLImageElement>('img[data-src]').forEach((img) => {
+    img.src = img.dataset.src!;
+    delete img.dataset.src;
+  });
 }
 
 export class Scroller {
@@ -28,8 +37,10 @@ export class Scroller {
       (entries) => {
         for (const e of entries) {
           const el = e.target as HTMLElement;
-          if (e.isIntersecting) this.near.add(el);
-          else {
+          if (e.isIntersecting) {
+            this.near.add(el);
+            load(el);
+          } else {
             this.near.delete(el);
             // A scene that has left settles at its end or its start.
             const p = e.boundingClientRect.top < 0 ? 1 : 0;
