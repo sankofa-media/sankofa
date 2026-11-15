@@ -4,6 +4,7 @@
 #   web/public/data/chapters.json  (chapter Markdown -> JSON)
 #   web/public/data/countries.json (cards by present-day country)
 #   web/public/data/listen.json    (recordings to listen to)
+#   web/public/data/voices.json    (voices remembering slavery, content/voices)
 #   web/public/data/names.json     (every card's names, content/aliases.yaml)
 #   web/public/data/factoids.json  (checked factoids only, content/factoids)
 #   web/public/data/features*.json (special projects, content/features)
@@ -42,6 +43,8 @@ node "$web/scripts/build-countries.ts" web/public/data/cards.json "$src/countrie
 node "$web/scripts/build-chapters.ts" "$src/chapters" web/public/data/chapters.json
 # Official recordings to listen to (content/listen.yaml); empty when absent.
 node "$web/scripts/build-listen.ts" "$src/listen.yaml" web/public/data/listen.json
+# Voices remembering slavery: LoC excerpts with English and Russian subtitles.
+node "$web/scripts/build-voices.ts" "$src" web/public/data
 if [ -d "$src/media" ]; then
   cp -R "$src/media/." web/public/media/
 fi

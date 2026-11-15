@@ -4,6 +4,7 @@
 // with subtitles) without changing what a card or an artist holds.
 import { parse as parseYaml } from 'yaml';
 import { lang, type Lang } from './i18n.ts';
+import type { Cue } from './vtt.ts';
 
 export type RecordingSource = 'youtube' | 'audio';
 /** Why the museum offers it: an official upload, a field recording, an archival voice. */
@@ -25,6 +26,12 @@ export interface Recording {
   note?: string;
   /** The same note in Russian, shown in Russian mode when present. */
   noteRu?: string;
+  /** Seconds where listening stops: an excerpt of a longer file (source: audio). */
+  end?: number;
+  /** Caption tracks for an audio file, as <track> elements. */
+  tracks?: { lang: Lang; src: string; label: string; default?: boolean }[];
+  /** The cues in the reader's language, shown under the docked player. */
+  cues?: Cue[];
 }
 
 export interface ListenFile {
@@ -90,4 +97,21 @@ export function noteFor(r: Recording, l: Lang = lang()): { text: string; lang: '
 /** The first recording the museum offers for a card or a roots artist ("card:<id>" or an artist id). */
 export function recordingFor(data: ListenFile, ref: string): Recording | undefined {
   return ref.startsWith('card:') ? data.cards[ref.slice(5)]?.[0] : data.roots[ref]?.[0];
+}
+
+const KIND_ORDER: Record<RecordingKind, number> = { official: 0, field: 1, voice: 2 };
+
+/**
+ * A card's recordings in the order it offers them: the official recording
+ * leads (or, without one, the first field recording, as the card always
+ * showed), then the others by kind, field recordings before voices, each
+ * kind in its file order. Voices never lead: they come with their transcript.
+ */
+export function orderRecordings(rs: readonly Recording[]): { lead?: Recording; rest: Recording[] } {
+  const sorted = rs
+    .map((r, i) => ({ r, i }))
+    .sort((a, b) => KIND_ORDER[a.r.kind] - KIND_ORDER[b.r.kind] || a.i - b.i)
+    .map((x) => x.r);
+  const lead = sorted[0] && sorted[0].kind !== 'voice' ? sorted[0] : undefined;
+  return { lead, rest: lead ? sorted.slice(1) : sorted };
 }
