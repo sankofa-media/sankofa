@@ -5,7 +5,7 @@ import { h } from '../../lib/dom';
 import { pick } from '../../lib/i18n';
 import { audioContext } from '../../lib/sound';
 import type { FeatureContext, FeatureInstance } from '../host';
-import { FlashGate, parseClock, formatClock, type Figure, type Frame, type Scene } from '../model';
+import type { Figure, Frame, Scene } from '../model';
 import { BEAT, clap } from '../engine/clap';
 import { blot, develop, drawing, ink, s, sketch } from '../engine/ink';
 import type { Picture } from '../engine/layers';
@@ -28,22 +28,30 @@ function house(kit: Kit, sc: Scene): { el: Element; open(on: boolean): void } {
   return { el: d, open: (on) => d.classList.toggle('open', on) };
 }
 
+/** The cover: the house with its door shut, the title, the lead, and the knock that turns the sound on. */
 const door: Render = (kit, sc) => {
   const home = house(kit, sc);
-  const drawingEl = home.el;
-  const opened = h('div.ft-opened', { 'aria-live': 'polite' });
   const btn = h('button.btn.primary.ft-knock', { type: 'button' }, kit.ui('knock')) as HTMLButtonElement;
   btn.addEventListener('click', () => {
     kit.unlock(true);
     kit.ctx.root.dataset.knocked = '';
-    home.open(true);
     btn.disabled = true;
     btn.textContent = kit.ui('knocked');
-    opened.replaceChildren(kit.block(sc.blocks.find((b) => b.id === 'opened')!));
-    opened.querySelector('.ft-block')?.classList.add('on');
   });
   const title = h('h1.ft-h1', {}, pick(kit.ctx.data.title));
-  return kit.section(sc, { stage: drawingEl, skip: ['opened'], after: [title, btn, opened, kit.ctx.data.reading ? h('p.ft-reading', {}, pick(kit.ctx.data.reading)) : null], screens: 1.4 });
+  const block = (id: string) => {
+    const b = sc.blocks.find((x) => x.id === id);
+    return b ? kit.block(b) : null;
+  };
+  const later = ['lead', 'why-knock'];
+  return kit.section(sc, { stage: home.el, skip: later, after: [title, block('lead'), btn, block('why-knock'), kit.ctx.data.reading ? h('p.ft-reading', {}, pick(kit.ctx.data.reading)) : null], screens: 1.4 });
+};
+
+/** 13 May 1939: the same door opens to the two strangers as the reader scrolls (open at once in calm mode). */
+const arrival: Render = (kit, sc) => {
+  const home = house(kit, sc);
+  kit.onProgress(sc.id, (p) => home.open(kit.calm || p > 0.3));
+  return kit.section(sc, { stage: home.el, screens: 2 });
 };
 
 const ringScene: Render = (kit, sc) => {
@@ -141,55 +149,56 @@ const riverScene: Render = (kit, sc) => {
 
 const stopScene: Render = (kit, sc) => kit.section(sc, { stage: drawing('0 0 400 300', 'art-stop', ink(sketch([[200, 0], [196, 120], [204, 300]], sc.id.length * 7, 3), 0, 0.6, { class: 'ink-line river' })), after: [stop(kit, sc.nodes ?? [])], screens: 1.6 });
 
+/**
+ * Paradise Circus: the clap of Simone's record runs under the whole song.
+ * A thread of ink from the 2010 track back to 1964 and on to 1939 pulses
+ * with it, on two and four, while the track plays in the docked player
+ * (in time with it) or while the scene is on screen. Calm mode: still.
+ */
+export const CIRCUS_BEAT = 60 / 94;
+
 const flashes: Render = (kit, sc) => {
-  const times = ((sc.flashes as (string | number)[]) ?? []).map(parseClock);
-  const end = Math.max(...times, 0) + 60;
-  const W = 400;
-  const x = (t: number) => 20 + (t / end) * (W - 40);
-  const anchors = ((sc.threads as string[]) ?? []).map((id, i) => ({ id, x: 40 + i * 70, label: kit.text(sc.id, `label-${kit.node(id)?.year ?? ''}`) || String(kit.node(id)?.year ?? '') }));
-  const marks = times.map((t, i) =>
-    s('g', { class: 'fl-mark', 'data-at': t, 'data-i': i }, s('circle', { cx: x(t), cy: 220, r: 9, class: 'fl-dot' }), art.label(x(t) - 14, 250, formatClock(t), 'ink-label small')),
-  );
-  const threads = times.flatMap((t, i) =>
-    anchors.map((a, j) => ink(`M${x(t)} 210 C${x(t)} ${150 - j * 30} ${a.x + 40} ${120 - j * 30} ${a.x} ${70 - j * 0}`, 0.2 + i * 0.15, 0.45 + i * 0.15, { class: `ink-line red thread t-${j}` })),
-  );
+  const node = sc.nodes?.[0] ?? '';
+  const year = (id: string) => kit.node(id)?.year ?? '';
+  const anchors = ((sc.threads as string[]) ?? []).map((id, i) => ({ id, x: 220 - i * 150, label: kit.text(sc.id, `label-${year(id)}`) || String(year(id)) }));
+  const from = { x: 340, y: 150 };
+  // 2010 → 1964, then 1964 → 1939: drawn as the scene opens, then pulsing.
+  const threads = anchors.map((a, j) => {
+    const d = j === 0 ? `M${from.x} ${from.y - 14} C${from.x} 95 ${a.x + 40} 60 ${a.x + 14} 60` : `M${anchors[j - 1].x - 14} 60 C${anchors[j - 1].x - 50} 25 ${a.x + 50} 25 ${a.x + 14} 60`;
+    return ink(d, j * 0.06, 0.08 + j * 0.06, { class: `ink-line red thread t-${j}` });
+  });
   const svg = drawing(
-    `0 0 ${W} 280`,
+    '0 0 400 200',
     'art-flashes',
-    ink(sketch([[20, 220], [W - 20, 220]], 140, 0.8), 0, 0.2),
     ...anchors.map((a) => s('g', { class: 'fl-anchor' }, s('circle', { cx: a.x, cy: 60, r: 14, class: 'fl-year' }), art.label(a.x - 14, 64, a.label, 'ink-label small'))),
     ...threads,
-    ...marks,
+    s('g', { class: 'fl-anchor fl-source' }, s('circle', { cx: from.x, cy: from.y, r: 14, class: 'fl-dot' }), art.label(from.x - 15, from.y + 36, String(year(node)), 'ink-label small')),
   );
-  const gate = new FlashGate(3, 1000);
-  const light = (i: number) => {
-    const m = marks[i];
-    if (!m) return;
-    m.classList.add('seen');
-    if (kit.calm || !gate.allow(performance.now())) return;
-    m.classList.remove('lit');
-    void (m as unknown as HTMLElement).getBoundingClientRect();
-    m.classList.add('lit');
+  const pulse = () => {
+    if (kit.calm) return;
+    svg.classList.remove('pulse');
+    void (svg as unknown as HTMLElement).getBoundingClientRect();
+    svg.classList.add('pulse');
   };
-  const show = h('button.btn.fl-show', { type: 'button' }, kit.ui('show-flashes'));
-  show.addEventListener('click', () => times.forEach((_, i) => window.setTimeout(() => light(i), i * 1100)));
-  // While the track plays in the docked player, its claps flash on time.
-  const node = sc.nodes?.[0] ?? '';
+  // Beats 2 and 4: every other beat, half a bar after the downbeat.
+  const bar2 = CIRCUS_BEAT * 2;
   let last = -1;
   const stopYt = watchYouTubeTime();
+  const t0 = performance.now() / 1000;
   const poll = window.setInterval(() => {
-    const t = kit.playerTime(node);
-    if (t === null) return;
-    times.forEach((at, i) => {
-      if (last < at && t >= at) light(i);
-    });
-    last = t;
-  }, 250);
+    const played = kit.playerTime(node);
+    const onScreen = kit.current() === sc.id;
+    if (played === null && !onScreen) return;
+    const t = played ?? performance.now() / 1000 - t0;
+    const k = Math.floor((t - CIRCUS_BEAT) / bar2);
+    if (k !== last && t >= CIRCUS_BEAT) pulse();
+    last = k;
+  }, 50);
   cleanups.push(() => {
     clearInterval(poll);
     stopYt();
   });
-  return kit.section(sc, { stage: svg, after: [show, stop(kit, sc.nodes ?? [])], screens: 2.4 });
+  return kit.section(sc, { stage: svg, after: [stop(kit, sc.nodes ?? [])], screens: 2.4 });
 };
 
 const filmstrip: Render = (kit, sc) => {
@@ -252,7 +261,7 @@ function playTogether(kit: Kit): void {
   window.setTimeout(() => delete kit.ctx.root.dataset.together, bar * 4 * 1000);
 }
 
-const RENDER: Record<string, Render> = { door, ring: ringScene, expedition, family, minute, album, simone, single, text: textScene, river: riverScene, stop: stopScene, flashes, filmstrip, silence, classroom, finale };
+const RENDER: Record<string, Render> = { door, ring: ringScene, expedition, arrival, family, minute, album, simone, single, text: textScene, river: riverScene, stop: stopScene, flashes, filmstrip, silence, classroom, finale };
 
 let cleanups: (() => void)[] = [];
 

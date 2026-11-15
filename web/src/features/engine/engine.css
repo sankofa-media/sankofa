@@ -346,16 +346,32 @@
     scale: 1.008;
   }
 }
-/* Hands jump with each clap; a still copy underneath keeps the figure whole. */
-.ft-art .al[data-role='hands'] > img:not(.al-still) {
-  will-change: transform;
+/* A clap: a soft ripple of ink where the drawn hands meet. */
+.ft-art .al-claps {
+  pointer-events: none;
 }
-.ft-art .al[data-role='hands'].clap > img:not(.al-still) {
-  animation: ft-clap-hands 0.32s var(--ease);
+.ft-art .clap-spot {
+  position: absolute;
+  width: 6.5%;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(31, 27, 22, 0.28) 0 18%, transparent 46%);
+  box-shadow: 0 0 0 1.5px rgba(31, 27, 22, 0.45);
+  opacity: 0;
+  scale: 0.3;
 }
-@keyframes ft-clap-hands {
-  30% {
-    transform: translateY(-0.45%) scale(1.004);
+.ft-art .clap-spot.splash {
+  animation: ft-ink-ripple 0.95s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+@keyframes ft-ink-ripple {
+  0% {
+    opacity: 0.75;
+    scale: 0.3;
+  }
+  100% {
+    opacity: 0;
+    scale: 1.7;
   }
 }
 /* Figures that come half a step forward when their scene is reached. */
@@ -513,7 +529,7 @@ body.mp-on .cc[data-place='corner'] {
 .is-calm .ft-art .al,
 .is-calm .ft-art img,
 .is-calm .ft-art .al[data-role='spin'] img,
-.is-calm .ft-art .al[data-role='hands'].clap > img:not(.al-still) {
+.is-calm .ft-art .clap-spot.splash {
   mask-image: none;
   animation: none;
   transition: none;
@@ -547,7 +563,7 @@ body.mp-on .cc[data-place='corner'] {
   .ft-art .al,
   .ft-art img,
   .ft-art .al[data-role='spin'] img,
-  .ft-art .al[data-role='hands'].clap > img:not(.al-still) {
+  .ft-art .clap-spot.splash {
     animation: none;
   }
   .ft-art .al[data-role='step'] {
