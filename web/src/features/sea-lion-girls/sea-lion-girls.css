@@ -354,33 +354,50 @@
   color: var(--ft-ink-2);
 }
 
-/* 5c. The three claps of "Paradise Circus" */
+/* 5c. Paradise Circus: the thread back to 1964 and 1939 pulses with the clap. */
 .fl-dot {
-  fill: var(--ft-paper);
+  fill: var(--ft-red);
   stroke: var(--ft-red);
   stroke-width: 2;
-}
-.fl-mark.seen .fl-dot {
-  fill: var(--ft-red);
-}
-.fl-mark.lit .fl-dot {
-  animation: ft-flash 0.9s var(--ease);
-  transform-box: fill-box;
-  transform-origin: center;
-}
-@keyframes ft-flash {
-  from {
-    transform: scale(2.4);
-    fill: #fff3d8;
-  }
 }
 .fl-year {
   fill: var(--ft-paper);
   stroke: var(--ft-ink);
   stroke-width: 1.4;
 }
-.is-calm .fl-mark .fl-dot {
-  fill: var(--ft-red);
+.art-flashes .thread {
+  /* Scaled with the drawing, so the dash that draws it in stays whole. */
+  vector-effect: none;
+  stroke-width: 1.4;
+}
+.art-flashes.pulse .thread {
+  animation: ft-thread-pulse 0.6s ease-out;
+}
+.art-flashes.pulse .t-1 {
+  animation-delay: 0.08s;
+}
+.art-flashes.pulse .fl-source .fl-dot {
+  animation: ft-source-pulse 0.6s ease-out;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+@keyframes ft-thread-pulse {
+  from {
+    stroke-width: 3.6;
+    opacity: 1;
+  }
+  to {
+    stroke-width: 1.4;
+    opacity: 0.8;
+  }
+}
+@keyframes ft-source-pulse {
+  from {
+    transform: scale(1.35);
+  }
+}
+.is-calm .art-flashes .thread,
+.is-calm .art-flashes .fl-dot {
   animation: none;
 }
 
@@ -603,9 +620,14 @@
   max-height: none;
 }
 .ft-photo .ink-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: 50% 22%;
+  /* The whole photograph, never cropped: it sits in the frame with dark paper round it. */
+  object-fit: contain;
+  object-position: 50% 50%;
+  background: #15120e;
   filter: grayscale(1) contrast(1.05);
 }
 .ft-credit {

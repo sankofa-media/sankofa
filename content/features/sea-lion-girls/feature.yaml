@@ -31,11 +31,11 @@ lineage: lineage.yaml
 # scene, `fit` registers it on the canvas (percent, scale). Sources: the art
 # contact sheet (door v2 and its finale porch and light, expedition v2, album
 # v1, piano v1, classroom v2, river v1) and the redraws (ring v3, family v4,
-# minute v4), WebP at 1600 px. Role `hands` jumps with each clap, `step`
-# comes half a step forward when the scene is reached. The sisters' layers
-# are named left and right: the alt text does not say which sister is which.
-# In ring and minute the hands exist only on the hands layer (the figures
-# have holes there), so those figures share its depth and do not breathe.
+# minute v4), WebP at 1600 px. Role `step` comes half a step forward when
+# the scene is reached; `claps` marks where hands meet, and a ripple of ink
+# spreads there with every clap (the figures keep their own hands and never
+# come apart). The sisters' layers are named left and right: the alt text
+# does not say which sister is which.
 art:
   - id: simone-1965
     kind: photo
@@ -120,7 +120,7 @@ ui:
   no-recording: { en: "No official recording to play here yet", ru: "Официальной записи для плеера пока нет", draft: true }
   sources: { en: "Sources", ru: "Источники", draft: true }
   listen-for: { en: "What to listen for", ru: "Что слушать", draft: true }
-  flip: { en: "Flip the record", ru: "Перевернуть пластинку", draft: true }
+  flip: { en: "Turn the record over", ru: "Перевернуть пластинку", draft: true }
   side-a: { en: "Side A", ru: "Сторона A", draft: true }
   side-b: { en: "Side B", ru: "Сторона B", draft: true }
   filter: { en: "Show", ru: "Показать", draft: true }
@@ -175,8 +175,11 @@ scenes:
       generated: true
       layers:
         - { file: ring-ground.webp, depth: 3, alt: "" }
-        - { file: ring-children.webp, depth: 10, alt: { en: "Children in a ring, seen from a little above, clapping", ru: "Дети в кругу, вид чуть сверху, хлопают в ладоши" } }
-        - { file: ring-hands.webp, depth: 10, role: hands, alt: "" }
+        - { file: ring-children.webp, depth: 10, role: figure, pivot: "50 60", alt: { en: "Children in a ring, seen from a little above, clapping", ru: "Дети в кругу, вид чуть сверху, хлопают в ладоши" } }
+      # Where each child's hands meet: a ripple of ink spreads there with every clap.
+      claps:
+        depth: 10
+        at: [ [52.3, 13.2], [69.6, 16.5], [82.8, 33.9], [17.5, 31.9], [32.8, 15.5], [52.5, 59.6], [70.5, 58.5], [29.7, 56.3] ]
     blocks:
       - id: kicker
         role: kicker
@@ -245,6 +248,8 @@ scenes:
         ru: Байхейлия
   - id: arrival
     kind: arrival
+    # The house of the cover: its door opens to the two strangers.
+    art: *door-art
     blocks:
       - id: kicker
         role: kicker
@@ -302,9 +307,11 @@ scenes:
       generated: true
       layers:
         - { file: minute-wash.webp, depth: 3, alt: "" }
-        - { file: minute-sister-left.webp, depth: 10, alt: { en: "Two sisters face each other and sing; one leads, the other answers", ru: "Две сестры стоят лицом друг к другу и поют: одна ведёт, другая отвечает" } }
-        - { file: minute-sister-right.webp, depth: 10, alt: { en: "The second sister, in a red dress, claps as she sings", ru: "Вторая сестра, в красном платье, хлопает в ладоши и поёт" } }
-        - { file: minute-hands.webp, depth: 10, role: hands, alt: "" }
+        - { file: minute-sister-left.webp, depth: 10, role: figure, pivot: "26 90", alt: { en: "Two sisters face each other and sing; one leads, the other answers", ru: "Две сестры стоят лицом друг к другу и поют: одна ведёт, другая отвечает" } }
+        - { file: minute-sister-right.webp, depth: 10, role: figure, pivot: "71 90", alt: { en: "The second sister, in a red dress, claps as she sings", ru: "Вторая сестра, в красном платье, хлопает в ладоши и поёт" } }
+      claps:
+        depth: 10
+        at: [ [39.6, 34.1], [63.2, 34.1] ]
     nodes: [ shipp-1939 ]
     blocks:
       - id: kicker

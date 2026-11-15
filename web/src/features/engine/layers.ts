@@ -2,9 +2,9 @@
 // stacked on one canvas of paper colour. The engine moves them through the
 // data attributes it already knows (data-depth for parallax, data-open for a
 // layer swinging open) and CSS does the rest: each layer is wiped in like
-// ink when its scene is reached, figures breathe, a disc turns, hands jump
-// with each clap (`clapHands`), figures step forward, and a layer with a
-// state shows only while the picture is in it. Files load when their
+// ink when its scene is reached, figures breathe, a disc turns, a ripple of
+// ink spreads where hands meet with each clap (`clapInk`), figures step
+// forward, and a layer with a state shows only while the picture is in it. Files load when their
 // scene comes near (img[data-src], see scroll.ts). Calm mode and reduced
 // motion leave the layers still and finished.
 import { h } from '../../lib/dom';
@@ -33,14 +33,13 @@ function layer(l: ArtLayer, i: number, src: string): HTMLElement {
   });
   const pivot = l.pivot?.trim().split(/\s+/).map((v) => `${v}%`).join(' ');
   // A disc turns inside its face: a still copy keeps the rim, the turning one is clipped to the face.
-  // Hands that jump with a clap leave a still copy behind them too, so the figures never show a gap.
-  const still = () => h('img.al-still', { alt: '', 'data-src': src, decoding: 'async', draggable: 'false', 'aria-hidden': 'true', style: style.join(';') });
   const face = l.role === 'spin' && l.spin?.face;
   const turning = face
-    ? [still(), h('div.al-face', { style: `clip-path:ellipse(${face[2]}% ${face[3]}% at ${face[0]}% ${face[1]}%)` }, img)]
-    : l.role === 'hands'
-      ? [still(), img]
-      : [img];
+    ? [
+        h('img.al-still', { alt: '', 'data-src': src, decoding: 'async', draggable: 'false', 'aria-hidden': 'true', style: style.join(';') }),
+        h('div.al-face', { style: `clip-path:ellipse(${face[2]}% ${face[3]}% at ${face[0]}% ${face[1]}%)` }, img),
+      ]
+    : [img];
   return h(
     'div.al',
     {
@@ -59,7 +58,14 @@ function layer(l: ArtLayer, i: number, src: string): HTMLElement {
 export function layered(art: SceneArt, src: (file: string) => string, opts: { name: string; state?: string; overlay?: Node | null }): Picture {
   const layers = art.layers.map((l, i) => layer(l, i, src(l.file)));
   const decorative = art.layers.every((l) => l.alt === '');
-  const el = h('div.ft-art', { 'data-art': opts.name, style: `aspect-ratio:${art.aspect ?? '3 / 2'}`, 'aria-hidden': decorative ? 'true' : undefined }, ...layers, opts.overlay ?? null);
+  const claps = art.claps
+    ? h(
+        'div.al.al-claps',
+        { 'data-depth': art.claps.depth ? String(art.claps.depth) : undefined, 'aria-hidden': 'true', style: `--i:${layers.length}` },
+        ...art.claps.at.map(([x, y]) => h('span.clap-spot', { style: `left:${x}%;top:${y}%` })),
+      )
+    : null;
+  const el = h('div.ft-art', { 'data-art': opts.name, style: `aspect-ratio:${art.aspect ?? '3 / 2'}`, 'aria-hidden': decorative ? 'true' : undefined }, ...layers, claps, opts.overlay ?? null);
   let state: string | undefined;
   const setState = (s: string) => {
     state = s;
@@ -80,11 +86,11 @@ export function layered(art: SceneArt, src: (file: string) => string, opts: { na
   };
 }
 
-/** Every clapping hands layer under `root` jumps once (the reader's clap or the bed's beat). */
-export function clapHands(root: Element): void {
-  root.querySelectorAll<HTMLElement>('.ft-scene.current .al[data-role="hands"]').forEach((al) => {
-    al.classList.remove('clap');
-    void al.offsetWidth;
-    al.classList.add('clap');
+/** A ripple of ink where the hands meet in the current scene's picture (the reader's clap or the bed's beat). */
+export function clapInk(root: Element): void {
+  root.querySelectorAll<HTMLElement>('.ft-scene.current .clap-spot').forEach((spot) => {
+    spot.classList.remove('splash');
+    void spot.offsetWidth;
+    spot.classList.add('splash');
   });
 }

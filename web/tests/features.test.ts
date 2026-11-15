@@ -150,6 +150,8 @@ describe('scene illustrations', () => {
     expect(errs).toMatch(/state must be a slug/);
     expect(errs).toMatch(/open must be "from to"/);
     expect(errs).toMatch(/spinning layer needs spin/);
+    expect(validateSceneArt({ ...layers(), claps: { at: [[120, 5]] } }, ctx).join()).toMatch(/claps need at/);
+    expect(validateSceneArt({ ...layers(), claps: { depth: 10, at: [[40, 34]] } }, ctx)).toEqual([]);
   });
 });
 
@@ -216,17 +218,16 @@ describe('the Sea Lion Girls content', () => {
     expect(validateFeature(f, { nodes: new Set(lin.nodes.map((n) => n.id)), sourced: sourcedNodes(lin), sync, rights, cards, artFiles, ledger: all })).toEqual([]);
     // The approved illustrations: every scene redrawn so far has its layers, generated and with alt fields.
     const drawn = f.scenes.filter((s) => s.art).map((s) => s.id);
-    expect(drawn).toEqual(['door', 'ring', 'expedition', 'family', 'minute', 'album', 'simone', 'river', 'classroom', 'finale']);
-    // Hands drawn on their own layer clap; figures with holes for those hands do not breathe away from them.
+    expect(drawn).toEqual(['door', 'ring', 'expedition', 'arrival', 'family', 'minute', 'album', 'simone', 'river', 'classroom', 'finale']);
+    // Ring and minute: whole figures with their own hands, and ink where the hands meet.
     for (const id of ['ring', 'minute']) {
-      const layers = f.scenes.find((s) => s.id === id)!.art!.layers;
-      const hands = layers.find((l) => l.role === 'hands')!;
-      expect(hands, id).toBeDefined();
-      for (const l of layers.filter((x) => x !== hands && x.depth !== 3)) {
-        expect(l.depth, `${id} ${l.file}`).toBe(hands.depth);
-        expect(l.role, `${id} ${l.file}`).toBeUndefined();
-      }
+      const a = f.scenes.find((s) => s.id === id)!.art!;
+      expect(a.layers.some((l) => /hands/.test(l.file)), id).toBe(false);
+      expect(a.claps?.at.length, id).toBeGreaterThan(0);
+      expect(validateSceneArt(a)).toEqual([]);
     }
+    // The arrival opens the cover's door.
+    expect(f.scenes.find((s) => s.id === 'arrival')!.art).toEqual(f.scenes.find((s) => s.id === 'door')!.art);
     // The minute's alt text never says which sister is which.
     const minuteAlt = JSON.stringify(f.scenes.find((s) => s.id === 'minute')!.art!.layers.map((l) => l.alt));
     expect(minuteAlt).not.toMatch(/Christine|Katherine|Кристин|Кэтрин/);

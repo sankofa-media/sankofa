@@ -66,8 +66,7 @@ export interface ArtLayer {
   depth?: number;
   /**
    * figure: breathes slightly; spin: turns slowly in its own plane (see
-   * `spin`); hands: jumps with each clap; step: comes half a step forward
-   * when its scene is reached.
+   * `spin`); step: comes half a step forward when its scene is reached.
    */
   role?: ArtRole;
   /** What it shows for a screen reader, or "" for a decorative layer. Required either way. */
@@ -88,8 +87,8 @@ export interface ArtLayer {
   spin?: { x: number; y: number; ratio: number; tilt?: number; face?: [number, number, number, number] };
 }
 
-export type ArtRole = 'figure' | 'spin' | 'hands' | 'step';
-export const ART_ROLES: readonly ArtRole[] = ['figure', 'spin', 'hands', 'step'];
+export type ArtRole = 'figure' | 'spin' | 'step';
+export const ART_ROLES: readonly ArtRole[] = ['figure', 'spin', 'step'];
 
 /** A scene's illustration: generated layers, marked as generated (they never enter the photo-rights ledger). */
 export interface SceneArt {
@@ -97,6 +96,8 @@ export interface SceneArt {
   /** The canvas, "w / h" (3 / 2 when not given). */
   aspect?: string;
   layers: ArtLayer[];
+  /** Where hands meet, in percent of the canvas: a ripple of ink spreads there with every clap. */
+  claps?: { depth?: number; at: [number, number][] };
 }
 
 export interface Scene {
@@ -211,6 +212,12 @@ export function validateSceneArt(art: unknown, ctx: ValidateContext = {}, photos
   if (!a || typeof a !== 'object' || Array.isArray(a)) return ['art must be { generated: true, layers: [...] }'];
   if (a.generated !== true) errs.push('art must be marked generated: true (a real photo goes in the feature\'s art list, with its rights)');
   if (a.aspect !== undefined && !/^\d+(\.\d+)?\s*\/\s*\d+(\.\d+)?$/.test(a.aspect)) errs.push(`art aspect ${JSON.stringify(a.aspect)} is not "w / h"`);
+  if (a.claps !== undefined) {
+    const c = a.claps;
+    const pct = (v: unknown) => typeof v === 'number' && v >= 0 && v <= 100;
+    if (!c || !Array.isArray(c.at) || c.at.length === 0 || !c.at.every((p) => Array.isArray(p) && p.length === 2 && p.every(pct))) errs.push('art claps need at: [[x, y], ...] in percent');
+    if (c?.depth !== undefined && !(typeof c.depth === 'number' && c.depth >= 0 && c.depth <= 80)) errs.push('art claps depth must be 0..80 pixels');
+  }
   if (!Array.isArray(a.layers) || a.layers.length === 0) return [...errs, 'art has no layers'];
   for (const l of a.layers) {
     const at = `art layer ${l?.file ?? '?'}`;
