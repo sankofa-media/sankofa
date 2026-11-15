@@ -19,7 +19,7 @@ for l in media site; do
 done
 "$HOME/go/bin/crane" append --platform linux/amd64 -b nginxinc/nginx-unprivileged:1.29-alpine \
   -f dist/museum-media.tar -f dist/museum-site.tar -t sankofa/museum:dev -o dist/museum.tar >/dev/null
-img=$(hack/stand/push.sh museum dist/museum.tar 2>/dev/null | tail -1)
+img=$(hack/stand/push.sh museum dist/museum.tar | tail -1)
 [[ $img == localhost:5000/* ]] || { echo "push failed" >&2; exit 1; }
 sed -e "s#MUSEUM_IMAGE#$img#" -e "s#MUSEUM_HOST#${MUSEUM_HOST:-museum.sankofa.workshop.aenix.io}#g" deploy/museum.yaml > dist/museum.yaml
 km apply -f dist/museum.yaml >/dev/null

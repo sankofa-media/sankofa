@@ -33,7 +33,7 @@ digest=${ref##*@}
 for ((i = 2; i < ${#pods[@]}; i += 2)); do
   ip=${pods[$((i + 1))]}
   km -n sankofa-registry run "copy-$name-$RANDOM" --rm -i --quiet --restart=Never \
-    --image=gcr.io/go-containerregistry/crane:v0.20.2 -- \
+    --image=gcr.io/go-containerregistry/crane:v0.20.3 -- \
     copy --insecure "$firstip:5000/sankofa/$name@$digest" "$ip:5000/sankofa/$name:dev" >/dev/null
 done
 echo "localhost:5000/sankofa/$name@$digest"
