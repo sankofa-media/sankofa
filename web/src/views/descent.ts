@@ -7,7 +7,7 @@ import type { Card } from '../lib/types';
 import { ERAS } from '../lib/types';
 import { formatYears, plain, span, when } from '../lib/cards';
 import { bookMarks, h, reducedMotion, svgIcon } from '../lib/dom';
-import { chapterCopy, eraColor, readerCards } from '../lib/atlasModel';
+import { chapterCopy, eraColor } from '../lib/atlasModel';
 import { MOVEMENTS } from '../lib/movements';
 import { chapterLabel, chapterNumber, count, pick, t, yearsAgo } from '../lib/i18n';
 import { LEVEL_NAMES } from './map';
@@ -250,7 +250,7 @@ export class Descent {
     const app = this.app;
     const W = this.el.clientWidth || window.innerWidth;
     const mobile = W < 760;
-    const all = readerCards(app.set, app.edition);
+    const all = app.set.all();
     const cards = levelCards(all.filter((c) => c.years.length), this.level);
     const cardIndex = new Map(cards.map((c) => [c.id, c]));
 

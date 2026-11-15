@@ -104,13 +104,18 @@ test('the index lists every entry from A to Z, with letters, a filter and kinds'
   await expect(ix.locator('.ix-entry[data-card="sun-ra"]')).toHaveCount(0);
   await ix.locator('.ix-chip[data-kind="genre"]').click();
 
-  // An entry opens its card; one of the other copy opens as that card, marked.
-  const other = ix.locator('.ix-entry.foreign').first();
-  await expect(other.locator('.ix-other')).toHaveText('in the other copy');
-  const id = await other.getAttribute('data-card');
-  await other.click();
-  await expect(drawerCard(page, id!)).toBeVisible();
-  await expect(drawerCard(page, id!).locator('.notice.edition')).toContainText('the index lists the pages of both copies');
+  // Every card is listed alike, without marks for the copies: the whole
+  // dictionary is in both. A card of the female half of a pair (the setup
+  // pins the male copy) opens as itself and names the other telling.
+  const total = await page.evaluate(async () => (await (await fetch('data/cards.json')).json()).cards.length);
+  await expect(ix.locator('.ix-entry')).toHaveCount(total);
+  await expect(ix.locator('.ix-other, .ix-entry.foreign')).toHaveCount(0);
+  const jacobs = ix.locator('.ix-entry[data-card="jacobs-garret"]');
+  await jacobs.scrollIntoViewIfNeeded();
+  await jacobs.click();
+  await expect(drawerCard(page, 'jacobs-garret')).toBeVisible();
+  await expect(drawerCard(page, 'jacobs-garret').locator('.pair-line')).toHaveText(/^In\syour\scopy\sthis\stheme\sis\stold\sthrough\s“Frederick\sDouglass/);
+  await expect(page.locator('.notice.edition')).toHaveCount(0);
 
   if (info.project.name === 'mobile') {
     // No sideways scrolling at phone width.

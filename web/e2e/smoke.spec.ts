@@ -661,7 +661,7 @@ test('the engine room folds long YAML values and scrolls, never soft-wraps; copy
   await expect(page.locator('.term.multi button.copy').first()).toHaveAttribute('aria-label', /Copy/);
 });
 
-test('the copy switch flips a paired card at once, and the pairs list links both voices', async ({ browser, baseURL }) => {
+test('both copies hold the whole dictionary: a link opens its own card, a pair card names the other telling', async ({ browser, baseURL }) => {
   // A page of its own: the shared setup pins the male copy on every load.
   const page = await (await browser.newContext({ baseURL })).newPage();
   await page.addInitScript(() => {
@@ -670,12 +670,27 @@ test('the copy switch flips a paired card at once, and the pairs list links both
       sessionStorage.setItem('seeded', '1');
     }
   });
+  // In the female copy, Douglass is Douglass: no swap, no notice, one quiet line.
   await page.goto('/#focus=douglass-covey');
-  await expect(page.locator('.card h2, #card-title').first()).toContainText('Harriet Jacobs');
-  await expect(page.locator('.notice.edition')).toContainText('This story belongs to the other copy');
+  await expect(page.locator('#card-title')).toContainText('Frederick Douglass');
+  await expect(page.locator('.notice.edition')).toHaveCount(0);
+  const line = page.locator('.card .pair-line');
+  await expect(line).toHaveText(/^In\syour\scopy\sthis\stheme\sis\stold\sthrough\s“Harriet\sJacobs/);
+  await page.goto('/#focus=jacobs-garret');
+  await expect(page.locator('#card-title')).toContainText('Harriet Jacobs');
+  await expect(line).toHaveText(/^In\sthe\sother\scopy\sthis\stheme\sis\stold\sthrough\s“Frederick\sDouglass/);
+  await line.locator('a').click();
+  await expect(page.locator('#card-title')).toContainText('Frederick Douglass');
+  // A [[link]] to Douglass (the guide has one) opens Douglass in the female copy.
+  await page.goto('/#view=guide');
+  await page.locator('.mx-guide a[data-card="douglass-covey"]').first().click();
+  await expect(page.locator('#card-title')).toContainText('Frederick Douglass');
+
   await page.goto('/');
   const note = page.locator('.opener .ed-note:visible');
-  await expect(note).toContainText(/Yours\sis\sthe\sfemale\scopy;\sin\sit\syou\sread\s/);
+  await expect(note).toContainText(/Each\sholds\sthe\swhole\sdictionary:\severy\scard\sopens\sin\sboth\./);
+  await expect(note).toContainText(/Yours\sis\sthe\sfemale\scopy;\sin\sits\schapters\syou\sread\s/);
+  await expect(note).toContainText('Pavić');
   // The note names the reader's own stories, never both copies' (the list is behind a button).
   await expect(note.locator('p').first()).not.toContainText('Frederick Douglass');
   // The pairs come from the data: count them there.
@@ -689,11 +704,37 @@ test('the copy switch flips a paired card at once, and the pairs list links both
   await note.getByRole('button', { name: pairs === 2 ? 'Both pairs' : `All ${said} pairs` }).click();
   await expect(note.locator('.ed-pairs li')).toHaveCount(pairs);
   await expect(note.locator('.ed-pairs')).toContainText('Harriet Jacobs');
-  await expect(note).toContainText(`They differ in ${said} places`);
+  await expect(note).toContainText(new RegExp(`in\\s${said}\\splaces\\sa\\schapter\\stells\\sits\\stheme\\sthrough\\sanother\\sstory`));
   await note.getByRole('button', { name: 'Open the male copy' }).click();
   await expect(page.locator('.opener .ed-note:visible')).toContainText(/Yours\sis\sthe\smale\scopy/);
   await page.goto('/#focus=jacobs-garret');
-  await expect(page.locator('.card h2, #card-title').first()).toContainText('Frederick Douglass');
+  await expect(page.locator('#card-title')).toContainText('Harriet Jacobs');
+  await expect(page.locator('.card .pair-line')).toHaveText(/^In\syour\scopy\sthis\stheme\sis\stold\sthrough\s“Frederick\sDouglass/);
+});
+
+test('a card with {male}/{female} paragraphs reads its own paragraph in each copy, in Russian too', async ({ browser, baseURL }) => {
+  for (const ed of ['m', 'f'] as const) {
+    const page = await (await browser.newContext({ baseURL })).newPage();
+    await page.addInitScript((e) => localStorage.setItem('sankofa.edition', e), ed);
+    // Mark one shared card's copies in the data the museum loads.
+    await page.route('**/data/cards.json', async (route) => {
+      const res = await route.fetch();
+      const d = await res.json();
+      const z = d.cards.find((c: { id: string }) => c.id === 'zong');
+      z.body += '\n\n{male} A paragraph for him.\n\n{female} A paragraph for her.';
+      if (z.translations?.ru?.body) z.translations.ru.body += '\n\n{male} Абзац для него.\n\n{female} Абзац для неё.';
+      await route.fulfill({ response: res, json: d });
+    });
+    await page.goto('/#focus=zong');
+    const text = page.locator('.card .text');
+    await expect(text).toContainText(ed === 'm' ? 'A paragraph for him.' : 'A paragraph for her.');
+    await expect(text).not.toContainText(ed === 'm' ? 'for her' : 'for him');
+    await expect(text).not.toContainText('{male}');
+    await page.goto('/#focus=zong&lang=ru');
+    await expect(text).toContainText(ed === 'm' ? 'Абзац для него.' : 'Абзац для неё.');
+    await expect(text).not.toContainText(ed === 'm' ? 'для неё' : 'для него');
+    await page.context().close();
+  }
 });
 
 test('one name per chapter: era tags read the chapter titles', async ({ page }) => {

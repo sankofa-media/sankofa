@@ -236,7 +236,7 @@ export class RouteReader {
     const play = this.playBtn(ref);
     if (ref.startsWith('card:')) {
       const id = ref.slice(5);
-      const c = this.ctx.app.set.forEdition(id, this.ctx.app.edition) ?? this.ctx.app.set.get(id);
+      const c = this.ctx.app.set.get(id);
       const img = c?.media?.find((m) => m.type === 'image');
       const deep = i > 0 && this.route[i - 1].startsWith('card:');
       const origins = this.threads.filter((t) => t.origin === i);

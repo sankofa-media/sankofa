@@ -84,9 +84,9 @@ describe('the built countries file', () => {
   });
 });
 
-describe('countries in the reader’s copy', async () => {
+describe('countries hold the whole dictionary', async () => {
   const { CardSet } = await import('../src/lib/cards');
-  const { countriesInCopy, countryCopy } = await import('../src/lib/countries');
+  const { countriesWithCards, countryCards } = await import('../src/lib/countries');
   const card = (id: string, years: number[], extra: object = {}) =>
     ({ id, kind: 'event', title: id, wow: '', years, places: [{ name: `${id}-a`, lat: 0, lon: 0 }, { name: `${id}-b`, lat: 1, lon: 1 }], zoom: 3, books: [], body: '', sources: [], ...extra }) as never;
   const set = new CardSet([
@@ -103,16 +103,15 @@ describe('countries in the reader’s copy', async () => {
   };
 
   it('lists a country’s cards in time order, with its own places', () => {
-    const rows = countryCopy(set, 'm', file.countries[0]);
+    const rows = countryCards(set, file.countries[0]);
     expect(rows.map((r) => r.card.id)).toEqual(['early', 'song-m', 'late']);
     expect(rows[2].places.map((p) => p.name)).toEqual(['late-b']);
     expect(rows[2].main).toBe(false);
   });
 
-  it('counts only the reader’s copy, and sorts by the reader’s language', () => {
-    expect(countriesInCopy(set, 'm', file, 'en').map((x) => [x.country.id, x.n])).toEqual([['zeta', 3]]);
-    expect(countriesInCopy(set, 'f', file, 'en').map((x) => [x.country.id, x.n])).toEqual([['alpha', 1], ['zeta', 2]]);
-    expect(countriesInCopy(set, 'f', file, 'ru').map((x) => x.country.id)).toEqual(['zeta', 'alpha']);
+  it('counts both cards of a pair, and sorts by the reader’s language', () => {
+    expect(countriesWithCards(set, file, 'en').map((x) => [x.country.id, x.n])).toEqual([['alpha', 1], ['zeta', 3]]);
+    expect(countriesWithCards(set, file, 'ru').map((x) => x.country.id)).toEqual(['zeta', 'alpha']);
   });
 });
 

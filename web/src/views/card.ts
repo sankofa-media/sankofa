@@ -6,8 +6,8 @@ import { formatYears, KIND_LABEL } from '../lib/cards';
 import { formatFragment, terminalCommand } from '../lib/fragment';
 import { vtags, bookMarks, copyText, h, svgIcon, toast } from '../lib/dom';
 import { eraColor } from '../lib/atlasModel';
-import { chapterLabel, edition, lang, pick, t } from '../lib/i18n';
-import { editionNote, pairLink } from './editionNote';
+import { chapterLabel, edition, lang, t } from '../lib/i18n';
+import { editionNote, pairLine } from './editionNote';
 import { cardYaml } from '../lib/cardYaml';
 import { mediaSrc } from '../lib/media';
 import { paragraphsOf } from '../lib/paragraphs';
@@ -83,16 +83,7 @@ export class Drawer {
   }
 }
 
-export interface CardContext {
-  /** The id the reader followed, when edition resolution swapped it. */
-  asked?: Card;
-  /** The card came from someone else's path and is not in the reader's copy. */
-  foreign?: boolean;
-  /** How a card of the other copy was reached: the index lists both copies. */
-  via?: 'index';
-}
-
-export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElement {
+export function renderCard(app: App, c: Card): HTMLElement {
   const era = ERAS.find((e) => e.id === c.era);
   const img = c.media?.find((m) => m.type === 'image');
   const audio = c.media?.filter((m) => m.type === 'audio') ?? [];
@@ -103,46 +94,9 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
   );
 
   const paragraphs = paragraphsOf(c.body).map((p) => h('p', {}, richText(app, p)));
-  const partner = app.set.partner(c.id);
-  const notices: HTMLElement[] = [];
   // What is disputed reads after the story it qualifies, not before it.
   const contested = c.dispute ? h('div.notice.contested', { role: 'note' }, h('b', {}, t('Contested.') + ' '), c.dispute) : null;
-  if (ctx.asked && ctx.asked.id !== c.id) {
-    notices.push(
-      h(
-        'div.notice.edition',
-        {},
-        // Said once, plainly: whose story this is, and how to read the other.
-        h('b', {}, pick({ en: 'This story belongs to the other copy.', ru: 'Эта история — из другого экземпляра.' }) + ' '),
-        pick({ en: `In yours, the chapter tells “${c.title}”. `, ru: `В вашем глава рассказывает «${c.title}». ` }),
-        pairLink(app, ctx.asked, pick({ en: 'Read the other one →', ru: 'Прочитать ту историю →' })),
-      ),
-    );
-  } else if (ctx.foreign) {
-    notices.push(
-      h(
-        'div.notice.edition',
-        {},
-        h('b', {}, t('From the other copy.') + ' '),
-        ctx.via === 'index'
-          ? pick({ en: `You hold the ${edition(app.edition)}; the index lists the pages of both copies.`, ru: `У вас ${edition(app.edition)}; указатель перечисляет страницы обоих экземпляров.` })
-          : t("You hold the {edition}; this page reached you through another reader's path.", { edition: edition(app.edition) }),
-        partner ? ' ' + t('Its counterpart in your copy is') + ' ' : '',
-        partner ? h('a', { href: `#focus=${partner.id}`, 'data-card': partner.id }, partner.title) : '',
-        partner ? '.' : '',
-      ),
-    );
-  } else if (c.edition === 'm' || c.edition === 'f') {
-    notices.push(
-      h(
-        'div.notice.edition',
-        {},
-        h('b', {}, t('Only in the {edition}.', { edition: edition(c.edition, 'prep') }) + ' '),
-        partner ? pick({ en: `In the other copy, the chapter tells “${partner.title}”. `, ru: `В другом экземпляре глава рассказывает «${partner.title}». ` }) : '',
-        partner ? pairLink(app, partner, pick({ en: 'Read it →', ru: 'Прочитать →' })) : '',
-      ),
-    );
-  }
+  const other = pairLine(app, c);
 
   const backlinks = app.set.backlinks(c.id).map((id) => app.set.get(id)).filter(Boolean) as Card[];
   const sameGenre = (c.genres ?? []).map((g) => app.set.get(g)).filter(Boolean) as Card[];
@@ -165,9 +119,9 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
       {},
       c.books.map((b) => h(`span.book.${b}`, {}, bookMarks([b]), BOOK_NAMES[b])),
     ),
-    ...notices,
     h('div.text', {}, ...paragraphs),
     contested,
+    other,
     ...(app.listen.cards[c.id] ?? []).slice(0, 1).map((r) => listenBlock(r)),
     ...audio.map((a) =>
       h(
@@ -258,7 +212,7 @@ export function renderBook(app: App, path: string[], actions: { share(): void; r
       'p',
       {},
       cards.length
-        ? t('Every card you open is written into your own book, here in your browser and nowhere else. Share it and another reader walks the same road, including pages their copy does not have.')
+        ? t('Every card you open is written into your own book, here in your browser and nowhere else. Share it and another reader walks the same road, whichever copy they hold.')
         : t('Open a card and it is written into your own book. Nothing leaves your browser until you share it.'),
     ),
     cards.length

@@ -1995,21 +1995,10 @@ html.cb-modal-open body {
 .ix-entry:hover .ix-title {
   color: var(--gold);
 }
-.ix-meta,
-.ix-other {
+.ix-meta {
   font-family: var(--font-sans);
   font-size: 12px;
   color: var(--ink-3);
-}
-.ix-other {
-  margin-left: 8px;
-  padding: 1px 7px;
-  border: 1px dashed var(--line-2);
-  border-radius: 999px;
-}
-.ix-entry.foreign .ix-title {
-  font-style: italic;
-  color: var(--ink-2);
 }
 /* The wow comes up on hover and on keyboard focus; a screen reader hears it always. */
 .ix-wow {

@@ -1,4 +1,4 @@
-import type { Book, Card, Chapter, Edition, Place } from './types';
+import type { Book, Card, Chapter, Place } from './types';
 import { BOOK_SYMBOLS } from './types';
 import { slug } from './fragment';
 import { localizeCredit, t } from './i18n';
@@ -25,18 +25,7 @@ export class CardSet {
     return this.order.map((id) => this.byId.get(id)!);
   }
 
-  /** Port of card.Set.ForEdition: m/f cards swap for the reader's copy. */
-  forEdition(id: string, edition: Edition | ''): Card | undefined {
-    const c = this.byId.get(id);
-    if (!c || c.edition === 'both' || c.edition === edition || !edition) return c;
-    for (const oid of this.order) {
-      const o = this.byId.get(oid)!;
-      if (o.pair === c.pair && o.id !== c.id) return o;
-    }
-    return c;
-  }
-
-  /** The other copy of an m/f card, if any. */
+  /** The other card of an m/f pair: the same theme told in the other copy. */
   partner(id: string): Card | undefined {
     const c = this.byId.get(id);
     if (!c?.pair) return undefined;
@@ -63,14 +52,6 @@ export class CardSet {
     }
     return partial;
   }
-}
-
-/**
- * The card a link to `id` opens in a copy: an m/f card swaps for its pair,
- * so a link always opens a card of the reader's own copy when there is one.
- */
-export function linkTarget(set: CardSet, id: string, edition: Edition | ''): Card | undefined {
-  return set.forEdition(id, edition) ?? set.get(id);
 }
 
 export function bookSymbols(books: Book[] | undefined): string {

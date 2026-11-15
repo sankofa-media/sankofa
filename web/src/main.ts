@@ -147,14 +147,10 @@ async function start(): Promise<void> {
     edition: held,
     media: (file) => `media/${file}`,
     openCard(id, opts = {}) {
-      const path = route.point.path;
-      const exact = opts.exact ?? !!path?.includes(id);
-      const asked = set.get(id);
-      const c = exact ? asked : set.forEdition(id, app.edition);
+      const c = set.get(id);
       if (!c) return;
       bookDrawer.close(true);
-      const foreign = c.edition !== 'both' && c.edition !== app.edition;
-      cardDrawer.show(renderCard(app, c, { asked: !exact ? asked : undefined, foreign, via: opts.via }));
+      cardDrawer.show(renderCard(app, c));
       const next = reader.recordVisit(c.id);
       pathListeners.forEach((l) => l(next));
       route = { ...route, point: { ...route.point, focus: c.id } };
@@ -172,7 +168,7 @@ async function start(): Promise<void> {
       route = { point: p, view: p.from || p.place || p.zoom || p.path?.length ? undefined : 'atlas' };
       writeRoute(route, push);
       atlas.open(p);
-      if (p.focus) app.openCard(p.focus, { push: false, exact: !!p.path?.includes(p.focus) });
+      if (p.focus) app.openCard(p.focus, { push: false });
     },
     openBook() {
       cardDrawer.close(true);
@@ -396,8 +392,7 @@ async function start(): Promise<void> {
     const a = (e.target as Element).closest<HTMLElement>('[data-card]');
     if (a) {
       e.preventDefault();
-      // data-exact: this very card, even from the other copy (the index lists both).
-      app.openCard(a.dataset.card!, a.dataset.exact !== undefined ? { exact: true, via: a.dataset.exact === 'index' ? 'index' : undefined } : {});
+      app.openCard(a.dataset.card!);
       return;
     }
     const ch = (e.target as Element).closest<HTMLElement>('a[data-chapter]');

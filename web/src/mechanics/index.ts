@@ -123,7 +123,7 @@ export function installMechanics(app: App, hooks: MechHooks): Mechanics {
       const [g, docs, o] = await Promise.all([data.guide(), data.documents().catch(() => null), data.objects().catch(() => null)]);
       const doc = inLang(g);
       const values = {
-        cards: String(app.set.all().filter((c) => c.edition === 'both' || c.edition === app.edition).length),
+        cards: String(app.set.all().length),
         pairs: String(editionPairs(app).length),
         documents: String(docs?.documents.length ?? 0),
         objects: String(OBJECT_KEYS.filter((k) => o?.[k]).length),

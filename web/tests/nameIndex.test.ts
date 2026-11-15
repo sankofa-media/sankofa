@@ -37,12 +37,12 @@ describe('name index', () => {
     expect(fold('Ёлка «Йоруба»')).toBe('елка йоруба');
   });
 
-  it('marks cards of the other copy, filters by either title and by kind', () => {
+  it('lists the cards of both copies alike, filters by either title and by kind', () => {
     const cards = [card('sun-ra', 'Сан Ра'), card('douglass-covey', 'Фредерик Дуглас против Эдварда Кови', { edition: 'm', kind: 'event' }), card('jazz', 'Джаз', { kind: 'genre' })];
     const raw = (id: string) => ({ 'sun-ra': card('sun-ra', 'Sun Ra'), 'douglass-covey': card('douglass-covey', 'Frederick Douglass fights Edward Covey'), jazz: card('jazz', 'Jazz') })[id];
-    const es = indexEntries(cards, 'ru', 'f', raw);
+    const es = indexEntries(cards, 'ru', raw);
     expect(es.map((e) => e.id)).toEqual(['jazz', 'sun-ra', 'douglass-covey']);
-    expect(es.find((e) => e.id === 'douglass-covey')?.foreign).toBe(true);
+    expect(es.find((e) => e.id === 'douglass-covey')).not.toHaveProperty('foreign');
     expect(letters(es)).toEqual(['Д', 'С', 'Ф']);
     expect(filterEntries(es, 'sun', new Set()).map((e) => e.id)).toEqual(['sun-ra']);
     expect(filterEntries(es, 'дуглас', new Set()).map((e) => e.id)).toEqual(['douglass-covey']);
