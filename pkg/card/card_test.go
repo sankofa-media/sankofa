@@ -76,11 +76,11 @@ func TestEditions(t *testing.T) {
 	if errs := s.Validate(); len(errs) != 0 {
 		t.Fatal(errs)
 	}
-	if s.ForEdition("douglass", EditionFemale).ID != "jacobs" {
-		t.Fatal("f reader must get jacobs")
+	if p := s.Partner("douglass"); p == nil || p.ID != "jacobs" {
+		t.Fatal("douglass's partner is jacobs")
 	}
-	if s.ForEdition("douglass", EditionMale).ID != "douglass" {
-		t.Fatal("m reader keeps douglass")
+	if p := s.Partner("jacobs"); p == nil || p.ID != "douglass" {
+		t.Fatal("jacobs's partner is douglass")
 	}
 	if errs := set(m).Validate(); len(errs) != 1 {
 		t.Fatalf("lonely pair must fail: %v", errs)

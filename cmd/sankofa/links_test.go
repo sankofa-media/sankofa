@@ -14,7 +14,8 @@ func linkSet() *card.Set {
 		{ID: "sun-ra", Title: "Sun Ra", Kind: "person", Books: []string{card.BookHeirs}, Years: []int{1914, 1993}, Edition: card.EditionBoth},
 		{ID: "zong", Title: "The Zong massacre", Kind: "event", Books: []string{card.BookArchives}, Years: []int{1781}, Edition: card.EditionBoth},
 		{ID: "blues", Title: "The blues", Kind: "genre", Years: []int{1890}, Edition: card.EditionBoth},
-		{ID: "douglass-covey", Title: "Frederick Douglass fights Edward Covey", Kind: "event", Years: []int{1834}, Edition: card.EditionMale},
+		{ID: "douglass-covey", Title: "Frederick Douglass fights Edward Covey", Kind: "event", Years: []int{1834}, Edition: card.EditionMale, Pair: "freedom"},
+		{ID: "jacobs-garret", Title: "Harriet Jacobs in the garret", Kind: "event", Years: []int{1835}, Edition: card.EditionFemale, Pair: "freedom"},
 	} {
 		s.ByID[c.ID] = c
 		s.Order = append(s.Order, c.ID)
@@ -54,7 +55,7 @@ func TestPrintCardWrapsLinksWhole(t *testing.T) {
 		Further: []string{"[[blues|The blues]], any recording"}}
 	for _, tty := range []bool{false, true} {
 		var b bytes.Buffer
-		printCard(&b, s, c, tty)
+		printCard(&b, s, c, card.EditionMale, tty)
 		out := b.String()
 		for _, line := range strings.Split(out, "\n") {
 			if visibleWidth(line) > 78 && !strings.Contains(line, "#") {
@@ -72,13 +73,16 @@ func TestPrintCardWrapsLinksWhole(t *testing.T) {
 
 func TestIndexOrder(t *testing.T) {
 	var b bytes.Buffer
-	printIndex(&b, linkSet(), card.EditionFemale, linkStyle{})
+	printIndex(&b, linkSet(), linkStyle{})
 	out := b.String()
 	if !strings.HasPrefix(out, "B\n  The blues") {
 		t.Fatalf("English ignores a leading The:\n%s", out)
 	}
-	if !strings.Contains(out, "Frederick Douglass fights Edward Covey · 1834 · event · in the other copy [douglass-covey]") {
-		t.Fatalf("the other copy is marked:\n%s", out)
+	if !strings.Contains(out, "Frederick Douglass fights Edward Covey · 1834 · event [douglass-covey]") || !strings.Contains(out, "Harriet Jacobs in the garret · 1835 · event [jacobs-garret]") {
+		t.Fatalf("both cards of a pair are listed, unmarked:\n%s", out)
+	}
+	if strings.Contains(out, "other copy") {
+		t.Fatalf("no card is marked as the other copy's:\n%s", out)
 	}
 	titles := func(l string, ts ...string) []string {
 		var cs []*card.Card
@@ -101,5 +105,38 @@ func TestIndexOrder(t *testing.T) {
 	}
 	if l := indexLetter("The Zong massacre", "en"); l != "Z" {
 		t.Fatalf("got %s", l)
+	}
+}
+
+func TestPrintCardReadsItsCopy(t *testing.T) {
+	s := linkSet()
+	c := &card.Card{ID: "x", Title: "X", Kind: "person", Years: []int{1900}, Wow: "w",
+		Body: "Both read this.\n\n{male} A paragraph for him.\n\n{female} A paragraph for her."}
+	for ed, want := range map[string]string{card.EditionMale: "for him", card.EditionFemale: "for her"} {
+		var b bytes.Buffer
+		printCard(&b, s, c, ed, false)
+		out := b.String()
+		other := map[string]string{"for him": "for her", "for her": "for him"}[want]
+		if !strings.Contains(out, "Both read this.") || !strings.Contains(out, want) || strings.Contains(out, other) || strings.Contains(out, "{male}") {
+			t.Fatalf("%s copy reads its own paragraph:\n%s", ed, out)
+		}
+	}
+}
+
+func TestPrintCardNamesTheOtherTelling(t *testing.T) {
+	s := linkSet()
+	plain := func(c *card.Card, ed string) string {
+		var b bytes.Buffer
+		printCard(&b, s, c, ed, false)
+		return strings.Join(strings.Fields(b.String()), " ")
+	}
+	if out := plain(s.ByID["douglass-covey"], card.EditionMale); !strings.Contains(out, "In the other copy this theme is told through “Harriet Jacobs in the garret” [jacobs-garret].") {
+		t.Fatalf("a pair card names its partner:\n%s", out)
+	}
+	if out := plain(s.ByID["douglass-covey"], card.EditionFemale); !strings.Contains(out, "In your copy this theme is told through “Harriet Jacobs in the garret” [jacobs-garret].") {
+		t.Fatalf("seen from the other copy, the line names the reader's own card:\n%s", out)
+	}
+	if out := plain(s.ByID["zong"], card.EditionFemale); strings.Contains(out, "this theme is told") {
+		t.Fatalf("a shared card has no pair line:\n%s", out)
 	}
 }

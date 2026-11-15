@@ -30,8 +30,8 @@ func (p *Picker) Next() *card.Card {
 		}
 	}
 	for _, id := range p.Set.Order {
-		c := p.Set.ByID[id]
-		if c.Edition != card.EditionBoth || p.prev[id] {
+		// Both copies hold the whole dictionary: any card can be a crumb.
+		if p.prev[id] {
 			continue
 		}
 		any = append(any, id)
