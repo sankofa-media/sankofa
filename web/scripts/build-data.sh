@@ -5,6 +5,7 @@
 #   web/public/data/countries.json (cards by present-day country)
 #   web/public/data/listen.json    (recordings to listen to)
 #   web/public/data/names.json     (every card's names, content/aliases.yaml)
+#   web/public/data/factoids.json  (checked factoids only, content/factoids)
 #   web/public/media/              (content/media)
 # Content comes from content/ when it has chapters; otherwise from the
 # placeholder set in web/fixtures/. Override with SANKOFA_CONTENT=<dir>.
@@ -32,6 +33,9 @@ if ! ls "$src/roots"/*.yaml >/dev/null 2>&1 && [ "$src" != web/fixtures ]; then
   echo "roots: placeholders from web/fixtures/roots"
 fi
 go run ./cmd/sankofa content export "$cards" -o web/public/data/cards.json
+# Short verified facts: only status "checked", validated against the cards;
+# an empty list when the content has none.
+go run ./cmd/sankofa content factoids "$src/factoids" --cards "$cards" -o web/public/data/factoids.json
 # Present-day countries of the card places (content/countries.yaml).
 node "$web/scripts/build-countries.ts" web/public/data/cards.json "$src/countries.yaml" web/public/data/countries.json
 node "$web/scripts/build-chapters.ts" "$src/chapters" web/public/data/chapters.json
