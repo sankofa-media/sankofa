@@ -82,7 +82,8 @@ const single: Render = (kit, sc) => {
       h('span.sg-hole', { 'aria-hidden': 'true' }),
       h('small.sg-side', {}, kit.ui(`side-${side}`)),
       h('b.sg-title', {}, t(`label-${side}`)),
-      h('span.sg-credit', {}, t('credit')),
+      // Bass is credited on the B side only: "Mississippi Goddam" is Simone's own.
+      side === 'b' ? h('span.sg-credit', {}, t('credit')) : null,
       side === 'b' ? h('span.sg-names', { 'data-develop': '0.35 0.8' }, t('names')) : null,
     );
   const disc = h('div.sg-disc', {}, face('a'), face('b'));
