@@ -1,0 +1,221 @@
+# Present-day countries for the atlas's "Countries" mode (web/scripts/build-countries.ts).
+#
+# countries: every country that holds a card place, keyed by `id` (the link key,
+#   country=<id>) and `iso` (ISO 3166-1 numeric, the Natural Earth / world-atlas
+#   feature id). `name` in English and Russian is required; `about` is the short
+#   header, and every fact in it is sourced in content/ledger/countries.yaml.
+#   A country without a sourced header shows only its name and card count.
+# areas: places inside a box go to a country regardless of the map's de facto
+#   line (internationally recognised borders, as in UN General Assembly resolutions).
+# overrides: one card place, by its English name, to a country id or `none`.
+#   For border towns the 1:50m outlines put on the wrong side, and for places
+#   that name a region rather than a point.
+
+areas:
+  - country: ukraine
+    why: Crimea (UN General Assembly resolution 68/262); Natural Earth draws it with Russia
+    box: [32.4, 44.3, 36.7, 46.3]   # [west, south, east, north]
+overrides:
+  - {card: mapungubwe-rhino, place: "Mapungubwe Hill, Limpopo, South Africa", country: south-africa}
+  - {card: parsley-massacre, place: "Ouanaminthe, Haiti", country: haiti}
+  - {card: faras-cathedral, place: "Faras (Pachoras), Sudan–Egypt border", country: sudan}
+  - {card: gannibal, place: "Logone-Birni (proposed birthplace)", country: cameroon}
+  - {card: siddi-of-karnataka, place: "Gaur, Bengal", country: india}
+  - {card: work-songs, place: "West and Central Africa", country: none}
+countries:
+  - {id: algeria, iso: "012", name: {en: "Algeria", ru: "Алжир"}}
+  - id: angola
+    iso: "024"
+    name: {en: "Angola", ru: "Ангола"}
+    about:
+      en: "In the 14th century the Kingdom of Kongo arose here, with its capital, Mbanza Kongo, in what is now northern Angola. The Kingdom of Ndongo also lay here: in the 17th century Queen Njinga ruled Ndongo and Matamba and fought the Portuguese who were invading her lands."
+      ru: "В XIV веке здесь возникло Королевство Конго, и его столица Мбанза-Конго стояла на нынешнем севере Анголы. Здесь же лежало Ндонго: в XVII веке королева Нзинга правила Ндонго и Матамбой и воевала с португальцами, вторгавшимися в её земли."
+  - {id: antigua-and-barbuda, iso: "028", name: {en: "Antigua and Barbuda", ru: "Антигуа и Барбуда"}}
+  - {id: argentina, iso: "032", name: {en: "Argentina", ru: "Аргентина"}}
+  - {id: aruba, iso: "533", name: {en: "Aruba", ru: "Аруба"}}
+  - {id: australia, iso: "036", name: {en: "Australia", ru: "Австралия"}}
+  - {id: austria, iso: "040", name: {en: "Austria", ru: "Австрия"}}
+  - {id: bahamas, iso: "044", name: {en: "Bahamas", ru: "Багамские Острова"}}
+  - {id: barbados, iso: "052", name: {en: "Barbados", ru: "Барбадос"}}
+  - {id: belgium, iso: "056", name: {en: "Belgium", ru: "Бельгия"}}
+  - {id: belize, iso: "084", name: {en: "Belize", ru: "Белиз"}}
+  - id: benin
+    iso: "204"
+    name: {en: "Benin", ru: "Бенин"}
+    about:
+      en: "In the 18th century the Kingdom of Dahomey, a state of the Fon, came to dominate the region. Dahomey built its power in part by selling captives into the Atlantic slave trade, and Vodun, the religion of this land, crossed the ocean with enslaved people."
+      ru: "В XVIII веке Королевство Дагомея, государство фон, подчинило себе соседей. Свою мощь Дагомея строила и на продаже пленников в атлантическую работорговлю, а водун, религия этих мест, пересёк океан вместе с невольниками."
+  - {id: bermuda, iso: "060", name: {en: "Bermuda", ru: "Бермудские Острова"}}
+  - {id: botswana, iso: "072", name: {en: "Botswana", ru: "Ботсвана"}}
+  - id: brazil
+    iso: "076"
+    name: {en: "Brazil", ru: "Бразилия"}
+    about:
+      en: "People who escaped slavery built quilombos here, among them Palmares, which held out in the 17th century under leaders including Zumbi. In Bahia, Candomblé took shape from West and Central African traditions brought by the enslaved, and samba grew among the region's Afro-Brazilians."
+      ru: "Бежавшие из рабства строили здесь киломбу — среди них Палмарис, который держался в XVII веке под началом Зумби. В Баие из западно- и центральноафриканских традиций, привезённых невольниками, сложилось кандомбле, а среди афробразильцев того же края выросла самба."
+  - {id: burkina-faso, iso: "854", name: {en: "Burkina Faso", ru: "Буркина-Фасо"}}
+  - {id: cabo-verde, iso: "132", name: {en: "Cabo Verde", ru: "Кабо-Верде"}}
+  - {id: cameroon, iso: "120", name: {en: "Cameroon", ru: "Камерун"}}
+  - id: canada
+    iso: "124"
+    name: {en: "Canada", ru: "Канада"}
+    about:
+      en: "Black Loyalists, African Americans who won freedom by siding with the British in the American Revolution, settled in Nova Scotia in 1783–84; Birchtown became their largest settlement. Africville in Halifax was an African Canadian community for more than a century until the city demolished it in the 1960s."
+      ru: "Чёрные лоялисты — афроамериканцы, добывшие свободу на стороне британцев в Войне за независимость, — в 1783–1784 годах обосновались в Новой Шотландии, и крупнейшим их поселением стал Бёрчтаун. Африквилль в Галифаксе больше века оставался афроканадской общиной, пока в 1960-е годы город его не снёс."
+  - {id: chad, iso: "148", name: {en: "Chad", ru: "Чад"}}
+  - {id: chile, iso: "152", name: {en: "Chile", ru: "Чили"}}
+  - id: colombia
+    iso: "170"
+    name: {en: "Colombia", ru: "Колумбия"}
+    about:
+      en: "San Basilio de Palenque was founded in the 17th century by people who escaped slavery, as a refuge. Its language, Palenquero, is a creole with Spanish vocabulary and Bantu grammatical features."
+      ru: "Сан-Басилио-де-Паленке основали в XVII веке бежавшие из рабства — как убежище. Его язык, паленкеро, — креольский: словарь у него испанский, а грамматика несёт черты языков банту."
+  - {id: congo, iso: "178", name: {en: "Republic of the Congo", ru: "Республика Конго"}}
+  - {id: costa-rica, iso: "188", name: {en: "Costa Rica", ru: "Коста-Рика"}}
+  - {id: cote-d-ivoire, iso: "384", name: {en: "Côte d’Ivoire", ru: "Кот-д’Ивуар"}}
+  - id: cuba
+    iso: "192"
+    name: {en: "Cuba", ru: "Куба"}
+    about:
+      en: "Santería, also called Regla de Ocha, joins African, above all Yoruba, worship with Spanish Catholic elements. Rumba took shape in Havana and Matanzas, in the poor neighbourhoods of Black Cubans and among communities of the enslaved."
+      ru: "Сантерия, или Регла-де-Оча, соединила африканские, прежде всего йорубские, верования с испанским католичеством. Румба сложилась в Гаване и Матансасе — в бедных кварталах чернокожих кубинцев и в общинах невольников."
+  - {id: curacao, iso: "531", name: {en: "Curaçao", ru: "Кюрасао"}}
+  - {id: denmark, iso: "208", name: {en: "Denmark", ru: "Дания"}}
+  - {id: dominican-republic, iso: "214", name: {en: "Dominican Republic", ru: "Доминиканская Республика"}}
+  - id: dr-congo
+    iso: "180"
+    name: {en: "DR Congo", ru: "ДР Конго"}
+    about:
+      en: "Here lay the Kuba kingdom, known for its cloth woven from raffia palm fibre, and the Luba kingdom."
+      ru: "Здесь лежали Королевство Куба, известное тканями из волокна пальмы рафии, и Королевство Луба."
+  - {id: ecuador, iso: "218", name: {en: "Ecuador", ru: "Эквадор"}}
+  - {id: egypt, iso: "818", name: {en: "Egypt", ru: "Египет"}}
+  - {id: equatorial-guinea, iso: "226", name: {en: "Equatorial Guinea", ru: "Экваториальная Гвинея"}}
+  - id: ethiopia
+    iso: "231"
+    name: {en: "Ethiopia", ru: "Эфиопия"}
+    about:
+      en: "The north of the country was home to the Kingdom of Aksum, which arose in the 1st century CE; its king Ezana made Christianity the state religion. Around the turn of the 13th century eleven churches were carved out of solid rock at Lalibela, conceived as a second Jerusalem and attributed to King Lalibela."
+      ru: "На севере страны лежало Аксумское царство, возникшее в I веке н. э.; его царь Эзана сделал христианство государственной религией. На рубеже XII–XIII веков в Лалибеле из цельной скалы вырубили одиннадцать церквей — их задумали как второй Иерусалим и приписывают царю Лалибеле."
+  - id: france
+    iso: "250"
+    name: {en: "France", ru: "Франция"}
+    about:
+      en: "In Paris in the 1930s, students from France's colonies, Aimé Césaire of Martinique, Léon-Gontran Damas of French Guiana and Léopold Sédar Senghor of Senegal, founded Négritude. In Guadeloupe, enslaved Africans and their descendants created gwoka."
+      ru: "В 1930-е годы в Париже студенты из французских колоний — Эме Сезер с Мартиники, Леон-Гонтран Дамас из Французской Гвианы и Леопольд Седар Сенгор из Сенегала — основали негритюд. На Гваделупе порабощённые африканцы и их потомки создали гвоку."
+  - {id: gambia, iso: "270", name: {en: "The Gambia", ru: "Гамбия"}}
+  - {id: germany, iso: "276", name: {en: "Germany", ru: "Германия"}}
+  - id: ghana
+    iso: "288"
+    name: {en: "Ghana", ru: "Гана"}
+    about:
+      en: "The ancient Ghana Empire lay elsewhere, in present-day Mauritania and Mali. Here, among the Akan states, Osei Tutu founded the Asante kingdom at the end of the 17th century, with its capital at Kumasi and the Golden Stool as the symbol of its unity. On the coast the Portuguese fortress of Elmina became a collection point for captives sold to European slavers."
+      ru: "Древняя Гана лежала в другом месте — на землях нынешних Мавритании и Мали. Здесь же, среди государств акан, в конце XVII века Осей Туту основал королевство Ашанти со столицей в Кумаси, и символом его единства стал Золотой стул. На побережье португальская крепость Эльмина стала местом, куда свозили пленников на продажу европейским работорговцам."
+  - {id: guinea, iso: "324", name: {en: "Guinea", ru: "Гвинея"}}
+  - {id: guinea-bissau, iso: "624", name: {en: "Guinea-Bissau", ru: "Гвинея-Бисау"}}
+  - {id: guyana, iso: "328", name: {en: "Guyana", ru: "Гайана"}}
+  - id: haiti
+    iso: "332"
+    name: {en: "Haiti", ru: "Гаити"}
+    about:
+      en: "Until 1804 this was Saint-Domingue, France's richest colony. An uprising of the enslaved that began in 1791 drove the Haitian Revolution, and on 1 January 1804 independence was proclaimed: Haiti became the first Black nation in the Americas."
+      ru: "До 1804 года здесь была колония Сан-Доминго — богатейшее владение Франции. Восстание невольников, начавшееся в 1791 году, стало движущей силой Гаитянской революции, и 1 января 1804 года была провозглашена независимость: Гаити стала первой чёрной нацией Америки."
+  - {id: india, iso: "356", name: {en: "India", ru: "Индия"}}
+  - {id: iraq, iso: "368", name: {en: "Iraq", ru: "Ирак"}}
+  - {id: italy, iso: "380", name: {en: "Italy", ru: "Италия"}}
+  - id: jamaica
+    iso: "388"
+    name: {en: "Jamaica", ru: "Ямайка"}
+    about:
+      en: "The Maroons, led in the early 18th century by Nanny, now the country's only female national hero, fought a war that ended with a peace treaty. Rastafari arose here in the 1930s, and reggae grew out of ska and rock steady."
+      ru: "Мароны, которых в начале XVIII века вела Нэнни — ныне единственная женщина среди национальных героев страны, — воевали, пока война не закончилась мирным договором. Здесь же в 1930-е годы возникло растафарианство, а из ска и рокстеди выросло регги."
+  - {id: japan, iso: "392", name: {en: "Japan", ru: "Япония"}}
+  - {id: kenya, iso: "404", name: {en: "Kenya", ru: "Кения"}}
+  - {id: lesotho, iso: "426", name: {en: "Lesotho", ru: "Лесото"}}
+  - {id: liberia, iso: "430", name: {en: "Liberia", ru: "Либерия"}}
+  - {id: maldives, iso: "462", name: {en: "Maldives", ru: "Мальдивы"}}
+  - id: mali
+    iso: "466"
+    name: {en: "Mali", ru: "Мали"}
+    about:
+      en: "Here, in the 13th century, Sundiata Keita founded the Mali Empire, under which Timbuktu became a centre of Islamic learning. In the 15th century the Songhai Empire, ruled from Gao, took over most of Mali's lands."
+      ru: "Здесь в XIII веке Сундиата Кейта основал Империю Мали, и при ней Томбукту стал центром исламской учёности. В XV веке большую часть её земель забрала Империя Сонгаи со столицей в Гао."
+  - {id: mauritania, iso: "478", name: {en: "Mauritania", ru: "Мавритания"}}
+  - {id: mexico, iso: "484", name: {en: "Mexico", ru: "Мексика"}}
+  - {id: morocco, iso: "504", name: {en: "Morocco", ru: "Марокко"}}
+  - {id: namibia, iso: "516", name: {en: "Namibia", ru: "Намибия"}}
+  - {id: netherlands, iso: "528", name: {en: "Netherlands", ru: "Нидерланды"}}
+  - {id: nicaragua, iso: "558", name: {en: "Nicaragua", ru: "Никарагуа"}}
+  - {id: niger, iso: "562", name: {en: "Niger", ru: "Нигер"}}
+  - id: nigeria
+    iso: "566"
+    name: {en: "Nigeria", ru: "Нигерия"}
+    about:
+      en: "In the south lay the Kingdom of Benin, where palace guilds cast brass plaques for the Oba; in 1897 British troops attacked Benin City. The Yoruba developed the Ifa system of divination, and in the north lies Hausaland, where the Durbar, a horse procession around the Emir, is held in Kano."
+      ru: "На юге лежало Королевство Бенин: дворцовые гильдии отливали для оба латунные рельефные пластины. В 1897 году британские войска напали на Бенин-Сити. Йоруба создали систему гадания Ифа, а на севере, в землях хауса, в Кано проходит дурбар — конная процессия вокруг эмира."
+  - {id: norfolk-island, iso: "574", name: {en: "Norfolk Island", ru: "Остров Норфолк"}}
+  - {id: palestine, iso: "275", name: {en: "Palestine", ru: "Палестина"}}
+  - {id: panama, iso: "591", name: {en: "Panama", ru: "Панама"}}
+  - {id: peru, iso: "604", name: {en: "Peru", ru: "Перу"}}
+  - {id: poland, iso: "616", name: {en: "Poland", ru: "Польша"}}
+  - {id: portugal, iso: "620", name: {en: "Portugal", ru: "Португалия"}}
+  - {id: puerto-rico, iso: "630", name: {en: "Puerto Rico", ru: "Пуэрто-Рико"}}
+  - {id: russia, iso: "643", name: {en: "Russia", ru: "Россия"}}
+  - {id: rwanda, iso: "646", name: {en: "Rwanda", ru: "Руанда"}}
+  - {id: saint-barthelemy, iso: "652", name: {en: "Saint Barthélemy", ru: "Сен-Бартелеми"}}
+  - {id: saint-vincent-and-the-grenadines, iso: "670", name: {en: "Saint Vincent and the Grenadines", ru: "Сент-Винсент и Гренадины"}}
+  - {id: sao-tome-and-principe, iso: "678", name: {en: "São Tomé and Príncipe", ru: "Сан-Томе и Принсипи"}}
+  - {id: saudi-arabia, iso: "682", name: {en: "Saudi Arabia", ru: "Саудовская Аравия"}}
+  - id: senegal
+    iso: "686"
+    name: {en: "Senegal", ru: "Сенегал"}
+    about:
+      en: "The island of Gorée was a slave-trading centre where captives were held before their forced passage to the Americas. The Mouride Sufi brotherhood grew from the teachings of Amadou Bamba."
+      ru: "Остров Горе был центром работорговли: здесь держали пленников, прежде чем силой увезти их в Америку. Из учения Амаду Бамбы выросло суфийское братство мюридов."
+  - {id: seychelles, iso: "690", name: {en: "Seychelles", ru: "Сейшельские Острова"}}
+  - {id: sierra-leone, iso: "694", name: {en: "Sierra Leone", ru: "Сьерра-Леоне"}}
+  - {id: somalia, iso: "706", name: {en: "Somalia", ru: "Сомали"}}
+  - id: south-africa
+    iso: "710"
+    name: {en: "South Africa", ru: "ЮАР"}
+    about:
+      en: "Around 1200 Mapungubwe, on the Limpopo, was the centre of a kingdom that traded gold and ivory as far as China and India. In the early 19th century Shaka expanded the Zulu kingdom by military force."
+      ru: "Около 1200 года Мапунгубве на Лимпопо было центром королевства, которое торговало золотом и слоновой костью вплоть до Китая и Индии. В начале XIX века Чака силой оружия расширил Королевство зулусов."
+  - {id: spain, iso: "724", name: {en: "Spain", ru: "Испания"}}
+  - id: sudan
+    iso: "729"
+    name: {en: "Sudan", ru: "Судан"}
+    about:
+      en: "Along the Nile here lay Kush, whose kings conquered Egypt and ruled it as its Twenty-fifth Dynasty; at Meroë, their capital, Kushite royals were buried beneath pyramids. In the 6th century the Nubian kingdom of Makuria, with its capital at Old Dongola, became Christian."
+      ru: "По Нилу здесь простиралось царство Куш: его цари завоевали Египет и правили им как XXV династия, а в столице, Мероэ, царственных особ хоронили под пирамидами. В VI веке христианство приняло нубийское царство Макурия со столицей в Старой Донголе."
+  - {id: suriname, iso: "740", name: {en: "Suriname", ru: "Суринам"}}
+  - {id: sweden, iso: "752", name: {en: "Sweden", ru: "Швеция"}}
+  - {id: tanzania, iso: "834", name: {en: "Tanzania", ru: "Танзания"}}
+  - id: trinidad-and-tobago
+    iso: "780"
+    name: {en: "Trinidad and Tobago", ru: "Тринидад и Тобаго"}
+    about:
+      en: "Calypso grew among Trinidad's people of African descent, and the steelpan was developed here in the 1930s and 1940s. London's Notting Hill Carnival draws on Trinidad's carnival tradition."
+      ru: "Калипсо выросло среди тринидадцев африканского происхождения, а в 1930–1940-е годы здесь появился стилпэн. На традицию тринидадского карнавала опирается и лондонский карнавал в Ноттинг-Хилле."
+  - {id: tunisia, iso: "788", name: {en: "Tunisia", ru: "Тунис"}}
+  - {id: turkey, iso: "792", name: {en: "Türkiye", ru: "Турция"}}
+  - {id: uganda, iso: "800", name: {en: "Uganda", ru: "Уганда"}}
+  - {id: ukraine, iso: "804", name: {en: "Ukraine", ru: "Украина"}}
+  - id: united-kingdom
+    iso: "826"
+    name: {en: "United Kingdom", ru: "Великобритания"}
+    about:
+      en: "From 1948, beginning with the Empire Windrush, Caribbean people came to help rebuild post-war Britain: the Windrush generation. In London, Claudia Jones staged a Caribbean carnival in 1959, and a street festival in 1966 began the annual Notting Hill Carnival."
+      ru: "С 1948 года, когда пришёл корабль «Эмпайр Уиндраш», люди с Карибских островов приезжали отстраивать послевоенную Британию — так появилось поколение «Уиндраша». В 1959 году Клаудия Джонс устроила в Лондоне карибский карнавал, а с уличного праздника 1966 года начался ежегодный карнавал в Ноттинг-Хилле."
+  - id: united-states
+    iso: "840"
+    name: {en: "United States", ru: "США"}
+    about:
+      en: "On the Sea Islands and the coast from North Carolina to Florida, descendants of enslaved Africans formed the Gullah Geechee people. Blues and jazz arose in African American communities, and in the 1920s and 1930s Harlem became the centre of the Harlem Renaissance."
+      ru: "На Морских островах и побережье от Северной Каролины до Флориды потомки порабощённых африканцев сложились в народ гулла-гичи. Блюз и джаз родились в афроамериканских общинах, а в 1920–1930-е годы Гарлем стал средоточием гарлемского ренессанса."
+  - {id: uruguay, iso: "858", name: {en: "Uruguay", ru: "Уругвай"}}
+  - {id: us-virgin-islands, iso: "850", name: {en: "US Virgin Islands", ru: "Виргинские Острова (США)"}}
+  - {id: uzbekistan, iso: "860", name: {en: "Uzbekistan", ru: "Узбекистан"}}
+  - {id: yemen, iso: "887", name: {en: "Yemen", ru: "Йемен"}}
+  - {id: zambia, iso: "894", name: {en: "Zambia", ru: "Замбия"}}
+  - {id: zimbabwe, iso: "716", name: {en: "Zimbabwe", ru: "Зимбабве"}}

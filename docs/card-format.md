@@ -104,3 +104,34 @@ must first explain what the thing is — how it sounds or works, where and when 
 arose, what it was for, its main forms and names — and only then tell the story
 that makes it memorable, and finally where it came from and what grew out of it.
 Up to 235 words.
+
+# Countries
+
+The atlas's "Countries" mode groups cards by present-day country. Nothing is
+written on the card: `web/scripts/build-countries.ts` assigns every place in
+`places` to the Natural Earth 1:50m admin-0 country it lies in (public domain,
+from the `world-atlas` package the map already draws), with an offline
+point-in-polygon test. A place within 30 km of a coast counts for that coast's
+country (harbours and small islands the coarse outline misses); a place at sea,
+at a pole or in Antarctica counts for none.
+
+- A card counts for **every** country one of its places lies in, not only the
+  main one: Josephine Bakhita belongs to both Sudan and Italy. The country list
+  marks which of the card's places lie in that country; the main place
+  (`places[0]`) is the card's home on the map as before.
+- Overseas departments and territories follow Natural Earth: Guadeloupe and
+  Martinique count with France, Puerto Rico, Bermuda or Curaçao are their own entries.
+- Where Natural Earth's de facto line differs from internationally recognised
+  borders (Crimea), `areas` in `content/countries.yaml` decides.
+- When the outline puts a border town on the wrong side, or a place names a
+  region rather than a point ("West and Central Africa"), add an entry to
+  `overrides` in `content/countries.yaml`: `{card, place, country}` with the
+  place's English name exactly as on the card and a country id or `none`.
+  Card front matter stays unchanged, so translations and the linter are not affected.
+- Every country that receives a card needs an entry in `content/countries.yaml`
+  with `name.en` and `name.ru` (standard Russian usage), or the build fails. The
+  optional `about` header (1–3 sentences, English and Russian) names the
+  communities and cultures that formed there and the historical states on its
+  territory; every fact in it has two independent sources with a verbatim quote
+  in `content/ledger/countries.yaml`. Without a sourced header the country shows
+  only its name and card count.

@@ -62,6 +62,14 @@ export interface MapRegion {
   color: string;
 }
 
+/** Countries to shade: those with cards, and the one chosen. */
+export interface MapCountries {
+  lit: Set<string>;
+  on?: string;
+  /** Accessible names by ISO id, for the tooltip. */
+  names?: Map<string, string>;
+}
+
 export interface MapNumber {
   n: number;
   lon: number;
@@ -77,6 +85,8 @@ interface Options {
   onHover?: (id: string | null, ev?: MouseEvent) => void;
   onLevel?: (level: number) => void;
   onMoveEnd?: () => void;
+  /** A click on a shaded country (setCountries), by its ISO numeric id. */
+  onCountry?: (iso: string) => void;
   /** Screen rectangles labels must stay out of (the text column, say). */
   avoid?: () => [number, number, number, number][];
   /** At most this many labels at once. */
@@ -109,11 +119,15 @@ export class GeoMap {
   private routes: MapRoute[] = [];
   private landGeo: unknown = null;
   private bordersGeo: unknown = null;
+  private countryGeo: { id?: string | number; properties?: { name?: string } }[] = [];
+  private shaded: MapCountries | null = null;
   private lastLevel = 0;
   private ro: ResizeObserver;
   private idPrefix = `m${++uid}`;
   /** Pixels on the right covered by a panel; flights centre in what is left. */
   inset = 0;
+  /** Pixels on the left covered by a panel. */
+  insetLeft = 0;
   private labelWidths = new Map<string, number>();
   private flight: [number, number, number, number] | null = null;
 
@@ -181,12 +195,14 @@ export class GeoMap {
     const [land, countries] = await Promise.all([loadTopo(land110Url), loadTopo(countries110Url)]);
     this.landGeo = feature(land, land.objects.land as never);
     this.bordersGeo = mesh(countries, countries.objects.countries as never, (a, b) => a !== b);
+    this.countryGeo = (feature(countries, countries.objects.countries as never) as unknown as { features: never[] }).features;
     this.drawBase();
     if (detail === 'high') {
       // Sharper coasts for the explorer, loaded after the first paint.
       Promise.all([loadTopo(land50Url), loadTopo(countries50Url)]).then(([l, c]) => {
         this.landGeo = feature(l, l.objects.land as never);
         this.bordersGeo = mesh(c, c.objects.countries as never, (a, b) => a !== b);
+        this.countryGeo = (feature(c, c.objects.countries as never) as unknown as { features: never[] }).features;
         this.drawBase();
       });
     }
@@ -226,9 +242,32 @@ export class GeoMap {
     this.gZoom.selectAll('*').remove();
     this.gZoom.append('path').attr('class', 'graticule').attr('d', path(geoGraticule10()));
     this.gZoom.append('path').attr('class', 'land').attr('d', path(this.landGeo as never));
+    this.drawCountries(path);
     this.gZoom.append('path').attr('class', 'borders').attr('d', path(this.bordersGeo as never));
     this.renderOverlay();
     this.placeLabels();
+  }
+
+  /** Shade the countries that have cards, and the chosen one; null clears. */
+  setCountries(c: MapCountries | null): void {
+    this.shaded = c;
+    if (this.landGeo) this.drawCountries(geoPath(this.projection));
+  }
+
+  private drawCountries(path: ReturnType<typeof geoPath>): void {
+    this.gZoom.selectAll('g.countries').remove();
+    const c = this.shaded;
+    if (!c) return;
+    const iso = (f: { id?: string | number }) => String(f.id ?? '');
+    const g = this.gZoom.insert('g', 'path.borders').attr('class', 'countries').attr('aria-hidden', 'true');
+    g.selectAll('path')
+      .data(this.countryGeo.filter((f) => c.lit.has(iso(f))))
+      .join('path')
+      .attr('class', (f) => `country${iso(f) === c.on ? ' on' : ''}`)
+      .attr('d', (f) => path(f as never))
+      .on('click', (_, f) => this.opts.onCountry?.(iso(f)))
+      .append('title')
+      .text((f) => c.names?.get(iso(f)) ?? f.properties?.name ?? '');
   }
 
   /** Screen position of a lon/lat. */
@@ -249,7 +288,7 @@ export class GeoMap {
   private target(lon: number, lat: number, k: number): ZoomTransform {
     const [x, y] = this.projection([lon, lat]) ?? [this.w / 2, this.h / 2];
     // Keep the point a little right of centre on wide screens: text lives on the left.
-    const cx = this.opts.interactive || this.w < 720 ? (this.w - this.inset) / 2 : this.w * 0.62;
+    const cx = this.opts.interactive || this.w < 720 ? this.insetLeft + (this.w - this.inset - this.insetLeft) / 2 : this.w * 0.62;
     const cy = !this.opts.interactive && this.w < 720 ? this.h * 0.34 : this.h / 2;
     return zoomIdentity.translate(cx, cy).scale(k).translate(-x, -y);
   }
@@ -281,7 +320,7 @@ export class GeoMap {
     const ys = pts.map((p) => p[1]);
     const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
     const wide = !this.opts.interactive && this.w >= 720;
-    const availW = wide ? this.w * 0.5 : this.w * 0.8;
+    const availW = wide ? this.w * 0.5 : (this.w - this.inset - this.insetLeft) * 0.8;
     // On a phone the step box covers the lower half: fit into the upper part.
     const phone = !this.opts.interactive && this.w < 720;
     const availH = phone ? this.h * 0.4 : this.h * 0.62;
