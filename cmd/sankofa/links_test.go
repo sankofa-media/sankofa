@@ -50,7 +50,7 @@ func TestRenderLinksOnATerminal(t *testing.T) {
 func TestPrintCardWrapsLinksWhole(t *testing.T) {
 	s := linkSet()
 	c := &card.Card{ID: "x", Title: "X", Kind: "person", Years: []int{1900}, Wow: "w",
-		Body: strings.Repeat("word ", 14) + "[[sun-ra|Sun Ra]] and " + strings.Repeat("more ", 14) + "[[zong|the Zong]] end.",
+		Body:    strings.Repeat("word ", 14) + "[[sun-ra|Sun Ra]] and " + strings.Repeat("more ", 14) + "[[zong|the Zong]] end.",
 		Further: []string{"[[blues|The blues]], any recording"}}
 	for _, tty := range []bool{false, true} {
 		var b bytes.Buffer
