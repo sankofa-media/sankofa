@@ -26,6 +26,7 @@ test('the switch opens Countries, a country lists its cards in time order, and t
   const starts = years.map((y) => parseInt(y, 10));
   expect([...starts].sort((a, b) => a - b)).toEqual(starts);
   await expect(panel(page)).toContainText('Candomblé');
+  await expect(panel(page).locator('.cn-about')).toContainText('Palmares');
   await expect(page.locator('.geo .country.on')).toHaveCount(1);
 
   // A card opens beside the list and keeps the country in the link.
@@ -64,6 +65,7 @@ test('Russian: the switch, the list and the country speak Russian', async ({ pag
   await expect(page.locator('.atlas-mode').getByRole('button', { name: 'Время' })).toBeVisible();
   await expect(panel(page).getByRole('heading', { name: 'Великобритания' })).toBeVisible();
   await expect(panel(page).locator('.cn-count')).toContainText(/карточ/);
+  await expect(panel(page).locator('.cn-about')).toContainText('«Уиндраша»');
   await panel(page).getByRole('button', { name: 'Все страны' }).click();
   await expect(panel(page).getByRole('button', { name: /^Бразилия, \d+ карточ/ })).toBeVisible();
   await expect(page).toHaveURL(/lang=ru.*atlas=countries/);
@@ -83,4 +85,11 @@ test('on a phone the country reads under the map, within the screen', async ({ p
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= window.innerWidth)).toBe(true);
   await p.locator('.cn-card').first().click();
   await expect(page.locator('.drawer.on')).toBeVisible();
+});
+
+test('a country without a sourced header shows only its name and count', async ({ page }) => {
+  await page.goto('/#atlas=countries&country=austria');
+  await expect(panel(page).getByRole('heading', { name: 'Austria' })).toBeVisible();
+  await expect(panel(page).locator('.cn-count')).toContainText('1 card');
+  await expect(panel(page).locator('.cn-about')).toHaveCount(0);
 });

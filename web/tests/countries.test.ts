@@ -114,3 +114,22 @@ describe('countries in the reader’s copy', async () => {
     expect(countriesInCopy(set, 'f', file, 'ru').map((x) => x.country.id)).toEqual(['zeta', 'alpha']);
   });
 });
+
+describe('country headers are sourced', async () => {
+  const YAML = (await import('yaml')).default;
+  const read = (p: string) => YAML.parse(readFileSync(new URL(`../../content/${p}`, import.meta.url), 'utf8'));
+  const countries = read('countries.yaml').countries as { id: string; about?: { en: string; ru: string } }[];
+  const ledger = read('ledger/countries.yaml').entries as { country: string; fact: string; sources: { url: string; quote: string }[] }[];
+
+  it('every header has ledger facts, each with two sources from different sites and a quote', () => {
+    const ids = new Set(countries.map((c) => c.id));
+    for (const c of countries.filter((x) => x.about)) expect(ledger.some((e) => e.country === c.id), c.id).toBe(true);
+    for (const e of ledger) {
+      expect(ids.has(e.country), e.country).toBe(true);
+      expect(e.sources.length, e.fact).toBeGreaterThanOrEqual(2);
+      expect(new Set(e.sources.map((s) => new URL(s.url).hostname.replace(/^www\./, ''))).size, e.fact).toBeGreaterThanOrEqual(2);
+      for (const s of e.sources) expect(s.quote?.length, e.fact).toBeGreaterThan(10);
+      expect(e.sources.some((s) => /wikipedia\.org/.test(s.url)), e.fact).toBe(false);
+    }
+  });
+});
