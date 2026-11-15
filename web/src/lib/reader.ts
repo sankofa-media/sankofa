@@ -2,8 +2,9 @@
 // they walked, the theme, what they found for their cabinet. The server knows nothing about visitors.
 import type { Edition } from './types';
 
-const K = { edition: 'sankofa.edition', path: 'sankofa.path', theme: 'sankofa.theme', cabinet: 'sankofa.cabinet' };
+const K = { edition: 'sankofa.edition', path: 'sankofa.path', theme: 'sankofa.theme', cabinet: 'sankofa.cabinet', facts: 'sankofa.facts' };
 const MAX_PATH = 200;
+const MAX_FACTS = 2000;
 
 function read(key: string): string | null {
   try {
@@ -73,4 +74,20 @@ export function readCabinet(): string | null {
 
 export function writeCabinet(json: string): void {
   write(K.cabinet, json);
+}
+
+/** The factoids this reader has been shown by the random-fact button. */
+export function readFactsSeen(): Set<string> {
+  const raw = read(K.facts);
+  return new Set(raw ? raw.split(',').filter(Boolean) : []);
+}
+
+/** Remember one more shown factoid; the oldest are forgotten past MAX_FACTS. */
+export function recordFactSeen(id: string): Set<string> {
+  const seen = readFactsSeen();
+  seen.delete(id);
+  seen.add(id);
+  const list = [...seen].slice(-MAX_FACTS);
+  write(K.facts, list.join(','));
+  return new Set(list);
 }

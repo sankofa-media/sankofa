@@ -13,6 +13,7 @@ import (
 
 	"github.com/tym83/sankofa/api/v1alpha1"
 	"github.com/tym83/sankofa/pkg/card"
+	"github.com/tym83/sankofa/pkg/factoid"
 	"github.com/tym83/sankofa/pkg/roots"
 )
 
@@ -34,6 +35,11 @@ func contentCmd() *cobra.Command {
 				errs = append(errs, err)
 			} else {
 				errs = append(errs, rs.Validate(s)...)
+			}
+			if all, err := factoid.LoadFS(os.DirFS(filepath.Join(args[0], "..", "factoids"))); err != nil {
+				errs = append(errs, err)
+			} else {
+				errs = append(errs, factoid.Validate(factoid.Shown(all), s)...)
 			}
 			for _, e := range errs {
 				fmt.Fprintln(cmd.ErrOrStderr(), e)
@@ -82,7 +88,103 @@ func contentCmd() *cobra.Command {
 	}
 	exp.Flags().StringVarP(&out, "out", "o", "-", "output file")
 	c.AddCommand(exp)
+	c.AddCommand(factoidsExportCmd())
 	return c
+}
+
+// factoidsExportCmd writes the checked factoids for the web museum, after
+// validating them against the cards; unverified factoids never leave here.
+func factoidsExportCmd() *cobra.Command {
+	var out, cards string
+	c := &cobra.Command{
+		Use:   "factoids DIR",
+		Short: "Validate the checked factoids and export them as JSON for the web museum",
+		Args:  cobra.ExactArgs(1),
+		RunE: func(cmd *cobra.Command, args []string) error {
+			var s *card.Set
+			if cards != "" {
+				var err error
+				if s, err = card.LoadDir(cards); err != nil {
+					return err
+				}
+			}
+			var shown []factoid.Factoid
+			if _, err := os.Stat(args[0]); err == nil {
+				all, err := factoid.LoadFS(os.DirFS(args[0]))
+				if err != nil {
+					return err
+				}
+				shown = factoid.Shown(all)
+				if errs := factoid.Validate(shown, s); len(errs) > 0 {
+					for _, e := range errs {
+						fmt.Fprintln(cmd.ErrOrStderr(), e)
+					}
+					return fmt.Errorf("%d problems in %d checked factoids", len(errs), len(shown))
+				}
+				fmt.Fprintf(cmd.ErrOrStderr(), "factoids: %d checked of %d\n", len(shown), len(all))
+			}
+			doc := map[string]any{"version": 1, "factoids": ExportFactoids(shown)}
+			data, err := json.Marshal(doc)
+			if err != nil {
+				return err
+			}
+			if out == "-" {
+				_, err = cmd.OutOrStdout().Write(data)
+				return err
+			}
+			if err := os.MkdirAll(filepath.Dir(out), 0o755); err != nil {
+				return err
+			}
+			return os.WriteFile(out, data, 0o644)
+		},
+	}
+	c.Flags().StringVarP(&out, "out", "o", "-", "output file")
+	c.Flags().StringVar(&cards, "cards", "", "card directory the factoids' cards must exist in")
+	return c
+}
+
+// ExportedFactoid is a factoid as the web museum shows it: no workshop fields.
+type ExportedFactoid struct {
+	ID      string           `json:"id"`
+	Cat     string           `json:"cat"`
+	EN      string           `json:"en"`
+	RU      string           `json:"ru"`
+	Year    int              `json:"year"`
+	Date    string           `json:"date,omitempty"`
+	Place   *exportedPlace   `json:"place,omitempty"`
+	Cards   []string         `json:"cards"`
+	Sources []exportedSource `json:"sources"`
+}
+
+// The museum shows a source's title and link; the quote stays in the workshop.
+type exportedSource struct {
+	Title string `json:"title"`
+	URL   string `json:"url"`
+}
+
+type exportedPlace struct {
+	Name string  `json:"name"`
+	Lat  float64 `json:"lat"`
+	Lon  float64 `json:"lon"`
+}
+
+// ExportFactoids prepares validated factoids for the web museum.
+func ExportFactoids(fs []factoid.Factoid) []ExportedFactoid {
+	out := make([]ExportedFactoid, 0, len(fs))
+	for _, f := range fs {
+		e := ExportedFactoid{ID: f.ID, Cat: f.Cat, EN: f.EN, RU: f.RU, Year: f.Year, Date: f.Date, Cards: f.Cards}
+		for _, s := range f.Sources {
+			e.Sources = append(e.Sources, exportedSource{Title: s.Title, URL: s.URL})
+		}
+		if e.Cards == nil {
+			e.Cards = []string{}
+		}
+		if f.Place != nil && f.Place.Lat != nil && f.Place.Lon != nil {
+			e.Place = &exportedPlace{Name: f.Place.Name, Lat: *f.Place.Lat, Lon: *f.Place.Lon}
+		}
+		out = append(out, e)
+	}
+	return out
 }
 
 // ExportedCard is a card as the web museum sees it.

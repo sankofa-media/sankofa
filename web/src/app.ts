@@ -25,6 +25,8 @@ export interface App {
   /** The main lines through the traditions (content/roots/lines.yaml). */
   lines: Line[];
   edition: 'm' | 'f';
+  /** The checked factoids, filled once data/factoids.json arrives. */
+  facts: import('./lib/factoids').Facts;
   media(file: string): string;
   /** Open exactly this card over the current view, in either copy. */
   openCard(id: string, opts?: { push?: boolean }): void;

@@ -13,6 +13,8 @@ import { showTip, hideTip } from './tip';
 import { chapterLabel, count, lang, pick, t } from '../lib/i18n';
 import { countriesWithCards, countryCards, countryPoints, type CountriesFile, type Country } from '../lib/countries';
 import { loadJson } from '../lib/loadJson';
+import { atlasFactoids } from '../lib/factoids';
+import { factoidView } from './factoid';
 
 /** The atlas's own keys next to the shared point (lib/route.ts). */
 export interface AtlasView {
@@ -40,6 +42,9 @@ export class Atlas {
   private countriesLoad?: Promise<void>;
   private modeBtns: HTMLButtonElement[] = [];
   private panel: HTMLElement;
+  /** The factoid opened from its dot, shown in a small box over the map. */
+  private factBox: HTMLElement;
+  private factId?: string;
   /** `push` when the change is a page to come back to (a mode, a country). */
   onChange?: (p: Point, view: AtlasView, push?: boolean) => void;
   onClose?: () => void;
@@ -99,13 +104,47 @@ export class Atlas {
         }),
       ),
     );
-    this.stage = h('div.atlas-stage', {}, ladder, legend, this.pathbar);
+    this.factBox = h('div.atlas-fact', { role: 'dialog', 'aria-modal': 'false', 'aria-label': pick({ en: 'A fact at this place', ru: 'Факт об этом месте' }), hidden: true, tabindex: '-1' });
+    this.factBox.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        e.stopPropagation();
+        this.hideFact(true);
+      }
+    });
+    this.stage = h('div.atlas-stage', {}, ladder, legend, this.pathbar, this.factBox);
     this.timeHost = h('div.atlas-time');
     this.list = h('div.atlas-list', { role: 'list' });
     this.panel = h('div.atlas-countries', { role: 'region', 'aria-label': pick({ en: 'Countries', ru: 'Страны' }) });
     this.el = h('section.atlas', { 'aria-label': t('Atlas'), role: 'region', tabindex: '-1' }, bar, this.stage, this.timeHost, this.list, this.panel, this.term);
     this.el.addEventListener('keydown', (e) => this.key(e));
     document.body.append(this.el);
+    // Factoids come after the cards: their dots join an open atlas.
+    void app.facts.ready.then(() => this.isOpen && this.draw(false));
+  }
+
+  /** Show a factoid from its dot: the sentence, its year, sources and cards. */
+  showFact(id: string): void {
+    const f = this.app.facts.list.find((x) => x.id === id);
+    if (!f) return;
+    this.factId = id;
+    this.factBox.replaceChildren(
+      h('button.icon-btn.close', { type: 'button', 'aria-label': pick({ en: 'Close', ru: 'Закрыть' }), onclick: () => this.hideFact(true) }, svgIcon('close')),
+      // Place names are kept in English only; the Russian box goes without.
+      ...(lang() === 'en' && f.place ? [h('span.atlas-fact-place', {}, f.place.name)] : []),
+      factoidView(this.app, f, { compact: true }),
+    );
+    this.factBox.hidden = false;
+    this.factBox.focus({ preventScroll: true });
+    this.draw(false);
+  }
+
+  private hideFact(refocus = false): void {
+    if (this.factBox.hidden) return;
+    const id = this.factId;
+    this.factBox.hidden = true;
+    this.factId = undefined;
+    this.draw(false);
+    if (refocus && id) this.stage.querySelector<SVGGElement>(`g.fact[data-fact="${CSS.escape(id)}"]`)?.focus({ preventScroll: true });
   }
 
   get isOpen(): boolean {
@@ -121,6 +160,7 @@ export class Atlas {
       // Names keep clear of the zoom ladder and of the legend in the corner.
       avoid: () => (this.mode === 'countries' ? this.panelBoxes() : [[0, 0, window.innerWidth < 720 ? 210 : 250, window.innerWidth < 720 ? 52 : 330], ...this.cornerBoxes()]),
       onPoint: (id) => this.focus(id),
+      onFact: (id) => this.showFact(id),
       onCountry: (iso) => {
         const c = this.countries?.countries.find((x) => x.iso === iso);
         if (c) this.selectCountry(c.id);
@@ -182,6 +222,8 @@ export class Atlas {
   }
 
   close(): void {
+    this.factBox.hidden = true;
+    this.factId = undefined;
     this.el.classList.remove('open');
     document.body.classList.remove('locked', 'atlas-open');
     this.term.classList.remove('on');
@@ -429,6 +471,9 @@ export class Atlas {
       })),
     );
     map.setRoutes([], false);
+    map.setFacts([]);
+    this.factBox.hidden = true;
+    this.factId = undefined;
     map.setRegions([]);
     map.setNumbers([]);
     this.when.textContent = c
@@ -543,6 +588,13 @@ export class Atlas {
       });
     }
     this.map.setPoints(layers.points);
+    // Factoids with a place: light dots at cities and people, in the same time.
+    const facts = atlasFactoids(this.app.facts.list, { level: this.level, from: this.p.from, to: this.p.to });
+    if (this.factId && !facts.some((f) => f.id === this.factId)) {
+      this.factBox.hidden = true;
+      this.factId = undefined;
+    }
+    this.map.setFacts(facts.map((f) => ({ id: f.id, lon: f.place!.lon, lat: f.place!.lat, on: f.id === this.factId, aria: `${pick({ en: 'Fact', ru: 'Факт' })}, ${f.year}, ${lang() === 'en' ? f.place!.name + ': ' : ''}${pick({ en: f.en, ru: f.ru })}` })));
     this.map.setRoutes(layers.routes, animate || this.level <= 2);
     this.map.setRegions(layers.regions);
     this.map.setNumbers(path.map((c, i) => ({ n: i + 1, lon: c.places[0].lon, lat: c.places[0].lat })));

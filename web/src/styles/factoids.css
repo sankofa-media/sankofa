@@ -1,0 +1,222 @@
+/* ---------- factoids: short checked facts, wherever they appear ---------- */
+.fx {
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  text-align: left;
+  font-style: normal;
+}
+.fx + .fx {
+  margin-top: 14px;
+}
+.fx-year {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--gold);
+  margin-bottom: 2px;
+}
+.fx-text {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 16px;
+  line-height: 1.45;
+  color: var(--ink);
+}
+.fx-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 14px;
+  margin-top: 6px;
+  font-size: 13px;
+}
+.fx-cards {
+  color: var(--ink-3);
+}
+.fx-src-btn {
+  font: inherit;
+  font-size: 12px;
+  color: var(--ink-3);
+  background: none;
+  border: 0;
+  padding: 2px 0;
+  cursor: pointer;
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
+.fx-src-btn::after {
+  content: ' ▾';
+}
+.fx-src-btn[aria-expanded='true']::after {
+  content: ' ▴';
+}
+.fx-src-btn:hover,
+.fx-src-btn:focus-visible {
+  color: var(--gold);
+}
+.fx-sources {
+  margin: 6px 0 0;
+  padding-left: 1.2em;
+  font-size: 12px;
+  color: var(--ink-2);
+}
+.fx-sources li {
+  margin-bottom: 3px;
+}
+.fx-sources a {
+  overflow-wrap: anywhere;
+}
+
+/* A card's footer: the same section rhythm as "Go further". */
+.fx-footer .fx-text {
+  font-size: 17px;
+}
+
+/* In a quiet stretch of the descent the fact stands under the silence line. */
+.d-quiet .d-quiet-line {
+  margin: 0;
+}
+.d-quiet .fx {
+  box-sizing: border-box;
+  max-width: min(34rem, 100%);
+  margin: 16px auto 0;
+  padding: 12px 16px;
+  border-left: 2px solid rgba(227, 171, 61, 0.5);
+  background: rgba(12, 13, 24, 0.35);
+  color: rgba(242, 233, 216, 0.72);
+}
+.d-quiet .fx-text {
+  color: rgba(242, 233, 216, 0.9);
+  font-size: 17px;
+}
+.d-quiet .fx-cards,
+.d-quiet .fx-src-btn {
+  color: rgba(242, 233, 216, 0.6);
+}
+
+/* Atlas: factoid dots, lighter and smaller than any card marker. */
+.geo .fact {
+  cursor: pointer;
+}
+.geo .fact .hit {
+  fill: transparent;
+}
+.geo .fact .fdot {
+  fill: var(--ink);
+  fill-opacity: 0.42;
+  stroke: none;
+  transition: r 0.2s, fill-opacity 0.2s;
+}
+.geo .fact:hover .fdot,
+.geo .fact:focus .fdot,
+.geo .fact.on .fdot {
+  fill-opacity: 0.95;
+  r: 4;
+}
+.geo .fact:focus {
+  outline: none;
+}
+.geo .fact:focus-visible .hit {
+  stroke: var(--gold);
+  stroke-width: 1.5;
+}
+.atlas-fact {
+  position: absolute;
+  z-index: 6;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  width: min(400px, calc(100% - 32px));
+  max-height: 60%;
+  overflow: auto;
+  padding: 14px 16px 12px;
+  background: var(--glass-2);
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+.atlas-fact[hidden] {
+  display: none;
+}
+.atlas-fact .close {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 32px;
+  height: 32px;
+}
+.atlas-fact-place {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-right: 32px;
+}
+
+/* The random-fact panel under the header. */
+.fx-panel {
+  position: fixed;
+  z-index: 45;
+  top: calc(var(--nav-h) + 8px);
+  right: var(--gutter);
+  width: min(400px, calc(100vw - 32px));
+  max-height: calc(100svh - var(--nav-h) - 24px);
+  overflow: auto;
+  padding: 12px 16px 14px;
+  background: var(--glass-2);
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+}
+.fx-panel[hidden] {
+  display: none;
+}
+.fx-panel:focus {
+  outline: none;
+}
+.fx-panel-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+.fx-panel-kicker {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  font-weight: 600;
+}
+.fx-panel .close {
+  width: 32px;
+  height: 32px;
+}
+.fx-panel-actions {
+  margin-top: 12px;
+}
+@media (max-width: 720px) {
+  .fx-panel {
+    right: 16px;
+    left: 16px;
+    width: auto;
+  }
+}
+
+/* The header names the button in its tooltip; the bar has no room for another word. */
+@media (min-width: 721px) {
+  .nav .nav-fact .label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+}

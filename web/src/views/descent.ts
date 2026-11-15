@@ -17,6 +17,8 @@ import { listenBlock } from './player';
 import { stopWithin } from '../lib/sound';
 import { richText } from '../app';
 import { buildScale, chapterAt, chapterCentres, chaptersAt, lanes, levelCards, NOW, place, quietStretches, START, type Item, type Placed, type Scale } from '../lib/descentModel';
+import { quietFactoids } from '../lib/factoids';
+import { factoidView } from './factoid';
 import { interpolateRgb } from 'd3-interpolate';
 import { scaleLinear } from 'd3-scale';
 
@@ -102,6 +104,11 @@ export class Descent {
     rail.append(...this.railEras());
     this.stars.style.boxShadow = starfield(260);
     document.body.append(this.el);
+    // The factoids arrive after the cards; the quiet stretches take them in.
+    void app.facts.ready.then(() => {
+      if (this.isOpen) this.layout(this.yearNow());
+      else this.built = false;
+    });
     window.addEventListener('resize', () => {
       if (this.isOpen) this.layout(this.yearNow());
       else this.built = false;
@@ -320,8 +327,12 @@ export class Descent {
     }
     // A stretch is quiet only if nothing at all is placed in it: no card, era panel or movement.
     const placedYears = [...cards, ...(this.level === 1 ? app.chapters.filter((c) => c.years.length) : []), ...MOVEMENTS] as { years: number[] }[];
-    quietStretches(placedYears as Card[]).forEach((q, i) => {
-      const el = h('div.d-quiet', {}, h('span', {}, `${q.from} — ${q.to}`), pick(QUIET[i % QUIET.length]));
+    const stretches = quietStretches(placedYears as Card[]);
+    // The archive is quiet, not empty: a checked fact from inside the stretch speaks for it.
+    const voices = quietFactoids(app.facts.list, stretches);
+    stretches.forEach((q, i) => {
+      const fact = voices[i];
+      const el = h('div.d-quiet', {}, h('span.d-quiet-years', {}, `${q.from} — ${q.to}`), h('p.d-quiet-line', {}, pick(QUIET[i % QUIET.length])), fact ? factoidView(app, fact, { compact: true }) : null);
       els.set('quiet:' + i, el);
       list.push({ kind: 'quiet', id: String(i), year: Math.round((q.from + q.to) / 2), h: 0, from: q.from, to: q.to });
     });

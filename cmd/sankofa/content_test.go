@@ -1,6 +1,12 @@
 package main
 
-import "testing"
+import (
+	"encoding/json"
+	"strings"
+	"testing"
+
+	"github.com/tym83/sankofa/pkg/factoid"
+)
 
 func TestStepLabel(t *testing.T) {
 	for _, tc := range []struct {
@@ -23,6 +29,24 @@ func TestStepLabel(t *testing.T) {
 		}
 		if !tc.bad && (label != tc.label || text != tc.text) {
 			t.Errorf("%q: got %q / %q, want %q / %q", tc.in, label, text, tc.label, tc.text)
+		}
+	}
+}
+
+func TestExportFactoidsKeepsWhatTheMuseumShows(t *testing.T) {
+	lat, lon := 6.45, 3.39
+	out := ExportFactoids([]factoid.Factoid{{ID: "fx-a", EN: "a", RU: "а", Year: 1900, Place: &factoid.Place{Name: "Lagos", Lat: &lat, Lon: &lon},
+		Sources: []factoid.Source{{Title: "One", URL: "https://one", Quote: "long quote"}}, Gender: "f", Status: factoid.Checked}})
+	data, _ := json.Marshal(out)
+	s := string(data)
+	for _, want := range []string{`"cards":[]`, `"lat":6.45`, `"url":"https://one"`} {
+		if !strings.Contains(s, want) {
+			t.Errorf("missing %s in %s", want, s)
+		}
+	}
+	for _, gone := range []string{"quote", "gender", "status"} {
+		if strings.Contains(s, gone) {
+			t.Errorf("%s leaks into the export: %s", gone, s)
 		}
 	}
 }

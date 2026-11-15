@@ -2684,7 +2684,7 @@ main:focus,
   font-size: 18px;
   color: rgba(242, 233, 216, 0.5);
 }
-.d-quiet span {
+.d-quiet .d-quiet-years {
   display: block;
   font-family: var(--font-sans);
   font-style: normal;

@@ -17,8 +17,12 @@ import (
 type State struct {
 	Edition string   `json:"edition"`
 	Path    []string `json:"path"`
-	Done    []string `json:"done,omitempty"` // finished quests
+	Done    []string `json:"done,omitempty"`  // finished quests
+	Facts   []string `json:"facts,omitempty"` // factoids already shown, oldest first
 }
+
+// MaxFacts is how many shown factoids the state remembers.
+const MaxFacts = 2000
 
 // Dir is where the state lives (SANKOFA_HOME or ~/.config/sankofa).
 func Dir() string {
@@ -76,14 +80,31 @@ func (s *State) Visit(id string) {
 	s.Path = append(s.Path, id)
 }
 
-// Seen reports whether the reader has opened the card.
+// Seen reports whether the reader has opened the card or been shown the
+// factoid.
 func (s *State) Seen(id string) bool {
 	for _, p := range s.Path {
 		if p == id {
 			return true
 		}
 	}
+	for _, f := range s.Facts {
+		if f == id {
+			return true
+		}
+	}
 	return false
+}
+
+// SawFact remembers that a factoid was shown, once.
+func (s *State) SawFact(id string) {
+	if s.Seen(id) {
+		return
+	}
+	s.Facts = append(s.Facts, id)
+	if n := len(s.Facts); n > MaxFacts {
+		s.Facts = s.Facts[n-MaxFacts:]
+	}
 }
 
 // EncodePath turns a path into a shareable token.

@@ -7,7 +7,7 @@ import (
 	"io/fs"
 )
 
-//go:embed cards quests roots
+//go:embed cards quests roots factoids
 var files embed.FS
 
 // Cards is the card collection.
@@ -15,6 +15,10 @@ func Cards() fs.FS { return sub("cards") }
 
 // Roots are the artists whose roots the museum traces.
 func Roots() fs.FS { return sub("roots") }
+
+// Factoids are the short verified facts, every status included: readers
+// get only the checked ones (pkg/factoid.Shown).
+func Factoids() fs.FS { return sub("factoids") }
 
 // Quests are the quest definitions.
 func Quests() fs.FS { return sub("quests") }

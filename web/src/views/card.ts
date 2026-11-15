@@ -14,6 +14,7 @@ import { paragraphsOf } from '../lib/paragraphs';
 import { cardCaches, cardChecks, cardExtras } from '../mechanics';
 import { listenBlock } from './player';
 import { stopWithin } from '../lib/sound';
+import { factFooter } from './factoid';
 
 /** A drawer that slides in from the right, with a focus trap and Esc to close. */
 export class Drawer {
@@ -147,6 +148,7 @@ export function renderCard(app: App, c: Card): HTMLElement {
           ),
         )
       : null,
+    factFooter(app, c.id),
     h(
       'div.card-actions',
       {},
