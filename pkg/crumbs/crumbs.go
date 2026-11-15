@@ -1,46 +1,97 @@
-// Package crumbs picks short "wow" lines to show while something is running,
-// enough to make someone want to read further.
+// Package crumbs picks short lines to show while something is running, enough
+// to make someone want to read further: the "wow" lines of cards and the
+// museum's checked factoids.
 package crumbs
 
 import (
 	"math/rand/v2"
 
 	"github.com/tym83/sankofa/pkg/card"
+	"github.com/tym83/sankofa/pkg/factoid"
 )
 
-// Picker chooses crumbs: first cards the reader has not opened, preferring
-// those linked from what they read last; never the same card twice in a row.
+// Crumb is one line to show: a card's wow line or a factoid.
+type Crumb struct {
+	Card *card.Card
+	Fact *factoid.Factoid
+}
+
+// ID is the card's or the factoid's id.
+func (c *Crumb) ID() string {
+	if c.Fact != nil {
+		return c.Fact.ID
+	}
+	return c.Card.ID
+}
+
+// Picker chooses crumbs: first what the reader has not seen, preferring what
+// is linked to the card they read last; never the same crumb twice until the
+// pool runs out.
 type Picker struct {
-	Set  *card.Set
+	Set *card.Set
+	// Facts are checked factoids (pkg/factoid.Shown); nil for cards only.
+	Facts []factoid.Factoid
+	// Seen reports cards the reader opened and factoids already shown.
 	Seen func(id string) bool
 	Last string // last card the reader opened
 	prev map[string]bool
 }
 
-// Next returns the next card to show, or nil for an empty set.
-func (p *Picker) Next() *card.Card {
+// Next returns the next crumb, card or factoid, or nil for an empty pool.
+func (p *Picker) Next() *Crumb { return p.next(true, true) }
+
+// NextFact returns the next factoid only, or nil when there are none.
+func (p *Picker) NextFact() *factoid.Factoid {
+	if c := p.next(false, true); c != nil {
+		return c.Fact
+	}
+	return nil
+}
+
+func (p *Picker) next(cards, facts bool) *Crumb {
 	if p.prev == nil {
 		p.prev = map[string]bool{}
 	}
-	var near, fresh, any []string
 	linked := map[string]bool{}
 	if c := p.Set.ByID[p.Last]; c != nil {
+		linked[c.ID] = true
 		for _, l := range c.Links() {
 			linked[l.Target] = true
 		}
 	}
-	for _, id := range p.Set.Order {
-		c := p.Set.ByID[id]
-		if c.Edition != card.EditionBoth || p.prev[id] {
-			continue
+	var near, fresh, any []Crumb
+	add := func(cr Crumb, related bool) {
+		id := cr.ID()
+		if p.prev[id] {
+			return
 		}
-		any = append(any, id)
+		any = append(any, cr)
 		if p.Seen != nil && p.Seen(id) {
-			continue
+			return
 		}
-		fresh = append(fresh, id)
-		if linked[id] {
-			near = append(near, id)
+		fresh = append(fresh, cr)
+		if related {
+			near = append(near, cr)
+		}
+	}
+	if cards && p.Set != nil {
+		for _, id := range p.Set.Order {
+			c := p.Set.ByID[id]
+			// Edition cards are never crumbs.
+			if c.Edition != card.EditionBoth {
+				continue
+			}
+			add(Crumb{Card: c}, linked[id])
+		}
+	}
+	if facts {
+		for i := range p.Facts {
+			f := &p.Facts[i]
+			related := false
+			for _, id := range f.Cards {
+				related = related || linked[id]
+			}
+			add(Crumb{Fact: f}, related)
 		}
 	}
 	pool := near
@@ -55,9 +106,9 @@ func (p *Picker) Next() *card.Card {
 			return nil
 		}
 		p.prev = map[string]bool{}
-		return p.Next()
+		return p.next(cards, facts)
 	}
-	id := pool[rand.IntN(len(pool))]
-	p.prev[id] = true
-	return p.Set.ByID[id]
+	cr := pool[rand.IntN(len(pool))]
+	p.prev[cr.ID()] = true
+	return &cr
 }
