@@ -20,6 +20,7 @@ import { loadMediaManifest } from './lib/media';
 import { loadJson } from './lib/loadJson';
 import { foldStepMarks, splitStepMarks } from './lib/stepMarks';
 import { EMPTY_LISTEN, type ListenFile } from './lib/listen';
+import { EMPTY_VOICES, type VoicesFile } from './lib/voices';
 import { rootsExtras } from './lib/elements';
 import { watchTypography } from './lib/typo';
 import { Drawer, renderBook, renderCard } from './views/card';
@@ -86,6 +87,7 @@ async function start(): Promise<void> {
   let cardsFile: CardsFile;
   let chaptersFile: ChaptersFile;
   let listenFile: ListenFile;
+  let voicesFile: VoicesFile;
   let namesFile: NamesFile | null;
   installNavMenu(document.querySelector<HTMLElement>('.nav')!);
   // The language switch needs no data, so it works while the cards load.
@@ -93,7 +95,7 @@ async function start(): Promise<void> {
   // Let the static cover paint before the 1 MB of cards competes for the wire.
   await new Promise<void>((r) => requestAnimationFrame(() => setTimeout(r, 0)));
   try {
-    [cardsFile, chaptersFile, listenFile, , namesFile] = await Promise.all([
+    [cardsFile, chaptersFile, listenFile, , namesFile, voicesFile] = await Promise.all([
       load<CardsFile>('data/cards.json'),
       load<ChaptersFile>('data/chapters.json'),
       // Listening is an extra: the museum opens without it.
@@ -101,6 +103,7 @@ async function start(): Promise<void> {
       loadMediaManifest(),
       // The dictionary's names: without them, only the marked links link.
       load<NamesFile>('data/names.json').catch(() => null),
+      load<VoicesFile>('data/voices.json').catch(() => EMPTY_VOICES),
     ]);
   } catch (e) {
     loading.remove();
@@ -154,6 +157,7 @@ async function start(): Promise<void> {
     },
     chapters,
     listen: listenFile,
+    voices: voicesFile,
     // The roots' elements, genre-to-genre steps and lines come with the cards.
     ...rootsExtras(cardsFile),
     edition: held,

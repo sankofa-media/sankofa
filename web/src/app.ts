@@ -16,6 +16,8 @@ export interface App {
   chapters: Chapter[];
   /** Recordings to listen to, by card and by roots artist. */
   listen: ListenFile;
+  /** Voices remembering slavery, with their subtitles, by card. */
+  voices: import('./lib/voices').VoicesFile;
   /** Styles as route stations, keyed "style:<id>" (content/roots/styles.yaml). */
   styles: import('./lib/roots').Artist[];
   /** Musical elements the roots carry (content/roots/elements.yaml). */
