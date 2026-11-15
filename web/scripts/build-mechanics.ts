@@ -121,6 +121,14 @@ for (const [i, round] of context.entries()) {
   const unchecked = pairContext(round).pairs.filter((p) => !p.check);
   for (const p of unchecked) console.warn(`ledger: context round ${i + 1}: no second check for ${p.fact.card}: ${p.fact.fact.slice(0, 80)}`);
 }
+// The new cards: every expand-<batch>.yaml beside its expand-<batch>-check.yaml.
+const expansion: ContextRound[] = (existsSync(ledger) ? readdirSync(ledger) : [])
+  .filter((f) => /^expand-[a-z0-9]+\.yaml$/.test(f) && existsSync(join(ledger, f.replace(/\.yaml$/, '-check.yaml'))))
+  .sort()
+  .map((f) => ({ facts: yaml(join(ledger, f), []), check: yaml(join(ledger, f.replace(/\.yaml$/, '-check.yaml')), []) }));
+for (const f of (existsSync(ledger) ? readdirSync(ledger) : []).filter((f) => /^expand-[a-z0-9]+\.yaml$/.test(f))) {
+  if (!existsSync(join(ledger, f.replace(/\.yaml$/, '-check.yaml')))) console.warn(`ledger: ${f} has no second check`);
+}
 const ledgers: Ledgers = {
   final: yaml(join(ledger, 'final.yaml'), {}),
   match: yaml(join(ledger, 'match.yaml'), { claims: [] }),
@@ -132,6 +140,7 @@ const ledgers: Ledgers = {
   mediaCheck: yaml(join(ledger, 'media-check.yaml'), []),
   rootsCheck: yaml(join(ledger, 'roots-check.yaml'), {}),
   rootsDeepCheck: yaml(join(ledger, 'roots-deep-check.yaml'), {}),
+  expansion,
   context,
 };
 const checks = buildChecks(ledgers, cardIds);

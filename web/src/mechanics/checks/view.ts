@@ -230,6 +230,14 @@ export function methodPage(data: ChecksFile): HTMLElement {
             ru: `${formatNumber(t.context.kept)} — добавлены, когда карточки переписывали ради предыстории и развязки: из ${formatNumber(t.context.facts)} ${pluralRu(t.context.facts, ['факта', 'фактов', 'фактов'])}, записанных автором с источниками, и ${formatNumber(t.context.unledgered)} ${pluralRu(t.context.unledgered, ['предложения', 'предложений', 'предложений'])}, которые он не записал, вторая проверка подтвердила ${formatNumber(t.context.confirmed)}, исправила ${formatNumber(t.context.corrected)} и убрала ${formatNumber(t.context.dropped)};`,
           }),
         ),
+        h(
+          'li',
+          {},
+          pick({
+            en: `${formatNumber(t.expansion.kept)} on the new cards: of ${formatNumber(t.expansion.facts)} facts the writers recorded with sources and ${formatNumber(t.expansion.unledgered)} sentences they had not recorded, an independent second check confirmed ${formatNumber(t.expansion.confirmed)}, corrected ${formatNumber(t.expansion.corrected)} and took ${formatNumber(t.expansion.dropped)} out;`,
+            ru: `${formatNumber(t.expansion.kept)} — на новых карточках: из ${formatNumber(t.expansion.facts)} ${pluralRu(t.expansion.facts, ['факта', 'фактов', 'фактов'])}, записанных авторами с источниками, и ${formatNumber(t.expansion.unledgered)} ${pluralRu(t.expansion.unledgered, ['предложения', 'предложений', 'предложений'])}, которые они не записали, независимая вторая проверка подтвердила ${formatNumber(t.expansion.confirmed)}, исправила ${formatNumber(t.expansion.corrected)} и убрала ${formatNumber(t.expansion.dropped)};`,
+          }),
+        ),
         h('li', {}, pick({ en: `${formatNumber(kept('corrected'))} kept in a corrected form, in all;`, ru: `${formatNumber(kept('corrected'))} — всего оставлены в исправленном виде;` })),
         h('li', {}, pick({ en: `${formatNumber(kept('disputed'))} kept only as contested.`, ru: `${formatNumber(kept('disputed'))} — оставлены только как спорные.` })),
       ),

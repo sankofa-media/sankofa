@@ -147,6 +147,9 @@ describe('how we checked: the museum’s own ledgers', () => {
   const ids = readdirSync(join(root, 'cards'))
     .filter((f) => f.endsWith('.md') && !/\.[a-z]{2}\.md$/.test(f))
     .map((f) => f.replace(/\.md$/, ''));
+  const batches = readdirSync(join(root, 'ledger'))
+    .map((f) => /^expand-([a-z0-9]+)\.yaml$/.exec(f)?.[1])
+    .filter((b): b is string => !!b);
   const out = buildChecks(
     {
       final: y('final.yaml'),
@@ -158,6 +161,7 @@ describe('how we checked: the museum’s own ledgers', () => {
       media: [...y('media.yaml'), ...y('media-documents.yaml')],
       mediaCheck: y('media-check.yaml'),
       context: ['a', 'b'].map((x) => ({ facts: y(`context-${x}.yaml`), check: y(`context-${x}-check.yaml`) })),
+      expansion: batches.map((b) => ({ facts: y(`expand-${b}.yaml`), check: y(`expand-${b}-check.yaml`) })),
     },
     ids,
   );
@@ -168,6 +172,16 @@ describe('how we checked: the museum’s own ledgers', () => {
       expect(pairs.filter((p) => !p.check).map((p) => `${p.fact.card}: ${p.fact.fact}`)).toEqual([]);
     }
     expect(out.totals.context.kept).toBeGreaterThan(400);
+  });
+
+  it('gives every expansion batch a second check that pairs most of its facts', () => {
+    expect(batches.length).toBe(36);
+    for (const b of batches) {
+      const { pairs } = pairContext({ facts: y(`expand-${b}.yaml`), check: y(`expand-${b}-check.yaml`) });
+      // c05 rewrote its ledger after the check, so fewer of its facts match a verdict word for word.
+      expect(pairs.filter((p) => p.check).length / pairs.length, b).toBeGreaterThan(0.65);
+    }
+    expect(out.totals.expansion.kept).toBeGreaterThan(3000);
   });
 
   it('has a record for every card', () => {

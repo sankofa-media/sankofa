@@ -65,6 +65,8 @@ export interface Totals {
   explainers: number;
   /** The context rewrite: the writer's ledger and its independent second check. */
   context: ContextTotals;
+  /** The new cards of the expansion, counted the same way. */
+  expansion: ContextTotals;
 }
 
 export interface ContextTotals {
@@ -146,12 +148,16 @@ export interface ContextCheck {
   verdict: string;
   sources?: (RawSource | string)[] | null;
   note?: string;
+  /** Some checkers wrote an unledgered sentence as `claim` instead of `fact`. */
+  claim?: string;
 }
 /**
  * A check file: either a list, where an unledgered sentence's fact starts
  * with "(unledgered)" or "UNLEDGERED:", or { claims, unledgered }.
  */
-export type ContextCheckFile = ContextCheck[] | { claims?: ContextCheck[]; unledgered?: ContextCheck[] };
+export type ContextCheckFile =
+  | ContextCheck[]
+  | { claims?: ContextCheck[]; entries?: ContextCheck[]; checks?: ContextCheck[]; removed?: ContextCheck[]; removed_or_reworded?: ContextCheck[]; unledgered?: ContextCheck[] };
 export interface ContextRound {
   facts: ContextFact[];
   check: ContextCheckFile;
@@ -172,6 +178,8 @@ export interface Ledgers {
   rootsDeepCheck?: { checks?: { verdict: string }[] };
   /** The context rewrite, one round per ledger (context-a, context-b). */
   context?: ContextRound[];
+  /** The new cards, one round per batch ledger (expand-c01 ... expand-x03). */
+  expansion?: ContextRound[];
 }
 
 export const norm = (s: string): string =>
@@ -285,7 +293,13 @@ const KEPT = new Set(['confirmed', 'corrected']);
 /** A check file in one shape: the claims of the writer's ledger, and the unledgered sentences. */
 export function contextCheckEntries(f: ContextCheckFile | undefined): { claims: ContextCheck[]; unledgered: ContextCheck[] } {
   if (!f) return { claims: [], unledgered: [] };
-  if (!Array.isArray(f)) return { claims: f.claims ?? [], unledgered: f.unledgered ?? [] };
+  if (!Array.isArray(f)) {
+    const named = (xs: ContextCheck[] | undefined) => (xs ?? []).map((e) => ({ ...e, fact: e.fact ?? e.claim ?? '' }));
+    return {
+      claims: named([...(f.claims ?? []), ...(f.entries ?? []), ...(f.checks ?? []), ...(f.removed ?? []), ...(f.removed_or_reworded ?? [])]),
+      unledgered: named(f.unledgered),
+    };
+  }
   const claims: ContextCheck[] = [];
   const unledgered: ContextCheck[] = [];
   for (const e of f) {
@@ -332,7 +346,7 @@ export function pairContext(round: ContextRound): { pairs: ContextPair[]; unledg
   return { pairs, unledgered };
 }
 
-function contextChecks(l: Ledgers): { byCard: Map<string, FactCheck[]>; totals: ContextTotals } {
+function contextChecks(rounds: ContextRound[] | undefined): { byCard: Map<string, FactCheck[]>; totals: ContextTotals } {
   const byCard = new Map<string, FactCheck[]>();
   const totals: ContextTotals = { facts: 0, unledgered: 0, kept: 0, confirmed: 0, corrected: 0, dropped: 0 };
   const keep = (card: string, f: FactCheck) => byCard.set(card, [...(byCard.get(card) ?? []), f]);
@@ -343,7 +357,7 @@ function contextChecks(l: Ledgers): { byCard: Map<string, FactCheck[]>; totals: 
     } else totals.dropped++;
   };
   const second = (c: ContextCheck): AgentCheck => ({ agent: 'C', verdict: c.verdict, sources: sources(c.sources ?? []), ...(c.note ? { note: c.note } : {}) });
-  for (const round of l.context ?? []) {
+  for (const round of rounds ?? []) {
     const { pairs, unledgered } = pairContext(round);
     totals.facts += pairs.length;
     totals.unledgered += unledgered.length;
@@ -372,7 +386,8 @@ export function buildChecks(l: Ledgers, cardIds: string[]): ChecksFile {
   const explainerChecks = new Map((l.explainersCheck?.claims ?? []).map((c) => [c.card + '|' + norm(c.claim), c]));
   const second = new Map((l.mediaCheck ?? []).map((m) => [m.card + '|' + m.file, m]));
   const known = new Set(cardIds);
-  const context = contextChecks(l);
+  const context = contextChecks(l.context);
+  const expansion = contextChecks(l.expansion);
   let facts = 0;
   let explainers = 0;
   for (const id of cardIds) {
@@ -394,7 +409,7 @@ export function buildChecks(l: Ledgers, cardIds: string[]): ChecksFile {
       });
       explainers++;
     }
-    list.push(...(context.byCard.get(id) ?? []));
+    list.push(...(context.byCard.get(id) ?? []), ...(expansion.byCard.get(id) ?? []));
     for (const f of list) byStatus[f.status] = (byStatus[f.status] ?? 0) + 1;
     facts += list.length;
     const media = (l.media ?? [])
@@ -425,7 +440,7 @@ export function buildChecks(l: Ledgers, cardIds: string[]): ChecksFile {
   const images = (l.media ?? []).filter((m) => known.has(m.card));
   // Context facts taken out of the cards, by the checker's verdict.
   const contextDropped = (...verdicts: string[]) =>
-    (l.context ?? []).reduce((n, round) => {
+    [...(l.context ?? []), ...(l.expansion ?? [])].reduce((n, round) => {
       const { pairs, unledgered } = pairContext(round);
       return n + [...pairs.map((p) => p.check?.verdict), ...unledgered.map((u) => u.verdict)].filter((v) => v && verdicts.includes(v)).length;
     }, 0);
@@ -436,7 +451,7 @@ export function buildChecks(l: Ledgers, cardIds: string[]): ChecksFile {
       cards: Object.keys(cards).length,
       facts,
       byStatus,
-      claimsExamined: l.match.claims.length + ex.length + context.totals.facts + context.totals.unledgered,
+      claimsExamined: l.match.claims.length + ex.length + context.totals.facts + context.totals.unledgered + expansion.totals.facts + expansion.totals.unledgered,
       refuted: matchCount('refuted') + rechecks.filter((r) => r.verdict === 'refuted').length + ex.filter((r) => r.verdict === 'refuted').length + contextDropped('refuted'),
       unconfirmed: matchCount('unconfirmed') + rechecks.filter((r) => r.verdict === 'unverified').length + ex.filter((r) => r.verdict === 'unverified').length + contextDropped('unconfirmed', 'unverified', 'removed'),
       rechecked: rechecks.length,
@@ -446,6 +461,7 @@ export function buildChecks(l: Ledgers, cardIds: string[]): ChecksFile {
       rootsByVerdict: tally(roots),
       explainers,
       context: context.totals,
+      expansion: expansion.totals,
     },
   };
 }
