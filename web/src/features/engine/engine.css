@@ -346,6 +346,31 @@
     scale: 1.008;
   }
 }
+/* Hands jump with each clap; a still copy underneath keeps the figure whole. */
+.ft-art .al[data-role='hands'] > img:not(.al-still) {
+  will-change: transform;
+}
+.ft-art .al[data-role='hands'].clap > img:not(.al-still) {
+  animation: ft-clap-hands 0.32s var(--ease);
+}
+@keyframes ft-clap-hands {
+  30% {
+    transform: translateY(-0.45%) scale(1.004);
+  }
+}
+/* Figures that come half a step forward when their scene is reached. */
+.ft-art .al[data-role='step'] {
+  scale: 0.955;
+  translate: 0 -1.2%;
+  transition:
+    mask-position 1.8s var(--ease) calc(0.15s + var(--i, 0) * 0.28s),
+    scale 1.6s var(--ease) 0.9s,
+    translate 1.6s var(--ease) 0.9s;
+}
+.ft-scene.reached .ft-art .al[data-role='step'] {
+  scale: 1;
+  translate: 0 0;
+}
 /* A layer swinging open from its pivot over a stretch of the scene. */
 .ft-art .al[data-open] {
   scale: calc(0.2 + 0.8 * var(--open, 1)) 1;
@@ -487,9 +512,15 @@ body.mp-on .cc[data-place='corner'] {
 /* Calm mode: finished, still drawings; text without waiting. */
 .is-calm .ft-art .al,
 .is-calm .ft-art img,
-.is-calm .ft-art .al[data-role='spin'] img {
+.is-calm .ft-art .al[data-role='spin'] img,
+.is-calm .ft-art .al[data-role='hands'].clap > img:not(.al-still) {
   mask-image: none;
   animation: none;
+  transition: none;
+}
+.is-calm .ft-art .al[data-role='step'] {
+  scale: 1;
+  translate: 0 0;
   transition: none;
 }
 .is-calm .ink-breathe,
@@ -515,8 +546,14 @@ body.mp-on .cc[data-place='corner'] {
   .ink-breathe,
   .ft-art .al,
   .ft-art img,
-  .ft-art .al[data-role='spin'] img {
+  .ft-art .al[data-role='spin'] img,
+  .ft-art .al[data-role='hands'].clap > img:not(.al-still) {
     animation: none;
+  }
+  .ft-art .al[data-role='step'] {
+    scale: 1;
+    translate: 0 0;
+    transition: none;
   }
   .ft-art .al {
     mask-image: none;

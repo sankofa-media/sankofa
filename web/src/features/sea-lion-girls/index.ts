@@ -51,7 +51,7 @@ const ringScene: Render = (kit, sc) => {
   hear.addEventListener('click', () => kit.setSound(kit.audio !== 'on'));
   const sync = () => hear.setAttribute('aria-pressed', String(kit.audio === 'on'));
   new MutationObserver(sync).observe(kit.ctx.root, { attributes: true, attributeFilter: ['data-audio'] });
-  return kit.section(sc, { stage: picture(kit, sc, () => art.ring()), after: [hear] });
+  return kit.section(sc, { stage: kit.art(sc)?.el, after: [hear] });
 };
 
 const expedition: Render = (kit, sc) => {
@@ -63,19 +63,18 @@ const expedition: Render = (kit, sc) => {
 
 const family: Render = (kit, sc) => {
   const figs = (sc.figures as Figure[]) ?? [];
-  const heights = figs.map((f) => (f.age && f.age >= 40 ? 1 : 0.8 + Math.min(0.18, ((f.age ?? 20) - 14) / 50)));
   const list = h(
     'ol.ft-figures',
     {},
     ...figs.map((f, i) => h(`li${f.lead ? '.lead' : ''}`, { 'data-figure': f.id, 'data-fade': `${0.1 + i * 0.1} ${0.3 + i * 0.1}` }, h('b', {}, pick(f.name)), h('span', {}, [f.age ? String(f.age) : '', f.role ? pick(f.role) : ''].filter(Boolean).join(' · ')))),
   );
-  return kit.section(sc, { stage: h('div.ft-stack', {}, picture(kit, sc, () => art.porch(heights, figs.map((f) => !!f.lead))), list), screens: 2.4 });
+  return kit.section(sc, { stage: h('div.ft-stack', {}, kit.art(sc)?.el ?? null, list), screens: 2.4 });
 };
 
 const minute: Render = (kit, sc) => {
   const loc = kit.node(sc.nodes?.[0] ?? '');
   return kit.section(sc, {
-    stage: picture(kit, sc, () => art.minute()),
+    stage: kit.art(sc)?.el,
     after: [loc ? kit.playButton(loc, kit.ui('play-1939')) : null, loc ? kit.credit(loc) : null, h('p.ft-hint', {}, kit.ui('clap-hint'))],
     screens: 2.6,
   });

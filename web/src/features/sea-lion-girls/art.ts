@@ -1,7 +1,8 @@
-// Placeholder line art for Sea Lion Girls, drawn in code: ink and pencil on
-// warm paper, one colour besides the ink (red, "dressed in red"). The owner
-// will supply or approve the final art; these drawings hold the places and
-// carry the motion (see ../engine/ink.ts for the data attributes).
+// Line art for Sea Lion Girls drawn in code: ink and pencil on warm paper,
+// one colour besides the ink (red, "dressed in red"). The scenes show their
+// generated illustrations (feature.yaml, `art:`); these drawings remain for
+// the film strip, the page, the glyphs, and as stand-ins for a scene whose
+// layers are not there.
 import type { Glyph } from '../lineage';
 import { blot, drawing, hatch, ink, loop, s, sketch } from '../engine/ink';
 
@@ -59,17 +60,6 @@ export function door(): SVGSVGElement {
   );
 }
 
-export function ring(n = 7, seed = 30): SVGSVGElement {
-  const g = s('g', { class: 'ring-figures' });
-  for (let i = 0; i < n; i++) {
-    const a = (i / n) * Math.PI * 2;
-    const x = 200 + Math.sin(a) * 120;
-    const y = 120 - Math.cos(a) * 52;
-    g.append(figure(x, y, 0.78 + 0.12 * Math.cos(a), seed + i * 11, { clap: true, from: (i / n) * 0.3, to: 0.3 + (i / n) * 0.3 }));
-  }
-  return drawing('0 0 400 300', 'art-ring', paper(400, 300), ink(loop(200, 205, 150, 34, seed, 2), 0, 0.5), g, blot(200, 205, 9));
-}
-
 export function expedition(place: string): SVGSVGElement {
   const route: [number, number][] = [
     [360, 40],
@@ -96,35 +86,6 @@ export function label(x: number, y: number, text: string, cls = 'ink-label', fad
   const t = s('text', { x, y, class: cls, ...(fade ? { 'data-fade': fade } : {}) });
   t.textContent = text;
   return t;
-}
-
-export function porch(heights: number[], leads: boolean[]): SVGSVGElement {
-  const n = heights.length;
-  const g = s('g', {});
-  heights.forEach((k, i) => {
-    const x = 60 + (i * 280) / Math.max(1, n - 1);
-    g.append(figure(x, 210 - 70 * k, k, 70 + i * 13, { red: leads[i], from: 0.08 + i * 0.1, to: 0.3 + i * 0.1 }));
-  });
-  return drawing(
-    '0 0 400 300',
-    'art-porch',
-    paper(400, 300),
-    s('g', { 'data-depth': 14 }, ink(sketch([[10, 60], [390, 60]], 60, 2), 0, 0.2), ink(sketch([[30, 60], [30, 282]], 61), 0, 0.2), ink(sketch([[370, 60], [370, 282]], 62), 0, 0.2), hatch(10, 40, 380, 20, 6, 63, 0, 0.3)),
-    ink(sketch([[10, 282], [390, 282]], 64, 1.5), 0, 0.2),
-    g,
-  );
-}
-
-export function minute(): SVGSVGElement {
-  return drawing(
-    '0 0 400 300',
-    'art-minute',
-    paper(400, 300),
-    ink(loop(200, 230, 140, 30, 80, 2), 0, 0.3),
-    figure(165, 120, 1.15, 81, { red: true, clap: true, from: 0.05, to: 0.35 }),
-    figure(235, 124, 1.1, 82, { red: true, clap: true, from: 0.1, to: 0.4 }),
-    blot(200, 230, 6, 'red'),
-  );
 }
 
 export function album(paris: string, washington: string): SVGSVGElement {

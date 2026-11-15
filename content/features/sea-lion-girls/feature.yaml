@@ -30,7 +30,12 @@ lineage: lineage.yaml
 # picture is in that state, `open` swings it open over a stretch of the
 # scene, `fit` registers it on the canvas (percent, scale). Sources: the art
 # contact sheet (door v2 and its finale porch and light, expedition v2, album
-# v1, piano v1, classroom v2, river v1), WebP at 1600 px.
+# v1, piano v1, classroom v2, river v1) and the redraws (ring v3, family v4,
+# minute v4), WebP at 1600 px. Role `hands` jumps with each clap, `step`
+# comes half a step forward when the scene is reached. The sisters' layers
+# are named left and right: the alt text does not say which sister is which.
+# In ring and minute the hands exist only on the hands layer (the figures
+# have holes there), so those figures share its depth and do not breathe.
 art:
   - id: simone-1965
     kind: photo
@@ -159,6 +164,12 @@ scenes:
 
   - id: ring
     kind: ring
+    art:
+      generated: true
+      layers:
+        - { file: ring-ground.webp, depth: 3, alt: "" }
+        - { file: ring-children.webp, depth: 10, alt: { en: "Children in a ring, seen from a little above, clapping", ru: "Дети в кругу, вид чуть сверху, хлопают в ладоши" } }
+        - { file: ring-hands.webp, depth: 10, role: hands, alt: "" }
     blocks:
       - { id: kicker, role: kicker, draft: true, en: "Before 1939", ru: "До 1939 года" }
       - { id: title, role: title, draft: true, en: "A game in a circle", ru: "Игра в круг" }
@@ -208,6 +219,13 @@ scenes:
 
   - id: family
     kind: family
+    art:
+      generated: true
+      layers:
+        - { file: family-church.webp, depth: 3, alt: { en: "A small wooden country church", ru: "Маленькая деревянная сельская церковь" } }
+        - { file: family-family.webp, depth: 8, role: figure, pivot: "40 90", alt: { en: "An older woman, a young man and a boy in their Sunday clothes", ru: "Пожилая женщина, молодой человек и мальчик в воскресной одежде" } }
+        - { file: family-sister-left.webp, depth: 12, role: step, pivot: "68 92", alt: { en: "Two young women standing half a step forward, one in a red dress", ru: "Две девушки на полшага впереди, одна в красном платье" } }
+        - { file: family-sister-right.webp, depth: 12, role: step, pivot: "80 92", alt: "" }
     figures:
       - { id: mary, name: { en: "Mary Shipp", ru: "Мэри Шипп" }, age: 47, role: { en: "John’s mother", ru: "мать Джона" } }
       - { id: isaac, name: { en: "Isaac", ru: "Айзек" }, age: 23 }
@@ -232,6 +250,13 @@ scenes:
 
   - id: minute
     kind: minute
+    art:
+      generated: true
+      layers:
+        - { file: minute-wash.webp, depth: 3, alt: "" }
+        - { file: minute-sister-left.webp, depth: 10, alt: { en: "Two sisters face each other and sing; one leads, the other answers", ru: "Две сестры стоят лицом друг к другу и поют: одна ведёт, другая отвечает" } }
+        - { file: minute-sister-right.webp, depth: 10, alt: { en: "The second sister, in a red dress, claps as she sings", ru: "Вторая сестра, в красном платье, хлопает в ладоши и поёт" } }
+        - { file: minute-hands.webp, depth: 10, role: hands, alt: "" }
     nodes: [ shipp-1939 ]
     blocks:
       - { id: kicker, role: kicker, draft: true, en: "The minute", ru: "Минута" }

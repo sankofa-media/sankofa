@@ -350,3 +350,39 @@ test('with reduced motion the illustrations do not move either', async ({ page }
   const mask = await scene(page, 'classroom').locator('.ft-art .al').first().evaluate((e) => getComputedStyle(e).maskImage);
   expect(mask).toBe('none');
 });
+
+test('the ring, the family and the minute are drawn in layers: hands clap, the sisters step forward', async ({ page }) => {
+  await openFeature(page);
+  for (const id of ['ring', 'family', 'minute']) await expect(scene(page, id).locator('svg.ink')).toHaveCount(0);
+  await goToScene(page, 'family');
+  const sisters = scene(page, 'family').locator('.al[data-role="step"]');
+  await expect(sisters).toHaveCount(2);
+  // Half a step back until the scene is reached, then forward to where they are drawn.
+  await expect.poll(() => sisters.first().evaluate((e) => getComputedStyle(e).scale)).toBe('1');
+  await expect(scene(page, 'family').locator('.ft-figures li')).toHaveCount(5);
+  await feature(page).locator('.ft-knock').evaluate((b) => (b as HTMLButtonElement).click());
+  await goToScene(page, 'minute');
+  const hands = scene(page, 'minute').locator('.al[data-role="hands"]');
+  // A still copy under the clapping hands keeps the sisters whole.
+  await expect(hands.locator('img')).toHaveCount(2);
+  await expect.poll(() => hands.locator('img').evaluateAll((els) => els.every((e) => (e as HTMLImageElement).naturalWidth > 0))).toBe(true);
+  await hands.evaluate((e) => e.classList.remove('clap'));
+  await feature(page).locator('.cc').click();
+  await expect(hands).toHaveClass(/clap/);
+  // The alt text says two sisters lead and answer, without naming which is which.
+  const alts = await scene(page, 'minute').locator('.ft-art img:not(.al-still)').evaluateAll((els) => els.map((e) => (e as HTMLImageElement).alt).join(' '));
+  expect(alts).toContain('one leads, the other answers');
+  expect(alts).not.toMatch(/Christine|Katherine/);
+});
+
+test('in calm mode the hands do not clap and the sisters already stand forward', async ({ page }) => {
+  await openFeature(page);
+  await sheet(page).locator('.ft-calm').click();
+  await expect(feature(page)).toHaveClass(/is-calm/);
+  const step = await scene(page, 'family').locator('.al[data-role="step"]').first().evaluate((e) => getComputedStyle(e).scale);
+  expect(step).toBe('1');
+  await goToScene(page, 'minute');
+  const hands = scene(page, 'minute').locator('.al[data-role="hands"]');
+  await feature(page).locator('.cc').click();
+  await expect(hands).not.toHaveClass(/clap/);
+});

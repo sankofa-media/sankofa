@@ -16,7 +16,7 @@ import { isCalm, onCalm, setCalm } from './calm';
 import { ClapCircle } from './circle';
 import { BEAT, clap, ClapBed, knock } from './clap';
 import { inkDefs, LivingInk } from './ink';
-import { layered, type Picture } from './layers';
+import { clapHands, layered, type Picture } from './layers';
 import { Scroller } from './scroll';
 
 const TEXT_TAG: Record<string, string> = { kicker: 'p.ft-kicker', title: 'h2.ft-title', lede: 'p.ft-lede', text: 'p.ft-text', caption: 'p.ft-caption', line: 'p.ft-line', quote: 'p.ft-quote', note: 'p.ft-note' };
@@ -61,7 +61,11 @@ export class Kit {
     ctx.root.append(defs);
     this.ink = new LivingInk(defs);
     this.bed = new ClapBed(ctx.root);
-    this.bed.onBeat = (b) => this.circle.pulse(b);
+    this.bed.onBeat = (b) => {
+      this.circle.pulse(b);
+      // The pictures' hands clap with the bed, on two and four.
+      if (b % 2 === 1) this.clapHands();
+    };
     this.bed.onStop = () => this.setAudio(this.audio === 'locked' ? 'locked' : 'off');
     this.circle = new ClapCircle(`sankofa.feature.${ctx.data.id}.claps`, this.ui('clap-circle'), (n) => this.ui('clap-count', { n }));
     this.circle.onClap = () => this.tap();
@@ -241,6 +245,7 @@ export class Kit {
     if (this.audio === 'locked') this.unlock();
     const ctx = audioContext();
     clap(ctx, ctx.currentTime, 0.32);
+    this.clapHands();
     this.circle.add(this.bed.running ? { now: ctx.currentTime, start: this.bed.start, beat: BEAT } : undefined);
   }
 
@@ -267,6 +272,11 @@ export class Kit {
   art(sc: Scene, opts: { state?: string; overlay?: Node | null } = {}): Picture | null {
     if (!sc.art?.layers?.length) return null;
     return layered(sc.art, (file) => this.ctx.app.media(`features/${this.ctx.data.id}/${file}`), { name: sc.id, ...opts });
+  }
+
+  /** The hands drawn in the current scene clap (not in calm mode). */
+  private clapHands(): void {
+    if (!this.ink.calm) clapHands(this.ctx.root);
   }
 
   /** Whether any scene shows generated art (the closing credits say so once). */

@@ -485,6 +485,18 @@
 .ft-k-minute .ink {
   max-height: calc(100svh - var(--nav-h) - 6vh - min(26vh, 22vw));
 }
+/* The clap circle sits above the sisters on this stage. */
+.ft-k-minute .ft-stage > .ft-art {
+  width: min(58vw, 860px, 100vw - 2 * var(--gutter) - 31rem - 32px, (100svh - var(--nav-h) - 6vh - min(26vh, 22vw)) * 1.5);
+}
+/* The family stand over their names: the picture and the list share one width. */
+.ft-k-family .ft-stage > .ft-stack {
+  width: min(58vw, 860px, 100vw - 2 * var(--gutter) - 31rem - 32px, (100svh - var(--nav-h) - 6vh - 90px) * 1.5);
+}
+.ft-k-family .ft-stack > .ft-art,
+.ft-k-family .ft-figures {
+  width: 100%;
+}
 
 /* Labels drawn over a layered picture: ink on its paper, whatever the theme. */
 .art-over .ink-label.place {
@@ -609,5 +621,14 @@
 @media (max-width: 720px) {
   .ft-photo {
     width: 100%;
+  }
+}
+@media (max-width: 720px) {
+  .ft-k-family .ft-stage > .ft-stack {
+    width: min(100%, (46svh - 70px) * 1.5);
+  }
+  .ft-k-minute .ft-stage > .ft-art {
+    width: min(100% - 30vw - 12px, 46svh * 1.5);
+    justify-self: start;
   }
 }

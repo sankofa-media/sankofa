@@ -49,7 +49,11 @@ export interface ArtLayer {
   file: string;
   /** Parallax: how many pixels the layer travels through the scene (0 is still). */
   depth?: number;
-  /** figure: breathes slightly; spin: turns slowly in its own plane (see `spin`). */
+  /**
+   * figure: breathes slightly; spin: turns slowly in its own plane (see
+   * `spin`); hands: jumps with each clap; step: comes half a step forward
+   * when its scene is reached.
+   */
   role?: ArtRole;
   /** What it shows for a screen reader, or "" for a decorative layer. Required either way. */
   alt: Bi | '';
@@ -69,8 +73,8 @@ export interface ArtLayer {
   spin?: { x: number; y: number; ratio: number; tilt?: number; face?: [number, number, number, number] };
 }
 
-export type ArtRole = 'figure' | 'spin';
-export const ART_ROLES: readonly ArtRole[] = ['figure', 'spin'];
+export type ArtRole = 'figure' | 'spin' | 'hands' | 'step';
+export const ART_ROLES: readonly ArtRole[] = ['figure', 'spin', 'hands', 'step'];
 
 /** A scene's illustration: generated layers, marked as generated (they never enter the photo-rights ledger). */
 export interface SceneArt {
