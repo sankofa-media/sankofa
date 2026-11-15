@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { readFileSync } from 'node:fs';
+import { readdirSync, readFileSync } from 'node:fs';
 import { parse } from 'yaml';
 import { clapAngle, FlashGate, formatClock, parseClock, publishFeature, sceneAt, sceneProgress, validateFeature, windowed, type FeatureSource } from '../src/features/model';
 import { branches, compileLineage, layoutRiver, playableOf, sourcedNodes, validateLineage, youtubeId, type RawLineage } from '../src/features/lineage';
@@ -61,6 +61,17 @@ describe('feature validation', () => {
     const errs = validateFeature(f);
     expect(errs.join('\n')).toMatch(/one block a: needs both en and ru/);
     expect(errs.join('\n')).toMatch(/block b: draft must be set/);
+  });
+  it('[[links]] must name dictionary cards; a photo needs alt text and a credit', () => {
+    const f = base();
+    f.scenes[0].blocks[0].en = 'Hello [[jazz]] and [[nowhere|there]]';
+    f.art = [{ id: 'p', kind: 'photo', file: 'p.jpg', rights: 'p.jpg' }];
+    f.scenes[1].art = 'missing';
+    const errs = validateFeature(f, { cards: new Set(['jazz']), rights: new Set(['p.jpg']) }).join('\n');
+    expect(errs).toMatch(/card that does not exist: nowhere/);
+    expect(errs).not.toMatch(/: jazz/);
+    expect(errs).toMatch(/art p: a real photo needs alt and credit/);
+    expect(errs).toMatch(/scene two: art missing is not in the feature's art list/);
   });
   it('a scene with only held text has nothing to show', () => {
     const f = base();
@@ -134,7 +145,10 @@ describe('the Sea Lion Girls content', () => {
   const lin = parse(readFileSync('../content/features/sea-lion-girls/lineage.yaml', 'utf8')) as RawLineage;
   it('is valid against its lineage, all draft, with the single-source lines held', () => {
     const sync = new Set((lin.sync ?? []).filter((s) => (s.sources ?? []).length).map((s) => s.work));
-    expect(validateFeature(f, { nodes: new Set(lin.nodes.map((n) => n.id)), sourced: sourcedNodes(lin), sync })).toEqual([]);
+    const ledger = parse(readFileSync('../content/ledger/media.yaml', 'utf8')) as { file: string; feature?: string }[];
+    const rights = new Set(ledger.filter((e) => e.feature === 'sea-lion-girls').map((e) => e.file));
+    const cards = new Set(readdirSync('../content/cards').filter((x) => !/\.[a-z]{2}\.md$/.test(x)).map((x) => x.replace(/\.md$/, '')));
+    expect(validateFeature(f, { nodes: new Set(lin.nodes.map((n) => n.id)), sourced: sourcedNodes(lin), sync, rights, cards })).toEqual([]);
     expect(validateLineage(lin)).toEqual([]);
     const blocks = f.scenes.flatMap((s) => s.blocks);
     expect(blocks.every((b) => b.draft === true)).toBe(true);
