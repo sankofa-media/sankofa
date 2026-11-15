@@ -26,7 +26,7 @@ sources:
   - {title: "Hérodote.net: 2 octobre 1925, Joséphine Baker lance la Revue nègre", url: "https://www.herodote.net/almanach-ID-3598.php"}
   - {title: "Ordre de la Libération: Joséphine Freda Baker", url: "https://www.ordredelaliberation.fr/fr/medailles/josephine-freda-baker"}
 ---
-La Revue nègre was a music-hall show performed entirely by Black American artists, and it opened at the Théâtre des Champs-Élysées in Paris on 2 October 1925. It was the modernist house where Diaghilev's Ballets Russes had premiered Stravinsky's Rite of Spring in 1913. Paris in 1925 was mad about jazz and about African art. The American producer Caroline Dudley Reagan assembled the troupe in New York: twelve musicians, among them the clarinettist and saxophonist Sidney Bechet, and eight chorus dancers.
+La Revue nègre was a music-hall show performed entirely by Black American artists, and it opened at the Théâtre des Champs-Élysées in Paris on 2 October 1925. It was the modernist house where Diaghilev's Ballets Russes had premiered Stravinsky's Rite of Spring in 1913. Paris in 1925 was mad about jazz and about African art. The American producer Caroline Dudley Reagan assembled the troupe: twelve musicians, among them Sidney Bechet, and eight chorus dancers.
 
 One of the dancers was Josephine Baker, born in St. Louis in 1906, who had danced in the chorus of the touring [[shuffle-along|Shuffle Along]]. Her "Danse sauvage", the wild dance, was the sensation of the night. The staging fed Paris's fantasy of "primitive" Africa, and Baker played with the racist stereotype while staying in command of it. Paul Colin's posters, cubist in their distortions, turned her silhouette into an Art Deco icon.
 

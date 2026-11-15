@@ -5,9 +5,8 @@ title: Rebecca Lee Crumpler
 wow: "In 1864, when the United States had some 54,000 physicians and not one Black woman among them, she graduated a 'doctress of medicine' and went south to treat people just freed from slavery."
 years: [1831, 1895]
 places:
-  - {name: "New England Female Medical College, Boston", lat: 42.3398, lon: -71.0892}
-  - {name: "Richmond, Virginia", lat: 37.5407, lon: -77.4360}
   - {name: "Joy Street, Beacon Hill, Boston", lat: 42.3588, lon: -71.0650}
+  - {name: "Richmond, Virginia", lat: 37.5407, lon: -77.4360}
 zoom: 4
 era: v3
 books: [voices]

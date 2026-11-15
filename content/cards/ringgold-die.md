@@ -27,4 +27,4 @@ That year Robert Newman, who ran the Spectrum Gallery on 57th Street in Manhatta
 
 Ringgold went on to become famous for her story quilts, such as Tar Beach, and in 2016 the Museum of Modern Art acquired Die.
 
-The painting refused to look away from 1967, and half a century later a Black woman's history painting of American violence took its place in the Museum of Modern Art.
+The painting refused to look away from 1967, and nearly half a century later a Black woman's history painting of American violence took its place in the Museum of Modern Art.

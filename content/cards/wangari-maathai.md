@@ -24,7 +24,7 @@ sources:
   - {title: "Goldman Environmental Prize: Wangari Maathai (1991)", url: "https://www.goldmanprize.org/recipient/wangari-maathai/"}
   - {title: "Right Livelihood: Wangari Maathai (1984)", url: "https://rightlivelihood.org/the-change-makers/find-a-laureate/wangari-maathai/"}
 ---
-Wangari Maathai was born in 1940 near Nyeri in central Kenya. She studied biology in the United States, in Kansas and Pittsburgh, and in 1971 the University of Nairobi awarded her a doctorate, which made her the first woman in East and Central Africa to earn one. She went on to chair the university's department of veterinary anatomy.
+Wangari Maathai was born in 1940 in Nyeri, in central Kenya. She studied biology in the United States, in Kansas and Pittsburgh, and in 1971 the University of Nairobi awarded her a doctorate, which made her the first woman in East and Central Africa to earn one. She went on to chair the university's department of veterinary anatomy.
 
 In the National Council of Women of Kenya she heard rural women describe walking ever farther for firewood. In 1977 she started what became the Green Belt Movement: groups of women planted trees on their farms and around schools and churches, for fuel and income and against deforestation. Over the following decades they planted some 30 million trees.
 

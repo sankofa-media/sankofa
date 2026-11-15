@@ -20,8 +20,8 @@ sources:
   - {title: "US House of Representatives, History, Art & Archives: The Congressional Gold Medal for Singer Marian Anderson", url: "https://history.house.gov/Historical-Highlights/1951-2000/The-Congressional-Gold-Medal-for-singer-Marian-Anderson/"}
   - {title: "Zanice Bond, BlackPast: Marian Anderson (1897-1993)", url: "https://www.blackpast.org/african-american-history/anderson-marian-1897-1993/"}
 ---
-In 1939 Washington, D.C., was still a segregated city. Marian Anderson, a contralto acclaimed across Europe, had already sung at the White House. Her concert in the capital that spring needed the largest hall in town, Constitution Hall, which belonged to the Daughters of the American Revolution, an all-white heritage society. The hall did not allow Black performers on its stage, and the DAR refused to make an exception.
+In 1939 the colour line still ran through the concert halls of Washington, D.C. Marian Anderson, a contralto acclaimed across Europe, had already sung at the White House. Her concert in the capital that spring needed the largest hall in town, Constitution Hall, which belonged to the Daughters of the American Revolution, an all-white heritage society. The hall did not allow Black performers on its stage, and the DAR refused to make an exception.
 
 The refusal set off a national controversy. Eleanor Roosevelt resigned from the DAR in protest. The NAACP and its allies moved the concert outdoors, to the steps of the Lincoln Memorial. On Easter Sunday, 9 April 1939, Anderson sang there to an integrated crowd of more than 75,000 people, opening with "My Country, 'Tis of Thee".
 
-Four years later the DAR relented: in 1943 it invited Anderson to sing at Constitution Hall, and she sang there to an integrated audience. In 1955 she became the first African American to sing with the Metropolitan Opera in New York.
+Four years later the DAR made an exception: in 1943 it invited Anderson to sing at Constitution Hall, and she sang there to an integrated audience. In 1955 she became the first African American to sing with the Metropolitan Opera in New York.

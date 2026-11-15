@@ -23,9 +23,9 @@ sources:
   - {title: "BlackPast, W. Gabriel Selassie I: Ernest Everett Just (1883–1941)", url: "https://www.blackpast.org/african-american-history/just-ernest-everett-1883-1941/"}
   - {title: "Encyclopedia of African-American Culture and History (Macmillan), via Encyclopedia.com: Just, Ernest", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/just-ernest"}
 ---
-In the early twentieth century much American biology was done at summer stations such as the Marine Biological Laboratory at Woods Hole, Massachusetts. Ernest Everett Just was born in Charleston, South Carolina, on 14 August 1883. He graduated from Dartmouth in 1907, the only magna cum laude of his class, and that autumn began teaching English at Howard University in Washington.
+Ernest Everett Just was born in Charleston, South Carolina, on 14 August 1883. He graduated from Dartmouth in 1907 magna cum laude and that autumn began teaching English at Howard University in Washington.
 
-He soon moved to biology. Summer after summer at Woods Hole he studied how the eggs of marine animals are fertilised and develop. In 1915 the NAACP made him the first winner of its Spingarn Medal, and in 1916 the University of Chicago gave him a doctorate. Still no white university would hire him.
+He soon moved to biology. In 1909 he began research at the Marine Biological Laboratory in Woods Hole, Massachusetts, and summer after summer there he studied how the eggs of marine animals are fertilised and develop. In 1915 the NAACP made him the first winner of its Spingarn Medal, and in 1916 the University of Chicago gave him a doctorate. Still no white university would hire him.
 
 So from 1929 he worked in Europe: at the Stazione Zoologica in Naples, at the Kaiser Wilhelm Institute for Biology in Berlin, and at the marine station at Roscoff in Brittany. In 1939 he published The Biology of the Cell Surface, which argued that the surface of the cell plays a fundamental part in development. When Germany invaded France in 1940 he was briefly interned, then released to return to the United States. He died in Washington on 27 October 1941.
 

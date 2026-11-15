@@ -1,5 +1,5 @@
 # Batch c31 (2026-11-13): facts in card bodies and wow lines, each with two or more independent sources and a quote.
-# Dropped: none.
+# Dropped (second check, 2026-11-14): Coachman "only American woman to win gold in athletics at the 1948 Games" (one valid source; see expand-c31-check.yaml).
 
 - card: lumumba-tooth
   fact: "Lumumba led Congo to independence from Belgium in June 1960 and became its first prime minister"
@@ -53,16 +53,17 @@
     - {title: "AP via CBS News: Belgium returns Lumumba's gold-capped tooth to his family (20 June 2022)", url: "https://www.cbsnews.com/news/patrice-lumumba-assassination-1961-tooth-returned-by-belgium-congo-hero-family", quote: "there is no absolute certainty that the tooth being returned is Lumumba's since no DNA test could be conducted"}
     - {title: "BBC News: DR Congo Covid spike delays return of Patrice Lumumba's tooth (13 June 2021)", url: "https://www.bbc.com/news/world-africa-57459055", quote: "even though no DNA tests had been carried out to confirm it was Lumumba's"}
 - card: lumumba-tooth
-  fact: "A Belgian parliamentary inquiry in 2001 found the government morally responsible / complicit"
+  fact: "A Belgian parliamentary inquiry in 2001 found members of the government of the day morally responsible for the circumstances that led to the killing"
   sources:
     - {title: "AP via CBS News: Belgium returns Lumumba's gold-capped tooth to his family (20 June 2022)", url: "https://www.cbsnews.com/news/patrice-lumumba-assassination-1961-tooth-returned-by-belgium-congo-hero-family", quote: "A Belgian parliamentary probe later determined that the government was \"morally responsible\" for Lumumba's death."}
     - {title: "BBC On This Day: 1961, Ex-Congo PM declared dead", url: "https://news.bbc.co.uk/onthisday/hi/dates/stories/february/13/newsid_2541000/2541053.stm", quote: "A Belgian Government inquiry into the murders reported in November 2001 that they would not have taken place without the complicity of Belgian and American intelligence services."}
+    - {title: "Damian Zane, BBC News: Why Belgium is returning a Congolese hero's golden tooth (20 June 2022)", url: "https://www.bbc.com/news/world-africa-61838781", quote: "the inquiry found that certain members of the government \"were morally responsible for circumstances leading to the death\""}
 - card: lumumba-tooth
   fact: "Belgium apologised in 2002"
   sources:
     - {title: "BBC On This Day: 1961, Ex-Congo PM declared dead", url: "https://news.bbc.co.uk/onthisday/hi/dates/stories/february/13/newsid_2541000/2541053.stm", quote: "In February 2002 the Belgian Government made its first official apology for its part in the assassinations"}
     - {title: "BBC News: DR Congo Covid spike delays return of Patrice Lumumba's tooth (13 June 2021)", url: "https://www.bbc.com/news/world-africa-57459055", quote: "In 2002, Belgium admitted responsibility for its part in the killing"}
-    - {title: "Dawn: Belgium apologizes for role in Lumumba killing (6 February 2002)", url: "https://www.dawn.com/news/18799/belgium-apologizes-for-role-in-lumumba", quote: "The government feels it should extend to the family of Patrice Lumumba... and to the Congolese people its profound and sincere regrets and its apologies for the pain inflicted upon them"}
+    - {title: "NPR Morning Edition: Belgian Apology (15 February 2002)", url: "https://www.npr.org/2002/02/15/1138123/belgian-apology", quote: "Commentator Kenneth Wiwa talks about Belgium's public apology for its part in the 1961 assassination of Congolese leader Patrice Lumumba."}
 - card: lumumba-tooth
   fact: "On 20 June 2022 the tooth was handed to Lumumba's family in a coffin in Brussels"
   sources:
@@ -103,7 +104,7 @@
     - {title: "National Park Service: Mrs. Recy Taylor (1919-2017)", url: "https://home.nps.gov/people/mrsrecytaylor1919-2017.htm", quote: "Wilson gave up the names of his accomplices"}
     - {title: "Equal Justice Initiative, A History of Racial Injustice: 14 February 1945", url: "https://calendar.eji.org/racial-injustice/feb/14", quote: "Hugo Wilson, the owner of the car, identified the six white men who raped Mrs. Taylor"}
 - card: recy-taylor
-  fact: "None of the men was arrested"
+  fact: "None of the six men was arrested"
   sources:
     - {title: "Equal Justice Initiative, A History of Racial Injustice: 14 February 1945", url: "https://calendar.eji.org/racial-injustice/feb/14", quote: "Yet none of the men were arrested."}
     - {title: "National Park Service: Mrs. Recy Taylor (1919-2017)", url: "https://home.nps.gov/people/mrsrecytaylor1919-2017.htm", quote: "The other men were not brought in or ever arrested."}
@@ -220,7 +221,7 @@
     - {title: "Bank of Canada: New vertical $10 bank note featuring iconic Canadian Viola Desmond now in circulation (19 November 2018)", url: "https://www.bankofcanada.ca/2018/11/new-vertical-10-bank-note-featuring-iconic-canadian-viola-desmond/", quote: "we honour her as the first Canadian woman to appear on a bank note"}
     - {title: "The Canadian Encyclopedia: Viola Desmond", url: "https://www.thecanadianencyclopedia.ca/en/article/viola-desmond", quote: "Viola Desmond would be the first Canadian woman to be featured by herself on the face of a banknote — the $10 note released on 19 November 2018"}
 - card: alice-coachman
-  fact: "In the segregated South she was barred from public sports facilities"
+  fact: "In the segregated South (Georgia) she was barred from public sports facilities"
   sources:
     - {title: "Lisa A. Ennis, New Georgia Encyclopedia: Alice Coachman (1923-2014)", url: "https://www.georgiaencyclopedia.org/articles/sports-outdoor-recreation/alice-coachman-1923-2014/", quote: "Barred from public sports facilities because of her race"}
     - {title: "BBC News: US black female gold Olympian Alice Coachman Davis dies (15 July 2014)", url: "https://www.bbc.com/news/world-us-canada-28309527", quote: "she was barred from public sports facilities because of her colour"}
@@ -282,11 +283,6 @@
   sources:
     - {title: "National Women's History Museum: Alice Coachman", url: "https://www.womenshistory.org/education-resources/biographies/alice-coachman", quote: "Alice Coachman was the first Black woman from any country to win an Olympic gold medal."}
     - {title: "BBC News: US black female gold Olympian Alice Coachman Davis dies (15 July 2014)", url: "https://www.bbc.com/news/world-us-canada-28309527", quote: "The first black woman to win an Olympic gold medal, Alice Coachman Davis, has died"}
-- card: alice-coachman
-  fact: "She was the only American woman to win gold in athletics at the 1948 Games"
-  sources:
-    - {title: "Alan Greenblatt, NPR Code Switch: Why An African-American Sports Pioneer Remains Obscure (19 July 2014)", url: "https://www.npr.org/blogs/codeswitch/2014/07/19/332665921/why-an-african-american-sports-pioneer-remains-obscure", quote: "She was the only American woman to win a gold medal in athletics at those games."}
-    - {title: "National Women's History Museum: Alice Coachman", url: "https://www.womenshistory.org/education-resources/biographies/alice-coachman", quote: "the only American woman to win a gold medal at the 1948 Olympic Games"}
 - card: alice-coachman
   fact: "Albany gave her a motorcade"
   sources:
@@ -376,6 +372,7 @@
   sources:
     - {title: "International Tennis Hall of Fame: Althea Gibson", url: "https://www.tennisfame.com/hall-of-famers/inductees/althea-gibson", quote: "The No. 1 ranked player in the world then retired and turned professional. However, there wasn’t much money to be made in professional women’s tennis"}
     - {title: "Shay Dawson, National Women's History Museum: Althea Gibson", url: "https://www.womenshistory.org/education-resources/biographies/althea-gibson", quote: "In 1958, she decided to no longer engage in amateur matches and sought out professional opportunities to make ends meet."}
+    - {title: "Encyclopaedia Britannica: Althea Gibson", url: "https://www.britannica.com/biography/Althea-Gibson", quote: "she turned professional following her 1958 Forest Hills win. However, there being few tournaments and prizes for women at that time, she took up professional golf in 1964"}
 - card: althea-gibson
   fact: "She tried a singing career"
   sources:
@@ -420,7 +417,7 @@
     - {title: "Ellen R. Stofan, National Air and Space Museum: Katherine Johnson Calculated Flight Paths for NASA and Continues To Inspire (25 February 2020)", url: "https://airandspace.si.edu/stories/editorial/katherine-johnson", quote: "Even when NASA turned to electronic computers to tabulate trajectories"}
     - {title: "MacTutor History of Mathematics, University of St Andrews: Katherine Johnson", url: "https://mathshistory.st-andrews.ac.uk/Biographies/Johnson_Katherine/", quote: "the flight of John Glenn in February 1962"}
 - card: katherine-johnson
-  fact: "Glenn asked that Johnson personally check the computer's numbers by hand before flying; the flight succeeded"
+  fact: "Glenn asked that Johnson personally check the computer's numbers by hand before climbing aboard; she did and he flew"
   sources:
     - {title: "Margot Lee Shetterly, NASA: Katherine Johnson Biography", url: "https://www.nasa.gov/centers-and-facilities/langley/katherine-johnson-biography/", quote: "Glenn asked engineers to “get the girl”—Johnson—to run the same numbers through the same equations that had been programmed into the computer, but by hand"}
     - {title: "Ellen R. Stofan, National Air and Space Museum: Katherine Johnson Calculated Flight Paths for NASA and Continues To Inspire (25 February 2020)", url: "https://airandspace.si.edu/stories/editorial/katherine-johnson", quote: "John Glenn now-famously asked that Katherine personally recheck the calculations on his flight before climbing aboard Friendship 7"}
@@ -472,11 +469,13 @@
     - {title: "PBS American Experience, Scottsboro: An American Tragedy: timeline", url: "https://www.pbs.org/wgbh/americanexperience/features/scottsboronine-black-youth-arrested-for-assault/", quote: "Governor Miller in turn calls in the National Guard to protect the jail and its prisoners."}
     - {title: "Encyclopedia of Alabama: Scottsboro Trials", url: "https://encyclopediaofalabama.org/article/scottsboro-trials/", quote: "Gov. Benjamin Meek Miller sent the Alabama National Guard to Scottsboro to prevent a lynching."}
 - card: scottsboro
-  fact: "Within days all-white juries convicted them and eight were sentenced to death"
+  fact: "Within days all-white juries convicted eight and sentenced them to death; the trial of the youngest, 13-year-old Roy Wright, ended in a hung jury"
   sources:
     - {title: "Encyclopedia of Alabama: Scottsboro Trials", url: "https://encyclopediaofalabama.org/article/scottsboro-trials/", quote: "The first set of trials took place in four groups over the course of just four days in early April 1931."}
     - {title: "Encyclopedia of Alabama: Scottsboro Trials", url: "https://encyclopediaofalabama.org/article/scottsboro-trials/", quote: "Eight defendants were sentenced to death"}
     - {title: "BBC News: Alabama posthumously pardons three Scottsboro Boys (21 November 2013)", url: "https://www.bbc.co.uk/news/world-us-canada-25046096", quote: "The boys were convicted by all-white juries. Eight were sentenced to death but none was ever executed."}
+    - {title: "Encyclopedia of Alabama: Scottsboro Trials", url: "https://encyclopediaofalabama.org/article/scottsboro-trials/", quote: "the jury split over whether to sentence the youngest defendant, 13-year-old Roy Wright, to death or life imprisonment, and a mistrial was declared"}
+    - {title: "PBS American Experience, Scottsboro: An American Tragedy: timeline", url: "https://www.pbs.org/wgbh/americanexperience/features/scottsboronine-black-youth-arrested-for-assault/", quote: "The case against Roy Wright, aged 13, ends in a hung jury"}
 - card: scottsboro
   fact: "The International Labor Defense took over their defence and won a stay of execution"
   sources:
@@ -501,7 +500,7 @@
   fact: "None was executed"
   sources:
     - {title: "BBC News: Alabama posthumously pardons three Scottsboro Boys (21 November 2013)", url: "https://www.bbc.co.uk/news/world-us-canada-25046096", quote: "Eight were sentenced to death but none was ever executed."}
-    - {title: "Encyclopedia of Alabama: Scottsboro Trials", url: "https://encyclopediaofalabama.org/article/scottsboro-trials/", quote: "Thus, on the basis of the same body of evidence, four defendants were freed and four convicted."}
+    - {title: "Encyclopedia of Alabama: Scottsboro Trials", url: "https://encyclopediaofalabama.org/article/scottsboro-trials/", quote: "Ozie Powell was paroled in 1946; Haywood Patterson escaped from prison in 1948. Norris, the last surviving defendant, was finally pardoned in 1976."}
 - card: scottsboro
   fact: "In 1937 charges against four of them were dropped; the others spent years in prison"
   sources:
@@ -519,10 +518,10 @@
     - {title: "Encyclopedia of Alabama: Scottsboro Trials", url: "https://encyclopediaofalabama.org/article/scottsboro-trials/", quote: "On November 21, 2013, the Alabama Board of Pardons and Paroles voted unanimously to pardon Haywood Patterson, Charlie Weems, and Andy Wright"}
     - {title: "BBC News: Alabama posthumously pardons three Scottsboro Boys (21 November 2013)", url: "https://www.bbc.co.uk/news/world-us-canada-25046096", quote: "The Alabama state legislature passed a law earlier this year allowing the parole board to grant the Scottsboro Boys posthumous pardons."}
 - card: marian-anderson-1939
-  fact: "In 1939 Washington was a segregated city"
+  fact: "In 1939 the colour line ran through Washington's concert halls (Constitution Hall barred Black performers)"
   sources:
     - {title: "Franklin D. Roosevelt Presidential Library: Eleanor Roosevelt and Marian Anderson", url: "https://www.fdrlibrary.org/anderson", quote: "in 1939, Washington, DC was still a racially segregated city"}
-    - {title: "National Park Service: Marian Anderson and Constitution Hall", url: "https://www.nps.gov/articles/000/marian-anderson-and-constitution-hall.htm", quote: "In 1939, Constitution Hall was at the center of a Civil Rights crisis"}
+    - {title: "National Park Service: Marian Anderson and Constitution Hall", url: "https://www.nps.gov/articles/000/marian-anderson-and-constitution-hall.htm", quote: "the venue banned black performers"}
 - card: marian-anderson-1939
   fact: "Anderson was a contralto acclaimed in Europe who had sung at the White House"
   sources:
@@ -568,7 +567,7 @@
     - {title: "National Park Service: Marian Anderson and Constitution Hall", url: "https://www.nps.gov/articles/000/marian-anderson-and-constitution-hall.htm", quote: "with the patriotic ballad, “My Country, ‘Tis of Thee.”"}
     - {title: "Zanice Bond, BlackPast: Marian Anderson (1897-1993)", url: "https://www.blackpast.org/african-american-history/anderson-marian-1897-1993/", quote: "with Anderson opening the program with “My Country ‘Tis of Thee.”"}
 - card: marian-anderson-1939
-  fact: "In 1943 the DAR invited her to Constitution Hall and she sang to an integrated audience"
+  fact: "In 1943 the DAR made an exception and invited her to Constitution Hall and she sang to an integrated audience"
   sources:
     - {title: "National Park Service: Marian Anderson and Constitution Hall", url: "https://www.nps.gov/articles/000/marian-anderson-and-constitution-hall.htm", quote: "In 1943, making an exception to its racial ban, which did not end until 1952, the DAR invited Anderson to perform at Constitution Hall for a war-benefit concert. Anderson agreed under the condition that the audience be integrated."}
     - {title: "Zanice Bond, BlackPast: Marian Anderson (1897-1993)", url: "https://www.blackpast.org/african-american-history/anderson-marian-1897-1993/", quote: "In 1943, she finally sang before an integrated audience at Constitution Hall at the invitation of the DAR."}
@@ -589,7 +588,7 @@
     - {title: "Damian Zane, BBC News: France admits colonial 'massacre', says Senegal's leader (29 November 2024)", url: "https://www.bbc.com/news/articles/cvg725vk174o", quote: "They were sent to France and many were captured by Germany during its successful invasion of the country."}
     - {title: "Armelle Mabon, La tragédie de Thiaroye, symbole du déni d'égalité, Hommes et Migrations 1235 (2002)", url: "https://www.persee.fr/doc/homig_1142-852x_2002_num_1235_1_3780", quote: "dans les Frontstalags en France"}
 - card: thiaroye-1944
-  fact: "Freed in 1944 they were shipped to Senegal and held at Thiaroye camp, about 15 km from Dakar"
+  fact: "Freed in 1944 they were shipped to Senegal and held at Thiaroye camp, on the outskirts of Dakar"
   sources:
     - {title: "Damian Zane, BBC News: France admits colonial 'massacre', says Senegal's leader (29 November 2024)", url: "https://www.bbc.com/news/articles/cvg725vk174o", quote: "Liberated in 1944, the soldiers were taken back to Senegal and housed in the Thiaroye military camp, 15km (nine miles) from the capital, Dakar."}
     - {title: "AP via Stars and Stripes: France's Macron acknowledges 1944 killings of West African troops was a massacre (29 November 2024)", url: "https://www.stripes.com/theaters/europe/2024-11-29/france-macron-west-african-troops-massacre-16004214.html", quote: "Thiaroye — a fishing village on the outskirts of the Senegalese capital of Dakar"}
@@ -611,7 +610,7 @@
     - {title: "Damian Zane, BBC News: France admits colonial 'massacre', says Senegal's leader (29 November 2024)", url: "https://www.bbc.com/news/articles/cvg725vk174o", quote: "On 1 December, the French violently brought an end to the protests."}
     - {title: "Armelle Mabon, La tragédie de Thiaroye, symbole du déni d'égalité, Hommes et Migrations 1235 (2002)", url: "https://www.persee.fr/doc/homig_1142-852x_2002_num_1235_1_3780", quote: "Leurs légitimes revendications furent réprimées dans le sang."}
 - card: thiaroye-1944
-  fact: "The official toll was 35; some put it as high as 400"
+  fact: "The official toll was 35; other estimates run as high as 400"
   sources:
     - {title: "Damian Zane, BBC News: France admits colonial 'massacre', says Senegal's leader (29 November 2024)", url: "https://www.bbc.com/news/articles/cvg725vk174o", quote: "At the time it was said that 35 of the tirailleurs were killed, but some have put the death toll as high as 400."}
     - {title: "AP via Stars and Stripes: France's Macron acknowledges 1944 killings of West African troops was a massacre (29 November 2024)", url: "https://www.stripes.com/theaters/europe/2024-11-29/france-macron-west-african-troops-massacre-16004214.html", quote: "Between 35 and 400 West African soldiers"}

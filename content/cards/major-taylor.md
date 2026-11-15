@@ -15,7 +15,7 @@ era: v5
 books: [voices]
 edition: both
 further:
-  - "Marshall W. Taylor, The Fastest Bicycle Rider in the World (1928)"
+  - "Marshall W. Taylor, The Fastest Bicycle Rider in the World (autobiography)"
   - "Andrew Ritchie, Major Taylor: The Extraordinary Career of a Champion Bicycle Racer (Johns Hopkins University Press, 1996)"
 sources:
   - {title: "Major Taylor Association: Who was Major Taylor (reprinted from the Worcester Telegram & Gazette, 1995)", url: "https://www.majortaylorassociation.org/whirlwind.shtml"}

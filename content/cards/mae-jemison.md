@@ -22,7 +22,7 @@ sources:
   - {title: "Allison Lantero, US Department of Energy: Astronaut Mae Jemison (2016)", url: "https://www.energy.gov/node/1626656"}
   - {title: "BBC Sky at Night Magazine: Mae Jemison, the first African American woman in space", url: "https://www.skyatnightmagazine.com/space-missions/mae-jemison-biography/"}
 ---
-Mae Jemison was born in Decatur, Alabama, in 1956 and grew up on the South Side of Chicago. She finished high school at 16 and went to Stanford, graduating in 1977 in chemical engineering and in African American studies, and dancing all the while. She qualified as a doctor at Cornell in 1981 and then served as a Peace Corps medical officer in West Africa, for Sierra Leone and Liberia, looking after Peace Corps volunteers and US embassy staff.
+Mae Jemison was born in Decatur, Alabama, in 1956 and grew up in Chicago. She finished high school at 16 and went to Stanford, graduating in 1977 in chemical engineering and in African American studies, and dancing all the while. She qualified as a doctor at Cornell in 1981 and then served as a Peace Corps medical officer in West Africa, for Sierra Leone and Liberia, looking after Peace Corps volunteers and US embassy staff.
 
 In 1987 NASA chose her as one of 15 new astronauts from some 2,000 applicants. On 12 September 1992 she flew on the space shuttle Endeavour, on STS-47, a joint mission with Japan, and became the first African American woman in space. She had long been a devoted Star Trek fan, so she opened her shifts in orbit with the call of the show's Lieutenant Uhura: "Hailing frequencies open."
 

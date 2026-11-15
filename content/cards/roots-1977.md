@@ -24,8 +24,8 @@ sources:
 ---
 Roots was a television miniseries made from Alex Haley's 1976 book about his own family. Haley had spent years in archives tracing his ancestry back to Kunta Kinte, a young man captured in the Gambia and carried to America in slavery, and the story followed his descendants down the generations to emancipation. LeVar Burton played the young Kunta.
 
-ABC executives feared that a series about slavery would be a ratings disaster. To limit the damage, they ran it on eight consecutive nights, from 23 to 30 January 1977, instead of week by week. Instead the audience grew night after night, and about 100 million Americans watched the final episode, one of the most-watched broadcasts in television history.
+ABC executives feared that a series about slavery would be a ratings disaster. To limit the damage, they ran it on eight consecutive nights, from 23 to 30 January 1977, instead of week by week. Instead it held the country night after night, and about 100 million Americans watched the final episode, one of the most-watched broadcasts in television history.
 
-The effect went far beyond the screen. Americans of every background set out to find their own ancestors. At the National Archives in Washington, demand for genealogical records rose to levels never seen before.
+The effect went far beyond the screen. All over the country, Americans set out to find their own ancestors. At the National Archives in Washington, demand for genealogical records rose to levels never seen before.
 
 Historians later questioned parts of Haley's research. But the eight nights of Roots made the slave trade and slavery a family story for a whole country, and sparked a nationwide passion for family history.

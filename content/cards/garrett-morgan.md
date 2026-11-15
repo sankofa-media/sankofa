@@ -15,7 +15,7 @@ edition: both
 further:
   - "Encyclopedia of Cleveland History: Waterworks Tunnel Disasters"
   - "US Patent 1,475,024, G. A. Morgan, Traffic Signal (20 November 1923)"
-dispute: "Accounts differ on the rescue: the Encyclopedia of Cleveland History and the Carnegie Hero Fund count two men brought out alive and four bodies, while the USPTO and Britannica speak of eight survivors. The reason he was passed over for the Carnegie Medal is also contested: the USPTO says the city refused to back his nomination; the Hero Fund says its 1917 ruling held that his hood had spared him the extraordinary risk the earlier rescuers faced."
+dispute: "Accounts differ on the rescue: the Encyclopedia of Cleveland History and the Carnegie Hero Fund count two men brought out alive and four bodies, while the USPTO and Britannica speak of eight men saved. The reason he was passed over for the Carnegie Medal is also contested: the USPTO says the city refused to back his nomination; the Hero Fund's 1917 ruling found no extraordinary risk to his life, which the Fund today explains by the protection his hood gave him."
 sources:
   - {title: "Encyclopedia of Cleveland History (Case Western Reserve University): Morgan, Garrett A.", url: "https://case.edu/ech/articles/m/morgan-garrett-a"}
   - {title: "Encyclopedia of Cleveland History: Waterworks Tunnel Disasters", url: "https://case.edu/ech/articles/w/waterworks-tunnel-disasters"}
@@ -26,7 +26,7 @@ sources:
   - {title: "Google Patents: US1475024A, Traffic signal", url: "https://patents.google.com/patent/US1475024A/en"}
   - {title: "Google Patents: US1113675A, Breathing device", url: "https://patents.google.com/patent/US1113675A/en"}
 ---
-Garrett Morgan was born in Paris, Kentucky, in 1877 to parents who had been enslaved. At fourteen he left the family farm for Cincinnati and paid a tutor out of his wages; in 1895 he moved to Cleveland, where he repaired sewing machines, opened a clothing business and sold a hair-straightening cream he had stumbled on while treating sewing needles. Moved, it is said, by the Triangle shirtwaist fire of 1911, he designed a hood whose tube drew cleaner air from near the floor, and patented it in 1914. When fire chiefs balked at buying from a Black inventor, he hired white actors to demonstrate it.
+Garrett Morgan was born in Paris, Kentucky, in 1877 to parents who had been enslaved. At fourteen he left the family farm for Cincinnati and paid a tutor out of his wages; in 1895 he moved to Cleveland, where he repaired sewing machines, opened a clothing business and sold a hair-straightening cream he had stumbled on while treating sewing needles. Moved, it is said, by the Triangle shirtwaist fire of 1911, he designed a hood whose tube drew cleaner air from near the floor, and patented it in 1914. When fire chiefs balked at buying from a Black inventor, he hired white actors to front the sales.
 
 On 25 July 1916 Cleveland police called him: an explosion had trapped men in a gas-filled waterworks tunnel under Lake Erie, and would-be rescuers had died. Morgan and his brother Frank went down in his hoods and brought men out alive, how many is disputed. Four white rescuers later received Carnegie Medals; Morgan did not.
 

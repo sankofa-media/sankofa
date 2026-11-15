@@ -19,6 +19,7 @@ sources:
   - {title: "South African History Online: Pass laws and the Sharpeville massacre", url: "https://www.sahistory.org.za/article/pass-laws-and-sharpeville-massacre"}
   - {title: "Encyclopaedia Britannica: Sharpeville massacre", url: "https://www.britannica.com/event/Sharpeville-massacre"}
   - {title: "Canadian Museum for Human Rights: The Sharpeville Massacre", url: "https://humanrights.ca/story/sharpeville-massacre"}
+  - {title: "UN Security Council resolution 134 (1960), 1 April 1960", url: "https://documents.un.org/api/symbol/access?s=S/RES/134(1960)&l=en&t=pdf"}
   - {title: "United Nations: International Day for the Elimination of Racial Discrimination", url: "https://www.un.org/en/observances/end-racism-day"}
   - {title: "UN Press: Signing of South Africa's new constitution, statement by the Secretary-General, 10 December 1996", url: "https://press.un.org/en/1996/19961210.sgsm6127.html"}
   - {title: "Government of South Africa: Public holidays", url: "https://www.gov.za/about-sa/public-holidays"}

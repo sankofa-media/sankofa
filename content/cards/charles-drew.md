@@ -2,7 +2,7 @@
 id: charles-drew
 kind: person
 title: "Charles R. Drew"
-wow: "The surgeon who built America's first large-scale blood bank saw the armed forces have the Red Cross refuse blood from Black donors like himself, then keep it apart from white donors' blood."
+wow: "The surgeon who directed the wartime blood-plasma programmes for Britain and the United States saw the armed forces have the Red Cross refuse blood from Black donors like himself, then keep it apart from white donors' blood."
 years: [1904, 1950]
 places:
   - {name: "Columbia-Presbyterian Medical Center, New York", lat: 40.8409, lon: -73.9420}
@@ -26,6 +26,6 @@ sources:
 ---
 Charles Drew was born in Washington, D.C., in 1904. He studied at Amherst College and at McGill University in Montreal, and in 1940 Columbia University gave him a doctorate in medical science for a thesis called "Banked Blood". He was the first African American to earn that degree at Columbia.
 
-That year, with Britain at war, Drew became medical director of Blood for Britain, which collected blood at New York hospitals, separated the plasma and shipped it across the Atlantic. In 1941 he helped launch the American Red Cross's national blood bank programme. Then the armed forces ruled that the Red Cross must refuse blood from Black donors; the rule was soon changed to accepting it only if kept apart from white donors' blood. The country's leading authority on banked blood could not have given blood to the programme he had built. Drew spoke out against the policy.
+That year, with Britain at war, Drew became medical director of Blood for Britain, which collected blood at New York hospitals, separated the plasma and shipped it across the Atlantic. In 1941 he helped launch the American Red Cross's national blood bank programme. Then the armed forces ruled that the Red Cross must refuse blood from Black donors; the rule was soon changed to accepting it only if kept apart from white donors' blood. Under the first rule, the country's leading authority on banked blood could not have given blood to the programme he had built. Drew spoke out against the policy.
 
 At Howard University he led the department of surgery, and between 1941 and 1950 he trained more than half of the Black surgeons certified in the United States. He died on 1 April 1950 after a car crash near Burlington, North Carolina. A legend says a white hospital turned him away; historians have shown that he received emergency care.

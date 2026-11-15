@@ -23,7 +23,7 @@ sources:
   - {title: "Jovonna Jones, Southern Cultures 28:2 (2022): Walking with Ella Watson", url: "https://www.southerncultures.org/article/walking-with-ella-watson/"}
   - {title: "Kansas Historical Society, Kansapedia: Gordon Parks", url: "https://www.kansashistory.gov/kansapedia/gordon-parks/12165"}
 ---
-In 1942 Gordon Parks, a self-taught photographer born in Fort Scott, Kansas, in 1912, came to Washington, D.C., to work for the photography section of the Farm Security Administration, a New Deal agency in Washington. The capital was segregated, and within days Parks met there, as he later put it, a bigotry and discrimination he had never expected to experience.
+In 1942 Gordon Parks, a self-taught photographer born in Fort Scott, Kansas, in 1912, came to Washington, D.C., to work for the photography section of the Farm Security Administration. The capital was segregated, and within days Parks met there, as he later put it, a bigotry and discrimination he had never expected to experience.
 
 In the agency's own building he approached Ella Watson, a Black woman who cleaned the offices and was supporting herself and her grandchildren. Parks stood her before the American flag with a broom in one hand and a mop in the other, an answer to Grant Wood's painting American Gothic. The government filed the picture as "Washington, D.C. Government charwoman". Parks went on to photograph Watson at home, with her family and in her neighbourhood.
 

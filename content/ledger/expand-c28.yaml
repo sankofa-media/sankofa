@@ -1,5 +1,5 @@
 # Batch c28 (2026-11-13): facts in card bodies and wow lines, each with two or more independent sources and a verbatim quote.
-# Dropped: none.
+# Dropped: none. Second check 2026-11-14: see expand-c28-check.yaml.
 
 - card: haiti-indemnity-1825
   fact: "In 1804 the formerly enslaved people of Saint-Domingue declared independence as Haiti"
@@ -19,7 +19,8 @@
     - {title: "UN News: calls for restitution two centuries after France imposed Haiti's independence debt (17 April 2025)", url: "https://news.un.org/en/story/2025/04/1162406", quote: "On April 17, 1825, besieged by French warships, Haiti agreed to pay an indemnity of 150 million gold francs to the European power. Officially, the payment was meant to compensate French plantation owners"}
     - {title: "The New York Times, Historical data on Haiti's double debt (GitHub, nytimes/haiti-debt)", url: "https://github.com/nytimes/haiti-debt", quote: "the indemnity that France demanded from Haiti to compensate former colonists"}
 - card: haiti-indemnity-1825
-  fact: "Haiti accepted in July 1825 as a French squadron approached, threatening a blockade of its ports (also wow: warships)"
+  fact: "Haiti accepted in 1825 as a French squadron approached, threatening a blockade of its ports (also wow: warships)"
+  note: "BnF dates the acceptance to 8 July 1825; UN News ties it to 17 April. The card says only 'that year'."
   sources:
     - {title: "BnF, France-Amériques: Gusti-Klara Gaillard-Pourchet, Haiti's independence debt and the slave unit of account (1794–1922)", url: "https://heritage.bnf.fr/france-ameriques/en/haitis-independence-debt-slave-unit-account-1794-1922", quote: "On 8 July of the same year, as a squadron approached, armed with 500 cannons and threatening to blockade Haiti’s ports should these demands not be met, President Boyer accepted the conditions"}
     - {title: "UN News: calls for restitution two centuries after France imposed Haiti's independence debt (17 April 2025)", url: "https://news.un.org/en/story/2025/04/1162406", quote: "besieged by French warships, Haiti agreed to pay an indemnity of 150 million gold francs"}
@@ -63,20 +64,24 @@
     - {title: "PBS NewsHour: Hundreds of years after Haiti paid to be free from slavery, the costs are still being felt (2022)", url: "https://www.pbs.org/newshour/show/hundreds-of-years-after-haiti-paid-to-be-free-from-slavery-the-costs-are-still-being-felt", quote: "The New York Times recently conducted an unprecedented investigation into those root causes"}
     - {title: "UN News: calls for restitution two centuries after France imposed Haiti's independence debt (17 April 2025)", url: "https://news.un.org/en/story/2025/04/1162406", quote: "An in-depth 2022 investigation by The New York Times found that Haiti’s payments to France"}
 - card: andrew-watson
-  fact: "In the 1870s football's rules were still being settled"
+  fact: "In the late 1870s Queen's Park of Glasgow was the strongest club in Scotland"
   sources:
-    - {title: "BBC Sport, Andrew Aloia: Andrew Watson, the 'most influential' black footballer for decades lost to history (2021)", url: "https://www.bbc.co.uk/sport/football/58841184", quote: "It was a time before professionalism, when the sport was still evolving and a single set of rules was yet to be universally adopted."}
-    - {title: "BBC Sport: Scotland's first black player (2004)", url: "https://news.bbc.co.uk/sport2/hi/football/internationals/scotland/3751759.stm", quote: "he began playing football in Glasgow in 1874"}
+    - {title: "BBC Sport: Scotland's first black player (2004)", url: "https://news.bbc.co.uk/sport2/hi/football/internationals/scotland/3751759.stm", quote: "before he was picked up by the then dominant Queen's Park"}
+    - {title: "Black History Month UK: Andrew Watson, first black international footballer", url: "https://www.blackhistorymonth.org.uk/article/section/sporting-heroes/andrew-watson-first-black-international-footballer/", quote: "He joined Queen’s Park – the country’s premier side"}
 - card: andrew-watson
-  fact: "Born in Georgetown, Demerara, British Guiana, in 1856 or 1857, to Scottish planter Peter Miller and local woman Rose Watson (also wow)"
+  fact: "Born in Demerara, British Guiana, in 1856 or 1857, to Peter Miller, a Scot in the colony's sugar business, and a local woman, Rose Watson (also wow)"
   sources:
     - {title: "Black History Month UK: Andrew Watson, first black international footballer", url: "https://www.blackhistorymonth.org.uk/article/section/sporting-heroes/andrew-watson-first-black-international-footballer/", quote: "Born in Demerara, British Guiana (now Guyana) on 18 May 1857, Andrew was the son of Scottish sugar plantation manager and former slave owner Peter Miller and local girl Rose Watson."}
     - {title: "BBC Sport: Scotland's first black player (2004)", url: "https://news.bbc.co.uk/sport2/hi/football/internationals/scotland/3751759.stm", quote: "his parents were Peter Miller, a Glasgow sugar merchant, and Rose Watson"}
     - {title: "BBC Sport, Andrew Aloia: Andrew Watson, the 'most influential' black footballer for decades lost to history (2021)", url: "https://www.bbc.co.uk/sport/football/58841184", quote: "Watson was born in 1856, in Georgetown, Demerara"}
     - {title: "Scottish Football Museum, Hall of Fame: Andrew Watson", url: "https://scottishfootballmuseum.org.uk/exhibitions/hall-of-fame/andrew-watson", quote: "Born in British Guiana, Andrew was brought to the UK by his Scottish father"}
 - card: andrew-watson
-  fact: "He was schooled in Halifax and London and in 1875 began studying natural philosophy, mathematics and engineering at Glasgow University"
+  fact: "His father sent him to Britain; he was schooled in Halifax and London and in 1875 moved to Glasgow to study natural philosophy, mathematics and engineering at the university"
   sources:
+    - {title: "Scottish Football Museum, Hall of Fame: Andrew Watson", url: "https://scottishfootballmuseum.org.uk/exhibitions/hall-of-fame/andrew-watson", quote: "Born in British Guiana, Andrew was brought to the UK by his Scottish father"}
+    - {title: "Black History Month UK: Andrew Watson, first black international footballer", url: "https://www.blackhistorymonth.org.uk/article/section/sporting-heroes/andrew-watson-first-black-international-footballer/", quote: "Peter Miller used his wealth to send Andrew and who can only be assumed to be his two other children to England"}
+    - {title: "Black History Month UK: Andrew Watson, first black international footballer", url: "https://www.blackhistorymonth.org.uk/article/section/sporting-heroes/andrew-watson-first-black-international-footballer/", quote: "likely to have helped pay for Andrew to attend Heath Grammar School in Halifax"}
+    - {title: "BBC Sport, Andrew Aloia: Andrew Watson, the 'most influential' black footballer for decades lost to history (2021)", url: "https://www.bbc.co.uk/sport/football/58841184", quote: "When Watson moved to Glasgow in 1875, aged 18, he had hardly played football."}
     - {title: "Black History Month UK: Andrew Watson, first black international footballer", url: "https://www.blackhistorymonth.org.uk/article/section/sporting-heroes/andrew-watson-first-black-international-footballer/", quote: "Andrew left Wimbledon in 1875 to study natural philosophy, mathematics, civil engineering and mechanics at Glasgow University"}
     - {title: "BBC Sport, Andrew Aloia: Andrew Watson, the 'most influential' black footballer for decades lost to history (2021)", url: "https://www.bbc.co.uk/sport/football/58841184", quote: "Watson attended Heath Grammar School in Halifax, West Yorkshire, and went on to study at King's College, London, as well as Glasgow University"}
     - {title: "BBC Sport: Scotland's first black player (2004)", url: "https://news.bbc.co.uk/sport2/hi/football/internationals/scotland/3751759.stm", quote: "educated at King's College, London and Glasgow University where he studied Natural Philosophy, Mathematics and Civil Engineering and Mechanics"}
@@ -87,7 +92,8 @@
     - {title: "BBC Sport: Scotland's first black player (2004)", url: "https://news.bbc.co.uk/sport2/hi/football/internationals/scotland/3751759.stm", quote: "before he was picked up by the then dominant Queen's Park ... He won three Scottish Cups with the Spiders"}
     - {title: "Black History Month UK: Andrew Watson, first black international footballer", url: "https://www.blackhistorymonth.org.uk/article/section/sporting-heroes/andrew-watson-first-black-international-footballer/", quote: "He joined Queen’s Park – the country’s premier side"}
 - card: andrew-watson
-  fact: "On 12 March 1881 he captained Scotland to a 6–1 win over England at the Kennington Oval (also wow)"
+  fact: "In 1881 he captained Scotland to a 6–1 win over England at the Kennington Oval (also wow)"
+  note: "The exact date, 12 March 1881, appears only in the Black History Month account and was dropped from the card."
   sources:
     - {title: "Scottish Football Museum, Hall of Fame: Andrew Watson", url: "https://scottishfootballmuseum.org.uk/exhibitions/hall-of-fame/andrew-watson", quote: "captained Scotland to a 6-1 victory over England at the Oval in 1881"}
     - {title: "Black History Month UK: Andrew Watson, first black international footballer", url: "https://www.blackhistorymonth.org.uk/article/section/sporting-heroes/andrew-watson-first-black-international-footballer/", quote: "his international debut for Scotland in a 6-1 victory over England on 12 March 1881 at the Kennington Oval"}
@@ -126,75 +132,72 @@
     - {title: "Scottish Football Museum, Hall of Fame: Andrew Watson", url: "https://scottishfootballmuseum.org.uk/exhibitions/hall-of-fame/andrew-watson", quote: "The world’s first black international footballer"}
     - {title: "BBC Sport, Andrew Aloia: Andrew Watson, the 'most influential' black footballer for decades lost to history (2021)", url: "https://www.bbc.co.uk/sport/football/58841184", quote: "He was a pioneer, the world's first black international"}
 - card: josephine-bakhita
-  fact: "In the 1870s people were bought and sold in the markets of El Obeid and Khartoum; she was sold again and again (also wow: slave markets of Sudan)"
+  fact: "In the 1870s Sudan had slave markets, among them El Obeid; she was sold again and again (also wow: slave markets of Sudan)"
   sources:
+    - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "forced to walk hundreds of miles on foot to a slave market in Al-Ubayyiḍ in south-central Sudan. Over the next decade of enslavement, Josephine was passed from owner to owner"}
     - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "Sold and resold in the markets of El Obeid and of Khartoum, she experienced the humiliations and sufferings of slavery"}
-    - {title: "Vatican News, Saint of the day: St. Josephine Bakhita", url: "https://www.vaticannews.va/en/saints/02/08/st--josephine-bakhita--virgin.html", quote: "She became human merchandise passed from hand to hand in the markets of El Obeid and Khartoum"}
-    - {title: "Benedict XVI, encyclical Spe salvi, §3 (2007)", url: "https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20071130_spe-salvi.html", quote: "sold five times in the slave-markets of Sudan"}
 - card: josephine-bakhita
-  fact: "Born around 1869 in a village in Darfur, she was kidnapped at about nine (also wow)"
+  fact: "Born around 1869 in a village in Darfur, she was kidnapped as a child by slave traders (also wow)"
   sources:
-    - {title: "Benedict XVI, encyclical Spe salvi, §3 (2007)", url: "https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20071130_spe-salvi.html", quote: "She was born around 1869—she herself did not know the precise date—in Darfur in Sudan. At the age of nine, she was kidnapped by slave-traders"}
-    - {title: "Vatican News, Saint of the day: St. Josephine Bakhita", url: "https://www.vaticannews.va/en/saints/02/08/st--josephine-bakhita--virgin.html", quote: "that terrified 9-year-old girl forgot everything, even her name ... the child born in 1869 in a village of Darfur"}
-    - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "Mother Josephine Bakhita was born in Sudan in 1869"}
+    - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "Josephine was born in the Daju village of Olgossa in Darfur. ... she was kidnapped from her family as a young child and enslaved by Arab slave traders, likely in early 1877"}
+    - {title: "Benedict XVI, encyclical Spe salvi, §3 (30 November 2007)", url: "https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20071130_spe-salvi.html", quote: "She was born around 1869—she herself did not know the precise date—in Darfur in Sudan. At the age of nine, she was kidnapped by slave-traders"}
+  note: "Her age at the kidnapping differs (about seven in Franciscan Media, about nine in Spe salvi, early 1877 in Britannica), so the card says only 'as a child'."
 - card: josephine-bakhita
-  fact: "She forgot her own name; her captors called her Bakhita, 'fortunate'"
+  fact: "She forgot her own name; her captors called her Bakhita, Arabic for 'fortunate'"
   sources:
-    - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "The fright and the terrible experiences she went through made her forget the name she was given by her parents ... Bakhita, which means fortunate, was the name given to her by her kidnappers."}
-    - {title: "Vatican News, Saint of the day: St. Josephine Bakhita", url: "https://www.vaticannews.va/en/saints/02/08/st--josephine-bakhita--virgin.html", quote: "“Bakhita,” they called her, Arabic for “fortunate one,”"}
+    - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "bought and sold so many times that she forgot her birth name. At some point during her captivity she was given the name Bakhita, which is Arabic for “fortunate.”"}
+    - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "The fright and the terrible experiences she went through made her forget the name she was given by her parents. Bakhita, which means fortunate, was the name given to her by her kidnappers."}
 - card: josephine-bakhita
-  fact: "In 1882 in Khartoum the Italian consul Callisto Legnani bought her"
+  fact: "In Khartoum the Italian consul Callisto Legnani bought her and took her to Italy"
   sources:
-    - {title: "Benedict XVI, encyclical Spe salvi, §3 (2007)", url: "https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20071130_spe-salvi.html", quote: "Finally, in 1882, she was bought by an Italian merchant for the Italian consul Callisto Legnani"}
-    - {title: "L'Osservatore Romano, 14 February 2020, via EWTN: Saint Josephine Bakhita", url: "https://www.ewtn.com/catholicism/library/saint-josephine-bakhita-14256", quote: "in 1882, she was bought by Callisto Legnani, an Italian consular agent in Sudan"}
-    - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "In the Capital of Sudan, Bakhita was bought by an Italian Consul, Callisto Legnani"}
+    - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "In 1883 she was sold to an Italian consul in Khartoum, Callisto Legnani, who treated her more humanely. He eventually took her to Italy"}
+    - {title: "Franciscan Media, Saint of the Day: Saint Josephine Bakhita", url: "https://www.franciscanmedia.org/saint-of-the-day/saint-josephine-bakhita/", quote: "finally in 1883 to Callisto Legnani, Italian consul in Khartoum, Sudan. Two years later, he took Josephine to Italy"}
+  note: "The year is 1883 in Britannica and Franciscan Media but 1882 in Spe salvi and L'Osservatore Romano; the card gives no year."
 - card: josephine-bakhita
-  fact: "When the Mahdist advance forced him home, she asked to go with him to Italy"
+  fact: "In Italy she became nanny to the Michieli family's small daughter"
   sources:
-    - {title: "Benedict XVI, encyclical Spe salvi, §3 (2007)", url: "https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20071130_spe-salvi.html", quote: "who returned to Italy as the Mahdists advanced"}
-    - {title: "Vatican News, Saint of the day: St. Josephine Bakhita", url: "https://www.vaticannews.va/en/saints/02/08/st--josephine-bakhita--virgin.html", quote: "was obliged to return to Italy because of the Mahdist wars in Sudan. Bakhita remembered the moment: “I dared to ask him to take me with him to Italy.”"}
-    - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "Political situations forced the Consul to leave for Italy. Bakhita asked and obtained permission to go with him"}
+    - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "gave her to the Michieli family to serve as a nanny"}
+    - {title: "Franciscan Media, Saint of the Day: Saint Josephine Bakhita", url: "https://www.franciscanmedia.org/saint-of-the-day/saint-josephine-bakhita/", quote: "Bakhita became babysitter to Mimmina Michieli"}
 - card: josephine-bakhita
-  fact: "She became nanny to the Michieli family's daughter near Venice"
+  fact: "When the family left for Africa on business, their daughter and Bakhita were placed with the Canossian Sisters in Venice"
   sources:
-    - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "She followed the new family, which settled in Zianigo (near Mirano Veneto) ... When their daughter Mimmina was born, Bakhita became her babysitter and friend."}
-    - {title: "Vatican News, Saint of the day: St. Josephine Bakhita", url: "https://www.vaticannews.va/en/saints/02/08/st--josephine-bakhita--virgin.html", quote: "She became the nanny of Alice, the daughter of the Michieli family, who were friends of the Legnamis and lived in Zianigo, near Mirano"}
-- card: josephine-bakhita
-  fact: "While the family went to Africa she was left with the Canossian Sisters in Venice"
-  sources:
+    - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "Her new owners, needing to do business in Sudan, temporarily placed her and their daughter in the custody of the Canossian Sisters at the Institute of the Catechumens in Venice in 1888."}
     - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "Mimmina and Bakhita were entrusted to the Canossian Sisters of the Institute of the Catechumens in Venice"}
-    - {title: "Vatican News, Saint of the day: St. Josephine Bakhita", url: "https://www.vaticannews.va/en/saints/02/08/st--josephine-bakhita--virgin.html", quote: "In 1888, the couple she worked for had to leave for Africa, and for nine months, Bakhita and Alice were left in the care of the Canossian Sisters of Venice"}
 - card: josephine-bakhita
-  fact: "When Signora Michieli came back for her, Bakhita refused to leave (also wow)"
+  fact: "When Signora Michieli came back for them, Bakhita refused to leave (also wow)"
   sources:
+    - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "When Mrs. Michieli returned to fetch her daughter and the enslaved nanny, Josephine resolutely refused to leave the institute."}
     - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "When Mrs. Michieli returned from Africa to take back her daughter and Bakhita, the latter, with unusual firmness and courage, expressed her desire to remain with the Canossian Sisters"}
-    - {title: "Benedict XVI, encyclical Spe salvi, §3 (2007)", url: "https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20071130_spe-salvi.html", quote: "Hence, when she was about to be taken back to Sudan, Bakhita refused"}
 - card: josephine-bakhita
-  fact: "She was baptised Josephine on 9 January 1890 and joined the order"
+  fact: "She was declared free because slavery had no standing in Italy (also wow)"
   sources:
+    - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "Josephine was declared free on the grounds that slavery was not recognized in Italy"}
+    - {title: "Franciscan Media, Saint of the Day: Saint Josephine Bakhita", url: "https://www.franciscanmedia.org/saint-of-the-day/saint-josephine-bakhita/", quote: "The judge concluded that since slavery was illegal in Italy, she had actually been free since 1885."}
+- card: josephine-bakhita
+  fact: "She was baptised Josephine on 9 January 1890 and later joined the Canossian order"
+  sources:
+    - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "On January 9, 1890, she was baptized and confirmed and received her first Holy Communion. ... She became a novice at the Institute of St. Magdalene of Canossa on December 7, 1893"}
     - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "was given the new name, Josephine. It was January 9, 1890"}
-    - {title: "Benedict XVI, encyclical Spe salvi, §3 (2007)", url: "https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20071130_spe-salvi.html", quote: "On 9 January 1890, she was baptized and confirmed"}
-    - {title: "Vatican News, Saint of the day: St. Josephine Bakhita", url: "https://www.vaticannews.va/en/saints/02/08/st--josephine-bakhita--virgin.html", quote: "In 1893 she entered the novitiate of the Canossian Sisters. Three years later she professed her vows"}
 - card: josephine-bakhita
-  fact: "For more than four decades she lived at the Schio convent as cook, seamstress and doorkeeper, greeting children"
+  fact: "At the Schio convent she cooked, sewed and kept the door, welcoming visitors"
   sources:
-    - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "lived in the community in Schio, engaged in various services: cooking, sewing, embroidery and attending to the door. When she was on duty at the door, she would gently lay her hands on the heads of the children"}
-    - {title: "Vatican News, Saint of the day: St. Josephine Bakhita", url: "https://www.vaticannews.va/en/saints/02/08/st--josephine-bakhita--virgin.html", quote: "spent the following 45 years as the cook, sacristan, and especially, the doorkeeper of the convent at Schio"}
+    - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "She was eventually assigned to a convent in Schio. ... cooking, embroidering, and sewing, and was responsible for attending the door of the convent to welcome visitors"}
+    - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "lived in the community in Schio, engaged in various services: cooking, sewing, embroidery and attending to the door"}
 - card: josephine-bakhita
-  fact: "Schio knew her as Madre Moretta"
+  fact: "The town came to love her"
   sources:
-    - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "In Schio (Vicenza), where she spent many years of her life, everyone still calls her our Black Mother."}
-    - {title: "Vatican News, Saint of the day: St. Josephine Bakhita", url: "https://www.vaticannews.va/en/saints/02/08/st--josephine-bakhita--virgin.html", quote: "the goodness and faith of the moretta, the “little brown sister,”"}
+    - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "She was loved by many in the city"}
+    - {title: "Vatican News, Saint of the day: St. Josephine Bakhita", url: "https://www.vaticannews.va/en/saints/02/08/st--josephine-bakhita--virgin.html", quote: "There she got to know the people of the town and the people in turn learned to appreciate the gentle smile, the goodness and faith of the moretta"}
 - card: josephine-bakhita
   fact: "She died at Schio on 8 February 1947"
   sources:
+    - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "died February 8, 1947, Schio, Italy"}
     - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "Mother Bakhita breathed her last on February 8, 1947 at the Canossian Convent"}
-    - {title: "Vatican News, Saint of the day: St. Josephine Bakhita", url: "https://www.vaticannews.va/en/saints/02/08/st--josephine-bakhita--virgin.html", quote: "All Schio was in mourning when Sr. Josephine Bakhita died of pneumonia on February 8, 1947."}
 - card: josephine-bakhita
   fact: "Pope John Paul II canonised her on 1 October 2000 (also wow)"
   sources:
+    - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "She was beatified on May 17, 1992, by Pope John Paul II and canonized by him on October 1, 2000."}
     - {title: "L'Osservatore Romano, 14 February 2020, via EWTN: Saint Josephine Bakhita", url: "https://www.ewtn.com/catholicism/library/saint-josephine-bakhita-14256", quote: "on 1 October of the Great Ju­bilee of the Year 2000 she was made a saint by John Paul II"}
-    - {title: "Benedict XVI, encyclical Spe salvi, §3 (2007)", url: "https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20071130_spe-salvi.html", quote: "the African Josephine Bakhita, canonized by Pope John Paul II"}
 - card: malik-ambar
   fact: "Deccan sultanates bought enslaved Africans from the Ethiopian highlands (Habshis) as soldiers; Ambar was one of them"
   sources:
@@ -414,8 +417,9 @@
     - {title: "Encyclopaedia Britannica: Anna Julia Cooper", url: "https://www.britannica.com/biography/Anna-Julia-Cooper", quote: "She died in her sleep at age 105."}
     - {title: "BlackPast, Tyina Steptoe: Anna Julia Haywood Cooper (1858–1964)", url: "https://www.blackpast.org/african-american-history/cooper-anna-julia-haywood-1858-1964/", quote: "Anna Julia Cooper died in 1964 in Washington, D.C. at the age of 105."}
 - card: parsley-massacre
-  fact: "In the 1930s the border existed mostly on paper; people crossed for school, ranches spanned it, Dominicans and Haitians traded and intermarried"
+  fact: "In the 1930s the border existed mostly on paper; a treaty fixed the line in the mid-1930s, but borderland Dominicans and Haitians traded, worked and married across it"
   sources:
+    - {title: "Encyclopaedia Britannica, Katie Angell: Parsley Massacre", url: "https://www.britannica.com/event/Parsley-Massacre", quote: "Although a treaty had formally established the national boundary between the two countries in the mid-1930s, the area continued to function as a socially and economically fluid space"}
     - {title: "NPR, Marlon Bishop and Tatiana Fernandez: 80 years on, Dominicans and Haitians revisit painful memories of Parsley Massacre (2017), via MPR News", url: "https://www.mprnews.org/story/2017/10/08/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre", quote: "the border, which existed mostly on paper, was a notably seamless site: Children crossed back and forth freely to go to school on one side and home on the other. Sprawling cattle ranches spanned the divide, and Dominicans and Haitians mingled and intermarried frequently"}
     - {title: "Encyclopaedia Britannica: Parsley Massacre", url: "https://www.britannica.com/event/Parsley-Massacre", quote: "Communities in these regions had long been interconnected through trade, labor migration, and family ties"}
 - card: parsley-massacre
@@ -558,8 +562,9 @@
     - {title: "Indiana Historical Society, Famous Hoosiers: Madam C. J. Walker", url: "https://indianahistory.org/education/educator-resources/famous-hoosiers/madam-c-j-walker/", quote: "she started to lose her hair ... Sarah started selling her products door-to-door in black neighborhoods in St. Louis"}
     - {title: "National Women's History Museum, Debra Michals: Madam C. J. Walker (2015)", url: "https://www.womenshistory.org/education-resources/biographies/madam-cj-walker", quote: "facing hair loss ... she not only began using African American businesswoman Annie Turbo Malone’s \"The Great Wonderful Hair Grower,” but she also joined Malone’s team of black women sales agents"}
 - card: madam-cj-walker
-  fact: "In 1905 in Denver she married Charles J. Walker, renamed herself Madam C. J. Walker and sold her own Wonderful Hair Grower"
+  fact: "In 1905 she moved to Denver, where she married Charles J. Walker, renamed herself Madam C. J. Walker and sold her own Wonderful Hair Grower"
   sources:
+    - {title: "Encyclopaedia Britannica, A'Lelia Bundles: Madam C. J. Walker", url: "https://www.britannica.com/money/Madam-C-J-Walker", quote: "After moving to Denver in 1905, she worked as a cook for a pharmacist ... In 1906 she married Charles Joseph Walker"}
     - {title: "Indiana Historical Society, Famous Hoosiers: Madam C. J. Walker", url: "https://indianahistory.org/education/educator-resources/famous-hoosiers/madam-c-j-walker/", quote: "Then she moved to Denver in 1905 and married Charles J. Walker. With her business becoming more successful, Sarah decided to adopt a new name – Madam C.J. Walker."}
     - {title: "Indiana Historical Society, Famous Hoosiers: Madam C. J. Walker", url: "https://indianahistory.org/education/educator-resources/famous-hoosiers/madam-c-j-walker/", quote: "These included Wonderful Hair Grower"}
     - {title: "National Women's History Museum, Debra Michals: Madam C. J. Walker (2015)", url: "https://www.womenshistory.org/education-resources/biographies/madam-cj-walker", quote: "A year later, Walker moved to Denver, Colorado, where she married ad-man Charles Joseph Walker, renamed herself “Madam C.J. Walker,” and with $1.25, launched her own line of hair products and straighteners for African American women, “Madam Walker’s Wonderful Hair Grower.”"}
@@ -618,7 +623,8 @@
     - {title: "Encyclopaedia Britannica: Katherine Dunham", url: "https://www.britannica.com/biography/Katherine-Dunham", quote: "On graduating with a bachelor’s degree in anthropology she undertook field studies in the Caribbean and in Brazil"}
     - {title: "BlackPast, Erica Anderson: Katherine Dunham (1909–2006) (2007)", url: "https://blackpast.org/african-american-history/dunham-katherine-1909-2006/", quote: "Dunham was granted a Rosenwald Travel Fellowship to do field research in the West Indies on dance and anthropology"}
 - card: dunham-esplanada-1950
-  fact: "In July 1950 she came to São Paulo to perform at the Municipal Theatre"
+  fact: "In 1950 she came to São Paulo to perform at the Municipal Theatre"
+  note: "The month (July) rests on Agência Senado alone and was dropped from the card."
   sources:
     - {title: "Agência Senado, Arquivo S, Ricardo Westin: Brasil criou 1ª lei antirracismo após hotel em SP negar hospedagem a dançarina negra americana (6 July 2020)", url: "https://www12.senado.leg.br/noticias/especiais/arquivo-s/brasil-criou-1a-lei-antirracismo-apos-hotel-em-sp-negar-hospedagem-a-dancarina-negra-americana", quote: "em 11 julho de 1950, a turnê que a célebre dançarina e coreógrafa americana Katherine Dunham fazia pelo Brasil"}
     - {title: "American Historical Association, 131st Annual Meeting (2017), Jerry Dávila: Defining and Denouncing Racial Discrimination in Brazil: The Debate Surrounding the Katherine Dunham Case", url: "https://aha.confex.com/aha/2017/webprogram/Paper20947.html", quote: "In 1950, African-American dancer Katherine Dunham was denied a room at the Hotel Esplanada adjoining the São Paulo Municipal Theater where she was to perform."}
@@ -654,6 +660,7 @@
 - card: dunham-esplanada-1950
   fact: "In July 1951 President Getúlio Vargas signed it as Law 1.390 (also wow: a year later)"
   sources:
+    - {title: "Câmara dos Deputados, Legislação: Lei nº 1.390, de 3 de julho de 1951, publicação original", url: "https://www2.camara.leg.br/legin/fed/lei/1950-1959/lei-1390-3-julho-1951-361802-publicacaooriginal-1-pl.html", quote: "LEI Nº 1.390, DE 3 DE JULHO DE 1951 Inclui entre as contravenções penais a prática de atos resultantes de preconceitos de raça ou de côr. ... GETÚLIO VARGAS"}
     - {title: "Fundação Cultural Palmares: Lei Afonso Arinos completa 61 anos (9 July 2012), via archive.org", url: "https://web.archive.org/web/20130629113518/http://www.palmares.gov.br/2012/07/lei-afonso-arinos-completa-61-anos/", quote: "Sancionada pelo então presidente Getúlio Vargas, em julho de 1951, a Lei 1.390"}
     - {title: "Agência Senado, Arquivo S, Ricardo Westin: Brasil criou 1ª lei antirracismo após hotel em SP negar hospedagem a dançarina negra americana (6 July 2020)", url: "https://www12.senado.leg.br/noticias/especiais/arquivo-s/brasil-criou-1a-lei-antirracismo-apos-hotel-em-sp-negar-hospedagem-a-dancarina-negra-americana", quote: "Em 3 de julho de 1951, um ano depois do \"revoltante incidente\" no Hotel Esplanada, o texto aprovado ganhou a assinatura do presidente Getúlio Vargas"}
 - card: dunham-esplanada-1950
@@ -682,6 +689,7 @@
 - card: dunham-esplanada-1950
   fact: "The 1988 constitution made racism a crime without bail or statute of limitations"
   sources:
+    - {title: "Câmara dos Deputados, Legislação: Constituição de 1988, publicação original, art. 5", url: "https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-publicacaooriginal-1-pl.html", quote: "XLII - a prática do racismo constitui crime inafiançável e imprescritível, sujeito à pena de reclusão, nos termos da lei"}
     - {title: "Fundação Cultural Palmares: Lei Afonso Arinos completa 61 anos (9 July 2012), via archive.org", url: "https://web.archive.org/web/20130629113518/http://www.palmares.gov.br/2012/07/lei-afonso-arinos-completa-61-anos/", quote: "a prática do racismo constitui crime inafiançável e imprescritível"}
     - {title: "NPR, Lulu Garcia-Navarro: Since established in the 1950s, Brazilians say anti-racism laws aren't enough (18 December 2016), transcript", url: "https://www.npr.org/transcripts/506045513", quote: "Racism is a criminal offense in Brazil. Discrimination on the basis of skin color is even defined in the country's constitution."}
     - {title: "Jerry Dávila: Challenging Racism in Brazil. Legal Suits in the Context of the 1951 Anti-Discrimination Law, Varia Historia (SciELO)", url: "https://www.scielo.br/j/vh/a/6BvVFHGbpvTGKJypxM4W6VQ/?lang=en", quote: "the 1988 law made discrimination a criminal act"}

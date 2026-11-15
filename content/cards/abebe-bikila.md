@@ -22,7 +22,7 @@ sources:
   - {title: "Encyclopaedia Britannica: Abebe Bikila", url: "https://www.britannica.com/biography/Abebe-Bikila"}
   - {title: "International Olympic Committee, Olympics.com: Abebe Bikila", url: "https://www.olympics.com/en/athletes/abebe-bikila"}
 ---
-Abebe Bikila was born on 7 August 1932 in the village of Jato in Ethiopia, on the very day the Los Angeles Olympic marathon was run. As a young man he joined Emperor Haile Selassie's Imperial Bodyguard, and the Swedish coach Onni Niskanen, made him a marathon runner. Hardly anyone outside Ethiopia knew his name when he lined up in Rome in 1960, without shoes.
+Abebe Bikila was born on 7 August 1932 in the village of Jato in Ethiopia, on the very day the Los Angeles Olympic marathon was run. As a young man he joined Emperor Haile Selassie's Imperial Bodyguard, and the Swedish coach Onni Niskanen made him a marathon runner. Hardly anyone outside Ethiopia knew his name when he lined up in Rome in 1960, without shoes.
 
 For most of the race he ran level with Rhadi Ben Abdesselem of Morocco. The decisive moment came near the Piazza di Porta Capena, by the [[aksum-obelisk|obelisk of Aksum]] that Italian troops had carried off from Ethiopia. There Bikila surged away, and he crossed the line at the Arch of Constantine in 2:15:16.2, a world best, barefoot on the streets of the city whose army had invaded his country.
 

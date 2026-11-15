@@ -1,0 +1,971 @@
+# Second, independent fact-check of batch c28 (2026-11-14). Every page was fetched again by the checker; quotes are as found (whitespace and link spacing normalised).
+# Verdicts: confirmed | corrected (card or ledger changed) | refuted | unconfirmed (fact removed).
+# Independence: the Holy See canonisation biography, Spe salvi, Vatican News and L'Osservatore Romano are treated as ONE source (all Holy See publications); every Bakhita fact is now paired with Britannica or Franciscan Media.
+# Britannica blocked direct fetches; its pages were read through archive.org snapshots (2026). planalto.gov.br blocked fetches; Brazilian legal texts were read on camara.leg.br.
+
+checks:
+  - card: haiti-indemnity-1825
+    fact: "In 1804 the formerly enslaved people of Saint-Domingue declared independence as Haiti"
+    verdict: confirmed
+    sources:
+      - {title: "BnF, France-Amériques: Gusti-Klara Gaillard-Pourchet, Haiti's independence debt and the slave unit of account (1794–1922)", url: "https://heritage.bnf.fr/france-ameriques/en/haitis-independence-debt-slave-unit-account-1794-1922", quote: "In 1804 Haiti is declared independent by its formerly enslaved people of African origin"}
+      - {title: "UN News: calls for restitution two centuries after France imposed Haiti's independence debt (17 April 2025)", url: "https://news.un.org/en/story/2025/04/1162406", quote: "Haiti gained independence from France in 1804"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: haiti-indemnity-1825
+    fact: "France did not recognise the new state; it later demanded payment as the price of recognition"
+    verdict: confirmed
+    sources:
+      - {title: "BnF, France-Amériques: Gusti-Klara Gaillard-Pourchet, Haiti's independence debt and the slave unit of account (1794–1922)", url: "https://heritage.bnf.fr/france-ameriques/en/haitis-independence-debt-slave-unit-account-1794-1922", quote: "France under Napoleon and then the Restoration continued, however, to regard the new black s tate as a rebel colony"}
+      - {title: "The New York Times, Historical data on Haiti's double debt (GitHub, nytimes/haiti-debt)", url: "https://github.com/nytimes/haiti-debt", quote: "The treaty introduced a new payment schedule and recognized Haiti’s independence, even before Haiti settled its debt."}
+    note: "BnF quote matched after collapsing a stray space ('black s tate')."
+  - card: haiti-indemnity-1825
+    fact: "In April 1825 France demanded 150 million francs for recognition, to compensate the former colonists (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "BnF, France-Amériques: Gusti-Klara Gaillard-Pourchet, Haiti's independence debt and the slave unit of account (1794–1922)", url: "https://heritage.bnf.fr/france-ameriques/en/haitis-independence-debt-slave-unit-account-1794-1922", quote: "in his Decree of 17 April, 1825 for recognition of the independence of the ‘French part of Saint-Domingue’"}
+      - {title: "UN News: calls for restitution two centuries after France imposed Haiti's independence debt (17 April 2025)", url: "https://news.un.org/en/story/2025/04/1162406", quote: "On April 17, 1825, besieged by French warships, Haiti agreed to pay an indemnity of 150 million gold francs to the European power. Officially, the payment was meant to compensate French plantation owners"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: haiti-indemnity-1825
+    fact: "Haiti accepted in 1825 as a French squadron approached, threatening a blockade of its ports (also wow: warships)"
+    verdict: corrected
+    sources:
+      - {title: "BnF, France-Amériques: Gusti-Klara Gaillard-Pourchet, Haiti's independence debt and the slave unit of account (1794–1922)", url: "https://heritage.bnf.fr/france-ameriques/en/haitis-independence-debt-slave-unit-account-1794-1922", quote: "On 8 July of the same year, as a squadron approached, armed with 500 cannons and threatening to blockade Haiti’s ports should these demands not be met, President Boyer accepted the conditions"}
+      - {title: "UN News: calls for restitution two centuries after France imposed Haiti's independence debt (17 April 2025)", url: "https://news.un.org/en/story/2025/04/1162406", quote: "besieged by French warships, Haiti agreed to pay an indemnity of 150 million gold francs"}
+    note: "BnF dates Boyer's acceptance to 8 July 1825; UN News dates the agreement to 17 April. Card now says 'that year' instead of 'that July'."
+  - card: haiti-indemnity-1825
+    fact: "To pay the first instalment Haiti borrowed 30 million francs in Paris and received only 24 million after commissions"
+    verdict: confirmed
+    sources:
+      - {title: "BnF, France-Amériques: Gusti-Klara Gaillard-Pourchet, Haiti's independence debt and the slave unit of account (1794–1922)", url: "https://heritage.bnf.fr/france-ameriques/en/haitis-independence-debt-slave-unit-account-1794-1922", quote: "Haiti only received 24 million of it once bank commissions had been deducted"}
+      - {title: "The New York Times, Historical data on Haiti's double debt (GitHub, nytimes/haiti-debt)", url: "https://github.com/nytimes/haiti-debt", quote: "To pay the indemnity, Haiti borrowed 30 million francs from a consortium of banks, including the Rothschilds, in 1825. The bankers kept six million francs as a commission, leaving Haiti with only 24 million francs"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: haiti-indemnity-1825
+    fact: "The indemnity and the loan together became the 'double debt'"
+    verdict: confirmed
+    sources:
+      - {title: "The New York Times, Historical data on Haiti's double debt (GitHub, nytimes/haiti-debt)", url: "https://github.com/nytimes/haiti-debt", quote: "Haiti’s “double debt.” This debt, which began in 1825, includes the indemnity that France demanded from Haiti to compensate former colonists and the loan"}
+      - {title: "UN News: calls for restitution two centuries after France imposed Haiti's independence debt (17 April 2025)", url: "https://news.un.org/en/story/2025/04/1162406", quote: "France pushed its banks to lend it money, what we call a “double debt,”"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: haiti-indemnity-1825
+    fact: "In 1838 a new treaty cut the indemnity to 90 million francs and recognised Haitian independence"
+    verdict: confirmed
+    sources:
+      - {title: "BnF, France-Amériques: Gusti-Klara Gaillard-Pourchet, Haiti's independence debt and the slave unit of account (1794–1922)", url: "https://heritage.bnf.fr/france-ameriques/en/haitis-independence-debt-slave-unit-account-1794-1922", quote: "Finally, in 1838, France recognised Haiti’s independence, unconditionally this time. The total indemnity was renegotiated downwards (to 90 million francs)"}
+      - {title: "The New York Times, Historical data on Haiti's double debt (GitHub, nytimes/haiti-debt)", url: "https://github.com/nytimes/haiti-debt", quote: "Payments made on the 150-million-franc indemnity, which was later reduced to 90 million francs"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: haiti-indemnity-1825
+    fact: "Payments dragged on through defaults and new schedules"
+    verdict: confirmed
+    sources:
+      - {title: "The New York Times, Historical data on Haiti's double debt (GitHub, nytimes/haiti-debt)", url: "https://github.com/nytimes/haiti-debt", quote: "In 1843, Haiti defaulted on the indemnity payment and the principal and interest of the 1825 loan after its president was ousted"}
+      - {title: "BnF, France-Amériques: Gusti-Klara Gaillard-Pourchet, Haiti's independence debt and the slave unit of account (1794–1922)", url: "https://heritage.bnf.fr/france-ameriques/en/haitis-independence-debt-slave-unit-account-1794-1922", quote: "From that very moment and for a whole decade, Haiti – insolvable – was doubly in default on payments due"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: haiti-indemnity-1825
+    fact: "The last indemnity payment was made in 1878 and the 1825 loan was paid off in 1887–88 (also wow: more than half a century)"
+    verdict: confirmed
+    sources:
+      - {title: "BnF, France-Amériques: Gusti-Klara Gaillard-Pourchet, Haiti's independence debt and the slave unit of account (1794–1922)", url: "https://heritage.bnf.fr/france-ameriques/en/haitis-independence-debt-slave-unit-account-1794-1922", quote: "The independence debt is finally paid off by Haiti in 1878 by way of a loan raised on the French market in 1875. The external loans of 1825 and 1875 are, respectively, paid off in 1887-88"}
+      - {title: "The New York Times, Historical data on Haiti's double debt (GitHub, nytimes/haiti-debt)", url: "https://github.com/nytimes/haiti-debt", quote: "In 1878, Haiti’s government made the last payment on the indemnity. Then in 1887, it said that it had paid off the loan — though a final, small amount of interest and late fees was paid the next year."}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: haiti-indemnity-1825
+    fact: "Former slaves paid their former masters for independence"
+    verdict: confirmed
+    sources:
+      - {title: "UN News: calls for restitution two centuries after France imposed Haiti's independence debt (17 April 2025)", url: "https://news.un.org/en/story/2025/04/1162406", quote: "“France forced the winners of Haiti’s independence – the former slaves – to compensate the losers, their former masters,”"}
+      - {title: "BnF, France-Amériques: Gusti-Klara Gaillard-Pourchet, Haiti's independence debt and the slave unit of account (1794–1922)", url: "https://heritage.bnf.fr/france-ameriques/en/haitis-independence-debt-slave-unit-account-1794-1922", quote: "The first is carried out to benefit both the ex-colonists (or their heirs) who had owned land and slaves, and their creditors"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: haiti-indemnity-1825
+    fact: "In 2022 the New York Times reconstructed the payment record from French archives"
+    verdict: confirmed
+    sources:
+      - {title: "The New York Times, Historical data on Haiti's double debt (GitHub, nytimes/haiti-debt)", url: "https://github.com/nytimes/haiti-debt", quote: "Relying on archival sources, we tabulated how much money Haitians paid to the families of their former colonial overlords"}
+      - {title: "UN News: calls for restitution two centuries after France imposed Haiti's independence debt (17 April 2025)", url: "https://news.un.org/en/story/2025/04/1162406", quote: "An in-depth 2022 investigation by The New York Times found that Haiti’s payments to France"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: andrew-watson
+    fact: "In the late 1870s Queen's Park of Glasgow was the strongest club in Scotland"
+    verdict: corrected
+    sources:
+      - {title: "BBC Sport: Scotland's first black player (2004)", url: "https://news.bbc.co.uk/sport2/hi/football/internationals/scotland/3751759.stm", quote: "before he was picked up by the then dominant Queen's Park"}
+      - {title: "Black History Month UK: Andrew Watson, first black international footballer", url: "https://www.blackhistorymonth.org.uk/article/section/sporting-heroes/andrew-watson-first-black-international-footballer/", quote: "He joined Queen’s Park – the country’s premier side"}
+    note: "Replaces the opening claim that football rules were still being settled (BBC 2021 only; the BBC 2004 quote said nothing about rules). New context sentence on Queen's Park rests on BBC 2004 and Black History Month."
+  - card: andrew-watson
+    fact: "Born in Demerara, British Guiana, in 1856 or 1857, to Peter Miller, a Scot in the colony's sugar business, and a local woman, Rose Watson (also wow)"
+    verdict: corrected
+    sources:
+      - {title: "Black History Month UK: Andrew Watson, first black international footballer", url: "https://www.blackhistorymonth.org.uk/article/section/sporting-heroes/andrew-watson-first-black-international-footballer/", quote: "Born in Demerara, British Guiana (now Guyana) on 18 May 1857, Andrew was the son of Scottish sugar plantation manager and former slave owner Peter Miller and local girl Rose Watson."}
+      - {title: "BBC Sport: Scotland's first black player (2004)", url: "https://news.bbc.co.uk/sport2/hi/football/internationals/scotland/3751759.stm", quote: "his parents were Peter Miller, a Glasgow sugar merchant, and Rose Watson"}
+    note: "Georgetown is named only by BBC 2021, so the card now says Demerara (BHM, BBC 2004, BBC 2021). Peter Miller is a 'plantation manager' (BHM) or 'sugar merchant' (BBC 2004), not a planter; card and wow now say he was in the sugar business."
+  - card: andrew-watson
+    fact: "His father sent him to Britain; he was schooled in Halifax and London and in 1875 moved to Glasgow to study natural philosophy, mathematics and engineering at the university"
+    verdict: corrected
+    sources:
+      - {title: "Black History Month UK: Andrew Watson, first black international footballer", url: "https://www.blackhistorymonth.org.uk/article/section/sporting-heroes/andrew-watson-first-black-international-footballer/", quote: "Andrew left Wimbledon in 1875 to study natural philosophy, mathematics, civil engineering and mechanics at Glasgow University"}
+      - {title: "BBC Sport, Andrew Aloia: Andrew Watson, the 'most influential' black footballer for decades lost to history (2021)", url: "https://www.bbc.co.uk/sport/football/58841184", quote: "When Watson moved to Glasgow in 1875, aged 18, he had hardly played football."}
+    note: "The 1875 move was quoted only from BHM; BBC 2021 confirms 'moved to Glasgow in 1875'. Halifax is in BBC 2021 and BHM; London schooling in BBC 2021 (King's College) and BHM (King's College School, Wimbledon). 'His father sent him' rests on SFM and BHM."
+  - card: andrew-watson
+    fact: "A full back, he joined Queen's Park, the leading club, and won three Scottish Cups"
+    verdict: confirmed
+    sources:
+      - {title: "Scottish Football Museum, Hall of Fame: Andrew Watson", url: "https://scottishfootballmuseum.org.uk/exhibitions/hall-of-fame/andrew-watson", quote: "A strong and composed full back, Watson won three Scottish Cups and four Glasgow Charity Cups with Queen’s Park"}
+      - {title: "BBC Sport: Scotland's first black player (2004)", url: "https://news.bbc.co.uk/sport2/hi/football/internationals/scotland/3751759.stm", quote: "before he was picked up by the then dominant Queen's Park ... He won three Scottish Cups with the Spiders"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: andrew-watson
+    fact: "In 1881 he captained Scotland to a 6–1 win over England at the Kennington Oval (also wow)"
+    verdict: corrected
+    sources:
+      - {title: "Scottish Football Museum, Hall of Fame: Andrew Watson", url: "https://scottishfootballmuseum.org.uk/exhibitions/hall-of-fame/andrew-watson", quote: "captained Scotland to a 6-1 victory over England at the Oval in 1881"}
+      - {title: "Black History Month UK: Andrew Watson, first black international footballer", url: "https://www.blackhistorymonth.org.uk/article/section/sporting-heroes/andrew-watson-first-black-international-footballer/", quote: "his international debut for Scotland in a 6-1 victory over England on 12 March 1881 at the Kennington Oval"}
+    note: "The exact date 12 March 1881 appears only in Black History Month; dropped. 6–1 at the Oval in 1881 is confirmed by SFM and BHM."
+  - card: andrew-watson
+    fact: "He played twice more for Scotland and won both times"
+    verdict: confirmed
+    sources:
+      - {title: "Scottish Football Museum, Hall of Fame: Andrew Watson", url: "https://scottishfootballmuseum.org.uk/exhibitions/hall-of-fame/andrew-watson", quote: "Watson played twice more for Scotland (a 5-1 win against Wales in 1881 and a 5-1 win against England in 1882)"}
+      - {title: "BBC Sport: Scotland's first black player (2004)", url: "https://news.bbc.co.uk/sport2/hi/football/internationals/scotland/3751759.stm", quote: "Watson also played in a 5-1 win in Wales and again helped thrash the English by the same scoreline at Hampden one year after his debut"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: andrew-watson
+    fact: "He was invited into the Corinthians, an exclusive amateur club set up to raise the standard of English football"
+    verdict: confirmed
+    sources:
+      - {title: "BBC Sport: Scotland's first black player (2004)", url: "https://news.bbc.co.uk/sport2/hi/football/internationals/scotland/3751759.stm", quote: "Watson was invited to tour with Corinthians, who were as much an exclusive gentlemen's club, with just 50 members, as football team"}
+      - {title: "BBC Sport, Andrew Aloia: Andrew Watson, the 'most influential' black footballer for decades lost to history (2021)", url: "https://www.bbc.co.uk/sport/football/58841184", quote: "They turned to Watson to show them the way as a new elite amateur team was formed"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: andrew-watson
+    fact: "He trained as a marine engineer and went to sea"
+    verdict: confirmed
+    sources:
+      - {title: "Black History Month UK: Andrew Watson, first black international footballer", url: "https://www.blackhistorymonth.org.uk/article/section/sporting-heroes/andrew-watson-first-black-international-footballer/", quote: "where he worked as a maritime engineer and played for Bootle FC"}
+      - {title: "BBC Sport, Andrew Aloia: Andrew Watson, the 'most influential' black footballer for decades lost to history (2021)", url: "https://www.bbc.co.uk/sport/football/58841184", quote: "retired from football and trained as a maritime engineer. He went to sea"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: andrew-watson
+    fact: "He died in 1921"
+    verdict: confirmed
+    sources:
+      - {title: "Scottish Football Museum, Hall of Fame: Andrew Watson", url: "https://scottishfootballmuseum.org.uk/exhibitions/hall-of-fame/andrew-watson", quote: "1856 — 1921"}
+      - {title: "Black History Month UK: Andrew Watson, first black international footballer", url: "https://www.blackhistorymonth.org.uk/article/section/sporting-heroes/andrew-watson-first-black-international-footballer/", quote: "died of pneumonia at 88 Forest Road on 8 March 1921, aged 64"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: andrew-watson
+    fact: "For more than a century his achievement went unrecognised, until researchers restored him to history"
+    verdict: confirmed
+    sources:
+      - {title: "BBC Sport, Andrew Aloia: Andrew Watson, the 'most influential' black footballer for decades lost to history (2021)", url: "https://www.bbc.co.uk/sport/football/58841184", quote: "but for more than a century the significance of his achievements went unrecognised. Research conducted over the past three decades has left us with some biographical details"}
+      - {title: "BBC Sport: Scotland's first black player (2004)", url: "https://news.bbc.co.uk/sport2/hi/football/internationals/scotland/3751759.stm", quote: "Watson's colour was not recognised until last year when a director of the Scottish Football Association museum, Ged O'Brien, spotted him in a picture"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: andrew-watson
+    fact: "He was the world's first Black international footballer (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Scottish Football Museum, Hall of Fame: Andrew Watson", url: "https://scottishfootballmuseum.org.uk/exhibitions/hall-of-fame/andrew-watson", quote: "The world’s first black international footballer"}
+      - {title: "BBC Sport, Andrew Aloia: Andrew Watson, the 'most influential' black footballer for decades lost to history (2021)", url: "https://www.bbc.co.uk/sport/football/58841184", quote: "He was a pioneer, the world's first black international"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: josephine-bakhita
+    fact: "In the 1870s Sudan had slave markets, among them El Obeid; she was sold again and again (also wow: slave markets of Sudan)"
+    verdict: corrected
+    sources:
+      - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "forced to walk hundreds of miles on foot to a slave market in Al-Ubayyiḍ in south-central Sudan. Over the next decade of enslavement, Josephine was passed from owner to owner"}
+      - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "Sold and resold in the markets of El Obeid and of Khartoum, she experienced the humiliations and sufferings of slavery"}
+    note: "Khartoum as a market place rested only on Holy See texts (canonisation biography, Vatican News, Spe salvi are one institution); card now names El Obeid, which Britannica also gives."
+  - card: josephine-bakhita
+    fact: "Born around 1869 in a village in Darfur, she was kidnapped as a child by slave traders (also wow)"
+    verdict: corrected
+    sources:
+      - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "Josephine was born in the Daju village of Olgossa in Darfur. ... she was kidnapped from her family as a young child and enslaved by Arab slave traders, likely in early 1877"}
+      - {title: "Benedict XVI, encyclical Spe salvi, §3 (30 November 2007)", url: "https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20071130_spe-salvi.html", quote: "She was born around 1869—she herself did not know the precise date—in Darfur in Sudan. At the age of nine, she was kidnapped by slave-traders"}
+    note: "'At about nine' rests only on Holy See texts; Franciscan Media says seven and Britannica says early 1877 (about eight). Card and wow now say 'as a child'."
+  - card: josephine-bakhita
+    fact: "She forgot her own name; her captors called her Bakhita, Arabic for 'fortunate'"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "bought and sold so many times that she forgot her birth name. At some point during her captivity she was given the name Bakhita, which is Arabic for “fortunate.”"}
+      - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "The fright and the terrible experiences she went through made her forget the name she was given by her parents. Bakhita, which means fortunate, was the name given to her by her kidnappers."}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: josephine-bakhita
+    fact: "In Khartoum the Italian consul Callisto Legnani bought her and took her to Italy"
+    verdict: corrected
+    sources:
+      - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "In 1883 she was sold to an Italian consul in Khartoum, Callisto Legnani, who treated her more humanely. He eventually took her to Italy"}
+      - {title: "Franciscan Media, Saint of the Day: Saint Josephine Bakhita", url: "https://www.franciscanmedia.org/saint-of-the-day/saint-josephine-bakhita/", quote: "finally in 1883 to Callisto Legnani, Italian consul in Khartoum, Sudan. Two years later, he took Josephine to Italy"}
+    note: "Year differs: 1883 in Britannica and Franciscan Media, 1882 in Spe salvi and L'Osservatore Romano. Year removed from the card."
+  - card: josephine-bakhita
+    fact: "In Italy she became nanny to the Michieli family's small daughter"
+    verdict: corrected
+    sources:
+      - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "gave her to the Michieli family to serve as a nanny"}
+      - {title: "Franciscan Media, Saint of the Day: Saint Josephine Bakhita", url: "https://www.franciscanmedia.org/saint-of-the-day/saint-josephine-bakhita/", quote: "Bakhita became babysitter to Mimmina Michieli"}
+    note: "The Michieli family 'near Venice' (Zianigo) rests on Holy See texts only; place dropped. The nanny role is confirmed by Britannica and Franciscan Media."
+  - card: josephine-bakhita
+    fact: "When the family left for Africa on business, their daughter and Bakhita were placed with the Canossian Sisters in Venice"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "Her new owners, needing to do business in Sudan, temporarily placed her and their daughter in the custody of the Canossian Sisters at the Institute of the Catechumens in Venice in 1888."}
+      - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "Mimmina and Bakhita were entrusted to the Canossian Sisters of the Institute of the Catechumens in Venice"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: josephine-bakhita
+    fact: "When Signora Michieli came back for them, Bakhita refused to leave (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "When Mrs. Michieli returned to fetch her daughter and the enslaved nanny, Josephine resolutely refused to leave the institute."}
+      - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "When Mrs. Michieli returned from Africa to take back her daughter and Bakhita, the latter, with unusual firmness and courage, expressed her desire to remain with the Canossian Sisters"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: josephine-bakhita
+    fact: "She was declared free because slavery had no standing in Italy (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "Josephine was declared free on the grounds that slavery was not recognized in Italy"}
+      - {title: "Franciscan Media, Saint of the Day: Saint Josephine Bakhita", url: "https://www.franciscanmedia.org/saint-of-the-day/saint-josephine-bakhita/", quote: "The judge concluded that since slavery was illegal in Italy, she had actually been free since 1885."}
+    note: "New fact added to close the Venice episode; confirmed by Britannica and Franciscan Media."
+  - card: josephine-bakhita
+    fact: "She was baptised Josephine on 9 January 1890 and later joined the Canossian order"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "On January 9, 1890, she was baptized and confirmed and received her first Holy Communion. ... She became a novice at the Institute of St. Magdalene of Canossa on December 7, 1893"}
+      - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "was given the new name, Josephine. It was January 9, 1890"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: josephine-bakhita
+    fact: "At the Schio convent she cooked, sewed and kept the door, welcoming visitors"
+    verdict: corrected
+    sources:
+      - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "She was eventually assigned to a convent in Schio. ... cooking, embroidering, and sewing, and was responsible for attending the door of the convent to welcome visitors"}
+      - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "lived in the community in Schio, engaged in various services: cooking, sewing, embroidery and attending to the door"}
+    note: "'More than four decades' (Vatican News, 45 years) and 'greeting the children at the gate' rest on Holy See texts only; card now says she cooked, sewed and kept the door, welcoming visitors (Britannica and the Holy See biography)."
+  - card: josephine-bakhita
+    fact: "The town came to love her"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "She was loved by many in the city"}
+      - {title: "Vatican News, Saint of the day: St. Josephine Bakhita", url: "https://www.vaticannews.va/en/saints/02/08/st--josephine-bakhita--virgin.html", quote: "There she got to know the people of the town and the people in turn learned to appreciate the gentle smile, the goodness and faith of the moretta"}
+    note: "Replaces 'the town knew her as Madre Moretta, its little Black mother', which rested only on Holy See texts."
+  - card: josephine-bakhita
+    fact: "She died at Schio on 8 February 1947"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "died February 8, 1947, Schio, Italy"}
+      - {title: "Holy See, canonisation biography: Josephine Bakhita (1869–1947)", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "Mother Bakhita breathed her last on February 8, 1947 at the Canossian Convent"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: josephine-bakhita
+    fact: "Pope John Paul II canonised her on 1 October 2000 (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica, Melissa Petruzzello: St. Josephine Bakhita", url: "https://www.britannica.com/biography/Josephine-Bakhita", quote: "She was beatified on May 17, 1992, by Pope John Paul II and canonized by him on October 1, 2000."}
+      - {title: "L'Osservatore Romano, 14 February 2020, via EWTN: Saint Josephine Bakhita", url: "https://www.ewtn.com/catholicism/library/saint-josephine-bakhita-14256", quote: "on 1 October of the Great Ju­bilee of the Year 2000 she was made a saint by John Paul II"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: malik-ambar
+    fact: "Deccan sultanates bought enslaved Africans from the Ethiopian highlands (Habshis) as soldiers; Ambar was one of them"
+    verdict: confirmed
+    sources:
+      - {title: "The Indian Express, Research: Malik Ambar (2020)", url: "https://indianexpress.com/article/research/malik-ambar-aurangabad-mughals-jahangir-akbar-shivaji-6397143/", quote: "Eaton notes that the Deccan sultanates were systematically recruiting the Habshis as slaves in the 16th century. They were highly valued for their physical strength and loyalty, and were frequently put to military service."}
+      - {title: "BlackPast, Omar H. Ali: Malik Ambar (1548–1627)", url: "https://blackpast.org/global-african-history/ambar-malik-1548-1626/", quote: "Malik Ambar was among the tens of thousands of men, women, and children captured in Africa and sold into slavery in the Middle East and India"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: malik-ambar
+    fact: "Born Chapu in Ethiopia in 1548"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Omar H. Ali: Malik Ambar (1548–1627)", url: "https://blackpast.org/global-african-history/ambar-malik-1548-1626/", quote: "Born Chapu in 1548 in Harar Province, Ethiopia"}
+      - {title: "The Indian Express, Research: Malik Ambar (2020)", url: "https://indianexpress.com/article/research/malik-ambar-aurangabad-mughals-jahangir-akbar-shivaji-6397143/", quote: "Born in 1548 in southern Ethiopia’s Khambata region ... He was known by the name of ‘Chapu’"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: malik-ambar
+    fact: "Sold at Mocha, taken to Baghdad, educated by a merchant, made a Muslim and named Ambar (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Omar H. Ali: Malik Ambar (1548–1627)", url: "https://blackpast.org/global-african-history/ambar-malik-1548-1626/", quote: "taken across the Red Sea to the port of Mocha in southern Arabia (Yemen). He was re-sold and sent to Baghdad, where he was educated"}
+      - {title: "The Indian Express, Research: Malik Ambar (2020)", url: "https://indianexpress.com/article/research/malik-ambar-aurangabad-mughals-jahangir-akbar-shivaji-6397143/", quote: "Chapu was sold in the Red Sea port of Mocha (in Yemen) ... From there, he was taken to Baghdad and “sold to a prominent merchant who, recognising Chapu’s superior intellectual qualities, raised and educated the youth, converted him to Islam, and gave him the name ‘Ambar’.”"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: malik-ambar
+    fact: "In the Deccan he was bought by Chengiz Khan, a former Ethiopian slave and chief minister of Ahmadnagar"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Omar H. Ali: Malik Ambar (1548–1627)", url: "https://blackpast.org/global-african-history/ambar-malik-1548-1626/", quote: "sent to India to serve Chengiz Khan, the Regent Minister of the Sultan of Nizam Shahi in Ahmadnagar ... Khan, an Ethiopian like himself who converted to Islam, but—unlike Ambar—was no longer enslaved"}
+      - {title: "The Indian Express, Research: Malik Ambar (2020)", url: "https://indianexpress.com/article/research/malik-ambar-aurangabad-mughals-jahangir-akbar-shivaji-6397143/", quote: "Here he was purchased by a certain Chengiz Khan. Khan himself was a former slave who had risen to hold the office of Peshwa, or chief minister of the Nizam Shahi sultanate of Ahmadnagar"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: malik-ambar
+    fact: "Freed after his master's death, he raised his own troops"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Omar H. Ali: Malik Ambar (1548–1627)", url: "https://blackpast.org/global-african-history/ambar-malik-1548-1626/", quote: "Upon Khan’s death in approximately 1594, Ambar was manumitted ... by 1595, he commanded a cavalry force of 150 men"}
+      - {title: "The Indian Express, Research: Malik Ambar (2020)", url: "https://indianexpress.com/article/research/malik-ambar-aurangabad-mughals-jahangir-akbar-shivaji-6397143/", quote: "Ambar’s master and patron Chenghiz Khan died, and Ambar was set free ... he was given charge of a small troop"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: malik-ambar
+    fact: "Around 1600 he led the resistance to the Mughal push south, with Marathas fighting beside Africans"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Omar H. Ali: Malik Ambar (1548–1627)", url: "https://blackpast.org/global-african-history/ambar-malik-1548-1626/", quote: "By 1600 the African, now a full-fledged mercenary general, emerged as the leading figure in the resistance movement against the spread of the Mughal Empire into the Deccan"}
+      - {title: "BlackPast, Omar H. Ali: Malik Ambar (1548–1627)", url: "https://blackpast.org/global-african-history/ambar-malik-1548-1626/", quote: "By 1620, Ambar’s army numbered fifty thousand men; forty thousand Marathas (Hindu warriors); and ten thousand Habshi"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: malik-ambar
+    fact: "Ruling through sultans he installed, he was the real power in Ahmadnagar (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Omar H. Ali: Malik Ambar (1548–1627)", url: "https://blackpast.org/global-african-history/ambar-malik-1548-1626/", quote: "he had already installed two young princes to the Nizam’s throne in succession, each time making himself Regent Minister, and, unlike his former master, functioning as de facto ruler"}
+      - {title: "Victoria and Albert Museum: Jahangir shooting at the head of Malik Ambar, IM.284-1914", url: "https://collections.vam.ac.uk/item/O405533/", quote: "This former slave of African origin had risen to be the effective ruler of the Deccan sultanate of Ahmadnagar"}
+    note: "BlackPast and the V&A record are independent."
+  - card: malik-ambar
+    fact: "He beat Mughal armies again and again (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Omar H. Ali: Malik Ambar (1548–1627)", url: "https://blackpast.org/global-african-history/ambar-malik-1548-1626/", quote: "Defeating in battle the armies of two Mughal emperors, Akbar and Jahangir"}
+      - {title: "The Indian Express, Research: Malik Ambar (2020)", url: "https://indianexpress.com/article/research/malik-ambar-aurangabad-mughals-jahangir-akbar-shivaji-6397143/", quote: "‘general after general’ were dispatched from Delhi towards the south to beat the Ethiopian, but failed. “The more times he defeated superior Mughal armies, the more men rallied to his side"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: malik-ambar
+    fact: "He built a new capital, Khadki, with waterworks; it later became Aurangabad"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Omar H. Ali: Malik Ambar (1548–1627)", url: "https://blackpast.org/global-african-history/ambar-malik-1548-1626/", quote: "Ambar founded the city of Khadki (the future site of Aurangabad), where he built several palaces, developed an irrigation system"}
+      - {title: "The Indian Express, Research: Malik Ambar (2020)", url: "https://indianexpress.com/article/research/malik-ambar-aurangabad-mughals-jahangir-akbar-shivaji-6397143/", quote: "Ambar established a new capital, a city named Khirki (present-day Aurangabad in Maharashtra) ... “Waterworks and an underground canal were among the early developments he brought about"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: malik-ambar
+    fact: "Jahangir called him 'the black-fated'"
+    verdict: confirmed
+    sources:
+      - {title: "The Indian Express, Research: Malik Ambar (2020)", url: "https://indianexpress.com/article/research/malik-ambar-aurangabad-mughals-jahangir-akbar-shivaji-6397143/", quote: "the one he lambasts as “the ill-starred” and “the black fated”"}
+      - {title: "BlackPast, Omar H. Ali: Malik Ambar (1548–1627)", url: "https://blackpast.org/global-african-history/ambar-malik-1548-1626/", quote: "who referred to their indomitable foe as the “rebel of black fortune.”"}
+    note: "Indian Express quotes Jahangir's memoir via Eaton; BlackPast paraphrases 'rebel of black fortune'."
+  - card: malik-ambar
+    fact: "Around 1616–20 a court painter, probably Abu'l Hasan, showed Jahangir shooting arrows at Ambar's severed head; the painting is in the Chester Beatty, Dublin (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Victoria and Albert Museum: Jahangir shooting at the head of Malik Ambar, IM.284-1914", url: "https://collections.vam.ac.uk/item/O405533/", quote: "adapted from a painting done for the Mughal emperor Jahangir (r. 1605-1627) between about 1616 and 1620. The original, now in the Chester Beatty Library in Dublin ... It represents the emperor shooting an arrow at the head of his major enemy, Malik Ambar"}
+      - {title: "LACMA: Emperor Jahangir Triumphing Over Poverty, M.75.4.28 (curatorial notes)", url: "https://collections.lacma.org/object/34094", quote: "(for example, see Jahangir Shoots the Head of Malik Ambar , c. 1616-1620, Chester Beatty Library, Dublin, In 07A.15)"}
+    note: "V&A says the original is in the Chester Beatty; LACMA gives the Chester Beatty number In 07A.15. The Freer version is a later copy inscribed to Abu'l-Hasan, which supports 'probably'."
+  - card: malik-ambar
+    fact: "The painting was a symbolic victory over a foe the Mughal armies kept failing to crush"
+    verdict: confirmed
+    sources:
+      - {title: "Victoria and Albert Museum: Jahangir shooting at the head of Malik Ambar, IM.284-1914", url: "https://collections.vam.ac.uk/item/O405533/", quote: "One of Jahangir's leading artists created a painting in which the emperor symbolically puts an end to his foe"}
+      - {title: "The Indian Express, Research: Malik Ambar (2020)", url: "https://indianexpress.com/article/research/malik-ambar-aurangabad-mughals-jahangir-akbar-shivaji-6397143/", quote: "the painting is a perfect depiction of Jahangir’s furore towards a man considered his arch-nemesis"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: baartman-return
+    fact: "A Khoekhoe woman born around 1789 near the Gamtoos River in the Eastern Cape"
+    verdict: confirmed
+    sources:
+      - {title: "South African History Online: Sara 'Saartjie' Baartman", url: "https://www.sahistory.org.za/people/sara-saartjie-baartman", quote: "A Khoikhoi woman Sara ‘Saartjie’ Baartman was born in 1789* at the Gamtoos river in what is now known as the Eastern Cape"}
+      - {title: "Encyclopaedia Britannica: Sarah Baartman", url: "https://www.britannica.com/biography/Sarah-Baartman", quote: "Sarah Baartman (born 1789, near the Gamtoos River, Xhosa kingdom [now in Eastern Cape, South Africa]"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: baartman-return
+    fact: "Orphaned young, she was a servant in Cape Town"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Sarah Baartman", url: "https://www.britannica.com/biography/Sarah-Baartman", quote: "Both of Baartman’s parents died while she was still young"}
+      - {title: "BBC News, Justin Parkinson: The significance of Sarah Baartman (2016)", url: "https://www.bbc.com/news/magazine-35240987", quote: "her mother died when she was two and her father, a cattle driver, died when she was an adolescent. She entered domestic service in Cape Town"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: baartman-return
+    fact: "In 1810 ship's surgeon William Dunlop and Hendrik Cezar took her to London on a contract she could not read"
+    verdict: confirmed
+    sources:
+      - {title: "South African History Online: Sara 'Saartjie' Baartman", url: "https://www.sahistory.org.za/people/sara-saartjie-baartman", quote: "On 29 October 1810, Sara allegedly ‘signed’ a contract with an English ship surgeon named William Dunlop ... she was illiterate"}
+      - {title: "BBC News, Justin Parkinson: The significance of Sarah Baartman (2016)", url: "https://www.bbc.com/news/magazine-35240987", quote: "In October 1810, although illiterate, Baartman allegedly signed a contract with English ship surgeon William Dunlop and mixed-race entrepreneur Hendrik Cesars, in whose household she worked"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: baartman-return
+    fact: "At Piccadilly paying crowds came to stare at her; she was billed as the 'Hottentot Venus' (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "South African History Online: Sara 'Saartjie' Baartman", url: "https://www.sahistory.org.za/people/sara-saartjie-baartman", quote: "She was taken to London where she was displayed in a building in Piccadilly"}
+      - {title: "The Guardian, Chris McGreal: Coming home (21 February 2002)", url: "https://www.theguardian.com/education/2002/feb/21/internationaleducationnews.highereducation", quote: "Saartjie Baartman was dragged out to squat before the mob at 225 Piccadilly ... the unfortunate woman made famous across Europe as the \"Hottentot Venus\""}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: baartman-return
+    fact: "Anti-slavery campaigners took her keepers to court; the case failed after the contract was shown and she testified she was not mistreated (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "BBC News, Justin Parkinson: The significance of Sarah Baartman (2016)", url: "https://www.bbc.com/news/magazine-35240987", quote: "campaigners were appalled at Baartman's treatment in London. Her employers were prosecuted for holding Baartman against her will, but not convicted, with Baartman herself testifying in their favour"}
+      - {title: "Encyclopaedia Britannica: Sarah Baartman", url: "https://www.britannica.com/biography/Sarah-Baartman", quote: "Some English people who were sympathetic to Baartman’s plight filed a lawsuit to stop the exhibitions, but they lost their case when shown the contract that Baartman had signed. Baartman also testified that she was not being mistreated."}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: baartman-return
+    fact: "In 1814 she was taken to Paris and sold to an animal showman, Réaux"
+    verdict: confirmed
+    sources:
+      - {title: "South African History Online: Sara 'Saartjie' Baartman", url: "https://www.sahistory.org.za/people/sara-saartjie-baartman", quote: "in September 1814, she was transported from England to France, and upon arrival Hendrik Cezar sold her to Reaux, a man who showcased animals"}
+      - {title: "Encyclopaedia Britannica: Sarah Baartman", url: "https://www.britannica.com/biography/Sarah-Baartman", quote: "In 1814 Baartman was sold to S. Réaux, an exhibitor in Paris"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: baartman-return
+    fact: "Scientists, among them Georges Cuvier, studied her as a specimen"
+    verdict: confirmed
+    sources:
+      - {title: "South African History Online: Sara 'Saartjie' Baartman", url: "https://www.sahistory.org.za/people/sara-saartjie-baartman", quote: "Her constant display attracted the attention of George Cuvier, a naturalist. He asked Reaux if he would allow Sara to be studied as a science specimen"}
+      - {title: "The Guardian, Chris McGreal: Coming home (21 February 2002)", url: "https://www.theguardian.com/education/2002/feb/21/internationaleducationnews.highereducation", quote: "Napoleon's surgeon general, George Cuvier, spotted her and claimed a scientific interest. Over the following year she was repeatedly studied by doctors and anthropologists"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: baartman-return
+    fact: "She died in Paris at about 26"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Sarah Baartman", url: "https://www.britannica.com/biography/Sarah-Baartman", quote: "Baartman died in Paris in 1815 at about the age of 26"}
+      - {title: "BBC News, Justin Parkinson: The significance of Sarah Baartman (2016)", url: "https://www.bbc.com/news/magazine-35240987", quote: "Sarah Baartman died on 29 December 1815 ... Baartman died aged 26"}
+    note: "Britannica and BBC give 1815; SAHO's text says 1816 but its vital record says 29 December 1815. Dispute covers this."
+  - card: baartman-return
+    fact: "Cuvier made a plaster cast and kept her skeleton, brain and genitals, displayed in a Paris museum into the 1970s (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "BBC News, Justin Parkinson: The significance of Sarah Baartman (2016)", url: "https://www.bbc.com/news/magazine-35240987", quote: "Georges Cuvier ... made a plaster cast of her body before dissecting it. He preserved her skeleton and pickled her brain and genitals, placing them in jars displayed at Paris's Museum of Man"}
+      - {title: "South African History Online: Sara 'Saartjie' Baartman", url: "https://www.sahistory.org.za/people/sara-saartjie-baartman", quote: "He made a plaster cast of her body, pickled her brain and genitals and placed them into jars which were placed on display at the Musée de l' Homme (Museum of Man) until 1974"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: baartman-return
+    fact: "In 1994 Nelson Mandela asked France to return her"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Sarah Baartman", url: "https://www.britannica.com/biography/Sarah-Baartman", quote: "In 1994 Nelson Mandela , the new president of South Africa , asked France to return Baartman’s remains"}
+      - {title: "BBC News, Justin Parkinson: The significance of Sarah Baartman (2016)", url: "https://www.bbc.com/news/magazine-35240987", quote: "After his election in 1994 as President of South Africa, Nelson Mandela requested the repatriation of Baartman's remains"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: baartman-return
+    fact: "In 2002 the French parliament voted to return her remains"
+    verdict: confirmed
+    sources:
+      - {title: "The Guardian, David Hearst: African woman going home after 200 years (30 April 2002)", url: "https://www.theguardian.com/world/2002/apr/30/education.arts", quote: "it was only this year that the French parliament overcame objections about the precedent it would set for countries seeking the return of artefacts, by voting to return Baartman's remains"}
+      - {title: "The Guardian, Chris McGreal: Coming home (21 February 2002)", url: "https://www.theguardian.com/education/2002/feb/21/internationaleducationnews.highereducation", quote: "The French senate has voted to release Baartman's remains from the Musé de L'Homme"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: baartman-return
+    fact: "In August 2002 she was buried at Hankey, near her birthplace (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "BBC News, Justin Parkinson: The significance of Sarah Baartman (2016)", url: "https://www.bbc.com/news/magazine-35240987", quote: "In August of that year, her remains were buried in Hankey, in Eastern Cape province"}
+      - {title: "South African History Online: Sara 'Saartjie' Baartman", url: "https://www.sahistory.org.za/people/sara-saartjie-baartman", quote: "On 9 August 2002, Women’s Day, a public holiday in South Africa, Sara was buried at Hankey in the Eastern Cape Province"}
+    note: "Card wording changed from 'in the valley where she was born' to 'near the place where she was born': no source opened places Hankey in the Gamtoos valley (the Guardian only reports that some wanted her buried in the Gamtoos Valley)."
+  - card: baartman-return
+    fact: "She became a symbol of colonial exploitation for South Africans"
+    verdict: confirmed
+    sources:
+      - {title: "The Guardian, Chris McGreal: Coming home (21 February 2002)", url: "https://www.theguardian.com/education/2002/feb/21/internationaleducationnews.highereducation", quote: "\"Saartjie Baartman became a symbol of our suffering, and all the misery she went through was a manifestation of how the Khoisan people were treated"}
+      - {title: "BBC News, Justin Parkinson: The significance of Sarah Baartman (2016)", url: "https://www.bbc.com/news/magazine-35240987", quote: "Today she is seen by many as the epitome of colonial exploitation and racism"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: anna-julia-cooper
+    fact: "Born enslaved in Raleigh in 1858; her father was probably her mother's enslaver (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "National Women's History Museum: Anna Julia Cooper", url: "https://www.womenshistory.org/education-resources/biographies/anna-julia-cooper", quote: "Anna Julia Cooper was born into enslavement in 1858 in Raleigh, North Carolina. Her mother was Hannah Stanley Haywood, and her enslaver, Fabius J. Haywood, was said to be her father."}
+      - {title: "Encyclopaedia Britannica: Anna Julia Cooper", url: "https://www.britannica.com/biography/Anna-Julia-Cooper", quote: "Cooper was the daughter of a slave woman and her white slaveholder (or his brother)"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: anna-julia-cooper
+    fact: "As a child she entered Saint Augustine's in Raleigh, a new school for freed people"
+    verdict: confirmed
+    sources:
+      - {title: "National Women's History Museum: Anna Julia Cooper", url: "https://www.womenshistory.org/education-resources/biographies/anna-julia-cooper", quote: "In 1867, she became a student at the Saint Augustine Normal and Collegiate Institute in Raleigh, North Carolina, a school built specifically to educate formerly enslaved children"}
+      - {title: "Encyclopaedia Britannica: Anna Julia Cooper", url: "https://www.britannica.com/biography/Anna-Julia-Cooper", quote: "In 1868 she enrolled in the newly established Saint Augustine’s Normal School and Collegiate Institute (now Saint Augustine’s University), a school for freed slaves"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: anna-julia-cooper
+    fact: "She noticed boys were steered into harder courses and spent her life fighting for Black women's education"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Anna Julia Cooper", url: "https://www.britannica.com/biography/Anna-Julia-Cooper", quote: "she had a feminist awakening when she realized that her male classmates were encouraged to study a more rigorous curriculum than were the female students. After that early realization, she spent the rest of her life advocating for the education of black women"}
+      - {title: "National Women's History Museum: Anna Julia Cooper", url: "https://www.womenshistory.org/education-resources/biographies/anna-julia-cooper", quote: "Her protests granted her entry into St. Augustine’s Normal School’s Greek and Latin course, which were previously male-designated courses ... placed her on the lifelong path of advocating for gender equality"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: anna-julia-cooper
+    fact: "Married in 1877, widowed two years later"
+    verdict: confirmed
+    sources:
+      - {title: "National Women's History Museum: Anna Julia Cooper", url: "https://www.womenshistory.org/education-resources/biographies/anna-julia-cooper", quote: "In 1877, Cooper married George A.C. Cooper at the age of 19 ... He passed away two years following their union"}
+      - {title: "Encyclopaedia Britannica: Anna Julia Cooper", url: "https://www.britannica.com/biography/Anna-Julia-Cooper", quote: "In 1877 Anna married her classmate George Cooper, who died two years later"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: anna-julia-cooper
+    fact: "Oberlin mathematics degree 1884, later a master's"
+    verdict: confirmed
+    sources:
+      - {title: "National Women's History Museum: Anna Julia Cooper", url: "https://www.womenshistory.org/education-resources/biographies/anna-julia-cooper", quote: "She graduated with her bachelor's degree in 1884 and received her master's in 1887 – both in Mathematics"}
+      - {title: "Encyclopaedia Britannica: Anna Julia Cooper", url: "https://www.britannica.com/biography/Anna-Julia-Cooper", quote: "graduating in 1884 with a B.S. in mathematics and receiving a master’s degree in mathematics in 1888"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: anna-julia-cooper
+    fact: "She taught at M Street High School in Washington"
+    verdict: confirmed
+    sources:
+      - {title: "National Women's History Museum: Anna Julia Cooper", url: "https://www.womenshistory.org/education-resources/biographies/anna-julia-cooper", quote: "took on a position as a math and science teacher at Washington High School (later M Street High School, and presently Dunbar High School) in Washington, DC"}
+      - {title: "Encyclopaedia Britannica: Anna Julia Cooper", url: "https://www.britannica.com/biography/Anna-Julia-Cooper", quote: "In 1887 she became a faculty member at the M Street High School"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: anna-julia-cooper
+    fact: "A Voice from the South (1892), a founding text of Black feminist thought (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Anna Julia Cooper", url: "https://www.britannica.com/biography/Anna-Julia-Cooper", quote: "whose book A Voice From the South by a Black Woman of the South (1892) became a classic African American feminist text"}
+      - {title: "National Women's History Museum: Anna Julia Cooper", url: "https://www.womenshistory.org/education-resources/biographies/anna-julia-cooper", quote: "this text is also said to be the first “book length articulation of Black feminist theory,”"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: anna-julia-cooper
+    fact: "In 1900 she addressed the first Pan-African Conference in London"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Anna Julia Cooper", url: "https://www.britannica.com/biography/Anna-Julia-Cooper", quote: "the first Pan-African Conference in 1900"}
+      - {title: "National Women's History Museum: Anna Julia Cooper", url: "https://www.womenshistory.org/education-resources/biographies/anna-julia-cooper", quote: "the Pan-African Conference in London in 1900"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: anna-julia-cooper
+    fact: "As principal she sent graduates to Ivy League colleges; her stand for college preparation over vocational training cost her the post"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Anna Julia Cooper", url: "https://www.britannica.com/biography/Anna-Julia-Cooper", quote: "under her tenure several M Street graduates were admitted to Ivy League schools. Cooper’s controversial emphasis on college preparatory courses irked critics (such as Booker T. Washington ) who favoured vocational education for blacks. Using trumped-up charges, the District of Columbia Board of Education refused to renew her contract"}
+      - {title: "National Women's History Museum: Anna Julia Cooper", url: "https://www.womenshistory.org/education-resources/biographies/anna-julia-cooper", quote: "some students ultimately attending Yale, Mount Holyoke, Brown and Harvard"}
+    note: "Britannica: board refused to renew her contract; NWHM: she resigned. 'Cost her the post' covers both."
+  - card: anna-julia-cooper
+    fact: "She raised five children of her late brother's family"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Tyina Steptoe: Anna Julia Haywood Cooper (1858–1964)", url: "https://www.blackpast.org/african-american-history/cooper-anna-julia-haywood-1858-1964/", quote: "After the death of her brother in 1915, however, she postponed pursuing her doctorate in order to raise his five grandchildren"}
+      - {title: "National Women's History Museum: Anna Julia Cooper", url: "https://www.womenshistory.org/education-resources/biographies/anna-julia-cooper", quote: "after her brother’s passing, she adopted his five children"}
+    note: "BlackPast says his five grandchildren, NWHM his five children; the card's 'five children of her late brother's family' covers both."
+  - card: anna-julia-cooper
+    fact: "In 1925, in her sixties, she received a doctorate from the University of Paris (Sorbonne) for a thesis in French on slavery and the French Revolution (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Anna Julia Cooper", url: "https://www.britannica.com/biography/Anna-Julia-Cooper", quote: "In 1925, at age 67, she received a doctorate from the Sorbonne in Paris , having written her dissertation on slavery . Written in French, it was published in English as Slavery and the French Revolutionists, 1788–1805"}
+      - {title: "National Women's History Museum: Anna Julia Cooper", url: "https://www.womenshistory.org/education-resources/biographies/anna-julia-cooper", quote: "Her dissertation was written in French and explored attitudes about enslavement post-Haitian rebellion (Bates 2015). Cooper received her doctorate at 65"}
+    note: "Age at the doctorate given as 67 (Britannica, BlackPast) or 65 (NWHM); handled in dispute."
+  - card: anna-julia-cooper
+    fact: "She was the fourth African American woman to earn a PhD"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Tyina Steptoe: Anna Julia Haywood Cooper (1858–1964)", url: "https://www.blackpast.org/african-american-history/cooper-anna-julia-haywood-1858-1964/", quote: "Cooper became the fourth African American woman to obtain a Doctorate of Philosophy"}
+      - {title: "National Women's History Museum: Anna Julia Cooper", url: "https://www.womenshistory.org/education-resources/biographies/anna-julia-cooper", quote: "This made her the fourth African American woman in the United States to earn a PhD"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: anna-julia-cooper
+    fact: "She later led Frelinghuysen University, a Washington school for working Black adults"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Anna Julia Cooper", url: "https://www.britannica.com/biography/Anna-Julia-Cooper", quote: "From 1930 to 1941 she served as president of the Frelinghuysen University for working adults in Washington, D.C."}
+      - {title: "BlackPast, Tyina Steptoe: Anna Julia Haywood Cooper (1858–1964)", url: "https://www.blackpast.org/african-american-history/cooper-anna-julia-haywood-1858-1964/", quote: "In 1930, Cooper retired from teaching to assume the presidency of Frelinghuysen University, a school for black adults"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: anna-julia-cooper
+    fact: "She died in 1964 aged 105 (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Anna Julia Cooper", url: "https://www.britannica.com/biography/Anna-Julia-Cooper", quote: "died February 27, 1964, Washington, D.C."}
+      - {title: "Encyclopaedia Britannica: Anna Julia Cooper", url: "https://www.britannica.com/biography/Anna-Julia-Cooper", quote: "She died in her sleep at age 105."}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: parsley-massacre
+    fact: "In the 1930s the border existed mostly on paper; a treaty fixed the line in the mid-1930s, but borderland Dominicans and Haitians traded, worked and married across it"
+    verdict: corrected
+    sources:
+      - {title: "Encyclopaedia Britannica, Katie Angell: Parsley Massacre", url: "https://www.britannica.com/event/Parsley-Massacre", quote: "Although a treaty had formally established the national boundary between the two countries in the mid-1930s, the area continued to function as a socially and economically fluid space"}
+      - {title: "NPR, Marlon Bishop and Tatiana Fernandez: 80 years on, Dominicans and Haitians revisit painful memories of Parsley Massacre (2017), via MPR News", url: "https://www.mprnews.org/story/2017/10/08/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre", quote: "the border, which existed mostly on paper, was a notably seamless site: Children crossed back and forth freely to go to school on one side and home on the other. Sprawling cattle ranches spanned the divide, and Dominicans and Haitians mingled and intermarried frequently"}
+    note: "Children crossing for school and ranches spanning the border rest on NPR alone; dropped. Card now uses Britannica's mid-1930s treaty and fluid borderland plus NPR's 'existed mostly on paper' and intermarriage."
+  - card: parsley-massacre
+    fact: "Trujillo wanted the border under Dominican control and Haitians removed from it"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Parsley Massacre", url: "https://www.britannica.com/event/Parsley-Massacre", quote: "Throughout the early 1930s Trujillo implemented repressive policies aimed at ending immigration and reestablishing Dominican control over the border areas"}
+      - {title: "NPR, Marlon Bishop and Tatiana Fernandez: 80 years on, Dominicans and Haitians revisit painful memories of Parsley Massacre (2017), via MPR News", url: "https://www.mprnews.org/story/2017/10/08/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre", quote: "Part of Trujillo's \"Dominicanization\" process after the massacre involved bringing new Dominican settlers and infrastructure to towns on the border"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: parsley-massacre
+    fact: "On 2 October 1937 in Dajabón Trujillo claimed Haitians were stealing cattle and crops and said he had already begun to remedy the situation"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Parsley Massacre", url: "https://www.britannica.com/event/Parsley-Massacre", quote: "Trujillo delivered a speech in the northwestern border town of Dajabón on October 2, in which he addressed Dominican residents and falsely claimed that Haitians were attacking local farmers and stealing “cattle, provisions, fruits.” ... declaring, “I will fix this. And we have already begun to remedy the situation.”"}
+      - {title: "NPR, Marlon Bishop and Tatiana Fernandez: 80 years on, Dominicans and Haitians revisit painful memories of Parsley Massacre (2017), via MPR News", url: "https://www.mprnews.org/story/2017/10/08/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre", quote: "Trujillo, on a tour of the border area, is said to have told supporters about the massacre on Oct. 2, 1937 ... we have already begun to remedy the situation"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: parsley-massacre
+    fact: "Over five to eight days soldiers killed Haitian men, women and children and Dominicans of Haitian descent (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Parsley Massacre", url: "https://www.britannica.com/event/Parsley-Massacre", quote: "Between October 3 and October 8, 1937, the Dominican Army carried out a brutal massacre of Haitians along the border region"}
+      - {title: "NPR, Marlon Bishop and Tatiana Fernandez: 80 years on, Dominicans and Haitians revisit painful memories of Parsley Massacre (2017), via MPR News", url: "https://www.mprnews.org/story/2017/10/08/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre", quote: "the Dominican military, under Trujillo's orders, began to execute Haitian families as well as Dominicans of Haitian descent ... The killing lasted between five and eight days."}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: parsley-massacre
+    fact: "Mostly with machetes, so it could pass for a farmers' uprising"
+    verdict: confirmed
+    sources:
+      - {title: "NPR, Marlon Bishop and Tatiana Fernandez: 80 years on, Dominicans and Haitians revisit painful memories of Parsley Massacre (2017), via MPR News", url: "https://www.mprnews.org/story/2017/10/08/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre", quote: "The killings, many of which took place in the border region, were mostly carried out by machete to help sell the regime's official account that the massacre was a spontaneous uprising of patriotic Dominican farmers"}
+      - {title: "Encyclopaedia Britannica: Parsley Massacre", url: "https://www.britannica.com/event/Parsley-Massacre", quote: "the perpetrators used weapons such as machetes to create the illusion that the killings were carried out by civilians"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: parsley-massacre
+    fact: "Survivors fled across the Massacre River into Haiti"
+    verdict: confirmed
+    sources:
+      - {title: "NPR, Marlon Bishop and Tatiana Fernandez: 80 years on, Dominicans and Haitians revisit painful memories of Parsley Massacre (2017), via MPR News", url: "https://www.mprnews.org/story/2017/10/08/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre", quote: "Many Haitians fleeing Trujillo's army crossed this river to reach safety in 1937"}
+      - {title: "Encyclopaedia Britannica: Parsley Massacre", url: "https://www.britannica.com/event/Parsley-Massacre", quote: "The river forms part of the northern boundary between the two countries and was also a crossing point for those fleeing the 1937 Parsley Massacre"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: parsley-massacre
+    fact: "Estimates of the dead vary widely, up to 30,000"
+    verdict: confirmed
+    sources:
+      - {title: "NPR, Marlon Bishop and Tatiana Fernandez: 80 years on, Dominicans and Haitians revisit painful memories of Parsley Massacre (2017), via MPR News", url: "https://www.mprnews.org/story/2017/10/08/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre", quote: "Estimates of the number of dead still vary widely — from less than 1,000 to 30,000."}
+      - {title: "Encyclopaedia Britannica: Parsley Massacre", url: "https://www.britannica.com/event/Parsley-Massacre", quote: "The massacre resulted in an estimated 9,000 to 30,000 deaths"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: parsley-massacre
+    fact: "The name comes from the story that soldiers made people say perejil and killed those who said it like Haitian Creole speakers; the extent of the test is debated (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Parsley Massacre", url: "https://www.britannica.com/event/Parsley-Massacre", quote: "a name rooted in reports that Dominican soldiers used the word perejil —Spanish for “ parsley ”—as a way to identify those who the Dominican soldiers suspected were Haitians. Those who struggled to pronounce the word with a Spanish accent, particularly speakers of Haitian Creole , were singled out and often killed. Although the extent of this practice remains debated among scholars"}
+      - {title: "NPR, Marlon Bishop and Tatiana Fernandez: 80 years on, Dominicans and Haitians revisit painful memories of Parsley Massacre (2017), via MPR News", url: "https://www.mprnews.org/story/2017/10/08/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre", quote: "Haitians and Dominicans pronounce the Spanish word perejil differently and, according to a popular though unconfirmed story, this was used as a litmus test of their origins"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: parsley-massacre
+    fact: "Trujillo denied his government's role and newspapers were silenced"
+    verdict: confirmed
+    sources:
+      - {title: "NPR, Marlon Bishop and Tatiana Fernandez: 80 years on, Dominicans and Haitians revisit painful memories of Parsley Massacre (2017), via MPR News", url: "https://www.mprnews.org/story/2017/10/08/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre", quote: "Afterward, there was a moratorium on newspapers covering the massacre, and Trujillo refused to publicly admit his government's role or accept responsibility."}
+      - {title: "Encyclopaedia Britannica: Parsley Massacre", url: "https://www.britannica.com/event/Parsley-Massacre", quote: "newspapers were prohibited from reporting on the events, and Trujillo denied any involvement or responsibility by his government"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: parsley-massacre
+    fact: "Only after Trujillo's assassination in 1961 could researchers gather survivors' testimony"
+    verdict: confirmed
+    sources:
+      - {title: "NPR, Marlon Bishop and Tatiana Fernandez: 80 years on, Dominicans and Haitians revisit painful memories of Parsley Massacre (2017), via MPR News", url: "https://www.mprnews.org/story/2017/10/08/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre", quote: "After the dictator was assassinated in 1961, researchers began to investigate what had been an off-limits subject, conducting interviews"}
+      - {title: "Encyclopaedia Britannica: Parsley Massacre", url: "https://www.britannica.com/event/Parsley-Massacre", quote: "It was only after Trujillo’s assassination in 1961 that researchers were able to begin investigating the massacre ... Through survivor accounts and archival research"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: parsley-massacre
+    fact: "The yearly Border of Lights commemoration in Dajabón brings Dominicans and Haitians together"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Parsley Massacre", url: "https://www.britannica.com/event/Parsley-Massacre", quote: "the annual Border of Lights commemoration held in Dajabón, organized by international scholars, human rights activists, and community members from both the Dominican Republic and Haiti"}
+      - {title: "NPR, Marlon Bishop and Tatiana Fernandez: 80 years on, Dominicans and Haitians revisit painful memories of Parsley Massacre (2017), via MPR News", url: "https://www.mprnews.org/story/2017/10/08/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre", quote: "an annual commemoration of the massacre in Dajabon called Border of Lights , organized by a group of international scholars and activists, including many Dominicans and Haitian-Americans"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: alice-ball
+    fact: "Hawaii sent people with Hansen's disease to Kalaupapa on Molokai"
+    verdict: confirmed
+    sources:
+      - {title: "National Women's History Museum: Alice Ball", url: "https://www.womenshistory.org/education-resources/biographies/alice-ball", quote: "the Kalaupapa settlement on the Hawaiian island of Molokai. Starting in 1866, the Kingdom's authorities forcibly removed more than 8,000 leprosy patients to this remote settlement"}
+      - {title: "BlackPast, Miles Jackson: Alice Augusta Ball (1892–1916)", url: "https://www.blackpast.org/african-american-history/ball-alice-augusta-1892-1916/", quote: "Kalaupapa, a special hospital for Hansen disease patients"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: alice-ball
+    fact: "Chaulmoogra oil, the main remedy, was hard to give as a drug; the task was to make it injectable"
+    verdict: confirmed
+    sources:
+      - {title: "National Women's History Museum: Alice Ball", url: "https://www.womenshistory.org/education-resources/biographies/alice-ball", quote: "At the time, the standard treatment for Hansen’s disease involved chaulmoogra oil. However, the oil was largely ineffective as it could not be properly absorbed by the human body when consumed orally and was too thick and painful when injected"}
+      - {title: "BlackPast, Miles Jackson: Alice Augusta Ball (1892–1916)", url: "https://www.blackpast.org/african-american-history/ball-alice-augusta-1892-1916/", quote: "She worked under extreme pressure to produce injectable chaulmooga oil"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: alice-ball
+    fact: "Born in Seattle in 1892; grandfather the photographer J. P. Ball"
+    verdict: confirmed
+    sources:
+      - {title: "National Women's History Museum: Alice Ball", url: "https://www.womenshistory.org/education-resources/biographies/alice-ball", quote: "Born on July 24, 1892, in Seattle, Washington ... He, James Presley Ball Sr., was one of the first African Americans to learn the daguerreotype process"}
+      - {title: "BlackPast, Miles Jackson: Alice Augusta Ball (1892–1916)", url: "https://www.blackpast.org/african-american-history/ball-alice-augusta-1892-1916/", quote: "Alice Augusta Ball, a pharmaceutical chemist, was born in Seattle, Washington in 1892 to Laura and James P. Ball Jr. Her grandfather was J.P. Ball , the well known daguerreotype photographer"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: alice-ball
+    fact: "Degrees in pharmaceutical chemistry and pharmacy at the University of Washington, then graduate study at the College of Hawaii"
+    verdict: confirmed
+    sources:
+      - {title: "National Women's History Museum: Alice Ball", url: "https://www.womenshistory.org/education-resources/biographies/alice-ball", quote: "Ball would later enroll at the University of Washington and earn two degrees, one in pharmaceutical chemistry (1912) and one in pharmacy (1914)"}
+      - {title: "BlackPast, Miles Jackson: Alice Augusta Ball (1892–1916)", url: "https://www.blackpast.org/african-american-history/ball-alice-augusta-1892-1916/", quote: "graduated with two degrees in pharmaceutical chemistry in 1912 and pharmacy in 1914. In the fall of 1914, she entered the College of Hawaii (later the University of Hawaii) as a graduate student in chemistry"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: alice-ball
+    fact: "In 1915 she was the first woman and first African American to earn a master's in chemistry there"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Miles Jackson: Alice Augusta Ball (1892–1916)", url: "https://www.blackpast.org/african-american-history/ball-alice-augusta-1892-1916/", quote: "On June 1, 1915, she was the first African American and the first woman to graduate with a Master of Science degree in chemistry from the University of Hawaii"}
+      - {title: "University of Hawaiʻi News: UH celebrates Alice Augusta Ball Day in Hawaiʻi, February 28 (2022)", url: "https://www.hawaii.edu/news/2022/02/28/alice-ball-day-february-28/", quote: "UH ’s first African-American graduate and first woman to earn her master’s degree in chemistry in 1915"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: alice-ball
+    fact: "At 23 she isolated the ethyl esters of the oil's fatty acids, which could be injected and absorbed (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "National Women's History Museum: Alice Ball", url: "https://www.womenshistory.org/education-resources/biographies/alice-ball", quote: "This technique, known as the “Ball Method”, isolated the ethyl esters of the fatty acids in the oil, allowing the treatment to be easily injected and absorbed by the body"}
+      - {title: "University of Hawaiʻi News: UH celebrates Alice Augusta Ball Day in Hawaiʻi, February 28 (2022)", url: "https://www.hawaii.edu/news/2022/02/28/alice-ball-day-february-28/", quote: "at the age of 23 discovered an effective treatment for Hansen’s disease (leprosy) using oil from the Chaulmoogra tree"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: alice-ball
+    fact: "She fell ill, possibly from chlorine inhalation, returned to Seattle and died on 31 December 1916 aged 24 (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Miles Jackson: Alice Augusta Ball (1892–1916)", url: "https://www.blackpast.org/african-american-history/ball-alice-augusta-1892-1916/", quote: "Ball returned to Seattle and died at the age of 24 on December 31, 1916. According to her obituary, she suffered injuries from inhaling chlorine gas during a class demonstration in Honolulu"}
+      - {title: "National Women's History Museum: Alice Ball", url: "https://www.womenshistory.org/education-resources/biographies/alice-ball", quote: "some accounts suggest she may have been exposed to chlorine gas during her laboratory work ... She was 24 years old"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: alice-ball
+    fact: "Arthur Dean, chemistry head and later university president, continued the work, which became the 'Dean method' (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Miles Jackson: Alice Augusta Ball (1892–1916)", url: "https://www.blackpast.org/african-american-history/ball-alice-augusta-1892-1916/", quote: "Arthur Lyman Dean, the chairman of the Chemistry Department at the University of Hawaii, who later became the second president of the University, continued refining the research work of Ball ... The “Dean Method”"}
+      - {title: "National Women's History Museum: Alice Ball", url: "https://www.womenshistory.org/education-resources/biographies/alice-ball", quote: "He continued where she left off, refined her methods ... calling it the “Dean Method.” At the time, he was the dean of the college and would later become the president of the university"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: alice-ball
+    fact: "Her technique remained the leading treatment until new drugs in the 1940s (also wow: quarter-century)"
+    verdict: confirmed
+    sources:
+      - {title: "National Women's History Museum: Alice Ball", url: "https://www.womenshistory.org/education-resources/biographies/alice-ball", quote: "The Ball Method remained the primary leprosy treatment until antibiotics were developed in the 1940s"}
+      - {title: "University of Hawaiʻi News: UH celebrates Alice Augusta Ball Day in Hawaiʻi, February 28 (2022)", url: "https://www.hawaii.edu/news/2022/02/28/alice-ball-day-february-28/", quote: "was the first successful treatment for Hansen’s disease that was used on thousands of patients around the world until the introduction of sulfone drugs in the mid-1940s"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: alice-ball
+    fact: "Researchers later restored her name"
+    verdict: confirmed
+    sources:
+      - {title: "National Women's History Museum: Alice Ball", url: "https://www.womenshistory.org/education-resources/biographies/alice-ball", quote: "Ball’s rightful place in scientific history was restored when Hawaiian historian, Kathyrn Takara, stumbled upon Ball’s original thesis"}
+      - {title: "University of Hawaiʻi News: UH celebrates Alice Augusta Ball Day in Hawaiʻi, February 28 (2022)", url: "https://www.hawaii.edu/news/2022/02/28/alice-ball-day-february-28/", quote: "Much of what is known about Ball is the result of extensive research by Paul Wermager"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: alice-ball
+    fact: "A chaulmoogra tree on the Mānoa campus bears her plaque; Hawaii marks 28 February as Alice Augusta Ball Day"
+    verdict: confirmed
+    sources:
+      - {title: "University of Hawaiʻi News: UH celebrates Alice Augusta Ball Day in Hawaiʻi, February 28 (2022)", url: "https://www.hawaii.edu/news/2022/02/28/alice-ball-day-february-28/", quote: "in the shade of a Chaulmoogra tree planted in Ball’s honor, where a bronze plaque is displayed in her memory"}
+      - {title: "National Women's History Museum: Alice Ball", url: "https://www.womenshistory.org/education-resources/biographies/alice-ball", quote: "The University of Hawai’i installed a plaque in her honor, established the Alice Ball Scholarship for those pursuing graduate degrees in chemistry, designated February 28th as Alice Augusta Ball Day , and dedicated a chaulmoogra tree to Ball’s honor"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: madam-cj-walker
+    fact: "Around 1900 scalp disease, poor diet and poor hygiene left many Black women with hair loss"
+    verdict: confirmed
+    sources:
+      - {title: "Indiana Historical Society, Famous Hoosiers: Madam C. J. Walker", url: "https://indianahistory.org/education/educator-resources/famous-hoosiers/madam-c-j-walker/", quote: "she started to lose her hair and noticed a lot of other black women had the same problem. Poor hygiene, diet and scalp diseases like dandruff led to brittle hair and hair loss"}
+      - {title: "Encyclopaedia Britannica, A'Lelia Bundles: Madam C. J. Walker", url: "https://www.britannica.com/money/Madam-C-J-Walker", quote: "About 1905 Walker perfected an ointment that healed dandruff and other hygiene -related ailments that were common"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: madam-cj-walker
+    fact: "Born Sarah Breedlove on 23 December 1867 near Delta, Louisiana, on the plantation where her parents had been enslaved (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Indiana Historical Society, Famous Hoosiers: Madam C. J. Walker", url: "https://indianahistory.org/education/educator-resources/famous-hoosiers/madam-c-j-walker/", quote: "Sarah Breedlove was born in Delta, La., on Dec. 23, 1867. She was the daughter of Owen and Minerva Anderson Breedlove. Both had formerly been enslaved."}
+      - {title: "Encyclopaedia Britannica, A'Lelia Bundles: Madam C. J. Walker", url: "https://www.britannica.com/money/Madam-C-J-Walker", quote: "born: December 23, 1867, near Delta, Louisiana"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: madam-cj-walker
+    fact: "Orphaned at seven, married at fourteen, widowed in 1887 with her daughter Lelia (also wow: orphaned)"
+    verdict: confirmed
+    sources:
+      - {title: "Indiana Historical Society, Famous Hoosiers: Madam C. J. Walker", url: "https://indianahistory.org/education/educator-resources/famous-hoosiers/madam-c-j-walker/", quote: "She was an orphan by the age of 7 and moved in with her older sister. At the age of 14, Sarah married Moses McWilliams ... In 1885, they had a daughter named Lelia ... Sarah’s husband died in 1887"}
+      - {title: "National Women's History Museum, Debra Michals: Madam C. J. Walker (2015)", url: "https://www.womenshistory.org/education-resources/biographies/madam-cj-walker", quote: "Orphaned at age seven ... at age 14 Walker married Moses McWilliams. When her husband died in 1887, Walker became a single parent of two-year old daughter Lelia"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: madam-cj-walker
+    fact: "In St Louis her brothers were barbers and she worked as a laundress (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Indiana Historical Society, Famous Hoosiers: Madam C. J. Walker", url: "https://indianahistory.org/education/educator-resources/famous-hoosiers/madam-c-j-walker/", quote: "Sarah then moved to St. Louis where three of her brothers lived and worked as barbers. She worked as a laundress"}
+      - {title: "National Women's History Museum, Debra Michals: Madam C. J. Walker (2015)", url: "https://www.womenshistory.org/education-resources/biographies/madam-cj-walker", quote: "Walker moved to St. Louis, Missouri, where her four brothers were barbers. There, she worked as a laundress and cook"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: madam-cj-walker
+    fact: "Losing her own hair, she began selling hair preparations"
+    verdict: confirmed
+    sources:
+      - {title: "Indiana Historical Society, Famous Hoosiers: Madam C. J. Walker", url: "https://indianahistory.org/education/educator-resources/famous-hoosiers/madam-c-j-walker/", quote: "she started to lose her hair ... Sarah started selling her products door-to-door in black neighborhoods in St. Louis"}
+      - {title: "National Women's History Museum, Debra Michals: Madam C. J. Walker (2015)", url: "https://www.womenshistory.org/education-resources/biographies/madam-cj-walker", quote: "facing hair loss ... she not only began using African American businesswoman Annie Turbo Malone’s \"The Great Wonderful Hair Grower,” but she also joined Malone’s team of black women sales agents"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: madam-cj-walker
+    fact: "In 1905 she moved to Denver, where she married Charles J. Walker, renamed herself Madam C. J. Walker and sold her own Wonderful Hair Grower"
+    verdict: corrected
+    sources:
+      - {title: "Encyclopaedia Britannica, A'Lelia Bundles: Madam C. J. Walker", url: "https://www.britannica.com/money/Madam-C-J-Walker", quote: "After moving to Denver in 1905, she worked as a cook for a pharmacist ... In 1906 she married Charles Joseph Walker"}
+      - {title: "Indiana Historical Society, Famous Hoosiers: Madam C. J. Walker", url: "https://indianahistory.org/education/educator-resources/famous-hoosiers/madam-c-j-walker/", quote: "Then she moved to Denver in 1905 and married Charles J. Walker. With her business becoming more successful, Sarah decided to adopt a new name – Madam C.J. Walker."}
+    note: "Britannica says she moved to Denver in 1905 and married Walker in 1906; the card no longer implies a 1905 marriage."
+  - card: madam-cj-walker
+    fact: "In 1910 she set up a laboratory and beauty school in Indianapolis"
+    verdict: confirmed
+    sources:
+      - {title: "Indiana Historical Society, Famous Hoosiers: Madam C. J. Walker", url: "https://indianahistory.org/education/educator-resources/famous-hoosiers/madam-c-j-walker/", quote: "In 1910, Madam C.J. Walker set up a laboratory and beauty school in Indianapolis."}
+      - {title: "National Women's History Museum, Debra Michals: Madam C. J. Walker (2015)", url: "https://www.womenshistory.org/education-resources/biographies/madam-cj-walker", quote: "After the pair divorced in 1910, she relocated to Indianapolis and built a factory for her Walker Manufacturing Company"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: madam-cj-walker
+    fact: "Her products were sold by thousands of Black women agents (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Indiana Historical Society, Famous Hoosiers: Madam C. J. Walker", url: "https://indianahistory.org/education/educator-resources/famous-hoosiers/madam-c-j-walker/", quote: "She had several thousand agents around the country to sell her full line of products"}
+      - {title: "Encyclopaedia Britannica, A'Lelia Bundles: Madam C. J. Walker", url: "https://www.britannica.com/money/Madam-C-J-Walker", quote: "She built an international beauty business that had 25,000 active sales agents by 1919"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: madam-cj-walker
+    fact: "She gave to Black institutions and the NAACP and campaigned against lynching"
+    verdict: confirmed
+    sources:
+      - {title: "Indiana Historical Society, Famous Hoosiers: Madam C. J. Walker", url: "https://indianahistory.org/education/educator-resources/famous-hoosiers/madam-c-j-walker/", quote: "contributing to African-American organizations in Indianapolis ... also gave money to the Tuskegee Institute and the National Association for the Advancement of Colored People"}
+      - {title: "National Women's History Museum, Debra Michals: Madam C. J. Walker (2015)", url: "https://www.womenshistory.org/education-resources/biographies/madam-cj-walker", quote: "became active in the anti-lynching movement, donating $5,000 to the NAACP’s efforts"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: madam-cj-walker
+    fact: "She died on 25 May 1919 at Villa Lewaro, Irvington-on-Hudson"
+    verdict: confirmed
+    sources:
+      - {title: "Indiana Historical Society, Famous Hoosiers: Madam C. J. Walker", url: "https://indianahistory.org/education/educator-resources/famous-hoosiers/madam-c-j-walker/", quote: "died on May 25, 1919, at her Irvington-on-Hudson, New York estate, Villa Lewaro"}
+      - {title: "Encyclopaedia Britannica, A'Lelia Bundles: Madam C. J. Walker", url: "https://www.britannica.com/money/Madam-C-J-Walker", quote: "died: May 25, 1919, Irvington, New York (aged 51)"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: madam-cj-walker
+    fact: "Her daughter A'Lelia Walker became a central figure of the Harlem Renaissance"
+    verdict: confirmed
+    sources:
+      - {title: "Indiana Historical Society, Famous Hoosiers: Madam C. J. Walker", url: "https://indianahistory.org/education/educator-resources/famous-hoosiers/madam-c-j-walker/", quote: "a daughter named Lelia, who later changed her name to A’Lelia and became a central figure of the Harlem Renaissance"}
+      - {title: "Encyclopaedia Britannica, A'Lelia Bundles: Madam C. J. Walker", url: "https://www.britannica.com/money/Madam-C-J-Walker", quote: "The Joy Goddess of Harlem: A’Lelia Walker and the Harlem Renaissance , a biography of her great-grandmother, whose parties and arts patronage helped define that era"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: dunham-esplanada-1950
+    fact: "Brazil had no legal segregation"
+    verdict: confirmed
+    sources:
+      - {title: "NPR, Lulu Garcia-Navarro: Since established in the 1950s, Brazilians say anti-racism laws aren't enough (18 December 2016), transcript", url: "https://www.npr.org/transcripts/506045513", quote: "But unlike the U.S. with its Jim Crow laws, Brazil never put in place any legal segregation."}
+      - {title: "Jerry Dávila: Challenging Racism in Brazil. Legal Suits in the Context of the 1951 Anti-Discrimination Law, Varia Historia (SciELO)", url: "https://www.scielo.br/j/vh/a/6BvVFHGbpvTGKJypxM4W6VQ/?lang=en", quote: "In the United States, legal challenges served to challenge the legal codification of white supremacy and dismantle structures of segregation. Since neither of these existed in Brazil"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: dunham-esplanada-1950
+    fact: "Many Brazilians considered racism an American problem; the country saw itself as a racial democracy"
+    verdict: confirmed
+    sources:
+      - {title: "American Historical Association, 131st Annual Meeting (2017), Jerry Dávila: Defining and Denouncing Racial Discrimination in Brazil: The Debate Surrounding the Katherine Dunham Case", url: "https://aha.confex.com/aha/2017/webprogram/Paper20947.html", quote: "Dunham and many Brazilians considered racism a U.S. problem rather than one shared in Brazil."}
+      - {title: "Agência Senado, Arquivo S, Ricardo Westin: Brasil criou 1ª lei antirracismo após hotel em SP negar hospedagem a dançarina negra americana (6 July 2020)", url: "https://www12.senado.leg.br/noticias/especiais/arquivo-s/brasil-criou-1a-lei-antirracismo-apos-hotel-em-sp-negar-hospedagem-a-dancarina-negra-americana", quote: "o país se julgava o mais perfeito exemplar de democracia racial"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: dunham-esplanada-1950
+    fact: "Slavery in Brazil ended only in 1888"
+    verdict: confirmed
+    sources:
+      - {title: "NPR, Lulu Garcia-Navarro: Since established in the 1950s, Brazilians say anti-racism laws aren't enough (18 December 2016), transcript", url: "https://www.npr.org/transcripts/506045513", quote: "slavery only ended in Brazil in 1888"}
+      - {title: "Agência Senado, Arquivo S, Ricardo Westin: Brasil criou 1ª lei antirracismo após hotel em SP negar hospedagem a dançarina negra americana (6 July 2020)", url: "https://www12.senado.leg.br/noticias/especiais/arquivo-s/brasil-criou-1a-lei-antirracismo-apos-hotel-em-sp-negar-hospedagem-a-dancarina-negra-americana", quote: "A escravidão havia sido abolida seis décadas antes, em 1888"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: dunham-esplanada-1950
+    fact: "Katherine Dunham (1909–2006) was an American dancer, choreographer and anthropologist"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Katherine Dunham", url: "https://www.britannica.com/biography/Katherine-Dunham", quote: "was an American dancer and choreographer who was a pioneer in the field of dance anthropology"}
+      - {title: "BlackPast, Erica Anderson: Katherine Dunham (1909–2006) (2007)", url: "https://blackpast.org/african-american-history/dunham-katherine-1909-2006/", quote: "Dunham graduated from the University of Chicago in 1936 with a bachelor’s degree in social anthropology"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: dunham-esplanada-1950
+    fact: "Her art grew out of fieldwork on the dances of the Caribbean"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica: Katherine Dunham", url: "https://www.britannica.com/biography/Katherine-Dunham", quote: "On graduating with a bachelor’s degree in anthropology she undertook field studies in the Caribbean and in Brazil"}
+      - {title: "BlackPast, Erica Anderson: Katherine Dunham (1909–2006) (2007)", url: "https://blackpast.org/african-american-history/dunham-katherine-1909-2006/", quote: "Dunham was granted a Rosenwald Travel Fellowship to do field research in the West Indies on dance and anthropology"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: dunham-esplanada-1950
+    fact: "In 1950 she came to São Paulo to perform at the Municipal Theatre"
+    verdict: corrected
+    sources:
+      - {title: "Agência Senado, Arquivo S, Ricardo Westin: Brasil criou 1ª lei antirracismo após hotel em SP negar hospedagem a dançarina negra americana (6 July 2020)", url: "https://www12.senado.leg.br/noticias/especiais/arquivo-s/brasil-criou-1a-lei-antirracismo-apos-hotel-em-sp-negar-hospedagem-a-dancarina-negra-americana", quote: "em 11 julho de 1950, a turnê que a célebre dançarina e coreógrafa americana Katherine Dunham fazia pelo Brasil"}
+      - {title: "American Historical Association, 131st Annual Meeting (2017), Jerry Dávila: Defining and Denouncing Racial Discrimination in Brazil: The Debate Surrounding the Katherine Dunham Case", url: "https://aha.confex.com/aha/2017/webprogram/Paper20947.html", quote: "In 1950, African-American dancer Katherine Dunham was denied a room at the Hotel Esplanada adjoining the São Paulo Municipal Theater where she was to perform."}
+    note: "July 1950 rests on Agência Senado alone (11 July); AHA, NPR and SciELO give only 1950. Card and wow now say 1950."
+  - card: dunham-esplanada-1950
+    fact: "The Esplanada, the luxury hotel next to the theatre, refused her a room because she was Black (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Agência Senado, Arquivo S, Ricardo Westin: Brasil criou 1ª lei antirracismo após hotel em SP negar hospedagem a dançarina negra americana (6 July 2020)", url: "https://www12.senado.leg.br/noticias/especiais/arquivo-s/brasil-criou-1a-lei-antirracismo-apos-hotel-em-sp-negar-hospedagem-a-dancarina-negra-americana", quote: "o gerente do Esplanada, o luxuoso hotel vizinho do teatro , se recusara a hospedá-la ao descobrir que era uma \"mulher de cor\""}
+      - {title: "American Historical Association, 131st Annual Meeting (2017), Jerry Dávila: Defining and Denouncing Racial Discrimination in Brazil: The Debate Surrounding the Katherine Dunham Case", url: "https://aha.confex.com/aha/2017/webprogram/Paper20947.html", quote: "Katherine Dunham was denied a room at the Hotel Esplanada adjoining the São Paulo Municipal Theater"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: dunham-esplanada-1950
+    fact: "She told reporters / took it to the press (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Agência Senado, Arquivo S, Ricardo Westin: Brasil criou 1ª lei antirracismo após hotel em SP negar hospedagem a dançarina negra americana (6 July 2020)", url: "https://www12.senado.leg.br/noticias/especiais/arquivo-s/brasil-criou-1a-lei-antirracismo-apos-hotel-em-sp-negar-hospedagem-a-dancarina-negra-americana", quote: "fazer uma denúncia aos repórteres que cobriam o espetáculo"}
+      - {title: "NPR, Lulu Garcia-Navarro: Since established in the 1950s, Brazilians say anti-racism laws aren't enough (18 December 2016), transcript", url: "https://www.npr.org/transcripts/506045513", quote: "Dunham and the director who had invited her took what happened at the hotel to the press."}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: dunham-esplanada-1950
+    fact: "The story caused a storm in the press"
+    verdict: confirmed
+    sources:
+      - {title: "Agência Senado, Arquivo S, Ricardo Westin: Brasil criou 1ª lei antirracismo após hotel em SP negar hospedagem a dançarina negra americana (6 July 2020)", url: "https://www12.senado.leg.br/noticias/especiais/arquivo-s/brasil-criou-1a-lei-antirracismo-apos-hotel-em-sp-negar-hospedagem-a-dancarina-negra-americana", quote: "A denúncia de racismo caiu no Brasil como uma bomba."}
+      - {title: "American Historical Association, 131st Annual Meeting (2017), Jerry Dávila: Defining and Denouncing Racial Discrimination in Brazil: The Debate Surrounding the Katherine Dunham Case", url: "https://aha.confex.com/aha/2017/webprogram/Paper20947.html", quote: "The incident received unusually intense interest from the press and from politicians"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: dunham-esplanada-1950
+    fact: "Gilberto Freyre, champion of Brazil's image of racial harmony, joined the protest"
+    verdict: confirmed
+    sources:
+      - {title: "Agência Senado, Arquivo S, Ricardo Westin: Brasil criou 1ª lei antirracismo após hotel em SP negar hospedagem a dançarina negra americana (6 July 2020)", url: "https://www12.senado.leg.br/noticias/especiais/arquivo-s/brasil-criou-1a-lei-antirracismo-apos-hotel-em-sp-negar-hospedagem-a-dancarina-negra-americana", quote: "O ensaio Casa Grande e Senzala , publicado em 1933, ajudou a dar força ao mito da democracia racial."}
+      - {title: "Jerry Dávila: Challenging Racism in Brazil. Legal Suits in the Context of the 1951 Anti-Discrimination Law, Varia Historia (SciELO)", url: "https://www.scielo.br/j/vh/a/6BvVFHGbpvTGKJypxM4W6VQ/?lang=en", quote: "public figures like Afonso Arinos and Gilberto Freyre discussed the need for the law"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: dunham-esplanada-1950
+    fact: "Congressman Afonso Arinos drafted a bill against racial discrimination"
+    verdict: confirmed
+    sources:
+      - {title: "Jerry Dávila: Challenging Racism in Brazil. Legal Suits in the Context of the 1951 Anti-Discrimination Law, Varia Historia (SciELO)", url: "https://www.scielo.br/j/vh/a/6BvVFHGbpvTGKJypxM4W6VQ/?lang=en", quote: "named after the legislator who drafted it in the aftermath of a 1950 case of racial discrimination at the Esplanada Hotel in São Paulo against African American dancer Katherine Dunham"}
+      - {title: "NPR, Lulu Garcia-Navarro: Since established in the 1950s, Brazilians say anti-racism laws aren't enough (18 December 2016), transcript", url: "https://www.npr.org/transcripts/506045513", quote: "it got the attention of Afonso Arinos, a famous intellectual and legislator. He sponsored a bill that made racism into a crime"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: dunham-esplanada-1950
+    fact: "In July 1951 President Getúlio Vargas signed it as Law 1.390 (also wow: a year later)"
+    verdict: corrected
+    sources:
+      - {title: "Câmara dos Deputados, Legislação: Lei nº 1.390, de 3 de julho de 1951, publicação original", url: "https://www2.camara.leg.br/legin/fed/lei/1950-1959/lei-1390-3-julho-1951-361802-publicacaooriginal-1-pl.html", quote: "LEI Nº 1.390, DE 3 DE JULHO DE 1951 Inclui entre as contravenções penais a prática de atos resultantes de preconceitos de raça ou de côr. ... GETÚLIO VARGAS"}
+      - {title: "Fundação Cultural Palmares: Lei Afonso Arinos completa 61 anos (9 July 2012), via archive.org", url: "https://web.archive.org/web/20130629113518/http://www.palmares.gov.br/2012/07/lei-afonso-arinos-completa-61-anos/", quote: "Sancionada pelo então presidente Getúlio Vargas, em julho de 1951, a Lei 1.390"}
+    note: "Confirmed; the law number 1.390 was quoted only from Palmares, so the original text of Lei nº 1.390 de 3 de julho de 1951 (Câmara dos Deputados), signed by Getúlio Vargas, was added."
+  - card: dunham-esplanada-1950
+    fact: "Refusing service in a shop or hotel because of race or colour became a punishable offence"
+    verdict: confirmed
+    sources:
+      - {title: "Agência Senado, Arquivo S, Ricardo Westin: Brasil criou 1ª lei antirracismo após hotel em SP negar hospedagem a dançarina negra americana (6 July 2020)", url: "https://www12.senado.leg.br/noticias/especiais/arquivo-s/brasil-criou-1a-lei-antirracismo-apos-hotel-em-sp-negar-hospedagem-a-dancarina-negra-americana", quote: "quem recusasse hospedagem em hotel, entrada em estabelecimento comercial, matrícula em escola ou contratação em empresa pública ou privada, desde que \"por preconceito de raça ou de cor\", poderia ser condenado"}
+      - {title: "Fundação Cultural Palmares: Lei Afonso Arinos completa 61 anos (9 July 2012), via archive.org", url: "https://web.archive.org/web/20130629113518/http://www.palmares.gov.br/2012/07/lei-afonso-arinos-completa-61-anos/", quote: "nenhum estabelecimento comercial pode deixar de atender um cliente ou maltratá-lo pelo preconceito de cor"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: dunham-esplanada-1950
+    fact: "It was Brazil's first law against racial discrimination (also wow)"
+    verdict: confirmed
+    sources:
+      - {title: "Fundação Cultural Palmares: Lei Afonso Arinos completa 61 anos (9 July 2012), via archive.org", url: "https://web.archive.org/web/20130629113518/http://www.palmares.gov.br/2012/07/lei-afonso-arinos-completa-61-anos/", quote: "foi o primeiro código brasileiro a incluir entre as contravenções penais a prática de atos resultantes de preconceitos de raça ou de cor"}
+      - {title: "Agência Senado, Arquivo S, Ricardo Westin: Brasil criou 1ª lei antirracismo após hotel em SP negar hospedagem a dançarina negra americana (6 July 2020)", url: "https://www12.senado.leg.br/noticias/especiais/arquivo-s/brasil-criou-1a-lei-antirracismo-apos-hotel-em-sp-negar-hospedagem-a-dancarina-negra-americana", quote: "A Lei Afonso Arinos surgiu como a primeira norma destinada a punir e inibir atos racistas."}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: dunham-esplanada-1950
+    fact: "It was seldom enforced and few cases came to trial"
+    verdict: confirmed
+    sources:
+      - {title: "Agência Senado, Arquivo S, Ricardo Westin: Brasil criou 1ª lei antirracismo após hotel em SP negar hospedagem a dançarina negra americana (6 July 2020)", url: "https://www12.senado.leg.br/noticias/especiais/arquivo-s/brasil-criou-1a-lei-antirracismo-apos-hotel-em-sp-negar-hospedagem-a-dancarina-negra-americana", quote: "meras 23 pessoas acusadas de transgredir a Lei Afonso Arinos se sentaram no banco dos réus entre 1951 e 1989"}
+      - {title: "Jerry Dávila: Challenging Racism in Brazil. Legal Suits in the Context of the 1951 Anti-Discrimination Law, Varia Historia (SciELO)", url: "https://www.scielo.br/j/vh/a/6BvVFHGbpvTGKJypxM4W6VQ/?lang=en", quote: "nearly two dozen cases against discrimination were taken to trial between 1951 and 1988"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: dunham-esplanada-1950
+    fact: "It stayed in force until it was replaced in 1989"
+    verdict: confirmed
+    sources:
+      - {title: "Agência Senado, Arquivo S, Ricardo Westin: Brasil criou 1ª lei antirracismo após hotel em SP negar hospedagem a dançarina negra americana (6 July 2020)", url: "https://www12.senado.leg.br/noticias/especiais/arquivo-s/brasil-criou-1a-lei-antirracismo-apos-hotel-em-sp-negar-hospedagem-a-dancarina-negra-americana", quote: "Até ser revogada, em 1989, a Lei Afonso Arinos não saiu do papel."}
+      - {title: "Jerry Dávila: Challenging Racism in Brazil. Legal Suits in the Context of the 1951 Anti-Discrimination Law, Varia Historia (SciELO)", url: "https://www.scielo.br/j/vh/a/6BvVFHGbpvTGKJypxM4W6VQ/?lang=en", quote: "in the decades between 1951 and 1989 during which the first law barring racial discrimination was in effect"}
+    note: "Both quotes found on the pages as fetched on 2026-11-14; sources independent."
+  - card: dunham-esplanada-1950
+    fact: "The 1988 constitution made racism a crime without bail or statute of limitations"
+    verdict: corrected
+    sources:
+      - {title: "Câmara dos Deputados, Legislação: Constituição de 1988, publicação original, art. 5", url: "https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-publicacaooriginal-1-pl.html", quote: "XLII - a prática do racismo constitui crime inafiançável e imprescritível, sujeito à pena de reclusão, nos termos da lei"}
+      - {title: "Fundação Cultural Palmares: Lei Afonso Arinos completa 61 anos (9 July 2012), via archive.org", url: "https://web.archive.org/web/20130629113518/http://www.palmares.gov.br/2012/07/lei-afonso-arinos-completa-61-anos/", quote: "a prática do racismo constitui crime inafiançável e imprescritível"}
+    note: "The NPR quote did not mention bail or limitation; the 1988 constitution, art. 5, XLII (Câmara dos Deputados text) was added as the second source with Palmares."
+  # Facts of the original ledger that are no longer in the cards
+  - card: andrew-watson
+    fact: "In the 1870s football's rules were still being settled"
+    verdict: unconfirmed
+    sources:
+      - {title: "BBC Sport, Andrew Aloia: Andrew Watson, the 'most influential' black footballer for decades lost to history (2021)", url: "https://www.bbc.co.uk/sport/football/58841184", quote: "It was a time before professionalism, when the sport was still evolving and a single set of rules was yet to be universally adopted."}
+    note: "Only one source; the paired BBC 2004 quote ('he began playing football in Glasgow in 1874') says nothing about rules. Removed; opening replaced by the Queen's Park context."
+  - card: andrew-watson
+    fact: "Born in Georgetown; match on 12 March 1881"
+    verdict: unconfirmed
+    sources:
+      - {title: "BBC Sport, Andrew Aloia (2021)", url: "https://www.bbc.co.uk/sport/football/58841184", quote: "Watson was born in 1856, in Georgetown, Demerara"}
+      - {title: "Black History Month UK", url: "https://www.blackhistorymonth.org.uk/article/section/sporting-heroes/andrew-watson-first-black-international-footballer/", quote: "his international debut for Scotland in a 6-1 victory over England on 12 March 1881 at the Kennington Oval"}
+    note: "Each detail has one source only (Georgetown: BBC 2021; 12 March: BHM). Card now says Demerara and 1881; place renamed 'Demerara, British Guiana'."
+  - card: josephine-bakhita
+    fact: "When the Mahdist advance forced Legnani home, she asked to go with him to Italy"
+    verdict: unconfirmed
+    sources:
+      - {title: "Vatican News, Saint of the day: St. Josephine Bakhita", url: "https://www.vaticannews.va/en/saints/02/08/st--josephine-bakhita--virgin.html", quote: "was obliged to return to Italy because of the Mahdist wars in Sudan. Bakhita remembered the moment: “I dared to ask him to take me with him to Italy.”"}
+      - {title: "Benedict XVI, encyclical Spe salvi, §3", url: "https://www.vatican.va/content/benedict-xvi/en/encyclicals/documents/hf_ben-xvi_enc_20071130_spe-salvi.html", quote: "who returned to Italy as the Mahdists advanced"}
+    note: "Both sources are Holy See publications (one source); Britannica and Franciscan Media say only that he took her to Italy. Removed."
+  - card: josephine-bakhita
+    fact: "Schio knew her as Madre Moretta, its little Black mother"
+    verdict: unconfirmed
+    sources:
+      - {title: "Holy See, canonisation biography", url: "https://www.vatican.va/news_services/liturgy/saints/ns_lit_doc_20001001_giuseppina-bakhita_en.html", quote: "In Schio (Vicenza), where she spent many years of her life, everyone still calls her our Black Mother."}
+    note: "Holy See texts only (Vatican News gives 'moretta, the little brown sister'); not in Britannica or Franciscan Media. Removed."
+  - card: dunham-esplanada-1950
+    fact: "Dunham came to São Paulo in July 1950"
+    verdict: unconfirmed
+    sources:
+      - {title: "Agência Senado, Arquivo S", url: "https://www12.senado.leg.br/noticias/especiais/arquivo-s/brasil-criou-1a-lei-antirracismo-apos-hotel-em-sp-negar-hospedagem-a-dancarina-negra-americana", quote: "em 11 julho de 1950, a turnê que a célebre dançarina e coreógrafa americana Katherine Dunham fazia pelo Brasil"}
+    note: "Month on one source only; card says 1950."
+  - card: parsley-massacre
+    fact: "Children crossed the border to go to school and ranches spanned it"
+    verdict: unconfirmed
+    sources:
+      - {title: "NPR via MPR News (2017)", url: "https://www.mprnews.org/story/2017/10/08/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre", quote: "Children crossed back and forth freely to go to school on one side and home on the other. Sprawling cattle ranches spanned the divide"}
+    note: "NPR only; Britannica speaks generally of trade, labour migration and family ties. Removed."
+
+unledgered:
+  - card: andrew-watson
+    claim: "Further: Scottish Football Museum Hall of Fame, inducted 2012; Llew Walker, Andrew Watson: A Straggling Life"
+    verdict: confirmed
+    note: "SFM page: 'Inducted in 2012'; BBC 2021 names Llew Walker as author of 'Andrew Watson, A straggling Life'."
+  - card: alice-ball
+    claim: "Further: chaulmoogra tree and plaque by Bachman Hall, UH Mānoa"
+    verdict: confirmed
+    note: "UH News (the university about its own campus): 'next to Bachman Hall in the shade of a Chaulmoogra tree planted in Ball’s honor, where a bronze plaque is displayed'; NWHM confirms the plaque and tree without naming the building."
+  - card: anna-julia-cooper
+    claim: "Front matter: M Street High School coordinates"
+    verdict: corrected
+    note: "The school stood at 128 M Street NW; point moved from 38.9087, -77.0184 (about 6th Street NW) to 38.9057, -77.0128."
+  - card: anna-julia-cooper
+    claim: "Emancipation brought new schools for freed people; she entered Saint Augustine's as a child"
+    verdict: confirmed
+    note: "Britannica: 'newly established ... a school for freed slaves' (1868); NWHM: 'a school built specifically to educate formerly enslaved children' (1867)."
+  - card: baartman-return
+    claim: "Title 'from Piccadilly to the Gamtoos valley' and place 'Hankey, Gamtoos River valley'"
+    verdict: corrected
+    note: "No opened source places Hankey in the Gamtoos valley. Title changed to 'Sara Baartman, from Piccadilly to Hankey', place to 'Hankey, Eastern Cape', body to 'near the place where she was born' (Britannica: near her birthplace)."
+  - card: baartman-return
+    claim: "Dispute: death in 1815 or 1816; display ended 1974 or mid-1970s"
+    verdict: confirmed
+    note: "SAHO text gives 1816 and 'until 1974'; Britannica and BBC give 1815; the Guardian (April 2002) says 'until the mid 1970s'."
+  - card: haiti-indemnity-1825
+    claim: "The 150 million francs were to compensate colonists who had lost their plantations"
+    verdict: confirmed
+    note: "UN News: 'meant to compensate French plantation owners'; BnF: compensation 'for their losses in real estate, that is to say, their rural and urban properties'."
+  - card: josephine-bakhita
+    claim: "Further: Canossian convent at Schio, where she lived and is buried"
+    verdict: corrected
+    note: "Burial place not stated in any opened source; changed to 'where she lived and died' (Britannica and the Holy See biography: died at Schio)."
+  - card: madam-cj-walker
+    claim: "Dispute: denial of being a millionaire in 1918; wealth estimates"
+    verdict: corrected
+    note: "The 1918 denial is reported only by the Indiana Historical Society (citing her letter to F. B. Ransom of 4 March 1918), so the dispute now attributes it to IHS; NWHM: 'Her total worth topped $1 million'; Britannica: 'one of the first African American female millionaires'."
+  - card: madam-cj-walker
+    claim: "Further: Madam Walker Legacy Center, built 1927, National Historic Landmark"
+    verdict: confirmed
+    note: "IHS: 'Constructed in 1927, the building is ... a National Historic Landmark'; Britannica: property that 'in 1927 became the site of the Madame Walker Theatre Center, another national historic landmark'."
+  - card: madam-cj-walker
+    claim: "Front matter: Delta, Louisiana coordinates"
+    verdict: corrected
+    note: "Point moved from 32.3254, -91.0257 (west of the town) to Delta itself, 32.3265, -90.9268."
+  - card: malik-ambar
+    claim: "Dispute: death 1626 or 1627; Khadki founded about 1610 or about 1619"
+    verdict: confirmed
+    note: "Indian Express (after Eaton): 'In 1610 ... established a new capital', 'Ambar died in 1626'; BlackPast: 'In approximately 1619, Ambar founded the city of Khadki', 'When Ambar died in 1627'."
+  - card: parsley-massacre
+    claim: "Further: Border of Lights in Dajabón and Ouanaminthe; Edwidge Danticat, The Farming of Bones"
+    verdict: corrected
+    note: "Both sources place Border of Lights in Dajabón only; Ouanaminthe removed from that line (it stays as a place: NPR describes survivors living in the Haitian border town of Ouanaminthe). Britannica names Danticat's novel."
+  - card: dunham-esplanada-1950
+    claim: "Front matter: Hotel Esplanada beside the Theatro Municipal"
+    verdict: confirmed
+    note: "Agência Senado: 'o luxuoso hotel vizinho do teatro'; AHA abstract: 'Hotel Esplanada adjoining the São Paulo Municipal Theater'."

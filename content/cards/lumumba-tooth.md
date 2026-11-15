@@ -23,10 +23,10 @@ sources:
   - {title: "BBC On This Day: 1961, Ex-Congo PM declared dead", url: "https://news.bbc.co.uk/onthisday/hi/dates/stories/february/13/newsid_2541000/2541053.stm"}
   - {title: "BBC Correspondent: Who Killed Lumumba? (transcript, 2000)", url: "https://news.bbc.co.uk/hi/english/static/audio_video/programmes/correspondent/transcripts/974745.txt"}
   - {title: "New York Public Library research guide: Patrice Lumumba, biography", url: "https://libguides.nypl.org/lumumba/biography"}
-  - {title: "Dawn: Belgium apologizes for role in Lumumba killing (6 February 2002)", url: "https://www.dawn.com/news/18799/belgium-apologizes-for-role-in-lumumba"}
+  - {title: "NPR Morning Edition: Belgian Apology (15 February 2002)", url: "https://www.npr.org/2002/02/15/1138123/belgian-apology"}
 ---
 Patrice Lumumba led the Belgian Congo to independence on 30 June 1960 and became its first prime minister. At the handover, with King Baudouin listening, he spoke bluntly of the contempt and violence Congolese had suffered under Belgian rule. Within months he was deposed and jailed, and in January 1961 he was flown to the breakaway province of Katanga and shot by a firing squad.
 
 To leave no grave, his body was dug up, cut apart and dissolved in acid. The Belgian police commissioner who oversaw the work, Gerard Soete, kept a gold-capped tooth and later admitted it. In 2016 it was still in his family: his daughter had it. No DNA test was ever made, so no one can prove it is Lumumba's.
 
-A Belgian parliamentary inquiry found in 2001 that the government of the day bore moral responsibility for the killing, and Belgium apologised in 2002. On 20 June 2022 the tooth was handed to Lumumba's family in a coffin in Brussels. On 30 June it was buried in a mausoleum in Kinshasa: a funeral attended by the president, sixty-one years late, for a single tooth.
+A Belgian parliamentary inquiry found in 2001 that members of the government of the day bore moral responsibility for the circumstances that led to the killing, and in 2002 Belgium apologised. On 20 June 2022 the tooth was handed to Lumumba's family in a coffin in Brussels. On 30 June it was buried in a mausoleum in Kinshasa: a funeral attended by the president, sixty-one years late, for a single tooth.

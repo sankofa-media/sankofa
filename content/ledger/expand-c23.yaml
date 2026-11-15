@@ -1,68 +1,70 @@
-# Expansion batch c23 (2026-11-13): every fact in the bodies and wow lines of the c23 cards,
-# with at least two independent sources and a supporting quote from each.
+# Expansion batch c23 (2026-11-13; rebuilt after the second check of 2026-11-14): every fact in the bodies and wow lines
+# of the c23 cards, with two independent sources and a supporting quote from each. See expand-c23-check.yaml.
 - card: sarafina
   fact: "Sarafina! was first staged in Johannesburg in 1987, at the Market Theatre"
   sources:
-    - {title: "Playbill: Sarafina!, Broadway (1988)", url: "https://playbill.com/production/sarafina-cort-theatre-vault-0000003489", quote: "Original Producer The Market Theatre First Presented in June 1987"}
-    - {title: "Lincoln Center Theater: Sarafina! (1987)", url: "https://www.lct.org/shows/sarafina/", quote: "who had all appeared in the premiere in Johannesburg earlier in 1987"}
-    - {title: "Kate Bartlett, NPR: The iconic South African theater that took on apartheid (2026)", url: "https://www.michiganpublic.org/2026-03-28/the-iconic-south-african-theater-that-took-on-apartheid", quote: "the hit musical \"Sarafina\" — about the Soweto uprising"}
+    - {title: "Playbill: Sarafina!, Broadway (1988)", url: "https://playbill.com/production/sarafina-cort-theatre-vault-0000003489", quote: "First Presented in June 1987 at The Market Theatre"}
+    - {title: "Encyclopaedia of South African Theatre, Film, Media and Performance (ESAT), Stellenbosch University: Sarafina!", url: "https://esat.sun.ac.za/index.php/Sarafina", quote: "opened at the Market Theatre in June 1987 (page summary)"}
 - card: sarafina
-  fact: "The musical is based on the Soweto uprising of 16 June 1976, when thousands of students protested against apartheid schooling"
+  fact: "Based on the Soweto uprising of 16 June 1976; thousands of students"
   sources:
-    - {title: "South African History Online: 16 June 1976, Soweto Uprising", url: "https://www.sahistory.org.za/article/june-16-soweto-youth-uprising", quote: "On 16 June 1976 between 3000 and 10 000 students mobilized"}
-    - {title: "Broadway.com: Mbongeni Ngema, Tony-nominated Sarafina! playwright and director, dies at 68 (2023)", url: "https://www.broadway.com/buzz/203632/mbongeni-ngema-tony-nominated-sarafina-playwright-and-director-dies-at-68/", quote: "is based on the events of the 1976 Soweto uprising"}
-    - {title: "Mogomotsi Magome, Associated Press: Mbongeni Ngema ... killed in a car crash at 68 (2023)", url: "https://www.click2houston.com/entertainment/2023/12/28/mbongeni-ngema-south-african-playwright-and-creator-of-sarafina-is-killed-in-a-car-crash-at-68/", quote: "The story was based on the events of the 1976 Soweto uprising in South Africa"}
+    - {title: "South African History Online: 16 June 1976, Soweto Uprising", url: "https://www.sahistory.org.za/article/june-16-soweto-youth-uprising", quote: "between 3000 and 10 000 students"}
+    - {title: "Mogomotsi Magome, Associated Press: Mbongeni Ngema ... killed in a car crash at 68 (2023)", url: "https://www.click2houston.com/entertainment/2023/12/28/mbongeni-ngema-south-african-playwright-and-creator-of-sarafina-is-killed-in-a-car-crash-at-68/", quote: "The story was based on the events of the 1976 Soweto uprising ... thousands of students protested"}
 - card: sarafina
   fact: "Ngema wrote the book, music and lyrics and directed"
   sources:
-    - {title: "Playbill: Sarafina!, Broadway (1988)", url: "https://playbill.com/production/sarafina-cort-theatre-vault-0000003489", quote: "Lyrics: Mbongeni Ngema Book: Mbongeni Ngema Music: Mbongeni Ngema"}
+    - {title: "Playbill: Sarafina!, Broadway (1988)", url: "https://playbill.com/production/sarafina-cort-theatre-vault-0000003489", quote: "Book / Music / Lyrics / Director: Mbongeni Ngema"}
     - {title: "Broadway.com: Mbongeni Ngema, Tony-nominated Sarafina! playwright and director, dies at 68 (2023)", url: "https://www.broadway.com/buzz/203632/mbongeni-ngema-tony-nominated-sarafina-playwright-and-director-dies-at-68/", quote: "Ngema wrote the musical's book, music and lyrics, in addition to directing"}
 - card: sarafina
   fact: "Hugh Masekela worked with Ngema on the score"
   sources:
-    - {title: "Broadway.com: Mbongeni Ngema, Tony-nominated Sarafina! playwright and director, dies at 68 (2023)", url: "https://www.broadway.com/buzz/203632/mbongeni-ngema-tony-nominated-sarafina-playwright-and-director-dies-at-68/", quote: "collaborated with South African jazz great Hugh Masekela on the score"}
-    - {title: "Kate Bartlett, NPR: The iconic South African theater that took on apartheid (2026)", url: "https://www.michiganpublic.org/2026-03-28/the-iconic-south-african-theater-that-took-on-apartheid", quote: "\"Sarafina,\" written by jazz musician Hugh Masekela, went on to Broadway"}
+    - {title: "Lincoln Center Theater: Sarafina! (1987)", url: "https://www.lct.org/shows/sarafina/", quote: "South African trumpeter Hugh Masekela ... collaborated with Ngema on the lively score"}
+    - {title: "Broadway.com: Mbongeni Ngema, Tony-nominated Sarafina! playwright and director, dies at 68 (2023)", url: "https://www.broadway.com/buzz/203632/mbongeni-ngema-tony-nominated-sarafina-playwright-and-director-dies-at-68/", quote: "Ngema collaborated with South African jazz great Hugh Masekela on the score"}
 - card: sarafina
-  fact: "The story follows a schoolgirl, Sarafina, who inspires her peers to fight segregation"
+  fact: "The story follows a schoolgirl, Sarafina, who inspires her classmates to fight segregation"
   sources:
-    - {title: "Mogomotsi Magome, Associated Press: Mbongeni Ngema ... killed in a car crash at 68 (2023)", url: "https://www.click2houston.com/entertainment/2023/12/28/mbongeni-ngema-south-african-playwright-and-creator-of-sarafina-is-killed-in-a-car-crash-at-68/", quote: "told the story of a student and how she inspired her peers to fight against racial segregation in apartheid South Africa"}
-    - {title: "Lincoln Center Theater: Sarafina! (1987)", url: "https://www.lct.org/shows/sarafina/", quote: "SARAFINA tells of a group of Soweto high school students"}
+    - {title: "Encyclopaedia of South African Theatre, Film, Media and Performance (ESAT), Stellenbosch University: Sarafina!", url: "https://esat.sun.ac.za/index.php/Sarafina", quote: "one girl named Sarafina, who inspired her classmates with her commitment to the struggle against apartheid"}
+    - {title: "Mogomotsi Magome, Associated Press: Mbongeni Ngema ... killed in a car crash at 68 (2023)", url: "https://www.click2houston.com/entertainment/2023/12/28/mbongeni-ngema-south-african-playwright-and-creator-of-sarafina-is-killed-in-a-car-crash-at-68/", quote: "told the story of a student and how she inspired her peers to fight against racial segregation"}
 - card: sarafina
   fact: "Leleti Khumalo played the title role"
   sources:
-    - {title: "Playbill: Sarafina!, Broadway (1988)", url: "https://playbill.com/production/sarafina-cort-theatre-vault-0000003489", quote: "Leleti Khumalo Sarafina (Original)"}
-    - {title: "Broadway.com: Mbongeni Ngema, Tony-nominated Sarafina! playwright and director, dies at 68 (2023)", url: "https://www.broadway.com/buzz/203632/mbongeni-ngema-tony-nominated-sarafina-playwright-and-director-dies-at-68/", quote: "It starred Leleti Khumalo"}
+    - {title: "Playbill: Sarafina!, Broadway (1988)", url: "https://playbill.com/production/sarafina-cort-theatre-vault-0000003489", quote: "Leleti Khumalo — Sarafina (Original)"}
+    - {title: "Encyclopaedia of South African Theatre, Film, Media and Performance (ESAT), Stellenbosch University: Sarafina!", url: "https://esat.sun.ac.za/index.php/Sarafina", quote: "Leleti Khumalo played the title role, Sarafina"}
 - card: sarafina
   fact: "Lincoln Center Theater brought the Johannesburg company to New York in 1987"
   sources:
-    - {title: "Lincoln Center Theater: Sarafina! (1987)", url: "https://www.lct.org/shows/sarafina/", quote: "The Newhouse production moved to Broadway for an extended run with the 24 actors ... who had all appeared in the premiere in Johannesburg earlier in 1987"}
-    - {title: "Playbill: Sarafina!, Broadway (1988)", url: "https://playbill.com/production/sarafina-cort-theatre-vault-0000003489", quote: "Lincoln Center Theater Producer"}
+    - {title: "Lincoln Center Theater: Sarafina! (1987)", url: "https://www.lct.org/shows/sarafina/", quote: "September 25, 1987 - January 3, 1988 ... had all appeared in the premiere in Johannesburg earlier in 1987"}
+    - {title: "Playbill: Sarafina!, Broadway (1988)", url: "https://playbill.com/production/sarafina-cort-theatre-vault-0000003489", quote: "Lincoln Center Theater — Producer"}
 - card: sarafina
   fact: "The show opened on Broadway in 1988"
   sources:
     - {title: "Playbill: Sarafina!, Broadway (1988)", url: "https://playbill.com/production/sarafina-cort-theatre-vault-0000003489", quote: "Opening Date Jan 28 1988"}
-    - {title: "Mogomotsi Magome, Associated Press: Mbongeni Ngema ... killed in a car crash at 68 (2023)", url: "https://www.click2houston.com/entertainment/2023/12/28/mbongeni-ngema-south-african-playwright-and-creator-of-sarafina-is-killed-in-a-car-crash-at-68/", quote: "which premiered on Broadway in 1988"}
-    - {title: "Broadway.com: Mbongeni Ngema, Tony-nominated Sarafina! playwright and director, dies at 68 (2023)", url: "https://www.broadway.com/buzz/203632/mbongeni-ngema-tony-nominated-sarafina-playwright-and-director-dies-at-68/", quote: "which premiered on Broadway in 1988"}
+    - {title: "Mogomotsi Magome, Associated Press: Mbongeni Ngema ... killed in a car crash at 68 (2023)", url: "https://www.click2houston.com/entertainment/2023/12/28/mbongeni-ngema-south-african-playwright-and-creator-of-sarafina-is-killed-in-a-car-crash-at-68/", quote: "premiered on Broadway in 1988"}
 - card: sarafina
   fact: "It received Tony nominations"
   sources:
+    - {title: "Playbill: Sarafina!, Broadway (1988)", url: "https://playbill.com/production/sarafina-cort-theatre-vault-0000003489", quote: "1988 Tony nominations: Musical, Original Score, Featured Actress, Direction, Choreography"}
     - {title: "Broadway.com: Mbongeni Ngema, Tony-nominated Sarafina! playwright and director, dies at 68 (2023)", url: "https://www.broadway.com/buzz/203632/mbongeni-ngema-tony-nominated-sarafina-playwright-and-director-dies-at-68/", quote: "The production received five Tony nominations"}
-    - {title: "Mogomotsi Magome, Associated Press: Mbongeni Ngema ... killed in a car crash at 68 (2023)", url: "https://www.click2houston.com/entertainment/2023/12/28/mbongeni-ngema-south-african-playwright-and-creator-of-sarafina-is-killed-in-a-car-crash-at-68/", quote: "being nominated for Tony and Grammy awards"}
 - card: sarafina
   fact: "It became a 1992 film with Whoopi Goldberg"
   sources:
-    - {title: "Mogomotsi Magome, Associated Press: Mbongeni Ngema ... killed in a car crash at 68 (2023)", url: "https://www.click2houston.com/entertainment/2023/12/28/mbongeni-ngema-south-african-playwright-and-creator-of-sarafina-is-killed-in-a-car-crash-at-68/", quote: "It was adapted into a musical drama starring Whoopi Goldberg in 1992"}
-    - {title: "Broadway.com: Mbongeni Ngema, Tony-nominated Sarafina! playwright and director, dies at 68 (2023)", url: "https://www.broadway.com/buzz/203632/mbongeni-ngema-tony-nominated-sarafina-playwright-and-director-dies-at-68/", quote: "It was adapted into a 1992 film of the same name, starring Whoopi Goldberg"}
+    - {title: "Mogomotsi Magome, Associated Press: Mbongeni Ngema ... killed in a car crash at 68 (2023)", url: "https://www.click2houston.com/entertainment/2023/12/28/mbongeni-ngema-south-african-playwright-and-creator-of-sarafina-is-killed-in-a-car-crash-at-68/", quote: "musical drama starring Whoopi Goldberg in 1992"}
+    - {title: "Encyclopaedia of South African Theatre, Film, Media and Performance (ESAT), Stellenbosch University: Sarafina!", url: "https://esat.sun.ac.za/index.php/Sarafina", quote: "The 1992 film ... directed by Darryl Roodt, starred Leleti Khumalo and Whoopi Goldberg"}
 - card: sarafina
-  fact: "Mandela was released on 11 February 1990, after 27 years in prison (so in his third decade in prison in 1987)"
+  fact: "Mandela released 11 February 1990 after 27 years (third decade in prison in 1987)"
   sources:
-    - {title: "South African History Online: Nelson Rolihlahla Mandela", url: "https://www.sahistory.org.za/people/nelson-rolihlahla-mandela", quote: "On Sunday 11 February, after 27 years in prison, Mandela was released from Victor Verster Prison."}
-    - {title: "The Nobel Prize: Nelson Mandela, biographical", url: "https://www.nobelprize.org/prizes/peace/1993/mandela/biographical/", quote: "Nelson Mandela was released on February 11, 1990."}
+    - {title: "South African History Online: Nelson Rolihlahla Mandela", url: "https://www.sahistory.org.za/people/nelson-rolihlahla-mandela", quote: "On Sunday 11 February, after 27 years in prison, Mandela was released from Victor Verster"}
+    - {title: "The Nobel Prize: Nelson Mandela, biographical", url: "https://www.nobelprize.org/prizes/peace/1993/mandela/biographical/", quote: "Mandela was arrested in 1962 ... Nelson Mandela was released on February 11, 1990."}
 - card: sarafina
   fact: "Ngema died in a car crash in 2023"
   sources:
-    - {title: "Mogomotsi Magome, Associated Press: Mbongeni Ngema ... killed in a car crash at 68 (2023)", url: "https://www.click2houston.com/entertainment/2023/12/28/mbongeni-ngema-south-african-playwright-and-creator-of-sarafina-is-killed-in-a-car-crash-at-68/", quote: "Mbongeni Ngema, South African playwright and creator of Sarafina, is killed in a car crash at 68 (headline; published December 28, 2023)"}
-    - {title: "Broadway.com: Mbongeni Ngema, Tony-nominated Sarafina! playwright and director, dies at 68 (2023)", url: "https://www.broadway.com/buzz/203632/mbongeni-ngema-tony-nominated-sarafina-playwright-and-director-dies-at-68/", quote: "Mbongeni Ngema, Tony-Nominated Sarafina! Playwright and Director, Dies at 68"}
+    - {title: "Mogomotsi Magome, Associated Press: Mbongeni Ngema ... killed in a car crash at 68 (2023)", url: "https://www.click2houston.com/entertainment/2023/12/28/mbongeni-ngema-south-african-playwright-and-creator-of-sarafina-is-killed-in-a-car-crash-at-68/", quote: "Ngema was killed in a head-on accident while returning from a funeral"}
+    - {title: "Broadway.com: Mbongeni Ngema, Tony-nominated Sarafina! playwright and director, dies at 68 (2023)", url: "https://www.broadway.com/buzz/203632/mbongeni-ngema-tony-nominated-sarafina-playwright-and-director-dies-at-68/", quote: "Ngema was killed in a car crash in a rural town in South Africa's Eastern Cape province ... died on December 27, 2023"}
+- card: sarafina
+  fact: "wow: reached Broadway in 1988, two years before Mandela's release"
+  sources:
+    - {title: "Playbill: Sarafina!, Broadway (1988)", url: "https://playbill.com/production/sarafina-cort-theatre-vault-0000003489", quote: "Opening Date Jan 28 1988"}
+    - {title: "The Nobel Prize: Nelson Mandela, biographical", url: "https://www.nobelprize.org/prizes/peace/1993/mandela/biographical/", quote: "Nelson Mandela was released on February 11, 1990."}
 - card: american-gothic-parks
   fact: "Parks was born in Fort Scott, Kansas, in 1912"
   sources:
@@ -71,157 +73,148 @@
 - card: american-gothic-parks
   fact: "Parks was self-taught"
   sources:
-    - {title: "Buffalo AKG Art Museum: Gordon Parks, American Gothic, Washington, D.C. (1942)", url: "https://buffaloakg.org/artworks/p2017111-american-gothic-washington-dc", quote: "self-trained photographer and lifelong humanitarian Gordon Parks"}
-    - {title: "Gordon Parks Foundation: Gordon Parks, biography", url: "https://www.gordonparksfoundation.org/gordon-parks/biography", quote: "Parks was drawn to photography as a young man"}
+    - {title: "Buffalo AKG Art Museum: Gordon Parks, American Gothic, Washington, D.C. (1942)", url: "https://buffaloakg.org/artworks/p2017111-american-gothic-washington-dc", quote: "self-trained photographer ... Gordon Parks"}
+    - {title: "Gordon Parks Foundation: Gordon Parks, biography", url: "https://www.gordonparksfoundation.org/gordon-parks/biography", quote: "After buying a camera at a pawnshop, he taught himself how to use it"}
 - card: american-gothic-parks
-  fact: "In 1942 Parks came to Washington to work for the photography section of the Farm Security Administration"
+  fact: "In 1942 Parks came to Washington to work for the photography section of the FSA"
   sources:
     - {title: "Gordon Parks Foundation: Washington, D.C., and Ella Watson, 1942", url: "https://www.gordonparksfoundation.org/gordon-parks/photography-archive/washington-d-c-and-ella-watson-1942", quote: "In January 1942, Parks arrived in Washington, D.C., to work for the Farm Security Administration (FSA)."}
-    - {title: "Buffalo AKG Art Museum: Gordon Parks, American Gothic, Washington, D.C. (1942)", url: "https://buffaloakg.org/artworks/p2017111-american-gothic-washington-dc", quote: "In 1942 ... Gordon Parks secured an apprenticeship with the photography branch of the Farm Security Administration (FSA)."}
-    - {title: "Gordon Parks Foundation: Gordon Parks, biography", url: "https://www.gordonparksfoundation.org/gordon-parks/biography", quote: "with the photography section of the FSA in Washington, D.C."}
+    - {title: "Buffalo AKG Art Museum: Gordon Parks, American Gothic, Washington, D.C. (1942)", url: "https://buffaloakg.org/artworks/p2017111-american-gothic-washington-dc", quote: "In 1942 ... secured an apprenticeship with the photography branch of the Farm Security Administration"}
 - card: american-gothic-parks
-  fact: "Within days Parks met bigotry and discrimination in Washington that he had not expected"
+  fact: "Within days Parks met bigotry and discrimination he had not expected"
   sources:
+    - {title: "Gordon Parks Foundation: Washington, D.C., and Ella Watson, 1942", url: "https://www.gordonparksfoundation.org/gordon-parks/photography-archive/washington-d-c-and-ella-watson-1942", quote: "Parks found bigotry everywhere ... After just a few days, Parks was utterly demoralized."}
     - {title: "Buffalo AKG Art Museum: Gordon Parks, American Gothic, Washington, D.C. (1942)", url: "https://buffaloakg.org/artworks/p2017111-american-gothic-washington-dc", quote: "I had experienced a kind of bigotry and discrimination [in Washington, D.C.] that I never expected to experience."}
-    - {title: "Gordon Parks Foundation: Washington, D.C., and Ella Watson, 1942", url: "https://www.gordonparksfoundation.org/gordon-parks/photography-archive/washington-d-c-and-ella-watson-1942", quote: "Parks found bigotry everywhere. ... After just a few days, Parks was utterly demoralized."}
 - card: american-gothic-parks
   fact: "Ella Watson cleaned the FSA offices"
   sources:
-    - {title: "Gordon Parks Foundation: Washington, D.C., and Ella Watson, 1942", url: "https://www.gordonparksfoundation.org/gordon-parks/photography-archive/washington-d-c-and-ella-watson-1942", quote: "Parks approached a Black woman who was cleaning the FSA ofﬁces. Her name was Ella Watson."}
-    - {title: "Buffalo AKG Art Museum: Gordon Parks, American Gothic, Washington, D.C. (1942)", url: "https://buffaloakg.org/artworks/p2017111-american-gothic-washington-dc", quote: "Ella Watson, who was a housekeeper at FSA headquarters in Washington, D.C."}
-    - {title: "National Archives, Prologue (Summer 1997): Pioneering photographers", url: "https://www.archives.gov/publications/prologue/1997/summer/pioneering-photographers", quote: "the now-classic 1942 image of government charwoman Ella Watson"}
+    - {title: "Gordon Parks Foundation: Washington, D.C., and Ella Watson, 1942", url: "https://www.gordonparksfoundation.org/gordon-parks/photography-archive/washington-d-c-and-ella-watson-1942", quote: "Parks approached a Black woman who was cleaning the FSA offices. Her name was Ella Watson."}
+    - {title: "Buffalo AKG Art Museum: Gordon Parks, American Gothic, Washington, D.C. (1942)", url: "https://buffaloakg.org/artworks/p2017111-american-gothic-washington-dc", quote: "Ella Watson, who was a housekeeper at FSA headquarters"}
 - card: american-gothic-parks
   fact: "Watson was supporting herself and her grandchildren"
   sources:
     - {title: "Gordon Parks Foundation: Washington, D.C., and Ella Watson, 1942", url: "https://www.gordonparksfoundation.org/gordon-parks/photography-archive/washington-d-c-and-ella-watson-1942", quote: "She was now working to support herself and her two grandchildren."}
-    - {title: "Jovonna Jones, Southern Cultures 28:2 (2022): Walking with Ella Watson", url: "https://www.southerncultures.org/article/walking-with-ella-watson/", quote: "holding her grandkids"}
+    - {title: "Jovonna Jones, Southern Cultures 28:2 (2022): Walking with Ella Watson", url: "https://www.southerncultures.org/article/walking-with-ella-watson/", quote: "holding her grandkids ... her adopted granddaughter"}
 - card: american-gothic-parks
-  fact: "Parks posed her before the flag with a broom in one hand and a mop in the other"
+  fact: "Posed before the flag with a broom in one hand and a mop in the other"
   sources:
     - {title: "Buffalo AKG Art Museum: Gordon Parks, American Gothic, Washington, D.C. (1942)", url: "https://buffaloakg.org/artworks/p2017111-american-gothic-washington-dc", quote: "I put her before the American flag with a broom in one hand and a mop in another."}
-    - {title: "National Archives, Prologue (Summer 1997): Pioneering photographers", url: "https://www.archives.gov/publications/prologue/1997/summer/pioneering-photographers", quote: "standing grimly, hauntingly, with mop and broom, next to an American flag"}
+    - {title: "National Archives, Prologue (Summer 1997): Pioneering photographers", url: "https://www.archives.gov/publications/prologue/1997/summer/pioneering-photographers", quote: "Ella Watson standing grimly, hauntingly, with mop and broom, next to an American flag"}
 - card: american-gothic-parks
-  fact: "The picture answers Grant Wood's painting American Gothic"
+  fact: "The picture answers Grant Wood's American Gothic"
   sources:
-    - {title: "Gordon Parks Foundation: Washington, D.C., and Ella Watson, 1942", url: "https://www.gordonparksfoundation.org/gordon-parks/photography-archive/washington-d-c-and-ella-watson-1942", quote: "by referring to and reinterpreting Grant Wood's celebrated 1930 painting of the same name"}
-    - {title: "Buffalo AKG Art Museum: Gordon Parks, American Gothic, Washington, D.C. (1942)", url: "https://buffaloakg.org/artworks/p2017111-american-gothic-washington-dc", quote: "And I said, American Gothic—that’s how I felt at the moment."}
+    - {title: "Gordon Parks Foundation: Washington, D.C., and Ella Watson, 1942", url: "https://www.gordonparksfoundation.org/gordon-parks/photography-archive/washington-d-c-and-ella-watson-1942", quote: "referring to and reinterpreting Grant Wood's celebrated 1930 painting of the same name"}
+    - {title: "Buffalo AKG Art Museum: Gordon Parks, American Gothic, Washington, D.C. (1942)", url: "https://buffaloakg.org/artworks/p2017111-american-gothic-washington-dc", quote: "He self-consciously composed the image as an echo of Grant Wood's famous 1930 painting American Gothic"}
 - card: american-gothic-parks
-  fact: "The government filed it as \"Washington, D.C. Government charwoman\""
+  fact: "Filed as 'Washington, D.C. Government charwoman'"
   sources:
-    - {title: "Library of Congress: Washington, D.C. Government charwoman (LC-USF34-013407-C)", url: "https://www.loc.gov/item/2017765074/", quote: "title : Washington, D.C. Government charwoman"}
-    - {title: "Jovonna Jones, Southern Cultures 28:2 (2022): Walking with Ella Watson", url: "https://www.southerncultures.org/article/walking-with-ella-watson/", quote: "Parks’s photograph Washington, DC Government Charwoman is better known as American Gothic."}
+    - {title: "Library of Congress: Washington, D.C. Government charwoman (LC-USF34-013407-C)", url: "https://www.loc.gov/item/2017765074/", quote: "title: Washington, D.C. Government charwoman; 1942; Parks, Gordon, photographer (LoC JSON record)"}
+    - {title: "Jovonna Jones, Southern Cultures 28:2 (2022): Walking with Ella Watson", url: "https://www.southerncultures.org/article/walking-with-ella-watson/", quote: "the iconic portrait for which they are both known: Washington, DC Government Charwoman"}
 - card: american-gothic-parks
-  fact: "Parks went on to photograph Watson at home, with her family and in her neighbourhood"
+  fact: "Parks photographed Watson at home, with her family and in her neighbourhood"
   sources:
-    - {title: "Library of Congress: Washington, D.C. Mrs. Ella Watson, a government charwoman and her adopted daughter", url: "https://www.loc.gov/item/2017765096/", quote: "Washington, D.C. Mrs. Ella Watson, a government charwoman and her adopted daughter"}
-    - {title: "Gordon Parks Foundation: Washington, D.C., and Ella Watson, 1942", url: "https://www.gordonparksfoundation.org/gordon-parks/photography-archive/washington-d-c-and-ella-watson-1942", quote: "Culminating this series is the photograph titled American Gothic"}
+    - {title: "Gordon Parks Foundation: Washington, D.C., and Ella Watson, 1942", url: "https://www.gordonparksfoundation.org/gordon-parks/photography-archive/washington-d-c-and-ella-watson-1942", quote: "for four months gave him access to her home and her community ... joyous photos of life within the walls of Watson's church"}
+    - {title: "Jovonna Jones, Southern Cultures 28:2 (2022): Walking with Ella Watson", url: "https://www.southerncultures.org/article/walking-with-ella-watson/", quote: "He posed Watson in her apartment ... holding her grandkids"}
 - card: american-gothic-parks
-  fact: "It became one of his best-known photographs"
+  fact: "One of his best-known photographs"
   sources:
     - {title: "Gordon Parks Foundation: Washington, D.C., and Ella Watson, 1942", url: "https://www.gordonparksfoundation.org/gordon-parks/photography-archive/washington-d-c-and-ella-watson-1942", quote: "Among the most famous pictures Parks ever took"}
-    - {title: "Kansas Historical Society, Kansapedia: Gordon Parks", url: "https://www.kansashistory.gov/kansapedia/gordon-parks/12165", quote: "one of his best known photographs, American Gothic, Washington, D.C., of Ella Watson"}
+    - {title: "Kansas Historical Society, Kansapedia: Gordon Parks", url: "https://www.kansashistory.gov/kansapedia/gordon-parks/12165", quote: "one of his best known photographs, American Gothic, Washington, D.C."}
 - card: american-gothic-parks
-  fact: "Parks became a staff photographer for Life"
+  fact: "Staff photographer for Life"
   sources:
     - {title: "Gordon Parks Foundation: Gordon Parks, biography", url: "https://www.gordonparksfoundation.org/gordon-parks/biography", quote: "a position as the first African American staff photographer for Life"}
     - {title: "Kansas Historical Society, Kansapedia: Gordon Parks", url: "https://www.kansashistory.gov/kansapedia/gordon-parks/12165", quote: "earned Parks a staff position as writer and photographer with Life"}
 - card: american-gothic-parks
   fact: "In 1969 he turned his novel The Learning Tree into a Hollywood film"
   sources:
-    - {title: "Gordon Parks Foundation: Gordon Parks, biography", url: "https://www.gordonparksfoundation.org/gordon-parks/biography", quote: "In 1969 he became the first African American to write and direct a major Hollywood studio feature film."}
-    - {title: "Kansas Historical Society, Kansapedia: Gordon Parks", url: "https://www.kansashistory.gov/kansapedia/gordon-parks/12165", quote: "adapted to the movie screen in 1969"}
+    - {title: "Gordon Parks Foundation: Gordon Parks, biography", url: "https://www.gordonparksfoundation.org/gordon-parks/biography", quote: "In 1969 he became the first African American to write and direct a major Hollywood studio feature film ... The Learning Tree, 1969"}
+    - {title: "Kansas Historical Society, Kansapedia: Gordon Parks", url: "https://www.kansashistory.gov/kansapedia/gordon-parks/12165", quote: "The Learning Tree, which he adapted to the movie screen in 1969"}
 - card: american-gothic-parks
   fact: "Parks died in 2006"
   sources:
     - {title: "Gordon Parks Foundation: Gordon Parks, biography", url: "https://www.gordonparksfoundation.org/gordon-parks/biography", quote: "continued working until his death in 2006"}
-    - {title: "Kansas Historical Society, Kansapedia: Gordon Parks", url: "https://www.kansashistory.gov/kansapedia/gordon-parks/12165", quote: "Parks died in March 7, 2006, in New York."}
+    - {title: "Kansas Historical Society, Kansapedia: Gordon Parks", url: "https://www.kansashistory.gov/kansapedia/gordon-parks/12165", quote: "Died: March 7, 2006, New York City"}
 - card: ringgold-die
-  fact: "Die was painted in 1967 and is part of the American People series"
+  fact: "Die was painted in 1967 and belongs to the American People series"
   sources:
-    - {title: "Sebastian Smee, The Washington Post: American carnage (2020)", url: "https://www.washingtonpost.com/graphics/2020/entertainment/faith-ringgold-american-people-series-20-die/", quote: "Faith Ringgold (b. 1930) American People Series #20: Die , 1967"}
-    - {title: "Hyperallergic: The fantastic life of Faith Ringgold (2018)", url: "https://hyperallergic.com/477794/the-fantastic-life-of-faith-ringgold/", quote: "“American People Series #20: Die” (1967)"}
-    - {title: "The Art Story: Faith Ringgold", url: "https://www.theartstory.org/artist/ringgold-faith/", quote: "Die (1967)"}
+    - {title: "Hyperallergic: The fantastic life of Faith Ringgold (2018)", url: "https://hyperallergic.com/477794/the-fantastic-life-of-faith-ringgold/", quote: "'American People Series #20: Die' (1967)"}
+    - {title: "Phaidon: Anatomy of an artwork, Die (1967) by Faith Ringgold", url: "https://www.phaidon.com/blogs/stories/anatomy-of-an-artwork-die-1967-by-faith-ringgold", quote: "This 1967, oil on canvas painting is the final work in her American People series"}
 - card: ringgold-die
   fact: "Ringgold was born in Harlem in 1930"
   sources:
-    - {title: "Hyperallergic: The fantastic life of Faith Ringgold (2018)", url: "https://hyperallergic.com/477794/the-fantastic-life-of-faith-ringgold/", quote: "Faith Ringgold was born on October 8, 1930, amid a cultural renaissance in Harlem, New York."}
-    - {title: "Sebastian Smee, The Washington Post: American carnage (2020)", url: "https://www.washingtonpost.com/graphics/2020/entertainment/faith-ringgold-american-people-series-20-die/", quote: "Born and raised in Harlem"}
-    - {title: "The Art Story: Faith Ringgold", url: "https://www.theartstory.org/artist/ringgold-faith/", quote: "Born: October 8, 1930 - New York City, New York"}
+    - {title: "Hyperallergic: The fantastic life of Faith Ringgold (2018)", url: "https://hyperallergic.com/477794/the-fantastic-life-of-faith-ringgold/", quote: "Faith Ringgold was born on October 8, 1930, amid a cultural renaissance in Harlem"}
+    - {title: "The Art Story: Faith Ringgold", url: "https://www.theartstory.org/artist/ringgold-faith/", quote: "Born: October 8, 1930 - New York City"}
 - card: ringgold-die
   fact: "It responds to the race riots of 1967 / the 1960s"
   sources:
-    - {title: "Sebastian Smee, The Washington Post: American carnage (2020)", url: "https://www.washingtonpost.com/graphics/2020/entertainment/faith-ringgold-american-people-series-20-die/", quote: "She painted “American People Series #20: Die” in response to race riots breaking out around America in 1967"}
+    - {title: "Phaidon: Anatomy of an artwork, Die (1967) by Faith Ringgold", url: "https://www.phaidon.com/blogs/stories/anatomy-of-an-artwork-die-1967-by-faith-ringgold", quote: "during the Long Hot Summer of 1967 when Ringgold was making the paintings, forty-three people died in race-related uprisings in Detroit"}
     - {title: "The Art Story: Faith Ringgold", url: "https://www.theartstory.org/artist/ringgold-faith/", quote: "this work depicts the race riots of the 1960s in America as a melee of random violence"}
 - card: ringgold-die
-  fact: "Hale Woodruff had criticised her work for lacking movement; she set out to show she could convey movement"
+  fact: "Bloodied Black and white figures in formal clothes fighting or fleeing"
   sources:
-    - {title: "Sebastian Smee, The Washington Post: American carnage (2020)", url: "https://www.washingtonpost.com/graphics/2020/entertainment/faith-ringgold-american-people-series-20-die/", quote: "Hale Woodruff , the acclaimed African American artist, had criticized Ringgold’s earlier work for being too static. ... she also wanted to show Woodruff that she could convey movement"}
-    - {title: "The Art Story: Faith Ringgold", url: "https://www.theartstory.org/artist/ringgold-faith/", quote: "I thought it was insulting that he thought I didn't know anything about rhythm or movement... I decided I'm going to show him I know rhythm and movement"}
+    - {title: "The Art Story: Faith Ringgold", url: "https://www.theartstory.org/artist/ringgold-faith/", quote: "The repeating adult figures, African Americans and whites, are injured, and fighting or fleeing ... well-dressed appearances"}
+    - {title: "Phaidon: Anatomy of an artwork, Die (1967) by Faith Ringgold", url: "https://www.phaidon.com/blogs/stories/anatomy-of-an-artwork-die-1967-by-faith-ringgold", quote: "the middle-class clothes of the day ... 'these people are not the people who are normally in the street fighting'"}
 - card: ringgold-die
-  fact: "Monumental canvas of bloodied Black and white figures in suits and cocktail dresses fighting or fleeing"
-  sources:
-    - {title: "Sebastian Smee, The Washington Post: American carnage (2020)", url: "https://www.washingtonpost.com/graphics/2020/entertainment/faith-ringgold-american-people-series-20-die/", quote: "half the figures in her painting are white and half black, and why Ringgold chose to show them wearing cocktail dresses and suits"}
-    - {title: "The Art Story: Faith Ringgold", url: "https://www.theartstory.org/artist/ringgold-faith/", quote: "The repeating adult figures, African Americans and whites, are injured, and fighting or fleeing"}
-    - {title: "Hyperallergic: The fantastic life of Faith Ringgold (2018)", url: "https://hyperallergic.com/477794/the-fantastic-life-of-faith-ringgold/", quote: "bloody bodies are strewn across the monumental canvas"}
-- card: ringgold-die
-  fact: "Two children, a white boy and a Black girl, huddle at the centre"
+  fact: "Two children cling to each other at the centre"
   sources:
     - {title: "The Art Story: Faith Ringgold", url: "https://www.theartstory.org/artist/ringgold-faith/", quote: "a white boy and an African-American girl huddle together in the center of the canvas"}
-    - {title: "Sebastian Smee, The Washington Post: American carnage (2020)", url: "https://www.washingtonpost.com/graphics/2020/entertainment/faith-ringgold-american-people-series-20-die/", quote: "with its two children huddled near the center of a bloody maelstrom"}
+    - {title: "Andrew Russeth, ARTnews: Faith Ringgold on her early art and activism at MoMA (2016), reprinted by ACA Galleries", url: "https://acagalleries.com/news/44/", quote: "Two terrified children hold each other amid the mayhem."}
 - card: ringgold-die
-  fact: "Ringgold drew on Picasso's Guernica and Jacob Lawrence"
+  fact: "Ringgold drew on Picasso's Guernica"
   sources:
-    - {title: "Sebastian Smee, The Washington Post: American carnage (2020)", url: "https://www.washingtonpost.com/graphics/2020/entertainment/faith-ringgold-american-people-series-20-die/", quote: "was inspired by Jacob Lawrence’s mid-century reinvention of history painting, and by Picasso’s antiwar masterpiece “ Guernica .”"}
     - {title: "The Art Story: Faith Ringgold", url: "https://www.theartstory.org/artist/ringgold-faith/", quote: "Influenced by both Picasso's Guernica and the depiction of race riots in Jacob Lawrence's The Migration Series"}
-    - {title: "Hyperallergic: The fantastic life of Faith Ringgold (2018)", url: "https://hyperallergic.com/477794/the-fantastic-life-of-faith-ringgold/", quote: "reminiscent of African Kuba patterns and Picasso’s 1937 painting “Guernica.”"}
+    - {title: "Phaidon: Anatomy of an artwork, Die (1967) by Faith Ringgold", url: "https://www.phaidon.com/blogs/stories/anatomy-of-an-artwork-die-1967-by-faith-ringgold", quote: "Guernica showed her that the most effective way to protest and memorialize violence ... was to take absolute care with composition"}
 - card: ringgold-die
-  fact: "First shown in 1967 at a gallery opening on 57th Street"
+  fact: "Newman invited her to show at Spectrum on 57th Street and let her use the gallery as a studio; her first solo show"
   sources:
-    - {title: "Sebastian Smee, The Washington Post: American carnage (2020)", url: "https://www.washingtonpost.com/graphics/2020/entertainment/faith-ringgold-american-people-series-20-die/", quote: "There was a party at the gallery opening where Faith Ringgold first showed this painting ... Emerging from the elevator into the 57th Street gallery in New York"}
-    - {title: "The Art Story: Faith Ringgold", url: "https://www.theartstory.org/artist/ringgold-faith/", quote: "In 1967, an invitation from Robert Newman for a solo show at his co-op gallery Spectrum gave new impetus to the work."}
+    - {title: "Phaidon: Anatomy of an artwork, Die (1967) by Faith Ringgold", url: "https://www.phaidon.com/blogs/stories/anatomy-of-an-artwork-die-1967-by-faith-ringgold", quote: "In 1967, Robert Newman, director of the Spectrum Gallery on 57th Street in New York invited Ringgold to show these works, and ... to use the gallery as her studio"}
+    - {title: "The Art Story: Faith Ringgold", url: "https://www.theartstory.org/artist/ringgold-faith/", quote: "an invitation from Robert Newman for a solo show at his co-op gallery Spectrum ... the then-closed gallery that Newman allowed her to use as a studio"}
 - card: ringgold-die
-  fact: "She became famous for story quilts such as Tar Beach"
+  fact: "Famous for story quilts such as Tar Beach"
   sources:
-    - {title: "Sebastian Smee, The Washington Post: American carnage (2020)", url: "https://www.washingtonpost.com/graphics/2020/entertainment/faith-ringgold-american-people-series-20-die/", quote: "She is famous for her “ story quilts .”"}
-    - {title: "Arwa Mahdawi, The Guardian: The quilts that made America quake (2019)", url: "https://www.theguardian.com/artanddesign/2019/jun/04/faith-ringgold-new-york-artist-serpentine-gallery-london", quote: "Tar Beach #2 , one of her signature “story quilts”"}
+    - {title: "Arwa Mahdawi, The Guardian: The quilts that made America quake (2019)", url: "https://www.theguardian.com/artanddesign/2019/jun/04/faith-ringgold-new-york-artist-serpentine-gallery-london", quote: "Tar Beach #2, one of her signature 'story quilts'"}
+    - {title: "The Art Story: Faith Ringgold", url: "https://www.theartstory.org/artist/ringgold-faith/", quote: "Important Art: ... Tar Beach (1988) ... her 1991 children's book Tar Beach"}
 - card: ringgold-die
   fact: "MoMA acquired Die in 2016"
   sources:
-    - {title: "Sebastian Smee, The Washington Post: American carnage (2020)", url: "https://www.washingtonpost.com/graphics/2020/entertainment/faith-ringgold-american-people-series-20-die/", quote: "New York’s Museum of Modern Art acquired Ringgold’s “American People Series #20: Die” in 2016."}
-    - {title: "Hyperallergic: The fantastic life of Faith Ringgold (2018)", url: "https://hyperallergic.com/477794/the-fantastic-life-of-faith-ringgold/", quote: "MoMA had only recently acquired (in 2016) what is considered her first major painting"}
-    - {title: "The Art Story: Faith Ringgold", url: "https://www.theartstory.org/artist/ringgold-faith/", quote: "Her work finally made it into New York’s Museum of Modern Art in 2016"}
+    - {title: "Hyperallergic: The fantastic life of Faith Ringgold (2018)", url: "https://hyperallergic.com/477794/the-fantastic-life-of-faith-ringgold/", quote: "MoMA had only recently acquired (in 2016) ... 'American People Series #20: Die' (1967)"}
+    - {title: "Andrew Russeth, ARTnews: Faith Ringgold on her early art and activism at MoMA (2016), reprinted by ACA Galleries", url: "https://acagalleries.com/news/44/", quote: "Earlier this year [2016], the Museum of Modern Art in New York acquired ... American People Series #20: Die"}
+- card: ringgold-die
+  fact: "Twelve feet long, painted on two panels, oil"
+  sources:
+    - {title: "Andrew Russeth, ARTnews: Faith Ringgold on her early art and activism at MoMA (2016), reprinted by ACA Galleries", url: "https://acagalleries.com/news/44/", quote: "a potent 12-foot-long scene ... painted Die on two 6-foot-square canvases"}
+    - {title: "Phaidon: Anatomy of an artwork, Die (1967) by Faith Ringgold", url: "https://www.phaidon.com/blogs/stories/anatomy-of-an-artwork-die-1967-by-faith-ringgold", quote: "Oil on canvas, two panels, 72 x 144 in (182.9 x 365.8 cm)"}
 - card: liberation-of-aunt-jemima
   fact: "Made in 1972"
   sources:
-    - {title: "NPR: Life is a collage for artist Betye Saar (2006)", url: "https://www.npr.org/templates/story/story.php?storyId=6688207", quote: "\"The Liberation of Aunt Jemima\" was exhibited in 1972."}
-    - {title: "Los Angeles Times, Carolina A. Miranda column: Betye Saar (2016)", url: "https://www.latimes.com/entertainment/arts/miranda/la-ca-cam-betye-saar-20160501-story.html", quote: "It began in 1972, with a breakthrough work titled “The Liberation of Aunt Jemima,”"}
-    - {title: "Associated Press via CNN: Artist Betye Saar ... has died at 99 (2026)", url: "https://www.cnn.com/2026/07/27/style/betye-saar-artist-death", quote: "“The Liberation of Aunt Jemima,” created in 1972"}
+    - {title: "Los Angeles Times, Carolina A. Miranda column: Betye Saar (2016)", url: "https://www.latimes.com/entertainment/arts/miranda/la-ca-cam-betye-saar-20160501-story.html", quote: "It began in 1972, with a breakthrough work titled 'The Liberation of Aunt Jemima'"}
+    - {title: "NPR: Life is a collage for artist Betye Saar (2006)", url: "https://www.npr.org/templates/story/story.php?storyId=6688207", quote: "'The Liberation of Aunt Jemima' was exhibited in 1972."}
 - card: liberation-of-aunt-jemima
-  fact: "A small, shoebox-size box assemblage"
+  fact: "A small box assemblage"
   sources:
     - {title: "Los Angeles Times, Carolina A. Miranda column: Betye Saar (2016)", url: "https://www.latimes.com/entertainment/arts/miranda/la-ca-cam-betye-saar-20160501-story.html", quote: "a small, shoe box-size assemblage"}
     - {title: "NPR: Life is a collage for artist Betye Saar (2006)", url: "https://www.npr.org/templates/story/story.php?storyId=6688207", quote: "It was a wooden box displaying a full-figured, smiling black mammy"}
 - card: liberation-of-aunt-jemima
-  fact: "Saar was born in Los Angeles in 1926 and worked there"
+  fact: "Saar was born in Los Angeles in 1926"
   sources:
     - {title: "NPR: Life is a collage for artist Betye Saar (2006)", url: "https://www.npr.org/templates/story/story.php?storyId=6688207", quote: "Born in Los Angeles back in 1926"}
     - {title: "Los Angeles Times, Carolina A. Miranda column: Betye Saar (2016)", url: "https://www.latimes.com/entertainment/arts/miranda/la-ca-cam-betye-saar-20160501-story.html", quote: "Saar was born Betye Brown in Los Angeles on July 30, 1926"}
 - card: liberation-of-aunt-jemima
-  fact: "She was a mother of three who came to art late"
+  fact: "She had trained in design and was raising three daughters"
   sources:
-    - {title: "NPR: Life is a collage for artist Betye Saar (2006)", url: "https://www.npr.org/templates/story/story.php?storyId=6688207", quote: "She was a mother, raising three daughters, a \"late bloomer,\" she laughs."}
-    - {title: "Los Angeles Times, Carolina A. Miranda column: Betye Saar (2016)", url: "https://www.latimes.com/entertainment/arts/miranda/la-ca-cam-betye-saar-20160501-story.html", quote: "“If you are a mom with three kids, you can’t go to a"}
+    - {title: "NPR: Life is a collage for artist Betye Saar (2006)", url: "https://www.npr.org/templates/story/story.php?storyId=6688207", quote: "She was a mother, raising three daughters"}
+    - {title: "Associated Press via CNN: Artist Betye Saar ... has died at 99 (2026)", url: "https://www.cnn.com/2026/07/27/style/betye-saar-artist-death", quote: "She was raising her three young daughters"}
 - card: liberation-of-aunt-jemima
-  fact: "In the years of Black Power she worked in assemblage of found objects"
+  fact: "In the late 1960s, after a 1967 show of Joseph Cornell's boxes at the Pasadena Art Museum, she turned to assemblage"
   sources:
-    - {title: "Los Angeles Times, Carolina A. Miranda column: Betye Saar (2016)", url: "https://www.latimes.com/entertainment/arts/miranda/la-ca-cam-betye-saar-20160501-story.html", quote: "In the 1970s, as the Black Power movement was ascendant, she observed it in her art"}
-    - {title: "Associated Press via CNN: Artist Betye Saar ... has died at 99 (2026)", url: "https://www.cnn.com/2026/07/27/style/betye-saar-artist-death", quote: "Saar pioneered assemblage, or sculptures made of found objects"}
-    - {title: "Hammer Museum, Now Dig This!: Betye Saar", url: "https://hammer.ucla.edu/now-dig-this/artists/betye-saar/", quote: "Saar began her career in design before transitioning to assemblage and installation"}
+    - {title: "Los Angeles Times, Carolina A. Miranda column: Betye Saar (2016)", url: "https://www.latimes.com/entertainment/arts/miranda/la-ca-cam-betye-saar-20160501-story.html", quote: "around 1967, when Saar visited an exhibition of the works of Joseph Cornell at the Pasadena Art Museum ... 'I immediately started collecting stuff after I saw that show'"}
+    - {title: "Hammer Museum, Now Dig This!: Betye Saar", url: "https://hammer.ucla.edu/now-dig-this/artists/betye-saar/", quote: "After seeing Joseph Cornell's retrospective at the Pasadena Art Museum in 1967, Saar too began to encase her objects in boxes"}
 - card: liberation-of-aunt-jemima
-  fact: "She collected memorabilia that demeaned Black people, including the mammy, a smiling minstrel servant figure"
+  fact: "She collected demeaning images, above all the mammy figure of American kitsch"
   sources:
-    - {title: "Associated Press via CNN: Artist Betye Saar ... has died at 99 (2026)", url: "https://www.cnn.com/2026/07/27/style/betye-saar-artist-death", quote: "It features memorabilia she collected that denigrated Black people, included a “mammy,” or 19th century minstrel character who smiled while serving white slave owners."}
-    - {title: "Los Angeles Times, Carolina A. Miranda column: Betye Saar (2016)", url: "https://www.latimes.com/entertainment/arts/miranda/la-ca-cam-betye-saar-20160501-story.html", quote: "she’s acquired debasing kitsch objects at flea markets and garage sales"}
+    - {title: "Associated Press via CNN: Artist Betye Saar ... has died at 99 (2026)", url: "https://www.cnn.com/2026/07/27/style/betye-saar-artist-death", quote: "memorabilia she collected that denigrated Black people, included a 'mammy'"}
+    - {title: "Los Angeles Times, Carolina A. Miranda column: Betye Saar (2016)", url: "https://www.latimes.com/entertainment/arts/miranda/la-ca-cam-betye-saar-20160501-story.html", quote: "she's acquired debasing kitsch objects at flea markets and garage sales ... a stereotypical mammy figurine"}
 - card: liberation-of-aunt-jemima
   fact: "She armed a smiling mammy figurine with a rifle and a hand grenade"
   sources:
@@ -231,91 +224,91 @@
   fact: "The work made her name and launched a series reclaiming derogatory images"
   sources:
     - {title: "NPR: Life is a collage for artist Betye Saar (2006)", url: "https://www.npr.org/templates/story/story.php?storyId=6688207", quote: "she created the piece that would make her reputation and launch a series of art aimed at reclaiming the derogatory images of Blacks"}
-    - {title: "Los Angeles Times, Carolina A. Miranda column: Betye Saar (2016)", url: "https://www.latimes.com/entertainment/arts/miranda/la-ca-cam-betye-saar-20160501-story.html", quote: "For more than 40 years, she’s acquired debasing kitsch objects ... and then transformed them."}
     - {title: "Hammer Museum, Now Dig This!: Betye Saar", url: "https://hammer.ucla.edu/now-dig-this/artists/betye-saar/", quote: "whose lasting influence was secured by her iconic reclamation of the Aunt Jemima figure"}
 - card: tutu-enwonwu
-  fact: "Enwonwu (1917–1994), regarded as the founding father of Nigerian modernism"
+  fact: "Enwonwu (1917–1994), founding father of Nigerian modernism"
   sources:
-    - {title: "Mark Brown, The Guardian: Tutu's return (2018)", url: "https://www.theguardian.com/artanddesign/2018/feb/06/tutus-return-missing-nigerian-masterpiece-found-in-london-flat-ben-enwonwu", quote: "The artist, regarded as the founding father of Nigerian modernism"}
     - {title: "Tate Modern: Nigerian Modernism (exhibition)", url: "https://www.tate.org.uk/whats-on/tate-modern/nigerian-modernism", quote: "the celebrated Nigerian modernist painter Ben Enwonwu (1917–1994)"}
-    - {title: "Ben Enwonwu Foundation: Ben Enwonwu", url: "https://benenwonwufoundation.org/ben-enwonwu/", quote: "born a twin on July 14, 1917 ... He died on February 5, 1994"}
+    - {title: "Bonhams press release: Africa's Mona Lisa smashes world record at Bonhams Africa Now sale in London (28 February 2018)", url: "https://www.bonhams.com/press_release/25681/", quote: "Benedict Chukwukadibia Enwonwu M.B.E (Nigerian, 1917-1994)"}
 - card: tutu-enwonwu
-  fact: "Painted in 1974 (Quartz: 1973; see dispute)"
+  fact: "Painted in 1974"
   sources:
-    - {title: "Mark Brown, The Guardian: Tutu's return (2018)", url: "https://www.theguardian.com/artanddesign/2018/feb/06/tutus-return-missing-nigerian-masterpiece-found-in-london-flat-ben-enwonwu", quote: "Ben Enwonwu ’s 1974 painting of the Ife princess Adetutu Ademiluyi"}
-    - {title: "CNN Style: Ben Enwonwu's Tutu at auction (2018)", url: "https://edition.cnn.com/style/article/ben-enwonwu-tutu-painting-auction/index.html", quote: "“Tutu” disappeared shortly after being painted in 1974"}
+    - {title: "Mark Brown, The Guardian: Tutu's return (2018)", url: "https://www.theguardian.com/artanddesign/2018/feb/06/tutus-return-missing-nigerian-masterpiece-found-in-london-flat-ben-enwonwu", quote: "Ben Enwonwu's 1974 painting of the Ife princess Adetutu Ademiluyi"}
+    - {title: "Bonhams press release: Africa's Mona Lisa smashes world record at Bonhams Africa Now sale in London (28 February 2018)", url: "https://www.bonhams.com/press_release/25681/", quote: "Enwonwu painted three versions of Tutu during 1973-74"}
 - card: tutu-enwonwu
   fact: "The sitter was the Ife princess Adetutu Ademiluyi, known as Tutu"
   sources:
     - {title: "Mark Brown, The Guardian: Tutu's return (2018)", url: "https://www.theguardian.com/artanddesign/2018/feb/06/tutus-return-missing-nigerian-masterpiece-found-in-london-flat-ben-enwonwu", quote: "painting of the Ife princess Adetutu Ademiluyi, known as Tutu"}
-    - {title: "CNN Style: Ben Enwonwu's Tutu at auction (2018)", url: "https://edition.cnn.com/style/article/ben-enwonwu-tutu-painting-auction/index.html", quote: "Depicting the Ife princess Adetutu Ademiluyi (abbreviated as “Tutu”)"}
-    - {title: "Lynsey Chutel, Quartz Africa (2018)", url: "https://qz.com/1218563/the-long-lost-painting-known-as-africas-mona-lisa-has-sold-for-a-record-price/", quote: "The portrait of the Ife royal Princess Adetutu Ademiluyi"}
+    - {title: "CNN Style: Ben Enwonwu's Tutu at auction (2018)", url: "https://edition.cnn.com/style/article/ben-enwonwu-tutu-painting-auction/index.html", quote: "Depicting the Ife princess Adetutu Ademiluyi (abbreviated as 'Tutu')"}
 - card: tutu-enwonwu
-  fact: "Painted after the civil war (Biafran war); three versions; symbol of national reconciliation"
+  fact: "After the Biafran war; three versions; symbol of national reconciliation"
   sources:
-    - {title: "Lynsey Chutel, Quartz Africa (2018)", url: "https://qz.com/1218563/the-long-lost-painting-known-as-africas-mona-lisa-has-sold-for-a-record-price/", quote: "The painting is one of three depictions of the princess painted in 1973, which became a symbol of Nigerian reconciliation after the war for Biafran independence."}
     - {title: "Mark Brown, The Guardian: Tutu's return (2018)", url: "https://www.theguardian.com/artanddesign/2018/feb/06/tutus-return-missing-nigerian-masterpiece-found-in-london-flat-ben-enwonwu", quote: "painted three versions of Tutu and the image became a symbol of national reconciliation"}
-    - {title: "CNN Style: Ben Enwonwu's Tutu at auction (2018)", url: "https://edition.cnn.com/style/article/ben-enwonwu-tutu-painting-auction/index.html", quote: "One of a triptych of artworks created by Enwonwu during the aftermath of Nigeria’s bloody civil war"}
+    - {title: "Bonhams press release: Africa's Mona Lisa smashes world record at Bonhams Africa Now sale in London (28 February 2018)", url: "https://www.bonhams.com/press_release/25681/", quote: "the image became a symbol of national reconciliation for a country struggling for unity in the wake of the Nigerian-Biafran conflict"}
 - card: tutu-enwonwu
   fact: "A national icon, nicknamed the African Mona Lisa"
   sources:
-    - {title: "CNN Style: Ben Enwonwu's Tutu at auction (2018)", url: "https://edition.cnn.com/style/article/ben-enwonwu-tutu-painting-auction/index.html", quote: "Often dubbed the “African Mona Lisa,”"}
-    - {title: "Lynsey Chutel, Quartz Africa (2018)", url: "https://qz.com/1218563/the-long-lost-painting-known-as-africas-mona-lisa-has-sold-for-a-record-price/", quote: "The long lost painting known as Africa’s Mona Lisa has sold for a record price"}
-    - {title: "Mark Brown, The Guardian: Tutu's return (2018)", url: "https://www.theguardian.com/artanddesign/2018/feb/06/tutus-return-missing-nigerian-masterpiece-found-in-london-flat-ben-enwonwu", quote: "is a national icon in Nigeria"}
+    - {title: "CNN Style: Ben Enwonwu's Tutu at auction (2018)", url: "https://edition.cnn.com/style/article/ben-enwonwu-tutu-painting-auction/index.html", quote: "Often dubbed the 'African Mona Lisa'"}
+    - {title: "Bonhams press release: Africa's Mona Lisa smashes world record at Bonhams Africa Now sale in London (28 February 2018)", url: "https://www.bonhams.com/press_release/25681/", quote: "described by ... Ben Okri as Africa's Mona Lisa ... 'The portrait of Tutu is a national icon in Nigeria'"}
 - card: tutu-enwonwu
-  fact: "All three originals were lost and their whereabouts were a mystery for decades"
+  fact: "All three were lost for decades"
   sources:
     - {title: "Mark Brown, The Guardian: Tutu's return (2018)", url: "https://www.theguardian.com/artanddesign/2018/feb/06/tutus-return-missing-nigerian-masterpiece-found-in-london-flat-ben-enwonwu", quote: "But all three were lost and became the subject of much speculation."}
-    - {title: "CNN Style: Ben Enwonwu's Tutu at auction (2018)", url: "https://edition.cnn.com/style/article/ben-enwonwu-tutu-painting-auction/index.html", quote: "Its whereabouts remained the subject of intense speculation for over 40 years"}
+    - {title: "Bonhams press release: Africa's Mona Lisa smashes world record at Bonhams Africa Now sale in London (28 February 2018)", url: "https://www.bonhams.com/press_release/25681/", quote: "All three paintings had been considered lost until Giles Peppiatt discovered the current picture"}
 - card: tutu-enwonwu
-  fact: "Giles Peppiatt of Bonhams was regularly sent Tutus that turned out to be prints"
+  fact: "Peppiatt was regularly sent Tutus that turned out to be prints"
   sources:
     - {title: "Mark Brown, The Guardian: Tutu's return (2018)", url: "https://www.theguardian.com/artanddesign/2018/feb/06/tutus-return-missing-nigerian-masterpiece-found-in-london-flat-ben-enwonwu", quote: "He estimated he gets sent a Tutu every eight weeks and it invariably turns out to be a print."}
     - {title: "CNN Style: Ben Enwonwu's Tutu at auction (2018)", url: "https://edition.cnn.com/style/article/ben-enwonwu-tutu-painting-auction/index.html", quote: "People brought him a number of prints but they all transpired to be fakes."}
 - card: tutu-enwonwu
-  fact: "Late in 2017 a north London family who had inherited it asked him to look; it was the real Tutu"
+  fact: "Late in 2017 a north London family asked him to look at a painting that had hung in their flat for 30 years"
   sources:
-    - {title: "Mark Brown, The Guardian: Tutu's return (2018)", url: "https://www.theguardian.com/artanddesign/2018/feb/06/tutus-return-missing-nigerian-masterpiece-found-in-london-flat-ben-enwonwu", quote: "But late last year, a family in north London approached him asking him to come and see a painting they said was by Enwonwu."}
-    - {title: "CNN Style: Ben Enwonwu's Tutu at auction (2018)", url: "https://edition.cnn.com/style/article/ben-enwonwu-tutu-painting-auction/index.html", quote: "Then one day in December 2017, he finally found the real thing. ... a “modest” apartment in north London ... The owners, who had inherited it"}
+    - {title: "Mark Brown, The Guardian: Tutu's return (2018)", url: "https://www.theguardian.com/artanddesign/2018/feb/06/tutus-return-missing-nigerian-masterpiece-found-in-london-flat-ben-enwonwu", quote: "late last year, a family in north London approached him asking him to come and see a painting"}
+    - {title: "Bonhams press release: Africa's Mona Lisa smashes world record at Bonhams Africa Now sale in London (28 February 2018)", url: "https://www.bonhams.com/press_release/25681/", quote: "discovered the current picture in a London apartment, where it had hung for the past 30 years"}
 - card: tutu-enwonwu
   fact: "Sold at Bonhams London on 28 February 2018 for £1,205,000"
   sources:
-    - {title: "Lynsey Chutel, Quartz Africa (2018)", url: "https://qz.com/1218563/the-long-lost-painting-known-as-africas-mona-lisa-has-sold-for-a-record-price/", quote: "has sold for a record £1,205,000 ... during Bonhams’ Africa Now auction on Feb. 28"}
+    - {title: "Bonhams press release: Africa's Mona Lisa smashes world record at Bonhams Africa Now sale in London (28 February 2018)", url: "https://www.bonhams.com/press_release/25681/", quote: "achieving £1,205,000 at Bonhams Africa Now sale in London today (28 February)"}
     - {title: "CNN Style: Ben Enwonwu's Tutu at auction (2018)", url: "https://edition.cnn.com/style/article/ben-enwonwu-tutu-painting-auction/index.html", quote: "has sold for over $1.6 million (£1,205,000)"}
 - card: tutu-enwonwu
   fact: "More than four times the top estimate"
   sources:
-    - {title: "Lynsey Chutel, Quartz Africa (2018)", url: "https://qz.com/1218563/the-long-lost-painting-known-as-africas-mona-lisa-has-sold-for-a-record-price/", quote: "more than four times the highest estimate"}
+    - {title: "Bonhams press release: Africa's Mona Lisa smashes world record at Bonhams Africa Now sale in London (28 February 2018)", url: "https://www.bonhams.com/press_release/25681/", quote: "It had an estimate of £200,000-300,000."}
     - {title: "Mark Brown, The Guardian: Tutu's return (2018)", url: "https://www.theguardian.com/artanddesign/2018/feb/06/tutus-return-missing-nigerian-masterpiece-found-in-london-flat-ben-enwonwu", quote: "It is expected to sell for between £200,000 and £300,000."}
 - card: tutu-enwonwu
   fact: "Bidders in Lagos followed live"
   sources:
-    - {title: "Mark Brown, The Guardian: Tutu's return (2018)", url: "https://www.theguardian.com/artanddesign/2018/feb/06/tutus-return-missing-nigerian-masterpiece-found-in-london-flat-ben-enwonwu", quote: "the sale will also be broadcast live to bidders in Lagos"}
-    - {title: "Lynsey Chutel, Quartz Africa (2018)", url: "https://qz.com/1218563/the-long-lost-painting-known-as-africas-mona-lisa-has-sold-for-a-record-price/", quote: "For the first time, the auction was opened to bidders in Lagos, who took part in real time."}
+    - {title: "Bonhams press release: Africa's Mona Lisa smashes world record at Bonhams Africa Now sale in London (28 February 2018)", url: "https://www.bonhams.com/press_release/25681/", quote: "the sale was broadcast live to a Bonhams auction event in Lagos, where bidders were able to participate in real time"}
+    - {title: "Okechukwu Uwaezuoke, ThisDay (Lagos): Enwonwu's Tutu sets new record, sells for £1.205m (2018)", url: "https://www.thisdaylive.com/2018/03/01/enwonwus-tutu-sets-new-record-sells-for-1-205m/", quote: "broadcast live to a Bonhams auction event at The Wheatbaker Hotel in Lagos ... started broadcasting live to the Lagos participants at 6 pm"}
 - card: tutu-enwonwu
   fact: "A record for Enwonwu"
   sources:
-    - {title: "Lynsey Chutel, Quartz Africa (2018)", url: "https://qz.com/1218563/the-long-lost-painting-known-as-africas-mona-lisa-has-sold-for-a-record-price/", quote: "Instead, they set a record for Enwonwu’s work."}
-    - {title: "Mark Brown, The Guardian: Tutu's return (2018)", url: "https://www.theguardian.com/artanddesign/2018/feb/06/tutus-return-missing-nigerian-masterpiece-found-in-london-flat-ben-enwonwu", quote: "If it goes over the upper limit it will set a new record for a modern Nigerian artist."}
+    - {title: "Bonhams press release: Africa's Mona Lisa smashes world record at Bonhams Africa Now sale in London (28 February 2018)", url: "https://www.bonhams.com/press_release/25681/", quote: "set a new world record for the artist's work at auction"}
+    - {title: "Okechukwu Uwaezuoke, ThisDay (Lagos): Enwonwu's Tutu sets new record, sells for £1.205m (2018)", url: "https://www.thisdaylive.com/2018/03/01/enwonwus-tutu-sets-new-record-sells-for-1-205m/", quote: "set a new record for the artist's work at an auction"}
 - card: tutu-enwonwu
-  fact: "The other two versions are still missing"
+  fact: "The other two versions were still missing"
   sources:
     - {title: "CNN Style: Ben Enwonwu's Tutu at auction (2018)", url: "https://edition.cnn.com/style/article/ben-enwonwu-tutu-painting-auction/index.html", quote: "The artist created two other pictures of Ademiluyi, both of which remain missing."}
-    - {title: "Mark Brown, The Guardian: Tutu's return (2018)", url: "https://www.theguardian.com/artanddesign/2018/feb/06/tutus-return-missing-nigerian-masterpiece-found-in-london-flat-ben-enwonwu", quote: "It is the only authentic Tutu"}
+    - {title: "Bonhams press release: Africa's Mona Lisa smashes world record at Bonhams Africa Now sale in London (28 February 2018)", url: "https://www.bonhams.com/press_release/25681/", quote: "All three paintings had been considered lost until Giles Peppiatt discovered the current picture"}
+- card: tutu-enwonwu
+  fact: "Painting had hung in the north London flat for thirty years"
+  sources:
+    - {title: "Bonhams press release: Africa's Mona Lisa smashes world record at Bonhams Africa Now sale in London (28 February 2018)", url: "https://www.bonhams.com/press_release/25681/", quote: "in a London apartment, where it had hung for the past 30 years"}
+    - {title: "CNN Style: Ben Enwonwu's Tutu at auction (2018)", url: "https://edition.cnn.com/style/article/ben-enwonwu-tutu-painting-auction/index.html", quote: "the painting had been hanging there for the last 30 years"}
 - card: wdia
   fact: "WDIA was one of the new Memphis stations after WWII"
   sources:
     - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: African-Americans in Radio", url: "https://www.museum.tv/radio-encyclopedia/african-americans-in-radio", quote: "It was the second new station (after KWAM in 1946), to go on the air in Memphis after the war"}
-    - {title: "Memphis Music Hall of Fame: Nat D. Williams", url: "http://memphismusichalloffame.com/inductee/natdwilliams/", quote: "there seemed no need for a sixth radio station playing formats similar to the city’s other five stations"}
+    - {title: "Memphis Music Hall of Fame: Nat D. Williams", url: "http://memphismusichalloffame.com/inductee/natdwilliams/", quote: "there seemed no need for a sixth radio station playing formats similar to the city's other five stations"}
 - card: wdia
-  fact: "Black programmes had been on radio since the All-Negro Hour of 1929"
+  fact: "Black programmes on radio since the All-Negro Hour of 1929"
   sources:
-    - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: African-Americans in Radio", url: "https://www.museum.tv/radio-encyclopedia/african-americans-in-radio", quote: "was receptive to Cooper's desire to produce and air The All Negro Hour in 1929"}
-    - {title: "Willie Brenc, BlackPast.org: Jack Leroy Cooper (2013)", url: "https://blackpast.org/aah/cooper-jack-leroy-1888-1970", quote: "In 1929, Joseph Silverstein, owner of WSBC ... agreed to air Cooper’s The All-Negro Hour ."}
+    - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: African-Americans in Radio", url: "https://www.museum.tv/radio-encyclopedia/african-americans-in-radio", quote: "receptive to Cooper's desire to produce and air The All Negro Hour in 1929"}
+    - {title: "Willie Brenc, BlackPast.org: Jack Leroy Cooper (2013)", url: "https://blackpast.org/aah/cooper-jack-leroy-1888-1970", quote: "In 1929, Joseph Silverstein, owner of WSBC ... agreed to air Cooper's The All-Negro Hour"}
 - card: wdia
   fact: "No station had given its whole day to Black listeners before WDIA"
   sources:
-    - {title: "Anne-Leslie Owens, Tennessee Encyclopedia: WDIA", url: "https://tennesseeencyclopedia.net/entries/wdia/", quote: "In 1948-49 white-owned WDIA in Memphis became the nation’s first all-black radio station."}
+    - {title: "Anne-Leslie Owens, Tennessee Encyclopedia: WDIA", url: "https://tennesseeencyclopedia.net/entries/wdia/", quote: "the nation's first all-black radio station"}
     - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: African-Americans in Radio", url: "https://www.museum.tv/radio-encyclopedia/african-americans-in-radio", quote: "until WDIA's entire schedule was completely filled with various black blocks ... Fulltime black-oriented radio was born."}
 - card: wdia
   fact: "In 1948 WDIA was failing"
@@ -323,109 +316,105 @@
     - {title: "Memphis Music Hall of Fame: Nat D. Williams", url: "http://memphismusichalloffame.com/inductee/natdwilliams/", quote: "In 1948, when the new WDIA radio station was about to go under"}
     - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: African-Americans in Radio", url: "https://www.museum.tv/radio-encyclopedia/african-americans-in-radio", quote: "found survival in the new competitive market very difficult. John Pepper, one of the WDIA owners, was ready to quit."}
 - card: wdia
-  fact: "White owners Bert Ferguson and John R. Pepper turned to Black listeners and hired Nat D. Williams"
+  fact: "Ferguson and Pepper turned to Black listeners; Ferguson hired Nat D. Williams"
   sources:
-    - {title: "Anne-Leslie Owens, Tennessee Encyclopedia: WDIA", url: "https://tennesseeencyclopedia.net/entries/wdia/", quote: "Its owners, Bert Ferguson and John R. Pepper, hired Nat D. Williams"}
-    - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: African-Americans in Radio", url: "https://www.museum.tv/radio-encyclopedia/african-americans-in-radio", quote: "Shortly afterwards Ferguson hired Nat D. Williams to create a block of black-oriented programming in the afternoon."}
+    - {title: "Anne-Leslie Owens, Tennessee Encyclopedia: WDIA", url: "https://tennesseeencyclopedia.net/entries/wdia/", quote: "Its owners, Bert Ferguson and John R. Pepper, hired ... the first publicly identified black disc jockey"}
+    - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: African-Americans in Radio", url: "https://www.museum.tv/radio-encyclopedia/african-americans-in-radio", quote: "Shortly afterwards Ferguson hired Nat D. Williams"}
 - card: wdia
   fact: "Williams was a history teacher at Booker T. Washington High School"
   sources:
-    - {title: "Memphis Music Hall of Fame: Nat D. Williams", url: "http://memphismusichalloffame.com/inductee/natdwilliams/", quote: "in 1930 took a teaching job at Booker T. Washington High School in South Memphis. There, he brought history and social studies to life"}
+    - {title: "Memphis Music Hall of Fame: Nat D. Williams", url: "http://memphismusichalloffame.com/inductee/natdwilliams/", quote: "took a teaching job at Booker T. Washington High School in South Memphis. There, he brought history and social studies to life"}
     - {title: "Shelby County Register plaque text: Nat D. Williams (via Read the Plaque)", url: "http://readtheplaque.com/plaque/nat-d-williams", quote: "A history teacher in the Memphis City schools"}
 - card: wdia
-  fact: "He ran amateur nights at the Palace Theater on Beale Street from 1935"
+  fact: "Amateur nights at the Palace Theater on Beale Street from 1935"
   sources:
-    - {title: "Shelby County Register plaque text: Nat D. Williams (via Read the Plaque)", url: "http://readtheplaque.com/plaque/nat-d-williams", quote: "best known for Amateur Night on Beale Street, which he began in 1935 at the Old Palace Theater"}
-    - {title: "Memphis Music Hall of Fame: Nat D. Williams", url: "http://memphismusichalloffame.com/inductee/natdwilliams/", quote: "He was host of the Palace Theater’s famed Beale Street Amateur Night"}
+    - {title: "Shelby County Register plaque text: Nat D. Williams (via Read the Plaque)", url: "http://readtheplaque.com/plaque/nat-d-williams", quote: "Amateur Night on Beale Street, which he began in 1935 at the Old Palace Theater"}
+    - {title: "Memphis Music Hall of Fame: Nat D. Williams", url: "http://memphismusichalloffame.com/inductee/natdwilliams/", quote: "He was host of the Palace Theater's famed Beale Street Amateur Night"}
 - card: wdia
   fact: "In 1948 Williams became the first Black radio announcer in Memphis"
   sources:
-    - {title: "Shelby County Register plaque text: Nat D. Williams (via Read the Plaque)", url: "http://readtheplaque.com/plaque/nat-d-williams", quote: "In 1948, Nat D. Williams became the first black radio announcer in Memphis when he began broadcasting for WDIA."}
+    - {title: "Shelby County Register plaque text: Nat D. Williams (via Read the Plaque)", url: "http://readtheplaque.com/plaque/nat-d-williams", quote: "In 1948, Nat D. Williams became the first black radio announcer in Memphis"}
     - {title: "Memphis Music Hall of Fame: Nat D. Williams", url: "http://memphismusichalloffame.com/inductee/natdwilliams/", quote: "the first African-American disc jockey in Memphis"}
 - card: wdia
-  fact: "His afternoon show brought money; the station added Black programmes (R&B, gospel) until the whole schedule was filled"
+  fact: "His afternoon show brought money; Black blocks of R&B and gospel filled the schedule"
   sources:
-    - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: African-Americans in Radio", url: "https://www.museum.tv/radio-encyclopedia/african-americans-in-radio", quote: "Willi:1.ms' after­ noon program soon brought financial success to WDIA ... until WDIA's entire schedule was completely filled with various black blocks of rhythm-and-blues and gospel music programming"}
+    - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: African-Americans in Radio", url: "https://www.museum.tv/radio-encyclopedia/african-americans-in-radio", quote: "Williams' afternoon program soon brought financial success to WDIA ... until WDIA's entire schedule was completely filled with various black blocks of rhythm-and-blues and gospel"}
     - {title: "Anne-Leslie Owens, Tennessee Encyclopedia: WDIA", url: "https://tennesseeencyclopedia.net/entries/wdia/", quote: "The programming change proved successful"}
 - card: wdia
-  fact: "By summer 1949, first US station with an entire on-air staff of Black DJs"
+  fact: "By summer 1949 the first US station with an all-Black on-air staff"
   sources:
     - {title: "Memphis Music Hall of Fame: Nat D. Williams", url: "http://memphismusichalloffame.com/inductee/natdwilliams/", quote: "by the summer of 1949 it became the first station in the United States with an entire cast of black disc jockeys"}
-    - {title: "Anne-Leslie Owens, Tennessee Encyclopedia: WDIA", url: "https://tennesseeencyclopedia.net/entries/wdia/", quote: "In 1948-49 white-owned WDIA in Memphis became the nation’s first all-black radio station."}
+    - {title: "Anne-Leslie Owens, Tennessee Encyclopedia: WDIA", url: "https://tennesseeencyclopedia.net/entries/wdia/", quote: "In 1948-49 white-owned WDIA ... the nation's first all-black radio station"}
 - card: wdia
-  fact: "B.B. King was a WDIA disc jockey from 1949"
+  fact: "B.B. King was a WDIA disc jockey by 1949"
   sources:
     - {title: "Mississippi Blues Trail: B.B. King Birthplace", url: "https://msbluestrail.org/blues-trail-markers/b-b-king-birthplace", quote: "By 1949 he had found work as a deejay on radio station WDIA"}
     - {title: "Anne-Leslie Owens, Tennessee Encyclopedia: WDIA", url: "https://tennesseeencyclopedia.net/entries/wdia/", quote: "Recording greats B. B. King and Rufus Thomas worked as disc jockeys"}
 - card: wdia
-  fact: "WDIA remained white-owned"
+  fact: "WDIA stayed white-owned"
   sources:
     - {title: "Anne-Leslie Owens, Tennessee Encyclopedia: WDIA", url: "https://tennesseeencyclopedia.net/entries/wdia/", quote: "white-owned WDIA in Memphis"}
-    - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/", quote: "Although WDIA, established in Memphis, Tennessee in 1948, played music oriented for a black audience, WERD was the only black-owned station to do so at that time."}
+    - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/", quote: "Although WDIA ... played music oriented for a black audience, WERD was the only black-owned station to do so at that time."}
 - card: destination-freedom
-  fact: "Weekly drama on WMAQ Chicago, Sunday mornings, 27 June 1948 to August 1950"
+  fact: "WMAQ Chicago, Sunday mornings, 27 June 1948 to August 1950"
   sources:
-    - {title: "Colin McBride, BlackPast.org: Richard Durham (2014)", url: "https://www.blackpast.org/african-american-history/durham-richard-1917-1984/", quote: "which aired on WMAQ in Chicago, Illinois from June 27, 1948 until its cancellation in August of 1950 ... audiences tuned in every Sunday morning"}
+    - {title: "Colin McBride, BlackPast.org: Richard Durham (2014)", url: "https://www.blackpast.org/african-american-history/durham-richard-1917-1984/", quote: "aired on WMAQ in Chicago, Illinois from June 27, 1948 until its cancellation in August of 1950 ... every Sunday morning"}
     - {title: "Ryan Ellett, Library of Congress, National Recording Registry essay: Destination Freedom", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DestinationFreedom.pdf", quote: "Airing between June 1948 and August 1950 ... Despite airing on Sunday mornings"}
-    - {title: "Ashleigh Lawrence-Sanders, Black Perspectives (AAIHS) (2018)", url: "https://www.aaihs.org/history-memory-and-the-power-of-black-radio/", quote: "On June 27, 1948, the first episode of Destination Freedom aired on WMAQ."}
 - card: destination-freedom
-  fact: "Black performers were heard mostly in comedy that recycled minstrel stereotypes"
+  fact: "Black performers heard mostly in comedy recycling minstrel stereotypes"
   sources:
-    - {title: "Ashleigh Lawrence-Sanders, Black Perspectives (AAIHS) (2018)", url: "https://www.aaihs.org/history-memory-and-the-power-of-black-radio/", quote: "though they often appeared in only comedic shows that perpetrated age-old Black stereotypes and minstrelsy"}
-    - {title: "Ryan Ellett, Library of Congress, National Recording Registry essay: Destination Freedom", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DestinationFreedom.pdf", quote: "a number of African-American performers who, as a whole, struggled to find roles outside of comedy programming"}
+    - {title: "Ashleigh Lawrence-Sanders, Black Perspectives (AAIHS) (2018)", url: "https://www.aaihs.org/history-memory-and-the-power-of-black-radio/", quote: "they often appeared in only comedic shows that perpetrated age-old Black stereotypes and minstrelsy"}
+    - {title: "Ryan Ellett, Library of Congress, National Recording Registry essay: Destination Freedom", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DestinationFreedom.pdf", quote: "African-American performers who, as a whole, struggled to find roles outside of comedy programming"}
 - card: destination-freedom
-  fact: "Durham was born in rural Mississippi in 1917 and moved to Chicago with his family in 1923 in the Great Migration"
+  fact: "Durham born in rural Mississippi 1917, to Chicago 1923, Great Migration"
   sources:
-    - {title: "Colin McBride, BlackPast.org: Richard Durham (2014)", url: "https://www.blackpast.org/african-american-history/durham-richard-1917-1984/", quote: "Born September 6, 1917 in Raymond, Mississippi, Richard Durham and his family moved north as part of the Great Migration . In 1923 the Durham family settled in Chicago."}
-    - {title: "Sonja D. Williams, Flow: Word warrior, Richard Durham (2015)", url: "https://www.flowjournal.org/2015/05/word-warrior-richard-durham/", quote: "Born in rural Mississippi in September 1917, Richard Durham’s family migrated – like thousands of other Southern blacks – to Chicago, Illinois in 1923."}
-    - {title: "National Radio Hall of Fame: Richard Durham", url: "https://www.radiohalloffame.com/richard-durham", quote: "born in rural Mississippi on September 6, 1917 and moved to Chicago with his family at the age of six"}
+    - {title: "Colin McBride, BlackPast.org: Richard Durham (2014)", url: "https://www.blackpast.org/african-american-history/durham-richard-1917-1984/", quote: "Born September 6, 1917 in Raymond, Mississippi ... moved north as part of the Great Migration. In 1923 the Durham family settled in Chicago."}
+    - {title: "Sonja D. Williams, Flow: Word warrior, Richard Durham (2015)", url: "https://www.flowjournal.org/2015/05/word-warrior-richard-durham/", quote: "Born in rural Mississippi in September 1917, Richard Durham's family migrated ... to Chicago, Illinois in 1923."}
 - card: destination-freedom
-  fact: "He learned radio writing in the WPA Writers Project"
+  fact: "He learned radio writing in the WPA Writers' Project"
   sources:
-    - {title: "Colin McBride, BlackPast.org: Richard Durham (2014)", url: "https://www.blackpast.org/african-american-history/durham-richard-1917-1984/", quote: "Durham learned how to become a radio scriptwriter while working with the Writers Project of the Works Progress Administration (WPA)."}
-    - {title: "Ashleigh Lawrence-Sanders, Black Perspectives (AAIHS) (2018)", url: "https://www.aaihs.org/history-memory-and-the-power-of-black-radio/", quote: "who began his career as part of the Writer’s Project of the WPA"}
-    - {title: "National Radio Hall of Fame: Richard Durham", url: "https://www.radiohalloffame.com/richard-durham", quote: "During the Depression, Durham found work in the radio division of the WPA"}
+    - {title: "Colin McBride, BlackPast.org: Richard Durham (2014)", url: "https://www.blackpast.org/african-american-history/durham-richard-1917-1984/", quote: "Durham learned how to become a radio scriptwriter while working with the Writers Project of the WPA"}
+    - {title: "National Radio Hall of Fame: Richard Durham", url: "https://www.radiohalloffame.com/richard-durham", quote: "Durham found work in the radio division of the WPA-sponsored Illinois Writers Project"}
 - card: destination-freedom
-  fact: "He was a reporter for the Chicago Defender"
+  fact: "Reporter for the Chicago Defender"
   sources:
-    - {title: "Colin McBride, BlackPast.org: Richard Durham (2014)", url: "https://www.blackpast.org/african-american-history/durham-richard-1917-1984/", quote: "he later became an award-winning investigative reporter for the Chicago Defender"}
-    - {title: "National Radio Hall of Fame: Richard Durham", url: "https://www.radiohalloffame.com/richard-durham", quote: "worked as an editor and journalist for the black-owned Chicago Defender newspaper"}
+    - {title: "Colin McBride, BlackPast.org: Richard Durham (2014)", url: "https://www.blackpast.org/african-american-history/durham-richard-1917-1984/", quote: "award-winning investigative reporter for the Chicago Defender"}
+    - {title: "National Radio Hall of Fame: Richard Durham", url: "https://www.radiohalloffame.com/richard-durham", quote: "worked as an editor and journalist for the black-owned Chicago Defender"}
 - card: destination-freedom
-  fact: "He created Here Comes Tomorrow, the first radio soap opera about a Black family"
+  fact: "Here Comes Tomorrow, first radio soap about a Black family"
   sources:
-    - {title: "Colin McBride, BlackPast.org: Richard Durham (2014)", url: "https://www.blackpast.org/african-american-history/durham-richard-1917-1984/", quote: "Here Comes Tomorrow , considered to be the first all-black radio soap opera"}
     - {title: "National Radio Hall of Fame: Richard Durham", url: "https://www.radiohalloffame.com/richard-durham", quote: "created the first soap opera focused on an African American family, Here Comes Tomorrow"}
-    - {title: "Ryan Ellett, Library of Congress, National Recording Registry essay: Destination Freedom", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DestinationFreedom.pdf", quote: "he debuted the earliest known black soap opera, the purely dramatic show “Here Comes Tomorrow,”"}
+    - {title: "Ryan Ellett, Library of Congress, National Recording Registry essay: Destination Freedom", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DestinationFreedom.pdf", quote: "he debuted the earliest known black soap opera ... 'Here Comes Tomorrow,' that followed the post-War problems of the Redmond family"}
 - card: destination-freedom
-  fact: "Episodes on Crispus Attucks"
+  fact: "Episode on Crispus Attucks"
   sources:
-    - {title: "Colin McBride, BlackPast.org: Richard Durham (2014)", url: "https://www.blackpast.org/african-american-history/durham-richard-1917-1984/", quote: "The half hour scripted program featured profiles on Crispus Attucks"}
-    - {title: "Ashleigh Lawrence-Sanders, Black Perspectives (AAIHS) (2018)", url: "https://www.aaihs.org/history-memory-and-the-power-of-black-radio/", quote: "after his Crispus Attucks script was sent back with substantial edits"}
+    - {title: "Colin McBride, BlackPast.org: Richard Durham (2014)", url: "https://www.blackpast.org/african-american-history/durham-richard-1917-1984/", quote: "featured profiles on Crispus Attucks"}
+    - {title: "Ashleigh Lawrence-Sanders, Black Perspectives (AAIHS) (2018)", url: "https://www.aaihs.org/history-memory-and-the-power-of-black-radio/", quote: "'The Knock Kneed Man,' told the story of Crispus Attucks"}
 - card: destination-freedom
-  fact: "Episodes on Frederick Douglass"
+  fact: "Episode on Frederick Douglass"
   sources:
-    - {title: "Colin McBride, BlackPast.org: Richard Durham (2014)", url: "https://www.blackpast.org/african-american-history/durham-richard-1917-1984/", quote: "Crispus Attucks , Denmark Vesey , and Frederick Douglass"}
+    - {title: "Colin McBride, BlackPast.org: Richard Durham (2014)", url: "https://www.blackpast.org/african-american-history/durham-richard-1917-1984/", quote: "Crispus Attucks, Denmark Vesey, and Frederick Douglass"}
     - {title: "Ryan Ellett, Library of Congress, National Recording Registry essay: Destination Freedom", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DestinationFreedom.pdf", quote: "historical giants such as Harriet Tubman and Frederick Douglass"}
 - card: destination-freedom
-  fact: "Episodes on Harriet Tubman"
+  fact: "Episode on Harriet Tubman"
   sources:
-    - {title: "Ryan Ellett, Library of Congress, National Recording Registry essay: Destination Freedom", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DestinationFreedom.pdf", quote: "historical giants such as Harriet Tubman and Frederick Douglass"}
+    - {title: "Ryan Ellett, Library of Congress, National Recording Registry essay: Destination Freedom", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DestinationFreedom.pdf", quote: "historical giants such as Harriet Tubman"}
     - {title: "National Radio Hall of Fame: Richard Durham", url: "https://www.radiohalloffame.com/richard-durham", quote: "including Harriet Tubman, Jackie Robinson, and Ida B. Wells"}
 - card: destination-freedom
-  fact: "Episodes on Black stars of his own day"
+  fact: "Black stars of his own day"
   sources:
-    - {title: "Ryan Ellett, Library of Congress, National Recording Registry essay: Destination Freedom", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DestinationFreedom.pdf", quote: "from biographies of black stars including Duke Ellington and Louis Armstrong"}
-    - {title: "National Radio Hall of Fame: Richard Durham", url: "https://www.radiohalloffame.com/richard-durham", quote: "including Harriet Tubman, Jackie Robinson, and Ida B. Wells"}
+    - {title: "Ryan Ellett, Library of Congress, National Recording Registry essay: Destination Freedom", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DestinationFreedom.pdf", quote: "biographies of black stars including Duke Ellington and Louis Armstrong"}
+    - {title: "Sonja D. Williams, Flow: Word warrior, Richard Durham (2015)", url: "https://www.flowjournal.org/2015/05/word-warrior-richard-durham/", quote: "notable contemporary and historical black leaders, including entertainer Lena Horne, diplomat Ralph Bunche"}
 - card: destination-freedom
-  fact: "He presented Black history as a fight for freedom"
+  fact: "Black lives dramatised as a fight for freedom"
   sources:
-    - {title: "National Radio Hall of Fame: Richard Durham", url: "https://www.radiohalloffame.com/richard-durham", quote: "Durham’s recurring theme of social and economic freedom was a revolutionary idea rarely heard on the radio at the time."}
-    - {title: "Ashleigh Lawrence-Sanders, Black Perspectives (AAIHS) (2018)", url: "https://www.aaihs.org/history-memory-and-the-power-of-black-radio/", quote: "Durham’s scripts attempted to reclaim a triumphant narrative of African American history"}
+    - {title: "National Radio Hall of Fame: Richard Durham", url: "https://www.radiohalloffame.com/richard-durham", quote: "Durham's recurring theme of social and economic freedom"}
+    - {title: "Sonja D. Williams, Flow: Word warrior, Richard Durham (2015)", url: "https://www.flowjournal.org/2015/05/word-warrior-richard-durham/", quote: "boldly advocating for freedom, justice and equality for Negroes and all oppressed people"}
 - card: destination-freedom
-  fact: "WMAQ kept final approval over scripts and insisted on changes"
+  fact: "WMAQ kept final approval and often insisted on changes"
   sources:
-    - {title: "Ryan Ellett, Library of Congress, National Recording Registry essay: Destination Freedom", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DestinationFreedom.pdf", quote: "the host station, WMAQ, retained the right of final approval for all of Durham’s scripts and not infrequently used this power to insist on changes"}
-    - {title: "Ashleigh Lawrence-Sanders, Black Perspectives (AAIHS) (2018)", url: "https://www.aaihs.org/history-memory-and-the-power-of-black-radio/", quote: "Durham and the in-house writers at NBC wrestled frequently over the supposed militant tone of his work"}
+    - {title: "Ryan Ellett, Library of Congress, National Recording Registry essay: Destination Freedom", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DestinationFreedom.pdf", quote: "WMAQ, retained the right of final approval for all of Durham's scripts and not infrequently used this power to insist on changes"}
+    - {title: "Ashleigh Lawrence-Sanders, Black Perspectives (AAIHS) (2018)", url: "https://www.aaihs.org/history-memory-and-the-power-of-black-radio/", quote: "after his Crispus Attucks script was sent back with substantial edits ... wrestled frequently over the supposed militant tone"}
 - card: destination-freedom
   fact: "Durham went on writing for radio and television"
   sources:
@@ -435,45 +424,59 @@
   fact: "Durham died in 1984"
   sources:
     - {title: "National Radio Hall of Fame: Richard Durham", url: "https://www.radiohalloffame.com/richard-durham", quote: "Richard Durham died on April 27, 1984."}
-    - {title: "Colin McBride, BlackPast.org: Richard Durham (2014)", url: "https://www.blackpast.org/african-american-history/durham-richard-1917-1984/", quote: "Richard Durham (1917-1984)"}
-- card: mary-dee
-  fact: "WHOD was a 250-watt station that debuted in 1948 in Homestead with ethnic programming for immigrants"
+    - {title: "Sonja D. Williams, Flow: Word warrior, Richard Durham (2015)", url: "https://www.flowjournal.org/2015/05/word-warrior-richard-durham/", quote: "Until his death in 1984, Durham remained a crusading writer"}
+- card: destination-freedom
+  fact: "wow: managers fought him over the scripts"
   sources:
-    - {title: "Pittsburgh Post-Gazette: Pittsburgh radio timeline (2013)", url: "https://www.post-gazette.com/ae/tv-radio/2013/10/13/Pittsburgh-radio-timeline/stories/201310130096", quote: "1948 -- WHOD-AM, a 250-watt station, debuts, featuring a spectrum of ethnic programming"}
-    - {title: "Pittsburgh Broadcast Review: Porky Chedwick (archived)", url: "https://web.archive.org/web/20200709061303/https://www.pbrtv.com/more/special-articles/porky-chedwick-radios-most-ignored-pioneer/", quote: "WHOD AM 860, whose manifest would be to provide ethnic and foreign language programming for Pittsburgh’s vast immigrant blue-collar"}
+    - {title: "Ryan Ellett, Library of Congress, National Recording Registry essay: Destination Freedom", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/DestinationFreedom.pdf", quote: "not infrequently used this power to insist on changes"}
+    - {title: "Ashleigh Lawrence-Sanders, Black Perspectives (AAIHS) (2018)", url: "https://www.aaihs.org/history-memory-and-the-power-of-black-radio/", quote: "Durham and the in-house writers at NBC wrestled frequently over the supposed militant tone of his work"}
+- card: mary-dee
+  fact: "WHOD was a 250-watt station that debuted in 1948 with ethnic programming for immigrants"
+  sources:
+    - {title: "Joe Pinchot, Pittsburgh Magazine: WAMO celebrates 75 years on the radio in Pittsburgh (2023)", url: "https://www.pittsburghmagazine.com/?p=228963", quote: "first went on the air on Aug. 1, 1948 ... the 'station of nations'"}
+    - {title: "Pittsburgh Broadcast Review: Porky Chedwick (archived)", url: "https://web.archive.org/web/20200709061303/https://www.pbrtv.com/more/special-articles/porky-chedwick-radios-most-ignored-pioneer/", quote: "WHOD AM 860, whose manifest would be to provide ethnic and foreign language programming for Pittsburgh's vast immigrant blue-collar ... 'The Porky Chedwick Show' ... originated in 1948"}
 - card: mary-dee
   fact: "Homestead is just outside Pittsburgh"
   sources:
-    - {title: "Pittsburgh Broadcast Review: Porky Chedwick (archived)", url: "https://web.archive.org/web/20200709061303/https://www.pbrtv.com/more/special-articles/porky-chedwick-radios-most-ignored-pioneer/", quote: "he read of a small daytime station coming to the suburb"}
+    - {title: "Pittsburgh Broadcast Review: Porky Chedwick (archived)", url: "https://web.archive.org/web/20200709061303/https://www.pbrtv.com/more/special-articles/porky-chedwick-radios-most-ignored-pioneer/", quote: "a small daytime station coming to the suburb"}
     - {title: "Pittsburgh City Paper: Life after WAMO (archived)", url: "https://web.archive.org/web/20150909085913/https://www.pghcitypaper.com/pittsburgh/life-after-wamo/Content?oid=1343383", quote: "WHOD, a modest Homestead AM station"}
 - card: mary-dee
-  fact: "WHOD launched Mary Dee Dudley, remembered as the first Black woman DJ in the US"
+  fact: "Mary Dee Dudley is believed to have been the first Black woman DJ in the US"
   sources:
-    - {title: "Pittsburgh Post-Gazette: Pittsburgh radio timeline (2013)", url: "https://www.post-gazette.com/ae/tv-radio/2013/10/13/Pittsburgh-radio-timeline/stories/201310130096", quote: "launches career of Mary Dee Dudley, the nation's first female African-American DJ"}
-    - {title: "Pittsburgh Tribune-Review: Music in the Hill ... (archived)", url: "https://web.archive.org/web/20191214164834/https://archive.triblive.com/aande/music/music-in-the-hill-was-a-way-of-life-until-progress-silenced-venues/", quote: "Homestead’s WHOD radio’s Mary Dee Dudley, aka “Mary Dee,” the first black female radio DJ"}
-    - {title: "Pittsburgh City Paper: Life after WAMO (archived)", url: "https://web.archive.org/web/20150909085913/https://www.pghcitypaper.com/pittsburgh/life-after-wamo/Content?oid=1343383", quote: "launched the careers of famous radio personalities like Porky Chedwick and Mary Dee"}
+    - {title: "Joe Pinchot, Pittsburgh Magazine: WAMO celebrates 75 years on the radio in Pittsburgh (2023)", url: "https://www.pittsburghmagazine.com/?p=228963", quote: "Mary Dee Dudley, who is believed to have been the first female, African American disc jockey in the country"}
+    - {title: "Pittsburgh Tribune-Review: Music in the Hill ... (archived)", url: "https://web.archive.org/web/20191214164834/https://archive.triblive.com/aande/music/music-in-the-hill-was-a-way-of-life-until-progress-silenced-venues/", quote: "Homestead's WHOD radio's Mary Dee Dudley, aka 'Mary Dee,' the first black female radio DJ"}
 - card: mary-dee
-  fact: "Porky Chedwick played records by Black artists on WHOD"
+  fact: "Porky Chedwick played records of Black musicians he had collected"
   sources:
-    - {title: "Pittsburgh Post-Gazette: Pittsburgh radio timeline (2013)", url: "https://www.post-gazette.com/ae/tv-radio/2013/10/13/Pittsburgh-radio-timeline/stories/201310130096", quote: "Porky Chedwick, who introduced Pittsburgh to records by black artists"}
-    - {title: "Pittsburgh Broadcast Review: Porky Chedwick (archived)", url: "https://web.archive.org/web/20200709061303/https://www.pbrtv.com/more/special-articles/porky-chedwick-radios-most-ignored-pioneer/", quote: "From WHOD’s little studio ... the sounds of Roy Brown, Wynonie Harris and The Dominoes ... were first played regularly"}
+    - {title: "Joe Pinchot, Pittsburgh Magazine: WAMO celebrates 75 years on the radio in Pittsburgh (2023)", url: "https://www.pittsburghmagazine.com/?p=228963", quote: "Chedwick collected obscure recordings of African American musicians and started playing them on WHOD"}
+    - {title: "Pittsburgh Broadcast Review: Porky Chedwick (archived)", url: "https://web.archive.org/web/20200709061303/https://www.pbrtv.com/more/special-articles/porky-chedwick-radios-most-ignored-pioneer/", quote: "The records Porky aired on WHOD were ones he had collected over the years"}
 - card: mary-dee
   fact: "In the late 1940s WHOD delivered Black music and news"
   sources:
-    - {title: "Pittsburgh City Paper: Life after WAMO (archived)", url: "https://web.archive.org/web/20150909085913/https://www.pghcitypaper.com/pittsburgh/life-after-wamo/Content?oid=1343383", quote: "Black radio in Pittsburgh started small in the late 1940s. Back then, WHOD, a modest Homestead AM station, delivered black music and news."}
-    - {title: "Pittsburgh Post-Gazette: Pittsburgh radio timeline (2013)", url: "https://www.post-gazette.com/ae/tv-radio/2013/10/13/Pittsburgh-radio-timeline/stories/201310130096", quote: "Porky Chedwick, who introduced Pittsburgh to records by black artists"}
+    - {title: "Pittsburgh City Paper: Life after WAMO (archived)", url: "https://web.archive.org/web/20150909085913/https://www.pghcitypaper.com/pittsburgh/life-after-wamo/Content?oid=1343383", quote: "Black radio in Pittsburgh started small in the late 1940s. Back then, WHOD ... delivered black music and news."}
+    - {title: "Joe Pinchot, Pittsburgh Magazine: WAMO celebrates 75 years on the radio in Pittsburgh (2023)", url: "https://www.pittsburghmagazine.com/?p=228963", quote: "WHOD played Greek music, Hebrew tunes, polkas and music by African American performers"}
 - card: mary-dee
   fact: "In 1956 WHOD dropped its immigrant programming and became WAMO"
   sources:
-    - {title: "Pittsburgh Broadcast Review: Porky Chedwick (archived)", url: "https://web.archive.org/web/20200709061303/https://www.pbrtv.com/more/special-articles/porky-chedwick-radios-most-ignored-pioneer/", quote: "“The Station of Nations,” WHOD, abandoned its ethnic manifest in 1956, when it was sold to Dynamic Broadcasting. The new owners re-christened the station WAMO"}
-    - {title: "Pittsburgh City Paper: Life after WAMO (archived)", url: "https://web.archive.org/web/20150909085913/https://www.pghcitypaper.com/pittsburgh/life-after-wamo/Content?oid=1343383", quote: "The station, which became WAMO-AM in the mid-1950s"}
+    - {title: "Pittsburgh Broadcast Review: Porky Chedwick (archived)", url: "https://web.archive.org/web/20200709061303/https://www.pbrtv.com/more/special-articles/porky-chedwick-radios-most-ignored-pioneer/", quote: "WHOD, abandoned its ethnic manifest in 1956 ... re-christened the station WAMO ... WAMO's format became country"}
+    - {title: "Joe Pinchot, Pittsburgh Magazine: WAMO celebrates 75 years on the radio in Pittsburgh (2023)", url: "https://www.pittsburghmagazine.com/?p=228963", quote: "WHOD changed its call letters to WAMO ... changed its format to country and western"}
 - card: mary-dee
-  fact: "WAMO went on to launch Black radio careers in Pittsburgh"
+  fact: "WAMO went on to launch Black radio careers"
   sources:
-    - {title: "Pittsburgh City Paper: Life after WAMO (archived)", url: "https://web.archive.org/web/20150909085913/https://www.pghcitypaper.com/pittsburgh/life-after-wamo/Content?oid=1343383", quote: "The station, which became WAMO-AM in the mid-1950s, launched the careers of famous radio personalities"}
-    - {title: "Pittsburgh Broadcast Review: Porky Chedwick (archived)", url: "https://web.archive.org/web/20200709061303/https://www.pbrtv.com/more/special-articles/porky-chedwick-radios-most-ignored-pioneer/", quote: "making Pittsburgh a major testing ground for R&B through the ’70s"}
+    - {title: "Joe Pinchot, Pittsburgh Magazine: WAMO celebrates 75 years on the radio in Pittsburgh (2023)", url: "https://www.pittsburghmagazine.com/?p=228963", quote: "WAMO was the R&B force through the '70s, '80s and '90s ... 'the premier Black radio station in the city of Pittsburgh'"}
+    - {title: "Pittsburgh City Paper: Life after WAMO (archived)", url: "https://web.archive.org/web/20150909085913/https://www.pghcitypaper.com/pittsburgh/life-after-wamo/Content?oid=1343383", quote: "WAMO's heyday, however, came in the 1960s, during the civil-rights movement."}
+- card: mary-dee
+  fact: "'The station of nations' and immigrant audience"
+  sources:
+    - {title: "Joe Pinchot, Pittsburgh Magazine: WAMO celebrates 75 years on the radio in Pittsburgh (2023)", url: "https://www.pittsburghmagazine.com/?p=228963", quote: "calling itself the 'station of nations'"}
+    - {title: "Pittsburgh Broadcast Review: Porky Chedwick (archived)", url: "https://web.archive.org/web/20200709061303/https://www.pbrtv.com/more/special-articles/porky-chedwick-radios-most-ignored-pioneer/", quote: "'The Station of Nations,' WHOD"}
+- card: mary-dee
+  fact: "Black radio in Pittsburgh began from that small start"
+  sources:
+    - {title: "Pittsburgh City Paper: Life after WAMO (archived)", url: "https://web.archive.org/web/20150909085913/https://www.pghcitypaper.com/pittsburgh/life-after-wamo/Content?oid=1343383", quote: "Black radio in Pittsburgh started small in the late 1940s. Back then, WHOD..."}
+    - {title: "Joe Pinchot, Pittsburgh Magazine: WAMO celebrates 75 years on the radio in Pittsburgh (2023)", url: "https://www.pittsburghmagazine.com/?p=228963", quote: "WHOD played ... music by African American performers"}
 - card: werd
-  fact: "Jesse B. Blayton Sr. bought the 1,000-watt WERD in 1949 for $50,000"
+  fact: "Blayton bought the 1,000-watt WERD in 1949 for $50,000"
   sources:
     - {title: "Laurence W. Etling, New Georgia Encyclopedia: WERD", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/werd/", quote: "The 1,000-watt station, purchased for $50,000"}
     - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/", quote: "In 1949, Blayton made history when he bought the 1,000-watt Atlanta radio station WERD for $50,000."}
@@ -483,36 +486,35 @@
     - {title: "Laurence W. Etling, New Georgia Encyclopedia: WERD", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/werd/", quote: "Jesse B. Blayton, a professor at Atlanta University and a bank president"}
     - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/", quote: "Blayton also taught accounting at Atlanta University"}
 - card: werd
-  fact: "By most accounts the first African American to own a radio station in the US (contested: KPRS)"
+  fact: "By most accounts the first African American station owner (contested: KPRS)"
   sources:
     - {title: "Laurence W. Etling, New Georgia Encyclopedia: WERD", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/werd/", quote: "WERD in Atlanta became the first radio station in America to be owned by an African American"}
     - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/", quote: "making him the first African American to own and operate a radio station in the United States"}
-    - {title: "Museum of Broadcast Communications, Encyclopedia of Radio: African-Americans in Radio", url: "https://www.museum.tv/radio-encyclopedia/african-americans-in-radio", quote: "Andrew \"Skip\" Carter bought KPRS of Kansas City, Missouri, a defunct operation, in early 1949: he became the first African­ American to own a commercial radio license. Later that same year, J.B. Slayton purchased WERD in Atlanta."}
 - card: werd
   fact: "WDIA played to Black listeners from 1948 but was white-owned"
   sources:
-    - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/", quote: "Although WDIA, established in Memphis, Tennessee in 1948, played music oriented for a black audience, WERD was the only black-owned station to do so at that time."}
-    - {title: "Anne-Leslie Owens, Tennessee Encyclopedia: WDIA", url: "https://tennesseeencyclopedia.net/entries/wdia/", quote: "In 1948-49 white-owned WDIA in Memphis"}
+    - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/", quote: "Although WDIA, established in Memphis, Tennessee in 1948, played music oriented for a black audience, WERD was the only black-owned station"}
+    - {title: "Anne-Leslie Owens, Tennessee Encyclopedia: WDIA", url: "https://tennesseeencyclopedia.net/entries/wdia/", quote: "In 1948-49 white-owned WDIA"}
 - card: werd
-  fact: "Located in the Prince Hall Masonic building on Auburn Avenue"
+  fact: "In the Prince Hall Masonic building on Auburn Avenue"
   sources:
-    - {title: "Laurence W. Etling, New Georgia Encyclopedia: WERD", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/werd/", quote: "was located in the Prince Hall Masons Grand Lodge at 334 Auburn Avenue"}
-    - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/", quote: "The station’s location in the Prince Hall Masonic Lodge Building"}
+    - {title: "Laurence W. Etling, New Georgia Encyclopedia: WERD", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/werd/", quote: "located in the Prince Hall Masons Grand Lodge at 334 Auburn Avenue"}
+    - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/", quote: "The station's location in the Prince Hall Masonic Lodge Building"}
 - card: werd
-  fact: "Blayton turned it toward Black listeners with music and programmes for them"
+  fact: "Blayton turned it toward Black listeners"
   sources:
     - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/", quote: "Blayton changed the program format and focused on the local African American audience."}
     - {title: "Laurence W. Etling, New Georgia Encyclopedia: WERD", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/werd/", quote: "played music and other programming of interest to Black listeners"}
 - card: werd
-  fact: "In the 1960s the SCLC, led by King, had its headquarters in the same building"
+  fact: "In the 1960s the SCLC had its headquarters in the same building"
   sources:
-    - {title: "Laurence W. Etling, New Georgia Encyclopedia: WERD", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/werd/", quote: "The Masonic lodge that housed WERD was also home to Martin Luther King Jr. ’s Southern Christian Leadership Conference (SCLC) during the 1960s."}
-    - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/", quote: "which also housed the headquarters of the Southern Christian Leadership Conference (SCLC)"}
+    - {title: "Laurence W. Etling, New Georgia Encyclopedia: WERD", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/werd/", quote: "also home to Martin Luther King Jr.'s Southern Christian Leadership Conference (SCLC) during the 1960s"}
+    - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/", quote: "which also housed the headquarters of the Southern Christian Leadership Conference"}
 - card: werd
-  fact: "King used WERD to make public statements; accounts differ on how"
+  fact: "King used WERD for public statements; accounts differ on how"
   sources:
-    - {title: "Laurence W. Etling, New Georgia Encyclopedia: WERD", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/werd/", quote: "It has been said that King would bang on the ceiling with a broomstick when he wanted to make a public statement, and the WERD disc jockey upstairs would lower a microphone from the window above."}
-    - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/", quote: "often walked upstairs to the WERD studio to make public statements about the organization’s activities"}
+    - {title: "Laurence W. Etling, New Georgia Encyclopedia: WERD", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/werd/", quote: "It has been said that King would bang on the ceiling with a broomstick ... the WERD disc jockey upstairs would lower a microphone from the window above"}
+    - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/", quote: "often walked upstairs to the WERD studio to make public statements"}
 - card: werd
   fact: "Blayton sold WERD in 1968 on retiring"
   sources:
@@ -523,3 +525,13 @@
   sources:
     - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/", quote: "He died on September 7, 1977 in Atlanta."}
     - {title: "Laurence W. Etling, New Georgia Encyclopedia: WERD", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/werd/", quote: "until his death on September 7, 1977"}
+- card: werd
+  fact: "Blayton inducted into the Radio Hall of Fame in 1995"
+  sources:
+    - {title: "Laurence W. Etling, New Georgia Encyclopedia: WERD", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/werd/", quote: "was inducted into the Radio Hall of Fame in 1995"}
+    - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/", quote: "In 1995, he was inducted into the Radio Hall of Fame."}
+- card: werd
+  fact: "For almost twenty years Black Atlanta had a station its own people owned"
+  sources:
+    - {title: "Nick Manos, BlackPast.org: Jesse B. Blayton, Sr. (2009)", url: "https://www.blackpast.org/african-american-history/blayton-sr-jesse-b-1879-1977/", quote: "bought ... in 1949 ... sold WERD in 1968"}
+    - {title: "Laurence W. Etling, New Georgia Encyclopedia: WERD", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/werd/", quote: "bought it in 1949 ... sold the station to white owners in 1968"}

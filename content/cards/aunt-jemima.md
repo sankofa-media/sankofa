@@ -2,7 +2,7 @@
 id: aunt-jemima
 kind: object
 title: Aunt Jemima and Nancy Green
-wow: "A pancake brand named after a minstrel-show song hired Nancy Green, born enslaved in Kentucky, to play its character at the 1893 Chicago world's fair; the name and face came off the box only in 2021."
+wow: "A pancake brand named after a minstrel-show character hired Nancy Green, born enslaved in Kentucky, to play its character at the 1893 Chicago world's fair; the brand was retired only in 2021."
 years: [1889, 2021]
 places:
   - {name: "World's Columbian Exposition, Chicago", lat: 41.7906, lon: -87.5831}
@@ -26,10 +26,10 @@ sources:
   - {title: "NPR: Life Is a Collage for Artist Betye Saar (2006)", url: "https://www.npr.org/templates/story/story.php?storyId=6688207"}
   - {title: "Hammer Museum, Now Dig This! Art and Black Los Angeles 1960–1980: Betye Saar", url: "https://hammer.ucla.edu/now-dig-this/artists/betye-saar/"}
 ---
-At the end of the 1880s a mill in St. Joseph, Missouri, invented a ready-mixed pancake flour and called it Aunt Jemima. The name came from "Old Aunt Jemima", a song of the racist minstrel stage. The R.T. Davis Milling Company bought the brand and hired a real woman to play the character: Nancy Green, born enslaved in Kentucky in 1834.
+At the end of the 1880s a mill in St. Joseph, Missouri, invented a ready-mixed pancake flour and called it Aunt Jemima. The name was taken from the racist minstrel stage. The R.T. Davis Milling Company bought the brand and hired a real woman to play the character: Nancy Green, born enslaved in Kentucky in 1834.
 
 Her first appearance came at the World's Columbian Exposition in Chicago in 1893. She cooked pancakes for the crowds and after the fair was offered a lifetime contract. She played the part until her death in 1923. Off the stage she gave her time and standing to charity and to good causes in Chicago.
 
-In 1972 the artist Betye Saar reclaimed the figure in [[liberation-of-aunt-jemima|The Liberation of Aunt Jemima]], the work that made her name. In June 2020 Quaker Oats, owner of the brand, admitted that its origins lay in a racial stereotype and promised to change it. In February 2021 it became Pearl Milling Company, named after the original mill, and the new boxes, with a mill in place of a face, reached the shops in June.
+In 1972 the artist Betye Saar reclaimed the figure in [[liberation-of-aunt-jemima|The Liberation of Aunt Jemima]], the work that made her name. In June 2020 Quaker Oats, owner of the brand, admitted that its origins lay in a racial stereotype and promised to change it. In February 2021 it became Pearl Milling Company, named after the original mill, and the new boxes, with a mill in place of a face, were due in the shops that June.
 
-For more than a century a minstrel mask smiled from American breakfast tables, and the woman who first wore it had been born a slave.
+For more than a century a minstrel mask smiled from American breakfast tables, and the woman who first wore it had been born into slavery.

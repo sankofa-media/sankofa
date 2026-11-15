@@ -22,11 +22,12 @@ sources:
   - {title: "Bowdoin College, Peary-MacMillan Arctic Museum: Matthew Henson", url: "https://www.bowdoin.edu/arctic-museum/educational-resources/arctic-biographies/henson.html"}
   - {title: "Encyclopedia of African-American Culture and History (Gale), via Encyclopedia.com: Henson, Matthew A.", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/henson-matthew"}
   - {title: "National Geographic, Anna Brendle: Profile: African-American North Pole Explorer Matthew Henson (2003)", url: "https://www.nationalgeographic.com/culture/article/profile-african-american-north-pole-explorer-matthew-henson"}
+  - {title: "Christian Science Monitor: Peary and the North Pole controversy (27 March 1989)", url: "https://csmonitor.com/1989/0327/dpear-f1.html"}
   - {title: "National Geographic, James Edward Mills: The Legacy of Arctic Explorer Matthew Henson (2014)", url: "https://www.nationalgeographic.com/adventure/article/the-legacy-of-arctic-explorer-matthew-henson"}
 ---
-Around 1900 the American naval engineer Robert Peary spent nearly two decades trying to reach the North Pole. His constant companion was Matthew Henson, born in 1866 in Charles County, Maryland, and orphaned young. At twelve Henson went to sea as a cabin boy, and on board he learned to read, write and navigate. Peary met him in a Washington hat shop and hired him as his valet for a survey in Nicaragua.
+Around 1900 the US Navy officer Robert Peary spent nearly two decades trying to reach the North Pole. His constant companion was Matthew Henson, born in 1866 in Charles County, Maryland, and orphaned young. At twelve Henson went to sea as a cabin boy, and on board he learned to read and write. Peary met him in a hat shop where Henson worked as a clerk, and hired him as his valet for a survey in Nicaragua.
 
-Henson went on to join Peary on seven Arctic expeditions. In Greenland he learned the Inuit language and became the expedition's best dog-sledge driver; of Peary's men he alone spoke Inuktitut fluently. On 6 April 1909 Peary, Henson and four Inuit men reached what they took to be the Pole. Henson said he got there first, ahead of Peary.
+Henson went on to join Peary on seven Arctic expeditions. In Greenland he learned the Inuit language and became the expedition's best dog-sledge driver, fluent in Inuktitut. On 6 April 1909 Peary, Henson and four Inuit men reached what they took to be the Pole. Henson said he got there first, ahead of Peary.
 
 The fame went to Peary. Henson wrote A Negro Explorer at the North Pole in 1912 and spent the rest of his working life as a clerk at the Customs House in New York. Honours came late; President Eisenhower received him at the White House. He died in 1955 and was buried in New York's Woodlawn Cemetery. On 6 April 1988 he and his wife Lucy were reburied at Arlington, near Peary.
 

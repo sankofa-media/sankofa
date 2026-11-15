@@ -24,7 +24,7 @@ sources:
   - {title: "US Holocaust Memorial Museum, Holocaust Encyclopedia: The Nazi Persecution of Black People in Germany (on ethnographic shows)", url: "https://encyclopedia.ushmm.org/content/en/article/afro-germans-during-the-holocaust"}
   - {title: "NBC News, David K. Li: Bronx Zoo operator apologizes for racist display of African man in 1906 (2020)", url: "https://www.nbcnews.com/news/us-news/bronx-zoo-operator-apologizes-racist-display-african-man-1906-n1235457"}
 ---
-Around 1900, putting people from distant lands on show was a popular entertainment in Europe and at American world's fairs. Ota Benga, a young man of the Mbuti people of the Congo, was brought to the United States in 1904 by Samuel Verner, a former missionary, to appear in an exhibit at the St. Louis World's Fair.
+Around 1900, putting people from distant lands on show was a popular entertainment in Europe and at American world's fairs. Ota Benga, a young man of the Mbuti people of the Congo, was brought to the United States in 1904 by the American Samuel Verner to appear in an exhibit at the St. Louis World's Fair.
 
 In September 1906 Verner brought him to the Bronx Zoo in New York. The zoo lodged him in the Monkey House, and crowds came to stare. Black ministers in the city were outraged. Led by the Reverend James H. Gordon, they campaigned against the exhibit and brought it to an end that same month. Ota Benga left the zoo for the Howard Colored Orphan Asylum, which Gordon ran in Brooklyn.
 

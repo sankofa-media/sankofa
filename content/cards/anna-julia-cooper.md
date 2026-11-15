@@ -7,7 +7,7 @@ years: [1858, 1964]
 places:
   - {name: "Sorbonne, Paris", lat: 48.8506, lon: 2.3439}
   - {name: "Raleigh, North Carolina", lat: 35.7796, lon: -78.6382}
-  - {name: "M Street High School, Washington, D.C.", lat: 38.9087, lon: -77.0184}
+  - {name: "M Street High School, Washington, D.C.", lat: 38.9057, lon: -77.0128}
 zoom: 4
 moment: {year: 1925}
 era: v5

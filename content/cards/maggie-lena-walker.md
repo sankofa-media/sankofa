@@ -21,7 +21,7 @@ sources:
   - {title: "Encyclopedia Virginia, Muriel Miller Branch: Maggie Lena Walker (1864–1934)", url: "https://encyclopediavirginia.org/entries/walker-maggie-lena-1864-1934/"}
   - {title: "National Women's History Museum, Arlisha R. Norwood: Maggie Lena Walker (2017)", url: "https://www.womenshistory.org/education-resources/biographies/maggie-lena-walker"}
 ---
-Maggie Lena Walker, who would found a bank in the segregated South, was born Maggie Lena Mitchell in Richmond, Virginia, on 15 July 1864, to a mother who had been enslaved. When the family lost its breadwinner, her mother took in laundry, and the girl carried the clean clothes back to white customers.
+Maggie Lena Walker, who would found a bank in the segregated South, was born Maggie Lena Mitchell in Richmond, Virginia, on 15 July 1864, to a mother who had been enslaved. When the family lost its breadwinner, her mother took in laundry, and the girl carried the clean clothes back to the customers.
 
 As a teenager she joined the Independent Order of St. Luke, a Black benevolent society that helped the sick and the elderly. She taught school for a few years and then gave her energy to the order. In 1902 she started its newspaper, the St. Luke Herald, and in 1903 she founded the St. Luke Penny Savings Bank and became its president: the first African American woman in the United States to charter a bank. The next year she and her family bought a house in Jackson Ward, Richmond's Black business district.
 

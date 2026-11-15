@@ -5,7 +5,7 @@ title: "Somerset v Stewart, 1772"
 wow: "An enslaved man bought in Virginia walked out on his master in London; seized to be shipped off and sold, he went to court, and on 22 June 1772 Lord Mansfield set him free."
 years: [1771, 1772]
 places:
-  - {name: "Westminster Hall, London", lat: 51.4995, lon: -0.1248}
+  - {name: "Westminster, London", lat: 51.4995, lon: -0.1248}
   - {name: "Norfolk, Virginia", lat: 36.8508, lon: -76.2859}
 zoom: 4
 era: v2

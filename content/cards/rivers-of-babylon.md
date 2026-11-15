@@ -21,9 +21,10 @@ sources:
   - {title: "Official Charts: Rivers of Babylon / Brown Girl in the Ring by Boney M, chart history", url: "https://officialcharts.com/songs/boney-m-rivers-of-babylonbrown-girl-in-the-ring"}
   - {title: "Encyclopaedia Britannica: Boney M", url: "https://www.britannica.com/topic/Boney-M"}
   - {title: "Encyclopaedia Britannica: Bob Marley", url: "https://www.britannica.com/biography/Bob-Marley"}
+  - {title: "Encyclopaedia Britannica: Rastafari", url: "https://www.britannica.com/topic/Rastafari"}
 ---
-"Rivers of Babylon" is a reggae song by the Melodians, a vocal group from Kingston, Jamaica, recorded with the producer Leslie Kong at the turn of the 1970s, when [[pinnacle-rastafari|Rastafari]] had taken hold among the island's musicians. Its words adapt two psalms. Psalm 137 is the lament of the exiled Hebrews who sat by the rivers of Babylon and wept when they remembered Zion; Psalm 19:14 supplies the prayer that the words of the mouth and the meditation of the heart be acceptable. The Melodians' Brent Dowe and Trevor McNaughton took the composer credit.
+"Rivers of Babylon" is a reggae song by the Melodians, a vocal group from Kingston, Jamaica, that included Brent Dowe and McNaughton. They made it with the producer Leslie Kong in the years when [[pinnacle-rastafari|Rastafari]] had taken hold among Kingston's musicians; sources disagree on whether that was 1967 or 1971. Its words adapt two psalms. Psalm 137 is the lament of the exiled Hebrews who sat by the rivers of Babylon and wept when they remembered Zion; Psalm 19:14 supplies the prayer that the words of the mouth and the meditation of the heart be acceptable.
 
-For Rastafarians, Babylon is any oppressive or unjust system of government, and in Jamaica the word also meant the police. The old lament of captives came to be heard as a Rastafarian anthem.
+Rastafarians, drawing on the story of the Babylonian captivity, saw people of African descent in the Americas as exiles in Babylon, longing for freedom as the Israelites had. In the Melodians' hands the old lament of captives became a song of Rastafarian faith.
 
 In 1972 the song reached audiences abroad on the soundtrack of [[harder-they-come|The Harder They Come]]. Six years later the German producer Frank Farian had Boney M, the group he had put together, record it. Their version entered the British chart on 29 April 1978, reached number one on 13 May and stayed in the chart for 40 weeks. A psalm of exile had travelled from ancient Babylon to Kingston, and from Kingston to the pop charts of Europe.

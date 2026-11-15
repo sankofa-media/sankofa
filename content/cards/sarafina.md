@@ -8,7 +8,7 @@ places:
   - {name: "Market Theatre, Johannesburg", lat: -26.2005, lon: 28.0300}
   - {name: "Lincoln Center Theater, New York", lat: 40.7725, lon: -73.9835}
 zoom: 4
-moment: {year: 1988, place: 1}
+moment: {year: 1987, place: 1}
 era: v6
 books: [heirs]
 edition: f
@@ -22,6 +22,7 @@ sources:
   - {title: "Broadway.com: Mbongeni Ngema, Tony-nominated Sarafina! playwright and director, dies at 68 (2023)", url: "https://www.broadway.com/buzz/203632/mbongeni-ngema-tony-nominated-sarafina-playwright-and-director-dies-at-68/"}
   - {title: "Mogomotsi Magome, Associated Press: Mbongeni Ngema, South African playwright and creator of Sarafina!, is killed in a car crash at 68 (2023)", url: "https://www.click2houston.com/entertainment/2023/12/28/mbongeni-ngema-south-african-playwright-and-creator-of-sarafina-is-killed-in-a-car-crash-at-68/"}
   - {title: "Kate Bartlett, NPR: The iconic South African theater that took on apartheid (2026)", url: "https://www.michiganpublic.org/2026-03-28/the-iconic-south-african-theater-that-took-on-apartheid"}
+  - {title: "Encyclopaedia of South African Theatre, Film, Media and Performance (ESAT), Stellenbosch University: Sarafina!", url: "https://esat.sun.ac.za/index.php/Sarafina"}
   - {title: "South African History Online: 16 June 1976, Soweto Uprising", url: "https://www.sahistory.org.za/article/june-16-soweto-youth-uprising"}
   - {title: "South African History Online: Nelson Rolihlahla Mandela", url: "https://www.sahistory.org.za/people/nelson-rolihlahla-mandela"}
   - {title: "The Nobel Prize: Nelson Mandela, biographical", url: "https://www.nobelprize.org/prizes/peace/1993/mandela/biographical/"}

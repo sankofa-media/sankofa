@@ -5,7 +5,6 @@ title: Susie King Taylor
 wow: "Taught to read in secret schools in Savannah, she reached Union lines at fourteen and spent the war as teacher, nurse and laundress to a regiment of formerly enslaved soldiers, then wrote the only Civil War memoir by an African American woman."
 years: [1848, 1912]
 places:
-  - {name: "Camp Saxton, Port Royal, South Carolina", lat: 32.3833, lon: -80.6833}
   - {name: "Savannah, Georgia", lat: 32.0809, lon: -81.0912}
   - {name: "St. Simons Island, Georgia", lat: 31.1350, lon: -81.3870}
   - {name: "Boston, Massachusetts", lat: 42.3601, lon: -71.0589}

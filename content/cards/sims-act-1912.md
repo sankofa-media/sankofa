@@ -18,6 +18,7 @@ sources:
   - {title: "Reason, Jesse Walker: When the Censors Came for Jack Johnson's Fight Films (2018)", url: "https://reason.com/2018/05/25/jack-johnson-fight-films/"}
   - {title: "Oregon Theater Project (University of Oregon): Prize-Fight Film Censorship", url: "https://oregontheaterproject.uoregon.edu/node/604"}
   - {title: "Motion Picture Herald, 20 July 1940: U.S. Prize Fight Ban Off, RKO Takes Over (transcribed by the Big V Riot Squad blog)", url: "https://bigvriotsquad.blogspot.com/2019/04/us-prize-fight-ban-off-rko-takes-over.html"}
+  - {title: "Library of Congress Research Guides: Jack Johnson vs. James Jeffries, Topics in Chronicling America", url: "https://guides.loc.gov/chronicling-america-johnson-vs-jeffries"}
   - {title: "Weber v. Freed, 239 U.S. 325 (1915), Legal Information Institute, Cornell Law School", url: "https://www.law.cornell.edu/supremecourt/text/239/325"}
 ---
 By 1910 films of prize fights were a profitable business for the young cinema, and a big fight film could earn a fortune. Jack Johnson, the first Black heavyweight champion, held the title, and the retired white champion James J. Jeffries came back to the ring to take it from him, hailed as the "Great White Hope".
@@ -26,4 +27,4 @@ On 4 July 1910 in Reno, Nevada, Johnson beat Jeffries. Race riots followed, and 
 
 Congress went further. The Sims Act of 31 July 1912 made it a crime to carry films of prize fights across state lines. Distributors broke the law openly, paying fines and moving prints across state lines regardless. The ban was repealed only in 1940, after twenty-eight years.
 
-It was one of the first fights over film censorship in the United States, and it began with a Black man winning.
+It was one of the first fights over film censorship in the United States, and a Black man's victory set off the federal ban.

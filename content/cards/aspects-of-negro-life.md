@@ -24,8 +24,8 @@ sources:
 ---
 Aspects of Negro Life is a cycle of four murals that Aaron Douglas painted in 1934 for the 135th Street branch of the New York Public Library in Harlem, today the Schomburg Center for Research in Black Culture. The commission came through a federal New Deal art programme. Douglas, born in Topeka, Kansas, in 1899, was the leading artist-illustrator of the Harlem Renaissance; he had drawn the cover of the magazine [[fire-1926|FIRE!!]].
 
-The four panels tell one story: The Negro in an African Setting, An Idyll of the Deep South, From Slavery Through Reconstruction and Song of the Towers. Together they run from African roots through slavery and emancipation to the Great Migration north. Douglas built them from sharp, stylised figures and geometric forms, drawing on African sculpture, jazz, dance and cubism.
+The four panels tell one story: The Negro in an African Setting, An Idyll of the Deep South, From Slavery Through Reconstruction and Song of the Towers. Together they run from African roots through slavery and emancipation to the Great Migration north. Douglas built them from sharp, stylised figures and geometric forms, drawing on African art and cubism.
 
-In Song of the Towers a series of concentric circles fills the centre, and in the middle a saxophonist raises his instrument high before the city: the creativity and freedom of the 1920s, when Black families moved north.
+In Song of the Towers a series of concentric circles fills the centre, and in the middle stands a saxophonist before the city: the creativity and freedom of the 1920s, when Black families moved north.
 
-Douglas left New York in 1939 to build the art department at Fisk University in Nashville. The murals are still in the Schomburg and remain his best-known work: Black history painted as one epic, in a public library, for the neighbourhood whose story it told.
+Douglas left New York in 1939 to teach at Fisk University in Nashville. The murals are still in the Schomburg and remain his best-known work: Black history painted as one epic, in a public library, for the neighbourhood whose story it told.

@@ -5,7 +5,7 @@ title: "Soul Train (1970–2006)"
 wow: "Chicago news reporter Don Cornelius paid for the pilot with his own money; his dance show ran until 2006 and gave the world the Soul Train Line."
 years: [1970, 2006]
 places:
-  - {name: "WCIU-TV, Chicago", lat: 41.8786, lon: -87.6359}
+  - {name: "WCIU-TV, Chicago", lat: 41.8781, lon: -87.6324}
   - {name: "Los Angeles", lat: 34.0522, lon: -118.2437}
 zoom: 4
 era: v7

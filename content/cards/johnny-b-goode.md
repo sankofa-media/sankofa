@@ -29,6 +29,6 @@ sources:
 ---
 In 1958 [[rock-n-roll|rock and roll]] was still a new sound, and Chuck Berry, a guitarist from St. Louis, wrote his own hits for Chess Records in Chicago. "Johnny B. Goode", released that year, rose to No. 8 on the American charts.
 
-It tells of a boy from deep down in Louisiana, close to New Orleans, who never learned to read or write so well but could play a guitar just like ringing a bell. The story was Berry's own, "more or less", as he put it. He was no Southern country boy, but the original line had said "colored boy", and he changed it to "country boy" so that radio would play it.
+It tells of a boy from deep down in Louisiana, close to New Orleans, who never learned to read or write so well but could play a guitar just like ringing a bell. The story was Berry's own, "more or less", as he put it. Berry himself had grown up in St. Louis, not in the Louisiana woods, and the original line had said "colored boy"; he changed it to "country boy" so that radio would play it.
 
 In 1977 NASA launched the two Voyager spacecraft, each carrying a gold-plated record of the sounds and music of Earth. When its makers chose the music, the folklorist Alan Lomax derided Berry's song as adolescent; Carl Sagan answered that the planet is home to a great many adolescents. So "Johnny B. Goode" went on the record. In 2012 Voyager 1 left the bubble of the Sun's wind and entered interstellar space. The boy whose colour the radio could not hear now plays farther from home than anything people have made.

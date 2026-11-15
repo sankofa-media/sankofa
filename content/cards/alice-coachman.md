@@ -2,7 +2,7 @@
 id: alice-coachman
 kind: person
 title: Alice Coachman
-wow: "Barred from the tracks white children used, she trained barefoot, jumping over ropes and sticks in Georgia, and in 1948 became the first Black woman from any country to win Olympic gold."
+wow: "Barred from public sports grounds in segregated Georgia, she trained barefoot, jumping over ropes and sticks, and in 1948 became the first Black woman from any country to win Olympic gold."
 years: [1923, 2014]
 places:
   - {name: "Wembley Stadium, London", lat: 51.556, lon: -0.2796}
@@ -22,6 +22,6 @@ sources:
 ---
 In the segregated South of the 1930s a Black girl who wanted to jump had nowhere to train: public sports grounds were closed to her. Alice Coachman, born in Albany, Georgia, in 1923, the fifth of ten children, trained anyway. She ran barefoot and practised the high jump over ropes and sticks, although her father wanted her to sit on the porch and be ladylike. A teacher and an aunt took her side, and Tuskegee Institute in Alabama took her in. From 1939 she won the national high-jump title year after year.
 
-War cancelled the Olympics of 1940 and 1944, the years of her prime. When the Games resumed in London in 1948, she made the team despite a back injury. At Wembley Stadium in August she cleared 5 feet 6⅛ inches on her first attempt, an Olympic record, and King George VI hung the gold medal around her neck. She was the first Black woman from any country to win Olympic gold, and the only American woman to win gold in athletics at those Games.
+War cancelled the Olympics of 1940 and 1944, the years of her prime. When the Games resumed in London in 1948, she made the team despite a back injury. At Wembley Stadium in August she cleared 5 feet 6⅛ inches on her first attempt, an Olympic record, and King George VI hung the gold medal around her neck. She was the first Black woman from any country to win Olympic gold.
 
 Albany gave her a motorcade, but the hall where the town honoured her was segregated, and the mayor would not shake her hand. She retired at 25 and died in 2014, aged 90.

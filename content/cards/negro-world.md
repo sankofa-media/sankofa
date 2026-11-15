@@ -2,7 +2,7 @@
 id: negro-world
 kind: media
 title: "Negro World (Harlem, 1918–1933)"
-wow: "Marcus Garvey's Harlem weekly printed a section in Spanish, was banned by Britain and France across their colonies, and kept travelling anyway, smuggled by Black seamen."
+wow: "Marcus Garvey's Harlem weekly printed a section in Spanish, was banned by Britain and France across their colonies, and kept travelling anyway, carried by seamen."
 years: [1918, 1933]
 places:
   - {name: "Harlem, New York", lat: 40.8116, lon: -73.9465}
@@ -15,6 +15,7 @@ edition: both
 further:
   - "Robert A. Hill (ed.), The Marcus Garvey and Universal Negro Improvement Association Papers (1983–)"
   - "The Negro World on microfilm, Schomburg Center for Research in Black Culture, New York Public Library"
+dispute: "The Library of Congress newspaper directory says the paper began in 1917; the Encyclopedia of African-American Culture and History and other accounts date its start to 1918."
 sources:
   - {title: "Encyclopedia of African-American Culture and History (via Encyclopedia.com): Negro World", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/negro-world"}
   - {title: "Library of Congress, Chronicling America directory: The Negro World (New York, N.Y.) 1917-1933", url: "https://www.loc.gov/item/sn84037003/"}
@@ -27,8 +28,8 @@ sources:
 ---
 The Negro World was the weekly newspaper of Marcus Garvey's Universal Negro Improvement Association (UNIA), published in Harlem from 1918 to 1933. Garvey, born in Jamaica in 1887, had founded the UNIA there in 1914 and moved to the United States in 1916. From Harlem he preached Black pride, an independent Black economy and a Black-governed nation in Africa, and the Negro World was his voice.
 
-The paper carried a section in Spanish, and its circulation is said to have reached 200,000 in the 1920s. Colonial governments read it as sedition. It was banned in Trinidad, British Guiana and Belize, and Britain and France banned it across their colonies. It travelled anyway: Black seamen, sometimes acting on their own, smuggled copies from port to port.
+The paper carried a section in Spanish, and its circulation is said to have reached 200,000 in the 1920s. Colonial governments read it as sedition. It was banned in Trinidad, British Guiana and Belize, and Britain and France banned it across their colonies. It travelled anyway: seamen, sometimes acting on their own, carried copies from port to port.
 
-Garvey's own fall came first: in 1927 he was deported from the United States. The paper stayed loyal to him and closed in 1933.
+Garvey's own fall came first: in 1927 he was deported from the United States. The paper outlived his deportation and closed in 1933.
 
 Like the [[chicago-defender|Chicago Defender]] in the American South, the Negro World shows how a Black newspaper could outrun a ban: in the 1920s it tied Harlem to the Caribbean and Africa, and the colonial authorities knew it.

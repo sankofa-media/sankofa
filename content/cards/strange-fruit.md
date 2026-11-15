@@ -2,7 +2,7 @@
 id: strange-fruit
 kind: work
 title: "\"Strange Fruit\" (Billie Holiday, 1939)"
-wow: "A Bronx schoolteacher's poem about a lynching photograph became the song Billie Holiday sang last, in a darkened room, with the waiters told to stop serving."
+wow: "A Bronx schoolteacher's poem about a lynching photograph became the song Billie Holiday sang last, in a darkened room where the waiters stopped serving."
 years: [1937, 1939]
 places:
   - {name: "Café Society, Greenwich Village, New York", lat: 40.7339, lon: -74.0006}
@@ -22,9 +22,10 @@ sources:
   - {title: "PBS American Masters: The story behind Billie Holiday's Strange Fruit", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-billie-holidays-strange-fruit/17738"}
   - {title: "Library of Congress blog: The Power of a Poem (2015)", url: "https://blogs.loc.gov/loc/2015/04/the-power-of-a-poem/"}
   - {title: "Biography.com: Billie Holiday and Strange Fruit", url: "https://www.biography.com/news/billie-holiday-strange-fruit"}
+  - {title: "Adam Rozen-Wheeler, BlackPast: Marion, Indiana Lynching (1930)", url: "https://www.blackpast.org/african-american-history/marion-indiana-lynching-1930/"}
 ---
 "Strange Fruit" is a song against lynching, the killing of Black Americans by white mobs, and it began as a poem. Its author, Abel Meeropol, was a Jewish high-school teacher from the Bronx who wrote as Lewis Allan. He was haunted by a photograph of the August 1930 lynching of two Black teenagers, Thomas Shipp and Abram Smith, in Marion, Indiana: their bodies hang from a tree above a white crowd. His poem, first called "Bitter Fruit", appeared in 1937 in The New York Teacher, a union magazine, and he set it to music himself.
 
-In 1939 the 23-year-old Billie Holiday took it into her set at Café Society in Greenwich Village, New York's first integrated nightclub. She feared harassment and violence, but audiences were stunned. She always sang it last: the waiters stopped serving, the room went dark, a spotlight lit her face, and there was no encore.
+In 1939 the 23-year-old Billie Holiday took it into her set at Café Society in Greenwich Village, an integrated nightclub. She feared harassment and violence, but audiences were stunned. She always sang it last: the waiters stopped serving, the room went dark, a spotlight lit her face, and there was no encore.
 
-Her label, Columbia, would not record it, fearing Southern record shops and radio stations, so she cut it for the small Commodore label. The record sold more than a million copies. In 1999 Time named it the song of the century, and it was among the first recordings chosen for the Library of Congress's National Recording Registry. The cause [[ida-b-wells|Ida B. Wells]] had fought for in print now had a voice.
+Her label, Columbia, would not record it, fearing a backlash, so she cut it for the independent Commodore label. The record sold more than a million copies. In 1999 Time named it the song of the century, and it was among the first recordings chosen for the Library of Congress's National Recording Registry. The cause [[ida-b-wells|Ida B. Wells]] had fought for in print now had a voice.

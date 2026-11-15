@@ -12,14 +12,14 @@ era: v5
 books: [voices]
 edition: both
 further:
-  - "Border of Lights, the yearly commemoration in Dajabón and Ouanaminthe"
+  - "Border of Lights, the yearly commemoration in Dajabón"
   - "Edwidge Danticat, The Farming of Bones (1998), a novel"
 dispute: "Whether soldiers actually used the word perejil as a test, and how widely, is debated; one account calls the story popular but unconfirmed. Estimates of the dead range from fewer than 1,000 to 30,000."
 sources:
   - {title: "Encyclopaedia Britannica: Parsley Massacre", url: "https://www.britannica.com/event/Parsley-Massacre"}
   - {title: "NPR, Marlon Bishop and Tatiana Fernandez: 80 years on, Dominicans and Haitians revisit painful memories of Parsley Massacre (2017), via MPR News", url: "https://www.mprnews.org/story/2017/10/08/80-years-on-dominicans-and-haitians-revisit-painful-memories-of-parsley-massacre"}
 ---
-In the 1930s the border between the Dominican Republic and Haiti existed mostly on paper. Children crossed it to go to school, ranches spread over it, and Dominicans and Haitians traded, worked and married across it. The dictator Rafael Trujillo wanted the border under Dominican control and the Haitians gone from it.
+In the 1930s the border between the Dominican Republic and Haiti existed mostly on paper. A treaty had fixed the line in the middle of the decade, but the people of the borderland, Dominican and Haitian, still traded, worked and married across it. The dictator Rafael Trujillo wanted the border under Dominican control and the Haitians gone from it.
 
 On 2 October 1937, in the border town of Dajabón, he told supporters that Haitians were stealing their cattle and crops and that he had "already begun to remedy the situation". Over the next five to eight days soldiers killed Haitian men, women and children and Dominicans of Haitian descent, mostly with machetes, so the killing could pass for an uprising of local farmers. Survivors fled across the Massacre River into Haiti. Estimates of the dead vary widely, up to 30,000.
 

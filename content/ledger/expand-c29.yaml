@@ -1,4 +1,4 @@
-# Batch c29 (2026-11-14): facts in card bodies and wow lines, each with two or more independent sources and a verbatim quote.
+# Batch c29 (2026-11-14), revised after the independent check in expand-c29-check.yaml: facts in card bodies and wow lines, each with two or more independent sources and a verbatim quote.
 # Quotes from encyclopediavirginia.org and theodorerooseveltcenter.org were taken through WebFetch (the sites refuse plain curl); the rest from the fetched page text.
 # Dropped details (single-sourced): Walker's coin banks for children and the "of any race" claim (kept only as dispute); Just's "first American at the Kaiser Wilhelm Institute" and pancreatic cancer; Henson built the sledges, Hubbard Medal date (sources disagree: 1988 vs 2000); Taylor's 1895 move date and autobiography year (1928 vs 1929); Rhineland Saarbrücken trial and Erwin Rieger's story; Ota Benga's tobacco-factory work and Gordon's quotation; Nancy Green's medal, bandana and church membership; Owens's horse races and 1972 quotation; the Davis account of the "lunch" spin and the Tillman threat; Weber v. Freed (1915) and the 1916 border projection.
 
@@ -73,7 +73,7 @@
 
 # ernest-everett-just
 - card: ernest-everett-just
-  fact: "Much American biology was done at summer stations such as the Marine Biological Laboratory at Woods Hole, where Just worked summer after summer"
+  fact: "In 1909 he began research at the Marine Biological Laboratory at Woods Hole and returned summer after summer"
   sources:
     - {title: "Embryo Project Encyclopedia: Ernest Everett Just", url: "https://embryo.asu.edu/pages/ernest-everett-just-1883-1941", quote: "involved in research at the Marine Biological Laboratory (MBL) at Woods Hole, Massachusetts"}
     - {title: "Encyclopedia of African-American Culture and History: Just, Ernest", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/just-ernest", quote: "an activity he looked forward to doing each summer at the MBL as a welcome respite from his heavy teaching"}
@@ -83,7 +83,7 @@
     - {title: "Embryo Project Encyclopedia: Ernest Everett Just", url: "https://embryo.asu.edu/pages/ernest-everett-just-1883-1941", quote: "Just was born in Charleston, South Carolina, on 14 August 1883"}
     - {title: "BlackPast: Ernest Everett Just", url: "https://www.blackpast.org/african-american-history/just-ernest-everett-1883-1941/", quote: "Born on August 14, 1883, in Charleston, South Carolina"}
 - card: ernest-everett-just
-  fact: "He graduated from Dartmouth in 1907, magna cum laude (the only one in his class)"
+  fact: "He graduated from Dartmouth in 1907 magna cum laude"
   sources:
     - {title: "Embryo Project Encyclopedia: Ernest Everett Just", url: "https://embryo.asu.edu/pages/ernest-everett-just-1883-1941", quote: "He graduated from Dartmouth in 1907, the only \"magna cum laude\" in his class"}
     - {title: "BlackPast: Ernest Everett Just", url: "https://www.blackpast.org/african-american-history/just-ernest-everett-1883-1941/", quote: "he graduated magna cum laude in biology with a minor in history in 1907"}
@@ -162,13 +162,13 @@
     - {title: "Arlington National Cemetery: Matthew Alexander Henson", url: "https://www.arlingtoncemetery.mil/explore/notable-graves/explorers/matthew-henson", quote: "Both died during Henson's childhood."}
     - {title: "Encyclopedia of African-American Culture and History: Henson, Matthew A.", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/henson-matthew", quote: "When he was still a young child both of his parents died"}
 - card: matthew-henson
-  fact: "At twelve he went to sea as a cabin boy and on board learned to read, write and navigate"
+  fact: "At twelve he went to sea as a cabin boy and on board learned to read and write"
   sources:
     - {title: "Arlington National Cemetery: Matthew Alexander Henson", url: "https://www.arlingtoncemetery.mil/explore/notable-graves/explorers/matthew-henson", quote: "At the age of 12, he went to work as a cabin boy on a merchant ship ... Aboard the ship for six years, he learned how to read, write and navigate."}
     - {title: "Bowdoin College, Peary-MacMillan Arctic Museum: Matthew Henson", url: "https://www.bowdoin.edu/arctic-museum/educational-resources/arctic-biographies/henson.html", quote: "he went to sea at age twelve as cabin boy aboard the Katie Hines"}
     - {title: "National Geographic, James Edward Mills (2014)", url: "https://www.nationalgeographic.com/adventure/article/the-legacy-of-arctic-explorer-matthew-henson", quote: "Henson received an education, learned a variety of technical skills, became a competent sailor"}
 - card: matthew-henson
-  fact: "Peary met him in a Washington hat shop and hired him as valet for a survey in Nicaragua"
+  fact: "Peary met him in a hat shop where Henson worked as a clerk and hired him as valet for a survey in Nicaragua"
   sources:
     - {title: "Arlington National Cemetery: Matthew Alexander Henson", url: "https://www.arlingtoncemetery.mil/explore/notable-graves/explorers/matthew-henson", quote: "while working as a clerk in a Washington, D.C. hat shop, he met Commander Robert E. Peary, who was planning a surveying expedition to Nicaragua. Upon learning of Henson's sailing and navigation experience, Peary hired him as a valet."}
     - {title: "Bowdoin College, Peary-MacMillan Arctic Museum: Matthew Henson", url: "https://www.bowdoin.edu/arctic-museum/educational-resources/arctic-biographies/henson.html", quote: "when Henson's employer at a hat shop recommended him to Peary as a valet on Peary's surveying expedition to Nicaragua."}
@@ -183,7 +183,7 @@
     - {title: "Encyclopedia of African-American Culture and History: Henson, Matthew A.", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/henson-matthew", quote: "While surveying Greenland Henson grew close to the native Inuits, learned the Inuit language, became the expedition's most able dogsled driver"}
     - {title: "Bowdoin College, Peary-MacMillan Arctic Museum: Matthew Henson", url: "https://www.bowdoin.edu/arctic-museum/educational-resources/arctic-biographies/henson.html", quote: "Of Peary's crew, only Henson was fluent in Inuktitut, and could drive a sledge with native prowess."}
 - card: matthew-henson
-  fact: "Of Peary's men he alone spoke Inuktitut fluently"
+  fact: "He spoke Inuktitut fluently"
   sources:
     - {title: "Bowdoin College, Peary-MacMillan Arctic Museum: Matthew Henson", url: "https://www.bowdoin.edu/arctic-museum/educational-resources/arctic-biographies/henson.html", quote: "Of Peary's crew, only Henson was fluent in Inuktitut"}
     - {title: "National Geographic, James Edward Mills (2014)", url: "https://www.nationalgeographic.com/adventure/article/the-legacy-of-arctic-explorer-matthew-henson", quote: "He was fluent in the Inuit language and established a rapport with the native people of the region."}
@@ -234,6 +234,7 @@
   sources:
     - {title: "Encyclopedia of African-American Culture and History: Henson, Matthew A.", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/henson-matthew", quote: "Peary was confronted with the news that Frederick Cook had claimed to have reached the North Pole one year earlier. Thus began a protracted and bitter public controversy over the veracity of each man's claim."}
     - {title: "National Geographic, Anna Brendle (2003)", url: "https://www.nationalgeographic.com/culture/article/profile-african-american-north-pole-explorer-matthew-henson", quote: "National Geographic magazine writer Wally Herbert, in his September 1988 article \"Commander Robert E. Peary: Did He Reach the Pole?\""}
+    - {title: "Christian Science Monitor (27 March 1989)", url: "https://csmonitor.com/1989/0327/dpear-f1.html", quote: "That attitude changed in 1988 when the magazine published an article by British explorer Wally Herbert - who trekked to the pole in 1969 - concluding that Peary fell short by 30 to 60 miles"}
 
 # major-taylor
 - card: major-taylor
@@ -330,14 +331,15 @@
     - {title: "USHMM Holocaust Encyclopedia", url: "https://encyclopedia.ushmm.org/content/en/article/afro-germans-during-the-holocaust", quote: "Most had German citizenship from their unmarried mothers."}
     - {title: "Deutsches Ärzteblatt, Gisela Tascher (2016), quoting the 1947 trial records", url: "https://www.aerzteblatt.de/archiv/175272/", quote: "Es handelte sich hierbei um Personen, die aus einem Geschlechtsverkehr zwischen deutschen Mädchen und Mitgliedern ausländischer Besatzungstruppen ... stammten und die deutsche Staatsangehörige waren."}
 - card: rhineland-sterilisation
-  fact: "As early as 1927 Weimar officials considered sterilising the children"
+  fact: "Already under the Weimar Republic officials considered sterilising the children"
   sources:
     - {title: "Paul Weindling, Am J Public Health 2022", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8802574/", quote: "German state officials had considered compulsory sterilization of the mixed-race children as early as 1927."}
     - {title: "Jüdische Allgemeine (epd), 2023", url: "https://www.juedische-allgemeine.de/allgemein/die-vergessenen-ns-opfer", quote: "Und bereits Beamte der Weimarer Republik prüften eine zwangsweise Sterilisation der Kinder, verwarfen die Idee aber."}
 - card: rhineland-sterilisation
-  fact: "In spring 1937, on a secret order from Hitler, the Gestapo set up Special Commission 3"
+  fact: "In 1937, on a secret order from Hitler, the Gestapo took the sterilisations in hand"
   sources:
     - {title: "Deutsches Ärzteblatt, Gisela Tascher (2016)", url: "https://www.aerzteblatt.de/archiv/175272/", quote: "Im Frühjahr 1937 ordnete der Reichsminister des Innern auf der Grundlage eines streng geheimen „Führerbefehls“ von Adolf Hitler ... die Sterilisation ... im Rahmen einer geheimen Sonderaktion der Gestapo an (4). Daraufhin wurde für diesen Auftrag bei der Gestapo in Berlin die „Sonderkommission 3“ gebildet"}
+    - {title: "Eugenics Archive (University of Alberta), timeline 1937", url: "https://eugenicsarchive.ca/discover/timeline/517300d9eed5c60000000026", quote: "Adolf Hitler orders the sterilization of the Rheinlandbastarde"}
     - {title: "Herrmann and Braun, Kritische Justiz 2010", url: "https://doi.org/10.5771/0023-4834-2010-3-338", quote: "die in von der „Sonderkommission 3“ in einer geheimen, vom Reichskanzleramt beschlossenen Aktion im Jahr 1937 zwangssterilisiert wurden."}
     - {title: "USHMM Holocaust Encyclopedia", url: "https://encyclopedia.ushmm.org/content/en/article/afro-germans-during-the-holocaust", quote: "In the 1930s, a secret Gestapo program coordinated the forced sterilization of the multiracial children in the Rhineland."}
 - card: rhineland-sterilisation
@@ -346,7 +348,7 @@
     - {title: "Deutsches Ärzteblatt, Gisela Tascher (2016)", url: "https://www.aerzteblatt.de/archiv/175272/", quote: "Im Reichsgebiet bildete man drei Kommissionen, die von Beamten der Gestapo geleitet wurden ... gehörten den Kommissionen „anthropologische Gutachter“ an"}
     - {title: "Paul Weindling, Am J Public Health 2022", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8802574/", quote: "In all, 385 \"mixed race\" children aged 13 to 16 years were sterilized in 1937. They were subjected to psychological, anthropological, and genetic evaluations."}
 - card: rhineland-sterilisation
-  fact: "Hundreds were sterilised (at least 385 by the end of 1937; other estimates 400–800)"
+  fact: "Hundreds were sterilised (at least 385 by the end of 1937; the epd report in Jüdische Allgemeine estimates 600–800 victims)"
   sources:
     - {title: "USHMM Holocaust Encyclopedia", url: "https://encyclopedia.ushmm.org/content/en/article/afro-germans-during-the-holocaust", quote: "doctors forcibly sterilized at least 385 children and teenagers by the end of 1937."}
     - {title: "Paul Weindling, Am J Public Health 2022", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8802574/", quote: "persuaded the Nazi public health authorities to sterilize 385 of them."}
@@ -391,7 +393,7 @@
     - {title: "USHMM Holocaust Encyclopedia", url: "https://encyclopedia.ushmm.org/content/en/article/afro-germans-during-the-holocaust", quote: "They were a popular form of entertainment in nineteenth and early twentieth century Europe."}
     - {title: "Encyclopedia Virginia, Ted Delaney: Ota Benga", url: "https://encyclopediavirginia.org/entries/benga-ota-ca-1883-1916/", quote: "from Central Africa to the United States to appear in an exhibit at the Saint Louis World's Fair."}
 - card: ota-benga-1906
-  fact: "Ota Benga, a young Mbuti man from the Congo, was brought to the US in 1904 by the former missionary Samuel Verner for the St. Louis World's Fair"
+  fact: "Ota Benga, a young Mbuti man from the Congo, was brought to the US in 1904 by Samuel Verner for the St. Louis World's Fair"
   sources:
     - {title: "Encyclopedia Virginia, Ted Delaney: Ota Benga", url: "https://encyclopediavirginia.org/entries/benga-ota-ca-1883-1916/", quote: "Samuel Phillips Verner, the former Presbyterian missionary who brought Benga to the United States ... A member of the Mbuti people"}
     - {title: "Wildlife Conservation Society: Understanding Our History", url: "https://www.wcs.org/understanding-our-history", quote: "Samuel Verner, who first forcibly brought Ota Benga to the United States in 1904 to be displayed at the St Louis World's Fair"}
@@ -437,7 +439,7 @@
     - {title: "Food Dive, Megan Poinski (2021)", url: "https://www.fooddive.com/news/aunt-jemima-rebrands-as-pearl-milling-company/594827/", quote: "The former Pearl Milling Company, located in St. Joseph, Missouri, invented the self-rising pancake mix and branded it as Aunt Jemima in 1889."}
     - {title: "NPR (10 February 2021)", url: "https://www.npr.org/2021/02/10/966166648/aunt-jemima-has-a-new-name-pearl-milling-company", quote: "Pearl Milling Company was founded in 1888 in St. Joseph, Missouri, and according to a PepsiCo statement, it created the self-rising pancake mix that became known as Aunt Jemima."}
 - card: aunt-jemima
-  fact: "The name came from 'Old Aunt Jemima', a song of the racist minstrel stage"
+  fact: "The name was taken from the racist minstrel stage"
   sources:
     - {title: "NPR, Alina Selyukh (17 June 2020)", url: "https://www.npr.org/2020/06/17/879104818/aunt-jemima-brand-to-change-name-remove-image-that-quaker-says-is-based-on-a-raci", quote: "Old Aunt Jemima originated as a song of field slaves that was later performed at minstrel shows."}
     - {title: "Food Dive (2021)", url: "https://www.fooddive.com/news/aunt-jemima-rebrands-as-pearl-milling-company/594827/", quote: "The idea for the Aunt Jemima character was originally taken from a minstrel show."}
@@ -478,7 +480,7 @@
     - {title: "NPR, Alina Selyukh (17 June 2020)", url: "https://www.npr.org/2020/06/17/879104818/aunt-jemima-brand-to-change-name-remove-image-that-quaker-says-is-based-on-a-raci", quote: "\"We recognize Aunt Jemima's origins are based on a racial stereotype,\" parent company Quaker Foods says, announcing plans to change the brand's logo and name."}
     - {title: "Food Dive (2021)", url: "https://www.fooddive.com/news/aunt-jemima-rebrands-as-pearl-milling-company/594827/", quote: "When PepsiCo announced it was rebranding Aunt Jemima, the company said it would work with consumers, employees, cultural and subject matter experts"}
 - card: aunt-jemima
-  fact: "In February 2021 the brand became Pearl Milling Company after the original mill; new boxes with a mill instead of a face reached shops in June"
+  fact: "In February 2021 the brand became Pearl Milling Company after the original mill; new boxes with a mill instead of a face were due in shops in June"
   sources:
     - {title: "Food Dive (2021)", url: "https://www.fooddive.com/news/aunt-jemima-rebrands-as-pearl-milling-company/594827/", quote: "will be rebranded as Pearl Milling Company, PepsiCo announced Tuesday ... But instead of a picture of a Black woman, the label will now feature a drawing of an old-fashioned mill on the banks of a river. The new packages are expected to reach shelves in June."}
     - {title: "NPR (10 February 2021)", url: "https://www.npr.org/2021/02/10/966166648/aunt-jemima-has-a-new-name-pearl-milling-company", quote: "Quaker Oats will replace the 130-year-old Aunt Jemima brand and logo in June, one year after it announced plans to do so."}
@@ -519,12 +521,12 @@
 
 # booker-t-dinner-1901
 - card: booker-t-dinner-1901
-  fact: "Booker T. Washington was born into slavery on a Virginia farm in 1856"
+  fact: "Booker T. Washington was born into slavery in Virginia"
   sources:
     - {title: "National Park Service: Booker T. Washington National Monument", url: "https://www.nps.gov/bowa/index.htm", quote: "Booker T. Washington was born a slave in April 1856 on the 207-acre farm of James Burroughs."}
     - {title: "Theodore Roosevelt Center: Booker T. Washington", url: "https://www.theodorerooseveltcenter.org/encyclopedia/race-ethnicity-and-gender/booker-t-washington", quote: "Born into slavery in Virginia, Washington fought hard after the Civil War for an education."}
 - card: booker-t-dinner-1901
-  fact: "After the Civil War he became the first principal of the Tuskegee Institute in Alabama"
+  fact: "After the Civil War he became head of the Tuskegee Institute in Alabama"
   sources:
     - {title: "National Park Service: Booker T. Washington National Monument", url: "https://www.nps.gov/bowa/index.htm", quote: "After the Civil War, Washington became the first principal of Tuskegee Normal and Industrial School."}
     - {title: "Florida Historical Quarterly, John K. Severn (1975)", url: "https://stars.library.ucf.edu/fhq/vol54/iss3/5", quote: "Booker T. Washington, president of Tuskegee Institute in Alabama and the most influential black leader in America"}
@@ -602,6 +604,7 @@
     - {title: "Oregon Theater Project", url: "https://oregontheaterproject.uoregon.edu/node/604", quote: "Johnson's victory was promptly followed by race riots ... in 1910, numerous states and cities banned the screening of the Johnson-Jeffries fight"}
     - {title: "Motion Picture Herald, 20 July 1940 (transcribed)", url: "https://bigvriotsquad.blogspot.com/2019/04/us-prize-fight-ban-off-rko-takes-over.html", quote: "But in some places exhibition of the film occasioned race-riots"}
     - {title: "Reason, Jesse Walker (2018)", url: "https://reason.com/2018/05/25/jack-johnson-fight-films/", quote: "anti-black and anti-boxing crusaders blocked local screenings of a film that showed the match."}
+    - {title: "Library of Congress Research Guides: Jack Johnson vs. James Jeffries", url: "https://guides.loc.gov/chronicling-america-johnson-vs-jeffries", quote: "Johnson's victory in the 15th round ignites both celebrations and race riots in cities across the nation."}
 - card: sims-act-1912
   fact: "The Sims Act of 31 July 1912 made carrying fight films across state lines a crime"
   sources:

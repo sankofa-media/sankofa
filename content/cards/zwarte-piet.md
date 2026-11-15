@@ -27,7 +27,7 @@ sources:
   - {title: "DutchNews.nl: Dutch prime minister tells MPs he has changed his views on Zwarte Piet (June 2020)", url: "https://www.dutchnews.nl/2020/06/dutch-prime-minister-tells-mps-he-has-changed-his-views-on-zwarte-piet/"}
   - {title: "U-Today (University of Twente): What the bleep is... Sinterklaas in 2020?", url: "https://utoday.nl/news/69149/what-the-bleep-is-sinterklaas-in-2020"}
 ---
-Every November the Netherlands stages the arrival of Sinterklaas, the bishop of its children's December feast, with his helpers, the Zwarte Pieten, "Black Petes". For generations Piet was played mostly by white performers in blackface make-up.
+Every November the Netherlands stages the arrival of Sinterklaas, the bishop of its children's December feast, with his helpers, the Zwarte Pieten, "Black Petes". Traditionally Piet was played mostly by white performers in blackface make-up.
 
 On 12 November 2011, at the national arrival of Sinterklaas in Dordrecht, the artist Quinsy Gario and a fellow activist wore T-shirts reading "Zwarte Piet is racisme" and were arrested for disturbing public order. In October 2014 the National Ombudsman ruled that the arrests had been unlawful, disproportionately violent and a breach of their fundamental rights.
 

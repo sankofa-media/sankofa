@@ -14,7 +14,7 @@ edition: f
 pair: washington-mathematicians
 further:
   - "Haynes-Lofton Family Papers, American Catholic History Research Center and University Archives, Catholic University of America"
-  - "Judy Green and Jeanne LaDuke, Pioneering Women in American Mathematics: The Pre-1940 PhD's (2009)"
+  - "Scott W. Williams, Mathematicians of the African Diaspora, University at Buffalo"
 sources:
   - {title: "MacTutor History of Mathematics (St Andrews): Martha Euphemia Lofton Haynes", url: "https://mathshistory.st-andrews.ac.uk/Biographies/Haynes/"}
   - {title: "Catholic University of America: Euphemia Lofton Haynes, Ph.D. 1943", url: "https://engage.catholic.edu/stories/euphemia-lofton-haynes-phd-1943"}

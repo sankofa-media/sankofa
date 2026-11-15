@@ -2,7 +2,7 @@
 id: blackbirds-1926
 kind: work
 title: "Blackbirds (London, 1926–1927)"
-wow: "Florence Mills took her Harlem revue to the London Pavilion, the Prince of Wales reportedly came back more than twenty times, and a year later Harlem lined its streets for her funeral."
+wow: "Florence Mills took her Harlem revue to the London Pavilion, the Prince of Wales came back again and again, and a year later Harlem lined its streets for her funeral."
 years: [1926, 1927]
 places:
   - {name: "London Pavilion, Piccadilly Circus", lat: 51.5101, lon: -0.1340}
@@ -21,10 +21,10 @@ sources:
   - {title: "Contemporary Black Biography (via Encyclopedia.com): Mills, Florence 1896–1927", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/mills-florence-1896-1927"}
   - {title: "Bill Egan, FlorenceMills.com: Biography", url: "http://www.florencemills.com/biography.htm"}
 ---
-Blackbirds was an all-Black revue built around the singer and dancer Florence Mills, and in 1926 it carried her from Harlem to Paris and then to the London Pavilion on Piccadilly Circus. Mills, born in Washington, D.C., in 1896, had become a star in [[shuffle-along|Shuffle Along]] in 1921. She already knew London: in 1923, in the revue Dover Street to Dixie, audiences there had given her an ovation before every song.
+Blackbirds was an all-Black revue built around the singer and dancer Florence Mills, and in 1926 it carried her from Harlem to Paris and then to the London Pavilion on Piccadilly Circus. Mills, born in Washington, D.C., in 1896, had become a star in [[shuffle-along|Shuffle Along]] in 1921. She already knew London: in 1923, in a revue there, audiences had given her an ovation before every song.
 
-Blackbirds opened at Harlem's Alhambra Theatre, then crossed the Atlantic. Her trademark song was "I'm a Little Blackbird Looking for a Bluebird", sung in a high, birdlike voice. London society took up the show and its cast, inviting them to parties, and the Prince of Wales, the future Edward VIII, was said to have seen it more than twenty times.
+Blackbirds opened at Harlem's Alhambra Theatre, then crossed the Atlantic. Her trademark song was "I'm a Little Blackbird Looking for a Bluebird", sung in a high, birdlike voice. London society took up the show and its cast, inviting them to parties, and the Prince of Wales, the future Edward VIII, came to see it again and again.
 
-The schedule wore her out. Seriously ill, she went home in 1927 and died in New York on 1 November, aged 31, after an operation. Harlem gave her the grandest funeral in its memory: thousands filled the church, and crowds estimated at up to 150,000 lined the streets.
+The schedule wore her out. Seriously ill, she went home in 1927 and died in New York on 1 November, aged 31, after an operation. Harlem gave her the largest funeral it had ever seen: thousands filled the church, and crowds estimated at up to 150,000 lined the streets.
 
 A Harlem star had topped the bill in the heart of London's theatre world, and when she died Harlem mourned her as its own.

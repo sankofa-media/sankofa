@@ -2,7 +2,7 @@
 id: dunham-esplanada-1950
 kind: event
 title: "Katherine Dunham and Brazil's first anti-racism law"
-wow: "In July 1950 a luxury hotel in São Paulo refused a room to the dancer Katherine Dunham because she was Black; she told the press, and a year later Brazil had its first law against racial discrimination."
+wow: "In 1950 a luxury hotel in São Paulo refused a room to the dancer Katherine Dunham because she was Black; she told the press, and a year later Brazil had its first law against racial discrimination."
 years: [1950, 1951]
 places:
   - {name: "Hotel Esplanada, São Paulo", lat: -23.5452, lon: -46.6388}
@@ -19,10 +19,12 @@ sources:
   - {title: "American Historical Association, 131st Annual Meeting (2017), Jerry Dávila: Defining and Denouncing Racial Discrimination in Brazil: The Debate Surrounding the Katherine Dunham Case", url: "https://aha.confex.com/aha/2017/webprogram/Paper20947.html"}
   - {title: "NPR, Lulu Garcia-Navarro: Since established in the 1950s, Brazilians say anti-racism laws aren't enough (18 December 2016), transcript", url: "https://www.npr.org/transcripts/506045513"}
   - {title: "Fundação Cultural Palmares: Lei Afonso Arinos completa 61 anos (9 July 2012), via archive.org", url: "https://web.archive.org/web/20130629113518/http://www.palmares.gov.br/2012/07/lei-afonso-arinos-completa-61-anos/"}
+  - {title: "Câmara dos Deputados: Lei nº 1.390, de 3 de julho de 1951, publicação original", url: "https://www2.camara.leg.br/legin/fed/lei/1950-1959/lei-1390-3-julho-1951-361802-publicacaooriginal-1-pl.html"}
+  - {title: "Câmara dos Deputados: Constituição de 1988, publicação original (art. 5, XLII)", url: "https://www2.camara.leg.br/legin/fed/consti/1988/constituicao-1988-5-outubro-1988-322142-publicacaooriginal-1-pl.html"}
   - {title: "Encyclopaedia Britannica: Katherine Dunham", url: "https://www.britannica.com/biography/Katherine-Dunham"}
   - {title: "BlackPast, Erica Anderson: Katherine Dunham (1909–2006) (2007)", url: "https://blackpast.org/african-american-history/dunham-katherine-1909-2006/"}
 ---
-In 1950 Brazil had never written segregation into law, and many Brazilians believed that racism was an American problem rather than their own, though slavery had ended there only in 1888. That July the American dancer, choreographer and anthropologist Katherine Dunham, who had built her art on fieldwork among the dances of the Caribbean, came to São Paulo to perform at the Municipal Theatre. The Esplanada, the luxury hotel next door, refused to give her a room because she was Black.
+In 1950 Brazil had never written segregation into law, and many Brazilians believed that racism was an American problem rather than their own, though slavery had ended there only in 1888. That year the American dancer, choreographer and anthropologist Katherine Dunham, who had built her art on fieldwork among the dances of the Caribbean, came to São Paulo to perform at the Municipal Theatre. The Esplanada, the luxury hotel next door, refused to give her a room because she was Black.
 
 Dunham did not keep quiet. She told reporters, and the story exploded in the press; the sociologist Gilberto Freyre, the great champion of Brazil's image of racial harmony, joined the protest. The congressman Afonso Arinos drafted a bill against racial discrimination, and in July 1951 President Getúlio Vargas signed it as Law 1.390. Turning a customer away from a shop or a hotel because of race or colour became a punishable offence.
 

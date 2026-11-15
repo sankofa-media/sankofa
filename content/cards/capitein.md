@@ -21,11 +21,11 @@ sources:
   - {title: "Nikolaus Wirth, BlackPast.org: Jacobus Elisa Johannes Capitein (ca. 1717-1747) (2007)", url: "https://blackpast.org/global-african-history/capitein-jacobus-elisa-johannes-1717-1747/"}
   - {title: "Dictionary of African Christian Biography: Capitein, Jacobus (A)", url: "https://dacb.org/stories/ghana/capitein-jacobus/"}
   - {title: "Dictionary of African Christian Biography: Capitein, Jacobus (C)", url: "https://dacb.org/stories/ghana/capitein-jacobus3/"}
-  - {title: "Jos Damen, Leiden University, Top 450: The story of Jacobus Capitein", url: "https://top450.universiteitleiden.nl/en/"}
+  - {title: "Jos Damen, Leiden University, Top 450: The story of Jacobus Capitein", url: "https://top450.universiteitleiden.nl/en/items/het-verhaal-van-jacobus-capitein"}
 ---
 In the early eighteenth century the Dutch West India Company held the castle of Elmina on the Gold Coast, today's Ghana. A boy born on that coast around 1717 was sold into slavery at about seven. The slave trader Arnold Steenhart gave him to a friend, the Company man Jacob van Goch, and in 1728 van Goch took him to Middelburg in the Netherlands, where slavery did not exist. The boy was called Jacobus Capitein.
 
-He grew up in The Hague, studied at its Latin School, was baptised and in 1737 entered Leiden University. In 1742 he defended a Latin dissertation there. Its question was whether slavery is compatible with Christian freedom, and his answer was that it is. It won him wide attention among theologians and among those who traded in slaves.
+He grew up in The Hague, studied at its Latin School, was baptised and in 1737 entered Leiden University. In 1742 he defended a Latin dissertation there. Its question was whether slavery is compatible with Christian freedom, and his answer was that it is. It won him wide attention among theologians and made him useful to those who defended the slave trade.
 
 That year he sailed back to Elmina as the Company's minister and schoolmaster. He started a school and put the Lord's Prayer and the Ten Commandments into Fante. But he found little support from the Company or from the church authorities in Amsterdam. He died at Elmina in February 1747, about thirty years old.
 

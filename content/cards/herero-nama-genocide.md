@@ -5,7 +5,7 @@ title: The Herero and Nama genocide
 wow: "In 1904 a German general ordered the Herero of Namibia exterminated and drove them into the desert; Germany officially called what followed a genocide only in May 2021."
 years: [1904, 2021]
 places:
-  - {name: "Waterberg (Ohamakari), Namibia", lat: -20.5, lon: 17.2333}
+  - {name: "Waterberg, Namibia", lat: -20.5, lon: 17.2333}
   - {name: "Shark Island, Lüderitz, Namibia", lat: -26.6420, lon: 15.1530}
   - {name: "Berlin", lat: 52.5200, lon: 13.4050}
 zoom: 2
@@ -25,6 +25,6 @@ sources:
 ---
 Germany took what is now Namibia in 1884 and called it German South West Africa. Settlers took the land and cattle of the Herero and the Nama, herding peoples. In 1904 the Herero rose against German rule, and the Nama soon followed.
 
-General Lothar von Trotha, sent to crush the rising, met the main Herero force at the Waterberg on 11 August 1904 with orders to take no prisoners. Those who escaped were driven into the Omaheke, part of the Kalahari, where thousands died of thirst and hunger, and von Trotha ordered that any Herero found inside the colony be shot. Survivors of both peoples were put in concentration camps, among them one on Shark Island at Lüderitz, and worked as forced labour; many died there. By the end, most of the Herero and at least half of the Nama were dead; the exact toll is disputed. Skulls of victims were shipped to Germany for race science, and some came back only in 2018.
+General Lothar von Trotha, sent to crush the rising, met the main Herero force at the Waterberg on 11 August 1904 with orders to take no prisoners. Those who escaped were driven into the Kalahari desert, where thousands died of thirst and hunger, and von Trotha ordered that any Herero found inside the colony be shot. Survivors of both peoples were put in concentration camps, among them one on Shark Island at Lüderitz, and worked as forced labour; many died there. By the end, most of the Herero and at least half of the Nama were dead; the exact toll is disputed. Skulls of victims were shipped to Germany for race science; in 2018 Germany returned some of them.
 
-For decades Berlin acknowledged the atrocities but ruled out reparations. On 28 May 2021 Foreign Minister Heiko Maas said Germany would now call the events a genocide and ask forgiveness, offering 1.1 billion euros for development over 30 years, a gesture, it said, and not legal compensation.
+Berlin had long acknowledged the atrocities but ruled out reparations. On 28 May 2021 Foreign Minister Heiko Maas said Germany would now call the events a genocide and ask forgiveness, offering 1.1 billion euros for development over 30 years, a gesture, it said, and not legal compensation.

@@ -2,6 +2,7 @@
 # strange-fruit, precious-lord, tutti-frutti, within-our-gates, aspects-of-negro-life,
 # fire-1926, negro-world, shuffle-along, revue-negre, blackbirds-1926.
 # Each fact has >= 2 independent sources with a supporting quote; '...' marks elided text, [brackets] mark editorial notes.
+# Revised after the second check (expand-c18-check.yaml): unconfirmed facts removed, corrected facts reworded, new facts added.
 - card: strange-fruit
   fact: "Abel Meeropol, the author, was a Jewish high-school teacher from the Bronx"
   sources:
@@ -14,11 +15,11 @@
     - {title: "Britannica: Strange Fruit (song)", url: "https://www.britannica.com/topic/Strange-Fruit-song", quote: "Under his pen name Lewis Allan, Meeropol wrote “Bitter Fruit”"}
     - {title: "PBS American Masters: The story behind Billie Holiday's Strange Fruit", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-billie-holidays-strange-fruit/17738", quote: "writing under the pen name Lewis Allan"}
 - card: strange-fruit
-  fact: "He was moved by a photograph of the August 1930 lynching of two Black teenagers, Thomas Shipp and Abram Smith, in Marion, Indiana, showing their bodies hanging above a white crowd"
+  fact: "He was moved by a photograph of the 7 August 1930 lynching of two Black teenagers, Thomas Shipp and Abram Smith, in Marion, Indiana, their bodies hanging above a white crowd"
   sources:
     - {title: "Britannica: Strange Fruit (song)", url: "https://www.britannica.com/topic/Strange-Fruit-song", quote: "The photograph that moved him to write the poem was of the August 7, 1930, lynching of 18-year-old Thomas Shipp and 19-year-old Abram Smith. The shocking image shows the bodies of the teenagers hanging from a tree branch, with a crowd of white men and women surrounding the tree."}
+    - {title: "Adam Rozen-Wheeler, BlackPast: Marion, Indiana Lynching (1930)", url: "https://www.blackpast.org/african-american-history/marion-indiana-lynching-1930/", quote: "On August 7, 1930, a mob of ten to fifteen thousand whites abducted three young black men from the jail in Marion, Indiana, lynching Thomas Shipp and Abram Smith. ... The iconic photograph of the incident inspired Abel Meeropol to write the poem and song “Strange Fruit,”"}
     - {title: "PBS American Masters: The story behind Billie Holiday's Strange Fruit", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-billie-holidays-strange-fruit/17738", quote: "after seeing a photo depicting the lynching of two Black teens in Indiana in 1930"}
-    - {title: "Biography.com: Billie Holiday and Strange Fruit", url: "https://www.biography.com/news/billie-holiday-strange-fruit", quote: "a 1930 photo that captured the lynching of two Black men in Indiana"}
 - card: strange-fruit
   fact: "The poem, first called \"Bitter Fruit\", was published in 1937 in The New York Teacher, a union magazine"
   sources:
@@ -31,11 +32,11 @@
     - {title: "Britannica: Strange Fruit (song)", url: "https://www.britannica.com/topic/Strange-Fruit-song", quote: "Meeropol composed music to accompany his poem"}
     - {title: "PBS American Masters: The story behind Billie Holiday's Strange Fruit", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-billie-holidays-strange-fruit/17738", quote: "before Meeropol decided to turn the poem into lyrics and set it to music"}
 - card: strange-fruit
-  fact: "In 1939 the 23-year-old Billie Holiday began singing it at Café Society in Greenwich Village, New York's first integrated nightclub"
+  fact: "In 1939 the 23-year-old Billie Holiday took it into her set at Café Society in Greenwich Village, an integrated nightclub"
   sources:
     - {title: "Britannica: Strange Fruit (song)", url: "https://www.britannica.com/topic/Strange-Fruit-song", quote: "At first, the 23-year-old Holiday was apprehensive about performing “Strange Fruit.” ... when she began singing it at Café Society in 1939, her audiences were awestruck"}
+    - {title: "Library of Congress blog: The Power of a Poem (2015)", url: "https://blogs.loc.gov/loc/2015/04/the-power-of-a-poem/", quote: "gave it to the owner of Café Society, an integrated cabaret club in New York’s Greenwich Village"}
     - {title: "Biography.com: Billie Holiday and Strange Fruit", url: "https://www.biography.com/news/billie-holiday-strange-fruit", quote: "In March 1939, a 23-year-old Billie Holiday walked up to the mic at West 4th's Cafe Society"}
-    - {title: "PBS American Masters: The story behind Billie Holiday's Strange Fruit", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-billie-holidays-strange-fruit/17738", quote: "working at New York's first integrated nightclub, Café Society in Greenwich Village"}
 - card: strange-fruit
   fact: "She feared harassment and violence, but audiences were stunned"
   sources:
@@ -48,10 +49,10 @@
     - {title: "PBS American Masters: The story behind Billie Holiday's Strange Fruit", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-billie-holidays-strange-fruit/17738", quote: "prompted Holiday to close out every performance with the song. Ahead of time, the waiters would stop serving so there was a deathly silence in the room, then a spotlight would shine on Holiday’s face"}
     - {title: "Biography.com: Billie Holiday and Strange Fruit", url: "https://www.biography.com/news/billie-holiday-strange-fruit", quote: "the room went completely black, save for a spotlight on her face ... there was no encore"}
 - card: strange-fruit
-  fact: "Columbia would not record it, fearing Southern record shops and radio, so she recorded it for the small Commodore label"
+  fact: "Columbia would not record it, fearing a backlash, so she recorded it for the independent Commodore label"
   sources:
     - {title: "Britannica: Strange Fruit (song)", url: "https://www.britannica.com/topic/Strange-Fruit-song", quote: "Columbia declined, fearing the reactions of Southern record retailers and radio stations, but allowed her to record it on the independent Commodore label"}
-    - {title: "PBS American Masters: The story behind Billie Holiday's Strange Fruit", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-billie-holidays-strange-fruit/17738", quote: "Commodore Records who recorded the song with Holiday and the Café Society Band in 1939"}
+    - {title: "PBS American Masters: The story behind Billie Holiday's Strange Fruit", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-billie-holidays-strange-fruit/17738", quote: "Holiday later approached her regular record label, Columbia, about recording the song, but was told they didn’t want to take the risk of backlash. So, she went instead with independent jazz label Commodore Records"}
 - card: strange-fruit
   fact: "The record sold more than a million copies"
   sources:
@@ -89,12 +90,12 @@
   sources:
     - {title: "New Georgia Encyclopedia: Georgia Tom Dorsey", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/georgia-tom-dorsey-1899-1993/", quote: "In 1932 Dorsey’s wife, Nettie Harper, died during childbirth, and their son died the following day."}
     - {title: "Kathryn Kemp, Christianity Today / Christian History: The Father of Gospel Music Wanted to Be a Secular Star (2018)", url: "https://www.christianitytoday.com/2018/05/father-gospel-music-thomas-dorsey/", quote: "his wife had just died in childbirth. His infant son died the next day."}
-    - {title: "PBS, This Far by Faith: Thomas Dorsey", url: "https://www.pbs.org/thisfarbyfaith/people/thomas_dorsey.html", quote: "in August 1932, Dorseys life was thrown into crisis when his wife and son died during childbirth"}
+    - {title: "PBS, This Far by Faith: Thomas Dorsey", url: "https://www.pbs.org/thisfarbyfaith/people/thomas_dorsey.html", quote: "in August 1932, Dorsey’s life was thrown into crisis when his wife and son died during childbirth"}
 - card: precious-lord
-  fact: "On the Saturday after her death he sat at a piano with his friend Theodore Frye and the song came"
+  fact: "On the Saturday after her death, with his friend Theodore Frye, Dorsey sat down at a piano and the song came"
   sources:
     - {title: "Kathryn Kemp, Christianity Today / Christian History: The Father of Gospel Music Wanted to Be a Secular Star (2018)", url: "https://www.christianitytoday.com/2018/05/father-gospel-music-thomas-dorsey/", quote: "The following Saturday after Nettie’s death, Dorsey met up with his friend Theodore Frye. There, he later said, God gave him the words and melody"}
-    - {title: "C. Michael Hawn, History of Hymns: Precious Lord, Take My Hand (UMC Discipleship Ministries, 2014)", url: "https://www.umcdiscipleship.org/resources/history-of-hymns-precious-lord-take-my-hand", quote: "On the following Saturday evening he took me up to Malone’s Poro College ... I sat down at the piano"}
+    - {title: "C. Michael Hawn, History of Hymns: Precious Lord, Take My Hand (UMC Discipleship Ministries, 2014)", url: "https://www.umcdiscipleship.org/resources/history-of-hymns-precious-lord-take-my-hand", quote: "especially a friend, Professor Frye, who seemed to know what I needed. On the following Saturday evening he took me up to Malone’s Poro College, a neighborhood music school. ... I sat down at the piano"}
 - card: precious-lord
   fact: "He set new words to an old hymn tune by George Allen sung to \"Must Jesus Bear the Cross Alone\""
   sources:
@@ -112,10 +113,10 @@
     - {title: "National Civil Rights Museum: Ben Branch", url: "https://civilrightsmuseum.org/blog/ben-branch/", quote: "Branch’s instrumental rendition of this gospel song was one of MLK’s favorites"}
     - {title: "Ernie Suggs, Atlanta Journal-Constitution: Last moments of Martin Luther King filled with normalcy (2018)", url: "https://www.ajc.com/news/last-moments-martin-luther-king-filled-with-normalcy/gzRKKQF2EfRGu44opcUxPO/", quote: "one of his favorite songs, \"Precious Lord, Take My Hand,\""}
 - card: precious-lord
-  fact: "On 4 April 1968, from the Lorraine Motel balcony in Memphis, King asked Ben Branch to play it at that night's meeting; minutes later he was shot"
+  fact: "On 4 April 1968 at the Lorraine Motel in Memphis King asked Ben Branch to play it, especially well, at that night's meeting; minutes later he was shot on the balcony"
   sources:
-    - {title: "National Civil Rights Museum: Ben Branch", url: "https://civilrightsmuseum.org/blog/ben-branch/", quote: "King had asked Branch to play “Precious Lord, Take My Hand” at a rally later that day ... Just minutes after this conversation, an assassin’s bullet would take Dr. King’s life on the balcony of the Lorraine Motel."}
-    - {title: "Ernie Suggs, Atlanta Journal-Constitution: Last moments of Martin Luther King filled with normalcy (2018)", url: "https://www.ajc.com/news/last-moments-martin-luther-king-filled-with-normalcy/gzRKKQF2EfRGu44opcUxPO/", quote: "From his second-floor balcony of the Lorraine Motel in Memphis, he spo tted Ben Branch ... and asked that he play it at the meeting that night, \"real pretty.\""}
+    - {title: "National Civil Rights Museum: Ben Branch", url: "https://civilrightsmuseum.org/blog/ben-branch/", quote: "King had asked Branch to play “Precious Lord, Take My Hand” at a rally later that day ... “Play that song tonight – I want you to play it like you’ve never played it before in your life,” Branch remembered ... Just minutes after this conversation, an assassin’s bullet would take Dr. King’s life on the balcony of the Lorraine Motel."}
+    - {title: "Ernie Suggs, Atlanta Journal-Constitution: Last moments of Martin Luther King filled with normalcy (2018)", url: "https://www.ajc.com/news/last-moments-martin-luther-king-filled-with-normalcy/gzRKKQF2EfRGu44opcUxPO/", quote: "King remembered how beautifully Branch had once played one of his favorite songs, \"Precious Lord, Take My Hand,\" and asked that he play it at the meeting that night, \"real pretty.\""}
     - {title: "Stanford King Institute: Assassination of Martin Luther King, Jr.", url: "https://kinginstitute.stanford.edu/assassination-martin-luther-king-jr", quote: "At 6:05 P.M. on Thursday, 4 April 1968, Martin Luther King was shot dead while standing on a balcony outside his second-floor room at the Lorraine Motel in Memphis, Tennessee."}
 - card: precious-lord
   fact: "Ben Branch was a bandleader"
@@ -148,11 +149,12 @@
     - {title: "Cary O'Dell, Library of Congress National Recording Registry essay: Tutti Frutti", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/TuttiFrutti.pdf", quote: "The couple of songs he recorded and released for them however obtained little attention."}
     - {title: "Britannica: Little Richard", url: "https://www.britannica.com/biography/Little-Richard", quote: "His first recordings in the early 1950s, produced in the soothing jump-blues style of Roy Brown, showed none of the soaring vocal reach"}
 - card: tutti-frutti
-  fact: "On 14 September 1955 he recorded at J&M Studio in New Orleans for Specialty with producer Bumps Blackwell; the session was going badly"
+  fact: "In September 1955 he recorded at J&M Studio in New Orleans for Specialty with producer Bumps Blackwell; the session was going badly"
   sources:
-    - {title: "Cary O'Dell, Library of Congress National Recording Registry essay: Tutti Frutti", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/TuttiFrutti.pdf", quote: "One particular recording session, this one on September 14, 1955 was, typically, not going well."}
     - {title: "Library of Congress National Recording Registry essay (Masino): Tutti Frutti", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Tutti-Frutti_Masino.pdf", quote: "In September of 1955, Little Richard recorded “Tutti Frutti” in a session at J&M Studio in New Orleans ... Produced by Robert “Bumps” Blackwell"}
     - {title: "Britannica: Little Richard", url: "https://www.britannica.com/biography/Little-Richard", quote: "His breakthrough came in September 1955 at a recording session at J & M Studio in New Orleans"}
+    - {title: "Cary O'Dell, Library of Congress National Recording Registry essay: Tutti Frutti", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/TuttiFrutti.pdf", quote: "One particular recording session, this one on September 14, 1955 was, typically, not going well."}
+    - {title: "Rolling Stone: Little Richard, 20 Essential Songs — Tutti-Frutti (1955)", url: "https://www.rollingstone.com/music/music-lists/little-richard-20-essential-songs-15792/tutti-frutti-1955-209077/", quote: "during a break in an unproductive recording session"}
 - card: tutti-frutti
   fact: "During a break he played an obscene number from his club act"
   sources:
@@ -182,15 +184,11 @@
     - {title: "Cary O'Dell, Library of Congress National Recording Registry essay: Tutti Frutti", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/TuttiFrutti.pdf", quote: "Pat Boone’s version of “Tutti Frutti” hit the charts in February 1956 and climbed all the way up to number 12"}
     - {title: "Rolling Stone: Pat Boone Remembers Little Richard (2020)", url: "https://www.rollingstone.com/music/music-features/pat-boone-little-richard-997029/", quote: "his “Tutti Frutti” was far more embraced on pop radio, hitting Number 12"}
 - card: tutti-frutti
-  fact: "Boone changed the lyrics further"
-  sources:
-    - {title: "Rolling Stone: Pat Boone Remembers Little Richard (2020)", url: "https://www.rollingstone.com/music/music-features/pat-boone-little-richard-997029/", quote: "So I changed it to “pretty little Susie is the gal for me.”"}
-    - {title: "Cary O'Dell, Library of Congress National Recording Registry essay: Tutti Frutti", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/TuttiFrutti.pdf", quote: "Boone’s version had slightly better diction but considerably less free-for-all passion"}
-- card: tutti-frutti
-  fact: "Remaking Black records for white audiences was common in the 1950s and showed how segregated the business was"
+  fact: "In the 1950s white singers often re-recorded Black hits for white audiences, and Boone's success was a sign of how segregated the business was"
   sources:
     - {title: "Cary O'Dell, Library of Congress National Recording Registry essay: Tutti Frutti", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/TuttiFrutti.pdf", quote: "it was much more common in the 1950s, especially the practice of remaking “black” records for white audiences by having them recorded by white artists"}
     - {title: "Rolling Stone: Pat Boone Remembers Little Richard (2020)", url: "https://www.rollingstone.com/music/music-features/pat-boone-little-richard-997029/", quote: "In a sign of how segregated the music business was at the time"}
+    - {title: "Library of Congress National Recording Registry essay (Masino): Tutti Frutti", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Tutti-Frutti_Masino.pdf", quote: "for many years the white singer Pat Boone would record Richard’s hits and chart successfully with his own predominately white audiences"}
 - card: tutti-frutti
   fact: "Elvis Presley covered it too"
   sources:
@@ -222,7 +220,7 @@
     - {title: "Britannica: Oscar Micheaux", url: "https://www.britannica.com/biography/Oscar-Micheaux", quote: "In 1917 he was approached by an African American film company for movie rights to The Homesteader . He refused the offer but liked the idea and made his own film version"}
     - {title: "Brian Meacham, Yale Film Archive: Film Notes, Within Our Gates", url: "https://web.library.yale.edu/node/173201", quote: "attracted the attention of the Lincoln Motion Picture Company ... so Micheaux set about turning the book into a film on his own"}
 - card: within-our-gates
-  fact: "His second feature answered Griffith's The Birth of a Nation"
+  fact: "Within Our Gates answered Griffith's The Birth of a Nation"
   sources:
     - {title: "AFI Catalog: Within Our Gates (1920)", url: "https://catalog.afi.com/Film/2186-WITHIN-OURGATES", quote: "Various sources, including the Library of Congress, described the film as Micheaux’s response to D. W. Griffith’s The Birth of a Nation (1915"}
     - {title: "Smithsonian Magazine: Watch the oldest-known surviving film by an African-American director", url: "https://www.smithsonianmag.com/smart-news/watch-oldest-known-surviving-film-african-american-director-180962035/", quote: "In response, Micheaux made Within Our Gates"}
@@ -238,7 +236,7 @@
     - {title: "Jeff Stafford, TCM: Within Our Gates (1920)", url: "https://www.tcm.com/articles/silent/86539/within-our-gates-1920", quote: "it contained a scene in which a black man is lynched by a white mob"}
     - {title: "Brian Meacham, Yale Film Archive: Film Notes, Within Our Gates", url: "https://web.library.yale.edu/node/173201", quote: "The film’s depiction of a brutal lynching in a flashback sequence"}
 - card: within-our-gates
-  fact: "Chicago's censor board took two months to pass it; it opened in Chicago in January 1920"
+  fact: "Chicago's censors at first refused to pass the film; it opened in Chicago after a delay"
   sources:
     - {title: "AFI Catalog: Within Our Gates (1920)", url: "https://catalog.afi.com/Film/2186-WITHIN-OURGATES", quote: "The film was scheduled to open on 12 Jan 1920 at Hammond’s Vendome Theatre in Chicago ... The past two months had reportedly been spent getting approval from the Chicago Censor Board."}
     - {title: "Jeff Stafford, TCM: Within Our Gates (1920)", url: "https://www.tcm.com/articles/silent/86539/within-our-gates-1920", quote: "At first the film, which eventually had its premiere in Chicago, was rejected by the Chicago Board of Movie Censors"}
@@ -253,27 +251,22 @@
     - {title: "Jeff Stafford, TCM: Within Our Gates (1920)", url: "https://www.tcm.com/articles/silent/86539/within-our-gates-1920", quote: "white theatre owners in the south who catered to black patronage were also offended by Within Our Gates and refused to book it"}
     - {title: "Smithsonian Magazine: Watch the oldest-known surviving film by an African-American director", url: "https://www.smithsonianmag.com/smart-news/watch-oldest-known-surviving-film-african-american-director-180962035/", quote: "Southern movie theaters boycotted the film"}
 - card: within-our-gates
-  fact: "It was thought lost for decades until a print titled La Negra was identified in the Filmoteca Española in Madrid"
+  fact: "It was lost for decades until a single print titled La Negra turned up in the Filmoteca Española in Madrid"
   sources:
     - {title: "Brian Meacham, Yale Film Archive: Film Notes, Within Our Gates", url: "https://web.library.yale.edu/node/173201", quote: "The film was thought lost for decades, until a film scholar identified a print titled LA NEGRA held in the Filmoteca Española in Madrid"}
     - {title: "Smithsonian Magazine: Watch the oldest-known surviving film by an African-American director", url: "https://www.smithsonianmag.com/smart-news/watch-oldest-known-surviving-film-african-american-director-180962035/", quote: "Within Our Gates was presumed as lost for decades, until that single print called La Negra was discovered in Spain."}
     - {title: "Blackbird (VCU): Oscar Micheaux's Within Our Gates", url: "https://blackbird.vcu.edu/v14n1/gallery/micheaux_o/micheaux.shtml", quote: "The film was thought lost until a single surviving print, under the title La Negra , was found in an archive in Madrid."}
 - card: within-our-gates
-  fact: "It came to the Library of Congress in 1990 and was restored in 1993"
+  fact: "It came to the Library of Congress in 1990 and was restored there"
   sources:
     - {title: "Brian Meacham, Yale Film Archive: Film Notes, Within Our Gates", url: "https://web.library.yale.edu/node/173201", quote: "That print was repatriated to the Library of Congress in 1990 and subsequently preserved."}
-    - {title: "AFI Catalog: Within Our Gates (1920)", url: "https://catalog.afi.com/Film/2186-WITHIN-OURGATES", quote: "was preserved by the Library of Congress’ Motion Picture, Broadcasting and Recorded Sound Division in 1993 from a single surviving print"}
     - {title: "Jeff Stafford, TCM: Within Our Gates (1920)", url: "https://www.tcm.com/articles/silent/86539/within-our-gates-1920", quote: "a copy was discovered in the Spanish Film Archive in Madrid in 1990"}
+    - {title: "Blackbird (VCU): Oscar Micheaux's Within Our Gates", url: "https://blackbird.vcu.edu/v14n1/gallery/micheaux_o/micheaux.shtml", quote: "The Library of Congress restored the print and translated the intertitles from Spanish back into English in the 1990s."}
 - card: within-our-gates
-  fact: "Only four original English intertitles survived; the rest were translated back from Spanish"
+  fact: "The original English intertitles were almost all lost and were translated back from Spanish"
   sources:
     - {title: "AFI Catalog: Within Our Gates (1920)", url: "https://catalog.afi.com/Film/2186-WITHIN-OURGATES", quote: "The original English intertitles remain lost, except in four cases"}
     - {title: "Blackbird (VCU): Oscar Micheaux's Within Our Gates", url: "https://blackbird.vcu.edu/v14n1/gallery/micheaux_o/micheaux.shtml", quote: "The Library of Congress restored the print and translated the intertitles from Spanish back into English in the 1990s."}
-- card: within-our-gates
-  fact: "It shows lynching from the perspective of its Black victims"
-  sources:
-    - {title: "Smithsonian Magazine: Watch the oldest-known surviving film by an African-American director", url: "https://www.smithsonianmag.com/smart-news/watch-oldest-known-surviving-film-african-american-director-180962035/", quote: "Like The Birth of a Nation , it portrays a lynching and racial violence—but from a black perspective."}
-    - {title: "Brian Meacham, Yale Film Archive: Film Notes, Within Our Gates", url: "https://web.library.yale.edu/node/173201", quote: "a fascinating and cogent response to the racist accusations of Griffith"}
 - card: aspects-of-negro-life
   fact: "Douglas painted the four-mural cycle in 1934 for the 135th Street branch of the NYPL, now the Schomburg Center"
   sources:
@@ -312,22 +305,22 @@
     - {title: "National Humanities Center, The Making of African American Identity: Aaron Douglas, Song of the Towers", url: "https://nationalhumanitiescenter.org/pds/maai3/migrations/text9/text9read.htm", quote: "The murals outline black history from its African roots through the Great Migration."}
     - {title: "Living New Deal: Schomburg Center, Douglas Murals (quoting Treasures of The New York Public Library)", url: "https://livingnewdeal.org/sites/schomburg-center-douglas-murals-new-york-ny/", quote: "Douglas painted these murals to reflect African and African American history, the African American present, and his vision of a promising future."}
 - card: aspects-of-negro-life
-  fact: "His style used stylised, geometric forms drawing on African sculpture, jazz, dance and cubism"
+  fact: "His style used stylised, geometric forms drawing on African art and cubism"
   sources:
-    - {title: "Living New Deal: Schomburg Center, Douglas Murals (quoting Treasures of The New York Public Library)", url: "https://livingnewdeal.org/sites/schomburg-center-douglas-murals-new-york-ny/", quote: "graphically incisive motifs and the dynamic incorporation of such influences as African sculpture, jazz music, dance, and abstract geometric forms"}
+    - {title: "Living New Deal: Schomburg Center, Douglas Murals (quoting Treasures of The New York Public Library)", url: "https://livingnewdeal.org/sites/schomburg-center-douglas-murals-new-york-ny/", quote: "the dynamic incorporation of such influences as African sculpture, jazz music, dance, and abstract geometric forms"}
     - {title: "Britannica: Aaron Douglas", url: "https://www.britannica.com/biography/Aaron-Douglas", quote: "Douglas incorporated synthetic cubist forms with stylized and geometric shapes drawn from African art ."}
 - card: aspects-of-negro-life
-  fact: "In Song of the Towers concentric circles fill the centre (rings of light in the wow)"
+  fact: "In Song of the Towers concentric circles fill the centre"
   sources:
     - {title: "National Humanities Center, The Making of African American Identity: Aaron Douglas, Song of the Towers", url: "https://nationalhumanitiescenter.org/pds/maai3/migrations/text9/text9read.htm", quote: "Dominating its center is a series of concentric circles, framed by jutting rectangular prisms."}
-    - {title: "Britannica: Aaron Douglas", url: "https://www.britannica.com/biography/Aaron-Douglas", quote: "He used the rhythm of circles, diagonals, and wavy lines to energize his illustrations"}
+    - {title: "Living New Deal: Schomburg Center, Douglas Murals (quoting Treasures of The New York Public Library)", url: "https://livingnewdeal.org/sites/schomburg-center-douglas-murals-new-york-ny/", quote: "Standing on the wheel of life in the center of the composition, a saxophonist"}
 - card: aspects-of-negro-life
-  fact: "A saxophonist at the centre raises his instrument before the city, expressing the creativity and freedom of the 1920s and the migration north"
+  fact: "A saxophonist stands at the centre before the city, expressing the creativity and freedom of the 1920s and the migration north"
   sources:
     - {title: "National Humanities Center, The Making of African American Identity: Aaron Douglas, Song of the Towers", url: "https://nationalhumanitiescenter.org/pds/maai3/migrations/text9/text9read.htm", quote: "more prominent in the mural's center is a saxophone player, with his instrument and free hand raised aloft. Placed before the city"}
     - {title: "Living New Deal: Schomburg Center, Douglas Murals (quoting Treasures of The New York Public Library)", url: "https://livingnewdeal.org/sites/schomburg-center-douglas-murals-new-york-ny/", quote: "It is symbolic of the migration of African peoples from the rural South and the Caribbean to the urban industrial centers of the North just after World War I. Standing on the wheel of life in the center of the composition, a saxophonist expresses the creativity of the 1920s and the freedom"}
 - card: aspects-of-negro-life
-  fact: "Douglas left New York in 1939 to build Fisk University's art department"
+  fact: "Douglas left New York in 1939 to teach at Fisk University"
   sources:
     - {title: "Britannica: Aaron Douglas", url: "https://www.britannica.com/biography/Aaron-Douglas", quote: "By 1939, Douglas had left New York City to teach at Fisk University"}
     - {title: "Kansas Historical Society, Kansapedia: Aaron Douglas", url: "https://www.kshs.org/kansapedia/aaron-douglas/12036", quote: "in 1939 when Charles S. Johnson, the first African American president of Fisk University, invited him to develop Fisk's art department"}
@@ -338,11 +331,11 @@
     - {title: "Britannica: Aaron Douglas", url: "https://www.britannica.com/biography/Aaron-Douglas", quote: "Collectively titled Aspects of Negro Life , these murals represent the pinnacle of his artistic achievement"}
     - {title: "New Deal Art Registry: Schomburg Center for Research in Black Culture", url: "https://newdealartregistry.org/map/SchomburgCenterForResearchInBlackCulture/NewYork/NY", quote: "Location: Research and Reference Room"}
 - card: fire-1926
-  fact: "In summer 1926 Thurman, Hurston, Douglas, Davis, Nugent, Bennett and Hughes decided to publish a Negro quarterly of the arts"
+  fact: "In 1926 Thurman, Hurston, Douglas, Davis, Nugent, Bennett and Hughes set out to publish what Hughes called a Negro quarterly of the arts"
   sources:
     - {title: "Langston Hughes, The Big Sea (1940), part III: Black Renaissance (Toronto Metropolitan University Pressbooks edition)", url: "https://pressbooks.library.torontomu.ca/thebigsea/?p=217", quote: "During the summer of 1926, Wallace Thurman, Zora Neale Hurston, Aaron Douglas, John P. Davis, Bruce Nugent, Gwendolyn Bennett, and I decided to publish “a Negro quarterly of the arts” to be called Fire"}
-    - {title: "Britannica: Fire!! (American magazine)", url: "https://www.britannica.com/topic/Fire-American-magazine", quote: "conceived in Washington, D.C., by poet Langston Hughes and writer and graphic artist Richard Nugent . The two, along with an editorial board comprising Zora Neale Hurston , Gwendolyn Bennett , John Davis , and Aaron Douglas"}
     - {title: "Modernist Journals Project (Davidson College): Fire!!", url: "https://modernistmagazines.org/american/fire/", quote: "Associate Editor(s): Langston Hughes Zora Neale Hurston Gwendolyn Bennett Aaron Douglas Richard Bruce John Davis"}
+    - {title: "Britannica: Fire!! (American magazine)", url: "https://www.britannica.com/topic/Fire-American-magazine", quote: "conceived in Washington, D.C., by poet Langston Hughes and writer and graphic artist Richard Nugent . The two, along with an editorial board comprising Zora Neale Hurston , Gwendolyn Bennett , John Davis , and Aaron Douglas"}
 - card: fire-1926
   fact: "As Hughes remembered it, the name meant burning up old ideas, and the magazine would be an outlet beyond The Crisis and Opportunity"
   sources:
@@ -363,18 +356,18 @@
 - card: fire-1926
   fact: "Contents included work by Hurston, Hughes and Countee Cullen"
   sources:
-    - {title: "Princeton University Library Graphic Arts: FIRE!! Devoted to Younger Negro Artists (with Thomas H. Wirth, FIRE!! in Retrospect)", url: "https://graphicarts.princeton.edu/2020/02/02/fire-devoted-to-younger-negro-artists/", quote: "Color Struck, a play in four scenes by Zora Neale Hurston ... From the Dark Tower by Counteé Cullen ... Elevator Boy by Langston"}
+    - {title: "Princeton University Library Graphic Arts: FIRE!! Devoted to Younger Negro Artists (with Thomas H. Wirth, FIRE!! in Retrospect)", url: "https://graphicarts.princeton.edu/2020/02/02/fire-devoted-to-younger-negro-artists/", quote: "Color Struck, a play in four scenes by Zora Neale Hurston ... From the Dark Tower by Counteé Cullen ... Elevator Boy by Langston"}
     - {title: "Britannica: Fire!! (American magazine)", url: "https://www.britannica.com/topic/Fire-American-magazine", quote: "Thurman solicited art, poetry, fiction, drama, and essays from his editorial advisers, as well as from such leading figures of the New Negro movement as Countee Cullen"}
 - card: fire-1926
-  fact: "Nugent's \"Smoke, Lilies and Jade\" appeared in it, the first literary work on an explicitly homosexual theme published by a Black writer"
+  fact: "Nugent's Smoke, Lilies and Jade, a story with homosexuality as its central theme, appeared in it"
   sources:
-    - {title: "Princeton University Library Graphic Arts: FIRE!! Devoted to Younger Negro Artists (with Thomas H. Wirth, FIRE!! in Retrospect)", url: "https://graphicarts.princeton.edu/2020/02/02/fire-devoted-to-younger-negro-artists/", quote: "Smoke, Lilies and Jade, a novel, part 1 by Richard Bruce"}
     - {title: "Modernist Journals Project (Davidson College): Fire!!", url: "https://modernistmagazines.org/american/fire/", quote: "his famous “Smoke, Lilies, and Jade,” which was “the first literary work on an explicitly homosexual theme” to be published by a black person"}
+    - {title: "BlackPast: Richard Bruce Nugent (1906-1987)", url: "https://www.blackpast.org/african-american-history/nugent-richard-bruce-1906-1987/", quote: "Nugent published “Smoke Lilies and Jade,” his now signature short story in which homosexuality is the central theme, in the first and only issue of Fire !!!"}
 - card: fire-1926
-  fact: "The white press barely noticed it; senior figures like Du Bois dismissed it, the young were enthusiastic"
+  fact: "The white press barely noticed it; the older Black intellectuals, Du Bois among them, dismissed it"
   sources:
+    - {title: "Langston Hughes, The Big Sea (1940), part III: Black Renaissance", url: "https://pressbooks.library.torontomu.ca/thebigsea/?p=217", quote: "None of the older Negro intellectuals would have anything to do with Fire . Dr. DuBois in the Crisis roasted it. ... The white critics (except for an excellent editorial in the Bookman for November, 1926) scarcely noticed it at all."}
     - {title: "Britannica: Fire!! (American magazine)", url: "https://www.britannica.com/topic/Fire-American-magazine", quote: "Responses to the magazine ranged from minimal notice in the white press to heated contention among African American critics. Among the latter, the senior rank of intellectuals , such as W.E.B. Du Bois , tended to dismiss it as self-indulgent, while younger figures reacted with enthusiasm."}
-    - {title: "Modernist Journals Project (Davidson College): Fire!!", url: "https://modernistmagazines.org/american/fire/", quote: "Opportunity “endorsed the journal enthusiastically,” whereas The Crisis ignored it, as did most white-owned presses"}
 - card: fire-1926
   fact: "The money ran out"
   sources:
@@ -454,7 +447,7 @@
     - {title: "The National Archives (UK) blog: Garveyism, a letter from the black working class", url: "https://blog.nationalarchives.gov.uk/garveyism-a-letter-from-the-black-working-class", quote: "Britain along with France banned the Negro World newspaper"}
     - {title: "University of Illinois Library, Black Literature collection record: Marcus Garvey", url: "https://bibleaves.library.illinois.edu/catalog/CC_X08856", quote: "British and French authorities deported all UNIA organizers and banned the Negro World from all their colonies"}
 - card: negro-world
-  fact: "Black seamen, sometimes on their own, smuggled copies around the world"
+  fact: "Seamen, sometimes acting on their own, carried copies around the world"
   sources:
     - {title: "Encyclopedia of African-American Culture and History (via Encyclopedia.com): Negro World", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/negro-world", quote: "Official circulation efforts were supplemented by itinerant seamen who, sometimes acting entirely on their own, took the paper around the world."}
     - {title: "University of Illinois Library, Black Literature collection record: Marcus Garvey", url: "https://bibleaves.library.illinois.edu/catalog/CC_X08856", quote: "but seamen continued to smuggle the paper throughout the world"}
@@ -464,9 +457,9 @@
     - {title: "Britannica: Marcus Garvey", url: "https://www.britannica.com/biography/Marcus-Garvey", quote: "in 1927 his sentence was commuted by U.S. Pres. Calvin Coolidge , and he was deported as an undesirable alien"}
     - {title: "Encyclopedia of African-American Culture and History (via Encyclopedia.com): Negro World", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/negro-world", quote: "The Negro World survived Garvey's deportation from the United States in 1927"}
 - card: negro-world
-  fact: "The paper stayed loyal to Garvey and closed in 1933"
+  fact: "The paper outlived Garvey's deportation and closed in 1933"
   sources:
-    - {title: "Encyclopedia of African-American Culture and History (via Encyclopedia.com): Negro World", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/negro-world", quote: "the paper remained loyal to him until its demise in 1933"}
+    - {title: "Encyclopedia of African-American Culture and History (via Encyclopedia.com): Negro World", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/negro-world", quote: "The Negro World survived Garvey's deportation from the United States in 1927"}
     - {title: "Library of Congress, Chronicling America directory: The Negro World (New York, N.Y.) 1917-1933", url: "https://www.loc.gov/item/sn84037003/", quote: "Biweekly, -Oct. 17, 1933 ... Publication suspended"}
 - card: negro-world
   fact: "It linked Harlem to the Caribbean and Africa"
@@ -553,7 +546,7 @@
     - {title: "The Scholar & Feminist Online (Barnard Center for Research on Women): Synesthetic rhythms, African American music and dance through Parisian eyes", url: "https://sfonline.barnard.edu/synesthetic-rhythmsafrican-american-music-and-dance-through-parisian-eyes/", quote: "launched a vogue for the black bottom and Charleston across Europe and advanced the craze for jazz that had already overtaken the capital"}
     - {title: "Musée franco-américain du château de Blérancourt: La Revue nègre, 1925 (Paul Colin)", url: "https://museefrancoamericain.fr/collection/objet/la-revue-negre-1925", quote: "En 1925 est organisée la première exposition d’art nègre, un art qui va influencer considérablement les Fauves et les Cubistes"}
 - card: revue-negre
-  fact: "Caroline Dudley Reagan assembled the troupe in New York"
+  fact: "Caroline Dudley Reagan assembled the troupe"
   sources:
     - {title: "Musée franco-américain du château de Blérancourt: La Revue nègre, 1925 (Paul Colin)", url: "https://museefrancoamericain.fr/collection/objet/la-revue-negre-1925", quote: "L’Américaine Caroline Dudley constitue la troupe à New York"}
     - {title: "Archives nationales: La France rend hommage à Joséphine Baker", url: "https://www.archives-nationales.culture.gouv.fr/dossiers-thematiques/la-france-rend-hommage-josephine-baker", quote: "Caroline Dudley Reagan. ... a le projet de monter à Paris une revue dont la distribution sera elle aussi entièrement noire"}
@@ -631,11 +624,11 @@
     - {title: "Britannica: Florence Mills", url: "https://www.britannica.com/biography/Florence-Mills", quote: "Her breakthrough came in 1921, when she landed the lead role in the Broadway musical Shuffle Along"}
     - {title: "Contemporary Black Biography (via Encyclopedia.com): Mills, Florence 1896–1927", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/mills-florence-1896-1927", quote: "Shuffle Along , which was the first legitimate African American musical comedy ... made Mills a star"}
 - card: blackbirds-1926
-  fact: "In 1923 in Dover Street to Dixie in London audiences gave her an ovation before every song"
+  fact: "In 1923, in a London revue, audiences gave her an ovation before every song"
   sources:
     - {title: "Contemporary Black Biography (via Encyclopedia.com): Mills, Florence 1896–1927", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/mills-florence-1896-1927", quote: "In 1923, Mills was invited to appear in London in a stage work entitled Dover Street to Dixie ... she received a fervent ovation before every song she sang"}
     - {title: "Bill Egan, FlorenceMills.com: Biography", url: "http://www.florencemills.com/biography.htm", quote: "Florence Mills received an ovation each time she came on stage - before every song she sang"}
-    - {title: "Britannica: Florence Mills", url: "https://www.britannica.com/biography/Florence-Mills", quote: "the following year she traveled to London to perform in From Dover to Dixie"}
+    - {title: "Zakiya Adair, BlackPast: Florence Mills (1896-1927)", url: "https://www.blackpast.org/african-american-history/mills-florence-1896-1927/", quote: "From Dover Street to Dixie (1923)"}
 - card: blackbirds-1926
   fact: "Blackbirds opened at Harlem's Alhambra Theatre"
   sources:
@@ -657,7 +650,7 @@
     - {title: "Contemporary Black Biography (via Encyclopedia.com): Mills, Florence 1896–1927", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/mills-florence-1896-1927", quote: "Mills was a celebrated guest at the glittering parties of young aristocrats and creative types"}
     - {title: "Bill Egan, FlorenceMills.com: Biography", url: "http://www.florencemills.com/biography.htm", quote: "Blackbirds parties become the rage, with high society folk entertaining the performers"}
 - card: blackbirds-1926
-  fact: "The Prince of Wales, the future Edward VIII, reportedly saw it more than twenty times"
+  fact: "The Prince of Wales, the future Edward VIII, came to see it again and again"
   sources:
     - {title: "Contemporary Black Biography (via Encyclopedia.com): Mills, Florence 1896–1927", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/mills-florence-1896-1927", quote: "At London ’ s Pavilion Theatre the Prince of Wales , who later became King Edward VIII , reportedly saw Blackbirds over twenty times."}
     - {title: "Bill Egan, FlorenceMills.com: Biography", url: "http://www.florencemills.com/biography.htm", quote: "The Prince of Wales is a frequent audience member, singing along with Florence"}
@@ -673,9 +666,38 @@
     - {title: "Zakiya Adair, BlackPast: Florence Mills (1896-1927)", url: "https://www.blackpast.org/african-american-history/mills-florence-1896-1927/", quote: "She died in New York City on November 1, 1927, from an infection after surgery."}
     - {title: "Contemporary Black Biography (via Encyclopedia.com): Mills, Florence 1896–1927", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/mills-florence-1896-1927", quote: "she became seriously ill and was admitted to New York ’ s Hospital for Joint Diseases for an appendectomy. On November 1, 1927, Mills died"}
 - card: blackbirds-1926
-  fact: "Harlem gave her its grandest funeral: thousands in the church, up to 150,000 in the streets"
+  fact: "Harlem gave her the largest funeral it had seen: thousands in the church, up to 150,000 in the streets"
   sources:
     - {title: "Contemporary Black Biography (via Encyclopedia.com): Mills, Florence 1896–1927", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/mills-florence-1896-1927", quote: "The number of mourners at Mills ’ s funeral at Harlem ’ s Mount Zion African Methodist Episcopal Church was estimated at 5,000, while 150,000 lined the streets outside. ... the people of Harlem gave her the grandest funeral within their considerable power"}
     - {title: "Bill Egan, FlorenceMills.com: Biography", url: "http://www.florencemills.com/biography.htm", quote: "Florence Mills funeral was the largest Harlem had ever seen."}
     - {title: "Britannica: Florence Mills", url: "https://www.britannica.com/biography/Florence-Mills", quote: "Her funeral was attended by some 150,000 mourners."}
     - {title: "Zakiya Adair, BlackPast: Florence Mills (1896-1927)", url: "https://www.blackpast.org/african-american-history/mills-florence-1896-1927/", quote: "Three thousand fans attended her funeral in Harlem and thousands more saw her funeral procession"}
+- card: precious-lord
+  fact: "The words describe a tired, weak, worn singer asking to be led through the storm and the night"
+  sources:
+    - {title: "C. Michael Hawn, History of Hymns: Precious Lord, Take My Hand (UMC Discipleship Ministries, 2014)", url: "https://www.umcdiscipleship.org/resources/history-of-hymns-precious-lord-take-my-hand", quote: "I am tired, I am weak, I am worn; Through the storm, through the night, lead me on to the light"}
+- card: tutti-frutti
+  fact: "He recorded for Specialty Records"
+  sources:
+    - {title: "Cary O'Dell, Library of Congress National Recording Registry essay: Tutti Frutti", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/TuttiFrutti.pdf", quote: "Finally, he joined Specialty Records where he was signed by Robert “Bumps” Blackwell"}
+    - {title: "Britannica: Little Richard", url: "https://www.britannica.com/biography/Little-Richard", quote: "he released a string of songs on Specialty Records"}
+- card: tutti-frutti
+  fact: "Pat Boone was a white singer (wow line said 'white crooner')"
+  sources:
+    - {title: "Library of Congress National Recording Registry essay (Masino): Tutti Frutti", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Tutti-Frutti_Masino.pdf", quote: "the white singer Pat Boone would record Richard’s hits"}
+    - {title: "Cary O'Dell, Library of Congress National Recording Registry essay: Tutti Frutti", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/TuttiFrutti.pdf", quote: "remaking “black” records for white audiences by having them recorded by white artists"}
+- card: negro-world
+  fact: "The Negro World was a weekly"
+  sources:
+    - {title: "Encyclopedia of African-American Culture and History (via Encyclopedia.com): Negro World", url: "https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/negro-world", quote: "briefly supplemented the weekly Negro World with a Daily Negro Times"}
+    - {title: "The Gleaner: The story of Marcus Garvey, part II (2023)", url: "https://jamaica-gleaner.com/article/news/20231005/story-marcus-garvey-part-ii", quote: "quickly grew from being a New York weekly"}
+- card: aspects-of-negro-life
+  fact: "Fisk University is in Nashville"
+  sources:
+    - {title: "Kansas Historical Society, Kansapedia: Aaron Douglas", url: "https://www.kshs.org/kansapedia/aaron-douglas/12036", quote: "Died: February 2, 1979, Nashville, Tennessee"}
+    - {title: "Britannica: Aaron Douglas", url: "https://www.britannica.com/biography/Aaron-Douglas", quote: "died February 2, 1979, Nashville , Tennessee"}
+- card: within-our-gates
+  fact: "A single print survived"
+  sources:
+    - {title: "Smithsonian Magazine: Watch the oldest-known surviving film by an African-American director", url: "https://www.smithsonianmag.com/smart-news/watch-oldest-known-surviving-film-african-american-director-180962035/", quote: "until that single print called La Negra was discovered in Spain"}
+    - {title: "AFI Catalog: Within Our Gates (1920)", url: "https://catalog.afi.com/Film/2186-WITHIN-OURGATES", quote: "from a single surviving print, found in Spain retitled as La Negra"}

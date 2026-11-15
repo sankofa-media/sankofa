@@ -1,11 +1,11 @@
 ---
 id: baartman-return
 kind: event
-title: "Sara Baartman, from Piccadilly to the Gamtoos valley"
+title: "Sara Baartman, from Piccadilly to Hankey"
 wow: "Shown to paying crowds in Piccadilly in 1810 as the 'Hottentot Venus', she was the subject of a London court case; her remains stayed on show in Paris into the 1970s and came home to the Eastern Cape in 2002."
 years: [1789, 2002]
 places:
-  - {name: "Hankey, Gamtoos River valley, Eastern Cape", lat: -33.8350, lon: 24.8817}
+  - {name: "Hankey, Eastern Cape", lat: -33.8350, lon: 24.8817}
   - {name: "Piccadilly, London", lat: 51.5098, lon: -0.1365}
   - {name: "Paris, France", lat: 48.8566, lon: 2.3522}
 zoom: 4
@@ -29,4 +29,4 @@ Sara Baartman was a Khoekhoe woman, born around 1789 near the Gamtoos River in w
 
 At Piccadilly paying crowds came to stare at her body; she was billed as the "Hottentot Venus". Campaigners against slavery took her keepers to court for holding her against her will, but the case failed after the contract was shown and Baartman testified that she was not mistreated. In 1814 she was taken to Paris and sold to an animal showman named Réaux, and scientists, Georges Cuvier among them, studied her as a specimen. She died in Paris at about 26.
 
-Cuvier cast her body in plaster and kept her skeleton, brain and genitals; they stayed on public display in a Paris museum into the 1970s. In 1994 Nelson Mandela asked France to give her back. In 2002 the French parliament voted to do so, and that August she was buried at Hankey, in the valley where she was born. By then she had become, for South Africans, the symbol of what colonialism did to their people.
+Cuvier cast her body in plaster and kept her skeleton, brain and genitals; they stayed on public display in a Paris museum into the 1970s. In 1994 Nelson Mandela asked France to give her back. In 2002 the French parliament voted to do so, and that August she was buried at Hankey, near the place where she was born. By then she had become, for South Africans, the symbol of what colonialism did to their people.

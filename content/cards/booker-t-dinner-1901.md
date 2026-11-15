@@ -22,7 +22,7 @@ sources:
   - {title: "National Park Service: Booker T. Washington National Monument", url: "https://www.nps.gov/bowa/index.htm"}
   - {title: "NPR, Talk of the Nation: Teddy Roosevelt's 'Shocking' Dinner With Washington (interview with Deborah Davis, 2012)", url: "https://www.npr.org/2012/05/14/152684575/teddy-roosevelts-shocking-dinner-with-washington"}
 ---
-Booker T. Washington was born into slavery on a Virginia farm in 1856. After the Civil War he became the first principal of the Tuskegee Institute in Alabama, and in 1895 he gave his most famous speech, at the Atlanta Exposition. By 1901 he was the most influential Black leader in the United States. President Theodore Roosevelt valued his knowledge of Southern politics and consulted him about the Republican Party and federal appointments in the South. On the evening of 16 October 1901 Washington dined at the White House with Roosevelt and his family.
+Booker T. Washington was born into slavery in Virginia. After the Civil War he became head of the Tuskegee Institute in Alabama, and in 1895 he gave his most famous speech, at the Atlanta Exposition. By 1901 he was the most influential Black leader in the United States. President Theodore Roosevelt valued his knowledge of Southern politics and consulted him about the Republican Party and federal appointments in the South. On the evening of 16 October 1901 Washington dined at the White House with Roosevelt and his family.
 
 When word of the meal got out, white Southerners reacted with fury. Newspapers ran inflammatory articles and cartoons, and Washington received threats against his life. The reaction shook Roosevelt.
 

@@ -1,5 +1,5 @@
 # Batch c32 (2026-11-13): facts in card bodies and wow lines, each with two or more independent sources and a verbatim quote.
-# Dropped: none.
+# Dropped: none. Revised after second check (expand-c32-check.yaml, 2026-11-14): Mau Mau ban on political organisations, Norman record "still stands", first sub-20 200 m, five cleared of all charges, South Side, late-1993 and reference-librarian details removed or corrected.
 
 - card: sharpeville-1960
   fact: "Sharpeville is a Black township in South Africa"
@@ -70,6 +70,7 @@
 - card: sharpeville-1960
   fact: "On 1 April 1960 the UN Security Council condemned the killings"
   sources:
+    - {title: "UN Security Council resolution 134 (1960), resolution of 1 April 1960 (S/4300)", url: "https://documents.un.org/api/symbol/access?s=S/RES/134(1960)&l=en&t=pdf", quote: "134 (1960). Resolution of 1 April 1960 ... Deplores that the recent disturbances in the Union of South Africa should have led to the loss of life of so many Africans"}
     - {title: "Canadian Museum for Human Rights: The Sharpeville Massacre", url: "https://humanrights.ca/story/sharpeville-massacre", quote: "On April 1, the United Nations (UN) Security Council passed a resolution condemning the killings"}
     - {title: "South African History Online: Aftermath, Sharpeville Massacre 1960", url: "https://www.sahistory.org.za/article/aftermath-sharpeville-massacre-1960", quote: "The United Nations Security Council and governments worldwide condemned the police action"}
 - card: sharpeville-1960
@@ -99,7 +100,7 @@
     - {title: "World Athletics: Five decades on from podium salute (2018)", url: "https://worldathletics.org/news/feature/1968-olympic-podium-salute-smith-norman-carlos-presidents-award", quote: "Smith won the 200m in 19.83, Norman was second in 20.06, with Carlos third in 20.10"}
     - {title: "Athletics Australia Hall of Fame: Peter Norman (Paul Jenes)", url: "https://www.athletics.com.au/hall-of-fame/peter-norman/", quote: "to split the two highly fancied Americans, Tommie Smith and John Carlos to win silver in 20.06"}
 - card: mexico-1968-salute
-  fact: "Smith ran 19.83, a world record and the first 200 m under 20 seconds"
+  fact: "Smith ran 19.83, a world record"
   sources:
     - {title: "Encyclopaedia Britannica: Tommie Smith", url: "https://www.britannica.com/biography/Tommie-Smith", quote: "he won the 200-meter dash in 19.83 seconds—the first time that the distance was run in less than 20 seconds"}
     - {title: "Athletics Australia Hall of Fame: Peter Norman (Paul Jenes)", url: "https://www.athletics.com.au/hall-of-fame/peter-norman/", quote: "behind Smith’s world record of 19.83"}
@@ -128,7 +129,7 @@
   fact: "Norman was white"
   sources:
     - {title: "The Conversation: Fifty years later, Peter Norman's heroic Olympic stand is finally being recognised at home (2018)", url: "https://theconversation.com/fifty-years-later-peter-normans-heroic-olympic-stand-is-finally-being-recognised-at-home-102112", quote: "Peter Norman, a white runner from Australia"}
-    - {title: "World Athletics: Five decades on from podium salute (2018)", url: "https://worldathletics.org/news/feature/1968-olympic-podium-salute-smith-norman-carlos-presidents-award", quote: "the late Peter Norman of Australia"}
+    - {title: "Erin Blakemore, History.com: How the 1968 Olympics protest ended Peter Norman's career", url: "https://www.history.com/articles/1968-mexico-city-olympics-black-power-protest-backlash", quote: "silver medalist Peter Norman, a white Australian runner"}
 - card: mexico-1968-salute
   fact: "The US Olympic Committee ordered Smith and Carlos to leave Mexico / expelled them from the Games"
   sources:
@@ -140,10 +141,10 @@
     - {title: "World Athletics: Five decades on from podium salute (2018)", url: "https://worldathletics.org/news/feature/1968-olympic-podium-salute-smith-norman-carlos-presidents-award", quote: "faced a fireball of fury upon their return to the United States"}
     - {title: "Encyclopaedia Britannica: Tommie Smith", url: "https://www.britannica.com/biography/Tommie-Smith", quote: "the two men were largely disparaged by the press"}
 - card: mexico-1968-salute
-  fact: "Norman's 20.06 remains the Australian national record"
+  fact: "Norman's 20.06 stood as the Australian national record for 56 years, until 2024"
   sources:
-    - {title: "Athletics Australia Hall of Fame: Peter Norman (Paul Jenes)", url: "https://www.athletics.com.au/hall-of-fame/peter-norman/", quote: "His time still stands as the Australian national record."}
-    - {title: "Australian Olympic Committee: Peter Norman", url: "https://olympics.com.au/olympians/peter-norman/", quote: "it has never been bettered by an Australian and remains our national record for the 200 metres sprint to this day"}
+    - {title: "Athletics Australia: Brisbane teen Gout Gout breaks Australia's longest standing athletics record (2024)", url: "https://www.athletics.com.au/news/brisbane-teen-gout-gout-breaks-australias-longest-record-/", quote: "eclipsing the time of 20.06 set by Norman at the 1968 Mexico City Olympics – a record that has stood unchallenged for 56 years"}
+    - {title: "World Athletics: Gout breaks Australian 200m record (7 December 2024)", url: "https://worldathletics.org/news/report/gout-australia-oceania-200m-record-bolt-world-age-16-best", quote: "Not only did he break Peter Norman's Oceanian record (20.06) that had stood since 1968"}
 - card: mexico-1968-salute
   fact: "Norman died in Melbourne in 2006 and Smith and Carlos were pallbearers at his funeral"
   sources:
@@ -243,7 +244,7 @@
     - {title: "Robin Bunce and Paul Field, The Guardian: Mangrove Nine (2010)", url: "https://www.theguardian.com/law/2010/nov/29/mangrove-nine-40th-anniversary", quote: "they ensured that two of the 12 jurors were black"}
     - {title: "Tony Warner, Sky History: The Mangrove Nine trial", url: "https://www.history.co.uk/articles/the-mangrove-nine-trial", quote: "They ended up with two black jurors while rejecting numerous jurors who appeared to have racial bias."}
 - card: mangrove-nine
-  fact: "After a 55-day trial all nine were acquitted of incitement to riot and five of all charges"
+  fact: "After a 55-day trial all nine were acquitted of incitement to riot"
   sources:
     - {title: "The National Archives (UK): The Mangrove Nine", url: "https://www.nationalarchives.gov.uk/explore-the-collection/stories/mangrove-nine/", quote: "When all nine defendants were acquitted of the most serious charges after a long 55-day trial"}
     - {title: "Robin Bunce and Paul Field, The Guardian: Mangrove Nine (2010)", url: "https://www.theguardian.com/law/2010/nov/29/mangrove-nine-40th-anniversary", quote: "All nine were acquitted of the principle charge of incitement to riot, while five of the nine, including Darcus Howe and Frank Crichlow, were acquitted of all other charges."}
@@ -264,11 +265,6 @@
   sources:
     - {title: "Encyclopaedia Britannica: Mau Mau", url: "https://www.britannica.com/topic/Mau-Mau", quote: "in October 1952, after a campaign of sabotage and assassination attributed to Mau Mau terrorists, the British Kenya government declared a state of emergency"}
     - {title: "GOV.UK: Statement to Parliament on settlement of Mau Mau claims (6 June 2013)", url: "https://www.gov.uk/government/news/statement-to-parliament-on-settlement-of-mau-mau-claims", quote: "the Emergency Period and the Mau Mau insurgency from October 1952 to December 1963"}
-- card: mau-mau-settlement
-  fact: "Political organisations were banned"
-  sources:
-    - {title: "GOV.UK: Statement to Parliament on settlement of Mau Mau claims (6 June 2013)", url: "https://www.gov.uk/government/news/statement-to-parliament-on-settlement-of-mau-mau-claims", quote: "political organisations were banned"}
-    - {title: "Encyclopaedia Britannica: Mau Mau", url: "https://www.britannica.com/topic/Mau-Mau", quote: "In 1950 the Mau Mau were banned by British authorities"}
 - card: mau-mau-settlement
   fact: "Thousands were held in detention camps without trial"
   sources:
@@ -365,10 +361,10 @@
     - {title: "Jessie Kratz, US National Archives: Charles Drew, a pioneer in blood transfusions (2023)", url: "https://prologue.blogs.archives.gov/?p=35631", quote: "In January 1941, the U.S."}
     - {title: "Jessie Kratz, US National Archives: Charles Drew, a pioneer in blood transfusions (2023)", url: "https://prologue.blogs.archives.gov/?p=35631", quote: "Drew became the director of the new American Red Cross Blood Bank"}
 - card: charles-drew
-  fact: "He built America's first large-scale blood bank (wow)"
+  fact: "He directed the wartime blood-plasma programmes for Britain and the United States (wow)"
   sources:
-    - {title: "NLM Profiles in Science: Charles R. Drew, biographical overview", url: "https://profiles.nlm.nih.gov/spotlight/bg/feature/biographical-overview", quote: "organized America's first large-scale blood bank"}
-    - {title: "Encyclopaedia Britannica: Charles Richard Drew", url: "https://www.britannica.com/biography/Charles-Richard-Drew", quote: "He soon developed efficient ways to process and store large quantities of blood plasma in “blood banks.”"}
+    - {title: "Encyclopaedia Britannica: Charles Richard Drew", url: "https://www.britannica.com/biography/Charles-Richard-Drew", quote: "he organized and directed the blood-plasma programs of the United States and Great Britain in the early years of World War II"}
+    - {title: "Jessie Kratz, US National Archives: Charles Drew, a pioneer in blood transfusions (2023)", url: "https://prologue.blogs.archives.gov/?p=35631", quote: "Drew was recruited to be the medical director of the Blood for Britain project"}
 - card: charles-drew
   fact: "The armed forces had the Red Cross exclude Black donors, then accept their blood only if kept separate"
   sources:
@@ -377,7 +373,7 @@
     - {title: "Encyclopaedia Britannica: Charles Richard Drew", url: "https://www.britannica.com/biography/Charles-Richard-Drew", quote: "the armed forces ruled that the blood of African Americans would be accepted but would have to be stored separately from that of whites"}
     - {title: "Jessie Kratz, US National Archives: Charles Drew, a pioneer in blood transfusions (2023)", url: "https://prologue.blogs.archives.gov/?p=35631", quote: "the Red Cross segregated blood by race"}
 - card: charles-drew
-  fact: "Drew himself could not have donated to the programme he built"
+  fact: "Under the first (exclusion) rule Drew himself could not have donated to the programme he built"
   sources:
     - {title: "NLM Profiles in Science: Charles R. Drew, biographical overview", url: "https://profiles.nlm.nih.gov/spotlight/bg/feature/biographical-overview", quote: "thus Drew, a leading expert in blood banking, was ineligible to participate in the program he helped establish"}
     - {title: "Encyclopaedia Britannica: Charles Richard Drew", url: "https://www.britannica.com/biography/Charles-Richard-Drew", quote: "agitating the authorities to stop excluding the blood of African Americans from plasma-supply networks"}
@@ -480,7 +476,7 @@
   fact: "In June 1967 a federal judge abolished the track system"
   sources:
     - {title: "University at Buffalo, Mathematicians of the African Diaspora: Haynes (with Ken Feil, Washington Post obituary, 1980)", url: "https://www.math.buffalo.edu/mad/PEEPS/haynes.euphemia.lofton.html", quote: "was abolished along with de facto segregation by Judge J. Skelly Wright in June 1967"}
-    - {title: "Hobson v. Hansen, 269 F. Supp. 401 (D.D.C., decided 19 June 1967), Caselaw Access Project", url: "https://static.case.law/f-supp/269/cases/0401-01.json", quote: "As to the remedy with respect to the track system, the track system simply must be abolished."}
+    - {title: "Hobson v. Hansen, 269 F. Supp. 401 (D.D.C., decided 19 June 1967), Caselaw Access Project", url: "https://static.case.law/f-supp/269/cases/0401-01.json", quote: "the court has issued a decree attached to its opinion ordering: 1. an injunction against racial and economic discrimination in the public school system here. 2. abolition of the track system."}
     - {title: "MacTutor: Martha Euphemia Lofton Haynes", url: "https://mathshistory.st-andrews.ac.uk/Biographies/Haynes/", quote: "successful lawsuit charging the school system with racial and economic discrimination in 1967"}
 - card: euphemia-lofton-haynes
   fact: "She died in 1980 and left $700,000 to Catholic University for a professorship and student loan fund"
@@ -584,16 +580,17 @@
     - {title: "Roy Rosenzweig, The Road to Xanadu, Journal of American History 88.2 (2001)", url: "http://chnm.gmu.edu/digitalhistory/links/cached/introduction/link0.27a.pathwaysonhistweb.html", quote: "the Lynch speech, in fact, appeared in print as early as 1970"}
     - {title: "Matt Giles, Longreads: The Enduring Legacy of the Willie Lynch Hoax (2018)", url: "https://longreads.com/2018/05/02/the-enduring-legacy-of-the-willie-lynch-hoax/", quote: "His speech on the banks of the James River was first “discovered” in 1970"}
 - card: willie-lynch-hoax
-  fact: "In late 1993 Anne Taylor, a reference librarian at UMSL, put it on the library's Gopher server"
+  fact: "In 1993 Anne Taylor of the UMSL library put it on the library's Gopher server"
   sources:
     - {title: "Anne Cleëster Taylor, The Slave Consultant's Narrative, UMSL (archived)", url: "https://web.archive.org/web/20070808080232/http://www.umsl.edu/services/library/blackstudies/narrate.htm", quote: "In late 1993, I added a (now infamous) article to the Library's gopher because I found it interesting."}
     - {title: "Anne Cleëster Taylor, email to Winslow and Bailey, UMSL (archived)", url: "https://web.archive.org/web/20070808191222/http://www.umsl.edu/services/library/blackstudies/winbail.htm", quote: "It first went up in late 1993, when Raleigh was teaching me how to create and load gopher documents."}
-    - {title: "Roy Rosenzweig, The Road to Xanadu, Journal of American History 88.2 (2001)", url: "http://chnm.gmu.edu/digitalhistory/links/cached/introduction/link0.27a.pathwaysonhistweb.html", quote: "Anne Clester Taylor, \"The Slave Consultant's Narrative: The Life of an Urban Myth?,\" in African Missouri"}
+    - {title: "Mike Adams, The Baltimore Sun: In search of 'Willie' Lynch (1998)", url: "https://www.baltimoresun.com/1998/02/22/in-search-of-willie-lynch-sometimes-the-truth-can-be-found-in-myth-fiction-even-in-a-lie/", quote: "i went to the internet where i found the speech on a web- site maintained by the university of missouri-st. louis. the contact person was anne taylor"}
     - {title: "Matt Giles, Longreads: The Enduring Legacy of the Willie Lynch Hoax (2018)", url: "https://longreads.com/2018/05/02/the-enduring-legacy-of-the-willie-lynch-hoax/", quote: "began its life online starting in 1993 when a reference librarian"}
 - card: willie-lynch-hoax
-  fact: "It had just appeared in the St. Louis Black Pages"
+  fact: "She had found it in the St. Louis Black Pages, a free local paper"
   sources:
-    - {title: "Anne Cleëster Taylor, email to Winslow and Bailey, UMSL (archived)", url: "https://web.archive.org/web/20070808191222/http://www.umsl.edu/services/library/blackstudies/winbail.htm", quote: "Louis Black Pages\", 9th anniversary editon, 1994*, page 8."}
+    - {title: "Anne Cleëster Taylor, email to Winslow and Bailey, UMSL (archived)", url: "https://web.archive.org/web/20070808191222/http://www.umsl.edu/services/library/blackstudies/winbail.htm", quote: "It was printed in a local, widely-distributed, free publication called \"The St. Louis Black Pages\""}
+    - {title: "Mike Adams, The Baltimore Sun: In search of 'Willie' Lynch (1998)", url: "https://www.baltimoresun.com/1998/02/22/in-search-of-willie-lynch-sometimes-the-truth-can-be-found-in-myth-fiction-even-in-a-lie/", quote: "Taylor discovered the speech in a local newspaper, the St. Louis Black Pages."}
     - {title: "Matt Giles, Longreads: The Enduring Legacy of the Willie Lynch Hoax (2018)", url: "https://longreads.com/2018/05/02/the-enduring-legacy-of-the-willie-lynch-hoax/", quote: "Louis Black Pages in 1998 — the newspaper that first printed Lynch’s speech in the early 1990s"}
 - card: willie-lynch-hoax
   fact: "In October 1995 Louis Farrakhan quoted it at the Million Man March"
@@ -627,7 +624,7 @@
     - {title: "William Jelani Cobb, Is Willie Lynch's Letter Real? Jim Crow Museum (2004)", url: "https://jimcrowmuseum.ferris.edu/question/2004/may.htm", quote: "The Willie Lynch speech would seem to give a quick-and-easy explanation of the roots of our much-lamented \"black disunity.\""}
     - {title: "Mike Adams, The Baltimore Sun: In search of 'Willie' Lynch (1998)", url: "https://www.baltimoresun.com/1998/02/22/in-search-of-willie-lynch-sometimes-the-truth-can-be-found-in-myth-fiction-even-in-a-lie/", quote: "There’s something about the message that resonates within the black psyche."}
 - card: wangari-maathai
-  fact: "Maathai was born in 1940 near Nyeri, Kenya"
+  fact: "Maathai was born in 1940 in Nyeri, Kenya"
   sources:
     - {title: "Nobel Prize: Wangari Maathai, Facts", url: "https://www.nobelprize.org/prizes/peace/2004/maathai/facts/", quote: "Born: 1 April 1940, Nyeri, Kenya"}
     - {title: "Encyclopaedia Britannica: Wangari Maathai", url: "https://www.britannica.com/biography/Wangari-Maathai", quote: "Born: April 1, 1940, Nyeri , Kenya"}
@@ -715,9 +712,9 @@
     - {title: "Marisa Mathias, National Women's History Museum: Mae Jemison", url: "https://www.womenshistory.org/education-resources/biographies/mae-jemison", quote: "Mae Carol Jemison was born in Decatur, Alabama on October 17, 1956."}
     - {title: "Encyclopaedia Britannica: Mae Jemison", url: "https://www.britannica.com/biography/Mae-Jemison", quote: "Mae Jemison (born October 17, 1956, Decatur , Alabama , U.S.)"}
 - card: mae-jemison
-  fact: "She grew up on the South Side of Chicago"
+  fact: "She grew up in Chicago"
   sources:
-    - {title: "BBC Sky at Night Magazine: Mae Jemison, the first African American woman in space", url: "https://www.skyatnightmagazine.com/space-missions/mae-jemison-biography/", quote: "As a little girl growing up on the south side of Chicago"}
+    - {title: "Encyclopaedia Britannica: Mae Jemison", url: "https://www.britannica.com/biography/Mae-Jemison", quote: "Jemison moved with her family to Chicago at the age of three."}
     - {title: "Marisa Mathias, National Women's History Museum: Mae Jemison", url: "https://www.womenshistory.org/education-resources/biographies/mae-jemison", quote: "moved to Chicago, Illinois"}
     - {title: "Allison Lantero, US Department of Energy: Astronaut Mae Jemison (2016)", url: "https://www.energy.gov/node/1626656", quote: "She hails from Chicago"}
 - card: mae-jemison

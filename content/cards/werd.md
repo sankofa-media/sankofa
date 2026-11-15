@@ -25,6 +25,6 @@ WERD was a 1,000-watt radio station in Atlanta that Jesse B. Blayton Sr. bought 
 
 The station sat in the Prince Hall Masonic building on Auburn Avenue. Blayton turned it toward the city's Black audience, with music and programmes aimed at Black listeners. In the 1960s the same building housed the headquarters of the Southern Christian Leadership Conference, led by [[martin-luther-king|Martin Luther King Jr.]], and King used WERD to make public statements, though accounts differ on how he reached its microphone.
 
-Blayton sold WERD in 1968, when he retired. He died in Atlanta in 1977.
+Blayton sold WERD in 1968 and died in 1977; in 1995 he was inducted into the Radio Hall of Fame.
 
 For almost twenty years Black Atlanta had a station that its own people owned, in the same house as the movement that was changing the South, and it could put that movement on the air.

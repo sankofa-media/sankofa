@@ -22,7 +22,7 @@ sources:
 ---
 In 1804 the formerly enslaved people of the French colony of Saint-Domingue declared their independence as Haiti, the outcome of the [[haitian-revolution|Haitian Revolution]]. France did not recognise the new state.
 
-In April 1825 France set its price for recognition: 150 million francs, to compensate the colonists who had lost their plantations. That July, with a French squadron approaching and ready to blockade its ports, Haiti accepted. To pay the first instalment it borrowed 30 million francs in Paris; after the bankers' commission it received 24 million. The indemnity and the loan together became Haiti's "double debt".
+In April 1825 France set its price for recognition: 150 million francs, to compensate the colonists who had lost their plantations. That year, with a French squadron approaching and ready to blockade its ports, Haiti accepted. To pay the first instalment it borrowed 30 million francs in Paris; after the bankers' commission it received 24 million. The indemnity and the loan together became Haiti's "double debt".
 
 Haiti could not keep up. In 1838 a new treaty cut the indemnity to 90 million francs and recognised Haitian independence outright. Payments dragged on through defaults and new schedules; the last indemnity payment was made in 1878, and the 1825 loan was paid off only in 1887–88.
 

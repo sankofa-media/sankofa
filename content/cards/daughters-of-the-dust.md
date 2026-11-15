@@ -23,9 +23,12 @@ sources:
   - {title: "UCLA Film & Television Archive, L.A. Rebellion: Daughters of the Dust", url: "https://cinema.ucla.edu/collections/la-rebellion/daughters-of-the-dust/"}
   - {title: "Sundance Institute: Your Next Double Feature: Daughters of the Dust and The Farewell", url: "https://www.sundance.org/blogs/your-next-double-feature-daughters-of-the-dust-and-the-farewell/"}
   - {title: "Tega Okiti, Sight and Sound (BFI): The black feminine on screen: 11 key auteurs (2017)", url: "https://www.bfi.org.uk/sight-and-sound/features/black-feminine-screen-11-key-auteurs"}
+  - {title: "AFI Catalog of Feature Films: Daughters of the Dust (1991)", url: "https://catalog.afi.com/Catalog/moviedetails/59221"}
+  - {title: "Yale University Library, Film Notes: Daughters of the Dust", url: "https://web.library.yale.edu/film/notes/fn00079"}
+  - {title: "Susan Cohen, Charleston City Paper: Twenty years later, Julie Dash's film Daughters of the Dust continues to inspire (14 September 2011)", url: "https://charlestoncitypaper.com/?p=54033"}
 ---
 On the Sea Islands off South Carolina and Georgia, the descendants of enslaved Africans kept a culture of their own long after slavery ended: the [[gullah|Gullah]]. Julie Dash grew up far from the islands, in New York, but in a household where that culture was alive. Her father was Gullah.
 
 Her first feature is set in 1902. The Peazant family gathers on its island on the eve of leaving for the mainland. The great-grandmother, Nana Peazant, the family matriarch, still lives by the old beliefs and refuses to go, fearing that the family's ties and traditions will be lost. Shot in a dreamlike, impressionistic style, the film won the cinematography award at the 1991 Sundance Film Festival.
 
-Released in 1991, it became the first feature by an African American woman to get a general theatrical release in the United States. In 2016 Beyoncé's visual album Lemonade drew on its imagery, and a restored print returned to cinemas. A family leaving home, seen through the eyes of its women, had found a new generation of viewers.
+After its Sundance premiere it opened in cinemas in January 1992, the first feature by an African American woman to get a general theatrical release in the United States. In 2016 Beyoncé's visual album Lemonade drew on its imagery, and a restored print returned to cinemas. A family leaving home, seen through the eyes of its women, had found a new generation of viewers.

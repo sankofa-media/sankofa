@@ -15,7 +15,6 @@ pair: sahel-screen
 further:
   - "Souleymane Cissé, Yeelen (1987)"
   - "Souleymane Cissé, Baara (1978) and Finyé (1982)"
-dispute: "The scope of the first is put differently: the African Studies Centre Leiden calls Yeelen the first African film to win a prize at Cannes, while the CNC and allAfrica speak of the first filmmaker, or Black African director, from sub-Saharan Africa. Accounts also differ on timing: ArtReview says Cissé was due in Ouagadougou the day after his death, the CNC three days later."
 sources:
   - {title: "Festival de Cannes: Yeelen (La lumière), Prix du Jury 1987", url: "https://www.festival-cannes.com/f/yeelen/"}
   - {title: "Al Jazeera: Mali filmmaker Souleymane Cisse, 'father of African cinema', dies at age 84 (2025)", url: "https://www.aljazeera.com/news/2025/2/20/mali-filmmaker-souleymane-cisse-father-of-african-cinema-dies-at-age-84"}
@@ -23,9 +22,10 @@ sources:
   - {title: "Sarah Jilani, ArtReview: Malian filmmaker Souleymane Cissé (1940–2025) taught us how to see", url: "https://artreview.com/malian-filmmaker-souleymane-cisse-1940-2025-taught-us-how-to-see-obituary-sarah-jilani-opinion-african-cinema"}
   - {title: "Ministère de la Culture: Hommage de Rachida Dati à Souleymane Cissé (2025)", url: "https://www.culture.gouv.fr/presse/communiques-de-presse/hommage-de-madame-rachida-dati-ministre-de-la-culture-a-monsieur-souleymane-cisse"}
   - {title: "Melody Chironda, allAfrica: Souleymane Cisse, father of African cinema, dies (2025)", url: "https://allafrica.com/stories/202502200398.html"}
-  - {title: "African Studies Centre Leiden: Souleymane Cissé (2025)", url: "https://www.ascleiden.nl/content/library-weekly/souleymane-cisse"}
+  - {title: "Sight and Sound (BFI): Souleymane Cissé's Yeelen reviewed in 1988", url: "https://www.bfi.org.uk/sight-and-sound/reviews/souleymane-cisses-yeelen-reviewed-1988"}
+  - {title: "New York State Writers Institute, University at Albany: Film notes, Yeelen", url: "https://www.albany.edu/writers-inst/webpages4/filmnotes/fns05n4.html"}
 ---
-Yeelen, whose title means "brightness" or "light", is a 1987 feature film by the Malian director Souleymane Cissé, drawn from the legends of the Bambara people. Cissé was born in 1940 in Bamako, under French colonial rule, and studied film at the state film institute in Moscow. His earlier features had looked at work, power and youth in modern Mali.
+Yeelen, whose title means "brightness" or "light", is a 1987 feature film by the Malian director Souleymane Cissé, drawn from the legends of the Bambara people. Cissé was born in 1940 in what is now Mali, then a French colony, and studied film at the state film institute in Moscow. His earlier features had looked at work, power and youth in modern Mali.
 
 With Yeelen he turned from the present to myth. A young man, Nianankoro, sets out across Mali to win the magic powers of Bambara tradition, which his father, a sorcerer, refuses to hand down for fear that his son will become his equal, and the father pursues him across the wide landscapes of the Sahel.
 
