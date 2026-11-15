@@ -41,8 +41,17 @@ export function wrapAnchor(root: Element, anchor: string, make: (text: string) =
   return null;
 }
 
+/**
+ * A hidden word: a span acting as a button, because a real <button> cannot
+ * break across lines and would move the text around it.
+ */
 function wordButton(app: App, f: CabinetFile, c: Cache, text: string): HTMLElement {
-  const b = h('button.cb-word', { type: 'button', 'aria-label': `${text}: ${pick(HIDDEN)}`, onclick: (e: Event) => (e.stopPropagation(), openCacheDialog(app, f, c.id)) }, text);
+  const open = (e: Event) => {
+    e.preventDefault();
+    e.stopPropagation();
+    openCacheDialog(app, f, c.id);
+  };
+  const b = h('span.cb-word', { role: 'button', tabindex: '0', 'aria-label': `${text}: ${pick(HIDDEN)}`, onclick: open, onkeydown: (e: Event) => { const k = (e as KeyboardEvent).key; if (k === 'Enter' || k === ' ') open(e); } }, text);
   mark(b, c);
   return b;
 }
