@@ -99,12 +99,12 @@ river:
     - post-ghostpoet-2023
 
 ui:
-  knock: { en: "Knock", ru: "Постучать", draft: true }
-  knocked: { en: "The door opens", ru: "Дверь открывается", draft: true }
+  knock: { en: "Knock — this turns the sound on", ru: "Постучать — так включится звук", draft: true }
+  knocked: { en: "The sound is on", ru: "Звук включён", draft: true }
   hear-clap: { en: "Hear the clap", ru: "Послушать хлопок", draft: true }
   clap-circle: { en: "Clap along", ru: "Хлопать вместе", draft: true }
   clap-hint:
-    en: "Tap the circle or press the space bar on the beat"
+    en: "Tap the circle or press the space bar in time"
     ru: "Касайтесь круга или нажимайте пробел в такт"
     draft: true
   clap-count: { en: "Your claps: {n}", ru: "Ваши хлопки: {n}", draft: true }
@@ -154,13 +154,21 @@ scenes:
         - { file: door-light.webp, depth: 10, state: open, alt: "" }
         - { file: door-tree.webp, depth: 18, alt: "" }
     blocks:
-      - { id: when, role: kicker, draft: true, en: "May 13, 1939. Byhalia, Mississippi", ru: "13 мая 1939 года. Байхейлия, Миссисипи" }
+      - id: when
+        role: kicker
+        draft: false
+        en: Byhalia, Mississippi, 13 May 1939
+        ru: Байхейлия, Миссисипи, 13 мая 1939 года
+      - id: lead
+        role: text
+        draft: false
+        en: The whole world knows this song. Nina Simone sang it, house DJs remixed it, Kanye West and Massive Attack built on it, films and games used it. But the first people whose voices we have singing it were two young women from a small town in Mississippi, Christine and Katherine Shipp. Their names are on almost none of those records. This is the story of how their song travelled without them.
+        ru: Эту песню знает весь мир. Её пела Нина Симон, её переделывали хаус-диджеи, на ней строили свои треки Канье Уэст и Massive Attack, она звучит в фильмах и видеоиграх. Но первыми, чьи голоса с этой песней дошли до нас, были две девушки из маленького городка в Миссисипи — Кристин и Кэтрин Шипп. Их имён почти нет на всех этих пластинках. Это история о том, как их песня обошла мир без них.
       - id: why-knock
         role: note
         draft: false
-        en: "A browser will not let a sound begin until someone does something. So the sound of this story begins with your knock, the way it began for the Shipps with a knock at their door."
-        ru: "Браузер не даёт звуку начаться, пока человек сам чего-нибудь не сделает. Поэтому звук этой истории начинается с вашего стука — так же, как для Шиппов он начался со стука в дверь."
-      - { id: opened, role: line, draft: false, en: "Luella and John Shipp open the door to strangers.", ru: "Луэлла и Джон Шипп открывают дверь незнакомцам." }
+        en: "The story has sound. It begins when you knock: your knock turns it on, and from then on you can clap along."
+        ru: В этой истории есть звук. Он включается, когда вы постучите в дверь, и дальше вы сможете хлопать вместе с героинями.
 
   - id: ring
     kind: ring
@@ -171,24 +179,36 @@ scenes:
         - { file: ring-children.webp, depth: 10, alt: { en: "Children in a ring, seen from a little above, clapping", ru: "Дети в кругу, вид чуть сверху, хлопают в ладоши" } }
         - { file: ring-hands.webp, depth: 10, role: hands, alt: "" }
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "Before 1939", ru: "До 1939 года" }
-      - { id: title, role: title, draft: true, en: "A game in a circle", ru: "Игра в круг" }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Before 1939
+        ru: До 1939 года
+      - id: title
+        role: title
+        draft: false
+        en: A game in a circle
+        ru: Игра в круг
       - id: form
         role: text
         draft: false
-        en: "Long before anyone recorded them, African American children played singing games in a ring or in a line. One voice leads, the group answers, the refrain comes round again and again, and hands and feet keep the second and fourth beats."
-        ru: "Задолго до того, как их кто-нибудь записал, афроамериканские дети играли в игры с пением — в кругу или в линию. Один голос ведёт, круг отвечает, припев возвращается снова и снова, а ладони и ноги держат вторую и четвёртую доли."
+        en: Long before anyone recorded such songs, African American children in the South played singing games in a ring. One child sings a line, the whole circle answers, and the answer comes round again and again. Hands and feet keep time on the second and fourth beats, so the game has its own rhythm section even with no instruments at all.
+        ru: Задолго до того, как такие песни кто-нибудь записал, афроамериканские дети на Юге играли в игры с пением, стоя в кругу. Один поёт строчку, весь круг ему отвечает, и этот ответ возвращается снова и снова. Ладони и ноги отбивают вторую и четвёртую доли, так что у игры есть своя ритм-секция, хотя инструментов в ней нет вовсе.
       - id: book
         role: text
         draft: false
-        en: "Bessie Jones and Bess Lomax Hawes gathered such games in “Step It Down” (1972). In their book the clapping of the group is called the real music of the game."
-        ru: "Бесси Джонс и Бесс Ломакс Хоуз собрали такие игры в книге «Step It Down» (1972). Хлопки круга там названы настоящей музыкой игры."
+        en: Bessie Jones, a singer from the Georgia Sea Islands, and the folklorist Bess Lomax Hawes gathered such games in their book “Step It Down” (1972). They wrote that the real music of these games is the clapping of the circle.
+        ru: Бесси Джонс, певица с Морских островов Джорджии, и фольклорист Бесс Ломакс Хоуз собрали такие игры в книге «Step It Down» (1972). По их словам, настоящая музыка этих игр — хлопки круга.
       - id: no-roots
         role: text
         draft: false
-        en: "The call and the answer tie the form to African musical practice. Where this one song came from before 1939, no source says, and we will not guess."
-        ru: "Вопрос и ответ роднят эту форму с африканской музыкальной практикой. Откуда пришла именно эта песня до 1939 года, не говорит ни один источник, и гадать мы не будем."
-      - { id: hear, role: caption, draft: true, en: "This is the clap, for now without a tune.", ru: "Это хлопок — пока без мелодии." }
+        en: This way of singing, where a leader calls and a group answers, links the games to African musical practice. Where our particular song came from before 1939, no source tells us, so we will not guess.
+        ru: Такой способ петь, когда ведущий зовёт, а группа отвечает, роднит эти игры с африканской музыкальной практикой. Откуда пришла до 1939 года именно наша песня, не сообщает ни один источник, и гадать мы не будем.
+      - id: hear
+        role: caption
+        draft: false
+        en: Press “Hear the clap” to hear the circle’s rhythm on its own, before any voice comes in.
+        ru: Нажмите «Послушать хлопок», чтобы услышать ритм круга сам по себе, ещё без голосов.
 
   - id: expedition
     kind: expedition
@@ -204,18 +224,39 @@ scenes:
           fit: { x: 7.04, y: 0, scale: 0.73 }
           alt: { en: "Its back doors open on a machine that cuts sound onto discs", ru: "Задние двери открыты, внутри аппарат, режущий звук на диски" }
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "The expedition", ru: "Экспедиция" }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: The expedition
+        ru: Экспедиция
       - id: why
         role: text
         draft: false
-        en: "In the 1930s the Library of Congress sent collectors with recording machines across the South, and the Federal Writers’ Project helped them find singers."
-        ru: "В 1930-е годы Библиотека Конгресса отправляла собирателей с записывающими аппаратами по Югу, а Федеральный писательский проект помогал им находить певцов."
+        en: In the 1930s the Library of Congress in Washington set out to record the songs that ordinary Americans sang, before they were forgotten. It sent folklorists with recording machines across the South, and the Federal Writers’ Project, a government programme that gave work to writers during the Depression, helped them find singers.
+        ru: В 1930-е годы Библиотека Конгресса в Вашингтоне взялась записать песни, которые пели обычные американцы, пока они не забылись. Она отправляла фольклористов с записывающими аппаратами по Югу, а Федеральный писательский проект — государственная программа, дававшая писателям работу во время Великой депрессии, — помогал им находить певцов.
       - id: halpert
         role: text
         draft: false
-        en: "In 1939 it was the folklorist Herbert Halpert’s turn. He travelled in an old army ambulance turned into a recording studio on wheels, with a machine that cut the sound straight onto discs. In Mississippi his guide was Abbott Ferriss of the Writers’ Project, who took notes and photographs."
-        ru: "В 1939 году настала очередь фольклориста Герберта Халперта. Он ездил на списанной армейской санитарной машине, превращённой в студию на колёсах: аппарат в ней резал звук прямо на диски. В Миссисипи его проводником был Эббот Феррис из Писательского проекта — он вёл записи и фотографировал."
-      - { id: byhalia, role: label, draft: true, en: "Byhalia", ru: "Байхейлия" }
+        en: "In the spring of 1939 the folklorist Herbert Halpert set off on such a journey. He drove an old army ambulance that had been turned into a recording studio on wheels: the machine inside cut sound straight onto discs. In Mississippi his guide was Abbott Ferriss of the Writers’ Project, who took notes and photographs. In May they came to the small town of Byhalia."
+        ru: "Весной 1939 года в такую поездку отправился фольклорист Герберт Халперт. Он ездил на старой армейской санитарной машине, превращённой в студию на колёсах: аппарат внутри резал звук прямо на диски. В Миссисипи его проводником был Эббот Феррис из Писательского проекта — он вёл записи и фотографировал. В мае они приехали в городок Байхейлию."
+      - id: byhalia
+        role: label
+        draft: false
+        en: Byhalia
+        ru: Байхейлия
+  - id: arrival
+    kind: arrival
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: 13 May 1939
+        ru: 13 мая 1939 года
+      - id: opened
+        role: text
+        draft: false
+        en: On 13 May Halpert and Ferriss knocked at the door of John Shipp and his wife Luella. They had come for the singing family of John’s mother, Mary Shipp, and Luella and John opened the door to the two strangers.
+        ru: Тринадцатого мая Халперт и Феррис постучали в дверь Джона Шиппа и его жены Луэллы. Они приехали к поющей семье матери Джона, Мэри Шипп, и Луэлла с Джоном открыли дверь двум незнакомцам.
 
   - id: family
     kind: family
@@ -233,20 +274,28 @@ scenes:
       - { id: christine, name: { en: "Christine", ru: "Кристин" }, age: 20, lead: true }
       - { id: katherine, name: { en: "Katherine", ru: "Кэтрин" }, age: 18, lead: true }
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "The family", ru: "Семья" }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: The family
+        ru: Семья
       - id: who
         role: text
         draft: false
-        en: "Halpert had come for John’s mother, Mary, and her children. They sang for him at the family’s church, Nichols Chapel."
-        ru: "Халперт приехал за матерью Джона, Мэри, и её детьми. Пели они ему в церкви семьи, Николс-Чепел."
+        en: "Halpert recorded Mary Shipp and four of her children: her sons Isaac and Allison and her daughters Christine and Katherine. They sang for him at the family’s church, Nichols Chapel."
+        ru: "Халперт записал Мэри Шипп и четверых её детей: сыновей Айзека и Эллисона и дочерей Кристин и Кэтрин. Пели они ему в церкви семьи, Николс-Чепел."
+      - id: step
+        role: line
+        draft: false
+        en: Then the two sisters, Christine and Katherine, stepped forward.
+        ru: Потом вперёд вышли две сестры — Кристин и Кэтрин.
       - id: by-ear
         role: text
         draft: true
         hold: true
         check: "One source (NPR 1998): the Shipps learned all their songs by ear."
-        en: "The Shipps knew their songs by ear."
-        ru: "Песни Шиппы знали на слух."
-      - { id: step, role: line, draft: false, en: "Christine and Katherine step forward.", ru: "Вперёд выходят Кристин и Кэтрин." }
+        en: The Shipps knew their songs by ear.
+        ru: Песни Шиппы знали на слух.
 
   - id: minute
     kind: minute
@@ -259,22 +308,26 @@ scenes:
         - { file: minute-hands.webp, depth: 10, role: hands, alt: "" }
     nodes: [ shipp-1939 ]
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "The minute", ru: "Минута" }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: The minute
+        ru: Минута
       - id: listen
         role: text
         draft: false
-        en: "The Library of Congress keeps the recording: about a minute, two voices, no instruments."
-        ru: "Запись хранит Библиотека Конгресса: около минуты, два голоса, ни одного инструмента."
+        en: "Christine and Katherine sang “Sea Lion Woman”. The recording lasts about a minute: two voices and no instruments. The Library of Congress still keeps it."
+        ru: "Кристин и Кэтрин спели «Sea Lion Woman». Запись длится около минуты: два голоса и ни одного инструмента. Она до сих пор хранится в Библиотеке Конгресса."
       - id: game
         role: text
         draft: false
-        en: "It is a ring game. One sister leads, the other answers, as a circle of children would. Nobody wrote it down for them; it came to them the way such games come, from other children."
-        ru: "Это игра в круг. Одна сестра ведёт, другая отвечает — как ответил бы круг детей. Никто не записывал её для них: она пришла к ним так, как приходят такие игры, — от других детей."
+        en: It is the same ring game. One sister sings a line, and the other answers, as the whole circle would answer in the playground. Nobody wrote this song down for them; it came to them the way such games always came, from other children.
+        ru: "Это та самая игра в круг. Одна сестра поёт строчку, другая отвечает, как ответил бы весь круг на школьном дворе. Никто не записывал для них эту песню: она пришла к ним, как всегда приходили такие игры, — от других детей."
       - id: yours
         role: caption
         draft: false
-        en: "Clap with them. Every clap stays on the circle as a drop of ink, and the circle stays with you to the end."
-        ru: "Хлопайте вместе с ними. Каждый хлопок останется на круге каплей туши, а круг останется с вами до конца."
+        en: "Clap with them: tap the circle or press the space bar in time. Each clap stays on the circle as a drop of ink, and the circle will stay with you until the end of the story."
+        ru: "Хлопайте вместе с ними: касайтесь круга или нажимайте пробел в такт. Каждый хлопок останется на круге каплей туши, а сам круг будет с вами до конца истории."
 
   - id: album
     kind: album
@@ -290,24 +343,36 @@ scenes:
           alt: { en: "One shellac disc with a blank red label", ru: "Шеллачная пластинка с пустой красной наклейкой" }
     nodes: [ afs-l4-1942 ]
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "1942", ru: "1942" }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: "1942"
+        ru: "1942"
       - id: album
         role: text
         draft: false
-        en: "In 1942 the Library of Congress put their minute on a set of 78-rpm discs: “Afro-American Blues and Game Songs”, Album IV."
-        ru: "В 1942 году Библиотека Конгресса выпустила их минуту на комплекте пластинок на 78 оборотов: «Afro-American Blues and Game Songs», Album IV."
+        en: Three years later the sisters’ minute came out on record. In 1942 the Library of Congress released a set of 78-rpm discs, “Afro-American Blues and Game Songs”, and Christine and Katherine were on it.
+        ru: Через три года минута сестёр вышла на пластинке. В 1942 году Библиотека Конгресса выпустила комплект дисков на 78 оборотов «Afro-American Blues and Game Songs», и Кристин с Кэтрин были в нём.
       - id: muddy
         role: text
         draft: false
-        en: "On the same album are the first recordings of a young man from the Delta, McKinley Morganfield. The world would know him as Muddy Waters."
-        ru: "На том же альбоме — первые записи молодого человека из Дельты, Маккинли Морганфилда. Мир узнает его как Мадди Уотерса."
+        en: On the same set are the first recordings of a young man from the Mississippi Delta, McKinley Morganfield. The world would soon know him as Muddy Waters.
+        ru: В том же комплекте — первые записи молодого человека из Дельты Миссисипи, Маккинли Морганфилда. Скоро мир узнает его как Мадди Уотерса.
       - id: paris
         role: text
         draft: false
-        en: "By 1948 a copy had crossed the Atlantic to the Musée de l’Homme in Paris. Two young women from Byhalia were already further from home than they would ever travel."
-        ru: "К 1948 году экземпляр пересёк Атлантику и оказался в Музее человека в Париже. Голоса двух девушек из Байхейлии ушли дальше, чем когда-либо уезжали они сами."
-      - { id: label-paris, role: label, draft: true, en: "Paris", ru: "Париж" }
-      - { id: label-washington, role: label, draft: true, en: "Washington", ru: "Вашингтон" }
+        en: By 1948 a copy had crossed the Atlantic to the Musée de l’Homme in Paris. The sisters’ voices had gone further than the sisters themselves would ever travel.
+        ru: К 1948 году один экземпляр пересёк Атлантику и попал в Музей человека в Париже. Голоса сестёр ушли дальше, чем когда-либо уезжали они сами.
+      - id: label-paris
+        role: label
+        draft: false
+        en: Paris
+        ru: Париж
+      - id: label-washington
+        role: label
+        draft: false
+        en: Washington
+        ru: Вашингтон
 
   - id: simone
     kind: simone
@@ -320,72 +385,95 @@ scenes:
         - { file: piano-grand.webp, depth: 8, alt: { en: "A grand piano on a dark stage", ru: "Рояль на тёмной сцене" } }
         - { file: piano-figure.webp, depth: 12, role: figure, pivot: "34 88", alt: { en: "A woman at the piano, upright, her hands on the keys", ru: "Женщина за роялем, прямая, руки на клавишах" } }
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "1964", ru: "1964" }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: "1964"
+        ru: "1964"
+      - id: route
+        role: text
+        draft: false
+        en: The song reached Nina Simone through the poet Langston Hughes. His secretary, George Houston Bass, had come across it, and Hughes wrote to Simone that “See-Line Woman” suited her particularly well.
+        ru: До Нины Симон песня дошла через поэта Ленгстона Хьюза. На неё наткнулся его секретарь Джордж Хьюстон Басс, а Хьюз написал Симон, что «See-Line Woman» подходит ей особенно.
       - id: version
         role: text
         draft: false
-        en: "In 1964 Nina Simone recorded the song as “See-Line Woman” for the album “Broadway-Blues-Ballads”."
-        ru: "В 1964 году Нина Симон записала песню как «See-Line Woman» для альбома «Broadway-Blues-Ballads»."
-      - id: arrangement
-        role: text
-        draft: false
-        en: "The arrangement is credited to her. She changed the spelling of the title, and the game became a concert piece."
-        ru: "Аранжировка записана за ней. Она изменила написание названия, и игра стала концертной вещью."
+        en: "In 1964 Simone recorded the song for her album “Broadway-Blues-Ballads”. She spelt the title her own way, as “See-Line Woman”, and the arrangement is credited to her: the playground game became a concert piece."
+        ru: "В 1964 году Симон записала песню для альбома «Broadway-Blues-Ballads». Название она написала по-своему, «See-Line Woman», а аранжировка записана за ней: игра со школьного двора стала концертной вещью."
       - id: bach
         role: text
         draft: false
-        en: "She had trained as a classical pianist on Bach, studied at Juilliard and been turned away by the Curtis Institute. A children’s game from a Mississippi churchyard went into her hands."
-        ru: "Она училась на классическую пианистку, на Бахе, занималась в Джульярде, и её не приняли в Кёртисовский институт. Детская игра с церковного двора в Миссисипи попала в эти руки."
+        en: Simone had trained to be a classical pianist on Bach and studied at Juilliard, but the Curtis Institute turned her down. So a children’s game from a Mississippi churchyard came into the hands of a pianist schooled on Bach.
+        ru: Симон готовилась стать классической пианисткой, играла Баха и занималась в Джульярдской школе, но в Кёртисовский институт её не приняли. Так детская игра с церковного двора в Миссисипи оказалась в руках пианистки, выученной на Бахе.
 
   - id: single
     kind: single
     nodes: [ simone-single-1964 ]
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "July 1964", ru: "Июль 1964" }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: July 1964
+        ru: Июль 1964
       - id: two-sides
         role: text
         draft: false
-        en: "In July 1964 a single came out. Side A: [[mississippi-goddam|“Mississippi Goddam”]]. Turn it over."
-        ru: "В июле 1964 года вышел сингл. Сторона A — [[mississippi-goddam|«Mississippi Goddam»]]. Переверните его."
-      - id: side-b
-        role: text
-        draft: false
-        en: "Side B: “Sea Lion Woman”, in the folk spelling. One record carried a cry about Mississippi on one side and a game of two young women from Mississippi on the other."
-        ru: "Сторона B — «Sea Lion Woman», в народном написании. На одной стороне пластинки — крик о Миссисипи, на другой — игра двух девушек из Миссисипи."
+        en: In July 1964 the song came out on a single. On side A was “Mississippi Goddam”. Press “Turn the record over” to see what was on the other side.
+        ru: В июле 1964 года песня вышла на сингле. На стороне A была «Mississippi Goddam». Нажмите «Перевернуть пластинку», чтобы увидеть, что было на другой стороне.
       - id: goddam
         role: text
         draft: false
-        en: "Simone wrote it after the murder of Medgar Evers in Mississippi and the bombing of a Birmingham church in 1963."
-        ru: "Симон написала её после убийства Медгара Эверса в Миссисипи и взрыва церкви в Бирмингеме в 1963 году."
-      - { id: label-a, role: label, draft: true, en: "Mississippi Goddam", ru: "Mississippi Goddam" }
-      - { id: label-b, role: label, draft: true, en: "Sea Lion Woman", ru: "Sea Lion Woman" }
-      - { id: credit, role: label, draft: true, en: "Written by George Houston Bass", ru: "Written by George Houston Bass" }
-      - { id: names, role: label, draft: true, en: "Christine and Katherine Shipp", ru: "Кристин и Кэтрин Шипп" }
+        en: Simone wrote “Mississippi Goddam” in 1963, after Medgar Evers was murdered in Mississippi and a church was bombed in Birmingham, Alabama.
+        ru: «Mississippi Goddam» Симон написала в 1963 году, после того как в Миссисипи убили Медгара Эверса, а в Бирмингеме, штат Алабама, взорвали церковь.
+      - id: side-b
+        role: text
+        draft: false
+        en: Side B was “Sea Lion Woman”, in the old folk spelling. So one record carried an angry protest about Mississippi on one side and a game sung by two young women from Mississippi on the other.
+        ru: На стороне B была «Sea Lion Woman», в старом народном написании. Так на одной пластинке оказались гневный протест против того, что творилось в Миссисипи, и игра, которую пели две девушки из Миссисипи.
+      - id: label-a
+        role: label
+        draft: false
+        en: Mississippi Goddam
+        ru: Mississippi Goddam
+      - id: label-b
+        role: label
+        draft: false
+        en: Sea Lion Woman
+        ru: Sea Lion Woman
+      - id: credit
+        role: label
+        draft: false
+        en: Written by George Houston Bass
+        ru: Written by George Houston Bass
+      - id: names
+        role: label
+        draft: false
+        en: Christine and Katherine Shipp
+        ru: Кристин и Кэтрин Шипп
       - id: name
         role: caption
         draft: false
-        en: "The label names one writer. Under it, the names of the two who sang the song in 1939 run in the ink."
-        ru: "Этикетка называет одного автора. Под ней расплываются в туши имена тех двоих, кто спел песню в 1939 году."
+        en: "Look at the label: it names one writer, George Houston Bass. The names of Christine and Katherine Shipp, who sang the song in 1939, are not there; under the label they run in the ink."
+        ru: "Посмотрите на этикетку: на ней один автор — Джордж Хьюстон Басс. Имён Кристин и Кэтрин Шипп, которые спели эту песню в 1939 году, там нет: под этикеткой они расплываются в туши."
 
   - id: bass
     kind: text
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "The man on the label", ru: "Человек на этикетке" }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: The man on the label
+        ru: Человек на этикетке
       - id: who
         role: text
         draft: false
-        en: "George Houston Bass was Langston Hughes’s secretary and literary assistant from 1959 to 1964. Later he founded the Rites and Reason theatre at Brown University. He died in Providence in 1990."
-        ru: "Джордж Хьюстон Басс был секретарём и литературным помощником Ленгстона Хьюза с 1959 по 1964 год. Потом он основал театр Rites and Reason в Брауновском университете. Умер в Провиденсе в 1990 году."
+        en: George Houston Bass was Langston Hughes’s secretary and literary assistant from 1959 to 1964. Later he founded the Rites and Reason theatre at Brown University, and he died in Providence in 1990.
+        ru: Джордж Хьюстон Басс был секретарём и литературным помощником Ленгстона Хьюза с 1959 по 1964 год. Позже он основал театр Rites and Reason в Брауновском университете и умер в Провиденсе в 1990 году.
       - id: system
         role: text
         draft: false
-        en: "Bass registered the copyright. From then on, the writer’s line on every record of the song carried his name, and not theirs."
-        ru: "Басс зарегистрировал авторское право. С тех пор в строке об авторе на каждой пластинке с этой песней стояло его имя — не их."
-      - id: route
-        role: text
-        draft: false
-        en: "It was Hughes who brought the song to Simone: he wrote to her that “See-Line Woman” was particularly suited to her. In 1965 he wrote to a friend about “my former secretary’s SEA LION WOMAN”, which she was singing at every concert."
-        ru: "Песню Симон предложил Хьюз: он написал ей, что «See-Line Woman» подходит ей особенно. В 1965 году он писал другу о «SEA LION WOMAN моего бывшего секретаря», которую она пела на каждом концерте."
+        en: Bass registered the copyright in the song. From then on, wherever a record named the writer, it named him, and never Christine and Katherine Shipp. In 1965 Hughes himself wrote to a friend about “my former secretary’s SEA LION WOMAN”, which Simone was singing at every concert.
+        ru: Басс зарегистрировал на песню авторское право. С тех пор везде, где на пластинке указан автор, стоит его имя, и ни разу — имена Кристин и Кэтрин Шипп. В 1965 году Хьюз сам писал другу о «SEA LION WOMAN моего бывшего секретаря», которую Симон пела на каждом концерте.
 
   - id: river
     kind: river
@@ -395,73 +483,121 @@ scenes:
       layers:
         - { file: river-ink.webp, alt: "" }
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "The river", ru: "Река" }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: The river
+        ru: Река
       - id: intro
         role: text
         draft: false
-        en: "From the 1939 recording and from the 1964 record, branches grow downward. Every version is a medallion with its year; press one to hear its official recording."
-        ru: "От записи 1939 года и от пластинки 1964 года вниз растут ветви. Каждая версия — медальон с годом; нажмите на него, чтобы услышать официальную запись."
+        en: "After 1964 the song began to branch. Below is its family tree, drawn as a river: every version is a circle with its year, and the lines show who took the song from whom. Press a circle to hear that version, where an official recording exists."
+        ru: "После 1964 года песня начала ветвиться. Ниже — её родословная, нарисованная как река: каждая версия — кружок с годом, а линии показывают, кто у кого взял песню. Нажмите на кружок, чтобы послушать эту версию, если у неё есть официальная запись."
       - id: branches
         role: text
         draft: false
-        en: "Two branches run side by side: those who took the young women’s voices and the circle’s answer, and those who took Simone’s title, her arrangement and her recording."
-        ru: "Две ветви идут рядом: одни взяли голоса девушек и ответ круга, другие — название Симон, её аранжировку и её запись."
+        en: "Two branches run side by side. On one are those who went back to the 1939 recording and took the sisters’ voices and the circle’s answer. On the other are those who took Nina Simone’s version: her title, her arrangement or her actual recording."
+        ru: "Две ветви идут рядом. На одной — те, кто вернулся к записи 1939 года и взял голоса сестёр Шипп и ответ круга. На другой — те, кто взял версию Нины Симон: её название, её аранжировку или саму её запись."
 
   - id: jazz
     kind: stop
     nodes: [ lateef-1967 ]
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "1967 · jazz", ru: "1967 · джаз" }
-      - { id: text, role: text, draft: true, en: "Yusef Lateef: the folk game becomes [[jazz]].", ru: "Юсеф Латиф: народная игра становится [[jazz|джазом]]." }
-      - { id: listen, role: note, draft: true, en: "Listen for the tambourine keeping the old clap.", ru: "Слушайте бубен: он держит старый хлопок." }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: 1967 · jazz
+        ru: 1967 · джаз
+      - id: text
+        role: text
+        draft: false
+        en: In 1967 the saxophonist Yusef Lateef recorded the song in New York, and the playground game became a piece of jazz.
+        ru: В 1967 году саксофонист Юсеф Латиф записал песню в Нью-Йорке, и игра со школьного двора стала джазовой пьесой.
+      - id: listen
+        role: note
+        draft: false
+        en: "Listen to the tambourine: it keeps the old clap of the circle."
+        ru: "Послушайте бубен: он держит старый хлопок круга."
 
   - id: beat
     kind: stop
     nodes: [ easybeats-1967 ]
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "1967 · beat", ru: "1967 · бит" }
-      - { id: text, role: text, draft: true, en: "The Easybeats, an Australian beat group, in an arrangement by Vanda and Young.", ru: "The Easybeats, австралийская бит-группа, в аранжировке Ванды и Янга." }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: 1967 · beat
+        ru: 1967 · бит
+      - id: text
+        role: text
+        draft: false
+        en: "The same year the song reached the other side of the world: the Australian beat group The Easybeats recorded it in an arrangement by their guitarists Harry Vanda and George Young."
+        ru: "В том же году песня добралась до другого края света: австралийская бит-группа The Easybeats записала её в аранжировке своих гитаристов Гарри Ванды и Джорджа Янга."
 
   - id: house
     kind: stop
     nodes: [ songstress-1997, maw-remix-2002 ]
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "1997 → 2002 · house", ru: "1997 → 2002 · хаус" }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: 1997 → 2002 · house
+        ru: 1997 → 2002 · хаус
       - id: text
         role: text
-        draft: true
-        en: "New York [[chicago-house|house]]: The Songstress, produced by Kerri Chandler and Jerome Sydenham; then Masters At Work remix Simone’s own recording for the clubs."
-        ru: "Нью-йоркский [[chicago-house|хаус]]: The Songstress, продюсеры Керри Чандлер и Джером Сайденхэм; потом Masters At Work делают ремикс самой записи Симон для клубов."
-      - { id: listen, role: note, draft: true, en: "Listen for the refrain turned into a loop over the kick drum.", ru: "Слушайте, как припев становится петлёй над бочкой." }
+        draft: false
+        en: Thirty years later the song came to the dance floors of New York house. In 1997 the producers Kerri Chandler and Jerome Sydenham released it as The Songstress, and in 2002 Masters At Work remixed Nina Simone’s own recording for the clubs.
+        ru: Через тридцать лет песня попала на танцполы нью-йоркского хауса. В 1997 году продюсеры Керри Чандлер и Джером Сайденхэм выпустили её под именем The Songstress, а в 2002 году Masters At Work сделали для клубов ремикс самой записи Нины Симон.
+      - id: listen
+        role: note
+        draft: false
+        en: Listen to how the refrain becomes a loop over the kick drum.
+        ru: Послушайте, как припев превращается в петлю над бас-барабаном.
 
   - id: feist
     kind: stop
     nodes: [ feist-sealion-2007 ]
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "2007", ru: "2007" }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: "2007"
+        ru: "2007"
       - id: text
         role: text
         draft: false
-        en: "Feist found the field recording on a compilation and called her version “kind of a half cover of the little girls”. Simone she names second."
-        ru: "Feist нашла полевую запись на сборнике и назвала свою версию «наполовину кавером на тех девочек». Нину Симон она называет второй."
+        en: The Canadian singer Feist went past Nina Simone, straight back to the sisters. She found the 1939 field recording on a compilation and called her version “kind of a half cover of the little girls”, naming Simone’s famous version only second.
+        ru: Канадская певица Feist прошла мимо Нины Симон прямо к сёстрам Шипп. Она нашла полевую запись 1939 года на сборнике и назвала свою версию «наполовину кавером на тех девочек», а знаменитую версию Симон упомянула лишь второй.
       - id: chorus
         role: text
         draft: false
-        en: "The clapping, chanting chorus around her is the circle’s answer of 1939, come back as an arrangement."
-        ru: "Хлопающий и поющий хор вокруг неё — ответ круга 1939 года, вернувшийся в виде аранжировки."
-      - { id: listen, role: note, draft: true, en: "Listen for the group answering her line by line.", ru: "Слушайте, как группа отвечает ей строка за строкой." }
+        en: The clapping, chanting chorus around her on the record is the circle’s answer of 1939, come back as an arrangement.
+        ru: Хлопающий и поющий хор вокруг неё на записи — это ответ круга 1939 года, вернувшийся в виде аранжировки.
+      - id: listen
+        role: note
+        draft: false
+        en: Listen to the group answering her line by line.
+        ru: Послушайте, как хор отвечает ей строка за строкой.
 
   - id: kanye
     kind: stop
     nodes: [ kanye-bad-news-2008 ]
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "2008", ru: "2008" }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: "2008"
+        ru: "2008"
       - id: text
         role: text
-        draft: true
-        en: "Kanye West, “Bad News”. The sample is licensed, and the booklet says it “contains a sample of the recording ‘See Line Woman’ as performed by Nina Simone”, written by George Bass."
-        ru: "Канье Уэст, «Bad News». Сэмпл лицензирован, и в буклете сказано, что трек «contains a sample of the recording ‘See Line Woman’ as performed by Nina Simone», а автор — George Bass."
-      - { id: again, role: line, draft: false, en: "The writer’s line again carries one name: George Bass.", ru: "В строке об авторе снова одно имя: Джордж Басс." }
+        draft: false
+        en: "In 2008 Kanye West built his song “Bad News” on a sample of Nina Simone’s recording. The sample was licensed, and the album booklet says so: the track contains a sample of “See Line Woman” as performed by Nina Simone, written by George Bass."
+        ru: "В 2008 году Канье Уэст построил свою песню «Bad News» на сэмпле из записи Нины Симон. Сэмпл был лицензирован, и в буклете альбома так и написано: трек содержит сэмпл «See Line Woman» в исполнении Нины Симон, автор — Джордж Басс."
+      - id: again
+        role: line
+        draft: false
+        en: Once again the writer’s line carries a single name, and it is not the name of either sister.
+        ru: И снова в строке об авторе одно имя, и это не имя ни одной из сестёр.
 
   - id: massive
     kind: flashes
@@ -469,31 +605,51 @@ scenes:
     flashes: [ "1:49", "2:37", "3:21" ]
     threads: [ simone-1964, shipp-1939 ]
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "2010", ru: "2010" }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: "2010"
+        ru: "2010"
       - id: text
         role: text
         draft: false
-        en: "Massive Attack, “Paradise Circus”. At 1:49, 2:37 and 3:21 Nina Simone’s claps sound under the song; comparing the two recordings, we found them there. From each one the ink runs back, to 1964 and then to 1939."
-        ru: "Massive Attack, «Paradise Circus». На 1:49, 2:37 и 3:21 под песней звучат хлопки Нины Симон — мы нашли их, сравнив две записи. От каждой вспышки тушь тянется назад: к 1964 году, потом к 1939-му."
+        en: "In 2010 the Bristol band Massive Attack released “Paradise Circus”. At 1:49, 2:37 and 3:21 Nina Simone’s claps from “See-Line Woman” sound under the song: we found them by laying the two recordings over each other. Press “Show the three claps”, and from each clap a line of ink will run back to 1964 and then to 1939."
+        ru: "В 2010 году бристольская группа Massive Attack выпустила «Paradise Circus». На 1:49, 2:37 и 3:21 под песней звучат хлопки Нины Симон из «See-Line Woman»: мы нашли их, наложив две записи друг на друга. Нажмите «Показать три хлопка», и от каждого из них линия туши протянется назад, к 1964 году, а потом к 1939-му."
       - id: on
         role: text
-        draft: true
-        en: "The branch goes on to Gui Boratto’s remix, to Burial’s twelve-minute rework and to the opening titles of “Luther”."
-        ru: "Дальше ветвь идёт к ремиксу Gui Boratto, к двенадцатиминутной переработке Burial и к заставке сериала «Лютер»."
+        draft: false
+        en: "From “Paradise Circus” the branch went on: the Brazilian producer Gui Boratto remixed it, the London producer Burial reworked it into a twelve-minute piece, and the track became the opening theme of the BBC series “Luther”."
+        ru: "От «Paradise Circus» ветвь пошла дальше: бразильский продюсер Gui Boratto сделал на неё ремикс, лондонский продюсер Burial превратил её в двенадцатиминутную пьесу, а сам трек стал музыкой к заставке сериала BBC «Лютер»."
       - id: fuchs
         role: note
-        draft: true
-        en: "The drums on the album are credited to Jerry Fuchs, who died in Brooklyn on November 8, 2009, three months before “Heligoland” came out."
-        ru: "Барабаны на альбоме записаны за Джерри Фуксом, который погиб в Бруклине 8 ноября 2009 года, за три месяца до выхода «Heligoland»."
-      - { id: label-1964, role: label, draft: true, en: "1964", ru: "1964" }
-      - { id: label-1939, role: label, draft: true, en: "1939", ru: "1939" }
+        draft: false
+        en: The drums on the album are credited to Jerry Fuchs. He died in Brooklyn on 8 November 2009, three months before the album came out.
+        ru: Барабаны на альбоме записаны за Джерри Фуксом. Он погиб в Бруклине 8 ноября 2009 года, за три месяца до выхода альбома.
+      - id: label-1964
+        role: label
+        draft: false
+        en: "1964"
+        ru: "1964"
+      - id: label-1939
+        role: label
+        draft: false
+        en: "1939"
+        ru: "1939"
 
   - id: burial
     kind: stop
     nodes: [ burial-2011 ]
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "2011", ru: "2011" }
-      - { id: text, role: text, draft: true, en: "Burial’s twelve-minute rework of “Paradise Circus”: the song dissolved into a shadow.", ru: "Двенадцатиминутная переработка «Paradise Circus» от Burial: песня, растворённая до тени." }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: "2011"
+        ru: "2011"
+      - id: text
+        role: text
+        draft: false
+        en: In Burial’s twelve-minute rework of “Paradise Circus” the song thins out almost to a shadow, but the clap is still there.
+        ru: В двенадцатиминутной переработке «Paradise Circus», которую сделал Burial, песня истончается почти до тени, но хлопок в ней остаётся.
 
   - id: screen
     kind: filmstrip
@@ -505,24 +661,40 @@ scenes:
       - { work: "The Accountant 2", node: ponder-dessner-2025, caption: { en: "Danielle Ponder and Bryce Dessner open “The Accountant 2”.", ru: "Даниэль Пондер и Брайс Десснер открывают «Бухгалтера 2»." } }
       - { work: "Heated Rivalry (Crave/HBO Max), episode 1 'Rookies'", node: feist-sealion-2007, caption: { en: "Its creator wanted the song’s “nervous energy” and was not sure he could afford it.", ru: "Создатель сериала хотел «нервную энергию» этой песни и не был уверен, что сможет её себе позволить." } }
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "On screen", ru: "Экран" }
-      - { id: text, role: text, draft: true, en: "The song on film, in series and in a game, frame by frame.", ru: "Песня в кино, в сериалах и в игре — кадр за кадром." }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: On screen
+        ru: На экране
+      - id: text
+        role: text
+        draft: false
+        en: "The song also found its way to the screen: into films, series and a video game. Scroll along the film strip to see where it sounded, year by year."
+        ru: "Песня попала и на экран: в фильмы, сериалы и видеоигру. Прокрутите киноленту, чтобы увидеть, где она звучала, год за годом."
 
   - id: silence
     kind: silence
     blocks:
-      - { id: stop, role: line, draft: true, en: "The river stops. The clap goes quiet.", ru: "Река останавливается. Хлопок затихает." }
-      - { id: film, role: text, draft: false, en: "In 1999 their own voices opened a Hollywood film.", ru: "В 1999 году их собственные голоса открыли голливудский фильм." }
+      - id: stop
+        role: line
+        draft: false
+        en: Now the river stops, and the clap falls silent.
+        ru: Здесь река останавливается, и хлопок затихает.
+      - id: film
+        role: text
+        draft: false
+        en: "In 1999 the Hollywood film “The General’s Daughter” opened with the 1939 recording: the voices of Christine and Katherine Shipp themselves."
+        ru: В 1999 году голливудский фильм «Дочь генерала» открылся записью 1939 года — голосами самих Кристин и Кэтрин Шипп.
       - id: never-heard
         role: text
         draft: false
-        en: "By then the sisters had long been dead. Of everyone who sang at Nichols Chapel that day, only their brother Isaac was still alive."
-        ru: "Сестёр к тому времени давно не было в живых. Из всех, кто пел в тот день в Николс-Чепел, оставался только их брат Айзек."
+        en: Neither sister heard it. By then both had long been dead. Of everyone who sang at Nichols Chapel that day in 1939, only their brother Isaac was still alive.
+        ru: "Ни одна из сестёр этого не услышала: обеих к тому времени давно не было в живых. Из всех, кто пел в тот день 1939 года в Николс-Чепел, оставался только их брат Айзек."
       - id: isaac-africa
         role: text
         draft: false
-        en: "Isaac had once gone to Africa as a hand on a cargo ship and learned songs there."
-        ru: "Айзек когда-то уходил в Африку матросом грузового судна и выучил там песни."
+        en: Isaac had once sailed to Africa as a hand on a cargo ship and learned songs there too.
+        ru: Айзек когда-то ходил в Африку матросом на грузовом судне и выучил песни и там.
 
   - id: classroom
     kind: classroom
@@ -533,13 +705,21 @@ scenes:
         - { file: classroom-children.webp, depth: 9, role: figure, pivot: "50 80", fit: { x: -2.5 }, alt: { en: "Children standing in a circle, clapping", ru: "Дети стоят в кругу и хлопают" } }
         - { file: classroom-teacher.webp, depth: 13, role: figure, pivot: "86 88", fit: { x: 3.19, y: 1.63, scale: 0.96 }, alt: { en: "Their teacher keeps the beat beside a small speaker", ru: "Учительница отбивает ритм рядом с небольшой колонкой" } }
     blocks:
-      - { id: kicker, role: kicker, draft: true, en: "The classroom", ru: "Класс" }
+      - id: kicker
+        role: kicker
+        draft: false
+        en: The classroom
+        ru: Класс
       - id: text
         role: text
         draft: false
-        en: "In American schools music teachers teach the song by the Kodály and Orff methods. So that the children hear where it came from, they play them the 1939 recording."
-        ru: "В американских школах учителя музыки разучивают эту песню по методикам Кодаи и Орфа. Чтобы дети услышали, откуда она, им ставят ту самую запись 1939 года."
-      - { id: ring, role: line, draft: true, en: "The children stand in a circle, and the circle claps again.", ru: "Дети встают в круг, и круг снова начинает хлопать." }
+        en: Today music teachers in American schools teach this song by the Kodály and Orff methods. So that the children can hear where it came from, they play them the recording Christine and Katherine made in 1939.
+        ru: Сегодня учителя музыки в американских школах разучивают эту песню по методикам Кодаи и Орфа. Чтобы дети услышали, откуда она взялась, им ставят ту самую запись, которую Кристин и Кэтрин сделали в 1939 году.
+      - id: ring
+        role: line
+        draft: false
+        en: The children stand in a circle, and the circle claps again.
+        ru: Дети встают в круг, и круг снова начинает хлопать.
 
   - id: finale
     kind: finale
@@ -550,9 +730,25 @@ scenes:
       - id: together
         role: text
         draft: false
-        en: "Your claps from the whole story, the children’s claps and the 1939 recording sound together. The circle closes."
-        ru: "Вместе звучат хлопки, которые вы оставляли на круге всю историю, хлопки детей и запись 1939 года. Круг замыкается."
-      - { id: credit-1, role: quote, draft: true, en: "A folk ring game.", ru: "Народная игра в круг." }
-      - { id: credit-2, role: quote, draft: true, en: "Sung by Christine and Katherine Shipp.", ru: "Пели Кристин и Кэтрин Шипп." }
-      - { id: credit-3, role: quote, draft: true, en: "Byhalia, Mississippi, May 13, 1939.", ru: "Байхейлия, Миссисипи, 13 мая 1939 года." }
-      - { id: last, role: line, draft: true, en: "The whole world knows the song. Now you know their names.", ru: "Песню знает весь мир. Теперь вы знаете их имена." }
+        en: "Press “Clap together”: your claps from the whole story, the children’s claps and the 1939 recording will sound at once, and the circle will close."
+        ru: "Нажмите «Хлопнуть вместе»: ваши хлопки за всю историю, хлопки детей и запись 1939 года прозвучат вместе, и круг замкнётся."
+      - id: credit-1
+        role: quote
+        draft: false
+        en: A folk ring game.
+        ru: Народная игра в круг.
+      - id: credit-2
+        role: quote
+        draft: false
+        en: Sung by Christine and Katherine Shipp.
+        ru: Пели Кристин и Кэтрин Шипп.
+      - id: credit-3
+        role: quote
+        draft: false
+        en: Byhalia, Mississippi, 13 May 1939.
+        ru: Байхейлия, Миссисипи, 13 мая 1939 года.
+      - id: last
+        role: line
+        draft: false
+        en: The whole world knows the song. Now you know their names.
+        ru: Песню знает весь мир. Теперь вы знаете их имена.
