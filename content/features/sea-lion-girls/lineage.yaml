@@ -20,6 +20,7 @@ nodes:
       - "Taught in US school music classrooms as a pentatonic call-and-response song (Kodály Center collection; GAMEPLAN Orff curriculum, Kriske/DeLelles) — see top-level 'afterlife'"
     what_travelled: "The call-and-response frame: a leader sings a line, the group answers with the title phrase ('Sea lion'). This is the cell every later version keeps."
     playable_url: null
+    playable_verified: "no recording exists: oral tradition node; the earliest recording is shipp-1939"
     sources:
       - title: "Library of Congress, Songs of America — Children's Songs (essay)"
         url: "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/traditional/childrens-songs/"
@@ -43,6 +44,7 @@ nodes:
     what_travelled: "The earliest surviving sound of the song: two voices, unaccompanied, barely a minute long — the title refrain answered line by line, the coffee/tea verse, the rhythm later artists clap to."
     playable_url: "https://www.loc.gov/item/ihas.200196570/"
     playable_audio_direct: "https://tile.loc.gov/storage-services/public/afc/afcihas-200196570/200196570.mp3"
+    playable_verified: "2026-11-15 Library of Congress item ihas.200196570; plays the LoC file via playable_audio_direct (tile.loc.gov)"
     archive_ids: "AFS 03008 A01 and B03; collection AFC 1939/005 (Herbert Halpert 1939 Southern States Recording Expedition)"
     sources:
       - title: "Library of Congress item record ihas.200196570 (JSON view)"
@@ -66,7 +68,8 @@ nodes:
     kind: field-recording
     parents: [shipp-1939]
     what_travelled: "First publication of the Shipp recording, as a Library of Congress 78-rpm album set; it put the girls' voices on the same album as the first recordings of McKinley Morganfield (Muddy Waters)."
-    playable_url: null
+    playable_url: "https://www.loc.gov/item/ihas.200196570/"
+    playable_verified: "2026-11-15 no official upload of the AFS L4 album found (searched YouTube for album/track title; only fan uploads and Document/Suncoast compilations); links to the Library of Congress page of the same 1939 Shipp recording that this album first issued"
     sources:
       - title: "Discogs — Afro-American Blues And Game Songs, The Library Of Congress AAFS L4"
         url: "https://www.discogs.com/release/5239619-Various-Afro-American-Blues-And-Game-Songs"
@@ -83,7 +86,8 @@ nodes:
     kind: field-recording
     parents: [shipp-1939]
     what_travelled: "Reissue that returned the Shipp recording to circulation and became the licensed source for the 1999 film use."
-    playable_url: null
+    playable_url: "https://www.loc.gov/item/ihas.200196570/"
+    playable_verified: "2026-11-15 no official upload of Rounder CD 1500 found (searched YouTube for album/track title); links to the Library of Congress page of the same 1939 Shipp recording"
     sources:
       - title: "Discogs — Rounder CD 1500 credits"
         url: "https://www.discogs.com/release/1367582-Various-A-Treasury-Of-Library-Of-Congress-Field-Recordings"
@@ -101,6 +105,7 @@ nodes:
     parents: [rounder-treasury-1997]
     what_travelled: "Excerpts of the actual 1939 voices, re-produced as film score. The remix track is on the album only, not in the film."
     playable_url: "https://www.youtube.com/watch?v=di6K-3kS94Y"
+    playable_verified: "2026-11-15 oEmbed author_name 'Release - Topic', title 'She Began To Lie'; auto-generated, provided by Milan, album The General's Daughter (Original Motion Picture Soundtrack)"
     playable_note: "Auto-generated 'Release - Topic' upload of 'She Began To Lie' (label-delivered)."
     sources:
       - title: "Discogs — The General's Daughter (Music From The Motion Picture), Milan 74321 69474-2"
@@ -125,7 +130,8 @@ nodes:
     afterlife: ["Template for nearly every later cover; officially remixed in 2002, 2022, 2026; sampled 2008"]
     what_travelled: "Title (respelled), the leader/answer refrain, the verse frame; Simone's arrangement turned a playground chant into a percussion-driven performance piece. Writer credit went to George Houston Bass, arranger credit to Simone."
     playable_url: "https://www.youtube.com/watch?v=E17-0CuPb64"
-    playable_note: "'Nina Simone - See-Line Woman (Audio)', Nina Simone Official Artist Channel."
+    playable_verified: "2026-11-15 oEmbed author_name 'NinaSimoneVEVO', title 'Nina Simone - See-Line Woman (Audio)'"
+    playable_note: "'Nina Simone - See-Line Woman (Audio)', NinaSimoneVEVO."
     album: "Broadway-Blues-Ballads (Philips PHM 200-148 / PHS 600-148), side B track 3"
     sources:
       - title: "Discogs — Broadway - Blues - Ballads, Philips PHM 200-148"
@@ -146,7 +152,8 @@ nodes:
     kind: cover
     parents: [simone-1964]
     what_travelled: "The children's song went out to radio as the flip side of Simone's protest anthem."
-    playable_url: null
+    playable_url: "https://www.youtube.com/watch?v=E17-0CuPb64"
+    playable_verified: "2026-11-15 oEmbed author_name 'NinaSimoneVEVO', title 'Nina Simone - See-Line Woman (Audio)'; same 1964 studio master as the album track; no separate upload of the Philips 40216 single exists"
     sources:
       - title: "Discogs — Nina Simone, Mississippi *%??**&% (Philips 40216, US, July 1964)"
         url: "https://www.discogs.com/release/4985266-Nina-Simone-Mississippi-"
@@ -165,6 +172,7 @@ nodes:
     style_changes: "Jazz quartet treatment (Lateef on flute/reeds and vocal, Hugh Lawson piano, Cecil McBee bass, Roy Brooks drums, Sylvia Shemwell tambourine — jazzdisco.org); the song becomes a modal-jazz vehicle"
     what_travelled: "The Simone spelling and the song as a jazz vehicle, three years after Simone. Recorded NYC 1 June 1967; Sylvia Shemwell on tambourine; issued on The Complete Yusef Lateef (Atlantic 1499, 1968)."
     playable_url: "https://www.youtube.com/watch?v=WEPP3yNFU6c"
+    playable_verified: "2026-11-15 oEmbed author_name 'Yusef Lateef - Topic', title 'See Line Woman'; provided by Rhino Atlantic, ℗ 1967 Atlantic"
     playable_note: "'Yusef Lateef - Topic' (auto-generated, label-delivered)."
     sources:
       - title: "Discogs — The Complete Yusef Lateef (master)"
@@ -183,7 +191,8 @@ nodes:
     parents: [simone-1964]
     style_changes: "British-produced beat-group version (producer Shel Talmy, arr. Vanda & Young; Pop Archives); credited 'Traditional'"
     what_travelled: "The song crossed into British-recorded beat music: credited 'Traditional, arr. Harry Vanda – George Young', produced by Shel Talmy, on Good Friday (UK) / Friday On My Mind (US)."
-    playable_url: null
+    playable_url: "https://www.youtube.com/watch?v=ejmjHAqjBqg"
+    playable_verified: "2026-11-15 oEmbed author_name 'The Easybeats', title 'The Easybeats - See Line Woman (Official Audio)'; official band channel @TheEasybeats"
     sources:
       - title: "Discogs — The Easybeats, Good Friday (master)"
         url: "https://www.discogs.com/master/165138-The-Easybeats-Good-Friday"
@@ -203,6 +212,7 @@ nodes:
     afterlife: ["Licensed onto many house compilations 1998–2013; third-generation remixes ('99 Presence, Full Intention, DEA) single-sourced"]
     what_travelled: "Simone's song into New York/New Jersey deep house: the refrain becomes a loopable chant over a four-on-the-floor kick. Writer credit stays with George Houston Bass. Ibadan Records IRC 005."
     playable_url: "https://www.youtube.com/watch?v=RjE9mzdPuPo"
+    playable_verified: "2026-11-15 oEmbed author_name 'Songstress - Topic', title 'See Line Woman (Vocal Mix)'; provided by Label Worx, ℗ Kerri Chandler"
     playable_note: "'See Line Woman (Vocal Mix)', Songstress - Topic (auto-generated)."
     sources:
       - title: "Discogs — The Songstress, See Line Woman (Ibadan IRC 005, 1997)"
@@ -222,7 +232,8 @@ nodes:
     style_changes: "Uses Simone's own master; Masters At Work extend it to a 10-minute house track (Verve // Remixed); NOW Toronto: 'the Masters at Work house reworking'"
     what_travelled: "Simone's own vocal and percussion stems, extended (10:04 on the vinyl) into a house track; the label-sanctioned entry of the song into club canon."
     playable_url: "https://www.youtube.com/watch?v=X9HwpD63coI"
-    playable_note: "'Nina Simone - See-Line Woman (Masters At Work Remix / Visualizer)', Nina Simone Official Artist Channel."
+    playable_verified: "2026-11-15 oEmbed author_name 'NinaSimoneVEVO', title 'Nina Simone - See-Line Woman (Masters At Work Remix / Visualizer)'"
+    playable_note: "'Nina Simone - See-Line Woman (Masters At Work Remix / Visualizer)', NinaSimoneVEVO."
     sources:
       - title: "Discogs — Verve // Remixed (Verve 314 589 606-1, 2002)"
         url: "https://www.discogs.com/release/915977-Various-Verve--Remixed"
@@ -241,6 +252,7 @@ nodes:
     style_changes: "Soul-jazz duo setting; Crawford (NPR): 'very modern, but real, as in keeping with the old school'; male-voice answer to her lead keeps the call-and-response"
     what_travelled: "The song as adult soul-jazz: Crawford says Sample set it 'very modern, but real'. Album Feeling Good (PRA/Universal, 2006; US 2007)."
     playable_url: "https://www.youtube.com/watch?v=PCoDdZRXV3s"
+    playable_verified: "2026-11-15 oEmbed author_name 'Joe Sample - Topic', title 'See Line Woman'; provided by The Orchard, album Feeling Good, ℗ 2007 PRA Records"
     playable_note: "'Joe Sample - Topic' (auto-generated)."
     sources:
       - title: "Discogs — Randy Crawford/Joe Sample, Feeling Good (master)"
@@ -261,7 +273,8 @@ nodes:
     afterlife: ["Grey's Anatomy OST Vol. 3 (2007); Heated Rivalry ep. 1 (2025)"]
     what_travelled: "Feist took from both ends of the chain: she calls it 'a half cover of the little girls' and names Simone's version; the clapping, chanting group answer comes back to the foreground. Only cover on The Reminder (Arts & Crafts/Cherrytree, 2007)."
     playable_url: "https://www.youtube.com/watch?v=AFxKw4EOtbU"
-    playable_note: "'Sealion', FeistMusic Official Artist Channel. Also BBC Music: Later... with Jools Holland (2008) https://www.youtube.com/watch?v=Q_HNjEMi_io"
+    playable_verified: "2026-11-15 oEmbed author_name 'Feist - Topic', title 'Sealion'; provided by Universal Music Group, album The Reminder"
+    playable_note: "'Sealion', Feist - Topic (auto-generated, label-delivered). Also BBC Music: Later... with Jools Holland (2008) https://www.youtube.com/watch?v=Q_HNjEMi_io"
     sources:
       - title: "NPR, Weekend Edition (host John Ydstie), 'The Way You Look at Feist...', 2007-06-16, transcript"
         url: "https://www.npr.org/transcripts/11115052"
@@ -281,7 +294,8 @@ nodes:
     kind: remix
     parents: [feist-sealion-2007]
     what_travelled: "Third generation: a remix of Feist's version."
-    playable_url: null
+    playable_url: "https://www.youtube.com/watch?v=2y2AodVuxe4"
+    playable_verified: "2026-11-15 oEmbed author_name 'Feist - Topic', title 'Sealion (Chromeo Remix)'; provided by Universal Music Group, single Sealion, ℗ 2007 Decca Records France"
     sources:
       - title: "Discogs — Arts & Crafts Sampler Vol 4 (master)"
         url: "https://www.discogs.com/master/1491634"
@@ -298,7 +312,8 @@ nodes:
     style_changes: "Takes the percussion bed ('tribal rhythm' — TV One, 2016) of Simone's master and sets it under 808 drum-machine and Auto-Tune vocal; the theme (a faithless lover) is kept and turned to first person"
     what_travelled: "The drum/percussion bed of Simone's recording, slowed and set under 808s and Auto-Tune; the song's subject (a faithless lover) carried over as theme."
     playable_url: "https://www.youtube.com/watch?v=1BlH1JZBeXI"
-    playable_note: "'Bad News', Kanye West Official Artist Channel (auto-generated art track)."
+    playable_verified: "2026-11-15 oEmbed author_name 'Kanye West - Topic', title 'Bad News'; provided by Universal Music Group, album 808s & Heartbreak"
+    playable_note: "'Bad News', Kanye West - Topic (auto-generated art track)."
     album: "808s & Heartbreak (Roc-A-Fella, 2008), track 9"
     sources:
       - title: "Discogs — 808s & Heartbreak, Roc-A-Fella B0012198-01, liner credits"
@@ -318,6 +333,7 @@ nodes:
     style_changes: "Experimental/noise-pop inside an all-Simone tribute album; louder, abrasive delivery (SLUG: 'more upbeat and familiar')"
     what_travelled: "Part of an all-Simone covers album (Nina, Graveface, street date 2013-12-02); the refrain kept, the arrangement made abrasive."
     playable_url: "https://www.youtube.com/watch?v=xzAvLngNavo"
+    playable_verified: "2026-11-15 oEmbed author_name 'Release - Topic', title 'See Line Woman'; auto-generated, provided by Symphonic Distribution, Xiu Xiu, album Nina, ℗ 2012 GRAVELLC"
     playable_note: "'Release - Topic' auto-generated upload."
     sources:
       - title: "Discogs — Xiu Xiu, Nina (master)"
@@ -336,7 +352,8 @@ nodes:
     parents: [simone-1964]
     style_changes: "Big-band R&B (horns, congas) with Mvula; reviewer hears 'her own African influences'"
     what_travelled: "Big-band horns and congas around the refrain; album Sirens Of Song."
-    playable_url: null
+    playable_url: "https://www.youtube.com/watch?v=dz2nsF4tvdA"
+    playable_verified: "2026-11-15 oEmbed author_name 'Jools Holland and His Rhythm & Blues Orchestra - Topic', title 'See-Line Woman'; provided by East West Records, album Sirens of Song, vocals Laura Mvula"
     sources:
       - title: "Discogs — Sirens Of Song (master)"
         url: "https://www.discogs.com/master/775877"
@@ -353,7 +370,8 @@ nodes:
     kind: cover
     parents: [simone-1964]
     what_travelled: "Recorded for the fictional Caribbean island of Yara as an 'alt-history' radio cover; the song reached a video-game audience."
-    playable_url: null
+    playable_url: "https://www.youtube.com/watch?v=qZIB1E8_eZE"
+    playable_verified: "2026-11-15 oEmbed author_name 'Ubisoft Music', title 'See-Line Woman | Far Cry 6 : The Music of Yara (from the Far Cry 6 OST) | Yolanda Castillo'; official label channel @UbisoftMusic"
     sources:
       - title: "Discogs — Far Cry 6: Original Game Soundtrack (master)"
         url: "https://www.discogs.com/master/2862709"
@@ -370,7 +388,8 @@ nodes:
     kind: remix
     parents: [simone-1964]
     what_travelled: "Official label remix of Simone's master; compilation Feeling Good: Her Greatest Hits and Remixes (Verve, 2022-02-11)."
-    playable_url: null
+    playable_url: "https://www.youtube.com/watch?v=CP5cl_TJxDo"
+    playable_verified: "2026-11-15 oEmbed author_name 'Nina Simone - Topic', title 'See-Line Woman (Riton Remix)'; provided by Universal Music Group, ℗ 2021 Verve Label Group, released 2021-09-24"
     sources:
       - title: "Universal Music Canada press release"
         url: "https://www.universalmusic.ca/press-releases/nina-simone-feeling-good-her-greatest-hits-remixes-out-today"
@@ -388,6 +407,7 @@ nodes:
     parents: [simone-1964]
     what_travelled: "Billed as a cover of Simone's version; opens The Accountant 2 (Amazon MGM / Warner Bros., 2025)."
     playable_url: "https://www.youtube.com/watch?v=EjGUZkKl_Nk"
+    playable_verified: "2026-11-15 oEmbed author_name 'WaterTower Music', title 'The Accountant 2 Soundtrack | See-Line Woman - Danielle Ponder & Bryce Dessner | WaterTower Music'; official label channel @WaterTowerWB"
     playable_note: "WaterTower Music (Verified label channel)."
     sources:
       - title: "Film Music Reporter, 'The Accountant 2 Soundtrack Album Details', 2025-04-17"
@@ -407,7 +427,8 @@ nodes:
     style_changes: "Club remix that keeps Simone's vocal as the core (Beatportal)"
     what_travelled: "Simone's vocal kept at the centre, re-grooved for current club play; part of Verve's 'Year of Nina', collected on Verve Remixed // Nina Simone (2026-10-16)."
     playable_url: "https://www.youtube.com/watch?v=dRYvm-sFgfU"
-    playable_note: "Nina Simone Official Artist Channel (also an edit/visualizer: https://www.youtube.com/watch?v=rnm_Vt2GsZc)."
+    playable_verified: "2026-11-15 oEmbed author_name 'NinaSimoneVEVO', title 'Nina Simone, Mochakk - See-Line Woman (Mochakk Mix / Visualizer)'"
+    playable_note: "NinaSimoneVEVO (also an edit/visualizer: https://www.youtube.com/watch?v=rnm_Vt2GsZc)."
     sources:
       - title: "Beatportal, Cameron Holbrook, 2026-05-15"
         url: "https://www.beatportal.com/articles/1411706-mochakks-club-ready-remix-of-nina-simones-iconic-see-line-woman-has-landed"
@@ -426,6 +447,7 @@ nodes:
     what_travelled: "The song returned to a community-choir, a cappella-rooted African American heritage setting."
     style_changes: "Heritage vocal ensemble 'bringing traditional forms of African American culture to the stage' (singers.com). Album Front Porch Music (EarthBeat! R2 72881) also sings 'Gon' Knock John Booker', 'All Hid?' and 'Rosie' — all three also on the 1942 LoC Album IV that first issued the Shipp recording (observation from the two Discogs tracklists)."
     playable_url: null
+    playable_verified: "no official upload found (searched YouTube: Linda Tillery - Topic and Linda Tillery and the Cultural Heritage Choir - Topic carry other albums, not Front Porch Music; only a fan upload of this track; no official Bandcamp)"
     sources:
       - title: "Discogs — Front Porch Music (1997)"
         url: "https://www.discogs.com/release/5044421-Linda-Tillery-And-The-Cultural-Heritage-Choir-Front-Porch-Music"
@@ -446,7 +468,8 @@ nodes:
     parents: [simone-1964]
     what_travelled: "Samples from Simone's 'See-Line Woman': the handclaps and a trace of her voice (owner, by ear; WhoSampled also lists the sample)."
     playable_url: "https://www.youtube.com/watch?v=6hUkyKBsGtQ"
-    playable_note: "'Paradise Circus', Massive Attack Official Artist Channel."
+    playable_verified: "2026-11-15 oEmbed author_name 'Massive Attack - Topic', title 'Paradise Circus'; provided by Universal Music Group, album Heligoland"
+    playable_note: "'Paradise Circus', Massive Attack - Topic (auto-generated, label-delivered)."
     album: "Heligoland (Virgin CDV3070, 2010-02-05), track 7"
     claims_for:
       - who: "WhoSampled (community database) — seen ONLY as search snippets; page returned 403/Cloudflare"
@@ -490,7 +513,8 @@ nodes:
     kind: remix
     parents: [paradise-circus-2010]
     what_travelled: "Third generation (if the Simone link holds): Sandoval vocal and the track, rebuilt as 8-minute melodic techno; free download via RCRD LBL."
-    playable_url: null
+    playable_url: "https://www.youtube.com/watch?v=ProwCLCppgo"
+    playable_verified: "2026-11-15 oEmbed author_name 'Massive Attack - Topic', title 'Paradise Circus (Gui Boratto Remix)'; provided by Universal Music Group, Heligoland, ℗ 2010 Virgin Records"
     sources:
       - title: "Discogs — Paradise Circus (Gui Boratto Remix), RCRD LBL 2010"
         url: "https://www.discogs.com/release/2131474-Massive-Attack-Paradise-Circus-Gui-Boratto-Remix"
@@ -507,7 +531,8 @@ nodes:
     kind: remix
     parents: [paradise-circus-2010]
     what_travelled: "Bass-music remix from the official Heligoland remix promo."
-    playable_url: null
+    playable_url: "https://www.youtube.com/watch?v=fx7yYXlGVwM"
+    playable_verified: "2026-11-15 oEmbed author_name 'Massive Attack - Topic', title 'Paradise Circus (Breakage's Tight Rope Remix)'; provided by Universal Music Group, Heligoland, ℗ 2010 Virgin Records"
     sources:
       - title: "Discogs — Massive Attack, Remixes (Virgin promo CDr, 2010)"
         url: "https://www.discogs.com/release/3651871-Massive-Attack-Remixes"
@@ -525,6 +550,7 @@ nodes:
     parents: [paradise-circus-2010]
     what_travelled: "A 12-minute Burial rework; Discogs notes it also samples 'let love flower' from Massive Attack's own 'Psyche'. The Vinyl Factory VF034, 1,000 numbered copies, 2011-10-24."
     playable_url: null
+    playable_verified: "no official upload found (searched YouTube: only fan uploads and vinyl rips, incl. the unofficial 'Massive Attack Bristol' slideshow channel; no Massive Attack - Topic upload; no official Bandcamp)"
     sources:
       - title: "Discogs — Four Walls / Paradise Circus (The Vinyl Factory VF034)"
         url: "https://www.discogs.com/release/3184385-Massive-Attack-Vs-Burial-Four-Walls-Paradise-Circus"
@@ -541,7 +567,8 @@ nodes:
     kind: cover
     parents: [paradise-circus-2010]
     what_travelled: "Massive Attack members re-record their own song with a male voice for the Netflix film Luther: The Fallen Sun."
-    playable_url: null
+    playable_url: "https://www.youtube.com/watch?v=9tmW6EJar-I"
+    playable_verified: "2026-11-15 oEmbed author_name 'Post - Topic', title 'Paradise Circus (Fallen Sun Version)'; provided by IIP-DDS, ℗ Netflix Music"
     sources:
       - title: "Film Music Reporter, 2023-02-24"
         url: "https://filmmusicreporter.com/2023/02/24/new-version-of-paradise-circus-from-luther-the-fallen-sun-released/"
@@ -558,7 +585,8 @@ nodes:
     kind: interpolation
     parents: [trad-ring-game]
     what_travelled: "Ghetto/raw house track built around a sung rendition of the folk tune (Cabrini Green EP, Dixon Avenue Basement Jams DABJ-1202)."
-    playable_url: null
+    playable_url: "https://www.youtube.com/watch?v=rtfpc_gAQMY"
+    playable_verified: "2026-11-15 oEmbed author_name 'Marquis Hawkes - Topic', title 'Sealion Woman'; provided by EPM Online, album Cabrini Green, ℗ Dixon Avenue Basement Jams 2012"
     sources:
       - title: "Discogs — Marquis Hawkes, Cabrini Green"
         url: "https://www.discogs.com/release/3870100-Marquis-Hawkes-Cabrini-Green"
@@ -575,7 +603,8 @@ nodes:
     kind: cover
     parents: [simone-1964]
     what_travelled: "Part of an all-Simone tribute album (Pour une Âme Souveraine, Naïve, 2012); writers credited Bass and Simone."
-    playable_url: null
+    playable_url: "https://www.youtube.com/watch?v=oSNUWixvuww"
+    playable_verified: "2026-11-15 oEmbed author_name 'naïve playlist', title 'Meshell Ndegeocello / Tracy Wannomae - See Line Woman (feat. Tracy Wannomae)'; official channel of the label Naïve, which released Pour une âme souveraine"
     sources:
       - title: "Discogs — Pour Une Âme Souveraine (master)"
         url: "https://www.discogs.com/master/480166"
@@ -592,7 +621,8 @@ nodes:
     kind: cover
     parents: [simone-1964]
     what_travelled: "Deep-house remake with new vocal by Dominique Fils-Aimé; credited 'Written by Nina Simone'; the label notes cite the 1964 Mississippi Goddam B-side. Foliage FNV001."
-    playable_url: "https://atjazz.bandcamp.com/album/see-line-woman-karizma-remixes"
+    playable_url: "https://www.youtube.com/watch?v=ep5aomJb5VI"
+    playable_verified: "2026-11-15 oEmbed author_name 'Atjazz - Topic', title 'See-Line Woman (Main Mix)'; provided by IIP-DDS, ℗ 2020 Reel People Music; official Bandcamp: atjazz.bandcamp.com"
     sources:
       - title: "Atjazz Bandcamp — See-Line Woman (Karizma Remixes)"
         url: "https://atjazz.bandcamp.com/album/see-line-woman-karizma-remixes"
@@ -609,7 +639,8 @@ nodes:
     kind: remix
     parents: [atjazz-2021]
     what_travelled: "Third generation: Baltimore house producer's dub of the Atjazz remake."
-    playable_url: "https://atjazz.bandcamp.com/album/see-line-woman-karizma-remixes"
+    playable_url: "https://www.youtube.com/watch?v=v3mDvnAxGx4"
+    playable_verified: "2026-11-15 oEmbed author_name 'Atjazz - Topic', title 'See-Line Woman (Karizma’s Last 1ne Dub)'; provided by Kartel, released 2021-03-05; official Bandcamp: atjazz.bandcamp.com"
     sources:
       - title: "Atjazz Bandcamp"
         url: "https://atjazz.bandcamp.com/album/see-line-woman-karizma-remixes"
