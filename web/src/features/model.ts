@@ -2,6 +2,7 @@
 // the pure part of the engine, shared by the build script and the browser:
 // the shape of a feature's content, its validation, and the arithmetic of
 // scrolling through scenes. Nothing here touches the DOM.
+import { links } from '../lib/links.ts';
 //
 // A feature lives in content/features/<id>/feature.yaml: a list of scenes,
 // each with text blocks in English and Russian. Every block is marked
@@ -33,6 +34,10 @@ export interface Art {
   file: string;
   /** The rights ledger entry (content/ledger/media.yaml) a photo is cleared by: its file name. */
   rights?: string;
+  /** What the picture shows, for a screen reader. */
+  alt?: Bi;
+  /** Who made it and under what licence, shown with it. */
+  credit?: Bi;
 }
 
 export interface Scene {
@@ -117,6 +122,8 @@ export interface ValidateContext {
   rights?: Set<string>;
   /** Screen uses (lineage sync works) with at least one source. */
   sync?: Set<string>;
+  /** Dictionary card ids, for [[id|words]] links in the text. */
+  cards?: Set<string>;
 }
 
 /** Problems with a feature's content; empty when it may be built. */
@@ -130,6 +137,7 @@ export function validateFeature(f: FeatureSource, ctx: ValidateContext = {}): st
   for (const a of f.art ?? []) {
     if (a.kind === 'photo' && !(a.rights && ctx.rights?.has(a.rights))) errs.push(`art ${a.id}: a real photo needs a rights entry in the media ledger`);
     if (a.kind !== 'photo' && a.kind !== 'generated') errs.push(`art ${a.id}: kind must be photo or generated`);
+    if (a.kind === 'photo' && !(bi(a.alt) && bi(a.credit))) errs.push(`art ${a.id}: a real photo needs alt and credit in en and ru`);
   }
   if (!Array.isArray(f.scenes) || f.scenes.length === 0) {
     errs.push('no scenes');
@@ -142,6 +150,7 @@ export function validateFeature(f: FeatureSource, ctx: ValidateContext = {}): st
     else if (sceneIds.has(s.id)) errs.push(`${at}: duplicate id`);
     sceneIds.add(s.id);
     if (!s.kind) errs.push(`${at}: no kind`);
+    if (s.art !== undefined && !(f.art ?? []).some((a) => a.id === s.art)) errs.push(`${at}: art ${String(s.art)} is not in the feature's art list`);
     const blocks = Array.isArray(s.blocks) ? s.blocks : [];
     const blockIds = new Set<string>();
     for (const b of blocks) {
@@ -152,6 +161,7 @@ export function validateFeature(f: FeatureSource, ctx: ValidateContext = {}): st
       if (!BLOCK_ROLES.includes(b.role)) errs.push(`${bat}: unknown role ${JSON.stringify(b.role)}`);
       if (!bi(b)) errs.push(`${bat}: needs both en and ru text`);
       if (typeof b.draft !== 'boolean') errs.push(`${bat}: draft must be set (true until the editor's pass)`);
+      if (ctx.cards) for (const id of [...links(b.en ?? ''), ...links(b.ru ?? '')]) if (!ctx.cards.has(id)) errs.push(`${bat}: links to a card that does not exist: ${id}`);
     }
     if (!blocks.some((b) => !b.hold && bi(b))) errs.push(`${at}: needs at least one shown block with en and ru text`);
     const used = [...(s.nodes ?? []), ...((s.threads as string[] | undefined) ?? []), ...((s.frames as Frame[] | undefined) ?? []).map((f) => f.node).filter((n): n is string => !!n)];

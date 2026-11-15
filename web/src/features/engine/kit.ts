@@ -2,7 +2,9 @@
 // flow of text, the text itself (bilingual, from the content files, through
 // the dictionary linker), the calm and sound switches on every screen, the
 // reader's clap circle, and the bridge to the museum's docked player.
+import { richText } from '../../app';
 import { h } from '../../lib/dom';
+import { plain } from '../../lib/links';
 import { pick } from '../../lib/i18n';
 import type { Recording } from '../../lib/listen';
 import { audioContext } from '../../lib/sound';
@@ -106,7 +108,7 @@ export class Kit {
   /** A block's text, from any scene. */
   text(sceneId: string, blockId: string): string {
     const b = this.scene(sceneId)?.blocks.find((x) => x.id === blockId);
-    return b ? pick(b) : '';
+    return b ? plain(pick(b)) : '';
   }
 
   /** The text blocks of a scene as elements (labels are for drawings and are left out). */
@@ -115,7 +117,8 @@ export class Kit {
   }
 
   block(b: Block): HTMLElement {
-    return h(`div.ft-block.ft-b-${b.role}`, { 'data-block': b.id, ...(b.draft ? { 'data-draft': '' } : {}) }, h(TEXT_TAG[b.role] ?? 'p', {}, pick(b)));
+    // Kickers are signposts ("1967 · jazz"): the dictionary is linked from the text under them.
+    return h(`div.ft-block.ft-b-${b.role}`, { 'data-block': b.id, ...(b.draft ? { 'data-draft': '' } : {}), ...(b.role === 'kicker' ? { 'data-no-link': '' } : {}) }, h(TEXT_TAG[b.role] ?? 'p', {}, richText(this.ctx.app, pick(b))));
   }
 
   // ---------- scenes ----------
@@ -245,7 +248,20 @@ export class Kit {
   recording(n: LineageNode): Recording | undefined {
     if (!n.play) return undefined;
     if (n.play.source === 'youtube') return { source: 'youtube', kind: 'official', youtube: n.play.youtube, title: n.title, channel: n.artist };
-    return { source: 'audio', kind: 'field', audio: n.play.audio, title: n.title, channel: n.artist };
+    return { source: 'audio', kind: 'field', audio: n.play.audio, title: n.title, channel: this.ui('loc-credit') };
+  }
+
+  /** The credit an archive recording plays under, with the way to its own page. */
+  credit(n: LineageNode): HTMLElement | null {
+    if (n.play?.source !== 'audio') return null;
+    return h('p.ft-credit', { 'data-credit': n.id }, this.ui('loc-credit'), ' ', n.link ? h('a', { href: n.link, target: '_blank', rel: 'noopener noreferrer' }, this.ui('loc-item')) : null);
+  }
+
+  /** A real photo from the feature's art list (cleared by the build), or null. */
+  photo(id: unknown): { src: string; alt: string; credit: string } | null {
+    const a = this.ctx.data.art.find((x) => x.id === id);
+    if (!a || a.kind !== 'photo' || !a.alt || !a.credit) return null;
+    return { src: this.ctx.app.media(a.file), alt: pick(a.alt), credit: pick(a.credit) };
   }
 
   /** Play a node in the museum's docked player (call from a click). */

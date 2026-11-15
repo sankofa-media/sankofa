@@ -319,7 +319,7 @@
   font-family: var(--font-sans);
   font-size: 12px;
 }
-.rv-card h3 {
+.rv-card .rv-title {
   font-family: var(--font-display);
   font-weight: 400;
   font-size: 22px;
@@ -514,4 +514,32 @@
   .rv-node {
     max-width: 64px;
   }
+}
+
+/* A photo developing out of its drawing, with its credit. */
+.ft-photo {
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+.ft-photo .ink-develop {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.ft-photo img {
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 22%;
+  filter: grayscale(1) contrast(1.05);
+}
+.ft-credit {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--ft-ink-2);
+  max-width: 34rem;
+}
+.ft-credit a {
+  color: inherit;
 }

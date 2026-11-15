@@ -6,7 +6,8 @@
 // allowed host, every real photo has a rights entry. Blocks held for a
 // second source (hold: true) are dropped here and never reach a reader.
 // Usage: node scripts/build-features.ts <content-dir> <data-dir>
-import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import YAML from 'yaml';
 import { isFeatureId, publishFeature, validateFeature, type Bi, type FeatureEntry, type FeatureSource, type FeaturesIndex } from '../src/features/model.ts';
@@ -26,7 +27,16 @@ const yaml = <T>(p: string): T => YAML.parse(readFileSync(p, 'utf8')) as T;
 const indexFile = join(dir, 'index.yaml');
 const index = existsSync(indexFile) ? yaml<{ order?: string[]; ui?: Record<string, Bi> }>(indexFile) : { order: [], ui: {} };
 const mediaLedger = join(src, 'ledger', 'media.yaml');
-const rights = new Set(existsSync(mediaLedger) ? (yaml<{ file: string; url?: string; license?: string }[]>(mediaLedger) ?? []).filter((e) => e.url && e.license).map((e) => e.file) : []);
+// A photo is cleared when its ledger entry names the source page, the licence
+// and its wording, and the file in content/media is exactly the one checked.
+const sha = (f: string) => createHash('sha256').update(readFileSync(f)).digest('hex');
+const rights = new Set(
+  (existsSync(mediaLedger) ? (yaml<{ file: string; url?: string; license?: string; license_wording?: string; sha256?: string }[]>(mediaLedger) ?? []) : [])
+    .filter((e) => e.url && e.license && e.license_wording && existsSync(join(src, 'media', e.file)) && e.sha256 === sha(join(src, 'media', e.file)))
+    .map((e) => e.file),
+);
+const cardsDir = join(src, 'cards');
+const cards = new Set(existsSync(cardsDir) ? readdirSync(cardsDir).filter((f) => f.endsWith('.md') && !/\.[a-z]{2}\.md$/.test(f)).map((f) => f.slice(0, -3)) : []);
 
 const errors: string[] = [];
 const entries: FeatureEntry[] = [];
@@ -49,7 +59,7 @@ for (const id of index.order ?? []) {
     errors.push(...validateLineage(raw).map((e) => `${id}/${f.lineage}: ${e}`));
   }
   const sync = new Set((raw?.sync ?? []).filter((s) => (s.sources ?? []).length > 0).map((s) => s.work));
-  const errs = validateFeature(f, raw ? { nodes: new Set(raw.nodes.map((n) => n.id)), sourced: sourcedNodes(raw), sync, rights } : { rights });
+  const errs = validateFeature(f, raw ? { nodes: new Set(raw.nodes.map((n) => n.id)), sourced: sourcedNodes(raw), sync, rights, cards } : { rights, cards });
   errors.push(...errs.map((e) => `${id}: ${e}`));
   if (errs.length) continue;
   let lineage;

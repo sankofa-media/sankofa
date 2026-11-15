@@ -18,6 +18,18 @@ dek:
 reading: {en: "35–45 minutes, with sound", ru: "35–45 минут, со звуком"}
 lineage: lineage.yaml
 
+# Pictures. Generated art needs no label; a real photo needs a rights entry in
+# content/ledger/media.yaml (source page, licence wording, checksum).
+art:
+  - id: simone-1965
+    kind: photo
+    file: nina-simone-1965.jpg
+    rights: nina-simone-1965.jpg
+    alt: {en: "Nina Simone, a portrait, 1965", ru: "Нина Симон, портрет, 1965 год"}
+    credit:
+      en: "Nina Simone, December 1965. Photo: Ron Kroon / Anefo, Nationaal Archief, CC0"
+      ru: "Нина Симон, декабрь 1965 года. Фото: Рон Крон / Anefo, Национальный архив Нидерландов, CC0"
+
 # The river: which lineage nodes it shows, where its two branches start, and
 # what travelled on to each node (clap, refrain, arrangement, tape) where the
 # default by kind is not right.
@@ -81,6 +93,11 @@ ui:
     draft: true
   clap-count: {en: "Your claps: {n}", ru: "Ваши хлопки: {n}", draft: true}
   play-1939: {en: "Play the 1939 recording", ru: "Включить запись 1939 года", draft: true}
+  loc-credit:
+    en: "Recording: Library of Congress, American Folklife Center (AFC 1939/005). Played from the Library’s own file for educational use."
+    ru: "Запись: Библиотека Конгресса, Американский центр фольклора (AFC 1939/005). Звучит из файла самой Библиотеки, в образовательных целях."
+    draft: true
+  loc-item: {en: "The recording at the Library of Congress", ru: "Запись на сайте Библиотеки Конгресса", draft: true}
   play: {en: "Play", ru: "Слушать", draft: true}
   play-label: {en: "Play “{title}”, {artist}, {year}", ru: "Слушать «{title}», {artist}, {year}", draft: true}
   listen-at-source: {en: "Listen at the source", ru: "Слушать у источника", draft: true}
@@ -236,6 +253,7 @@ scenes:
   - id: simone
     kind: simone
     nodes: [simone-1964]
+    art: simone-1965
     blocks:
       - {id: kicker, role: kicker, draft: true, en: "1964", ru: "1964"}
       - id: version
@@ -262,8 +280,8 @@ scenes:
       - id: two-sides
         role: text
         draft: true
-        en: "In July 1964 a 45 came out. Side A: “Mississippi Goddam”. Turn it over."
-        ru: "В июле 1964 года вышла сорокапятка. Сторона A — «Mississippi Goddam». Переверните её."
+        en: "In July 1964 a 45 came out. Side A: [[mississippi-goddam|“Mississippi Goddam”]]. Turn it over."
+        ru: "В июле 1964 года вышла сорокапятка. Сторона A — [[mississippi-goddam|«Mississippi Goddam»]]. Переверните её."
       - id: side-b
         role: text
         draft: true
@@ -328,7 +346,7 @@ scenes:
     nodes: [lateef-1967]
     blocks:
       - {id: kicker, role: kicker, draft: true, en: "1967 · jazz", ru: "1967 · джаз"}
-      - {id: text, role: text, draft: true, en: "Yusef Lateef: the folk game becomes jazz.", ru: "Юсеф Латиф: народная игра становится джазом."}
+      - {id: text, role: text, draft: true, en: "Yusef Lateef: the folk game becomes [[jazz]].", ru: "Юсеф Латиф: народная игра становится [[jazz|джазом]]."}
       - {id: listen, role: note, draft: true, en: "Listen for the tambourine keeping the old clap.", ru: "Слушайте бубен: он держит старый хлопок."}
 
   - id: beat
@@ -346,8 +364,8 @@ scenes:
       - id: text
         role: text
         draft: true
-        en: "New York house: The Songstress, produced by Kerri Chandler and Jerome Sydenham; then Masters At Work remix Simone’s own recording for the clubs."
-        ru: "Нью-йоркский хаус: The Songstress, продюсеры Керри Чандлер и Джером Сайденхэм; потом Masters At Work делают ремикс самой записи Симон для клубов."
+        en: "New York [[chicago-house|house]]: The Songstress, produced by Kerri Chandler and Jerome Sydenham; then Masters At Work remix Simone’s own recording for the clubs."
+        ru: "Нью-йоркский [[chicago-house|хаус]]: The Songstress, продюсеры Керри Чандлер и Джером Сайденхэм; потом Masters At Work делают ремикс самой записи Симон для клубов."
       - {id: listen, role: note, draft: true, en: "Listen for the refrain turned into a loop over the kick drum.", ru: "Слушайте, как припев становится петлёй над бочкой."}
 
   - id: feist

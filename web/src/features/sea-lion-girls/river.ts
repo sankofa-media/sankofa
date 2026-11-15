@@ -81,10 +81,11 @@ export function card(kit: Kit, n: LineageNode): HTMLElement {
     h(
       'div.rv-card-tx',
       {},
-      h('h3', {}, n.title),
+      h('p.rv-title', {}, n.title),
       h('p.rv-artist', {}, n.artist),
       h('p.rv-trav', {}, `${kit.ui('travelled')}: ${kit.ui(`glyph-${n.glyph}`)}`),
       kit.playButton(n),
+      kit.credit(n),
       n.sources.length
         ? h(
             'details.rv-src',

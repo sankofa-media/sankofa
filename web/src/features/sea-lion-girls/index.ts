@@ -7,7 +7,7 @@ import { audioContext } from '../../lib/sound';
 import type { FeatureContext, FeatureInstance } from '../host';
 import { FlashGate, parseClock, formatClock, type Figure, type Frame, type Scene } from '../model';
 import { BEAT, clap } from '../engine/clap';
-import { drawing, ink, s, sketch } from '../engine/ink';
+import { develop, drawing, ink, s, sketch } from '../engine/ink';
 import { Kit, watchYouTubeTime } from '../engine/kit';
 import * as art from './art';
 import { river, stop, syncYear } from './river';
@@ -58,7 +58,7 @@ const minute: Render = (kit, sc) => {
   const loc = kit.node(sc.nodes?.[0] ?? '');
   return kit.section(sc, {
     stage: art.minute(),
-    after: [loc ? kit.playButton(loc, kit.ui('play-1939')) : null, h('p.ft-hint', {}, kit.ui('clap-hint'))],
+    after: [loc ? kit.playButton(loc, kit.ui('play-1939')) : null, loc ? kit.credit(loc) : null, h('p.ft-hint', {}, kit.ui('clap-hint'))],
     screens: 2.6,
   });
 };
@@ -67,7 +67,10 @@ const album: Render = (kit, sc) => kit.section(sc, { stage: art.album(kit.text(s
 
 const simone: Render = (kit, sc) => {
   const n = kit.node(sc.nodes?.[0] ?? '');
-  return kit.section(sc, { stage: art.piano(), after: [n ? kit.playButton(n) : null] });
+  // The drawing at the piano develops into the photograph, when there is a cleared one.
+  const photo = kit.photo(sc.art);
+  const stage = photo ? h('figure.ft-photo', {}, develop(art.piano(), { src: photo.src, alt: photo.alt }, 0.25, 0.7), h('figcaption.ft-credit', {}, photo.credit)) : art.piano();
+  return kit.section(sc, { stage, after: [n ? kit.playButton(n) : null] });
 };
 
 const single: Render = (kit, sc) => {
@@ -195,7 +198,8 @@ const finale: Render = (kit, sc) => {
     if (loc) kit.play(loc);
     playTogether(kit);
   });
-  return kit.section(sc, { stage: h('div.ft-stack', {}, label, doorEl), skip: lines.map((b) => b.id), after: [together], screens: 3 });
+  const loc = kit.node(sc.nodes?.[0] ?? '');
+  return kit.section(sc, { stage: h('div.ft-stack', {}, label, doorEl), skip: lines.map((b) => b.id), after: [together, loc ? kit.credit(loc) : null], screens: 3 });
 };
 
 /** Four bars of the reader's claps (where they fell on the circle) and the children's, over the 1939 voices. */

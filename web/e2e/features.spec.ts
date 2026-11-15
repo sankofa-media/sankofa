@@ -143,7 +143,7 @@ test('the river: two branches, a filter by kind, and a node plays in the docked 
   await rv.locator('.rv-node[data-node="feist-sealion-2007"]').click();
   await expect(page.locator('.mp')).toBeVisible();
   await expect(page.locator('.mp-now b')).toContainText('Feist');
-  await expect(rv.locator('.rv-detail .rv-card h3')).toContainText('Sealion');
+  await expect(rv.locator('.rv-detail .rv-card .rv-title')).toContainText('Sealion');
   // A node without an official upload says so instead of playing.
   await rv.locator('.rv-node[data-node="easybeats-1967"]').click();
   await expect(rv.locator('.rv-detail .ft-none')).toBeVisible();
@@ -210,4 +210,68 @@ test('the feature fits a phone: nothing runs off the side', async ({ page, isMob
     const over = await page.locator('.ft-sheet').evaluate((el) => el.scrollWidth - el.clientWidth);
     expect(over, id).toBeLessThanOrEqual(1);
   }
+});
+
+test('a dictionary link opens its card over the longread; closing it returns to the same scene and sound', async ({ page }) => {
+  await openFeature(page);
+  await feature(page).locator('.ft-knock').click();
+  await expect(feature(page)).toHaveAttribute('data-audio', 'on');
+  await goToScene(page, 'jazz');
+  // A recording in the docked player keeps playing through the card.
+  await scene(page, 'jazz').locator('.ft-play').first().click();
+  await expect(page.locator('.mp iframe.lb-frame')).toHaveCount(1);
+  const audio = await feature(page).getAttribute('data-audio');
+  // An explicit [[jazz]] link in the stop's text.
+  const link = scene(page, 'jazz').locator('[data-block="text"] a.xref[data-card="jazz"]');
+  await expect(link).toBeVisible();
+  await link.click();
+  await expect(page.locator('.drawer.on article.card[data-card-id="jazz"]')).toBeVisible();
+  const top = await page.locator('.ft-sheet').evaluate((el) => el.scrollTop);
+  const at = page.url().match(/scene=([a-z-]+)/)?.[1];
+  expect(page.url()).toContain('view=feature');
+  await expect(feature(page)).toBeAttached();
+  await page.keyboard.press('Escape');
+  await expect(page.locator('.drawer.on')).toHaveCount(0);
+  await expect(feature(page)).toBeVisible();
+  expect(page.url()).toContain(`scene=${at}`);
+  expect(await page.locator('.ft-sheet').evaluate((el) => el.scrollTop)).toBe(top);
+  await expect(feature(page)).toHaveAttribute('data-audio', audio!);
+  await expect(page.locator('.mp iframe.lb-frame')).toHaveCount(1);
+  // The linker also finds names nobody marked: the river's cards and the stops are woven.
+  expect(await feature(page).locator('a.xref[data-card]').count()).toBeGreaterThan(2);
+});
+
+test('in Russian the links open the Russian card in place, and the scene stays', async ({ page }) => {
+  await openFeature(page, '#view=feature&item=sea-lion-girls&scene=single&lang=ru');
+  await expect.poll(() => page.url()).toContain('scene=single');
+  const link = scene(page, 'single').locator('[data-block="two-sides"] a.xref[data-card="mississippi-goddam"]');
+  await expect(link).toHaveText('«Mississippi Goddam»');
+  await link.click();
+  await expect(page.locator('.drawer.on article.card[data-card-id="mississippi-goddam"]')).toBeVisible();
+  const at = page.url().match(/scene=([a-z-]+)/)?.[1];
+  const top = await page.locator('.ft-sheet').evaluate((el) => el.scrollTop);
+  await page.locator('.drawer.on .close').first().click();
+  await expect(page.locator('.drawer.on')).toHaveCount(0);
+  await expect(feature(page)).toBeVisible();
+  expect(page.url()).toContain(`scene=${at}`);
+  expect(await page.locator('.ft-sheet').evaluate((el) => el.scrollTop)).toBe(top);
+});
+
+test('the 1939 recording plays the Library’s own file, credited, with a link to its page', async ({ page }) => {
+  await openFeature(page, '#view=feature&item=sea-lion-girls&scene=minute');
+  const sc = scene(page, 'minute');
+  await expect(sc.locator('.ft-credit')).toContainText('Library of Congress, American Folklife Center');
+  await expect(sc.locator('.ft-credit a')).toHaveAttribute('href', 'https://www.loc.gov/item/ihas.200196570/');
+  await sc.locator('.ft-play').click();
+  await expect(page.locator('.mp audio')).toHaveAttribute('src', /^https:\/\/tile\.loc\.gov\//);
+  await expect(page.locator('.mp iframe')).toHaveCount(0);
+});
+
+test('Nina Simone’s photo develops out of the drawing, with its CC0 credit', async ({ page }) => {
+  await openFeature(page, '#view=feature&item=sea-lion-girls&scene=simone');
+  const fig = scene(page, 'simone').locator('figure.ft-photo');
+  await expect(fig.locator('img')).toHaveAttribute('src', /nina-simone-1965\.jpg$/);
+  await expect(fig.locator('img')).toHaveAttribute('alt', /Nina Simone/);
+  await expect(fig.locator('figcaption')).toContainText('Anefo');
+  await expect(fig.locator('figcaption')).toContainText('CC0');
 });
