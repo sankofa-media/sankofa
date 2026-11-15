@@ -1,9 +1,9 @@
 - id: fx-fd-0003
   cat: fd
-  en: "A twelve-year-old enslaved boy, Edmond Albius, devised a method of hand-pollinating vanilla on Réunion in 1841."
-  ru: "В 1841 году двенадцатилетний невольник Эдмон Альбиус на Реюньоне придумал способ опылять ваниль вручную."
+  en: "In 1841 twelve-year-old Edmond Albius, an enslaved boy, invented a technique to hand-pollinate vanilla."
+  ru: "В 1841 году двенадцатилетний невольник Эдмон Альбиус придумал способ опылять ваниль вручную."
   year: 1841
-  place: {"name":"Sainte-Suzanne, Réunion","lat":-20.906,"lon":55.608}
+  place: { "name": "Sainte-Suzanne, Réunion", "lat": -20.906, "lon": 55.608 }
   cards: []
   gender: m
   region: africa
@@ -18,10 +18,10 @@
 
 - id: fx-fd-0004
   cat: fd
-  en: "Edna Lewis's 1976 cookbook The Taste of Country Cooking paired recipes with memories of rural Black life in Virginia."
-  ru: "В книге «Вкус деревенской кухни» 1976 года Эдна Льюис соединила рецепты с воспоминаниями о жизни чернокожей деревни в Виргинии."
+  en: "Edna Lewis's The Taste of Country Cooking (1976) recorded the cooking tradition of her hometown, Freetown, Virginia."
+  ru: "В книге «Вкус деревенской кухни» (1976) Эдна Льюис записала кулинарные традиции родного Фритауна в Виргинии."
   year: 1976
-  place: {"name":"Freetown, Virginia","lat":38.25,"lon":-78.1}
+  place: { "name": "Freetown, Virginia", "lat": 38.25, "lon": -78.1 }
   cards: []
   gender: f
   region: us
@@ -39,7 +39,7 @@
   en: "Edna Lewis and Scott Peacock brought their Southern cooking traditions together in The Gift of Southern Cooking, published in 2003."
   ru: "В 2003 году Эдна Льюис и Скотт Пикок объединили свои традиции южной кухни в книге «Дар южной кухни»."
   year: 2003
-  place: {"name":"Decatur, Georgia","lat":33.775,"lon":-84.296}
+  place: { "name": "Decatur, Georgia", "lat": 33.775, "lon": -84.296 }
   cards: []
   gender: f
   region: us
@@ -57,7 +57,7 @@
   en: "Unable to read or write, Abby Fisher dictated the recipes for her 1881 Southern cookbook."
   ru: "Не умея читать и писать, Эбби Фишер надиктовала рецепты для своей книги о южной кухне, вышедшей в 1881 году."
   year: 1881
-  place: {"name":"San Francisco","lat":37.775,"lon":-122.419}
+  place: { "name": "San Francisco", "lat": 37.775, "lon": -122.419 }
   cards: []
   gender: f
   region: us
@@ -75,25 +75,19 @@
   en: "Abby Fisher won an award at the Sacramento State Fair in 1879, before publishing her cookbook."
   ru: "Эбби Фишер получила награду на ярмарке штата в Сакраменто в 1879 году, ещё до выхода своей поваренной книги."
   year: 1879
-  place: {"name":"Sacramento","lat":38.582,"lon":-121.494}
+  place: { "name": "Sacramento", "lat": 38.582, "lon": -121.494 }
   cards: []
   gender: f
   region: us
-  sources:
-    - title: "The Henry Ford: What Mrs. Fisher Knows About Southern Cooking"
-      url: "https://www.thehenryford.org/collections/explore/recipes-and-cookbooks/cookbook/what-mrs-fisher-knows-about-southern-cooking-(facsimile)"
-      quote: "won an award at the 1879 Sacramento State Fair."
-    - title: "Library of Congress: What Mrs. Fisher knows about old southern cooking"
-      url: "https://www.loc.gov/resource/rbc0001.2018gen23680/?sp=16"
-      quote: "Diploma awarded at Sacrameto State Fair, 1879."
+  sources: [ { "title": "The Henry Ford: What Mrs. Fisher Knows About Southern Cooking", "url": "https://www.thehenryford.org/collections/explore/recipes-and-cookbooks/cookbook/what-mrs-fisher-knows-about-southern-cooking-(facsimile)", "quote": "won an award at the 1879 Sacramento State Fair." }, { "title": "KQED: The Formerly Enslaved Cook Who Became a Celebrity Chef", "url": "https://www.kqed.org/arts/13892514/the-formerly-enslaved-cook-who-became-a-celebrity-chef-in-san-francisco", "quote": "In 1879, the Sacramento State Fair awarded her their prestigious" } ]
   status: drafted
 
 - id: fx-fd-0008
   cat: fd
-  en: "Breadfruit reached Jamaica aboard HMS Providence in 1793, after the Bounty expedition had failed."
-  ru: "В 1793 году хлебное дерево доставили на Ямайку кораблём «Провиденс», после неудачи экспедиции «Баунти»."
+  en: "Breadfruit was successfully introduced to Jamaica in 1793, when some 350 trees arrived on a second voyage."
+  ru: "В 1793 году хлебное дерево удалось завезти на Ямайку: во втором плавании туда доставили около 350 саженцев."
   year: 1793
-  place: {"name":"Bath, Jamaica","lat":17.95,"lon":-76.35}
+  place: { "name": "Bath, Jamaica", "lat": 17.95, "lon": -76.35 }
   cards: []
   gender: none
   region: caribbean
@@ -111,17 +105,21 @@
   en: "Jamaica's West African ackee travelled to England with William Bligh in 1793."
   ru: "В 1793 году Уильям Блай увёз с Ямайки в Англию аки — плодовое дерево западноафриканского происхождения."
   year: 1793
-  place: {"name":"Kingston, Jamaica","lat":17.971,"lon":-76.793}
+  place: { "name": "Kingston, Jamaica", "lat": 17.971, "lon": -76.793 }
   cards: []
   gender: none
   region: caribbean
   sources:
-    - title: "Office of the Prime Minister of Jamaica: National Fruit – Ackee"
-      url: "https://opm.gov.jm/symbols/national-fruit-ackee/"
-      quote: "in 1793 took plants of the fruit from Jamaica to England."
-    - title: "Mitchell, Webster and Ahmad, University of the West Indies: Ackee – Jamaica’s top fruit"
-      url: "https://www.researchgate.net/profile/Sylvia-Mitchell/publication/236154238_Ackee_Blighia_sapida_-_Jamaica%27s_top_fruit/links/0c9605167795451b65000000/Ackee-Blighia-sapida-Jamaicas-top-fruit.pdf"
-      quote: "Bligh took the then unnamed tree to Kew Gardens in 1793"
+    [
+      { "title": "Office of the Prime Minister of Jamaica: National Fruit – Ackee", "url": "https://opm.gov.jm/symbols/national-fruit-ackee/", "quote": "in 1793 took plants of the fruit from Jamaica to England." },
+      {
+          "title": "Salud Uninorte: El Ackee, salud, nutrición y cultura",
+          "url": "https://rcientificas.uninorte.edu.co/salud/es/article/download/1886/2167/10844",
+          "quote": "fue el capitán William Bligh quien en 1793
+
+            lo llevó de Jamaica a Inglaterra"
+        }
+    ]
   status: drafted
 
 - id: fx-fd-0010
@@ -129,7 +127,7 @@
   en: "Malinda Russell published A Domestic Cook Book in Michigan in 1866, the oldest known cookbook by an African American woman."
   ru: "В 1866 году Малинда Расселл издала в Мичигане «Домашнюю поваренную книгу» — старейшую известную кулинарную книгу афроамериканки."
   year: 1866
-  place: {"name":"Paw Paw, Michigan","lat":42.217,"lon":-85.891}
+  place: { "name": "Paw Paw, Michigan", "lat": 42.217, "lon": -85.891 }
   cards: []
   gender: f
   region: us
@@ -144,10 +142,10 @@
 
 - id: fx-fd-0011
   cat: fd
-  en: "Ethiopia banned teff exports in 2006 to curb rising prices of the grain used for injera."
-  ru: "В 2006 году Эфиопия запретила вывоз теффа, пытаясь сдержать подорожание зерна, из которого пекут ынджеру."
+  en: "Ethiopia banned exports of unprocessed teff grain and flour in January 2006."
+  ru: "В январе 2006 года Эфиопия запретила вывоз необработанного зерна и муки теффа."
   year: 2006
-  place: {"name":"Addis Ababa, Ethiopia","lat":9.03,"lon":38.74}
+  place: { "name": "Addis Ababa, Ethiopia", "lat": 9.03, "lon": 38.74 }
   cards: []
   gender: none
   region: africa
@@ -165,17 +163,11 @@
   en: "Malawi's nsima culinary tradition joined UNESCO's intangible heritage list in 2017."
   ru: "В 2017 году малавийская кулинарная традиция нсима вошла в список нематериального наследия ЮНЕСКО."
   year: 2017
-  place: {"name":"Lilongwe, Malawi","lat":-13.963,"lon":33.774}
+  place: { "name": "Lilongwe, Malawi", "lat": -13.963, "lon": 33.774 }
   cards: []
   gender: none
   region: africa
-  sources:
-    - title: "UNESCO: Nsima, the Culinary Tradition of Malawi"
-      url: "https://www.unesco.org/archives/multimedia/document-4633"
-      quote: "ICH Representative list 2017"
-    - title: "Government of Malawi: Sixth National Report to the Convention on Biological Diversity"
-      url: "https://www.cbd.int/doc/nr/nr-06/mw-nr-06-en.pdf"
-      quote: "Nsima, Culinary Tradition of Malawi (2017)"
+  sources: [ { "title": "UNESCO: Remarkable Heritage of Southern Africa", "url": "https://s3-ap-northeast-2.amazonaws.com/gced-public/resources/230234eng_0.pdf", "quote": "Inscribed on the Representative List of Intangible Cultural Heritage of Humanity in 2017" }, { "title": "Government of Malawi: Sixth National Report to the Convention on Biological Diversity", "url": "https://www.cbd.int/doc/nr/nr-06/mw-nr-06-en.pdf", "quote": "Nsima, Culinary Tradition of Malawi (2017)" } ]
   status: drafted
 
 - id: fx-fd-0013
@@ -183,7 +175,7 @@
   en: "Esther Ocloo founded Ghana's food-processing company Nkulenu Industries in 1942."
   ru: "В 1942 году Эстер Оклоо основала в Гане пищевую компанию Nkulenu Industries."
   year: 1942
-  place: {"name":"Accra, Ghana","lat":5.56,"lon":-0.196}
+  place: { "name": "Accra, Ghana", "lat": 5.56, "lon": -0.196 }
   cards: []
   gender: f
   region: africa
@@ -198,10 +190,10 @@
 
 - id: fx-fd-0014
   cat: fd
-  en: "Fatmata Binta won the 2022 Basque Culinary World Prize for sharing Fulani food culture through her travelling restaurant, Dine on a Mat."
-  ru: "В 2022 году Фатмата Бинта получила Basque Culinary World Prize за знакомство с кухней фульбе через свой передвижной ресторан «Обед на циновке»."
+  en: "In 2022 Fatmata Binta became the first African to receive the Basque Culinary World Prize."
+  ru: "В 2022 году Фатмата Бинта стала первым африканским лауреатом премии Basque Culinary World Prize."
   year: 2022
-  place: {"name":"Freetown, Sierra Leone","lat":8.485,"lon":-13.234}
+  place: { "name": "Freetown, Sierra Leone", "lat": 8.485, "lon": -13.234 }
   cards: []
   gender: f
   region: africa
@@ -219,25 +211,19 @@
   en: "Kenyan nutrition advocate Ruth Oniang’o and Malian seed entrepreneur Maïmouna Sidibé Coulibaly shared the Africa Food Prize in 2017."
   ru: "В 2017 году Африканскую продовольственную премию разделили кенийская исследовательница питания Рут Онианго и малийская предпринимательница в семеноводстве Маймуна Сидибе Кулибали."
   year: 2017
-  place: {"name":"Abidjan, Côte d’Ivoire","lat":5.36,"lon":-4.008}
+  place: { "name": "Abidjan, Côte d’Ivoire", "lat": 5.36, "lon": -4.008 }
   cards: []
   gender: f
   region: africa
-  sources:
-    - title: "Alliance Bioversity International and CIAT: Former CIAT board member announced joint winner"
-      url: "https://alliancebioversityciat.org/stories/former-ciat-board-member-announced-joint-winner-2017-africa-food-prize"
-      quote: "Honorable Professor Ruth Oniang’o, is joint winner of the 2017 Africa Food Prize."
-    - title: "African Development Bank: AGRF 2017, deux lauréates"
-      url: "https://www.afdb.org/en/news-and-events/agrf-2017-le-prix-africain-pour-lalimentation-decerne-a-deux-laureates-17317"
-      quote: "Le Prix africain de l’alimentation a été décerné mercredi 6 septembre 2017"
+  sources: [ { "title": "Africa Food Prize: 2017 winners", "url": "https://africafoodprize.org/champions-for-nutrition-food-security-and-agribusiness-named-winners-of-2017-africa-food-prize/", "quote": "Two women, working at both ends of the agriculture supply chain in Africa, have each been awarded the 2017 Africa Food Prize." }, { "title": "JKUAT: Founding Professor Bags 2017 Africa Food Prize", "url": "https://discover.jkuat.ac.ke/founding-jkuat-professor-bags-2017-africa-food-prize/", "quote": "Prof. Ruth Oniang’o has been announced the winner of the prestigious 2017 Africa Food Prize." } ]
   status: drafted
 
 - id: fx-fd-0016
   cat: fd
-  en: "Mory Sacko's MoSuke, blending African, Japanese and French cuisines, earned a Michelin star in 2021."
-  ru: "В 2021 году MoSuke Мори Сако, соединяющий африканскую, японскую и французскую кухню, получил звезду «Мишлен»."
+  en: "Mory Sacko's restaurant MoSuke earned its first Michelin star in 2021."
+  ru: "В 2021 году ресторан Мори Сако MoSuke получил первую звезду «Мишлен»."
   year: 2021
-  place: {"name":"Paris, France","lat":48.8566,"lon":2.3522}
+  place: { "name": "Paris, France", "lat": 48.8566, "lon": 2.3522 }
   cards: []
   gender: m
   region: europe
@@ -252,10 +238,10 @@
 
 - id: fx-fd-0017
   cat: fd
-  en: "Benin-born Georgiana Viou earned a Michelin star for Rouge in Nîmes in 2023."
-  ru: "В 2023 году уроженка Бенина Жоржиана Виу получила звезду «Мишлен» за ресторан Rouge в Ниме."
+  en: "Chef Georgiana Viou received her first Michelin star in 2023 for her restaurant Rouge in Nîmes."
+  ru: "В 2023 году шеф-повар Жоржиана Виу получила первую звезду «Мишлен» за ресторан Rouge в Ниме."
   year: 2023
-  place: {"name":"Nîmes, France","lat":43.8367,"lon":4.3601}
+  place: { "name": "Nîmes, France", "lat": 43.8367, "lon": 4.3601 }
   cards: []
   gender: f
   region: europe
@@ -270,10 +256,10 @@
 
 - id: fx-fd-0018
   cat: fd
-  en: "Dooky Chase's opened in New Orleans in 1941 and became a gathering place for civil rights activists."
-  ru: "Открывшийся в Новом Орлеане в 1941 году ресторан Dooky Chase’s стал местом встреч борцов за гражданские права."
+  en: "Dooky Chase's Restaurant in Louisiana opened its doors for business in 1941."
+  ru: "Ресторан Dooky Chase’s в Луизиане открылся в 1941 году."
   year: 1941
-  place: {"name":"New Orleans, Louisiana","lat":29.951,"lon":-90.072}
+  place: { "name": "New Orleans, Louisiana", "lat": 29.951, "lon": -90.072 }
   cards: []
   gender: none
   region: us
@@ -291,7 +277,7 @@
   en: "Creole chef Leah Chase received the James Beard Foundation's Lifetime Achievement Award in 2016."
   ru: "В 2016 году мастер креольской кухни Лия Чейз получила премию Фонда Джеймса Бирда за дело всей жизни."
   year: 2016
-  place: {"name":"New Orleans, Louisiana","lat":29.951,"lon":-90.072}
+  place: { "name": "New Orleans, Louisiana", "lat": 29.951, "lon": -90.072 }
   cards: []
   gender: f
   region: us
@@ -309,17 +295,11 @@
   en: "Fannie Lou Hamer founded the Freedom Farm Cooperative in 1969 to build economic independence through farming."
   ru: "В 1969 году Фанни Лу Хеймер основала кооператив «Ферма свободы», чтобы земледелие давало людям экономическую независимость."
   year: 1969
-  place: {"name":"Ruleville, Mississippi","lat":33.725,"lon":-90.551}
-  cards: ["fannie-lou-hamer"]
+  place: { "name": "Ruleville, Mississippi", "lat": 33.725, "lon": -90.551 }
+  cards: [ "fannie-lou-hamer" ]
   gender: f
   region: us
-  sources:
-    - title: "NMAAHC: How Fannie Lou Hamer Challenged a Nation"
-      url: "https://nmaahc.si.edu/explore/stories/how-fannie-lou-hamer-challenged-nation"
-      quote: "In 1969, she launched the Freedom Farm Cooperative (FFC)"
-    - title: "Mississippi Department of Archives and History: Fannie Lou Townsend Hamer Collection"
-      url: "https://finding.mdah.ms.gov/manuscripts/t012"
-      quote: "Founded in 1969, Freedom Farm began as a farmers’ cooperative"
+  sources: [ { "title": "SNCC Digital Gateway: Fannie Lou Hamer founds Freedom Farm Cooperative", "url": "https://snccdigital.org/events/fannie-lou-hamer-founds-freedom-farm-cooperative/", "quote": "In 1969, Mrs. Hamer founded the Freedom Farm Cooperative" }, { "title": "Mississippi Department of Archives and History: Fannie Lou Townsend Hamer Collection", "url": "https://finding.mdah.ms.gov/manuscripts/t012", "quote": "Founded in 1969, Freedom Farm began as a farmers’ cooperative" } ]
   status: drafted
 
 - id: fx-fd-0021
@@ -327,7 +307,7 @@
   en: "Coffee seedlings reached Jamaica in 1728, beginning the island's coffee-growing history."
   ru: "В 1728 году на Ямайку привезли саженцы кофейного дерева, положив начало местному кофейному хозяйству."
   year: 1728
-  place: {"name":"Jamaica","lat":18.1096,"lon":-77.2975}
+  place: { "name": "Jamaica", "lat": 18.1096, "lon": -77.2975 }
   cards: []
   gender: none
   region: caribbean
@@ -345,17 +325,11 @@
   en: "George Washington's enslaved chef Hercules escaped from Mount Vernon in 1797."
   ru: "В 1797 году Геркулес, порабощённый повар Джорджа Вашингтона, бежал из Маунт-Вернона."
   year: 1797
-  place: {"name":"Mount Vernon, Virginia","lat":38.707,"lon":-77.086}
+  place: { "name": "Mount Vernon, Virginia", "lat": 38.707, "lon": -77.086 }
   cards: []
   gender: m
   region: us
-  sources:
-    - title: "Mount Vernon: Hercules Posey"
-      url: "https://www.mountvernon.org/library/digitalhistory/digital-encyclopedia/article/hercules"
-      quote: "Hercules self-emancipated from Mount Vernon in 1797"
-    - title: "Encyclopedia Virginia: Hercules"
-      url: "https://encyclopediavirginia.org/entries/hercules-b-ca-1754/"
-      quote: "he ran away from Mount Vernon in 1797."
+  sources: [ { "title": "National Park Service: Enslaved People in the Presidents’ House", "url": "https://www.nps.gov/inde/learn/historyculture/enslaved-people.htm", "quote": "Accounts differ about his flight to freedom, but Hercules fled from bondage in 1797." }, { "title": "Encyclopedia Virginia: Hercules", "url": "https://encyclopediavirginia.org/entries/hercules-b-ca-1754/", "quote": "he ran away from Mount Vernon in 1797." } ]
   status: drafted
 
 - id: fx-fd-0023
@@ -363,17 +337,11 @@
   en: "In 1793, Thomas Jefferson promised freedom to chef James Hemings on condition that he train another cook."
   ru: "В 1793 году Томас Джефферсон пообещал повару Джеймсу Хемингсу свободу при условии, что тот обучит себе замену."
   year: 1793
-  place: {"name":"Philadelphia","lat":39.953,"lon":-75.165}
+  place: { "name": "Philadelphia", "lat": 39.953, "lon": -75.165 }
   cards: []
   gender: m
   region: us
-  sources:
-    - title: "Monticello: James Hemings"
-      url: "https://www.monticello.org/encyclopedia/james-hemings/"
-      quote: "end of 1793 … Jefferson required Hemings teach a person of Jefferson's choice to be \"a good cook.\""
-    - title: "Library of Congress: Promise of freedom for James Hemings"
-      url: "https://loc.gov/exhibits/jefferson/jefflife.html"
-      quote: "Thomas Jefferson. Promise of Freedom, September 15, 1793."
+  sources: [ { "title": "White House Historical Association: Slavery and French Cuisine", "url": "https://www.whitehousehistory.org/slavery-and-french-cuisine-in-jeffersons-working-white-house", "quote": "Hemings would return to Monticello to train another enslaved person in French cooking to serve as a replacement chef." }, { "title": "Library of Congress: Promise of freedom for James Hemings", "url": "https://loc.gov/exhibits/jefferson/jefflife.html", "quote": "Thomas Jefferson. Promise of Freedom, September 15, 1793." } ]
   status: drafted
 
 - id: fx-fd-0024
@@ -381,7 +349,7 @@
   en: "Chef James Hemings left a handwritten inventory of Monticello’s kitchen utensils dated 20 February 1796."
   ru: "Повар Джеймс Хемингс оставил собственноручную опись кухонной утвари Монтичелло, датированную 20 февраля 1796 года."
   year: 1796
-  place: {"name":"Monticello, Virginia","lat":38.01,"lon":-78.453}
+  place: { "name": "Monticello, Virginia", "lat": 38.01, "lon": -78.453 }
   cards: []
   gender: m
   region: us
@@ -399,25 +367,30 @@
   en: "Domesticated pearl millet grains from Mali’s Lower Tilemsi Valley date to 2500–2000 BCE."
   ru: "Зёрна одомашненного жемчужного проса из нижней долины Тилемси в Мали датируются 2500–2000 годами до нашей эры."
   year: -2500
-  place: {"name":"Lower Tilemsi Valley, Mali","lat":17.1,"lon":0.2}
+  place: { "name": "Lower Tilemsi Valley, Mali", "lat": 17.1, "lon": 0.2 }
   cards: []
   gender: none
   region: africa
   sources:
-    - title: "Winchell et al. (2018): Origins and dissemination of sorghum and pearl millet"
-      url: "https://discovery.ucl.ac.uk/10061925/7/Murphy%20VoR%20Winchell2018_Article_OnTheOriginsAndDisseminationOf.pdf"
-      quote: "domestication of pearl millet to 2500–2000 BC"
-    - title: "MacDonald et al. (2017): Windé Koroji"
-      url: "https://discovery.ucl.ac.uk/id/eprint/10048844/1/MacDonald%20et%20al%202017_FArS35-FS%20Breunig.pdf"
-      quote: "pearl millet samples dating to between\n2500 and 2000 BCE"
+    [
+      { "title": "Winchell et al. (2018): Origins and dissemination of sorghum and pearl millet", "url": "https://discovery.ucl.ac.uk/10061925/7/Murphy%20VoR%20Winchell2018_Article_OnTheOriginsAndDisseminationOf.pdf", "quote": "domestication of pearl millet to 2500–2000 BC" },
+      {
+          "title": "MacDonald et al. (2017): Windé Koroji",
+          "url": "https://discovery.ucl.ac.uk/id/eprint/10048844/1/MacDonald%20et%20al%202017_FArS35-FS%20Breunig.pdf",
+          "quote": "pearl millet samples dating to between
+
+            2500 and 2000 BCE"
+        },
+      { "url": "https://pure.mpg.de/rest/items/item_3290904_6/component/file_3309684/content", "title": "Champion et al. (2021): Agricultural diversification in West Africa", "quote": "that are dated to from ca. 2500 BC to 2000 BC and were found in the lower Tilemsi valley" }
+    ]
   status: drafted
 
 - id: fx-fd-0026
   cat: fd
-  en: "African pearl millet had reached India’s Saurashtra peninsula by at least 1700 BCE."
-  ru: "Африканское жемчужное просо достигло индийского полуострова Саураштра не позднее 1700 года до нашей эры."
+  en: "Pearl millet had reached Gujarat in India by at least 1700 BCE."
+  ru: "Жемчужное просо достигло индийского Гуджарата не позднее 1700 года до нашей эры."
   year: -1700
-  place: {"name":"Saurashtra, Gujarat","lat":22.1,"lon":70.8}
+  place: { "name": "Saurashtra, Gujarat", "lat": 22.1, "lon": 70.8 }
   cards: []
   gender: none
   region: asia
@@ -435,35 +408,21 @@
   en: "Pottery from eastern Sudan, dated 3500–3000 BCE, preserves impressions of sorghum with domestication traits."
   ru: "Керамика из восточного Судана, датированная 3500–3000 годами до нашей эры, сохранила отпечатки сорго с признаками одомашнивания."
   year: -3500
-  place: {"name":"KG23, eastern Sudan","lat":15.5,"lon":36.3}
+  place: { "name": "KG23, eastern Sudan", "lat": 15.5, "lon": 36.3 }
   cards: []
   gender: none
   region: africa
   sources:
-    - title: "University of Chicago Press: Earliest evidence for a native African cultigen"
-      url: "https://www.journals.uchicago.edu/journals/ca/pr/170921"
-      quote: "in eastern Sudan, dating from 3500 to 3000 BC"
-    - title: "Winchell et al. (2018): Origins and dissemination of sorghum and pearl millet"
-      url: "https://discovery.ucl.ac.uk/10061925/7/Murphy%20VoR%20Winchell2018_Article_OnTheOriginsAndDisseminationOf.pdf"
-      quote: "KG23\n(3500–3000 BC)"
-  status: drafted
+    [
+      {
+          "title": "Brass et al.: New findings on Jebel Moya",
+          "url": "https://pure.manchester.ac.uk/ws/portalfiles/portal/158808977/Brass_et_al._2019_New_findings_on_the_significance_of_Jebe.pdf",
+          "quote": "studies of sorghum chaff imprints in ceramics and
 
-- id: fx-fd-0028
-  cat: fd
-  en: "Ethiopia’s Gedeo landscape, where trees shelter enset and coffee crops, became UNESCO World Heritage in 2023."
-  ru: "В 2023 году ЮНЕСКО признала всемирным наследием эфиопский ландшафт гедео, где под деревьями выращивают энсету и кофе."
-  year: 2023
-  place: {"name":"Gedeo, Ethiopia","lat":6.249,"lon":38.288}
-  cards: []
-  gender: none
-  region: africa
-  sources:
-    - title: "UNESCO: The Gedeo Cultural Landscape"
-      url: "https://whc.unesco.org/en/list/1641/"
-      quote: "Date of Inscription: 2023"
-    - title: "Ethiopian News Agency: UNESCO inscribes Gedeo Cultural Landscape"
-      url: "https://www.ena.et/web/eng/w/eng_3345334"
-      quote: "Addis Ababa, September 17/2023 (ENA) The Gedeo Cultural Landscape"
+            other clay artefacts have pushed back domestication processes to 3500–3000 BC"
+        },
+      { "title": "Winchell et al. (2018): Origins and dissemination of sorghum and pearl millet", "url": "https://discovery.ucl.ac.uk/10061925/7/Murphy%20VoR%20Winchell2018_Article_OnTheOriginsAndDisseminationOf.pdf", "quote": "KG23\n(3500–3000 BC)" }
+    ]
   status: drafted
 
 - id: fx-fd-0029
@@ -471,17 +430,21 @@
   en: "African rice was domesticated independently of Asian rice about 3,000 years ago."
   ru: "Африканский рис одомашнили независимо от азиатского около трёх тысяч лет назад."
   year: -1000
-  place: {"name":"West Africa","lat":13,"lon":-5}
+  place: { "name": "West Africa", "lat": 13, "lon": -5 }
   cards: []
   gender: none
   region: africa
   sources:
-    - title: "Wang et al. (2014): The genome sequence of African rice"
-      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC7036042/"
-      quote: "independently domesticated from the wild progenitor O. barthii ∼3,000 years ago"
-    - title: "Van Andel et al. (2019): Hidden rice diversity in the Guianas"
-      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC6764085/"
-      quote: "African rice (O. glaberrima Steud), domesticated about 3,000 years ago"
+    [
+      { "title": "Wang et al. (2014): The genome sequence of African rice", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7036042/", "quote": "independently domesticated from the wild progenitor O. barthii ∼3,000 years ago" },
+      {
+          "title": "Prodjinoto et al. (2021): Salt stress in African rice",
+          "url": "https://orbi.uliege.be/bitstream/2268/258972/1/Prodjinoto2021_Article_DiscriminatingTheImpactOfNaAnd.pdf",
+          "quote": "Oryza glaberrima, was independently domesticated
+
+            3000 years ago from the wild rice progenitor O. barthii"
+        }
+    ]
   status: drafted
 
 - id: fx-fd-0030
@@ -489,17 +452,11 @@
   en: "Konso’s stone terraces, which protect Ethiopian farmland against erosion, became part of a UNESCO World Heritage landscape in 2011."
   ru: "Каменные террасы консо, защищающие эфиопские поля от эрозии, в 2011 году стали частью ландшафта Всемирного наследия ЮНЕСКО."
   year: 2011
-  place: {"name":"Konso, Ethiopia","lat":5.3,"lon":37.4}
+  place: { "name": "Konso, Ethiopia", "lat": 5.3, "lon": 37.4 }
   cards: []
   gender: none
   region: africa
-  sources:
-    - title: "UNESCO: Konso Cultural Landscape"
-      url: "https://whc.unesco.org/en/list/1333/"
-      quote: "Date of Inscription: 2011"
-    - title: "South Ethiopia Tourism Bureau: Konso"
-      url: "https://setourismbureau.gov.et/konso-landscape/"
-      quote: "Konso Zone was registered as a World Heritage Site by UNESCO in 2011"
+  sources: [ { "title": "University of York: Future of world heritage site depends on understanding the past", "url": "https://www.york.ac.uk/news-and-events/features/2017/world-heritage-site-depends-on-understanding-past/", "quote": "Designated as an UNESCO world heritage site in 2011" }, { "title": "Assefa and Bork: Long-Term Indigenous Soil Conservation Technology (2014)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4190142/", "quote": "they were designated as a world heritage by UNSECO in June 2011" } ]
   status: drafted
 
 - id: fx-fd-0031
@@ -507,17 +464,11 @@
   en: "Sierra Leonean scientist Monty Jones won the 2004 World Food Prize for developing NERICA rice by crossing African and Asian varieties."
   ru: "Учёный из Сьерра-Леоне Монти Джонс получил Всемирную продовольственную премию 2004 года за рис NERICA, выведенный скрещиванием африканских и азиатских разновидностей."
   year: 2004
-  place: {"name":"Bouaké, Côte d’Ivoire","lat":7.69,"lon":-5.03}
+  place: { "name": "Bouaké, Côte d’Ivoire", "lat": 7.69, "lon": -5.03 }
   cards: []
   gender: m
   region: africa
-  sources:
-    - title: "World Food Prize Foundation: Tribute to Monty Jones"
-      url: "https://www.worldfoodprize.org/blog/2024/04/30/world-food-prize-foundation-pays-tribute-to-first-african-world-food-prize-laureate-minister-monty-jones/"
-      quote: "Minister Jones was honored as the 2004 World Food Prize Laureate"
-    - title: "AfricaRice: Bref historique"
-      url: "https://www.africarice-fr.org/bref-historique"
-      quote: "2004\n\nDr Monty Jones reçoit le prestigieux Prix mondial de l’Alimentation"
+  sources: [ { "title": "World Food Prize Foundation: Tribute to Monty Jones", "url": "https://www.worldfoodprize.org/blog/2024/04/30/world-food-prize-foundation-pays-tribute-to-first-african-world-food-prize-laureate-minister-monty-jones/", "quote": "Minister Jones was honored as the 2004 World Food Prize Laureate" }, { "title": "AfricaRice: Bref historique", "url": "https://www.africarice-fr.org/bref-historique", "quote": "Dr Monty Jones reçoit le prestigieux Prix mondial de l’Alimentation pour ses travaux de recherche sur le Nouveau riz pour l’Afrique (NERICA)" } ]
   status: drafted
 
 - id: fx-fd-0032
@@ -525,7 +476,7 @@
   en: "Gebisa Ejeta won the 2009 World Food Prize for sorghum hybrids resistant to drought and the parasitic weed Striga."
   ru: "Гебиса Эджета получил Всемирную продовольственную премию 2009 года за гибриды сорго, устойчивые к засухе и растению-паразиту стриге."
   year: 2009
-  place: {"name":"West Lafayette, Indiana","lat":40.425,"lon":-86.922}
+  place: { "name": "West Lafayette, Indiana", "lat": 40.425, "lon": -86.922 }
   cards: []
   gender: m
   region: us
@@ -540,10 +491,10 @@
 
 - id: fx-fd-0033
   cat: fd
-  en: "Adejoké Bakare became Britain’s first Black female Michelin-starred chef in 2024 with her West African restaurant Chishuru."
-  ru: "В 2024 году Адежоке Бакаре стала первой чернокожей женщиной-поваром со звездой «Мишлен» в Британии благодаря западноафриканскому ресторану Chishuru."
+  en: "Adejoké Bakare's restaurant Chishuru won its first Michelin star in February 2024."
+  ru: "В феврале 2024 года ресторан Адежоке Бакаре Chishuru получил первую звезду «Мишлен»."
   year: 2024
-  place: {"name":"London","lat":51.518,"lon":-0.14}
+  place: { "name": "London", "lat": 51.518, "lon": -0.14 }
   cards: []
   gender: f
   region: europe
@@ -558,10 +509,10 @@
 
 - id: fx-fd-0034
   cat: fd
-  en: "Réunion-born chef Kelly Rangama earned a Michelin star for her Paris restaurant Le Faham in 2020."
-  ru: "Уроженка Реюньона Келли Рангама в 2020 году получила звезду «Мишлен» за свой парижский ресторан Le Faham."
+  en: "Chef Kelly Rangama's Paris restaurant Le Faham entered the Michelin Guide with a star in January 2020."
+  ru: "В январе 2020 года парижский ресторан Келли Рангамы Le Faham вошёл в гид «Мишлен» со звездой."
   year: 2020
-  place: {"name":"Paris","lat":48.887,"lon":2.32}
+  place: { "name": "Paris", "lat": 48.887, "lon": 2.32 }
   cards: []
   gender: f
   region: europe
@@ -576,10 +527,10 @@
 
 - id: fx-fd-0035
   cat: fd
-  en: "Afro-Peruvian cook Teresa Izquierdo opened El Rincón que No Conoces in Lima in 1978, cooking, serving and collecting payments herself."
-  ru: "Афроперуанская повариха Тереса Искьердо в 1978 году открыла в Лиме El Rincón que No Conoces, сама готовила, обслуживала гостей и принимала оплату."
+  en: "In 1978 Teresa Izquierdo fulfilled her dream of her own restaurant, El Rincón que No Conoces."
+  ru: "В 1978 году Тереса Искьердо осуществила мечту о собственном ресторане — El Rincón que No Conoces."
   year: 1978
-  place: {"name":"Lima","lat":-12.087,"lon":-77.037}
+  place: { "name": "Lima", "lat": -12.087, "lon": -77.037 }
   cards: []
   gender: f
   region: latam
@@ -594,10 +545,10 @@
 
 - id: fx-fd-0036
   cat: fd
-  en: "Martinican chef Marcel Ravin earned a second Michelin star for Monaco’s Blue Bay in 2022, with cooking rooted in Caribbean flavours."
-  ru: "Мартиникский повар Марсель Равен получил вторую звезду «Мишлен» для монакского Blue Bay в 2022 году, опираясь на карибские вкусы."
+  en: "Marcel Ravin's Monaco restaurant Blue Bay received a second Michelin star in the 2022 guide."
+  ru: "В 2022 году монакский ресторан Марселя Равена Blue Bay получил вторую звезду «Мишлен»."
   year: 2022
-  place: {"name":"Monaco","lat":43.749,"lon":7.438}
+  place: { "name": "Monaco", "lat": 43.749, "lon": 7.438 }
   cards: []
   gender: m
   region: europe
@@ -612,10 +563,10 @@
 
 - id: fx-fd-0037
   cat: fd
-  en: "Cape Verdean breeder Maria Andrade shared the 2016 World Food Prize for orange-fleshed sweetpotatoes that combat vitamin A deficiency."
-  ru: "Селекционер из Кабо-Верде Мария Андраде стала лауреатом Всемирной продовольственной премии 2016 года за оранжевый батат, помогающий восполнить недостаток витамина A."
+  en: "Maria Andrade shared the 2016 World Food Prize with Howarth Bouis, Jan Low and Robert Mwanga."
+  ru: "Мария Андраде разделила Всемирную продовольственную премию 2016 года с Хауартом Буисом, Ян Лоу и Робертом Мванга."
   year: 2016
-  place: {"name":"Maputo, Mozambique","lat":-25.966,"lon":32.583}
+  place: { "name": "Maputo, Mozambique", "lat": -25.966, "lon": 32.583 }
   cards: []
   gender: f
   region: africa
@@ -633,7 +584,7 @@
   en: "By 1911, the Gold Coast, now Ghana, had become the world’s leading cocoa producer."
   ru: "К 1911 году Золотой Берег, нынешняя Гана, стал ведущим производителем какао в мире."
   year: 1911
-  place: {"name":"Ghana","lat":6.1,"lon":-1.1}
+  place: { "name": "Ghana", "lat": 6.1, "lon": -1.1 }
   cards: []
   gender: none
   region: africa
@@ -651,17 +602,11 @@
   en: "Lena Richard self-published a Creole cookbook in New Orleans in 1939, before a major publisher took it up."
   ru: "В 1939 году Лена Ричард сама издала в Новом Орлеане книгу креольских рецептов, прежде чем ею заинтересовалось крупное издательство."
   year: 1939
-  place: {"name":"New Orleans","lat":29.951,"lon":-90.072}
+  place: { "name": "New Orleans", "lat": 29.951, "lon": -90.072 }
   cards: []
   gender: f
   region: us
-  sources:
-    - title: "Smithsonian Magazine: Meet Lena Richard"
-      url: "https://www.smithsonianmag.com/smithsonian-institution/meet-mama-lena-celebrity-chef-and-creole-cookbook-author-180975085/"
-      quote: "The 1939 self-publication … was titled Lena Richard’s Cook Book."
-    - title: "Southern Food and Beverage Museum: Creole Cuisine — Lena Richard"
-      url: "https://artsandculture.google.com/story/4AVhWsp48meFKw?hl=en"
-      quote: "In 1939, Richard self-published Lena Richard’s Cook Book"
+  sources: [ { "title": "Oxford American: Lena Richard’s New Orleans Cookbook (2025)", "url": "https://oxfordamerican.org/magazine/issue-128-spring-2025/lena-richard-s-new-orleans-cookbook", "quote": "the self-published Lena Richard’s Cook Book, which she sent to the printer in 1939." }, { "title": "Southern Food and Beverage Museum: Creole Cuisine — Lena Richard", "url": "https://artsandculture.google.com/story/4AVhWsp48meFKw?hl=en", "quote": "In 1939, Richard self-published Lena Richard’s Cook Book" } ]
   status: drafted
 
 - id: fx-fd-0040
@@ -669,17 +614,11 @@
   en: "Lena Richard hosted a Creole cooking show on New Orleans television in 1949."
   ru: "В 1949 году Лена Ричард вела на телевидении Нового Орлеана передачу о креольской кухне."
   year: 1949
-  place: {"name":"New Orleans","lat":29.951,"lon":-90.072}
+  place: { "name": "New Orleans", "lat": 29.951, "lon": -90.072 }
   cards: []
   gender: f
   region: us
-  sources:
-    - title: "Smithsonian Magazine: Meet Lena Richard"
-      url: "https://www.smithsonianmag.com/smithsonian-institution/meet-mama-lena-celebrity-chef-and-creole-cookbook-author-180975085/"
-      quote: "was the star of a 1949 popular 30-minute cooking show"
-    - title: "Southern Food and Beverage Museum: Creole Cuisine — Lena Richard"
-      url: "https://artsandculture.google.com/story/4AVhWsp48meFKw?hl=en"
-      quote: "From 1949 until her death in 1950, Richard hosted a twice-weekly cooking show"
+  sources: [ { "title": "Oxford American: Lena Richard’s New Orleans Cookbook (2025)", "url": "https://oxfordamerican.org/magazine/issue-128-spring-2025/lena-richard-s-new-orleans-cookbook", "quote": "Lena Richard’s New Orleans Cook Book" }, { "title": "Southern Food and Beverage Museum: Creole Cuisine — Lena Richard", "url": "https://artsandculture.google.com/story/4AVhWsp48meFKw?hl=en", "quote": "From 1949 until her death in 1950, Richard hosted a twice-weekly cooking show" } ]
   status: drafted
 
 - id: fx-fd-0041
@@ -687,17 +626,11 @@
   en: "Attiéké des Lagunes, Côte d’Ivoire’s fermented cassava semolina, received geographical-indication protection in 2023."
   ru: "Ивуарийская крупа из ферментированного маниока «Аттьеке-де-Лагюн» в 2023 году получила защиту географического указания."
   year: 2023
-  place: {"name":"Lagoon region, Côte d’Ivoire","lat":5.3,"lon":-4.3}
+  place: { "name": "Lagoon region, Côte d’Ivoire", "lat": 5.3, "lon": -4.3 }
   cards: []
   gender: none
   region: africa
-  sources:
-    - title: "Government of Côte d’Ivoire: Interview with OIPI director Paul Assandé"
-      url: "https://gouv.ci/index.php/actualite/dr-paul-assande-directeur-general-de-loffice-ivoirien-de-la-propriete-intellectuelle-oipi-la-labelisation-de-lappellation-attieke-permet-dempecher-lusage-abusif-qui-est-fait-de-ce-mot-par-de-nombreux-pays-mais-egalement-de-booster-les-vent-2393"
-      quote: "l’Attiéké des Lagunes a été labellisé aussi par Indication géographique, en 2023"
-    - title: "District Autonome d’Abidjan: L’Unesco inscrit l’attiéké"
-      url: "https://www.abidjan.district.ci/index2.php?num=4655&page=actu"
-      quote: "En 2023, l´Organisation africaine de la propriété intellectuelle (OAPI) a enregistré l\"attiéké des lagunes\" en indication géographique protégée (IGP)"
+  sources: [ { "title": "APIA: Revue scientifique de la propriété intellectuelle en Afrique, no. 8 (2025)", "url": "https://apia-asso.org/wp-content/uploads/2025/11/RSPIA_n%C2%B08_2025.pdf", "quote": "la Propriété Intellectuelle le 26 juillet 2023 à l’occasion du SAITT 2023" }, { "title": "District Autonome d’Abidjan: L’Unesco inscrit l’attiéké", "url": "https://www.abidjan.district.ci/index2.php?num=4655&page=actu", "quote": "En 2023, l´Organisation africaine de la propriété intellectuelle (OAPI) a enregistré l\"attiéké des lagunes\" en indication géographique protégée (IGP)" } ]
   status: drafted
 
 - id: fx-fd-0042
@@ -705,17 +638,11 @@
   en: "Haiti’s cassava-bread traditions entered UNESCO’s intangible heritage list in 2024 through a joint nomination with Cuba, Honduras, Venezuela and the Dominican Republic."
   ru: "Традиции гаитянских маниоковых лепёшек вошли в список нематериального наследия ЮНЕСКО в 2024 году по совместной заявке с Кубой, Гондурасом, Венесуэлой и Доминиканской Республикой."
   year: 2024
-  place: {"name":"Port-au-Prince, Haiti","lat":18.54,"lon":-72.34}
+  place: { "name": "Port-au-Prince, Haiti", "lat": 18.54, "lon": -72.34 }
   cards: []
   gender: none
   region: caribbean
-  sources:
-    - title: "UNESCO: Traditional knowledge and practices for cassava bread"
-      url: "https://ich.unesco.org/en/RL/traditional-knowledge-and-practices-for-the-making-and-consumption-of-cassava-bread-02118"
-      quote: "Inscribed in 2024 (19.COM) on the Representative List"
-    - title: "Haiti Ministry of Culture and Communication: Press release"
-      url: "https://communication.gouv.ht/communiques/communique-de-presse-du-mcc/"
-      quote: "sur la Liste Représentative du Patrimoine Culturel Immatériel de l’Humanité, ce mercredi 4 décembre 2024"
+  sources: [ { "title": "NPR via KASU: Cassava bread is named a cultural heritage of humanity (2024)", "url": "https://www.kasu.org/2024-12-19/cassava-bread-is-named-a-cultural-heritage-of-humanity", "quote": "The countries included in this month's recognition are the Dominican Republic, Haiti, Venezuela, Cuba and Honduras." }, { "title": "Caribbean Media Corporation via Jamaica Observer: UNESCO recognises cassava bread (2024)", "url": "https://www.jamaicaobserver.com/2024/12/09/unesco-recognises-cassava-bread-intangible-heritage-humanity/", "quote": "UNESCO) has recognised cassava bread as an Intangible Cultural Heritage of Humanity." } ]
   status: drafted
 
 - id: fx-fd-0043
@@ -723,17 +650,23 @@
   en: "Bourbon coffee descends from trees brought from Yemen to Réunion in 1715–1718."
   ru: "Кофе бурбон происходит от деревьев, привезённых из Йемена на Реюньон в 1715–1718 годах."
   year: 1715
-  place: {"name":"Réunion","lat":-21.1,"lon":55.5}
+  place: { "name": "Réunion", "lat": -21.1, "lon": 55.5 }
   cards: []
   gender: none
   region: africa
   sources:
-    - title: "USDA: Coffee Crop Germplasm Vulnerability Statement (2020)"
-      url: "https://www.ars-grin.gov/npgs/cgc_reports/2020%20-%20Coffee%20Vulnerability%20Statement.pdf"
-      quote: "1715 & 1718 – plants introduced\nfrom Mocha in Yemen to Bourbon\nIsland"
-    - title: "Royal Society of Chemistry: Introduction to Coffee Plant and Genetics"
-      url: "https://books.rsc.org/books/edited-volume/1829/chapter/2242994/Introduction-to-Coffee-Plant-and-Genetics?searchresult=1"
-      quote: "with plants from Mocha, a city on the Yemeni coast (1715–1718)"
+    [
+      {
+          "title": "USDA: Coffee Crop Germplasm Vulnerability Statement (2020)",
+          "url": "https://www.ars-grin.gov/npgs/cgc_reports/2020%20-%20Coffee%20Vulnerability%20Statement.pdf",
+          "quote": "1715 & 1718 – plants introduced
+
+            from Mocha in Yemen to Bourbon
+
+            Island"
+        },
+      { "title": "National Museum of Ethnology: Indian Ocean World Studies, Senri Ethnological Studies 114", "url": "https://www.minpaku.ac.jp/assets/pages/research/publication/research-publications/ses/ses_114.pdf", "quote": "Arabica coffee from Yemen, in 1708, 1715, and 1718; the second and third bore fruit,22)" }
+    ]
   status: drafted
 
 - id: fx-fd-0044
@@ -741,25 +674,19 @@
   en: "Cowpea remains from Ghana show people were using this African pulse by about 1500 BCE."
   ru: "Остатки вигны из Ганы свидетельствуют: люди использовали это африканское бобовое растение уже около 1500 года до нашей эры."
   year: -1500
-  place: {"name":"Kintampo, Ghana","lat":8.05,"lon":-1.73}
+  place: { "name": "Kintampo, Ghana", "lat": 8.05, "lon": -1.73 }
   cards: []
   gender: none
   region: africa
-  sources:
-    - title: "Padulosi and Ng (1997): Origin, taxonomy and morphology of Vigna unguiculata"
-      url: "https://biblio.iita.org/documents/U97InbkPadulosiOriginNothomNodev.pdf-35f0dee1ac1ec0f3f93472a4db788f38.pdf"
-      quote: "cowpea by African hunters or food gatherers as early as c. 1500 BC."
-    - title: "Chipeta et al. (2025): Cowpea genetic diversity in Malawi"
-      url: "https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2024.1461631/full"
-      quote: "Archaeological evidence from Ghana suggests cowpea was domesticated around 1500 BC"
+  sources: [ { "title": "Moses Ahmed Daramy, KNUST (2015): Response of Cowpea to Nitrogen and Phosphorus Fertilizers", "url": "https://ir.knust.edu.gh/server/api/core/bitstreams/de061331-aae0-44eb-9d33-3c2860c3c95e/content", "quote": "gathering (if not cultivation) of cowpea by African hunters or food gatherers as early as 1500 BC." }, { "title": "Chipeta et al. (2025): Cowpea genetic diversity in Malawi", "url": "https://www.frontiersin.org/journals/plant-science/articles/10.3389/fpls.2024.1461631/full", "quote": "Archaeological evidence from Ghana suggests cowpea was domesticated around 1500 BC" } ]
   status: drafted
 
 - id: fx-fd-0045
   cat: fd
-  en: "Okra was documented in Brazil by 1658, probably brought across the Atlantic by enslaved Africans."
-  ru: "К 1658 году бамию уже описали в Бразилии, куда её, вероятно, привезли через Атлантику порабощённые африканцы."
+  en: "Okra was documented on a Brazilian plantation by 1658."
+  ru: "К 1658 году бамия уже была описана на одной из бразильских плантаций."
   year: 1658
-  place: {"name":"Pernambuco, Brazil","lat":-8.05,"lon":-34.9}
+  place: { "name": "Pernambuco, Brazil", "lat": -8.05, "lon": -34.9 }
   cards: []
   gender: none
   region: latam
@@ -777,17 +704,11 @@
   en: "Vertamae Smart-Grosvenor’s Vibration Cooking (1970) blended recipes, travel and autobiography into a celebration of Black food culture."
   ru: "В книге «Кулинария по наитию» 1970 года Вертамэй Смарт-Гровенор соединила рецепты, путешествия и воспоминания, воспевая чёрную кулинарную культуру."
   year: 1970
-  place: {"name":"New York","lat":40.713,"lon":-74.006}
+  place: { "name": "New York", "lat": 40.713, "lon": -74.006 }
   cards: []
   gender: f
   region: us
-  sources:
-    - title: "University of Georgia Press: Vibration Cooking"
-      url: "https://www.jstor.org/stable/j.ctt46nd6q"
-      quote: "Vibration Cooking was first published in 1970"
-    - title: "Anne E. Goldman: Take My Word, University of California Press"
-      url: "https://publishing.cdlib.org/ucpressebooks/public/book/take-my-word-autobiographical-innovations-of-ethnic-american-working-women.html"
-      quote: "Vibration Cooking: Or, The Travel Notes of a Geechee Girl (1970)"
+  sources: [ { "title": "University of Georgia Press: Vibration Cooking", "url": "https://www.ugapress.org/9780820337395/vibration-cooking/", "quote": "Vibration Cooking was first published in 1970" }, { "title": "Anne E. Goldman: Take My Word, University of California Press", "url": "https://publishing.cdlib.org/ucpressebooks/public/book/take-my-word-autobiographical-innovations-of-ethnic-american-working-women.html", "quote": "Vibration Cooking: Or, The Travel Notes of a Geechee Girl (1970)" } ]
   status: drafted
 
 - id: fx-fd-0047
@@ -795,7 +716,7 @@
   en: "Kenya’s tea-growing history began with seedlings imported from India and planted at Limuru in 1903."
   ru: "История кенийского чая началась с саженцев, привезённых из Индии и высаженных в Лимуру в 1903 году."
   year: 1903
-  place: {"name":"Limuru, Kenya","lat":-1.11,"lon":36.64}
+  place: { "name": "Limuru, Kenya", "lat": -1.11, "lon": 36.64 }
   cards: []
   gender: none
   region: africa
@@ -810,10 +731,10 @@
 
 - id: fx-fd-0048
   cat: fd
-  en: "Carmen Stevens qualified as a winemaker in South Africa in 1995, after apartheid had barred Black students from studying the craft."
-  ru: "В 1995 году Кармен Стивенс получила в ЮАР квалификацию винодела — профессию, к обучению которой апартеид прежде не допускал чернокожих студентов."
+  en: "Carmen Stevens made history in 1995 when she qualified as a winemaker in South Africa."
+  ru: "В 1995 году Кармен Стивенс вошла в историю, получив в ЮАР квалификацию винодела."
   year: 1995
-  place: {"name":"Elsenburg, South Africa","lat":-33.84,"lon":18.83}
+  place: { "name": "Elsenburg, South Africa", "lat": -33.84, "lon": 18.83 }
   cards: []
   gender: f
   region: africa
@@ -828,10 +749,10 @@
 
 - id: fx-fd-0049
   cat: fd
-  en: "After humanitarian work with the United Nations, Selassie Atadika founded Midunu in Accra in 2014 to celebrate African cuisine through travelling dinners."
-  ru: "После гуманитарной работы в ООН Селасси Атадика в 2014 году основала в Аккре Midunu, знакомя гостей с африканской кухней на выездных ужинах."
+  en: "In 2014 Selassie Atadika founded Midunu, a nomadic private dining experience in Accra, Ghana."
+  ru: "В 2014 году Селасси Атадика основала в Аккре Midunu — кочующие закрытые ужины."
   year: 2014
-  place: {"name":"Accra, Ghana","lat":5.56,"lon":-0.2}
+  place: { "name": "Accra, Ghana", "lat": 5.56, "lon": -0.2 }
   cards: []
   gender: f
   region: africa
@@ -849,17 +770,11 @@
   en: "In 1978, sisters Norma Jean and Carole Darden published Spoonbread and Strawberry Wine, weaving family history into a Southern cookbook."
   ru: "В 1978 году сёстры Норма Джин и Кэрол Дарден выпустили «Кукурузный хлеб и земляничное вино», соединив историю семьи с рецептами американского Юга."
   year: 1978
-  place: {"name":"New York, United States","lat":40.71,"lon":-74.01}
+  place: { "name": "New York, United States", "lat": 40.71, "lon": -74.01 }
   cards: []
   gender: f
   region: us
-  sources:
-    - title: "DC Public Library: Top Shelf"
-      url: "https://www.dclibrary.org/news/top-shelf-my-all-time-favorite-cookbooks"
-      quote: "Originally published in 1978, this cookbook by Norma Jean and Carole Darden merges a family’s history and their local food traditions."
-    - title: "Sarah Lawrence College: Spoonbread and Strawberry Wine"
-      url: "https://www.sarahlawrence.edu/news-events/news/2024-02-27-beloved-cookbook-spoonbread-and-strawberry-wine-by-sisters-norma-jean-darden-61-and-carole-darden-lloyd-66-still-serving-inspiration-itn.html"
-      quote: "their Spoonbread and Strawberry Wine, written in 1978"
+  sources: [ { "title": "DC Public Library: Top Shelf", "url": "https://www.dclibrary.org/news/top-shelf-my-all-time-favorite-cookbooks", "quote": "Originally published in 1978, this cookbook by Norma Jean and Carole Darden merges a family’s history and their local food traditions." }, { "title": "Sarah Lawrence College: Spoonbread and Strawberry Wine", "url": "https://www.sarahlawrence.edu/news-events/news/2024-02-27-beloved-cookbook-spoonbread-and-strawberry-wine-by-sisters-norma-jean-darden-61-and-carole-darden-lloyd-66-still-serving-inspiration-itn.html", "quote": "Spoonbread and Strawberry Wine, written in 1978" } ]
   status: drafted
 
 - id: fx-fd-0051
@@ -867,25 +782,19 @@
   en: "In 1999, Gidleigh Park earned its second Michelin star with Michael Caines leading the kitchen."
   ru: "В 1999 году ресторан Gidleigh Park получил вторую звезду «Мишлен» под руководством шеф-повара Майкла Кейнса."
   year: 1999
-  place: {"name":"Chagford, United Kingdom","lat":50.67,"lon":-3.88}
+  place: { "name": "Chagford, United Kingdom", "lat": 50.67, "lon": -3.88 }
   cards: []
   gender: m
   region: europe
-  sources:
-    - title: "National Portrait Gallery: Michael Caines"
-      url: "https://www.npg.org.uk/collections/search/person/mp84339/michael-caines"
-      quote: "in 1999, Gidleigh Park was awarded a second Michelin Star"
-    - title: "The Caterer: Michael Caines on Michelin"
-      url: "https://www.thecaterer.com/news/michael-caines-on-michelin-and-launching-at-the-bath-priory"
-      quote: "After gaining a second Michelin star in 1999, Caines set up Michael Caines Restaurants"
+  sources: [ { "title": "The Guardian: Q&A — Michael Caines (2006)", "url": "https://www.theguardian.com/theguardian/2006/apr/08/weekend7.weekend2", "quote": "In 1999, he gained a second." }, { "title": "The Caterer: Michael Caines on Michelin", "url": "https://www.thecaterer.com/news/michael-caines-on-michelin-and-launching-at-the-bath-priory", "quote": "After gaining a second Michelin star in 1999, Caines set up Michael Caines Restaurants" } ]
   status: drafted
 
 - id: fx-fd-0052
   cat: fd
-  en: "In 2001, Kenyan nutritionist Ruth Oniang’o founded AJFAND, a journal giving African food and agricultural research an international platform."
-  ru: "В 2001 году кенийская исследовательница питания Рут Онианго основала AJFAND — журнал, открывший африканским исследованиям питания и сельского хозяйства путь к международной аудитории."
+  en: "Ruth Oniang'o's journal AJFAND was initiated in 2001 as a pilot project."
+  ru: "Журнал Рут Онианго AJFAND появился в 2001 году как пилотный проект."
   year: 2001
-  place: {"name":"Nairobi, Kenya","lat":-1.29,"lon":36.82}
+  place: { "name": "Nairobi, Kenya", "lat": -1.29, "lon": 36.82 }
   cards: []
   gender: f
   region: africa
@@ -903,17 +812,21 @@
   en: "Mashama Bailey, chef of Savannah’s The Grey, won the James Beard Foundation’s Outstanding Chef award in 2022."
   ru: "Машама Бейли, шеф-повар ресторана The Grey в Саванне, получила премию Фонда Джеймса Бирда «Выдающийся шеф-повар» в 2022 году."
   year: 2022
-  place: {"name":"Savannah, Georgia, United States","lat":32.08,"lon":-81.1}
+  place: { "name": "Savannah, Georgia, United States", "lat": 32.08, "lon": -81.1 }
   cards: []
   gender: f
   region: us
   sources:
-    - title: "James Beard Foundation: The 2022 Award Winners"
-      url: "https://www.jamesbeard.org/stories/the-2022-james-beard-award-winners"
-      quote: "2022 Outstanding Chef Mashama Bailey."
-    - title: "Institute of Culinary Education: Mashama Bailey"
-      url: "https://www.ice.edu/about/alumni-profiles/mashama-bailey"
-      quote: "received top honor at the 2022 James Beard Foundation Awards, winning Outstanding Chef."
+    [
+      { "title": "James Beard Foundation: The 2022 Award Winners", "url": "https://www.jamesbeard.org/stories/the-2022-james-beard-award-winners", "quote": "2022 Outstanding Chef Mashama Bailey." },
+      {
+          "title": "Savannah City Council: Minutes, 14 July 2022",
+          "url": "https://savannahga.gov/DocumentCenter/View/24565/ActionMinutes_2022-07-14",
+          "quote": "Mashama Bailey, Executive Chef and Partner of The Grey
+
+            Restaurant, Winner of the 2022 James Beard Award for Outstanding Chef."
+        }
+    ]
   status: drafted
 
 - id: fx-fd-0054
@@ -921,7 +834,7 @@
   en: "Mariya Russell became the first Black woman to earn a Michelin star in 2019, leading the kitchen at Chicago’s Kikkō."
   ru: "В 2019 году Мария Расселл, руководившая кухней чикагского Kikkō, стала первой чернокожей женщиной, получившей звезду «Мишлен»."
   year: 2019
-  place: {"name":"Chicago, Illinois, United States","lat":41.88,"lon":-87.63}
+  place: { "name": "Chicago, Illinois, United States", "lat": 41.88, "lon": -87.63 }
   cards: []
   gender: f
   region: us
@@ -939,17 +852,11 @@
   en: "Akinwumi Adesina pledged his $250,000 World Food Prize award in 2017 to support young Africans building careers in agriculture."
   ru: "В 2017 году Акинвуми Адесина пообещал направить 250 тысяч долларов Всемирной продовольственной премии на поддержку молодых африканцев, выбравших сельское хозяйство."
   year: 2017
-  place: {"name":"Des Moines, Iowa, United States","lat":41.59,"lon":-93.62}
+  place: { "name": "Des Moines, Iowa, United States", "lat": 41.59, "lon": -93.62 }
   cards: []
   gender: m
   region: us
-  sources:
-    - title: "African Development Bank: Africa’s pathway out of poverty, 20 October 2017"
-      url: "https://www.afdb.org/en/news-and-events/africas-pathway-out-of-poverty-by-dr-akinwumi-a-adesina-president-of-the-african-development-bank-world-food-prize-laureate-luncheon-october-20-2017-in-des-moines-iowa-17468"
-      quote: "Last night I had the privilege of donating my World Food Prize award of $250,000"
-    - title: "Voice of America: 2017 World Food Prize"
-      url: "https://editorials.voa.gov/a/world-food-prize/4099647.html"
-      quote: "Dr. Adesina pledged to use the 250,000 dollar award that comes with the World Food Prize"
+  sources: [ { "title": "World Food Prize: Launching the World Hunger Fighters Foundation (2019)", "url": "https://www.worldfoodprize.org/documents/filelibrary/2019_borlaug_dialogue_transcripts/2019WFP1315_Hunger_Fighters_Launch__22DF90D1716F7.pdf", "quote": "he committed the entire $250,000 Prize to" }, { "title": "Voice of America: 2017 World Food Prize", "url": "https://editorials.voa.gov/a/world-food-prize/4099647.html", "quote": "Dr. Adesina pledged to use the 250,000 dollar award that comes with the World Food Prize" } ]
   status: drafted
 
 - id: fx-fd-0056
@@ -957,7 +864,7 @@
   en: "TV chef Ainsley Harriott received an MBE in the 2020 New Year Honours for services to broadcasting and the culinary arts."
   ru: "Телеповар Эйнсли Харриотт получил звание кавалера ордена Британской империи в новогоднем наградном списке 2020 года за заслуги в телевещании и кулинарии."
   year: 2020
-  place: {"name":"London, United Kingdom","lat":51.51,"lon":-0.13}
+  place: { "name": "London, United Kingdom", "lat": 51.51, "lon": -0.13 }
   cards: []
   gender: m
   region: europe
@@ -975,15 +882,9 @@
   en: "Princess Pamela’s Soul Food Cookbook, published in 1969, preserved Southern recipes carried north during the Great Migration."
   ru: "Вышедшая в 1969 году кулинарная книга Принцессы Памелы сохранила южные рецепты, которые афроамериканцы увозили на север во время Великого переселения."
   year: 1969
-  place: {"name":"New York, United States","lat":40.71,"lon":-74.01}
+  place: { "name": "New York, United States", "lat": 40.71, "lon": -74.01 }
   cards: []
   gender: f
   region: us
-  sources:
-    - title: "Rizzoli: Spring 2024 catalogue, page 135"
-      url: "https://www.rizzoliusa.com/wp-content/uploads/2023/11/Spring-24-Catalog.pdf"
-      quote: "Princess Pamela, who paved the way for all the others with this 1969 cult classic."
-    - title: "National Museum of American History: Food for the People"
-      url: "https://americanhistory.si.edu/explore/exhibitions/food/online/resetting-table/food-people"
-      quote: "Princess Pamela’s Soul Food Cookbook, 1969"
+  sources: [ { "title": "Rizzoli: Spring 2024 catalogue, page 135", "url": "https://www.rizzoliusa.com/wp-content/uploads/2023/11/Spring-24-Catalog.pdf", "quote": "Princess Pamela, who paved the way for all the others with this 1969 cult classic." }, { "title": "NPR via Maine Public: Princess Pamela’s Soul Food Cookbook Comes Back", "url": "https://www.mainepublic.org/2017-02-18/princess-pamelas-soul-food-cookbook-comes-back-after-falling-out-of-print", "quote": "And this one book stood out from 1969." } ]
   status: drafted

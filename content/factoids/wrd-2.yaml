@@ -1,20 +1,14 @@
 - id: fx-wrd-0004
   cat: "wrd"
-  en: "English “okra” has West African roots, with dictionaries comparing the Igbo name ókùrù."
-  ru: "Английское «okra» («бамия») имеет западноафриканские корни: словари сопоставляют его с игбоским ókùrù."
+  en: "English “okra”, the vegetable’s name, has West African origins."
+  ru: "Английское «okra», название бамии, имеет западноафриканское происхождение."
   year: 1679
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: okra"
-      url: "https://www.merriam-webster.com/dictionary/okra"
-      quote: "of African origin; akin to Ibo ókùrù okra\n\nFirst Known Use\n\n1679"
-    - title: "Collins English Dictionary: okra"
-      url: "https://www.collinsdictionary.com/dictionary/english/okra"
-      quote: "[1670–80; said to be of West African origin, though precise source unknown; cf. Igbo ókùrù okra]"
+  sources: [{"title": "Dictionary.com: okra", "url": "https://www.dictionary.com/browse/okra", "quote": "Etymology Origin of okra First recorded in 1670–80; said to be of West African origin, though precise source unknown; compare Igbo ókùrù okra"}, {"title": "American Heritage Dictionary: okra", "url": "https://ahdictionary.com/word/search.html?q=okra", "quote": "[Of West African origin; akin to Akan (Twi) nkruma .]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing."
 - id: fx-wrd-0005
   cat: "wrd"
   en: "English “gumbo” came through Louisiana French from a Bantu name for okra."
@@ -23,15 +17,9 @@
   cards: []
   gender: "none"
   region: "us"
-  sources:
-    - title: "Merriam-Webster: gumbo"
-      url: "https://www.merriam-webster.com/dictionary/gumbo"
-      quote: "American French gombo, of Bantu origin; akin to Umbundu ochinggômbo okra"
-    - title: "Collins English Dictionary: gumbo"
-      url: "https://www.collinsdictionary.com/dictionary/english/gumbo"
-      quote: "[1795–1805, Amer.; ‹ LaF gombo, gumbo ‹ a Bantu language; cf. Umbundu ochinggombo, Luba chinggombo okra]"
+  sources: [{"title": "Dictionary.com: gumbo", "url": "https://www.dictionary.com/browse/gumbo", "quote": "1795–1805, < Louisiana French gombo, gumbo < a Bantu language; compare Umbundu ochinggombo, Luba chinggombo okra"}, {"title": "American Heritage Dictionary: gumbo", "url": "https://ahdictionary.com/word/search.html?q=gumbo", "quote": "[Louisiana French gombo , of Bantu origin; akin to Tshiluba ki-ngumbo , okra.]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing."
 - id: fx-wrd-0006
   cat: "wrd"
   en: "“Goober”, an American name for the peanut, has Bantu roots related to Kimbundu nguba."
@@ -40,15 +28,9 @@
   cards: []
   gender: "none"
   region: "us"
-  sources:
-    - title: "Merriam-Webster: goober"
-      url: "https://www.merriam-webster.com/dictionary/goober"
-      quote: "of Bantu origin; akin to Kimbundu ŋguba peanut"
-    - title: "Collins English Dictionary: goober"
-      url: "https://www.collinsdictionary.com/dictionary/english/goober"
-      quote: "[1825–35; of Afr orig.; cf. Kimbundu nguba peanut]"
+  sources: [{"title": "Dictionary.com: goober", "url": "https://www.dictionary.com/browse/goober", "quote": "First recorded in 1825–35; of Bantu origin; compare Kongo, Kimbundu nguba “peanut”"}, {"title": "American Heritage Dictionary: goober", "url": "https://ahdictionary.com/word/search.html?q=goober", "quote": "[Of Bantu origin; akin to Kongo or Kimbundu n-guba .]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing."
 - id: fx-wrd-0007
   cat: "wrd"
   en: "English “banana” came through Spanish or Portuguese from an African word."
@@ -57,15 +39,9 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: banana"
-      url: "https://www.merriam-webster.com/dictionary/banana"
-      quote: "Spanish or Portuguese; Spanish, from Portuguese, of African origin; akin to Wolof banaana banana\n\nFirst Known Use\n\n1597"
-    - title: "Collins English Dictionary: banana"
-      url: "https://www.collinsdictionary.com/dictionary/english/banana"
-      quote: "C16: from Spanish or Portuguese, of African origin"
+  sources: [{"title": "Dictionary.com: banana", "url": "https://www.dictionary.com/browse/banana", "quote": "akin to various words for banana or plantain in WAfr languages (e.g., Wolof, Malinke banana, Vai"}, {"title": "American Heritage Dictionary: banana", "url": "https://ahdictionary.com/word/search.html?q=banana", "quote": "[Portuguese and Spanish, from Wolof, Mande, and Fulani.]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing."
 - id: fx-wrd-0008
   cat: "wrd"
   en: "English “kudu” travelled through Afrikaans from a Khoekhoe name for the antelope."
@@ -74,15 +50,9 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: kudu"
-      url: "https://www.merriam-webster.com/dictionary/kudu"
-      quote: "Afrikaans koedoe, from Khoikhoi kudu-b, kudu-s\n\nFirst Known Use\n\n1777"
-    - title: "Collins English Dictionary: kudu"
-      url: "https://www.collinsdictionary.com/dictionary/english/kudu"
-      quote: "[1770–80; ‹ Afrik koedoe ‹ Khoikhoi ≠kudu]"
+  sources: [{"title": "Dictionary.com: kudu", "url": "https://www.dictionary.com/browse/kudu", "quote": "Etymology Origin of kudu 1770–80; < Afrikaans koedoe < Khoikhoi ǂkudu"}, {"title": "American Heritage Dictionary: kudu", "url": "https://ahdictionary.com/word/search.html?q=kudu", "quote": "[Afrikaans koedoe , ultimately from Xhosa i-quda, i-qudu (possibly via Xhosa i-qudu ) of Khoekhoe origin; akin to obsolete Khoekhoegowab ‡ hurub , kudu horn"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing."
 - id: fx-wrd-0009
   cat: "wrd"
   en: "English borrowed the antelope's name “impala” from Zulu."
@@ -91,32 +61,20 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: impala"
-      url: "https://www.merriam-webster.com/dictionary/impala"
-      quote: "Zulu\n\nFirst Known Use\n\n1875"
-    - title: "Collins English Dictionary: impala"
-      url: "https://www.collinsdictionary.com/dictionary/english/impala"
-      quote: "[1870–75; ‹ Zulu, or a cognate word in another Nguni dial.]"
+  sources: [{"title": "Dictionary.com: impala", "url": "https://www.dictionary.com/browse/impala", "quote": "1870–75; < Zulu, or a cognate word in another Nguni dial."}, {"title": "American Heritage Dictionary: impala", "url": "https://ahdictionary.com/word/search.html?q=impala", "quote": "[Zulu ím-pàlà : ím- , n. pref. + -pàlà , impala.]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing."
 - id: fx-wrd-0010
   cat: "wrd"
-  en: "English “chimpanzee” comes from a Kongo dialect."
-  ru: "Английское «chimpanzee» («шимпанзе») происходит из одного из диалектов языка конго."
+  en: "English “chimpanzee” has roots in a Bantu language of the Congo region."
+  ru: "Английское «chimpanzee» («шимпанзе») восходит к одному из языков банту региона Конго."
   year: 1738
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: chimpanzee"
-      url: "https://www.merriam-webster.com/dictionary/chimpanzee"
-      quote: "Kongo dialect chimpenzi\n\nFirst Known Use\n\n1738"
-    - title: "Collins English Dictionary: chimpanzee"
-      url: "https://www.collinsdictionary.com/dictionary/english/chimpanzee"
-      quote: "C18: from Kongo dialect"
+  sources: [{"title": "Dictionary.com: chimpanzee", "url": "https://www.dictionary.com/browse/chimpanzee", "quote": "origin uncertain; possibly from Vili , a Bantu language spoken on the Atlantic coast between southern Gabon and northern Angola"}, {"title": "American Heritage Dictionary: chimpanzee", "url": "https://ahdictionary.com/word/search.html?q=chimpanzee", "quote": "[Portuguese, from Vili (Bantu language of Congo) ci-mpenzi .]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing."
 - id: fx-wrd-0011
   cat: "wrd"
   en: "English “quagga” preserves a Khoekhoe animal name borrowed through Afrikaans."
@@ -125,32 +83,20 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: quagga"
-      url: "https://www.merriam-webster.com/dictionary/quagga"
-      quote: "obsolete Afrikaans (now kwagga), from Khoikhoi quácha\n\nFirst Known Use\n\n1780"
-    - title: "Collins English Dictionary: quagga"
-      url: "https://www.collinsdictionary.com/dictionary/english/quagga"
-      quote: "C18: from obsolete Afrikaans, from Khoekhoe qǔagga; compare Xhosa i-qwara something striped"
+  sources: [{"title": "Dictionary.com: quagga", "url": "https://www.dictionary.com/browse/quagga", "quote": "1775–85; < Afrikaans (now spelling kwagga ) < Khoikhoi, first recorded as quácha (1691); said to be imitative of the animal's yelp"}, {"title": "American Heritage Dictionary: quagga", "url": "https://ahdictionary.com/word/search.html?q=quagga", "quote": "[Earlier Afrikaans (now spelled kwagga ), from Khoikhoi !ua-xa , perhaps imitative of its braying.]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing."
 - id: fx-wrd-0012
   cat: "wrd"
-  en: "English “okapi” comes from Mvuba, a language of the Democratic Republic of the Congo."
-  ru: "Английское «okapi» пришло из мвуба — языка, на котором говорят в Демократической Республике Конго."
+  en: "English “okapi” probably comes from Mvuba, a language of the Democratic Republic of the Congo."
+  ru: "Английское «okapi» («окапи»), вероятно, происходит из мвуба, языка Демократической Республики Конго."
   year: 1900
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: okapi"
-      url: "https://www.merriam-webster.com/dictionary/okapi"
-      quote: "Mvuba (language spoken west of Lake Edward, Democratic Republic of the Congo)\n\nFirst Known Use\n\n1900"
-    - title: "Collins English Dictionary: okapi"
-      url: "https://www.collinsdictionary.com/dictionary/english/okapi"
-      quote: "1900; ‹ Bambuba (Mvu'ba), a Central Sudanic language of the NE Democratic Republic of the Congo"
+  sources: [{"title": "Dictionary.com: okapi", "url": "https://www.dictionary.com/browse/okapi", "quote": "1900; < Bambuba (Mvu’ba), a Central Sudanic language of the NE Democratic Republic of the Congo"}, {"title": "American Heritage Dictionary: okapi", "url": "https://ahdictionary.com/word/search.html?q=okapi", "quote": "[Perhaps of Mvuba (Nilo-Saharan language of Congo) origin.]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing."
 - id: fx-wrd-0013
   cat: "wrd"
   en: "The “tsetse” in English “tsetse fly” comes through Afrikaans from the Tswana word for a fly."
@@ -159,15 +105,9 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: tsetse fly"
-      url: "https://www.merriam-webster.com/dictionary/tsetse%20fly"
-      quote: "Afrikaans, from Tswana tsètsè fly\n\nFirst Known Use\n\n1865"
-    - title: "Collins English Dictionary: tsetse fly"
-      url: "https://www.collinsdictionary.com/dictionary/english/tsetse-fly"
-      quote: "[1860–65; ‹ Tswana tsètsè fly]"
+  sources: [{"title": "Dictionary.com: tsetse fly", "url": "https://www.dictionary.com/browse/tsetse%20fly", "quote": "Etymology Origin of tsetse fly First recorded in 1845–50; from Afrikaans, from Tswana tsêtsê + fly 1 ( def. )"}, {"title": "American Heritage Dictionary: tsetse fly", "url": "https://ahdictionary.com/word/search.html?q=tsetse%20fly", "quote": "that cause sleeping sickness in humans and nagana in livestock. [Afrikaans, from Sotho (Tswana) tsêtsê .]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use, not the date of oral borrowing."
 - id: fx-wrd-0014
   cat: "wrd"
   en: "English “marimba” has Bantu roots related to the Kimbundu word for a xylophone."
@@ -176,15 +116,9 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: marimba"
-      url: "https://www.merriam-webster.com/dictionary/marimba"
-      quote: "of Bantu origin; akin to Kimbundu marimba xylophone\n\nFirst Known Use\n\n1704"
-    - title: "Collins English Dictionary: marimba"
-      url: "https://www.collinsdictionary.com/dictionary/english/marimba"
-      quote: "[1695–1705; ‹ Pg ‹ Kimbundu or a related Bantu language; akin to kalimba]"
+  sources: [{"title": "Dictionary.com: marimba", "url": "https://www.dictionary.com/browse/marimba", "quote": "1695–1705; < Portuguese < Kimbundu or a related Bantu language; akin to kalimba"}, {"title": "American Heritage Dictionary: marimba", "url": "https://ahdictionary.com/word/search.html?q=marimba", "quote": "[Portuguese, of Bantu origin; akin to Kimbundu ma-rimba : ma- , pl. n. pref. + -rimba , xylophone, hand piano.]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0015
   cat: "wrd"
   en: "English “safari” comes from Swahili for “journey”, ultimately from Arabic."
@@ -193,15 +127,9 @@
   cards: ["swahili"]
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: safari"
-      url: "https://www.merriam-webster.com/dictionary/safari"
-      quote: "Swahili, journey, from Arabic safarī of a journey\n\nFirst Known Use\n\n1859"
-    - title: "Collins English Dictionary: safari"
-      url: "https://www.collinsdictionary.com/dictionary/english/safari"
-      quote: "C19: from Swahili: journey, from Arabic safarīya, from safara to travel"
+  sources: [{"title": "Dictionary.com: safari", "url": "https://www.dictionary.com/browse/safari", "quote": "Etymology Origin of safari 1885–90; < Swahili < Arabic safar journey"}, {"title": "Oxford Learner’s Dictionaries: safari", "url": "https://www.oxfordlearnersdictionaries.com/definition/english/safari", "quote": "Word Origin late 19th cent.: from Kiswahili, from Arabic safara ‘to travel’."}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology. Collins's American entry instead dates it to 1885–90."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing. Collins's American entry instead dates it to 1885–90."
 - id: fx-wrd-0016
   cat: "wrd"
   en: "English “bwana” travelled through Swahili from Arabic abūna, “our father”."
@@ -210,15 +138,9 @@
   cards: ["swahili"]
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: bwana"
-      url: "https://www.merriam-webster.com/dictionary/bwana"
-      quote: "Swahili, from Arabic abūna our father\n\nFirst Known Use\n\n1874"
-    - title: "Collins English Dictionary: bwana"
-      url: "https://www.collinsdictionary.com/dictionary/english/bwana"
-      quote: "Swahili, from Arabic abūna our father"
+  sources: [{"title": "Dictionary.com: bwana", "url": "https://www.dictionary.com/browse/bwana", "quote": "1875–80; < Swahili < Arabic abūnā our father"}, {"title": "American Heritage Dictionary: bwana", "url": "https://ahdictionary.com/word/search.html?q=bwana", "quote": "[Swahili, from Arabic 'ab ū n ā , our father"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology. Collins's American entry instead dates it to 1875–80."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing. Collins's American entry instead dates it to 1875–80."
 - id: fx-wrd-0017
   cat: "wrd"
   en: "English borrowed “mbira”, the musical instrument's name, from Shona."
@@ -227,15 +149,9 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: mbira"
-      url: "https://www.merriam-webster.com/dictionary/mbira"
-      quote: "Shona\n\nFirst Known Use\n\ncirca 1911"
-    - title: "Collins English Dictionary: mbira"
-      url: "https://www.collinsdictionary.com/dictionary/english/mbira"
-      quote: "Shona"
+  sources: [{"title": "Dictionary.com: mbira", "url": "https://www.dictionary.com/browse/mbira", "quote": "First recorded in 1905–10; from Shona; see also marimba ( def. ) , mbila , thumb piano"}, {"title": "American Heritage Dictionary: mbira", "url": "https://ahdictionary.com/word/search.html?q=mbira", "quote": "[Of Bantu origin; akin to Shona m-bìrà .]"}]
   status: "drafted"
-  note: "Year follows Merriam-Webster's approximate dating, circa 1911; Collins gives 1905–10. Both agree on Shona origin."
+  note: "Year follows Merriam-Webster's approximate dating, circa 1911; Collins gives 1905–10."
 - id: fx-wrd-0018
   cat: "wrd"
   en: "“Benne”, an American word for sesame, preserves a West African plant name."
@@ -244,15 +160,9 @@
   cards: []
   gender: "none"
   region: "us"
-  sources:
-    - title: "Merriam-Webster: benne"
-      url: "https://www.merriam-webster.com/dictionary/benne"
-      quote: "of African origin; akin to Malinke bĕne sesame\n\nFirst Known Use\n\n1769"
-    - title: "Collins English Dictionary: benne"
-      url: "https://www.collinsdictionary.com/dictionary/english/benne"
-      quote: "[1760–70, Amer.; ‹ Wolof, Malinke bene]"
+  sources: [{"title": "Dictionary.com: benne", "url": "https://www.dictionary.com/browse/benne", "quote": "Etymology Origin of benne 1760–70, < Wolof, Malinke bene"}, {"title": "American Heritage Dictionary: benne", "url": "https://ahdictionary.com/word/search.html?q=benne", "quote": "See sesame . [Wolof and Malinke bene .]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0019
   cat: "wrd"
   en: "English took “teff”, the grain's name, from Amharic."
@@ -261,15 +171,9 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: teff"
-      url: "https://www.merriam-webster.com/dictionary/teff"
-      quote: "Amharic ṭef\n\nFirst Known Use\n\n1790"
-    - title: "Collins English Dictionary: teff"
-      url: "https://www.collinsdictionary.com/dictionary/english/teff"
-      quote: "[1780–90; ‹ Amharic t'ef; cf. Geez t'ah'əf, t'ayəf]"
+  sources: [{"title": "Dictionary.com: teff", "url": "https://www.dictionary.com/browse/teff", "quote": "First recorded in 1780–90; from Amharic t’ef; compare Geez t’ah’əf, t’ayəf"}, {"title": "American Heritage Dictionary: teff", "url": "https://ahdictionary.com/word/search.html?q=teff", "quote": "[Amharic ṭ ef ; see ṭ ḥ p in the Appendix of Semitic roots .]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0020
   cat: "wrd"
   en: "“Ackee”, the fruit's English name, has West African origins, though its precise source remains uncertain."
@@ -278,15 +182,9 @@
   cards: []
   gender: "none"
   region: "caribbean"
-  sources:
-    - title: "Merriam-Webster: ackee"
-      url: "https://www.merriam-webster.com/dictionary/ackee"
-      quote: "probably borrowed from a Twi word, or from a related loanword in another West African language"
-    - title: "Collins English Dictionary: ackee"
-      url: "https://www.collinsdictionary.com/dictionary/english/ackee"
-      quote: "C18: of African origin"
+  sources: [{"title": "Dictionary.com: ackee", "url": "https://www.dictionary.com/browse/ackee", "quote": "Etymology Origin of ackee First recorded in 1785–95; from a dialect of Kru, a West African family of languages"}, {"title": "American Heritage Dictionary: akee", "url": "https://ahdictionary.com/word/search.html?q=akee", "quote": "[Possibly Kru akee or Akan (Twi) a ŋ ky ẽ , wild cashew.]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0021
   cat: "wrd"
   en: "English borrowed the Brazilian dance name “samba” from Portuguese."
@@ -295,15 +193,9 @@
   cards: []
   gender: "none"
   region: "latam"
-  sources:
-    - title: "Merriam-Webster: samba"
-      url: "https://www.merriam-webster.com/dictionary/samba"
-      quote: "Portuguese\n\nFirst Known Use\n\n1885"
-    - title: "Collins English Dictionary: samba"
-      url: "https://www.collinsdictionary.com/dictionary/english/samba"
-      quote: "[1880–85; ‹ Pg samba, alleged to be of African orig.]"
+  sources: [{"title": "Dictionary.com: samba", "url": "https://www.dictionary.com/browse/samba", "quote": "First recorded in 1885; from Portuguese, of African origin, possibly Kongo semba, the name of a dance"}, {"title": "American Heritage Dictionary: samba", "url": "https://ahdictionary.com/word/search.html?q=samba", "quote": "[Portuguese, perhaps from Kongo semba , dance move in which partners thrust out their bellies and touch navels.]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0022
   cat: "wrd"
   en: "The dance name “mambo” entered English from Latin American Spanish."
@@ -312,15 +204,9 @@
   cards: []
   gender: "none"
   region: "caribbean"
-  sources:
-    - title: "Merriam-Webster: mambo"
-      url: "https://www.merriam-webster.com/dictionary/mambo"
-      quote: "American Spanish\n\nFirst Known Use\n\n1946"
-    - title: "Collins English Dictionary: mambo"
-      url: "https://www.collinsdictionary.com/dictionary/english/mambo"
-      quote: "[1945–50; ‹ AmerSp]"
+  sources: [{"title": "Dictionary.com: mambo", "url": "https://www.dictionary.com/browse/mambo", "quote": "from Caribbean Spanish (Cuba), from Haitian Creole manbo “ritual dance; Vodou priestess”; perhaps from Kongo màmbu, plural of diàmbu “ritual negotiation, message”"}, {"title": "American Heritage Dictionary: mambo", "url": "https://ahdictionary.com/word/search.html?q=mambo", "quote": "[Cuban Spanish, from Haitian Creole manbo , voodoo priestess"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0023
   cat: "wrd"
   en: "English borrowed the drum name “bongo” from Latin American Spanish bongó."
@@ -329,15 +215,9 @@
   cards: []
   gender: "none"
   region: "caribbean"
-  sources:
-    - title: "Merriam-Webster: bongo"
-      url: "https://www.merriam-webster.com/dictionary/bongo"
-      quote: "American Spanish bongó"
-    - title: "Collins English Dictionary: bongo"
-      url: "https://www.collinsdictionary.com/dictionary/english/bongo"
-      quote: "[1915–20, Amer.; ‹ AmerSp bongó]"
+  sources: [{"title": "Dictionary.com: bongo", "url": "https://www.dictionary.com/browse/bongo", "quote": "Origin of bongo 2 An Americanism dating back to 1915–20; from Latin American Spanish (Puerto Rico) bongó"}, {"title": "Oxford Learner’s Dictionaries: bongo", "url": "https://www.oxfordlearnersdictionaries.com/definition/english/bongo", "quote": "Word Origin 1920s: from Latin American Spanish bongó ."}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0024
   cat: "wrd"
   en: "English “nyala”, an antelope's name, has Bantu origins related to Venda dzì-nyálà."
@@ -346,15 +226,9 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: nyala"
-      url: "https://www.merriam-webster.com/dictionary/nyala"
-      quote: "of Bantu origin; akin to Venda dzì-nyálà nyala buck\n\nFirst Known Use\n\n1899"
-    - title: "Collins English Dictionary: nyala"
-      url: "https://www.collinsdictionary.com/dictionary/english/nyala"
-      quote: "1895–1900; ‹ Venda (Bantu language of the Transvaal and Zimbabwe) (dzì-)nyálà nyala buck"
+  sources: [{"title": "Dictionary.com: nyala", "url": "https://www.dictionary.com/browse/nyala", "quote": "1895–1900; < Venda (Bantu language of the Transvaal and Zimbabwe) ( dzì )- nyálà nyala buck; or < a cognate Bantu word"}, {"title": "American Heritage Dictionary: nyala", "url": "https://ahdictionary.com/word/search.html?q=nyala", "quote": "[Tsonga (Bantu language of South Africa or Mozambique) and Venda nyala .]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0025
   cat: "wrd"
   en: "English borrowed the snake name “mamba” from Zulu imamba."
@@ -363,15 +237,9 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: mamba"
-      url: "https://www.merriam-webster.com/dictionary/mamba"
-      quote: "Zulu imamba\n\nFirst Known Use\n\n1839"
-    - title: "Collins English Dictionary: mamba"
-      url: "https://www.collinsdictionary.com/dictionary/english/mamba"
-      quote: "from Zulu im-amba"
+  sources: [{"title": "Dictionary.com: mamba", "url": "https://www.dictionary.com/browse/mamba", "quote": "Etymology Origin of mamba 1860–65; < Nguni; compare Zulu imamba, izimamba"}, {"title": "Oxford Learner’s Dictionaries: mamba", "url": "https://www.oxfordlearnersdictionaries.com/definition/english/mamba", "quote": "Word Origin mid 19th cent.: from Zulu imamba ."}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology. Collins's American entry instead dates it to 1860–65."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing. Collins's American entry instead dates it to 1860–65."
 - id: fx-wrd-0026
   cat: "wrd"
   en: "English “indaba”, meaning a conference, comes from Zulu for a matter under discussion."
@@ -380,15 +248,9 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: indaba"
-      url: "https://www.merriam-webster.com/dictionary/indaba"
-      quote: "Zulu, matter for discussion, affair\n\nFirst Known Use\n\n1827"
-    - title: "Collins English Dictionary: indaba"
-      url: "https://www.collinsdictionary.com/dictionary/english/indaba"
-      quote: "Zulu in-daba, subject, matter"
+  sources: [{"title": "Dictionary.com: indaba", "url": "https://www.dictionary.com/browse/indaba", "quote": "1890–95; < Zulu indaba, izindaba (with implosive b ) matter for discussion, affair, account"}, {"title": "American Heritage Dictionary: indaba", "url": "https://ahdictionary.com/word/search.html?q=indaba", "quote": "[Zulu ín-dàbà , affair, topic for discussion, conference : ín- , n. pref. + -dàbà , affair.]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology. Collins's American entry instead dates it to 1890–95."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing. Collins's American entry instead dates it to 1890–95."
 - id: fx-wrd-0027
   cat: "wrd"
   en: "English borrowed “macumba”, a name for Afro-Brazilian religious practices, from Brazilian Portuguese."
@@ -397,32 +259,20 @@
   cards: []
   gender: "none"
   region: "latam"
-  sources:
-    - title: "Merriam-Webster: macumba"
-      url: "https://www.merriam-webster.com/dictionary/macumba"
-      quote: "Brazilian Portuguese\n\nFirst Known Use\n\n1939"
-    - title: "Collins English Dictionary: macumba"
-      url: "https://www.collinsdictionary.com/dictionary/english/macumba"
-      quote: "[1935–40; ‹ Pg]"
+  sources: [{"title": "Dictionary.com: macumba", "url": "https://www.dictionary.com/browse/macumba", "quote": "Etymology Origin of macumba Borrowed into English from Portuguese around 1935–40"}, {"title": "Oxford Learner’s Dictionaries: macumba", "url": "https://www.oxfordlearnersdictionaries.com/definition/english/macumba", "quote": "that involves magic and possession by spirits Word Origin Portuguese."}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0028
   cat: "wrd"
-  en: "English “voodoo” came through Louisiana Creole, probably from an Ewe word for a guardian deity."
-  ru: "Английское «voodoo» пришло через луизианский креольский, вероятно, из языка эве, где означает божество-покровителя."
+  en: "English “voodoo” came through Louisiana French from West African languages."
+  ru: "Английское «voodoo» пришло через луизианский французский из западноафриканских языков."
   year: 1850
   cards: []
   gender: "none"
   region: "us"
-  sources:
-    - title: "Merriam-Webster: voodoo"
-      url: "https://www.merriam-webster.com/dictionary/voodoo"
-      quote: "Louisiana Creole voudou, probably from Ewe vódũ tutelary deity"
-    - title: "Collins English Dictionary: voodoo"
-      url: "https://www.collinsdictionary.com/dictionary/english/voodoo"
-      quote: "C19: from Louisiana French voudou, ultimately of West African origin; compare Ewe vodu guardian spirit"
+  sources: [{"title": "Dictionary.com: voodoo", "url": "https://www.dictionary.com/browse/voodoo", "quote": "An Americanism dating back to 1810–20; from Louisiana French, earlier vandoux, vandoo, from a West African source perhaps akin to Fon vodũ “spirit,” or Ewe"}, {"title": "American Heritage Dictionary: voodoo", "url": "https://ahdictionary.com/word/search.html?q=voodoo", "quote": "[Louisiana French voudou , from Ewe vodu and Fon vodun .]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology. Collins's American entry includes older uses dated 1810–20."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing. Collins's American entry includes older uses dated 1810–20."
 - id: fx-wrd-0029
   cat: "wrd"
   en: "The Caribbean word “obeah” has West African roots, though dictionaries do not establish one certain source language."
@@ -431,13 +281,7 @@
   cards: []
   gender: "none"
   region: "caribbean"
-  sources:
-    - title: "Merriam-Webster: obeah"
-      url: "https://www.merriam-webster.com/dictionary/obeah"
-      quote: "of African origin; akin to Ibo díbìà folk healer\n\nFirst Known Use\n\ncirca 1711"
-    - title: "Collins English Dictionary: obeah"
-      url: "https://www.collinsdictionary.com/dictionary/english/obeah"
-      quote: "‹ a West African language, though precise source unclear"
+  sources: [{"title": "Dictionary.com: obeah", "url": "https://www.dictionary.com/browse/obeah", "quote": "< a West African language, though precise source unclear; compare Twi ɔ-bayifó sorcerer"}, {"title": "American Heritage Dictionary: obeah", "url": "https://ahdictionary.com/word/search.html?q=obeah", "quote": "[West Indian English, of West African origin; akin to Efik ubio"}]
   status: "drafted"
   note: "Year follows Merriam-Webster's approximate circa 1711; Collins dates English use to 1750–60. The claim concerns only the shared African etymology."
 - id: fx-wrd-0030
@@ -448,13 +292,7 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: dashiki"
-      url: "https://www.merriam-webster.com/dictionary/dashiki"
-      quote: "modification of Yoruba dàńṣíkí\n\nFirst Known Use\n\ncirca 1968"
-    - title: "Collins English Dictionary: dashiki"
-      url: "https://www.collinsdictionary.com/dictionary/english/dashiki"
-      quote: "[‹ Yoruba dàńṣíkí ‹ Hausa dán cíkí (with imploded d)]"
+  sources: [{"title": "Dictionary.com: dashiki", "url": "https://www.dictionary.com/browse/dashiki", "quote": "From Yoruba dàńṣíkí, from Hausa dán cíkí (with imploded d )"}, {"title": "American Heritage Dictionary: dashiki", "url": "https://ahdictionary.com/word/search.html?q=dashiki", "quote": "[Yoruba dà ń ṣ íkí , from Hausa dán cíkí .]"}]
   status: "drafted"
   note: "Year is approximate: Merriam-Webster gives circa 1968, not an exact borrowing date."
 - id: fx-wrd-0031
@@ -465,15 +303,9 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: kente"
-      url: "https://www.merriam-webster.com/dictionary/kente"
-      quote: "Twi kenté\n\nFirst Known Use\n\n1957"
-    - title: "Collins English Dictionary: kente"
-      url: "https://www.collinsdictionary.com/dictionary/english/kente"
-      quote: "[1955–60; ‹ Ashanti]"
+  sources: [{"title": "Dictionary.com: kente", "url": "https://www.dictionary.com/browse/kente", "quote": "Etymology Origin of kente First recorded in 1950–55; from Twi"}, {"title": "American Heritage Dictionary: kente", "url": "https://ahdictionary.com/word/search.html?q=kente", "quote": "prominently featured in Afrocentric fashion. [Twi, cloth.]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0032
   cat: "wrd"
   en: "English “boubou”, the robe's name, came through French from Malinke bubu."
@@ -482,15 +314,9 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: boubou"
-      url: "https://www.merriam-webster.com/dictionary/boubou"
-      quote: "French, from Malinke bubu\n\nFirst Known Use\n\n1961"
-    - title: "Collins English Dictionary: boubou"
-      url: "https://www.collinsdictionary.com/dictionary/english/boubou"
-      quote: "[1960–65; ‹ F ‹ Malinke bubu]"
+  sources: [{"title": "Dictionary.com: boubou", "url": "https://www.dictionary.com/browse/boubou", "quote": "Etymology Origin of boubou First recorded in 1960–65; from French, from Malinke bubu"}, {"title": "American Heritage Dictionary: boubou", "url": "https://ahdictionary.com/word/search.html?q=boubou", "quote": "A long, loose-fitting African garment. [French, from Malinke bubu .]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0033
   cat: "wrd"
   en: "English “harmattan”, the dry wind's name, is linked to Twi haramata."
@@ -499,15 +325,9 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: harmattan"
-      url: "https://www.merriam-webster.com/dictionary/harmattan"
-      quote: "from or akin to Twi haramata\n\nFirst Known Use\n\n1671"
-    - title: "Collins English Dictionary: harmattan"
-      url: "https://www.collinsdictionary.com/dictionary/english/harmattan"
-      quote: "[1665–75; said to be ‹ Twi haramata]"
+  sources: [{"title": "Dictionary.com: harmattan", "url": "https://www.dictionary.com/browse/harmattan", "quote": "1665–75; said to be < Twi haramata"}, {"title": "American Heritage Dictionary: harmattan", "url": "https://ahdictionary.com/word/search.html?q=harmattan", "quote": "[Akan (Twi) haramata , possibly from Arabic"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0034
   cat: "wrd"
   en: "English borrowed the disease name “chikungunya” from Kimakonde, a language of the Makonde people."
@@ -516,32 +336,20 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: chikungunya"
-      url: "https://www.merriam-webster.com/dictionary/chikungunya"
-      quote: "borrowed from Kimakonde (Bantu language of the Makonde), alleged to mean \"that which bends up\""
-    - title: "Collins English Dictionary: chikungunya"
-      url: "https://www.collinsdictionary.com/dictionary/english/chikungunya"
-      quote: "C20: from Kimakonde (a Tanzanian language): to become contorted"
+  sources: [{"title": "American Heritage Dictionary: chikungunya", "url": "https://ahdictionary.com/word/search.html?q=chikungunya", "quote": "[Makonde (Bantu language of the region of Tanzania where an epidemic in the 1950s led to the first medical description of the disease) : chi-"}, {"title": "Oxford Learner’s Dictionaries: chikungunya", "url": "https://www.oxfordlearnersdictionaries.com/definition/english/chikungunya", "quote": "Word Origin 1950s: probably from Makonde."}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0035
   cat: "wrd"
-  en: "The dance name “conga” came into English through Spanish and probably ultimately refers to the Congo."
-  ru: "Название танца «conga» пришло в английский через испанский и, вероятно, восходит к названию Конго."
+  en: "English borrowed the dance name “conga” from Cuban Spanish."
+  ru: "Английское название танца «conga» заимствовано из кубинского испанского."
   year: 1934
   cards: []
   gender: "none"
   region: "caribbean"
-  sources:
-    - title: "Merriam-Webster: conga"
-      url: "https://www.merriam-webster.com/dictionary/conga"
-      quote: "American Spanish, probably from feminine of congo black person, from Congo, region in Africa\n\nFirst Known Use\n\n1934"
-    - title: "Collins English Dictionary: conga"
-      url: "https://www.collinsdictionary.com/dictionary/english/conga"
-      quote: "C20: from American Spanish, feminine of congo belonging to the Congo"
+  sources: [{"title": "Dictionary.com: conga", "url": "https://www.dictionary.com/browse/conga", "quote": "First recorded in 1930–35; from Cuban Spanish"}, {"title": "American Heritage Dictionary: conga", "url": "https://ahdictionary.com/word/search.html?q=conga", "quote": "[American Spanish (danza) Conga , Congo (dance), from Spanish Congo , of the Congo, from Kongo -kongo , Kongo language and people.]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0036
   cat: "wrd"
   en: "English borrowed the Afro-Cuban dance name “rumba” from Latin American Spanish."
@@ -550,15 +358,9 @@
   cards: []
   gender: "none"
   region: "caribbean"
-  sources:
-    - title: "Merriam-Webster: rumba"
-      url: "https://www.merriam-webster.com/dictionary/rumba"
-      quote: "American Spanish\n\nFirst Known Use\n\n1912"
-    - title: "Collins English Dictionary: rumba"
-      url: "https://www.collinsdictionary.com/dictionary/english/rumba"
-      quote: "[1920–25; ‹ AmerSp]"
+  sources: [{"title": "Dictionary.com: rumba", "url": "https://www.dictionary.com/browse/rumba", "quote": "First recorded in 1910–15; from Latin American Spanish (Cuba): literally, “party; spree,” from Spanish rumbo “commotion, uproar,” earlier “ostentation, pomp”; further origin uncertain"}, {"title": "American Heritage Dictionary: rumba", "url": "https://ahdictionary.com/word/search.html?q=rumba", "quote": "[American Spanish, from Spanish rumbo , ship's course, revelry, pomp; see RHUMB .]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology. Collins's American entry instead gives 1920–25."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing. Collins's American entry instead gives 1920–25."
 - id: fx-wrd-0037
   cat: "wrd"
   en: "“Banjo” probably has African roots related to Kimbundu mbanza, a stringed instrument."
@@ -567,15 +369,9 @@
   cards: ["banjo-lesson"]
   gender: "none"
   region: "caribbean"
-  sources:
-    - title: "Merriam-Webster: banjo"
-      url: "https://www.merriam-webster.com/dictionary/banjo"
-      quote: "probably of African origin; akin to Kimbundu mbanza, a similar instrument\n\nFirst Known Use\n\n1708"
-    - title: "Collins English Dictionary: banjo"
-      url: "https://www.collinsdictionary.com/dictionary/english/banjo"
-      quote: "prob. of African orig.; cf. Kimbundu mbanza a plucked string instrument"
+  sources: [{"title": "Dictionary.com: banjo", "url": "https://www.dictionary.com/browse/banjo", "quote": "First recorded in 1730–40; compare Jamaican English banja, bonjour, bangil, Brazilian Portuguese banza; probably of African origin; compare Kimbundu mbanza a plucked string instrument"}, {"title": "American Heritage Dictionary: banjo", "url": "https://ahdictionary.com/word/search.html?q=banjo", "quote": "[Earlier banshaw, banjore, banjo , probably of African origin and akin to Kimbundu and Tshiluba mbanza , a plucked stringed instrument"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology. Collins dates English forms to 1730–40."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing. Collins dates English forms to 1730–40."
 - id: fx-wrd-0038
   cat: "wrd"
   en: "English “juju”, meaning a charm, has West African roots associated with Hausa."
@@ -584,32 +380,9 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: juju"
-      url: "https://www.merriam-webster.com/dictionary/juju"
-      quote: "of W. African origin; akin to the source of Hausa jùju fetish"
-    - title: "Collins English Dictionary: juju"
-      url: "https://www.collinsdictionary.com/dictionary/english/juju"
-      quote: "C19: probably from Hausa djudju evil spirit, fetish"
+  sources: [{"title": "Dictionary.com: juju", "url": "https://www.dictionary.com/browse/juju", "quote": "First recorded in 1890–95; allegedly from Hausa jūjū “fetish,” from French joujou “toy, plaything”"}, {"title": "American Heritage Dictionary: juju", "url": "https://ahdictionary.com/word/search.html?q=juju", "quote": "[Of West African origin; akin to the source of Hausa j ū j ū , fetish, evil spirit.]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology. Collins's American entry instead gives 1890–95."
-- id: fx-wrd-0039
-  cat: "wrd"
-  en: "English “iroko”, a tropical tree and timber name, comes from Yoruba ìrokò."
-  ru: "Английское название тропического дерева и его древесины «iroko» пришло из йоруба ìrokò."
-  year: 1890
-  cards: []
-  gender: "none"
-  region: "africa"
-  sources:
-    - title: "Merriam-Webster: iroko"
-      url: "https://www.merriam-webster.com/dictionary/iroko"
-      quote: "Yoruba ìrokò\n\nFirst Known Use\n\n1890"
-    - title: "Collins English Dictionary: iroko"
-      url: "https://www.collinsdictionary.com/dictionary/english/iroko"
-      quote: "C19: from Yoruba"
-  status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing. Collins's American entry instead gives 1890–95."
 - id: fx-wrd-0040
   cat: "wrd"
   en: "English “gerenuk”, the long-necked antelope's name, was borrowed from Somali."
@@ -618,100 +391,53 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: gerenuk"
-      url: "https://www.merriam-webster.com/dictionary/gerenuk"
-      quote: "borrowed from Somali gáránúug\n\nFirst Known Use\n\n1895"
-    - title: "Collins English Dictionary: gerenuk"
-      url: "https://www.collinsdictionary.com/dictionary/english/gerenuk"
-      quote: "[1890–95; ‹ Somali gáránúug]"
+  sources: [{"title": "Dictionary.com: gerenuk", "url": "https://www.dictionary.com/browse/gerenuk", "quote": "Etymology Origin of gerenuk First recorded in 1890–95, gerenuk is from the Somali word gáránúug"}, {"title": "American Heritage Dictionary: gerenuk", "url": "https://ahdictionary.com/word/search.html?q=gerenuk", "quote": "A gazelle (Litocranius walleri) of eastern Africa having long legs, a long slender neck, and backward-curving horns in the male. [Somali garan ū g .]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0041
   cat: "wrd"
-  en: "The English antelope name “lechwe” probably comes from Sesotho lets'a."
-  ru: "Английское название антилопы «lechwe», вероятно, происходит от lets'a языка сесото."
+  en: "English “lechwe”, an antelope’s name, has southern African Bantu roots."
+  ru: "Английское «lechwe», название антилопы, имеет корни в языках банту юга Африки."
   year: 1857
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: lechwe"
-      url: "https://www.merriam-webster.com/dictionary/lechwe"
-      quote: "probably from Sesotho lets'a\n\nFirst Known Use\n\n1857"
-    - title: "Collins English Dictionary: lechwe"
-      url: "https://www.collinsdictionary.com/dictionary/english/lechwe"
-      quote: "[1855–60; prob. ‹ Sesotho lets'a]"
+  sources: [{"title": "Dictionary.com: lechwe", "url": "https://www.dictionary.com/browse/lechwe", "quote": "Etymology Origin of lechwe 1855–60; probably < Sesotho lets'a"}, {"title": "American Heritage Dictionary: lechwe", "url": "https://ahdictionary.com/word/search.html?q=lechwe", "quote": "[From Tswana, letswee or a kindred Bantu source .]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
-- id: fx-wrd-0042
-  cat: "wrd"
-  en: "English “fossa”, the Malagasy predator's name, came through French from Malagasy fosa."
-  ru: "Английское название мадагаскарского хищника «fossa» пришло через французский из малагасийского fosa."
-  year: 1838
-  cards: []
-  gender: "none"
-  region: "africa"
-  sources:
-    - title: "Merriam-Webster: fossa"
-      url: "https://www.merriam-webster.com/dictionary/fossa"
-      quote: "borrowed from French, borrowed from Malagasy fosa"
-    - title: "Collins English Dictionary: fossa"
-      url: "https://www.collinsdictionary.com/dictionary/english/fossa"
-      quote: "[1830–40; ‹ Malagasy; cf. earlier fossane (‹ F ‹ Malagasy)]"
-  status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0043
   cat: "wrd"
-  en: "Alice Walker developed “womanist” in 1983 as a term for a Black feminist or feminist of color."
-  ru: "В 1983 году Элис Уокер развила понятие «вуманистка» для обозначения чернокожей феминистки или феминистки из других небелых сообществ."
+  en: "Alice Walker coined “womanist”, a term centered on Black women’s experiences."
+  ru: "Элис Уокер ввела термин «вуманистка», связанный с опытом чернокожих женщин."
   year: 1983
   cards: []
   gender: "f"
   region: "us"
-  sources:
-    - title: "NMAAHC: The Revolutionary Practice of Black Feminisms"
-      url: "https://nmaahc.si.edu/explore/stories/revolutionary-practice-black-feminisms"
-      quote: "In 1983, Alice Walker developed the term “womanist” to describe “a Black feminist or feminist of color.”"
-    - title: "Black Metropolis Research Consortium: Womanism — Marcia Walker-McWilliams"
-      url: "https://bmrc.lib.uchicago.edu/portal/curated/womanism/"
-      quote: "In her work, In Search of Our Mother’s Garden: Womanist Prose (Harcourt Brace, 1983) Walker characterized womanism"
+  sources: [{"title": "St Andrews Encyclopaedia of Theology: Womanist Theology", "url": "https://www.saet.ac.uk/Christianity/WomanistTheology", "quote": "Alice Walker was first to coin the term Womanist"}, {"title": "Howard University Law Library: The Womanist Movement", "url": "https://library.law.howard.edu/civilrightshistory/womanist", "quote": "The term ‘womanist’ was coined by author and activist, Alice Walker"}]
   status: "drafted"
   note: "1983 dates the developed definition, not the earliest use of womanist."
 - id: fx-wrd-0044
   cat: "wrd"
-  en: "English “mbaqanga”, a South African music name, comes from Zulu for steamed maize bread."
-  ru: "Английское название южноафриканской музыки «mbaqanga» восходит к зулусскому названию кукурузного хлеба, приготовленного на пару."
+  en: "The South African music name “mbaqanga” comes from a Zulu word for cornmeal porridge."
+  ru: "Название южноафриканской музыки «mbaqanga» происходит от зулусского слова, обозначающего кукурузную кашу."
   year: 1964
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: mbaqanga"
-      url: "https://www.merriam-webster.com/dictionary/mbaqanga"
-      quote: "Zulu umbaqanga, literally, steamed cornmeal bread\n\nFirst Known Use\n\n1964"
-    - title: "Collins English Dictionary: mbaqanga"
-      url: "https://www.collinsdictionary.com/dictionary/english/mbaqanga"
-      quote: "Zulu umbaqanga, lit., steamed bread made from cornmeal"
+  sources: [{"title": "American Heritage Dictionary: mbaqanga", "url": "https://ahdictionary.com/word/search.html?q=mbaqanga", "quote": "Zulu -mbaqanga in umbaqanga , thick porridge made of cornmeal or millet"}, {"title": "Ulwazi Programme: Mbaqanga", "url": "https://www.ulwaziprogramme.org/mbaqanga-your-daily-bread/", "quote": "In Zulu, the word mbaqanga refers to cornmeal porridge"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0045
   cat: "wrd"
-  en: "English “ngwee”, Zambia's currency subdivision, comes from Bemba for “bright”."
-  ru: "Английское «ngwee», название разменной денежной единицы Замбии, происходит от слова «яркий» языка бемба."
+  en: "“Ngwee” names a subdivision of Zambia’s kwacha."
+  ru: "«Нгве» — название разменной единицы замбийской квачи."
   year: 1966
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: ngwee"
-      url: "https://www.merriam-webster.com/dictionary/ngwee"
-      quote: "Bemba, literally, bright\n\nFirst Known Use\n\n1966"
-    - title: "Collins English Dictionary: ngwee"
-      url: "https://www.collinsdictionary.com/dictionary/english/ngwee"
-      quote: "Bemba < adj., lit., bright"
+  sources: [{"title": "Dictionary.com: ngwee", "url": "https://www.dictionary.com/browse/ngwee", "quote": "a bronze coin and monetary unit of Zambia, one 100th of a kwacha."}, {"title": "Parliament of Zambia: Bank of Zambia Act 2022", "url": "https://www.parliament.gov.zm/sites/default/files/documents/acts/Act%20No.%205%20of%202022%2C%20The%20Bank%20of%20Zambia.pdf", "quote": "One ngwee is the one-hundredth part of the Kwacha."}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0046
   cat: "wrd"
   en: "English “pula”, Botswana's currency name, comes from a Tswana word meaning “rain”."
@@ -720,32 +446,20 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: pula"
-      url: "https://www.merriam-webster.com/dictionary/pula"
-      quote: "Tswana, literally, rain (used as a greeting)\n\nFirst Known Use\n\n1976"
-    - title: "Collins English Dictionary: pula"
-      url: "https://www.collinsdictionary.com/dictionary/english/pula"
-      quote: "lit., rain, in a Bantu language of Botswana"
+  sources: [{"title": "Botswana Tourism Organisation: Money", "url": "https://botswanatourism.co.bw/travel-info/money", "quote": "The Botswana currency is the Pula (meaning ‘rain’ in Setswana)."}, {"title": "Bank of Botswana: History of Botswana Currency", "url": "https://www.bankofbotswana.bw/content/history-botswana-currency", "quote": "the choice of Pula (meaning ‘rain’ or ‘blessings’) as the basic unit"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0047
   cat: "wrd"
-  en: "English borrowed “loti”, the name of Lesotho's currency, from Sesotho."
-  ru: "Название валюты Лесото «loti» пришло в английский из сесото."
+  en: "“Loti” is the name of Lesotho’s currency."
+  ru: "«Лоти» — название денежной единицы Лесото."
   year: 1979
   cards: ["moshoeshoe"]
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: loti"
-      url: "https://www.merriam-webster.com/dictionary/loti"
-      quote: "Sesotho, literally, mountain, probably from the Maloti Mountains, Lesotho\n\nFirst Known Use\n\n1979"
-    - title: "Collins English Dictionary: loti"
-      url: "https://www.collinsdictionary.com/dictionary/english/loti"
-      quote: "Origin: Sotho"
+  sources: [{"title": "Dictionary.com: loti", "url": "https://www.dictionary.com/browse/loti", "quote": "a cupronickel coin, paper money, and monetary unit of Lesotho, equal to 100 lisente."}, {"title": "Central Bank of Lesotho: About the Kingdom", "url": "https://centralbank.org.ls/about-the-kingdom-of-lesotho/", "quote": "The official currency in Lesotho is the Loti"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0048
   cat: "wrd"
   en: "The music name “zouk” entered English from Lesser Antillean French Creole, where it referred to a dance party."
@@ -754,15 +468,9 @@
   cards: []
   gender: "none"
   region: "caribbean"
-  sources:
-    - title: "Merriam-Webster: zouk"
-      url: "https://www.merriam-webster.com/dictionary/zouk"
-      quote: "Lesser Antillean French Creole, literally, dance party, dance"
-    - title: "Collins English Dictionary: zouk"
-      url: "https://www.collinsdictionary.com/dictionary/english/zouk"
-      quote: "[1985–90; appar. ‹ Lesser Antillean Creole French; said to mean lit. “place to dance, party”]"
+  sources: [{"title": "Dictionary.com: zouk", "url": "https://www.dictionary.com/browse/zouk", "quote": "1985–90; apparently < Lesser Antillean Creole French; said to mean literally “place to dance, party”"}, {"title": "American Heritage Dictionary: zouk", "url": "https://ahdictionary.com/word/search.html?q=zouk", "quote": "[Antillean French Creole, party; probably akin to JUKE 1 .]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0049
   cat: "wrd"
   en: "The Caribbean music name “soca” combines parts of “soul” and “calypso”."
@@ -771,15 +479,9 @@
   cards: []
   gender: "none"
   region: "caribbean"
-  sources:
-    - title: "Merriam-Webster: soca"
-      url: "https://www.merriam-webster.com/dictionary/soca"
-      quote: "so(ul) entry 1 + ca(lypso) entry 2\n\nFirst Known Use\n\n1973"
-    - title: "Collins English Dictionary: soca"
-      url: "https://www.collinsdictionary.com/dictionary/english/soca"
-      quote: "C20: a blend of soul and calypso"
+  sources: [{"title": "Dictionary.com: soca", "url": "https://www.dictionary.com/browse/soca", "quote": "Etymology Origin of soca 1975–80; so(ul) + ca(lypso)"}, {"title": "Oxford Learner’s Dictionaries: soca", "url": "https://www.oxfordlearnersdictionaries.com/definition/english/soca", "quote": "Word Origin 1970s: blend of soul and calypso ."}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology. Collins's American entry instead gives 1975–80."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing. Collins's American entry instead gives 1975–80."
 - id: fx-wrd-0050
   cat: "wrd"
   en: "English “aye-aye”, the lemur's name, came through French from Malagasy aiay."
@@ -788,15 +490,9 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: aye-aye"
-      url: "https://www.merriam-webster.com/dictionary/aye-aye"
-      quote: "French, from Malagasy aiay\n\nFirst Known Use\n\n1781"
-    - title: "Collins English Dictionary: aye-aye"
-      url: "https://www.collinsdictionary.com/dictionary/english/aye-aye"
-      quote: "C18: from French, from Malagasy aiay, probably of imitative origin"
+  sources: [{"title": "Dictionary.com: aye-aye", "url": "https://www.dictionary.com/browse/aye-aye", "quote": "Etymology Origin of aye-aye First recorded in 1775–85; from French, from Malagasy aiay, probably imitative of its cry"}, {"title": "American Heritage Dictionary: aye-aye", "url": "https://ahdictionary.com/word/search.html?q=aye-aye", "quote": "and rodentlike teeth. [French, from Malagasy aiay .]"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0051
   cat: "wrd"
   en: "English borrowed “sifaka”, a name for Malagasy lemurs, from Malagasy."
@@ -805,15 +501,9 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: sifaka"
-      url: "https://www.merriam-webster.com/dictionary/sifaka"
-      quote: "Malagasy\n\nFirst Known Use\n\n1845"
-    - title: "Collins English Dictionary: sifaka"
-      url: "https://www.collinsdictionary.com/dictionary/english/sifaka"
-      quote: "from Malagasy"
+  sources: [{"title": "American Heritage Dictionary: sifaka", "url": "https://ahdictionary.com/word/search.html?q=sifaka", "quote": "used for leaping long distances from tree to tree. [Malagasy.]"}, {"title": "Duke Lemur Center: Coquerel’s Sifaka", "url": "https://lemur.duke.edu/discover/meet-the-lemurs/coquerels-sifaka/", "quote": "The Malagasy name ‘sifaka’ comes from the distinct call this animal makes as it travels through the trees"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0052
   cat: "wrd"
   en: "English “mangabey”, a monkey's name, ultimately comes from a place name in Madagascar."
@@ -822,32 +512,20 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: mangabey"
-      url: "https://www.merriam-webster.com/dictionary/mangabey"
-      quote: "French, from Mangabe, town in eastern Madagascar\n\nFirst Known Use\n\n1774"
-    - title: "Collins English Dictionary: mangabey"
-      url: "https://www.collinsdictionary.com/dictionary/english/mangabey"
-      quote: "[1765–75; after Mangabey, a region in Madagascar]"
+  sources: [{"title": "Dictionary.com: mangabey", "url": "https://www.dictionary.com/browse/mangabey", "quote": "First recorded in 1765–75; after Mangabey, a region in Madagascar"}, {"title": "American Heritage Dictionary: mangabey", "url": "https://ahdictionary.com/word/search.html?q=mangabey", "quote": "[After Mangabey , a place in Madagascar"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0053
   cat: "wrd"
-  en: "English “orisha”, a deity's name, was borrowed from Yoruba."
-  ru: "Английское «orisha», обозначающее божество, заимствовано из языка йоруба."
+  en: "“Orisha” denotes a spirit or deity in Yoruba religion."
+  ru: "«Ориша» обозначает духа или божество в религии йоруба."
   year: 1854
   cards: ["ifa-divination", "regla-de-ocha"]
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: orisha"
-      url: "https://www.merriam-webster.com/dictionary/orisha"
-      quote: "Yoruba òrìṣà\n\nFirst Known Use\n\n1854"
-    - title: "Collins English Dictionary: orisha"
-      url: "https://www.collinsdictionary.com/dictionary/english/orisha"
-      quote: "from Yoruba orisha and the Portuguese spelling orixá"
+  sources: [{"url": "https://www.historiskmuseum.no/english/exhibitions/exhibitions-archive/santeria/about-santeria/", "quote": "the divinities in the Yoruba religion are called orisha or orisa", "title": "University of Oslo Historical Museum: About Santería"}, {"title": "American Heritage Dictionary: orisha", "url": "https://ahdictionary.com/word/search.html?q=orisha", "quote": "Any of various spirits in West African and especially Yoruban religious belief that can interact directly with human beings"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; Collins independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0054
   cat: "wrd"
   en: "English “kalimba”, a musical instrument's name, comes from Bantu languages."
@@ -856,100 +534,20 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: kalimba"
-      url: "https://www.merriam-webster.com/dictionary/kalimba"
-      quote: "of Bantu origin; akin to Bemba akalimba zanza, Kimbundu marimba xylophone"
-    - title: "Collins English Dictionary: kalimba"
-      url: "https://www.collinsdictionary.com/dictionary/english/kalimba"
-      quote: "1950–55; the instrument's name in a number of Bantu languages of East Africa"
+  sources: [{"title": "Dictionary.com: kalimba", "url": "https://www.dictionary.com/browse/kalimba", "quote": "1950–55; the instrument's name in a number of Bantu languages of East Africa, e.g., Bisa, Lala (Zambia), Tumbuka, Nyanja (Malawi); cf. marimba"}, {"title": "American Heritage Dictionary: kalimba", "url": "https://ahdictionary.com/word/search.html?q=kalimba", "quote": "[Of Bantu origin; akin to Bemba ka-limba , diminutive of ci-limba , any musical instrument"}]
   status: "drafted"
   note: "Year is the upper bound of Collins's English attestation interval 1950–55, not a precise first-use date."
 - id: fx-wrd-0055
   cat: "wrd"
-  en: "English “sassaby”, an antelope's name, comes from a Bantu language, identified by Merriam-Webster as Tswana."
-  ru: "Английское название антилопы «sassaby» пришло из языка банту, который Merriam-Webster определяет как тсвана."
+  en: "English “sassaby”, an antelope’s name, comes from Tswana."
+  ru: "Английское название антилопы «sassaby» происходит из языка тсвана."
   year: 1820
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: sassaby"
-      url: "https://www.merriam-webster.com/dictionary/sassaby"
-      quote: "Tswana tshêsêbê"
-    - title: "Collins English Dictionary: sassaby"
-      url: "https://www.collinsdictionary.com/dictionary/english/sassaby"
-      quote: "[1810–20; said to be ‹ Tswana]"
+  sources: [{"title": "Dictionary.com: sassaby", "url": "https://www.dictionary.com/browse/sassaby", "quote": "Etymology Origin of sassaby 1810–20; said to be < Tswana"}, {"title": "American Heritage Dictionary: tsessebe (sassaby)", "url": "https://ahdictionary.com/word/search.html?q=tsessebe", "quote": "lunatus of southern Africa. Also called sassaby . [Tswana tshêsêbê .]"}]
   status: "drafted"
   note: "Year is the upper bound of Collins's attestation interval 1810–20, not a precise first-use date."
-- id: fx-wrd-0056
-  cat: "wrd"
-  en: "English “impi”, an armed force or regiment, was borrowed from Zulu."
-  ru: "Английское «impi», обозначающее войско или полк, заимствовано из языка зулу."
-  year: 1880
-  cards: []
-  gender: "none"
-  region: "africa"
-  sources:
-    - title: "Merriam-Webster: impi"
-      url: "https://www.merriam-webster.com/dictionary/impi"
-      quote: "Zulu"
-    - title: "Collins English Dictionary: impi"
-      url: "https://www.collinsdictionary.com/dictionary/english/impi"
-      quote: "[1875–80; ‹ Zulu: impi, armed force, battle]"
-  status: "drafted"
-  note: "Year is the upper bound of Collins's attestation interval 1875–80, not a precise first-use date."
-- id: fx-wrd-0057
-  cat: "wrd"
-  en: "English “obeche”, a tropical timber name, preserves a Nigerian word."
-  ru: "Английское название древесины «obeche» сохраняет слово одного из языков Нигерии."
-  year: 1910
-  cards: []
-  gender: "none"
-  region: "africa"
-  sources:
-    - title: "Merriam-Webster: obeche"
-      url: "https://www.merriam-webster.com/dictionary/obeche"
-      quote: "native name in Nigeria"
-    - title: "Collins English Dictionary: obeche"
-      url: "https://www.collinsdictionary.com/dictionary/english/obeche"
-      quote: "[1905–10; ‹ Edo oβεxε]"
-  status: "drafted"
-  note: "Year is the upper bound of Collins's attestation interval 1905–10, not a precise first-use date."
-- id: fx-wrd-0058
-  cat: "wrd"
-  en: "English “okoume”, a timber name, came through French from an African language."
-  ru: "Английское название древесины «okoume» пришло через французский из африканского языка."
-  year: 1925
-  cards: []
-  gender: "none"
-  region: "africa"
-  sources:
-    - title: "Merriam-Webster: okoume"
-      url: "https://www.merriam-webster.com/dictionary/okoume"
-      quote: "French okoumé, from native name in Africa"
-    - title: "Collins English Dictionary: okoume"
-      url: "https://www.collinsdictionary.com/dictionary/english/okoume"
-      quote: "[1920–25; ‹ F okoumé, prob. ‹ Mpongwe (Bantu language of Gabon)]"
-  status: "drafted"
-  note: "Year is the upper bound of Collins's attestation interval 1920–25, not a precise first-use date."
-- id: fx-wrd-0059
-  cat: "wrd"
-  en: "English “sapele”, a tropical timber name, comes from a West African name."
-  ru: "Английское название древесины «sapele» восходит к западноафриканскому названию."
-  year: 1905
-  cards: []
-  gender: "none"
-  region: "africa"
-  sources:
-    - title: "Merriam-Webster: sapele"
-      url: "https://www.merriam-webster.com/dictionary/sapele"
-      quote: "sapele, sapeli from native name in West Africa"
-    - title: "Collins English Dictionary: sapele"
-      url: "https://www.collinsdictionary.com/dictionary/english/sapele"
-      quote: "C20: West African name"
-  status: "drafted"
-  note: "Year is the upper bound of Collins's attestation interval 1900–05; its American entry traces the name to the Nigerian port Sapele."
 - id: fx-wrd-0060
   cat: "wrd"
   en: "English “sitatunga”, an antelope's name, comes from southern African Bantu languages."
@@ -958,30 +556,18 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: sitatunga"
-      url: "https://www.merriam-webster.com/dictionary/sitatunga"
-      quote: "Subiya & Tonga"
-    - title: "Collins English Dictionary: sitatunga"
-      url: "https://www.collinsdictionary.com/dictionary/english/sitatunga"
-      quote: "[1880–85; said to be ‹ Lozi, Subiya, or Tonga (Bantu languages of W Zambia)]"
+  sources: [{"title": "Dictionary.com: sitatunga", "url": "https://www.dictionary.com/browse/sitatunga", "quote": "Etymology Origin of sitatunga 1880–85; said to be < Lozi, Subiya, or Tonga (Bantu languages of W Zambia)"}, {"title": "American Heritage Dictionary: sitatunga", "url": "https://ahdictionary.com/word/search.html?q=sitatunga", "quote": "and spirally twisted horns in the male. [Of Bantu origin.]"}]
   status: "drafted"
   note: "Year is the upper bound of Collins's attestation interval 1880–85, not a precise first-use date."
 - id: fx-wrd-0061
   cat: "wrd"
-  en: "English “gnu” preserves a southern African Khoekhoe name for the wildebeest."
-  ru: "Английское «gnu» сохраняет южноафриканское название антилопы гну из языка койкоин."
+  en: "English “gnu”, a name for the wildebeest, has southern African roots."
+  ru: "Английское название антилопы «gnu» имеет южноафриканские корни."
   year: 1777
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: gnu"
-      url: "https://www.merriam-webster.com/dictionary/gnu"
-      quote: "Khoikhoi t'gnu\n\nFirst Known Use\n\n1777"
-    - title: "Collins English Dictionary: gnu"
-      url: "https://www.collinsdictionary.com/dictionary/english/gnu"
-      quote: "1770–80; ‹ Khoikhoi, first recorded as t'gnu"
+  sources: [{"title": "Dictionary.com: gnu", "url": "https://www.dictionary.com/browse/gnu", "quote": "1770–80; < Khoikhoi, first recorded as t’gnu; probably to be identified with ǂnû black, as applying originally to the black wildebeest"}, {"title": "American Heritage Dictionary: gnu", "url": "https://ahdictionary.com/word/search.html?q=gnu", "quote": "[Probably from Dutch gnoe , from Xhosa i-ngu , white-tailed gnu, from San !nu , black wildebeest.]"}]
   status: "drafted"
   note: "Year follows Merriam-Webster. The cited Collins American/Random House entry agrees on Khoekhoe; its British entry instead proposes Xhosa."
 - id: fx-wrd-0062
@@ -992,13 +578,7 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: yam"
-      url: "https://www.merriam-webster.com/dictionary/yam"
-      quote: "earlier iname, from Portuguese inhame & Spanish ñame, of African origin; akin to Fulani nyami to eat\n\nFirst Known Use\n\n1657"
-    - title: "Collins English Dictionary: yam"
-      url: "https://www.collinsdictionary.com/dictionary/english/yam"
-      quote: "C17: from Portuguese inhame, ultimately of West African origin; compare Senegal nyami to eat"
+  sources: [{"title": "Dictionary.com: yam", "url": "https://www.dictionary.com/browse/yam", "quote": "from sources in one or more West African languages"}, {"title": "American Heritage Dictionary: yam", "url": "https://ahdictionary.com/word/search.html?q=yam", "quote": "[Portuguese inhame or obsolete Spanish igname, iñame , both from Portuguese and English Creole nyam , to eat, of West African origin"}]
   status: "drafted"
   note: "Year follows Merriam-Webster's yam entry. Other dictionaries date earlier spellings to the 1580s; the fact does not claim a precise borrowing date."
 - id: fx-wrd-0063
@@ -1009,13 +589,7 @@
   cards: ["haitian-vodou"]
   gender: "none"
   region: "caribbean"
-  sources:
-    - title: "Merriam-Webster: zombie"
-      url: "https://www.merriam-webster.com/dictionary/zombie"
-      quote: "Louisiana Creole or Haitian Creole zonbi, of Bantu origin; akin to Kimbundu nzúmbe ghost\n\nFirst Known Use\n\n1928"
-    - title: "Collins English Dictionary: zombie"
-      url: "https://www.collinsdictionary.com/dictionary/english/zombie"
-      quote: "[1810–20; appar. ‹ Kongo or Kimbundu nzambi god]"
+  sources: [{"title": "Dictionary.com: zombie", "url": "https://www.dictionary.com/browse/zombie", "quote": "First recorded in 1810–20; from Louisiana French, Haitian Creole zonbi, from a Bantu language, e.g., Kongo nzambi “god,” zumbi “fetish,” or Kimbundu nzambi “god”"}, {"title": "American Heritage Dictionary: zombie", "url": "https://ahdictionary.com/word/search.html?q=zombie", "quote": "[Louisiana French Creole and Haitian Creole zonbi and of Bantu origin; akin to Kimbundu nzúmbi , ghost, soul, spirit.]"}]
   status: "drafted"
   note: "1928 is Merriam-Webster's date for its modern sense; Collins and Etymonline record older forms and senses. This is not the first occurrence of every spelling."
 - id: fx-wrd-0064
@@ -1026,15 +600,9 @@
   cards: []
   gender: "none"
   region: "latam"
-  sources:
-    - title: "Merriam-Webster: capoeira"
-      url: "https://www.merriam-webster.com/dictionary/capoeira"
-      quote: "Brazilian Portuguese, kind of martial art"
-    - title: "Collins English Dictionary: capoeira"
-      url: "https://www.collinsdictionary.com/dictionary/english/capoeira"
-      quote: "C20: from Portuguese"
+  sources: [{"title": "Dictionary.com: capoeira", "url": "https://www.dictionary.com/browse/capoeira", "quote": "from Brazilian Portuguese; of uncertain origin; perhaps a transferred use of capoeira “cultivated area that has reverted to forest or scrub”"}, {"title": "American Heritage Dictionary: capoeira", "url": "https://ahdictionary.com/word/search.html?q=capoeira", "quote": "[Brazilian Portuguese, perhaps from capoeira , cultivated field that has reverted to forest or scrubland"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; the second dictionary independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0065
   cat: "wrd"
   en: "English borrowed “griot”, the West African storyteller's title, from French."
@@ -1043,13 +611,7 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: griot"
-      url: "https://www.merriam-webster.com/dictionary/griot"
-      quote: "French\n\nFirst Known Use\n\n1820"
-    - title: "Collins English Dictionary: griot"
-      url: "https://www.collinsdictionary.com/dictionary/english/griot"
-      quote: "C20: from French guirot, perhaps from Portuguese criado domestic servant"
+  sources: [{"title": "Dictionary.com: griot", "url": "https://www.dictionary.com/browse/griot", "quote": "1955–60; < French, earlier guiriot, perhaps ultimately < Portuguese criado domestic servant, altered in W African coastal creoles"}, {"title": "American Heritage Dictionary: griot", "url": "https://ahdictionary.com/word/search.html?q=griot", "quote": "[French, alteration of guiriot , perhaps ultimately from Portuguese criado , domestic servant"}]
   status: "drafted"
   note: "Year follows Merriam-Webster (1820); Collins gives a later dating. The agreed claim is borrowing from French, not a secure deeper Portuguese origin."
 - id: fx-wrd-0066
@@ -1060,46 +622,17 @@
   cards: []
   gender: "none"
   region: "africa"
-  sources:
-    - title: "Merriam-Webster: kwacha"
-      url: "https://www.merriam-webster.com/dictionary/kwacha"
-      quote: "Bemba or Chichewa (Bantu language of Malawi), literally, it dawns\n\nFirst Known Use\n\n1966"
-    - title: "American Heritage Dictionary, fifth edition: kwacha"
-      url: "https://ahdictionary.com/word/search.html?q=kwacha"
-      quote: "Bemba and Chewa, dawn"
+  sources: [{"title": "University of Strathclyde: doctoral research on water relations in Malawi", "url": "https://stax.strath.ac.uk/downloads/tq57nr41t?locale=en", "quote": "I learn that the word Kwacha translates as dawn"}, {"title": "American Heritage Dictionary, fifth edition: kwacha", "url": "https://ahdictionary.com/word/search.html?q=kwacha", "quote": "Bemba and Chewa, dawn"}]
   status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; the second dictionary independently supports the etymology."
-- id: fx-wrd-0067
-  cat: "wrd"
-  en: "English “dalasi”, the Gambian currency's name, was borrowed from a Gambian language."
-  ru: "Английское название гамбийской валюты «dalasi» заимствовано из одного из языков Гамбии."
-  year: 1966
-  cards: []
-  gender: "none"
-  region: "africa"
-  sources:
-    - title: "Merriam-Webster: dalasi"
-      url: "https://www.merriam-webster.com/dictionary/dalasi"
-      quote: "Wolof, probably ultimately from West African French dala 5-franc coin, from English dollar\n\nFirst Known Use\n\n1966"
-    - title: "Collins English Dictionary: dalasi"
-      url: "https://www.collinsdictionary.com/dictionary/english/dalasi"
-      quote: "from a Gambian native name"
-  status: "drafted"
-  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing; the second dictionary independently supports the etymology."
+  note: "Year is Merriam-Webster's earliest known English use in the relevant sense, not the date of oral borrowing."
 - id: fx-wrd-0068
   cat: "wrd"
-  en: "English “Santeria”, the Afro-Cuban religion's name, comes from Spanish for “holiness”."
-  ru: "Английское название афрокубинской религии «Santeria» происходит от испанского слова со значением «святость»."
+  en: "English “Santeria”, the Afro-Cuban religion’s name, comes from Spanish."
+  ru: "Английское «Santeria», название афрокубинской религии, происходит из испанского языка."
   year: 1950
   cards: ["regla-de-ocha"]
   gender: "none"
   region: "caribbean"
-  sources:
-    - title: "Douglas Harper, Online Etymology Dictionary: santeria"
-      url: "https://www.etymonline.com/word/santeria"
-      quote: "Afro-Cuban religion, 1950, from Spanish, literally \"holiness, sanctity.\""
-    - title: "Collins English Dictionary: santeria"
-      url: "https://www.collinsdictionary.com/dictionary/english/santeria"
-      quote: "American Spanish, literally: holiness"
+  sources: [{"title": "Dictionary.com: santeria", "url": "https://www.dictionary.com/browse/santeria", "quote": "First recorded in 1980–85; from Latin American Spanish"}, {"title": "American Heritage Dictionary: santeria", "url": "https://ahdictionary.com/word/search.html?q=santeria", "quote": "[From American Spanish santería , worship of saints, from Spanish santo , saint"}]
   status: "drafted"
-  note: "Year follows Etymonline's English attestation (1950); Collins gives a later interval. Both support the Spanish etymology."
+  note: "Year follows Etymonline's English attestation (1950); Collins gives a later interval."
