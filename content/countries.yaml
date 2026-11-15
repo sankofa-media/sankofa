@@ -1,0 +1,121 @@
+# Present-day countries for the atlas's "Countries" mode (web/scripts/build-countries.ts).
+#
+# countries: every country that holds a card place, keyed by `id` (the link key,
+#   country=<id>) and `iso` (ISO 3166-1 numeric, the Natural Earth / world-atlas
+#   feature id). `name` in English and Russian is required; `about` is the short
+#   header, and every fact in it is sourced in content/ledger/countries.yaml.
+#   A country without a sourced header shows only its name and card count.
+# areas: places inside a box go to a country regardless of the map's de facto
+#   line (internationally recognised borders, as in UN General Assembly resolutions).
+# overrides: one card place, by its English name, to a country id or `none`.
+#   For border towns the 1:50m outlines put on the wrong side, and for places
+#   that name a region rather than a point.
+
+areas:
+  - country: ukraine
+    why: Crimea (UN General Assembly resolution 68/262); Natural Earth draws it with Russia
+    box: [32.4, 44.3, 36.7, 46.3]   # [west, south, east, north]
+overrides:
+  - {card: mapungubwe-rhino, place: "Mapungubwe Hill, Limpopo, South Africa", country: south-africa}
+  - {card: parsley-massacre, place: "Ouanaminthe, Haiti", country: haiti}
+  - {card: faras-cathedral, place: "Faras (Pachoras), Sudan–Egypt border", country: sudan}
+  - {card: gannibal, place: "Logone-Birni (proposed birthplace)", country: cameroon}
+  - {card: siddi-of-karnataka, place: "Gaur, Bengal", country: india}
+  - {card: work-songs, place: "West and Central Africa", country: none}
+countries:
+  - {id: algeria, iso: "012", name: {en: "Algeria", ru: "Алжир"}}
+  - {id: angola, iso: "024", name: {en: "Angola", ru: "Ангола"}}
+  - {id: antigua-and-barbuda, iso: "028", name: {en: "Antigua and Barbuda", ru: "Антигуа и Барбуда"}}
+  - {id: argentina, iso: "032", name: {en: "Argentina", ru: "Аргентина"}}
+  - {id: aruba, iso: "533", name: {en: "Aruba", ru: "Аруба"}}
+  - {id: australia, iso: "036", name: {en: "Australia", ru: "Австралия"}}
+  - {id: austria, iso: "040", name: {en: "Austria", ru: "Австрия"}}
+  - {id: bahamas, iso: "044", name: {en: "Bahamas", ru: "Багамские Острова"}}
+  - {id: barbados, iso: "052", name: {en: "Barbados", ru: "Барбадос"}}
+  - {id: belgium, iso: "056", name: {en: "Belgium", ru: "Бельгия"}}
+  - {id: belize, iso: "084", name: {en: "Belize", ru: "Белиз"}}
+  - {id: benin, iso: "204", name: {en: "Benin", ru: "Бенин"}}
+  - {id: bermuda, iso: "060", name: {en: "Bermuda", ru: "Бермудские Острова"}}
+  - {id: botswana, iso: "072", name: {en: "Botswana", ru: "Ботсвана"}}
+  - {id: brazil, iso: "076", name: {en: "Brazil", ru: "Бразилия"}}
+  - {id: burkina-faso, iso: "854", name: {en: "Burkina Faso", ru: "Буркина-Фасо"}}
+  - {id: cabo-verde, iso: "132", name: {en: "Cabo Verde", ru: "Кабо-Верде"}}
+  - {id: cameroon, iso: "120", name: {en: "Cameroon", ru: "Камерун"}}
+  - {id: canada, iso: "124", name: {en: "Canada", ru: "Канада"}}
+  - {id: chad, iso: "148", name: {en: "Chad", ru: "Чад"}}
+  - {id: chile, iso: "152", name: {en: "Chile", ru: "Чили"}}
+  - {id: colombia, iso: "170", name: {en: "Colombia", ru: "Колумбия"}}
+  - {id: congo, iso: "178", name: {en: "Republic of the Congo", ru: "Республика Конго"}}
+  - {id: costa-rica, iso: "188", name: {en: "Costa Rica", ru: "Коста-Рика"}}
+  - {id: cote-d-ivoire, iso: "384", name: {en: "Côte d’Ivoire", ru: "Кот-д’Ивуар"}}
+  - {id: cuba, iso: "192", name: {en: "Cuba", ru: "Куба"}}
+  - {id: curacao, iso: "531", name: {en: "Curaçao", ru: "Кюрасао"}}
+  - {id: denmark, iso: "208", name: {en: "Denmark", ru: "Дания"}}
+  - {id: dominican-republic, iso: "214", name: {en: "Dominican Republic", ru: "Доминиканская Республика"}}
+  - {id: dr-congo, iso: "180", name: {en: "DR Congo", ru: "ДР Конго"}}
+  - {id: ecuador, iso: "218", name: {en: "Ecuador", ru: "Эквадор"}}
+  - {id: egypt, iso: "818", name: {en: "Egypt", ru: "Египет"}}
+  - {id: equatorial-guinea, iso: "226", name: {en: "Equatorial Guinea", ru: "Экваториальная Гвинея"}}
+  - {id: ethiopia, iso: "231", name: {en: "Ethiopia", ru: "Эфиопия"}}
+  - {id: france, iso: "250", name: {en: "France", ru: "Франция"}}
+  - {id: gambia, iso: "270", name: {en: "The Gambia", ru: "Гамбия"}}
+  - {id: germany, iso: "276", name: {en: "Germany", ru: "Германия"}}
+  - {id: ghana, iso: "288", name: {en: "Ghana", ru: "Гана"}}
+  - {id: guinea, iso: "324", name: {en: "Guinea", ru: "Гвинея"}}
+  - {id: guinea-bissau, iso: "624", name: {en: "Guinea-Bissau", ru: "Гвинея-Бисау"}}
+  - {id: guyana, iso: "328", name: {en: "Guyana", ru: "Гайана"}}
+  - {id: haiti, iso: "332", name: {en: "Haiti", ru: "Гаити"}}
+  - {id: india, iso: "356", name: {en: "India", ru: "Индия"}}
+  - {id: iraq, iso: "368", name: {en: "Iraq", ru: "Ирак"}}
+  - {id: italy, iso: "380", name: {en: "Italy", ru: "Италия"}}
+  - {id: jamaica, iso: "388", name: {en: "Jamaica", ru: "Ямайка"}}
+  - {id: japan, iso: "392", name: {en: "Japan", ru: "Япония"}}
+  - {id: kenya, iso: "404", name: {en: "Kenya", ru: "Кения"}}
+  - {id: lesotho, iso: "426", name: {en: "Lesotho", ru: "Лесото"}}
+  - {id: liberia, iso: "430", name: {en: "Liberia", ru: "Либерия"}}
+  - {id: maldives, iso: "462", name: {en: "Maldives", ru: "Мальдивы"}}
+  - {id: mali, iso: "466", name: {en: "Mali", ru: "Мали"}}
+  - {id: mauritania, iso: "478", name: {en: "Mauritania", ru: "Мавритания"}}
+  - {id: mexico, iso: "484", name: {en: "Mexico", ru: "Мексика"}}
+  - {id: morocco, iso: "504", name: {en: "Morocco", ru: "Марокко"}}
+  - {id: namibia, iso: "516", name: {en: "Namibia", ru: "Намибия"}}
+  - {id: netherlands, iso: "528", name: {en: "Netherlands", ru: "Нидерланды"}}
+  - {id: nicaragua, iso: "558", name: {en: "Nicaragua", ru: "Никарагуа"}}
+  - {id: niger, iso: "562", name: {en: "Niger", ru: "Нигер"}}
+  - {id: nigeria, iso: "566", name: {en: "Nigeria", ru: "Нигерия"}}
+  - {id: norfolk-island, iso: "574", name: {en: "Norfolk Island", ru: "Остров Норфолк"}}
+  - {id: palestine, iso: "275", name: {en: "Palestine", ru: "Палестина"}}
+  - {id: panama, iso: "591", name: {en: "Panama", ru: "Панама"}}
+  - {id: peru, iso: "604", name: {en: "Peru", ru: "Перу"}}
+  - {id: poland, iso: "616", name: {en: "Poland", ru: "Польша"}}
+  - {id: portugal, iso: "620", name: {en: "Portugal", ru: "Португалия"}}
+  - {id: puerto-rico, iso: "630", name: {en: "Puerto Rico", ru: "Пуэрто-Рико"}}
+  - {id: russia, iso: "643", name: {en: "Russia", ru: "Россия"}}
+  - {id: rwanda, iso: "646", name: {en: "Rwanda", ru: "Руанда"}}
+  - {id: saint-barthelemy, iso: "652", name: {en: "Saint Barthélemy", ru: "Сен-Бартелеми"}}
+  - {id: saint-vincent-and-the-grenadines, iso: "670", name: {en: "Saint Vincent and the Grenadines", ru: "Сент-Винсент и Гренадины"}}
+  - {id: sao-tome-and-principe, iso: "678", name: {en: "São Tomé and Príncipe", ru: "Сан-Томе и Принсипи"}}
+  - {id: saudi-arabia, iso: "682", name: {en: "Saudi Arabia", ru: "Саудовская Аравия"}}
+  - {id: senegal, iso: "686", name: {en: "Senegal", ru: "Сенегал"}}
+  - {id: seychelles, iso: "690", name: {en: "Seychelles", ru: "Сейшельские Острова"}}
+  - {id: sierra-leone, iso: "694", name: {en: "Sierra Leone", ru: "Сьерра-Леоне"}}
+  - {id: somalia, iso: "706", name: {en: "Somalia", ru: "Сомали"}}
+  - {id: south-africa, iso: "710", name: {en: "South Africa", ru: "ЮАР"}}
+  - {id: spain, iso: "724", name: {en: "Spain", ru: "Испания"}}
+  - {id: sudan, iso: "729", name: {en: "Sudan", ru: "Судан"}}
+  - {id: suriname, iso: "740", name: {en: "Suriname", ru: "Суринам"}}
+  - {id: sweden, iso: "752", name: {en: "Sweden", ru: "Швеция"}}
+  - {id: tanzania, iso: "834", name: {en: "Tanzania", ru: "Танзания"}}
+  - {id: trinidad-and-tobago, iso: "780", name: {en: "Trinidad and Tobago", ru: "Тринидад и Тобаго"}}
+  - {id: tunisia, iso: "788", name: {en: "Tunisia", ru: "Тунис"}}
+  - {id: turkey, iso: "792", name: {en: "Türkiye", ru: "Турция"}}
+  - {id: uganda, iso: "800", name: {en: "Uganda", ru: "Уганда"}}
+  - {id: ukraine, iso: "804", name: {en: "Ukraine", ru: "Украина"}}
+  - {id: united-kingdom, iso: "826", name: {en: "United Kingdom", ru: "Великобритания"}}
+  - {id: united-states, iso: "840", name: {en: "United States", ru: "США"}}
+  - {id: uruguay, iso: "858", name: {en: "Uruguay", ru: "Уругвай"}}
+  - {id: us-virgin-islands, iso: "850", name: {en: "US Virgin Islands", ru: "Виргинские Острова (США)"}}
+  - {id: uzbekistan, iso: "860", name: {en: "Uzbekistan", ru: "Узбекистан"}}
+  - {id: yemen, iso: "887", name: {en: "Yemen", ru: "Йемен"}}
+  - {id: zambia, iso: "894", name: {en: "Zambia", ru: "Замбия"}}
+  - {id: zimbabwe, iso: "716", name: {en: "Zimbabwe", ru: "Зимбабве"}}

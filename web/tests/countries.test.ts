@@ -1,0 +1,84 @@
+import { readFileSync } from 'node:fs';
+import { createRequire } from 'node:module';
+import { describe, expect, it } from 'vitest';
+import { feature } from 'topojson-client';
+import type { Topology } from 'topojson-specification';
+import { assignCard, countryAt, isoOf, type CountryFeature } from '../src/lib/countryAssign';
+type CountriesFile = { countries: { id: string; name: { en: string; ru: string }; about?: { en: string; ru: string }; cards: { id: string; places: number[]; main: boolean }[] }[] };
+
+const require = createRequire(import.meta.url);
+const topo = JSON.parse(readFileSync(require.resolve('world-atlas/countries-50m.json'), 'utf8')) as Topology;
+const features = (feature(topo, topo.objects.countries as never) as unknown as { features: CountryFeature[] }).features;
+const at = (lon: number, lat: number) => {
+  const f = countryAt(features, lon, lat);
+  return f ? isoOf(f) : null;
+};
+
+describe('country of a place', () => {
+  it('finds the country a place lies in', () => {
+    expect(at(-8.0029, 12.6392)).toBe('466'); // Bamako, Mali
+    expect(at(-3.0074, 16.7666)).toBe('466'); // Timbuktu, Mali
+    expect(at(15.3136, -4.3317)).toBe('180'); // Kinshasa, DR Congo
+    expect(at(-0.1276, 51.5072)).toBe('826'); // London
+  });
+
+  it('counts harbours and islands the coarse coastline misses', () => {
+    expect(at(-38.5014, -12.9714)).toBe('076'); // Salvador, Bahia
+    expect(at(-76.7931, 17.9714)).toBe('388'); // Kingston, Jamaica
+    expect(at(-74.006, 40.7128)).toBe('840'); // New York City
+    expect(at(55.492, -4.6796)).toBe('690'); // Mahé, Seychelles
+  });
+
+  it('keeps a segment whole across the far meridian (Cartagena is not Vietnam)', () => {
+    expect(at(-75.5478, 10.4236)).toBe('170');
+  });
+
+  it('gives no country to the open sea and the poles', () => {
+    expect(at(-30, 10)).toBeNull(); // "Atlantic Ocean"
+    expect(at(-78.5, 17.5)).toBeNull(); // off Jamaica, where the Zong sailed
+    expect(at(0, 89.9)).toBeNull();
+    expect(at(0, -89.9)).toBeNull(); // Antarctica is not a country
+  });
+
+  it('counts a card for every country its places lie in, and lets a pin decide first', () => {
+    const places = [
+      { name: 'Schio', lat: 45.7139, lon: 11.3561 },
+      { name: 'Darfur', lat: 13.5, lon: 24.0 },
+      { name: 'Venice', lat: 45.4408, lon: 12.3155 },
+    ];
+    expect([...assignCard(features, places)]).toEqual([
+      ['380', [0, 2]],
+      ['729', [1]],
+    ]);
+    const pinned = assignCard(features, places, (i) => (i === 1 ? null : undefined));
+    expect([...pinned.keys()]).toEqual(['380']);
+  });
+});
+
+describe('the built countries file', () => {
+  const file = JSON.parse(readFileSync(new URL('../public/data/countries.json', import.meta.url), 'utf8')) as CountriesFile;
+  const of = (id: string) => file.countries.filter((c) => c.cards.some((x) => x.id === id)).map((c) => c.id).sort();
+
+  it('places known cards in their countries', () => {
+    expect(of('candomble')).toEqual(['brazil']);
+    expect(of('josephine-bakhita')).toEqual(['italy', 'sudan']);
+    expect(of('mansa-musa')).toContain('mali');
+  });
+
+  it('follows content/countries.yaml where the outlines are wrong', () => {
+    // Crimea is Ukraine; border towns stand on their own side.
+    expect(of('mary-seacole')).toEqual(['jamaica', 'ukraine', 'united-kingdom']);
+    expect(of('mapungubwe-rhino')).toEqual(['south-africa']);
+    expect(of('parsley-massacre')).toEqual(['dominican-republic', 'haiti']);
+    expect(of('gannibal')).toContain('cameroon');
+  });
+
+  it('names every country in English and Russian, and marks the main place', () => {
+    for (const c of file.countries) {
+      expect(c.name.en && c.name.ru, c.id).toBeTruthy();
+      if (c.about) expect(c.about.en && c.about.ru, c.id).toBeTruthy();
+    }
+    const brazil = file.countries.find((c) => c.id === 'brazil')!;
+    expect(brazil.cards.find((x) => x.id === 'candomble')).toMatchObject({ main: true, places: [0] });
+  });
+});
