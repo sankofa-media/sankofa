@@ -10,8 +10,7 @@ places:
 zoom: 5
 era: v6
 books: [heirs]
-edition: m
-pair: art-abroad
+edition: both
 genres: [funk]
 further:
   - "Manu Dibango, \"Soul Makossa\" (Fiesta, 1972; Atlantic, 1973)"

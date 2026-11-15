@@ -12,8 +12,7 @@ zoom: 4
 moment: {year: 1810, place: 1}
 era: v4
 books: [archives]
-edition: f
-pair: victorian-britain
+edition: both
 further:
   - "Clifton Crais and Pamela Scully, Sara Baartman and the Hottentot Venus: A Ghost Story and a Biography (Princeton, 2009)"
   - "Sarah Baartman's grave, Hankey, Eastern Cape"

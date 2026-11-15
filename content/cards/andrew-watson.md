@@ -12,8 +12,7 @@ zoom: 4
 moment: {year: 1881}
 era: v4
 books: [heirs]
-edition: m
-pair: victorian-britain
+edition: both
 further:
   - "Scottish Football Museum, Hampden Park, Glasgow: Hall of Fame (inducted 2012)"
   - "Llew Walker, Andrew Watson: A Straggling Life"

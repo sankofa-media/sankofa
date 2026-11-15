@@ -10,8 +10,7 @@ places:
 zoom: 3
 era: v4
 books: [heirs]
-edition: f
-pair: black-catholic
+edition: both
 further:
   - "Festa da Boa Morte, Cachoeira, every August"
   - "Armando Alexandre Castro, \"Irmãs de fé: tradição e turismo no recôncavo baiano\", Caderno Virtual de Turismo 10:3 (2010)"

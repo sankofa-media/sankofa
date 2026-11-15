@@ -11,8 +11,7 @@ places:
 zoom: 4
 era: v3
 books: [voices]
-edition: f
-pair: self-taught
+edition: both
 further:
   - "Susie King Taylor, Reminiscences of My Life in Camp with the 33d United States Colored Troops, Late 1st S.C. Volunteers (Boston, 1902), Project Gutenberg"
   - "Fort Pulaski National Monument, near Savannah, Georgia"

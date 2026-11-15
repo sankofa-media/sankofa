@@ -9,8 +9,7 @@ places:
 zoom: 4
 era: v7
 books: [heirs]
-edition: m
-pair: new-airwaves
+edition: both
 genres: [reggae]
 further:
   - "Dread Broadcasting Corporation: Rebel Radio (Trojan Records compilation of DBC recordings)"

@@ -10,8 +10,7 @@ places:
 zoom: 4
 era: v7
 books: [heirs]
-edition: m
-pair: new-york-voices
+edition: both
 further:
   - "Apollo Theater: history of the theater"
   - "Radio Hall of Fame: Percy Sutton, Legends of Radio (2024)"

@@ -9,8 +9,7 @@ places:
 zoom: 4
 era: v4
 books: [heirs]
-edition: m
-pair: black-catholic
+edition: both
 further:
   - "John XXIII, homily at the canonisation of Martin de Porres, 6 May 1962 (Vatican)"
   - "Convento de Santo Domingo, Lima"

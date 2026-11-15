@@ -11,8 +11,7 @@ places:
 zoom: 5
 era: v6
 books: [voices]
-edition: f
-pair: art-abroad
+edition: both
 further:
   - "Constance Valis Hill, \"Katherine Dunham's Southland: Protest in the Face of Repression\", Dance Research Journal 26:2 (1994)"
   - "Cleo Parker Robinson Dance, reconstruction of Southland (Denver, 2012)"

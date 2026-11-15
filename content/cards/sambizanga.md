@@ -11,8 +11,7 @@ places:
 zoom: 4
 era: v6
 books: [voices]
-edition: f
-pair: colonial-reckonings
+edition: both
 further:
   - "José Luandino Vieira, The Real Life of Domingos Xavier (A vida verdadeira de Domingos Xavier)"
   - "Sarah Maldoror, Monangambééé (short film, 1969)"

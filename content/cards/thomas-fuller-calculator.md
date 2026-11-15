@@ -10,8 +10,7 @@ zoom: 4
 moment: {year: 1780}
 era: v3
 books: [archives]
-edition: m
-pair: on-the-record
+edition: both
 further:
   - "John Fauvel and Paulus Gerdes, 'African Slave and Calculating Prodigy: Bicentenary of the Death of Thomas Fuller', Historia Mathematica 17 (1990)"
   - "Columbian Centinel, Boston, 29 December 1790: obituary of Thomas Fuller"

@@ -10,8 +10,7 @@ places:
 zoom: 4
 era: v3
 books: [voices]
-edition: m
-pair: self-taught
+edition: both
 dispute: "BlackPast and the chess historian Neil Brennen record no date of death; a Chess Drum profile says he died of tuberculosis in 1881, at twenty-six."
 further:
   - "Theophilus A. Thompson, Chess Problems: Either to Play and Mate, or Compel Self-mate in Four Moves (Dubuque, 1873), digitised copy at the Internet Archive"

@@ -9,8 +9,7 @@ places:
 zoom: 4
 era: v4
 books: [voices]
-edition: m
-pair: black-media
+edition: both
 further:
   - "O Clarim d'Alvorada, digitised issues in the Hemeroteca Digital of the Biblioteca Nacional do Brasil"
   - "Flávio Thales Ribeiro Francisco, Um novo abolicionismo para a ascensão na nação da Mãe Preta, Antíteses 10:19 (2017)"

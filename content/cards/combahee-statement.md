@@ -9,8 +9,7 @@ places:
 zoom: 4
 era: v7
 books: [heirs]
-edition: f
-pair: words-of-liberation
+edition: both
 further:
   - "The Combahee River Collective Statement (April 1977)"
   - "Keeanga-Yamahtta Taylor (ed.), How We Get Free: Black Feminism and the Combahee River Collective (2017)"

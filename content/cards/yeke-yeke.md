@@ -11,8 +11,7 @@ places:
 zoom: 4
 era: v7
 books: [heirs]
-edition: m
-pair: ecstasy
+edition: both
 further:
   - "Mory Kanté, Akwaba Beach (album, 1987)"
   - "Rail Band, recordings from the Buffet Hôtel de la Gare, Bamako (1970s)"

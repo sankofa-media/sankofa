@@ -10,8 +10,7 @@ places:
 zoom: 4
 era: v6
 books: [heirs]
-edition: m
-pair: screen-firsts
+edition: both
 genres: [reggae]
 further:
   - "Perry Henzell, The Harder They Come (1972)"

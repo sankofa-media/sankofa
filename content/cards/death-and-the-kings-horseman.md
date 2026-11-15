@@ -10,8 +10,7 @@ places:
 zoom: 4
 era: v6
 books: [heirs]
-edition: m
-pair: colonial-reckonings
+edition: both
 further:
   - "Wole Soyinka, Death and the King's Horseman (1975), with the author's note"
   - "Wole Soyinka, \"Who's Afraid of Elesin Oba?\" (essay)"

@@ -9,8 +9,7 @@ places:
 zoom: 4
 era: v0
 books: [voices]
-edition: m
-pair: ethiopia-voices
+edition: both
 further:
   - "Ralph Lee, Mehari Worku and Wendy Laura Belcher (trans.), The Hatata Inquiries: Two Texts of Seventeenth-Century African Philosophy from Ethiopia (De Gruyter, 2023, open access)"
   - "Claude Sumner, Classical Ethiopian Philosophy (1985)"

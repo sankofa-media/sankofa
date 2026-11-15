@@ -9,8 +9,7 @@ places:
 zoom: 4
 era: v7
 books: [heirs]
-edition: f
-pair: new-airwaves
+edition: both
 genres: [hip-hop]
 further:
   - "The Sugarhill Gang, Rapper's Delight (Sugar Hill Records, 1979), long version"

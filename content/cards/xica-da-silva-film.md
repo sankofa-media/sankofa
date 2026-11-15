@@ -9,8 +9,7 @@ places:
 zoom: 4
 era: v4
 books: [voices]
-edition: f
-pair: screen-1976
+edition: both
 further:
   - "Carlos Diegues, Xica da Silva (1976), 4K restoration (2026)"
   - "Opinião, 15 October 1976: the debate on Xica da Silva"

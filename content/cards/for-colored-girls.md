@@ -11,8 +11,7 @@ zoom: 4
 moment: {year: 1976}
 era: v7
 books: [voices]
-edition: f
-pair: new-york-voices
+edition: both
 further:
   - "Ntozake Shange, for colored girls who have considered suicide / when the rainbow is enuf (Shameless Hussy Press, 1975; Macmillan, 1976)"
   - "for colored girls…, Broadway revival directed and choreographed by Camille A. Brown (Booth Theatre, 2022)"

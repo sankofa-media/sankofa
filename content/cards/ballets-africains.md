@@ -10,8 +10,7 @@ places:
 zoom: 3
 era: v6
 books: [heirs]
-edition: m
-pair: new-stages
+edition: both
 further:
   - "Joshua Cohen, \"Stages in Transition: Les Ballets Africains and Independence, 1959 to 1960\", Journal of Black Studies"
   - "Fodéba Keïta, \"La danse africaine et la scène\", Présence Africaine (1957)"

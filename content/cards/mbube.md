@@ -10,8 +10,7 @@ places:
 zoom: 5
 era: v5
 books: [heirs]
-edition: m
-pair: wartime-voices
+edition: both
 further:
   - "Solomon Linda's Original Evening Birds, \"Mbube\" (Gallo, 1939)"
   - "Rian Malan, \"In the Jungle: Inside the Long, Hidden Genealogy of 'The Lion Sleeps Tonight'\", Rolling Stone, 2000"

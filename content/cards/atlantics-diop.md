@@ -11,8 +11,7 @@ zoom: 4
 moment: {year: 2019}
 era: v7
 books: [heirs]
-edition: f
-pair: atlantic-west
+edition: both
 further:
   - "Mati Diop, Atlantics (2019)"
   - "Mati Diop, Atlantiques (short film, 2009)"

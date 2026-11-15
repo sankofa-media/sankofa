@@ -11,8 +11,7 @@ zoom: 4
 moment: {year: 1959}
 era: v6
 books: [voices]
-edition: f
-pair: new-stages
+edition: both
 further:
   - "Langston Hughes, \"Harlem\" (1951)"
   - "Hansberry v. Lee, 311 U.S. 32 (1940)"

@@ -11,8 +11,7 @@ zoom: 4
 moment: {year: 1896, place: 1}
 era: v0
 books: [archives]
-edition: f
-pair: ethiopia-voices
+edition: both
 further:
   - "Chris Prouty, Empress Taytu and Menilek II: Ethiopia 1883–1910 (1986)"
 dispute: "Her dates differ: DW gives her birth as around 1840 or 1851 and her death as 1917, the Library of Congress gives 1853–1918."

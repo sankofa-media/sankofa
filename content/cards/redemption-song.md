@@ -10,8 +10,7 @@ places:
 zoom: 4
 era: v7
 books: [heirs]
-edition: m
-pair: words-of-liberation
+edition: both
 genres: [reggae]
 further:
   - "Bob Marley and the Wailers, Uprising (1980)"

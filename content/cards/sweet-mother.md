@@ -10,8 +10,7 @@ zoom: 4
 moment: {year: 1976}
 era: v7
 books: [heirs]
-edition: m
-pair: atlantic-west
+edition: both
 genres: [highlife]
 further:
   - "Prince Nico Mbarga and Rocafil Jazz, \"Sweet Mother\" (1976)"

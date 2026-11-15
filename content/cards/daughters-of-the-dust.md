@@ -9,8 +9,7 @@ places:
 zoom: 4
 era: v7
 books: [heirs]
-edition: f
-pair: crossing-over
+edition: both
 further:
   - "Julie Dash, Daughters of the Dust (1991), restored 2016"
   - "Julie Dash, Daughters of the Dust (novel)"

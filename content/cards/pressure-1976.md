@@ -9,8 +9,7 @@ places:
 zoom: 4
 era: v4
 books: [heirs]
-edition: m
-pair: screen-1976
+edition: both
 further:
   - "Horace Ové, Pressure (1975), restored by the BFI National Archive and The Film Foundation (2023)"
   - "Samuel Selvon, The Lonely Londoners (1956)"

@@ -9,8 +9,7 @@ places:
 zoom: 4
 era: v6
 books: [voices]
-edition: m
-pair: staged-history
+edition: both
 further:
   - "J. Fred MacDonald (ed.), Richard Durham's Destination Freedom: Scripts from Radio's Black Legacy, 1948–50 (Praeger, 1989)"
   - "Sonja D. Williams, Word Warrior: Richard Durham, Radio, and Freedom (University of Illinois Press, 2015)"

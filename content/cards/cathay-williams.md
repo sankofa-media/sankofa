@@ -11,8 +11,7 @@ places:
 zoom: 4
 era: v3
 books: [archives]
-edition: f
-pair: on-the-record
+edition: both
 further:
   - "St. Louis Daily Times, 2 January 1876: 'She Fought Nobly', her interview"
   - "National Archives (US): enlistment papers and certificate of disability for discharge of William Cathey, 1866 and 1868"

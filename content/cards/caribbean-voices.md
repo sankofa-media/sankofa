@@ -10,8 +10,7 @@ places:
 zoom: 4
 era: v4
 books: [voices]
-edition: f
-pair: black-media
+edition: both
 further:
   - "BBC History, 100 Voices: Caribbean Voices and London Calling, the BBC and Caribbean Literature"
   - "Una Marson, Tropic Reveries (1930) and Heights and Depths (1931)"

@@ -11,8 +11,7 @@ zoom: 4
 moment: {year: 1987, place: 1}
 era: v6
 books: [heirs]
-edition: f
-pair: staged-history
+edition: both
 further:
   - "Sarafina! (1992), film directed by Darrell Roodt, with Whoopi Goldberg"
   - "Sarafina! The Music of Liberation, original Broadway cast recording (1988)"

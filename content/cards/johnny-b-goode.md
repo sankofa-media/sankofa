@@ -10,8 +10,7 @@ zoom: 4
 moment: {year: 1958}
 era: v7
 books: [heirs]
-edition: m
-pair: crossing-over
+edition: both
 genres: [rock-n-roll]
 further:
   - "Chuck Berry, \"Johnny B. Goode\" (Chess, 1958)"

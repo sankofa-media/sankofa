@@ -10,8 +10,7 @@ zoom: 4
 moment: {year: 1954}
 era: v6
 books: [voices]
-edition: f
-pair: screen-firsts
+edition: both
 further:
   - "Otto Preminger, Carmen Jones (20th Century Fox, 1954)"
   - "Donald Bogle, Dorothy Dandridge: A Biography (1997)"

@@ -9,8 +9,7 @@ places:
 zoom: 4
 era: v7
 books: [heirs]
-edition: f
-pair: ecstasy
+edition: both
 further:
   - "Kathleen Collins, Losing Ground (1982; restoration released by Milestone Films)"
   - "Kathleen Collins, Whatever Happened to Interracial Love? (stories, 2016)"

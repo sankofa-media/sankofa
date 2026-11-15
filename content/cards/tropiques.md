@@ -9,8 +9,7 @@ places:
 zoom: 3
 era: v5
 books: [voices]
-edition: f
-pair: wartime-voices
+edition: both
 further:
   - "Tropiques 1941–1945, collection complète (Paris: Jean-Michel Place, 1978), with a preface by René Ménil"
   - "Suzanne Césaire, The Great Camouflage: Writings of Dissent (1941–1945), ed. Daniel Maximin (Wesleyan University Press, 2012)"
