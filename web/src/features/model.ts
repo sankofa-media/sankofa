@@ -25,6 +25,21 @@ export interface Block extends Bi {
   hold?: boolean;
   /** Why it is held (for the editor). */
   check?: string;
+  /** Whose account this is: one of the feature's lenses (see Lens). */
+  lens?: string;
+}
+
+/**
+ * One witness through whom a scene can be read (the "Rashomon" lenses): the
+ * same scene, told by someone else. A lens marked `empty` is a witness who
+ * left no account; it carries only its `silence` and no blocks.
+ */
+export interface Lens {
+  id: string;
+  name: Bi;
+  role?: Bi;
+  empty?: boolean;
+  silence?: Bi;
 }
 
 /** One picture in a feature: generated art needs no label, a real photo needs its rights. */
@@ -111,6 +126,8 @@ export interface FeatureSource {
   art?: Art[];
   /** The river of versions, when the feature has a lineage. */
   river?: RiverSource;
+  /** The witnesses a scene can be read through (scenes list theirs as `lenses`). */
+  lenses?: Lens[];
   scenes: Scene[];
 }
 
@@ -133,6 +150,7 @@ export interface FeatureData {
   art: Art[];
   scenes: Scene[];
   lineage?: import('./lineage').LineageData;
+  lenses?: Lens[];
 }
 
 export interface FeatureEntry {
@@ -275,9 +293,53 @@ export function validateFeature(f: FeatureSource, ctx: ValidateContext = {}): st
     }
     for (const fig of (s.figures as Figure[] | undefined) ?? []) if (!bi(fig.name) || (fig.role && !bi(fig.role))) errs.push(`${at}: figure ${fig.id} needs a name (and role) in en and ru`);
   }
+  errs.push(...validateLenses(f));
   for (const n of f.river?.include ?? []) {
     if (ctx.nodes && !ctx.nodes.has(n)) errs.push(`river: lineage node ${n} does not exist`);
     else if (ctx.sourced && !ctx.sourced.has(n)) errs.push(`river: lineage node ${n} has no sources`);
+  }
+  return errs;
+}
+
+/**
+ * Problems with a feature's lenses: every lens is defined once, with a name
+ * in both languages; a scene lists only defined lenses, and each one it lists
+ * speaks there in at least one shown block, except a witness who left no
+ * account (`empty`), who speaks nowhere and is shown by its silence.
+ */
+export function validateLenses(f: FeatureSource): string[] {
+  const errs: string[] = [];
+  const lenses = new Map<string, Lens>();
+  for (const l of f.lenses ?? []) {
+    if (!isFeatureId(l?.id)) errs.push(`lens ${JSON.stringify(l?.id)}: id is not a slug`);
+    else if (lenses.has(l.id)) errs.push(`lens ${l.id}: duplicate id`);
+    else lenses.set(l.id, l);
+    if (!bi(l?.name)) errs.push(`lens ${l?.id}: needs a name in en and ru`);
+    if (l?.role !== undefined && !bi(l.role)) errs.push(`lens ${l.id}: role needs en and ru`);
+    if (l?.empty && !bi(l.silence)) errs.push(`lens ${l.id}: an empty lens needs its silence in en and ru`);
+  }
+  for (const s of f.scenes ?? []) {
+    const listed = s.lenses === undefined ? [] : Array.isArray(s.lenses) ? (s.lenses as string[]) : null;
+    if (listed === null) {
+      errs.push(`scene ${s.id}: lenses must be a list of lens ids`);
+      continue;
+    }
+    for (const id of listed) {
+      const l = lenses.get(id);
+      if (!l) {
+        errs.push(`scene ${s.id}: lens ${id} is not defined`);
+        continue;
+      }
+      const shown = (s.blocks ?? []).filter((b) => b.lens === id && !b.hold).length;
+      if (!l.empty && shown === 0) errs.push(`scene ${s.id}: lens ${id} has nothing to say here (no shown block)`);
+    }
+    for (const b of s.blocks ?? []) {
+      if (b.lens === undefined) continue;
+      const l = lenses.get(b.lens);
+      if (!l) errs.push(`scene ${s.id} block ${b.id}: lens ${b.lens} is not defined`);
+      else if (l.empty) errs.push(`scene ${s.id} block ${b.id}: ${b.lens} left no account and cannot speak`);
+      else if (!listed.includes(b.lens)) errs.push(`scene ${s.id} block ${b.id}: lens ${b.lens} is not in the scene's lenses`);
+    }
   }
   return errs;
 }
@@ -306,12 +368,12 @@ export function publishFeature(f: FeatureSource, lineage?: FeatureData['lineage'
       if (b.hold) held++;
       return !b.hold;
     });
-    return { ...s, blocks: blocks.map(({ id, role, en, ru, draft }) => ({ id, role, en: en.trim(), ru: ru.trim(), draft })) };
+    return { ...s, blocks: blocks.map(({ id, role, en, ru, draft, lens }) => ({ id, role, en: en.trim(), ru: ru.trim(), draft, ...(lens ? { lens } : {}) })) };
   });
   const ui: Record<string, Bi> = {};
   for (const [k, v] of Object.entries(f.ui ?? {})) ui[k] = { en: v.en.trim(), ru: v.ru.trim() };
   return {
-    data: { version: 1, id: f.id, title: f.title, dek: f.dek, ...(f.reading ? { reading: f.reading } : {}), ui, art: f.art ?? [], scenes, ...(lineage ? { lineage } : {}) },
+    data: { version: 1, id: f.id, title: f.title, dek: f.dek, ...(f.reading ? { reading: f.reading } : {}), ui, art: f.art ?? [], scenes, ...(lineage ? { lineage } : {}), ...(f.lenses?.length ? { lenses: f.lenses } : {}) },
     held,
   };
 }
