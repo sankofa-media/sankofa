@@ -1,5 +1,5 @@
 // The reader's Cabinet of Curiosities: a tall old cabinet whose drawers are
-// labelled by hand, a secret drawer without a label, Plyushkin's corner where
+// labelled by hand, a secret drawer without a label, the unsorted heap where
 // every find lands unsorted, and the honest drawer that says where such
 // cabinets got their things. Empty places show as dusty silhouettes: there is
 // more to find, and nothing says where.
@@ -52,7 +52,7 @@ export function cabinetView(app: App, f: CabinetFile): HTMLElement {
             } }, pick({ en: `Put it in the drawer “${d.label.en}”`, ru: `Положить в ящик «${d.label.ru}»` }))
           : h('p.cb-locked', {}, pick({ en: 'Its drawer is locked. Its key is somewhere in the museum.', ru: 'Его ящик заперт. Ключ — где-то в музее.' })),
       );
-    } else if (fromHeap) actions = h('p.cb-hint', {}, pick({ en: 'It belongs in no drawer. Plyushkin would keep it in the heap, and so do we.', ru: 'Ни в какой ящик это не годится. Плюшкин оставил бы это в куче — оставим и мы.' }));
+    } else if (fromHeap) actions = h('p.cb-hint', {}, pick({ en: 'It belongs in no drawer; it stays with the unsorted things.', ru: 'Ни в какой ящик это не годится — пусть остаётся среди неразобранного.' }));
     openArtifactDialog(app, f, a, actions);
   };
 
@@ -112,7 +112,7 @@ export function cabinetView(app: App, f: CabinetFile): HTMLElement {
     return h(
       'section.cb-heap',
       { 'aria-labelledby': 'cb-heap-h' },
-      h('h3', { id: 'cb-heap-h' }, heap ? pick(heap.label) : pick({ en: 'Plyushkin’s corner', ru: 'Угол Плюшкина' })),
+      h('h3', { id: 'cb-heap-h' }, heap ? pick(heap.label) : pick({ en: 'Unsorted', ru: 'Неразобранное' })),
       h('p.cb-hint', {}, heap?.intro ? pick(heap.intro) : pick({ en: 'Everything you find lands here first, in a heap. Pick through it and put things away.', ru: 'Всё найденное сначала попадает сюда, в кучу. Переберите её и разложите вещи по местам.' })),
       list.length
         ? h('ul.cb-pile', {}, list.map((s) => h('li', { style: `--tilt:${tilt(s.artifact.id)}deg` }, thumb(s.artifact, () => inspect(s.artifact, true), '.cb-heaped'))))

@@ -26,7 +26,7 @@ function file(): CabinetFile {
     version: 1,
     intro: L('A cabinet'),
     drawers: [
-      { id: 'heap', label: L('Plyushkin’s corner') },
+      { id: 'heap', label: L('Unsorted') },
       { id: 'seas', label: L('Seas') },
       { id: 'seals', label: L('Seals and patents') },
       { id: 'underground', label: L('Underground'), lock: 'brass-key', intro: L('Secret'), contents: ['still-book'] },
@@ -141,7 +141,7 @@ describe('cabinet: a reader finds things', () => {
     expect(reachable(f, 'm').has('f-thing')).toBe(false);
     expect(tally(f, EMPTY, 'm')).toEqual({ have: 1, of: 6 });
   });
-  it('finds land in Plyushkin’s corner, and are sorted into their drawers', () => {
+  it('finds land in Unsorted, and are sorted into their drawers', () => {
     const f = file();
     let h = openCache(f, EMPTY, 'chest', 'm').state;
     expect(slots(f, h, 'heap', 'm').map((s) => s.artifact.id)).toEqual(['certificate', 'm-thing']);

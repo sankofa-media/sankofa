@@ -102,7 +102,7 @@ export function openCacheDialog(app: App, f: CabinetFile, cacheId: string): void
       h(
         'p.cb-into',
         {},
-        pick(again ? { en: 'These things are already in your cabinet. ', ru: 'Эти вещи уже в вашем кабинете. ' } : { en: 'These things are now in your cabinet, in Plyushkin’s corner, waiting to be sorted. ', ru: 'Теперь эти вещи в вашем кабинете — в углу Плюшкина, ждут, пока их разберут. ' }),
+        pick(again ? { en: 'These things are already in your cabinet. ', ru: 'Эти вещи уже в вашем кабинете. ' } : { en: 'These things are now in your cabinet, with the unsorted things, waiting to be put away. ', ru: 'Теперь эти вещи в вашем кабинете, среди неразобранного, — ждут, пока их разложат по ящикам. ' }),
         h('a', { href: '#view=cabinet', 'data-mech': 'cabinet' }, pick({ en: 'Open your cabinet →', ru: 'Открыть ваш кабинет →' })),
       ),
     );

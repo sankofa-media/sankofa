@@ -1,6 +1,6 @@
 // The Workshop and the Cabinet of Curiosities: the old link to the objects,
 // a cache on a card's picture, one in a chapter's words, a locked cache and
-// its key, a secret drawer, Plyushkin's corner, the two copies, Russian.
+// its key, a secret drawer, the unsorted heap, the two copies, Russian.
 import { expect, test, type Page } from '@playwright/test';
 
 const as = (edition: 'm' | 'f', lang?: 'ru') => async ({ page }: { page: Page }) => {
@@ -67,7 +67,7 @@ test.describe('the Workshop', () => {
 test.describe('the cabinet', () => {
   test.beforeEach(as('m'));
 
-  test('a cache on a picture: the container first, then its things, then Plyushkin’s corner', async ({ page }) => {
+  test('a cache on a picture: the container first, then its things, then Unsorted', async ({ page }) => {
     await openFromPicture(page, 'equiano');
     await expect(cache(page).locator('#cb-cache-title')).toBeVisible();
     await expect(cache(page).locator('.cb-container-story')).not.toBeEmpty();
@@ -79,7 +79,7 @@ test.describe('the cabinet', () => {
     await page.keyboard.press('Escape');
     await expect(cache(page)).toHaveCount(0);
     await expect(page.locator('.drawer.on article.card[data-card-id="equiano"]')).toBeVisible();
-    // The finds wait unsorted in Plyushkin's corner; one is put away.
+    // The finds wait unsorted in the unsorted heap; one is put away.
     await page.goto('/#view=cabinet');
     const pile = sheet(page).locator('.cb-pile .cb-thing');
     const n = await pile.count();

@@ -91,7 +91,7 @@ export interface CabinetFile {
   sources?: Record<string, { title: string; url: string }[]>;
 }
 
-/** Plyushkin's corner: where every find lands before it is sorted, and where the strays stay. */
+/** the unsorted heap: where every find lands before it is sorted, and where the strays stay. */
 export const HEAP = 'heap';
 
 // ---------- validation ----------
@@ -184,7 +184,7 @@ export function validateCabinet(f: CabinetFile, k: Known): string[] {
     if (d.lock && !keys.has(d.lock)) errs.push(`drawer ${d.id}: key ${d.lock} does not exist`);
     for (const a of d.contents ?? []) if (!art.has(a)) errs.push(`drawer ${d.id}: artifact ${a} does not exist`);
   }
-  if (!drawers.has(HEAP)) errs.push(`cabinet: there is no ${HEAP} drawer (Plyushkin's corner)`);
+  if (!drawers.has(HEAP)) errs.push(`cabinet: there is no ${HEAP} drawer (the unsorted heap)`);
 
   const placed = new Map<string, string>();
   const place = (a: string, where: string) => {
@@ -308,7 +308,7 @@ export function isLocked(c: Cache, h: Holdings): boolean {
 /**
  * Open a cache. A locked one stays shut unless the reader holds its key (and
  * `useKey` is asked); its artifacts and keys then go into the cabinet: the
- * artifacts into Plyushkin's corner, unsorted.
+ * artifacts into the unsorted heap, unsorted.
  */
 export function openCache(f: CabinetFile, h: Holdings, cacheId: string, e: Edition, useKey = false): OpenResult {
   const c = f.caches.find((x) => x.id === cacheId);
@@ -360,7 +360,7 @@ export interface Slot {
 
 /**
  * A drawer's slots for a reader: what they have put there, and a silhouette
- * for each thing of their copy still missing. Plyushkin's corner holds every
+ * for each thing of their copy still missing. the unsorted heap holds every
  * unsorted find, and its own strays.
  */
 export function slots(f: CabinetFile, h: Holdings, drawerId: string, e: Edition): Slot[] {
