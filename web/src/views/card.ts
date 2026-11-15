@@ -12,7 +12,7 @@ import { cardYaml } from '../lib/cardYaml';
 import { mediaSrc } from '../lib/media';
 import { paragraphsOf } from '../lib/paragraphs';
 import { cardCaches, cardChecks, cardExtras } from '../mechanics';
-import { listenBlock } from './player';
+import { cardRecordings } from './recordings';
 import { stopWithin } from '../lib/sound';
 import { factFooter } from './factoid';
 
@@ -123,7 +123,7 @@ export function renderCard(app: App, c: Card): HTMLElement {
     h('div.text', {}, ...paragraphs),
     contested,
     other,
-    ...(app.listen.cards[c.id] ?? []).slice(0, 1).map((r) => listenBlock(r)),
+    cardRecordings(app, c),
     ...audio.map((a) =>
       h(
         'figure.card-audio',

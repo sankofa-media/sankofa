@@ -1,4 +1,5 @@
 # All times are seconds on the original LoC MP3 clock, including WebVTT cues.
+# The ru block carries the Russian names and notes the museum shows.
 # Dates retain source precision: a year alone does not imply January 1.
 voices:
   - id: "fountain-hughes"
@@ -15,6 +16,11 @@ voices:
     credit: "Cyrus B. Koonce Collection (AFC 1950/037), American Folklife Center, Library of Congress"
     card: "wpa-narratives"
     birth_note: "born into slavery near Charlottesville, about 1860"
+    ru:
+      speaker: "Фаунтин Хьюз"
+      place: "Балтимор, Мэриленд"
+      interviewer: "Хермонд Норвуд"
+      birth_note: "родился в рабстве под Шарлотсвиллом около 1860 года"
     subtitles:
       en: "fountain-hughes.en.vtt"
       ru: "fountain-hughes.ru.vtt"
@@ -34,6 +40,11 @@ voices:
     credit: "John Henry Faulk Recordings of Negro Religious Services, Part 3 (AFC 1941/016), American Folklife Center, Library of Congress"
     card: "wpa-narratives"
     birth_note: "born into slavery near Bellville, Texas; exact birth year unknown"
+    ru:
+      speaker: "Лора Смолли"
+      place: "Хемпстед, округ Уоллер, Техас"
+      interviewer: "Джон Генри Фолк и неизвестная собеседница"
+      birth_note: "родилась в рабстве под Беллвиллом, Техас; точный год рождения неизвестен"
     subtitles:
       en: "laura-smalley.en.vtt"
       ru: "laura-smalley.ru.vtt"
@@ -53,6 +64,11 @@ voices:
     credit: "John and Ruby Lomax 1940 Southern States Recordings Collection (AFC 1940/003), American Folklife Center, Library of Congress"
     card: "wpa-narratives"
     birth_note: "born into slavery, about 1851 by his own count; grew up in Jasper, Texas"
+    ru:
+      speaker: "Дядя Билли Маккри"
+      place: "Джаспер, округ Джаспер, Техас"
+      interviewer: "Джон А. Ломакс и Руби Т. Ломакс"
+      birth_note: "родился в рабстве, по собственному счёту около 1851 года; вырос в Джаспере, Техас"
     subtitles:
       en: "billy-mccrea.en.vtt"
       ru: "billy-mccrea.ru.vtt"
