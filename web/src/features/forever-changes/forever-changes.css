@@ -432,7 +432,9 @@
   transition: opacity 1.2s var(--ease);
 }
 .fc.fx-watching .fc-watch {
-  opacity: 0.9;
+  opacity: 1;
+  width: 150px;
+  filter: drop-shadow(0 0 14px color-mix(in srgb, var(--ft-red) 70%, transparent));
 }
 .fc-eye {
   width: 100%;
@@ -449,36 +451,197 @@
 }
 
 /* ---------- the decay ---------- */
-.fc.fx-on .ft-flow .ft-title {
+/* Melting: the current chapter's letters and pictures run through the SVG filters of trip-fx.ts. */
+.fc.fx-on .ft-scene.current .ft-flow .ft-title,
+.fc.fx-on .ft-scene.current .ft-flow .ft-kicker {
   filter: url(#fc-flow-strong);
 }
-.fc.fx-on .ft-flow .ft-text,
-.fc.fx-on .ft-flow .ft-lede,
-.fc.fx-on .ft-flow .ft-quote {
+.fc.fx-on .ft-scene.current .ft-flow .ft-text,
+.fc.fx-on .ft-scene.current .ft-flow .ft-lede,
+.fc.fx-on .ft-scene.current .ft-flow .ft-quote {
   filter: url(#fc-flow-soft);
 }
 .fc.fx-on .ft-stage {
-  filter: hue-rotate(var(--drift)) saturate(calc(1 + var(--decay) * 0.8));
+  filter: hue-rotate(var(--drift)) saturate(calc(1 + var(--decay) * 1.6));
+}
+.fc.fx-trip .ft-scene.current .ft-stage {
+  /* On the stage itself (it covers the screen): a filter on a smaller box would show its edges through the blended colour above. */
+  filter: url(#fc-melt-art) hue-rotate(var(--drift)) saturate(calc(1 + var(--decay) * 1.6))
+    drop-shadow(0 calc(var(--vel, 0) * -26px) 0 color-mix(in srgb, #ff2bd6 calc(var(--trails, 0) * 60%), transparent))
+    drop-shadow(0 calc(var(--vel, 0) * -52px) 0 color-mix(in srgb, #00f0ff calc(var(--trails, 0) * 40%), transparent));
 }
 .fc.fx-on .ft-flow .ft-text,
 .fc.fx-on .ft-flow .ft-lede,
 .fc.fx-on .ft-flow .ft-title {
-  /* The echo: a doubled line in poster colours, never strong enough to cover the text. */
+  /* The echo: a doubled line in poster colours; the trails behind what scrolls. Never strong enough to cover the text. */
   text-shadow:
-    calc(var(--echo) * 4px) calc(var(--echo) * 2px) 0 color-mix(in srgb, var(--fc-violet) calc(var(--echo) * 38%), transparent),
-    calc(var(--echo) * -3px) calc(var(--echo) * -1px) 0 color-mix(in srgb, var(--fc-acid) calc(var(--echo) * 24%), transparent);
+    calc(var(--echo) * 4px) calc(var(--echo) * 2px) 0 color-mix(in srgb, var(--fc-violet) calc(var(--echo) * 45%), transparent),
+    calc(var(--echo) * -3px) calc(var(--echo) * -1px) 0 color-mix(in srgb, var(--fc-acid) calc(var(--echo) * 30%), transparent),
+    0 calc(var(--vel, 0) * -12px) 1px color-mix(in srgb, #ff2bd6 calc(var(--trails, 0) * 55%), transparent),
+    0 calc(var(--vel, 0) * -24px) 2px color-mix(in srgb, #00f0ff calc(var(--trails, 0) * 38%), transparent),
+    0 calc(var(--vel, 0) * -36px) 3px color-mix(in srgb, #b6ff00 calc(var(--trails, 0) * 24%), transparent);
+}
+.fc.fx-on .ft-flow .ft-title,
+.fc.fx-on .ft-flow .ft-kicker {
+  text-shadow:
+    calc(var(--split, 0) * 1px) 0 0 color-mix(in srgb, #ff2bd6 70%, transparent),
+    calc(var(--split, 0) * -1px) 0 0 color-mix(in srgb, #00f0ff 70%, transparent),
+    calc(var(--echo) * 6px) calc(var(--echo) * 4px) 0 color-mix(in srgb, var(--fc-violet) calc(var(--echo) * 50%), transparent),
+    0 calc(var(--vel, 0) * -18px) 2px color-mix(in srgb, #ff2bd6 calc(var(--trails, 0) * 60%), transparent),
+    0 calc(var(--vel, 0) * -36px) 4px color-mix(in srgb, #00f0ff calc(var(--trails, 0) * 40%), transparent);
+}
+/* The whole page breathes. */
+.fc.fx-trip .ft-scene.current .ft-stage > *,
+.fc.fx-trip .ft-scene.current .ft-flow > .ft-block {
+  animation: fc-breathe 7.5s ease-in-out infinite;
+}
+@keyframes fc-breathe {
+  0%,
+  100% {
+    scale: calc(1 - var(--breathe, 0));
+  }
+  50% {
+    scale: calc(1 + var(--breathe, 0));
+  }
+}
+/* It tilts and swims at the top of the trip. */
+.fc.fx-swim .ft-scene.current .ft-flow > .ft-block.on {
+  animation:
+    fc-breathe 7.5s ease-in-out infinite,
+    fc-swim 11s ease-in-out infinite;
+}
+.fc.fx-swim .ft-scene.current .ft-flow > .ft-block.on:nth-child(even) {
+  animation-delay: 0s, -4.2s;
+}
+.fc.fx-swim .ft-scene.current .ft-stage {
+  animation: fc-swim 13s ease-in-out infinite reverse;
+}
+@keyframes fc-swim {
+  0%,
+  100% {
+    transform: rotate(calc(var(--tilt, 0) * -1deg)) translate(calc(var(--tilt, 0) * -7px), 0);
+  }
+  33% {
+    transform: rotate(calc(var(--tilt, 0) * 0.6deg)) translate(calc(var(--tilt, 0) * 5px), calc(var(--tilt, 0) * 4px));
+  }
+  66% {
+    transform: rotate(calc(var(--tilt, 0) * 1deg)) translate(calc(var(--tilt, 0) * 8px), calc(var(--tilt, 0) * -3px));
+  }
+}
+/* Words that trade places for a moment. */
+.fc-swap {
+  display: inline-block;
+  transition:
+    translate 0.9s cubic-bezier(0.5, 0, 0.3, 1),
+    rotate 0.9s,
+    color 0.9s;
+}
+.fc-swap.away {
+  translate: var(--sx) var(--sy);
+  rotate: 4deg;
+  color: #ff5ad8;
+}
+/* The layers of the trip: acid behind, mycelium over the pictures and under the text, colour and the vignette over it all. */
+.fc-trip-back,
+.fc-trip-myc,
+.fc-trip-over,
+.fc-trip-vig {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+.fc-trip-back[hidden],
+.fc-trip-myc[hidden],
+.fc-trip-over[hidden],
+.fc-trip-vig[hidden] {
+  display: none;
+}
+.fc-trip-back {
+  z-index: 0;
+  opacity: 0;
+}
+.fc-trip-myc {
+  z-index: 0;
+}
+.fc-trip-over {
+  z-index: 2;
+  opacity: 0;
+  mix-blend-mode: overlay;
+}
+.fc-trip-vig {
+  z-index: 2;
+  opacity: 0;
+  background: radial-gradient(ellipse 72% 68% at 50% 50%, transparent 38%, rgba(14, 0, 20, 0.55) 72%, rgba(3, 0, 5, 0.97) 100%);
+  scale: 1.14;
+  animation: fc-vig 8s ease-in-out infinite;
+}
+@keyframes fc-vig {
+  50% {
+    scale: 1;
+  }
+}
+.fc.fx-on .ft-flow > .ft-block {
+  background: color-mix(in srgb, var(--ft-glass), #050008 calc(var(--trip-dark, 0) * 40%));
 }
 .fc.fx-creep .ft-flow > .ft-b-note {
-  translate: calc((var(--p, 0) - 0.3) * var(--decay) * 70px) calc(var(--p, 0) * var(--decay) * 26px);
-  rotate: calc((var(--p, 0) - 0.5) * var(--decay) * 3deg);
-  transition: translate 0.6s linear, rotate 0.6s linear;
+  translate: calc((var(--p, 0) - 0.3) * var(--decay) * 140px) calc(var(--p, 0) * var(--decay) * 46px);
+  rotate: calc((var(--p, 0) - 0.5) * var(--decay) * 6deg);
+  transition:
+    translate 0.6s linear,
+    rotate 0.6s linear;
 }
+/* The red telephone rings: a red wave through the picture, the telephone shakes (through the FlashGate). */
 .fc.fx-ring .ft-scene.current .ft-stage {
-  animation: fc-ring 0.7s ease-out 1;
+  animation: fc-ring 0.9s ease-out 1;
 }
 @keyframes fc-ring {
   30% {
-    box-shadow: inset 0 0 120px color-mix(in srgb, var(--ft-red) 45%, transparent);
+    box-shadow: inset 0 0 160px color-mix(in srgb, var(--ft-red) 55%, transparent);
+  }
+}
+.fc.fx-watching .ft-scene.current .ft-stage::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 40vmin;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 3px solid color-mix(in srgb, var(--ft-red) 70%, transparent);
+  translate: -50% -50%;
+  scale: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+.fc.fx-ring.fx-watching .ft-scene.current .ft-stage::after {
+  animation: fc-ring-wave 1.6s ease-out 1;
+}
+@keyframes fc-ring-wave {
+  from {
+    scale: 0.2;
+    opacity: 0.9;
+  }
+  to {
+    scale: 2.6;
+    opacity: 0;
+  }
+}
+.fc.fx-ring [data-scene='the-red-telephone'] .ft-stack > svg {
+  animation: fc-phone-shake 0.7s linear 1;
+}
+@keyframes fc-phone-shake {
+  10%,
+  50%,
+  90% {
+    translate: -6px 2px;
+    rotate: -1.4deg;
+  }
+  30%,
+  70% {
+    translate: 6px -2px;
+    rotate: 1.4deg;
   }
 }
 /* Song by song. */
@@ -791,7 +954,7 @@ body.fc-lee-on {
   }
 }
 .fc-lee-vision[data-kind='figure'] {
-  width: min(22vw, 120px);
+  width: min(34vw, 220px);
   transform: translate(0, -50%);
   opacity: 0.55;
 }
@@ -809,12 +972,12 @@ body.fc-lee-on {
   overflow: visible;
 }
 .fc-figure .ink-line {
-  stroke: #0b0b0b;
-  stroke-width: 5;
+  stroke: #050307;
+  stroke-width: 9;
 }
 .fc-lee-vision[data-kind='face'] {
-  width: min(30vw, 160px);
-  opacity: 0.35;
+  width: min(52vw, 320px);
+  opacity: 0.6;
   mix-blend-mode: overlay;
 }
 .fc-face-eye {
@@ -824,11 +987,16 @@ body.fc-lee-on {
   animation: fc-melt 1.3s ease-in forwards;
 }
 @keyframes fc-melt {
+  40% {
+    opacity: 0.7;
+    filter: blur(3px) hue-rotate(90deg);
+    scale: 1.1 1.5;
+  }
   to {
     opacity: 0;
-    filter: blur(10px);
-    translate: 0 40px;
-    scale: 1 1.6;
+    filter: blur(14px) hue-rotate(200deg);
+    translate: 0 120px;
+    scale: 0.7 3;
   }
 }
 .fc-lee-vision.gone {
@@ -872,7 +1040,19 @@ body.fc-lee-on {
 .fc.is-calm .fc-lee-pin-eye {
   animation: none;
 }
+.fc.is-calm .fc-trip-back,
+.fc.is-calm .fc-trip-myc,
+.fc.is-calm .fc-trip-over,
+.fc.is-calm .fc-trip-vig {
+  display: none;
+}
 @media (prefers-reduced-motion: reduce) {
+  .fc-trip-back,
+  .fc-trip-myc,
+  .fc-trip-over,
+  .fc-trip-vig {
+    display: none !important;
+  }
   .fc .fc-light,
   .fc .fc-lee-pin-eye,
   .fc-lee-vision,

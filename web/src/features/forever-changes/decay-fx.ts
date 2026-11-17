@@ -1,6 +1,7 @@
 // The decay drawn: the levels of ../engine/decay.ts turned into what the
-// reader sees. Letters flow through an SVG displacement filter, colour
-// drifts, text gets an echo, the text lags behind the scroll and then falls
+// reader sees. The trip itself (melting, acid colour, mycelium, the tunnel)
+// is ./trip-fx.ts; here: colour drifts, text gets an echo, the text lags
+// behind the scroll and then falls
 // after it (only the picture: the real scroll is never held or pushed, so
 // the keyboard and the scroll bar always work), footnotes creep, the
 // progress bar lies for a moment, a chapter in the menu is called something
@@ -11,12 +12,10 @@ import { h } from '../../lib/dom';
 import { decayEffects, Drag, lyingProgress, STILL, type DecayEffects } from '../engine/decay';
 import { s } from '../engine/ink';
 import { FlashGate } from '../model';
+import { TripFx } from './trip-fx';
+import type { Mood } from './trip';
 
 const reduced = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-/** The most a letter moves, in pixels, at the worst: body text and titles. */
-export const FLOW_TEXT = 1;
-export const FLOW_TITLE = 3.5;
 
 export interface DecayFxOptions {
   root: HTMLElement;
@@ -33,10 +32,9 @@ export class DecayFx {
   level = 0;
   effects: DecayEffects = STILL;
   private chosen = false;
-  private soft: SVGElement;
-  private strong: SVGElement;
-  private turbulence: SVGElement[];
-  private drag = new Drag(46);
+  mood: Mood = { dark: 0, warm: 0 };
+  readonly trip: TripFx;
+  private drag = new Drag(72);
   private lastTop: number;
   private raf = 0;
   private last = 0;
@@ -48,38 +46,22 @@ export class DecayFx {
     const top = this.o.scroller.scrollTop;
     const dy = top - this.lastTop;
     this.lastTop = top;
-    if (this.active) this.drag.push(dy, this.effects.drag);
+    if (this.active) {
+      this.drag.push(dy, this.effects.drag);
+      this.trip.scrolled(dy);
+    }
     this.paintBar();
     this.loop();
   };
 
   constructor(private readonly o: DecayFxOptions) {
     this.lastTop = o.scroller.scrollTop;
-    const filter = (id: string, scale: number) =>
-      s(
-        'filter',
-        { id, x: '-2%', y: '-10%', width: '104%', height: '120%' },
-        s('feTurbulence', { type: 'turbulence', baseFrequency: '0.012 0.06', numOctaves: 1, seed: 3, result: 'n' }),
-        s('feDisplacementMap', { in: 'SourceGraphic', in2: 'n', scale, xChannelSelector: 'R', yChannelSelector: 'G' }),
-      );
-    this.soft = filter('fc-flow-soft', 0);
-    this.strong = filter('fc-flow-strong', 0);
-    const defs = s('svg', { class: 'ink-defs', width: 0, height: 0, 'aria-hidden': 'true', focusable: 'false' }, s('defs', {}, this.soft, this.strong));
-    o.root.append(defs);
-    this.turbulence = [...defs.querySelectorAll('feTurbulence')];
+    this.trip = new TripFx({ root: o.root, scroller: o.scroller });
     o.scroller.addEventListener('scroll', this.onScroll, { passive: true });
-    // The letters' flow changes shape slowly: three times a second at most, and only while there is decay.
-    this.timers.push(
-      window.setInterval(() => {
-        if (!this.active || this.frozen || document.hidden || this.level <= 0) return;
-        const t = performance.now() / 1000;
-        for (const f of this.turbulence) f.setAttribute('baseFrequency', `${(0.012 + 0.004 * Math.sin(t * 0.7)).toFixed(4)} ${(0.06 + 0.02 * Math.sin(t * 0.43)).toFixed(4)}`);
-      }, 1000 / 3),
-    );
     // A false name in the menu, a lying bar, a ring of the red telephone.
-    this.timers.push(window.setInterval(() => this.rename(), 6500));
+    this.timers.push(window.setInterval(() => this.rename(), 3800));
     this.timers.push(window.setInterval(() => this.paintBar(), 400));
-    this.timers.push(window.setInterval(() => this.ring(), 2600));
+    this.timers.push(window.setInterval(() => this.ring(), 2200));
     this.paintBar();
   }
 
@@ -100,6 +82,7 @@ export class DecayFx {
   /** The record is turned over: everything stops for a moment. */
   freeze(ms = 1200): void {
     this.frozenUntil = performance.now() + ms;
+    this.trip.hold(ms);
     this.o.root.dataset.frozen = '';
     this.drag.reset();
     this.paintDrag(0);
@@ -109,8 +92,9 @@ export class DecayFx {
   }
 
   /** The level now (from the reader's place). */
-  set(level: number, scene: HTMLElement | null): void {
+  set(level: number, scene: HTMLElement | null, mood?: Mood): void {
     this.level = level;
+    if (mood) this.mood = mood;
     if (scene !== this.dragged) {
       this.paintDrag(0);
       this.dragged = scene;
@@ -132,8 +116,7 @@ export class DecayFx {
     r.style.setProperty('--drift', `${e.drift}deg`);
     r.style.setProperty('--echo', e.echo.toFixed(3));
     r.dataset.decay = String(Math.round((on ? this.level : 0) * 10));
-    this.soft.querySelector('feDisplacementMap')!.setAttribute('scale', (e.flow * FLOW_TEXT * 2).toFixed(2));
-    this.strong.querySelector('feDisplacementMap')!.setAttribute('scale', (e.flow * FLOW_TITLE * 2).toFixed(2));
+    this.trip.set(on ? this.level : 0, this.mood, this.dragged, on);
     if (!on) {
       this.drag.reset();
       this.paintDrag(0);
@@ -204,6 +187,7 @@ export class DecayFx {
     this.o.scroller.removeEventListener('scroll', this.onScroll);
     this.timers.forEach((t) => clearInterval(t));
     if (this.raf) cancelAnimationFrame(this.raf);
+    this.trip.dispose();
   }
 }
 
