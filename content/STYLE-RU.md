@@ -39,4 +39,4 @@ This applies to all Russian text in the museum: cards, chapters, longreads, help
 
 ## Volume
 
-Redundancy needs room. Card body limits: 220 words in English (235 for genres, languages, scripts and instruments), up to 1.3× that in Russian. If the text no longer fits after editing, raise it in a separate decision; don't cut the links between sentences.
+Redundancy needs room. The card body limit is 320 words in English (340 for genres, languages, scripts and instruments), up to 1.3× that in Russian: the owner raised it on 17.11.2026 for context and connections. Don't cut the connections to fit.
