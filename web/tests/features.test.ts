@@ -73,6 +73,13 @@ describe('feature validation', () => {
     expect(errs).toMatch(/art p: a real photo needs alt and credit/);
     expect(errs).toMatch(/scene two: photo missing is not a photo in the feature's art list/);
   });
+  it('a photo caption, when given, needs English and Russian', () => {
+    const f = base();
+    f.art = [{ id: 'p', kind: 'photo', file: 'p.jpg', rights: 'p.jpg', alt: bi('A', 'А'), credit: bi('C', 'К'), caption: { en: 'Only English' } as never }];
+    expect(validateFeature(f, { rights: new Set(['p.jpg']) }).join('\n')).toMatch(/art p: caption needs en and ru/);
+    f.art[0].caption = bi('Caption', 'Подпись');
+    expect(validateFeature(f, { rights: new Set(['p.jpg']) })).toEqual([]);
+  });
   it('a scene with only held text has nothing to show', () => {
     const f = base();
     f.scenes[1].blocks = [f.scenes[1].blocks[1]];
@@ -240,6 +247,23 @@ describe('the Sea Lion Girls content', () => {
     // Every line still resting on one source stays held: today only "learned by ear".
     const held = blocks.filter((b) => b.hold).map((b) => b.id);
     expect(held).toEqual(['by-ear']);
+  });
+  it('shows a cleared real photo on every stop with a person to see, each with its caption, credit and source', () => {
+    const ledger = parse(readFileSync('../content/ledger/media.yaml', 'utf8')) as { file: string; feature?: string; url?: string; source_revision?: string; license_url?: string; caption?: { en: string; ru: string }; credit?: { en: string; ru: string } }[];
+    const photos = Object.fromEntries(f.scenes.filter((s) => s.photo).map((s) => [s.id, s.photo]));
+    expect(photos).toEqual({ simone: 'simone-1965', bass: 'hughes-1936', jazz: 'lateef-1964', beat: 'easybeats-1967', house: 'vega-2009', feist: 'feist-2006', kanye: 'kanye-2008', massive: 'massive-2010' });
+    for (const [scene, id] of Object.entries(photos)) {
+      if (scene === 'simone') continue;
+      const a = f.art!.find((x) => x.id === id)!;
+      const e = ledger.find((x) => x.file === a.file && x.feature === 'sea-lion-girls');
+      expect(e, id).toBeDefined();
+      expect(a.source, id).toBe(e!.url);
+      expect(e!.source_revision, id).toMatch(/^https:\/\/commons\.wikimedia\.org\/w\/index\.php\?title=File:.+&oldid=\d+$/);
+      expect(a.caption, id).toEqual(e!.caption);
+      expect(a.credit, id).toEqual(e!.credit);
+      // An attribution licence gets its link next to the credit.
+      if (/creativecommons\.org\/licenses\//.test(e!.license_url ?? '')) expect(a.license_url, id).toBe(e!.license_url);
+    }
   });
 });
 

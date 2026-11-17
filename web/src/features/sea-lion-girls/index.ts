@@ -11,6 +11,7 @@ import { blot, develop, drawing, ink, s, sketch } from '../engine/ink';
 import type { Picture } from '../engine/layers';
 import { Kit, watchYouTubeTime } from '../engine/kit';
 import * as art from './art';
+import * as drawn from './drawn';
 import { river, stop, syncYear } from './river';
 import '../engine/engine.css';
 import './sea-lion-girls.css';
@@ -19,6 +20,38 @@ type Render = (kit: Kit, sc: Scene) => HTMLElement;
 
 /** The scene's generated layers, or the placeholder drawing until it has them. */
 const picture = (kit: Kit, sc: Scene, placeholder: () => Element, opts: Parameters<Kit['art']>[1] = {}): Element => kit.art(sc, opts)?.el ?? placeholder();
+
+/** The sketch each photographed stop develops out of. */
+const MOTIF: Record<string, drawn.Motif> = { bass: 'desk', jazz: 'flute', beat: 'guitar', house: 'decks', feist: 'hands', kanye: 'pads', massive: 'stage' };
+/** Drawings in code for the scenes still waiting for their generated art (ART-BRIEF-2). */
+const DRAWN: Record<string, () => SVGSVGElement> = { words: drawn.words, burial: drawn.nightStreet, screen: drawn.projector, silence: drawn.silence };
+
+/** A real photograph developing out of a drawing, shown whole on paper, with its caption and credit (and links where the licence asks). */
+function print(kit: Kit, id: unknown, under: Element): HTMLElement | null {
+  const p = kit.photo(id);
+  if (!p) return null;
+  const link = (href: string, text: string) => h('a', { href, target: '_blank', rel: 'noopener noreferrer' }, text);
+  return h(
+    'figure.ft-photo.ft-print',
+    { 'data-photo': String(id) },
+    develop(under, { src: p.src, alt: p.alt }, 0.12, 0.45),
+    h(
+      'figcaption.ft-credit',
+      {},
+      p.caption ? h('span.ft-caption', {}, p.caption) : null,
+      p.credit,
+      p.source ? [' · ', link(p.source, pick({ en: 'source', ru: 'источник' }))] : null,
+      p.license ? [' · ', link(p.license, pick({ en: 'licence', ru: 'лицензия' }))] : null,
+    ),
+  );
+}
+
+/** A scene's picture: its photo developing out of a sketch, its generated art, or its drawing in code; else `fallback`. */
+function still(kit: Kit, sc: Scene, fallback?: () => Element): Element | null {
+  const own = kit.art(sc)?.el ?? (DRAWN[sc.id] ? drawn.panel(sc.id, DRAWN[sc.id]()) : null);
+  const photo = sc.photo ? print(kit, sc.photo, own ?? drawn.panel(sc.id, drawn.sketchOf(MOTIF[sc.id] ?? 'stage', sc.id.length * 131))) : null;
+  return photo ?? own ?? fallback?.() ?? null;
+}
 
 /** The house: its layered picture with a door that opens, or the drawn placeholder. */
 function house(kit: Kit, sc: Scene): { el: Element; open(on: boolean): void } {
@@ -126,6 +159,8 @@ const single: Render = (kit, sc) => {
     );
   const disc = h('div.sg-disc', {}, face('a'), face('b'));
   const record = h('div.sg', { 'data-side': 'a' }, h('div.sg-vinyl', { 'aria-hidden': 'true' }), disc);
+  // The record lies on the platter of a player on the table (generated art, when the scene has it).
+  const table = h('div.sg-table', {}, kit.art(sc)?.el ?? drawn.panel('single', drawn.recordTable()), record);
   const live = h('p.sg-now.ft-visually-hidden', { 'aria-live': 'polite' });
   const flip = h('button.btn.primary.sg-flip', { type: 'button', 'aria-pressed': 'false' }, kit.ui('flip')) as HTMLButtonElement;
   flip.addEventListener('click', () => {
@@ -134,10 +169,10 @@ const single: Render = (kit, sc) => {
     flip.setAttribute('aria-pressed', String(b));
     live.textContent = `${kit.ui(b ? 'side-b' : 'side-a')}: ${t(b ? 'label-b' : 'label-a')}`;
   });
-  return kit.section(sc, { stage: h('div.ft-stack', {}, record, live), after: [flip], screens: 2.6 });
+  return kit.section(sc, { stage: h('div.ft-stack', {}, table, live), after: [flip], screens: 2.6 });
 };
 
-const textScene: Render = (kit, sc) => kit.section(sc, { stage: art.page() });
+const textScene: Render = (kit, sc) => kit.section(sc, { stage: still(kit, sc, () => art.page()) });
 
 const riverScene: Render = (kit, sc) => {
   const r = river(kit, kit.art(sc));
@@ -147,7 +182,8 @@ const riverScene: Render = (kit, sc) => {
   return el;
 };
 
-const stopScene: Render = (kit, sc) => kit.section(sc, { stage: drawing('0 0 400 300', 'art-stop', ink(sketch([[200, 0], [196, 120], [204, 300]], sc.id.length * 7, 3), 0, 0.6, { class: 'ink-line river' })), after: [stop(kit, sc.nodes ?? [])], screens: 1.6 });
+const stopScene: Render = (kit, sc) =>
+  kit.section(sc, { stage: still(kit, sc, () => drawing('0 0 400 300', 'art-stop', ink(sketch([[200, 0], [196, 120], [204, 300]], sc.id.length * 7, 3), 0, 0.6, { class: 'ink-line river' }))), after: [stop(kit, sc.nodes ?? [])], screens: 1.6 });
 
 /**
  * Paradise Circus: the clap of Simone's record runs under the whole song.
@@ -198,7 +234,8 @@ const flashes: Render = (kit, sc) => {
     clearInterval(poll);
     stopYt();
   });
-  return kit.section(sc, { stage: svg, after: [stop(kit, sc.nodes ?? [])], screens: 2.4 });
+  const photo = still(kit, sc);
+  return kit.section(sc, { stage: photo ? h('div.ft-stack.fl-stack', {}, photo, svg) : svg, after: [stop(kit, sc.nodes ?? [])], screens: 2.4 });
 };
 
 const filmstrip: Render = (kit, sc) => {
@@ -212,10 +249,10 @@ const filmstrip: Render = (kit, sc) => {
       return h('li.fs-frame', { 'data-work': f.work }, art.frame(i), h('b.fs-year', {}, y ? String(y) : ''), h('p', {}, pick(f.caption)), n?.play ? kit.playButton(n) : null);
     }),
   );
-  return kit.section(sc, { after: [strip], screens: 1.4 });
+  return kit.section(sc, { stage: still(kit, sc), after: [strip], screens: 1.4 });
 };
 
-const silence: Render = (kit, sc) => kit.section(sc, { screens: 2 });
+const silence: Render = (kit, sc) => kit.section(sc, { stage: still(kit, sc), screens: 2 });
 
 const classroom: Render = (kit, sc) => kit.section(sc, { stage: picture(kit, sc, () => art.classroom()), screens: 2.2 });
 

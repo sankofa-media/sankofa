@@ -213,7 +213,7 @@ test('a link keeps the scene: reload and back return to it', async ({ page }) =>
 test('the feature fits a phone: nothing runs off the side', async ({ page, isMobile }) => {
   test.skip(!isMobile, 'phone layout');
   await openFeature(page);
-  for (const id of ['door', 'ring', 'expedition', 'arrival', 'family', 'minute', 'words', 'album', 'simone', 'single', 'river', 'screen', 'classroom', 'finale']) {
+  for (const id of ['door', 'ring', 'expedition', 'arrival', 'family', 'minute', 'words', 'album', 'simone', 'single', 'bass', 'river', 'jazz', 'massive', 'burial', 'screen', 'silence', 'classroom', 'finale']) {
     await goToScene(page, id);
     const over = await page.locator('.ft-sheet').evaluate((el) => el.scrollWidth - el.clientWidth);
     expect(over, id).toBeLessThanOrEqual(1);
@@ -420,6 +420,28 @@ test('every control the text tells the reader to press exists, with that label',
   // (The museum's typography binds short words with no-break spaces; compare the words.)
   for (const label of ['Hear the clap', 'Turn the record over', 'Clap together']) expect(text).toContain(`“${label}”`);
   expect(text).not.toContain('Show the three claps');
+});
+
+test('every scene from the words to the silence has a picture; the photos are whole, captioned and credited', async ({ page }) => {
+  await openFeature(page);
+  for (const id of ['words', 'single', 'bass', 'jazz', 'beat', 'house', 'feist', 'kanye', 'massive', 'burial', 'screen', 'silence']) {
+    await goToScene(page, id);
+    await expect(scene(page, id).locator('.ft-stage').locator('.ft-art, figure.ft-photo').first(), id).toBeVisible();
+  }
+  const photos: Record<string, string> = { bass: 'langston-hughes-1936', jazz: 'yusef-lateef-1964', beat: 'easybeats-schiphol-1967', house: 'louie-vega-2009', feist: 'feist-fillmore-2006', kanye: 'kanye-west-2008', massive: 'massive-attack-2010' };
+  for (const [id, file] of Object.entries(photos)) {
+    const fig = scene(page, id).locator('figure.ft-photo.ft-print');
+    const img = fig.locator('img.ink-photo');
+    await expect(img, id).toHaveAttribute('src', new RegExp(`${file}\\.jpg$`));
+    await expect(img, id).toHaveAttribute('loading', 'lazy');
+    await expect(img, id).toHaveCSS('object-fit', 'contain');
+    await expect(fig.locator('.ft-caption'), id).not.toBeEmpty();
+    await expect(fig.locator('figcaption a[href^="https://commons.wikimedia.org/wiki/File:"]'), id).toHaveCount(1);
+  }
+  // Burial stays anonymous: a drawing, no photo.
+  await expect(scene(page, 'burial').locator('figure.ft-photo')).toHaveCount(0);
+  // The single lies on the platter of a player on the table, and still turns over.
+  await expect(scene(page, 'single').locator('.sg-table > .ft-art + .sg')).toHaveCount(1);
 });
 
 test('Nina Simone’s photo is shown whole, not cropped', async ({ page }) => {

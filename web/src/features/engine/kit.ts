@@ -282,10 +282,10 @@ export class Kit {
   }
 
   /** A real photo from the feature's art list (cleared by the build), or null. */
-  photo(id: unknown): { src: string; alt: string; credit: string } | null {
+  photo(id: unknown): { src: string; alt: string; credit: string; caption?: string; source?: string; license?: string } | null {
     const a = this.ctx.data.art.find((x) => x.id === id);
     if (!a || a.kind !== 'photo' || !a.alt || !a.credit) return null;
-    return { src: this.ctx.app.media(a.file), alt: pick(a.alt), credit: pick(a.credit) };
+    return { src: this.ctx.app.media(a.file), alt: pick(a.alt), credit: pick(a.credit), ...(a.caption ? { caption: pick(a.caption) } : {}), ...(a.source ? { source: a.source } : {}), ...(a.license_url ? { license: a.license_url } : {}) };
   }
 
   /** Play a node in the museum's docked player (call from a click). */

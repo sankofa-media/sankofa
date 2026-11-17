@@ -51,6 +51,8 @@ export interface Art {
   rights?: string;
   /** What the picture shows, for a screen reader. */
   alt?: Bi;
+  /** What the photo shows, in a line under it (as its source page states it). */
+  caption?: Bi;
   /** Who made it and under what licence, shown with it. */
   credit?: Bi;
   /** The page it comes from, linked from the credit. */
@@ -265,6 +267,7 @@ export function validateFeature(f: FeatureSource, ctx: ValidateContext = {}): st
     if (a.kind === 'generated' && ctx.ledger?.has(a.file)) errs.push(`art ${a.id}: generated art must not be in the photo-rights ledger`);
     if (a.kind !== 'photo' && a.kind !== 'generated') errs.push(`art ${a.id}: kind must be photo or generated`);
     if (a.kind === 'photo' && !(bi(a.alt) && bi(a.credit))) errs.push(`art ${a.id}: a real photo needs alt and credit in en and ru`);
+    if (a.caption !== undefined && !bi(a.caption)) errs.push(`art ${a.id}: caption needs en and ru`);
     for (const k of ['source', 'license_url'] as const) if (a[k] !== undefined && !/^https:\/\/\S+$/.test(a[k]!)) errs.push(`art ${a.id}: ${k} must be an https link`);
   }
   if (!Array.isArray(f.scenes) || f.scenes.length === 0) {
