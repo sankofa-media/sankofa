@@ -53,6 +53,10 @@ export interface Art {
   alt?: Bi;
   /** Who made it and under what licence, shown with it. */
   credit?: Bi;
+  /** The page it comes from, linked from the credit. */
+  source?: string;
+  /** The licence's own page, linked from the credit when the licence asks for a link. */
+  license_url?: string;
 }
 
 /**
@@ -96,6 +100,12 @@ export interface SceneArt {
   /** The canvas, "w / h" (3 / 2 when not given). */
   aspect?: string;
   layers: ArtLayer[];
+  /**
+   * Transparent pictures the scene's mechanic places by itself rather than
+   * stacking them on the canvas (the figures of the Arthur Lee mode). They
+   * ship with the scene and need alt text like any layer.
+   */
+  overlays?: ArtLayer[];
   /** Where hands meet, in percent of the canvas: a ripple of ink spreads there with every clap. */
   claps?: { depth?: number; at: [number, number][] };
 }
@@ -202,7 +212,7 @@ const RANGE = /^\s*(0|1|0?\.\d+)\s+(0|1|0?\.\d+)\s*$/;
 
 /** Every art file the feature's scenes use, for the build to ship. */
 export function sceneArtFiles(f: FeatureSource): string[] {
-  return [...new Set(f.scenes.flatMap((s) => (s.art?.layers ?? []).map((l) => l.file)))];
+  return [...new Set(f.scenes.flatMap((s) => [...(s.art?.layers ?? []), ...(s.art?.overlays ?? [])].map((l) => l.file)))];
 }
 
 /** Problems with a scene's generated illustration. */
@@ -219,7 +229,8 @@ export function validateSceneArt(art: unknown, ctx: ValidateContext = {}, photos
     if (c?.depth !== undefined && !(typeof c.depth === 'number' && c.depth >= 0 && c.depth <= 80)) errs.push('art claps depth must be 0..80 pixels');
   }
   if (!Array.isArray(a.layers) || a.layers.length === 0) return [...errs, 'art has no layers'];
-  for (const l of a.layers) {
+  if (a.overlays !== undefined && !Array.isArray(a.overlays)) errs.push('art overlays must be a list of layers');
+  for (const l of [...a.layers, ...(Array.isArray(a.overlays) ? a.overlays : [])]) {
     const at = `art layer ${l?.file ?? '?'}`;
     if (typeof l?.file !== 'string' || !ART_FILE.test(l.file)) {
       errs.push(`${at}: file must be a lowercase name ending in .webp, .png or .jpg`);
@@ -254,6 +265,7 @@ export function validateFeature(f: FeatureSource, ctx: ValidateContext = {}): st
     if (a.kind === 'generated' && ctx.ledger?.has(a.file)) errs.push(`art ${a.id}: generated art must not be in the photo-rights ledger`);
     if (a.kind !== 'photo' && a.kind !== 'generated') errs.push(`art ${a.id}: kind must be photo or generated`);
     if (a.kind === 'photo' && !(bi(a.alt) && bi(a.credit))) errs.push(`art ${a.id}: a real photo needs alt and credit in en and ru`);
+    for (const k of ['source', 'license_url'] as const) if (a[k] !== undefined && !/^https:\/\/\S+$/.test(a[k]!)) errs.push(`art ${a.id}: ${k} must be an https link`);
   }
   if (!Array.isArray(f.scenes) || f.scenes.length === 0) {
     errs.push('no scenes');
