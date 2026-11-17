@@ -3,7 +3,9 @@ import { readFileSync } from 'node:fs';
 import { parse } from 'yaml';
 import { BLEND_FROM, decayAt, decayEffects, Drag, lyingProgress, THRESHOLDS, type DecayPoint } from '../src/features/engine/decay';
 import { byteCapacity, codewords, encodeQR, formatBits, qrPath, rsRemainder, versionBits } from '../src/features/engine/qr';
-import { FlashGate, publishFeature, validateFeature, validateLenses, type FeatureSource } from '../src/features/model';
+import { FlashGate, publishFeature, sceneArtFiles, validateFeature, validateLenses, validateSceneArt, type FeatureSource } from '../src/features/model';
+import { sortOverlays } from '../src/features/forever-changes/lee/mode';
+import { existsSync } from 'node:fs';
 import { VISION_IDS } from '../src/features/forever-changes/art';
 import { BEHIND_FROM, BEHIND_GAP, facing, gap, intensity, MAX_AT_ONCE, movedToward, Scheduler, type Vision } from '../src/features/forever-changes/lee/scheduler';
 import { leeUrl, wantsLee } from '../src/features/forever-changes/lee/url';
@@ -24,7 +26,9 @@ describe('Forever Changes: the scenes', () => {
     expect(songs.map((s) => s.side).join('')).toBe('aaaaaabbbbb');
   });
   it('the content is valid and held lines never ship', () => {
-    expect(validateFeature(fc)).toEqual([]);
+    // Its photographs are cleared by the media ledger (the build also checks each file's checksum).
+    const ledger = parse(readFileSync(new URL('../../content/ledger/media.yaml', import.meta.url), 'utf8')) as { file: string; feature?: string }[];
+    expect(validateFeature(fc, { rights: new Set(ledger.filter((e) => e.feature === 'forever-changes').map((e) => e.file)) })).toEqual([]);
     expect(fc.scenes.every((s) => s.blocks.every((b) => typeof b.draft === 'boolean'))).toBe(true);
     const held = fc.scenes.flatMap((s) => s.blocks.filter((b) => b.hold));
     expect(held.length).toBeGreaterThanOrEqual(0);
@@ -56,6 +60,52 @@ describe('Forever Changes: the scenes', () => {
     for (const s of fc.scenes.filter((x) => x.kind === 'song'))
       for (const b of s.blocks.filter((x) => !x.lens && !x.hold && x.role !== 'quote'))
         for (const m of b.en.matchAll(/“([^”]+)”/g)) expect(m[1].split(/\s+/).length, `${s.id}/${b.id}: ${m[1]}`).toBeLessThanOrEqual(8);
+  });
+});
+
+describe('the pictures', () => {
+  const dir = new URL('../../content/features/forever-changes/art/', import.meta.url);
+  it('every chapter has a generated picture, every file is there, and people stay unnamed in it', () => {
+    for (const s of fc.scenes) {
+      expect(s.art?.generated, s.id).toBe(true);
+      expect(s.art!.layers.length, s.id).toBeGreaterThan(0);
+      expect(validateSceneArt(s.art), s.id).toEqual([]);
+      // The picture as a whole is described: its back layer (or each state's) has alt text.
+      expect(s.art!.layers.some((l) => l.alt !== ''), s.id).toBe(true);
+    }
+    for (const f of sceneArtFiles(fc)) expect(existsSync(new URL(f, dir)), f).toBe(true);
+    const alts = JSON.stringify(fc.scenes.map((s) => [...s.art!.layers, ...(s.art!.overlays ?? [])].map((l) => l.alt)));
+    expect(alts).not.toMatch(/Arthur|Lee\b|Echols|Botnick|MacLean|Forssi|Holzman|Артур|Ли\b|Эколс/);
+  });
+  it('the chapters that follow the text have a state per part', () => {
+    const states = (id: string) => [...new Set(fc.scenes.find((s) => s.id === id)!.art!.layers.map((l) => l.state))];
+    expect(states('prologue')).toEqual(['memphis', 'dorsey', 'bido', 'castle']);
+    expect(states('after')).toEqual(['after', 'prison']);
+  });
+  it('the real photographs are cleared, credited in both languages and never marked generated', () => {
+    const ledger = parse(readFileSync(new URL('../../content/ledger/media.yaml', import.meta.url), 'utf8')) as { file: string; feature?: string; license_url?: string; source_revision?: string }[];
+    const photos = (fc.art ?? []).filter((a) => a.kind === 'photo');
+    expect(photos.map((a) => a.id)).toEqual(['love-1967', 'love-1966-ad', 'love-red-book-ad', 'echols-2019']);
+    for (const a of photos) {
+      const e = ledger.find((x) => x.file === a.file);
+      expect(e?.feature, a.id).toBe('forever-changes');
+      expect(e?.source_revision, a.id).toMatch(/oldid=\d+/);
+      expect(a.credit?.en && a.credit?.ru, a.id).toBeTruthy();
+      expect(a.source, a.id).toMatch(/^https:\/\/commons\.wikimedia\.org\/wiki\/File:/);
+    }
+    // CC BY-SA: the author and a link to the licence.
+    const echols = photos.find((a) => a.id === 'echols-2019')!;
+    expect(echols.credit!.en).toContain('Ghmyrtle');
+    expect(echols.license_url).toBe('https://creativecommons.org/licenses/by-sa/4.0/');
+    expect(validateFeature({ ...fc, art: [{ ...echols, license_url: 'http://x' }] })).toContain('art echols-2019: license_url must be an https link');
+  });
+  it('the Arthur Lee mode’s painted overlays are sorted into figures, faces and objects', () => {
+    const lee = fc.scenes.find((s) => s.kind === 'lee')!.art!.overlays!;
+    const o = sortOverlays(lee.map((l) => ({ file: l.file, src: l.file, alt: '' })));
+    expect(o.figures.length).toBe(8);
+    expect(o.faces.length).toBe(2);
+    expect(Object.keys(o.objects).sort()).toEqual(['newspaper', 'old-man', 'telephone']);
+    for (const id of Object.keys(o.objects)) expect(VISION_IDS, id).toContain(id);
   });
 });
 

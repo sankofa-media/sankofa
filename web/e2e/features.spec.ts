@@ -173,41 +173,30 @@ test('Massive Attack: the thread back to 1964 and 1939 pulses with the clap', as
 
 test('in calm mode the Paradise Circus thread stays still', async ({ page }) => {
   await openFeature(page);
-  await sheet(page).locator('.ft-calm').click();
+  await page.emulateMedia({ reducedMotion: 'reduce' });
   await goToScene(page, 'massive');
   await page.waitForTimeout(2500);
   await expect(scene(page, 'massive').locator('svg.art-flashes')).not.toHaveClass(/pulse/);
 });
 
-test('calm mode: a switch on the feature screen, on by itself with reduced motion', async ({ page }) => {
+test('calm mode follows the system’s reduced motion, with no switch on the screen', async ({ page }) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
   await openFeature(page);
-  const calm = sheet(page).locator('.ft-calm');
-  await expect(calm).toHaveAttribute('aria-pressed', 'false');
-  await calm.click();
-  await expect(calm).toHaveAttribute('aria-pressed', 'true');
+  await expect(sheet(page).locator('.ft-calm')).toHaveCount(0);
   await expect(feature(page)).toHaveClass(/is-calm/);
+  const anim = await feature(page).locator('.ink-breathe').first().evaluate((e) => getComputedStyle(e).animationName);
+  expect(anim).toBe('none');
   // Every drawing is finished and every line of text shown at once.
   await expect.poll(() => feature(page).locator('.ft-block:not(.on)').count()).toBe(0);
   const offsets = await feature(page).locator('[data-scene="door"] [data-ink]').evaluateAll((els) => els.map((e) => (e as SVGElement).style.strokeDashoffset));
   expect(offsets.every((o) => o === '0')).toBe(true);
-  // Kept for the next visit.
-  await page.reload();
-  await expect(sheet(page).locator('.ft-calm')).toHaveAttribute('aria-pressed', 'true');
-});
-
-test('calm mode follows the system’s reduced motion', async ({ page }) => {
-  await page.emulateMedia({ reducedMotion: 'reduce' });
-  await openFeature(page);
-  await expect(sheet(page).locator('.ft-calm')).toHaveAttribute('aria-pressed', 'true');
-  const anim = await feature(page).locator('.ink-breathe').first().evaluate((e) => getComputedStyle(e).animationName);
-  expect(anim).toBe('none');
 });
 
 test('in Russian, the feature, its labels and its menu entry are Russian', async ({ page }) => {
   await openFeature(page, '#view=feature&item=sea-lion-girls&lang=ru');
   await expect(feature(page).locator('h1.ft-h1')).toContainText('как две девушки из Миссисипи');
   await expect(feature(page).locator('.ft-knock')).toHaveText('Постучать — так включится звук');
-  await expect(sheet(page).locator('.ft-calm')).toContainText('Спокойный режим');
+  await expect(sheet(page).locator('.ft-sound')).toContainText('Хлопок');
   await expect(scene(page, 'door').locator('[data-block="when"]')).toContainText('13 мая 1939 года');
   await expect(page.locator('.nav-actions [data-features]')).toHaveAttribute('aria-label', 'Спецпроекты');
 });
@@ -344,7 +333,7 @@ test('the finale: the door of the first scene opens, with the light behind it', 
 
 test('calm mode keeps the illustrations still and finished', async ({ page }) => {
   await openFeature(page, '#view=feature&item=sea-lion-girls&scene=album');
-  await sheet(page).locator('.ft-calm').click();
+  await page.emulateMedia({ reducedMotion: 'reduce' });
   await expect(feature(page)).toHaveClass(/is-calm/);
   const style = (sel: string) => feature(page).locator(sel).first().evaluate((e) => {
     const s = getComputedStyle(e);
@@ -398,7 +387,7 @@ test('the ring, the family and the minute are drawn in layers: whole figures, in
 
 test('in calm mode a clap leaves no ripple and the sisters already stand forward', async ({ page }) => {
   await openFeature(page);
-  await sheet(page).locator('.ft-calm').click();
+  await page.emulateMedia({ reducedMotion: 'reduce' });
   await expect(feature(page)).toHaveClass(/is-calm/);
   const step = await scene(page, 'family').locator('.al[data-role="step"]').first().evaluate((e) => getComputedStyle(e).scale);
   expect(step).toBe('1');

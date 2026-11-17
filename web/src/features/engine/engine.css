@@ -333,8 +333,7 @@
 .ft-art .al[data-state='open'] img {
   transition-duration: 1.6s;
 }
-.ft-art[data-state='open'] .al[data-state='open'] img,
-.ft-art[data-state='closed'] .al[data-state='closed'] img {
+.ft-art .al.al-on[data-state] img {
   opacity: 1;
 }
 /* A figure breathes (the individual scale property leaves the parallax transform alone). */
@@ -502,25 +501,21 @@ body.mp-on .cc[data-place='corner'] {
   }
 }
 
-/* The bar's switches */
-.ft-calm,
+/* The bar's switch */
 .ft-sound {
   font-size: 13px;
   padding: 0.4em 0.8em;
 }
-.ft-calm[aria-pressed='true'],
 .ft-sound[aria-pressed='true'] {
   border-color: var(--gold);
   color: var(--gold);
 }
-.ft-calm-ic,
 .ft-sound-ic {
   width: 9px;
   height: 9px;
   border-radius: 50%;
   border: 1.5px solid currentColor;
 }
-.ft-calm[aria-pressed='true'] .ft-calm-ic,
 .ft-sound[aria-pressed='true'] .ft-sound-ic {
   background: currentColor;
 }
@@ -622,7 +617,6 @@ body.mp-on .cc[data-place='corner'] {
   }
 }
 @media (max-width: 420px) {
-  .ft-calm,
   .ft-sound {
     font-size: 12px;
     padding: 0.35em 0.6em;

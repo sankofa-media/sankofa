@@ -90,42 +90,6 @@
   background: var(--fc-acid);
 }
 
-/* ---------- the door ---------- */
-.fc-gate {
-  position: fixed;
-  inset: var(--nav-h) 0 0 0;
-  z-index: 35;
-  display: grid;
-  place-items: center;
-  padding: 16px;
-  background: #050403;
-  color: #efe4cf;
-}
-.fc-gate-box {
-  max-width: 34rem;
-  font-family: var(--font-sans);
-  font-size: 17px;
-  line-height: 1.55;
-}
-.fc-gate-box h2 {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(26px, 4vw, 38px);
-  margin: 0 0 14px;
-}
-.fc-gate-go {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 22px;
-}
-.fc-gate-reduced {
-  color: #c7b89c;
-}
-.fc[data-gate] .fc-lee-pinbox {
-  visibility: hidden;
-}
-
 /* ---------- scenes ---------- */
 .fc .ft-h1 {
   font-family: var(--font-display);
@@ -140,9 +104,6 @@
 }
 .fc .ft-long .ft-flow {
   padding-bottom: 26svh;
-}
-.fc .ft-scene {
-  border-top: 1px solid color-mix(in srgb, var(--ft-ink) 8%, transparent);
 }
 .fc-plays {
   display: flex;
@@ -161,71 +122,12 @@
 .fc-no-player {
   font-size: 13px;
 }
-/* The magazine: a serious serif, a rule, columns on a wide screen. */
-.fc .ft-k-magazine .ft-block,
-.fc .ft-k-after .ft-block {
-  border-radius: 0;
-  box-shadow: none;
-  border-top: 2px solid color-mix(in srgb, var(--ft-ink) 60%, transparent);
-}
-.fc .ft-k-after .ft-block {
-  border-top-width: 1px;
-}
-.fc-mast {
-  font-size: 42px;
-  letter-spacing: 0.04em;
-}
 /* The diary: dated pages. */
 .fc-diary .ft-b-line {
   font-family: var(--font-mono, ui-monospace, monospace);
-  border-left: 3px solid var(--ft-red);
 }
 .fc-diary .ft-b-line .ft-line {
   font-size: 16px;
-}
-/* The hillside: ink turning to watercolour; the lights come and go slowly. */
-.art-hillside .fc-glow {
-  fill: color-mix(in srgb, var(--fc-acid) 18%, transparent);
-  filter: blur(calc(6px + var(--p, 0) * 14px));
-}
-.fc-light {
-  fill: var(--fc-acid);
-  opacity: 0.7;
-  animation: fc-twinkle 5s ease-in-out infinite;
-}
-.fc-light.l1 {
-  animation-delay: -1.2s;
-  fill: var(--ft-red);
-}
-.fc-light.l2 {
-  animation-delay: -2.4s;
-}
-.fc-light.l3 {
-  animation-delay: -3.1s;
-  fill: #f5efe0;
-}
-.fc-light.l4 {
-  animation-delay: -4s;
-}
-@keyframes fc-twinkle {
-  50% {
-    opacity: 0.25;
-  }
-}
-.fc-sitter {
-  stroke: var(--ft-red);
-}
-.fc-stranger .ink-line {
-  stroke: var(--fc-teal);
-}
-.fc-stand .fc-lamp {
-  fill: var(--fc-acid);
-  opacity: 0;
-  filter: blur(6px);
-  transition: opacity 1.4s var(--ease);
-}
-.fc-stand.on .fc-lamp {
-  opacity: 0.85;
 }
 .fc [data-scene='end'] .ft-b-line .ft-line {
   font-family: var(--font-display);
@@ -233,15 +135,52 @@
   line-height: 1.15;
 }
 
-/* Placeholder drawings stay clear of the text column on a wide screen. */
-.fc .ft-stage > .ink,
-.fc .ft-stack > .ink {
-  width: min(52vw, 760px, 100vw - 2 * var(--gutter) - 31rem - 32px);
+/* ---------- text on the page ----------
+   No cards: the type sits on the page. Behind each block a feathered shade
+   of the page's own colour, borderless, fades out on every side; on calm
+   paper it is invisible (a magazine page), over a picture or the trip it
+   darkens and blurs just enough to keep the type readable. */
+.fc {
+  --fc-tint: transparent;
+  --fc-scrim: color-mix(in oklab, color-mix(in oklab, var(--ft-paper), #050008 calc(var(--trip-dark, 0) * 70%)), var(--fc-tint) 14%);
+}
+:root[data-theme='light'] .fc,
+.fc.ft-white {
+  --fc-scrim: color-mix(in oklab, var(--ft-paper), var(--fc-tint) 10%);
+}
+.fc .ft-flow > .ft-block {
+  position: relative;
+  isolation: isolate;
+  background: none;
+  box-shadow: none;
+  border: 0;
+  border-radius: 0;
+}
+.fc .ft-flow > .ft-block::before {
+  content: '';
+  position: absolute;
+  /* Wide towards the page's edge, narrow towards the picture, so it never shades the picture. */
+  inset: -56px -26px -56px -84px;
+  z-index: -1;
+  pointer-events: none;
+  background: color-mix(in srgb, var(--fc-scrim) calc(76% + var(--decay, 0) * 22%), transparent);
+  /* Feathered on every side: solid only under the type itself. */
+  mask-image: linear-gradient(to right, transparent, #000 76px, #000 calc(100% - 22px), transparent), linear-gradient(to bottom, transparent, #000 50px, #000 calc(100% - 50px), transparent);
+  mask-composite: intersect;
+}
+/* The controls and the witnesses keep to the text column, clear of the picture. */
+.fc .ft-flow > .ft-block.ft-controls {
+  max-width: 31rem;
 }
 @media (max-width: 720px) {
-  .fc .ft-stage > .ink,
-  .fc .ft-stack > .ink {
-    width: 100%;
+  .fc .ft-flow > .ft-block::before {
+    inset: -36px -40px;
+    mask-image: linear-gradient(to right, transparent, #000 28px, #000 calc(100% - 28px), transparent), linear-gradient(to bottom, transparent, #000 32px, #000 calc(100% - 32px), transparent);
+  }
+}
+@media (min-width: 721px) {
+  .fc.fx-trip .ft-flow > .ft-block::before {
+    backdrop-filter: blur(calc(var(--decay, 0) * 5px));
   }
 }
 
@@ -272,31 +211,35 @@
   color: var(--ft-ink);
   cursor: pointer;
 }
-.fc-lens-btn[aria-pressed='true'] {
+.fc-lens-btn[aria-checked='true'] {
   background: var(--ft-ink);
   color: var(--ft-paper);
 }
 .fc-lens-btn[data-empty] {
   border-style: dashed;
 }
+/* One witness at a time: the voices share one place and crossfade. */
 .fc-voices {
   display: grid;
-  gap: 12px;
-}
-.fc-lens.differ .fc-voices {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
 }
 .fc-voice {
-  padding: 14px 16px;
-  border-radius: 6px;
-  background: var(--ft-glass);
-  box-shadow: 0 0 0 1px rgba(127, 110, 85, 0.25);
+  grid-area: 1 / 1;
+  opacity: 0;
+  visibility: hidden;
+  translate: 0 6px;
+  transition:
+    opacity 0.45s var(--ease),
+    translate 0.45s var(--ease),
+    visibility 0s linear 0.45s;
 }
-.fc-voice[hidden] {
-  display: none;
-}
-.fc-lens.differ .fc-voice.is-on {
-  box-shadow: 0 0 0 2px var(--ft-red);
+.fc-voice.is-on {
+  opacity: 1;
+  visibility: visible;
+  translate: 0 0;
+  transition:
+    opacity 0.55s var(--ease) 0.12s,
+    translate 0.55s var(--ease) 0.12s,
+    visibility 0s;
 }
 .fc-voice .ft-block {
   padding: 8px 0 0;
@@ -307,7 +250,7 @@
 .fc-voice .ft-text,
 .fc-voice .ft-lede,
 .fc-voice .ft-quote {
-  font-size: 17px;
+  font-size: 18px;
   line-height: 1.5;
 }
 .fc-voice-who {
@@ -319,21 +262,12 @@
   font-size: 13px;
   color: var(--ft-ink-2);
 }
-.fc-voice[data-empty] {
-  min-height: 9rem;
-  background: repeating-linear-gradient(transparent 0 18px, color-mix(in srgb, var(--ft-ink) 14%, transparent) 18px 19px);
-}
 .fc-voice-silence {
   font-family: var(--font-display);
   font-style: italic;
   color: var(--ft-ink-2);
 }
-.fc-lens-hint {
-  margin: 0;
-  font: 14px/1.5 var(--font-sans);
-  color: var(--ft-ink-2);
-}
-/* Each witness restyles the scene. */
+/* Each witness restyles the scene: its type and the tint of the page under the text, never a box. */
 .fc .ft-scene[data-lens='botnick'] .ft-flow > .ft-block:not(.ft-controls),
 .fc-voice[data-voice='botnick'] {
   font-family: var(--font-mono, ui-monospace, monospace);
@@ -346,40 +280,143 @@
 .fc .ft-scene[data-lens='botnick'] .ft-stage {
   background: repeating-linear-gradient(90deg, transparent 0 39px, color-mix(in srgb, var(--fc-teal) 18%, transparent) 39px 40px);
 }
-.fc .ft-scene[data-lens='echols'] .ft-flow > .ft-block:not(.ft-controls),
-.fc-voice[data-voice='echols'] {
-  background: color-mix(in oklab, var(--ft-glass), #8a5a2b 22%);
+.fc .ft-scene[data-lens='echols'] {
+  --fc-tint: #8a5a2b;
 }
 .fc .ft-scene[data-lens='echols'] .ft-stage {
   filter: sepia(0.55);
 }
-.fc .ft-scene[data-lens='stuart-ware'] .ft-flow > .ft-block:not(.ft-controls),
-.fc-voice[data-voice='stuart-ware'] {
-  box-shadow: none;
-  border-left: 3px solid var(--ft-ink);
+.fc .ft-scene[data-lens='stuart-ware'] .ft-flow > .ft-block:not(.ft-controls) .ft-title {
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: clamp(24px, 3vw, 36px);
 }
 .fc .ft-scene[data-lens='stuart-ware'] .ft-stage {
   filter: grayscale(1) contrast(1.15);
 }
-.fc .ft-scene[data-lens='holzman'] .ft-flow > .ft-block:not(.ft-controls),
-.fc-voice[data-voice='holzman'] {
-  background: color-mix(in oklab, var(--ft-glass), #2b5a8a 20%);
-  border-radius: 0;
+.fc .ft-scene[data-lens='holzman'] {
+  --fc-tint: #2b5a8a;
 }
 .fc .ft-scene[data-lens='lee'] .ft-flow > .ft-block:not(.ft-controls) .ft-title,
 .fc .ft-scene[data-lens='lee'] .ft-flow > .ft-block:not(.ft-controls) .ft-lede {
   color: color-mix(in oklab, var(--ft-ink), var(--fc-acid) 30%);
 }
+:root[data-theme='light'] .fc .ft-scene[data-lens='lee'] .ft-flow > .ft-block:not(.ft-controls) .ft-title,
+:root[data-theme='light'] .fc .ft-scene[data-lens='lee'] .ft-flow > .ft-block:not(.ft-controls) .ft-lede {
+  color: color-mix(in oklab, var(--ft-ink), #7a2a00 35%);
+}
 .fc .ft-scene[data-lens='lee'] .ft-stage {
   filter: saturate(1.6) hue-rotate(20deg);
 }
-.fc .ft-scene[data-lens='critics'] .ft-flow > .ft-block:not(.ft-controls),
-.fc-voice[data-voice='critics'] {
-  background: color-mix(in oklab, var(--ft-glass), #fff 6%);
-  border-radius: 2px;
+.fc .ft-scene[data-lens='critics'] .ft-flow > .ft-block:not(.ft-controls) .ft-text {
+  font-style: italic;
+}
+
+/* What lies over a chapter's picture: the record, the watcher, real photographs. */
+.ft-art .fc-over {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+.fc-photo {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  justify-items: center;
+  gap: 6px;
+  padding: 3% 4% 2%;
+  background: var(--ft-art-paper, #f3ead8);
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 1.2s var(--ease),
+    visibility 0s linear 1.2s;
+}
+.fc-photo img {
+  /* Whole, never cropped. */
+  position: static;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  translate: none;
+  scale: none;
+  filter: grayscale(0.1) contrast(1.04);
+}
+.fc-photo.al-on,
+.fc-photo[data-develop-photo] {
+  visibility: visible;
+  transition:
+    opacity 1.2s var(--ease),
+    visibility 0s;
+}
+.fc-photo.al-on {
+  opacity: 1;
+}
+/* Develops out of the drawing as the reader goes on (the drawing stays under it). */
+.fc-photo[data-develop-photo] {
+  opacity: clamp(0, calc((var(--p, 0) - 0.32) / 0.3), 1);
+  transition: none;
+}
+.fc-photo-credit {
+  margin: 0;
+  max-width: 62ch;
+  font: 12px/1.35 var(--font-sans);
+  color: #3d3429;
+  text-align: center;
+}
+.fc-photo-credit a {
+  color: inherit;
+}
+.is-calm .fc-photo[data-develop-photo] {
+  opacity: 1;
 }
 
 /* ---------- songs and the record ---------- */
+/* The record lies over the last picture of side A, which fades as the reader goes on and goes when it turns. */
+.ft-art .fc-record {
+  position: absolute;
+  right: 5%;
+  top: 7%;
+  width: 40%;
+  z-index: 1;
+  filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.45));
+}
+.ft-art .fc-record > svg {
+  border-radius: 50%;
+  background: radial-gradient(circle, #e9dcc3 0 21%, #141017 22% 100%);
+}
+.ft-art .fc-record .ink-line {
+  stroke: #c7b89c;
+}
+.ft-art .fc-record .ink-line.red {
+  stroke: #e0574a;
+}
+.ft-art .fc-record .fc-faces {
+  inset: 30%;
+  font-size: clamp(8px, 0.85vw, 12px);
+  color: #1f1b16;
+}
+.fc [data-scene='flip'] .ft-art .al {
+  opacity: calc(1 - var(--p, 0) * 0.6);
+  transition:
+    mask-position 1.8s var(--ease) calc(0.15s + var(--i, 0) * 0.28s),
+    opacity 1.2s var(--ease);
+}
+.fc [data-scene='flip'][data-side='b'] .ft-art .al {
+  opacity: 0.12;
+}
+/* The Arthur Lee mode's own chapter: figures that are not there, over a dark wash. */
+.ft-art[data-art='lee'] {
+  --ft-art-paper: #07050b;
+  background: radial-gradient(ellipse 70% 80% at 50% 62%, #2b1a3a, #0b0710 62%, #050308);
+}
+.ft-art[data-art='lee'] img {
+  filter: saturate(0.85) brightness(0.92) drop-shadow(0 0 18px rgba(156, 91, 214, 0.35));
+}
+
 .fc-record {
   position: relative;
   display: grid;
@@ -583,9 +620,6 @@
     scale: 1;
   }
 }
-.fc.fx-on .ft-flow > .ft-block {
-  background: color-mix(in srgb, var(--ft-glass), #050008 calc(var(--trip-dark, 0) * 40%));
-}
 .fc.fx-creep .ft-flow > .ft-b-note {
   translate: calc((var(--p, 0) - 0.3) * var(--decay) * 140px) calc(var(--p, 0) * var(--decay) * 46px);
   rotate: calc((var(--p, 0) - 0.5) * var(--decay) * 6deg);
@@ -629,7 +663,7 @@
     opacity: 0;
   }
 }
-.fc.fx-ring [data-scene='the-red-telephone'] .ft-stack > svg {
+.fc.fx-ring [data-scene='the-red-telephone'] .al[data-layer$='telephone'] {
   animation: fc-phone-shake 0.7s linear 1;
 }
 @keyframes fc-phone-shake {
@@ -661,10 +695,6 @@
   translate: calc(var(--decay) * var(--p, 0) * 22px) 0;
   rotate: calc(var(--decay) * 0.6deg);
 }
-.fc.fx-on [data-scene='between-clark-and-hilldale'] .fc-light,
-.fc.fx-on [data-scene='between-clark-and-hilldale'] .ink-breathe {
-  animation-duration: 1.4s;
-}
 .fc-word {
   display: inline-block;
 }
@@ -682,17 +712,6 @@
   75% {
     rotate: -0.5deg;
   }
-}
-/* The Good Humor Man: a breath, a child's drawing. */
-.fc [data-scene='the-good-humor-man'] .ft-stage .ink-line {
-  stroke: var(--fc-acid);
-  stroke-width: 3;
-}
-.fc [data-scene='the-good-humor-man'] .ft-stage .ink-line.red {
-  stroke: #e86a9a;
-}
-.fc [data-scene='the-good-humor-man'] .ft-block {
-  border-radius: 18px;
 }
 /* The record turned over: everything stops for a moment. */
 .fc[data-frozen] *,
@@ -1099,8 +1118,32 @@ body.fc-lee-on {
   text-shadow: 0 0 18px #000;
 }
 
+/* The painted overlays: melted by the mode's own filter and tinted with the chapter's colour. */
+.fc-lee-pic {
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: url(#fc-lee-melt) hue-rotate(var(--lee-tint, 0deg)) saturate(calc(1 + var(--lee, 0) * 0.8));
+}
+.fc-lee-vision[data-kind='figure'][data-painted] {
+  width: min(62vw, 440px);
+  opacity: 0.9;
+  filter: drop-shadow(0 0 3px rgba(190, 255, 40, 0.55)) drop-shadow(0 0 30px rgba(0, 0, 0, 0.9));
+}
+.fc-lee-vision[data-kind='object'][data-painted] {
+  width: min(58vw, 380px);
+}
+.fc-lee-vision[data-kind='face'][data-painted] {
+  width: min(64vw, 400px);
+  opacity: 0.8;
+  mix-blend-mode: screen;
+}
+.fc-lee-vision[data-object='newspaper'] img {
+  transform-origin: left;
+  animation: fc-unfold 3s ease-out both;
+}
+
 /* ---------- calm, and less motion: no decay at all, nothing moves ---------- */
-.fc.is-calm .fc-light,
 .fc.is-calm .fc-lee-pin-eye {
   animation: none;
 }
@@ -1117,7 +1160,6 @@ body.fc-lee-on {
   .fc-trip-vig {
     display: none !important;
   }
-  .fc .fc-light,
   .fc .fc-lee-pin-eye,
   .fc-lee-vision,
   .fc-lee-vision[data-kind],
@@ -1144,3 +1186,14 @@ body.fc-lee-on {
 .fc-epigraph { margin: 0 0 28px; }
 .fc-epigraph .ft-quote { font-size: clamp(22px, 2.4vw, 30px); margin: 0; }
 .fc-epigraph-who { margin-top: 10px; font-size: 14px; opacity: 0.75; }
+
+/* The credits' links in a picture can be pressed through the text column's empty space. */
+.fc .ft-flow {
+  pointer-events: none;
+}
+.fc .ft-flow > * {
+  pointer-events: auto;
+}
+.fc .ft-stage .fc-photo-credit a {
+  pointer-events: auto;
+}

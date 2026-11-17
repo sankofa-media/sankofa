@@ -72,6 +72,7 @@ export function layered(art: SceneArt, src: (file: string) => string, opts: { na
     el.dataset.state = s;
     for (const al of layers) {
       if (!al.dataset.state) continue;
+      al.classList.toggle('al-on', al.dataset.state === s);
       if (al.dataset.state === s) al.removeAttribute('aria-hidden');
       else al.setAttribute('aria-hidden', 'true');
     }
