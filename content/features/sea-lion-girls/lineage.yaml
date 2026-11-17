@@ -29,14 +29,17 @@ nodes:
         url: "https://archives.crem-cnrs.fr/archives/items/CNRSMH_E_1948_001_016_005_005"
         quote: "\"Negro children's games\""
     note: "No source fixes an origin date or place. Title spellings vary (Sea Lion, See-Line, C-Line, She-Lyin'). One scholar (W. Jason Miller) reads it as a song about sex workers greeting sailors in port; this is an interpretation, single-authored — see people.md."
+    story:
+      en: "Nobody knows where or when this game was born: it was not composed but handed on, from children to children, in the schoolyards of the American South. A leader sings a line, the circle answers with the words of the title, and every later version, however far from the playground, keeps that call and answer."
+      ru: "Где и когда родилась эта игра, не знает никто: её не сочиняли, её передавали — от одних детей к другим, на школьных дворах американского Юга. Ведущая поёт строчку, круг отвечает словами из названия, и этот вопрос с ответом сохранят потом все версии, какими бы далёкими от двора они ни были."
 
   - id: shipp-1939
     title: "Old Uncle Rabbit and Sea Lion Woman"
     artist: "Katherine Shipp and Christine (Christeen) Shipp; recorded by Herbert Halpert"
     year: 1939
     kind: field-recording
-    parents: [trad-ring-game]
-    influences_in: ["trad-ring-game (learned by ear within the family, per NPR 1998)"]
+    parents: [ trad-ring-game ]
+    influences_in: [ "trad-ring-game (learned by ear within the family, per NPR 1998)" ]
     afterlife:
       - "The Kodály Center's teaching entry cites this exact disc as its source: 'Library of Congress AFS 3008 B3. Collected by Herbert Halpert.'"
       - "Teachers play this LoC recording in class (GAMEPLAN teacher blog, 2011)"
@@ -60,13 +63,16 @@ nodes:
         url: "https://www.npr.org/1998/07/10/1034287/shipp-family-singers"
         quote: "One of the groups they recorded was the Shipp family from Byhalia."
     note: "Date 13 May 1939 (Wade; Rounder notes). Ages on that day: Christine 20, Katherine 18 (Wade). The LoC record itself carries no date; the CREM copy gives only '1939'."
+    story:
+      en: "The earliest sound of this song that has come down to us: two voices, no instruments, under a minute. Christine and Katherine Shipp sing the refrain, answering each other line by line, and between refrains the woman of the game drinks coffee, then tea. The folklorist Herbert Halpert recorded them on 13 May 1939."
+      ru: "Самый ранний звук этой песни, который до нас дошёл: два голоса без инструментов, меньше минуты. Кристин и Кэтрин Шипп поют припев, отвечая друг другу строчка за строчкой, а между припевами женщина из игры пьёт то кофе, то чай. Записал их фольклорист Герберт Халперт 13 мая 1939 года."
 
   - id: afs-l4-1942
     title: "Afro-American Blues and Game Songs (LoC Album IV / AFS L4), track 'Sea Lion Woman'"
     artist: "Katherine Shipp, Christeen Shipp (ed. Alan Lomax)"
     year: 1942
     kind: field-recording
-    parents: [shipp-1939]
+    parents: [ shipp-1939 ]
     what_travelled: "First publication of the Shipp recording, as a Library of Congress 78-rpm album set; it put the girls' voices on the same album as the first recordings of McKinley Morganfield (Muddy Waters)."
     playable_url: "https://www.loc.gov/item/ihas.200196570/"
     playable_verified: "2026-11-15 no official upload of the AFS L4 album found (searched YouTube for album/track title; only fan uploads and Document/Suncoast compilations); links to the Library of Congress page of the same 1939 Shipp recording that this album first issued"
@@ -78,13 +84,16 @@ nodes:
         url: "https://archives.crem-cnrs.fr/archives/items/CNRSMH_E_1948_001_016_005_005"
         quote: "Album IV : Afro-American Blues and Game Songs : from the Archive of American Folk Song [5 Disques]"
     note: "The Discogs tracklist places B6 'Old Uncle Rabbit' and B7 'Sea Lion Woman' (Shipp) on the same LP as A10/A11 by McKinley Morganfield. The CREM copy (collection code E_1948) shows a set had reached the Paris Musée de l'Homme by 1948."
+    story:
+      en: Three years later the Library of Congress first published the recording, in a set of 78-rpm discs called “Afro-American Blues and Game Songs”. That put the Shipp sisters’ voices on the same album as the first recordings of McKinley Morganfield, whom the world would soon know as Muddy Waters.
+      ru: Через три года Библиотека Конгресса впервые издала эту запись — в комплекте пластинок на 78 оборотов «Afro-American Blues and Game Songs». Так голоса сестёр Шипп оказались на одном альбоме с первыми записями Маккинли Морганфилда, которого мир вскоре узнает как Мадди Уотерса.
 
   - id: rounder-treasury-1997
     title: "A Treasury of Library of Congress Field Recordings (Rounder CD 1500), track 6 'Sea Lion Woman'"
     artist: "Christine and Katherine Shipp; compiled and annotated by Stephen Wade"
     year: 1997
     kind: field-recording
-    parents: [shipp-1939]
+    parents: [ shipp-1939 ]
     what_travelled: "Reissue that returned the Shipp recording to circulation and became the licensed source for the 1999 film use."
     playable_url: "https://www.loc.gov/item/ihas.200196570/"
     playable_verified: "2026-11-15 no official upload of Rounder CD 1500 found (searched YouTube for album/track title); links to the Library of Congress page of the same 1939 Shipp recording"
@@ -96,13 +105,16 @@ nodes:
         url: "https://www.triquarterly.org/the-latest-word/reviews/beautiful-music-all-around-us-stephen-wade"
         quote: "barely a minute in length but as strong as an ox and playful as a sprite"
     note: "TriQuarterly confirms the 1997 Rounder release as the basis of the book."
+    story:
+      en: For more than half a century the recording lay in the archive. In 1997 the folklorist Stephen Wade put it on a collection of the best Library of Congress field recordings, released by the Rounder label, and the sisters’ song began to be heard again.
+      ru: Больше полувека запись лежала в архиве. В 1997 году фольклорист Стивен Уэйд включил её в сборник лучших полевых записей Библиотеки Конгресса, выпущенный лейблом Rounder, и песня сестёр снова начала звучать.
 
   - id: shes-began-to-lie-1999
     title: "She Began To Lie (The General's Daughter, opening track) + 'She Began To Lie (Re-mix)'"
     artist: "Christine and Katherine Shipp; produced/adapted by Greg Hale Jones (remix with Russell Ziecker)"
     year: 1999
     kind: remix
-    parents: [rounder-treasury-1997]
+    parents: [ rounder-treasury-1997 ]
     what_travelled: "Excerpts of the actual 1939 voices, re-produced as film score. The remix track is on the album only, not in the film."
     playable_url: "https://www.youtube.com/watch?v=di6K-3kS94Y"
     playable_verified: "2026-11-15 oEmbed author_name 'Release - Topic', title 'She Began To Lie'; auto-generated, provided by Milan, album The General's Daughter (Original Motion Picture Soundtrack)"
@@ -115,19 +127,22 @@ nodes:
         url: "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/traditional/childrens-songs/"
         quote: "was featured in the 1999 Paramount film, The General's Daughter"
     note: "Discogs promo CD (Milan MLAB 35885-1) adds: 'Track # 1 does not appear in the film' and credits the Shipp source 'courtesy of Rounder Records'."
+    story:
+      en: It was from that collection that in 1999 the recording was licensed for the Hollywood film “The General’s Daughter”. The composer Greg Hale Jones worked the real voices of 1939 into the music that opens the film.
+      ru: Именно с этого сборника в 1999 году запись взяли для голливудского фильма «Дочь генерала». Композитор Грег Хейл Джонс обработал настоящие голоса 1939 года и сделал из них музыку, которой открывается фильм.
 
   - id: simone-1964
     title: "See-Line Woman"
     artist: "Nina Simone"
     year: 1964
     kind: cover
-    parents: [shipp-1939]
+    parents: [ shipp-1939 ]
     influences_in:
       - "Shipp field recording / folk song via George H. Bass (writer credit) and, per W. Jason Miller (single author), Langston Hughes's suggestion"
       - "Simone's classical training: Bach-centred study, Juilliard 1950, Curtis rejection (PBS American Masters; National Women's History Museum). PBS: 'a strong Bach influence can clearly be heard in Simone's improvisations' — a general statement, not about this track"
       - "Album personnel (official ninasimone.com credits): Rudy Stevenson flute, Lisle Atkinson percussion, Bobby Hamilton drums; Hal Mooney producer. Per-track assignment to B3 not confirmed"
     style_changes: "Kept the refrain and leader/answer; added syncopated handclaps and percussion, renamed it 'See-Line Woman' (Eats, Drinks & Leaves, Tim Cooper 2023) and made it a staged, rhythm-driven piece — the template most later versions copy"
-    afterlife: ["Template for nearly every later cover; officially remixed in 2002, 2022, 2026; sampled 2008"]
+    afterlife: [ "Template for nearly every later cover; officially remixed in 2002, 2022, 2026; sampled 2008" ]
     what_travelled: "Title (respelled), the leader/answer refrain, the verse frame; Simone's arrangement turned a playground chant into a percussion-driven performance piece. Writer credit went to George Houston Bass, arranger credit to Simone."
     playable_url: "https://www.youtube.com/watch?v=E17-0CuPb64"
     playable_verified: "2026-11-15 oEmbed author_name 'NinaSimoneVEVO', title 'Nina Simone - See-Line Woman (Audio)'"
@@ -144,13 +159,16 @@ nodes:
         url: "https://theconversationus.substack.com/p/the-forgotten-story-behind-nina-simone"
         quote: "Simone performed the song, \"See-Line Woman,\" for the first time at a March 21, 1964, concert in Carnegie Hall"
     note: "Album producer: Hal Mooney (Discogs). Album-level personnel per Discogs master notes: Rudy Stevenson (flute), Lisle Atkinson (percussion), Bobby Hamilton (drums); arrangers Hal Mooney and Horace Ott for other tracks — B3 is credited to Simone. Date conflict: MusicBrainz/Presto give a 21 March 1964 recording date, the same day as the Carnegie Hall concert Miller cites — see unconfirmed.md."
+    story:
+      en: Nina Simone recorded the song in 1964 and respelled its title her own way, “See-Line Woman”. Her arrangement turned a playground game into a concert piece driven by percussion, with the circle’s call and answer intact. The record names George Houston Bass as the writer and Simone as the arranger.
+      ru: Нина Симон записала песню в 1964 году и переписала её название по-своему — «See-Line Woman». Её аранжировка превратила дворовую игру в концертную вещь, где всё держится на ударных, а вопрос и ответ круга сохранились. Автором на пластинке значится Джордж Хьюстон Басс, аранжировщиком — сама Симон.
 
   - id: simone-single-1964
     title: "Mississippi Goddam / Sea Lion Woman (Philips 40216)"
     artist: "Nina Simone"
     year: 1964
     kind: cover
-    parents: [simone-1964]
+    parents: [ simone-1964 ]
     what_travelled: "The children's song went out to radio as the flip side of Simone's protest anthem."
     playable_url: "https://www.youtube.com/watch?v=E17-0CuPb64"
     playable_verified: "2026-11-15 oEmbed author_name 'NinaSimoneVEVO', title 'Nina Simone - See-Line Woman (Audio)'; same 1964 studio master as the album track; no separate upload of the Philips 40216 single exists"
@@ -162,13 +180,16 @@ nodes:
         url: "https://www.backlash-blues.com/timeline"
         quote: "\"See-Line Woman\" was released in mid-July of 1964 as the B Side to \"Mississippi Goddam.\""
     note: "On this label the title is printed 'Sea Lion Woman', the folk spelling. A separate A-side single followed: Philips 40376 (1965), 'See-Line Woman' b/w 'I Love Your Lovin' Ways' (Discogs release 2329066) — single-sourced, kept as a note."
+    story:
+      en: In July of that year the song came out on a single, as the flip side of “Mississippi Goddam”. The label printed its title the old way, “Sea Lion Woman”, and the children’s game went out to radio together with one of the fiercest protest songs of the time.
+      ru: В июле того же года песня вышла на сингле — оборотной стороной «Mississippi Goddam». На этикетке её название напечатали по-старому, «Sea Lion Woman», и детская игра пошла на радио вместе с одной из самых яростных песен протеста того времени.
 
   - id: lateef-1967
     title: "See Line Woman"
     artist: "Yusef Lateef Quartet"
     year: 1967
     kind: cover
-    parents: [simone-1964]
+    parents: [ simone-1964 ]
     style_changes: "Jazz quartet treatment (Lateef on flute/reeds and vocal, Hugh Lawson piano, Cecil McBee bass, Roy Brooks drums, Sylvia Shemwell tambourine — jazzdisco.org); the song becomes a modal-jazz vehicle"
     what_travelled: "The Simone spelling and the song as a jazz vehicle, three years after Simone. Recorded NYC 1 June 1967; Sylvia Shemwell on tambourine; issued on The Complete Yusef Lateef (Atlantic 1499, 1968)."
     playable_url: "https://www.youtube.com/watch?v=WEPP3yNFU6c"
@@ -182,13 +203,16 @@ nodes:
         url: "https://www.jazzdisco.org/yusef-lateef/discography/"
         quote: "NYC, June 1, 1967 ... 4. See Line Woman"
     note: "Parent inferred from the 'See Line' spelling, which originates with Simone's record; no Lateef statement found. Some listings spell it 'Sea Line Woman' and credit it as traditional."
+    story:
+      en: Three years after Simone the saxophonist Yusef Lateef recorded the song with his quartet, in New York on 1 June 1967. He took the title in Simone’s spelling and made the playground game into a jazz piece, with Sylvia Shemwell on tambourine.
+      ru: Через три года после Симон песню записал саксофонист Юсеф Латиф со своим квартетом — 1 июня 1967 года в Нью-Йорке. Название он взял в написании Симон, а из дворовой игры сделал джазовую пьесу; бубен в ней ведёт Сильвия Шемвелл.
 
   - id: easybeats-1967
     title: "See Line Woman"
     artist: "The Easybeats"
     year: 1967
     kind: cover
-    parents: [simone-1964]
+    parents: [ simone-1964 ]
     style_changes: "British-produced beat-group version (producer Shel Talmy, arr. Vanda & Young; Pop Archives); credited 'Traditional'"
     what_travelled: "The song crossed into British-recorded beat music: credited 'Traditional, arr. Harry Vanda – George Young', produced by Shel Talmy, on Good Friday (UK) / Friday On My Mind (US)."
     playable_url: "https://www.youtube.com/watch?v=ejmjHAqjBqg"
@@ -201,15 +225,18 @@ nodes:
         url: "https://poparchives.com.au/the-easybeats/see-line-woman/"
         quote: "Nina Simone's version was the first popular recording of this traditionally sourced song."
     note: "Parent = Simone is inferred from the 'See Line' title; neither source says the band learned it from her."
+    story:
+      en: "The same year the song moved into beat music: the Australian band the Easybeats recorded it, with Shel Talmy producing. The record lists it as traditional, arranged by the band’s guitarists Harry Vanda and George Young."
+      ru: "В том же году песня перебралась в бит-музыку: её записали австралийцы The Easybeats, продюсером был Шел Талми. На пластинке песня значится народной, в аранжировке гитаристов группы Гарри Ванды и Джорджа Янга."
 
   - id: songstress-1997
     title: "See Line Woman (See Line Woman Vocal / The Organ Grind / Muted Relaxation / Random Dub)"
     artist: "The Songstress (production: Jerome Sydenham and Kerri Chandler)"
     year: 1997
     kind: interpolation
-    parents: [simone-1964]
+    parents: [ simone-1964 ]
     style_changes: "Deep-house: the refrain looped as a chant over a four-on-the-floor groove, multiple club mixes (Vocal, Organ Grind, Dub); NOW Toronto calls Chandler's a 'house reworking'"
-    afterlife: ["Licensed onto many house compilations 1998–2013; third-generation remixes ('99 Presence, Full Intention, DEA) single-sourced"]
+    afterlife: [ "Licensed onto many house compilations 1998–2013; third-generation remixes ('99 Presence, Full Intention, DEA) single-sourced" ]
     what_travelled: "Simone's song into New York/New Jersey deep house: the refrain becomes a loopable chant over a four-on-the-floor kick. Writer credit stays with George Houston Bass. Ibadan Records IRC 005."
     playable_url: "https://www.youtube.com/watch?v=RjE9mzdPuPo"
     playable_verified: "2026-11-15 oEmbed author_name 'Songstress - Topic', title 'See Line Woman (Vocal Mix)'; provided by Label Worx, ℗ Kerri Chandler"
@@ -222,13 +249,16 @@ nodes:
         url: "https://nowtoronto.com/music/album-reviews/discs-265"
         quote: "(though Kerri Chandler beat them to it two years ago)"
     note: "Whether the vocal is a re-sing by an uncredited 'Songstress' or a lift of Simone's voice is not settled by any source opened — kind set to 'interpolation' conservatively; see unconfirmed.md. Widely relicensed (Future Funk 6, Real Ibiza, Kaoz Theory, LateNightTales/Cinematic Orchestra 2010 per Discogs)."
+    story:
+      en: In 1997 the producers Kerri Chandler and Jerome Sydenham took the song into New York deep house. The refrain became a loop repeating endlessly over a four-to-the-floor kick drum, and Bass was still credited as the writer.
+      ru: В 1997 году продюсеры Керри Чандлер и Джером Сайденхэм унесли песню в нью-йоркский дип-хаус. Припев стал петлёй, которая без конца повторяется над прямым ритмом бас-барабана, а автором по-прежнему значится Басс.
 
   - id: maw-remix-2002
     title: "See-Line Woman (Masters At Work Remix)"
     artist: "Nina Simone, remixed by Masters At Work (Louie Vega, Kenny 'Dope' Gonzalez)"
     year: 2002
     kind: remix
-    parents: [simone-1964]
+    parents: [ simone-1964 ]
     style_changes: "Uses Simone's own master; Masters At Work extend it to a 10-minute house track (Verve // Remixed); NOW Toronto: 'the Masters at Work house reworking'"
     what_travelled: "Simone's own vocal and percussion stems, extended (10:04 on the vinyl) into a house track; the label-sanctioned entry of the song into club canon."
     playable_url: "https://www.youtube.com/watch?v=X9HwpD63coI"
@@ -242,13 +272,16 @@ nodes:
         url: "https://nowtoronto.com/music/album-reviews/discs-265"
         quote: "the Masters at Work house reworking of Nina Simone's See-Line Woman"
     note: "Discogs also lists 'See Line Woman' on Masters At Work, Stop And Listen 5 (2000) — possibly an earlier circulation; unresolved."
+    story:
+      en: In 2002 Masters At Work, Louie Vega and Kenny “Dope” Gonzalez, remixed Nina Simone’s own recording, stretching it to ten minutes. With that official remix the song settled for good into the club canon.
+      ru: В 2002 году Masters At Work — Луи Вега и Кенни «Доуп» Гонсалес — сделали ремикс самой записи Нины Симон, растянув её на десять минут. С этого официального ремикса песня окончательно вошла в клубную классику.
 
   - id: crawford-sample-2006
     title: "See Line Woman"
     artist: "Randy Crawford & Joe Sample"
     year: 2006
     kind: cover
-    parents: [simone-1964]
+    parents: [ simone-1964 ]
     style_changes: "Soul-jazz duo setting; Crawford (NPR): 'very modern, but real, as in keeping with the old school'; male-voice answer to her lead keeps the call-and-response"
     what_travelled: "The song as adult soul-jazz: Crawford says Sample set it 'very modern, but real'. Album Feeling Good (PRA/Universal, 2006; US 2007)."
     playable_url: "https://www.youtube.com/watch?v=PCoDdZRXV3s"
@@ -262,15 +295,18 @@ nodes:
         url: "https://www.npr.org/transcripts/7812291"
         quote: "We decided to put that in a more, much more modern vein."
     note: null
+    story:
+      en: The singer Randy Crawford and the pianist Joe Sample recorded the song in 2006 as grown-up soul jazz. Crawford said Sample set it in a sound that was “very modern, but real”.
+      ru: Певица Рэнди Кроуфорд и пианист Джо Сэмпл записали песню в 2006 году как взрослый соул-джаз. Кроуфорд говорила, что Сэмпл поместил её в звучание «очень современное, но настоящее».
 
   - id: feist-sealion-2007
     title: "Sealion (a.k.a. Sea Lion Woman)"
     artist: "Feist"
     year: 2007
     kind: cover
-    parents: [shipp-1939, simone-1964]
+    parents: [ shipp-1939, simone-1964 ]
     style_changes: "Indie-pop; 'a squad of clapping, chanting backup vocalists' (Inquirer) restores the group answer and handclaps of the playground form; Feist frames it as 'a half cover of the little girls' (NPR)"
-    afterlife: ["Grey's Anatomy OST Vol. 3 (2007); Heated Rivalry ep. 1 (2025)"]
+    afterlife: [ "Grey's Anatomy OST Vol. 3 (2007); Heated Rivalry ep. 1 (2025)" ]
     what_travelled: "Feist took from both ends of the chain: she calls it 'a half cover of the little girls' and names Simone's version; the clapping, chanting group answer comes back to the foreground. Only cover on The Reminder (Arts & Crafts/Cherrytree, 2007)."
     playable_url: "https://www.youtube.com/watch?v=AFxKw4EOtbU"
     playable_verified: "2026-11-15 oEmbed author_name 'Feist - Topic', title 'Sealion'; provided by Universal Music Group, album The Reminder"
@@ -286,13 +322,16 @@ nodes:
         url: "https://www.discogs.com/master/2267299"
         quote: "Sealion 3:41 — Feist: Written-By; George Houston Bass: Written-By"
     note: "Feist's live album Look At What The Light Did Now (2010) credits 'Written-By [Elements From]' George Houston Bass and Nina Simone (Discogs)."
+    story:
+      en: The Canadian singer Feist took the song from both ends of the chain at once. She called her version “kind of a half cover of the little girls” and named Nina Simone’s famous version second; the chorus that claps and answers her is the circle’s answer of 1939 once again.
+      ru: Канадская певица Feist взяла песню сразу с обоих концов цепочки. Свою версию она называла «наполовину кавером на тех девочек», а знаменитую версию Нины Симон упоминала второй; хор, который хлопает и отвечает ей, — это снова ответ круга 1939 года.
 
   - id: chromeo-sealion-2007
     title: "Sealion (Chromeo Remix)"
     artist: "Feist, remixed by Chromeo"
     year: 2007
     kind: remix
-    parents: [feist-sealion-2007]
+    parents: [ feist-sealion-2007 ]
     what_travelled: "Third generation: a remix of Feist's version."
     playable_url: "https://www.youtube.com/watch?v=2y2AodVuxe4"
     playable_verified: "2026-11-15 oEmbed author_name 'Feist - Topic', title 'Sealion (Chromeo Remix)'; provided by Universal Music Group, single Sealion, ℗ 2007 Decca Records France"
@@ -308,7 +347,7 @@ nodes:
     artist: "Kanye West"
     year: 2008
     kind: sample
-    parents: [simone-1964]
+    parents: [ simone-1964 ]
     style_changes: "Takes the percussion bed ('tribal rhythm' — TV One, 2016) of Simone's master and sets it under 808 drum-machine and Auto-Tune vocal; the theme (a faithless lover) is kept and turned to first person"
     what_travelled: "The drum/percussion bed of Simone's recording, slowed and set under 808s and Auto-Tune; the song's subject (a faithless lover) carried over as theme."
     playable_url: "https://www.youtube.com/watch?v=1BlH1JZBeXI"
@@ -323,13 +362,16 @@ nodes:
         url: "https://djbooth.net/features/2017-08-10-kanye-west-nina-simone-samples/"
         quote: "Sampled on 'Bad News.'"
     note: "OWNER'S MEMORY — Kanye: CORRECT. The sample is officially cleared and printed in the liner notes ('Used under licence from Universal Music Enterprises ... Written by George Bass'). Kanye's other Simone samples are different songs: 'Strange Fruit' -> 'Blood on the Leaves' (2013), 'Do What You Gotta Do' -> 'Famous' (2016), 'Sinnerman' -> Talib Kweli 'Get By' (Kanye production) — per DJBooth headers."
+    story:
+      en: In 2008 Kanye West set the drums of Nina Simone’s recording under his “Bad News”, slowed beneath electronic drums and a processed voice. The sample was officially licensed, and the album booklet names as writer neither Simone nor the Shipp sisters but George Bass.
+      ru: В 2008 году Канье Уэст положил под свою «Bad News» ударные из записи Нины Симон, замедлив их под электронные барабаны и обработанный голос. Сэмпл был официально лицензирован, и в буклете альбома автором названа не Симон и не сёстры Шипп, а Джордж Басс.
 
   - id: xiu-xiu-2013
     title: "See Line Woman"
     artist: "Xiu Xiu"
     year: 2013
     kind: cover
-    parents: [simone-1964]
+    parents: [ simone-1964 ]
     style_changes: "Experimental/noise-pop inside an all-Simone tribute album; louder, abrasive delivery (SLUG: 'more upbeat and familiar')"
     what_travelled: "Part of an all-Simone covers album (Nina, Graveface, street date 2013-12-02); the refrain kept, the arrangement made abrasive."
     playable_url: "https://www.youtube.com/watch?v=xzAvLngNavo"
@@ -343,13 +385,16 @@ nodes:
         url: "https://www.slugmag.com/?p=4132"
         quote: "the highlight of the album is the more upbeat and familiar \"See Line Woman,\""
     note: null
+    story:
+      en: The experimental band Xiu Xiu recorded the song for an album made entirely of Nina Simone’s songs. The refrain stayed; the sound turned harsh and abrasive.
+      ru: Экспериментальная группа Xiu Xiu записала песню для альбома, целиком составленного из песен Нины Симон. Припев остался, а звук стал резким и колючим.
 
   - id: mvula-holland-2014
     title: "See-Line Woman"
     artist: "Jools Holland & His Rhythm & Blues Orchestra with Laura Mvula"
     year: 2014
     kind: cover
-    parents: [simone-1964]
+    parents: [ simone-1964 ]
     style_changes: "Big-band R&B (horns, congas) with Mvula; reviewer hears 'her own African influences'"
     what_travelled: "Big-band horns and congas around the refrain; album Sirens Of Song."
     playable_url: "https://www.youtube.com/watch?v=dz2nsF4tvdA"
@@ -362,13 +407,16 @@ nodes:
         url: "https://renownedforsound.com/?p=47635"
         quote: "brings her own African influences to See Line Woman"
     note: null
+    story:
+      en: The singer Laura Mvula sang the song with Jools Holland’s big band, the refrain surrounded by brass and congas.
+      ru: "Певица Лора Мвула спела песню с биг-бэндом Джулса Холланда: припев здесь окружают медные духовые и конги."
 
   - id: far-cry-6-2021
     title: "See-Line Woman (Cover)"
     artist: "credited to Yolanda Castillo (in-game radio, Far Cry 6)"
     year: 2021
     kind: cover
-    parents: [simone-1964]
+    parents: [ simone-1964 ]
     what_travelled: "Recorded for the fictional Caribbean island of Yara as an 'alt-history' radio cover; the song reached a video-game audience."
     playable_url: "https://www.youtube.com/watch?v=qZIB1E8_eZE"
     playable_verified: "2026-11-15 oEmbed author_name 'Ubisoft Music', title 'See-Line Woman | Far Cry 6 : The Music of Yara (from the Far Cry 6 OST) | Yolanda Castillo'; official label channel @UbisoftMusic"
@@ -380,13 +428,16 @@ nodes:
         url: "https://bleedingcool.com/games/ubisoft-music-releases-digital-album-far-cry-6-the-music-of-yara"
         quote: "16. See-Line Woman – Yolanda Castillo"
     note: "Whether 'Yolanda Castillo' is a real singer's name or an in-world persona was not established."
+    story:
+      en: "In 2021 the song reached the video game Far Cry 6: a cover plays on the radio of the fictional Caribbean island of Yara, and so the song reached gamers."
+      ru: "В 2021 году песня попала в видеоигру Far Cry 6: её кавер звучит по радио на вымышленном карибском острове Яра, и так песня дошла до игроков."
 
   - id: riton-2022
     title: "See-Line Woman (Riton Remix)"
     artist: "Nina Simone, remixed by Riton"
     year: 2022
     kind: remix
-    parents: [simone-1964]
+    parents: [ simone-1964 ]
     what_travelled: "Official label remix of Simone's master; compilation Feeling Good: Her Greatest Hits and Remixes (Verve, 2022-02-11)."
     playable_url: "https://www.youtube.com/watch?v=CP5cl_TJxDo"
     playable_verified: "2026-11-15 oEmbed author_name 'Nina Simone - Topic', title 'See-Line Woman (Riton Remix)'; provided by Universal Music Group, ℗ 2021 Verve Label Group, released 2021-09-24"
@@ -398,13 +449,16 @@ nodes:
         url: "https://musicbrainz.org/recording/36da8861-5c8a-4fde-a966-549a624d7a47"
         quote: "first-release-date 2022-02-11; release: Feeling Good (Her Greatest Hits & Remixes)"
     note: null
+    story:
+      en: The producer Riton made an official remix of Simone’s recording for a collection of her greatest songs and remixes released by Verve.
+      ru: Продюсер Riton сделал официальный ремикс записи Симон для сборника её лучших песен и ремиксов, выпущенного лейблом Verve.
 
   - id: ponder-dessner-2025
     title: "See-Line Woman"
     artist: "Danielle Ponder & Bryce Dessner"
     year: 2025
     kind: cover
-    parents: [simone-1964]
+    parents: [ simone-1964 ]
     what_travelled: "Billed as a cover of Simone's version; opens The Accountant 2 (Amazon MGM / Warner Bros., 2025)."
     playable_url: "https://www.youtube.com/watch?v=EjGUZkKl_Nk"
     playable_verified: "2026-11-15 oEmbed author_name 'WaterTower Music', title 'The Accountant 2 Soundtrack | See-Line Woman - Danielle Ponder & Bryce Dessner | WaterTower Music'; official label channel @WaterTowerWB"
@@ -417,13 +471,16 @@ nodes:
         url: "https://vaguevisages.com/2025/06/23/the-accountant-2-soundtrack-amazon-songs/"
         quote: "scores the opening bingo sequence"
     note: null
+    story:
+      en: The singer Danielle Ponder and the composer Bryce Dessner recorded a version after Nina Simone’s, and in 2025 it opens the film “The Accountant 2”.
+      ru: Певица Даниэль Пондер и композитор Брайс Десснер записали версию по следам Нины Симон, и этой песней в 2025 году открывается фильм «Бухгалтер 2».
 
   - id: mochakk-2026
     title: "See-Line Woman (Mochakk Mix)"
     artist: "Nina Simone, remixed by Mochakk"
     year: 2026
     kind: remix
-    parents: [simone-1964]
+    parents: [ simone-1964 ]
     style_changes: "Club remix that keeps Simone's vocal as the core (Beatportal)"
     what_travelled: "Simone's vocal kept at the centre, re-grooved for current club play; part of Verve's 'Year of Nina', collected on Verve Remixed // Nina Simone (2026-10-16)."
     playable_url: "https://www.youtube.com/watch?v=dRYvm-sFgfU"
@@ -437,13 +494,16 @@ nodes:
         url: "https://www.udiscovermusic.com/?p=2766024"
         quote: "See-Line Woman (Mochakk Mix)"
     note: null
+    story:
+      en: In 2026, when Verve declared a “year of Nina”, the DJ Mochakk made a remix that keeps her voice at the centre and rewrites the groove for today’s clubs.
+      ru: В 2026 году, когда лейбл Verve объявил «год Нины», диджей Mochakk сделал ремикс, где в центре по-прежнему её голос, а ритм переписан для сегодняшних клубов.
 
   - id: tillery-1997
     title: "See Line Woman"
     artist: "Linda Tillery and the Cultural Heritage Choir"
     year: 1997
     kind: cover
-    parents: [simone-1964, afs-l4-1942]
+    parents: [ simone-1964, afs-l4-1942 ]
     what_travelled: "The song returned to a community-choir, a cappella-rooted African American heritage setting."
     style_changes: "Heritage vocal ensemble 'bringing traditional forms of African American culture to the stage' (singers.com). Album Front Porch Music (EarthBeat! R2 72881) also sings 'Gon' Knock John Booker', 'All Hid?' and 'Rosie' — all three also on the 1942 LoC Album IV that first issued the Shipp recording (observation from the two Discogs tracklists)."
     playable_url: null
@@ -456,6 +516,9 @@ nodes:
         url: "https://www.singers.com/world/culturalheritage.html"
         quote: "bringing traditional forms of African American culture to the stage"
     note: "Parent: the 'See Line' spelling points to Simone; the surrounding repertoire points to the LoC Album IV. Neither link is stated by the group in sources opened."
+    story:
+      en: "Linda Tillery and her Cultural Heritage Choir brought the song back to where it came from: community choral singing, almost without instruments. In the choir’s repertoire it sits next to songs from the same 1942 Library of Congress album."
+      ru: Линда Тиллери и её Cultural Heritage Choir вернули песню туда, откуда она пришла, — в хоровое пение афроамериканской общины, почти без инструментов. В репертуаре хора рядом с ней стоят песни с того же альбома Библиотеки Конгресса 1942 года.
 
   - id: paradise-circus-2010
     title: "Paradise Circus"
@@ -465,7 +528,7 @@ nodes:
     status: confirmed-by-owner
     verified: true
     decision: "Owner (2026-11-15): it samples Nina Simone's See-Line Woman (handclaps and some of her voice). Supported by WhoSampled and New Vinyl Villain; no official credit."
-    parents: [simone-1964]
+    parents: [ simone-1964 ]
     what_travelled: "Samples from Simone's 'See-Line Woman': the handclaps and a trace of her voice (owner, by ear; WhoSampled also lists the sample)."
     playable_url: "https://www.youtube.com/watch?v=6hUkyKBsGtQ"
     playable_verified: "2026-11-15 oEmbed author_name 'Massive Attack - Topic', title 'Paradise Circus'; provided by Universal Music Group, album Heligoland"
@@ -505,13 +568,16 @@ nodes:
         quote: "contributes vocals to this track over handclaps and a minimalist chord progression"
       - note: "Claps are confirmed to be IN the track by three sources; none says where they come from."
     note: "Owner decision recorded above (status confirmed-by-owner). Research record: supporting sources are WhoSampled and blogs; the official credits name no Simone/Bass and NPR 2010 reports the band stopped sampling others — kept here for transparency. The live drummer Jerry Fuchs died 8 Nov 2009, three months before the album came out (Exclaim 2009-11-08: 'died early Sunday morning (November 8) from injuries sustained in a five-storey fall inside a broken elevator shaft'; UPI 2009-11-09: 'Drummer Jerry Fuchs, 34')."
+    story:
+      en: Through the whole of this song by the Bristol band Massive Attack, sung with Hope Sandoval, run the handclaps from Nina Simone’s “See-Line Woman”. The song later became the opening music of the series “Luther”.
+      ru: Через всю песню бристольской группы Massive Attack, записанную с певицей Хоуп Сандовал, проходят хлопки из «See-Line Woman» Нины Симон. Позже эта песня стала музыкой к заставке сериала «Лютер».
 
   - id: gui-boratto-2010
     title: "Paradise Circus (Gui Boratto Remix)"
     artist: "Massive Attack, remixed by Gui Boratto"
     year: 2010
     kind: remix
-    parents: [paradise-circus-2010]
+    parents: [ paradise-circus-2010 ]
     what_travelled: "Third generation (if the Simone link holds): Sandoval vocal and the track, rebuilt as 8-minute melodic techno; free download via RCRD LBL."
     playable_url: "https://www.youtube.com/watch?v=ProwCLCppgo"
     playable_verified: "2026-11-15 oEmbed author_name 'Massive Attack - Topic', title 'Paradise Circus (Gui Boratto Remix)'; provided by Universal Music Group, Heligoland, ℗ 2010 Virgin Records"
@@ -523,13 +589,16 @@ nodes:
         url: "https://www.thefader.com/2010/02/25/massive-attack-f-hope-sandoval-of-mazzy-star-paradise-circus-gui-boratto-remix-mp3"
         quote: "sounds like they are working on their nerves"
     note: "A claim that this remix scored a 2010 Lincoln car commercial (Songfacts, per search snippet) was not confirmed."
+    story:
+      en: "The producer Gui Boratto rebuilt “Paradise Circus” into eight minutes of melodic techno: Sandoval’s voice stayed, and a new building grew around it."
+      ru: "Продюсер Gui Boratto перестроил «Paradise Circus» в восьмиминутный мелодичный техно-трек: голос Сандовал остался, вокруг него выросло новое здание."
 
   - id: breakage-2010
     title: "Paradise Circus (Breakage's Tight Rope Remix)"
     artist: "Massive Attack, remixed by Breakage"
     year: 2010
     kind: remix
-    parents: [paradise-circus-2010]
+    parents: [ paradise-circus-2010 ]
     what_travelled: "Bass-music remix from the official Heligoland remix promo."
     playable_url: "https://www.youtube.com/watch?v=fx7yYXlGVwM"
     playable_verified: "2026-11-15 oEmbed author_name 'Massive Attack - Topic', title 'Paradise Circus (Breakage's Tight Rope Remix)'; provided by Universal Music Group, Heligoland, ℗ 2010 Virgin Records"
@@ -541,13 +610,16 @@ nodes:
         url: "https://musicbrainz.org/work/dafa419b-cc44-3a88-ac8e-9f73b2713053"
         quote: "Paradise Circus (Breakage’s Tight Rope remix)"
     note: "Two community databases; acceptable but thin."
+    story:
+      en: The producer Breakage made a heavy, bass-driven remix of “Paradise Circus” for the official promotional set of the album Heligoland.
+      ru: Продюсер Breakage сделал из «Paradise Circus» ремикс для официального промо-сборника альбома Heligoland — тяжёлый, басовый.
 
   - id: burial-2011
     title: "Paradise Circus (Burial rework), B-side of 'Four Walls / Paradise Circus'"
     artist: "Massive Attack vs Burial"
     year: 2011
     kind: remix
-    parents: [paradise-circus-2010]
+    parents: [ paradise-circus-2010 ]
     what_travelled: "A 12-minute Burial rework; Discogs notes it also samples 'let love flower' from Massive Attack's own 'Psyche'. The Vinyl Factory VF034, 1,000 numbered copies, 2011-10-24."
     playable_url: null
     playable_verified: "no official upload found (searched YouTube: only fan uploads and vinyl rips, incl. the unofficial 'Massive Attack Bristol' slideshow channel; no Massive Attack - Topic upload; no official Bandcamp)"
@@ -559,13 +631,16 @@ nodes:
         url: "https://beatsperminute.com/listen-massive-attack-burial-paradise-circus/"
         quote: "a 12-minute Burial rework of Massive Attack’s “Paradise Circus,”"
     note: null
+    story:
+      en: The producer Burial reworked “Paradise Circus” into a twelve-minute piece. The record came out in 2011 in a run of a thousand numbered copies.
+      ru: Продюсер Burial переработал «Paradise Circus» в двенадцатиминутную пьесу. Пластинка вышла в 2011 году тиражом в тысячу пронумерованных копий.
 
   - id: post-ghostpoet-2023
     title: "Paradise Circus (Fallen Sun Version)"
     artist: "POST (Grant 'Daddy G' Marshall & Stew Jackson) feat. Ghostpoet"
     year: 2023
     kind: cover
-    parents: [paradise-circus-2010]
+    parents: [ paradise-circus-2010 ]
     what_travelled: "Massive Attack members re-record their own song with a male voice for the Netflix film Luther: The Fallen Sun."
     playable_url: "https://www.youtube.com/watch?v=9tmW6EJar-I"
     playable_verified: "2026-11-15 oEmbed author_name 'Post - Topic', title 'Paradise Circus (Fallen Sun Version)'; provided by IIP-DDS, ℗ Netflix Music"
@@ -577,13 +652,16 @@ nodes:
         url: "https://www.discogs.com/release/26753339"
         quote: "Paradise Circus (Fallen Sun Version) 5:20"
     note: null
+    story:
+      en: "In 2023 two members of Massive Attack, Daddy G and Stew Jackson, re-recorded their song with Ghostpoet for the film “Luther: The Fallen Sun”."
+      ru: "В 2023 году двое участников Massive Attack, Дэдди Джи и Стю Джексон, заново записали свою песню с Ghostpoet для фильма «Лютер: Павшее солнце»."
 
   - id: marquis-hawkes-2012
     title: "Sealion Woman"
     artist: "Marquis Hawkes"
     year: 2012
     kind: interpolation
-    parents: [trad-ring-game]
+    parents: [ trad-ring-game ]
     what_travelled: "Ghetto/raw house track built around a sung rendition of the folk tune (Cabrini Green EP, Dixon Avenue Basement Jams DABJ-1202)."
     playable_url: "https://www.youtube.com/watch?v=rtfpc_gAQMY"
     playable_verified: "2026-11-15 oEmbed author_name 'Marquis Hawkes - Topic', title 'Sealion Woman'; provided by EPM Online, album Cabrini Green, ℗ Dixon Avenue Basement Jams 2012"
@@ -595,13 +673,16 @@ nodes:
         url: "https://ra.co/reviews/11963"
         quote: "blisteringly paced and melody-free save a sassy rendition of the American folk tune"
     note: "Parent unresolved: RA calls it a rendition of the folk tune; WhoSampled (snippet only) says it samples Simone's recording ('multiple elements'). Kept under the folk root until settled."
+    story:
+      en: The house producer Marquis Hawkes built his track “Sealion Woman” around a sung version of the folk tune, raw ghetto house.
+      ru: Хаус-продюсер Marquis Hawkes построил трек «Sealion Woman» вокруг спетой народной мелодии — сырой, «гетто-хаус».
 
   - id: meshell-2012
     title: "See Line Woman"
     artist: "Meshell Ndegeocello (feat. Tracy Wannomae, flute/soprano sax)"
     year: 2012
     kind: cover
-    parents: [simone-1964]
+    parents: [ simone-1964 ]
     what_travelled: "Part of an all-Simone tribute album (Pour une Âme Souveraine, Naïve, 2012); writers credited Bass and Simone."
     playable_url: "https://www.youtube.com/watch?v=oSNUWixvuww"
     playable_verified: "2026-11-15 oEmbed author_name 'naïve playlist', title 'Meshell Ndegeocello / Tracy Wannomae - See Line Woman (feat. Tracy Wannomae)'; official channel of the label Naïve, which released Pour une âme souveraine"
@@ -613,13 +694,16 @@ nodes:
         url: "https://www.notreble.com/buzz/2016/01/09/meshell-ndegeocello-see-line-woman/"
         quote: "Here's Meshell and her band performing 'See Line Woman'"
     note: "Promoted from unconfirmed in the generations sweep."
+    story:
+      en: Meshell Ndegeocello recorded the song for her tribute album to Nina Simone, “Pour une Âme Souveraine”, which credits Bass and Simone as writers.
+      ru: Мешелл Ндегеочелло записала песню для своего альбома-посвящения Нине Симон «Pour une Âme Souveraine», и автором там названы Басс и Симон.
 
   - id: atjazz-2021
     title: "See-Line Woman"
     artist: "Atjazz feat. Dominique Fils-Aimé"
     year: 2021
     kind: cover
-    parents: [simone-1964]
+    parents: [ simone-1964 ]
     what_travelled: "Deep-house remake with new vocal by Dominique Fils-Aimé; credited 'Written by Nina Simone'; the label notes cite the 1964 Mississippi Goddam B-side. Foliage FNV001."
     playable_url: "https://www.youtube.com/watch?v=ep5aomJb5VI"
     playable_verified: "2026-11-15 oEmbed author_name 'Atjazz - Topic', title 'See-Line Woman (Main Mix)'; provided by IIP-DDS, ℗ 2020 Reel People Music; official Bandcamp: atjazz.bandcamp.com"
@@ -631,13 +715,16 @@ nodes:
         url: "https://www.discogs.com/release/20987047"
         quote: "Dominique Fils-Aimé: Vocals; Nina Simone: Written-By"
     note: "The writer credit names Simone (not Bass) — a credit drift worth noting."
+    story:
+      en: "The producer Atjazz recast the song as deep house with a new voice, the singer Dominique Fils-Aimé. Here, for the first time, Nina Simone herself is credited as writer: the name on the song had changed again."
+      ru: "Продюсер Atjazz переложил песню в дип-хаус с новым голосом — певицы Доминик Филс-Эме. Автором здесь впервые указана сама Нина Симон: имя на песне снова сменилось."
 
   - id: karizma-2021
     title: "See-Line Woman (Karizma's Last 1ne Dub / Dubstrumental)"
     artist: "Atjazz feat. Dominique Fils-Aimé, remixed by Karizma"
     year: 2021
     kind: remix
-    parents: [atjazz-2021]
+    parents: [ atjazz-2021 ]
     what_travelled: "Third generation: Baltimore house producer's dub of the Atjazz remake."
     playable_url: "https://www.youtube.com/watch?v=v3mDvnAxGx4"
     playable_verified: "2026-11-15 oEmbed author_name 'Atjazz - Topic', title 'See-Line Woman (Karizma’s Last 1ne Dub)'; provided by Kartel, released 2021-03-05; official Bandcamp: atjazz.bandcamp.com"
@@ -649,6 +736,9 @@ nodes:
         url: "https://www.discogs.com/release/20987047"
         quote: "B1 See Line Woman (Karizma Last 1ne Dub) — Karizma: Remix"
     note: null
+    story:
+      en: The Baltimore house producer Karizma made a dub of the Atjazz remake, a third generation as far from the 1939 playground as the song could go.
+      ru: Хаус-продюсер Karizma из Балтимора сделал даб-версию на ремейк Atjazz — уже третье поколение, ушедшее от двора 1939 года так далеко, как только можно.
 
 sync:
 

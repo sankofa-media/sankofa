@@ -35,6 +35,8 @@ export interface RawNode {
   /** A disputed link the owner confirmed: its supporting claims stand in for sources. */
   verified?: boolean;
   claims_for?: { who?: string; url?: string; quote?: string; says?: string }[];
+  /** The version's short story for readers, in both languages. */
+  story?: { en: string; ru: string };
 }
 
 export interface RawSync {
@@ -67,6 +69,8 @@ export interface LineageNode {
   /** A page to listen at, when the recording cannot be played inside the museum. */
   link?: string;
   sources: { title: string; url: string }[];
+  /** The version's short story for readers. */
+  story?: { en: string; ru: string };
 }
 
 export interface SyncEntry {
@@ -249,6 +253,7 @@ export function compileLineage(raw: RawLineage, opts: CompileOptions): LineageDa
       categories: cats,
       ...playableOf(n),
       sources: nodeSources(n),
+      ...(n.story ? { story: n.story } : {}),
     });
   }
   const sync = (raw.sync ?? []).map((s) => ({ work: s.work, type: s.type, year: s.year, sources: sourcesOf(s.sources) }));

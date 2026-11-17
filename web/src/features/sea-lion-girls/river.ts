@@ -1,6 +1,7 @@
 // The river: the song's family tree growing down the page in two branches,
 // a filter by what each version took, and every medallion a way into the
 // docked player. Stops along it are cards for one or a few versions.
+import { pick } from '../../lib/i18n';
 import { h } from '../../lib/dom';
 import type { Kit } from '../engine/kit';
 import type { Picture } from '../engine/layers';
@@ -86,6 +87,7 @@ export function card(kit: Kit, n: LineageNode): HTMLElement {
       {},
       h('p.rv-title', {}, n.title),
       h('p.rv-artist', {}, n.artist),
+      n.story ? h('p.rv-story', {}, pick(n.story)) : null,
       h('p.rv-trav', {}, `${kit.ui('travelled')}: ${kit.ui(`glyph-${n.glyph}`)}`),
       kit.playButton(n),
       kit.credit(n),
