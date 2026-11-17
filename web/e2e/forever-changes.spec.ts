@@ -147,7 +147,6 @@ test('the lenses: the session players’ day through three witnesses, none decla
   await expect(lens.locator('.fc-voice[data-voice="echols"]')).toHaveClass(/is-on/);
   // Every version stays on the page.
   for (const id of ['botnick', 'echols', 'stuart-ware']) await expect(lens.locator(`.fc-voice[data-voice="${id}"]`)).toBeVisible();
-  await expect(lens.locator('.fc-lens-hint')).toBeVisible();
   // The scene is restyled per lens.
   const font = () => sc.locator('.ft-flow > .ft-b-lede, .ft-flow > .ft-b-text').first().evaluate((e) => getComputedStyle(e).fontFamily);
   const echolsFont = await font();

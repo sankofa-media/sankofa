@@ -44,7 +44,6 @@ export function lensPane(kit: Kit, sc: Scene, section: () => HTMLElement | null)
     h('p.fc-lens-label', { id: `lens-${sc.id}` }, kit.ui('lens-label')),
     h('div.fc-lens-btns', { role: 'group', 'aria-labelledby': `lens-${sc.id}` }, ...buttons),
     h('div.fc-voices', {}, ...voices),
-    differ ? h('p.fc-lens-hint', {}, kit.ui('lens-hint')) : null,
   );
   const choose = (id: string) => {
     el.dataset.lens = id;
