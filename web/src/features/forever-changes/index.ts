@@ -97,10 +97,10 @@ export function mount(ctx: FeatureContext): FeatureInstance {
   const watch = watcher(kit.ui('watching'));
   const stageOf = (sc: Scene, placeholder: () => Element | null): Element | null => kit.art(sc)?.el ?? placeholder();
 
-  const scene = (sc: Scene, stage: Element | null, opts: { after?: (Node | null)[]; screens?: number; long?: boolean } = {}): HTMLElement => {
+  const scene = (sc: Scene, stage: Element | null, opts: { after?: (Node | null)[]; screens?: number; long?: boolean; skip?: string[]; before?: Node | null } = {}): HTMLElement => {
     let el: HTMLElement | null = null;
     const pane = lensPane(kit, sc, () => el);
-    el = kit.section(sc, { stage, skip: pane?.blocks ?? [], after: [...(opts.after ?? []), pane?.el ?? null], screens: opts.screens ?? 1 });
+    el = kit.section(sc, { stage, skip: [...(pane?.blocks ?? []), ...(opts.skip ?? [])], after: [...(opts.before ? [opts.before] : []), ...(opts.after ?? []), pane?.el ?? null], screens: opts.screens ?? 1 });
     if (opts.long !== false) el.classList.add('ft-long');
     if (pane) el.dataset.lens = pane.el.dataset.lens;
     el.dataset.decayLevel = String(sc.decay ?? 0);
@@ -127,7 +127,11 @@ export function mount(ctx: FeatureContext): FeatureInstance {
     switch (sc.kind) {
       case 'warning': {
         const title = h('h1.ft-h1', {}, pick(ctx.data.title));
-        return scene(sc, null, { after: [title, ctx.data.reading ? h('p.ft-reading', {}, pick(ctx.data.reading)) : null], screens: 1.2, long: false });
+        // Lee's words and who said them stay together, as one quotation.
+        const said = sc.blocks.find((b) => b.role === 'quote');
+        const who = sc.blocks.find((b) => b.role === 'caption');
+        const quote = said ? h('figure.fc-epigraph', {}, h('blockquote.ft-quote', {}, pick({ en: said.en, ru: said.ru })), who ? h('figcaption.fc-epigraph-who', {}, pick({ en: who.en, ru: who.ru })) : null) : null;
+        return scene(sc, null, { skip: [said?.id, who?.id].filter((x): x is string => !!x), before: quote, after: [title, ctx.data.reading ? h('p.ft-reading', {}, pick(ctx.data.reading)) : null], screens: 1.2, long: false });
       }
       case 'magazine':
         return scene(sc, stageOf(sc, () => art.magazine(false)));
