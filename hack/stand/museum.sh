@@ -21,7 +21,7 @@ done
   -f dist/museum-media.tar -f dist/museum-site.tar -t sankofa/museum:dev -o dist/museum.tar >/dev/null
 img=$(hack/stand/push.sh museum dist/museum.tar | tail -1)
 [[ $img == localhost:5000/* ]] || { echo "push failed" >&2; exit 1; }
-sed -e "s#MUSEUM_IMAGE#$img#" -e "s#MUSEUM_HOST#${MUSEUM_HOST:-museum.sankofa.workshop.aenix.io}#g" deploy/museum.yaml > dist/museum.yaml
+sed -e "s#MUSEUM_IMAGE#$img#" -e "s#MUSEUM_HOST#${MUSEUM_HOST:-museum.sankofa.workshop.aenix.io}#g" -e "s#PUBLIC_HOST#${PUBLIC_HOST:-sankofa.black}#g" deploy/museum.yaml > dist/museum.yaml
 km apply -f dist/museum.yaml >/dev/null
 km -n sankofa-museum rollout status deploy/museum --timeout=180s
 echo "$img" >&2

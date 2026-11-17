@@ -57,3 +57,24 @@ spec:
       http:
         paths:
           - {path: /, pathType: Prefix, backend: {service: {name: museum, port: {name: http}}}}
+---
+# The museum's own domain. www redirects to the bare domain; the certificate
+# covers both names.
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: museum-domain
+  namespace: sankofa-museum
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt
+    nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts: [PUBLIC_HOST, www.PUBLIC_HOST]
+      secretName: museum-domain-tls
+  rules:
+    - host: PUBLIC_HOST
+      http:
+        paths:
+          - {path: /, pathType: Prefix, backend: {service: {name: museum, port: {name: http}}}}
