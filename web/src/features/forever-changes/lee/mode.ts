@@ -3,7 +3,8 @@
 // through shaders on the device (see ./gl.ts); things that are not there
 // appear at the edge of the frame and melt when the phone turns to them,
 // faces surface in the patterns, the current chapter's objects come into
-// the room, and the longer it runs the stronger it gets. Without a camera
+// the room (painted overlays where there are some, melting and tinted with
+// the picture; ink drawings otherwise), and the longer it runs the stronger it gets. Without a camera
 // (or on a computer) the same runs over a still picture. Nothing is sent
 // anywhere: there is no network call in this file. The way out is always on
 // the screen, and Escape works too.
@@ -30,7 +31,37 @@ export interface LeeOptions {
   phone: boolean;
   /** Calm mode or reduced motion: the picture holds still and nothing appears. */
   calm?(): boolean;
+  /** Painted overlays (transparent pictures) for the figures, the faces and the objects that have one. */
+  overlays?: LeeOverlays;
   onClose?(): void;
+}
+
+/** A painted overlay: where it is and what it shows. */
+export interface LeePicture {
+  src: string;
+  alt: string;
+}
+
+export interface LeeOverlays {
+  figures: LeePicture[];
+  faces: LeePicture[];
+  /** By vision id (telephone, newspaper, old-man…). */
+  objects: Record<string, LeePicture[]>;
+}
+
+/** Sorts a scene's overlay files into the mode's kinds by name (lee-mode-figure-…, lee-mode-face-pattern-…, lee-mode-red-telephone-…). */
+export function sortOverlays(pics: (LeePicture & { file: string })[]): LeeOverlays {
+  const out: LeeOverlays = { figures: [], faces: [], objects: {} };
+  const object = (id: string, p: LeePicture) => (out.objects[id] ??= []).push(p);
+  for (const { file, src, alt } of pics) {
+    const name = file.replace(/^lee-mode-/, '').replace(/-v\d+\.[a-z]+$/, '');
+    const p = { src, alt };
+    if (name.startsWith('figure-') || name === 'shadow') out.figures.push(p);
+    else if (name === 'face-pattern') out.faces.push(p);
+    else if (name === 'red-telephone') object('telephone', p);
+    else object(name, p);
+  }
+  return out;
 }
 
 type Source = 'camera' | 'still';
@@ -65,6 +96,8 @@ export class LeeMode {
   private behind = { side: 1, s: 0 };
   private frames = 0;
   private returnTo: Element | null = null;
+  private melting: SVGElement;
+  private picked = 0;
   private off: (() => void)[] = [];
 
   constructor(private readonly o: LeeOptions) {
@@ -106,7 +139,25 @@ export class LeeMode {
       const v = this.visionAt(e.target as Element);
       if (v) this.melt(v);
     });
+    // The painted overlays melt through their own filter, stronger as the mode deepens.
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('class', 'ink-defs');
+    svg.setAttribute('aria-hidden', 'true');
+    svg.innerHTML =
+      '<filter id="fc-lee-melt" x="-10%" y="-10%" width="120%" height="125%" color-interpolation-filters="sRGB">' +
+      '<feTurbulence type="fractalNoise" baseFrequency="0.011 0.034" numOctaves="2" seed="67" result="n">' +
+      '<animate attributeName="baseFrequency" dur="11s" values="0.011 0.034;0.016 0.05;0.011 0.034" repeatCount="indefinite"/></feTurbulence>' +
+      '<feDisplacementMap in="SourceGraphic" in2="n" scale="6" xChannelSelector="R" yChannelSelector="G"/></filter>';
+    this.melting = svg.querySelector('feDisplacementMap')!;
+    this.el.append(svg);
     o.host.append(this.el);
+  }
+
+  /** The next painted picture of a kind, in turn (null when there is none). */
+  private pic(list: LeePicture[] | undefined): HTMLImageElement | null {
+    if (!list?.length) return null;
+    const p = list[this.picked++ % list.length];
+    return h('img.fc-lee-pic', { src: p.src, alt: '', decoding: 'async', draggable: 'false' }) as HTMLImageElement;
   }
 
   get isOpen(): boolean {
@@ -203,6 +254,11 @@ export class LeeMode {
       this.el.toggleAttribute('data-calm', calm);
       this.el.style.setProperty('--lee', phase.intensity.toFixed(3));
       this.el.style.setProperty('--lee-bad', phase.bad.toFixed(3));
+      // The overlays melt with the picture, and take the chapter's colour.
+      if (this.frames % 6 === 0) {
+        this.melting.setAttribute('scale', (4 + 26 * phase.intensity + 14 * phase.bad).toFixed(1));
+        this.el.style.setProperty('--lee-tint', `${Math.round((((this.chapter?.hue ?? 0) + t * 0.004) % 1) * 360 - 40)}deg`);
+      }
       const name = phase.bad > 0.5 ? 'bad' : phase.kaleidoscope > 0.45 ? 'kaleidoscope' : 'euphoric';
       if (name !== phaseName) this.el.dataset.phase = phaseName = name;
       // Faces and the one behind fade in and out over seconds.
@@ -254,22 +310,25 @@ export class LeeMode {
 
   private show(v: Vision): void {
     let el: HTMLElement;
+    const ov = this.o.overlays;
     if (v.kind === 'object' && v.object) {
-      const art = vision(v.object, 'fc-vision ink');
-      el = h('div.fc-lee-vision', { 'data-kind': 'object', 'data-object': v.object, style: `left:${v.x * 100}%;top:${v.y * 100}%` }, art);
+      const art = this.pic(ov?.objects[v.object]) ?? vision(v.object, 'fc-vision ink');
+      el = h('div.fc-lee-vision', { 'data-kind': 'object', 'data-object': v.object, ...(art instanceof HTMLImageElement ? { 'data-painted': '' } : {}), style: `left:${v.x * 100}%;top:${v.y * 100}%` }, art);
       this.live.textContent = this.o.say(`vision-${v.object}`);
     } else if (v.kind === 'face') {
       // Out of the busiest pattern in the picture, if there is one.
       const [fx, fy] = this.hotspot;
       this.face.x = fx;
       this.face.y = fy;
-      el = h('div.fc-lee-vision', { 'data-kind': 'face', style: `left:${fx * 100}%;top:${fy * 100}%` }, face());
+      const painted = this.pic(ov?.faces);
+      el = h('div.fc-lee-vision', { 'data-kind': 'face', ...(painted ? { 'data-painted': '' } : {}), style: `left:${fx * 100}%;top:${fy * 100}%` }, painted ?? face());
     } else if (v.kind === 'eyes') {
       el = h('div.fc-lee-vision', { 'data-kind': 'eyes', style: `left:${v.x * 100}%;top:${v.y * 100}%` }, eyes(v.at));
     } else if (v.kind === 'behind') {
       el = h('div.fc-lee-vision', { 'data-kind': 'behind', 'data-side': v.x < 0 ? 'left' : 'right' }, h('span.fc-lee-shadow'), h('p.fc-lee-whisper', {}, this.o.say('lee-behind')));
     } else {
-      el = h('div.fc-lee-vision', { 'data-kind': 'figure', 'data-side': v.x < 0 ? 'left' : 'right', style: `top:${v.y * 100}%` }, inkFigure());
+      const painted = this.pic(ov?.figures);
+      el = h('div.fc-lee-vision', { 'data-kind': 'figure', ...(painted ? { 'data-painted': '' } : {}), 'data-side': v.x < 0 ? 'left' : 'right', style: `top:${v.y * 100}%` }, painted ?? inkFigure());
     }
     // Every drawn line is finished at once: there is no scroll here to draw it.
     el.querySelectorAll<SVGPathElement>('[data-ink]').forEach((p) => (p.style.strokeDashoffset = '0'));

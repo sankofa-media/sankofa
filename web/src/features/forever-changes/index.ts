@@ -1,19 +1,20 @@
 // Forever Changes: Love's album of 1967 and Arthur Lee, as a page that
 // comes apart song by song and is put back together. All words come from
-// content/features/forever-changes; this file arranges them, draws the
-// placeholders, and wires the lenses, the decay and the Arthur Lee mode.
+// content/features/forever-changes; this file arranges them with their
+// illustrations, and wires the lenses, the decay and the Arthur Lee mode.
 import { h } from '../../lib/dom';
 import { pick } from '../../lib/i18n';
 import type { FeatureContext, FeatureInstance } from '../host';
 import type { Scene } from '../model';
+import type { Picture } from '../engine/layers';
 import { decayAt, type DecayPoint } from '../engine/decay';
 import { Kit } from '../engine/kit';
-import { isCalm, onCalm, setCalm } from '../engine/calm';
+import { onCalm } from '../engine/calm';
 import * as art from './art';
 import { DecayFx, watcher } from './decay-fx';
 import { moodAt } from './trip';
 import { lensPane } from './lenses';
-import { LeeMode, type LeeChapter } from './lee/mode';
+import { LeeMode, sortOverlays, type LeeChapter } from './lee/mode';
 import { isPhone, LeePin, qrSvg } from './lee/pin';
 import { wantsLee } from './lee/url';
 import { ECHOES, SONGS, type Official } from './recordings';
@@ -29,23 +30,38 @@ interface Song {
   length?: string;
 }
 
-const GATE_KEY = 'sankofa.feature.forever-changes.entered';
-
-function entered(): boolean {
-  try {
-    return sessionStorage.getItem(GATE_KEY) === '1';
-  } catch {
-    return false;
-  }
+/**
+ * Pictures that change as the text reaches each part of a chapter: the
+ * art's state, the block from which it shows (`at`: once that share of the
+ * block has come up the screen), and a real photograph that takes the
+ * drawing's place for that part. The first step shows first.
+ */
+interface Step {
+  state: string;
+  from: string;
+  at?: number;
+  photo?: string;
 }
-
-function enter(): void {
-  try {
-    sessionStorage.setItem(GATE_KEY, '1');
-  } catch {
-    /* this page only */
-  }
-}
+const STEPS: Record<string, Step[]> = {
+  prologue: [
+    { state: 'memphis', from: 'kicker' },
+    { state: 'dorsey', from: 'dorsey' },
+    { state: 'love-named', from: 'byrds', photo: 'love-1966-ad' },
+    { state: 'bido', from: 'holzman' },
+    { state: 'red-book', from: 'holzman', at: 0.55, photo: 'love-red-book-ad' },
+    { state: 'castle', from: 'tour' },
+  ],
+  after: [
+    { state: 'after', from: 'kicker' },
+    { state: 'prison', from: 'prison' },
+  ],
+  echoes: [
+    { state: 'orchestra', from: 'kicker' },
+    { state: 'echols', from: 'screen', photo: 'echols-2019' },
+  ],
+};
+/** A photograph that develops out of the chapter's drawing as the reader goes on. */
+const DEVELOP: Record<string, string> = { 'session-day': 'love-1967' };
 
 const reduced = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -96,7 +112,29 @@ export function mount(ctx: FeatureContext): FeatureInstance {
   // ---------- scenes ----------
   const songs = scenes.filter((sc) => sc.kind === 'song' && sc.song).map((sc) => sc.song as Song);
   const watch = watcher(kit.ui('watching'));
-  const stageOf = (sc: Scene, placeholder: () => Element | null): Element | null => kit.art(sc)?.el ?? placeholder();
+  const pictures = new Map<string, Picture>();
+  // A real photograph inside a chapter's picture: whole, with its caption and credit (and links where the licence asks).
+  const photo = (id: string, state?: string): HTMLElement | null => {
+    const a = ctx.data.art.find((x) => x.id === id);
+    const p = kit.photo(id);
+    if (!a || !p) return null;
+    const link = (href: string, text: string) => h('a', { href, target: '_blank', rel: 'noopener noreferrer' }, text);
+    return h(
+      'figure.fc-photo',
+      { 'data-photo': id, ...(state ? { 'data-state': state, 'aria-hidden': 'true' } : { 'data-develop-photo': '' }) },
+      h('img', { 'data-src': p.src, alt: p.alt, decoding: 'async', draggable: 'false' }),
+      h('figcaption.ft-credit.fc-photo-credit', {}, p.credit, a.source ? [' · ', link(a.source, 'Wikimedia Commons')] : null, a.license_url ? [' · ', link(a.license_url, pick({ en: 'licence', ru: 'лицензия' }))] : null),
+    );
+  };
+  const photosOf = (sc: Scene): HTMLElement[] =>
+    [...(STEPS[sc.id] ?? []).filter((st) => st.photo).map((st) => photo(st.photo!, st.state)), DEVELOP[sc.id] ? photo(DEVELOP[sc.id]) : null].filter((x): x is HTMLElement => !!x);
+  const pictureOf = (sc: Scene, overlay?: Node | null): Picture | null => {
+    const photos = photosOf(sc);
+    const pic = kit.art(sc, { state: STEPS[sc.id]?.[0].state, overlay: photos.length || overlay ? h('div.fc-over', {}, overlay ?? null, ...photos) : null });
+    if (pic) pictures.set(sc.id, pic);
+    return pic;
+  };
+  const stageOf = (sc: Scene, overlay?: Node | null): Element | null => pictureOf(sc, overlay)?.el ?? null;
 
   const scene = (sc: Scene, stage: Element | null, opts: { after?: (Node | null)[]; screens?: number; long?: boolean; skip?: string[]; before?: Node | null } = {}): HTMLElement => {
     let el: HTMLElement | null = null;
@@ -112,6 +150,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
     const side = (s: 'a' | 'b') =>
       h(`div.fc-face.fc-${s}`, {}, h('small', {}, kit.ui(`side-${s}`)), h('ol', {}, ...songs.filter((x) => x.side === s).map((x) => h('li', {}, x.title))));
     const record = h('div.fc-record', { 'data-side': 'a' }, art.disc(), h('div.fc-faces', {}, side('a'), side('b')));
+    const pic = pictureOf(sc, record);
     const live = h('p.ft-visually-hidden.fc-flip-now', { 'aria-live': 'polite' });
     const btn = h('button.btn.primary.fc-flip', { type: 'button', 'aria-pressed': 'false' }, kit.ui('flip')) as HTMLButtonElement;
     btn.addEventListener('click', () => {
@@ -121,7 +160,10 @@ export function mount(ctx: FeatureContext): FeatureInstance {
       live.textContent = kit.ui(b ? 'side-b' : 'side-a');
       fx.freeze(1200);
     });
-    return scene(sc, h('div.ft-stack', {}, record), { after: [btn, live], screens: 1.6, long: false });
+    const el = scene(sc, pic?.el ?? h('div.ft-stack', {}, record), { after: [btn, live], screens: 1.6, long: false });
+    btn.addEventListener('click', () => (el.dataset.side = record.dataset.side));
+    el.dataset.side = 'a';
+    return el;
   };
 
   const render = (sc: Scene): HTMLElement | null => {
@@ -132,27 +174,24 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         const said = sc.blocks.find((b) => b.role === 'quote');
         const who = sc.blocks.find((b) => b.role === 'caption');
         const quote = said ? h('figure.fc-epigraph', {}, h('blockquote.ft-quote', {}, pick({ en: said.en, ru: said.ru })), who ? h('figcaption.fc-epigraph-who', {}, pick({ en: who.en, ru: who.ru })) : null) : null;
-        return scene(sc, null, { skip: [said?.id, who?.id].filter((x): x is string => !!x), before: quote, after: [title, ctx.data.reading ? h('p.ft-reading', {}, pick(ctx.data.reading)) : null], screens: 1.2, long: false });
+        return scene(sc, stageOf(sc), { skip: [said?.id, who?.id].filter((x): x is string => !!x), before: quote, after: [title, ctx.data.reading ? h('p.ft-reading', {}, pick(ctx.data.reading)) : null], screens: 1.2, long: false });
       }
       case 'magazine':
-        return scene(sc, stageOf(sc, () => art.magazine(false)));
       case 'after':
-        return scene(sc, stageOf(sc, () => art.magazine(true)));
-      case 'hillside':
-        return scene(sc, stageOf(sc, () => art.hillside()), { screens: 1.4 });
       case 'session':
-        return scene(sc, stageOf(sc, () => art.studio()));
+      case 'orchestra':
+        return scene(sc, stageOf(sc));
+      case 'hillside':
+        return scene(sc, stageOf(sc), { screens: 1.4 });
       case 'diary': {
-        const el = scene(sc, stageOf(sc, () => art.diary()));
+        const el = scene(sc, stageOf(sc));
         el.classList.add('fc-diary');
         return el;
       }
-      case 'orchestra':
-        return scene(sc, stageOf(sc, () => art.score()));
       case 'song': {
         const song = sc.song as Song | undefined;
-        const visions = (sc.visions as string[] | undefined) ?? [];
-        const stage = stageOf(sc, () => (sc.id === 'the-red-telephone' ? h('div.ft-stack', {}, art.song(visions[0], song?.n ?? 0), watch.el) : art.song(visions[0], song?.n ?? 0)));
+        // Someone is watching from the red telephone's picture.
+        const stage = stageOf(sc, sc.id === 'the-red-telephone' ? watch.el : null);
         const rec = SONGS[sc.id];
         const el = scene(sc, stage, { after: [rec ? playButton(rec) : h('p.ft-none.fc-no-player', {}, kit.ui('no-recording'))] });
         el.dataset.side = song?.side ?? '';
@@ -162,11 +201,11 @@ export function mount(ctx: FeatureContext): FeatureInstance {
       case 'flip':
         return flip(sc);
       case 'return':
-        return scene(sc, stageOf(sc, () => art.stands()), { screens: 1.4 });
+        return scene(sc, stageOf(sc), { screens: 1.4 });
       case 'end':
-        return scene(sc, null, { screens: 1.4, long: false });
+        return scene(sc, stageOf(sc), { screens: 1.4, long: false });
       case 'echoes':
-        return scene(sc, stageOf(sc, () => art.echoes()), {
+        return scene(sc, stageOf(sc), {
           after: [h('div.fc-plays', {}, h('p.fc-plays-label', {}, pick({ en: 'Official recordings', ru: 'Официальные записи' })), ...ECHOES.map((r) => playButton(r, r.year ? `${r.artist}, ${r.year}` : r.artist)))],
         });
       case 'lee': {
@@ -174,7 +213,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         open.addEventListener('click', () => openLee());
         const code = isPhone() ? null : h('figure.fc-lee-inline', {}, qrSvg(pin.url(), kit.ui('lee-qr')), h('figcaption', {}, kit.ui('lee-qr')));
         leeInline = code;
-        return scene(sc, null, { after: [code, open], screens: 1.2 });
+        return scene(sc, stageOf(sc), { after: [code, open], screens: 1.2 });
       }
       default:
         return null;
@@ -200,7 +239,11 @@ export function mount(ctx: FeatureContext): FeatureInstance {
     const sc = scenes[i];
     return { id: sc?.id ?? 'warning', name: sc ? nameOf(sc) : '', visions: visionsOf(sc), hue: (0.92 + (i / scenes.length) * 0.75) % 1 };
   };
-  const lee = new LeeMode({ host: root, say: (k, v) => kit.ui(k, v), phone: isPhone(), calm: () => kit.calm || reduced() });
+  // The mode's figures, faces and objects are the painted overlays of its own chapter.
+  const overlays = sortOverlays(
+    (scenes.find((x) => x.kind === 'lee')?.art?.overlays ?? []).map((l) => ({ file: l.file, src: ctx.app.media(`features/${ctx.data.id}/${l.file}`), alt: l.alt === '' ? '' : pick(l.alt) })),
+  );
+  const lee = new LeeMode({ host: root, say: (k, v) => kit.ui(k, v), phone: isPhone(), calm: () => kit.calm || reduced(), overlays });
   const pin = new LeePin({ host: root, say: (k) => kit.ui(k), current: () => kit.current() ?? ctx.scene, open: () => openLee() });
   let leeInline: HTMLElement | null = null;
   const openLee = () => lee.open(chapter(kit.current() ?? ctx.scene));
@@ -219,14 +262,30 @@ export function mount(ctx: FeatureContext): FeatureInstance {
     names: () => [...menuItems.map((m) => ({ el: m.label, alias: aliasOf(m.sc) })), { el: nowEl, alias: aliasOf(scenes.find((s) => s.id === kit.current()) ?? scenes[0]) }],
   });
   const points: DecayPoint[] = scenes.map((sc) => ({ decay: typeof sc.decay === 'number' ? sc.decay : 0, settle: sc.settle === true }));
-  const standsOf = (el: HTMLElement) => [...el.querySelectorAll<SVGGElement>('.fc-stand')];
+  // The picture follows the text: the last step whose first block has come up the screen.
+  const step = (sc: Scene, el: HTMLElement) => {
+    const steps = STEPS[sc.id];
+    const pic = pictures.get(sc.id);
+    if (!steps || !pic) return;
+    let state = steps[0].state;
+    for (const st of steps) {
+      const b = el.querySelector<HTMLElement>(`.ft-flow > [data-block="${st.from}"]`);
+      if (!b) continue;
+      const r = b.getBoundingClientRect();
+      if (r.top + r.height * (st.at ?? 0) < innerHeight * 0.62) state = st.state;
+    }
+    if (pic.state === state) return;
+    pic.setState(state);
+    pic.el.querySelectorAll<HTMLElement>('.fc-photo[data-state]').forEach((f) => {
+      const on = f.dataset.state === state;
+      f.classList.toggle('al-on', on);
+      f.setAttribute('aria-hidden', String(!on));
+    });
+  };
   const ids = scenes.map((sc) => sc.id);
   scenes.forEach((sc, i) => {
     kit.onProgress(sc.id, (p, el) => {
-      if (sc.kind === 'return') {
-        const st = standsOf(el);
-        st.forEach((s, k) => s.classList.toggle('on', kit.calm || p > 0.1 + (k / st.length) * 0.7));
-      }
+      step(sc, el);
       if (el.classList.contains('current')) fx.set(decayAt(points, i, p), el, moodAt(ids, i, p));
     });
     kit.onEnter(sc.id, (el) => {
@@ -247,35 +306,6 @@ export function mount(ctx: FeatureContext): FeatureInstance {
   };
   ctx.scroller.addEventListener('pointermove', follow);
   cleanups.push(() => ctx.scroller.removeEventListener('pointermove', follow));
-
-  // ---------- the door: a warning, and the choice ----------
-  const gate = (): void => {
-    const done = (full: boolean) => {
-      enter();
-      // With the system asking for less motion, "as it is" still stays calm.
-      if (!full || !reduced()) setCalm(!full);
-      fx.choose(true);
-      el.remove();
-      root.removeAttribute('data-gate');
-      (ctx.scroller as HTMLElement).focus({ preventScroll: true });
-    };
-    const calmBtn = h('button.btn.fc-gate-calm', { type: 'button' }, kit.ui('gate-calm'));
-    const fullBtn = h('button.btn.primary.fc-gate-full', { type: 'button' }, kit.ui('gate-full'));
-    calmBtn.addEventListener('click', () => done(false));
-    fullBtn.addEventListener('click', () => done(true));
-    const el = h(
-      'div.fc-gate',
-      { role: 'dialog', 'aria-modal': 'true', 'aria-labelledby': 'fc-gate-title' },
-      h('div.fc-gate-box', {}, h('h2', { id: 'fc-gate-title' }, kit.ui('gate-title')), h('p', {}, kit.ui('gate-text')), reduced() ? h('p.fc-gate-reduced', {}, kit.ui('gate-reduced')) : null, h('div.fc-gate-go', {}, calmBtn, fullBtn)),
-    );
-    root.dataset.gate = '';
-    root.append(el);
-    queueMicrotask(() => (isCalm() ? calmBtn : fullBtn).focus({ preventScroll: true }));
-  };
-  // No warning screen: the page opens straight into the album.
-  void gate;
-  if (!entered()) enter();
-  fx.choose(true);
 
   kit.start(ctx.scene);
   fx.apply();
