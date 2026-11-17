@@ -63,12 +63,12 @@ const (
 
 // MaxBodyWords keeps cards short: room for a complete short story (context,
 // what happened, how it ended, why it matters), not an encyclopedia entry.
-const MaxBodyWords = 220
+const MaxBodyWords = 320
 
 // MaxExplainerWords is the room for cards that must first explain what
 // something is — a genre, an instrument, a script, a language — before the
 // story that makes it memorable.
-const MaxExplainerWords = 235
+const MaxExplainerWords = 340
 
 // Explainer kinds open with what the thing is, then tell the story.
 var Explainer = map[string]bool{KindGenre: true, KindInstrument: true, KindScript: true, KindLanguage: true}
