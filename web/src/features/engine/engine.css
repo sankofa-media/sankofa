@@ -271,7 +271,7 @@
   object-fit: cover;
 }
 .ink-develop > :not(.ink-photo) {
-  opacity: calc(1 - var(--develop, 0) * 0.85);
+  opacity: calc(1 - var(--develop, 0));
 }
 
 /* Layered illustrations (layers.ts): generated layers on one paper canvas. */
