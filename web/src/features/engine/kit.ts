@@ -1,6 +1,7 @@
 // The kit a feature is built with: scene sections with a sticky stage and a
 // flow of text, the text itself (bilingual, from the content files, through
-// the dictionary linker), the calm and sound switches on every screen, the
+// the dictionary linker), the sound switch on every screen, calm mode with
+// the system's reduce-motion setting, the
 // reader's clap circle, and the bridge to the museum's docked player.
 import { richText } from '../../app';
 import { h } from '../../lib/dom';
@@ -12,7 +13,7 @@ import { miniPlayer } from '../../views/miniPlayer';
 import type { FeatureContext } from '../host';
 import type { LineageNode } from '../lineage';
 import type { Bi, Block, Scene } from '../model';
-import { isCalm, onCalm, setCalm } from './calm';
+import { isCalm, onCalm } from './calm';
 import { ClapCircle } from './circle';
 import { BEAT, clap, ClapBed, knock } from './clap';
 import { inkDefs, LivingInk } from './ink';
@@ -45,7 +46,6 @@ export class Kit {
   private progress = new Map<string, (p: number, el: HTMLElement) => void>();
   private disposers: (() => void)[] = [];
   private soundBtn: HTMLButtonElement;
-  private calmBtn: HTMLButtonElement;
   private nodes: Map<string, LineageNode>;
   /** Scenes where the space bar claps rather than scrolls. */
   clapScenes = new Set<string>();
@@ -71,11 +71,8 @@ export class Kit {
     this.circle.onClap = () => this.tap();
     ctx.root.append(this.circle.el);
 
-    this.calmBtn = h('button.btn.ft-calm', { type: 'button', 'aria-pressed': 'false', title: this.ui('calm-hint') }, h('span.ft-calm-ic', { 'aria-hidden': 'true' }), this.ui('calm')) as HTMLButtonElement;
-    this.calmBtn.addEventListener('click', () => setCalm(!this.ink.calm));
     this.soundBtn = h('button.btn.ft-sound', { type: 'button', 'aria-pressed': 'false' }, h('span.ft-sound-ic', { 'aria-hidden': 'true' }), h('span.ft-sound-tx')) as HTMLButtonElement;
     this.soundBtn.addEventListener('click', () => this.setSound(this.audio !== 'on'));
-    // No calm toggle on screen: the system's reduce-motion setting alone stills the page.
     ctx.tools.replaceChildren(this.soundBtn);
     this.applyCalm(isCalm());
     this.disposers.push(onCalm((on) => this.applyCalm(on)));
@@ -185,7 +182,6 @@ export class Kit {
   private applyCalm(on: boolean): void {
     this.ink.calm = on;
     this.ctx.root.classList.toggle('is-calm', on);
-    this.calmBtn.setAttribute('aria-pressed', String(on));
     if (on) this.scroller?.revealAll();
     // Redraw every scene where it stands, and let its mechanics settle too (a door that opens, a river grown).
     for (const el of this.sceneEls) {

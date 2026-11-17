@@ -6,8 +6,8 @@
 // the keyboard and the scroll bar always work), footnotes creep, the
 // progress bar lies for a moment, a chapter in the menu is called something
 // else for a moment, and in "The Red Telephone" someone is watching. All of
-// it stops in calm mode, with reduced motion, and until the reader chose
-// "as it is" at the door. Any flash goes through the FlashGate.
+// it stops when the system asks for reduced motion. Any flash goes through
+// the FlashGate.
 import { h } from '../../lib/dom';
 import { decayEffects, Drag, lyingProgress, STILL, type DecayEffects } from '../engine/decay';
 import { s } from '../engine/ink';
@@ -31,7 +31,6 @@ export interface DecayFxOptions {
 export class DecayFx {
   level = 0;
   effects: DecayEffects = STILL;
-  private chosen = false;
   mood: Mood = { dark: 0, warm: 0 };
   readonly trip: TripFx;
   private drag = new Drag(72);
@@ -65,14 +64,8 @@ export class DecayFx {
     this.paintBar();
   }
 
-  /** The reader chose at the door: "as it is" lets the decay in. */
-  choose(full: boolean): void {
-    this.chosen = full;
-    this.apply();
-  }
-
   get active(): boolean {
-    return this.chosen && !this.o.calm() && !reduced();
+    return !this.o.calm() && !reduced();
   }
 
   private get frozen(): boolean {
