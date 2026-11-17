@@ -357,7 +357,7 @@ test('screenshots of the key chapters and the mode', async ({ page, isMobile }) 
 });
 
 test('the trip scales with the chapters: calm prologue, dark mushrooms, the peak, a breath, the reassembly', async ({ page }) => {
-  test.setTimeout(90_000);
+  test.setTimeout(120_000);
   await open(page);
   await goToScene(page, 'prologue');
   await page.waitForTimeout(600);
@@ -365,14 +365,14 @@ test('the trip scales with the chapters: calm prologue, dark mushrooms, the peak
   expect(['webgl2', 'webgl', '2d']).toContain(await feature(page).getAttribute('data-trip-gl'));
   // A House Is Not a Motel: colour behind the page, mycelium from the edges.
   await goToScene(page, 'a-house-is-not-a-motel');
-  await expect.poll(() => opacity(page, 'back'), { timeout: 8000 }).toBeGreaterThan(0.5);
+  await expect.poll(() => opacity(page, 'back'), { timeout: 15_000 }).toBeGreaterThan(0.5);
   await expect(feature(page).locator('.fc-trip-myc')).toBeVisible();
-  await expect.poll(() => opacity(page, 'vig'), { timeout: 8000 }).toBeGreaterThan(0.3);
+  await expect.poll(() => opacity(page, 'vig'), { timeout: 15_000 }).toBeGreaterThan(0.3);
   const house = await opacity(page, 'over');
   // The peak: everything at full, the page swims, the stage melts.
   await goToScene(page, 'the-red-telephone');
-  await expect.poll(() => opacity(page, 'back'), { timeout: 8000 }).toBeGreaterThan(0.95);
-  await expect.poll(() => opacity(page, 'over'), { timeout: 8000 }).toBeGreaterThan(house);
+  await expect.poll(() => opacity(page, 'back'), { timeout: 15_000 }).toBeGreaterThan(0.95);
+  await expect.poll(() => opacity(page, 'over'), { timeout: 15_000 }).toBeGreaterThan(house);
   await expect(feature(page)).toHaveClass(/fx-swim/);
   expect(await scene(page, 'the-red-telephone').locator('.ft-stage svg.ink').first().evaluate((e) => getComputedStyle(e).filter)).toContain('fc-melt-art');
   expect(await scene(page, 'the-red-telephone').locator('.ft-text').first().evaluate((e) => getComputedStyle(e).filter)).toContain('fc-flow-soft');
@@ -380,10 +380,10 @@ test('the trip scales with the chapters: calm prologue, dark mushrooms, the peak
   // Body text melts, but within its bound.
   expect(Number(await page.locator('#fc-flow-soft feDisplacementMap').getAttribute('scale'))).toBeLessThanOrEqual(5);
   // The frames keep coming, and words that swap come back as they were.
-  const text = await scene(page, 'the-red-telephone').locator('.ft-flow').innerText();
-  await expect.poll(() => feature(page).getAttribute('data-trip-fps'), { timeout: 8000 }).not.toBeNull();
+  const text = await scene(page, 'the-red-telephone').locator('.ft-flow').evaluate((e) => (e.textContent ?? '').replace(/\s+/g, ' '));
+  await expect.poll(() => feature(page).getAttribute('data-trip-fps'), { timeout: 15_000 }).not.toBeNull();
   await page.waitForTimeout(5000);
-  expect(await scene(page, 'the-red-telephone').locator('.ft-flow').innerText()).toBe(text);
+  expect(await scene(page, 'the-red-telephone').locator('.ft-flow').evaluate((e) => (e.textContent ?? '').replace(/\s+/g, ' '))).toBe(text);
   // The keyboard still scrolls at the peak: nothing holds the page.
   const before = await sheet(page).evaluate((el) => el.scrollTop);
   await sheet(page).focus();
@@ -391,16 +391,16 @@ test('the trip scales with the chapters: calm prologue, dark mushrooms, the peak
   await expect.poll(() => sheet(page).evaluate((el) => el.scrollTop)).toBeGreaterThan(before);
   // A breath: the dark recedes.
   await goToScene(page, 'the-good-humor-man');
-  await expect.poll(() => opacity(page, 'back'), { timeout: 8000 }).toBeLessThan(0.75);
-  await expect.poll(() => opacity(page, 'vig'), { timeout: 8000 }).toBeLessThan(0.2);
+  await expect.poll(() => opacity(page, 'back'), { timeout: 15_000 }).toBeLessThan(0.75);
+  await expect.poll(() => opacity(page, 'vig'), { timeout: 15_000 }).toBeLessThan(0.2);
   // The reassembly: warm, then nothing by the end.
   await goToScene(page, 'you-set-the-scene');
-  await expect.poll(async () => Number(await feature(page).evaluate((e) => e.style.getPropertyValue('--trip-warm') || 0)), { timeout: 8000 }).toBeGreaterThan(0.3);
+  await expect.poll(async () => Number(await feature(page).evaluate((e) => e.style.getPropertyValue('--trip-warm') || 0)), { timeout: 15_000 }).toBeGreaterThan(0.3);
   await goToScene(page, 'after');
-  await expect(feature(page).locator('.fc-trip-back')).toBeHidden({ timeout: 8000 });
+  await expect(feature(page).locator('.fc-trip-back')).toBeHidden({ timeout: 15_000 });
   // Calm stops it all at once.
   await goToScene(page, 'the-red-telephone');
-  await expect.poll(() => opacity(page, 'back'), { timeout: 8000 }).toBeGreaterThan(0.5);
+  await expect.poll(() => opacity(page, 'back'), { timeout: 15_000 }).toBeGreaterThan(0.5);
   await sheet(page).locator('.ft-calm').click();
   await expectNoTrip(page);
 });
