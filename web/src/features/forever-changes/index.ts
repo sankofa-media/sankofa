@@ -11,6 +11,7 @@ import { Kit } from '../engine/kit';
 import { isCalm, onCalm, setCalm } from '../engine/calm';
 import * as art from './art';
 import { DecayFx, watcher } from './decay-fx';
+import { moodAt } from './trip';
 import { lensPane } from './lenses';
 import { LeeMode, type LeeChapter } from './lee/mode';
 import { isPhone, LeePin, qrSvg } from './lee/pin';
@@ -199,7 +200,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
     const sc = scenes[i];
     return { id: sc?.id ?? 'warning', name: sc ? nameOf(sc) : '', visions: visionsOf(sc), hue: (0.92 + (i / scenes.length) * 0.75) % 1 };
   };
-  const lee = new LeeMode({ host: root, say: (k, v) => kit.ui(k, v), phone: isPhone() });
+  const lee = new LeeMode({ host: root, say: (k, v) => kit.ui(k, v), phone: isPhone(), calm: () => kit.calm || reduced() });
   const pin = new LeePin({ host: root, say: (k) => kit.ui(k), current: () => kit.current() ?? ctx.scene, open: () => openLee() });
   let leeInline: HTMLElement | null = null;
   const openLee = () => lee.open(chapter(kit.current() ?? ctx.scene));
@@ -219,17 +220,18 @@ export function mount(ctx: FeatureContext): FeatureInstance {
   });
   const points: DecayPoint[] = scenes.map((sc) => ({ decay: typeof sc.decay === 'number' ? sc.decay : 0, settle: sc.settle === true }));
   const standsOf = (el: HTMLElement) => [...el.querySelectorAll<SVGGElement>('.fc-stand')];
+  const ids = scenes.map((sc) => sc.id);
   scenes.forEach((sc, i) => {
     kit.onProgress(sc.id, (p, el) => {
       if (sc.kind === 'return') {
         const st = standsOf(el);
         st.forEach((s, k) => s.classList.toggle('on', kit.calm || p > 0.1 + (k / st.length) * 0.7));
       }
-      if (el.classList.contains('current')) fx.set(decayAt(points, i, p), el);
+      if (el.classList.contains('current')) fx.set(decayAt(points, i, p), el, moodAt(ids, i, p));
     });
     kit.onEnter(sc.id, (el) => {
       el.classList.add('entered');
-      fx.set(decayAt(points, i, Number(el.dataset.p ?? 0)), el);
+      fx.set(decayAt(points, i, Number(el.dataset.p ?? 0)), el, moodAt(ids, i, Number(el.dataset.p ?? 0)));
       nowEl.textContent = nameOf(sc);
       delete nowEl.dataset.renamed;
       root.classList.toggle('ft-white', sc.kind === 'end');

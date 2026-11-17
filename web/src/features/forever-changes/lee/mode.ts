@@ -10,8 +10,9 @@
 import { h } from '../../../lib/dom';
 import { FlashGate } from '../../model';
 import { vision } from '../art';
+import { leePhase, Quality, smoothstep } from '../trip';
 import { Shader, stillRoom } from './gl';
-import { facing, intensity, movedToward, Scheduler, type Vision } from './scheduler';
+import { facing, movedToward, Scheduler, type Vision } from './scheduler';
 
 export interface LeeChapter {
   id: string;
@@ -27,15 +28,12 @@ export interface LeeOptions {
   say(key: string, vars?: Record<string, string>): string;
   /** A phone: the camera is offered. */
   phone: boolean;
+  /** Calm mode or reduced motion: the picture holds still and nothing appears. */
+  calm?(): boolean;
   onClose?(): void;
 }
 
 type Source = 'camera' | 'still';
-
-const smooth = (a: number, b: number, x: number) => {
-  const t = Math.min(1, Math.max(0, (x - a) / (b - a)));
-  return t * t * (3 - 2 * t);
-};
 
 export class LeeMode {
   readonly el: HTMLElement;
@@ -60,6 +58,12 @@ export class LeeMode {
   private lastFrame: Float32Array | null = null;
   private sampler: CanvasRenderingContext2D | null = null;
   private gate = new FlashGate(3, 1000);
+  private quality = new Quality(1);
+  /** Where the picture's edges are busiest (0..1): faces come out of there. */
+  private hotspot: [number, number] = [0.5, 0.45];
+  private face = { x: 0.5, y: 0.45, s: 0 };
+  private behind = { side: 1, s: 0 };
+  private frames = 0;
   private returnTo: Element | null = null;
   private off: (() => void)[] = [];
 
@@ -169,40 +173,71 @@ export class LeeMode {
     (this.el.querySelector('.fc-lee-exit') as HTMLElement).focus({ preventScroll: true });
     this.shader = Shader.create(this.canvas);
     this.el.classList.toggle('no-gl', !this.shader);
+    this.el.dataset.gl = this.shader?.kind ?? 'none';
     if (!this.shader && this.still) this.view.prepend(Object.assign(this.still, { className: 'fc-lee-still-img' }));
     if (this.shader) this.shader.mirror = false;
     this.scheduler = new Scheduler(this.chapter?.visions ?? [], hashSeed(this.chapter?.id ?? 'lee'));
     this.t0 = performance.now();
     const fit = () => {
-      const scale = Math.min(1, 900 / Math.max(innerWidth, innerHeight));
-      this.shader?.resize(innerWidth * scale * Math.min(2, devicePixelRatio || 1) * 0.6, innerHeight * scale * Math.min(2, devicePixelRatio || 1) * 0.6);
+      const scale = Math.min(1, 1000 / Math.max(innerWidth, innerHeight));
+      const q = this.quality.scale * 1.6;
+      this.shader?.resize(innerWidth * scale * Math.min(2, devicePixelRatio || 1) * q, innerHeight * scale * Math.min(2, devicePixelRatio || 1) * q);
     };
     fit();
     window.addEventListener('resize', fit);
     this.off.push(() => window.removeEventListener('resize', fit));
     if (this.still && this.shader) this.shader.upload(this.still, this.still.width, this.still.height);
+    let last = performance.now();
+    let phaseName = '';
     const frame = () => {
       this.raf = requestAnimationFrame(frame);
+      const now = performance.now();
+      const dt = Math.min(0.1, (now - last) / 1000);
+      if (this.quality.frame(now - last)) fit();
+      last = now;
       if (document.hidden) return;
-      const t = (performance.now() - this.t0) / 1000;
-      const level = intensity(t);
-      this.el.style.setProperty('--lee', level.toFixed(3));
+      const calm = this.o.calm?.() ?? false;
+      if (calm) this.t0 = now;
+      const t = (now - this.t0) / 1000;
+      const phase = leePhase(t);
+      this.el.toggleAttribute('data-calm', calm);
+      this.el.style.setProperty('--lee', phase.intensity.toFixed(3));
+      this.el.style.setProperty('--lee-bad', phase.bad.toFixed(3));
+      const name = phase.bad > 0.5 ? 'bad' : phase.kaleidoscope > 0.45 ? 'kaleidoscope' : 'euphoric';
+      if (name !== phaseName) this.el.dataset.phase = phaseName = name;
+      // Faces and the one behind fade in and out over seconds.
+      const faceOn = [...this.shown.keys()].some((v) => v.kind === 'face');
+      const behindOn = [...this.shown.keys()].find((v) => v.kind === 'behind');
+      this.face.s += ((faceOn ? 1 : 0) - this.face.s) * Math.min(1, dt * 0.8);
+      if (behindOn) this.behind.side = behindOn.x < 0 ? -1 : 1;
+      this.behind.s += ((behindOn ? 1 : 0) - this.behind.s) * Math.min(1, dt * 0.6);
       if (this.shader) {
         if (this.stream && this.video.readyState >= 2) this.shader.upload(this.video, this.video.videoWidth, this.video.videoHeight);
-        this.shader.draw(t, { intensity: level, kaleidoscope: smooth(0.35, 1, level) * 0.85, hue: ((this.chapter?.hue ?? 0) + t * 0.002) % 1 });
+        this.shader.draw(t, {
+          phase,
+          hue: ((this.chapter?.hue ?? 0) + t * 0.004) % 1,
+          face: [this.face.x, this.face.y, this.face.s * smoothstep(0, 0.3, phase.intensity + 0.15)],
+          behind: [this.behind.side, this.behind.s],
+          still: !this.stream,
+          octaves: this.quality.octaves,
+        });
+      }
+      if (++this.frames % 30 === 0) {
+        this.el.dataset.frames = String(this.frames);
+        this.el.dataset.fps = String(Math.round(this.quality.fps));
       }
     };
     this.raf = requestAnimationFrame(frame);
     // The visions: a few times a second is plenty.
     this.timers.push(window.setInterval(() => this.visions(), 250));
-    if (this.stream) this.timers.push(window.setInterval(() => this.sample(), 250));
+    this.timers.push(window.setInterval(() => this.sample(), 250));
     const near = (e: PointerEvent) => this.near(e.clientX, e.clientY);
     this.el.addEventListener('pointermove', near);
     this.off.push(() => this.el.removeEventListener('pointermove', near));
   }
 
   private visions(): void {
-    if (!this.scheduler) return;
+    if (!this.scheduler || this.o.calm?.()) return;
     const t = (performance.now() - this.t0) / 1000;
     for (const v of this.scheduler.tick(t)) this.show(v);
     const alive = new Set(this.scheduler.active(t));
@@ -224,7 +259,13 @@ export class LeeMode {
       el = h('div.fc-lee-vision', { 'data-kind': 'object', 'data-object': v.object, style: `left:${v.x * 100}%;top:${v.y * 100}%` }, art);
       this.live.textContent = this.o.say(`vision-${v.object}`);
     } else if (v.kind === 'face') {
-      el = h('div.fc-lee-vision', { 'data-kind': 'face', style: `left:${v.x * 100}%;top:${v.y * 100}%` }, face());
+      // Out of the busiest pattern in the picture, if there is one.
+      const [fx, fy] = this.hotspot;
+      this.face.x = fx;
+      this.face.y = fy;
+      el = h('div.fc-lee-vision', { 'data-kind': 'face', style: `left:${fx * 100}%;top:${fy * 100}%` }, face());
+    } else if (v.kind === 'eyes') {
+      el = h('div.fc-lee-vision', { 'data-kind': 'eyes', style: `left:${v.x * 100}%;top:${v.y * 100}%` }, eyes(v.at));
     } else if (v.kind === 'behind') {
       el = h('div.fc-lee-vision', { 'data-kind': 'behind', 'data-side': v.x < 0 ? 'left' : 'right' }, h('span.fc-lee-shadow'), h('p.fc-lee-whisper', {}, this.o.say('lee-behind')));
     } else {
@@ -267,33 +308,37 @@ export class LeeMode {
     window.setTimeout(() => s.el.remove(), 1400);
   }
 
-  /** How much the camera picture changed on each side since the last look. */
+  /** How much the picture changed on each side since the last look, and where its edges are busiest. */
   private sample(): void {
-    if (this.video.readyState < 2) return;
+    const src: CanvasImageSource | null = this.stream ? (this.video.readyState >= 2 ? this.video : null) : this.still;
+    if (!src) return;
+    const W = 32;
+    const H = 18;
     if (!this.sampler) {
       const c = document.createElement('canvas');
-      c.width = 32;
-      c.height = 18;
+      c.width = W;
+      c.height = H;
       this.sampler = c.getContext('2d', { willReadFrequently: true });
     }
     const g = this.sampler;
     if (!g) return;
-    g.drawImage(this.video, 0, 0, 32, 18);
-    const px = g.getImageData(0, 0, 32, 18).data;
-    const lum = new Float32Array(32 * 18);
+    g.drawImage(src, 0, 0, W, H);
+    const px = g.getImageData(0, 0, W, H).data;
+    const lum = new Float32Array(W * H);
     for (let i = 0; i < lum.length; i++) lum[i] = (px[i * 4] * 0.299 + px[i * 4 + 1] * 0.587 + px[i * 4 + 2] * 0.114) / 255;
-    if (this.lastFrame) {
+    if (this.lastFrame && this.stream) {
       let l = 0;
       let r = 0;
-      for (let y = 0; y < 18; y++)
-        for (let x = 0; x < 32; x++) {
-          const d = Math.abs(lum[y * 32 + x] - this.lastFrame[y * 32 + x]);
+      for (let y = 0; y < H; y++)
+        for (let x = 0; x < W; x++) {
+          const d = Math.abs(lum[y * W + x] - this.lastFrame[y * W + x]);
           if (x < 11) l += d;
           else if (x >= 21) r += d;
         }
-      this.diff = { left: l / (11 * 18), right: r / (11 * 18) };
+      this.diff = { left: l / (11 * H), right: r / (11 * H) };
     }
     this.lastFrame = lum;
+    this.hotspot = edgeHotspot(lum, W, H) ?? this.hotspot;
   }
 
   private stopCamera(): void {
@@ -361,5 +406,41 @@ function face(): SVGSVGElement {
     '<path class="ink-line" d="M30 46c6-8 18-8 24 0M66 46c6-8 18-8 24 0"/>' +
     '<circle class="fc-face-eye" cx="42" cy="50" r="4"/><circle class="fc-face-eye" cx="78" cy="50" r="4"/>' +
     '<path class="ink-line" d="M38 86c14 10 30 10 44 0"/>';
+  return svg;
+}
+
+/** Where a small luminance picture has the most edges (away from its border), as 0..1 coordinates. */
+export function edgeHotspot(lum: Float32Array, w: number, h: number): [number, number] | null {
+  let best = 0;
+  let at: [number, number] | null = null;
+  for (let y = 3; y < h - 3; y++)
+    for (let x = 4; x < w - 4; x++) {
+      let e = 0;
+      for (let dy = -1; dy <= 1; dy++)
+        for (let dx = -1; dx <= 1; dx++) {
+          const i = (y + dy) * w + x + dx;
+          e += Math.abs(lum[i + 1] - lum[i - 1]) + Math.abs(lum[i + w] - lum[i - w]);
+        }
+      if (e > best) {
+        best = e;
+        at = [(x + 0.5) / w, (y + 0.5) / h];
+      }
+    }
+  return best > 0.4 ? at : null;
+}
+
+/** Eyes opening in the dark, a few at a time. */
+function eyes(seed: number): SVGSVGElement {
+  const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('viewBox', '0 0 240 160');
+  svg.setAttribute('class', 'fc-eyes');
+  let out = '';
+  for (let i = 0; i < 6; i++) {
+    const x = 30 + ((i * 73 + seed * 13) % 180);
+    const y = 25 + ((i * 41 + seed * 7) % 110);
+    const r = 9 + ((i * 5 + seed) % 9);
+    out += `<g class="fc-eyes-one" style="--d:${(i * 0.37).toFixed(2)}s"><path class="ink-line" d="M${x - r * 1.8} ${y}Q${x} ${y - r * 1.4} ${x + r * 1.8} ${y}Q${x} ${y + r * 1.4} ${x - r * 1.8} ${y}Z"/><circle class="fc-face-eye" cx="${x}" cy="${y}" r="${(r * 0.55).toFixed(1)}"/></g>`;
+  }
+  svg.innerHTML = out;
   return svg;
 }

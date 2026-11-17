@@ -4,7 +4,7 @@
 // draws what this says.
 
 /** Everything the mode can show besides the picture itself. */
-export type VisionKind = 'figure' | 'face' | 'object' | 'behind';
+export type VisionKind = 'figure' | 'face' | 'object' | 'behind' | 'eyes';
 
 export interface Vision {
   kind: VisionKind;
@@ -25,16 +25,16 @@ export function intensity(seconds: number): number {
   return 1 - Math.exp(-t / 170);
 }
 
-/** Seconds between visions at an intensity: rare at first, never a crowd. */
+/** Seconds between visions at an intensity: now and then at first, every few seconds at full strength. */
 export function gap(level: number): number {
-  return 22 - 15 * Math.min(1, Math.max(0, level));
+  return 14 - 10.5 * Math.min(1, Math.max(0, level));
 }
 
 /** At most this many at once. */
-export const MAX_AT_ONCE = 3;
+export const MAX_AT_ONCE = 5;
 /** "Someone behind you" waits for the world to be strong, and comes rarely. */
-export const BEHIND_FROM = 0.45;
-export const BEHIND_GAP = 45;
+export const BEHIND_FROM = 0.4;
+export const BEHIND_GAP = 40;
 
 export function rng(seed: number): () => number {
   let a = seed >>> 0 || 1;
@@ -113,8 +113,9 @@ export class Scheduler {
       this.lastBehind = at;
       return { kind: 'behind', at, life: 4, x: x < 0.5 ? -1 : 1, y: 0.5 };
     }
-    if (r < 0.75) return { kind: 'figure', at, life: 12 + 8 * level, x: x < 0.5 ? -1 : 1, y: 0.35 + y * 0.4 };
-    return { kind: 'face', at, life: 6 + 4 * level, x: 0.15 + x * 0.7, y: 0.15 + y * 0.6 };
+    if (r < 0.62) return { kind: 'figure', at, life: 12 + 8 * level, x: x < 0.5 ? -1 : 1, y: 0.35 + y * 0.4 };
+    if (r < 0.84 || level < 0.25) return { kind: 'face', at, life: 7 + 5 * level, x: 0.15 + x * 0.7, y: 0.15 + y * 0.6 };
+    return { kind: 'eyes', at, life: 6 + 4 * level, x: 0.15 + x * 0.7, y: 0.15 + y * 0.6 };
   }
 }
 

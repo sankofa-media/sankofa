@@ -55,6 +55,16 @@ async function goToScene(page: Page, id: string): Promise<void> {
   await expect.poll(() => page.url()).toContain(`scene=${id}`);
 }
 
+/** Nothing of the trip on screen: no layers, no melting, no swimming. */
+async function expectNoTrip(page: Page): Promise<void> {
+  for (const l of ['back', 'myc', 'over', 'vig']) await expect(feature(page).locator(`.fc-trip-${l}`)).toBeHidden();
+  await expect(feature(page)).not.toHaveClass(/fx-trip|fx-swim/);
+  for (const f of await feature(page).locator('.ft-scene.current .ft-stage svg.ink').evaluateAll((els) => els.map((e) => getComputedStyle(e).filter))) expect(f).not.toContain('url(');
+  await expect(feature(page).locator('.fc-swap')).toHaveCount(0);
+}
+
+const opacity = (page: Page, l: string) => feature(page).locator(`.fc-trip-${l}`).evaluate((e) => (getComputedStyle(e).display === 'none' ? 0 : Number(getComputedStyle(e).opacity)));
+
 const SCENES = ['warning', 'prologue', 'hillside', 'session-day', 'diary', 'orchestra', 'alone-again-or', 'a-house-is-not-a-motel', 'andmoreagain', 'the-daily-planet', 'old-man', 'the-red-telephone', 'flip', 'between-clark-and-hilldale', 'live-and-let-live', 'the-good-humor-man', 'bummer-in-the-summer', 'you-set-the-scene', 'after', 'return', 'end', 'echoes', 'lee'];
 
 test('the list opens Forever Changes, behind a warning; back returns to the list', async ({ page }) => {
@@ -85,6 +95,7 @@ test('choosing calm at the door: no decay anywhere, even at the peak', async ({ 
   await expect(feature(page)).toHaveAttribute('data-decay', '0');
   const filter = await scene(page, 'the-red-telephone').locator('.ft-title').evaluate((e) => getComputedStyle(e).filter);
   expect(filter).toBe('none');
+  await expectNoTrip(page);
   // The door is not shown again in this session.
   await page.reload();
   await expect(feature(page)).toBeVisible();
@@ -133,6 +144,8 @@ test('with reduced motion, "as it is" still stays calm', async ({ page }) => {
   await page.waitForTimeout(400);
   await expect(feature(page)).not.toHaveClass(/fx-on/);
   await expect(feature(page)).toHaveAttribute('data-decay', '0');
+  await expectNoTrip(page);
+  expect(await scene(page, 'the-red-telephone').locator('.ft-text').first().evaluate((e) => getComputedStyle(e).filter)).toBe('none');
 });
 
 test('the lenses: the session players’ day through three witnesses, none declared right', async ({ page }) => {
@@ -341,4 +354,96 @@ test('screenshots of the key chapters and the mode', async ({ page, isMobile }) 
   await expect(mode.locator('.fc-lee-vision[data-object="telephone"]')).toBeAttached({ timeout: 9000 });
   await page.waitForTimeout(2500);
   await page.screenshot({ path: `${SHOTS}/${name}-32-lee-running.png` });
+});
+
+test('the trip scales with the chapters: calm prologue, dark mushrooms, the peak, a breath, the reassembly', async ({ page }) => {
+  test.setTimeout(120_000);
+  await open(page);
+  await goToScene(page, 'prologue');
+  await page.waitForTimeout(600);
+  await expect(feature(page).locator('.fc-trip-back')).toBeHidden();
+  expect(['webgl2', 'webgl', '2d']).toContain(await feature(page).getAttribute('data-trip-gl'));
+  // A House Is Not a Motel: colour behind the page, mycelium from the edges.
+  await goToScene(page, 'a-house-is-not-a-motel');
+  await expect.poll(() => opacity(page, 'back'), { timeout: 15_000 }).toBeGreaterThan(0.5);
+  await expect(feature(page).locator('.fc-trip-myc')).toBeVisible();
+  await expect.poll(() => opacity(page, 'vig'), { timeout: 15_000 }).toBeGreaterThan(0.3);
+  const house = await opacity(page, 'over');
+  // The peak: everything at full, the page swims, the stage melts.
+  await goToScene(page, 'the-red-telephone');
+  await expect.poll(() => opacity(page, 'back'), { timeout: 15_000 }).toBeGreaterThan(0.95);
+  await expect.poll(() => opacity(page, 'over'), { timeout: 15_000 }).toBeGreaterThan(house);
+  await expect(feature(page)).toHaveClass(/fx-swim/);
+  expect(await scene(page, 'the-red-telephone').locator('.ft-stage svg.ink').first().evaluate((e) => getComputedStyle(e).filter)).toContain('fc-melt-art');
+  expect(await scene(page, 'the-red-telephone').locator('.ft-text').first().evaluate((e) => getComputedStyle(e).filter)).toContain('fc-flow-soft');
+  expect(Number(await page.locator('#fc-flow-strong feDisplacementMap').getAttribute('scale'))).toBeGreaterThan(15);
+  // Body text melts, but within its bound.
+  expect(Number(await page.locator('#fc-flow-soft feDisplacementMap').getAttribute('scale'))).toBeLessThanOrEqual(5);
+  // The frames keep coming, and words that swap come back as they were.
+  const text = await scene(page, 'the-red-telephone').locator('.ft-flow').evaluate((e) => (e.textContent ?? '').replace(/\s+/g, ' '));
+  await expect.poll(() => feature(page).getAttribute('data-trip-fps'), { timeout: 15_000 }).not.toBeNull();
+  await page.waitForTimeout(5000);
+  expect(await scene(page, 'the-red-telephone').locator('.ft-flow').evaluate((e) => (e.textContent ?? '').replace(/\s+/g, ' '))).toBe(text);
+  // The keyboard still scrolls at the peak: nothing holds the page.
+  const before = await sheet(page).evaluate((el) => el.scrollTop);
+  await sheet(page).focus();
+  await page.keyboard.press('PageDown');
+  await expect.poll(() => sheet(page).evaluate((el) => el.scrollTop)).toBeGreaterThan(before);
+  // A breath: the dark recedes.
+  await goToScene(page, 'the-good-humor-man');
+  await expect.poll(() => opacity(page, 'back'), { timeout: 15_000 }).toBeLessThan(0.75);
+  await expect.poll(() => opacity(page, 'vig'), { timeout: 15_000 }).toBeLessThan(0.2);
+  // The reassembly: warm, then nothing by the end.
+  await goToScene(page, 'you-set-the-scene');
+  await expect.poll(async () => Number(await feature(page).evaluate((e) => e.style.getPropertyValue('--trip-warm') || 0)), { timeout: 15_000 }).toBeGreaterThan(0.3);
+  await goToScene(page, 'after');
+  await expect(feature(page).locator('.fc-trip-back')).toBeHidden({ timeout: 15_000 });
+  // Calm stops it all at once.
+  await goToScene(page, 'the-red-telephone');
+  await expect.poll(() => opacity(page, 'back'), { timeout: 15_000 }).toBeGreaterThan(0.5);
+  await sheet(page).locator('.ft-calm').click();
+  await expectNoTrip(page);
+});
+
+test('the Arthur Lee shader runs on a stubbed camera and ramps into its phases', async ({ page, isMobile }) => {
+  test.setTimeout(90_000);
+  await page.clock.install();
+  await page.goto('/#view=feature&item=forever-changes&scene=the-red-telephone&lee=1');
+  const mode = feature(page).locator('.fc-lee');
+  await expect(mode).toHaveAttribute('data-state', 'warning');
+  await mode.locator(isMobile ? '.fc-lee-camera' : '.fc-lee-still').click();
+  await expect(mode).toHaveAttribute('data-source', isMobile ? 'camera' : 'still');
+  expect(['webgl2', 'webgl']).toContain(await mode.getAttribute('data-gl'));
+  await expect.poll(async () => Number(await mode.getAttribute('data-frames')), { timeout: 8000 }).toBeGreaterThan(30);
+  const lee = async () => Number(await mode.evaluate((e) => e.style.getPropertyValue('--lee')));
+  expect(await lee()).toBeLessThan(0.1);
+  await expect(mode).toHaveAttribute('data-phase', 'euphoric');
+  // After the ramp: strong, and the phases come round, the bad stretch among them.
+  await page.clock.fastForward(8 * 60_000);
+  await expect.poll(lee, { timeout: 8000 }).toBeGreaterThan(0.9);
+  const seen = new Set<string>();
+  for (let k = 0; k < 12 && seen.size < 3; k++) {
+    await page.clock.fastForward(10_000);
+    await page.waitForTimeout(150);
+    seen.add((await mode.getAttribute('data-phase')) ?? '');
+  }
+  expect([...seen].sort()).toEqual(['bad', 'euphoric', 'kaleidoscope']);
+  // Many visions by now, never more than the scheduler allows at once.
+  await expect.poll(() => mode.locator('.fc-lee-vision:not(.melt):not(.gone)').count()).toBeGreaterThan(0);
+  const frames = Number(await mode.getAttribute('data-frames'));
+  await expect.poll(async () => Number(await mode.getAttribute('data-frames')), { timeout: 8000 }).toBeGreaterThan(frames);
+  await mode.locator('.fc-lee-exit').click();
+  await expect(mode).toBeHidden();
+});
+
+test('in calm mode the Arthur Lee picture holds still and nothing appears', async ({ page, isMobile }) => {
+  test.skip(isMobile, 'one run is enough');
+  await page.addInitScript(() => localStorage.setItem('sankofa.feature.calm', '1'));
+  await page.goto('/#view=feature&item=forever-changes&scene=the-red-telephone&lee=1');
+  const mode = feature(page).locator('.fc-lee');
+  await mode.locator('.fc-lee-still').click();
+  await expect(mode).toHaveAttribute('data-calm', '');
+  await page.waitForTimeout(5000);
+  await expect(mode.locator('.fc-lee-vision')).toHaveCount(0);
+  expect(Number(await mode.evaluate((e) => e.style.getPropertyValue('--lee')))).toBe(0);
 });
