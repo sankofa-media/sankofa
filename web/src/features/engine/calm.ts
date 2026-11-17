@@ -17,7 +17,9 @@ function systemCalm(): boolean {
 }
 
 export function isCalm(): boolean {
-  return stored() ?? systemCalm();
+  // Only the system setting decides now; an old stored choice is ignored.
+  void stored;
+  return systemCalm();
 }
 
 export function setCalm(on: boolean): void {
@@ -35,7 +37,7 @@ const listeners = new Set<(on: boolean) => void>();
 export function onCalm(cb: (on: boolean) => void): () => void {
   listeners.add(cb);
   const mq = typeof matchMedia === 'function' ? matchMedia('(prefers-reduced-motion: reduce)') : null;
-  const sys = () => stored() === null && cb(systemCalm());
+  const sys = () => cb(systemCalm());
   mq?.addEventListener('change', sys);
   return () => {
     listeners.delete(cb);

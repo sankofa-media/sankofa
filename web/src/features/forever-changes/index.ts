@@ -272,8 +272,10 @@ export function mount(ctx: FeatureContext): FeatureInstance {
     root.append(el);
     queueMicrotask(() => (isCalm() ? calmBtn : fullBtn).focus({ preventScroll: true }));
   };
-  if (entered()) fx.choose(true);
-  else gate();
+  // No warning screen: the page opens straight into the album.
+  void gate;
+  if (!entered()) enter();
+  fx.choose(true);
 
   kit.start(ctx.scene);
   fx.apply();

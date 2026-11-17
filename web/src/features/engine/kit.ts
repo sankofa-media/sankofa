@@ -75,7 +75,8 @@ export class Kit {
     this.calmBtn.addEventListener('click', () => setCalm(!this.ink.calm));
     this.soundBtn = h('button.btn.ft-sound', { type: 'button', 'aria-pressed': 'false' }, h('span.ft-sound-ic', { 'aria-hidden': 'true' }), h('span.ft-sound-tx')) as HTMLButtonElement;
     this.soundBtn.addEventListener('click', () => this.setSound(this.audio !== 'on'));
-    ctx.tools.replaceChildren(this.calmBtn, this.soundBtn);
+    // No calm toggle on screen: the system's reduce-motion setting alone stills the page.
+    ctx.tools.replaceChildren(this.soundBtn);
     this.applyCalm(isCalm());
     this.disposers.push(onCalm((on) => this.applyCalm(on)));
     this.setAudio('locked');
