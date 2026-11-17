@@ -464,9 +464,10 @@
 .fc.fx-on .ft-stage {
   filter: hue-rotate(var(--drift)) saturate(calc(1 + var(--decay) * 1.6));
 }
-.fc.fx-trip .ft-scene.current .ft-stage {
-  /* On the stage itself (it covers the screen): a filter on a smaller box would show its edges through the blended colour above. */
-  filter: url(#fc-melt-art) hue-rotate(var(--drift)) saturate(calc(1 + var(--decay) * 1.6))
+.fc.fx-trip .ft-scene.current .ft-stage svg.ink,
+.fc.fx-trip .ft-scene.current .ft-stage .ft-art {
+  /* On the picture only: a filter over the whole screen costs a phone every frame. */
+  filter: url(#fc-melt-art)
     drop-shadow(0 calc(var(--vel, 0) * -26px) 0 color-mix(in srgb, #ff2bd6 calc(var(--trails, 0) * 60%), transparent))
     drop-shadow(0 calc(var(--vel, 0) * -52px) 0 color-mix(in srgb, #00f0ff calc(var(--trails, 0) * 40%), transparent));
 }
@@ -490,9 +491,9 @@
     0 calc(var(--vel, 0) * -18px) 2px color-mix(in srgb, #ff2bd6 calc(var(--trails, 0) * 60%), transparent),
     0 calc(var(--vel, 0) * -36px) 4px color-mix(in srgb, #00f0ff calc(var(--trails, 0) * 40%), transparent);
 }
-/* The whole page breathes. */
+/* The whole page breathes (the controls hold still, so they stay easy to press). */
 .fc.fx-trip .ft-scene.current .ft-stage > *,
-.fc.fx-trip .ft-scene.current .ft-flow > .ft-block {
+.fc.fx-trip .ft-scene.current .ft-flow > .ft-block:not(.ft-controls) {
   animation: fc-breathe 7.5s ease-in-out infinite;
 }
 @keyframes fc-breathe {
@@ -505,12 +506,12 @@
   }
 }
 /* It tilts and swims at the top of the trip. */
-.fc.fx-swim .ft-scene.current .ft-flow > .ft-block.on {
+.fc.fx-swim .ft-scene.current .ft-flow > .ft-block.on:not(.ft-controls) {
   animation:
     fc-breathe 7.5s ease-in-out infinite,
     fc-swim 11s ease-in-out infinite;
 }
-.fc.fx-swim .ft-scene.current .ft-flow > .ft-block.on:nth-child(even) {
+.fc.fx-swim .ft-scene.current .ft-flow > .ft-block.on:not(.ft-controls):nth-child(even) {
   animation-delay: 0s, -4.2s;
 }
 .fc.fx-swim .ft-scene.current .ft-stage {
