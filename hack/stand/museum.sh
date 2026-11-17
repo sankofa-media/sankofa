@@ -5,16 +5,18 @@ set -euo pipefail
 cd "$(dirname "$0")/../.."
 source hack/stand/env.sh
 (cd web && sh scripts/build-data.sh >/dev/null && npx vite build >/dev/null)
-# Two layers: the pictures (large, rarely changed) and the site. Each tar is
-# byte-for-byte reproducible (fixed times, owners, sorted names), so an
-# unchanged picture layer keeps its digest and is never pushed again.
+# Two layers: the pictures (large, rarely changed) and the site. The picture
+# layer is byte-for-byte reproducible (fixed times, owners, sorted names), so an
+# unchanged one keeps its digest and is never pushed again. The site layer keeps
+# real file times: nginx builds ETag and Last-Modified from them, and a fixed
+# time made browsers keep an old index.html of the same size.
 rm -rf dist/museum-media dist/museum-site dist/museum-*.tar dist/museum.tar
 mkdir -p dist/museum-media/usr/share/nginx/html dist/museum-site/usr/share/nginx/html dist/museum-site/etc/nginx/conf.d
 cp -R web/dist/media dist/museum-media/usr/share/nginx/html/
 rsync -a --exclude /media web/dist/ dist/museum-site/usr/share/nginx/html/
 cp web/nginx.conf dist/museum-site/etc/nginx/conf.d/default.conf
 for l in media site; do
-  (cd "dist/museum-$l" && chmod -R a+rX . && find . -exec touch -h -t 202601010000 {} + &&
+  (cd "dist/museum-$l" && chmod -R a+rX . && { [ "$l" = media ] && find . -exec touch -h -t 202601010000 {} + || true; } &&
     find . -mindepth 1 | LC_ALL=C sort | COPYFILE_DISABLE=1 tar --uid 0 --gid 0 --uname root --gname root --no-recursion -cf "../museum-$l.tar" -T -)
 done
 "$HOME/go/bin/crane" append --platform linux/amd64 -b nginxinc/nginx-unprivileged:1.29-alpine \
