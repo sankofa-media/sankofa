@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Angel queue</title>
+<style>
+  :root { color-scheme: light dark; --bg: #faf8f5; --fg: #1d1b19; --muted: #6b655e; --line: #ddd6cc; --accent: #8a2b1d; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #161412; --fg: #ece7e0; --muted: #9a9289; --line: #34302b; --accent: #e08a6f; } }
+  body { margin: 0; padding: 16px; background: var(--bg); color: var(--fg); font: 16px/1.5 system-ui, sans-serif; }
+  main { max-width: 760px; margin: 0 auto; }
+  h1 { font-size: 1.3rem; margin: 0 0 12px; }
+  form, .bar { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  input, select, button { font: inherit; padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; background: transparent; color: inherit; }
+  input { flex: 1; min-width: 12rem; }
+  button { cursor: pointer; }
+  button.pub { border-color: var(--accent); color: var(--accent); }
+  article { border-top: 1px solid var(--line); padding: 12px 0; }
+  .text { white-space: pre-wrap; font-size: 1.1rem; }
+  .meta, .tr { color: var(--muted); font-size: .9rem; }
+  #msg { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Angel: words waiting for the owner</h1>
+  <form id="auth">
+    <input id="token" type="password" placeholder="ANGEL_ADMIN_TOKEN" autocomplete="off">
+    <select id="status">
+      <option value="">pending, review, reported</option>
+      <option value="published">published</option>
+      <option value="rejected">rejected</option>
+      <option value="hidden">hidden</option>
+      <option value="crisis">crisis</option>
+      <option value="queued">queued</option>
+    </select>
+    <button>Load</button>
+  </form>
+  <p id="msg"></p>
+  <section id="list"></section>
+</main>
+<script>
+  // The token lives only in this tab's memory: no cookies, no storage.
+  const $ = (id) => document.getElementById(id);
+  const api = location.pathname.replace(/admin\/?$/, "");
+  const auth = () => ({ Authorization: "Bearer " + $("token").value });
+  function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }
+  async function load() {
+    const st = $("status").value;
+    const r = await fetch(api + "admin/queue" + (st ? "?status=" + encodeURIComponent(st) : ""), { headers: auth() });
+    const list = $("list");
+    list.replaceChildren();
+    if (!r.ok) { $("msg").textContent = "Error " + r.status + ": " + ((await r.json().catch(() => ({}))).error || ""); return; }
+    const { words } = await r.json();
+    $("msg").textContent = words.length ? words.length + " word(s)" : "Nothing here.";
+    for (const w of words) {
+      const a = el("article");
+      a.append(el("div", "text", w.text || "(no text kept)"));
+      if (w.tr_en || w.tr_ru) a.append(el("div", "tr", [w.tr_en && "en: " + w.tr_en, w.tr_ru && "ru: " + w.tr_ru].filter(Boolean).join(" · ")));
+      a.append(el("div", "meta", ["#" + w.id, w.status, w.lang, w.theme, w.day, w.reports ? w.reports + " report(s)" : "", w.voice ? "voice" : "", w.reason].filter(Boolean).join(" · ")));
+      const bar = el("div", "bar");
+      for (const action of ["publish", "hide"]) {
+        const b = el("button", action === "publish" ? "pub" : "", action);
+        b.onclick = async () => {
+          const r = await fetch(api + "admin/words/" + w.id, { method: "POST", headers: { ...auth(), "Content-Type": "application/json" }, body: JSON.stringify({ action }) });
+          if (r.ok) a.remove(); else $("msg").textContent = "Error " + r.status + ": " + ((await r.json().catch(() => ({}))).error || "");
+        };
+        bar.append(b);
+      }
+      a.append(bar);
+      list.append(a);
+    }
+  }
+  $("auth").onsubmit = (e) => { e.preventDefault(); load(); };
+</script>
+</body>
+</html>
