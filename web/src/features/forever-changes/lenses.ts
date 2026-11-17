@@ -56,7 +56,7 @@ export function lensPane(kit: Kit, sc: Scene, section: () => HTMLElement | null)
   const el = h(
     'div.fc-lens',
     { 'data-lenses': ids.join(' ') },
-    h('p.fc-lens-label', { id: `lens-${sc.id}` }, kit.ui('lens-label')),
+    h('p.fc-lens-label.ft-visually-hidden', { id: `lens-${sc.id}` }, kit.ui('lens-label')),
     group,
     h('div.fc-voices', { 'aria-live': 'polite' }, ...voices),
   );
