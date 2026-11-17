@@ -926,12 +926,34 @@ body.fc-lee-on {
   stroke: #ff4a3a;
 }
 .fc-lee-vision[data-kind='object'] {
-  width: min(38vw, 220px);
+  width: min(64vw, 400px);
+  filter: drop-shadow(0 0 22px rgba(255, 60, 220, 0.75)) drop-shadow(0 0 6px rgba(0, 240, 255, 0.8));
+  animation:
+    fc-appear 3s ease-out both,
+    fc-float 9s ease-in-out infinite,
+    fc-hue 14s linear infinite;
+}
+.fc-lee-vision[data-kind='object'] .ink-line {
+  stroke-width: 5;
+  stroke: #fff6d8;
+}
+@keyframes fc-float {
+  50% {
+    translate: 0 -18px;
+    rotate: 6deg;
+    scale: 1.12;
+  }
+}
+@keyframes fc-hue {
+  to {
+    filter: drop-shadow(0 0 22px rgba(255, 60, 220, 0.75)) drop-shadow(0 0 6px rgba(0, 240, 255, 0.8)) hue-rotate(360deg);
+  }
 }
 .fc-lee-vision[data-object='telephone'] {
   animation:
     fc-appear 2.4s ease-out both,
-    fc-shake 0.9s ease-in-out infinite;
+    fc-shake 0.9s ease-in-out infinite,
+    fc-hue 14s linear infinite;
 }
 @keyframes fc-shake {
   25% {
@@ -956,7 +978,17 @@ body.fc-lee-on {
 .fc-lee-vision[data-kind='figure'] {
   width: min(34vw, 220px);
   transform: translate(0, -50%);
-  opacity: 0.55;
+  opacity: 0.92;
+  filter: blur(1px) drop-shadow(0 0 3px rgba(190, 255, 40, 0.7)) drop-shadow(0 0 28px rgba(0, 0, 0, 0.95));
+  animation:
+    fc-appear 3.2s ease-out both,
+    fc-sway-fig 7s ease-in-out infinite;
+}
+@keyframes fc-sway-fig {
+  50% {
+    skew: 3deg 0deg;
+    scale: 1 1.06;
+  }
 }
 .fc-lee-vision[data-kind='figure'][data-side='left'] {
   left: -4%;
@@ -979,6 +1011,37 @@ body.fc-lee-on {
   width: min(52vw, 320px);
   opacity: 0.6;
   mix-blend-mode: overlay;
+  animation:
+    fc-appear 4s ease-out both,
+    fc-float 11s ease-in-out infinite;
+}
+.fc-lee-vision[data-kind='eyes'] {
+  width: min(60vw, 360px);
+  mix-blend-mode: screen;
+}
+.fc-eyes {
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+.fc-eyes .ink-line {
+  stroke: #d8ff3a;
+  stroke-width: 2;
+}
+.fc-eyes-one {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: fc-eye-open 5s ease-in-out var(--d, 0s) infinite both;
+}
+@keyframes fc-eye-open {
+  0%,
+  100% {
+    scale: 1 0.08;
+  }
+  40%,
+  70% {
+    scale: 1 1;
+  }
 }
 .fc-face-eye {
   fill: #fff;
@@ -1056,7 +1119,9 @@ body.fc-lee-on {
   .fc .fc-light,
   .fc .fc-lee-pin-eye,
   .fc-lee-vision,
+  .fc-lee-vision[data-kind],
   .fc-lee-vision[data-object='telephone'],
+  .fc-eyes-one,
   .fc-lee.no-gl .fc-lee-still-img {
     animation: none !important;
   }

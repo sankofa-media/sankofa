@@ -248,7 +248,7 @@ describe('the Arthur Lee mode: the scheduler of visions', () => {
     expect(behind.length).toBeGreaterThan(0);
     for (const b of behind) expect(intensity(b.at)).toBeGreaterThanOrEqual(BEHIND_FROM);
     for (let i = 1; i < behind.length; i++) expect(behind[i].at - behind[i - 1].at).toBeGreaterThanOrEqual(BEHIND_GAP);
-    expect(new Set(seen.map((v) => v.kind))).toEqual(new Set(['object', 'figure', 'face', 'behind']));
+    expect(new Set(seen.map((v) => v.kind))).toEqual(new Set(['object', 'figure', 'face', 'behind', 'eyes']));
     const early = seen.filter((v) => v.at < 120).length;
     const late = seen.filter((v) => v.at >= 1200 && v.at < 1320).length;
     expect(late).toBeGreaterThan(early);

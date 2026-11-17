@@ -196,7 +196,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
     const sc = scenes[i];
     return { id: sc?.id ?? 'warning', name: sc ? nameOf(sc) : '', visions: visionsOf(sc), hue: (0.92 + (i / scenes.length) * 0.75) % 1 };
   };
-  const lee = new LeeMode({ host: root, say: (k, v) => kit.ui(k, v), phone: isPhone() });
+  const lee = new LeeMode({ host: root, say: (k, v) => kit.ui(k, v), phone: isPhone(), calm: () => kit.calm || reduced() });
   const pin = new LeePin({ host: root, say: (k) => kit.ui(k), current: () => kit.current() ?? ctx.scene, open: () => openLee() });
   let leeInline: HTMLElement | null = null;
   const openLee = () => lee.open(chapter(kit.current() ?? ctx.scene));
