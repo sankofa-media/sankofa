@@ -161,13 +161,13 @@ scenes:
       - id: lead
         role: text
         draft: false
-        en: The whole world knows this song. Nina Simone sang it, house DJs remixed it, Kanye West and Massive Attack built on it, films and games used it. But the first people whose voices we have singing it were two young women from a small town in Mississippi, Christine and Katherine Shipp. Their names are on almost none of those records. This is the story of how their song travelled without them.
-        ru: Эту песню знает весь мир. Её пела Нина Симон, её переделывали хаус-диджеи, на ней строили свои треки Канье Уэст и Massive Attack, она звучит в фильмах и видеоиграх. Но первыми, чьи голоса с этой песней дошли до нас, были две девушки из маленького городка в Миссисипи — Кристин и Кэтрин Шипп. Их имён почти нет на всех этих пластинках. Это история о том, как их песня обошла мир без них.
+        en: The whole world knows this song. Nina Simone sang it, house DJs remade it again and again, Kanye West and Massive Attack built tracks on it, and it plays in films, series and video games. But the first people whose voices singing it have come down to us were not stars but two young women from a small town in Mississippi, Christine and Katherine Shipp. Their names are on almost none of those records. This is the story of how their song went round the world while they stayed at home, unknown.
+        ru: Эту песню знает весь мир. Её пела Нина Симон, её снова и снова переделывали хаус-диджеи, на ней строили свои треки Канье Уэст и Massive Attack, она звучит в фильмах, сериалах и видеоиграх. Но первыми, чьи голоса с этой песней дошли до нас, были не звёзды, а две девушки из маленького городка в штате Миссисипи — Кристин и Кэтрин Шипп. Их имён нет почти ни на одной из этих пластинок. Это история о том, как их песня обошла весь мир, а сами они остались дома, в безвестности.
       - id: why-knock
         role: note
         draft: false
-        en: "The story has sound. It begins when you knock: your knock turns it on, and from then on you can clap along."
-        ru: В этой истории есть звук. Он включается, когда вы постучите в дверь, и дальше вы сможете хлопать вместе с героинями.
+        en: "This story has sound. It comes on when you knock at the door, and from then on you can clap along with its heroines."
+        ru: В этой истории есть звук. Он включится, когда вы постучите в дверь, а дальше вы сможете хлопать в такт вместе с героинями.
 
   - id: ring
     kind: ring
@@ -179,7 +179,7 @@ scenes:
       # Where each child's hands meet: a ripple of ink spreads there with every clap.
       claps:
         depth: 10
-        at: [ [52.3, 13.2], [69.6, 16.5], [82.8, 33.9], [17.5, 31.9], [32.8, 15.5], [52.5, 59.6], [70.5, 58.5], [29.7, 56.3] ]
+        at: [ [ 52.3, 13.2 ], [ 69.6, 16.5 ], [ 82.8, 33.9 ], [ 17.5, 31.9 ], [ 32.8, 15.5 ], [ 52.5, 59.6 ], [ 70.5, 58.5 ], [ 29.7, 56.3 ] ]
     blocks:
       - id: kicker
         role: kicker
@@ -194,23 +194,23 @@ scenes:
       - id: form
         role: text
         draft: false
-        en: Long before anyone recorded such songs, African American children in the South played singing games in a ring. One child sings a line, the whole circle answers, and the answer comes round again and again. Hands and feet keep time on the second and fourth beats, so the game has its own rhythm section even with no instruments at all.
-        ru: Задолго до того, как такие песни кто-нибудь записал, афроамериканские дети на Юге играли в игры с пением, стоя в кругу. Один поёт строчку, весь круг ему отвечает, и этот ответ возвращается снова и снова. Ладони и ноги отбивают вторую и четвёртую доли, так что у игры есть своя ритм-секция, хотя инструментов в ней нет вовсе.
+        en: Long before anyone thought of recording such songs, African American children in the American South played singing games standing in a ring. One of them sings a line, the whole circle answers, and the answer comes round again and again until the game is over. Hands and feet beat out the second and fourth beats, so the game has a rhythm section of its own, though it has no instruments and needs none.
+        ru: Задолго до того, как такие песни кто-нибудь догадался записать, афроамериканские дети на Юге Соединённых Штатов играли в игры с пением, встав в круг. Один из них поёт строчку, весь круг отвечает ему, и этот ответ возвращается снова и снова, пока игра не кончится. Ладони и ноги отбивают при этом вторую и четвёртую доли такта, так что у игры есть собственная ритм-секция, хотя никаких инструментов в ней нет и не нужно.
       - id: book
         role: text
         draft: false
-        en: Bessie Jones, a singer from the Georgia Sea Islands, and the folklorist Bess Lomax Hawes gathered such games in their book “Step It Down” (1972). They wrote that the real music of these games is the clapping of the circle.
-        ru: Бесси Джонс, певица с Морских островов Джорджии, и фольклорист Бесс Ломакс Хоуз собрали такие игры в книге «Step It Down» (1972). По их словам, настоящая музыка этих игр — хлопки круга.
+        en: Bessie Jones, a singer from the Georgia Sea Islands, and the folklorist Bess Lomax Hawes collected such games in their book “Step It Down”, published in 1972. The real music of these games, they wrote, is not the tune but the clapping of the circle.
+        ru: Бесси Джонс, певица с Морских островов Джорджии, и фольклорист Бесс Ломакс Хоуз собрали такие игры в книге «Step It Down», вышедшей в 1972 году. По их словам, настоящая музыка этих игр — не мелодия, а хлопки круга.
       - id: no-roots
         role: text
         draft: false
-        en: This way of singing, where a leader calls and a group answers, links the games to African musical practice. Where our particular song came from before 1939, no source tells us, so we will not guess.
-        ru: Такой способ петь, когда ведущий зовёт, а группа отвечает, роднит эти игры с африканской музыкальной практикой. Откуда пришла до 1939 года именно наша песня, не сообщает ни один источник, и гадать мы не будем.
+        en: This way of singing, where one calls and the rest answer, links the games to African musical practice. But where our particular song came from before 1939, no source says, and we will not guess.
+        ru: Такой способ петь, когда один зовёт, а остальные отвечают, роднит эти игры с африканской музыкальной практикой. Но откуда пришла до 1939 года именно наша песня, не сообщает ни один источник, и гадать мы не станем.
       - id: hear
         role: caption
         draft: false
         en: Press “Hear the clap” to hear the circle’s rhythm on its own, before any voice comes in.
-        ru: Нажмите «Послушать хлопок», чтобы услышать ритм круга сам по себе, ещё без голосов.
+        ru: Нажмите «Послушать хлопок», чтобы услышать ритм круга сам по себе, пока ещё без голосов.
 
   - id: expedition
     kind: expedition
@@ -234,13 +234,13 @@ scenes:
       - id: why
         role: text
         draft: false
-        en: In the 1930s the Library of Congress in Washington set out to record the songs that ordinary Americans sang, before they were forgotten. It sent folklorists with recording machines across the South, and the Federal Writers’ Project, a government programme that gave work to writers during the Depression, helped them find singers.
-        ru: В 1930-е годы Библиотека Конгресса в Вашингтоне взялась записать песни, которые пели обычные американцы, пока они не забылись. Она отправляла фольклористов с записывающими аппаратами по Югу, а Федеральный писательский проект — государственная программа, дававшая писателям работу во время Великой депрессии, — помогал им находить певцов.
+        en: In the 1930s the Library of Congress in Washington set itself the task of recording the songs ordinary Americans sang, before they were forgotten altogether. It sent folklorists with recording machines on journeys through the South, and the Federal Writers’ Project, a government programme that gave writers work during the Depression, helped them find singers in villages and small towns.
+        ru: В 1930-е годы Библиотека Конгресса в Вашингтоне поставила себе задачу записать песни, которые пели обычные американцы, — пока те не забылись совсем. Она отправляла фольклористов с записывающими аппаратами в поездки по Югу, а Федеральный писательский проект, государственная программа, дававшая работу писателям в годы Великой депрессии, помогал им находить певцов по деревням и маленьким городам.
       - id: halpert
         role: text
         draft: false
-        en: "In the spring of 1939 the folklorist Herbert Halpert set off on such a journey. He drove an old army ambulance that had been turned into a recording studio on wheels: the machine inside cut sound straight onto discs. In Mississippi his guide was Abbott Ferriss of the Writers’ Project, who took notes and photographs. In May they came to the small town of Byhalia."
-        ru: "Весной 1939 года в такую поездку отправился фольклорист Герберт Халперт. Он ездил на старой армейской санитарной машине, превращённой в студию на колёсах: аппарат внутри резал звук прямо на диски. В Миссисипи его проводником был Эббот Феррис из Писательского проекта — он вёл записи и фотографировал. В мае они приехали в городок Байхейлию."
+        en: "In the spring of 1939 the folklorist Herbert Halpert set off on such a journey. He drove an old army ambulance that had been turned into a studio on wheels: the machine inside cut sound straight onto discs. In Mississippi his guide was Abbott Ferriss of the Writers’ Project, who took notes and photographs. In May they reached the small town of Byhalia."
+        ru: "Весной 1939 года в такую поездку отправился фольклорист Герберт Халперт. Ездил он на старой армейской санитарной машине, которую превратили в студию на колёсах: стоявший внутри аппарат резал звук прямо на диски. В Миссисипи его проводником стал Эббот Феррис из Писательского проекта — он вёл записи и фотографировал. В мае они добрались до городка Байхейлия."
       - id: byhalia
         role: label
         draft: false
@@ -259,8 +259,8 @@ scenes:
       - id: opened
         role: text
         draft: false
-        en: On 13 May Halpert and Ferriss knocked at the door of John Shipp and his wife Luella. They had come for the singing family of John’s mother, Mary Shipp, and Luella and John opened the door to the two strangers.
-        ru: Тринадцатого мая Халперт и Феррис постучали в дверь Джона Шиппа и его жены Луэллы. Они приехали к поющей семье матери Джона, Мэри Шипп, и Луэлла с Джоном открыли дверь двум незнакомцам.
+        en: "On 13 May Halpert and Ferriss knocked at the door of the house where John Shipp lived with his wife Luella. They had come not for the couple themselves but for John’s singing family: his mother, Mary Shipp, and her children. Luella and John opened the door to the two strangers."
+        ru: Тринадцатого мая Халперт и Феррис постучали в дверь дома, где жили Джон Шипп и его жена Луэлла. Приехали они не к ним самим, а к поющей семье Джона — к его матери, Мэри Шипп, и её детям. Луэлла и Джон открыли дверь двум незнакомцам.
 
   - id: family
     kind: family
@@ -286,13 +286,13 @@ scenes:
       - id: who
         role: text
         draft: false
-        en: "Halpert recorded Mary Shipp and four of her children: her sons Isaac and Allison and her daughters Christine and Katherine. They sang for him at the family’s church, Nichols Chapel."
-        ru: "Халперт записал Мэри Шипп и четверых её детей: сыновей Айзека и Эллисона и дочерей Кристин и Кэтрин. Пели они ему в церкви семьи, Николс-Чепел."
+        en: "That day Halpert recorded Mary Shipp and four of her children: her sons Isaac and Allison and her daughters Christine and Katherine. They sang for him not at home but at their church, which was called Nichols Chapel."
+        ru: "Халперт записал в тот день Мэри Шипп и четверых её детей: сыновей Айзека и Эллисона и дочерей Кристин и Кэтрин. Пели они ему не дома, а в своей церкви — она называлась Николс-Чепел."
       - id: step
         role: line
         draft: false
-        en: Then the two sisters, Christine and Katherine, stepped forward.
-        ru: Потом вперёд вышли две сестры — Кристин и Кэтрин.
+        en: And then the two sisters, Christine and Katherine, stepped forward.
+        ru: А потом вперёд вышли две сестры — Кристин и Кэтрин.
       - id: by-ear
         role: text
         draft: true
@@ -311,7 +311,7 @@ scenes:
         - { file: minute-sister-right.webp, depth: 10, role: figure, pivot: "71 90", alt: { en: "The second sister, in a red dress, claps as she sings", ru: "Вторая сестра, в красном платье, хлопает в ладоши и поёт" } }
       claps:
         depth: 10
-        at: [ [39.6, 34.1], [63.2, 34.1] ]
+        at: [ [ 39.6, 34.1 ], [ 63.2, 34.1 ] ]
     nodes: [ shipp-1939 ]
     blocks:
       - id: kicker
@@ -322,18 +322,18 @@ scenes:
       - id: listen
         role: text
         draft: false
-        en: "Christine and Katherine sang “Sea Lion Woman”. The recording lasts about a minute: two voices and no instruments. The Library of Congress still keeps it."
-        ru: "Кристин и Кэтрин спели «Sea Lion Woman». Запись длится около минуты: два голоса и ни одного инструмента. Она до сих пор хранится в Библиотеке Конгресса."
+        en: "Christine was twenty and Katherine eighteen, and they sang “Sea Lion Woman”. The recording lasts about a minute: two voices and no instruments. The Library of Congress still keeps it."
+        ru: "Кристин было двадцать лет, Кэтрин — восемнадцать, и они спели «Sea Lion Woman». Запись длится около минуты: два голоса, ни одного инструмента. Её до сих пор хранит Библиотека Конгресса."
       - id: game
         role: text
         draft: false
-        en: It is the same ring game. One sister sings a line, and the other answers, as the whole circle would answer in the playground. Nobody wrote this song down for them; it came to them the way such games always came, from other children.
-        ru: "Это та самая игра в круг. Одна сестра поёт строчку, другая отвечает, как ответил бы весь круг на школьном дворе. Никто не записывал для них эту песню: она пришла к ним, как всегда приходили такие игры, — от других детей."
+        en: "This is the same ring game we spoke of. One sister sings a line and the other answers, as the whole circle would answer in the schoolyard. Nobody wrote the song down for them or taught it from notes: it came to them the way such games always came, from other children."
+        ru: "Это та самая игра в круг, о которой шла речь. Одна сестра поёт строчку, другая отвечает, как ответил бы весь круг на школьном дворе. Никто не записывал для них эту песню и не учил их ей по нотам: она пришла к ним так, как всегда приходили такие игры, — от других детей."
       - id: yours
         role: caption
         draft: false
-        en: "Clap with them: tap the circle or press the space bar in time. Each clap stays on the circle as a drop of ink, and the circle will stay with you until the end of the story."
-        ru: "Хлопайте вместе с ними: касайтесь круга или нажимайте пробел в такт. Каждый хлопок останется на круге каплей туши, а сам круг будет с вами до конца истории."
+        en: "Clap with them: tap the circle or press the space bar in time. Each of your claps stays on the circle as a drop of ink, and the circle will stay with you until the end of the story."
+        ru: "Хлопайте вместе с ними — касайтесь круга или нажимайте пробел в такт. Каждый ваш хлопок останется на круге каплей туши, а сам круг будет с вами до конца истории."
   - id: words
     kind: text
     blocks:
@@ -390,18 +390,18 @@ scenes:
       - id: album
         role: text
         draft: false
-        en: Three years later the sisters’ minute came out on record. In 1942 the Library of Congress released a set of 78-rpm discs, “Afro-American Blues and Game Songs”, and Christine and Katherine were on it.
-        ru: Через три года минута сестёр вышла на пластинке. В 1942 году Библиотека Конгресса выпустила комплект дисков на 78 оборотов «Afro-American Blues and Game Songs», и Кристин с Кэтрин были в нём.
+        en: Three years passed, and the Shipp sisters’ minute came out on record. In 1942 the Library of Congress issued a set of 78-rpm discs called “Afro-American Blues and Game Songs”, and Christine’s and Katherine’s voices were in it.
+        ru: Прошло три года, и минута сестёр Шипп вышла на пластинке. В 1942 году Библиотека Конгресса выпустила комплект дисков на 78 оборотов под названием «Afro-American Blues and Game Songs», и голоса Кристин и Кэтрин оказались в нём.
       - id: muddy
         role: text
         draft: false
-        en: On the same set are the first recordings of a young man from the Mississippi Delta, McKinley Morganfield. The world would soon know him as Muddy Waters.
-        ru: В том же комплекте — первые записи молодого человека из Дельты Миссисипи, Маккинли Морганфилда. Скоро мир узнает его как Мадди Уотерса.
+        en: The same set holds the first recordings of a young man from the Mississippi Delta named McKinley Morganfield. Very soon the world would know him as Muddy Waters.
+        ru: В том же комплекте — первые записи молодого человека из Дельты Миссисипи по имени Маккинли Морганфилд. Совсем скоро мир узнает его как Мадди Уотерса.
       - id: paris
         role: text
         draft: false
-        en: By 1948 a copy had crossed the Atlantic to the Musée de l’Homme in Paris. The sisters’ voices had gone further than the sisters themselves would ever travel.
-        ru: К 1948 году один экземпляр пересёк Атлантику и попал в Музей человека в Париже. Голоса сестёр ушли дальше, чем когда-либо уезжали они сами.
+        en: By 1948 a copy of the album had crossed the Atlantic to the Musée de l’Homme in Paris. The Shipp sisters’ voices had travelled further than the sisters themselves would ever go from home.
+        ru: К 1948 году один экземпляр этого альбома пересёк Атлантику и попал в Музей человека в Париже. Голоса сестёр Шипп ушли дальше, чем когда-либо уезжали из дома они сами.
       - id: label-paris
         role: label
         draft: false
@@ -432,18 +432,18 @@ scenes:
       - id: route
         role: text
         draft: false
-        en: The song reached Nina Simone through the poet Langston Hughes. His secretary, George Houston Bass, had come across it, and Hughes wrote to Simone that “See-Line Woman” suited her particularly well.
-        ru: До Нины Симон песня дошла через поэта Ленгстона Хьюза. На неё наткнулся его секретарь Джордж Хьюстон Басс, а Хьюз написал Симон, что «See-Line Woman» подходит ей особенно.
+        en: A quarter of a century later the song reached Nina Simone, brought to her by the poet Langston Hughes. His secretary, George Houston Bass, had come across it, and Hughes wrote to Simone that “See-Line Woman” suited her particularly well.
+        ru: Четверть века спустя песня дошла до Нины Симон, и привёл её туда поэт Ленгстон Хьюз. На неё наткнулся его секретарь, Джордж Хьюстон Басс, а Хьюз написал Симон, что «See-Line Woman» подходит ей особенно.
       - id: version
         role: text
         draft: false
-        en: "In 1964 Simone recorded the song for her album “Broadway-Blues-Ballads”. She spelt the title her own way, as “See-Line Woman”, and the arrangement is credited to her: the playground game became a concert piece."
-        ru: "В 1964 году Симон записала песню для альбома «Broadway-Blues-Ballads». Название она написала по-своему, «See-Line Woman», а аранжировка записана за ней: игра со школьного двора стала концертной вещью."
+        en: "In 1964 Simone recorded the song for her album “Broadway-Blues-Ballads”. She spelled the title her own way, “See-Line Woman”, and the record credits the arrangement to her. So a schoolyard game became a concert piece."
+        ru: "В 1964 году Симон записала песню для альбома «Broadway-Blues-Ballads». Название она написала по-своему — «See-Line Woman», а аранжировка на пластинке записана за ней самой. Так игра со школьного двора стала концертной вещью."
       - id: bach
         role: text
         draft: false
-        en: Simone had trained to be a classical pianist on Bach and studied at Juilliard, but the Curtis Institute turned her down. So a children’s game from a Mississippi churchyard came into the hands of a pianist schooled on Bach.
-        ru: Симон готовилась стать классической пианисткой, играла Баха и занималась в Джульярдской школе, но в Кёртисовский институт её не приняли. Так детская игра с церковного двора в Миссисипи оказалась в руках пианистки, выученной на Бахе.
+        en: "Simone had trained to be a classical pianist: she played Bach and studied at Juilliard, but the Curtis Institute turned her down. And so a children’s game from a Mississippi churchyard came into the hands of a pianist schooled on Bach."
+        ru: "Симон готовилась стать классической пианисткой: играла Баха, училась в Джульярдской школе, но в Кёртисовский институт её не приняли. И вот детская игра с церковного двора в Миссисипи оказалась в руках пианистки, выученной на Бахе."
 
   - id: single
     kind: single
@@ -457,8 +457,8 @@ scenes:
       - id: two-sides
         role: text
         draft: false
-        en: In July 1964 the song came out on a single. On side A was “Mississippi Goddam”. Press “Turn the record over” to see what was on the other side.
-        ru: В июле 1964 года песня вышла на сингле. На стороне A была «Mississippi Goddam». Нажмите «Перевернуть пластинку», чтобы увидеть, что было на другой стороне.
+        en: In July 1964 the song came out on a single too. On side A was “Mississippi Goddam”. Press “Turn the record over” to see what was on the other side.
+        ru: В июле 1964 года песня вышла и на сингле. На стороне A была «Mississippi Goddam». Нажмите «Перевернуть пластинку», чтобы увидеть, что было на другой стороне.
       - id: goddam
         role: text
         draft: false
@@ -467,8 +467,8 @@ scenes:
       - id: side-b
         role: text
         draft: false
-        en: Side B was “Sea Lion Woman”, in the old folk spelling. So one record carried an angry protest about Mississippi on one side and a game sung by two young women from Mississippi on the other.
-        ru: На стороне B была «Sea Lion Woman», в старом народном написании. Так на одной пластинке оказались гневный протест против того, что творилось в Миссисипи, и игра, которую пели две девушки из Миссисипи.
+        en: And on side B was “Sea Lion Woman”, in the old folk spelling. So one record carried an angry protest against what was happening in Mississippi and a game sung by two young women from that same Mississippi.
+        ru: А на стороне B была «Sea Lion Woman» в старом, народном написании. Так на одной пластинке оказались гневный протест против того, что творилось в Миссисипи, и игра, которую пели две девушки из того же Миссисипи.
       - id: label-a
         role: label
         draft: false
@@ -493,7 +493,7 @@ scenes:
         role: caption
         draft: false
         en: "Look at the label: it names one writer, George Houston Bass. The names of Christine and Katherine Shipp, who sang the song in 1939, are not there; under the label they run in the ink."
-        ru: "Посмотрите на этикетку: на ней один автор — Джордж Хьюстон Басс. Имён Кристин и Кэтрин Шипп, которые спели эту песню в 1939 году, там нет: под этикеткой они расплываются в туши."
+        ru: "Посмотрите на этикетку: автором на ней указан один человек — Джордж Хьюстон Басс. Имён Кристин и Кэтрин Шипп, которые спели эту песню в 1939 году, там нет: под этикеткой они расплываются в туши."
 
   - id: bass
     kind: text
@@ -506,13 +506,13 @@ scenes:
       - id: who
         role: text
         draft: false
-        en: George Houston Bass was Langston Hughes’s secretary and literary assistant from 1959 to 1964. Later he founded the Rites and Reason theatre at Brown University, and he died in Providence in 1990.
-        ru: Джордж Хьюстон Басс был секретарём и литературным помощником Ленгстона Хьюза с 1959 по 1964 год. Позже он основал театр Rites and Reason в Брауновском университете и умер в Провиденсе в 1990 году.
+        en: From 1959 to 1964 George Houston Bass was secretary and literary assistant to Langston Hughes, the poet who suggested the song to Nina Simone. Later Bass founded the Rites and Reason theatre at Brown University, and he died in Providence in 1990.
+        ru: Джордж Хьюстон Басс с 1959 по 1964 год был секретарём и литературным помощником Ленгстона Хьюза — того самого поэта, который предложил песню Нине Симон. Позже Басс основал театр Rites and Reason в Брауновском университете и умер в Провиденсе в 1990 году.
       - id: system
         role: text
         draft: false
         en: Bass registered the copyright in the song. From then on, wherever a record named the writer, it named him, and never Christine and Katherine Shipp. In 1965 Hughes himself wrote to a friend about “my former secretary’s SEA LION WOMAN”, which Simone was singing at every concert.
-        ru: Басс зарегистрировал на песню авторское право. С тех пор везде, где на пластинке указан автор, стоит его имя, и ни разу — имена Кристин и Кэтрин Шипп. В 1965 году Хьюз сам писал другу о «SEA LION WOMAN моего бывшего секретаря», которую Симон пела на каждом концерте.
+        ru: Басс зарегистрировал на песню авторское право. С тех пор везде, где на пластинке указан автор, стоит его имя — и ни разу имена Кристин и Кэтрин Шипп. В 1965 году Хьюз сам писал другу о «SEA LION WOMAN моего бывшего секретаря», которую Симон пела на каждом концерте.
 
   - id: river
     kind: river
@@ -721,13 +721,13 @@ scenes:
       - id: film
         role: text
         draft: false
-        en: "In 1999 the Hollywood film “The General’s Daughter” opened with the 1939 recording: the voices of Christine and Katherine Shipp themselves."
-        ru: В 1999 году голливудский фильм «Дочь генерала» открылся записью 1939 года — голосами самих Кристин и Кэтрин Шипп.
+        en: "In 1999 the Hollywood film “The General’s Daughter” opened with that very recording of 1939, the voices of Christine and Katherine Shipp themselves."
+        ru: В 1999 году голливудский фильм «Дочь генерала» открылся той самой записью 1939 года — голосами самих Кристин и Кэтрин Шипп.
       - id: never-heard
         role: text
         draft: false
-        en: Neither sister heard it. By then both had long been dead. Of everyone who sang at Nichols Chapel that day in 1939, only their brother Isaac was still alive.
-        ru: "Ни одна из сестёр этого не услышала: обеих к тому времени давно не было в живых. Из всех, кто пел в тот день 1939 года в Николс-Чепел, оставался только их брат Айзек."
+        en: "Neither sister heard it: both had long been dead by then. Of everyone who sang at Nichols Chapel that May day in 1939, only their brother Isaac was still alive."
+        ru: "Ни одна из сестёр этого не услышала: обеих к тому времени давно не было в живых. Из всех, кто пел в тот майский день 1939 года в Николс-Чепел, оставался только их брат Айзек."
       - id: isaac-africa
         role: text
         draft: false
@@ -751,8 +751,8 @@ scenes:
       - id: text
         role: text
         draft: false
-        en: Today music teachers in American schools teach this song by the Kodály and Orff methods. So that the children can hear where it came from, they play them the recording Christine and Katherine made in 1939.
-        ru: Сегодня учителя музыки в американских школах разучивают эту песню по методикам Кодаи и Орфа. Чтобы дети услышали, откуда она взялась, им ставят ту самую запись, которую Кристин и Кэтрин сделали в 1939 году.
+        en: Today music teachers in American schools teach this song by the Kodály and Orff methods. And so that the children can hear where it came from, they play them the recording Christine and Katherine Shipp made in 1939.
+        ru: А сегодня учителя музыки в американских школах разучивают эту песню с детьми по методикам Кодаи и Орфа. И чтобы дети услышали, откуда она взялась, им ставят ту самую запись, которую Кристин и Кэтрин Шипп сделали в 1939 году.
       - id: ring
         role: line
         draft: false
