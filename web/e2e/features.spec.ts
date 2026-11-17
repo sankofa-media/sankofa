@@ -53,7 +53,7 @@ test('the menu opens the list of features, and the list opens Sea Lion Girls', a
 test('every scene is built, held lines never show, and no text is hard to reach', async ({ page }) => {
   await openFeature(page);
   const ids = await feature(page).locator('.ft-scene').evaluateAll((els) => els.map((e) => (e as HTMLElement).dataset.scene));
-  expect(ids).toEqual(['door', 'ring', 'expedition', 'arrival', 'family', 'minute', 'album', 'simone', 'single', 'bass', 'river', 'jazz', 'beat', 'house', 'feist', 'kanye', 'massive', 'burial', 'screen', 'silence', 'classroom', 'finale']);
+  expect(ids).toEqual(['door', 'ring', 'expedition', 'arrival', 'family', 'minute', 'words', 'album', 'simone', 'single', 'bass', 'river', 'jazz', 'beat', 'house', 'feist', 'kanye', 'massive', 'burial', 'screen', 'silence', 'classroom', 'finale']);
   // Lines waiting for a second source are not shipped at all.
   const text = await feature(page).innerText();
   // The one line still resting on a single source never ships.
@@ -224,7 +224,7 @@ test('a link keeps the scene: reload and back return to it', async ({ page }) =>
 test('the feature fits a phone: nothing runs off the side', async ({ page, isMobile }) => {
   test.skip(!isMobile, 'phone layout');
   await openFeature(page);
-  for (const id of ['door', 'ring', 'expedition', 'arrival', 'family', 'minute', 'album', 'simone', 'single', 'river', 'screen', 'classroom', 'finale']) {
+  for (const id of ['door', 'ring', 'expedition', 'arrival', 'family', 'minute', 'words', 'album', 'simone', 'single', 'river', 'screen', 'classroom', 'finale']) {
     await goToScene(page, id);
     const over = await page.locator('.ft-sheet').evaluate((el) => el.scrollWidth - el.clientWidth);
     expect(over, id).toBeLessThanOrEqual(1);
