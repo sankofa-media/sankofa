@@ -86,9 +86,11 @@
 .ft-block {
   max-width: 31rem;
   padding: 18px 22px;
-  border-radius: 6px;
+  /* A shade, not a box: it keeps the text readable over a picture and has
+     no edge to look like a frame someone forgot to remove. */
+  border-radius: 28px;
   background: var(--ft-glass);
-  box-shadow: 0 0 0 1px rgba(127, 110, 85, 0.18);
+  box-shadow: 0 0 28px 20px var(--ft-glass);
   opacity: 0;
   transform: translateY(14px);
   transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
