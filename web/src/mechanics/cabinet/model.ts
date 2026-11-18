@@ -362,7 +362,7 @@ export function keyChains(f: CabinetFile): string[][] {
   const opens = (key: string) => [...f.caches.filter((c) => c.lock === key).map((c) => `cache:${c.id}`), ...f.drawers.filter((d) => d.lock === key).map((d) => `drawer:${d.id}`)];
   const out: string[][] = [];
   const walk = (path: string[], c: Cache | undefined) => {
-    const next = [...(c?.gives ?? []).flatMap(opens), ...(c?.leads ? [`cache:${c.leads}`] : [])];
+    const next = [...new Set([...(c?.gives ?? []).flatMap(opens), ...(c?.leads ? [`cache:${c.leads}`] : [])])];
     if (!next.length) return out.push(path);
     for (const n of next) {
       const nc = n.startsWith('cache:') ? f.caches.find((x) => `cache:${x.id}` === n) : undefined;
