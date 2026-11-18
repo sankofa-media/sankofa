@@ -15,9 +15,9 @@ import (
 // Pulses are readers' own heartbeats, gathered into a chorus around the
 // author's. A pulse is health data (GDPR art. 9), so only its anonymous form
 // is ever accepted or kept: the RR intervals (milliseconds between beats),
-// rounded to 5 ms, the kind of source, and the day. No ECG, no device, no
-// name, no age, no time of day. The browser parses any watch export itself;
-// the server never sees the file.
+// rounded to 5 ms, the kind of source, and the day. No ECG or camera frames,
+// no device, no name, no age, no time of day: the browser derives the
+// intervals from the camera itself and sends only them.
 
 // Limits of a pulse.
 const (
@@ -31,8 +31,10 @@ const (
 	PulsesPerHour = 2
 )
 
-// PulseSources are where a pulse may come from.
-var PulseSources = map[string]bool{"watch": true, "camera": true, "tap": true}
+// PulseSources are where a pulse may come from. Today only the phone camera
+// (a fingertip over the lens); the stored field lets another source, such as
+// tapping along, be added later without a schema change.
+var PulseSources = map[string]bool{"camera": true}
 
 // RoundRR rounds an interval to the nearest RRStep ms.
 func RoundRR(v int) int { return (v + RRStep/2) / RRStep * RRStep }
@@ -119,9 +121,23 @@ func (s *Store) pulses(ctx context.Context, q string, args ...any) ([]Pulse, err
 	return out, rows.Err()
 }
 
-// SamplePulses returns up to n random visible pulses.
-func (s *Store) SamplePulses(ctx context.Context, n int) ([]Pulse, error) {
-	return s.pulses(ctx, `SELECT id, rr, source, day, hidden FROM pulses WHERE hidden = 0 ORDER BY random() LIMIT ?`, n)
+// FirstPulse returns the earliest visible pulse: the centre pulse that plays
+// under every reader's palm. When it is hidden or deleted, the next earliest
+// takes its place. It returns ErrNotFound when there is none.
+func (s *Store) FirstPulse(ctx context.Context) (Pulse, error) {
+	ps, err := s.pulses(ctx, `SELECT id, rr, source, day, hidden FROM pulses WHERE hidden = 0 ORDER BY id LIMIT 1`)
+	if err != nil {
+		return Pulse{}, err
+	}
+	if len(ps) == 0 {
+		return Pulse{}, ErrNotFound
+	}
+	return ps[0], nil
+}
+
+// SamplePulses returns up to n random visible pulses other than except.
+func (s *Store) SamplePulses(ctx context.Context, n int, except int64) ([]Pulse, error) {
+	return s.pulses(ctx, `SELECT id, rr, source, day, hidden FROM pulses WHERE hidden = 0 AND id != ? ORDER BY random() LIMIT ?`, except, n)
 }
 
 // RecentPulses returns the newest pulses, hidden ones included, for the owner.
@@ -174,7 +190,7 @@ func (s *Server) submitPulse(w http.ResponseWriter, r *http.Request) {
 		Consent bool   `json:"consent"`
 	}
 	if err := dec.Decode(&in); err != nil {
-		fail(w, http.StatusBadRequest, "want {rr: [ms], source: watch|camera|tap, consent: true}")
+		fail(w, http.StatusBadRequest, "want {rr: [ms], source: camera, consent: true}")
 		return
 	}
 	if !in.Consent {
@@ -182,7 +198,7 @@ func (s *Server) submitPulse(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	if !PulseSources[in.Source] {
-		fail(w, http.StatusBadRequest, "source must be watch, camera or tap")
+		fail(w, http.StatusBadRequest, "source must be camera")
 		return
 	}
 	rr, err := ValidateRR(in.RR)
@@ -203,21 +219,34 @@ func (s *Server) submitPulse(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusCreated, map[string]string{"delete_code": code})
 }
 
+// PublicPulse is a pulse as readers get it.
+type PublicPulse struct {
+	ID int64 `json:"id"`
+	RR []int `json:"rr"`
+}
+
+// samplePulses returns {first, others}: the centre pulse (or null) and a
+// random sample of the rest.
 func (s *Server) samplePulses(w http.ResponseWriter, r *http.Request) {
-	ps, err := s.Svc.Store.SamplePulses(r.Context(), count(r, 24, 100))
+	var first *PublicPulse
+	f, err := s.Svc.Store.FirstPulse(r.Context())
+	switch {
+	case err == nil:
+		first = &PublicPulse{f.ID, f.RR}
+	case !errors.Is(err, ErrNotFound):
+		fail(w, http.StatusInternalServerError, "store")
+		return
+	}
+	ps, err := s.Svc.Store.SamplePulses(r.Context(), count(r, 24, 100), f.ID)
 	if err != nil {
 		fail(w, http.StatusInternalServerError, "store")
 		return
 	}
-	type out struct {
-		ID int64 `json:"id"`
-		RR []int `json:"rr"`
-	}
-	res := make([]out, 0, len(ps))
+	others := make([]PublicPulse, 0, len(ps))
 	for _, p := range ps {
-		res = append(res, out{p.ID, p.RR})
+		others = append(others, PublicPulse{p.ID, p.RR})
 	}
-	writeJSON(w, http.StatusOK, map[string]any{"pulses": res})
+	writeJSON(w, http.StatusOK, map[string]any{"first": first, "others": others})
 }
 
 func (s *Server) countPulses(w http.ResponseWriter, r *http.Request) {

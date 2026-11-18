@@ -1,11 +1,13 @@
 package angel
 
 import (
+	"context"
 	"encoding/json"
 	"errors"
 	"net/http"
 	"strings"
 	"testing"
+	"time"
 )
 
 func steady(n, ms int) []int {
@@ -76,13 +78,13 @@ func TestHTTPPulses(t *testing.T) {
 		return do(t, "POST", ts.URL+"/api/angel/pulses", ip, "application/json", body(v))
 	}
 
-	if resp, _ := post("a", map[string]any{"rr": steady(40, 800), "source": "watch"}); resp.StatusCode != http.StatusBadRequest {
+	if resp, _ := post("a", map[string]any{"rr": steady(40, 800), "source": "camera"}); resp.StatusCode != http.StatusBadRequest {
 		t.Fatalf("no consent: %d", resp.StatusCode)
 	}
-	if resp, _ := post("a", map[string]any{"rr": steady(40, 800), "source": "watch", "consent": true, "ecg": []int{1, 2}}); resp.StatusCode != http.StatusBadRequest {
+	if resp, _ := post("a", map[string]any{"rr": steady(40, 800), "source": "camera", "consent": true, "ecg": []int{1, 2}}); resp.StatusCode != http.StatusBadRequest {
 		t.Fatalf("extra fields accepted: %d", resp.StatusCode)
 	}
-	if resp, _ := post("a", map[string]any{"rr": steady(40, 800), "source": "fitbit", "consent": true}); resp.StatusCode != http.StatusBadRequest {
+	if resp, _ := post("a", map[string]any{"rr": steady(40, 800), "source": "watch", "consent": true}); resp.StatusCode != http.StatusBadRequest {
 		t.Fatalf("unknown source: %d", resp.StatusCode)
 	}
 	resp, out := post("a", map[string]any{"rr": steady(40, 803), "source": "camera", "consent": true})
@@ -90,13 +92,13 @@ func TestHTTPPulses(t *testing.T) {
 		t.Fatalf("pulse: %d %v", resp.StatusCode, out)
 	}
 	code := out["delete_code"].(string)
-	post("a", map[string]any{"rr": steady(30, 700), "source": "tap", "consent": true})
-	if resp, _ := post("a", map[string]any{"rr": steady(30, 700), "source": "tap", "consent": true}); resp.StatusCode != http.StatusTooManyRequests {
+	post("a", map[string]any{"rr": steady(30, 700), "source": "camera", "consent": true})
+	if resp, _ := post("a", map[string]any{"rr": steady(30, 700), "source": "camera", "consent": true}); resp.StatusCode != http.StatusTooManyRequests {
 		t.Fatalf("third pulse in an hour: %d", resp.StatusCode)
 	}
 
 	_, out = do(t, "GET", ts.URL+"/api/angel/pulses?n=24", "b", "", nil)
-	ps := out["pulses"].([]any)
+	ps := append(out["others"].([]any), out["first"])
 	if len(ps) != 2 {
 		t.Fatalf("sample %v", out)
 	}
@@ -124,4 +126,51 @@ func TestHTTPPulses(t *testing.T) {
 	if resp, _ = do(t, "DELETE", ts.URL+"/api/angel/pulses?code="+code, "x", "", nil); resp.StatusCode != http.StatusNotFound {
 		t.Fatalf("delete twice %d", resp.StatusCode)
 	}
+}
+
+func TestFirstPulse(t *testing.T) {
+	srv, ts := newServer(t, nil)
+	if _, out := do(t, "GET", ts.URL+"/api/angel/pulses", "x", "", nil); out["first"] != nil || len(out["others"].([]any)) != 0 {
+		t.Fatalf("empty chorus: %v", out)
+	}
+	ctx := context.Background()
+	var codes []string
+	var ids []int64
+	for i := range 4 {
+		code := NewDeleteCode()
+		id, err := srv.Svc.Store.InsertPulse(ctx, steady(30, 700+i*50), "camera", code, time.Now())
+		if err != nil {
+			t.Fatal(err)
+		}
+		codes, ids = append(codes, code), append(ids, id)
+	}
+	check := func(wantFirst int64, wantOthers int) {
+		t.Helper()
+		_, out := do(t, "GET", ts.URL+"/api/angel/pulses?n=24", "x", "", nil)
+		if got := int64(out["first"].(map[string]any)["id"].(float64)); got != wantFirst {
+			t.Fatalf("first = %d, want %d", got, wantFirst)
+		}
+		others := out["others"].([]any)
+		if len(others) != wantOthers {
+			t.Fatalf("others = %d, want %d", len(others), wantOthers)
+		}
+		for _, o := range others {
+			if int64(o.(map[string]any)["id"].(float64)) == wantFirst {
+				t.Fatal("first is also among the others")
+			}
+		}
+	}
+	check(ids[0], 3)
+	if err := srv.Svc.Store.SetPulseHidden(ctx, ids[0], true); err != nil {
+		t.Fatal(err)
+	}
+	check(ids[1], 2)
+	if err := srv.Svc.Store.DeletePulseByCode(ctx, codes[1]); err != nil {
+		t.Fatal(err)
+	}
+	check(ids[2], 1)
+	if err := srv.Svc.Store.SetPulseHidden(ctx, ids[0], false); err != nil {
+		t.Fatal(err)
+	}
+	check(ids[0], 2) // shown again, the earliest is the centre again
 }
