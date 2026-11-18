@@ -33,6 +33,7 @@ import { RootsMap } from './views/rootsMap';
 import { installMechanics } from './mechanics';
 import { installFeatures } from './features';
 import { installNavMenu, navReady, setBookCount } from './views/navMenu';
+import { installFocusTrap } from './lib/focusTrap';
 import { isMechView } from './mechanics/views';
 import { compileLexicon, type NamesFile } from './lib/names';
 import { setLexicon, weaveLive } from './lib/weave';
@@ -90,6 +91,7 @@ async function start(): Promise<void> {
   let voicesFile: VoicesFile;
   let namesFile: NamesFile | null;
   installNavMenu(document.querySelector<HTMLElement>('.nav')!);
+  installFocusTrap();
   // The language switch needs no data, so it works while the cards load.
   document.querySelectorAll<HTMLElement>('[data-lang-switch]').forEach((b) => b.addEventListener('click', () => switchLang(lang() === 'ru' ? 'en' : 'ru')));
   // Let the static cover paint before the 1 MB of cards competes for the wire.

@@ -59,3 +59,32 @@ test('on a phone the atlas list keeps long BCE dates inside their column', async
   const over = await page.evaluate(() => [...document.querySelectorAll<HTMLElement>('.atlas-item .y')].filter((e) => e.scrollWidth > e.clientWidth + 1).map((e) => e.textContent));
   expect(over).toEqual([]);
 });
+
+test('Tab goes round inside an open room instead of walking into the page hidden under it', async ({ page, isMobile }) => {
+  test.skip(isMobile, 'a keyboard walk');
+  for (const where of ['/#view=dedication', '/#view=cabinet', '/#focus=mansa-musa']) {
+    await page.goto('about:blank');
+    await page.goto(where);
+    await page.waitForTimeout(1500);
+    for (let i = 0; i < 40; i++) {
+      await page.keyboard.press('Tab');
+      const behind = await page.evaluate(() => {
+        const a = document.activeElement;
+        return !!a && (a === document.body || !!a.closest('.nav, .skip, #story'));
+      });
+      expect(behind, `${where}: Tab ${i + 1} left the room`).toBe(false);
+    }
+  }
+});
+
+test('Escape leaves Roots even though the room opens with the focus in its search', async ({ page }) => {
+  await page.goto('/#view=roots');
+  const input = page.locator('.roots.open .r-input');
+  await expect(input).toBeFocused();
+  await input.fill('nirv');
+  await page.keyboard.press('Escape');
+  await expect(input).toHaveValue('');
+  await expect(page.locator('.roots.open')).toBeVisible();
+  await page.keyboard.press('Escape');
+  await expect(page.locator('.roots.open')).toHaveCount(0);
+});
