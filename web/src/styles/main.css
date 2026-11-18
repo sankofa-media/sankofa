@@ -4042,6 +4042,9 @@ details.k8s .term {
   }
   .atlas-item .y {
     grid-row: span 2;
+    /* A long BCE span breaks after its dash instead of running under the title. */
+    white-space: normal;
+    min-width: 0;
     font-family: var(--font-sans);
     font-size: 12px;
     color: var(--era);

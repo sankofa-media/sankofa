@@ -50,3 +50,12 @@ test('the top bar never runs off a laptop screen: it draws closer, then folds in
   await expect(menu).toBeHidden();
   await expect(page.locator('#nav-sheet')).toBeHidden();
 });
+
+test('on a phone the atlas list keeps long BCE dates inside their column', async ({ page, isMobile }) => {
+  test.skip(!isMobile, 'the list is the phone’s atlas');
+  await page.goto('/#view=atlas');
+  const y = page.locator('.atlas-item .y').first();
+  await expect(y).toBeVisible({ timeout: 15_000 });
+  const over = await page.evaluate(() => [...document.querySelectorAll<HTMLElement>('.atlas-item .y')].filter((e) => e.scrollWidth > e.clientWidth + 1).map((e) => e.textContent));
+  expect(over).toEqual([]);
+});
