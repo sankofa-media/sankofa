@@ -1438,6 +1438,12 @@
 .cb-imgwrap:hover .cb-glint {
   opacity: 0.35;
 }
+/* No hover on a touch screen: the glint stays faintly visible there. */
+@media (hover: none) {
+  .cb-glint {
+    opacity: 0.35;
+  }
+}
 .cb-glint:hover,
 .cb-glint:focus-visible {
   opacity: 1;

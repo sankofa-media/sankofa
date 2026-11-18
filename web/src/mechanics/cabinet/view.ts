@@ -162,7 +162,7 @@ export function cabinetView(app: App, f: CabinetFile): HTMLElement {
         'header.mx-head.cb-head',
         {},
         h('h2', {}, pick({ en: 'Cabinet of Curiosities', ru: 'Кабинет редкостей' })),
-        h('p.mx-lede', {}, pick(f.intro)),
+        ...pick(f.intro).split(/\n\s*\n/).map((para) => h('p.mx-lede', {}, para)),
         h('p.cb-tally', { role: 'status' }, count(t.have, t.of)),
         keys.length ? h('div.cb-keyring', {}, h('span', {}, pick({ en: 'On your key ring:', ru: 'На вашей связке:' })), ...keys.map((k) => h('span.cb-keyring-key', { title: pick(k.note) }, keyArt(), pick(k.name)))) : null,
       ),
