@@ -17,17 +17,23 @@ if [[ $src == ./* && -d $src ]]; then
 else
   tar=$src
 fi
-digest=""
-port=15000
-for pod in $(km -n sankofa-registry get pods -l app=registry -o name); do
-  port=$((port + 1))
-  km -n sankofa-registry port-forward "$pod" "$port:5000" >/dev/null 2>&1 &
-  pf=$!
-  for _ in $(seq 1 30); do curl -sf "http://localhost:$port/v2/" >/dev/null && break; sleep 0.5; done
-  ref=$(crane push --insecure "$tar" "localhost:$port/sankofa/$name:dev")
-  kill $pf 2>/dev/null || true; wait $pf 2>/dev/null || true
-  d=${ref##*@}
-  if [[ -n $digest && $d != "$digest" ]]; then echo "digest differs between nodes: $digest vs $d" >&2; exit 1; fi
-  digest=$d
+# Push once from here to the first node's registry, then copy inside the
+# cluster to the others: the laptop's uplink is the slow part, the cluster
+# network is not. crane skips blobs a registry already has, so an unchanged
+# layer (the museum's pictures) is not sent again.
+pods=($(km -n sankofa-registry get pods -l app=registry -o jsonpath='{range .items[*]}{.metadata.name}{" "}{.status.podIP}{"\n"}{end}' | sort))
+first=${pods[0]} firstip=${pods[1]}
+port=15001
+km -n sankofa-registry port-forward "pod/$first" "$port:5000" >/dev/null 2>&1 &
+pf=$!
+trap 'kill $pf 2>/dev/null || true' EXIT
+for _ in $(seq 1 30); do curl -sf "http://localhost:$port/v2/" >/dev/null && break; sleep 0.5; done
+ref=$(crane push --insecure "$tar" "localhost:$port/sankofa/$name:dev")
+digest=${ref##*@}
+for ((i = 2; i < ${#pods[@]}; i += 2)); do
+  ip=${pods[$((i + 1))]}
+  km -n sankofa-registry run "copy-$name-$RANDOM" --rm -i --quiet --restart=Never \
+    --image=gcr.io/go-containerregistry/crane:v0.20.3 -- \
+    copy --insecure "$firstip:5000/sankofa/$name@$digest" "$ip:5000/sankofa/$name:dev" >/dev/null
 done
 echo "localhost:5000/sankofa/$name@$digest"

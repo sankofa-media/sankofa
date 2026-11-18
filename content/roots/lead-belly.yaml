@@ -9,13 +9,60 @@ genre: "Folk / blues"
 genreRu: "фолк / блюз"
 links:
   - to: "card:work-songs"
-    kind: "influence"
-    claim: "Lead Belly learned “Rock Island Line” from singers in Arkansas prisons and brought it into his own repertoire."
-    claimRu: "Ледбелли перенял «Rock Island Line» у певцов в арканзасских тюрьмах и включил её в свой репертуар."
-    sources:
-      - title: "Library of Congress: From Mule-een to New Orleans"
+    kind: "style"
+    how: "Lead Belly brought the work songs he had learned into his concerts: a percussive, driving pulse and a spoken story setting up each song."
+    howRu: "Ледбелли перенёс выученные рабочие песни на концертную сцену: ударный, напористый пульс и устный рассказ перед каждой песней."
+    carries: []
+    dimensions: ["rhythm", "performance"]
+    evidence:
+      - type: "analysis"
+        dimensions: ["rhythm", "performance"]
+        text: "Introducing it as a work song, Lead Belly turned the piece into a percussive musical drama framed by a spoken monologue."
+        textRu: "Объявляя её рабочей песней, Ледбелли превращал вещь в ударную музыкальную драму, обрамлённую устным монологом."
+        source:
+          title: "Library of Congress, Folklife Today (Stephen Winick): From “Mule-een” to New Orleans (2017)"
+          url: "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/"
+          quote: "creating a musical drama of a percussive freight train express bound for New Orleans."
+      - type: "critics"
+        dimensions: ["performance"]
+        text: "Contemporary Musicians notes that he learned work songs and spirituals in his family and introduced his songs with a spoken story."
+        textRu: "Contemporary Musicians отмечает, что рабочие песни и спиричуэлс он усвоил в семье, а свои песни предварял устным рассказом."
+        source:
+          title: "Contemporary Musicians (Michael E. Mueller), via Encyclopedia.com: Leadbelly"
+          url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/leadbelly"
+          quote: "learned spirituals, work songs, and lullabies"
+    scope: "career"
+    example:
+      song: "“Rock Island Line” (1937 onward)"
+      text: "A song from Arkansas prison gangs that Lead Belly introduced on stage as a work song."
+      textRu: "Песня арканзасских тюремных бригад, которую Ледбелли объявлял со сцены как рабочую."
+      source:
+        title: "Library of Congress, Folklife Today (Stephen Winick, 2017)"
         url: "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/"
-      - title: "Encyclopedia of Arkansas: The Rock Island Line"
-        url: "https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/"
-story: "Lead Belly heard “Rock Island Line” from singers in Arkansas prisons. He brought the song into his own repertoire."
-storyRu: "Ледбелли услышал «Rock Island Line» от певцов в арканзасских тюрьмах. Он включил песню в собственный репертуар."
+        quote: "I'm gonna do a work song, entitled 'The Rock Island Line.'"
+  - to: "card:blues"
+    kind: "style"
+    how: "As a blues singer he stood on the ringing twelve-string guitar and a sharp, keening voice, delivered with a commanding stage presence."
+    howRu: "Как блюзовый певец он опирался на звенящую двенадцатиструнную гитару и пронзительный, причитающий голос, а на сцене держался властно."
+    carries: []
+    dimensions: ["sound", "melody-vocal", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "melody-vocal", "performance"]
+        text: "Contemporary Musicians calls him the King of the Twelve-String Guitar, a musician with a commanding stage presence and voice."
+        textRu: "Contemporary Musicians называет его королём двенадцатиструнной гитары, музыкантом с властным голосом и сценическим присутствием."
+        source:
+          title: "Contemporary Musicians (Michael E. Mueller), via Encyclopedia.com: Leadbelly"
+          url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/leadbelly"
+          quote: "A talented musician with a commanding stage presence and voice"
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The Rock & Roll Hall of Fame singles out his sharp, keening vocals."
+        textRu: "Зал славы рок-н-ролла выделяет его пронзительный, причитающий вокал."
+        source:
+          title: "Rock & Roll Hall of Fame: Lead Belly"
+          url: "https://rockhall.com/inductees/lead-belly/"
+          quote: "sharp, keening vocals"
+    scope: "career"
+story: "Lead Belly carried the work songs he had learned onto the concert stage, with a percussive pulse and a spoken story before each song. As a blues singer he stood on the twelve-string guitar and a sharp, keening voice."
+storyRu: "Ледбелли перенёс выученные рабочие песни на концертную сцену: ударный пульс и устный рассказ перед каждой песней. Как блюзовый певец он опирался на двенадцатиструнную гитару и пронзительный, причитающий голос."

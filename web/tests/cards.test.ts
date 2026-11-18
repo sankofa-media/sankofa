@@ -1,5 +1,8 @@
 import { describe, expect, it } from 'vitest';
-import { CardSet, bookSymbols, formatYears, links, overlaps, plain, segments } from '../src/lib/cards';
+import { CardSet, bookSymbols, cardForEdition, formatYears, links, localizeCard, overlaps, plain, segments, when } from '../src/lib/cards';
+import { atlasLayers } from '../src/lib/atlasModel';
+import { quietStretches } from '../src/lib/descentModel';
+import { readFileSync } from 'node:fs';
 import type { Card } from '../src/lib/types';
 
 const card = (c: Partial<Card> & { id: string }): Card => ({
@@ -48,15 +51,6 @@ describe('links', () => {
 });
 
 describe('editions', () => {
-  it('resolves paired cards to the reader edition like ForEdition', () => {
-    expect(set.forEdition('douglass', 'f')!.id).toBe('jacobs');
-    expect(set.forEdition('douglass', 'm')!.id).toBe('douglass');
-    expect(set.forEdition('jacobs', 'm')!.id).toBe('douglass');
-    expect(set.forEdition('zong', 'f')!.id).toBe('zong');
-    expect(set.forEdition('douglass', '')!.id).toBe('douglass');
-    expect(set.forEdition('nope', 'f')).toBeUndefined();
-  });
-
   it('finds the other copy', () => {
     expect(set.partner('jacobs')!.id).toBe('douglass');
     expect(set.partner('zong')).toBeUndefined();
@@ -87,5 +81,60 @@ describe('places and time', () => {
     expect(formatYears([1778, 1860])).toBe('1778–1860');
     expect(formatYears([1781])).toBe('1781');
     expect(formatYears([1781, 1781])).toBe('1781');
+  });
+});
+
+describe('card bodies by copy', () => {
+  const card = JSON.parse(readFileSync(new URL('./fixtures/marked/card.json', import.meta.url), 'utf8')) as Card;
+
+  it('keeps the marked paragraphs of the reader’s copy only, marker stripped', () => {
+    const m = cardForEdition(card, 'm').body.split('\n\n');
+    const f = cardForEdition(card, 'f').body.split('\n\n');
+    expect(m).toHaveLength(3);
+    expect(f).toHaveLength(3);
+    expect(m[1]).toBe('Only the male copy reads this\nwrapped line.');
+    expect(f[1]).toBe('Only the female copy reads this.');
+    expect(m[0]).toBe(f[0]);
+    expect(m.join(' ')).not.toMatch(/\{(male|female)\}/);
+  });
+
+  it('works on the translation too and never touches the hook or title', () => {
+    const ru = cardForEdition(localizeCard(card, 'ru'), 'f');
+    expect(ru.body).toBe('Общий первый абзац.\n\nТолько женский экземпляр.\n\nОбщий последний абзац.');
+    expect(cardForEdition(card, 'f').wow).toBe(card.wow);
+  });
+
+  it('returns an unmarked card unchanged', () => {
+    const plainCard = { ...card, body: 'One.\n\nTwo.' };
+    expect(cardForEdition(plainCard, 'm')).toBe(plainCard);
+  });
+});
+
+describe('the moment a card is about', () => {
+  const smalls = card({ id: 'robert-smalls', years: [1839, 1915], places: [{ name: 'Beaufort', lat: 32.4, lon: -80.7 }, { name: 'Charleston', lat: 32.8, lon: -79.9 }], moment: { year: 1862, place: 1 } });
+
+  it('reads the moment, falling back to the first year and place', () => {
+    expect(when(smalls)).toEqual({ year: 1862, place: smalls.places[1] });
+    expect(when({ ...smalls, moment: { year: 1862 } }).place.name).toBe('Beaufort');
+    expect(when({ ...smalls, moment: undefined })).toEqual({ year: 1839, place: smalls.places[0] });
+  });
+
+  it('places the atlas pin at the moment, in place and in time', () => {
+    const set = new CardSet([smalls]);
+    const at1862 = atlasLayers(set, { level: 4, from: 1860, to: 1865 });
+    expect(at1862.points[0]).toMatchObject({ lon: -79.9, lat: 32.8, out: false });
+    const at1900 = atlasLayers(set, { level: 4, from: 1900, to: 1910 });
+    expect(at1900.points[0].out).toBe(true);
+  });
+
+  it('names a card on the map by its label when it has one, in the reader’s language', () => {
+    const slav = card({ id: 'slav', title: 'Slav, slave and the Atlantic', label: 'Slav → slave', translations: { ru: { title: 'Славянин, slave и Атлантика', label: 'Славянин → раб', wow: 'w', body: 'b' } } });
+    expect(atlasLayers(new CardSet([slav]), { level: 4 }).points[0].label).toBe('Slav → slave');
+    expect(atlasLayers(new CardSet([localizeCard(slav, 'ru')]), { level: 4 }).points[0].label).toBe('Славянин → раб');
+    expect(atlasLayers(new CardSet([smalls]), { level: 4 }).points[0].label).toBe('robert-smalls');
+  });
+
+  it('anchors the descent at the moment', () => {
+    expect(quietStretches([smalls], 45)[0]).toEqual({ from: 1300, to: 1862 });
   });
 });

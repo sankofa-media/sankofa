@@ -43,6 +43,24 @@ export interface MapPoint {
   aria?: string;
 }
 
+/** A factoid with a place: a small light dot, quieter than a card's marker. */
+export interface MapFact {
+  id: string;
+  lon: number;
+  lat: number;
+  aria: string;
+  on?: boolean;
+}
+
+/** A cache of the Cabinet of Curiosities: a glint seen only on hover or focus. */
+export interface MapGlint {
+  id: string;
+  lon: number;
+  lat: number;
+  aria: string;
+  opened?: boolean;
+}
+
 export interface MapRoute {
   id: string;
   legs: Leg[];
@@ -62,6 +80,14 @@ export interface MapRegion {
   color: string;
 }
 
+/** Countries to shade: those with cards, and the one chosen. */
+export interface MapCountries {
+  lit: Set<string>;
+  on?: string;
+  /** Accessible names by ISO id, for the tooltip. */
+  names?: Map<string, string>;
+}
+
 export interface MapNumber {
   n: number;
   lon: number;
@@ -73,10 +99,16 @@ interface Options {
   detail?: 'low' | 'high';
   frame?: [[number, number], [number, number]]; // lon/lat corners of the home view
   onPoint?: (id: string) => void;
+  /** A click (or Enter) on a factoid's dot. */
+  onFact?: (id: string, el: Element) => void;
+  /** A click (or Enter) on a cabinet glint. */
+  onGlint?: (id: string) => void;
   onRegion?: (r: MapRegion) => void;
   onHover?: (id: string | null, ev?: MouseEvent) => void;
   onLevel?: (level: number) => void;
   onMoveEnd?: () => void;
+  /** A click on a shaded country (setCountries), by its ISO numeric id. */
+  onCountry?: (iso: string) => void;
   /** Screen rectangles labels must stay out of (the text column, say). */
   avoid?: () => [number, number, number, number][];
   /** At most this many labels at once. */
@@ -104,16 +136,22 @@ export class GeoMap {
   private gRoutes: Selection<SVGGElement, unknown, null, undefined>;
   private gRegions: Selection<SVGGElement, unknown, null, undefined>;
   private gPoints: Selection<SVGGElement, unknown, null, undefined>;
+  private gFacts: Selection<SVGGElement, unknown, null, undefined>;
+  private gGlints: Selection<SVGGElement, unknown, null, undefined>;
   private gNums: Selection<SVGGElement, unknown, null, undefined>;
   private points: MapPoint[] = [];
   private routes: MapRoute[] = [];
   private landGeo: unknown = null;
   private bordersGeo: unknown = null;
+  private countryGeo: { id?: string | number; properties?: { name?: string } }[] = [];
+  private shaded: MapCountries | null = null;
   private lastLevel = 0;
   private ro: ResizeObserver;
   private idPrefix = `m${++uid}`;
   /** Pixels on the right covered by a panel; flights centre in what is left. */
   inset = 0;
+  /** Pixels on the left covered by a panel. */
+  insetLeft = 0;
   private labelWidths = new Map<string, number>();
   private flight: [number, number, number, number] | null = null;
 
@@ -137,6 +175,9 @@ export class GeoMap {
     this.gZoom = this.svg.append('g');
     this.gRoutes = this.svg.append('g').attr('class', 'routes');
     this.gRegions = this.svg.append('g').attr('class', 'regions');
+    // Factoid dots lie under the cards' markers, never over them.
+    this.gFacts = this.svg.append('g').attr('class', 'facts');
+    this.gGlints = this.svg.append('g').attr('class', 'cb-aglints');
     this.gPoints = this.svg.append('g').attr('class', 'points');
     this.gNums = this.svg.append('g').attr('class', 'nums');
 
@@ -181,12 +222,14 @@ export class GeoMap {
     const [land, countries] = await Promise.all([loadTopo(land110Url), loadTopo(countries110Url)]);
     this.landGeo = feature(land, land.objects.land as never);
     this.bordersGeo = mesh(countries, countries.objects.countries as never, (a, b) => a !== b);
+    this.countryGeo = (feature(countries, countries.objects.countries as never) as unknown as { features: never[] }).features;
     this.drawBase();
     if (detail === 'high') {
       // Sharper coasts for the explorer, loaded after the first paint.
       Promise.all([loadTopo(land50Url), loadTopo(countries50Url)]).then(([l, c]) => {
         this.landGeo = feature(l, l.objects.land as never);
         this.bordersGeo = mesh(c, c.objects.countries as never, (a, b) => a !== b);
+        this.countryGeo = (feature(c, c.objects.countries as never) as unknown as { features: never[] }).features;
         this.drawBase();
       });
     }
@@ -226,9 +269,32 @@ export class GeoMap {
     this.gZoom.selectAll('*').remove();
     this.gZoom.append('path').attr('class', 'graticule').attr('d', path(geoGraticule10()));
     this.gZoom.append('path').attr('class', 'land').attr('d', path(this.landGeo as never));
+    this.drawCountries(path);
     this.gZoom.append('path').attr('class', 'borders').attr('d', path(this.bordersGeo as never));
     this.renderOverlay();
     this.placeLabels();
+  }
+
+  /** Shade the countries that have cards, and the chosen one; null clears. */
+  setCountries(c: MapCountries | null): void {
+    this.shaded = c;
+    if (this.landGeo) this.drawCountries(geoPath(this.projection));
+  }
+
+  private drawCountries(path: ReturnType<typeof geoPath>): void {
+    this.gZoom.selectAll('g.countries').remove();
+    const c = this.shaded;
+    if (!c) return;
+    const iso = (f: { id?: string | number }) => String(f.id ?? '');
+    const g = this.gZoom.insert('g', 'path.borders').attr('class', 'countries').attr('aria-hidden', 'true');
+    g.selectAll('path')
+      .data(this.countryGeo.filter((f) => c.lit.has(iso(f))))
+      .join('path')
+      .attr('class', (f) => `country${iso(f) === c.on ? ' on' : ''}`)
+      .attr('d', (f) => path(f as never))
+      .on('click', (_, f) => this.opts.onCountry?.(iso(f)))
+      .append('title')
+      .text((f) => c.names?.get(iso(f)) ?? f.properties?.name ?? '');
   }
 
   /** Screen position of a lon/lat. */
@@ -249,7 +315,7 @@ export class GeoMap {
   private target(lon: number, lat: number, k: number): ZoomTransform {
     const [x, y] = this.projection([lon, lat]) ?? [this.w / 2, this.h / 2];
     // Keep the point a little right of centre on wide screens: text lives on the left.
-    const cx = this.opts.interactive || this.w < 720 ? (this.w - this.inset) / 2 : this.w * 0.62;
+    const cx = this.opts.interactive || this.w < 720 ? this.insetLeft + (this.w - this.inset - this.insetLeft) / 2 : this.w * 0.62;
     const cy = !this.opts.interactive && this.w < 720 ? this.h * 0.34 : this.h / 2;
     return zoomIdentity.translate(cx, cy).scale(k).translate(-x, -y);
   }
@@ -281,7 +347,7 @@ export class GeoMap {
     const ys = pts.map((p) => p[1]);
     const [x0, x1, y0, y1] = [Math.min(...xs), Math.max(...xs), Math.min(...ys), Math.max(...ys)];
     const wide = !this.opts.interactive && this.w >= 720;
-    const availW = wide ? this.w * 0.5 : this.w * 0.8;
+    const availW = wide ? this.w * 0.5 : (this.w - this.inset - this.insetLeft) * 0.8;
     // On a phone the step box covers the lower half: fit into the upper part.
     const phone = !this.opts.interactive && this.w < 720;
     const availH = phone ? this.h * 0.4 : this.h * 0.62;
@@ -342,6 +408,60 @@ export class GeoMap {
     sel.raise();
     this.renderOverlay();
     this.placeLabels();
+  }
+
+  setFacts(facts: MapFact[]): void {
+    const sel = this.gFacts
+      .selectAll<SVGGElement, MapFact>('g.fact')
+      .data(facts, (d) => d.id)
+      .join((enter) => {
+        const g = enter.append('g').attr('class', 'fact');
+        // A wider, invisible target: the dot itself is small on purpose.
+        g.append('circle').attr('class', 'hit').attr('r', 9);
+        g.append('circle').attr('class', 'fdot').attr('r', 2.2);
+        if (this.opts.interactive) {
+          g.attr('tabindex', 0).attr('role', 'button');
+          g.on('click', (ev: MouseEvent, d) => {
+            ev.stopPropagation();
+            this.opts.onFact?.(d.id, ev.currentTarget as Element);
+          });
+          g.on('keydown', (ev: KeyboardEvent, d) => {
+            if (ev.key === 'Enter' || ev.key === ' ') {
+              ev.preventDefault();
+              this.opts.onFact?.(d.id, ev.currentTarget as Element);
+            }
+          });
+        }
+        return g;
+      });
+    sel.attr('class', (d) => `fact${d.on ? ' on' : ''}`).attr('data-fact', (d) => d.id).attr('aria-label', (d) => d.aria);
+    this.renderOverlay();
+  }
+
+  setGlints(glints: MapGlint[]): void {
+    this.gGlints
+      .selectAll<SVGGElement, MapGlint>('g.cb-aglint')
+      .data(glints, (d) => d.id)
+      .join((enter) => {
+        const g = enter.append('g').attr('class', 'cb-aglint').attr('tabindex', 0).attr('role', 'button');
+        g.append('circle').attr('class', 'hit').attr('r', 12);
+        g.append('circle').attr('class', 'spark').attr('r', 3.2);
+        g.on('click', (ev: MouseEvent, d) => {
+          ev.stopPropagation();
+          this.opts.onGlint?.(d.id);
+        });
+        g.on('keydown', (ev: KeyboardEvent, d) => {
+          if (ev.key === 'Enter' || ev.key === ' ') {
+            ev.preventDefault();
+            this.opts.onGlint?.(d.id);
+          }
+        });
+        return g;
+      })
+      .attr('data-cache', (d) => d.id)
+      .classed('opened', (d) => !!d.opened)
+      .attr('aria-label', (d) => d.aria);
+    this.renderOverlay();
   }
 
   setRoutes(routes: MapRoute[], animate = true): void {
@@ -425,6 +545,24 @@ export class GeoMap {
     return `M${a[0].toFixed(1)},${a[1].toFixed(1)}Q${q0[0].toFixed(1)},${q0[1].toFixed(1)} ${end[0].toFixed(1)},${end[1].toFixed(1)}`;
   }
 
+  /** The screen midpoint of a leg's arc, and the arc's chord length. */
+  private curveMid(leg: Leg): [number, number, number] {
+    const a = this.xy(leg.from[0], leg.from[1]);
+    const b = this.xy(leg.to[0], leg.to[1]);
+    const dx = b[0] - a[0];
+    const dy = b[1] - a[1];
+    const len = Math.hypot(dx, dy);
+    let nx = -dy / (len || 1);
+    let ny = dx / (len || 1);
+    if (ny > 0) {
+      nx = -nx;
+      ny = -ny;
+    }
+    const bend = Math.min(0.24 * len, 220);
+    const c = [(a[0] + b[0]) / 2 + nx * bend, (a[1] + b[1]) / 2 + ny * bend];
+    return [0.25 * a[0] + 0.5 * c[0] + 0.25 * b[0], 0.25 * a[1] + 0.5 * c[1] + 0.25 * b[1], len];
+  }
+
   private renderRoutes(): void {
     const legs = this.routes.flatMap((r) => r.legs.map((l, i) => ({ r, l, key: `${r.id}:${i}` })));
     this.gRoutes
@@ -455,45 +593,63 @@ export class GeoMap {
         t.append('tspan').attr('class', 'sub').attr('dy', '1.35em');
         return t;
       });
-    lab
-      .attr('transform', (d) => {
-        const [x, y] = this.xy(d.label!.at[0], d.label!.at[1]);
-        // Keep the label on screen: clamp by its measured width.
-        const w = (this.labelWidths.get(d.id) ?? d.label!.text.length * 8) + 8;
-        // Not under the text column either.
-        const left = Math.max(8, ...(this.opts.avoid?.() ?? []).filter((a) => y > a[1] - 30 && y < a[3]).map((a) => a[2] + 12));
-        const cx = Math.max(left, Math.min(this.w - w, x));
-        return `translate(${cx.toFixed(1)},${y})`;
-      })
-      .style('opacity', (d) => Math.min(1, ((d.progress ?? 1) - 0.4) * 2));
     // Titles above every arc, never crossed by one.
     lab.raise();
     lab.select('tspan.main').attr('x', 0).text((d) => d.label!.text);
     lab.select('tspan.sub').attr('x', 0).text((d) => d.label!.sub ?? '');
-    // Movement titles never stack on one another: each moves down until free.
-    const placed: DOMRect[] = [];
-    lab.each((_, i, n) => {
-      const el = n[i] as SVGTextElement;
-      const tr = el.getAttribute('transform') ?? '';
-      const m = tr.match(/translate\(([-\d.]+),([-\d.]+)\)/);
-      if (!m) return;
-      let y = Number(m[2]);
-      for (let k = 0; k < 6; k++) {
-        const r = el.getBoundingClientRect();
-        if (!placed.some((p) => r.left < p.right && r.right > p.left && r.top < p.bottom + 4 && r.bottom > p.top - 4)) break;
-        y += 40;
-        el.setAttribute('transform', `translate(${m[1]},${y})`);
-      }
-      placed.push(el.getBoundingClientRect());
-    });
+    lab.style('opacity', (d) => Math.min(1, ((d.progress ?? 1) - 0.4) * 2));
+    // Each title sits at the middle of its own route: just above the arc's
+    // midpoint, else below it or beside it, on whichever leg has room. A title
+    // that finds no room keeps its first place rather than drifting away.
+    const placed: [number, number, number, number][] = [];
+    const avoid = this.opts.avoid?.() ?? [];
+    const free = (r: [number, number, number, number]) =>
+      r[0] >= 4 && r[2] <= this.w - 4 && r[1] >= 4 && r[3] <= this.h - 4 &&
+      !placed.some((p) => r[0] < p[2] && r[2] > p[0] && r[1] < p[3] + 4 && r[3] > p[1] - 4) &&
+      !avoid.some((p) => r[0] < p[2] && r[2] > p[0] && r[1] < p[3] && r[3] > p[1]);
     lab.each((d, i, n) => {
-      if (this.labelWidths.has(d.id)) return;
-      const bb = (n[i] as SVGTextElement).getBBox?.();
+      const el = n[i] as SVGTextElement;
+      // Measure the title as drawn: an estimate lets two titles overlap.
+      let bb: DOMRect | undefined;
+      try {
+        bb = el.getBBox?.();
+      } catch {
+        bb = undefined;
+      }
       if (bb && bb.width) this.labelWidths.set(d.id, bb.width);
+      const w = this.labelWidths.get(d.id) ?? Math.max(d.label!.text.length * 8, (d.label!.sub ?? '').length * 6.4);
+      const box = (x: number, y: number): [number, number, number, number] => [x, y - 15, x + w, y + (d.label!.sub ? 22 : 6)];
+      const mids = [...d.legs].map((l) => ({ l, m: this.curveMid(l) })).sort((p, q) => q.m[2] - p.m[2]);
+      let best: [number, number] | undefined;
+      for (const { m } of mids) {
+        const [mx, my] = m;
+        for (const [x, y] of [[mx - w / 2, my - 22], [mx - w / 2, my + 20], [mx + 10, my + 4], [mx - w - 10, my + 4], [mx - w / 2, my - 46], [mx - w / 2, my + 44]] as [number, number][]) {
+          const cx = Math.max(4, Math.min(this.w - w - 4, x));
+          if (free(box(cx, y))) {
+            best = [cx, y];
+            break;
+          }
+        }
+        if (best) break;
+      }
+      // A title with no free room steps back rather than sit on another one;
+      // its route is still drawn, and named again when the map moves.
+      el.classList.toggle('crowded', !best);
+      if (!best) return;
+      placed.push(box(best[0], best[1]));
+      el.setAttribute('transform', `translate(${best[0].toFixed(1)},${best[1].toFixed(1)})`);
     });
   }
 
   private renderOverlay(): void {
+    this.gGlints.selectAll<SVGGElement, MapGlint>('g.cb-aglint').attr('transform', (d) => {
+      const [x, y] = this.xy(d.lon, d.lat);
+      return `translate(${x.toFixed(1)},${y.toFixed(1)})`;
+    });
+    this.gFacts.selectAll<SVGGElement, MapFact>('g.fact').attr('transform', (d) => {
+      const [x, y] = this.xy(d.lon, d.lat);
+      return `translate(${x.toFixed(1)},${y.toFixed(1)})`;
+    });
     this.gPoints.selectAll<SVGGElement, MapPoint>('g.pt').attr('transform', (d) => {
       const [x, y] = this.xy(d.lon, d.lat);
       return `translate(${x.toFixed(1)},${y.toFixed(1)})`;

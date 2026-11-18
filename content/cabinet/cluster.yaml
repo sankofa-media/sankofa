@@ -1,0 +1,39 @@
+# What the museum's cluster says about the caches hidden in it (caches.yaml,
+# hidden: {at: cluster}). {word} is the cache's lock word. The annotation goes
+# on the Card named by the cache (pkg/cabinet.Annotation, and -ru for the
+# Russian note), written by the griot; the storeroom is the ConfigMap
+# storeroom in the namespace sankofa-museum (deploy/museum.yaml); rummage is
+# what `sankofa rummage` prints.
+annotation:
+  en: "In the margin, in pencil: a letter lock opens to {word}."
+  ru: "На полях карандашом: кодовый замок открывается словом {word}."
+rummage:
+  en: |-
+    You rummage along the storeroom shelves.
+    Behind a crate of 78s sits a wooden box of brown wax cylinders, each in its own cotton-lined tube.
+    One tube is labelled in faded ink: The Laughing Song.
+    Scratched into the lid is a single word: {word}.
+  ru: |-
+    Вы роетесь на полках запасника.
+    За ящиком с пластинками на 78 оборотов стоит деревянный ящик с коричневыми восковыми валиками, каждый в своём футляре, выложенном ватой.
+    На одном футляре выцветшими чернилами написано: The Laughing Song.
+    На крышке нацарапано одно слово: {word}.
+storeroom:
+  en: |-
+    STOREROOM OF THE SANKOFA MUSEUM. Inventory, kept by the steward.
+    Shelf A: a student's trunk from McGrawville, New York. Empty; its woodcut hangs upstairs.
+    Shelf B: a ship steward's chest from the Lembrança, Rio de Janeiro to New York, 1847.
+    The chest has no keyhole, only a lock of letters.
+    Word for the lock: {word} (Portuguese for memory; the lock has no cedilla).
+    Inside the chest: the steward's keys, and one of them opens the last shelf.
+    Shelf C, the last: a bread basket, sent home to Brazil. Look for it among the countries.
+    Nothing here is thrown away. What is put away is remembered.
+  ru: |-
+    КЛАДОВАЯ МУЗЕЯ САНКОФА. Опись ведёт стюард.
+    Полка А: студенческий сундук из Макгроувилла, штат Нью-Йорк. Пуст; его гравюра висит наверху.
+    Полка Б: сундук корабельного стюарда с «Лембрансы», Рио-де-Жанейро — Нью-Йорк, 1847 год.
+    Замочной скважины у сундука нет, только замок с буквами.
+    Слово для замка: {word} (по-португальски «память»; седиль замок не берёт).
+    В сундуке — ключи стюарда, и один из них отпирает последнюю полку.
+    Полка В, последняя: хлебная корзина, отправленная домой, в Бразилию. Ищите её среди стран.
+    Здесь ничего не выбрасывают. Что убрано на полку — то помнят.

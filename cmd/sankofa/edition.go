@@ -21,10 +21,12 @@ func editionCmd() *cobra.Command {
 		Use:   "edition [m|f|swap]",
 		Short: "Show or change your copy of the dictionary: the male or the female edition",
 		Long: `Like the copies of Pavić's Dictionary of the Khazars, every reader holds one
-of two editions. They differ in the voice of a few key passages: Frederick
-Douglass fighting Covey in the male copy, Harriet Jacobs in her garret in the
-female one. The copy is dealt at random on first use; this command lets you
-trade it.`,
+of two editions. Both hold the whole dictionary, and a link opens the very card
+it names. They tell the same themes with a man's and a woman's view: some cards
+read differently, and a chapter may tell its theme through another life,
+Frederick Douglass fighting Covey in the male copy, Harriet Jacobs in her
+garret in the female one. The copy is dealt at random on first use; this
+command lets you trade it, and sankofa dict --edition reads in either.`,
 		Args: cobra.MaximumNArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
 			st, err := reader.Load()

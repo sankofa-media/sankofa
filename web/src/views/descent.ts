@@ -5,15 +5,20 @@
 import type { App } from '../app';
 import type { Card } from '../lib/types';
 import { ERAS } from '../lib/types';
-import { formatYears, span } from '../lib/cards';
-import { vtags, bookMarks, h, reducedMotion, svgIcon } from '../lib/dom';
-import { chapterCopy, eraColor, readerCards } from '../lib/atlasModel';
+import { formatYears, plain, span, when } from '../lib/cards';
+import { bookMarks, h, reducedMotion, svgIcon } from '../lib/dom';
+import { chapterCopy, eraColor } from '../lib/atlasModel';
 import { MOVEMENTS } from '../lib/movements';
-import { count, pick, t, yearsAgo } from '../lib/i18n';
+import { chapterLabel, chapterNumber, count, pick, t, yearsAgo } from '../lib/i18n';
 import { LEVEL_NAMES } from './map';
+import { paragraphsOf } from '../lib/paragraphs';
 import { mediaSrc } from '../lib/media';
+import { listenBlock } from './player';
+import { stopWithin } from '../lib/sound';
 import { richText } from '../app';
 import { buildScale, chapterAt, chapterCentres, chaptersAt, lanes, levelCards, NOW, place, quietStretches, START, type Item, type Placed, type Scale } from '../lib/descentModel';
+import { quietFactoids } from '../lib/factoids';
+import { factoidView } from './factoid';
 import { interpolateRgb } from 'd3-interpolate';
 import { scaleLinear } from 'd3-scale';
 
@@ -29,7 +34,7 @@ const STARS = scaleLinear().domain([1945, 1975, 2005]).range([0, 0.55, 1]).clamp
 const QUIET = [
   { en: 'The archive is quiet here. The people were not.', ru: 'Архив здесь молчит. Люди — нет.' },
   { en: 'Few records survive from these years. Absence of evidence, not of lives.', ru: 'От этих лет почти не осталось записей. Документов нет, но люди жили.' },
-  { en: 'A long stretch with no card yet. Somebody was singing.', ru: 'Долгий отрезок без единой карточки. Кто-то в это время пел.' },
+  { en: 'A long stretch with no card. Somebody was singing.', ru: 'Долгий отрезок без единой карточки. Кто-то в это время пел.' },
   { en: 'Silence in the sources. Keep going.', ru: 'Источники молчат. Идите дальше.' },
 ];
 
@@ -99,6 +104,11 @@ export class Descent {
     rail.append(...this.railEras());
     this.stars.style.boxShadow = starfield(260);
     document.body.append(this.el);
+    // The factoids arrive after the cards; the quiet stretches take them in.
+    void app.facts.ready.then(() => {
+      if (this.isOpen) this.layout(this.yearNow());
+      else this.built = false;
+    });
     window.addEventListener('resize', () => {
       if (this.isOpen) this.layout(this.yearNow());
       else this.built = false;
@@ -171,6 +181,7 @@ export class Descent {
   }
 
   close(): void {
+    stopWithin(this.el);
     this.el.classList.remove('open');
     document.body.classList.remove('locked');
   }
@@ -197,7 +208,7 @@ export class Descent {
       const f = (y: number) => ((y - START) / (NOW - START)) * 100;
       return h('b', {
         style: `top:${f(a)}%;height:${Math.max(1, f(b) - f(a))}%;--era:${eraColor(e.id)};left:${ERAS.indexOf(e) % 2 ? 5 : 0}px`,
-        title: `${e.id} ${e.label}`,
+        title: `${chapterLabel(e.id)} · ${e.label}`,
       });
     });
   }
@@ -230,8 +241,8 @@ export class Descent {
           this.meterEra.dataset.key = key;
           this.meterEra.style.setProperty('--era', eraColor(ch?.id));
           this.meterEra.replaceChildren(
-            ch ? h('span.main', {}, ...vtags(`${ch.id} · ${ch.title}`)) : '',
-            also.length ? h('span.also', {}, pick({ en: 'also: ', ru: 'а также: ' }), ...also.map((c) => h('i', { style: `--era:${eraColor(c.id)}`, title: c.title }, c.id))) : '',
+            ch ? h('span.main', {}, `${chapterLabel(ch.id)} · ${ch.title}`) : '',
+            also.length ? h('span.also', {}, pick({ en: also.length > 1 ? 'also chapters ' : 'also chapter ', ru: also.length > 1 ? 'а также главы ' : 'а также глава ' }), ...also.map((c) => h('i', { style: `--era:${eraColor(c.id)}`, title: `${chapterLabel(c.id)} · ${c.title}` }, String(chapterNumber(c.id) ?? '')))) : '',
           );
         }
       }
@@ -246,7 +257,7 @@ export class Descent {
     const app = this.app;
     const W = this.el.clientWidth || window.innerWidth;
     const mobile = W < 760;
-    const all = readerCards(app.set, app.edition);
+    const all = app.set.all();
     const cards = levelCards(all.filter((c) => c.years.length), this.level);
     const cardIndex = new Map(cards.map((c) => [c.id, c]));
 
@@ -286,7 +297,7 @@ export class Descent {
       const el = this.cardEl(c, colW);
       els.set('card:' + c.id, el);
       // Every card at its own start year, so the year beside it is the year it shows.
-      list.push({ kind: 'card', id: c.id, year: Math.max(START, span(c)[0]), h: 0 });
+      list.push({ kind: 'card', id: c.id, year: Math.max(START, when(c).year), h: 0 });
     }
     // Level 1 is a summary: each era opens with its picture, title and span.
     if (this.level === 1) {
@@ -300,7 +311,7 @@ export class Descent {
           h(
             'div.tx',
             {},
-            h('small', {}, ...vtags(`${ch.id} · ${ch.kicker}`)),
+            h('small', {}, `${chapterLabel(ch.id)} · ${ch.kicker}`),
             h('b', {}, ch.title),
             h('span', {}, pick({ en: `${count(chapterCopy(app.set, app.edition, ch).length, 'card', 'en')} in this era · read the chapter →`, ru: `В этой эпохе ${count(chapterCopy(app.set, app.edition, ch).length, 'card', 'ru')} · читать главу →` })),
           ),
@@ -316,8 +327,12 @@ export class Descent {
     }
     // A stretch is quiet only if nothing at all is placed in it: no card, era panel or movement.
     const placedYears = [...cards, ...(this.level === 1 ? app.chapters.filter((c) => c.years.length) : []), ...MOVEMENTS] as { years: number[] }[];
-    quietStretches(placedYears as Card[]).forEach((q, i) => {
-      const el = h('div.d-quiet', {}, h('span', {}, `${q.from} — ${q.to}`), pick(QUIET[i % QUIET.length]));
+    const stretches = quietStretches(placedYears as Card[]);
+    // The archive is quiet, not empty: a checked fact from inside the stretch speaks for it.
+    const voices = quietFactoids(app.facts.list, stretches);
+    stretches.forEach((q, i) => {
+      const fact = voices[i];
+      const el = h('div.d-quiet', {}, h('span.d-quiet-years', {}, `${q.from} — ${q.to}`), h('p.d-quiet-line', {}, pick(QUIET[i % QUIET.length])), fact ? factoidView(app, fact, { compact: true }) : null);
       els.set('quiet:' + i, el);
       list.push({ kind: 'quiet', id: String(i), year: Math.round((q.from + q.to) / 2), h: 0, from: q.from, to: q.to });
     });
@@ -411,8 +426,8 @@ export class Descent {
         bands.append(
           h(
             'a.d-lane',
-            { href: `#ch=${ch.id}`, 'data-chapter': ch.id, style: `top:${y0}px;height:${Math.max(30, y1 - y0)}px;left:${x}px;--era:${eraColor(ch.id)}`, title: `${ch.id} · ${ch.title} · ${ch.kicker}` },
-            h('span', {}, ...vtags(`${ch.id} · ${ch.title}`)),
+            { href: `#ch=${ch.id}`, 'data-chapter': ch.id, style: `top:${y0}px;height:${Math.max(30, y1 - y0)}px;left:${x}px;--era:${eraColor(ch.id)}`, title: `${chapterLabel(ch.id)} · ${ch.title} · ${ch.kicker}` },
+            h('span', {}, ch.title),
           ),
         );
       });
@@ -519,7 +534,8 @@ export class Descent {
 
   private cardEl(c: Card, w: number): HTMLElement {
     const img = c.media?.find((m) => m.type === 'image');
-    const [a] = span(c);
+    // The year beside a card is the moment its story is about.
+    const a = when(c).year;
     return h(
       `a.dc${img ? '' : '.noimg'}${c.zoom <= 2 ? '.big' : ''}`,
       { href: `#focus=${c.id}`, 'data-card': c.id, style: `width:${w}px;--era:${eraColor(c.era)}` },
@@ -527,9 +543,11 @@ export class Descent {
       h(
         'div.tx',
         {},
-        h('small', {}, c.era ? h('span.era', { title: this.app.chapters.find((x) => x.id === c.era)?.title ?? '' }, c.era) : null, h('b', {}, String(a)), h('i.pl', {}, c.places[0].name), bookMarks(c.books)),
+        h('small', {}, c.era ? h('span.era', { title: `${chapterLabel(c.era)} · ${this.app.chapters.find((x) => x.id === c.era)?.title ?? ''}` }, String(chapterNumber(c.era) ?? '')) : null, h('b', {}, String(a)), h('i.pl', {}, c.places[0].name), bookMarks(c.books)),
         h('strong', {}, c.title),
         h('span.w', {}, c.wow),
+        // On a phone level 5 has no desk beside the column: the card itself opens up.
+        this.level === 5 && this.phone() ? h('span.dc-body', {}, plain(c.body.split(/\n\s*\n/)[0]).replace(/\s*\n\s*/g, ' ')) : null,
         c.years.length > 1 && c.years[1] !== a ? h('em', {}, formatYears(c.years)) : null,
       ),
     );
@@ -556,8 +574,13 @@ export class Descent {
     imgs.forEach((i) => io.observe(i));
   }
 
+  private phone(): boolean {
+    return (this.el.clientWidth || window.innerWidth) < 760;
+  }
+
   /** Level 5: the card under the reading line, laid open on the desk. */
   private updateDesk(): void {
+    if (this.phone()) return void this.desk.replaceChildren();
     const line = this.el.clientHeight * 0.45;
     let best: HTMLElement | undefined;
     let bestD = Infinity;
@@ -569,7 +592,8 @@ export class Descent {
         best = el;
       }
     }
-    const id = best?.dataset.card ?? '';
+    // No card near the reading line (the introduction, say): no empty desk.
+    const id = best && bestD < this.el.clientHeight * 0.35 ? (best.dataset.card ?? '') : '';
     if (id === this.deskId) return;
     this.deskId = id;
     this.track.querySelectorAll('a.dc.desk-on').forEach((e) => e.classList.remove('desk-on'));
@@ -587,15 +611,38 @@ export class Descent {
           {},
           // The full picture straight away: the document is the point of this level.
           img ? h('figure', {}, h('img', { ...mediaSrc(this.app, img.file, [960]), sizes: '(max-width: 760px) 92vw, 36vw', alt: img.caption ?? c.title, decoding: 'async' }), h('figcaption.credit', {}, img.caption ?? '')) : null,
-          h('small', {}, ...vtags(`${c.era ?? ''} · ${formatYears(c.years)} · ${c.places[0].name}`)),
+          h('small', {}, [chapterLabel(c.era), formatYears(c.years), c.places[0].name].filter(Boolean).join(' · ')),
           h('h3', {}, c.title),
           // The hook only when the body does not open with the same words.
           sameStart(c.wow, c.body) ? null : h('p.desk-wow', {}, c.wow),
-          h('div.desk-body', {}, richText(this.app, c.body.split(/\n\s*\n/)[0].replace(/\s*\n\s*/g, ' '))),
+          h('div.desk-body', {}, ...paragraphsOf(c.body).map((p) => h('p', {}, richText(this.app, p)))),
+          ...(this.app.listen.cards[c.id] ?? []).slice(0, 1).map((r) => listenBlock(r, { compact: true })),
         ),
         h('div.desk-foot', {}, h('a.btn', { href: `#focus=${c.id}`, 'data-card': c.id }, pick({ en: 'Open the card →', ru: 'Открыть карточку →' }))),
       ),
     );
+    this.watchClip();
+  }
+
+  /**
+   * A desk text taller than its panel fades out at the bottom edge instead of
+   * being cut mid-line, and the button below says there is more to read.
+   */
+  private watchClip(): void {
+    const scroll = this.desk.querySelector<HTMLElement>('.desk-scroll');
+    const btn = this.desk.querySelector<HTMLElement>('.desk-foot .btn');
+    if (!scroll || !btn) return;
+    const paint = () => {
+      const clipped = scroll.scrollHeight - scroll.clientHeight > 4;
+      const atEnd = scroll.scrollTop + scroll.clientHeight >= scroll.scrollHeight - 4;
+      scroll.classList.toggle('clipped', clipped && !atEnd);
+      btn.textContent = clipped ? pick({ en: 'Read more →', ru: 'Читать дальше →' }) : pick({ en: 'Open the card →', ru: 'Открыть карточку →' });
+    };
+    scroll.addEventListener('scroll', paint, { passive: true });
+    requestAnimationFrame(paint);
+    // Pictures and fonts settle after the first frame.
+    scroll.querySelectorAll('img').forEach((i) => i.addEventListener('load', paint, { once: true }));
+    setTimeout(paint, 600);
   }
 
   private reveal(): void {

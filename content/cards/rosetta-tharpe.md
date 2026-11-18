@@ -9,6 +9,7 @@ places:
   - {name: "Macon, Georgia", lat: 32.8407, lon: -83.6324}
   - {name: "Wilbraham Road station, Manchester", lat: 53.4475, lon: -2.2752}
 zoom: 4
+moment: {year: 1938}
 era: v6
 books: [heirs]
 genres: [gospel, rock-n-roll]
@@ -28,4 +29,8 @@ sources:
 media:
   - {type: "image", file: "rosetta-tharpe.jpg", caption: "Sister Rosetta Tharpe with her guitar, publicity photograph, 1938", credit: "James J. Kriegsmann", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Sister_Rosetta_Tharpe_(1938_publicity_photo_with_guitar).jpg"}
 ---
-Rock and roll's godmother was a Pentecostal gospel singer with a guitar. In the fall of 1938 she walked onto the stage of the Cotton Club in Manhattan, and that year she made her first Decca records, among them "Rock Me". With Sammy Price she released "Strange Things Happening Every Day", a number two on the "race" chart, dated 1944 by PBS and 1945 by NPR. In 1964, at a disused Manchester railway station, she played electric guitar for television. She died in 1973, and her Philadelphia grave stayed unmarked until fans paid for a stone, placed in 2009 by most accounts. In 2018 the Rock & Roll Hall of Fame inducted her for musical influence. See [[gospel|gospel]], [[rock-n-roll|rock and roll]] and [[big-mama-thornton|Willie Mae "Big Mama" Thornton]].
+Sister Rosetta Tharpe, born in 1915 in Cotton Plant, Arkansas, was a Pentecostal [[gospel|gospel]] singer and guitarist whom [[rock-n-roll|rock and roll]] later called its godmother. As a child she performed beside her mother, an evangelist.
+
+In the fall of 1938 she walked onto the stage of the Cotton Club in Manhattan, and that year she made her first Decca records, among them "Rock Me", and sang at John Hammond's From Spirituals to Swing concert at Carnegie Hall. With Sammy Price she released "Strange Things Happening Every Day", a number two on the "race" chart. In 1951 she married for the third time before a sold-out baseball stadium in Washington, playing electric guitar from the outfield.
+
+In 1964 she toured Britain with the American Folk, Blues and Gospel Caravan, beside Muddy Waters, and at a disused Manchester railway station she played electric guitar for British television. After a stroke in 1970 she lost a leg, and she died in Philadelphia in 1973. Her grave there stayed unmarked until fans paid for a stone. In 2018 the Rock & Roll Hall of Fame inducted her for musical influence.

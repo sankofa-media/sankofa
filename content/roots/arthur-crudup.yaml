@@ -8,14 +8,37 @@ placeRu: "Форест, Миссисипи"
 genre: "Blues"
 genreRu: "блюз"
 links:
-  - to: "card:gospel"
-    kind: "influence"
-    claim: "Arthur Crudup developed his musical skills through gospel singing before his blues recording career."
-    claimRu: "До начала карьеры блюзового исполнителя на пластинках Артур Крадап развивал своё музыкальное мастерство, исполняя госпел."
-    sources:
-      - title: "Mississippi Blues Trail: Arthur Big Boy Crudup"
-        url: "https://visitmississippi.org/things-to-do/blues-trail/mississippi-blues-trail-arthur-big-boy-crudup/"
-      - title: "Virginia General Assembly: Arthur William Crudup commemoration (2023)"
-        url: "https://legacylis.virginia.gov/cgi-bin/legp604.exe?231+ful+HJ672ER+pdf="
-story: "Arthur Crudup developed his musical skills through gospel singing. That apprenticeship preceded his blues recording career."
-storyRu: "Артур Крадап развивал своё музыкальное мастерство, исполняя госпел. Эта школа предшествовала его карьере блюзового исполнителя на пластинках."
+  - to: "card:blues"
+    kind: "style"
+    how: "A self-taught Mississippi bluesman, Crudup worked squarely in the blues: a soulful voice, his own memorable lyrics and a distinctive sound that made him one of the best-selling blues artists of the 1940s."
+    howRu: "Самоучка из Миссисипи, Крадап работал в самой сердцевине блюза: проникновенный голос, запоминающиеся собственные тексты и узнаваемое звучание сделали его одним из самых продаваемых блюзменов 1940-х."
+    carries: []
+    dimensions: ["melody-vocal", "sound", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "melody-vocal"]
+        text: "The Mississippi Blues Trail marker credits his unique sound and memorable lyrics with winning over record buyers in the 1940s."
+        textRu: "Мемориальная доска «Блюзового пути Миссисипи» объясняет его успех у покупателей пластинок 1940-х узнаваемым звучанием и запоминающимися текстами."
+        source:
+          title: "Visit Mississippi: Mississippi Blues Trail — Arthur “Big Boy” Crudup"
+          url: "https://visitmississippi.org/things-to-do/blues-trail/mississippi-blues-trail-arthur-big-boy-crudup/"
+          quote: "unique sound and memorable lyrics"
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The Virginia General Assembly’s commemoration names him a bluesman, singer and guitarist whose soulful voice inspired other musicians."
+        textRu: "Резолюция Генеральной ассамблеи Виргинии называет его блюзменом, певцом и гитаристом, чей проникновенный голос вдохновлял других музыкантов."
+        source:
+          title: "Virginia General Assembly: House Joint Resolution 672, Arthur William Crudup (2023)"
+          url: "https://legacylis.virginia.gov/cgi-bin/legp604.exe?231+ful+HJ672ER+pdf="
+          quote: "soulful voice"
+      - type: "critics"
+        dimensions: ["performance"]
+        text: "AP recounts that he was self-taught and played parties and nightclubs in the Mississippi Delta."
+        textRu: "AP рассказывает, что он был самоучкой и играл на вечеринках и в ночных клубах дельты Миссисипи."
+        source:
+          title: "Associated Press (Ben Finley), via Chicago Sun-Times (2024)"
+          url: "https://chicago.suntimes.com/music/2024/07/05/bluesman-arthur-crudup-wrote-thats-all-right-elvis-first-hit-song-but-he-barely-got-paid-for-it"
+          quote: "Self-taught, he played parties and nightclubs in the Mississippi Delta."
+    scope: "career"
+story: "Arthur Crudup was a self-taught Mississippi bluesman. His soulful voice, memorable lyrics and distinctive sound made him one of the best-selling blues artists of the 1940s."
+storyRu: "Артур Крадап — блюзмен-самоучка из Миссисипи. Проникновенный голос, запоминающиеся тексты и узнаваемое звучание сделали его одним из самых продаваемых блюзменов 1940-х."

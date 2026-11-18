@@ -3,11 +3,11 @@ id: marvin-gaye
 name: Marvin Gaye
 nameRu: Марвин Гэй
 aliases:
-- марвин гэй
-- марвин гей
+  - марвин гэй
+  - марвин гей
 years:
-- 1939
-- 1984
+  - 1939
+  - 1984
 place:
   name: Washington, D.C.
   lat: 38.9072
@@ -15,17 +15,70 @@ place:
 placeRu: "Вашингтон, округ Колумбия"
 genre: Soul
 genreRu: соул
+story: "After gospel, Marvin Gaye’s formative music was doo-wop: he sang in Washington vocal groups and with the Moonglows before his straight rhythm-and-blues hits at Motown. His honeyed tenor then carried soul into concept albums about sexuality and social issues, from What’s Going On onwards."
+storyRu: "После госпела главной школой Марвина Гэя стал ду-воп: он пел в вашингтонских вокальных группах и с Moonglows, прежде чем записать на Motown свои чистые ритм-н-блюзовые хиты. Затем его медовый тенор перенёс соул в концептуальные альбомы о чувственности и общественных проблемах — начиная с «What’s Going On»."
 links:
-- to: card:gospel
-  kind: scene
-  claim: Marvin Gaye developed his singing as a child in his father’s church.
-  claimRu: Марвин Гэй развивал свой певческий дар ещё ребёнком в церкви отца.
-  sources:
-  - title: 'Marvin Gaye: official biography'
-    url: https://www.marvingaye.net/about/
-  - title: 'Record Mirror: This stubborn man called Marvin Gaye, January 4, 1964'
-    url: https://www.worldradiohistory.com/UK/Record-Mirror/60s/64/Record-Mirror-1964-01-04-S-OCR.pdf
-story: Marvin Gaye’s singing began developing in childhood. His father’s church was
-  its early setting.
-storyRu: Певческий дар Марвина Гэя начал развиваться ещё в детстве. Первой его средой
-  стала церковь отца.
+  - to: "card:rhythm-and-blues"
+    kind: "style"
+    how: "Gaye’s style formed in doo-wop vocal-group singing — harmony groups that played to the rhythm-and-blues crowd — and his first Motown hits were straight R&B."
+    howRu: "Стиль Гэя сложился в ду-вопе — в пении вокальных групп, выступавших перед ритм-н-блюзовой публикой, — а его первые хиты на Motown были чистым ритм-н-блюзом."
+    carries: []
+    dimensions: ["melody-vocal", "performance"]
+    scope: "career"
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "In his official biography Gaye says doo-wop was his big influence after gospel and names his favourite solo singers, among them Clyde McPhatter and Ray Charles."
+        textRu: "В официальной биографии Гэй говорит, что после госпела сильнее всего на него повлиял ду-воп, и называет любимых солистов, среди них Клайда Макфаттера и Рэя Чарльза."
+        source:
+          title: "Marvin Gaye official site: About (biography)"
+          url: "https://www.marvingaye.net/about/"
+          quote: "“After gospel, my big influence was doo wop,” the singer explained. “My four favorite solo singers were Rudy West, Clyde McPhatter, Little Willie John and Ray Charles.”"
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The same biography calls his 1963 breakthrough “Stubborn Kind of Fellow” straight-up R&B."
+        textRu: "Та же биография называет его прорыв 1963 года «Stubborn Kind of Fellow» чистым ритм-н-блюзом."
+        source:
+          title: "Marvin Gaye official site: About (biography)"
+          url: "https://www.marvingaye.net/about/"
+          quote: "That came in in 1963 with “Stubborn Kind of Fellow.” The song was straight-up R&B"
+      - type: "critics"
+        dimensions: ["performance"]
+        text: "A reference biography notes that his vocal group the Marquees won a following among rhythm-and-blues audiences before Harvey Fuqua made them the Moonglows."
+        textRu: "Справочная биография отмечает, что его вокальная группа Marquees завоевала публику ритм-н-блюза, прежде чем Харви Фукуа превратил её в Moonglows."
+        source:
+          title: "Encyclopedia.com (Gale biography): Marvin Gaye"
+          url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/marvin-gaye"
+          quote: "The Marquees made several recordings and attracted a following among the rhythm and blues crowd."
+      - type: "critics"
+        dimensions: ["performance"]
+        text: "Another reference entry says that after the Air Force he sang around Washington in several doo-wop groups."
+        textRu: "Другая справочная статья пишет, что после службы в ВВС он пел в Вашингтоне в нескольких ду-воп-группах."
+        source:
+          title: "Encyclopedia.com (Scribner Encyclopedia of American Lives): Gaye, Marvin"
+          url: "https://www.encyclopedia.com/media/encyclopedias-almanacs-transcripts-and-maps/gaye-marvin-1959-1984"
+          quote: "sang around town in a number of Doo-Wop groups"
+  - to: "style:soul"
+    kind: "style"
+    how: "Gaye was a soul singer of the Motown era whose honeyed tenor moved from pop-soul hits to long concept albums carrying sexual passion and social consciousness."
+    howRu: "Гэй — соул-певец эпохи Motown, чей медовый тенор прошёл путь от поп-соуловых хитов до больших концептуальных альбомов, полных чувственной страсти и гражданской сознательности."
+    carries: []
+    dimensions: ["melody-vocal", "harmony-form", "image"]
+    scope: "career"
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal", "harmony-form", "image"]
+        text: "The Rock & Roll Hall of Fame describes his singing as nurturing the soul and his honeyed tenor exploring sexuality and social issues on sprawling concept albums."
+        textRu: "Зал славы рок-н-ролла пишет, что его пение питало душу, а медовый тенор исследовал чувственность и общественные темы в масштабных концептуальных альбомах."
+        source:
+          title: "Rock & Roll Hall of Fame: Marvin Gaye"
+          url: "https://rockhall.com/inductees/marvin-gaye/"
+          quote: "He used his honeyed tenor to explore sexuality and social issues on such sprawling concept albums as the intensely exploratory What’s Going On."
+      - type: "critics"
+        dimensions: ["image"]
+        text: "A reference biography calls him one of the best-selling soul artists of his generation, whose work ranged from sexual passion to social consciousness."
+        textRu: "Справочная биография называет его одним из самых продаваемых соул-артистов поколения, в чьём творчестве было всё — от чувственной страсти до гражданской сознательности."
+        source:
+          title: "Encyclopedia.com (Contemporary Black Biography): Marvin Gaye"
+          url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/marvin-gaye"
+          quote: "Marvin Gaye was one of the best-selling soul artists of his generation, a Motown prodigy whose work displayed everything from sexual passion to social consciousness."

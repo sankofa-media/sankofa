@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildTree, chainLine, deepest, endCards, extendLineage, fold, foldRun, longestRoots, searchArtists, suggestions, type Artist } from '../src/lib/roots';
+import { buildTree, chainLine, deepest, endCards, extendLineage, fold, linkSources, linkTo, longestRoots, searchArtists, styleStations, suggestions, type Artist } from '../src/lib/roots';
 
 const link = (to: string) => ({ to, claim: `to ${to}`, sources: [{ title: 'a', url: 'https://a' }, { title: 'b', url: 'https://b' }] });
 const art = (id: string, name: string, links: string[], paths: string[][], extra: Partial<Artist> = {}): Artist => ({
@@ -77,11 +77,6 @@ describe('deep roots', () => {
     expect(rr.children.every((c) => c.lineage)).toBe(true);
   });
 
-  it('folds long runs of single steps', () => {
-    expect(foldRun(3)).toEqual({ show: 3, hide: 0 });
-    expect(foldRun(6)).toEqual({ show: 2, hide: 4 });
-  });
-
   it('puts the deepest chains and named borrowings first', () => {
     const withSample = [...all];
     withSample[2] = { ...withSample[2], links: [{ ...withSample[2].links[0], kind: 'sample', what: 'the handclaps of X' }] };
@@ -118,15 +113,51 @@ describe('new kinds', () => {
   });
 });
 
-import { groupChildren, quotes } from '../src/lib/roots';
+import { quotes } from '../src/lib/roots';
 describe('telling each fact once', () => {
   it('uses each language’s quotation marks', () => {
     expect(quotes('sampled "Stratus" in \'Safe from Harm\'', 'en')).toBe('sampled “Stratus” in “Safe from Harm”');
     expect(quotes('записали “Stratus” и "Safe from Harm"', 'ru')).toBe('записали «Stratus» и «Safe from Harm»');
   });
-  it('groups two links that tell the same borrowing', () => {
-    const l = { to: 'x', kind: 'sample' as const, what: 'the groove of Stratus', claim: 'c', sources: [] };
-    const n = { ref: 'ma', weight: 2, children: [{ ref: 'card:jazz', link: { ...l, to: 'card:jazz' }, children: [], weight: 1 }, { ref: 'cobham', link: { ...l, to: 'root:cobham' }, children: [], weight: 1 }] };
-    expect(groupChildren(n).map((g) => g.map((c) => c.ref))).toEqual([['card:jazz', 'cobham']]);
+});
+
+import { recordingFor, type ListenFile } from '../src/lib/listen';
+
+describe('recordings along a route', () => {
+  it('finds each stop’s recording, and none where there is none', () => {
+    const rec = { source: 'youtube' as const, kind: 'official' as const, youtube: 'HrrWhCbZAyY', title: 't' };
+    const data: ListenFile = { version: 1, cards: { blues: [rec] }, roots: { sabbath: [rec] } };
+    expect(recordingFor(data, 'card:blues')).toBe(rec);
+    expect(recordingFor(data, 'sabbath')).toBe(rec);
+    expect(recordingFor(data, 'metallica')).toBeUndefined();
+  });
+});
+
+describe('styles as stations', () => {
+  const evidence = [
+    { type: 'testimony' as const, dimensions: ['rhythm' as const], text: 'They say so.', source: { title: 'a', url: 'https://a', quote: 'q' } },
+    { type: 'critics' as const, dimensions: ['sound' as const], text: 'Critics heard it.', source: { title: 'b', url: 'https://b', quote: 'q' } },
+  ];
+  const stations = styleStations([
+    { id: 'british-beat', name: 'British beat', years: [1962], place: 'Liverpool', traits: [{ en: 'backbeat' }], sources: [], from: [{ to: 'card:rock-n-roll', kind: 'style', how: 'h', evidence }] },
+  ]);
+  const oasis = art('oasis', 'Oasis', [], [['oasis', 'style:british-beat', 'card:rock-n-roll']], { links: [{ to: 'style:british-beat', kind: 'style', how: 'h', evidence }] });
+
+  it('turn styles into stations keyed style:<id>, whose links are their parents', () => {
+    expect(stations[0].id).toBe('style:british-beat');
+    expect(stations[0].style).toBe(true);
+    expect(linkTo(oasis, 'style:british-beat')?.kind).toBe('style');
+    expect(linkTo(stations[0], 'card:rock-n-roll')?.how).toBe('h');
+  });
+
+  it('build a tree through a style station', () => {
+    const byId = new Map([oasis, ...stations].map((a) => [a.id, a]));
+    const tree = buildTree(oasis, byId);
+    expect(tree.children[0].ref).toBe('style:british-beat');
+    expect(tree.children[0].children[0].link?.how).toBe('h');
+  });
+
+  it('list every source of a link once, from its evidence', () => {
+    expect(linkSources(oasis.links[0]).map((s) => s.url)).toEqual(['https://a', 'https://b']);
   });
 });

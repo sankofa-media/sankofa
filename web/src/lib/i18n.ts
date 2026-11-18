@@ -180,10 +180,6 @@ export const RU: Record<string, string> = {
 
   // card panel
   'Contested.': 'Об этом спорят.',
-  'From the other copy.': 'Из другого экземпляра.',
-  "You hold the {edition}; this page reached you through another reader's path.": 'У вас в руках {edition}; эта страница пришла к вам по пути другого читателя.',
-  'Its counterpart in your copy is': 'Её пара в вашем экземпляре —',
-  'Only in the {edition}.': 'Только в {edition}.',
   'Go further': 'Куда смотреть дальше',
   'Cards that lead here': 'Сюда ведут',
   'Show on the atlas': 'Показать на атласе',
@@ -192,8 +188,8 @@ export const RU: Record<string, string> = {
   Sources: 'Источники',
   'Your book · {edition}': 'Ваша книга · {edition}',
   'The path you walked': 'Пройденный путь',
-  'Every card you open is written into your own book, here in your browser and nowhere else. Share it and another reader walks the same road, including pages their copy does not have.':
-    'Каждая открытая карточка вписывается в вашу собственную книгу — здесь, в браузере, и больше нигде. Поделитесь ею, и другой читатель пройдёт той же дорогой, включая страницы, которых нет в его экземпляре.',
+  'Every card you open is written into your own book, here in your browser and nowhere else. Share it and another reader walks the same road, whichever copy they hold.':
+    'Каждая открытая карточка вписывается в вашу собственную книгу — здесь, в браузере, и больше нигде. Поделитесь ею, и другой читатель пройдёт той же дорогой, какой бы экземпляр ни был у него в руках.',
   'Open a card and it is written into your own book. Nothing leaves your browser until you share it.':
     'Откройте карточку — и она впишется в вашу книгу. Ничто не покинет браузер, пока вы сами не поделитесь.',
   'Share my path': 'Поделиться путём',
@@ -299,4 +295,15 @@ const CREDIT_RU: [RegExp, string][] = [
 export function localizeCredit(s: string, l: Lang = current): string {
   if (l !== 'ru' || !s) return s;
   return CREDIT_RU.reduce((acc, [re, to]) => acc.replace(re, to), s);
+}
+
+/** The reader's name for a chapter: v0 → "Chapter 1" / «Глава 1». Internal ids never show. */
+export function chapterNumber(id?: string): number | undefined {
+  const m = id?.match(/^v(\d+)$/);
+  return m ? Number(m[1]) + 1 : undefined;
+}
+
+export function chapterLabel(id?: string, l: Lang = current): string {
+  const n = chapterNumber(id);
+  return n ? (l === 'ru' ? `Глава ${n}` : `Chapter ${n}`) : '';
 }

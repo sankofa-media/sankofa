@@ -2,11 +2,11 @@ id: albert-ayler
 name: Albert Ayler
 nameRu: Альберт Эйлер
 aliases:
-- альберт эйлер
-- альберт айлер
+  - альберт эйлер
+  - альберт айлер
 years:
-- 1936
-- 1970
+  - 1936
+  - 1970
 place:
   name: "Cleveland, Ohio"
   lat: 41.4993
@@ -14,15 +14,54 @@ place:
 placeRu: "Кливленд, Огайо"
 genre: Free jazz
 genreRu: фри-джаз
-story: Albert Ayler carried the melodic language of spirituals into his improvisations. Even his free playing retained that connection to song.
-storyRu: Альберт Эйлер перенёс мелодический язык спиричуэлс в свои импровизации. Даже в свободной игре он сохранял эту связь с песней.
+story: "Albert Ayler’s tenor roared and shrieked past chords and notes into pure sound, stretching time and pitch in free collective improvisation. Yet his solos took off from ditty-like themes with the candor of spirituals, marches and gospel shouts, played with a gospel saxophonist’s wide, voice-like vibrato."
+storyRu: "Тенор Альберта Эйлера ревел и визжал, прорываясь сквозь аккорды и ноты к чистому звуку, растягивая время и высоту звука в свободной коллективной импровизации. Но его соло отталкивались от простых, как песенка, тем, бесхитростных, как спиричуэлс, марши и госпельные выкрики, и звучали с широким, похожим на человеческий голос вибрато госпельного саксофониста."
 links:
-- to: card:spirituals
-  kind: influence
-  claim: Albert Ayler’s improvisations drew on melodies shaped by spirituals.
-  claimRu: В импровизациях Альберта Эйлера звучали мелодии, восходившие к спиричуэлс.
-  sources:
-  - title: 'Kevin Whitehead: Albert Ayler — Testifying the Breaking Point, Fresh Air/TPR'
-    url: https://www.tpr.org/2001-05-07/albert-ayler-testifying-the-breaking-point
-  - title: 'Richard Brody: The Jubilant Glory of Albert Ayler’s Revelations — The New Yorker'
-    url: https://www.newyorker.com/culture/the-front-row/the-jubilant-glory-of-albert-aylers-revelations
+  - to: "style:free-jazz"
+    kind: "style"
+    scope: "career"
+    how: "Ayler played free jazz at its most extreme: improvisations that shredded chords and notes for pure sound, time and pitch stretched to the breaking point, and collective improvisation of several horns at once."
+    howRu: "Эйлер играл фри-джаз в его самом крайнем виде: импровизации, разрывающие аккорды и ноты ради чистого звука, время и высота звука, растянутые до предела, и коллективная импровизация нескольких духовых сразу."
+    carries: ["improvisation"]
+    dimensions: ["sound", "rhythm", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "performance"]
+        text: "Richard Brody describes Ayler’s improvisations reaching for pure sound and his groups’ collective improvisations."
+        textRu: "Ричард Броуди описывает, как импровизации Эйлера рвались к чистому звуку и как его ансамбли импровизировали коллективно."
+        source:
+          title: "The New Yorker (Richard Brody): The Jubilant Glory of Albert Ayler’s “Revelations”"
+          url: "https://www.newyorker.com/culture/the-front-row/the-jubilant-glory-of-albert-aylers-revelations"
+          quote: "Throughout his career, Ayler’s improvisations, mostly on tenor sax, roared and shrieked and shredded the very notion of chords and notes to reach a realm of pure sound."
+      - type: "critics"
+        dimensions: ["rhythm", "sound"]
+        text: "Kevin Whitehead hears him stretch tempo, pitch and the saxophone’s sound itself."
+        textRu: "Кевин Уайтхед слышит, как он растягивает темп, высоту и сам звук саксофона."
+        source:
+          title: "Texas Public Radio / NPR (Kevin Whitehead): Albert Ayler — Testifying the Breaking Point (2001)"
+          url: "https://www.tpr.org/2001-05-07/albert-ayler-testifying-the-breaking-point"
+          quote: "Ayler also liked slow-drag tempos, but he'd stretch time even further. He stretched everything: time, pitch, and the very fabric of a saxophone's sound."
+  - to: "card:spirituals"
+    kind: "influence"
+    scope: "career"
+    how: "Ayler’s themes had the plain melodic candor of spirituals, marches and gospel shouts, and he played them with the wide, voice-like vibrato of gospel saxophonists."
+    howRu: "В темах Эйлера была бесхитростная мелодическая простота спиричуэлс, маршей и госпельных выкриков, а играл он их с широким, похожим на голос вибрато госпельных саксофонистов."
+    carries: ["gospel-vocal"]
+    dimensions: ["melody-vocal", "sound"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Brody hears in Ayler’s compositions the melodic candor of spirituals, marches, gospel shouts and folk songs."
+        textRu: "Броуди слышит в сочинениях Эйлера мелодическую простоту спиричуэлс, маршей, госпельных выкриков и народных песен."
+        source:
+          title: "The New Yorker (Richard Brody): The Jubilant Glory of Albert Ayler’s “Revelations”"
+          url: "https://www.newyorker.com/culture/the-front-row/the-jubilant-glory-of-albert-aylers-revelations"
+          quote: "But he never dispensed with melody; his wildest expatiations took off from his compositions, often brief and ditty-like, that had the overt, ingenuous, melodic candor of spirituals and marches, gospel shouts and folk songs."
+      - type: "critics"
+        dimensions: ["sound", "melody-vocal"]
+        text: "Whitehead traces Ayler’s exaggerated vibrato to gospel saxophonists and his folksy tunes to church music."
+        textRu: "Уайтхед выводит преувеличенное вибрато Эйлера из манеры госпельных саксофонистов, а его простонародные мелодии — из церковной музыки."
+        source:
+          title: "Texas Public Radio / NPR (Kevin Whitehead): Albert Ayler — Testifying the Breaking Point (2001)"
+          url: "https://www.tpr.org/2001-05-07/albert-ayler-testifying-the-breaking-point"
+          quote: "Gospel saxophonists typically use a wide vibrato to make their sound more voice-like and unworldly. Ayler took that lesson to heart."

@@ -9,11 +9,13 @@ Cards live in `content/cards/<id>.md` (English, primary). Translations sit next 
 id: bridgetower
 kind: person            # person genre place object language script instrument event media work myth comparison
 title: George Bridgetower
+# label: "Slav → slave"  # optional: the name on the atlas map, when the title cut at its first comma or colon would mislead
 wow: Beethoven's most famous violin sonata was written for him, not for Kreutzer.
 years: [1778, 1860]     # [from] or [from, to]
 places:                 # first place is the main atlas point
   - {name: Vienna, lat: 48.2082, lon: 16.3738}
 zoom: 4                 # 1 centuries/Atlantic, 2 regions, 3 cities and genres, 4 people, 5 a single document or recording
+moment: {year: 1802}    # optional: the year the story is about and `place:` (index into places, default 0), when not years[0] at places[0]; within 10 years of `years`
 era: v5                 # v0 Africa before, v1 Middle Passage, v2 resistance, v3 voices, v4 diaspora, v5 Harlem/Négritude (and earlier Europe), v6 civil rights, v7 Afrofuturism
 books: [heirs]          # voices (their own words), archives (records of those who traded and ruled), heirs (diaspora, memory, art)
 edition: both           # both | m | f ; m/f cards come in pairs sharing `pair`
@@ -26,7 +28,7 @@ media:                  # optional, public domain or open licence only
   - {type: image, file: bridgetower.jpg, caption: "...", credit: "...", license: "Public domain", url: "https://commons.wikimedia.org/..."}
 dispute: ""             # set when a claim is contested; say what is disputed
 ---
-The body: 40–140 words, a story, not a reference. Cross-references are
+The body: up to 320 words (340 for genre, instrument, script and language cards), counted per copy; a complete short story, not a reference. Cross-references are
 written [[zong]] or [[zong|the Zong massacre]] and must point to existing cards.
 ```
 
@@ -37,6 +39,8 @@ Rules:
 - Admiration, not stigma: start from what the person made or did. Do not hide uncomfortable topics either.
 - No generalising: every card has a place and a time.
 - `sankofa content lint content/` must pass.
+- A paragraph of the body (or of a chapter) that starts with `{male} ` or `{female} ` is read only in that copy of the museum; unmarked paragraphs are read in both. A translation must mark the same paragraphs.
+- Both copies hold the whole dictionary: every card, `edition: m` and `f` included, is on the atlas, in the countries, the index and the search of either copy, and a link opens exactly the card it names. The copies differ in content: `{male}`/`{female}` paragraphs, and pairs. A pair (one `m` and one `f` card sharing `pair`) decides which of the two stories a chapter tells in each copy; each card of a pair names the other one.
 
 # Chapter format
 
@@ -53,8 +57,16 @@ places: [{name: Atlantic Ocean, lat: 10, lon: -30}]
 cards: [equiano, zong, slavevoyages-names]   # the cards the chapter walks through, in order
 ---
 Chapter text: short paragraphs, separated by blank lines. Each paragraph is one
-scroll step. Use [[card-id]] links like in cards. 150–400 words in total.
+scroll step. Use [[card-id]] links like in cards. A step is at most 80 words (it must fit its box on a phone); each copy reads 6–14 steps.
+
+{at Ouidah · 1860} A paragraph may open (after any {male}/{female} marker) with
+the label its step shows: the place and the year the paragraph itself is about,
+or a century or period when it gives no year. Label every paragraph or none.
 ```
+
+Labels are short place names ("Detroit · 1991", "Benin City · 16th century"), never an
+institution or an address. A translation carries its own label on the same paragraphs
+(`{at Уида · 1860}`).
 
 Media files for cards and chapters live in `content/media/`.
 
@@ -70,6 +82,7 @@ Media files for cards and chapters live in `content/media/`.
 ```markdown
 ---
 title: Джордж Бриджтауэр
+# label: "Славянин → раб"           # only when the card has a label
 wow: Самую знаменитую скрипичную сонату Бетховена написали для него, а не для Крейцера.
 places: ["Вена", "Лондон"]          # same order as the card's places
 further: ["Бетховен, Соната для скрипки № 9 ля мажор, соч. 47"]   # same order
@@ -93,4 +106,37 @@ Genres, instruments, scripts and languages (`kind: genre | instrument | script |
 must first explain what the thing is — how it sounds or works, where and when it
 arose, what it was for, its main forms and names — and only then tell the story
 that makes it memorable, and finally where it came from and what grew out of it.
-Up to 235 words.
+Up to 340 words.
+
+# Countries
+
+The atlas's "Countries" mode groups cards by present-day country. Nothing is
+written on the card: `web/scripts/build-countries.ts` assigns every place in
+`places` to the Natural Earth 1:50m admin-0 country it lies in (public domain,
+from the `world-atlas` package the map already draws), with an offline
+point-in-polygon test. A place within 30 km of a coast counts for that coast's
+country (harbours and small islands the coarse outline misses); a place at sea,
+at a pole or in Antarctica counts for none.
+
+- A card counts for **every** country one of its places lies in, not only the
+  main one: Josephine Bakhita belongs to both Sudan and Italy. The country list
+  marks which of the card's places lie in that country; the main place
+  (`places[0]`) is the card's home on the map as before.
+- Overseas departments and territories follow Natural Earth: Guadeloupe and
+  Martinique count with France, Puerto Rico, Bermuda or Curaçao are their own entries.
+- Territories whose status is disputed (Crimea, Jerusalem) are listed under no
+  state: they are entries of their own with `disputed: true`, the atlas says their
+  status is disputed and paints them in no state's colour; `areas` in
+  `content/countries.yaml` draws their boxes.
+- When the outline puts a border town on the wrong side, or a place names a
+  region rather than a point ("West and Central Africa"), add an entry to
+  `overrides` in `content/countries.yaml`: `{card, place, country}` with the
+  place's English name exactly as on the card and a country id or `none`.
+  Card front matter stays unchanged, so translations and the linter are not affected.
+- Every country that receives a card needs an entry in `content/countries.yaml`
+  with `name.en` and `name.ru` (standard Russian usage), or the build fails. The
+  optional `about` header (1–3 sentences, English and Russian) names the
+  communities and cultures that formed there and the historical states on its
+  territory; every fact in it has two independent sources with a verbatim quote
+  in `content/ledger/countries.yaml`. Without a sourced header the country shows
+  only its name and card count.

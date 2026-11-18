@@ -1,0 +1,663 @@
+# Second, independent check (2026-11-14) of content/ledger/expand-c05.yaml.
+# Every cited URL was re-downloaded and every ledger quote was matched against the
+# fetched text (openedition.org blocks bots: Wion's two articles were read via
+# web.archive.org snapshots of 2025-12-11 and 2026-04-12; Minneapolis Institute of
+# Art labels via search.artsmia.org/id/<n>).
+# verdict: confirmed | corrected (card wording or sources changed) |
+#          refuted | unconfirmed (removed from the card).
+# Independence rulings used throughout:
+#  - BBC News articles of 2005 and 2008 = one source (same publisher).
+#  - Pletser (2012) and Pletser & Huylebrouck (2016) = one source (same authors); Keller is independent of them.
+#  - Art Institute of Chicago labels = one source; Cleveland, Minneapolis, Palmer (Penn State) and Carlos (Emory) are each independent.
+#  - DACB articles by Thornton and by Brockman = one source (same publisher); Hendrickx (Pharos) is independent.
+#  - Internazionale (Franchin) summarises Jonathan Egid's Aeon essay, so it is not independent of Cantor & Egid; it is treated as independent of Herbjørnsrud (different author and argument).
+#  - Encyclopedia of World Biography (Gale) entry on Amina is weak (calls Hausaland "north Africa", garbles "Bellow"); used only where a second independent source agrees.
+entries:
+# ---------------- ishango-bone ----------------
+- card: ishango-bone
+  fact: "Bone handle about ten centimetres long"
+  verdict: confirmed
+  sources:
+    - {title: "Keller, The fables of Ishango (BibNum 2010)", url: "http://www.bibnum.education.fr/sites/default/files/ishango-analysis_v2.pdf", quote: "Placed lengthwise (10 cm)"}
+    - {title: "Pletser, arXiv:1204.1019", url: "https://arxiv.org/pdf/1204.1019", quote: "The Ishango bone is a 10-cm long curved bone"}
+  note: ""
+- card: ishango-bone
+  fact: "Found at Ishango, east DR Congo, near the Uganda border"
+  verdict: confirmed
+  sources:
+    - {title: "Keller (2010)", url: "http://www.bibnum.education.fr/sites/default/files/ishango-analysis_v2.pdf", quote: "close to the border with Uganda"}
+    - {title: "Pletser (2012)", url: "https://arxiv.org/pdf/1204.1019", quote: "not far from the present border between Congo and Uganda"}
+  note: ""
+- card: ishango-bone
+  fact: "Found by Jean de Heinzelin in the 1950s"
+  verdict: confirmed
+  sources:
+    - {title: "Keller (2010)", url: "http://www.bibnum.education.fr/sites/default/files/ishango-analysis_v2.pdf", quote: "Discovered in 1957 by the Belgian archaeologist Jean de Heinzelin"}
+    - {title: "Pletser & Huylebrouck (2016)", url: "https://arxiv.org/pdf/1607.00860.pdf", quote: "discovered by archaeologist Jean de Heinzelin in the late 1950s"}
+  note: "Pletser 2012 says 'in the early fifties'; the decade is consistent, the exact year is not, so the card keeps 'the 1950s'."
+- card: ishango-bone
+  fact: "Dated to more than 20,000 years ago"
+  verdict: corrected
+  sources:
+    - {title: "Keller (2010)", url: "http://www.bibnum.education.fr/sites/default/files/ishango-analysis_v2.pdf", quote: "It is usually dated to 20,000 years BCE"}
+    - {title: "Pletser & Huylebrouck (2016)", url: "https://arxiv.org/pdf/1607.00860.pdf", quote: "The accepted dating is of 22,000 years"}
+  note: "The two figures agree (20,000 BCE = about 22,000 years ago); the dispute line wrongly presented them as alternatives and was rewritten."
+- card: ishango-bone
+  fact: "A quartz fragment in one end shows it was a tool handle"
+  verdict: confirmed
+  sources:
+    - {title: "Keller (2010)", url: "http://www.bibnum.education.fr/sites/default/files/ishango-analysis_v2.pdf", quote: "A fragment of quartz affixed to one end shows that it was a tool handle"}
+    - {title: "Pletser (2012)", url: "https://arxiv.org/pdf/1204.1019", quote: "encased in its narrower (top) extremity a fragment of quartz"}
+  note: ""
+- card: ishango-bone
+  fact: "Three columns of grouped notches"
+  verdict: confirmed
+  sources:
+    - {title: "Keller (2010)", url: "http://www.bibnum.education.fr/sites/default/files/ishango-analysis_v2.pdf", quote: "three rows of more or less parallel but asymmetrically grouped notches"}
+    - {title: "Pletser & Huylebrouck (2016)", url: "https://arxiv.org/pdf/1607.00860.pdf", quote: "the arrangement of the notches on three columns suggests an arithmetical"}
+  note: "Ledger's P&H quote (column sums) replaced by one that states the three columns."
+- card: ishango-bone
+  fact: "De Heinzelin in Scientific American 1962: one column holds 11, 13, 17, 19, the primes between 10 and 20"
+  verdict: confirmed
+  sources:
+    - {title: "Keller (2010)", url: "http://www.bibnum.education.fr/sites/default/files/ishango-analysis_v2.pdf", quote: "published his results in Scientific American in June 1962: Take the first column, for example: 11, 13, 17 and 19 are all prime numbers"}
+    - {title: "Pletser (2012)", url: "https://arxiv.org/pdf/1204.1019", quote: "to see in the G column the four prime numbers between 10 and 20"}
+  note: ""
+- card: ishango-bone
+  fact: "Another column pairs 3 with 6 and 4 with 8, as if doubling"
+  verdict: confirmed
+  sources:
+    - {title: "Keller (2010)", url: "http://www.bibnum.education.fr/sites/default/files/ishango-analysis_v2.pdf", quote: "3 is doubled to 6, 4 to 8 and 5 to 10"}
+    - {title: "Pletser (2012)", url: "https://arxiv.org/pdf/1204.1019", quote: "the first four groups of the M column suggest duplication by 2"}
+  note: ""
+- card: ishango-bone
+  fact: "De Heinzelin suggested an arithmetical game"
+  verdict: confirmed
+  sources:
+    - {title: "Keller (2010)", url: "http://www.bibnum.education.fr/sites/default/files/ishango-analysis_v2.pdf", quote: "they may represent an arithmetical game of some sort"}
+    - {title: "Pletser (2012)", url: "https://arxiv.org/pdf/1204.1019", quote: "de Heinzelin's arithmetic game interpretation"}
+  note: ""
+- card: ishango-bone
+  fact: "Alexander Marshack read it as a calendar"
+  verdict: confirmed
+  sources:
+    - {title: "Keller (2010)", url: "http://www.bibnum.education.fr/sites/default/files/ishango-analysis_v2.pdf", quote: "Alexander Marshack’s interpretation of the bone as a lunar calendar"}
+    - {title: "Pletser (2012)", url: "https://arxiv.org/pdf/1204.1019", quote: "A. Marshack [Mar] suggested a different usage for the bone as a lunar calendar"}
+  note: ""
+- card: ishango-bone
+  fact: "Pletser and Huylebrouck proposed a count mixing tens and twelves"
+  verdict: corrected
+  sources:
+    - {title: "Pletser & Huylebrouck (2016)", url: "https://arxiv.org/pdf/1607.00860.pdf", quote: "a people who were counting by mixing bases 10 and 12 (or 6)"}
+    - {title: "Keller (2010)", url: "http://www.bibnum.education.fr/sites/default/files/ishango-analysis_v2.pdf", quote: "the derived base 12 was used for larger numbers"}
+  note: "'Dropped the primes' rested only on the authors' own statement; removed. Wording now 'proposed instead a count that mixed tens and twelves'."
+- card: ishango-bone
+  fact: "Keller: worn or barely visible notches make numeric readings suspect"
+  verdict: confirmed
+  sources:
+    - {title: "Keller (2010)", url: "http://www.bibnum.education.fr/sites/default/files/ishango-analysis_v2.pdf", quote: "Several of the notches are worn way or barely visible, which immediately makes any numeric interpretation suspect."}
+    - {title: "Pletser & Huylebrouck (2016)", url: "https://arxiv.org/pdf/1607.00860.pdf", quote: "Several of the notches are worn way or barely visible, which immediately makes any numeric interpretation suspect"}
+  note: "P&H quote Keller in order to answer him: it confirms the attribution, not the claim itself, which the card presents as Keller's view."
+- card: ishango-bone
+  fact: "On show at the Royal Belgian Institute of Natural Sciences, Brussels; called humanity's oldest mathematical tool"
+  verdict: confirmed
+  sources:
+    - {title: "Keller (2010)", url: "http://www.bibnum.education.fr/sites/default/files/ishango-analysis_v2.pdf", quote: "It is on display at the Royal Belgian Institute of Natural Sciences, in Brussels, and presented to visitors as “humanity’s oldest calculator”"}
+    - {title: "Pletser & Huylebrouck (2016)", url: "https://arxiv.org/pdf/1607.00860.pdf", quote: "can be considered as the oldest mathematical tool of humankind"}
+  note: ""
+# ---------------- kuba-kingdom ----------------
+- card: kuba-kingdom
+  fact: "Kingdom took shape in the 17th century under kings such as Shyaam"
+  verdict: corrected
+  sources:
+    - {title: "Art Institute of Chicago: Panel (103017)", url: "https://www.artic.edu/artworks/103017", quote: "According to oral tradition, the 17th-century Kuba king Shyaam introduced plush-textured raffia textiles to his kingdom."}
+    - {title: "Cleveland Museum of Art: Knife (ikul) 1916.721", url: "https://clevelandart.org/art/1916.721", quote: "Introduced by King Shyaam in the second quarter of the 17th century"}
+  note: "The 17th-century foundation comes only from AIC labels (another AIC label says 16th century). Card now says only that oral tradition remembers Shyaam, a 17th-century king; the dispute line about AIC labels stays."
+- card: kuba-kingdom
+  fact: "Hierarchical court society; rank in dress and regalia (raffia hats, belts, pendants)"
+  verdict: confirmed
+  sources:
+    - {title: "Art Institute of Chicago: Pendant (148324)", url: "https://www.artic.edu/artworks/148324", quote: "individuals have signaled court rank and status with their elaborate dress"}
+    - {title: "Cleveland Museum of Art: Hat (laket) 1915.465", url: "https://clevelandart.org/art/1915.465", quote: "Titled Kuba men and prominent women wear the laket , a small ornate dome-shaped hat"}
+  note: "Palmer catalogue 36 also lists hats and belts."
+- card: kuba-kingdom
+  fact: "Designs had names; the interlace is imbol; motifs pass from cloth to carved wood"
+  verdict: confirmed
+  sources:
+    - {title: "Cleveland Museum of Art: Box 1976.185", url: "https://clevelandart.org/art/1976.185", quote: "Each design, derived from weaving patterns, has its own name---for example the interlace is called imbol"}
+    - {title: "Minneapolis Institute of Art: Panel (3789)", url: "https://collections.artsmia.org/art/3789", quote: "Patterns used for embroidery are drawn from over 200 traditional designs which are also used for wood carving, basketry, and ceramics."}
+  note: "AIC belt label also names imbol."
+- card: kuba-kingdom
+  fact: "Raffia cloth was the most prestigious art"
+  verdict: confirmed
+  sources:
+    - {title: "Minneapolis Institute of Art: Panel (3789)", url: "https://collections.artsmia.org/art/3789", quote: "Finely worked cut-pile embroideries are objects of great prestige in Kuba society."}
+    - {title: "Art Institute of Chicago: Panel (103017)", url: "https://www.artic.edu/artworks/103017", quote: "Raffia panels have long been considered valuable in Central Africa."}
+  note: "Card said 'most prized'; softened to 'most prestigious'."
+- card: kuba-kingdom
+  fact: "Men set up looms and wove small square panels"
+  verdict: confirmed
+  sources:
+    - {title: "Minneapolis Institute of Art: Panel (3789)", url: "https://collections.artsmia.org/art/3789", quote: "Kuba men set up the looms and weave the raffia cloth"}
+    - {title: "Carlos Museum, Emory", url: "https://digitalprojects.carlos.emory.edu/exhibits/show/objects-for-personal-use-and-a/textiles/about", quote: "the men weave the fiber culled from the outer layers of the fronds on diagonal looms, resulting in the small square panels"}
+  note: ""
+- card: kuba-kingdom
+  fact: "Women embroidered and appliquéd; finest panels in cut pile, a tufted plush stitch"
+  verdict: confirmed
+  sources:
+    - {title: "Palmer Museum, Penn State, cat. 36", url: "https://exhibitions.psu.edu/s/african-brilliance/page/catalogue-36", quote: "Women are responsible for the decorative elements and designs, including embroidery and pile work with needles, appliqué"}
+    - {title: "Minneapolis Institute of Art: Panel (3789)", url: "https://collections.artsmia.org/art/3789", quote: "The finest cut-pile embroideries, as in these examples, combine a flat stem stitch with a tufted plush stitch"}
+  note: ""
+- card: kuba-kingdom
+  fact: "A skirt sewn by several women of one family, each a section"
+  verdict: confirmed
+  sources:
+    - {title: "Art Institute of Chicago: Woman's Ceremonial Skirt (134096)", url: "https://www.artic.edu/artworks/134096", quote: "several women from the same extended family would contribute different sections"}
+    - {title: "Minneapolis Institute of Art: Woman's ceremonial skirt (3268)", url: "https://collections.artsmia.org/art/3268", quote: "several women within the lineage contributing one or more sections"}
+  note: ""
+- card: kuba-kingdom
+  fact: "Appliqué shapes sit where the cloth had small holes"
+  verdict: confirmed
+  sources:
+    - {title: "Art Institute of Chicago: Ceremonial Skirt (110059)", url: "https://www.artic.edu/artworks/110059", quote: "the placement of the shapes is often determined by small holes or tears in the raffia fabric"}
+    - {title: "Minneapolis Institute of Art: Woman's Ceremonial Skirt (83666)", url: "https://collections.artsmia.org/art/83666", quote: "The use of appliqué is believed to have evolved from a need to patch small holes"}
+  note: ""
+- card: kuba-kingdom
+  fact: "Worn on ceremonial occasions, above all funerals"
+  verdict: confirmed
+  sources:
+    - {title: "Minneapolis Institute of Art: Woman's ceremonial skirt (3268)", url: "https://collections.artsmia.org/art/3268", quote: "who would wear it on ceremonial occasions, especially funerals"}
+    - {title: "Art Institute of Chicago: Panel (103017)", url: "https://www.artic.edu/artworks/103017", quote: "frequently displayed at court ceremonies and funerals"}
+  note: ""
+- card: kuba-kingdom
+  fact: "Laid out around the dead, then wrapped round the body or buried with it"
+  verdict: corrected
+  sources:
+    - {title: "Palmer Museum, Penn State, cat. 36", url: "https://exhibitions.psu.edu/s/african-brilliance/page/catalogue-36", quote: "Elaborately decorated raffia textiles are part of the significant suite of gifts presented by family and clan members to display on the occasion of a funeral. ... These cloths are later wrapped around or buried with the body"}
+    - {title: "Carlos Museum, Emory", url: "https://digitalprojects.carlos.emory.edu/exhibits/show/objects-for-personal-use-and-a/textiles/about", quote: "once sewn together, serve as burial cloth demonstrating the status of the dead"}
+  note: "'Laid out around the dead' was not in any source; now 'relatives brought them to be displayed'."
+- card: kuba-kingdom
+  fact: "Royal masks danced the founding of the kingdom (card had tied this to funerals)"
+  verdict: corrected
+  sources:
+    - {title: "Art Institute of Chicago: Helmet Mask (Bwoom) 99540", url: "https://www.artic.edu/artworks/99540", quote: "During performances the masks reenact episodes in the foundation of the kingdom."}
+    - {title: "Cleveland Museum of Art: Mask (Bwoom) 1935.304", url: "https://clevelandart.org/art/1935.304", quote: "All three are protagonists in the reenactment of the foundation of the Kuba kingdom. Outside the capital, however, bwoom appears in different non-royal contexts"}
+  note: "No source places the masks at funerals; the 'while' linking them was removed and the sentence now begins 'At court'."
+- card: kuba-kingdom
+  fact: "Families still keep the cloths, show them at funerals, bury them with important adults"
+  verdict: confirmed
+  sources:
+    - {title: "Art Institute of Chicago: Panel (103017)", url: "https://www.artic.edu/artworks/103017", quote: "Today they continue to be collected by families, used in funeral displays, and buried with important adults."}
+    - {title: "Palmer Museum, Penn State, cat. 36", url: "https://exhibitions.psu.edu/s/african-brilliance/page/catalogue-36", quote: "or sometimes saved by the family and stored for a future occasion"}
+  note: ""
+# ---------------- aksum-obelisk ----------------
+- card: aksum-obelisk
+  fact: "Aksum, northern Ethiopia, capital of a great trading empire in the first centuries AD, trading through Adulis"
+  verdict: confirmed
+  sources:
+    - {title: "Mark Rose, Of Obelisks and Empire, Archaeology (AIA) 2009", url: "https://archive.archaeology.org/0905/abstracts/aksum.html", quote: "In the first century A.D., an unknown merchant recorded details of the Red Sea trade, and mentioned Adulis, the harbor of \"the city of the people called Aksumites\""}
+    - {title: "Zamani Project: Stelae Field of Aksum", url: "https://zamaniproject.org/site-ethiopia-aksum-stelae-field.html", quote: "some 200 km inland from the strategic ancient port of Adulis on the Red Sea coast of modern Eritrea. During the first seven centuries AD it was the capital of a major empire."}
+  note: ""
+- card: aksum-obelisk
+  fact: "Graves of rulers and nobles marked by huge carved monoliths"
+  verdict: confirmed
+  sources:
+    - {title: "Rose (2009)", url: "https://archive.archaeology.org/0905/abstracts/aksum.html", quote: "monolithic obelisks were raised to mark the burials of rulers and nobility"}
+    - {title: "Zamani Project", url: "https://zamaniproject.org/site-ethiopia-aksum-stelae-field.html", quote: "each marked by a huge monolithic stela carved to represent a multi-storied building"}
+  note: ""
+- card: aksum-obelisk
+  fact: "Of three colossal stelae meant to align, only one stood in modern times; Stele 2 had fallen long before"
+  verdict: confirmed
+  sources:
+    - {title: "Rose (2009)", url: "https://archive.archaeology.org/0905/abstracts/aksum.html", quote: "they were intended to form a single alignment, but only one remained standing into modern times ... Stele 2 fell as well, but perhaps only in the seventh century"}
+    - {title: "BBC News (4 Sep 2008)", url: "https://news.bbc.co.uk/1/hi/world/africa/7597589.stm", quote: "It had been lying on the ground for centuries when the Italians found it"}
+  note: ""
+- card: aksum-obelisk
+  fact: "About 24 m tall and over 150 tonnes"
+  verdict: confirmed
+  sources:
+    - {title: "BBC News (19 Apr 2005)", url: "https://news.bbc.co.uk/2/hi/africa/4458105.stm", quote: "Weighs 160 tons 24m tall"}
+    - {title: "Corriere della Sera (26 May 2008)", url: "http://www.corriere.it/cronache/08_maggio_26/l_obelisco_conteso_rinasce_ad_axum_6f8d4c02-2aec-11dd-9793-00144f02aabc.shtml", quote: "pesante 152 tonnellate e alto 23.4 metri"}
+  note: ""
+- card: aksum-obelisk
+  fact: "Taken to Rome in 1937 as a war trophy; set up in front of the building now used by FAO"
+  verdict: confirmed
+  sources:
+    - {title: "Rose (2009)", url: "https://archive.archaeology.org/0905/abstracts/aksum.html", quote: "Taken to Rome as a war trophy by Mussolini's forces in 1937"}
+    - {title: "Corriere della Sera (2008)", url: "http://www.corriere.it/cronache/08_maggio_26/l_obelisco_conteso_rinasce_ad_axum_6f8d4c02-2aec-11dd-9793-00144f02aabc.shtml", quote: "dal 28 ottobre 1937 al dicembre 2003 era collocato a Roma, di fronte all’edificio della Fao"}
+  note: ""
+- card: aksum-obelisk
+  fact: "After the war Ethiopia asked for it back; in 1947 Italy pledged to return it"
+  verdict: corrected
+  sources:
+    - {title: "BBC News (4 Jun 2008)", url: "https://news.bbc.co.uk/2/hi/africa/7435314.stm", quote: "In 1947, Italy signed a pledge to the UN to give back the obelisk"}
+    - {title: "Christian Science Monitor (8 Apr 1996)", url: "https://www.csmonitor.com/1996/0408/08072.html", quote: "In the 1947 peace treaty with the United Nations, Italy promised to return within 18 months art and historical loot taken from Ethiopia after its invasion in October 1935. Half a century later, the promises still have not been met."}
+  note: "Corriere (ledger's second source) does not mention 1947; replaced by CSM and added to card sources. Wording now 'in the peace treaty of 1947 Italy undertook to return what it had looted'."
+- card: aksum-obelisk
+  fact: "Lightning struck its top in May 2002"
+  verdict: confirmed
+  sources:
+    - {title: "BBC News (4 Jun 2008)", url: "https://news.bbc.co.uk/2/hi/africa/7435314.stm", quote: "a lightning strike in 2002"}
+    - {title: "Corriere della Sera (2008)", url: "http://www.corriere.it/cronache/08_maggio_26/l_obelisco_conteso_rinasce_ad_axum_6f8d4c02-2aec-11dd-9793-00144f02aabc.shtml", quote: "durante il violentissimo temporale del 27 maggio 2002. Una saetta colp la vetta della stele"}
+  note: "Corriere page text drops accented letters (colpì)."
+- card: aksum-obelisk
+  fact: "Flown back in three sections in 2005; raised again on its site in 2008 in a UNESCO project with Italian money and Ethiopian partners"
+  verdict: confirmed
+  sources:
+    - {title: "Rose (2009)", url: "https://archive.archaeology.org/0905/abstracts/aksum.html", quote: "Taken by Mussolini in 1937, the Aksum Obelisk was returned, in three pieces, in 2005. Last year, it was re-erected in its original position in a joint UNESCO, Italian, and Ethiopian project."}
+    - {title: "Corriere della Sera (2008)", url: "http://www.corriere.it/cronache/08_maggio_26/l_obelisco_conteso_rinasce_ad_axum_6f8d4c02-2aec-11dd-9793-00144f02aabc.shtml", quote: "fondi italiani gestiti dall’organismo culturale dell’Onu"}
+  note: "BBC 2005 adds that it arrived by Antonov aircraft."
+- card: aksum-obelisk
+  fact: "A symbol of Ethiopian history; its return closed a dispute dating from the war"
+  verdict: confirmed
+  sources:
+    - {title: "Corriere della Sera (2008)", url: "http://www.corriere.it/cronache/08_maggio_26/l_obelisco_conteso_rinasce_ad_axum_6f8d4c02-2aec-11dd-9793-00144f02aabc.shtml", quote: "Cos si chiuder un lungo contenzioso tra l’Etiopia e l’Italia, nato nel dopoguerra quando l’impero etiope chiese indietro uno dei simboli della propria storia"}
+    - {title: "BBC News (4 Jun 2008)", url: "https://news.bbc.co.uk/2/hi/africa/7435314.stm", quote: "The Axum Obelisk, a symbol of Ethiopias identity"}
+  note: ""
+# ---------------- lalibela ----------------
+- card: lalibela
+  fact: "Town in the mountains of northern Ethiopia, a great pilgrimage place; named after a Zagwe king; tradition of a new Jerusalem"
+  verdict: confirmed
+  sources:
+    - {title: "Phillipson, Current World Archaeology 18 (2006)", url: "https://world-archaeology.com/features/lalibela-ethiopa-rock-hewn-churches", quote: "High in the mountains of northern Ethiopia, Lalibela is one of the most important pilgrimage places of the Ethiopian Orthodox Church."}
+    - {title: "Zamani Project: Lalibela", url: "https://zamaniproject.org/site-ethiopia-lalibela-rock-hewn-churches.html", quote: "named for the 12th century Zagwe king Gebre Mesqel Lalibela. After Muslim conquests halted Christian pilgramages to the holy land, King Lalibela set out to construct a symbolic version of Jerusalem, the ‘New Jerusalem’."}
+  note: "Walker (Popular Archaeology) also: 'He was to build a new Jerusalem'."
+- card: lalibela
+  fact: "Eleven churches carved inside and out from soft volcanic tuff; some in pits reached by trenches, some cut into a cliff"
+  verdict: corrected
+  sources:
+    - {title: "Phillipson, CWA (2006)", url: "https://world-archaeology.com/features/lalibela-ethiopa-rock-hewn-churches", quote: "Lalibela is famed for its 11 Medieval churches ... The Lalibela churches are carved, inside and out, from soft volcanic rock. Their architecture is extremely diverse: some stand as isolated blocks in deep pits, while others have been cut into the face of a cliff."}
+    - {title: "Zamani Project", url: "https://zamaniproject.org/site-ethiopia-lalibela-rock-hewn-churches.html", quote: "famed for its 11 rock-hewn churches ... some cut into the face of a cliff, and others in carved pits accessed by long passages or trenches"}
+  note: "'Each church is a single piece of stone' contradicted the cliff-cut churches; now 'each church remains one with the rock it was cut from'."
+- card: lalibela
+  fact: "Largest is Biete Medhane Alem, House of the Saviour of the World"
+  verdict: confirmed
+  sources:
+    - {title: "Zamani Project", url: "https://zamaniproject.org/site-ethiopia-lalibela-rock-hewn-churches.html", quote: "With five aisles, Biete Medhani Alem is believed to be the largest monolithic church in the world."}
+    - {title: "Samuel Walker, Popular Archaeology", url: "https://popular-archaeology.com/article/through-pilgrim-eyes-the-creation-of-significance/", quote: "Bete Medhane Alem, or Savior of the World Church. As the largest church"}
+  note: ""
+- card: lalibela
+  fact: "Names such as Golgotha and the Tomb of Adam echo the Holy Land"
+  verdict: confirmed
+  sources:
+    - {title: "Phillipson, CWA (2006)", url: "https://world-archaeology.com/features/lalibela-ethiopa-rock-hewn-churches", quote: "bear names like the Tomb of Adam or the Church of Golgotha which mirror those of places visited by pilgrims to Jerusalem"}
+    - {title: "Zamani Project", url: "https://zamaniproject.org/site-ethiopia-lalibela-rock-hewn-churches.html", quote: "Biete Golgotha ... and Adams Tomb"}
+  note: ""
+- card: lalibela
+  fact: "Tradition: all churches finished within King Lalibela's reign"
+  verdict: corrected
+  sources:
+    - {title: "Phillipson, CWA (2006)", url: "https://world-archaeology.com/features/lalibela-ethiopa-rock-hewn-churches", quote: "These exceptional buildings are said to have been built during the 25 year reign of King Lalibela"}
+    - {title: "Zamani Project", url: "https://zamaniproject.org/site-ethiopia-lalibela-rock-hewn-churches.html", quote: "King Lalibela set out to construct a symbolic version of Jerusalem"}
+  note: "Only CWA states completion within the reign; card now says 'Tradition credits all of them to King Lalibela'."
+- card: lalibela
+  fact: "Phillipson: oldest rock-cut features may be about five centuries older than the king"
+  verdict: confirmed
+  sources:
+    - {title: "Phillipson, CWA (2006)", url: "https://world-archaeology.com/features/lalibela-ethiopa-rock-hewn-churches", quote: "argues that the oldest of the rock-hewn features at Lalibela may date to the 7th or 8th centuries – about 500 years earlier than the traditional dating"}
+    - {title: "Derat et al., Antiquity 95 (2021), abstract", url: "https://www.cambridge.org/core/journals/antiquity/article/abs/rockcut-churches-of-lalibela-and-the-cave-church-of-washa-mikael-troglodytism-and-the-christianisation-of-the-ethiopian-highlands/DC1B8FC2A2221141A7E648F9B9219755", quote: "Recent research, however, has shown that the rock-cut churches were not created ex nihilo."}
+  note: "The attribution rests on Phillipson's own account; Derat's independent team confirms the underlying point that the site has older roots."
+- card: lalibela
+  fact: "A French team reading cuts, openings and spoil heaps asks whether one grand plan or a centre reshaped over time"
+  verdict: corrected
+  sources:
+    - {title: "Fauvelle-Aymar et al., Antiquity 84 (2010), abstract", url: "https://www.cambridge.org/core/journals/antiquity/article/rockcut-stratigraphy-sequencing-the-lalibela-churches/B53C45E7808B62840E6C5BF3F6380B88", quote: "Do they belong to one grand ceremonial monastic plan, or a long-lived ritual centre, continually refashioned over time? ... embedded in the cuts and openings, the spoil heaps, and even in the now vanished sediments, the stratigraphic sequence is there to be read."}
+    - {title: "Derat et al., Antiquity 95 (2021), abstract", url: "https://www.cambridge.org/core/journals/antiquity/article/abs/rockcut-churches-of-lalibela-and-the-cave-church-of-washa-mikael-troglodytism-and-the-christianisation-of-the-ethiopian-highlands/DC1B8FC2A2221141A7E648F9B9219755", quote: "New archaeological evidence has emerged for an earlier, local troglodytic culture, particularly at Washa Mika'el"}
+  note: "The two Antiquity papers share authors (one team). Body now states the team's result (older local cave-church tradition) and the open question stays in the dispute line; Phillipson's CWA ('These first monuments were not originally churches ... converted to ecclesiastical use') is the independent second source for a long development."
+- card: lalibela
+  fact: "Churches still in use: priests serve them, pilgrims walk between them"
+  verdict: confirmed
+  sources:
+    - {title: "Zamani Project", url: "https://zamaniproject.org/site-ethiopia-lalibela-rock-hewn-churches.html", quote: "today, the churches are attended by Coptic priests"}
+    - {title: "Walker, Popular Archaeology", url: "https://popular-archaeology.com/article/through-pilgrim-eyes-the-creation-of-significance/", quote: "These remain living, vibrant, churches, functioning within a pilgrim ethos"}
+  note: ""
+# ---------------- taytu-betul ----------------
+- card: taytu-betul
+  fact: "Aristocratic family, mid-19th century; church-educated; could read and write"
+  verdict: confirmed
+  sources:
+    - {title: "Fentahun Tiruneh, Library of Congress blog (2022)", url: "https://blogs.loc.gov/international-collections/2022/03/taytu-betul-the-cunning-empress-of-ethiopia/", quote: "She was raised in an aristocratic family. She was church-educated"}
+    - {title: "DW African Roots (2021)", url: "https://www.dw.com/en/taytu-betul-ethiopias-strategic-empress-african-roots/a-57010781", quote: "born into an influential aristocratic family related to the Solomonic dynasty around 1840 or 1851 ... She was able to read and write"}
+  note: "DW names its scholarly advisers (Konaté, Mafela, Ogbogbo)."
+- card: taytu-betul
+  fact: "After four marriages she married Menelik, king of Shewa; empress from 1889"
+  verdict: confirmed
+  sources:
+    - {title: "Library of Congress (2022)", url: "https://blogs.loc.gov/international-collections/2022/03/taytu-betul-the-cunning-empress-of-ethiopia/", quote: "After four failed marriages to important personages, she married Menelik when he was the ruler of Shewa. When Menelik became the emperor of Ethiopia in 1889, she became the empress of Ethiopia two days later"}
+    - {title: "DW (2021)", url: "https://www.dw.com/en/taytu-betul-ethiopias-strategic-empress-african-roots/a-57010781", quote: "finally married her fifth husband, the King of Shewa , who later became Emperor Menelik II"}
+  note: ""
+- card: taytu-betul
+  fact: "Enlarged the empire by alliances and conquest (card: 'of lands to the south')"
+  verdict: corrected
+  sources:
+    - {title: "DW (2021)", url: "https://www.dw.com/en/taytu-betul-ethiopias-strategic-empress-african-roots/a-57010781", quote: "they forged more allegiances with the region's various rulers, partly through political prowess and partly through military force"}
+    - {title: "Amber N. Wiley, SAH blog (2014)", url: "https://www.sah.org/publications/sah-blog/sah-blog/2014/12/04/the-new-flower-addis-ababa-and-the-project-of-african-modernity", quote: "the conquered provinces of which Oromia was the largest"}
+  note: "Neither source says 'to the south'; card now says 'above all of the Oromo lands'."
+- card: taytu-betul
+  fact: "She chose the site of Addis Ababa and named it; it became the capital"
+  verdict: confirmed
+  sources:
+    - {title: "DW (2021)", url: "https://www.dw.com/en/taytu-betul-ethiopias-strategic-empress-african-roots/a-57010781", quote: "She is the one who chose the area of Ethiopia's present-day capital city and named it Addis Ababa."}
+    - {title: "Wiley, SAH (2014)", url: "https://www.sah.org/publications/sah-blog/sah-blog/2014/12/04/the-new-flower-addis-ababa-and-the-project-of-african-modernity", quote: "It was at Finfinne that Empress Taytu Betul renamed the city “Addis Ababa,”"}
+  note: "LOC agrees ('She founded Addis Ababa ... and named it')."
+- card: taytu-betul
+  fact: "Treaty of Wuchale article meant to make Ethiopia a protectorate; she fought it and urged war"
+  verdict: confirmed
+  sources:
+    - {title: "Library of Congress (2022)", url: "https://blogs.loc.gov/international-collections/2022/03/taytu-betul-the-cunning-empress-of-ethiopia/", quote: "was discovered to include in Article 17 the intention of Italy to make Ethiopia a protectorate ... the empress persuaded the emperor to declare war against Italy"}
+    - {title: "DW (2021)", url: "https://www.dw.com/en/taytu-betul-ethiopias-strategic-empress-african-roots/a-57010781", quote: "Taytu had vehemently opposed deals with Italy and the Treaty of Wuchale, which effectively made Ethiopia an Italian protectorate on paper."}
+  note: ""
+- card: taytu-betul
+  fact: "Led about five thousand soldiers; cut the Italians off from water; campaign ended at Adwa 1896"
+  verdict: confirmed
+  sources:
+    - {title: "Library of Congress (2022)", url: "https://blogs.loc.gov/international-collections/2022/03/taytu-betul-the-cunning-empress-of-ethiopia/", quote: "she had her own contingent of close to five thousand troops ... she commanded operation to prevent Italian military access to all sources of potable water. This strategy worked in favor of the emperor and the Ethiopians prevailed in the battle."}
+    - {title: "DW (2021)", url: "https://www.dw.com/en/taytu-betul-ethiopias-strategic-empress-african-roots/a-57010781", quote: "Taytu is said to have commanded 5,000 infantry and 600 cavalry ... at an Italian-built fort in Mekelle, where she defeated the Italians by cutting off their water supply"}
+  note: "DW puts the water stratagem at Mekelle, LOC at Adwa; the card's 'helped win the campaign that ended at Adwa' covers both."
+- card: taytu-betul
+  fact: "Ran much of the government in Menelik's last years until rivals forced her out; died 1917 or 1918 away from the palace"
+  verdict: confirmed
+  sources:
+    - {title: "DW (2021)", url: "https://www.dw.com/en/taytu-betul-ethiopias-strategic-empress-african-roots/a-57010781", quote: "Taytu took over much of the political work, effectively ruling the country herself. After some time, her rivals in the royal family pressured her into giving up power. ... Taytu was ousted from the main palace ... She died in 1917."}
+    - {title: "Library of Congress (2022)", url: "https://blogs.loc.gov/international-collections/2022/03/taytu-betul-the-cunning-empress-of-ethiopia/", quote: "Empress Taytu Betul (1853-1918)"}
+  note: ""
+# ---------------- afonso-kongo-letters ----------------
+- card: afonso-kongo-letters
+  fact: "Afonso I, born Mvemba a Nzinga, ruled Kongo in the first half of the 16th century, from Mbanza Kongo / São Salvador (card: 'northern Angola')"
+  verdict: corrected
+  sources:
+    - {title: "Brockman, DACB: Afonso I", url: "https://dacb.org/stories/congo/afonso1/", quote: "Afonso was born Mvemba Nzinga ... reigned from 1506 to 1545 ... located in the area of present day Angola"}
+    - {title: "Hendrickx, Pharos 102 (2021)", url: "https://www.pharosjot.com/uploads/7/1/6/3/7163688/theme_1_article_4_se1_2021__benjamin_hendrickx_kimpa_vita.pdf", quote: "with Sao Salvador (now Mbanza Kongo) as capital"}
+  note: "'Northern' Angola not stated by either source; card now 'in today's Angola'. BlackPast also: 'leader of the Kongolese people in the early part of the 16th Century'."
+- card: afonso-kongo-letters
+  fact: "Father Nzinga a Nkuwu baptised João I in 1491"
+  verdict: confirmed
+  sources:
+    - {title: "Thornton, DACB: Kimpa Vita (D)", url: "https://dacb.org/stories/congo/kimpa3-vita/", quote: "the baptism of Nzinga a Nkuwu as King João I in 1491"}
+    - {title: "Hendrickx (2021)", url: "https://www.pharosjot.com/uploads/7/1/6/3/7163688/theme_1_article_4_se1_2021__benjamin_hendrickx_kimpa_vita.pdf", quote: "King Nzinga (João) converted to Catholicism in 1491"}
+  note: ""
+- card: afonso-kongo-letters
+  fact: "Catholicism the state religion; churches and schools; young nobles to Lisbon"
+  verdict: confirmed
+  sources:
+    - {title: "Jessica Snethen, BlackPast (2009)", url: "https://www.blackpast.org/global-african-history/king-alfonso-i-d-1543/", quote: "Alfonso named Catholicism the state religion and built many Catholic churches throughout his kingdom"}
+    - {title: "Hendrickx (2021)", url: "https://www.pharosjot.com/uploads/7/1/6/3/7163688/theme_1_article_4_se1_2021__benjamin_hendrickx_kimpa_vita.pdf", quote: "instituted a culture of education and schooling for the nobles, men and girls, and some nobles went to Lisbon to study"}
+  note: "DACB adds 'building churches and schools' and 'sent talented young men to Portugal to be educated'."
+- card: afonso-kongo-letters
+  fact: "Alliance brought priests and craftsmen and a demand for slaves; Afonso did not reject slavery; war captives sold"
+  verdict: confirmed
+  sources:
+    - {title: "Brockman, DACB", url: "https://dacb.org/stories/congo/afonso1/", quote: "Manuel supplied missionaries and craftsmen to the Kongo ... Afonso did not repudiate slavery on principle ... Initially, slavery was limited to war captives"}
+    - {title: "BlackPast (2009)", url: "https://www.blackpast.org/global-african-history/king-alfonso-i-d-1543/", quote: "This atmosphere changed when the Portuguese demanded slaves in return for their trade goods. ... Initially Alfonso sent war captives and criminals to be sold as slaves"}
+  note: ""
+- card: afonso-kongo-letters
+  fact: "1526 letter (card: 'July 1526'): merchants seize sons of the land, nobles' sons and relatives; country depopulated; Kongo needs only priests, teachers, wine and flour for Mass"
+  verdict: corrected
+  sources:
+    - {title: "Letter of 6 July 1526, Religion and Slavery", url: "https://religionandslavery.org/ps%3A-afonso-i-to-portugal", quote: "the mentioned merchants are taking every day our natives, sons of the land and the sons of our noblemen and vassals and our relatives ... our country is being completely depopulated ... no more than some priests and a few people to teach in schools, and no other goods except wine and flour for the holy sacrament"}
+    - {title: "Same letter, trans. Thornton, in Dunn & Willoughby, Panorama, Source 3.1", url: "https://res.cloudinary.com/bloomsbury-online-resources/image/upload/v1786707560/Panorama%20-%20A%20World%20History/Volume%202/Primary%20Source%20Documents/Source_3.1_Volume_2.pdf", quote: "these traders carry away our native-born countrymen and the children of our nobles and vassals as well as relatives of ours ... our homeland is becoming completely depopulated ... we need only priests and a few people to teach in our kingdoms’ schools"}
+  note: "Two independent translations of the primary letter. The month appears only in the Religion and Slavery edition; removed, card now 'in 1526'."
+- card: afonso-kongo-letters
+  fact: "Second 1526 letter: free people kidnapped at night, ironed and branded; law that buyers let three named court officials check"
+  verdict: corrected
+  sources:
+    - {title: "Letter of 18 October 1526, Religion and Slavery", url: "https://religionandslavery.org/ps%3A-afonso-i-to-portugal", quote: "seize many of our people, freed and exempt men; and very often it happens that they kidnap even noblemen ... we passed a law so that any white man living in our Kingdoms and wanting to purchase goods in any way should first inform three of our noblemen and officials of our court"}
+    - {title: "Brockman, DACB", url: "https://dacb.org/stories/congo/afonso1/", quote: "in 1526 he issued decrees to regulate and moderate it. ... A commission was set up to see that no one was kidnapped into slavery"}
+  note: "Night kidnapping, irons, branding and the number of officials appear in one edition only; removed. Card keeps free people and nobles seized and sold, and court officials checking captives."
+- card: afonso-kongo-letters
+  fact: "The trade destabilised Kongo and its neighbours; Afonso died in the 1540s"
+  verdict: confirmed
+  sources:
+    - {title: "BlackPast (2009)", url: "https://www.blackpast.org/global-african-history/king-alfonso-i-d-1543/", quote: "Ultimately the demand for slaves destabilized the Kongo and its neighbors ... Alfonso died in 1543."}
+    - {title: "Panorama, Source 3.1 (editors' introduction)", url: "https://res.cloudinary.com/bloomsbury-online-resources/image/upload/v1786707560/Panorama%20-%20A%20World%20History/Volume%202/Primary%20Source%20Documents/Source_3.1_Volume_2.pdf", quote: "by the 1520s, the trade caused disruptions, demographic decline, and instability in the Kongo kingdom"}
+  note: "DACB gives 1545 for his death; the dispute line already records the spread of dates (Hendrickx: '1506-1543' and '1509-43', both confirmed). The Panorama introduction wrongly merges Afonso with his father and was used only for this general point."
+# ---------------- kimpa-vita ----------------
+- card: kimpa-vita
+  fact: "Born around 1684 into the Kongo nobility"
+  verdict: confirmed
+  sources:
+    - {title: "Thornton, DACB (D)", url: "https://dacb.org/stories/congo/kimpa3-vita/", quote: "born near the mountain of Kibangu in the eastern part of the Kingdom of Kongo around 1684. Her father was a mwana Kongo or noble of royal stock"}
+    - {title: "Hendrickx (2021)", url: "https://www.pharosjot.com/uploads/7/1/6/3/7163688/theme_1_article_4_se1_2021__benjamin_hendrickx_kimpa_vita.pdf", quote: "Kimpa Vita (Figure 1) was born in the nobility in 1684"}
+  note: ""
+- card: kimpa-vita
+  fact: "Christian since 1491; civil wars since 1665; São Salvador abandoned"
+  verdict: confirmed
+  sources:
+    - {title: "Thornton, DACB (D)", url: "https://dacb.org/stories/congo/kimpa3-vita/", quote: "devastating series of civil wars since the death of King António I at the Battle of Mbwila in 1665 ... re-occupy the abandoned city of São Salvador"}
+    - {title: "Hendrickx (2021)", url: "https://www.pharosjot.com/uploads/7/1/6/3/7163688/theme_1_article_4_se1_2021__benjamin_hendrickx_kimpa_vita.pdf", quote: "At the battle of Mbwila (Ambouilla) King Antonio I (1661-65) was killed by the Portuguese and the Kingdom broke up ... restore one king and repopulate Mbanza Kongo (Sao Salvador)"}
+  note: "Ledger's second source for 'abandoned' was Brockman (same publisher as Thornton); replaced by Hendrickx."
+- card: kimpa-vita
+  fact: "She worked as a nganga"
+  verdict: confirmed
+  sources:
+    - {title: "Thornton, DACB (D)", url: "https://dacb.org/stories/congo/kimpa3-vita/", quote: "She became a nganga marinda , a spiritual mediator"}
+    - {title: "Hendrickx (2021)", url: "https://www.pharosjot.com/uploads/7/1/6/3/7163688/theme_1_article_4_se1_2021__benjamin_hendrickx_kimpa_vita.pdf", quote: "nganga marinda (person communicating with the spiritual world)"}
+  note: ""
+- card: kimpa-vita
+  fact: "In 1703 or 1704, gravely ill, she said Saint Anthony had entered her to restore Kongo"
+  verdict: confirmed
+  sources:
+    - {title: "Thornton, DACB (D)", url: "https://dacb.org/stories/congo/kimpa3-vita/", quote: "Beatriz became ill, probably in 1703 ... she fell sick and was at the point of death when she had a vision of Saint Anthony of Padua"}
+    - {title: "Hendrickx (2021)", url: "https://www.pharosjot.com/uploads/7/1/6/3/7163688/theme_1_article_4_se1_2021__benjamin_hendrickx_kimpa_vita.pdf", quote: "claimed in 1704 to have been visited and then reincarnated as St Anthony of Padua during a nearly fatal fever"}
+  note: "Ledger's second source was Brockman (same publisher); replaced."
+- card: kimpa-vita
+  fact: "Jesus and Mary born in Kongo near São Salvador; founders of the faith Black; she turned against the Capuchins"
+  verdict: confirmed
+  sources:
+    - {title: "Hendrickx (2021)", url: "https://www.pharosjot.com/uploads/7/1/6/3/7163688/theme_1_article_4_se1_2021__benjamin_hendrickx_kimpa_vita.pdf", quote: "Jesus-Mary-Joseph were born and lived in Kongo in the Sao Salvador area. Kongo is the holy land - the founders of Christianism are black by race. ... This explains her hate against the Capuchins"}
+    - {title: "Thornton, DACB (D)", url: "https://dacb.org/stories/congo/kimpa3-vita/", quote: "the Capuchins had denied Kongo its Black saints"}
+  note: ""
+- card: kimpa-vita
+  fact: "Moved into the ruined capital; thousands joined her, calling for one king"
+  verdict: corrected
+  sources:
+    - {title: "Thornton, DACB (D)", url: "https://dacb.org/stories/congo/kimpa3-vita/", quote: "setting up makeshift quarters in the ruins of the cathedral. Thousands of ordinary people joined her"}
+    - {title: "Hendrickx (2021)", url: "https://www.pharosjot.com/uploads/7/1/6/3/7163688/theme_1_article_4_se1_2021__benjamin_hendrickx_kimpa_vita.pdf", quote: "Above all she exhorted rival claimants to the throne to give up the struggle, restore one king and repopulate Mbanza Kongo (Sao Salvador)"}
+  note: "'Thousands' rests on DACB alone (Brockman, same publisher, says 'flocked'); card and wow now say 'crowds'."
+- card: kimpa-vita
+  fact: "Captured, handed to Pedro IV, condemned as a heretic and burned on 2 July 1706"
+  verdict: corrected
+  sources:
+    - {title: "Thornton, DACB (D)", url: "https://dacb.org/stories/congo/kimpa3-vita/", quote: "Pedro tried her for witchcraft under Kongo’s civil law ... On July 2, 1706, she was burned alive"}
+    - {title: "Hendrickx (2021)", url: "https://www.pharosjot.com/uploads/7/1/6/3/7163688/theme_1_article_4_se1_2021__benjamin_hendrickx_kimpa_vita.pdf", quote: "in 1706 she was captured by Pedro IV and burnt as a heretic in Evululu ... roaring flames that took her life on July 2, 1706"}
+  note: "Thornton says the charge was witchcraft under civil law, not heresy. Card now gives both and a dispute line was added (EN and RU)."
+- card: kimpa-vita
+  fact: "Movement outlived her; Pedro IV took São Salvador in 1709 and restored the kingdom"
+  verdict: corrected
+  sources:
+    - {title: "Thornton, DACB (D)", url: "https://dacb.org/stories/congo/kimpa3-vita/", quote: "The movement, however continued without her, and Constantinho da Silva more or less embraced the cause ... It was only when Pedro IV’s armies attacked and occupied São Salvador in 1709 that the movement’s center came to an end."}
+    - {title: "Hendrickx (2021)", url: "https://www.pharosjot.com/uploads/7/1/6/3/7163688/theme_1_article_4_se1_2021__benjamin_hendrickx_kimpa_vita.pdf", quote: "she crowned Pedro da Silva with the black Antonine crown ... Pedro IV then restored the full Kingdom on 15 February 1709 (battle for Sao Salvador between King Pedro IV and Pedro da Silva)"}
+  note: "The card's colon made Pedro IV's victory read as the movement's success; it was the movement's defeat. Rewritten: the movement lived on under Pedro Constantinho da Silva until Pedro IV took São Salvador and reunited the kingdom."
+- card: kimpa-vita
+  fact: "Churches in Angola and Congo, among them Bundu dia Kongo, claim her as founder"
+  verdict: confirmed
+  sources:
+    - {title: "Thornton, DACB (D)", url: "https://dacb.org/stories/congo/kimpa3-vita/", quote: "members of a variety of independent churches working in the Democratic Republic of Congo and Angola ... These include Bundu dia Kongo"}
+    - {title: "Hendrickx (2021)", url: "https://www.pharosjot.com/uploads/7/1/6/3/7163688/theme_1_article_4_se1_2021__benjamin_hendrickx_kimpa_vita.pdf", quote: "linked to the origin of today’s Bundu dia Kongo movement"}
+  note: ""
+# ---------------- amina-of-zazzau ----------------
+- card: amina-of-zazzau
+  fact: "Zazzau, today Zaria, a Hausa city-state; Amina by most accounts 16th century"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of World Biography (Gale)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/amina-zaria", quote: "Her domain of Zazzau, a city-state of Hausaland, was eventually renamed to Zaria ... According to most accounts, Queen Amina ruled for 34 years at the turn of the sixteenth and seventeenth centuries."}
+    - {title: "DW African Roots (2020)", url: "https://www.dw.com/en/amina-the-warrior-queen-of-zazzau/a-52448399", quote: "Amina is believed to have been born in the16th century ... She lived in what is now Zaria City, in Kaduna State, Nigeria."}
+  note: ""
+- card: amina-of-zazzau
+  fact: "Reigned 34 years, spent at war"
+  verdict: confirmed
+  sources:
+    - {title: "H. R. Palmer (trans.), The Kano Chronicle, JRAI 38 (1908)", url: "https://archive.org/details/sim_royal-anthropological-institute-of-great-britain-ireland_1908_38", quote: "Her conquests extended over thirty-four years."}
+    - {title: "Gale", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/amina-zaria", quote: "She spent the duration of her 34-year reign in military aggression."}
+  note: "Kano Chronicle added to card sources. DW also: 'She reigned for 34 years'."
+- card: amina-of-zazzau
+  fact: "Conquests far to the south; brought Kano and Katsina under her rule"
+  verdict: corrected
+  sources:
+    - {title: "Kano Chronicle, Palmer (1908)", url: "https://archive.org/details/sim_royal-anthropological-institute-of-great-britain-ireland_1908_38", quote: "At this time Zaria, under Queen Amina, conquered all the towns as far as Kworarafa and Nupe. Every town paid tribute to her. The Sarkin Nupe sent forty eunuchs and ten thousand kolas to her."}
+    - {title: "Gale", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/amina-zaria", quote: "\"conquered all the towns as far as Kwararafa [to the north] and Nupe [in the south].\" ... she collected tributes of kola nuts and male slaves from her subject cities"}
+  note: "Kano and Katsina appear explicitly only in Dan Tafa's Rawdat al-Afkaar (Gale's 'dominated the entire area' is vague): removed. Card now gives the Kano Chronicle's own words: towns as far as Nupe and Kwararafa, tribute from every town, eunuchs and kola nuts from Nupe. Gale's '[to the north]' for Kwararafa is its own error."
+- card: amina-of-zazzau
+  fact: "Credited with walls round the towns she conquered, some surviving"
+  verdict: confirmed
+  sources:
+    - {title: "Gale", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/amina-zaria", quote: "A 15-kilometer wall surrounding the modern-day city of Zaria dates back to Amina and is known as ganuwar Amina (Amina's wall)."}
+    - {title: "DW (2020)", url: "https://www.dw.com/en/amina-the-warrior-queen-of-zazzau/a-52448399", quote: "the walls she built around the major cities she conquered"}
+  note: ""
+- card: amina-of-zazzau
+  fact: "Died on campaign at Atagara"
+  verdict: confirmed
+  sources:
+    - {title: "DW (2020)", url: "https://www.dw.com/en/amina-the-warrior-queen-of-zazzau/a-52448399", quote: "it is widely accepted that she died in battle at Atagara, a place in present day Kogi State"}
+    - {title: "Gale", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/amina-zaria", quote: "it is common belief that Amina died during a military campaign at Atagara near Bida in Nigeria"}
+  note: ""
+- card: amina-of-zazzau
+  fact: "Muhammad Bello wrote of her in the 19th century; chronicles and oral traditions supply the rest"
+  verdict: corrected
+  sources:
+    - {title: "DW (2020)", url: "https://www.dw.com/en/amina-the-warrior-queen-of-zazzau/a-52448399", quote: "The second sultan of Sokoto, Mohammed Bello, who was also a son to Usman dan Fodio ... first wrote about her in his book 'Infaku'l Maisuri'"}
+    - {title: "Dan Tafa, Rawdat al-Afkaar, trans. Muhammad Shareef (1991)", url: "http://siiasi.org/wp-content/uploads/2014/12/English-Rawd-al-Afkaar.pdf", quote: "The government of Zakzak was the kingdom established by Amina, the daughter of the ruler of Zakzak."}
+  note: "Gale garbles Bello ('Kano Chronicles, a translation by Muhammed Bellow'). Card now: the Kano Chronicle mentions her, 19th-century Sokoto scholars such as Muhammad Bello wrote of her (DW for Bello; Dan Tafa, grandson of Usman dan Fodio, is a second Sokoto writer), oral traditions supply the rest (Gale: 'Other details were pulled from the oral traditions of Nigeria')."
+- card: amina-of-zazzau
+  fact: "Dates disputed (15th vs 16th century); some say she never existed"
+  verdict: corrected
+  sources:
+    - {title: "Kano Chronicle, Palmer (1908)", url: "https://archive.org/details/sim_royal-anthropological-institute-of-great-britain-ireland_1908_38", quote: "At this time Zaria, under Queen Amina, conquered ... Dauda Bakon Damisa ruled Kano seventeen years. XVI. Abdulahi Burja ... A.D. 1438-1452."}
+    - {title: "Gale", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/amina-zaria", quote: "Historians J. F. Ajayi and Michael Crowder suggested that Amina lived in the fifteenth century rather than the sixteenth century."}
+  note: "Dispute line now adds the Kano Chronicle's placement in Dauda's reign (1421–1438 in Palmer's chronology). DW is the source for doubts about her existence ('Some have argued that Amina's story is a myth and that she never existed'); Gale implies the same ('the fact that she existed is a matter of general acceptance')."
+- card: amina-of-zazzau
+  fact: "Hausa praise: a woman as capable as a man; remembered as the warrior queen"
+  verdict: confirmed
+  sources:
+    - {title: "Gale", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/amina-zaria", quote: "(Amina, daughter of Nikatau, a woman as capable as a man) ... commonly known as the warrior queen"}
+    - {title: "DW (2020)", url: "https://www.dw.com/en/amina-the-warrior-queen-of-zazzau/a-52448399", quote: "'Amina, a woman like a man!' ... She is mostly remembered as the revered warrior queen."}
+  note: ""
+# ---------------- zera-yacob ----------------
+- card: zera-yacob
+  fact: "Hatata means 'inquiry' in Ge'ez"
+  verdict: confirmed
+  sources:
+    - {title: "Dag Herbjørnsrud, Aeon", url: "https://aeon.co/essays/yacob-and-amo-africas-precursors-to-locke-hume-and-kant", quote: "Hatäta (meaning ‘the enquiry’)"}
+    - {title: "Anna Franchin, Internazionale (2024)", url: "https://www.internazionale.it/notizie/anna-franchin/2024/01/09/hatata-zera-yacob", quote: "che in geez ... significa indagine, inchiesta"}
+  note: ""
+- card: zera-yacob
+  fact: "A philosophical autobiography set in 17th-century Ethiopia; narrator born in the north around 1600"
+  verdict: confirmed
+  sources:
+    - {title: "Cantor & Egid, JHI (2026), abstract", url: "https://www.repository.cam.ac.uk/items/d5c5469f-1334-4aaa-95cd-c786a5b8cf03", quote: "a philosophical autobiography set in seventeenth-century Ethiopia"}
+    - {title: "Herbjørnsrud, Aeon", url: "https://aeon.co/essays/yacob-and-amo-africas-precursors-to-locke-hume-and-kant", quote: "Yacob was born on 28 August 1599 into a rather poor family on a farm outside Axum, the legendary former capital in northern Ethiopia."}
+  note: ""
+- card: zera-yacob
+  fact: "Age of strife between the Orthodox Church and Catholicism brought by Jesuits"
+  verdict: confirmed
+  sources:
+    - {title: "Herbjørnsrud, Aeon", url: "https://aeon.co/essays/yacob-and-amo-africas-precursors-to-locke-hume-and-kant", quote: "In the 1620s, a Portuguese Jesuit convinced King Susenyos to convert to Catholicism, which soon became Ethiopia’s official religion."}
+    - {title: "Internazionale (2024)", url: "https://www.internazionale.it/notizie/anna-franchin/2024/01/09/hatata-zera-yacob", quote: "sconvolta dal conflitto tra cristiani ortodossi copti e cattolici ferenj (stranieri)"}
+  note: ""
+- card: zera-yacob
+  fact: "Declared no religion more right; denounced to the king; fled to a cave; reasoned out a Creator, equality of women and men, against slavery"
+  verdict: confirmed
+  sources:
+    - {title: "Herbjørnsrud, Aeon", url: "https://aeon.co/essays/yacob-and-amo-africas-precursors-to-locke-hume-and-kant", quote: "had declared that no religion was more right than any other, and his enemies brought charges against him to the king ... all humans – male and female – are created equal. He argued against slavery ... a personal belief in a theistic Creator, reasoning that the world’s order makes that the most rational option"}
+    - {title: "Internazionale (2024)", url: "https://www.internazionale.it/notizie/anna-franchin/2024/01/09/hatata-zera-yacob", quote: "Si rifugia in una grotta in cui medita tutto il giorno, e lì sviluppa la sua filosofia: crede nella supremazia della ragione, sostiene che uomini e donne sono stati creati uguali, si schiera contro la schiavitù"}
+  note: "Wion (Afriques 2021) independently notes 'the rejection of slavery, because the creator [...] made us equal'."
+- card: zera-yacob
+  fact: "When the violence ended he returned; disciple Walda Heywat urged him to write"
+  verdict: confirmed
+  sources:
+    - {title: "Herbjørnsrud, Aeon", url: "https://aeon.co/essays/yacob-and-amo-africas-precursors-to-locke-hume-and-kant", quote: "The book was written down in 1667 on the insistence of his student, Walda Heywat"}
+    - {title: "Internazionale (2024)", url: "https://www.internazionale.it/notizie/anna-franchin/2024/01/09/hatata-zera-yacob", quote: "Quando finiscono le violenze, esce dal suo isolamento e torna in città, dove trova un discepolo che lo esorta a trascrivere i suoi pensieri"}
+  note: ""
+- card: zera-yacob
+  fact: "Reached Europe in the mid-19th century through Capuchin Giusto da Urbino"
+  verdict: confirmed
+  sources:
+    - {title: "Anaïs Wion, Afriques (2021), episode 2 (via web.archive.org)", url: "https://journals.openedition.org/afriques/3188", quote: "showed how the texts of the Ḥ atatā were discovered by the Capuchin missionary Giusto d’Urbino between 1852 and 1854"}
+    - {title: "Internazionale (2024)", url: "https://www.internazionale.it/notizie/anna-franchin/2024/01/09/hatata-zera-yacob", quote: "Il testo fu “scoperto” nel 1852 da un frate cappuccino di nome Giusto da Urbino"}
+  note: "Wion episode 1 (afriques/1063, abstract) agrees."
+- card: zera-yacob
+  fact: "In 1920 Conti Rossini declared it a forgery by Giusto; academia accepted"
+  verdict: confirmed
+  sources:
+    - {title: "Wion, Afriques (2021), episode 2", url: "https://journals.openedition.org/afriques/3188", quote: "Between 1916 and 1920, two successive articles by C. Conti Rossini cast doubt on the authenticity of the texts and demonstrated in a few pages that Giusto d’Urbino himself was the author ... Nonetheless, t he academic community accepted these two scholars’ authoritative arguments."}
+    - {title: "Internazionale (2024)", url: "https://www.internazionale.it/notizie/anna-franchin/2024/01/09/hatata-zera-yacob", quote: "Poi negli anni venti un orientalista italiano, Carlo Conti Rossini, sostenne che lo scritto era un falso, prodotto dallo stesso da Urbino. ... la sua tesi fu presa per buona da quasi tutti gli accademici europei"}
+  note: "Dispute line changed from 'in the 1920s' to 'in 1920' to match the body and Wion."
+- card: zera-yacob
+  fact: "Claude Sumner translated it into English in 1976 and read it as Ethiopian philosophy"
+  verdict: confirmed
+  sources:
+    - {title: "Herbjørnsrud, Aeon", url: "https://aeon.co/essays/yacob-and-amo-africas-precursors-to-locke-hume-and-kant", quote: "The only translation into English was done in 1976, by the Canadian professor and priest Claude Sumner. He published it as part of a five-volume work on Ethiopian philosophy"}
+    - {title: "Stanford Encyclopedia of Philosophy: Africana Philosophy", url: "https://plato.stanford.edu/entries/africana/", quote: "Zera Yacob and Walda Heyat, two seventeenth century philosophers (Sumner 1976–78)"}
+  note: "Wion (2021) also cites 'Claude Sumner’s 1976 English translation'."
+- card: zera-yacob
+  fact: "The authorship debate continues; the Hatata has a place in the history of African philosophy"
+  verdict: confirmed
+  sources:
+    - {title: "Cantor & Egid, JHI (2026), abstract", url: "https://www.repository.cam.ac.uk/items/d5c5469f-1334-4aaa-95cd-c786a5b8cf03", quote: "new archival evidence to reframe the controversy over the authorship"}
+    - {title: "Wion, Afriques (2021), episode 2", url: "https://journals.openedition.org/afriques/3188", quote: "The present article follows up on this scholarly investigation in an effort to corroborate and enrich it, but also to show its shortcomings"}
+  note: "Ledger paired Cantor & Egid with Internazionale, which summarises Egid (not independent); replaced by Wion. Place in African philosophy: SEP Africana entry and Adamson & Jeffers' History of Philosophy without any gaps episode 'In You I Take Shelter: Zera Yacob'."
+
+unledgered:
+- card: kuba-kingdom
+  fact: "Front matter: Nsheng (Mushenge) at lat -4.9667, lon 21.4333"
+  verdict: corrected
+  sources:
+    - {title: "OpenStreetMap Nominatim: Mushenge, Kasaï", url: "https://nominatim.openstreetmap.org/search?q=Mushenge&format=json", quote: "\"lat\":\"-4.5209850\",\"lon\":\"21.3115805\",\"class\":\"place\",\"type\":\"town\",\"name\":\"Mushenge\""}
+    - {title: "Art Institute of Chicago: Ceremonial Skirt (110059)", url: "https://www.artic.edu/artworks/110059", quote: "Kuba, Bushong Democratic Republic of the Congo, Kasai Province, Mushenge"}
+  note: "Old point lay ~50 km south of the town; set to -4.5210, 21.3116."
+- card: kuba-kingdom
+  fact: "Further reading: Tervala, Polk and Gould, Kuba: Fabric of an Empire (BMA); AIC Helmet Mask (Mukenga)"
+  verdict: confirmed
+  sources:
+    - {title: "Smithsonian Libraries catalogue", url: "https://si.edu/object/siris_sil_1103765", quote: "Kuba : fabric of an empire / by Kevin Tervala, Matthew S. Polk, Jr., and Amy L. Gould"}
+    - {title: "Art Institute of Chicago API", url: "https://api.artic.edu/api/v1/artworks/search?q=mukenga%20kuba", quote: "\"id\":99539,\"title\":\"Helmet Mask (Mukenga)\""}
+  note: "Search-result title only for the catalogue; BMA exhibition 2018–19 confirmed in the same results."
+- card: aksum-obelisk
+  fact: "Front matter: years 300–2008; Northern Stelae Park and Piazza di Porta Capena coordinates"
+  verdict: confirmed
+  sources:
+    - {title: "Rose (2009)", url: "https://archive.archaeology.org/0905/abstracts/aksum.html", quote: "One, at more than 100 feet and about 550 tons, fell and shattered as it was being erected in the fourth century."}
+    - {title: "Zamani Project", url: "https://zamaniproject.org/site-ethiopia-aksum-stelae-field.html", quote: "Aksum’s prosperity seems to have peaked in the late 3rd and early 4th centuries AD. Monumental royal tombs were constructed"}
+  note: "Coordinates plausible for both sites."
+- card: lalibela
+  fact: "Churches are cut down into the ground, not built up"
+  verdict: confirmed
+  sources:
+    - {title: "Phillipson, CWA (2006)", url: "https://world-archaeology.com/features/lalibela-ethiopa-rock-hewn-churches", quote: "the huge task represented by the cutting of these churches and their associated trenches, passages and tunnels"}
+    - {title: "Fauvelle-Aymar et al. (2010), abstract", url: "https://www.cambridge.org/core/journals/antiquity/article/rockcut-stratigraphy-sequencing-the-lalibela-churches/B53C45E7808B62840E6C5BF3F6380B88", quote: "Since the churches are cut into live rock"}
+  note: ""
+- card: taytu-betul
+  fact: "Further reading: Chris Prouty, Empress Taytu and Menilek II (1986)"
+  verdict: confirmed
+  sources:
+    - {title: "Library of Congress (2022)", url: "https://blogs.loc.gov/international-collections/2022/03/taytu-betul-the-cunning-empress-of-ethiopia/", quote: "(Prouty , p. 199)"}
+  note: "Cited by LOC; bibliographic detail is standard."
+- card: afonso-kongo-letters
+  fact: "Further reading: Thornton, Afonso I Mvemba a Nzinga, King of Kongo: His Life and Correspondence (Hackett, 2023)"
+  verdict: confirmed
+  sources:
+    - {title: "Panorama, Source 3.1", url: "https://res.cloudinary.com/bloomsbury-online-resources/image/upload/v1786707560/Panorama%20-%20A%20World%20History/Volume%202/Primary%20Source%20Documents/Source_3.1_Volume_2.pdf", quote: "Source: John K. Thornton, Afonso I Mvemba a Nzinga, King of Kongo: His Life and Correspondence (Indianapolis and Cambridge: Hackett Publishing Company, 2023): 203."}
+  note: ""
+- card: kimpa-vita
+  fact: "Aged about 22 at death; drawn into the war of factions"
+  verdict: confirmed
+  sources:
+    - {title: "Thornton, DACB (D)", url: "https://dacb.org/stories/congo/kimpa3-vita/", quote: "The movement, calling for reconciliation was received on partisan lines, with the Kimpanzu being sympathetic, while the Kinlaza were opposed."}
+    - {title: "Hendrickx (2021)", url: "https://www.pharosjot.com/uploads/7/1/6/3/7163688/theme_1_article_4_se1_2021__benjamin_hendrickx_kimpa_vita.pdf", quote: "Kimpa Vita (Dona Beatriz) (1684-1706), who - in a period of civil war - \"supported\" Pedro IV (Nusama a Mvemba) to conquer and maintain the throne ... and then “betrayed” him"}
+  note: "Age derived from 1684 and 1706, both confirmed."
+- card: zera-yacob
+  fact: "Further reading: Lee, Worku and Belcher (trans.), The Hatata Inquiries (De Gruyter, 2023)"
+  verdict: confirmed
+  sources:
+    - {title: "History of Philosophy without any gaps, episode 9, further reading", url: "https://historyofphilosophy.net/zera-yacob", quote: "R. Lee with M. Worku and W.L. Belcher, The Hatata Enquiries: Two Texts of Seventeenth-Century African Philosophy from Ethiopia about Reason, the Creator, and Our Ethical Responsibilities (Berlin: 2023)."}
+  note: ""
+- card: amina-of-zazzau
+  fact: "Further reading: Bolanle Awe (ed.), Nigerian Women in Historical Perspective (1992)"
+  verdict: unconfirmed
+  sources: []
+  note: "Not opened in this check (well-known edited volume, Sankore/Bookcraft 1992); left as further reading, not a fact claim."
+- card: all
+  fact: "Russian versions"
+  verdict: confirmed
+  sources: []
+  note: "Read all nine .ru.md against the English after the fixes: same content, «» quotes, em dashes with spaces; each correction mirrored in Russian (Kimpa dispute line added in RU; Amina 'Кановская хроника' passages; Afonso letter details; Lalibela, Kuba, Aksum, Taytu, Ishango, Zera wording)."

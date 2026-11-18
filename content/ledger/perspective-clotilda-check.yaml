@@ -1,0 +1,216 @@
+# Second, independent check (2026-11-15) of content/ledger/perspective-clotilda.yaml
+# and content/cards/clotilda.md / .ru.md. Every cited URL was reopened and every
+# ledger quote was matched against the fetched page text. NMAAHC returned a
+# Smithsonian 500 page and is not relied on.
+# verdict: confirmed | corrected (card wording or sources changed) |
+#          refuted | unconfirmed (removed from the card).
+# Card-level changes: the `dispute` field was removed from both files. It cited no
+# contradicting source; every page opened gives about 110 carried (EoA, AHC, NatGeo
+# 2018 and 2019, Enslaved.org; EJI "more than 100"). Diouf in NatGeo 2019 says Foster
+# "selected 125" at Ouidah, so the card now says "took about 110 ... aboard" rather
+# than "bought", which removes the only possible tension. Word counts after the fix:
+# EN male 218, female 220; RU male 230, female 231 (within +30%). Both copies read
+# context -> story -> outcome -> closing; .ru.md marks the same paragraphs.
+- card: clotilda
+  fact: "In 1860, more than fifty years after the US outlawed the international slave trade, the Mobile shipbuilder Timothy Meaher wagered he could smuggle in a cargo of captives"
+  verdict: corrected
+  sources:
+    - {title: "Encyclopedia of Alabama: Clotilda", url: "https://encyclopediaofalabama.org/article/emclotilda-em/", quote: "more than 50 years after the U.S. Congress outlawed the international slave trade. Timothy Meaher, a Mobile businessman and ship builder had enlisted the help of Capt. William Foster and wagered that he could smuggle a ship carrying enslaved people into Mobile Bay."}
+    - {title: "National Geographic (2018, Joel K. Bourne Jr.)", url: "https://www.nationalgeographic.com/science/2018/07/clotilda-slave-ships-mobile-alabama-africatown-archaeology/", quote: "The mastermind was Captain Timothy Meaher, a wealthy Mobile shipbuilder ... Meaher allegedly wagered several Northern businessmen $1,000 that he could smuggle a cargo of Africans into Mobile Bay under the nose of federal officials"}
+  note: "Card said 'banned the slave trade'; the 1808 law banned the import (international trade), not the domestic trade. Wording changed in wow and body, EN and RU."
+- card: clotilda
+  fact: "Captain William Foster took about 110 men, women and children aboard at Ouidah in Dahomey"
+  verdict: corrected
+  sources:
+    - {title: "Alabama Historical Commission: Clotilda", url: "https://ahc.alabama.gov/clotilda.aspx", quote: "The storied ship illegally transported 110 people from Benin, Africa to Mobile, Alabama in 1860"}
+    - {title: "National Geographic (2019, Sylviane Diouf)", url: "https://www.nationalgeographic.com/magazine/article/clotilda-americas-last-slave-ship-stole-them-from-home-it-couldnt-steal-their-identities-feature", quote: "The 110 young men, women, and children who boarded the Clotilda in May 1860"}
+  note: "Was 'bought about 110'. NatGeo 2019 says Foster 'selected 125 individuals', so purchase vs boarding are not the same number; 'took aboard' is what all sources agree on. EoA ('110 ... were purchased') and Enslaved.org ('about 110') also agree. Ouidah in Dahomey: EoA and NatGeo 2018 ('Whydah in present-day Benin')."
+- card: clotilda
+  fact: "Foster then burned the schooner Clotilda to hide the evidence"
+  verdict: corrected
+  sources:
+    - {title: "Encyclopedia of Alabama: Clotilda", url: "https://encyclopediaofalabama.org/article/emclotilda-em/", quote: "Foster refitted a Gulf Coast schooner, the Clotilda ... Soon after it arrived in Mobile Bay, its captain burned the ship to hide the evidence"}
+    - {title: "National Geographic (2018)", url: "https://www.nationalgeographic.com/science/2018/07/clotilda-slave-ships-mobile-alabama-africatown-archaeology/", quote: "Foster then burned his ship to the waterline to hide the evidence of his crime."}
+  note: "Card said 'his schooner'. Ownership is not agreed: NatGeo 2018 calls it Meaher's ('take his fast, new schooner'), Enslaved.org (Cudjo Lewis) says 'The owner of the ship, Timothy Meaher'. Changed to 'the schooner Clotilda' (RU 'сжёг шхуну «Клотильда»'). EJI and AHC also confirm the burning."
+- card: clotilda
+  fact: "Only Foster was fined"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Alabama: Clotilda", url: "https://encyclopediaofalabama.org/article/emclotilda-em/", quote: "the only punishment meted out was a $1,000 fine levied against Foster"}
+    - {title: "National Geographic (2019)", url: "https://www.nationalgeographic.com/magazine/article/clotilda-americas-last-slave-ship-stole-them-from-home-it-couldnt-steal-their-identities-feature", quote: "Timothy Meaher was arrested, released on bail, tried, and cleared of all charges. ... Foster was fined $1,000"}
+  note: "Different publishers and texts, though both rest on Diouf's research. Consistent with NatGeo 2018 ('indicted ... but never convicted') and EJI (no indictment): the fine was for unpaid duties, not a conviction."
+- card: clotilda
+  fact: "The captives stayed enslaved until 1865"
+  verdict: confirmed
+  sources:
+    - {title: "Alabama Historical Commission: Clotilda", url: "https://ahc.alabama.gov/clotilda.aspx", quote: "where they remained in slavery until the end of the Civil War"}
+    - {title: "National Park Service", url: "https://www.nps.gov/articles/000/zora-neale-hurston-and-cudjo-s-own-story.htm", quote: "where they were enslaved until the end of the Civil War in 1865."}
+  note: ""
+- card: clotilda
+  fact: "Oluale Kossola was nineteen when Dahomey's army raided his Yoruba town of Bantè"
+  verdict: confirmed
+  sources:
+    - {title: "Enslaved.org: Cudjo Lewis (Timothy M. Broughton)", url: "https://enslaved.org/fullStory/16-23-106156/", quote: "At the time of his enslavement at the age of 19 ... Kossola was captured in February 1860, alongside 109 others in a raid by the Kingdom of Dahomey."}
+    - {title: "National Geographic (2019)", url: "https://www.nationalgeographic.com/magazine/article/clotilda-americas-last-slave-ship-stole-them-from-home-it-couldnt-steal-their-identities-feature", quote: "Like 19-year-old Kossola (later known as Cudjo Lewis), several were victims of a raid by the slave-trading kingdom of Dahomey."}
+  note: "Yoruba: EoA and Enslaved.org; Bantè: NPS ('his town, Bantè') and EoA ('Banté region'). EoA ledger quote extended with its 'At age 19 ... In April 1860 ... attacked the town' passage. Enslaved.org Kossola page added to card sources."
+- card: clotilda
+  fact: "Once free, he married his shipmate Abile"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Alabama: Oluale Kossola", url: "https://encyclopediaofalabama.org/?p=15143", quote: "In 1865, with general emancipation, Cujdo regained his freedom and took the name Lewis. He married Abile, a young woman who also had been on the Clotilda ."}
+    - {title: "Enslaved.org: Cudjo Lewis", url: "https://enslaved.org/fullStory/16-23-106156/", quote: "After gaining his freedom, Lewis married Abile, a woman who had been on the slave ship Clotilda with him."}
+  note: "First ledger's second source (NatGeo: 'Abile and Kossola's land') did not state the marriage; replaced."
+- card: clotilda
+  fact: "The Africans could not raise the fare home"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Alabama: Oluale Kossola", url: "https://encyclopediaofalabama.org/?p=15143", quote: "when they failed to raise enough money for the trip, they decided to stay in Alabama"}
+    - {title: "Equal Justice Initiative", url: "https://eji.org/?p=17839", quote: "official indifference and economic barriers prevented the men and women of the Clotilda from returning home."}
+  note: "NatGeo 2019 agrees ('longing to return home, but it was not enough')."
+- card: clotilda
+  fact: "Kossola put their claim for land for an African Town to Meaher, who refused"
+  verdict: confirmed
+  sources:
+    - {title: "National Geographic (2019)", url: "https://www.nationalgeographic.com/magazine/article/clotilda-americas-last-slave-ship-stole-them-from-home-it-couldnt-steal-their-identities-feature", quote: "Why don’t you give us a piece of this land and let us build for ourselves an African Town?” They were asking for reparations. Meaher was incensed."}
+    - {title: "Enslaved.org: Cudjo Lewis", url: "https://enslaved.org/fullStory/16-23-106156/", quote: "Lewis asked Timothy Meaher for land to build the community, and he refused."}
+  note: "EoA Kossola also: 'Cudjo was chosen as the spokesman. Meaher refused their demand'. Card paraphrases without quotation marks, which is right."
+- card: clotilda
+  fact: "In 1927 Zora Neale Hurston came to interview him and kept returning"
+  verdict: confirmed
+  sources:
+    - {title: "National Park Service", url: "https://www.nps.gov/articles/000/zora-neale-hurston-and-cudjo-s-own-story.htm", quote: "Hurston began working as an investigator for Dr. Carter G. Woodson and the Association for the Study of Negro Life and History (ASNLH) in 1927. ... Also during this expedition, Hurston first interviewed Kossola in Mobile, Alabama."}
+    - {title: "Enslaved.org: Cudjo Lewis", url: "https://enslaved.org/fullStory/16-23-106156/", quote: "was interviewed repeatedly by Zora Neale Hurston over the end of 1927 and the first few months of 1928"}
+  note: "First ledger's NPS quote did not contain 1927; replaced with the passage that does. NPR/MPR also gives 1927 and 'numerous times'."
+- card: clotilda
+  fact: "He told her about his town, the raid and the slave pen at Ouidah"
+  verdict: confirmed
+  sources:
+    - {title: "National Park Service", url: "https://www.nps.gov/articles/000/zora-neale-hurston-and-cudjo-s-own-story.htm", quote: "He then details the raid by Dahomey on his town, Bantè, that led to his capture and the journey to the barracoon in Ouidah"}
+    - {title: "Enslaved.org: Cudjo Lewis", url: "https://enslaved.org/fullStory/16-23-106156/", quote: "According to Kossola, he and the other slaves were marched to the coast and then held in the coastal port of Ouidah for three weeks in a slave pen, also known as a barracoon."}
+  note: ""
+- card: clotilda
+  fact: "By then he had outlived his wife and all six of their children"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Alabama: Oluale Kossola", url: "https://encyclopediaofalabama.org/?p=15143", quote: "He and his wife had five sons and one daughter. ... Sadly, all of the children died young ... Abile passed away in 1908, just one month before Aleck died."}
+    - {title: "Enslaved.org: Cudjo Lewis", url: "https://enslaved.org/fullStory/16-23-106156/", quote: "Together they had six children: Aleck, James, Pollee Dahoo, David, Cudjo, and Celia Es-bew-O-see). ... In November 1908, his beloved Abile died after forty years of marriage."}
+  note: "NPS also says six and 'Kossola survived his wife and children'; EoA's Africatown photo caption: 'The children all died before their parents and Abile Lewis died in 1908', so all were dead well before 1927. A Christian Century review of Barracoon says 'five children'; a single review against EoA, Enslaved.org and NPS is not treated as a dispute."
+- card: clotilda
+  fact: "He died in 1935"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Alabama: Oluale Kossola", url: "https://encyclopediaofalabama.org/?p=15143", quote: "Cudjo Lewis died of age-related illness on July 26, 1935, at about 94."}
+    - {title: "Enslaved.org: Cudjo Lewis", url: "https://enslaved.org/fullStory/16-23-106156/", quote: "Lewis survived until 1935 when he died well into his nineties."}
+  note: ""
+- card: clotilda
+  fact: "Barracoon waited until 2018"
+  verdict: confirmed
+  sources:
+    - {title: "National Park Service", url: "https://www.nps.gov/articles/000/zora-neale-hurston-and-cudjo-s-own-story.htm", quote: "Hurston made many attempts to publish Barracoon but was unsuccessful until 2018."}
+    - {title: "Enslaved.org: Cudjo Lewis", url: "https://enslaved.org/fullStory/16-23-106156/", quote: "It was finally published in 2018, over 80 years after Lewis’ death"}
+  note: ""
+- card: clotilda
+  fact: "Redoshi was twelve"
+  verdict: confirmed
+  sources:
+    - {title: "HISTORY", url: "https://www.history.com/articles/last-slave-ship-survivor-redoshi-clotilda", quote: "Kidnapped at age 12 in what is now Benin, she became a prisoner on the Clotilda"}
+    - {title: "WBUR Here & Now (2019)", url: "https://www.wbur.org/hereandnow/2019/04/08/trans-atlantic-slave-trade-last-survivor", quote: "was kidnapped at the age of 12 from Benin in West Africa, in 1860."}
+  note: ""
+- card: clotilda
+  fact: "Traders made her the 'wife' of a grown man from another people and sold the pair to Washington Smith of Dallas County"
+  verdict: confirmed
+  sources:
+    - {title: "HISTORY", url: "https://www.history.com/articles/last-slave-ship-survivor-redoshi-clotilda", quote: "Slave traders forced the 12-year-old Redoshi to be the “wife” of an adult enslaved man who spoke a different language. The traders then sold Redoshi and the man as a couple to Washington Smith"}
+    - {title: "Enslaved.org: Redoshi (Hannah Durkin)", url: "https://enslaved.org/fullStory/16-23-126816/", quote: "Redoshi was a twelve-year-old girl when she was sold and married to Yawith, a much older man from a different ethnic group."}
+  note: "Dallas County: Enslaved.org ('Washington Smith’s plantation in Bogue Chitto, Dallas County') and HISTORY ('Smith’s Bogue Chitto plantation in Dallas County')."
+- card: clotilda
+  fact: "Smith renamed her Sally Smith"
+  verdict: confirmed
+  sources:
+    - {title: "HISTORY", url: "https://www.history.com/articles/last-slave-ship-survivor-redoshi-clotilda", quote: "Smith also forced her to take a new name, “Sally Smith.”"}
+    - {title: "Enslaved.org: Redoshi", url: "https://enslaved.org/fullStory/16-23-126816/", quote: "When Redoshi arrived at the Smith plantation, they renamed her Sally or Sallie"}
+  note: ""
+- card: clotilda
+  fact: "Freed after five years in house and fields"
+  verdict: confirmed
+  sources:
+    - {title: "HISTORY", url: "https://www.history.com/articles/last-slave-ship-survivor-redoshi-clotilda", quote: "For nearly five years, Redoshi worked in the house and the fields of Smith’s Bogue Chitto plantation in Dallas County."}
+    - {title: "WBUR Here & Now (2019)", url: "https://www.wbur.org/hereandnow/2019/04/08/trans-atlantic-slave-trade-last-survivor", quote: "She was forced to work in both the fields and in the house, the slave owner's house, and she was basically enslaved for about five years."}
+  note: ""
+- card: clotilda
+  fact: "She sharecropped his land with her husband, Yawith"
+  verdict: confirmed
+  sources:
+    - {title: "Enslaved.org: Redoshi", url: "https://enslaved.org/fullStory/16-23-126816/", quote: "Redoshi and Yawith continued to labor as sharecroppers on the Smith plantation."}
+    - {title: "WBUR Here & Now (2019)", url: "https://www.wbur.org/hereandnow/2019/04/08/trans-atlantic-slave-trade-last-survivor", quote: "She still had to work as a sharecropper, her husband had to work as a sharecropper on the land in which they were enslaved."}
+  note: ""
+- card: clotilda
+  fact: "She kept her language and faith"
+  verdict: confirmed
+  sources:
+    - {title: "Enslaved.org: Redoshi", url: "https://enslaved.org/fullStory/16-23-126816/", quote: "Redoshi remained committed to her West African spiritual beliefs and language throughout her life."}
+    - {title: "WBUR Here & Now (2019)", url: "https://www.wbur.org/hereandnow/2019/04/08/trans-atlantic-slave-trade-last-survivor", quote: "She worked to hold on to her West African religious belief"}
+  note: ""
+- card: clotilda
+  fact: "She told her story to Amelia Boynton Robinson, later a Selma voting-rights leader"
+  verdict: confirmed
+  sources:
+    - {title: "HISTORY", url: "https://www.history.com/articles/last-slave-ship-survivor-redoshi-clotilda", quote: "Later, Redoshi described this forced child marriage to the civil rights activist Amelia Boynton Robinson."}
+    - {title: "Enslaved.org: Redoshi", url: "https://enslaved.org/fullStory/16-23-126816/", quote: "Amelia Boynton Robinson, a civil rights activist who leads African American voting rights efforts in Dallas County from the 1930s to the climactic protests at Selma in the mid 1960s."}
+  note: "WBUR agrees ('a leading role in the fight for voting rights')."
+- card: clotilda
+  fact: "She outlived all but one known shipmate"
+  verdict: confirmed
+  sources:
+    - {title: "Enslaved.org: Redoshi", url: "https://enslaved.org/fullStory/16-23-126816/", quote: "Redoshi outlived all other known Clotilda survivors with the exception of Matilda McCrear, who died in January 1940."}
+    - {title: "Encyclopedia of Alabama: Oluale Kossola", url: "https://encyclopediaofalabama.org/?p=15143", quote: "Two women, Sally \"Redoshi\" Smith and Matilda McCrear, were the last surviving members of the group, living until 1937 and 1940, respectively."}
+  note: "Her death year (1936 vs 1937) differs between sources; the card rightly does not state it."
+- card: clotilda
+  fact: "A 1938 film shows her lips moving without sound"
+  verdict: confirmed
+  sources:
+    - {title: "Enslaved.org: Redoshi", url: "https://enslaved.org/fullStory/16-23-126816/", quote: "Redoshi appeared in the U.S. Department of Agriculture film The Negro Farmer: Extension Work for Better Farming and Better Living (1938). ... Although she is shown talking on film, tragically her voice is silenced in the brief clip"}
+    - {title: "WBUR Here & Now (2019)", url: "https://www.wbur.org/hereandnow/2019/04/08/trans-atlantic-slave-trade-last-survivor", quote: "you can see her mouth move in the film footage, but there's no audio track, so you can't hear directly from her."}
+  note: "1938: Enslaved.org and HISTORY."
+- card: clotilda
+  fact: "The only known footage of a woman survivor of the transatlantic slave trade"
+  verdict: confirmed
+  sources:
+    - {title: "HISTORY", url: "https://www.history.com/articles/last-slave-ship-survivor-redoshi-clotilda", quote: "That film containing footage of Redoshi is the only known footage of a female survivor of the transatlantic slave trade."}
+    - {title: "Enslaved.org: Redoshi", url: "https://enslaved.org/fullStory/16-23-126816/", quote: "This recording of Redoshi is the only known footage of a female African born transatlantic slave trade survivor."}
+  note: "Both rest on Durkin's finding but are separate texts by different publishers."
+- card: clotilda
+  fact: "The scholar Hannah Durkin reconstructed her life in 2019"
+  verdict: confirmed
+  sources:
+    - {title: "HISTORY", url: "https://www.history.com/articles/last-slave-ship-survivor-redoshi-clotilda", quote: "Durkin published her research on Redoshi in the 2019 volume of Slavery & Abolition ."}
+    - {title: "National Park Service", url: "https://www.nps.gov/articles/000/zora-neale-hurston-and-cudjo-s-own-story.htm", quote: "Hannah Durkin published two articles in 2019 and 2020 about two other survivors of the Clotilda , Sally “Redoshi” Smith and Matilda McCrear"}
+  note: ""
+- card: clotilda
+  fact: "The shipmates near Mobile bought land, partly from Meaher, and built their own African Town"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopedia of Alabama: Oluale Kossola", url: "https://encyclopediaofalabama.org/?p=15143", quote: "they purchased land from him and others and established African Town on a hill north of Mobile."}
+    - {title: "Enslaved.org: Cudjo Lewis", url: "https://enslaved.org/fullStory/16-23-106156/", quote: "in 1872 Lewis purchased two acres from Meaher for $100."}
+  note: "NatGeo 2019 agrees ('buying land, including from the Meahers')."
+- card: clotilda
+  fact: "Many descendants still live in today's Africatown"
+  verdict: confirmed
+  sources:
+    - {title: "Equal Justice Initiative", url: "https://eji.org/?p=17839", quote: "many of them founded Africatown, an independent community near Mobile where many of their descendants live today."}
+    - {title: "National Geographic (2019)", url: "https://www.nationalgeographic.com/magazine/article/clotilda-americas-last-slave-ship-stole-them-from-home-it-couldnt-steal-their-identities-feature", quote: "Many of their descendants still live there today."}
+  note: ""
+- card: clotilda
+  fact: "In May 2019 the Alabama Historical Commission identified the wreck"
+  verdict: confirmed
+  sources:
+    - {title: "Alabama Historical Commission", url: "https://ahc.alabama.gov/clotilda.aspx", quote: "In May 2019, after a comprehensive assessment and months of research, the Alabama Historical Commission announced experts and archaeological evidence determined the identity of the Clotilda"}
+    - {title: "Encyclopedia of Alabama: Clotilda", url: "https://encyclopediaofalabama.org/article/emclotilda-em/", quote: "in May 2019, the Alabama Historical Commission (AHC) announced that the Clotilda had been identified conclusively."}
+  note: ""
+- card: clotilda
+  fact: "(card field) dispute: number of captives Foster bought is not settled"
+  verdict: refuted
+  sources:
+    - {title: "Encyclopedia of Alabama: Clotilda", url: "https://encyclopediaofalabama.org/article/emclotilda-em/", quote: "110 enslaved men, women, and children were purchased at the slave markets in the port city of Ouidah"}
+    - {title: "Enslaved.org: Redoshi", url: "https://enslaved.org/fullStory/16-23-126816/", quote: "disembarking around 110 captives"}
+  note: "No source opened contradicts 'about 110' carried; the field named none ('other institutional sources differ'). Removed from .md and .ru.md per the rule that dispute is only for positive contradiction."

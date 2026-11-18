@@ -3,12 +3,13 @@ id: nsibidi
 kind: script
 title: Nsibidi
 wow: "The leopard society of the Cross River kept its knowledge in secret signs, and enslaved members carried the society itself across the Atlantic to Havana."
-years: [1911]
+years: [1830, 1911]
 places:
   - {name: "Cross River region", lat: 4.9757, lon: 8.3417}
   - {name: Havana, lat: 23.1136, lon: -82.3666}
   - {name: Matanzas, lat: 23.0411, lon: -81.5775}
 zoom: 3
+moment: {year: 1830, place: 1}
 era: v0
 books: [voices, heirs]
 further:
@@ -36,6 +37,6 @@ media:
 ---
 Nsibidi is a system of signs, not an alphabet: its marks do not spell out sounds but stand for ideas and situations, such as love. It comes from the Cross River region of today's Nigeria and Cameroon and belongs above all to the Ekpe, or leopard, society, a men's association whose lodges governed local towns and trade. Nsibidi is ideographic, abstract and gestural: signs are drawn on the ground or performed with the body, and members wear them on ukara, cotton wrappers with white signs against indigo. Many signs are widely known; their deepest meanings are kept by initiates.
 
-Secret signs crossed the Atlantic. Enslaved Cross River Africans carried Ekpe to Cuba and, from the 1830s, rebuilt its lodges, first in Regla across the bay from Havana, then in Havana and Matanzas, as the Abakuá society. In 1911 Elphinstone Dayrell printed a set of nsibidi signs in a London journal.
+Secret signs crossed the Atlantic. Enslaved Cross River Africans carried Ekpe to Cuba and, from the 1830s, rebuilt its lodges, first in Regla across the bay from Havana, then in Havana and Matanzas, as the Abakuá society. The Abakuá society is still active in Cuba today. In Nigeria, in 1911, Elphinstone Dayrell, the British District Commissioner at Ikom, printed a set of nsibidi signs with their meanings in a London journal.
 
-Other African signs and scripts: [[adinkra|adinkra]], [[vai-script|the Vai script]] and [[nko|N'Ko]]; another sign system, carried in sound, is the [[talking-drums|talking drum]].
+Nsibidi belongs to a wider African family of signs and scripts, from [[adinkra|adinkra]] to [[vai-script|the Vai script]] and [[nko|N'Ko]]; the [[talking-drums|talking drum]] carries a sign system of its own in sound.

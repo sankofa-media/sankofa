@@ -11,6 +11,8 @@ export const RU_TITLE_FIX: Record<string, string> = { 'Африка до': 'Аф
 
 export function localizeStatics(l: Lang): void {
   if (l === 'en') return;
+  // The page's own landmarks carry their Russian names beside the English ones.
+  if (typeof document !== 'undefined') document.querySelectorAll<HTMLElement>('[data-aria-ru]').forEach((el) => el.setAttribute('aria-label', el.dataset.ariaRu!));
   for (const e of ERAS) e.label = t(e.label);
   for (const r of REGIONS) r.name = t(r.name);
   for (const m of MOVEMENTS) {

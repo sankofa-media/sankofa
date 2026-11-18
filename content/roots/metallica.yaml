@@ -9,24 +9,60 @@ genre: "Thrash metal"
 genreRu: "трэш-метал"
 links:
   - to: "root:black-sabbath"
-    claim: "Metallica recorded Black Sabbath’s “Sabbra Cadabra”, inserting a passage from “A National Acrobat”."
-    claimRu: "Metallica записали «Sabbra Cadabra» группы Black Sabbath, включив в неё фрагмент «A National Acrobat»."
-    sources:
-      - title: "Distorted Sound: Heavy Music History — Garage Inc."
-        url: "https://distortedsoundmag.com/heavy-music-history-garage-inc-metallica/"
-      - title: "Metal Hammer: The story of Metallica’s Garage Inc."
-        url: "https://www.loudersound.com/bands-artists/metallica-load-cover-songs-story-album"
-    kind: "cover"
-    what: "“Sabbra Cadabra”: Metallica’s recording also includes a passage from Black Sabbath’s “A National Acrobat”."
-    whatRu: "«Sabbra Cadabra»: в запись Metallica также включён фрагмент «A National Acrobat» группы Black Sabbath."
-  - to: "root:black-sabbath"
     kind: "influence"
-    claim: "Black Sabbath were a formative musical influence on Metallica’s James Hetfield."
-    claimRu: "Black Sabbath сыграли важную роль в музыкальном становлении Джеймса Хэтфилда из Metallica."
-    sources:
-      - title: "Blabbermouth: full Metallica speech inducting Black Sabbath"
-        url: "https://blabbermouth.net/news/full-text-of-metallica-s-black-sabbath-induction-speech-available"
-      - title: "Metal Hammer: James Hetfield on Tony Iommi’s influence"
-        url: "https://www.loudersound.com/news/metallica-james-hetfield-why-black-sabbath-tony-iommi-riff-lord-2026"
-story: "Black Sabbath helped shape James Hetfield as a musician. Metallica also recorded “Sabbra Cadabra”, weaving in a passage from “A National Acrobat”."
-storyRu: "Black Sabbath повлияли на становление Джеймса Хэтфилда как музыканта. Metallica также записали «Sabbra Cadabra», вплетя в неё фрагмент «A National Acrobat»."
+    how: "James Hetfield took his rhythm-guitar playing and songwriting from Tony Iommi: massive, menacing riffs carrying dark lyrics as the core of the song."
+    howRu: "Ритм-гитару и манеру сочинять Джеймс Хэтфилд перенял у Тони Айомми: массивные, угрожающие риффы, на которых держатся мрачные тексты, — сердцевина песни."
+    carries: ["riff"]
+    dimensions: ["harmony-form", "sound", "image"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["harmony-form", "image"]
+        text: "Inducting Black Sabbath into the Rock & Roll Hall of Fame, Hetfield describes them as mammoth riffs with menacing lyrics, and Ulrich traces all of metal to them."
+        textRu: "Вводя Black Sabbath в Зал славы рок-н-ролла, Хэтфилд описывает их музыку как исполинские риффы с угрожающими текстами, а Ульрих возводит к ним весь метал."
+        source:
+          title: "Blabbermouth: full text of Metallica’s Black Sabbath induction speech (2006)"
+          url: "https://blabbermouth.net/news/full-text-of-metallica-s-black-sabbath-induction-speech-available"
+          quote: "BLACK SABBATH is mammoth riffs with menacing lyrics that made me oh so happy. … All the metal bands and all the so-called subgenres of metal still trace their lineage to one place"
+      - type: "testimony"
+        dimensions: ["harmony-form", "sound"]
+        text: "Hetfield names Iommi as the musician who most inspired his rhythm playing and songwriting."
+        textRu: "Хэтфилд называет Айомми музыкантом, который сильнее всех вдохновлял его как ритм-гитариста и автора песен."
+        source:
+          title: "Metal Hammer (Louder): James Hetfield on Tony Iommi"
+          url: "https://www.loudersound.com/news/metallica-james-hetfield-why-black-sabbath-tony-iommi-riff-lord-2026"
+          quote: "He is the one that has inspired me the most for my rhythm playing and songwriting"
+      - type: "testimony"
+        dimensions: ["sound", "image"]
+        text: "On the Hall of Fame’s Black Sabbath page Ulrich calls the band groundbreaking for its huge hymns of doom."
+        textRu: "На странице Black Sabbath в Зале славы Ульрих называет группу новаторской за её огромные гимны обречённости."
+        source:
+          title: "Rock & Roll Hall of Fame: Black Sabbath"
+          url: "https://www.rockhall.com/inductees/black-sabbath"
+          quote: "Utterly groundbreaking, with their huge hymns of doom."
+    scope: "career"
+  - to: "style:heavy-metal"
+    kind: "style"
+    how: "Metallica came out of the new wave of British heavy metal, which Lars Ulrich sought out in England, and sped it up into thrash: breakneck tempos, precise riffing, punk energy and progressive song structures."
+    howRu: "Metallica вышли из новой волны британского хеви-метала, за которой Ларс Ульрих ездил в Англию, и разогнали её до трэша: бешеные темпы, точные риффы, панковская энергия и прогрессивное строение песен."
+    carries: ["riff"]
+    dimensions: ["rhythm", "harmony-form", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["rhythm", "harmony-form", "performance"]
+        text: "The Rock & Roll Hall of Fame describes Metallica fusing speed, precision and hooks, bringing punk energy and prog sophistication into metal, from breakneck thrash to mid-tempo heaviness."
+        textRu: "Зал славы рок-н-ролла пишет, что Metallica соединили скорость, точность и цепкие хуки, принесли в метал панковскую энергию и изощрённость прогрессив-рока и прошли путь от бешеного трэша к тяжести на средних темпах."
+        source:
+          title: "Rock & Roll Hall of Fame: Metallica"
+          url: "https://rockhall.com/inductees/metallica/"
+          quote: "Fusing speed, precision, and wickedly catchy hooks … punk energy and prog rock sophistication … Debuting with raw, breakneck thrash on 1984’s Kill ‘Em All"
+      - type: "critics"
+        dimensions: ["rhythm", "performance"]
+        text: "Alexis Petridis in The Guardian recounts Ulrich travelling to England for the new wave of British heavy metal and calls Diamond Head a key influence without which, Ulrich said, Metallica would not exist."
+        textRu: "Алексис Петридис в The Guardian рассказывает, как Ульрих поехал в Англию за новой волной британского хеви-метала, и называет Diamond Head ключевым влиянием: по словам Ульриха, без них Metallica бы не было."
+        source:
+          title: "The Guardian: Metallica, 72 Seasons review (2023)"
+          url: "https://www.theguardian.com/music/2023/apr/13/metallica-72-seasons-review"
+          quote: "Lars Ulrich had saved up his paper-round money and decamped to England in search of the new wave of British heavy metal … Diamond Head nevertheless became a key influence on Metallica: Ulrich claimed the band simply “wouldn’t exist” without them."
+    scope: "career"
+story: "James Hetfield took his rhythm playing and songwriting from Tony Iommi’s menacing riffs. Metallica came out of the new wave of British heavy metal and sped it up into thrash, adding punk energy and progressive song structures."
+storyRu: "Ритм-гитара и манера сочинять Джеймса Хэтфилда выросли из угрожающих риффов Тони Айомми. Metallica вышли из новой волны британского хеви-метала и разогнали её до трэша, добавив панковскую энергию и прогрессивное строение песен."

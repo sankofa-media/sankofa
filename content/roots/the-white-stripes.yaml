@@ -7,25 +7,60 @@ placeRu: "Детройт"
 genre: "Garage rock and blues rock"
 genreRu: "гаражный рок и блюз-рок"
 links:
-  - to: "card:blues"
-    claim: "The White Stripes covered Son House's 'Death Letter'."
-    claimRu: "The White Stripes исполняли «Death Letter» Сона Хауса."
-    sources:
-      - title: "Rolling Stone: The White Stripes Share 2000 Performance of Death Letter"
-        url: "https://au.rollingstone.com/music/music-news/white-stripes-death-letter-2000-12901/"
-      - title: "The Guardian: The White Stripes bring the blues back to rock"
-        url: "https://www.theguardian.com/music/2011/jun/12/white-stripes-blues-rock"
-    kind: "cover"
-    what: "“Death Letter”: the White Stripes’ own performance of Son House’s song."
-    whatRu: "«Death Letter»: собственное исполнение песни Сона Хауса группой The White Stripes."
   - to: "root:son-house"
     kind: "influence"
-    claim: "Son House’s stark singing and playing became a guiding model for the White Stripes’ Jack White."
-    claimRu: "Суровое, скупое пение и игра Сона Хауса стали ориентиром для Джека Уайта из The White Stripes."
-    sources:
-      - title: "The New Yorker: Jack White’s Infinite Imagination"
-        url: "https://www.newyorker.com/magazine/2017/03/13/jack-whites-infinite-imagination"
-      - title: "Classic Rock: How Jack White brought Son House to a new generation"
-        url: "https://www.loudersound.com/features/jack-white-son-house"
-story: "Son House’s stark expression became a guiding model for Jack White. The White Stripes also took up his repertoire, recording “Death Letter”."
-storyRu: "Суровая выразительность Сона Хауса стала ориентиром для Джека Уайта. The White Stripes обратились и к его репертуару, записав «Death Letter»."
+    scope: "career"
+    how: "From Son House Jack White took the raw Delta blues voice of the White Stripes: bluesy acoustic slide guitar and a primal, percussive attack, retold rather than copied."
+    howRu: "У Сона Хауса Джек Уайт взял необработанный дельта-блюзовый голос The White Stripes — блюзовую акустическую слайд-гитару и первобытную, ударную атаку, пересказанные, а не скопированные."
+    carries: ["slide-guitar"]
+    dimensions: ["sound"]
+    evidence:
+      - type: "listening"
+        dimensions: ["sound"]
+        text: "Contemporary Musicians says a friend introduced White to Son House, whom he heard as the song he had been waiting for his whole life, and describes his raw, bluesy acoustic slide guitar; White adds that he is not interested in copying, but in retelling the story."
+        textRu: "Справочник Contemporary Musicians рассказывает, что Уайта познакомил с музыкой Сона Хауса приятель и что в ней Уайт услышал песню, которую ждал всю жизнь; там же описана грубая, блюзовая акустическая слайд-гитара самого Уайта. Сам Уайт говорит, что копировать ему неинтересно — ему интересно пересказать историю заново."
+        source:
+          title: "Bruce Walker, Contemporary Musicians: The White Stripes (via Encyclopedia.com)"
+          url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/white-stripes"
+          quote: "I heard the song I'd been waiting to hear my whole life. … Alternately featuring Jack's primal electric guitar playing with his raw, bluesy acoustic slide guitar playing"
+      - type: "critics"
+        dimensions: []
+        text: "EBSCO's reference entry on House says the White Stripes credited him as a major inspiration, and describes the raw intensity, percussive bottleneck slide and shouted, near-spoken singing of his style."
+        textRu: "Справочная статья EBSCO о Хаусе пишет, что The White Stripes называли его одним из главных источников вдохновения, и описывает его манеру: необработанную силу, ударный слайд бутылочным горлышком и пение на грани крика и речи."
+        source:
+          title: "EBSCO Research Starters: Son House"
+          url: "https://www.ebsco.com/research-starters/history/son-house"
+          quote: "the alternative rock band the White Stripes credited House as a major inspiration"
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "The Rock & Roll Hall of Fame lists Son House first among the White Stripes' influences and says the duo reinvigorated rock and roll by returning it to its primal blues roots."
+        textRu: "Зал славы рок-н-ролла ставит Сона Хауса первым в списке тех, кто повлиял на The White Stripes, и пишет, что дуэт оживил рок-н-ролл, вернув его к первобытным блюзовым корням."
+        source:
+          title: "Rock & Roll Hall of Fame: The White Stripes"
+          url: "https://www.rockhall.com/inductees/white-stripes"
+          quote: "reinvigorated rock & roll by returning it to its primal blues roots"
+  - to: "style:indie-rock"
+    kind: "style"
+    scope: "career"
+    how: "The White Stripes played the stripped-down garage rock of the 2000s revival: a guitar-and-drums duo, punk-blues minimalism, instinctive hypnotic drumming and a strict red-and-white image."
+    howRu: "The White Stripes играли аскетичный гаражный рок возрождения 2000-х: дуэт гитары и барабанов, панк-блюзовый минимализм, инстинктивные гипнотические барабаны и строгий красно-белый образ."
+    dimensions: ["sound", "rhythm", "image"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "rhythm", "image"]
+        text: "The Rock & Roll Hall of Fame says the band's sound began as stripped-down, late-nineties punk-blues minimalism, praises Meg White's instinctual, hypnotic drumming and notes the red-and-white design carried even onto her drum heads."
+        textRu: "Зал славы рок-н-ролла пишет, что звучание группы начиналось как аскетичный панк-блюзовый минимализм конца девяностых, хвалит инстинктивную, гипнотическую игру Мег Уайт и отмечает красно-белый узор, доходивший даже до пластиков её барабанов."
+        source:
+          title: "Rock & Roll Hall of Fame: The White Stripes"
+          url: "https://www.rockhall.com/inductees/white-stripes"
+          quote: "The White Stripes' sound began as stripped-down, late '90s punk-blues minimalism, with electric guitar, … Meg's playing was incredibly instinctual, hypnotic and unique. … painting the heads of Meg White's Ludwig drum set in the same distinctive red and white design."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Contemporary Musicians describes a minimalist hybrid of American punk, folk, country and blues, and quotes Tom Sinclair praising the band for stripping things down to the primal."
+        textRu: "Справочник Contemporary Musicians описывает минималистский сплав американского панка, фолка, кантри и блюза и приводит слова Тома Синклера, похвалившего группу за то, что она свела всё к первобытной основе."
+        source:
+          title: "Bruce Walker, Contemporary Musicians: The White Stripes (via Encyclopedia.com)"
+          url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/white-stripes"
+          quote: "minimalist hybrid of American punk, folk, country, and blues music"
+story: "Jack White heard in Son House the song he had been waiting for his whole life, and took from him the raw Delta voice of the White Stripes: bluesy slide guitar and a primal, percussive attack, retold rather than copied. With Meg White's hypnotic drums the duo set it inside the stripped-down punk-blues minimalism of the garage revival."
+storyRu: "В музыке Сона Хауса Джек Уайт услышал песню, которую ждал всю жизнь, и взял у него необработанный дельта-блюзовый голос The White Stripes — блюзовый слайд и первобытную ударную атаку, пересказанные, а не скопированные. Вместе с гипнотическими барабанами Мег Уайт дуэт вписал этот голос в аскетичный панк-блюзовый минимализм гаражного возрождения."

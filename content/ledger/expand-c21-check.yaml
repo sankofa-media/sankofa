@@ -1,0 +1,874 @@
+# Second, independent fact-check of batch c21 (2026-11-14).
+# Every source in expand-c21.yaml was re-fetched (Britannica, 64 Parishes, Criterion and the LoC registry list via archive.org snapshots);
+# every quoted passage was found verbatim on its page.
+checks:
+- card: pata-pata
+  fact: "Makeba was born in Johannesburg (Prospect Township, near Johannesburg) in 1932"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Miriam Makeba", url: "https://www.britannica.com/biography/Miriam-Makeba", quote: "born March 4, 1932, Prospect Township, near Johannesburg, South Africa"}
+    - {title: "South African History Online: Miriam Makeba", url: "https://www.sahistory.org.za/people/miriam-makeba", quote: "Born 4 March 1932 in Johannesburg, South Africa"}
+- card: pata-pata
+  fact: "In the 1950s she sang with the all-woman group the Skylarks"
+  verdict: confirmed
+  sources:
+    - {title: "Megan Iacobini de Fazio, Bandcamp Daily: Miriam Makeba, Pata Pata (2019)", url: "https://daily.bandcamp.com/2019/09/30/miriam-makeba-pata-pata-review/", quote: "by the 1950s she was singing professionally with all-girl group The Skylarks"}
+    - {title: "South African History Online: Miriam Makeba", url: "https://www.sahistory.org.za/people/miriam-makeba", quote: "Makeba sang for all-women group, the Skylarks"}
+- card: pata-pata
+  fact: "She first recorded Pata Pata with the Skylarks in South Africa"
+  verdict: confirmed
+  sources:
+    - {title: "Megan Iacobini de Fazio, Bandcamp Daily: Miriam Makeba, Pata Pata (2019)", url: "https://daily.bandcamp.com/2019/09/30/miriam-makeba-pata-pata-review/", quote: "had previously been recorded by Makeba and The Skylarks in 1959"}
+    - {title: "John Eyles, All About Jazz: Miriam Makeba, Pata Pata (2019)", url: "https://www.allaboutjazz.com/pata-pata-miriam-makeba-strut-records-review-by-john-eyles", quote: "She had written the title song in 1956, when she still lived in South Africa, and recorded it with the Skylarks"}
+  note: "Bandcamp Daily (Iacobini de Fazio) and All About Jazz (Eyles) are separate signed reviews of the 2019 Strut reissue; they disagree on the year (1959 vs 1956), so they are not copying one text. Year kept out of the body and in dispute."
+- card: pata-pata
+  fact: "South Africa was governed by apartheid"
+  verdict: confirmed
+  sources:
+    - {title: "Megan Iacobini de Fazio, Bandcamp Daily: Miriam Makeba, Pata Pata (2019)", url: "https://daily.bandcamp.com/2019/09/30/miriam-makeba-pata-pata-review/", quote: "South Africa’s white supremacist government banned her from returning home"}
+    - {title: "South African History Online: Miriam Makeba", url: "https://www.sahistory.org.za/people/miriam-makeba", quote: "She was the first black musician to leave South Africa on account of apartheid"}
+- card: pata-pata
+  fact: "Her part in the 1959 American anti-apartheid documentary Come Back, Africa brought her notice abroad"
+  verdict: confirmed
+  sources:
+    - {title: "Megan Iacobini de Fazio, Bandcamp Daily: Miriam Makeba, Pata Pata (2019)", url: "https://daily.bandcamp.com/2019/09/30/miriam-makeba-pata-pata-review/", quote: "All of that changed in 1959, when the young artist appeared in U.S. filmmaker Lionel Rogosin’s acclaimed anti-apartheid documentary Come Back, Africa"}
+    - {title: "Encyclopaedia Britannica: Miriam Makeba", url: "https://www.britannica.com/biography/Miriam-Makeba", quote: "her appearance in the documentary film Come Back, Africa (1959) attracted the interest of Harry Belafonte and other American performers"}
+- card: pata-pata
+  fact: "With Harry Belafonte's help she settled in the United States"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Miriam Makeba", url: "https://www.britannica.com/biography/Miriam-Makeba", quote: "With their help, Makeba in 1959 settled in the United States"}
+    - {title: "South African History Online: Miriam Makeba", url: "https://www.sahistory.org.za/people/miriam-makeba", quote: "met Harry Belafonte, who helped her to immigrate to the USA"}
+- card: pata-pata
+  fact: "In 1960 South Africa refused to let her back in"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Miriam Makeba", url: "https://www.britannica.com/biography/Miriam-Makeba", quote: "In 1960 she was denied reentry into South Africa"}
+    - {title: "South African History Online: Miriam Makeba", url: "https://www.sahistory.org.za/people/miriam-makeba", quote: "In 1960, when she tried to return to South Africa for her mother’s funeral, she discovered that her passport had been revoked"}
+- card: pata-pata
+  fact: "In 1963 South Africa banned her records"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Miriam Makeba", url: "https://www.britannica.com/biography/Miriam-Makeba", quote: "In 1963 the South African government banned her records and revoked her passport"}
+    - {title: "South African History Online: Miriam Makeba", url: "https://www.sahistory.org.za/people/miriam-makeba", quote: "She lived in the US thereafter and her records were banned in South Africa"}
+- card: pata-pata
+  fact: "In 1967 she recorded Pata Pata again for Reprise with producer Jerry Ragovoy"
+  verdict: confirmed
+  sources:
+    - {title: "John Eyles, All About Jazz: Miriam Makeba, Pata Pata (2019)", url: "https://www.allaboutjazz.com/pata-pata-miriam-makeba-strut-records-review-by-john-eyles", quote: "Originally released on Reprise in 1967"}
+    - {title: "Megan Iacobini de Fazio, Bandcamp Daily: Miriam Makeba, Pata Pata (2019)", url: "https://daily.bandcamp.com/2019/09/30/miriam-makeba-pata-pata-review/", quote: "this brighter, uptempo version, produced by R&B producer Jerry Ragovoy"}
+    - {title: "Bruce Lindsay, Jazz Journal: Miriam Makeba, Pata Pata (2019)", url: "https://jazzjournal.co.uk/?p=14042", quote: "released Pata Pata on Reprise in 1967"}
+  note: "Ragovoy also named as producer in All About Jazz: \"jointly credited to makeba and jerry ragovoy, the album's producer\"."
+- card: pata-pata
+  fact: "The 1967 version was brighter and faster than the original"
+  verdict: confirmed
+  sources:
+    - {title: "Megan Iacobini de Fazio, Bandcamp Daily: Miriam Makeba, Pata Pata (2019)", url: "https://daily.bandcamp.com/2019/09/30/miriam-makeba-pata-pata-review/", quote: "this brighter, uptempo version"}
+    - {title: "Bruce Lindsay, Jazz Journal: Miriam Makeba, Pata Pata (2019)", url: "https://jazzjournal.co.uk/?p=14042", quote: "an updated version of a song Makeba wrote in 1956 when she was still in South Africa, is the album’s standout track: an upbeat, uptempo song"}
+- card: pata-pata
+  fact: "The single climbed into the Billboard top 20 (it was an American hit in 1967)"
+  verdict: confirmed
+  sources:
+    - {title: "Bruce Lindsay, Jazz Journal: Miriam Makeba, Pata Pata (2019)", url: "https://jazzjournal.co.uk/?p=14042", quote: "It made it into the Billboard top 20"}
+    - {title: "John Eyles, All About Jazz: Miriam Makeba, Pata Pata (2019)", url: "https://www.allaboutjazz.com/pata-pata-miriam-makeba-strut-records-review-by-john-eyles", quote: "peaking at 12 on the Billboard Hot 100"}
+- card: pata-pata
+  fact: "The 1967 hit made Makeba known worldwide, far beyond those who already knew her"
+  verdict: confirmed
+  sources:
+    - {title: "Megan Iacobini de Fazio, Bandcamp Daily: Miriam Makeba, Pata Pata (2019)", url: "https://daily.bandcamp.com/2019/09/30/miriam-makeba-pata-pata-review/", quote: "But it was in 1967, with her incredibly catchy smash hit “Pata Pata,” that Makeba became a global sensation."}
+    - {title: "South African History Online: Miriam Makeba", url: "https://www.sahistory.org.za/people/miriam-makeba", quote: "She was also the first black woman to have a Top-Ten worldwide hit with Pata Pata in 1967."}
+- card: pata-pata
+  fact: "Makeba stayed in exile for some thirty years"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Miriam Makeba", url: "https://www.britannica.com/biography/Miriam-Makeba", quote: "she lived in exile for three decades thereafter"}
+    - {title: "South African History Online: Miriam Makeba", url: "https://www.sahistory.org.za/people/miriam-makeba", quote: "She then returned, after 31 years in exile"}
+- card: pata-pata
+  fact: "In 1990 the newly freed Nelson Mandela urged her to come home, and she did"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Miriam Makeba", url: "https://www.britannica.com/biography/Miriam-Makeba", quote: "In 1990 the South African Black activist Nelson Mandela , who had just been released from his extended imprisonment, encouraged Makeba to return to South Africa"}
+    - {title: "South African History Online: Miriam Makeba", url: "https://www.sahistory.org.za/people/miriam-makeba", quote: "Nelson Mandela was freed from 27 years in prison, and encouraged Miriam Makeba to return to South Africa. She then returned"}
+- card: pata-pata
+  fact: "She died in 2008 in Italy, shortly after a concert"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Miriam Makeba", url: "https://www.britannica.com/biography/Miriam-Makeba", quote: "she died of a heart attack shortly after giving a concert in Italy in 2008"}
+    - {title: "South African History Online: Miriam Makeba", url: "https://www.sahistory.org.za/people/miriam-makeba", quote: "Makeba died in 2008, at the age 76, after having a of a heart attack after a 30 minute performance at a concert"}
+  note: "SAHO vital record also gives \"died 9 November 2008 in Castel Volturno, Italy\"."
+- card: respect
+  fact: "Otis Redding wrote Respect and released it on Stax in 1965"
+  verdict: confirmed
+  sources:
+    - {title: "Cary O'Dell, Library of Congress National Recording Registry: Respect", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Respect.pdf", quote: "Otis Redding would have those honors when he released his original composition on the Stax label in 1965"}
+    - {title: "Encyclopaedia Britannica: Otis Redding", url: "https://www.britannica.com/biography/Otis-Redding", quote: "“ Respect ” (1965)"}
+    - {title: "Jonathan Gould, CBC q: Monterey Pop at 50 (book excerpt, 2017)", url: "https://www.cbc.ca/radio/q/monterey-pop-at-50-the-day-otis-redding-became-a-legend-1.4162924", quote: "\"Respect,\" one of the songs Redding had written and recorded"}
+- card: respect
+  fact: "In Redding's version the man asks his woman for respect; Franklin reversed the gender perspective"
+  verdict: confirmed
+  sources:
+    - {title: "Lee Cowan, CBS News: How Aretha Franklin's Respect became one of the greatest songs of all time", url: "https://www.cbsnews.com/news/how-aretha-franklins-respect-became-one-of-the-greatest-songs-of-all-time", quote: "In Redding's version, the woman was sitting at home waiting for her man. Franklin turned that on its head."}
+    - {title: "Vintage Rock (2024), abstract in EBSCO Music Index: 14 February 1967, Aretha Franklin records Respect", url: "https://www.ebsco.com/articles/biography/c34dd244-4740-5690-82c7-29d63588fa61/14-february-1967-aretha-franklin-records-respect", quote: "Franklin's version notably reversed the song's gender perspective"}
+    - {title: "Jonathan Gould, CBC q: Monterey Pop at 50 (book excerpt, 2017)", url: "https://www.cbc.ca/radio/q/monterey-pop-at-50-the-day-otis-redding-became-a-legend-1.4162924", quote: "into a woman's demand for the real thing"}
+- card: respect
+  fact: "Franklin was a Baptist minister's daughter who grew up singing in her father's Detroit church"
+  verdict: confirmed
+  sources:
+    - {title: "Cary O'Dell, Library of Congress National Recording Registry: Respect", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Respect.pdf", quote: "growing up in her father’s, the Reverend C.L. Franklin, New Bethel Baptist Church in Detroit"}
+    - {title: "Encyclopaedia Britannica: Aretha Franklin", url: "https://www.britannica.com/biography/Aretha-Franklin", quote: "Her father, C.L. Franklin, presided over the New Bethel Baptist Church of Detroit"}
+- card: respect
+  fact: "Franklin knew Redding's recording"
+  verdict: confirmed
+  sources:
+    - {title: "Cary O'Dell, Library of Congress National Recording Registry: Respect", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Respect.pdf", quote: "Franklin was already familiar with Redding’s recording"}
+    - {title: "Lee Cowan, CBS News: How Aretha Franklin's Respect became one of the greatest songs of all time", url: "https://www.cbsnews.com/news/how-aretha-franklins-respect-became-one-of-the-greatest-songs-of-all-time", quote: "I had heard Otis Redding sing it"}
+- card: respect
+  fact: "In 1967 she recorded it at an Atlantic session in New York with producer Jerry Wexler"
+  verdict: confirmed
+  sources:
+    - {title: "Cary O'Dell, Library of Congress National Recording Registry: Respect", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Respect.pdf", quote: "It was Franklin’s producer Jerry Wexler who first brought “Respect” to the singer’s attention. It was at a recording session in New York City."}
+    - {title: "Vintage Rock (2024), abstract in EBSCO Music Index: 14 February 1967, Aretha Franklin records Respect", url: "https://www.ebsco.com/articles/biography/c34dd244-4740-5690-82c7-29d63588fa61/14-february-1967-aretha-franklin-records-respect", quote: "Aretha Franklin's 1967 cover of the song, recorded in New York City with the Muscle Shoals Rhythm Section and produced by Jerry Wexler"}
+  note: "Recording city confirmed as New York by both; neither names Atlantic's own studio, so the front-matter place was renamed from \"Atlantic Recording Studios, New York\" to \"New York\" (city coordinates)."
+- card: respect
+  fact: "With her sister Carolyn she reworked tempo and phrasing and added 'sock it to me'"
+  verdict: confirmed
+  sources:
+    - {title: "Cary O'Dell, Library of Congress National Recording Registry: Respect", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Respect.pdf", quote: "sitting at the piano that day with her sister Carolyn in attendance, the two women began to play with the song’s tempo and phrasing"}
+    - {title: "Lee Cowan, CBS News: How Aretha Franklin's Respect became one of the greatest songs of all time", url: "https://www.cbsnews.com/news/how-aretha-franklins-respect-became-one-of-the-greatest-songs-of-all-time", quote: "my sister came by, Carolyn, and she helped me put the background to it, and we came up with the cliché, 'sock it to me,'"}
+- card: respect
+  fact: "Her version went to number one on the Billboard pop chart"
+  verdict: confirmed
+  sources:
+    - {title: "Cary O'Dell, Library of Congress National Recording Registry: Respect", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Respect.pdf", quote: "Aretha’s went all the way to #1"}
+    - {title: "Jonathan Gould, CBC q: Monterey Pop at 50 (book excerpt, 2017)", url: "https://www.cbc.ca/radio/q/monterey-pop-at-50-the-day-otis-redding-became-a-legend-1.4162924", quote: "stood at #1 on the Billboard Pop charts"}
+- card: respect
+  fact: "At the Monterey Pop Festival in June 1967 Redding introduced it as a song a girl had taken away from him but would sing it anyway"
+  verdict: confirmed
+  sources:
+    - {title: "Jonathan Gould, CBC q: Monterey Pop at 50 (book excerpt, 2017)", url: "https://www.cbc.ca/radio/q/monterey-pop-at-50-the-day-otis-redding-became-a-legend-1.4162924", quote: "\"This is a song that a girl took away from me,\" Otis told the crowd. \"But I'm still going to do it anyway.\""}
+    - {title: "Lee Cowan, CBS News: How Aretha Franklin's Respect became one of the greatest songs of all time", url: "https://www.cbsnews.com/news/how-aretha-franklins-respect-became-one-of-the-greatest-songs-of-all-time", quote: "\"This love song is a song a girl took away from me... but I'm still going to do it anyway,\" he said."}
+- card: respect
+  fact: "Redding died in a plane crash in December 1967"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Otis Redding", url: "https://www.britannica.com/biography/Otis-Redding", quote: "On December 10, 1967, Redding and most of his backing band were killed when their chartered plane crashed into a Wisconsin lake."}
+    - {title: "Jonathan Gould, CBC q: Monterey Pop at 50 (book excerpt, 2017)", url: "https://www.cbc.ca/radio/q/monterey-pop-at-50-the-day-otis-redding-became-a-legend-1.4162924", quote: "he was killed in a plane crash in December 1967"}
+- card: respect
+  fact: "Franklin said everyone wanted respect"
+  verdict: confirmed
+  sources:
+    - {title: "Cary O'Dell, Library of Congress National Recording Registry: Respect", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Respect.pdf", quote: "everyone wanted respect"}
+    - {title: "Lee Cowan, CBS News: How Aretha Franklin's Respect became one of the greatest songs of all time", url: "https://www.cbsnews.com/news/how-aretha-franklins-respect-became-one-of-the-greatest-songs-of-all-time", quote: "Everybody wanted respect. Who doesn't want respect?"}
+- card: respect
+  fact: "The record was heard as a woman's declaration and as a battle cry of the civil rights movement"
+  verdict: confirmed
+  sources:
+    - {title: "Cary O'Dell, Library of Congress National Recording Registry: Respect", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Respect.pdf", quote: "It was also one of the battle cries of the civil rights movement."}
+    - {title: "Lee Cowan, CBS News: How Aretha Franklin's Respect became one of the greatest songs of all time", url: "https://www.cbsnews.com/news/how-aretha-franklins-respect-became-one-of-the-greatest-songs-of-all-time", quote: "The respect part of it became a mantra for the Civil Rights Movement"}
+  note: "CBS: \"Respect, in her version, was a declaration of independence\"; Gould (CBC): \"a woman's demand for the real thing\" supports the woman's-declaration reading."
+- card: respect
+  fact: "It became Franklin's signature song"
+  verdict: confirmed
+  sources:
+    - {title: "Vintage Rock (2024), abstract in EBSCO Music Index: 14 February 1967, Aretha Franklin records Respect", url: "https://www.ebsco.com/articles/biography/c34dd244-4740-5690-82c7-29d63588fa61/14-february-1967-aretha-franklin-records-respect", quote: "transformed it into a chart-topping hit and her signature track"}
+    - {title: "Cary O'Dell, Library of Congress National Recording Registry: Respect", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Respect.pdf", quote: "it has remained Franklin’s most famous and requested song"}
+- card: mississippi-goddam
+  fact: "The song is an upbeat show tune in sound, at odds with its lyrics"
+  verdict: confirmed
+  sources:
+    - {title: "Liz Fields, PBS American Masters: The story behind Nina Simone's protest song Mississippi Goddam (2021)", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-nina-simones-protest-song-mississippi-goddam/16651", quote: "the incongruously upbeat show tune"}
+    - {title: "Nadine Cohodas, Library of Congress National Recording Registry: Mississippi Goddam", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/MississippiGoddam.pdf", quote: "its insistent up-beat rhythm at odds with its bracing lyrics"}
+    - {title: "Ruth Feldstein, History News Network: Nina Simone, the antidote to the We Shall Overcome myth", url: "https://www.historynewsnetwork.org/article/154884", quote: "With an upbeat tempo, the “show tune,” as Simone described it"}
+- card: mississippi-goddam
+  fact: "Simone was a classically trained pianist who had made her name as a nightclub (supper-club) singer"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Nina Simone", url: "https://www.britannica.com/biography/Nina-Simone", quote: "A student of classical music at the Juilliard School of Music in New York City , she began performing as a pianist. Her vocal career began in 1954 in an Atlantic City , New Jersey , nightclub"}
+    - {title: "Ruth Feldstein, History News Network: Nina Simone, the antidote to the We Shall Overcome myth", url: "https://www.historynewsnetwork.org/article/154884", quote: "the Southern-born and classically-trained musician, known for her “supper club” music"}
+- card: mississippi-goddam
+  fact: "She wrote it in September 1963 right after the 16th Street Baptist Church bombing in Birmingham killed four Black girls"
+  verdict: confirmed
+  sources:
+    - {title: "Nadine Cohodas, Library of Congress National Recording Registry: Mississippi Goddam", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/MississippiGoddam.pdf", quote: "in September 1963, immediately after four young girls in Birmingham, Alabama, died in a church bombing"}
+    - {title: "Liz Fields, PBS American Masters: The story behind Nina Simone's protest song Mississippi Goddam (2021)", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-nina-simones-protest-song-mississippi-goddam/16651", quote: "It was a bloody Sunday in Birmingham, Alabama on September 15, 1963 that inspired the singer and pianist Nina Simone’s famous protest song"}
+- card: mississippi-goddam
+  fact: "The bomb was planted by Ku Klux Klan members"
+  verdict: confirmed
+  sources:
+    - {title: "Liz Fields, PBS American Masters: The story behind Nina Simone's protest song Mississippi Goddam (2021)", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-nina-simones-protest-song-mississippi-goddam/16651", quote: "the four Ku Klux Klan members who planted the dynamite"}
+    - {title: "Ruth Feldstein, History News Network: Nina Simone, the antidote to the We Shall Overcome myth", url: "https://www.historynewsnetwork.org/article/154884", quote: "four young girls killed when Ku Klux Klan members planted a bomb at the 16th Street Baptist Church in Birmingham, Alabama"}
+- card: mississippi-goddam
+  fact: "She wrote it in one burst of fury"
+  verdict: confirmed
+  sources:
+    - {title: "Ruth Feldstein, History News Network: Nina Simone, the antidote to the We Shall Overcome myth", url: "https://www.historynewsnetwork.org/article/154884", quote: "it came to her in a “rush of fury, hatred and determination”"}
+    - {title: "Liz Fields, PBS American Masters: The story behind Nina Simone's protest song Mississippi Goddam (2021)", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-nina-simones-protest-song-mississippi-goddam/16651", quote: "it erupted out of me quicker than I could write it down"}
+- card: mississippi-goddam
+  fact: "She said she sat down and the whole song came at once"
+  verdict: confirmed
+  sources:
+    - {title: "Liz Fields, PBS American Masters: The story behind Nina Simone's protest song Mississippi Goddam (2021)", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-nina-simones-protest-song-mississippi-goddam/16651", quote: "When I sat down the whole song happened. I never stopped writing until the thing was finished."}
+    - {title: "Nadine Cohodas, Library of Congress National Recording Registry: Mississippi Goddam", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/MississippiGoddam.pdf", quote: "And when these kids got bombed, I sat down and wrote this song."}
+- card: mississippi-goddam
+  fact: "She said singing it felt like firing ten bullets back at the bombers"
+  verdict: confirmed
+  sources:
+    - {title: "Liz Fields, PBS American Masters: The story behind Nina Simone's protest song Mississippi Goddam (2021)", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-nina-simones-protest-song-mississippi-goddam/16651", quote: "Writing and performing it felt “like throwing ten bullets back” at the four Ku Klux Klan members"}
+    - {title: "Nadine Cohodas, Library of Congress National Recording Registry: Mississippi Goddam", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/MississippiGoddam.pdf", quote: "Later she said she felt she had fired “ten bullets” back at the Birmingham bombers."}
+- card: mississippi-goddam
+  fact: "The lyrics name Alabama and Mississippi and list the fears of Black Southerners"
+  verdict: confirmed
+  sources:
+    - {title: "Nadine Cohodas, Library of Congress National Recording Registry: Mississippi Goddam", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/MississippiGoddam.pdf", quote: "They were at once a geography lesson (“Alabama’s got me so upset/Tennessee made me lose my rest/And everybody knows about Mississippi Goddam”) and a catalogue of fears"}
+    - {title: "Liz Fields, PBS American Masters: The story behind Nina Simone's protest song Mississippi Goddam (2021)", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-nina-simones-protest-song-mississippi-goddam/16651", quote: "She also addresses the fears surrounding a biased criminal justice system"}
+- card: mississippi-goddam
+  fact: "The lyrics reject the advice to 'go slow'"
+  verdict: confirmed
+  sources:
+    - {title: "Liz Fields, PBS American Masters: The story behind Nina Simone's protest song Mississippi Goddam (2021)", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-nina-simones-protest-song-mississippi-goddam/16651", quote: "You keep on saying ‘Go slow!’"}
+    - {title: "Ruth Feldstein, History News Network: Nina Simone, the antidote to the We Shall Overcome myth", url: "https://www.historynewsnetwork.org/article/154884", quote: "You keep on saying “Go Slow.”"}
+- card: mississippi-goddam
+  fact: "In 1964 she recorded it live at Carnegie Hall"
+  verdict: confirmed
+  sources:
+    - {title: "Ruth Feldstein, History News Network: Nina Simone, the antidote to the We Shall Overcome myth", url: "https://www.historynewsnetwork.org/article/154884", quote: "In March and April of 1964, singer/songwriter Nina Simone gave several performances at Carnegie Hall. In Concert, the seven-song album that came from these recorded concerts"}
+    - {title: "Liz Fields, PBS American Masters: The story behind Nina Simone's protest song Mississippi Goddam (2021)", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-nina-simones-protest-song-mississippi-goddam/16651", quote: "as it was being recorded live at Carnegie Hall"}
+- card: mississippi-goddam
+  fact: "On stage she told audiences she meant every word of it"
+  verdict: confirmed
+  sources:
+    - {title: "Nadine Cohodas, Library of Congress National Recording Registry: Mississippi Goddam", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/MississippiGoddam.pdf", quote: "told the audience, “I mean every word of it.”"}
+    - {title: "Liz Fields, PBS American Masters: The story behind Nina Simone's protest song Mississippi Goddam (2021)", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-nina-simones-protest-song-mississippi-goddam/16651", quote: "“The name of this tune is Mississippi Goddam, and I mean every word of it,”"}
+- card: mississippi-goddam
+  fact: "Some listeners broke the record and sent it back to the label, calling it bad taste"
+  verdict: confirmed
+  sources:
+    - {title: "Nadine Cohodas, Library of Congress National Recording Registry: Mississippi Goddam", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/MississippiGoddam.pdf", quote: "We got several letters where they had actually broken up this recording and sent it back to the recording company, really, telling them it was in bad taste."}
+    - {title: "Liz Fields, PBS American Masters: The story behind Nina Simone's protest song Mississippi Goddam (2021)", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-nina-simones-protest-song-mississippi-goddam/16651", quote: "“We got several letters where they had actually broken up this recording and sent it back to the recording company, really, telling them it was in bad taste,”"}
+- card: mississippi-goddam
+  fact: "She kept changing the second line to fit events, singing of Selma after the marchers were beaten in 1965"
+  verdict: corrected
+  sources:
+    - {title: "Nadine Cohodas, Library of Congress National Recording Registry: Mississippi Goddam", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/MississippiGoddam.pdf", quote: "she changed the second line to “Selma made me lose my rest” to appreciative cheers"}
+    - {title: "Liz Fields, PBS American Masters: The story behind Nina Simone's protest song Mississippi Goddam (2021)", url: "https://www.pbs.org/wnet/americanmasters/the-story-behind-nina-simones-protest-song-mississippi-goddam/16651", quote: "A year later, she sang for “Selma,” after the brutal police confrontation with peaceful marchers across Alabama’s Edmund Pettus bridge in 1965"}
+  note: "Sources document one change (to Selma); \"kept changing\" overstated it. Body now: \"Later she changed the second line...\"."
+- card: mississippi-goddam
+  fact: "The song made her a voice of the civil rights movement (it reflected her determination to be part of the movement)"
+  verdict: confirmed
+  sources:
+    - {title: "Nadine Cohodas, Library of Congress National Recording Registry: Mississippi Goddam", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/MississippiGoddam.pdf", quote: "It reflected her growing determination to be part of the Civil Rights movement"}
+    - {title: "Encyclopaedia Britannica: Nina Simone", url: "https://www.britannica.com/biography/Nina-Simone", quote: "In the 1960s Simone added protest songs, became a friend of Martin Luther King, Jr. , and Malcolm X , and performed at civil rights demonstrations. Her 1964 song “ Mississippi Goddam” exemplifies this period."}
+- card: zombie-fela
+  fact: "Fela Kuti released Zombie with Africa 70 in 1976, under military rule"
+  verdict: confirmed
+  sources:
+    - {title: "Fela Kuti estate: Story, 1976", url: "https://felakuti.com/story/1976", quote: "It is followed by Zombie, an eviscerating attack on the violent abuse of power by the Nigerian army."}
+    - {title: "Scroll.in: The art of resistance, Zombie by Fela Kuti", url: "https://scroll.in/article/948202/the-art-of-resistance-zombie-by-fela-kuti-questions-repressive-governments", quote: "In 1976, Nigerian musician Fela Kuti released a song titled Zombie that criticised the oppressive military regime in Nigeria."}
+  note: "Africa 70 confirmed by the estate's 1976 page (\"fela releases seven albums with africa 70\") and Britannica: Fela Kuti (band \"known variously as the Nigeria 70, Africa 70\")."
+- card: zombie-fela
+  fact: "Zombie is an afrobeat track with a driving groove and horns"
+  verdict: confirmed
+  sources:
+    - {title: "Dennis Ade Peter, OkayAfrica: Zombie is still Fela Kuti's greatest protest song", url: "https://www.okayafrica.com/zombie-is-fela-kutis-greatest-protest-song/1440729", quote: "a strident groove with percussion mimicking a marching parade and horn blasts growling"}
+    - {title: "David Katz, Red Bull Music Academy Daily: A guide to the albums of Fela Kuti (2012)", url: "https://daily.redbullmusicacademy.com/2012/12/a-guide-to-the-albums-of-fela-kuti", quote: "It starts off strong with a rousing horn fanfare"}
+- card: zombie-fela
+  fact: "The zombie turns, stops and thinks only when told to, and is a soldier of the Nigerian army"
+  verdict: confirmed
+  sources:
+    - {title: "Dennis Ade Peter, OkayAfrica: Zombie is still Fela Kuti's greatest protest song", url: "https://www.okayafrica.com/zombie-is-fela-kutis-greatest-protest-song/1440729", quote: "Zombie no go turn unless you tell am to turn/Zombie no go think unless you tell am to think"}
+    - {title: "David Katz, Red Bull Music Academy Daily: A guide to the albums of Fela Kuti (2012)", url: "https://daily.redbullmusicacademy.com/2012/12/a-guide-to-the-albums-of-fela-kuti", quote: "the zombie of the title, who does whatever he is told unthinkingly, is revealed to be a soldier of the Nigerian Army"}
+    - {title: "Scroll.in: The art of resistance, Zombie by Fela Kuti", url: "https://scroll.in/article/948202/the-art-of-resistance-zombie-by-fela-kuti-questions-repressive-governments", quote: "Kuti compares the Nigerian military personnel to zombies who follow orders mindlessly"}
+- card: zombie-fela
+  fact: "The record became a huge hit"
+  verdict: confirmed
+  sources:
+    - {title: "David Katz, Red Bull Music Academy Daily: A guide to the albums of Fela Kuti (2012)", url: "https://daily.redbullmusicacademy.com/2012/12/a-guide-to-the-albums-of-fela-kuti", quote: "The song became a huge hit"}
+    - {title: "Dennis Ade Peter, OkayAfrica: Zombie is still Fela Kuti's greatest protest song", url: "https://www.okayafrica.com/zombie-is-fela-kutis-greatest-protest-song/1440729", quote: "“It was a big deal, ‘Zombie’ was huge,”"}
+- card: zombie-fela
+  fact: "Fela lived with family, musicians and followers in a Lagos compound he called the Kalakuta Republic"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Funmilayo Ransome-Kuti", url: "https://www.britannica.com/biography/Funmilayo-Ransome-Kuti", quote: "the family property in Lagos, which Fela had transformed into a commune that he called the Kalakuta Republic"}
+    - {title: "Dennis Ade Peter, OkayAfrica: Zombie is still Fela Kuti's greatest protest song", url: "https://www.okayafrica.com/zombie-is-fela-kutis-greatest-protest-song/1440729", quote: "Fela’s two-story building and residence that served as a commune for family, band members, dancers and dozens of others"}
+- card: zombie-fela
+  fact: "Police had raided the compound before"
+  verdict: confirmed
+  sources:
+    - {title: "Dennis Ade Peter, OkayAfrica: Zombie is still Fela Kuti's greatest protest song", url: "https://www.okayafrica.com/zombie-is-fela-kutis-greatest-protest-song/1440729", quote: "By this time armed raids weren’t new at Kalakuta Republic. In November 1974, Fela was beaten to near-death by police officers who broke into the commune"}
+    - {title: "David Katz, Red Bull Music Academy Daily: A guide to the albums of Fela Kuti (2012)", url: "https://daily.redbullmusicacademy.com/2012/12/a-guide-to-the-albums-of-fela-kuti", quote: "Kalakuta Show was Fela’s dramatic response to two notorious police raids that took place in 1974."}
+- card: zombie-fela
+  fact: "On 18 February 1977 about a thousand soldiers stormed the compound"
+  verdict: confirmed
+  sources:
+    - {title: "Fela Kuti estate: Story, 1977", url: "https://felakuti.com/story/1977", quote: "On 18 February, in an unprecedently brutal assault, 1,000 soldiers batter their way into Kalakuta"}
+    - {title: "Tayo Agunbiade, Al Jazeera: The Lioness of Lisabi (2020)", url: "https://www.aljazeera.com/features/2020/10/1/the-lioness-of-lisabi-who-ended-unfair-taxes-for-nigerian-women", quote: "On February 18, 1977, approximately 1,000 soldiers stormed a compound in Lagos."}
+    - {title: "Dennis Ade Peter, OkayAfrica: Zombie is still Fela Kuti's greatest protest song", url: "https://www.okayafrica.com/zombie-is-fela-kutis-greatest-protest-song/1440729", quote: "On February 18, 1977, six days after FESTAC ‘77 ended, about 1,000 soldiers stormed Kalakuta Republic"}
+- card: zombie-fela
+  fact: "The soldiers beat Fela and burned/razed the compound"
+  verdict: confirmed
+  sources:
+    - {title: "Fela Kuti estate: Story, 1977", url: "https://felakuti.com/story/1977", quote: "raze it to the ground. Among other outrages, they beat and rape dozens of residents, beat and arrest Fela"}
+    - {title: "Dennis Ade Peter, OkayAfrica: Zombie is still Fela Kuti's greatest protest song", url: "https://www.okayafrica.com/zombie-is-fela-kutis-greatest-protest-song/1440729", quote: "Kalakuta Republic was sacked and burnt down."}
+- card: zombie-fela
+  fact: "The army's attack was a response to Zombie (the song cost him dearly)"
+  verdict: confirmed
+  sources:
+    - {title: "David Katz, Red Bull Music Academy Daily: A guide to the albums of Fela Kuti (2012)", url: "https://daily.redbullmusicacademy.com/2012/12/a-guide-to-the-albums-of-fela-kuti", quote: "The song became a huge hit, but cost Fela dearly, as it led to a thousand soldiers unleashing a brutal attack on Kalakuta in February 1977"}
+    - {title: "Dennis Ade Peter, OkayAfrica: Zombie is still Fela Kuti's greatest protest song", url: "https://www.okayafrica.com/zombie-is-fela-kutis-greatest-protest-song/1440729", quote: "“Zombie” was the most pivotal inflection point in Fela’s life. It elevated him into immorality but it also caused his greatest pain."}
+- card: zombie-fela
+  fact: "His mother Funmilayo Ransome-Kuti was thrown from a second-floor window"
+  verdict: confirmed
+  sources:
+    - {title: "Fela Kuti estate: Story, 1977", url: "https://felakuti.com/story/1977", quote: "throw his 77-year old mother out of a second floor window"}
+    - {title: "Tayo Agunbiade, Al Jazeera: The Lioness of Lisabi (2020)", url: "https://www.aljazeera.com/features/2020/10/1/the-lioness-of-lisabi-who-ended-unfair-taxes-for-nigerian-women", quote: "Kuti’s 76-year-old mother, Funmilayo Ransome-Kuti, was thrown from a second-storey window"}
+    - {title: "Encyclopaedia Britannica: Funmilayo Ransome-Kuti", url: "https://www.britannica.com/biography/Funmilayo-Ransome-Kuti", quote: "threw her out a second-story window"}
+- card: zombie-fela
+  fact: "She died of her injuries in April 1978"
+  verdict: confirmed
+  sources:
+    - {title: "Tayo Agunbiade, Al Jazeera: The Lioness of Lisabi (2020)", url: "https://www.aljazeera.com/features/2020/10/1/the-lioness-of-lisabi-who-ended-unfair-taxes-for-nigerian-women", quote: "She sustained injuries from which she never recovered and died at the General Hospital in Lagos on April 13, 1978."}
+    - {title: "Fela Kuti estate: Story, 1978", url: "https://felakuti.com/story/1978", quote: "On 13 April, Fela’s mother dies from injuries she suffered during the attack."}
+- card: zombie-fela
+  fact: "In 1978 Ghana expelled him"
+  verdict: confirmed
+  sources:
+    - {title: "Fela Kuti estate: Story, 1978", url: "https://felakuti.com/story/1978", quote: "Fela and Afrika 70 fly to Ghana, where Fela is detained and then expelled"}
+    - {title: "David Katz, Red Bull Music Academy Daily: A guide to the albums of Fela Kuti (2012)", url: "https://daily.redbullmusicacademy.com/2012/12/a-guide-to-the-albums-of-fela-kuti", quote: "he travelled to Ghana, but was expelled when a performance of “Zombie” instigated a riot"}
+  note: "Britannica: Fela Kuti adds \"In exile in Ghana in 1978\"; RBMA gives 1978 and the expulsion."
+- card: zombie-fela
+  fact: "In 1979 he and supporters carried a symbolic coffin to General Obasanjo's headquarters"
+  verdict: corrected
+  sources:
+    - {title: "Fela Kuti estate: Story, 1979", url: "https://felakuti.com/story/1979", quote: "On 30 September, Fela and around sixty supporters, including members of his family and The Young African Pioneers, deposit a symbolic coffin outside Nigerian head of state General Obasanjo’s headquarters"}
+    - {title: "Jeff Terich, Treble (2020)", url: "https://www.treblezine.com/fela-kutis-coffin-for-head-of-state-was-genuine-life-and-death-protest-music/", quote: "After his mother’s death, Kuti brought a coffin representing her to the Dodan barracks"}
+  note: "Only the estate gives 30 September 1979; RBMA's chronology here is garbled (it dates the mother's death to 1979). Year dropped; body now says the coffin was carried after his mother's death to Dodan Barracks, supported by the estate and Treble (Terich, 2020). years changed to [1976, 1978]."
+- card: a-change-is-gonna-come
+  fact: "A Change Is Gonna Come is a 1964 soul ballad that became a civil rights anthem"
+  verdict: confirmed
+  sources:
+    - {title: "John Wirt, 64 Parishes: A Change Is Gonna Come", url: "https://64parishes.org/entry/a-change-is-gonna-come", quote: "became a civil rights anthem"}
+    - {title: "NPR (via WUSF): Sam Cooke and the song that 'almost scared him' (2014)", url: "https://www.wusf.org/2014-02-01/sam-cooke-and-the-song-that-almost-scared-him", quote: "one of the most important songs of the civil rights era"}
+    - {title: "Encyclopaedia Britannica: Sam Cooke", url: "https://www.britannica.com/biography/Sam-Cooke", quote: "remains his signature song, an anthem of hope"}
+- card: a-change-is-gonna-come
+  fact: "Cooke moved from gospel to pop stardom with You Send Me in 1957"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Sam Cooke", url: "https://www.britannica.com/biography/Sam-Cooke", quote: "including his first hit, the ethereal “ You Send Me ,” which shot to number one on all charts in 1957"}
+    - {title: "John Wirt, 64 Parishes: A Change Is Gonna Come", url: "https://64parishes.org/entry/a-change-is-gonna-come", quote: "A former gospel music star, the African American singer had been a pop and rhythm-and-blues star since his 1957 crossover hit, “You Send Me.”"}
+- card: a-change-is-gonna-come
+  fact: "Dylan's Blowin' in the Wind struck him; he felt a Black man should have written such a song"
+  verdict: confirmed
+  sources:
+    - {title: "NPR (via WUSF): Sam Cooke and the song that 'almost scared him' (2014)", url: "https://www.wusf.org/2014-02-01/sam-cooke-and-the-song-that-almost-scared-him", quote: "Bob Dylan 's \"Blowin' in the Wind,\" which Guralnick says Cooke loved but wished had come from a person of color"}
+    - {title: "B.G. Rhule, Library of Congress National Recording Registry: A Change Is Gonna Come", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/AChangeIsGonnaCome.pdf", quote: "it was more of a feeling that he, as a black man, should also write such a song"}
+    - {title: "John Wirt, 64 Parishes: A Change Is Gonna Come", url: "https://64parishes.org/entry/a-change-is-gonna-come", quote: "nearly made him ashamed of himself for not writing a song like it"}
+- card: a-change-is-gonna-come
+  fact: "In autumn 1963, on a Southern tour, he arrived at a Holiday Inn in Shreveport where he had booked rooms, and was turned away"
+  verdict: confirmed
+  sources:
+    - {title: "John Wirt, 64 Parishes: A Change Is Gonna Come", url: "https://64parishes.org/entry/a-change-is-gonna-come", quote: "On the morning of October 8, 1963, Cooke and three members of his touring entourage arrived at the Holiday Inn North in Shreveport. The African American singing star had called the hotel in advance to make reservations"}
+    - {title: "NPR (via WUSF): Sam Cooke and the song that 'almost scared him' (2014)", url: "https://www.wusf.org/2014-02-01/sam-cooke-and-the-song-that-almost-scared-him", quote: "In the fall of 1963, Cooke faced a direct affront: He and his band were turned away from a Holiday Inn in Shreveport, La."}
+    - {title: "Associated Press via Billboard: Louisiana mayor apologizes for racist treatment of Sam Cooke (2019)", url: "https://www.billboard.com/music/music-news/louisiana-mayor-apologizes-racist-treatment-sam-cooke-8517176", quote: "He had a reservation at a Holiday Inn but he, his wife and others were turned away."}
+- card: a-change-is-gonna-come
+  fact: "Cooke protested angrily"
+  verdict: confirmed
+  sources:
+    - {title: "John Wirt, 64 Parishes: A Change Is Gonna Come", url: "https://64parishes.org/entry/a-change-is-gonna-come", quote: "Cooke and his brother, Charles, protested angrily"}
+    - {title: "NPR (via WUSF): Sam Cooke and the song that 'almost scared him' (2014)", url: "https://www.wusf.org/2014-02-01/sam-cooke-and-the-song-that-almost-scared-him", quote: "\"He just went off,\" Guralnick says. \"And when he refused to leave, he became obstreperous"}
+- card: a-change-is-gonna-come
+  fact: "He and his companions were arrested for disturbing the peace"
+  verdict: confirmed
+  sources:
+    - {title: "NPR (via WUSF): Sam Cooke and the song that 'almost scared him' (2014)", url: "https://www.wusf.org/2014-02-01/sam-cooke-and-the-song-that-almost-scared-him", quote: "Cooke was arrested and jailed, along with several of his company, for disturbing the peace."}
+    - {title: "John Wirt, 64 Parishes: A Change Is Gonna Come", url: "https://64parishes.org/entry/a-change-is-gonna-come", quote: "Cooke and the others were arrested at the Black-owned Castle Hotel. Charged with causing a public disturbance"}
+    - {title: "Associated Press via Billboard: Louisiana mayor apologizes for racist treatment of Sam Cooke (2019)", url: "https://www.billboard.com/music/music-news/louisiana-mayor-apologizes-racist-treatment-sam-cooke-8517176", quote: "KSLA reports Cooke and three others in his group were eventually arrested."}
+- card: a-change-is-gonna-come
+  fact: "Within a month or two he had written the song"
+  verdict: confirmed
+  sources:
+    - {title: "NPR (via WUSF): Sam Cooke and the song that 'almost scared him' (2014)", url: "https://www.wusf.org/2014-02-01/sam-cooke-and-the-song-that-almost-scared-him", quote: "Guralnick says \"A Change Is Gonna Come\" was written within a month or two after that."}
+    - {title: "John Wirt, 64 Parishes: A Change Is Gonna Come", url: "https://64parishes.org/entry/a-change-is-gonna-come", quote: "In late 1963 Cooke told confidants that he’d written a song during an almost dreamlike state."}
+  note: "NPR (Guralnick) gives \"within a month or two\"; 64 Parishes gives \"in late 1963\" after the 8 October incident, consistent."
+- card: a-change-is-gonna-come
+  fact: "The song came to him almost whole"
+  verdict: corrected
+  sources:
+    - {title: "NPR (via WUSF): Sam Cooke and the song that 'almost scared him' (2014)", url: "https://www.wusf.org/2014-02-01/sam-cooke-and-the-song-that-almost-scared-him", quote: "He grabbed it out of the air and it came to him whole"}
+    - {title: "John Wirt, 64 Parishes: A Change Is Gonna Come", url: "https://64parishes.org/entry/a-change-is-gonna-come", quote: "he’d written a song during an almost dreamlike state"}
+  note: "Only NPR says it came \"whole\"; 64 Parishes says he told confidants he wrote it in \"an almost dreamlike state\". Body and wow now say it came to him almost as in a dream (NPR \"grabbed it out of the air\" agrees)."
+- card: a-change-is-gonna-come
+  fact: "He gave arranger René Hall a free hand: strings, horns and timpani, like a film score"
+  verdict: confirmed
+  sources:
+    - {title: "NPR (via WUSF): Sam Cooke and the song that 'almost scared him' (2014)", url: "https://www.wusf.org/2014-02-01/sam-cooke-and-the-song-that-almost-scared-him", quote: "For this track, however, he gave total latitude to the arranger, René Hall."}
+    - {title: "John Wirt, 64 Parishes: A Change Is Gonna Come", url: "https://64parishes.org/entry/a-change-is-gonna-come", quote: "He gave Hall no guidance, other than to write a suitable arrangement."}
+    - {title: "NPR (via WUSF): Sam Cooke and the song that 'almost scared him' (2014)", url: "https://www.wusf.org/2014-02-01/sam-cooke-and-the-song-that-almost-scared-him", quote: "The timpani carries the bridge. It was like a movie score."}
+- card: a-change-is-gonna-come
+  fact: "It appeared on the album Ain't That Good News in March 1964"
+  verdict: confirmed
+  sources:
+    - {title: "NPR (via WUSF): Sam Cooke and the song that 'almost scared him' (2014)", url: "https://www.wusf.org/2014-02-01/sam-cooke-and-the-song-that-almost-scared-him", quote: "\"A Change Is Gonna Come\" was released on the album Ain't That Good News in March of 1964."}
+    - {title: "John Wirt, 64 Parishes: A Change Is Gonna Come", url: "https://64parishes.org/entry/a-change-is-gonna-come", quote: "originally released on Cooke’s 1964 album, Ain’t That Good News"}
+- card: a-change-is-gonna-come
+  fact: "In December 1964 Cooke was shot dead at a Los Angeles motel"
+  verdict: confirmed
+  sources:
+    - {title: "NPR (via WUSF): Sam Cooke and the song that 'almost scared him' (2014)", url: "https://www.wusf.org/2014-02-01/sam-cooke-and-the-song-that-almost-scared-him", quote: "Sam Cooke would be shot to death at a motel in Los Angeles"}
+    - {title: "Encyclopaedia Britannica: Sam Cooke", url: "https://www.britannica.com/biography/Sam-Cooke", quote: "he was shot to death at age 33 by a motel manager"}
+  note: "Britannica: \"died december 11, 1964, los angeles, california\"."
+- card: a-change-is-gonna-come
+  fact: "The single came out only after his death"
+  verdict: confirmed
+  sources:
+    - {title: "NPR (via WUSF): Sam Cooke and the song that 'almost scared him' (2014)", url: "https://www.wusf.org/2014-02-01/sam-cooke-and-the-song-that-almost-scared-him", quote: "Just before the song was to be released as a single in December of 1964, Sam Cooke would be shot to death"}
+    - {title: "Encyclopaedia Britannica: Sam Cooke", url: "https://www.britannica.com/biography/Sam-Cooke", quote: "“ A Change Is Gonna Come” (1965) remains his signature song"}
+- card: a-change-is-gonna-come
+  fact: "The movement took up the song at once"
+  verdict: confirmed
+  sources:
+    - {title: "NPR (via WUSF): Sam Cooke and the song that 'almost scared him' (2014)", url: "https://www.wusf.org/2014-02-01/sam-cooke-and-the-song-that-almost-scared-him", quote: "The civil rights movement picked up on it immediately"}
+    - {title: "John Wirt, 64 Parishes: A Change Is Gonna Come", url: "https://64parishes.org/entry/a-change-is-gonna-come", quote: "became a civil rights anthem"}
+- card: a-change-is-gonna-come
+  fact: "(dispute) Accounts of the Shreveport incident differ: 64 Parishes has the clerk claim no rooms were free, while Rhule's LoC essay says the group had checked in and the trouble began with a car horn that would not stop"
+  verdict: confirmed
+  sources:
+    - {title: "John Wirt, 64 Parishes: A Change Is Gonna Come", url: "https://64parishes.org/entry/a-change-is-gonna-come", quote: "When the desk clerk claimed no rooms were available"}
+    - {title: "B.G. Rhule, Library of Congress National Recording Registry: A Change Is Gonna Come", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/AChangeIsGonnaCome.pdf", quote: "After checking into a hotel there, with a less-than-friendly manager who had only rented them a room because of Sam’s celebrity"}
+    - {title: "B.G. Rhule, Library of Congress National Recording Registry: A Change Is Gonna Come", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/AChangeIsGonnaCome.pdf", quote: "Suddenly, the Maserarti’s horn began to blare unceasingly."}
+- card: carmen-jones
+  fact: "Carmen Jones is a 1954 Hollywood musical with an all-Black cast"
+  verdict: confirmed
+  sources:
+    - {title: "TCM: Carmen Jones (1954)", url: "https://www.tcm.com/articles/musical/114175/carmen-jones-1954", quote: "Carmen Jones (1954) was a rarity for Hollywood: a mainstream film with an all-African American cast."}
+    - {title: "Encyclopaedia Britannica: Dorothy Dandridge", url: "https://www.britannica.com/biography/Dorothy-Dandridge", quote: "Otto Preminger’s all-black Carmen Jones (1954)"}
+- card: carmen-jones
+  fact: "It began on Broadway in 1943 when Oscar Hammerstein II rewrote Bizet's Carmen for Black performers, keeping the music"
+  verdict: confirmed
+  sources:
+    - {title: "Cornell Cinema: Carmen Jones", url: "https://cinema.cornell.edu/carmen-jones", quote: "In 1943, Oscar Hammerstein II decided to adapt Bizet’s popular tragic opera Carmen for the Broadway stage as a vehicle for an all-Black cast."}
+    - {title: "TCM: Carmen Jones (1954)", url: "https://www.tcm.com/articles/musical/114175/carmen-jones-1954", quote: "the stage show Carmen Jones that Billy Rose had done in 1943, still using the original music from Bizet's opera Carmen but with a new libretto"}
+- card: carmen-jones
+  fact: "Carmen works in a parachute factory in the wartime South; Don José becomes a soldier named Joe"
+  verdict: confirmed
+  sources:
+    - {title: "Cornell Cinema: Carmen Jones", url: "https://cinema.cornell.edu/carmen-jones", quote: "He updated the opening from a 19th century tobacco factory to a parachute factory in the American South in WWII, made Jose into a soldier (Joe)"}
+    - {title: "Raquel Stecher, TCM: Dorothy Dandridge (2022)", url: "https://www.tcm.com/articles/featured-actors/021687/dorothy-dandridge-100th-birthday-tribute", quote: "Dandridge lit up the screen as Carmen, a worker at a parachute factory who seduces Joe (Belafonte)"}
+- card: carmen-jones
+  fact: "20th Century Fox backed Otto Preminger in making the film"
+  verdict: confirmed
+  sources:
+    - {title: "Cornell Cinema: Carmen Jones", url: "https://cinema.cornell.edu/carmen-jones", quote: "20th Century Fox picked up the show, betting on producer and director Otto Preminger."}
+    - {title: "TCM: Carmen Jones (1954)", url: "https://www.tcm.com/articles/musical/114175/carmen-jones-1954", quote: "Two days later, Zanuck committed Fox to the project"}
+- card: carmen-jones
+  fact: "Dandridge was a nightclub singer from Cleveland"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Dorothy Dandridge", url: "https://www.britannica.com/biography/Dorothy-Dandridge", quote: "Dorothy Dandridge (born November 9, 1922, Cleveland , Ohio , U.S."}
+    - {title: "Raquel Stecher, TCM: Dorothy Dandridge (2022)", url: "https://www.tcm.com/articles/featured-actors/021687/dorothy-dandridge-100th-birthday-tribute", quote: "Born Dorothy Jean Dandridge on November 9, 1922, in Cleveland, OH"}
+    - {title: "Raquel Stecher, TCM: Dorothy Dandridge (2022)", url: "https://www.tcm.com/articles/featured-actors/021687/dorothy-dandridge-100th-birthday-tribute", quote: "She had a great sense of her appeal and leveraged her burgeoning fame into a career on the nightclub circuit"}
+- card: carmen-jones
+  fact: "Preminger at first found her too poised and ladylike for Carmen; she came back in flashy clothes and heavy make-up and won him over (two TCM articles by different writers, drawing respectively on Bogle's biography and Dandridge's autobiography)"
+  verdict: corrected
+  sources:
+    - {title: "Encyclopedia of World Biography (Gale), via Encyclopedia.com: Dorothy Dandridge", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/dorothy-dandridge", quote: "When she first auditioned for Preminger, she struck him as being far too elegant and ladylike for the part."}
+    - {title: "Raquel Stecher, TCM: Dorothy Dandridge (2022)", url: "https://www.tcm.com/articles/featured-actors/021687/dorothy-dandridge-100th-birthday-tribute", quote: "Preminger found her too poised, too elegant for the part."}
+  note: "Both original sources were TCM (one publisher = one source). Replaced the second with Encyclopedia of World Biography (Gale) via Encyclopedia.com; the fact stands unchanged."
+- card: carmen-jones
+  fact: "Her and Belafonte's singing was dubbed by opera singers; hers by mezzo-soprano Marilyn Horne"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Dorothy Dandridge", url: "https://www.britannica.com/biography/Dorothy-Dandridge", quote: "the singing was dubbed by mezzo-soprano Marilyn Horne"}
+    - {title: "Cornell Cinema: Carmen Jones", url: "https://cinema.cornell.edu/carmen-jones", quote: "their roles were dubbed, Dandridge’s by Marilyn Horne."}
+    - {title: "Raquel Stecher, TCM: Dorothy Dandridge (2022)", url: "https://www.tcm.com/articles/featured-actors/021687/dorothy-dandridge-100th-birthday-tribute", quote: "the singing voices of Belafonte and Dandridge were dubbed by professional opera singers"}
+- card: carmen-jones
+  fact: "The film was a hit"
+  verdict: confirmed
+  sources:
+    - {title: "Raquel Stecher, TCM: Dorothy Dandridge (2022)", url: "https://www.tcm.com/articles/featured-actors/021687/dorothy-dandridge-100th-birthday-tribute", quote: "The movie premiered in October 1954 and was a huge hit."}
+    - {title: "Cornell Cinema: Carmen Jones", url: "https://cinema.cornell.edu/carmen-jones", quote: "The film was a commercial success"}
+- card: carmen-jones
+  fact: "Dandridge, dressed as Carmen, appeared on the cover of Life"
+  verdict: confirmed
+  sources:
+    - {title: "Raquel Stecher, TCM: Dorothy Dandridge (2022)", url: "https://www.tcm.com/articles/featured-actors/021687/dorothy-dandridge-100th-birthday-tribute", quote: "Dandridge, dressed as Carmen, was photographed for the cover of LIFE magazine."}
+    - {title: "Cornell Cinema: Carmen Jones", url: "https://cinema.cornell.edu/carmen-jones", quote: "Dandridge was the first Black woman to appear on the cover of Life"}
+- card: carmen-jones
+  fact: "She became the first Black woman nominated for the best actress Academy Award"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Dorothy Dandridge", url: "https://www.britannica.com/biography/Dorothy-Dandridge", quote: "the first black woman to be nominated for an Academy Award for best actress"}
+    - {title: "Raquel Stecher, TCM: Dorothy Dandridge (2022)", url: "https://www.tcm.com/articles/featured-actors/021687/dorothy-dandridge-100th-birthday-tribute", quote: "Her performance earned her a nomination for a Best Actress Academy Award, the first ever nomination for a Black woman in the business."}
+    - {title: "Cornell Cinema: Carmen Jones", url: "https://cinema.cornell.edu/carmen-jones", quote: "the first to be nominated for an Oscar in a leading role"}
+- card: carmen-jones
+  fact: "Film offers came slowly afterwards"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Dorothy Dandridge", url: "https://www.britannica.com/biography/Dorothy-Dandridge", quote: "film offers thereafter did not come readily"}
+    - {title: "Raquel Stecher, TCM: Dorothy Dandridge (2022)", url: "https://www.tcm.com/articles/featured-actors/021687/dorothy-dandridge-100th-birthday-tribute", quote: "Dandridge wouldn’t appear on screen again for nearly three years"}
+- card: carmen-jones
+  fact: "Bess in Porgy and Bess (1959) was her last great part as a star"
+  verdict: confirmed
+  sources:
+    - {title: "Raquel Stecher, TCM: Dorothy Dandridge (2022)", url: "https://www.tcm.com/articles/featured-actors/021687/dorothy-dandridge-100th-birthday-tribute", quote: "Porgy and Bess (1959) proved to be Dandridge’s last hurrah as a movie star."}
+    - {title: "Encyclopaedia Britannica: Dorothy Dandridge", url: "https://www.britannica.com/biography/Dorothy-Dandridge", quote: "One of her most important roles was Bess in Preminger’s handsomely produ"}
+  note: "TCM (Stecher): last hurrah as a star; Britannica lists Bess as one of her most important roles and says offers thereafter did not come readily. Wording \"last great part as a star\" kept."
+- card: carmen-jones
+  fact: "She died in 1965, aged 42"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Dorothy Dandridge", url: "https://www.britannica.com/biography/Dorothy-Dandridge", quote: "September 8, 1965, West Hollywood, California (aged 42)"}
+    - {title: "Raquel Stecher, TCM: Dorothy Dandridge (2022)", url: "https://www.tcm.com/articles/featured-actors/021687/dorothy-dandridge-100th-birthday-tribute", quote: "On September 8, 1965, Dorothy Dandridge died in her Los Angeles home of an accidental overdose. She was 42 years old."}
+- card: carmen-jones
+  fact: "In 1992 the film was selected for the National Film Registry"
+  verdict: confirmed
+  sources:
+    - {title: "Cornell Cinema: Carmen Jones", url: "https://cinema.cornell.edu/carmen-jones", quote: "The film was added to the National Film Registry in 1992."}
+    - {title: "Library of Congress: Complete National Film Registry listing", url: "https://www.loc.gov/programs/national-film-preservation-board/film-registry/complete-national-film-registry-listing/", quote: "Carmen Jones 1954 1992"}
+- card: black-girl-sembene
+  fact: "Black Girl (La Noire de...) is a 1966 feature film from Senegal, recently independent of France"
+  verdict: confirmed
+  sources:
+    - {title: "Sarah Jilani, BFI: In praise of Mbissine Thérèse Diop in Ousmane Sembène's Black Girl (2016)", url: "https://www.bfi.org.uk/features/praise-mbissine-therese-diop-ousmane-sembenes-black-girl", quote: "The original French title of this 1966 film is La Noire de…"}
+    - {title: "Ashley Clark, The Criterion Collection: Black Girl, Self, Possessed", url: "https://www.criterion.com/current/posts/4402-black-girl-self-possessed", quote: "When Senegal gained independence from France in 1960, Sembène returned home"}
+    - {title: "Encyclopaedia Britannica: Ousmane Sembène", url: "https://www.britannica.com/biography/Ousmane-Sembene", quote: "His 1966 feature film, La Noire de… ( Black Girl )"}
+- card: black-girl-sembene
+  fact: "Sembène served as a soldier in the Second World War"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Ousmane Sembène", url: "https://www.britannica.com/biography/Ousmane-Sembene", quote: "In 1942, during World War II , he joined the Free French forces"}
+    - {title: "Ashley Clark, The Criterion Collection: Black Girl, Self, Possessed", url: "https://www.criterion.com/current/posts/4402-black-girl-self-possessed", quote: "After a period of service with the Free French Forces in World War II"}
+- card: black-girl-sembene
+  fact: "He worked as a docker in Marseille and was a union militant"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Ousmane Sembène", url: "https://www.britannica.com/biography/Ousmane-Sembene", quote: "he remained in France, working as a docker in Marseille , and became a militant trade unionist"}
+    - {title: "Festival de Cannes: Cannes Classics, La Noire de... (2015)", url: "https://www.festival-cannes.com/en/2015/cannes-classics-la-noire-deblack-girl-a-look-back-at-the-origins-of-african-film/", quote: "worked in turn as a fisherman, a builder and a docker in Marseille"}
+    - {title: "Ashley Clark, The Criterion Collection: Black Girl, Self, Possessed", url: "https://www.criterion.com/current/posts/4402-black-girl-self-possessed", quote: "eventually rising to the status of the intellectual aristocracy of the labor movement"}
+- card: black-girl-sembene
+  fact: "He taught himself to write and published novels"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Ousmane Sembène", url: "https://www.britannica.com/biography/Ousmane-Sembene", quote: "Sembène taught himself to read and write in French and in 1956 published his first novel"}
+    - {title: "Ashley Clark, The Criterion Collection: Black Girl, Self, Possessed", url: "https://www.criterion.com/current/posts/4402-black-girl-self-possessed", quote: "Sembène also became a prolific, self-taught novelist"}
+- card: black-girl-sembene
+  fact: "He studied film in Moscow"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Ousmane Sembène", url: "https://www.britannica.com/biography/Ousmane-Sembene", quote: "After studying at the Moscow Film School, Sembène returned to Africa"}
+    - {title: "Ashley Clark, The Criterion Collection: Black Girl, Self, Possessed", url: "https://www.criterion.com/current/posts/4402-black-girl-self-possessed", quote: "he was offered a scholarship to attend the Gorky Film Studio in Moscow"}
+- card: black-girl-sembene
+  fact: "He based his first feature on one of his own short stories"
+  verdict: confirmed
+  sources:
+    - {title: "Ashley Clark, The Criterion Collection: Black Girl, Self, Possessed", url: "https://www.criterion.com/current/posts/4402-black-girl-self-possessed", quote: "Black Girl (1966), a brisk, memorably pointed tale based on one of his own short stories"}
+    - {title: "Festival de Cannes: Cannes Classics, La Noire de... (2015)", url: "https://www.festival-cannes.com/en/2015/cannes-classics-la-noire-deblack-girl-a-look-back-at-the-origins-of-african-film/", quote: "His first feature film, La Noire de…(Black Girl) , was based on one of his short story collections."}
+- card: black-girl-sembene
+  fact: "Diouana, a young woman from Dakar, is hired by a French couple to look after their children"
+  verdict: confirmed
+  sources:
+    - {title: "Sarah Jilani, BFI: In praise of Mbissine Thérèse Diop in Ousmane Sembène's Black Girl (2016)", url: "https://www.bfi.org.uk/features/praise-mbissine-therese-diop-ousmane-sembenes-black-girl", quote: "Nanny to a white French family who live in post-independence Dakar"}
+    - {title: "Festival de Cannes: Cannes Classics, La Noire de... (2015)", url: "https://www.festival-cannes.com/en/2015/cannes-classics-la-noire-deblack-girl-a-look-back-at-the-origins-of-african-film/", quote: "A white family leave Dakar to return to France with their governess, Diouana."}
+- card: black-girl-sembene
+  fact: "In Antibes she is made to cook and clean as well, and is confined to the flat"
+  verdict: confirmed
+  sources:
+    - {title: "Sarah Jilani, BFI: In praise of Mbissine Thérèse Diop in Ousmane Sembène's Black Girl (2016)", url: "https://www.bfi.org.uk/features/praise-mbissine-therese-diop-ousmane-sembenes-black-girl", quote: "now they expect her to cook, clean, shop and serve too"}
+    - {title: "Sarah Jilani, BFI: In praise of Mbissine Thérèse Diop in Ousmane Sembène's Black Girl (2016)", url: "https://www.bfi.org.uk/features/praise-mbissine-therese-diop-ousmane-sembenes-black-girl", quote: "even locking Diouana in the apartment when she heads out"}
+    - {title: "Festival de Cannes: Cannes Classics, La Noire de... (2015)", url: "https://www.festival-cannes.com/en/2015/cannes-classics-la-noire-deblack-girl-a-look-back-at-the-origins-of-african-film/", quote: "When she arrives in Antibes, the young woman discovers that not only must she look after the children, but she is also expected to do the housework"}
+- card: black-girl-sembene
+  fact: "She gives her employers an African mask and later takes it back"
+  verdict: confirmed
+  sources:
+    - {title: "Marcia Landy, Jump Cut no. 27: Political allegory and engaged cinema, Sembène's Black Girl", url: "https://www.ejumpcut.org/archive/onlinessays/JC27folder/BlackGirlLandy.html", quote: "the African mask, which Diouana takes from a young boy, possibly her brother, to give as a gift to her employer"}
+    - {title: "Marcia Landy, Jump Cut no. 27: Political allegory and engaged cinema, Sembène's Black Girl", url: "https://www.ejumpcut.org/archive/onlinessays/JC27folder/BlackGirlLandy.html", quote: "Having reappropriated the mask, Diouana is unwilling to relinquish it to the wife"}
+    - {title: "Ashley Clark, The Criterion Collection: Black Girl, Self, Possessed", url: "https://www.criterion.com/current/posts/4402-black-girl-self-possessed", quote: "Diouana’s decision to reclaim her mask signals the moment at which she decides to regain control of her life"}
+- card: black-girl-sembene
+  fact: "The French title means 'the Black girl of...' and leaves open whether she is from somewhere or belongs to someone"
+  verdict: confirmed
+  sources:
+    - {title: "Sarah Jilani, BFI: In praise of Mbissine Thérèse Diop in Ousmane Sembène's Black Girl (2016)", url: "https://www.bfi.org.uk/features/praise-mbissine-therese-diop-ousmane-sembenes-black-girl", quote: "which literally means “the black girl of…” – a shorthand of the time for “the domestic servant of…”"}
+    - {title: "Ashley Clark, The Criterion Collection: Black Girl, Self, Possessed", url: "https://www.criterion.com/current/posts/4402-black-girl-self-possessed", quote: "The ellipsis after the preposition leaves unspecified whether de means “from”—as in coming from a specific place—or the possessive of, which reduces Diouana to the status of property."}
+- card: black-girl-sembene
+  fact: "The story ends with her suicide"
+  verdict: confirmed
+  sources:
+    - {title: "Marcia Landy, Jump Cut no. 27: Political allegory and engaged cinema, Sembène's Black Girl", url: "https://www.ejumpcut.org/archive/onlinessays/JC27folder/BlackGirlLandy.html", quote: "Sembene provides the prologue to Diouana's suicide"}
+    - {title: "Ashley Clark, The Criterion Collection: Black Girl, Self, Possessed", url: "https://www.criterion.com/current/posts/4402-black-girl-self-possessed", quote: "the character’s swift decline and suicide"}
+- card: black-girl-sembene
+  fact: "Diouana was played by Mbissine Thérèse Diop, a newcomer to acting"
+  verdict: confirmed
+  sources:
+    - {title: "Sarah Jilani, BFI: In praise of Mbissine Thérèse Diop in Ousmane Sembène's Black Girl (2016)", url: "https://www.bfi.org.uk/features/praise-mbissine-therese-diop-ousmane-sembenes-black-girl", quote: "It’s hard to believe this was Diop’s first (and, as it turned out, last) foray into acting"}
+    - {title: "Ashley Clark, The Criterion Collection: Black Girl, Self, Possessed", url: "https://www.criterion.com/current/posts/4402-black-girl-self-possessed", quote: "played by the charismatic and beautiful nonprofessional actor M’Bissine Thérèse Diop"}
+- card: black-girl-sembene
+  fact: "It is usually counted the first feature by a director from sub-Saharan Africa"
+  verdict: confirmed
+  sources:
+    - {title: "Sarah Jilani, BFI: In praise of Mbissine Thérèse Diop in Ousmane Sembène's Black Girl (2016)", url: "https://www.bfi.org.uk/features/praise-mbissine-therese-diop-ousmane-sembenes-black-girl", quote: "is believed to be the first feature-length film ever made by a sub-Saharan African"}
+    - {title: "Ashley Clark, The Criterion Collection: Black Girl, Self, Possessed", url: "https://www.criterion.com/current/posts/4402-black-girl-self-possessed", quote: "was the first feature made in Africa by a sub-Saharan African to attract international notice"}
+    - {title: "Encyclopaedia Britannica: Ousmane Sembène", url: "https://www.britannica.com/biography/Ousmane-Sembene", quote: "was considered the first major film produced by an African filmmaker"}
+- card: black-girl-sembene
+  fact: "Sembène is often called the father of African cinema"
+  verdict: confirmed
+  sources:
+    - {title: "Sarah Jilani, BFI: In praise of Mbissine Thérèse Diop in Ousmane Sembène's Black Girl (2016)", url: "https://www.bfi.org.uk/features/praise-mbissine-therese-diop-ousmane-sembenes-black-girl", quote: "known as the father of African cinema"}
+    - {title: "Festival de Cannes: Cannes Classics, La Noire de... (2015)", url: "https://www.festival-cannes.com/en/2015/cannes-classics-la-noire-deblack-girl-a-look-back-at-the-origins-of-african-film/", quote: "He was, indisputably, the father of African film"}
+    - {title: "Ashley Clark, The Criterion Collection: Black Girl, Self, Possessed", url: "https://www.criterion.com/current/posts/4402-black-girl-self-possessed", quote: "Ousmane Sembène was widely recognized as the father of African cinema"}
+- card: black-girl-sembene
+  fact: "He made films until his death in 2007"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Ousmane Sembène", url: "https://www.britannica.com/biography/Ousmane-Sembene", quote: "died June 9/10, 2007, Dakar"}
+    - {title: "Ashley Clark, The Criterion Collection: Black Girl, Self, Possessed", url: "https://www.criterion.com/current/posts/4402-black-girl-self-possessed", quote: "before his death in 2007 at the age of eighty-four"}
+  note: "Britannica also lists Moolaadé (2004) among his films, supporting that he made films to the end."
+- card: touki-bouki
+  fact: "Touki Bouki is a 1973 Senegalese feature, Djibril Diop Mambéty's first"
+  verdict: confirmed
+  sources:
+    - {title: "Margarita Landazuri, TCM: Touki Bouki", url: "https://www.tcm.com/articles/770468/touki-bouki", quote: "his first feature, Touki Bouki (1973), is his masterpiece"}
+    - {title: "Sight and Sound (BFI): Docs go wild, FID Marseille 2013", url: "https://www.bfi.org.uk/sight-and-sound/news/docs-go-wild-fid-marseille-2013", quote: "Mambéty’s ground-breaking 1973 Senegalese road movie Touki Bouki"}
+- card: touki-bouki
+  fact: "Its Wolof title means 'the journey of the hyena'"
+  verdict: confirmed
+  sources:
+    - {title: "Margarita Landazuri, TCM: Touki Bouki", url: "https://www.tcm.com/articles/770468/touki-bouki", quote: "(which means \"Journey of the Hyena\" in the Wolof language of Senegal)"}
+    - {title: "Festival de Cannes: Touki Bouki, Cannes Classics 2008", url: "https://www.festival-cannes.com/en/f/touki-bouki/", quote: "Cannes Classics: “Le Voyage de la Hyène” by Djibril Diop Mambéty"}
+- card: touki-bouki
+  fact: "Its style draws on the French New Wave and the avant-garde, with jump cuts, yet is wholly original"
+  verdict: confirmed
+  sources:
+    - {title: "Margarita Landazuri, TCM: Touki Bouki", url: "https://www.tcm.com/articles/770468/touki-bouki", quote: "shows the influence of the French New Wave, yet is completely original. It's layered with sounds and music, fantasy and stark reality, and filled with jump-cuts"}
+    - {title: "Steffan Horowitz, Africa Is a Country: Martin Scorsese digitally restores Touki Bouki (2013)", url: "https://africasacountry.com/2013/12/martin-scorsese-digitally-restores-djibril-diop-mambetys-masterpiece-touki-bouki", quote: "it is an eccentric film that draws on avant-garde and French New Wave film traditions, all the while remaining completely unique"}
+- card: touki-bouki
+  fact: "Mory is a cowherd who rides a motorbike with a cow's skull and horns; Anta is a student"
+  verdict: confirmed
+  sources:
+    - {title: "Margarita Landazuri, TCM: Touki Bouki", url: "https://www.tcm.com/articles/770468/touki-bouki", quote: "lovers Mory, a cattle herder, and Anta, a student, ride around on Mory's motorbike which is customized with an ox's skull and horns on the front"}
+    - {title: "Festival de Cannes: Touki Bouki, Cannes Classics 2008", url: "https://www.festival-cannes.com/en/f/touki-bouki/", quote: "Mory, a cowherd who rides a motorcycle mounted with a cow’s skull, and Anta, a university student"}
+  note: "RU translation said the skull was on the handlebars (\"на руле\"); corrected to \"спереди\" to match \"on the front\"."
+- card: touki-bouki
+  fact: "They dream of Paris while Josephine Baker sings 'Paris, Paris' on the soundtrack"
+  verdict: confirmed
+  sources:
+    - {title: "Margarita Landazuri, TCM: Touki Bouki", url: "https://www.tcm.com/articles/770468/touki-bouki", quote: "The soundtrack plays \"Paris, Paris,\" sung by Josephine Baker"}
+    - {title: "Ashley Clark, The Criterion Collection: Black Girl, Self, Possessed", url: "https://www.criterion.com/current/posts/4402-black-girl-self-possessed", quote: "Djibril Diop Mambéty’s deliberately grating use of Josephine Baker’s “Paris, Paris” in Touki bouki (1973)"}
+- card: touki-bouki
+  fact: "They try schemes to raise money and book passage on a ship to France"
+  verdict: confirmed
+  sources:
+    - {title: "Festival de Cannes: Touki Bouki, Cannes Classics 2008", url: "https://www.festival-cannes.com/en/f/touki-bouki/", quote: "work up different con schemes to raise the money"}
+    - {title: "Festival de Cannes: Touki Bouki, Cannes Classics 2008", url: "https://www.festival-cannes.com/en/f/touki-bouki/", quote: "he and Anta book passage on a ship to France"}
+    - {title: "Margarita Landazuri, TCM: Touki Bouki", url: "https://www.tcm.com/articles/770468/touki-bouki", quote: "They come up with various schemes to get the money to take a ship to Europe"}
+- card: touki-bouki
+  fact: "At the last moment Mory turns back and the ship sails with Anta aboard"
+  verdict: confirmed
+  sources:
+    - {title: "Sight and Sound (BFI): Docs go wild, FID Marseille 2013", url: "https://www.bfi.org.uk/sight-and-sound/news/docs-go-wild-fid-marseille-2013", quote: "Mory, of course, in that film’s final scenes, turned back while the ship sail off with Anta onboard."}
+    - {title: "Margarita Landazuri, TCM: Touki Bouki", url: "https://www.tcm.com/articles/770468/touki-bouki", quote: "finally board the ship, but in the end only one of them goes"}
+- card: touki-bouki
+  fact: "Mambéty made only one more feature, Hyènes (1992), from Dürrenmatt's The Visit, and died in 1998"
+  verdict: confirmed
+  sources:
+    - {title: "Margarita Landazuri, TCM: Touki Bouki", url: "https://www.tcm.com/articles/770468/touki-bouki", quote: "His second and final feature, Hyenas (1992), based on Friedrich Durrenmatt's play, The Visit"}
+    - {title: "Steffan Horowitz, Africa Is a Country: Martin Scorsese digitally restores Touki Bouki (2013)", url: "https://africasacountry.com/2013/12/martin-scorsese-digitally-restores-djibril-diop-mambetys-masterpiece-touki-bouki", quote: "Mambéty only ever released one other feature-length film, called Hyènes in 1992"}
+    - {title: "Steffan Horowitz, Africa Is a Country: Martin Scorsese digitally restores Touki Bouki (2013)", url: "https://africasacountry.com/2013/12/martin-scorsese-digitally-restores-djibril-diop-mambetys-masterpiece-touki-bouki", quote: "Mambéty died of lung cancer in 1998"}
+  note: "TCM (Landazuri) also: \"mambety died of lung cancer in paris in 1998\"."
+- card: touki-bouki
+  fact: "In 2008 Scorsese's World Cinema Foundation restored the film and it was shown at Cannes"
+  verdict: confirmed
+  sources:
+    - {title: "Margarita Landazuri, TCM: Touki Bouki", url: "https://www.tcm.com/articles/770468/touki-bouki", quote: "Ten years later, the World Cinema Foundation, an organization established by Martin Scorsese to preserve neglected films from around the world, selected Touki Bouki as one of the films to be restored and preserved."}
+    - {title: "Festival de Cannes: Touki Bouki, Cannes Classics 2008", url: "https://www.festival-cannes.com/en/f/touki-bouki/", quote: "2008 Cannes Classics"}
+- card: touki-bouki
+  fact: "It stands among Sight and Sound's critics' hundred greatest films (no. 66 in 2022)"
+  verdict: confirmed
+  sources:
+    - {title: "Steffan Horowitz, Africa Is a Country: Martin Scorsese digitally restores Touki Bouki (2013)", url: "https://africasacountry.com/2013/12/martin-scorsese-digitally-restores-djibril-diop-mambetys-masterpiece-touki-bouki", quote: "The film was recently featured on Sight & Sound magazine’s Top 100 list of the greatest films of all time."}
+    - {title: "BFI, Sight and Sound: The Greatest Films of All Time (2022 critics' poll)", url: "https://www.bfi.org.uk/sight-and-sound/greatest-films-all-time", quote: "Touki Bouki 66"}
+- card: harder-they-come
+  fact: "The Harder They Come is a 1972 Jamaican feature directed by Perry Henzell"
+  verdict: confirmed
+  sources:
+    - {title: "Krista Thompson, Art Journal 77, no. 2 (2018): Ivanhoe Rhygin Martin and photographic disappearance in Jamaica", url: "https://artjournal.collegeart.org/?p=10123", quote: "the 1972 Jamaican-produced independent film The Harder They Come"}
+    - {title: "IRIE Magazine: The Harder They Come (1972)", url: "https://www.iriemag.com/magazine/summer-2026/the-harder-they-come/", quote: "Directed by Perry Henzell, The Harder They Come follows Ivanhoe “Ivan” Martin (Jimmy Cliff)"}
+- card: harder-they-come
+  fact: "The ska and reggae singer Jimmy Cliff plays Ivan"
+  verdict: confirmed
+  sources:
+    - {title: "Krista Thompson, Art Journal 77, no. 2 (2018): Ivanhoe Rhygin Martin and photographic disappearance in Jamaica", url: "https://artjournal.collegeart.org/?p=10123", quote: "the Jamaican ska and reggae singer and musician Jimmy Cliff, who played the role of Martin in The Harder They Come"}
+    - {title: "Encyclopaedia Britannica: Jimmy Cliff", url: "https://www.britannica.com/biography/Jimmy-Cliff", quote: "largely through his performance in the landmark film The Harder They Come (1972)"}
+- card: harder-they-come
+  fact: "Ivan comes from the countryside to Kingston to be a singer"
+  verdict: confirmed
+  sources:
+    - {title: "IRIE Magazine: The Harder They Come (1972)", url: "https://www.iriemag.com/magazine/summer-2026/the-harder-they-come/", quote: "a young man from rural Jamaica who arrives in Kingston, Jamaica, looking for work and, after some initial struggles, lands a recording contract as a reggae singer"}
+    - {title: "Krista Thompson, Art Journal 77, no. 2 (2018): Ivanhoe Rhygin Martin and photographic disappearance in Jamaica", url: "https://artjournal.collegeart.org/?p=10123", quote: "Ivan arrive from the Jamaican countryside, set on being a reggae singer"}
+- card: harder-they-come
+  fact: "He records a song, a greedy producer cheats him, he slides into crime and after a shoot-out with police becomes a hunted man"
+  verdict: confirmed
+  sources:
+    - {title: "IRIE Magazine: The Harder They Come (1972)", url: "https://www.iriemag.com/magazine/summer-2026/the-harder-they-come/", quote: "after a bitter dispute with a manipulative producer, Hilton (Bob Charlton), he soon finds himself resorting to petty crime"}
+    - {title: "Krista Thompson, Art Journal 77, no. 2 (2018): Ivanhoe Rhygin Martin and photographic disappearance in Jamaica", url: "https://artjournal.collegeart.org/?p=10123", quote: "his efforts to achieve fame and fortune undercut by a greedy record producer"}
+    - {title: "Krista Thompson, Art Journal 77, no. 2 (2018): Ivanhoe Rhygin Martin and photographic disappearance in Jamaica", url: "https://artjournal.collegeart.org/?p=10123", quote: "Ivan, wanted by the police after a brazen shoot-out"}
+- card: harder-they-come
+  fact: "Ivan was based on the real Ivanhoe Martin, known as Rhygin"
+  verdict: confirmed
+  sources:
+    - {title: "Krista Thompson, Art Journal 77, no. 2 (2018): Ivanhoe Rhygin Martin and photographic disappearance in Jamaica", url: "https://artjournal.collegeart.org/?p=10123", quote: "The film was based on the real-life exploits of Ivan or Ivanhoe Martin, also known as “Rhygin” and “Rhyging,”"}
+    - {title: "Jamaica Observer: The story of Rhygin, the Two-Gun Killer (2007)", url: "https://www.jamaicaobserver.com/2007/10/20/the-story-of-rhygin-the-two-gun-killer/", quote: "So popular was Rhygin’s exploits that the movie The Harder They Come was made about his life."}
+- card: harder-they-come
+  fact: "Rhygin escaped from prison"
+  verdict: confirmed
+  sources:
+    - {title: "Jamaica Observer: The story of Rhygin, the Two-Gun Killer (2007)", url: "https://www.jamaicaobserver.com/2007/10/20/the-story-of-rhygin-the-two-gun-killer/", quote: "But after two years of incarceration, Rhygin escaped from the maximum security General Penitentiary."}
+    - {title: "Jamaica Gleaner, The Classics: Sunday Gleaner, 10 October 1948, Rhyging killed by police (reprint, 2021)", url: "https://jamaica-gleaner.com/article/esponsored/20211014/jamaicas-most-wanted-ivanhoe-rhyging-martin-killed-police", quote: "First of all, he escaped from the General Penitentiary through one of the windows"}
+- card: harder-they-come
+  fact: "In 1948, after a string of shootings, he was the object of what was called the biggest manhunt ever"
+  verdict: confirmed
+  sources:
+    - {title: "Jamaica Observer: The story of Rhygin, the Two-Gun Killer (2007)", url: "https://www.jamaicaobserver.com/2007/10/20/the-story-of-rhygin-the-two-gun-killer/", quote: "what was known at the time as the biggest manhunt ever"}
+    - {title: "Jamaica Gleaner, The Classics: Sunday Gleaner, 10 October 1948, Rhyging killed by police (reprint, 2021)", url: "https://jamaica-gleaner.com/article/esponsored/20211014/jamaicas-most-wanted-ivanhoe-rhyging-martin-killed-police", quote: "For five long weeks, he defied one of the biggest manhunt ever organised by the local police."}
+  note: "Gleaner reprint also documents the shootings (\"he shot and injured estella brown and iris bailey\")."
+- card: harder-they-come
+  fact: "It ended in October 1948 on Lime Cay off Port Royal, where police shot him dead"
+  verdict: confirmed
+  sources:
+    - {title: "Jamaica Observer: The story of Rhygin, the Two-Gun Killer (2007)", url: "https://www.jamaicaobserver.com/2007/10/20/the-story-of-rhygin-the-two-gun-killer/", quote: "the cops swooped down on the Cay in the early morning hours of October 9, 1948"}
+    - {title: "Jamaica Gleaner, The Classics: Sunday Gleaner, 10 October 1948, Rhyging killed by police (reprint, 2021)", url: "https://jamaica-gleaner.com/article/esponsored/20211014/jamaicas-most-wanted-ivanhoe-rhyging-martin-killed-police", quote: "was driven to take refuge on Lime Cay, some miles from Port Royal"}
+    - {title: "Jamaica Gleaner, The Classics: Sunday Gleaner, 10 October 1948, Rhyging killed by police (reprint, 2021)", url: "https://jamaica-gleaner.com/article/esponsored/20211014/jamaicas-most-wanted-ivanhoe-rhyging-martin-killed-police", quote: "the police following his trail to Lime Cay, where he was killed after a desperate stand"}
+- card: harder-they-come
+  fact: "Many poor people saw him as a folk hero"
+  verdict: corrected
+  sources:
+    - {title: "Jamaica Observer: The story of Rhygin, the Two-Gun Killer (2007)", url: "https://www.jamaicaobserver.com/2007/10/20/the-story-of-rhygin-the-two-gun-killer/", quote: "he was very well liked by the common people who saw him as somewhat of a folk hero"}
+    - {title: "Krista Thompson, Art Journal 77, no. 2 (2018): Ivanhoe Rhygin Martin and photographic disappearance in Jamaica", url: "https://artjournal.collegeart.org/?p=10123", quote: "a social bandit, and a folk hero"}
+  note: "Sources say \"common people\", not specifically Kingstonians or the poor; body now \"Many ordinary Jamaicans\"."
+- card: harder-they-come
+  fact: "Cliff sang the title song"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Jimmy Cliff", url: "https://www.britannica.com/biography/Jimmy-Cliff", quote: "he contributed to its soundtrack the classics “ Many Rivers to Cross,” “ Sitting in Limbo,” and the title song"}
+    - {title: "IRIE Magazine: The Harder They Come (1972)", url: "https://www.iriemag.com/magazine/summer-2026/the-harder-they-come/", quote: "He records his first song, “The Harder They Come,”"}
+- card: harder-they-come
+  fact: "The film and soundtrack are credited with introducing reggae to audiences far beyond Jamaica"
+  verdict: confirmed
+  sources:
+    - {title: "Krista Thompson, Art Journal 77, no. 2 (2018): Ivanhoe Rhygin Martin and photographic disappearance in Jamaica", url: "https://artjournal.collegeart.org/?p=10123", quote: "The film and its soundtrack have been credited with introducing reggae to audiences transnationally."}
+    - {title: "IRIE Magazine: The Harder They Come (1972)", url: "https://www.iriemag.com/magazine/summer-2026/the-harder-they-come/", quote: "introduced Jamaican culture and reggae music to audiences worldwide"}
+    - {title: "Encyclopaedia Britannica: Jimmy Cliff", url: "https://www.britannica.com/biography/Jimmy-Cliff", quote: "instrumental in introducing reggae to an international audience, largely through his performance in the landmark film"}
+- card: harder-they-come
+  fact: "The film made Cliff an international star"
+  verdict: confirmed
+  sources:
+    - {title: "Encyclopaedia Britannica: Jimmy Cliff", url: "https://www.britannica.com/biography/Jimmy-Cliff", quote: "With his hit Wonderful World, Beautiful People (1970) and the landmark film The Harder They Come (1972), Cliff became reggae’s biggest star."}
+    - {title: "IRIE Magazine: The Harder They Come (1972)", url: "https://www.iriemag.com/magazine/summer-2026/the-harder-they-come/", quote: "The film not only launched the international acting career of Jimmy Cliff"}
+- card: independance-cha-cha
+  fact: "Congolese rumba is the dance music that grew out of Cuban music and records"
+  verdict: confirmed
+  sources:
+    - {title: "Gary Stewart, Rumba on the River: Joseph Kabasele (archived)", url: "https://web.archive.org/web/20130420065932/http://www.coldrunbooks.com/kabasele.html", quote: "contributed heavily to the evolving Congolese rumba, a variant of the Cuban son"}
+    - {title: "RFI Musique: 60 ans des indépendances, au Congo, un cha-cha de circonstances (2020)", url: "https://musique.rfi.fr/musique-africaine/20200630-60-ans-independances-congo-cha-cha-circonstances", quote: "le phénomène résulte aussi de la commercialisation massive à bas prix de 78 tours cubains sur le continent"}
+- card: independance-cha-cha
+  fact: "African Jazz was led by singer Joseph Kabasele, Le Grand Kallé, the biggest name in Congolese music"
+  verdict: confirmed
+  sources:
+    - {title: "Gary Stewart, Rumba on the River: Joseph Kabasele (archived)", url: "https://web.archive.org/web/20130420065932/http://www.coldrunbooks.com/kabasele.html", quote: "Kabasele became known as \"Le Grand Kalle\" as his popularity rose to an unparalleled level."}
+    - {title: "RFI Musique: 60 ans des indépendances, au Congo, un cha-cha de circonstances (2020)", url: "https://musique.rfi.fr/musique-africaine/20200630-60-ans-independances-congo-cha-cha-circonstances", quote: "Cette chanson de Joseph Kabasele , dit Grand Kalle"}
+    - {title: "Mondomix: Indépendance Cha Cha, histoire d'un tube (archived)", url: "https://web.archive.org/web/20130627192310/http://www.mondomix.com/news/independance-cha-cha-histoire-d-un-tube", quote: "Joseph Kabasele, super star avec son African Jazz"}
+- card: independance-cha-cha
+  fact: "In January 1960 Congolese politicians gathered in Brussels for the Round Table talks with Belgium"
+  verdict: confirmed
+  sources:
+    - {title: "Alan Brain, Pan African Music: Round Table, Indépendance Cha Cha (2020)", url: "https://pan-african-music.com/en/round-table-independence-cha-cha/", quote: "In January of that year, dozens of Congolese politicians arrived in Brussels to discuss the terms of the independence of Congo. Those negotiations were known as the “Table Ronde”."}
+    - {title: "Mondomix: Indépendance Cha Cha, histoire d'un tube (archived)", url: "https://web.archive.org/web/20130627192310/http://www.mondomix.com/news/independance-cha-cha-histoire-d-un-tube", quote: "la table ronde qui se déroule du 20 janvier au 20 février 1960"}
+- card: independance-cha-cha
+  fact: "Homesick delegates had the band brought to Brussels to entertain them"
+  verdict: confirmed
+  sources:
+    - {title: "Alan Brain, Pan African Music: Round Table, Indépendance Cha Cha (2020)", url: "https://pan-african-music.com/en/round-table-independence-cha-cha/", quote: "a strong nostalgia for the homeland and its music had already invaded the Congolese politicians in Brussels. In an unexpected decision that shaped the history of their country, the politicians came up with the idea of bringing a Congolese rumba orchestra to Brussels."}
+    - {title: "RFI Musique: 60 ans des indépendances, au Congo, un cha-cha de circonstances (2020)", url: "https://musique.rfi.fr/musique-africaine/20200630-60-ans-independances-congo-cha-cha-circonstances", quote: "Joseph Kabasele et une partie de son orchestre African Jazz, qui règne sur la rumba congolaise, sont invités dans la capitale belge pour distraire les négociateurs"}
+- card: independance-cha-cha
+  fact: "Two musicians of the rival OK Jazz, including singer Vicky Longomba, joined"
+  verdict: confirmed
+  sources:
+    - {title: "RFI Musique: 60 ans des indépendances, au Congo, un cha-cha de circonstances (2020)", url: "https://musique.rfi.fr/musique-africaine/20200630-60-ans-independances-congo-cha-cha-circonstances", quote: "Ils sont rejoints par deux membres de l’OK Jazz, la formation concurrente."}
+    - {title: "Mondomix: Indépendance Cha Cha, histoire d'un tube (archived)", url: "https://web.archive.org/web/20130627192310/http://www.mondomix.com/news/independance-cha-cha-histoire-d-un-tube", quote: "il convie également Vicky Longomba et Brazzos, issues de l’OK Jazz, l’écurie concurrente"}
+    - {title: "Alan Brain, Pan African Music: Round Table, Indépendance Cha Cha (2020)", url: "https://pan-african-music.com/en/round-table-independence-cha-cha/", quote: "Vicky Longomba and Brazzos were members of the O.K. Jazz orchestra"}
+- card: independance-cha-cha
+  fact: "The band played for the delegates at the Hotel Plaza, where they stayed"
+  verdict: corrected
+  sources:
+    - {title: "Alan Brain, Pan African Music: Round Table, Indépendance Cha Cha (2020)", url: "https://pan-african-music.com/en/round-table-independence-cha-cha/", quote: "the ensemble provided live music for the Congolese politicians in the dancing bar of the Hotel Plaza"}
+    - {title: "Alan Brain, Pan African Music: Round Table, Indépendance Cha Cha (2020)", url: "https://pan-african-music.com/en/round-table-independence-cha-cha/", quote: "the fancy Hotel Plaza, where the Congolese politicians were staying"}
+    - {title: "Mondomix: Indépendance Cha Cha, histoire d'un tube (archived)", url: "https://web.archive.org/web/20130627192310/http://www.mondomix.com/news/independance-cha-cha-histoire-d-un-tube", quote: "est dépêché à l’hôtel Plazza de Bruxelles afin de commenter en chanson la table ronde"}
+  note: "That the politicians stayed at the Plaza rests on Pan African Music alone; \"where they stayed\" dropped. The band playing at the Plaza is confirmed by PAM and Mondomix."
+- card: independance-cha-cha
+  fact: "The song was written on the spot and recorded in Brussels"
+  verdict: confirmed
+  sources:
+    - {title: "Mondomix: Indépendance Cha Cha, histoire d'un tube (archived)", url: "https://web.archive.org/web/20130627192310/http://www.mondomix.com/news/independance-cha-cha-histoire-d-un-tube", quote: "Écrites à chaud, gravées sur place chez Philips"}
+    - {title: "RFI Musique: 60 ans des indépendances, au Congo, un cha-cha de circonstances (2020)", url: "https://musique.rfi.fr/musique-africaine/20200630-60-ans-independances-congo-cha-cha-circonstances", quote: "enregistre sur place la chanson qui célèbre l’indépendance acquise sur le papier"}
+    - {title: "Alan Brain, Pan African Music: Round Table, Indépendance Cha Cha (2020)", url: "https://pan-african-music.com/en/round-table-independence-cha-cha/", quote: "the band worked almost until the next morning to finish the legendary song"}
+- card: independance-cha-cha
+  fact: "Its lyrics hail independence and name the politicians, rivals such as Kasa-Vubu and Lumumba"
+  verdict: confirmed
+  sources:
+    - {title: "RFI Musique: 60 ans des indépendances, au Congo, un cha-cha de circonstances (2020)", url: "https://musique.rfi.fr/musique-africaine/20200630-60-ans-independances-congo-cha-cha-circonstances", quote: "en faisant allusion aux noms des protagonistes honorés au micro : Kasa-Vubu, Lumumba, Tshombé"}
+    - {title: "Gary Stewart, Rumba on the River: Joseph Kabasele (archived)", url: "https://web.archive.org/web/20130420065932/http://www.coldrunbooks.com/kabasele.html", quote: "celebrated Congo's impending freedom from Belgian colonial masters and lauded Congolese politicians by name"}
+    - {title: "Mondomix: Indépendance Cha Cha, histoire d'un tube (archived)", url: "https://web.archive.org/web/20130627192310/http://www.mondomix.com/news/independance-cha-cha-histoire-d-un-tube", quote: "Joseph Kasa-Vubu (futur président) et son rival Patrice Lumumba (futur chef du gouvernement) négocient âprement"}
+  note: "Pan African Music also: \"patrice lumumba, joseph kasavubu and the other politicians ... were happy to hear their names mentioned in the song\"."
+- card: independance-cha-cha
+  fact: "Congo became independent on 30 June 1960"
+  verdict: confirmed
+  sources:
+    - {title: "Alan Brain, Pan African Music: Round Table, Indépendance Cha Cha (2020)", url: "https://pan-african-music.com/en/round-table-independence-cha-cha/", quote: "On 30 June 1960, the Congo (DRC) became independent."}
+    - {title: "Mondomix: Indépendance Cha Cha, histoire d'un tube (archived)", url: "https://web.archive.org/web/20130627192310/http://www.mondomix.com/news/independance-cha-cha-histoire-d-un-tube", quote: "le 30 juin 1960, jour de l’Indépendance"}
+- card: independance-cha-cha
+  fact: "It became a hit across Africa as country after country became independent"
+  verdict: confirmed
+  sources:
+    - {title: "Gary Stewart, Rumba on the River: Joseph Kabasele (archived)", url: "https://web.archive.org/web/20130420065932/http://www.coldrunbooks.com/kabasele.html", quote: "Record became a continent-wide hit as, one by one, African countries won their independence."}
+    - {title: "Alan Brain, Pan African Music: Round Table, Indépendance Cha Cha (2020)", url: "https://pan-african-music.com/en/round-table-independence-cha-cha/", quote: "became the soundtrack for independence, not only in Congo but in all Sub-Saharan Africa"}
+    - {title: "Mondomix: Indépendance Cha Cha, histoire d'un tube (archived)", url: "https://web.archive.org/web/20130627192310/http://www.mondomix.com/news/independance-cha-cha-histoire-d-un-tube", quote: "le premier tube pan-africain"}
+- card: independance-cha-cha
+  fact: "In Congo it is still heard as the sound of independence, closer to hearts than any official anthem"
+  verdict: confirmed
+  sources:
+    - {title: "RFI Musique: 60 ans des indépendances, au Congo, un cha-cha de circonstances (2020)", url: "https://musique.rfi.fr/musique-africaine/20200630-60-ans-independances-congo-cha-cha-circonstances", quote: "il n’y a eu qu’un seul véritable hymne national congolais, un seul petit air qui jusqu’à aujourd’hui fait spontanément se déhancher toute l’Afrique centrale"}
+    - {title: "Alan Brain, Pan African Music: Round Table, Indépendance Cha Cha (2020)", url: "https://pan-african-music.com/en/round-table-independence-cha-cha/", quote: "most Congolese associate independence with an all-star orchestra, a continental hit song"}
+- card: independance-cha-cha
+  fact: "(dispute) First performance: PAM says 1 February 1960 at the Hotel Plaza; Mondomix says 30 June 1960"
+  verdict: confirmed
+  sources:
+    - {title: "Alan Brain, Pan African Music: Round Table, Indépendance Cha Cha (2020)", url: "https://pan-african-music.com/en/round-table-independence-cha-cha/", quote: "Grand Kallé and African Jazz launched into their new song “Indépendance Cha Cha”"}
+    - {title: "Mondomix: Indépendance Cha Cha, histoire d'un tube (archived)", url: "https://web.archive.org/web/20130627192310/http://www.mondomix.com/news/independance-cha-cha-histoire-d-un-tube", quote: "qui les joueront pour la première fois en public le 30 juin 1960, jour de l’Indépendance"}
+- card: independance-cha-cha
+  fact: "(dispute) Authorship: Mondomix credits Roger Izeidi; RFI and Stewart credit Kabasele"
+  verdict: confirmed
+  sources:
+    - {title: "Mondomix: Indépendance Cha Cha, histoire d'un tube (archived)", url: "https://web.archive.org/web/20130627192310/http://www.mondomix.com/news/independance-cha-cha-histoire-d-un-tube", quote: "Son auteur, Roger Izeidi"}
+    - {title: "RFI Musique: 60 ans des indépendances, au Congo, un cha-cha de circonstances (2020)", url: "https://musique.rfi.fr/musique-africaine/20200630-60-ans-independances-congo-cha-cha-circonstances", quote: "Cette chanson de Joseph Kabasele"}
+    - {title: "Gary Stewart, Rumba on the River: Joseph Kabasele (archived)", url: "https://web.archive.org/web/20130420065932/http://www.coldrunbooks.com/kabasele.html", quote: "Kabasele's most memorable song, \"Indépendance Cha Cha\" from 1960"}
+unledgered:
+- card: zombie-fela
+  claim: "Front matter place Kalakuta Republic, Lagos (6.5568, 3.3501)"
+  verdict: unconfirmed
+  note: "The 1977 compound stood on Agege Motor Road, Mushin; none of the opened sources gives an address. Coordinates are an approximate point on the Lagos mainland and are left as a city-level marker."
+- card: pata-pata
+  claim: "moment place index 1 (New York) for 1967"
+  verdict: confirmed
+  note: "Bandcamp Daily: after exile 'makeba landed in new york city'; the 1967 Reprise hit belongs to her American period. Kept."
+- card: a-change-is-gonna-come
+  claim: "Shreveport incident on a Southern tour"
+  verdict: confirmed
+  sources:
+    - {title: "John Wirt, 64 Parishes", url: "https://64parishes.org/entry/a-change-is-gonna-come", quote: "the shreveport incident happened during a southern tour"}
+    - {title: "B.G. Rhule, Library of Congress, National Recording Registry", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/AChangeIsGonnaCome.pdf", quote: "commenced a road tour in shreveport, louisiana"}
+- card: pata-pata
+  claim: "RU wow phrasing"
+  verdict: corrected
+  note: "«подняли американские чарты» (charts raised the song) rewritten as «поднялась в американских чартах»."
+- card: all
+  claim: "Pairs, eras, kinds, years, links"
+  verdict: confirmed
+  note: "pair labels match within the batch (africa-on-record: pata-pata f / zombie-fela m; songs-of-1963: mississippi-goddam f / a-change-is-gonna-come m; screen-firsts: carmen-jones f / harder-they-come m). All kinds are work, era v6. Cross-links selma-1965, afrobeat, gospel, reggae exist. EN and RU bodies checked against each other after fixes; lint clean for these cards."

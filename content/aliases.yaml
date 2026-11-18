@@ -1,0 +1,268 @@
+# Names of cards as running text writes them, when the title does not.
+#
+# The museum links the first mention of a card in a block of text it renders
+# from data (the Workshop, the cabinet, documents, country headers, Roots, the
+# engine room). It knows every card by its title (without the parenthesis,
+# the leading "The" and the subtitle), its `inline` name, and the names below.
+# Russian names are given in the nominative: their case forms are matched by
+# themselves ("Сан Ра" also finds «Сана Ра», «Сану Ра»).
+#
+# `never` lists names a title gives that are too often an ordinary word or
+# another place of the same name to be linked by themselves.
+#
+# web/scripts/build-names.ts turns this into data/names.json and writes the
+# report of unlinked mentions to dist/link-gaps.txt.
+aliases:
+  # people
+  equiano:
+    en: [Olaudah Equiano, Equiano, Gustavus Vassa]
+    ru: [Олауда Эквиано, Эквиано, Густавус Васса]
+  douglass-covey:
+    en: [Frederick Douglass, Douglass]
+    ru: [Фредерик Дуглас]
+  jacobs-garret:
+    en: [Harriet Jacobs, Linda Brent]
+    ru: [Гарриет Джейкобс, Линда Брент]
+  hurston:
+    en: [Hurston]
+    ru: [Хёрстон]
+  achebe:
+    en: [Achebe]
+    ru: [Ачебе]
+  bridgetower:
+    en: [Bridgetower]
+    ru: [Бриджтауэр]
+  ngugi:
+    en: [Ngugi wa Thiong'o, Ngũgĩ]
+    ru: [Нгуги]
+  martin-luther-king:
+    en: [Martin Luther King, Dr. King]
+    ru: [Мартин Лютер Кинг]
+  malcolm-x:
+    en: [Malcolm X]
+    ru: [Малкольм Икс]
+  sojourner-truth:
+    en: [Sojourner Truth, "Ain't I a Woman?"]
+    ru: [Соджорнер Трут]
+  owens-berlin-1936:
+    en: [Jesse Owens]
+    ru: [Джесси Оуэнс]
+  marian-anderson-1939:
+    en: [Marian Anderson]
+    ru: [Мариан Андерсон]
+  viola-desmond:
+    en: [Viola Desmond]
+    ru: [Виола Десмонд]
+  booker-t-dinner-1901:
+    en: [Booker T. Washington]
+    ru: [Букер Т. Вашингтон]
+  ota-benga-1906:
+    en: [Ota Benga]
+    ru: [Ота Бенга]
+  sims-act-1912:
+    en: [Jack Johnson]
+    ru: [Джек Джонсон]
+  gannibal:
+    en: [Abram Gannibal]
+    ru: [Абрам Ганнибал]
+  general-dumas:
+    en: [Thomas-Alexandre Dumas, General Dumas]
+    ru: [Тома-Александр Дюма, генерал Дюма]
+  saint-georges:
+    en: [Chevalier de Saint-Georges, Joseph Bologne]
+    ru: [шевалье де Сен-Жорж, Жозеф Болонь]
+  nzinga:
+    en: [Njinga, Nzinga, Queen Njinga]
+    ru: [Нзинга, королева Нзинга]
+  kimpa-vita:
+    en: [Kimpa Vita, Dona Beatriz]
+    ru: [Кимпа Вита]
+  nardal-sisters:
+    en: [Nardal sisters, Paulette Nardal, Jane Nardal]
+    ru: [сёстры Нардаль, Полетт Нардаль, Жанна Нардаль]
+  big-mama-thornton:
+    en: [Big Mama Thornton, Willie Mae Thornton]
+    ru: [Биг Мама Торнтон]
+  rosetta-tharpe:
+    en: [Rosetta Tharpe]
+    ru: [Розетта Тарп]
+  madam-cj-walker:
+    en: [Madam C.J. Walker]
+    ru: [Си Джей Уокер]
+  major-taylor:
+    en: [Major Taylor]
+    ru: [Мейджор Тейлор]
+  black-japan-yasuke:
+    en: [Yasuke]
+    ru: [Ясукэ]
+  phillis-wheatley:
+    en: [Wheatley]
+    ru: [Уитли]
+  ida-b-wells:
+    en: [Ida Wells, Ida B. Wells-Barnett]
+    ru: [Ида Уэллс]
+  dave-the-potter:
+    en: [Dave the Potter, David Drake]
+    ru: [гончар Дейв, Дэвид Дрейк]
+  mansa-musa:
+    en: [Musa I of Mali]
+    ru: [Муса I]
+  sun-ra:
+    en: [Sun Ra, Le Sony'r Ra, Herman Poole Blount]
+    ru: [Сан Ра]
+  # events and documents
+  zong:
+    en: [Zong massacre, the Zong]
+    ru: [резня на «Зонге»]
+  amistad-case:
+    en: [Amistad, La Amistad]
+    ru: [«Амистад»]
+  stono-drum-ban:
+    en: [Stono Rebellion, Stono rebellion]
+    ru: [восстание в Стоно]
+  partus-1662:
+    en: [Partus sequitur ventrem]
+    ru: [Partus sequitur ventrem]
+  civil-rights-act-1964:
+    en: [Civil Rights Act]
+    ru: [Закон о гражданских правах]
+  tuskegee:
+    en: [Tuskegee study, Tuskegee syphilis study]
+    ru: [исследование в Таскиги]
+  scottsboro:
+    en: [Scottsboro Boys, Scottsboro trials]
+    ru: [парни из Скоттсборо]
+  underground-railroad-myths:
+    en: [quilt codes, Drinking Gourd]
+    ru: [коды на одеялах]
+  willie-lynch-hoax:
+    en: [Willie Lynch letter, Willie Lynch]
+    ru: [письмо Вилли Линча, Вилли Линч]
+  wedgwood-medallion:
+    en: [Wedgwood medallion, "Am I Not a Man and a Brother"]
+    ru: [медальон Веджвуда]
+  brookes:
+    en: [Brookes print, Description of a Slave Ship]
+    ru: [гравюра «Брукс»]
+  wpa-narratives:
+    en: [WPA narratives, Born in Slavery, WPA slave narratives]
+    ru: [«Рождённые в рабстве»]
+  hannah-crafts:
+    en: [The Bondwoman's Narrative, Hannah Crafts]
+    ru: [Ханна Крафтс]
+  walkers-appeal:
+    en: [Walker's Appeal]
+    ru: [«Воззвание» Уокера]
+  du-bois-infographics:
+    en: [Du Bois's data portraits]
+    ru: [диаграммы Дюбуа]
+  timbuktu-manuscripts:
+    en: [Timbuktu manuscripts, Timbuktu]
+    ru: [рукописи Тимбукту, Тимбукту]
+  sunjata:
+    en: [Epic of Sunjata, Sunjata, Sundiata]
+    ru: [Сундиата, сказание о Сундиате]
+  kebra-nagast:
+    en: [Kebra Nagast]
+    ru: [«Кебра нагаст»]
+  # works and media whose single-word titles are not guessed
+  slavevoyages:
+    en: [SlaveVoyages, Trans-Atlantic Slave Trade Database]
+    ru: [SlaveVoyages]
+  nollywood:
+    en: [Nollywood]
+    ru: [Нолливуд]
+  freedomways:
+    en: [Freedomways]
+    ru: [«Freedomways»]
+  zombie-fela:
+    en: [Fela's Zombie]
+    ru: ["«Zombie» Фелы"]
+  respect:
+    en: [Aretha Franklin's Respect]
+    ru: [«Respect» Ареты Франклин]
+  roots-1977:
+    en: [Roots miniseries]
+    ru: [сериал «Корни»]
+  drum-magazine:
+    en: [Drum magazine]
+    ru: [журнал «Драм»]
+  the-crisis:
+    en: [The Crisis]
+    ru: [журнал «Кризис»]
+  negro-world:
+    en: [Negro World]
+    ru: [«Негритянский мир»]
+  chicago-defender:
+    en: [Chicago Defender]
+    ru: [«Чикаго дефендер»]
+  freedoms-journal:
+    en: [Freedom's Journal]
+    ru: [«Журнал свободы»]
+  mbube:
+    en: [Mbube, The Lion Sleeps Tonight]
+    ru: [«Mbube», «The Lion Sleeps Tonight»]
+  amen-break:
+    en: [Amen break, "Amen, Brother"]
+    ru: [брейк Amen, «Amen, Brother»]
+  american-gothic-parks:
+    en: [American Gothic]
+    ru: [«Американская готика, Вашингтон»]
+  ringgold-die:
+    en: [American People Series]
+    ru: ["«Американский народ, № 20: Умри»"]
+  black-orpheus:
+    en: [Orfeu Negro]
+    ru: [Orfeu Negro]
+  xica-da-silva-film:
+    en: [Xica da Silva]
+    ru: [фильм «Шика да Силва»]
+  # things, genres and instruments written more than one way
+  cowries:
+    en: [cowrie shells, cowries, cowrie]
+    ru: [раковины каури, каури]
+  steelpan:
+    en: [steel pan, steel band]
+    ru: [стилпэн, стил-бэнд]
+  work-songs:
+    en: [work songs, field hollers]
+    ru: [рабочие песни, полевые кличи]
+  rhythm-and-blues:
+    en: [R&B, rhythm & blues]
+    ru: [ритм-энд-блюз]
+  rock-n-roll:
+    en: [rock 'n' roll, rock-and-roll, rock’n’roll]
+    ru: [рок-н-ролл]
+  hip-hop:
+    en: [hip hop]
+    ru: [хип-хоп]
+  talking-drums:
+    en: [talking drum, talking drums]
+    ru: [говорящий барабан, говорящие барабаны]
+  banjo:
+    en: [banjo]
+    ru: [банджо]
+  gullah:
+    en: [Gullah, Geechee]
+    ru: [гулла]
+  haitian-vodou:
+    en: [Vodou, Haitian Vodou]
+    ru: [вуду, гаитянское вуду]
+  regla-de-ocha:
+    en: [Santería, Regla de Ocha]
+    ru: [Сантерия]
+  candomble:
+    en: [Candomblé]
+    ru: [кандомбле]
+  palmares:
+    en: [Palmares]
+    ru: [Палмарис]
+  dikenga:
+    en: [Kongo cosmogram, dikenga]
+    ru: [дикенга, конголезская космограмма]
+  ifa-divination:
+    en: [Ifá divination]
+    ru: [Ифа]
+never:
+  en: [Lagos, Solitude, Jerk, Nanny, Paulette, Koto, Pinnacle, Carlota, Amina, Tula]
+  ru: [Лагуш, Тула, Кото, Полетт, Пиннакл, Сона, сона]

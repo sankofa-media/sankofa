@@ -8,6 +8,7 @@ places:
   - {name: Paris, lat: 48.8566, lon: 2.3522}
   - {name: "Basse-Terre, Guadeloupe", lat: 15.9985, lon: -61.7255}
 zoom: 4
+moment: {year: 1781}
 era: v5
 books: [heirs]
 further:
@@ -15,6 +16,7 @@ further:
   - "Haydn, Symphonies Nos. 82-87 (the Paris symphonies)"
 sources:
   - {title: "Handel and Haydn Society: Joseph Bologne", url: "https://handelandhaydn.org/joseph-bologne-chevalier-de-saint-georges-through-the-years/"}
+  - {title: "Boston Public Library: Joseph Bologne, Chevalier de Saint-Georges", url: "https://www.bpl.org/blogs/post/joseph-bologne-chevalier-de-saint-georges/"}
   - {title: "BBC Music Magazine: Paul Riley on Joseph Bologne", url: "https://www.classical-music.com/features/composers/bologne-joseph"}
   - {title: "Warwick Lister: The First Performance of Haydn’s Paris Symphonies, Eighteenth-Century Music", url: "https://www.cambridge.org/core/journals/eighteenth-century-music/article/abs/the-first-performance-of-haydns-paris-symphonies/9A97AFA6AFAB74C1511D9121DEFF8035"}
   - {title: "Philharmonie de Paris: Haydn Symphony No. 84 programme notes", url: "https://pad.philharmoniedeparis.fr/download.ashx?id=CMTN000339500_01&typedoc=CMTN"}
@@ -22,4 +24,8 @@ sources:
 media:
   - {"type": "image", "file": "saint-georges.jpg", "caption": "Monsieur de St. George, mezzotint by William Ward after Mather Brown, published 4 April 1788", "credit": "William Ward after Mather Brown; Metropolitan Museum of Art, Harris Brisbane Dick Fund, 1953", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Monsieur_de_St._George_MET_DP819235.jpg"}
 ---
-Haydn's six Paris symphonies were ordered by an orchestra founded by a swordsman from Guadeloupe. Joseph Bologne, Chevalier de Saint-Georges, was a celebrated fencer and violinist. In 1772 he played his own concertos with the Concert des Amateurs and soon led it. When it folded in 1781 he founded the Concert de la Loge Olympique, a Masonic orchestra, and it was for this orchestra that Haydn wrote the six symphonies, composed in 1785 and 1786 and probably first heard in Paris in 1787. In 1792 the musician became colonel of a cavalry legion of men of colour. Compare [[general-dumas|General Thomas-Alexandre Dumas]] and [[bridgetower|George Bridgetower]].
+Joseph Bologne, Chevalier de Saint-Georges, was born in Guadeloupe to a French planter and an enslaved woman, Nanon, and taken to France as a child. In Paris he became a celebrated fencer and violinist.
+
+In 1772 he played his own concertos with the Concert des Amateurs and soon led it. In 1776 he was put forward to direct the Paris Opéra, but singers objected to taking orders from a man of colour, and he did not get the post; he went on to write operas of his own.
+
+After the Concert des Amateurs folded in 1781 he founded the Concert de la Loge Olympique, a Masonic orchestra, and it was for this orchestra that Haydn wrote his six Paris symphonies, composed in 1785 and 1786 and probably first heard in Paris in 1787. In 1792 he became colonel of a cavalry legion of men of colour. Imprisoned during the Terror, he survived it and died in Paris in 1799.

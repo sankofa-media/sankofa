@@ -1,0 +1,19 @@
+{
+  "id": "river",
+  "kind": "event",
+  "title": "The river",
+  "wow": "{male} is not a marker in a hook.",
+  "years": [1862],
+  "places": [{ "name": "Beaufort", "lat": 32.43, "lon": -80.67 }],
+  "zoom": 4,
+  "books": ["archives"],
+  "sources": [],
+  "body": "Shared first paragraph about [[robert-smalls]].\n\n{male} Only the male copy reads this\nwrapped line.\n\n{female} Only the female copy reads this.\n\nShared last paragraph.",
+  "translations": {
+    "ru": {
+      "title": "Река",
+      "wow": "Крючок.",
+      "body": "Общий первый абзац.\n\n{male} Только мужской экземпляр.\n\n{female} Только женский экземпляр.\n\nОбщий последний абзац."
+    }
+  }
+}

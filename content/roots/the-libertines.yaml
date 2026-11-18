@@ -7,15 +7,96 @@ place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
 placeRu: "Лондон"
 genre: "Indie rock"
 genreRu: "инди-рок"
-story: "The Libertines’ debut, Up the Bracket, was recorded with Mick Jones. The producer connected their first album to a musician from the Clash."
-storyRu: "Дебютный альбом The Libertines «Up the Bracket» записан вместе с Миком Джонсом. Продюсером первой пластинки стал музыкант The Clash."
+story: "Pete Doherty grew up on Pulp, Oasis, Blur and the Smiths, and critics hear the Libertines marrying the blunt fury of the Clash to Britpop’s romance of the English song. Their scrappy, live-recorded twin-guitar rock made Up the Bracket a starting gun for the 2000s indie revival."
+storyRu: "Пит Доэрти вырос на Pulp, Oasis, Blur и The Smiths, а критики слышат у The Libertines прямолинейную ярость The Clash, соединённую с брит-поповской романтикой английской песни. Их нарочито неряшливый рок на две гитары, записанный вживую, сделал «Up the Bracket» стартовым выстрелом инди-возрождения 2000-х."
 links:
   - to: "root:the-clash"
-    kind: "producer"
-    claim: "The Libertines recorded their debut album, Up the Bracket, with the Clash’s Mick Jones."
-    claimRu: "The Libertines записали дебютный альбом Up the Bracket вместе с Миком Джонсом из The Clash."
-    sources:
-      - title: "Radio X: The Libertines on Up the Bracket, Mick Jones and Glastonbury"
-        url: "https://www.radiox.co.uk/artists/libertines/talk-up-the-bracket-gigs-mick-jones-glasto/"
-      - title: "The Independent: Carl Barât on the story of Up the Bracket"
-        url: "https://www.the-independent.com/arts-entertainment/music/features/the-libertines-up-the-bracket-pete-doherty-carl-barat-interview-b2200753.html"
+    kind: "influence"
+    how: "The Libertines took from the Clash the blunt, truculent attack of London punk — fast, fuzz-soaked guitars and a snotty, street-level attitude."
+    howRu: "The Libertines взяли у The Clash прямолинейный, задиристый напор лондонского панка — быстрые гитары в фузе и дерзкую уличную позу."
+    carries: []
+    dimensions: ["sound", "image"]
+    evidence:
+      - type: "listening"
+        dimensions: ["image"]
+        text: "Carl Barât put the Clash on his list of songs that formed the Libertines, a list read as a portrait of the music and attitude behind Up the Bracket."
+        textRu: "Карл Барат включил The Clash в список песен, сформировавших The Libertines, — список, который читается как портрет музыки и настроя «Up the Bracket»."
+        source:
+          title: "Far Out: From Bob Dylan to David Bowie — Carl Barât picked 15 songs that influenced The Libertines (Joe Taysom, 2020)"
+          url: "https://faroutmagazine.co.uk/carl-barat-the-libertines-influences-bob-dylan-david-bowie-smiths-jam-clash/"
+          quote: "It should come as no surprise that The Clash feature in his list of influences, with Barat including ‘Remote Control’ in his list of compilations. … it paints a succinct picture of the kind of music, as well as attitude which was encapsulated within Up The Bracket."
+      - type: "critics"
+        dimensions: ["sound", "image"]
+        text: "Guitar.com hears in Up the Bracket the blunt fury and truculence of the Clash, carried by fuzz-soaked, galloping guitars."
+        textRu: "Guitar.com слышит в «Up the Bracket» прямолинейную ярость и задиристость The Clash, которую несут скачущие гитары в фузе."
+        source:
+          title: "Guitar.com: The Genius Of… Up the Bracket by The Libertines (Andy Price, 2022)"
+          url: "https://guitar.com/reviews/album/the-genius-of-up-the-bracket-by-the-libertines/"
+          quote: "Marrying the blunt fury of The Clash with the poeticism of The Smiths … Barât and Doherty's fuzz-soaked, galloping guitars ran roughshod over Hassall and Powell's solid rhythm section. … There's the Clash-like truculence of the whirlwind title track"
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "NME traces the Libertines’ music to the taut directness of Patti Smith and the Clash."
+        textRu: "NME выводит музыку The Libertines из сжатой прямоты Патти Смит и The Clash."
+        source:
+          title: "NME: The Roots Of… The Libertines (2013)"
+          url: "https://www.nme.com/blogs/nme-blogs/the-roots-of-the-libertines-776240"
+          quote: "The taut directness of Patti Smith and the Clash informed the music Doherty and Barat would make"
+    scope: "career"
+  - to: "style:britpop"
+    kind: "influence"
+    how: "Doherty’s formative listening was the Britpop of Pulp, Oasis, Blur and Elastica; the Libertines kept its romance of English rock and literary tradition, Smiths-like chords and two exchanging voices."
+    howRu: "Доэрти сформировался на брит-попе Pulp, Oasis, Blur и Elastica; The Libertines сохранили присущую брит-попу романтику английского рока и литературной традиции, аккорды в духе The Smiths и перекличку двух голосов."
+    carries: []
+    dimensions: ["harmony-form", "melody-vocal", "image"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["harmony-form", "melody-vocal"]
+        text: "Doherty says that as a teenager he fell for Pulp, Oasis, Blur and Elastica, also discovered Wire and the Smiths, and built songs for two voices — Up the Bracket on the chords of a Smiths song."
+        textRu: "Доэрти рассказывает, что подростком влюбился в Pulp, Oasis, Blur и Elastica, открыл для себя Wire и The Smiths и сочинял песни на два голоса, а «Up the Bracket» построил на аккордах песни The Smiths."
+        source:
+          title: "Big Issue: Pete Doherty — ‘Living without heroin was very hard to imagine’ (Adrian Lobb, 2025)"
+          url: "https://www.bigissue.com/culture/music/pete-doherty-interview-music-drugs-libertines/"
+          quote: "This was the era of Pulp and Oasis and Blur and Elastica, all these bands I really fell for. I loved that music. And I was discovering older stuff too, listening to Wire and The Smiths."
+      - type: "critics"
+        dimensions: ["harmony-form", "melody-vocal", "image"]
+        text: "Guitar.com describes Up the Bracket’s romantic veneration of Britain’s rock and literary canon, its Smiths-esque chords and the thrill of early Suede, with Barât and Doherty exchanging lead vocals."
+        textRu: "Guitar.com пишет о романтическом преклонении «Up the Bracket» перед британским роком и литературой, об аккордах в духе The Smiths и азарте ранних Suede, а также о том, как Барат и Доэрти передают друг другу ведущий вокал."
+        source:
+          title: "Guitar.com: The Genius Of… Up the Bracket by The Libertines (Andy Price, 2022)"
+          url: "https://guitar.com/reviews/album/the-genius-of-up-the-bracket-by-the-libertines/"
+          quote: "With their romantic veneration of Britain's rock and literary canon … the nicotine-stained thrill of early Suede … punchy Smiths-esque chords … as he and Doherty exchange lead vocals."
+    scope: "career"
+  - to: "style:indie-rock"
+    kind: "style"
+    how: "The Libertines played indie guitar rock in its garage-revival form: purposefully lo-fi, mostly live-recorded twin guitars mixing poetry and punk rock."
+    howRu: "The Libertines играли инди-рок в духе гаражного возрождения: нарочито лоу-фай, две гитары, записанные в основном вживую, смесь поэзии и панк-рока."
+    carries: []
+    dimensions: ["sound", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "performance"]
+        text: "Guitar.com calls the record mainly live and purposefully lo-fi, rooted in Britain’s punk and indie heritage, and a wake-up call for the 2000s ‘indie renaissance’."
+        textRu: "Guitar.com называет пластинку записанной в основном вживую и нарочито лоу-фай, укоренённой в британском панке и инди, — пластинкой, разбудившей «инди-ренессанс» 2000-х."
+        source:
+          title: "Guitar.com: The Genius Of… Up the Bracket by The Libertines (Andy Price, 2022)"
+          url: "https://guitar.com/reviews/album/the-genius-of-up-the-bracket-by-the-libertines/"
+          quote: "Recorded mainly live … Purposefully lo-fi, Barât and Doherty's wilfully imprecise approach to guitar masked their true ability. … still sports the essence of Britain's punk and indie heritage."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Exclaim! describes a sound equal parts poetry and punk rock that kickstarted a new era of British guitar bands."
+        textRu: "Exclaim! описывает звук, наполовину состоящий из поэзии, наполовину из панк-рока, — с него началась новая эпоха британских гитарных групп."
+        source:
+          title: "Exclaim!: The Libertines (Sarah Murphy, 2015)"
+          url: "https://exclaim.ca/Music/article/libertines-boys_in_band"
+          quote: "With a sound that was equal parts poetry and punk rock … kickstarted a new era in British rock and paved the way for future generation of guitar-wielding wannabes"
+    scope: "career"
+notes:
+  - period: "2002 (Up the Bracket)"
+    who: "Mick Jones"
+    role: "producer"
+    what: "The Clash’s Mick Jones produced the debut album."
+    whatRu: "Мик Джонс из The Clash спродюсировал дебютный альбом."
+    source:
+      title: "Guitar.com: The Genius Of… Up the Bracket by The Libertines (Andy Price, 2022)"
+      url: "https://guitar.com/reviews/album/the-genius-of-up-the-bracket-by-the-libertines/"
+      quote: "with The Clash's co-architect Mick Jones helming their debut"

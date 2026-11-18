@@ -1,0 +1,22 @@
+---
+- id: fx-stg-0001
+  cat: stg
+  en: Alvin Ailey's Revelations premiered at New York's 92nd Street YM-YWHA on 31 January 1960.
+  ru: "Премьера «Откровений» Элвина Эйли прошла 31 января 1960 года в Нью-Йорке, в культурном центре YM-YWHA на 92-й улице."
+  year: 1960
+  place:
+    name: 92nd Street Y, New York
+    lat: 40.7829
+    lon: -73.9523
+  cards:
+    - revelations-ailey
+  gender: m
+  region: us
+  sources:
+    - title: 'Alvin Ailey American Dance Theater: Revelations'
+      url: https://pressroom.ailey.org/alvin-ailey-american-dance-theater/repertory/revelations
+      quote: The ballet premiered at the 92nd Street YM-YWHA on January 31, 1960
+    - title: 'Dance Notation Bureau: Revelations, dance ID 688'
+      url: https://www.dancenotation.org/catalog/revelations/
+      quote: January 31, 1960
+  status: checked

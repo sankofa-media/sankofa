@@ -1,18 +1,27 @@
 import './styles/main.css';
+import './styles/roots.css';
+import './styles/countries.css';
+import './styles/factoids.css';
 import type { App } from './app';
+import { cardLink } from './app';
 import type { CardsFile, ChaptersFile } from './lib/types';
 import { ERAS } from './lib/types';
-import { rememberPlace, takePlace } from './lib/place';
-import { CardSet, localizeCard, localizeChapter } from './lib/cards';
-import { sortChapters } from './lib/chapters';
+import { holdScroll, placeTop, rememberPlace, takePlace } from './lib/place';
+import { CardSet, cardForEdition, localizeCard, localizeChapter } from './lib/cards';
+import { chapterForEdition, sortChapters } from './lib/chapters';
 import { formatFragment } from './lib/fragment';
 import { formatRoute, parseRoute, screenOf, type Route } from './lib/route';
 import * as reader from './lib/reader';
 import { copyText, h, svgIcon, toast } from './lib/dom';
-import { detectLang, isLang, lang, setLang, storeLang, storedLang, t, t as tr, type Lang } from './lib/i18n';
+import { chapterLabel, chapterNumber, detectLang, isLang, lang, pick, setLang, storeLang, storedLang, t, t as tr, type Lang } from './lib/i18n';
 import { buildStory } from './views/story';
 import { localizeStatics, RU_TITLE_FIX } from './lib/statics';
 import { loadMediaManifest } from './lib/media';
+import { loadJson } from './lib/loadJson';
+import { foldStepMarks, splitStepMarks } from './lib/stepMarks';
+import { EMPTY_LISTEN, type ListenFile } from './lib/listen';
+import { EMPTY_VOICES, type VoicesFile } from './lib/voices';
+import { rootsExtras } from './lib/elements';
 import { watchTypography } from './lib/typo';
 import { Drawer, renderBook, renderCard } from './views/card';
 import { Atlas } from './views/atlas';
@@ -21,12 +30,22 @@ import { Listen } from './views/listen';
 import { Engine } from './views/engine';
 import { Roots } from './views/roots';
 import { RootsMap } from './views/rootsMap';
+import { installMechanics } from './mechanics';
+import { installFeatures } from './features';
+import { installNavMenu, navReady, setBookCount } from './views/navMenu';
+import { installFocusTrap } from './lib/focusTrap';
+import { isMechView } from './mechanics/views';
+import { compileLexicon, type NamesFile } from './lib/names';
+import { setLexicon, weaveLive } from './lib/weave';
+import { Facts, usableFactoids, type FactoidsFile } from './lib/factoids';
+import { FactPanel } from './views/factoid';
 
 async function load<T>(url: string): Promise<T> {
-  // The cover paints first; the data comes at a lower priority.
-  const r = await fetch(url, { priority: 'low' } as RequestInit);
-  if (!r.ok) throw new Error(`${url}: ${r.status}`);
-  return r.json() as Promise<T>;
+  // The cover paints first; the data comes at a lower priority, with a
+  // timeout and further tries on a slow line.
+  const data = await loadJson<T>(url, { priority: 'low', timeout: 20_000 });
+  if (data === null) throw new Error(`${url}: not found`);
+  return data;
 }
 
 function readRoute(): Route {
@@ -45,9 +64,13 @@ function writeRoute(r: Route, push: boolean): void {
 export function switchLang(to: Lang): void {
   storeLang(to);
   const r = parseRoute(location.hash);
-  // Keep the reader's place in the story across the rebuild.
+  // Keep the reader's place in the story across the rebuild: the chapter and
+  // the step being read go into the link, the offset in it into this tab.
   const here = !r.view ? rememberPlace() : undefined;
-  if (here) r.ch = here.ch;
+  if (here) {
+    r.ch = here.ch;
+    r.step = here.step >= 0 ? here.step : undefined;
+  }
   const frag = formatRoute({ ...r, point: { ...r.point, lang: to === 'en' ? undefined : to } });
   history.replaceState(null, '', frag ? `#${frag}` : location.pathname + location.search);
   location.reload();
@@ -64,32 +87,67 @@ async function start(): Promise<void> {
   document.body.append(loading);
   let cardsFile: CardsFile;
   let chaptersFile: ChaptersFile;
-  navLegend(current);
+  let listenFile: ListenFile;
+  let voicesFile: VoicesFile;
+  let namesFile: NamesFile | null;
+  installNavMenu(document.querySelector<HTMLElement>('.nav')!);
+  installFocusTrap();
   // The language switch needs no data, so it works while the cards load.
   document.querySelectorAll<HTMLElement>('[data-lang-switch]').forEach((b) => b.addEventListener('click', () => switchLang(lang() === 'ru' ? 'en' : 'ru')));
   // Let the static cover paint before the 1 MB of cards competes for the wire.
   await new Promise<void>((r) => requestAnimationFrame(() => setTimeout(r, 0)));
   try {
-    [cardsFile, chaptersFile] = await Promise.all([load<CardsFile>('data/cards.json'), load<ChaptersFile>('data/chapters.json'), loadMediaManifest()]);
+    [cardsFile, chaptersFile, listenFile, , namesFile, voicesFile] = await Promise.all([
+      load<CardsFile>('data/cards.json'),
+      load<ChaptersFile>('data/chapters.json'),
+      // Listening is an extra: the museum opens without it.
+      load<ListenFile>('data/listen.json').catch(() => EMPTY_LISTEN),
+      loadMediaManifest(),
+      // The dictionary's names: without them, only the marked links link.
+      load<NamesFile>('data/names.json').catch(() => null),
+      load<VoicesFile>('data/voices.json').catch(() => EMPTY_VOICES),
+    ]);
   } catch (e) {
     loading.remove();
-    document.getElementById('story')!.append(h('p.error', {}, t('The museum could not load its cards ({error}). Run scripts/build-data.sh.', { error: (e as Error).message })));
+    document.getElementById('story')!.append(
+      h(
+        'div.load-error',
+        { role: 'alert' },
+        h('p', {}, pick({ en: 'The museum could not load its cards. Check the connection and try again.', ru: 'Музей не смог загрузить карточки. Проверьте соединение и попробуйте ещё раз.' })),
+        h('p.load-error-detail', {}, (e as Error).message),
+        h('button.btn.primary', { type: 'button', onclick: () => location.reload() }, pick({ en: 'Try again', ru: 'Попробовать ещё раз' })),
+      ),
+    );
     return;
   }
 
   const rawCards = new Map(cardsFile.cards.map((c) => [c.id, c]));
-  const set = new CardSet(cardsFile.cards.map((c) => localizeCard(c, current)));
-  const chapters = sortChapters(chaptersFile.chapters.map((c) => localizeChapter(c, current))).map((c) => ({ ...c, title: RU_TITLE_FIX[c.title] ?? c.title }));
+  const held = reader.edition();
+  // Cards, like chapters, hold only the reader's copy of a marked paragraph.
+  const set = new CardSet(cardsFile.cards.map((c) => cardForEdition(localizeCard(c, current), held)));
+  // Each copy reads only its own paragraphs: every step and count follows from here.
+  // A step's own label and picture ({at …}, {img …}) travel with its paragraph
+  // through both filters, then come off as fields beside the clean text.
+  const chapters = sortChapters(chaptersFile.chapters.map((c) => splitStepMarks(chapterForEdition(localizeChapter(foldStepMarks(c), current), held)))).map((c) => ({ ...c, title: RU_TITLE_FIX[c.title] ?? c.title }));
   // One name per release: every era label is the chapter's own title.
   for (const e of ERAS) e.label = chapters.find((c) => c.id === e.id)?.title ?? e.label;
+  if (namesFile) setLexicon(compileLexicon(namesFile[current], current));
   const cardDrawer = new Drawer(t('Card'));
   const bookDrawer = new Drawer(t('Your book'));
   const pathListeners: ((p: string[]) => void)[] = [];
   let route = readRoute();
   let chapterNow: string | null = null;
 
+  // Factoids are an extra, like listening: they arrive after the cards and
+  // fill the views that wait for them; without them the museum is whole.
+  const facts = new Facts();
+  void loadJson<FactoidsFile>('data/factoids.json', { priority: 'low', timeout: 20_000 })
+    .then((f) => facts.fill(usableFactoids(f)))
+    .catch(() => facts.fill([]));
+
   const app: App = {
     set,
+    facts,
     raw: (id) => rawCards.get(id),
     openEngine(push = true) {
       cardDrawer.close(true);
@@ -100,21 +158,21 @@ async function start(): Promise<void> {
       engine.open();
     },
     chapters,
-    edition: reader.edition(),
+    listen: listenFile,
+    voices: voicesFile,
+    // The roots' elements, genre-to-genre steps and lines come with the cards.
+    ...rootsExtras(cardsFile),
+    edition: held,
     media: (file) => `media/${file}`,
     openCard(id, opts = {}) {
-      const path = route.point.path;
-      const exact = opts.exact ?? !!path?.includes(id);
-      const asked = set.get(id);
-      const c = exact ? asked : set.forEdition(id, app.edition);
+      const c = set.get(id);
       if (!c) return;
       bookDrawer.close(true);
-      const foreign = c.edition !== 'both' && c.edition !== app.edition;
-      cardDrawer.show(renderCard(app, c, { asked: !exact ? asked : undefined, foreign }));
+      cardDrawer.show(renderCard(app, c));
       const next = reader.recordVisit(c.id);
       pathListeners.forEach((l) => l(next));
       route = { ...route, point: { ...route.point, focus: c.id } };
-      if (!atlas.isOpen && !descent.isOpen && !listen.isOpen && !engine.isOpen && !roots.isOpen && !rootsMap.isOpen && !route.ch && chapterNow) route.ch = chapterNow;
+      if (!atlas.isOpen && !descent.isOpen && !listen.isOpen && !engine.isOpen && !roots.isOpen && !rootsMap.isOpen && !features.isOpen && !route.ch && chapterNow) route.ch = chapterNow;
       writeRoute(route, opts.push ?? true);
     },
     closeCard() {
@@ -128,7 +186,7 @@ async function start(): Promise<void> {
       route = { point: p, view: p.from || p.place || p.zoom || p.path?.length ? undefined : 'atlas' };
       writeRoute(route, push);
       atlas.open(p);
-      if (p.focus) app.openCard(p.focus, { push: false, exact: !!p.path?.includes(p.focus) });
+      if (p.focus) app.openCard(p.focus, { push: false });
     },
     openBook() {
       cardDrawer.close(true);
@@ -163,7 +221,7 @@ async function start(): Promise<void> {
       chapterNow = id;
       // The link follows the chapter being read, so a reload or a shared
       // link opens there; overlays keep their own links.
-      if (id && !atlas.isOpen && !descent.isOpen && !listen.isOpen && !engine.isOpen && !roots.isOpen && !rootsMap.isOpen && !route.point.focus && !route.view && route.ch !== id) {
+      if (id && !atlas.isOpen && !descent.isOpen && !listen.isOpen && !engine.isOpen && !roots.isOpen && !rootsMap.isOpen && !features.isOpen && !route.point.focus && !route.view && route.ch !== id) {
         route = { point: {}, ch: id };
         writeRoute(route, false);
       }
@@ -189,7 +247,8 @@ async function start(): Promise<void> {
   const roots = new Roots(app, cardsFile.roots ?? []);
   roots.onArtist = (artist) => {
     route = { point: {}, view: 'roots', artist };
-    writeRoute(route, true);
+    // A chain is a page to come back to; a cleared one is not.
+    writeRoute(route, !!artist);
   };
   roots.onClose = () => {
     roots.close();
@@ -210,6 +269,8 @@ async function start(): Promise<void> {
     if (keep !== 'descent' && descent.isOpen) descent.close();
     if (keep !== 'listen' && listen.isOpen) listen.close();
     if (keep !== 'engine' && engine.isOpen) engine.close();
+    if (!isMechView(keep) && mech.isOpen) mech.close();
+    if (keep !== 'features' && keep !== 'feature' && features.isOpen) features.close();
   };
   const listen = new Listen(app);
   listen.onClose = () => {
@@ -223,9 +284,9 @@ async function start(): Promise<void> {
     route = { point: {}, ch: chapterNow ?? undefined };
     writeRoute(route, false);
   };
-  atlas.onChange = (p) => {
-    route = { point: p };
-    writeRoute(route, false);
+  atlas.onChange = (p, view, push) => {
+    route = { point: p, ...view };
+    writeRoute(route, push ?? false);
   };
   atlas.onClose = () => {
     atlas.close();
@@ -240,6 +301,12 @@ async function start(): Promise<void> {
   };
 
   setupNav(app, atlas);
+  const factPanel = new FactPanel(app);
+  const factBtn = document.querySelector<HTMLElement>('.nav [data-open-fact]');
+  if (factBtn) {
+    factBtn.title = pick({ en: 'A random fact from the archive', ru: 'Случайный факт из архива' });
+    factBtn.addEventListener('click', () => factPanel.toggle());
+  }
   document.querySelectorAll<HTMLAnchorElement>('[data-set-lang]').forEach((a) =>
     a.addEventListener('click', (e) => {
       e.preventDefault();
@@ -247,7 +314,39 @@ async function start(): Promise<void> {
       if (isLang(to) && to !== lang()) switchLang(to);
     }),
   );
+  linkCover(app);
   buildStory(app, document.getElementById('story')!);
+  // Documents, working objects, how we checked, the guide and the dedication.
+  const mech = installMechanics(app, {
+    navigate(view, item, push = true) {
+      cardDrawer.close(true);
+      bookDrawer.close(true);
+      if (view) closeOverlays(view);
+      route = view ? { point: {}, view, ...(item ? { item } : {}) } : { point: {}, ch: chapterNow ?? undefined };
+      writeRoute(route, push);
+    },
+  });
+  // Special projects: the list and each feature, loaded when opened.
+  const features = installFeatures(app, {
+    navigate(view, item, scene, push = true) {
+      // Reading on into the next scene changes only the link.
+      const sceneOnly = !push && view === 'feature' && route.view === 'feature' && route.item === item;
+      if (!sceneOnly) {
+        cardDrawer.close(true);
+        bookDrawer.close(true);
+        if (view) closeOverlays(view);
+      }
+      route = view ? { point: {}, view, ...(item ? { item } : {}), ...(scene ? { scene } : {}) } : { point: {}, ch: chapterNow ?? undefined };
+      writeRoute(route, push);
+    },
+  });
+  // The dictionary runs through the rooms whose text comes from data.
+  weaveLive(app, engine.el);
+  weaveLive(app, roots.el);
+  weaveLive(app, rootsMap.el);
+  weaveLive(app, listen.el);
+  const countries = atlas.el.querySelector('.atlas-countries');
+  if (countries) weaveLive(app, countries);
   watchTypography(current);
   trackChapters(app);
   loading.remove();
@@ -284,6 +383,17 @@ async function start(): Promise<void> {
       route = { point: {}, view: 'roots', artist: ra.dataset.artistRoots };
       writeRoute(route, true);
       roots.open(ra.dataset.artistRoots);
+      return;
+    }
+    // An element's thread in Roots, from the Workshop and elsewhere.
+    const re = (e.target as Element).closest<HTMLElement>('[data-roots-element]');
+    if (re) {
+      e.preventDefault();
+      cardDrawer.close(true);
+      closeOverlays('roots');
+      route = { point: {}, view: 'roots', item: re.dataset.rootsElement };
+      writeRoute(route, true);
+      roots.open(undefined, re.dataset.rootsElement);
       return;
     }
     const ro = (e.target as Element).closest<HTMLElement>('[data-roots]');
@@ -341,30 +451,24 @@ async function start(): Promise<void> {
     closeOverlays(screen);
     if (screen === 'listen') listen.open();
     else if (screen === 'engine') engine.open();
-    else if (screen === 'roots') roots.open(route.artist);
+    else if (screen === 'roots') roots.open(route.artist, route.item);
     else if (screen === 'roots-map') rootsMap.open();
+    else if (isMechView(screen)) mech.open(screen, route.item);
+    else if (screen === 'features' || screen === 'feature') features.open(screen, route.item, route.scene);
     else if (screen === 'descent') descent.open(route.point.from, route.point.zoom);
-    else if (screen === 'atlas') atlas.open(route.point);
+    else if (screen === 'atlas') atlas.open(route.point, { atlas: route.atlas, country: route.country });
     else if (route.ch && (initial || route.ch !== chapterNow)) {
-      scrollToChapter(route.ch, initial);
-      // After a language or copy switch, come back to the same depth in the chapter.
-      const back = initial ? takePlace(route.ch) : undefined;
-      const el = back && document.getElementById(`ch-${back.ch}`);
-      if (back && el) {
-        // Pictures and fonts above may still settle: aim again a few times,
-        // unless the reader has started scrolling.
-        let moved = false;
-        const stop = () => (moved = true);
-        window.addEventListener('wheel', stop, { once: true, passive: true });
-        window.addEventListener('touchstart', stop, { once: true, passive: true });
-        const aim = () => !moved && window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY + back.frac * el.offsetHeight, behavior: 'auto' });
-        requestAnimationFrame(aim);
-        [300, 900, 1800].forEach((ms) => setTimeout(aim, ms));
-      }
+      // After a language or copy switch, come back to the same step; a plain
+      // chapter link opens at the chapter's top. Either way the place is held
+      // while pictures, maps and fonts above it settle.
+      const back = initial ? takePlace(route.ch, route.step) : undefined;
+      if (back && document.getElementById(`ch-${back.ch}`)) holdScroll(() => placeTop(back));
+      else if (initial) holdChapter(route.ch);
+      else scrollToChapter(route.ch);
     } else if (initial && route.point.focus) {
       // A card link opens over its own chapter, not wherever the story was.
       const era = app.set.get(route.point.focus)?.era;
-      if (era) scrollToChapter(era, true);
+      if (era) holdChapter(era);
     }
     if (route.point.focus) app.openCard(route.point.focus, { push: false });
     else cardDrawer.close(true);
@@ -374,18 +478,44 @@ async function start(): Promise<void> {
   window.addEventListener('popstate', () => apply(false));
   window.addEventListener('hashchange', () => apply(false));
   apply(true);
+  // Only now may a menu entry chosen during loading open its view.
+  navReady();
 }
 
-function scrollToChapter(id: string, instant = false): void {
+/**
+ * The cover and the opening are static HTML, so their names are linked by
+ * hand as <a data-card>; once the cards are here, those links get the book
+ * and the one-line wow of the card they open, like every other link.
+ */
+function linkCover(app: App): void {
+  document.querySelectorAll<HTMLAnchorElement>('.cover a[data-card], .opener a[data-card]').forEach((a) => {
+    const id = a.dataset.card!;
+    if (!app.set.get(id)) return;
+    const l = cardLink(app, id, a.textContent ?? '');
+    l.classList.add(...[...a.classList].filter((c) => c !== 'xref'));
+    a.replaceWith(l);
+  });
+}
+
+function scrollToChapter(id: string): void {
+  document.getElementById(`ch-${id}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+/**
+ * Open the story at a chapter at once and keep it there while the page
+ * settles. ('auto' would follow the page's smooth scrolling and still be on
+ * its way, chapters away, when the reader starts reading.)
+ */
+function holdChapter(id: string): void {
   const el = document.getElementById(`ch-${id}`);
-  el?.scrollIntoView({ behavior: instant ? 'auto' : 'smooth', block: 'start' });
+  if (el) holdScroll(() => el.getBoundingClientRect().top + window.scrollY);
 }
 
 function setupNav(app: App, atlas: Atlas): void {
   const nav = document.querySelector<HTMLElement>('.nav')!;
   const progress = nav.querySelector<HTMLElement>('.progress')!;
   for (const ch of app.chapters) {
-    progress.append(h('a', { href: `#ch=${ch.id}`, 'data-chapter': ch.id, 'aria-label': `${ch.id}: ${ch.title}` }, h('span', {}, ch.id)));
+    progress.append(h('a', { href: `#ch=${ch.id}`, 'data-chapter': ch.id, 'aria-label': `${chapterLabel(ch.id)}: ${ch.title}`, title: `${chapterLabel(ch.id)} · ${ch.title}` }, h('span', {}, String(chapterNumber(ch.id) ?? ''))));
   }
   nav.querySelector('[data-home]')!.addEventListener('click', (e) => {
     e.preventDefault();
@@ -396,10 +526,8 @@ function setupNav(app: App, atlas: Atlas): void {
   atlasBtn.addEventListener('click', () => app.openAtlas({ zoom: 1 }));
   const bookBtn = nav.querySelector<HTMLElement>('[data-open-book]')!;
   bookBtn.addEventListener('click', () => app.openBook());
-  const count = nav.querySelector<HTMLElement>('[data-path-count]')!;
-  const setCount = (p: string[]) => {
-    count.textContent = String(new Set(p).size);
-  };
+  // The book's count shows only once there is something in it.
+  const setCount = (p: string[]) => setBookCount(new Set(p).size);
   setCount(reader.readPath());
   app.onPath(setCount);
 
@@ -451,41 +579,3 @@ function trackChapters(app: App): void {
 }
 
 start();
-
-/**
- * On a phone the top bar is icons only. On the first visit a strip under it
- * names each icon once; it goes away when closed or when an icon is used.
- */
-function navLegend(l: string): void {
-  if (window.innerWidth >= 720) return;
-  const KEY = 'sankofa.navlegend';
-  try {
-    if (localStorage.getItem(KEY)) return;
-  } catch {
-    return;
-  }
-  const items = [...document.querySelectorAll<HTMLElement>('.nav-actions .btn:not(.lang-switch)')]
-    .map((b) => {
-      const svg = b.querySelector('svg')?.cloneNode(true);
-      const name = b.querySelector(`.label [data-l="${l}"]`)?.textContent ?? '';
-      return svg && name ? h('span', {}, svg as SVGElement as unknown as HTMLElement, name) : null;
-    })
-    .filter((x): x is HTMLElement => !!x);
-  if (!items.length) return;
-  const strip = h('div.nav-legend', { role: 'note' }, ...items, h('button.icon-btn', { 'aria-label': l === 'ru' ? 'Скрыть подсказку' : 'Hide this hint', onclick: () => done() }, '×'));
-  const done = () => {
-    strip.remove();
-    try {
-      localStorage.setItem(KEY, '1');
-    } catch {
-      /* private mode */
-    }
-  };
-  document.querySelectorAll('.nav-actions .btn').forEach((b) => b.addEventListener('click', done, { once: true }));
-  // Only on the story, and only until the reader starts reading: the first
-  // scroll folds it away for good, and it never sits over an open view.
-  if (/(^|[#&])(view|focus)=/.test(location.hash) || document.body.classList.contains('locked')) return;
-  window.addEventListener('scroll', done, { once: true, passive: true });
-  new MutationObserver(() => document.body.classList.contains('locked') && done()).observe(document.body, { attributes: true, attributeFilter: ['class'] });
-  document.body.append(strip);
-}

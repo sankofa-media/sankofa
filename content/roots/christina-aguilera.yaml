@@ -3,10 +3,10 @@ id: christina-aguilera
 name: Christina Aguilera
 nameRu: Кристина Агилера
 aliases:
-- кристина агилера
-- кристина агильера
+  - кристина агилера
+  - кристина агильера
 years:
-- 1980
+  - 1980
 place:
   name: New York City
   lat: 40.7128
@@ -14,33 +14,70 @@ place:
 placeRu: "Нью-Йорк"
 genre: Pop and soul
 genreRu: поп и соул
+story: "Christina Aguilera says Etta James was her lifelong dream: she aspired to sing like her and to emulate her notes and passion. She grew up mimicking blues, soul, gospel and jazz records, and critics place her powerhouse, melismatic voice beside Whitney Houston and Mariah Carey, over hip-hop and R&B beats."
+storyRu: "Кристина Агилера говорит, что Этта Джеймс была мечтой всей её жизни: Агилера хотела петь как она, повторять её ноты и её страсть. Выросла она на подражании пластинкам блюза, соула, госпела и джаза, а её мощный голос с мелизмами, звучащий поверх хип-хоповых и ритм-н-блюзовых битов, критики ставят рядом с Уитни Хьюстон и Мэрайей Кэри."
 links:
-- to: card:rhythm-and-blues
-  claim: Christina Aguilera performed Etta James’s signature song “At Last” at James’s
-    funeral.
-  claimRu: Кристина Агилера исполнила «At Last», одну из главных песен Этты Джеймс,
-    на её похоронах.
-  sources:
-  - title: 'NME: Christina Aguilera performs At Last at Etta James’s funeral'
-    url: https://www.nme.com/news/music/etta-james-1270497
-  - title: 'ABC News: Christina Aguilera and Stevie Wonder pay tribute to Etta James'
-    url: https://abcnews.com/blogs/entertainment/2012/01/etta-james-funeral-christina-aguilera-stevie-wonder-pay-tribute
-  kind: cover
-  what: A live performance of “At Last”, associated with Etta James, at her funeral.
-  whatRu: Живое исполнение «At Last», одной из главных песен Этты Джеймс, на её похоронах.
-- to: root:etta-james
-  kind: influence
-  claim: Christina Aguilera grew up on Etta James records introduced by her mother
-    and names James as her favourite blues singer.
-  claimRu: Кристина Агилера выросла на пластинках Этты Джеймс, которые ставила ей
-    мать, и называет Джеймс своей любимой блюзовой певицей.
-  sources:
-  - title: 'Biography Today: Christina Aguilera — Major Influences, via ERIC'
-    url: https://files.eric.ed.gov/fulltext/ED452104.pdf
-  - title: 'ABC News: Etta James funeral tribute'
-    url: https://abcnews.com/blogs/entertainment/2012/01/etta-james-funeral-christina-aguilera-stevie-wonder-pay-tribute
-story: Christina Aguilera grew up on Etta James records introduced by her mother,
-  and James became her favourite blues singer. At James’s funeral, she sang “At Last”.
-storyRu: Кристина Агилера выросла на пластинках Этты Джеймс, которые ставила ей мать,
-  и Джеймс стала её любимой блюзовой певицей.
-  На похоронах Джеймс она исполнила «At Last».
+  - to: "root:etta-james"
+    kind: "influence"
+    how: "Aguilera modelled her singing on Etta James — her notes and her passion — within a childhood spent imitating blues, soul, gospel and jazz records."
+    howRu: "В пении Агилера равнялась на Этту Джеймс — на её ноты и её страсть, — а всё детство подражала пластинкам блюза, соула, госпела и джаза."
+    carries: []
+    dimensions: ["melody-vocal", "performance"]
+    scope: "career"
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal", "performance"]
+        text: "Speaking at James’s funeral, Aguilera said she had aspired all her life to sing like Etta James and to emulate her notes and passion."
+        textRu: "На похоронах Джеймс Агилера сказала, что всю жизнь стремилась петь как Этта Джеймс и повторять её ноты и её страсть."
+        source:
+          title: "ABC News: Etta James’ Funeral — Christina Aguilera, Stevie Wonder Pay Tribute (2012)"
+          url: "https://abcnews.com/blogs/entertainment/2012/01/etta-james-funeral-christina-aguilera-stevie-wonder-pay-tribute"
+          quote: "I've aspired to sing like her, to be like her, to emulate her notes and her passion and the love for what she did - I could feel it."
+      - type: "testimony"
+        dimensions: []
+        text: "NME reports that Aguilera called James her favourite singer and regularly sings James’s signature hit in her own shows."
+        textRu: "NME сообщает, что Агилера назвала Джеймс своей любимой певицей и постоянно поёт её главный хит на своих концертах."
+        source:
+          title: "NME: Christina Aguilera performs ‘At Last’ at Etta James’ funeral (2012)"
+          url: "https://www.nme.com/news/music/etta-james-1270497"
+          quote: "Singers paid tribute to the soul icon and described her as her 'favourite singer'"
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The Observer notes that Aguilera grew up mimicking blues, soul, gospel and jazz records."
+        textRu: "The Observer отмечает, что Агилера выросла, подражая пластинкам блюза, соула, госпела и джаза."
+        source:
+          title: "The Observer, Kitty Empire: Christina Aguilera, Back to Basics — She can bitch with the best (2006)"
+          url: "https://www.theguardian.com/music/2006/aug/13/popandrock.christinaaguilera"
+          quote: "What Aguilera means is first principles: the blues, soul, gospel and jazz that underpin all contemporary forms. As a child, she grew up mimicking these records."
+  - to: "style:contemporary-r-and-b"
+    kind: "style"
+    how: "Aguilera works in contemporary R&B pop: a multi-octave, melismatic powerhouse voice in the line of Whitney Houston and Mariah Carey, set over hard hip-hop and trap beats."
+    howRu: "Агилера работает в современном поп-ритм-н-блюзе: мощный многооктавный голос с мелизмами, в традиции Уитни Хьюстон и Мэрайи Кэри, поверх жёстких хип-хоповых и трэп-битов."
+    carries: []
+    dimensions: ["melody-vocal", "rhythm", "sound"]
+    scope: "career"
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The Observer places Aguilera among the multi-octave queens of the melismatic age, beside Whitney Houston and Mariah Carey."
+        textRu: "The Observer ставит Агилеру в ряд многооктавных королев эпохи мелизмов — рядом с Уитни Хьюстон и Мэрайей Кэри."
+        source:
+          title: "The Observer, Kitty Empire: Christina Aguilera, Back to Basics — She can bitch with the best (2006)"
+          url: "https://www.theguardian.com/music/2006/aug/13/popandrock.christinaaguilera"
+          quote: "Nonsense: Aguilera's peers are the other two multi-octave queens of the melismatic age, Whitney Houston and Mariah Carey."
+      - type: "critics"
+        dimensions: ["rhythm", "sound"]
+        text: "Even on her retro album, the Observer hears hip-hop as the dominant idiom, with club tracks that hit hard and low."
+        textRu: "Даже на её ретро-альбоме The Observer слышит хип-хоп как главный язык — клубные треки бьют тяжело и низко."
+        source:
+          title: "The Observer, Kitty Empire: Christina Aguilera, Back to Basics — She can bitch with the best (2006)"
+          url: "https://www.theguardian.com/music/2006/aug/13/popandrock.christinaaguilera"
+          quote: "Despite the vintage poses, B2B's dominant idiom is hip hop; most of the club-oriented tracks hit hard and low."
+      - type: "critics"
+        dimensions: ["melody-vocal", "sound"]
+        text: "Pitchfork hears her powerhouse voice as the nucleus of her sound, even over trap beats."
+        textRu: "Pitchfork слышит в её мощном голосе ядро её звучания — даже поверх трэп-битов."
+        source:
+          title: "Pitchfork, Claire Lobenfeld: Christina Aguilera — Liberation (2018)"
+          url: "https://pitchfork.com/reviews/albums/christina-aguilera-liberation/"
+          quote: "Aguilera’s powerhouse voice remains the nucleus of her sound, even when she’s tinkering with trap tropes and try-hard slang."

@@ -1,0 +1,532 @@
+# Second, independent fact-check of batch x03 (2026-11-13).
+# Every source below was re-opened (curl + text extraction, or WebFetch where noted) and the quote searched for verbatim.
+# Independence rule applied strictly: same publisher or same underlying text = one source.
+# Notes on independence: AAIHS and bpb pieces are both by Tiffany Florvil (counted as one); Stabroek News articles
+# (McAlmont 2013, "Glimpses" 2010, 2009 feature) count as one publisher; Village Voice News 2023 copies McAlmont verbatim
+# and is not counted; Britannica (Lockley) and Samurai Museum Berlin both lean on Lockley, so BlackPast is kept as the
+# independent leg wherever possible; Americas Quarterly is an interview with one activist (Moreno Figueroa).
+
+entries:
+  # --- zanj-rebellion ---
+  - card: zanj-rebellion
+    fact: "Zanj worked the salt marshes around Basra, removing salty topsoil"
+    verdict: confirmed
+    sources:
+      - {title: "EBSCO Research Starters, Thomas Sizgorich", url: "https://www.ebsco.com/research-starters/history/zanj-revolt-african-slaves", quote: "thousands of black African slaves were employed removing unusable topsoil from extensive tracts of southern Iraqi marshland"}
+      - {title: "BlackPast, Omar H. Ali", url: "https://blackpast.org/global-african-history/islam-and-african-diaspora-indian-ocean-world/", quote: "removing salt from the crust of the land surrounding Basra"}
+    note: "'by hand' (unsourced) removed from body."
+  - card: zanj-rebellion
+    fact: "Revolt began in about 869 under Ali ibn Muhammad"
+    verdict: confirmed
+    sources:
+      - {title: "JSTOR Daily, Mohammed Elnaiem", url: "https://daily.jstor.org/what-was-the-zanj-rebellion/", quote: "in about 869 CE, Ali bin Muhammad, a slave-descended Arab, journeyed into the slave quarters"}
+      - {title: "EBSCO Research Starters, Thomas Sizgorich", url: "https://www.ebsco.com/research-starters/history/zanj-revolt-african-slaves", quote: "the so-called Zanj revolt, which began in 869"}
+    note: "Dispute line (Persian vs Arab; JSTOR's 868-883 span) verified on both pages."
+  - card: zanj-rebellion
+    fact: "Rebel state with army, capital and coins"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Omar H. Ali", url: "https://blackpast.org/global-african-history/islam-and-african-diaspora-indian-ocean-world/", quote: "the black rebels organized their own state, with its own standing army, buildings, and even minted coins"}
+      - {title: "JSTOR Daily, Mohammed Elnaiem", url: "https://daily.jstor.org/what-was-the-zanj-rebellion/", quote: "build its own city (Al-Mukhtara, Al-Mani’ah), print its own currency"}
+  - card: zanj-rebellion
+    fact: "Held out fourteen years, 869-883"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Omar H. Ali", url: "https://blackpast.org/global-african-history/islam-and-african-diaspora-indian-ocean-world/", quote: "The rebellion-turned-state lasted fourteen years"}
+      - {title: "EBSCO Research Starters, Thomas Sizgorich", url: "https://www.ebsco.com/research-starters/history/zanj-revolt-african-slaves", quote: "occurring from 869 to 883"}
+  - card: zanj-rebellion
+    fact: "Al-Muwaffaq besieged the capital; Ali killed in battle 883; revolt collapsed"
+    verdict: confirmed
+    sources:
+      - {title: "JSTOR Daily, Mohammed Elnaiem", url: "https://daily.jstor.org/what-was-the-zanj-rebellion/", quote: "He was decapitated in battle in 883, after general Al-Muwaffaq laid siege to the rebellion’s capital city."}
+      - {title: "EBSCO Research Starters, Thomas Sizgorich", url: "https://www.ebsco.com/research-starters/history/zanj-revolt-african-slaves", quote: "ՙAlī ibn Muḥammad was killed in battle on August 11, 883, and the Zanj revolt collapsed."}
+  - card: zanj-rebellion
+    fact: "Zanj fighters taken into the Abbasid army"
+    verdict: confirmed
+    sources:
+      - {title: "JSTOR Daily, Mohammed Elnaiem", url: "https://daily.jstor.org/what-was-the-zanj-rebellion/", quote: "refused to return the Sudan (Blacks) that fought alongside him to their masters. They joined his army instead."}
+      - {title: "EBSCO Research Starters, Thomas Sizgorich", url: "https://www.ebsco.com/research-starters/history/zanj-revolt-african-slaves", quote: "the last former Zanj guerrilla was mustered into the ՙAbbāsid army"}
+  - card: zanj-rebellion
+    fact: "Detested by chroniclers; remembered as a stain"
+    verdict: confirmed
+    sources:
+      - {title: "JSTOR Daily, Mohammed Elnaiem", url: "https://daily.jstor.org/what-was-the-zanj-rebellion/", quote: "the Zanj were detested by contemporary historians like Al-Tabari and Al-Mas’udi"}
+      - {title: "Arab Reform Initiative, Saad Salloum (2020)", url: "https://www.arab-reform.net/publication/in-the-footsteps-of-martin-luther-king-will-we-witness-a-revolution-against-racial-discrimination-in-the-middle-east/", quote: "their rebellion was deemed a stain in Islamic history books"}
+  - card: zanj-rebellion
+    fact: "Black Iraqis in Basra tell the revolt as their ancestors' history"
+    verdict: confirmed
+    sources:
+      - {title: "Arab Reform Initiative, Saad Salloum (2020)", url: "https://www.arab-reform.net/publication/in-the-footsteps-of-martin-luther-king-will-we-witness-a-revolution-against-racial-discrimination-in-the-middle-east/", quote: "stories of abduction and enslavement of Jalal’s ancestors ... and their rebellion"}
+      - {title: "NPR, Corey Flintoff (2008)", url: "https://www.npr.org/2008/12/03/96977550/black-iraqis-in-basra-face-racism", quote: "until there was a slave uprising in the mid-800s"}
+
+  # --- afro-iraqis-basra ---
+  - card: afro-iraqis-basra
+    fact: "Descend from East Africans who came as sailors or enslaved people"
+    verdict: confirmed
+    sources:
+      - {title: "NPR, Corey Flintoff (2008)", url: "https://www.npr.org/2008/12/03/96977550/black-iraqis-in-basra-face-racism", quote: "descendants of the people who came here from East Africa as sailors or slaves over the course of centuries"}
+      - {title: "Arab Reform Initiative, Saad Salloum (2020)", url: "https://www.arab-reform.net/publication/in-the-footsteps-of-martin-luther-king-will-we-witness-a-revolution-against-racial-discrimination-in-the-middle-east/", quote: "their transport from Africa to Iraq"}
+  - card: afro-iraqis-basra
+    fact: "No official count; 400,000 to two million"
+    verdict: confirmed
+    sources:
+      - {title: "The New Arab, Ibrahim Al-Marashi (2022) [WebFetch; site blocks curl]", url: "https://www.newarab.com/analysis/story-afro-iraqis", quote: "they range from 400,000 to approximately two million, primarily located in the Basra province"}
+      - {title: "Arab Reform Initiative, Saad Salloum (2020)", url: "https://www.arab-reform.net/publication/in-the-footsteps-of-martin-luther-king-will-we-witness-a-revolution-against-racial-discrimination-in-the-middle-east/", quote: "It is estimated that there are roughly 400,000 Afro-Iraqis across the country"}
+  - card: afro-iraqis-basra
+    fact: "Most in Basra province, many in Zubair"
+    verdict: confirmed
+    sources:
+      - {title: "The New Arab, Ibrahim Al-Marashi (2022) [WebFetch]", url: "https://www.newarab.com/analysis/story-afro-iraqis", quote: "particularly the inland district of Zubayr where most Afro-Iraqis live"}
+      - {title: "Arab Reform Initiative, Saad Salloum (2020)", url: "https://www.arab-reform.net/publication/in-the-footsteps-of-martin-luther-king-will-we-witness-a-revolution-against-racial-discrimination-in-the-middle-east/", quote: "predominately concentrated demographically in the city of Basra"}
+    note: "'old district' (unsourced) removed."
+  - card: afro-iraqis-basra
+    fact: "Wedding drummers often Black men from Zubair; many work as musicians"
+    verdict: confirmed
+    sources:
+      - {title: "NPR, Corey Flintoff (2008)", url: "https://www.npr.org/2008/12/03/96977550/black-iraqis-in-basra-face-racism", quote: "When there's a big wedding, Basrawis call in drummers from the district of Zubair."}
+      - {title: "The New Arab, Ibrahim Al-Marashi (2022) [WebFetch]", url: "https://www.newarab.com/analysis/story-afro-iraqis", quote: "Most are constrained to lower income jobs, working as cleaners or musicians and dancers."}
+  - card: afro-iraqis-basra
+    fact: "Rituals of African origin in Zubair calling spirits"
+    verdict: confirmed
+    sources:
+      - {title: "NPR, Corey Flintoff (2008)", url: "https://www.npr.org/2008/12/03/96977550/black-iraqis-in-basra-face-racism", quote: "prepare an altar for a ceremony they say will summon a spirit from Africa"}
+      - {title: "Arab Reform Initiative, Saad Salloum (2020)", url: "https://www.arab-reform.net/publication/in-the-footsteps-of-martin-luther-king-will-we-witness-a-revolution-against-racial-discrimination-in-the-middle-east/", quote: "folk rituals they practised for centuries in special places called \"Makayed\", and in specific areas of Basra Governorate, including the Zubair"}
+  - card: afro-iraqis-basra
+    fact: "Menial jobs, musicians and dancers; discrimination by skin colour"
+    verdict: confirmed
+    sources:
+      - {title: "NPR, Corey Flintoff (2008)", url: "https://www.npr.org/2008/12/03/96977550/black-iraqis-in-basra-face-racism", quote: "Long relegated to menial jobs or work as musicians and dancers"}
+      - {title: "Arab Reform Initiative, Saad Salloum (2020)", url: "https://www.arab-reform.net/publication/in-the-footsteps-of-martin-luther-king-will-we-witness-a-revolution-against-racial-discrimination-in-the-middle-east/", quote: "continue to suffer from racial discrimination and marginalization"}
+  - card: afro-iraqis-basra
+    fact: "After Obama's 2008 win, Jalal Dhiab of the Free Iraqi Movement sought minority recognition"
+    verdict: confirmed
+    sources:
+      - {title: "NPR, Corey Flintoff (2008)", url: "https://www.npr.org/2008/12/03/96977550/black-iraqis-in-basra-face-racism", quote: "Jalal Diyaab is the leader of the Free Iraqi Movement, which is seeking to have Iraq's roughly 2 million black people recognized as a minority"}
+      - {title: "The New Arab, Ibrahim Al-Marashi (2022) [WebFetch]", url: "https://www.newarab.com/analysis/story-afro-iraqis", quote: "Jalal Diab Thijeel founded the Free Iraqi Movement in 2007 to represent the Afro-Iraqi community"}
+  - card: afro-iraqis-basra
+    fact: "Dhiab revived memory of the Zanj revolt"
+    verdict: confirmed
+    sources:
+      - {title: "Arab Reform Initiative, Saad Salloum (2020)", url: "https://www.arab-reform.net/publication/in-the-footsteps-of-martin-luther-king-will-we-witness-a-revolution-against-racial-discrimination-in-the-middle-east/", quote: "is the man behind the revival of all of this hidden history"}
+      - {title: "NPR, Corey Flintoff (2008)", url: "https://www.npr.org/2008/12/03/96977550/black-iraqis-in-basra-face-racism", quote: "talking about a history of slavery and oppression that he says dates back to at least the ninth century"}
+  - card: afro-iraqis-basra
+    fact: "Dhiab assassinated in Basra, April 2013"
+    verdict: confirmed
+    sources:
+      - {title: "The New Arab, Ibrahim Al-Marashi (2022) [WebFetch]", url: "https://www.newarab.com/analysis/story-afro-iraqis", quote: "On April 26, 2013, Thijeel was assassinated."}
+      - {title: "Arab Reform Initiative, Saad Salloum (2020)", url: "https://www.arab-reform.net/publication/in-the-footsteps-of-martin-luther-king-will-we-witness-a-revolution-against-racial-discrimination-in-the-middle-east/", quote: "the civil activist Jalal Dhiab, who was assassinated in Basra in 2013"}
+
+  # --- siddi-of-karnataka ---
+  - card: siddi-of-karnataka
+    fact: "Called Habshi (Abyssinian)"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, John McLeod (2024)", url: "https://blackpast.org/global-african-history/who-are-the-sidis-a-brief-introduction-to-the-800-year-african-experience-in-india/", quote: "African-Indians were long known as Habshi, Arabic for Abyssinian (Ethiopian)."}
+      - {title: "JSTOR Daily, Akanksha Singh (2023)", url: "https://daily.jstor.org/the-habshis-dynasty-of-india/", quote: "‘Habshis’ or people of Habush (Abyssinia)"}
+  - card: siddi-of-karnataka
+    fact: "Today mostly Karnataka, Gujarat, Andhra Pradesh"
+    verdict: confirmed
+    sources:
+      - {title: "JSTOR Daily, Akanksha Singh (2023)", url: "https://daily.jstor.org/the-habshis-dynasty-of-india/", quote: "Living primarily in Karnataka, Gujarat, and in some parts of Andhra Pradesh"}
+      - {title: "BlackPast, John McLeod (2024)", url: "https://blackpast.org/global-african-history/who-are-the-sidis-a-brief-introduction-to-the-800-year-african-experience-in-india/", quote: "the Indian states of Gujarat, Andhra Pradesh, and Karnataka"}
+  - card: siddi-of-karnataka
+    fact: "Many came enslaved; some rose to generals, administrators, kingmakers"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, John McLeod (2024)", url: "https://blackpast.org/global-african-history/who-are-the-sidis-a-brief-introduction-to-the-800-year-african-experience-in-india/", quote: "Many were enslaved and were brought to India between the fifteenth and nineteenth centuries by Muslim and Portuguese slave traders."}
+      - {title: "JSTOR Daily, Akanksha Singh (2023)", url: "https://daily.jstor.org/the-habshis-dynasty-of-india/", quote: "were frequently elevated to the rank of generals, administrators and king-makers"}
+  - card: siddi-of-karnataka
+    fact: "Jamal ud-Din Yaqut at Raziya's court"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, John McLeod (2024)", url: "https://blackpast.org/global-african-history/who-are-the-sidis-a-brief-introduction-to-the-800-year-african-experience-in-india/", quote: "an Ethiopian named Jamal ad-Din Yaqut was a noble at the court of Queen Raziyya of Delhi"}
+      - {title: "JSTOR Daily, Akanksha Singh (2023)", url: "https://daily.jstor.org/the-habshis-dynasty-of-india/", quote: "Raziya, ascended the throne after her father’s death in 1236"}
+  - card: siddi-of-karnataka
+    fact: "Lovers story doubted"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, John McLeod (2024)", url: "https://blackpast.org/global-african-history/who-are-the-sidis-a-brief-introduction-to-the-800-year-african-experience-in-india/", quote: "this story appears only to have emerged in modern times"}
+      - {title: "JSTOR Daily, Akanksha Singh (2023)", url: "https://daily.jstor.org/the-habshis-dynasty-of-india/", quote: "historians since then have debated whether the relationship had the makings of an epic love story"}
+  - card: siddi-of-karnataka
+    fact: "Some 8,000 Abyssinians in Bengal; Habshi dynasty to 1493"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, John McLeod (2024)", url: "https://blackpast.org/global-african-history/who-are-the-sidis-a-brief-introduction-to-the-800-year-african-experience-in-india/", quote: "recruited some 8000 enslaved Ethiopians to serve in his army and his administration ... In 1487, Ethiopian nobles overthrew the reigning king"}
+      - {title: "JSTOR Daily, Akanksha Singh (2023)", url: "https://daily.jstor.org/the-habshis-dynasty-of-india/", quote: "There were some 8,000 of them; by the time Barbak died, that number had swelled to 20,000 Abyssinian soldiers in the Bengal army."}
+    note: "JSTOR text uses a non-breaking space in '8,000'; quote present."
+  - card: siddi-of-karnataka
+    fact: "Sachin from 1791 to 1948"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, John McLeod (2024)", url: "https://blackpast.org/global-african-history/who-are-the-sidis-a-brief-introduction-to-the-800-year-african-experience-in-india/", quote: "In 1791 when Balu Miyan renounced his claims to Janjira ... His family ruled until 1948"}
+      - {title: "JSTOR Daily, Akanksha Singh (2023)", url: "https://daily.jstor.org/the-habshis-dynasty-of-india/", quote: "Sachin, a small “African-ruled” princely state , took root in 1791, only to be signed over to India in 1948"}
+
+  # --- black-japan-yasuke ---
+  - card: black-japan-yasuke
+    fact: "Japan ending a century of civil war; Nobunaga near unification"
+    verdict: confirmed
+    sources:
+      - {title: "Samurai Museum Berlin", url: "https://samuraimuseum.de/en/?p=52665", quote: "was on the verge of unifying Japan after more than a hundred years of civil war"}
+      - {title: "BlackPast, Robert Fikes (2016)", url: "https://blackpast.org/global-african-history/yasuke-1555/", quote: "best remembered for his efforts to unify and bring political stability to Japan"}
+  - card: black-japan-yasuke
+    fact: "Came to Japan 1579 with Valignano as bodyguard or servant"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Robert Fikes (2016)", url: "https://blackpast.org/global-african-history/yasuke-1555/", quote: "Yasuke accompanied the Italian Jesuit missionary Alessandro Vaglignano to Japan in 1579."}
+      - {title: "Encyclopaedia Britannica, Thomas Lockley: Yasuke [archived copy]", url: "https://www.britannica.com/biography/Yasuke", quote: "arriving in Japan at the port of Kuchinotsu, in modern-day Nagasaki prefecture, in May 1579"}
+  - card: black-japan-yasuke
+    fact: "Birth name unknown"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Robert Fikes (2016)", url: "https://blackpast.org/global-african-history/yasuke-1555/", quote: "Even the derivation of his name and place of birth can only be conjectured."}
+      - {title: "Samurai Museum Berlin", url: "https://samuraimuseum.de/en/?p=52665", quote: "the name was probably a Japanisation of a Portuguese or African name"}
+  - card: black-japan-yasuke
+    fact: "Crowds in Kyoto"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Robert Fikes (2016)", url: "https://blackpast.org/global-african-history/yasuke-1555/", quote: "Fróis recounted the frenzy on the city streets of then capital of Japan, Kyoto"}
+      - {title: "Samurai Museum Berlin", url: "https://samuraimuseum.de/en/?p=52665", quote: "Hundreds flocked together to see the stranger"}
+  - card: black-japan-yasuke
+    fact: "Stripped and scrubbed"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Robert Fikes (2016)", url: "https://blackpast.org/global-african-history/yasuke-1555/", quote: "Nobunaga demanded that black man strip to his waist and scrub his skin to prove that his dark color was real."}
+      - {title: "Encyclopaedia Britannica, Thomas Lockley: Yasuke", url: "https://www.britannica.com/biography/Yasuke", quote: "Nobunaga could not trust the color of his skin and had his retainers scrub him"}
+  - card: black-japan-yasuke
+    fact: "Over six feet; house and sword; bodyguard"
+    verdict: corrected
+    sources:
+      - {title: "BlackPast, Robert Fikes (2016)", url: "https://blackpast.org/global-african-history/yasuke-1555/", quote: "towering 6 foot 2 inches. Nobunaga orders Yasuke to be his retainer and bodyguard."}
+      - {title: "Encyclopaedia Britannica, Thomas Lockley: Yasuke", url: "https://www.britannica.com/biography/Yasuke", quote: "Ōta states that Nobunaga made Yasuke a vassal, giving him a house, servants, a sword, and a stipend."}
+    note: "BlackPast does not mention the house or sword; first ledger leaned on one source. Britannica added to card sources. Wow 'within months' replaced by 'in 1581 ... soon' (Samurai Museum: arrival March 1581, service spring/summer 1581)."
+  - card: black-japan-yasuke
+    fact: "Honnō-ji, Nobunaga's suicide, Yasuke to Nobutada at Nijō"
+    verdict: corrected
+    sources:
+      - {title: "Encyclopaedia Britannica, Thomas Lockley: Yasuke", url: "https://www.britannica.com/biography/Yasuke", quote: "Yasuke rushed to the Oda clan’s new lord, Nobunaga’s eldest son, Nobutada, who was barricaded inside the nearby Nijō-goshō imperial villa."}
+      - {title: "BlackPast, Robert Fikes (2016)", url: "https://blackpast.org/global-african-history/yasuke-1555/", quote: "When Nobunaga’s former general, Akechi Mitsuhide, attempted a coup in June 1582, the daimyo was obliged to perform seppuku"}
+    note: "Nobutada was in the Nijō palace, not 'Nijō Castle' (today's castle is later); card now says 'at nearby Nijō'. Honnō-ji: Britannica + Samurai Museum."
+  - card: black-japan-yasuke
+    fact: "Spared by Akechi, handed to Jesuits, vanishes"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Robert Fikes (2016)", url: "https://blackpast.org/global-african-history/yasuke-1555/", quote: "took pity and spared his life. Sent to rejoin the European Jesuit missionaries"}
+      - {title: "Encyclopaedia Britannica, Thomas Lockley: Yasuke", url: "https://www.britannica.com/biography/Yasuke", quote: "Yasuke was accompanied by Mitsuhide’s vassals to the Jesuit church ... This is the last confirmed record of Yasuke."}
+  - card: black-japan-yasuke
+    fact: "Best-known African in pre-modern Japan, attested by Japanese and Jesuit sources"
+    verdict: corrected
+    sources:
+      - {title: "BlackPast, Robert Fikes (2016)", url: "https://blackpast.org/global-african-history/yasuke-1555/", quote: "The few Portuguese and Japanese sources that mention his brief presence in Japan"}
+      - {title: "Encyclopaedia Britannica, Thomas Lockley: Yasuke", url: "https://www.britannica.com/biography/Yasuke", quote: "Portuguese-language Jesuit reports from the late 16th century ... and works of the Japanese chroniclers Ōta Gyūichi and Matsudaira Ietada"}
+    note: "Superlative 'best-known' rested on BlackPast alone; replaced with 'a rare documented life'."
+  - card: black-japan-yasuke
+    fact: "(dispute) samurai status"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Robert Fikes (2016)", url: "https://blackpast.org/global-african-history/yasuke-1555/", quote: "Eventually Yasuke rose to the rank of Samurai"}
+      - {title: "Samurai Museum Berlin", url: "https://samuraimuseum.de/en/?p=52665", quote: "But the contemporary sources never explicitly call him one. They use terms such as “servant” (kerai) or “sword bearer” (kosho)."}
+
+  # --- bahamas-junkanoo ---
+  - card: bahamas-junkanoo
+    fact: "Boxing Day and New Year's Day; crepe paper and cardboard; goatskin drums, cowbells, whistles, brass"
+    verdict: confirmed
+    sources:
+      - {title: "TIME, Sasha C. Wells", url: "https://time.com/7202192/junkanoo-holiday-history/", quote: "music played on goat-skin drums, cowbells, whistles, and brass instruments"}
+      - {title: "Caribbean Beat, Krista Thompson (2006)", url: "https://www.caribbean-beat.com/issue-82/junkanoo-rush", quote: "Junkanoo costumes are traditionally made from strips of crêpe paper and cardboard"}
+    note: "Goatskin (unledgered) also in HistoryMiami: 'covered in goat or sheep skin'."
+  - card: bahamas-junkanoo
+    fact: "Old name John Canoe"
+    verdict: confirmed
+    sources:
+      - {title: "Caribbean Beat, Krista Thompson (2006)", url: "https://www.caribbean-beat.com/issue-82/junkanoo-rush", quote: "Junkanoo (originally spelled “John Canoe”)"}
+      - {title: "TIME, Sasha C. Wells", url: "https://time.com/7202192/junkanoo-holiday-history/", quote: "it was referred to as “John Canoe,” a reference to an Akan warrior"}
+  - card: bahamas-junkanoo
+    fact: "Began on the enslaved people's Christmas holiday"
+    verdict: confirmed
+    sources:
+      - {title: "Caribbean Beat, Krista Thompson (2006)", url: "https://www.caribbean-beat.com/issue-82/junkanoo-rush", quote: "one of the very few times of the year when masters gave slaves a reprieve from work"}
+      - {title: "TIME, Sasha C. Wells", url: "https://time.com/7202192/junkanoo-holiday-history/", quote: "the tradition dates back to when enslavers gave their slaves a day off during the holidays as reprieve"}
+  - card: bahamas-junkanoo
+    fact: "Rush into white-owned Bay Street broke segregation; officials feared it"
+    verdict: confirmed
+    sources:
+      - {title: "TIME, Sasha C. Wells", url: "https://time.com/7202192/junkanoo-holiday-history/", quote: "Junkanooers broke the practice of racial segregation by rushing into town at night, which disturbed government officials"}
+      - {title: "Caribbean Beat, Krista Thompson (2006)", url: "https://www.caribbean-beat.com/issue-82/junkanoo-rush", quote: "transgressed the island’s unspoken racial boundaries"}
+  - card: bahamas-junkanoo
+    fact: "1942 riot of airport labourers; parades banned; back on Bay Street 1948"
+    verdict: corrected
+    sources:
+      - {title: "TIME, Sasha C. Wells", url: "https://time.com/7202192/junkanoo-holiday-history/", quote: "Black Bahamian laborers protested in response to unequal pay in the building of two British military air bases in New Providence"}
+      - {title: "Caribbean Beat, Krista Thompson (2006)", url: "https://www.caribbean-beat.com/issue-82/junkanoo-rush", quote: "unrest following labour disputes with an American company hired to construct the airport"}
+    note: "Sources disagree on whose project it was; card now says 'building wartime airfields on New Providence rioted over their pay'. Ban 1942-47 and 1948 return confirmed by both. years changed from unsourced [1800, 1948] to [1942, 1948]."
+  - card: bahamas-junkanoo
+    fact: "Groups compete for prizes"
+    verdict: confirmed
+    sources:
+      - {title: "TIME, Sasha C. Wells", url: "https://time.com/7202192/junkanoo-holiday-history/", quote: "Junkanoo groups compete for the coveted “overall winner” spot every parade."}
+      - {title: "Caribbean Beat, Krista Thompson (2006)", url: "https://www.caribbean-beat.com/issue-82/junkanoo-rush", quote: "competing groups who battled for prizes"}
+
+  # --- bermuda-gombeys ---
+  - card: bermuda-gombeys
+    fact: "Masked dancers with drummers; identities concealed"
+    verdict: confirmed
+    sources:
+      - {title: "Smithsonian, Bermuda Connections", url: "https://folklife-media.si.edu/docs/folklife/education_exhibits/resources/Bermuda_Connections_125_146.pdf", quote: "the dancers’ identities are totally obscured by their costumes"}
+      - {title: "National Geographic, Bob Krist (2015)", url: "https://www.nationalgeographic.com/travel/article/gombeys-behind-the-mask-in-bermuda", quote: "donned masks and full-coverage costumes to conceal their identities"}
+  - card: bermuda-gombeys
+    fact: "Mirrors on costumes"
+    verdict: confirmed
+    sources:
+      - {title: "Smithsonian, Bermuda Connections", url: "https://folklife-media.si.edu/docs/folklife/education_exhibits/resources/Bermuda_Connections_125_146.pdf", quote: "ribbons, mirrors, and sequins"}
+      - {title: "National Geographic, Bob Krist (2015)", url: "https://www.nationalgeographic.com/travel/article/gombeys-behind-the-mask-in-bermuda", quote: "often include pieces of mirror to deflect evil spirits"}
+  - card: bermuda-gombeys
+    fact: "Gombey = Bantu word for rhythm"
+    verdict: confirmed
+    sources:
+      - {title: "Smithsonian, Bermuda Connections", url: "https://folklife-media.si.edu/docs/folklife/education_exhibits/resources/Bermuda_Connections_125_146.pdf", quote: "Gombey means rhythm, specifically drum rhythm, in an African Bantu language."}
+      - {title: "National Geographic, Bob Krist (2015)", url: "https://www.nationalgeographic.com/travel/article/gombeys-behind-the-mask-in-bermuda", quote: "gombey means “rhythm” in Bantu"}
+  - card: bermuda-gombeys
+    fact: "West African, British, Caribbean and Native American elements"
+    verdict: confirmed
+    sources:
+      - {title: "Smithsonian, Bermuda Connections", url: "https://folklife-media.si.edu/docs/folklife/education_exhibits/resources/Bermuda_Connections_125_146.pdf", quote: "combine references to North America, Africa, and the Caribbean ... reflect a British military influence"}
+      - {title: "National Geographic, Bob Krist (2015)", url: "https://www.nationalgeographic.com/travel/article/gombeys-behind-the-mask-in-bermuda", quote: "West African, British, Caribbean, and Native American"}
+    note: "Smithsonian PDF wraps lines; quote parts present (it says 'American Indians')."
+  - card: bermuda-gombeys
+    fact: "Grew among the enslaved; comment on their condition"
+    verdict: confirmed
+    sources:
+      - {title: "Smithsonian, Bermuda Connections", url: "https://folklife-media.si.edu/docs/folklife/education_exhibits/resources/Bermuda_Connections_125_146.pdf", quote: "The tradition was adopted by, and became popular among the bondpeople in Bermuda."}
+      - {title: "National Geographic, Bob Krist (2015)", url: "https://www.nationalgeographic.com/travel/article/gombeys-behind-the-mask-in-bermuda", quote: "developed several centuries ago by Bermuda’s slave population to give artistic expression to the indignities they suffered"}
+  - card: bermuda-gombeys
+    fact: "Only on year-end holidays; viewed with suspicion"
+    verdict: confirmed
+    sources:
+      - {title: "Smithsonian, Bermuda Connections", url: "https://folklife-media.si.edu/docs/folklife/education_exhibits/resources/Bermuda_Connections_125_146.pdf", quote: "Originally they only danced on Boxing Day and New Year’s Day, the two holidays bondpeople were not forced to work."}
+      - {title: "National Geographic, Bob Krist (2015)", url: "https://www.nationalgeographic.com/travel/article/gombeys-behind-the-mask-in-bermuda", quote: "viewed the high-energy performances as a threat to the social order"}
+  - card: bermuda-gombeys
+    fact: "Passed down in families; now a symbol of Bermuda"
+    verdict: corrected
+    sources:
+      - {title: "Smithsonian, Bermuda Connections", url: "https://folklife-media.si.edu/docs/folklife/education_exhibits/resources/Bermuda_Connections_125_146.pdf", quote: "The gombey dances and rhythms were passed on from father to son."}
+      - {title: "National Geographic, Bob Krist (2015)", url: "https://www.nationalgeographic.com/travel/article/gombeys-behind-the-mask-in-bermuda", quote: "passed down through generations within families"}
+    note: "'from parents to children' corrected to 'from father to son' (Smithsonian: crowds were men and boys of one family). years [1800] kept as an approximation: Smithsonian says early gombey-type dancers were seen in St David's 'in the 1800s'; National Geographic 'several centuries ago'."
+
+  # --- guyana-emancipation-villages ---
+  - card: guyana-emancipation-villages
+    fact: "Full freedom 1 August 1838 after apprenticeship"
+    verdict: confirmed
+    sources:
+      - {title: "DPI Guyana (2020)", url: "https://dpi.gov.gy/from-northbrook-to-victoria-holding-steadfast-to-her-african-heritage-amid-transformation", quote: "one year after emancipation on August 1st, 1838 ... during the apprenticeship period (1834-1838)"}
+      - {title: "Stabroek News, Cecilia McAlmont (2013)", url: "https://stabroeknews.com/2013/08/01/news/guyana/the-african-village-movement-2", quote: "when apprenticeship ended"}
+    note: "First ledger's second source (Stabroek 2010) quote did not contain the date."
+  - card: guyana-emancipation-villages
+    fact: "Planters wanted a settled labour force; cotton estates abandoned"
+    verdict: unconfirmed
+    sources:
+      - {title: "Stabroek News, Cecilia McAlmont (2013)", url: "https://stabroeknews.com/2013/08/01/news/guyana/the-african-village-movement-2", quote: "purchasing some of the 50 mainly cotton estates that had been abandoned"}
+      - {title: "Stabroek News, Glimpses of Guyanese History 6 (2010)", url: "https://stabroeknews.com/2010/guyana-review/02/25/glimpses-of-guyanese-history-6", quote: "the planter would have near at hand a settled labour force"}
+    note: "Both from one publisher (Stabroek News); no second independent source found. Removed from card."
+  - card: guyana-emancipation-villages
+    fact: "November 1839: 83 from five estates bought Northbrook for $10,000"
+    verdict: corrected
+    sources:
+      - {title: "DPI Guyana (2020)", url: "https://dpi.gov.gy/from-northbrook-to-victoria-holding-steadfast-to-her-african-heritage-amid-transformation", quote: "was bought on November 7th, 1839 ... by eighty-three ex-slaves from estates: Douchfour, Ann’s Grove, Hope, Paradise and Enmore"}
+      - {title: "Guyana Times International: Victoria Village", url: "https://guyanatimesinternational.com/victoria-village/", quote: "The plantation then was bought for 30,000 guilders or $10,283.63."}
+    note: "People, estates and month confirmed (Stabroek + DPI). Price is recorded as 30,000 guilders (Stabroek 2009, Guyana Times, DPI 2017), so the card now says '30,000 guilders, about $10,000'. Day differs (2 vs 7 November); card gives the month only."
+  - card: guyana-emancipation-villages
+    fact: "$6,000 cash pushed through Georgetown in wheelbarrows; balance in three weeks"
+    verdict: corrected
+    sources:
+      - {title: "Stabroek News: Victoria and the village movement (2009)", url: "https://stabroeknews.com/2009/11/15/features/victoria-and-the-village-movement", quote: "It is a matter of legend that two-thirds of the money was paid right away in coins, delivered in a wheelbarrow"}
+      - {title: "Guyana Times International: Victoria Village", url: "https://guyanatimesinternational.com/victoria-village/", quote: "According to historical folklore, the 83 persons pooled their money in a wheelbarrow"}
+    note: "The wheelbarrow is village tradition, not documented fact; card now says so. Georgetown streets, $6,000 down payment and three-week payoff rest on Stabroek alone (Village Voice News copies McAlmont) and were removed. Wow line rewritten."
+  - card: guyana-emancipation-villages
+    fact: "Renamed Victoria after the queen"
+    verdict: confirmed
+    sources:
+      - {title: "Stabroek News, Cecilia McAlmont (2013)", url: "https://stabroeknews.com/2013/08/01/news/guyana/the-african-village-movement-2", quote: "requesting the royal name of Victoria be given to the new plantation village"}
+      - {title: "Guyana Times International: Victoria Village", url: "https://guyanatimesinternational.com/victoria-village/", quote: "renamed it Victoria, in honour of then monarch of British Guiana, Queen Victoria"}
+    note: "DPI 2017 says 'presumably' and mentions an alternative reading (victory)."
+  - card: guyana-emancipation-villages
+    fact: "By the late 1840s tens of thousands lived in villages"
+    verdict: unconfirmed
+    sources:
+      - {title: "Stabroek News, Cecilia McAlmont (2013)", url: "https://stabroeknews.com/2013/08/01/news/guyana/the-african-village-movement-2", quote: "about 44,556 of them lived in the villages"}
+      - {title: "Stabroek News, Glimpses of Guyanese History 6 (2010)", url: "https://stabroeknews.com/2010/guyana-review/02/25/glimpses-of-guyanese-history-6", quote: "By the middle of 1847, they totalled 30,000"}
+    note: "Single publisher. Removed; replaced by 'set off the Village Movement' (DPI 2020 + Guyana Times + Stabroek)."
+
+  # --- belize-kriol ---
+  - card: belize-kriol
+    fact: "English vocabulary, African grammar"
+    verdict: corrected
+    sources:
+      - {title: "University of Groningen, Ken Decker, thesis abstract", url: "https://research.rug.nl/en/publications/orthography-development-for-creole-languages", quote: "the Kriol language of Belize, an English-lexicon Creole language"}
+      - {title: "BlackPast, Maria-Elena Velasquez (2009)", url: "https://blackpast.org/gah/belizean-kriols", quote: "similar to English but is influenced by African grammar and syntax"}
+    note: "Sources say 'African', not 'West African'; body corrected."
+  - card: belize-kriol
+    fact: "Spoken across ethnic lines"
+    verdict: confirmed
+    sources:
+      - {title: "Countries and Their Cultures: Culture of Belize", url: "https://www.everyculture.com/A-Bo/Belize.html", quote: "the language spoken across ethnic lines is a form of pidgin English called Creole"}
+      - {title: "BlackPast, Maria-Elena Velasquez (2009)", url: "https://blackpast.org/gah/belizean-kriols", quote: "about 75% of Belizeans, regardless of their racial background, speak some form of Kriol"}
+  - card: belize-kriol
+    fact: "Related to Jamaican creole"
+    verdict: confirmed
+    sources:
+      - {title: "BlackPast, Maria-Elena Velasquez (2009)", url: "https://blackpast.org/gah/belizean-kriols", quote: "Belizean Kriol patois is similar to the Jamaican patois"}
+      - {title: "Encyclopedia of World Cultures, Edmund T. Gordon", url: "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/creoles-nicaragua", quote: "closely related to other creoles spoken in the Anglophone Caribbean, particularly in Belize and Jamaica"}
+  - card: belize-kriol
+    fact: "British woodcutters, logwood and mahogany, enslaved Africans from Jamaica"
+    verdict: corrected
+    sources:
+      - {title: "Library of Congress, Belize: A Country Study (1992), Slavery in the Settlement", url: "http://countrystudies.us/belize/7.htm", quote: "a 1724 Spanish missionary's account, which stated that the British recently had been importing them from Jamaica and Bermuda"}
+      - {title: "BlackPast, Maria-Elena Velasquez (2009)", url: "https://blackpast.org/gah/belizean-kriols", quote: "By 1724 the British were transporting slaves from Jamaica to Belize to cut logwood"}
+    note: "First ledger's two BlackPast articles count as one publisher; Library of Congress country study added (logwood then mahogany, Baymen, forest camps). 'Shipped to England' rested on BlackPast alone and was dropped."
+  - card: belize-kriol
+    fact: "Creoles from British settlers and enslaved Africans"
+    verdict: confirmed
+    sources:
+      - {title: "Countries and Their Cultures: Culture of Belize", url: "https://www.everyculture.com/A-Bo/Belize.html", quote: "the Creoles, formed by the intermarriage of the British and their African slaves"}
+      - {title: "Library of Congress, Belize: A Country Study, Slavery in the Settlement", url: "http://countrystudies.us/belize/7.htm", quote: "the process of assimilation was creating a new, synthetic Creole culture"}
+  - card: belize-kriol
+    fact: "From the 1990s, orthography with Ken Decker and the Kriol Project"
+    verdict: confirmed
+    sources:
+      - {title: "University of Groningen, Ken Decker, thesis abstract", url: "https://research.rug.nl/en/publications/orthography-development-for-creole-languages", quote: "This research, begun in 1993, is based on the development of an orthography for the Kriol language of Belize"}
+      - {title: "News 5 Belize (2006)", url: "https://archive.channel5belize.com/?p=9958", quote: "Compiled through the collaborative efforts of Belizeans and international linguist, Ken Decker"}
+  - card: belize-kriol
+    fact: "Grammar The Song of Kriol and a Kriol-English dictionary in the 2000s"
+    verdict: confirmed
+    sources:
+      - {title: "Glottolog: Decker 2006", url: "https://glottolog.org/resource/reference/id/308160", quote: "Decker, Kendall D. 2006. The song of Kriol: a grammar of the kriol language of Belize. Belize City: The Angelus Press."}
+      - {title: "News 5 Belize (2007)", url: "https://archive.channel5belize.com/?p=6103", quote: "the National Kriol Council’s official introduction of the Kriol – English Dictionary"}
+    note: "Further item's '(Belize Kriol Project, 2005)' edition not found in any source; removed. years changed to [1724, 2007]."
+
+  # --- nicaragua-miskitu-creoles --- (all eight entries re-opened; quotes present)
+  - {card: nicaragua-miskitu-creoles, fact: "Bluefields; English-based creole first language", verdict: confirmed, note: "Gordon (Encyclopedia of World Cultures) + BlackPast (Wada), quotes as in expand-x03.yaml."}
+  - {card: nicaragua-miskitu-creoles, fact: "Brought as slaves by the British for forestry and plantations", verdict: confirmed, note: "Gordon + BlackPast."}
+  - {card: nicaragua-miskitu-creoles, fact: "18th-century free communities at Bluefields and Pearl Lagoon", verdict: confirmed, note: "Gordon dates it after the 1787 evacuation; BlackPast 'in the 1700s'."}
+  - {card: nicaragua-miskitu-creoles, fact: "Freed people arrived after British emancipation", verdict: confirmed, note: "Gordon 1833, BlackPast 1834; card says '1830s'."}
+  - {card: nicaragua-miskitu-creoles, fact: "British protection; Creoles rose in trade and politics", verdict: confirmed}
+  - {card: nicaragua-miskitu-creoles, fact: "From the 1880s US banana and lumber boom", verdict: confirmed}
+  - {card: nicaragua-miskitu-creoles, fact: "1894 reincorporation; mestizos replaced Creoles", verdict: confirmed}
+  - {card: nicaragua-miskitu-creoles, fact: "Lagoon villages shared with Miskitu and Garifuna", verdict: confirmed, note: "Gordon: 'small biethnic villages of the Pearl Lagoon area'; UNESCO: Garifuna live in Nicaragua."}
+
+  # --- afro-germans --- (all entries re-opened; quotes present)
+  - {card: afro-germans, fact: "Isolation in white settings; colonial labels", verdict: confirmed, note: "AAIHS (Florvil) + Literary Hub (Hickmon)."}
+  - {card: afro-germans, fact: "Lorde at the Free University, 1984", verdict: confirmed, note: "AAIHS + Literary Hub."}
+  - {card: afro-germans, fact: "Farbe bekennen, 1986, by Oguntoye, Ayim, Schultz", verdict: confirmed, note: "AAIHS + taz."}
+  - {card: afro-germans, fact: "First book of its kind", verdict: confirmed, note: "taz + Literary Hub."}
+  - {card: afro-germans, fact: "Self-names Afro-German and Black German", verdict: confirmed, note: "bpb (Florvil) + taz."}
+  - {card: afro-germans, fact: "Book set a movement going, connected Black Germans", verdict: confirmed, note: "taz + ISD + AAIHS."}
+  - card: afro-germans
+    fact: "ISD 1985; ADEFRA 1986"
+    verdict: confirmed
+    sources:
+      - {title: "bpb, Tiffany N. Florvil, Black Germany reading sample", url: "https://www.bpb.de/system/files/dokument_pdf/9176_Florvil_BlackGermany_BpB_Leseprobe.pdf", quote: "die 1985 ins Leben gerufene ISD und die 1986 mit feministischem Schwerpunkt gegründete ADEFRA"}
+      - {title: "Literary Hub, Gabrielle Hickmon (2019)", url: "https://lithub.com/what-audre-lorde-learned-in-berlin-about-afro-german-identity", quote: "Founded a year later, Afro-German Women (ADEFRA)"}
+    note: "First ledger had no independent second source for ADEFRA 1986 (AAIHS is also Florvil); Literary Hub supplies it."
+  - {card: afro-germans, fact: "English edition Showing Our Colors", verdict: confirmed, note: "AAIHS + Literary Hub."}
+  - {card: afro-germans, fact: "ISD still active, one of the oldest", verdict: confirmed, note: "ISD site + Literary Hub."}
+
+  # --- black-russia-soviet ---
+  - {card: black-russia-soviet, fact: "USSR courted the Third World from the late 1950s", verdict: confirmed, note: "Katsakioris (Prague Papers) + Matusevich."}
+  - {card: black-russia-soviet, fact: "5 February 1960 founding decision", verdict: confirmed, note: "Matusevich + RUDN."}
+  - card: black-russia-soviet
+    fact: "Named after Lumumba in February 1961"
+    verdict: confirmed
+    sources:
+      - {title: "RUDN: История", url: "https://www.rudn.ru/about/history", quote: "22 февраля 1961 года Университету было присвоено имя Патриса Лумумбы"}
+      - {title: "Constantin Katsakioris (2021), full PDF", url: "https://oap.unige.ch/journals/rhca/fr/article/download/variakatsakioris/228/545", quote: "rebaptisée « Patrice Lumumba » après l’assassinat du Premier Ministre congolais en janvier 1961"}
+    note: "The quote is in the article PDF, not on the abstract page the first ledger cited."
+  - card: black-russia-soviet
+    fact: "Complaints: racism, travel, associations, dating"
+    verdict: confirmed
+    sources:
+      - {title: "Maxim Matusevich (2008)", url: "https://www2.warwick.ac.uk/fac/arts/history/students/modules/hi277/programme/t1w10/hi277_matusevich.pdf", quote: "racist incidents, restrictions on travel within the USSR, restrictions on dating Russian girls, restrictions on forming independent national and ethnic student associations"}
+      - {title: "Julie Hessler (2006) [WebFetch; site blocks curl]", url: "https://journals.openedition.org/monderusse/9591", quote: "romantic relations between black African men and Russian women"}
+  - card: black-russia-soviet
+    fact: "December 1963 death of a Ghanaian student; march; first protest since late 1920s"
+    verdict: confirmed
+    sources:
+      - {title: "Julie Hessler (2006) [WebFetch]", url: "https://journals.openedition.org/monderusse/9591", quote: "this was the first recorded political protest in Moscow’s Red Square since the late 1920s"}
+      - {title: "Maxim Matusevich (2008)", url: "https://www2.warwick.ac.uk/fac/arts/history/students/modules/hi277/programme/t1w10/hi277_matusevich.pdf", quote: "The death of a Ghanaian student in Moscow, in December 1963, which other African students suspected was a homicide"}
+    note: "Hessler: died on the 13th, protest on the 18th, halted at the Spasskie Gate of the Kremlin; 'days later' is right."
+  - card: black-russia-soviet
+    fact: "African students kept coming"
+    verdict: confirmed
+    sources:
+      - {title: "Julie Hessler (2006) [WebFetch]", url: "https://journals.openedition.org/monderusse/9591", quote: "African students continued to come to the Soviet Union to study"}
+      - {title: "Maxim Matusevich (2008)", url: "https://www2.warwick.ac.uk/fac/arts/history/students/modules/hi277/programme/t1w10/hi277_matusevich.pdf", quote: "eventually reaching some 5,000 by the end of the decade"}
+    note: "First ledger's Katsakioris quote ('978 premiers promus') did not support the fact; replaced."
+  - card: black-russia-soviet
+    fact: "Renamed 5 February 1992"
+    verdict: confirmed
+    sources:
+      - {title: "RUDN: История", url: "https://www.rudn.ru/about/history", quote: "5 февраля 1992 года решением Правительства России Университет переименован"}
+      - {title: "Constantin Katsakioris (2021), full PDF", url: "https://oap.unige.ch/journals/rhca/fr/article/download/variakatsakioris/228/545", quote: "Le 5 février 1992, elle fut rebaptisée Université russe de l’Amitié des Peuples."}
+
+  # --- afro-mexicans-recognition ---
+  - card: afro-mexicans-recognition
+    fact: "Descend from Africans brought in colonial times for forced labour"
+    verdict: corrected
+    sources:
+      - {title: "Papeles de Población (2019)", url: "https://www.redalyc.org/journal/112/11260966010/html/", quote: "a person who descends from the Africans who arrived in Mexico during the colonial period to perform forced labor on farms, mills, mines"}
+      - {title: "JSTOR Daily, Karen Juanita Carrillo (2021)", url: "https://daily.jstor.org/mexicos-yanga-commenorates-founding/", quote: "Yanga was enslaved on the Nuestra Señora de la Concepción sugarcane plantation"}
+    note: "First ledger's Americas Quarterly quote (about schools) did not support the fact. Mills and mines (Papeles only) dropped; card now 'farms and sugar plantations'."
+  - card: afro-mexicans-recognition
+    fact: "No national count before 2015; barely acknowledged"
+    verdict: corrected
+    sources:
+      - {title: "Papeles de Población (2019)", url: "https://www.redalyc.org/journal/112/11260966010/html/", quote: "Before that, there were no nation-wide official counts of the Afro-Mexican population."}
+      - {title: "Americas Quarterly, Leonie Rauls (2020)", url: "https://americasquarterly.org/?p=16304", quote: "There is confusion and even sometimes denial of the existence of Afro-Mexicans"}
+    note: "'History hardly taught' rested on one interviewee; replaced by 'barely acknowledged ... as if no part of the nation' (Papeles: 'excluded from the notion of what is Mexican')."
+  - {card: afro-mexicans-recognition, fact: "Twenty-year bottom-up campaign", verdict: confirmed, note: "Americas Quarterly (interview) + Papeles ('arduous process')."}
+  - {card: afro-mexicans-recognition, fact: "2015 Intercensal Survey; 1,381,853; 1.2%", verdict: confirmed, note: "Papeles + Americas Quarterly."}
+  - {card: afro-mexicans-recognition, fact: "9 August 2019 decree, Article 2 section C", verdict: confirmed, note: "DOF text + Americas Quarterly; translation of the clause checked."}
+  - {card: afro-mexicans-recognition, fact: "Counting brings visibility and policy", verdict: confirmed}
+
+  # --- afro-colombian-law-70 --- (all entries re-opened; PDF quotes wrap across lines but are present)
+  - {card: afro-colombian-law-70, fact: "Riverside land counted as baldíos", verdict: confirmed, note: "Ley 70 art. 1 + Uniandes NP-26."}
+  - {card: afro-colombian-law-70, fact: "Slavery abolished 1851", verdict: confirmed, note: "Uniandes 'abolición de la esclavitud en 1851' + Foro (142 years before 1993)."}
+  - {card: afro-colombian-law-70, fact: "Transitional article 55 after mobilisation", verdict: confirmed}
+  - {card: afro-colombian-law-70, fact: "Law 70 of 27 August 1993: collective property, identity, ethnic group", verdict: confirmed}
+  - {card: afro-colombian-law-70, fact: "Consejos Comunitarios", verdict: confirmed}
+  - {card: afro-colombian-law-70, fact: "Nearly six million hectares", verdict: confirmed, note: "Uniandes 'algo menos de 6 millones' (2016); Foro 5.7 million (2023)."}
+  - {card: afro-colombian-law-70, fact: "State barely recognised Afro-Colombians before 1991", verdict: confirmed}
+
+  # --- black-australians-pacific --- (all entries re-opened; quotes present)
+  - {card: black-australians-pacific, fact: "At least ten / eleven / twelve on the First Fleet", verdict: confirmed, note: "UWA review quotes Chingaipe; Pybus eleven; SBS twelve. Dispute line accurate."}
+  - {card: black-australians-pacific, fact: "John Caesar, first bushranger", verdict: confirmed}
+  - {card: black-australians-pacific, fact: "Most from America, runaways to the British", verdict: confirmed}
+  - {card: black-australians-pacific, fact: "Randall from the American colonies, convicted 1785", verdict: confirmed, note: "Pybus: stealing a watch, trial reported April 1785; SBS: picking a pocket in 1785. Card says 'theft'."}
+  - {card: black-australians-pacific, fact: "One of three convicts licensed to shoot game", verdict: confirmed}
+  - {card: black-australians-pacific, fact: "NSW Corps band, flute and drum", verdict: confirmed}
+  - {card: black-australians-pacific, fact: "26 January 1808, 400 soldiers behind the band arrested Bligh", verdict: confirmed}
+  - {card: black-australians-pacific, fact: "Gillen 1989 and Pybus 2006", verdict: confirmed}
+
+unledgered:
+  - {card: zanj-rebellion, claim: "Basra 'a great port' of the caliphate", verdict: unconfirmed, action: "reworded to 'a city of the Abbasid caliphate'"}
+  - {card: zanj-rebellion, claim: "Rebels 'turned the marshes and canals into a fortress'", verdict: unconfirmed, action: "removed (EBSCO alone describes marsh guerrilla warfare)"}
+  - {card: zanj-rebellion, claim: "Topsoil dug 'by hand'", verdict: unconfirmed, action: "removed"}
+  - {card: afro-iraqis-basra, claim: "'old' district of Zubair", verdict: unconfirmed, action: "removed"}
+  - card: black-japan-yasuke
+    claim: "Nobunaga attacked at the Honnō-ji temple in Kyoto"
+    verdict: confirmed
+    sources:
+      - {title: "Encyclopaedia Britannica, Thomas Lockley: Yasuke", url: "https://www.britannica.com/biography/Yasuke", quote: "The group ended up staying at Honnō-ji, the same temple where Yasuke and Nobunaga had met the previous year."}
+      - {title: "Samurai Museum Berlin", url: "https://samuraimuseum.de/en/?p=52665", quote: "Nobunaga was staying at the Honnō-ji a Buddhist temple in the heart of Kyoto"}
+  - card: bahamas-junkanoo
+    claim: "Goatskin drums"
+    verdict: confirmed
+    sources:
+      - {title: "TIME, Sasha C. Wells", url: "https://time.com/7202192/junkanoo-holiday-history/", quote: "music played on goat-skin drums"}
+      - {title: "HistoryMiami Museum", url: "https://historymiami.org/?p=3006", quote: "covered in goat or sheep skin"}
+  - {card: bahamas-junkanoo, claim: "years [1800, 1948]", verdict: unconfirmed, action: "start year had no source; set to [1942, 1948]"}
+  - {card: guyana-emancipation-villages, claim: "Savings gathered over years; coins pushed through Georgetown streets", verdict: unconfirmed, action: "removed; Georgetown dropped from places"}
+  - {card: belize-kriol, claim: "Kriol grammar from 'West African' languages", verdict: refuted, action: "sources say African; corrected"}
+  - {card: belize-kriol, claim: "Further: Song of Kriol 'Belize Kriol Project, 2005'", verdict: unconfirmed, action: "removed; Angelus Press 2006 kept (Glottolog)"}
+  - {card: afro-mexicans-recognition, claim: "Forced labour 'in mills and in mines'", verdict: unconfirmed, action: "Papeles alone; replaced by 'farms and sugar plantations'"}
+  - {card: black-australians-pacific, claim: "Randall 'known as a crack shot', 'ranging through the bush after kangaroo'", verdict: unconfirmed, action: "Pybus alone; removed"}
+  - {card: black-russia-soviet, claim: "'as one African colony after another became independent' (1960)", verdict: confirmed, note: "context; Matusevich and Katsakioris frame the founding in Soviet policy toward newly independent states"}

@@ -9,6 +9,7 @@ places:
   - {name: London, lat: 51.5072, lon: -0.1276}
   - {name: Łódź, lat: 51.7592, lon: 19.4560}
 zoom: 4
+moment: {year: 1858}
 era: v5
 books: [heirs]
 dispute: "His birth year is given as 1807 (Folger) and 1805 (Encyclopedia of Ukraine), and some sources date his London debut to 1826 rather than October 1825."
@@ -24,7 +25,12 @@ sources:
   - {title: "Kyiv Post, Bohdan Nahaylo: Shevchenko and Aldridge, Unbound Prometheans who Bonded", url: "https://www.kyivpost.com/post/14050"}
   - {title: "Wikimedia Commons: Portrait of Ira Aldridge, by Taras Shevchenko (1858)", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Ira_Aldridge,_by_Taras_Shevchenko_(1858).jpg"}
   - {title: "Congressional Record, 17 March 2011", url: "https://www.govinfo.gov/content/pkg/CREC-2011-03-17/html/CREC-2011-03-17-pt1-PgE525-2.htm"}
+  - {title: "Internet Encyclopedia of Ukraine: Shevchenko, Taras", url: "http://www.encyclopediaofukraine.com/display.asp?linkpath=pages%5CS%5CH%5CShevchenkoTaras.htm"}
 media:
   - {type: "image", file: "ira-aldridge.jpg", caption: "Ira Aldridge, drawn by Taras Shevchenko in St Petersburg, 25 December 1858", credit: "Taras Shevchenko; Taras Shevchenko National Museum, Kyiv", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:Portrait_of_Ira_Aldridge,_by_Taras_Shevchenko_(1858).jpg"}
 ---
-Taras Shevchenko, a poet born a serf, watched Ira Aldridge play Othello in St Petersburg, became his friend and drew his portrait. Barred from a real career in New York, where he had acted with the African Grove company, Aldridge sailed for Britain at seventeen. In October 1825 he made his London debut at the Royal Coburg, now the Old Vic, as Oroonoko in The Revolt of Surinam. He became famous as Othello and Aaron the Moor, then toured Europe, playing in English to casts speaking German or Swedish. The St Petersburg Othello came in November 1858; the drawing is dated 25 December. He died on tour in Łódź in 1867. Even his birth year is disputed: 1805 or 1807. Compare [[bridgetower|George Bridgetower]] and [[gannibal|Abram Petrovich Gannibal]].
+Ira Aldridge was a Black American actor who made his career in Europe. In New York he had acted with the African Grove company, but could have no real career there, and at seventeen he sailed for Britain. In October 1825 he made his London debut at the Royal Coburg, now the Old Vic, as Oroonoko in The Revolt of Surinam. When Edmund Kean collapsed during a run of Othello at Covent Garden, Aldridge took over the part; critics attacked his race and the production closed. Yet he became famous as Othello and Aaron the Moor, and from the 1850s toured Europe, playing in English to casts speaking German or Swedish. Saxony made him a knight.
+
+In St Petersburg in November 1858 his Othello was seen by Taras Shevchenko, a poet born a serf, whose freedom friends had bought in 1838 and who was lately back from ten years' exile as a common soldier. The two became friends, and on 25 December Shevchenko drew his portrait. In the 1860s Aldridge toured Ukrainian cities from Kyiv to Odesa. He died on tour in Łódź in 1867.
+
+Russia had known the African-born general [[gannibal|Abram Gannibal]], and London the Black violinist [[bridgetower|George Bridgetower]]; Aldridge carried a Black tragedian's career across a whole continent.

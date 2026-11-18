@@ -1,0 +1,249 @@
+# The Workshop: working objects the reader can play, each one an element of
+# music that travels between styles (content/roots/elements.yaml), tied to its
+# cards. Sounds are either a recording the card already carries (with its
+# rights on the card and in the ledgers) or synthesized in the browser; nothing
+# else is hosted. Patterns are written here, in 16 steps per bar.
+#
+# Every object's label restates its cards and its elements; facts that are not
+# on a card are in content/ledger/workshop.yaml with two sources each.
+# Fields: elements (element ids, the first is the one you touch), cards,
+# name, what (the element, as this object shows it), when (where and when),
+# who (who made it), next (where it went next).
+intro:
+  en: >-
+    A style is not a wall. What passes from one music into the next are
+    elements: a bent note, a pattern on the drums, a way of answering a voice,
+    a few bars cut out of a record and played again. They grew in the work
+    songs, spirituals and blues of African Americans, in jazz, funk and Cuban
+    son, in Jamaican sound systems and Bronx parties, and they travel on: from
+    singer to singer, on records, inside machines. Rock and roll, soul,
+    hip-hop and house are built from them, which is why the Roots of any band
+    lead back to the same few. On this workbench every object lets you touch
+    one element: play it, change it, hear what it does.
+  ru: >-
+    Стиль — не стена. Из одной музыки в другую переходят элементы: подтянутая
+    нота, барабанный рисунок, манера отвечать голосу, несколько тактов,
+    вырезанных из пластинки и сыгранных заново. Они выросли в рабочих песнях,
+    спиричуэлс и блюзе афроамериканцев, в джазе, фанке и кубинском соне, на
+    ямайских саунд-системах и вечеринках Бронкса — и странствуют дальше: от
+    певца к певцу, на пластинках, внутри машин. Из них построены рок-н-ролл,
+    соул, хип-хоп и хаус, поэтому «Корни» любой группы приводят к одним и тем
+    же немногим элементам. На этом верстаке каждый предмет позволяет
+    дотронуться до одного из них: сыграть его, изменить и услышать, что он
+    делает.
+
+gramophone:
+  card: crazy-blues
+  # The card's own public-domain recording (see the card's media entry).
+  audio: crazy-blues.ogg
+  rpm: 78
+  elements: [blue-notes, twelve-bar-blues]
+  cards: [crazy-blues, blues, jazz, big-mama-thornton]
+  name: {en: "The record", ru: "Пластинка"}
+  what:
+    en: >-
+      Music that travels without people. A record carries a style farther
+      than any singer can go: on this one the blues went out on shellac, blue
+      notes and twelve bars and all, to anyone who owned a gramophone.
+    ru: >-
+      Музыка, которая путешествует без людей. Пластинка уносит стиль дальше,
+      чем может уехать любой певец: с этой пластинкой блюз, со всеми своими
+      блюзовыми нотами и двенадцатью тактами, разошёлся на шеллаке по домам
+      всех, у кого был граммофон.
+  when: {en: "New York, 10 August 1920", ru: "Нью-Йорк, 10 августа 1920 года"}
+  who:
+    en: >-
+      Mamie Smith, a vaudeville singer and dancer, with her Jazz Hounds, a band
+      of Black musicians. The song is Perry Bradford’s; he pestered record
+      companies until OKeh agreed to record her.
+    ru: >-
+      Мейми Смит, певица и танцовщица водевиля, со своими Jazz Hounds —
+      оркестром чернокожих музыкантов. Песня Перри Брэдфорда: он донимал
+      звукозаписывающие компании, пока OKeh не согласилась её записать.
+  next:
+    en: >-
+      “Crazy Blues” opened the “race records” market. Bessie Smith came next,
+      then the blues boom and a market for jazz on record; the line of Black
+      women singing the blues on record runs on to Big Mama Thornton.
+    ru: >-
+      Песня «Crazy Blues» открыла рынок «расовых пластинок». Следом пришла
+      Бесси Смит, потом блюзовый бум, а вместе с ним и рынок джаза на
+      пластинках. И линия чернокожих певиц, записывающих блюз, тянется отсюда
+      дальше, к Биг Маме Торнтон.
+
+tr808:
+  card: planet-rock
+  tempo: 120
+  # A simple electro pattern in the spirit the card describes. It is not the
+  # pattern of any record.
+  pattern:
+    bd: "x..x......x..x.."
+    sd: "....x.......x..."
+    cp: "....x.......x..."
+    ch: "x.x.x.x.x.x.xxx."
+    oh: "..............x."
+    cb: "..........x....."
+    lt: "......x........."
+  elements: [groove]
+  cards: [planet-rock, hip-hop, chicago-house]
+  name: {en: "The machine rhythm", ru: "Ритм машины"}
+  what:
+    en: >-
+      A groove that a machine keeps. A drum machine plays its pattern exactly,
+      bar after bar, so that one person can build a whole rhythm section and
+      rebuild other people’s music on it.
+    ru: >-
+      Грув, который держит машина. Драм-машина играет свой рисунок точно,
+      такт за тактом, и один человек может собрать на ней целую ритм-секцию —
+      и пересобрать на ней чужую музыку.
+  when: {en: "New York, 1982", ru: "Нью-Йорк, 1982 год"}
+  who:
+    en: >-
+      Afrika Bambaataa, a Bronx DJ, with the producer Arthur Baker, for the
+      new label Tommy Boy: on “Planet Rock” they rebuilt Kraftwerk’s music on a
+      Roland TR-808.
+    ru: >-
+      Африка Бамбаатаа, диджей из Бронкса, вместе с продюсером Артуром
+      Бейкером — для нового лейбла Tommy Boy. В «Planet Rock» они пересобрали
+      музыку Kraftwerk на Roland TR-808.
+  next:
+    en: >-
+      The record became one of hip-hop’s earliest hits and most influential
+      tracks. In Chicago, house was made on drum machines such as the TR-808
+      and TR-909, with the kick drum on every beat of the bar.
+    ru: >-
+      Пластинка стала одним из первых хитов хип-хопа и одной из самых
+      влиятельных его записей. В Чикаго на драм-машинах вроде TR-808 и TR-909
+      делали хаус, где бочка бьёт на каждую долю такта.
+
+amen:
+  card: amen-break
+  tempo: 136
+  # An approximate four-bar re-creation of the famous break, played on
+  # synthesized drums. Not a sample, and not the recording.
+  pattern:
+    ride:  "x.x.x.x.x.x.x.x.|x.x.x.x.x.x.x.x.|x.x.x.x.x.x.x.x.|x.x.x.x.x.....x."
+    crash: "................|................|................|..........x....."
+    snare: "....x..x.x..x..x|....x..x.x..x..x|....x..x.x....x.|.x..x..x.x....x."
+    kick:  "x.x.......xx....|x.x.......xx....|x.x.......x.....|..xx......x....."
+    hat:   "................|................|................|................"
+  # The official recording, opened only when the reader asks for it. Copied
+  # from the museum's listening list (cards.amen-break), checked against
+  # YouTube oEmbed on 2026-11-13.
+  youtube:
+    id: "HrrWhCbZAyY"
+    title: "Amen Brother"
+    channel: "The Winstons - Topic"
+    start: 85
+  elements: [breakbeat, sampling]
+  cards: [amen-break, hip-hop, funk, rinse-fm]
+  name: {en: "The break and the sample", ru: "Брейк и сэмпл"}
+  what:
+    en: >-
+      A break is the few bars where the band drops out and only the drums
+      play; a sample is that piece cut out of the record and played again.
+      This break, looped, sped up and chopped, became the floor of whole
+      genres.
+    ru: >-
+      Брейк — несколько тактов, где оркестр замолкает и играют только
+      барабаны; сэмпл — этот кусок, вырезанный из пластинки и сыгранный
+      заново. Этот брейк зацикливали, ускоряли и резали на части, и на нём
+      выросли целые жанры.
+  when: {en: "1969, the B-side of “Color Him Father”", ru: "1969 год, сторона Б сингла «Color Him Father»"}
+  who:
+    en: >-
+      Gregory C. Coleman on drums, in the Winstons, an integrated soul band led
+      by Richard L. Spencer. Neither of them received sample royalties.
+    ru: >-
+      За барабанами — Грегори К. Коулман из The Winstons, смешанной
+      соул-группы, которой руководил Ричард Л. Спенсер. Ни тот ни другой не
+      получил отчислений за сэмплы.
+  next:
+    en: >-
+      Hip-hop producers looped it; then it was sped up and chopped into jungle
+      and drum and bass, the sound that pirate stations such as Rinse FM
+      broadcast from the tower blocks of east London.
+    ru: >-
+      Сначала брейк зациклили продюсеры хип-хопа, а потом его ускорили и
+      нарезали на куски для джангла и драм-н-бейса — того звука, который
+      пиратские станции вроде Rinse FM пускали в эфир из высоток Восточного
+      Лондона.
+
+clave:
+  card: independance-cha-cha
+  tempo: 104
+  elements: [polyrhythm]
+  cards: [independance-cha-cha]
+  name: {en: "The clave", ru: "Клаве"}
+  what:
+    en: >-
+      Two hardwood sticks and the five strokes played on them; in Spanish the
+      word also means “key”. In Cuban music the clave is the rhythmic anchor:
+      drums, bells and voices place their own patterns against it. The pattern
+      descends from African rhythmic traditions brought to Cuba under slavery.
+    ru: >-
+      Две палочки из твёрдого дерева и пять ударов, которые на них играют;
+      по-испански это слово значит ещё и «ключ». В кубинской музыке клаве —
+      ритмическая опора: барабаны, колокол и голоса укладывают против неё свои
+      рисунки. Сам рисунок восходит к африканским ритмическим традициям,
+      привезённым на Кубу вместе с рабством.
+  when: {en: "Cuba; New York in the early 1940s", ru: "Куба; Нью-Йорк начала 1940-х"}
+  who:
+    en: >-
+      Afro-Cuban musicians; in New York, Machito and his Afro-Cubans with the
+      trumpeter Mario Bauzá, who credited Machito with having brought the clave
+      to the United States.
+    ru: >-
+      Афрокубинские музыканты; в Нью-Йорке — Мачито и его Afro-Cubans вместе с
+      трубачом Марио Баусой, который считал, что именно Мачито привёз клаве в
+      Соединённые Штаты.
+  next:
+    en: >-
+      Machito’s band blended jazz instrumentation with Cuban rhythms and stayed
+      tied to the clave. Cuban records also carried these rhythms back across
+      the ocean: in Léopoldville, Congolese rumba grew out of them.
+    ru: >-
+      Оркестр Мачито соединил джазовый состав с кубинскими ритмами и не
+      отступал от клаве. А кубинские пластинки увезли эти ритмы обратно через
+      океан: в Леопольдвиле из них выросла конголезская румба.
+  # The son clave in its 3–2 form, a traditional pattern, over a simple conga
+  # part written for this museum.
+  pattern:
+    clave: "x..x..x...x.x..."
+    conga: "..x...xx..x...xx"
+    tumba: "......x.......x."
+    bell:  "x.x.x.x.x.x.x.x."
+
+call:
+  card: work-songs
+  elements: [call-and-response]
+  cards: [work-songs, spirituals, blues, gospel]
+  name: {en: "Call and response", ru: "Зов и отклик"}
+  what:
+    en: >-
+      One voice calls a line, and the group answers with a refrain. The call
+      can change every time; the answer comes back the same and holds everyone
+      together. In the fields it timed the strokes of shared work.
+    ru: >-
+      Один голос запевает строку, и все отвечают припевом. Зов может каждый
+      раз меняться, а отклик возвращается неизменным и держит всех вместе. В
+      поле такая перекличка отмеряла взмахи общей работы.
+  when: {en: "Sierra Leone, the 1790s; the American South; Parchman Farm, Mississippi, 1947–1948", ru: "Сьерра-Леоне, 1790-е; американский Юг; тюремная ферма Парчмен, Миссисипи, 1947–1948"}
+  who:
+    en: >-
+      Rowers on the coast of Sierra Leone, described by a doctor working there;
+      enslaved African Americans singing in the fields; the crews whose
+      wood-cutting songs Alan Lomax taped at Parchman Farm.
+    ru: >-
+      Гребцы у берегов Сьерра-Леоне, которых описал работавший там врач;
+      порабощённые афроамериканцы, певшие в поле; бригады, чьи песни
+      лесорубов Алан Ломакс записал на ферме Парчмен.
+  next:
+    en: >-
+      Into the spirituals, the blues and gospel; and on, as the guitar
+      answering a blues singer, horn sections answering a soloist, gospel
+      choirs, and a crowd shouting back at a rapper.
+    ru: >-
+      В спиричуэлс, блюз и госпел — и дальше: гитара отвечает блюзовому
+      певцу, духовая секция — солисту, перекликаются госпел-хоры, толпа
+      кричит в ответ рэперу.

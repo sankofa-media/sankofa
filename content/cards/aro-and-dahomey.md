@@ -24,7 +24,13 @@ sources:
   - {title: "Library of Congress Country Studies, Nigeria", url: "https://countrystudies.us/nigeria/7.htm"}
   - {title: "PBS: Noble Desire, A Time for Healing", url: "https://www.pbs.org/video/noble-desire-a-time-for-healing-fexkfb"}
   - {title: "NBC News: Genetic quest leads to African apology", url: "https://www.nbcnews.com/sciencemain/genetic-quest-leads-african-apology-role-slave-trade-8c11467842"}
+  - {title: "Slavery Monuments: La Porte du Non Retour, Ouidah", url: "https://www.slaverymonuments.org/items/show/1147"}
+  - {title: "Encyclopaedia Britannica: Ouidah", url: "https://www.britannica.com/place/Ouidah"}
+  - {title: "Republic of Benin: Benin, a land of opportunity for Afro-descendants", url: "https://benin.bj/en/news/benin-a-land-of-opportunity-for-afro-descendants"}
+  - {title: "Africanews: Benin grants citizenship to slave descendants (2024)", url: "https://www.africanews.com/2024/12/16/benin-grants-citizenship-to-slave-descendants/"}
 media:
   - {"type": "image", "file": "aro-and-dahomey.jpg", "caption": "Royal palace in Abomey, Benin", "credit": "Dominik Schwarz", "license": "CC BY-SA 3.0", "url": "https://commons.wikimedia.org/wiki/File:Abomey-K%C3%B6nigspalast3.jpg"}
 ---
-In 1999 Benin's president Mathieu Kérékou convened a reconciliation conference to ask forgiveness for the slave trade. The Atlantic trade needed African sellers, and states and merchant networks supplied them. In the Bight of Biafra, where there was no large state, the Aro merchants of Arochukwu drove the trade's expansion through Igboland. None of this lightens European guilt; it adds African responsibility. Count the voyages in [[slavevoyages|SlaveVoyages]], see the currency in [[cowries|cowrie shells]], and read [[equiano|Olaudah Equiano]].
+The Atlantic slave trade needed African sellers, and on the West African coast states and merchant networks supplied them. Dahomey, a kingdom in what is now Benin, sold captives through Ouidah, its great slave-trading port: people were sold in the market square and marched down a road to the beach, where they were forced onto the ships. In the Bight of Biafra to the east, where there was no large state, the Aro merchants of Arochukwu drove the trade's expansion through Igboland. One of the people taken from that country, by his own account, was [[equiano|Olaudah Equiano]]. None of this lightens European guilt; it adds African responsibility. The ships and their human cargo can be followed voyage by voyage in [[slavevoyages|SlaveVoyages]], and part of its currency survives in [[cowries|cowrie shells]].
+
+Centuries later Benin chose to face its part. In 1999 its president, Mathieu Kérékou, convened a reconciliation conference to ask forgiveness for the slave trade. In 2024 Benin went further and passed a law offering nationality to anyone who can trace their descent to a sub-Saharan African deported in the slave trade.

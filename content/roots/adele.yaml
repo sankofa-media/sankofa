@@ -3,9 +3,9 @@ id: adele
 name: Adele
 nameRu: Адель
 aliases:
-- адель
+  - адель
 years:
-- 1988
+  - 1988
 place:
   name: London
   lat: 51.5074
@@ -13,29 +13,86 @@ place:
 placeRu: "Лондон"
 genre: Soul pop
 genreRu: соул-поп
+story: "Adele built her singing on Etta James: hearing her records made her think seriously about her voice, and critics hear an allegiance to James in her torchy, unaffected delivery and in her ’60s glamour. Her albums rest on American soul — drums, piano and horns under gospel and soul vocal inflections."
+storyRu: "Пение Адель выросло из Этты Джеймс: услышав её пластинки, Адель всерьёз задумалась о собственном голосе, а критики слышат верность Джеймс в страстной, безыскусной подаче Адель и в её глянце 1960-х. Её альбомы стоят на американском соуле — барабаны, фортепиано и духовые под госпельными и соуловыми интонациями голоса."
 links:
-- to: root:bob-dylan
-  claim: Adele recorded Bob Dylan’s “Make You Feel My Love”.
-  claimRu: Адель записала «Make You Feel My Love» Боба Дилана.
-  sources:
-  - title: 'Rolling Stone: Every Adele Song, Ranked — Make You Feel My Love'
-    url: https://au.rollingstone.com/music/music-lists/every-adele-song-ranked-35015/make-you-feel-my-love-35062/
-  - title: 'SRF: Adele bringt Emotionen in Dylans Song'
-    url: https://www.srf.ch/kultur/musik/cover-me-special-adele-bringt-emotionen-in-dylans-song
-  kind: cover
-  what: Bob Dylan’s song “Make You Feel My Love”, newly performed by Adele.
-  whatRu: Песня Боба Дилана «Make You Feel My Love» в новом исполнении Адель.
-- to: root:etta-james
-  kind: influence
-  claim: Discovering Etta James at fourteen changed how Adele thought about singing.
-  claimRu: Услышав Этту Джеймс в четырнадцать лет, Адель стала иначе относиться к
-    пению.
-  sources:
-  - title: 'NPR: Adele — Timeless at 22'
-    url: https://www.npr.org/2011/02/16/133814213/adele-an-unforgettable-voice-timeless-at-22
-  - title: 'Hot Press: Adele — a 2008 interview'
-    url: https://www.hotpress.com/music/happy-35th-birthday-adele-revisiting-a-classic-2008-interview-22966556
-story: Hearing Etta James at fourteen changed how Adele thought about singing. Her
-  recorded repertoire also includes Bob Dylan’s “Make You Feel My Love”.
-storyRu: Услышав Этту Джеймс в четырнадцать лет, Адель стала иначе относиться к пению.
-  В её записанный репертуар вошла и «Make You Feel My Love» Боба Дилана.
+  - to: "root:etta-james"
+    kind: "influence"
+    how: "Adele took from Etta James a torchy, full-throated soul delivery that carries raw emotion rather than vocal tricks, along with a ’60s glamour image."
+    howRu: "Адель взяла у Этты Джеймс страстную соул-подачу в полный голос, где важна обнажённая эмоция, а не вокальные фокусы, и вместе с ней — глянцевый образ 1960-х."
+    carries: []
+    dimensions: ["melody-vocal", "image"]
+    scope: "career"
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "Adele says that before hearing Etta James and Ella Fitzgerald at fourteen she only impersonated singers; afterwards she began to think seriously about singing."
+        textRu: "Адель говорит, что до того, как в четырнадцать лет услышала Этту Джеймс и Эллу Фицджеральд, она лишь подражала певцам, а после стала всерьёз думать о пении."
+        source:
+          title: "Hot Press: Adele — a 2008 interview, revisited (2023)"
+          url: "https://www.hotpress.com/music/happy-35th-birthday-adele-revisiting-a-classic-2008-interview-22966556"
+          quote: "Before that, I just used to impersonate singers, but when I heard Etta James and Ella Fitzgerald, I started thinking about singing a lot more."
+      - type: "listening"
+        dimensions: ["melody-vocal", "image"]
+        text: "Adele traces her love of American soul to an Etta James compilation; James’s voice moved her as no other had, and her look struck her first."
+        textRu: "Свою любовь к американскому соулу Адель ведёт от сборника Этты Джеймс: голос Джеймс тронул её, как ни один другой, а поразил её поначалу облик певицы."
+        source:
+          title: "NPR, All Things Considered: Adele — An Unforgettable Voice, Timeless at 22 (2011)"
+          url: "https://www.npr.org/2011/02/16/133814213/adele-an-unforgettable-voice-timeless-at-22"
+          quote: "\"I saw the most stunning woman I've ever seen in my life,\" Adele says. \"She had this beehive weave, and these catty eyes, and this seductive figure, and this look on her face, like, 'Don't mess with me.' \" … \"She went right through me — it was the first time that I'd ever been so moved by someone's voice,\" Adele says."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Reviewing 21, NPR’s critic hears a straight-ahead torch delivery and an allegiance to Etta James rather than to funk."
+        textRu: "Рецензент NPR слышит в «21» прямую, без затей, страстную балладную подачу и верность Этте Джеймс, а не фанку."
+        source:
+          title: "NPR, First Listen: Adele, 21 (2011)"
+          url: "https://www.npr.org/2011/03/02/133496838/first-listen-adele-21"
+          quote: "But she's aiming for straight-ahead torchy with a country flavor. That separates her from other young white soul singers of the past 10 years — Amy Winehouse , yes, but also Nikka Costa, Anastasia and Duffy . She's not going for the funk. I can hear her allegiance to Etta James over Ronnie Spector"
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The Line of Best Fit praises a delivery free of contrived cracks and trills and notes Adele’s professed love for Etta James."
+        textRu: "The Line of Best Fit хвалит её подачу, свободную от нарочитых срывов голоса и трелей, и напоминает о признаниях Адель в любви к Этте Джеймс."
+        source:
+          title: "The Line of Best Fit: Adele — 21 (review, 2011)"
+          url: "https://www.thelineofbestfit.com/reviews/albums/adele-21-44967"
+          quote: "Her delivery is perfect; her inflection is unaffected, and remains gloriously free of the contrived cracks and trills favoured by so many of her peers."
+  - to: "style:soul"
+    kind: "style"
+    how: "Adele works in soul: songs built on drums, piano and horns, sung with gospel and soul inflections and a chain-gang chorus behind the voice."
+    howRu: "Адель работает в соуле: песни на барабанах, фортепиано и духовых, спетые с госпельными и соуловыми интонациями, с хором в духе тюремных рабочих песен за спиной."
+    carries: ["gospel-vocal"]
+    dimensions: ["sound", "melody-vocal"]
+    scope: "career"
+    evidence:
+      - type: "listening"
+        dimensions: ["melody-vocal"]
+        text: "NPR describes 21 as steeped in Adele’s love of American soul and R&B."
+        textRu: "NPR пишет, что «21» пропитан любовью Адель к американскому соулу и ритм-н-блюзу."
+        source:
+          title: "NPR, All Things Considered: Adele — An Unforgettable Voice, Timeless at 22 (2011)"
+          url: "https://www.npr.org/2011/02/16/133814213/adele-an-unforgettable-voice-timeless-at-22"
+          quote: "The new album is a set of songs steeped in the singer's love for American soul and R&B."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "NPR’s reviewer hears soul-music instrumentation on 21: drums, piano and horns ahead of guitar."
+        textRu: "Рецензент NPR слышит в «21» соуловую инструментовку: барабаны, фортепиано и духовые впереди гитары."
+        source:
+          title: "NPR: On 21, Adele’s Voice Is Wise Beyond Her Years (2011)"
+          url: "https://www.npr.org/2011/03/09/134168484/on-21-adeles-voice-is-wise-beyond-her-years"
+          quote: "The album's instrumentation is heavy on drums, piano and horns — soul-music ammunition that often takes precedence over the guitar."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The same review notes that the gospel and soul inflections dominate the album."
+        textRu: "Та же рецензия отмечает, что в альбоме господствуют госпельные и соуловые интонации."
+        source:
+          title: "NPR: On 21, Adele’s Voice Is Wise Beyond Her Years (2011)"
+          url: "https://www.npr.org/2011/03/09/134168484/on-21-adeles-voice-is-wise-beyond-her-years"
+          quote: "She's said in interviews that 21 was influenced by her recent discovery of old country music, though you wouldn't know it from the gospel and soul inflections that dominate."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "The Line of Best Fit calls 21 an album fundamentally influenced by Black spirituals, citing the chain-gang backing of “Rumour Has It”."
+        textRu: "The Line of Best Fit называет «21» альбомом, глубоко обязанным чёрным спиричуэлс, и приводит в пример подпевки в духе тюремных рабочих песен в «Rumour Has It»."
+        source:
+          title: "The Line of Best Fit: Adele — 21 (review, 2011)"
+          url: "https://www.thelineofbestfit.com/reviews/albums/adele-21-44967"
+          quote: "it helps to mitigate the most problematic aspects of a white BRIT School graduate writing an album so fundamentally influenced by black spirituals. If I were listening to the chain gang backing of stand-out ‘Rumour Has It’"

@@ -8,25 +8,61 @@ placeRu: "Лондон"
 genre: "Hard rock"
 genreRu: "хард-рок"
 links:
-  - to: "card:blues"
-    claim: "Led Zeppelin reworked “When the Levee Breaks”, originally recorded by Kansas Joe McCoy and Memphis Minnie."
-    claimRu: "Led Zeppelin переработали «When the Levee Breaks» — песню, впервые записанную Канзасом Джо Маккоем и Мемфис Минни."
-    sources:
-      - title: "Charles Shaar Murray: Led Zeppelin, Memphis Minnie, and the levee that broke (Classic Rock)"
-        url: "https://www.loudersound.com/features/led-zeppelin-memphis-minnie-when-the-levee-breaks"
-      - title: "Trevor de Clercq: Measuring a Measure (Music Theory Online 22.3)"
-        url: "https://mtosmt.org/issues/mto.16.22.3/mto.16.22.3.declercq.pdf"
-    kind: "cover"
-    what: "“When the Levee Breaks”: Led Zeppelin re-recorded and rearranged the song recorded by Kansas Joe McCoy and Memphis Minnie."
-    whatRu: "«When the Levee Breaks»: Led Zeppelin заново записали и переаранжировали песню Канзаса Джо Маккоя и Мемфис Минни."
   - to: "root:howlin-wolf"
     kind: "influence"
-    claim: "Robert Plant identifies Howlin’ Wolf as one of his early musical roots."
-    claimRu: "Роберт Плант называет Хаулина Вулфа одним из своих ранних музыкальных ориентиров."
-    sources:
-      - title: "Interview: Robert Plant (1977 interview, republished 2013)"
-        url: "https://www.interviewmagazine.com/music/new-again-robert-plant"
-      - title: "Blabbermouth: Robert Plant on his musical roots (2015)"
-        url: "https://blabbermouth.net/news/robert-plant-wants-deadhead-like-solo-following"
-story: "Robert Plant names Howlin’ Wolf among his early musical roots. Led Zeppelin also transformed “When the Levee Breaks”, first recorded by Kansas Joe McCoy and Memphis Minnie."
-storyRu: "Роберт Плант называет Хаулина Вулфа одним из своих ранних музыкальных ориентиров. Led Zeppelin также преобразили «When the Levee Breaks» — песню, впервые записанную Канзасом Джо Маккоем и Мемфис Минни."
+    how: "Robert Plant modelled his fronting of the band on Howlin’ Wolf: an overpowering, shouted stage presence and long one-chord blues vamps rather than neat song forms."
+    howRu: "Роберт Плант строил свою роль фронтмена по Хаулину Вулфу: всё подавляющий напор на сцене, пение на крике и долгие блюзовые вампы на одном аккорде вместо аккуратной песенной формы."
+    carries: []
+    dimensions: ["melody-vocal", "performance", "harmony-form"]
+    evidence:
+      - type: "listening"
+        dimensions: ["melody-vocal"]
+        text: "Plant names Howlin’ Wolf and Muddy Waters as the singers he listened to first and describes his own singing as pushing his voice to its limit."
+        textRu: "Плант называет Хаулина Вулфа и Мадди Уотерса первыми певцами, которых он слушал, а свою манеру описывает как пение на пределе голоса."
+        source:
+          title: "Interview Magazine: Robert Plant (1977 interview, republished 2013)"
+          url: "https://www.interviewmagazine.com/music/new-again-robert-plant"
+          quote: "In the early days it was Howlin' Wolf and Muddy Waters, Ray Charles … I loved the feeling of letting fly, of pushing as far as I could go with my voice."
+      - type: "critics"
+        dimensions: ["performance", "harmony-form"]
+        text: "Far Out calls Plant a natural disciple of Wolf’s performance style in fronting Zeppelin, and quotes Plant on Wolf’s overpowering presence and one-chord songs as the start of Zeppelin’s career."
+        textRu: "Far Out называет Планта прирождённым учеником сценической манеры Вулфа в роли фронтмена Zeppelin и приводит слова Планта о подавляющем сценическом напоре Вулфа и его песнях на одном аккорде, с которых началась карьера Zeppelin."
+        source:
+          title: "Far Out: The singer Robert Plant described as the last echo of the blues"
+          url: "https://faroutmagazine.co.uk/singer-robert-plant-last-echo-of-the-blues/"
+          quote: "Plant, of course, was a natural disciple of Wolf's performance style, … He played a lot of songs which were on one chord, … which basically started the career of people like [Eric] Clapton and Zeppelin."
+    scope: "career"
+  - to: "style:blues-rock"
+    kind: "style"
+    how: "Led Zeppelin came out of the British blues scene and turned the blues into a loud, heavy, riff-built rock that the band stretched and improvised on stage."
+    howRu: "Led Zeppelin вышли из британской блюзовой сцены и превратили блюз в громкий, тяжёлый рок на риффах, который группа на сцене растягивала импровизациями."
+    carries: ["riff", "improvisation"]
+    dimensions: ["harmony-form", "sound", "performance", "melody-vocal"]
+    evidence:
+      - type: "critics"
+        dimensions: ["harmony-form", "sound", "performance"]
+        text: "The Rock & Roll Hall of Fame describes the band’s start in late-1960s heavy blues, its blend of blues and modal riffs, its transformation of the blues and its improvising live act."
+        textRu: "Зал славы рок-н-ролла описывает начало группы в тяжёлом блюзе конца 1960-х, её сплав блюза и модальных риффов, то, как она преобразила блюз, и её импровизационные концерты."
+        source:
+          title: "Rock & Roll Hall of Fame: Led Zeppelin"
+          url: "https://rockhall.com/inductees/led-zeppelin/"
+          quote: "From late ‘60s heavy blues and Celtic folk beginnings, Led Zeppelin dominated ‘70s rock … As an untouchable live act, they embraced improvisation, reinventing their sound onstage"
+      - type: "testimony"
+        dimensions: ["melody-vocal", "performance"]
+        text: "Plant recalls singing R&B in Midlands bands and learning the ethos of the blues as Alexis Korner’s harmonica player."
+        textRu: "Плант вспоминает, как пел ритм-н-блюз в группах Мидлендса и усваивал дух блюза, играя на губной гармонике у Алексиса Корнера."
+        source:
+          title: "The Guardian: Robert Plant’s teenage obsessions (2021)"
+          url: "https://www.theguardian.com/music/2021/may/20/robert-plants-teenage-obsessions-stourbridge-was-our-beverly-hills"
+          quote: "Suddenly I became Alexis Korner’s harmonica player, and carried his bag in and out of gigs. I learned so much from him. He wasn’t Johnny Guitar Watson or Jimi Hendrix, but carried the whole ethos of blues"
+      - type: "testimony"
+        dimensions: ["performance"]
+        text: "Plant describes the band phrasing around each other on stage, with Bonham following his vocal lines at once."
+        textRu: "Плант рассказывает, как музыканты на сцене строят фразы, отталкиваясь друг от друга, а Бонэм мгновенно следует за его вокальной линией."
+        source:
+          title: "Interview Magazine: Robert Plant (1977 interview, republished 2013)"
+          url: "https://www.interviewmagazine.com/music/new-again-robert-plant"
+          quote: "When you're singing we all phrase each other in the most remarkable ways. … Bonzo will pick it up—he'll phrase with me instantly"
+    scope: "career"
+story: "Robert Plant fronted Led Zeppelin in the manner of Howlin’ Wolf, with an overpowering voice and long one-chord blues vamps. The band came out of the British blues scene and turned the blues into heavy, riff-built rock, stretched by improvisation on stage."
+storyRu: "Роберт Плант вёл Led Zeppelin на манер Хаулина Вулфа — подавляющим голосом и долгими блюзовыми вампами на одном аккорде. Группа вышла из британской блюзовой сцены и превратила блюз в тяжёлый рок на риффах, который на сцене разрастался в импровизации."

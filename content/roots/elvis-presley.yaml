@@ -8,27 +8,69 @@ placeRu: "Тупело, Миссисипи"
 genre: "Rock and roll"
 genreRu: "рок-н-ролл"
 links:
-  - to: "card:big-mama-thornton"
-    claim: "Elvis Presley recorded “Hound Dog”, the song first recorded by Big Mama Thornton."
-    claimRu: "Элвис Пресли записал «Hound Dog» — песню, которую первой записала Биг Мама Торнтон."
-    sources:
-      - title: "The Guardian: Why no one sang the blues like Big Mama Thornton"
-        url: "https://www.theguardian.com/music/2026/apr/10/big-mama-thornton-documentary-blues-singer-original-hound-dog-elvis"
-      - title: "Michael Sporke: Hound Dog — Big Mama Thornton (Library of Congress)"
-        url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/HoundDog.pdf"
-    kind: "cover"
-    what: "“Hound Dog”: Presley’s own recording of the song first recorded by Thornton."
-    whatRu: "«Hound Dog»: собственная запись Пресли песни, которую первой записала Торнтон."
   - to: "root:arthur-crudup"
-    kind: "cover"
-    claim: "Elvis Presley released his debut single with Arthur Crudup’s “That’s All Right”."
-    claimRu: "Для своего дебютного сингла Элвис Пресли записал песню Артура Крадапа «That’s All Right»."
-    what: "“That’s All Right”: Presley’s 1954 debut single re-records Crudup’s blues song."
-    whatRu: "«That’s All Right»: на дебютном сингле 1954 года Пресли заново исполнил блюзовую песню Крадапа."
-    sources:
-      - title: "Associated Press: Arthur Crudup and Elvis’s first hit (Chicago Sun-Times)"
+    kind: "influence"
+    how: "Presley named Crudup as the model for the way he played and felt the blues: the hard-strummed guitar and the depth of feeling of Crudup’s Mississippi blues."
+    howRu: "Пресли называл Крадапа образцом того, как он сам играл и чувствовал блюз: гитара с жёстким боем и глубина чувства миссисипского блюза Крадапа."
+    carries: []
+    dimensions: ["rhythm", "sound", "melody-vocal"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["rhythm", "sound", "melody-vocal"]
+        text: "In 1956 Presley said he used to hear Crudup bang his guitar the way he himself now did, and wanted to feel all that Crudup felt."
+        textRu: "В 1956 году Пресли говорил, что слышал, как Крадап колотит по гитаре — так же, как теперь он сам, — и мечтал прочувствовать всё, что чувствовал Крадап."
+        source:
+          title: "Associated Press (Ben Finley), via Chicago Sun-Times: Bluesman Arthur Crudup wrote Elvis’ first hit (2024)"
+          url: "https://chicago.suntimes.com/music/2024/07/05/bluesman-arthur-crudup-wrote-thats-all-right-elvis-first-hit-song-but-he-barely-got-paid-for-it"
+          quote: "Down in Tupelo, Mississippi, I used to hear old Arthur Crudup bang his box the way I do now"
+      - type: "listening"
+        dimensions: []
+        text: "The Rock & Roll Hall of Fame lists Crudup among Presley’s influences."
+        textRu: "Зал славы рок-н-ролла называет Крадапа среди тех, кто повлиял на Пресли."
+        source:
+          title: "Rock & Roll Hall of Fame: Elvis Presley"
+          url: "https://rockhall.com/inductees/elvis-presley/"
+          quote: "Arthur \"Big Boy\" Crudup"
+    scope: "career"
+    example:
+      song: "“That’s All Right” (1954)"
+      text: "Presley’s first single was Crudup’s blues; Crudup himself heard the result as a kind of hillbilly record."
+      textRu: "Первым синглом Пресли стал блюз Крадапа; сам Крадап услышал в этой записи нечто вроде хиллбилли-пластинки."
+      source:
+        title: "Associated Press (Ben Finley), via Chicago Sun-Times (2024)"
         url: "https://chicago.suntimes.com/music/2024/07/05/bluesman-arthur-crudup-wrote-thats-all-right-elvis-first-hit-song-but-he-barely-got-paid-for-it"
-      - title: "Virginia General Assembly: Arthur William Crudup commemoration (2023)"
-        url: "https://legacylis.virginia.gov/cgi-bin/legp604.exe?231+ful+HJ672ER+pdf="
-story: "Elvis Presley’s debut single featured Arthur Crudup’s “That’s All Right”. He also recorded “Hound Dog”, a song first recorded by Big Mama Thornton."
-storyRu: "На дебютном сингле Элвиса Пресли прозвучала «That’s All Right» Артура Крадапа. Он также записал «Hound Dog» — песню, которую первой исполнила на пластинке Биг Мама Торнтон."
+        quote: "a kind of hillbilly record"
+  - to: "card:rock-n-roll"
+    kind: "style"
+    how: "Presley’s rock and roll melded blues and R&B with country and gospel, sung with rough, passionate vocals over a pelvic bump-and-grind rhythm and staged with hip-shaking, provocative performance."
+    howRu: "Рок-н-ролл Пресли сплавил блюз и ритм-н-блюз с кантри и госпелом: грубый, страстный вокал поверх ритма с «покачиванием бёдер» и вызывающая сценическая пластика."
+    carries: []
+    dimensions: ["rhythm", "harmony-form", "melody-vocal", "performance", "image"]
+    evidence:
+      - type: "critics"
+        dimensions: ["harmony-form", "performance", "image"]
+        text: "The Hall of Fame describes his revolutionary melding of blues, country and gospel, his provocative stage performances and the shape-shifting rock-star image."
+        textRu: "Зал славы пишет о революционном сплаве блюза, кантри и госпела, о вызывающих выступлениях и о переменчивом облике рок-звезды."
+        source:
+          title: "Rock & Roll Hall of Fame: Elvis Presley"
+          url: "https://rockhall.com/inductees/elvis-presley/"
+          quote: "With a revolutionary melding of blues, country, gospel, and other roots music"
+      - type: "analysis"
+        dimensions: ["harmony-form", "rhythm", "performance"]
+        text: "Gale’s Contemporary Musicians finds that his combination of country, R&B and gospel was new, carried by a pelvic bump-and-grind rhythm and a daringly sexual performing style."
+        textRu: "Справочник Contemporary Musicians отмечает, что его сочетание кантри, ритм-н-блюза и госпела было новым и держалось на ритме с «покачиванием бёдер» и дерзко чувственной манере выступлений."
+        source:
+          title: "Contemporary Musicians (Nancy Evans), via Encyclopedia.com: Elvis Presley"
+          url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/elvis-presley"
+          quote: "combined elements of country-and-western, rhythm-and-blues, and gospel, was new"
+      - type: "analysis"
+        dimensions: ["melody-vocal"]
+        text: "Baker’s Biographical Dictionary of Musicians hears rough, passionate vocals in his early records."
+        textRu: "Биографический словарь музыкантов Бейкера слышит в его ранних записях грубый, страстный вокал."
+        source:
+          title: "Baker’s Biographical Dictionary of Musicians (Brock Helander), via Encyclopedia.com: Elvis Presley"
+          url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/elvis-presley"
+          quote: "rough, passionate vocals"
+    scope: "career"
+story: "Elvis Presley named Arthur Crudup as the model for how he banged his guitar and felt the blues. His rock and roll melded blues and R&B with country and gospel, sung with rough passion over a bump-and-grind rhythm and staged with provocative, hip-shaking performance."
+storyRu: "Элвис Пресли называл Артура Крадапа образцом того, как сам колотил по гитаре и чувствовал блюз. Его рок-н-ролл сплавил блюз и ритм-н-блюз с кантри и госпелом: грубая страсть вокала, ритм с «покачиванием бёдер» и вызывающая сценическая пластика."

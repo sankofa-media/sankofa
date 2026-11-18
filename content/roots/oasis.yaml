@@ -7,17 +7,38 @@ place: {"name": "Manchester", "lat": 53.4808, "lon": -2.2426}
 placeRu: "Манчестер"
 genre: "Britpop"
 genreRu: "брит-поп"
+story: "Oasis built guitar-based British rock and roll on the Beatles: Noel Gallagher's Beatle-esque melodies and anthemic choruses, punchy guitars and Liam Gallagher's nasal vocal. Noel named the Beatles among the bands that made him a guitarist and wanted to sound like a cross of John Squire, Paul Weller and John Lennon."
+storyRu: "Oasis строили гитарный британский рок-н-ролл на фундаменте The Beatles: битловские мелодии и гимновые припевы Ноэла Галлахера, напористые гитары и носовой вокал Лиама Галлахера. Ноэл называл The Beatles среди групп, сделавших его гитаристом, и хотел звучать как помесь Джона Сквайра, Пола Уэллера и Джона Леннона."
 links:
   - to: "root:the-beatles"
-    claim: "Oasis included their cover of the Beatles’ “I Am the Walrus” on The Masterplan."
-    claimRu: "Oasis включили свою версию песни The Beatles «I Am the Walrus» в сборник The Masterplan."
-    sources:
-      - title: "Apple Music: The Masterplan — editorial album notes"
-        url: "https://music.apple.com/us/album/the-masterplan/1517453693"
-      - title: "Pitchfork: Oasis — The Masterplan"
-        url: "https://pitchfork.com/reviews/albums/5930-the-masterplan/"
-    kind: "cover"
-    what: "“I Am the Walrus”: the Oasis cover included on The Masterplan."
-    whatRu: "«I Am the Walrus»: версия Oasis, включённая в «The Masterplan»."
-story: "Oasis recorded the Beatles’ “I Am the Walrus”. Their version appears on The Masterplan."
-storyRu: "Oasis записали «I Am the Walrus» The Beatles. Их версия вошла в сборник «The Masterplan»."
+    kind: "influence"
+    how: "From the Beatles came the melodic idiom — Beatle-esque tunes and soaring choruses — a Lennon-like nasal vocal and the image of four ordinary lads from a northern town, delivered with punchy guitars and punk swagger."
+    howRu: "От The Beatles пришёл мелодический язык — битловские напевы и взлетающие припевы, — носовой, ленноновский вокал и образ четырёх обычных парней из северного города; всё это подано с напористыми гитарами и панковской развязностью."
+    carries: []
+    dimensions: ["melody-vocal", "sound", "image"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal", "sound", "image"]
+        text: "The Rock and Roll Hall of Fame describes Oasis as a tight mix of Beatle-esque melodies, punk swagger and punchy guitars, offering Beatles-influenced pop with a rebellious attitude, and lists the Beatles first among their influences."
+        textRu: "Зал славы рок-н-ролла описывает Oasis как плотную смесь битловских мелодий, панковской развязности и напористых гитар — битловский поп с бунтарской позой — и первыми среди их влияний называет The Beatles."
+        source:
+          title: "Rock & Roll Hall of Fame: Oasis"
+          url: "https://rockhall.com/inductees/oasis/"
+          quote: "a tight mix of Beatle-esque melodies, punk swagger, and punchy guitars ... rebellious attitude while offering punk, glam, and Beatles-influenced pop to legions of fans"
+      - type: "critics"
+        dimensions: ["melody-vocal", "image"]
+        text: "Sam Kemp hears the Beatles link deliberately underlined in Liam's long hair, round sunglasses and nasal vocal style, and in the band's image as four ordinary lads from a northern town."
+        textRu: "Сэм Кемп видит нарочно подчёркнутую связь с The Beatles в длинных волосах Лиама, его круглых очках и носовой манере пения — и в образе группы как четырёх обычных парней из северного города."
+        source:
+          title: "Sam Kemp, Far Out Magazine: Did Oasis really sound like The Beatles? (2022)"
+          url: "https://faroutmagazine.co.uk/did-oasis-really-sound-like-the-beatles/"
+          quote: "Liam Gallagher's long hair, penchant for round sunglasses, and nasal vocal style ... Like The Beatles, Oasis was comprised of four ordinary lads from a northern town."
+      - type: "testimony"
+        dimensions: ["sound"]
+        text: "Noel Gallagher named the Beatles among the bands that made him a guitarist and said he wanted to sound like John Squire crossed with Paul Weller and John Lennon."
+        textRu: "Ноэл Галлахер назвал The Beatles среди групп, сделавших его гитаристом, и сказал, что хотел звучать как Джон Сквайр, скрещённый с Полом Уэллером и Джоном Ленноном."
+        source:
+          title: "Callum MacHattie, Far Out Magazine: The bands that inspired Noel Gallagher to become a guitarist (2025)"
+          url: "https://faroutmagazine.co.uk/bands-that-made-noel-gallagher-a-guitarist/"
+          quote: "The Jam, Stone Roses, The Smiths and The Beatles. ... I saw John Squire from The Stone Roses cross them two with Paul Weller and John Lennon, and that's how I wanted to sound."
+    scope: "career"

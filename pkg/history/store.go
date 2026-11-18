@@ -5,12 +5,9 @@ package history
 
 import (
 	"context"
-	"database/sql"
 	"encoding/json"
 	"fmt"
 	"time"
-
-	_ "modernc.org/sqlite"
 )
 
 // Verbs of a record.
@@ -50,135 +47,98 @@ type Record struct {
 	Manager  string          `json:"manager,omitempty"` // field manager of the last write: who did it
 	Revision string          `json:"resourceVersion"`
 	Object   json.RawMessage `json:"object"`
+	// Recorded is when Griot wrote the record; At minus Recorded is the lag.
+	Recorded time.Time `json:"recorded,omitempty"`
 }
 
-// Store keeps records in SQLite.
-type Store struct{ db *sql.DB }
-
-// Open opens or creates the store.
-func Open(path string) (*Store, error) {
-	db, err := sql.Open("sqlite", path+"?_pragma=journal_mode(WAL)&_pragma=busy_timeout(5000)")
-	if err != nil {
-		return nil, err
-	}
-	db.SetMaxOpenConns(1)
-	_, err = db.Exec(`
-CREATE TABLE IF NOT EXISTS records (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  grp TEXT NOT NULL, resource TEXT NOT NULL, namespace TEXT NOT NULL, name TEXT NOT NULL,
-  uid TEXT NOT NULL, kind TEXT NOT NULL, verb TEXT NOT NULL, at INTEGER NOT NULL,
-  manager TEXT NOT NULL, revision TEXT NOT NULL, hash TEXT NOT NULL, object BLOB NOT NULL
-);
-CREATE INDEX IF NOT EXISTS records_ref ON records(grp, resource, namespace, name, at);
-CREATE INDEX IF NOT EXISTS records_verb ON records(verb, at);
-CREATE INDEX IF NOT EXISTS records_uid ON records(uid, id);`)
-	if err != nil {
-		return nil, err
-	}
-	return &Store{db: db}, nil
+// Entry is a record with its content hash, as the recorder writes it.
+type Entry struct {
+	Record Record
+	Hash   string
 }
 
-// Close closes the store.
-func (s *Store) Close() error { return s.db.Close() }
-
-// LastHash returns the content hash of the latest record for the uid.
-func (s *Store) LastHash(ctx context.Context, uid string) (hash, verb string, err error) {
-	err = s.db.QueryRowContext(ctx, `SELECT hash, verb FROM records WHERE uid=? ORDER BY id DESC LIMIT 1`, uid).Scan(&hash, &verb)
-	if err == sql.ErrNoRows {
-		return "", "", nil
-	}
-	return hash, verb, err
+// Head is the latest record of one object incarnation (uid), without the body.
+type Head struct {
+	ID   int64
+	UID  string
+	Ref  Ref
+	Kind string
+	Hash string
+	Verb string
 }
 
-// Add appends a record.
-func (s *Store) Add(ctx context.Context, r Record, hash string) error {
-	_, err := s.db.ExecContext(ctx, `INSERT INTO records(grp,resource,namespace,name,uid,kind,verb,at,manager,revision,hash,object) VALUES(?,?,?,?,?,?,?,?,?,?,?,?)`,
-		r.Ref.Group, r.Ref.Resource, r.Ref.Namespace, r.Ref.Name, r.UID, r.Kind, r.Verb, r.At.UnixMilli(), r.Manager, r.Revision, hash, []byte(r.Object))
-	return err
+// Stats describe the size of the memory.
+type Stats struct {
+	Records int64 `json:"records"`
+	Objects int64 `json:"objects"` // distinct uids
+	Bytes   int64 `json:"bytes"`   // on-disk size as the backend reports it
 }
 
-func scan(rows *sql.Rows) ([]Record, error) {
-	defer rows.Close()
-	var out []Record
-	for rows.Next() {
-		var r Record
-		var at int64
-		var obj []byte
-		if err := rows.Scan(&r.ID, &r.Ref.Group, &r.Ref.Resource, &r.Ref.Namespace, &r.Ref.Name, &r.UID, &r.Kind, &r.Verb, &at, &r.Manager, &r.Revision, &obj); err != nil {
-			return nil, err
-		}
-		r.At = time.UnixMilli(at).UTC()
-		r.Object = obj
-		out = append(out, r)
-	}
-	return out, rows.Err()
+// Summary is an object's life in numbers: what a story needs without
+// reading every record.
+type Summary struct {
+	Records  int
+	Changes  int
+	Lives    int
+	First    Record // without body
+	Last     Record // without body
+	Managers []string
 }
 
-const cols = `id,grp,resource,namespace,name,uid,kind,verb,at,manager,revision,object`
-
-// Life returns every record of an object (all its incarnations), oldest first.
-func (s *Store) Life(ctx context.Context, ref Ref) ([]Record, error) {
-	rows, err := s.db.QueryContext(ctx, `SELECT `+cols+` FROM records WHERE grp=? AND resource=? AND namespace=? AND name=? ORDER BY id`,
-		ref.Group, ref.Resource, ref.Namespace, ref.Name)
-	if err != nil {
-		return nil, err
-	}
-	return scan(rows)
+// Store is where the memory lives. SQLite (one file, one writer) and
+// PostgreSQL (shared by several Griot replicas) implement it.
+type Store interface {
+	// Heads returns the latest record of every uid; the recorder warms its
+	// dedup cache with it.
+	Heads(ctx context.Context) ([]Head, error)
+	// LastHash returns the content hash and verb of the latest record for uid.
+	LastHash(ctx context.Context, uid string) (hash, verb string, err error)
+	// Add appends one record.
+	Add(ctx context.Context, r Record, hash string) error
+	// AddBatch appends records in one transaction, in order.
+	AddBatch(ctx context.Context, entries []Entry) error
+	// Life returns every record of an object (all its incarnations), oldest first.
+	Life(ctx context.Context, ref Ref) ([]Record, error)
+	// At returns the state of the object at t: the latest record not after t.
+	At(ctx context.Context, ref Ref, t time.Time) (Record, bool, error)
+	// LastAlive returns the latest record of the object under this name.
+	LastAlive(ctx context.Context, ref Ref) (Record, bool, error)
+	// Latest returns the latest record of an incarnation.
+	Latest(ctx context.Context, uid string) (Record, bool, error)
+	// Obituaries lists deaths, newest first, optionally in one namespace.
+	Obituaries(ctx context.Context, namespace string, limit int) ([]Record, error)
+	// NamespaceAt returns the state of every object that was alive in the
+	// namespace at t ("" means cluster-scoped objects), paged.
+	NamespaceAt(ctx context.Context, namespace string, t time.Time, after *Cursor, limit int) ([]Record, error)
+	// Moments returns records without bodies, newest first, paged by id.
+	Moments(ctx context.Context, ref Ref, limit int, beforeID int64) ([]Record, error)
+	// Summarize counts an object's life without reading it.
+	Summarize(ctx context.Context, ref Ref) (Summary, error)
+	// Prune forgets records older than before, except the latest of each uid.
+	Prune(ctx context.Context, before time.Time) (int64, error)
+	// Retain applies a retention policy and compaction.
+	Retain(ctx context.Context, p Policy, now time.Time) (RetainStats, error)
+	// Vacuum gives space freed by retention back: SQLite rebuilds its file
+	// (VACUUM; it needs free disk as large as the store and blocks writes
+	// while it runs), PostgreSQL runs a plain VACUUM ANALYZE (no lock against
+	// writes; space is reused, not returned to the file system).
+	Vacuum(ctx context.Context) error
+	// Stats reports counts and size.
+	Stats(ctx context.Context) (Stats, error)
+	Close() error
 }
 
-// At returns the state of the object at time t: the latest record not after
-// t. ok is false when the object did not exist then.
-func (s *Store) At(ctx context.Context, ref Ref, t time.Time) (r Record, ok bool, err error) {
-	rows, err := s.db.QueryContext(ctx, `SELECT `+cols+` FROM records WHERE grp=? AND resource=? AND namespace=? AND name=? AND at<=? ORDER BY id DESC LIMIT 1`,
-		ref.Group, ref.Resource, ref.Namespace, ref.Name, t.UnixMilli())
-	if err != nil {
-		return r, false, err
-	}
-	rs, err := scan(rows)
-	if err != nil || len(rs) == 0 {
-		return r, false, err
-	}
-	return rs[0], true, nil
-}
+// Open opens or creates a SQLite store at path.
+func Open(path string) (*SQLStore, error) { return OpenSQLite(path) }
 
-// LastAlive returns the last state before the object died, for restores
-// without a time.
-func (s *Store) LastAlive(ctx context.Context, ref Ref) (r Record, ok bool, err error) {
-	rows, err := s.db.QueryContext(ctx, `SELECT `+cols+` FROM records WHERE grp=? AND resource=? AND namespace=? AND name=? ORDER BY id DESC LIMIT 1`,
-		ref.Group, ref.Resource, ref.Namespace, ref.Name)
-	if err != nil {
-		return r, false, err
+// OpenStore opens a store by driver name: "sqlite" (dsn is a file path) or
+// "postgres" (dsn is a libpq/pgx connection string).
+func OpenStore(driver, dsn string) (Store, error) {
+	switch driver {
+	case "sqlite", "":
+		return OpenSQLite(dsn)
+	case "postgres", "postgresql", "pgx":
+		return OpenPostgres(dsn)
 	}
-	rs, err := scan(rows)
-	if err != nil || len(rs) == 0 {
-		return r, false, err
-	}
-	return rs[0], true, nil
-}
-
-// Obituaries lists deaths, newest first, optionally in one namespace.
-func (s *Store) Obituaries(ctx context.Context, namespace string, limit int) ([]Record, error) {
-	q := `SELECT ` + cols + ` FROM records WHERE verb='died'`
-	args := []any{}
-	if namespace != "" {
-		q += ` AND namespace=?`
-		args = append(args, namespace)
-	}
-	q += ` ORDER BY id DESC LIMIT ?`
-	args = append(args, limit)
-	rows, err := s.db.QueryContext(ctx, q, args...)
-	if err != nil {
-		return nil, err
-	}
-	return scan(rows)
-}
-
-// Prune forgets records older than the retention, except the last record of
-// each object, so every object keeps at least its obituary.
-func (s *Store) Prune(ctx context.Context, before time.Time) (int64, error) {
-	res, err := s.db.ExecContext(ctx, `DELETE FROM records WHERE at<? AND id NOT IN (SELECT MAX(id) FROM records GROUP BY uid)`, before.UnixMilli())
-	if err != nil {
-		return 0, err
-	}
-	return res.RowsAffected()
+	return nil, fmt.Errorf("unknown store %q: want sqlite or postgres", driver)
 }

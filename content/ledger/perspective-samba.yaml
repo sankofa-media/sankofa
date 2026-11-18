@@ -1,0 +1,171 @@
+# Perspective rewrite of samba (2026-11-15): shared frame plus {female} (Tia Ciata) and {male} (Donga)
+# paragraphs. One entry per fact of the new paragraphs and of the extended dispute, two independent
+# sources each with a verbatim quote. Quotes with [...] are trimmed.
+# Left out on purpose: Tia Ciata's birthplace (Salvador in Cravo Albin and Chazkel, Santo Amaro in
+# Brasil de Fato), her arrival year (1874 in Chazkel, 1876 in Cravo Albin and Monteiro), her death year
+# (1924 in Chazkel and Brasil de Fato, 1933 in Cravo Albin), Donga's birth year (1889 in IMS and USP,
+# 1890 in Cravo Albin), and the story of her healing President Venceslau Brás (one source opened).
+- card: samba
+  copy: both
+  fact: "Bahian migrants carried samba from Bahia to Rio de Janeiro"
+  sources:
+    - {title: "Rolling Stone Brasil: Dossiê, o samba de roda e o prato-e-faca", url: "https://rollingstone.com.br/?p=101205", quote: "o samba baiano tradicional foi levado para o Rio de Janeiro por emigrados baianos"}
+    - {title: "UNESCO ICH: Samba de Roda of the Recôncavo of Bahia", url: "https://ich.unesco.org/en/RL/samba-de-roda-of-the-reconcavo-of-bahia-00101", quote: "the Samba de Roda was eventually taken by migrants to Rio de Janeiro"}
+- card: samba
+  copy: both
+  fact: "Bahian 'aunts' led the Black neighbourhood around Praça Onze, called Little Africa"
+  sources:
+    - {title: "Instituto Moreira Salles: Little Africas, QR code 10", url: "https://ims.com.br/2023/10/09/little-africas-qr-code-10/", quote: "If Little Africa's capital is Praça Onze, then its main authority is Tia Ciata. [...] Around these women, most of whom hailed from Bahia and all of whom were connected to Candomblé, are networks"}
+    - {title: "Amy Chazkel, Tia Ciata, Encyclopedia of African-American Culture and History (Gale, 2005)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/tia-ciata", quote: "she made her home into the headquarters of the section of Rio de Janeiro known as \"Little Africa.\" [...] near Praça Onze (de Junho) [...] Among Rio's numerous Bahian matriarchs affectionately called \"Tia\" at the time"}
+- card: samba
+  copy: both
+  fact: "Pelo Telefone was registered at the National Library in 1916 and was the hit of the 1917 carnival"
+  sources:
+    - {title: "Agência Brasil: Primeiro samba faz hoje 100 anos (2016)", url: "https://agenciabrasil.ebc.com.br/cultura/noticia/2016-11/primeiro-samba-faz-hoje-100-anos-e-ganha-exposicao-na-biblioteca-nacional", quote: "A Biblioteca Nacional só concluiria o registro no dia 27 de novembro, com o número 3.295. [...] que foi sucesso no carnaval de 1917."}
+    - {title: "USP: O centenário de Pelo Telefone", url: "https://jornal.usp.br/artigos/o-centenario-de-pelo-telefone/", quote: "a partitura manuscrita para piano de Pelo Telefone foi registrada oficialmente na Biblioteca Nacional em 27/11/16 [...] foi a que atingiu grande repercussão no carnaval carioca daquele ano"}
+- card: samba
+  copy: both
+  fact: "Who made Pelo Telefone, and where, is still argued over"
+  sources:
+    - {title: "USP: O centenário de Pelo Telefone", url: "https://jornal.usp.br/artigos/o-centenario-de-pelo-telefone/", quote: "A autoria do samba, por exemplo, foi questionada por inúmeros compositores contemporâneos de Donga."}
+    - {title: "Tiago de Melo Gomes, Para além da casa da Tia Ciata, Afro-Ásia 29/30 (2003)", url: "https://www.redalyc.org/pdf/770/77003005.pdf", quote: "é uma composição sobre a qual correm muitas histórias conflitantes e não há indícios seguros de que a canção tenha sido de fato composta na famosa casa da Praça Onze"}
+- card: samba
+  copy: both
+  fact: "Dispute: Tiago de Melo Gomes finds no firm evidence that Pelo Telefone was composed at Tia Ciata's house; it refers to events of 1913 and circulated in many versions before it was recorded"
+  sources:
+    - {title: "Tiago de Melo Gomes, Para além da casa da Tia Ciata, Afro-Ásia 29/30 (2003)", url: "https://www.redalyc.org/pdf/770/77003005.pdf", quote: "a canção, gravada em 1916, contém referências a fatos ocorridos em 1913 [...] indício seguro de ter sido cantada em uma infinidade de lugares e recebido diversas versões"}
+    - {title: "USP: O centenário de Pelo Telefone", url: "https://jornal.usp.br/artigos/o-centenario-de-pelo-telefone/", quote: "Eles alegavam que a parte central da canção surgiu nos tradicionais improvisos em reuniões na Casa da Tia Ciata"}
+  note: "The second source shows the house attribution is a claim of contemporaries; the 1913 argument itself is Gomes's own (primary source for his view)."
+- card: samba
+  copy: both
+  fact: "Dispute: earlier discs already carried the word samba; Pelo Telefone was the first registered and recorded samba to become a hit"
+  sources:
+    - {title: "Agência Brasil: Primeiro samba faz hoje 100 anos (2016)", url: "https://agenciabrasil.ebc.com.br/cultura/noticia/2016-11/primeiro-samba-faz-hoje-100-anos-e-ganha-exposicao-na-biblioteca-nacional", quote: "“Foi o primeiro samba gravado e registrado que fez muito sucesso. Foi um grande sucesso popular. Outros sambas não foram registrados, é verdade, mas foram gravados antes de 'Pelo Telefone' e não fizeram sucesso."}
+    - {title: "USP: O centenário de Pelo Telefone", url: "https://jornal.usp.br/artigos/o-centenario-de-pelo-telefone/", quote: "antes de Pelo Telefone , outras canções foram gravadas com a designação de “samba” no título ou no selo do disco"}
+    - {title: "Amy Chazkel, Tia Ciata, Encyclopedia of African-American Culture and History (Gale, 2005)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/tia-ciata", quote: "While not the first recorded samba rhythm, as commonly believed, \"Pelo telefone\" was indeed the first one to enjoy enormous success."}
+  note: "Sandroni's name was dropped from the dispute: his words appear only in the Agência Brasil interview (the Jornal do Comércio text is a copy of it)."
+- card: samba
+  copy: both
+  fact: "Dispute: other composers of the time contested the authorship, saying its core grew out of improvised verses at Tia Ciata's house"
+  sources:
+    - {title: "USP: O centenário de Pelo Telefone", url: "https://jornal.usp.br/artigos/o-centenario-de-pelo-telefone/", quote: "A autoria do samba, por exemplo, foi questionada por inúmeros compositores contemporâneos de Donga. Eles alegavam que a parte central da canção surgiu nos tradicionais improvisos em reuniões na Casa da Tia Ciata"}
+    - {title: "Agência Brasil: Primeiro samba faz hoje 100 anos (2016)", url: "https://agenciabrasil.ebc.com.br/cultura/noticia/2016-11/primeiro-samba-faz-hoje-100-anos-e-ganha-exposicao-na-biblioteca-nacional", quote: "desde o lançamento da música, várias pessoas reivindicaram a autoria, já que era comum que os participantes de rodas de samba fizessem improvisações"}
+    - {title: "Instituto Moreira Salles: Little Africas, QR code 18", url: "https://ims.com.br/2023/10/09/little-africas-qr-code-18/", quote: "his critics argue that the song appropriates motifs sung in Tia Ciata’s house, suggesting collective authorship"}
+- card: samba
+  copy: female
+  fact: "Tia Ciata was the most famous of the aunts"
+  sources:
+    - {title: "Instituto Moreira Salles: Little Africas, QR code 10", url: "https://ims.com.br/2023/10/09/little-africas-qr-code-10/", quote: "Born Hilária Batista de Almeida, the Bahian woman who lived in the city for almost 50 years is the most famous incarnation"}
+    - {title: "Amy Chazkel, Tia Ciata, Encyclopedia of African-American Culture and History (Gale, 2005)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/tia-ciata", quote: "Among Rio's numerous Bahian matriarchs affectionately called \"Tia\" at the time, Ciata was the most famous."}
+- card: samba
+  copy: female
+  fact: "Tia Ciata was born Hilária Batista de Almeida in Bahia in 1854"
+  sources:
+    - {title: "Dicionário Cravo Albin: Tia Ciata", url: "http://dicionariompb.com.br/personalidade/tia-ciata", quote: "Nome verdadeiro: Hilária Batista de Almeida [...] Alguns pesquisadores afirmam que a data correta é : 23/4/1854."}
+    - {title: "Brasil de Fato: História de Tia Ciata reforça resistência cultural do povo preto (2024)", url: "https://www.brasildefato.com.br/2024/01/13/historia-de-tia-ciata-reforca-resistencia-cultural-do-povo-preto/", quote: "Neste sábado (13) faz 170 anos que Hilária Batista de Almeida nasceu em Santo Amaro da Purificação, no recôncavo baiano."}
+- card: samba
+  copy: female
+  fact: "She came to Rio with a daughter"
+  sources:
+    - {title: "Amy Chazkel, Tia Ciata, Encyclopedia of African-American Culture and History (Gale, 2005)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/tia-ciata", quote: "In 1874, she and her daughter Isabel became part of a massive flow of Brazilians of African descent"}
+    - {title: "Brasil de Fato: História de Tia Ciata reforça resistência cultural do povo preto (2024)", url: "https://www.brasildefato.com.br/2024/01/13/historia-de-tia-ciata-reforca-resistencia-cultural-do-povo-preto/", quote: "Chegou ao Rio com uma filha quando tinha 22 anos"}
+- card: samba
+  copy: female
+  fact: "She sold Bahian sweets from a tray in the city centre"
+  sources:
+    - {title: "Dicionário Cravo Albin: Tia Ciata", url: "http://dicionariompb.com.br/personalidade/tia-ciata", quote: "Ela vendia quitutes em seu tabuleiro entre as ruas Uruguaiana e Sete de Setembro."}
+    - {title: "Amy Chazkel, Tia Ciata, Encyclopedia of African-American Culture and History (Gale, 2005)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/tia-ciata", quote: "A skilled confectioner, Tia Ciata made sweets and other Bahian delicacies in her home and sold them on the street."}
+    - {title: "Brasil de Fato: História de Tia Ciata reforça resistência cultural do povo preto (2024)", url: "https://www.brasildefato.com.br/2024/01/13/historia-de-tia-ciata-reforca-resistencia-cultural-do-povo-preto/", quote: "vestida de baiana, ela montou um tabuleiro no centro do Rio para vender acarajés"}
+- card: samba
+  copy: female
+  fact: "At the candomblé house of João Alabá she became mãe-pequena, second in rank"
+  sources:
+    - {title: "Amy Chazkel, Tia Ciata, Encyclopedia of African-American Culture and History (Gale, 2005)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/tia-ciata", quote: "Once in Rio, Ciata associated herself with the terreiro (religious community) of the African-born João Alabá. [...] She became mãe-pequena —literally \"little mother\" (or Iyá Kekerê)—the second highest position in the Candomblé hierarchy."}
+    - {title: "Carlos Monteiro, Enfoques 16:1 (2017), UFRJ", url: "https://revistas.ufrj.br/index.php/enfoques/article/view/17117/10781", quote: "Ali, tornou-se mãe pequena no terreiro de João Alabá, na Rua Barão de São Félix, cargo que a conduziu a auxiliar direta do então famoso pai de santo."}
+- card: samba
+  copy: female
+  fact: "Her home on Rua Visconde de Itaúna held rites for the orishas and samba"
+  sources:
+    - {title: "Dicionário Cravo Albin: Tia Ciata", url: "http://dicionariompb.com.br/personalidade/tia-ciata", quote: "residiu na Rua Visconde de Itaúna (próxima à Praça Onze) [...] passou a promover sessões de samba em sua casa. [...] Realizava igualmente rituais de culto aos seus orixás africanos."}
+    - {title: "Brasil de Fato: História de Tia Ciata reforça resistência cultural do povo preto (2024)", url: "https://www.brasildefato.com.br/2024/01/13/historia-de-tia-ciata-reforca-resistencia-cultural-do-povo-preto/", quote: "Mas foi na casa da Rua Visconde de Itaúna que o encontro da cultura com a religião ficou mais forte."}
+    - {title: "Instituto Moreira Salles: Little Africas, QR code 13", url: "https://ims.com.br/2023/10/09/little-africas-qr-code-13/", quote: "When she died, she was already living on Visconde de Itaúna"}
+- card: samba
+  copy: female
+  fact: "Her husband, João Batista da Silva, was a public servant, and the police, who raided such gatherings, left hers alone"
+  sources:
+    - {title: "Brasil de Fato: História de Tia Ciata reforça resistência cultural do povo preto (2024)", url: "https://www.brasildefato.com.br/2024/01/13/historia-de-tia-ciata-reforca-resistencia-cultural-do-povo-preto/", quote: "Na cidade, se casou com o funcionário público João Baptista da Silva [...] a polícia deixasse de fazer operações de repressão no reduto de sambistas"}
+    - {title: "Amy Chazkel, Tia Ciata, Encyclopedia of African-American Culture and History (Gale, 2005)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/tia-ciata", quote: "Ciata married João Batista da Silva, a fellow Bahian who was well situated in Rio's Afro-Brazilian community. [...] because of her husband's position on the staff of the chief of police."}
+    - {title: "Tiago de Melo Gomes, Para além da casa da Tia Ciata, Afro-Ásia 29/30 (2003)", url: "https://www.redalyc.org/pdf/770/77003005.pdf", quote: "Esta rede de contatos seria mobilizada quando houvesse a necessidade de escapar das malhas da polícia"}
+  note: "Chazkel gives the husband's post as the reason only as speculation, so the body states the two facts side by side and does not claim a cause."
+- card: samba
+  copy: female
+  fact: "Regulars said Pelo Telefone grew at her house from shared improvised verses"
+  sources:
+    - {title: "USP: O centenário de Pelo Telefone", url: "https://jornal.usp.br/artigos/o-centenario-de-pelo-telefone/", quote: "Eles alegavam que a parte central da canção surgiu nos tradicionais improvisos em reuniões na Casa da Tia Ciata"}
+    - {title: "Amy Chazkel, Tia Ciata, Encyclopedia of African-American Culture and History (Gale, 2005)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/tia-ciata", quote: "Participants in one of the sessions at Ciata's house collectively authored the song"}
+- card: samba
+  copy: female
+  fact: "Popular memory keeps her house as the cradle of samba"
+  sources:
+    - {title: "Amy Chazkel, Tia Ciata, Encyclopedia of African-American Culture and History (Gale, 2005)", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/tia-ciata", quote: "Popular memory holds her house as the birthplace of samba"}
+    - {title: "Carlos Monteiro, Enfoques 16:1 (2017), UFRJ", url: "https://revistas.ufrj.br/index.php/enfoques/article/view/17117/10781", quote: "configurar, a partir dessas trocas, a gênese do que seria a base do modo carioca de fazer samba"}
+    - {title: "Agência Brasil: Primeiro samba faz hoje 100 anos (2016)", url: "https://agenciabrasil.ebc.com.br/cultura/noticia/2016-11/primeiro-samba-faz-hoje-100-anos-e-ganha-exposicao-na-biblioteca-nacional", quote: "O samba havia sido concebido naquele ano, durante uma roda na casa de Tia Ciata."}
+- card: samba
+  copy: male
+  fact: "Donga was born Ernesto Joaquim Maria dos Santos"
+  sources:
+    - {title: "Instituto Moreira Salles: Little Africas, QR code 18", url: "https://ims.com.br/2023/10/09/little-africas-qr-code-18/", quote: "Ernesto Joaquim Maria dos Santos (1889-1974), or Donga,"}
+    - {title: "USP: O centenário de Pelo Telefone", url: "https://jornal.usp.br/artigos/o-centenario-de-pelo-telefone/", quote: "Ernesto dos Santos, o Donga (1889/1974-RJ)"}
+- card: samba
+  copy: male
+  fact: "Donga was the son of a Bahian mother"
+  sources:
+    - {title: "Dicionário Cravo Albin: Donga", url: "http://dicionariompb.com.br/artista/donga", quote: "A mãe, a famosa Tia Amélia do grupo das baianas do grupo da Cidade Nova,"}
+    - {title: "Rafael José de Menezes Bastos, Les Batutas, 1922, RBCS 20:58 (2005)", url: "https://www.redalyc.org/pdf/107/10705809.pdf", quote: "como Donga e João da Baiana, era filho de pai carioca e mãe baiana"}
+- card: samba
+  copy: male
+  fact: "On 27 November 1916 the National Library registered Pelo Telefone under his name"
+  sources:
+    - {title: "Dicionário Cravo Albin: Donga", url: "http://dicionariompb.com.br/artista/donga", quote: "por ter registrado na Biblioteca Nacional ( 27 de novembro de 1916) a partitura do"}
+    - {title: "Instituto Moreira Salles: Little Africas, QR code 18", url: "https://ims.com.br/2023/10/09/little-africas-qr-code-18/", quote: "which he registered under his name at the National Library"}
+    - {title: "Agência Brasil: Primeiro samba faz hoje 100 anos (2016)", url: "https://agenciabrasil.ebc.com.br/cultura/noticia/2016-11/primeiro-samba-faz-hoje-100-anos-e-ganha-exposicao-na-biblioteca-nacional", quote: "A Biblioteca Nacional só concluiria o registro no dia 27 de novembro, com o número 3.295."}
+- card: samba
+  copy: male
+  fact: "Critics said he had taken motifs sung at Tia Ciata's house"
+  sources:
+    - {title: "Instituto Moreira Salles: Little Africas, QR code 18", url: "https://ims.com.br/2023/10/09/little-africas-qr-code-18/", quote: "his critics argue that the song appropriates motifs sung in Tia Ciata’s house"}
+    - {title: "USP: O centenário de Pelo Telefone", url: "https://jornal.usp.br/artigos/o-centenario-de-pelo-telefone/", quote: "Eles alegavam que a parte central da canção surgiu nos tradicionais improvisos em reuniões na Casa da Tia Ciata"}
+- card: samba
+  copy: male
+  fact: "He later shared the credit with Mauro de Almeida"
+  sources:
+    - {title: "Instituto Moreira Salles: Little Africas, QR code 18", url: "https://ims.com.br/2023/10/09/little-africas-qr-code-18/", quote: "later including journalist Mauro de Almeida, a.k.a. Peru dos Pés Frios [Cold-footed Turkey], as a partner."}
+    - {title: "USP: O centenário de Pelo Telefone", url: "https://jornal.usp.br/artigos/o-centenario-de-pelo-telefone/", quote: "Maurício de Almeida, o Peru dos Pés Frios, que ganhou coautoria da composição."}
+  note: "USP spells the first name Maurício; IMS, Chazkel and Cravo Albin give Mauro."
+- card: samba
+  copy: male
+  fact: "In 1922 Donga spent six months in Paris with Pixinguinha's Oito Batutas"
+  sources:
+    - {title: "Rafael José de Menezes Bastos, Les Batutas, 1922, RBCS 20:58 (2005)", url: "https://www.redalyc.org/pdf/107/10705809.pdf", quote: "Em 1922, Os Oito Batutas – reduzidos a sete músicos –, sob a direção de Pixinguinha e incluindo Donga e outros membros importantes do círculo de música popular do Rio de Janeiro, passaram seis meses em Paris, de fevereiro a agosto."}
+    - {title: "Dicionário Cravo Albin: Donga", url: "http://dicionariompb.com.br/artista/donga", quote: "Em 28 de janeiro de 1922, embarcaram para Paris, custeados por Arnaldo Guinle,"}
+    - {title: "Instituto Moreira Salles: Little Africas, QR code 19", url: "https://ims.com.br/2023/10/09/little-africas-qr-code-19/", quote: "In February of 1922, the Oito Batutas [...] did a 6-month stint in Paris."}
+  note: "Cravo Albin dates the sailing 28 January 1922, Conde and Shaw the departure February 1922, so the body gives only the year and the six-month stay."
+- card: samba
+  copy: male
+  fact: "Part of the Brazilian press objected that a mostly Black band should represent the country"
+  sources:
+    - {title: "Rafael José de Menezes Bastos, Les Batutas, 1922, RBCS 20:58 (2005)", url: "https://www.redalyc.org/pdf/107/10705809.pdf", quote: "a viagem provocou no país um acalorado debate sobre a legitimidade d’ Os Batutas – em sua maioria negros, que faziam uma música considerada nacional brasileira – como representantes brasileiros em Paris"}
+    - {title: "Maite Conde and Lisa Shaw, Towards an Alternative 1922, Revista Brasileira de História 42:90 (2022)", url: "https://www.scielo.br/j/rbh/a/3J9qgqTNjzycpFy3jMVn6HQ/?lang=en", quote: "The departure for Paris of the Oito Batutas in February 1922 had prompted a racist backlash in some quarters of the Brazilian press."}
+- card: samba
+  copy: male
+  fact: "In Paris, as Les Batutas, they played the nightclubs"
+  sources:
+    - {title: "Rafael José de Menezes Bastos, Les Batutas, 1922, RBCS 20:58 (2005)", url: "https://www.redalyc.org/pdf/107/10705809.pdf", quote: "o grupo – na França chamado de Les Batutas – apresentou-se no Shéhérazade, entre outros locais"}
+    - {title: "Maite Conde and Lisa Shaw, Towards an Alternative 1922, Revista Brasileira de História 42:90 (2022)", url: "https://www.scielo.br/j/rbh/a/3J9qgqTNjzycpFy3jMVn6HQ/?lang=en", quote: "the Oito Batutas played in nightclubs and at private parties in Paris between February and August 1922"}
+    - {title: "Instituto Moreira Salles: Little Africas, QR code 19", url: "https://ims.com.br/2023/10/09/little-africas-qr-code-19/", quote: "later renamed Les Batutas) did a 6-month stint in Paris. They performed in 3 nightclubs, most notably Shéhérazade"}
+- card: samba
+  copy: male
+  fact: "Above all they played the Shéhérazade"
+  sources:
+    - {title: "Instituto Moreira Salles: Little Africas, QR code 19", url: "https://ims.com.br/2023/10/09/little-africas-qr-code-19/", quote: "They performed in 3 nightclubs, most notably Shéhérazade, a “magical Montmartre establishment” run by Duque"}
+    - {title: "Rafael José de Menezes Bastos, Les Batutas, 1922, RBCS 20:58 (2005)", url: "https://www.redalyc.org/pdf/107/10705809.pdf", quote: "o grupo – na França chamado de Les Batutas – apresentou-se no Shéhérazade, entre outros locais"}

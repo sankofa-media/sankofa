@@ -1,0 +1,79 @@
+# A throwaway control plane (etcd, kube-apiserver, kube-controller-manager)
+# for Griot benchmarks. The churn of ~100k objects goes into this API, never
+# into the cluster hosting it, so the Griot of that cluster is not disturbed.
+apiVersion: v1
+kind: Service
+metadata: {name: vapi, namespace: griot-bench}
+spec:
+  selector: {app: vapi}
+  ports: [{name: https, port: 6443, targetPort: 6443}]
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: vapi, namespace: griot-bench}
+spec:
+  replicas: 1
+  strategy: {type: Recreate}
+  selector: {matchLabels: {app: vapi}}
+  template:
+    metadata: {labels: {app: vapi}}
+    spec:
+      volumes:
+        - {name: pki, secret: {secretName: vapi-pki}}
+        - {name: audit, secret: {secretName: vapi-audit}}
+        - {name: etcd, emptyDir: {}}
+      containers:
+        - name: etcd
+          image: registry.k8s.io/etcd:3.6.9-0
+          command: [etcd, --data-dir=/var/lib/etcd, --listen-client-urls=http://127.0.0.1:2379, --advertise-client-urls=http://127.0.0.1:2379, --listen-peer-urls=http://127.0.0.1:2380, --quota-backend-bytes=8589934592, --snapshot-count=50000]
+          volumeMounts: [{name: etcd, mountPath: /var/lib/etcd}]
+          resources: {requests: {cpu: 100m, memory: 512Mi}, limits: {memory: 2Gi}}
+        - name: apiserver
+          image: registry.k8s.io/kube-apiserver:v1.35.9
+          env: [{name: POD_IP, valueFrom: {fieldRef: {fieldPath: status.podIP}}}]
+          command:
+            - kube-apiserver
+            - --advertise-address=$(POD_IP)
+            - --etcd-servers=http://127.0.0.1:2379
+            - --secure-port=6443
+            - --tls-cert-file=/pki/apiserver.crt
+            - --tls-private-key-file=/pki/apiserver.key
+            - --client-ca-file=/pki/ca.crt
+            - --service-account-key-file=/pki/sa.pub
+            - --service-account-signing-key-file=/pki/sa.key
+            - --service-account-issuer=https://vapi.griot-bench.svc
+            - --service-cluster-ip-range=10.96.0.0/16
+            - --authorization-mode=RBAC
+            - --requestheader-client-ca-file=/pki/front-proxy-ca.crt
+            - --requestheader-allowed-names=front-proxy-client
+            - --requestheader-username-headers=X-Remote-User
+            - --requestheader-group-headers=X-Remote-Group
+            - --requestheader-extra-headers-prefix=X-Remote-Extra-
+            - --proxy-client-cert-file=/pki/front-proxy-client.crt
+            - --proxy-client-key-file=/pki/front-proxy-client.key
+            - --enable-aggregator-routing=true
+            - --max-requests-inflight=800
+            - --max-mutating-requests-inflight=400
+            # Audit events go to griot-pg, which names users in timelines.
+            - --audit-policy-file=/audit/policy.yaml
+            - --audit-webhook-config-file=/audit/webhook.kubeconfig
+            - --audit-webhook-batch-max-wait=1s
+          volumeMounts: [{name: pki, mountPath: /pki}, {name: audit, mountPath: /audit}]
+          resources: {requests: {cpu: 200m, memory: 1Gi}, limits: {memory: 3Gi}}
+        - name: controller-manager
+          image: registry.k8s.io/kube-controller-manager:v1.35.9
+          command:
+            - kube-controller-manager
+            - --kubeconfig=/pki/kubeconfig.local
+            - --authentication-kubeconfig=/pki/kubeconfig.local
+            - --authorization-kubeconfig=/pki/kubeconfig.local
+            - --service-account-private-key-file=/pki/sa.key
+            - --root-ca-file=/pki/ca.crt
+            - --leader-elect=false
+            - --kube-api-qps=300
+            - --kube-api-burst=600
+            - --concurrent-deployment-syncs=10
+            - --concurrent-replicaset-syncs=10
+            - --controllers=*,-nodeipam,-nodelifecycle,-service,-route,-cloud-node-lifecycle,-persistentvolume-binder,-attachdetach
+          volumeMounts: [{name: pki, mountPath: /pki}]
+          resources: {requests: {cpu: 50m, memory: 256Mi}, limits: {memory: 1Gi}}

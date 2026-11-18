@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Build and boot Sankofa using kuberoot's own workshop workflow.
-# Commands: builder, build amd64, media amd64 [args], node sankofa-N amd64,
-# console sankofa-N, sync, test, sh [command]. Heavy work stays in the builder.
+# Commands: builder, build amd64, kube amd64, media amd64 [args], node sankofa-N amd64,
+# console sankofa-N, sync, test, sh [command]. `kube` builds the patched
+# control plane from patches/kubernetes; `build` then bakes it into the image. Heavy work stays in the builder.
 set -euo pipefail
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 SRC=${KUBEROOT_SRC:-$ROOT/../kuberoot}
@@ -14,17 +15,22 @@ b() { k exec -i sankofa-builder -c tools -- "$@"; }
 case ${1:-} in
   builder) k apply -f "$ROOT/distro/kuberoot/sankofa/builder.yaml"; exit ;;
   node|console) [[ ${2:-} =~ ^sankofa-[a-z0-9-]+$ ]] || { echo 'Node names must start with sankofa-' >&2; exit 1; } ;;
-  build|media|bundle) [[ ${2:-} = amd64 || ${2:-} = arm64 ]] || { echo 'Expected amd64 or arm64' >&2; exit 1; } ;;
+  build|kube|media|bundle) [[ ${2:-} = amd64 || ${2:-} = arm64 ]] || { echo 'Expected amd64 or arm64' >&2; exit 1; } ;;
   sync|test|sh) ;;
-  *) echo 'Usage: hack/kuberoot.sh builder|build ARCH|media ARCH [args]|bundle ARCH|node sankofa-N ARCH|console sankofa-N|sync|test|sh [command]' >&2; exit 1 ;;
+  *) echo 'Usage: hack/kuberoot.sh builder|build ARCH|kube ARCH|media ARCH [args]|bundle ARCH|node sankofa-N ARCH|console sankofa-N|sync|test|sh [command]' >&2; exit 1 ;;
 esac
 if [[ $1 = node ]]; then
   [[ ${3:-} = amd64 || ${3:-} = arm64 ]] || { echo 'Expected amd64 or arm64' >&2; exit 1; }
 fi
-if [[ ${1:-} = build || ${1:-} = test ]]; then
+if [[ ${1:-} = build || ${1:-} = test || ${1:-} = kube ]]; then
   (cd "$ROOT" && git ls-files -co --exclude-standard -z |
     COPYFILE_DISABLE=1 tar --null -T - -czf -) |
     b sh -c 'mkdir -p /work/src/sankofa.new && tar -xzf - -C /work/src/sankofa.new && rm -rf /work/src/sankofa && mv /work/src/sankofa.new /work/src/sankofa'
+  if [[ $1 = kube ]]; then
+    v=$(git -C "$SRC" show "$REF:build/components.env" | sed -n 's/^K8S_VERSION=//p')
+    b env JOBS=2 nice -n 10 sh /work/src/sankofa/patches/kubernetes/build.sh "$v" "$2"
+    exit
+  fi
   if [[ $1 = test ]]; then
     b sh -c 'cd /work/src/sankofa && go test ./...'
     exit

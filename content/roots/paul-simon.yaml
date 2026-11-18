@@ -7,24 +7,73 @@ place: {"name": "Newark, New Jersey", "lat": 40.7357, "lon": -74.1724}
 placeRu: "Ньюарк, Нью-Джерси"
 genre: "Folk rock"
 genreRu: "фолк-рок"
-story: "Paul Simon went to Jamaica to record “Mother and Child Reunion”. Musicians who had backed Jimmy Cliff played on the recording."
-storyRu: "Пол Саймон записал «Mother and Child Reunion» на Ямайке. В записи участвовали музыканты, которые аккомпанировали Джимми Клиффу."
+story: "Paul Simon grew up on 1950s rock and roll and New York doo-wop: three-part street-corner harmony, the blended duet singing of the Everly Brothers, Elvis Presley and the Bo Diddley beat. Around 1970–1972 he took up the reggae beat he heard from Jamaica."
+storyRu: "Пол Саймон вырос на рок-н-ролле 1950-х и нью-йоркском ду-вопе: трёхголосии уличных вокальных групп, слитном дуэтном пении Everly Brothers, Элвисе Пресли и ритме Бо Диддли. Около 1970–1972 годов он перенял ямайский ритм регги."
 links:
+  - to: "card:rock-n-roll"
+    kind: "influence"
+    how: "Simon's singing and songwriting came out of 1950s rock and roll and doo-wop: close duet harmony modelled on the Everly Brothers, three-part doo-wop voicing from bass to falsetto, and the Bo Diddley beat."
+    howRu: "Пение и песни Саймона выросли из рок-н-ролла и ду-вопа 1950-х: тесная дуэтная гармония по образцу Everly Brothers, трёхголосие ду-вопа от баса до фальцета и ритм Бо Диддли."
+    carries: []
+    dimensions: ["melody-vocal", "rhythm"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "Simon names Elvis as the central force of rock and roll, says Simon and Garfunkel would not have existed without the Everly Brothers, and credits childhood doo-wop groups with teaching him all three vocal parts."
+        textRu: "Саймон называет Элвиса главной силой рок-н-ролла, говорит, что без Everly Brothers не было бы Simon and Garfunkel, и рассказывает, что в детских ду-воп-группах научился петь все три голоса."
+        source:
+          title: "RJ Smith: Paul Simon interview, SPIN (January 1987)"
+          url: "https://www.spinmagazine.com/2019/07/paul-simon-graceland-apartheid-un-cultural-boycott-january-1987-interview/"
+          quote: "The Everly Brothers , too—wouldn’t have been a Simon and Garfunkel without the Everly Brothers. Doo wop groups, we sang in doo wop groups when we were kids. We learned about singing all the three different parts, from bass to falsetto. I still do that on all my records"
+      - type: "listening"
+        dimensions: ["rhythm", "melody-vocal"]
+        text: "Rolling Stone's profile records that Simon's pinnacles remain Elvis's “Mystery Train” and the Bo Diddley beat, that he and Garfunkel imitated the Everly Brothers, and that the duo saw their edge as New York doo-wop."
+        textRu: "Rolling Stone пишет, что вершинами для Саймона остаются «Mystery Train» Элвиса и ритм Бо Диддли, что вместе с Гарфанкелом он подражал Everly Brothers и что своим козырем дуэт считал нью-йоркский ду-воп."
+        source:
+          title: "Rolling Stone: Paul Simon’s Restless Journey (2011)"
+          url: "https://www.rollingstone.com/music/features/paul-simons-restless-journey-20110512"
+          quote: "His first favorite song was a doo-wop hit, “Sincerely” by Harvey and the Moonglows. His two “unattainable pinnacles” remain Elvis Presley’s song “Mystery Train” and the Bo Diddley beat."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "A profile traces Simon's songwriting to his love of Elvis, the Everly Brothers, 1950s R&B and blues."
+        textRu: "Автор очерка выводит песни Саймона из его любви к Элвису, Everly Brothers, ритм-н-блюзу 1950-х и блюзу."
+        source:
+          title: "VICE: It Takes You a While to Realise You Don’t Know Anything — A Conversation with Paul Simon"
+          url: "https://www.vice.com/en/article/it-takes-you-a-while-to-realise-you-dont-know-anything-a-conversation-with-paul-simon/"
+          quote: "By the time Simon was about 12, a pint-sized kid (and still no more than about 5 foot 5 now), he knew he loved to sing. The songwriting came later, through a love of Elvis, The Everly Brothers, 50s R&B, and blues."
+    scope: "career"
   - to: "card:reggae"
-    kind: "scene"
-    claim: "Paul Simon recorded 'Mother and Child Reunion' in Jamaica with musicians who had backed Jimmy Cliff."
-    claimRu: "Пол Саймон записал «Mother and Child Reunion» на Ямайке с музыкантами, которые аккомпанировали Джимми Клиффу."
-    sources:
-      - title: "Jamaica Observer: Simon’s reggae classics get new life"
-        url: "https://www.jamaicaobserver.com/2013/09/28/simons-reggae-classics-get-new-life/"
-      - title: "NPO Radio 2: Mother & Child Reunion — Paul Simon"
-        url: "https://www.nporadio2.nl/muziek/nummers/abb5467a-7410-4080-bab4-8e8066ae0268/mother-child-reunion"
-  - to: "root:jimmy-cliff"
-    kind: "scene"
-    claim: "Paul Simon recorded 'Mother and Child Reunion' in Jamaica with musicians who had backed Jimmy Cliff."
-    claimRu: "Пол Саймон записал «Mother and Child Reunion» на Ямайке с музыкантами, которые аккомпанировали Джимми Клиффу."
-    sources:
-      - title: "Jamaica Observer: Simon’s reggae classics get new life"
-        url: "https://www.jamaicaobserver.com/2013/09/28/simons-reggae-classics-get-new-life/"
-      - title: "NPO Radio 2: Mother & Child Reunion — Paul Simon"
-        url: "https://www.nporadio2.nl/muziek/nummers/abb5467a-7410-4080-bab4-8e8066ae0268/mother-child-reunion"
+    kind: "influence"
+    how: "Drawn to Jimmy Cliff's records, Simon went to Kingston and set his song on the new reggae beat in place of the older ska feel."
+    howRu: "Увлёкшись пластинками Джимми Клиффа, Саймон поехал в Кингстон и положил свою песню на новый ритм регги вместо прежнего ска."
+    carries: []
+    dimensions: ["rhythm"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["rhythm"]
+        text: "Simon recalls asking Kingston musicians for a ska version and taking up reggae instead once they played it to him."
+        textRu: "Саймон вспоминает, как попросил кингстонских музыкантов о версии в духе ска и, услышав их регги, выбрал его."
+        source:
+          title: "Rolling Stone: Paul Simon’s Restless Journey (2011)"
+          url: "https://www.rollingstone.com/music/features/paul-simons-restless-journey-20110512"
+          quote: "“I showed them my song and said, ‘I want to do a ska version.’ They said, ‘We don’t do ska anymore.’ I said, ‘What do you do?’ They said, ‘We play reggae.’ I said, ‘What’s that sound like?’ They played it. I said, ‘Let’s do it!'”"
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "Howard Campbell calls Simon one of the first American stars to embrace reggae and describes him as immersed in Jamaican pop by 1972."
+        textRu: "Говард Кэмпбелл называет Саймона одной из первых американских звёзд, взявшихся за регги, и пишет, что к 1972 году тот был погружён в ямайскую поп-музыку."
+        source:
+          title: "Howard Campbell: Simon’s reggae classics get new life, Jamaica Observer (2013)"
+          url: "https://www.jamaicaobserver.com/2013/09/28/simons-reggae-classics-get-new-life/"
+          quote: "By the time he went solo in 1972, Simon was immersed in Jamaican pop music. He was particularly impressed by Cliff whose hit songs at the time included Wonderful World, Beautiful People and Vietnam."
+    scope: "period"
+    period: "1970–1972 (“Cecilia”, “Mother and Child Reunion”)"
+notes:
+  - period: "1971–1972 (“Mother and Child Reunion”)"
+    who: "Jimmy Cliff's Kingston session players (Jackie Jackson, Winston Grennan, Neville Hinds)"
+    role: "session"
+    what: "Simon recorded “Mother and Child Reunion” in Kingston with the musicians who had backed Jimmy Cliff on Leslie Kong's sessions."
+    whatRu: "Саймон записал «Mother and Child Reunion» в Кингстоне с музыкантами, аккомпанировавшими Джимми Клиффу на сессиях Лесли Конга."
+    source:
+      title: "Howard Campbell: Simon’s reggae classics get new life, Jamaica Observer (2013)"
+      url: "https://www.jamaicaobserver.com/2013/09/28/simons-reggae-classics-get-new-life/"
+      quote: "Simon actually travelled to Jamaica in 1971 and recorded Mother and Child Reunion with the same musicians who backed Cliff on the Kong sessions. They included bass player Jackie Jackson, drummer Winston Grennan and Neville Hinds on organ."

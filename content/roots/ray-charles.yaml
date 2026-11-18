@@ -3,10 +3,10 @@ id: ray-charles
 name: Ray Charles
 nameRu: Рэй Чарльз
 aliases:
-- рэй чарльз
+  - рэй чарльз
 years:
-- 1930
-- 2004
+  - 1930
+  - 2004
 place:
   name: Albany, Georgia
   lat: 31.5785
@@ -14,17 +14,126 @@ place:
 placeRu: "Олбани, Джорджия"
 genre: Soul and rhythm and blues
 genreRu: соул и ритм-н-блюз
+story: "Ray Charles built soul by putting gospel-powered vocals, the moan and fervour of the church, into rhythm and blues. His R&B rested on a tight horn-driven band, passionate piano and tireless showmanship. Underneath lay jazz: he began as a jazz and blues pianist in the manner of Nat King Cole and Charles Brown, admired Art Tatum and played with time like a jazzman."
+storyRu: "Рэй Чарльз построил соул, вложив в ритм-н-блюз вокал, заряженный госпелом, — церковный стон и пыл. Его ритм-н-блюз держался на плотном духовом бэнде, страстном фортепиано и неутомимом шоу. А в основании лежал джаз: начинал он джазовым и блюзовым пианистом в манере Нэта Кинга Коула и Чарльза Брауна, восхищался Артом Тейтумом и обращался со временем как джазмен."
 links:
-- to: card:gospel
-  kind: influence
-  claim: Ray Charles fused gospel expression with rhythm and blues on “I Got a Woman”.
-  claimRu: В «I Got a Woman» Рэй Чарльз соединил выразительность госпела с ритм-н-блюзом.
-  sources:
-  - title: 'Blue Note Records: Ray Charles biography'
-    url: https://www.bluenote.com/artist/ray-charles/
-  - title: 'Rhino: Single Stories — I Got a Woman'
-    url: https://www.rhino.com/article/single-stories-ray-charles-i-got-a-woman
-story: On “I Got a Woman”, Ray Charles brought gospel expression into rhythm and blues.
-  His singing joined those two traditions in one performance.
-storyRu: В «I Got a Woman» Рэй Чарльз перенёс выразительность госпела в ритм-н-блюз.
-  Его пение соединило эти две традиции в одной записи.
+  - to: "card:gospel"
+    kind: "style"
+    how: "Charles took the gospel voice — a throaty, unrestrained moan, pleading church fervour — and set it to secular rhythm and blues, the step that became soul."
+    howRu: "Чарльз взял госпельный голос — хрипловатый, ничем не сдержанный стон, церковный пыл мольбы, — и переложил его на светский ритм-н-блюз; этот шаг и стал соулом."
+    carries: ["gospel-vocal"]
+    dimensions: ["melody-vocal", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "His biography on the Blue Note site credits him with merging 1950s R&B with gospel-powered vocals and singles out the gospel moan of “I Got a Woman”."
+        textRu: "Биография на сайте Blue Note ставит ему в заслугу то, что он соединил ритм-н-блюз 1950-х с вокалом, заряженным госпелом, и выделяет госпельный стон в «I Got a Woman»."
+        source:
+          title: "Blue Note Records: Ray Charles biography"
+          url: "https://www.bluenote.com/artist/ray-charles/"
+          quote: "Charles did even more to devise a new form of black pop by merging ’50s R&B with gospel-powered vocals, adding plenty of flavor from contemporary jazz, blues, and (in the ’60s) country."
+      - type: "critics"
+        dimensions: ["performance", "melody-vocal"]
+        text: "The same biography hears the fervour of the church in the pleading vocals of “What’d I Say”."
+        textRu: "Та же биография слышит церковный пыл в умоляющем пении «What’d I Say»."
+        source:
+          title: "Blue Note Records: Ray Charles biography"
+          url: "https://www.bluenote.com/artist/ray-charles/"
+          quote: "“What’d I Say,” which caught the fervor of the church with its pleading vocals, as well as the spirit of rock & roll with its classic electric piano line."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "PBS American Masters describes his own style emerging as a throatier, unrestrained sound reminiscent of gospel."
+        textRu: "PBS в цикле American Masters пишет, что его собственный стиль рождался как более хриплый, раскованный звук, напоминающий госпел."
+        source:
+          title: "PBS American Masters: About Ray Charles (2006)"
+          url: "https://www.pbs.org/wnet/americanmasters/ray-charles-about-ray-charles/554/"
+          quote: "he was beginning to find his style with a throatier, unrestrained sound reminiscent of gospel music."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "NPR’s obituary places him among the first to blend the emotional power of gospel with secular themes."
+        textRu: "Некролог NPR ставит его среди первых, кто соединил эмоциональную силу госпела со светскими темами."
+        source:
+          title: "NPR: Ray Charles, American Legend, Dies at 73 (2004)"
+          url: "https://www.npr.org/templates/story/story.php?storyId=1947628"
+          quote: "Among the first musicians to blend the emotional power of gospel music with secular themes"
+    scope: "career"
+  - to: "card:rhythm-and-blues"
+    kind: "style"
+    how: "Charles worked inside rhythm and blues: a tight, bouncy horn-driven band, a passionate piano and tireless showmanship carried an R&B that was sophisticated yet kept its grit."
+    howRu: "Чарльз работал внутри ритм-н-блюза: плотный, упругий духовой бэнд, страстное фортепиано и неутомимое шоу несли ритм-н-блюз — изощрённый, но не потерявший шершавости."
+    carries: []
+    dimensions: ["sound", "performance", "melody-vocal"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "melody-vocal"]
+        text: "The Blue Note biography describes the tight horn-driven arrangement behind “I Got a Woman” and an R&B that paved the way for soul without losing its grit."
+        textRu: "Биография Blue Note описывает плотную духовую аранжировку «I Got a Woman» и ритм-н-блюз, проложивший дорогу соулу, но не утративший шершавости."
+        source:
+          title: "Blue Note Records: Ray Charles biography"
+          url: "https://www.bluenote.com/artist/ray-charles/"
+          quote: "Throughout the ’50s, Charles ran off a series of R&B hits that, although they weren’t called “soul” at the time, did a lot to pave the way for soul by presenting a form of R&B that was sophisticated without sacrificing any emotional grit."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "The same biography singles out the horn-driven band sound of his pivotal 1955 record."
+        textRu: "Там же выделено звучание бэнда с духовыми на его поворотной записи 1955 года."
+        source:
+          title: "Blue Note Records: Ray Charles biography"
+          url: "https://www.bluenote.com/artist/ray-charles/"
+          quote: "Charles first truly let go with his unmistakable gospel-ish moan, backed by a tight, bouncy horn-driven arrangement."
+      - type: "critics"
+        dimensions: ["performance", "sound"]
+        text: "The New Georgia Encyclopedia names his voice, passionate piano and tireless showmanship as what made him a legend."
+        textRu: "«Новая энциклопедия Джорджии» называет его голос, страстную игру на фортепиано и неутомимое шоу тем, что сделало его легендой."
+        source:
+          title: "New Georgia Encyclopedia: Ray Charles (Hal Jacobs)"
+          url: "https://www.georgiaencyclopedia.org/articles/arts-culture/ray-charles-1930-2004/"
+          quote: "Over the next four decades his unique voice, passionate style of playing the piano, and tireless showmanship made him a legendary figure in the world of entertainment."
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Van Morrison, writing for Rolling Stone, heard blues, R&B, gospel and swing rolled into one sound."
+        textRu: "Ван Моррисон в эссе для Rolling Stone слышал в нём блюз, ритм-н-блюз, госпел и свинг, свёрнутые в один звук."
+        source:
+          title: "Rolling Stone: 100 Greatest Artists — Ray Charles (essay by Van Morrison)"
+          url: "https://www.rollingstone.com/music/lists/100-greatest-artists-of-all-time-19691231/ray-charles-20110420"
+          quote: "His sound was stunning — it was the blues, it was R&B, it was gospel, it was swing — it was all the stuff I was listening to before that but rolled into one amazing, soulful thing."
+    scope: "career"
+  - to: "card:jazz"
+    kind: "style"
+    how: "Charles started as a jazz and blues pianist-singer modelled on Nat King Cole and Charles Brown, admired Art Tatum, kept recording straight jazz and phrased behind and around the beat like a jazz musician."
+    howRu: "Чарльз начинал джазовым и блюзовым пианистом-певцом по образцу Нэта Кинга Коула и Чарльза Брауна, восхищался Артом Тейтумом, не переставал записывать чистый джаз и фразировал с оттяжкой и вокруг доли, как джазовый музыкант."
+    carries: []
+    dimensions: ["melody-vocal", "rhythm", "performance"]
+    evidence:
+      - type: "listening"
+        dimensions: ["melody-vocal", "performance"]
+        text: "NPR notes that he started out as a jazz and blues pianist and singer in the style of his idols Nat King Cole and Charles Brown."
+        textRu: "NPR отмечает, что начинал он джазовым и блюзовым пианистом и певцом в стиле своих кумиров — Нэта Кинга Коула и Чарльза Брауна."
+        source:
+          title: "NPR: Ray Charles, American Legend, Dies at 73 (2004)"
+          url: "https://www.npr.org/templates/story/story.php?storyId=1947628"
+          quote: "Charles started out primarily as a jazz and blues pianist and singer in the style of his early musical idols such as Nat \"King\" Cole and pianist Charles Brown."
+      - type: "listening"
+        dimensions: ["melody-vocal"]
+        text: "The New Georgia Encyclopedia records his deep appreciation of Art Tatum and his early imitation of Charles Brown and Nat King Cole."
+        textRu: "«Новая энциклопедия Джорджии» пишет о его глубоком восхищении Артом Тейтумом и о раннем подражании Чарльзу Брауну и Нэту Кингу Коулу."
+        source:
+          title: "New Georgia Encyclopedia: Ray Charles (Hal Jacobs)"
+          url: "https://www.georgiaencyclopedia.org/articles/arts-culture/ray-charles-1930-2004/"
+          quote: "Over time he also discovered jazz music and a deep appreciation of jazz pianist Art Tatum."
+      - type: "critics"
+        dimensions: ["rhythm", "melody-vocal"]
+        text: "Van Morrison describes his phrasing as playing with time like a jazz musician."
+        textRu: "Ван Моррисон описывает его фразировку как игру со временем, свойственную джазмену."
+        source:
+          title: "Rolling Stone: 100 Greatest Artists — Ray Charles (essay by Van Morrison)"
+          url: "https://www.rollingstone.com/music/lists/100-greatest-artists-of-all-time-19691231/ray-charles-20110420"
+          quote: "He didn't put the time where you thought it was gonna be, but it was always perfect, always right. He knew how to play with time, like any great jazzman."
+      - type: "critics"
+        dimensions: ["performance"]
+        text: "The Blue Note biography notes the straight jazz he recorded at Atlantic with David “Fathead” Newman and Milt Jackson."
+        textRu: "Биография Blue Note упоминает чистый джаз, записанный им на Atlantic с Дэвидом «Фэтхедом» Ньюменом и Милтом Джексоном."
+        source:
+          title: "Blue Note Records: Ray Charles biography"
+          url: "https://www.bluenote.com/artist/ray-charles/"
+          quote: "Charles had always been eclectic, recording quite a bit of straight jazz at Atlantic, with noted jazz musicians like David “Fathead” Newman and Milt Jackson."
+    scope: "career"

@@ -4,7 +4,8 @@
 // empty manifest and the museum serves the originals.
 // Usage: node scripts/build-media.ts <media-dir> <manifest.json>
 import { execFileSync } from 'node:child_process';
-import { existsSync, mkdirSync, readdirSync, statSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 
 const WIDTHS = [480, 960, 1600];
@@ -91,11 +92,56 @@ function height(file: string): number | undefined {
 }
 
 function resize(src: string, dst: string, w: number): void {
-  if (tool === 'sips') execFileSync('sips', ['-Z', String(w), '-s', 'formatOptions', '72', src, '--out', dst], { stdio: 'ignore' });
-  else execFileSync('vipsthumbnail', [src, '--size', `${w}x`, '-o', `${dst}[Q=72,strip]`], { stdio: 'ignore' });
+  // sips now and then fails a file it handles fine a moment later (exit 13
+  // somewhere in a long run of a thousand pictures): try it again before giving up.
+  for (let attempt = 1; ; attempt++) {
+    try {
+      if (tool === 'sips') execFileSync('sips', ['-Z', String(w), '-s', 'formatOptions', '72', src, '--out', dst], { stdio: 'ignore' });
+      else execFileSync('vipsthumbnail', [src, '--size', `${w}x`, '-o', `${dst}[Q=72,strip]`], { stdio: 'ignore' });
+      return;
+    } catch (err) {
+      if (attempt >= 3) throw err;
+      execFileSync('sleep', ['1']);
+    }
+  }
+}
+
+/**
+ * The picture's average colour, as #rrggbb: shown in its frame while the
+ * picture itself is still on the way. The image is shrunk to one pixel and
+ * that pixel read back (BMP from sips, PPM from vips). Optional: on any
+ * failure the frame keeps the page's own colour.
+ */
+const scratch = mkdtempSync(join(tmpdir(), 'sankofa-media-'));
+process.on('exit', () => rmSync(scratch, { recursive: true, force: true }));
+const hex = (r: number, g: number, b: number) => '#' + [r, g, b].map((v) => v.toString(16).padStart(2, '0')).join('');
+function averageColour(src: string): string | undefined {
+  try {
+    if (tool === 'sips') {
+      const out = join(scratch, 'px.bmp');
+      execFileSync('sips', ['-z', '1', '1', '-s', 'format', 'bmp', src, '--out', out], { stdio: 'ignore' });
+      const b = readFileSync(out);
+      const at = b.readUInt32LE(10);
+      return hex(b[at + 2], b[at + 1], b[at]);
+    }
+    if (tool === 'vips') {
+      const out = join(scratch, 'px.ppm');
+      execFileSync('vipsthumbnail', [src, '--size', '1x1!', '-o', out], { stdio: 'ignore' });
+      const b = readFileSync(out);
+      // P6 header: magic, width, height and maxval, then the pixel bytes.
+      const head = b.subarray(0, 64).toString('latin1').match(/^P6\s+\d+\s+\d+\s+\d+\s/);
+      if (!head) return undefined;
+      const at = head[0].length;
+      return hex(b[at], b[at + 1], b[at + 2]);
+    }
+  } catch {
+    /* no colour: the frame stays neutral */
+  }
+  return undefined;
 }
 
 const files: Record<string, number[]> = {};
+const colours: Record<string, string> = {};
 const sizes: Record<string, number> = {};
 const ratios: Record<string, number> = {};
 const webps: string[] = [];
@@ -109,6 +155,8 @@ if (tool) {
     sizes[f] = w0;
     const h0 = height(src);
     if (h0) ratios[f] = Math.round((w0 / h0) * 1000) / 1000;
+    const c = averageColour(src);
+    if (c) colours[f] = c;
     for (const w of WIDTHS) {
       if (w >= w0 * 0.9) break; // never upscale, and skip near-duplicates
       const dstDir = join(dir, `w${w}`);
@@ -123,5 +171,5 @@ if (tool) {
   }
 }
 mkdirSync(dirname(out), { recursive: true });
-writeFileSync(out, JSON.stringify({ widths: WIDTHS, files, sizes, ratios, webp: webps }));
+writeFileSync(out, JSON.stringify({ widths: WIDTHS, files, sizes, ratios, colours, webp: webps }));
 console.log(`media variants: ${tool ?? 'none (no sips or vipsthumbnail)'}, ${Object.keys(files).length} images, ${webps.length} with WebP`);

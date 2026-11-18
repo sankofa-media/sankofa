@@ -48,9 +48,9 @@
   </head>
   <body>
     <a class="skip" href="#story"><span data-l="en">Skip to the story</span><span data-l="ru">Перейти к истории</span></a>
-    <nav class="nav" aria-label="Museum">
+    <nav class="nav" aria-label="Museum" data-aria-ru="Музей">
       <a class="wordmark" href="#" data-home>Sanko<span>f</span>a</a>
-      <div class="progress" aria-label="Chapters"></div>
+      <div class="progress" aria-label="Chapters" data-aria-ru="Главы"></div>
       <div class="nav-actions">
         <button class="btn" type="button" data-open-descent data-descent=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v15m0 0-6-6m6 6 6-6M5 21h14"/></svg><span class="label"><span data-l="en">Descend</span><span data-l="ru">Сквозь века</span></span></button>
         <button class="btn" type="button" data-open-atlas><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Zm0 0v14m6-12v14"/></svg><span class="label"><span data-l="en">Atlas</span><span data-l="ru">Атлас</span></span></button>
@@ -58,6 +58,13 @@
         <button class="btn" type="button" data-open-roots data-roots=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v7m0 0-5 5m5-5 5 5m-5-5v11M7 15l-3 6m3-6 2 6m8-6 3 6m-3-6-2 6"/></svg><span class="label"><span data-l="en">Roots</span><span data-l="ru">Корни</span></span></button>
         <button class="btn" type="button" data-open-engine data-engine=""><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 8 4 4-4 4m6 0h8"/></svg><span class="label"><span data-l="en">Engine room</span><span data-l="ru">Машинное отделение</span></span></button>
         <button class="btn" type="button" data-open-book><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2V5Zm0 16a2 2 0 0 1 2-2h13v2"/></svg><span class="label"><span data-l="en">Your book</span><span data-l="ru">Ваша книга</span></span> <span class="count" data-path-count>0</span></button>
+        <button class="btn nav-fact" type="button" data-open-fact><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6m-5 3h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3Z"/></svg><span class="label"><span data-l="en">A fact</span><span data-l="ru">Факт</span></span></button>
+        <a class="btn mx-nav" href="#view=workshop" data-mech="workshop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10h18M5 10v10m14-10v10M3 20h18M8 10V6h8v4m-6-2h4"/></svg><span class="label"><span data-l="en">Workshop</span><span data-l="ru">Мастерская</span></span></a>
+        <a class="btn mx-nav" href="#view=cabinet" data-mech="cabinet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h14v18H5zM5 9h14M5 15h14M11 6h2m-2 6h2m-2 6h2M7 21v1m10-1v1"/></svg><span class="label"><span data-l="en">Cabinet</span><span data-l="ru">Кабинет редкостей</span></span></a>
+        <a class="btn ft-nav" href="#view=features" data-features><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 4 6 7.2 6 11a6 6 0 0 1-12 0c0-3.8 3-7 6-11Zm-2.5 11.5a2.5 2.5 0 0 0 2.5 2.5"/></svg><span class="label"><span data-l="en">Special projects</span><span data-l="ru">Спецпроекты</span></span></a>
+        <a class="btn mx-nav" href="#view=index" data-mech="index"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h4M6 4v16m-2 0h4M12 6h8m-8 4h8m-8 4h8m-8 4h5"/></svg><span class="label"><span data-l="en">Index</span><span data-l="ru">Указатель</span></span></a>
+        <a class="btn mx-nav" href="#view=guide" data-mech="guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-2.6-11.5a2.7 2.7 0 0 1 5.2 1c0 1.8-2.6 2.2-2.6 3.8m0 2.6v.1"/></svg><span class="label"><span data-l="en">Guide</span><span data-l="ru">Как читать</span></span></a>
+        <a class="btn mx-nav" href="#view=dedication" data-mech="dedication"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10v18l-5-3.5L7 21V3Z"/></svg><span class="label"><span data-l="en">Dedication</span><span data-l="ru">Посвящение</span></span></a>
         <button class="btn lang-switch" type="button" data-lang-switch><span data-l="en" lang="ru" aria-label="Читать по-русски">RU</span><span data-l="ru" lang="en" aria-label="Read in English">EN</span></button>
         <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to light theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4V2m0 20v-2m8-8h2M2 12h2m13.66-5.66 1.41-1.41M4.93 19.07l1.41-1.41m0-11.32L4.93 4.93m14.14 14.14-1.41-1.41M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Z"/></svg></button>
       </div>
@@ -69,10 +76,10 @@
         </figure>
         <div class="cover-inner">
           <h1 id="cover-title">Sanko<em>f</em>a</h1>
-          <p class="deck" data-l="en">Seven centuries of Black culture, from the libraries of Timbuktu to the starships of Sun Ra.</p>
-          <p class="deck" data-l="ru">Семь веков чёрной культуры — от библиотек Тимбукту до звездолётов Сан Ра.</p>
-          <p class="cover-wow" data-l="en">Around 1324 a king of Mali, on his way to Mecca, spent so much gold in Cairo that its price there was still low twelve years later.</p>
-          <p class="cover-wow" data-l="ru">Около 1324 года царь Мали по пути в Мекку потратил в Каире столько золота, что и двенадцать лет спустя оно стоило там дешевле прежнего.</p>
+          <p class="deck" data-l="en">Seven centuries of Black culture, from the libraries of <a class="xref" href="#focus=timbuktu-manuscripts" data-card="timbuktu-manuscripts">Timbuktu</a> to the starships of <a class="xref" href="#focus=sun-ra" data-card="sun-ra">Sun Ra</a>.</p>
+          <p class="deck" data-l="ru">Семь веков чёрной культуры — от библиотек <a class="xref" href="#focus=timbuktu-manuscripts" data-card="timbuktu-manuscripts">Тимбукту</a> до звездолётов <a class="xref" href="#focus=sun-ra" data-card="sun-ra">Сан Ра</a>.</p>
+          <p class="cover-wow" data-l="en">In 1324 <a class="xref" href="#focus=mansa-musa" data-card="mansa-musa">a king of Mali</a>, on his way to Mecca, spent so much gold in Cairo that its price there was still low some twelve years later.</p>
+          <p class="cover-wow" data-l="ru">В 1324 году <a class="xref" href="#focus=mansa-musa" data-card="mansa-musa">царь Мали</a> по пути в Мекку потратил в Каире столько золота, что и лет двенадцать спустя оно стоило там дешевле прежнего.</p>
           <div class="cover-actions">
             <a class="btn primary" href="#t=1300&amp;view=descent" data-descent=""><span data-l="en">Descend through seven centuries</span><span data-l="ru">Спуститься сквозь семь веков</span></a>
             <a class="btn l-cover" href="#view=roots" data-roots=""><span data-l="en">Find your band’s roots</span><span data-l="ru">Найти корни своей группы</span></a>
@@ -80,9 +87,9 @@
             <a class="cue" href="#opener"><i aria-hidden="true"></i><span data-l="en">Or begin before the ships</span><span data-l="ru">Или начать с того, что было до кораблей</span></a>
           </div>
         </div>
-        <p class="credit cover-credit"><span data-l="en">Mansa Musa on the Catalan Atlas, about 1375</span><span data-l="ru">Манса Муса в Каталанском атласе, около 1375 года</span> · Bibliothèque nationale de France · <span data-l="en">public domain</span><span data-l="ru">общественное достояние</span></p>
+        <p class="credit cover-credit"><span data-l="en"><a class="xref" href="#focus=mansa-musa" data-card="mansa-musa">Mansa Musa</a> on the Catalan Atlas, about 1375</span><span data-l="ru"><a class="xref" href="#focus=mansa-musa" data-card="mansa-musa">Манса Муса</a> в Каталанском атласе, около 1375 года</span> · Bibliothèque nationale de France · <span data-l="en">public domain</span><span data-l="ru">общественное достояние</span></p>
       </section>
-      <section class="opener" id="opener" aria-label="Introduction">
+      <section class="opener" id="opener" aria-label="Introduction" data-aria-ru="Вступление">
         <div data-l="en">
           <p class="lede">This museum tells seven centuries of Black culture in eight chapters: <span data-chapter-list>Africa Before, the Middle Passage, Resistance, Voices, Diaspora, Renaissance, Civil Rights and Independence and Afrofuturism</span>. Every page is a card: a few lines, one surprise, and a road further.</p>
           <p>Cards come from three books. The Book of Voices <b data-book="voices">❝</b> is told by people in their own words. The Book of Archives <b data-book="archives">▤</b> is the ledger kept by those who traded and ruled. The Book of Heirs <b data-book="heirs">✶</b> is the art and argument of the diaspora. As in Pavić’s <i>Dictionary of the Khazars</i>, the books do not always agree.</p>
@@ -93,7 +100,7 @@
           <p>Карточки взяты из трёх книг. Книга голосов <b data-book="voices">❝</b> — история, рассказанная самими людьми. Книга архивов <b data-book="archives">▤</b> — учётные записи тех, кто торговал и правил. Книга наследников <b data-book="heirs">✶</b> — искусство и споры диаспоры. Как в «Хазарском словаре» Павича, книги не всегда согласны друг с другом.</p>
           <div data-edition-note></div>
         </div>
-        <aside class="engine-aside" aria-label="The engine room">
+        <aside class="engine-aside" aria-label="The engine room" data-aria-ru="Машинное отделение">
           <div class="kicker"><span data-l="en">The engine room</span><span data-l="ru">Машинное отделение</span></div>
           <p data-l="en">This museum is also a Kubernetes cluster. Every card is an object in it, and the cluster’s own machinery is named after the culture it comes from: Griot remembers, Kgotla holds a council before anything is deleted, the nodes play drums.</p>
           <p data-l="ru">Этот музей — ещё и кластер Kubernetes. Каждая карточка — объект в нём, а механизмы самого кластера названы по той культуре, из которой они пришли: Griot помнит, Kgotla созывает совет, прежде чем что-то удалить, а узлы играют на барабанах.</p>

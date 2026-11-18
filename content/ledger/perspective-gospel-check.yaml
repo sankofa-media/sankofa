@@ -1,0 +1,193 @@
+# Second, independent check of the gospel perspective rewrite (2026-11-15).
+# Every source below was opened again for this check; quotes are verbatim ("..." marks an omission).
+# The shared paragraphs were already checked in explainers-check.yaml and context-a-check.yaml and are unchanged.
+- card: gospel
+  copy: both
+  fact: "wow: gospel's father was the blues pianist \"Georgia Tom\"; its mother, Sallie Martin, could not read music and turned his songs into a business"
+  verdict: confirmed
+  sources:
+    - {title: "Chicago Public Library, Martin and Morris Music Company Papers: biographical note", url: "https://www.chipublib.org/fa-martin-and-morris-music-company-papers", quote: "Martin was much more effective than Dorsey at marketing Dorsey's compositions ... quickly both made and saved Dorsey money"}
+    - {title: "African American Registry: Sallie Martin", url: "https://aaregistry.org/story/sallie-martin-was-great-for-the-business-of-gospel/", quote: "she couldn't even read music. But Dorsey hired her. ... She took over his music store and, within a few months, was turning a neat profit."}
+  note: "Georgia Tom as blues pianist: New Georgia Encyclopedia (\"first gained recognition as a blues pianist in the 1920s\") and PBS via archive.org (\"Under the name Georgia Tom he performed with blues artist Ma Rainey\")."
+- card: gospel
+  copy: male
+  fact: "Thomas A. Dorsey, called the father of gospel music, first made his name in the blues"
+  verdict: confirmed
+  sources:
+    - {title: "New Georgia Encyclopedia: Georgia Tom Dorsey", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/georgia-tom-dorsey-1899-1993/", quote: "Dorsey first gained recognition as a blues pianist in the 1920s and later became known as the father of gospel music"}
+    - {title: "Hymnology Archive (Atlanta Constitution obituary, 24 January 1993)", url: "https://hymnologyarchive.com/thomas-a-dorsey", quote: "known as the father of gospel music for his merging of religious music with the blues"}
+  note: ""
+- card: gospel
+  copy: male
+  fact: "He came to Chicago from Georgia in 1916"
+  verdict: confirmed
+  sources:
+    - {title: "New Georgia Encyclopedia: Georgia Tom Dorsey", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/georgia-tom-dorsey-1899-1993/", quote: "In 1916 Dorsey moved to Chicago, Illinois"}
+    - {title: "Christianity Today: Kathryn Kemp (2018)", url: "https://www.christianitytoday.com/2018/05/father-gospel-music-thomas-dorsey/", quote: "In 1916, at the age of 17, Dorsey moved north to Chicago to pursue a musical career."}
+  note: "PBS (archive.org) agrees: \"In 1916, he left Atlanta for good.\""
+- card: gospel
+  copy: male
+  fact: "As \"Georgia Tom\" he led Ma Rainey's band"
+  verdict: corrected
+  sources:
+    - {title: "New Georgia Encyclopedia: Georgia Tom Dorsey", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/georgia-tom-dorsey-1899-1993/", quote: "in 1924 Ma Rainey chose him to organize and lead her Wild Cats Jazz Band"}
+    - {title: "Encyclopedia.com (Gale, Contemporary Musicians): Rainey, Ma", url: "https://encyclopedia.com/education/news-wires-white-papers-and-books/rainey-ma", quote: "Serving as both director and manager, Dorsey assembled able musicians who could read arrangements"}
+  note: "Ledger correction, card text unchanged: the Christianity Today and Hymnology quotes say only that he debuted or toured with Rainey, not that he led the band. Replaced with Gale (added to card sources). Russian «руководил группой» changed to «руководил оркестром» (a 1920s jazz band, not a «группа»)."
+- card: gospel
+  copy: male
+  fact: "He set sacred words to blues patterns and published the songs himself"
+  verdict: confirmed
+  sources:
+    - {title: "New Georgia Encyclopedia: Georgia Tom Dorsey", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/georgia-tom-dorsey-1899-1993/", quote: "his foresight in deciding to publish all of his material"}
+    - {title: "Christianity Today: Kathryn Kemp (2018)", url: "https://www.christianitytoday.com/2018/05/father-gospel-music-thomas-dorsey/", quote: "Dorsey dubbed his music “gospel blues” due to the similarity of his gospel rhythms and vocals to those heard in blues and jazz clubs. ... Thomas Dorsey published and performed his own music for decades."}
+  note: ""
+- card: gospel
+  copy: male
+  fact: "In 1932 his wife Nettie died in childbirth and their son died the next day"
+  verdict: corrected
+  sources:
+    - {title: "New Georgia Encyclopedia: Georgia Tom Dorsey", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/georgia-tom-dorsey-1899-1993/", quote: "In 1932 Dorsey’s wife, Nettie Harper, died during childbirth, and their son died the following day."}
+    - {title: "Christianity Today: Kathryn Kemp (2018)", url: "https://www.christianitytoday.com/2018/05/father-gospel-music-thomas-dorsey/", quote: "Dorsey’s wife, Nettie, whom he married in 1925 ... His infant son died the next day."}
+  note: "Ledger correction only: the CT quote now carries the name Nettie. PBS gives August 1932 and the Atlanta Constitution 1932; the Chicago Tribune obituary says 1931, a lone outlier against four sources, so 1932 stays and no dispute is set."
+- card: gospel
+  copy: male
+  fact: "In his grief he wrote \"Take My Hand, Precious Lord\""
+  verdict: confirmed
+  sources:
+    - {title: "New Georgia Encyclopedia: Georgia Tom Dorsey", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/georgia-tom-dorsey-1899-1993/", quote: "This tragedy caused Dorsey to renounce blues music and inspired him to write his famous piece “Take My Hand, Precious Lord,”"}
+    - {title: "PBS, This Far by Faith: Thomas Dorsey (via archive.org; live site 403)", url: "https://www.pbs.org/thisfarbyfaith/people/thomas_dorsey.html", quote: "In his grief, he turned to the piano for comfort. The tune he wrote, Take My Hand, Precious Lord, came, he says, direct from God."}
+  note: "Hymnology/Atlanta Constitution also: \"The song was prompted by a tragedy early in Mr. Dorsey’s life.\""
+- card: gospel
+  copy: male
+  fact: "In 1933 he co-founded a national convention of gospel choirs"
+  verdict: confirmed
+  sources:
+    - {title: "PBS, This Far by Faith (via archive.org)", url: "https://www.pbs.org/thisfarbyfaith/people/thomas_dorsey.html", quote: "Dorsey co-founded the National Convention of Gospel Choirs and Choruses in 1933."}
+    - {title: "BlackPast: Janet Hauck, Sallie Martin", url: "https://www.blackpast.org/african-american-history/martin-sallie-1895-1988/", quote: "With him, in 1933, Martin co-founded the National Convention of Gospel Choirs and Choruses."}
+  note: ""
+- card: gospel
+  copy: male
+  fact: "He later teamed with Mahalia Jackson, who had come up from New Orleans"
+  verdict: corrected
+  sources:
+    - {title: "64 Parishes: Ben Sandmel, Mahalia Jackson (via archive.org)", url: "https://64parishes.org/entry/mahalia-jackson", quote: "At age sixteen, she moved to Chicago, Illinois ... In the early 1940s she worked with the gospel music pioneer Thomas A. Dorsey"}
+    - {title: "PBS, This Far by Faith (via archive.org)", url: "https://www.pbs.org/thisfarbyfaith/people/thomas_dorsey.html", quote: "Six years later, he teamed with Mahalia Jackson"}
+  note: "Ledger correction only: Rock Hall and Biography.com say she was born in New Orleans but not that she moved to Chicago; 64 Parishes added for the move. New Georgia Encyclopedia also: \"Dorsey worked extensively with Mahalia Jackson\"."
+- card: gospel
+  copy: male
+  fact: "In 1968 Mahalia Jackson sang \"Precious Lord\" at the funeral of Martin Luther King Jr."
+  verdict: confirmed
+  sources:
+    - {title: "The World (PRI): Laying an American saint to rest (2018)", url: "https://theworld.org/stories/2018/04/02/laying-american-saint-rest", quote: "his good friend Mahalia Jackson sang his favorite hymn, \"Take My Hand, Precious Lord.”"}
+    - {title: "64 Parishes: Mahalia Jackson (via archive.org)", url: "https://64parishes.org/entry/mahalia-jackson", quote: "Five years later, she sang Dorsey’s most famous song, “Take My Hand, Precious Lord” at King’s funeral."}
+  note: "Biography.com also confirms (April 1968)."
+- card: gospel
+  copy: male
+  fact: "Dorsey died in Chicago in 1993, having written hundreds of songs"
+  verdict: corrected
+  sources:
+    - {title: "New Georgia Encyclopedia: Georgia Tom Dorsey", url: "https://www.georgiaencyclopedia.org/articles/arts-culture/georgia-tom-dorsey-1899-1993/", quote: "Dorsey died in Chicago on January 23, 1993"}
+    - {title: "Chicago Tribune (25 January 1993)", url: "https://www.chicagotribune.com/1993/01/25/thomas-a-dorsey-gospel-pioneer/", quote: "Thomas A. Dorsey, widely acknowledged as the father of gospel music, died Saturday night in his Chicago home. He was 93."}
+  note: "Ledger correction only: no second source in the ledger gave Chicago as the place of death; Tribune added (also to card sources). Hundreds of songs: Christianity Today (\"penning hundreds of songs\") and the Atlanta Constitution (\"more than 1,000 gospel songs\")."
+- card: gospel
+  copy: female
+  fact: "Sallie Martin is called the mother of gospel music"
+  verdict: confirmed
+  sources:
+    - {title: "Chicago Public Library: Martin and Morris papers", url: "https://www.chipublib.org/fa-martin-and-morris-music-company-papers", quote: "Sallie Martin, often called the “Mother of Gospel Music,”"}
+    - {title: "African American Registry: Sallie Martin", url: "https://aaregistry.org/story/sallie-martin-was-great-for-the-business-of-gospel/", quote: "Known as \"The Mother of Gospel\" by the National Convention of Gospel Choirs and Choruses"}
+  note: ""
+- card: gospel
+  copy: female
+  fact: "She could not read music"
+  verdict: confirmed
+  sources:
+    - {title: "Chicago Public Library: Martin and Morris papers", url: "https://www.chipublib.org/fa-martin-and-morris-music-company-papers", quote: "she could not read music and showed no interest in learning"}
+    - {title: "African American Registry: Sallie Martin", url: "https://aaregistry.org/story/sallie-martin-was-great-for-the-business-of-gospel/", quote: "she couldn't even read music"}
+  note: ""
+- card: gospel
+  copy: female
+  fact: "She had cleaned houses and washed clothes in Atlanta"
+  verdict: confirmed
+  sources:
+    - {title: "Chicago Public Library: Martin and Morris papers", url: "https://www.chipublib.org/fa-martin-and-morris-music-company-papers", quote: "she commenced work as a babysitter, domestic worker, and laundry laborer in Atlanta"}
+    - {title: "African American Registry: Sallie Martin", url: "https://aaregistry.org/story/sallie-martin-was-great-for-the-business-of-gospel/", quote: "she moved to Atlanta, where she began a series of jobs, including babysitting, cleaning houses, and washing clothes"}
+  note: ""
+- card: gospel
+  copy: female
+  fact: "She came to Chicago in the 1920s"
+  verdict: confirmed
+  sources:
+    - {title: "Chicago Public Library: Martin and Morris papers", url: "https://www.chipublib.org/fa-martin-and-morris-music-company-papers", quote: "she settled in Chicago around 1927"}
+    - {title: "BlackPast: Janet Hauck, Sallie Martin", url: "https://www.blackpast.org/african-american-history/martin-sallie-1895-1988/", quote: "by 1929, had moved to Chicago and joined a chorus directed by Thomas Dorsey"}
+  note: "The audition itself came in the early 1930s (CPL: \"in the early 1930s she determined to join his new gospel chorus\"); the card does not date it, so no conflict."
+- card: gospel
+  copy: female
+  fact: "She auditioned for Dorsey, who disliked her rough, shouting style but took her on"
+  verdict: confirmed
+  sources:
+    - {title: "Chicago Public Library: Martin and Morris papers", url: "https://www.chipublib.org/fa-martin-and-morris-music-company-papers", quote: "Hearing her audition, Dorsey was moved by Martin's evangelistic fervor but disliked her rough, untrained vocal style with its shouting, stepping “sanctified” accompaniments."}
+    - {title: "African American Registry: Sallie Martin", url: "https://aaregistry.org/story/sallie-martin-was-great-for-the-business-of-gospel/", quote: "She arranged an audition. There were serious misgivings about her unrefined style ... But Dorsey hired her."}
+  note: ""
+- card: gospel
+  copy: female
+  fact: "She sang his songs in churches, sold the sheet music and kept his books"
+  verdict: confirmed
+  sources:
+    - {title: "BlackPast: Janet Hauck, Sallie Martin", url: "https://www.blackpast.org/african-american-history/martin-sallie-1895-1988/", quote: "she served as Dorsey’s song demonstrator and bookkeeper, singing and selling his compositions at churches and conventions"}
+    - {title: "Chicago Public Library: Martin and Morris papers", url: "https://www.chipublib.org/fa-martin-and-morris-music-company-papers", quote: "She also understood the importance of bookkeeping and inventory control"}
+  note: ""
+- card: gospel
+  copy: female
+  fact: "Within months his business turned a profit"
+  verdict: confirmed
+  sources:
+    - {title: "African American Registry: Sallie Martin", url: "https://aaregistry.org/story/sallie-martin-was-great-for-the-business-of-gospel/", quote: "She took over his music store and, within a few months, was turning a neat profit."}
+    - {title: "Chicago Public Library: Martin and Morris papers", url: "https://www.chipublib.org/fa-martin-and-morris-music-company-papers", quote: "quickly both made and saved Dorsey money"}
+  note: ""
+- card: gospel
+  copy: female
+  fact: "She helped found the National Convention of Gospel Choirs and Choruses and travelled the country setting up choirs"
+  verdict: confirmed
+  sources:
+    - {title: "Chicago Public Library: Martin and Morris papers", url: "https://www.chipublib.org/fa-martin-and-morris-music-company-papers", quote: "A co-founder in 1933 of the National Convention of Gospel Choirs and Choruses ... Sallie Martin commenced traveling around the country, establishing dozens, possibly hundreds, of new gospel choirs"}
+    - {title: "Christianity Today: Kathryn Kemp (2018)", url: "https://www.christianitytoday.com/2018/05/father-gospel-music-thomas-dorsey/", quote: "Sallie Martin, one of Dorsey’s singers, became the first organizer of the convention, traveling around the country"}
+  note: "BlackPast also: \"in 1933, Martin co-founded the National Convention\"."
+- card: gospel
+  copy: female
+  fact: "In 1940 she and the composer Kenneth Morris opened Martin and Morris Music"
+  verdict: confirmed
+  sources:
+    - {title: "Chicago Public Library: Martin and Morris papers", url: "https://www.chipublib.org/fa-martin-and-morris-music-company-papers", quote: "In 1940 the Martin and Morris Music Company, Inc., opened its doors"}
+    - {title: "African American Registry: Sallie Martin", url: "https://aaregistry.org/story/sallie-martin-was-great-for-the-business-of-gospel/", quote: "In 1940, Martin went solo ... That same year, Martin and gospel composer Kenneth Morris joined forces with financial backer Rev. Clarence H. Cobb to found Martin and Morris, Inc."}
+  note: ""
+- card: gospel
+  copy: female
+  fact: "Martin and Morris grew into one of the largest Black gospel publishers"
+  verdict: confirmed
+  sources:
+    - {title: "Chicago Public Library: Martin and Morris papers", url: "https://www.chipublib.org/fa-martin-and-morris-music-company-papers", quote: "one of the largest U.S. gospel publishing houses, Martin and Morris Music, Inc. of Chicago"}
+    - {title: "African American Registry: Sallie Martin", url: "https://aaregistry.org/story/sallie-martin-was-great-for-the-business-of-gospel/", quote: "This publishing company became the biggest of its kind in America."}
+  note: ""
+- card: gospel
+  copy: female
+  fact: "The Sallie Martin Singers were among the first all-female gospel groups"
+  verdict: confirmed
+  sources:
+    - {title: "BlackPast: Janet Hauck, Sallie Martin", url: "https://www.blackpast.org/african-american-history/martin-sallie-1895-1988/", quote: "one of the first all-female gospel groups"}
+    - {title: "Chicago Public Library: Martin and Morris papers", url: "https://www.chipublib.org/fa-martin-and-morris-music-company-papers", quote: "she formed the Colored Ladies Quartet, America's first all-female gospel singing group (soon renamed the Sallie Martin Singers)"}
+  note: "\"Among the first\" is the cautious reading of CPL's \"first\"; no contradiction."
+- card: gospel
+  copy: female
+  fact: "She died in Chicago in 1988"
+  verdict: confirmed
+  sources:
+    - {title: "Chicago Public Library: Martin and Morris papers", url: "https://www.chipublib.org/fa-martin-and-morris-music-company-papers", quote: "Sallie Martin died on June 18, 1988 in Chicago."}
+    - {title: "African American Registry: Sallie Martin", url: "https://aaregistry.org/story/sallie-martin-was-great-for-the-business-of-gospel/", quote: "she died in Chicago on June 18, 1988"}
+  note: ""
+- card: gospel
+  copy: both
+  fact: "Structure, word limit, translation"
+  verdict: confirmed
+  sources: []
+  note: "Male copy 225 words, female 233 (genre limit 235); each copy runs context -> story -> outcome. .ru.md marks the same paragraphs ({male}, {female}) and says the same. Lint: 456 cards OK."

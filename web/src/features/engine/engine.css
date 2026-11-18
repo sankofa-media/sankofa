@@ -1,0 +1,633 @@
+/* The feature engine: scenes with a sticky stage and a flow of text, living ink, the clap circle, calm mode. */
+.ft {
+  --ft-paper: #1a1712;
+  --ft-paper-2: #241f18;
+  --ft-ink: #efe4cf;
+  --ft-ink-2: #c7b89c;
+  --ft-red: #e0574a;
+  --ft-glass: rgba(26, 23, 18, 0.86);
+  position: relative;
+  background: var(--ft-paper);
+  color: var(--ft-ink);
+  overflow-x: clip;
+  transition: background 1.2s var(--ease);
+}
+:root[data-theme='light'] .ft {
+  --ft-paper: #f3ead8;
+  --ft-paper-2: #e9dcc3;
+  --ft-ink: #1f1b16;
+  --ft-ink-2: #5a5045;
+  --ft-red: #a8322a;
+  --ft-glass: rgba(243, 234, 216, 0.9);
+}
+.ft.ft-white {
+  --ft-paper: #fbf8f1;
+  --ft-ink: #1f1b16;
+  --ft-ink-2: #5a5045;
+  --ft-glass: rgba(251, 248, 241, 0.92);
+}
+.ft-visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+.ink-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+/* Scenes */
+.ft-scene {
+  position: relative;
+  display: grid;
+  min-height: calc(var(--screens, 2) * 100svh);
+}
+.ft-stage,
+.ft-flow {
+  grid-area: 1 / 1;
+  min-width: 0;
+}
+.ft-stage {
+  position: sticky;
+  top: var(--nav-h);
+  height: calc(100svh - var(--nav-h));
+  display: grid;
+  place-items: center end;
+  padding: 3vh var(--gutter);
+  pointer-events: none;
+  box-sizing: border-box;
+}
+.ft-stage:empty {
+  display: none;
+}
+.ft-stage > * {
+  width: min(58vw, 860px);
+  max-height: 100%;
+}
+.ft-flow {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ft-gap, 38svh);
+  padding: 34svh var(--gutter) 40svh;
+}
+.ft-long .ft-controls {
+  max-width: none;
+}
+.ft-long .ft-flow {
+  gap: 28px;
+  padding: 18svh var(--gutter) 20svh;
+}
+.ft-block {
+  max-width: 31rem;
+  padding: 18px 22px;
+  /* A shade, not a box: it keeps the text readable over a picture and has
+     no edge to look like a frame someone forgot to remove. */
+  border-radius: 28px;
+  background: var(--ft-glass);
+  box-shadow: 0 0 28px 20px var(--ft-glass);
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+.ft-block.on {
+  opacity: 1;
+  transform: none;
+}
+/* A caption or note completes the block above it: it sits right under it, not a screen away. */
+.ft-flow > .ft-block:not(.ft-b-kicker) + .ft-block:is(.ft-b-caption, .ft-b-note) {
+  margin-top: calc(14px - var(--ft-gap, 38svh));
+}
+.ft-long .ft-flow {
+  --ft-gap: 28px;
+}
+.ft-block p,
+.ft-block h2 {
+  margin: 0;
+}
+.ft-kicker {
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ft-red);
+}
+.ft-block.ft-b-kicker {
+  background: none;
+  box-shadow: none;
+  padding: 0 4px;
+  margin-bottom: -34svh;
+}
+.ft-long .ft-block.ft-b-kicker {
+  margin-bottom: 0;
+}
+.ft-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.05;
+}
+.ft-text,
+.ft-lede {
+  font-family: var(--font-display);
+  font-size: clamp(19px, 1.6vw, 22px);
+  line-height: 1.55;
+}
+.ft-caption,
+.ft-note,
+.ft-hint,
+.ft-reading {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ft-ink-2);
+}
+.ft-line {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(22px, 2.4vw, 30px);
+  line-height: 1.35;
+}
+.ft-quote {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.6vw, 32px);
+}
+.ft-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+}
+.ft a.xref {
+  color: inherit;
+}
+.ft .btn {
+  color: var(--ft-ink);
+  border-color: rgba(127, 110, 85, 0.6);
+  background: var(--ft-glass);
+}
+.ft .btn.primary {
+  background: var(--ft-red);
+  border-color: var(--ft-red);
+  color: #fff8ef;
+}
+.ft .btn.primary:hover {
+  background: transparent;
+  color: var(--ft-red);
+}
+.ft .btn:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+.ft button:focus-visible,
+.ft a:focus-visible,
+.ft [tabindex]:focus-visible,
+.ft-bar button:focus-visible {
+  outline: 2px solid var(--ft-red, var(--gold));
+  outline-offset: 3px;
+}
+
+/* Living ink */
+.ink {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: calc(100svh - var(--nav-h) - 6vh);
+  overflow: visible;
+}
+.ink-paper {
+  fill: none;
+}
+.ink path,
+.ink-line {
+  fill: none;
+  stroke: var(--ft-ink);
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
+}
+.ink-line[data-ink] {
+  stroke-dasharray: 1;
+}
+.ink-line.red,
+.ink-figure.red .ink-line {
+  stroke: var(--ft-red);
+}
+.ink-figure.red .ink-fill {
+  fill: color-mix(in srgb, var(--ft-red) 22%, transparent);
+}
+.ink-hatch path {
+  stroke-width: 0.7;
+  opacity: 0.55;
+}
+.ink-dot {
+  fill: var(--ft-ink);
+}
+.ink-label {
+  font-family: var(--font-display);
+  font-size: 15px;
+  fill: var(--ft-ink);
+}
+.ink-label.small {
+  font-family: var(--font-sans);
+  font-size: 11px;
+}
+.ink-blot {
+  fill: var(--ft-ink);
+  opacity: 0.8;
+  transform-box: fill-box;
+  transform-origin: center;
+  transform: scale(0.2);
+  transition: transform 2.4s var(--ease);
+}
+.ink-blot.red {
+  fill: var(--ft-red);
+}
+.ft-scene.reached .ink-blot {
+  transform: scale(1);
+}
+.ft-scene.current .ink {
+  filter: url(#ft-boil);
+}
+.ink-breathe {
+  transform-box: fill-box;
+  animation: ft-breathe 5.5s ease-in-out infinite;
+}
+@keyframes ft-breathe {
+  50% {
+    transform: scale(1.018) translateY(-0.6px);
+  }
+}
+.ink-develop {
+  position: relative;
+  display: grid;
+}
+.ink-develop > * {
+  grid-area: 1 / 1;
+  width: 100%;
+}
+.ink-develop > .ink-photo {
+  opacity: var(--develop, 0);
+  object-fit: cover;
+}
+.ink-develop > :not(.ink-photo) {
+  opacity: calc(1 - var(--develop, 0));
+}
+
+/* Layered illustrations (layers.ts): generated layers on one paper canvas. */
+@property --spin {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+.ft-art {
+  --ft-art-paper: #f3ead8;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: var(--ft-art-paper);
+  max-height: calc(100svh - var(--nav-h) - 6vh);
+}
+.ft-stage > .ft-art,
+.ft-stack > .ft-art {
+  /* Clear of the text column, as tall as the screen allows: an opaque picture under text would hide it. */
+  width: min(58vw, 860px, 100vw - 2 * var(--gutter) - 31rem - 32px, (100svh - var(--nav-h) - 6vh) * 1.5);
+}
+.ft-art > .al,
+.ft-art > svg {
+  position: absolute;
+  inset: 0;
+}
+.ft-art > svg {
+  width: 100%;
+  height: 100%;
+  max-height: none;
+}
+.ft-art .al {
+  transform-origin: var(--pivot, 50% 100%);
+  /* Each layer is wiped in like wet ink when its scene is reached, back to front. */
+  mask-image: linear-gradient(100deg, #000 42%, transparent 58%);
+  mask-size: 260% 100%;
+  mask-repeat: no-repeat;
+  mask-position: 100% 0;
+  transition: mask-position 1.8s var(--ease) calc(0.15s + var(--i, 0) * 0.28s);
+}
+.ft-scene.reached .ft-art .al {
+  mask-position: 0 0;
+}
+.ft-art img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  translate: var(--x, 0) var(--y, 0);
+  scale: var(--k, 1);
+  user-select: none;
+}
+/* A layer with a state shows only while the picture is in it. */
+.ft-art .al[data-state] img {
+  opacity: 0;
+  transition: opacity 1.2s var(--ease);
+}
+.ft-art .al[data-state='open'] img {
+  transition-duration: 1.6s;
+}
+.ft-art .al.al-on[data-state] img {
+  opacity: 1;
+}
+/* A figure breathes (the individual scale property leaves the parallax transform alone). */
+.ft-art .al[data-role='figure'] {
+  animation: ft-breathe-layer 5.5s ease-in-out infinite;
+}
+@keyframes ft-breathe-layer {
+  50% {
+    scale: 1.008;
+  }
+}
+/* A clap: a soft ripple of ink where the drawn hands meet. */
+.ft-art .al-claps {
+  pointer-events: none;
+}
+.ft-art .clap-spot {
+  position: absolute;
+  width: 6.5%;
+  aspect-ratio: 1;
+  translate: -50% -50%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(31, 27, 22, 0.28) 0 18%, transparent 46%);
+  box-shadow: 0 0 0 1.5px rgba(31, 27, 22, 0.45);
+  opacity: 0;
+  scale: 0.3;
+}
+.ft-art .clap-spot.splash {
+  animation: ft-ink-ripple 0.95s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+@keyframes ft-ink-ripple {
+  0% {
+    opacity: 0.75;
+    scale: 0.3;
+  }
+  100% {
+    opacity: 0;
+    scale: 1.7;
+  }
+}
+/* Figures that come half a step forward when their scene is reached. */
+.ft-art .al[data-role='step'] {
+  scale: 0.955;
+  translate: 0 -1.2%;
+  transition:
+    mask-position 1.8s var(--ease) calc(0.15s + var(--i, 0) * 0.28s),
+    scale 1.6s var(--ease) 0.9s,
+    translate 1.6s var(--ease) 0.9s;
+}
+.ft-scene.reached .ft-art .al[data-role='step'] {
+  scale: 1;
+  translate: 0 0;
+}
+/* A layer swinging open from its pivot over a stretch of the scene. */
+.ft-art .al[data-open] {
+  scale: calc(0.2 + 0.8 * var(--open, 1)) 1;
+  opacity: min(1, calc(var(--open, 1) * 3));
+}
+/* A disc seen at an angle turns in its own plane, inside its still rim. */
+.ft-art .al-face {
+  position: absolute;
+  inset: 0;
+}
+.ft-art .al[data-role='spin'] .al-face img,
+.ft-art .al[data-role='spin'] > img:only-child {
+  transform-origin: var(--cx) var(--cy);
+  transform: rotate(var(--tilt)) scaleY(var(--ratio)) rotate(var(--spin)) scaleY(calc(1 / var(--ratio))) rotate(calc(-1 * var(--tilt)));
+  animation: ft-spin 48s linear infinite;
+}
+@keyframes ft-spin {
+  to {
+    --spin: 360deg;
+  }
+}
+.ft-stack {
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+}
+
+/* The reader's clap circle */
+.cc {
+  position: fixed;
+  z-index: 15;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--ft-paper) 70%, transparent);
+  color: var(--ft-ink);
+  cursor: pointer;
+  touch-action: manipulation;
+  transition: width 0.6s var(--ease), top 0.6s var(--ease), left 0.6s var(--ease), bottom 0.6s var(--ease);
+}
+.cc[hidden] {
+  display: none;
+}
+.cc[data-place='corner'] {
+  left: 16px;
+  bottom: 16px;
+  width: 68px;
+}
+body.mp-on .cc[data-place='corner'] {
+  bottom: 118px;
+}
+/* On its stage: at the top of the drawing column, above the drawing. */
+.cc[data-place='stage'] {
+  --cc: min(26vh, 22vw);
+  left: calc(100vw - var(--gutter) - min(29vw, 430px) - var(--cc) / 2);
+  bottom: calc(100svh - var(--nav-h) - 3vh - var(--cc));
+  width: var(--cc);
+}
+.cc-svg {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  overflow: visible;
+}
+.cc-ring {
+  fill: none;
+  stroke: var(--ft-ink);
+  stroke-width: 1.4;
+  vector-effect: non-scaling-stroke;
+}
+.cc-ring-2 {
+  stroke-dasharray: 2 5;
+  opacity: 0.5;
+  transform: scale(0.82);
+}
+.cc-beat {
+  fill: var(--ft-ink);
+  opacity: 0.4;
+}
+.cc-beat.on {
+  fill: var(--ft-red);
+}
+.cc[data-beat='1'] .cc-beat[data-beat='1'],
+.cc[data-beat='3'] .cc-beat[data-beat='3'] {
+  opacity: 1;
+}
+.cc-drop {
+  fill: var(--ft-ink);
+  opacity: 0.85;
+}
+.cc-count {
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  white-space: nowrap;
+  color: var(--ft-ink-2);
+}
+.cc[data-place='corner'] .cc-count {
+  display: none;
+}
+.cc.flash .cc-ring:first-child {
+  animation: ft-drop 0.5s var(--ease);
+}
+@keyframes ft-drop {
+  from {
+    stroke: var(--ft-red);
+    stroke-width: 4;
+  }
+}
+
+/* The bar's switch */
+.ft-sound {
+  font-size: 13px;
+  padding: 0.4em 0.8em;
+}
+.ft-sound[aria-pressed='true'] {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+.ft-sound-ic {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  border: 1.5px solid currentColor;
+}
+.ft-sound[aria-pressed='true'] .ft-sound-ic {
+  background: currentColor;
+}
+
+/* Calm mode: finished, still drawings; text without waiting. */
+.is-calm .ft-art .al,
+.is-calm .ft-art img,
+.is-calm .ft-art .al[data-role='spin'] img,
+.is-calm .ft-art .clap-spot.splash {
+  mask-image: none;
+  animation: none;
+  transition: none;
+}
+.is-calm .ft-art .al[data-role='step'] {
+  scale: 1;
+  translate: 0 0;
+  transition: none;
+}
+.is-calm .ink-breathe,
+.is-calm .cc.flash .cc-ring {
+  animation: none;
+}
+.is-calm .ft-scene.current .ink {
+  filter: none;
+}
+.is-calm .ink-blot {
+  transform: none;
+  transition: none;
+}
+.is-calm .ft-block {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+.is-calm .cc {
+  transition: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ink-breathe,
+  .ft-art .al,
+  .ft-art img,
+  .ft-art .al[data-role='spin'] img,
+  .ft-art .clap-spot.splash {
+    animation: none;
+  }
+  .ft-art .al[data-role='step'] {
+    scale: 1;
+    translate: 0 0;
+    transition: none;
+  }
+  .ft-art .al {
+    mask-image: none;
+  }
+  .ft-art .al,
+  .ft-art img {
+    transition: none;
+  }
+  .ft-block,
+  .cc,
+  .ink-blot {
+    transition: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .ft-stage {
+    place-items: start center;
+    padding: 10px 12px;
+  }
+  .ft-stage > * {
+    width: 100%;
+  }
+  .ink {
+    max-height: 46svh;
+  }
+  .ft-stage > .ft-art,
+  .ft-stack > .ft-art {
+    width: min(100%, calc(46svh * 1.5));
+  }
+  .ft-flow {
+    --ft-gap: 30svh;
+    padding-top: 52svh;
+  }
+  .ft-block {
+    padding: 14px 16px;
+  }
+  .ft-block.ft-b-kicker {
+    margin-bottom: -26svh;
+  }
+  .cc[data-place='stage'] {
+    --cc: 30vw;
+    left: calc(100vw - 12px - var(--cc));
+    bottom: calc(100svh - var(--nav-h) - 12px - var(--cc));
+  }
+  .cc[data-place='corner'] {
+    width: 56px;
+    left: 12px;
+    bottom: 12px;
+  }
+}
+@media (max-width: 420px) {
+  .ft-sound {
+    font-size: 12px;
+    padding: 0.35em 0.6em;
+  }
+}

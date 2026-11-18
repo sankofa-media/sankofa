@@ -1,0 +1,1425 @@
+# Forever Changes — the scenes of the longread and their text.
+#
+# Every text block is DRAFT copy written from the storyboard
+# (sankofa-features/forever-changes/STORYBOARD.ru.md) and the research
+# (sankofa-features/research/forever-changes/): a faithful English draft and a
+# Russian one. The editor replaces it and sets `draft: false`.
+#
+# Conventions:
+# - A block without `lens` is the narrator's: only facts with two opened
+#   sources (timeline.yaml, `status: verified` claims in songs.yaml, after.md
+#   items not marked [single]).
+# - A block with `lens: <id>` belongs to one witness (or to the critics and
+#   fans) and is shown in the chapter's lens pane. It is that person's account,
+#   phrased as such; where the witnesses contradict each other the scene is
+#   marked `differ: true` and every version stays on the page, none declared
+#   right. The lens `angel` is empty: David Angel left no account.
+# - A block with `hold: true` carries a fact with a single source, or one
+#   listed in unconfirmed.md; `check:` says why. The build drops it and it never
+#   reaches a reader.
+# - Lyrics are never quoted beyond a few words; the songs are paraphrased.
+# - `decay` is the page's decay level in the chapter (0 calm .. 1 the peak);
+#   `settle: true` makes it fall back to 0 over the chapter. `alias` is the
+#   false name the chapter menu shows for a moment while the page decays.
+#   `visions` are the objects the Arthur Lee mode shows in that chapter.
+# - Dictionary links: [[card-id|words]].
+id: forever-changes
+order: 2
+title:
+  en: "Forever Changes: the last words that were not the last"
+  ru: "Forever Changes: последние слова, которые не стали последними"
+dek:
+  en: "In 1967 a twenty-two-year-old from Memphis made an album he thought would be his last words. It flopped at home, broke his band and outlived almost everyone who made it."
+  ru: "В 1967 году двадцатидвухлетний парень из Мемфиса записал альбом, который считал своими последними словами. Дома он провалился, группу развалил и пережил почти всех, кто его делал."
+reading:
+  en: "50–60 minutes; put your phone nearby"
+  ru: "50–60 минут; держите телефон под рукой"
+
+# Real photographs, cleared in content/ledger/media.yaml. Each is shown
+# whole, with its caption and credit; where the licence asks for it, the
+# credit links the source page and the licence.
+art:
+  - id: love-1967
+    kind: photo
+    file: love-1967-elektra.jpg
+    rights: love-1967-elektra.jpg
+    alt: { en: "The five members of Love posing against a white background, 1967", ru: "Пятеро участников Love позируют на белом фоне, 1967 год" }
+    credit:
+      en: "Love in 1967, an Elektra Records promotional photograph. Public domain"
+      ru: "Love в 1967 году, рекламное фото Elektra Records. Общественное достояние"
+    source: https://commons.wikimedia.org/wiki/File:LOVE60s.png
+  - id: love-1966-ad
+    kind: photo
+    file: love-1966-concert-ad.jpg
+    rights: love-1966-concert-ad.jpg
+    alt: { en: "Love leaning against a rock wall: Ken Forssi, Arthur Lee, Alban “Snoopy” Pfisterer, Johnny Echols and Bryan MacLean", ru: "Love у каменной стены: Кен Форсси, Артур Ли, Албан «Снупи» Пфистерер, Джонни Эколс и Брайан Маклин" }
+    credit:
+      en: "Love in a concert advertisement, October 1966; left to right Ken Forssi, Arthur Lee, Alban “Snoopy” Pfisterer, Johnny Echols, Bryan MacLean. Montana Kaimin. Public domain"
+      ru: "Love в рекламе концерта, октябрь 1966 года; слева направо Кен Форсси, Артур Ли, Албан «Снупи» Пфистерер, Джонни Эколс, Брайан Маклин. Montana Kaimin. Общественное достояние"
+    source: https://commons.wikimedia.org/wiki/File:Love_ad_1966.png
+  - id: love-red-book-ad
+    kind: photo
+    file: love-my-little-red-book-ad-1966.jpg
+    rights: love-my-little-red-book-ad-1966.jpg
+    alt: { en: "Elektra’s trade advertisement for Love’s single “My Little Red Book”: the band on a rocky slope", ru: "Реклама Elektra для сингла Love «My Little Red Book»: группа на каменистом склоне" }
+    credit:
+      en: "Elektra’s advertisement for “My Little Red Book”, Billboard, 14 May 1966. Public domain"
+      ru: "Реклама Elektra для «My Little Red Book», Billboard, 14 мая 1966 года. Общественное достояние"
+    source: https://commons.wikimedia.org/wiki/File:Love_(1966).png
+  - id: echols-2019
+    kind: photo
+    file: johnny-echols-2019.jpg
+    rights: johnny-echols-2019.jpg
+    alt: { en: "Johnny Echols singing and playing a red guitar on stage, 2019", ru: "Джонни Эколс поёт и играет на красной гитаре на сцене, 2019 год" }
+    credit:
+      en: "Johnny Echols performing in Bristol, 2019. Photo: Ghmyrtle, CC BY-SA 4.0"
+      ru: "Джонни Эколс на концерте в Бристоле, 2019 год. Фото: Ghmyrtle, CC BY-SA 4.0"
+    source: https://commons.wikimedia.org/wiki/File:Johnny_Echols_2019.jpg
+    license_url: https://creativecommons.org/licenses/by-sa/4.0/
+
+lenses:
+  - id: lee
+    name: { en: "Arthur Lee", ru: "Артур Ли" }
+    role: { en: "singer, writer of nine of the eleven songs, producer", ru: "певец, автор девяти песен из одиннадцати, продюсер" }
+  - id: botnick
+    name: { en: "Bruce Botnick", ru: "Брюс Ботник" }
+    role: { en: "engineer and co-producer", ru: "звукорежиссёр и сопродюсер" }
+  - id: echols
+    name: { en: "Johnny Echols", ru: "Джонни Эколс" }
+    role: { en: "lead guitarist, Lee's childhood friend", ru: "соло-гитарист, друг детства Ли" }
+  - id: stuart-ware
+    name: { en: "Michael Stuart-Ware", ru: "Майкл Стюарт-Уэр" }
+    role: { en: "drummer", ru: "барабанщик" }
+  - id: holzman
+    name: { en: "Jac Holzman", ru: "Джек Хольцман" }
+    role: { en: "founder of Elektra Records", ru: "основатель лейбла Elektra" }
+  - id: critics
+    name: { en: "Critics and fans", ru: "Критики и поклонники" }
+    role: { en: "then and now", ru: "тогда и сейчас" }
+  - id: angel
+    name: { en: "David Angel", ru: "Дэвид Энджел" }
+    role: { en: "arranger and orchestrator", ru: "аранжировщик и оркестровщик" }
+    empty: true
+    silence:
+      en: "David Angel did not tell. No interview, letter or memoir of his about these sessions was found; everything we know of his part comes from the others."
+      ru: "Дэвид Энджел не рассказал. Ни интервью, ни письма, ни воспоминаний о тех сессиях от него не нашлось; всё, что известно о его работе, рассказали другие."
+
+ui:
+  lens-label: { en: "Who tells it", ru: "Кто рассказывает" }
+  chapters: { en: "Chapters", ru: "Главы" }
+  progress: { en: "How far you are", ru: "Сколько прочитано" }
+  flip: { en: "Turn the record over", ru: "Перевернуть пластинку" }
+  side-a: { en: "Side A", ru: "Сторона A" }
+  side-b: { en: "Side B", ru: "Сторона B" }
+  watching: { en: "Someone is watching.", ru: "Кто-то смотрит." }
+  lee-open: { en: "Arthur Lee mode", ru: "Режим Артура Ли" }
+  lee-hint: { en: "See your room through his eyes", ru: "Посмотрите на свою комнату его глазами" }
+  lee-qr:
+    en: "Point your phone's camera at the code: the mode opens on the phone, at this chapter."
+    ru: "Наведите камеру телефона на код: режим откроется на телефоне, на этой главе."
+  lee-here: { en: "Open on this computer", ru: "Открыть на этом компьютере" }
+  lee-close: { en: "Close", ru: "Закрыть" }
+  lee-warning-title: { en: "Before the camera starts", ru: "Прежде чем включится камера" }
+  lee-warning-text:
+    en: "Your room will flow with colour and fill with shapes that are not there. Nothing flashes more than three times a second, but if you have photosensitive epilepsy, do not start. If you feel unwell, press Exit: it is always on the screen."
+    ru: "Комната потечёт цветом и наполнится фигурами, которых нет. Ничто не мигает чаще трёх раз в секунду, но при фоточувствительной эпилепсии не включайте режим. Если станет нехорошо, нажмите «Выйти»: эта кнопка всегда на экране."
+  lee-privacy:
+    en: "Everything is computed on this device. The camera picture goes nowhere."
+    ru: "Всё считается на этом устройстве. Картинка с камеры никуда не уходит."
+  lee-atmosphere:
+    en: "The liquid light here is the atmosphere of the period, not a document: no source ties Love to a particular light show."
+    ru: "«Жидкий свет» здесь — атмосфера эпохи, а не документ: ни один источник не связывает Love с конкретным световым шоу."
+  lee-start-camera: { en: "Start with the camera", ru: "Включить с камерой" }
+  lee-start-still: { en: "Without the camera", ru: "Без камеры" }
+  lee-exit: { en: "Exit", ru: "Выйти" }
+  lee-denied:
+    en: "No camera: the mode runs over a still picture."
+    ru: "Камеры нет: режим работает поверх неподвижной картинки."
+  lee-behind: { en: "Someone is behind you.", ru: "Кто-то стоит у вас за спиной." }
+  lee-chapter: { en: "Now: {title}", ru: "Сейчас: {title}" }
+  lee-motion:
+    en: "Allow motion sensors so the figures can melt when you turn to them"
+    ru: "Разрешите датчики движения, чтобы фигуры таяли, когда вы к ним поворачиваетесь"
+  no-recording:
+    en: "The official recording is not linked here yet."
+    ru: "Официальная запись здесь пока не подключена."
+  vision-telephone: { en: "A red telephone, ringing", ru: "Красный телефон, звонит" }
+  vision-newspaper: { en: "A newspaper unfolding: The Daily Planet", ru: "Разворачивается газета «Daily Planet»" }
+  vision-old-man: { en: "An old man, standing still", ru: "Неподвижный старик" }
+  vision-trumpet: { en: "A trumpet playing by itself", ru: "Труба, играющая сама" }
+  vision-helmet: { en: "A soldier's helmet in grey mud", ru: "Солдатская каска в серой грязи" }
+  vision-rose: { en: "A flower opening and closing", ru: "Цветок, который раскрывается и закрывается" }
+  vision-jukebox: { en: "A jukebox glowing in a café", ru: "Музыкальный автомат светится в кафе" }
+  vision-crystal: { en: "A crystal growing", ru: "Растущий кристалл" }
+  vision-ice-cream: { en: "An ice-cream van", ru: "Фургон мороженщика" }
+  vision-sun: { en: "A summer sun, too bright", ru: "Слишком яркое летнее солнце" }
+  vision-curtain: { en: "A stage curtain parting", ru: "Раздвигается театральный занавес" }
+  vision-siren: { en: "The light of an ambulance", ru: "Мигалка скорой помощи" }
+  vision-chairs: { en: "Empty chairs in a studio", ru: "Пустые стулья в студии" }
+  vision-tape-reel: { en: "A tape reel turning", ru: "Вращается катушка с плёнкой" }
+  vision-notes: { en: "Music notes writing themselves", ru: "Ноты, которые пишутся сами" }
+  vision-record: { en: "A record turning over", ru: "Переворачивается пластинка" }
+  vision-bars: { en: "The bars of a cell", ru: "Решётка камеры" }
+  vision-music-stand: { en: "A music stand lighting up", ru: "Загорается пюпитр" }
+  vision-lily: { en: "A white lily", ru: "Белая лилия" }
+  vision-castle: { en: "An old mansion called the Castle", ru: "Старый особняк по прозвищу «Замок»" }
+  vision-eye: { en: "An eye in the pattern", ru: "Глаз в узоре" }
+  vision-guitar: { en: "A guitar with no one holding it", ru: "Гитара, которую никто не держит" }
+
+scenes:
+  # ---------------------------------------------------------------- 0
+  - id: warning
+    kind: warning
+    decay: 0
+    name: { en: "Before", ru: "Перед входом" }
+    visions: [ eye ]
+    art:
+      generated: true
+      layers:
+        - { file: the-hillside-v2-sky.webp, alt: { en: "A young man sitting on a hillside at night, looking out over the lights of Los Angeles", ru: "Молодой человек сидит ночью на склоне холма и смотрит на огни Лос-Анджелеса" } }
+        - { file: the-hillside-v2-city-lights.webp, depth: 6, alt: "" }
+        - { file: the-hillside-v2-ambulance-streaks.webp, depth: 8, alt: "" }
+        - { file: the-hillside-v2-man.webp, depth: 12, role: figure, alt: "" }
+    blocks:
+      - id: last-words
+        role: quote
+        draft: false
+        en: “When I did that album, I thought I was going to die at that particular time, so those were my last words.”
+        ru: «Когда я делал этот альбом, я думал, что вот-вот умру. Это были мои последние слова».
+      - id: who
+        role: caption
+        draft: false
+        en: Arthur Lee, author and voice of Love, on Forever Changes
+        ru: Артур Ли, автор и голос Love, — о пластинке Forever Changes
+    differ: false
+
+  # ---------------------------------------------------------------- 1
+  - id: prologue
+    kind: magazine
+    decay: 0
+    name: { en: "Memphis to Los Angeles", ru: "Из Мемфиса в Лос-Анджелес" }
+    lenses:
+      - lee
+      - echols
+      - holzman
+    differ: true
+    visions: [ castle, guitar ]
+    art:
+      generated: true
+      layers:
+        - { file: memphis-los-angeles-v1-memphis.webp, state: memphis, alt: { en: "A boy with a schoolbook walks along a street of the 1950s; palms, a bridge and the towers of Los Angeles behind him", ru: "Мальчик с учебником идёт по улице пятидесятых; за ним пальмы, мост и башни Лос-Анджелеса" } }
+        - { file: memphis-los-angeles-v1-la.webp, depth: 6, state: memphis, alt: "" }
+        - { file: memphis-los-angeles-v1-boy.webp, depth: 12, role: figure, state: memphis, alt: "" }
+        - { file: dorsey-high-v2-court.webp, state: dorsey, alt: { en: "Two teenagers play basketball on a school court; two electric guitars lean against the fence", ru: "Двое подростков играют в баскетбол на школьной площадке; у сетки стоят две электрогитары" } }
+        - { file: dorsey-high-v2-guitars.webp, depth: 6, state: dorsey, alt: "" }
+        - { file: dorsey-high-v2-boys.webp, depth: 12, role: figure, state: dorsey, alt: "" }
+        - { file: bido-litos-v1-room.webp, state: bido, alt: { en: "A band plays in a small, crowded club; a man in glasses listens at the side", ru: "Группа играет в маленьком тесном клубе; сбоку слушает мужчина в очках" } }
+        - { file: bido-litos-v1-band.webp, depth: 6, state: bido, alt: "" }
+        - { file: bido-litos-v1-listener.webp, depth: 8, state: bido, alt: "" }
+        - { file: bido-litos-v1-crowd.webp, depth: 14, state: bido, alt: "" }
+        - { file: the-castle-v2-hill.webp, state: castle, alt: { en: "A large old mansion on a green hill at night, its windows lit", ru: "Большой старый особняк на зелёном холме ночью, окна светятся" } }
+        - { file: the-castle-v2-house.webp, depth: 6, state: castle, alt: "" }
+        - { file: the-castle-v2-windows.webp, depth: 6, state: castle, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Prologue · 1945–1967
+        ru: Пролог · 1945–1967
+      - id: title
+        role: title
+        draft: false
+        en: The boy from Memphis
+        ru: Мальчик из Мемфиса
+      - id: lede
+        role: lede
+        draft: false
+        en: "Arthur Lee was born in Memphis on 7 March 1945. His mother, Agnes, taught school; his father, Chester Taylor, played the trumpet. As a boy he came to Los Angeles, to West Adams, and grew up there under his stepfather’s name, Clinton Lee. Memphis, he remembered, was segregated, and the memory stayed: a band where Black and white musicians played together was his idea from the very start."
+        ru: "Артур Ли родился в Мемфисе 7 марта 1945 года. Его мать, Агнес, была учительницей, а отец, Честер Тейлор, трубачом. Ещё ребёнком он попал в Лос-Анджелес, в район Уэст-Адамс, и вырос там под фамилией отчима, Клинтона Ли. В Мемфисе, вспоминал он потом, была сегрегация, и эта память осталась с ним навсегда: группу, где чёрные и белые играют вместе, он задумал с самого начала."
+      - id: dorsey
+        role: text
+        draft: false
+        en: At Dorsey High he was a basketball player before he was a musician. He started making music with his childhood friend Johnny Echols, and by 1963 they had a band and a first single. A year later Lee wrote “My Diary” for the singer Rosa Lee Brooks, and a young Jimi Hendrix played the guitar on it.
+        ru: В школе Дорси он сначала был не музыкантом, а баскетболистом. Музыку он начал играть с другом детства Джонни Эколсом, и в 1963 году у них уже была своя группа и первый сингл. Через год Ли написал «My Diary» для певицы Розы Ли Брукс, и на гитаре там сыграл молодой Джими Хендрикс.
+      - id: byrds
+        role: text
+        draft: false
+        en: In 1965 Lee saw the Byrds at Ciro’s on the Sunset Strip, and everything fell into place. He left [[rhythm-and-blues|rhythm and blues]] for folk rock, brought in the guitarist Bryan MacLean, who had worked as a roadie for the Byrds, and called the band Love; the name Grass Roots had already been taken.
+        ru: В 1965 году Ли увидел The Byrds в клубе Ciro's на Сансет-Стрип, и всё в его голове встало на место. Он ушёл от [[rhythm-and-blues|ритм-н-блюза]] к фолк-року, позвал гитариста Брайана Маклина, который работал у The Byrds техником, и назвал группу Love. Название Grass Roots к тому времени уже забрали другие.
+      - id: name-lee
+        role: quote
+        draft: false
+        en: "The word came to him on the freeway: rather than hate the people who took your name, “maybe you should love them.”"
+        ru: "Слово пришло ему в голову на шоссе: вместо того чтобы ненавидеть тех, кто украл у тебя название, «может, их стоит любить»."
+        lens: lee
+      - id: name-billboard
+        role: quote
+        draft: false
+        en: Echols and MacLean remembered a billboard for Luv brassieres on Melrose.
+        ru: А Эколс с Маклином помнили рекламный щит бюстгальтеров Luv на Мелроуз.
+        lens: echols
+      - id: holzman
+        role: text
+        draft: false
+        en: At Bido Lito’s in Hollywood they were heard by Jac Holzman, whose label Elektra had until then put out folk records. Love became the first rock band he signed. The singles “My Little Red Book” and “7 and 7 Is” reached the charts, and the band moved into the Castle, a run-down mansion in Los Feliz where they lived together, played together and took a great many drugs.
+        ru: В клубе Bido Lito's в Голливуде их услышал Джек Хольцман, хозяин лейбла Elektra, который до тех пор выпускал фолк. Love стали первой рок-группой, которую он подписал. Песни выходили одна за другой, синглы «My Little Red Book» и «7 and 7 Is» попали в чарты, а сама группа поселилась в «Замке» — обветшалом особняке в Лос-Фелис, где жили вместе, играли и принимали много наркотиков.
+      - id: holzman-saw
+        role: quote
+        draft: false
+        en: “Thirty seconds into their version of ‘Hey Joe’, I knew this was the group I was looking for.” The club itself he remembered as “a scene from Dante’s Inferno”.
+        ru: "«Через тридцать секунд их „Hey Joe“ я понял: вот она, группа, которую я искал». Сам клуб он запомнил как «сцену из Дантова „Ада“»."
+        lens: holzman
+      - id: tour
+        role: text
+        draft: false
+        en: Love hardly ever left Los Angeles, and each of three men explained why in his own way.
+        ru: Из Лос-Анджелеса Love почти не уезжали. Почему — каждый из троих объяснял по-своему.
+      - id: tour-echols
+        role: quote
+        draft: false
+        en: “We were a mixed-race group in the sixties … all of the South, most of Middle-America, and many parts of the Midwest as well were simply off-limits to us.”
+        ru: «Мы были смешанной группой в шестидесятые. Весь Юг, бо́льшая часть Средней Америки и многие места на Среднем Западе были для нас просто закрыты».
+        lens: echols
+      - id: tour-holzman
+        role: quote
+        draft: false
+        en: “He was jealous of The Doors’ success … But he wouldn’t travel far from his perch in LA.”
+        ru: «Он ревновал к успеху The Doors. Но далеко от своего насеста в Лос-Анджелесе он не уезжал».
+        lens: holzman
+      - id: tour-lee
+        role: quote
+        draft: false
+        en: "Touring meant going out to “eat shit”, and he wasn’t having it: “I always thought that if something was good, it would get through anyway.”"
+        ru: "Гастроли означали «жрать дерьмо», а он на это не соглашался: «Я всегда думал: если вещь хорошая, она и так пробьётся»."
+        lens: lee
+      - id: dacapo
+        role: text
+        draft: false
+        en: The second album, “Da Capo”, came out early in 1967, with one long piece, “Revelation”, filling its second side; it got no higher than number 80. San Francisco would call that summer the Summer of Love, and the band called Love was falling apart.
+        ru: Второй альбом, «Da Capo», вышел в начале 1967 года, и всю его вторую сторону занимала одна длинная вещь, «Revelation». Пластинка дошла лишь до восьмидесятого места. Лето 1967-го в Сан-Франциско назовут «летом любви», а группа под названием Love в это время разваливалась.
+
+  # ---------------------------------------------------------------- 2
+  - id: hillside
+    kind: hillside
+    decay: 0.08
+    name: { en: "The hill above the city", ru: "Холм над городом" }
+    lenses:
+      - critics
+      - lee
+      - echols
+      - botnick
+    visions: [ siren, eye ]
+    art:
+      generated: true
+      layers:
+        - { file: the-hillside-v1-sky.webp, alt: { en: "A young man in a red jacket sits in the grass above the city at night; an ambulance light streaks along the road below", ru: "Молодой человек в красной куртке сидит ночью в траве над городом; внизу по дороге тянется свет скорой" } }
+        - { file: the-hillside-v1-city-lights.webp, depth: 6, alt: "" }
+        - { file: the-hillside-v1-ambulance-streaks.webp, depth: 8, alt: "" }
+        - { file: the-hillside-v1-man.webp, depth: 12, role: figure, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: 1967 · Mulholland Drive
+        ru: 1967 · Малхолланд-драйв
+      - id: title
+        role: title
+        draft: false
+        en: Looking down
+        ru: Смотреть вниз
+      - id: lede
+        role: lede
+        draft: false
+        en: "By 1967 Lee had left the Castle for a house high in the hills above the city. From there Los Angeles lay below him whole: the lights, the freeways and, at night, the flashing ambulances. He hardly went out. He sat, looked down and thought about dying."
+        ru: "К 1967 году Ли ушёл из «Замка» в дом высоко на холмах над городом. Оттуда Лос-Анджелес лежал под ним целиком: огни, шоссе и по ночам мигалки машин скорой помощи. Он почти не выходил. Сидел, смотрел вниз и думал о смерти."
+      - id: forssi
+        role: quote
+        draft: false
+        en: “Then we’d look down over the city, Arthur staring and wondering about the ambulances and the sirens.”
+        ru: «Мы смотрели вниз на город, а Артур всё смотрел и думал о скорых, о сиренах».
+        lens: critics
+      - id: forssi-who
+        role: caption
+        draft: false
+        en: Ken Forssi, Love’s bass player
+        ru: Кен Форсси, басист Love
+      - id: last-words
+        role: text
+        draft: false
+        en: He was twenty-two and certain he would die soon, “about 26”, he said; he just had a feeling. He wrote the new songs as last words. Many years later he would call it, calmly, a stage that young people go through. At the time it was real.
+        ru: "Ему было двадцать два, и он был уверен, что скоро умрёт: «лет в двадцать шесть», говорил он, просто было такое чувство. Новые песни он писал как последние слова. Через много лет, уже спокойно, он назовёт это этапом, через который проходят молодые. А тогда это было всерьёз."
+      - id: last-words-1991
+        role: quote
+        draft: false
+        en: “The album Forever Changes was to be my last words to this life. And it’s like death is in there.”
+        ru: «Forever Changes должен был стать моими последними словами этой жизни. Смерть в нём есть».
+        lens: lee
+      - id: echols-dark
+        role: quote
+        draft: false
+        en: “We were scared to death that they were going to need more bodies for the Vietnam war … There was a dark side.”
+        ru: «Мы до смерти боялись, что им понадобятся новые тела для войны во Вьетнаме. Была у того лета и тёмная сторона».
+        lens: echols
+      - id: botnick-stoned
+        role: quote
+        draft: false
+        en: "Bruce Botnick, the engineer who recorded all of Love’s albums, on the year before: “Arthur was stoned twenty-four hours a day.”"
+        ru: "Брюс Ботник, звукорежиссёр, записавший все альбомы Love, о годе перед этим: «Артур был под кайфом двадцать четыре часа в сутки»."
+        lens: botnick
+    differ: true
+
+  # ---------------------------------------------------------------- 3
+  - id: session-day
+    kind: session
+    decay: 0.15
+    name: { en: "The session players' day", ru: "День сессионных музыкантов" }
+    lenses:
+      - botnick
+      - echols
+      - stuart-ware
+      - holzman
+    differ: true
+    visions: [ chairs, tape-reel ]
+    art:
+      generated: true
+      layers:
+        - { file: strangers-in-our-chairs-v1-studio.webp, alt: { en: "Session musicians play in a recording studio while a group of young musicians watch from the doorway", ru: "Студийные музыканты играют в студии звукозаписи, а молодые музыканты группы смотрят на них из дверей" } }
+        - { file: strangers-in-our-chairs-v1-session-players.webp, depth: 6, alt: "" }
+        - { file: strangers-in-our-chairs-v1-band.webp, depth: 12, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: 1 August 1967 · Sunset Sound
+        ru: 1 августа 1967 года · Sunset Sound
+      - id: title
+        role: title
+        draft: false
+        en: Strangers in their chairs
+        ru: Чужие на их стульях
+      - id: lede
+        role: lede
+        draft: false
+        en: "Botnick was to produce the third album with Neil Young, but Young dropped out before it began. On the first day the members of Love walked into Sunset Sound and found strangers in their places: the best session players in Los Angeles, the crew that would later be called the Wrecking Crew. They were there to record Lee’s songs instead of his own band."
+        ru: "Третий альбом должен был продюсировать Ботник вместе с Нилом Янгом, но Янг отказался ещё до начала. В первый день записи музыканты Love вошли в студию Sunset Sound и увидели, что на их местах сидят чужие: лучшие студийные музыканты Лос-Анджелеса, команда, которую потом назовут Wrecking Crew. Им предстояло записать песни Ли вместо его собственной группы."
+      - id: botnick-why
+        role: quote
+        draft: false
+        en: “They couldn’t play, basically … I did a little shock value … I did it intentionally, to shock the band into getting serious.”
+        ru: «Они, по сути, не могли играть. Я устроил небольшой шок. Сделал это нарочно — чтобы встряхнуть группу и заставить её взяться за дело».
+        lens: botnick
+      - id: botnick-cry
+        role: quote
+        draft: false
+        en: “I remember Bryan sitting there crying.”
+        ru: «Помню, Брайан сидел и плакал».
+        lens: botnick
+      - id: echols-why
+        role: quote
+        draft: false
+        en: The album was meant to be a double, and Elektra decided it cost too much. Bryan sulked and staged “a minor mutiny”, and “Jac Holzman decided to show us who was in charge.”
+        ru: Пластинку задумывали двойной, и Elektra решила, что это слишком дорого. Брайан обиделся и «устроил небольшой бунт», а «Джек Хольцман решил показать нам, кто здесь главный».
+        lens: echols
+      - id: echols-ten
+        role: quote
+        draft: false
+        en: “They played for maybe less than 10 minutes and we knew that it just could not work.”
+        ru: «Они играли, может, меньше десяти минут, и мы поняли, что так ничего не выйдет».
+        lens: echols
+      - id: stuart-booth
+        role: quote
+        draft: false
+        en: “I look up in the booth and I see Arthur huddling with Bruce Botnick and the Elektra rep”, and then came the idea “to go ahead and bring studio cats in”, to save everyone money.
+        ru: "«Поднимаю глаза на аппаратную и вижу: Артур шепчется с Брюсом Ботником и человеком из Elektra». Потом прозвучало: «а не позвать ли студийных ребят», — чтобы всем сэкономить деньги."
+        lens: stuart-ware
+      - id: stuart-chairs
+        role: quote
+        draft: false
+        en: “We all walk in and there are strangers in our chairs.” Jim Gordon was behind his drums. “It was an honor to have him replace me, but painful, nonetheless.”
+        ru: «Мы входим, а на наших стульях сидят чужие». За его барабанами сидел Джим Гордон. «Честь, что меня заменил он. Но всё равно больно».
+        lens: stuart-ware
+      - id: holzman-why
+        role: quote
+        draft: false
+        en: “The album was plagued by internal problems within the band and lack of preparation … It clearly wasn’t happening.”
+        ru: «Альбому мешали внутренние проблемы группы и неподготовленность. Явно ничего не получалось».
+        lens: holzman
+      - id: back
+        role: text
+        draft: false
+        en: "The session players cut two songs, and the band asked for a second chance. Botnick remembers that he and Arthur exchanged a wink and gave it. Stuart-Ware remembers a call from the man at Elektra the next day: the professionals had come out “too plastic”. Echols remembers bonuses all round. Either way, ten days later Love were back in the studio, making the album themselves."
+        ru: Сессионные музыканты записали две песни, и группа попросила второй шанс. Ботник вспоминает, что они с Артуром переглянулись и дали его. Стюарт-Уэр — что на следующий день позвонил человек из Elektra и сказал, что у профессионалов вышло «слишком пластмассово». Эколс — что всем выдали премии. Так или иначе, через десять дней Love вернулись в студию и записали альбом сами.
+
+  # ---------------------------------------------------------------- 4
+  - id: diary
+    kind: diary
+    decay: 0.12
+    name: { en: "Botnick's diary", ru: "Дневник Ботника" }
+    lenses:
+      - holzman
+    visions: [ tape-reel, notes ]
+    art:
+      generated: true
+      layers:
+        - { file: botnicks-diary-v2-console.webp, alt: { en: "An engineer’s desk: a mixing console, a lamp, tape reels and an open diary", ru: "Стол звукорежиссёра: пульт, лампа, катушки с плёнкой и открытый дневник" } }
+        - { file: botnicks-diary-v2-desk.webp, depth: 4, alt: "" }
+        - { file: botnicks-diary-v2-tape.webp, depth: 8, alt: "" }
+        - { file: botnicks-diary-v2-diary.webp, depth: 12, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: August–September 1967
+        ru: Август–сентябрь 1967
+      - id: title
+        role: title
+        draft: false
+        en: Seven weeks
+        ru: Семь недель
+      - id: lede
+        role: lede
+        draft: false
+        en: Botnick kept a diary of the sessions, and where memory tells stories, the diary gives dates. The whole album was made in seven weeks in the summer of 1967.
+        ru: Ботник вёл дневник сессий, и где память рассказывает легенды, дневник даёт даты. Весь альбом сделали за семь недель лета 1967 года.
+      - id: d-0801
+        role: line
+        draft: false
+        en: 1 August · Sunset Sound · session players cut “Andmoreagain” and “The Daily Planet” in three hours
+        ru: 1 августа · Sunset Sound · студийные музыканты за три часа записывают «Andmoreagain» и «The Daily Planet»
+      - id: d-0811
+        role: line
+        draft: false
+        en: 11–13 August · Western Recorders · the band records its own rhythm tracks
+        ru: 11–13 августа · Western Recorders · группа сама записывает ритм-партии
+      - id: d-0820
+        role: line
+        draft: false
+        en: 20 August – 9 September · Sunset Sound · vocals
+        ru: 20 августа – 9 сентября · Sunset Sound · голоса
+      - id: d-0914
+        role: line
+        draft: false
+        en: 14 September · at Leon Russell’s house · guitar overdubs
+        ru: 14 сентября · дома у Леона Расселла · гитары
+      - id: d-0918
+        role: line
+        draft: false
+        en: 18 September · strings and horns
+        ru: 18 сентября · струнные и духовые
+      - id: d-0919
+        role: line
+        draft: false
+        en: 19–20 September · stereo mixes
+        ru: 19–20 сентября · стереосведение
+      - id: holzman-bruce
+        role: quote
+        draft: false
+        en: “Without Bruce, this album would not have made it into the Registry.”
+        ru: «Без Брюса этот альбом не попал бы в Национальный реестр звукозаписей».
+        lens: holzman
+    differ: false
+
+  # ---------------------------------------------------------------- 5
+  - id: orchestra
+    kind: orchestra
+    decay: 0.18
+    name: { en: "The orchestra", ru: "Оркестр" }
+    lenses:
+      - botnick
+      - lee
+      - echols
+      - angel
+    differ: true
+    visions: [ notes, music-stand ]
+    art:
+      generated: true
+      layers:
+        - { file: the-orchestra-v2-section.webp, alt: { en: "In a studio a singer sings a part to a string and brass section while a young man writes out the score", ru: "В студии певец напевает партию струнным и духовым, а молодой человек записывает ноты" } }
+        - { file: the-orchestra-v2-men.webp, depth: 6, alt: "" }
+        - { file: the-orchestra-v2-sheets.webp, depth: 12, role: figure, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: 18 September 1967 · strings and horns
+        ru: 18 сентября 1967 · струнные и духовые
+      - id: title
+        role: title
+        draft: false
+        en: A voice turned into notes
+        ru: Голос, ставший нотами
+      - id: lede
+        role: lede
+        draft: false
+        en: Lee heard the strings and the brass in his head. Botnick called his mother, Priscilla Nemoy, a copyist who had prepared parts for Frank Sinatra, and she suggested the arranger David Angel. Lee sat beside Angel and sang him the counter-melodies, and Angel turned what he sang into a score for a small orchestra.
+        ru: Струнные и медь Ли слышал в голове. Ботник позвонил своей матери, Присцилле Немой, которая переписывала ноты для Фрэнка Синатры, и она посоветовала аранжировщика Дэвида Энджела. Ли садился рядом и напевал Энджелу контрмелодии, а тот превращал напетое в партитуру для небольшого оркестра.
+      - id: botnick-sang
+        role: quote
+        draft: false
+        en: “Arthur would sing a counter-melody for the strings and brass and then David would turn that into arrangements.”
+        ru: «Артур напевал контрмелодию для струнных и меди, а Дэвид превращал её в аранжировку».
+        lens: botnick
+      - id: lee-told
+        role: quote
+        draft: false
+        en: “David Angel’s great – he’s on the whole record! … I told him what to do – I helped orchestrate.”
+        ru: «Дэвид Энджел великолепен — он на всей пластинке! Я говорил ему, что делать, я помогал оркестровать».
+        lens: lee
+      - id: echols-angel
+        role: quote
+        draft: false
+        en: “He was a magnificent arranger and came up with the Mariachi horns.”
+        ru: «Он был великолепным аранжировщиком. Мариачи-духовые придумал он».
+        lens: echols
+      - id: sound
+        role: text
+        draft: false
+        en: "So a rock band got a sound that rock bands did not have then: acoustic guitars, strings, mariachi trumpets, everything soft and clear, and through all that beauty come words about death and war. Holzman, who had built Elektra on folk records, had suggested the direction before the sessions: “What would happen if you advanced backwards?”"
+        ru: "Так рок-группа получила звук, которого у рок-групп тогда не было: акустические гитары, струнные, мариачи-трубы, всё мягко и прозрачно — а сквозь эту красоту проступают слова о смерти и войне. Хольцман, сделавший Elektra на фолк-пластинках, ещё до сессий предлагал Ли этот путь: «А что, если двинуться вперёд назад?»"
+
+  # ---------------------------------------------------------------- side A
+  - id: alone-again-or
+    kind: song
+    decay: 0.25
+    name: { en: "Alone Again Or", ru: "Alone Again Or" }
+    song: { n: 1, side: a, title: "Alone Again Or", writer: "Bryan MacLean", length: "3:15" }
+    lenses:
+      - echols
+      - botnick
+      - stuart-ware
+    visions: [ trumpet, guitar ]
+    art:
+      generated: true
+      layers:
+        - { file: alone-again-or-v1-window.webp, alt: { en: "A classical guitar and a trumpet on a sunny window sill, a rush-seat chair beside them", ru: "Классическая гитара и труба на солнечном подоконнике, рядом плетёный стул" } }
+        - { file: alone-again-or-v1-instruments.webp, depth: 6, alt: "" }
+        - { file: alone-again-or-v1-chair.webp, depth: 12, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Side A · 1 · Bryan MacLean
+        ru: Сторона A · 1 · Брайан Маклин
+      - id: title
+        role: title
+        draft: false
+        en: Alone Again Or
+        ru: Alone Again Or
+      - id: lede
+        role: lede
+        draft: false
+        en: "The record opens not with Lee but with Bryan MacLean: his song, his voice, straight and without vibrato. A Spanish guitar comes in, then strings and a trumpet out of a Mexican band. The man in the song could love the whole world, waits and waits, and every time ends up alone. “Alone again, or…” The title breaks off like the hope does."
+        ru: Пластинку открывает не Ли, а Брайан Маклин. Это его песня и его голос — ровный, совсем без вибрато. Вступает испанская гитара, следом струнные и труба, как в мексиканском оркестре. Человек в песне готов любить весь мир, ждёт и ждёт — и каждый раз остаётся один. «Опять один, или…» — название обрывается на полуслове, как сама надежда.
+      - id: spanish
+        role: text
+        draft: false
+        en: "The Spanish turn came from Echols’s guitar. He was warming up with flamenco runs, and Angel suggested putting them into Bryan’s song. The trumpet came from the radio: Tijuana Brass was everywhere on the air then, and Botnick decided to take from it something Spanish rather than Mexican."
+        ru: "Испанский поворот песне дала гитара Эколса. Он разминал пальцы фламенковскими пассажами, и Энджел предложил вписать их в песню Брайана. Трубу подсказало радио: в эфире тогда повсюду звучал Tijuana Brass, и Ботник решил взять у него не мексиканское, а испанское."
+      - id: echols-banjo
+        role: quote
+        draft: false
+        en: At first it was a banjo song. “Why don’t you play those runs in Bryan’s song?” Angel asked.
+        ru: Поначалу это была песня под банджо. «А почему бы тебе не сыграть эти пассажи в песне Брайана?» — спросил Энджел.
+        lens: echols
+      - id: botnick-spanish
+        role: quote
+        draft: false
+        en: “Tijuana Brass was big on the radio … more Spanish than Mexican.”
+        ru: «В эфире царили Tijuana Brass. Можно было взять их вкус, не копируя, — испанское, а не мексиканское».
+        lens: botnick
+      - id: stuart-title
+        role: quote
+        draft: false
+        en: Asked what the song was called, Bryan said, “Well, ‘Alone Again’… or…”, and Arthur said that would be the title.
+        ru: "Брайана спросили, как песня называется. «Ну, наверное, „Alone Again“… или…» И Артур сказал: так и назовём."
+        lens: stuart-ware
+      - id: afterlife
+        role: text
+        draft: false
+        en: It is the best-known song on the album. UFO, the Damned and Calexico covered it, and Wes Anderson put it in his first film, “Bottle Rocket”.
+        ru: Эта песня — самая известная на альбоме. Её перепевали UFO, The Damned, Calexico, а Уэс Андерсон поставил её в свой первый фильм, «Бутылочная ракета».
+    differ: true
+
+  - id: a-house-is-not-a-motel
+    kind: song
+    decay: 0.4
+    name: { en: "A House Is Not a Motel", ru: "A House Is Not a Motel" }
+    alias: { en: "A Motel Is Not a House", ru: "A Motel Is Not a House" }
+    song: { n: 2, side: a, title: "A House Is Not a Motel", writer: "Arthur Lee", length: "3:25" }
+    lenses:
+      - echols
+    visions: [ helmet, guitar ]
+    art:
+      generated: true
+      layers:
+        - { file: a-house-is-not-a-motel-v2-doorway.webp, alt: { en: "A pair of muddy army boots in the doorway of a ruined house, rain on the mud outside", ru: "Пара грязных армейских ботинок у порога разрушенного дома, снаружи дождь и грязь" } }
+        - { file: a-house-is-not-a-motel-v2-rain-mud.webp, depth: 6, alt: "" }
+        - { file: a-house-is-not-a-motel-v2-boots.webp, depth: 12, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Side A · 2 · Arthur Lee
+        ru: Сторона A · 2 · Артур Ли
+      - id: title
+        role: title
+        draft: false
+        en: A House Is Not a Motel
+        ru: A House Is Not a Motel
+      - id: lede
+        role: lede
+        draft: false
+        en: "Straight after the love song comes the war. One night in a San Francisco club a soldier back from Vietnam sat down with Lee and Echols and told them what it was like. One thing he said stayed in Lee’s head: blood mixed with mud turns grey."
+        ru: "Сразу после песни о любви приходит война. Однажды в клубе в Сан-Франциско к Ли и Эколсу подсел солдат, вернувшийся из Вьетнама, и рассказал, какая она там. Одна его фраза осталась у Ли в голове: кровь, смешанная с грязью, становится серой."
+      - id: song
+        role: text
+        draft: false
+        en: "That line grew into a song that is less a story than a run of visions: blood and mud, schools that teach war, the news going on while the city goes about its day. It opens on a quiet acoustic guitar and builds into the hardest [[rock-n-roll|rock]] on the record; at the end Echols’s two guitars lock horns, and everything stops dead."
+        ru: "Из этой фразы выросла песня — не рассказ, а череда видений: кровь и грязь, школы, где учат воевать, новости, которые идут своим чередом, пока город живёт обычной жизнью. Она начинается тихой акустикой и разгоняется до самого жёсткого [[rock-n-roll|рока]] на пластинке. В конце две гитары Эколса сцепляются друг с другом — и всё обрывается."
+      - id: echols-soldier
+        role: quote
+        draft: false
+        en: “This soldier … sat down with us … Things like how mixed blood turns grey. He said that, and it became the basis for ‘A House Is Not A Motel’.”
+        ru: «Он подсел к нам и стал рассказывать. Вроде того, что смешанная кровь становится серой. Это и легло в основу „A House Is Not a Motel“».
+        lens: echols
+    differ: false
+
+  - id: andmoreagain
+    kind: song
+    decay: 0.5
+    name: { en: "Andmoreagain", ru: "Andmoreagain" }
+    alias: { en: "And more again and more again", ru: "И снова и снова и снова" }
+    song: { n: 3, side: a, title: "Andmoreagain", writer: "Arthur Lee", length: "3:15" }
+    lenses:
+      - lee
+      - stuart-ware
+      - botnick
+    differ: true
+    visions: [ rose, chairs ]
+    art:
+      generated: true
+      layers:
+        - { file: andmoreagain-v1-stairs.webp, alt: { en: "A young man at the foot of a curving staircase looks up at a woman in a red dress on the landing", ru: "Молодой человек у подножия изогнутой лестницы смотрит вверх, на женщину в красном платье на площадке" } }
+        - { file: andmoreagain-v1-upstairs.webp, depth: 8, role: figure, alt: "" }
+        - { file: andmoreagain-v1-downstairs.webp, depth: 12, role: figure, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Side A · 3 · Arthur Lee
+        ru: Сторона A · 3 · Артур Ли
+      - id: title
+        role: title
+        draft: false
+        en: Andmoreagain
+        ru: Andmoreagain
+      - id: lede
+        role: lede
+        draft: false
+        en: "The gentlest song on the album: slow, with the strings wrapped around the voice. A man promises tenderness, and the words of the title have run together into one, like a promise said over and over: and more, again."
+        ru: "Самая нежная песня альбома: медленная, струнные будто обнимают голос. Человек обещает нежность, и слова в названии слиплись в одно, как обещание, которое повторяют без конца: «и ещё раз, и снова»."
+      - id: origin
+        role: quote
+        draft: false
+        en: "He wrote it out of a bummer: he was upstairs with a girl he liked, and then it turned out Bryan was downstairs with her."
+        ru: Написал он её из обиды. Он был наверху с девушкой, которая ему нравилась, — а потом оказалось, что внизу с ней Брайан.
+        lens: lee
+      - id: stuart-redone
+        role: quote
+        draft: false
+        en: "“‘Andmoreagain’ was redone by us.” And a fill he overplayed: “It was a mistake I was hoping I would have the opportunity to correct during the next take, but the next take never came.”"
+        ru: "«„Andmoreagain“ выбросили, и мы переписали её сами». И ещё: одну сбивку он переиграл — «надеялся исправить в следующем дубле, но следующего дубля не было»."
+        lens: stuart-ware
+      - id: botnick-two
+        role: quote
+        draft: false
+        en: “The two songs I recorded with the Wrecking Crew ended up on the album.”
+        ru: «Две песни, которые я записал с Wrecking Crew, в итоге попали на альбом».
+        lens: botnick
+
+  - id: the-daily-planet
+    kind: song
+    decay: 0.62
+    name: { en: "The Daily Planet", ru: "The Daily Planet" }
+    alias: { en: "The Daily Plant", ru: "The Daily Plant" }
+    song: { n: 4, side: a, title: "The Daily Planet", writer: "Arthur Lee", length: "3:25" }
+    lenses:
+      - echols
+      - stuart-ware
+    differ: true
+    visions: [ newspaper ]
+    art:
+      generated: true
+      layers:
+        - { file: the-daily-planet-v1-background.webp, alt: { en: "A city of towers and freeways rising out of an open newspaper", ru: "Город из башен и шоссе вырастает из раскрытой газеты" } }
+        - { file: the-daily-planet-v1-city.webp, depth: 6, alt: "" }
+        - { file: the-daily-planet-v1-newspaper.webp, depth: 12, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Side A · 4 · Arthur Lee
+        ru: Сторона A · 4 · Артур Ли
+      - id: title
+        role: title
+        draft: false
+        en: The Daily Planet
+        ru: The Daily Planet
+      - id: lede
+        role: lede
+        draft: false
+        en: "The Daily Planet is the newspaper Superman works for. In Lee’s song it is an ordinary man’s day: getting up, the news, work, the same again tomorrow, and a man who has long stopped believing in any of it. It is the one recording from that first day that stayed on the record: the session players laid down the track, and the band added its own parts on top."
+        ru: "«Daily Planet» — газета, в которой служит Супермен. У Ли это день обычного человека: подъём, новости, работа, завтра всё то же самое — и человек, который давно перестал в это верить. Это единственная запись того первого дня, которая осталась на пластинке: студийные музыканты сыграли основу, группа наложила поверх своё."
+      - id: echols-blaine
+        role: quote
+        draft: false
+        en: “I can state unequivocally and with absolute certainty that Hal Blaine played drums on ‘The Daily Planet’.”
+        ru: "«Могу сказать с абсолютной уверенностью: на барабанах там играл Хэл Блейн»."
+        lens: echols
+      - id: stuart-gordon
+        role: quote
+        draft: false
+        en: “I’ve heard … that Hal Blaine played on ‘Daily Planet’, but that’s not true. It was Jim Gordon.”
+        ru: «Говорят, на „Daily Planet“ играл Хэл Блейн. Это неправда. Это был Джим Гордон».
+        lens: stuart-ware
+
+  - id: old-man
+    kind: song
+    decay: 0.35
+    name: { en: "Old Man", ru: "Old Man" }
+    song: { n: 5, side: a, title: "Old Man", writer: "Bryan MacLean", length: "2:57" }
+    lenses:
+      - botnick
+      - lee
+    visions: [ old-man ]
+    art:
+      generated: true
+      layers:
+        - { file: old-man-v2-road.webp, alt: { en: "An old man and a young man talk on a bench by a winding road above the city", ru: "Старик и молодой человек разговаривают на скамейке у извилистой дороги над городом" } }
+        - { file: old-man-v2-bench.webp, depth: 6, alt: "" }
+        - { file: old-man-v2-men.webp, depth: 10, role: figure, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Side A · 5 · Bryan MacLean
+        ru: Сторона A · 5 · Брайан Маклин
+      - id: title
+        role: title
+        draft: false
+        en: Old Man
+        ru: Old Man
+      - id: lede
+        role: lede
+        draft: false
+        en: MacLean’s second and last song on the album is a breath after the war and the newspaper noise. An old man passes on to a young one what life has taught him. A few years later MacLean would leave music and turn to faith, and the song can be heard as the first step down that road. Under his voice the strings play a melody of their own, as if coming to meet the words.
+        ru: Вторая и последняя песня Маклина на альбоме — передышка после войны и газетного шума. Старик передаёт молодому то, что понял за жизнь. Через несколько лет Маклин уйдёт из музыки и обратится к вере, и эту песню можно услышать как первый шаг по той дороге. Под его голосом звучат струнные со своей мелодией, которая будто идёт навстречу словам.
+      - id: botnick-bryan
+        role: quote
+        draft: false
+        en: “As deep as what Arthur was writing, I think Bryan was easily as deep, but coming from a different direction.”
+        ru: «Как глубоко ни писал Артур, Брайан был, по-моему, не менее глубок, — только шёл с другой стороны».
+        lens: botnick
+      - id: lee-bryan
+        role: quote
+        draft: false
+        en: “I wanted it to be Lee and MacLean or MacLean and Lee. But we just never could … He was just another kind of guy than I am. But I think he was a fabulous writer.”
+        ru: "«Я хотел, чтобы было „Ли и Маклин“ или „Маклин и Ли“. Но у нас ничего не вышло: мы были слишком разными. А автор он был потрясающий»."
+        lens: lee
+      - id: plant
+        role: text
+        draft: false
+        en: Robert Plant calls it his favourite song on the album.
+        ru: Роберт Плант называет её своей любимой песней на альбоме.
+    differ: true
+
+  - id: the-red-telephone
+    kind: song
+    decay: 1
+    name: { en: "The Red Telephone", ru: "The Red Telephone" }
+    alias: { en: "The Red Telephone is ringing", ru: "Звонит красный телефон" }
+    song: { n: 6, side: a, title: "The Red Telephone", writer: "Arthur Lee", length: "4:45" }
+    lenses:
+      - echols
+      - lee
+    visions: [ telephone, bars, eye ]
+    art:
+      generated: true
+      layers:
+        - { file: the-red-telephone-v2-sky.webp, alt: { en: "A huge red telephone rings on a hill above the city lights at night", ru: "Огромный красный телефон звонит на холме над ночными огнями города" } }
+        - { file: the-red-telephone-v2-city-hill.webp, depth: 6, alt: "" }
+        - { file: the-red-telephone-v2-telephone.webp, depth: 12, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Side A · 6 · Arthur Lee
+        ru: Сторона A · 6 · Артур Ли
+      - id: title
+        role: title
+        draft: false
+        en: The Red Telephone
+        ru: The Red Telephone
+      - id: lede
+        role: lede
+        draft: false
+        en: "Here the album reaches the bottom. Lee is back on his hill, watching calmly, almost coldly, as people die below. The voice stays level while the words grow darker: skin colour, people being locked up today, who will be next. A harpsichord rings, the strings hold, and at the end the band’s voices fall into a spoken chant, like a fever, a prayer, a news bulletin."
+        ru: "Здесь альбом спускается на самое дно. Ли снова сидит на своём холме и спокойно, почти равнодушно смотрит, как внизу умирают люди. Голос ровный, а слова всё страшнее: про цвет кожи, про тех, кого сегодня запирают, про то, кто будет следующим. Звенит клавесин, тянут струнные, в конце голоса группы начинают монотонно проговаривать слова — как бред, как молитва, как сводка."
+      - id: marat
+        role: quote
+        draft: false
+        en: The closing lines came from a film. He and Arthur went to an art-house cinema to see “Marat/Sade”, and a line about everyone being normal and wanting freedom lodged in Lee’s head.
+        ru: Последние строки пришли из кино. Они с Артуром пошли в артхаусный кинотеатр на «Марат/Сад», и фраза о том, что все нормальные и хотят свободы, засела у Ли в голове.
+        lens: echols
+      - id: lee-see
+        role: quote
+        draft: false
+        en: “I write about what I see.”
+        ru: «Я пишу о том, что вижу».
+        lens: lee
+      - id: prophecy
+        role: text
+        draft: false
+        en: Less than thirty years later the man who sang about people being locked up would be locked up himself, in a California prison.
+        ru: Меньше чем через тридцать лет человек, который пел о том, как людей запирают, сам окажется в калифорнийской тюрьме.
+    differ: true
+
+  # ---------------------------------------------------------------- flip
+  - id: flip
+    kind: flip
+    decay: 0.55
+    name: { en: "Turn the record over", ru: "Перевернуть пластинку" }
+    visions: [ record ]
+    art:
+      generated: true
+      layers:
+        - { file: the-red-telephone-v1-sky.webp, alt: { en: "A red telephone ringing on a hill above the city at dusk", ru: "Красный телефон звонит на холме над городом в сумерках" } }
+        - { file: the-red-telephone-v1-city-hill.webp, depth: 6, alt: "" }
+        - { file: the-red-telephone-v1-telephone.webp, depth: 12, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Between the sides
+        ru: Между сторонами
+      - id: line
+        role: line
+        draft: false
+        en: Side one ends on the hill above the dying city. Turn the record over.
+        ru: Первая сторона кончается на холме, под которым умирают люди. Пластинку нужно перевернуть.
+      - id: method
+        role: text
+        draft: false
+        en: "The second side comes down from the hill into the city: the Sunset Strip, a café, the ice-cream man on the corner. Songs about what Lee saw around him. “I don’t write ‘I need you, baby’,” he said."
+        ru: Вторая сторона спускается с холма обратно в город — на Сансет-Стрип, в кафе, к мороженщику на углу. Песни о том, что Ли видел вокруг. «Я не пишу „ты мне нужна, бэби“», — говорил он.
+    differ: false
+
+  # ---------------------------------------------------------------- side B
+  - id: between-clark-and-hilldale
+    kind: song
+    decay: 0.7
+    name: { en: "Between Clark and Hilldale", ru: "Between Clark and Hilldale" }
+    alias: { en: "Between Here and Nowhere", ru: "Между здесь и нигде" }
+    song: { n: 7, side: b, title: "Maybe the People Would Be the Times or Between Clark and Hilldale", writer: "Arthur Lee", length: "3:30" }
+    lenses:
+      - stuart-ware
+      - echols
+    visions: [ jukebox, sun ]
+    art:
+      generated: true
+      layers:
+        - { file: between-clark-and-hilldale-v2-facades.webp, alt: { en: "A club marquee and a café with a glowing jukebox on a wet street of palms at night", ru: "Козырёк клуба и кафе со светящимся музыкальным автоматом на мокрой ночной улице с пальмами" } }
+        - { file: between-clark-and-hilldale-v2-street.webp, depth: 6, alt: "" }
+        - { file: between-clark-and-hilldale-v2-jukebox.webp, depth: 10, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Side B · 1 · Arthur Lee
+        ru: Сторона B · 1 · Артур Ли
+      - id: title
+        role: title
+        draft: false
+        en: Maybe the People Would Be the Times or Between Clark and Hilldale
+        ru: Maybe the People Would Be the Times or Between Clark and Hilldale
+      - id: lede
+        role: lede
+        draft: false
+        en: "The longest title on the record is an address: the block of the Sunset Strip between Clark Street, home of the Whisky a Go Go, and Hilldale, where a cheap diner called The Eating Affair had Love on its jukebox. Lee paints the street from life, the people on the pavement, the clubs, the crowd, and says goodbye to them as if he knows he won’t be back."
+        ru: "Самое длинное название на пластинке — это адрес. Квартал Сансет-Стрип между Кларк-стрит, где клуб Whisky a Go Go, и Хиллдейл, где в дешёвой забегаловке The Eating Affair в музыкальном автомате стояла пластинка Love. Ли рисует эту улицу с натуры: людей на тротуаре, ночные клубы, публику — и прощается с ними, словно знает, что больше сюда не вернётся."
+      - id: stuart-tempo
+        role: quote
+        draft: false
+        en: "Arthur told him to push the tempo because Bryan was dragging on the fast songs, “and on ‘Between Clark and Hilldale’ even more.” Now: “It sounds horrible. To me, anyway.”"
+        ru: "Артур велел гнать темп: Брайан, мол, тянет все быстрые песни. «А на этой — гнать ещё сильнее». И теперь: «Звучит ужасно. По крайней мере, для меня»."
+        lens: stuart-ware
+      - id: stuart-listen
+        role: quote
+        draft: false
+        en: Can he listen to the album now? “Still ‘no’, and probably always will be.”
+        ru: Может ли он слушать этот альбом сейчас? «До сих пор нет. И, наверное, никогда».
+        lens: stuart-ware
+      - id: echols-cafe
+        role: quote
+        draft: false
+        en: Arthur called the place not The Eating Affair but The Slop Affair.
+        ru: Кафе Артур называл не The Eating Affair, а The Slop Affair — «Помойка».
+        lens: echols
+    differ: true
+
+  - id: live-and-let-live
+    kind: song
+    decay: 0.8
+    name: { en: "Live and Let Live", ru: "Live and Let Live" }
+    alias: { en: "Let Live and Live", ru: "Let Live and Live" }
+    song: { n: 8, side: b, title: "Live and Let Live", writer: "Arthur Lee", length: "5:24" }
+    lenses:
+      - echols
+      - critics
+    visions: [ crystal, bars ]
+    art:
+      generated: true
+      layers:
+        - { file: live-and-let-live-v2-background.webp, alt: { en: "Two crowds of young people, Black and white, face each other across a cracked road", ru: "Две толпы молодых людей, чёрных и белых, стоят друг против друга через растрескавшуюся дорогу" } }
+        - { file: live-and-let-live-v2-group-left.webp, depth: 10, role: figure, alt: "" }
+        - { file: live-and-let-live-v2-group-right.webp, depth: 14, role: figure, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Side B · 2 · Arthur Lee
+        ru: Сторона B · 2 · Артур Ли
+      - id: title
+        role: title
+        draft: false
+        en: Live and Let Live
+        ru: Live and Let Live
+      - id: lede
+        role: lede
+        draft: false
+        en: "The song opens with an image fans and mockers still quote: snot dried on his trousers has turned to crystal. That was Lee’s humour, and from that joke comes a grim picture of a world where everyone fears everyone, splits into us and them and is ready to shoot. MacLean’s acoustic guitar and Echols’s electric lock together and won’t let go."
+        ru: "Песня начинается с образа, который до сих пор цитируют и поклонники, и насмешники: засохшая на штанах сопля превратилась в кристалл. Ли так шутил — и с этой шутки начинается мрачная картина мира, где все боятся всех, делятся на своих и чужих и готовы стрелять. Акустическая гитара Маклина и электрическая Эколса сцепляются и долго не отпускают друг друга."
+      - id: echols-dystopia
+        role: quote
+        draft: false
+        en: “It paints a picture of a dystopia, ruled by violence, mistrust and tribalism.”
+        ru: «Это картина антиутопии, где правят насилие, недоверие и деление на своих и чужих».
+        lens: echols
+      - id: bell
+        role: quote
+        draft: false
+        en: "Andy Bell of Ride loves the album but couldn’t forgive that: “The greatest album in the world wouldn’t mention snot.”"
+        ru: "Энди Белл из Ride любит альбом, но этого простить не смог: «Величайший альбом в истории не стал бы петь про сопли»."
+        lens: critics
+    differ: true
+
+  - id: the-good-humor-man
+    kind: song
+    decay: 0.2
+    name: { en: "The Good Humor Man", ru: "The Good Humor Man" }
+    song: { n: 9, side: b, title: "The Good Humor Man He Sees Everything Like This", writer: "Arthur Lee", length: "3:00" }
+    lenses:
+      - echols
+      - stuart-ware
+    visions: [ ice-cream, sun ]
+    art:
+      generated: true
+      layers:
+        - { file: the-good-humor-man-v1-street.webp, alt: { en: "Children with ice-cream cones crowd round an ice-cream van on a sunny street, drawn like a child’s crayon picture", ru: "Дети с рожками мороженого толпятся у фургона мороженщика на солнечной улице, нарисованной как детский рисунок мелками" } }
+        - { file: the-good-humor-man-v1-truck.webp, depth: 6, alt: "" }
+        - { file: the-good-humor-man-v1-children.webp, depth: 12, role: figure, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Side B · 3 · Arthur Lee
+        ru: Сторона B · 3 · Артур Ли
+      - id: title
+        role: title
+        draft: false
+        en: The Good Humor Man He Sees Everything Like This
+        ru: The Good Humor Man He Sees Everything Like This
+      - id: lede
+        role: lede
+        draft: false
+        en: After the dystopia, childhood. Good Humor is the ice-cream van that drives through American streets in summer, and its driver sees everyone and everything. The strings are plucked, the orchestra is light as an old film, and Lee sings like a jazz singer. For three minutes the page remembers that the world can be kind.
+        ru: После антиутопии — детство. Good Humor — это фургончик с мороженым, который летом объезжает американские кварталы, а его продавец видит всех и всё. Струнные пощипывают, оркестр звучит легко, как в старом кино, и Ли поёт, как джазовый певец. На три минуты страница вспоминает, что мир бывает добрым.
+      - id: echols-moody
+        role: quote
+        draft: false
+        en: "Its root is [[jazz|jazz]] vocalese: “This song is a beautifully written homage to James Moody and King Pleasure.”"
+        ru: "Корень песни — [[jazz|джазовый]] вокализ: «Это посвящение Джеймсу Муди и Кингу Плежеру»."
+        lens: echols
+      - id: stuart-suit
+        role: quote
+        draft: false
+        en: Arthur teased Bryan, “Why do you always write about happy shit?”, and called Bryan’s white suit his “Good Humor Man suit”.
+        ru: "Артур дразнил Брайана: «Почему ты всё время пишешь про счастливую хрень?» — а белый костюм Брайана прозвал «костюмом мороженщика»."
+        lens: stuart-ware
+    differ: true
+
+  - id: bummer-in-the-summer
+    kind: song
+    decay: 0.75
+    name: { en: "Bummer in the Summer", ru: "Bummer in the Summer" }
+    alias: { en: "Summer in the Bummer", ru: "Summer in the Bummer" }
+    song: { n: 10, side: b, title: "Bummer in the Summer", writer: "Arthur Lee", length: "2:20" }
+    lenses:
+      - echols
+    differ: false
+    visions: [ sun, guitar ]
+    art:
+      generated: true
+      layers:
+        - { file: bummer-in-the-summer-v1-porch.webp, alt: { en: "A guitar leans on a porch rail while a woman in a summer dress walks away down the path", ru: "Гитара прислонена к перилам веранды, а женщина в летнем платье уходит по тропинке" } }
+        - { file: bummer-in-the-summer-v1-guitar.webp, depth: 6, alt: "" }
+        - { file: bummer-in-the-summer-v1-woman.webp, depth: 12, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Side B · 4 · Arthur Lee
+        ru: Сторона B · 4 · Артур Ли
+      - id: title
+        role: title
+        draft: false
+        en: Bummer in the Summer
+        ru: Bummer in the Summer
+      - id: lede
+        role: lede
+        draft: false
+        en: "The shortest and strangest song on the album. It starts as bright country, falls into a Bo Diddley beat out of fifties [[rhythm-and-blues|rhythm and blues]], and Lee fires the words off in bursts, like Dylan. He wants her to stay, she wants to be free, and he lets her go: he has no claim on her."
+        ru: "Самая короткая и самая странная песня альбома. Начинается как бодрое кантри, проваливается в ритм Бо Диддли из [[rhythm-and-blues|ритм-н-блюза]] пятидесятых, и Ли выпаливает слова очередями, как Дилан. Он хочет верности, она хочет свободы, и он её отпускает: никаких прав на неё у него нет."
+      - id: echols-temptation
+        role: quote
+        draft: false
+        en: “It’s about a relationship strained by temptation.”
+        ru: «Это об отношениях, которые соблазн довёл до предела».
+        lens: echols
+
+  - id: you-set-the-scene
+    kind: song
+    decay: 0.45
+    settle: true
+    name: { en: "You Set the Scene", ru: "You Set the Scene" }
+    alias: { en: "You Set the Stage", ru: "You Set the Stage" }
+    song: { n: 11, side: b, title: "You Set the Scene", writer: "Arthur Lee", length: "6:49" }
+    lenses:
+      - echols
+      - lee
+    visions: [ curtain, music-stand ]
+    art:
+      generated: true
+      layers:
+        - { file: you-set-the-scene-v2-stage.webp, alt: { en: "A conductor raises his baton before a full orchestra on a lit stage", ru: "Дирижёр поднимает палочку перед большим оркестром на освещённой сцене" } }
+        - { file: you-set-the-scene-v2-orchestra.webp, depth: 6, alt: "" }
+        - { file: you-set-the-scene-v2-conductor.webp, depth: 12, role: figure, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Side B · 5 · Arthur Lee
+        ru: Сторона B · 5 · Артур Ли
+      - id: title
+        role: title
+        draft: false
+        en: You Set the Scene
+        ru: You Set the Scene
+      - id: lede
+        role: lede
+        draft: false
+        en: "The last song, and the last words he thought would be his last. It was never written as one song: the bass player Ken Forssi, on his own initiative, stitched it together from three of Lee’s unfinished songs. It holds life and death, war, and the need to change. To those who think life is a game, Lee puts a question: do you like the part you are playing? The music grows from a quiet guitar into a major-key orchestra, brass racing against strings, and everything that came apart over the album comes back together."
+        ru: "Последняя песня — и последние слова, которые он считал последними. Её не писали как одну песню: басист Кен Форсси сам, по собственному почину, сшил её из трёх незаконченных песен Ли. В ней жизнь и смерть, война и то, что меняться необходимо. Тем, кто считает жизнь игрой, Ли задаёт вопрос: а нравится ли вам роль, которую вы играете? Музыка вырастает из тихой гитары в мажорный оркестр, медь несётся навстречу струнным, и всё, что весь альбом распадалось, собирается обратно."
+      - id: echols-profound
+        role: quote
+        draft: false
+        en: He counts the line about the part you play among the best ever written. “Arthur didn’t understand. He did not know.”
+        ru: Строку о роли он считает одной из лучших когда-либо написанных. «А Артур этого не понимал. Он не знал».
+        lens: echols
+      - id: lee-mine
+        role: quote
+        draft: false
+        en: “My thing was the Forever Changes album. That’s when I finally got a chance to do my thing and I wasn’t worried about whether the public was gonna buy it.”
+        ru: «Это была моя вещь — Forever Changes. Наконец я сделал своё и не думал, купит это публика или нет».
+        lens: lee
+      - id: last
+        role: text
+        draft: false
+        en: The young man who expected to be dead by twenty-six ends not with death but with change, in a major key, with an orchestra.
+        ru: Молодой человек, который ждал смерти к двадцати шести, заканчивает не смертью, а тем, что всё меняется. Мажором и оркестром.
+    differ: true
+
+  # ---------------------------------------------------------------- after
+  - id: after
+    kind: after
+    decay: 0
+    name: { en: "After", ru: "После" }
+    lenses:
+      - lee
+      - botnick
+    differ: true
+    visions: [ bars, newspaper ]
+    art:
+      generated: true
+      layers:
+        - { file: after-v1-street.webp, state: after, alt: { en: "A thin man in a long coat stands outside a club at night, its marquee lit in red", ru: "Худой человек в длинном пальто стоит ночью у клуба с красной подсветкой козырька" } }
+        - { file: after-v1-club.webp, depth: 6, state: after, alt: "" }
+        - { file: after-v1-man.webp, depth: 12, role: figure, state: after, alt: "" }
+        - { file: prison-v1-cell.webp, state: prison, alt: { en: "A man in grey prison clothes sits on a cell bunk, eyes closed, playing a guitar that is not there", ru: "Человек в серой тюремной робе сидит на нарах с закрытыми глазами и играет на гитаре, которой нет" } }
+        - { file: prison-v1-bunk.webp, depth: 6, state: prison, alt: "" }
+        - { file: prison-v1-man.webp, depth: 12, role: figure, state: prison, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: 1967–2001
+        ru: 1967–2001
+      - id: title
+        role: title
+        draft: false
+        en: The record that didn’t sell
+        ru: Пластинка, которая не продавалась
+      - id: lede
+        role: lede
+        draft: false
+        en: Forever Changes came out in November 1967, and America didn’t notice. On the Billboard chart it climbed to number 154 and vanished after ten weeks. In England it reached number 24 and stayed there for good, in the heads of musicians who would later call it theirs.
+        ru: Forever Changes вышел в ноябре 1967 года, и Америка его не заметила. В чарте Billboard он поднялся до 154-го места и через десять недель исчез. В Англии он дошёл до 24-го места и остался там навсегда — в головах музыкантов, которые потом будут называть его своим.
+      - id: breakup
+        role: text
+        draft: false
+        en: "The band didn’t survive it. In 1968 Lee broke up the line-up and built a new one around himself. Echols remembers how MacLean was fired: Holzman had secretly offered Bryan a solo deal, Bryan told Arthur, and Arthur said, “Fantastic, congratulations, Bryan… You’re fired!” MacLean left music and became a Christian."
+        ru: "Группа этого не пережила. В 1968 году Ли распустил состав и собрал новый вокруг себя. Как уволили Маклина, Эколс помнит так: Хольцман тайком предложил Брайану сольный контракт, Брайан рассказал об этом Артуру, и Артур ответил: «Потрясающе, поздравляю, Брайан. Ты уволен!» Маклин ушёл из музыки и стал христианином."
+      - id: lee-slap
+        role: quote
+        draft: false
+        en: “The last time I saw Bryan I slapped him. Not hard. I missed … He was a great musician, a great writer.”
+        ru: «В последний раз, когда я видел Брайана, я дал ему пощёчину. Не сильно. Промахнулся. А музыкант и автор он был отличный».
+        lens: lee
+      - id: botnick-roxy
+        role: quote
+        draft: false
+        en: “I was going to the Roxy, and coming out … this panhandler came up to me. It was a bum. And it was Arthur.”
+        ru: «Я выходил из клуба Roxy, и ко мне подошёл попрошайка. Бродяга. Это был Артур».
+        lens: botnick
+      - id: prison
+        role: text
+        draft: false
+        en: In the mid-nineties a gun went off outside Lee’s flat during a quarrel with a neighbour. Lee denied it, but he had earlier convictions, and under California’s three-strikes law he was given twelve years. While he was inside, Ken Forssi and Bryan MacLean both died, in 1998.
+        ru: В середине девяностых возле квартиры Ли во время ссоры с соседом прозвучал выстрел. Ли это отрицал, но у него были прежние судимости, и по калифорнийскому закону «трёх ударов» его приговорили к двенадцати годам. Пока он сидел, в 1998 году умерли Кен Форсси и Брайан Маклин.
+      - id: lee-head
+        role: quote
+        draft: false
+        en: “In prison, I hardly touched a guitar … It was a test to me to see if I could do all these songs totally in my head. That kept me going.”
+        ru: "«В тюрьме я почти не брал в руки гитару. Это была проверка: смогу ли я удержать все эти песни целиком в голове. Это меня и держало»."
+        lens: lee
+      - id: released
+        role: text
+        draft: false
+        en: "In December 2001 he was freed: a court found that the prosecution had acted improperly."
+        ru: "В декабре 2001 года его освободили: суд признал, что обвинение вело процесс нечестно."
+
+  # ---------------------------------------------------------------- return
+  - id: return
+    kind: return
+    decay: 0
+    name: { en: "The return", ru: "Возвращение" }
+    lenses:
+      - lee
+      - echols
+    visions: [ music-stand, notes ]
+    art:
+      generated: true
+      layers:
+        - { file: the-return-v1-hall.webp, alt: { en: "An older singer with a guitar performs with a band and a string section in an ornate hall; the audience applauds", ru: "Немолодой певец с гитарой выступает с группой и струнными в нарядном зале; публика аплодирует" } }
+        - { file: the-return-v1-performers.webp, depth: 6, alt: "" }
+        - { file: the-return-v1-audience.webp, depth: 12, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: 2002–2005
+        ru: 2002–2005
+      - id: title
+        role: title
+        draft: false
+        en: The orchestra comes back
+        ru: Оркестр возвращается
+      - id: lede
+        role: lede
+        draft: false
+        en: "The musicians of Baby Lemonade, who had played with him before prison, were waiting. From 2002 they played Forever Changes whole, first song to last, with strings and horns: across England, at London’s Royal Festival Hall, in Chicago, in New York. What Lee had once sung to Angel now sounded every night from a live orchestra behind him."
+        ru: Его ждали музыканты Baby Lemonade, которые играли с ним до тюрьмы. В 2002 году они вместе со струнными и духовыми стали играть Forever Changes целиком, от первой песни до последней, — по Англии, в лондонском Королевском фестивальном зале, в Чикаго, в Нью-Йорке. То, что Ли когда-то напевал Энджелу, теперь каждый вечер звучало живым оркестром за его спиной.
+      - id: lee-arm
+        role: quote
+        draft: false
+        en: “It was a little rough at first … Now I don’t want to go on stage without my orchestra. It’s like a third arm.”
+        ru: «Сначала было тяжеловато. А теперь я не хочу выходить на сцену без своего оркестра. Он мне как третья рука».
+        lens: lee
+      - id: parliament
+        role: text
+        draft: false
+        en: In 2002 the British MP Peter Bradley put a motion honouring Lee before the House of Commons, and Lee visited Parliament.
+        ru: В 2002 году британский депутат Питер Брэдли внёс в Палату общин резолюцию в честь Ли, и Ли побывал в парламенте.
+      - id: echols-bow
+        role: quote
+        draft: false
+        en: “Nothing in this life will ever match the look on Arthur’s face when members of Parliament … actually bowed down in honor of our group.”
+        ru: «Ничто в этой жизни не сравнится с лицом Артура, когда члены парламента поклонились в честь нашей группы».
+        lens: echols
+    differ: true
+
+  # ---------------------------------------------------------------- end
+  - id: end
+    kind: end
+    decay: 0
+    name: { en: "The end", ru: "Конец" }
+    lenses:
+      - echols
+    visions: [ lily ]
+    art:
+      generated: true
+      layers:
+        - { file: the-end-v1-memphis-dawn.webp, alt: { en: "Dawn over a river city and its bridge, seen through a window; a vase of daisies on the sill", ru: "Рассвет над городом на реке и мостом, вид из окна; на подоконнике ваза с ромашками" } }
+        - { file: the-end-v1-window.webp, depth: 6, alt: "" }
+        - { file: the-end-v1-flowers.webp, depth: 12, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: 2006 · Memphis
+        ru: 2006 · Мемфис
+      - id: title
+        role: title
+        draft: false
+        en: Where he was born
+        ru: Там, где он родился
+      - id: lede
+        role: lede
+        draft: false
+        en: "In 2006 Lee was found to have leukaemia. He had no health insurance, and friends put on a benefit for him: on 23 June at the Beacon Theatre in New York, Robert Plant played. Into “Hey Joe”, the song with which Love had once won Holzman over, Plant wove a line from “Nature Boy”: the greatest thing is just to love and be loved in return."
+        ru: "В 2006 году у Ли нашли лейкемию. Медицинской страховки у него не было, и друзья устроили для него концерт: 23 июня в нью-йоркском театре «Бикон» играл Роберт Плант. В «Hey Joe», песню, с которой Love когда-то покорили Хольцмана, Плант вплёл строку из «Nature Boy»: самое главное — любить и быть любимым."
+      - id: death
+        role: text
+        draft: false
+        en: Arthur Lee died on 3 August 2006 in Memphis, the city where he was born. He was sixty-one, and his wife Diane was with him. He lived thirty-five years longer than he had promised himself when he wrote his last words.
+        ru: Артур Ли умер 3 августа 2006 года в Мемфисе, в городе, где родился. Ему был шестьдесят один год, рядом была его жена Дайан. Он прожил на тридцать пять лет дольше, чем обещал себе, когда писал последние слова.
+      - id: echols-hospital
+        role: quote
+        draft: false
+        en: "“I’d just been at the hospital in Memphis with him. I got back to Los Angeles, and Diane called to say he had passed.” In the hospital Arthur had asked him: “Why don’t you guys do this until I’m ready to continue?”"
+        ru: "«Я только что был у него в больнице в Мемфисе. Вернулся в Лос-Анджелес, и Дайан позвонила: его не стало». А в больнице Артур успел попросить: «Поиграйте это без меня, пока я не буду готов продолжить»."
+        lens: echols
+      - id: forever
+        role: line
+        draft: false
+        en: The world changes. Forever changes.
+        ru: Мир меняется. Forever changes.
+    differ: false
+
+  # ---------------------------------------------------------------- echoes
+  - id: echoes
+    kind: echoes
+    decay: 0
+    name: { en: "Echoes", ru: "Отголоски" }
+    lenses:
+      - critics
+      - echols
+    visions: [ record, eye ]
+    art:
+      generated: true
+      layers:
+        - { file: you-set-the-scene-v1-stage.webp, state: orchestra, alt: { en: "An orchestra plays under warm stage lights, a conductor seen from behind", ru: "Оркестр играет под тёплыми огнями сцены, дирижёр виден со спины" } }
+        - { file: you-set-the-scene-v1-orchestra.webp, state: orchestra, depth: 6, alt: "" }
+        - { file: you-set-the-scene-v1-conductor.webp, state: orchestra, depth: 12, role: figure, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: From 1968 to now
+        ru: С 1968 года до наших дней
+      - id: title
+        role: title
+        draft: false
+        en: The album that didn’t end
+        ru: Альбом, который не кончился
+      - id: lede
+        role: lede
+        draft: false
+        en: The record that didn’t sell at home became one of the most revered in [[rock-n-roll|rock]] history. Rolling Stone put it at number 40 among the 500 greatest albums; it is in the Grammy Hall of Fame and in the Library of Congress’s National Recording Registry.
+        ru: Пластинка, которая не продавалась дома, стала одной из самых почитаемых в истории [[rock-n-roll|рока]]. Rolling Stone поставил её на сороковое место среди пятисот величайших альбомов, она в Зале славы «Грэмми» и в Национальном реестре звукозаписей Библиотеки Конгресса.
+      - id: influence
+        role: text
+        draft: false
+        en: Its deepest roots grew in England. Led Zeppelin, Echo and the Bunnymen, and Siouxsie and the Banshees named Love among their influences, and the Clash, Botnick says, were crazy about this album.
+        ru: Глубже всего она проросла в Англии. Led Zeppelin, Echo and the Bunnymen, Siouxsie and the Banshees называли Love среди тех, кто на них повлиял. The Clash, по словам Ботника, были от этого альбома без ума.
+      - id: bell
+        role: quote
+        draft: false
+        en: “It’s a dark album, and good music can be dark and still uplifting. Love were on the front line.”
+        ru: «Это тёмный альбом, а хорошая музыка может быть тёмной и всё равно поднимать дух. Love были на передовой».
+        lens: critics
+      - id: bell-who
+        role: caption
+        draft: false
+        en: Andy Bell, guitarist of Ride
+        ru: Энди Белл, гитарист Ride
+      - id: screen
+        role: text
+        draft: false
+        en: “Alone Again Or” plays in Wes Anderson’s “Bottle Rocket” and at the end of the first season of “Russian Doll”. And Johnny Echols still plays the whole album with his Love Band.
+        ru: «Alone Again Or» звучит в «Бутылочной ракете» Уэса Андерсона и в финале первого сезона «Жизни на повторе». А Джонни Эколс до сих пор играет альбом целиком со своей Love Band.
+      - id: echols-on
+        role: quote
+        draft: false
+        en: “Forever Changes could only have happened in Los Angeles. And only at that particular moment in time.”
+        ru: «Forever Changes мог случиться только в Лос-Анджелесе. И только в тот самый момент».
+        lens: echols
+    differ: true
+
+  # ---------------------------------------------------------------- lee
+  - id: lee
+    kind: lee
+    decay: 0
+    name: { en: "Arthur Lee mode", ru: "Режим Артура Ли" }
+    visions: [ eye, siren, telephone ]
+    art:
+      generated: true
+      layers:
+        - { file: lee-mode-shadow-v1.webp, depth: 4, fit: { x: -27, scale: 0.96 }, alt: { en: "Figures that are not there, standing in the dark", ru: "Фигуры, которых нет, стоят в темноте" } }
+        - { file: lee-mode-figure-walking-v2.webp, depth: 8, role: figure, fit: { x: 3, scale: 0.9 }, alt: "" }
+        - { file: lee-mode-figure-standing-v1.webp, depth: 14, role: figure, fit: { x: 30 }, alt: "" }
+      # Pictures the Arthur Lee mode places in the room itself (not stacked on the canvas).
+      overlays:
+        - { file: lee-mode-figure-standing-v1.webp, alt: { en: "A young man standing, looking aside", ru: "Молодой человек стоит и смотрит в сторону" } }
+        - { file: lee-mode-figure-standing-v2.webp, alt: { en: "A young man in a suit, arms folded", ru: "Молодой человек в костюме, руки скрещены" } }
+        - { file: lee-mode-figure-walking-v1.webp, alt: { en: "A young man walking past", ru: "Молодой человек проходит мимо" } }
+        - { file: lee-mode-figure-walking-v2.webp, alt: { en: "A young man in a patterned shirt walking past", ru: "Молодой человек в пёстрой рубашке проходит мимо" } }
+        - { file: lee-mode-figure-seated-v1.webp, alt: { en: "A young man sitting, looking into the distance", ru: "Молодой человек сидит и смотрит вдаль" } }
+        - { file: lee-mode-figure-seated-v2.webp, alt: { en: "A young man sitting cross-legged", ru: "Молодой человек сидит, скрестив ноги" } }
+        - { file: lee-mode-shadow-v1.webp, alt: { en: "A dark figure, barely there", ru: "Тёмная фигура, едва заметная" } }
+        - { file: lee-mode-shadow-v2.webp, alt: { en: "A dark figure in a coat, barely there", ru: "Тёмная фигура в пальто, едва заметная" } }
+        - { file: lee-mode-old-man-v1.webp, alt: { en: "An old man with a cane, standing still", ru: "Неподвижный старик с тростью" } }
+        - { file: lee-mode-old-man-v2.webp, alt: { en: "An old man in a coat, standing still", ru: "Неподвижный старик в пальто" } }
+        - { file: lee-mode-newspaper-v1.webp, alt: { en: "An open newspaper", ru: "Раскрытая газета" } }
+        - { file: lee-mode-newspaper-v2.webp, alt: { en: "A newspaper unfolding in the air", ru: "Газета разворачивается в воздухе" } }
+        - { file: lee-mode-red-telephone-v1.webp, alt: { en: "A red telephone, ringing", ru: "Красный телефон звонит" } }
+        - { file: lee-mode-red-telephone-v2.webp, alt: { en: "A red telephone, its receiver jumping", ru: "Красный телефон, трубка подпрыгивает" } }
+        - { file: lee-mode-face-pattern-v1.webp, alt: { en: "A face in the pattern", ru: "Лицо в узоре" } }
+        - { file: lee-mode-face-pattern-v2.webp, alt: { en: "A face in the pattern", ru: "Лицо в узоре" } }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Through his eyes
+        ru: Его глазами
+      - id: lede
+        role: lede
+        draft: false
+        en: From his hill above Los Angeles he saw the same city as everyone else, and saw sirens, death, delirium and beauty in it all at once. Take your phone, point the camera at your room, and see what this album does to it.
+        ru: С холма над Лос-Анджелесом он видел тот же город, что и все, — и видел в нём сирены, смерть, бред и красоту сразу. Возьмите телефон, наведите камеру на свою комнату и посмотрите, что с ней сделает этот альбом.
+      - id: privacy
+        role: line
+        draft: false
+        en: Everything happens on your phone. The camera picture goes nowhere.
+        ru: Всё происходит в вашем телефоне. Изображение с камеры никуда не уходит.
+    differ: false

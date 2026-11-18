@@ -1,0 +1,1869 @@
+# The caches: containers hidden across the museum, each with its own history.
+# hidden: card-image (x/y in % of the picture), card-text or chapter-step
+# (the words it hides in, per language), workshop (the drawer under an object).
+# lock/gives: keys (cabinet.yaml). contents: per copy of the museum (both, m, f).
+caches:
+  - id: sea-chest
+    kind: chest
+    name:
+      en: A Black sailor's sea chest
+      ru: Сундучок чернокожего моряка
+    place:
+      en: Philadelphia and the Atlantic
+      ru: Филадельфия и Атлантика
+    time:
+      en: "1810"
+      ru: 1810 год
+    story:
+      en: "Among a Black sailor's things, few were worth as much as a single sheet of paper. In 1796
+        Congress created the seaman's protection certificate to keep American sailors from being
+        seized into the British navy; for a man of color it was also proof that he was free. Sailors
+        kept the certificates themselves, while the sworn proofs filed to obtain them stayed in
+        customs records now held by the National Archives. A borrowed certificate could open a road
+        too: in 1838 Frederick Douglass walked to freedom with one."
+      ru: "Среди вещей чернокожего моряка мало что стоило дороже одного листа бумаги. В 1796 году Конгресс
+        ввёл охранное свидетельство моряка, чтобы американских матросов не забирали силой в
+        британский флот; чернокожему оно к тому же доказывало, что он свободен. Сами свидетельства
+        моряки держали при себе, а показания под присягой, поданные ради их получения, оставались в
+        таможенных делах, которые теперь хранит Национальный архив США. Открыть дорогу могло и
+        свидетельство, взятое взаймы: в 1838 году именно с таким ушёл на свободу Фредерик Дуглас."
+    hidden:
+      at: card-image
+      card: equiano
+      x: 60
+      y: 49
+    contents:
+      both:
+        - seamens-protection-dunbar
+      m:
+        - equiano-bahama-banks
+      f:
+        - seacole-british-hotel
+    cards:
+      - equiano
+      - mary-seacole
+      - paul-cuffe
+      - douglass-covey
+  - id: box-brown-box
+    kind: box
+    name:
+      en: Henry Box Brown's box
+      ru: Ящик Генри «Бокса» Брауна
+    place:
+      en: Richmond, Virginia, to Philadelphia
+      ru: Из Ричмонда (Виргиния) в Филадельфию
+    time:
+      en: March 1849
+      ru: март 1849 года
+    story:
+      en: On 23 March 1849 friends in Richmond, Virginia, sealed Henry Brown into a wooden box and sent it
+        by rail to Philadelphia. About twenty-six hours later the box was opened at the office of
+        the Pennsylvania Anti-Slavery Society, and Brown rose out of it alive and free. William
+        Still was among the witnesses.
+      ru: 23 марта 1849 года друзья в Ричмонде (Виргиния) запечатали Генри Брауна в деревянный ящик и
+        отправили поездом в Филадельфию. Примерно через двадцать шесть часов ящик вскрыли в конторе
+        Пенсильванского антирабовладельческого общества, и Браун поднялся из него живым и свободным.
+        Среди свидетелей был Уильям Стилл.
+    hidden:
+      at: chapter-step
+      chapter: v2
+      anchor:
+        en: logged hundreds of fugitives
+        ru: вносил в свой журнал сотни беглецов
+    gives:
+      - brass-key
+    contents:
+      both:
+        - box-brown-resurrection
+        - box-brown-narrative-1849
+    cards:
+      - underground-railroad-myths
+  - id: pullman-grip
+    kind: grip
+    name:
+      en: A Pullman porter's grip
+      ru: Саквояж пульмановского проводника
+    place:
+      en: Chicago and the southbound trains
+      ru: Чикаго и поезда, идущие на юг
+    time:
+      en: 1917–1919
+      ru: 1917–1919
+    story:
+      en: A grip like those Black Pullman porters carried out of Chicago on trains bound south. In their
+        luggage rode bundles of the Chicago Defender, the weekly that called Southerners north and
+        named 15 May 1917 the day of the Great Northern Drive. Some Southern towns tried to stop its
+        sale; the porters smuggled it in anyway, and by 1918 it sold 125,000 copies.
+      ru: Такой саквояж чернокожий проводник пульмановского вагона брал в рейс из Чикаго на юг. В багаже
+        ехали пачки «Чикаго дефендер» — еженедельника, который звал южан на Север и назначил на 15
+        мая 1917 года «Великий поход на Север». Некоторые южные города пытались запретить его
+        продажу, но проводники всё равно провозили газету, и к 1918 году она расходилась тиражом
+        125 000 экземпляров.
+    hidden:
+      at: card-text
+      card: chicago-defender
+      anchor:
+        en: Pullman porters
+        ru: проводники пульмановских спальных вагонов
+    contents:
+      both:
+        - negro-migration-during-the-war
+        - pullman-porter-union-station
+    cards:
+      - chicago-defender
+      - migration-series
+  - id: windrush-suitcase
+    kind: suitcase
+    name:
+      en: A Windrush passenger's suitcase
+      ru: Чемодан пассажира «Уиндраша»
+    place:
+      en: From the Caribbean to Tilbury, Essex
+      ru: С Карибских островов в Тилбери, Эссекс
+    time:
+      en: June 1948
+      ru: июнь 1948 года
+    story:
+      en: A suitcase like those carried ashore at Tilbury on 22 June 1948, when HMT Empire Windrush docked
+        with passengers from the Caribbean. Some were men who had served in the RAF during the war
+        and were coming back, Sam King among them. Those with nowhere to go, 236 by the official
+        count, were put up in the deep wartime shelter under Clapham South Tube station.
+      ru: С такими чемоданами сходили на берег в Тилбери 22 июня 1948 года, когда к причалу подошёл
+        «Эмпайр Уиндраш» с пассажирами с Карибских островов. Некоторые из них в войну служили в
+        Королевских ВВС и теперь возвращались — среди них Сэм Кинг. Тех, кому некуда было идти, — по
+        официальному счёту 236 человек — поселили в глубоком бомбоубежище военных лет под станцией
+        метро «Клэпем-Саут».
+    hidden:
+      at: card-text
+      card: windrush-scandal
+      anchor:
+        en: to Tilbury
+        ru: в порт Тилбери
+    contents:
+      both:
+        - empire-windrush
+      m:
+        - sam-king-plaque
+      f:
+        - clapham-south-shelter
+    cards:
+      - windrush-scandal
+      - claudia-jones
+  - id: record-crate
+    kind: crate
+    name:
+      en: A Bronx DJ's record crate
+      ru: Ящик с пластинками диджея из Бронкса
+    place:
+      en: 1520 Sedgwick Avenue, the Bronx
+      ru: Седжвик-авеню, 1520, Бронкс
+    time:
+      en: 11 August 1973
+      ru: 11 августа 1973 года
+    story:
+      en: A crate of records like the one Clive Campbell, DJ Kool Herc, brought to the recreation room of
+        1520 Sedgwick Avenue on 11 August 1973. His sister Cindy was throwing a party to pay for
+        back-to-school clothes and handed out invitations on index cards. He played mostly funk and
+        soul, and stretched the drum breaks with a trick he called the merry-go-round.
+      ru: С таким ящиком пластинок Клайв Кэмпбелл, он же диджей Кул Херк, спустился 11 августа 1973 года в
+        комнату отдыха дома 1520 по Седжвик-авеню. Его сестра Синди устраивала вечеринку, чтобы
+        заработать на одежду к школе, и раздавала приглашения на учётных карточках. Херк ставил в
+        основном фанк и соул и растягивал барабанные брейки приёмом, который называл «каруселью».
+    hidden:
+      at: workshop
+      object: amen
+    contents:
+      both:
+        - 1520-sedgwick-avenue
+        - kool-herc-hunts-point
+    cards:
+      - hip-hop
+      - cindy-campbell
+      - amen-break
+  - id: griot-bag
+    kind: bag
+    name:
+      en: A jeli's bag
+      ru: Сумка джели
+    place:
+      en: The court of Mansa Sulayman, Mali
+      ru: Двор мансы Сулеймана, Мали
+    time:
+      en: 1352–1353
+      ru: 1352–1353
+    story:
+      en: A bag like one a jeli, a Mande griot, might have carried at the court of Mali. In 1352 the
+        Moroccan traveller Ibn Battuta reached the capital of Mansa Sulayman and watched the court
+        interpreter Dugha play an instrument made of reeds with small calabashes beneath it. On
+        feast days poets in feathered bird costumes recited before the sultan.
+      ru: Такую сумку мог носить при дворе Мали джели — гриот народов манде. В 1352 году марокканский
+        путешественник Ибн Баттута добрался до столицы мансы Сулеймана и видел, как придворный
+        толмач Дуга играет на инструменте из тростника с маленькими тыквами-калебасами внизу. А по
+        праздникам перед султаном читали стихи поэты, наряженные в птичьи костюмы из перьев.
+    hidden:
+      at: card-image
+      card: sunjata
+      x: 47
+      y: 80
+    contents:
+      both:
+        - mandinka-kora
+        - malinke-bala
+    cards:
+      - sunjata
+      - talking-drums
+      - yeke-yeke
+  - id: schomburg-box
+    kind: archive-box
+    name:
+      en: Arturo Schomburg's archive box
+      ru: Архивная коробка Артуро Шомбурга
+    place:
+      en: 135th Street branch of the New York Public Library, Harlem, New York
+      ru: Отделение Нью-Йоркской публичной библиотеки на 135-й улице, Гарлем, Нью-Йорк
+    time:
+      en: "1926"
+      ru: 1926 год
+    story:
+      en: "Arturo Alfonso Schomburg, a Puerto Rican of African descent living in New York, spent his life
+        collecting books, pamphlets, manuscripts and prints by and about people of African descent,
+        and not only in the United States. In 1926 the New York Public Library bought his collection
+        for $10,000 with a grant from the Carnegie Corporation: 2,932 volumes and 1,124 pamphlets,
+        with prints and manuscripts besides. It went to the library's 135th Street branch in Harlem,
+        where it became the Division of Negro Literature, History and Prints."
+      ru: "Артуро Альфонсо Шомбург, пуэрториканец африканского происхождения, живший в Нью-Йорке, всю
+        жизнь собирал книги, брошюры, рукописи и гравюры, написанные людьми африканского
+        происхождения или рассказывающие о них, — и не только в Соединённых Штатах. В 1926 году
+        Нью-Йоркская публичная библиотека купила его собрание за 10 000 долларов на грант Корпорации
+        Карнеги: 2932 тома и 1124 брошюры, а ещё гравюры и рукописи. Собрание отправилось в
+        отделение библиотеки на 135-й улице в Гарлеме и стало там особым отделом литературы, истории и гравюр, посвящённых чернокожим."
+    hidden:
+      at: chapter-step
+      chapter: v5
+      anchor:
+        en: Latin verse
+        ru: латинские стихи
+    gives:
+      - iron-key
+    contents:
+      both:
+        - schomburg-portrait
+        - wheatley-poems-1773
+        - juan-latino-austriad
+    cards:
+      - phillis-wheatley
+      - juan-latino
+  - id: inventors-strongbox
+    kind: strongbox
+    name:
+      en: The Patent Office strongbox
+      ru: Несгораемый ящик Патентного ведомства
+    place:
+      en: United States Patent Office, Washington, D.C.
+      ru: Патентное ведомство США, Вашингтон
+    time:
+      en: 1877–1913
+      ru: 1877–1913 годы
+    story:
+      en: "The records of the United States Patent Office noted an inventor's nationality but never his or
+        her race, so no one could simply count the patents granted to Black inventors. Henry E.
+        Baker, who joined the office in Washington as a copyist in 1877 and rose to assistant
+        examiner, set out to do it by hand: he sent letter after letter to patent attorneys, company
+        owners, newspaper editors and Black community leaders asking for names. In 1913 he reported
+        some 800 patents verified as belonging to Black inventors. This box keeps three such
+        patents, from the electric lamp to the front door."
+      ru: "В записях Патентного ведомства США отмечали, из какой страны изобретатель, но никогда не
+        отмечали его расу, поэтому сосчитать патенты чернокожих изобретателей было попросту нельзя.
+        Генри Э. Бейкер, пришедший в вашингтонское ведомство переписчиком в 1877 году и
+        дослужившийся до помощника эксперта, взялся сделать это вручную: письмо за письмом он
+        рассылал патентным поверенным, владельцам компаний, редакторам газет и лидерам чернокожих
+        общин и просил назвать имена. В 1913 году он сообщил примерно о 800 проверенных патентах
+        чернокожих изобретателей. В этом ящике хранятся три таких патента — от электрической лампы
+        до входной двери."
+    # On a card of both copies: Lewis Latimer's card is in the male copy only.
+    hidden:
+      at: card-text
+      card: garrett-morgan
+      anchor:
+        en: patented it in 1914
+        ru: в 1914 году запатентовал его
+    lock: iron-key
+    contents:
+      both:
+        - latimer-carbons-patent
+        - morgan-traffic-signal-patent
+        - brown-home-security-patent
+    cards:
+      - lewis-latimer
+      - garrett-morgan
+      - marie-van-brittan-brown
+  - id: benin-expedition-trunk
+    kind: trunk
+    name:
+      en: A tin trunk like those of the Benin expedition
+      ru: Жестяной сундук вроде тех, что возили с собой участники бенинского похода
+    place:
+      en: Benin City
+      ru: Бенин-Сити
+    time:
+      en: February 1897
+      ru: февраль 1897 года
+    story:
+      en: A tin trunk like those the officers of the Benin expedition took home in 1897. In January of
+        that year a British party bound for Benin City was ambushed, and almost all of its members
+        were killed; in February a large British force marched on the city in reprisal, captured it
+        and burned it. The works of art of the royal court were gathered up as spoils of war. Many
+        were shared out among officers and other servicemen as booty, and many more were sold to
+        defray the cost of the campaign, and so they scattered into the museums of Europe and America.
+      ru: "Такой жестяной сундук офицеры бенинского похода увозили домой в 1897 году. В январе того года
+        британский отряд, направлявшийся в Бенин-Сити, попал в засаду, и почти все его участники
+        погибли. В феврале в отместку на город двинулось большое британское войско; Бенин-Сити взяли и
+        сожгли. Произведения искусства царского двора собрали как военную добычу, и дальше их судьбы
+        разошлись: многое поделили между офицерами и рядовыми как трофеи, а ещё больше продали, чтобы
+        покрыть расходы на войну. Так бенинские вещи и рассеялись по музеям Европы и Америки."
+    hidden:
+      at: country
+      country: nigeria
+      anchor:
+        en: British troops attacked
+        ru: напали британские войска
+    gives:
+      - bronze-key
+    contents:
+      both:
+        - granville-oba-compound-1897
+    cards:
+      - benin-bronzes
+      - queen-idia
+  - id: ovonramwen-plate-case
+    kind: case
+    name:
+      en: A photographer's plate case like Jonathan Adagogo Green's
+      ru: Ящик для фотопластинок вроде того, с которым работал Джонатан Адагого Грин
+    place:
+      en: The yacht Ivy, on the way to Calabar
+      ru: Яхта «Айви» на пути в Калабар
+    time:
+      en: "1897"
+      ru: 1897 год
+    story:
+      en: "A plate case like those the photographers of the 1890s carried, Jonathan Adagogo Green among
+        them. In 1897 Green photographed Oba Ovonramwen on board the British government yacht Ivy: the
+        king sits in a wicker chair with shackles on his ankles, on his way into exile at Calabar. He
+        never saw Benin City again. He died in exile in January 1914, and that same year his son
+        returned to Benin City and was crowned Oba Eweka II. Some of the royal treasures that West
+        Africa lost in those years have only lately come back: on 9 November 2021 France signed over
+        to the Republic of Benin twenty-six royal treasures of Abomey."
+      ru: "С таким ящиком для фотопластинок ездили фотографы 1890-х, и среди них Джонатан Адагого Грин. В
+        1897 году Грин сфотографировал оба Овонрамвена на борту британской правительственной яхты
+        «Айви»: царь сидит в плетёном кресле, на ногах у него кандалы, а везут его в ссылку, в
+        Калабар. Бенин-Сити он больше не увидел. Овонрамвен умер в изгнании в январе 1914 года, а в
+        том же году его сын вернулся в Бенин-Сити и был коронован как оба Эвека II. Кое-что из царских
+        сокровищ, утраченных Западной Африкой в те годы, вернулось совсем недавно: 9 ноября 2021 года
+        Франция подписала передачу Республике Бенин двадцати шести царских сокровищ Абомея."
+    hidden:
+      at: factoid
+      fact: fx-obj-0031
+      anchor:
+        en: the transfer of ownership
+        ru: права собственности
+    lock: bronze-key
+    gives:
+      - leopard-key
+    contents:
+      both:
+        - green-ovonramwen-ivy-1897
+    cards:
+      - agojie
+      - benin-bronzes
+  - id: festac-despatch-case
+    kind: case
+    name:
+      en: A despatch case like those that carried the letters about Idia's mask
+      ru: Дипломатический портфель вроде тех, в которых возили письма о маске Идии
+    place:
+      en: Lagos and London
+      ru: Лагос и Лондон
+    time:
+      en: 1974–1977
+      ru: 1974–1977
+    story:
+      en: A despatch case like those in which letters about Queen Idia's mask went between Lagos and
+        London in the 1970s. For FESTAC, the Second World Black and African Festival of Arts and
+        Culture held in Lagos in 1977, Nigeria chose as its emblem the ivory pendant mask of Idia that
+        colonial troops had looted from Benin City and that the British Museum held. Nigeria asked the
+        museum to return the mask, or at least to lend it for the festival, and brought the matter
+        before UNESCO, but London would agree to neither. So Nigeria had copies carved by artists of
+        Benin City, and during the festival Idia's face looked down on Lagos from flags, banners and
+        lamp posts.
+      ru: В таких дипломатических портфелях в 1970-е годы ходили между Лагосом и Лондоном письма о маске
+        царицы Идии. Нигерия готовилась принять в Лагосе ФЕСТАК — Второй всемирный фестиваль
+        чернокожих и африканских искусств и культуры, назначенный на 1977 год, — и выбрала ему
+        эмблемой ту самую подвесную маску Идии из слоновой кости, которую колониальные войска вывезли
+        из Бенин-Сити и которая хранилась в Британском музее. Нигерия просила музей вернуть маску, а
+        если не вернуть, то хотя бы дать её на время фестиваля, и даже вынесла этот вопрос в ЮНЕСКО,
+        но Лондон не согласился ни на то, ни на другое. Тогда Нигерия заказала копии мастерам из
+        Бенин-Сити, и во время фестиваля лицо Идии смотрело на Лагос с флагов, полотнищ и фонарных
+        столбов.
+    hidden:
+      at: card-image
+      card: queen-idia
+      x: 41
+      y: 8
+    lock: leopard-key
+    gives:
+      - returned-key
+    contents:
+      both:
+        - met-iyoba-idia-pendant
+    cards:
+      - queen-idia
+      - benin-bronzes
+  - id: djenne-mud-pail
+    kind: tin
+    name:
+      en: A tin pail like those that carry mud to the Great Mosque of Djenné
+      ru: Жестяное ведро вроде тех, в которых носят глину к Большой мечети Дженне
+    place:
+      en: Djenné, Mali
+      ru: Дженне, Мали
+    time:
+      en: Every year before the rains
+      ru: каждый год перед дождями
+    story:
+      en: "A tin pail like those in which the people of Djenné carry mud to their Great Mosque. The mosque
+        is the largest mud-brick building in the world, and before every rainy season it needs a new
+        coat of mud, or the Sahel rains will wear it away. Thousands of townspeople come out for the
+        replastering, carrying buckets and jugs: by tradition women and girls fetch water to mix with
+        the clay, and men and boys climb the walls and lay on the new layer. The present building was
+        raised in 1907 on the site of the old mosque, and since 2016 UNESCO has listed it as World
+        Heritage in danger."
+      ru: "В таких жестяных вёдрах жители Дженне носят глину к своей Большой мечети. Это самое большое в
+        мире здание из сырцового кирпича, и перед каждым сезоном дождей его нужно заново обмазать
+        глиной, иначе сахельские ливни его размоют. На обмазку выходят тысячи горожан с вёдрами и
+        кувшинами, и роли расписаны издавна: женщины и девочки носят воду, чтобы замешивать глину, а
+        мужчины и мальчики взбираются на стены и кладут свежий слой. Нынешнее здание поднялось в 1907
+        году на месте старой мечети, а с 2016 года ЮНЕСКО числит его среди памятников всемирного
+        наследия, которым грозит опасность."
+    hidden:
+      at: card-image
+      card: djenne-mosque
+      x: 62
+      y: 51
+    contents:
+      both:
+        - fortier-djenne-ruins-1906
+    cards:
+      - djenne-mosque
+  - id: kente-stole-bag
+    kind: bag
+    name:
+      en: A garment bag like those that carry kente stoles to commencement
+      ru: Чехол для одежды вроде тех, в которых везут на выпускной палантин из кенте
+    place:
+      en: American campuses, from West Chester, Pennsylvania
+      ru: американские университеты, начиная с Уэст-Честера в Пенсильвании
+    time:
+      en: Since 1993
+      ru: с 1993 года
+    story:
+      en: A garment bag like those in which graduates carry a kente stole to commencement. Kente came to
+        the attention of most African Americans in 1958, when Kwame Nkrumah, the first prime minister
+        of independent Ghana, wore it to meet President Eisenhower at the White House, and in the
+        years of the civil rights movement it became a symbol of Black pride. In 1993 West Chester
+        University in Pennsylvania held what is generally taken to be the first kente graduation
+        ceremony. The custom spread from campus to campus, and today kente stoles are draped over
+        graduates' shoulders all across the country.
+      ru: В таком чехле выпускник везёт на торжественную церемонию свой палантин из кенте. Большинство
+        афроамериканцев впервые обратили внимание на эту ткань в 1958 году, когда Кваме Нкрума, первый
+        премьер-министр независимой Ганы, пришёл в ней в Белый дом на встречу с президентом
+        Эйзенхауэром; в годы борьбы за гражданские права кенте стала знаком чёрной гордости. В 1993
+        году Университет Уэст-Честера в Пенсильвании устроил, как принято считать, первую выпускную
+        церемонию с кенте. Обычай пошёл от кампуса к кампусу, и теперь палантины из кенте ложатся на
+        плечи выпускников по всей стране.
+    hidden:
+      at: card-text
+      card: kente
+      anchor:
+        en: a fixture of Black graduations
+        ru: выпускных церемониях чернокожих студентов
+    contents:
+      both:
+        - asante-kente-met
+    cards:
+      - kente
+  - id: timbuktu-manuscript-chest
+    kind: chest
+    name:
+      en: A metal chest like those that carried Timbuktu's manuscripts to Bamako
+      ru: Металлический сундук вроде тех, в которых рукописи Томбукту увозили в Бамако
+    place:
+      en: From Timbuktu to Bamako
+      ru: Из Томбукту в Бамако
+    time:
+      en: 2012–2013
+      ru: 2012–2013
+    story:
+      en: A metal chest like those in which the manuscripts of Timbuktu escaped from the city. In April
+        2012 Timbuktu fell to armed rebels, and the keepers of its private libraries, aware of the
+        danger, decided to smuggle their books south to Bamako. Metal chests the size of a large
+        suitcase, the kind widely used in Africa for packing clothes, suited the purpose best;
+        couriers took them by road and down the Niger by boat, past armed checkpoints, until January
+        2013. When the militants left Timbuktu that January they set fire to the Ahmed Baba
+        Institute's building, but by then at least 95 per cent of the city's manuscripts were safe.
+      ru: В таких металлических сундуках рукописи Томбукту спаслись из города. В апреле 2012 года Томбукту
+        захватили вооружённые повстанцы, и хранители частных библиотек, понимая, чем это грозит их
+        книгам, решили тайком вывезти их на юг, в Бамако. Лучше всего для этого подошли металлические
+        сундуки величиной с большой чемодан — в Африке в них обычно складывают одежду. Курьеры везли
+        их по дорогам и на лодках вниз по Нигеру, мимо вооружённых постов, и последние добрались до
+        места в январе 2013 года. Уходя тогда из Томбукту, боевики подожгли здание Института Ахмеда
+        Бабы, но к тому времени не меньше 95 процентов рукописей города были уже в безопасности.
+    hidden:
+      at: country
+      country: mali
+      anchor:
+        en: centre of Islamic learning
+        ru: центром исламской учёности
+    contents:
+      both:
+        - timbuktu-heavens-1733
+      m:
+        - ahmad-baba-miraj-al-suud
+      f:
+        - timbuktu-emancipation-1726
+    cards:
+      - timbuktu-manuscripts
+  - id: black-star-line-tin
+    kind: tin
+    name:
+      en: A tin like those that kept Black Star Line shares
+      ru: Жестянка вроде тех, где хранили акции «Блэк Стар Лайн»
+    place:
+      en: Harlem, New York, and the Atlantic
+      ru: Гарлем, Нью-Йорк, и Атлантика
+    time:
+      en: 1919–1923
+      ru: 1919–1923 годы
+    story:
+      en: A tin like those in which followers of Marcus Garvey kept their shares in his shipping line. In
+        1919 Garvey, who had founded the Universal Negro Improvement Association, set up the Black
+        Star Line, a shipping company owned by Black people, and sold its shares at $5 apiece. Its
+        first ship was the Yarmouth, an old steamer built in 1887, which was to be renamed Frederick
+        Douglass. By 1922 the line was practically bankrupt, and in 1923 a jury found Garvey guilty of
+        mail fraud over the sale of its shares.
+      ru: В такой жестянке сторонники Маркуса Гарви держали акции его пароходной компании. В 1919 году
+        Гарви, основатель Всемирной ассоциации по улучшению положения негров, создал «Блэк Стар Лайн»
+        — судоходную линию, которой владели бы сами чернокожие, — и продавал её акции по пять долларов
+        за штуку. Первым её судном стал «Ярмут», старый пароход постройки 1887 года, который
+        собирались переименовать во «Фредерика Дугласа». К 1922 году линия была почти банкротом, а в
+        1923 году присяжные признали Гарви виновным в почтовом мошенничестве при продаже её акций.
+    hidden:
+      at: roots
+      artist: bob-marley
+      anchor:
+        en: lyrics of resistance
+        ru: текстами о сопротивлении
+    gives:
+      - ships-key
+    contents:
+      both:
+        - black-star-line-broadside-1921
+    cards:
+      - negro-world
+      - redemption-song
+  - id: sea-island-fanner-basket
+    leads: amistad-sea-chest
+    kind: basket
+    name:
+      en: A coiled basket like those of the Sea Islands
+      ru: Шитая корзина вроде тех, что делают на Морских островах
+    place:
+      en: The rice coast of South Carolina and Georgia
+      ru: Рисовое побережье Южной Каролины и Джорджии
+    time:
+      en: From the 1700s to today
+      ru: С XVIII века до наших дней
+    story:
+      en: "A coiled basket like those sewn on the Sea Islands and along the rice coast of South Carolina
+        and Georgia. On the rice plantations the grain could not have been processed without the
+        fanner, a wide winnowing tray: the threshed rice was thrown into the air, and the wind carried
+        the chaff away. The same basket was common in Senegambia, and enslaved Africans made it in
+        their new country from marsh rush, bound with strips of saw palmetto or splints of white oak.
+        Once coastal Highway 17 was paved and the Cooper River Bridge opened in 1929, basket makers
+        could sell straight to travellers, and their stands still line the road at Mount Pleasant."
+      ru: "Корзина, сшитая по спирали из травяного жгута, вроде тех, что шьют на Морских островах и по
+        всему рисовому побережью Южной Каролины и Джорджии. На рисовых плантациях зерно невозможно
+        было обработать без веялки — широкого плоского подноса: обмолоченный рис подбрасывали в
+        воздух, и ветер уносил мякину. Точно такая же корзина была в ходу в Сенегамбии, и порабощённые
+        африканцы делали её на новой земле из болотного камыша, обматывая жгут полосками карликовой
+        пальмы или лучиной белого дуба. Когда прибрежное шоссе 17 покрыли асфальтом, а в 1929 году
+        открыли мост через реку Купер, мастера стали продавать корзины прямо проезжающим, и их
+        прилавки до сих пор стоят вдоль дороги у Маунт-Плезанта."
+    hidden:
+      at: feature
+      feature: sea-lion-girls
+      scene: ring
+      block: book
+      anchor:
+        en: Georgia Sea Islands
+        ru: Морских островов Джорджии
+    clue:
+      en: "At the bottom of the basket lies a slip of paper in a careful hand: “The griot who keeps this
+        museum’s cluster writes notes in the margins of its Card objects, the margins every Kubernetes
+        object keeps in its metadata. The Card amistad-case has such a note. Read it, and the word
+        written there will open the next lock.”"
+      ru: "На дне корзины лежит записка, выведенная аккуратным почерком: «Гриот, который хранит кластер
+        этого музея, пишет заметки на полях его объектов Card — на тех полях, что есть в метаданных у
+        любого объекта Kubernetes. Такая заметка есть и у карточки amistad-case. Прочтите её, и слово,
+        записанное там, откроет следующий замок»."
+    lock: ships-key
+    contents:
+      both:
+        - carolina-rice-fanner-basket
+        - senegal-rice-fanner-basket
+    cards:
+      - gullah
+  - id: amistad-sea-chest
+    kind: chest
+    name:
+      en: A sea chest like those packed in Farmington in 1841
+      ru: Морской сундук вроде тех, что собирали в Фармингтоне в 1841 году
+    place:
+      en: Farmington, Connecticut, to Freetown, Sierra Leone
+      ru: Из Фармингтона (Коннектикут) во Фритаун (Сьерра-Леоне)
+    time:
+      en: 1841–1842
+      ru: 1841–1842 годы
+    story:
+      en: A sea chest like those packed in Farmington, Connecticut, in the autumn of 1841. That March the
+        Supreme Court had set the Amistad Africans free, and Farmington abolitionists sheltered them
+        while the Amistad Committee raised the money to send them home; the Africans themselves were
+        taken round New England to fundraising meetings and spoke before church audiences. Late in
+        1841 the 35 survivors sailed on the chartered ship Gentleman with a party of missionaries, and
+        in January 1842 they reached Freetown, Sierra Leone.
+      ru: Морской сундук вроде тех, что собирали в Фармингтоне (Коннектикут) осенью 1841 года. В марте
+        того года Верховный суд признал африканцев с «Амистада» свободными, и фармингтонские
+        аболиционисты приютили их, пока Комитет «Амистада» собирал деньги, чтобы отправить их домой;
+        самих африканцев возили по Новой Англии на собрания, где шёл сбор пожертвований, и они
+        выступали перед церковными общинами. В конце 1841 года тридцать пять уцелевших отплыли на
+        зафрахтованном судне «Джентльмен» вместе с группой миссионеров, а в январе 1842 года добрались
+        до Фритауна в Сьерра-Леоне.
+    hidden:
+      at: cluster
+      via: annotation
+      card: amistad-case
+      word: sengbe
+    gives:
+      - lighthouse-key
+    contents:
+      both:
+        - cinquez-sun-lithograph-1839
+    cards:
+      - amistad-case
+  - id: zong-papers-portfolio
+    kind: portfolio
+    name:
+      en: A portfolio like those that held the Zong papers
+      ru: Папка вроде тех, в которых лежали бумаги о «Зонге»
+    place:
+      en: The Caribbean Sea and London
+      ru: Карибское море и Лондон
+    time:
+      en: 1781–1783
+      ru: 1781–1783 годы
+    story:
+      en: A portfolio for papers like those Granville Sharp gathered about the Zong. Between 29 November
+        and 1 December 1781 the crew of the Liverpool slave ship Zong threw 132 African captives into
+        the sea, and the owners claimed them from their underwriters like any other insured cargo. The
+        underwriters refused to pay, and in 1783 the case came to court. Olaudah Equiano told Sharp
+        about it; Sharp had the hearing taken down and demanded that the Admiralty try the crew for
+        murder. Nobody was ever prosecuted.
+      ru: Папка для бумаг вроде тех, в которые Гренвилл Шарп собирал документы о «Зонге». С 29 ноября по 1
+        декабря 1781 года команда ливерпульского невольничьего судна «Зонг» выбросила в море 132
+        пленных африканца, а владельцы потребовали у страховщиков возмещения, как за любой
+        застрахованный груз. Страховщики платить отказались, и в 1783 году дело дошло до суда. Олауда
+        Эквиано рассказал о нём Шарпу; тот добился, чтобы слушание застенографировали, и потребовал от
+        Адмиралтейства судить команду за убийство. Под суд так никто и не попал.
+    hidden:
+      at: index
+      card: zong
+    lock: lighthouse-key
+    contents:
+      both:
+        - turner-slave-ship-1840
+    cards:
+      - zong
+      - granville-sharp
+      - equiano
+  - id: garifuna-carrying-basket
+    kind: basket
+    name:
+      en: A carrying basket like those of the Black Caribs of Saint Vincent
+      ru: Заплечная корзина вроде тех, что носили чёрные карибы Сент-Винсента
+    place:
+      en: Saint Vincent, Baliceaux and Roatán
+      ru: Сент-Винсент, Балисо и Роатан
+    time:
+      en: 1795–1797
+      ru: 1795–1797 годы
+    story:
+      en: A carrying basket like those the Black Carib women bear on their backs in Agostino Brunias’s
+        picture of Chatoyer’s family. The Garifuna fought the British for their land, and their
+        paramount chief Joseph Chatoyer died in 1795 in the Second Carib War. In 1796 the British
+        shipped more than four thousand of them to the small island of Baliceaux, where about half
+        died. In April 1797 the 2,026 survivors landed on Roatán, off Honduras, and the Garifuna of
+        Central America descend from them.
+      ru: Заплечная корзина вроде тех, что несут на спинах женщины чёрных карибов на картине Агостино
+        Бруниаса, где изображена семья Шатуайе. Гарифуна воевали с британцами за свою землю, и их
+        верховный вождь Жозеф Шатуайе погиб в 1795 году во Второй карибской войне. В 1796 году
+        британцы вывезли больше четырёх тысяч гарифуна на крошечный остров Балисо, и там умерла
+        примерно половина из них. В апреле 1797 года 2026 уцелевших высадились на острове Роатан у
+        берегов Гондураса, и от них ведут свой род гарифуна Центральной Америки.
+    hidden:
+      at: card-image
+      card: garifuna
+      x: 23
+      y: 67
+    contents:
+      both:
+        - chatoyer-five-wives-1796
+    cards:
+      - garifuna
+  - id: rio-sketch-portfolio
+    kind: portfolio
+    name:
+      en: A travelling artist’s portfolio like those carried through Rio in the 1820s
+      ru: Папка странствующего художника вроде тех, с которыми ходили по Рио в 1820-е годы
+    place:
+      en: Rio de Janeiro and Paris
+      ru: Рио-де-Жанейро и Париж
+    time:
+      en: 1820–1835
+      ru: 1820–1835 годы
+    story:
+      en: A portfolio like those European artists carried through Brazil in the 1820s. The English painter
+        Augustus Earle lived in Rio de Janeiro from 1820 to 1824 and painted two men at a game of
+        capoeira, though he titled the picture only “Negroes fighting”. Johann Moritz Rugendas, a
+        young German, came to Brazil in 1822 as draughtsman to Baron Langsdorff’s expedition, and the
+        Paris printer Engelmann published his Voyage pittoresque dans le Brésil between 1827 and 1835.
+        One of its lithographs, issued in 1835, shows the capoeira game, “or the dance of war”.
+      ru: Папка вроде тех, с которыми европейские художники странствовали по Бразилии в 1820-е годы.
+        Английский живописец Огастес Эрл жил в Рио-де-Жанейро с 1820 по 1824 год и написал двух
+        мужчин, играющих в капоэйру, хотя назвал картину просто «Негры дерутся». Молодой немец Иоганн
+        Мориц Ругендас приехал в Бразилию в 1822 году рисовальщиком экспедиции барона Лангсдорфа, а
+        парижский печатник Энгельман с 1827 по 1835 год выпускал его «Живописное путешествие по
+        Бразилии». На одной из литографий этой книги, вышедшей в 1835 году, — игра в капоэйру, «или
+        танец войны».
+    hidden:
+      at: card-text
+      card: capoeira
+      anchor:
+        en: across the Atlantic
+        ru: через Атлантику
+    contents:
+      both:
+        - earle-negroes-fighting-brazils
+      m:
+        - rugendas-negres-fond-de-cale
+      f:
+        - christiano-junior-vendors-1864
+    cards:
+      - capoeira
+  - id: clarkson-campaign-chest
+    kind: chest
+    name:
+      en: Thomas Clarkson’s campaign chest
+      ru: Агитационный сундук Томаса Кларксона
+    place:
+      en: British ports, and Wisbech, Cambridgeshire
+      ru: Британские порты и Уисбек, Кембриджшир
+    time:
+      en: 1787–1870
+      ru: 1787–1870 годы
+    story:
+      en: "In 1787 Thomas Clarkson became a founding member of the society for abolishing the slave trade,
+        and he went round British ports collecting West African goods from merchant ships: textiles,
+        seeds, dyes and leatherwork. He kept them in a chest made for the purpose, together with
+        leg-shackles and thumbscrews bought in a Liverpool shop, and carried it all over Britain to
+        show that Africa could trade in goods instead of people. In 1870 the chest was given to the
+        museum of Wisbech, the town where he was born."
+      ru: "В 1787 году Томас Кларксон стал одним из основателей общества за отмену работорговли и принялся
+        объезжать британские порты, собирая с торговых судов западноафриканские товары: ткани, семена,
+        красители, изделия из кожи. Всё это он хранил в сундуке, сделанном нарочно для этой цели,
+        вместе с ножными кандалами и тисками для пальцев, купленными в ливерпульской лавке, и возил
+        его по всей Британии, чтобы показать: Африка может торговать товарами, а не людьми. В 1870
+        году сундук передали в музей Уисбека — города, где Кларксон родился."
+    hidden:
+      at: chapter-step
+      chapter: v1
+      anchor:
+        en: turned to pictures
+        ru: взялись за изображения
+    contents:
+      both:
+        - clarkson-jamaica-scroll-portrait
+    cards:
+      - brookes
+      - wedgwood-medallion
+  - id: mcgrawville-student-trunk
+    leads: lembranca-steward-chest
+    kind: trunk
+    name:
+      en: A student's trunk like those carried to New York Central College
+      ru: Студенческий сундук — из тех, с какими приезжали в Нью-Йоркский центральный колледж
+    place:
+      en: New York Central College, McGrawville, New York
+      ru: Нью-Йоркский центральный колледж, Макгроувилл, штат Нью-Йорк
+    time:
+      en: 1849–1853
+      ru: 1849–1853
+    story:
+      en: A trunk like those students brought to New York Central College in McGrawville, a village in
+        upstate New York. Antislavery Baptists of the American Baptist Free Mission Society founded
+        it, and it took in Black and white students, young women as well as young men; it was also
+        among the first colleges in the country to hire Black professors. In 1849 Mahommah Gardo
+        Baquaqua enrolled there, an African who had been enslaved in Brazil and had escaped in New
+        York two years before, and he studied at McGrawville until 1853. Later the same school took in
+        a girl named Edmonia Lewis, who would grow up to be a sculptor.
+      ru: С такими сундуками студенты приезжали в Нью-Йоркский центральный колледж — в Макгроувилл,
+        деревню на севере штата Нью-Йорк. Основали колледж баптисты-аболиционисты из Американского
+        баптистского общества свободной миссии, и учиться туда принимали и чернокожих, и белых, и
+        юношей, и девушек; к тому же это был один из первых колледжей в стране, где преподавали
+        чернокожие профессора. В 1849 году сюда поступил Махомма Гардо Бакуакуа — африканец, которого
+        обратили в рабство в Бразилии и который двумя годами раньше бежал от хозяина в Нью-Йорке. В
+        Макгроувилле он проучился до 1853 года. А позже в ту же школу отдали девочку по имени Эдмония
+        Льюис, которой предстояло стать скульптором.
+    hidden:
+      at: atlas
+      lon: -76.095
+      lat: 42.5935
+    clue:
+      en: "Under the lid a curator has pinned a note: “Whatever the museum does not show, it keeps in the
+        storeroom. The inventory is not on these pages. It hangs in the cluster itself, in the
+        museum's own namespace, sankofa-museum, as a config map named storeroom. Ask the cluster to
+        get it for you, and read its data.”"
+      ru: "Под крышкой хранитель приколол записку: «Всё, чего музей не показывает, он держит в кладовой.
+        Опись кладовой не на этих страницах. Она висит в самом кластере, в собственном пространстве
+        имён музея, sankofa-museum, — это config map по имени storeroom. Попросите кластер достать её
+        (get) и прочтите, что лежит у неё в data»."
+    contents:
+      both:
+        - nycc-main-building-1849
+    cards:
+      - death-of-cleopatra-lewis
+  - id: lembranca-steward-chest
+    kind: chest
+    name:
+      en: A ship steward's chest like those aboard the Lembrança
+      ru: Сундук корабельного стюарда — вроде тех, что стояли на «Лембрансе»
+    place:
+      en: From Rio de Janeiro to New York
+      ru: Из Рио-де-Жанейро в Нью-Йорк
+    time:
+      en: "1847"
+      ru: 1847 год
+    story:
+      en: In Rio de Janeiro Mahommah Gardo Baquaqua spent two weeks in the slave market before a ship's
+        captain, Clemente José da Costa, bought him. On the captain's vessel, the Lembrança, whose
+        name is Portuguese for memory, Baquaqua rose to under-steward, and when the steward gave up
+        his post, “the keys of his office were entrusted to me”. In 1847 the ship carried a cargo of
+        coffee to New York. The first English word Baquaqua learned on board was “F-r-e-e”, and in New
+        York he ran. Abolitionists took up his case; when the courts would not set him free, they got
+        him out of jail and away to Boston, and from Boston he sailed for Haiti.
+      ru: В Рио-де-Жанейро Махомма Гардо Бакуакуа две недели простоял на невольничьем рынке, пока его не
+        купил капитан Клементе Жозе да Коста. На капитанском судне — оно называлось «Лембранса», что
+        по-португальски значит «память», — Бакуакуа дослужился до помощника стюарда, а когда стюард
+        оставил место, «ключи от его хозяйства доверили мне». В 1847 году судно повезло в Нью-Йорк
+        груз кофе. Первым английским словом, которое Бакуакуа выучил на борту, было «F-r-e-e» —
+        «свободен», и в Нью-Йорке он бежал. За его дело взялись аболиционисты; суд не захотел признать
+        его свободным, и тогда они вызволили Бакуакуа из тюрьмы и переправили в Бостон, а оттуда он
+        уплыл на Гаити.
+    hidden:
+      at: cluster
+      via: configmap
+      word: lembranca
+    clue:
+      en: "Among the steward's keys hangs a tag in the same hand as the inventory: “The last shelf is a
+        basket, and it went home to Brazil. Look for it among the countries.”"
+      ru: "Среди ключей стюарда висит бирка, подписанная тем же почерком, что и опись: «Последняя полка —
+        корзина, и она вернулась домой, в Бразилию. Ищите её среди стран»."
+    gives:
+      - storeroom-key
+    contents:
+      both:
+        - rugendas-marche-aux-negres
+    cards:
+      - cais-do-valongo
+  - id: baquaqua-bread-basket
+    kind: basket
+    name:
+      en: A bread basket like the one Baquaqua carried
+      ru: Хлебная корзина — вроде той, с которой ходил Бакуакуа
+    place:
+      en: Pernambuco, Brazil
+      ru: Пернамбуку, Бразилия
+    time:
+      en: 1845–1847
+      ru: 1845–1847
+    story:
+      en: "Mahommah Gardo Baquaqua was born around 1824 in Djougou, in present-day Benin; in 1845 he was
+        captured, carried across the Atlantic to Recife, in Pernambuco, and sold to a baker. The baker
+        sent him out to sell bread, first round the town, then out into the country, and in the
+        evening in the market till nine at night. When Baquaqua drank away the takings, his master
+        counted the basket and beat him. He tried to drown himself, and was sold again and sent south
+        to Rio de Janeiro. Nine years later, a free man, he told his story in a book printed in
+        Detroit: the only known account by a man enslaved in Brazil."
+      ru: "Махомма Гардо Бакуакуа родился около 1824 года в Джугу, на территории нынешнего Бенина. В 1845
+        году его захватили, через Атлантику привезли в Ресифи, в провинцию Пернамбуку, и продали
+        пекарю. Пекарь посылал его торговать хлебом: сначала по городу, потом по окрестным деревням, а
+        вечером — на рынке, до девяти часов. Однажды Бакуакуа пропил выручку, и хозяин, пересчитав,
+        что осталось в корзине, жестоко его избил. Бакуакуа пытался утопиться; его снова продали и
+        отправили на юг, в Рио-де-Жанейро. Девять лет спустя, уже свободным человеком, он рассказал
+        свою историю в книге, напечатанной в Детройте, — это единственное известное свидетельство
+        человека, бывшего рабом в Бразилии."
+    hidden:
+      at: country
+      country: brazil
+      anchor:
+        en: brought by the enslaved
+        ru: привезённых невольниками
+    lock: storeroom-key
+    contents:
+      both:
+        - baquaqua-biography-1854
+    cards:
+      - males-revolt-1835
+      - cais-do-valongo
+  - id: rumba-shipping-crate
+    kind: crate
+    name:
+      en: A rumbero's shipping crate
+      ru: Портовый ящик румберо
+    place:
+      en: The ports of Havana and Matanzas, Cuba
+      ru: Порты Гаваны и Матансаса, Куба
+    time:
+      en: Late 19th century
+      ru: конец XIX века
+    story:
+      en: A wooden shipping crate like those the first rumberos drummed on in Havana and Matanzas. Toward
+        the end of the nineteenth century people of many African backgrounds came to these port cities
+        looking for work, many of them as stevedores, and in their poor neighbourhoods a rumba meant
+        simply a party. At first they kept time on whatever lay to hand at home or at work, a drawer,
+        a table, a frying pan, spoons; then crates of different sizes became rumba's first true
+        instruments, and the two hardwood sticks of the clave set the rhythm. Over time conga drums
+        took the crates' place, and in 2016 UNESCO inscribed rumba in Cuba on its list of the
+        intangible cultural heritage of humanity.
+      ru: "На таком деревянном портовом ящике отбивали ритм первые румберо Гаваны и Матансаса. В конце XIX
+        века в эти портовые города стекались в поисках заработка люди самых разных африканских корней
+        — многие из них нанимались грузчиками, — и в их бедных кварталах слово «румба» означало
+        попросту праздник, вечеринку. Поначалу ритм выстукивали на том, что подворачивалось под руку
+        дома или на работе: на выдвижном ящике, на столе, на сковороде, ложками. Потом их место заняли
+        ящики разной величины — они и стали первыми настоящими инструментами румбы, а ритм ей задавали
+        две палочки из твёрдого дерева, клаве. Со временем ящики уступили место барабанам-конга, а в
+        2016 году ЮНЕСКО внесла кубинскую румбу в список нематериального культурного наследия
+        человечества."
+    hidden:
+      at: workshop
+      object: clave
+    contents:
+      both:
+        - havana-wharf-1899
+        - claves-and-conga
+    cards:
+      - independance-cha-cha
+  - id: palmares-eckhout-basket
+    kind: basket
+    name:
+      en: A basket like the African one in Albert Eckhout's painting
+      ru: Корзина вроде африканской с картины Альберта Экхаута
+    place:
+      en: Pernambuco, Dutch Brazil
+      ru: Пернамбуку, Голландская Бразилия
+    time:
+      en: 1630–1654
+      ru: 1630–1654 годы
+    story:
+      en: A basket like the African one that Albert Eckhout put into the hand of a woman he painted in
+        Brazil. In 1630 the Dutch West India Company seized the sugar-rich captaincy of Pernambuco,
+        and in 1637 Johan Maurits of Nassau-Siegen arrived to govern the colony, bringing the painters
+        Eckhout and Frans Post with him. The Company had taken the sugar industry from the Portuguese,
+        and the work on its plantations was forced out of enslaved people. Inland, in the hills, lay
+        Palmares, the refuge of those who fled, and the Dutch sent expeditions against it just as the
+        Portuguese did. In 1654 the Dutch surrendered Recife, and that same year Johan Maurits gave
+        Eckhout's paintings to King Frederick III of Denmark.
+      ru: Такую корзину — африканскую, как считают историки искусства, — Альберт Экхаут вложил в руку
+        женщины, которую писал в Бразилии. В 1630 году Голландская Вест-Индская компания захватила
+        Пернамбуку, капитанство, богатое сахаром, а в 1637 году править колонией приехал граф Иоганн
+        Мориц Нассау-Зигенский и привёз с собой двух художников — Экхаута и пейзажиста Франса Поста.
+        Сахарное дело компания отняла у португальцев, и на её плантациях трудились невольники, которых
+        заставляли работать силой. А в глубине страны, в горах, лежал Палмарис — убежище тех, кто от
+        этой работы бежал, и голландцы посылали против него экспедиции точно так же, как португальцы.
+        В 1654 году голландцы сдали Ресифи, и в том же году Иоганн Мориц подарил картины Экхаута
+        датскому королю Фредерику III.
+    hidden:
+      at: card-text
+      card: palmares
+      anchor:
+        en: Dutch and Portuguese expeditions
+        ru: голландских и португальских экспедиций
+    contents:
+      both:
+        - post-landscape-in-brazil-1652
+      m:
+        - eckhout-african-man-1641
+      f:
+        - eckhout-african-woman-1641
+    cards:
+      - palmares
+      - slavevoyages
+  - id: fisk-jubilee-trunk
+    kind: trunk
+    name:
+      en: A trunk like those the Fisk Jubilee Singers took on tour
+      ru: Дорожный сундук вроде тех, с которыми ездили Юбилейные певцы Фиска
+    place:
+      en: Nashville, Tennessee, the Northern states and Britain
+      ru: Нашвилл (Теннесси), северные штаты и Британия
+    time:
+      en: 1871–1874
+      ru: 1871–1874
+    story:
+      en: A trunk like those the singers of Fisk University packed when they left Nashville on 6 October
+        1871. Fisk taught people who had only just come out of slavery, and by that autumn it was deep
+        in debt, so its treasurer and music teacher, George L. White, took nine student singers north
+        to raise money with their voices. Early on the road he named them after the biblical year of
+        jubilee, and in 1873 the tour carried them to Britain, where they sang for Queen Victoria. The
+        money they brought home went into Jubilee Hall, the university's first permanent building,
+        finished in 1876.
+      ru: С таким сундуком певцы Университета Фиска выехали из Нашвилла 6 октября 1871 года. В Фиске
+        учились люди, только что вышедшие из рабства, и к той осени школа увязла в долгах. Тогда её
+        казначей и учитель музыки Джордж Л. Уайт повёз девятерых студентов-певцов на Север, чтобы они
+        собрали денег своими голосами. Уже в дороге Уайт назвал их в честь библейского юбилейного
+        года, а в 1873 году турне довезло их до Британии, где они пели перед королевой Викторией. На
+        привезённые деньги выстроили Юбилейный зал — первое постоянное здание университета,
+        законченное в 1876 году.
+    hidden:
+      at: chapter-step
+      chapter: v3
+      anchor:
+        en: set out on tour
+        ru: отправились в гастрольное турне
+    contents:
+      both:
+        - fisk-jubilee-singers-1872
+        - fisk-jubilee-hall-1970
+    cards:
+      - spirituals
+      - swing-low
+  - id: henson-kit-bag
+    kind: bag
+    name:
+      en: A kit bag like those packed for Peary's last drive to the Pole
+      ru: Вещевой мешок вроде тех, что собирали в последний поход Пири к полюсу
+    place:
+      en: From New York to Cape Sheridan and the Arctic Ocean ice
+      ru: Из Нью-Йорка к мысу Шеридан и на лёд Северного Ледовитого океана
+    time:
+      en: 1908–1909
+      ru: 1908–1909
+    story:
+      en: "A kit bag like those packed aboard the Roosevelt, the ship that sailed north from New York in
+        July 1908 on Robert Peary's last attempt at the North Pole. Matthew Henson had been with Peary
+        on seven Arctic expeditions, and of all Peary's crew only he spoke Inuktitut and drove a dog
+        sledge as well as the Inuit themselves. In February 1909 the party left Cape Sheridan for the
+        sea ice, and on 6 April Peary, Henson and four Inuit men reached what they took to be the
+        Pole; by Henson's own account he got there first. The honours came late: the Explorers Club
+        admitted him as a member only in 1937."
+      ru: "Такой вещевой мешок могли уложить в трюм «Рузвельта» — судна, которое в июле 1908 года ушло из
+        Нью-Йорка на север: Роберт Пири в последний раз пытался добраться до Северного полюса. Рядом с
+        ним, как и в семи прежних арктических экспедициях, был Мэтью Хенсон, и из всей команды Пири
+        только Хенсон говорил на инуктитуте и правил собачьей упряжкой не хуже самих инуитов. В
+        феврале 1909 года отряд двинулся от мыса Шеридан на морской лёд, и 6 апреля Пири, Хенсон и
+        четверо инуитов дошли до места, которое сочли полюсом; по словам самого Хенсона, первым там
+        оказался он. Почести пришли к нему нескоро: Клуб исследователей принял Хенсона в свои члены
+        лишь в 1937 году."
+    hidden:
+      at: index
+      card: matthew-henson
+    contents:
+      both:
+        - henson-fur-suit-1910
+        - henson-north-pole-sledge
+    cards:
+      - matthew-henson
+  - id: lomax-car-trunk
+    kind: trunk
+    name:
+      en: A car trunk like the Lomaxes'
+      ru: Багажник вроде того, с которым Ломаксы колесили по Югу
+    place:
+      en: Prison farms of the American South
+      ru: Тюремные фермы американского Юга
+    time:
+      en: 1933–1934
+      ru: 1933–1934 годы
+    story:
+      en: A car trunk like the one in which John A. Lomax drove a huge recording machine across the South.
+        In 1933 he and his teenage son Alan set out to record folk music for the Library of Congress,
+        and they went looking for it in prisons, where, Lomax believed, the inmates had 'not yet been
+        influenced by jazz and the radio'. Radio and records scarcely reached the prison farms, and
+        the work crews there still sang their group songs as they had before sharecropping. In July
+        1933, at the Angola penitentiary in Louisiana, father and son first heard Huddie Ledbetter,
+        the singer the world would know as Lead Belly.
+      ru: "С таким багажником, в который едва втиснули огромный звукозаписывающий аппарат, Джон Ломакс
+        колесил по американскому Югу. В 1933 году он вместе с сыном-подростком Аланом отправился
+        записывать народную музыку для Библиотеки Конгресса, и искали они её в тюрьмах: заключённые,
+        полагал Ломакс, «ещё не испытали влияния джаза и радио». Радио и пластинки до тюремных ферм и
+        правда почти не доходили, и рабочие бригады пели там свои общие песни так же, как пели их ещё
+        до издольщины. А в июле 1933 года в луизианской тюрьме Ангола отец и сын впервые услышали
+        Хадди Ледбеттера — певца, которого мир потом узнает под именем Лед Белли."
+    hidden:
+      at: workshop
+      object: call
+    contents:
+      both:
+        - reed-camp-woodyard-1934
+    cards:
+      - work-songs
+  - id: apollo-tape-box
+    kind: box
+    name:
+      en: A tape box like the one from the Apollo, October 1962
+      ru: Коробка с плёнкой вроде той, что увезли из «Аполло» в октябре 1962 года
+    place:
+      en: Apollo Theater, 125th Street, Harlem, New York
+      ru: Театр «Аполло», 125-я улица, Гарлем, Нью-Йорк
+    time:
+      en: 24 October 1962
+      ru: 24 октября 1962 года
+    story:
+      en: "A tape box like the one that held a single night at Harlem's Apollo Theater. Syd Nathan, head
+        of King Records, did not believe in a live album: the business was singles, and no one had yet
+        made money that way. James Brown paid for it himself, the recording and the hire of the
+        theatre, and on 24 October 1962, the last night of a run at the Apollo, the tape rolled. Live
+        at the Apollo reached number two on the album chart and stayed on it for well over a year."
+      ru: "В такой коробке хранилась плёнка с одним-единственным вечером в гарлемском театре «Аполло». Сид
+        Натан, глава King Records, в концертный альбом не верил: деньги в те годы делали на синглах, а
+        на живых записях их ещё никто не заработал. Тогда Джеймс Браун заплатил за всё сам — и за
+        запись, и за аренду театра, и 24 октября 1962 года, в последний вечер его выступлений в
+        «Аполло», магнитофон включили. Альбом Live at the Apollo поднялся на второе место в альбомном
+        чарте и продержался в нём больше года."
+    hidden:
+      at: roots
+      artist: james-brown
+      anchor:
+        en: edge of gospel abandon
+        ru: грани госпельного самозабвения
+    contents:
+      both:
+        - james-brown-schiphol-1977
+    cards:
+      - funk
+      - rhythm-and-blues
+  - id: amo-book-chest
+    kind: chest
+    name:
+      en: A scholar's book chest like Anton Wilhelm Amo's
+      ru: Книжный сундук учёного вроде того, что был у Антона Вильгельма Амо
+    place:
+      en: Halle, Wittenberg and Jena
+      ru: Галле, Виттенберг и Йена
+    time:
+      en: 1727–1747
+      ru: 1727–1747 годы
+    story:
+      en: A book chest like the one that followed Anton Wilhelm Amo from one German university to the
+        next. Brought from the Gold Coast to the court of Brunswick-Wolfenbüttel as a small child, he
+        enrolled at Halle in 1727 and two years later defended a disputation there on the rights of
+        Moors in Europe. In 1730 he moved to Wittenberg, where in 1734 he took his doctorate; back in
+        Halle as a lecturer, he published his largest work in 1738, the Treatise on the Art of
+        Philosophising Soberly and Accurately. He went on to teach at Jena, and around 1747, amid
+        racist mockery, he left Germany for the Gold Coast.
+      ru: Такой книжный сундук ездил за Антоном Вильгельмом Амо из одного немецкого университета в другой.
+        Маленьким ребёнком его привезли с Золотого Берега ко двору герцогов
+        Брауншвейг-Вольфенбюттельских, а в 1727 году он поступил в университет Галле и через два года
+        защитил там диспут о правах мавров в Европе. В 1730 году Амо перебрался в Виттенберг и в
+        1734-м получил там докторскую степень; вернувшись в Галле уже преподавателем, он выпустил в
+        1738 году свой самый большой труд — «Трактат об искусстве трезво и точно философствовать».
+        Потом он преподавал в Йене, а около 1747 года, когда над ним уже открыто глумились из-за цвета
+        кожи, уехал из Германии на Золотой Берег.
+    hidden:
+      at: factoid
+      fact: fx-sci-0004
+      anchor:
+        en: the mind–body problem
+        ru: соотношение души и тела
+    contents:
+      both:
+        - amo-halle-plaque-1975
+    cards:
+      - amo
+  - id: bridgetower-violin-case
+    kind: case
+    name:
+      en: A violin case like a travelling prodigy's
+      ru: Скрипичный футляр вроде тех, что возили с собой юные виртуозы
+    place:
+      en: From Paris and London to Vienna
+      ru: Из Парижа и Лондона в Вену
+    time:
+      en: 1788–1803
+      ru: 1788–1803 годы
+    story:
+      en: A violin case like the one a boy prodigy carried from court to court. In late 1788 George
+        Bridgetower set out with his father on a concert tour that ran through Liège, Brussels and The
+        Hague to the Concert Spirituel in Paris on 11 April 1789. The Revolution drove them on to
+        England, where the boy soon passed into the care of the Prince of Wales and grew up a member
+        of his musical household. In 1802 he went on leave to visit his mother in Dresden, travelled
+        on to Vienna, and there, on 24 May 1803, he and Beethoven gave the first performance of the
+        sonata now called the 'Kreutzer'.
+      ru: "С таким скрипичным футляром мальчик-вундеркинд переезжал от двора ко двору. В конце 1788 года
+        Джордж Бриджтауэр отправился с отцом в концертное турне: Льеж, Брюссель, Гаага, а 11 апреля
+        1789 года — парижский «Духовный концерт». Начавшаяся революция погнала их дальше, в Англию, и
+        вскоре мальчика взял под своё покровительство принц Уэльский: Бриджтауэр вырос при его дворе и
+        играл в его домашнем оркестре. В 1802 году он получил отпуск, чтобы навестить мать в Дрездене,
+        оттуда поехал в Вену и там 24 мая 1803 года вместе с Бетховеном впервые сыграл сонату, которую
+        теперь называют «Крейцеровой»."
+    hidden:
+      at: card-image
+      card: bridgetower
+      x: 80
+      y: 57
+    contents:
+      both:
+        - kreutzer-sonata-simrock-1805
+      m:
+        - saint-george-ward-mezzotint-1788
+      f:
+        - greenfield-birmingham-concert-1853
+    cards:
+      - bridgetower
+      - saint-georges
+  - id: liberia-settler-trunk
+    kind: trunk
+    name:
+      en: A settler's trunk like those shipped to Liberia
+      ru: Сундук переселенца вроде тех, что везли в Либерию
+    place:
+      en: Monrovia, Liberia
+      ru: Монровия, Либерия
+    time:
+      en: 1820–1854
+      ru: 1820–1854 годы
+    story:
+      en: A trunk like those that free Black emigrants packed for the voyage to Liberia. In 1820 the
+        American Colonization Society sent its first ship of settlers to West Africa, and in 1847 the
+        colony that had grown up around Monrovia declared itself an independent republic. In 1853 the
+        Hartford daguerreotypist Augustus Washington sailed there too, with his wife and children. In
+        Monrovia he kept making daguerreotypes for a time, and later he sat in both houses of the
+        Liberian legislature.
+      ru: Такие сундуки укладывали в дорогу свободные чернокожие переселенцы, отплывавшие в Либерию. В
+        1820 году Американское колонизационное общество отправило в Западную Африку первый корабль с
+        поселенцами, а в 1847 году колония, разросшаяся вокруг Монровии, провозгласила себя
+        независимой республикой. В 1853 году туда же отплыл с женой и детьми Огастес Вашингтон,
+        дагеротипист из Хартфорда. В Монровии он ещё какое-то время снимал дагеротипы, а потом заседал
+        в обеих палатах либерийского законодательного собрания.
+    hidden:
+      at: chapter-step
+      chapter: v4
+      anchor:
+        en: first sailed in 1820
+        ru: отплыли в 1820 году
+    contents:
+      both:
+        - roberts-daguerreotype-1854
+    cards:
+      - liberia
+  - id: forever-changes-crate
+    kind: crate
+    name:
+      en: A record-shop crate like those of 1968
+      ru: Ящик из музыкального магазина вроде тех, что стояли там в 1968 году
+    place:
+      en: Record shops in America and Britain
+      ru: Музыкальные магазины Америки и Британии
+    time:
+      en: 1967–1968
+      ru: 1967–1968 годы
+    story:
+      en: "A record-shop crate like those in which Forever Changes waited for buyers. Elektra released
+        Love's third album on 1 November 1967, and at home it barely moved: in 1968 it climbed no
+        higher than number 154 on the Billboard album chart. In Britain the same year it reached
+        number 24 and found an audience among musicians, who kept it alive until the critics caught
+        up."
+      ru: "В таком ящике музыкального магазина Forever Changes дожидался покупателей. Elektra выпустила
+        третий альбом Love 1 ноября 1967 года, и на родине он почти не продавался: в 1968 году
+        пластинка поднялась в альбомном чарте Billboard лишь до 154-го места. Зато в Британии в том же
+        году она дошла до 24-го места и нашла слушателей среди музыкантов, которые и сберегли её до
+        тех пор, пока критики не спохватились."
+    hidden:
+      at: feature
+      feature: forever-changes
+      scene: echoes
+      block: influence
+      anchor:
+        en: deepest roots grew in England
+        ru: Глубже всего она проросла в Англии
+    contents:
+      both:
+        - forever-changes-billboard-1968
+    cards:
+      - rock-n-roll
+  - id: aldridge-touring-trunk
+    kind: trunk
+    name:
+      en: A touring actor's trunk like Ira Aldridge's
+      ru: Гастрольный сундук актёра вроде того, что был у Айры Олдриджа
+    place:
+      en: Łódź, Poland
+      ru: Лодзь, Польша
+    time:
+      en: 1852–1867
+      ru: 1852–1867 годы
+    story:
+      en: A touring actor's trunk like the one that crossed a continent with Ira Aldridge. In 1852 the
+        American-born tragedian, long settled in England, sailed for the Continent, and for the next
+        fifteen years he played Othello, Shylock, Macbeth and Richard III in Germany, Prussia,
+        Switzerland, Austria-Hungary, Sweden and Russia. He spoke his lines in English while the local
+        company around him answered in German or Swedish, and audiences followed him all the same. In
+        1867, on tour in Poland, he fell ill and died in Łódź, and there he was buried.
+      ru: Такой гастрольный сундук пересёк вместе с Айрой Олдриджем целый континент. В 1852 году трагик,
+        родившийся в Америке и давно осевший в Англии, отплыл на континент и следующие пятнадцать лет
+        играл Отелло, Шейлока, Макбета и Ричарда III в Германии, Пруссии, Швейцарии, Австро-Венгрии,
+        Швеции и России. Сам он говорил по-английски, местная труппа отвечала ему по-немецки или
+        по-шведски, и публика всё равно его понимала. В 1867 году, на гастролях в Польше, Олдридж
+        заболел и умер в Лодзи; там его и похоронили.
+    hidden:
+      at: atlas
+      lon: 19.4447
+      lat: 51.7797
+    contents:
+      both:
+        - aldridge-as-aaron-1852
+    cards:
+      - ira-aldridge
+  - id: delta-suitcase
+    kind: suitcase
+    name:
+      en: A suitcase like those Delta migrants carried to Chicago
+      ru: Чемодан, с какими переселенцы из Дельты уезжали в Чикаго
+    place:
+      en: Stovall Plantation, Mississippi, to Chicago
+      ru: Из поместья Стовалл (Миссисипи) в Чикаго
+    time:
+      en: 1941–1943
+      ru: 1941–1943
+    story:
+      en: A suitcase like those that went north with the people of the Mississippi Delta. McKinley
+        Morganfield, known as Muddy Waters, grew up on the Stovall Plantation near Clarksdale and ran
+        a juke joint there out of his own house. In August 1941 the folklorists Alan Lomax and John
+        Work came to Stovall for the Library of Congress and recorded him at that juke joint, and the
+        next summer they came back for more. In 1943 he left for Chicago.
+      ru: С такими чемоданами уезжали на север люди из дельты Миссисипи. Маккинли Морганфилд, которого все
+        звали Мадди Уотерс, вырос в поместье Стовалл под Кларксдейлом и держал там прямо у себя в доме
+        джук-джойнт — заведение, где играли музыку и танцевали. В августе 1941 года в Стовалл приехали
+        фольклористы Алан Ломакс и Джон Уорк, собиравшие песни для Библиотеки Конгресса, и записали
+        Мадди в этом самом заведении, а следующим летом вернулись за новыми записями. В 1943 году он
+        уехал в Чикаго.
+    hidden:
+      at: roots
+      artist: muddy-waters
+      anchor:
+        en: In Chicago he amplified
+        ru: В Чикаго он превратил
+    contents:
+      both:
+        - wolcott-clarksdale-juke-1939
+    cards:
+      - blues
+  - id: computers-portfolio
+    kind: portfolio
+    name:
+      en: A portfolio like those that held the figures of Langley's human computers
+      ru: Папка, в каких хранили выкладки «живых вычислителей» Лэнгли
+    place:
+      en: Langley, Virginia
+      ru: Лэнгли, Виргиния
+    time:
+      en: 1953–1962
+      ru: 1953–1962
+    story:
+      en: "A portfolio like those in which the human computers of Langley, in Virginia, kept their
+        figures. Katherine Johnson came to the NACA's laboratory there in 1953 and started in the
+        all-Black West Area Computing section: until 1958 Black workers at the NACA were kept apart
+        from their white colleagues. She did the trajectory analysis for Alan Shepard's flight in May
+        1961. Before John Glenn's orbital flight in 1962 the numbers were run on electronic computers,
+        but Glenn asked for 'the girl' to check them by hand on her desk calculator."
+      ru: "В таких папках «живые вычислители» из Лэнгли, что в Виргинии, хранили свои выкладки. Кэтрин
+        Джонсон пришла в тамошнюю лабораторию НАКА, предшественника НАСА, в 1953 году и начинала в
+        Западном вычислительном отделе, где работали одни чернокожие: до 1958 года чернокожих
+        сотрудников НАКА держали отдельно от белых коллег. Она рассчитала траекторию полёта Алана
+        Шепарда в мае 1961 года. Перед орбитальным полётом Джона Гленна в 1962 году цифры уже считали
+        электронные машины, но Гленн попросил, чтобы «та девушка» проверила их вручную, на своём
+        настольном арифмометре."
+    hidden:
+      at: factoid
+      fact: fx-plc-0024
+      anchor:
+        en: Langley Research Center
+        ru: Исследовательском центре Лэнгли
+    contents:
+      both:
+        - skopinski-johnson-tn-d233
+    cards:
+      - katherine-johnson
+  - id: golden-record-case
+    kind: case
+    name:
+      en: The case of the Voyager Golden Record
+      ru: Футляр «Золотой пластинки» «Вояджера»
+    place:
+      en: Aboard Voyager 1 and Voyager 2
+      ru: На борту «Вояджера-1» и «Вояджера-2»
+    time:
+      en: "1977"
+      ru: 1977 год
+    story:
+      en: In August and September 1977 NASA launched the two Voyager probes, and each carried a phonograph
+        record etched in copper and plated with gold, sealed in an aluminium case together with a
+        cartridge and a needle; instructions on the cover explain how to play it. A committee chaired
+        by the astronomer Carl Sagan chose its greetings, its sounds of the Earth and its music. Among
+        the music are Chuck Berry's "Johnny B. Goode" and "Dark Was the Night" by Blind Willie
+        Johnson, a gospel singer who had played for coins on the streets of Texas towns.
+      ru: В августе и сентябре 1977 года НАСА отправило в полёт два зонда «Вояджер», и каждый унёс с собой
+        граммофонную пластинку — медную, с золотым покрытием, запечатанную в алюминиевый футляр вместе
+        с головкой звукоснимателя и иглой; на крышке выгравировано, как эту пластинку проиграть.
+        Приветствия, звуки Земли и музыку для неё отбирала комиссия во главе с астрономом Карлом
+        Саганом. Среди музыки есть «Johnny B. Goode» Чака Берри и «Dark Was the Night» Слепого Уилли
+        Джонсона — исполнителя госпелов, который пел за монетки на улицах техасских городков.
+    hidden:
+      at: index
+      card: johnny-b-goode
+    contents:
+      both:
+        - voyager-golden-record-cover-1977
+    cards:
+      - johnny-b-goode
+  - id: jemison-preference-kit
+    kind: case
+    name:
+      en: A Personal Preference Kit like the one Mae Jemison packed
+      ru: Личный набор астронавта, вроде того, что собирала в полёт Мэй Джемисон
+    place:
+      en: Space shuttle Endeavour, STS-47
+      ru: Шаттл «Индевор», миссия STS-47
+    time:
+      en: September 1992
+      ru: сентябрь 1992 года
+    story:
+      en: On a shuttle flight every crew member could take along a Personal Preference Kit, a small case
+        about the size of a paperback, with no more than 20 personal items weighing a pound and a half
+        in all. When Mae Jemison flew on Endeavour in September 1992, the first African American woman
+        in space, she took with her a photograph of the aviator Bessie Coleman and a banner of the
+        Alpha Kappa Alpha sorority. Coleman had trained in France and won her pilot's licence there in
+        1921, because no flying school in America would take her.
+      ru: В полёт на шаттле каждый член экипажа мог взять личный набор астронавта — маленький футляр
+        размером примерно с книжку в мягкой обложке, куда помещалось не больше двадцати личных вещей
+        общим весом в полтора фунта. Когда в сентябре 1992 года Мэй Джемисон, первая афроамериканка в
+        космосе, полетела на «Индеворе», она взяла с собой фотографию лётчицы Бесси Коулман и знамя
+        студенческого сестринства «Альфа Каппа Альфа». Коулман училась летать во Франции и там же в
+        1921 году получила лётное свидетельство, потому что ни одна лётная школа в Америке её не
+        приняла.
+    hidden:
+      at: card-image
+      card: mae-jemison
+      x: 47
+      y: 56
+    contents:
+      both:
+        - jemison-spacelab-j-1992
+      m:
+        - mcnair-saxophone-1984
+      f:
+        - coleman-flying-helmet
+    cards:
+      - mae-jemison
+      - bessie-coleman
+  - id: fanner-basket
+    kind: basket
+    name:
+      en: A fanner basket like those that winnowed Lowcountry rice
+      ru: Корзина-веялка, в каких веяли рис на низинном побережье
+    place:
+      en: Coastal South Carolina and Georgia
+      ru: Побережье Южной Каролины и Джорджии
+    time:
+      en: 18th–20th centuries
+      ru: XVIII–XX века
+    story:
+      en: A fanner basket like those on the rice plantations of the Carolina and Georgia coast. Planters
+        there sought out Africans from the rice-growing coast of West Africa, and the enslaved brought
+        their own knowledge of rice with them, the fanner basket included, a wide, flat tray known in
+        both Senegambia and South Carolina. After threshing, workers tossed the grain in it and let
+        the wind carry off the chaff. The craft outlived the rice fields. In 1929, when Highway 17 was
+        paved and the Cooper River Bridge opened, basket sewers from Mount Pleasant began selling
+        their baskets by the road, and their stands still line it.
+      ru: Такой корзиной-веялкой работали на рисовых плантациях побережья Каролины и Джорджии. Плантаторы
+        нарочно искали невольников с рисового побережья Западной Африки, и порабощённые привезли с
+        собой собственное знание риса, а вместе с ним и веялку — широкий плоский поднос, одинаково
+        знакомый и в Сенегамбии, и в Южной Каролине. Обмолоченное зерно подбрасывали в нём, и ветер
+        уносил мякину. Ремесло пережило рисовые поля. В 1929 году, когда заасфальтировали шоссе 17 и
+        открыли мост через реку Купер, мастерицы из Маунт-Плезанта стали продавать свои корзины прямо
+        у дороги, и их прилавки стоят вдоль неё до сих пор.
+    hidden:
+      at: card-text
+      card: gullah
+      anchor:
+        en: rice, Sea Island cotton
+        ru: плантации риса
+    contents:
+      both:
+        - waud-rice-ogeechee-1867
+    cards:
+      - gullah
+  - id: seamstress-bag
+    kind: bag
+    name:
+      en: A seamstress's work bag like those carried home from downtown Montgomery
+      ru: Рабочая сумка швеи, с какими возвращались домой из центра Монтгомери
+    place:
+      en: Montgomery, Alabama
+      ru: Монтгомери, Алабама
+    time:
+      en: 1 December 1955
+      ru: 1 декабря 1955 года
+    story:
+      en: A work bag like those Montgomery seamstresses carried home at the end of the day. On 1 December
+        1955 Rosa Parks, a forty-two-year-old seamstress at the Montgomery Fair department store, was
+        riding home on a city bus when the driver ordered her to give up her seat to white passengers,
+        and she refused. She was arrested. Parks was also secretary of the local NAACP, and her arrest
+        became the rallying point for the bus boycott, which lasted more than a year. Newspapers made
+        her a tired seamstress; she later wrote that the only tired she was, was tired of giving in.
+      ru: С такими сумками швеи Монтгомери возвращались домой после смены. 1 декабря 1955 года Роза Паркс,
+        сорокадвухлетняя швея из универмага «Монтгомери фэр», ехала с работы на городском автобусе, и
+        водитель велел ей уступить место белым пассажирам. Она отказалась, и её арестовали. Паркс к
+        тому же была секретарём местного отделения NAACP, Национальной ассоциации содействия прогрессу
+        цветного населения, и её арест стал той точкой, вокруг которой чернокожие горожане сплотились
+        в бойкот автобусов, продлившийся больше года. Газеты сделали из неё усталую швею, а она потом
+        написала, что устала лишь от одного — от того, что приходится уступать.
+    hidden:
+      at: chapter-step
+      chapter: v6
+      anchor:
+        en: give up her bus seat
+        ru: уступить место в автобусе
+    contents:
+      both:
+        - parks-bus-diagram-1955
+    cards:
+      - montgomery-bus-boycott
+      - claudette-colvin
+  - id: liberty-sea-bag
+    kind: bag
+    name:
+      en: A sea bag like those the crew of the SS Booker T. Washington carried aboard
+      ru: Матросский мешок, с какими поднималась на борт команда «Букера Т. Вашингтона»
+    place:
+      en: Wilmington, California, and the Atlantic
+      ru: Уилмингтон (Калифорния) и Атлантика
+    time:
+      en: "1942"
+      ru: 1942 год
+    story:
+      en: A sea bag like those the crew of the SS Booker T. Washington carried aboard. Hugh Mulzac, born
+        in the British West Indies, became an American citizen in 1918 and passed for a master's
+        licence by 1920, yet no shipping line would give a Black captain a ship, and for twenty years
+        he worked mostly in ships' steward's departments. In September 1942 the first Liberty ship
+        named for an African American was launched at Wilmington, California, and Mulzac became her
+        captain, the first African American to command a ship of the US Merchant Marine. He was
+        offered an all-Black crew and insisted on an integrated one.
+      ru: С такими мешками поднималась на борт команда «Букера Т. Вашингтона». Хью Малзак родился в
+        Британской Вест-Индии, в 1918 году стал гражданином США, а к 1920-му сдал экзамен на капитана.
+        Только ни одна судоходная компания не доверяла судно чернокожему капитану, и двадцать лет он
+        служил в основном по камбузной и буфетной части. В сентябре 1942 года в Уилмингтоне, в
+        Калифорнии, спустили на воду первый «Либерти», названный в честь афроамериканца, и Малзак стал
+        его капитаном — первым афроамериканцем, командовавшим судном торгового флота США. Ему
+        предлагали команду из одних чернокожих, но он настоял на смешанной.
+    hidden:
+      at: feature
+      feature: sea-lion-girls
+      scene: silence
+      block: isaac-africa
+      anchor:
+        en: a hand on a cargo ship
+        ru: матросом на грузовом судне
+    contents:
+      both:
+        - booker-t-washington-launch-1942
+    cards:
+      - marian-anderson-1939
+  - id: tr808-flight-case
+    kind: case
+    name:
+      en: A flight case like those that carried drum machines
+      ru: Кофр для драм-машины
+    place:
+      en: From Osaka to the Bronx
+      ru: От Осаки до Бронкса
+    time:
+      en: 1980–1982
+      ru: 1980–1982
+    story:
+      en: "A flight case like those in which drum machines travelled from the shop to the studio and on to
+        the club. Roland's TR-808 came out in 1980 and was a commercial disaster: only about 12,000
+        were made, and within a few years it was discontinued. Then early hip-hop made its name. In
+        1982 Afrika Bambaataa's \"Planet Rock\" laid its beat under Kraftwerk's synthesizers, and the
+        machine that had failed in the shops became the sound of a new music."
+      ru: В таком кофре драм-машина ездила из магазина в студию, а из студии в клуб. Roland TR-808 вышла в
+        1980 году и с треском провалилась в продаже — её сделали всего около 12 000 штук и через
+        несколько лет сняли с производства. Имя ей сделал ранний хип-хоп. В 1982 году Африка Бамбаатаа
+        подложил её ритм под синтезаторы Kraftwerk в «Planet Rock», и машина, которую не захотели
+        покупать в магазинах, стала голосом новой музыки.
+    hidden:
+      at: workshop
+      object: tr808
+    gives:
+      - reel-key
+    contents:
+      both:
+        - tr808-mim-phoenix
+    cards:
+      - planet-rock
+      - hip-hop
+    clue:
+      en: The key is cut like a reel of tape. Its lock is in the longread about a record its maker meant
+        as his last words, on the day the band is given a second chance.
+      ru: "Бородка ключа выточена как бобина с плёнкой. Замок к нему — в лонгриде о пластинке, которую её
+        автор считал своими последними словами: там, где группе дают второй шанс."
+    leads: forever-changes-tape-box
+  - id: forever-changes-tape-box
+    kind: box
+    name:
+      en: A tape box like those of a Hollywood session, 1967
+      ru: Коробка из-под плёнки с голливудской сессии 1967 года
+    place:
+      en: Sunset Sound and Western Recorders, Hollywood
+      ru: Студии Sunset Sound и Western Recorders, Голливуд
+    time:
+      en: August–September 1967
+      ru: август — сентябрь 1967 года
+    story:
+      en: A box like those that held the reels of magnetic tape at a Hollywood session in the summer of
+        1967. That August and September Love recorded Forever Changes at Sunset Sound and Western
+        Recorders, with Bruce Botnick as engineer and co-producer. Elektra released the album in
+        November 1967. At home it climbed no higher than No. 154 on the Billboard album chart, while
+        in Britain it reached No. 24. In 2011 the Library of Congress added it to the National
+        Recording Registry.
+      ru: В таких коробках лежали бобины магнитной плёнки на голливудских сессиях лета 1967 года. В
+        августе и сентябре Love записывали Forever Changes на студиях Sunset Sound и Western
+        Recorders, а за пультом сидел Брюс Ботник — звукорежиссёр и сопродюсер альбома. Elektra
+        выпустила пластинку в ноябре 1967 года. Дома она поднялась лишь до 154-го места в альбомном
+        чарте Billboard, зато в Британии дошла до 24-го. А в 2011 году Библиотека Конгресса внесла её
+        в Национальный реестр звукозаписей.
+    hidden:
+      at: feature
+      feature: forever-changes
+      scene: session-day
+      block: back
+      anchor:
+        en: back in the studio
+        ru: вернулись в студию
+    lock: reel-key
+    contents:
+      both:
+        - sunset-sound-sign
+    cards:
+      - rock-n-roll
+    clue:
+      en: "Pencilled on the inner sleeve, in a hurried hand: “Didn’t all fit on the record. The rest is
+        down in the storeroom. At a terminal: sankofa rummage (kubectl sankofa rummage works too).”"
+      ru: "На внутреннем конверте карандашом, наспех: «На пластинку влезло не всё. Остальное — внизу, в
+        запаснике. У терминала: sankofa rummage (можно и kubectl sankofa rummage)»."
+    leads: johnson-exhibition-box
+  - id: johnson-exhibition-box
+    kind: box
+    name:
+      en: An exhibitor's box of phonograph cylinders
+      ru: Ящик с фонографными валиками, какие возили по городам
+    place:
+      en: New York and the roads of America
+      ru: Нью-Йорк и дороги Америки
+    time:
+      en: The 1890s
+      ru: 1890-е годы
+    story:
+      en: A box of wax cylinders like those that phonograph exhibitors carried from town to town in the
+        early 1890s, and no exhibition box was thought complete without two records by George W.
+        Johnson, "The Laughing Song" and "The Whistling Coon", minstrel numbers that mocked Black
+        people. Johnson had been born into slavery in Virginia and sang for coins on the streets of
+        New York; in 1890 he became the first African American to make commercial records. A wax
+        cylinder could not yet be copied, so he sang the same songs over and over, and "The Laughing
+        Song" became one of the best-selling records of the decade.
+      ru: В таких ящиках демонстраторы фонографа в начале 1890-х возили восковые валики из города в город,
+        и ни один такой ящик не считался полным без двух записей Джорджа У. Джонсона — «The Laughing
+        Song» и «The Whistling Coon», номеров из менестрель-шоу, которые высмеивали чернокожих.
+        Джонсон родился рабом в Виргинии и пел за мелочь на улицах Нью-Йорка, а в 1890 году стал
+        первым афроамериканцем, чьи записи пошли в продажу. Копировать восковой валик тогда ещё не
+        умели, поэтому он пел одни и те же песни снова и снова, и «The Laughing Song» стала одной из
+        самых продаваемых записей десятилетия.
+    hidden:
+      at: cluster
+      via: cli
+      word: laughing
+    gives:
+      - needle-key
+    contents:
+      both:
+        - george-w-johnson-phonoscope-1898
+    cards:
+      - crazy-blues
+    clue:
+      en: The needle points up, at the sky. Look for its lock in the chapter about the future, where the
+        future is put together from hardware; something there is coming in to land.
+      ru: "Игла смотрит вверх, в небо. Ищите замок в главе о будущем — там, где будущее собирают из
+        железа: что-то там заходит на посадку."
+    leads: mothership-road-trunk
+  - id: mothership-road-trunk
+    kind: trunk
+    name:
+      en: A road trunk like those of the P-Funk Earth Tour
+      ru: Гастрольный сундук, как на P-Funk Earth Tour
+    place:
+      en: Arenas across the United States
+      ru: Арены по всей Америке
+    time:
+      en: 1976–1977
+      ru: 1976–1977
+    story:
+      en: "A road trunk like those Parliament-Funkadelic's crew hauled from arena to arena on the P-Funk
+        Earth Tour, which began in 1976. At the height of the show the band sang the old gospel song
+        \"Swing Down, Sweet Chariot\", the lights dimmed, and amid smoke, sparks and flashing lights a
+        huge silver spaceship came down onto the stage; out of it stepped George Clinton. The original
+        Mothership did not survive: in the early 1980s, when the band was in debt, it was thrown
+        away."
+      ru: "Такие сундуки команда Parliament-Funkadelic возила с арены на арену во время P-Funk Earth Tour,
+        начавшегося в 1976 году. В разгар концерта группа пела старый госпел «Swing Down, Sweet
+        Chariot», свет гас, и в дыму, искрах и вспышках на сцену опускался огромный серебристый
+        космический корабль, из которого выходил Джордж Клинтон. Сам корабль-матка не уцелел: в начале
+        1980-х, когда группа оказалась в долгах, его выбросили."
+    hidden:
+      at: chapter-step
+      chapter: v7
+      anchor:
+        en: built in hardware
+        ru: собирали и в железе
+    lock: needle-key
+    contents:
+      both:
+        - p-funk-mothership-nmaahc
+    cards:
+      - funk
+  - id: race-records-case
+    kind: case
+    name:
+      en: A record case like those of the early 1920s
+      ru: Футляр для пластинок начала двадцатых
+    place:
+      en: New York
+      ru: Нью-Йорк
+    time:
+      en: 1920–1923
+      ru: 1920–1923
+    story:
+      en: A case for shellac records like those of the early 1920s. When Mamie Smith's "Crazy Blues" came
+        out on OKeh in the autumn of 1920, it reportedly sold 75,000 copies within months, and the
+        record companies took note. By the summer of 1921 OKeh had launched a series of "race records"
+        for Black buyers, and other labels soon opened their own. In Harlem Harry Pace went further
+        and founded Black Swan, the first major record company owned by African Americans.
+      ru: Футляр для шеллачных пластинок, какие были в ходу в начале двадцатых. Когда осенью 1920 года на
+        OKeh вышла «Crazy Blues» Мейми Смит, её, по рассказам, за считаные месяцы раскупили в 75 000
+        экземпляров, и звукозаписывающие компании это заметили. К лету 1921 года OKeh завела серию
+        «расовых пластинок» для чернокожих покупателей, а вскоре свои серии открыли и другие фирмы. В
+        Гарлеме Гарри Пейс пошёл дальше и основал Black Swan — первую крупную звукозаписывающую
+        компанию, которой владели афроамериканцы.
+    hidden:
+      at: workshop
+      object: gramophone
+    contents:
+      both:
+        - black-swan-ad-1921
+    cards:
+      - crazy-blues
+      - blues
+  - id: franklin-caravan-bag
+    kind: bag
+    name:
+      en: A garment bag like those of the C. L. Franklin Gospel Caravan
+      ru: Портплед вроде тех, что возил с собой «Госпельный караван К. Л. Франклина»
+    place:
+      en: Detroit and the road
+      ru: Детройт и дорога
+    time:
+      en: The mid-1950s to 1972
+      ru: Середина 1950-х — 1972 год
+    story:
+      en: A garment bag like those packed for the road by the C. L. Franklin Gospel Caravan. In the
+        mid-1950s Aretha's father, the Detroit preacher C. L. Franklin, took his sermons on the road
+        and toured the country for weeks at a time with his own revival show. Aretha travelled with
+        him as a girl, singing and playing the piano. In 1972 she went back to church to record a
+        gospel album, Amazing Grace, with her father and Clara Ward among the congregation; it has
+        sold two million copies, more than any other gospel record.
+      ru: Портплед вроде тех, что укладывали в дорогу артисты «Госпельного каравана К. Л. Франклина». В
+        середине 1950-х отец Ареты, детройтский проповедник К. Л. Франклин, повёз свои проповеди по
+        стране и неделями гастролировал с собственным шоу. Арета ездила с ним ещё девочкой, пела и
+        играла на фортепиано. А в 1972 году она вернулась в церковь, чтобы записать госпел-альбом
+        Amazing Grace, и среди прихожан сидели её отец и Клара Уорд. Пластинка разошлась тиражом в два
+        миллиона экземпляров — больше, чем любая другая госпел-запись.
+    hidden:
+      at: roots
+      artist: aretha-franklin
+      anchor:
+        en: church abandon
+        ru: церковное самозабвение
+    contents:
+      both:
+        - aretha-franklin-atlantic-1968
+      m:
+        - new-bethel-detroit
+      f:
+        - clara-ward-tambourine
+    cards:
+      - gospel
+      - respect
+      - precious-lord
+  - id: stedman-portfolio
+    kind: portfolio
+    name:
+      en: A portfolio like the one that held John Gabriel Stedman's Surinam drawings
+      ru: Папка вроде той, где Джон Габриэль Стедман хранил суринамские рисунки
+    place:
+      en: Suriname and London
+      ru: Суринам и Лондон
+    time:
+      en: 1770s–1796
+      ru: 1770-е — 1796 год
+    story:
+      en: A portfolio like the one in which John Gabriel Stedman kept his Surinam drawings. Stedman, a
+        Scottish captain in Dutch service, was sent to Suriname in the 1770s to fight the Maroons,
+        people who had escaped slavery and lived in the forest. He kept a journal and drew what he
+        saw, and in 1796 his Narrative came out in London with engravings after his drawings by the
+        city's best engravers, William Blake among them. He also brought back to Europe a banjo made
+        by an enslaved person in Suriname, the oldest banjo known to survive.
+      ru: "Папка вроде той, в которой Джон Габриэль Стедман хранил свои суринамские рисунки. Стедмана,
+        шотландского капитана на голландской службе, в 1770-е годы отправили в Суринам воевать с
+        маронами — людьми, которые бежали из рабства и жили в лесу. Он вёл дневник и зарисовывал всё,
+        что видел, а в 1796 году в Лондоне вышло его «Повествование» с гравюрами по его рисункам — их
+        делали лучшие лондонские граверы, и среди них Уильям Блейк. А ещё Стедман привёз в Европу
+        банджо, которое сделал в Суринаме порабощённый человек: это самое старое из сохранившихся
+        банджо."
+    hidden:
+      at: card-image
+      card: banjo
+      x: 79
+      y: 64
+    contents:
+      both:
+        - stedman-creole-bania
+    cards:
+      - banjo

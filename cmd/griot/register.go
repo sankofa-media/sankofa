@@ -22,7 +22,7 @@ func publishEndpoint(ctx context.Context, cl client.Client, ip string) error {
 	return cl.Patch(ctx, ep, client.Apply, client.FieldOwner("griot-node"), client.ForceOwnership)
 }
 
-func reconcile(ctx context.Context, log *slog.Logger, cl client.Client, apiService string, ca []byte, ip string, sync bool) {
+func reconcile(ctx context.Context, log *slog.Logger, cl client.Client, apiService string, ca []byte, ip string, sync, hooks bool) {
 	ticker := time.NewTicker(10 * time.Second)
 	defer ticker.Stop()
 	synced := !sync
@@ -36,12 +36,18 @@ func reconcile(ctx context.Context, log *slog.Logger, cl client.Client, apiServi
 				synced = true
 			}
 		}
-		if err := publishCA(ctx, cl, apiService, ca); err != nil {
-			log.Warn("publish API CA; retrying", "err", err)
+		// Without a self-signed CA the certificate and its bundles are managed
+		// by whoever installed them (the Helm chart).
+		if ca != nil && apiService != "" {
+			if err := publishCA(ctx, cl, apiService, ca); err != nil {
+				log.Warn("publish API CA; retrying", "err", err)
+			}
 		}
-		for _, name := range []string{"sankofa-validating", "sankofa-mutating"} {
-			if err := publishWebhookCA(ctx, cl, name, ca); err != nil {
-				log.Warn("publish webhook CA; retrying", "name", name, "err", err)
+		if ca != nil && hooks {
+			for _, name := range []string{"sankofa-validating", "sankofa-mutating"} {
+				if err := publishWebhookCA(ctx, cl, name, ca); err != nil {
+					log.Warn("publish webhook CA; retrying", "name", name, "err", err)
+				}
 			}
 		}
 		if ip != "" {

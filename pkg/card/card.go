@@ -61,13 +61,14 @@ const (
 	EditionFemale = "f"
 )
 
-// MaxBodyWords keeps cards short: enough to inspire, not an encyclopedia entry.
-const MaxBodyWords = 140
+// MaxBodyWords keeps cards short: room for a complete short story (context,
+// what happened, how it ended, why it matters), not an encyclopedia entry.
+const MaxBodyWords = 320
 
 // MaxExplainerWords is the room for cards that must first explain what
 // something is — a genre, an instrument, a script, a language — before the
 // story that makes it memorable.
-const MaxExplainerWords = 235
+const MaxExplainerWords = 340
 
 // Explainer kinds open with what the thing is, then tell the story.
 var Explainer = map[string]bool{KindGenre: true, KindInstrument: true, KindScript: true, KindLanguage: true}
@@ -104,16 +105,50 @@ type Media struct {
 	URL     string `json:"url,omitempty"` // where the original lives
 }
 
+// Moment is the point a card's story is about: a person's card spans a life,
+// but its story may be one year in one of its places (Robert Smalls is born
+// in 1839; the card tells his escape of 1862).
+type Moment struct {
+	Year  int `json:"year"`
+	Place int `json:"place,omitempty"` // index into places, 0 by default
+}
+
+// MomentSlack is how far outside a card's years its moment may fall (a story
+// told about the years just before or after a span).
+const MomentSlack = 10
+
+// When returns the year and place the card's story is about: the moment when
+// set, else the first year at the first place.
+func (c *Card) When() (int, Place) {
+	var p Place
+	if len(c.Places) > 0 {
+		p = c.Places[0]
+	}
+	if c.Moment == nil {
+		y := 0
+		if len(c.Years) > 0 {
+			y = c.Years[0]
+		}
+		return y, p
+	}
+	if c.Moment.Place >= 0 && c.Moment.Place < len(c.Places) {
+		p = c.Places[c.Moment.Place]
+	}
+	return c.Moment.Year, p
+}
+
 // Card is one entry of the dictionary.
 type Card struct {
 	ID      string   `json:"id"`
 	Kind    string   `json:"kind"`
 	Title   string   `json:"title"`
 	Inline  string   `json:"inline,omitempty"` // the name inside a sentence: "the blues"
+	Label   string   `json:"label,omitempty"`  // the name on the atlas map, when the title cut short would mislead
 	Wow     string   `json:"wow"`              // one-line hook shown in crumbs
 	Years   []int    `json:"years"`            // [from] or [from, to]
 	Places  []Place  `json:"places"`           // first is the main point
 	Zoom    int      `json:"zoom"`             // 1..5, see docs/card-format.md
+	Moment  *Moment  `json:"moment,omitempty"` // the moment the story is about, when not years[0] at places[0]
 	Era     string   `json:"era,omitempty"`    // v0..v7
 	Books   []string `json:"books"`            // voices | archives | heirs
 	Edition string   `json:"edition,omitempty"`
@@ -139,6 +174,7 @@ type Card struct {
 type Translation struct {
 	Title    string   `json:"title"`
 	Inline   string   `json:"inline,omitempty"`
+	Label    string   `json:"label,omitempty"`
 	Wow      string   `json:"wow"`
 	Places   []string `json:"places,omitempty"`  // translated place names, same order
 	Further  []string `json:"further,omitempty"` // translated "further" items, same order
@@ -161,6 +197,9 @@ func (c *Card) Localized(lang string) *Card {
 	}
 	out := *c
 	out.Title, out.Wow, out.Body = t.Title, t.Wow, t.Body
+	if t.Label != "" {
+		out.Label = t.Label
+	}
 	if t.Dispute != "" {
 		out.Dispute = t.Dispute
 	}
@@ -383,6 +422,17 @@ func (s *Set) Validate() []error {
 		if c.Zoom < 1 || c.Zoom > 5 {
 			bad(c, "zoom must be 1..5")
 		}
+		if m := c.Moment; m != nil {
+			if len(c.Years) > 0 {
+				from, to := c.Years[0], c.Years[len(c.Years)-1]
+				if m.Year < from-MomentSlack || m.Year > to+MomentSlack {
+					bad(c, "moment year %d is not within or near years %d-%d", m.Year, from, to)
+				}
+			}
+			if m.Place < 0 || m.Place >= len(c.Places) {
+				bad(c, "moment place %d is not an index into its %d places", m.Place, len(c.Places))
+			}
+		}
 		if len(c.Books) == 0 {
 			bad(c, "needs at least one book")
 		}
@@ -412,8 +462,8 @@ func (s *Set) Validate() []error {
 				bad(c, "source without title")
 			}
 		}
-		if n := len(strings.Fields(c.PlainBody())); n == 0 || n > MaxWords(c.Kind) {
-			bad(c, "body has %d words, want 1..%d", n, MaxWords(c.Kind))
+		if n := CopyWords(c.Body); n == 0 || n > MaxWords(c.Kind) {
+			bad(c, "body has %d words in one copy, want 1..%d", n, MaxWords(c.Kind))
 		}
 		for _, l := range c.Links() {
 			if _, ok := s.ByID[l.Target]; !ok {
@@ -422,6 +472,18 @@ func (s *Set) Validate() []error {
 		}
 		for _, e := range ProseErrors(c.Body) {
 			bad(c, "%s", e)
+		}
+		for i, p := range Paragraphs(c.Body) {
+			if LinkInLabel(p) {
+				bad(c, "paragraph %d: a card link inside the {at} label; link in the text instead", i+1)
+			}
+		}
+		for lang, t := range c.Translations {
+			for i, p := range Paragraphs(t.Body) {
+				if LinkInLabel(p) {
+					bad(c, "%s translation paragraph %d: a card link inside the {at} label; link in the text instead", lang, i+1)
+				}
+			}
 		}
 		for lang, t := range c.Translations {
 			for _, e := range ProseErrors(t.Body) {
@@ -438,7 +500,7 @@ func (s *Set) Validate() []error {
 			if strings.TrimSpace(t.Title) == "" || strings.TrimSpace(t.Wow) == "" || strings.TrimSpace(t.Body) == "" {
 				bad(c, "%s translation needs title, wow and body", lang)
 			}
-			if n := len(strings.Fields(tc.PlainBody())); n > MaxWords(c.Kind)*13/10 {
+			if n := CopyWords(t.Body); n > MaxWords(c.Kind)*13/10 {
 				bad(c, "%s translation has %d words, want at most %d", lang, n, MaxWords(c.Kind)*13/10)
 			}
 			want := map[string]int{}
@@ -522,20 +584,21 @@ func (s *Set) Backlinks(id string) []string {
 	return out
 }
 
-// ForEdition resolves a card for a reader's edition: an m/f card is swapped
-// for its pair when the reader holds the other copy.
-func (s *Set) ForEdition(id, edition string) *Card {
+// Partner returns the other card of an m/f pair: the card that tells the
+// same theme in the other copy. Both copies hold the whole dictionary, so a
+// link never swaps one for the other; the pair only says which story each
+// copy's chapter tells.
+func (s *Set) Partner(id string) *Card {
 	c := s.ByID[id]
-	if c == nil || c.Edition == EditionBoth || c.Edition == edition || edition == "" {
-		return c
+	if c == nil || c.Pair == "" {
+		return nil
 	}
 	for _, oid := range s.Order {
-		o := s.ByID[oid]
-		if o.Pair == c.Pair && o.ID != c.ID {
+		if o := s.ByID[oid]; o.Pair == c.Pair && o.ID != c.ID {
 			return o
 		}
 	}
-	return c
+	return nil
 }
 
 // Resolved returns a copy of the card whose bare [[id]] links carry the

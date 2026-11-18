@@ -3,9 +3,9 @@ id: abba
 name: ABBA
 nameRu: ABBA
 aliases:
-- абба
+  - абба
 years:
-- 1972
+  - 1972
 place:
   name: Stockholm
   lat: 59.3293
@@ -13,30 +13,87 @@ place:
 placeRu: "Стокгольм"
 genre: Pop and disco
 genreRu: поп и диско
+story: "ABBA modelled their songwriting on the Beatles: every song written as a potential hit, every album varied, pop sources studied and reshaped with scholarly exactitude. From “Dancing Queen” to Voulez-Vous they turned to disco, looking for the African-American dance groove they admired in Stevie Wonder."
+storyRu: "Песни ABBA писали по образцу The Beatles: каждую — как возможный хит, каждый альбом — разнообразным, а поп-источники изучали и переплавляли с учёной точностью. От «Dancing Queen» до «Voulez-Vous» они обращались к диско в поисках афроамериканского танцевального грува, которым восхищались у Стиви Уандера."
 links:
-- to: card:rhythm-and-blues
-  claim: For “Dancing Queen”, ABBA took rhythmic inspiration from soul singer George
-    McCrae’s “Rock Your Baby”.
-  claimRu: Работая над «Dancing Queen», ABBA вдохновлялись ритмом «Rock Your Baby»
-    соул-певца Джорджа Маккрея.
-  sources:
-  - title: 'Library of Congress: Carl Magnus Palm on Arrival'
-    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Arrival_Palm.pdf
-  - title: 'Rolling Stone: ABBA — Dancing Queen'
-    url: https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/abba-dancing-queen-30281/
-  kind: influence
-- to: root:george-mccrae
-  claim: For “Dancing Queen”, ABBA took rhythmic inspiration from soul singer George
-    McCrae’s “Rock Your Baby”.
-  claimRu: Работая над «Dancing Queen», ABBA вдохновлялись ритмом «Rock Your Baby»
-    соул-певца Джорджа Маккрея.
-  sources:
-  - title: 'Library of Congress: Carl Magnus Palm on Arrival'
-    url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Arrival_Palm.pdf
-  - title: 'Rolling Stone: ABBA — Dancing Queen'
-    url: https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/abba-dancing-queen-30281/
-  kind: influence
-story: For “Dancing Queen”, ABBA listened to George McCrae’s “Rock Your Baby”. Its
-  rhythm helped them find the feel of their own song.
-storyRu: Работая над «Dancing Queen», ABBA слушали «Rock Your Baby» Джорджа Маккрея.
-  Его ритм помог им найти звучание собственной песни.
+  - to: "root:the-beatles"
+    kind: "influence"
+    how: "Andersson and Ulvaeus took the Beatles as their model of pop songcraft: every song written as a potential single, albums built on variety, and the English-language pop tradition studied and reshaped onto a Swedish schlager base."
+    howRu: "Андерссон и Ульвеус взяли The Beatles за образец поп-ремесла: каждая песня — потенциальный сингл, альбом держится на разнообразии, а англоязычная поп-традиция изучена и переплавлена на шведской шлягерной основе."
+    carries: []
+    dimensions: ["harmony-form"]
+    scope: "career"
+    evidence:
+      - type: "critics"
+        dimensions: ["harmony-form"]
+        text: "ABBA biographer Carl Magnus Palm writes that the group modelled themselves on the Beatles in aiming for variety across an album."
+        textRu: "Биограф ABBA Карл Магнус Пальм пишет, что группа равнялась на The Beatles, добиваясь разнообразия в пределах альбома."
+        source:
+          title: "Library of Congress, National Recording Registry: Carl Magnus Palm on ABBA’s Arrival"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Arrival_Palm.pdf"
+          quote: "Modelling themselves on the Beatles, ABBA aspired to a sense of variation on their albums"
+      - type: "critics"
+        dimensions: ["harmony-form"]
+        text: "In a Guardian feature built on interviews with Ulvaeus and Lyngstad, the Beatles are named as the source of their method of writing every song as a potential hit single, and as their heroes."
+        textRu: "В материале Guardian, построенном на беседах с Ульвеусом и Лингстад, The Beatles названы источником их метода — писать каждую песню как возможный хит — и их кумирами."
+        source:
+          title: "The Guardian: Abba on drugs, Eminem and why writing great pop is a job for young people (2014)"
+          url: "https://www.theguardian.com/music/2014/apr/10/abba-interview-bjorn-ulvaeus-frida-lyngstad"
+          quote: "They took inspiration from the Beatles by writing every song as a potential hit single – only when they had enough for an LP did that become the album."
+      - type: "critics"
+        dimensions: []
+        text: "NPR’s Barry Walters writes that ABBA studied and reshaped the Beatles and the Stones with scholarly exactitude."
+        textRu: "Барри Уолтерс на NPR пишет, что ABBA изучили и переплавили The Beatles и Rolling Stones с учёной точностью."
+        source:
+          title: "NPR, The Record: Barry Walters, ABBA’s Essential, Influential Melancholy (2015)"
+          url: "https://www.npr.org/sections/therecord/2015/05/23/408844375/abbas-essential-influential-melancholy"
+          quote: "Further culturally removed from their sources than The Beatles and the Stones, they nevertheless studied and reshaped them with the exactitude of scholarly vets."
+      - type: "critics"
+        dimensions: []
+        text: "Palm, quoted by BBC Culture, says ABBA added the Beach Boys and the Beatles to the simple blueprint of the schlager they grew up loving."
+        textRu: "Пальм в материале BBC Culture говорит, что ABBA добавили The Beach Boys и The Beatles к простой схеме шлягера, который любили с детства."
+        source:
+          title: "BBC Culture: Andrew Harrison, Why are Abba so popular? (2014)"
+          url: "https://www.bbc.com/culture/article/20140415-why-are-abba-so-popular"
+          quote: "but Abba grew up loving Schlager and they added other things that they loved like The Beach Boys and The Beatles to that simple blueprint."
+  - to: "style:disco"
+    kind: "style"
+    how: "In their disco period ABBA, admirers of Stevie Wonder, worked to bring an African-American dance groove into their records, culminating in the disco album Voulez-Vous and the dark, string-laden disco of “Gimme! Gimme! Gimme!”."
+    howRu: "В свой дискотечный период ABBA, поклонники Стиви Уандера, старались привнести в свои записи афроамериканский танцевальный грув; вершиной стали диско-альбом «Voulez-Vous» и мрачное, полное струнных диско «Gimme! Gimme! Gimme!»."
+    carries: ["groove"]
+    dimensions: ["rhythm", "sound"]
+    scope: "period"
+    period: "1976–1979 (“Dancing Queen” to Voulez-Vous)"
+    evidence:
+      - type: "listening"
+        dimensions: ["rhythm"]
+        text: "Palm writes that Andersson and Ulvaeus were huge fans of Stevie Wonder but, raised on European hit music, found it hard to tap into African-American rhythms."
+        textRu: "Пальм пишет, что Андерссон и Ульвеус были страстными поклонниками Стиви Уандера, но, выросшие на европейской эстраде, с трудом осваивали афроамериканские ритмы."
+        source:
+          title: "Library of Congress, National Recording Registry: Carl Magnus Palm on ABBA’s Arrival"
+          url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Arrival_Palm.pdf"
+          quote: "Benny and Björn were both huge fans of artists such as Stevie Wonder, but, being Swedes brought up on “square” European hit music, found it hard to tap into African-American rhythms."
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "The Guardian calls Voulez-Vous their disco album, the record on which they finally brought a groove into their sound."
+        textRu: "Guardian называет «Voulez-Vous» их диско-альбомом — пластинкой, на которой в их звуке наконец появился грув."
+        source:
+          title: "The Guardian: Abba on drugs, Eminem and why writing great pop is a job for young people (2014)"
+          url: "https://www.theguardian.com/music/2014/apr/10/abba-interview-bjorn-ulvaeus-frida-lyngstad"
+          quote: "on which they finally introduced a groove to their sound"
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Rolling Stone hears the eerie electronic strings and death-disco sound of “Gimme! Gimme! Gimme!” as an influence on Eighties European dance music."
+        textRu: "В зловещих электронных струнных и звучании «смертельного диско» песни «Gimme! Gimme! Gimme!» Rolling Stone слышит то, что повлияло на европейскую танцевальную музыку восьмидесятых."
+        source:
+          title: "Rolling Stone: The 25 Best ABBA Songs, Ranked"
+          url: "https://www.rollingstone.com/music/music-features/the-25-best-abba-songs-ranked-707709/"
+          quote: "The death-disco sound of “Gimme! Gimme! Gimme!” was influential on the Euro-sleaze dance music of the Eighties"
+    example:
+      song: "“Dancing Queen” (1976)"
+      text: "To find a dance groove, Andersson and Ulvaeus listened to George McCrae’s “Rock Your Baby” before trying their hand at a disco song."
+      textRu: "В поисках танцевального грува Андерссон и Ульвеус слушали «Rock Your Baby» Джорджа Маккрея, прежде чем самим взяться за песню в духе диско."
+      source:
+        title: "Rolling Stone: The 500 Greatest Songs of All Time — ABBA, “Dancing Queen”"
+        url: "https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/abba-dancing-queen-30281/"
+        quote: "ABBA’s songwriters were inspired by soulman George McCrae’s dance-floor hit “Rock Your Baby” to try their hands at a disco song"

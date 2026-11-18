@@ -6,10 +6,15 @@ import { formatYears, KIND_LABEL } from '../lib/cards';
 import { formatFragment, terminalCommand } from '../lib/fragment';
 import { vtags, bookMarks, copyText, h, svgIcon, toast } from '../lib/dom';
 import { eraColor } from '../lib/atlasModel';
-import { edition, lang, pick, t } from '../lib/i18n';
-import { editionNote, pairLink } from './editionNote';
+import { chapterLabel, edition, lang, t } from '../lib/i18n';
+import { editionNote, pairLine } from './editionNote';
 import { cardYaml } from '../lib/cardYaml';
 import { mediaSrc } from '../lib/media';
+import { paragraphsOf } from '../lib/paragraphs';
+import { cardCaches, cardChecks, cardExtras } from '../mechanics';
+import { cardRecordings } from './recordings';
+import { stopWithin } from '../lib/sound';
+import { factFooter } from './factoid';
 
 /** A drawer that slides in from the right, with a focus trap and Esc to close. */
 export class Drawer {
@@ -38,6 +43,7 @@ export class Drawer {
 
   show(content: HTMLElement): void {
     if (!this.isOpen) this.returnTo = document.activeElement;
+    stopWithin(this.el);
     const close = h('button.icon-btn.close', { 'aria-label': t('Close'), onclick: () => this.close() }, svgIcon('close'));
     // A sticky header holds the close button, so it never covers the text.
     const bar = h('div.drawer-bar', {}, h('span.drawer-label', {}, ...vtags(content.dataset.label ?? '')), close);
@@ -54,6 +60,8 @@ export class Drawer {
 
   close(silent = false): void {
     if (!this.isOpen) return;
+    // Nothing keeps playing behind a closed panel.
+    stopWithin(this.el);
     this.el.classList.remove('on');
     this.scrim.classList.remove('on');
     document.documentElement.classList.remove('panel-open');
@@ -76,14 +84,7 @@ export class Drawer {
   }
 }
 
-export interface CardContext {
-  /** The id the reader followed, when edition resolution swapped it. */
-  asked?: Card;
-  /** The card came from someone else's path and is not in the reader's copy. */
-  foreign?: boolean;
-}
-
-export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElement {
+export function renderCard(app: App, c: Card): HTMLElement {
   const era = ERAS.find((e) => e.id === c.era);
   const img = c.media?.find((m) => m.type === 'image');
   const audio = c.media?.filter((m) => m.type === 'audio') ?? [];
@@ -93,44 +94,10 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
     h('button', { onclick: async () => toast((await copyText(terminalCommand(point))) ? t('Command copied') : t('Copy failed')) }, t('Copy')),
   );
 
-  const paragraphs = c.body.split(/\n\s*\n/).map((p) => h('p', {}, richText(app, p.replace(/\s*\n\s*/g, ' '))));
-  const partner = app.set.partner(c.id);
-  const notices: HTMLElement[] = [];
-  if (c.dispute) notices.push(h('div.notice', { role: 'note' }, h('b', {}, t('Contested.') + ' '), c.dispute));
-  if (ctx.asked && ctx.asked.id !== c.id) {
-    notices.push(
-      h(
-        'div.notice.edition',
-        {},
-        // Said once, plainly: whose story this is, and how to read the other.
-        h('b', {}, pick({ en: 'This story belongs to the other copy.', ru: 'Эта история — из другого экземпляра.' }) + ' '),
-        pick({ en: `In yours, the chapter tells “${c.title}”. `, ru: `В вашем глава рассказывает «${c.title}». ` }),
-        pairLink(app, ctx.asked, pick({ en: 'Read the other one →', ru: 'Прочитать ту историю →' })),
-      ),
-    );
-  } else if (ctx.foreign) {
-    notices.push(
-      h(
-        'div.notice.edition',
-        {},
-        h('b', {}, t('From the other copy.') + ' '),
-        t("You hold the {edition}; this page reached you through another reader's path.", { edition: edition(app.edition) }),
-        partner ? ' ' + t('Its counterpart in your copy is') + ' ' : '',
-        partner ? h('a', { href: `#focus=${partner.id}`, 'data-card': partner.id }, partner.title) : '',
-        partner ? '.' : '',
-      ),
-    );
-  } else if (c.edition === 'm' || c.edition === 'f') {
-    notices.push(
-      h(
-        'div.notice.edition',
-        {},
-        h('b', {}, t('Only in the {edition}.', { edition: edition(c.edition, 'prep') }) + ' '),
-        partner ? pick({ en: `In the other copy, the chapter tells “${partner.title}”. `, ru: `В другом экземпляре глава рассказывает «${partner.title}». ` }) : '',
-        partner ? pairLink(app, partner, pick({ en: 'Read it →', ru: 'Прочитать →' })) : '',
-      ),
-    );
-  }
+  const paragraphs = paragraphsOf(c.body).map((p) => h('p', {}, richText(app, p)));
+  // What is disputed reads after the story it qualifies, not before it.
+  const contested = c.dispute ? h('div.notice.contested', { role: 'note' }, h('b', {}, t('Contested.') + ' '), c.dispute) : null;
+  const other = pairLine(app, c);
 
   const backlinks = app.set.backlinks(c.id).map((id) => app.set.get(id)).filter(Boolean) as Card[];
   const sameGenre = (c.genres ?? []).map((g) => app.set.get(g)).filter(Boolean) as Card[];
@@ -141,7 +108,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
     h(
       'div.meta',
       {},
-      h('span.era-tag', {}, ...vtags(`${c.era ?? ''} ${era ? '· ' + era.label : ''}`)),
+      h('span.era-tag', {}, [chapterLabel(c.era), era?.label].filter(Boolean).join(' · ')),
       h('span', {}, KIND_LABEL[c.kind] ?? c.kind),
       h('span', {}, formatYears(c.years)),
       h('span', {}, c.places.map((p) => p.name).join(' → ')),
@@ -153,8 +120,10 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
       {},
       c.books.map((b) => h(`span.book.${b}`, {}, bookMarks([b]), BOOK_NAMES[b])),
     ),
-    ...notices,
     h('div.text', {}, ...paragraphs),
+    contested,
+    other,
+    cardRecordings(app, c),
     ...audio.map((a) =>
       h(
         'figure.card-audio',
@@ -163,6 +132,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
         h('figcaption.credit', {}, a.caption ? a.caption + ' · ' : '', a.credit, ' · ', a.url ? h('a', { href: a.url, rel: 'noopener', target: '_blank' }, a.license) : a.license),
       ),
     ),
+    cardExtras(app, c),
     c.further?.length ? h('section.sec.further', {}, h('h3', {}, t('Go further')), h('ul', {}, c.further.map((f) => h('li', {}, richText(app, f))))) : null,
     sameGenre.length || backlinks.length
       ? h(
@@ -178,6 +148,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
           ),
         )
       : null,
+    factFooter(app, c.id),
     h(
       'div.card-actions',
       {},
@@ -207,6 +178,7 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
         c.sources.map((s) => h('li', {}, s.url ? h('a', { href: s.url, rel: 'noopener', target: '_blank' }, s.title) : s.title)),
       ),
     ),
+    cardChecks(app, c),
   );
 
   const media = img
@@ -225,7 +197,9 @@ export function renderCard(app: App, c: Card, ctx: CardContext = {}): HTMLElemen
       )
     : null;
 
-  return h('article.card', { 'data-label': `${c.era ?? ''} · ${KIND_LABEL[c.kind] ?? c.kind}`, 'data-card-id': c.id, 'aria-labelledby': 'card-title', lang: c.textLang && c.textLang !== lang() ? c.textLang : undefined }, media, body);
+  const article = h('article.card', { 'data-label': [chapterLabel(c.era), KIND_LABEL[c.kind] ?? c.kind].filter(Boolean).join(' · '), 'data-card-id': c.id, 'aria-labelledby': 'card-title', lang: c.textLang && c.textLang !== lang() ? c.textLang : undefined }, media, body);
+  cardCaches(app, c, article);
+  return article;
 }
 
 export function renderBook(app: App, path: string[], actions: { share(): void; replay(): void; clear(): void }): HTMLElement {
@@ -240,7 +214,7 @@ export function renderBook(app: App, path: string[], actions: { share(): void; r
       'p',
       {},
       cards.length
-        ? t('Every card you open is written into your own book, here in your browser and nowhere else. Share it and another reader walks the same road, including pages their copy does not have.')
+        ? t('Every card you open is written into your own book, here in your browser and nowhere else. Share it and another reader walks the same road, whichever copy they hold.')
         : t('Open a card and it is written into your own book. Nothing leaves your browser until you share it.'),
     ),
     cards.length

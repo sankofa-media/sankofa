@@ -15,8 +15,9 @@ import (
 	"golang.org/x/text/unicode/norm"
 )
 
-// DefaultBase is used when SANKOFA_MUSEUM_URL is not set.
-const DefaultBase = "http://localhost:8080/"
+// DefaultBase is the public museum, used when SANKOFA_MUSEUM_URL is not set:
+// a link printed by the CLI opens for anyone, not only next to a local build.
+const DefaultBase = "https://museum.sankofa.workshop.aenix.io/"
 
 // Point is a position in the atlas: a time span, a place, a zoom level and an
 // optional focused card.

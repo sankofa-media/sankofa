@@ -1,0 +1,76 @@
+# All times are seconds on the original LoC MP3 clock, including WebVTT cues.
+# The ru block carries the Russian names and notes the museum shows.
+# Dates retain source precision: a year alone does not imply January 1.
+voices:
+  - id: "fountain-hughes"
+    speaker: "Fountain Hughes"
+    recorded:
+      date: "1949-06-11"
+      place: "Baltimore, Maryland"
+      interviewer: "Hermond Norwood"
+    loc_url: "https://www.loc.gov/item/afc1950037_afs09990a/"
+    mp3_url: "https://tile.loc.gov/storage-services/service/afc/afc1950037/afc1950037_afs09990/afc1950037_afs09990a.mp3"
+    transcript_url: "https://tile.loc.gov/storage-services/service/afc/afc1950037/afc1950037_afs09990/afc1950037_afs09990a.xml"
+    rights_quote: "The Library of Congress is unaware of any copyright or other restrictions in the Voices Remembering Slavery Collection. Absent any such restrictions, these materials are free to use and reuse."
+    rights_url: "https://www.loc.gov/collections/voices-remembering-slavery/about-this-collection/rights-and-access/"
+    credit: "Cyrus B. Koonce Collection (AFC 1950/037), American Folklife Center, Library of Congress"
+    card: "wpa-narratives"
+    birth_note: "born into slavery near Charlottesville, about 1860"
+    ru:
+      speaker: "Фаунтин Хьюз"
+      place: "Балтимор, Мэриленд"
+      interviewer: "Хермонд Норвуд"
+      birth_note: "родился в рабстве под Шарлотсвиллом около 1860 года"
+    subtitles:
+      en: "fountain-hughes.en.vtt"
+      ru: "fountain-hughes.ru.vtt"
+    start: 1132.0
+    end: 1201.6
+  - id: "laura-smalley"
+    speaker: "Laura Smalley"
+    recorded:
+      date: "1941"
+      place: "Hempstead, Waller County, Texas"
+      interviewer: "John Henry Faulk; unidentified female interviewer"
+    loc_url: "https://www.loc.gov/item/afc1941016_afs05496a/"
+    mp3_url: "https://tile.loc.gov/storage-services/service/afc/afc1941016/afc1941016_afs05496/afc1941016_afs05496a.mp3"
+    transcript_url: "https://tile.loc.gov/storage-services/service/afc/afc1941016/afc1941016_afs05496/afc1941016_afs05496a.xml"
+    rights_quote: "The Library of Congress is unaware of any copyright or other restrictions in the Voices Remembering Slavery Collection. Absent any such restrictions, these materials are free to use and reuse."
+    rights_url: "https://www.loc.gov/collections/voices-remembering-slavery/about-this-collection/rights-and-access/"
+    credit: "John Henry Faulk Recordings of Negro Religious Services, Part 3 (AFC 1941/016), American Folklife Center, Library of Congress"
+    card: "wpa-narratives"
+    birth_note: "born into slavery near Bellville, Texas; exact birth year unknown"
+    ru:
+      speaker: "Лора Смолли"
+      place: "Хемпстед, округ Уоллер, Техас"
+      interviewer: "Джон Генри Фолк и неизвестная собеседница"
+      birth_note: "родилась в рабстве под Беллвиллом, Техас; точный год рождения неизвестен"
+    subtitles:
+      en: "laura-smalley.en.vtt"
+      ru: "laura-smalley.ru.vtt"
+    start: 579.0
+    end: 600.15
+  - id: "billy-mccrea"
+    speaker: "Uncle Billy McCrea"
+    recorded:
+      date: "1940"
+      place: "Jasper, Jasper County, Texas"
+      interviewer: "John A. Lomax and Ruby T. Lomax"
+    loc_url: "https://www.loc.gov/item/afc1940003_afs03975a/"
+    mp3_url: "https://tile.loc.gov/storage-services/service/afc/afc1940003/afc1940003_afs03975/afc1940003_afs03975a.mp3"
+    transcript_url: "https://tile.loc.gov/storage-services/service/afc/afc1940003/afc1940003_afs03975/afc1940003_afs03975a.xml"
+    rights_quote: "The Library of Congress is unaware of any copyright or other restrictions in the Voices Remembering Slavery Collection. Absent any such restrictions, these materials are free to use and reuse."
+    rights_url: "https://www.loc.gov/collections/voices-remembering-slavery/about-this-collection/rights-and-access/"
+    credit: "John and Ruby Lomax 1940 Southern States Recordings Collection (AFC 1940/003), American Folklife Center, Library of Congress"
+    card: "wpa-narratives"
+    birth_note: "born into slavery, about 1851 by his own count; grew up in Jasper, Texas"
+    ru:
+      speaker: "Дядя Билли Маккри"
+      place: "Джаспер, округ Джаспер, Техас"
+      interviewer: "Джон А. Ломакс и Руби Т. Ломакс"
+      birth_note: "родился в рабстве, по собственному счёту около 1851 года; вырос в Джаспере, Техас"
+    subtitles:
+      en: "billy-mccrea.en.vtt"
+      ru: "billy-mccrea.ru.vtt"
+    start: 189.3
+    end: 224.95

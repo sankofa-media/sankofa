@@ -127,10 +127,13 @@ spec:
             requests: {cpu: 50m, memory: 128Mi}
             limits: {memory: 512Mi}
           securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: [ALL]}}
-          volumeMounts: [{name: memory, mountPath: /var/lib/griot}]
+          volumeMounts: [{name: memory, mountPath: /var/lib/griot}, {name: tmp, mountPath: /tmp}]
       volumes:
         - name: memory
           persistentVolumeClaim: {claimName: griot-memory}
+        # SQLite needs a writable temp directory for VACUUM; the root filesystem is read-only.
+        - name: tmp
+          emptyDir: {sizeLimit: 2Gi}
 ---
 apiVersion: v1
 kind: Service

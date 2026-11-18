@@ -8,6 +8,7 @@ places:
   - {name: "Boston, Massachusetts", lat: 42.3601, lon: -71.0589}
   - {name: London, lat: 51.5072, lon: -0.1276}
 zoom: 4
+moment: {year: 1773, place: 1}
 era: v3
 books: [voices]
 further:
@@ -22,17 +23,13 @@ sources:
   - {title: "Phillis Wheatley: Poems on Various Subjects, full text", url: "https://www.gutenberg.org/cache/epub/409/pg409.html"}
   - {title: "National Archives, Founders Online: Washington to Wheatley, 28 February 1776", url: "https://founders.archives.gov/documents/Washington/03-03-02-0281"}
   - {title: "Somerville Museum: Phillis Wheatley and George Washington", url: "https://www.somervillemuseum.org/museum-blog/first-flag-poetry-rlmgh"}
+  - {title: "Massachusetts Historical Society, African Americans and the End of Slavery in Massachusetts: Phillis Wheatley", url: "https://www.masshist.org/features/endofslavery/wheatley"}
+  - {title: "Boston Public Library (2023): Tracing the Life of Phillis Wheatley Peters", url: "https://www.bpl.org/blogs/post/tracing-the-life-of-phillis-wheatley-peters/"}
 media:
   - {"type": "image", "file": "phillis-wheatley.jpg", "caption": "Frontispiece of Poems on Various Subjects, London, 1773", "credit": "Scipio Moorhead, engraver, as catalogued by the Library of Congress; Library of Congress, Rare Book and Special Collections Division", "license": "Public domain", "url": "https://www.loc.gov/item/2002712199/"}
 ---
-Eighteen of Boston's most prominent men, from Governor Thomas Hutchinson to
-John Hancock, put their names in her book to assure the world that the
-poems were "written by Phillis". She had been brought from Africa as a
-child and was enslaved in a Boston household. In September 1773 a London
-bookseller published her Poems on Various Subjects, Religious and Moral.
-Its frontispiece portrait is credited to Scipio Moorhead, enslaved by a
-Boston minister, and the book includes her poem "To S. M. a young African
-Painter, on seeing his Works". In 1775 she sent George Washington a poem;
-in February 1776 he replied that if she came to Cambridge he would be
-"happy to see a person so favourd by the Muses". Compare [[equiano|Olaudah Equiano]] and
-[[juan-latino|Juan Latino]].
+Phillis Wheatley was brought from West Africa to Boston as a child in 1761, enslaved, and named by her buyers after the slave ship, the Phillis. At about fourteen she published her first poem in a newspaper, and in 1770 an elegy on the preacher George Whitefield made her famous.
+
+To assure the world that her poems were "written by Phillis", eighteen of Boston's most prominent men, from Governor Thomas Hutchinson to John Hancock, put their names in her book. In 1773 she sailed to London, where that September a bookseller published her Poems on Various Subjects, Religious and Moral, the first known book of poetry by a Black woman. Its frontispiece portrait is credited to Scipio Moorhead, enslaved by a Boston minister, and the book includes her poem "To S. M. a young African Painter, on seeing his Works".
+
+Back in Boston she wrote that her master had "given me my freedom". In 1775 she sent George Washington a poem; in February 1776 he replied that if she came to Cambridge he would be "happy to see a person so favourd by the Muses". She married John Peters, a free Black man, but her proposed second volume was never published in wartime Boston, and she was living in a boardinghouse when she died in December 1784.

@@ -7,19 +7,70 @@ place: {"name": "Kingsland, Arkansas", "lat": 33.859, "lon": -92.2932}
 placeRu: "Кингсленд, Арканзас"
 genre: "Country"
 genreRu: "кантри"
+story: "Johnny Cash worked in country music: plainspoken narrative songs, a booming baritone and a bare, stark sound of acoustic guitar, bass and lead guitar. As a boy he listened to Sister Rosetta Tharpe on the radio, and she remained his favourite singer, an influence on his music."
+storyRu: "Джонни Кэш работал в кантри: простые повествовательные песни, гулкий баритон и голый, суровый звук — акустическая гитара, бас и соло-гитара. Мальчиком он слушал по радио Систер Розетту Тарп, и она осталась его любимой певицей, повлиявшей на его музыку."
 links:
-  - to: "card:work-songs"
-    claim: "Johnny Cash recorded “Rock Island Line”, a song John Lomax first recorded in 1934 from a convict work group in an Arkansas prison."
-    claimRu: "Джонни Кэш записал «Rock Island Line» — песню, которую Джон Ломакс впервые записал в 1934 году от рабочей бригады заключённых в арканзасской тюрьме."
-    sources:
-      - title: "Johnny Cash: Rock Island Line — official recording catalogue"
-        url: "https://www.johnnycash.com/track/rock-island-line/"
-      - title: "Library of Congress: From Mule-een to New Orleans — What Was Lead Belly Saying?"
-        url: "https://blogs.loc.gov/folklife/2017/08/from-mule-een-to-new-orleans-just-what-was-lead-belly-saying/"
-      - title: "CALS Encyclopedia of Arkansas: The Rock Island Line (song)"
-        url: "https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/"
-    kind: "cover"
-    what: "“Rock Island Line”: Cash’s performance of the song first documented by Lomax in an Arkansas prison in 1934."
-    whatRu: "«Rock Island Line»: исполнение Кэшем песни, впервые записанной Ломаксом в арканзасской тюрьме в 1934 году."
-story: "Johnny Cash recorded “Rock Island Line”. The song reaches back to a convict work group recorded by John Lomax in an Arkansas prison in 1934."
-storyRu: "Джонни Кэш записал «Rock Island Line». Песня восходит к рабочей бригаде заключённых, которую Джон Ломакс записал в арканзасской тюрьме в 1934 году."
+  - to: "style:country"
+    kind: "style"
+    how: "Cash worked in country: plainspoken narrative songs of the everyman, a deep booming baritone, and a stripped, percussive sound of muted acoustic guitar, bass and lead guitar, framed by the image of the Man in Black."
+    howRu: "Кэш работал в кантри: незамысловатые повествовательные песни о простом человеке, глубокий гулкий баритон и скупой, ударный звук — приглушённая акустическая гитара, бас и соло-гитара, а обрамляет всё это образ Человека в чёрном."
+    carries: []
+    dimensions: ["harmony-form", "melody-vocal", "sound", "image"]
+    scope: "career"
+    evidence:
+      - type: "critics"
+        dimensions: ["harmony-form", "image"]
+        text: "The Rock & Roll Hall of Fame calls Cash a country legend whose plainspoken narrative songs spoke to the American everyman."
+        textRu: "Зал славы рок-н-ролла называет Кэша легендой кантри, чьи незамысловатые повествовательные песни говорили с простым американцем."
+        source:
+          title: "Rock & Roll Hall of Fame: Johnny Cash"
+          url: "https://rockhall.com/inductees/johnny-cash/"
+          quote: "Johnny Cash had all the qualities of a country legend: a rich life, a keen instinct for storytelling and an unflinching eye on the world around him. Cash’s humble beginnings made him an authentic storyteller whose plainspoken narrative songs spoke to the American everyman."
+      - type: "critics"
+        dimensions: ["melody-vocal", "sound", "image"]
+        text: "The Guardian’s obituary places Cash at the mythic centre of country music and describes his sound as an acoustic guitar and a great booming baritone."
+        textRu: "Некролог в The Guardian ставит Кэша в мифический центр кантри и описывает его звук: акустическая гитара и могучий гулкий баритон."
+        source:
+          title: "The Guardian: Adam Sweeting, Johnny Cash (obituary, 2003)"
+          url: "https://www.theguardian.com/culture/2003/sep/12/johnnycash"
+          quote: "The result, 1994's American Recordings, featured just Cash, his acoustic guitar and that great booming baritone voice, playing songs by Leonard Cohen, Tom Waits and Kris Kristofferson alongside strong material of his own."
+      - type: "testimony"
+        dimensions: ["sound"]
+        text: "Cash described how he got his early sound: paper woven into the guitar strings for a percussive scratch, with bass and lead guitar, bare and stark."
+        textRu: "Кэш рассказывал, как получился его ранний звук: вплетённая в струны гитары бумага для ударного шороха, бас и соло-гитара — голо и сурово."
+        source:
+          title: "NPR, Fresh Air: Johnny Cash — The ‘Fresh Air’ Interview (1997, rebroadcast 2016)"
+          url: "https://www.npr.org/templates/transcript/transcript.php?storyId=503138966"
+          quote: "And I put paper in the strings of my guitar to get that (vocalizing) sound, and with the bass and the lead guitar, there it was. Bare and stark, that song was when it was released."
+  - to: "card:rosetta-tharpe"
+    kind: "influence"
+    how: "Sister Rosetta Tharpe was the voice young Cash heard on the family radio and his favourite singer; critics and his daughter count her among the formative influences on his music."
+    howRu: "Систер Розетта Тарп была голосом, который юный Кэш слышал по семейному радио, и его любимой певицей; критики и его дочь причисляют её к тем, кто сформировал его музыку."
+    carries: []
+    dimensions: ["melody-vocal"]
+    scope: "career"
+    evidence:
+      - type: "listening"
+        dimensions: ["melody-vocal"]
+        text: "Rosanne Cash writes that Tharpe was her father’s favourite singer, heard as a boy on the family’s battery radio over the cotton fields, and a major influence on him."
+        textRu: "Розанна Кэш пишет, что Тарп была любимой певицей её отца: мальчиком он слушал её по семейному радио на батарейках среди хлопковых полей, и она сильно на него повлияла."
+        source:
+          title: "Oxford American: Rosanne Cash, The Godmother of Soul (Issue 111, 2020)"
+          url: "https://oxfordamerican.org/magazine/issue-111-winter-2020/the-godmother-of-soul"
+          quote: "Dozens of musicians and performers credit her as a major influence, from Chuck Berry to Elvis to Keith Richards to my dad, who must have felt as if a spell had been cast on him as he sat glued to his family’s battery-powered radio and heard her voice pierce the gloaming over the cotton fields."
+      - type: "critics"
+        dimensions: []
+        text: "The Encyclopedia of Arkansas lists Cash among the musicians who cited Tharpe as an influence and says he spoke of her impact on his music."
+        textRu: "«Энциклопедия Арканзаса» называет Кэша среди музыкантов, признававших влияние Тарп, и пишет, что он говорил о том, как она повлияла на его музыку."
+        source:
+          title: "CALS Encyclopedia of Arkansas: Sister Rosetta Tharpe"
+          url: "https://encyclopediaofarkansas.net/entries/sister-rosetta-tharpe-1781/"
+          quote: "Her songs have been recorded by Elvis Presley, and Johnny Cash spoke of her impact on his music."
+      - type: "critics"
+        dimensions: []
+        text: "PopMatters, drawing on Gayle Wald’s biography, notes that Cash called Tharpe his favourite artist."
+        textRu: "PopMatters, опираясь на биографию Гейл Уолд, отмечает, что Кэш называл Тарп своей любимой исполнительницей."
+        source:
+          title: "PopMatters: Sister Rosetta Tharpe Got Rock Rolling Long Before Elvis"
+          url: "https://www.popmatters.com/sister-rosetta-tharpe-got-rock-rolling-long-before-elvis-2495821302.html"
+          quote: "Tharpe’s audience included jazz aficionados and discerning Southerners such as Johnny Cash, who called the gospel singer his favorite artist."

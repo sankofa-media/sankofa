@@ -6,17 +6,38 @@ place: {"name": "London", "lat": 51.5074, "lon": -0.1278}
 placeRu: "Лондон"
 genre: "Pop rock"
 genreRu: "поп-рок"
-story: "The riff in Coldplay’s “Talk” came from Kraftwerk’s “Computer Love”. A synthesizer melody became a guitar part in the new recording."
-storyRu: "Рифф в «Talk» группы Coldplay пришёл из «Computer Love» Kraftwerk. Синтезаторная мелодия стала гитарной партией в новой записи."
+story: "Coldplay formed in the wake of Radiohead: Chris Martin found his singing voice by hearing Thom Yorke and admits the band stole a lot from Radiohead in its early music. Critics hear in Radiohead's falsetto-and-acoustic-guitar ballads of The Bends the template that “essentially invented Coldplay”."
+storyRu: "Coldplay возникли вслед за Radiohead: Крис Мартин нашёл свой певческий голос, услышав Тома Йорка, и признаёт, что в ранних песнях группа многое у Radiohead украла. Критики слышат в балладах Radiohead с альбома «The Bends», где фальцет поёт под акустическую гитару, тот образец, который «по сути изобрёл Coldplay»."
 links:
-  - to: "root:kraftwerk"
-    kind: "interpolation"
-    claim: "Coldplay used the riff from Kraftwerk's 'Computer Love' in 'Talk'."
-    claimRu: "В «Talk» Coldplay использовали рифф из «Computer Love» группы Kraftwerk."
-    what: "The synthesizer riff from Kraftwerk's 'Computer Love', replayed on guitar in 'Talk'."
-    whatRu: "Синтезаторный рифф из «Computer Love» группы Kraftwerk, заново сыгранный на гитаре в «Talk»."
-    sources:
-      - title: "NPO Radio 2: Coldplay leent de basis voor Talk van Kraftwerk"
-        url: "https://www.nporadio2.nl/nieuws/top2000/e21e3ff0-4ff8-495f-9247-c533993bce04/coldplay-leent-de-basis-voor-talk-van-kraftwerk"
-      - title: "LA Weekly / Arthur: A conversation with Ralf Hutter of Kraftwerk"
-        url: "https://arthurmag.com/2009/11/16/a-conversation-with-ralf-hutter-of-kraftwerk-2005/"
+  - to: "root:radiohead"
+    kind: "influence"
+    how: "From Radiohead's mid-1990s ballads Coldplay took the falsetto-led vocal over acoustic guitar, melancholy anthemic guitar rock and the very idea that a singer like Martin could make this music."
+    howRu: "Из баллад Radiohead середины 1990-х Coldplay взяли фальцетный вокал под акустическую гитару, меланхоличный гитарный рок с размахом гимна и саму мысль, что такой певец, как Мартин, может делать эту музыку."
+    carries: []
+    dimensions: ["melody-vocal", "sound"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "Chris Martin told Mojo that Radiohead's arrival first made him think people like him could make music, and that hearing Thom Yorke and Jeff Buckley showed him a singing voice that sounded do-able."
+        textRu: "Крис Мартин рассказал Mojo, что именно с появлением Radiohead он впервые подумал, что музыку могут делать и такие, как он, а голоса Тома Йорка и Джеффа Бакли показали ему манеру пения, которая казалась ему по силам."
+        source:
+          title: "Mojo: Chris Martin Interviewed"
+          url: "https://mojo4music.com/articles/stories/chris-martin-interviewed"
+          quote: "And then, I guess, when Radiohead came around, that was the first time I thought, “Oh, people like me can make music also.” ... Then I heard Thom Yorke and Jeff Buckley and I thought, “OK, that sounds do-able.”"
+      - type: "testimony"
+        dimensions: ["sound", "melody-vocal"]
+        text: "Martin told Rolling Stone that the band obviously stole a lot from Radiohead in its early music."
+        textRu: "Мартин признался Rolling Stone, что в ранних песнях группа, конечно, многое украла у Radiohead."
+        source:
+          title: "Brian Hiatt, Rolling Stone India: Chris Martin — The Jesus of Uncool (2008)"
+          url: "https://rollingstoneindia.com/chris-martin-feature"
+          quote: "Our relationship with Radiohead is a funny one ... we were kids when they got huge, and we obviously stole a lot from them in our early music."
+      - type: "critics"
+        dimensions: ["sound", "melody-vocal"]
+        text: "Ed Power writes that Coldplay built global stardom on the softest side of Radiohead and that “High and Dry” essentially invented Coldplay; producer Nigel Godrich sums up that style as a guy singing in falsetto with an acoustic guitar."
+        textRu: "Эд Пауэр пишет, что Coldplay построили мировую славу на самой мягкой стороне Radiohead и что «High and Dry», по сути, изобрела Coldplay; продюсер Найджел Годрич сводит этот стиль к парню, поющему фальцетом под акустическую гитару."
+        source:
+          title: "Ed Power, The Irish Times: Why Radiohead’s The Bends is the worst great album of all time (2020)"
+          url: "https://www.irishtimes.com/culture/music/why-radiohead-s-the-bends-is-the-worst-great-album-of-all-time-1.4199850"
+          quote: "But what is indisputable is that Coldplay took the soggiest bits of Radiohead and parlayed them into a global stardom. ... High and Dry – which essentially invented Coldplay ... It's a guy singing in falsetto with an acoustic guitar."
+    scope: "career"

@@ -1,0 +1,164 @@
+{{- $name := include "griot.name" . -}}
+{{- $sqlite := eq .Values.store.type "sqlite" -}}
+{{- $r := .Values.retention -}}
+{{- if $sqlite }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ $name }}-memory
+  namespace: {{ .Release.Namespace }}
+  labels: {{- include "griot.labels" . | nindent 4 }}
+  annotations: {helm.sh/resource-policy: keep}
+spec:
+  accessModes: [ReadWriteOnce]
+  {{- with .Values.store.sqlite.storageClass }}
+  storageClassName: {{ . }}
+  {{- end }}
+  resources: {requests: {storage: {{ .Values.store.sqlite.size }}}}
+---
+{{- end }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ $name }}
+  namespace: {{ .Release.Namespace }}
+  labels: {{- include "griot.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicas }}
+  {{- if $sqlite }}
+  strategy: {type: Recreate}
+  {{- end }}
+  selector:
+    matchLabels: {{- include "griot.selector" . | nindent 6 }}
+  template:
+    metadata:
+      labels: {{- include "griot.selector" . | nindent 8 }}
+      annotations:
+        checksum/args: {{ toJson .Values.retention | sha256sum | trunc 16 }}
+    spec:
+      serviceAccountName: {{ $name }}
+      securityContext: {runAsNonRoot: true, runAsUser: 65532, fsGroup: 65532, seccompProfile: {type: RuntimeDefault}}
+      {{- if and (not $sqlite) (gt (int .Values.replicas) 1) (not .Values.affinity) }}
+      affinity:
+        podAntiAffinity:
+          preferredDuringSchedulingIgnoredDuringExecution:
+            - weight: 100
+              podAffinityTerm:
+                topologyKey: kubernetes.io/hostname
+                labelSelector:
+                  matchLabels: {{- include "griot.selector" . | nindent 20 }}
+      {{- else }}
+      {{- with .Values.affinity }}
+      affinity: {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- end }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector: {{- toYaml . | nindent 8 }}
+      {{- end }}
+      {{- with .Values.tolerations }}
+      tolerations: {{- toYaml . | nindent 8 }}
+      {{- end }}
+      containers:
+        - name: griot
+          image: {{ include "griot.image" . }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          args:
+            - --store={{ .Values.store.type }}
+            {{- if $sqlite }}
+            - --db=/var/lib/griot/memory.db
+            {{- end }}
+            {{- if gt (int .Values.replicas) 1 }}
+            - --leader-elect
+            - --lease-name={{ $name }}-recorder
+            {{- end }}
+            - --compress={{ .Values.store.compress }}
+            - --retention={{ $r.maxAge }}
+            - --max-versions={{ $r.maxVersions }}
+            - --tombstone-ttl={{ $r.tombstoneTTL }}
+            - --compact={{ $r.compact }}
+            - --retain-every={{ $r.every }}
+            {{- with $r.vacuumEvery }}
+            - --vacuum-every={{ . }}
+            {{- end }}
+            {{- if .Values.audit.enabled }}
+            - --audit-listen=:9444
+            - --audit-client-ca=/audit-ca/ca.crt
+            {{- end }}
+            - --namespaces={{ join "," .Values.scope.namespaces }}
+            - --exclude-namespaces={{ join "," .Values.scope.excludeNamespaces }}
+            - --exclude-resources={{ join "," .Values.scope.excludeResources }}
+            - --tls-cert-file=/serving/tls.crt
+            - --tls-key-file=/serving/tls.key
+            - --apiservice=
+            - --no-sync
+            - --webhooks=false
+            - --pulse=
+            - --metrics=:{{ .Values.metrics.port }}
+          env:
+            - name: POD_NAMESPACE
+              valueFrom: {fieldRef: {fieldPath: metadata.namespace}}
+            {{- if not $sqlite }}
+            - name: GRIOT_DSN
+              valueFrom: {secretKeyRef: {name: {{ .Values.store.postgres.existingSecret }}, key: {{ .Values.store.postgres.key }}}}
+            {{- end }}
+          ports:
+            - {name: https, containerPort: 8443}
+            - {name: metrics, containerPort: {{ .Values.metrics.port }}}
+            {{- if .Values.audit.enabled }}
+            - {name: audit, containerPort: 9444}
+            {{- end }}
+          readinessProbe: {httpGet: {path: /readyz, port: https, scheme: HTTPS}}
+          livenessProbe: {httpGet: {path: /livez, port: https, scheme: HTTPS}, periodSeconds: 20}
+          resources: {{- toYaml .Values.resources | nindent 12 }}
+          securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: [ALL]}}
+          volumeMounts:
+            - {name: serving, mountPath: /serving, readOnly: true}
+            {{- if .Values.audit.enabled }}
+            - {name: audit-ca, mountPath: /audit-ca, readOnly: true}
+            {{- end }}
+            {{- if $sqlite }}
+            - {name: memory, mountPath: /var/lib/griot}
+            {{- end }}
+            - {name: tmp, mountPath: /tmp}
+      volumes:
+        - name: serving
+          secret: {secretName: {{ $name }}-serving}
+        {{- if .Values.audit.enabled }}
+        - name: audit-ca
+          secret: {secretName: {{ required "audit.clientCASecret is required with audit.enabled" .Values.audit.clientCASecret }}}
+        {{- end }}
+        {{- if $sqlite }}
+        - name: memory
+          persistentVolumeClaim: {claimName: {{ $name }}-memory}
+        {{- end }}
+        # SQLite needs a writable temp directory for VACUUM; the root filesystem is read-only.
+        - name: tmp
+          emptyDir: {sizeLimit: 2Gi}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ $name }}
+  namespace: {{ .Release.Namespace }}
+  labels: {{- include "griot.labels" . | nindent 4 }}
+spec:
+  selector: {{- include "griot.selector" . | nindent 4 }}
+  ports:
+    - {name: https, port: 443, targetPort: https}
+    - {name: metrics, port: {{ .Values.metrics.port }}, targetPort: metrics}
+    {{- if .Values.audit.enabled }}
+    - {name: audit, port: 9444, targetPort: audit}
+    {{- end }}
+{{- if gt (int .Values.replicas) 1 }}
+---
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  name: {{ $name }}
+  namespace: {{ .Release.Namespace }}
+  labels: {{- include "griot.labels" . | nindent 4 }}
+spec:
+  minAvailable: 1
+  selector:
+    matchLabels: {{- include "griot.selector" . | nindent 6 }}
+{{- end }}

@@ -76,11 +76,11 @@ func TestEditions(t *testing.T) {
 	if errs := s.Validate(); len(errs) != 0 {
 		t.Fatal(errs)
 	}
-	if s.ForEdition("douglass", EditionFemale).ID != "jacobs" {
-		t.Fatal("f reader must get jacobs")
+	if p := s.Partner("douglass"); p == nil || p.ID != "jacobs" {
+		t.Fatal("douglass's partner is jacobs")
 	}
-	if s.ForEdition("douglass", EditionMale).ID != "douglass" {
-		t.Fatal("m reader keeps douglass")
+	if p := s.Partner("jacobs"); p == nil || p.ID != "douglass" {
+		t.Fatal("jacobs's partner is douglass")
 	}
 	if errs := set(m).Validate(); len(errs) != 1 {
 		t.Fatalf("lonely pair must fail: %v", errs)
@@ -152,6 +152,17 @@ func TestLocalizedMedia(t *testing.T) {
 	}
 }
 
+func TestLocalizedLabel(t *testing.T) {
+	c := &Card{Title: "Slav, slave and the Atlantic", Label: "Slav → slave", Translations: map[string]*Translation{"ru": {Title: "Славянин, slave и Атлантика", Label: "Славянин → раб"}}}
+	if got := c.Localized("ru").Label; got != "Славянин → раб" {
+		t.Fatal(got)
+	}
+	c.Translations["ru"].Label = ""
+	if got := c.Localized("ru").Label; got != "Slav → slave" {
+		t.Fatal(got)
+	}
+}
+
 func TestInlineNames(t *testing.T) {
 	a := mk(t, "a", "", "", "Spirituals fed the [[b]]. [[b]] grew.")
 	b := mk(t, "b", "", "", "x")
@@ -159,5 +170,41 @@ func TestInlineNames(t *testing.T) {
 	s := set(a, b)
 	if got := s.Resolved(a).Body; got != "Spirituals fed the [[b|blues]]. [[b|The blues]] grew." {
 		t.Fatal(got)
+	}
+}
+
+func TestMoment(t *testing.T) {
+	two := strings.Replace(good, "places: [{name: X, lat: 1, lon: 2}]", "places: [{name: X, lat: 1, lon: 2}, {name: Second, lat: 3, lon: 4}]", 1)
+	withMoment := func(m string) *Card {
+		c, err := Parse([]byte(strings.Replace(two, "zoom: 4", "zoom: 4\nmoment: "+m, 1)))
+		if err != nil {
+			t.Fatal(err)
+		}
+		c.Body = "x"
+		return c
+	}
+	c := withMoment("{year: 1840, place: 1}")
+	if errs := set(c).Validate(); len(errs) != 0 {
+		t.Fatal(errs)
+	}
+	if y, p := c.When(); y != 1840 || p.Name != "Second" {
+		t.Fatalf("when: %d %s", y, p.Name)
+	}
+	if y, p := withMoment("{year: 1820}").When(); y != 1820 || p.Name != "X" {
+		t.Fatalf("default place: %d %s", y, p.Name)
+	}
+	plain, _ := Parse([]byte(good))
+	if y, p := plain.When(); y != 1800 || p.Name != "X" {
+		t.Fatalf("no moment: %d %s", y, p.Name)
+	}
+	// Near the span is fine; far from it or a place that is not there is not.
+	if errs := set(withMoment("{year: 1858}")).Validate(); len(errs) != 0 {
+		t.Fatal(errs)
+	}
+	for m, want := range map[string]string{"{year: 1700}": "not within or near", "{year: 1840, place: 2}": "not an index", "{year: 1840, place: -1}": "not an index"} {
+		errs := set(withMoment(m)).Validate()
+		if len(errs) != 1 || !strings.Contains(errs[0].Error(), want) {
+			t.Fatalf("%s: %v", m, errs)
+		}
 	}
 }

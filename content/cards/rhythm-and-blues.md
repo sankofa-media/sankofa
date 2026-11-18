@@ -3,7 +3,7 @@ id: rhythm-and-blues
 kind: genre
 title: Rhythm and blues
 inline: "rhythm and blues"
-wow: "Billboard once filed Black popular records under \"Race\"; a young writer editing its charts gave the music a new name: rhythm and blues."
+wow: "Billboard once filed Black popular records under \"Race\"; one of its own writers gave the music a new name: rhythm and blues."
 years: [1949, 1960]
 places:
   - {name: "Urban United States", lat: 40.7128, lon: -74.0060}
@@ -33,23 +33,48 @@ sources:
   - {title: "GRAMMY.com: R&B pioneer Johnny Otis dies", url: "https://www.grammy.com/news/rb-pioneer-johnny-otis-dies/"}
   - {title: "Mark Puryear, Tell It Like It Is, Smithsonian Folklife Festival (2011), pp. 53–63", url: "https://folkways-media.si.edu/docs/festival/2011/festival-program-book-rnb.pdf"}
   - {title: "Case Western Reserve University, Encyclopedia of Cleveland History: Rock & Roll", url: "https://case.edu/ech/articles/r/rock-roll"}
+  - {title: "BlackPast: Ruth Brown (1928-2006)", url: "https://www.blackpast.org/african-american-history/brown-ruth-1928-2006/"}
+  - {title: "Diane Moroff, Brown, Ruth, Contemporary Musicians, via Encyclopedia.com", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/ruth-brown"}
+  - {title: "Encyclopedia of Arkansas: Louis Thomas Jordan (1908-1975)", url: "https://encyclopediaofarkansas.net/entries/louis-thomas-jordan-1685/"}
+  - {title: "NPR: Louis Jordan, Jukebox King (2008)", url: "https://www.npr.org/2008/03/04/87905064/louis-jordan-jukebox-king"}
+  - {title: "Contemporary Musicians, via Encyclopedia.com: Jordan, Louis", url: "https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/louis-jordan"}
+  - {title: "Rock & Roll Hall of Fame: Louis Jordan", url: "https://www.rockhall.com/inductees/louis-jordan"}
+  - {title: "Blues Foundation, Blues Hall of Fame: Louis Jordan", url: "https://www.blues.org/award-search/louis-jordan-was-the-most-popula"}
+  - {title: "Western News, Western University: Researcher explores label exploitation of R&B artists (2015)", url: "https://news.westernu.ca/2015/11/professor-explores-label-exploitation-of-a-generation-of-rb-artists/"}
+  - {title: "Chicago Sun-Times: Ruth Brown's Rainbow (2006)", url: "https://chicago.suntimes.com/news/2006/11/24/18584697/ruth-brown-s-rainbow"}
+  - {title: "Associated Press via Taipei Times: Jerry Wexler obituary (2008)", url: "https://www.taipeitimes.com/News/world/archives/2008/08/17/2003420595"}
+  - {title: "Carnegie Hall, Timeline of African American Music: Funk", url: "https://timeline.carnegiehall.org/genres/funk"}
 media:
   - {"type": "image", "file": "rhythm-and-blues.jpg", "caption": "Ruth Brown performing, 10 September 2005", "credit": "caviera (-cp on Flickr)", "license": "CC BY 2.0", "url": "https://commons.wikimedia.org/wiki/File:Ruth_Brown.jpg"}
 ---
-Rhythm and blues was the dance music of Black America in the 1940s and early
-1950s, flourishing in the big cities after the Second World War. Swing orchestras
-shrank to small jump bands, and their jump blues kept the twelve-bar blues, a
-rolling boogie-woogie bass and a shuffle beat, with a saxophone out front and
-the drums hitting hard on the backbeat, two and four. The saxophonist and
-singer Louis Jordan set the model with his Tympany Five. Vocal groups brought
-close harmony learned in church. It played in Black clubs from New York to Los
-Angeles.
+Rhythm and blues was the dance music of Black urban America after the Second
+World War. From the 1940s into the early 1950s, swing orchestras shrank to small
+jump bands that kept a boogie-woogie bass and a shuffle beat, with a saxophone
+out front and drums hitting hard on the backbeat. Vocal groups brought close
+harmony from church.
 
-Billboard once ranked Black popular records under the name "Race". Jerry
-Wexler, a young writer editing its charts, proposed another: "rhythm and
-blues", and in 1949 the magazine renamed the chart. The music had its
-labels too. Atlantic Records, founded in 1947, became known as "The House
-that Ruth Built" thanks to the singer Ruth Brown.
+Billboard filed these records as "Race" until Jerry Wexler, a writer at the
+magazine, proposed "rhythm and blues" for its Black music chart; in 1949 the
+chart took the new name.
+
+{male} The model was Louis Jordan, born in 1908 in Brinkley, Arkansas, the son
+of a bandleader. He started with the Rabbit Foot Minstrels, then sang and
+played saxophone for Chick Webb until Webb fired him in 1938 for trying to take
+Ella Fitzgerald into a band of his own. His small Tympany Five
+recorded "Caldonia" and "Ain't Nobody Here but Us Chickens", and his records topped the charts for 113 weeks in all. [[rock-n-roll|Rock and roll]] pushed
+him aside in the 1950s, but Chuck Berry, James Brown and Ray Charles named him
+as an influence. He died in Los Angeles in 1975; in 1987 he entered the Rock
+and Roll Hall of Fame.
+
+{female} Ruth Brown, born in Portsmouth, Virginia, in 1928, sang in her
+father's church choir. A car crash on her way to join Atlantic in New York kept
+her in hospital almost a year. From "So Long" in 1949 and "Teardrops from
+My Eyes" in 1950, her hits made the label known as "The House that Ruth
+Built". Yet she saw no royalties: after leaving Atlantic in the early 1960s she
+drove a bus and cleaned houses, and the label said she owed it money. She
+fought back; Atlantic wrote off her debts and those of other artists of her
+era, paid back royalties and helped found the Rhythm and Blues Foundation. On
+Broadway she won a Tony for Black and Blue.
 
 Out of R&B, the [[blues|blues]] and [[gospel|gospel]] came [[rock-n-roll|rock and roll]] and [[funk|funk]],
-and by the mid-1960s it had helped give rise to soul; compare [[rosetta-tharpe|Sister Rosetta Tharpe]].
+and by the mid-1960s it had helped give rise to soul.

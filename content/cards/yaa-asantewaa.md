@@ -9,6 +9,7 @@ places:
   - {name: "Ejisu, Asante (Ghana)", lat: 6.7220, lon: -1.4700}
   - {name: "Mahé, Seychelles", lat: -4.6796, lon: 55.4920}
 zoom: 4
+moment: {year: 1900}
 era: v2
 books: [archives, heirs]
 further:
@@ -21,15 +22,13 @@ sources:
   - {title: "A. A. Boahen, Encyclopaedia Africana: Yaa Asantewaa", url: "https://encyclopaediaafricana.com/asantewaa-yaa/"}
   - {title: "Deutsche Welle / Gerda Henkel Foundation: Yaa Asantewaa", url: "https://amp.dw.com/en/yaa-asantewaa-the-asante-warrior-queen/a-42968725"}
   - {title: "Seychelles Nation", url: "https://nation.sc/article.html?id=251467"}
+  - {title: "BlackPast: The Golden Stool (17th c.– )", url: "https://www.blackpast.org/global-african-history/golden-stool-17th-c/"}
+  - {title: "Encyclopaedia Africana: The Golden Stool", url: "https://encyclopaediaafricana.com/?p=14823"}
 media:
   - {type: "image", file: "yaa-asantewaa.jpg", caption: "The British garrison and civilians besieged in the Kumasi fort, 1900", credit: "From C. H. Armitage and A. F. Montanaro, The Ashanti Campaign of 1900 (London, 1901)", license: "Public domain", url: "https://commons.wikimedia.org/wiki/File:FortKumasi_1900_Besatzung_B004b-2.jpg"}
 ---
-A British governor asked for the Golden Stool, which holds the soul of the
-Asante nation, and the Queen Mother of Ejisu went to war. In March 1900
-Governor Frederick Hodgson held a durbar in Kumasi, capital of Asante, whose
-king Prempeh had been exiled by the British. There he asked the chiefs to
-hand over the Stool; later accounts say he demanded to sit on it, a version
-his wife's memoir disputes. Yaa Asantewaa, Queen Mother of Ejisu, led the
-rising that followed. She was exiled to the Seychelles and died there in
-1921. Compare [[nanny-of-the-maroons|Nanny of the Maroons]], [[nzinga|Queen
-Njinga of Ndongo and Matamba]] and the [[adinkra|adinkra]] signs of Asante.
+A British governor asked for the Golden Stool, which holds the soul of the Asante nation, and the Queen Mother of Ejisu went to war. In March 1900 Governor Frederick Hodgson held a durbar in Kumasi, capital of the Asante kingdom in what is now Ghana, whose king Prempeh the British had exiled. There he asked the chiefs to hand over the Stool.
+
+Yaa Asantewaa, Queen Mother of Ejisu, led the rising that followed, and Asante fighters besieged the British in the fort at Kumasi. Within months a British expeditionary force put the revolt down. She was captured with other leaders and exiled to the Seychelles, where she died in 1921.
+
+The British never got the Stool: the Asante kept it hidden. Prempeh was allowed home only in 1924. In Ghana the war of 1900 is named after her, the Yaa Asantewaa War.

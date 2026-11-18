@@ -106,9 +106,6 @@ func (m *atlasModel) visible() []*card.Card {
 	var out []*card.Card
 	for _, id := range m.set.Order {
 		c := m.set.ByID[id]
-		if c.Edition != card.EditionBoth && c.Edition != m.st.Edition {
-			continue
-		}
 		if c.Zoom < m.zoom-1 || c.Zoom > m.zoom+1 {
 			continue
 		}

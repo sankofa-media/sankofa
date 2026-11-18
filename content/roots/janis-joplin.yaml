@@ -3,11 +3,11 @@ id: janis-joplin
 name: Janis Joplin
 nameRu: Дженис Джоплин
 aliases:
-- дженис джоплин
-- джэнис джоплин
+  - дженис джоплин
+  - джэнис джоплин
 years:
-- 1943
-- 1970
+  - 1943
+  - 1970
 place:
   name: Port Arthur, Texas
   lat: 29.8849
@@ -16,28 +16,51 @@ placeRu: "Порт-Артур, Техас"
 genre: Blues rock / soul
 genreRu: блюз-рок / соул
 links:
-- to: card:big-mama-thornton
-  claim: Joplin recorded Thornton’s “Ball and Chain”.
-  claimRu: Джоплин записала «Ball and Chain» Торнтон.
-  sources:
-  - title: 'Smithsonian Folkways: Big Mama Thornton, Ball N’ Chain liner notes'
-    url: https://folkways-media.si.edu/docs/folkways/artwork/ARH00305.pdf
-  - title: 'The Guardian: Big Mama Thornton profile'
-    url: https://www.theguardian.com/music/2026/apr/10/big-mama-thornton-documentary-blues-singer-original-hound-dog-elvis
-  kind: cover
-  what: Big Mama Thornton’s song “Ball and Chain”, performed by Joplin.
-  whatRu: Песня Биг Мамы Торнтон «Ball and Chain» в исполнении Джоплин.
-- to: root:bessie-smith
-  kind: influence
-  claim: Bessie Smith’s blues singing helped shape Janis Joplin’s vocal style.
-  claimRu: Блюзовое пение Бесси Смит помогло сформировать вокальную манеру Дженис
-    Джоплин.
-  sources:
-  - title: 'Rock & Roll Hall of Fame: Janis Joplin'
-    url: https://rockhall.com/inductees/janis-joplin/
-  - title: 'NPR Fresh Air: Holly George-Warren on Janis Joplin, via NHPR'
-    url: https://www.nhpr.org/2019-10-21/new-janis-joplin-biography-reveals-the-hard-work-behind-the-heart
-story: Bessie Smith’s blues singing helped shape Janis Joplin’s voice. Joplin also
-  brought Big Mama Thornton’s “Ball and Chain” into her recorded repertoire.
-storyRu: Блюзовое пение Бесси Смит помогло сформировать голос Дженис Джоплин. В её
-  записанный репертуар вошла и «Ball and Chain» Биг Мамы Торнтон.
+  - to: "root:lead-belly"
+    kind: "influence"
+    scope: "career"
+    how: "Lead Belly's records turned Joplin from a choir soprano toward a rough, raw blues voice."
+    howRu: "Пластинки Ледбелли увели Джоплин от хорового сопрано к грубому, необработанному блюзовому голосу."
+    dimensions: ["melody-vocal"]
+    evidence:
+      - type: "listening"
+        dimensions: ["melody-vocal"]
+        text: "Her biographer Holly George-Warren says Joplin took her voice for granted until she discovered Lead Belly, and then wanted to rough up her sound and make it more raw."
+        textRu: "Её биограф Холли Джордж-Уоррен рассказывает: пока Джоплин не открыла для себя Ледбелли, она не задумывалась о своём голосе, а потом захотела огрубить свой звук, сделать его сырее."
+        source:
+          title: "NPR Fresh Air via NHPR: Holly George-Warren on Janis Joplin (2019)"
+          url: "https://www.nhpr.org/2019-10-21/new-janis-joplin-biography-reveals-the-hard-work-behind-the-heart"
+          quote: "Janis took her own vocals for granted until she discovered Lead Belly. … she wanted to experiment with roughing up her sound and making it more raw"
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "The Rock & Roll Hall of Fame lists Lead Belly among Joplin's influences and hears in her singing the rawness of the blues."
+        textRu: "Зал славы рок-н-ролла числит Ледбелли среди тех, кто повлиял на Джоплин, и слышит в её пении необработанность блюза."
+        source:
+          title: "Rock & Roll Hall of Fame: Janis Joplin"
+          url: "https://rockhall.com/inductees/janis-joplin/"
+          quote: "applying the rawness of the blues, restraint of country, and gutsiness of R&B to her artistry."
+  - to: "root:bessie-smith"
+    kind: "influence"
+    scope: "career"
+    how: "Bessie Smith became Joplin's chief model as a blues singer: the way to fill a space with the voice, and the songs and lyrics she knew by heart and drew on in choosing and writing her own."
+    howRu: "Бесси Смит стала для Джоплин главным образцом блюзовой певицы: у неё Джоплин училась заполнять голосом пространство, а песни и тексты Смит знала наизусть и опиралась на них, выбирая репертуар и сочиняя своё."
+    dimensions: ["melody-vocal", "harmony-form"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "Joplin said of Bessie Smith that she showed her the air and taught her how to fill it."
+        textRu: "О Бесси Смит Джоплин говорила: та показала ей воздух и научила его заполнять."
+        source:
+          title: "Rock & Roll Hall of Fame: Bessie Smith"
+          url: "https://www.rockhall.com/inductees/bessie-smith"
+          quote: "\"She showed me the air and taught me how to fill it,\" said Janis Joplin of Bessie Smith"
+      - type: "listening"
+        dimensions: ["harmony-form", "melody-vocal"]
+        text: "George-Warren says Joplin knew Bessie Smith's lyrics by heart, performed her songs from around 1963, and that they informed her songwriting and choice of songs; after Smith, 'that was all she wrote'."
+        textRu: "По словам Джордж-Уоррен, Джоплин знала тексты Бесси Смит наизусть, примерно с 1963 года пела её песни, и они определили, что она выбирала и как писала сама; после Смит, говорит биограф, вопрос был решён."
+        source:
+          title: "NPR Fresh Air via NHPR: Holly George-Warren on Janis Joplin (2019)"
+          url: "https://www.nhpr.org/2019-10-21/new-janis-joplin-biography-reveals-the-hard-work-behind-the-heart"
+          quote: "But she was mostly inspired by Lead Belly, until she discovered, of course, Bessie Smith, and then that was all she wrote. … Those very much informed Janis' own songwriting and the songs that she chose to sing."
+story: "Lead Belly's records turned Janis Joplin from a choir soprano toward a rough, raw blues voice. Bessie Smith then became her chief model: in Joplin's words, Smith showed her the air and taught her how to fill it, and Smith's songs shaped what Joplin sang and wrote."
+storyRu: "Пластинки Ледбелли увели Дженис Джоплин от хорового сопрано к грубому, необработанному блюзовому голосу. Потом главным образцом для неё стала Бесси Смит: по словам Джоплин, та показала ей воздух и научила его заполнять, а песни Смит определили, что Джоплин пела и что писала сама."

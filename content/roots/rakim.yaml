@@ -1,11 +1,10 @@
----
 id: rakim
 name: Rakim
 nameRu: Раким
 aliases:
-- раким
+  - раким
 years:
-- 1968
+  - 1968
 place:
   name: Wyandanch, New York
   lat: 40.7539
@@ -13,26 +12,54 @@ place:
 placeRu: "Уайандэнч, Нью-Йорк"
 genre: Hip-hop
 genreRu: хип-хоп
+story: "Rakim, who grew up in a house full of jazz and played saxophone himself, wrote his rhymes as if he were John Coltrane, matching his words to the patterns of sax lines and drums. With Paid in Full (1987) he moved the rhyme from the end of the bar into its middle and beginning, and internal rhyme schemes changed the flow of hip-hop."
+storyRu: "Раким вырос в доме, где всегда звучал джаз, и сам играл на саксофоне; рифмы он писал так, будто он Джон Колтрейн, подгоняя слова под рисунок саксофонных линий и барабанов. С альбомом «Paid in Full» (1987) он перенёс рифму с конца такта в его середину и начало, и внутренние рифмы изменили флоу хип-хопа."
 links:
-- to: root:john-coltrane
-  kind: influence
-  claim: Rakim modelled the rhythms of his rhymes on John Coltrane’s saxophone playing.
-  claimRu: Раким строил ритм своих рифм по образцу саксофонной игры Джона Колтрейна.
-  sources:
-  - title: 'NPR: Eric B. & Rakim change the flow of rap, via Connecticut Public'
-    url: https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full
-  - title: 'Westword: Q&A with Rakim'
-    url: https://www.westword.com/music/qanda-with-rakim-5676480/
-- to: card:hip-hop
-  kind: scene
-  claim: Rakim expanded hip-hop’s rhyme patterns with intricate internal rhymes.
-  claimRu: Раким усложнил рифмовку в хип-хопе, развивая замысловатые внутренние рифмы.
-  sources:
-  - title: 'NPR: Eric B. & Rakim change the flow of rap, via Connecticut Public'
-    url: https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full
-  - title: 'GRUNGECAKE: Eminem’s Apple Music interview on Rakim'
-    url: https://grungecake.com/eminem-apple-music-beats-1/news/74251/?share=mastodon
-story: Rakim modelled the rhythms of his rhymes on John Coltrane’s saxophone playing.
-  His intricate internal rhymes expanded hip-hop’s rhyme patterns.
-storyRu: Раким строил ритм своих рифм по образцу саксофонной игры Джона Колтрейна.
-  Его сложные внутренние рифмы расширили возможности рифмовки в хип-хопе.
+  - to: "root:john-coltrane"
+    kind: "influence"
+    scope: "career"
+    how: "Rakim modelled his flow on Coltrane’s saxophone: he wrote rhymes as if playing sax, landing his words on the rhythmic patterns of Coltrane’s lines and of the drums."
+    howRu: "Раким строил флоу по образцу саксофона Колтрейна: писал рифмы так, словно играет на саксофоне, и укладывал слова на ритмический рисунок колтрейновских линий и барабанов."
+    carries: ["rap-flow"]
+    dimensions: ["rhythm", "melody-vocal"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["rhythm", "melody-vocal"]
+        text: "Rakim told NPR that Coltrane was an influence and that he wrote rhymes as if he were a saxophone player."
+        textRu: "Раким рассказывал NPR, что на него повлиял Колтрейн и что он писал рифмы так, словно играет на саксофоне."
+        source:
+          title: "Connecticut Public / NPR: Eric B. & Rakim change the flow of rap with ‘Paid in Full’ (2023)"
+          url: "https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full"
+          quote: "\"I was shooting for something different,\" Rakim told NPR in 2009. \"You know, like, some of my influence was John Coltrane. I played the sax as well. So, listening to him play in the different rhythms that he had, I was trying to write my rhymes as if I was a saxophone player.\""
+      - type: "testimony"
+        dimensions: ["rhythm"]
+        text: "In Westword he said his favourite rhythms came from Coltrane’s sax and that he emulated those patterns with words."
+        textRu: "В интервью Westword он говорил, что любимые ритмы брал у саксофона Колтрейна и повторял их рисунок словами."
+        source:
+          title: "Westword (Dave Herrera): Q&A with Rakim"
+          url: "https://www.westword.com/music/qanda-with-rakim-5676480/"
+          quote: "When I started rhyming, my favorite rhythms were from John Coltrane and some of the things he did on sax. And certain rhythms that I hear on drums, I try to emulate with my words, dropping on the same patterns that them beats or them notes would hit. So I started developing a style, and it was alright."
+  - to: "card:hip-hop"
+    kind: "style"
+    scope: "career"
+    how: "Rakim transformed hip-hop rhyme: internal rhyme schemes and rhymes placed at the beginning and middle of the bar rather than only at its end."
+    howRu: "Раким преобразил рифму хип-хопа: внутренние рифмы и рифмы в начале и середине такта, а не только в конце."
+    carries: ["rap-flow"]
+    dimensions: ["melody-vocal", "rhythm"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal", "rhythm"]
+        text: "Connecticut Public says Paid in Full introduced internal rhyme schemes and that “My Melody” moved the rhyme to the centre of the bar."
+        textRu: "Connecticut Public пишет, что «Paid in Full» ввёл внутренние рифмы, а в «My Melody» рифма переместилась в середину такта."
+        source:
+          title: "Connecticut Public / NPR: Eric B. & Rakim change the flow of rap with ‘Paid in Full’ (2023)"
+          url: "https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full"
+          quote: "In one of his early songs, \"My Melody,\" Rakim places the rhyme in the center of the bar instead of at the end, which Fitzgerald says flipped the traditional customs of hip-hop rhythm and lyrics at the time."
+      - type: "testimony"
+        dimensions: ["rhythm"]
+        text: "Rakim described starting to rhyme at the beginning, middle and end of the bar."
+        textRu: "Раким рассказывал, как начал рифмовать в начале, середине и конце такта."
+        source:
+          title: "Westword (Dave Herrera): Q&A with Rakim"
+          url: "https://www.westword.com/music/qanda-with-rakim-5676480/"
+          quote: "Then I started rhyming at the beginning of the bar, the middle of the bar and at the end of the bar."

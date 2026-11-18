@@ -34,6 +34,8 @@ export interface Card {
   years: number[];
   places: Place[];
   zoom: number;
+  /** The moment the story is about: a year and an index into places (default 0). */
+  moment?: { year: number; place?: number };
   era?: string;
   books: Book[];
   edition?: Edition;
@@ -48,6 +50,8 @@ export interface Card {
   body: string;
   /** the name as it reads inside a sentence: "the blues" */
   inline?: string;
+  /** The name on the atlas map, when the title cut short would mislead. */
+  label?: string;
   backlinks?: string[];
   translations?: Record<string, CardTranslation>;
   /** Set on a localized copy: the language its text is actually in. */
@@ -62,10 +66,14 @@ export interface CardTranslation {
   dispute?: string;
   captions?: string[];
   inline?: string;
+  label?: string;
   credits?: string[];
   licenses?: string[];
   body: string;
 }
+
+/** Which copy a chapter paragraph belongs to: '' for both, m or f for one. */
+export type StepCopy = '' | 'm' | 'f';
 
 export interface ChapterTranslation {
   title?: string;
@@ -74,6 +82,8 @@ export interface ChapterTranslation {
   heroCredit?: string;
   heroLicense?: string;
   steps?: string[];
+  stepCopies?: StepCopy[];
+  stepLabels?: string[];
 }
 
 export interface Chapter {
@@ -85,6 +95,10 @@ export interface Chapter {
   places: Place[];
   cards: string[];
   steps: string[];
+  /** Parallel to steps, present only when some paragraph is marked {male} or {female}. */
+  stepCopies?: StepCopy[];
+  /** Parallel to steps, present only when paragraphs carry `{at Place · Year}`: the label each step shows. */
+  stepLabels?: string[];
   translations?: Record<string, ChapterTranslation>;
   textLang?: string;
 }
@@ -94,6 +108,10 @@ export interface CardsFile {
   cards: Card[];
   /** artists traced back to museum cards (pkg/roots), when exported */
   roots?: import('./roots').Artist[];
+  /** the roots' elements of music, card-to-card steps and lines, when exported */
+  rootsElements?: unknown;
+  rootsCardLinks?: unknown;
+  rootsLines?: unknown;
 }
 
 export interface ChaptersFile {

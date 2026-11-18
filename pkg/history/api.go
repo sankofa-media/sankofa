@@ -3,11 +3,13 @@ package history
 import (
 	"context"
 	"crypto/x509"
+	"encoding/base64"
 	"encoding/json"
 	"fmt"
 	"net/http"
 	"strconv"
 	"strings"
+	"sync"
 	"time"
 
 	authzv1 "k8s.io/api/authorization/v1"
@@ -23,11 +25,14 @@ const (
 
 // Moment is one record in a timeline, without the object body.
 type Moment struct {
-	Verb            string    `json:"verb"`
-	At              time.Time `json:"at"`
-	Manager         string    `json:"manager,omitempty"`
-	ResourceVersion string    `json:"resourceVersion,omitempty"`
-	UID             string    `json:"uid"`
+	Verb    string    `json:"verb"`
+	At      time.Time `json:"at"`
+	Manager string    `json:"manager,omitempty"`
+	// User is the authenticated user of the matching audit event, when Griot
+	// receives audit events.
+	User            string `json:"user,omitempty"`
+	ResourceVersion string `json:"resourceVersion,omitempty"`
+	UID             string `json:"uid"`
 }
 
 // Timeline is the life story of one object.
@@ -40,6 +45,10 @@ type Timeline struct {
 	Moments           []Moment `json:"moments"`
 	// Object is the state at ?at=<RFC3339> or the last known state.
 	Object json.RawMessage `json:"object,omitempty"`
+	// Records counts every moment; Moments holds the newest page of them.
+	Records int `json:"records,omitempty"`
+	// Continue fetches older moments (?continue=).
+	Continue string `json:"continue,omitempty"`
 }
 
 // TimelineList is a list of timelines: obituaries when listed.
@@ -126,9 +135,14 @@ func (a *Authenticator) User(r *http.Request) (string, []string, error) {
 
 // API serves the history group for the aggregator.
 type API struct {
-	Store *Store
+	Store Store
 	Auth  *Authenticator
 	Kube  kubernetes.Interface
+
+	// Who, when set, names the user behind each moment (audit correlation).
+	Who func(ctx context.Context, ref Ref, moments []Moment)
+
+	cache sync.Map // review key -> verdict
 }
 
 func (a *API) Handler() http.Handler {
@@ -227,39 +241,121 @@ func (a *API) serve(w http.ResponseWriter, r *http.Request) {
 		status(w, 403, metav1.StatusReasonForbidden, fmt.Sprintf("%s cannot get %s: the memory follows your RBAC", user, ref))
 		return
 	}
-	life, err := a.Store.Life(ctx, ref)
+	q := r.URL.Query()
+	sum, err := a.Store.Summarize(ctx, ref)
 	if err != nil {
 		status(w, 500, metav1.StatusReasonInternalError, err.Error())
 		return
 	}
-	if len(life) == 0 {
+	if sum.Records == 0 {
 		status(w, 404, metav1.StatusReasonNotFound, fmt.Sprintf("no memory of %s", ref))
 		return
 	}
-	tl := toTimeline(ref, life)
-	if at := r.URL.Query().Get("at"); at != "" {
-		t, err := time.Parse(time.RFC3339, at)
+	// Moments come newest first in pages; a long life is not read whole.
+	limit := DefaultMoments
+	if l, err := strconv.Atoi(q.Get("limit")); err == nil && l > 0 && l <= MaxMoments {
+		limit = l
+	}
+	before, _ := strconv.ParseInt(q.Get("continue"), 10, 64)
+	moments, err := a.Store.Moments(ctx, ref, limit+1, before)
+	if err != nil {
+		status(w, 500, metav1.StatusReasonInternalError, err.Error())
+		return
+	}
+	tl := summaryTimeline(ref, sum)
+	if len(moments) > limit {
+		moments = moments[:limit]
+		tl.Continue = strconv.FormatInt(moments[limit-1].ID, 10)
+	}
+	// Oldest first within the page, as a story is told.
+	for i := len(moments) - 1; i >= 0; i-- {
+		m := moments[i]
+		tl.Moments = append(tl.Moments, Moment{Verb: m.Verb, At: m.At, Manager: m.Manager, ResourceVersion: m.Revision, UID: m.UID})
+	}
+	if a.Who != nil {
+		a.Who(ctx, ref, tl.Moments)
+	}
+	var rec Record
+	var found bool
+	if at := q.Get("at"); at != "" {
+		t, err := time.Parse(time.RFC3339Nano, at)
 		if err != nil {
 			status(w, 400, metav1.StatusReasonBadRequest, "at must be RFC3339")
 			return
 		}
-		rec, found, err := a.Store.At(ctx, ref, t)
-		if err != nil {
-			status(w, 500, metav1.StatusReasonInternalError, err.Error())
-			return
-		}
-		if !found {
+		if rec, found, err = a.Store.At(ctx, ref, t); err == nil && !found {
 			status(w, 404, metav1.StatusReasonNotFound, fmt.Sprintf("%s did not exist at %s", ref, at))
 			return
 		}
-		tl.Object = rec.Object
 	} else {
-		tl.Object = life[len(life)-1].Object
+		rec, found, err = a.Store.LastAlive(ctx, ref)
+	}
+	if err != nil {
+		status(w, 500, metav1.StatusReasonInternalError, err.Error())
+		return
+	}
+	if found {
+		tl.Object = rec.Object
 	}
 	writeJSON(w, 200, tl)
 }
 
+// Pages of moments in a timeline.
+const (
+	DefaultMoments = 500
+	MaxMoments     = 5000
+	// MaxPage bounds one page of a namespace list.
+	MaxPage = 5000
+)
+
 func (a *API) list(ctx context.Context, w http.ResponseWriter, r *http.Request, user string, groups []string, ns string, cluster bool) {
+	kind := "TimelineList"
+	if cluster {
+		kind = "ClusterTimelineList"
+	}
+	out := TimelineList{TypeMeta: metav1.TypeMeta{Kind: kind, APIVersion: Group + "/" + Version}, Items: []Timeline{}}
+	check := a.checker(ctx, user, groups)
+	if at := r.URL.Query().Get("at"); at != "" {
+		// The namespace (or the cluster scope) as it was at a moment: every
+		// object alive then, with its state.
+		t, err := time.Parse(time.RFC3339Nano, at)
+		if err != nil {
+			status(w, 400, metav1.StatusReasonBadRequest, "at must be RFC3339")
+			return
+		}
+		if ns == metav1.NamespaceAll && !cluster {
+			status(w, 400, metav1.StatusReasonBadRequest, "?at= lists one namespace at a time")
+			return
+		}
+		limit := 0
+		if l, err := strconv.Atoi(r.URL.Query().Get("limit")); err == nil && l > 0 {
+			limit = min(l, MaxPage)
+		}
+		after, err := decodeCursor(r.URL.Query().Get("continue"))
+		if err != nil {
+			status(w, 400, metav1.StatusReasonBadRequest, err.Error())
+			return
+		}
+		recs, err := a.Store.NamespaceAt(ctx, ns, t, after, limit)
+		if err != nil {
+			status(w, 500, metav1.StatusReasonInternalError, err.Error())
+			return
+		}
+		if limit > 0 && len(recs) == limit {
+			last := recs[len(recs)-1]
+			out.Continue = encodeCursor(Cursor{Group: last.Ref.Group, Resource: last.Ref.Resource, Name: last.Ref.Name, ID: last.ID})
+		}
+		for _, rec := range recs {
+			if !check(rec.Ref) {
+				continue
+			}
+			tl := toTimeline(rec.Ref, []Record{rec})
+			tl.Object = rec.Object
+			out.Items = append(out.Items, tl)
+		}
+		writeJSON(w, 200, out)
+		return
+	}
 	limit := 100
 	if l, err := strconv.Atoi(r.URL.Query().Get("limit")); err == nil && l > 0 && l <= 1000 {
 		limit = l
@@ -269,13 +365,8 @@ func (a *API) list(ctx context.Context, w http.ResponseWriter, r *http.Request, 
 		status(w, 500, metav1.StatusReasonInternalError, err.Error())
 		return
 	}
-	kind := "TimelineList"
-	if cluster {
-		kind = "ClusterTimelineList"
-	}
-	out := TimelineList{TypeMeta: metav1.TypeMeta{Kind: kind, APIVersion: Group + "/" + Version}, Items: []Timeline{}}
 	for _, rec := range recs {
-		if cluster != (rec.Ref.Namespace == "") || !a.allowed(ctx, user, groups, rec.Ref) {
+		if cluster != (rec.Ref.Namespace == "") || !check(rec.Ref) {
 			continue
 		}
 		tl := toTimeline(rec.Ref, []Record{rec})
@@ -284,7 +375,42 @@ func (a *API) list(ctx context.Context, w http.ResponseWriter, r *http.Request, 
 	writeJSON(w, 200, out)
 }
 
+// checker authorises many objects of one request. A caller who may get a
+// resource in the whole namespace may read the memory of all its objects
+// with one review; otherwise each object is reviewed by name.
+func (a *API) checker(ctx context.Context, user string, groups []string) func(Ref) bool {
+	wide := map[Ref]bool{}
+	return func(ref Ref) bool {
+		k := Ref{Group: ref.Group, Resource: ref.Resource, Namespace: ref.Namespace}
+		ok, seen := wide[k]
+		if !seen {
+			ok = a.allowed(ctx, user, groups, k)
+			wide[k] = ok
+		}
+		return ok || a.allowed(ctx, user, groups, ref)
+	}
+}
+
+// authzTTL is how long a review result is reused, like the API server's
+// webhook authorizer cache, but short: revoking access takes effect within it.
+const authzTTL = 10 * time.Second
+
+type verdict struct {
+	ok      bool
+	expires time.Time
+}
+
 func (a *API) allowed(ctx context.Context, user string, groups []string, ref Ref) bool {
+	key := user + "\x00" + strings.Join(groups, ",") + "\x00" + ref.String()
+	if v, ok := a.cache.Load(key); ok && time.Now().Before(v.(verdict).expires) {
+		return v.(verdict).ok
+	}
+	ok := a.review(ctx, user, groups, ref)
+	a.cache.Store(key, verdict{ok: ok, expires: time.Now().Add(authzTTL)})
+	return ok
+}
+
+func (a *API) review(ctx context.Context, user string, groups []string, ref Ref) bool {
 	sar := &authzv1.SubjectAccessReview{Spec: authzv1.SubjectAccessReviewSpec{
 		User: user, Groups: groups,
 		ResourceAttributes: &authzv1.ResourceAttributes{Verb: "get", Group: ref.Group, Resource: ref.Resource, Namespace: ref.Namespace, Name: ref.Name},
@@ -310,6 +436,76 @@ func toTimeline(ref Ref, life []Record) Timeline {
 	tl.CreationTimestamp = metav1.NewTime(life[0].At)
 	tl.Story = Story(tl.Kind, ref, life)
 	return tl
+}
+
+func summaryTimeline(ref Ref, sum Summary) Timeline {
+	kind := "Timeline"
+	if ref.Namespace == "" {
+		kind = "ClusterTimeline"
+	}
+	tl := Timeline{
+		TypeMeta:   metav1.TypeMeta{Kind: kind, APIVersion: Group + "/" + Version},
+		ObjectMeta: metav1.ObjectMeta{Name: TimelineName(ref), Namespace: ref.Namespace, CreationTimestamp: metav1.NewTime(sum.First.At)},
+		Target:     ref,
+		Kind:       sum.Last.Kind,
+		Records:    sum.Records,
+	}
+	tl.Story = StoryOf(tl.Kind, ref, sum)
+	return tl
+}
+
+func encodeCursor(c Cursor) string {
+	b, _ := json.Marshal([]any{c.Group, c.Resource, c.Name, c.ID})
+	return base64.RawURLEncoding.EncodeToString(b)
+}
+
+func decodeCursor(s string) (*Cursor, error) {
+	if s == "" {
+		return nil, nil
+	}
+	b, err := base64.RawURLEncoding.DecodeString(s)
+	var v []any
+	if err == nil {
+		err = json.Unmarshal(b, &v)
+	}
+	if err != nil || len(v) != 4 {
+		return nil, fmt.Errorf("bad continue token")
+	}
+	c := &Cursor{}
+	var ok [4]bool
+	c.Group, ok[0] = v[0].(string)
+	c.Resource, ok[1] = v[1].(string)
+	c.Name, ok[2] = v[2].(string)
+	id, ok3 := v[3].(float64)
+	c.ID, ok[3] = int64(id), ok3
+	if !ok[0] || !ok[1] || !ok[2] || !ok[3] {
+		return nil, fmt.Errorf("bad continue token")
+	}
+	return c, nil
+}
+
+// StoryOf tells a life from its summary.
+func StoryOf(kind string, ref Ref, sum Summary) string {
+	life := []Record{sum.First}
+	for i := 1; i < sum.Lives; i++ {
+		life = append(life, Record{Verb: Born})
+	}
+	for i := 0; i < sum.Changes; i++ {
+		life = append(life, Record{Verb: Changed})
+	}
+	for _, m := range sum.Managers {
+		life = append(life, Record{Manager: m})
+	}
+	if sum.Records > 1 {
+		// Only whether it died and when matters about the end; its verb is
+		// already counted.
+		end := Record{At: sum.Last.At}
+		if sum.Last.Verb == Died {
+			end.Verb = Died
+		}
+		life = append(life, end)
+	}
+	return Story(kind, ref, life)
 }
 
 // Story tells the life of an object in one paragraph, the way a griot would.

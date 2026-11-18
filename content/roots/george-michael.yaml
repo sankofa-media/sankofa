@@ -3,12 +3,12 @@ id: george-michael
 name: George Michael
 nameRu: Джордж Майкл
 aliases:
-- джордж майкл
-- уэм
-- wham
+  - джордж майкл
+  - уэм
+  - wham
 years:
-- 1963
-- 2016
+  - 1963
+  - 2016
 place:
   name: London
   lat: 51.5074
@@ -16,45 +16,54 @@ place:
 placeRu: "Лондон"
 genre: Pop and soul
 genreRu: поп и соул
+story: "From Wham!’s Motown homages and 1960s soul pastiches to the gospel-inspired vocals of his solo records, critics hear George Michael working in soul. They describe a soulful R&B tone, a pure falsetto and grooves drawn from R&B, soul and dance music."
+storyRu: "Критики слышат у Джорджа Майкла соул — от оммажей Motown и стилизаций под соул 1960-х во времена Wham! до вокала сольных пластинок, вдохновлённого госпелом. Они описывают соуловый ритм-н-блюзовый тембр, чистый фальцет и грув из ритм-н-блюза, соула и танцевальной музыки."
 links:
-- to: card:rhythm-and-blues
-  claim: George Michael recorded “I Knew You Were Waiting (For Me)” as a duet with
-    Aretha Franklin.
-  claimRu: Джордж Майкл записал «I Knew You Were Waiting (For Me)» дуэтом с Аретой
-    Франклин.
-  sources:
-  - title: 'Recording Academy: George Michael'
-    url: https://www.grammy.com/artists/george-michael/12041
-  - title: 'MusicRadar: Mick Hucknall on George Michael’s Aretha Franklin duet'
-    url: https://www.musicradar.com/artists/i-was-so-jealous-of-george-michael-mick-hucknall-says-he-was-simply-green-with-envy-when-he-learned-that-the-former-wham-star-was-recording-a-duet-with-aretha-franklin
-  kind: collaboration
-- to: root:stevie-wonder
-  kind: influence
-  claim: Stevie Wonder was one of George Michael’s major musical influences.
-  claimRu: Стиви Уандер был одним из главных музыкальных ориентиров Джорджа Майкла.
-  sources:
-  - title: 'Rock & Roll Hall of Fame: George Michael — Influences'
-    url: https://rockhall.com/inductees/george-michael/
-  - title: 'The Guardian: Elton John remembers George Michael'
-    url: https://www.theguardian.com/global/2017/oct/15/the-george-michael-we-knew-by-elton-john-mariah-carey-james-corden-tatjana-patitz
-- to: root:james-brown
-  kind: sample
-  claim: George Michael built the beat of “Freedom! ’90” on the drum break from James
-    Brown’s “Funky Drummer”.
-  claimRu: Джордж Майкл построил бит «Freedom! ’90» на барабанном брейке из «Funky
-    Drummer» Джеймса Брауна.
-  sources:
-  - title: 'Rolling Stone: George Michael — Freedom! ’90'
-    url: https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/george-michael-freedom-90-3-30441/
-  - title: 'MusicRadar: When sampling ruled the world'
-    url: https://www.musicradar.com/drums/it-was-deemed-that-an-artist-could-sample-an-unrecognisable-portion-of-a-work-without-the-need-to-declare-the-sample-or-indeed-pay-the-original-artist-when-sampling-ruled-the-world-and-drummers-didnt-get-paid
-  what: Clyde Stubblefield’s drum break from James Brown’s “Funky Drummer” recording,
-    looped in “Freedom! ’90”.
-  whatRu: Барабанный брейк Клайда Стабблфилда из записи Джеймса Брауна «Funky Drummer»,
-    зацикленный в «Freedom! ’90».
-story: Stevie Wonder was one of George Michael’s major musical influences. Michael
-  sang “I Knew You Were Waiting (For Me)” with Aretha Franklin and built the beat
-  of “Freedom! ’90” from James Brown’s “Funky Drummer”.
-storyRu: Стиви Уандер был одним из главных музыкальных ориентиров Джорджа Майкла.
-  Майкл спел «I Knew You Were Waiting (For Me)» с Аретой Франклин, а бит «Freedom!
-  ’90» построил на «Funky Drummer» Джеймса Брауна.
+  - to: "style:soul"
+    kind: "style"
+    how: "Michael worked in soul throughout: Motown-style pop and 1960s soul pastiche with Wham!, then gospel-inspired lead vocals, a soulful R&B tone with a pure falsetto, and R&B and soul grooves."
+    howRu: "Майкл всю жизнь работал в соуле: поп в духе Motown и стилизация под соул 1960-х с Wham!, затем госпельные по духу вокальные партии, соуловый ритм-н-блюзовый тембр с чистым фальцетом, грув ритм-н-блюза и соула."
+    carries: ["gospel-vocal", "groove"]
+    dimensions: ["melody-vocal", "harmony-form", "rhythm"]
+    scope: "career"
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "In the Rock & Roll Hall of Fame essay, Annie Zaleski describes Michael’s soulful R&B tone and angelic falsetto."
+        textRu: "В эссе для Зала славы рок-н-ролла Энни Залески описывает соуловый ритм-н-блюзовый тембр Майкла и его ангельский фальцет."
+        source:
+          title: "Rock & Roll Hall of Fame: George Michael (inducted 2023)"
+          url: "https://rockhall.com/inductees/george-michael/"
+          quote: "\"Michael was blessed with a soulful R&B tone – including an angelic falsetto croon as pure and tranquil as clear ocean water – and a fluid sense of dynamics.\""
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "The Hall of Fame describes him as a singer-songwriter-producer using R&B, soul and dance grooves."
+        textRu: "Зал славы описывает его как певца, автора и продюсера, работавшего с грувом ритм-н-блюза, соула и танцевальной музыки."
+        source:
+          title: "Rock & Roll Hall of Fame: George Michael (inducted 2023)"
+          url: "https://rockhall.com/inductees/george-michael/"
+          quote: "George Michael evolved through the '90s and ‘00s into an accomplished producer-singer-songwriter, utilizing R&B, soul and dance grooves and textures, repeatedly pushing his vocals to the limit."
+      - type: "critics"
+        dimensions: ["harmony-form"]
+        text: "Alexis Petridis hears Wham!’s “Freedom” as a Motown homage worthy of Holland-Dozier-Holland."
+        textRu: "Алексис Петридис слышит в «Freedom» Wham! оммаж Motown, достойный Холланда — Дозье — Холланда."
+        source:
+          title: "The Guardian, Alexis Petridis: George Michael’s 30 greatest songs — ranked! (2021)"
+          url: "https://www.theguardian.com/music/2021/dec/09/george-michaels-30-greatest-songs-ranked"
+          quote: "it’s a beautifully turned, effortlessly commercial Motown homage worthy of peak-period Holland-Dozier-Holland."
+      - type: "critics"
+        dimensions: ["harmony-form"]
+        text: "Petridis calls “The Edge of Heaven” an example of Michael’s way with 1960s soul pastiche."
+        textRu: "Петридис называет «The Edge of Heaven» образцом того, как Майкл умел стилизовать соул 1960-х."
+        source:
+          title: "The Guardian, Alexis Petridis: George Michael’s 30 greatest songs — ranked! (2021)"
+          url: "https://www.theguardian.com/music/2021/dec/09/george-michaels-30-greatest-songs-ranked"
+          quote: "It’s a sophisticated example of Michael’s way with an irrepressible 60s soul pastiche"
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "On “Freedom! ’90”, Petridis hears gospel-inspired vocals."
+        textRu: "В «Freedom! ’90» Петридис слышит вокал, вдохновлённый госпелом."
+        source:
+          title: "The Guardian, Alexis Petridis: George Michael’s 30 greatest songs — ranked! (2021)"
+          url: "https://www.theguardian.com/music/2021/dec/09/george-michaels-30-greatest-songs-ranked"
+          quote: "the gospel-inspired vocals soar, Michael himself sounding impassioned."

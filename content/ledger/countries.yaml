@@ -1,0 +1,999 @@
+# Sources for the country headers in content/countries.yaml (about.en / about.ru).
+# Every fact in a header has two independent authoritative sources that were
+# opened, each with a short verbatim quote. Researched 2026-11-14; every quote
+# was then re-downloaded and matched against the page text (PDF text for PDFs;
+# journals.openedition.org via web.archive.org). Britannica and UNESCO World
+# Heritage pages refused automated access, so they are not cited here.
+# Wikipedia is not cited. "dropped" lists facts left out for want of a second source.
+entries:
+- country: mali
+  fact: The Mali Empire was founded by Sundiata Keita in the 13th century.
+  sources:
+  - title: 'National Geographic Education: The Mali Empire'
+    url: https://education.nationalgeographic.org/resource/mali-empire/
+    quote: From the 13th to 17th century, West Africa was home to the great Mali Empire.
+  - title: 'OpenStax (Rice University), World History Vol. 1: 15.2 Medieval Sub-Saharan
+      Africa'
+    url: https://openstax.org/books/world-history-volume-1/pages/15-2-medieval-sub-saharan-africa
+    quote: Sosso Kingdom was short-lived; it was defeated by Sundiata Keita in 1235.
+- country: mali
+  fact: Under the Mali Empire, Timbuktu became a centre of Islamic learning.
+  sources:
+  - title: 'National Geographic Education: The Mali Empire'
+    url: https://education.nationalgeographic.org/resource/mali-empire/
+    quote: Mali included the city of Timbuktu, which became known as an important
+      center of knowledge.
+  - title: 'OpenStax (Rice University), World History Vol. 1: 15.1 Culture and Society
+      in Medieval Africa'
+    url: https://openstax.org/books/world-history-volume-1/pages/15-1-culture-and-society-in-medieval-africa
+    quote: Fourteenth-century Timbuktu was a great center of learning specializing
+      in Islamic law, philosophy, and science.
+- country: mali
+  fact: In the 15th century the Songhai Empire, ruled from Gao, took over most of
+    Mali's lands.
+  sources:
+  - title: 'National Geographic Education: The Mali Empire'
+    url: https://education.nationalgeographic.org/resource/mali-empire/
+    quote: The surrounding Songhay Empire would conquer most of the Mali kingdom by
+      the late 15th century.
+  - title: 'OpenStax (Rice University), World History Vol. 2: 3.2 The Songhai Empire'
+    url: https://openstax.org/books/world-history-volume-2/pages/3-2-the-songhai-empire
+    quote: From his capital at Gao, Sunni Ali engaged in a war of conquest against
+      his Muslim neighbors.
+- country: ghana
+  fact: The ancient Ghana Empire lay in present-day Mauritania and Mali, not in modern
+    Ghana.
+  sources:
+  - title: 'OpenStax (Rice University), World History Vol. 1: 15.2 Medieval Sub-Saharan
+      Africa'
+    url: https://openstax.org/books/world-history-volume-1/pages/15-2-medieval-sub-saharan-africa
+    quote: The Ghana Empire dominated the region between western Mali and southeastern
+      Mauritania
+  - title: 'National Geographic Education: Kingdom'
+    url: https://education.nationalgeographic.org/resource/kingdom/
+    quote: The Ghana Empire, located in the modern countries of Mauritania and Mali,
+- country: ghana
+  fact: Akan states existed on the territory of present-day Ghana.
+  sources:
+  - title: 'EBSCO Research Starters: Rise of the Asante Empire'
+    url: https://ebsco.com/research-starters/history/rise-asante-empire
+    quote: mightiest imperial power among the Akan states of western Africa
+  - title: 'OpenStax (Rice University), World History Vol. 2: Ch. 3 Introduction'
+    url: https://openstax.org/books/world-history-volume-2/pages/3-introduction
+    quote: provided enslaved people from Benin to the Akan mines in modern-day Ghana
+      and Côte d’Ivoire
+- country: ghana
+  fact: Osei Tutu founded the Asante kingdom at the end of the 17th century, with
+    Kumasi as its capital.
+  sources:
+  - title: 'EBSCO Research Starters: Rise of the Asante Empire'
+    url: https://ebsco.com/research-starters/history/rise-asante-empire
+    quote: He chose Kumasi as the nation’s capital
+  - title: 'Manhyia Palace Archives: History of the Asante Union'
+    url: https://manhyiaarchives.org/royal-history/history-of-asante-union/37-asante-union
+    quote: The Asante kingdom was founded at about the end of the seventeenth century
+      by Osei Tutu
+- country: ghana
+  fact: The Golden Stool was the symbol of Asante unity.
+  sources:
+  - title: 'EBSCO Research Starters: Rise of the Asante Empire'
+    url: https://ebsco.com/research-starters/history/rise-asante-empire
+    quote: supported by the symbolic Golden Stool, which represented unity among the
+      Asante people.
+  - title: 'Manhyia Palace Archives: History of the Asante Union'
+    url: https://manhyiaarchives.org/royal-history/history-of-asante-union/37-asante-union
+    quote: The Golden Stool became the repository of a national spirit transcending
+      all local ties.
+- country: ghana
+  fact: The Portuguese fortress of Elmina on the Gold Coast became a collection point
+    for captives traded to European slavers.
+  sources:
+  - title: 'EBSCO Research Starters: Elmina'
+    url: https://www.ebsco.com/research-starters/history/elmina/
+    quote: Elmina became a collection point for slaves from the Niger delta and regions
+      south.
+  - title: 'OpenStax (Rice University), World History Vol. 2: Ch. 3 Introduction'
+    url: https://openstax.org/books/world-history-volume-2/pages/3-introduction
+    quote: Elmina had become one of the earliest direct links between European slavers
+- country: nigeria
+  fact: The Kingdom of Benin lay in southern Nigeria, and guilds attached to the Oba's
+    palace cast brass plaques.
+  sources:
+  - title: 'British Museum (via Google Arts & Culture): Brass plaque, oba with Europeans'
+    url: https://artsandculture.google.com/asset/brass-plaque-oba-with-europeans/7AHb7Irko7spNA?hl=en
+    quote: Guilds of craftsmen based in the palace compound used the imported raw
+      materials to make relief plaques and regalia.
+  - title: 'Pitt Rivers Museum, University of Oxford: The Kingdom of Benin'
+    url: https://prm.ox.ac.uk/node/3624741
+    quote: It was one of the most important kingdoms in West Africa, located in present-day
+      Edo State, Nigeria.
+- country: nigeria
+  fact: British troops attacked Benin City in 1897.
+  sources:
+  - title: 'Pitt Rivers Museum, University of Oxford: The Kingdom of Benin'
+    url: https://prm.ox.ac.uk/node/3624741
+    quote: In February 1897 British troops
+  - title: 'Horniman Museum and Gardens: Horniman to return ownership of Benin bronzes
+      to Nigeria'
+    url: https://www.horniman.ac.uk/story/horniman-to-return-ownership-of-benin-bronzes-to-nigeria/
+    quote: forcibly removed from Benin City during the British military incursion
+      in February 1897
+- country: nigeria
+  fact: The Yoruba developed the Ifa system of divination.
+  sources:
+  - title: 'UNESCO Intangible Cultural Heritage: Ifa divination system (Nigeria)'
+    url: https://ich.unesco.org/en/RL/ifa-divination-system-00146
+    quote: The knowledge of Ifa has been preserved within Yoruba communities and transmitted
+      among Ifa priests.
+  - title: 'Dallas Museum of Art (via Google Arts & Culture): Ifa divination tapper
+      (iro Ifa)'
+    url: https://artsandculture.google.com/asset/ifa-divination-tapper-iro-ifa/YAHyJI4Qg_B-rA
+    quote: Ifa, considered the most important and most reliable system of divination,
+      enables supplicants to understand the will of the Supreme Being Olodumare.
+- country: nigeria
+  fact: Hausaland lies in northern Nigeria.
+  sources:
+  - title: 'OpenStax (Rice University), World History Vol. 1: 15.1 Culture and Society
+      in Medieval Africa'
+    url: https://openstax.org/books/world-history-volume-1/pages/15-1-culture-and-society-in-medieval-africa
+    quote: West African rulers from Mali to Hausaland (present-day Nigeria) had adopted
+      Islam
+  - title: 'EBSCO Research Starters: First Hausa State Established'
+    url: https://www.ebsco.com/research-starters/language-and-linguistics/first-hausa-state-established/
+    quote: emerged in northern Nigeria and southern Niger by the early tenth century.
+- country: nigeria
+  fact: The Durbar in Kano is a horse procession centred on the Emir.
+  sources:
+  - title: 'UNESCO Intangible Cultural Heritage: Durbar in Kano'
+    url: https://ich.unesco.org/en/RL/durbar-in-kano-01895
+    quote: The central figure of the Durbar procession is the Emir and his palace
+      courtiers, officials and bodyguards.
+  - title: 'EBSCO Research Starters: Hausa people'
+    url: https://www.ebsco.com/research-starters/ethnic-and-cultural-studies/hausa-people/
+    quote: This festival features colorful horse parades, group prayers, and horse
+      races to celebrate the people's cultural heritage.
+- country: senegal
+  fact: Gorée Island was a slave-trading centre where captives were held before forced
+    embarkation for the Americas.
+  sources:
+  - title: 'EBSCO Research Starters: Senegal'
+    url: https://www.ebsco.com/research-starters/geography-and-cartography/senegal
+    quote: Gorée Island in Senegal was the largest slave-trading center on the African
+      coast
+  - title: 'The UNESCO Courier: Gorée island, destination for memorial tourism and
+      symbol of the tragedy of slavery'
+    url: https://courier.unesco.org/en/articles/goree-island-memory
+    quote: used notably as a holding centre for slaves before their forced embarkation
+      for the Americas
+- country: senegal
+  fact: The Mouride Sufi brotherhood grew from the teachings of Amadou Bamba.
+  sources:
+  - title: 'Fowler Museum at UCLA: A Saint in the City: Sufi Arts of Urban Senegal'
+    url: https://fowler.ucla.edu/product/a-saint-in-the-city-sufi-arts-of-urban-senegal/
+    quote: a Sufi movement steeped in the mystical teachings of Sheikh Amadou Bamba
+      (1853-1927).
+  - title: 'Cambridge University Press: Pacifism and Non-Violence in Contemporary
+      Islamic Philosophy, ch. 1 Hierarchy, Community, and Nonviolence in Senegal'
+    url: https://www.cambridge.org/core/books/pacifism-and-nonviolence-in-contemporary-islamic-philosophy/hierarchy-community-and-nonviolence-in-senegal/4D07F3EE187BE3C46ACA049A75D09AC1
+    quote: Murīdiyyah Sufi Muslim brotherhood [ṭarīqah] which he established in or
+      around 1883
+- country: benin
+  fact: The Kingdom of Dahomey came to dominate the region in the 18th century.
+  sources:
+  - title: 'EBSCO Research Starters: Benin'
+    url: https://www.ebsco.com/research-starters/geography-and-cartography/benin/
+    quote: Starting around 1720, the Dahomey kingdom began to assume dominance over
+      the other states in the region.
+  - title: 'OpenStax (Rice University), World History Vol. 2: 3.4 The Trans-Saharan
+      Slave Trade'
+    url: https://openstax.org/books/world-history-volume-2/pages/3-4-the-trans-saharan-slave-trade
+    quote: By 1737, Agaja had conquered the entire Slave Coast and brought it under
+      Dahomey's control.
+- country: benin
+  fact: Dahomey was a state of the Fon.
+  sources:
+  - title: 'EBSCO Research Starters: Benin'
+    url: https://www.ebsco.com/research-starters/geography-and-cartography/benin/
+    quote: The Fon became the most powerful group in Benin because they had settled
+      the southern coast,
+  - title: 'Michael C. Carlos Museum, Emory University (via Google Arts & Culture):
+      Power Figure, Bocio'
+    url: https://artsandculture.google.com/asset/power-figure-bocio/ugHCmIhFVExHkw?hl=en
+    quote: All but the royal bocio retained their importance in the lives of Fon and
+      Ewe people from Dahomey
+- country: benin
+  fact: Dahomey built its power in part by selling captives into the Atlantic slave
+    trade.
+  sources:
+  - title: 'EBSCO Research Starters: Benin'
+    url: https://www.ebsco.com/research-starters/geography-and-cartography/benin/
+    quote: By selling other African peoples into slavery, Dahomey built a powerful
+      empire that existed for centuries.
+  - title: 'OpenStax (Rice University), World History Vol. 2: 3.4 The Trans-Saharan
+      Slave Trade'
+    url: https://openstax.org/books/world-history-volume-2/pages/3-4-the-trans-saharan-slave-trade
+    quote: Dahomey went on to become one of the major exporters of enslaved captives,
+      which the state traded in exchange for firearms.
+- country: benin
+  fact: Vodun, the religion of this region, was carried across the Atlantic by enslaved
+    people.
+  sources:
+  - title: 'EBSCO Research Starters: West African Vodun'
+    url: https://www.ebsco.com/research-starters/religion-and-philosophy/west-african-vodun
+    quote: they brought their Vodun beliefs with them
+  - title: 'UNESCO Intangible Cultural Heritage: Benin, safeguarding projects (Vodun)'
+    url: https://ich.unesco.org/en/state/benin-BJ?info=projects
+    quote: Originating in West Africa and practised wherever enslaved people were
+      deported,
+- country: angola
+  fact: The Kingdom of Kongo arose in the 14th century (c. 1380 / c. 1390)
+  sources:
+  - title: 'EBSCO Research Starters: Kongo (historical kingdom)'
+    url: https://www.ebsco.com/research-starters/history/kongo-historical-kingdom
+    quote: oral tradition states it was formed around 1380
+  - title: 'South African History Online: Kingdom of Kongo 1390–1914'
+    url: https://sahistory.org.za/article/kingdom-kongo-1390-1914
+    quote: Historians therefore also date the founding of the Kingdom of Kongo to
+      sometime around 1390 CE.
+- country: angola
+  fact: Kongo's capital, Mbanza Kongo, was in what is now northern Angola
+  sources:
+  - title: 'EBSCO Research Starters: Kongo (historical kingdom)'
+    url: https://www.ebsco.com/research-starters/history/kongo-historical-kingdom
+    quote: established the capital of Mbanza Kongo in what is now northern Angola
+  - title: 'South African History Online: Kingdom of Kongo 1390–1914'
+    url: https://sahistory.org.za/article/kingdom-kongo-1390-1914
+    quote: The Kingdom was centered around the great city of Mbanza Kongo, located
+      in what is now northern Angola
+- country: angola
+  fact: The Kingdom of Ndongo lay in present-day Angola
+  sources:
+  - title: 'Enslaved.org (MATRIX, Michigan State University): Njinga Mbandi'
+    url: https://enslaved.org/fullStory/16-23-102027/
+    quote: Njinga Mbandi born in the Kingdom of Ndongo (present-day Angola)
+  - title: 'South African History Online: Njinga Ana de Sousa'
+    url: https://sahistory.org.za/st/people/njinga-ana-de-sousa
+    quote: Njinga was born around 1582 in the Kingdom of Ndongo in present-day-Angola.
+- country: angola
+  fact: Queen Njinga ruled Ndongo and Matamba, in the 17th century (1624–1663)
+  sources:
+  - title: 'Enslaved.org (MATRIX, Michigan State University): Njinga Mbandi'
+    url: https://enslaved.org/fullStory/16-23-102027/
+    quote: From the time she took the throne in 1624 until her death in 1663
+  - title: Enslaved.org (same page, second quote for Ndongo and Matamba)
+    url: https://enslaved.org/fullStory/16-23-102027/
+    quote: reigns as ruler of Ndongo-Matamba
+  - title: 'South African History Online: Njinga Ana de Sousa'
+    url: https://sahistory.org.za/st/people/njinga-ana-de-sousa
+    quote: The Portuguese would acknowledge Njinga as ruler of both Matamba and Ndongo
+  - title: 'South African History Online: Njinga Ana de Sousa (date)'
+    url: https://sahistory.org.za/st/people/njinga-ana-de-sousa
+    quote: In 1663 Queen Njinga died at the age of 81 years old
+- country: angola
+  fact: Njinga fought the Portuguese who were invading her lands
+  sources:
+  - title: 'South African History Online: Njinga Ana de Sousa'
+    url: https://sahistory.org.za/st/people/njinga-ana-de-sousa
+    quote: Queen Njinga would personally lead many raids against the Portuguese who
+      was invading the Ndongo lands
+  - title: 'Enslaved.org (MATRIX, Michigan State University): Njinga Mbandi'
+    url: https://enslaved.org/fullStory/16-23-102027/
+    quote: Njinga defeated the Portuguese army that attacked her capital in Matamba
+      in 1644
+- country: dr-congo
+  fact: The Kuba kingdom lay in present-day DR Congo and was known for cloth woven
+    from raffia
+  sources:
+  - title: 'EBSCO Research Starters: Formation of the Kuba Kingdom'
+    url: https://www.ebsco.com/research-starters/history/formation-kuba-kingdom/
+    quote: Kuba textiles, woven from raffia cloth, were a highly valued trade good
+      in regional commerce
+  - title: 'Philadelphia Museum of Art (press): Creative Africa: Threads of Tradition'
+    url: https://press.philamuseum.org/creative-africa-threads-of-tradition/
+    quote: Decorated skirts worn by high-ranking Kuba women in the Democratic Republic
+      of Congo are part of the display
+  - title: Philadelphia Museum of Art (same page, caption)
+    url: https://press.philamuseum.org/creative-africa-threads-of-tradition/
+    quote: African, Congo, Kuba kingdom
+- country: dr-congo
+  fact: The Luba kingdom lay in present-day DR Congo
+  sources:
+  - title: 'EBSCO Research Starters: Luba Governance'
+    url: https://www.ebsco.com/research-starters/history/luba-governance
+    quote: Upper Kasai River area, Democratic Republic of Congo
+  - title: 'LACMA: Art from an African Kingdom: Luba Masterworks from Central Africa
+      (educator resource)'
+    url: https://www.lacma.org/sites/default/files/module-uploads/E4E_LubaConsolidated.pdf
+    quote: The Luba Kingdom is an influential Central African state that has flourished
+      for the past several centuries in what is now the Katanga
+- country: ethiopia
+  fact: The Kingdom of Aksum lay in northern Ethiopia
+  sources:
+  - title: 'EBSCO Research Starters: Kingdom of Aksum (S. Sishagne)'
+    url: https://www.ebsco.com/research-starters/history/kingdom-aksum/
+    quote: The Kingdom of Aksum, located in what is now northern Ethiopia
+  - title: 'National Geographic Society (Education): The Kingdom of Aksum'
+    url: https://education.nationalgeographic.org/resource/kingdom-aksum/
+    quote: Aksum was situated in the highlands of northern Ethiopia, in a region called
+      Tigray, near present-day Eritrea
+- country: ethiopia
+  fact: Aksum arose in the 1st century CE
+  sources:
+  - title: 'EBSCO Research Starters: Kingdom of Aksum'
+    url: https://www.ebsco.com/research-starters/history/kingdom-aksum/
+    quote: DATE 1st century C.E. LOCALE Aksum (now in northern Ethiopia
+  - title: 'National Geographic Society (Education): The Kingdom of Aksum'
+    url: https://education.nationalgeographic.org/resource/kingdom-aksum/
+    quote: A major empire of the ancient world, the kingdom of Aksum arose in Ethiopia
+      during the first century C.E.
+- country: ethiopia
+  fact: King Ezana made Christianity the state religion of Aksum
+  sources:
+  - title: 'EBSCO Research Starters: Kingdom of Aksum'
+    url: https://www.ebsco.com/research-starters/history/kingdom-aksum/
+    quote: its adoption as the official religion of the state by King Ezana in the
+      middle of the fourth century
+  - title: 'National Geographic Society (Education): The Kingdom of Aksum'
+    url: https://education.nationalgeographic.org/resource/kingdom-aksum/
+    quote: After assuming the throne, Ezana proclaimed Christianity the state religion
+- country: ethiopia
+  fact: Eleven churches were carved out of solid rock at Lalibela
+  sources:
+  - title: 'EBSCO Research Starters: Lalibela Founds the Christian Capital of Ethiopia'
+    url: https://www.ebsco.com/research-starters/religion-and-philosophy/lalibela-founds-christian-capital-ethiopia/
+    quote: The eleven edifices attributed to Lalibela are all sculpted inside and
+      out from solid volcanic rock
+  - title: 'World Monuments Fund: Africa''s Cultural Landmarks (with The Met)'
+    url: https://www.wmf.org/partners/africas-cultural-landmarks-the-met
+    quote: The 11 medieval churches of Lalibela were carved directly out of – and
+      into – the rock of this mountainous region.
+- country: ethiopia
+  fact: The Lalibela churches date to the 12th century
+  sources:
+  - title: 'National Geographic (Travel): Embracing the Ancient in Ethiopia'
+    url: https://www.nationalgeographic.com/travel/article/embracing-the-ancient-in-ethiopia
+    quote: Lalibela’s subterranean churches were carved out of rock from the top down
+      in the 12th century.
+  - title: 'EBSCO Research Starters: Lalibela Founds the Christian Capital of Ethiopia'
+    url: https://www.ebsco.com/research-starters/religion-and-philosophy/lalibela-founds-christian-capital-ethiopia/
+    quote: Lalibela (c. mid-twelfth century-c. 1221), Zagwe ruler, r. c. 1181-c. 1221
+- country: ethiopia
+  fact: The churches were conceived as a second Jerusalem and are attributed to King
+    Lalibela
+  sources:
+  - title: 'EBSCO Research Starters: Lalibela Founds the Christian Capital of Ethiopia'
+    url: https://www.ebsco.com/research-starters/religion-and-philosophy/lalibela-founds-christian-capital-ethiopia/
+    quote: Most of these churches are attributed to King Lalibela.
+  - title: EBSCO Research Starters (same page, Jerusalem)
+    url: https://www.ebsco.com/research-starters/religion-and-philosophy/lalibela-founds-christian-capital-ethiopia/
+    quote: that, according to traditional accounts, were designed to replicate Jerusalem
+  - title: 'National Geographic (Travel): Embracing the Ancient in Ethiopia'
+    url: https://www.nationalgeographic.com/travel/article/embracing-the-ancient-in-ethiopia
+    quote: Lalibela was built by a 12th-century Ethiopian king as a second Jerusalem
+- country: south-africa
+  fact: Mapungubwe, on the Limpopo, was the centre of a kingdom
+  sources:
+  - title: 'South African History Online: Mapungubwe'
+    url: https://www.sahistory.org.za/article/mapungubwe
+    quote: Mapungubwe appears to have been the centre of the largest known kingdom
+      in the African sub-continent
+  - title: 'SAnews (South African Government News Agency): Mapungubwe heritage route
+      launched'
+    url: https://www.sanews.gov.za/south-africa/mapungubwe-heritage-route-launched
+    quote: a kingdom predating that of Great Zimbabwe
+  - title: 'EBSCO Research Starters: Mapungubwe (Limpopo location)'
+    url: https://www.ebsco.com/research-starters/anthropology/mapungubwe/
+    quote: located on the southern riverbank of the Limpopo River in southeastern
+      Africa
+  - title: 'South African History Online: Mapungubwe (Limpopo location)'
+    url: https://www.sahistory.org.za/article/mapungubwe
+    quote: is an Iron Age archaeological site in the Limpopo Province
+- country: south-africa
+  fact: Around 1200 Mapungubwe traded gold and ivory as far as China and India
+  sources:
+  - title: 'South African History Online: Mapungubwe'
+    url: https://www.sahistory.org.za/article/mapungubwe
+    quote: The civilization thrived as a sophisticated trading center from around
+      1200 to 1300 AD, trading gold and ivory with China, India and Egypt
+  - title: 'SAnews (South African Government News Agency): Mapungubwe heritage route
+      launched'
+    url: https://www.sanews.gov.za/south-africa/mapungubwe-heritage-route-launched
+    quote: Mapungubwe was the base of a trading empire that traded with the people
+      of China, India, Egypt and Persia
+  - title: SAnews (same page, date)
+    url: https://www.sanews.gov.za/south-africa/mapungubwe-heritage-route-launched
+    quote: exchanging ivory, gold around the year 1200
+- country: south-africa
+  fact: In the early 19th century Shaka expanded the Zulu kingdom by military force
+  sources:
+  - title: 'EBSCO Research Starters: Zulu people'
+    url: https://www.ebsco.com/research-starters/ethnic-and-cultural-studies/zulu-people/
+    quote: Shaka expanded the Zulu Kingdom through military force
+  - title: EBSCO Research Starters (same page, date)
+    url: https://www.ebsco.com/research-starters/ethnic-and-cultural-studies/zulu-people/
+    quote: they banded together under the Zulu identity during the early nineteenth
+      century under the Zulu kingdom
+  - title: 'South African History Online: Zulu'
+    url: https://sahistory.org.za/article/zulu
+    quote: Shaka ruled from 1816 to 1828, when he was assassinated by his brothers.
+  - title: 'South African History Online: Zulu (expansion)'
+    url: https://sahistory.org.za/article/zulu
+    quote: Within twelve years, he had forged one of the mightiest empires the African
+      continent has ever known.
+- country: sudan
+  fact: Kush lay along the Nile in present-day Sudan
+  sources:
+  - title: 'EBSCO Research Starters: Meroitic Empire'
+    url: https://www.ebsco.com/research-starters/history/meroitic-empire/
+    quote: Kush, Nubia (now northern and central Sudan)
+  - title: 'National Geographic (History): These mighty pyramids were built by one
+      of Africa’s earliest civilizations'
+    url: https://www.nationalgeographic.com/history/article/sudan-archaeology-pyramdis-kush-nubia
+    quote: which ruled large parts of the middle Nile Valley
+  - title: National Geographic (same page, Sudan)
+    url: https://www.nationalgeographic.com/history/article/sudan-archaeology-pyramdis-kush-nubia
+    quote: The mysterious rulers of Nubia, in present-day Sudan
+- country: sudan
+  fact: Kushite kings conquered Egypt and ruled it as the Twenty-fifth Dynasty
+  sources:
+  - title: 'EBSCO Research Starters: Meroitic Empire'
+    url: https://www.ebsco.com/research-starters/history/meroitic-empire/
+    quote: formed Egypt's Twenty-fifth (Kushite) Dynasty
+  - title: 'National Geographic (History): These mighty pyramids were built by one
+      of Africa’s earliest civilizations'
+    url: https://www.nationalgeographic.com/history/article/sudan-archaeology-pyramdis-kush-nubia
+    quote: the Kingdom of Kush, whose kings—nicknamed the Black Pharaohs—conquered
+      Egypt in 747 B.C. and ruled the vast territory for nearly a century
+- country: sudan
+  fact: Meroë was the capital of Kush
+  sources:
+  - title: 'EBSCO Research Starters: Meroitic Empire'
+    url: https://www.ebsco.com/research-starters/history/meroitic-empire/
+    quote: The city of Meroë became the administrative capital
+  - title: 'National Geographic (History): These mighty pyramids were built by one
+      of Africa’s earliest civilizations'
+    url: https://www.nationalgeographic.com/history/article/sudan-archaeology-pyramdis-kush-nubia
+    quote: the Kushite capital until the empire collapsed in A.D. 400 and site of
+      Sudan’s best-preserved pyramids
+- country: sudan
+  fact: Kushite royals were buried beneath pyramids (at Meroë)
+  sources:
+  - title: 'EBSCO Research Starters: Meroitic Empire'
+    url: https://www.ebsco.com/research-starters/history/meroitic-empire/
+    quote: They used pyramids for royal burials
+  - title: 'National Geographic (History): These mighty pyramids were built by one
+      of Africa’s earliest civilizations (Meroë caption)'
+    url: https://www.nationalgeographic.com/history/article/sudan-archaeology-pyramdis-kush-nubia
+    quote: Most of the 41 tombs here belong to the royals of the powerful Kingdom
+      of Kush
+- country: sudan
+  fact: Old Dongola was the capital of the Nubian kingdom of Makuria
+  sources:
+  - title: Archaeology Magazine (Archaeological Institute of America), 9 Nov 2026
+    url: https://archaeology.org/news/2026/11/09/archaeologists-uncover-original-floor-of-nubias-largest-medieval-cathedral/
+    quote: Old Dongola was the capital of Makuria, a flourishing Nubian kingdom that
+      converted to Christianity in the sixth century A.D.
+  - title: 'National Geographic (History): These mighty pyramids were built by one
+      of Africa’s earliest civilizations'
+    url: https://www.nationalgeographic.com/history/article/sudan-archaeology-pyramdis-kush-nubia
+    quote: served as the capital of the medieval Nubian kingdom of Makuria
+- country: sudan
+  fact: Makuria became Christian in the 6th century
+  sources:
+  - title: Archaeology Magazine (Archaeological Institute of America), 9 Nov 2026
+    url: https://archaeology.org/news/2026/11/09/archaeologists-uncover-original-floor-of-nubias-largest-medieval-cathedral/
+    quote: Old Dongola was the capital of Makuria, a flourishing Nubian kingdom that
+      converted to Christianity in the sixth century A.D.
+  - title: 'EBSCO Research Starters: Makouria (C. L. Tellier)'
+    url: https://www.ebsco.com/research-starters/religion-and-philosophy/makouria/
+    quote: The kingdom became a recognized independent entity by the sixth century
+      and underwent a religious transformation, embracing Christianity
+- country: brazil
+  fact: Palmares was a quilombo, a community of people who escaped slavery
+  sources:
+  - title: 'Encyclopedia of African-American Culture and History (Gale) via Encyclopedia.com,
+      Flávio Gomes: Palmares'
+    url: https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/palmares
+    quote: These communities of fugitives were known as quilombos or mocambos.
+  - title: 'IPHAN (Instituto do Patrimônio Histórico e Artístico Nacional), Superintendência
+      em Alagoas: Patrimônio Arqueológico'
+    url: https://www.gov.br/iphan/pt-br/superintendencias/alagoas/patrimonio-arqueologico
+    quote: Foi um símbolo de resistência dos escravos no Brasil, tendo como grande
+      líder Zumbi
+- country: brazil
+  fact: Palmares existed in the 17th century
+  sources:
+  - title: 'Encyclopedia of African-American Culture and History via Encyclopedia.com,
+      Flávio Gomes: Palmares'
+    url: https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/palmares
+    quote: By the middle of the seventeenth century, the population of Palmares had
+      already reached more than 20,000 people.
+  - title: 'IPHAN, Superintendência em Alagoas: Patrimônio Arqueológico'
+    url: https://www.gov.br/iphan/pt-br/superintendencias/alagoas/patrimonio-arqueologico
+    quote: Entre os séculos XVII e XVIII, negros, brancos e índios organizaram a República
+      dos Palmares
+- country: brazil
+  fact: Zumbi was among the leaders of Palmares
+  sources:
+  - title: 'Encyclopedia of African-American Culture and History via Encyclopedia.com,
+      Flávio Gomes: Palmares'
+    url: https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/palmares
+    quote: The Palmarinos—led by Ganga Zumba and later Zumbi—had a complex economic,
+      military, and political organization.
+  - title: 'IPHAN, Superintendência em Alagoas: Patrimônio Arqueológico'
+    url: https://www.gov.br/iphan/pt-br/superintendencias/alagoas/patrimonio-arqueologico
+    quote: tendo como grande líder Zumbi
+- country: brazil
+  fact: Candomblé took shape in Bahia from West and Central African traditions brought
+    by enslaved Africans
+  sources:
+  - title: 'Encyclopedia of African-American Culture and History via Encyclopedia.com,
+      Rachel E. Harding: Candomblé'
+    url: https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/candomble
+    quote: combines cosmologies and ritual practices from West and Central African
+      sources ... particularly around the port city of Salvador, Bahia.
+  - title: 'Odete Dourado, ''Antigas falas, novas aparências: o tombamento do Ilê
+      Axé Iyá Nassô Oká'', risco (IAU-USP) 14, 2011'
+    url: https://journals.usp.br/risco/article/download/45501/49110/54308
+    quote: Os rituais e templos afro-brasileiros se estruturaram a partir das culturas
+      trazidas pelos escravos africanos
+- country: brazil
+  fact: Samba grew among Afro-Brazilians of Bahia
+  sources:
+  - title: 'UNESCO Intangible Cultural Heritage: Samba de Roda of the Recôncavo of
+      Bahia'
+    url: https://ich.unesco.org/en/RL/samba-de-roda-of-the-reconcavo-of-bahia-00101
+    quote: a major component of regional popular culture among Brazilians of African
+      descent
+  - title: 'Encyclopedia of African-American Culture and History via Encyclopedia.com,
+      Carlos Sandroni: Samba'
+    url: https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/samba
+    quote: They often mention black immigrants from Bahia, who migrated around the
+      time of abolition, in 1888.
+- country: cuba
+  fact: Santería, also called Regla de Ocha, joins African (mainly Yoruba) worship
+    with Spanish Catholic elements
+  sources:
+  - title: 'Smithsonian Festival of American Folklife program book 1989, David Brown:
+      Santería'
+    url: https://folklife-media.si.edu/docs/festival/program-book-articles/FESTBK1989_10.pdf
+    quote: came to be known as La Regla Lucumí, La Regla de Ocha, or Santería ...
+      the emerging creole religion creatively borrowed or remade Catholic elements
+  - title: 'Atlas Etnográfico de Cuba (Instituto Cubano de Investigación Cultural
+      Juan Marinello): Glossary, S'
+    url: https://atlasetnografico.cult.cu/en/glosario/S.html
+    quote: Popular religion, also called regla de ocha, or ocha-ifá, merging African
+      (mainly Yoruba and Adya-Fon) and Spanish elements
+- country: cuba
+  fact: Rumba took shape in Havana and Matanzas among Black Cubans and communities
+    of the enslaved
+  sources:
+  - title: 'UNESCO Intangible Cultural Heritage: Rumba in Cuba'
+    url: https://ich.unesco.org/en/RL/rumba-in-cuba-a-festive-combination-of-music-and-dances-and-all-the-practices-associated-01185
+    quote: developed in marginal neighbourhoods of cities in Cuba like Havana and
+      Matanzas
+  - title: Smithsonian Folkways, Music of Cuba (FE 4064), liner notes by John Santos
+    url: https://folkways-media.si.edu/docs/folkways/artwork/FW04064.pdf
+    quote: developed mostly around the poor black communal living quarters (solares)
+      in the urban areas of Havana and in the slave barracks
+- country: cuba
+  fact: Rumba is rooted in African culture and grew where communities of the enslaved
+    lived
+  sources:
+  - title: 'UNESCO Intangible Cultural Heritage: Rumba in Cuba'
+    url: https://ich.unesco.org/en/RL/rumba-in-cuba-a-festive-combination-of-music-and-dances-and-all-the-practices-associated-01185
+    quote: grew especially popular in rural areas where communities of African slaves
+      lived
+  - title: Smithsonian Folkways, Music of Cuba (FE 4064), liner notes by John Santos
+    url: https://folkways-media.si.edu/docs/folkways/artwork/FW04064.pdf
+    quote: The strongest influence in the Rumba is obviously African, although its
+      Spanish heritage is also evident.
+- country: haiti
+  fact: Before independence the territory was Saint-Domingue, France's richest colony
+  sources:
+  - title: 'Anna Plassart (The Open University), The Conversation: Haiti has suffered
+      hugely over centuries but its revolution was stunningly innovative'
+    url: https://theconversation.com/haiti-has-suffered-hugely-over-centuries-but-its-revolution-was-stunningly-innovative-183954
+    quote: Saint-Domingue (as Haiti was then known) was France's largest and richest
+      colony.
+  - title: 'Encyclopedia of African-American Culture and History via Encyclopedia.com,
+      Laennec Hurbon: Haitian Revolution: Overview'
+    url: https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/haitian-revolution-overview
+    quote: On the eve of 1789, St. Domingue was the most prosperous French colony
+- country: haiti
+  fact: An uprising of the enslaved beginning in 1791 drove the Haitian Revolution
+  sources:
+  - title: Anna Plassart, The Conversation
+    url: https://theconversation.com/haiti-has-suffered-hugely-over-centuries-but-its-revolution-was-stunningly-innovative-183954
+    quote: from 1791 its driving force was the great antislavery uprising
+  - title: 'Laennec Hurbon via Encyclopedia.com: Haitian Revolution: Overview'
+    url: https://encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/haitian-revolution-overview
+    quote: It was during the night of August 22–23, 1791, that a general slave insurrection
+      in the north of the country exploded
+- country: haiti
+  fact: Independence was proclaimed on 1 January 1804
+  sources:
+  - title: Anna Plassart, The Conversation
+    url: https://theconversation.com/haiti-has-suffered-hugely-over-centuries-but-its-revolution-was-stunningly-innovative-183954
+    quote: On January 1 1804 a former slave, Jean-Jacques Dessalines, proclaimed the
+      independence
+  - title: 'Julia Gaffield (Georgia State University), Commonplace: On the List of
+      Free Nations'
+    url: https://commonplace.online/article/on-the-list-of-free-nations/
+    quote: According to most accounts, the Haitian Revolution ended on January 1,
+      1804, with Haiti's Declaration of Independence.
+- country: haiti
+  fact: Haiti became the first Black nation in the Americas
+  sources:
+  - title: Anna Plassart, The Conversation
+    url: https://theconversation.com/haiti-has-suffered-hugely-over-centuries-but-its-revolution-was-stunningly-innovative-183954
+    quote: Haiti became the first black republic in the world.
+  - title: 'UC Santa Barbara Library research guide: Black Americas — Haiti'
+    url: https://guides.library.ucsb.edu/blackamericas/haiti
+    quote: eventually created the first Black nation in the Americas
+- country: jamaica
+  fact: Nanny led the Maroons in the early 18th century
+  sources:
+  - title: 'Jamaica Information Service: Nanny of the Maroons'
+    url: https://www.jis.gov.jm/information/heroes/nanny-of-the-maroons/
+    quote: Nanny was a leader of the Maroons at the beginning of the 18th century.
+  - title: 'Royal Museums Greenwich: Nanny of the Maroons'
+    url: https://www.rmg.co.uk/stories/maritime-history/nanny-maroons
+    quote: led a community of formerly enslaved Africans called the Windward Maroons
+- country: jamaica
+  fact: Nanny is Jamaica's only female national hero
+  sources:
+  - title: 'Royal Museums Greenwich: Nanny of the Maroons'
+    url: https://www.rmg.co.uk/stories/maritime-history/nanny-maroons
+    quote: Nanny is Jamaica's only female national hero.
+  - title: Blue and John Crow Mountains National Park (JCDT)
+    url: https://www.blueandjohncrowmountains.org/?p=199
+    quote: Nanny of the Maroons is Jamaica's only female national hero.
+- country: jamaica
+  fact: The Maroons' war ended with a peace treaty
+  sources:
+  - title: 'Royal Museums Greenwich: Nanny of the Maroons'
+    url: https://www.rmg.co.uk/stories/maritime-history/nanny-maroons
+    quote: a Treaty was signed on 20 April 1740 which brought an end to years of hostilities
+  - title: Blue and John Crow Mountains National Park (JCDT)
+    url: https://www.blueandjohncrowmountains.org/?p=199
+    quote: These wars stopped only because of the Peace Treaty which gave the Maroons
+      their sovereignty.
+- country: jamaica
+  fact: Rastafari arose in Jamaica in the 1930s
+  sources:
+  - title: 'EBSCO Research Starters, Michael Joseph: Rastafari Movement'
+    url: https://ebsco.com/research-starters/nutrition-and-dietetics/rastafari-movement
+    quote: Rastafari (or Ras Tafari) is a religion rooted in Jewish and Christian
+      sources that developed in Jamaica in the 1930s.
+  - title: 'RE:ONLINE (Culham St Gabriel''s Trust): Rastafari — Founders'
+    url: https://www.reonline.org.uk/religion-worldview/rastafari/rastafari-table-of-contents/beliefs-teachings-wisdom-authority/founders/
+    quote: A number of preachers emerged in the 1930s in Jamaica
+- country: jamaica
+  fact: Reggae grew out of ska and rock steady
+  sources:
+  - title: 'UNESCO Intangible Cultural Heritage: Reggae music of Jamaica'
+    url: https://ich.unesco.org/en/RL/reggae-music-of-jamaica-01398
+    quote: gradually transforming Ska into Rock Steady and then into Reggae
+  - title: 'Jamaica Information Service: Reggae'
+    url: https://jis.gov.jm/jamaica/reggae/
+    quote: reggae is based on ska, an earlier form of Jamaican popular music,
+- country: colombia
+  fact: San Basilio de Palenque was founded in the 17th century by people who escaped
+    slavery, as a refuge
+  sources:
+  - title: 'UNESCO Intangible Cultural Heritage: Cultural space of Palenque de San
+      Basilio'
+    url: https://ich.unesco.org/en/RL/cultural-space-of-palenque-de-san-basilio-00102
+    quote: founded by escaped slaves as a refuge in the seventeenth century
+  - title: 'Al Jazeera: ''A dream'': How the Americas'' first free town took its independence
+      back (2024)'
+    url: https://www.aljazeera.com/features/2024/8/11/a-dream-how-the-americas-first-free-town-took-its-independence-back
+    quote: established the small town in the 17th century as a safe haven for former
+      slaves like himself
+- country: colombia
+  fact: Palenquero is a creole with Spanish vocabulary and Bantu grammatical features
+  sources:
+  - title: 'UNESCO Intangible Cultural Heritage: Cultural space of Palenque de San
+      Basilio'
+    url: https://ich.unesco.org/en/RL/cultural-space-of-palenque-de-san-basilio-00102
+    quote: the only creole language in Latin America with a lexical Spanish basis
+      and grammatical characteristics of Bantu languages
+  - title: 'Al Jazeera: ''A dream'': How the Americas'' first free town took its independence
+      back (2024)'
+    url: https://www.aljazeera.com/features/2024/8/11/a-dream-how-the-americas-first-free-town-took-its-independence-back
+    quote: is rooted in Spanish and is a blend of African Bantu languages
+- country: united-states
+  fact: The Gullah Geechee are descendants of enslaved Africans on the Sea Islands
+    and coast of the Carolinas, Georgia and Florida (North Carolina to Florida)
+  sources:
+  - title: 'National Park Service, Gullah Geechee Cultural Heritage Corridor: History
+      & Culture'
+    url: https://www.nps.gov/guge/learn/historyculture/index.htm
+    quote: The Gullah Geechee people are the descendants of West and Central Africans
+      who were enslaved
+  - title: 'South Carolina Encyclopedia (University of South Carolina): Gullah'
+    url: https://www.scencyclopedia.org/sce/entries/gullah/
+    quote: descended from enslaved Africans who settled in the Sea Islands and lowcountry
+      of South Carolina, Georgia, Florida, and North Carolina.
+- country: united-states
+  fact: Blues and jazz arose in African American communities
+  sources:
+  - title: 'Library of Congress, Folklife Today: The Birth of the Blues and Jazz'
+    url: https://blogs.loc.gov/folklife/2017/02/birth-of-blues-and-jazz/
+    quote: emerging African American genres of blues and jazz were bursting into American
+      consciousness
+  - title: 'National Park Service, New Orleans Jazz NHP: Early History'
+    url: https://www.nps.gov/jazz/learn/historyculture/history_early.htm
+    quote: The roots of jazz were largely nourished in the African-American community
+- country: united-states
+  fact: 'The Harlem Renaissance: African American cultural expression concentrated
+    in Harlem in the 1920s and 1930s'
+  sources:
+  - title: 'Library of Congress Research Guide: Harlem Renaissance'
+    url: https://guides.loc.gov/harlem-renaissance
+    quote: The Harlem Renaissance was a period in American history from the 1920s
+      and 1930s.
+  - title: 'SAGE Encyclopedia of Urban History: Harlem Renaissance'
+    url: https://sk.sagepub.com/ency/edvol/embed/urbanhistory/chpt/harlem-renaissance
+    quote: The Harlem Renaissance was a culmination of African American cultural expression
+- country: united-kingdom
+  fact: From 1948, beginning with the Empire Windrush, Caribbean people came to Britain;
+    they are known as the Windrush generation
+  sources:
+  - title: 'The National Archives (UK): Postwar Caribbean migration'
+    url: https://www.nationalarchives.gov.uk/explore-the-collection/explore-by-time-period/postwar/postwar-caribbean-migration/
+    quote: It marks the arrival of the iconic postwar ship carrying a largely Caribbean
+      workforce,
+  - title: 'London Museum: Origins of Notting Hill Carnival'
+    url: https://londonmuseum.org.uk/collections/london-stories/origins-notting-hill-carnival
+    quote: began with the Windrush Generation – Caribbean people who, from 1948, came
+      to help rebuild post-war Britain.
+- country: united-kingdom
+  fact: Claudia Jones organised a Caribbean carnival in London (St Pancras) in 1959
+  sources:
+  - title: 'London Museum: Origins of Notting Hill Carnival'
+    url: https://londonmuseum.org.uk/collections/london-stories/origins-notting-hill-carnival
+    quote: On 30 January 1959, Claudia Jones, an activist and newspaper editor, organised
+      the first Caribbean carnival
+  - title: 'Black Cultural Archives (Google Arts & Culture): A History of Notting
+      Hill Carnival'
+    url: https://artsandculture.google.com/story/a-history-of-notting-hill-carnival-black-cultural-archives/pwXhDoHj8Po6Kg?hl=en
+    quote: organised a Caribbean Carnival in St. Pancras Town Hall on 30th January
+      1959.
+- country: united-kingdom
+  fact: A 1966 street festival in Notting Hill began the annual Notting Hill Carnival
+  sources:
+  - title: 'London Museum: Origins of Notting Hill Carnival'
+    url: https://londonmuseum.org.uk/collections/london-stories/origins-notting-hill-carnival
+    quote: The 1966 Notting Hill festival was the street party which created the Notting
+      Hill Carnival we know today.
+  - title: 'Black Cultural Archives (Google Arts & Culture): A History of Notting
+      Hill Carnival'
+    url: https://artsandculture.google.com/story/a-history-of-notting-hill-carnival-black-cultural-archives/pwXhDoHj8Po6Kg?hl=en
+    quote: This event marked the beginning of the annual Notting Hill Carnival
+- country: france
+  fact: Négritude was founded in Paris in the 1930s by Césaire, Damas and Senghor,
+    students from France's colonies
+  sources:
+  - title: 'Academy of American Poets (poets.org): A Brief Guide to Negritude'
+    url: https://poets.org/node/70295
+    quote: Aimé Césaire, Senghor, and Léon-Gontran Damas, met while studying in Paris
+      in 1931
+  - title: 'EBSCO Research Starters: Development of Negritude'
+    url: https://www.ebsco.com/research-starters/history/development-negritude
+    quote: The negritude movement in Paris in the 1930's had much in common with the
+      Harlem Renaissance in the United States.
+  - title: 'Assemblée nationale: Césaire, poète et politique'
+    url: https://www2.assemblee-nationale.fr/15/evenements/2022/inauguration-de-la-salle-aime-cesaire/cesaire-poete-et-politique
+    quote: Avec Léopold Sédar Senghor et Léon-Gontran Damas il jette les bases de
+      la Négritude.
+- country: france
+  fact: Aimé Césaire was from Martinique
+  sources:
+  - title: 'Assemblée nationale: Césaire, poète et politique'
+    url: https://www2.assemblee-nationale.fr/15/evenements/2022/inauguration-de-la-salle-aime-cesaire/cesaire-poete-et-politique
+    quote: Aimé Césaire est né à Basse-Pointe (Martinique) le 26 juin 1913.
+  - title: 'EBSCO Research Starters: Development of Negritude'
+    url: https://www.ebsco.com/research-starters/history/development-negritude
+    quote: Aimé Césaire of Martinique, Léopold Senghor of Senegal, and Léon-Gontran
+      Damas of French Guyana
+- country: france
+  fact: Léon-Gontran Damas was from French Guiana (born in Cayenne)
+  sources:
+  - title: 'Académie des sciences d''outre-mer: review of ''Léon-Gontran Damas : poète,
+      écrivain patrimonial et postcolonial'' (Jean Nemo)'
+    url: https://www.academieoutremer.fr/images/files/Leon-Gontran-Damas-%2860_056%29.pdf
+    quote: Né en 1912 à Cayenne, dans une famille qui descendait de presque toutes
+      les composantes de la population
+  - title: 'Encyclopedia of Latin American History and Culture (via Encyclopedia.com):
+      Damas, Léon-Gontran'
+    url: https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/damas-leon-gontran-1912-1978
+    quote: He was born at Cayenne in the French colony of Guyana
+- country: france
+  fact: Léopold Sédar Senghor was from Senegal
+  sources:
+  - title: 'Academy of American Poets (poets.org): A Brief Guide to Negritude'
+    url: https://poets.org/node/70295
+    quote: Sengalese poet and politician Léopold Sédar Senghor
+  - title: 'EBSCO Research Starters: Development of Negritude'
+    url: https://www.ebsco.com/research-starters/history/development-negritude
+    quote: Aimé Césaire of Martinique, Léopold Senghor of Senegal, and Léon-Gontran
+      Damas of French Guyana
+- country: france
+  fact: In Guadeloupe, gwoka originated with enslaved Africans and their descendants
+  sources:
+  - title: 'UNESCO Intangible Cultural Heritage: Decision 9.COM 10.17 (Gwoka)'
+    url: https://ich.unesco.org/en/decisions/9.COM/10.17
+    quote: Originally performed by slaves of African origin, Gwoka is nowadays practised
+      and recreated
+  - title: Marie-Héléna Laumuno, 'Les femmes et le gwoka en Guadeloupe', Clio 50 (2019),
+      OpenEdition
+    url: https://journals.openedition.org/clio/17594
+    quote: Toutes les manifestations « musicales » d’origine africaine, pratiquées
+      par les populations esclaves et leurs descendants
+- country: canada
+  fact: Black Loyalists, African Americans who gained freedom through the British,
+    settled in Nova Scotia in 1783–84
+  sources:
+  - title: 'Canadian Museum of History: Birchtown (African Nova Scotian communities)'
+    url: https://historymuseum.ca/teachers-zone/african-nova-scotians-20th-century-canadian-legacies/african-nova-scotian-communities/birchtown
+    quote: In 1783–1784, British promises of freedom attracted more than 1,000 African
+      Americans to Nova Scotia.
+  - title: 'Parks Canada: Black history in Canada (designations)'
+    url: https://parks.canada.ca/culture/designation/histoire-noirs-black-history
+    quote: Rose Fortune was one of more than 3,000 Black Loyalists who gained freedom
+      and resettlement in Nova Scotia in 1783–1784.
+  - title: 'Black Loyalist Heritage Centre (Nova Scotia Museum): About'
+    url: https://blackloyalist.novascotia.ca/about
+    quote: free men and women who fought for the British during the American Revolution
+      and won their freedom.
+- country: canada
+  fact: Birchtown was the largest Black Loyalist settlement
+  sources:
+  - title: 'Canadian Museum of History: Birchtown'
+    url: https://historymuseum.ca/teachers-zone/african-nova-scotians-20th-century-canadian-legacies/african-nova-scotian-communities/birchtown
+    quote: Birchtown was the largest Black Loyalist settlement.
+  - title: 'Black Loyalist Heritage Centre (Nova Scotia Museum): About'
+    url: https://blackloyalist.novascotia.ca/about
+    quote: In the late 18th century, Birchtown was the largest free Black community
+      in British North America.
+- country: canada
+  fact: Africville in Halifax was an African Canadian (Black) community for over a
+    century, demolished by the city in the 1960s
+  sources:
+  - title: 'Parks Canada, Directory of Federal Heritage Designations: Africville National
+      Historic Site'
+    url: https://parks.canada.ca/culture/designation/lieu-site/africville
+    quote: For over a century African Canadians settled here, developing an independent
+      community centred around church and family.
+  - title: 'Canadian Museum for Human Rights: The story of Africville'
+    url: https://humanrights.ca/story/the-story-of-africville
+    quote: Africville was a close‐knit Black community in the north end of Halifax
+      for over 120 years.
+  - title: 'Canadian Museum for Human Rights: The story of Africville'
+    url: https://humanrights.ca/story/the-story-of-africville
+    quote: The City demolished Africville in the 1960s, and its residents have been
+      fighting for justice ever since.
+  - title: 'Parks Canada: Africville National Historic Site'
+    url: https://parks.canada.ca/culture/designation/lieu-site/africville
+    quote: Once the location of a historic Black community, the houses were demolished
+      in the 1960s
+- country: trinidad-and-tobago
+  fact: Calypso developed among Trinidad's people of African descent
+  sources:
+  - title: Keith Q. Warner, 'Calypso', Encyclopedia of African-American Culture and
+      History (Gale, via Encyclopedia.com)
+    url: https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/calypso
+    quote: early calypso, which evolved out of simple efforts at communication among
+      the largely African underclass.
+  - title: 'Esther M. Morgan-Ellis (ed.), Resonances, University of North Georgia
+      Press: 9.11 Steelband Music of Trinidad and Tobago'
+    url: https://human.libretexts.org/Bookshelves/Music/Ethnomusicology/Resonances_-_Engaging_Music_in_its_Cultural_Context_(Morgan-Ellis_Ed.)/04%3A_Music_for_Political_Expression/09%3A_National_Identity/9.11%3A_Steelband_Music_of_Trinidad_and_Tobago
+    quote: The calypso tradition developed among enslaved Africans, and has roots
+      in the sung storytelling of West Africa.
+- country: trinidad-and-tobago
+  fact: The steelpan was developed in Trinidad and Tobago in the 1930s and 1940s
+  sources:
+  - title: 'Ministry of Foreign and CARICOM Affairs, Trinidad and Tobago: National
+      Instrument'
+    url: https://foreign.gov.tt/about/trinidad-tobago/national-symbols/national-instrument/
+    quote: whose early evolution dates back to the 1930's and 40's
+  - title: 'Esther M. Morgan-Ellis (ed.), Resonances, University of North Georgia
+      Press: 9.11 Steelband Music of Trinidad and Tobago'
+    url: https://human.libretexts.org/Bookshelves/Music/Ethnomusicology/Resonances_-_Engaging_Music_in_its_Cultural_Context_(Morgan-Ellis_Ed.)/04%3A_Music_for_Political_Expression/09%3A_National_Identity/9.11%3A_Steelband_Music_of_Trinidad_and_Tobago
+    quote: impoverished Afro-Trinidadian youth began building drums out of discarded
+      biscuit tins in the late 1930s
+- country: trinidad-and-tobago
+  fact: Notting Hill Carnival draws on Trinidad's carnival tradition
+  sources:
+  - title: 'London Museum: Origins of Notting Hill Carnival'
+    url: https://londonmuseum.org.uk/collections/london-stories/origins-notting-hill-carnival
+    quote: It was held in January to match the annual carnival in the Caribbean island
+      of Trinidad
+  - title: 'Black Cultural Archives (Google Arts & Culture): A History of Notting
+      Hill Carnival'
+    url: https://artsandculture.google.com/story/a-history-of-notting-hill-carnival-black-cultural-archives/pwXhDoHj8Po6Kg?hl=en
+    quote: The development of Carnival in the Caribbean, particularly on the island
+      of Trinidad
+dropped:
+- 'all: Britannica and UNESCO World Heritage Centre (whc.unesco.org) returned HTTP
+  403 to WebFetch; the Met (429), Smarthistory, Smithsonian NMAfA and Smithsonian
+  Magazine (403) were also unreachable, so facts were sourced from OpenStax, EBSCO
+  Research Starters, National Geographic Education, UNESCO ICH / UNESCO Courier and
+  museum pages instead.'
+- 'mali: Mansa Musa as the empire''s height (only National Geographic states ''height'';
+  OpenStax only calls him the most famous ruler).'
+- 'mali: Kurukan Fuga / Manden Charter (UNESCO ICH only; page names the ''Mandingo
+  Empire'', no second source).'
+- 'ghana: Elmina built in 1482 (EBSCO only; OpenStax gives no year).'
+- 'nigeria: British looting of the Benin bronzes in 1897 (only Horniman says ''looted'';
+  Pitt Rivers says attacked) - header says only that British troops attacked Benin
+  City.'
+- 'nigeria: ''Edo State'' (Pitt Rivers only; British Museum says southern Nigeria)
+  - header says ''in the south''.'
+- 'senegal: Jolof Empire as a named empire, its dates and the 1549 battle of Danki
+  (only Wikipedia-derived pages and the Folkways list; no second authoritative source
+  opened).'
+- 'senegal: founding date of the Mouride order c. 1883 (Cambridge only; Fowler gives
+  Bamba''s dates, not the founding).'
+- 'benin: Vodun as national religion / national holiday (EBSCO only).'
+- 'benin: Ouidah as a slave port (not stated in the sources opened).'
+- 'angola: Ndongo as a Mbundu kingdom / vassal of Kongo that broke free in the early
+  1500s — only South African History Online states it; no second independent source
+  opened.'
+- 'angola: Kongo''s king Nzinga a Nkuwu converted to Christianity in 1491 — EBSCO
+  only (SAHO gives the 1482 contact, not the same fact); dropped to keep the header
+  short.'
+- 'dr-congo: Luba as ''the first centralized state in the Congo region'' — EBSCO only;
+  LACMA says only ''influential Central African state''.'
+- 'dr-congo: Kuba founding date — EBSCO says 1600s, Boston MFA (certificate error,
+  not opened) reportedly says 18th century; conflicting and unverified, so no date
+  given.'
+- 'dr-congo: Kuba wood sculpture — EBSCO only.'
+- 'ethiopia: Zagwe dynasty — named only by EBSCO among the sources I could open (UNESCO,
+  Britannica, Met, Smarthistory all blocked 403/429).'
+- 'ethiopia: Ezana''s conversion dated to the mid-4th century — EBSCO only; NatGeo
+  confirms the act but gives no date, so the header gives no century for it.'
+- 'south-africa: Mapungubwe trade over Indian Ocean networks — EBSCO only; replaced
+  by ''as far as China and India'' (SAHO + SAnews).'
+- 'south-africa: golden rhinoceros — SAHO and SAnews mention it, but omitted for brevity
+  (could be added).'
+- 'sudan: Meroë pyramids counts (200+ / 41 royal tombs) — single-source numbers, not
+  used.'
+- 'brazil: Palmares population over 20,000 and its destruction in 1694/1695 — only
+  Encyclopedia.com (Gomes) gives the figure; dates differ between sources'
+- 'brazil: Casa Branca (Ilê Axé Iyá Nassô Oká) as the first terreiro listed by IPHAN
+  — sources disagree on 1984 vs 1986; left out to keep the header short'
+- 'cuba: son as an Afro-Cuban form — only the Folkways liner notes; Britannica (Santería)
+  blocked (403)'
+- 'cuba: Lucumí as the Cuban name of the Yoruba — only the Smithsonian program book'
+- 'haiti: ''first Black republic'' wording — only The Conversation; Gaffield notes
+  Haiti was not always a republic, so the header uses ''first Black nation in the
+  Americas'' (UCSB + Plassart)'
+- 'jamaica: Maroons as formerly enslaved Africans — only Royal Museums Greenwich verbatim;
+  JIS and the national park page do not say it'
+- 'jamaica: link between reggae and Rastafari — only JIS verbatim; UNESCO reggae page
+  does not mention Rastafari'
+- 'colombia: Benkos Biohó as founder and ''first free town in the Americas'' — only
+  Al Jazeera opened; the ''first'' claim is contested'
+- 'united-states: Gullah as a creole language ''spoken nowhere else'' — only NPS opened;
+  no second source.'
+- 'united-states: jazz born specifically in New Orleans — only NPS states it; LOC
+  page does not.'
+- 'united-states: Britannica (Gullah, Harlem Renaissance, blues), NMAAHC, NGA and
+  Smithsonian music pages all returned HTTP 403 and were not used.'
+- 'united-kingdom: Windrush docking at Tilbury on 22 June 1948 — only The National
+  Archives; London Museum gives only ''from 1948''.'
+- 'united-kingdom: Caribbean settlers in Notting Hill faced racism and violence —
+  London Museum only.'
+- 'france: gwoka''s Ka drums, call-and-response singing and UNESCO inscription — UNESCO
+  only (Ministry of Culture and Université des Antilles pages not retrievable).'
+- 'canada: half of the Black Loyalists left for Sierra Leone in 1792 — Canadian Museum
+  of History only; Parks Canada designation page for the 1792 migration not opened.'
+- 'canada: Canadian Encyclopedia articles (Black Loyalists, Africville, Shelburne
+  riots) — WebFetch returned only navigation, not used.'
+- 'trinidad-and-tobago: steelpan invented specifically by Afro-Trinidadian youth from
+  biscuit tins — UNG Press only; steelpan as national instrument (1992) — Trinidad
+  and Tobago government page only; calypso''s link to Carnival — Gale only. National
+  Carnival Commission pages returned 404.'

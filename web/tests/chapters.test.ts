@@ -1,5 +1,9 @@
 import { describe, expect, it } from 'vitest';
-import { parseChapter, parseChapterTranslation, sortChapters } from '../src/lib/chapters';
+import { chapterForEdition, parseChapter, parseChapterTranslation, sortChapters } from '../src/lib/chapters';
+import { execFileSync } from 'node:child_process';
+import { mkdtempSync, readFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { localizeChapter, localizeCard } from '../src/lib/cards';
 import type { Card } from '../src/lib/types';
 
@@ -126,5 +130,92 @@ describe('translated credits', () => {
     expect(ch.hero).toMatchObject({ credit: 'Британская библиотека', license: 'свободная' });
     const fb = localizeChapter({ ...parseChapter(SRC), translations: { ru: { title: 'Т' } } }, 'ru');
     expect(fb.hero?.license).toBe('общественное достояние');
+  });
+});
+
+describe('edition markers', () => {
+  const dir = new URL('./fixtures/marked/', import.meta.url).pathname;
+  const read = (f: string) => readFileSync(join(dir, f), 'utf8');
+
+  it('strips {male}/{female} and records which copy each paragraph is in', () => {
+    const c = parseChapter(read('v3.md'));
+    expect(c.steps).toHaveLength(4);
+    expect(c.steps[1]).toBe('[[douglass-covey|Frederick Douglass]] fights Edward Covey and is never whipped by him again.');
+    expect(c.steps[2]).toMatch(/^\[\[jacobs-garret/);
+    expect(c.stepCopies).toEqual(['', 'm', 'f', '']);
+  });
+
+  it('leaves unmarked chapters as they are', () => {
+    const c = parseChapter(SRC);
+    expect(c.stepCopies).toBeUndefined();
+    expect(chapterForEdition(c, 'f')).toBe(c);
+  });
+
+  it('each copy reads only its own paragraphs, in both languages', () => {
+    const c = parseChapter(read('v3.md'));
+    c.translations = { ru: parseChapterTranslation(read('v3.ru.md')) };
+    const m = chapterForEdition(c, 'm');
+    const f = chapterForEdition(c, 'f');
+    expect(m.steps).toHaveLength(3);
+    expect(f.steps).toHaveLength(3);
+    expect(m.steps.join(' ')).toContain('douglass-covey');
+    expect(m.steps.join(' ')).not.toContain('jacobs-garret');
+    expect(f.steps.join(' ')).toContain('jacobs-garret');
+    expect(f.steps.join(' ')).not.toContain('douglass-covey');
+    expect(m.steps.join(' ')).not.toMatch(/\{(male|female)\}/);
+    const ru = chapterForEdition(localizeChapter(c, 'ru'), 'f');
+    expect(ru.steps).toEqual(['Общее начало о [[wheatley|Уитли]].', '[[jacobs-garret|Гарриет Джейкобс]] семь лет прячется на чердаке.', 'Общий финал.']);
+    expect(ru.textLang).toBe('ru');
+  });
+
+  it('the build keeps a translation only when its markers match the original', () => {
+    const out = join(mkdtempSync(join(tmpdir(), 'chapters-')), 'chapters.json');
+    execFileSync(process.execPath, [new URL('../scripts/build-chapters.ts', import.meta.url).pathname, dir, out], { stdio: 'pipe' });
+    const data = JSON.parse(readFileSync(out, 'utf8'));
+    const v3 = data.chapters.find((c: { id: string }) => c.id === 'v3');
+    const v4 = data.chapters.find((c: { id: string }) => c.id === 'v4');
+    expect(v3.stepCopies).toEqual(['', 'm', 'f', '']);
+    expect(v3.translations.ru.steps).toHaveLength(4);
+    expect(v3.translations.ru.stepCopies).toBeUndefined();
+    expect(v4.stepCopies).toBeUndefined();
+    expect(v4.translations.ru.steps).toBeUndefined();
+  });
+});
+
+describe('step labels', () => {
+  const EN = `---
+id: v9
+title: T
+---
+{at Oyo · 1949} Drums of [[equiano]].
+
+{male} {at Charleston · 1862} His story.
+
+{female} {at Combahee River · 1863} Her story.
+`;
+  const RU = `---
+title: Т
+kicker: К
+---
+{at Ойо · 1949} Барабаны [[equiano|Эквиано]].
+
+{male} {at Чарлстон · 1862} Его история.
+
+{female} {at река Комбахи · 1863} Её история.
+`;
+  it('strips {at …} after the copy marker and keeps it per step', () => {
+    const c = parseChapter(EN);
+    expect(c.steps).toEqual(['Drums of [[equiano]].', 'His story.', 'Her story.']);
+    expect(c.stepLabels).toEqual(['Oyo · 1949', 'Charleston · 1862', 'Combahee River · 1863']);
+    expect(chapterForEdition(c, 'f').stepLabels).toEqual(['Oyo · 1949', 'Combahee River · 1863']);
+  });
+  it('a translation shows its own labels', () => {
+    const c = { ...parseChapter(EN), translations: { ru: parseChapterTranslation(RU) } };
+    const ru = chapterForEdition(localizeChapter(c, 'ru'), 'm');
+    expect(ru.stepLabels).toEqual(['Ойо · 1949', 'Чарлстон · 1862']);
+    expect(ru.steps[0]).toBe('Барабаны [[equiano|Эквиано]].');
+  });
+  it('unlabelled chapters have no labels', () => {
+    expect(parseChapter(SRC).stepLabels).toBeUndefined();
   });
 });

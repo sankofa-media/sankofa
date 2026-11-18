@@ -20,16 +20,13 @@ sources:
   - {title: "National Park Service: David Walker", url: "https://home.nps.gov/people/david-walker.htm"}
   - {title: "PBS Africans in America: David Walker", url: "https://www.pbs.org/wgbh/aia/part4/4p2930.html"}
   - {title: "National Park Service: David Walker", url: "https://www.nps.gov/people/david-walker.htm"}
+  - {title: "Encyclopedia of African-American Culture and History (Gale), via Encyclopedia.com: Walker, David", url: "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/walker-david"}
+  - {title: "R. J. Ellis, American History Through Literature 1820–1870, via Encyclopedia.com: Walker's Appeal", url: "https://www.encyclopedia.com/arts/culture-magazines/walkers-appeal"}
 media:
   - {"type": "image", "file": "walkers-appeal.jpg", "caption": "Frontispiece and title page of Walker's Appeal, with Henry Highland Garnet's sketch of his life, New York, 1848", "credit": "Wood engraving; Library of Congress Prints and Photographs Division", "license": "Public domain", "url": "https://www.loc.gov/item/92513183/"}
 ---
-A Boston clothes dealer wrote a call to resist slavery and asked sailors
-heading south to carry copies with them. David Walker was born in
-Wilmington, North Carolina, to a free mother, and ran a clothing business on
-Brattle Street in Boston. In 1829 he published his Appeal ... to the
-Coloured Citizens of the World, urging the enslaved to resist. According to
-Henry Highland Garnet, Georgians put a price on Walker's head; the sums
-reported differ. He died in Boston in 1830. Compare the free press of
-[[freedoms-journal|Freedom's Journal]], the [[haitian-revolution|Haitian
-Revolution]] and [[douglass-covey|Frederick Douglass's fight with Edward
-Covey]].
+In September 1829 David Walker, a free Black clothes dealer in Boston, published a pamphlet urging the enslaved people of the American South to resist. Born in Wilmington, North Carolina, to a free mother, he ran a clothing business on Brattle Street and was an agent for [[freedoms-journal|Freedom's Journal]], the first Black newspaper in the United States.
+
+His Appeal ... to the Coloured Citizens of the World went through three editions by June 1830, and he asked sailors heading south to carry copies with them. When copies surfaced in Southern ports, the authorities seized them, and Georgia, North Carolina and other states passed laws against antislavery writing and against teaching Black people to read. According to Henry Highland Garnet, Georgians put a price on Walker's head.
+
+Walker died in Boston in 1830. Rumour said he had been killed; official records gave consumption. The pamphlet outlived him: abolitionists drew on it, among them William Lloyd Garrison.

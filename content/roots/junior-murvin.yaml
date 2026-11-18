@@ -7,24 +7,48 @@ place: {"name": "Saint James, Jamaica", "lat": 18.382, "lon": -77.872}
 placeRu: "Сент-Джеймс, Ямайка"
 genre: "Reggae"
 genreRu: "регги"
-story: "Junior Murvin’s “Police and Thieves” came out of Jamaica’s reggae studios. Lee “Scratch” Perry produced the song that brought him wider recognition."
-storyRu: "«Police and Thieves» Джуниора Мёрвина выросла из ямайской студийной сцены регги. Продюсером песни, принёсшей ему известность, стал Ли «Скрэтч» Перри."
+story: "Junior Murvin sang reggae in a high falsetto, one of the most remarkable voices of the music, and named the soul singer Curtis Mayfield as his model. His 1976 “Police and Thieves” carried him from the Jamaican scene to the world."
+storyRu: "Джуниор Мёрвин пел регги высоким фальцетом — одним из самых примечательных голосов этой музыки — и называл своим образцом соул-певца Кёртиса Мейфилда. «Police and Thieves» 1976 года вывела его с ямайской сцены в мир."
 links:
-  - to: "root:lee-scratch-perry"
-    kind: "producer"
-    claim: "Lee “Scratch” Perry produced Junior Murvin’s breakthrough “Police and Thieves”."
-    claimRu: "Ли «Скрэтч» Перри продюсировал «Police and Thieves» — песню, принёсшую Джуниору Мёрвину известность."
-    sources:
-      - title: "Pitchfork: R.I.P. Reggae Singer Junior Murvin"
-        url: "https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/"
-      - title: "Rebelbase: Junior Murvin interview, October 2004"
-        url: "https://rebelbase.be/interviews/detail/junior-murvin---handelsbeurs-102004"
   - to: "card:reggae"
-    kind: "scene"
-    claim: "Junior Murvin’s “Police and Thieves” emerged from Jamaica’s reggae recording scene."
-    claimRu: "«Police and Thieves» Джуниора Мёрвина выросла из ямайской сцены звукозаписи регги."
-    sources:
-      - title: "Pitchfork: R.I.P. Reggae Singer Junior Murvin"
-        url: "https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/"
-      - title: "Rebelbase: Junior Murvin interview, October 2004"
-        url: "https://rebelbase.be/interviews/detail/junior-murvin---handelsbeurs-102004"
+    kind: "style"
+    scope: "career"
+    how: "Murvin sang reggae in a high falsetto, taking Curtis Mayfield’s spiritual soul singing as his model."
+    howRu: "Мёрвин пел регги высоким фальцетом, взяв за образец одухотворённое соул-пение Кёртиса Мейфилда."
+    carries: []
+    dimensions: ["melody-vocal"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "Asked about the singer who most shaped his style, Murvin named Curtis Mayfield, a “spiritual singer” who “sang for the people”."
+        textRu: "На вопрос о певце, сильнее всех повлиявшем на его манеру, Мёрвин назвал Кёртиса Мейфилда — «духовного певца», который «пел для людей»."
+        source:
+          title: "Rebelbase: Junior Murvin interview (2004)"
+          url: "https://rebelbase.be/interviews/detail/junior-murvin---handelsbeurs-102004"
+          quote: "but Curtis Mayfield was a spiritual singer. He sang for the people, to help them to live better. He was an American type roots singer."
+      - type: "critics"
+        dimensions: []
+        text: "Pitchfork’s obituary calls him a reggae singer best known for the 1976 hit “Police & Thieves”."
+        textRu: "Некролог Pitchfork называет его певцом регги, известным прежде всего по хиту 1976 года «Police & Thieves»."
+        source:
+          title: "Pitchfork (Carrie Battan): R.I.P. Reggae Singer Junior Murvin (2013)"
+          url: "https://pitchfork.com/news/53191-rip-reggae-singer-junior-murvin/"
+          quote: "Murvin is best known as the man behind the 1976 reggae hit \"Police & Thieves\" (produced by Lee \"Scratch\" Perry), which broke him out of the local Jamaican scene and put him on the international radar"
+      - type: "critics"
+        dimensions: ["melody-vocal"]
+        text: "Introducing the interview, Rebelbase calls his falsetto one of the most remarkable voices in reggae."
+        textRu: "Во вступлении к интервью Rebelbase называет его фальцет одним из самых примечательных голосов в регги."
+        source:
+          title: "Rebelbase: Junior Murvin — Handelsbeurs (2004)"
+          url: "https://rebelbase.be/interviews/detail/junior-murvin---handelsbeurs-102004"
+          quote: "Fact is the man has one of the most remarkable voices in reggae music, even though he'd rather avoid using the term \"falsetto\"... Junior, your unmistakeable falsetto voice is still as strong as ever."
+notes:
+  - period: "1976–1977 (Police and Thieves)"
+    who: "Lee “Scratch” Perry"
+    role: "producer"
+    what: "Perry produced “Police and Thieves” and the album of the same name at his Black Ark studio."
+    whatRu: "Перри спродюсировал «Police and Thieves» и одноимённый альбом на своей студии Black Ark."
+    source:
+      title: "Songlines: Obituary — Lee ‘Scratch’ Perry (1936–2021)"
+      url: "https://www.songlines.co.uk/news/obituary-lee-scratch-perry-1936-2021"
+      quote: "That he produced Junior Murvin’s ‘Police and Thieves’, Max Romeo’s ‘War in a Babylon’, George Faith’s ‘I’ve Got the Groove’ and his own dub masterwork Super Ape on a Teac 4-track is simply astounding"

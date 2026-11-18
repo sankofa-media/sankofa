@@ -24,16 +24,27 @@ sources:
   - {title: "Georg Leets: Abram Petrovich Gannibal (1984), documentary biography", url: "https://imwerden.de/pdf/leets_abram_petrovich_gannibal_1984__ocr.pdf"}
   - {title: "Ibrahima Gaye, 'African Pushkin', Philology. Theory & Practice 2024", url: "https://www.gramota.net/articles/phil20240134.pdf"}
   - {title: "Pushkin, Arap Petra Velikogo", url: "https://ru.wikisource.org/wiki/%D0%90%D1%80%D0%B0%D0%BF_%D0%9F%D0%B5%D1%82%D1%80%D0%B0_%D0%92%D0%B5%D0%BB%D0%B8%D0%BA%D0%BE%D0%B3%D0%BE_(%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD)"}
+  - {title: "Vokrug Sveta: Iz Afriki v Sibir, kak arap Petra Velikogo v ssylku popal", url: "https://www.vokrugsveta.ru/articles/iz-afriki-v-sibir-kak-arap-petra-velikogo-v-ssylku-popal-id740147"}
+  - {title: "Pushkin Museum-Reserve Mikhailovskoye: history of the estate", url: "https://pushkinland.ru/2018/english/res1.php"}
+  - {title: "Russian Life: Pushkin's estates (1999)", url: "https://www.russianlife.com/magazine/june-july-1999/pushkins-estates/"}
 media:
   - {"type": "image", "file": "gannibal.jpg", "caption": "Outbuilding at Suyda, Gatchinsky district, Leningrad region, 2 October 2021", "credit": "Vaija", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Outbuildin_Suyda,_Gatchinsky_district,_Leningrad_region.jpg"}
 ---
 Alexander Pushkin, Russia's national poet, was the great-grandson of an
 African boy who had been kidnapped. Held in Constantinople, the child was
 brought to Peter the Great around 1705, and the tsar became his godfather.
-Peter sent him to France to study military engineering; back home he served
-as an engineer, fell into disgrace after Peter's death and rose again under
-Elizabeth to general-in-chief. He died in 1781. Where he was born is
-disputed: Ethiopia in the old account, the Logone sultanate near Lake Chad
-in Dieudonné Gnammankou's. In 1827 Pushkin began a novel about him. Compare
-[[ira-aldridge|Ira Aldridge]] and [[oliver-golden|Oliver Golden]], and ask
-[[what-black-means|what "Black" means]] in Russia.
+Peter sent him to France to study military engineering, from 1717 to 1723.
+
+Back in Russia he served as an engineer, but after Peter's death he fell
+into disgrace and was sent off to Siberia. Elizabeth, Peter's daughter,
+brought him back to favour: in 1742 she granted him the estate of
+Mikhailovskoye in the Pskov district, and he rose to general-in-chief. He retired in
+1762 and died in 1781 on his estate at Suyda.
+
+His son Osip was the father of Pushkin's mother,
+and Pushkin spent two years of exile at Mikhailovskoye. In 1827 he began a
+novel about his great-grandfather; it was published only after the poet's
+death, as The Moor of Peter the Great. Through Gannibal an African story
+runs into the centre of Russian literature, beside those of
+[[ira-aldridge|Ira Aldridge]] and [[oliver-golden|Oliver Golden]], and
+raises the question of [[what-black-means|what "Black" means]] in Russia.

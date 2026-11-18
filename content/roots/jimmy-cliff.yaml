@@ -7,15 +7,69 @@ place: {"name": "Somerton, Saint James, Jamaica", "lat": 18.383, "lon": -77.8}
 placeRu: "Сомертон, Сент-Джеймс, Ямайка"
 genre: "Reggae and soul"
 genreRu: "регги и соул"
-story: "Jimmy Cliff’s singing began in church. That gospel experience preceded his recording career."
-storyRu: "Джимми Клифф начал петь в церкви. Этот опыт госпел-пения предшествовал его карьере звукозаписи."
+story: "Jimmy Cliff’s soulful voice was formed on the American rhythm and blues he heard on Jamaican radio — Little Richard, Sam Cooke, Ray Charles. He began with ska singles in the early 1960s and became reggae’s first global star, carrying its live Kingston sound and its political edge around the world."
+storyRu: "Проникновенный голос Джимми Клиффа сложился на американском ритм-н-блюзе, который он слышал по ямайскому радио, — Литл Ричард, Сэм Кук, Рэй Чарльз. Он начинал с синглов ска в начале 1960-х и стал первой мировой звездой регги, разнеся по миру его живое кингстонское звучание и политическую остроту."
 links:
-  - to: "card:gospel"
-    kind: "scene"
-    claim: "Jimmy Cliff began singing in church before his recording career."
-    claimRu: "Джимми Клифф начал петь в церкви задолго до карьеры звукозаписи."
-    sources:
-      - title: "Rolling Stone: Jimmy Cliff obituary"
-        url: "https://www.rollingstone.co.uk/music/news/jimmy-cliff-the-harder-they-come-reggae-giant-dead-at-81-56553/"
-      - title: "NPR via NCPR: Reggae pioneer Jimmy Cliff dies at 81"
-        url: "https://www.northcountrypublicradio.org/news/npr/nx-s1-4526570/reggae-pioneer-jimmy-cliff-dies-at-81"
+  - to: "card:rhythm-and-blues"
+    kind: "influence"
+    scope: "career"
+    how: "Cliff’s soulful vocal style was informed by the American R&B and soul singers he heard on AM radio as a boy — Little Richard, Sam Cooke, Ray Charles — and by New Orleans music on the airwaves."
+    howRu: "Проникновенная вокальная манера Клиффа сложилась на американских певцах ритм-н-блюза и соула, которых он мальчишкой слышал по AM-радио, — Литл Ричарде, Сэме Куке, Рэе Чарльзе — и на новоорлеанской музыке из эфира."
+    carries: ["gospel-vocal"]
+    dimensions: ["melody-vocal"]
+    evidence:
+      - type: "listening"
+        dimensions: ["melody-vocal"]
+        text: "Rolling Stone says the singers he heard on the radio, from Little Richard to Ray Charles, informed his soulful vocals."
+        textRu: "Rolling Stone пишет, что певцы, которых он слышал по радио, от Литл Ричарда до Рэя Чарльза, сформировали его проникновенный вокал."
+        source:
+          title: "Rolling Stone UK: Jimmy Cliff, ‘The Harder They Come’ Reggae Giant, Dead at 81 (2025)"
+          url: "https://www.rollingstone.co.uk/music/news/jimmy-cliff-the-harder-they-come-reggae-giant-dead-at-81-56553/"
+          quote: "from Little Richard to Derrick Morgan, Sam Cooke to Ray Charles — that was being played on AM radio, legendary singers who informed Cliff’s soulful vocals."
+      - type: "listening"
+        text: "NPR notes that he was exposed to American music from New Orleans and Florida through the radio before moving to Kingston."
+        textRu: "NPR отмечает, что до переезда в Кингстон он слушал по радио американскую музыку из Нового Орлеана и Флориды."
+        source:
+          title: "NPR (Isabella Gomez Sarmiento): Reggae pioneer Jimmy Cliff dies at 81 (2025), via North Country Public Radio"
+          url: "https://www.northcountrypublicradio.org/news/npr/nx-s1-4526570/reggae-pioneer-jimmy-cliff-dies-at-81"
+          quote: "After being exposed to American music from New Orleans and Florida through the radio, a teenaged James moved to Kingston to pursue an artistic career."
+  - to: "card:reggae"
+    kind: "style"
+    scope: "career"
+    how: "Cliff began with early-1960s ska singles, made reggae on the live Kingston studio sound he later returned to, and used it, like punk, for political and social comment."
+    howRu: "Клифф начинал с синглов ска в начале 1960-х, строил регги на живом звучании кингстонских студий, к которому потом вернулся, и, как панк, высказывался через него о политике и обществе."
+    carries: ["reggae-offbeat"]
+    dimensions: ["sound", "image"]
+    evidence:
+      - type: "critics"
+        dimensions: []
+        text: "Rolling Stone calls him a soulful singer and lists his early ska classics."
+        textRu: "Rolling Stone называет его проникновенным певцом и перечисляет его ранние классические записи ска."
+        source:
+          title: "Rolling Stone UK: Jimmy Cliff, ‘The Harder They Come’ Reggae Giant, Dead at 81 (2025)"
+          url: "https://www.rollingstone.co.uk/music/news/jimmy-cliff-the-harder-they-come-reggae-giant-dead-at-81-56553/"
+          quote: "Through this deal, Cliff released a half-dozen singles in the first half of the Sixties, beginning with his debut 1962 single ‘Hurricane Hattie,’ along with ska classics like ‘Miss Jamaica’ and ‘Gold Digger.’"
+      - type: "testimony"
+        dimensions: ["sound"]
+        text: "Cliff told NPR that Rebirth meant going back to the same instruments and live-to-tape techniques of reggae’s beginnings."
+        textRu: "Клифф рассказывал NPR, что «Rebirth» означал возврат к тем же инструментам и записи живьём на плёнку, что и на заре регги."
+        source:
+          title: "NPR (Isabella Gomez Sarmiento): Reggae pioneer Jimmy Cliff dies at 81 (2025), via North Country Public Radio"
+          url: "https://www.northcountrypublicradio.org/news/npr/nx-s1-4526570/reggae-pioneer-jimmy-cliff-dies-at-81"
+          quote: "In an interview with NPR, Cliff described that album as a revitalization of his artistic vision, which necessitated going back to the sound that first launched his career from the studios of Kingston — playing with the same instruments and following the same live-to-tape recording techniques that he'd employed in the genre's beginnings."
+      - type: "testimony"
+        dimensions: ["image"]
+        text: "He said reggae and punk address the same political and social issues."
+        textRu: "Он говорил, что регги и панк поднимают одни и те же политические и социальные вопросы."
+        source:
+          title: "NPR (Isabella Gomez Sarmiento): Reggae pioneer Jimmy Cliff dies at 81 (2025), via North Country Public Radio"
+          url: "https://www.northcountrypublicradio.org/news/npr/nx-s1-4526570/reggae-pioneer-jimmy-cliff-dies-at-81"
+          quote: "Because reggae and punk address the same issues — political, social issues."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "The Rock & Roll Hall of Fame calls him a shepherd of reggae’s mellow, sun-drenched sound."
+        textRu: "Зал славы рок-н-ролла называет его проводником мягкого, залитого солнцем звучания регги."
+        source:
+          title: "Rock & Roll Hall of Fame: Jimmy Cliff (2010)"
+          url: "https://rockhall.com/inductees/jimmy-cliff/"
+          quote: "A self-proclaimed shepherd of reggae, Cliff has gone all over the globe to pass on the mellow, sun-drenched sound."

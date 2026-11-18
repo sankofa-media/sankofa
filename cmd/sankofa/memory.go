@@ -105,10 +105,16 @@ func tellCmd() *cobra.Command {
 			w := cmd.OutOrStdout()
 			fmt.Fprintln(w, wrap(tl.Story, 78))
 			fmt.Fprintln(w)
+			if tl.Records > len(tl.Moments) {
+				fmt.Fprintf(w, "  (the latest %d of %d moments)\n", len(tl.Moments), tl.Records)
+			}
 			for _, m := range tl.Moments {
 				who := m.Manager
 				if who == "" {
 					who = "-"
+				}
+				if m.User != "" {
+					who += " (" + m.User + ")"
 				}
 				fmt.Fprintf(w, "  %s  %-7s  %s\n", m.At.Local().Format("2006-01-02 15:04:05"), m.Verb, who)
 			}
@@ -118,24 +124,34 @@ func tellCmd() *cobra.Command {
 }
 
 func fetchCmd() *cobra.Command {
-	var at string
-	var dry bool
+	var at, outDir string
+	var dry, apply, force bool
 	c := &cobra.Command{
-		Use:   "fetch TYPE/NAME",
-		Short: "Sankofa: go back and fetch it. Restore an object from the cluster memory",
+		Use:   "fetch TYPE/NAME | namespace/NS",
+		Short: "Sankofa: go back and fetch it. Restore an object or a namespace from the cluster memory",
 		Long: `Restore one object as it was at --at (RFC3339 or a duration like 2h meaning
 "two hours ago"), or as it was last seen alive. Status, UID and owner
-references are not restored: the object is born again.`,
+references are not restored: the object is born again.
+
+With namespace/NS, print the manifests of the whole namespace as it was at
+--at, in creation order, and a report on stderr: objects owned by controllers
+(ReplicaSets, Pods, Jobs of CronJobs...) are left to their controllers,
+Secrets are left out (their values are never kept), objects of Helm, Argo CD
+or Flux are left out unless --force. --apply restores them, after a
+server-side dry run of every manifest.`,
 		Args: cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
+			if ns, ok := namespaceArg(args[0]); ok {
+				if at == "" {
+					return fmt.Errorf("namespace/%s needs --at", ns)
+				}
+				return fetchNamespace(cmd, ns, nsFetch{at: at, outDir: outDir, apply: apply, force: force})
+			}
 			ts := ""
 			if at != "" {
-				if d, err := time.ParseDuration(at); err == nil {
-					ts = time.Now().Add(-d).UTC().Format(time.RFC3339)
-				} else if _, err := time.Parse(time.RFC3339, at); err == nil {
-					ts = at
-				} else {
-					return fmt.Errorf("--at wants RFC3339 or a duration")
+				var err error
+				if ts, err = when(at); err != nil {
+					return err
 				}
 			}
 			tl, gvr, ns, err := timeline(cmd.Context(), args[0], ts)
@@ -145,6 +161,15 @@ references are not restored: the object is born again.`,
 			u := &unstructured.Unstructured{}
 			if err := json.Unmarshal(tl.Object, &u.Object); err != nil {
 				return err
+			}
+			if reason := history.SkipReason(u); reason != "" {
+				return fmt.Errorf("%s is not restored from memory: %s", args[0], reason)
+			}
+			if o, ok := history.ControllerOf(u); ok && !force {
+				return fmt.Errorf("%s was owned by %s, which recreates it; restore the owner, or --force", args[0], o)
+			}
+			if o, ok := history.ManagerOf(u); ok && !force {
+				return fmt.Errorf("%s is managed by %s; restore it through that, or --force", args[0], o)
 			}
 			reborn(u)
 			if dry {
@@ -177,19 +202,18 @@ references are not restored: the object is born again.`,
 			return nil
 		},
 	}
-	c.Flags().StringVar(&at, "at", "", "point in time: RFC3339, or a duration back from now (e.g. 2h)")
-	c.Flags().BoolVar(&dry, "dry-run", false, "print the object instead of restoring it")
+	c.Flags().StringVar(&at, "at", "", "point in time: RFC3339, or a duration back from now (e.g. 2h, 7d)")
+	c.Flags().BoolVar(&dry, "dry-run", false, "one object: print it instead of restoring it")
+	c.Flags().StringVar(&outDir, "out-dir", "", "namespace: write one manifest per file into this directory instead of stdout")
+	c.Flags().BoolVar(&apply, "apply", false, "namespace: apply the manifests after a server-side dry run")
+	c.Flags().BoolVar(&force, "force", false, "include objects managed by Helm, Argo CD or Flux, or owned by a controller")
 	return c
 }
 
 // reborn strips what belongs to a past life.
 func reborn(u *unstructured.Unstructured) {
-	for _, f := range []string{"uid", "creationTimestamp", "generation", "deletionTimestamp", "deletionGracePeriodSeconds", "ownerReferences", "resourceVersion", "selfLink", "managedFields"} {
-		unstructured.RemoveNestedField(u.Object, "metadata", f)
-	}
-	unstructured.RemoveNestedField(u.Object, "status")
+	history.Reborn(u)
 	ann := u.GetAnnotations()
-	delete(ann, "kubectl.kubernetes.io/last-applied-configuration")
 	if ann == nil {
 		ann = map[string]string{}
 	}

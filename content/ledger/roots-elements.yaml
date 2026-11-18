@@ -1,0 +1,1182 @@
+# Ledger of the musical-element layer of Roots (content/roots/elements.yaml).
+# Generated from the per-link review and the independent second check; quotes are verbatim from the opened sources.
+description: 'Evidence for the `carries` tags of content/roots/*.yaml: for every link that carries a musical element, the element and the passages of the link''s sources that support it. Links with `carries: []` are listed under anecdoteOnly with the reason given in their `how`.'
+tagged:
+  - from: abba
+    to: card:rhythm-and-blues
+    element: groove
+    how: ABBA borrowed the dance groove of a Black American soul record, George McCrae’s “Rock Your Baby”, to make “Dancing Queen” move.
+    sources:
+      - title: 'Library of Congress: Carl Magnus Palm on Arrival'
+        url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Arrival_Palm.pdf
+        quote: found it hard to tap into African-American rhythms. So, to find the right groove for their new song, they took a listen to George McCrae’s 1974 US number one “Rock Your Baby”
+  - from: abba
+    to: root:george-mccrae
+    element: groove
+    how: ABBA borrowed the dance groove of George McCrae’s “Rock Your Baby” to make “Dancing Queen” move.
+    sources:
+      - title: 'Library of Congress: Carl Magnus Palm on Arrival'
+        url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Arrival_Palm.pdf
+        quote: found it hard to tap into African-American rhythms. So, to find the right groove for their new song, they took a listen to George McCrae’s 1974 US number one “Rock Your Baby”
+  - from: amy-winehouse
+    to: card:jazz
+    element: improvisation
+    how: 'Winehouse took jazz singing’s habit of improvising: on stage she changed melodies night after night instead of repeating the record.'
+    sources:
+      - title: 'NME: The Amy Winehouse Band on why she was so special'
+        url: https://www.nme.com/features/music-interviews/amy-winehouse-band-dale-davis-3612156
+        quote: she improvised every night
+  - from: amy-winehouse
+    to: root:marvin-gaye
+    element: sampling
+    how: 'The hip-hop method of sampling: Winehouse’s producer built “Tears Dry on Their Own” on a Motown recording.'
+    sources:
+      - title: 'Classic Motown: Marvin Gaye & Tammi Terrell — United'
+        url: https://classic.motown.com/story/marvin-gaye-tammi-terrell-united/
+        quote: was built on a sample interpolation of Marvin & Tammi’s “Ain’t No Mountain High Enough.”
+  - from: aquarium
+    to: card:reggae
+    element: reggae-offbeat
+    how: Aquarium wrote “Vavilon” in the reggae rhythm, the Jamaican offbeat feel.
+    sources:
+      - title: 'Kommersant Weekend: 10 albums of September'
+        url: https://www.kommersant.ru/doc/4493505
+        quote: изначально придуманных как регги
+  - from: arctic-monkeys
+    to: root:dr-dre
+    element: groove
+    how: 'Arctic Monkeys rebuilt their rock around a hip-hop groove: drum patterns and bass lines modelled on Dr. Dre’s West Coast beats.'
+    sources:
+      - title: 'NME: Alex Turner on new Arctic Monkeys album — ‘It sounds like Dr Dre’'
+        url: https://www.nme.com/news/music/arctic-monkeys-160-1252025
+        quote: It sounds like a Dr Dre beat
+      - title: 'Enmore Audio: Engineering the Sound — Arctic Monkeys’ AM'
+        url: https://happymag.tv/engineering-the-sound-arctic-monkeys-am/
+        quote: bass lines drawn from West Coast hip-hop
+  - from: aretha-franklin
+    to: card:gospel
+    element: gospel-vocal
+    how: 'Aretha Franklin’s voice was formed in gospel: her father’s church and the gospel singer Clara Ward were her models.'
+    sources:
+      - title: 'Detroit Historical Society: Aretha Franklin'
+        url: https://www.detroithistorical.org/learn/online-research/encyclopedia-of-detroit/franklin-aretha
+        quote: Franklin’s father and gospel singer Clara Ward were major influences
+  - from: big-mama-thornton
+    to: card:blues
+    element: twelve-bar-blues
+    how: 'Big Mama Thornton worked in the twelve-bar blues form: “Hound Dog” was written for her as a twelve-bar blues.'
+    sources:
+      - title: 'Encyclopedia of Alabama: Willie Mae “Big Mama” Thornton'
+        url: https://encyclopediaofalabama.org/article/willie-mae-big-mama-thornton/
+        quote: They offered her a 12-bar blues vocal called "Hound Dog,"
+  - from: billy-cobham
+    to: root:miles-davis
+    element: improvisation
+    how: Cobham played in Miles Davis’s fusion ensemble, where jazz-rock joined funky grooves to improvisation.
+    sources:
+      - title: 'Blue Note Records: Billy Cobham biography'
+        url: https://www.bluenote.com/artist/billy-cobham/
+        quote: awe-inspiring solo improvisations
+  - from: billy-cobham
+    to: root:miles-davis
+    element: groove
+    how: Cobham played in Miles Davis’s fusion ensemble, where jazz-rock joined funky grooves to improvisation.
+    sources:
+      - title: 'Blue Note Records: Billy Cobham biography'
+        url: https://www.bluenote.com/artist/billy-cobham/
+        quote: He was capable of subtler, funkier grooves on the one hand, and awe-inspiring solo improvisations on the other
+  - from: billy-cobham
+    to: card:jazz
+    element: improvisation
+    how: Jazz fusion carried jazz improvisation into rock volume, and Cobham was one of its leading drummers.
+    sources:
+      - title: 'Blue Note Records: Billy Cobham biography'
+        url: https://www.bluenote.com/artist/billy-cobham/
+        quote: awe-inspiring solo improvisations
+  - from: black-sabbath
+    to: card:blues
+    element: riff
+    how: Black Sabbath grew out of a blues band and built heavy metal on slowed, weighted blues riffs.
+    sources:
+      - title: 'Rolling Stone: Heavy Metal, Year One — The Inside Story of Black Sabbath’s Groundbreaking Debut'
+        url: https://au.rollingstone.com/music/music-features/black-sabbath-debut-album-heavy-metal-origin-interview-7306/
+        quote: over weighty blues riffs
+  - from: bob-marley
+    to: card:reggae
+    element: reggae-offbeat
+    how: The Wailers’ work with Perry helped define the reggae rhythm that grew out of ska’s offbeat.
+    sources:
+      - title: 'Bob Marley estate: History'
+        url: https://www.bobmarley.com/history/
+        quote: By the mid 60s, the jaunty ska beat had metamorphosed into the slower paced rocksteady sound, which soon gave way to Jamaica’s signature reggae rhythm around 1968.
+  - from: bts
+    to: root:eminem
+    element: rap-flow
+    how: RM, a rapper, names Eminem among the rappers who influenced him.
+    sources:
+      - title: 'El País: Interview with BTS leader RM'
+        url: https://english.elpais.com/culture/2023-03-15/rm-the-leader-of-k-pop-band-bts-we-work-so-hard-in-korea-because-70-years-ago-there-was-nothing.html
+        quote: You cite rappers like Nas and Eminem
+  - from: charley-patton
+    to: card:blues
+    element: polyrhythm
+    how: 'Patton’s Delta blues was polyrhythmic: picking against a beat tapped on the body of the guitar.'
+    sources:
+      - title: 'National Park Service: Charley Patton'
+        url: https://home.nps.gov/locations/lowermsdeltaregion/charley-patton.htm
+        quote: Patton's polyrhythmic picking, accompanied by tapping the body of the guitar
+  - from: charlie-parker
+    to: card:jazz
+    element: improvisation
+    how: Parker learned the jazz soloist’s craft of improvising over chord changes in Kansas City’s bands.
+    sources:
+      - title: 'Ed Komara: Ko Ko — Library of Congress'
+        url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/ko-ko.pdf
+        quote: conceived during his apprenticeship with Kansas City bands
+      - title: 'Ed Komara: Ko Ko — Library of Congress'
+        url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/ko-ko.pdf
+        quote: they tried clumsily to improvise solos to its chord progression
+  - from: chuck-berry
+    to: card:rhythm-and-blues
+    element: riff
+    how: Chuck Berry built rock and roll from blues chords, jump-blues rhythm and guitar riffs.
+    sources:
+      - title: 'Rock & Roll Hall of Fame: Chuck Berry'
+        url: https://rockhall.com/inductees/chuck-berry/
+        quote: an amalgam of jazz-inspired guitar riffs, jump blues rhythms, and country storytelling
+  - from: daft-punk
+    to: card:chicago-house
+    element: groove
+    how: 'Daft Punk worked in the Chicago house method: looping filtered pieces of disco records over a four-on-the-floor beat.'
+    sources:
+      - title: 'Complex: A Guide to Daft Punk'
+        url: https://www.complex.com/music/a/david-drake/a-guide-to-daft-punk
+        quote: wedding them to a four-on-the-floor house beat
+  - from: daft-punk
+    to: card:chicago-house
+    element: sampling
+    how: 'Daft Punk worked in the Chicago house method: looping filtered pieces of disco records over a four-on-the-floor beat.'
+    sources:
+      - title: 'Complex: A Guide to Daft Punk'
+        url: https://www.complex.com/music/a/david-drake/a-guide-to-daft-punk
+        quote: The idea of “filtering” old disco tracks and wedding them to a four-on-the-floor house beat was already pervasive in Chicago at this time
+  - from: daft-punk
+    to: root:edwin-birdsong
+    element: sampling
+    how: 'Sampling: Daft Punk built a hit on a recording of a Black funk musician.'
+    sources:
+      - title: 'Resident Advisor: Edwin Birdsong obituary'
+        url: https://ra.co/news/43130
+        quote: who used 1979's "Cola Bottle Baby" as the basis for their 2001 hit "Harder Better Faster Stronger."
+  - from: dinah-washington
+    to: card:gospel
+    element: gospel-vocal
+    how: 'Dinah Washington’s voice was trained in gospel: she sang in church and accompanied the gospel singer Sallie Martin before turning to clubs.'
+    sources:
+      - title: 'Encyclopedia of Alabama: Dinah Washington'
+        url: https://encyclopediaofalabama.org/article/dinah-washington/
+        quote: By the age of 11, she was performing as a gospel vocalist at church recitals across the country.
+      - title: 'Encyclopedia of Alabama: Dinah Washington'
+        url: https://encyclopediaofalabama.org/article/dinah-washington/
+        quote: studied with renowned gospel singer Sallie Martin
+  - from: dr-dre
+    to: card:funk
+    element: groove
+    how: Dr. Dre built G-funk by sampling and slowing down Parliament-Funkadelic’s grooves.
+    sources:
+      - title: 'Library of Congress: Rashad Grove — The Chronic'
+        url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/the-chronic.pdf
+        quote: timeless grooves of Parliament Funkadelic
+  - from: dr-dre
+    to: card:funk
+    element: sampling
+    how: Dr. Dre built G-funk by sampling and slowing down Parliament-Funkadelic’s grooves.
+    sources:
+      - title: 'Pitchfork: Sheldon Pearce — The Chronic'
+        url: https://pitchfork.com/reviews/albums/dr-dre-the-chronic/
+        quote: they were making beats by reworking about a dozen Parliament-Funkadelic songs in their sessions
+  - from: ed-sheeran
+    to: root:eminem
+    element: rap-flow
+    how: 'A childhood exercise in rap delivery: Sheeran rapped Eminem’s album back to back to cure a stutter; the sources tell it as practice, not as a style he adopted.'
+    sources:
+      - title: 'The Standard: Ed Sheeran on Eminem and his childhood stutter'
+        url: https://www.standard.co.uk/showbiz/ed-sheeran-eminem-cured-his-childhood-stutter-friendship-howard-stern-b1081401.html
+        quote: By learning that record and rapping it back to back to back to back, it cured my stutter
+  - from: edwin-birdsong
+    to: card:funk
+    element: groove
+    how: Birdsong’s jazz-funk with Roy Ayers was groove music, later mined for samples.
+    sources:
+      - title: 'Wax Poetics: Edwin Birdsong — Cosmic Reverb'
+        url: https://magazine.waxpoetics.com/article/edwin-birdsong-cosmic-reverb/
+        quote: bringing Birdsong’s grooves to a new global
+  - from: elvis-presley
+    to: card:big-mama-thornton
+    element: twelve-bar-blues
+    how: Elvis carried a twelve-bar blues written for Big Mama Thornton to the top of the pop charts.
+    sources:
+      - title: 'Encyclopedia of Alabama: Willie Mae “Big Mama” Thornton'
+        url: https://encyclopediaofalabama.org/article/willie-mae-big-mama-thornton/
+        quote: They offered her a 12-bar blues vocal called "Hound Dog,"
+  - from: eminem
+    to: card:funk
+    element: sampling
+    how: 'The hip-hop method of sampling: Dr. Dre looped a funk riff from Labi Siffre’s record for Eminem’s first hit.'
+    sources:
+      - title: 'Rolling Stone: Labi Siffre’s Biggest Moment Was an Eminem Sample'
+        url: https://www.rollingstone.com/music/music-features/the-holdovers-song-crying-laughing-loving-lying-labi-siffre-1234939657/
+        quote: Those staccato funk riffs and keyboards in Eminem’s “My Name Is” were sampled from “I Got The…,” Siffre’s 1975 jam.
+  - from: eminem
+    to: card:funk
+    element: riff
+    how: 'The hip-hop method of sampling: Dr. Dre looped a funk riff from Labi Siffre’s record for Eminem’s first hit.'
+    sources:
+      - title: 'Rolling Stone: Labi Siffre’s Biggest Moment Was an Eminem Sample'
+        url: https://www.rollingstone.com/music/music-features/the-holdovers-song-crying-laughing-loving-lying-labi-siffre-1234939657/
+        quote: Those staccato funk riffs
+  - from: eminem
+    to: root:rakim
+    element: rap-flow
+    how: Eminem learned the craft of rap flow, multisyllabic rhyme patterns, from Rakim.
+    sources:
+      - title: 'SiriusXM Shade 45: Eminem on learning from Rakim'
+        url: https://www.siriusxm.com/blog/eminem-ll-cool-j-rakim-shade-45
+        quote: Eminem also discussed learning from Rakim’s multisyllabic rhyme patterns
+  - from: eminem
+    to: root:labi-siffre
+    element: sampling
+    how: 'Sampling: Labi Siffre’s funk recording became the loop of “My Name Is”.'
+    sources:
+      - title: 'MusicRadar: Chas and Dave played on a classic Eminem track'
+        url: https://www.musicradar.com/news/chas-and-dave-played-on-a-classic-eminem-track-and-no-one-knew-about-it
+        quote: The track was then sampled for My Name Is by the production powerhouse that is Dr.
+  - from: eric-clapton
+    to: card:blues
+    element: riff
+    how: Clapton took the riffs of blues records, Robert Johnson’s first of all, and worked them into his own guitar vocabulary.
+    sources:
+      - title: 'Eric Clapton: Official biography'
+        url: https://ericclapton.com/pages/about
+        quote: Clapton was unique because he did not simply replicate the blues riffs he heard on records.
+  - from: eric-clapton
+    to: root:robert-johnson
+    element: groove
+    how: In Robert Johnson’s boogie patterns Clapton heard where many rhythm-and-blues grooves came from.
+    sources:
+      - title: 'Guitar World: Eric Clapton — The King and I'
+        url: https://www.guitarworld.com/artists/eric-clapton-king-and-i
+        quote: As soon as I heard Johnson play boogie on things like “When You Got a Good Friend” and “Rambling on My Mind,” I immediately understood where a lot of R&B grooves originated.
+  - from: etta-james
+    to: card:gospel
+    element: gospel-vocal
+    how: Etta James was a gospel prodigy and kept that gospel charge in her rhythm and blues.
+    sources:
+      - title: 'Biography: Etta James'
+        url: https://www.biography.com/musicians/etta-james
+        quote: She knew how to rock a house, and did so with such gospel-charged tunes
+  - from: fela-kuti
+    to: card:afrobeat
+    element: polyrhythm
+    how: Fela built Afrobeat on interlocking, repeating rhythmic patterns, with a female chorus answering his voice in call and response.
+    sources:
+      - title: 'Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)'
+        url: https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en
+        quote: Instead, they play interlocked, strictly repetitive patterns.
+      - title: 'Trinity Laban: Fela Kuti'
+        url: https://www.trinitylaban.ac.uk/about-us/our-history/fela-kuti/
+        quote: a powerful and rhythmically complex form
+  - from: fela-kuti
+    to: card:afrobeat
+    element: call-and-response
+    how: Fela built Afrobeat on interlocking, repeating rhythmic patterns, with a female chorus answering his voice in call and response.
+    sources:
+      - title: 'Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)'
+        url: https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en
+        quote: added a female choir that responded to his singing. This ‘call and response’ provided West African depth
+  - from: fela-kuti
+    to: root:james-brown
+    element: groove
+    how: From James Brown Fela took funk’s highly syncopated percussive groove.
+    sources:
+      - title: 'Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)'
+        url: https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en
+        quote: They include the funk of James Brown
+      - title: 'Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)'
+        url: https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en
+        quote: ‘highly syncopated percussive rhythm scheme’
+  - from: george-michael
+    to: root:james-brown
+    element: breakbeat
+    how: 'Hip-hop’s breakbeat method: George Michael looped the drum break of “Funky Drummer” under a pop song.'
+    sources:
+      - title: 'MusicRadar: When sampling ruled the world'
+        url: https://www.musicradar.com/drums/it-was-deemed-that-an-artist-could-sample-an-unrecognisable-portion-of-a-work-without-the-need-to-declare-the-sample-or-indeed-pay-the-original-artist-when-sampling-ruled-the-world-and-drummers-didnt-get-paid
+        quote: it was possible to extract a single bar of drum loop
+  - from: george-michael
+    to: root:james-brown
+    element: sampling
+    how: 'Hip-hop’s breakbeat method: George Michael looped the drum break of “Funky Drummer” under a pop song.'
+    sources:
+      - title: 'Rolling Stone: George Michael — Freedom! ’90'
+        url: https://au.rollingstone.com/music/music-lists/best-songs-of-all-time-30065/george-michael-freedom-90-3-30441/
+        quote: which nodded to hip-hop with its sample of James Brown’s 1970 classic “Funky Drummer.”
+  - from: howlin-wolf
+    to: card:blues
+    element: riff
+    how: Wolf moved Delta blues onto amplified instruments, with electric guitar riffs driving the band.
+    sources:
+      - title: 'National Park Service: Howlin’ Wolf'
+        url: https://www.nps.gov/locations/lowermsdeltaregion/howlin-wolf.htm
+        quote: Willie Johnson played slashing guitar riffs
+  - from: iron-maiden
+    to: root:led-zeppelin
+    element: riff
+    how: Iron Maiden covered a song built on a Jimmy Page riff, the riff-driven hard rock of their predecessors.
+    sources:
+      - title: 'Far Out: The 10 greatest covers of Led Zeppelin songs'
+        url: https://faroutmagazine.co.uk/led-zeppelin-greatest-covers-jeff-buckley-iron-maiden/
+        quote: You can tell [that it is a Jimmy Page riff] instantly.
+  - from: james-brown
+    to: card:gospel
+    element: gospel-vocal
+    how: 'James Brown carried gospel singing into secular music: gospel-driven vocals over a syncopated rhythm.'
+    sources:
+      - title: 'Rock and Roll Hall of Fame: James Brown'
+        url: https://library.rockhall.com/james_brown
+        quote: His transformation of gospel fervor into the taut, explosive intensity of rhythm & blues
+      - title: 'Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)'
+        url: https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en
+        quote: ‘gospel-driven vocals’
+  - from: joe-cocker
+    to: root:ray-charles
+    element: gospel-vocal
+    how: Cocker modelled his singing on Ray Charles, whose voice was the gospel-powered voice of early soul.
+    sources:
+      - title: 'Contemporary Musicians: Joe Cocker'
+        url: https://www.encyclopedia.com/people/literature-and-arts/music-popular-and-jazz-biographies/joe-cocker
+        quote: Cocker's primary vocal influence, Ray Charles
+    note: 'Inherited: the source shows Ray Charles as Cocker’s vocal model; the gospel character of that voice is documented on Ray Charles’s own link.'
+  - from: john-coltrane
+    to: card:jazz
+    element: improvisation
+    how: Coltrane came up through bebop bands, Gillespie’s among them, and made the long improvisation his art.
+    sources:
+      - title: 'Blue Note Records: John Coltrane — biography'
+        url: https://www.bluenote.com/artist/john-coltrane/
+        quote: the 16-minute improvisation
+  - from: john-coltrane
+    to: root:miles-davis
+    element: improvisation
+    how: In Miles Davis’s band Coltrane learned to improvise over open modal structures instead of dense chord changes.
+    sources:
+      - title: 'John Coltrane: official biography'
+        url: https://www.johncoltrane.com/biography
+        quote: Miles’s shift from traditional, chord-based song forms to more open-ended, modal structures provided a needed freshness that helped improvisers avoid the same old bebop clichés.
+  - from: johnny-cash
+    to: card:work-songs
+    element: call-and-response
+    how: The song came from a convict work gang whose versions were built on call and response, a leader’s line answered by the group.
+    sources:
+      - title: 'CALS Encyclopedia of Arkansas: The Rock Island Line (song)'
+        url: https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/
+        quote: Both versions were dominated by the chorus, in call-and-response form.
+  - from: joss-stone
+    to: root:aretha-franklin
+    element: gospel-vocal
+    how: Stone says her voice came from listening to Aretha Franklin, the gospel-trained soul singer.
+    sources:
+      - title: 'The Guardian: Purely belter — Joss Stone interview'
+        url: https://www.theguardian.com/music/2003/nov/14/popandrock1
+        quote: Where did my voice come from? I don't know. I think it was just the music I listened to. I had an Aretha Franklin CD when I was 10
+    note: 'Inherited: the source shows Aretha Franklin as Stone’s vocal model; the gospel character of that voice is documented on Aretha Franklin’s own link.'
+  - from: king-tubby
+    to: card:reggae
+    element: dub
+    how: 'King Tubby invented dub as a studio art: remixing rhythm tracks, dropping parts out and adding echo and reverb.'
+    sources:
+      - title: 'Sean Williams: Tubby’s Dub Style (2012)'
+        url: https://www.pure.ed.ac.uk/ws/portalfiles/portal/15441495/Tubbys_Dub_Style.pdf
+        quote: the individual tools used for delay, reverberation and filtering
+      - title: 'David Katz: King Tubby — a beginner’s guide (FACT)'
+        url: https://factmag.com/2015/05/19/king-tubby-beginners-guide-dub-reggae
+        quote: the creative re-mixing he pioneered
+  - from: kraftwerk
+    to: card:funk
+    element: groove
+    how: Kraftwerk took the funky beats of James Brown into their electronic music.
+    sources:
+      - title: 'The Quietus: Karl Bartos Interviewed — Kraftwerk and the Birth of the Modern'
+        url: https://thequietus.com/interviews/karl-bartos-interviewed-kraftwerk-and-the-birth-of-the-modern/
+        quote: I was growing up with the funky beats of James Brown and I brought them in more and more.
+      - title: 'The Quietus: Karl Bartos Interviewed — Kraftwerk and the Birth of the Modern'
+        url: https://thequietus.com/interviews/karl-bartos-interviewed-kraftwerk-and-the-birth-of-the-modern/
+        quote: We took some black beats into our music
+  - from: kraftwerk
+    to: root:james-brown
+    element: groove
+    how: Kraftwerk took the funky beats of James Brown into their electronic music.
+    sources:
+      - title: 'The Quietus: Karl Bartos Interviewed — Kraftwerk and the Birth of the Modern'
+        url: https://thequietus.com/interviews/karl-bartos-interviewed-kraftwerk-and-the-birth-of-the-modern/
+        quote: I was growing up with the funky beats of James Brown and I brought them in more and more.
+  - from: labi-siffre
+    to: card:jazz
+    element: improvisation
+    how: Siffre learned music by improvising in jazz clubs.
+    sources:
+      - title: 'Pitchfork: Labi Siffre — Crying Laughing Loving Lying'
+        url: https://pitchfork.com/reviews/albums/labi-siffre-crying-laughing-loving-lying/
+        quote: Following his improvised jazz club education
+  - from: lead-belly
+    to: card:work-songs
+    element: call-and-response
+    how: Lead Belly learned a convict work song built on call and response and carried it to a wide audience.
+    sources:
+      - title: 'Encyclopedia of Arkansas: The Rock Island Line'
+        url: https://encyclopediaofarkansas.net/entries/the-rock-island-line-song-2570/
+        quote: Both versions were dominated by the chorus, in call-and-response form.
+  - from: lee-scratch-perry
+    to: card:reggae
+    element: reggae-offbeat
+    how: Perry helped shape the early reggae rhythm and then dub, through studio experiments with reverb and echo.
+    sources:
+      - title: 'Songlines: Obituary — Lee “Scratch” Perry (1936–2021)'
+        url: https://www.songlines.co.uk/news/obituary-lee-scratch-perry-1936-2021
+        quote: The song’s unusual, off-kilter rhythm, inspired by a pocomania church service, helped the new reggae style come into being.
+  - from: lee-scratch-perry
+    to: card:reggae
+    element: dub
+    how: Perry helped shape the early reggae rhythm and then dub, through studio experiments with reverb and echo.
+    sources:
+      - title: 'Songlines: Obituary — Lee “Scratch” Perry (1936–2021)'
+        url: https://www.songlines.co.uk/news/obituary-lee-scratch-perry-1936-2021
+        quote: Perry helped the dub art form to come into being through experimentation with reverb, echo
+  - from: lee-scratch-perry
+    to: root:king-tubby
+    element: dub
+    how: 'Perry and King Tubby shared the dub method: Tubby remixed, Perry added effects.'
+    sources:
+      - title: 'David Katz: The Strange World Of King Tubby (The Quietus)'
+        url: https://thequietus.com/interviews/strange-world-of/king-tubby-best-music/
+        quote: the abstract reggae subgenre defined by its bass-heavy remixes and echo-shrouded disappearing vocals
+  - from: little-richard
+    to: card:gospel
+    element: gospel-vocal
+    how: 'Little Richard sang rock and roll with gospel’s voice: shouting, whooping and a “churchy” tone.'
+    sources:
+      - title: 'NPR: Little Richard, the King and Queen of Rock and Roll (WYPR)'
+        url: https://www.wypr.org/2020-05-09/little-richard-the-king-and-queen-of-rock-and-roll-dead-at-87
+        quote: Then there was gospel singer Marion Williams, from whom Little Richard said he got his trademark whoop.
+      - title: 'New Georgia Encyclopedia: Little Richard Penniman'
+        url: https://www.georgiaencyclopedia.org/articles/arts-culture/little-richard-penniman-1932-2020/
+        quote: Little Richard’s dramatic, “churchy” voice
+  - from: madonna
+    to: card:funk
+    element: groove
+    how: Madonna modelled “Express Yourself” on the funk groove of Sly and the Family Stone.
+    sources:
+      - title: 'Attitude: Ten reasons Like a Prayer remains an all-time classic'
+        url: https://www.attitude.co.uk/culture/sexuality/like-a-prayer-at-31-ten-reasons-madonnas-fourth-album-remains-an-all-time-classic-298511/
+        quote: it used the funk of Sly & the Family Stone as an inspiration
+      - title: 'Vice: Like a Prayer was Madonna’s first masterpiece'
+        url: https://www.vice.com/en/article/like-a-prayer-was-madonnas-first-masterpiece
+        quote: The Sly and the Family Stone-inspired funk missile
+  - from: marvin-gaye
+    to: card:gospel
+    element: gospel-vocal
+    how: Marvin Gaye’s singing grew from the full-gospel church music of his father.
+    sources:
+      - title: 'Marvin Gaye: official biography'
+        url: https://www.marvingaye.net/about/
+        quote: That music—the full-gospel sounds of celebratory joy—formed the basis of Marvin’s art.
+  - from: massive-attack
+    to: card:jazz
+    element: sampling
+    how: Massive Attack sampled the rhythm section of a jazz-fusion record as the groove of “Safe from Harm”.
+    sources:
+      - title: 'MusicTech: Landmark Productions — Massive Attack, Blue Lines'
+        url: https://musictech.net/guides/essential-guide/landmarks-massive-attack/
+        quote: a kinetic rhythm section (lifted from Billy Cobham’s Stratus
+  - from: massive-attack
+    to: card:jazz
+    element: groove
+    how: Massive Attack sampled the rhythm section of a jazz-fusion record as the groove of “Safe from Harm”.
+    sources:
+      - title: 'MusicTech: Landmark Productions — Massive Attack, Blue Lines'
+        url: https://musictech.net/guides/essential-guide/landmarks-massive-attack/
+        quote: a kinetic rhythm section
+  - from: massive-attack
+    to: root:billy-cobham
+    element: sampling
+    how: Massive Attack sampled the rhythm section of Cobham’s “Stratus” as the groove of “Safe from Harm”.
+    sources:
+      - title: 'MusicTech: Landmark Productions — Massive Attack, Blue Lines'
+        url: https://musictech.net/guides/essential-guide/landmarks-massive-attack/
+        quote: a kinetic rhythm section (lifted from Billy Cobham’s Stratus
+  - from: massive-attack
+    to: root:billy-cobham
+    element: groove
+    how: Massive Attack sampled the rhythm section of Cobham’s “Stratus” as the groove of “Safe from Harm”.
+    sources:
+      - title: 'MusicTech: Landmark Productions — Massive Attack, Blue Lines'
+        url: https://musictech.net/guides/essential-guide/landmarks-massive-attack/
+        quote: a kinetic rhythm section
+  - from: metallica
+    to: root:black-sabbath
+    element: riff
+    how: Metallica covered Black Sabbath for the riff.
+    sources:
+      - title: 'Metal Hammer: The story of Metallica’s Garage Inc.'
+        url: https://www.loudersound.com/bands-artists/metallica-load-cover-songs-story-album
+        quote: It’s that opening riff that just really gets us going
+  - from: metallica
+    to: root:black-sabbath
+    element: riff
+    how: Hetfield took his rhythm playing and songwriting from Tony Iommi’s riffs.
+    sources:
+      - title: 'Metal Hammer: James Hetfield on Tony Iommi’s influence'
+        url: https://www.loudersound.com/news/metallica-james-hetfield-why-black-sabbath-tony-iommi-riff-lord-2026
+        quote: He is the one that has inspired me the most for my rhythm playing and songwriting
+      - title: 'Blabbermouth: full Metallica speech inducting Black Sabbath'
+        url: https://blabbermouth.net/news/full-text-of-metallica-s-black-sabbath-induction-speech-available
+        quote: BLACK SABBATH is mammoth riffs
+  - from: miles-davis
+    to: root:charlie-parker
+    element: improvisation
+    how: Playing beside Parker, Davis learned bebop’s fast, inventive improvising.
+    sources:
+      - title: 'Blue Note Records: Miles Davis — biography'
+        url: https://www.bluenote.com/artist/miles-davis/
+        quote: characterized by fast, inventive soloing and dynamic rhythm variations
+  - from: miles-davis
+    to: card:jazz
+    element: improvisation
+    how: Davis went from bebop soloing to improvising on modes instead of chord changes.
+    sources:
+      - title: 'National Endowment for the Arts: Miles Davis'
+        url: https://www.arts.gov/honors/jazz/miles-davis
+        quote: had begun playing in modes rather than standard chord changes
+  - from: muddy-waters
+    to: root:son-house
+    element: slide-guitar
+    how: Muddy Waters learned Delta slide guitar from Son House’s songs and playing.
+    sources:
+      - title: 'National Park Service: Muddy Waters'
+        url: https://www.nps.gov/locations/lowermsdeltaregion/muddy-waters.htm
+        quote: Waters's early influences were local guitarists Charley Patton and Son House. One of the first blues tunes he learned was House's "Walkin' Blues."
+      - title: 'National Park Service: Muddy Waters'
+        url: https://www.nps.gov/locations/lowermsdeltaregion/muddy-waters.htm
+        quote: Waters's dark, bass-laden slide guitar
+      - title: 'NPS Lower Mississippi Delta: Son House'
+        url: https://home.nps.gov/locations/lowermsdeltaregion/son-house.htm
+        quote: House's powerful vocals and slashing slide guitar style
+  - from: muddy-waters
+    to: card:blues
+    element: slide-guitar
+    how: Muddy Waters carried Delta slide guitar into the amplified Chicago band.
+    sources:
+      - title: 'National Park Service: Muddy Waters'
+        url: https://www.nps.gov/locations/lowermsdeltaregion/muddy-waters.htm
+        quote: Waters's dark, bass-laden slide guitar
+  - from: ornette-coleman
+    to: card:jazz
+    element: improvisation
+    how: Coleman freed jazz improvisation from fixed chord patterns, up to a whole album of collective improvisation.
+    sources:
+      - title: 'National Endowment for the Arts: Ornette Coleman'
+        url: https://www.arts.gov/honors/jazz/ornette-coleman
+        quote: a means of escaping traditional chord patterns and progressions
+      - title: 'National Endowment for the Arts: Ornette Coleman'
+        url: https://www.arts.gov/honors/jazz/ornette-coleman
+        quote: essentially one continuous collective improvisation
+  - from: otis-redding
+    to: card:gospel
+    element: gospel-vocal
+    how: Redding’s singing drew on his Baptist church upbringing and on gospel-rooted singers such as Sam Cooke and Little Richard.
+    sources:
+      - title: 'New Georgia Encyclopedia: Otis Redding'
+        url: https://www.georgiaencyclopedia.org/articles/arts-culture/otis-redding-1941-1967
+        quote: Influenced by Little Richard, Sam Cooke, and his own Baptist church upbringing
+  - from: paul-simon
+    to: card:reggae
+    element: reggae-offbeat
+    how: Simon recorded in Jamaica with Jimmy Cliff’s players and took a reggae feel into American pop.
+    sources:
+      - title: 'Jamaica Observer: Simon’s reggae classics get new life'
+        url: https://www.jamaicaobserver.com/2013/09/28/simons-reggae-classics-get-new-life/
+        quote: They contain reggae-flavoured classics such as Cecilia and Mother and Child Reunion
+  - from: paul-simon
+    to: root:jimmy-cliff
+    element: reggae-offbeat
+    how: Simon recorded in Jamaica with Jimmy Cliff’s players and took a reggae feel into American pop.
+    sources:
+      - title: 'Jamaica Observer: Simon’s reggae classics get new life'
+        url: https://www.jamaicaobserver.com/2013/09/28/simons-reggae-classics-get-new-life/
+        quote: They contain reggae-flavoured classics such as Cecilia and Mother and Child Reunion
+  - from: peter-gabriel
+    to: card:rhythm-and-blues
+    element: groove
+    how: Gabriel built “Sledgehammer” on a soul groove, with a horn player from Otis Redding’s band.
+    sources:
+      - title: 'Peter Gabriel: Sledgehammer'
+        url: https://petergabriel.com/release/sledgehammer/
+        quote: that was built around a great groove and a good feel
+      - title: 'Sound On Sound: Peter Gabriel — Behind The Mask (January 1987)'
+        url: https://www.muzines.co.uk/articles/peter-gabriel-behind-the-mask/1494
+        quote: the trumpet player on the gig was Wayne Jackson, of the Memphis Horns, and he's playing on Sledgehammer
+  - from: peter-gabriel
+    to: root:otis-redding
+    element: groove
+    how: Gabriel built “Sledgehammer” on a soul groove, with a horn player from Otis Redding’s band.
+    sources:
+      - title: 'Peter Gabriel: Sledgehammer'
+        url: https://petergabriel.com/release/sledgehammer/
+        quote: that was built around a great groove and a good feel
+  - from: rakim
+    to: root:john-coltrane
+    element: rap-flow
+    how: 'Rakim built his rap flow on the rhythms of Coltrane’s saxophone lines: jazz phrasing turned into rhyme.'
+    sources:
+      - title: 'Westword: Q&A with Rakim'
+        url: https://www.westword.com/music/qanda-with-rakim-5676480/
+        quote: When I started rhyming, my favorite rhythms were from John Coltrane and some of the things he did on sax.
+  - from: rakim
+    to: card:hip-hop
+    element: rap-flow
+    how: Rakim changed rap flow, moving rhymes inside the bar.
+    sources:
+      - title: 'NPR: Eric B. & Rakim change the flow of rap, via Connecticut Public'
+        url: https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full
+        quote: Rakim places the rhyme in the center of the bar instead of at the end
+  - from: ray-charles
+    to: card:gospel
+    element: gospel-vocal
+    how: Ray Charles put gospel singing into rhythm and blues and so helped invent soul.
+    sources:
+      - title: 'Blue Note Records: Ray Charles biography'
+        url: https://www.bluenote.com/artist/ray-charles/
+        quote: merging ’50s R&B with gospel-powered vocals
+      - title: 'Blue Note Records: Ray Charles biography'
+        url: https://www.bluenote.com/artist/ray-charles/
+        quote: his unmistakable gospel-ish moan
+  - from: red-hot-chili-peppers
+    to: root:james-brown
+    element: groove
+    how: With James Brown and Parliament-Funkadelic among their influences, the Chili Peppers built their sound on funk grooves and slap bass.
+    sources:
+      - title: 'Rock & Roll Hall of Fame: Red Hot Chili Peppers — Influences'
+        url: https://rockhall.com/inductees/red-hot-chili-peppers/
+        quote: Influence Parliament-Funkadelic James Brown
+      - title: 'Rock & Roll Hall of Fame: Red Hot Chili Peppers — Influences'
+        url: https://rockhall.com/inductees/red-hot-chili-peppers/
+        quote: signature blend of slap bass, rapping, and punk-metal guitar
+  - from: robert-johnson
+    to: root:son-house
+    element: slide-guitar
+    how: Johnson took Son House as a model and learned his licks, the slide-guitar blues of the Delta.
+    sources:
+      - title: 'NPS Lower Mississippi Delta: Son House'
+        url: https://home.nps.gov/locations/lowermsdeltaregion/son-house.htm
+        quote: His song "Preachin' The Blues Part I & II" was a six-minute biography of his life and served as inspiration for Robert Johnson's "Preaching Blues" and "Walking Blues." House's powerful vocals and slashing slide guitar style
+      - title: 'NPS Lower Mississippi Delta: Son House'
+        url: https://home.nps.gov/locations/lowermsdeltaregion/son-house.htm
+        quote: learning the older musicians' licks
+  - from: son-house
+    to: card:blues
+    element: slide-guitar
+    how: Son House’s Delta blues ran on slashing slide guitar and powerful vocals.
+    sources:
+      - title: 'National Park Service: Son House'
+        url: https://home.nps.gov/locations/lowermsdeltaregion/son-house.htm
+        quote: House's powerful vocals and slashing slide guitar style
+  - from: stevie-wonder
+    to: card:gospel
+    element: gospel-vocal
+    how: Wonder sang in a church choir, and gospel stayed in his music.
+    sources:
+      - title: 'University Musical Society: From Cass Corridor to the World, Winter 2013'
+        url: https://www.annarbor.com/ums_the_event_program_insert_05_v3_01-10-13.pdf
+        quote: he joined a church choir; the gospel influence on his music
+  - from: talking-heads
+    to: card:afrobeat
+    element: polyrhythm
+    how: 'Talking Heads built Remain in Light from looped, layered Afrobeat rhythms: West African polyrhythm in a rock band.'
+    sources:
+      - title: 'Library of Congress: Remain in Light — Talking Heads'
+        url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf
+        quote: based on looping Afrobeat rhythms (pioneered by Fela Kuti)
+      - title: 'Pitchfork: Talking Heads — Remain in Light'
+        url: https://pitchfork.com/reviews/albums/talking-heads-remain-in-light/
+        quote: Afrobeat combined American funk and jazz influences with West-African polyrhythms
+  - from: talking-heads
+    to: root:fela-kuti
+    element: polyrhythm
+    how: 'Talking Heads built Remain in Light from looped, layered Afrobeat rhythms: West African polyrhythm in a rock band.'
+    sources:
+      - title: 'Library of Congress: Remain in Light — Talking Heads'
+        url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RemainInLight.pdf
+        quote: based on looping Afrobeat rhythms (pioneered by Fela Kuti)
+  - from: television
+    to: card:jazz
+    element: improvisation
+    how: Verlaine brought the jazz habit of exploratory improvisation into punk-era guitar.
+    sources:
+      - title: 'The Irish Times: Tom Verlaine, guitarist frontman of US band Television, dies at 73'
+        url: https://www.irishtimes.com/culture/music/2023/01/30/tom-verlaine-guitarist-frontman-of-us-band-television-dies-at-73
+        quote: whose exploratory guitar improvisations
+  - from: the-police
+    to: card:reggae
+    element: reggae-offbeat
+    how: The Police took reggae bass lines and offbeat parts and switched between them and punk.
+    sources:
+      - title: 'Guitar Player: Andy Summers on the strategies behind his creative life'
+        url: https://www.guitarplayer.com/players/you-certainly-dont-want-to-be-looking-for-commercial-success-andy-summers-reveals-the-evolving-strategies-that-keep-his-creative-life-busier-than-ever
+        quote: Well, we can play reggae bass lines too.
+      - title: 'LOS40: Interview with Andy Summers, 20 May 2022'
+        url: https://los40.com/los40/2022/05/20/los40classic/1652955281_806107.html
+        quote: A Sting le iba muy bien tocar líneas de bajo reggae mientras cantaba
+  - from: the-police
+    to: root:bob-marley
+    element: reggae-offbeat
+    how: Sting set sparse reggae parts in the verse against punk in the chorus, and the chorus of “So Lonely” is a sped-up “No Woman, No Cry”.
+    sources:
+      - title: 'Guitar World: Sting’s 10 best basslines with the Police'
+        url: https://www.guitarworld.com/features/stings-10-best-basslines-with-the-police
+        quote: sparse reggae(ish) parts in the verse coupled with driving punk lines in the chorus
+      - title: 'Guitar World: Sting’s 10 best basslines with the Police'
+        url: https://www.guitarworld.com/features/stings-10-best-basslines-with-the-police
+        quote: is a sped up interpretation of Bob Marley’s No Woman No Cry
+  - from: the-prodigy
+    to: card:hip-hop
+    element: sampling
+    how: 'Sampling: The Prodigy looped a rap phrase from a hip-hop record into a dance track.'
+    sources:
+      - title: 'MusicTech: Landmark Productions — The Prodigy, The Fat of the Land'
+        url: https://www.musictech.com/guides/essential-guide/landmarks-prodigy-fat-of-the-land/
+        quote: this constantly repeated stanza is a sample taken from Give The Drummer Some by New York rap outfit the Ultramagnetic MCs
+  - from: the-prodigy
+    to: root:ultramagnetic-mcs
+    element: sampling
+    how: 'Sampling: The Prodigy looped a rap phrase from the Ultramagnetic MCs into a dance track.'
+    sources:
+      - title: 'MusicTech: Landmark Productions — The Prodigy, The Fat of the Land'
+        url: https://www.musictech.com/guides/essential-guide/landmarks-prodigy-fat-of-the-land/
+        quote: this constantly repeated stanza is a sample taken from Give The Drummer Some by New York rap outfit the Ultramagnetic MCs
+  - from: the-white-stripes
+    to: card:blues
+    element: slide-guitar
+    how: The White Stripes covered Son House’s song and took his raw slide approach with it.
+    sources:
+      - title: 'Louder: Jack White on Son House'
+        url: https://www.loudersound.com/features/jack-white-son-house
+        quote: As well as absorbing his feral slide approach, White also took on House’s material, most notably with the Stripes’ cover of 1965’s signature tune Death Letter.
+  - from: the-white-stripes
+    to: root:son-house
+    element: slide-guitar
+    how: Jack White took Son House’s feral slide guitar as his model.
+    sources:
+      - title: 'Classic Rock: How Jack White brought Son House to a new generation'
+        url: https://www.loudersound.com/features/jack-white-son-house
+        quote: As well as absorbing his feral slide approach
+  - from: ultramagnetic-mcs
+    to: card:hip-hop
+    element: sampling
+    how: Ultramagnetic MCs were among the first to play the sampler as an instrument.
+    sources:
+      - title: 'SPIN: When Hip Hop Went Ultra — Ced Gee and Kool Keith interview'
+        url: https://www.spinmagazine.com/2023/11/ultramagnetic-mcs-interview/
+        quote: Ultramagnetic are also widely credited as the first hip hop group to use a sampler as an instrument
+  - from: the-beatles
+    to: root:chuck-berry
+    element: riff
+    how: "The riff as a repeated bass figure: McCartney played the notes of the bass riff of Berry’s “I’m Talking About You” under a Beatles song of his own."
+    sources:
+      - title: "Skidmore College, Gordon Thompson: “I Saw Her Standing There” (course notes quoting McCartney in Miles, Many Years From Now, 1997)"
+        url: https://thompsong.domains.skidmore.edu/dept/courses/mu220/campus/08-Lennon-McCartney/2-Songwriting/60br082a.html
+        quote: "I played exactly the same notes as he did [Chuck Berry's \"I'm Talking about You\" (1961)] and it fitted our number perfectly."
+      - title: "MusicRadar: Paul McCartney on his favourite basses, key lines and influential players (Tony Bacon, 1994)"
+        url: https://www.musicradar.com/news/classic-interview-paul-mccartney-on-his-favourite-basses-key-lines-and-influential-players
+        quote: "I could just learn [sings I Saw Her Standing There bass-line], nicked from Chuck Berry as I’m sure you know, I’m Talking About You. I’ve given him credit, though."
+  - from: the-rolling-stones
+    to: card:blues
+    element: slide-guitar
+    how: "Slide guitar from the blues: Brian Jones practised it to Elmore James and Robert Johnson records and brought it into the early Stones."
+    sources:
+      - title: "Classic Rock (Louder): The Rolling Stones’ blues roots in the early 1960s"
+        url: https://www.loudersound.com/features/rolling-stones-blues-roots-early-1960s
+        quote: "working for untold hours on his slide technique and soaking up records by Elmore James, Robert Johnson and Howlin’ Wolf"
+      - title: "uDiscover Music: Why Brian Jones was so important to the Rolling Stones"
+        url: https://www.udiscovermusic.com/stories/just-why-was-brian-jones-so-important-to-the-rolling-stones
+        quote: "Brian became obsessed with the blues, practicing slide guitar while listening to Elmore James and Robert Johnson records."
+  - from: led-zeppelin
+    to: card:blues
+    element: riff
+    how: "The blues riff that keeps turning instead of resolving: Jones built “Black Dog” on the model of a repeating Chicago blues figure."
+    sources:
+      - title: "Guitar World: John Paul Jones — Black Dog lesson"
+        url: https://www.guitarworld.com/lessons/song-lessons/john-paul-jones-black-dog-lesson
+        quote: "I was inspired to write the Black Dog riff after learning an old blues riff in E from the Muddy Waters album, Electric Mud . [ Ed. note: Jones later retracted this , citing Howlin’ Wolf’s Smokestack Lightning as his inspiration for the riff. ]"
+      - title: "Classic Rock (Louder): How Led Zeppelin created the rhythmic swing of “Black Dog”"
+        url: https://www.loudersound.com/features/black-dog-led-zeppelin-riff
+        quote: "Based on a cartwheeling riff bassist John Paul Jones had been ‘inspired’ to develop after listening to the similarly shaped Tom Cat by Muddy Waters ."
+  - from: david-bowie
+    to: root:james-brown
+    element: groove
+    how: "James Brown’s funk groove: Alomar split the guitar into three locked, syncopated parts, the way Brown’s guitarists played; “that’s what you hear on that track,” he said."
+    sources:
+      - title: "The Line of Best Fit: Carlos Alomar on David Bowie"
+        url: https://www.thelineofbestfit.com/features/longread/carlos-alomar-on-david-bowie-he-was-a-transitional-generational-artist
+        quote: "I happen to like funky stuff and I’d come from that James Brown school of three guitar players locked perfectly in a perfect rhythm; so instead of playing one part with everything in it, I just broke up all my little ideas into being those three James Brown guitar players."
+      - title: "Far Out: The song that inspired David Bowie and John Lennon’s “Fame” (quoting Alomar to The Intercept, 2020)"
+        url: https://faroutmagazine.co.uk/the-song-that-inspired-david-bowie-and-john-lennons-fame/
+        quote: "Taking from my past history of working with James Brown, I decided to approach it like that."
+  - from: the-clash
+    to: card:reggae
+    element: dub
+    how: "Dub as a studio method: with Mikey Dread the Clash remade their own songs as dub versions, as “Junco Partner” became “Version Pardner”."
+    sources:
+      - title: "Spectrum Culture: Discography — The Clash, Sandinista!"
+        url: https://spectrumculture.com/2016/03/03/discography-the-clash-sandinista/
+        quote: "Thanks to the Jamaican reggae legend and producer, Mikey Dread, Sandinista! features a large amount of dub-inspired songs, straight reggae songs and dub remixes."
+      - title: "Gigwise: Mikey Dread 1954–2008"
+        url: https://gigwise.com/features/41679/Mikey-Dread-1954-2008
+        quote: "Best known in the UK as producer of the Clash, Jamaican born Mikey Dread"
+      - title: "Ken Hunt: Michael “Mikey Dread” Campbell (1954–2008)"
+        url: https://kenhunt.doruzka.com/?p=64
+        quote: "he bridged the gap between reggae and punk, notably through his work with The Clash on their 1980 Bankrobber single, the US album Black Market Clash (1980) and their marvellously sprawling, spiky and self-indulgent Sandinista!"
+  - from: charles-mingus
+    to: card:gospel
+    element: call-and-response
+    how: "Call and response from Holiness worship: the band trades phrases back and forth and Mingus shouts from inside it, the stage his pulpit."
+    sources:
+      - title: "OUPblog: A holding corporation called old America — Charles Mingus’ religious multitudes"
+        url: https://blog.oup.com/?p=94894
+        quote: "complex antiphonal work, trading phrases back and forth in a knowing echo of the call-and-response dialogism of African-American music; and a use of guttural, vocalic textures that connected New Orleans to the avant-garde. Mingus shouted encouragement to his bandmates, the stage his pulpit."
+      - title: "First Things: Holiness, folk culture, and the African-American experience"
+        url: https://firstthings.com/blogs/firstthoughts/2014/02/holiness-folk-culture-and-the-african-american-experience
+        quote: "Indeed, they are so filled with the call-and-response dynamic of holiness worship that many Pentecostals and holiness folks would recognize Mingus’ shouts and call outs immediately."
+  - from: bessie-smith
+    to: card:blues
+    element: twelve-bar-blues
+    how: "Smith worked inside the twelve-bar blues and improvised within it, changing phrasing and inflection from verse to verse."
+    sources:
+      - title: "NPR: How Bessie Smith influenced a century of popular music (2019)"
+        url: https://www.npr.org/2019/08/05/747738120/how-bessie-smith-influenced-a-century-of-popular-music
+        quote: "The repeated lines and consistent chord changes inherent to the classic 12-bar structure can feel static to contemporary listeners, but even in the 1920s, there were listeners who found Smith's Southern blues too slow."
+      - title: "Alona Sagee: Bessie Smith — “Down Hearted Blues” and “Gulf Coast Blues” revisited, Popular Music 26/1 (Cambridge University Press, 2007)"
+        url: https://www.cambridge.org/core/journals/popular-music/article/bessie-smith-down-hearted-blues-and-gulf-coast-blues-revisited/AD6C34C4BC8AC400BBF941F08F473E28
+        quote: "although Bessie's phrases display some similarities with each other, they constantly vary in imaginative ways, matching her with true jazz improvisers."
+  - from: bessie-smith
+    to: card:blues
+    element: improvisation
+    how: "Smith worked inside the twelve-bar blues and improvised within it, changing phrasing and inflection from verse to verse."
+    sources:
+      - title: "NPR: How Bessie Smith influenced a century of popular music (2019)"
+        url: https://www.npr.org/2019/08/05/747738120/how-bessie-smith-influenced-a-century-of-popular-music
+        quote: "The repeated lines and consistent chord changes inherent to the classic 12-bar structure can feel static to contemporary listeners, but even in the 1920s, there were listeners who found Smith's Southern blues too slow."
+      - title: "Alona Sagee: Bessie Smith — “Down Hearted Blues” and “Gulf Coast Blues” revisited, Popular Music 26/1 (Cambridge University Press, 2007)"
+        url: https://www.cambridge.org/core/journals/popular-music/article/bessie-smith-down-hearted-blues-and-gulf-coast-blues-revisited/AD6C34C4BC8AC400BBF941F08F473E28
+        quote: "although Bessie's phrases display some similarities with each other, they constantly vary in imaginative ways, matching her with true jazz improvisers."
+  - from: the-velvet-underground
+    to: root:marvin-gaye
+    element: riff
+    how: "An R&B riff moved to rock guitar: the band opened “There She Goes Again” with the rhythmic figure that opens “Hitch Hike”."
+    sources:
+      - title: "Aidan Levy: The Velvet Underground & Nico — Library of Congress"
+        url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf
+        quote: "That R&B influence would manifest in songs like “There She Goes Again,” with the intro sampling Marvin Gaye’s “Hitch Hike.”"
+      - title: "Far Out: “There She Goes Again” — the Lou Reed song inspired by Marvin Gaye"
+        url: https://faroutmagazine.co.uk/lou-reed-song-inspired-by-marvin-gaye/
+        quote: "the introduction to the song that Reed wrote sounds remarkably like Gaye’s tune, with the same rhythmic pattern being applied in the opening guitar chords as is done in the horns of ‘Hitch Hike’."
+  - from: lou-reed
+    to: root:marvin-gaye
+    element: riff
+    how: "An R&B riff moved to rock guitar: Reed set the rhythmic figure that opens “Hitch Hike” at the head of his own song."
+    sources:
+      - title: "Aidan Levy: The Velvet Underground & Nico — Library of Congress"
+        url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Velvet-Underground-and-Nico_Levy.pdf
+        quote: "That R&B influence would manifest in songs like “There She Goes Again,” with the intro sampling Marvin Gaye’s “Hitch Hike.”"
+      - title: "Far Out: “There She Goes Again” — the Lou Reed song inspired by Marvin Gaye"
+        url: https://faroutmagazine.co.uk/lou-reed-song-inspired-by-marvin-gaye/
+        quote: "the introduction to the song that Reed wrote sounds remarkably like Gaye’s tune, with the same rhythmic pattern being applied in the opening guitar chords as is done in the horns of ‘Hitch Hike’."
+anecdoteOnly:
+  - from: adele
+    to: root:bob-dylan
+    kind: cover
+    how: 'A cover of a Bob Dylan ballad: it shows Adele’s repertoire, not a musical element passed on from a Black tradition.'
+  - from: adele
+    to: root:etta-james
+    kind: influence
+    how: 'An awakening rather than a technique: hearing Etta James made Adele think seriously about singing and start writing her own songs; the sources name no specific device she took.'
+  - from: albert-ayler
+    to: card:spirituals
+    kind: influence
+    how: Ayler took the plain, hymn-like melodies of spirituals and the wide vibrato of church saxophonists as starting points for free improvisation; that melodic debt is real but is not one of the elements traced here.
+  - from: amy-winehouse
+    to: root:dinah-washington
+    kind: influence
+    how: A named influence on Winehouse’s style among other jazz singers; the sources do not say which element of Dinah Washington’s singing she took.
+  - from: arctic-monkeys
+    to: card:rhythm-and-blues
+    kind: cover
+    how: A cover of a 1960s R&B song; it shows taste, not a musical element passed on.
+  - from: arthur-crudup
+    to: card:gospel
+    kind: influence
+    how: Crudup sang gospel before the blues, but the sources name no specific technique he carried over.
+  - from: bessie-smith
+    to: card:blues
+    kind: scene
+    how: The evidence is about where Bessie Smith shaped her blues, on the Black vaudeville stage, not about a particular musical device.
+  - from: billie-eilish
+    to: root:the-beatles
+    kind: influence
+    how: An admiration for the Beatles; no musical element from a Black tradition is documented on this step.
+  - from: black-sabbath
+    to: root:eric-clapton
+    kind: influence
+    how: Iommi learned blues guitar from Clapton’s records with John Mayall and from blues records in general; the sources name no single device.
+  - from: bob-dylan
+    to: card:blues
+    kind: cover
+    how: 'A cover of a Blind Lemon Jefferson song on a debut album: repertoire, not a documented element.'
+  - from: bob-dylan
+    to: root:robert-johnson
+    kind: influence
+    how: 'Dylan took from Robert Johnson a way of building songs: compressed, metaphor-heavy lyrics, Johnson’s guitar sound and rhythm; songwriting, not one of the elements traced here.'
+  - from: bob-marley
+    to: root:lee-scratch-perry
+    kind: producer
+    how: Perry, a pioneer of dub, paired the Wailers with the Barrett brothers’ drums and bass; the sources describe the production, not an element the Wailers took from him.
+  - from: charles-mingus
+    to: card:gospel
+    kind: influence
+    how: The church choir and group singing were Mingus’s first musical world; the sources name no specific element taken from them.
+  - from: charles-mingus
+    to: card:gospel
+    kind: influence
+    how: Mingus turned the gospel singing and preaching of his youth into jazz compositions; the sources describe the inspiration, not the device.
+  - from: christina-aguilera
+    to: card:rhythm-and-blues
+    kind: cover
+    how: 'A tribute performance at a funeral: it shows reverence, not a musical element passed on.'
+  - from: christina-aguilera
+    to: root:etta-james
+    kind: influence
+    how: A childhood love of Etta James’s records; the sources do not say which element of her singing Aguilera took.
+  - from: coldplay
+    to: root:kraftwerk
+    kind: interpolation
+    how: Coldplay replayed a Kraftwerk synthesizer melody on guitar; the borrowing is a German electronic melody, and Kraftwerk’s own links carry the Black element further back.
+  - from: creedence-clearwater-revival
+    to: card:rhythm-and-blues
+    kind: cover
+    how: 'A cover of Screamin’ Jay Hawkins’s song: repertoire, not a documented element.'
+  - from: creedence-clearwater-revival
+    to: root:little-richard
+    kind: influence
+    how: Little Richard was a formative model for Fogerty, but the sources name no single device he took.
+  - from: david-bowie
+    to: card:jazz
+    kind: cover
+    how: Bowie recorded a song after Nina Simone’s version of it; an interpretation, not a documented element.
+  - from: deep-purple
+    to: card:rock-n-roll
+    kind: cover
+    how: 'A Little Richard cover in concert: repertoire, not a documented element.'
+  - from: deep-purple
+    to: root:little-richard
+    kind: influence
+    how: Early rock and roll first drew Gillan to music; the sources name no device he took from Little Richard.
+  - from: dolly-parton
+    to: root:the-beatles
+    kind: cover
+    how: 'A cover of a Beatles song: no element from a Black tradition is documented on this step.'
+  - from: elvis-presley
+    to: root:arthur-crudup
+    kind: cover
+    how: Elvis’s first single was a cover of Crudup’s blues; the sources record the song, not a specific device.
+  - from: george-mccrae
+    to: card:gospel
+    kind: scene
+    how: McCrae sang in a choir as a child; the sources name no specific technique carried into his soul records.
+  - from: george-michael
+    to: card:rhythm-and-blues
+    kind: collaboration
+    how: 'A duet with Aretha Franklin: a collaboration, not a documented transfer of an element.'
+  - from: george-michael
+    to: root:stevie-wonder
+    kind: influence
+    how: A named influence; the sources describe Michael’s soulful tone and falsetto but do not tie a device to Stevie Wonder.
+  - from: howlin-wolf
+    to: root:charley-patton
+    kind: teacher
+    how: Patton taught the young Wolf songs and showmanship; repertoire and stagecraft rather than one musical element.
+  - from: iron-maiden
+    to: root:deep-purple
+    kind: influence
+    how: Harris learned bass by playing along to Deep Purple records; the sources name no element.
+  - from: janis-joplin
+    to: card:big-mama-thornton
+    kind: cover
+    how: 'A cover of Thornton’s song: repertoire, not a documented element.'
+  - from: janis-joplin
+    to: root:bessie-smith
+    kind: influence
+    how: Joplin learned Bessie Smith’s songs and lyrics by heart and they shaped her choice of songs; the sources speak of lyrics, not a vocal device.
+  - from: jimmy-cliff
+    to: card:gospel
+    kind: scene
+    how: Cliff began singing in church; the sources name no specific technique carried over.
+  - from: joe-cocker
+    to: card:rhythm-and-blues
+    kind: cover
+    how: Cocker rearranged Ray Charles’s hit with a new rhythm; the song travelled, not a documented element.
+  - from: joss-stone
+    to: root:the-white-stripes
+    kind: cover
+    how: Stone turned a White Stripes song into a funk jam with soul musicians; the element came from her soul band, not from the White Stripes.
+  - from: junior-murvin
+    to: root:lee-scratch-perry
+    kind: producer
+    how: Perry produced Murvin’s hit; the sources document the production, not a specific element passed on.
+  - from: junior-murvin
+    to: card:reggae
+    kind: scene
+    how: Murvin’s falsetto reggae came out of the Kingston studio scene; the sources do not tie it to a specific transmitted element.
+  - from: led-zeppelin
+    to: card:blues
+    kind: cover
+    how: Led Zeppelin took Memphis Minnie and Kansas Joe’s song but dropped its twelve-bar form, rebuilding it on one chord around a riff and Bonham’s drums.
+  - from: led-zeppelin
+    to: root:howlin-wolf
+    kind: influence
+    how: Plant names Howlin’ Wolf among his first roots; the sources record admiration, not a specific device.
+  - from: lou-reed
+    to: card:rhythm-and-blues
+    kind: influence
+    how: Reed began in doo-wop, Black vocal-group rhythm and blues; the sources record the style, not a specific element.
+  - from: lou-reed
+    to: root:ornette-coleman
+    kind: influence
+    how: Reed listened to the free-jazz players Ornette Coleman and Cecil Taylor and brought their energy into rock guitar, though by his own account he could not play like them.
+  - from: mashina-vremeni
+    to: root:the-beatles
+    kind: influence
+    how: Makarevich names the Beatles among his songwriting models; no element from a Black tradition is documented on this step.
+  - from: mumiy-troll
+    to: root:aquarium
+    kind: cover
+    how: 'A Russian tribute cover: no element from a Black tradition is documented on this step.'
+  - from: nirvana
+    to: card:blues
+    kind: cover
+    how: 'Nirvana took a traditional song in Lead Belly’s version: repertoire, not a documented element.'
+  - from: nirvana
+    to: root:lead-belly
+    kind: cover
+    how: 'Nirvana took a traditional song in Lead Belly’s version: repertoire, not a documented element.'
+  - from: oasis
+    to: root:the-beatles
+    kind: cover
+    how: 'A Beatles cover: no element from a Black tradition is documented on this step.'
+  - from: ornette-coleman
+    to: card:rhythm-and-blues
+    kind: scene
+    how: Coleman served his apprenticeship in R&B bands; the sources record the setting, not a specific element.
+  - from: radiohead
+    to: card:jazz
+    kind: influence
+    how: Radiohead borrowed the loose, irregular drum feel of Mingus records for one song; the band itself denied a jazz sensibility.
+  - from: radiohead
+    to: root:charles-mingus
+    kind: influence
+    how: Radiohead borrowed the loose, irregular drum feel of Mingus records for one song; the band itself denied a jazz sensibility.
+  - from: red-hot-chili-peppers
+    to: card:funk
+    kind: cover
+    how: 'A cover of a Stevie Wonder song: repertoire, not a documented element.'
+  - from: robert-johnson
+    to: card:blues
+    kind: scene
+    how: Johnson learned the Delta blues from its players; the sources stress his steady four-beat pulse that rock later used, which is not one of the elements traced here.
+  - from: stevie-wonder
+    to: root:ray-charles
+    kind: influence
+    how: Wonder’s first album was a tribute of Ray Charles covers; the sources record admiration and repertoire, not a specific element.
+  - from: taylor-swift
+    to: card:funk
+    kind: cover
+    how: 'A cover of a funk-era hit: repertoire, not a documented element.'
+  - from: television
+    to: root:the-velvet-underground
+    kind: influence
+    how: The Velvet Underground shaped Verlaine’s guitar style; the sources name no element from a Black tradition on this step.
+  - from: television
+    to: root:john-coltrane
+    kind: influence
+    how: A Coltrane record made Verlaine take up the saxophone; the sources record the spark, not a specific device.
+  - from: television
+    to: root:albert-ayler
+    kind: influence
+    how: As a teenage saxophonist Verlaine embraced Ayler; the sources record admiration, not a specific device.
+  - from: the-beatles
+    to: card:rhythm-and-blues
+    kind: cover
+    how: 'The Beatles’ “Twist and Shout” was an arrangement honed on stage from an R&B record: repertoire, not a documented element.'
+  - from: the-beatles
+    to: root:little-richard
+    kind: influence
+    how: Little Richard’s songs were the repertoire on which the Beatles learned to play live; the sources do not name a device they took.
+  - from: the-beatles
+    to: root:chuck-berry
+    kind: influence
+    how: Chuck Berry’s songs were the core of the Beatles’ early sets; the sources record repertoire, not a specific device.
+  - from: the-clash
+    to: card:reggae
+    kind: cover
+    how: A punk band’s cover of a reggae song; the sources speak of shared defiance, not of a musical element.
+  - from: the-clash
+    to: root:junior-murvin
+    kind: cover
+    how: A punk band’s cover of a reggae song; the sources speak of shared defiance, not of a musical element.
+  - from: the-clash
+    to: root:lee-scratch-perry
+    kind: producer
+    how: Perry produced one Clash single; the sources record the session, not an element passed on.
+  - from: the-libertines
+    to: root:the-clash
+    kind: producer
+    how: Mick Jones produced the Libertines’ debut; no element from a Black tradition is documented on this step.
+  - from: the-rolling-stones
+    to: card:blues
+    kind: cover
+    how: The Stones’ version closely mirrors Howlin’ Wolf’s record, whose slide riff was played by Hubert Sumlin; the sources do not show which element the Stones’ own recording kept.
+  - from: the-rolling-stones
+    to: root:muddy-waters
+    kind: influence
+    how: Chicago blues shaped Richards’s guitar licks and Jagger’s singing; the sources describe a broad style, not one of the elements traced here.
+  - from: the-velvet-underground
+    to: root:lou-reed
+    kind: member
+    how: 'Membership, not influence: Reed founded the band, and the Velvets even banned blues licks.'
+  - from: van-morrison
+    to: card:blues
+    kind: cover
+    how: 'Them covered Big Joe Williams’s blues standard: repertoire, not a documented element.'
+  - from: van-morrison
+    to: root:lead-belly
+    kind: influence
+    how: Lead Belly stood for Morrison within a whole world of blues and gospel records; the sources name no specific device.
+secondCheck:
+  method: "An independent checker re-fetched every source URL (116 of 117 loaded; the Library of Congress Songs of America page returned 403 and its quotes were checked against the earlier copy) and judged whether each quote supports the element, the tag and the how sentence."
+  applied:
+    - "Dropped tags: bob-marley → lee-scratch-perry (dub), the-rolling-stones → card:blues (slide-guitar), lou-reed → ornette-coleman (improvisation)."
+    - "Retagged eric-clapton → robert-johnson from riff to groove (the quote is about boogie grooves)."
+    - "Added call-and-response to fela-kuti → card:afrobeat (under-tagged; the quote is in the link's added source)."
+    - "Reworded how: johnny-cash → card:work-songs, billy-cobham → miles-davis, bts → eminem, iron-maiden → led-zeppelin, metallica → black-sabbath (cover), john-coltrane → card:jazz, paul-simon (both links)."
+    - "Kept as inherited, with a note: joe-cocker → ray-charles and joss-stone → aretha-franklin (gospel-vocal)."
+    - "Card links: afrobeat → highlife and jazz → spirituals now carry nothing; funk → rhythm-and-blues carries groove only; hip-hop → reggae carries rap-flow only; hip-hop → funk drops groove; afrobeat → jazz drops riff; added sources for gospel → blues, jazz → blues, rock-n-roll → gospel and highlife → jazz."
+    - "Elements: replaced a blue-notes quote, cut unsupported claims from the twelve-bar blues and reggae offbeat texts, added sources for polyrhythm and dub, replaced the jazz-glossary 'break' (a different meaning) with an Amen break source."
+    - "Lines: removed an unsourced sentence from the gospel line, reworded the disco step of the dance line, replaced 'a singing bass' in the Caribbean line."

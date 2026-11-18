@@ -14,7 +14,7 @@ tags: [uncredited]
 further:
   - "The Winstons, \"Color Him Father\" / \"Amen, Brother\" (1969 single)"
   - "Nate Harrison, Can I Get an Amen? (2004, audio-visual installation)"
-dispute: "Gregory Coleman's homelessness at his death is reported by music outlets and by Spencer's account, not by a public record. The 2015 crowdfunding total is reported differently: Mixmag says £24,000, FACT more than £20,000."
+dispute: "That neither Spencer nor Coleman received sample royalties is reported in 2015–2017 accounts. Music outlets and Spencer's account say Coleman died homeless and broke; no public record confirms it. The 2015 crowdfunding total is reported differently: Mixmag says £24,000, FACT more than £20,000."
 sources:
   - {title: "WFAE: Richard Lewis Spencer dies at 78 (2020)", url: "https://www.wfae.org/arts-culture/2020-12-28/richard-lewis-spencer-north-carolina-musician-known-for-the-winstons-dies-at-78"}
   - {title: "NPR: Funk band behind 'Amen break' drum riff receives long overdue notoriety (2017)", url: "https://text.npr.org/542087087"}
@@ -26,7 +26,13 @@ sources:
   - {title: "Engadget (2015)", url: "https://www.engadget.com/2015/02/20/amen-break-sample-crowdfunding-campaign/"}
   - {title: "Mixmag (2015)", url: "https://mixmag.net/read/amen-break-arranger-finally-receives-royalties-news"}
   - {title: "DJ TechTools: The Amen break's retroactive fundraiser (2015)", url: "https://djtechtools.com/2015/02/24/the-amen-breaks-retroactive-fundraiser"}
+  - {title: "Dazed: Rinse FM at 30, oral history", url: "https://www.dazeddigital.com/music/article/62542/1/rinse-fm-at-30-an-oral-history-of-the-notorious-east-london-radio"}
+  - {title: "Dummy: The Dummy guide to Rinse FM", url: "https://dmy.co/features/the-dummy-guide-to-rinse-fm/"}
 media:
   - {"type": "image", "file": "amen-break.jpg", "caption": "Label of the Winstons' seven-inch single Amen Brother, 1969", "credit": "The Winstons / Metromedia; scan via Discogs", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Amen_Brother_7_inch_single.jpg"}
 ---
-Few recordings have been copied more than a few bars of drumming nobody paid for. In 1969 the Winstons, an integrated soul band, had a Grammy-winning hit with "Color Him Father", written and sung by their leader Richard L. Spencer. Its B-side was the instrumental "Amen, Brother", with Gregory C. Coleman on drums. Its break was looped in [[hip-hop|hip-hop]], then sped up and chopped into jungle and drum and bass, becoming one of the most sampled recordings ever. As reported in 2015–2017, neither Spencer nor Coleman had received sample royalties; Spencer learned how famous it was only in 1996. Coleman reportedly died homeless and broke. In 2015 the UK DJ Martyn Webster crowdfunded more than £20,000 for Spencer, who died in 2020. Compare [[funk|funk]], [[planet-rock|"Planet Rock"]] and [[rinse-fm|Rinse FM]].
+The Amen break is a drum solo a few seconds long from a 1969 soul record, and it became one of the most sampled recordings ever while the men who made it went unpaid. That year the Winstons, an integrated soul band, had a Grammy-winning hit with "Color Him Father", written and sung by their leader Richard L. Spencer. Its B-side was the instrumental "Amen, Brother", with Gregory C. Coleman on drums. Producers looped his break in [[hip-hop|hip-hop]], then sped it up and chopped it into jungle and drum and bass, the sound that pirate stations such as [[rinse-fm|Rinse FM]] broadcast from the tower blocks of east London.
+
+Neither Spencer nor Coleman received sample royalties. Spencer had left the recording industry, studied at Howard University and become a Baptist minister and a high-school teacher in North Carolina; he learned how famous the break was only in 1996. Coleman died in 2006. In 2015 the UK DJ Martyn Webster crowdfunded more than £20,000 for Spencer, who died in December 2020, aged 78.
+
+The break turned a piece of [[funk|funk]] drumming into raw material for machines, much as [[planet-rock|"Planet Rock"]] did with Kraftwerk, and whole genres were built on it.

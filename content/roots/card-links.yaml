@@ -1,0 +1,372 @@
+# Steps between museum cards: a card and one of its `roots`, explained by
+# the musical elements that travelled along the step. Each rests on facts
+# of the cards themselves (and their sources) or on sources quoted here.
+links:
+  - from: spirituals
+    to: work-songs
+    kind: influence
+    how: "Spirituals kept the work song’s call and response, a leader’s line answered by the group, and turned it to worship."
+    howRu: "Спиричуэлс сохранили зов и отклик рабочей песни — строку запевалы и ответ хора — и обратили их к молитве."
+    carries: [call-and-response]
+    facts:
+      - card: spirituals
+        quote: "A leader could improvise a verse while the others answered with a refrain, the call and answer of work songs and field hollers."
+      - card: work-songs
+        quote: "In the work songs of the American South one voice sang a line and the crew answered with a refrain, timing the strokes of work."
+
+  - from: blues
+    to: work-songs
+    kind: influence
+    how: "The blues took the bending cry of the field holler, its blue notes, and the answering voice of the work song, now played by a guitar."
+    howRu: "Блюз взял у полевого клича его тянущийся, изгибающийся крик — блюзовые ноты, — а у рабочей песни отвечающий голос, который теперь вела гитара."
+    carries: [blue-notes, call-and-response]
+    facts:
+      - card: work-songs
+        quote: "A worker alone sent out a holler instead, a long bending cry."
+      - card: blues
+        quote: "The voice leans on blue notes, such as flattened thirds and sevenths, and the guitar often answers a line like a second singer."
+    sources:
+      - title: "Library of Congress, Folklife Today: The Painful Birth of Blues and Jazz"
+        url: "https://blogs.loc.gov/folklife/2017/02/birth-of-blues-and-jazz/"
+        quote: "These notes likely had earlier origins, as they are found in rural African American work songs."
+
+  - from: blues
+    to: spirituals
+    kind: influence
+    how: "The three-line blues verse grew out of the older sung forms of Black America, spirituals among them; the blues kept their call and response in the dialogue of voice and guitar."
+    howRu: "Трёхстрочный блюзовый куплет вырос из более старых песенных форм чёрной Америки, в том числе из спиричуэлс; зов и отклик блюз сохранил в диалоге голоса и гитары."
+    carries: [call-and-response]
+    facts:
+      - card: blues
+        quote: "The blues grew out of work songs, field hollers and spirituals, and its forms and sounds passed on into jazz, gospel and rock and roll."
+    sources:
+      - title: "Carnegie Hall, Timeline of African American Music: Rural/Folk Blues"
+        url: "https://timeline.carnegiehall.org/genres/rural-folk-blues"
+        quote: "The three-line rural blues form emerged out of African American work songs, field calls and protest songs, game songs and social songs, spirituals, and folk ballads."
+
+  - from: gospel
+    to: spirituals
+    kind: influence
+    how: "Gospel inherited the call and response of the spirituals through the jubilee quartets, but wrote new, composed songs in place of anonymous ones."
+    howRu: "Госпел унаследовал зов и отклик спиричуэлс через юбилейные квартеты, но вместо безымянных песен стал писать новые, авторские."
+    carries: [call-and-response]
+    facts:
+      - card: gospel
+        quote: "Unlike the spirituals, which no one person wrote, gospel songs had composers and were sold as sheet music."
+    sources:
+      - title: "Carnegie Hall, Timeline of African American Music: Jubilee Quartet"
+        url: "https://timeline.carnegiehall.org/genres/jubilee-quartet"
+        quote: "the call-and-response style of folk spiritual work song traditions"
+
+  - from: gospel
+    to: blues
+    kind: influence
+    how: "Thomas Dorsey set sacred words to the melodies, harmonies and beat of the blues, so gospel sang with blue notes and a rocking rhythm."
+    howRu: "Томас Дорси положил священные слова на мелодии, гармонии и ритм блюза, и госпел запел блюзовыми нотами на раскачивающемся ритме."
+    carries: [blue-notes]
+    facts:
+      - card: gospel
+        quote: "The blues-based style of Black gospel flourished in Chicago in the 1930s: new songs with sacred words, set to the melodies, harmonies and beat of the blues."
+    sources:
+      - title: "Carnegie Hall, Timeline of African American Music: Traditional Gospel"
+        url: "https://timeline.carnegiehall.org/genres/traditional-gospel"
+        quote: "Dorsey, known as the “Father of Gospel,” fused blues-styled melodies and harmonies, blues and ragtime rhythms, and texts that testified to the powers of Jesus Christ"
+      - title: "Center for Jazz Studies, Columbia University, Jazz Glossary: blues"
+        url: "https://ccnmtl.columbia.edu/projects/jazzglossary/b/blues.html"
+        quote: "a scale with a flatted third, fifth, and perhaps a seventh"
+
+  - from: jazz
+    to: blues
+    kind: influence
+    how: "Jazz took the blues as one of its foundations, the twelve-bar form and blue notes, and improvised on them."
+    howRu: "Джаз взял блюз за одну из своих основ — двенадцатитактовую форму и блюзовые ноты — и стал на них импровизировать."
+    carries: [twelve-bar-blues, blue-notes]
+    facts:
+      - card: jazz
+        quote: "It emerged in New Orleans around 1900, mainly among Black and Creole musicians, out of ragtime, the blues, spirituals and the city's brass-band marches, played with a ragged, swinging rhythm."
+    sources:
+      - title: "Carnegie Hall, Timeline of African American Music: Rural/Folk Blues"
+        url: "https://timeline.carnegiehall.org/genres/rural-folk-blues"
+        quote: "The harmonic structure of most blues songs, whether rural blues, urban blues, boogie-woogie, or jazz, is based on a 12-bar form"
+      - title: "Center for Jazz Studies, Columbia University, Jazz Glossary: blues"
+        url: "https://ccnmtl.columbia.edu/projects/jazzglossary/b/blues.html"
+        quote: "a scale with a flatted third, fifth, and perhaps a seventh"
+
+  - from: jazz
+    to: spirituals
+    kind: influence
+    how: "Jazz grew partly out of spirituals, and both leave room for improvisation; the facts show a shared practice, not a documented handover."
+    howRu: "Джаз отчасти вырос из спиричуэлс, и в обоих есть место импровизации; факты показывают общую практику, а не задокументированную передачу."
+    carries: []
+    facts:
+      - card: spirituals
+        quote: "A leader could improvise a verse while the others answered with a refrain"
+      - card: jazz
+        quote: "They improvised together, each horn weaving its own line around the tune"
+
+  - from: rhythm-and-blues
+    to: blues
+    kind: influence
+    how: "Rhythm and blues kept the twelve-bar blues and a rolling boogie bass, amplified and sped up for dancing in the cities."
+    howRu: "Ритм-н-блюз сохранил двенадцатитактовый блюз и раскатистый бас буги-вуги, усилив и ускорив их для танцев в городах."
+    carries: [twelve-bar-blues]
+    facts:
+      - card: rhythm-and-blues
+        quote: "Swing orchestras shrank to small jump bands, and their jump blues kept the twelve-bar blues, a rolling boogie-woogie bass and a shuffle beat"
+    sources:
+      - title: "Carnegie Hall, Timeline of African American Music: Rhythm & Blues"
+        url: "https://timeline.carnegiehall.org/genres/rhythm-blues"
+        quote: "The up-tempo style known as “jump blues” is characterized by a 12-bar blues structure, boogie-woogie bass line, shuffle rhythms"
+
+  - from: rhythm-and-blues
+    to: jazz
+    kind: influence
+    how: "Swing bands shrank into jump bands and brought rhythm and blues the shuffle beat and riffing horns."
+    howRu: "Свинговые оркестры сократились до джамп-составов и принесли ритм-н-блюзу шаффл и риффующие духовые."
+    carries: [swing, riff]
+    facts:
+      - card: rhythm-and-blues
+        quote: "Swing orchestras shrank to small jump bands, and their jump blues kept the twelve-bar blues, a rolling boogie-woogie bass and a shuffle beat, with a saxophone out front"
+    sources:
+      - title: "Carnegie Hall, Timeline of African American Music: Rhythm & Blues"
+        url: "https://timeline.carnegiehall.org/genres/rhythm-blues"
+        quote: "These combos, popular from the1940s through the early-1950s, retained the boogie-woogie foundation, the shuffle beat, and the riffing horn patterns from swing."
+
+  - from: rhythm-and-blues
+    to: gospel
+    kind: influence
+    how: "Rhythm and blues took gospel singing from the church, its vocal-group harmony and its gospel-inflected soloists."
+    howRu: "Ритм-н-блюз взял из церкви госпел-пение — гармонию вокальных групп и солистов с госпельной интонацией."
+    carries: [gospel-vocal]
+    facts:
+      - card: rhythm-and-blues
+        quote: "Vocal groups brought close harmony learned in church."
+    sources:
+      - title: "Carnegie Hall, Timeline of African American Music: Rhythm & Blues"
+        url: "https://timeline.carnegiehall.org/genres/rhythm-blues"
+        quote: "The vocals of Etta James, Dinah Washington, Ruth Brown (“Mama He Treats Your Daughter Mean,” 1953) and LaVern Baker often conveyed a gospel flavor."
+
+  - from: rock-n-roll
+    to: rhythm-and-blues
+    kind: influence
+    how: "Rock and roll was rhythm and blues under a new name, taking its heavy backbeat, saxophone and pounding piano to teenagers."
+    howRu: "Рок-н-ролл был ритм-н-блюзом под новым именем: он понёс подросткам его тяжёлый бэкбит, саксофон и молотящее фортепиано."
+    carries: [backbeat]
+    facts:
+      - card: rock-n-roll
+        quote: "\"What they call rock 'n' roll is rhythm and blues,\" said Fats Domino of New Orleans."
+      - card: rhythm-and-blues
+        quote: "with a saxophone out front and the drums hitting hard on the backbeat, two and four"
+    sources:
+      - title: "Library of Congress, Songs of America: Blues"
+        url: "https://www.loc.gov/collections/songs-of-america/articles-and-essays/musical-styles/popular-songs-of-the-day/blues/"
+        quote: "being overly reliant on a strong \"back beat,\" or a delayed emphasis on the second and fourth beats of the measure."
+
+  - from: rock-n-roll
+    to: blues
+    kind: influence
+    how: "Under rock and roll lay the blues, its twelve-bar form and blue notes and a call-and-response vocal pattern."
+    howRu: "Под рок-н-роллом лежал блюз — его двенадцатитактовая форма, блюзовые ноты и вокальный рисунок «зов и отклик»."
+    carries: [twelve-bar-blues, blue-notes, call-and-response]
+    facts:
+      - card: rock-n-roll
+        quote: "Under it all lay the blues"
+    sources:
+      - title: "Case Western Reserve University, Encyclopedia of Cleveland History: Rock & Roll"
+        url: "https://case.edu/ech/articles/r/rock-roll"
+        quote: "the use of \"blue notes\" (flatted thirds), a \"call-and-response\" vocal pattern, and a framework based on a 1-4-5 chord progression (tonic, subdominant, dominant)"
+
+  - from: rock-n-roll
+    to: gospel
+    kind: influence
+    how: "Rock and roll took gospel’s voice, the shouts and churchy tone of singers such as Little Richard, and Rosetta Tharpe’s gospel guitar."
+    howRu: "Рок-н-ролл взял голос госпела — крик и «церковный» тембр таких певцов, как Литл Ричард, — и госпельную гитару Розетты Тарп."
+    carries: [gospel-vocal]
+    facts:
+      - card: rock-n-roll
+        quote: "Under it all lay the blues, gospel, rhythm and blues, Sister Rosetta Tharpe's guitar"
+    sources:
+      - title: "Carnegie Hall, Timeline of African American Music: Rock ’n’ Roll"
+        url: "https://timeline.carnegiehall.org/genres/rock-n-roll"
+        quote: "developed a unique sound defined by their roots in Southern-flavored blues and gospel music, respectively"
+      - title: "New Georgia Encyclopedia: Little Richard"
+        url: "https://www.georgiaencyclopedia.org/articles/arts-culture/little-richard-penniman-1932-2020/"
+        quote: "Little Richard’s dramatic, “churchy” voice"
+
+  - from: funk
+    to: gospel
+    kind: influence
+    how: "Funk kept gospel’s voice, gospel-driven shouting and call and response, over a new rhythm."
+    howRu: "Фанк сохранил голос госпела — крик в госпельном духе и зов и отклик — поверх нового ритма."
+    carries: [gospel-vocal, call-and-response]
+    sources:
+      - title: "PBS: How James Brown Invented Funk"
+        url: "https://www.pbs.org/video/how-james-brown-invented-funk-xtwzri/"
+        quote: "The use of this gospel-inspired call and response and vocal punctuations have inspired generations of hip hop artists."
+      - title: "Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)"
+        url: "https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en"
+        quote: "James Brown developed funk in the 1960s by combining his ‘gospel-driven vocals’ with ‘jazzy horn arrangements’"
+
+  - from: funk
+    to: rhythm-and-blues
+    kind: influence
+    how: "Funk took the rhythm-and-blues dance band and moved its accent from the backbeat to the first beat, “the one”, turning the whole band into a groove."
+    howRu: "Фанк взял ритм-н-блюзовый танцевальный оркестр и перенёс акцент с бэкбита на первую долю, на «раз», превратив весь состав в грув."
+    carries: [groove]
+    facts:
+      - card: funk
+        quote: "Where rhythm and blues leaned on the backbeat, two and four, James Brown put the weight on the first beat of the bar, \"the one\"."
+    sources:
+      - title: "PBS: How James Brown Invented Funk"
+        url: "https://www.pbs.org/video/how-james-brown-invented-funk-xtwzri/"
+        quote: "So most music of that era gave heavy emphasis to the back beat, on the two and the four of the measure."
+
+  - from: funk
+    to: jazz
+    kind: influence
+    how: "Funk took solos, horn riffs and phrasing from the jazz of the swing and bebop bands."
+    howRu: "Фанк взял соло, духовые риффы и фразировку у джаза свинговых и бибоп-оркестров."
+    carries: [riff, improvisation]
+    facts:
+      - card: funk
+        quote: "Its roots run through gospel, rhythm and blues and jazz."
+    sources:
+      - title: "Carnegie Hall, Timeline of African American Music: Funk"
+        url: "https://timeline.carnegiehall.org/genres/funk"
+        quote: "represent a jazz-derived funk style that incorporates solos, horn riffs, and melodic phrasings from the bebop and swing band tradition"
+
+  - from: reggae
+    to: rhythm-and-blues
+    kind: influence
+    how: "Jamaican ska began as a local version of American rhythm and blues, with the accent moved to the offbeat; rocksteady and reggae slowed it down."
+    howRu: "Ямайское ска начиналось как местная версия американского ритм-н-блюза с акцентом, сдвинутым на слабую долю; рокстеди и регги замедлили его."
+    carries: [reggae-offbeat]
+    facts:
+      - card: reggae
+        quote: "Ska slowed into rocksteady and then into reggae, taking in soul and rhythm and blues from the United States."
+    sources:
+      - title: "Bob Marley official site: History"
+        url: "https://www.bobmarley.com/history/"
+        quote: "A local interpretation of American soul and R&B, with an irresistible accent on the offbeat"
+      - title: "Mixmag: How Jamaican soundsystem culture changed dance music forever"
+        url: "https://mixmag.net/feature/how-jamaican-soundsystem-culture-changed-dance-music-forever"
+        quote: "Initially playing R&B from America, soundsystems evolved parallel to the development of Jamaica’s own unique sounds"
+
+  - from: hip-hop
+    to: funk
+    kind: influence
+    how: "Hip-hop was built from funk records, looping their drum breaks and later sampling them."
+    howRu: "Хип-хоп собран из фанковых пластинок: их барабанные брейки зацикливали, а потом сэмплировали."
+    carries: [breakbeat, sampling]
+    facts:
+      - card: hip-hop
+        quote: "His trick was the merry-go-round: two copies of one funk or soul record on two turntables, switching between them so the drum break ran as long as he liked."
+      - card: funk
+        quote: "Funk fed Afrobeat and hip-hop, whose producers built new songs from its breaks"
+    sources:
+      - title: "Carnegie Hall, Timeline of African American Music: Rap/Hip-Hop"
+        url: "https://timeline.carnegiehall.org/genres/rap-hip-hop"
+        quote: "sampled materials from various sources, especially funk, provided the foundation for new songs"
+
+  - from: hip-hop
+    to: reggae
+    kind: influence
+    how: "Kool Herc brought the Jamaican sound system and the deejay’s toasting over records to the Bronx, and toasting fed rap flow."
+    howRu: "Кул Херк привёз в Бронкс ямайскую саунд-систему и манеру диджея «тостовать» поверх пластинок, и «тосты» питали рэп-флоу."
+    carries: [rap-flow]
+    facts:
+      - card: reggae
+        quote: "Its engine was the sound system: the first appeared in the late 1940s, and the selector at the records and the deejay who toasted over them followed"
+      - card: hip-hop
+        quote: "brought Jamaica's sound-system culture to the Bronx"
+    sources:
+      - title: "Contemporary Black Biography, via Encyclopedia.com: Kool Herc"
+        url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/kool-herc"
+        quote: "During mixes, he would often toast the crowd in the tradition of reggae emcees, calling out lyrics and names of people in the crowd."
+      - title: "Carnegie Hall, Timeline of African American Music: Musical Exchange Across the Black Atlantic"
+        url: "https://timeline.carnegiehall.org/stories/musical-exchange-across-the-black-atlantic"
+        quote: "a fusion of African American traditions of verbal improvisation with Jamaican traditions of “toasting” over prerecorded music"
+
+  - from: chicago-house
+    to: funk
+    kind: influence
+    how: "House reworked disco and funk records into a four-on-the-floor groove played by drum machines."
+    howRu: "Хаус переделывал диско- и фанк-пластинки в грув «четыре в пол», который играли драм-машины."
+    carries: [groove]
+    facts:
+      - card: chicago-house
+        quote: "young, mostly Black and gay men danced to the disco and funk records he reworked, later with a drum machine"
+    sources:
+      - title: "Carnegie Hall, Timeline of African American Music: House"
+        url: "https://timeline.carnegiehall.org/genres/house"
+        quote: "It is characterized by a funky 4/4 bass beat and prominent high-hat fills."
+
+  - from: detroit-techno
+    to: funk
+    kind: influence
+    how: "Detroit techno joined the funk of Parliament-Funkadelic to the machines of Kraftwerk, who had themselves taken in James Brown’s funky beats."
+    howRu: "Детройт-техно соединило фанк Parliament-Funkadelic с машинами Kraftwerk, которые и сами впитали фанковые биты Джеймса Брауна."
+    carries: [groove]
+    facts:
+      - card: detroit-techno
+        quote: "the funk of Parliament-Funkadelic and the electronic pop of Germany's Kraftwerk"
+    sources:
+      - title: "The Quietus: Karl Bartos interviewed"
+        url: "https://thequietus.com/interviews/karl-bartos-interviewed-kraftwerk-and-the-birth-of-the-modern/"
+        quote: "I was growing up with the funky beats of James Brown and I brought them in more and more."
+
+  - from: highlife
+    to: jazz
+    kind: influence
+    how: "Highlife’s dance bands borrowed jazz and swing-band horns; E. T. Mensah led a small swing-style band."
+    howRu: "Танцевальные оркестры хайлайфа заимствовали духовые джаза и свинговых бэндов; Э. Т. Менса возглавлял небольшой ансамбль в свинговом духе."
+    carries: [swing]
+    facts:
+      - card: highlife
+        quote: "After the war E. T. Mensah, later known as the King of Highlife, took it out of the ballroom with a small swing-style band, the Tempos."
+      - card: highlife
+        quote: "Its ballroom horns make it kin to jazz"
+    sources:
+      - title: "Carnegie Hall, Timeline of African American Music: Musical Exchange Across the Black Atlantic"
+        url: "https://timeline.carnegiehall.org/stories/musical-exchange-across-the-black-atlantic"
+        quote: "Jazz was later (along with Trinidadian calypso) also a fundamental catalyst in the development of the pan-Anglophone-West African dance music known as highlife"
+
+  - from: afrobeat
+    to: highlife
+    kind: influence
+    how: "Fela began in highlife and then built Afrobeat against it, replacing highlife’s improvising guitar with interlocking repeated patterns; the step is a departure rather than a handover."
+    howRu: "Фела начинал в хайлайфе, а потом построил афробит в споре с ним, заменив импровизирующую гитару хайлайфа сцепленными повторяющимися рисунками; этот шаг — отход, а не передача."
+    carries: []
+    facts:
+      - card: highlife
+        quote: "Fela Kuti began in highlife before he built Afrobeat"
+    sources:
+      - title: "Naeem Inayatullah: Gigging on the World Stage (Contexto Internacional, 2016)"
+        url: "https://www.scielo.br/j/cint/a/3TTy5RCKtKQDJLghWzb833b/?lang=en"
+        quote: "Eliminating the improvising guitar allowed Fela to distance afrobeat from highlife."
+
+  - from: afrobeat
+    to: funk
+    kind: influence
+    how: "Afrobeat took the drive of James Brown’s funk, its long, repeating groove."
+    howRu: "Афробит взял напор фанка Джеймса Брауна — его долгий, повторяющийся грув."
+    carries: [groove]
+    facts:
+      - card: afrobeat
+        quote: "Fela had led a highlife and jazz band before it, and took the drive of James Brown's funk."
+      - card: afrobeat
+        quote: "A big band builds a trance-like groove that can fill a whole side of an LP"
+
+  - from: afrobeat
+    to: jazz
+    kind: influence
+    how: "From jazz Afrobeat took its horn section and extended improvisation."
+    howRu: "У джаза афробит взял духовую секцию и протяжённую импровизацию."
+    carries: [improvisation]
+    facts:
+      - card: afrobeat
+        quote: "horns punch out riffs over the drums"
+    sources:
+      - title: "Trinity Laban Conservatoire: Fela Kuti"
+        url: "https://www.trinitylaban.ac.uk/about-us/our-history/fela-kuti/"
+        quote: "Fela began experimenting with a fusion of jazz, highlife, Yoruba rhythms, funk, and extended improvisation."

@@ -1,13 +1,12 @@
----
 id: eminem
 name: Eminem
 nameRu: Эминем
 aliases:
-- эминем
-- маршалл мэтерс
-- слим шейди
+  - эминем
+  - маршалл мэтерс
+  - слим шейди
 years:
-- 1972
+  - 1972
 place:
   name: St. Joseph, Missouri
   lat: 39.7675
@@ -15,49 +14,70 @@ place:
 placeRu: "Сент-Джозеф, Миссури"
 genre: Hip-hop
 genreRu: хип-хоп
+story: "Eminem learned rap from the golden-age MCs — LL Cool J made him want to rap, and Rakim’s multisyllabic, inside rhyme schemes taught him how. He came up battle-rapping in Detroit’s underground clubs and broke through with a rapid-fire delivery of raw, taboo stories, often voiced by his alter ego Slim Shady."
+storyRu: "Эминем учился рэпу у эмси золотой эры: из-за LL Cool J ему захотелось читать рэп, а многосложные внутренние рифмы Ракима научили, как это делать. Он вырос на рэп-баттлах в подпольных клубах Детройта и прорвался скороговоркой, которой рассказывал грубые, запретные истории, часто голосом своего альтер эго Слима Шейди."
 links:
-- to: card:funk
-  claim: Eminem’s “My Name Is” uses the riff from Labi Siffre’s funk recording “I
-    Got The…”.
-  claimRu: В «My Name Is» Эминема использован рифф из фанковой записи Лаби Сиффре
-    «I Got The…».
-  sources:
-  - title: 'MusicRadar: Chas and Dave played on a classic Eminem track'
-    url: https://www.musicradar.com/news/chas-and-dave-played-on-a-classic-eminem-track-and-no-one-knew-about-it
-  - title: 'Rolling Stone: Labi Siffre’s Biggest Moment Was an Eminem Sample'
-    url: https://www.rollingstone.com/music/music-features/the-holdovers-song-crying-laughing-loving-lying-labi-siffre-1234939657/
-  kind: sample
-  what: The instrumental riff from Labi Siffre’s 1975 recording “I Got The…” in “My
-    Name Is”.
-  whatRu: Инструментальный рифф из записи Лаби Сиффре «I Got The…» 1975 года в «My
-    Name Is».
-- to: root:rakim
-  kind: influence
-  claim: Rakim’s rhyme patterns helped shape Eminem’s approach to rap.
-  claimRu: Рифмовка Ракима помогла сформировать подход Эминема к рэпу.
-  sources:
-  - title: 'SiriusXM Shade 45: Eminem on learning from Rakim'
-    url: https://www.siriusxm.com/blog/eminem-ll-cool-j-rakim-shade-45
-  - title: Apple Music interview with Eminem, transcribed by GRUNGECAKE
-    url: https://grungecake.com/eminem-apple-music-beats-1/news/74251/?share=mastodon
-- to: root:labi-siffre
-  claim: Eminem’s “My Name Is” uses the riff from Labi Siffre’s funk recording “I
-    Got The…”.
-  claimRu: В «My Name Is» Эминема использован рифф из фанковой записи Лаби Сиффре
-    «I Got The…».
-  sources:
-  - title: 'MusicRadar: Chas and Dave played on a classic Eminem track'
-    url: https://www.musicradar.com/news/chas-and-dave-played-on-a-classic-eminem-track-and-no-one-knew-about-it
-  - title: 'Pitchfork: Labi Siffre — Crying Laughing Loving Lying'
-    url: https://pitchfork.com/reviews/albums/labi-siffre-crying-laughing-loving-lying/
-  kind: sample
-  what: The instrumental riff from Labi Siffre’s 1975 recording “I Got The…” in “My
-    Name Is”.
-  whatRu: Инструментальный рифф из записи Лаби Сиффре «I Got The…» 1975 года в «My
-    Name Is».
-story: 'Rakim’s rhyme patterns helped shape Eminem’s approach to rap. “My Name Is”
-  also carries an older recording inside it: the instrumental riff from Labi Siffre’s
-  “I Got The…”.'
-storyRu: Рифмовка Ракима помогла сформировать подход Эминема к рэпу. А внутри «My
-  Name Is» звучит более ранняя запись — инструментальный рифф из «I Got The…» Лаби
-  Сиффре.
+  - to: "root:rakim"
+    kind: "influence"
+    scope: "career"
+    how: "Eminem built his rhyme craft on Rakim’s: dense multisyllabic and internal rhyme schemes that grow more complex with every verse."
+    howRu: "Своё искусство рифмы Эминем построил на ракимовском: плотные многосложные и внутренние рифмы, которые с каждым куплетом усложняются."
+    carries: ["rap-flow"]
+    dimensions: ["melody-vocal", "rhythm"]
+    evidence:
+      - type: "testimony"
+        dimensions: ["melody-vocal"]
+        text: "On Shade 45 Eminem talked about learning from Rakim’s multisyllabic rhyme patterns."
+        textRu: "В эфире Shade 45 Эминем рассказывал, как учился на многосложных рифмах Ракима."
+        source:
+          title: "SiriusXM: Eminem Shares His Influences During Shade 45’s ‘Back to School’ Special (2026)"
+          url: "https://www.siriusxm.com/blog/eminem-ll-cool-j-rakim-shade-45"
+          quote: "Eminem also discussed learning from Rakim’s multisyllabic rhyme patterns and described his time in Detroit’s underground rap scene as an important learning experience."
+      - type: "testimony"
+        dimensions: ["melody-vocal", "rhythm"]
+        text: "To Apple Music he praised Rakim’s inside rhyme schemes and multisyllabic rhymes as the work of “the God MC”."
+        textRu: "В интервью Apple Music он восхищался внутренними и многосложными рифмами Ракима — «бога среди эмси»."
+        source:
+          title: "GRUNGECAKE: Eminem tells Apple Music about the golden age of hip-hop (transcript of the Zane Lowe interview)"
+          url: "https://grungecake.com/eminem-apple-music-beats-1/news/74251/"
+          quote: "Yo, the inside rhyme schemes, all that sh-t. Yeah, man, that’s the God MC right there. Yeah, all the multi-syllable, and Rakim just kept getting more complicated with the sh-t every time he came out."
+      - type: "critics"
+        dimensions: ["rhythm"]
+        text: "Connecticut Public names Eminem among the MCs inspired by Rakim’s rhymes and rhythms."
+        textRu: "Connecticut Public называет Эминема среди эмси, вдохновлённых рифмами и ритмами Ракима."
+        source:
+          title: "Connecticut Public / NPR: Eric B. & Rakim change the flow of rap with ‘Paid in Full’ (2023)"
+          url: "https://www.ctpublic.org/2023-08-04/eric-b-rakim-change-the-flow-of-rap-with-paid-in-full"
+          quote: "A lot of MC's have been inspired by Rakim's rhymes and rhytms from Eminem to Lil Wayne to Houston artists like Bun B and Z-Ro, says Fitzgerald."
+  - to: "card:hip-hop"
+    kind: "style"
+    scope: "career"
+    how: "Eminem came up through hip-hop’s battle rap in Detroit’s clubs, on the golden-age MCs from LL Cool J to Nas, and made his name with rapid-fire delivery, raw confessional subject matter and the alter ego Slim Shady."
+    howRu: "Эминем вырос на рэп-баттлах в клубах Детройта и на эмси золотой эры — от LL Cool J до Nas, а прославился скороговоркой, грубыми исповедальными сюжетами и альтер эго Слимом Шейди."
+    carries: ["rap-flow"]
+    dimensions: ["melody-vocal", "image", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["melody-vocal", "image"]
+        text: "The Rock & Roll Hall of Fame describes his rapid-fire delivery of taboo subjects and his alter ego."
+        textRu: "Зал славы рок-н-ролла описывает его стремительную подачу запретных тем и его альтер эго."
+        source:
+          title: "Rock & Roll Hall of Fame: Eminem (2022)"
+          url: "https://rockhall.com/inductees/eminem/"
+          quote: "Eminem burst from the Detroit rap underground to global fame with rapid-fire delivery of raw, taboo subject matter like addiction, occasionally voiced by alter-ego Slim Shady."
+      - type: "critics"
+        dimensions: ["performance", "melody-vocal"]
+        text: "Jeremy D. Larson notes his love for Big Daddy Kane, Masta Ace and Nas and his come-up battle-rapping in Detroit clubs."
+        textRu: "Джереми Д. Ларсон отмечает его любовь к Big Daddy Kane, Masta Ace и Nas и то, как он поднимался через рэп-баттлы в детройтских клубах."
+        source:
+          title: "Pitchfork (Jeremy D. Larson): Eminem — The Marshall Mathers LP"
+          url: "https://pitchfork.com/reviews/albums/eminem-the-marshall-mathers-lp/"
+          quote: "The album established his to-put-it-lightly Freudian relationship with his mother, his clear love for legends like Big Daddy Kane and Masta Ace and Nas, and his come-up battle-rapping at the Detroit hip-hop clubs."
+      - type: "testimony"
+        dimensions: ["performance"]
+        text: "Eminem said LL Cool J was what made him want to rap."
+        textRu: "Эминем говорил, что рэп ему захотелось читать из-за LL Cool J."
+        source:
+          title: "SiriusXM: Eminem Shares His Influences During Shade 45’s ‘Back to School’ Special (2026)"
+          url: "https://www.siriusxm.com/blog/eminem-ll-cool-j-rakim-shade-45"
+          quote: "“He was what made me want to rap in the first place,” Eminem said."

@@ -8,12 +8,20 @@ import { zoom as d3zoom, zoomIdentity, type ZoomTransform } from 'd3-zoom';
 import 'd3-transition';
 import { h, reducedMotion, svgIcon } from '../lib/dom';
 import { count, lang, pick, t } from '../lib/i18n';
-import { buildGraph, grewFrom, headline, layout, radius, reach, yearY, type GEdge, type GNode, type Graph, type MapCard } from '../lib/rootsMap';
+import { buildGraph, carrying, grewFrom, headline, layout, radius, reach, yearY, type GEdge, type GNode, type Graph, type MapCard } from '../lib/rootsMap';
 import { nbsp, quotes } from '../lib/typo';
-import { placeName, KIND_LABEL, searchArtists, type Artist, type LinkKind } from '../lib/roots';
+import { recordingFor } from '../lib/listen';
+import { placeName, KIND_LABEL, searchArtists, type Artist, type LineageCard, type LinkKind } from '../lib/roots';
+import { cardLinkIndex, elementColors, type MusicElement } from '../lib/elements';
+import { elementReach, routeSet, type RouteSet } from '../lib/routes';
+import { RouteReader } from './routeReader';
+import { ElementPanel } from './elementPanel';
+import { miniPlayer } from './miniPlayer';
 
 const NS = 'http://www.w3.org/2000/svg';
-const KINDS: (LinkKind | 'lineage')[] = ['influence', 'cover', 'sample', 'interpolation', 'member', 'producer', 'collaboration', 'scene', 'teacher', 'lineage'];
+const KINDS: (LinkKind | 'lineage')[] = ['influence', 'style', 'scene', 'teacher', 'lineage'];
+/** Room kept between a name and the edge of a phone screen, px. */
+const EDGE = 6;
 
 export class RootsMap {
   readonly el: HTMLElement;
@@ -32,6 +40,16 @@ export class RootsMap {
   private built = false;
   private phone = false;
   private early = 0.28;
+  private lit?: Set<string>;
+  private litCard = false;
+  private reader: RouteReader;
+  private panel: ElementPanel;
+  private elements: Map<string, MusicElement>;
+  private colors: Map<string, string>;
+  private byId: Map<string, Artist>;
+  private lineage: Map<string, LineageCard>;
+  private elFilter?: string;
+  private elBar: HTMLElement;
   onClose?: () => void;
 
   constructor(
@@ -77,7 +95,31 @@ export class RootsMap {
       h('div.rm-search', {}, this.input, this.results),
       h('p.rm-hint-line', {}, pick({ en: 'Tap an artist to light its way to the roots. Later artists are further up ↑', ru: 'Коснитесь исполнителя — загорится его путь к корням. Выше — более поздние исполнители ↑' })),
     );
+    this.byId = new Map([...artists, ...app.styles].map((a) => [a.id, a]));
+    this.lineage = new Map(app.set.all().map((c) => [c.id, { id: c.id, roots: c.roots }] as [string, LineageCard]));
+    this.elements = new Map(app.elements.elements.map((e) => [e.id, e]));
+    this.colors = elementColors(app.elements);
+    this.elBar = h('div.rm-elbar');
+    if (app.elements.elements.length) {
+      this.elBar.append(
+        h('span.rm-elbar-lede', {}, pick({ en: 'Follow an element:', ru: 'Проследить элемент:' })),
+        h(
+          'ul.rm-els',
+          { 'aria-label': pick({ en: 'Elements of music', ru: 'Элементы музыки' }) },
+          app.elements.elements.map((e) =>
+            h('li', {}, h('button.rt-el', { type: 'button', 'data-el': e.id, 'aria-pressed': 'false', style: `--ec:${this.colors.get(e.id)}`, onclick: () => this.filterElement(this.elFilter === e.id ? undefined : e.id) }, h('i', { 'aria-hidden': 'true' }), (lang() === 'ru' && e.nameRu) || e.name)),
+          ),
+        ),
+      );
+      this.head.append(this.elBar);
+    }
+    this.reader = new RouteReader({ app, byId: this.byId, cardLinks: cardLinkIndex(app.cardLinks), elements: this.elements, colors: this.colors, lines: app.lines, onElement: (id) => this.filterElement(id) }, true);
     this.el = h('section.rmap', { 'aria-label': pick({ en: 'The music map', ru: 'Карта музыки' }), tabindex: '-1' }, bar, this.head, this.stage, legend, this.info);
+    this.panel = new ElementPanel(app, this.byId, this.el, app.cardLinks.links);
+    this.panel.onArtist = (id) => {
+      this.panel.close();
+      this.focusOn(id);
+    };
     this.el.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') this.onClose?.();
     });
@@ -97,6 +139,8 @@ export class RootsMap {
   }
 
   close(): void {
+    this.panel.close();
+    miniPlayer().close();
     this.el.classList.remove('open');
     document.body.classList.remove('locked');
   }
@@ -108,7 +152,8 @@ export class RootsMap {
   private build(): void {
     this.built = true;
     const cards = new Map<string, MapCard>(this.app.set.all().map((c) => [c.id, { id: c.id, title: c.title, years: c.years, roots: c.roots }]));
-    const g = (this.g = buildGraph(this.artists, cards, (a) => this.nameOf(a)));
+    const cardCarries = new Map(this.app.cardLinks.links.filter((l) => l.carries?.length).map((l) => [`${l.from}>${l.to}`, l.carries!]));
+    const g = (this.g = buildGraph([...this.artists, ...this.app.styles], cards, (a) => this.nameOf(a), cardCarries));
     this.phone = window.innerWidth < 760;
     // Phones get a canvas wider than the screen, panned sideways, so the
     // artists spread out instead of piling at the left edge.
@@ -124,23 +169,34 @@ export class RootsMap {
     if (this.phone) {
       this.svg.setAttribute('height', String(H));
       this.svg.setAttribute('width', String(W));
+      // Drawn at full size and panned, never shrunk to the screen: labels stay legible.
+      this.svg.style.width = `${W}px`;
+      this.svg.style.height = `${H}px`;
+      this.svg.style.maxWidth = 'none';
     }
     this.draw(W, H, years);
     // Headline: computed from the data.
     const hl = headline(g);
-    const rc = hl.root ? this.app.set.get(hl.root.id.slice(5)) : undefined;
-    const rootInline = rc?.inline || (hl.root ? (lang() === 'ru' ? `«${hl.root.label}»` : hl.root.label.charAt(0).toLowerCase() + hl.root.label.slice(1)) : '');
+    const inline = (n: GNode) => {
+      const rc = this.app.set.get(n.id.slice(5));
+      return rc?.inline || (lang() === 'ru' ? `«${n.label}»` : n.label.replace(/^The /, 'the '));
+    };
+    const names = hl.roots.map(inline);
+    const two = names.length > 1;
+    // As many roots as the map draws at its foot, named, never "one root" over two.
+    const en = two ? `${names.length === 2 ? 'two' : names.length} roots: ${names.slice(0, -1).join(', ')} and ${names[names.length - 1]}` : names[0];
+    const ruN = two ? `${names.length === 2 ? 'двум' : names.length === 3 ? 'трём' : names.length} корням: ${names.slice(0, -1).join(', ')} и ${names[names.length - 1]}` : `корню: ${names[0]}`;
     // Set explicitly: the heading is written before the page-wide typesetter starts.
-    this.head.querySelector('h2')!.textContent = nbsp(hl.root
+    this.head.querySelector('h2')!.textContent = nbsp(hl.roots.length
       ? pick({
           en:
             hl.count === hl.total
-              ? `All ${hl.total} artists lead back to ${rootInline}`
-              : `Of ${count(hl.total, 'artist', 'en')}, ${hl.count} lead back to ${rootInline}`,
+              ? `All ${hl.total} artists lead back to ${en}`
+              : `Of ${count(hl.total, 'artist', 'en')}, ${hl.count} lead back to ${en}`,
           ru:
             hl.count === hl.total
-              ? `Все ${count(hl.total, 'artist', 'ru')} ${pluralLead(hl.total)} к одному корню: ${rootInline}`
-              : `Из ${count(hl.total, 'artistOf', 'ru')} ${hl.count} ${pluralLead(hl.count)} к одному корню: ${rootInline}`,
+              ? `Все ${count(hl.total, 'artist', 'ru')} ${pluralLead(hl.total)} к ${ruN}`
+              : `Из ${count(hl.total, 'artistOf', 'ru')} ${hl.count} ${pluralLead(hl.count)} к ${ruN}`,
         })
       : pick({ en: 'Every chain on one map', ru: 'Все цепочки на одной карте' }), lang());
     if (!this.phone) {
@@ -166,10 +222,22 @@ export class RootsMap {
       select(this.svg).call(this.zoomer.transform, zoomIdentity.translate((vw - (x1 - x0) * k) / 2 - x0 * k, (vh - (y1 - y0) * k) / 2 - y0 * k).scale(k));
     }
     this.placeLabels();
+    // Labels are measured: measure again once the faces have loaded.
+    // The italic face of the root names loads only once they are drawn.
+    const again = () => this.isOpen && this.placeLabels(this.lit);
+    void document.fonts?.ready.then(again);
+    document.fonts?.addEventListener?.('loadingdone', again);
+    setTimeout(again, 700);
     this.showInfo();
     // Phones open on the roots at the bottom, with the artists above them; the
     // line under the search says that later artists are further up.
     if (this.phone) {
+      // Names are fitted to the visible strip: fit them again once a pan settles.
+      let settle = 0;
+      this.stage.addEventListener('scroll', () => {
+        clearTimeout(settle);
+        settle = window.setTimeout(() => this.isOpen && this.placeLabels(this.lit), 120);
+      }, { passive: true });
       const deepest = Math.max(...g.nodes.map((n) => n.y!));
       requestAnimationFrame(() => {
         this.stage.scrollTop = Math.max(0, deepest + 90 - this.stage.clientHeight);
@@ -212,70 +280,208 @@ export class RootsMap {
     }
     for (const n of [...g.nodes].sort((x, y) => Number(x.card) - Number(y.card))) {
       const el = document.createElementNS(NS, 'g');
-      el.setAttribute('class', `rm-node${n.card ? ' card' : ''}`);
+      el.setAttribute('class', `rm-node${n.card ? ' card' : ''}${n.style ? ' style' : ''}`);
       el.setAttribute('transform', `translate(${n.x},${n.y})`);
       el.setAttribute('tabindex', '0');
       el.setAttribute('role', 'button');
       el.setAttribute('aria-label', `${n.label}, ${n.year}`);
       const r = radius(n);
-      el.innerHTML = `${n.card ? `<circle class="halo" r="${r * 3.2}" fill="url(#rm-glow)"/>` : ''}<circle class="dot" r="${r}"/><text class="lbl" y="${-r - 5}" text-anchor="middle"></text>`;
+      const dot = n.style ? `<rect class="dot" x="${-r}" y="${-r}" width="${2 * r}" height="${2 * r}" transform="rotate(45)"/>` : `<circle class="dot" r="${r}"/>`;
+      el.innerHTML = `${n.card ? `<circle class="halo" r="${r * 3.2}" fill="url(#rm-glow)"/>` : ''}${dot}<text class="lbl" y="${-r - 5}" text-anchor="middle"></text>`;
       el.querySelector('text')!.textContent = quotes(n.label, lang());
-      el.addEventListener('mouseenter', () => !this.pinned && this.light(n.id));
-      el.addEventListener('mouseleave', () => !this.pinned && this.light());
-      el.addEventListener('focus', () => this.light(n.id));
-      el.addEventListener('click', () => {
-        this.pinned = this.pinned === n.id ? undefined : n.id;
-        this.light(this.pinned);
+      el.addEventListener('click', () => this.pick(n.id));
+      el.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.pick(n.id);
+        }
       });
       gNodes.append(el);
       this.nodeEls.set(n.id, el);
     }
   }
 
-  /** Light a node's whole way down (an artist) or everything that grew from it (a root). */
-  private light(id?: string): void {
+  /**
+   * Light an artist's route (its stations on, the rest of its way down
+   * half-lit) or, for a root, everything that grew from it. Only the lit
+   * route is named; everything else is dimmed.
+   */
+  private light(id?: string, route?: number): void {
     const g = this.g!;
-    this.el.classList.toggle('lit', !!id);
+    this.el.classList.toggle('lit', !!id || !!this.elFilter);
+    this.lit = undefined;
+    this.litCard = false;
+    this.nodeEls.forEach((el) => el.classList.remove('cur', 'near'));
+    this.edgeEls.forEach(({ el }) => el.classList.remove('near'));
     if (!id) {
       this.nodeEls.forEach((el) => el.classList.remove('on'));
       this.edgeEls.forEach(({ el }) => el.classList.remove('on'));
+      if (this.elFilter) return this.paintElement();
       this.showInfo();
+      this.placeLabels();
       return;
     }
     const n = g.byId.get(id)!;
-    const set = n.card ? grewFrom(g, id) : reach(g, id);
-    this.nodeEls.forEach((el, k) => el.classList.toggle('on', set.has(k)));
-    this.edgeEls.forEach(({ e, el }) => el.classList.toggle('on', set.has(e.from) && set.has(e.to)));
-    this.showInfo(n, set);
-    this.placeLabels(set);
+    if (n.card || n.style) {
+      // A root or a style: everything that grew from it, and for a style the way down too.
+      const set = n.style ? new Set([...grewFrom(g, id), ...reach(g, id)]) : grewFrom(g, id);
+      this.nodeEls.forEach((el, k) => el.classList.toggle('on', set.has(k)));
+      this.edgeEls.forEach(({ e, el }) => el.classList.toggle('on', set.has(e.from) && set.has(e.to)));
+      this.showInfo(n, set);
+      this.lit = set;
+      this.litCard = true;
+      this.placeLabels(set);
+      return;
+    }
+    const a = this.byId.get(id)!;
+    const rs = routeSet(a, this.byId, this.lineage);
+    const cur = route ?? (this.shownArtist === id ? this.reader.current : 0);
+    this.shownArtist = id;
+    this.paintRoute(rs, cur);
+    this.showInfo(n, undefined, cur);
   }
 
-  private showInfo(n?: GNode, set?: Set<string>): void {
+  private shownArtist?: string;
+
+  /** One route of the lit artist: its stations and links on, the rest of the way half-lit. */
+  private paintRoute(rs: RouteSet, cur: number): void {
+    const g = this.g!;
+    const route = rs.routes[cur] ?? [rs.root];
+    const on = new Set(route);
+    const steps = new Set(route.slice(0, -1).map((r, i) => `${r}>${route[i + 1]}`));
+    const near = reach(g, rs.root);
+    this.nodeEls.forEach((el, k) => {
+      el.classList.toggle('on', on.has(k));
+      el.classList.toggle('near', !on.has(k) && near.has(k));
+    });
+    this.edgeEls.forEach(({ e, el }) => {
+      el.classList.toggle('on', steps.has(`${e.from}>${e.to}`));
+      el.classList.toggle('near', !steps.has(`${e.from}>${e.to}`) && near.has(e.from) && near.has(e.to));
+    });
+    this.lit = on;
+    this.placeLabels(on);
+  }
+
+  /** Light every link that carries an element. */
+  filterElement(id?: string): void {
+    this.elFilter = id && this.elements.has(id) ? id : undefined;
+    this.elBar.querySelectorAll<HTMLElement>('[data-el]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.el === this.elFilter)));
+    this.pinned = undefined;
+    this.shownArtist = undefined;
+    this.light();
+  }
+
+  private paintElement(): void {
+    const g = this.g!;
+    const id = this.elFilter!;
+    const { edges, nodes } = carrying(g, id);
+    const color = this.colors.get(id) ?? '';
+    const lit = new Set(edges);
+    this.nodeEls.forEach((el, k) => el.classList.toggle('on', nodes.has(k)));
+    this.edgeEls.forEach(({ e, el }) => {
+      el.classList.toggle('on', lit.has(e));
+      el.classList.toggle('el-on', lit.has(e));
+      // A lit link takes the element's colour in place of its kind's.
+      if (lit.has(e)) el.style.setProperty('--kc', color);
+      else el.style.removeProperty('--kc');
+    });
+    this.lit = nodes;
+    this.placeLabels(nodes);
+    const e = this.elements.get(id)!;
+    const reachOf = elementReach(this.artists, [e], this.app.styles).get(id);
+    this.info.classList.remove('idle');
+    this.info.replaceChildren(
+      h('small', { style: `color:${color}` }, pick({ en: 'An element of music', ru: 'Элемент музыки' })),
+      h('b', {}, (lang() === 'ru' && e.nameRu) || e.name),
+      h('p', {}, (lang() === 'ru' && e.whatRu) || e.what),
+      h('p.rm-el-count', {}, pick({ en: `Lit: ${edges.length} ${edges.length === 1 ? 'link carries' : 'links carry'} it, along ${reachOf?.routes ?? 0} ${reachOf?.routes === 1 ? 'route' : 'routes'}.`, ru: `Подсвечено связей, которые его несут: ${edges.length}; маршрутов: ${reachOf?.routes ?? 0}.` })),
+      h('div.rm-info-btns', {}, h('button.btn', { type: 'button', onclick: () => this.panel.open({ element: e, color, reach: reachOf }) }, pick({ en: 'Where it comes from →', ru: 'Откуда он →' })), h('button.btn', { type: 'button', onclick: () => this.filterElement() }, pick({ en: 'Clear', ru: 'Сбросить' }))),
+    );
+  }
+
+  private showInfo(n?: GNode, set?: Set<string>, cur = 0): void {
     this.info.classList.toggle('idle', !n);
+    this.info.classList.remove('path');
     if (!n) {
       this.info.replaceChildren(
-        h('p.rm-hint', {}, pick({ en: 'Tap an artist to light its way to the roots; a glowing root, to see all that grew from it.', ru: 'Коснитесь исполнителя — загорится его путь к корням; светящегося корня — всё, что из него выросло.' })),
+        h('p.rm-hint', {}, pick({ en: 'Tap an artist to read its route to the roots; a glowing root, to see all that grew from it.', ru: 'Коснитесь исполнителя — откроется его маршрут к корням; светящегося корня — всё, что из него выросло.' })),
+      );
+      return;
+    }
+    if (n.style) {
+      const st = this.byId.get(n.id);
+      const grew = [...grewFrom(this.g!, n.id)].filter((k) => !this.g!.byId.get(k)!.card && !this.g!.byId.get(k)!.style).length;
+      this.info.replaceChildren(
+        h('small', {}, pick({ en: 'A style', ru: 'Стиль' })),
+        h('b', {}, n.label),
+        h('ul.rm-traits', {}, (st?.traits ?? []).map((t) => h('li', {}, (lang() === 'ru' && t.ru) || t.en))),
+        h('p', {}, pick({ en: `${count(grew, 'artist', 'en')} of the collection work in it.`, ru: `Исполнителей коллекции в этом стиле: ${grew}.` })),
       );
       return;
     }
     if (n.card) {
-      const artists = [...set!].filter((k) => !this.g!.byId.get(k)!.card).length;
+      const artists = [...set!].filter((k) => !this.g!.byId.get(k)!.card && !this.g!.byId.get(k)!.style).length;
+      const rec = recordingFor(this.app.listen, n.id);
       this.info.replaceChildren(
         h('small', {}, pick({ en: 'A root in the museum', ru: 'Корень в музее' })),
         h('b', {}, n.label),
         h('p', {}, pick({ en: `${count(artists, 'artist', 'en')} grew out of it.`, ru: `Из него выросло: ${count(artists, 'artist', 'ru')}.` })),
-        h('a.btn', { href: `#focus=${n.id.slice(5)}`, 'data-card': n.id.slice(5) }, pick({ en: 'Open the card →', ru: 'Открыть карточку →' })),
+        h(
+          'div.rm-info-btns',
+          {},
+          rec
+            ? h('button.btn.rt-playcard', { type: 'button', 'aria-label': pick({ en: `Play ${n.label}: ${rec.title}`, ru: `Слушать: ${n.label}, ${rec.title}` }), onclick: () => miniPlayer().play([{ ref: n.id, label: n.label, rec }], 0) }, '▶ ', pick({ en: 'Listen', ru: 'Слушать' }))
+            : null,
+          h('a.btn', { href: `#focus=${n.id.slice(5)}`, 'data-card': n.id.slice(5) }, pick({ en: 'Open the card →', ru: 'Открыть карточку →' })),
+        ),
       );
       return;
     }
-    const a = this.artists.find((x) => x.id === n.id)!;
-    const story = (lang() === 'ru' && a.storyRu) || a.story;
+    const a = this.byId.get(n.id)!;
+    this.info.classList.add('path');
+    const route = this.reader.el;
+    this.reader.onRoute = (i) => {
+      this.paintRoute(routeSet(a, this.byId, this.lineage), i);
+      head.replaceChildren(...this.pathHead(a));
+    };
+    const rs = routeSet(a, this.byId, this.lineage);
+    this.reader.set(rs, cur);
+    const head = h('div.rm-path-head', {}, ...this.pathHead(a));
+    // Phones: the sheet opens folded, so the lit path stays in view above it.
+    this.info.classList.remove('open');
+    const toggle = h(
+      'button.btn.rm-sheet-toggle',
+      {
+        type: 'button',
+        'aria-expanded': 'false',
+        onclick: () => {
+          const open = this.info.classList.toggle('open');
+          toggle.setAttribute('aria-expanded', String(open));
+          toggle.textContent = open ? pick({ en: 'Hide the route ↓', ru: 'Свернуть маршрут ↓' }) : pick({ en: 'Read the route ↑', ru: 'Читать маршрут ↑' });
+        },
+      },
+      pick({ en: 'Read the route ↑', ru: 'Читать маршрут ↑' }),
+    );
     this.info.replaceChildren(
+      head,
+      toggle,
+      route,
+      h('a.btn', { href: `#view=roots&artist=${a.id}`, 'data-artist-roots': a.id }, pick({ en: 'All routes in Roots →', ru: 'Все маршруты в «Корнях» →' })),
+    );
+    this.info.scrollTop = 0;
+  }
+
+  private pathHead(a: Artist): HTMLElement[] {
+    const heard = this.reader.tracks().length;
+    const summary = this.reader.summary();
+    return [
       h('small', {}, `${a.years[0]} · ${placeName(a, lang())}`),
       h('b', {}, this.nameOf(a)),
-      ...(story ? [h('p', {}, story)] : []),
-      h('a.btn', { href: `#view=roots&artist=${a.id}`, 'data-artist-roots': a.id }, pick({ en: 'Follow the chain →', ru: 'Пройти по цепочке →' })),
-    );
+      ...(((lang() === 'ru' && a.storyRu) || a.story) ? [h('p.rm-story', {}, (lang() === 'ru' && a.storyRu) || a.story!)] : []),
+      ...(heard ? [h('button.btn.primary.rt-playroute', { type: 'button', onclick: () => this.reader.playRoute() }, svgIcon('wave'), pick({ en: 'Play the route', ru: 'Слушать маршрут' }))] : []),
+      ...(summary ? [summary] : []),
+      ...[this.reader.lineBox()].filter((x): x is HTMLElement => !!x),
+    ];
   }
 
   /** Labels by importance; none overlap. While something is lit, its labels come first. */
@@ -303,40 +509,91 @@ export class RootsMap {
     // Dots are obstacles too: a label never covers another artist's node.
     const dots = new Map<string, DOMRect>();
     for (const n of g.nodes) {
-      const c = this.nodeEls.get(n.id)?.querySelector('circle');
+      const c = this.nodeEls.get(n.id)?.querySelector('circle.dot');
       if (c) dots.set(n.id, c.getBoundingClientRect());
     }
     let self = '';
     const over = (r: DOMRect, b: DOMRect) => r.left < b.right + 3 && r.right > b.left - 3 && r.top < b.bottom + 1 && r.bottom > b.top - 1;
-    const hits = (r: DOMRect) => boxes.some((b) => over(r, b)) || [...dots].some(([id, b]) => id !== self && b.width > 0 && over(r, b));
+    // A root's name may pass over a small artist dot, never over a label or another root.
+    let selfCard = false;
+    // While a path is lit, only its own dots are obstacles: the dimmed ones may be covered.
+    const hits = (r: DOMRect) => boxes.some((b) => over(r, b)) || [...dots].some(([id, b]) => id !== self && b.width > 0 && (!priority || priority.has(id)) && (!selfCard || id.startsWith('card:')) && over(r, b));
+    const fewArtists = !!priority && [...priority].filter((k) => !g.byId.get(k)?.card).length <= 8;
     const bigRoots = new Set(g.nodes.filter((x) => x.card).sort((a, b) => b.support - a.support).slice(0, 3).map((x) => x.id));
     lbls.forEach(({ n, el }, i) => {
       self = n.id;
+      selfCard = n.card;
       let r = rects[i];
-      const want = priority ? priority.has(n.id) || n.card : famous ? famous.has(n.id) || n.card : true;
+      // On a phone a lit path is named alone: an artist's chain, or for a root
+      // only the traditions that grew from it, never the forty artists above.
+      const want = priority
+        ? priority.has(n.id) && (!this.litCard || n.card || fewArtists)
+        : famous
+          ? famous.has(n.id) || n.card
+          : true;
       // Every root keeps its name: above its dot, or below it if that is taken.
-      if (n.card) {
+      // A lit artist looks for a free place the same way; others stay above their dot.
+      if (!n.card) {
+        el.setAttribute('x', '0');
+        el.setAttribute('y', String(-radius(n) - 5));
+        el.setAttribute('text-anchor', 'middle');
+        r = el.getBoundingClientRect();
+      }
+      if (n.card || (priority?.has(n.id) && hits(r))) {
         const rr = radius(n);
         // above, below, right, left: the first place that is free
-        const spots: [number, number, string][] = [[0, -rr - 5, 'middle'], [0, rr + 16, 'middle'], [rr + 6, 4, 'start'], [-rr - 6, 4, 'end']];
-        for (const [x, y, anchor] of spots) {
+        const spots: [number, number, string][] = [[0, -rr - 5, 'middle'], [0, rr + 16, 'middle'], [rr + 6, 4, 'start'], [-rr - 6, 4, 'end'], [rr + 4, -rr - 2, 'start'], [-rr - 4, -rr - 2, 'end'], [rr + 4, rr + 12, 'start'], [-rr - 4, rr + 12, 'end']];
+        // On a phone a free place inside the screen beats one its edge would cut.
+        const cut = (b: DOMRect) => this.phone && (b.left < view.left + EDGE || b.right > view.right - EDGE);
+        const put = ([x, y, anchor]: [number, number, string]) => {
           el.setAttribute('x', String(x));
           el.setAttribute('y', String(y));
           el.setAttribute('text-anchor', anchor);
+          return el.getBoundingClientRect();
+        };
+        let firstFree: [number, number, string] | undefined;
+        for (const spot of spots) {
+          r = put(spot);
+          if (hits(r)) continue;
+          firstFree ??= spot;
+          if (!cut(r)) break;
+        }
+        if (firstFree && (hits(r) || cut(r))) r = put(firstFree);
+      }
+      // A phone shows a strip of a wider canvas: a name the screen edge would
+      // cut slides back inside it, and the name of a dot off screen is not drawn.
+      let offScreen = false;
+      if (this.phone && r.width > 0) {
+        const dot = dots.get(n.id) ?? this.nodeEls.get(n.id)!.getBoundingClientRect();
+        const cx = (dot.left + dot.right) / 2;
+        offScreen = cx < view.left || cx > view.right;
+        const dx = r.left < view.left + EDGE ? view.left + EDGE - r.left : r.right > view.right - EDGE ? view.right - EDGE - r.right : 0;
+        if (!offScreen && dx) {
+          el.setAttribute('x', String(Number(el.getAttribute('x') ?? 0) + dx));
           r = el.getBoundingClientRect();
-          if (!hits(r)) break;
         }
       }
       // Roots keep their names unless they would print over another label;
-      // the three biggest roots always keep theirs.
-      const free = !hits(r) || (n.card && bigRoots.has(n.id));
-      const ok = want && free && shown < budget && r.width > 0;
+      // the three biggest roots always keep theirs, unless a path is lit.
+      const free = !hits(r) || (n.card && bigRoots.has(n.id) && !priority);
+      const ok = want && free && !offScreen && shown < budget && r.width > 0;
       el.classList.toggle('hide', !ok);
       if (ok) {
         boxes.push(r);
         shown++;
       }
     });
+  }
+
+  /** A node picked by click or keyboard: light it, or unlight it if it was lit. */
+  private pick(id: string): void {
+    this.pinned = this.pinned === id ? undefined : id;
+    if (this.pinned && this.elFilter) {
+      this.elFilter = undefined;
+      this.elBar.querySelectorAll<HTMLElement>('[data-el]').forEach((b) => b.setAttribute('aria-pressed', 'false'));
+      this.edgeEls.forEach(({ el }) => (el.classList.remove('el-on'), el.style.removeProperty('--kc')));
+    }
+    this.light(this.pinned);
   }
 
   private search(): void {
@@ -351,9 +608,14 @@ export class RootsMap {
     this.input.value = '';
     this.results.replaceChildren();
     this.pinned = id;
+    if (this.elFilter) {
+      this.elFilter = undefined;
+      this.elBar.querySelectorAll<HTMLElement>('[data-el]').forEach((b) => b.setAttribute('aria-pressed', 'false'));
+      this.edgeEls.forEach(({ el }) => (el.classList.remove('el-on'), el.style.removeProperty('--kc')));
+    }
     this.light(id);
     if (this.phone) {
-      this.stage.scrollTo({ top: n.y! - this.stage.clientHeight / 3, behavior: reducedMotion() ? 'auto' : 'smooth' });
+      this.stage.scrollTo({ top: n.y! - this.stage.clientHeight / 4, left: Math.max(0, n.x! - this.stage.clientWidth / 2), behavior: reducedMotion() ? 'auto' : 'smooth' });
       return;
     }
     // Fit the whole way down to the roots, clear of the info plate.

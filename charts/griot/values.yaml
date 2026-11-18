@@ -1,0 +1,64 @@
+image:
+  # Build with: KO_DOCKER_REPO=<registry>/griot ko build --bare ./cmd/griot
+  repository: ghcr.io/tym83/sankofa/griot
+  tag: ""        # defaults to the chart appVersion
+  digest: ""     # sha256:...; wins over tag
+  pullPolicy: IfNotPresent
+
+# With store.type=sqlite exactly one replica is allowed: SQLite has one writer
+# and lives on a ReadWriteOnce volume. With postgres, replicas elect one
+# recorder; every replica serves reads.
+replicas: 1
+
+store:
+  type: sqlite # sqlite | postgres
+  compress: true
+  sqlite:
+    size: 10Gi
+    storageClass: ""
+  postgres:
+    # Secret with the connection string, e.g.
+    #   kubectl create secret generic griot-postgres --from-literal=dsn='postgres://griot:...@db:5432/griot?sslmode=require'
+    existingSecret: ""
+    key: dsn
+
+retention:
+  maxAge: 720h          # forget changes older than this; the latest state of every object stays ("0" keeps all)
+  maxVersions: 0        # at most N records per object, 0 = no limit
+  tombstoneTTL: 2160h   # forget deleted objects entirely after this, 0 = never
+  compact: "24h:1h,168h:24h"  # every change for a day, the newest per hour for a week, per day after
+  every: 1h
+  # Give freed space back. SQLite: VACUUM rebuilds the file (needs free disk
+  # as large as the store, blocks writes while it runs); weekly by default.
+  # PostgreSQL: autovacuum does it (Griot tunes it on its table); set a
+  # duration here only to add a plain VACUUM ANALYZE. Never VACUUM FULL.
+  vacuumEvery: ""   # "" = default for the store, "0" = never, e.g. "168h"
+
+# Name the user behind each moment from the API server's audit events.
+# Point the API server's audit webhook (--audit-webhook-config-file) at
+# https://<release>.<namespace>.svc:9444/audit with a client certificate
+# signed by the CA in clientCASecret (key ca.crt).
+audit:
+  enabled: false
+  clientCASecret: ""
+
+scope:
+  namespaces: []         # only these (cluster-scoped objects are always recorded)
+  excludeNamespaces: []
+  excludeResources: []   # e.g. [pods, replicasets.apps]
+
+apiService:
+  # Register history.sankofa.kuberoot.dev with the aggregator. Without it the
+  # memory is recorded but only reachable through the Service.
+  enabled: true
+
+metrics:
+  port: 9090
+
+resources:
+  requests: {cpu: 100m, memory: 256Mi}
+  limits: {memory: 1Gi}
+
+nodeSelector: {}
+tolerations: []
+affinity: {}

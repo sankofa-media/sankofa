@@ -6,28 +6,78 @@ place: {"name": "Braintree, England", "lat": 51.8787, "lon": 0.5529}
 placeRu: "Брейнтри, Англия"
 genre: "Big beat and rave"
 genreRu: "биг-бит и рейв"
-story: "The Prodigy took a vocal phrase from Ultramagnetic MCs’ “Give the Drummer Some”. Looping Kool Keith’s voice made it the hook of “Smack My Bitch Up”."
-storyRu: "The Prodigy взяли вокальную фразу из «Give the Drummer Some» группы Ultramagnetic MCs. Зацикленный голос Кула Кита стал главной вокальной фразой «Smack My Bitch Up»."
+story: "The Prodigy grew out of the British rave scene: Liam Howlett was a rave DJ whose sampler-and-synth tracks fronted by dancers became the militant voice of the movement. Howlett had cut his teeth on hip-hop as a DJ and breakdancer, and its hard-edged production, plus punk energy, turned the group’s breakbeat rave into big beat."
+storyRu: "The Prodigy вышли из британской рейв-сцены: Лиам Хаулетт был рейв-диджеем, а его треки из сэмплов и синтезаторов, исполнявшиеся с танцорами на авансцене, стали воинственным голосом движения. Начинал Хаулетт с хип-хопа — как диджей и брейкдансер, — и жёсткий хип-хоп-продакшн вместе с энергией панка превратил брейкбит-рейв группы в биг-бит."
 links:
+  - to: "style:rave"
+    kind: "style"
+    scope: "career"
+    how: "The Prodigy came out of rave: Howlett’s breakbeat-driven sampler and synth tracks, played to rave crowds with dancers out front, became the militant voice of the scene and then crossed into big beat with crushing beats and hard-rock energy."
+    howRu: "The Prodigy вышли из рейва: брейкбитовые треки Хаулетта на сэмплере и синтезаторах, сыгранные для рейверов с танцорами на авансцене, стали воинственным голосом сцены, а затем перешли в биг-бит с сокрушительными битами и энергией хард-рока."
+    carries: ["breakbeat", "sampling"]
+    dimensions: ["rhythm", "sound", "performance", "image"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "image"]
+        text: "MusicTech calls them, after the anti-authoritarian single Their Law, the figureheads of the militant rave scene."
+        textRu: "После антиавторитарного сингла «Their Law» MusicTech называет их лицом воинственной рейв-сцены."
+        source:
+          title: "MusicTech (Andy Price): Landmark Productions — The Prodigy, The Fat of the Land (2015)"
+          url: "https://www.musictech.com/guides/essential-guide/landmarks-prodigy-fat-of-the-land/"
+          quote: "Battle lines were drawn and the band seized upon the mood of a nation with single Their Law – a direct anti-authoritarian clarion call that made the band the figureheads of the militant rave scene."
+      - type: "critics"
+        dimensions: ["performance", "sound"]
+        text: "The Guardian’s obituary of Keith Flint describes live shows harnessing rave euphoria with hard-rock energy, and the mix of house and electronica with crushing beats."
+        textRu: "Некролог Кита Флинта в The Guardian описывает концерты, соединявшие рейвовую эйфорию с энергией хард-рока, и смесь хауса и электроники с сокрушительными битами."
+        source:
+          title: "The Guardian (Adam Sweeting): Keith Flint obituary (2019)"
+          url: "https://www.theguardian.com/music/2019/mar/04/keith-flint-obituary"
+          quote: "The group’s live appearances harnessed the massed euphoria of the rave scene they grew out of with ferocious hard-rock energy, and it proved an intoxicating mix for audiences around the world."
+      - type: "critics"
+        dimensions: ["image"]
+        text: "Pitchfork calls them icons of the English rave scene."
+        textRu: "Pitchfork называет их иконами английской рейв-сцены."
+        source:
+          title: "Pitchfork (Jesse Dorris): The Prodigy — The Fat of the Land"
+          url: "https://pitchfork.com/reviews/albums/the-prodigy-the-fat-of-the-land/"
+          quote: "The men responsible were the Prodigy, icons in their native England rave scene."
+      - type: "analysis"
+        dimensions: ["rhythm", "sound"]
+        text: "MusicTech notes that the E-mu SP-1200 drum machine drove the breakbeat of “Firestarter”."
+        textRu: "MusicTech отмечает, что брейкбит «Firestarter» держится на драм-машине E-mu SP-1200."
+        source:
+          title: "MusicTech (Andy Price): Landmark Productions — The Prodigy, The Fat of the Land (2015)"
+          url: "https://www.musictech.com/guides/essential-guide/landmarks-prodigy-fat-of-the-land/"
+          quote: "The E-mu SP1200 drum machine was the brawn behind the breakbeat in Firestarter"
   - to: "card:hip-hop"
-    kind: "sample"
-    claim: "The Prodigy's 'Smack My Bitch Up' samples 'Give the Drummer Some' by Ultramagnetic MCs."
-    claimRu: "В «Smack My Bitch Up» The Prodigy звучит сэмпл из «Give the Drummer Some» группы Ultramagnetic MCs."
-    what: "Kool Keith's vocal phrase from Ultramagnetic MCs' 'Give the Drummer Some', looped as the hook of 'Smack My Bitch Up'."
-    whatRu: "Вокальная фраза Кула Кита из «Give the Drummer Some» группы Ultramagnetic MCs, зацикленная как главная вокальная фраза «Smack My Bitch Up»."
-    sources:
-      - title: "MusicTech: Landmark Productions — The Prodigy, The Fat of the Land"
-        url: "https://www.musictech.com/guides/essential-guide/landmarks-prodigy-fat-of-the-land/"
-      - title: "Justin Morey: Copyright Management and its Effect on the Sampling Practice of UK Dance Music Producers"
-        url: "https://eprints.leedsbeckett.ac.uk/478/1/Copyright%20management%20and%20its%20effect%20on%20the%20sampling%20practice%20of%20UK%20dance%20music%20producers.pdf"
-  - to: "root:ultramagnetic-mcs"
-    kind: "sample"
-    claim: "The Prodigy's 'Smack My Bitch Up' samples 'Give the Drummer Some' by Ultramagnetic MCs."
-    claimRu: "В «Smack My Bitch Up» The Prodigy звучит сэмпл из «Give the Drummer Some» группы Ultramagnetic MCs."
-    what: "Kool Keith's vocal phrase from Ultramagnetic MCs' 'Give the Drummer Some', looped as the hook of 'Smack My Bitch Up'."
-    whatRu: "Вокальная фраза Кула Кита из «Give the Drummer Some» группы Ultramagnetic MCs, зацикленная как главная вокальная фраза «Smack My Bitch Up»."
-    sources:
-      - title: "MusicTech: Landmark Productions — The Prodigy, The Fat of the Land"
-        url: "https://www.musictech.com/guides/essential-guide/landmarks-prodigy-fat-of-the-land/"
-      - title: "Justin Morey: Copyright Management and its Effect on the Sampling Practice of UK Dance Music Producers"
-        url: "https://eprints.leedsbeckett.ac.uk/478/1/Copyright%20management%20and%20its%20effect%20on%20the%20sampling%20practice%20of%20UK%20dance%20music%20producers.pdf"
+    kind: "influence"
+    scope: "career"
+    how: "Howlett began in hip-hop as a DJ and breakdancer; its hard-edged production — harsh sample collisions and heavy breakbeats, with Public Enemy as a model — shaped the Prodigy’s sound."
+    howRu: "Хаулетт начинал в хип-хопе как диджей и брейкдансер; жёсткий хип-хоп-продакшн — грубые столкновения сэмплов и тяжёлые брейкбиты по образцу Public Enemy — сформировал звучание The Prodigy."
+    carries: ["breakbeat", "sampling"]
+    dimensions: ["sound", "performance"]
+    evidence:
+      - type: "critics"
+        dimensions: ["sound", "performance"]
+        text: "Chal Ravens hears Howlett’s roots as a hip-hop DJ and breakdancer in his harsh sample collisions, with production cues from Public Enemy."
+        textRu: "Чал Рэйвенс слышит в грубых столкновениях сэмплов у Хаулетта его прошлое хип-хоп-диджея и брейкдансера и продюсерские приёмы Public Enemy."
+        source:
+          title: "The Guardian (Chal Ravens): The 100 greatest UK No 1s — No 8, The Prodigy, Firestarter (2020)"
+          url: "https://www.theguardian.com/music/2020/may/27/the-100-greatest-uk-no-1s-no-8-the-prodigy-firestarter"
+          quote: "reflect his roots as a hip-hop DJ and breakdancer, but although he took production cues from righteous outfits including Rage Against the Machine and Public Enemy, he wasn’t interested in their message."
+      - type: "listening"
+        dimensions: ["performance"]
+        text: "Jesse Dorris writes that Howlett cut his teeth on hip-hop; his first concert was Afrika Bambaataa."
+        textRu: "Джесси Доррис пишет, что Хаулетт начинал с хип-хопа: первым концертом, на который он попал, был концерт Африки Бамбаатаа."
+        source:
+          title: "Pitchfork (Jesse Dorris): The Prodigy — The Fat of the Land"
+          url: "https://pitchfork.com/reviews/albums/the-prodigy-the-fat-of-the-land/"
+          quote: "He cut his teeth on hip-hop: His first concert was Afrika Bambaataa and Word of Mouth at Wembley stadium."
+      - type: "critics"
+        dimensions: ["sound"]
+        text: "Tim Jonze credits Howlett’s love of hard-edged hip-hop production for the band’s wider sound."
+        textRu: "Тим Джонз выводит звучание группы в целом из любви Хаулетта к жёсткому хип-хоп-продакшну."
+        source:
+          title: "The Guardian (Tim Jonze): The Prodigy’s Leeroy Thornhill on fame, raves and Keith Flint (2024)"
+          url: "https://www.theguardian.com/music/2024/oct/21/the-prodigys-leeroy-thornhill-on-fame-raves-and-his-late-best-mate-keith-flint-i-love-him-and-i-always-will"
+          quote: "Howlett’s love of hard-edged hip-hop production and raucous punk energy helped them broaden their fanbase"

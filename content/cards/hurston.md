@@ -9,6 +9,7 @@ places:
   - {name: "Africatown, Mobile, Alabama", lat: 30.7347, lon: -88.0544}
   - {name: "Fort Pierce, Florida", lat: 27.4467, lon: -80.3256}
 zoom: 4
+moment: {year: 1927, place: 1}
 era: v5
 books: [voices, heirs]
 further:
@@ -28,4 +29,6 @@ sources:
 media:
   - {"type": "image", "file": "hurston.jpg", "caption": "Zora Neale Hurston, 3 April 1938", "credit": "Carl Van Vechten; Library of Congress, Van Vechten collection", "license": "Public domain", "url": "https://commons.wikimedia.org/wiki/File:Zora_Neale_Hurston_(1938).jpg"}
 ---
-Publishers wanted Kossola's story in standard English; Zora Neale Hurston refused, and the book waited until 2018. She grew up in Eatonville, Florida, one of the first towns in the United States incorporated by Black people, where her father became mayor. She studied anthropology at Barnard under Franz Boas and went south to collect folklore. In Mobile in 1927 she sat with Kossola, called Cudjo Lewis, a survivor of the [[clotilda|Clotilda]], and took down his story in his own speech: Barracoon. Their Eyes Were Watching God (1937) she wrote in seven weeks. She died in a county welfare home in Fort Pierce in 1960 and lay in an unmarked grave until Alice Walker located it in 1973 and placed a stone: "A Genius of the South". Compare [[wpa-narratives|the WPA slave narratives]] and [[work-songs|the work songs and hollers of the fields]].
+Zora Neale Hurston was a novelist and anthropologist who wrote down the speech of the Black South as it was spoken. She grew up in Eatonville, Florida, one of the first towns in the United States incorporated by Black people, where her father became mayor. She studied anthropology at Barnard under Franz Boas and went south to collect folklore. In Mobile in 1927 she sat with Kossola, called Cudjo Lewis, a survivor of the [[clotilda|Clotilda]] who after freedom had helped found Africatown. She took down his story in his own speech, finishing Barracoon in 1931. A publisher would take it only if his dialect were rewritten in standard English; she refused, and Barracoon waited until 2018.
+
+Their Eyes Were Watching God (1937) she wrote in seven weeks. Acclaim did not bring security: by 1950 she was working as a maid, and in 1960 she died in a county welfare home in Fort Pierce. She lay in an unmarked grave until Alice Walker located it in 1973 and placed a stone: "A Genius of the South". In the 1970s, with Walker leading the way, her largely forgotten books found readers again. Her insistence on people's own words links her to [[wpa-narratives|the WPA slave narratives]] and to [[work-songs|the work songs and hollers of the fields]] of the South she recorded.

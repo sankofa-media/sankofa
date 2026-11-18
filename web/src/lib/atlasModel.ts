@@ -1,7 +1,7 @@
 // What the atlas shows at each zoom level. Zoom is a level of generalisation:
 // 1 big movements, 2 regions, 3 cities and genres, 4 people, 5 one document.
 import type { Card, Edition } from './types';
-import { CardSet, overlaps } from './cards';
+import { CardSet, overlaps, when } from './cards';
 import { MOVEMENTS, REGIONS, regionOf } from './movements';
 import type { MapPoint, MapRegion, MapRoute } from '../views/map';
 
@@ -22,24 +22,22 @@ export interface AtlasQuery {
   from?: number;
   to?: number;
   focus?: string;
-  edition: Exclude<Edition, 'both'> | '';
   lit?: string[];
 }
 
-/** Cards in the reader's copy: shared cards plus the reader's half of each pair. */
-export function readerCards(set: CardSet, edition: AtlasQuery['edition']): Card[] {
-  return set.all().filter((c) => !edition || c.edition === 'both' || c.edition === edition);
-}
-
 /**
- * One chapter's cards in the reader's copy, in the chapter's own order. Every
- * count of a chapter (contents, chapter end, descent) is this list's length.
+ * One chapter's cards as the reader's copy tells it, in the chapter's own
+ * order: of each pair the chapter tells the reader's half. The dictionary
+ * itself (atlas, countries, index, links) holds every card in both copies;
+ * only the chapter's telling differs. Every count of a chapter (contents,
+ * chapter end, descent) is this list's length.
  */
-export function chapterCopy(set: CardSet, edition: AtlasQuery['edition'], chapter: { id: string; cards: string[] }): Card[] {
+export function chapterCopy(set: CardSet, edition: Exclude<Edition, 'both'> | '', chapter: { id: string; cards: string[] }): Card[] {
   const order = new Map(chapter.cards.map((id, i) => [id, i]));
   const rank = (c: Card) => order.get(c.id) ?? order.get(set.partner(c.id)?.id ?? '') ?? 1e6;
-  return readerCards(set, edition)
-    .filter((c) => c.era === chapter.id)
+  return set
+    .all()
+    .filter((c) => c.era === chapter.id && (!edition || c.edition === 'both' || c.edition === edition))
     .sort((a, b) => rank(a) - rank(b));
 }
 
@@ -47,7 +45,7 @@ export function chapterCopy(set: CardSet, edition: AtlasQuery['edition'], chapte
 function spread(cards: Card[], level: number): Map<string, [number, number]> {
   const groups = new Map<string, Card[]>();
   for (const c of cards) {
-    const p = c.places[0];
+    const p = when(c).place;
     const key = `${p.lon.toFixed(1)},${p.lat.toFixed(1)}`;
     groups.set(key, [...(groups.get(key) ?? []), c]);
   }
@@ -55,7 +53,7 @@ function spread(cards: Card[], level: number): Map<string, [number, number]> {
   const step = 2.2 / [1, 2.2, 4.6, 9, 18][level - 1];
   for (const g of groups.values()) {
     g.forEach((c, i) => {
-      const p = c.places[0];
+      const p = when(c).place;
       if (i === 0) return out.set(c.id, [p.lon, p.lat]);
       const a = i * 2.4;
       const r = step * Math.sqrt(i);
@@ -83,10 +81,10 @@ export interface AtlasLayers {
   visible: Card[];
 }
 
-export function atlasLayers(set: CardSet, q: AtlasQuery, extra: Card[] = []): AtlasLayers {
+export function atlasLayers(set: CardSet, q: AtlasQuery): AtlasLayers {
   const lvl = Math.max(1, Math.min(5, q.level));
-  const own = readerCards(set, q.edition);
-  const cards = [...own, ...extra.filter((e) => !own.includes(e))];
+  // The whole dictionary, in either copy.
+  const cards = set.all();
   const pos = spread(cards, lvl);
   const lit = new Set(q.lit ?? []);
   const points: MapPoint[] = [];
@@ -95,7 +93,8 @@ export function atlasLayers(set: CardSet, q: AtlasQuery, extra: Card[] = []): At
 
   for (const c of cards) {
     if (isNonPlace(c)) continue;
-    const inTime = overlaps(c, q.from, q.to);
+    // A card with a moment stands on the map at that moment; others for their span.
+    const inTime = c.moment ? overlaps({ years: [c.moment.year] }, q.from, q.to) : overlaps(c, q.from, q.to);
     const focus = c.id === q.focus;
     const major = c.zoom <= lvl || focus || lit.has(c.id);
     const [lon, lat] = pos.get(c.id)!;
@@ -104,7 +103,7 @@ export function atlasLayers(set: CardSet, q: AtlasQuery, extra: Card[] = []): At
       id: c.id,
       lon,
       lat,
-      label: c.title,
+      label: c.label || c.title,
       title: c.kind === 'person' || c.kind === 'work' || lvl >= 4,
       color: eraColor(c.era),
       minor: !major,

@@ -3,9 +3,9 @@ id: ed-sheeran
 name: Ed Sheeran
 nameRu: Эд Ширан
 aliases:
-- эд ширан
+  - эд ширан
 years:
-- 1991
+  - 1991
 place:
   name: "Halifax, England"
   lat: 53.725
@@ -13,19 +13,46 @@ place:
 placeRu: "Галифакс, Англия"
 genre: Folk pop
 genreRu: фолк-поп
+story: "Ed Sheeran names Eminem as one of the reasons he started writing songs; as a boy he learned Eminem’s fast, melodic, percussive rapping by heart, and critics hear hip-hop bravado in his songwriting."
+storyRu: "Эд Ширан называет Эминема одной из причин, по которым он начал писать песни; мальчиком он выучил наизусть быстрый, мелодичный, ударный рэп Эминема, и критики слышат в его песнях хип-хоповую браваду."
 links:
-- to: root:eminem
-  claim: Ed Sheeran learned Eminem’s The Marshall Mathers LP by heart as a child,
-    practising its rapid rap delivery.
-  claimRu: В детстве Эд Ширан выучил наизусть The Marshall Mathers LP Эминема и упражнялся
-    в быстрой рэп-подаче.
-  sources:
-  - title: 'ABC News: How Eminem Helped Ed Sheeran Overcome Stuttering'
-    url: https://abcnews.com/Entertainment/eminem-helped-ed-sheeran-overcome-stuttering/story?id=31661107
-  - title: 'The Standard: Ed Sheeran on Eminem and his childhood stutter'
-    url: https://www.standard.co.uk/showbiz/ed-sheeran-eminem-cured-his-childhood-stutter-friendship-howard-stern-b1081401.html
-  kind: influence
-story: Ed Sheeran learned Eminem’s The Marshall Mathers LP by heart as a child. Practising
-  its rapid delivery was part of his musical education.
-storyRu: Эд Ширан ещё ребёнком выучил наизусть «The Marshall Mathers LP» Эминема.
-  Упражнения в быстрой рэп-подаче стали частью его музыкального воспитания.
+  - to: "root:eminem"
+    kind: "influence"
+    how: "Eminem gave Sheeran the impulse to write songs and a rap delivery, very fast, melodic and percussive, that he learned by heart; critics hear the resulting blend of hip-hop bravado and everyday songwriting as the core of his breakthrough."
+    howRu: "Эминем подтолкнул Ширана к сочинительству и дал ему рэп-подачу — очень быструю, мелодичную и ударную, — которую тот выучил наизусть; критики слышат в получившейся смеси хип-хоповой бравады и песен о повседневном основу его прорыва."
+    carries: ["rap-flow"]
+    dimensions: ["melody-vocal", "rhythm", "harmony-form", "image"]
+    scope: "career"
+    evidence:
+      - type: "testimony"
+        dimensions: ["harmony-form"]
+        text: "When he featured on Eminem’s “River”, Sheeran said Eminem was one of the reasons he started writing songs."
+        textRu: "Когда Ширан спел в песне Эминема «River», он сказал, что Эминем — одна из причин, по которым он начал писать песни."
+        source:
+          title: "Entertainment.ie: Eminem’s new album ‘Revival’ features Ed Sheeran on one song (2017)"
+          url: "http://entertainment.ie/music/news/Eminems-new-album-Revival-features-Ed-Sheeran-on-one-song-yes-really/399935.htm"
+          quote: "He is one of the reasons I started writing songs, and was such a pleasure to work with him."
+      - type: "listening"
+        dimensions: ["melody-vocal", "rhythm"]
+        text: "Sheeran says he learned The Marshall Mathers LP by heart as a boy and describes Eminem’s rapping as very fast, melodic and percussive."
+        textRu: "Ширан рассказывает, что мальчиком выучил наизусть «The Marshall Mathers LP», и описывает рэп Эминема как очень быстрый, мелодичный и ударный."
+        source:
+          title: "ABC News: How Eminem Helped Ed Sheeran Overcome Stuttering (2015)"
+          url: "https://abcnews.com/Entertainment/eminem-helped-ed-sheeran-overcome-stuttering/story?id=31661107"
+          quote: "And he raps very fast and very melodically and very percussively"
+      - type: "critics"
+        dimensions: ["melody-vocal", "image"]
+        text: "Rolling Stone hears in Divide the blend of hip-hop bravado and everyday-bloke songwriting that made his breakthrough."
+        textRu: "Rolling Stone слышит в «Divide» ту смесь хип-хоповой бравады и песен простого парня, с которой начался его прорыв."
+        source:
+          title: "Rolling Stone: Maura Johnston, Review: Ed Sheeran’s ‘Divide’ (2017)"
+          url: "https://www.rollingstone.com/music/albumreviews/review-ed-sheerans-divide-w470271"
+          quote: "Sheeran doubles down on the blend of hip-hop bravado and everyday-bloke songwriting that helped him break out at the turn of the decade."
+    example:
+      song: "The Marshall Mathers LP (2000)"
+      text: "Sheeran says rapping Eminem’s album back to back as a child cured his stutter."
+      textRu: "Ширан говорит, что в детстве раз за разом читал этот альбом Эминема и так избавился от заикания."
+      source:
+        title: "The Standard: Ed Sheeran says Eminem ‘cured’ his childhood stutter (2023)"
+        url: "https://www.standard.co.uk/showbiz/ed-sheeran-eminem-cured-his-childhood-stutter-friendship-howard-stern-b1081401.html"
+        quote: "By learning that record and rapping it back to back to back to back, it cured my stutter,"

@@ -1,0 +1,229 @@
+# Second, independent check (2026-11-15) of content/ledger/perspective-hip-hop.yaml and the
+# {male}/{female} rewrite of content/cards/hip-hop.md (+ .ru.md). Every URL below was reopened
+# (WebFetch; the Library of Congress PDF and the UCR PDF extracted with pdftotext).
+# Independence: The Spokesman-Review piece is Kim Bellware's Washington Post story (counted once);
+# Yahoo carries David Browne's Rolling Stone article (counted as Rolling Stone).
+# verdict: confirmed | corrected (card wording or sources changed) | refuted | unconfirmed (removed).
+# Word count per copy (body, link labels counted): male 232, female 234 (genre limit 235).
+# Changes made: RU male paragraph, first sentence rewritten (doubled "а ... а" construction);
+# ledger entry on the drum breaks got sources for "funk and soul" (the original two did not name genres);
+# duplicate GRAMMY.com entry (trailing slash) removed from the card's sources.
+entries:
+  - card: hip-hop
+    copy: male
+    fact: "Clive Campbell grew up among the sound systems of Kingston, Jamaica"
+    verdict: confirmed
+    sources:
+      - {title: "GRAMMY.com: DJ Kool Herc and Cindy Campbell interview (2023)", url: "https://www.grammy.com/news/dj-kool-herc-cindy-campbell-50th-anniversary-of-hip-hop-interview-jamaican-roots", quote: "Clive and Cindy Campbell were born and raised in Jamaica's capital city, Kingston; ... from an early age, they were exposed to the island's sound system culture"}
+      - {title: "David Browne, Rolling Stone (via Yahoo, 2023)", url: "https://ca.news.yahoo.com/kool-herc-history-mystery-hip-134136707.html", quote: "Growing up in the Trenchtown neighborhood of Kingston, Jamaica, young Clive was immersed in U-Roy ... saw and heard his first sound systems."}
+    note: ""
+  - card: hip-hop
+    copy: male
+    fact: "In the Bronx, as DJ Kool Herc, he played parties on his father's sound system"
+    verdict: confirmed
+    sources:
+      - {title: "Kristen Gallerneaux, The Henry Ford: From a DJ's Closet", url: "https://www.thehenryford.org/collections/explore/articles/from-a-djs-closet", quote: "using his father's sound system to DJ at block, house and basement parties."}
+      - {title: "David Browne, Rolling Stone (via Yahoo, 2023)", url: "https://ca.news.yahoo.com/kool-herc-history-mystery-hip-134136707.html", quote: "His father, a mechanic, already had a sound system"}
+    note: "RU sentence reworded for style; meaning unchanged."
+  - card: hip-hop
+    copy: male
+    fact: "He saw dancers wait for the drum breaks in funk and soul records"
+    verdict: corrected
+    sources:
+      - {title: "GRAMMY.com: DJ Kool Herc and Cindy Campbell interview (2023)", url: "https://www.grammy.com/news/dj-kool-herc-cindy-campbell-50th-anniversary-of-hip-hop-interview-jamaican-roots", quote: "Herc spun primarily funk and soul, as well as the occasional rock record. ... Once the dancers heard that, all they wanted to hear were the breaks."}
+      - {title: "Kristen Gallerneaux, The Henry Ford: From a DJ's Closet", url: "https://www.thehenryford.org/collections/explore/articles/from-a-djs-closet", quote: "Herc cued and repeated percussion \"breaks\" in soul and funk music to extend the high-energy moments dancers craved."}
+    note: "Card wording correct. The ledger's HISTORY and Contemporary Musicians quotes confirm the waiting for breaks but name no genre (HISTORY page: no genre at all); GRAMMY and The Henry Ford quotes for funk/soul added to the ledger."
+  - card: hip-hop
+    copy: male
+    fact: "He switched between two copies of one record on two turntables to stretch the break: the merry-go-round"
+    verdict: confirmed
+    sources:
+      - {title: "GRAMMY.com (2023)", url: "https://www.grammy.com/news/dj-kool-herc-cindy-campbell-50th-anniversary-of-hip-hop-interview-jamaican-roots", quote: "I had two copies of the same record and I went for the yolk, the butter. ... He called his distinctive approach the merry-go-round"}
+      - {title: "Kristen Gallerneaux, The Henry Ford", url: "https://www.thehenryford.org/collections/explore/articles/from-a-djs-closet", quote: "He called this his \"Merry-Go-Round\" technique, and with it, he could make the breaks last as long as he wanted."}
+    note: ""
+  - card: hip-hop
+    copy: male
+    fact: "On the microphone he talked over the records, as Jamaican DJs did"
+    verdict: confirmed
+    sources:
+      - {title: "HISTORY: Hip-hop is born at a teen party in the Bronx", url: "https://www.history.com/this-day-in-history/hip-hop-is-born-at-a-birthday-party-in-the-bronx", quote: "Herc often emulated the style of Jamaican \"selectors\" (DJs) by \"toasting\" (i.e., talking) over the records he spun"}
+      - {title: "Rock & Roll Hall of Fame: DJ Kool Herc", url: "https://rockhall.com/inductees/dj-kool-herc/", quote: "Jamaican-born DJ Kool Herc brought sound system traditions from his homeland, \"toasting\" via microphone over LPs."}
+    note: ""
+  - card: hip-hop
+    copy: male
+    fact: "The party usually dated as the start was his sister Cindy Campbell's, in August 1973"
+    verdict: confirmed
+    sources:
+      - {title: "GRAMMY.com (2023)", url: "https://www.grammy.com/news/dj-kool-herc-cindy-campbell-50th-anniversary-of-hip-hop-interview-jamaican-roots", quote: "is widely recognized as laying the foundation upon which hip-hop was built."}
+      - {title: "HISTORY", url: "https://www.history.com/this-day-in-history/hip-hop-is-born-at-a-birthday-party-in-the-bronx", quote: "His sister's party on August 11, however, put him before his biggest crowd ever"}
+    note: "PBS Independent Lens also calls it 'the first hip-hop party', thrown by Cindy Campbell."
+  - card: hip-hop
+    copy: male
+    fact: "Grandmaster Flash and Afrika Bambaataa built on his breaks and overshadowed him"
+    verdict: confirmed
+    sources:
+      - {title: "GRAMMY.com (2023)", url: "https://www.grammy.com/news/dj-kool-herc-cindy-campbell-50th-anniversary-of-hip-hop-interview-jamaican-roots", quote: "it would influence other pioneering Bronx hip-hop DJs including Grandmaster Flash and Afrika Bambaataa."}
+      - {title: "Ken Taylor, Contemporary Musicians: Kool Herc (Encyclopedia.com)", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/kool-herc", quote: "the rise of Grandmaster Flash & the Furious Five and Bambaataa's numerous crews stole much of his stature as a deejay."}
+    note: ""
+  - card: hip-hop
+    copy: male
+    fact: "He survived a stabbing and later drug addiction"
+    verdict: confirmed
+    sources:
+      - {title: "David Browne, Rolling Stone (via Yahoo, 2023)", url: "https://ca.news.yahoo.com/kool-herc-history-mystery-hip-134136707.html", quote: "He was stabbed in a club and later battled drug addiction."}
+      - {title: "Contemporary Musicians: Kool Herc", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/kool-herc", quote: "Herc was stabbed three times at one of his own events"}
+    note: "Contemporary Musicians also mentions the drug addiction."
+  - card: hip-hop
+    copy: male
+    fact: "In 2023 the Rock & Roll Hall of Fame inducted him for musical influence"
+    verdict: confirmed
+    sources:
+      - {title: "Rock & Roll Hall of Fame: DJ Kool Herc", url: "https://rockhall.com/inductees/dj-kool-herc/", quote: "Inducted: 2023 Category: Musical Influence"}
+      - {title: "David Browne, Rolling Stone (via Yahoo, 2023)", url: "https://ca.news.yahoo.com/kool-herc-history-mystery-hip-134136707.html", quote: "he'll be inducted into the Rock & Roll Hall of Fame with a Musical Influence Award."}
+    note: ""
+  - card: hip-hop
+    copy: female
+    fact: "In August 1973 Cindy Campbell needed money for school clothes"
+    verdict: confirmed
+    sources:
+      - {title: "GRAMMY.com (2023)", url: "https://www.grammy.com/news/dj-kool-herc-cindy-campbell-50th-anniversary-of-hip-hop-interview-jamaican-roots", quote: "On Aug. 11, 1973, high school student Cindy Campbell threw a party in the recreation room ... to earn money for new back-to-school clothes."}
+      - {title: "Kristen Gallerneaux, The Henry Ford", url: "https://www.thehenryford.org/collections/explore/articles/from-a-djs-closet", quote: "They were throwing a party to raise funds for Cindy's back-to-school wardrobe."}
+    note: ""
+  - card: hip-hop
+    copy: female
+    fact: "She threw the party in her building's recreation room at 1520 Sedgwick Avenue"
+    verdict: confirmed
+    sources:
+      - {title: "Kristen Gallerneaux, The Henry Ford", url: "https://www.thehenryford.org/collections/explore/articles/from-a-djs-closet", quote: "rented their apartment building's recreation room at 1520 Sedgwick Ave. in the Bronx, New York."}
+      - {title: "David Browne, Rolling Stone (via Yahoo, 2023)", url: "https://ca.news.yahoo.com/kool-herc-history-mystery-hip-134136707.html", quote: "The white-walled rec room at 1520 Sedgwick ... Cindy rented it for $25."}
+    note: ""
+  - card: hip-hop
+    copy: female
+    fact: "She wrote the invitations on index cards and charged girls 25 cents and boys 50"
+    verdict: confirmed
+    sources:
+      - {title: "GRAMMY.com (2023)", url: "https://www.grammy.com/news/dj-kool-herc-cindy-campbell-50th-anniversary-of-hip-hop-interview-jamaican-roots", quote: "Cindy hand wrote invitations on index cards ... charged a modest admission fee (25 cents for ladies, 50 cents for 'fellas')"}
+      - {title: "David Browne, Rolling Stone (via Yahoo, 2023)", url: "https://ca.news.yahoo.com/kool-herc-history-mystery-hip-134136707.html", quote: "Writing out invites on index cards, she charged 25 cents for girls, double that for the boys."}
+    note: "Two ledger entries (index cards; prices) checked together."
+  - card: hip-hop
+    copy: female
+    fact: "She asked her brother, DJ Kool Herc, to play"
+    verdict: confirmed
+    sources:
+      - {title: "GRAMMY.com (2023)", url: "https://www.grammy.com/news/dj-kool-herc-cindy-campbell-50th-anniversary-of-hip-hop-interview-jamaican-roots", quote: "she asked her 18-year-old brother Clive to play the music."}
+      - {title: "Contemporary Musicians: Kool Herc", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/kool-herc", quote: "My sister asked me to give a party one day. ... play at a party"}
+    note: ""
+  - card: hip-hop
+    copy: female
+    fact: "The party raised a few hundred dollars; the parties soon outgrew the room"
+    verdict: confirmed
+    sources:
+      - {title: "David Browne, Rolling Stone (via Yahoo, 2023)", url: "https://ca.news.yahoo.com/kool-herc-history-mystery-hip-134136707.html", quote: "had raised a few hundred dollars to buy new duds. ... they soon outgrew the space and reemerged in nearby parks"}
+      - {title: "Contemporary Musicians: Kool Herc / GRAMMY.com", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/kool-herc", quote: "made 300 dollars (Contemporary Musicians); By the end of 1973, the recreation room couldn't accommodate the size of the crowds attending Herc's parties (GRAMMY.com)"}
+    note: "Each half has two independent sources: money — Rolling Stone + Contemporary Musicians; outgrowing the room — Rolling Stone + GRAMMY.com."
+  - card: hip-hop
+    copy: female
+    fact: "Sylvia Robinson had sung the 1950s hit \"Love Is Strange\""
+    verdict: confirmed
+    sources:
+      - {title: "Contemporary Musicians: Robinson, Sylvia (Encyclopedia.com)", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/robinson-sylvia", quote: "\"Love Is Strange\" was a hit on both rhythm-and-blues and pop charts"}
+      - {title: "Kim Bellware, Washington Post (via The Spokesman-Review, 2023)", url: "https://spokesman.com/stories/2023/aug/08/the-unlikely-origins-of-rappers-delight-hip-hops-f", quote: "beginning in the 1950s as half of the duo Mickey and Sylvia"}
+    note: "Release year differs (1956 Contemporary Musicians, 1957 NJArts); the card says only '1950s', so no dispute is needed."
+  - card: hip-hop
+    copy: female
+    fact: "In 1979 her label faced bankruptcy"
+    verdict: confirmed
+    sources:
+      - {title: "Kim Bellware, Washington Post (via The Spokesman-Review, 2023)", url: "https://spokesman.com/stories/2023/aug/08/the-unlikely-origins-of-rappers-delight-hip-hops-f", quote: "In 1979, the 43-year-old Robinson and her husband, Joe, were facing bankruptcy after the collapse of their label, All Platinum Records."}
+      - {title: "Contemporary Musicians: Robinson, Sylvia", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/robinson-sylvia", quote: "The company had already filed for Chapter 11 bankruptcy"}
+    note: ""
+  - card: hip-hop
+    copy: female
+    fact: "She watched a Harlem club go wild as its DJ talked over the music"
+    verdict: confirmed
+    sources:
+      - {title: "Kim Bellware, Washington Post (via The Spokesman-Review, 2023)", url: "https://spokesman.com/stories/2023/aug/08/the-unlikely-origins-of-rappers-delight-hip-hops-f", quote: "the dee jay was playing music and talking over the music, and the kids were going crazy"}
+      - {title: "Contemporary Musicians: Robinson, Sylvia", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/robinson-sylvia", quote: "this guy was talking over the records. Anything he said made them go crazy"}
+    note: "Club: Harlem World (both sources)."
+  - card: hip-hop
+    copy: female
+    fact: "She put together the Sugarhill Gang and produced \"Rapper's Delight\""
+    verdict: confirmed
+    sources:
+      - {title: "Jay Lustig, NJArts.net (2022)", url: "https://www.njarts.net/95697", quote: "She put together the Sugarhill Gang trio and produced the single"}
+      - {title: "Eric Reese, Library of Congress National Recording Registry essay", url: "https://www.loc.gov/static/programs/national-recording-preservation-board/documents/RappersDelight.pdf", quote: "Upon its release in 1979, the Sugarhill Gang's song, produced by Sylvia Robinson"}
+    note: "Assembling the group also in the Washington Post piece."
+  - card: hip-hop
+    copy: female
+    fact: "\"Rapper's Delight\" was rap's first hit"
+    verdict: confirmed
+    sources:
+      - {title: "Jay Lustig, NJArts.net (2022)", url: "https://www.njarts.net/95697", quote: "Rap didn't begin with \"Rapper's Delight,\" but that was the genre's first hit single."}
+      - {title: "David Browne, Rolling Stone (via Yahoo, 2023)", url: "https://ca.news.yahoo.com/kool-herc-history-mystery-hip-134136707.html", quote: "\"Rapper's Delight,\" the 1979 hit by the Sugarhill Gang ... that was the first rap hit."}
+    note: "LoC essay: 'Not that it was the first rap song released' — consistent with 'first hit', not 'first record'."
+  - card: hip-hop
+    copy: female
+    fact: "It came out on her new Sugar Hill label"
+    verdict: confirmed
+    sources:
+      - {title: "Contemporary Musicians: Robinson, Sylvia", url: "https://www.encyclopedia.com/education/news-wires-white-papers-and-books/robinson-sylvia", quote: "founded Sugar Hill label and pioneered the idea of recording rap music, 1979"}
+      - {title: "Jay Lustig, NJArts.net (2022)", url: "https://www.njarts.net/95697", quote: "Englewood-based Sugar Hill Records released landmark rap singles by the Sugarhill Gang"}
+    note: "Washington Post calls it her 'nascent' label in 1979."
+  - card: hip-hop
+    copy: female
+    fact: "In 2022 she entered the Rock & Roll Hall of Fame"
+    verdict: confirmed
+    sources:
+      - {title: "Rock & Roll Hall of Fame: Sylvia Robinson", url: "https://rockhall.com/inductees/sylvia-robinson/", quote: "Inducted: 2022 Category: Ahmet Ertegun Award"}
+      - {title: "Jay Lustig, NJArts.net (2022)", url: "https://www.njarts.net/95697", quote: "(The Non-Performers category is officially known as the Ahmet Ertegun Award.)"}
+    note: ""
+  # Shared paragraphs (not in the perspective ledger; earlier checks in context-a-check.yaml and
+  # explainers-check.yaml) — reopened here.
+  - card: hip-hop
+    copy: both
+    fact: "Hip-hop is a culture of DJing, MCing, breaking and graffiti, born in the Bronx in the early 1970s among young African American, Caribbean and Latino New Yorkers"
+    verdict: confirmed
+    sources:
+      - {title: "Lindsay Rapport, UC Riverside: Hip Hop Culture and its Foundational Elements", url: "https://gluckprogram.ucr.edu/sites/default/files/2018-08/D41_HipHopCulture.pdf", quote: "Hip Hop's origin story begins in the 1970s in the South Bronx ... with predominantly African American and Latino-American youth ... four foundational elements: the DJ, the MC, graffiti, and breaking."}
+      - {title: "Carnegie Hall Timeline: Rap & Hip-Hop", url: "https://timeline.carnegiehall.org/genres/rap-hip-hop", quote: "Hip-hop music culture is a product of African American, Afro-Caribbean and Latino inner-city communities."}
+    note: "PBS also lists rapping, DJ'ing, breaking and graffiti; early 1970s per HISTORY/GRAMMY (1973)."
+  - card: hip-hop
+    copy: both
+    fact: "Landlords paid arsonists to torch buildings for the insurance, and the near-bankrupt city cut fire and other basic services"
+    verdict: confirmed
+    sources:
+      - {title: "PBS Independent Lens", url: "https://www.pbs.org/independentlens/blog/how-the-burning-of-the-bronx-led-to-the-birth-of-hip-hop/", quote: "New York City was bankrupt. ... landlords were paying arsonists to torch their buildings for insurance money ... close fire stations"}
+      - {title: "WNYC: The South Bronx, where hip-hop was born", url: "https://www.wnyc.org/story/89709-south-bronx-hip-hop-year-zero/", quote: "heavy arson activity from slumlords seeking insurance money ... the lack of basic services like law enforcement, firefighters, sanitation and health"}
+    note: ""
+  - card: hip-hop
+    copy: both
+    fact: "The MC rhymed over the beat in rhythm and street speech"
+    verdict: confirmed
+    sources:
+      - {title: "Carnegie Hall Timeline", url: "https://timeline.carnegiehall.org/genres/rap-hip-hop", quote: "Rap is original poetry recited in rhythm and rhyme over prerecorded instrumental tracks."}
+      - {title: "Cheryl Keyes, Rap (Encyclopedia.com)", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-popular-and-jazz/rap-music", quote: "makes use of rhyme, rhythmic speech, and street vernacular"}
+    note: ""
+  - card: hip-hop
+    copy: both
+    fact: "Later, drum machines and samples, including funk, became its instruments"
+    verdict: confirmed
+    sources:
+      - {title: "Carnegie Hall Timeline", url: "https://timeline.carnegiehall.org/genres/rap-hip-hop", quote: "Synthesizers, drum machines, and computers became the primary instruments and eventually sampled materials from various sources, especially funk"}
+      - {title: "Cheryl Keyes, Rap (Encyclopedia.com)", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-popular-and-jazz/rap-music", quote: "the sampled sounds of Parliament and the Funkadelics"}
+    note: ""
+  - card: hip-hop
+    copy: both
+    fact: "Its roots include Jamaican sound-system practice (reggae) and funk"
+    verdict: confirmed
+    sources:
+      - {title: "Cheryl Keyes, Rap (Encyclopedia.com)", url: "https://www.encyclopedia.com/literature-and-arts/performing-arts/music-popular-and-jazz/rap-music", quote: "tailored his disc-jockeying style after the dub music jockeys of Jamaica ... The funk-style rap, introduced by George Clinton and his group Parliament"}
+      - {title: "GRAMMY.com (2023) / Rock & Roll Hall of Fame", url: "https://rockhall.com/inductees/dj-kool-herc/", quote: "brought sound system traditions from his homeland, \"toasting\" via microphone over LPs (Rock Hall); Herc spun primarily funk and soul (GRAMMY.com)"}
+    note: "'Reggae' as root stands for the Jamaican sound-system/dub/toasting tradition the sources name; no source contradicts it."
+  - card: hip-hop
+    copy: both
+    fact: "The Amen break from \"Amen, Brother\" is among the breaks hip-hop looped into fame"
+    verdict: confirmed
+    sources:
+      - {title: "NPR (2017)", url: "https://text.npr.org/542087087", quote: "That middle part is what early hip-hop artists sampled. ... N.W.A. was one of the first back in 1988."}
+      - {title: "DJ TechTools (2009)", url: "https://djtechtools.com/2009/12/10/dj-history-the-drums-that-last-forever", quote: "first became popular amongst underground hip-hop DJs of the mid to late 70's"}
+    note: ""
