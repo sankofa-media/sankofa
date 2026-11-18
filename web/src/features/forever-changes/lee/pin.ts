@@ -4,12 +4,11 @@
 // to try it here over a still picture).
 import { h } from '../../../lib/dom';
 import { lang } from '../../../lib/i18n';
-import { encodeQR, qrPath } from '../../engine/qr';
+import { isPhone, qrSvg } from '../../engine/qr';
 import { leeUrl } from './url';
 
-export function isPhone(): boolean {
-  return typeof matchMedia === 'function' && matchMedia('(hover: none) and (pointer: coarse)').matches;
-}
+// Kept here too for the mode's callers; they live in the engine now.
+export { isPhone, qrSvg };
 
 export interface PinOptions {
   host: HTMLElement;
@@ -17,28 +16,6 @@ export interface PinOptions {
   /** The chapter being read now. */
   current(): string | undefined;
   open(): void;
-}
-
-/** An SVG QR code for `text`. */
-export function qrSvg(text: string, label: string): SVGSVGElement {
-  const { d, size } = qrPath(encodeQR(text));
-  const ns = 'http://www.w3.org/2000/svg';
-  const svg = document.createElementNS(ns, 'svg');
-  svg.setAttribute('viewBox', `0 0 ${size} ${size}`);
-  svg.setAttribute('class', 'fc-qr');
-  svg.setAttribute('role', 'img');
-  svg.setAttribute('aria-label', label);
-  svg.setAttribute('shape-rendering', 'crispEdges');
-  svg.dataset.url = text;
-  const bg = document.createElementNS(ns, 'rect');
-  bg.setAttribute('width', String(size));
-  bg.setAttribute('height', String(size));
-  bg.setAttribute('fill', '#fff');
-  const p = document.createElementNS(ns, 'path');
-  p.setAttribute('d', d);
-  p.setAttribute('fill', '#000');
-  svg.append(bg, p);
-  return svg;
 }
 
 export class LeePin {

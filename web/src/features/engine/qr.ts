@@ -1,7 +1,7 @@
 // A small QR code encoder (ISO/IEC 18004): byte mode, error correction
 // level M, versions 1–10 (up to 213 bytes, enough for a museum link). It
 // draws to a boolean grid and to an SVG path; nothing is fetched, nothing
-// leaves the page.
+// leaves the page. `qrSvg` draws one for a link a phone should open.
 
 /** Error correction level M: [EC codewords per block, blocks of the short length, short data length, blocks of the long length]. */
 const BLOCKS_M: [number, number, number, number][] = [
@@ -302,4 +302,31 @@ export function qrPath(qr: QR, margin = 4): { d: string; size: number } {
     }
   });
   return { d: parts.join(''), size: qr.size + margin * 2 };
+}
+
+/** An SVG QR code for `text`, black on white, named for screen readers by `label`. */
+export function qrSvg(text: string, label: string, cls = 'fc-qr'): SVGSVGElement {
+  const { d, size } = qrPath(encodeQR(text));
+  const ns = 'http://www.w3.org/2000/svg';
+  const svg = document.createElementNS(ns, 'svg');
+  svg.setAttribute('viewBox', `0 0 ${size} ${size}`);
+  svg.setAttribute('class', cls);
+  svg.setAttribute('role', 'img');
+  svg.setAttribute('aria-label', label);
+  svg.setAttribute('shape-rendering', 'crispEdges');
+  svg.dataset.url = text;
+  const bg = document.createElementNS(ns, 'rect');
+  bg.setAttribute('width', String(size));
+  bg.setAttribute('height', String(size));
+  bg.setAttribute('fill', '#fff');
+  const p = document.createElementNS(ns, 'path');
+  p.setAttribute('d', d);
+  p.setAttribute('fill', '#000');
+  svg.append(bg, p);
+  return svg;
+}
+
+/** A phone or a tablet: no hover, a coarse pointer (a QR code would be pointless there). */
+export function isPhone(): boolean {
+  return typeof matchMedia === 'function' && matchMedia('(hover: none) and (pointer: coarse)').matches;
 }
