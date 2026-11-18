@@ -193,6 +193,16 @@ scenes:
   - id: line
     kind: line
     act: 1
+    art:
+      generated: true
+      aspect: "3 / 2"
+      layers:
+        - file: line-v1-room.webp
+          depth: 6
+          alt: { en: "An empty dark room with one window", ru: "Пустая тёмная комната с одним окном" }
+        - file: line-v1-speaker.webp
+          depth: 16
+          alt: { en: "The cone of a large loudspeaker at the bottom of the frame", ru: "Диффузор большого динамика внизу кадра" }
     blocks:
       - id: kicker
         role: kicker
@@ -214,6 +224,23 @@ scenes:
     kind: kingston
     act: 1
     photo: coxsone-corner
+    art:
+      generated: true
+      aspect: "3 / 2"
+      layers:
+        - file: kingston-v1-street.webp
+          depth: 4
+          alt: ""
+        - file: kingston-v1-soundsystem.webp
+          depth: 10
+          alt: { en: "Speaker boxes of a sound system against a wall in the evening sun", ru: "Колонки саунд-системы у стены в вечернем солнце" }
+        - file: kingston-v1-people.webp
+          depth: 16
+          alt: { en: "Young men listening in the street", ru: "Парни слушают на улице" }
+        - file: kingston-v1-singer.webp
+          depth: 22
+          role: figure
+          alt: { en: "A young singer at a microphone in a doorway", ru: "Молодой певец у микрофона в дверном проёме" }
     blocks:
       - id: kicker
         role: kicker
@@ -240,6 +267,38 @@ scenes:
     kind: then-now
     act: 1
     photo: studio-one
+    art:
+      generated: true
+      aspect: "3 / 2"
+      layers:
+        - file: kingston-v2-street.webp
+          depth: 4
+          alt: ""
+        - file: kingston-v2-soundsystem.webp
+          depth: 8
+          alt: { en: "A sound system in a Kingston street, 1973", ru: "Саунд-система на улице Кингстона, 1973 год" }
+        - file: kingston-v2-people.webp
+          depth: 12
+          alt: ""
+        - file: kingston-v2-singer.webp
+          depth: 16
+          role: figure
+          alt: { en: "A young singer at a microphone, in warm light", ru: "Молодой певец у микрофона в тёплом свете" }
+        - file: voice-v2-dark.webp
+          depth: 4
+          alt: ""
+        - file: voice-v2-singer.webp
+          depth: 10
+          role: figure
+          alt: { en: "The same singer, older, in the dark, 1998", ru: "Тот же певец, старше, в темноте, 1998 год" }
+        - file: voice-v2-breath.webp
+          depth: 10
+          alt: ""
+      overlays:
+        - file: oil-v1-oil-low.webp
+          alt: ""
+        - file: oil-v1-oil-high.webp
+          alt: ""
     blocks:
       - id: kicker
         role: kicker
@@ -255,7 +314,7 @@ scenes:
         role: text
         draft: false
         en: In 1973 his song “You Are My Angel” came out, in Jamaica as a small seven-inch on the Soul Sound label, and in England as the title track of an LP on Trojan. The producer was Bunny Lee, the sleeve names King Tubby's as the studio, and the songwriter credit is Andy's own. It is a love song, light and unhurried.
-        ru: В 1973 году вышла его песня «You Are My Angel»: на Ямайке маленькой сорокапяткой лейбла Soul Sound, в Англии заглавной вещью долгоиграющей пластинки на лейбле Trojan. Продюсером был Банни Ли, студией на конверте значится студия Кинг Табби, автором песни — сам Энди. Это песня о любви, светлая и неторопливая.
+        ru: "В 1973 году вышла его песня «You Are My Angel»: на Ямайке маленькой сорокапяткой лейбла Soul Sound, в Англии заглавной вещью долгоиграющей пластинки на лейбле Trojan. Продюсером был Банни Ли, студией на конверте значится студия Кинг Табби, автором песни — сам Энди. Это песня о любви, светлая и неторопливая."
       - id: paid
         role: text
         draft: false
@@ -267,6 +326,19 @@ scenes:
     kind: bristol
     act: 2
     photo: st-paul-street
+    art:
+      generated: true
+      aspect: "3 / 2"
+      layers:
+        - file: bristol-v1-street.webp
+          depth: 8
+          alt: { en: "A wet street of terraced houses at night", ru: "Мокрая ночная улица с домами в ряд" }
+        - file: bristol-v1-window.webp
+          depth: 16
+          alt: ""
+        - file: bristol-v1-party.webp
+          depth: 26
+          alt: { en: "People crowded behind a lit window around a record deck", ru: "Люди теснятся за освещённым окном вокруг проигрывателя" }
     blocks:
       - id: kicker
         role: kicker
@@ -293,6 +365,19 @@ scenes:
     kind: studio
     act: 2
     photo: del-naja-marshall
+    art:
+      generated: true
+      aspect: "3 / 2"
+      layers:
+        - file: studio-v1-room.webp
+          depth: 6
+          alt: ""
+        - file: studio-v1-figures.webp
+          depth: 10
+          alt: { en: "Three men sitting far apart in a dark studio", ru: "Трое мужчин сидят далеко друг от друга в тёмной студии" }
+        - file: studio-v1-desk.webp
+          depth: 20
+          alt: { en: "A mixing desk in the foreground", ru: "Микшерный пульт на переднем плане" }
     blocks:
       - id: kicker
         role: kicker
@@ -308,16 +393,23 @@ scenes:
         role: text
         draft: false
         en: By the third album Massive Attack were three, Robert Del Naja, Grant Marshall and Andrew Vowles. The producer Neil Davidge became almost a fourth member; he was hired for six months and stayed, he says, for three years. They recorded in Bristol, in the band's own studio and at Christchurch Studios, and for a while in a holiday cottage in Cornwall.
-        ru: К третьему альбому Massive Attack были втроём: Роберт Дель Ная, Грант Маршалл и Эндрю Воулз. Почти четвёртым участником стал продюсер Нил Дэвидж: его наняли на полгода, а остался он, по его словам, на три года. Записывались в Бристоле, в собственной студии группы и на студии Christchurch, а какое-то время в снятом на лето коттедже в Корнуолле.
+        ru: "К третьему альбому Massive Attack были втроём: Роберт Дель Ная, Грант Маршалл и Эндрю Воулз. Почти четвёртым участником стал продюсер Нил Дэвидж: его наняли на полгода, а остался он, по его словам, на три года. Записывались в Бристоле, в собственной студии группы и на студии Christchurch, а какое-то время в снятом на лето коттедже в Корнуолле."
       - id: apart
         role: text
         draft: false
-        en: The work went badly. The three wrote their parts separately, recorded separately and gave interviews separately, and the manager texted Davidge to schedule who could use Christchurch when. Del Naja pulled the sound towards post-punk, and Vowles asked whether they had become a punk band. What finally broke them was “Teardrop”, which Vowles secretly sent to Madonna while the others wanted Elizabeth Fraser to sing it. Two decades later Marshall remembered the album as full of bad memories, and Del Naja summed it up in two words: the fight. Vowles left soon afterwards.
-        ru: Работа шла тяжело. Трое писали свои партии порознь, порознь записывались и порознь давали интервью, а менеджер присылал Дэвиджу сообщения, чтобы развести их по студийному времени. Дель Ная тянул звук к постпанку, и Воулз спрашивал, не стали ли они панк-группой. Окончательно их рассорила «Teardrop»: Воулз тайком отправил её Мадонне, а остальные хотели, чтобы её спела Элизабет Фрейзер. Двадцать лет спустя Маршалл вспоминал этот альбом как время дурных воспоминаний, а Дель Ная назвал его коротко: драка. Вскоре после альбома Воулз ушёл.
+        en: "The work went badly. The three wrote their parts separately, recorded separately and gave interviews separately, and the manager texted Davidge to schedule who could use Christchurch when. Del Naja pulled the sound towards post-punk, and Vowles asked whether they had become a punk band. What finally broke them was “Teardrop”, which Vowles secretly sent to Madonna while the others wanted Elizabeth Fraser to sing it. Two decades later Marshall remembered the album as full of bad memories, and Del Naja summed it up in two words: the fight. Vowles left soon afterwards."
+        ru: "Работа шла тяжело. Трое писали свои партии порознь, порознь записывались и порознь давали интервью, а менеджер присылал Дэвиджу сообщения, чтобы развести их по студийному времени. Дель Ная тянул звук к постпанку, и Воулз спрашивал, не стали ли они панк-группой. Окончательно их рассорила «Teardrop»: Воулз тайком отправил её Мадонне, а остальные хотели, чтобы её спела Элизабет Фрейзер. Двадцать лет спустя Маршалл вспоминал этот альбом как время дурных воспоминаний, а Дель Ная назвал его коротко: драка. Вскоре после альбома Воулз ушёл."
 
   - id: olympic
     kind: olympic
     act: 2
+    art:
+      generated: true
+      aspect: "3 / 2"
+      layers:
+        - file: studio-v1-desk.webp
+          depth: 14
+          alt: { en: "A mixing desk in the dark", ru: "Микшерный пульт в темноте" }
     blocks:
       - id: kicker
         role: kicker
@@ -338,12 +430,27 @@ scenes:
         role: text
         draft: false
         en: So, as Del Naja told it, they stripped the music down almost to nothing, kept something of the old melody, added what Horace himself suggested and wrote new words. Andy took the melody and the words largely from his own song of 1973. When he had sung, Davidge remembers, all he could say was that it was magic.
-        ru: Тогда, как рассказывал Дель Ная, музыку разобрали почти до основания, оставили кое-что от прежней мелодии, добавили то, что предложил сам Хорас, и написали новые слова. Мелодию и слова Энди взял во многом из своей же песни 1973 года. Когда он спел, Дэвидж, по его словам, смог сказать только одно: это волшебство.
+        ru: "Тогда, как рассказывал Дель Ная, музыку разобрали почти до основания, оставили кое-что от прежней мелодии, добавили то, что предложил сам Хорас, и написали новые слова. Мелодию и слова Энди взял во многом из своей же песни 1973 года. Когда он спел, Дэвидж, по его словам, смог сказать только одно: это волшебство."
 
   - id: voice
     kind: voice
     act: 2
     photo: andy-2007
+    art:
+      generated: true
+      aspect: "3 / 2"
+      layers:
+        - file: voice-v1-dark.webp
+          depth: 4
+          alt: ""
+        - file: voice-v1-singer.webp
+          depth: 10
+          role: figure
+          alt: { en: "A singer with closed eyes at a microphone, his hands open", ru: "Певец с закрытыми глазами у микрофона, ладони раскрыты" }
+        - file: voice-v1-breath.webp
+          depth: 10
+          role: figure
+          alt: ""
     blocks:
       - id: kicker
         role: kicker
@@ -360,6 +467,18 @@ scenes:
     kind: strata
     act: 2
     photo: bruschini
+    art:
+      generated: true
+      aspect: "3 / 2"
+      layers:
+        - file: strata-v1-bass.webp
+          alt: { en: "A slow, thick wave: the bass", ru: "Медленная густая волна: бас" }
+        - file: strata-v1-drums.webp
+          alt: { en: "Sharp spikes at even distances: the drums", ru: "Острые всплески через равные промежутки: барабаны" }
+        - file: strata-v1-voice.webp
+          alt: { en: "A thin line that barely moves: the voice", ru: "Тонкая, почти неподвижная линия: голос" }
+        - file: strata-v1-guitar.webp
+          alt: { en: "A jagged band of noise with red in it: the guitars", ru: "Рваная полоса шума с красным: гитары" }
     blocks:
       - id: kicker
         role: kicker
@@ -375,12 +494,22 @@ scenes:
         role: text
         draft: false
         en: Even that was not the end. At the final mix at Olympic they decided to bring in one more bass line and changed the rhythm patterns, so that, says Davidge, it certainly was not the same song any more. The credits name four writers, Del Naja, Marshall, Vowles and Hinds, that is, Horace Andy. The song runs six minutes and eighteen seconds.
-        ru: Но и это был не конец. Уже на финальном сведении в Olympic решили добавить ещё одну басовую линию и поменяли ритмические рисунки, так что, говорит Дэвидж, это была уже точно не та песня. Авторами в выходных данных значатся четверо: Дель Ная, Маршалл, Воулз и Хайндс, то есть Хорас Энди. Длится песня шесть минут восемнадцать секунд.
+        ru: "Но и это был не конец. Уже на финальном сведении в Olympic решили добавить ещё одну басовую линию и поменяли ритмические рисунки, так что, говорит Дэвидж, это была уже точно не та песня. Авторами в выходных данных значатся четверо: Дель Ная, Маршалл, Воулз и Хайндс, то есть Хорас Энди. Длится песня шесть минут восемнадцать секунд."
 
   # ------------------------------------------------ Act III. The breakdown
   - id: break
     kind: break
     act: 3
+    art:
+      generated: true
+      aspect: "3 / 2"
+      layers:
+        - file: break-v1-cracks.webp
+          alt: { en: "A screen cracked from its centre", ru: "Экран, расколотый из центра" }
+        - file: break-v1-shards.webp
+          alt: ""
+        - file: break-v1-flash.webp
+          alt: ""
     blocks:
       - id: guitars
         role: text
@@ -391,6 +520,35 @@ scenes:
   - id: crowd
     kind: crowd
     act: 3
+    art:
+      generated: true
+      aspect: "3 / 2"
+      layers:
+        - file: crowd-v1-carpark.webp
+          depth: 6
+          alt: { en: "A multi-storey car park at night", ru: "Многоэтажная парковка ночью" }
+        - file: crowd-v1-crowd-1.webp
+          depth: 10
+          alt: ""
+        - file: crowd-v1-crowd-2.webp
+          depth: 14
+          alt: { en: "People standing silently between the pillars", ru: "Люди молча стоят между колоннами" }
+        - file: crowd-v1-crowd-3.webp
+          depth: 18
+          alt: { en: "A crowd standing along the right side, watching", ru: "Толпа стоит вдоль правой стороны и смотрит" }
+        - file: crowd-v1-man.webp
+          depth: 24
+          role: figure
+          alt: { en: "A man in a long coat walking towards us", ru: "Человек в длинном пальто идёт навстречу" }
+      overlays:
+        - file: watchers-v1-watcher-1.webp
+          alt: { en: "A figure standing still", ru: "Неподвижно стоящая фигура" }
+        - file: watchers-v1-watcher-2.webp
+          alt: { en: "A figure standing still", ru: "Неподвижно стоящая фигура" }
+        - file: watchers-v1-watcher-3.webp
+          alt: { en: "A figure standing still", ru: "Неподвижно стоящая фигура" }
+        - file: watchers-v1-watcher-4.webp
+          alt: { en: "A figure standing still", ru: "Неподвижно стоящая фигура" }
     blocks:
       - id: release
         role: text
@@ -407,6 +565,17 @@ scenes:
     kind: beetle
     act: 3
     photo: beetle-plate
+    art:
+      generated: true
+      aspect: "1 / 1"
+      layers:
+        - file: beetle-v1-shadow.webp
+          depth: 6
+          alt: ""
+        - file: beetle-v1-beetle.webp
+          depth: 14
+          role: figure
+          alt: { en: "A stag beetle drawn in ink", ru: "Жук-олень, нарисованный тушью" }
     blocks:
       - id: kicker
         role: kicker
@@ -416,13 +585,26 @@ scenes:
       - id: cover
         role: text
         draft: false
-        en: The sleeve of “Mezzanine” is a black stag beetle on white. The photograph is by Nick Knight; the art direction and design are by Robert Del Naja and Tom Hingston. The Museum of Modern Art in New York keeps the sleeve in its architecture and design collection. We do not reproduce it here: the beetles on this page come from a German book on insects of 1884, and from our own drawing.
-        ru: На обложке «Mezzanine» — чёрный жук-олень на белом. Фотографию сделал Ник Найт, оформление придумали Роберт Дель Ная и Том Хингстон. Нью-йоркский Музей современного искусства хранит этот конверт в своей коллекции архитектуры и дизайна. Здесь мы его не воспроизводим: жуки на этой странице — из немецкой книги о насекомых 1884 года и с нашего рисунка.
+        en: "The sleeve of “Mezzanine” is a black stag beetle on white. The photograph is by Nick Knight; the art direction and design are by Robert Del Naja and Tom Hingston. The Museum of Modern Art in New York keeps the sleeve in its architecture and design collection. We do not reproduce it here: the beetles on this page come from a German book on insects of 1884, and from our own drawing."
+        ru: "На обложке «Mezzanine» — чёрный жук-олень на белом. Фотографию сделал Ник Найт, оформление придумали Роберт Дель Ная и Том Хингстон. Нью-йоркский Музей современного искусства хранит этот конверт в своей коллекции архитектуры и дизайна. Здесь мы его не воспроизводим: жуки на этой странице — из немецкой книги о насекомых 1884 года и с нашего рисунка."
 
   # ------------------------------------------------ Act IV. The fade that does not end
   - id: screens
     kind: screens
     act: 4
+    art:
+      generated: true
+      aspect: "3 / 2"
+      layers:
+        - file: screens-cinema-v1-full.webp
+          fit: { x: -25, y: -25, scale: 0.47 }
+          alt: { en: "An empty cinema with its screen lit", ru: "Пустой кинозал, светится экран" }
+        - file: screens-tv-v1-full.webp
+          fit: { x: 25, y: 0, scale: 0.47 }
+          alt: { en: "Two people watching television in a dark room", ru: "Двое смотрят телевизор в тёмной комнате" }
+        - file: screens-game-v1-full.webp
+          fit: { x: -25, y: 25, scale: 0.47 }
+          alt: { en: "A computer screen glowing in a dark bedroom", ru: "Экран компьютера светится в тёмной спальне" }
     blocks:
       - id: kicker
         role: kicker
@@ -433,7 +615,7 @@ scenes:
         role: text
         draft: false
         en: The song soon moved from the record to the screen. In Guy Ritchie's “Snatch” of 2000 it plays in the amusement arcade and in the scene where a caravan burns, and it is on the soundtrack album. The Guardian writes that “Mezzanine” supplied countless film and television directors with three songs at once, “Angel”, “Teardrop” and “Inertia Creeps”.
-        ru: Песня быстро перешла с пластинки на экраны. В «Большом куше» Гая Ричи 2000 года она звучит в зале игровых автоматов и в сцене, где горит фургон, и есть на альбоме саундтрека. The Guardian пишет, что «Mezzanine» снабдил бесчисленных режиссёров кино и телевидения сразу тремя песнями: «Angel», «Teardrop» и «Inertia Creeps».
+        ru: "Песня быстро перешла с пластинки на экраны. В «Большом куше» Гая Ричи 2000 года она звучит в зале игровых автоматов и в сцене, где горит фургон, и есть на альбоме саундтрека. The Guardian пишет, что «Mezzanine» снабдил бесчисленных режиссёров кино и телевидения сразу тремя песнями: «Angel», «Teardrop» и «Inertia Creeps»."
 
   - id: afterlife
     kind: afterlife
@@ -470,6 +652,16 @@ scenes:
     kind: spiral
     act: 4
     photo: lathe
+    art:
+      generated: true
+      aspect: "1 / 1"
+      layers:
+        - file: spiral-v1-glow.webp
+          alt: ""
+        - file: spiral-v1-groove.webp
+          role: spin
+          spin: { x: 50, y: 50, ratio: 1 }
+          alt: { en: "A single spiral groove, turning slowly", ru: "Одна спиральная канавка, медленно вращается" }
     blocks:
       - id: groove
         role: text
@@ -480,10 +672,32 @@ scenes:
   - id: fall
     kind: fall
     act: 4
+    silent: true
+    art:
+      generated: true
+      aspect: "3 / 2"
+      layers:
+        - file: fall-v1-static.webp
+          alt: ""
+        - file: fall-v1-particles.webp
+          alt: ""
     blocks: []
 
   # ------------------------------------------------ The last screen
   - id: warm
     kind: warm
     act: 5
+    silent: true
+    art:
+      generated: true
+      aspect: "3 / 2"
+      layers:
+        - file: warm-v3-light.webp
+          alt: ""
+        - file: warm-v3-glass.webp
+          alt: { en: "Fogged glass with warm light behind it", ru: "Запотевшее стекло, за ним тёплый свет" }
+        - file: warm-v3-palm.webp
+          role: figure
+          pivot: "58 50"
+          alt: { en: "A palm print on the fogged glass", ru: "Отпечаток ладони на запотевшем стекле" }
     blocks: []
