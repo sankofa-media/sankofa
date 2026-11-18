@@ -7,7 +7,6 @@
 // reached, the page explains nothing and shows only that line.
 import { h } from '../../../lib/dom';
 import { lang } from '../../../lib/i18n';
-import { isPhone } from '../../engine/qr';
 import * as api from '../api';
 import { closeCamera, FrameReader, openBackCamera, type Camera } from './camera';
 import { analyse, checkRR, type Sample } from './ppg';
@@ -52,7 +51,6 @@ export class PulsePage {
   private canvas: HTMLCanvasElement;
   private floatBox: HTMLElement;
   private othersLine: HTMLElement;
-  private vibOff: HTMLElement;
   private sayEl: HTMLElement;
   private ownEl: HTMLElement;
   private particles: HTMLCanvasElement;
@@ -72,7 +70,6 @@ export class PulsePage {
   private id = api.tabId();
   private heartbeat = 0;
   private lastSent = 0;
-  private vibNoted = false;
   private haptic: HTMLLabelElement | null = null;
   private returnFocus: Element | null = null;
   private timers: number[] = [];
@@ -84,10 +81,9 @@ export class PulsePage {
     this.canvas = h('canvas.ap-canvas', { 'aria-hidden': 'true' }) as HTMLCanvasElement;
     this.floatBox = h('div.ap-float', { 'aria-hidden': 'true' });
     this.othersLine = h('p.ap-others', { 'aria-live': 'polite' });
-    this.vibOff = h('p.ap-note.ap-vib-off', { hidden: true }, say('pulse-vibration-off'));
     const further = h('button.ap-further', { type: 'button', 'aria-label': say('pulse-further') }, h('span', { 'aria-hidden': 'true' }, '↓'));
     further.addEventListener('click', () => this.sayEl.scrollIntoView({ behavior: o.calm() ? 'auto' : 'smooth' }));
-    this.touchSec = h('section.ap-sec.ap-touch', { 'aria-label': say('pulse-touch') }, this.canvas, h('p.ap-touch-line', {}, say('pulse-touch')), this.floatBox, h('div.ap-touch-foot', {}, this.othersLine, this.vibOff, further));
+    this.touchSec = h('section.ap-sec.ap-touch', { 'aria-label': say('pulse-touch') }, this.canvas, h('p.ap-touch-line', {}, say('pulse-touch')), this.floatBox, h('div.ap-touch-foot', {}, this.othersLine, further));
     this.sayEl = this.buildWords();
     this.ownEl = this.buildOwn();
     const last = h('section.ap-sec.ap-last', {}, h('p.ap-last-line', {}, say('last')));
@@ -227,10 +223,6 @@ export class PulsePage {
     this.report(true);
     clearInterval(this.heartbeat);
     this.heartbeat = window.setInterval(() => this.report(true), 5000);
-    if (!this.vibNoted && isPhone() && !canVibrate() && !this.haptic) {
-      this.vibNoted = true;
-      this.vibOff.hidden = false;
-    }
   }
 
   private lift(quiet: boolean): void {

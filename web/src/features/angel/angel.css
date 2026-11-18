@@ -37,11 +37,15 @@
   background: transparent;
   color: var(--ft-ink);
 }
+/* No boxes: on a wide screen the text stands beside the picture and needs no
+   backing. On a phone, where it scrolls over the picture, it gets a soft,
+   edgeless shade instead (see the 720px block below). */
 .an .ft-block {
-  box-shadow: 0 0 0 1px rgba(200, 200, 200, 0.08);
-}
-.an .ft-block.ft-controls {
+  background: none;
   box-shadow: none;
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 .an .ft-title {
   letter-spacing: -0.01em;
@@ -528,9 +532,7 @@
   display: grid;
   gap: 18px;
   max-width: 28rem;
-  padding: 22px 24px;
-  border-radius: 6px;
-  background: rgba(43, 28, 16, 0.86);
+  padding: 22px 0;
   color: #f6e8d6;
 }
 .an-warm-words .ft-line {
@@ -622,6 +624,22 @@
   }
   .an .ft-block {
     max-width: none;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  /* Over the picture: a shade that fades out at its edges, never a box. */
+  .an .ft-block:is(.ft-b-text, .ft-b-lede, .ft-b-note, .ft-b-caption) {
+    background: rgba(14, 14, 16, 0.78);
+    box-shadow: 0 0 32px 26px rgba(14, 14, 16, 0.78);
+    border-radius: 28px;
+  }
+  .an.an-warm .ft-block:is(.ft-b-text, .ft-b-lede, .ft-b-note, .ft-b-caption) {
+    background: rgba(43, 28, 16, 0.78);
+    box-shadow: 0 0 32px 26px rgba(43, 28, 16, 0.78);
+  }
+  .an .ft-b-title .ft-title,
+  .an .ft-b-kicker .ft-kicker {
+    text-shadow: 0 1px 18px rgba(0, 0, 0, 0.95), 0 0 2px rgba(0, 0, 0, 0.9);
   }
   .an .an-full .ft-stage {
     place-items: stretch;

@@ -22,9 +22,6 @@ title:
 dek:
   en: "In 1973 a young singer in Kingston recorded a light love song. A quarter of a century later he sang it again in a London studio, and it became one of the darkest, heaviest songs of the decade. It has not stopped since."
   ru: "В 1973 году молодой певец из Кингстона записал светлую песню о любви. Через четверть века он спел её снова, в лондонской студии, и она стала одной из самых тёмных и тяжёлых песен десятилетия. С тех пор она не кончается."
-reading:
-  en: "20–25 minutes; with sound, and your phone nearby"
-  ru: "20–25 минут; со звуком и с телефоном под рукой"
 
 # Real photographs, open licences only (sankofa-features/research/angel/media.yaml).
 # Each must also get its entry in content/ledger/media.yaml.
@@ -128,9 +125,6 @@ art:
     license_url: https://creativecommons.org/licenses/by-sa/2.0
 
 ui:
-  sound-hint:
-    en: "This story has sound: the official recordings play in the player below. Without sound, the song's beat comes through the light and, on a phone, through vibration."
-    ru: "В этой истории есть звук: официальные записи играют в плеере внизу. Без звука ритм песни передают свет и, на телефоне, вибрация."
   then: { en: "1973", ru: "1973" }
   now: { en: "1998", ru: "1998" }
   then-now-hint: { en: "Drag between the two years", ru: "Потяните между двумя годами" }
@@ -148,9 +142,6 @@ ui:
   pulse-touch: { en: "Put your finger or your palm on the screen if things are hard right now.", ru: "Приложи палец или ладонь, если тебе сейчас тяжело." }
   pulse-others: { en: "{n} more here now", ru: "Сейчас здесь ещё {n}" }
   pulse-further: { en: "Further", ru: "Дальше" }
-  pulse-vibration-off:
-    en: "This phone cannot vibrate from a web page; the pulse is in the light."
-    ru: "Этот телефон не умеет вибрировать со страницы: пульс — в свете."
   words-invite:
     en: "Say what you never said. By voice or in writing. Without your name: your words will stay here, among the words of others."
     ru: "Скажи то, что так и не было сказано. Голосом или текстом. Без имени: твои слова останутся здесь, среди слов других людей."
