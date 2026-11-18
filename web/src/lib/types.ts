@@ -50,6 +50,8 @@ export interface Card {
   body: string;
   /** the name as it reads inside a sentence: "the blues" */
   inline?: string;
+  /** The name on the atlas map, when the title cut short would mislead. */
+  label?: string;
   backlinks?: string[];
   translations?: Record<string, CardTranslation>;
   /** Set on a localized copy: the language its text is actually in. */
@@ -64,6 +66,7 @@ export interface CardTranslation {
   dispute?: string;
   captions?: string[];
   inline?: string;
+  label?: string;
   credits?: string[];
   licenses?: string[];
   body: string;

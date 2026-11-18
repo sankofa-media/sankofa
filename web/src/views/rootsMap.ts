@@ -20,6 +20,8 @@ import { miniPlayer } from './miniPlayer';
 
 const NS = 'http://www.w3.org/2000/svg';
 const KINDS: (LinkKind | 'lineage')[] = ['influence', 'style', 'scene', 'teacher', 'lineage'];
+/** Room kept between a name and the edge of a phone screen, px. */
+const EDGE = 6;
 
 export class RootsMap {
   readonly el: HTMLElement;
@@ -230,6 +232,12 @@ export class RootsMap {
     // Phones open on the roots at the bottom, with the artists above them; the
     // line under the search says that later artists are further up.
     if (this.phone) {
+      // Names are fitted to the visible strip: fit them again once a pan settles.
+      let settle = 0;
+      this.stage.addEventListener('scroll', () => {
+        clearTimeout(settle);
+        settle = window.setTimeout(() => this.isOpen && this.placeLabels(this.lit), 120);
+      }, { passive: true });
       const deepest = Math.max(...g.nodes.map((n) => n.y!));
       requestAnimationFrame(() => {
         this.stage.scrollTop = Math.max(0, deepest + 90 - this.stage.clientHeight);
@@ -535,18 +543,40 @@ export class RootsMap {
         const rr = radius(n);
         // above, below, right, left: the first place that is free
         const spots: [number, number, string][] = [[0, -rr - 5, 'middle'], [0, rr + 16, 'middle'], [rr + 6, 4, 'start'], [-rr - 6, 4, 'end'], [rr + 4, -rr - 2, 'start'], [-rr - 4, -rr - 2, 'end'], [rr + 4, rr + 12, 'start'], [-rr - 4, rr + 12, 'end']];
-        for (const [x, y, anchor] of spots) {
+        // On a phone a free place inside the screen beats one its edge would cut.
+        const cut = (b: DOMRect) => this.phone && (b.left < view.left + EDGE || b.right > view.right - EDGE);
+        const put = ([x, y, anchor]: [number, number, string]) => {
           el.setAttribute('x', String(x));
           el.setAttribute('y', String(y));
           el.setAttribute('text-anchor', anchor);
+          return el.getBoundingClientRect();
+        };
+        let firstFree: [number, number, string] | undefined;
+        for (const spot of spots) {
+          r = put(spot);
+          if (hits(r)) continue;
+          firstFree ??= spot;
+          if (!cut(r)) break;
+        }
+        if (firstFree && (hits(r) || cut(r))) r = put(firstFree);
+      }
+      // A phone shows a strip of a wider canvas: a name the screen edge would
+      // cut slides back inside it, and the name of a dot off screen is not drawn.
+      let offScreen = false;
+      if (this.phone && r.width > 0) {
+        const dot = dots.get(n.id) ?? this.nodeEls.get(n.id)!.getBoundingClientRect();
+        const cx = (dot.left + dot.right) / 2;
+        offScreen = cx < view.left || cx > view.right;
+        const dx = r.left < view.left + EDGE ? view.left + EDGE - r.left : r.right > view.right - EDGE ? view.right - EDGE - r.right : 0;
+        if (!offScreen && dx) {
+          el.setAttribute('x', String(Number(el.getAttribute('x') ?? 0) + dx));
           r = el.getBoundingClientRect();
-          if (!hits(r)) break;
         }
       }
       // Roots keep their names unless they would print over another label;
       // the three biggest roots always keep theirs, unless a path is lit.
       const free = !hits(r) || (n.card && bigRoots.has(n.id) && !priority);
-      const ok = want && free && shown < budget && r.width > 0;
+      const ok = want && free && !offScreen && shown < budget && r.width > 0;
       el.classList.toggle('hide', !ok);
       if (ok) {
         boxes.push(r);

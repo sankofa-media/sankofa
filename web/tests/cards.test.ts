@@ -127,6 +127,13 @@ describe('the moment a card is about', () => {
     expect(at1900.points[0].out).toBe(true);
   });
 
+  it('names a card on the map by its label when it has one, in the reader’s language', () => {
+    const slav = card({ id: 'slav', title: 'Slav, slave and the Atlantic', label: 'Slav → slave', translations: { ru: { title: 'Славянин, slave и Атлантика', label: 'Славянин → раб', wow: 'w', body: 'b' } } });
+    expect(atlasLayers(new CardSet([slav]), { level: 4 }).points[0].label).toBe('Slav → slave');
+    expect(atlasLayers(new CardSet([localizeCard(slav, 'ru')]), { level: 4 }).points[0].label).toBe('Славянин → раб');
+    expect(atlasLayers(new CardSet([smalls]), { level: 4 }).points[0].label).toBe('robert-smalls');
+  });
+
   it('anchors the descent at the moment', () => {
     expect(quietStretches([smalls], 45)[0]).toEqual({ from: 1300, to: 1862 });
   });

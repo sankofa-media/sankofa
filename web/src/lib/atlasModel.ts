@@ -103,7 +103,7 @@ export function atlasLayers(set: CardSet, q: AtlasQuery): AtlasLayers {
       id: c.id,
       lon,
       lat,
-      label: c.title,
+      label: c.label || c.title,
       title: c.kind === 'person' || c.kind === 'work' || lvl >= 4,
       color: eraColor(c.era),
       minor: !major,

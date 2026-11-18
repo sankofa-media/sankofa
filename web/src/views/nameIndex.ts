@@ -68,10 +68,11 @@ export function nameIndex(app: App): HTMLElement {
     const shown = filterEntries(all, query, kinds);
     const have = new Set(shown.map((e) => e.letter));
     bar.replaceChildren(
-      ...letters(all).map((L, i, ls) =>
-        h(
-          // Where Russian letters give way to Latin ones, a gap says so.
-          `button.ix-letter${i && /\p{Script=Cyrillic}/u.test(ls[i - 1]) && !/\p{Script=Cyrillic}/u.test(L) ? '.ix-gap' : ''}`,
+      ...letters(all).flatMap((L, i, ls) => {
+        // Where Russian letters give way to Latin ones, the Latin alphabet starts a line of its own.
+        const latinAfterRussian = i > 0 && /\p{Script=Cyrillic}/u.test(ls[i - 1]) && !/\p{Script=Cyrillic}/u.test(L);
+        const button = h(
+          `button.ix-letter${latinAfterRussian ? '.ix-gap' : ''}`,
           {
             type: 'button',
             'data-letter': L,
@@ -84,8 +85,9 @@ export function nameIndex(app: App): HTMLElement {
             },
           },
           L,
-        ),
-      ),
+        );
+        return latinAfterRussian ? [h('span.ix-break', { 'aria-hidden': 'true' }), button] : [button];
+      }),
     );
     const groups = new Map<string, IndexEntry[]>();
     for (const e of shown) (groups.get(e.letter) ?? groups.set(e.letter, []).get(e.letter)!).push(e);

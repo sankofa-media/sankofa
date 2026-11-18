@@ -88,3 +88,61 @@ test('Escape leaves Roots even though the room opens with the focus in its searc
   await page.keyboard.press('Escape');
   await expect(page.locator('.roots.open')).toHaveCount(0);
 });
+
+test('the name index starts the Latin alphabet on a line of its own, after the Russian one', async ({ page }) => {
+  for (const width of [390, 1440]) {
+    await page.setViewportSize({ width, height: 844 });
+    await page.goto('about:blank');
+    await page.goto('/#view=index&lang=ru');
+    const gap = page.locator('.ix-letters .ix-letter.ix-gap');
+    await expect(gap).toBeVisible();
+    const [last, first, left] = await page.evaluate(() => {
+      const g = document.querySelector<HTMLElement>('.ix-letters .ix-gap')!;
+      const prev = g.previousElementSibling!.previousElementSibling as HTMLElement;
+      return [prev.getBoundingClientRect().bottom, g.getBoundingClientRect().top, g.getBoundingClientRect().left - document.querySelector('.ix-letters')!.getBoundingClientRect().left];
+    });
+    // Below «Я», with room between the two, and at the start of the row.
+    expect(first).toBeGreaterThan(last + 4);
+    expect(left).toBeLessThan(2);
+  }
+});
+
+test('on a phone the music map keeps every name it shows inside the screen', async ({ page, isMobile }) => {
+  test.skip(!isMobile, 'a phone pans a canvas wider than the screen');
+  for (const lang of ['ru', 'en']) {
+    await page.goto('about:blank');
+    await page.goto(`/#view=roots-map&lang=${lang}`);
+    await expect(page.locator('.rm-svg text.lbl:not(.hide)').first()).toBeVisible({ timeout: 15_000 });
+    const cut = async () =>
+      page.evaluate(() => {
+        const v = document.querySelector('.rm-stage')!.getBoundingClientRect();
+        return [...document.querySelectorAll('.rm-svg text.lbl:not(.hide)')]
+          .map((t) => [t.textContent, t.getBoundingClientRect()] as const)
+          .filter(([, r]) => r.width > 0 && r.bottom > v.top && r.top < v.bottom && (r.left < v.left || r.right > v.right))
+          .map(([s]) => s);
+      });
+    await expect.poll(cut).toEqual([]);
+    // Panned sideways, the names are fitted to the new strip.
+    await page.locator('.rm-stage').evaluate((s) => s.scrollBy(150, 0));
+    await expect.poll(cut).toEqual([]);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(await page.evaluate(() => window.innerWidth));
+  }
+});
+
+test('the atlas names the Slav card “Slav → slave”, not a bare “Slav”', async ({ page }) => {
+  for (const [lang, name] of [['en', 'Slav → slave'], ['ru', 'Славянин → раб']]) {
+    await page.goto('about:blank');
+    await page.goto(`/#focus=slave-word-and-systems&lang=${lang}&zoom=1`);
+    await expect(page.locator('.atlas.open g.pt.focus text.lbl')).toHaveText(name, { timeout: 15_000 });
+  }
+});
+
+test('every special project says how long it takes, Angel included', async ({ page }) => {
+  for (const [lang, re] of [['en', /^\d+\P{L}+\d+\P{L}+minutes/u], ['ru', /^\d+\P{L}+\d+\P{L}+минут/u]] as const) {
+    await page.goto('about:blank');
+    await page.goto(`/#view=features&lang=${lang}`);
+    await expect(page.locator('.ft-item-link[data-feature="angel"] .ft-item-tx small')).toHaveText(re);
+    const items = page.locator('.ft-item-link');
+    await expect(items).toHaveCount(await page.locator('.ft-item-link .ft-item-tx small').count());
+  }
+});

@@ -2,6 +2,7 @@
 id: slave-word-and-systems
 kind: comparison
 title: "Slav, slave and the Atlantic"
+label: "Slav → slave"
 wow: "The English word 'slave' comes from 'Slav' — but the Atlantic system that later filled the word with meaning bound bondage to African descent, passed it from mother to child and moved 12.5 million people."
 years: [800, 1866]
 places:

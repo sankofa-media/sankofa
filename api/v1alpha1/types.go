@@ -70,6 +70,9 @@ type CardSpec struct {
 	// The name inside a sentence, e.g. "the blues".
 	// +optional
 	Inline string `json:"inline,omitempty"`
+	// The name on the atlas map, when the title cut short would mislead.
+	// +optional
+	Label string `json:"label,omitempty"`
 	// The one-line hook.
 	Wow string `json:"wow"`
 	// +kubebuilder:validation:MinItems=1
@@ -121,7 +124,9 @@ type CardText struct {
 	Title string `json:"title"`
 	// +optional
 	Inline string `json:"inline,omitempty"`
-	Wow    string `json:"wow"`
+	// +optional
+	Label string `json:"label,omitempty"`
+	Wow   string `json:"wow"`
 	// +optional
 	Places []string `json:"places,omitempty"`
 	// +optional
