@@ -1,0 +1,489 @@
+# Angel — the scenes of the special project and their text.
+#
+# A mood piece: the story of Massive Attack's "Angel" told along the shape of
+# the track (bass and silence → the voice → the breakdown → the fade), and a
+# warm last screen that leads to the pulse page on a phone.
+#
+# Storyboard: sankofa-features/angel/STORYBOARD.ru.md.
+# Research: sankofa-features/research/angel/ (REPORT.md, timeline.yaml,
+# afterlife.yaml; nothing from unconfirmed.md is used).
+#
+# Rules for this text (owner, 17.11.2026):
+# - The feeling comes from the music and the facts; the text never builds it
+#   up: no "piercing", "heartbreaking", no judging feelings.
+# - No personal story. The pulse belongs to no one: nowhere say whose it is.
+# - Lyrics are never quoted; song titles only.
+# - Dictionary links: [[card-id|words]].
+id: angel
+order: 3
+title:
+  en: "Angel"
+  ru: "Angel"
+dek:
+  en: "In 1973 a young singer in Kingston recorded a light love song. A quarter of a century later he sang it again in a London studio, and it became one of the darkest, heaviest songs of the decade. It has not stopped since."
+  ru: "В 1973 году молодой певец из Кингстона записал светлую песню о любви. Через четверть века он спел её снова, в лондонской студии, и она стала одной из самых тёмных и тяжёлых песен десятилетия. С тех пор она не кончается."
+reading:
+  en: "20–25 minutes; with sound, and your phone nearby"
+  ru: "20–25 минут; со звуком и с телефоном под рукой"
+
+# Real photographs, open licences only (sankofa-features/research/angel/media.yaml).
+# Each must also get its entry in content/ledger/media.yaml.
+art:
+  - id: coxsone-corner
+    kind: photo
+    file: angel-coxsone-corner.jpg
+    rights: angel-coxsone-corner.jpg
+    alt: { en: "A street corner in Kingston, Jamaica", ru: "Угол улицы в Кингстоне, Ямайка" }
+    caption: { en: "The Kingston corner where Coxsone Dodd started his sound system. Photographed in 2007", ru: "Угол в Кингстоне, где Коксон Додд начинал свою саунд-систему. Снимок 2007 года" }
+    credit: { en: "Photo: Christina Xu, CC BY-SA 2.0", ru: "Фото: Christina Xu, CC BY-SA 2.0" }
+    source: https://commons.wikimedia.org/wiki/File:Corner_Coxsone_Dodd_Kingston_Jamaica.jpg
+    license_url: https://creativecommons.org/licenses/by-sa/2.0
+  - id: studio-one
+    kind: photo
+    file: angel-studio-one.jpg
+    rights: angel-studio-one.jpg
+    alt: { en: "The front of Studio One in Kingston", ru: "Фасад Studio One в Кингстоне" }
+    caption: { en: "Studio One, Kingston. Photographed in 2009", ru: "Studio One, Кингстон. Снимок 2009 года" }
+    credit: { en: "Photo: dubdem sound system, CC BY 2.0", ru: "Фото: dubdem sound system, CC BY 2.0" }
+    source: https://commons.wikimedia.org/wiki/File:Studio_one.jpg
+    license_url: https://creativecommons.org/licenses/by/2.0
+  - id: st-paul-street
+    kind: photo
+    file: angel-st-paul-street.jpg
+    rights: angel-st-paul-street.jpg
+    alt: { en: "A street of terraced houses in St Pauls, Bristol", ru: "Улица с домами в ряд в районе Сент-Полс, Бристоль" }
+    caption: { en: "St Paul Street, Bristol, 2008", ru: "Сент-Пол-стрит, Бристоль, 2008 год" }
+    credit: { en: "Photo: Matt Buck, CC BY-SA 2.0", ru: "Фото: Matt Buck, CC BY-SA 2.0" }
+    source: https://commons.wikimedia.org/wiki/File:Bristol_DSCF5330_(2879845640).jpg
+    license_url: https://creativecommons.org/licenses/by-sa/2.0
+  - id: del-naja-marshall
+    kind: photo
+    file: angel-del-naja-marshall.jpg
+    rights: angel-del-naja-marshall.jpg
+    alt: { en: "Robert Del Naja and Grant Marshall on stage", ru: "Роберт Дель Ная и Грант Маршалл на сцене" }
+    caption: { en: "Robert Del Naja (3D) and Grant Marshall (Daddy G) at the Eurockéennes festival, 2008", ru: "Роберт Дель Ная (3D) и Грант Маршалл (Daddy G) на фестивале Eurockéennes, 2008 год" }
+    credit: { en: "Photo: Festival Eurockéennes / Rod le Hiboo, composite by Jezhotwells, CC BY-SA 3.0", ru: "Фото: Festival Eurockéennes / Rod le Hiboo, монтаж Jezhotwells, CC BY-SA 3.0" }
+    source: https://commons.wikimedia.org/wiki/File:Massive_Attack_composite.jpg
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+  - id: andy-2007
+    kind: photo
+    file: angel-horace-andy-2007.jpg
+    rights: angel-horace-andy-2007.jpg
+    alt: { en: "Horace Andy singing on stage", ru: "Хорас Энди поёт на сцене" }
+    caption: { en: "Horace Andy at Het Depot, Leuven, 2007", ru: "Хорас Энди в клубе Het Depot, Лёвен, 2007 год" }
+    credit: { en: "Photo: Simon Schoeters (Cimm), CC BY 2.0", ru: "Фото: Simon Schoeters (Cimm), CC BY 2.0" }
+    source: https://commons.wikimedia.org/wiki/File:Horace_Andy.jpg
+    license_url: https://creativecommons.org/licenses/by/2.0
+  - id: andy-moscow
+    kind: photo
+    file: angel-horace-andy-moscow.jpg
+    rights: angel-horace-andy-moscow.jpg
+    alt: { en: "Horace Andy on stage with Massive Attack in Moscow", ru: "Хорас Энди на сцене с Massive Attack в Москве" }
+    caption: { en: "Horace Andy with Massive Attack in Moscow, 2009", ru: "Хорас Энди с Massive Attack в Москве, 2009 год" }
+    credit: { en: "Photo: Saturation, CC BY-SA 3.0", ru: "Фото: Saturation, CC BY-SA 3.0" }
+    source: https://commons.wikimedia.org/wiki/File:Horace_Andy_(Massive_Attack_live_in_Moscow,_2009).jpg
+    license_url: https://creativecommons.org/licenses/by-sa/3.0
+  - id: bruschini
+    kind: photo
+    file: angel-bruschini.jpg
+    rights: angel-bruschini.jpg
+    alt: { en: "Angelo Bruschini playing guitar on stage", ru: "Анджело Брускини играет на гитаре на сцене" }
+    caption: { en: "Angelo Bruschini with Massive Attack, 2010", ru: "Анджело Брускини с Massive Attack, 2010 год" }
+    credit: { en: "Photo: Carlos Martínez, CC BY-SA 2.0", ru: "Фото: Carlos Martínez, CC BY-SA 2.0" }
+    source: https://commons.wikimedia.org/wiki/File:Angelo_Bruschini.jpg
+    license_url: https://creativecommons.org/licenses/by-sa/2.0
+  - id: beetle-plate
+    kind: photo
+    file: angel-beetle-plate-1884.jpg
+    rights: angel-beetle-plate-1884.jpg
+    alt: { en: "A plate of beetles from a nineteenth-century German book on insects", ru: "Таблица с жуками из немецкой книги о насекомых XIX века" }
+    caption: { en: "A plate from Brehm and Taschenberg, “Die Insekten, Tausendfüssler und Spinnen”, 1884", ru: "Таблица из книги Брема и Ташенберга «Насекомые, многоножки и пауки», 1884 год" }
+    credit: { en: "Public domain", ru: "Общественное достояние" }
+    source: https://commons.wikimedia.org/wiki/File:Die_Insekten,_Tausendf%C3%BCssler_und_Spinnen_(Plate_5)_(9524145828).jpg
+  - id: mezzanine-xxi
+    kind: photo
+    file: angel-mezzanine-xxi-2019.jpg
+    rights: angel-mezzanine-xxi-2019.jpg
+    alt: { en: "Massive Attack on a large stage under white light", ru: "Massive Attack на большой сцене в белом свете" }
+    caption: { en: "Massive Attack on the Mezzanine XXI tour, Assago, February 2019", ru: "Massive Attack в туре Mezzanine XXI, Ассаго, февраль 2019 года" }
+    credit: { en: "Photo: Dennis Radaelli, CC BY-SA 4.0", ru: "Фото: Dennis Radaelli, CC BY-SA 4.0" }
+    source: https://commons.wikimedia.org/wiki/File:Massive_Attack_at_Mediolanum_Forum,_Assago_-_February_6th,_2019.jpg
+    license_url: https://creativecommons.org/licenses/by-sa/4.0
+  - id: rock-en-seine-2024
+    kind: photo
+    file: angel-rock-en-seine-2024.jpg
+    rights: angel-rock-en-seine-2024.jpg
+    alt: { en: "Massive Attack in concert at night", ru: "Massive Attack на ночном концерте" }
+    caption: { en: "Massive Attack at Rock en Seine, August 2024", ru: "Massive Attack на фестивале Rock en Seine, август 2024 года" }
+    credit: { en: "Photo: ManoSolo13241324, CC0", ru: "Фото: ManoSolo13241324, CC0" }
+    source: https://commons.wikimedia.org/wiki/File:Massive_Attack_2024_1.jpg
+  - id: lathe
+    kind: photo
+    file: angel-lathe.jpg
+    rights: angel-lathe.jpg
+    alt: { en: "A lathe cutting a spiral groove into a master disc", ru: "Станок нарезает спиральную канавку на мастер-диске" }
+    caption: { en: "A Scully lathe cutting the groove of a record: one spiral from the edge towards the centre. Jamaica, 2007", ru: "Станок Scully нарезает канавку пластинки: одна спираль от края к центру. Ямайка, 2007 год" }
+    credit: { en: "Photo: Christina Xu, CC BY-SA 2.0", ru: "Фото: Christina Xu, CC BY-SA 2.0" }
+    source: https://commons.wikimedia.org/wiki/File:Vinyl_pressing_machine.jpg
+    license_url: https://creativecommons.org/licenses/by-sa/2.0
+
+ui:
+  sound-hint:
+    en: "This story has sound: the official recordings play in the player below. Without sound, the song's beat comes through the light and, on a phone, through vibration."
+    ru: "В этой истории есть звук: официальные записи играют в плеере внизу. Без звука ритм песни передают свет и, на телефоне, вибрация."
+  then: { en: "1973", ru: "1973" }
+  now: { en: "1998", ru: "1998" }
+  then-now-hint: { en: "Drag between the two years", ru: "Потяните между двумя годами" }
+  strata-hint: { en: "Lay the layers on top of one another", ru: "Наложите слои друг на друга" }
+  strata-bass: { en: "Bass", ru: "Бас" }
+  strata-drums: { en: "Drums", ru: "Барабаны" }
+  strata-voice: { en: "Voice", ru: "Голос" }
+  strata-guitar: { en: "Guitars", ru: "Гитары" }
+  progress: { en: "How far you are", ru: "Сколько прочитано" }
+  # The warm last screen and the pulse page. The pulse belongs to no one:
+  # never say whose it is.
+  invite: { en: "You are not alone. Feel the pulse.", ru: "Ты не один. Почувствуй пульс." }
+  invite-qr: { en: "Point your phone's camera at the code", ru: "Наведи камеру телефона на код" }
+  invite-here: { en: "Feel it", ru: "Почувствовать" }
+  pulse-touch: { en: "Put your finger or your palm on the screen if things are hard right now.", ru: "Приложи палец или ладонь, если тебе сейчас тяжело." }
+  pulse-others: { en: "{n} more here now", ru: "Сейчас здесь ещё {n}" }
+  pulse-vibration-off:
+    en: "This phone cannot vibrate from a web page; the pulse is in the light."
+    ru: "Этот телефон не умеет вибрировать со страницы: пульс — в свете."
+  words-invite:
+    en: "Say what you never said. By voice or in writing. Without your name: your words will stay here, among the words of others."
+    ru: "Скажи то, что так и не было сказано. Голосом или текстом. Без имени: твои слова останутся здесь, среди слов других людей."
+  words-placeholder: { en: "Your words", ru: "Твои слова" }
+  words-voice: { en: "Say it aloud", ru: "Сказать голосом" }
+  words-keep-voice: { en: "Let my voice stay in the chorus, unrecognisable", ru: "Пусть мой голос останется в хоре, неузнаваемым" }
+  words-release: { en: "Let go", ru: "Отпустить" }
+  words-keep: { en: "Keep to myself", ru: "Оставить себе" }
+  words-sent: { en: "Your words are here.", ru: "Твои слова здесь." }
+  words-kept: { en: "They went nowhere.", ru: "Они никуда не ушли." }
+  words-checked:
+    en: "Before your words join the others, an AI made by Anthropic reads them, to keep out advertising and anything that could hurt someone. They are shown without a name."
+    ru: "Прежде чем слова попадут к другим, их прочитает нейросеть Anthropic, чтобы не пропустить рекламу и то, что может кому-то навредить. Показываются они без имени."
+  words-delete: { en: "To remove them later, keep this code: {code}", ru: "Чтобы потом их убрать, сохрани этот код: {code}" }
+  words-crisis:
+    en: "It sounds as if things are very hard for you right now. You don't have to carry it alone. If you are in danger, call 112. People who can help, in your country: findahelpline.com"
+    ru: "Похоже, тебе сейчас очень тяжело. Не нужно нести это одному. Если ты в опасности, звони 112. Те, кто умеет помочь, в твоей стране: findahelpline.com"
+  words-report: { en: "Remove", ru: "Убрать" }
+  own-pulse: { en: "You can leave your pulse too.", ru: "Можно оставить и свой пульс." }
+  own-pulse-how:
+    en: "Cover the back camera with your fingertip and hold still for half a minute."
+    ru: "Закрой подушечкой пальца заднюю камеру и не двигайся полминуты."
+  own-pulse-light:
+    en: "This browser cannot turn on the flash. Hold your finger over the camera with a bright lamp or a window behind it."
+    ru: "Этот браузер не умеет включать вспышку. Закрой пальцем камеру, а за пальцем пусть будет яркая лампа или окно."
+  own-pulse-beats: { en: "{n} beats", ru: "Ударов: {n}" }
+  own-pulse-feel: { en: "Feel it", ru: "Почувствовать" }
+  own-pulse-again: { en: "Again", ru: "Заново" }
+  own-pulse-consent:
+    en: "My rhythm will become one of the pulses on this page, anonymously. Only the gaps between beats: no name, no video."
+    ru: "Мой ритм анонимно станет одним из пульсов этой страницы. Только промежутки между ударами: без имени и без видео."
+  own-pulse-send: { en: "Leave it", ru: "Оставить" }
+  own-pulse-failed:
+    en: "The pulse would not come through on this phone. Try with more light, or press a little more gently."
+    ru: "На этом телефоне пульс не поймался. Попробуй при более ярком свете или прижми палец чуть мягче."
+  own-pulse-sent: { en: "Your pulse is here.", ru: "Твой пульс здесь." }
+  last: { en: "You are not alone.", ru: "Ты не один." }
+
+scenes:
+  # ------------------------------------------------ Act I. Silence and bass
+  - id: line
+    kind: line
+    act: 1
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Massive Attack, “Angel”, 1998
+        ru: Massive Attack, «Angel», 1998
+      - id: title
+        role: title
+        draft: false
+        en: Angel
+        ru: Angel
+      - id: bass
+        role: lede
+        draft: false
+        en: The hi-fi magazine What Hi-Fi? has long kept this song among its regular test tracks. Its opening, they write, demands power and control from a subwoofer, because it rests on a bass that you feel in your body more than you hear. But before it became a test for loudspeakers, it was a Jamaican love song, sung by a young man from Kingston in 1973. Nearly a quarter of a century later he sang it again, and it was a different song.
+        ru: Журнал What Hi-Fi? давно держит эту песню среди своих постоянных тестовых треков. Её вступление, пишут там, требует от сабвуфера мощи и выдержки, потому что держится на басе, который скорее чувствуешь телом, чем слышишь. Но прежде чем стать испытанием для динамиков, она была ямайской песней о любви, которую в 1973 году спел молодой парень из Кингстона. Почти через четверть века он спел её снова, и это была уже другая песня.
+
+  - id: kingston
+    kind: kingston
+    act: 1
+    photo: coxsone-corner
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Kingston, 1970
+        ru: Кингстон, 1970 год
+      - id: title
+        role: title
+        draft: false
+        en: A new name
+        ru: Новое имя
+      - id: school
+        role: text
+        draft: false
+        en: Horace Hinds was born in Kingston, Jamaica. His cousin Justin Hinds was already a singer, and the boy boasted of him whenever Justin came on the radio. He listened to American soul first, and only later to Jamaican singers; Alton Ellis let him play his guitar. In 1970 he auditioned at Studio One for Clement Dodd, known as Coxsone, and sang him a song of his own, “Got To Be Sure”. Dodd gave him a new name, Horace Andy, after the singer Bob Andy, and also so that no one would compare him with his cousin.
+        ru: Хорас Хайндс родился в Кингстоне, на Ямайке. Его двоюродный брат Джастин Хайндс уже был певцом, и мальчик хвастался им всякий раз, когда того крутили по радио. Сначала он слушал американский соул и только потом ямайских певцов; Элтон Эллис давал ему поиграть на своей гитаре. В 1970 году он пришёл на прослушивание в Studio One к Клементу Додду по прозвищу Коксон и спел ему собственную песню «Got To Be Sure». Додд дал ему новое имя, Хорас Энди, в честь певца Боба Энди, а заодно чтобы никто не сравнивал его с братом.
+      - id: university
+        role: text
+        draft: false
+        en: Andy would later call Studio One his “school, my college, my university”. There he recorded “Skylarking”, which became his signature song and a number one in Jamaica.
+        ru: Позже Энди назовёт Studio One своей «школой, колледжем и университетом». Там он записал «Skylarking», песню, которая стала его визитной карточкой и поднялась на первое место в Ямайке.
+
+  - id: then-now
+    kind: then-now
+    act: 1
+    photo: studio-one
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: "1973"
+        ru: 1973 год
+      - id: title
+        role: title
+        draft: false
+        en: You Are My Angel
+        ru: You Are My Angel
+      - id: record
+        role: text
+        draft: false
+        en: In 1973 his song “You Are My Angel” came out, in Jamaica as a small seven-inch on the Soul Sound label, and in England as the title track of an LP on Trojan. The producer was Bunny Lee, the sleeve names King Tubby's as the studio, and the songwriter credit is Andy's own. It is a love song, light and unhurried.
+        ru: В 1973 году вышла его песня «You Are My Angel»: на Ямайке маленькой сорокапяткой лейбла Soul Sound, в Англии заглавной вещью долгоиграющей пластинки на лейбле Trojan. Продюсером был Банни Ли, студией на конверте значится студия Кинг Табби, автором песни — сам Энди. Это песня о любви, светлая и неторопливая.
+      - id: paid
+        role: text
+        draft: false
+        en: It brought its author little. Half a century later Andy said that Bunny Lee was not a producer but a financier, never paid him and sold his recordings to Trojan. BMG answers that those licences expired long ago.
+        ru: Автору она принесла немного. Через полвека Энди скажет, что Банни Ли был не продюсером, а финансистом, денег ему не платил и продал его записи Trojan. Компания BMG отвечает, что те лицензии давно истекли.
+
+  # ------------------------------------------------ Act II. The voice
+  - id: bristol
+    kind: bristol
+    act: 2
+    photo: st-paul-street
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Bristol and London
+        ru: Бристоль и Лондон
+      - id: title
+        role: title
+        draft: false
+        en: “It turned out it was me”
+        ru: «Оказалось, что ищут меня»
+      - id: favourite
+        role: text
+        draft: false
+        en: For Grant Marshall, known as Daddy G, of the Bristol group Massive Attack, Horace Andy was his favourite reggae singer. Andy himself was living in London by then. One day, on his way home to Peckham, he heard that some group was looking for a singer, “and it turned out it was me”. Daddy G sent him a cassette, and with the keyboard player Caroline Williams Andy wrote “One Love” for the group's first album, “Blue Lines”, in 1991. He has sung on every Massive Attack album since; no other guest voice of theirs can say that.
+        ru: Для Гранта Маршалла по прозвищу Daddy G из бристольской группы Massive Attack, Хорас Энди был любимым певцом регги. Сам Энди к тому времени жил в Лондоне. Однажды по дороге домой, в Пекхэм, он услышал, что какая-то группа ищет певца, — «и оказалось, что ищут меня». Daddy G прислал ему кассету, и вместе с клавишницей Кэролайн Уильямс Энди написал «One Love» для первого альбома группы, «Blue Lines», вышедшего в 1991 году. С тех пор он поёт на каждой их пластинке; ни один другой приглашённый голос Massive Attack этим похвастаться не может.
+      - id: freedom
+        role: text
+        draft: false
+        en: No reggae producer, Andy says, ever let him sing the way Massive Attack do. He does not like samplers, though, and teases that with them the band works slowly.
+        ru: Ни один продюсер регги, говорит Энди, не позволял ему петь так, как позволяют Massive Attack. Сэмплеры он, правда, не любит и посмеивается, что с ними группа работает медленно.
+
+  - id: studio
+    kind: studio
+    act: 2
+    photo: del-naja-marshall
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Bristol, 1997
+        ru: Бристоль, 1997 год
+      - id: title
+        role: title
+        draft: false
+        en: Three people in different rooms
+        ru: Трое в разных комнатах
+      - id: trio
+        role: text
+        draft: false
+        en: By the third album Massive Attack were three, Robert Del Naja, Grant Marshall and Andrew Vowles. The producer Neil Davidge became almost a fourth member; he was hired for six months and stayed, he says, for three years. They recorded in Bristol, in the band's own studio and at Christchurch Studios, and for a while in a holiday cottage in Cornwall.
+        ru: К третьему альбому Massive Attack были втроём: Роберт Дель Ная, Грант Маршалл и Эндрю Воулз. Почти четвёртым участником стал продюсер Нил Дэвидж: его наняли на полгода, а остался он, по его словам, на три года. Записывались в Бристоле, в собственной студии группы и на студии Christchurch, а какое-то время в снятом на лето коттедже в Корнуолле.
+      - id: apart
+        role: text
+        draft: false
+        en: The work went badly. The three wrote their parts separately, recorded separately and gave interviews separately, and the manager texted Davidge to schedule who could use Christchurch when. Del Naja pulled the sound towards post-punk, and Vowles asked whether they had become a punk band. What finally broke them was “Teardrop”, which Vowles secretly sent to Madonna while the others wanted Elizabeth Fraser to sing it. Two decades later Marshall remembered the album as full of bad memories, and Del Naja summed it up in two words: the fight. Vowles left soon afterwards.
+        ru: Работа шла тяжело. Трое писали свои партии порознь, порознь записывались и порознь давали интервью, а менеджер присылал Дэвиджу сообщения, чтобы развести их по студийному времени. Дель Ная тянул звук к постпанку, и Воулз спрашивал, не стали ли они панк-группой. Окончательно их рассорила «Teardrop»: Воулз тайком отправил её Мадонне, а остальные хотели, чтобы её спела Элизабет Фрейзер. Двадцать лет спустя Маршалл вспоминал этот альбом как время дурных воспоминаний, а Дель Ная назвал его коротко: драка. Вскоре после альбома Воулз ушёл.
+
+  - id: olympic
+    kind: olympic
+    act: 2
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: London, Olympic Studios
+        ru: Лондон, студия Olympic
+      - id: title
+        role: title
+        draft: false
+        en: A song that was not in the plan
+        ru: Песня, которой не было в плане
+      - id: clash
+        role: text
+        draft: false
+        en: “Angel” was not in the plan for the album. Neil Davidge says it was plucked out of thin air during a mixing session at Olympic Studios in London. The idea had been to make a kind of cover of The Clash's “Straight to Hell” with Horace Andy singing, but Andy was not keen on singing the word “hell”.
+        ru: «Angel» не было в плане альбома. По словам Нила Дэвиджа, песню выхватили буквально из воздуха во время сведения в лондонской студии Olympic. Собирались сделать что-то вроде кавера на «Straight to Hell» группы The Clash с Хорасом Энди, но Энди не захотел петь слово «ад».
+      - id: angel
+        role: text
+        draft: false
+        en: So, as Del Naja told it, they stripped the music down almost to nothing, kept something of the old melody, added what Horace himself suggested and wrote new words. Andy took the melody and the words largely from his own song of 1973. When he had sung, Davidge remembers, all he could say was that it was magic.
+        ru: Тогда, как рассказывал Дель Ная, музыку разобрали почти до основания, оставили кое-что от прежней мелодии, добавили то, что предложил сам Хорас, и написали новые слова. Мелодию и слова Энди взял во многом из своей же песни 1973 года. Когда он спел, Дэвидж, по его словам, смог сказать только одно: это волшебство.
+
+  - id: voice
+    kind: voice
+    act: 2
+    photo: andy-2007
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: The voice
+        ru: Голос
+      - id: falsetto
+        role: text
+        draft: false
+        en: Andy has a high falsetto that people know from the first note, and long notes with a low, slow vibrato. On “Mezzanine”, the AllMusic critic wrote, he left the safe waters of reggae. The Guardian singles out his call of love, repeated over and over in this song, as something you do not forget.
+        ru: У Энди высокий фальцет, который узнают с первой ноты, и долгие ноты с низким, медленным вибрато. На «Mezzanine», писал критик AllMusic, он покинул безопасные воды регги. The Guardian отдельно выделяет его признание в любви, повторённое в этой песне снова и снова, как то, чего не забыть.
+
+  - id: strata
+    kind: strata
+    act: 2
+    photo: bruschini
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: What it is made of
+        ru: Из чего она собрана
+      - id: skeleton
+        role: text
+        draft: false
+        en: First there was a programmed skeleton. Davidge describes going through sequences and samples and throwing them out one after another. Then live musicians played over it, among them the guitarist Angelo Bruschini, and suddenly, Davidge says, it was something dark, made for a club and romantic all at once, with very heavy guitars and drums.
+        ru: Сначала был запрограммированный скелет. Дэвидж рассказывает, как они перебирали последовательности и сэмплы и выбрасывали их один за другим. Потом поверх играли живые музыканты, среди них гитарист Анджело Брускини, и вдруг, по словам Дэвиджа, получилось что-то тёмное, клубное и романтическое разом, с очень тяжёлыми гитарами и барабанами.
+      - id: not-the-same
+        role: text
+        draft: false
+        en: Even that was not the end. At the final mix at Olympic they decided to bring in one more bass line and changed the rhythm patterns, so that, says Davidge, it certainly was not the same song any more. The credits name four writers, Del Naja, Marshall, Vowles and Hinds, that is, Horace Andy. The song runs six minutes and eighteen seconds.
+        ru: Но и это был не конец. Уже на финальном сведении в Olympic решили добавить ещё одну басовую линию и поменяли ритмические рисунки, так что, говорит Дэвидж, это была уже точно не та песня. Авторами в выходных данных значатся четверо: Дель Ная, Маршалл, Воулз и Хайндс, то есть Хорас Энди. Длится песня шесть минут восемнадцать секунд.
+
+  # ------------------------------------------------ Act III. The breakdown
+  - id: break
+    kind: break
+    act: 3
+    blocks:
+      - id: guitars
+        role: text
+        draft: false
+        en: In the middle of the song the guitars come in, and everything that until then rested on the bass and the voice gives way. A love song from 1973 sounds here like what the AllMusic critic called perhaps the darkest and heaviest song Massive Attack ever recorded.
+        ru: Посреди песни в неё входят гитары, и всё, что до этого держалось на басе и голосе, обрушивается. Любовная песня 1973 года звучит здесь так, что критик AllMusic назвал её, может быть, самой тёмной и тяжёлой вещью, какую Massive Attack когда-либо записывали.
+
+  - id: crowd
+    kind: crowd
+    act: 3
+    blocks:
+      - id: release
+        role: text
+        draft: false
+        en: “Mezzanine” came out on 20 April 1998 and went straight to number one in Britain. “Angel” followed as a single on 13 July and reached number thirty, then fell to sixty the next week.
+        ru: «Mezzanine» вышел 20 апреля 1998 года и сразу поднялся на первое место в Британии. «Angel» вышел синглом 13 июля, добрался до тридцатого места и через неделю опустился на шестидесятое.
+      - id: video
+        role: text
+        draft: false
+        en: The video was directed by Walter Stern for Academy Films, the second of his three for the band, between “Risingson” and “Teardrop”. All three members are in it, and so is Horace Andy. The official video is in the player.
+        ru: Клип снял Уолтер Стерн для студии Academy Films — второй из трёх его клипов для группы, между «Risingson» и «Teardrop». В нём снялись все трое и сам Хорас Энди. Официальный клип — в плеере.
+
+  - id: beetle
+    kind: beetle
+    act: 3
+    photo: beetle-plate
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: The sleeve
+        ru: Обложка
+      - id: cover
+        role: text
+        draft: false
+        en: The sleeve of “Mezzanine” is a black stag beetle on white. The photograph is by Nick Knight; the art direction and design are by Robert Del Naja and Tom Hingston. The Museum of Modern Art in New York keeps the sleeve in its architecture and design collection. We do not reproduce it here: the beetles on this page come from a German book on insects of 1884, and from our own drawing.
+        ru: На обложке «Mezzanine» — чёрный жук-олень на белом. Фотографию сделал Ник Найт, оформление придумали Роберт Дель Ная и Том Хингстон. Нью-йоркский Музей современного искусства хранит этот конверт в своей коллекции архитектуры и дизайна. Здесь мы его не воспроизводим: жуки на этой странице — из немецкой книги о насекомых 1884 года и с нашего рисунка.
+
+  # ------------------------------------------------ Act IV. The fade that does not end
+  - id: screens
+    kind: screens
+    act: 4
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Other people's screens
+        ru: Чужие экраны
+      - id: snatch
+        role: text
+        draft: false
+        en: The song soon moved from the record to the screen. In Guy Ritchie's “Snatch” of 2000 it plays in the amusement arcade and in the scene where a caravan burns, and it is on the soundtrack album. The Guardian writes that “Mezzanine” supplied countless film and television directors with three songs at once, “Angel”, “Teardrop” and “Inertia Creeps”.
+        ru: Песня быстро перешла с пластинки на экраны. В «Большом куше» Гая Ричи 2000 года она звучит в зале игровых автоматов и в сцене, где горит фургон, и есть на альбоме саундтрека. The Guardian пишет, что «Mezzanine» снабдил бесчисленных режиссёров кино и телевидения сразу тремя песнями: «Angel», «Teardrop» и «Inertia Creeps».
+
+  - id: afterlife
+    kind: afterlife
+    act: 4
+    photo: mezzanine-xxi
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: Afterwards
+        ru: Потом
+      - id: title
+        role: title
+        draft: false
+        en: It does not end
+        ru: Она не кончается
+      - id: berlin
+        role: text
+        draft: false
+        en: The band first played “Angel” at a concert in Berlin on 8 July 1997, months before the record came out, so the song lived on stage before anyone could buy it. By the fans' count on setlist.fm it is the song Massive Attack have played more than any other, nearly five hundred times; the latest show on record was in Melbourne in August 2026.
+        ru: Впервые группа сыграла «Angel» на концерте в Берлине 8 июля 1997 года, за несколько месяцев до выхода пластинки, так что песня жила на сцене раньше, чем её можно было купить. По подсчётам поклонников на сайте setlist.fm, это песня, которую Massive Attack играли чаще всех остальных, почти пятьсот раз; последний из записанных концертов был в Мельбурне в августе 2026 года.
+      - id: dub
+        role: text
+        draft: false
+        en: The dub version that Mad Professor made of it in 1998 was shelved, and it came out in full only in 2019, twenty-one years later. The song has been covered by Sepultura and by The Dillinger Escape Plan; Tame Impala played it in concert; the Norwegian band Leprous put it out as a single; and in 2026 Grian Chatten of Fontaines D.C. sang it for the “Peaky Blinders” film.
+        ru: Даб-версию, которую Мэд Профессор сделал в 1998 году, положили на полку, и целиком она вышла только в 2019-м, через двадцать один год. Песню перепевали Sepultura и The Dillinger Escape Plan, Tame Impala играли её на концертах, норвежская группа Leprous выпустила её синглом, а в 2026 году её спел Гриан Чаттен из Fontaines D.C. для фильма по «Острым козырькам».
+      - id: still
+        role: text
+        draft: false
+        en: And Horace Andy still sings it with the band. In June 2025, in his seventies, he sang it at their concert in London, and reviewers named it a high point of the night.
+        ru: А Хорас Энди всё ещё поёт её с группой. В июне 2025 года, когда ему было за семьдесят, он спел её на их лондонском концерте, и рецензенты назвали её лучшим моментом вечера.
+
+  - id: spiral
+    kind: spiral
+    act: 4
+    photo: lathe
+    blocks:
+      - id: groove
+        role: text
+        draft: false
+        en: The groove of a record is a single spiral that runs from the edge towards the centre. With this song it has not reached the centre yet.
+        ru: Канавка пластинки — одна спираль, которая идёт от края к центру. У этой песни она до центра пока не дошла.
+
+  - id: fall
+    kind: fall
+    act: 4
+    blocks: []
+
+  # ------------------------------------------------ The last screen
+  - id: warm
+    kind: warm
+    act: 5
+    blocks: []
