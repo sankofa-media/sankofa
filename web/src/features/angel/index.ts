@@ -278,7 +278,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
       if (sc.id === 'then-now') {
         const t = Number(el.style.getPropertyValue('--tn') || 0);
         beatAt(thenNowPeriod(t), 1 - t);
-      } else beatAt(pulsePeriod(BPM_1998), sc.id === 'kingston' ? 1 : 0);
+      } else beatAt(pulsePeriod(BPM_1998), sc.id === 'kingston' || sc.id === 'warm' ? 1 : 0);
       if (sc.id === 'line') scope?.start();
       else scope?.stop();
       if (sc.id === 'break') breakdown(el);
