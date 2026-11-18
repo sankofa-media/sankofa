@@ -177,9 +177,16 @@ ui:
     ru: "Похоже, тебе сейчас очень тяжело. Не нужно нести это одному. Если ты в опасности, звони 112. Те, кто умеет помочь, в твоей стране: findahelpline.com"
   words-report: { en: "Remove", ru: "Убрать" }
   own-pulse: { en: "You can leave your pulse too.", ru: "Можно оставить и свой пульс." }
-  own-pulse-how:
-    en: "Cover the back camera with your fingertip and hold still for half a minute."
-    ru: "Закрой подушечкой пальца заднюю камеру и не двигайся полминуты."
+  own-pulse-step-1: { en: "Press “Begin” and let the page use the camera.", ru: "Нажми «Начать» и разреши странице включить камеру." }
+  own-pulse-step-2:
+    en: "Cover the back camera, the one next to the flash, with your fingertip. The flash turns on by itself, and your finger glows red."
+    ru: "Закрой подушечкой пальца заднюю камеру, ту, что рядом со вспышкой. Вспышка загорится сама, и палец засветится красным."
+  own-pulse-step-3:
+    en: "Do not press hard, and keep your finger still for forty seconds. Your pulse will appear on the screen."
+    ru: "Не дави и не двигай палец сорок секунд. Пульс появится на экране."
+  own-pulse-cover: { en: "Cover the camera completely with your finger.", ru: "Закрой камеру пальцем целиком." }
+  own-pulse-hold: { en: "Keep your finger there. Seconds left: {n}", ru: "Держи палец. Осталось секунд: {n}" }
+  own-pulse-moved: { en: "Your finger moved, so the count starts again.", ru: "Палец сдвинулся, поэтому отсчёт начался заново." }
   own-pulse-start: { en: "Begin", ru: "Начать" }
   own-pulse-light:
     en: "This browser cannot turn on the flash. Hold your finger over the camera with a bright lamp or a window behind it."

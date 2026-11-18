@@ -227,3 +227,14 @@ describe('the Angel content', () => {
     expect(all).not.toMatch(/\b(my|author'?s?|owner'?s?)\s+pulse|мой пульс|пульс автора|пульс владельца/i);
   });
 });
+
+describe('a fingertip over the lens', () => {
+  it('is red and lit through; an open view, a dark room or a white wall is not', async () => {
+    const { covered } = await import('../src/features/angel/pulse/ppg');
+    expect(covered({ t: 0, v: 40, r: 210, b: 20 })).toBe(true);
+    expect(covered({ t: 0, v: 120, r: 130, b: 110 })).toBe(false);
+    expect(covered({ t: 0, v: 8, r: 12, b: 6 })).toBe(false);
+    expect(covered({ t: 0, v: 230, r: 240, b: 235 })).toBe(false);
+    expect(covered({ t: 0, v: 50 })).toBe(true);
+  });
+});

@@ -9,7 +9,7 @@ import { h } from '../../../lib/dom';
 import { lang } from '../../../lib/i18n';
 import * as api from '../api';
 import { closeCamera, FrameReader, openBackCamera, type Camera } from './camera';
-import { analyse, checkRR, type Sample } from './ppg';
+import { analyse, checkRR, covered, type Sample } from './ppg';
 import { beatsBetween, lubDub, vibrationPattern, waveAt } from './wave';
 
 export interface PulsePageOptions {
@@ -82,12 +82,13 @@ export class PulsePage {
     this.floatBox = h('div.ap-float', { 'aria-hidden': 'true' });
     this.othersLine = h('p.ap-others', { 'aria-live': 'polite' });
     const further = h('button.ap-further', { type: 'button', 'aria-label': say('pulse-further') }, h('span', { 'aria-hidden': 'true' }, '↓'));
-    further.addEventListener('click', () => this.sayEl.scrollIntoView({ behavior: o.calm() ? 'auto' : 'smooth' }));
+    further.addEventListener('click', () => this.ownEl.scrollIntoView({ behavior: o.calm() ? 'auto' : 'smooth' }));
     this.touchSec = h('section.ap-sec.ap-touch', { 'aria-label': say('pulse-touch') }, this.canvas, h('p.ap-touch-line', {}, say('pulse-touch')), this.floatBox, h('div.ap-touch-foot', {}, this.othersLine, further));
     this.sayEl = this.buildWords();
     this.ownEl = this.buildOwn();
     const last = h('section.ap-sec.ap-last', {}, h('p.ap-last-line', {}, say('last')));
-    this.scroll = h('div.ap-scroll', {}, this.touchSec, this.sayEl, this.ownEl, last);
+    // Feel the others first, then leave one's own pulse, and only then the words.
+    this.scroll = h('div.ap-scroll', {}, this.touchSec, this.ownEl, this.sayEl, last);
     const close = h('button.icon-btn.ap-close', { type: 'button', 'aria-label': o.engine('close') }, '×');
     close.addEventListener('click', () => this.close());
     this.particles = h('canvas.ap-particles', { 'aria-hidden': 'true' }) as HTMLCanvasElement;
@@ -544,6 +545,9 @@ export class PulsePage {
     const light = h('p.ap-note.ap-light', { hidden: true }, say('own-pulse-light'));
     const wave = h('canvas.ap-own-wave', { 'aria-hidden': 'true', hidden: true }) as HTMLCanvasElement;
     const beats = h('p.ap-beats', { 'aria-live': 'polite' });
+    const status = h('p.ap-status', { 'aria-live': 'polite', hidden: true });
+    const bar = h('span');
+    const progress = h('div.ap-progress', { hidden: true, 'aria-hidden': 'true' }, bar);
     const failed = h('p.ap-note.ap-failed', { hidden: true }, say('own-pulse-failed'));
     const feel = h('button.btn.ap-feel', { type: 'button' }, say('own-pulse-feel')) as HTMLButtonElement;
     const again = h('button.btn.ap-again', { type: 'button' }, say('own-pulse-again')) as HTMLButtonElement;
@@ -559,7 +563,7 @@ export class PulsePage {
       rr = [];
       start.hidden = false;
       start.disabled = false;
-      light.hidden = failed.hidden = retry.hidden = result.hidden = true;
+      light.hidden = failed.hidden = retry.hidden = result.hidden = status.hidden = progress.hidden = true;
       wave.hidden = true;
       beats.textContent = '';
       consent.checked = false;
@@ -569,6 +573,7 @@ export class PulsePage {
     const fail = () => {
       this.stopCamera();
       start.hidden = true;
+      status.hidden = progress.hidden = true;
       failed.hidden = false;
       retry.hidden = false;
     };
@@ -597,12 +602,34 @@ export class PulsePage {
       } catch {
         return fail();
       }
-      const samples: Sample[] = [];
+      let samples: Sample[] = [];
       let t0 = -1;
       let tick = 0;
+      // Only an unbroken stretch with the lens covered counts; a finger lifted for more than a moment starts the count again.
+      let offSince = -1;
+      let wasOn = false;
+      status.hidden = progress.hidden = false;
+      status.textContent = say('own-pulse-cover');
+      bar.style.width = '0%';
       this.reader = new FrameReader(video, (s) => {
+        if (!covered(s)) {
+          if (offSince < 0) offSince = s.t;
+          if (s.t - offSince > 0.7 && samples.length) {
+            samples = [];
+            t0 = -1;
+            beats.textContent = '';
+            bar.style.width = '0%';
+            status.textContent = wasOn ? say('own-pulse-moved') : say('own-pulse-cover');
+          } else if (!samples.length) status.textContent = wasOn ? say('own-pulse-moved') : say('own-pulse-cover');
+          return;
+        }
+        offSince = -1;
+        wasOn = true;
         if (t0 < 0) t0 = s.t;
         samples.push(s);
+        const left = Math.max(0, Math.ceil(RECORD_SECONDS - (s.t - t0)));
+        status.textContent = say('own-pulse-hold', { n: left });
+        bar.style.width = `${Math.min(100, ((s.t - t0) / RECORD_SECONDS) * 100).toFixed(1)}%`;
         if (s.t - t0 >= RECORD_SECONDS) finish();
       });
       const show = () => {
@@ -615,6 +642,7 @@ export class PulsePage {
       this.timers.push(tick);
       const finish = () => {
         clearInterval(tick);
+        status.hidden = progress.hidden = true;
         // The camera stops the moment the reading is done; nothing of the picture is kept.
         this.stopCamera();
         const a = analyse(samples);
@@ -656,7 +684,7 @@ export class PulsePage {
       sent.replaceChildren(h('p.ap-said-line', {}, say('own-pulse-sent')), h('p.ap-note.ap-code', {}, say('own-pulse-delete', { code })));
     });
 
-    return h('section.ap-sec.ap-own', {}, h('p.ap-lead', {}, say('own-pulse')), h('p.ap-note', {}, say('own-pulse-how')), start, light, wave, beats, failed, retry, result, sent);
+    return h('section.ap-sec.ap-own', {}, h('p.ap-lead', {}, say('own-pulse')), h('ol.ap-steps', {}, h('li', {}, say('own-pulse-step-1')), h('li', {}, say('own-pulse-step-2')), h('li', {}, say('own-pulse-step-3'))), start, light, status, progress, wave, beats, failed, retry, result, sent);
   }
 
   private stopCamera(): void {
