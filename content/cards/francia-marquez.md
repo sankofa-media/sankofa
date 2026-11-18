@@ -3,12 +3,11 @@ id: francia-marquez
 kind: person
 title: Francia Márquez
 wow: "A teenage mother who mined gold and worked as a maid led 80 Afro-Colombian women on a ten-day march to Bogotá against illegal mining, and in 2022 was elected Colombia's first Black vice-president."
-years: [1981, 2022]
+years: [1981]
 places:
   - {name: "La Toma, Suárez, Cauca, Colombia", lat: 2.9533, lon: -76.6939}
   - {name: "Bogotá, Colombia", lat: 4.7110, lon: -74.0721}
 zoom: 4
-moment: {year: 2014}
 era: v7
 books: [heirs]
 edition: both
