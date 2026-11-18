@@ -279,8 +279,8 @@ scenes:
       - id: no-roots
         role: text
         draft: false
-        en: This way of singing, where one calls and the rest answer, links the games to African musical practice. But where our particular song came from before 1939, no source says, and we will not guess.
-        ru: Такой способ петь, когда один зовёт, а остальные отвечают, роднит эти игры с африканской музыкальной практикой. Но откуда пришла до 1939 года именно наша песня, не сообщает ни один источник, и гадать мы не станем.
+        en: "This way of singing, one voice calling and the rest answering, links these games to African musical practice. But where this particular song came from before it reached Mississippi, and who sang it first, nobody wrote down: playground games passed from older children to younger ones and had no authors."
+        ru: "Такой способ петь, когда один зовёт, а остальные отвечают, роднит эти игры с африканской музыкой. А вот откуда пришла в Миссисипи именно эта песня и кто спел её первым, никто не записал: дворовые игры переходили от старших детей к младшим, и авторов у них не было."
       - id: hear
         role: caption
         draft: false
@@ -334,8 +334,8 @@ scenes:
       - id: opened
         role: text
         draft: false
-        en: "On 13 May Halpert and Ferriss knocked at the door of the house where John Shipp lived with his wife Luella. They had come not for the couple themselves but for John’s singing family: his mother, Mary Shipp, and her children. Luella and John opened the door to the two strangers."
-        ru: Тринадцатого мая Халперт и Феррис постучали в дверь дома, где жили Джон Шипп и его жена Луэлла. Приехали они не к ним самим, а к поющей семье Джона — к его матери, Мэри Шипп, и её детям. Луэлла и Джон открыли дверь двум незнакомцам.
+        en: "On the thirteenth of May Halpert and Ferris knocked at the house of John Shipp and his wife, Luella. The couple opened the door to two strangers, although the visitors had come not for them but for John’s singing family: his mother, Mary Shipp, and her children."
+        ru: Тринадцатого мая Халперт и Феррис постучали в дом Джона Шиппа и его жены Луэллы. Хозяева открыли дверь двум незнакомцам, хотя приехали те не к ним самим, а к поющей семье Джона — к его матери Мэри Шипп и её детям.
 
   - id: family
     kind: family
@@ -373,8 +373,8 @@ scenes:
         draft: true
         hold: true
         check: "One source (NPR 1998): the Shipps learned all their songs by ear."
-        en: The Shipps knew their songs by ear.
-        ru: Песни Шиппы знали на слух.
+        en: The Shipps sang all these songs by ear, without notes, the way they had once heard them themselves.
+        ru: Все эти песни Шиппы пели на слух, без нот, — так, как когда-то услышали их сами.
 
   - id: minute
     kind: minute
@@ -435,8 +435,8 @@ scenes:
       - id: simone
         role: text
         draft: false
-        en: By the time the song reached Nina Simone, the woman of the game had changed. In Simone’s “See-Line Woman” she is “dressed in red” and makes “a man lose his head”. The playground chant had turned into a song about a woman men lose their heads over, and the woman who drank coffee and tea was gone.
-        ru: Пока песня шла к Нине Симон, женщина из игры изменилась. В «See-Line Woman» у Симон она «одета в красное» и «сводит мужчину с ума». Дворовая считалка превратилась в песню о женщине, из-за которой мужчины теряют голову, а женщина, пившая кофе и чай, исчезла.
+        en: By the time the song reached Nina Simone, the woman of the game had changed. In Simone’s “See-Line Woman” she is “dressed in red” and makes “a man lose his head”. The playground game had turned into a song about a woman men lose their heads over, and the woman who drank coffee and tea was gone.
+        ru: Пока песня шла к Нине Симон, женщина из игры изменилась. В «See-Line Woman» у Симон она «одета в красное» и «сводит мужчину с ума». Дворовая игра превратилась в песню о женщине, из-за которой мужчины теряют голову, а женщина, пившая кофе и чай, исчезла.
       - id: together
         role: line
         draft: false
@@ -508,7 +508,7 @@ scenes:
         role: text
         draft: false
         en: A quarter of a century later the song reached Nina Simone, brought to her by the poet Langston Hughes. His secretary, George Houston Bass, had come across it, and Hughes wrote to Simone that “See-Line Woman” suited her particularly well.
-        ru: Четверть века спустя песня дошла до Нины Симон, и привёл её туда поэт Ленгстон Хьюз. На неё наткнулся его секретарь, Джордж Хьюстон Басс, а Хьюз написал Симон, что «See-Line Woman» подходит ей особенно.
+        ru: "Прошла четверть века, и песня дошла до Нины Симон. Привёл её туда поэт Ленгстон Хьюз: на песню наткнулся его секретарь Джордж Хьюстон Басс, а Хьюз написал Симон, что «See-Line Woman» подходит ей особенно."
       - id: version
         role: text
         draft: false
@@ -518,7 +518,7 @@ scenes:
         role: text
         draft: false
         en: "Simone had trained to be a classical pianist: she played Bach and studied at Juilliard, but the Curtis Institute turned her down. And so a children’s game from a Mississippi churchyard came into the hands of a pianist schooled on Bach."
-        ru: "Симон готовилась стать классической пианисткой: играла Баха, училась в Джульярдской школе, но в Кёртисовский институт её не приняли. И вот детская игра с церковного двора в Миссисипи оказалась в руках пианистки, выученной на Бахе."
+        ru: "Симон готовилась стать классической пианисткой: играла Баха, училась в Джульярдской школе, но в Кёртисовский институт её не приняли. И вот игра со школьного двора, которую сёстры Шипп спели когда-то в церкви в Миссисипи, оказалась в руках пианистки, выученной на Бахе."
 
   - id: single
     kind: single
@@ -590,30 +590,6 @@ scenes:
         en: Bass registered the copyright in the song. From then on, wherever a record named the writer, it named him, and never Christine and Katherine Shipp. In 1965 Hughes himself wrote to a friend about “my former secretary’s SEA LION WOMAN”, which Simone was singing at every concert.
         ru: Басс зарегистрировал на песню авторское право. С тех пор везде, где на пластинке указан автор, стоит его имя — и ни разу имена Кристин и Кэтрин Шипп. В 1965 году Хьюз сам писал другу о «SEA LION WOMAN моего бывшего секретаря», которую Симон пела на каждом концерте.
 
-  - id: river
-    kind: river
-    art:
-      generated: true
-      aspect: "1 / 3"
-      layers:
-        - { file: river-ink.webp, alt: "" }
-    blocks:
-      - id: kicker
-        role: kicker
-        draft: false
-        en: The river
-        ru: Река
-      - id: intro
-        role: text
-        draft: false
-        en: "After 1964 the song began to branch. Below is its family tree, drawn as a river: every version is a circle with its year, and the lines show who took the song from whom. Press a circle to hear that version, where an official recording exists."
-        ru: "После 1964 года песня начала ветвиться. Ниже — её родословная, нарисованная как река: каждая версия — кружок с годом, а линии показывают, кто у кого взял песню. Нажмите на кружок, чтобы послушать эту версию, если у неё есть официальная запись."
-      - id: branches
-        role: text
-        draft: false
-        en: "Two branches run side by side. On one are those who went back to the 1939 recording and took the sisters’ voices and the circle’s answer. On the other are those who took Nina Simone’s version: her title, her arrangement or her actual recording."
-        ru: "Две ветви идут рядом. На одной — те, кто вернулся к записи 1939 года и взял голоса сестёр Шипп и ответ круга. На другой — те, кто взял версию Нины Симон: её название, её аранжировку или саму её запись."
-
   - id: jazz
     kind: stop
     photo: lateef-1964
@@ -627,13 +603,13 @@ scenes:
       - id: text
         role: text
         draft: false
-        en: In 1967 the saxophonist Yusef Lateef recorded the song in New York, and the playground game became a piece of jazz.
-        ru: В 1967 году саксофонист Юсеф Латиф записал песню в Нью-Йорке, и игра со школьного двора стала джазовой пьесой.
+        en: From here the song passed from hand to hand, and its road is easiest to follow stop by stop. The first stop is jazz. On 1 June 1967, three years after Simone, the saxophonist Yusef Lateef recorded the song with his quartet in New York. He kept the title in Simone’s spelling and turned the schoolyard game into a jazz piece.
+        ru: Дальше песня пошла по рукам, и её дорогу проще всего пройти по остановкам. Первая — джаз. 1 июня 1967 года, через три года после Симон, саксофонист Юсеф Латиф записал песню со своим квартетом в Нью-Йорке. Название он оставил в написании Симон, а из игры со школьного двора сделал джазовую пьесу.
       - id: listen
         role: note
         draft: false
-        en: "Listen to the tambourine: it keeps the old clap of the circle."
-        ru: "Послушайте бубен: он держит старый хлопок круга."
+        en: "Listen to Sylvia Shemwell’s tambourine: it keeps the circle’s old clap."
+        ru: "Послушайте бубен Сильвии Шемвелл: он держит старый хлопок круга."
 
   - id: beat
     kind: stop
@@ -648,8 +624,8 @@ scenes:
       - id: text
         role: text
         draft: false
-        en: "The same year the song reached the other side of the world: the Australian beat group The Easybeats recorded it in an arrangement by their guitarists Harry Vanda and George Young."
-        ru: "В том же году песня добралась до другого края света: австралийская бит-группа The Easybeats записала её в аранжировке своих гитаристов Гарри Ванды и Джорджа Янга."
+        en: "In the same year, 1967, the song reached the other side of the world and entered beat music. The Australian band The Easybeats recorded it with the producer Shel Talmy; the record lists the song as traditional, arranged by the band’s guitarists Harry Vanda and George Young."
+        ru: "В том же 1967 году песня добралась до другого края света и попала в бит-музыку. Австралийская группа The Easybeats записала её с продюсером Шелом Талми; на пластинке песня значится народной, в аранжировке гитаристов группы Гарри Ванды и Джорджа Янга."
 
   - id: house
     kind: stop
@@ -686,7 +662,7 @@ scenes:
         role: text
         draft: false
         en: The Canadian singer Feist went past Nina Simone, straight back to the sisters. She found the 1939 field recording on a compilation and called her version “kind of a half cover of the little girls”, naming Simone’s famous version only second.
-        ru: Канадская певица Feist прошла мимо Нины Симон прямо к сёстрам Шипп. Она нашла полевую запись 1939 года на сборнике и назвала свою версию «наполовину кавером на тех девочек», а знаменитую версию Симон упомянула лишь второй.
+        ru: Канадская певица Feist прошла мимо Нины Симон прямо к сёстрам Шипп. Она нашла полевую запись 1939 года на сборнике и назвала свою версию «наполовину кавером на тех девочек», а знаменитую версию Симон назвала только во вторую очередь.
       - id: chorus
         role: text
         draft: false
@@ -733,13 +709,13 @@ scenes:
       - id: text
         role: text
         draft: false
-        en: "In 2010 the Bristol band Massive Attack released “Paradise Circus”. Through the whole song runs the clap from Nina Simone’s “See-Line Woman”. While the track plays, a line of ink pulses with that clap and runs back along the river: to Simone’s record of 1964, and from it to the sisters’ minute of 1939."
-        ru: "В 2010 году бристольская группа Massive Attack выпустила «Paradise Circus». Через всю песню проходит хлопок из «See-Line Woman» Нины Симон. Пока трек звучит, линия туши пульсирует в такт этому хлопку и тянется назад по реке — к пластинке Симон 1964 года, а от неё к минуте сестёр Шипп 1939 года."
+        en: "In 2010 the Bristol band Massive Attack released “Paradise Circus”. Through the whole song runs the clap from Nina Simone’s “See-Line Woman”. While the track plays, a line of ink pulses with that clap and runs back: to Simone’s record of 1964, and from it to the sisters’ minute of 1939."
+        ru: "В 2010 году бристольская группа Massive Attack выпустила «Paradise Circus». Через всю песню проходит хлопок из «See-Line Woman» Нины Симон. Пока трек звучит, линия туши пульсирует в такт этому хлопку и тянется назад — к пластинке Симон 1964 года, а от неё к минуте сестёр Шипп 1939 года."
       - id: on
         role: text
         draft: false
-        en: "From “Paradise Circus” the branch went on: the producer Gui Boratto remixed it, the producer Burial reworked it into a twelve-minute piece, and the track became the opening theme of the BBC series “Luther”."
-        ru: "От «Paradise Circus» ветвь пошла дальше: продюсер Gui Boratto сделал на неё ремикс, продюсер Burial превратил её в двенадцатиминутную пьесу, а сам трек стал музыкой к заставке сериала BBC «Лютер»."
+        en: "From “Paradise Circus” the branch went on. The producer Gui Boratto rebuilt the track as an eight-minute melodic techno piece, the producer Burial as a twelve-minute one, and the song itself became the opening theme of the BBC series “Luther”; in 2023, for the film “Luther: The Fallen Sun”, two members of Massive Attack recorded it again with Ghostpoet."
+        ru: "От «Paradise Circus» ветвь пошла дальше. Продюсер Gui Boratto перестроил трек в восьмиминутную мелодичную техно-вещь, продюсер Burial — в двенадцатиминутную пьесу, а сама песня стала музыкой к заставке сериала BBC «Лютер»; в 2023 году для фильма «Лютер: Павшее солнце» двое участников Massive Attack заново записали её с Ghostpoet."
       - id: fuchs
         role: note
         draft: false
@@ -768,8 +744,8 @@ scenes:
       - id: text
         role: text
         draft: false
-        en: In Burial’s twelve-minute rework of “Paradise Circus” the song thins out almost to a shadow, but the clap is still there.
-        ru: В двенадцатиминутной переработке «Paradise Circus», которую сделал Burial, песня истончается почти до тени, но хлопок в ней остаётся.
+        en: Burial’s rework came out in 2011, a thousand numbered copies. The song thins in it almost to a shadow, but the clap from Simone’s record stays.
+        ru: Переработка Burial вышла в 2011 году тиражом в тысячу пронумерованных пластинок. Песня в ней истончается почти до тени, но хлопок с пластинки Симон остаётся.
 
   - id: screen
     kind: filmstrip
@@ -791,6 +767,30 @@ scenes:
         draft: false
         en: "The song also found its way to the screen: into films, series and a video game. Scroll along the film strip to see where it sounded, year by year."
         ru: "Песня попала и на экран: в фильмы, сериалы и видеоигру. Прокрутите киноленту, чтобы увидеть, где она звучала, год за годом."
+
+  - id: river
+    kind: river
+    art:
+      generated: true
+      aspect: "1 / 3"
+      layers:
+        - { file: river-ink.webp, alt: "" }
+    blocks:
+      - id: kicker
+        role: kicker
+        draft: false
+        en: The whole river
+        ru: Вся река
+      - id: intro
+        role: text
+        draft: false
+        en: "We have walked only a few of its stops. Altogether the song has some thirty versions, drawn here as one river: each version is a circle with its year, and a line leads back to the one it took the song from. Tap a circle to read its story and, where there is an official recording, to hear it."
+        ru: "Мы прошли лишь по нескольким остановкам. Всего у песни набралось около тридцати версий, и здесь они нарисованы одной рекой: каждая версия — кружок с годом, а линия ведёт к той, у кого песню взяли. Нажмите на кружок — откроется история версии, а если у неё есть официальная запись, её можно послушать."
+      - id: branches
+        role: text
+        draft: false
+        en: "Two branches run side by side. On one are those who went back to the 1939 recording and took the sisters’ voices and the circle’s answer. On the other are those who took Nina Simone’s version: her title, her arrangement or her actual recording."
+        ru: "Две ветви идут рядом. На одной — те, кто вернулся к записи 1939 года и взял голоса сестёр Шипп и ответ круга. На другой — те, кто взял версию Нины Симон: её название, её аранжировку или саму её запись."
 
   - id: silence
     kind: silence
