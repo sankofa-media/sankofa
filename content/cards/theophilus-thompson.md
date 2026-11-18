@@ -3,11 +3,12 @@ id: theophilus-thompson
 kind: person
 title: Theophilus Thompson
 wow: "Born to enslaved parents in Maryland, he watched his first game of chess at about seventeen without daring to ask a question, and within two years had a book of his own chess problems in print."
-years: [1855]
+years: [1855, 1874]
 places:
   - {name: "Frederick, Maryland", lat: 39.4143, lon: -77.4105}
   - {name: "Dubuque, Iowa", lat: 42.5006, lon: -90.6646}
 zoom: 4
+moment: {year: 1873}
 era: v3
 books: [voices]
 edition: both

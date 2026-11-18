@@ -10,6 +10,7 @@ places:
   - {name: "Khartoum, Sudan", lat: 15.5007, lon: 32.5599}
   - {name: "Venice, Italy", lat: 45.4408, lon: 12.3155}
 zoom: 4
+moment: {year: 1890, place: 3}
 era: v4
 books: [voices]
 edition: f

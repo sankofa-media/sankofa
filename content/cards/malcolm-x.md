@@ -9,6 +9,7 @@ places:
   - {name: "Omaha, Nebraska", lat: 41.2565, lon: -95.9345}
   - {name: "U.S. Capitol, Washington, D.C.", lat: 38.8899, lon: -77.0091}
 zoom: 4
+moment: {year: 1965}
 era: v6
 books: [voices]
 edition: m

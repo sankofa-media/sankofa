@@ -8,6 +8,7 @@ places:
   - {name: "Joy Street, Beacon Hill, Boston", lat: 42.3588, lon: -71.0650}
   - {name: "Richmond, Virginia", lat: 37.5407, lon: -77.4360}
 zoom: 4
+moment: {year: 1864}
 era: v3
 books: [voices]
 edition: f
