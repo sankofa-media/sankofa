@@ -123,6 +123,8 @@ export interface Scene {
   photo?: string;
   /** The scene's generated illustration. */
   art?: SceneArt;
+  /** Told by its picture and mechanic alone: no text is required. */
+  silent?: boolean;
   /** Anything else the scene's mechanic reads (figures, flashes, frames…). */
   [extra: string]: unknown;
 }
@@ -296,7 +298,9 @@ export function validateFeature(f: FeatureSource, ctx: ValidateContext = {}): st
       if (typeof b.draft !== 'boolean') errs.push(`${bat}: draft must be set (true until the editor's pass)`);
       if (ctx.cards) for (const id of [...links(b.en ?? ''), ...links(b.ru ?? '')]) if (!ctx.cards.has(id)) errs.push(`${bat}: links to a card that does not exist: ${id}`);
     }
-    if (!blocks.some((b) => !b.hold && bi(b))) errs.push(`${at}: needs at least one shown block with en and ru text`);
+    // A scene marked `silent: true` is told by its picture and mechanic alone (a pause, a last screen) and may have no text.
+    if (s.silent !== undefined && typeof s.silent !== 'boolean') errs.push(`${at}: silent must be true or false`);
+    if (s.silent !== true && !blocks.some((b) => !b.hold && bi(b))) errs.push(`${at}: needs at least one shown block with en and ru text`);
     const used = [...(s.nodes ?? []), ...((s.threads as string[] | undefined) ?? []), ...((s.frames as Frame[] | undefined) ?? []).map((f) => f.node).filter((n): n is string => !!n)];
     for (const n of used) {
       if (ctx.nodes && !ctx.nodes.has(n)) errs.push(`${at}: lineage node ${n} does not exist`);

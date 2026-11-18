@@ -97,6 +97,16 @@ describe('feature validation', () => {
   });
 });
 
+describe('silent scenes', () => {
+  it('a scene with no text must say it is silent', () => {
+    const f = base();
+    f.scenes.push({ id: 'pause', kind: 'fall', blocks: [] });
+    expect(validateFeature(f).join('\n')).toContain('scene pause: needs at least one shown block');
+    f.scenes[2].silent = true;
+    expect(validateFeature(f)).toEqual([]);
+  });
+});
+
 describe('scene illustrations', () => {
   const layers = (): SceneArt => ({
     generated: true,
