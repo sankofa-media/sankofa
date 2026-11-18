@@ -190,13 +190,13 @@
   gender: none
   region: africa
   sources:
-    - title: 'Croatian Encyclopedia: Matobo'
-      url: https://www.enciklopedija.hr/clanak/matobo
-      quote: nalazi se od 2003. na UNESCO-ovu popisu zaštićene svjetske kulturne baštine
+    - title: "UNESCO World Heritage Centre: World Heritage List open data, Matobo Hills (site 306)"
+      url: https://data.unesco.org/api/explore/v2.1/catalog/datasets/whc001/records?where=id_no%3D%22306%22&select=name_en,date_inscribed,category
+      quote: '"name_en": "Matobo Hills", "date_inscribed": "2003", "category": "Cultural"'
     - title: 'National Museums and Monuments of Zimbabwe: World Heritage Sites'
       url: https://www.nmmz.co.zw/world-heritage-sites/
       quote: 'Matobo Hills Year of Inscription: 2003'
-  status: unverified
+  status: checked
 - id: fx-hon-0012
   cat: hon
   en: Liberian activist Leymah Gbowee won the 2011 Nobel Peace Prize for leading the Women of Liberia Mass Action for Peace.
@@ -232,14 +232,14 @@
   gender: none
   region: africa
   sources:
-    - title: 'Croatian Encyclopedia: Gorée'
-      url: https://www.enciklopedija.hr/clanak/goree
-      quote: Od 1978. otok je na UNESCO-ovu popisu svjetske kulturne baštine.
+    - title: "UNESCO World Heritage Centre: World Heritage List open data, Island of Gorée (site 26)"
+      url: https://data.unesco.org/api/explore/v2.1/catalog/datasets/whc001/records?where=id_no%3D%2226%22&select=date_inscribed,short_description_en
+      quote: '"date_inscribed": "1978" […] it was the largest slave-trading centre on the African coast'
     - title: 'ALIPH Foundation: Réhabilitation du musée de la Mer de Gorée'
       url: >-
         https://www.aliph-foundation.org/fr/nos-actions/rehabilitation-of-the-sea-museum-in-goree-initial-steps
       quote: des 12 premiers sites inscrits en 1978 sur la liste du patrimoine mondial de l’UNESCO.
-  status: unverified
+  status: checked
 - id: fx-hon-0014
   cat: hon
   en: Timbuktu's mosques and sacred places entered UNESCO's World Heritage List in 1988, recognising the city's intellectual and spiritual heritage.
@@ -254,10 +254,10 @@
   gender: none
   region: africa
   sources:
-    - title: 'Croatian Encyclopedia: Timbuktu'
-      url: https://www.enciklopedija.hr/clanak/timbuktu
-      quote: Timbuktu je od 1988. na UNESCO-ovu popisu svjetske kulturne baštine.
+    - title: "UNESCO World Heritage Centre: World Heritage List open data, Timbuktu (site 119)"
+      url: https://data.unesco.org/api/explore/v2.1/catalog/datasets/whc001/records?where=id_no%3D%22119%22&select=name_en,date_inscribed,short_description_en
+      quote: '"name_en": "Timbuktu", "date_inscribed": "1988" […] Timbuktu was an intellectual and spiritual capital'
     - title: 'International Criminal Court: Al Mahdi reparations order, 17 August 2017, paragraph 21'
       url: https://www.icc-cpi.int/sites/default/files/CourtRecords/CR2017_05117.PDF
       quote: Timbuktu was inscribed on the World Heritage List in 1988
-  status: unverified
+  status: checked
