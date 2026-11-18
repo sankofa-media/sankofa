@@ -237,7 +237,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
 
   // ---------- the mood ----------
   const watchers = ((scenes.find((s) => s.id === 'crowd')?.art?.overlays ?? []) as ArtLayer[]).map((l) => ({ src: art(l.file), alt: l.alt === '' ? '' : pick(l.alt) }));
-  const fx = new MoodFx({ root, scroller: ctx.scroller, bar, title: pick(ctx.data.title), calm, watchers, end: () => again.offsetTop });
+  const fx = new MoodFx({ root, scroller: ctx.scroller, bar, title: 'Angel', calm, watchers, end: () => again.offsetTop });
   /** The light's beat: its period in seconds and how warm the page is. */
   const beatAt = (period: number, warmth: number) => {
     root.style.setProperty('--an-period', `${period.toFixed(3)}s`);
