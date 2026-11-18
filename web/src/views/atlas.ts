@@ -15,6 +15,10 @@ import { countriesWithCards, countryCards, countryPoints, type CountriesFile, ty
 import { loadJson } from '../lib/loadJson';
 import { atlasFactoids } from '../lib/factoids';
 import { factoidView } from './factoid';
+import { cabinet as loadCabinet } from '../mechanics/data';
+import { atlasGlints } from '../mechanics/cabinet/hide';
+import { openCacheDialog } from '../mechanics/cabinet/cache';
+import type { CabinetFile } from '../mechanics/cabinet/model';
 
 /** The atlas's own keys next to the shared point (lib/route.ts). */
 export interface AtlasView {
@@ -45,6 +49,8 @@ export class Atlas {
   /** The factoid opened from its dot, shown in a small box over the map. */
   private factBox: HTMLElement;
   private factId?: string;
+  /** The Cabinet of Curiosities, for the glints on the map. */
+  private cab: CabinetFile | null = null;
   /** `push` when the change is a page to come back to (a mode, a country). */
   onChange?: (p: Point, view: AtlasView, push?: boolean) => void;
   onClose?: () => void;
@@ -120,6 +126,13 @@ export class Atlas {
     document.body.append(this.el);
     // Factoids come after the cards: their dots join an open atlas.
     void app.facts.ready.then(() => this.isOpen && this.draw(false));
+    // So do the cabinet's glints.
+    void loadCabinet()
+      .then((f) => {
+        this.cab = f;
+        if (this.isOpen) this.draw(false);
+      })
+      .catch(() => undefined);
   }
 
   /** Show a factoid from its dot: the sentence, its year, sources and cards. */
@@ -161,6 +174,7 @@ export class Atlas {
       avoid: () => (this.mode === 'countries' ? this.panelBoxes() : [[0, 0, window.innerWidth < 720 ? 210 : 250, window.innerWidth < 720 ? 52 : 330], ...this.cornerBoxes()]),
       onPoint: (id) => this.focus(id),
       onFact: (id) => this.showFact(id),
+      onGlint: (id) => this.cab && openCacheDialog(this.app, this.cab, id),
       onCountry: (iso) => {
         const c = this.countries?.countries.find((x) => x.iso === iso);
         if (c) this.selectCountry(c.id);
@@ -472,6 +486,7 @@ export class Atlas {
     );
     map.setRoutes([], false);
     map.setFacts([]);
+    map.setGlints([]);
     this.factBox.hidden = true;
     this.factId = undefined;
     map.setRegions([]);
@@ -505,7 +520,7 @@ export class Atlas {
       h('button.cn-back', { type: 'button', onclick: () => this.selectCountry(undefined, true) }, svgIcon('prev'), pick({ en: 'All countries', ru: 'Все страны' })),
       h(
         'div.cn-head',
-        {},
+        { 'data-country': c.id },
         h('h3', { tabindex: '-1' }, c.name[lang()]),
         h('p.cn-count', {}, rows.length ? `${count(rows.length, 'card')} · ${range}` : pick({ en: 'No cards in your copy of the museum.', ru: 'В вашем экземпляре музея карточек нет.' })),
         c.disputed ? h('p.cn-disputed', {}, pick({ en: 'Its status is disputed; the museum lists it under no state.', ru: 'Статус этой территории оспаривается; музей не относит её ни к одному государству.' })) : null,
@@ -595,6 +610,7 @@ export class Atlas {
       this.factId = undefined;
     }
     this.map.setFacts(facts.map((f) => ({ id: f.id, lon: f.place!.lon, lat: f.place!.lat, on: f.id === this.factId, aria: `${pick({ en: 'Fact', ru: 'Факт' })}, ${f.year}, ${lang() === 'en' ? f.place!.name + ': ' : ''}${pick({ en: f.en, ru: f.ru })}` })));
+    this.map.setGlints(this.cab ? atlasGlints(this.app, this.cab).map((g) => ({ ...g, aria: pick({ en: 'Something is hidden at this place', ru: 'В этом месте что-то спрятано' }) })) : []);
     this.map.setRoutes(layers.routes, animate || this.level <= 2);
     this.map.setRegions(layers.regions);
     this.map.setNumbers(path.map((c, i) => ({ n: i + 1, lon: c.places[0].lon, lat: c.places[0].lat })));

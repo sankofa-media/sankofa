@@ -8,8 +8,8 @@ import { h } from '../../lib/dom';
 import { pick } from '../../lib/i18n';
 import { mediaSrc } from '../../lib/media';
 import { keyArt, silhouette } from './art';
-import { closeCache, openArtifactDialog } from './cache';
-import { drawerOpen, HEAP, slots, sortInto, tally, unlockDrawer, type Artifact, type CabinetFile, type Drawer, type Holdings } from './model';
+import { closeCache, openArtifactDialog, openCacheDialog } from './cache';
+import { cacheByWord, contentsFor, drawerOpen, HEAP, slots, sortInto, tally, unlockDrawer, type Artifact, type CabinetFile, type Drawer, type Holdings } from './model';
 import { holdings, onHoldings, save } from './store';
 
 /** A stable small tilt per thing, so the heap looks heaped and stays put. */
@@ -102,8 +102,41 @@ export function cabinetView(app: App, f: CabinetFile): HTMLElement {
     } else {
       body = h('div.cb-drawer-in', { id }, d.intro ? h('p.cb-drawer-intro', {}, pick(d.intro)) : null, slotList(d, hs));
     }
+    // A drawer inside this one (the honest shelf's inner drawer) sits at the back of it.
+    const inner = f.drawers.filter((x) => x.within === d.id);
+    if (inner.length && !(secret && !isOpen)) body.append(...inner.map((x) => drawerEl(x, hs)));
     body.hidden = !pulled;
-    return h(`section.cb-drawer${secret ? '.cb-secret' : ''}${d.id === 'honest' ? '.cb-honest' : ''}${pulled ? '.pulled' : ''}`, { 'data-drawer': d.id, 'aria-label': secret && !isOpen ? pick({ en: 'A drawer with no label', ru: 'Ящик без надписи' }) : pick(d.label) }, face, body);
+    return h(`section.cb-drawer${secret ? '.cb-secret' : ''}${d.within ? '.cb-inner' : ''}${d.id === 'honest' || d.within === 'honest' ? '.cb-honest' : ''}${pulled ? '.pulled' : ''}`, { 'data-drawer': d.id, 'aria-label': secret && !isOpen ? pick({ en: 'A drawer with no label', ru: 'Ящик без надписи' }) : pick(d.label) }, face, body);
+  };
+
+  /** The letter lock: a word read in the museum's cluster opens what it locks. */
+  let lockMsg = '';
+  const letterLock = () => {
+    const words = f.caches.filter((c) => c.hidden.at === 'cluster' && contentsFor(c, app.edition).length);
+    if (!words.length) return null;
+    const input = h('input.cb-lock-input', { type: 'text', id: 'cb-lock-word', autocomplete: 'off', autocapitalize: 'none', spellcheck: 'false', maxlength: '24', placeholder: pick({ en: 'a word', ru: 'слово' }) }) as HTMLInputElement;
+    const msg = h('p.cb-lock-msg', { role: 'status', 'aria-live': 'polite' }, lockMsg);
+    const form = h(
+      'form.cb-lock',
+      {
+        onsubmit: (e: Event) => {
+          e.preventDefault();
+          const c = cacheByWord(f, input.value);
+          if (c && contentsFor(c, app.edition).length) {
+            lockMsg = '';
+            openCacheDialog(app, f, c.id);
+          } else {
+            lockMsg = pick({ en: 'The rings turn, but the lock does not give.', ru: 'Кольца поворачиваются, но замок не поддаётся.' });
+            msg.textContent = lockMsg;
+          }
+        },
+      },
+      h('label', { for: 'cb-lock-word' }, pick({ en: 'A box with a letter lock lies on the cabinet. Its rings spell a word; the museum’s cluster knows which.', ru: 'На кабинете лежит шкатулка с кодовым замком из букв. Кольца складываются в слово, а какое — знает кластер музея.' })),
+      h('div.cb-lock-row', {}, input, h('button.btn.cb-lock-go', { type: 'submit' }, pick({ en: 'Turn the rings', ru: 'Повернуть кольца' }))),
+      msg,
+    );
+    const found = words.filter((c) => holdings().opened.includes(c.id)).length;
+    return h('section.cb-letterlock', { 'aria-labelledby': 'cb-lock-h' }, h('h3', { id: 'cb-lock-h' }, pick({ en: 'The letter lock', ru: 'Кодовый замок' }), found ? h('small', {}, ` · ${found}/${words.length}`) : null), form);
   };
 
   const heapEl = (hs: Holdings) => {
@@ -133,7 +166,8 @@ export function cabinetView(app: App, f: CabinetFile): HTMLElement {
         h('p.cb-tally', { role: 'status' }, count(t.have, t.of)),
         keys.length ? h('div.cb-keyring', {}, h('span', {}, pick({ en: 'On your key ring:', ru: 'На вашей связке:' })), ...keys.map((k) => h('span.cb-keyring-key', { title: pick(k.note) }, keyArt(), pick(k.name)))) : null,
       ),
-      h('div.cb-cabinet', {}, h('div.cb-crown', { 'aria-hidden': 'true' }), h('div.cb-drawers', {}, ...f.drawers.filter((d) => d.id !== HEAP).map((d) => drawerEl(d, hs)))),
+      h('div.cb-cabinet', {}, h('div.cb-crown', { 'aria-hidden': 'true' }), h('div.cb-drawers', {}, ...f.drawers.filter((d) => d.id !== HEAP && !d.within).map((d) => drawerEl(d, hs)))),
+      letterLock() ?? "",
       heapEl(hs),
     );
   };

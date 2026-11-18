@@ -27,7 +27,7 @@ func main() {
 		}
 	}
 	kubeFlags.AddFlags(root.PersistentFlags())
-	root.AddCommand(contentCmd(), dictCmd(), tellCmd(), fetchCmd(), diffCmd(), obituariesCmd(), creditsCmd(), genreCmd(), questCmd(), crumbCmd(), waitCmd(), atlasCmd(), storyCmd(), kgotlaCmd(), editionCmd(), rootsCmd())
+	root.AddCommand(contentCmd(), dictCmd(), tellCmd(), fetchCmd(), diffCmd(), obituariesCmd(), creditsCmd(), genreCmd(), questCmd(), crumbCmd(), waitCmd(), atlasCmd(), storyCmd(), kgotlaCmd(), editionCmd(), rootsCmd(), rummageCmd())
 	if err := root.Execute(); err != nil {
 		fmt.Fprintln(os.Stderr, "sankofa:", err)
 		os.Exit(1)

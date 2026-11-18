@@ -15,17 +15,39 @@ export interface L {
 
 export type Edition = 'm' | 'f';
 
-export const CONTAINER_KINDS = ['chest', 'box', 'suitcase', 'crate', 'archive-box', 'bag', 'strongbox', 'grip'] as const;
+export const CONTAINER_KINDS = ['chest', 'box', 'suitcase', 'crate', 'archive-box', 'bag', 'strongbox', 'grip', 'trunk', 'tin', 'case', 'basket', 'portfolio'] as const;
 export type ContainerKind = (typeof CONTAINER_KINDS)[number];
 
 export const SHAPES = ['paper', 'book', 'photo', 'drawing', 'object', 'instrument', 'record'] as const;
 export type Shape = (typeof SHAPES)[number];
 
+/** Where in the cluster a cache is found: a Card's annotation, the storeroom ConfigMap, the `sankofa rummage` command. */
+export const CLUSTER_VIA = ['annotation', 'configmap', 'cli'] as const;
+export type ClusterVia = (typeof CLUSTER_VIA)[number];
+
 export type Hidden =
   | { at: 'card-image'; card: string; x: number; y: number }
   | { at: 'card-text'; card: string; anchor: L }
   | { at: 'chapter-step'; chapter: string; anchor: L }
-  | { at: 'workshop'; object: string };
+  | { at: 'workshop'; object: string }
+  /** words of a factoid, wherever it is shown (a card's footer, the atlas, the random fact) */
+  | { at: 'factoid'; fact: string; anchor: L }
+  /** a faint glint on the atlas map, in its Time mode */
+  | { at: 'atlas'; lon: number; lat: number }
+  /** words of a country's header in the atlas's Countries mode */
+  | { at: 'country'; country: string; anchor: L }
+  /** words of an artist's story in Roots */
+  | { at: 'roots'; artist: string; anchor: L }
+  /** a glint by a card's entry in the name index */
+  | { at: 'index'; card: string }
+  /** words of a text block of a longread's scene */
+  | { at: 'feature'; feature: string; scene: string; block: string; anchor: L }
+  /**
+   * Found in the museum's cluster, not on the site: the reader types the word
+   * into the cabinet's letter lock. The content holds the word; the built data
+   * only its hash (wordHash), so the page does not give it away.
+   */
+  | { at: 'cluster'; via: ClusterVia; card?: string; word?: string; hash?: string };
 
 export interface Cache {
   id: string;
@@ -42,6 +64,10 @@ export interface Cache {
   /** artifacts inside, in both copies and in one copy only */
   contents: { both?: string[]; m?: string[]; f?: string[] };
   cards?: string[];
+  /** a line of the game, found inside: where to look next */
+  clue?: L;
+  /** the cache the clue leads to (a chain goes on through it) */
+  leads?: string;
 }
 
 export interface Artifact {
@@ -72,6 +98,8 @@ export interface Drawer {
   intro?: L;
   /** artifacts that lie in the drawer itself, not in a cache */
   contents?: string[];
+  /** a drawer inside another one (the honest shelf's inner drawer) */
+  within?: string;
 }
 
 export interface Key {
@@ -115,6 +143,31 @@ export interface Known {
   /** a card's or chapter's text, per language, for anchors */
   text(kind: 'card' | 'chapter', id: string, lang: 'en' | 'ru'): string;
   facts: Fact[];
+  /** the copy a card is in (m, f or both); absent: both */
+  edition?(card: string): string | undefined;
+  /** the other places' texts, null when there is no such place */
+  factoid?(id: string): L | null;
+  country?(id: string): L | null;
+  roots?(artist: string): L | null;
+  feature?(feature: string, scene: string, block: string): L | null;
+}
+
+/** The letters a lock word is made of: lowercase latin, nothing else. */
+export const normWord = (w: string) => w.toLowerCase().replace(/[^a-z]/g, '');
+
+/** FNV-1a of a lock word, as hex: what the page keeps instead of the word itself. */
+export function wordHash(w: string): string {
+  let x = 0x811c9dc5;
+  for (const ch of `sankofa:${normWord(w)}`) x = Math.imul(x ^ ch.charCodeAt(0), 0x01000193) >>> 0;
+  return x.toString(16).padStart(8, '0');
+}
+
+/** The cluster cache a typed word opens, if any. */
+export function cacheByWord(f: CabinetFile, word: string): Cache | undefined {
+  const w = normWord(word);
+  if (w.length < 4) return undefined;
+  const hash = wordHash(w);
+  return f.caches.find((c) => c.hidden.at === 'cluster' && (c.hidden.hash === hash || (!!c.hidden.word && normWord(c.hidden.word) === w)));
 }
 
 const filled = (v: L | undefined) => !!v?.en?.trim() && !!v?.ru?.trim();
@@ -183,6 +236,7 @@ export function validateCabinet(f: CabinetFile, k: Known): string[] {
     if (d.intro && d.id !== HEAP && !factsBy.has(`drawer:${d.id}`)) errs.push(`drawer ${d.id}: its intro has no facts in the ledger`);
     if (d.lock && !keys.has(d.lock)) errs.push(`drawer ${d.id}: key ${d.lock} does not exist`);
     for (const a of d.contents ?? []) if (!art.has(a)) errs.push(`drawer ${d.id}: artifact ${a} does not exist`);
+    if (d.within && (!drawers.has(d.within) || d.within === HEAP || d.within === d.id || drawers.get(d.within)?.within)) errs.push(`drawer ${d.id}: cannot lie within ${d.within}`);
   }
   if (!drawers.has(HEAP)) errs.push(`cabinet: there is no ${HEAP} drawer (the unsorted heap)`);
 
@@ -198,6 +252,8 @@ export function validateCabinet(f: CabinetFile, k: Known): string[] {
     const at = `cache ${c.id}`;
     if (!CONTAINER_KINDS.includes(c.kind)) errs.push(`${at}: unknown kind ${c.kind}`);
     for (const fld of ['name', 'place', 'time', 'story'] as const) if (!filled(c[fld])) errs.push(`${at}: ${fld} needs English and Russian`);
+    if (c.clue && !filled(c.clue)) errs.push(`${at}: clue needs English and Russian`);
+    if (c.leads && (!c.clue || !f.caches.some((x) => x.id === c.leads && x.id !== c.id))) errs.push(`${at}: leads to ${c.leads}, which needs a clue and an existing cache`);
     if (!factsBy.has(`cache:${c.id}`)) errs.push(`${at}: its story has no facts in the ledger`);
     for (const id of c.cards ?? []) if (!k.cards.has(id)) errs.push(`${at}: card ${id} does not exist`);
     if (c.lock && !keys.has(c.lock)) errs.push(`${at}: key ${c.lock} does not exist`);
@@ -225,7 +281,30 @@ export function validateCabinet(f: CabinetFile, k: Known): string[] {
       else for (const lang of ['en', 'ru'] as const) if (!anchorIn(k.text(kind, id, lang), hd.anchor[lang])) errs.push(`${at}: the ${lang} anchor "${hd.anchor[lang]}" is not in the text of ${kind} ${id}`);
     } else if (hd.at === 'workshop') {
       if (!k.objects.has(hd.object)) errs.push(`${at}: the Workshop has no object ${hd.object}`);
+    } else if (hd.at === 'factoid' || hd.at === 'country' || hd.at === 'roots' || hd.at === 'feature') {
+      const [what, text] =
+        hd.at === 'factoid' ? [`factoid ${hd.fact}`, k.factoid?.(hd.fact)]
+        : hd.at === 'country' ? [`country ${hd.country}`, k.country?.(hd.country)]
+        : hd.at === 'roots' ? [`Roots artist ${hd.artist}`, k.roots?.(hd.artist)]
+        : [`scene ${hd.scene} block ${hd.block} of feature ${hd.feature}`, k.feature?.(hd.feature, hd.scene, hd.block)];
+      if (!text) errs.push(`${at}: there is no ${what} with text`);
+      else if (!filled(hd.anchor)) errs.push(`${at}: anchor needs English and Russian`);
+      else for (const lang of ['en', 'ru'] as const) if (!anchorIn(text[lang], hd.anchor[lang])) errs.push(`${at}: the ${lang} anchor "${hd.anchor[lang]}" is not in the text of ${what}`);
+    } else if (hd.at === 'atlas') {
+      if (!(Math.abs(hd.lat) <= 90 && Math.abs(hd.lon) <= 180)) errs.push(`${at}: the atlas glint needs lat/lon`);
+    } else if (hd.at === 'index') {
+      if (!k.cards.has(hd.card)) errs.push(`${at}: card ${hd.card} does not exist`);
+    } else if (hd.at === 'cluster') {
+      if (!CLUSTER_VIA.includes(hd.via)) errs.push(`${at}: unknown way into the cluster ${hd.via}`);
+      if (!/^[a-z]{4,16}$/.test(hd.word ?? '')) errs.push(`${at}: the lock word must be 4 to 16 lowercase latin letters`);
+      if (hd.via === 'annotation' && !(hd.card && k.cards.has(hd.card))) errs.push(`${at}: the annotation needs an existing card`);
+      const same = f.caches.filter((x) => x.hidden?.at === 'cluster' && x.hidden.word === hd.word);
+      if (same.length > 1) errs.push(`${at}: its lock word is also another cache's`);
     } else errs.push(`${at}: unknown hiding place ${(hd as { at: string }).at}`);
+    // A place found in one copy only would leave the other copy's things out of reach.
+    const onCard = hd && (hd.at === 'card-image' || hd.at === 'card-text' || hd.at === 'index') ? hd.card : undefined;
+    const ed = onCard ? (k.edition?.(onCard) ?? 'both') : 'both';
+    if (ed === 'm' || ed === 'f') errs.push(`${at}: card ${onCard} is in the ${ed} copy only`);
   }
   for (const x of f.keys) {
     if (!filled(x.name) || !filled(x.note)) errs.push(`key ${x.id}: name and note need English and Russian`);
@@ -233,6 +312,10 @@ export function validateCabinet(f: CabinetFile, k: Known): string[] {
   }
   // A lock whose key lies only behind the same lock can never be opened.
   for (const c of f.caches) if (c.lock && (c.gives ?? []).includes(c.lock)) errs.push(`cache ${c.id}: holds its own key`);
+  // Every lock must open in the end, walking the chains from the open caches.
+  const order = openOrder(f);
+  for (const c of f.caches) if (c.lock && !order.caches.includes(c.id) && !(c.gives ?? []).includes(c.lock)) errs.push(`cache ${c.id}: its key ${c.lock} lies only behind locks that never open`);
+  for (const d of f.drawers) if (d.lock && keys.has(d.lock) && givenKeys.has(d.lock) && !order.keys.includes(d.lock)) errs.push(`drawer ${d.id}: its key ${d.lock} lies only behind locks that never open`);
 
   for (const a of f.artifacts) {
     const at = `artifact ${a.id}`;
@@ -249,6 +332,47 @@ export function validateCabinet(f: CabinetFile, k: Known): string[] {
     if (!factsBy.has(`artifact:${a.id}`)) errs.push(`${at}: its note has no facts in the ledger`);
   }
   return errs;
+}
+
+/**
+ * The order a reader can open the caches in, following the keys: first every
+ * cache without a lock, then each locked one whose key has been found.
+ */
+export function openOrder(f: CabinetFile): { caches: string[]; keys: string[] } {
+  const caches: string[] = [];
+  const keys = new Set<string>();
+  for (let grew = true; grew; ) {
+    grew = false;
+    for (const c of f.caches) {
+      if (caches.includes(c.id) || (c.lock && !keys.has(c.lock))) continue;
+      caches.push(c.id);
+      (c.gives ?? []).forEach((k) => keys.add(k));
+      grew = true;
+    }
+  }
+  return { caches, keys: [...keys] };
+}
+
+/**
+ * The chains of keys: each starts at a cache that is open and gives a key,
+ * and runs through the caches that key opens to the lock where it ends (a
+ * cache that gives nothing more, or a drawer).
+ */
+export function keyChains(f: CabinetFile): string[][] {
+  const opens = (key: string) => [...f.caches.filter((c) => c.lock === key).map((c) => `cache:${c.id}`), ...f.drawers.filter((d) => d.lock === key).map((d) => `drawer:${d.id}`)];
+  const out: string[][] = [];
+  const walk = (path: string[], c: Cache | undefined) => {
+    const next = [...new Set([...(c?.gives ?? []).flatMap(opens), ...(c?.leads ? [`cache:${c.leads}`] : [])])];
+    if (!next.length) return out.push(path);
+    for (const n of next) {
+      const nc = n.startsWith('cache:') ? f.caches.find((x) => `cache:${x.id}` === n) : undefined;
+      if (path.includes(n)) continue;
+      walk([...path, n], nc);
+    }
+  };
+  const led = new Set(f.caches.map((c) => c.leads).filter(Boolean));
+  for (const c of f.caches) if (!c.lock && !led.has(c.id) && (c.gives?.length || c.leads)) walk([`cache:${c.id}`], c);
+  return out;
 }
 
 // ---------- what a reader can find ----------

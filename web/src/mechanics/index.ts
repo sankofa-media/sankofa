@@ -16,7 +16,7 @@ import { desk, type DeskView } from './docs/view';
 import { agentsNote, checksPanel, methodPage } from './checks/view';
 import { objectBlock, objectKeyForCard, OBJECT_KEYS, setWorkshopDrawers, shelf } from './objects/view';
 import { cabinetView } from './cabinet/view';
-import { hideInCard, hideInStory, workshopDrawer } from './cabinet/hide';
+import { hideInCard, hideInStory, hideLive, workshopDrawer } from './cabinet/hide';
 import type { CabinetFile } from './cabinet/model';
 import { stopAll, watchPage } from '../lib/sound';
 import { inLang, prose } from './guide/view';
@@ -174,7 +174,11 @@ export function installMechanics(app: App, hooks: MechHooks): Mechanics {
   // The caches hidden in the chapters, once the cabinet's data is here.
   void data
     .cabinet()
-    .then((c) => c && hideInStory(app, c))
+    .then((c) => {
+      if (!c) return;
+      hideInStory(app, c);
+      hideLive(app, c);
+    })
     .catch(() => undefined);
   return mech;
 }

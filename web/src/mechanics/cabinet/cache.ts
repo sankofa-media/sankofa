@@ -11,6 +11,9 @@ import { holdings, save } from './store';
 
 let open: { el: HTMLElement; back: Element | null } | null = null;
 
+/** A line with `code` in backticks, as text and <code>. */
+const withCode = (t: string) => t.split('`').map((part, i) => (i % 2 ? h('code', {}, part) : part));
+
 // Escape closes the cache before anything under it (a card, a sheet): this
 // listener sits on the window, ahead of the document's own.
 function onEscape(e: KeyboardEvent): void {
@@ -99,6 +102,7 @@ export function openCacheDialog(app: App, f: CabinetFile, cacheId: string): void
         const k = keyName(id);
         return k ? h('div.cb-keyfind', {}, keyArt(), h('div', {}, h('b', {}, pick(k.name)), h('p', {}, pick(k.note)))) : '';
       }),
+      c.clue ? h('p.cb-clue', {}, h('span.cb-clue-tag', {}, pick({ en: 'A note in the lid: ', ru: 'Записка под крышкой: ' })), ...withCode(pick(c.clue))) : '',
       h(
         'p.cb-into',
         {},

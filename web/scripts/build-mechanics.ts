@@ -16,7 +16,7 @@ import { buildChecks, pairContext, type ContextRound, type Ledgers, type MediaEn
 import { validateDoc, type Doc } from '../src/mechanics/docs/model.ts';
 import { LABEL_FIELDS, parsePattern, validateLabel, type ObjectLabel, type ObjectsFile } from '../src/mechanics/objects/model.ts';
 import { cardLinks, parseProse, type ProseFile } from '../src/mechanics/guide/model.ts';
-import { validateCabinet, type CabinetFile, type Fact } from '../src/mechanics/cabinet/model.ts';
+import { validateCabinet, wordHash, type CabinetFile, type Fact, type L } from '../src/mechanics/cabinet/model.ts';
 
 const [src, out] = process.argv.slice(2);
 if (!src || !out) {
@@ -161,6 +161,15 @@ if (existsSync(join(cabDir, 'cabinet.yaml'))) {
     else if (cabLedger.includes(e)) errors.push(`media-cabinet.yaml: ${e.file} sha256 is ${sum}, the ledger says ${e.sha256}`);
   }
   const facts = yaml<Fact[]>(join(ledger, 'cabinet.yaml'), []);
+  // The other places caches hide in: the factoids the museum shows, the
+  // countries' headers in the atlas.
+  const factoidText = new Map<string, L>();
+  const fxDir = join(src, 'factoids');
+  for (const f of existsSync(fxDir) ? readdirSync(fxDir).filter((x) => x.endsWith('.yaml')) : [])
+    for (const x of yaml<{ id: string; status?: string; en?: string; ru?: string }[]>(join(fxDir, f), []))
+      if (x?.status === 'checked' && x.en && x.ru) factoidText.set(x.id, { en: x.en, ru: x.ru });
+  const countryText = new Map<string, L>();
+  for (const c of yaml<{ countries?: { id: string; about?: L }[] }>(join(src, 'countries.yaml'), {}).countries ?? []) if (c.about?.en && c.about.ru) countryText.set(c.id, c.about);
   const body = (p: string) => (existsSync(p) ? read(p).replace(/^---\n[\s\S]*?\n---\n/, '') : '');
   const errs = validateCabinet(cabinet, {
     cards,
@@ -170,6 +179,18 @@ if (existsSync(join(cabDir, 'cabinet.yaml'))) {
     rights: cabRights,
     text: (kind, id, l) => body(join(src, kind === 'card' ? 'cards' : 'chapters', `${id}${l === 'ru' ? '.ru' : ''}.md`)),
     facts,
+    edition: (id) => (existsSync(join(src, 'cards', `${id}.md`)) ? /^edition:\s*(\w+)/m.exec(read(join(src, 'cards', `${id}.md`)))?.[1] : undefined),
+    factoid: (id) => factoidText.get(id) ?? null,
+    country: (id) => countryText.get(id) ?? null,
+    roots: (id) => {
+      const a = yaml<{ story?: string; storyRu?: string } | null>(join(src, 'roots', `${id}.yaml`), null);
+      return a?.story && a.storyRu ? { en: a.story, ru: a.storyRu } : null;
+    },
+    feature: (id, scene, block) => {
+      const ft = yaml<{ scenes?: { id: string; blocks?: ({ id: string; hold?: boolean } & Partial<L>)[] }[] } | null>(join(src, 'features', id, 'feature.yaml'), null);
+      const b = ft?.scenes?.find((x) => x.id === scene)?.blocks?.find((x) => x.id === block);
+      return b && !b.hold && b.en && b.ru ? { en: b.en, ru: b.ru } : null;
+    },
   });
   errors.push(...errs.map((e) => `cabinet: ${e}`));
   // What the reader sees: sizes of the pictures, and the sources behind each text.
@@ -181,6 +202,8 @@ if (existsSync(join(cabDir, 'cabinet.yaml'))) {
       if (!list.some((y) => y.url === x.url)) list.push({ title: x.title, url: x.url });
     }
   cabinet.sources = sources;
+  // A lock word stays in the content; the page gets only its hash.
+  cabinet.caches = cabinet.caches.map((c) => (c.hidden?.at === 'cluster' ? { ...c, hidden: { at: 'cluster', via: c.hidden.via, ...(c.hidden.card ? { card: c.hidden.card } : {}), hash: wordHash(c.hidden.word ?? '') } } : c));
   cabinet.artifacts = cabinet.artifacts.map((a) => {
     let size = {};
     try {
