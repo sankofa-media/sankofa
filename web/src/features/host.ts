@@ -57,7 +57,7 @@ function loadIndex(): Promise<FeaturesIndex | null> {
 }
 
 const FALLBACK: Record<string, Bi> = {
-  'list-kicker': { en: 'Features', ru: 'Спецпроекты' },
+  'list-kicker': { en: 'Special projects', ru: 'Спецпроекты' },
   close: { en: 'Close', ru: 'Закрыть' },
   back: { en: 'All features', ru: 'Все спецпроекты' },
   loading: { en: 'Loading…', ru: 'Загружается…' },

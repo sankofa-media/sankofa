@@ -28,7 +28,7 @@ test('the menu opens the list of features, and the list opens Sea Lion Girls', a
   if (isMobile) {
     await page.locator('.nav-menu-btn').click();
     const entry = page.locator('.nav-sheet-item[data-entry="features"]');
-    await expect(entry.locator('b')).toHaveText('Features');
+    await expect(entry.locator('b')).toHaveText('Special projects');
     await expect(entry.locator('small')).not.toBeEmpty();
     await entry.click();
   } else {

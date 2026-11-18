@@ -71,8 +71,8 @@ export function editionNote(app: App): HTMLElement {
       ? `${names.slice(0, SHOWN).join(', ')} ${ru ? `и ещё ${rest} ${pluralRu(rest, ['историю', 'истории', 'историй'])}` : `and ${rest} more stories`}`
       : join(names);
   const text = ru
-    ? `Как у Павича, у музея два экземпляра — мужской и женский. В каждом весь словарь: любая карточка открывается в обоих. Темы у них одни и те же, но в одном они увидены глазами мужчины, в другом — глазами женщины: ${varied ? 'иные карточки читаются в них по-разному, а ' : ''}${RU_IN[n] ?? `в ${n} местах`} глава рассказывает свою тему через другую историю. У вас — ${mine === 'f' ? 'женский' : 'мужской'}; в его главах вы прочтёте: ${own}.`
-    : `Like Pavić’s dictionary, this museum has two copies, a male and a female one. Each holds the whole dictionary: every card opens in both. They tell the same themes, one with a man’s view and one with a woman’s: ${varied ? 'some cards read differently in each, and ' : ''}in ${EN_NUM[n] ?? n} places a chapter tells its theme through another story. Yours is the ${mine === 'f' ? 'female' : 'male'} copy; in its chapters you read ${own}.`;
+    ? `И ещё одно роднит музей с «Хазарским словарём»: у него тоже два экземпляра, мужской и женский. В каждом весь словарь: любая карточка открывается в обоих. Темы у них одни и те же, но в одном они увидены глазами мужчины, в другом — глазами женщины: ${varied ? 'иные карточки читаются в них по-разному, а ' : ''}${RU_IN[n] ?? `в ${n} местах`} глава рассказывает свою тему через другую историю. У вас — ${mine === 'f' ? 'женский' : 'мужской'}; в его главах вы прочтёте: ${own}.`
+    : `And like that dictionary, the museum comes in two copies, a male and a female one. Each holds the whole dictionary: every card opens in both. They tell the same themes, one with a man’s view and one with a woman’s: ${varied ? 'some cards read differently in each, and ' : ''}in ${EN_NUM[n] ?? n} places a chapter tells its theme through another story. Yours is the ${mine === 'f' ? 'female' : 'male'} copy; in its chapters you read ${own}.`;
 
   const list = h(
     'ol.ed-pairs',

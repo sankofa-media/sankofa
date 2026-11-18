@@ -54,7 +54,7 @@ export function installFeatures(app: App, hooks: FeatureHooks): Features {
   });
   // The top-bar entry keeps a name when its label folds away.
   document.querySelectorAll<HTMLElement>('.nav-actions [data-features]').forEach((a) => {
-    a.setAttribute('aria-label', pick({ en: 'Features: special projects', ru: 'Спецпроекты' }));
+    a.setAttribute('aria-label', pick({ en: 'Special projects', ru: 'Спецпроекты' }));
     a.title = a.getAttribute('aria-label')!;
   });
   return api;
