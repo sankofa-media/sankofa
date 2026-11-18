@@ -29,6 +29,7 @@ export function factoidView(app: App, f: Factoid, o: FactViewOptions = {}): HTML
     'ol.fx-sources',
     { id: srcId, hidden: true, 'aria-label': pick({ en: 'How we checked it', ru: 'Как мы это проверили' }) },
     f.sources.map((s) => h('li', {}, h('a', { href: s.url, rel: 'noopener', target: '_blank' }, s.title))),
+    f.status === 'single-source' ? h('li.fx-single', {}, pick({ en: 'Checked against one source only.', ru: 'Проверено только по одному источнику.' })) : null,
   );
   const toggle = h(
     'button.fx-src-btn',

@@ -19,8 +19,8 @@ func TestRealCollectionValidates(t *testing.T) {
 		t.Fatal(err)
 	}
 	shown := Shown(all)
-	if len(shown) == 0 || len(shown) == len(all) {
-		t.Fatalf("expected some, not all, factoids checked: %d of %d", len(shown), len(all))
+	if len(shown) == 0 {
+		t.Fatalf("expected checked factoids, got none of %d", len(all))
 	}
 	for _, e := range Validate(shown, cs) {
 		t.Error(e)

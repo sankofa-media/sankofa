@@ -154,6 +154,7 @@ type ExportedFactoid struct {
 	Place   *exportedPlace   `json:"place,omitempty"`
 	Cards   []string         `json:"cards"`
 	Sources []exportedSource `json:"sources"`
+	Status  string           `json:"status,omitempty"`
 }
 
 // The museum shows a source's title and link; the quote stays in the workshop.
@@ -173,6 +174,9 @@ func ExportFactoids(fs []factoid.Factoid) []ExportedFactoid {
 	out := make([]ExportedFactoid, 0, len(fs))
 	for _, f := range fs {
 		e := ExportedFactoid{ID: f.ID, Cat: f.Cat, EN: f.EN, RU: f.RU, Year: f.Year, Date: f.Date, Cards: f.Cards}
+		if f.Status == factoid.SingleSource {
+			e.Status = f.Status
+		}
 		for _, s := range f.Sources {
 			e.Sources = append(e.Sources, exportedSource{Title: s.Title, URL: s.URL})
 		}

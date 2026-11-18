@@ -22,6 +22,8 @@ export interface Factoid {
   place?: { name: string; lat: number; lon: number };
   cards: string[];
   sources: FactSource[];
+  /** "single-source": shown although only one source could be confirmed. */
+  status?: string;
 }
 
 export interface FactoidsFile {
@@ -45,7 +47,7 @@ export function usableFactoids(file: FactoidsFile | null | undefined): Factoid[]
     seen.add(f.id);
     if (!f.en?.trim() || !f.ru?.trim() || words(f.en) > MAX_WORDS || words(f.ru) > MAX_WORDS) return false;
     if (!Number.isInteger(f.year) || f.year === 0) return false;
-    if (!Array.isArray(f.cards) || !Array.isArray(f.sources) || f.sources.length < 2) return false;
+    if (!Array.isArray(f.cards) || !Array.isArray(f.sources) || f.sources.length < (f.status === 'single-source' ? 1 : 2)) return false;
     if (f.sources.some((s) => !s?.title || !/^https?:\/\//.test(s.url ?? ''))) return false;
     if (f.place && !(Number.isFinite(f.place.lat) && Number.isFinite(f.place.lon))) return false;
     return true;

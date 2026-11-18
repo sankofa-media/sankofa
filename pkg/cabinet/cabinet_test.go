@@ -76,9 +76,9 @@ func TestRealCabinetAndStoreroom(t *testing.T) {
 	var found bool
 	for _, doc := range strings.Split(string(raw), "\n---\n") {
 		var o struct {
-			Kind     string            `json:"kind"`
+			Kind     string                           `json:"kind"`
 			Metadata struct{ Name, Namespace string } `json:"metadata"`
-			Data     map[string]string `json:"data"`
+			Data     map[string]string                `json:"data"`
 		}
 		if yaml.Unmarshal([]byte(doc), &o) != nil || o.Kind != "ConfigMap" || o.Metadata.Name != "storeroom" {
 			continue

@@ -16,8 +16,12 @@ import (
 	"github.com/tym83/sankofa/pkg/card"
 )
 
-// Checked is the only status a factoid may be shown with.
+// Checked is the status of a factoid confirmed by two independent sources.
 const Checked = "checked"
+
+// SingleSource marks a factoid the editor chose to show although only one
+// source could be confirmed; the page says so next to it.
+const SingleSource = "single-source"
 
 // MaxWords is the longest a factoid may be, in either language.
 const MaxWords = 30
@@ -84,11 +88,11 @@ func LoadFS(fsys fs.FS) ([]Factoid, error) {
 	return out, nil
 }
 
-// Shown keeps only the checked factoids.
+// Shown keeps the checked factoids and those shown on a single source.
 func Shown(all []Factoid) []Factoid {
 	var out []Factoid
 	for _, f := range all {
-		if f.Status == Checked {
+		if f.Status == Checked || f.Status == SingleSource {
 			out = append(out, f)
 		}
 	}
@@ -140,7 +144,9 @@ func Validate(shown []Factoid, cards *card.Set) []error {
 				}
 			}
 		}
-		if len(f.Sources) < 2 {
+		if f.Status == SingleSource && len(f.Sources) < 1 {
+			bad(f, "no source, one is needed")
+		} else if f.Status != SingleSource && len(f.Sources) < 2 {
 			bad(f, "%d sources, two are needed", len(f.Sources))
 		}
 		for _, s := range f.Sources {
