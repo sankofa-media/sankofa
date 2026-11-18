@@ -523,7 +523,8 @@ export class GeoMap {
     this.renderOverlay();
   }
 
-  private curve(leg: Leg, progress: number): string {
+  /** A leg's arc on screen: its start, the control point that bows it north, its end. */
+  private arc(leg: Leg): [[number, number], [number, number], [number, number]] {
     const a = this.xy(leg.from[0], leg.from[1]);
     const b = this.xy(leg.to[0], leg.to[1]);
     const dx = b[0] - a[0];
@@ -536,7 +537,11 @@ export class GeoMap {
       ny = -ny;
     }
     const bend = Math.min(0.24 * len, 220);
-    const c: [number, number] = [(a[0] + b[0]) / 2 + nx * bend, (a[1] + b[1]) / 2 + ny * bend];
+    return [a, [(a[0] + b[0]) / 2 + nx * bend, (a[1] + b[1]) / 2 + ny * bend], b];
+  }
+
+  private curve(leg: Leg, progress: number): string {
+    const [a, c, b] = this.arc(leg);
     const t = Math.max(0, Math.min(1, progress));
     // De Casteljau: the part of the quadratic curve from 0 to t.
     const q0: [number, number] = [a[0] + (c[0] - a[0]) * t, a[1] + (c[1] - a[1]) * t];
@@ -545,22 +550,11 @@ export class GeoMap {
     return `M${a[0].toFixed(1)},${a[1].toFixed(1)}Q${q0[0].toFixed(1)},${q0[1].toFixed(1)} ${end[0].toFixed(1)},${end[1].toFixed(1)}`;
   }
 
-  /** The screen midpoint of a leg's arc, and the arc's chord length. */
-  private curveMid(leg: Leg): [number, number, number] {
-    const a = this.xy(leg.from[0], leg.from[1]);
-    const b = this.xy(leg.to[0], leg.to[1]);
-    const dx = b[0] - a[0];
-    const dy = b[1] - a[1];
-    const len = Math.hypot(dx, dy);
-    let nx = -dy / (len || 1);
-    let ny = dx / (len || 1);
-    if (ny > 0) {
-      nx = -nx;
-      ny = -ny;
-    }
-    const bend = Math.min(0.24 * len, 220);
-    const c = [(a[0] + b[0]) / 2 + nx * bend, (a[1] + b[1]) / 2 + ny * bend];
-    return [0.25 * a[0] + 0.5 * c[0] + 0.25 * b[0], 0.25 * a[1] + 0.5 * c[1] + 0.25 * b[1], len];
+  /** A point on a leg's arc, t from 0 (its start) to 1 (its end). */
+  private legPoint(leg: Leg, t: number): [number, number] {
+    const [a, c, b] = this.arc(leg);
+    const u = 1 - t;
+    return [u * u * a[0] + 2 * u * t * c[0] + t * t * b[0], u * u * a[1] + 2 * u * t * c[1] + t * t * b[1]];
   }
 
   private renderRoutes(): void {
@@ -598,15 +592,35 @@ export class GeoMap {
     lab.select('tspan.main').attr('x', 0).text((d) => d.label!.text);
     lab.select('tspan.sub').attr('x', 0).text((d) => d.label!.sub ?? '');
     lab.style('opacity', (d) => Math.min(1, ((d.progress ?? 1) - 0.4) * 2));
-    // Each title sits at the middle of its own route: just above the arc's
-    // midpoint, else below it or beside it, on whichever leg has room. A title
-    // that finds no room keeps its first place rather than drifting away.
+    // Each title sits along its own route, on whichever spot crosses the
+    // fewest arcs and dots: the busy Atlantic is full of both, and a title
+    // laid over them is hard to read. Titles never overlap one another, never
+    // leave the frame and never go under the text column; a title that finds
+    // no room at all steps back, and is named again when the map moves.
     const placed: [number, number, number, number][] = [];
     const avoid = this.opts.avoid?.() ?? [];
+    const hit = (r: [number, number, number, number], p: [number, number, number, number]) => r[0] < p[2] && r[2] > p[0] && r[1] < p[3] && r[3] > p[1];
     const free = (r: [number, number, number, number]) =>
       r[0] >= 4 && r[2] <= this.w - 4 && r[1] >= 4 && r[3] <= this.h - 4 &&
-      !placed.some((p) => r[0] < p[2] && r[2] > p[0] && r[1] < p[3] + 4 && r[3] > p[1] - 4) &&
-      !avoid.some((p) => r[0] < p[2] && r[2] > p[0] && r[1] < p[3] && r[3] > p[1]);
+      !placed.some((p) => hit(r, [p[0], p[1] - 4, p[2], p[3] + 4])) &&
+      !avoid.some((p) => hit(r, p));
+    const arcs: [number, number][] = [];
+    for (const r of this.routes) for (const l of r.legs) for (let k = 0; k <= 24; k++) arcs.push(this.legPoint(l, k / 24));
+    const dots: [number, number][] = this.points.filter((p) => !p.out).map((p) => this.xy(p.lon, p.lat));
+    // The places that will be named keep room for their names around them,
+    // and no title sits right by such a dot, where it would read as its name.
+    const named: { dot: [number, number]; ring: [number, number, number, number] }[] = this.points
+      .filter((p) => !p.out && !p.minor && p.label)
+      .map((p) => {
+        const [x, y] = this.xy(p.lon, p.lat);
+        const w = Math.min(p.label.length * 8.5 + 16, 150);
+        return { dot: [x, y], ring: [x - w / 2, y - 26, x + w, y + 26] };
+      });
+    const byDot = (r: [number, number, number, number]) =>
+      named.reduce((n, { dot: [x, y], ring }) => n + (hit(r, [x - 24, y - 24, x + 24, y + 24]) ? 3 : hit(r, ring) ? 1 : 0), 0);
+    const inside = (r: [number, number, number, number], pts: [number, number][]) => pts.reduce((n, [x, y]) => n + (x > r[0] && x < r[2] && y > r[1] && y < r[3] ? 1 : 0), 0);
+    type Spot = { r: [number, number, number, number]; x: number; y: number; cost: number };
+    const titles: { el: SVGTextElement; spots: Spot[] }[] = [];
     lab.each((d, i, n) => {
       const el = n[i] as SVGTextElement;
       // Measure the title as drawn: an estimate lets two titles overlap.
@@ -619,26 +633,31 @@ export class GeoMap {
       if (bb && bb.width) this.labelWidths.set(d.id, bb.width);
       const w = this.labelWidths.get(d.id) ?? Math.max(d.label!.text.length * 8, (d.label!.sub ?? '').length * 6.4);
       const box = (x: number, y: number): [number, number, number, number] => [x, y - 15, x + w, y + (d.label!.sub ? 22 : 6)];
-      const mids = [...d.legs].map((l) => ({ l, m: this.curveMid(l) })).sort((p, q) => q.m[2] - p.m[2]);
-      let best: [number, number] | undefined;
-      for (const { m } of mids) {
-        const [mx, my] = m;
-        for (const [x, y] of [[mx - w / 2, my - 22], [mx - w / 2, my + 20], [mx + 10, my + 4], [mx - w - 10, my + 4], [mx - w / 2, my - 46], [mx - w / 2, my + 44]] as [number, number][]) {
-          const cx = Math.max(4, Math.min(this.w - w - 4, x));
-          if (free(box(cx, y))) {
-            best = [cx, y];
-            break;
+      const spots: Spot[] = [];
+      for (const l of d.legs) {
+        for (const t of [0.5, 0.4, 0.6, 0.3, 0.7]) {
+          const [mx, my] = this.legPoint(l, t);
+          for (const [dx, dy, far] of [[-w / 2, -22, 0], [-w / 2, 20, 0], [10, 4, 1], [-w - 10, 4, 1], [-w / 2, -46, 2], [-w / 2, 44, 2], [-w / 2, -70, 4], [-w / 2, 68, 4]]) {
+            const x = Math.max(4, Math.min(this.w - w - 4, mx + dx));
+            const r = box(x, my + dy);
+            if (!free(r)) continue;
+            spots.push({ r, x, y: my + dy, cost: inside(r, arcs) + 4 * inside(r, dots) + 40 * byDot(r) + far * 6 + Math.abs(t - 0.5) * 30 });
           }
         }
-        if (best) break;
       }
-      // A title with no free room steps back rather than sit on another one;
-      // its route is still drawn, and named again when the map moves.
-      el.classList.toggle('crowded', !best);
-      if (!best) return;
-      placed.push(box(best[0], best[1]));
-      el.setAttribute('transform', `translate(${best[0].toFixed(1)},${best[1].toFixed(1)})`);
+      titles.push({ el, spots: spots.sort((p, q) => p.cost - q.cost) });
     });
+    // The title with the fewest good spots chooses first, so a roomy one
+    // does not take the only place a cramped one had.
+    const good = (t: (typeof titles)[number]) => t.spots.filter((s) => s.cost < t.spots[0].cost + 20).length;
+    titles.sort((p, q) => (p.spots.length ? good(p) : Infinity) - (q.spots.length ? good(q) : Infinity));
+    for (const { el, spots } of titles) {
+      const best = spots.find((s) => free(s.r));
+      el.classList.toggle('crowded', !best);
+      if (!best) continue;
+      placed.push(best.r);
+      el.setAttribute('transform', `translate(${best.x.toFixed(1)},${best.y.toFixed(1)})`);
+    }
   }
 
   private renderOverlay(): void {
