@@ -40,6 +40,9 @@
 .an .ft-block {
   box-shadow: 0 0 0 1px rgba(200, 200, 200, 0.08);
 }
+.an .ft-block.ft-controls {
+  box-shadow: none;
+}
 .an .ft-title {
   letter-spacing: -0.01em;
 }
