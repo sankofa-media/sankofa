@@ -103,6 +103,10 @@ spec:
                 - myth
                 - comparison
                 type: string
+              label:
+                description: The name on the atlas map, when the title cut short
+                  would mislead.
+                type: string
               media:
                 items:
                   description: Media is a public-domain or openly licensed image or
@@ -209,6 +213,8 @@ spec:
                         type: string
                       type: array
                     inline:
+                      type: string
+                    label:
                       type: string
                     licenses:
                       items:

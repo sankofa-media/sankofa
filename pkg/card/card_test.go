@@ -152,6 +152,17 @@ func TestLocalizedMedia(t *testing.T) {
 	}
 }
 
+func TestLocalizedLabel(t *testing.T) {
+	c := &Card{Title: "Slav, slave and the Atlantic", Label: "Slav → slave", Translations: map[string]*Translation{"ru": {Title: "Славянин, slave и Атлантика", Label: "Славянин → раб"}}}
+	if got := c.Localized("ru").Label; got != "Славянин → раб" {
+		t.Fatal(got)
+	}
+	c.Translations["ru"].Label = ""
+	if got := c.Localized("ru").Label; got != "Slav → slave" {
+		t.Fatal(got)
+	}
+}
+
 func TestInlineNames(t *testing.T) {
 	a := mk(t, "a", "", "", "Spirituals fed the [[b]]. [[b]] grew.")
 	b := mk(t, "b", "", "", "x")

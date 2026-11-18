@@ -143,6 +143,7 @@ type Card struct {
 	Kind    string   `json:"kind"`
 	Title   string   `json:"title"`
 	Inline  string   `json:"inline,omitempty"` // the name inside a sentence: "the blues"
+	Label   string   `json:"label,omitempty"`  // the name on the atlas map, when the title cut short would mislead
 	Wow     string   `json:"wow"`              // one-line hook shown in crumbs
 	Years   []int    `json:"years"`            // [from] or [from, to]
 	Places  []Place  `json:"places"`           // first is the main point
@@ -173,6 +174,7 @@ type Card struct {
 type Translation struct {
 	Title    string   `json:"title"`
 	Inline   string   `json:"inline,omitempty"`
+	Label    string   `json:"label,omitempty"`
 	Wow      string   `json:"wow"`
 	Places   []string `json:"places,omitempty"`  // translated place names, same order
 	Further  []string `json:"further,omitempty"` // translated "further" items, same order
@@ -195,6 +197,9 @@ func (c *Card) Localized(lang string) *Card {
 	}
 	out := *c
 	out.Title, out.Wow, out.Body = t.Title, t.Wow, t.Body
+	if t.Label != "" {
+		out.Label = t.Label
+	}
 	if t.Dispute != "" {
 		out.Dispute = t.Dispute
 	}

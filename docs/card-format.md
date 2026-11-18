@@ -9,6 +9,7 @@ Cards live in `content/cards/<id>.md` (English, primary). Translations sit next 
 id: bridgetower
 kind: person            # person genre place object language script instrument event media work myth comparison
 title: George Bridgetower
+# label: "Slav → slave"  # optional: the name on the atlas map, when the title cut at its first comma or colon would mislead
 wow: Beethoven's most famous violin sonata was written for him, not for Kreutzer.
 years: [1778, 1860]     # [from] or [from, to]
 places:                 # first place is the main atlas point
@@ -81,6 +82,7 @@ Media files for cards and chapters live in `content/media/`.
 ```markdown
 ---
 title: Джордж Бриджтауэр
+# label: "Славянин → раб"           # only when the card has a label
 wow: Самую знаменитую скрипичную сонату Бетховена написали для него, а не для Крейцера.
 places: ["Вена", "Лондон"]          # same order as the card's places
 further: ["Бетховен, Соната для скрипки № 9 ля мажор, соч. 47"]   # same order

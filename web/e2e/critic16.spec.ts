@@ -128,3 +128,11 @@ test('on a phone the music map keeps every name it shows inside the screen', asy
     expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(await page.evaluate(() => window.innerWidth));
   }
 });
+
+test('the atlas names the Slav card “Slav → slave”, not a bare “Slav”', async ({ page }) => {
+  for (const [lang, name] of [['en', 'Slav → slave'], ['ru', 'Славянин → раб']]) {
+    await page.goto('about:blank');
+    await page.goto(`/#focus=slave-word-and-systems&lang=${lang}&zoom=1`);
+    await expect(page.locator('.atlas.open g.pt.focus text.lbl')).toHaveText(name, { timeout: 15_000 });
+  }
+});
