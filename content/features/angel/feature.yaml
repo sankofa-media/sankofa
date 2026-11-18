@@ -147,6 +147,7 @@ ui:
   invite-here: { en: "Feel it", ru: "Почувствовать" }
   pulse-touch: { en: "Put your finger or your palm on the screen if things are hard right now.", ru: "Приложи палец или ладонь, если тебе сейчас тяжело." }
   pulse-others: { en: "{n} more here now", ru: "Сейчас здесь ещё {n}" }
+  pulse-further: { en: "Further", ru: "Дальше" }
   pulse-vibration-off:
     en: "This phone cannot vibrate from a web page; the pulse is in the light."
     ru: "Этот телефон не умеет вибрировать со страницы: пульс — в свете."
@@ -155,6 +156,7 @@ ui:
     ru: "Скажи то, что так и не было сказано. Голосом или текстом. Без имени: твои слова останутся здесь, среди слов других людей."
   words-placeholder: { en: "Your words", ru: "Твои слова" }
   words-voice: { en: "Say it aloud", ru: "Сказать голосом" }
+  words-voice-stop: { en: "Stop", ru: "Стоп" }
   words-keep-voice: { en: "Let my voice stay in the chorus, unrecognisable", ru: "Пусть мой голос останется в хоре, неузнаваемым" }
   words-release: { en: "Let go", ru: "Отпустить" }
   words-keep: { en: "Keep to myself", ru: "Оставить себе" }
@@ -172,6 +174,7 @@ ui:
   own-pulse-how:
     en: "Cover the back camera with your fingertip and hold still for half a minute."
     ru: "Закрой подушечкой пальца заднюю камеру и не двигайся полминуты."
+  own-pulse-start: { en: "Begin", ru: "Начать" }
   own-pulse-light:
     en: "This browser cannot turn on the flash. Hold your finger over the camera with a bright lamp or a window behind it."
     ru: "Этот браузер не умеет включать вспышку. Закрой пальцем камеру, а за пальцем пусть будет яркая лампа или окно."
@@ -186,6 +189,7 @@ ui:
     en: "The pulse would not come through on this phone. Try with more light, or press a little more gently."
     ru: "На этом телефоне пульс не поймался. Попробуй при более ярком свете или прижми палец чуть мягче."
   own-pulse-sent: { en: "Your pulse is here.", ru: "Твой пульс здесь." }
+  own-pulse-delete: { en: "To remove it later, keep this code: {code}", ru: "Чтобы потом его убрать, сохрани этот код: {code}" }
   last: { en: "You are not alone.", ru: "Ты не один." }
 
 scenes:
