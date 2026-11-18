@@ -77,6 +77,23 @@ test('the list names Angel after Forever Changes, and it opens', async ({ page }
   expect(page.url()).toContain('item=angel');
 });
 
+test('the language switches inside the feature and the reader stays in the scene', async ({ page }) => {
+  await mockApi(page, { first: false });
+  await open(page, '#view=feature&item=angel&scene=bristol');
+  await expect(scene(page, 'bristol')).toContainText(LINES.bristol[0]);
+  const btn = sheet(page).locator('.ft-lang');
+  await expect(btn).toHaveText('RU');
+  await btn.click();
+  await expect.poll(() => page.url()).toContain('lang=ru');
+  await expect(feature(page)).toBeVisible();
+  expect(page.url()).toContain('scene=bristol');
+  await expect(scene(page, 'bristol')).toContainText(LINES.bristol[1]);
+  await expect(sheet(page).locator('.ft-lang')).toHaveText('EN');
+  await sheet(page).locator('.ft-lang').click();
+  await expect.poll(() => page.url()).not.toContain('lang=ru');
+  await expect(scene(page, 'bristol')).toContainText(LINES.bristol[0]);
+});
+
 for (const [lang, k] of [['en', 0], ['ru', 1]] as const) {
   test(`every scene is built with its picture and its text (${lang})`, async ({ page }) => {
     test.setTimeout(120_000);
@@ -89,8 +106,8 @@ for (const [lang, k] of [['en', 0], ['ru', 1]] as const) {
       // A picture in every scene, loaded as its scene comes near.
       const imgs = scene(page, id).locator('.ft-stage img');
       expect(await imgs.count(), id).toBeGreaterThan(0);
-      // The video's cover comes from YouTube, which these tests keep offline.
-      if (id !== 'crowd') await expect.poll(() => imgs.first().evaluate((i) => (i as HTMLImageElement).complete && (i as HTMLImageElement).naturalWidth > 0), { message: id }).toBe(true);
+      // The videos' covers come from YouTube, which these tests keep offline.
+      if (id !== 'crowd' && id !== 'screens') await expect.poll(() => imgs.first().evaluate((i) => (i as HTMLImageElement).complete && (i as HTMLImageElement).naturalWidth > 0), { message: id }).toBe(true);
       if (LINES[id]) await expect(scene(page, id).locator('.ft-flow'), id).toContainText(LINES[id][k]);
     }
     // The real photographs carry their credit and a link to their source.
@@ -98,6 +115,22 @@ for (const [lang, k] of [['en', 0], ['ru', 1]] as const) {
     await expect(scene(page, 'voice').locator('.an-photo a[href*="commons.wikimedia.org"]')).toHaveCount(1);
   });
 }
+
+test('the other versions turn one at a time with the arrows', async ({ page }) => {
+  await mockApi(page, { first: false });
+  await open(page);
+  await goToScene(page, 'afterlife', 0.6);
+  const shelf = scene(page, 'afterlife').locator('.an-versions');
+  await expect(shelf.locator('.an-video-cover')).toHaveCount(1);
+  await expect(shelf.locator('.an-version-title')).toContainText('Horace Andy');
+  await expect(shelf.locator('.an-version-count')).toHaveText('1 / 5');
+  await shelf.locator('.an-version-turn').nth(1).click();
+  await expect(shelf.locator('.an-version-title')).toContainText('Angel Dust');
+  await expect(shelf.locator('.an-version-count')).toHaveText('2 / 5');
+  await shelf.locator('.an-version-turn').nth(0).click();
+  await shelf.locator('.an-version-turn').nth(0).click();
+  await expect(shelf.locator('.an-version-title')).toContainText('Grian Chatten');
+});
 
 test('the progress bar never shows the end, and the page simply ends after the warm screen', async ({ page }) => {
   await mockApi(page, { first: false });

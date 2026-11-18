@@ -1116,21 +1116,23 @@ body.an-pulse-on {
 
 /* The other versions: a row of official players to swipe through. */
 .an .an-versions {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 4px 2px 12px;
-  max-width: min(100%, 40rem);
-}
-.an .an-version {
-  flex: 0 0 min(82%, 26rem);
   margin: 0;
-  scroll-snap-align: start;
   display: grid;
-  gap: 8px;
+  gap: 10px;
+  max-width: min(100%, 34rem);
 }
-.an .an-version figcaption {
+.an .an-version-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.an .an-version-count {
+  font: 14px/1 var(--font-sans);
+  color: var(--ft-ink-2);
+  min-width: 3.5em;
+  text-align: center;
+}
+.an .an-version-title {
   font: 14px/1.4 var(--font-sans);
   color: var(--ft-ink-2);
 }

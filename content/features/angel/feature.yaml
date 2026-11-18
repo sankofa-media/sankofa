@@ -594,19 +594,6 @@ scenes:
   - id: screens
     kind: screens
     act: 4
-    art:
-      generated: true
-      aspect: "3 / 2"
-      layers:
-        - file: screens-cinema-v1-full.webp
-          fit: { x: -25, y: -25, scale: 0.47 }
-          alt: { en: "An empty cinema with its screen lit", ru: "Пустой кинозал, светится экран" }
-        - file: screens-tv-v1-full.webp
-          fit: { x: 25, y: 0, scale: 0.47 }
-          alt: { en: "Two people watching television in a dark room", ru: "Двое смотрят телевизор в тёмной комнате" }
-        - file: screens-game-v1-full.webp
-          fit: { x: -25, y: 25, scale: 0.47 }
-          alt: { en: "A computer screen glowing in a dark bedroom", ru: "Экран компьютера светится в тёмной спальне" }
     blocks:
       - id: kicker
         role: kicker

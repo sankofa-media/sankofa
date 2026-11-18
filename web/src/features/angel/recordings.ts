@@ -35,6 +35,18 @@ export const VIDEO: Official = {
 };
 
 /**
+ * The scene from Guy Ritchie's "Snatch" (2000) with the song, as the owner
+ * chose it. Not an official channel: an Irish fan channel of the band.
+ */
+export const SNATCH: Official = {
+  youtube: 'MZj8HZ8XXkg',
+  title: 'Massive Attack - Angel (Snatch)',
+  artist: 'Massive Attack',
+  channel: 'MASSIVEATTACK.IE',
+  verified: 'oEmbed author_name "MASSIVEATTACK.IE", checked 2026-11-18',
+};
+
+/**
  * Horace Andy's song, from the compilation "Jah Is the One" (Bunny Lee
  * producing). It is not proven to be the 1973 master, so it is never
  * labelled as the 1973 record.

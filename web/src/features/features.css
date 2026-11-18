@@ -53,6 +53,9 @@
   gap: 6px;
   margin-left: auto;
 }
+.ft-lang {
+  flex: none;
+}
 .ft-close {
   border-color: var(--line-2);
   flex: none;
