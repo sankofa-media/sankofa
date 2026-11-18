@@ -92,8 +92,18 @@ function height(file: string): number | undefined {
 }
 
 function resize(src: string, dst: string, w: number): void {
-  if (tool === 'sips') execFileSync('sips', ['-Z', String(w), '-s', 'formatOptions', '72', src, '--out', dst], { stdio: 'ignore' });
-  else execFileSync('vipsthumbnail', [src, '--size', `${w}x`, '-o', `${dst}[Q=72,strip]`], { stdio: 'ignore' });
+  // sips now and then fails a file it handles fine a moment later (exit 13
+  // somewhere in a long run of a thousand pictures): try it again before giving up.
+  for (let attempt = 1; ; attempt++) {
+    try {
+      if (tool === 'sips') execFileSync('sips', ['-Z', String(w), '-s', 'formatOptions', '72', src, '--out', dst], { stdio: 'ignore' });
+      else execFileSync('vipsthumbnail', [src, '--size', `${w}x`, '-o', `${dst}[Q=72,strip]`], { stdio: 'ignore' });
+      return;
+    } catch (err) {
+      if (attempt >= 3) throw err;
+      execFileSync('sleep', ['1']);
+    }
+  }
 }
 
 /**
