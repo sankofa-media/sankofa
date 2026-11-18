@@ -136,3 +136,13 @@ test('the atlas names the Slav card “Slav → slave”, not a bare “Slav”'
     await expect(page.locator('.atlas.open g.pt.focus text.lbl')).toHaveText(name, { timeout: 15_000 });
   }
 });
+
+test('every special project says how long it takes, Angel included', async ({ page }) => {
+  for (const [lang, re] of [['en', /^\d+\P{L}+\d+\P{L}+minutes/u], ['ru', /^\d+\P{L}+\d+\P{L}+минут/u]] as const) {
+    await page.goto('about:blank');
+    await page.goto(`/#view=features&lang=${lang}`);
+    await expect(page.locator('.ft-item-link[data-feature="angel"] .ft-item-tx small')).toHaveText(re);
+    const items = page.locator('.ft-item-link');
+    await expect(items).toHaveCount(await page.locator('.ft-item-link .ft-item-tx small').count());
+  }
+});
