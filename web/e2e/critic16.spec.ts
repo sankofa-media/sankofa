@@ -26,3 +26,27 @@ test('a glint on the atlas map is faintly visible on a touch screen, as the Cabi
   await expect(glint).toBeAttached({ timeout: 15_000 });
   await expect(glint).toHaveCSS('opacity', '0.35');
 });
+
+test('the top bar never runs off a laptop screen: it draws closer, then folds into the Menu', async ({ page, isMobile }) => {
+  test.skip(isMobile, 'a phone always has the Menu');
+  const lastRight = () => page.evaluate(() => {
+    const vis = [...document.querySelectorAll<HTMLElement>('.nav-actions > *')].filter((e) => e.offsetWidth > 0);
+    return vis[vis.length - 1].getBoundingClientRect().right;
+  });
+  // Russian labels are the longest: at 1440 the whole bar is there, theme switch included.
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.goto('/#ch=v5&lang=ru');
+  await expect(page.locator('.nav [data-theme-toggle]')).toBeVisible();
+  expect(await lastRight()).toBeLessThanOrEqual(1440);
+  // A narrower window folds the bar into the Menu, which names every way in.
+  await page.setViewportSize({ width: 1024, height: 768 });
+  const menu = page.locator('.nav-menu-btn');
+  await expect(menu).toBeVisible();
+  expect(await lastRight()).toBeLessThanOrEqual(1024);
+  await menu.click();
+  await expect(page.locator('#nav-sheet [data-entry="dedication"]')).toBeVisible();
+  // Wide again: the bar comes back and the sheet closes.
+  await page.setViewportSize({ width: 1600, height: 900 });
+  await expect(menu).toBeHidden();
+  await expect(page.locator('#nav-sheet')).toBeHidden();
+});

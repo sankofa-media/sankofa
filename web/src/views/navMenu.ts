@@ -49,6 +49,8 @@ export function bookCount(n: number, l = lang()): string {
 // and carried out once the museum is ready, instead of being lost.
 let ready = false;
 let pending: HTMLElement | undefined;
+// Measures the bar again once its entries change width (the book's count).
+let refit = () => {};
 export function navReady(): void {
   ready = true;
   const b = pending;
@@ -132,10 +134,33 @@ export function installNavMenu(nav: HTMLElement): void {
     const t = e.target as Node;
     if (!sheet.contains(t) && !btn.contains(t)) close();
   });
-  window.addEventListener('resize', () => window.innerWidth > 720 && close());
+  // On a phone, or wherever the entries do not fit one line (a laptop in
+  // Russian, a narrow window), the bar folds into the Menu: first it draws
+  // the entries closer, and only if that is not enough does it fold.
+  const root = document.documentElement;
+  const fits = () => {
+    const last = [...actions.children].reverse().find((c) => (c as HTMLElement).offsetWidth > 0);
+    const edge = nav.getBoundingClientRect().right - parseFloat(getComputedStyle(nav).paddingRight || '0');
+    return !last || last.getBoundingClientRect().right <= edge + 0.5;
+  };
+  const fit = () => {
+    root.classList.remove('nav-tight', 'nav-compact');
+    if (window.innerWidth <= 720) return root.classList.add('nav-compact');
+    if (fits()) return;
+    root.classList.add('nav-tight');
+    if (!fits()) root.classList.add('nav-compact');
+  };
+  refit = () => {
+    fit();
+    if (!root.classList.contains('nav-compact')) close();
+  };
+  let raf = 0;
+  window.addEventListener('resize', () => (raf ||= requestAnimationFrame(() => ((raf = 0), refit()))));
+  void document.fonts?.ready.then(refit);
   // The language switch stays in the bar; the menu goes just before it.
   actions.insertBefore(btn, actions.querySelector('.lang-switch'));
   nav.after(sheet);
+  fit();
 }
 
 /** Show how many cards are in the reader's book, or nothing while it is empty. */
@@ -152,4 +177,5 @@ export function setBookCount(n: number): void {
     book.title = `${name}: ${what}`;
     book.setAttribute('aria-label', `${name}, ${what}`);
   }
+  refit();
 }
