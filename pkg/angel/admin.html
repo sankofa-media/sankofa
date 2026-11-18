@@ -24,7 +24,7 @@
 </head>
 <body>
 <main>
-  <h1>Angel: words waiting for the owner</h1>
+  <h1>Angel: words and pulses for the owner</h1>
   <form id="auth">
     <input id="token" type="password" placeholder="ANGEL_ADMIN_TOKEN" autocomplete="off">
     <select id="status">
@@ -34,6 +34,7 @@
       <option value="hidden">hidden</option>
       <option value="crisis">crisis</option>
       <option value="queued">queued</option>
+      <option value="pulses">readers' pulses</option>
     </select>
     <button>Load</button>
   </form>
@@ -46,8 +47,33 @@
   const api = location.pathname.replace(/admin\/?$/, "");
   const auth = () => ({ Authorization: "Bearer " + $("token").value });
   function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text) e.textContent = text; return e; }
+  async function loadPulses() {
+    const r = await fetch(api + "admin/pulses", { headers: auth() });
+    const list = $("list");
+    list.replaceChildren();
+    if (!r.ok) { $("msg").textContent = "Error " + r.status + ": " + ((await r.json().catch(() => ({}))).error || ""); return; }
+    const { pulses } = await r.json();
+    $("msg").textContent = pulses.length ? pulses.length + " pulse(s), newest first" : "No pulses yet.";
+    for (const p of pulses) {
+      const a = el("article");
+      const bpm = Math.round(60000 * p.rr.length / p.rr.reduce((x, y) => x + y, 0));
+      a.append(el("div", "text", bpm + " bpm · " + p.rr.length + " beats"));
+      a.append(el("div", "meta", ["#" + p.id, p.source, p.day, p.hidden ? "hidden" : "shown"].join(" · ")));
+      const action = p.hidden ? "publish" : "hide";
+      const b = el("button", action === "publish" ? "pub" : "", action);
+      b.onclick = async () => {
+        const r = await fetch(api + "admin/pulses/" + p.id, { method: "POST", headers: { ...auth(), "Content-Type": "application/json" }, body: JSON.stringify({ action }) });
+        if (r.ok) loadPulses(); else $("msg").textContent = "Error " + r.status;
+      };
+      const bar = el("div", "bar");
+      bar.append(b);
+      a.append(bar);
+      list.append(a);
+    }
+  }
   async function load() {
     const st = $("status").value;
+    if (st === "pulses") return loadPulses();
     const r = await fetch(api + "admin/queue" + (st ? "?status=" + encodeURIComponent(st) : ""), { headers: auth() });
     const list = $("list");
     list.replaceChildren();

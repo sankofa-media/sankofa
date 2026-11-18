@@ -1,6 +1,16 @@
 // Package angel is the server side of the special project "Angel": the
-// presence of readers touching the screen at the same moment, and the chorus
-// of words they never said.
+// presence of readers touching the screen at the same moment, the chorus of
+// words they never said, and the chorus of readers' own pulses.
+//
+// Privacy. No cookies, no accounts, no IP addresses stored: clients are told
+// apart by an HMAC of the IP under a daily salt kept only in memory. Words
+// keep the day they were left, not the time; delete codes are kept as
+// SHA-256 hashes; original voice recordings are deleted right after
+// transcription (a whisper that cannot be recognised is kept only when the
+// reader asks); words with signs of crisis are not kept. Pulses are health
+// data (GDPR art. 9): only their anonymous form is accepted and stored, RR
+// intervals rounded to 5 ms with the kind of source and the day, never ECG,
+// device information, names or dates of birth.
 package angel
 
 import (
@@ -105,7 +115,7 @@ func OpenStore(path string) (*Store, error) {
 		return nil, err
 	}
 	db.SetMaxOpenConns(1) // one writer; also keeps ":memory:" a single database
-	if _, err := db.Exec(schema); err != nil {
+	if _, err := db.Exec(schema + pulseSchema); err != nil {
 		db.Close()
 		return nil, fmt.Errorf("schema: %w", err)
 	}
