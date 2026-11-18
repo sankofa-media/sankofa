@@ -52,6 +52,15 @@ export interface MapFact {
   on?: boolean;
 }
 
+/** A cache of the Cabinet of Curiosities: a glint seen only on hover or focus. */
+export interface MapGlint {
+  id: string;
+  lon: number;
+  lat: number;
+  aria: string;
+  opened?: boolean;
+}
+
 export interface MapRoute {
   id: string;
   legs: Leg[];
@@ -92,6 +101,8 @@ interface Options {
   onPoint?: (id: string) => void;
   /** A click (or Enter) on a factoid's dot. */
   onFact?: (id: string, el: Element) => void;
+  /** A click (or Enter) on a cabinet glint. */
+  onGlint?: (id: string) => void;
   onRegion?: (r: MapRegion) => void;
   onHover?: (id: string | null, ev?: MouseEvent) => void;
   onLevel?: (level: number) => void;
@@ -126,6 +137,7 @@ export class GeoMap {
   private gRegions: Selection<SVGGElement, unknown, null, undefined>;
   private gPoints: Selection<SVGGElement, unknown, null, undefined>;
   private gFacts: Selection<SVGGElement, unknown, null, undefined>;
+  private gGlints: Selection<SVGGElement, unknown, null, undefined>;
   private gNums: Selection<SVGGElement, unknown, null, undefined>;
   private points: MapPoint[] = [];
   private routes: MapRoute[] = [];
@@ -165,6 +177,7 @@ export class GeoMap {
     this.gRegions = this.svg.append('g').attr('class', 'regions');
     // Factoid dots lie under the cards' markers, never over them.
     this.gFacts = this.svg.append('g').attr('class', 'facts');
+    this.gGlints = this.svg.append('g').attr('class', 'cb-aglints');
     this.gPoints = this.svg.append('g').attr('class', 'points');
     this.gNums = this.svg.append('g').attr('class', 'nums');
 
@@ -425,6 +438,32 @@ export class GeoMap {
     this.renderOverlay();
   }
 
+  setGlints(glints: MapGlint[]): void {
+    this.gGlints
+      .selectAll<SVGGElement, MapGlint>('g.cb-aglint')
+      .data(glints, (d) => d.id)
+      .join((enter) => {
+        const g = enter.append('g').attr('class', 'cb-aglint').attr('tabindex', 0).attr('role', 'button');
+        g.append('circle').attr('class', 'hit').attr('r', 12);
+        g.append('circle').attr('class', 'spark').attr('r', 3.2);
+        g.on('click', (ev: MouseEvent, d) => {
+          ev.stopPropagation();
+          this.opts.onGlint?.(d.id);
+        });
+        g.on('keydown', (ev: KeyboardEvent, d) => {
+          if (ev.key === 'Enter' || ev.key === ' ') {
+            ev.preventDefault();
+            this.opts.onGlint?.(d.id);
+          }
+        });
+        return g;
+      })
+      .attr('data-cache', (d) => d.id)
+      .classed('opened', (d) => !!d.opened)
+      .attr('aria-label', (d) => d.aria);
+    this.renderOverlay();
+  }
+
   setRoutes(routes: MapRoute[], animate = true): void {
     const prev = new Map(this.routes.map((r) => [r.id, r.progress ?? 1]));
     this.routes = routes.map((r) => ({ ...r, progress: animate && !reducedMotion() ? (prev.get(r.id) ?? 0) : 1 }));
@@ -603,6 +642,10 @@ export class GeoMap {
   }
 
   private renderOverlay(): void {
+    this.gGlints.selectAll<SVGGElement, MapGlint>('g.cb-aglint').attr('transform', (d) => {
+      const [x, y] = this.xy(d.lon, d.lat);
+      return `translate(${x.toFixed(1)},${y.toFixed(1)})`;
+    });
     this.gFacts.selectAll<SVGGElement, MapFact>('g.fact').attr('transform', (d) => {
       const [x, y] = this.xy(d.lon, d.lat);
       return `translate(${x.toFixed(1)},${y.toFixed(1)})`;

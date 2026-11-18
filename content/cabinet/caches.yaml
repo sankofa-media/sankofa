@@ -280,11 +280,13 @@ caches:
         общин и просил назвать имена. В 1913 году он сообщил примерно о 800 проверенных патентах
         чернокожих изобретателей. В этом ящике хранятся три таких патента — от электрической лампы
         до входной двери."
+    # On a card of both copies: Lewis Latimer's card is in the male copy only.
     hidden:
-      at: card-image
-      card: lewis-latimer
-      x: 73
-      y: 29
+      at: card-text
+      card: garrett-morgan
+      anchor:
+        en: patented it in 1914
+        ru: в 1914 году запатентовал его
     lock: iron-key
     contents:
       both:

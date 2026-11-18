@@ -131,5 +131,70 @@ export function workshopDrawer(app: App, f: CabinetFile | null, key: string): HT
   return h('div.cb-wdrawer', {}, btn, inner);
 }
 
+/** Where a cache's words show on the page, as a selector, for the places rendered by the museum's views. */
+function scopeOf(hd: Cache['hidden']): string | null {
+  switch (hd.at) {
+    case 'factoid':
+      return `.fx[data-fact="${CSS.escape(hd.fact)}"] .fx-text`;
+    case 'country':
+      return `.cn-head[data-country="${CSS.escape(hd.country)}"] .cn-about`;
+    case 'roots':
+      return `.r-tree[data-root="${CSS.escape(hd.artist)}"] .r-story`;
+    case 'feature':
+      return `.ft-sheet [data-scene="${CSS.escape(hd.scene)}"] [data-block="${CSS.escape(hd.block)}"]`;
+    default:
+      return null;
+  }
+}
+
+/** A glint by an entry of the name index, seen only when the entry is hovered or the glint has focus. */
+function indexGlint(app: App, f: CabinetFile, c: Cache): HTMLElement {
+  const b = h('button.cb-glint.cb-ixglint', { type: 'button', 'aria-label': pick({ en: 'Something is hidden by this entry', ru: 'У этой статьи что-то спрятано' }), onclick: () => openCacheDialog(app, f, c.id) }, h('i', { 'aria-hidden': 'true' }));
+  mark(b, c);
+  return b;
+}
+
+/**
+ * The caches in the rooms the museum renders as the reader goes (factoids,
+ * the Countries atlas, Roots, the name index, the longreads): whatever is
+ * drawn is searched on the next frame, the way the dictionary is woven in.
+ */
+export function hideLive(app: App, f: CabinetFile): () => void {
+  const mine = live(app, f).filter((c) => scopeOf(c.hidden) || c.hidden.at === 'index');
+  let raf = 0;
+  const run = () => {
+    raf = 0;
+    for (const c of mine) {
+      const hd = c.hidden;
+      if (hd.at === 'index') {
+        for (const a of document.querySelectorAll<HTMLElement>(`.mx-index a.ix-entry[data-card="${CSS.escape(hd.card)}"]`)) {
+          const li = a.parentElement;
+          if (li && !li.querySelector(`[data-cache="${CSS.escape(c.id)}"]`)) {
+            li.classList.add('cb-ixwrap');
+            li.append(indexGlint(app, f, c));
+          }
+        }
+        continue;
+      }
+      if (!('anchor' in hd)) continue;
+      for (const el of document.querySelectorAll(scopeOf(hd)!)) if (!el.querySelector(`[data-cache="${CSS.escape(c.id)}"]`)) wrapAnchor(el, hd.anchor[lang()], (t) => wordButton(app, f, c, t));
+    }
+  };
+  const obs = new MutationObserver(() => {
+    raf ||= requestAnimationFrame(run);
+  });
+  obs.observe(document.body, { childList: true, subtree: true });
+  raf = requestAnimationFrame(run);
+  return () => {
+    obs.disconnect();
+    if (raf) cancelAnimationFrame(raf);
+  };
+}
+
+/** The glints on the atlas map: where they are, and whether they were opened. */
+export function atlasGlints(app: App, f: CabinetFile): { id: string; lon: number; lat: number; opened: boolean }[] {
+  return live(app, f).flatMap((c) => (c.hidden.at === 'atlas' ? [{ id: c.id, lon: c.hidden.lon, lat: c.hidden.lat, opened: holdings().opened.includes(c.id) }] : []));
+}
+
 // Opened caches look opened everywhere they are hidden.
 onHoldings((hs) => document.querySelectorAll<HTMLElement>('[data-cache]').forEach((b) => b.classList.toggle('opened', hs.opened.includes(b.dataset.cache!))));

@@ -2044,3 +2044,104 @@ html.cb-modal-open body {
   border-radius: 2px;
   filter: saturate(0.9);
 }
+
+/* ---------- phase 2: more places to hide, the letter lock, the inner drawer ---------- */
+.cb-ixwrap {
+  position: relative;
+}
+.cb-ixglint {
+  top: 50%;
+  right: -6px;
+  left: auto;
+  margin: -15px 0 0;
+}
+.cb-ixwrap:hover .cb-ixglint {
+  opacity: 0.35;
+}
+.cb-ixwrap .cb-ixglint:hover,
+.cb-ixwrap .cb-ixglint:focus-visible {
+  opacity: 1;
+}
+.geo .cb-aglint {
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.geo .cb-aglint .hit {
+  fill: transparent;
+}
+.geo .cb-aglint .spark {
+  fill: rgba(255, 244, 214, 0.95);
+  filter: drop-shadow(0 0 4px rgba(255, 236, 180, 0.8));
+}
+.geo .cb-aglint:hover,
+.geo .cb-aglint:focus-visible {
+  opacity: 1;
+  outline: none;
+}
+.geo .cb-aglint:focus-visible .hit {
+  stroke: var(--gold);
+  stroke-width: 1.5;
+}
+.cb-clue {
+  margin: 16px 0 0;
+  padding: 12px 14px;
+  border-left: 2px solid var(--gold);
+  background: var(--bg-2, rgba(255, 255, 255, 0.03));
+  color: var(--ink-2);
+  font-style: italic;
+}
+.cb-clue-tag {
+  font-style: normal;
+  color: var(--ink-3);
+}
+.cb-clue code {
+  font-style: normal;
+}
+.cb-letterlock {
+  max-width: 980px;
+  margin: 28px auto;
+  padding: 18px 20px;
+  border: 1px solid var(--wood-edge, var(--line-2));
+  border-radius: 6px;
+}
+.cb-letterlock h3 {
+  font-weight: 380;
+  font-size: clamp(20px, 2.4vw, 26px);
+  margin: 0 0 8px;
+}
+.cb-letterlock h3 small {
+  color: var(--ink-3);
+  font-size: 0.6em;
+}
+.cb-lock label {
+  display: block;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.cb-lock-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.cb-lock-input {
+  flex: 1 1 12rem;
+  min-width: 0;
+  font: inherit;
+  font-family: var(--font-mono, monospace);
+  letter-spacing: 0.3em;
+  text-transform: lowercase;
+  padding: 8px 12px;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line-2);
+  border-radius: 4px;
+}
+.cb-lock-msg {
+  min-height: 1.4em;
+  margin: 8px 0 0;
+  color: var(--ink-3);
+}
+.cb-drawer.cb-inner {
+  margin-top: 18px;
+}
