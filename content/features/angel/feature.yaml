@@ -137,14 +137,14 @@ ui:
   then: { en: "1973", ru: "1973" }
   now: { en: "1998", ru: "1998" }
   then-now-hint: { en: "Drag between the two years", ru: "Потяните между двумя годами" }
-  strata-hint: { en: "Lay the layers on top of one another", ru: "Наложите слои друг на друга" }
+  strata-hint: { en: "Turn the tracks on one after another and hear the song come together", ru: "Включай дорожки одну за другой и слушай, как собирается песня" }
   strata-bass: { en: "Bass", ru: "Бас" }
   strata-drums: { en: "Drums", ru: "Барабаны" }
   strata-voice: { en: "Voice", ru: "Голос" }
   strata-guitar: { en: "Guitars", ru: "Гитары" }
   strata-sound-note:
-    en: "The sound of these layers is our own sketch, not Massive Attack's recording."
-    ru: "Звук этих слоёв — наш собственный набросок, а не запись Massive Attack."
+    en: "What plays here is the song itself: eight bars from its middle, taken apart into four tracks."
+    ru: "Здесь звучит сама песня: восемь тактов из её середины, разобранные на четыре дорожки."
   progress: { en: "How far you are", ru: "Сколько прочитано" }
   # The warm last screen and the pulse page. The pulse belongs to no one:
   # never say whose it is.

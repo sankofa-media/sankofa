@@ -191,7 +191,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         clean.setAttribute('aria-hidden', 'true');
         const pic = picture(sc, clean);
         const stacked = new Set<string>();
-        strataSound = new StrataSound(BPM_1998);
+        strataSound = new StrataSound();
         const live = h('p.ft-visually-hidden', { 'aria-live': 'polite' });
         const buttons = STRATA.map((k) => {
           const b = h('button.btn.an-stratum', { type: 'button', 'aria-pressed': 'false', 'data-stratum': k }, kit.ui(`strata-${k}`)) as HTMLButtonElement;
