@@ -1955,8 +1955,10 @@ html.cb-modal-open body {
 .ix-letter:hover:not(:disabled) {
   background: var(--gold-soft);
 }
-.ix-letter.ix-gap {
-  margin-left: 18px;
+/* The Latin alphabet starts its own line, a little apart from the Russian one. */
+.ix-break {
+  flex-basis: 100%;
+  height: 6px;
 }
 .ix-letter:disabled {
   color: var(--ink-3);

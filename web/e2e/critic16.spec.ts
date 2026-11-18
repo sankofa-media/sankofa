@@ -88,3 +88,21 @@ test('Escape leaves Roots even though the room opens with the focus in its searc
   await page.keyboard.press('Escape');
   await expect(page.locator('.roots.open')).toHaveCount(0);
 });
+
+test('the name index starts the Latin alphabet on a line of its own, after the Russian one', async ({ page }) => {
+  for (const width of [390, 1440]) {
+    await page.setViewportSize({ width, height: 844 });
+    await page.goto('about:blank');
+    await page.goto('/#view=index&lang=ru');
+    const gap = page.locator('.ix-letters .ix-letter.ix-gap');
+    await expect(gap).toBeVisible();
+    const [last, first, left] = await page.evaluate(() => {
+      const g = document.querySelector<HTMLElement>('.ix-letters .ix-gap')!;
+      const prev = g.previousElementSibling!.previousElementSibling as HTMLElement;
+      return [prev.getBoundingClientRect().bottom, g.getBoundingClientRect().top, g.getBoundingClientRect().left - document.querySelector('.ix-letters')!.getBoundingClientRect().left];
+    });
+    // Below «Я», with room between the two, and at the start of the row.
+    expect(first).toBeGreaterThan(last + 4);
+    expect(left).toBeLessThan(2);
+  }
+});
