@@ -73,7 +73,7 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: 38svh;
+  gap: var(--ft-gap, 38svh);
   padding: 34svh var(--gutter) 40svh;
 }
 .ft-long .ft-controls {
@@ -96,6 +96,13 @@
 .ft-block.on {
   opacity: 1;
   transform: none;
+}
+/* A caption or note completes the block above it: it sits right under it, not a screen away. */
+.ft-flow > .ft-block:not(.ft-b-kicker) + .ft-block:is(.ft-b-caption, .ft-b-note) {
+  margin-top: calc(14px - var(--ft-gap, 38svh));
+}
+.ft-long .ft-flow {
+  --ft-gap: 28px;
 }
 .ft-block p,
 .ft-block h2 {
@@ -596,8 +603,8 @@ body.mp-on .cc[data-place='corner'] {
     width: min(100%, calc(46svh * 1.5));
   }
   .ft-flow {
+    --ft-gap: 30svh;
     padding-top: 52svh;
-    gap: 30svh;
   }
   .ft-block {
     padding: 14px 16px;

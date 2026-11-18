@@ -310,9 +310,12 @@ export function mount(ctx: FeatureContext): FeatureInstance {
   const minuteAt = scenes.findIndex((sc) => sc.kind === 'minute');
   const stageAt = new Set(['minute', 'finale']);
   kit.clapScenes = new Set(scenes.filter((sc) => ['minute', 'classroom', 'finale'].includes(sc.kind)).map((sc) => sc.id));
-  kit.circlePlace = (id, i) => {
-    const kind = scenes.find((sc) => sc.id === id)?.kind ?? '';
-    if (minuteAt < 0 || i < minuteAt) return 'hidden';
+  // By the scene's own place in the story: some scenes render nothing, so the
+  // index of the scene element on the page is not the index in the story.
+  kit.circlePlace = (id) => {
+    const at = scenes.findIndex((sc) => sc.id === id);
+    const kind = scenes[at]?.kind ?? '';
+    if (minuteAt < 0 || at < minuteAt) return 'hidden';
     return stageAt.has(kind) ? 'stage' : 'corner';
   };
   const quiet = new Set(scenes.filter((sc) => sc.kind === 'silence').map((sc) => sc.id));

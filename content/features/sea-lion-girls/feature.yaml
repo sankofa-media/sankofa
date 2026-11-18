@@ -179,8 +179,8 @@ ui:
   hear-clap: { en: "Hear the clap", ru: "Послушать хлопок", draft: true }
   clap-circle: { en: "Clap along", ru: "Хлопать вместе", draft: true }
   clap-hint:
-    en: "Tap the circle or press the space bar in time"
-    ru: "Касайтесь круга или нажимайте пробел в такт"
+    en: "Clap: tap the circle or press the space bar"
+    ru: "Хлопайте: касайтесь круга или жмите пробел"
     draft: true
   clap-count: { en: "Your claps: {n}", ru: "Ваши хлопки: {n}", draft: true }
   play-1939: { en: "Play the 1939 recording", ru: "Включить запись 1939 года", draft: true }
@@ -407,16 +407,16 @@ scenes:
       - id: yours
         role: caption
         draft: false
-        en: "Clap with them: tap the circle or press the space bar in time. Each of your claps stays on the circle as a drop of ink, and the circle will stay with you until the end of the story."
-        ru: "Хлопайте вместе с ними — касайтесь круга или нажимайте пробел в такт. Каждый ваш хлопок останется на круге каплей туши, а сам круг будет с вами до конца истории."
+        en: "Join the circle: clap with the sisters by tapping the circle above the picture, or the space bar, in time. Each clap stays on the circle as a drop of ink, the circle stays with you in the corner, and at the very end of the story you can hear your claps together with the children’s."
+        ru: "Встаньте в круг: хлопайте вместе с сёстрами — касайтесь круга над рисунком или нажимайте пробел в такт. Каждый хлопок останется на круге каплей туши, круг будет с вами в углу экрана, а в самом конце истории вы сможете услышать свои хлопки вместе с детскими."
   - id: words
     kind: text
     blocks:
       - id: kicker
         role: kicker
         draft: false
-        en: The words
-        ru: Слова
+        en: What the name means
+        ru: Что значит название
       - id: heard
         role: text
         draft: false

@@ -43,7 +43,7 @@ export class ClapCircle {
       e.preventDefault();
       this.onClap?.();
     });
-    // The keyboard's Enter and Space arrive as a click with no pointer.
+    // The keyboard's Enter arrives as a click with no pointer (Space is caught earlier, by the kit).
     this.el.addEventListener('click', (e) => {
       if (e.detail === 0) this.onClap?.();
     });
@@ -85,7 +85,7 @@ export class ClapCircle {
         return s('circle', { cx: (r * Math.sin(a)).toFixed(1), cy: (-r * Math.cos(a)).toFixed(1), r: 2.6 + ((i * 3) % 4) * 0.5, class: 'cc-drop' });
       }),
     );
-    this.count.textContent = this.drops.length ? this.countText(this.drops.length) : '';
+    this.count.textContent = this.drops.length ? this.countText(this.drops.length) : this.label;
     this.el.setAttribute('aria-label', this.drops.length ? `${this.label}. ${this.countText(this.drops.length)}` : this.label);
     // A new drop may glow, but never more than three times a second.
     if (fresh && this.gate.allow(performance.now())) {
