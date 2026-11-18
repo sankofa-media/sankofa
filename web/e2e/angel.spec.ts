@@ -77,6 +77,23 @@ test('the list names Angel after Forever Changes, and it opens', async ({ page }
   expect(page.url()).toContain('item=angel');
 });
 
+test('the language switches inside the feature and the reader stays in the scene', async ({ page }) => {
+  await mockApi(page, { first: false });
+  await open(page, '#view=feature&item=angel&scene=bristol');
+  await expect(scene(page, 'bristol')).toContainText(LINES.bristol[0]);
+  const btn = sheet(page).locator('.ft-lang');
+  await expect(btn).toHaveText('RU');
+  await btn.click();
+  await expect.poll(() => page.url()).toContain('lang=ru');
+  await expect(feature(page)).toBeVisible();
+  expect(page.url()).toContain('scene=bristol');
+  await expect(scene(page, 'bristol')).toContainText(LINES.bristol[1]);
+  await expect(sheet(page).locator('.ft-lang')).toHaveText('EN');
+  await sheet(page).locator('.ft-lang').click();
+  await expect.poll(() => page.url()).not.toContain('lang=ru');
+  await expect(scene(page, 'bristol')).toContainText(LINES.bristol[0]);
+});
+
 for (const [lang, k] of [['en', 0], ['ru', 1]] as const) {
   test(`every scene is built with its picture and its text (${lang})`, async ({ page }) => {
     test.setTimeout(120_000);

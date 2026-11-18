@@ -328,6 +328,7 @@ async function start(): Promise<void> {
   });
   // Special projects: the list and each feature, loaded when opened.
   const features = installFeatures(app, {
+    switchLang: () => switchLang(lang() === 'ru' ? 'en' : 'ru'),
     navigate(view, item, scene, push = true) {
       // Reading on into the next scene changes only the link.
       const sceneOnly = !push && view === 'feature' && route.view === 'feature' && route.item === item;
