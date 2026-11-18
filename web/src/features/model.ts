@@ -135,6 +135,8 @@ export interface FeatureSource {
   title: Bi;
   dek: Bi;
   reading?: Bi;
+  /** The scene whose picture is the feature's cover in the list (the first scene with art when unset). */
+  cover?: string;
   /** A lineage file next to feature.yaml. */
   lineage?: string;
   ui?: Record<string, Bi & { draft?: boolean }>;
@@ -174,6 +176,13 @@ export interface FeatureEntry {
   dek: Bi;
   reading?: Bi;
   scenes: number;
+  /** The cover in the list: a scene's layers, back to front, without the ones of a later state. */
+  cover?: Cover;
+}
+
+export interface Cover {
+  aspect: string;
+  layers: { file: string; depth?: number }[];
 }
 
 /** The list of features (data/features.json) with the engine's own labels. */
@@ -215,6 +224,16 @@ const ART_FILE = /^[a-z0-9]+(?:-[a-z0-9]+)*\.(?:webp|png|jpg)$/;
 const RANGE = /^\s*(0|1|0?\.\d+)\s+(0|1|0?\.\d+)\s*$/;
 
 /** Every art file the feature's scenes use, for the build to ship. */
+/** The feature's cover: the chosen scene's picture as it first looks. */
+export function featureCover(f: FeatureSource): Cover | undefined {
+  const sc = f.cover ? f.scenes.find((s) => s.id === f.cover) : f.scenes.find((s) => s.art?.layers?.length);
+  const art = sc?.art;
+  if (!art?.layers?.length) return undefined;
+  const first = art.layers.find((l) => l.state)?.state;
+  const layers = art.layers.filter((l) => !l.state || l.state === first).map((l) => (l.depth ? { file: l.file, depth: l.depth } : { file: l.file }));
+  return { aspect: art.aspect ?? '3 / 2', layers };
+}
+
 export function sceneArtFiles(f: FeatureSource): string[] {
   return [...new Set(f.scenes.flatMap((s) => [...(s.art?.layers ?? []), ...(s.art?.overlays ?? [])].map((l) => l.file)))];
 }

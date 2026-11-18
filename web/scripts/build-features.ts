@@ -13,7 +13,7 @@ import { createHash } from 'node:crypto';
 import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import YAML from 'yaml';
-import { isFeatureId, publishFeature, sceneArtFiles, validateFeature, type Bi, type FeatureEntry, type FeatureSource, type FeaturesIndex } from '../src/features/model.ts';
+import { featureCover, isFeatureId, publishFeature, sceneArtFiles, validateFeature, type Bi, type FeatureEntry, type FeatureSource, type FeaturesIndex } from '../src/features/model.ts';
 import { compileLineage, sourcedNodes, validateLineage, type RawLineage } from '../src/features/lineage.ts';
 
 const [src, out, media = join(out ?? '', '..', 'media')] = process.argv.slice(2);
@@ -87,7 +87,9 @@ for (const id of index.order ?? []) {
   if (used.length) mkdirSync(join(artOut, id), { recursive: true });
   for (const file of used) copyFileSync(join(artDir, file), join(artOut, id, file));
   art += used.length;
-  entries.push({ id, title: f.title, dek: f.dek, ...(f.reading ? { reading: f.reading } : {}), scenes: f.scenes.length });
+  const cover = featureCover(f);
+  if (f.cover && !cover) errors.push(`${id}: cover ${f.cover} is not a scene with art`);
+  entries.push({ id, title: f.title, dek: f.dek, ...(f.reading ? { reading: f.reading } : {}), scenes: f.scenes.length, ...(cover ? { cover } : {}) });
 }
 for (const [k, v] of Object.entries(index.ui ?? {})) if (!v || !v.en || !v.ru) errors.push(`index.yaml: ui.${k} needs en and ru`);
 if (errors.length) {

@@ -8,7 +8,7 @@ import { lang, pick } from '../lib/i18n';
 import { loadJson } from '../lib/loadJson';
 import { stopWithin } from '../lib/sound';
 import { weaveLive } from '../lib/weave';
-import type { Bi, FeatureData, FeaturesIndex } from './model';
+import type { Bi, Cover, FeatureData, FeaturesIndex } from './model';
 import './features.css';
 
 /** What a feature module gets to work with. */
@@ -128,7 +128,7 @@ export function createFeatures(app: App, hooks: FeatureHooks): Features {
         h(
           'a.ft-item-link',
           { href: `#view=feature&item=${f.id}`, 'data-feature': f.id },
-          h('span.ft-item-art', { 'aria-hidden': 'true' }),
+          coverArt(f.id, f.cover),
           h('span.ft-item-tx', {}, h('b', {}, pick(f.title)), h('span', {}, pick(f.dek)), f.reading ? h('small', {}, pick(f.reading)) : null),
           h('span.btn.primary.ft-item-go', { 'aria-hidden': 'true' }, say('open')),
         ),
@@ -138,6 +138,34 @@ export function createFeatures(app: App, hooks: FeatureHooks): Features {
       h('header.ft-list-head', {}, h('h2', {}, say('list-title')), h('p', {}, say('list-dek'))),
       h('ul.ft-list', {}, ...items),
     );
+    body.querySelectorAll<HTMLElement>('.ft-item-link').forEach(drift);
+  };
+
+  // A cover is the feature's first picture; its layers drift apart a little
+  // as the pointer crosses the card, as they do in the story.
+  const coverArt = (id: string, cover: Cover | undefined) => {
+    if (!cover) return h('span.ft-item-art.ft-item-ring', { 'aria-hidden': 'true' });
+    const layers = cover.layers.map((l) =>
+      h('img', { src: app.media(`features/${id}/${l.file}`), alt: '', loading: 'lazy', decoding: 'async', draggable: 'false', 'data-depth': l.depth ? String(l.depth) : undefined }),
+    );
+    return h('span.ft-item-art', { 'aria-hidden': 'true', style: `aspect-ratio:${cover.aspect}` }, ...layers);
+  };
+  const drift = (link: HTMLElement) => {
+    const art = link.querySelector<HTMLElement>('.ft-item-art');
+    const layers = [...(art?.querySelectorAll<HTMLElement>('img[data-depth]') ?? [])];
+    if (!art || !layers.length || matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const move = (x: number, y: number) => {
+      for (const img of layers) {
+        const d = Number(img.dataset.depth);
+        img.style.transform = x || y ? `translate(${(x * d).toFixed(1)}px, ${(y * d).toFixed(1)}px)` : '';
+      }
+    };
+    const clamp = (v: number) => Math.max(-1, Math.min(1, v));
+    link.addEventListener('pointermove', (e) => {
+      const r = art.getBoundingClientRect();
+      move(-0.6 * clamp(((e.clientX - r.left) / r.width - 0.5) * 2), -0.6 * clamp(((e.clientY - r.top) / r.height - 0.5) * 2));
+    });
+    link.addEventListener('pointerleave', () => move(0, 0));
   };
 
   const feature = async (id: string, scene: string | undefined, my: number) => {

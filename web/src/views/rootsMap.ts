@@ -288,7 +288,20 @@ export class RootsMap {
       const r = radius(n);
       const dot = n.style ? `<rect class="dot" x="${-r}" y="${-r}" width="${2 * r}" height="${2 * r}" transform="rotate(45)"/>` : `<circle class="dot" r="${r}"/>`;
       el.innerHTML = `${n.card ? `<circle class="halo" r="${r * 3.2}" fill="url(#rm-glow)"/>` : ''}${dot}<text class="lbl" y="${-r - 5}" text-anchor="middle"></text>`;
-      el.querySelector('text')!.textContent = quotes(n.label, lang());
+      const name = quotes(n.label, lang());
+      const text = el.querySelector('text')!;
+      // A long root name on a phone takes two lines rather than run over its own dot.
+      const cut = this.phone && n.card && name.length > 18 ? breakName(name) : null;
+      if (cut) {
+        text.dataset.lines = '2';
+        for (const [i, line] of cut.entries()) {
+          const t = document.createElementNS(NS, 'tspan');
+          t.setAttribute('x', '0');
+          if (i) t.setAttribute('dy', '1.1em');
+          t.textContent = line;
+          text.append(t);
+        }
+      } else text.textContent = name;
       el.addEventListener('click', () => this.pick(n.id));
       el.addEventListener('keydown', (e) => {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -534,8 +547,8 @@ export class RootsMap {
       // Every root keeps its name: above its dot, or below it if that is taken.
       // A lit artist looks for a free place the same way; others stay above their dot.
       if (!n.card) {
-        el.setAttribute('x', '0');
-        el.setAttribute('y', String(-radius(n) - 5));
+        setX(el, 0);
+        el.setAttribute('y', String(-radius(n) - 5 - lift(el)));
         el.setAttribute('text-anchor', 'middle');
         r = el.getBoundingClientRect();
       }
@@ -546,8 +559,9 @@ export class RootsMap {
         // On a phone a free place inside the screen beats one its edge would cut.
         const cut = (b: DOMRect) => this.phone && (b.left < view.left + EDGE || b.right > view.right - EDGE);
         const put = ([x, y, anchor]: [number, number, string]) => {
-          el.setAttribute('x', String(x));
-          el.setAttribute('y', String(y));
+          setX(el, x);
+          // A two-line name grows downward: above the dot it starts a line higher, beside it half a line.
+          el.setAttribute('y', String(y < -4 ? y - lift(el) : y > 4 ? y : y - lift(el) / 2));
           el.setAttribute('text-anchor', anchor);
           return el.getBoundingClientRect();
         };
@@ -569,7 +583,7 @@ export class RootsMap {
         offScreen = cx < view.left || cx > view.right;
         const dx = r.left < view.left + EDGE ? view.left + EDGE - r.left : r.right > view.right - EDGE ? view.right - EDGE - r.right : 0;
         if (!offScreen && dx) {
-          el.setAttribute('x', String(Number(el.getAttribute('x') ?? 0) + dx));
+          setX(el, Number(el.getAttribute('x') ?? 0) + dx);
           r = el.getBoundingClientRect();
         }
       }
@@ -635,6 +649,25 @@ export class RootsMap {
       .duration(reducedMotion() ? 0 : 1200)
       .call(this.zoomer.transform as never, zoomIdentity.translate((usableW - (x1 - x0) * k) / 2 - x0 * k, (H - (y1 - y0) * k) / 2 - y0 * k).scale(k));
   }
+}
+
+/** A long name split into two lines at the space nearest its middle. */
+function breakName(name: string): [string, string] | null {
+  const mid = name.length / 2;
+  let at = -1;
+  for (let i = name.indexOf(' '); i >= 0; i = name.indexOf(' ', i + 1)) if (at < 0 || Math.abs(i - mid) < Math.abs(at - mid)) at = i;
+  return at < 0 ? null : [name.slice(0, at), name.slice(at + 1)];
+}
+
+/** How much higher a two-line label starts, so that it ends where one line would. */
+function lift(el: SVGTextElement): number {
+  return el.dataset.lines === '2' ? 16 : 0;
+}
+
+/** Move a label sideways, its second line with it. */
+function setX(el: Element, x: number): void {
+  el.setAttribute('x', String(x));
+  el.querySelectorAll('tspan').forEach((t) => t.setAttribute('x', String(x)));
 }
 
 function pluralLead(n: number): string {
