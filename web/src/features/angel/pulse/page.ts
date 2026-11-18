@@ -181,7 +181,11 @@ export class PulsePage {
       if ((e.target as Element).closest('button')) return;
       if (this.el.dataset.state !== 'full') return;
       e.preventDefault();
-      c.setPointerCapture?.(e.pointerId);
+      try {
+        c.setPointerCapture(e.pointerId);
+      } catch {
+        /* a pointer the browser no longer tracks */
+      }
       const first = this.pointers.size === 0;
       this.pointers.set(e.pointerId, pos(e));
       this.updateCentre();

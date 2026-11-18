@@ -216,8 +216,16 @@
 .an-photo.an-inline img {
   width: 100%;
   height: auto;
-  max-height: 60svh;
+  max-height: 42svh;
   object-fit: contain;
+}
+/* Hints and labels between the controls stay legible over the pictures. */
+.an .ft-controls > .ft-hint,
+.an .ft-controls > .ft-reading {
+  margin: 0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: var(--ft-glass);
 }
 
 /* Line: one white line in the empty room. */
@@ -479,6 +487,9 @@
   transition: opacity 1.2s var(--ease);
 }
 .an-after .an-step img {
+  position: static;
+  translate: none;
+  scale: none;
   width: 100%;
   height: 100%;
   min-height: 0;
@@ -495,13 +506,14 @@
 }
 .an-year-count {
   position: absolute;
-  top: 10px;
-  left: 14px;
+  right: 12px;
+  bottom: 44px;
   z-index: 2;
   padding: 2px 8px;
   border-radius: 4px;
   background: rgba(11, 11, 12, 0.7);
-  font: 300 clamp(28px, 3.4vw, 44px) / 1 var(--font-display);
+  font: 300 clamp(22px, 2.6vw, 34px) / 1 var(--font-display);
+  opacity: 0.8;
   font-variant-numeric: tabular-nums;
   color: var(--ft-ink);
 }
@@ -632,7 +644,8 @@
     height: 46svh;
   }
   .an-year-count {
-    font-size: 26px;
+    font-size: 20px;
+    bottom: 40px;
   }
 }
 
