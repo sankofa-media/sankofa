@@ -115,7 +115,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         const pic = picture(sc, scope.el);
         firstWord = h('p.an-first-word', { 'aria-hidden': 'true' });
         const el = scene(sc, pic?.el ?? scope.el, {
-          after: [ctx.data.reading ? h('p.ft-reading', {}, pick(ctx.data.reading)) : null, h('p.ft-hint.an-sound-hint', {}, kit.ui('sound-hint')), playButton(ANGEL, pick({ en: 'Massive Attack, “Angel”', ru: 'Massive Attack, «Angel»' })), firstWord],
+          after: [playButton(ANGEL, pick({ en: 'Massive Attack, “Angel”', ru: 'Massive Attack, «Angel»' })), firstWord],
           screens: 1.3,
           long: false,
         });
