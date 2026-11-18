@@ -17,8 +17,8 @@
 id: angel
 order: 3
 title:
-  en: "Angel"
-  ru: "Angel"
+  en: "Angel: the song that was never meant to be"
+  ru: "Angel: песня, которой не должно было быть"
 dek:
   en: "In 1973 a young singer in Kingston recorded a light love song. A quarter of a century later he sang it again in a London studio, and it became one of the darkest, heaviest songs of the decade. It has not stopped since."
   ru: "В 1973 году молодой певец из Кингстона записал светлую песню о любви. Через четверть века он спел её снова, в лондонской студии, и она стала одной из самых тёмных и тяжёлых песен десятилетия. С тех пор она не кончается."
@@ -209,6 +209,11 @@ scenes:
         draft: false
         en: Angel
         ru: Angel
+      - id: subtitle
+        role: line
+        draft: false
+        en: The song that was never meant to be
+        ru: Песня, которой не должно было быть
       - id: bass
         role: lede
         draft: false
