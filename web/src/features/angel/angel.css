@@ -507,19 +507,6 @@
 [data-step='2'] .an-step[data-step='2'] {
   opacity: 1;
 }
-.an-year-count {
-  position: absolute;
-  right: 12px;
-  bottom: 44px;
-  z-index: 2;
-  padding: 2px 8px;
-  border-radius: 4px;
-  background: rgba(11, 11, 12, 0.7);
-  font: 300 clamp(22px, 2.6vw, 34px) / 1 var(--font-display);
-  opacity: 0.8;
-  font-variant-numeric: tabular-nums;
-  color: var(--ft-ink);
-}
 
 /* Fall: everything drops away into silence. */
 .an [data-scene='fall'] .ft-art .al img {
@@ -645,10 +632,6 @@
   }
   .an-watcher {
     height: 46svh;
-  }
-  .an-year-count {
-    font-size: 20px;
-    bottom: 40px;
   }
 }
 

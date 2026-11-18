@@ -16,7 +16,7 @@ import { Kit } from '../engine/kit';
 import { isPhone, qrSvg } from '../engine/qr';
 import * as api from './api';
 import { MoodFx } from './fx';
-import { anxietyAt, crowdShown, thenNowPeriod, yearAt, pulsePeriod, BPM_1998 } from './mood';
+import { anxietyAt, crowdShown, thenNowPeriod, pulsePeriod, BPM_1998 } from './mood';
 import { ANDY, ANGEL, VIDEO, type Official } from './recordings';
 import { pulseUrl, wantsPulse } from './url';
 import { Oscilloscope } from './scope';
@@ -210,8 +210,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         return el;
       }
       case 'afterlife': {
-        const year = h('span.an-year-count', { 'aria-hidden': 'true' }, '1997');
-        const box = h('div.ft-art.an-after', {}, ...AFTER_STEPS.map((s, i) => photo(s.photo, 'an-step', { 'data-step': String(i) })), year);
+        const box = h('div.ft-art.an-after', {}, ...AFTER_STEPS.map((s, i) => photo(s.photo, 'an-step', { 'data-step': String(i) })));
         const el = scene(sc, box, { screens: 1 });
         el.dataset.step = '0';
         return el;
@@ -266,7 +265,6 @@ export function mount(ctx: FeatureContext): FeatureInstance {
           el.dataset.lit = String(Math.min(2, Math.floor(p * 3)));
           break;
         case 'afterlife':
-          el.querySelector('.an-year-count')!.textContent = String(calm() ? 2026 : yearAt(Math.min(1, p * 1.25)));
           step(el);
           break;
       }

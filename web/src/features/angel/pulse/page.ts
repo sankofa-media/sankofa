@@ -285,6 +285,9 @@ export class PulsePage {
     const span = h('span.ap-word', { lang: w.lang || undefined, style: `left:${x.toFixed(0)}px;top:${y.toFixed(0)}px` }, w.text, tr);
     span.addEventListener('animationend', () => span.remove());
     this.floatBox.append(span);
+    // A long word is centred on its point and may reach past the edge: pull it back inside.
+    const half = span.offsetWidth / 2 + 12;
+    if (half * 2 < r.width) span.style.left = `${Math.min(r.width - half, Math.max(half, x)).toFixed(0)}px`;
   }
 
   private draw(t: number, touching: boolean): void {
