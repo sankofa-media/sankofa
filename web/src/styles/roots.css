@@ -1045,6 +1045,10 @@ a.rt-who:hover b {
     flex-wrap: nowrap;
     overflow-x: auto;
     padding-bottom: 2px;
+    /* The row scrolls: its far end fades out instead of slicing a chip. */
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 36px), transparent);
+    padding-right: 28px;
   }
   .rm-els {
     flex-wrap: nowrap;

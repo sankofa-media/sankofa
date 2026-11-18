@@ -106,3 +106,25 @@ test('the name index starts the Latin alphabet on a line of its own, after the R
     expect(left).toBeLessThan(2);
   }
 });
+
+test('on a phone the music map keeps every name it shows inside the screen', async ({ page, isMobile }) => {
+  test.skip(!isMobile, 'a phone pans a canvas wider than the screen');
+  for (const lang of ['ru', 'en']) {
+    await page.goto('about:blank');
+    await page.goto(`/#view=roots-map&lang=${lang}`);
+    await expect(page.locator('.rm-svg text.lbl:not(.hide)').first()).toBeVisible({ timeout: 15_000 });
+    const cut = async () =>
+      page.evaluate(() => {
+        const v = document.querySelector('.rm-stage')!.getBoundingClientRect();
+        return [...document.querySelectorAll('.rm-svg text.lbl:not(.hide)')]
+          .map((t) => [t.textContent, t.getBoundingClientRect()] as const)
+          .filter(([, r]) => r.width > 0 && r.bottom > v.top && r.top < v.bottom && (r.left < v.left || r.right > v.right))
+          .map(([s]) => s);
+      });
+    await expect.poll(cut).toEqual([]);
+    // Panned sideways, the names are fitted to the new strip.
+    await page.locator('.rm-stage').evaluate((s) => s.scrollBy(150, 0));
+    await expect.poll(cut).toEqual([]);
+    expect(await page.evaluate(() => document.documentElement.scrollWidth)).toBeLessThanOrEqual(await page.evaluate(() => window.innerWidth));
+  }
+});
