@@ -17,7 +17,7 @@
         Carlos Sandroni and Benjamin Lagarde: The recognition of Brazilian samba de roda and reunion maloya as intangible cultural heritage of humanity
       url: https://www.scielo.br/j/vb/a/rmHwmBKwGxq6RmCkPSSWNNK/?format=html&lang=en&ilang=pt_BR
       quote: maloya was formally added to the ICH Representative List on October 1, 2009.
-  status: "unverified"
+  status: "checked"
 - id: "fx-hon-0016"
   cat: "hon"
   en: "Guadeloupe's gwoka joined UNESCO's Representative List of intangible cultural heritage in 2014."
@@ -34,12 +34,10 @@
         https://www.culture.gouv.fr/thematiques/patrimoine-culturel-immateriel/pour-les-acteurs-de-la-sauvegarde/le-patrimoine-culturel-immateriel-en-outre-mer/les-territoires-ultramarins-et-leur-patrimoine-culturel-immateriel
       quote: >-
         Le gwoka a été inscrit sur la liste représentative du patrimoine culturel immatériel de l'humanité par l'Unesco en 2014
-    - title: 'Guadeloupe Islands Tourist Board: Le gwoka'
-      url: >-
-        https://www.lesilesdeguadeloupe.com/decouvrir/culture-et-patrimoine/la-musique-et-la-danse/le-gwoka/
-      quote: >-
-        En 2014, il est inscrit au patrimoine culturel immatériel de l’UNESCO, consacrant ainsi son rôle fondamental
-  status: "unverified"
+    - title: "UNESCO Intangible Cultural Heritage open data: Gwoka (element 00991)"
+      url: https://data.unesco.org/api/explore/v2.1/catalog/datasets/ich001/records?where=ich_public_ref%3D%22991%22&select=title_en,inscription_year,type_of_element_en
+      quote: '"inscription_year": "2014", "type_of_element_en": "Representative List"'
+  status: "checked"
 - id: "fx-hon-0017"
   cat: "hon"
   en: "Liberian president Ellen Johnson Sirleaf shared the Nobel Peace Prize in 2011."
@@ -169,15 +167,15 @@
   gender: "none"
   region: "africa"
   sources:
-    - title: 'Croatian Encyclopedia: Khami'
-      url: https://enciklopedija.hr/clanak/khami
-      quote: Na UNESCO-ovu popisu svjetske kulturne baštine od 1986.
+    - title: "UNESCO World Heritage Centre: World Heritage List open data, Khami Ruins National Monument (site 365)"
+      url: https://data.unesco.org/api/explore/v2.1/catalog/datasets/whc001/records?where=id_no%3D%22365%22&select=name_en,date_inscribed
+      quote: '"name_en": "Khami Ruins National Monument", "date_inscribed": "1986"'
     - title: 'National Museums and Monuments of Zimbabwe: World Heritage Sites'
       url: https://www.nmmz.co.zw/world-heritage-sites/
       quote: |-
         Khami Ruins National Monument
         Year of Inscription: 1986
-  status: "unverified"
+  status: "checked"
 - id: "fx-hon-0026"
   cat: "hon"
   en: "South Africa's Mapungubwe Cultural Landscape joined UNESCO's World Heritage List in 2003."
@@ -250,7 +248,7 @@
       url: https://nhc-nam.org/world-heritage/
       quote: >-
         The Twyfelfontein /Ui-//aes World Heritage Site was inscribed on the World Heritage List on 29 June 2007.
-  status: "unverified"
+  status: "checked"
 - id: "fx-hon-0030"
   cat: "hon"
   en: "The ruins of Tanzania's Kilwa Kisiwani joined UNESCO's World Heritage List in 1981."
@@ -261,13 +259,13 @@
   gender: "none"
   region: "africa"
   sources:
-    - title: 'Croatian Encyclopedia: Kilwa Kisiwani'
-      url: https://www.enciklopedija.hr/clanak/kilwa-kisiwani
-      quote: 1981. uvršten na UNESCO-ov popis svjetske kulturne baštine.
+    - title: "UNESCO World Heritage Centre: World Heritage List open data, Ruins of Kilwa Kisiwani and Ruins of Songo Mnara (site 144)"
+      url: https://data.unesco.org/api/explore/v2.1/catalog/datasets/whc001/records?where=id_no%3D%22144%22&select=name_en,date_inscribed
+      quote: '"name_en": "Ruins of Kilwa Kisiwani and Ruins of Songo Mnara", "date_inscribed": "1981"'
     - title: 'Parliament of Tanzania: proceedings, 24 April 2018'
       url: https://polis.parliament.go.tz/uploads/documents/1528211175-24%20APRILI%2C%202018.pdf
       quote: orodha ya Urithi wa Dunia mwaka 1981 na Shirika la
-  status: "unverified"
+  status: "checked"
 - id: "fx-hon-0031"
   cat: "hon"
   en: "Ethiopia's rock-hewn churches at Lalibela joined UNESCO's World Heritage List in 1978."
@@ -278,14 +276,14 @@
   gender: "none"
   region: "africa"
   sources:
-    - title: 'Croatian Encyclopedia: Lalibela'
-      url: https://www.enciklopedija.hr/clanak/lalibela
-      quote: Lalibela je od 1978. na UNESCO-ovu popisu svjetske kulturne baštine.
+    - title: "UNESCO World Heritage Centre: World Heritage List open data, Rock-Hewn Churches, Lalibela (site 18)"
+      url: https://data.unesco.org/api/explore/v2.1/catalog/datasets/whc001/records?where=id_no%3D%2218%22&select=name_en,date_inscribed
+      quote: '"name_en": "Rock-Hewn Churches, Lalibela", "date_inscribed": "1978"'
     - title: 'World Monuments Fund: Rock-Hewn Churches'
       url: https://www.wmf.org/projects/rock-hewn-churches
       quote: >-
         The churches, inscribed on the UNESCO World Heritage List in 1978, are sculpted out of solid volcanic rock
-  status: "unverified"
+  status: "checked"
 - id: "fx-hon-0032"
   cat: "hon"
   en: "Uruguayan candombe and its community spaces joined UNESCO's intangible heritage list in 2009."
@@ -373,7 +371,7 @@
       url: >-
         https://www.elysee.fr/emmanuel-macron/2024/02/21/missak-manouchian-et-ses-camarades-de-la-resistance-entrent-au-pantheon
       quote: après Joséphine Baker en 2021, qu’entre au Panthéon une figure
-  status: "unverified"
+  status: "checked"
 - id: "fx-hon-0037"
   cat: "hon"
   en: "The rituals and festivities of Panama's Congo culture joined UNESCO's intangible heritage list in 2018."
@@ -405,16 +403,15 @@
   gender: "none"
   region: "africa"
   sources:
-    - title: 'RTP: Morna cabo-verdiana é oficialmente Património Imaterial da Humanidade'
-      url: >-
-        https://www.rtp.pt/noticias/cultura/morna-cabo-verdiana-e-oficialmente-patrimonio-imaterial-da-humanidade_n1191380
-      quote: foi adoptada a classificação de património imaterial da humanidade
+    - title: "UNESCO Intangible Cultural Heritage open data: Morna, musical practice of Cabo Verde (element 01469)"
+      url: https://data.unesco.org/api/explore/v2.1/catalog/datasets/ich001/records?where=ich_public_ref%3D%221469%22&select=title_en,inscription_year,type_of_element_en
+      quote: '"title_en": "Morna, musical practice of Cabo Verde", "inscription_year": "2019"'
     - title: >-
         Government of Cabo Verde: Cultural Merit Medal for the Morna nomination team, 13 December 2019
       url: >-
         https://www.governo.cv/governo-vai-atribuir-medalha-de-merito-cultural-de-1o-grau-a-comissao-tecnica-e-cientifica-do-processo-morna/
       quote: Após a declaração oficial da Morna como Património Imaterial da Humanidade
-  status: "unverified"
+  status: "checked"
 - id: "fx-hon-0039"
   cat: "hon"
   en: "Seychelles' moutya dance joined UNESCO's intangible heritage list in 2021."

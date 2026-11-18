@@ -53,7 +53,7 @@ test('the menu opens the list of features, and the list opens Sea Lion Girls', a
 test('every scene is built, held lines never show, and no text is hard to reach', async ({ page }) => {
   await openFeature(page);
   const ids = await feature(page).locator('.ft-scene').evaluateAll((els) => els.map((e) => (e as HTMLElement).dataset.scene));
-  expect(ids).toEqual(['door', 'ring', 'expedition', 'arrival', 'family', 'minute', 'words', 'album', 'simone', 'single', 'bass', 'river', 'jazz', 'beat', 'house', 'feist', 'kanye', 'massive', 'burial', 'screen', 'silence', 'classroom', 'finale']);
+  expect(ids).toEqual(['door', 'ring', 'expedition', 'arrival', 'family', 'minute', 'words', 'album', 'simone', 'single', 'bass', 'jazz', 'beat', 'house', 'feist', 'kanye', 'massive', 'burial', 'screen', 'river', 'silence', 'classroom', 'finale']);
   // Lines waiting for a second source are not shipped at all.
   const text = await feature(page).innerText();
   // The one line still resting on a single source never ships.
@@ -438,10 +438,23 @@ test('every scene from the words to the silence has a picture; the photos are wh
     await expect(fig.locator('.ft-caption'), id).not.toBeEmpty();
     await expect(fig.locator('figcaption a[href^="https://commons.wikimedia.org/wiki/File:"]'), id).toHaveCount(1);
   }
-  // Burial stays anonymous: a drawing, no photo.
+  // Burial stays anonymous: a generated picture, no photo.
   await expect(scene(page, 'burial').locator('figure.ft-photo')).toHaveCount(0);
   // The single lies on the platter of a player on the table, and still turns over.
   await expect(scene(page, 'single').locator('.sg-table > .ft-art + .sg')).toHaveCount(1);
+  // Words, the single, burial, screen and silence show their generated layers, not drawings in code.
+  for (const id of ['words', 'single', 'burial', 'screen', 'silence']) await expect(scene(page, id).locator('.ft-art .al img').first(), id).toHaveAttribute('src', new RegExp(`${id}-[a-z-]+\\.webp$`));
+  await expect(page.locator('.ft-drawn[data-art="words"], .ft-drawn[data-art="single"], .ft-drawn[data-art="burial"], .ft-drawn[data-art="screen"], .ft-drawn[data-art="silence"]')).toHaveCount(0);
+  // The record sits on the drawn platter: centred on the picture, 52% of its width (within the parallax).
+  await goToScene(page, 'single');
+  const pic = await scene(page, 'single').locator('.sg-table > .ft-art').boundingBox();
+  const rec = await scene(page, 'single').locator('.sg-table > .sg').boundingBox();
+  expect(pic && rec).toBeTruthy();
+  if (pic && rec) {
+    expect(Math.abs(rec.x + rec.width / 2 - (pic.x + pic.width / 2))).toBeLessThan(2);
+    expect(Math.abs(rec.y + rec.height / 2 - (pic.y + pic.height / 2))).toBeLessThan(10);
+    expect(Math.abs(rec.width / pic.width - 0.52)).toBeLessThan(0.01);
+  }
 });
 
 test('Nina Simone’s photo is shown whole, not cropped', async ({ page }) => {

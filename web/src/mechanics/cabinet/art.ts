@@ -17,6 +17,12 @@ const CONTAINERS: Record<ContainerKind, string> = {
   strongbox:
     '<rect x="16" y="26" width="88" height="62" rx="4"/><rect x="24" y="34" width="72" height="46" rx="2"/><circle cx="60" cy="57" r="11"/><path d="M60 46v4M60 64v4M49 57h4M67 57h4"/><path d="M58 55h4l-1 6h-2z"/><path d="M20 88v4M100 88v4"/>',
   grip: '<path d="M14 46h92l-6 40H20z"/><path d="M14 46c4-10 10-14 46-14s42 4 46 14"/><path d="M46 32c0-10 6-14 14-14s14 4 14 14"/><path d="M60 32v14"/><rect x="54" y="44" width="12" height="8" rx="1"/>',
+  trunk:
+    '<path d="M10 38h100v48H10z"/><path d="M10 38l6-12h88l6 12"/><path d="M10 52h100M28 38v48M92 38v48"/><path d="M50 38v10h20V38"/><circle cx="60" cy="44" r="1.6"/><path d="M4 62h6M110 62h6"/>',
+  tin: '<rect x="18" y="38" width="84" height="46" rx="5"/><path d="M14 38h92v-8a4 4 0 0 0-4-4H18a4 4 0 0 0-4 4z"/><path d="M28 50h64M28 72h64"/><circle cx="60" cy="61" r="6"/>',
+  case: '<path d="M16 64c0-14 12-22 30-22h18c10 0 16-8 28-8 10 0 14 6 14 14v14c0 8-4 14-14 14-12 0-18-8-28-8H46c-18 0-30-8-30-4z"/><path d="M56 42v-6a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v6"/><path d="M30 64h56" stroke-dasharray="3 4"/>',
+  basket: '<path d="M18 46h84l-8 40H26z"/><path d="M18 46c0-18 18-28 42-28s42 10 42 28"/><path d="M22 58h76M24 70h72M38 46l4 40M60 46v40M82 46l-4 40"/>',
+  portfolio: '<path d="M12 30h96v56H12z"/><path d="M12 30l10-8h76l10 8"/><path d="M60 30v56" stroke-dasharray="3 4"/><path d="M46 58h-14M88 58H74"/><circle cx="60" cy="58" r="3"/>',
 };
 
 const SHAPE_ART: Record<Shape, string> = {

@@ -31,6 +31,16 @@ async function openFromPicture(page: Page, card: string) {
   await expect(cache(page)).toBeVisible();
 }
 
+/** Open the cache hidden in a word of a card. */
+async function openFromCardWord(page: Page, card: string) {
+  await page.goto(`/#focus=${card}`);
+  const word = page.locator(`.drawer.on article.card[data-card-id="${card}"] .cb-word`).first();
+  await expect(word).toBeAttached({ timeout: 15_000 });
+  await word.scrollIntoViewIfNeeded();
+  await word.click();
+  await expect(cache(page)).toBeVisible();
+}
+
 /** Open the cache hidden in a word of a chapter step. */
 async function openFromWord(page: Page, chapter: string) {
   await page.goto(`/#ch=${chapter}`);
@@ -96,7 +106,7 @@ test.describe('the cabinet', () => {
   });
 
   test('a locked cache opens only with its key, found in another cache', async ({ page }) => {
-    await openFromPicture(page, 'lewis-latimer');
+    await openFromCardWord(page, 'garrett-morgan');
     await expect(cache(page).locator('.cb-locked')).toContainText('locked');
     await expect(cache(page).locator('.cb-usekey')).toHaveCount(0);
     await page.keyboard.press('Escape');
@@ -104,14 +114,14 @@ test.describe('the cabinet', () => {
     await openFromWord(page, 'v5');
     await cache(page).locator('.cb-openit').click();
     await expect(cache(page).locator('.cb-keyfind')).toBeVisible();
-    await openFromPicture(page, 'lewis-latimer');
+    await openFromCardWord(page, 'garrett-morgan');
     await cache(page).locator('.cb-usekey').click();
     expect(await cache(page).locator('.cb-find').count()).toBeGreaterThan(0);
   });
 
   test('a secret drawer has no label until its key turns', async ({ page }) => {
     await page.goto('/#view=cabinet');
-    const secret = sheet(page).locator('.cb-drawer.cb-secret');
+    const secret = sheet(page).locator('.cb-drawer.cb-secret[data-drawer="underground"]');
     await expect(secret.locator('.cb-plate')).toHaveText('a drawer with no label');
     await secret.locator('.cb-face').click();
     await expect(secret.locator('.cb-usekey')).toHaveCount(0);
@@ -119,8 +129,8 @@ test.describe('the cabinet', () => {
     await cache(page).locator('.cb-openit').click();
     await expect(cache(page).locator('.cb-keyfind')).toBeVisible();
     await page.goto('/#view=cabinet');
-    await sheet(page).locator('.cb-drawer.cb-secret .cb-face').click();
-    await sheet(page).locator('.cb-drawer.cb-secret .cb-usekey').click();
+    await sheet(page).locator('.cb-drawer.cb-secret[data-drawer="underground"] .cb-face').click();
+    await sheet(page).locator('.cb-drawer.cb-secret[data-drawer="underground"] .cb-usekey').click();
     await expect(sheet(page).locator('.cb-drawer[data-drawer="underground"] .cb-plate')).toHaveText('Underground');
     expect(await sheet(page).locator('.cb-drawer[data-drawer="underground"] .cb-thing').count()).toBeGreaterThan(0);
     // The finds survive a reload: they are kept in this browser.
@@ -130,7 +140,7 @@ test.describe('the cabinet', () => {
 
   test('the honest drawer is open from the start', async ({ page }) => {
     await page.goto('/#view=cabinet');
-    const honest = sheet(page).locator('.cb-drawer.cb-honest');
+    const honest = sheet(page).locator('.cb-drawer.cb-honest[data-drawer="honest"]');
     await expect(honest).toHaveClass(/pulled/);
     await expect(honest.locator('.cb-drawer-intro')).toContainText('1897');
     expect(await honest.locator('.cb-thing').count()).toBeGreaterThan(0);
@@ -152,7 +162,7 @@ test.describe('in Russian', () => {
   test('the cabinet, the Workshop and a hidden word speak Russian', async ({ page }) => {
     await page.goto('/#view=cabinet&lang=ru');
     await expect(sheet(page).locator('.cb-head h2')).toHaveText('Кабинет редкостей');
-    await expect(sheet(page).locator('.cb-drawer.cb-secret .cb-plate')).toHaveText('ящик без надписи');
+    await expect(sheet(page).locator('.cb-drawer.cb-secret[data-drawer="underground"] > .cb-face .cb-plate')).toHaveText('ящик без надписи');
     await page.goto('/#view=workshop&lang=ru');
     await expect(sheet(page).locator('.mx-shelf h2').first()).toHaveText('Мастерская');
     await expect(sheet(page).locator('.mx-label dt').first()).toHaveText('Где и когда');

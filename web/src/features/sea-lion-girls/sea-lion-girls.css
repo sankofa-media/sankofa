@@ -304,9 +304,9 @@
   gap: 16px;
   align-items: start;
   padding: 16px;
-  border-radius: 8px;
   background: var(--ft-glass);
-  box-shadow: 0 0 0 1px rgba(127, 110, 85, 0.25);
+  box-shadow: 0 0 24px 16px var(--ft-glass);
+  border-radius: 24px;
   max-width: 34rem;
 }
 .rv-med.big {
@@ -692,162 +692,6 @@
   --ft-ink: #1f1b16;
   --ft-red: #a3272b;
 }
-.ft-drawn .ink-solid {
-  fill: #1f1b16;
-  stroke: none;
-}
-.ft-drawn .ink-skin {
-  fill: #4a3125;
-  stroke: none;
-}
-.ft-drawn .ink-red {
-  fill: #a3272b;
-  stroke: none;
-}
-.ft-drawn .ink-limb {
-  fill: none;
-  stroke: #4a3125;
-  stroke-width: 15;
-  stroke-linecap: round;
-  vector-effect: none;
-}
-.ft-drawn .dr-paper-line {
-  stroke: #f3ead8;
-  opacity: 0.5;
-}
-.ft-drawn .dr-rule {
-  opacity: 0.35;
-  stroke-width: 1;
-}
-.ft-drawn .dr-write {
-  stroke-width: 1.2;
-}
-.ft-drawn .dr-erased path.ink-line {
-  opacity: 0.3;
-  stroke-width: 1.1;
-}
-.ft-drawn .dr-smudge {
-  fill: #1f1b16;
-  stroke: none;
-  opacity: 0.06;
-}
-.ft-drawn .dr-sheet {
-  fill: #fbf6ea;
-  stroke: none;
-}
-.ft-drawn .dr-tag,
-.ft-drawn .dr-sleeve {
-  fill: #e6d6b4;
-  stroke: none;
-}
-.ft-drawn .dr-pencil {
-  stroke-width: 3;
-}
-.ft-drawn .dr-grain {
-  opacity: 0.25;
-  stroke-width: 1;
-}
-.ft-drawn .dr-case {
-  fill: #e0cfab;
-  stroke: none;
-}
-.ft-drawn .dr-arm {
-  stroke-width: 3.2;
-}
-.ft-drawn .dr-coffee {
-  fill: #2c1f17;
-  stroke: none;
-}
-.ft-drawn .dr-tea {
-  fill: #8a6a3e;
-  stroke: none;
-  opacity: 0.7;
-}
-.ft-drawn .dr-sun {
-  fill: #fbf6ea;
-}
-.ft-drawn .dr-fence {
-  opacity: 0.7;
-}
-.ft-drawn .dr-ground {
-  fill: #1f1b16;
-  stroke: none;
-  opacity: 0.16;
-}
-.ft-drawn .dr-chalk {
-  stroke: #fbf6ea;
-  stroke-width: 3;
-}
-.ft-drawn .dr-chalk.faint {
-  stroke-width: 1.4;
-  opacity: 0.7;
-}
-.ft-drawn .dr-ribbon {
-  stroke-width: 3;
-}
-.ft-drawn .dr-night {
-  fill: #1c1813;
-  stroke: none;
-}
-.ft-drawn .dr-screen {
-  fill: #f3ead8;
-  stroke: none;
-}
-.ft-drawn .dr-beam {
-  fill: #f3ead8;
-  stroke: none;
-  opacity: 0.22;
-}
-.ft-drawn .dr-dust {
-  fill: #f3ead8;
-  opacity: 0.6;
-}
-.ft-drawn .dr-machine,
-.ft-drawn .dr-seat {
-  fill: #0d0b09;
-  stroke: none;
-}
-.ft-drawn .dr-light-line {
-  stroke: #b9aa8e;
-}
-.ft-drawn .dr-pilot {
-  fill: #a3272b;
-}
-.ft-drawn .dr-house {
-  fill: #2a241d;
-  stroke: none;
-}
-.ft-drawn .dr-window {
-  fill: #15120e;
-  stroke: none;
-}
-.ft-drawn .dr-lit {
-  fill: #f0d9a4;
-  stroke: none;
-}
-.ft-drawn .dr-curtain {
-  opacity: 0.85;
-}
-.ft-drawn .dr-road {
-  fill: #13100c;
-  stroke: none;
-}
-.ft-drawn .dr-shine {
-  stroke: #f0d9a4;
-  opacity: 0.55;
-}
-.ft-drawn .dr-halo {
-  fill: #f0d9a4;
-  opacity: 0.18;
-}
-.ft-drawn .dr-lamp {
-  fill: #f0d9a4;
-}
-.ft-drawn .dr-rain {
-  stroke: #b9aa8e;
-  stroke-width: 0.8;
-  opacity: 0.55;
-}
 .ft-drawn .dr-spot {
   fill: #1f1b16;
   stroke: none;
@@ -881,15 +725,4 @@
   .fl-stack > .art-flashes {
     max-height: 12svh;
   }
-}
-.ft-drawn .dr-table {
-  fill: #eadcbd;
-  stroke: none;
-}
-.ft-drawn .dr-thread {
-  stroke-width: 2.4;
-}
-.ft-drawn .dr-hand {
-  fill: #4a3125;
-  stroke: none;
 }

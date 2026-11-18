@@ -23,8 +23,6 @@ const picture = (kit: Kit, sc: Scene, placeholder: () => Element, opts: Paramete
 
 /** The sketch each photographed stop develops out of. */
 const MOTIF: Record<string, drawn.Motif> = { bass: 'desk', jazz: 'flute', beat: 'guitar', house: 'decks', feist: 'hands', kanye: 'pads', massive: 'stage' };
-/** Drawings in code for the scenes still waiting for their generated art (ART-BRIEF-2). */
-const DRAWN: Record<string, () => SVGSVGElement> = { words: drawn.words, burial: drawn.nightStreet, screen: drawn.projector, silence: drawn.silence };
 
 /** A real photograph developing out of a drawing, shown whole on paper, with its caption and credit (and links where the licence asks). */
 function print(kit: Kit, id: unknown, under: Element): HTMLElement | null {
@@ -46,9 +44,9 @@ function print(kit: Kit, id: unknown, under: Element): HTMLElement | null {
   );
 }
 
-/** A scene's picture: its photo developing out of a sketch, its generated art, or its drawing in code; else `fallback`. */
+/** A scene's picture: its photo developing out of a sketch, or its generated art; else `fallback`. */
 function still(kit: Kit, sc: Scene, fallback?: () => Element): Element | null {
-  const own = kit.art(sc)?.el ?? (DRAWN[sc.id] ? drawn.panel(sc.id, DRAWN[sc.id]()) : null);
+  const own = kit.art(sc)?.el ?? null;
   const photo = sc.photo ? print(kit, sc.photo, own ?? drawn.panel(sc.id, drawn.sketchOf(MOTIF[sc.id] ?? 'stage', sc.id.length * 131))) : null;
   return photo ?? own ?? fallback?.() ?? null;
 }
@@ -159,8 +157,11 @@ const single: Render = (kit, sc) => {
     );
   const disc = h('div.sg-disc', {}, face('a'), face('b'));
   const record = h('div.sg', { 'data-side': 'a' }, h('div.sg-vinyl', { 'aria-hidden': 'true' }), disc);
-  // The record lies on the platter of a player on the table (generated art, when the scene has it).
-  const table = h('div.sg-table', {}, kit.art(sc)?.el ?? drawn.panel('single', drawn.recordTable()), record);
+  // The record lies on the platter of the player on the table (centre 50%/50%,
+  // 52% of the width) and moves with the player's layer, so it stays on it.
+  const player = sc.art?.layers.at(-1);
+  if (player?.depth) record.dataset.depth = String(player.depth);
+  const table = h('div.sg-table', {}, kit.art(sc)?.el ?? null, record);
   const live = h('p.sg-now.ft-visually-hidden', { 'aria-live': 'polite' });
   const flip = h('button.btn.primary.sg-flip', { type: 'button', 'aria-pressed': 'false' }, kit.ui('flip')) as HTMLButtonElement;
   flip.addEventListener('click', () => {
@@ -310,9 +311,12 @@ export function mount(ctx: FeatureContext): FeatureInstance {
   const minuteAt = scenes.findIndex((sc) => sc.kind === 'minute');
   const stageAt = new Set(['minute', 'finale']);
   kit.clapScenes = new Set(scenes.filter((sc) => ['minute', 'classroom', 'finale'].includes(sc.kind)).map((sc) => sc.id));
-  kit.circlePlace = (id, i) => {
-    const kind = scenes.find((sc) => sc.id === id)?.kind ?? '';
-    if (minuteAt < 0 || i < minuteAt) return 'hidden';
+  // By the scene's own place in the story: some scenes render nothing, so the
+  // index of the scene element on the page is not the index in the story.
+  kit.circlePlace = (id) => {
+    const at = scenes.findIndex((sc) => sc.id === id);
+    const kind = scenes[at]?.kind ?? '';
+    if (minuteAt < 0 || at < minuteAt) return 'hidden';
     return stageAt.has(kind) ? 'stage' : 'corner';
   };
   const quiet = new Set(scenes.filter((sc) => sc.kind === 'silence').map((sc) => sc.id));

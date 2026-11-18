@@ -78,3 +78,31 @@ spec:
       http:
         paths:
           - {path: /, pathType: Prefix, backend: {service: {name: museum, port: {name: http}}}}
+---
+# The storeroom: a cache of the Cabinet of Curiosities hidden in the cluster
+# (content/cabinet/cluster.yaml, checked by pkg/cabinet's tests).
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: storeroom
+  namespace: sankofa-museum
+  labels: {app.kubernetes.io/name: museum}
+data:
+  inventory.en.txt: |-
+    STOREROOM OF THE SANKOFA MUSEUM. Inventory, kept by the steward.
+    Shelf A: a student's trunk from McGrawville, New York. Empty; its woodcut hangs upstairs.
+    Shelf B: a ship steward's chest from the Lembrança, Rio de Janeiro to New York, 1847.
+    The chest has no keyhole, only a lock of letters.
+    Word for the lock: lembranca (Portuguese for memory; the lock has no cedilla).
+    Inside the chest: the steward's keys, and one of them opens the last shelf.
+    Shelf C, the last: a bread basket, sent home to Brazil. Look for it among the countries.
+    Nothing here is thrown away. What is put away is remembered.
+  inventory.ru.txt: |-
+    КЛАДОВАЯ МУЗЕЯ САНКОФА. Опись ведёт стюард.
+    Полка А: студенческий сундук из Макгроувилла, штат Нью-Йорк. Пуст; его гравюра висит наверху.
+    Полка Б: сундук корабельного стюарда с «Лембрансы», Рио-де-Жанейро — Нью-Йорк, 1847 год.
+    Замочной скважины у сундука нет, только замок с буквами.
+    Слово для замка: lembranca (по-португальски «память»; седиль замок не берёт).
+    В сундуке — ключи стюарда, и один из них отпирает последнюю полку.
+    Полка В, последняя: хлебная корзина, отправленная домой, в Бразилию. Ищите её среди стран.
+    Здесь ничего не выбрасывают. Что убрано на полку — то помнят.

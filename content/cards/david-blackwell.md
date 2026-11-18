@@ -9,6 +9,7 @@ places:
   - {name: "Howard University, Washington, D.C.", lat: 38.9227, lon: -77.0194}
   - {name: "Institute for Advanced Study, Princeton", lat: 40.3315, lon: -74.6683}
 zoom: 4
+moment: {year: 1965}
 era: v6
 books: [archives]
 edition: m

@@ -9,6 +9,7 @@ places:
   - {name: "St. Simons Island, Georgia", lat: 31.1350, lon: -81.3870}
   - {name: "Boston, Massachusetts", lat: 42.3601, lon: -71.0589}
 zoom: 4
+moment: {year: 1862, place: 1}
 era: v3
 books: [voices]
 edition: both

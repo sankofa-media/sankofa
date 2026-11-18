@@ -78,17 +78,31 @@ export class Kit {
     this.disposers.push(onCalm((on) => this.applyCalm(on)));
     this.setAudio('locked');
 
-    const keys = (e: KeyboardEvent) => {
-      if (e.key !== ' ' || e.repeat || e.ctrlKey || e.metaKey || e.altKey) return;
-      const t = e.target as HTMLElement;
-      if (t.closest('button, a, input, select, textarea, [contenteditable], [role="button"]')) return;
+    // In a clapping scene the space bar always claps, even when a button such as the
+    // sound switch still has focus (otherwise Space would press that button instead).
+    const clapping = (e: KeyboardEvent): boolean => {
+      if (e.key !== ' ' || e.ctrlKey || e.metaKey || e.altKey) return false;
+      const t = e.target as HTMLElement | null;
+      if (t?.closest('input, select, textarea, [contenteditable]')) return false;
+      if (t && !ctx.root.contains(t) && t !== document.body && !ctx.scroller.contains(t)) return false;
       const cur = this.scroller?.currentScene()?.dataset.scene;
-      if (!cur || !this.clapScenes.has(cur)) return;
-      e.preventDefault();
-      this.tap();
+      return !!cur && this.clapScenes.has(cur);
     };
-    ctx.scroller.addEventListener('keydown', keys);
-    this.disposers.push(() => ctx.scroller.removeEventListener('keydown', keys));
+    const down = (e: KeyboardEvent) => {
+      if (!clapping(e)) return;
+      e.preventDefault();
+      e.stopPropagation();
+      if (!e.repeat) this.tap();
+    };
+    const up = (e: KeyboardEvent) => {
+      if (clapping(e)) e.preventDefault();
+    };
+    window.addEventListener('keydown', down, true);
+    window.addEventListener('keyup', up, true);
+    this.disposers.push(() => {
+      window.removeEventListener('keydown', down, true);
+      window.removeEventListener('keyup', up, true);
+    });
   }
 
   // ---------- text ----------
@@ -171,6 +185,8 @@ export class Kit {
   goTo(id: string | undefined, smooth = false): void {
     const el = this.sceneEls.find((s) => s.dataset.scene === id) ?? this.sceneEls[0];
     if (el && this.scroller) this.scroller.goTo(el, smooth && !this.ink.calm);
+    // A jump stays quiet about the scene change, but the circle must still find its place.
+    if (el && !smooth) this.circle.setPlace(this.circlePlace(el.dataset.scene!, this.sceneEls.indexOf(el)));
   }
 
   current(): string | undefined {

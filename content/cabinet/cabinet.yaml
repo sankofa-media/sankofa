@@ -14,6 +14,16 @@ intro:
     of the Workshop. Each lies in a chest, a box or a suitcase with a history
     of its own; open it, and what was inside comes here. Some drawers are locked, and their
     keys lie elsewhere.
+
+    How to look. A hidden word is underlined in faint gold: click it. A
+    picture that hides something lights up a small glint when you hover
+    over it (on a phone the glint is always faintly visible): tap the glint.
+    Glints also sit on the atlas map, by entries of the name index, under
+    the Workshop's things and in the longreads. Read what you find: a key
+    or a note often says where to look next, and a few notes lead out of
+    the site into the museum's cluster, where kubectl and the sankofa
+    command answer; the word you find there opens the letter lock below.
+    The count at the top shows how many things are still out there.
   ru: >-
     В романе Милорада Павича «Ящик для письменных принадлежностей» каждое
     отделение маленького ящика хранит историю вместе с вещами, которые ей
@@ -23,6 +33,17 @@ intro:
     или чемодане, и у каждого из них своя история; откройте его, и то, что
     было внутри, перейдёт сюда. Некоторые ящики заперты, а ключи от них
     лежат в другом месте.
+
+    Как искать. Слово с тайником едва заметно подчёркнуто золотом — по нему
+    можно щёлкнуть. Картинка, на которой что-то спрятано, загорается
+    маленькой искрой, когда наводишь на неё мышь (на телефоне искра видна
+    всегда, хоть и бледно), — нажмите на искру. Такие же искры есть на карте
+    атласа, у статей именного указателя, под вещами Мастерской и в
+    лонгридах. Читайте то, что нашли: ключ или записка часто подсказывают,
+    где искать дальше, а некоторые записки уводят с сайта в кластер музея,
+    где отвечают kubectl и команда sankofa; найденное там слово открывает
+    кодовый замок ниже. Счётчик наверху показывает, сколько вещей ещё
+    ждут вас.
 
 drawers:
   - id: letters
@@ -75,6 +96,31 @@ drawers:
       - museum-wormianum
       - benin-warrior-plaque
       - cologne-benin-transfer
+  - id: returned
+    label: {en: Returned home, ru: Вернувшееся домой}
+    lock: returned-key
+    # The honest drawer's inner drawer: the end of the chain from Benin City.
+    within: honest
+    intro:
+      en: "This drawer keeps what has gone home. On 27 October 2021 Jesus College, Cambridge, handed the
+        bronze cockerel Okukor to Nigeria's National Commission for Museums and Monuments, the first
+        institution in the world to return a Benin Bronze. In October 2022 the Smithsonian transferred to
+        Nigeria the ownership of 29 Benin works, and on 28 November the Horniman Museum in London, having
+        given up ownership of its 72 Benin objects, handed back the first six. On 20 December 2022 the
+        German foreign minister, Annalena Baerbock, handed over the first Benin works from German museums
+        in Abuja."
+      ru: "В этом ящике лежит то, что вернулось домой. 27 октября 2021 года Колледж Иисуса в Кембридже
+        передал Национальной комиссии Нигерии по музеям и памятникам бронзового петуха Окукора и стал
+        первым учреждением в мире, вернувшим бенинскую бронзу. В октябре 2022 года Смитсоновский институт
+        передал Нигерии право собственности на 29 бенинских работ, а 28 ноября лондонский Музей Хорнимана,
+        уступив Нигерии все свои 72 бенинских предмета, отдал первые шесть из них. 20 декабря 2022 года
+        министр иностранных дел Германии Анналена Бербок привезла в Абуджу первые бенинские вещи из
+        немецких музеев."
+    contents:
+      - horniman-orhogbua-plaque
+      - linden-idia-mask
+  - id: sky
+    label: {en: Sky, ru: Небо}
   - id: heap
     label: {en: Unsorted, ru: Неразобранное}
     intro:
@@ -99,3 +145,56 @@ keys:
     note:
       en: A key for a strongbox, with a paper tag that has lost its writing.
       ru: Ключ от несгораемого ящика, с бумажной биркой, надпись на которой стёрлась.
+  - id: bronze-key
+    name: {en: A small cast-brass key, ru: Маленький литой латунный ключ}
+    note:
+      en: It was cast in a mould, not cut, the way the guild in Benin City still casts brass.
+      ru: Его не выпилили, а отлили в форме — так, как до сих пор льют латунь мастера гильдии в Бенин-Сити.
+  - id: leopard-key
+    name: {en: A key with a leopard's head, ru: Ключ с головой леопарда}
+    note:
+      en: The leopard was the oba's animal; somewhere a queen mother's face is waiting for this key.
+      ru: Леопард был зверем оба; где-то этого ключа ждёт лицо царицы-матери.
+  - id: returned-key
+    name: {en: A key on a luggage label, ru: Ключ на багажной бирке}
+    note:
+      en: The label has a single word on it, in a careful hand — Home.
+      ru: На бирке аккуратным почерком выведено одно слово — «Домой».
+  - id: ships-key
+    name:
+      en: A ship’s key with a black star
+      ru: Корабельный ключ с чёрной звездой
+    note:
+      en: A brass key with a five-pointed star on its bow; it smells of salt and of something sewn from
+        grass.
+      ru: Латунный ключ с пятиконечной звездой на головке; от него пахнет солью и чем-то сшитым из травы.
+  - id: lighthouse-key
+    name:
+      en: A lighthouse keeper’s key
+      ru: Ключ смотрителя маяка
+    note:
+      en: A heavy key from the lamp room. Somewhere in the museum’s long list of names one name keeps a
+        light burning.
+      ru: Тяжёлый ключ от фонарного помещения. Где-то в длинном списке имён этого музея одно имя держит
+        огонь зажжённым.
+  - id: reel-key
+    name:
+      en: The reel key
+      ru: Ключ-бобина
+    note:
+      en: A small key with a bow shaped like a reel of magnetic tape; it opens a box from a Hollywood recording session.
+      ru: Маленький ключ, головка которого похожа на бобину с магнитной плёнкой; он открывает коробку с голливудской сессии звукозаписи.
+  - id: needle-key
+    name:
+      en: The needle key
+      ru: Ключ-игла
+    note:
+      en: A key as thin as a phonograph needle; it fits a road trunk that once travelled with a spaceship.
+      ru: Ключ тонкий, как игла фонографа; он подходит к гастрольному сундуку, который когда-то ездил вместе с космическим кораблём.
+  - id: storeroom-key
+    name:
+      en: The steward's storeroom key
+      ru: Ключ стюарда от кладовой
+    note:
+      en: One of the keys entrusted to Baquaqua on the Lembrança; it opens the last shelf of the storeroom.
+      ru: Один из ключей, доверенных Бакуакуа на «Лембрансе»; он отпирает последнюю полку кладовой.

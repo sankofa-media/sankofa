@@ -1,6 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import {
   anchorIn,
+  cacheByWord,
+  keyChains,
+  openOrder,
+  wordHash,
   drawerOpen,
   EMPTY,
   isLocked,
@@ -183,5 +187,79 @@ describe('cabinet: a reader finds things', () => {
     expect(parseHoldings(null)).toEqual(EMPTY);
     expect(parseHoldings('{oops')).toEqual(EMPTY);
     expect(parseHoldings('{"found":["a",3],"keys":"x"}')).toEqual({ ...EMPTY, found: ['a'] });
+  });
+});
+
+describe('cabinet: phase two places, chains and the letter lock', () => {
+  const places = (): CabinetFile => {
+    const f = file();
+    const more = (id: string, hidden: CabinetFile['caches'][number]['hidden'], extra: Partial<CabinetFile['caches'][number]> = {}) => {
+      f.artifacts.push({ ...f.artifacts[0], id: `${id}-thing`, drawer: 'seas' });
+      f.caches.push({ id, kind: 'trunk', name: L(id), place: L('Here'), time: L('1900'), story: L('A story'), hidden, contents: { both: [`${id}-thing`] }, ...extra });
+    };
+    more('fx', { at: 'factoid', fact: 'fx-1', anchor: L('a ring game', 'игру в круг') });
+    more('atlas', { at: 'atlas', lon: -61.4, lat: 15.4 }, { clue: L('Ask the storeroom'), leads: 'word' });
+    more('country', { at: 'country', country: 'ghana', anchor: L('a ring game', 'игру в круг') });
+    more('roots', { at: 'roots', artist: 'bob-marley', anchor: L('a ring game', 'игру в круг') });
+    more('index', { at: 'index', card: 'equiano' });
+    more('feature', { at: 'feature', feature: 'sea-lion-girls', scene: 'door', block: 'lead', anchor: L('a ring game', 'игру в круг') });
+    more('word', { at: 'cluster', via: 'configmap', word: 'storeroom' }, { gives: ['copper-key'] });
+    more('end', { at: 'workshop', object: 'tr808' }, { lock: 'copper-key' });
+    f.keys.push({ id: 'copper-key', name: L('A copper key'), note: L('Green with age') });
+    f.drawers.push({ id: 'returned', label: L('Returned'), lock: 'brass-key', within: 'honest', intro: L('Gone home'), contents: [] });
+    return f;
+  };
+  const texts = (patch: Partial<Known> = {}): Known => {
+    const f = places();
+    const t = { en: 'two sisters sang a ring game', ru: 'две сестры спели игру в круг' };
+    return { ...known(f), factoid: (id) => (id === 'fx-1' ? t : null), country: (id) => (id === 'ghana' ? t : null), roots: (id) => (id === 'bob-marley' ? t : null), feature: (ft, sc, b) => (ft === 'sea-lion-girls' && sc === 'door' && b === 'lead' ? t : null), facts: [...known(f).facts, two('drawer:returned')], ...patch };
+  };
+
+  it('accepts caches in factoids, the atlas, countries, Roots, the index, longreads and the cluster', () => {
+    expect(validateCabinet(places(), texts())).toEqual([]);
+  });
+  it('wants every anchor in its text, in both languages', () => {
+    const errs = validateCabinet(places(), texts({ country: () => ({ en: 'nothing', ru: 'ничего' }), feature: () => null })).join('\n');
+    expect(errs).toMatch(/cache country: the en anchor "a ring game" is not in the text of country ghana/);
+    expect(errs).toMatch(/cache country: the ru anchor/);
+    expect(errs).toMatch(/cache feature: there is no scene door block lead of feature sea-lion-girls/);
+  });
+  it('refuses a hiding place on a card of one copy only', () => {
+    expect(validateCabinet(places(), texts({ edition: (id) => (id === 'equiano' ? 'm' : undefined) })).join('\n')).toMatch(/card equiano is in the m copy only/);
+  });
+  it('refuses a bad lock word, a clue that leads nowhere and a drawer within the heap', () => {
+    const f = places();
+    const w = f.caches.find((c) => c.id === 'word')!;
+    w.hidden = { at: 'cluster', via: 'configmap', word: 'No' };
+    f.caches.find((c) => c.id === 'atlas')!.leads = 'nowhere';
+    f.drawers.find((d) => d.id === 'returned')!.within = 'heap';
+    const errs = validateCabinet(f, texts()).join('\n');
+    expect(errs).toMatch(/lock word must be 4 to 16/);
+    expect(errs).toMatch(/leads to nowhere/);
+    expect(errs).toMatch(/drawer returned: cannot lie within heap/);
+  });
+  it('refuses a lock whose key lies only behind locks that never open', () => {
+    const f = places();
+    f.caches.find((c) => c.id === 'word')!.lock = 'copper-key';
+    expect(validateCabinet(f, texts()).join('\n')).toMatch(/cache (word|end): its key copper-key lies only behind locks that never open/);
+  });
+  it('walks the chains: open caches first, then each lock once its key is found', () => {
+    const f = places();
+    const order = openOrder(f).caches;
+    expect(order.indexOf('end')).toBeGreaterThan(order.indexOf('word'));
+    expect(order.indexOf('strongbox')).toBeGreaterThan(order.indexOf('chest'));
+    expect(keyChains(f)).toContainEqual(['cache:atlas', 'cache:word', 'cache:end']);
+    expect(keyChains(f)).toContainEqual(['cache:box', 'drawer:underground']);
+    expect(keyChains(f)).toContainEqual(['cache:box', 'drawer:returned']);
+  });
+  it('a word opens its cluster cache; the page keeps only a hash', () => {
+    const f = places();
+    const w = f.caches.find((c) => c.id === 'word')!;
+    expect(cacheByWord(f, ' StoreRoom ')?.id).toBe('word');
+    expect(cacheByWord(f, 'store')).toBeUndefined();
+    w.hidden = { at: 'cluster', via: 'configmap', hash: wordHash('storeroom') };
+    expect(cacheByWord(f, 'storeroom')?.id).toBe('word');
+    expect(wordHash('storeroom')).toMatch(/^[0-9a-f]{8}$/);
+    expect(wordHash('storeroom')).not.toBe(wordHash('storerooms'));
   });
 });
