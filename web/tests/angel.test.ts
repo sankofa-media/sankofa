@@ -220,7 +220,7 @@ describe('the pulse page link', () => {
 describe('the Angel content', () => {
   const f = parse(readFileSync('../content/features/angel/feature.yaml', 'utf8')) as FeatureSource;
   it('keeps the scenes in the order of the track', () => {
-    expect(f.scenes.map((s) => s.id)).toEqual(['line', 'kingston', 'then-now', 'bristol', 'studio', 'olympic', 'voice', 'strata', 'break', 'crowd', 'beetle', 'screens', 'afterlife', 'spiral', 'fall', 'warm']);
+    expect(f.scenes.map((s) => s.id)).toEqual(['line', 'kingston', 'then-now', 'bristol', 'studio', 'olympic', 'voice', 'strata', 'break', 'crowd', 'beetle', 'screens', 'afterlife', 'warm']);
   });
   it('never says whose the pulse is', () => {
     const all = JSON.stringify(f.ui) + JSON.stringify(f.scenes);

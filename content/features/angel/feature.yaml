@@ -89,6 +89,14 @@ art:
     credit: { en: "Photo: Carlos Martínez, CC BY-SA 2.0", ru: "Фото: Carlos Martínez, CC BY-SA 2.0" }
     source: https://commons.wikimedia.org/wiki/File:Angelo_Bruschini.jpg
     license_url: https://creativecommons.org/licenses/by-sa/2.0
+  - id: mezzanine-cover
+    kind: photo
+    file: angel-mezzanine-cover.jpg
+    rights: angel-mezzanine-cover.jpg
+    alt: { en: "The cover of Mezzanine: a black stag beetle on white", ru: "Обложка «Mezzanine»: чёрный жук-олень на белом" }
+    caption: { en: "The cover of “Mezzanine”, Virgin Records, 1998", ru: "Обложка «Mezzanine», Virgin Records, 1998 год" }
+    credit: { en: "Photograph by Nick Knight; art direction and design by Robert Del Naja and Tom Hingston. © Massive Attack / Virgin Records, quoted in a review", ru: "Фотография Ника Найта; оформление Роберта Дель Ная и Тома Хингстона. © Massive Attack / Virgin Records, цитируется в обзоре" }
+    source: https://en.wikipedia.org/wiki/File:Massive_Attack_-_Mezzanine.png
   - id: beetle-plate
     kind: photo
     file: angel-beetle-plate-1884.jpg
@@ -133,11 +141,17 @@ ui:
   strata-drums: { en: "Drums", ru: "Барабаны" }
   strata-voice: { en: "Voice", ru: "Голос" }
   strata-guitar: { en: "Guitars", ru: "Гитары" }
+  strata-sound-note:
+    en: "The sound of these layers is our own sketch, not Massive Attack's recording."
+    ru: "Звук этих слоёв — наш собственный набросок, а не запись Massive Attack."
   progress: { en: "How far you are", ru: "Сколько прочитано" }
   # The warm last screen and the pulse page. The pulse belongs to no one:
   # never say whose it is.
+  invite-lead:
+    en: "For almost thirty years this song has played at concerts, in films and in other people's headphones, and for many it has become a song about their own love. If you are in love right now, if you miss someone or have lost someone close, you are not alone. Open the page on your phone, put your finger or your palm on the screen and feel the heartbeats of the other people who were here before you. There you can also say what was never said, and leave your own heartbeat."
+    ru: "Почти тридцать лет эта песня звучит на концертах, в кино и в чужих наушниках, и для многих она стала песней об их собственной любви. Если ты сейчас любишь, скучаешь или потерял близкого человека, ты не один. Открой страницу на телефоне, приложи к экрану палец или ладонь и почувствуй, как бьются сердца других людей, которые были здесь до тебя. Там же можно сказать то, что так и не было сказано, и оставить своё сердцебиение."
   invite: { en: "You are not alone. Feel the pulse.", ru: "Ты не один. Почувствуй пульс." }
-  invite-qr: { en: "Point your phone's camera at the code", ru: "Наведи камеру телефона на код" }
+  invite-qr: { en: "Point your phone's camera at the code to open the page", ru: "Наведи камеру телефона на код, чтобы открыть страницу" }
   invite-here: { en: "Feel it", ru: "Почувствовать" }
   pulse-touch: { en: "Put your finger or your palm on the screen if things are hard right now.", ru: "Приложи палец или ладонь, если тебе сейчас тяжело." }
   pulse-others: { en: "{n} more here now", ru: "Сейчас здесь ещё {n}" }
@@ -327,7 +341,7 @@ scenes:
         role: text
         draft: false
         en: By his own account, Andy was never paid for this song. Half a century later he said that Bunny Lee was not a producer but a financier, who never paid him and sold his recordings to Trojan. Answering him, the company BMG said that those licences had expired long ago.
-        ru: Денег за эту песню Энди, по его словам, так и не получил. Через полвека он скажет, что Банни Ли был не продюсером, а финансистом: ничего ему не заплатил и продал его записи лейблу Trojan. Компания BMG, отвечая на эти слова, сообщила, что те лицензии давно истекли.
+        ru: "Денег за эту песню Энди, по его словам, так и не получил. Через полвека он скажет, что Банни Ли был не продюсером, а финансистом: ничего ему не заплатил и продал его записи лейблу Trojan. Компания BMG, отвечая на эти слова, сообщила, что те лицензии давно истекли."
 
   # ------------------------------------------------ Act II. The voice
   - id: bristol
@@ -400,7 +414,7 @@ scenes:
       - id: trio
         role: text
         draft: false
-        en: By the third album there were three people left in Massive Attack: Robert Del Naja, Grant Marshall and Andrew Vowles. The producer Neil Davidge became almost a fourth member; he was hired for six months and stayed, he says, for three years. They recorded in Bristol, in the band's own studio and at Christchurch Studios, and for a while in a holiday cottage in Cornwall.
+        en: "By the third album there were three people left in Massive Attack: Robert Del Naja, Grant Marshall and Andrew Vowles. The producer Neil Davidge became almost a fourth member; he was hired for six months and stayed, he says, for three years. They recorded in Bristol, in the band's own studio and at Christchurch Studios, and for a while in a holiday cottage in Cornwall."
         ru: "К третьему альбому в Massive Attack оставалось три человека: Роберт Дель Ная, Грант Маршалл и Эндрю Воулз. Почти четвёртым участником стал продюсер Нил Дэвидж: его наняли на полгода, а остался он, по его словам, на три года. Альбом записывали в Бристоле, в собственной студии группы и на студии Christchurch, а какое-то время в снятом на лето коттедже в Корнуолле."
       - id: apart
         role: text
@@ -437,7 +451,7 @@ scenes:
       - id: angel
         role: text
         draft: false
-        en: So, as Del Naja told it, they stripped the music down almost to nothing and followed what Horace himself suggested: instead of The Clash's song he sang a melody and words taken largely from his own song of 1973, “You Are My Angel”. When Andy first sang the song in the studio, Davidge remembers, all he could say was that it was magic. As for “Straight to Hell”, Andy did record it after all, twenty years later: he released it in 2017 together with Big Youth.
+        en: "So, as Del Naja told it, they stripped the music down almost to nothing and followed what Horace himself suggested: instead of The Clash's song he sang a melody and words taken largely from his own song of 1973, “You Are My Angel”. When Andy first sang the song in the studio, Davidge remembers, all he could say was that it was magic. As for “Straight to Hell”, Andy did record it after all, twenty years later: he released it in 2017 together with Big Youth."
         ru: "Тогда, как рассказывал Дель Ная, музыку разобрали почти до основания и пошли за тем, что предложил сам Хорас: вместо песни The Clash он спел мелодию и слова, взятые во многом из его же песни 1973 года, «You Are My Angel». Когда Энди впервые спел эту песню в студии, Дэвидж, как он сам вспоминает, только и сказал: «Это волшебство». А «Straight to Hell» Энди всё-таки записал, двадцать лет спустя: в 2017 году он выпустил её вместе с Биг Ютом."
 
   - id: voice
@@ -468,13 +482,12 @@ scenes:
       - id: falsetto
         role: text
         draft: false
-        en: Andy has a high falsetto that people know from the first note, and long notes with a low, slow vibrato. On “Mezzanine”, the AllMusic critic wrote, he left the safe waters of reggae. The Guardian singles out his call of love, repeated over and over in this song, as something you do not forget.
+        en: Andy has a high falsetto that people know from the first note, and long notes with a low, slow vibrato. On “Mezzanine”, the AllMusic critic wrote, he went far beyond the familiar bounds of reggae. The Guardian writes that his declaration of love, which he repeats over and over in this song, is impossible to forget.
         ru: У Энди высокий фальцет, который узнают с первой ноты, и долгие ноты с низким, медленным вибрато. На «Mezzanine», писал критик AllMusic, он вышел далеко за привычные пределы регги. The Guardian пишет, что его признание в любви, которое он повторяет в этой песне снова и снова, невозможно забыть.
 
   - id: strata
     kind: strata
     act: 2
-    photo: bruschini
     art:
       generated: true
       aspect: "3 / 2"
@@ -496,34 +509,25 @@ scenes:
       - id: skeleton
         role: text
         draft: false
-        en: At first the song was put together on a computer: its rhythm and parts were programmed rather than played. Davidge describes going through parts and samples and throwing them out one after another. Then live musicians played over that computer draft, among them the guitarist Angelo Bruschini, and suddenly, Davidge says, it was something dark, made for a club and romantic all at once, with very heavy guitars and drums.
-        ru: Сначала песню собирали на компьютере: ритм и партии в ней были запрограммированы, а не сыграны. Дэвидж рассказывает, как они перебирали разные партии и сэмплы и выбрасывали их один за другим. Потом поверх этой компьютерной заготовки сыграли живые музыканты, среди них гитарист Анджело Брускини, и вдруг, по словам Дэвиджа, получилось что-то тёмное, клубное и романтическое разом, с очень тяжёлыми гитарами и барабанами.
+        en: "At first the song was put together on a computer: its rhythm and parts were programmed rather than played. Davidge describes going through parts and samples and throwing them out one after another. Then live musicians played over that computer draft, among them the guitarist Angelo Bruschini, and suddenly, Davidge says, it was something dark, made for a club and romantic all at once, with very heavy guitars and drums."
+        ru: "Сначала песню собирали на компьютере: ритм и партии в ней были запрограммированы, а не сыграны. Дэвидж рассказывает, как они перебирали разные партии и сэмплы и выбрасывали их один за другим. Потом поверх этой компьютерной заготовки сыграли живые музыканты, среди них гитарист Анджело Брускини, и вдруг, по словам Дэвиджа, получилось что-то тёмное, клубное и романтическое разом, с очень тяжёлыми гитарами и барабанами."
       - id: not-the-same
         role: text
         draft: false
-        en: Even that was not yet the final version. At the final mix at Olympic they decided to bring in one more bass line and changed the rhythm patterns, so that, says Davidge, it certainly was not the same song any more. The credits name four writers, Del Naja, Marshall, Vowles and Hinds, that is, Horace Andy. The song runs six minutes and eighteen seconds, and its opening rests on a bass you feel in your body more than you hear: the hi-fi magazine What Hi-Fi? has long kept it among its regular test tracks for subwoofers.
-        ru: "Но и это была ещё не окончательная версия. Уже на финальном сведении в Olympic музыканты решили добавить ещё одну басовую линию и поменяли ритмический рисунок, так что, говорит Дэвидж, это была уже точно не та песня. Авторами песни в выходных данных значатся четыре человека: Дель Ная, Маршалл, Воулз и Хайндс, то есть Хорас Энди. Длится песня шесть минут восемнадцать секунд, а её вступление построено на басе, который скорее чувствуешь телом, чем слышишь: журнал What Hi-Fi? давно проверяет на этой песне сабвуферы."
+        en: "Even that was not yet the final version. At the final mix at Olympic they decided to bring in one more bass line and changed the rhythm patterns, so that, says Davidge, it was certainly no longer the song they had recorded before the mix. The credits name four writers, Del Naja, Marshall, Vowles and Hinds, that is, Horace Andy. The song runs six minutes and eighteen seconds, and its opening rests on a bass you feel in your body more than you hear: the hi-fi magazine What Hi-Fi? has long kept it among its regular test tracks for subwoofers."
+        ru: "Но и это была ещё не окончательная версия. Уже на финальном сведении в Olympic музыканты решили добавить ещё одну басовую линию и поменяли ритмический рисунок, так что, говорит Дэвидж, это была уже совсем не та песня, что они записали до сведения. Авторами песни в выходных данных значатся четыре человека: Дель Ная, Маршалл, Воулз и Хайндс, то есть Хорас Энди. Длится песня шесть минут восемнадцать секунд, а её вступление построено на басе, который скорее чувствуешь телом, чем слышишь: журнал What Hi-Fi? давно проверяет на этой песне сабвуферы."
 
   # ------------------------------------------------ Act III. The breakdown
   - id: break
     kind: break
     act: 3
-    art:
-      generated: true
-      aspect: "3 / 2"
-      layers:
-        - file: break-v1-cracks.webp
-          alt: { en: "A screen cracked from its centre", ru: "Экран, расколотый из центра" }
-        - file: break-v1-shards.webp
-          alt: ""
-        - file: break-v1-flash.webp
-          alt: ""
+    photo: bruschini
     blocks:
       - id: guitars
         role: text
         draft: false
-        en: In the middle of the song the guitars come in, and everything that until then rested on the bass and the voice gives way. A love song from 1973 sounds here like what the AllMusic critic called perhaps the darkest and heaviest song Massive Attack ever recorded.
-        ru: В середине песни вступают гитары, и всё, что до этого держалось на басе и голосе, обрушивается. Любовная песня 1973 года звучит здесь так, что критик AllMusic назвал её, может быть, самой тёмной и тяжёлой вещью, какую Massive Attack когда-либо записывали.
+        en: In the middle of the song Angelo Bruschini's guitars come in, and the sound, which until then rested on the bass, the drums and the voice, turns dense and heavy. A love song of 1973 sounds here like what the AllMusic critic called perhaps the darkest and heaviest song Massive Attack have ever recorded.
+        ru: В середине песни вступают гитары Анджело Брускини, и звук, который до этого держался на басе, барабанах и голосе, становится плотным и тяжёлым. Песня о любви 1973 года звучит здесь так, что критик AllMusic назвал её, пожалуй, самой тёмной и тяжёлой вещью, какую Massive Attack когда-либо записывали.
 
   - id: crowd
     kind: crowd
@@ -561,29 +565,18 @@ scenes:
       - id: release
         role: text
         draft: false
-        en: “Mezzanine” came out on 20 April 1998 and went straight to number one in Britain. “Angel” followed as a single on 13 July and reached number thirty, then fell to sixty the next week.
-        ru: «Mezzanine» вышел 20 апреля 1998 года и сразу поднялся на первое место в Британии. «Angel» вышла синглом 13 июля, добралась до тридцатого места и через неделю опустилась на шестидесятое.
+        en: The album “Mezzanine” came out on 20 April 1998 and went straight to number one in the British charts. The single “Angel”, released on 13 July, got no higher than number thirty and fell to sixty a week later. It never became a hit in the usual sense, which makes it all the more remarkable that this is the song the band would go on to play in concert more than any other.
+        ru: Альбом «Mezzanine» вышел 20 апреля 1998 года и сразу занял первое место в британском хит-параде. А сингл «Angel», вышедший 13 июля, поднялся только до тридцатого места и уже через неделю опустился на шестидесятое. Хитом в обычном смысле слова песня так и не стала, и тем удивительнее, что именно её группа потом будет играть на концертах чаще всех остальных.
       - id: video
         role: text
         draft: false
-        en: "The video was directed by Walter Stern for Academy Films, the second of his three for the band, between “Risingson” and “Teardrop”. In it a man gets out of a car in a multi-storey car park, and one person, then two, then more and more begin to follow him. He walks faster, goes out into the open, the crowd keeps growing, and at the end he stops and turns to face it. The official video can be watched in the player."
-        ru: "Клип снял Уолтер Стерн для студии Academy Films — второй из трёх его клипов для группы, между «Risingson» и «Teardrop». Человек выходит из машины на многоуровневой парковке, и за ним начинают идти — сначала один, потом двое, потом всё больше. Он ускоряет шаг, выходит на открытое место, толпа растёт, а в самом конце он останавливается и поворачивается к ней лицом. Официальный клип можно посмотреть в плеере."
+        en: "The video was directed by Walter Stern for Academy Films; for Massive Attack he also made the videos for “Risingson” and “Teardrop”. In it a man gets out of a car in a multi-storey car park, and one person, then two, then more and more begin to follow him. He walks faster, goes out into the open, the crowd keeps growing, and at the end he stops and turns to face it."
+        ru: "Клип снял Уолтер Стерн для студии Academy Films; для Massive Attack он снял ещё клипы на «Risingson» и «Teardrop». Человек выходит из машины на многоуровневой парковке, и за ним начинают идти — сначала один, потом двое, потом всё больше. Он ускоряет шаг, выходит на открытое место, толпа растёт, а в самом конце он останавливается и поворачивается к ней лицом."
 
   - id: beetle
     kind: beetle
     act: 3
-    photo: beetle-plate
-    art:
-      generated: true
-      aspect: "1 / 1"
-      layers:
-        - file: beetle-v1-shadow.webp
-          depth: 6
-          alt: ""
-        - file: beetle-v1-beetle.webp
-          depth: 14
-          role: figure
-          alt: { en: "A stag beetle drawn in ink", ru: "Жук-олень, нарисованный тушью" }
+    photo: mezzanine-cover
     blocks:
       - id: kicker
         role: kicker
@@ -593,8 +586,8 @@ scenes:
       - id: cover
         role: text
         draft: false
-        en: "The sleeve of “Mezzanine” is a black stag beetle on white. The photograph is by Nick Knight; the art direction and design are by Robert Del Naja and Tom Hingston. The Museum of Modern Art in New York keeps the sleeve in its architecture and design collection. We do not reproduce it here: the beetles on this page come from a German book on insects of 1884, and from our own drawing."
-        ru: "На обложке «Mezzanine» — чёрный жук-олень на белом. Фотографию сделал Ник Найт, оформление придумали Роберт Дель Ная и Том Хингстон. Нью-йоркский Музей современного искусства хранит этот конверт в своей коллекции архитектуры и дизайна. Здесь мы его не воспроизводим: жуки на этой странице — из немецкой книги о насекомых 1884 года и с нашего рисунка."
+        en: "The sleeve of “Mezzanine” is a black stag beetle on white. The photograph is by Nick Knight; the art direction and design are by Robert Del Naja and Tom Hingston. The Museum of Modern Art in New York keeps the sleeve in its architecture and design collection."
+        ru: "На обложке «Mezzanine» — чёрный жук-олень на белом. Фотографию сделал Ник Найт, оформление придумали Роберт Дель Ная и Том Хингстон. Нью-йоркский Музей современного искусства хранит этот конверт в своей коллекции архитектуры и дизайна."
 
   # ------------------------------------------------ Act IV. The fade that does not end
   - id: screens
@@ -622,12 +615,19 @@ scenes:
       - id: snatch
         role: text
         draft: false
-        en: Soon film and television began to use the song. In Guy Ritchie's “Snatch” of 2000 it plays in the amusement arcade and in the scene where a caravan burns, and it is on the soundtrack album. The Guardian writes that “Mezzanine” supplied countless film and television directors with three songs at once, “Angel”, “Teardrop” and “Inertia Creeps”.
-        ru: "Вскоре песню стали брать в кино и на телевидение. В «Большом куше» Гая Ричи 2000 года она звучит в зале игровых автоматов и в сцене, где горит фургон, и есть на альбоме саундтрека. The Guardian пишет, что «Mezzanine» дал бесчисленным режиссёрам кино и телевидения сразу три песни: «Angel», «Teardrop» и «Inertia Creeps»."
+        en: Soon film and television began to use the song. In Guy Ritchie's “Snatch” of 2000 it plays in the amusement arcade and in the scene where a caravan burns, and it is on the soundtrack album. The Guardian writes that three songs from “Mezzanine”, “Angel”, “Teardrop” and “Inertia Creeps”, were later taken up by countless film and television directors.
+        ru: "Вскоре песню стали брать в кино и на телевидение. В «Большом куше» Гая Ричи 2000 года она звучит в зале игровых автоматов и в сцене, где горит фургон, и есть на альбоме саундтрека. The Guardian пишет, что три песни с «Mezzanine», «Angel», «Teardrop» и «Inertia Creeps», потом брали в свои фильмы и сериалы бесчисленные режиссёры."
 
   - id: afterlife
     kind: afterlife
     act: 4
+    # Official uploads only (the artists', their labels' or the concert publishers' own channels).
+    versions:
+      - { youtube: vffamzeOOTM, en: "Horace Andy, “You Are My Angel”, live in Sydney", ru: "Хорас Энди, «You Are My Angel», концерт в Сиднее" }
+      - { youtube: 9fOoKV3x3MA, en: "Massive Attack v Mad Professor, “Angel (Angel Dust)”, made in 1998, released in 2019", ru: "Massive Attack и Мэд Профессор, «Angel (Angel Dust)», сделана в 1998-м, вышла в 2019-м" }
+      - { youtube: z0VtqHugrKs, en: "Sepultura, “Angel”, 2002", ru: "Sepultura, «Angel», 2002" }
+      - { youtube: 5VaRCjRpWBE, en: "Leprous, “Angel”, 2019", ru: "Leprous, «Angel», 2019" }
+      - { youtube: Idi5PDNETSs, en: "Grian Chatten, “Angel”, 2026", ru: "Гриан Чаттен, «Angel», 2026" }
     photo: mezzanine-xxi
     blocks:
       - id: kicker
@@ -638,13 +638,13 @@ scenes:
       - id: title
         role: title
         draft: false
-        en: It does not end
-        ru: Она не кончается
+        en: A song still being played
+        ru: Песня, которую играют до сих пор
       - id: berlin
         role: text
         draft: false
-        en: The band first played “Angel” at a concert in Berlin on 8 July 1997, months before the record came out, so the song lived on stage before anyone could buy it. By the fans' count on setlist.fm it is the song Massive Attack have played more than any other, nearly five hundred times; the latest show on record was in Melbourne in August 2026.
-        ru: Впервые группа сыграла «Angel» на концерте в Берлине 8 июля 1997 года, за несколько месяцев до выхода пластинки, так что песня жила на сцене раньше, чем её можно было купить. По подсчётам поклонников на сайте setlist.fm, это песня, которую Massive Attack играли чаще всех остальных, почти пятьсот раз; последний из учтённых там концертов прошёл в Мельбурне в августе 2026 года.
+        en: The band first played “Angel” at a concert in Berlin on 8 July 1997, months before the record came out, so the song's life on stage began before anyone could buy it. By the fans' count on setlist.fm the band has played it in concert nearly five hundred times, more often than any other song of theirs. The latest of those concerts was in Melbourne in August 2026.
+        ru: Впервые группа сыграла «Angel» на концерте в Берлине 8 июля 1997 года, за несколько месяцев до выхода пластинки, так что концертная жизнь песни началась раньше, чем её можно было купить. По подсчётам поклонников на сайте setlist.fm, группа играла её на концертах почти пятьсот раз, чаще любой другой своей песни. Последний из учтённых там концертов прошёл в Мельбурне в августе 2026 года.
       - id: dub
         role: text
         draft: false
@@ -655,41 +655,6 @@ scenes:
         draft: false
         en: And Horace Andy still sings it with the band. In June 2025, in his seventies, he sang it at their concert in London, and reviewers named it a high point of the night.
         ru: А Хорас Энди всё ещё поёт её с группой. В июне 2025 года, когда ему было за семьдесят, он спел её на их лондонском концерте, и рецензенты назвали её лучшим моментом вечера.
-
-  - id: spiral
-    kind: spiral
-    act: 4
-    photo: lathe
-    art:
-      generated: true
-      aspect: "1 / 1"
-      layers:
-        - file: spiral-v1-glow.webp
-          alt: ""
-        - file: spiral-v1-groove.webp
-          role: spin
-          spin: { x: 50, y: 50, ratio: 1 }
-          alt: { en: "A single spiral groove, turning slowly", ru: "Одна спиральная канавка, медленно вращается" }
-    blocks:
-      - id: groove
-        role: text
-        draft: false
-        en: The groove of a record is a single spiral that runs from the edge towards the centre. With this song it has not reached the centre yet.
-        ru: Канавка пластинки — одна спираль, которая идёт от края к центру. У этой песни она до центра пока не дошла.
-
-  - id: fall
-    kind: fall
-    act: 4
-    silent: true
-    art:
-      generated: true
-      aspect: "3 / 2"
-      layers:
-        - file: fall-v1-static.webp
-          alt: ""
-        - file: fall-v1-particles.webp
-          alt: ""
-    blocks: []
 
   # ------------------------------------------------ The last screen
   - id: warm

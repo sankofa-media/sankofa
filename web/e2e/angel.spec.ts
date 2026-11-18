@@ -2,23 +2,22 @@ import { expect, test, type Page } from '@playwright/test';
 
 const SHOTS = process.env.ANGEL_SHOTS;
 
-const SCENES = ['line', 'kingston', 'then-now', 'bristol', 'studio', 'olympic', 'voice', 'strata', 'break', 'crowd', 'beetle', 'screens', 'afterlife', 'spiral', 'fall', 'warm'];
+const SCENES = ['line', 'kingston', 'then-now', 'bristol', 'studio', 'olympic', 'voice', 'strata', 'break', 'crowd', 'beetle', 'screens', 'afterlife', 'warm'];
 /** A line of each scene's text (the silent ones have none), in both languages. */
 const LINES: Record<string, [string, string]> = {
-  line: ['What Hi-Fi?', 'What Hi-Fi?'],
+  line: ['The song that was never meant to be', 'Песня, которой не должно было быть'],
   kingston: ['A new name', 'Новое имя'],
   'then-now': ['light and unhurried', 'светлая и неторопливая'],
   bristol: ['it turned out it was me', 'оказалось, что ищут меня'],
   studio: ['Three people in different rooms', 'Трое в разных комнатах'],
-  olympic: ['A song that was not in the plan', 'Песня, которой не было в плане'],
+  olympic: ['A song that was not in the plan', 'Песня, которой не было в планах'],
   voice: ['high falsetto', 'высокий фальцет'],
-  strata: ['programmed skeleton', 'запрограммированный скелет'],
-  break: ['the guitars come in', 'входят гитары'],
+  strata: ['programmed rather than played', 'запрограммированы, а не сыграны'],
+  break: ['Angelo Bruschini’s guitars come in', 'вступают гитары Анджело Брускини'],
   crowd: ['Walter Stern', 'Уолтер Стерн'],
   beetle: ['Nick Knight', 'Ник Найт'],
   screens: ['Snatch', 'Большом куше'],
-  afterlife: ['It does not end', 'Она не кончается'],
-  spiral: ['single spiral', 'одна спираль'],
+  afterlife: ['A song still being played', 'Песня, которую играют до сих пор'],
 };
 
 const RR = Array.from({ length: 40 }, (_, i) => 900 - i * 6);
@@ -90,7 +89,8 @@ for (const [lang, k] of [['en', 0], ['ru', 1]] as const) {
       // A picture in every scene, loaded as its scene comes near.
       const imgs = scene(page, id).locator('.ft-stage img');
       expect(await imgs.count(), id).toBeGreaterThan(0);
-      await expect.poll(() => imgs.first().evaluate((i) => (i as HTMLImageElement).complete && (i as HTMLImageElement).naturalWidth > 0), { message: id }).toBe(true);
+      // The video's cover comes from YouTube, which these tests keep offline.
+      if (id !== 'crowd') await expect.poll(() => imgs.first().evaluate((i) => (i as HTMLImageElement).complete && (i as HTMLImageElement).naturalWidth > 0), { message: id }).toBe(true);
       if (LINES[id]) await expect(scene(page, id).locator('.ft-flow'), id).toContainText(LINES[id][k]);
     }
     // The real photographs carry their credit and a link to their source.
@@ -99,7 +99,7 @@ for (const [lang, k] of [['en', 0], ['ru', 1]] as const) {
   });
 }
 
-test('the progress bar never shows the end, and the page fades back into the opening', async ({ page }) => {
+test('the progress bar never shows the end, and the page simply ends after the warm screen', async ({ page }) => {
   await mockApi(page, { first: false });
   await open(page);
   const bar = feature(page).locator('.an-progress');
@@ -109,18 +109,19 @@ test('the progress bar never shows the end, and the page fades back into the ope
   expect(now).toBeGreaterThan(90);
   expect(now).toBeLessThanOrEqual(99);
   expect(await bar.evaluate((e) => Number(getComputedStyle(e).getPropertyValue('--shown')))).toBeLessThanOrEqual(0.99);
-  // Scrolling on past the warm screen brings back the line.
+  // Scrolling to the very bottom stays at the bottom: no loop back to the opening.
   await sheet(page).evaluate((s) => (s.scrollTop = s.scrollHeight));
-  await expect.poll(() => sheet(page).evaluate((s) => s.scrollTop), { timeout: 5000 }).toBeLessThan(50);
-  await expect.poll(() => page.url()).toContain('scene=line');
+  await page.waitForTimeout(1500);
+  expect(await sheet(page).evaluate((s) => s.scrollTop)).toBeGreaterThan(100);
 });
 
-test('without a first pulse the warm screen says only the last line', async ({ page }) => {
+test('without a first pulse the warm screen still invites: the first pulse is left on the pulse page', async ({ page }) => {
   await mockApi(page, { first: false });
   await open(page, '#view=feature&item=angel&scene=warm');
-  await expect(scene(page, 'warm').locator('.an-last')).toHaveText('You are not alone.');
-  await expect(scene(page, 'warm').locator('.an-invite')).toBeHidden();
-  await expect(scene(page, 'warm').locator('.an-qr, .an-feel')).toHaveCount(0);
+  const warm = scene(page, 'warm');
+  await expect(warm.locator('.an-invite-lead')).toContainText('you are not alone');
+  await expect(warm.locator('.an-invite-line')).toHaveText('You are not alone. Feel the pulse.');
+  await expect(warm.locator('.an-last')).toBeHidden();
 });
 
 test('without the service at all the warm screen says only the last line, and nothing goes wrong', async ({ page }) => {
@@ -147,7 +148,7 @@ test('with a first pulse the warm screen invites: a QR code on a computer, a but
     const qr = warm.locator('svg.an-qr-code');
     await expect(qr).toBeVisible();
     expect(await qr.getAttribute('data-url')).toMatch(/#view=feature&item=angel&scene=warm&pulse=1$/);
-    await expect(warm.locator('.an-qr figcaption')).toHaveText('Point your phone’s camera at the code');
+    await expect(warm.locator('.an-qr figcaption')).toHaveText('Point your phone’s camera at the code to open the page');
   }
 });
 

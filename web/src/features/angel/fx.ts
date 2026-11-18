@@ -7,7 +7,7 @@
 // the end. Reduced motion keeps the light still, the type steady, the
 // scroll ordinary and the figures away; the narrowing stays, gently.
 import { h } from '../../lib/dom';
-import { shownProgress, squeeze, stickyCount, tremble, viscosity } from './mood';
+import { shownProgress, squeeze, stickyCount, tremble } from './mood';
 
 export interface MoodOptions {
   root: HTMLElement;
@@ -55,12 +55,9 @@ export class MoodFx {
     o.root.append(h('div.an-beat', { 'aria-hidden': 'true' }), this.wall, this.watcherBox);
 
     const onScroll = () => this.scrolled();
-    const onWheel = (e: WheelEvent) => this.wheel(e);
     o.scroller.addEventListener('scroll', onScroll, { passive: true });
-    o.scroller.addEventListener('wheel', onWheel, { passive: false });
     this.disposers.push(() => {
       o.scroller.removeEventListener('scroll', onScroll);
-      o.scroller.removeEventListener('wheel', onWheel);
     });
     this.scheduleWatcher();
   }
@@ -134,18 +131,6 @@ export class MoodFx {
     r.style.setProperty('--an-shake', this.shake.toFixed(3));
     r.style.setProperty('--an-jx', (Math.random() * 2 - 1).toFixed(2));
     this.raf = requestAnimationFrame(() => this.tremor());
-  }
-
-  /** A heavier scroll towards the breakdown: a wheel step moves the page less (never less than about half). */
-  private wheel(e: WheelEvent): void {
-    if (this.o.calm() || e.ctrlKey || e.metaKey || this.anxiety < 0.05) return;
-    const t = e.target as Element | null;
-    if (t?.closest('textarea, input, select, [contenteditable], .an-pulse')) return;
-    const k = viscosity(this.anxiety);
-    if (k >= 0.999) return;
-    e.preventDefault();
-    const unit = e.deltaMode === 1 ? 16 : e.deltaMode === 2 ? this.o.scroller.clientHeight : 1;
-    this.o.scroller.scrollTop += e.deltaY * unit * k;
   }
 
   // ---------- someone behind you ----------

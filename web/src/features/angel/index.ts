@@ -11,6 +11,7 @@ import { miniPlayer } from '../../views/miniPlayer';
 import type { FeatureContext, FeatureInstance } from '../host';
 import type { ArtLayer, Scene } from '../model';
 import { FlashGate } from '../model';
+import { StrataSound, type Stratum } from './strata-sound';
 import { onCalm } from '../engine/calm';
 import { Kit } from '../engine/kit';
 import { isPhone, qrSvg } from '../engine/qr';
@@ -26,7 +27,7 @@ import './angel.css';
 const DEVELOP = new Set<string>();
 /** Scenes whose photograph stands in the text column (the stage is busy with the mechanic). */
 // Every photo stands on its own in the text column, never over a drawing.
-const IN_FLOW = new Set(['kingston', 'then-now', 'bristol', 'studio', 'voice', 'strata', 'beetle', 'spiral']);
+const IN_FLOW = new Set(['kingston', 'then-now', 'bristol', 'studio', 'voice', 'strata', 'spiral']);
 /** The afterlife's photographs, each from the block it belongs to. */
 const AFTER_STEPS: { from: string; photo: string }[] = [
   { from: 'berlin', photo: 'mezzanine-xxi' },
@@ -96,6 +97,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
   const flowPhoto = (sc: Scene) => (IN_FLOW.has(sc.id) && sc.photo ? photo(String(sc.photo), 'an-inline') : null);
 
   let firstWord: HTMLElement | null = null;
+  let strataSound: StrataSound | null = null;
   let invite: HTMLElement | null = null;
   const gate = new FlashGate();
   let pulsePage: { open(): void; dispose(): void; isOpen: boolean } | null = null;
@@ -169,6 +171,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         clean.setAttribute('aria-hidden', 'true');
         const pic = picture(sc, clean);
         const stacked = new Set<string>();
+        strataSound = new StrataSound(BPM_1998);
         const live = h('p.ft-visually-hidden', { 'aria-live': 'polite' });
         const buttons = STRATA.map((k) => {
           const b = h('button.btn.an-stratum', { type: 'button', 'aria-pressed': 'false', 'data-stratum': k }, kit.ui(`strata-${k}`)) as HTMLButtonElement;
@@ -176,11 +179,12 @@ export function mount(ctx: FeatureContext): FeatureInstance {
             if (stacked.has(k)) stacked.delete(k);
             else stacked.add(k);
             b.setAttribute('aria-pressed', String(stacked.has(k)));
+            strataSound?.set(k as Stratum, stacked.has(k));
             paintStrata();
           });
           return b;
         });
-        const el = scene(sc, pic?.el ?? null, { after: [h('p.ft-hint', {}, kit.ui('strata-hint')), h('div.an-strata-btns', {}, ...buttons), live, flowPhoto(sc)], screens: 1.4 });
+        const el = scene(sc, pic?.el ?? null, { after: [h('p.ft-hint', {}, kit.ui('strata-hint')), h('div.an-strata-btns', {}, ...buttons), h('p.ft-hint.an-strata-note', {}, kit.ui('strata-sound-note')), live, flowPhoto(sc)], screens: 1.4 });
         const svg = el.querySelector<SVGSVGElement>('svg.an-clean');
         const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         svg?.append(path);
@@ -207,18 +211,49 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         draw();
         return el;
       }
+      case 'beetle': {
+        // The album's own cover, as every review of it shows.
+        return scene(sc, sc.photo ? photo(String(sc.photo), 'an-stage-photo.an-cover') : null, { screens: 1 });
+      }
       case 'break': {
-        const el = scene(sc, picture(sc)?.el ?? null, { screens: 1.5, long: false });
-        el.classList.add('an-full');
-        return el;
+        // The guitars come in: the man who played them, not a metaphor.
+        return scene(sc, sc.photo ? photo(String(sc.photo), 'an-stage-photo') : null, { screens: 1.5, long: false });
       }
       case 'crowd': {
-        const el = scene(sc, picture(sc)?.el ?? null, { after: [playButton(VIDEO, pick({ en: 'The official video', ru: 'Официальный клип' }))], screens: 1.6 });
+        // The official video itself, large: its cover first, the player only when the reader asks for it.
+        const label = pick({ en: 'Play the official video', ru: 'Смотреть официальный клип' });
+        const cover = h('button.an-video-cover', { type: 'button', 'aria-label': label },
+          h('img', { src: `https://i.ytimg.com/vi/${VIDEO.youtube}/hqdefault.jpg`, alt: pick({ en: 'The official video of “Angel”', ru: 'Официальный клип «Angel»' }), decoding: 'async', draggable: 'false' }),
+          h('span.an-video-play', { 'aria-hidden': 'true' }, '▶'));
+        const box = h('div.ft-art.an-video', {}, cover);
+        cover.addEventListener('click', () => {
+          box.replaceChildren(h('iframe', {
+            src: `https://www.youtube-nocookie.com/embed/${VIDEO.youtube}?autoplay=1&rel=0`,
+            title: pick({ en: 'Massive Attack, “Angel”, official video', ru: 'Massive Attack, «Angel», официальный клип' }),
+            allow: 'autoplay; encrypted-media; picture-in-picture; fullscreen',
+            allowfullscreen: '',
+            loading: 'lazy',
+          }));
+        });
+        const el = scene(sc, box, { screens: 1.6 });
         return el;
       }
       case 'afterlife': {
         const box = h('div.ft-art.an-after', {}, ...AFTER_STEPS.map((s, i) => photo(s.photo, 'an-step', { 'data-step': String(i) })));
-        const el = scene(sc, box, { screens: 1 });
+        // The other lives of the song, each in its official player, side by side to swipe through.
+        const versions = ((sc.versions ?? []) as { youtube: string; en: string; ru: string }[]).map((v) => {
+          const title = pick(v);
+          const cover = h('button.an-video-cover', { type: 'button', 'aria-label': title },
+            h('img', { src: `https://i.ytimg.com/vi/${v.youtube}/hqdefault.jpg`, alt: '', decoding: 'async', loading: 'lazy', draggable: 'false' }),
+            h('span.an-video-play', { 'aria-hidden': 'true' }, '▶'));
+          const frame = h('div.an-video', {}, cover);
+          cover.addEventListener('click', () => {
+            frame.replaceChildren(h('iframe', { src: `https://www.youtube-nocookie.com/embed/${v.youtube}?autoplay=1&rel=0`, title, allow: 'autoplay; encrypted-media; picture-in-picture; fullscreen', allowfullscreen: '' }));
+          });
+          return h('figure.an-version', {}, frame, h('figcaption', {}, title));
+        });
+        const shelf = versions.length ? h('div.an-versions', {}, ...versions) : null;
+        const el = scene(sc, box, { after: [shelf], screens: 1 });
         el.dataset.step = '0';
         return el;
       }
@@ -237,10 +272,9 @@ export function mount(ctx: FeatureContext): FeatureInstance {
   };
 
   for (const sc of scenes) root.append(render(sc));
-  // After the warm screen the page does not end: scrolling on fades back into the bass of the opening.
+  // Where the reading ends (the progress bar counts up to here).
   const again = h('div.an-again', { 'aria-hidden': 'true' });
-  const returning = h('div.an-return', { 'aria-hidden': 'true' }, h('span.an-return-line'));
-  root.append(again, returning);
+  root.append(again);
 
   // ---------- the mood ----------
   const watchers = ((scenes.find((s) => s.id === 'crowd')?.art?.overlays ?? []) as ArtLayer[]).map((l) => ({ src: art(l.file), alt: l.alt === '' ? '' : pick(l.alt) }));
@@ -284,6 +318,8 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         const t = Number(el.style.getPropertyValue('--tn') || 0);
         beatAt(thenNowPeriod(t), 1 - t);
       } else beatAt(pulsePeriod(BPM_1998), sc.id === 'kingston' || sc.id === 'warm' ? 1 : 0);
+      if (sc.id === 'strata') strataSound?.resume();
+      else strataSound?.pause();
       if (sc.id === 'break') breakdown(el);
       if (sc.id === 'crowd') vibrate([90, 60, 90, 60, 90]);
     });
@@ -298,30 +334,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
     el.classList.add('an-flash');
   };
 
-  // ---------- the tail: back to the bass ----------
-  let back = false;
-  const tail = () => {
-    if (back) return;
-    const vh = ctx.scroller.clientHeight;
-    const top = again.getBoundingClientRect().top - ctx.scroller.getBoundingClientRect().top;
-    const t = Math.min(1, Math.max(0, 1 - top / vh));
-    returning.style.opacity = t.toFixed(3);
-    if (t < 0.97) return;
-    // Under the dark, back to the opening; then the dark lifts and the bass is there again.
-    back = true;
-    returning.style.opacity = '1';
-    ctx.scroller.scrollTo({ top: 0, behavior: 'auto' });
-    window.setTimeout(() => {
-      returning.classList.add('out');
-      returning.style.opacity = '0';
-      window.setTimeout(() => {
-        returning.classList.remove('out');
-        back = false;
-      }, calm() ? 0 : 1700);
-    }, 80);
-  };
-  ctx.scroller.addEventListener('scroll', tail, { passive: true });
-  cleanups.push(() => ctx.scroller.removeEventListener('scroll', tail));
+
 
   // ---------- the readers' words and the pulse ----------
   void api.words(lang()).then((ws) => {
@@ -334,11 +347,13 @@ export function mount(ctx: FeatureContext): FeatureInstance {
     }
   });
   void api.pulses().then((ps) => {
-    if (!ps?.first || !invite) return;
+    // The service answers: the pulse page works even before the first pulse (it is where that pulse is left).
+    if (!ps || !invite) return;
     const url = pulseUrl(location.origin + location.pathname, lang());
     const here = h('button.btn.primary.an-feel', { type: 'button' }, kit.ui('invite-here'));
     here.addEventListener('click', () => void openPulse());
     invite.replaceChildren(
+      h('p.an-invite-lead', {}, kit.ui('invite-lead')),
       h('p.ft-line.an-invite-line', {}, kit.ui('invite')),
       isPhone() ? here : h('figure.an-qr', {}, qrSvg(url, kit.ui('invite-qr'), 'an-qr-code'), h('figcaption', {}, kit.ui('invite-qr'))),
     );
@@ -357,6 +372,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
     dispose: () => {
       cleanups.forEach((c) => c());
       pulsePage?.dispose();
+      strataSound?.dispose();
       fx.dispose();
       kit.dispose();
     },
