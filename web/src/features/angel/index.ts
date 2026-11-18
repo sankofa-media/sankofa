@@ -19,14 +19,14 @@ import { MoodFx } from './fx';
 import { anxietyAt, crowdShown, thenNowPeriod, pulsePeriod, BPM_1998 } from './mood';
 import { ANDY, ANGEL, VIDEO, type Official } from './recordings';
 import { pulseUrl, wantsPulse } from './url';
-import { Oscilloscope } from './scope';
 import '../engine/engine.css';
 import './angel.css';
 
 /** Scenes whose real photograph develops out of the drawing as the reader goes on. */
-const DEVELOP = new Set(['kingston', 'bristol', 'studio', 'voice', 'beetle']);
+const DEVELOP = new Set<string>();
 /** Scenes whose photograph stands in the text column (the stage is busy with the mechanic). */
-const IN_FLOW = new Set(['then-now', 'strata', 'spiral']);
+// Every photo stands on its own in the text column, never over a drawing.
+const IN_FLOW = new Set(['kingston', 'then-now', 'bristol', 'studio', 'voice', 'strata', 'beetle', 'spiral']);
 /** The afterlife's photographs, each from the block it belongs to. */
 const AFTER_STEPS: { from: string; photo: string }[] = [
   { from: 'berlin', photo: 'mezzanine-xxi' },
@@ -95,7 +95,6 @@ export function mount(ctx: FeatureContext): FeatureInstance {
   const picture = (sc: Scene, overlay?: Node | null) => kit.art(sc, { overlay: overlay ?? (DEVELOP.has(sc.id) && sc.photo ? photo(String(sc.photo), 'an-develop', { 'data-develop-photo': '' }) : null) });
   const flowPhoto = (sc: Scene) => (IN_FLOW.has(sc.id) && sc.photo ? photo(String(sc.photo), 'an-inline') : null);
 
-  let scope: Oscilloscope | null = null;
   let firstWord: HTMLElement | null = null;
   let invite: HTMLElement | null = null;
   const gate = new FlashGate();
@@ -111,14 +110,22 @@ export function mount(ctx: FeatureContext): FeatureInstance {
   const render = (sc: Scene): HTMLElement => {
     switch (sc.kind) {
       case 'line': {
-        scope = new Oscilloscope(calm);
-        const pic = picture(sc, scope.el);
+        const pic = picture(sc);
         firstWord = h('p.an-first-word', { 'aria-hidden': 'true' });
-        const el = scene(sc, pic?.el ?? scope.el, {
+        const el = scene(sc, pic?.el ?? null, {
           after: [playButton(ANGEL, pick({ en: 'Massive Attack, “Angel”', ru: 'Massive Attack, «Angel»' })), firstWord],
           screens: 1.3,
           long: false,
         });
+        // The subtitle belongs to the title: one block, one line under it.
+        const title = el.querySelector('[data-block="title"]');
+        const sub = el.querySelector('[data-block="subtitle"]');
+        const line = sub?.firstElementChild;
+        if (title && sub && line) {
+          line.classList.add('an-subtitle');
+          title.append(line);
+          sub.remove();
+        }
         return el;
       }
       case 'then-now': {
@@ -139,7 +146,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         return el;
       }
       case 'studio': {
-        const el = scene(sc, picture(sc)?.el ?? null);
+        const el = scene(sc, picture(sc)?.el ?? null, { after: [flowPhoto(sc)] });
         // The three figures, cut apart, drift a little further from one another as the reader goes on.
         const fig = el.querySelector<HTMLElement>('.al[data-layer="studio-v1-figures"]');
         if (fig) {
@@ -277,8 +284,6 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         const t = Number(el.style.getPropertyValue('--tn') || 0);
         beatAt(thenNowPeriod(t), 1 - t);
       } else beatAt(pulsePeriod(BPM_1998), sc.id === 'kingston' || sc.id === 'warm' ? 1 : 0);
-      if (sc.id === 'line') scope?.start();
-      else scope?.stop();
       if (sc.id === 'break') breakdown(el);
       if (sc.id === 'crowd') vibrate([90, 60, 90, 60, 90]);
     });
@@ -351,7 +356,6 @@ export function mount(ctx: FeatureContext): FeatureInstance {
     current: () => kit.current(),
     dispose: () => {
       cleanups.forEach((c) => c());
-      scope?.dispose();
       pulsePage?.dispose();
       fx.dispose();
       kit.dispose();

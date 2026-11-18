@@ -236,17 +236,6 @@
 }
 
 /* Line: one white line in the empty room. */
-.ft-art .an-scope {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-.an-scope-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
 .an-first-word {
   margin: 0;
   font: italic 18px/1.4 var(--font-display);
@@ -999,4 +988,51 @@ body.an-pulse-on {
   .ap-text {
     transition: none;
   }
+}
+
+/* The opening: the subtitle sits right under the title, as one block. */
+.an .an-subtitle {
+  margin: 14px 0 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 300;
+  font-size: clamp(20px, 2.2vw, 30px);
+  line-height: 1.25;
+  color: var(--ft-ink-2);
+}
+/* The opening picture: the rain keeps falling, the lit window breathes with the bass. */
+.an [data-layer$='-rain'] img {
+  animation: an-rain 0.42s linear infinite;
+}
+@keyframes an-rain {
+  from {
+    transform: translateY(-3%);
+  }
+  to {
+    transform: translateY(3%);
+  }
+}
+.an [data-layer$='-window'] img {
+  animation: an-glow var(--an-period, 1.12s) ease-out infinite;
+}
+@keyframes an-glow {
+  0% {
+    opacity: 1;
+    filter: brightness(1.18);
+  }
+  60%,
+  100% {
+    opacity: 0.82;
+    filter: brightness(1);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .an [data-layer$='-rain'] img,
+  .an [data-layer$='-window'] img {
+    animation: none;
+  }
+}
+.is-calm .an [data-layer$='-rain'] img,
+.is-calm .an [data-layer$='-window'] img {
+  animation: none;
 }

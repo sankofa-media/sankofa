@@ -20,8 +20,8 @@ title:
   en: "Angel: the song that was never meant to be"
   ru: "Angel: песня, которой не должно было быть"
 dek:
-  en: "In 1973 a young singer in Kingston recorded a light love song. A quarter of a century later he sang it again in a London studio, and it became one of the darkest, heaviest songs of the decade. It has not stopped since."
-  ru: "В 1973 году молодой певец из Кингстона записал светлую песню о любви. Через четверть века он спел её снова, в лондонской студии, и она стала одной из самых тёмных и тяжёлых песен десятилетия. С тех пор она не кончается."
+  en: "In 1973 a young singer in Kingston recorded a light love song. A quarter of a century later he sang it again in a London studio, and it became one of the darkest, heaviest songs of the decade. In all the years since, it has never been used up."
+  ru: "В 1973 году молодой певец из Кингстона записал светлую песню о любви. Через четверть века он спел её снова, в лондонской студии, и она стала одной из самых тёмных и тяжёлых песен десятилетия. За все годы, что прошли с тех пор, её так и не исчерпали."
 
 # Real photographs, open licences only (sankofa-features/research/angel/media.yaml).
 # Each must also get its entry in content/ledger/media.yaml.
@@ -192,12 +192,20 @@ scenes:
       generated: true
       aspect: "3 / 2"
       layers:
-        - file: line-v1-room.webp
-          depth: 6
-          alt: { en: "An empty dark room with one window", ru: "Пустая тёмная комната с одним окном" }
-        - file: line-v1-speaker.webp
-          depth: 16
-          alt: { en: "The cone of a large loudspeaker at the bottom of the frame", ru: "Диффузор большого динамика внизу кадра" }
+        - file: window-v1-street.webp
+          depth: 4
+          alt: { en: "A narrow street of terraced houses at night, in heavy rain, under a streetlight", ru: "Узкая улица с домами в ряд, ночь, сильный дождь, фонарь" }
+        - file: window-v1-window.webp
+          depth: 4
+          alt: { en: "A single window lit with warm light on the first floor of the house opposite", ru: "Единственное окно, освещённое тёплым светом, на втором этаже дома напротив" }
+        - file: window-v1-man.webp
+          depth: 10
+          role: figure
+          pivot: "22 80"
+          alt: { en: "A man in a long coat stands under the streetlight with his back to us, looking up at the window", ru: "Мужчина в длинном плаще стоит под фонарём спиной к нам и смотрит вверх, на окно" }
+        - file: window-v1-rain.webp
+          depth: 14
+          alt: ""
     blocks:
       - id: kicker
         role: kicker
@@ -217,8 +225,8 @@ scenes:
       - id: bass
         role: lede
         draft: false
-        en: The hi-fi magazine What Hi-Fi? has long kept this song among its regular test tracks. Its opening, they write, demands power and control from a subwoofer, because it rests on a bass that you feel in your body more than you hear. But before it became a test for loudspeakers, it was a Jamaican love song, sung by a young man from Kingston in 1973. Nearly a quarter of a century later he sang it again, and it was a different song.
-        ru: Журнал What Hi-Fi? давно держит эту песню среди своих постоянных тестовых треков. Её вступление, пишут там, требует от сабвуфера мощи и выдержки, потому что держится на басе, который скорее чувствуешь телом, чем слышишь. Но прежде чем стать испытанием для динамиков, она была ямайской песней о любви, которую в 1973 году спел молодой парень из Кингстона. Почти через четверть века он спел её снова, и это была уже другая песня.
+        en: In 1973 a young singer from Kingston recorded a love song, light and unhurried. Nearly a quarter of a century later, in a London studio, he sang it again, though no one had planned that song for the album. It became one of the darkest and heaviest songs of its decade, and in all the years since it has never been used up.
+        ru: В 1973 году молодой певец из Кингстона записал песню о любви, светлую и неторопливую. Почти через четверть века, в лондонской студии, он спел её снова, хотя этой песни в планах альбома не было. Она стала одной из самых тёмных и тяжёлых песен десятилетия, и за все годы, что прошли с тех пор, её так и не исчерпали.
 
   - id: kingston
     kind: kingston
@@ -256,12 +264,12 @@ scenes:
         role: text
         draft: false
         en: Horace Hinds was born in Kingston, Jamaica. His cousin Justin Hinds was already a singer, and the boy boasted of him whenever Justin came on the radio. He listened to American soul first, and only later to Jamaican singers; Alton Ellis let him play his guitar. In 1970 he auditioned at Studio One for Clement Dodd, known as Coxsone, and sang him a song of his own, “Got To Be Sure”. Dodd gave him a new name, Horace Andy, after the singer Bob Andy, and also so that no one would compare him with his cousin.
-        ru: Хорас Хайндс родился в Кингстоне, на Ямайке. Его двоюродный брат Джастин Хайндс уже был певцом, и мальчик хвастался им всякий раз, когда того крутили по радио. Сначала он слушал американский соул и только потом ямайских певцов; Элтон Эллис давал ему поиграть на своей гитаре. В 1970 году он пришёл на прослушивание в Studio One к Клементу Додду по прозвищу Коксон и спел ему собственную песню «Got To Be Sure». Додд дал ему новое имя, Хорас Энди, в честь певца Боба Энди, а заодно чтобы никто не сравнивал его с братом.
+        ru: Хорас Хайндс родился в Кингстоне, на Ямайке. Его двоюродный брат Джастин Хайндс уже был певцом, и мальчик хвастался им всякий раз, когда песни брата звучали по радио. Сначала он слушал американский соул и только потом ямайских певцов; знаменитый певец Элтон Эллис давал ему поиграть на своей гитаре. В 1970 году он пришёл на прослушивание в Studio One к Клементу Додду по прозвищу Коксон и спел ему собственную песню «Got To Be Sure». Додд дал ему новое имя, Хорас Энди, в честь певца Боба Энди, а заодно чтобы никто не сравнивал его с братом.
       - id: university
         role: text
         draft: false
         en: Andy would later call Studio One his “school, my college, my university”. There he recorded “Skylarking”, which became his signature song and a number one in Jamaica.
-        ru: Позже Энди назовёт Studio One своей «школой, колледжем и университетом». Там он записал «Skylarking», песню, которая стала его визитной карточкой и поднялась на первое место в Ямайке.
+        ru: Позже Энди назовёт Studio One своей «школой, колледжем и университетом». Там он записал «Skylarking», песню, которая стала его визитной карточкой и поднялась на первое место на Ямайке.
 
   - id: then-now
     kind: then-now
@@ -314,12 +322,12 @@ scenes:
         role: text
         draft: false
         en: In 1973 his song “You Are My Angel” came out, in Jamaica as a small seven-inch on the Soul Sound label, and in England as the title track of an LP on Trojan. The producer was Bunny Lee, the sleeve names King Tubby's as the studio, and the songwriter credit is Andy's own. It is a love song, light and unhurried.
-        ru: "В 1973 году вышла его песня «You Are My Angel»: на Ямайке маленькой сорокапяткой лейбла Soul Sound, в Англии заглавной вещью долгоиграющей пластинки на лейбле Trojan. Продюсером был Банни Ли, студией на конверте значится студия Кинг Табби, автором песни — сам Энди. Это песня о любви, светлая и неторопливая."
+        ru: "В 1973 году вышла его песня «You Are My Angel»: на Ямайке маленькой сорокапяткой лейбла Soul Sound, в Англии заглавной вещью долгоиграющей пластинки на лейбле Trojan. Продюсером был Банни Ли, записана она, если верить конверту, в студии Кинг Табби, а автором песни значится сам Энди. Это песня о любви, светлая и неторопливая."
       - id: paid
         role: text
         draft: false
-        en: It brought its author little. Half a century later Andy said that Bunny Lee was not a producer but a financier, never paid him and sold his recordings to Trojan. BMG answers that those licences expired long ago.
-        ru: Автору она принесла немного. Через полвека Энди скажет, что Банни Ли был не продюсером, а финансистом, денег ему не платил и продал его записи Trojan. Компания BMG отвечает, что те лицензии давно истекли.
+        en: By his own account, Andy was never paid for this song. Half a century later he said that Bunny Lee was not a producer but a financier, who never paid him and sold his recordings to Trojan. Answering him, the company BMG said that those licences had expired long ago.
+        ru: Денег за эту песню Энди, по его словам, так и не получил. Через полвека он скажет, что Банни Ли был не продюсером, а финансистом: ничего ему не заплатил и продал его записи лейблу Trojan. Компания BMG, отвечая на эти слова, сообщила, что те лицензии давно истекли.
 
   # ------------------------------------------------ Act II. The voice
   - id: bristol
@@ -353,13 +361,13 @@ scenes:
       - id: favourite
         role: text
         draft: false
-        en: For Grant Marshall, known as Daddy G, of the Bristol group Massive Attack, Horace Andy was his favourite reggae singer. Andy himself was living in London by then. One day, on his way home to Peckham, he heard that some group was looking for a singer, “and it turned out it was me”. Daddy G sent him a cassette, and with the keyboard player Caroline Williams Andy wrote “One Love” for the group's first album, “Blue Lines”, in 1991. He has sung on every Massive Attack album since; no other guest voice of theirs can say that.
-        ru: Для Гранта Маршалла по прозвищу Daddy G из бристольской группы Massive Attack, Хорас Энди был любимым певцом регги. Сам Энди к тому времени жил в Лондоне. Однажды по дороге домой, в Пекхэм, он услышал, что какая-то группа ищет певца, — «и оказалось, что ищут меня». Daddy G прислал ему кассету, и вместе с клавишницей Кэролайн Уильямс Энди написал «One Love» для первого альбома группы, «Blue Lines», вышедшего в 1991 году. С тех пор он поёт на каждой их пластинке; ни один другой приглашённый голос Massive Attack этим похвастаться не может.
+        en: For Grant Marshall, known as Daddy G, of the Bristol group Massive Attack, Horace Andy was his favourite reggae singer. Andy himself was living in London by then. One day, on his way home to Peckham, he heard that some group was looking for a singer, “and it turned out it was me”. Daddy G sent him a cassette, and with the keyboard player Caroline Williams Andy wrote “One Love” for the group's first album, “Blue Lines”, in 1991. He has sung on every Massive Attack album since; no other guest vocalist of theirs can say that.
+        ru: Для Гранта Маршалла по прозвищу Daddy G из бристольской группы Massive Attack Хорас Энди был любимым певцом регги. Сам Энди к тому времени жил в Лондоне. Однажды по дороге домой, в Пекхэм, он услышал, что какая-то группа ищет певца, — «и оказалось, что ищут меня». Daddy G прислал ему кассету, и вместе с клавишницей Кэролайн Уильямс Энди написал «One Love» для первого альбома группы, «Blue Lines», вышедшего в 1991 году. С тех пор он поёт на каждой их пластинке; ни один другой приглашённый вокалист Massive Attack этим похвастаться не может.
       - id: freedom
         role: text
         draft: false
-        en: No reggae producer, Andy says, ever let him sing the way Massive Attack do. He does not like samplers, though, and teases that with them the band works slowly.
-        ru: Ни один продюсер регги, говорит Энди, не позволял ему петь так, как позволяют Massive Attack. Сэмплеры он, правда, не любит и посмеивается, что с ними группа работает медленно.
+        en: No reggae producer, Andy says, ever let him sing the way Massive Attack do.
+        ru: Ни один продюсер регги, говорит Энди, не позволял ему петь так, как позволяют Massive Attack.
 
   - id: studio
     kind: studio
@@ -392,13 +400,13 @@ scenes:
       - id: trio
         role: text
         draft: false
-        en: By the third album Massive Attack were three, Robert Del Naja, Grant Marshall and Andrew Vowles. The producer Neil Davidge became almost a fourth member; he was hired for six months and stayed, he says, for three years. They recorded in Bristol, in the band's own studio and at Christchurch Studios, and for a while in a holiday cottage in Cornwall.
-        ru: "К третьему альбому Massive Attack были втроём: Роберт Дель Ная, Грант Маршалл и Эндрю Воулз. Почти четвёртым участником стал продюсер Нил Дэвидж: его наняли на полгода, а остался он, по его словам, на три года. Записывались в Бристоле, в собственной студии группы и на студии Christchurch, а какое-то время в снятом на лето коттедже в Корнуолле."
+        en: By the third album there were three people left in Massive Attack: Robert Del Naja, Grant Marshall and Andrew Vowles. The producer Neil Davidge became almost a fourth member; he was hired for six months and stayed, he says, for three years. They recorded in Bristol, in the band's own studio and at Christchurch Studios, and for a while in a holiday cottage in Cornwall.
+        ru: "К третьему альбому в Massive Attack оставалось три человека: Роберт Дель Ная, Грант Маршалл и Эндрю Воулз. Почти четвёртым участником стал продюсер Нил Дэвидж: его наняли на полгода, а остался он, по его словам, на три года. Альбом записывали в Бристоле, в собственной студии группы и на студии Christchurch, а какое-то время в снятом на лето коттедже в Корнуолле."
       - id: apart
         role: text
         draft: false
-        en: "The work went badly. The three wrote their parts separately, recorded separately and gave interviews separately, and the manager texted Davidge to schedule who could use Christchurch when. Del Naja pulled the sound towards post-punk, and Vowles asked whether they had become a punk band. What finally broke them was “Teardrop”, which Vowles secretly sent to Madonna while the others wanted Elizabeth Fraser to sing it. Two decades later Marshall remembered the album as full of bad memories, and Del Naja summed it up in two words: the fight. Vowles left soon afterwards."
-        ru: "Работа шла тяжело. Трое писали свои партии порознь, порознь записывались и порознь давали интервью, а менеджер присылал Дэвиджу сообщения, чтобы развести их по студийному времени. Дель Ная тянул звук к постпанку, и Воулз спрашивал, не стали ли они панк-группой. Окончательно их рассорила «Teardrop»: Воулз тайком отправил её Мадонне, а остальные хотели, чтобы её спела Элизабет Фрейзер. Двадцать лет спустя Маршалл вспоминал этот альбом как время дурных воспоминаний, а Дель Ная назвал его коротко: драка. Вскоре после альбома Воулз ушёл."
+        en: "Work on the album went badly. The members of the band wrote their parts separately, recorded separately and gave interviews separately, and the manager texted Davidge to schedule who could use Christchurch when. Del Naja pulled the sound towards post-punk, and Vowles asked whether they had become a punk band. What finally broke them was “Teardrop”, which Vowles secretly sent to Madonna while the others wanted Elizabeth Fraser of Cocteau Twins to sing it. In the end Fraser sang it. Two decades later Marshall said that the album was bound up with a great deal of bad feeling for him, and Del Naja described that work in two words: the fight. And Vowles soon left the band."
+        ru: "Работа над альбомом шла тяжело. Участники группы писали свои партии порознь, порознь записывались и порознь давали интервью, а менеджер присылал Дэвиджу сообщения, чтобы развести их по студийному времени. Дель Ная тянул звук к постпанку, и Воулз спрашивал, не стали ли они панк-группой. Окончательно их рассорила «Teardrop»: Воулз тайком отправил её Мадонне, а остальные хотели, чтобы её спела Элизабет Фрейзер из Cocteau Twins. В итоге её и спела Фрейзер. Двадцать лет спустя Маршалл говорил, что с этим альбомом у него связано много тяжёлого, а Дель Ная описал ту работу одним словом: драка. А Воулз вскоре ушёл из группы."
 
   - id: olympic
     kind: olympic
@@ -420,17 +428,17 @@ scenes:
         role: title
         draft: false
         en: A song that was not in the plan
-        ru: Песня, которой не было в плане
+        ru: Песня, которой не было в планах
       - id: clash
         role: text
         draft: false
-        en: “Angel” was not in the plan for the album. Neil Davidge says it was plucked out of thin air during a mixing session at Olympic Studios in London. The idea had been to make a kind of cover of The Clash's “Straight to Hell” with Horace Andy singing, but Andy was not keen on singing the word “hell”.
-        ru: «Angel» не было в плане альбома. По словам Нила Дэвиджа, песню выхватили буквально из воздуха во время сведения в лондонской студии Olympic. Собирались сделать что-то вроде кавера на «Straight to Hell» группы The Clash с Хорасом Энди, но Энди не захотел петь слово «ад».
+        en: The song “Angel” was not in the original plan for the album. Neil Davidge says it was plucked out of thin air during a mixing session at Olympic Studios in London. The idea had been to make a kind of cover of The Clash's “Straight to Hell” with Horace Andy singing, but Andy was not keen on singing the word “hell”.
+        ru: Песни «Angel» не было в первоначальных планах альбома. По словам Нила Дэвиджа, песня родилась буквально из ничего, прямо во время сведения в лондонской студии Olympic. Группа собиралась записать с Хорасом Энди что-то вроде кавера на «Straight to Hell» группы The Clash, но Энди не захотел петь слово «ад».
       - id: angel
         role: text
         draft: false
-        en: So, as Del Naja told it, they stripped the music down almost to nothing, kept something of the old melody, added what Horace himself suggested and wrote new words. Andy took the melody and the words largely from his own song of 1973. When he had sung, Davidge remembers, all he could say was that it was magic.
-        ru: "Тогда, как рассказывал Дель Ная, музыку разобрали почти до основания, оставили кое-что от прежней мелодии, добавили то, что предложил сам Хорас, и написали новые слова. Мелодию и слова Энди взял во многом из своей же песни 1973 года. Когда он спел, Дэвидж, по его словам, смог сказать только одно: это волшебство."
+        en: So, as Del Naja told it, they stripped the music down almost to nothing and followed what Horace himself suggested: instead of The Clash's song he sang a melody and words taken largely from his own song of 1973, “You Are My Angel”. When Andy first sang the song in the studio, Davidge remembers, all he could say was that it was magic. As for “Straight to Hell”, Andy did record it after all, twenty years later: he released it in 2017 together with Big Youth.
+        ru: "Тогда, как рассказывал Дель Ная, музыку разобрали почти до основания и пошли за тем, что предложил сам Хорас: вместо песни The Clash он спел мелодию и слова, взятые во многом из его же песни 1973 года, «You Are My Angel». Когда Энди впервые спел эту песню в студии, Дэвидж, как он сам вспоминает, только и сказал: «Это волшебство». А «Straight to Hell» Энди всё-таки записал, двадцать лет спустя: в 2017 году он выпустил её вместе с Биг Ютом."
 
   - id: voice
     kind: voice
@@ -461,7 +469,7 @@ scenes:
         role: text
         draft: false
         en: Andy has a high falsetto that people know from the first note, and long notes with a low, slow vibrato. On “Mezzanine”, the AllMusic critic wrote, he left the safe waters of reggae. The Guardian singles out his call of love, repeated over and over in this song, as something you do not forget.
-        ru: У Энди высокий фальцет, который узнают с первой ноты, и долгие ноты с низким, медленным вибрато. На «Mezzanine», писал критик AllMusic, он покинул безопасные воды регги. The Guardian отдельно выделяет его признание в любви, повторённое в этой песне снова и снова, как то, чего не забыть.
+        ru: У Энди высокий фальцет, который узнают с первой ноты, и долгие ноты с низким, медленным вибрато. На «Mezzanine», писал критик AllMusic, он вышел далеко за привычные пределы регги. The Guardian пишет, что его признание в любви, которое он повторяет в этой песне снова и снова, невозможно забыть.
 
   - id: strata
     kind: strata
@@ -483,18 +491,18 @@ scenes:
       - id: kicker
         role: kicker
         draft: false
-        en: What it is made of
-        ru: Из чего она собрана
+        en: What the song is made of
+        ru: Из чего собрана песня
       - id: skeleton
         role: text
         draft: false
-        en: First there was a programmed skeleton. Davidge describes going through sequences and samples and throwing them out one after another. Then live musicians played over it, among them the guitarist Angelo Bruschini, and suddenly, Davidge says, it was something dark, made for a club and romantic all at once, with very heavy guitars and drums.
-        ru: Сначала был запрограммированный скелет. Дэвидж рассказывает, как они перебирали последовательности и сэмплы и выбрасывали их один за другим. Потом поверх играли живые музыканты, среди них гитарист Анджело Брускини, и вдруг, по словам Дэвиджа, получилось что-то тёмное, клубное и романтическое разом, с очень тяжёлыми гитарами и барабанами.
+        en: At first the song was put together on a computer: its rhythm and parts were programmed rather than played. Davidge describes going through parts and samples and throwing them out one after another. Then live musicians played over that computer draft, among them the guitarist Angelo Bruschini, and suddenly, Davidge says, it was something dark, made for a club and romantic all at once, with very heavy guitars and drums.
+        ru: Сначала песню собирали на компьютере: ритм и партии в ней были запрограммированы, а не сыграны. Дэвидж рассказывает, как они перебирали разные партии и сэмплы и выбрасывали их один за другим. Потом поверх этой компьютерной заготовки сыграли живые музыканты, среди них гитарист Анджело Брускини, и вдруг, по словам Дэвиджа, получилось что-то тёмное, клубное и романтическое разом, с очень тяжёлыми гитарами и барабанами.
       - id: not-the-same
         role: text
         draft: false
-        en: Even that was not the end. At the final mix at Olympic they decided to bring in one more bass line and changed the rhythm patterns, so that, says Davidge, it certainly was not the same song any more. The credits name four writers, Del Naja, Marshall, Vowles and Hinds, that is, Horace Andy. The song runs six minutes and eighteen seconds.
-        ru: "Но и это был не конец. Уже на финальном сведении в Olympic решили добавить ещё одну басовую линию и поменяли ритмические рисунки, так что, говорит Дэвидж, это была уже точно не та песня. Авторами в выходных данных значатся четверо: Дель Ная, Маршалл, Воулз и Хайндс, то есть Хорас Энди. Длится песня шесть минут восемнадцать секунд."
+        en: Even that was not yet the final version. At the final mix at Olympic they decided to bring in one more bass line and changed the rhythm patterns, so that, says Davidge, it certainly was not the same song any more. The credits name four writers, Del Naja, Marshall, Vowles and Hinds, that is, Horace Andy. The song runs six minutes and eighteen seconds, and its opening rests on a bass you feel in your body more than you hear: the hi-fi magazine What Hi-Fi? has long kept it among its regular test tracks for subwoofers.
+        ru: "Но и это была ещё не окончательная версия. Уже на финальном сведении в Olympic музыканты решили добавить ещё одну басовую линию и поменяли ритмический рисунок, так что, говорит Дэвидж, это была уже точно не та песня. Авторами песни в выходных данных значатся четыре человека: Дель Ная, Маршалл, Воулз и Хайндс, то есть Хорас Энди. Длится песня шесть минут восемнадцать секунд, а её вступление построено на басе, который скорее чувствуешь телом, чем слышишь: журнал What Hi-Fi? давно проверяет на этой песне сабвуферы."
 
   # ------------------------------------------------ Act III. The breakdown
   - id: break
@@ -515,7 +523,7 @@ scenes:
         role: text
         draft: false
         en: In the middle of the song the guitars come in, and everything that until then rested on the bass and the voice gives way. A love song from 1973 sounds here like what the AllMusic critic called perhaps the darkest and heaviest song Massive Attack ever recorded.
-        ru: Посреди песни в неё входят гитары, и всё, что до этого держалось на басе и голосе, обрушивается. Любовная песня 1973 года звучит здесь так, что критик AllMusic назвал её, может быть, самой тёмной и тяжёлой вещью, какую Massive Attack когда-либо записывали.
+        ru: В середине песни вступают гитары, и всё, что до этого держалось на басе и голосе, обрушивается. Любовная песня 1973 года звучит здесь так, что критик AllMusic назвал её, может быть, самой тёмной и тяжёлой вещью, какую Massive Attack когда-либо записывали.
 
   - id: crowd
     kind: crowd
@@ -554,12 +562,12 @@ scenes:
         role: text
         draft: false
         en: “Mezzanine” came out on 20 April 1998 and went straight to number one in Britain. “Angel” followed as a single on 13 July and reached number thirty, then fell to sixty the next week.
-        ru: «Mezzanine» вышел 20 апреля 1998 года и сразу поднялся на первое место в Британии. «Angel» вышел синглом 13 июля, добрался до тридцатого места и через неделю опустился на шестидесятое.
+        ru: «Mezzanine» вышел 20 апреля 1998 года и сразу поднялся на первое место в Британии. «Angel» вышла синглом 13 июля, добралась до тридцатого места и через неделю опустилась на шестидесятое.
       - id: video
         role: text
         draft: false
-        en: "The video was directed by Walter Stern for Academy Films, the second of his three for the band, between “Risingson” and “Teardrop”. In it a man gets out of a car in a multi-storey car park, and one person, then two, then more and more begin to follow him. He walks faster, goes out into the open, the crowd keeps growing, and at the end he stops and turns to face it. The official video is in the player."
-        ru: "Клип снял Уолтер Стерн для студии Academy Films — второй из трёх его клипов для группы, между «Risingson» и «Teardrop». Человек выходит из машины на многоуровневой парковке, и за ним начинают идти — сначала один, потом двое, потом всё больше. Он ускоряет шаг, выходит на открытое место, толпа растёт, а в самом конце он останавливается и поворачивается к ней лицом. Официальный клип — в плеере."
+        en: "The video was directed by Walter Stern for Academy Films, the second of his three for the band, between “Risingson” and “Teardrop”. In it a man gets out of a car in a multi-storey car park, and one person, then two, then more and more begin to follow him. He walks faster, goes out into the open, the crowd keeps growing, and at the end he stops and turns to face it. The official video can be watched in the player."
+        ru: "Клип снял Уолтер Стерн для студии Academy Films — второй из трёх его клипов для группы, между «Risingson» и «Teardrop». Человек выходит из машины на многоуровневой парковке, и за ним начинают идти — сначала один, потом двое, потом всё больше. Он ускоряет шаг, выходит на открытое место, толпа растёт, а в самом конце он останавливается и поворачивается к ней лицом. Официальный клип можно посмотреть в плеере."
 
   - id: beetle
     kind: beetle
@@ -614,8 +622,8 @@ scenes:
       - id: snatch
         role: text
         draft: false
-        en: The song soon moved from the record to the screen. In Guy Ritchie's “Snatch” of 2000 it plays in the amusement arcade and in the scene where a caravan burns, and it is on the soundtrack album. The Guardian writes that “Mezzanine” supplied countless film and television directors with three songs at once, “Angel”, “Teardrop” and “Inertia Creeps”.
-        ru: "Песня быстро перешла с пластинки на экраны. В «Большом куше» Гая Ричи 2000 года она звучит в зале игровых автоматов и в сцене, где горит фургон, и есть на альбоме саундтрека. The Guardian пишет, что «Mezzanine» снабдил бесчисленных режиссёров кино и телевидения сразу тремя песнями: «Angel», «Teardrop» и «Inertia Creeps»."
+        en: Soon film and television began to use the song. In Guy Ritchie's “Snatch” of 2000 it plays in the amusement arcade and in the scene where a caravan burns, and it is on the soundtrack album. The Guardian writes that “Mezzanine” supplied countless film and television directors with three songs at once, “Angel”, “Teardrop” and “Inertia Creeps”.
+        ru: "Вскоре песню стали брать в кино и на телевидение. В «Большом куше» Гая Ричи 2000 года она звучит в зале игровых автоматов и в сцене, где горит фургон, и есть на альбоме саундтрека. The Guardian пишет, что «Mezzanine» дал бесчисленным режиссёрам кино и телевидения сразу три песни: «Angel», «Teardrop» и «Inertia Creeps»."
 
   - id: afterlife
     kind: afterlife
@@ -636,7 +644,7 @@ scenes:
         role: text
         draft: false
         en: The band first played “Angel” at a concert in Berlin on 8 July 1997, months before the record came out, so the song lived on stage before anyone could buy it. By the fans' count on setlist.fm it is the song Massive Attack have played more than any other, nearly five hundred times; the latest show on record was in Melbourne in August 2026.
-        ru: Впервые группа сыграла «Angel» на концерте в Берлине 8 июля 1997 года, за несколько месяцев до выхода пластинки, так что песня жила на сцене раньше, чем её можно было купить. По подсчётам поклонников на сайте setlist.fm, это песня, которую Massive Attack играли чаще всех остальных, почти пятьсот раз; последний из записанных концертов был в Мельбурне в августе 2026 года.
+        ru: Впервые группа сыграла «Angel» на концерте в Берлине 8 июля 1997 года, за несколько месяцев до выхода пластинки, так что песня жила на сцене раньше, чем её можно было купить. По подсчётам поклонников на сайте setlist.fm, это песня, которую Massive Attack играли чаще всех остальных, почти пятьсот раз; последний из учтённых там концертов прошёл в Мельбурне в августе 2026 года.
       - id: dub
         role: text
         draft: false
