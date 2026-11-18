@@ -304,9 +304,9 @@
   gap: 16px;
   align-items: start;
   padding: 16px;
-  border-radius: 8px;
   background: var(--ft-glass);
-  box-shadow: 0 0 0 1px rgba(127, 110, 85, 0.25);
+  box-shadow: 0 0 24px 16px var(--ft-glass);
+  border-radius: 24px;
   max-width: 34rem;
 }
 .rv-med.big {
