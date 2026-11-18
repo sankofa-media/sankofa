@@ -2,7 +2,7 @@
 id: chica-da-silva
 kind: person
 title: Chica da Silva
-wow: "Freed in Brazil's diamond district, she raised thirteen children with the diamond contractor and rose into the local elite; a century later the legend of a seductress was written over her real life."
+wow: "Freed in Brazil's diamond district, she raised thirteen children with the diamond contractor and rose into the local elite; decades after her death a legend was written over her real life."
 years: [1732, 1796]
 places:
   - {name: "Diamantina (Arraial do Tejuco), Minas Gerais", lat: -18.2494, lon: -43.6003}
