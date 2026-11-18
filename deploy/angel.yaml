@@ -1,0 +1,210 @@
+# The special project "Angel": presence of readers and the chorus of their
+# unsaid words (cmd/angel), and whisper.cpp for voice messages. Rolled out by
+# hack/stand/angel.sh, which fills ANGEL_IMAGE, WHISPER_IMAGE, MUSEUM_HOST and
+# PUBLIC_HOST. Namespace and the museum itself: deploy/museum.yaml.
+#
+# Secrets the owner creates once (never in the repository):
+#   kubectl -n sankofa-museum create secret generic angel-anthropic \
+#     --from-literal=ANTHROPIC_API_KEY=... --from-literal=ANGEL_ADMIN_TOKEN="$(openssl rand -hex 32)"
+# Both keys are optional: without ANTHROPIC_API_KEY every word waits for the
+# owner, without ANGEL_ADMIN_TOKEN the owner's queue is closed.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: angel-data
+  namespace: sankofa-museum
+spec:
+  accessModes: [ReadWriteOnce]
+  resources: {requests: {storage: 2Gi}}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angel
+  namespace: sankofa-museum
+  labels: {app.kubernetes.io/name: angel}
+spec:
+  replicas: 1 # presence lives in memory and SQLite has one writer
+  strategy: {type: Recreate} # the volume is ReadWriteOnce
+  selector: {matchLabels: {app.kubernetes.io/name: angel}}
+  template:
+    metadata:
+      labels: {app.kubernetes.io/name: angel}
+    spec:
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 65532
+        runAsGroup: 65532
+        fsGroup: 65532
+        seccompProfile: {type: RuntimeDefault}
+      containers:
+        - name: angel
+          image: ANGEL_IMAGE
+          command: [/usr/local/bin/angel]
+          args: [-listen=:8080, -data=/var/lib/angel, -ffmpeg=/usr/local/bin/ffmpeg, -whisper-url=http://whisper:8080, -ip-header=X-Real-IP]
+          envFrom:
+            - secretRef: {name: angel-anthropic, optional: true}
+          ports: [{name: http, containerPort: 8080}]
+          readinessProbe: {httpGet: {path: /healthz, port: http}}
+          livenessProbe: {httpGet: {path: /healthz, port: http}, periodSeconds: 20}
+          resources:
+            requests: {cpu: 20m, memory: 48Mi}
+            limits: {memory: 256Mi} # ffmpeg holds up to 30 s of audio for areverse
+          volumeMounts:
+            - {name: data, mountPath: /var/lib/angel}
+            - {name: tmp, mountPath: /tmp}
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: {drop: [ALL]}
+      volumes:
+        - name: data
+          persistentVolumeClaim: {claimName: angel-data}
+        - name: tmp
+          emptyDir: {sizeLimit: 64Mi}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: angel
+  namespace: sankofa-museum
+spec:
+  selector: {app.kubernetes.io/name: angel}
+  ports: [{name: http, port: 80, targetPort: http}]
+---
+# whisper.cpp's HTTP server (official image of ggml-org, CPU build), only
+# reachable inside the namespace. Model: ggml-small, multilingual (Russian
+# and English transcribe well enough for 30-second messages; base is
+# noticeably worse in Russian, medium is too heavy for the museum's nodes).
+# It is fetched once by the init container from the official Hugging Face
+# repository at a fixed commit and checked against its SHA-256.
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: whisper-models
+  namespace: sankofa-museum
+spec:
+  accessModes: [ReadWriteOnce]
+  resources: {requests: {storage: 1Gi}}
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: whisper
+  namespace: sankofa-museum
+  labels: {app.kubernetes.io/name: whisper}
+spec:
+  replicas: 1
+  strategy: {type: Recreate}
+  selector: {matchLabels: {app.kubernetes.io/name: whisper}}
+  template:
+    metadata:
+      labels: {app.kubernetes.io/name: whisper}
+    spec:
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+        seccompProfile: {type: RuntimeDefault}
+      initContainers:
+        - name: model
+          image: curlimages/curl:8.11.1
+          env:
+            - {name: MODEL, value: ggml-small.bin}
+            - {name: URL, value: "https://huggingface.co/ggerganov/whisper.cpp/resolve/5359861c739e955e79d9a303bcbc70fb988958b1/ggml-small.bin"}
+            - {name: SHA256, value: 1be3a9b2063867b937e64e2ec7483364a79917e157fa98c5d94b5c1fffea987b}
+          command: [sh, -ec]
+          args:
+            - |
+              f=/models/$MODEL
+              if [ -f "$f" ] && echo "$SHA256  $f" | sha256sum -c -s; then exit 0; fi
+              curl -fsSL --retry 5 -o "$f.part" "$URL"
+              echo "$SHA256  $f.part" | sha256sum -c -s
+              mv "$f.part" "$f"
+          volumeMounts: [{name: models, mountPath: /models}]
+          resources:
+            requests: {cpu: 10m, memory: 16Mi}
+            limits: {memory: 64Mi}
+          securityContext: {allowPrivilegeEscalation: false, readOnlyRootFilesystem: true, capabilities: {drop: [ALL]}}
+      containers:
+        - name: whisper
+          image: WHISPER_IMAGE
+          command: [/app/build/bin/whisper-server]
+          args: [--host, 0.0.0.0, --port, "8080", -m, /models/ggml-small.bin, -t, "2"]
+          ports: [{name: http, containerPort: 8080}]
+          readinessProbe: {tcpSocket: {port: http}, periodSeconds: 10}
+          livenessProbe: {tcpSocket: {port: http}, initialDelaySeconds: 30, periodSeconds: 30}
+          resources:
+            requests: {cpu: 500m, memory: 1Gi}
+            limits: {memory: 2Gi}
+          volumeMounts:
+            - {name: models, mountPath: /models, readOnly: true}
+            - {name: tmp, mountPath: /tmp}
+          securityContext:
+            allowPrivilegeEscalation: false
+            readOnlyRootFilesystem: true
+            capabilities: {drop: [ALL]}
+      volumes:
+        - name: models
+          persistentVolumeClaim: {claimName: whisper-models}
+        - name: tmp
+          emptyDir: {sizeLimit: 64Mi}
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: whisper
+  namespace: sankofa-museum
+spec:
+  selector: {app.kubernetes.io/name: whisper}
+  ports: [{name: http, port: 8080, targetPort: http}]
+---
+# Only the angel talks to whisper.
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: whisper
+  namespace: sankofa-museum
+spec:
+  podSelector: {matchLabels: {app.kubernetes.io/name: whisper}}
+  policyTypes: [Ingress]
+  ingress:
+    - from: [{podSelector: {matchLabels: {app.kubernetes.io/name: angel}}}]
+      ports: [{port: 8080}]
+---
+# /api/angel on both museum hosts. A separate Ingress object, because the
+# annotations below (no buffering for the presence stream, long reads, 3 MB
+# bodies for voice) must not apply to the museum's pages. The hosts and TLS
+# secrets are those of the museum and museum-domain Ingresses in
+# deploy/museum.yaml: cert-manager keeps issuing them there, so this object
+# carries no issuer annotation and only reuses the secrets. ingress-nginx
+# merges same-host Ingresses and routes the longer path here.
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: angel
+  namespace: sankofa-museum
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-buffering: "off"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "3600"
+    nginx.ingress.kubernetes.io/proxy-body-size: 3m
+spec:
+  ingressClassName: nginx
+  tls:
+    - hosts: [MUSEUM_HOST]
+      secretName: museum-tls
+    - hosts: [PUBLIC_HOST]
+      secretName: museum-domain-tls
+  rules:
+    - host: MUSEUM_HOST
+      http:
+        paths:
+          - {path: /api/angel, pathType: Prefix, backend: {service: {name: angel, port: {name: http}}}}
+    - host: PUBLIC_HOST
+      http:
+        paths:
+          - {path: /api/angel, pathType: Prefix, backend: {service: {name: angel, port: {name: http}}}}
