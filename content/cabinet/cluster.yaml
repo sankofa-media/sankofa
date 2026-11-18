@@ -1,0 +1,15 @@
+# What the museum's cluster says about the caches hidden in it (caches.yaml,
+# hidden: {at: cluster}). {word} is the cache's lock word. The annotation goes
+# on the Card named by the cache (pkg/cabinet.Annotation, and -ru for the
+# Russian note), written by the griot; the storeroom is the ConfigMap
+# storeroom in the namespace sankofa-museum (deploy/museum.yaml); rummage is
+# what `sankofa rummage` prints.
+annotation:
+  en: "In the margin, in pencil: a letter lock opens to {word}."
+  ru: "На полях карандашом: кодовый замок открывается словом {word}."
+rummage:
+  en: "{word}"
+  ru: "{word}"
+storeroom:
+  en: "{word}"
+  ru: "{word}"

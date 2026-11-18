@@ -43,6 +43,7 @@ import (
 	"github.com/tym83/sankofa/api/v1alpha1"
 	"github.com/tym83/sankofa/content"
 	"github.com/tym83/sankofa/pkg/admission"
+	"github.com/tym83/sankofa/pkg/cabinet"
 	"github.com/tym83/sankofa/pkg/card"
 	"github.com/tym83/sankofa/pkg/credits"
 	"github.com/tym83/sankofa/pkg/history"
@@ -312,10 +313,20 @@ func syncCards(ctx context.Context, log *slog.Logger, cl client.Client) error {
 	if errs := set.Validate(); len(errs) > 0 {
 		return fmt.Errorf("embedded content does not lint: %v", errs[0])
 	}
+	// A few cards carry a note in the margin: a cache of the museum's
+	// Cabinet of Curiosities hidden in the cluster.
+	cab, err := cabinet.Load(content.Cabinet())
+	if err != nil {
+		return fmt.Errorf("cabinet: %w", err)
+	}
+	margins := cab.Margins()
 	keep := map[string]bool{}
 	for _, id := range set.Order {
 		o := v1alpha1.FromCard(set.Resolved(set.ByID[id]))
 		o.Labels["app.kubernetes.io/managed-by"] = managedBy
+		if m := margins[id]; m != nil {
+			o.Annotations = m
+		}
 		if err := cl.Patch(ctx, o, client.Apply, client.FieldOwner(managedBy), client.ForceOwnership); err != nil {
 			return fmt.Errorf("card %s: %w", id, err)
 		}
