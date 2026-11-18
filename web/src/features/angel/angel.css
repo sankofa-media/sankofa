@@ -952,6 +952,36 @@ body.an-pulse-on {
     background: rgba(241, 197, 141, 0.45);
   }
 }
+.ap-steps {
+  margin: 0;
+  padding-left: 1.4em;
+  display: grid;
+  gap: 8px;
+  font: 16px/1.5 var(--font-sans);
+  color: #f1e3cf;
+}
+.ap-status {
+  margin: 0;
+  font: 600 18px/1.4 var(--font-sans);
+  color: #f6e8d6;
+}
+.ap-progress {
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(246, 232, 214, 0.18);
+  overflow: hidden;
+}
+.ap-progress span {
+  display: block;
+  height: 100%;
+  width: 0;
+  background: #e3a35f;
+  transition: width 0.3s linear;
+}
+.ap-status[hidden],
+.ap-progress[hidden] {
+  display: none;
+}
 .ap-beats {
   margin: 0;
   font: 16px/1.4 var(--font-sans);

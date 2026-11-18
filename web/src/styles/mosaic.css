@@ -1,0 +1,231 @@
+/* The home page's mosaic: every door of the museum on one wall of torn paper,
+   big and small, a little askew, so a first-time reader sees what is here
+   before the story begins. */
+.mosaic {
+  padding: clamp(56px, 10vh, 120px) var(--gutter) clamp(40px, 8vh, 96px);
+  background: var(--bg);
+}
+.mo-head {
+  max-width: 1280px;
+  margin: 0 auto clamp(28px, 4vw, 48px);
+}
+.mo-head .kicker {
+  margin: 0 0 10px;
+}
+.mo-head h2 {
+  margin: 0 0 14px;
+  font: 600 clamp(30px, 4.4vw, 60px) / 1.05 var(--font-display);
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.mo-dek {
+  margin: 0;
+  max-width: 44rem;
+  font: clamp(17px, 1.3vw, 20px) / 1.55 var(--font-display);
+  color: var(--ink-2);
+}
+.mo-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: clamp(92px, 9vw, 128px);
+  grid-auto-flow: dense;
+  gap: clamp(10px, 1.4vw, 18px);
+}
+.mo-tile {
+  --tilt: 0deg;
+  position: relative;
+  display: grid;
+  align-content: end;
+  min-width: 0;
+  overflow: hidden;
+  padding: clamp(14px, 1.6vw, 22px);
+  border: 0;
+  font: inherit;
+  text-align: left;
+  color: #f6eee0;
+  text-decoration: none;
+  cursor: pointer;
+  background: #1a1c33;
+  rotate: var(--tilt);
+  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.45));
+  transition:
+    rotate 0.5s var(--ease),
+    scale 0.5s var(--ease),
+    filter 0.5s var(--ease);
+}
+.mo-tile:hover,
+.mo-tile:focus-visible {
+  rotate: 0deg;
+  scale: 1.025;
+  z-index: 2;
+  filter: drop-shadow(0 22px 34px rgba(0, 0, 0, 0.55));
+}
+.mo-tile:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+}
+.mo-tile {
+  grid-column: span var(--c, 4);
+  grid-row: span var(--r, 3);
+}
+.mo-tile[style*='--r:1'] {
+  align-content: center;
+}
+.mo-art {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.mo-art img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.9s var(--ease);
+}
+.mo-tile:hover .mo-art > img:only-child {
+  transform: scale(1.05);
+}
+/* A special project's illustration is its own layers: they part a little under the pointer, as in the feature. */
+.mo-layers img:nth-child(2) {
+  --d: 6px;
+}
+.mo-layers img:nth-child(3) {
+  --d: 12px;
+}
+.mo-layers img:nth-child(4) {
+  --d: 18px;
+}
+.mo-tile:hover .mo-layers img {
+  transform: translate(calc(var(--d, 0px) * -0.6), calc(var(--d, 0px) * -0.35)) scale(1.03);
+}
+.mo-art::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 10, 20, 0) 30%, rgba(10, 10, 20, 0.55) 62%, rgba(10, 10, 20, 0.88) 100%);
+}
+.mo-text {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 6px;
+  max-width: 34rem;
+}
+.mo-kind {
+  font: 600 11px/1.2 var(--font-sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #f1c46f;
+}
+.mo-title {
+  font: 600 clamp(20px, 2vw, 30px) / 1.1 var(--font-display);
+}
+.mo-tile[style*='--c:7;--r:4'] .mo-title {
+  font-size: clamp(34px, 4.6vw, 64px);
+}
+.mo-sub {
+  font: clamp(14px, 1vw, 16px) / 1.45 var(--font-sans);
+  color: rgba(246, 238, 224, 0.86);
+}
+.mo-tile[style*='--r:1'] .mo-title {
+  font-size: clamp(18px, 1.5vw, 22px);
+}
+/* Tiles without a picture are coloured paper with one large sign. */
+.mo-type {
+  color: #1d160d;
+}
+.mo-type .mo-kind {
+  color: rgba(29, 22, 13, 0.7);
+}
+.mo-type .mo-sub {
+  color: rgba(29, 22, 13, 0.82);
+}
+.mo-gold {
+  background: #e3ab3d;
+}
+.mo-terra {
+  background: #d26b44;
+}
+.mo-indigo {
+  background: #8fa0e0;
+}
+.mo-green {
+  background: #7fbf92;
+}
+.mo-crimson {
+  background: #d98a96;
+}
+.mo-plain {
+  background: #f2e9d8;
+}
+.mo-glyph {
+  position: absolute;
+  right: -0.06em;
+  top: -0.12em;
+  font: 400 clamp(110px, 13vw, 210px) / 1 var(--font-display);
+  color: rgba(29, 22, 13, 0.14);
+  pointer-events: none;
+  transition: rotate 0.9s var(--ease);
+}
+.mo-tile:hover .mo-glyph {
+  rotate: -8deg;
+}
+.mo-credit {
+  max-width: 1280px;
+  margin: 28px auto 0;
+}
+.mo-torn-0 { clip-path: polygon(0.0% 0.6%, 7.1% 1.4%, 14.3% 1.0%, 21.4% 1.6%, 28.6% 1.6%, 35.7% 0.2%, 42.9% 0.0%, 50.0% 2.2%, 57.1% 0.7%, 64.3% 0.6%, 71.4% 2.6%, 78.6% 1.2%, 85.7% 2.2%, 92.9% 1.2%, 100.0% 1.7%, 99.8% 12.5%, 99.1% 25.0%, 98.8% 37.5%, 99.3% 50.0%, 99.0% 62.5%, 99.1% 75.0%, 99.9% 87.5%, 100.0% 97.9%, 92.9% 98.3%, 85.7% 99.2%, 78.6% 99.9%, 71.4% 97.6%, 64.3% 98.7%, 57.1% 98.0%, 50.0% 97.5%, 42.9% 98.0%, 35.7% 97.4%, 28.6% 98.9%, 21.4% 97.8%, 14.3% 98.8%, 7.1% 97.4%, 0.0% 97.5%, 0.1% 87.5%, 0.2% 75.0%, 0.3% 62.5%, 1.4% 50.0%, 0.6% 37.5%, 0.9% 25.0%, 0.4% 12.5%); }
+.mo-torn-1 { clip-path: polygon(0.0% 0.7%, 7.1% 0.5%, 14.3% 0.7%, 21.4% 0.2%, 28.6% 1.0%, 35.7% 1.0%, 42.9% 0.8%, 50.0% 0.2%, 57.1% 0.6%, 64.3% 0.4%, 71.4% 0.3%, 78.6% 1.1%, 85.7% 1.2%, 92.9% 0.1%, 100.0% 1.0%, 99.2% 12.5%, 99.5% 25.0%, 99.6% 37.5%, 99.1% 50.0%, 99.4% 62.5%, 99.0% 75.0%, 99.1% 87.5%, 100.0% 99.6%, 92.9% 97.9%, 85.7% 97.2%, 78.6% 97.3%, 71.4% 98.3%, 64.3% 99.9%, 57.1% 100.0%, 50.0% 99.6%, 42.9% 97.4%, 35.7% 99.2%, 28.6% 99.0%, 21.4% 97.5%, 14.3% 99.1%, 7.1% 98.5%, 0.0% 98.8%, 0.1% 87.5%, 0.8% 75.0%, 1.2% 62.5%, 0.2% 50.0%, 0.3% 37.5%, 0.6% 25.0%, 0.1% 12.5%); }
+.mo-torn-2 { clip-path: polygon(0.0% 1.4%, 7.1% 2.1%, 14.3% 2.5%, 21.4% 0.8%, 28.6% 2.0%, 35.7% 1.8%, 42.9% 1.7%, 50.0% 0.3%, 57.1% 0.1%, 64.3% 1.0%, 71.4% 1.9%, 78.6% 0.7%, 85.7% 1.3%, 92.9% 0.8%, 100.0% 2.2%, 98.7% 12.5%, 99.4% 25.0%, 98.6% 37.5%, 99.9% 50.0%, 98.9% 62.5%, 98.8% 75.0%, 99.8% 87.5%, 100.0% 98.0%, 92.9% 98.4%, 85.7% 97.3%, 78.6% 99.4%, 71.4% 98.5%, 64.3% 97.5%, 57.1% 98.2%, 50.0% 99.1%, 42.9% 99.8%, 35.7% 97.4%, 28.6% 98.7%, 21.4% 97.2%, 14.3% 99.6%, 7.1% 97.7%, 0.0% 97.7%, 1.3% 87.5%, 0.0% 75.0%, 0.5% 62.5%, 0.1% 50.0%, 1.1% 37.5%, 0.5% 25.0%, 1.3% 12.5%); }
+.mo-torn-3 { clip-path: polygon(0.0% 1.9%, 7.1% 2.2%, 14.3% 0.5%, 21.4% 2.6%, 28.6% 0.5%, 35.7% 1.7%, 42.9% 0.2%, 50.0% 2.0%, 57.1% 0.4%, 64.3% 1.8%, 71.4% 1.9%, 78.6% 2.0%, 85.7% 1.1%, 92.9% 2.3%, 100.0% 2.6%, 99.8% 12.5%, 99.3% 25.0%, 98.7% 37.5%, 99.0% 50.0%, 99.4% 62.5%, 99.6% 75.0%, 98.7% 87.5%, 100.0% 99.8%, 92.9% 97.9%, 85.7% 97.6%, 78.6% 99.6%, 71.4% 99.1%, 64.3% 99.1%, 57.1% 98.5%, 50.0% 99.0%, 42.9% 97.5%, 35.7% 97.4%, 28.6% 99.1%, 21.4% 97.5%, 14.3% 99.8%, 7.1% 99.7%, 0.0% 98.1%, 1.1% 87.5%, 1.1% 75.0%, 1.4% 62.5%, 1.2% 50.0%, 0.4% 37.5%, 1.0% 25.0%, 1.3% 12.5%); }
+
+@media (max-width: 1000px) {
+  .mo-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-auto-rows: 104px;
+  }
+  .mo-tile {
+    grid-column: span 3;
+  }
+  .mo-tile[style*='--c:7'] {
+    grid-column: span 6;
+  }
+  .mo-tile[style*='--r:1'] {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 560px) {
+  .mo-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 92px;
+    gap: 10px;
+  }
+  .mo-tile {
+    grid-column: span 1;
+    padding: 12px;
+  }
+  .mo-tile[style*='--c:7'],
+  .mo-tile[style*='--c:5'] {
+    grid-column: span 2;
+  }
+  .mo-tile[style*='--r:1'] {
+    grid-column: span 2;
+  }
+  .mo-tile:not([style*='--c:7']):not([style*='--c:5']) .mo-sub {
+    display: none;
+  }
+  .mo-glyph {
+    font-size: 96px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mo-tile,
+  .mo-art img,
+  .mo-glyph {
+    transition: none;
+  }
+}

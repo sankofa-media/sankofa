@@ -1,4 +1,5 @@
 import './styles/main.css';
+import './styles/mosaic.css';
 import './styles/roots.css';
 import './styles/countries.css';
 import './styles/factoids.css';
@@ -525,6 +526,8 @@ function setupNav(app: App, atlas: Atlas): void {
   });
   const atlasBtn = nav.querySelector<HTMLElement>('[data-open-atlas]')!;
   atlasBtn.addEventListener('click', () => app.openAtlas({ zoom: 1 }));
+  // The home page's mosaic opens the atlas the same way.
+  document.querySelectorAll<HTMLElement>('[data-mo-open="atlas"]').forEach((b) => b.addEventListener('click', () => app.openAtlas({ zoom: 1 })));
   const bookBtn = nav.querySelector<HTMLElement>('[data-open-book]')!;
   bookBtn.addEventListener('click', () => app.openBook());
   // The book's count shows only once there is something in it.

@@ -66,7 +66,7 @@ export function closeCamera(c: Camera | null): void {
 type FrameVideo = HTMLVideoElement & { requestVideoFrameCallback?: (cb: (now: number, meta: { mediaTime?: number; expectedDisplayTime?: number }) => void) => number; cancelVideoFrameCallback?: (id: number) => void };
 
 /**
- * Read the mean green of the middle half of every frame. Times come from
+ * Read the mean green (and red and blue) of the middle half of every frame. Times come from
  * requestVideoFrameCallback (the frame's own time) where the browser has
  * it, otherwise from animation frames.
  */
@@ -115,9 +115,16 @@ export class FrameReader {
     const sh = v.videoHeight / 2;
     this.g.drawImage(v, sw / 2, sh / 2, sw, sh, 0, 0, 24, 24);
     const px = this.g.getImageData(0, 0, 24, 24).data;
-    let sum = 0;
-    for (let i = 1; i < px.length; i += 4) sum += px[i];
-    this.onSample({ t, v: sum / (px.length / 4) });
+    let r = 0;
+    let g = 0;
+    let b = 0;
+    for (let i = 0; i < px.length; i += 4) {
+      r += px[i];
+      g += px[i + 1];
+      b += px[i + 2];
+    }
+    const n = px.length / 4;
+    this.onSample({ t, v: g / n, r: r / n, b: b / n });
   }
 
   stop(): void {
