@@ -30,8 +30,9 @@ lineage: lineage.yaml
 # picture is in that state, `open` swings it open over a stretch of the
 # scene, `fit` registers it on the canvas (percent, scale). Sources: the art
 # contact sheet (door v2 and its finale porch and light, expedition v2, album
-# v1, piano v1, classroom v2, river v1) and the redraws (ring v3, family v4,
-# minute v4), WebP at 1600 px. Role `step` comes half a step forward when
+# v1, piano v1, classroom v2, river v1), the redraws (ring v3, family v4,
+# minute v4) and revision 3 (words, single, burial, screen, silence v1),
+# WebP at 1600 px. Role `step` comes half a step forward when
 # the scene is reached; `claps` marks where hands meet, and a ripple of ink
 # spreads there with every clap (the figures keep their own hands and never
 # come apart). The sisters' layers are named left and right: the alt text
@@ -411,6 +412,12 @@ scenes:
         ru: "Встаньте в круг: хлопайте вместе с сёстрами — касайтесь круга над рисунком или нажимайте пробел в такт. Каждый хлопок останется на круге каплей туши, круг будет с вами в углу экрана, а в самом конце истории вы сможете услышать свои хлопки вместе с детскими."
   - id: words
     kind: text
+    art:
+      generated: true
+      layers:
+        - { file: words-table-sheet.webp, depth: 3, alt: { en: "A lined school sheet on a table, covered in pencil marks rubbed out and drawn again", ru: "Тетрадный лист в линейку на столе, весь в стёртых и заново наведённых карандашных линиях" } }
+        - { file: words-label.webp, depth: 6, alt: { en: "A blank luggage tag on a red thread", ru: "Пустая багажная бирка на красной нитке" } }
+        - { file: words-girls.webp, depth: 10, role: figure, pivot: "50 95", alt: { en: "Two young women at either side of the table lean over the sheet; one writes on it with a pencil, the other watches", ru: "Две девушки по разные стороны стола склонились над листом: одна пишет на нём карандашом, другая смотрит" } }
     blocks:
       - id: kicker
         role: kicker
@@ -522,6 +529,12 @@ scenes:
 
   - id: single
     kind: single
+    art:
+      generated: true
+      layers:
+        - { file: single-table.webp, depth: 3, alt: "" }
+        - { file: single-sleeve-cups.webp, depth: 6, alt: { en: "A plain paper record sleeve with one red band, a cup of black coffee and a cup of tea", ru: "Простой бумажный конверт для пластинки с красной полосой, чашка чёрного кофе и чашка чая" } }
+        - { file: single-player.webp, depth: 8, alt: { en: "An open portable record player on a wooden table, seen from above", ru: "Раскрытый переносной проигрыватель на деревянном столе, вид сверху" } }
     nodes: [ simone-single-1964 ]
     blocks:
       - id: kicker
@@ -734,6 +747,12 @@ scenes:
 
   - id: burial
     kind: stop
+    art:
+      generated: true
+      layers:
+        - { file: burial-houses.webp, depth: 3, alt: { en: "A row of terraced houses on a London street at night; in one upper window a light is on behind a red curtain", ru: "Ряд одинаковых домов на лондонской улице ночью; в одном окне наверху за красной занавеской горит свет" } }
+        - { file: burial-road-lamp.webp, depth: 8, alt: { en: "A wet road under a street lamp, with the lit window reflected in it", ru: "Мокрая мостовая под фонарём, в ней отражается освещённое окно" } }
+        - { file: burial-rain.webp, depth: 14, alt: "" }
     nodes: [ burial-2011 ]
     blocks:
       - id: kicker
@@ -749,6 +768,12 @@ scenes:
 
   - id: screen
     kind: filmstrip
+    art:
+      generated: true
+      layers:
+        - { file: screen-room-screen.webp, depth: 3, alt: { en: "An empty cinema with a blank lit screen", ru: "Пустой кинозал с освещённым чистым экраном" } }
+        - { file: screen-beam.webp, depth: 6, alt: "" }
+        - { file: screen-projector-seats.webp, depth: 12, alt: { en: "A film projector at the back of the hall throws its beam over two rows of empty seats", ru: "Кинопроектор в глубине зала бросает луч над двумя рядами пустых кресел" } }
     frames:
       - { work: "The General's Daughter", node: shes-began-to-lie-1999, caption: { en: "The film opens with their own voices.", ru: "Фильм открывается их собственными голосами." } }
       - { work: "Grey's Anatomy, Original Soundtrack Vol. 3 (series soundtrack album)", node: feist-sealion-2007, caption: { en: "Feist’s version on the “Grey’s Anatomy” soundtrack.", ru: "Версия Feist на саундтреке «Анатомии страсти»." } }
@@ -794,6 +819,12 @@ scenes:
 
   - id: silence
     kind: silence
+    art:
+      generated: true
+      layers:
+        - { file: silence-sky-fence.webp, depth: 3, alt: { en: "An empty schoolyard at dusk: a wire fence, a bare tree, a swing hanging still", ru: "Пустой школьный двор в сумерках: сетчатый забор, голое дерево, неподвижные качели" } }
+        - { file: silence-ground.webp, depth: 6, alt: "" }
+        - { file: silence-circle-ribbon.webp, depth: 9, alt: { en: "A chalk circle on the ground with nobody in it, and a small red ribbon at its edge", ru: "Меловой круг на земле, в нём никого, а у края — маленькая красная ленточка" } }
     blocks:
       - id: stop
         role: line
