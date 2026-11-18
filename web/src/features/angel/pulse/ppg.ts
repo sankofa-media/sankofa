@@ -10,6 +10,15 @@ export interface Sample {
   t: number;
   /** Mean green of the frame's centre, 0..255. */
   v: number;
+  /** Mean red and blue of the same pixels (to tell a fingertip over the lens from an open view). */
+  r?: number;
+  b?: number;
+}
+
+/** A fingertip lit through: the frame is red, with little blue in it. */
+export function covered(s: Sample): boolean {
+  if (s.r === undefined || s.b === undefined) return true;
+  return s.r > 60 && s.r > s.v * 1.4 && s.r > s.b * 1.8;
 }
 
 export interface Series {

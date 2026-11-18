@@ -137,14 +137,14 @@ ui:
   then: { en: "1973", ru: "1973" }
   now: { en: "1998", ru: "1998" }
   then-now-hint: { en: "Drag between the two years", ru: "Потяните между двумя годами" }
-  strata-hint: { en: "Lay the layers on top of one another", ru: "Наложите слои друг на друга" }
+  strata-hint: { en: "Turn the tracks on one after another and hear the song come together", ru: "Включай дорожки одну за другой и слушай, как собирается песня" }
   strata-bass: { en: "Bass", ru: "Бас" }
   strata-drums: { en: "Drums", ru: "Барабаны" }
   strata-voice: { en: "Voice", ru: "Голос" }
   strata-guitar: { en: "Guitars", ru: "Гитары" }
   strata-sound-note:
-    en: "The sound of these layers is our own sketch, not Massive Attack's recording."
-    ru: "Звук этих слоёв — наш собственный набросок, а не запись Massive Attack."
+    en: "What plays here is the song itself: eight bars from its middle, taken apart into four tracks."
+    ru: "Здесь звучит сама песня: восемь тактов из её середины, разобранные на четыре дорожки."
   progress: { en: "How far you are", ru: "Сколько прочитано" }
   # The warm last screen and the pulse page. The pulse belongs to no one:
   # never say whose it is.
@@ -177,9 +177,16 @@ ui:
     ru: "Похоже, тебе сейчас очень тяжело. Не нужно нести это одному. Если ты в опасности, звони 112. Те, кто умеет помочь, в твоей стране: findahelpline.com"
   words-report: { en: "Remove", ru: "Убрать" }
   own-pulse: { en: "You can leave your pulse too.", ru: "Можно оставить и свой пульс." }
-  own-pulse-how:
-    en: "Cover the back camera with your fingertip and hold still for half a minute."
-    ru: "Закрой подушечкой пальца заднюю камеру и не двигайся полминуты."
+  own-pulse-step-1: { en: "Press “Begin” and let the page use the camera.", ru: "Нажми «Начать» и разреши странице включить камеру." }
+  own-pulse-step-2:
+    en: "Cover the back camera, the one next to the flash, with your fingertip. The flash turns on by itself, and your finger glows red."
+    ru: "Закрой подушечкой пальца заднюю камеру, ту, что рядом со вспышкой. Вспышка загорится сама, и палец засветится красным."
+  own-pulse-step-3:
+    en: "Do not press hard, and keep your finger still for forty seconds. Your pulse will appear on the screen."
+    ru: "Не дави и не двигай палец сорок секунд. Пульс появится на экране."
+  own-pulse-cover: { en: "Cover the camera completely with your finger.", ru: "Закрой камеру пальцем целиком." }
+  own-pulse-hold: { en: "Keep your finger there. Seconds left: {n}", ru: "Держи палец. Осталось секунд: {n}" }
+  own-pulse-moved: { en: "Your finger moved, so the count starts again.", ru: "Палец сдвинулся, поэтому отсчёт начался заново." }
   own-pulse-start: { en: "Begin", ru: "Начать" }
   own-pulse-light:
     en: "This browser cannot turn on the flash. Hold your finger over the camera with a bright lamp or a window behind it."
@@ -594,19 +601,6 @@ scenes:
   - id: screens
     kind: screens
     act: 4
-    art:
-      generated: true
-      aspect: "3 / 2"
-      layers:
-        - file: screens-cinema-v1-full.webp
-          fit: { x: -25, y: -25, scale: 0.47 }
-          alt: { en: "An empty cinema with its screen lit", ru: "Пустой кинозал, светится экран" }
-        - file: screens-tv-v1-full.webp
-          fit: { x: 25, y: 0, scale: 0.47 }
-          alt: { en: "Two people watching television in a dark room", ru: "Двое смотрят телевизор в тёмной комнате" }
-        - file: screens-game-v1-full.webp
-          fit: { x: -25, y: 25, scale: 0.47 }
-          alt: { en: "A computer screen glowing in a dark bedroom", ru: "Экран компьютера светится в тёмной спальне" }
     blocks:
       - id: kicker
         role: kicker

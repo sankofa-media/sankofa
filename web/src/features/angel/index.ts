@@ -18,7 +18,7 @@ import { isPhone, qrSvg } from '../engine/qr';
 import * as api from './api';
 import { MoodFx } from './fx';
 import { anxietyAt, crowdShown, thenNowPeriod, pulsePeriod, BPM_1998 } from './mood';
-import { ANDY, ANGEL, VIDEO, type Official } from './recordings';
+import { ANDY, ANGEL, SNATCH, VIDEO, type Official } from './recordings';
 import { pulseUrl, wantsPulse } from './url';
 import '../engine/engine.css';
 import './angel.css';
@@ -47,6 +47,26 @@ const vibrate = (p: number[]) => {
     /* not allowed yet */
   }
 };
+
+
+/** A video, large: its cover first, the player only when the reader asks for it. */
+function bigVideo(id: string, alt: { en: string; ru: string }, title: { en: string; ru: string }): HTMLElement {
+  const label = pick({ en: 'Play the video', ru: 'Смотреть видео' });
+  const cover = h('button.an-video-cover', { type: 'button', 'aria-label': `${label}: ${pick(title)}` },
+    h('img', { src: `https://i.ytimg.com/vi/${id}/hqdefault.jpg`, alt: pick(alt), decoding: 'async', draggable: 'false' }),
+    h('span.an-video-play', { 'aria-hidden': 'true' }, '▶'));
+  const box = h('div.ft-art.an-video', {}, cover);
+  cover.addEventListener('click', () => {
+    box.replaceChildren(h('iframe', {
+      src: `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`,
+      title: pick(title),
+      allow: 'autoplay; encrypted-media; picture-in-picture; fullscreen',
+      allowfullscreen: '',
+      loading: 'lazy',
+    }));
+  });
+  return box;
+}
 
 export function mount(ctx: FeatureContext): FeatureInstance {
   const kit = new Kit(ctx);
@@ -171,7 +191,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         clean.setAttribute('aria-hidden', 'true');
         const pic = picture(sc, clean);
         const stacked = new Set<string>();
-        strataSound = new StrataSound(BPM_1998);
+        strataSound = new StrataSound();
         const live = h('p.ft-visually-hidden', { 'aria-live': 'polite' });
         const buttons = STRATA.map((k) => {
           const b = h('button.btn.an-stratum', { type: 'button', 'aria-pressed': 'false', 'data-stratum': k }, kit.ui(`strata-${k}`)) as HTMLButtonElement;
@@ -219,40 +239,39 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         // The guitars come in: the man who played them, not a metaphor.
         return scene(sc, sc.photo ? photo(String(sc.photo), 'an-stage-photo') : null, { screens: 1.5, long: false });
       }
-      case 'crowd': {
-        // The official video itself, large: its cover first, the player only when the reader asks for it.
-        const label = pick({ en: 'Play the official video', ru: 'Смотреть официальный клип' });
-        const cover = h('button.an-video-cover', { type: 'button', 'aria-label': label },
-          h('img', { src: `https://i.ytimg.com/vi/${VIDEO.youtube}/hqdefault.jpg`, alt: pick({ en: 'The official video of “Angel”', ru: 'Официальный клип «Angel»' }), decoding: 'async', draggable: 'false' }),
-          h('span.an-video-play', { 'aria-hidden': 'true' }, '▶'));
-        const box = h('div.ft-art.an-video', {}, cover);
-        cover.addEventListener('click', () => {
-          box.replaceChildren(h('iframe', {
-            src: `https://www.youtube-nocookie.com/embed/${VIDEO.youtube}?autoplay=1&rel=0`,
-            title: pick({ en: 'Massive Attack, “Angel”, official video', ru: 'Massive Attack, «Angel», официальный клип' }),
-            allow: 'autoplay; encrypted-media; picture-in-picture; fullscreen',
-            allowfullscreen: '',
-            loading: 'lazy',
-          }));
-        });
-        const el = scene(sc, box, { screens: 1.6 });
-        return el;
-      }
+      case 'crowd':
+        return scene(sc, bigVideo(VIDEO.youtube, { en: 'The official video of “Angel”', ru: 'Официальный клип «Angel»' }, { en: 'Massive Attack, “Angel”, official video', ru: 'Massive Attack, «Angel», официальный клип' }), { screens: 1.6 });
+      case 'screens':
+        // The scene from the film itself, in place of the pictures of screens.
+        return scene(sc, bigVideo(SNATCH.youtube, { en: 'The scene from “Snatch” with “Angel”', ru: 'Сцена из «Большого куша» с «Angel»' }, { en: '“Snatch” (2000), the scene with “Angel”', ru: '«Большой куш» (2000), сцена с «Angel»' }), { screens: 1.6 });
       case 'afterlife': {
         const box = h('div.ft-art.an-after', {}, ...AFTER_STEPS.map((s, i) => photo(s.photo, 'an-step', { 'data-step': String(i) })));
-        // The other lives of the song, each in its official player, side by side to swipe through.
-        const versions = ((sc.versions ?? []) as { youtube: string; en: string; ru: string }[]).map((v) => {
+        // The other lives of the song, one player at a time, turned with the arrows (a playing one stops when the reader turns on).
+        const list = (sc.versions ?? []) as { youtube: string; en: string; ru: string }[];
+        let at = 0;
+        const frame = h('div.an-video');
+        const caption = h('figcaption.an-version-title');
+        const counter = h('span.an-version-count', { 'aria-live': 'polite' });
+        const showVersion = (k: number) => {
+          at = (k + list.length) % list.length;
+          const v = list[at];
           const title = pick(v);
           const cover = h('button.an-video-cover', { type: 'button', 'aria-label': title },
-            h('img', { src: `https://i.ytimg.com/vi/${v.youtube}/hqdefault.jpg`, alt: '', decoding: 'async', loading: 'lazy', draggable: 'false' }),
+            h('img', { src: `https://i.ytimg.com/vi/${v.youtube}/hqdefault.jpg`, alt: '', decoding: 'async', draggable: 'false' }),
             h('span.an-video-play', { 'aria-hidden': 'true' }, '▶'));
-          const frame = h('div.an-video', {}, cover);
           cover.addEventListener('click', () => {
             frame.replaceChildren(h('iframe', { src: `https://www.youtube-nocookie.com/embed/${v.youtube}?autoplay=1&rel=0`, title, allow: 'autoplay; encrypted-media; picture-in-picture; fullscreen', allowfullscreen: '' }));
           });
-          return h('figure.an-version', {}, frame, h('figcaption', {}, title));
-        });
-        const shelf = versions.length ? h('div.an-versions', {}, ...versions) : null;
+          frame.replaceChildren(cover);
+          caption.textContent = title;
+          counter.textContent = `${at + 1} / ${list.length}`;
+        };
+        const arrow = (dir: -1 | 1) => h('button.btn.an-version-turn', { type: 'button', 'aria-label': dir < 0 ? pick({ en: 'Previous version', ru: 'Предыдущая версия' }) : pick({ en: 'Next version', ru: 'Следующая версия' }), onclick: () => showVersion(at + dir) }, dir < 0 ? '←' : '→');
+        let shelf: HTMLElement | null = null;
+        if (list.length) {
+          showVersion(0);
+          shelf = h('figure.an-versions', {}, frame, h('div.an-version-bar', {}, arrow(-1), counter, arrow(1)), caption);
+        }
         const el = scene(sc, box, { after: [shelf], screens: 1 });
         el.dataset.step = '0';
         return el;
@@ -301,9 +320,6 @@ export function mount(ctx: FeatureContext): FeatureInstance {
       switch (sc.kind) {
         case 'crowd':
           el.dataset.shown = String(calm() ? 3 : crowdShown(p));
-          break;
-        case 'screens':
-          el.dataset.lit = String(Math.min(2, Math.floor(p * 3)));
           break;
         case 'afterlife':
           step(el);

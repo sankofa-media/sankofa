@@ -4,7 +4,7 @@
 // of its own, loaded only when a reader opens it.
 import type { App } from '../app';
 import { h, svgIcon } from '../lib/dom';
-import { pick } from '../lib/i18n';
+import { lang, pick } from '../lib/i18n';
 import { loadJson } from '../lib/loadJson';
 import { stopWithin } from '../lib/sound';
 import { weaveLive } from '../lib/weave';
@@ -71,9 +71,11 @@ export function createFeatures(app: App, hooks: FeatureHooks): Features {
   const kicker = h('span.ft-kicker');
   const back = h('a.btn.ft-back', { href: '#view=features', 'data-features': '' }, svgIcon('prev'), h('span.ft-back-label'));
   const tools = h('div.ft-tools');
+  // The other language, named in itself, as in the museum's top bar.
+  const langBtn = h('button.btn.lang-switch.ft-lang', { type: 'button', onclick: () => hooks.switchLang() });
   const closeBtn = h('button.icon-btn.ft-close', { type: 'button', onclick: () => closeAll() }, svgIcon('close'));
   const body = h('div.ft-body');
-  const el = h('section.ft-sheet', { role: 'dialog', 'aria-modal': 'true', tabindex: '-1', hidden: true }, h('div.ft-bar', {}, back, kicker, tools, closeBtn), body);
+  const el = h('section.ft-sheet', { role: 'dialog', 'aria-modal': 'true', tabindex: '-1', hidden: true }, h('div.ft-bar', {}, back, kicker, tools, langBtn, closeBtn), body);
   document.body.append(el);
   weaveLive(app, body);
   let returnTo: Element | null = null;
@@ -85,6 +87,10 @@ export function createFeatures(app: App, hooks: FeatureHooks): Features {
     back.hidden = !inFeature;
     back.querySelector('.ft-back-label')!.textContent = say('back');
     closeBtn.setAttribute('aria-label', say('close'));
+    const ru = lang() === 'ru';
+    langBtn.textContent = ru ? 'EN' : 'RU';
+    langBtn.lang = ru ? 'en' : 'ru';
+    langBtn.setAttribute('aria-label', ru ? 'Read in English' : 'Читать по-русски');
     el.setAttribute('aria-label', say('list-kicker'));
   };
 

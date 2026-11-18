@@ -7,6 +7,8 @@ import { pick } from '../lib/i18n';
 
 export interface FeatureHooks {
   navigate(view: 'features' | 'feature' | null, item?: string, scene?: string, push?: boolean): void;
+  /** Read the museum, this feature included, in the other language. */
+  switchLang(): void;
 }
 
 export interface Features {
