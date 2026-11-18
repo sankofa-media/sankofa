@@ -162,7 +162,8 @@ export function cabinetView(app: App, f: CabinetFile): HTMLElement {
         'header.mx-head.cb-head',
         {},
         h('h2', {}, pick({ en: 'Cabinet of Curiosities', ru: 'Кабинет редкостей' })),
-        ...pick(f.intro).split(/\n\s*\n/).map((para) => h('p.mx-lede', {}, para)),
+        // A folded YAML block keeps a blank line as a single newline: every newline left is a paragraph.
+        ...pick(f.intro).split(/\n+/).map((para) => h('p.mx-lede', {}, para)),
         h('p.cb-tally', { role: 'status' }, count(t.have, t.of)),
         keys.length ? h('div.cb-keyring', {}, h('span', {}, pick({ en: 'On your key ring:', ru: 'На вашей связке:' })), ...keys.map((k) => h('span.cb-keyring-key', { title: pick(k.note) }, keyArt(), pick(k.name)))) : null,
       ),

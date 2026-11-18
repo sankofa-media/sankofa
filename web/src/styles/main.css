@@ -4042,6 +4042,9 @@ details.k8s .term {
   }
   .atlas-item .y {
     grid-row: span 2;
+    /* A long BCE span breaks after its dash instead of running under the title. */
+    white-space: normal;
+    min-width: 0;
     font-family: var(--font-sans);
     font-size: 12px;
     color: var(--era);
@@ -8049,103 +8052,113 @@ html:lang(ru) .xref {
   flex: none;
 }
 
-/* Phone: wordmark, language and one labelled Menu; the menu names every way in. */
+/* A bar a little too wide for its window first draws its entries closer. */
+html.nav-tight .nav-actions {
+  gap: 0;
+}
+html.nav-tight .nav-actions .btn {
+  padding: 0.45em 0.55em;
+}
+
+/* Wordmark, language and one labelled Menu: on a phone, and wherever the
+   bar's entries do not fit in one line (navMenu.ts sets nav-compact).
+   The menu names every way in. */
 .nav-menu-btn,
 .nav-sheet {
   display: none;
 }
-@media (max-width: 720px) {
-  .nav .nav-actions .btn:not(.lang-switch):not(.nav-menu-btn),
-  .nav [data-theme-toggle] {
-    display: none !important;
-  }
-  .nav .nav-actions .nav-menu-btn {
-    display: inline-flex !important;
-    align-items: center;
-    gap: 8px;
-    width: auto;
-    height: 36px;
-    padding: 0 12px;
-    border: 1px solid var(--line-2);
-    border-radius: 999px;
-    font-family: var(--font-sans);
-    font-size: 14px;
-  }
-  .nav-menu-ic {
-    display: inline-grid;
-    gap: 3px;
-    width: 14px;
-  }
-  .nav-menu-ic i {
-    display: block;
-    height: 1.5px;
-    background: currentColor;
-    border-radius: 1px;
-  }
-  .nav-sheet:not([hidden]) {
-    display: block;
-    position: fixed;
-    top: var(--nav-h);
-    left: 0;
-    right: 0;
-    z-index: 60;
-    max-height: calc(100svh - var(--nav-h));
-    overflow-y: auto;
-    background: rgba(12, 11, 20, 0.98);
-    border-bottom: 1px solid rgba(242, 233, 216, 0.14);
-    box-shadow: 0 24px 48px -18px rgba(0, 0, 0, 0.7);
-    color: #f2e9d8;
-  }
-  .nav-sheet-list {
-    list-style: none;
-    margin: 0;
-    padding: 6px 0 10px;
-  }
-  .nav-sheet-item {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    width: 100%;
-    padding: 11px 18px;
-    background: none;
-    border: 0;
-    color: inherit;
-    text-align: left;
-    font-family: var(--font-sans);
-    cursor: pointer;
-  }
-  .nav-sheet-item:hover,
-  .nav-sheet-item:focus-visible {
-    background: rgba(242, 233, 216, 0.06);
-  }
-  .nav-sheet-ic {
-    flex: none;
-    width: 22px;
-    display: grid;
-    place-items: center;
-    color: var(--gold);
-  }
-  .nav-sheet-ic svg {
-    width: 20px;
-    height: 20px;
-  }
-  .nav-sheet-tx {
-    display: grid;
-    gap: 2px;
-  }
-  .nav-sheet-tx b {
-    font-size: 15.5px;
-    font-weight: 600;
-  }
-  .nav-sheet-tx small {
-    font-size: 12.5px;
-    color: rgba(242, 233, 216, 0.66);
-  }
-  .nav-sheet-count {
-    font-weight: 400;
-    color: var(--gold);
-  }
+html.nav-compact .nav .nav-actions .btn:not(.lang-switch):not(.nav-menu-btn),
+html.nav-compact .nav [data-theme-toggle] {
+  display: none !important;
+}
+html.nav-compact .nav .nav-actions .nav-menu-btn {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  width: auto;
+  height: 36px;
+  padding: 0 12px;
+  border: 1px solid var(--line-2);
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+}
+html.nav-compact .nav-menu-ic {
+  display: inline-grid;
+  gap: 3px;
+  width: 14px;
+}
+html.nav-compact .nav-menu-ic i {
+  display: block;
+  height: 1.5px;
+  background: currentColor;
+  border-radius: 1px;
+}
+html.nav-compact .nav-sheet:not([hidden]) {
+  display: block;
+  position: fixed;
+  top: var(--nav-h);
+  left: 0;
+  right: 0;
+  z-index: 60;
+  max-height: calc(100svh - var(--nav-h));
+  overflow-y: auto;
+  background: rgba(12, 11, 20, 0.98);
+  border-bottom: 1px solid rgba(242, 233, 216, 0.14);
+  box-shadow: 0 24px 48px -18px rgba(0, 0, 0, 0.7);
+  color: #f2e9d8;
+}
+html.nav-compact .nav-sheet-list {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0 10px;
+}
+html.nav-compact .nav-sheet-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 11px 18px;
+  background: none;
+  border: 0;
+  color: inherit;
+  text-align: left;
+  font-family: var(--font-sans);
+  cursor: pointer;
+}
+html.nav-compact .nav-sheet-item:hover,
+html.nav-compact .nav-sheet-item:focus-visible {
+  background: rgba(242, 233, 216, 0.06);
+}
+html.nav-compact .nav-sheet-ic {
+  flex: none;
+  width: 22px;
+  display: grid;
+  place-items: center;
+  color: var(--gold);
+}
+html.nav-compact .nav-sheet-ic svg {
+  width: 20px;
+  height: 20px;
+}
+html.nav-compact .nav-sheet-tx {
+  display: grid;
+  gap: 2px;
+}
+html.nav-compact .nav-sheet-tx b {
+  font-size: 15.5px;
+  font-weight: 600;
+}
+html.nav-compact .nav-sheet-tx small {
+  font-size: 12.5px;
+  color: rgba(242, 233, 216, 0.66);
+}
+html.nav-compact .nav-sheet-count {
+  font-weight: 400;
+  color: var(--gold);
+}
 
+@media (max-width: 720px) {
   /* The step picture always sits above its words, in every chapter. */
   .chapter .step .step-fig,
   .chapter.rhythm-2 .step .step-fig {

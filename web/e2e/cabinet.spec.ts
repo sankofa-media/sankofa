@@ -23,8 +23,10 @@ async function openFromPicture(page: Page, card: string) {
   await page.goto(`/#focus=${card}`);
   const spot = page.locator(`.drawer.on article.card[data-card-id="${card}"] .cb-glint`);
   await expect(spot).toBeAttached();
-  // Nothing shows until the picture is hovered or the spot has focus.
-  await expect(spot).toHaveCSS('opacity', '0');
+  // Nothing shows until the picture is hovered or the spot has focus; a touch
+  // screen has no hover, so there the glint stays faintly seen.
+  const touch = await page.evaluate(() => matchMedia('(hover: none)').matches);
+  await expect(spot).toHaveCSS('opacity', touch ? '0.35' : '0');
   await expect(spot).toHaveAttribute('aria-label', /hidden/i);
   await spot.focus();
   await page.keyboard.press('Enter');

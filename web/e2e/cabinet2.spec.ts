@@ -84,11 +84,14 @@ async function reveal(page: Page, c: Cache, lang?: 'ru'): Promise<Locator> {
   }
 }
 
+const touch = (page: Page) => page.evaluate(() => matchMedia('(hover: none)').matches);
+
 /** Find a cache and open its dialog, from the keyboard as a reader with no mouse would. */
 async function find(page: Page, c: Cache, lang?: 'ru'): Promise<void> {
   const el = await reveal(page, c, lang);
   await expect(el).toBeAttached({ timeout: 20_000 });
-  if (c.hidden.at === 'card-image' || c.hidden.at === 'index' || c.hidden.at === 'atlas') await expect(el).toHaveCSS('opacity', '0');
+  // Hidden until hovered; a touch screen has no hover, so there it stays faintly seen.
+  if (c.hidden.at === 'card-image' || c.hidden.at === 'index' || c.hidden.at === 'atlas') await expect(el).toHaveCSS('opacity', (await touch(page)) ? '0.35' : '0');
   await el.focus();
   await page.keyboard.press('Enter');
   await expect(modal(page).locator('#cb-cache-title')).toBeVisible();

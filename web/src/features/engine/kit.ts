@@ -142,9 +142,11 @@ export class Kit {
 
   section(sc: Scene, parts: SceneParts): HTMLElement {
     const title = sc.blocks.find((b) => b.role === 'kicker' || b.role === 'title' || b.role === 'line');
+    // A scene with no heading of its own is named by its `name`, never by its bare id.
+    const named = sc.name as { en: string; ru: string } | undefined;
     const el = h(
       `section.ft-scene.ft-k-${sc.kind}`,
-      { id: `scene-${sc.id}`, 'data-scene': sc.id, 'aria-label': title ? pick(title) : sc.id, style: `--screens:${parts.screens ?? 2}` },
+      { id: `scene-${sc.id}`, 'data-scene': sc.id, 'aria-label': title ? pick(title) : named?.en ? pick(named) : sc.id, style: `--screens:${parts.screens ?? 2}` },
       h('div.ft-stage', {}, parts.stage ?? null),
       h('div.ft-flow', {}, ...this.blocks(sc, parts.skip), ...(parts.after ?? []).filter((x): x is Node => !!x).map((n) => h('div.ft-block.ft-controls', {}, n))),
     );

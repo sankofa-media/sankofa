@@ -172,6 +172,9 @@ export class Roots {
       e.preventDefault();
       this.pick(hits[this.active].dataset.id!);
     } else if (e.key === 'Escape') {
+      // The first Escape clears the search; on an empty field it leaves the room,
+      // which opens with the focus right here.
+      if (!this.input.value) return this.onClose?.();
       this.input.value = '';
       this.search();
     }
