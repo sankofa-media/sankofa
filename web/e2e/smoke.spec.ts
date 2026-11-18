@@ -690,7 +690,7 @@ test('both copies hold the whole dictionary: a link opens its own card, a pair c
   const note = page.locator('.opener .ed-note:visible');
   await expect(note).toContainText(/Each\sholds\sthe\swhole\sdictionary:\severy\scard\sopens\sin\sboth\./);
   await expect(note).toContainText(/Yours\sis\sthe\sfemale\scopy;\sin\sits\schapters\syou\sread\s/);
-  await expect(note).toContainText('Pavić');
+  await expect(note).toContainText(/like\sthat\sdictionary,\sthe\smuseum\scomes\sin\stwo\scopies/);
   // The note names the reader's own stories, never both copies' (the list is behind a button).
   await expect(note.locator('p').first()).not.toContainText('Frederick Douglass');
   // The pairs come from the data: count them there.
