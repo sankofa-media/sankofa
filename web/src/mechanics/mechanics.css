@@ -2080,6 +2080,12 @@ html.cb-modal-open body {
   fill: rgba(255, 244, 214, 0.95);
   filter: drop-shadow(0 0 4px rgba(255, 236, 180, 0.8));
 }
+/* As on the pictures: with no hover on a touch screen, the map's glints stay faintly visible. */
+@media (hover: none) {
+  .geo .cb-aglint {
+    opacity: 0.35;
+  }
+}
 .geo .cb-aglint:hover,
 .geo .cb-aglint:focus-visible {
   opacity: 1;

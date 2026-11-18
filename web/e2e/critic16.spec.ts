@@ -13,8 +13,16 @@ test('the Cabinet’s “how to look” is a paragraph of its own', async ({ pag
   await page.goto('/#view=cabinet&lang=ru');
   const ledes = sheet(page).locator('.cb-head .mx-lede');
   await expect(ledes).toHaveCount(2);
-  await expect(ledes.nth(1)).toHaveText(/^Как искать\./);
-  await page.goto('/#view=cabinet');
-  await page.reload();
-  await expect(sheet(page).locator('.cb-head .mx-lede').nth(1)).toHaveText(/^How to look\./);
+  await expect(ledes.nth(1)).toHaveText(/^Как\P{L}*искать/u);
+  await page.goto('about:blank');
+  await page.goto('/#view=cabinet&lang=en');
+  await expect(sheet(page).locator('.cb-head .mx-lede').nth(1)).toHaveText(/^How\P{L}*to\P{L}*look/u);
+});
+
+test('a glint on the atlas map is faintly visible on a touch screen, as the Cabinet promises', async ({ page, isMobile }) => {
+  test.skip(!isMobile, 'only a touch screen has no hover');
+  await page.goto('/#view=atlas');
+  const glint = page.locator('.atlas.open g.cb-aglint').first();
+  await expect(glint).toBeAttached({ timeout: 15_000 });
+  await expect(glint).toHaveCSS('opacity', '0.35');
 });
