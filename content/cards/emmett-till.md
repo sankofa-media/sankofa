@@ -45,6 +45,7 @@ sources:
   - {title: "Library of Congress: Ida B. Wells and the activism of investigative journalism", url: "https://blogs.loc.gov/headlinesandheroes/2020/02/ida-b-wells-and-the-activism-of-investigative-journalism/"}
 media:
   - {"type": "image", "file": "emmett-till.jpg", "caption": "Emmett Till's last home, 6427 S. St. Lawrence Avenue, Chicago, 3 September 2016", "credit": "Charles Orlowek", "license": "CC BY-SA 4.0", "url": "https://commons.wikimedia.org/wiki/File:Emmett_Till%27s_Chicago_home_6427_S._St._Lawrence_Avenue.jpg"}
+  - {"type": "image", "file": "emmett-till-2.jpg", "caption": "Grave of Emmett Louis Till (1941–1955) at Burr Oak Cemetery, 29 May 2022", "credit": "Nick Number", "license": "CC BY 4.0", "url": "https://commons.wikimedia.org/wiki/File:Grave_of_Emmett_Louis_Till_(1941%E2%80%931955)_at_Burr_Oak_Cemetery.jpg"}
 ---
 Emmett Till, fourteen, left Chicago in August 1955 to visit
 family in the Mississippi Delta. On 24 August he stopped at Bryant's store
