@@ -5,12 +5,22 @@ set -euo pipefail
 cd "$(dirname "$0")/../.."
 source hack/stand/env.sh
 # One deploy at a time: two pushes through the same registry tunnel stall each other.
-mkdir -p dist
-if ! mkdir dist/.museum-deploy.lock 2>/dev/null; then
-  echo "another museum deploy is running (dist/.museum-deploy.lock); wait for it" >&2
-  exit 1
+# The lock lives beside the stand credentials, not in the checkout, so it also
+# holds deploys started from other worktrees. A lock whose owner died is taken over.
+LOCK=${MUSEUM_DEPLOY_LOCK:-$HOME/.sankofa-stand/museum-deploy.lock}
+mkdir -p "$(dirname "$LOCK")" dist
+if ! mkdir "$LOCK" 2>/dev/null; then
+  sleep 1 # the owner may not have written its pid yet
+  owner=$(cat "$LOCK/pid" 2>/dev/null || true)
+  if [ -n "$owner" ] && kill -0 "$owner" 2>/dev/null; then
+    echo "another museum deploy is running (pid $owner, $(cat "$LOCK/dir" 2>/dev/null)); wait for it" >&2
+    exit 1
+  fi
+  echo "taking over a stale deploy lock (pid ${owner:-unknown} is gone)" >&2
 fi
-trap 'rmdir dist/.museum-deploy.lock 2>/dev/null || true' EXIT
+echo $$ >"$LOCK/pid"
+pwd >"$LOCK/dir"
+trap 'rm -f "$LOCK/pid" "$LOCK/dir"; rmdir "$LOCK" 2>/dev/null || true' EXIT
 (cd web && sh scripts/build-data.sh >/dev/null && npx vite build >/dev/null)
 # The pictures go in three layers (card pictures, cabinet things, longread art)
 # and the site in a fourth. A picture layer is byte-for-byte reproducible (fixed
