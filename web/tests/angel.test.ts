@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { parse } from 'yaml';
-import { analyse, checkRR, detectBeats, intervals, movingAverage, pulsatile, resample, type Sample } from '../src/features/angel/pulse/ppg';
+import { analyse, checkRR, detectBeats, intervals, movingAverage, pulsatile, resample, steady, type Sample } from '../src/features/angel/pulse/ppg';
 import { beatAt, beatsBetween, beatTimes, bpm, lubDub, vibrationPattern, waveAt } from '../src/features/angel/pulse/wave';
 import { ANXIETY, anxietyAt, crowdShown, PROGRESS_CEILING, shownProgress, squeeze, stickyCount, thenNowPeriod, tremble, viscosity, yearAt, pulsePeriod } from '../src/features/angel/mood';
 import { pulseUrl, wantsPulse } from '../src/features/angel/url';
@@ -48,7 +48,14 @@ function fingertip(rr: number[], opts: { fps?: number; seed?: number; noise?: nu
 
 describe('camera pulse: the signal arithmetic', () => {
   it('resamples uneven frames onto an even grid', () => {
-    const s = resample([{ t: 0, v: 0 }, { t: 0.05, v: 5 }, { t: 0.1, v: 10 }], 20);
+    const s = resample(
+      [
+        { t: 0, v: 0 },
+        { t: 0.05, v: 5 },
+        { t: 0.1, v: 10 },
+      ],
+      20,
+    );
     expect(s.hz).toBe(20);
     expect([...s.v]).toEqual([0, 5, 10]);
     const m = movingAverage([1, 2, 3, 4, 5], 3);
@@ -64,7 +71,7 @@ describe('camera pulse: the signal arithmetic', () => {
     expect(Math.max(...x)).toBeGreaterThan(0.5);
   });
 
-  it("finds every beat of a steady pulse and measures it to within half a frame", () => {
+  it('finds every beat of a steady pulse and measures it to within half a frame', () => {
     const rr = new Array(40).fill(0).map((_, i) => 830 + ((i * 37) % 5) * 10);
     const { samples, beats } = fingertip(rr, { seed: 11 });
     const a = analyse(samples);
@@ -119,7 +126,10 @@ describe('camera pulse: the signal arithmetic', () => {
   });
 
   it('flat light, or a finger that moved, gives no pulse to send', () => {
-    const flat: Sample[] = Array.from({ length: 900 }, (_, k) => ({ t: k / 30, v: 120 + Math.sin(k) * 0.01 }));
+    const flat: Sample[] = Array.from({ length: 900 }, (_, k) => ({
+      t: k / 30,
+      v: 120 + Math.sin(k) * 0.01,
+    }));
     expect(checkRR(analyse(flat).rr)).not.toBeNull();
   });
 
@@ -134,10 +144,93 @@ describe('camera pulse: the signal arithmetic', () => {
   });
 });
 
+describe('camera pulse: a real fingertip under a flash', () => {
+  /** A beat as a phone sees it: the fall, the slow return, and the second bump (the dicrotic wave) a third of a second later. */
+  function realistic(
+    rr: number[],
+    opts: {
+      seed?: number;
+      bump?: number;
+      noise?: number;
+      slips?: number[];
+    } = {},
+  ): Sample[] {
+    const r = rng(opts.seed ?? 5);
+    const beats: number[] = [0.4];
+    for (const v of rr) beats.push(beats[beats.length - 1] + v / 1000);
+    const end = beats[beats.length - 1] + 0.6;
+    const out: Sample[] = [];
+    for (let k = 0; k / 30 < end; k++) {
+      const t = k / 30 + (r() - 0.5) * 0.008;
+      let dip = 0;
+      for (const b of beats) {
+        const d = t - b;
+        if (d < -0.2 || d > 1.2) continue;
+        dip += d < 0 ? Math.exp(-(d * d) / (2 * 0.04 * 0.04)) : Math.exp(-d / 0.18);
+        // The dicrotic wave: a smaller darkening 0.33 s after the beat.
+        dip += (opts.bump ?? 0.6) * Math.exp(-((d - 0.33) ** 2) / (2 * 0.05 * 0.05));
+      }
+      // The flash leaves green nearly black and noisy; red carries the pulse.
+      const slip = (opts.slips ?? []).some((a) => t > a && t < a + 0.4) ? 25 : 0;
+      out.push({
+        t,
+        v: 8 + (r() - 0.5) * 2,
+        r: 210 - 3 * dip + slip + (r() - 0.5) * 2 * (opts.noise ?? 0.3),
+        b: 20,
+      });
+    }
+    return out;
+  }
+
+  it('reads the pulse from red when the flash leaves green dark, and does not count the second bump', () => {
+    const rr = Array.from({ length: 45 }, (_, i) => 820 + ((i * 53) % 7) * 12);
+    const a = analyse(realistic(rr));
+    expect(checkRR(a.rr)).toBeNull();
+    const mean = a.rr.reduce((p, v) => p + v, 0) / a.rr.length;
+    expect(Math.abs(mean - 856)).toBeLessThan(25);
+  });
+
+  it('keeps the steady stretch when the finger slips for a moment', () => {
+    const rr = new Array(50).fill(780);
+    const a = analyse(realistic(rr, { slips: [9.1, 31.4], seed: 9 }));
+    expect(checkRR(a.rr)).toBeNull();
+    a.rr.forEach((v) => expect(Math.abs(v - 780)).toBeLessThan(40));
+  });
+
+  it('catches a pulse across rates, bumps, noise and slips', () => {
+    let ok = 0;
+    let n = 0;
+    for (let seed = 1; seed <= 40; seed++) {
+      const r = rng(seed * 101);
+      const base = 520 + r() * 560;
+      const rr = Array.from({ length: Math.ceil(40000 / base) + 2 }, () => Math.round(base * (0.95 + r() * 0.1)));
+      const slips = r() < 0.5 ? [5 + r() * 30] : [];
+      const a = analyse(
+        realistic(rr, {
+          seed,
+          bump: 0.2 + r() * 0.4,
+          noise: 0.2 + r() * 0.6,
+          slips,
+        }),
+      );
+      n++;
+      if (!checkRR(a.rr) && Math.abs(a.rr.reduce((p, v) => p + v, 0) / a.rr.length - base) < base * 0.08) ok++;
+    }
+    expect(ok / n).toBeGreaterThanOrEqual(0.95);
+  });
+
+  it('joins a bump counted as a beat back into its interval', () => {
+    expect(steady([800, 800, 300, 500, 800, 800])).toEqual([800, 800, 800, 800, 800]);
+  });
+});
+
 describe('the pulse wave rebuilt from its rhythm', () => {
   const rr = [1000, 900, 800, 700];
   it('places beats at the real times and loops', () => {
-    expect(beatTimes(rr)).toEqual({ times: [0, 1000, 1900, 2700], cycle: 3400 });
+    expect(beatTimes(rr)).toEqual({
+      times: [0, 1000, 1900, 2700],
+      cycle: 3400,
+    });
     expect(beatAt(1950, rr)).toMatchObject({ index: 2 });
     expect(beatAt(3400 + 950, rr)).toMatchObject({ index: 0 });
     expect(beatsBetween(0, 3400, rr).map((b) => b.at)).toEqual([1000, 1900, 2700, 3400]);

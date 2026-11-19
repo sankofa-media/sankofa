@@ -83,7 +83,16 @@ export function pulsatile(series: Series, opts: { invert?: boolean; baseline?: n
  * the surrounding two seconds, and above a floor of sensor noise), no closer than the refractory period (the
  * larger peak wins), each refined by a parabola through its neighbours.
  */
-export function detectBeats(x: Float64Array, hz: number, opts: { refractory?: number; share?: number; window?: number; floor?: number } = {}): number[] {
+export function detectBeats(
+  x: Float64Array,
+  hz: number,
+  opts: {
+    refractory?: number;
+    share?: number;
+    window?: number;
+    floor?: number;
+  } = {},
+): number[] {
   const n = x.length;
   if (n < 3) return [];
   const refractory = opts.refractory ?? 0.3;
@@ -129,7 +138,14 @@ export function intervals(beats: readonly number[]): number[] {
 
 // The limits the server checks (pkg/angel/pulse.go), checked here first so
 // a reader is not asked to send what would be refused.
-export const RR_LIMITS = { minBeats: 20, maxBeats: 120, min: 270, max: 2000, jump: 0.4, jumpShare: 0.1 } as const;
+export const RR_LIMITS = {
+  minBeats: 20,
+  maxBeats: 120,
+  min: 270,
+  max: 2000,
+  jump: 0.4,
+  jumpShare: 0.1,
+} as const;
 
 export type RRProblem = 'count' | 'range' | 'irregular';
 
@@ -154,14 +170,120 @@ export interface Analysis {
 }
 
 /**
- * Everything from raw frames: resample to 30 Hz, take the pulsatile part,
- * find the beats, measure the intervals. The first and last second are left
- * out of the beats (the moving averages are lopsided there).
+ * The pulse period, from the autocorrelation of the wave: the lag between
+ * 0.3 and 1.6 s (37 to 200 beats a minute) where the wave best matches
+ * itself, and how well (0..1). A wave of noise matches itself nowhere.
+ */
+export function period(raw: Float64Array, hz: number): { lag: number; strength: number } {
+  const n = raw.length;
+  // A slip of the finger is a jolt many times the pulse; clipped, it cannot drown the rhythm.
+  const mag = Float64Array.from(raw, Math.abs).sort();
+  const lim = 4 * (mag[n >> 1] || 0);
+  const x = Float64Array.from(raw, (y) => Math.max(-lim, Math.min(lim, y)));
+  let e = 0;
+  for (let i = 0; i < n; i++) e += x[i] * x[i];
+  if (!(e > 0)) return { lag: 0, strength: 0 };
+  const lo = Math.max(1, Math.round(0.3 * hz));
+  const hi = Math.min(n - 1, Math.round(1.6 * hz));
+  const ac: number[] = [];
+  for (let k = 0; k <= hi; k++) {
+    let c = 0;
+    for (let i = 0; i + k < n; i++) c += x[i] * x[i + k];
+    ac.push(c / e);
+  }
+  // The best match, then halved while half the lag matches nearly as well: two periods match almost as well as one.
+  const peaks: number[] = [];
+  for (let k = lo; k < hi; k++) if (ac[k] > ac[k - 1] && ac[k] >= ac[k + 1] && ac[k] > 0.15) peaks.push(k);
+  let best = -1;
+  for (const k of peaks) if (best < 0 || ac[k] > ac[best]) best = k;
+  for (let again = true; again && best > 0;) {
+    again = false;
+    for (const k of peaks) {
+      if (Math.abs(k * 2 - best) <= Math.max(2, best * 0.12) && ac[k] > 0.75 * ac[best]) {
+        best = k;
+        again = true;
+        break;
+      }
+    }
+  }
+  if (best < 0) return { lag: 0, strength: 0 };
+  return { lag: best / hz, strength: ac[best] };
+}
+
+/**
+ * The intervals that are surely the heart's: a too-short interval followed
+ * by one that completes it (a bump after the beat, counted as a beat) is
+ * one interval; then the longest unbroken stretch where every interval is
+ * near its neighbours' median and no step between two is a jump. A finger
+ * that slipped for a moment breaks the stretch, it does not spoil it.
+ */
+export function steady(rr: readonly number[]): number[] {
+  const merged: number[] = [];
+  const med = (a: readonly number[], i: number) => {
+    const w = a.slice(Math.max(0, i - 4), i + 5).sort((p, q) => p - q);
+    return w[w.length >> 1];
+  };
+  for (let i = 0; i < rr.length; i++) {
+    const m = med(rr, i);
+    if (rr[i] < 0.65 * m && i + 1 < rr.length && rr[i] + rr[i + 1] < 1.3 * m) {
+      merged.push(rr[i] + rr[i + 1]);
+      i++;
+    } else merged.push(rr[i]);
+  }
+  let best: [number, number] = [0, 0];
+  let from = 0;
+  for (let i = 0; i <= merged.length; i++) {
+    const m = i < merged.length ? med(merged, i) : 0;
+    const ok =
+      i < merged.length &&
+      merged[i] >= RR_LIMITS.min &&
+      merged[i] <= RR_LIMITS.max &&
+      merged[i] > 0.7 * m &&
+      merged[i] < 1.4 * m &&
+      (i === from || Math.abs(merged[i] - merged[i - 1]) / merged[i - 1] <= 0.3);
+    if (!ok) {
+      if (i - from > best[1] - best[0]) best = [from, i];
+      from = i + 1;
+    }
+  }
+  return merged.slice(best[0], best[1]);
+}
+
+/**
+ * Everything from raw frames: resample to 30 Hz, take the pulsatile part of
+ * the colour that carries the pulse best (green usually; red when the flash
+ * leaves green too dark), find the beats no closer than most of a period
+ * (so the second bump of every beat is not a beat), measure the intervals
+ * and keep the steady stretch. The first and last second are left out of
+ * the beats (the moving averages are lopsided there).
  */
 export function analyse(samples: readonly Sample[], hz = 30): Analysis {
-  const series = resample(samples, hz);
-  const wave = pulsatile(series);
+  const channels: Sample[][] = [samples as Sample[]];
+  if (samples.length && samples.every((s) => s.r !== undefined)) channels.push(samples.map((s) => ({ t: s.t, v: s.r! })));
+  let wave: Float64Array = new Float64Array(0);
+  let slope: Float64Array = new Float64Array(0);
+  let p = { lag: 0, strength: -1 };
+  for (const c of channels) {
+    const w = pulsatile(resample(c, hz));
+    // A beat is where the wave climbs steepest: the second bump of a beat can be as tall as the first, but it never rises as fast.
+    const d = movingAverage(
+      Float64Array.from(w, (y, i) => (i ? (y - w[i - 1]) * hz : 0)),
+      3,
+    );
+    const q = period(d, hz);
+    if (q.strength > p.strength) {
+      wave = w;
+      slope = d;
+      p = q;
+    }
+  }
   const dur = wave.length / hz;
-  const beats = detectBeats(wave, hz).filter((t) => t >= 1 && t <= dur - 1);
-  return { wave, hz, beats, rr: intervals(beats) };
+  // The second bump comes 0.25 to 0.4 s after the beat whatever the rate, so beats closer than 0.42 s are never both counted
+  // (a resting pulse up to about 140 a minute), and never closer than most of the period found.
+  const refractory = Math.max(0.42, 0.6 * p.lag);
+  const beats = detectBeats(slope, hz, {
+    refractory,
+    floor: 0.05 * hz * 0.1,
+  }).filter((t) => t >= 1 && t <= dur - 1);
+  return { wave, hz, beats, rr: steady(intervals(beats)) };
 }
