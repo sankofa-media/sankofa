@@ -5,7 +5,7 @@ import { h } from '../../lib/dom';
 import { pick } from '../../lib/i18n';
 import { audioContext } from '../../lib/sound';
 import type { FeatureContext, FeatureInstance } from '../host';
-import type { Figure, Frame, Scene } from '../model';
+import type { Bi, Figure, Frame, Scene } from '../model';
 import { BEAT, clap } from '../engine/clap';
 import { blot, develop, drawing, ink, s, sketch } from '../engine/ink';
 import type { Picture } from '../engine/layers';
@@ -32,7 +32,8 @@ function print(kit: Kit, id: unknown, under: Element): HTMLElement | null {
   return h(
     'figure.ft-photo.ft-print',
     { 'data-photo': String(id) },
-    develop(under, { src: p.src, alt: p.alt }, 0.12, 0.45),
+    // The photo is there when the scene arrives; the drawing only stands in until it loads.
+    develop(under, { src: p.src, alt: p.alt }, 0, 0),
     h(
       'figcaption.ft-credit',
       {},
@@ -85,13 +86,22 @@ const arrival: Render = (kit, sc) => {
   return kit.section(sc, { stage: home.el, screens: 2 });
 };
 
+/** The clap's switch in the text: like the one in the bar, it always names what pressing it will do. */
 const ringScene: Render = (kit, sc) => {
-  const hear = h('button.btn.ft-hear', { type: 'button', 'aria-pressed': 'false' }, kit.ui('hear-clap'));
+  const hear = h('button.btn.ft-hear', { type: 'button', 'aria-pressed': 'false' }, kit.ui('sound-off'));
   hear.addEventListener('click', () => kit.setSound(kit.audio !== 'on'));
-  const sync = () => hear.setAttribute('aria-pressed', String(kit.audio === 'on'));
+  const sync = () => {
+    hear.setAttribute('aria-pressed', String(kit.audio === 'on'));
+    hear.textContent = kit.ui(kit.audio === 'on' ? 'sound-on' : 'sound-off');
+  };
   new MutationObserver(sync).observe(kit.ctx.root, { attributes: true, attributeFilter: ['data-audio'] });
   return kit.section(sc, { stage: kit.art(sc)?.el, after: [hear] });
 };
+
+/** The circle's place under a scene's picture (wide screens). */
+const slot = () => h('div.cc-slot');
+/** Its place in the text, right after the words that explain it (phones, where the text runs over the picture). */
+const textSlot = () => h('div.cc-slot.cc-slot-text');
 
 const expedition: Render = (kit, sc) => {
   // Where the road leads: a pin on the horizon with the place's name above it.
@@ -110,11 +120,48 @@ const family: Render = (kit, sc) => {
   return kit.section(sc, { stage: h('div.ft-stack', {}, kit.art(sc)?.el ?? null, list), screens: 2.4 });
 };
 
+interface VerseLine {
+  call: string;
+  answer: string;
+  gloss: Bi;
+  unclear?: boolean;
+}
+
+/** What the sisters sing, line by line: the lead's line, its meaning, and the answer. */
+function verse(kit: Kit, sc: Scene): HTMLElement | null {
+  const v = sc.verse as { lines: VerseLine[]; more?: Bi } | undefined;
+  if (!v?.lines?.length) return null;
+  const [open, close] = pick({ en: '“”', ru: '«»' });
+  const quote = (t: string) => `${open}${t}${close}`;
+  return h(
+    'div.slg-verse',
+    {},
+    h(
+      'ol',
+      {},
+      ...v.lines.map((l) =>
+        h(
+          `li${l.unclear ? '.unclear' : ''}`,
+          {},
+          h('span.slg-who', {}, kit.ui('verse-lead')),
+          h('span.slg-call', { lang: 'en' }, quote(l.call)),
+          h('span.slg-gloss', {}, pick(l.gloss)),
+          h('span.slg-who', {}, kit.ui('verse-answer')),
+          h('span.slg-answer', { lang: 'en' }, quote(l.answer)),
+        ),
+      ),
+    ),
+    v.more ? h('p.slg-more', {}, pick(v.more)) : null,
+  );
+}
+
 const minute: Render = (kit, sc) => {
   const loc = kit.node(sc.nodes?.[0] ?? '');
+  const yours = sc.blocks.find((b) => b.id === 'yours');
   return kit.section(sc, {
-    stage: kit.art(sc)?.el,
-    after: [loc ? kit.playButton(loc, kit.ui('play-1939')) : null, loc ? kit.credit(loc) : null, h('p.ft-hint', {}, kit.ui('clap-hint'))],
+    stage: h('div.ft-stack.cc-stack', {}, kit.art(sc)?.el ?? null, slot()),
+    skip: ['yours'],
+    after: [loc ? kit.playButton(loc, kit.ui('play-1939')) : null, loc ? kit.credit(loc) : null, verse(kit, sc), yours ? kit.block(yours) : null, textSlot()],
     screens: 2.6,
   });
 };
@@ -138,7 +185,7 @@ const simone: Render = (kit, sc) => {
   // The drawing at the piano develops into the photograph, when there is a cleared one.
   const photo = kit.photo(sc.photo);
   const drawn = picture(kit, sc, () => art.piano());
-  const stage = photo ? h('figure.ft-photo', {}, develop(drawn, { src: photo.src, alt: photo.alt }, 0.25, 0.7), h('figcaption.ft-credit', {}, photo.credit)) : drawn;
+  const stage = photo ? h('figure.ft-photo', {}, develop(drawn, { src: photo.src, alt: photo.alt }, 0, 0), h('figcaption.ft-credit', {}, photo.credit)) : drawn;
   return kit.section(sc, { stage, after: [n ? kit.playButton(n) : null] });
 };
 
@@ -153,24 +200,16 @@ const single: Render = (kit, sc) => {
       h('b.sg-title', {}, t(`label-${side}`)),
       // Bass is credited on the B side only: "Mississippi Goddam" is Simone's own.
       side === 'b' ? h('span.sg-credit', {}, t('credit')) : null,
-      side === 'b' ? h('span.sg-names', { 'data-develop': '0.35 0.8' }, t('names')) : null,
     );
+  // The record lies B side up: the side the song was on, with its label.
   const disc = h('div.sg-disc', {}, face('a'), face('b'));
-  const record = h('div.sg', { 'data-side': 'a' }, h('div.sg-vinyl', { 'aria-hidden': 'true' }), disc);
+  const record = h('div.sg', { 'data-side': 'b' }, h('div.sg-vinyl', { 'aria-hidden': 'true' }), disc);
   // The record lies on the platter of the player on the table (centre 50%/50%,
   // 52% of the width) and moves with the player's layer, so it stays on it.
   const player = sc.art?.layers.at(-1);
   if (player?.depth) record.dataset.depth = String(player.depth);
   const table = h('div.sg-table', {}, kit.art(sc)?.el ?? null, record);
-  const live = h('p.sg-now.ft-visually-hidden', { 'aria-live': 'polite' });
-  const flip = h('button.btn.primary.sg-flip', { type: 'button', 'aria-pressed': 'false' }, kit.ui('flip')) as HTMLButtonElement;
-  flip.addEventListener('click', () => {
-    const b = record.dataset.side !== 'b';
-    record.dataset.side = b ? 'b' : 'a';
-    flip.setAttribute('aria-pressed', String(b));
-    live.textContent = `${kit.ui(b ? 'side-b' : 'side-a')}: ${t(b ? 'label-b' : 'label-a')}`;
-  });
-  return kit.section(sc, { stage: h('div.ft-stack', {}, table, live), after: [flip], screens: 2.6 });
+  return kit.section(sc, { stage: h('div.ft-stack', {}, table), screens: 2 });
 };
 
 const textScene: Render = (kit, sc) => kit.section(sc, { stage: still(kit, sc, () => art.page()) });
@@ -255,7 +294,7 @@ const filmstrip: Render = (kit, sc) => {
 
 const silence: Render = (kit, sc) => kit.section(sc, { stage: still(kit, sc), screens: 2 });
 
-const classroom: Render = (kit, sc) => kit.section(sc, { stage: picture(kit, sc, () => art.classroom()), screens: 2.2 });
+const classroom: Render = (kit, sc) => kit.section(sc, { stage: h('div.ft-stack.cc-stack', {}, picture(kit, sc, () => art.classroom()), slot()), after: [textSlot()], screens: 2.2 });
 
 const finale: Render = (kit, sc) => {
   const credit = kit.text('single', 'credit');
@@ -278,10 +317,15 @@ const finale: Render = (kit, sc) => {
     if (loc) kit.play(loc);
     playTogether(kit);
   });
-  const loc = kit.node(sc.nodes?.[0] ?? '');
-  const artCredit = kit.generated ? h('p.ft-credit.ft-art-credit', {}, kit.ui('art-credit')) : null;
-  return kit.section(sc, { stage: h('div.ft-stack', {}, label, home.el), skip: lines.map((b) => b.id), after: [together, loc ? kit.credit(loc) : null, artCredit], screens: 3 });
+  return kit.section(sc, { stage: h('div.ft-stack.cc-stack', {}, label, home.el, slot()), skip: lines.map((b) => b.id), after: [textSlot(), together], screens: 3 });
 };
+
+/** The closing credits: plain lines at the foot of the page, after the last scene, standing still. */
+function credits(kit: Kit): HTMLElement {
+  const fin = kit.ctx.data.scenes.find((sc) => sc.kind === 'finale');
+  const loc = kit.node(fin?.nodes?.[0] ?? '');
+  return h('footer.slg-credits', {}, loc ? kit.credit(loc) : null, kit.generated ? h('p.ft-credit.ft-art-credit', {}, kit.ui('art-credit')) : null);
+}
 
 /** Four bars of the reader's claps (where they fell on the circle) and the children's, over the 1939 voices. */
 function playTogether(kit: Kit): void {
@@ -308,17 +352,13 @@ export function mount(ctx: FeatureContext): FeatureInstance {
   const kit = new Kit(ctx);
   const scenes = ctx.data.scenes.filter((sc) => RENDER[sc.kind]);
   for (const sc of scenes) ctx.root.append(RENDER[sc.kind](kit, sc));
-  const minuteAt = scenes.findIndex((sc) => sc.kind === 'minute');
-  const stageAt = new Set(['minute', 'finale']);
-  kit.clapScenes = new Set(scenes.filter((sc) => ['minute', 'classroom', 'finale'].includes(sc.kind)).map((sc) => sc.id));
-  // By the scene's own place in the story: some scenes render nothing, so the
-  // index of the scene element on the page is not the index in the story.
-  kit.circlePlace = (id) => {
-    const at = scenes.findIndex((sc) => sc.id === id);
-    const kind = scenes[at]?.kind ?? '';
-    if (minuteAt < 0 || at < minuteAt) return 'hidden';
-    return stageAt.has(kind) ? 'stage' : 'corner';
-  };
+  ctx.root.append(credits(kit));
+  // The circle shows only where the reader claps: under the picture of the
+  // minute, the classroom and the finale. In between it is put away (the
+  // claps are kept and come back in the finale).
+  const clapping = new Set(['minute', 'classroom', 'finale']);
+  kit.clapScenes = new Set(scenes.filter((sc) => clapping.has(sc.kind)).map((sc) => sc.id));
+  kit.circlePlace = (id) => (kit.clapScenes.has(id) ? 'stage' : 'hidden');
   const quiet = new Set(scenes.filter((sc) => sc.kind === 'silence').map((sc) => sc.id));
   for (const sc of scenes) kit.onEnter(sc.id, (el) => {
     kit.hush(quiet.has(sc.id));

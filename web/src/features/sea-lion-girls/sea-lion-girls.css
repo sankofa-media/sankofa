@@ -146,18 +146,6 @@
 .sg-credit {
   font-size: clamp(7px, 0.85vw, 10px);
 }
-.sg-names {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: clamp(8px, 1vw, 12px);
-  color: #8a2a22;
-  filter: blur(calc(var(--develop, 0) * 3px));
-  opacity: calc(1 - var(--develop, 0) * 0.85);
-}
-.is-calm .sg-names {
-  filter: none;
-  opacity: 0.4;
-}
 .is-calm .sg-disc {
   transition: none;
 }
@@ -197,6 +185,72 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+}
+.rv-legend li.rv-legend-head {
+  flex-basis: 100%;
+  color: var(--ft-ink);
+}
+/* A version's card: a panel held at the bottom of the screen, in view where the circle was tapped. */
+.rv-detail {
+  position: sticky;
+  bottom: 16px;
+  z-index: 4;
+  justify-self: center;
+  width: min(100%, 36rem);
+}
+.rv-detail[hidden] {
+  display: none;
+}
+.rv-detail .rv-card {
+  max-width: none;
+  max-height: 60svh;
+  overflow-y: auto;
+  border: 1px solid color-mix(in srgb, var(--ft-ink) 25%, transparent);
+  background: var(--ft-paper);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  padding-right: 44px;
+}
+.rv-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 1;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  color: var(--ft-ink);
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}
+.rv-node.on {
+  opacity: 1;
+  z-index: 2;
+}
+.rv-node.on .rv-med {
+  outline: 3px solid var(--ft-red);
+  outline-offset: 3px;
+}
+.rv-node.on .rv-name {
+  color: var(--ft-ink);
+  -webkit-line-clamp: 3;
+}
+@media (max-width: 720px) {
+  .rv-detail {
+    position: fixed;
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+    width: auto;
+  }
+  body.mp-on .rv-detail {
+    bottom: 110px;
+  }
+  .rv-detail .rv-card {
+    max-height: 55svh;
+  }
 }
 .ft-glyph {
   width: 18px;
@@ -443,10 +497,6 @@
   justify-self: start;
 }
 
-/* 6. Silence */
-.ft-k-silence .ft-flow {
-  gap: 30svh;
-}
 
 /* 8. The name returns */
 .ft-k-finale .ft-stage,
@@ -725,4 +775,105 @@
   .fl-stack > .art-flashes {
     max-height: 12svh;
   }
+}
+
+/* The clap circle under the picture, not over it. */
+.cc-stack {
+  --cc-size: 128px;
+  --cc-room: calc(var(--cc-size) + 64px);
+  align-content: center;
+}
+.cc-stack > .ft-art {
+  width: min(58vw, 860px, 100vw - 2 * var(--gutter) - 31rem - 32px, (100svh - var(--nav-h) - 6vh - var(--cc-room)) * 1.5);
+}
+
+/* The words of the 1939 recording, line by line. */
+.slg-verse {
+  max-width: 31rem;
+  padding: 16px 22px;
+  border-radius: 28px;
+  background: var(--ft-glass);
+  box-shadow: 0 0 28px 20px var(--ft-glass);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.45;
+}
+.slg-verse ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+.slg-verse li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0 12px;
+  align-items: baseline;
+}
+.slg-who {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ft-ink-2);
+}
+.slg-call,
+.slg-answer {
+  font-family: var(--font-display);
+  font-size: 19px;
+}
+.slg-answer {
+  color: var(--ft-red);
+}
+.slg-gloss {
+  grid-column: 2;
+  color: var(--ft-ink-2);
+  margin-bottom: 2px;
+}
+.slg-verse li.unclear .slg-call {
+  font-style: italic;
+}
+.slg-head,
+.slg-more {
+  margin: 0 0 12px;
+  color: var(--ft-ink-2);
+}
+.slg-more {
+  margin: 12px 0 0;
+}
+
+.cc-slot-text {
+  display: none;
+}
+@media (max-width: 720px) {
+  /* On a phone the text runs over the picture, so the circle stands in the text instead. */
+  .cc-stack {
+    --cc-size: 112px;
+    align-content: start;
+  }
+  .cc-stack > .cc-slot {
+    display: none;
+  }
+  .cc-stack > .ft-art {
+    width: min(100%, 46svh * 1.5);
+  }
+  .cc-slot-text {
+    display: grid;
+    width: 100%;
+    --cc-size: 112px;
+  }
+  .slg-verse {
+    padding: 14px 16px;
+  }
+}
+
+/* The closing credits: still, at the foot of the page. */
+.slg-credits {
+  display: grid;
+  gap: 8px;
+  max-width: 44rem;
+  padding: 24px var(--gutter) 48px;
+}
+.slg-credits .ft-credit {
+  margin: 0;
 }

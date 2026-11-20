@@ -1,6 +1,8 @@
 // The river: the song's family tree growing down the page in two branches,
-// a filter by what each version took, and every medallion a way into the
-// docked player. Stops along it are cards for one or a few versions.
+// a filter by what each version took, and every medallion opens its card:
+// a panel that stays at the bottom of the screen, with the version's names,
+// what it took, its story and its own play button (a tap never starts the
+// music by itself). Stops along it are cards for one or a few versions.
 import { pick } from '../../lib/i18n';
 import { h } from '../../lib/dom';
 import type { Kit } from '../engine/kit';
@@ -27,9 +29,15 @@ export function river(kit: Kit, backdrop: Picture | null = null): { el: HTMLElem
     const my = (y0 + y1) / 2;
     edges.append(s('path', { d: `M${x0} ${y0} C${x0} ${my} ${x1} ${my} ${x1} ${y1}`, class: `rv-edge b-${b.branch}`, 'data-row': b.row, 'vector-effect': 'non-scaling-stroke' }));
   }
-  const detail = h('div.rv-detail', { 'aria-live': 'polite' });
+  const detail = h('div.rv-detail', { 'aria-live': 'polite', hidden: true });
+  const close = h('button.rv-close', { type: 'button', 'aria-label': kit.ui('close-card') }, '×');
+  close.addEventListener('click', () => {
+    detail.hidden = true;
+    buttons.forEach((x) => x.classList.remove('on'));
+  });
   const show = (n: LineageNode) => {
-    detail.replaceChildren(card(kit, n));
+    detail.replaceChildren(close, card(kit, n));
+    detail.hidden = false;
   };
   const buttons = lay.placed.map((p) => {
     const n = byId.get(p.id)!;
@@ -42,9 +50,11 @@ export function river(kit: Kit, backdrop: Picture | null = null): { el: HTMLElem
       h('span.rv-name', { 'aria-hidden': 'true' }, n.artist.split(/[;(]/)[0].trim()),
     );
     b.addEventListener('click', () => {
-      buttons.forEach((x) => x.classList.toggle('on', x === b));
+      buttons.forEach((x) => {
+        x.classList.toggle('on', x === b);
+        x.setAttribute('aria-expanded', String(x === b));
+      });
       show(n);
-      kit.play(n);
     });
     return b;
   });
@@ -63,6 +73,7 @@ export function river(kit: Kit, backdrop: Picture | null = null): { el: HTMLElem
   const legend = h(
     'ul.rv-legend',
     {},
+    h('li.rv-legend-head', {}, kit.ui('legend')),
     ...(['clap', 'refrain', 'arrangement', 'tape'] as const).map((g) => h('li', {}, glyph(g), kit.ui(`glyph-${g}`))),
   );
   const heads = h('div.rv-heads', { 'aria-hidden': 'true' }, h('span.b-girls', {}, kit.ui('branch-girls')), h('span.b-simone', {}, kit.ui('branch-simone')));
