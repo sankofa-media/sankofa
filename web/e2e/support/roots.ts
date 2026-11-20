@@ -38,7 +38,7 @@ export function fixtureRoots(): Artist[] {
 
 export async function serveFixtureRoots(page: Page): Promise<void> {
   const roots = fixtureRoots();
-  await page.route(/\/data\/(?:cache\/)?cards(?:\.(?:en|ru)\.[a-f0-9]+)?\.json$/, async (route) => {
+  await page.route(/\/data\/(?:cache\/)?(?:cards|roots)(?:\.(?:en|ru)\.[a-f0-9]+)?\.json$/, async (route) => {
     const res = await route.fetch();
     const data = await res.json();
     await route.fulfill({ response: res, json: { ...data, roots } });

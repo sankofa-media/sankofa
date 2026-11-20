@@ -57,7 +57,7 @@ export function editionNote(app: App): HTMLElement {
   const other: 'm' | 'f' = mine === 'f' ? 'm' : 'f';
   const n = pairs.length;
   // Cards whose own text differs between the copies ({male}/{female} paragraphs).
-  const varied = app.set.all().some((c) => COPY_PARAGRAPH.test(app.raw(c.id)?.body ?? ''));
+  const varied = app.set.all().some((c) => c.varied || COPY_PARAGRAPH.test(app.raw(c.id)?.body ?? ''));
   // Every pair from the data, in each copy's own words.
   // Names come from the cards themselves, so a new pair needs no code here.
   const name = (c: Card) => (ru ? `«${c.title}»` : c.inline || c.title.replace(/^The /, 'the '));

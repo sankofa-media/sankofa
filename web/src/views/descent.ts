@@ -601,6 +601,9 @@ export class Descent {
     best?.classList.add('desk-on');
     const c = id ? this.app.set.get(id) : undefined;
     if (!c) return void this.desk.replaceChildren();
+    if (c.summary) void this.app.set.ensure(id).then(() => {
+      if (this.deskId === id) { this.deskId = ''; this.updateDesk(); }
+    }).catch(() => {});
     const img = c.media?.find((m) => m.type === 'image');
     this.desk.replaceChildren(
       h(
@@ -648,6 +651,19 @@ export class Descent {
 
   private reveal(): void {
     this.loadImages();
+    if (this.level === 5 && this.phone()) {
+      const io = new IntersectionObserver(entries => {
+        for (const e of entries) if (e.isIntersecting) {
+          io.unobserve(e.target);
+          const el = e.target as HTMLElement;
+          void this.app.set.ensure(el.dataset.card!).then(c => {
+            const body = el.querySelector('.dc-body');
+            if (body && c) body.textContent = plain(c.body.split(/\n\s*\n/)[0]).replace(/\s*\n\s*/g, ' ');
+          }).catch(() => {});
+        }
+      }, { root: this.el });
+      this.track.querySelectorAll('a.dc').forEach(el => io.observe(el));
+    }
     const els = this.track.querySelectorAll('.dc, .d-chapter, .d-era, .d-move, .d-quiet');
     if (reducedMotion() || !('IntersectionObserver' in window)) {
       els.forEach((e) => e.classList.add('seen'));

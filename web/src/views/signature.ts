@@ -4,7 +4,7 @@
 import type { App } from '../app';
 import type { Card } from '../lib/types';
 import { cardForEdition, formatYears, links } from '../lib/cards';
-import { h, reducedMotion } from '../lib/dom';
+import { h, reducedMotion, revealOnScroll } from '../lib/dom';
 import { lang, pick } from '../lib/i18n';
 import { progressive } from '../lib/media';
 
@@ -95,6 +95,22 @@ export function narratedCards(steps: string[]): Set<string> {
 export function signature(app: App, chapterId: string, c0: Card | undefined, near = ''): HTMLElement | null {
   const plan = PLAN[chapterId];
   if (!c0) return null;
+  if (c0.summary) {
+    const host = signature(app, chapterId, { ...c0, summary: false }, near) ?? h('div.signature-pending');
+    const observer = new IntersectionObserver(entries => {
+      if (!entries.some(e => e.isIntersecting)) return;
+      observer.disconnect();
+      void app.set.ensure(c0.id).then(card => {
+        const full = signature(app, chapterId, card, near);
+        if (full) { host.replaceWith(full); revealOnScroll(full); }
+        else host.remove();
+      }).catch(() => {
+        host.append(h('a', { href: `#focus=${c0.id}`, 'data-card': c0.id }, c0.title));
+      });
+    }, { rootMargin: '100% 0px' });
+    observer.observe(host);
+    return host;
+  }
   // An interlude never repeats a fact the step beside it has just told.
   const line = freshLine(c0, near);
   const c = { ...c0, wow: line };

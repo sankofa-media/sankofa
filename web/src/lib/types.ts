@@ -27,6 +27,9 @@ export interface Media {
 }
 
 export interface Card {
+  /** Compact runtime entry; full prose is fetched on demand. */
+  summary?: boolean;
+  varied?: boolean;
   /** Original printer-column title and counter wording, retained by localized runtime exports. */
   sourceTitle?: string;
   counterText?: Partial<Record<'m' | 'f', string>>;

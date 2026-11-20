@@ -62,7 +62,7 @@ export function indexEntries(cards: Card[], l: Lang, raw: (id: string) => Card |
     .map((c) => ({
       id: c.id,
       title: c.title,
-      en: raw(c.id)?.title ?? c.title,
+      en: c.sourceTitle ?? raw(c.id)?.title ?? c.title,
       kind: c.kind,
       years: c.years,
       wow: c.wow,

@@ -1,10 +1,11 @@
+import { lazyView } from './lib/lazyView';
 import './styles/main.css';
 import './styles/roots.css';
 import './styles/countries.css';
 import './styles/factoids.css';
 import type { App } from './app';
 import { cardLink } from './app';
-import type { CardsFile, ChaptersFile } from './lib/types';
+import type { Card, CardsFile, ChaptersFile } from './lib/types';
 import { ERAS } from './lib/types';
 import { holdScroll, placeNow, placeTop, rememberPlace, takePlace } from './lib/place';
 import { CardSet, cardForEdition, localizeCard, localizeChapter } from './lib/cards';
@@ -29,8 +30,6 @@ import { Atlas } from './views/atlas';
 import { Descent } from './views/descent';
 import { Listen } from './views/listen';
 import { Engine } from './views/engine';
-import { Roots } from './views/roots';
-import { RootsMap } from './views/rootsMap';
 import { installMechanics } from './mechanics';
 import { installFeatures } from './features';
 import { installNavMenu, navReady, setBookCount } from './views/navMenu';
@@ -42,9 +41,8 @@ import { Facts, usableFactoids, type FactoidsFile } from './lib/factoids';
 import { FactPanel } from './views/factoid';
 
 async function load<T>(url: string): Promise<T> {
-  // The cover paints first; the data comes at a lower priority, with a
-  // timeout and further tries on a slow line.
-  const data = await loadJson<T>(url, { priority: 'low', timeout: 120_000 });
+  // Text takes priority over the cover image, with retries on a slow line.
+  const data = await loadJson<T>(url, { priority: 'high', timeout: 120_000 });
   if (data === null) throw new Error(`${url}: not found`);
   return data;
 }
@@ -103,11 +101,11 @@ async function start(): Promise<void> {
   installFocusTrap();
   // The language switch needs no data, so it works while the cards load.
   document.querySelectorAll<HTMLElement>('[data-lang-switch]').forEach((b) => b.addEventListener('click', () => switchLang(lang() === 'ru' ? 'en' : 'ru')));
-  // Let the static cover paint before the 1 MB of cards competes for the wire.
+  // Let the static cover paint before the card index competes for the wire.
   await new Promise<void>((r) => requestAnimationFrame(() => setTimeout(r, 0)));
   try {
     [cardsFile, chaptersFile, listenFile, , namesFile, voicesFile] = await Promise.all([
-      load<CardsFile>('data/cards.json'),
+      load<CardsFile>('data/card-index.json'),
       load<ChaptersFile>('data/chapters.json'),
       // Listening is an extra: the museum opens without it.
       load<ListenFile>('data/listen.json').catch(() => EMPTY_LISTEN),
@@ -133,7 +131,11 @@ async function start(): Promise<void> {
   const rawCards = new Map(cardsFile.cards.map((c) => [c.id, c]));
   const held = reader.edition();
   // Cards, like chapters, hold only the reader's copy of a marked paragraph.
-  const set = new CardSet(cardsFile.cards.map((c) => cardForEdition(localizeCard(c, current), held)));
+  const set = new CardSet(cardsFile.cards.map((c) => cardForEdition(localizeCard(c, current), held)), async id => {
+    const full = await load<Card>(`data/cards/${id}.json`);
+    rawCards.set(id, full);
+    return cardForEdition(full, held);
+  });
   // Each copy reads only its own paragraphs: every step and count follows from here.
   // A step's own label and picture ({at …}, {img …}) travel with its paragraph
   // through both filters, then come off as fields beside the clean text.
@@ -151,6 +153,7 @@ async function start(): Promise<void> {
   // fill the views that wait for them; without them the museum is whole.
   const facts = new Facts(async () => usableFactoids(await loadJson<FactoidsFile>('data/factoids.json', { priority: 'low', timeout: 60_000 })));
 
+  let cardRequest = 0;
   const app: App = {
     set,
     facts,
@@ -174,7 +177,15 @@ async function start(): Promise<void> {
       const c = set.get(id);
       if (!c) return;
       bookDrawer.close(true);
-      cardDrawer.show(renderCard(app, c));
+      const request = ++cardRequest;
+      cardDrawer.show(c.summary ? h('div', { role: 'status' }, h('h2', {}, c.title), h('p', {}, c.wow)) : renderCard(app, c));
+      if (c.summary) void set.ensure(id).then(full => {
+        if (full && request === cardRequest && cardDrawer.isOpen) cardDrawer.show(renderCard(app, full));
+      }).catch(() => {
+        if (request === cardRequest && cardDrawer.isOpen) cardDrawer.show(h('div', { role: 'alert' },
+          h('p', {}, pick({ en: 'The card could not load. Please try again.', ru: 'Карточку не удалось загрузить. Попробуйте ещё раз.' })),
+          h('button.btn', { onclick: () => app.openCard(id, { push: false }) }, t('Try again'))));
+      });
       const next = reader.recordVisit(c.id);
       pathListeners.forEach((l) => l(next));
       route = { ...route, point: { ...route.point, focus: c.id } };
@@ -250,7 +261,15 @@ async function start(): Promise<void> {
     route = { point: {}, ch: chapterNow ?? undefined };
     writeRoute(route, false);
   };
-  const roots = new Roots(app, cardsFile.roots ?? []);
+  let rootsData: Promise<CardsFile> | undefined;
+  const loadRoots = () => rootsData ??= load<CardsFile>('data/roots.json').then(data => {
+    Object.assign(app, rootsExtras(data));
+    return data;
+  }).catch(error => { rootsData = undefined; throw error; });
+  const roots = lazyView(async () => {
+    const [data, { Roots }] = await Promise.all([loadRoots(), import('./views/roots')]);
+    return new Roots(app, data.roots ?? []);
+  });
   roots.onArtist = (artist) => {
     route = { point: {}, view: 'roots', artist };
     // A chain is a page to come back to; a cleared one is not.
@@ -261,7 +280,10 @@ async function start(): Promise<void> {
     route = { point: {}, ch: chapterNow ?? undefined };
     writeRoute(route, false);
   };
-  const rootsMap = new RootsMap(app, cardsFile.roots ?? []);
+  const rootsMap = lazyView(async () => {
+    const [data, { RootsMap }] = await Promise.all([loadRoots(), import('./views/rootsMap')]);
+    return new RootsMap(app, data.roots ?? []);
+  });
   rootsMap.onClose = () => {
     rootsMap.close();
     route = { point: {}, view: 'roots' };
@@ -269,8 +291,8 @@ async function start(): Promise<void> {
     roots.open();
   };
   const closeOverlays = (keep?: string) => {
-    if (keep !== 'roots-map' && rootsMap.isOpen) rootsMap.close();
-    if (keep !== 'roots' && roots.isOpen) roots.close();
+    if (keep !== 'roots-map') rootsMap.close();
+    if (keep !== 'roots') roots.close();
     if (keep !== 'atlas' && atlas.isOpen) atlas.close();
     if (keep !== 'descent' && descent.isOpen) descent.close();
     if (keep !== 'listen' && listen.isOpen) listen.close();

@@ -62,7 +62,12 @@ export function runtimeData(): Plugin {
                 }));
                 return { ...card, localized: true, sourceTitle: c.title, ...(Object.keys(counterText).length ? { counterText } : {}) };
               });
-              emit(`data/card-index.${language}.json`, { cards: value.cards.map((c: any) => ({ id: c.id, title: c.title, wow: c.wow, books: c.books, years: c.years, places: c.places, era: c.era, kind: c.kind, pair: c.pair, edition: c.edition, inline: c.inline, label: c.label, body: '' })) });
+              emit(`data/roots.${language}.json`, { ...value, cards: [] });
+              emit(`data/card-index.${language}.json`, { version: value.version, rootsElements: value.rootsElements, cards: value.cards.map((c: any) => {
+                const { body, sources, further, dispute, media, ...index } = c;
+                return { ...index, body: '', sources: [], summary: true, varied: /(^|\n)\s*\{(male|female)\}\s/.test(body),
+                  media: media?.filter((m: any) => m.type === 'image') };
+              }) });
               for (const c of value.cards) emit(`data/cards/${c.id}.${language}.json`, c);
               for (const c of original.cards) emit(`data/raw-cards/${c.id}.${language}.json`, c);
             }
