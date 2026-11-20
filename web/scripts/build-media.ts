@@ -10,7 +10,7 @@
 import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
-import { dirname, join } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
 
 const WIDTHS = [480, 960, 1600];
 
@@ -101,7 +101,7 @@ function resize(src: string, dst: string, w: number): void {
   for (let attempt = 1; ; attempt++) {
     try {
       if (tool === 'sips') execFileSync('sips', ['-Z', String(w), '-s', 'formatOptions', '72', src, '--out', dst], { stdio: 'ignore' });
-      else execFileSync('vipsthumbnail', [src, '--size', `${w}x`, '-o', `${dst}[Q=72,strip]`], { stdio: 'ignore' });
+      else execFileSync('vipsthumbnail', [src, '--size', `${w}x`, '-o', `${resolve(dst)}[Q=72,strip]`], { stdio: 'ignore' });
       return;
     } catch (err) {
       if (attempt >= 3) throw err;
@@ -178,7 +178,7 @@ if (tool) {
 /** A smaller copy of a transparent WebP layer, alpha kept. */
 function resizeWebp(src: string, dst: string, w: number): void {
   if (webp === 'cwebp') execFileSync('cwebp', ['-quiet', '-resize', String(w), '0', '-q', '82', '-alpha_q', '90', src, '-o', dst], { stdio: 'ignore' });
-  else execFileSync('vipsthumbnail', [src, '--size', `${w}x`, '-o', `${dst}[Q=82,alpha_q=90,strip]`], { stdio: 'ignore' });
+  else execFileSync('vipsthumbnail', [src, '--size', `${w}x`, '-o', `${resolve(dst)}[Q=82,alpha_q=90,strip]`], { stdio: 'ignore' });
 }
 
 // The illustration layers of the special projects, at media/features/<id>/.
