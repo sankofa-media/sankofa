@@ -5,7 +5,7 @@
 // The language of a path is its prefix: /ru/… is Russian, any other page
 // path is English; the bare root keeps the reader's own language.
 // Pure: the build (scripts/seo) and the browser share it.
-import { formatRoute, parseRoute, type Route } from './route';
+import { formatRoute, parseRoute, type Route } from './route.ts';
 
 export type PageLang = 'en' | 'ru';
 export type PageKind = 'home' | 'features' | 'feature' | 'chapter' | 'card' | 'guide' | 'dedication';
