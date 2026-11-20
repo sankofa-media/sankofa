@@ -328,6 +328,8 @@ test('level 5 never shows an empty desk, and a phone reads the card in the colum
   await page.waitForTimeout(1200);
   if (info.project.name === 'mobile') {
     await expect(page.locator('.d-desk')).toBeHidden();
+    // Full prose arrives when this card's row enters the viewport.
+    await page.locator('.descent a.dc').first().scrollIntoViewIfNeeded();
     await expect(page.locator('.descent a.dc .dc-body').first()).not.toBeEmpty();
   } else {
     await expect(page.locator('.d-desk .desk-in h3')).toBeVisible();
@@ -717,13 +719,12 @@ test('a card with {male}/{female} paragraphs reads its own paragraph in each cop
     const page = await (await browser.newContext({ baseURL })).newPage();
     await page.addInitScript((e) => localStorage.setItem('sankofa.edition', e), ed);
     // Mark one shared card's copies in the data the museum loads.
-    await page.route(/\/data\/(?:cache\/)?cards(?:\.(?:en|ru)\.[a-f0-9]+)?\.json$/, async (route) => {
+    await page.route(/\/data\/cache\/cards\/zong\.(?:en|ru)\.[a-f0-9]+\.json$/, async (route) => {
       const res = await route.fetch();
-      const d = await res.json();
-      const z = d.cards.find((c: { id: string }) => c.id === 'zong');
+      const z = await res.json();
       z.body += route.request().url().includes('.ru.') ? '\n\n{male} Абзац для него.\n\n{female} Абзац для неё.' : '\n\n{male} A paragraph for him.\n\n{female} A paragraph for her.';
       if (z.translations?.ru?.body) z.translations.ru.body += '\n\n{male} Абзац для него.\n\n{female} Абзац для неё.';
-      await route.fulfill({ response: res, json: d });
+      await route.fulfill({ response: res, json: z });
     });
     await page.goto('/#focus=zong');
     const text = page.locator('.card .text');

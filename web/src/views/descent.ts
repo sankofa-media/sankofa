@@ -39,6 +39,8 @@ const QUIET = [
 ];
 
 export class Descent {
+  private proseObserver?: IntersectionObserver;
+  private proseLayout = 0;
   readonly el: HTMLElement;
   private track: HTMLElement;
   private meterYear: HTMLElement;
@@ -651,17 +653,28 @@ export class Descent {
 
   private reveal(): void {
     this.loadImages();
+    this.proseObserver?.disconnect();
     if (this.level === 5 && this.phone()) {
       const io = new IntersectionObserver(entries => {
         for (const e of entries) if (e.isIntersecting) {
           io.unobserve(e.target);
           const el = e.target as HTMLElement;
+          if (!this.app.set.get(el.dataset.card!)?.summary) continue;
           void this.app.set.ensure(el.dataset.card!).then(c => {
             const body = el.querySelector('.dc-body');
-            if (body && c) body.textContent = plain(c.body.split(/\n\s*\n/)[0]).replace(/\s*\n\s*/g, ' ');
+            if (!body || !c || !el.isConnected) return;
+            const text = plain(c.body.split(/\n\s*\n/)[0]).replace(/\s*\n\s*/g, ' ');
+            if (body.textContent === text) return;
+            body.textContent = text;
+            // The column positions use measured heights, including newly loaded prose.
+            if (!this.proseLayout) this.proseLayout = requestAnimationFrame(() => {
+              this.proseLayout = 0;
+              if (this.isOpen && this.level === 5) this.layout(this.yearNow());
+            });
           }).catch(() => {});
         }
       }, { root: this.el });
+      this.proseObserver = io;
       this.track.querySelectorAll('a.dc').forEach(el => io.observe(el));
     }
     const els = this.track.querySelectorAll('.dc, .d-chapter, .d-era, .d-move, .d-quiet');
