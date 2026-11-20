@@ -141,7 +141,7 @@ func TestVerdictRouting(t *testing.T) {
 		{"reject", &fakeModerator{j: Judgement{Verdict: VerdictReject, Reason: "ad"}}, "buy now", StatusRejected, "buy now"},
 		{"crisis drops text", &fakeModerator{j: Judgement{Verdict: VerdictCrisis, Reason: "risk"}}, "я не хочу больше жить", StatusCrisis, ""},
 		{"refusal held for owner", &fakeModerator{j: Judgement{Verdict: VerdictReject, Refused: true}}, "something", StatusReview, "something"},
-		{"model error waits", &fakeModerator{err: errors.New("boom")}, "Папа, спасибо", StatusPending, "Папа, спасибо"},
+		{"model error falls back to the rules", &fakeModerator{err: errors.New("boom")}, "Папа, спасибо", StatusPublished, "Папа, спасибо"},
 		{"cleaning cannot add links", &fakeModerator{j: Judgement{Verdict: VerdictPublish, CleanText: "see example.com"}}, "hi", StatusRejected, "hi"},
 	}
 	for _, c := range cases {
@@ -529,7 +529,7 @@ func TestRulesPublishAndHoldDanger(t *testing.T) {
 	}
 }
 
-func TestSeedFillsOnlyAnEmptyChorus(t *testing.T) {
+func TestSeedOnce(t *testing.T) {
 	ctx := context.Background()
 	st, err := OpenStore(":memory:")
 	if err != nil {
@@ -554,5 +554,31 @@ func TestSeedFillsOnlyAnEmptyChorus(t *testing.T) {
 		if w.TrEN == "" || w.TrRU == "" {
 			t.Fatalf("seed without both languages: %+v", w)
 		}
+	}
+}
+
+type failing struct{}
+
+func (failing) Moderate(context.Context, string, string) (Judgement, error) {
+	return Judgement{}, errors.New("credit balance is too low")
+}
+
+func TestModelFailureFallsBackToRules(t *testing.T) {
+	ctx := context.Background()
+	st, err := OpenStore(":memory:")
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer st.Close()
+	svc := &Service{Store: st, Moderator: failing{}}
+	w := Word{Text: "Прости меня"}
+	svc.judge(ctx, &w)
+	if w.Status != StatusPublished {
+		t.Fatalf("status %s (%s)", w.Status, w.Reason)
+	}
+	w = Word{Text: "не хочу жить"}
+	svc.judge(ctx, &w)
+	if w.Status != StatusCrisis {
+		t.Fatalf("status %s", w.Status)
 	}
 }
