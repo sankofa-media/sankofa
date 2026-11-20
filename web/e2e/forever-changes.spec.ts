@@ -231,17 +231,23 @@ test('the prologue’s picture follows the text: Memphis, Dorsey High, the club,
   await expect(after).toHaveAttribute('data-state', 'prison');
 });
 
-test('the record turns over between the sides, and everything stops for a moment', async ({ page }) => {
+test('the opening shows the cover, the title, Lee\'s words and offers the mode at once', async ({ page, isMobile }) => {
+  await page.goto('/#view=feature&item=forever-changes&lang=ru');
+  const first = scene(page, 'warning');
+  await expect(first.locator('.fc-cover img')).toHaveJSProperty('complete', true);
+  expect(await first.locator('.fc-cover img').evaluate((i: HTMLImageElement) => i.naturalWidth)).toBeGreaterThan(200);
+  await expect(first.locator('h1.ft-h1')).toContainText('Forever Changes');
+  await expect(first.locator('.fc-cover-sub')).toContainText('Артура Ли');
+  await expect(first.locator('.fc-epigraph-who')).toContainText('автор песен и солист группы Love');
+  await first.locator('.fc-cover-go').click();
+  if (isMobile) await expect(feature(page).locator('.fc-lee')).toHaveAttribute('data-state', 'warning');
+  else await expect(feature(page).locator('.fc-lee-panel')).toBeVisible();
+});
+
+test('between the sides there is text, not a record to turn over', async ({ page }) => {
   await open(page, '#view=feature&item=forever-changes&scene=flip');
-  const rec = scene(page, 'flip').locator('.fc-record');
-  await expect(rec).toHaveAttribute('data-side', 'a');
-  await expect(rec.locator('.fc-a li')).toHaveCount(6);
-  await scene(page, 'flip').locator('.fc-flip').click();
-  await expect(rec).toHaveAttribute('data-side', 'b');
-  await expect(feature(page)).toHaveAttribute('data-frozen', '');
-  await expect(rec.locator('.fc-b li')).toHaveCount(5);
-  await expect(rec.locator('.fc-b')).toContainText('You Set the Scene');
-  await expect(feature(page)).not.toHaveAttribute('data-frozen', '', { timeout: 3000 });
+  await expect(scene(page, 'flip').locator('.fc-record, .fc-flip')).toHaveCount(0);
+  await expect(scene(page, 'flip').locator('.ft-flow')).toContainText('Side two');
 });
 
 test('the Arthur Lee button is pinned in every chapter', async ({ page }) => {
@@ -324,7 +330,8 @@ test('in Russian, everything visible is Russian', async ({ page }) => {
   await page.goto('/#view=feature&item=forever-changes&lang=ru');
   await expect(feature(page).locator('h1.ft-h1')).toContainText('последние слова, которые не стали последними');
   await expect(sheet(page).locator('.fc-menu-btn')).toHaveText('Главы');
-  await expect(feature(page).locator('.fc-lee-pin')).toContainText('Артура Ли');
+  await expect(feature(page).locator('.fc-lee-pin')).toContainText('Ваша комната под ЛСД');
+  await expect(feature(page).locator('.fc-lens-label').first()).toBeAttached();
   await goToScene(page, 'session-day');
   await expect(scene(page, 'session-day').locator('.fc-lens-btn[data-lens="botnick"]')).toHaveText('Брюс Ботник');
 });
