@@ -1176,3 +1176,11 @@ body.fc-lee-on {
     margin-bottom: 24px;
   }
 }
+
+@media (max-width: 720px) {
+  /* Leave room below the final paragraph so its picture stays pinned while
+     the reader centers that paragraph beneath it. */
+  .fc .ft-scene .ft-flow {
+    padding-bottom: max(40svh, calc(var(--ft-stage-h) + 64px));
+  }
+}
