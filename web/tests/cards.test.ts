@@ -138,3 +138,27 @@ describe('the moment a card is about', () => {
     expect(quietStretches([smalls], 45)[0]).toEqual({ from: 1300, to: 1862 });
   });
 });
+
+describe('on-demand card prose', () => {
+  it('shares an in-flight load and retains the full card for repeat opens', async () => {
+    let calls = 0;
+    const full = card({ id: 'entry', body: 'The entire source text.' });
+    const index = new CardSet([card({ id: 'entry', summary: true })], async () => { calls++; return full; });
+    const [first, second] = await Promise.all([index.ensure('entry'), index.ensure('entry')]);
+    expect(first).toEqual(full);
+    expect(second).toEqual(full);
+    expect(await index.ensure('entry')).toEqual(full);
+    expect(calls).toBe(1);
+  });
+
+  it('retries after failure without replacing the index entry', async () => {
+    let calls = 0;
+    const index = new CardSet([card({ id: 'entry', summary: true })], async () => {
+      if (++calls === 1) throw new Error('Offline');
+      return card({ id: 'entry', body: 'Recovered text.' });
+    });
+    await expect(index.ensure('entry')).rejects.toThrow('Offline');
+    expect(index.get('entry')?.summary).toBe(true);
+    expect((await index.ensure('entry'))?.body).toBe('Recovered text.');
+  });
+});

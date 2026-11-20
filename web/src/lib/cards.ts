@@ -10,7 +10,24 @@ export class CardSet {
   readonly byId = new Map<string, Card>();
   readonly order: string[];
 
-  constructor(cards: Card[]) {
+  private pending = new Map<string, Promise<Card | undefined>>();
+
+  /** Fetch only a requested entry; failed requests remain retryable. */
+  async ensure(id: string): Promise<Card | undefined> {
+    const card = this.get(id);
+    if (!card?.summary || !this.loadCard) return card;
+    let request = this.pending.get(id);
+    if (!request) {
+      request = this.loadCard(id).then(full => {
+        this.byId.set(id, full);
+        return full;
+      }).finally(() => this.pending.delete(id));
+      this.pending.set(id, request);
+    }
+    return request;
+  }
+
+  constructor(cards: Card[], private loadCard?: (id: string) => Promise<Card>) {
     for (const c of cards) {
       this.byId.set(c.id, { ...c, edition: c.edition || 'both' });
     }

@@ -66,8 +66,8 @@ export function renderPage(template: string, site: string, p: SeoPage, noscript:
   html = html.replace(NOSCRIPT, () => noscript);
   html = html.replace(/href="(?:\/)?features\//g, `href="${p.lang === 'ru' ? '/ru' : ''}/features/`);
   if (p.kind === 'home') return html;
-  // Only the home's first screen is the cover picture.
-  html = html.replace(/\s*<link rel="preload" as="image"[^>]*>/, '');
+  // Only the home's first screen uses the cover and its small display face.
+  html = html.replace(/\s*<link rel="preload" as="(?:image|font)"[^>]*>/g, '');
   if (p.kind === 'feature' || p.kind === 'features') html = html.replace(/<body[\s\S]*?<\/body>/, '<body></body>');
   return html.replace(/<body([^>]*)>/, (_, attrs: string) => `<body${attrs} class="pre">\n    <div class="prerender" data-prerender lang="${p.lang}">${p.body}</div>`);
 }

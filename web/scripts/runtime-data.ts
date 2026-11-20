@@ -33,6 +33,21 @@ export function runtimeData(): Plugin {
         res.end(value);
       });
     },
+    transformIndexHtml() {
+      const paths = Object.fromEntries(['en', 'ru'].map(language => {
+        const key = `data/card-index.${language}.json`;
+        return [language, `/${key.replace('data/', 'data/cache/').replace('.json', `.${manifest[key]}.json`)}`];
+      }));
+      // The language has already been selected by the inline head script.
+      // Start the small index before the module graph finishes downloading.
+      return [{ tag: 'script', injectTo: 'head', children: `if (!/\\/features(?:\\/|$)/.test(location.pathname)) {
+        var indexPreload = document.createElement('link');
+        indexPreload.rel = 'preload'; indexPreload.as = 'fetch'; indexPreload.crossOrigin = 'anonymous';
+        indexPreload.fetchPriority = 'high';
+        indexPreload.href = ${JSON.stringify(paths)}[document.documentElement.lang] || ${JSON.stringify(paths.en)};
+        document.head.append(indexPreload);
+      }` }];
+    },
     resolveId(id) { if (id === 'virtual:runtime-data') return '\0runtime-data'; },
     load(id) { if (id === '\0runtime-data') return `export default ${JSON.stringify(manifest)}`; },
     buildStart() {
@@ -62,7 +77,12 @@ export function runtimeData(): Plugin {
                 }));
                 return { ...card, localized: true, sourceTitle: c.title, ...(Object.keys(counterText).length ? { counterText } : {}) };
               });
-              emit(`data/card-index.${language}.json`, { cards: value.cards.map((c: any) => ({ id: c.id, title: c.title, wow: c.wow, books: c.books, years: c.years, places: c.places, era: c.era, kind: c.kind, pair: c.pair, edition: c.edition, inline: c.inline, label: c.label, body: '' })) });
+              emit(`data/roots.${language}.json`, { ...value, cards: [] });
+              emit(`data/card-index.${language}.json`, { version: value.version, rootsElements: value.rootsElements?.map(({ id, name, nameRu }: any) => ({ id, name, nameRu })), cards: value.cards.map((c: any) => {
+                const { body, sources, further, dispute, media, ...index } = c;
+                return { ...index, body: '', sources: [], summary: true, varied: /(^|\n)\s*\{(male|female)\}\s/.test(body),
+                  media: media?.filter((m: any) => m.type === 'image') };
+              }) });
               for (const c of value.cards) emit(`data/cards/${c.id}.${language}.json`, c);
               for (const c of original.cards) emit(`data/raw-cards/${c.id}.${language}.json`, c);
             }
