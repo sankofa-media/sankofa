@@ -7,7 +7,7 @@
 //   llms.txt, llms-full.txt, ru/llms-full.txt
 //   features.atom, ru/features.atom
 // Every special project listed in content/features/index.yaml gets all of it
-// with no change here. SANKOFA_SITE sets the canonical origin.
+// with no change here. SITE_URL sets the canonical origin.
 import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
@@ -174,7 +174,7 @@ export function seo(): Plugin {
     },
     closeBundle() {
       const dist = resolve(config.root, config.build.outDir);
-      buildSeo(dist, resolve(config.root, '..'), process.env.SANKOFA_SITE?.replace(/\/+$/, '') || DEFAULT_SITE, (s) => config.logger.info(s));
+      buildSeo(dist, resolve(config.root, '..'), (process.env.SITE_URL || process.env.SANKOFA_SITE)?.replace(/\/+$/, '') || DEFAULT_SITE, (s) => config.logger.info(s));
     },
   };
 }
