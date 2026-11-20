@@ -547,7 +547,13 @@ test('the type stays readable over the pictures and the trip at every level of d
   for (const id of ['prologue', 'hillside', 'session-day', 'a-house-is-not-a-motel', 'the-daily-planet', 'the-red-telephone', 'between-clark-and-hilldale', 'live-and-let-live', 'bummer-in-the-summer', 'you-set-the-scene', 'end']) {
     await goToScene(page, id);
     const lede = scene(page, id).locator('.ft-flow > .ft-b-lede, .ft-flow > .ft-b-text').first();
-    await lede.evaluate((el) => el.scrollIntoView({ block: 'center' }));
+    await lede.evaluate((el) => {
+      el.scrollIntoView({ block: 'center' });
+      // On a phone the scene's picture is pinned above the text and the text passes under it: read the block just below it.
+      const stage = el.closest('.ft-scene')?.querySelector<HTMLElement>(':scope > .ft-stage');
+      const sheet = el.closest<HTMLElement>('.ft-sheet');
+      if (stage && sheet && matchMedia('(max-width: 720px)').matches) sheet.scrollTop += el.getBoundingClientRect().top - stage.getBoundingClientRect().bottom - 32;
+    });
     await page.waitForTimeout(3500);
     worst.push([id, await contrastOf(page, lede)]);
   }
