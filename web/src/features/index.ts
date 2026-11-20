@@ -1,4 +1,6 @@
 // Special projects in the museum: the menu entry, the links and the route.
+// While one is open it is the page: the museum is hidden (body.ft-on) and
+// comes back, at the place it was left, when the reader returns to it.
 // Only this stub is in the museum's main bundle; the sheet with the list
 // (./host) loads on the first visit, and each feature with its engine loads
 // only when it is opened.
@@ -21,12 +23,15 @@ export function installFeatures(app: App, hooks: FeatureHooks): Features {
   let host: Features | undefined;
   let loading: Promise<Features> | undefined;
   let wanted: [('features' | 'feature') | null, string?, string?] = [null];
+  let museumY = 0;
   const load = () => (loading ??= import('./host').then((m) => (host = m.createFeatures(app, hooks))));
   const api: Features = {
     get isOpen() {
       return host?.isOpen ?? wanted[0] !== null;
     },
     open(view, item, scene) {
+      if (!document.body.classList.contains('ft-on')) museumY = window.scrollY;
+      document.body.classList.add('ft-on');
       wanted = [view, item, scene];
       if (host) return host.open(view, item, scene);
       void load().then((h) => {
@@ -36,7 +41,12 @@ export function installFeatures(app: App, hooks: FeatureHooks): Features {
     },
     close() {
       wanted = [null];
+      const was = document.body.classList.contains('ft-on');
       host?.close();
+      if (!was) return;
+      document.body.classList.remove('ft-on');
+      // At once: the page's smooth scrolling would sweep through the whole story.
+      window.scrollTo({ top: museumY, behavior: 'instant' });
     },
   };
   // Links anywhere: <a data-features> opens the list, <a data-feature="id"> one feature.

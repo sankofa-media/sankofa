@@ -1,8 +1,8 @@
 // The museum's own position next to the shared atlas point: which view is
 // open (view=descent) and which chapter the story is at (ch=v3). Go's
 // atlas.Parse ignores these keys, so terminal links stay compatible.
-import { formatFragment, goQueryEscape, safeParse, type Point } from './fragment';
-import { isMechView, type MechView } from '../mechanics/views';
+import { formatFragment, goQueryEscape, safeParse, type Point } from './fragment.ts';
+import { isMechView, type MechView } from '../mechanics/views.ts';
 
 export type View = 'descent' | 'listen' | 'atlas' | 'engine' | 'roots' | 'roots-map' | 'features' | 'feature' | MechView;
 

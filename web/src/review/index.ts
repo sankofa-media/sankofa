@@ -5,6 +5,10 @@
 import './review.css';
 import { pick } from '../lib/i18n';
 import { forgetReviewToken } from '../lib/reviewGate';
+import { hashOfLocation } from '../lib/pagePath';
+
+// Notes are keyed by the page as its hash link names it, on a feature's own path too.
+const hashNow = () => hashOfLocation(location.pathname, location.hash);
 import { ReviewApi, ReviewError, type Note, type NoteInput, type NoteSelection } from './api';
 import { around, describe, deviceKind, excerpt, pageOf, pickable, resolve, type Target } from './locator';
 
@@ -116,10 +120,10 @@ function targetOf(e: Element): Target {
 }
 
 function pageNow(e: Element): NoteInput['page'] {
-  const p = pageOf(location.hash);
+  const p = pageOf(hashNow());
   return {
     url: location.href,
-    hash: location.hash,
+    hash: hashNow(),
     ...p,
     lang: document.documentElement.lang || 'en',
     theme: document.documentElement.dataset.theme,
@@ -316,7 +320,7 @@ export class Review {
 
   private place(): void {
     if (this.focusEl) this.highlight(this.focusEl.isConnected ? this.focusEl : null);
-    const key = pageOf(location.hash).key;
+    const key = pageOf(hashNow()).key;
     const shown = this.collapsed ? [] : this.notes.filter((n) => n.status === 'open' && n.page.key === key);
     const keep = new Set<string>();
     shown.forEach((n, i) => {
@@ -587,7 +591,7 @@ export class Review {
 
   private async show(n: Note): Promise<void> {
     this.closePanel();
-    if (n.page.hash !== location.hash && pageOf(n.page.hash).key !== pageOf(location.hash).key) location.hash = n.page.hash;
+    if (n.page.hash !== hashNow() && pageOf(n.page.hash).key !== pageOf(hashNow()).key) location.assign('/' + n.page.hash);
     // The page may still be opening: look for the element for a few seconds.
     for (let i = 0; i < 25; i++) {
       const t = resolve<Element>(n.target, document);

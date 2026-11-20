@@ -145,7 +145,21 @@ export interface FeatureSource {
   river?: RiverSource;
   /** The witnesses a scene can be read through (scenes list theirs as `lenses`). */
   lenses?: Lens[];
+  /** What search engines and link previews show; derived from the text when absent. */
+  seo?: FeatureSeo;
   scenes: Scene[];
+}
+
+/**
+ * Optional overrides for the feature's page outside the museum (search
+ * results, link previews, llms.txt, the feed). Without them the build takes
+ * the dek as the description and draws the social picture from the cover.
+ */
+export interface FeatureSeo {
+  /** A short description, about 160 characters, in both languages. */
+  description?: Bi;
+  /** A picture in the feature's art folder for link previews (cropped to 1200×630). */
+  image?: string;
 }
 
 export interface RiverSource {
@@ -178,6 +192,7 @@ export interface FeatureEntry {
   scenes: number;
   /** The cover in the list: a scene's layers, back to front, without the ones of a later state. */
   cover?: Cover;
+  seo?: FeatureSeo;
 }
 
 export interface Cover {

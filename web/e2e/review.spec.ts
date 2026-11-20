@@ -38,7 +38,7 @@ test('the owner turns review on with the token, notes a paragraph of a feature a
   await expect(feature(page)).toBeVisible();
   // The token leaves the link at once and stays on the device.
   expect(page.url()).not.toContain('review');
-  expect(page.url()).toContain('view=feature&item=sea-lion-girls');
+  expect(new URL(page.url()).pathname).toBe('/features/sea-lion-girls/');
   expect(await page.evaluate(() => localStorage.getItem('sankofa.review'))).toBe(TOKEN);
 
   const bar = page.locator('.rv-bar');

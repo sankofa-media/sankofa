@@ -60,6 +60,13 @@
   border-color: var(--line-2);
   flex: none;
 }
+/* The way back into the museum: its name, where a site keeps its wordmark. */
+.ft-home {
+  flex: none;
+  font-family: var(--font-display);
+  font-size: 17px;
+  letter-spacing: 0.01em;
+}
 .ft-loading,
 .ft-error {
   max-width: 40rem;

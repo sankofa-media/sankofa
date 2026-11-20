@@ -2,18 +2,27 @@
 <html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
+    <!-- Every relative address (data/, media/, assets/) is from the root, so the
+         same page also works at /features/<id>/ and the other pre-rendered paths. -->
+    <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <!-- seo:start — the build (scripts/seo) writes each page's own head here. -->
+    <title>Sankofa — Go back and fetch it</title>
+    <meta name="description" content="Seven centuries of Black culture, from the courts of Mali to Afrofuturism: a museum that ships as a Kubernetes distribution." />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Sankofa — Go back and fetch it" />
     <meta property="og:description" content="Seven centuries of Black culture, from the libraries of Timbuktu to the starships of Sun Ra: a museum that ships as a Kubernetes distribution." />
-    <meta property="og:image" content="https://museum.sankofa.workshop.aenix.io/social-card.jpg" />
+    <meta property="og:image" content="https://sankofa.black/social-card.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta name="twitter:card" content="summary_large_image" />
-    <title>Sankofa — Go back and fetch it</title>
-    <meta name="description" content="Seven centuries of Black culture, from the courts of Mali to Afrofuturism: a museum that ships as a Kubernetes distribution." />
+    <!-- seo:end -->
     <meta name="theme-color" content="#0c0d18" />
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230c0d18'/%3E%3Ctext x='16' y='23' font-family='Georgia' font-size='20' text-anchor='middle' fill='%23e3ab3d'%3ES%3C/text%3E%3C/svg%3E" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="alternate" type="application/atom+xml" title="Sankofa: special projects" href="features.atom" />
     <script>
       try {
         if (localStorage.getItem('sankofa.theme') === 'light') document.documentElement.dataset.theme = 'light';
@@ -23,11 +32,14 @@
         var l = null;
         try {
           l = new URLSearchParams(location.hash.slice(1)).get('lang');
+          // A page path names its language: /ru/… is Russian, /features/… English.
+          if (l !== 'ru' && l !== 'en' && location.pathname !== '/') l = /^\/ru(\/|$)/.test(location.pathname) ? 'ru' : 'en';
           if (l !== 'ru' && l !== 'en') l = localStorage.getItem('sankofa.lang');
         } catch (e) {}
         if (l !== 'ru' && l !== 'en') l = (navigator.languages || [navigator.language || '']).some(function (x) { return /^ru\b/i.test(x); }) ? 'ru' : 'en';
         document.documentElement.lang = l;
-        if (l === 'ru') document.title = 'Sankofa — Вернись и забери';
+        // A pre-rendered page has its own title in its language.
+        if (l === 'ru' && location.pathname === '/') document.title = 'Sankofa — Вернись и забери';
       })();
     </script>
     <link rel="preload" as="image" type="image/webp" imagesrcset="media/w960/hero-v0.webp 960w, media/hero-v0.webp 1600w" imagesizes="100vw" fetchpriority="high" />
@@ -43,6 +55,12 @@
       .cover-inner{padding:0 clamp(16px,4vw,56px) clamp(48px,10vh,110px)}
       .cover h1{font-size:clamp(64px,15vw,210px);line-height:.86;margin:0;font-weight:400}
       html:not(:lang(ru)) [data-l=ru],html:lang(ru) [data-l=en]{display:none}
+      /* A special project is the whole page; a pre-rendered page shows its own text until the museum starts. */
+      body.ft-on>.nav,body.ft-on>.skip,body.ft-on>#story,body.pre>.nav,body.pre>.skip,body.pre>#story{display:none}
+      .prerender{max-width:44rem;margin:0 auto;padding:32px 16px 64px;line-height:1.6}
+      .prerender img{max-width:100%;height:auto}
+      .prerender a{color:#e3ab3d}
+      .prerender .crumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:.6em;padding:0;margin:0 0 24px;font-size:15px}
     </style>
     <script type="module" src="/src/main.ts"></script>
   </head>
@@ -61,7 +79,7 @@
         <button class="btn nav-fact" type="button" data-open-fact><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6m-5 3h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3Z"/></svg><span class="label"><span data-l="en">A fact</span><span data-l="ru">Факт</span></span></button>
         <a class="btn mx-nav" href="#view=workshop" data-mech="workshop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10h18M5 10v10m14-10v10M3 20h18M8 10V6h8v4m-6-2h4"/></svg><span class="label"><span data-l="en">Workshop</span><span data-l="ru">Мастерская</span></span></a>
         <a class="btn mx-nav" href="#view=cabinet" data-mech="cabinet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h14v18H5zM5 9h14M5 15h14M11 6h2m-2 6h2m-2 6h2M7 21v1m10-1v1"/></svg><span class="label"><span data-l="en">Cabinet</span><span data-l="ru">Кабинет редкостей</span></span></a>
-        <a class="btn ft-nav" href="#view=features" data-features><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 4 6 7.2 6 11a6 6 0 0 1-12 0c0-3.8 3-7 6-11Zm-2.5 11.5a2.5 2.5 0 0 0 2.5 2.5"/></svg><span class="label"><span data-l="en">Special projects</span><span data-l="ru">Спецпроекты</span></span></a>
+        <a class="btn ft-nav" href="features/" data-features><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 4 6 7.2 6 11a6 6 0 0 1-12 0c0-3.8 3-7 6-11Zm-2.5 11.5a2.5 2.5 0 0 0 2.5 2.5"/></svg><span class="label"><span data-l="en">Special projects</span><span data-l="ru">Спецпроекты</span></span></a>
         <a class="btn mx-nav" href="#view=index" data-mech="index"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h4M6 4v16m-2 0h4M12 6h8m-8 4h8m-8 4h8m-8 4h5"/></svg><span class="label"><span data-l="en">Index</span><span data-l="ru">Указатель</span></span></a>
         <a class="btn mx-nav" href="#view=guide" data-mech="guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-2.6-11.5a2.7 2.7 0 0 1 5.2 1c0 1.8-2.6 2.2-2.6 3.8m0 2.6v.1"/></svg><span class="label"><span data-l="en">Guide</span><span data-l="ru">Как читать</span></span></a>
         <a class="btn mx-nav" href="#view=dedication" data-mech="dedication"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10v18l-5-3.5L7 21V3Z"/></svg><span class="label"><span data-l="en">Dedication</span><span data-l="ru">Посвящение</span></span></a>
@@ -108,6 +126,9 @@
         </aside>
       </section>
     </main>
-    <noscript><p class="error">The museum needs JavaScript to draw its maps and timeline. Музею нужен JavaScript, чтобы нарисовать карты и хронологию.</p></noscript>
+    <noscript>
+      <p class="error">The museum needs JavaScript to draw its maps and timeline. Музею нужен JavaScript, чтобы нарисовать карты и хронологию.</p>
+      <!-- seo:noscript — the build lists the pages that read without JavaScript here. -->
+    </noscript>
   </body>
 </html>

@@ -1,10 +1,10 @@
-import type { Book, Card, Chapter, Place } from './types';
-import { BOOK_SYMBOLS } from './types';
-import { slug } from './fragment';
-import { localizeCredit, t } from './i18n';
+import type { Book, Card, Chapter, Place } from './types.ts';
+import { BOOK_SYMBOLS } from './types.ts';
+import { slug } from './fragment.ts';
+import { localizeCredit, t } from './i18n.ts';
 
-export { links, plain, segments, type Segment } from './links';
-import { links } from './links';
+export { links, plain, segments, type Segment } from './links.ts';
+import { links } from './links.ts';
 
 export class CardSet {
   readonly byId = new Map<string, Card>();

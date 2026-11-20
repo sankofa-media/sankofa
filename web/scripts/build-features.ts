@@ -89,7 +89,17 @@ for (const id of index.order ?? []) {
   art += used.length;
   const cover = featureCover(f);
   if (f.cover && !cover) errors.push(`${id}: cover ${f.cover} is not a scene with art`);
-  entries.push({ id, title: f.title, dek: f.dek, ...(f.reading ? { reading: f.reading } : {}), scenes: f.scenes.length, ...(cover ? { cover } : {}) });
+  // seo: optional description and link-preview picture (scripts/seo uses them).
+  const seo = f.seo;
+  if (seo?.description && !(seo.description.en?.trim() && seo.description.ru?.trim())) errors.push(`${id}: seo.description needs en and ru`);
+  if (seo?.image) {
+    if (!artFiles.has(seo.image)) errors.push(`${id}: seo.image ${seo.image} is not in art/`);
+    else {
+      mkdirSync(join(artOut, id), { recursive: true });
+      copyFileSync(join(artDir, seo.image), join(artOut, id, seo.image));
+    }
+  }
+  entries.push({ id, title: f.title, dek: f.dek, ...(f.reading ? { reading: f.reading } : {}), scenes: f.scenes.length, ...(cover ? { cover } : {}), ...(seo ? { seo } : {}) });
 }
 for (const [k, v] of Object.entries(index.ui ?? {})) if (!v || !v.en || !v.ru) errors.push(`index.yaml: ui.${k} needs en and ru`);
 if (errors.length) {

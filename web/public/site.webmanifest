@@ -1,0 +1,15 @@
+{
+  "name": "Sankofa — Go back and fetch it",
+  "short_name": "Sankofa",
+  "description": "Seven centuries of Black culture, from the courts of Mali to Afrofuturism: a museum that ships as a Kubernetes distribution.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#0c0d18",
+  "theme_color": "#0c0d18",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}
