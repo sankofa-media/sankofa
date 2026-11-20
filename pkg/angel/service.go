@@ -277,9 +277,10 @@ func (s *Service) judge(ctx context.Context, w *Word) {
 	}
 	j, err := s.Moderator.Moderate(ctx, w.Text, w.Lang)
 	if err != nil {
+		// The model is out of reach (no credit, an outage): the rules decide, so words never hang.
 		s.log().Warn("angel moderate", "id", w.ID, "err", err)
-		w.Status, w.Reason = StatusPending, "moderation failed: waits for the owner"
-		return
+		j, _ = Rules{}.Moderate(ctx, w.Text, w.Lang)
+		j.Reason = "rules after a failed model call: " + j.Reason
 	}
 	w.Reason = j.Reason
 	if j.Lang != "" {

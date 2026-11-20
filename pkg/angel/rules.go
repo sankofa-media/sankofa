@@ -36,11 +36,11 @@ var seedWords = []Word{
 	{Text: "I loved you the whole time. There was just never a right evening to say it.", Lang: "en", TrRU: "Я любил тебя всё это время. Просто так и не нашлось подходящего вечера, чтобы сказать.", Theme: "love"},
 }
 
-// Seed puts the first words into an empty chorus, published; it does nothing
-// once any word has been left.
+// Seed puts the first words into the chorus, published, once: it does
+// nothing when they are already there (or were removed by the owner).
 func (s *Store) Seed(ctx context.Context, now time.Time) error {
 	var n int
-	if err := s.db.QueryRowContext(ctx, `SELECT COUNT(*) FROM words`).Scan(&n); err != nil {
+	if err := s.db.QueryRowContext(ctx, `SELECT COUNT(*) FROM words WHERE reason = 'seed'`).Scan(&n); err != nil {
 		return err
 	}
 	if n > 0 {
