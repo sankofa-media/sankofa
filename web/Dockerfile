@@ -6,7 +6,9 @@ FROM golang:1.26-alpine AS data
 WORKDIR /src
 COPY go.mod go.sum ./
 RUN go mod download
+COPY api ./api
 COPY cmd ./cmd
+COPY content ./content
 COPY pkg ./pkg
 RUN CGO_ENABLED=0 go build -o /out/sankofa ./cmd/sankofa
 
