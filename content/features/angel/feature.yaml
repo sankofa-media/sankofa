@@ -218,18 +218,18 @@ scenes:
       generated: true
       aspect: "3 / 2"
       layers:
-        - file: window-v1-street.webp
+        - file: line-r2-plate.webp
           depth: 4
           alt: { en: "A narrow street of terraced houses at night, in heavy rain, under a streetlight", ru: "Узкая улица с домами в ряд, ночь, сильный дождь, фонарь" }
-        - file: window-v1-window.webp
+        - file: line-r2-window.webp
           depth: 4
           alt: { en: "A single window lit with warm light on the first floor of the house opposite", ru: "Единственное окно, освещённое тёплым светом, на втором этаже дома напротив" }
-        - file: window-v1-man.webp
+        - file: line-r2-man.webp
           depth: 10
           role: figure
           pivot: "22 80"
           alt: { en: "A man in a long coat stands under the streetlight with his back to us, looking up at the window", ru: "Мужчина в длинном плаще стоит под фонарём спиной к нам и смотрит вверх, на окно" }
-        - file: window-v1-rain.webp
+        - file: line-r2-rain.webp
           depth: 14
           alt: ""
     blocks:
@@ -262,16 +262,16 @@ scenes:
       generated: true
       aspect: "3 / 2"
       layers:
-        - file: kingston-v1-street.webp
+        - file: kingston-r2-plate.webp
           depth: 4
           alt: ""
-        - file: kingston-v1-soundsystem.webp
+        - file: kingston-r2-soundsystem.webp
           depth: 10
           alt: { en: "Speaker boxes of a sound system against a wall in the evening sun", ru: "Колонки саунд-системы у стены в вечернем солнце" }
-        - file: kingston-v1-people.webp
+        - file: kingston-r2-people.webp
           depth: 16
           alt: { en: "Young men listening in the street", ru: "Парни слушают на улице" }
-        - file: kingston-v1-singer.webp
+        - file: kingston-r2-singer.webp
           depth: 22
           role: figure
           alt: { en: "A young singer at a microphone in a doorway", ru: "Молодой певец у микрофона в дверном проёме" }
@@ -305,27 +305,27 @@ scenes:
       generated: true
       aspect: "3 / 2"
       layers:
-        - file: kingston-v2-street.webp
+        - file: then-now-r2-plate.webp
           depth: 4
           alt: ""
-        - file: kingston-v2-soundsystem.webp
+        - file: then-now-r2-soundsystem.webp
           depth: 8
           alt: { en: "A sound system in a Kingston street, 1973", ru: "Саунд-система на улице Кингстона, 1973 год" }
-        - file: kingston-v2-people.webp
+        - file: then-now-r2-people.webp
           depth: 12
           alt: ""
-        - file: kingston-v2-singer.webp
+        - file: then-now-r2-singer.webp
           depth: 16
           role: figure
           alt: { en: "A young singer at a microphone, in warm light", ru: "Молодой певец у микрофона в тёплом свете" }
-        - file: voice-v2-dark.webp
+        - file: then-now-r2-dark.webp
           depth: 4
           alt: ""
-        - file: voice-v2-singer.webp
+        - file: then-now-r2-voice-singer.webp
           depth: 10
           role: figure
           alt: { en: "The same singer, older, in the dark, 1998", ru: "Тот же певец, старше, в темноте, 1998 год" }
-        - file: voice-v2-breath.webp
+        - file: then-now-r2-breath.webp
           depth: 10
           alt: ""
       overlays:
@@ -364,13 +364,13 @@ scenes:
       generated: true
       aspect: "3 / 2"
       layers:
-        - file: bristol-v1-street.webp
+        - file: bristol-r2-plate.webp
           depth: 8
           alt: { en: "A wet street of terraced houses at night", ru: "Мокрая ночная улица с домами в ряд" }
-        - file: bristol-v1-window.webp
+        - file: bristol-r2-window.webp
           depth: 16
           alt: ""
-        - file: bristol-v1-party.webp
+        - file: bristol-r2-party.webp
           depth: 26
           alt: { en: "People crowded behind a lit window around a record deck", ru: "Люди теснятся за освещённым окном вокруг проигрывателя" }
     blocks:
@@ -403,13 +403,13 @@ scenes:
       generated: true
       aspect: "3 / 2"
       layers:
-        - file: studio-v1-room.webp
+        - file: studio-r2-plate.webp
           depth: 6
           alt: ""
-        - file: studio-v1-figures.webp
+        - file: studio-r2-figures.webp
           depth: 10
           alt: { en: "Three men sitting far apart in a dark studio", ru: "Трое мужчин сидят далеко друг от друга в тёмной студии" }
-        - file: studio-v1-desk.webp
+        - file: studio-r2-desk.webp
           depth: 20
           alt: { en: "A mixing desk in the foreground", ru: "Микшерный пульт на переднем плане" }
     blocks:
@@ -441,7 +441,9 @@ scenes:
       generated: true
       aspect: "3 / 2"
       layers:
-        - file: studio-v1-desk.webp
+        - file: olympic-r2-plate.webp
+          alt: ""
+        - file: olympic-r2-desk.webp
           depth: 14
           alt: { en: "A mixing desk in the dark", ru: "Микшерный пульт в темноте" }
     blocks:
@@ -474,14 +476,14 @@ scenes:
       generated: true
       aspect: "3 / 2"
       layers:
-        - file: voice-v1-dark.webp
+        - file: voice-r2-plate.webp
           depth: 4
           alt: ""
-        - file: voice-v1-singer.webp
+        - file: voice-r2-singer.webp
           depth: 10
           role: figure
           alt: { en: "A singer with closed eyes at a microphone, his hands open", ru: "Певец с закрытыми глазами у микрофона, ладони раскрыты" }
-        - file: voice-v1-breath.webp
+        - file: voice-r2-breath.webp
           depth: 10
           role: figure
           alt: ""
@@ -504,13 +506,15 @@ scenes:
       generated: true
       aspect: "3 / 2"
       layers:
-        - file: strata-v1-bass.webp
+        - file: strata-r2-plate.webp
+          alt: ""
+        - file: strata-r2-bass.webp
           alt: { en: "A slow, thick wave: the bass", ru: "Медленная густая волна: бас" }
-        - file: strata-v1-drums.webp
+        - file: strata-r2-drums.webp
           alt: { en: "Sharp spikes at even distances: the drums", ru: "Острые всплески через равные промежутки: барабаны" }
-        - file: strata-v1-voice.webp
+        - file: strata-r2-voice.webp
           alt: { en: "A thin line that barely moves: the voice", ru: "Тонкая, почти неподвижная линия: голос" }
-        - file: strata-v1-guitar.webp
+        - file: strata-r2-guitar.webp
           alt: { en: "A jagged band of noise with red in it: the guitars", ru: "Рваная полоса шума с красным: гитары" }
     blocks:
       - id: kicker
@@ -548,19 +552,19 @@ scenes:
       generated: true
       aspect: "3 / 2"
       layers:
-        - file: crowd-v1-carpark.webp
+        - file: crowd-r2-plate.webp
           depth: 6
           alt: { en: "A multi-storey car park at night", ru: "Многоэтажная парковка ночью" }
-        - file: crowd-v1-crowd-1.webp
+        - file: crowd-r2-crowd-1.webp
           depth: 10
           alt: ""
-        - file: crowd-v1-crowd-2.webp
+        - file: crowd-r2-crowd-2.webp
           depth: 14
           alt: { en: "People standing silently between the pillars", ru: "Люди молча стоят между колоннами" }
-        - file: crowd-v1-crowd-3.webp
+        - file: crowd-r2-crowd-3.webp
           depth: 18
           alt: { en: "A crowd standing along the right side, watching", ru: "Толпа стоит вдоль правой стороны и смотрит" }
-        - file: crowd-v1-man.webp
+        - file: crowd-r2-man.webp
           depth: 24
           role: figure
           alt: { en: "A man in a long coat walking towards us", ru: "Человек в длинном пальто идёт навстречу" }
@@ -664,11 +668,11 @@ scenes:
       generated: true
       aspect: "3 / 2"
       layers:
-        - file: warm-v3-light.webp
+        - file: warm-r2-plate.webp
           alt: ""
-        - file: warm-v3-glass.webp
+        - file: warm-r2-glass.webp
           alt: { en: "Fogged glass with warm light behind it", ru: "Запотевшее стекло, за ним тёплый свет" }
-        - file: warm-v3-palm.webp
+        - file: warm-r2-palm.webp
           role: figure
           pivot: "58 50"
           alt: { en: "A palm print on the fogged glass", ru: "Отпечаток ладони на запотевшем стекле" }
