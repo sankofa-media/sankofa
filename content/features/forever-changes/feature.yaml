@@ -196,10 +196,10 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: the-hillside-v2-sky.webp, alt: { en: "A young man sitting on a hillside at night, looking out over the lights of Los Angeles", ru: "Молодой человек сидит ночью на склоне холма и смотрит на огни Лос-Анджелеса" } }
-        - { file: the-hillside-v2-city-lights.webp, depth: 6, alt: "" }
-        - { file: the-hillside-v2-ambulance-streaks.webp, depth: 8, alt: "" }
-        - { file: the-hillside-v2-man.webp, depth: 12, role: figure, alt: "" }
+        - { file: the-hillside-r2-plate.webp, alt: { en: "A young man sitting on a hillside at night, looking out over the lights of Los Angeles", ru: "Молодой человек сидит ночью на склоне холма и смотрит на огни Лос-Анджелеса" } }
+        - { file: the-hillside-r2-city-lights.webp, depth: 6, alt: "" }
+        - { file: the-hillside-r2-ambulance-streaks.webp, depth: 8, alt: "" }
+        - { file: the-hillside-r2-man.webp, depth: 12, role: figure, alt: "" }
     blocks:
       - id: last-words
         role: quote
@@ -227,19 +227,19 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: memphis-los-angeles-v1-memphis.webp, state: memphis, alt: { en: "A boy with a schoolbook walks along a street of the 1950s; palms, a bridge and the towers of Los Angeles behind him", ru: "Мальчик с учебником идёт по улице пятидесятых; за ним пальмы, мост и башни Лос-Анджелеса" } }
-        - { file: memphis-los-angeles-v1-la.webp, depth: 6, state: memphis, alt: "" }
-        - { file: memphis-los-angeles-v1-boy.webp, depth: 12, role: figure, state: memphis, alt: "" }
-        - { file: dorsey-high-v2-court.webp, state: dorsey, alt: { en: "Two teenagers play basketball on a school court; two electric guitars lean against the fence", ru: "Двое подростков играют в баскетбол на школьной площадке; у сетки стоят две электрогитары" } }
-        - { file: dorsey-high-v2-guitars.webp, depth: 6, state: dorsey, alt: "" }
-        - { file: dorsey-high-v2-boys.webp, depth: 12, role: figure, state: dorsey, alt: "" }
-        - { file: bido-litos-v1-room.webp, state: bido, alt: { en: "A band plays in a small, crowded club; a man in glasses listens at the side", ru: "Группа играет в маленьком тесном клубе; сбоку слушает мужчина в очках" } }
-        - { file: bido-litos-v1-band.webp, depth: 6, state: bido, alt: "" }
-        - { file: bido-litos-v1-listener.webp, depth: 8, state: bido, alt: "" }
-        - { file: bido-litos-v1-crowd.webp, depth: 14, state: bido, alt: "" }
-        - { file: the-castle-v2-hill.webp, state: castle, alt: { en: "A large old mansion on a green hill at night, its windows lit", ru: "Большой старый особняк на зелёном холме ночью, окна светятся" } }
-        - { file: the-castle-v2-house.webp, depth: 6, state: castle, alt: "" }
-        - { file: the-castle-v2-windows.webp, depth: 6, state: castle, alt: "" }
+        - { file: memphis-los-angeles-r2-plate.webp, state: memphis, alt: { en: "A boy with a schoolbook walks along a street of the 1950s; palms, a bridge and the towers of Los Angeles behind him", ru: "Мальчик с учебником идёт по улице пятидесятых; за ним пальмы, мост и башни Лос-Анджелеса" } }
+        - { file: memphis-los-angeles-r2-la.webp, depth: 6, state: memphis, alt: "" }
+        - { file: memphis-los-angeles-r2-boy.webp, depth: 12, role: figure, state: memphis, alt: "" }
+        - { file: dorsey-high-r2-plate.webp, state: dorsey, alt: { en: "Two teenagers play basketball on a school court; two electric guitars lean against the fence", ru: "Двое подростков играют в баскетбол на школьной площадке; у сетки стоят две электрогитары" } }
+        - { file: dorsey-high-r2-guitars.webp, depth: 6, state: dorsey, alt: "" }
+        - { file: dorsey-high-r2-boys.webp, depth: 12, role: figure, state: dorsey, alt: "" }
+        - { file: bido-litos-r2-plate.webp, state: bido, alt: { en: "A band plays in a small, crowded club; a man in glasses listens at the side", ru: "Группа играет в маленьком тесном клубе; сбоку слушает мужчина в очках" } }
+        - { file: bido-litos-r2-band.webp, depth: 6, state: bido, alt: "" }
+        - { file: bido-litos-r2-listener.webp, depth: 8, state: bido, alt: "" }
+        - { file: bido-litos-r2-crowd.webp, depth: 14, state: bido, alt: "" }
+        - { file: the-castle-r2-plate.webp, state: castle, alt: { en: "A large old mansion on a green hill at night, its windows lit", ru: "Большой старый особняк на зелёном холме ночью, окна светятся" } }
+        - { file: the-castle-r2-house.webp, depth: 6, state: castle, alt: "" }
+        - { file: the-castle-r2-windows.webp, depth: 6, state: castle, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -332,10 +332,10 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: the-hillside-v1-sky.webp, alt: { en: "A young man in a red jacket sits in the grass above the city at night; an ambulance light streaks along the road below", ru: "Молодой человек в красной куртке сидит ночью в траве над городом; внизу по дороге тянется свет скорой" } }
-        - { file: the-hillside-v1-city-lights.webp, depth: 6, alt: "" }
-        - { file: the-hillside-v1-ambulance-streaks.webp, depth: 8, alt: "" }
-        - { file: the-hillside-v1-man.webp, depth: 12, role: figure, alt: "" }
+        - { file: the-hillside-r2-plate.webp, alt: { en: "A young man in a red jacket sits in the grass above the city at night; an ambulance light streaks along the road below", ru: "Молодой человек в красной куртке сидит ночью в траве над городом; внизу по дороге тянется свет скорой" } }
+        - { file: the-hillside-r2-city-lights.webp, depth: 6, alt: "" }
+        - { file: the-hillside-r2-ambulance-streaks.webp, depth: 8, alt: "" }
+        - { file: the-hillside-r2-man.webp, depth: 12, role: figure, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -398,9 +398,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: strangers-in-our-chairs-v1-studio.webp, alt: { en: "Session musicians play in a recording studio while a group of young musicians watch from the doorway", ru: "Студийные музыканты играют в студии звукозаписи, а молодые музыканты группы смотрят на них из дверей" } }
-        - { file: strangers-in-our-chairs-v1-session-players.webp, depth: 6, alt: "" }
-        - { file: strangers-in-our-chairs-v1-band.webp, depth: 12, alt: "" }
+        - { file: strangers-in-our-chairs-r2-plate.webp, alt: { en: "Session musicians play in a recording studio while a group of young musicians watch from the doorway", ru: "Студийные музыканты играют в студии звукозаписи, а молодые музыканты группы смотрят на них из дверей" } }
+        - { file: strangers-in-our-chairs-r2-session-players.webp, depth: 6, alt: "" }
+        - { file: strangers-in-our-chairs-r2-band.webp, depth: 12, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -476,10 +476,10 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: botnicks-diary-v2-console.webp, alt: { en: "An engineer’s desk: a mixing console, a lamp, tape reels and an open diary", ru: "Стол звукорежиссёра: пульт, лампа, катушки с плёнкой и открытый дневник" } }
-        - { file: botnicks-diary-v2-desk.webp, depth: 4, alt: "" }
-        - { file: botnicks-diary-v2-tape.webp, depth: 8, alt: "" }
-        - { file: botnicks-diary-v2-diary.webp, depth: 12, alt: "" }
+        - { file: botnicks-diary-r2-plate.webp, alt: { en: "An engineer’s desk: a mixing console, a lamp, tape reels and an open diary", ru: "Стол звукорежиссёра: пульт, лампа, катушки с плёнкой и открытый дневник" } }
+        - { file: botnicks-diary-r2-desk.webp, depth: 4, alt: "" }
+        - { file: botnicks-diary-r2-tape.webp, depth: 8, alt: "" }
+        - { file: botnicks-diary-r2-diary.webp, depth: 12, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -549,9 +549,10 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: the-orchestra-v2-section.webp, alt: { en: "In a studio a singer sings a part to a string and brass section while a young man writes out the score", ru: "В студии певец напевает партию струнным и духовым, а молодой человек записывает ноты" } }
-        - { file: the-orchestra-v2-men.webp, depth: 6, alt: "" }
-        - { file: the-orchestra-v2-sheets.webp, depth: 12, role: figure, alt: "" }
+        - { file: the-orchestra-r2-plate.webp, alt: { en: "An empty recording studio", ru: "Пустая студия звукозаписи" } }
+        - { file: the-orchestra-r2-section.webp, alt: { en: "In a studio a singer sings a part to a string and brass section while a young man writes out the score", ru: "В студии певец напевает партию струнным и духовым, а молодой человек записывает ноты" } }
+        - { file: the-orchestra-r2-men.webp, depth: 6, alt: "" }
+        - { file: the-orchestra-r2-sheets.webp, depth: 12, role: figure, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -606,9 +607,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: alone-again-or-v1-window.webp, alt: { en: "A classical guitar and a trumpet on a sunny window sill, a rush-seat chair beside them", ru: "Классическая гитара и труба на солнечном подоконнике, рядом плетёный стул" } }
-        - { file: alone-again-or-v1-instruments.webp, depth: 6, alt: "" }
-        - { file: alone-again-or-v1-chair.webp, depth: 12, alt: "" }
+        - { file: alone-again-or-r2-plate.webp, alt: { en: "A classical guitar and a trumpet on a sunny window sill, a rush-seat chair beside them", ru: "Классическая гитара и труба на солнечном подоконнике, рядом плетёный стул" } }
+        - { file: alone-again-or-r2-instruments.webp, depth: 6, alt: "" }
+        - { file: alone-again-or-r2-chair.webp, depth: 12, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -667,9 +668,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: a-house-is-not-a-motel-v2-doorway.webp, alt: { en: "A pair of muddy army boots in the doorway of a ruined house, rain on the mud outside", ru: "Пара грязных армейских ботинок у порога разрушенного дома, снаружи дождь и грязь" } }
-        - { file: a-house-is-not-a-motel-v2-rain-mud.webp, depth: 6, alt: "" }
-        - { file: a-house-is-not-a-motel-v2-boots.webp, depth: 12, alt: "" }
+        - { file: a-house-is-not-a-motel-r2-plate.webp, alt: { en: "A pair of muddy army boots in the doorway of a ruined house, rain on the mud outside", ru: "Пара грязных армейских ботинок у порога разрушенного дома, снаружи дождь и грязь" } }
+        - { file: a-house-is-not-a-motel-r2-rain-mud.webp, depth: 6, alt: "" }
+        - { file: a-house-is-not-a-motel-r2-boots.webp, depth: 12, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -714,9 +715,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: andmoreagain-v1-stairs.webp, alt: { en: "A young man at the foot of a curving staircase looks up at a woman in a red dress on the landing", ru: "Молодой человек у подножия изогнутой лестницы смотрит вверх, на женщину в красном платье на площадке" } }
-        - { file: andmoreagain-v1-upstairs.webp, depth: 8, role: figure, alt: "" }
-        - { file: andmoreagain-v1-downstairs.webp, depth: 12, role: figure, alt: "" }
+        - { file: andmoreagain-r2-plate.webp, alt: { en: "A young man at the foot of a curving staircase looks up at a woman in a red dress on the landing", ru: "Молодой человек у подножия изогнутой лестницы смотрит вверх, на женщину в красном платье на площадке" } }
+        - { file: andmoreagain-r2-upstairs.webp, depth: 8, role: figure, alt: "" }
+        - { file: andmoreagain-r2-downstairs.webp, depth: 12, role: figure, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -776,9 +777,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: the-daily-planet-v1-background.webp, alt: { en: "A city of towers and freeways rising out of an open newspaper", ru: "Город из башен и шоссе вырастает из раскрытой газеты" } }
-        - { file: the-daily-planet-v1-city.webp, depth: 6, alt: "" }
-        - { file: the-daily-planet-v1-newspaper.webp, depth: 12, alt: "" }
+        - { file: the-daily-planet-r2-plate.webp, alt: { en: "A city of towers and freeways rising out of an open newspaper", ru: "Город из башен и шоссе вырастает из раскрытой газеты" } }
+        - { file: the-daily-planet-r2-city.webp, depth: 6, alt: "" }
+        - { file: the-daily-planet-r2-newspaper.webp, depth: 12, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -820,9 +821,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: old-man-v2-road.webp, alt: { en: "An old man and a young man talk on a bench by a winding road above the city", ru: "Старик и молодой человек разговаривают на скамейке у извилистой дороги над городом" } }
-        - { file: old-man-v2-bench.webp, depth: 6, alt: "" }
-        - { file: old-man-v2-men.webp, depth: 10, role: figure, alt: "" }
+        - { file: old-man-r2-plate.webp, alt: { en: "An old man and a young man talk on a bench by a winding road above the city", ru: "Старик и молодой человек разговаривают на скамейке у извилистой дороги над городом" } }
+        - { file: old-man-r2-bench.webp, depth: 6, alt: "" }
+        - { file: old-man-r2-men.webp, depth: 10, role: figure, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -871,9 +872,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: the-red-telephone-v2-sky.webp, alt: { en: "A huge red telephone rings on a hill above the city lights at night", ru: "Огромный красный телефон звонит на холме над ночными огнями города" } }
-        - { file: the-red-telephone-v2-city-hill.webp, depth: 6, alt: "" }
-        - { file: the-red-telephone-v2-telephone.webp, depth: 12, alt: "" }
+        - { file: the-red-telephone-r2-plate.webp, alt: { en: "A huge red telephone rings on a hill above the city lights at night", ru: "Огромный красный телефон звонит на холме над ночными огнями города" } }
+        - { file: the-red-telephone-r2-city-hill.webp, depth: 6, alt: "" }
+        - { file: the-red-telephone-r2-telephone.webp, depth: 12, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -918,9 +919,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: the-red-telephone-v1-sky.webp, alt: { en: "A red telephone ringing on a hill above the city at dusk", ru: "Красный телефон звонит на холме над городом в сумерках" } }
-        - { file: the-red-telephone-v1-city-hill.webp, depth: 6, alt: "" }
-        - { file: the-red-telephone-v1-telephone.webp, depth: 12, alt: "" }
+        - { file: the-red-telephone-r2-plate.webp, alt: { en: "A red telephone ringing on a hill above the city at dusk", ru: "Красный телефон звонит на холме над городом в сумерках" } }
+        - { file: the-red-telephone-r2-city-hill.webp, depth: 6, alt: "" }
+        - { file: the-red-telephone-r2-telephone.webp, depth: 12, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -953,9 +954,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: between-clark-and-hilldale-v2-facades.webp, alt: { en: "A club marquee and a café with a glowing jukebox on a wet street of palms at night", ru: "Козырёк клуба и кафе со светящимся музыкальным автоматом на мокрой ночной улице с пальмами" } }
-        - { file: between-clark-and-hilldale-v2-street.webp, depth: 6, alt: "" }
-        - { file: between-clark-and-hilldale-v2-jukebox.webp, depth: 10, alt: "" }
+        - { file: between-clark-and-hilldale-r2-plate.webp, alt: { en: "A club marquee and a café with a glowing jukebox on a wet street of palms at night", ru: "Козырёк клуба и кафе со светящимся музыкальным автоматом на мокрой ночной улице с пальмами" } }
+        - { file: between-clark-and-hilldale-r2-street.webp, depth: 6, alt: "" }
+        - { file: between-clark-and-hilldale-r2-jukebox.webp, depth: 10, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -1005,9 +1006,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: live-and-let-live-v2-background.webp, alt: { en: "Two crowds of young people, Black and white, face each other across a cracked road", ru: "Две толпы молодых людей, чёрных и белых, стоят друг против друга через растрескавшуюся дорогу" } }
-        - { file: live-and-let-live-v2-group-left.webp, depth: 10, role: figure, alt: "" }
-        - { file: live-and-let-live-v2-group-right.webp, depth: 14, role: figure, alt: "" }
+        - { file: live-and-let-live-r2-plate.webp, alt: { en: "Two crowds of young people, Black and white, face each other across a cracked road", ru: "Две толпы молодых людей, чёрных и белых, стоят друг против друга через растрескавшуюся дорогу" } }
+        - { file: live-and-let-live-r2-group-left.webp, depth: 10, role: figure, alt: "" }
+        - { file: live-and-let-live-r2-group-right.webp, depth: 14, role: figure, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -1050,9 +1051,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: the-good-humor-man-v1-street.webp, alt: { en: "Children with ice-cream cones crowd round an ice-cream van on a sunny street, drawn like a child’s crayon picture", ru: "Дети с рожками мороженого толпятся у фургона мороженщика на солнечной улице, нарисованной как детский рисунок мелками" } }
-        - { file: the-good-humor-man-v1-truck.webp, depth: 6, alt: "" }
-        - { file: the-good-humor-man-v1-children.webp, depth: 12, role: figure, alt: "" }
+        - { file: the-good-humor-man-r2-plate.webp, alt: { en: "Children with ice-cream cones crowd round an ice-cream van on a sunny street, drawn like a child’s crayon picture", ru: "Дети с рожками мороженого толпятся у фургона мороженщика на солнечной улице, нарисованной как детский рисунок мелками" } }
+        - { file: the-good-humor-man-r2-truck.webp, depth: 6, alt: "" }
+        - { file: the-good-humor-man-r2-children.webp, depth: 12, role: figure, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -1096,9 +1097,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: bummer-in-the-summer-v1-porch.webp, alt: { en: "A guitar leans on a porch rail while a woman in a summer dress walks away down the path", ru: "Гитара прислонена к перилам веранды, а женщина в летнем платье уходит по тропинке" } }
-        - { file: bummer-in-the-summer-v1-guitar.webp, depth: 6, alt: "" }
-        - { file: bummer-in-the-summer-v1-woman.webp, depth: 12, alt: "" }
+        - { file: bummer-in-the-summer-r2-plate.webp, alt: { en: "A guitar leans on a porch rail while a woman in a summer dress walks away down the path", ru: "Гитара прислонена к перилам веранды, а женщина в летнем платье уходит по тропинке" } }
+        - { file: bummer-in-the-summer-r2-guitar.webp, depth: 6, alt: "" }
+        - { file: bummer-in-the-summer-r2-woman.webp, depth: 12, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -1136,9 +1137,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: you-set-the-scene-v2-stage.webp, alt: { en: "A conductor raises his baton before a full orchestra on a lit stage", ru: "Дирижёр поднимает палочку перед большим оркестром на освещённой сцене" } }
-        - { file: you-set-the-scene-v2-orchestra.webp, depth: 6, alt: "" }
-        - { file: you-set-the-scene-v2-conductor.webp, depth: 12, role: figure, alt: "" }
+        - { file: you-set-the-scene-r2-plate.webp, alt: { en: "A conductor raises his baton before a full orchestra on a lit stage", ru: "Дирижёр поднимает палочку перед большим оркестром на освещённой сцене" } }
+        - { file: you-set-the-scene-r2-orchestra.webp, depth: 6, alt: "" }
+        - { file: you-set-the-scene-r2-conductor.webp, depth: 12, role: figure, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -1187,12 +1188,12 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: after-v1-street.webp, state: after, alt: { en: "A thin man in a long coat stands outside a club at night, its marquee lit in red", ru: "Худой человек в длинном пальто стоит ночью у клуба с красной подсветкой козырька" } }
-        - { file: after-v1-club.webp, depth: 6, state: after, alt: "" }
-        - { file: after-v1-man.webp, depth: 12, role: figure, state: after, alt: "" }
-        - { file: prison-v1-cell.webp, state: prison, alt: { en: "A man in grey prison clothes sits on a cell bunk, eyes closed, playing a guitar that is not there", ru: "Человек в серой тюремной робе сидит на нарах с закрытыми глазами и играет на гитаре, которой нет" } }
-        - { file: prison-v1-bunk.webp, depth: 6, state: prison, alt: "" }
-        - { file: prison-v1-man.webp, depth: 12, role: figure, state: prison, alt: "" }
+        - { file: after-r2-plate.webp, state: after, alt: { en: "A thin man in a long coat stands outside a club at night, its marquee lit in red", ru: "Худой человек в длинном пальто стоит ночью у клуба с красной подсветкой козырька" } }
+        - { file: after-r2-club.webp, depth: 6, state: after, alt: "" }
+        - { file: after-r2-man.webp, depth: 12, role: figure, state: after, alt: "" }
+        - { file: prison-r2-plate.webp, state: prison, alt: { en: "A man in grey prison clothes sits on a cell bunk, eyes closed, playing a guitar that is not there", ru: "Человек в серой тюремной робе сидит на нарах с закрытыми глазами и играет на гитаре, которой нет" } }
+        - { file: prison-r2-bunk.webp, depth: 6, state: prison, alt: "" }
+        - { file: prison-r2-man.webp, depth: 12, role: figure, state: prison, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -1255,9 +1256,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: the-return-v1-hall.webp, alt: { en: "An older singer with a guitar performs with a band and a string section in an ornate hall; the audience applauds", ru: "Немолодой певец с гитарой выступает с группой и струнными в нарядном зале; публика аплодирует" } }
-        - { file: the-return-v1-performers.webp, depth: 6, alt: "" }
-        - { file: the-return-v1-audience.webp, depth: 12, alt: "" }
+        - { file: the-return-r2-plate.webp, alt: { en: "An older singer with a guitar performs with a band and a string section in an ornate hall; the audience applauds", ru: "Немолодой певец с гитарой выступает с группой и струнными в нарядном зале; публика аплодирует" } }
+        - { file: the-return-r2-performers.webp, depth: 6, alt: "" }
+        - { file: the-return-r2-audience.webp, depth: 12, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -1304,9 +1305,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: the-end-v1-memphis-dawn.webp, alt: { en: "Dawn over a river city and its bridge, seen through a window; a vase of daisies on the sill", ru: "Рассвет над городом на реке и мостом, вид из окна; на подоконнике ваза с ромашками" } }
-        - { file: the-end-v1-window.webp, depth: 6, alt: "" }
-        - { file: the-end-v1-flowers.webp, depth: 12, alt: "" }
+        - { file: the-end-r2-plate.webp, alt: { en: "Dawn over a river city and its bridge, seen through a window; a vase of daisies on the sill", ru: "Рассвет над городом на реке и мостом, вид из окна; на подоконнике ваза с ромашками" } }
+        - { file: the-end-r2-window.webp, depth: 6, alt: "" }
+        - { file: the-end-r2-flowers.webp, depth: 12, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -1353,9 +1354,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: you-set-the-scene-v1-stage.webp, state: orchestra, alt: { en: "An orchestra plays under warm stage lights, a conductor seen from behind", ru: "Оркестр играет под тёплыми огнями сцены, дирижёр виден со спины" } }
-        - { file: you-set-the-scene-v1-orchestra.webp, state: orchestra, depth: 6, alt: "" }
-        - { file: you-set-the-scene-v1-conductor.webp, state: orchestra, depth: 12, role: figure, alt: "" }
+        - { file: you-set-the-scene-r2-plate.webp, state: orchestra, alt: { en: "An orchestra plays under warm stage lights, a conductor seen from behind", ru: "Оркестр играет под тёплыми огнями сцены, дирижёр виден со спины" } }
+        - { file: you-set-the-scene-r2-orchestra.webp, state: orchestra, depth: 6, alt: "" }
+        - { file: you-set-the-scene-r2-conductor.webp, state: orchestra, depth: 12, role: figure, alt: "" }
     blocks:
       - id: kicker
         role: kicker
@@ -1405,9 +1406,10 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: lee-mode-shadow-v1.webp, depth: 4, fit: { x: -27, scale: 0.96 }, alt: { en: "Figures that are not there, standing in the dark", ru: "Фигуры, которых нет, стоят в темноте" } }
-        - { file: lee-mode-figure-walking-v2.webp, depth: 8, role: figure, fit: { x: 3, scale: 0.9 }, alt: "" }
-        - { file: lee-mode-figure-standing-v1.webp, depth: 14, role: figure, fit: { x: 30 }, alt: "" }
+        - { file: lee-r2-plate.webp, alt: "" }
+        - { file: lee-r2-shadow.webp, depth: 4, alt: { en: "Figures that are not there, standing in the dark", ru: "Фигуры, которых нет, стоят в темноте" } }
+        - { file: lee-r2-figure-walking.webp, depth: 8, role: figure, alt: "" }
+        - { file: lee-r2-figure-standing.webp, depth: 14, role: figure, alt: "" }
       # Pictures the Arthur Lee mode places in the room itself (not stacked on the canvas).
       overlays:
         - { file: lee-mode-figure-standing-v1.webp, alt: { en: "A young man standing, looking aside", ru: "Молодой человек стоит и смотрит в сторону" } }
