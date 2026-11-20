@@ -45,7 +45,8 @@ export function installFeatures(app: App, hooks: FeatureHooks): Features {
       host?.close();
       if (!was) return;
       document.body.classList.remove('ft-on');
-      window.scrollTo(0, museumY);
+      // At once: the page's smooth scrolling would sweep through the whole story.
+      window.scrollTo({ top: museumY, behavior: 'instant' });
     },
   };
   // Links anywhere: <a data-features> opens the list, <a data-feature="id"> one feature.

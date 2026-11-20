@@ -477,6 +477,8 @@ async function start(): Promise<void> {
       document.querySelectorAll('[data-prerender]').forEach((el) => el.remove());
       document.body.classList.remove('pre');
     }
+    // Back from a special project: the museum comes back where it was left.
+    const fromFeature = features.isOpen && screen !== 'features' && screen !== 'feature';
     closeOverlays(screen);
     if (screen === 'listen') listen.open();
     else if (screen === 'engine') engine.open();
@@ -486,7 +488,7 @@ async function start(): Promise<void> {
     else if (screen === 'features' || screen === 'feature') features.open(screen, route.item, route.scene);
     else if (screen === 'descent') descent.open(route.point.from, route.point.zoom);
     else if (screen === 'atlas') atlas.open(route.point, { atlas: route.atlas, country: route.country });
-    else if (route.ch && (initial || route.ch !== chapterNow)) {
+    else if (route.ch && !fromFeature && (initial || route.ch !== chapterNow)) {
       // After a language or copy switch, come back to the same step; a plain
       // chapter link opens at the chapter's top. Either way the place is held
       // while pictures, maps and fonts above it settle.
