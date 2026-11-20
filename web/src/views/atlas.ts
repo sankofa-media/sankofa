@@ -217,6 +217,7 @@ export class Atlas {
     this.ensure();
     const first = !this.isOpen;
     this.el.classList.add('open');
+    this.app.facts.load();
     document.body.classList.add('locked', 'atlas-open');
     if (first) this.el.focus({ preventScroll: true });
     this.mode = view.atlas === 'countries' ? 'countries' : 'time';

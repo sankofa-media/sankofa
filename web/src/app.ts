@@ -10,7 +10,7 @@ import type { CardLinksFile, ElementsFile, Line } from './lib/elements';
 
 export interface App {
   set: CardSet;
-  /** The card as exported (English, with translations), as the cluster holds it. */
+  /** The localized card before edition filtering; original YAML is loaded on demand. */
   raw(id: string): Card | undefined;
   openEngine(push?: boolean): void;
   chapters: Chapter[];

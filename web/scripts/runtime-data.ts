@@ -3,7 +3,7 @@ import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import type { Plugin } from 'vite';
 import { contentsFor } from '../src/mechanics/cabinet/model.ts';
-import { localizeCard, localizeChapter } from '../src/lib/cards.ts';
+import { bodyForEdition, localizeCard, localizeChapter } from '../src/lib/cards.ts';
 
 /** Preserve the data interfaces while shipping only the requested translation. */
 export function localized(value: any, language: 'en' | 'ru'): any {
@@ -51,7 +51,12 @@ export function runtimeData(): Plugin {
             if (key === 'data/cards.json') {
               value.cards = original.cards.map((c: any) => {
                 const { translations, ...card } = localizeCard(c, language);
-                return { ...card, localized: true };
+                const counterText = Object.fromEntries(['m', 'f'].flatMap(edition => {
+                  const text = `${c.wow} ${bodyForEdition(c.body, edition as 'm' | 'f')}`;
+                  const match = text.match(/\b(?:(?:nearly|almost|about|around|over|more than)\s+)?\d{1,3}(?:,\d{3})+\b/i);
+                  return match ? [[edition, match[0]]] : [];
+                }));
+                return { ...card, localized: true, sourceTitle: c.title, ...(Object.keys(counterText).length ? { counterText } : {}) };
               });
               emit(`data/card-index.${language}.json`, { cards: value.cards.map((c: any) => ({ id: c.id, title: c.title, wow: c.wow, books: c.books, years: c.years, places: c.places, era: c.era, kind: c.kind, pair: c.pair, edition: c.edition, inline: c.inline, label: c.label, body: '' })) });
               for (const c of value.cards) emit(`data/cards/${c.id}.${language}.json`, c);
@@ -63,12 +68,14 @@ export function runtimeData(): Plugin {
             });
             if (key === 'data/checks.json') for (const [id, check] of Object.entries(value.cards)) emit(`data/checks/${id}.${language}.json`, check);
             if (key === 'data/cabinet.json') {
-              for (const id of ['angel', 'sea-lion-girls', 'forever-changes']) {
+              for (const { id } of JSON.parse(readFileSync('public/data/features.json', 'utf8')).features) {
                 const caches = value.caches.filter((c: any) => c.hidden.at === 'feature' && c.hidden.feature === id);
                 const ids = new Set(caches.flatMap((c: any) => [...contentsFor(c, 'm'), ...contentsFor(c, 'f')]));
+                const keyIds = new Set(caches.flatMap((c: any) => [c.lock, ...(c.gives ?? [])]));
+                const keys = value.keys.filter((k: any) => keyIds.has(k.id));
                 const artifacts = value.artifacts.filter((a: any) => ids.has(a.id));
                 const sources = Object.fromEntries(Object.entries(value.sources ?? {}).filter(([k]) => caches.some((c: any) => k === `cache:${c.id}`) || ids.has(k.replace(/^artifact:/, ''))));
-                emit(`data/feature-caches/${id}.${language}.json`, { ...value, caches, artifacts, sources, drawers: [], keys: [] });
+                emit(`data/feature-caches/${id}.${language}.json`, { ...value, caches, artifacts, sources, drawers: [], keys });
               }
             }
             emit(key.replace(/\.json$/, `.${language}.json`), value);

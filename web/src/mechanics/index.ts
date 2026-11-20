@@ -3,6 +3,8 @@
 // three doors: views opened by the router (#view=document&item=…, objects,
 // method, guide, dedication), blocks on every card, and a few links placed
 // into the story (the copy note, the end of the story, the footer).
+import { loadJson } from '../lib/loadJson';
+import type { ChecksFile } from './checks/model';
 import type { App } from '../app';
 import type { Card } from '../lib/types';
 import { h } from '../lib/dom';
@@ -143,11 +145,21 @@ export function installMechanics(app: App, hooks: MechHooks): Mechanics {
     }
   };
 
+  let cabinetStarted = false;
+  const ensureCabinet = () => {
+    if (cabinetStarted) return;
+    cabinetStarted = true;
+    void data.cabinet().then(c => {
+      if (c) { hideInStory(app, c); hideLive(app, c); }
+    }).catch(() => { cabinetStarted = false; });
+  };
+  for (const event of ['pointerdown', 'keydown']) document.addEventListener(event, ensureCabinet, { once: true });
   const mech: Mechanics = {
     get isOpen() {
       return sheet.isOpen;
     },
     open(asked, item) {
+      ensureCabinet();
       // An old name opens the new room, and the link says so from then on.
       const v = canonicalView(asked);
       if (v !== asked) hooks.navigate(v, item, false);
@@ -171,15 +183,14 @@ export function installMechanics(app: App, hooks: MechHooks): Mechanics {
   });
 
   decorate();
-  // The caches hidden in the chapters, once the cabinet's data is here.
-  void data
-    .cabinet()
-    .then((c) => {
-      if (!c) return;
-      hideInStory(app, c);
-      hideLive(app, c);
-    })
-    .catch(() => undefined);
+  // Discover the hidden story caches when the reader reaches the chapters.
+  const observer = new IntersectionObserver(entries => {
+    if (!entries.some(e => e.isIntersecting)) return;
+    observer.disconnect();
+    ensureCabinet();
+  });
+  if (['view', 'focus', 'atlas', 'country'].some(key => new URLSearchParams(location.hash.slice(1)).has(key))) ensureCabinet();
+  requestAnimationFrame(() => document.querySelectorAll('article.chapter').forEach(el => observer.observe(el)));
   return mech;
 }
 
@@ -280,8 +291,8 @@ export function cardExtras(app: App, c: Card): HTMLElement {
 /** The "How we checked" panel of a card. */
 export function cardChecks(app: App, c: Card): HTMLElement {
   const host = h('div.mx-card-checks');
-  void data.checks().then((f) => {
-    const p = checksPanel(c, f?.cards[c.id]);
+  void loadJson<ChecksFile['cards'][string]>(`data/checks/${c.id}.json`).then((check) => {
+    const p = checksPanel(c, check ?? undefined);
     if (p) host.replaceChildren(p);
     weave(app, host, { exclude: [c.id] });
   }).catch(() => undefined);

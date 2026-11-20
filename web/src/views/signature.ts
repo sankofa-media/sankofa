@@ -105,13 +105,14 @@ export function signature(app: App, chapterId: string, c0: Card | undefined, nea
   if ((kind === 'plate' || kind === 'insert') && !img) kind = 'quote';
   const r0 = app.raw(c.id);
   const raw = r0 ? cardForEdition(r0, app.edition) : c;
-  const n = kind === 'counter' ? firstBigNumber(`${raw.wow} ${raw.body}`) : undefined;
+  const counterText = raw.counterText?.[app.edition] ?? `${raw.wow} ${raw.body}`;
+  const n = kind === 'counter' ? firstBigNumber(counterText) : undefined;
   if (kind === 'counter' && (!n || near.replace(/[\s,\u00a0\u202f]/g, '').includes(String(n)))) kind = 'quote';
   if (kind === 'quote' && !line) return null;
   const link = h('a.btn.attr', { href: `#focus=${c.id}`, 'data-card': c.id }, kindLink(c));
   const era = `--era:var(--${chapterId})`;
 
-  if (kind === 'counter') return counter(n!, qualifierOf(`${raw.wow} ${raw.body}`), c, link, era);
+  if (kind === 'counter') return counter(n!, qualifierOf(counterText), c, link, era);
   if (kind === 'plate') return plate(app, c, link, era);
   if (kind === 'insert') return insert(app, c, link, era);
   return h('section.interlude.sig', { style: era }, h('blockquote.reveal', {}, c.wow), link);

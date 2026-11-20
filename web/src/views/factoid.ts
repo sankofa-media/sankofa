@@ -76,6 +76,7 @@ export function factFooter(app: App, cardId: string): HTMLElement {
     sec.replaceChildren(h('h3', {}, pick({ en: 'Did you know', ru: 'Знаете ли вы' })), ...list.map((f) => factoidView(app, f, { from: cardId })));
     sec.hidden = false;
   };
+  app.facts.load();
   if (app.facts.list.length) fill();
   else void app.facts.ready.then(fill);
   return sec;
@@ -132,6 +133,7 @@ export class FactPanel {
     this.el.hidden = false;
     this.mark(true);
     this.next();
+    this.app.facts.load();
     if (!this.app.facts.list.length) void this.app.facts.ready.then(() => this.isOpen && this.next());
     this.el.focus({ preventScroll: true });
   }

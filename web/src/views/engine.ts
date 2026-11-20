@@ -1,3 +1,5 @@
+import { loadJson } from '../lib/loadJson';
+import type { Card } from '../lib/types';
 // The engine room: how the museum is a Kubernetes cluster. Every card is an
 // object; the distribution's mechanics are named after the culture they come
 // from, with one command each to try them.
@@ -134,7 +136,7 @@ export class Engine {
     this.yamlHost = h('div.e-yaml');
     this.tryHost = h('div.e-try');
     const cards = app.set.all();
-    const raw = cards.map((c) => app.raw(c.id) ?? c);
+    const raw = cards.map((c) => ({ ...(app.raw(c.id) ?? c), title: c.sourceTitle ?? c.title }));
     const mine = cards.length;
     const bar = h(
       'header.d-bar',
@@ -268,10 +270,12 @@ export class Engine {
   }
 
   /** The YAML of the card the reader opened last. */
-  private renderYaml(): void {
+  private async renderYaml(): Promise<void> {
     const path = readPath();
     const opened = [...path].reverse().find((x) => this.app.raw(x));
-    const c = this.app.raw(opened ?? 'equiano') ?? this.app.set.all()[0];
+    const available = this.app.raw(opened ?? 'equiano') ?? this.app.set.all()[0];
+    if (!available) return;
+    const c = await loadJson<Card>(`data/raw-cards/${available.id}.json`).catch(() => null) ?? available;
     if (!c) return;
     const title = this.app.set.get(c.id)?.title ?? c.title;
     this.yamlHost.replaceChildren(
