@@ -101,9 +101,14 @@ test('the clap circle keeps the reader’s claps through the whole feature', asy
   await page.keyboard.press('Space');
   await expect(circle.locator('.cc-drop')).toHaveCount(3);
   await expect(circle).toHaveAttribute('aria-label', /3/);
+  // It sits under the picture, never over it.
+  const pic = await scene(page, 'minute').locator('.ft-art').boundingBox();
+  const box = await circle.boundingBox();
+  expect(box!.y).toBeGreaterThanOrEqual(pic!.y + pic!.height - 1);
+  // Where the reader does not clap, it is put away, and the claps are kept.
   await goToScene(page, 'river');
-  await expect(circle).toHaveAttribute('data-place', 'corner');
-  await expect(circle).toBeVisible();
+  await expect(circle).toHaveAttribute('data-place', 'hidden');
+  await expect(circle).toBeHidden();
   await expect(circle.locator('.cc-drop')).toHaveCount(3);
   await goToScene(page, 'finale');
   await expect(circle).toHaveAttribute('data-place', 'stage');
@@ -115,26 +120,28 @@ test('the clap circle keeps the reader’s claps through the whole feature', asy
   await expect(page.locator('.mp-now b')).toContainText('Shipp');
 });
 
-test('the 1964 single turns over: A side, then the B side and the name on its label', async ({ page }) => {
+test('the 1964 single lies B side up, with the one name on its label', async ({ page }) => {
   await openFeature(page, '#view=feature&item=sea-lion-girls&scene=single');
   await expect.poll(() => page.url()).toContain('scene=single');
   const rec = scene(page, 'single').locator('.sg');
-  const flip = scene(page, 'single').locator('.sg-flip');
-  await expect(rec).toHaveAttribute('data-side', 'a');
-  await expect(rec.locator('.sg-a .sg-title')).toHaveText('Mississippi Goddam');
-  await flip.click();
   await expect(rec).toHaveAttribute('data-side', 'b');
-  await expect(flip).toHaveAttribute('aria-pressed', 'true');
+  await expect(scene(page, 'single').locator('.sg-flip')).toHaveCount(0);
   await expect(rec.locator('.sg-b .sg-title')).toHaveText('Sea Lion Woman');
   await expect(rec.locator('.sg-b .sg-credit')).toHaveText('Written by George Houston Bass');
-  await expect(rec.locator('.sg-b .sg-names')).toHaveText('Christine and Katherine Shipp');
-  await expect(scene(page, 'single').locator('.sg-now')).toContainText('Sea Lion Woman');
+  // The text says plainly which side the song was on.
+  await expect(scene(page, 'single').locator('[data-block="two-sides"]')).toContainText('B side');
 });
 
-test('the river: two branches, a filter by kind, and a node plays in the docked player', async ({ page }) => {
+test('the river: two branches, a filter by kind, and a node opens its card, which plays in the docked player', async ({ page }) => {
   await openFeature(page, '#view=feature&item=sea-lion-girls&scene=river');
   const rv = scene(page, 'river');
-  await expect(rv.locator('.rv-node')).toHaveCount(29);
+  await expect(rv.locator('.rv-node')).toHaveCount(30);
+  // Every version hangs from something: no circle without a line.
+  const lone = await rv.evaluate((el) => {
+    const ids = [...el.querySelectorAll<HTMLElement>('.rv-node')].map((b) => b.dataset.node!);
+    return ids.length - 1 - el.querySelectorAll('.rv-edge').length;
+  });
+  expect(lone).toBeLessThanOrEqual(0);
   await expect(rv.locator('.rv-node[data-branch="girls"]')).not.toHaveCount(0);
   await expect(rv.locator('.rv-node[data-branch="simone"]')).not.toHaveCount(0);
   await expect(rv.locator('.rv-node[data-node="feist-sealion-2007"]')).toHaveAttribute('data-branch', 'girls');
@@ -145,12 +152,22 @@ test('the river: two branches, a filter by kind, and a node plays in the docked 
   await rv.locator('.rv-filter[data-filter="all"]').click();
   await expect(rv.locator('.rv-node.dim')).toHaveCount(0);
   await rv.locator('.rv-node[data-node="feist-sealion-2007"]').click();
+  // A tap opens the card in view and marks the circle; it does not start the music.
+  await expect(rv.locator('.rv-node[data-node="feist-sealion-2007"]')).toHaveClass(/\bon\b/);
+  await expect(rv.locator('.rv-detail .rv-card .rv-title')).toContainText('Sealion');
+  await expect(rv.locator('.rv-detail .rv-card')).toBeInViewport();
+  await expect(page.locator('.mp')).not.toBeVisible();
+  await rv.locator('.rv-detail .ft-play').click();
   await expect(page.locator('.mp')).toBeVisible();
   await expect(page.locator('.mp-now b')).toContainText('Feist');
-  await expect(rv.locator('.rv-detail .rv-card .rv-title')).toContainText('Sealion');
+  // The card closes (on a phone it covers the lower half of the diagram).
+  await rv.locator('.rv-detail .rv-close').click();
+  await expect(rv.locator('.rv-detail')).toBeHidden();
+  await expect(rv.locator('.rv-node.on')).toHaveCount(0);
   // A node without an official upload says so instead of playing.
   await rv.locator('.rv-node[data-node="burial-2011"]').click();
   await expect(rv.locator('.rv-detail .ft-none')).toBeVisible();
+  await rv.locator('.rv-detail .rv-close').click();
   // One with only a legal page to listen at offers the way there.
   await rv.locator('.rv-node[data-node="afs-l4-1942"]').click();
   await expect(rv.locator('.rv-detail a.ft-out')).toHaveAttribute('href', 'https://www.loc.gov/item/ihas.200196570/');
@@ -196,7 +213,7 @@ test('in Russian, the feature, its labels and its menu entry are Russian', async
   await openFeature(page, '#view=feature&item=sea-lion-girls&lang=ru');
   await expect(feature(page).locator('h1.ft-h1')).toContainText('как две девушки из Миссисипи');
   await expect(feature(page).locator('.ft-knock')).toHaveText('Постучать — так включится звук');
-  await expect(sheet(page).locator('.ft-sound')).toContainText('Хлопок');
+  await expect(sheet(page).locator('.ft-sound')).toHaveText('Включить хлопок');
   await expect(scene(page, 'door').locator('[data-block="when"]')).toContainText('13 мая 1939 года');
   await expect(page.locator('.nav-actions [data-features]')).toHaveAttribute('aria-label', 'Спецпроекты');
 });
@@ -291,7 +308,7 @@ test('Nina Simone’s photo develops out of the drawing, with its CC0 credit', a
   await expect(fig.locator('figcaption')).toContainText('CC0');
 });
 
-test('the illustrations load scene by scene, as the reader comes near', async ({ page }) => {
+test('the illustrations load a couple of scenes ahead of the reader, not all at once', async ({ page }) => {
   const asked: string[] = [];
   page.on('request', (r) => {
     const m = r.url().match(/media\/features\/sea-lion-girls\/([a-z0-9-]+\.webp)$/);
@@ -301,8 +318,8 @@ test('the illustrations load scene by scene, as the reader comes near', async ({
   const door = scene(page, 'door').locator('.ft-art img');
   await expect(door).toHaveCount(5);
   await expect.poll(() => door.evaluateAll((els) => els.every((e) => (e as HTMLImageElement).complete && (e as HTMLImageElement).naturalWidth > 0))).toBe(true);
-  // Nothing further down has been fetched yet.
-  expect(asked.filter((f) => !f.startsWith('door-'))).toEqual([]);
+  // Only the opening scenes are fetched at first, nothing further down.
+  expect(asked.filter((f) => !/^(door|ring|expedition)-/.test(f))).toEqual([]);
   await expect(scene(page, 'classroom').locator('.ft-art img[data-src]')).toHaveCount(3);
   // Layers carry alt text where they mean something, and an empty alt where they are decoration.
   await expect(scene(page, 'door').locator('[data-layer="door-house"] img')).toHaveAttribute('alt', /wooden house/);
@@ -315,7 +332,7 @@ test('the illustrations load scene by scene, as the reader comes near', async ({
   expect(asked).not.toContain('classroom-room.webp');
   // No caption on the pictures themselves; one line in the closing credits says they are generated.
   await expect(feature(page).locator('.ft-art figcaption')).toHaveCount(0);
-  await expect(scene(page, 'finale').locator('.ft-art-credit')).toHaveText('Illustrations generated, edited by the museum');
+  await expect(feature(page).locator('.slg-credits .ft-art-credit')).toHaveText('Illustrations generated, edited by the museum');
 });
 
 test('the finale: the door of the first scene opens, with the light behind it', async ({ page }) => {
@@ -410,15 +427,14 @@ test('the arrival: on 13 May the door of the cover opens to the two strangers', 
 test('every control the text tells the reader to press exists, with that label', async ({ page }) => {
   await openFeature(page);
   await expect(feature(page).locator('.ft-knock')).toHaveText('Knock — this turns the sound on');
-  await expect(scene(page, 'ring').locator('.ft-hear')).toHaveText('Hear the clap');
+  await expect(scene(page, 'ring').locator('.ft-hear')).toHaveText('Turn the clap on');
   await expect(feature(page).locator('.cc')).toBeAttached();
-  await expect(scene(page, 'single').locator('.sg-flip')).toHaveText('Turn the record over');
   await expect(scene(page, 'river').locator('.rv-node').first()).toBeAttached();
   await expect(scene(page, 'finale').locator('.fn-together')).toHaveText('Clap together');
   // Each quoted label in the text matches a button.
   const text = (await feature(page).locator('.ft-block').evaluateAll((els) => els.map((e) => e.textContent ?? ''))).join('\n').replace(/\u00a0/g, ' ').replace(/\u2060/g, '');
   // (The museum's typography binds short words with no-break spaces; compare the words.)
-  for (const label of ['Hear the clap', 'Turn the record over', 'Clap together']) expect(text).toContain(`“${label}”`);
+  for (const label of ['Turn the clap on', 'Clap together']) expect(text).toContain(`“${label}”`);
   expect(text).not.toContain('Show the three claps');
 });
 
@@ -433,7 +449,8 @@ test('every scene from the words to the silence has a picture; the photos are wh
     const fig = scene(page, id).locator('figure.ft-photo.ft-print');
     const img = fig.locator('img.ink-photo');
     await expect(img, id).toHaveAttribute('src', new RegExp(`${file}\\.jpg$`));
-    await expect(img, id).toHaveAttribute('loading', 'lazy');
+    // Loaded ahead of the scene by the scroller, not lazily at the last moment.
+    await expect(img, id).not.toHaveAttribute('loading', 'lazy');
     await expect(img, id).toHaveCSS('object-fit', 'contain');
     await expect(fig.locator('.ft-caption'), id).not.toBeEmpty();
     await expect(fig.locator('figcaption a[href^="https://commons.wikimedia.org/wiki/File:"]'), id).toHaveCount(1);
