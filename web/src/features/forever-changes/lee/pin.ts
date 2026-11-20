@@ -43,13 +43,16 @@ export class LeePin {
       e.stopPropagation();
       this.hide(true);
     });
-    this.btn.addEventListener('click', () => {
-      if (isPhone()) return o.open();
-      if (this.panel.hidden) this.show();
-      else this.hide();
-    });
+    this.btn.addEventListener('click', () => this.press());
     this.el = h('div.fc-lee-pinbox', {}, this.panel, this.btn);
     o.host.append(this.el);
+  }
+
+  /** What the button does: on a phone the mode opens; on a computer the panel with the QR code opens or closes. */
+  press(): void {
+    if (isPhone()) return this.o.open();
+    if (this.panel.hidden) this.show();
+    else this.hide();
   }
 
   /** The link for the chapter being read. */

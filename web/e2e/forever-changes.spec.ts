@@ -66,16 +66,16 @@ const opacity = (page: Page, l: string) => feature(page).locator(`.fc-trip-${l}`
 
 const SCENES = ['warning', 'prologue', 'hillside', 'session-day', 'diary', 'orchestra', 'alone-again-or', 'a-house-is-not-a-motel', 'andmoreagain', 'the-daily-planet', 'old-man', 'the-red-telephone', 'flip', 'between-clark-and-hilldale', 'live-and-let-live', 'the-good-humor-man', 'bummer-in-the-summer', 'you-set-the-scene', 'after', 'return', 'end', 'echoes', 'lee'];
 
-test('the list opens Forever Changes straight into the epigraph; back returns to the list', async ({ page }) => {
+test('the list opens Forever Changes straight onto the album cover; back returns to the list', async ({ page }) => {
   await page.goto('/#view=features');
   const item = sheet(page).locator('[data-feature="forever-changes"]');
   await expect(item).toContainText('Forever Changes: the last words that were not the last');
   await item.click();
   await expect(feature(page)).toBeVisible();
-  // No warning screen, no dialog, no calm switch: the first thing is Lee's epigraph.
+  // No warning screen, no dialog, no calm switch: the first thing is the album's cover, then the title and Lee's epigraph.
   await expect(feature(page).locator('[role="dialog"]:visible')).toHaveCount(0);
   await expect(sheet(page).locator('.ft-calm')).toHaveCount(0);
-  await expect(scene(page, 'warning').locator('.fc-epigraph')).toBeInViewport();
+  await expect(scene(page, 'warning').locator('.fc-cover:visible img')).toBeInViewport();
   await expect(scene(page, 'warning').locator('.fc-epigraph')).toContainText('my last words');
   const ids = await feature(page).locator('.ft-scene').evaluateAll((els) => els.map((e) => (e as HTMLElement).dataset.scene));
   expect(ids).toEqual(SCENES);
@@ -203,7 +203,9 @@ test('the lenses: one witness at a time, the first listed first, and the switch 
 
 test('every chapter has its picture, and the pictures load scene by scene', async ({ page }) => {
   await open(page);
-  for (const id of SCENES) await expect(scene(page, id).locator('.ft-stage .ft-art .al').first(), id).toBeAttached();
+  // The opening shows the album's cover instead of a drawing.
+  await expect(scene(page, 'warning').locator('.fc-cover img').first()).toBeAttached();
+  for (const id of SCENES.filter((x) => x !== 'warning')) await expect(scene(page, id).locator('.ft-stage .ft-art .al').first(), id).toBeAttached();
   // Far chapters have not loaded theirs yet.
   expect(await scene(page, 'echoes').locator('.ft-art img').first().getAttribute('src')).toBeNull();
   await goToScene(page, 'echoes');
@@ -231,17 +233,23 @@ test('the prologue’s picture follows the text: Memphis, Dorsey High, the club,
   await expect(after).toHaveAttribute('data-state', 'prison');
 });
 
-test('the record turns over between the sides, and everything stops for a moment', async ({ page }) => {
+test('the opening shows the cover, the title, Lee\'s words and offers the mode at once', async ({ page, isMobile }) => {
+  await page.goto('/#view=feature&item=forever-changes&lang=ru');
+  const first = scene(page, 'warning');
+  await expect(first.locator('.fc-cover:visible img')).toHaveJSProperty('complete', true);
+  expect(await first.locator('.fc-cover:visible img').evaluate((i: HTMLImageElement) => i.naturalWidth)).toBeGreaterThan(200);
+  await expect(first.locator('h1.ft-h1')).toContainText('Forever Changes');
+  await expect(first.locator('.fc-cover-sub')).toContainText('Артура Ли');
+  await expect(first.locator('.fc-epigraph-who')).toContainText('автор песен и солист группы Love');
+  await first.locator('.fc-cover-go').click();
+  if (isMobile) await expect(feature(page).locator('.fc-lee')).toHaveAttribute('data-state', 'warning');
+  else await expect(feature(page).locator('.fc-lee-panel')).toBeVisible();
+});
+
+test('between the sides there is text, not a record to turn over', async ({ page }) => {
   await open(page, '#view=feature&item=forever-changes&scene=flip');
-  const rec = scene(page, 'flip').locator('.fc-record');
-  await expect(rec).toHaveAttribute('data-side', 'a');
-  await expect(rec.locator('.fc-a li')).toHaveCount(6);
-  await scene(page, 'flip').locator('.fc-flip').click();
-  await expect(rec).toHaveAttribute('data-side', 'b');
-  await expect(feature(page)).toHaveAttribute('data-frozen', '');
-  await expect(rec.locator('.fc-b li')).toHaveCount(5);
-  await expect(rec.locator('.fc-b')).toContainText('You Set the Scene');
-  await expect(feature(page)).not.toHaveAttribute('data-frozen', '', { timeout: 3000 });
+  await expect(scene(page, 'flip').locator('.fc-record, .fc-flip')).toHaveCount(0);
+  await expect(scene(page, 'flip').locator('.ft-flow')).toContainText('Side two');
 });
 
 test('the Arthur Lee button is pinned in every chapter', async ({ page }) => {
@@ -324,7 +332,8 @@ test('in Russian, everything visible is Russian', async ({ page }) => {
   await page.goto('/#view=feature&item=forever-changes&lang=ru');
   await expect(feature(page).locator('h1.ft-h1')).toContainText('последние слова, которые не стали последними');
   await expect(sheet(page).locator('.fc-menu-btn')).toHaveText('Главы');
-  await expect(feature(page).locator('.fc-lee-pin')).toContainText('Артура Ли');
+  await expect(feature(page).locator('.fc-lee-pin')).toContainText('Ваша комната под ЛСД');
+  await expect(feature(page).locator('.fc-lens-label').first()).toBeAttached();
   await goToScene(page, 'session-day');
   await expect(scene(page, 'session-day').locator('.fc-lens-btn[data-lens="botnick"]')).toHaveText('Брюс Ботник');
 });

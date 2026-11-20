@@ -83,9 +83,16 @@ describe('the pictures', () => {
     expect(states('after')).toEqual(['after', 'prison']);
   });
   it('the real photographs are cleared, credited in both languages and never marked generated', () => {
-    const ledger = parse(readFileSync(new URL('../../content/ledger/media.yaml', import.meta.url), 'utf8')) as { file: string; feature?: string; license_url?: string; source_revision?: string }[];
-    const photos = (fc.art ?? []).filter((a) => a.kind === 'photo');
-    expect(photos.map((a) => a.id)).toEqual(['love-1967', 'love-1966-ad', 'love-red-book-ad', 'echols-2019']);
+    const ledger = parse(readFileSync(new URL('../../content/ledger/media.yaml', import.meta.url), 'utf8')) as { file: string; feature?: string; license?: string; license_url?: string; source_revision?: string }[];
+    const all = (fc.art ?? []).filter((a) => a.kind === 'photo');
+    expect(all.map((a) => a.id)).toEqual(['cover', 'love-1967', 'love-1966-ad', 'love-red-book-ad', 'echols-2019']);
+    // The album cover is quoted in a review, as critics do, and says so.
+    const cover = all.find((a) => a.id === 'cover')!;
+    const quoted = ledger.find((x) => x.file === cover.file);
+    expect(quoted?.feature).toBe('forever-changes');
+    expect(quoted?.license).toMatch(/art\. 1274; fair use/);
+    expect(cover.credit!.en).toContain('Bob Pepper');
+    const photos = all.filter((a) => a.id !== 'cover');
     for (const a of photos) {
       const e = ledger.find((x) => x.file === a.file);
       expect(e?.feature, a.id).toBe('forever-changes');

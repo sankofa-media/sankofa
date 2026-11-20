@@ -19,6 +19,7 @@ import { isPhone, LeePin, qrSvg } from './lee/pin';
 import { wantsLee } from './lee/url';
 import { ECHOES, SONGS, type Official } from './recordings';
 import { miniPlayer } from '../../views/miniPlayer';
+import { mediaSrc } from '../../lib/media';
 import '../engine/engine.css';
 import './forever-changes.css';
 
@@ -73,6 +74,8 @@ export function mount(ctx: FeatureContext): FeatureInstance {
   // This longread has no clap of its own: the songs play in the museum's player.
   ctx.tools.querySelector('.ft-sound')?.remove();
   const scenes = ctx.data.scenes;
+  // The faces this longread sets its text in, fetched now, not when a chapter first needs one.
+  for (const f of ['400 1em Literata', 'italic 400 1em Literata', '400 1em Fraunces', 'italic 400 1em Fraunces', '400 1em Inter', '600 1em Inter']) document.fonts?.load(f, 'Aa Аа').catch(() => {});
   const cleanups: (() => void)[] = [];
   const nameOf = (sc: Scene) => (sc.name ? pick(sc.name as { en: string; ru: string }) : (sc.blocks.find((b) => b.role === 'title') ? kit.text(sc.id, sc.blocks.find((b) => b.role === 'title')!.id) : sc.id));
   const aliasOf = (sc: Scene) => (sc.alias ? pick(sc.alias as { en: string; ru: string }) : undefined);
@@ -110,7 +113,6 @@ export function mount(ctx: FeatureContext): FeatureInstance {
   root.append(bar);
 
   // ---------- scenes ----------
-  const songs = scenes.filter((sc) => sc.kind === 'song' && sc.song).map((sc) => sc.song as Song);
   const watch = watcher(kit.ui('watching'));
   const pictures = new Map<string, Picture>();
   // A real photograph inside a chapter's picture: whole, with its caption and credit (and links where the licence asks).
@@ -146,35 +148,35 @@ export function mount(ctx: FeatureContext): FeatureInstance {
     return el;
   };
 
-  const flip = (sc: Scene): HTMLElement => {
-    const side = (s: 'a' | 'b') =>
-      h(`div.fc-face.fc-${s}`, {}, h('small', {}, kit.ui(`side-${s}`)), h('ol', {}, ...songs.filter((x) => x.side === s).map((x) => h('li', {}, x.title))));
-    const record = h('div.fc-record', { 'data-side': 'a' }, art.disc(), h('div.fc-faces', {}, side('a'), side('b')));
-    const pic = pictureOf(sc, record);
-    const live = h('p.ft-visually-hidden.fc-flip-now', { 'aria-live': 'polite' });
-    const btn = h('button.btn.primary.fc-flip', { type: 'button', 'aria-pressed': 'false' }, kit.ui('flip')) as HTMLButtonElement;
-    btn.addEventListener('click', () => {
-      const b = record.dataset.side !== 'b';
-      record.dataset.side = b ? 'b' : 'a';
-      btn.setAttribute('aria-pressed', String(b));
-      live.textContent = kit.ui(b ? 'side-b' : 'side-a');
-      fx.freeze(1200);
-    });
-    const el = scene(sc, pic?.el ?? h('div.ft-stack', {}, record), { after: [btn, live], screens: 1.6, long: false });
-    btn.addEventListener('click', () => (el.dataset.side = record.dataset.side));
-    el.dataset.side = 'a';
-    return el;
+  // The album's cover, loaded at once: it is the first thing on the page.
+  const cover = (where: 'stage' | 'flow'): HTMLElement | null => {
+    const a = ctx.data.art.find((x) => x.id === 'cover');
+    const p = kit.photo('cover');
+    if (!a || !p) return null;
+    const img = mediaSrc(ctx.app, a.file, [800]);
+    return h(
+      `figure.fc-cover.fc-cover-${where}`,
+      {},
+      h('img', { src: img.src, ...(img.srcset ? { srcset: img.srcset, sizes: '(min-width: 900px) 46vw, 100vw' } : {}), alt: p.alt, decoding: 'async', fetchpriority: 'high', draggable: 'false' }),
+      h('figcaption.ft-credit.fc-photo-credit', {}, p.caption ? `${p.caption}. ` : null, p.credit),
+    );
   };
 
   const render = (sc: Scene): HTMLElement | null => {
     switch (sc.kind) {
       case 'warning': {
-        const title = h('h1.ft-h1', {}, pick(ctx.data.title));
+        // The opening: the album's cover, the title, what this is, Lee's words, and the mode offered at once.
+        // Beside the text on a wide screen; on a phone the text would run over it, so there it heads the text.
+        const pic = cover('stage');
+        const head = h('header.fc-cover-head', {}, pic ? cover('flow') : null, h('p.ft-kicker.fc-cover-kicker', {}, kit.ui('cover-kicker')), h('h1.ft-h1', {}, pick(ctx.data.title)), h('p.fc-cover-sub', {}, kit.ui('cover-sub')), ctx.data.reading ? h('p.ft-reading', {}, pick(ctx.data.reading)) : null);
         // Lee's words and who said them stay together, as one quotation.
         const said = sc.blocks.find((b) => b.role === 'quote');
         const who = sc.blocks.find((b) => b.role === 'caption');
         const quote = said ? h('figure.fc-epigraph', {}, h('blockquote.ft-quote', {}, pick({ en: said.en, ru: said.ru })), who ? h('figcaption.fc-epigraph-who', {}, pick({ en: who.en, ru: who.ru })) : null) : null;
-        return scene(sc, stageOf(sc), { skip: [said?.id, who?.id].filter((x): x is string => !!x), before: quote, after: [title, ctx.data.reading ? h('p.ft-reading', {}, pick(ctx.data.reading)) : null], screens: 1.2, long: false });
+        const go = h('button.btn.primary.fc-cover-go', { type: 'button' }, h('span.fc-lee-pin-eye', { 'aria-hidden': 'true' }), kit.ui('lee-open'));
+        go.addEventListener('click', () => pin.press());
+        const offer = h('div.fc-cover-mode', {}, h('p', {}, kit.ui('cover-mode')), go);
+        return scene(sc, pic ?? stageOf(sc), { skip: [said?.id, who?.id].filter((x): x is string => !!x), before: head, after: [quote, offer], screens: 1, long: false });
       }
       case 'magazine':
       case 'after':
@@ -199,14 +201,14 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         return el;
       }
       case 'flip':
-        return flip(sc);
+        return scene(sc, stageOf(sc), { long: false });
       case 'return':
         return scene(sc, stageOf(sc), { screens: 1.4 });
       case 'end':
         return scene(sc, stageOf(sc), { screens: 1.4, long: false });
       case 'echoes':
         return scene(sc, stageOf(sc), {
-          after: [h('div.fc-plays', {}, h('p.fc-plays-label', {}, pick({ en: 'Official recordings', ru: 'Официальные записи' })), ...ECHOES.map((r) => playButton(r, r.year ? `${r.artist}, ${r.year}` : r.artist)))],
+          after: [h('div.fc-plays', {}, h('p.fc-plays-label', {}, pick({ en: 'Other artists sing “Alone Again Or”', ru: 'Другие исполнители поют «Alone Again Or»' })), ...ECHOES.map((r) => playButton(r, r.year ? `${r.artist}, ${r.year}` : r.artist)))],
         });
       case 'lee': {
         const open = h('button.btn.primary.fc-lee-go', { type: 'button' }, kit.ui('lee-open'));

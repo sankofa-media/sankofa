@@ -29,16 +29,26 @@ title:
   en: "Forever Changes: the last words that were not the last"
   ru: "Forever Changes: последние слова, которые не стали последними"
 dek:
-  en: "In 1967 a twenty-two-year-old from Memphis made an album he thought would be his last words. It flopped at home, broke his band and outlived almost everyone who made it."
-  ru: "В 1967 году двадцатидвухлетний парень из Мемфиса записал альбом, который считал своими последними словами. Дома он провалился, группу развалил и пережил почти всех, кто его делал."
+  en: "In 1967 a twenty-two-year-old from Memphis made an album he thought would be his last words. It flopped in America, the band broke up after it, and the record outlived almost everyone who made it."
+  ru: "В 1967 году двадцатидвухлетний парень из Мемфиса записал альбом, который считал своими последними словами. В Америке пластинка провалилась, группа после неё распалась, а сама она пережила почти всех, кто её делал."
 reading:
-  en: "50–60 minutes; put your phone nearby"
-  ru: "50–60 минут; держите телефон под рукой"
+  en: "50–60 minutes to read"
+  ru: "Чтение займёт 50–60 минут"
 
 # Real photographs, cleared in content/ledger/media.yaml. Each is shown
 # whole, with its caption and credit; where the licence asks for it, the
 # credit links the source page and the licence.
 art:
+  - id: cover
+    kind: photo
+    file: forever-changes-cover-1967.jpg
+    rights: forever-changes-cover-1967.jpg
+    alt: { en: "The cover of Forever Changes: the faces of the five members of Love, painted in bright colours and fitted together into one heart-shaped head", ru: "Обложка Forever Changes: лица пятерых участников Love, написанные яркими красками и сложенные в одну голову в форме сердца" }
+    caption: { en: "The cover of “Forever Changes”, Elektra Records, 1967", ru: "Обложка альбома «Forever Changes», Elektra Records, 1967 год" }
+    credit:
+      en: "Cover art by Bob Pepper, design by William S. Harvey. © Elektra Records, quoted in a review"
+      ru: "Рисунок Боба Пеппера, оформление Уильяма Харви. © Elektra Records, цитируется в обзоре"
+    source: https://musicbrainz.org/release/559bdfab-5744-4986-812a-52de4678dd60/cover-art
   - id: love-1967
     kind: photo
     file: love-1967-elektra.jpg
@@ -46,7 +56,7 @@ art:
     alt: { en: "The five members of Love posing against a white background, 1967", ru: "Пятеро участников Love позируют на белом фоне, 1967 год" }
     credit:
       en: "Love in 1967, an Elektra Records promotional photograph. Public domain"
-      ru: "Love в 1967 году, рекламное фото Elektra Records. Общественное достояние"
+      ru: "Love в 1967 году, рекламная фотография Elektra Records. Общественное достояние"
     source: https://commons.wikimedia.org/wiki/File:LOVE60s.png
   - id: love-1966-ad
     kind: photo
@@ -81,6 +91,9 @@ lenses:
   - id: lee
     name: { en: "Arthur Lee", ru: "Артур Ли" }
     role: { en: "singer, writer of nine of the eleven songs, producer", ru: "певец, автор девяти песен из одиннадцати, продюсер" }
+  - id: forssi
+    name: { en: "Ken Forssi", ru: "Кен Форсси" }
+    role: { en: "Love’s bass player", ru: "басист Love" }
   - id: botnick
     name: { en: "Bruce Botnick", ru: "Брюс Ботник" }
     role: { en: "engineer and co-producer", ru: "звукорежиссёр и сопродюсер" }
@@ -102,54 +115,61 @@ lenses:
     empty: true
     silence:
       en: "David Angel did not tell. No interview, letter or memoir of his about these sessions was found; everything we know of his part comes from the others."
-      ru: "Дэвид Энджел не рассказал. Ни интервью, ни письма, ни воспоминаний о тех сессиях от него не нашлось; всё, что известно о его работе, рассказали другие."
+      ru: "Дэвид Энджел о своей работе ничего не рассказал. Ни интервью, ни письма, ни воспоминаний о тех сессиях от него не осталось; всё, что о ней известно, рассказали другие."
 
 ui:
-  lens-label: { en: "Who tells it", ru: "Кто рассказывает" }
+  lens-label: { en: "Who tells it: choose whose words to read this chapter in", ru: "Кто рассказывает: выберите, чьими словами читать эту главу" }
   chapters: { en: "Chapters", ru: "Главы" }
   progress: { en: "How far you are", ru: "Сколько прочитано" }
   flip: { en: "Turn the record over", ru: "Перевернуть пластинку" }
   side-a: { en: "Side A", ru: "Сторона A" }
   side-b: { en: "Side B", ru: "Сторона B" }
-  watching: { en: "Someone is watching.", ru: "Кто-то смотрит." }
-  lee-open: { en: "Arthur Lee mode", ru: "Режим Артура Ли" }
-  lee-hint: { en: "See your room through his eyes", ru: "Посмотрите на свою комнату его глазами" }
+  watching: { en: "Someone is watching.", ru: "Кто-то на вас смотрит." }
+  lee-open: { en: "Your room on LSD", ru: "Ваша комната под ЛСД" }
+  lee-hint: { en: "The phone’s camera shows your room roughly as the world looks on LSD, and things from the songs of this chapter appear in it", ru: "Камера телефона показывает вашу комнату примерно такой, какой мир видится под ЛСД, и в ней появляются вещи из песен этой главы" }
   lee-qr:
     en: "Point your phone's camera at the code: the mode opens on the phone, at this chapter."
-    ru: "Наведите камеру телефона на код: режим откроется на телефоне, на этой главе."
+    ru: "Наведите на код камеру телефона: режим откроется на телефоне, на этой же главе."
   lee-here: { en: "Open on this computer", ru: "Открыть на этом компьютере" }
   lee-close: { en: "Close", ru: "Закрыть" }
   lee-warning-title: { en: "Before the camera starts", ru: "Прежде чем включится камера" }
   lee-warning-text:
     en: "Your room will flow with colour and fill with shapes that are not there. Nothing flashes more than three times a second, but if you have photosensitive epilepsy, do not start. If you feel unwell, press Exit: it is always on the screen."
-    ru: "Комната потечёт цветом и наполнится фигурами, которых нет. Ничто не мигает чаще трёх раз в секунду, но при фоточувствительной эпилепсии не включайте режим. Если станет нехорошо, нажмите «Выйти»: эта кнопка всегда на экране."
+    ru: "По комнате поплывут цветные разводы, и в ней появятся фигуры, которых на самом деле нет. Ничто не мигает чаще трёх раз в секунду, но при фоточувствительной эпилепсии режим включать нельзя. Если вам станет не по себе, нажмите «Выйти»: эта кнопка всегда на экране."
   lee-privacy:
     en: "Everything is computed on this device. The camera picture goes nowhere."
-    ru: "Всё считается на этом устройстве. Картинка с камеры никуда не уходит."
+    ru: "Изображение с камеры обрабатывается прямо на этом устройстве и никуда не отправляется."
   lee-atmosphere:
     en: "The liquid light here is the atmosphere of the period, not a document: no source ties Love to a particular light show."
-    ru: "«Жидкий свет» здесь — атмосфера эпохи, а не документ: ни один источник не связывает Love с конкретным световым шоу."
+    ru: "Такие переливы цвета, «жидкий свет», показывали на концертах шестидесятых. Здесь они передают дух времени, а не документ: ни один источник не связывает Love с каким-то определённым световым шоу."
   lee-start-camera: { en: "Start with the camera", ru: "Включить с камерой" }
   lee-start-still: { en: "Without the camera", ru: "Без камеры" }
   lee-exit: { en: "Exit", ru: "Выйти" }
   lee-denied:
     en: "No camera: the mode runs over a still picture."
-    ru: "Камеры нет: режим работает поверх неподвижной картинки."
+    ru: "Камера недоступна, поэтому режим работает с неподвижной картинкой."
   lee-behind: { en: "Someone is behind you.", ru: "Кто-то стоит у вас за спиной." }
-  lee-chapter: { en: "Now: {title}", ru: "Сейчас: {title}" }
+  lee-chapter: { en: "Chapter: {title}", ru: "Глава: {title}" }
   lee-motion:
     en: "Allow motion sensors so the figures can melt when you turn to them"
-    ru: "Разрешите датчики движения, чтобы фигуры таяли, когда вы к ним поворачиваетесь"
+    ru: "Разрешите доступ к датчикам движения: тогда фигуры будут таять, когда вы поворачиваете к ним телефон"
+  cover-kicker: { en: "A Sankofa special", ru: "Спецпроект Sankofa" }
+  cover-sub:
+    en: "Love’s 1967 album and the story of the man who wrote it, Arthur Lee"
+    ru: "Альбом группы Love 1967 года и история его автора, Артура Ли"
+  cover-mode:
+    en: "In those years, Louder magazine writes, Lee and Love took a great deal of LSD. This mode shows roughly how the world looks on it: the phone’s camera films your room, the walls begin to flow with colour, figures appear at the edge of the frame, and things from the songs of the chapter you are reading come into the room. The button stays in the corner of the screen in every chapter."
+    ru: "В те годы, как пишет журнал Louder, Ли и музыканты Love принимали очень много ЛСД. Этот режим показывает, примерно каким видится под ним мир: камера телефона снимает вашу комнату, стены начинают переливаться цветом, по краям кадра появляются фигуры, а в комнату приходят вещи из песен той главы, которую вы читаете. Кнопка режима остаётся в углу экрана во всех главах."
   no-recording:
     en: "The official recording is not linked here yet."
     ru: "Официальная запись здесь пока не подключена."
-  vision-telephone: { en: "A red telephone, ringing", ru: "Красный телефон, звонит" }
+  vision-telephone: { en: "A red telephone, ringing", ru: "Звонит красный телефон" }
   vision-newspaper: { en: "A newspaper unfolding: The Daily Planet", ru: "Разворачивается газета «Daily Planet»" }
   vision-old-man: { en: "An old man, standing still", ru: "Неподвижный старик" }
-  vision-trumpet: { en: "A trumpet playing by itself", ru: "Труба, играющая сама" }
+  vision-trumpet: { en: "A trumpet playing by itself", ru: "Труба играет сама по себе" }
   vision-helmet: { en: "A soldier's helmet in grey mud", ru: "Солдатская каска в серой грязи" }
   vision-rose: { en: "A flower opening and closing", ru: "Цветок, который раскрывается и закрывается" }
-  vision-jukebox: { en: "A jukebox glowing in a café", ru: "Музыкальный автомат светится в кафе" }
+  vision-jukebox: { en: "A jukebox glowing in a café", ru: "Светится музыкальный автомат в кафе" }
   vision-crystal: { en: "A crystal growing", ru: "Растущий кристалл" }
   vision-ice-cream: { en: "An ice-cream van", ru: "Фургон мороженщика" }
   vision-sun: { en: "A summer sun, too bright", ru: "Слишком яркое летнее солнце" }
@@ -157,7 +177,7 @@ ui:
   vision-siren: { en: "The light of an ambulance", ru: "Мигалка скорой помощи" }
   vision-chairs: { en: "Empty chairs in a studio", ru: "Пустые стулья в студии" }
   vision-tape-reel: { en: "A tape reel turning", ru: "Вращается катушка с плёнкой" }
-  vision-notes: { en: "Music notes writing themselves", ru: "Ноты, которые пишутся сами" }
+  vision-notes: { en: "Music notes writing themselves", ru: "Ноты сами ложатся на бумагу" }
   vision-record: { en: "A record turning over", ru: "Переворачивается пластинка" }
   vision-bars: { en: "The bars of a cell", ru: "Решётка камеры" }
   vision-music-stand: { en: "A music stand lighting up", ru: "Загорается пюпитр" }
@@ -171,7 +191,7 @@ scenes:
   - id: warning
     kind: warning
     decay: 0
-    name: { en: "Before", ru: "Перед входом" }
+    name: { en: "Opening", ru: "Начало" }
     visions: [ eye ]
     art:
       generated: true
@@ -189,8 +209,8 @@ scenes:
       - id: who
         role: caption
         draft: false
-        en: Arthur Lee, author and voice of Love, on Forever Changes
-        ru: Артур Ли, автор и голос Love, — о пластинке Forever Changes
+        en: "Arthur Lee, Love’s songwriter and singer, on Forever Changes"
+        ru: "Артур Ли, автор песен и солист группы Love, — об альбоме Forever Changes"
     differ: false
 
   # ---------------------------------------------------------------- 1
@@ -235,76 +255,76 @@ scenes:
         role: lede
         draft: false
         en: "Arthur Lee was born in Memphis on 7 March 1945. His mother, Agnes, taught school; his father, Chester Taylor, played the trumpet. As a boy he came to Los Angeles, to West Adams, and grew up there under his stepfather’s name, Clinton Lee. Memphis, he remembered, was segregated, and the memory stayed: a band where Black and white musicians played together was his idea from the very start."
-        ru: "Артур Ли родился в Мемфисе 7 марта 1945 года. Его мать, Агнес, была учительницей, а отец, Честер Тейлор, трубачом. Ещё ребёнком он попал в Лос-Анджелес, в район Уэст-Адамс, и вырос там под фамилией отчима, Клинтона Ли. В Мемфисе, вспоминал он потом, была сегрегация, и эта память осталась с ним навсегда: группу, где чёрные и белые играют вместе, он задумал с самого начала."
+        ru: "Артур Ли родился в Мемфисе 7 марта 1945 года. Его мать, Агнес, была учительницей, а отец, Честер Тейлор, играл на трубе. Ещё ребёнком он попал в Лос-Анджелес, в район Уэст-Адамс, и вырос там под фамилией отчима, Клинтона Ли. В Мемфисе, вспоминал он потом, была сегрегация, и он этого не забыл: с первых шагов в музыке он хотел, чтобы в его группе чёрные и белые музыканты играли вместе."
       - id: dorsey
         role: text
         draft: false
         en: At Dorsey High he was a basketball player before he was a musician. He started making music with his childhood friend Johnny Echols, and by 1963 they had a band and a first single. A year later Lee wrote “My Diary” for the singer Rosa Lee Brooks, and a young Jimi Hendrix played the guitar on it.
-        ru: В школе Дорси он сначала был не музыкантом, а баскетболистом. Музыку он начал играть с другом детства Джонни Эколсом, и в 1963 году у них уже была своя группа и первый сингл. Через год Ли написал «My Diary» для певицы Розы Ли Брукс, и на гитаре там сыграл молодой Джими Хендрикс.
+        ru: "В старшей школе Дорси он сначала играл в баскетбол и только потом занялся музыкой. Начинал он вместе с другом детства Джонни Эколсом, и к 1963 году у них уже были своя группа и первый сингл. Через год Ли написал «My Diary» для певицы Розы Ли Брукс, и на гитаре в этой записи сыграл молодой Джими Хендрикс."
       - id: byrds
         role: text
         draft: false
         en: In 1965 Lee saw the Byrds at Ciro’s on the Sunset Strip, and everything fell into place. He left [[rhythm-and-blues|rhythm and blues]] for folk rock, brought in the guitarist Bryan MacLean, who had worked as a roadie for the Byrds, and called the band Love; the name Grass Roots had already been taken.
-        ru: В 1965 году Ли увидел The Byrds в клубе Ciro's на Сансет-Стрип, и всё в его голове встало на место. Он ушёл от [[rhythm-and-blues|ритм-н-блюза]] к фолк-року, позвал гитариста Брайана Маклина, который работал у The Byrds техником, и назвал группу Love. Название Grass Roots к тому времени уже забрали другие.
+        ru: "В 1965 году Ли увидел The Byrds в клубе Ciro's на Сансет-Стрип и понял, чего хочет. Он ушёл от [[rhythm-and-blues|ритм-н-блюза]] к фолк-року, позвал гитариста Брайана Маклина, который работал у The Byrds техником, и назвал группу Love. Название Grass Roots к тому времени было уже занято."
       - id: name-lee
         role: quote
         draft: false
         en: "The word came to him on the freeway: rather than hate the people who took your name, “maybe you should love them.”"
-        ru: "Слово пришло ему в голову на шоссе: вместо того чтобы ненавидеть тех, кто украл у тебя название, «может, их стоит любить»."
+        ru: "Слово «любовь» пришло Ли в голову на шоссе: вместо того чтобы ненавидеть тех, кто увёл у тебя название, «может, их стоит полюбить»."
         lens: lee
       - id: name-billboard
         role: quote
         draft: false
         en: Echols and MacLean remembered a billboard for Luv brassieres on Melrose.
-        ru: А Эколс с Маклином помнили рекламный щит бюстгальтеров Luv на Мелроуз.
+        ru: "Эколс и Маклин вспоминали другое: рекламный щит бюстгальтеров Luv на Мелроуз-авеню."
         lens: echols
       - id: holzman
         role: text
         draft: false
         en: At Bido Lito’s in Hollywood they were heard by Jac Holzman, whose label Elektra had until then put out folk records. Love became the first rock band he signed. The singles “My Little Red Book” and “7 and 7 Is” reached the charts, and the band moved into the Castle, a run-down mansion in Los Feliz where they lived together, played together and took a great many drugs.
-        ru: В клубе Bido Lito's в Голливуде их услышал Джек Хольцман, хозяин лейбла Elektra, который до тех пор выпускал фолк. Love стали первой рок-группой, которую он подписал. Песни выходили одна за другой, синглы «My Little Red Book» и «7 and 7 Is» попали в чарты, а сама группа поселилась в «Замке» — обветшалом особняке в Лос-Фелис, где жили вместе, играли и принимали много наркотиков.
+        ru: "В клубе Bido Lito's в Голливуде их услышал Джек Хольцман, владелец Elektra; до тех пор его лейбл выпускал фолк-пластинки. Love стали первой рок-группой, которую он подписал. Песни выходили одна за другой, синглы «My Little Red Book» и «7 and 7 Is» попали в чарты, а сама группа поселилась в «Замке» — обветшалом особняке в Лос-Фелисе, где музыканты жили вместе, вместе играли и принимали очень много наркотиков."
       - id: holzman-saw
         role: quote
         draft: false
-        en: “Thirty seconds into their version of ‘Hey Joe’, I knew this was the group I was looking for.” The club itself he remembered as “a scene from Dante’s Inferno”.
-        ru: "«Через тридцать секунд их „Hey Joe“ я понял: вот она, группа, которую я искал». Сам клуб он запомнил как «сцену из Дантова „Ада“»."
+        en: "“Thirty seconds into their version of ‘Hey Joe’, I knew this was the group I was looking for.” Bido Lito’s itself he remembered as “a scene from Dante’s Inferno”."
+        ru: "Хольцман вспоминал: «Они заиграли „Hey Joe“, и через тридцать секунд я понял: вот она, группа, которую я искал». А сам клуб Bido Lito's он запомнил как сцену из „Ада“ Данте."
         lens: holzman
       - id: tour
         role: text
         draft: false
-        en: Love hardly ever left Los Angeles, and each of three men explained why in his own way.
-        ru: Из Лос-Анджелеса Love почти не уезжали. Почему — каждый из троих объяснял по-своему.
+        en: "Love hardly ever left Los Angeles, and Echols, Holzman and Lee himself each explained why in his own way."
+        ru: "Из Лос-Анджелеса Love почти не уезжали. Почему — Эколс, Хольцман и сам Ли объясняли каждый по-своему."
       - id: tour-echols
         role: quote
         draft: false
         en: “We were a mixed-race group in the sixties … all of the South, most of Middle-America, and many parts of the Midwest as well were simply off-limits to us.”
-        ru: «Мы были смешанной группой в шестидесятые. Весь Юг, бо́льшая часть Средней Америки и многие места на Среднем Западе были для нас просто закрыты».
+        ru: "«В нашей группе играли и белые, и чёрные, а на дворе были шестидесятые. Весь Юг, бо́льшая часть Средней Америки и многие места на Среднем Западе были для нас просто закрыты»."
         lens: echols
       - id: tour-holzman
         role: quote
         draft: false
         en: “He was jealous of The Doors’ success … But he wouldn’t travel far from his perch in LA.”
-        ru: «Он ревновал к успеху The Doors. Но далеко от своего насеста в Лос-Анджелесе он не уезжал».
+        ru: "«Он завидовал успеху The Doors. Но от своего насиженного места в Лос-Анджелесе далеко не уезжал»."
         lens: holzman
       - id: tour-lee
         role: quote
         draft: false
         en: "Touring meant going out to “eat shit”, and he wasn’t having it: “I always thought that if something was good, it would get through anyway.”"
-        ru: "Гастроли означали «жрать дерьмо», а он на это не соглашался: «Я всегда думал: если вещь хорошая, она и так пробьётся»."
+        ru: "Для Ли гастроли значили «жрать дерьмо», и на это он не соглашался: «Я всегда думал: если вещь хорошая, она и так пробьётся»."
         lens: lee
       - id: dacapo
         role: text
         draft: false
         en: The second album, “Da Capo”, came out early in 1967, with one long piece, “Revelation”, filling its second side; it got no higher than number 80. San Francisco would call that summer the Summer of Love, and the band called Love was falling apart.
-        ru: Второй альбом, «Da Capo», вышел в начале 1967 года, и всю его вторую сторону занимала одна длинная вещь, «Revelation». Пластинка дошла лишь до восьмидесятого места. Лето 1967-го в Сан-Франциско назовут «летом любви», а группа под названием Love в это время разваливалась.
+        ru: "Второй альбом, «Da Capo», вышел в начале 1967 года, и всю его вторую сторону занимала одна длинная вещь, «Revelation». В чарте пластинка поднялась только до восьмидесятого места. Лето 1967-го в Сан-Франциско назовут «летом любви», а группа под названием Love в это время разваливалась."
 
   # ---------------------------------------------------------------- 2
   - id: hillside
     kind: hillside
     decay: 0.08
-    name: { en: "The hill above the city", ru: "Холм над городом" }
+    name: { en: "The house above the city", ru: "Дом над городом" }
     lenses:
-      - critics
+      - forssi
       - lee
       - echols
       - botnick
@@ -325,47 +345,41 @@ scenes:
       - id: title
         role: title
         draft: false
-        en: Looking down
-        ru: Смотреть вниз
+        en: "The house above the city"
+        ru: "Дом над городом"
       - id: lede
         role: lede
         draft: false
         en: "By 1967 Lee had left the Castle for a house high in the hills above the city. From there Los Angeles lay below him whole: the lights, the freeways and, at night, the flashing ambulances. He hardly went out. He sat, looked down and thought about dying."
-        ru: "К 1967 году Ли ушёл из «Замка» в дом высоко на холмах над городом. Оттуда Лос-Анджелес лежал под ним целиком: огни, шоссе и по ночам мигалки машин скорой помощи. Он почти не выходил. Сидел, смотрел вниз и думал о смерти."
+        ru: "К 1967 году Ли переехал из «Замка» в дом высоко на холмах над городом. Оттуда Лос-Анджелес был виден целиком: огни, автострады, а по ночам мигалки скорой помощи. Ли почти не выходил из дома: сидел, смотрел вниз и думал о смерти."
       - id: forssi
         role: quote
         draft: false
         en: “Then we’d look down over the city, Arthur staring and wondering about the ambulances and the sirens.”
-        ru: «Мы смотрели вниз на город, а Артур всё смотрел и думал о скорых, о сиренах».
-        lens: critics
-      - id: forssi-who
-        role: caption
-        draft: false
-        en: Ken Forssi, Love’s bass player
-        ru: Кен Форсси, басист Love
-        lens: critics
+        ru: "«Мы сидели и смотрели сверху на город, а Артур не сводил глаз со скорых и всё думал о них, о сиренах»."
+        lens: forssi
       - id: last-words
         role: text
         draft: false
         en: He was twenty-two and certain he would die soon, “about 26”, he said; he just had a feeling. He wrote the new songs as last words. Many years later he would call it, calmly, a stage that young people go through. At the time it was real.
-        ru: "Ему было двадцать два, и он был уверен, что скоро умрёт: «лет в двадцать шесть», говорил он, просто было такое чувство. Новые песни он писал как последние слова. Через много лет, уже спокойно, он назовёт это этапом, через который проходят молодые. А тогда это было всерьёз."
+        ru: "Ему было двадцать два, и он был уверен, что скоро умрёт, «лет в двадцать шесть». Почему, он и сам не знал: просто было такое предчувствие. Новые песни он писал как последние слова. Много лет спустя он спокойно скажет, что через это в молодости проходят многие. А тогда всё было всерьёз."
       - id: last-words-1991
         role: quote
         draft: false
         en: “The album Forever Changes was to be my last words to this life. And it’s like death is in there.”
-        ru: «Forever Changes должен был стать моими последними словами этой жизни. Смерть в нём есть».
+        ru: "«Forever Changes должен был стать моими последними словами, обращёнными к этой жизни. В нём как будто живёт смерть»."
         lens: lee
       - id: echols-dark
         role: quote
         draft: false
         en: “We were scared to death that they were going to need more bodies for the Vietnam war … There was a dark side.”
-        ru: «Мы до смерти боялись, что им понадобятся новые тела для войны во Вьетнаме. Была у того лета и тёмная сторона».
+        ru: "«Мы до смерти боялись, что для войны во Вьетнаме понадобится ещё пушечного мяса. У всего этого была и тёмная сторона»."
         lens: echols
       - id: botnick-stoned
         role: quote
         draft: false
-        en: "Bruce Botnick, the engineer who recorded all of Love’s albums, on the year before: “Arthur was stoned twenty-four hours a day.”"
-        ru: "Брюс Ботник, звукорежиссёр, записавший все альбомы Love, о годе перед этим: «Артур был под кайфом двадцать четыре часа в сутки»."
+        en: "Bruce Botnick, the engineer who recorded all of Love’s albums, on the days of the band’s first album: “Arthur was stoned twenty-four hours a day.”"
+        ru: "О временах первого альбома Love звукорежиссёр Брюс Ботник, записавший все пластинки группы, говорил: «Артур был под кайфом круглые сутки»."
         lens: botnick
     differ: true
 
@@ -373,7 +387,7 @@ scenes:
   - id: session-day
     kind: session
     decay: 0.15
-    name: { en: "The session players' day", ru: "День сессионных музыкантов" }
+    name: { en: "The session players' day", ru: "День студийных музыкантов" }
     lenses:
       - botnick
       - echols
@@ -396,18 +410,18 @@ scenes:
       - id: title
         role: title
         draft: false
-        en: Strangers in their chairs
-        ru: Чужие на их стульях
+        en: "Session players instead of the band"
+        ru: "Вместо группы — студийные музыканты"
       - id: lede
         role: lede
         draft: false
-        en: "Botnick was to produce the third album with Neil Young, but Young dropped out before it began. On the first day the members of Love walked into Sunset Sound and found strangers in their places: the best session players in Los Angeles, the crew that would later be called the Wrecking Crew. They were there to record Lee’s songs instead of his own band."
-        ru: "Третий альбом должен был продюсировать Ботник вместе с Нилом Янгом, но Янг отказался ещё до начала. В первый день записи музыканты Love вошли в студию Sunset Sound и увидели, что на их местах сидят чужие: лучшие студийные музыканты Лос-Анджелеса, команда, которую потом назовут Wrecking Crew. Им предстояло записать песни Ли вместо его собственной группы."
+        en: "The engineer Bruce Botnick was to produce the third album with Neil Young of Buffalo Springfield, but Young dropped out before it began. On the first day the members of Love walked into Sunset Sound and found strangers in their places: the best session players in Los Angeles, the crew that would later be called the Wrecking Crew. They were there to record Lee’s songs instead of his own band."
+        ru: "Третий альбом должен был продюсировать звукорежиссёр Брюс Ботник вместе с Нилом Янгом из Buffalo Springfield, но Янг отказался ещё до начала работы. В первый день записи музыканты Love вошли в студию Sunset Sound и увидели, что на их местах сидят чужие: лучшие студийные музыканты Лос-Анджелеса, команда, которую потом назовут Wrecking Crew. Им предстояло записать песни Ли вместо его собственной группы."
       - id: botnick-why
         role: quote
         draft: false
         en: “They couldn’t play, basically … I did a little shock value … I did it intentionally, to shock the band into getting serious.”
-        ru: «Они, по сути, не могли играть. Я устроил небольшой шок. Сделал это нарочно — чтобы встряхнуть группу и заставить её взяться за дело».
+        ru: "«Играть они, по сути, не могли. Я устроил небольшую встряску, и сделал это нарочно: хотел, чтобы группа наконец взялась за дело всерьёз»."
         lens: botnick
       - id: botnick-cry
         role: quote
@@ -419,7 +433,7 @@ scenes:
         role: quote
         draft: false
         en: The album was meant to be a double, and Elektra decided it cost too much. Bryan sulked and staged “a minor mutiny”, and “Jac Holzman decided to show us who was in charge.”
-        ru: Пластинку задумывали двойной, и Elektra решила, что это слишком дорого. Брайан обиделся и «устроил небольшой бунт», а «Джек Хольцман решил показать нам, кто здесь главный».
+        ru: "Альбом задумывали двойным, но Elektra решила, что это слишком дорого. Брайан обиделся и «устроил небольшой бунт», а «Джек Хольцман решил показать нам, кто здесь главный»."
         lens: echols
       - id: echols-ten
         role: quote
@@ -431,25 +445,25 @@ scenes:
         role: quote
         draft: false
         en: “I look up in the booth and I see Arthur huddling with Bruce Botnick and the Elektra rep”, and then came the idea “to go ahead and bring studio cats in”, to save everyone money.
-        ru: "«Поднимаю глаза на аппаратную и вижу: Артур шепчется с Брюсом Ботником и человеком из Elektra». Потом прозвучало: «а не позвать ли студийных ребят», — чтобы всем сэкономить деньги."
+        ru: "«Поднимаю глаза на аппаратную и вижу: Артур шепчется с Брюсом Ботником и человеком из Elektra». Потом прозвучала идея «позвать студийных ребят» — чтобы всем сэкономить деньги."
         lens: stuart-ware
       - id: stuart-chairs
         role: quote
         draft: false
-        en: “We all walk in and there are strangers in our chairs.” Jim Gordon was behind his drums. “It was an honor to have him replace me, but painful, nonetheless.”
-        ru: «Мы входим, а на наших стульях сидят чужие». За его барабанами сидел Джим Гордон. «Честь, что меня заменил он. Но всё равно больно».
+        en: "“We all walk in and there are strangers in our chairs.” Jim Gordon, one of the busiest session drummers in Los Angeles, was behind Stuart-Ware’s drums. “It was an honor to have him replace me, but painful, nonetheless.”"
+        ru: "«Мы входим, а на наших местах сидят чужие». За барабанами Стюарт-Уэра сидел Джим Гордон, один из самых востребованных студийных барабанщиков Лос-Анджелеса. «Честь, что меня заменил именно он. Но всё равно было больно»."
         lens: stuart-ware
       - id: holzman-why
         role: quote
         draft: false
         en: “The album was plagued by internal problems within the band and lack of preparation … It clearly wasn’t happening.”
-        ru: «Альбому мешали внутренние проблемы группы и неподготовленность. Явно ничего не получалось».
+        ru: "«Записи альбома мешали раздоры внутри группы и неподготовленность. Было ясно, что дело не идёт»."
         lens: holzman
       - id: back
         role: text
         draft: false
-        en: "The session players cut two songs, and the band asked for a second chance. Botnick remembers that he and Arthur exchanged a wink and gave it. Stuart-Ware remembers a call from the man at Elektra the next day: the professionals had come out “too plastic”. Echols remembers bonuses all round. Either way, ten days later Love were back in the studio, making the album themselves."
-        ru: Сессионные музыканты записали две песни, и группа попросила второй шанс. Ботник вспоминает, что они с Артуром переглянулись и дали его. Стюарт-Уэр — что на следующий день позвонил человек из Elektra и сказал, что у профессионалов вышло «слишком пластмассово». Эколс — что всем выдали премии. Так или иначе, через десять дней Love вернулись в студию и записали альбом сами.
+        en: "The session players cut two songs, and the band asked for a second chance. Botnick remembers that he and Arthur exchanged a wink and gave it. The drummer Michael Stuart-Ware remembers a call from the man at Elektra the next day: the professionals had come out “too plastic”. Echols remembers bonuses all round. Either way, ten days later Love were back in the studio, making the album themselves."
+        ru: "Студийные музыканты записали две песни, и группа попросила дать ей ещё один шанс. Ботник вспоминает, что они с Артуром переглянулись, подмигнули друг другу и согласились. Барабанщик Майкл Стюарт-Уэр — что на следующий день позвонил человек из Elektra и сказал, что у профессионалов вышло «слишком пластмассово». Эколс — что всем выдали премии. Так или иначе, через десять дней Love вернулись в студию и записали альбом сами."
 
   # ---------------------------------------------------------------- 4
   - id: diary
@@ -475,13 +489,13 @@ scenes:
       - id: title
         role: title
         draft: false
-        en: Seven weeks
-        ru: Семь недель
+        en: Seven weeks of recording
+        ru: Семь недель записи
       - id: lede
         role: lede
         draft: false
         en: Botnick kept a diary of the sessions, and where memory tells stories, the diary gives dates. The whole album was made in seven weeks in the summer of 1967.
-        ru: Ботник вёл дневник сессий, и где память рассказывает легенды, дневник даёт даты. Весь альбом сделали за семь недель лета 1967 года.
+        ru: "Ботник вёл дневник записи, и там, где воспоминания расходятся, дневник даёт точные даты. Весь альбом записали за семь недель летом 1967 года."
       - id: d-0801
         role: line
         draft: false
@@ -496,12 +510,12 @@ scenes:
         role: line
         draft: false
         en: 20 August – 9 September · Sunset Sound · vocals
-        ru: 20 августа – 9 сентября · Sunset Sound · голоса
+        ru: "20 августа – 9 сентября · Sunset Sound · запись вокала"
       - id: d-0914
         role: line
         draft: false
-        en: 14 September · at Leon Russell’s house · guitar overdubs
-        ru: 14 сентября · дома у Леона Расселла · гитары
+        en: 14 September · at the house of the musician Leon Russell · guitar overdubs
+        ru: "14 сентября · дома у музыканта Леона Расселла · гитарные наложения"
       - id: d-0918
         role: line
         draft: false
@@ -547,18 +561,18 @@ scenes:
       - id: title
         role: title
         draft: false
-        en: A voice turned into notes
-        ru: Голос, ставший нотами
+        en: "How Lee’s humming became an orchestra"
+        ru: "Как напев Ли стал оркестром"
       - id: lede
         role: lede
         draft: false
         en: Lee heard the strings and the brass in his head. Botnick called his mother, Priscilla Nemoy, a copyist who had prepared parts for Frank Sinatra, and she suggested the arranger David Angel. Lee sat beside Angel and sang him the counter-melodies, and Angel turned what he sang into a score for a small orchestra.
-        ru: Струнные и медь Ли слышал в голове. Ботник позвонил своей матери, Присцилле Немой, которая переписывала ноты для Фрэнка Синатры, и она посоветовала аранжировщика Дэвида Энджела. Ли садился рядом и напевал Энджелу контрмелодии, а тот превращал напетое в партитуру для небольшого оркестра.
+        ru: "Партии струнных и духовых Ли слышал в голове. Ботник позвонил своей матери, Присцилле Немой, которая переписывала ноты для Фрэнка Синатры, и она посоветовала аранжировщика Дэвида Энджела. Ли садился рядом с Энджелом и напевал ему контрмелодии, а тот превращал напетое в партитуру для небольшого оркестра."
       - id: botnick-sang
         role: quote
         draft: false
         en: “Arthur would sing a counter-melody for the strings and brass and then David would turn that into arrangements.”
-        ru: «Артур напевал контрмелодию для струнных и меди, а Дэвид превращал её в аранжировку».
+        ru: "«Артур напевал контрмелодию для струнных и духовых, а Дэвид превращал её в аранжировку»."
         lens: botnick
       - id: lee-told
         role: quote
@@ -570,13 +584,13 @@ scenes:
         role: quote
         draft: false
         en: “He was a magnificent arranger and came up with the Mariachi horns.”
-        ru: «Он был великолепным аранжировщиком. Мариачи-духовые придумал он».
+        ru: "«Он был великолепным аранжировщиком. Духовые в духе мариачи придумал он»."
         lens: echols
       - id: sound
         role: text
         draft: false
         en: "So a rock band got a sound that rock bands did not have then: acoustic guitars, strings, mariachi trumpets, everything soft and clear, and through all that beauty come words about death and war. Holzman, who had built Elektra on folk records, had suggested the direction before the sessions: “What would happen if you advanced backwards?”"
-        ru: "Так рок-группа получила звук, которого у рок-групп тогда не было: акустические гитары, струнные, мариачи-трубы, всё мягко и прозрачно — а сквозь эту красоту проступают слова о смерти и войне. Хольцман, сделавший Elektra на фолк-пластинках, ещё до сессий предлагал Ли этот путь: «А что, если двинуться вперёд назад?»"
+        ru: "Так у рок-группы появился звук, какого у рок-групп тогда не было: акустические гитары, струнные, трубы в духе мариачи. Всё звучит мягко и прозрачно, а сквозь эту красоту проступают слова о смерти и войне. Хольцман, поднявший Elektra на фолк-пластинках, ещё до начала записи подсказал Ли это направление: «А что, если идти вперёд, пятясь назад?»"
 
   # ---------------------------------------------------------------- side A
   - id: alone-again-or
@@ -609,36 +623,36 @@ scenes:
       - id: lede
         role: lede
         draft: false
-        en: "The record opens not with Lee but with Bryan MacLean: his song, his voice, straight and without vibrato. A Spanish guitar comes in, then strings and a trumpet out of a Mexican band. The man in the song could love the whole world, waits and waits, and every time ends up alone. “Alone again, or…” The title breaks off like the hope does."
-        ru: Пластинку открывает не Ли, а Брайан Маклин. Это его песня и его голос — ровный, совсем без вибрато. Вступает испанская гитара, следом струнные и труба, как в мексиканском оркестре. Человек в песне готов любить весь мир, ждёт и ждёт — и каждый раз остаётся один. «Опять один, или…» — название обрывается на полуслове, как сама надежда.
+        en: "The record opens not with Lee but with Bryan MacLean, Love’s rhythm guitarist, who wrote the song and sings it, straight and without vibrato. A Spanish guitar comes in, then strings and a trumpet out of a Mexican band. The man in the song could love the whole world, waits and waits, and every time ends up alone. The title, “Alone again, or…”, breaks off on “or”: the other outcome is never named."
+        ru: "Первую песню на пластинке написал и спел не Ли, а ритм-гитарист Love Брайан Маклин. Поёт он ровно, совсем без вибрато. Вступает испанская гитара, за ней струнные и труба, как в мексиканском оркестре. Человек в песне готов любить весь мир, ждёт и ждёт — и каждый раз остаётся один. Название, «Опять один, или…», обрывается на слове «или»: другой исход в нём так и не назван."
       - id: spanish
         role: text
         draft: false
-        en: "The Spanish turn came from Echols’s guitar. He was warming up with flamenco runs, and Angel suggested putting them into Bryan’s song. The trumpet came from the radio: Tijuana Brass was everywhere on the air then, and Botnick decided to take from it something Spanish rather than Mexican."
-        ru: "Испанский поворот песне дала гитара Эколса. Он разминал пальцы фламенковскими пассажами, и Энджел предложил вписать их в песню Брайана. Трубу подсказало радио: в эфире тогда повсюду звучал Tijuana Brass, и Ботник решил взять у него не мексиканское, а испанское."
+        en: "The Spanish sound came from Echols’s guitar. He was warming up with flamenco runs, and Angel suggested putting them into Bryan’s song. The trumpet came from the radio: Herb Alpert’s Tijuana Brass were everywhere on the air then, and Botnick decided to borrow their trumpet sound but make it more Spanish than Mexican."
+        ru: "Испанское звучание песне дала гитара Эколса. Разминая пальцы, он наигрывал пассажи в духе фламенко, и Энджел предложил вписать их в песню Брайана. Мысль о трубе подсказало радио: в эфире тогда без конца звучали Herb Alpert & the Tijuana Brass, и Ботник решил взять у них звучание трубы, но сделать его скорее испанским, чем мексиканским."
       - id: echols-banjo
         role: quote
         draft: false
         en: At first it was a banjo song. “Why don’t you play those runs in Bryan’s song?” Angel asked.
-        ru: Поначалу это была песня под банджо. «А почему бы тебе не сыграть эти пассажи в песне Брайана?» — спросил Энджел.
+        ru: "Поначалу Маклин пел эту песню под банджо. «А почему бы тебе не сыграть эти пассажи в песне Брайана?» — спросил Энджел Эколса."
         lens: echols
       - id: botnick-spanish
         role: quote
         draft: false
         en: “Tijuana Brass was big on the radio … more Spanish than Mexican.”
-        ru: «В эфире царили Tijuana Brass. Можно было взять их вкус, не копируя, — испанское, а не мексиканское».
+        ru: "«Тогда по радио всюду звучали Tijuana Brass, и я подумал, что можно взять что-то от их звучания, не копируя впрямую: сделать его скорее испанским, чем мексиканским»."
         lens: botnick
       - id: stuart-title
         role: quote
         draft: false
         en: Asked what the song was called, Bryan said, “Well, ‘Alone Again’… or…”, and Arthur said that would be the title.
-        ru: "Брайана спросили, как песня называется. «Ну, наверное, „Alone Again“… или…» И Артур сказал: так и назовём."
+        ru: "Брайана спросили, как называется песня. «Ну, наверное, „Alone Again“… или…» И Артур сказал: так и назовём."
         lens: stuart-ware
       - id: afterlife
         role: text
         draft: false
-        en: It is the best-known song on the album. UFO, the Damned and Calexico covered it, and Wes Anderson put it in his first film, “Bottle Rocket”.
-        ru: Эта песня — самая известная на альбоме. Её перепевали UFO, The Damned, Calexico, а Уэс Андерсон поставил её в свой первый фильм, «Бутылочная ракета».
+        en: It is the best-known song on the album. UFO, the Damned and Calexico covered it, and the director Wes Anderson put it in his first film, “Bottle Rocket”.
+        ru: "Это самая известная песня альбома. Её перепевали UFO, The Damned и Calexico, а режиссёр Уэс Андерсон поставил её в свой первый фильм, «Бутылочная ракета»."
     differ: true
 
   - id: a-house-is-not-a-motel
@@ -671,17 +685,17 @@ scenes:
         role: lede
         draft: false
         en: "Straight after the love song comes the war. One night in a San Francisco club a soldier back from Vietnam sat down with Lee and Echols and told them what it was like. One thing he said stayed in Lee’s head: blood mixed with mud turns grey."
-        ru: "Сразу после песни о любви приходит война. Однажды в клубе в Сан-Франциско к Ли и Эколсу подсел солдат, вернувшийся из Вьетнама, и рассказал, какая она там. Одна его фраза осталась у Ли в голове: кровь, смешанная с грязью, становится серой."
+        ru: "Сразу после песни о любви приходит война. Однажды в клубе в Сан-Франциско к Ли и Эколсу подсел солдат, вернувшийся из Вьетнама, и рассказал, что там творится. Одна его фраза осталась у Ли в голове: кровь, смешанная с грязью, становится серой."
       - id: song
         role: text
         draft: false
         en: "That line grew into a song that is less a story than a run of visions: blood and mud, schools that teach war, the news going on while the city goes about its day. It opens on a quiet acoustic guitar and builds into the hardest [[rock-n-roll|rock]] on the record; at the end Echols’s two guitars lock horns, and everything stops dead."
-        ru: "Из этой фразы выросла песня — не рассказ, а череда видений: кровь и грязь, школы, где учат воевать, новости, которые идут своим чередом, пока город живёт обычной жизнью. Она начинается тихой акустикой и разгоняется до самого жёсткого [[rock-n-roll|рока]] на пластинке. В конце две гитары Эколса сцепляются друг с другом — и всё обрывается."
+        ru: "Из этой фразы выросла песня без связного сюжета: картины сменяют одна другую — кровь и грязь, школы, где учат воевать, новости, которые идут своим чередом, пока город живёт обычной жизнью. Начинается она с тихой акустической гитары, а к концу становится самой жёсткой [[rock-n-roll|рок-песней]] альбома: две соло-гитары Эколса спорят друг с другом, и музыка резко обрывается."
       - id: echols-soldier
         role: quote
         draft: false
         en: “This soldier … sat down with us … Things like how mixed blood turns grey. He said that, and it became the basis for ‘A House Is Not A Motel’.”
-        ru: «Он подсел к нам и стал рассказывать. Вроде того, что смешанная кровь становится серой. Это и легло в основу „A House Is Not a Motel“».
+        ru: "«Этот солдат подсел к нам и стал рассказывать. Говорил что-то вроде: кровь, смешавшись с грязью, становится серой. Так он и сказал, и это легло в основу „A House Is Not a Motel“»."
         lens: echols
     differ: false
 
@@ -717,19 +731,29 @@ scenes:
       - id: lede
         role: lede
         draft: false
-        en: "The gentlest song on the album: slow, with the strings wrapped around the voice. A man promises tenderness, and the words of the title have run together into one, like a promise said over and over: and more, again."
-        ru: "Самая нежная песня альбома: медленная, струнные будто обнимают голос. Человек обещает нежность, и слова в названии слиплись в одно, как обещание, которое повторяют без конца: «и ещё раз, и снова»."
+        en: "The gentlest song on the album: slow, with the strings wrapped around the voice. A man promises tenderness, and the three words of the title are written as one, like a promise said over and over: and more, again."
+        ru: "Самая нежная песня альбома: медленная, и струнные будто обнимают голос. Человек обещает нежность, и три слова названия написаны слитно, как обещание, которое повторяют без конца: «и ещё раз, и снова»."
+      - id: session
+        role: text
+        draft: false
+        en: "It is one of the two songs cut on the first day, 1 August, when the Wrecking Crew played in the band’s place. Botnick, the Los Angeles Times and the notes to the reissue say that take is the one on the record; Stuart-Ware remembers that the band later recorded it again themselves. Echols adds that the tape was sped up a little to lift Lee’s voice."
+        ru: "Это одна из двух песен, записанных в первый день, 1 августа, когда вместо группы в студии играли музыканты Wrecking Crew. Ботник, газета Los Angeles Times и примечания к переизданию утверждают, что на пластинке осталась именно та запись; Стюарт-Уэр помнит, что потом группа перезаписала песню сама. Эколс добавляет, что плёнку слегка ускорили, чтобы голос Ли зазвучал выше."
+      - id: words
+        role: text
+        draft: false
+        en: "The words are simple: the man promises love again and more again and keeps telling her she does not know how much he loves her. Lee sings softly, at the slow pace of a ballad, with the strings close around him. Reviewing the album for Rolling Stone in 1968, Jim Bickhart counted “Andmoreagain” among its good songs."
+        ru: "Слова простые: герой обещает любить ещё и ещё и всё повторяет, что она даже не знает, как сильно он её любит. Ли поёт негромко, в неспешном темпе баллады, и струнные звучат совсем рядом с голосом. В рецензии на альбом в Rolling Stone в 1968 году Джим Бикхарт назвал «Andmoreagain» среди удачных песен пластинки."
       - id: origin
         role: quote
         draft: false
-        en: "He wrote it out of a bummer: he was upstairs with a girl he liked, and then it turned out Bryan was downstairs with her."
-        ru: Написал он её из обиды. Он был наверху с девушкой, которая ему нравилась, — а потом оказалось, что внизу с ней Брайан.
+        en: "In 1975 Lee said he wrote it out of a bummer: he was upstairs with a girl he liked, and the next thing he knew she was downstairs in bed with Bryan MacLean."
+        ru: "В 1975 году Ли рассказывал, что написал эту песню с досады: он сидел наверху с девушкой, которая ему нравилась, а не успел оглянуться, как она уже была внизу, в постели у Брайана Маклина."
         lens: lee
       - id: stuart-redone
         role: quote
         draft: false
-        en: "“‘Andmoreagain’ was redone by us.” And a fill he overplayed: “It was a mistake I was hoping I would have the opportunity to correct during the next take, but the next take never came.”"
-        ru: "«„Andmoreagain“ выбросили, и мы переписали её сами». И ещё: одну сбивку он переиграл — «надеялся исправить в следующем дубле, но следующего дубля не было»."
+        en: "“‘Andmoreagain’ was redone by us.” And Stuart-Ware overplayed a fill: “It was a mistake I was hoping I would have the opportunity to correct during the next take, but the next take never came.”"
+        ru: "«„Andmoreagain“ мы потом перезаписали сами». А в одной сбивке Стюарт-Уэр перестарался: «Я надеялся исправить ошибку в следующем дубле, но следующего дубля так и не было»."
         lens: stuart-ware
       - id: botnick-two
         role: quote
@@ -769,13 +793,13 @@ scenes:
       - id: lede
         role: lede
         draft: false
-        en: "The Daily Planet is the newspaper Superman works for. In Lee’s song it is an ordinary man’s day: getting up, the news, work, the same again tomorrow, and a man who has long stopped believing in any of it. It is the one recording from that first day that stayed on the record: the session players laid down the track, and the band added its own parts on top."
-        ru: "«Daily Planet» — газета, в которой служит Супермен. У Ли это день обычного человека: подъём, новости, работа, завтра всё то же самое — и человек, который давно перестал в это верить. Это единственная запись того первого дня, которая осталась на пластинке: студийные музыканты сыграли основу, группа наложила поверх своё."
+        en: "The title comes from the Superman comics: the Daily Planet is the newspaper where Superman’s other self, the reporter Clark Kent, works. Lee’s song is an ordinary man’s day: getting up, the news, work, the same again tomorrow, and a man who has long stopped believing in any of it. Of everything the session players recorded on that first day, this song certainly made the album; on that all the witnesses agree. The Wrecking Crew played the backing track, then Lee sang over it and the band added its own parts; Stuart-Ware, for one, says he added drum fills."
+        ru: "Название песни взято из комиксов о Супермене: «Daily Planet» — газета, в которой работает его второе «я», журналист Кларк Кент. А поёт Ли о дне обычного человека: подъём, новости, работа, назавтра всё то же самое, и человек, который давно перестал во всё это верить. Из всего, что студийные музыканты записали в первый день, на альбом точно попала эта песня: в этом сходятся все участники. Инструментальную основу сыграли музыканты Wrecking Crew, потом Ли спел поверх неё свою партию, а группа дописала свои; Стюарт-Уэр, например, говорит, что добавил барабанные сбивки."
       - id: echols-blaine
         role: quote
         draft: false
-        en: “I can state unequivocally and with absolute certainty that Hal Blaine played drums on ‘The Daily Planet’.”
-        ru: "«Могу сказать с абсолютной уверенностью: на барабанах там играл Хэл Блейн»."
+        en: "Echols is sure the drummer was the Wrecking Crew’s Hal Blaine: “I can state unequivocally and with absolute certainty that Hal Blaine played drums on ‘The Daily Planet’.”"
+        ru: "Эколс уверен, что на барабанах играл Хэл Блейн из Wrecking Crew: «Могу сказать с абсолютной уверенностью: на барабанах в „The Daily Planet“ играл Хэл Блейн»."
         lens: echols
       - id: stuart-gordon
         role: quote
@@ -814,7 +838,7 @@ scenes:
         role: lede
         draft: false
         en: MacLean’s second and last song on the album is a breath after the war and the newspaper noise. An old man passes on to a young one what life has taught him. A few years later MacLean would leave music and turn to faith, and the song can be heard as the first step down that road. Under his voice the strings play a melody of their own, as if coming to meet the words.
-        ru: Вторая и последняя песня Маклина на альбоме — передышка после войны и газетного шума. Старик передаёт молодому то, что понял за жизнь. Через несколько лет Маклин уйдёт из музыки и обратится к вере, и эту песню можно услышать как первый шаг по той дороге. Под его голосом звучат струнные со своей мелодией, которая будто идёт навстречу словам.
+        ru: "Вторая и последняя песня Маклина на альбоме — передышка после войны и газетного шума. Старик передаёт молодому то, что понял за жизнь. Через несколько лет Маклин уйдёт из музыки и обратится к вере, и эту песню можно услышать как первый шаг на этом пути. Под голосом Маклина струнные ведут собственную мелодию, и она словно идёт навстречу словам."
       - id: botnick-bryan
         role: quote
         draft: false
@@ -830,8 +854,8 @@ scenes:
       - id: plant
         role: text
         draft: false
-        en: Robert Plant calls it his favourite song on the album.
-        ru: Роберт Плант называет её своей любимой песней на альбоме.
+        en: Robert Plant, the singer of Led Zeppelin, calls it his favourite song on the album.
+        ru: Роберт Плант, певец Led Zeppelin, называет её своей любимой песней на альбоме.
     differ: true
 
   - id: the-red-telephone
@@ -865,12 +889,12 @@ scenes:
         role: lede
         draft: false
         en: "Here the album reaches the bottom. Lee is back on his hill, watching calmly, almost coldly, as people die below. The voice stays level while the words grow darker: skin colour, people being locked up today, who will be next. A harpsichord rings, the strings hold, and at the end the band’s voices fall into a spoken chant, like a fever, a prayer, a news bulletin."
-        ru: "Здесь альбом спускается на самое дно. Ли снова сидит на своём холме и спокойно, почти равнодушно смотрит, как внизу умирают люди. Голос ровный, а слова всё страшнее: про цвет кожи, про тех, кого сегодня запирают, про то, кто будет следующим. Звенит клавесин, тянут струнные, в конце голоса группы начинают монотонно проговаривать слова — как бред, как молитва, как сводка."
+        ru: "Здесь альбом спускается на самое дно. Ли снова сидит на своём холме и спокойно, почти равнодушно смотрит, как внизу умирают люди. Голос ровный, а слова всё страшнее: про цвет кожи, про тех, кого сегодня запирают, про то, кто будет следующим. Звенит клавесин, тянут струнные, а в конце музыканты хором монотонно проговаривают слова, похожие то на бред, то на молитву, то на сводку новостей."
       - id: marat
         role: quote
         draft: false
-        en: The closing lines came from a film. He and Arthur went to an art-house cinema to see “Marat/Sade”, and a line about everyone being normal and wanting freedom lodged in Lee’s head.
-        ru: Последние строки пришли из кино. Они с Артуром пошли в артхаусный кинотеатр на «Марат/Сад», и фраза о том, что все нормальные и хотят свободы, засела у Ли в голове.
+        en: "The closing lines came from a film. Echols and Arthur went to an art-house cinema to see “Marat/Sade”, and a line about everyone being normal and wanting freedom lodged in Lee’s head."
+        ru: "Последние строки пришли из кино. Эколс и Артур пошли в артхаусный кинотеатр на «Марат/Сад», и фраза о том, что все нормальные и хотят свободы, засела у Ли в голове."
         lens: echols
       - id: lee-see
         role: quote
@@ -889,7 +913,7 @@ scenes:
   - id: flip
     kind: flip
     decay: 0.55
-    name: { en: "Turn the record over", ru: "Перевернуть пластинку" }
+    name: { en: "Side two", ru: "Вторая сторона" }
     visions: [ record ]
     art:
       generated: true
@@ -906,13 +930,13 @@ scenes:
       - id: line
         role: line
         draft: false
-        en: Side one ends on the hill above the dying city. Turn the record over.
-        ru: Первая сторона кончается на холме, под которым умирают люди. Пластинку нужно перевернуть.
+        en: Side one of the record ends here, on the hill above the dying city.
+        ru: "На этом первая сторона пластинки кончается: Ли остаётся на холме, у подножия которого умирают люди."
       - id: method
         role: text
         draft: false
-        en: "The second side comes down from the hill into the city: the Sunset Strip, a café, the ice-cream man on the corner. Songs about what Lee saw around him. “I don’t write ‘I need you, baby’,” he said."
-        ru: Вторая сторона спускается с холма обратно в город — на Сансет-Стрип, в кафе, к мороженщику на углу. Песни о том, что Ли видел вокруг. «Я не пишу „ты мне нужна, бэби“», — говорил он.
+        en: "Side two begins with a descent from the hill back into the city: the Sunset Strip, a café, the ice-cream man on the corner. These are songs about what Lee saw around him. “I don’t write ‘I need you, baby’,” he said."
+        ru: "Вторая сторона пластинки начинается с того, что песни спускаются с холма обратно в город — на Сансет-Стрип, в кафе, к мороженщику на углу. Это песни о том, что Ли видел вокруг. «Я не пишу „ты мне нужна, бэби“», — говорил он."
     differ: false
 
   # ---------------------------------------------------------------- side B
@@ -947,24 +971,24 @@ scenes:
         role: lede
         draft: false
         en: "The longest title on the record is an address: the block of the Sunset Strip between Clark Street, home of the Whisky a Go Go, and Hilldale, where a cheap diner called The Eating Affair had Love on its jukebox. Lee paints the street from life, the people on the pavement, the clubs, the crowd, and says goodbye to them as if he knows he won’t be back."
-        ru: "Самое длинное название на пластинке — это адрес. Квартал Сансет-Стрип между Кларк-стрит, где клуб Whisky a Go Go, и Хиллдейл, где в дешёвой забегаловке The Eating Affair в музыкальном автомате стояла пластинка Love. Ли рисует эту улицу с натуры: людей на тротуаре, ночные клубы, публику — и прощается с ними, словно знает, что больше сюда не вернётся."
+        ru: "Самое длинное название на пластинке — это адрес. Квартал Сансет-Стрип между Кларк-стрит, где стоит клуб Whisky a Go Go, и Хиллдейл, где в музыкальном автомате дешёвой забегаловки The Eating Affair стояла пластинка Love. Ли рисует эту улицу с натуры: людей на тротуаре, ночные клубы, публику — и прощается с ними, словно знает, что больше сюда не вернётся."
       - id: stuart-tempo
         role: quote
         draft: false
-        en: "Arthur told him to push the tempo because Bryan was dragging on the fast songs, “and on ‘Between Clark and Hilldale’ even more.” Now: “It sounds horrible. To me, anyway.”"
-        ru: "Артур велел гнать темп: Брайан, мол, тянет все быстрые песни. «А на этой — гнать ещё сильнее». И теперь: «Звучит ужасно. По крайней мере, для меня»."
+        en: "Stuart-Ware remembers Arthur asking him to push the tempo because Bryan was dragging on all the up-tempo songs. On ‘Between Clark and Hilldale’ it is very noticeable, and today he says of the recording: “It sounds horrible. To me, anyway.”"
+        ru: "Стюарт-Уэр вспоминает, что Артур просил его играть быстрее: Брайан, по словам Ли, затягивал все быстрые песни. В „Between Clark and Hilldale“ это особенно слышно, и сегодня Стюарт-Уэр говорит об этой записи: «Звучит ужасно. По крайней мере, на мой слух»."
         lens: stuart-ware
       - id: stuart-listen
         role: quote
         draft: false
-        en: Can he listen to the album now? “Still ‘no’, and probably always will be.”
-        ru: Может ли он слушать этот альбом сейчас? «До сих пор нет. И, наверное, никогда».
+        en: "Can Stuart-Ware listen to the album now? “Still ‘no’, and probably always will be.”"
+        ru: "Может ли Стюарт-Уэр теперь слушать этот альбом? «По-прежнему нет. И, наверное, никогда не смогу»."
         lens: stuart-ware
       - id: echols-cafe
         role: quote
         draft: false
         en: Arthur called the place not The Eating Affair but The Slop Affair.
-        ru: Кафе Артур называл не The Eating Affair, а The Slop Affair — «Помойка».
+        ru: "Артур называл это кафе не The Eating Affair, а The Slop Affair, то есть примерно «Помои»."
         lens: echols
     differ: true
 
@@ -999,18 +1023,18 @@ scenes:
         role: lede
         draft: false
         en: "The song opens with an image fans and mockers still quote: snot dried on his trousers has turned to crystal. That was Lee’s humour, and from that joke comes a grim picture of a world where everyone fears everyone, splits into us and them and is ready to shoot. MacLean’s acoustic guitar and Echols’s electric lock together and won’t let go."
-        ru: "Песня начинается с образа, который до сих пор цитируют и поклонники, и насмешники: засохшая на штанах сопля превратилась в кристалл. Ли так шутил — и с этой шутки начинается мрачная картина мира, где все боятся всех, делятся на своих и чужих и готовы стрелять. Акустическая гитара Маклина и электрическая Эколса сцепляются и долго не отпускают друг друга."
+        ru: "Песня начинается с образа, который до сих пор цитируют и поклонники, и насмешники: засохшая на штанах сопля превратилась в кристалл. Таков был юмор Ли, и с этой шутки начинается мрачная картина мира, где все боятся всех, делятся на своих и чужих и готовы стрелять. Акустическая гитара Маклина и электрическая Эколса сцепляются и долго не отпускают друг друга."
       - id: echols-dystopia
         role: quote
         draft: false
         en: “It paints a picture of a dystopia, ruled by violence, mistrust and tribalism.”
-        ru: «Это картина антиутопии, где правят насилие, недоверие и деление на своих и чужих».
+        ru: «Песня рисует мир, которым правят насилие, недоверие и вражда своих с чужими».
         lens: echols
       - id: bell
         role: quote
         draft: false
-        en: "Andy Bell of Ride loves the album but couldn’t forgive that: “The greatest album in the world wouldn’t mention snot.”"
-        ru: "Энди Белл из Ride любит альбом, но этого простить не смог: «Величайший альбом в истории не стал бы петь про сопли»."
+        en: "Andy Bell, the guitarist of Ride, loves the album but couldn’t forgive that: “The greatest album in the world wouldn’t mention snot.”"
+        ru: "Энди Белл, гитарист группы Ride, любит этот альбом, но одну строчку простить не смог: «Величайший альбом в истории не стал бы петь про сопли»."
         lens: critics
     differ: true
 
@@ -1043,13 +1067,13 @@ scenes:
       - id: lede
         role: lede
         draft: false
-        en: After the dystopia, childhood. Good Humor is the ice-cream van that drives through American streets in summer, and its driver sees everyone and everything. The strings are plucked, the orchestra is light as an old film, and Lee sings like a jazz singer. For three minutes the page remembers that the world can be kind.
-        ru: После антиутопии — детство. Good Humor — это фургончик с мороженым, который летом объезжает американские кварталы, а его продавец видит всех и всё. Струнные пощипывают, оркестр звучит легко, как в старом кино, и Ли поёт, как джазовый певец. На три минуты страница вспоминает, что мир бывает добрым.
+        en: "After the grim “Live and Let Live”, childhood. Good Humor is the ice-cream van that drives through American streets in summer, and its driver sees everyone and everything. The strings are plucked, the orchestra is light as an old film, and Lee sings like a jazz singer. For three minutes the album remembers that the world can be kind."
+        ru: "После мрачной «Live and Let Live» — детство. Good Humor — это фургончик с мороженым, который летом объезжает американские кварталы, а его продавец видит всех и всё. Струнные играют пиццикато, оркестр звучит легко, как в старом кино, и Ли поёт, как джазовый певец. На три минуты альбом напоминает, что мир бывает добрым."
       - id: echols-moody
         role: quote
         draft: false
         en: "Its root is [[jazz|jazz]] vocalese: “This song is a beautifully written homage to James Moody and King Pleasure.”"
-        ru: "Корень песни — [[jazz|джазовый]] вокализ: «Это посвящение Джеймсу Муди и Кингу Плежеру»."
+        ru: "Песня выросла из [[jazz|джазового]] вокализа: «Это прекрасно написанное посвящение Джеймсу Муди и Кингу Плежеру» — двум джазовым музыкантам, которые прославились именно вокализами."
         lens: echols
       - id: stuart-suit
         role: quote
@@ -1089,13 +1113,13 @@ scenes:
       - id: lede
         role: lede
         draft: false
-        en: "The shortest and strangest song on the album. It starts as bright country, falls into a Bo Diddley beat out of fifties [[rhythm-and-blues|rhythm and blues]], and Lee fires the words off in bursts, like Dylan. He wants her to stay, she wants to be free, and he lets her go: he has no claim on her."
-        ru: "Самая короткая и самая странная песня альбома. Начинается как бодрое кантри, проваливается в ритм Бо Диддли из [[rhythm-and-blues|ритм-н-блюза]] пятидесятых, и Ли выпаливает слова очередями, как Дилан. Он хочет верности, она хочет свободы, и он её отпускает: никаких прав на неё у него нет."
+        en: "The shortest and strangest song on the album. It starts as bright country, falls into a beat of the rock and roll pioneer Bo Diddley out of fifties [[rhythm-and-blues|rhythm and blues]], and Lee fires the words off in bursts, like Bob Dylan. He wants her to stay, she wants to be free, and he lets her go: he has no claim on her."
+        ru: "Самая короткая и самая странная песня альбома. Она начинается как бодрое кантри, потом срывается в ритм рок-н-ролльщика Бо Диддли из [[rhythm-and-blues|ритм-н-блюза]] пятидесятых, и Ли выпаливает слова очередями, как Боб Дилан. Он хочет, чтобы она осталась, она хочет свободы, и он её отпускает: никаких прав на неё у него нет."
       - id: echols-temptation
         role: quote
         draft: false
         en: “It’s about a relationship strained by temptation.”
-        ru: «Это об отношениях, которые соблазн довёл до предела».
+        ru: "«Это песня об отношениях, которые трещат по швам из-за соблазна»."
         lens: echols
 
   - id: you-set-the-scene
@@ -1129,25 +1153,25 @@ scenes:
       - id: lede
         role: lede
         draft: false
-        en: "The last song, and the last words he thought would be his last. It was never written as one song: the bass player Ken Forssi, on his own initiative, stitched it together from three of Lee’s unfinished songs. It holds life and death, war, and the need to change. To those who think life is a game, Lee puts a question: do you like the part you are playing? The music grows from a quiet guitar into a major-key orchestra, brass racing against strings, and everything that came apart over the album comes back together."
-        ru: "Последняя песня — и последние слова, которые он считал последними. Её не писали как одну песню: басист Кен Форсси сам, по собственному почину, сшил её из трёх незаконченных песен Ли. В ней жизнь и смерть, война и то, что меняться необходимо. Тем, кто считает жизнь игрой, Ли задаёт вопрос: а нравится ли вам роль, которую вы играете? Музыка вырастает из тихой гитары в мажорный оркестр, медь несётся навстречу струнным, и всё, что весь альбом распадалось, собирается обратно."
+        en: "The last song is the one Lee thought would be his last words. It was never written as one song: the bass player Ken Forssi, on his own initiative, stitched it together from three of Lee’s unfinished songs. It holds life and death, war, and the need to change. To those who think life is a game, Lee puts a question: do you like the part you are playing? The music grows from a quiet guitar into a major-key orchestra, brass racing against strings, and everything that came apart over the album comes back together."
+        ru: "Последняя песня альбома — та, которую Ли считал своими последними словами. Её не писали как одну песню: басист Кен Форсси по собственному почину сшил её из трёх незаконченных песен Ли. В ней говорится о жизни и смерти, о войне и о том, что человеку необходимо меняться. Тем, кто считает жизнь игрой, Ли задаёт вопрос: а нравится ли вам роль, которую вы играете? Музыка вырастает из тихой гитары в полнозвучный мажорный оркестр, духовые несутся навстречу струнным, и всё, что распадалось на протяжении альбома, снова собирается воедино."
       - id: echols-profound
         role: quote
         draft: false
-        en: He counts the line about the part you play among the best ever written. “Arthur didn’t understand. He did not know.”
-        ru: Строку о роли он считает одной из лучших когда-либо написанных. «А Артур этого не понимал. Он не знал».
+        en: "Echols says Arthur himself did not realise how profound his line was: “for everyone who thinks that life is just a game, do you like the part you’re playing?” “He didn’t know.”"
+        ru: "Джонни Эколс говорит, что Артур и сам не понимал, как глубока его строка: «всем, кто думает, что жизнь — всего лишь игра: а нравится ли вам роль, которую вы играете?» «Он этого не знал»."
         lens: echols
       - id: lee-mine
         role: quote
         draft: false
         en: “My thing was the Forever Changes album. That’s when I finally got a chance to do my thing and I wasn’t worried about whether the public was gonna buy it.”
-        ru: «Это была моя вещь — Forever Changes. Наконец я сделал своё и не думал, купит это публика или нет».
+        ru: "«Моим главным делом был альбом Forever Changes. Тогда я наконец смог сделать то, что хотел, и не думал, купит это публика или нет»."
         lens: lee
       - id: last
         role: text
         draft: false
-        en: The young man who expected to be dead by twenty-six ends not with death but with change, in a major key, with an orchestra.
-        ru: Молодой человек, который ждал смерти к двадцати шести, заканчивает не смертью, а тем, что всё меняется. Мажором и оркестром.
+        en: "Lee was sure he would be dead by twenty-six, yet he ended the album with a song not about death but about everything changing, in a major key, with an orchestra."
+        ru: "Ли был уверен, что умрёт к двадцати шести, а закончил альбом песней не о смерти, а о том, что всё меняется, — в мажоре, с оркестром."
     differ: true
 
   # ---------------------------------------------------------------- after
@@ -1184,12 +1208,12 @@ scenes:
         role: lede
         draft: false
         en: Forever Changes came out in November 1967, and America didn’t notice. On the Billboard chart it climbed to number 154 and vanished after ten weeks. In England it reached number 24 and stayed there for good, in the heads of musicians who would later call it theirs.
-        ru: Forever Changes вышел в ноябре 1967 года, и Америка его не заметила. В чарте Billboard он поднялся до 154-го места и через десять недель исчез. В Англии он дошёл до 24-го места и остался там навсегда — в головах музыкантов, которые потом будут называть его своим.
+        ru: "Forever Changes вышел в ноябре 1967 года, и Америка его не заметила. В чарте Billboard он поднялся до 154-го места и через десять недель исчез. В Англии альбом дошёл до 24-го места и навсегда запомнился музыкантам, которые потом будут считать его своим."
       - id: breakup
         role: text
         draft: false
-        en: "The band didn’t survive it. In 1968 Lee broke up the line-up and built a new one around himself. Echols remembers how MacLean was fired: Holzman had secretly offered Bryan a solo deal, Bryan told Arthur, and Arthur said, “Fantastic, congratulations, Bryan… You’re fired!” MacLean left music and became a Christian."
-        ru: "Группа этого не пережила. В 1968 году Ли распустил состав и собрал новый вокруг себя. Как уволили Маклина, Эколс помнит так: Хольцман тайком предложил Брайану сольный контракт, Брайан рассказал об этом Артуру, и Артур ответил: «Потрясающе, поздравляю, Брайан. Ты уволен!» Маклин ушёл из музыки и стал христианином."
+        en: "The band didn’t survive it. In 1968 Lee broke up the line-up and built a new one around himself. Echols remembers how MacLean was fired: Holzman had secretly offered Bryan a solo deal, Bryan told Arthur, and Arthur said, “Fantastic, congratulations, Bryan… You’re fired!” In 1970 MacLean left the music business and later became a born-again Christian; in 1985 he wrote “Don’t Toss Us Away” for Lone Justice, the band of his half-sister Maria McKee."
+        ru: "Группа этого не пережила. В 1968 году Ли распустил состав и собрал новый вокруг себя. Эколс рассказывает, как уволили Маклина: Хольцман тайком предложил Брайану сольный контракт, Брайан рассказал об этом Артуру, и Артур ответил: «Потрясающе, поздравляю, Брайан. Ты уволен!» В 1970 году Маклин ушёл из музыкального бизнеса и позже стал глубоко верующим христианином, а в 1985 году написал песню «Don’t Toss Us Away» для группы Lone Justice, где пела его сводная сестра Мария Макки."
       - id: lee-slap
         role: quote
         draft: false
@@ -1206,18 +1230,18 @@ scenes:
         role: text
         draft: false
         en: In the mid-nineties a gun went off outside Lee’s flat during a quarrel with a neighbour. Lee denied it, but he had earlier convictions, and under California’s three-strikes law he was given twelve years. While he was inside, Ken Forssi and Bryan MacLean both died, in 1998.
-        ru: В середине девяностых возле квартиры Ли во время ссоры с соседом прозвучал выстрел. Ли это отрицал, но у него были прежние судимости, и по калифорнийскому закону «трёх ударов» его приговорили к двенадцати годам. Пока он сидел, в 1998 году умерли Кен Форсси и Брайан Маклин.
+        ru: "В середине девяностых возле квартиры Ли во время ссоры с соседом прозвучал выстрел. Ли отрицал, что стрелял он, но у него были прежние судимости, и по калифорнийскому закону «о трёх преступлениях» его приговорили к двенадцати годам. Пока он сидел, в 1998 году умерли Кен Форсси и Брайан Маклин."
       - id: lee-head
         role: quote
         draft: false
         en: “In prison, I hardly touched a guitar … It was a test to me to see if I could do all these songs totally in my head. That kept me going.”
-        ru: "«В тюрьме я почти не брал в руки гитару. Это была проверка: смогу ли я удержать все эти песни целиком в голове. Это меня и держало»."
+        ru: "«В тюрьме я почти не брал в руки гитару. Это была проверка: смогу ли я удержать все эти песни целиком в голове. Это меня и поддерживало»."
         lens: lee
       - id: released
         role: text
         draft: false
         en: "In December 2001 he was freed: a court found that the prosecution had acted improperly."
-        ru: "В декабре 2001 года его освободили: суд признал, что обвинение вело процесс нечестно."
+        ru: "В декабре 2001 года Ли освободили: суд признал, что обвинение допустило нарушения."
 
   # ---------------------------------------------------------------- return
   - id: return
@@ -1243,13 +1267,13 @@ scenes:
       - id: title
         role: title
         draft: false
-        en: The orchestra comes back
-        ru: Оркестр возвращается
+        en: The album back on stage
+        ru: Альбом снова на сцене
       - id: lede
         role: lede
         draft: false
         en: "The musicians of Baby Lemonade, who had played with him before prison, were waiting. From 2002 they played Forever Changes whole, first song to last, with strings and horns: across England, at London’s Royal Festival Hall, in Chicago, in New York. What Lee had once sung to Angel now sounded every night from a live orchestra behind him."
-        ru: Его ждали музыканты Baby Lemonade, которые играли с ним до тюрьмы. В 2002 году они вместе со струнными и духовыми стали играть Forever Changes целиком, от первой песни до последней, — по Англии, в лондонском Королевском фестивальном зале, в Чикаго, в Нью-Йорке. То, что Ли когда-то напевал Энджелу, теперь каждый вечер звучало живым оркестром за его спиной.
+        ru: "Ли ждали музыканты Baby Lemonade, которые играли с ним до тюрьмы. С 2002 года они вместе со струнными и духовыми исполняли Forever Changes целиком, от первой песни до последней, — по всей Англии, в лондонском Королевском фестивальном зале, в Чикаго, в Нью-Йорке. То, что Ли когда-то напевал Энджелу, теперь каждый вечер играл живой оркестр за его спиной."
       - id: lee-arm
         role: quote
         draft: false
@@ -1259,13 +1283,13 @@ scenes:
       - id: parliament
         role: text
         draft: false
-        en: In 2002 the British MP Peter Bradley put a motion honouring Lee before the House of Commons, and Lee visited Parliament.
-        ru: В 2002 году британский депутат Питер Брэдли внёс в Палату общин резолюцию в честь Ли, и Ли побывал в парламенте.
+        en: "In 2002, when Lee toured England for the first time after prison, the Labour MP Peter Bradley tabled an Early Day Motion in the House of Commons, a short statement that MPs sign to put something on public record. It called Love the world’s greatest rock band and Forever Changes the greatest album of all time. Bradley, who said he had cherished the record for thirty-five years, welcomed Lee to the House of Commons."
+        ru: "В 2002 году, когда Ли впервые после тюрьмы гастролировал по Англии, депутат-лейборист Питер Брэдли внёс в Палату общин так называемое Early Day Motion — короткое заявление, которое депутаты подписывают, чтобы публично что-то отметить. В нём Love были названы величайшей рок-группой мира, а Forever Changes — величайшим альбомом всех времён. Брэдли, по его словам, тридцать пять лет дорожил этой пластинкой; он и принимал Ли в Палате общин."
       - id: echols-bow
         role: quote
         draft: false
         en: “Nothing in this life will ever match the look on Arthur’s face when members of Parliament … actually bowed down in honor of our group.”
-        ru: «Ничто в этой жизни не сравнится с лицом Артура, когда члены парламента поклонились в честь нашей группы».
+        ru: "«Ничто в этой жизни не сравнится с тем, какое лицо было у Артура, когда члены парламента поклонились в честь нашей группы»."
         lens: echols
     differ: true
 
@@ -1298,17 +1322,17 @@ scenes:
         role: lede
         draft: false
         en: "In 2006 Lee was found to have leukaemia. He had no health insurance, and friends put on a benefit for him: on 23 June at the Beacon Theatre in New York, Robert Plant played. Into “Hey Joe”, the song with which Love had once won Holzman over, Plant wove a line from “Nature Boy”: the greatest thing is just to love and be loved in return."
-        ru: "В 2006 году у Ли нашли лейкемию. Медицинской страховки у него не было, и друзья устроили для него концерт: 23 июня в нью-йоркском театре «Бикон» играл Роберт Плант. В «Hey Joe», песню, с которой Love когда-то покорили Хольцмана, Плант вплёл строку из «Nature Boy»: самое главное — любить и быть любимым."
+        ru: "В 2006 году у Ли нашли лейкемию. Медицинской страховки у него не было, и друзья устроили благотворительный концерт: 23 июня в нью-йоркском театре «Бикон» играл Роберт Плант. В «Hey Joe», песню, с которой Love когда-то покорили Хольцмана, Плант вплёл строку из «Nature Boy»: самое главное — любить и быть любимым."
       - id: death
         role: text
         draft: false
         en: Arthur Lee died on 3 August 2006 in Memphis, the city where he was born. He was sixty-one, and his wife Diane was with him. He lived thirty-five years longer than he had promised himself when he wrote his last words.
-        ru: Артур Ли умер 3 августа 2006 года в Мемфисе, в городе, где родился. Ему был шестьдесят один год, рядом была его жена Дайан. Он прожил на тридцать пять лет дольше, чем обещал себе, когда писал последние слова.
+        ru: "Артур Ли умер 3 августа 2006 года в Мемфисе, в городе, где родился. Ему был шестьдесят один год, рядом была его жена Дайан. Он прожил на тридцать пять лет дольше, чем отпускал себе, когда писал свои «последние слова»."
       - id: echols-hospital
         role: quote
         draft: false
         en: "“I’d just been at the hospital in Memphis with him. I got back to Los Angeles, and Diane called to say he had passed.” In the hospital Arthur had asked him: “Why don’t you guys do this until I’m ready to continue?”"
-        ru: "«Я только что был у него в больнице в Мемфисе. Вернулся в Лос-Анджелес, и Дайан позвонила: его не стало». А в больнице Артур успел попросить: «Поиграйте это без меня, пока я не буду готов продолжить»."
+        ru: "«Я только что навещал его в больнице в Мемфисе. Вернулся в Лос-Анджелес, и тут позвонила Дайан: его не стало». А в больнице Артур успел попросить: «Играйте это без меня, пока я не смогу вернуться»."
         lens: echols
       - id: forever
         role: line
@@ -1341,34 +1365,29 @@ scenes:
       - id: title
         role: title
         draft: false
-        en: The album that didn’t end
-        ru: Альбом, который не кончился
+        en: "How the album became a classic"
+        ru: "Как альбом стал классикой"
       - id: lede
         role: lede
         draft: false
         en: The record that didn’t sell at home became one of the most revered in [[rock-n-roll|rock]] history. Rolling Stone put it at number 40 among the 500 greatest albums; it is in the Grammy Hall of Fame and in the Library of Congress’s National Recording Registry.
-        ru: Пластинка, которая не продавалась дома, стала одной из самых почитаемых в истории [[rock-n-roll|рока]]. Rolling Stone поставил её на сороковое место среди пятисот величайших альбомов, она в Зале славы «Грэмми» и в Национальном реестре звукозаписей Библиотеки Конгресса.
+        ru: "Пластинка, которую в Америке почти не покупали, стала одной из самых почитаемых в истории [[rock-n-roll|рока]]. Rolling Stone поставил её на сороковое место среди пятисот величайших альбомов; она включена в Зал славы «Грэмми» и в Национальный реестр звукозаписей Библиотеки Конгресса."
       - id: influence
         role: text
         draft: false
-        en: Its deepest roots grew in England. Led Zeppelin, Echo and the Bunnymen, and Siouxsie and the Banshees named Love among their influences, and the Clash, Botnick says, were crazy about this album.
-        ru: Глубже всего она проросла в Англии. Led Zeppelin, Echo and the Bunnymen, Siouxsie and the Banshees называли Love среди тех, кто на них повлиял. The Clash, по словам Ботника, были от этого альбома без ума.
+        en: "It mattered most in England. Led Zeppelin, Echo and the Bunnymen, and Siouxsie and the Banshees named Love among their influences, and the Clash, Botnick says, were crazy about this album."
+        ru: "Сильнее всего альбом повлиял на английских музыкантов. Led Zeppelin, Echo and the Bunnymen, Siouxsie and the Banshees называли Love среди тех, кто на них повлиял, а The Clash, по словам Ботника, были от этого альбома без ума."
       - id: bell
         role: quote
         draft: false
-        en: “It’s a dark album, and good music can be dark and still uplifting. Love were on the front line.”
-        ru: «Это тёмный альбом, а хорошая музыка может быть тёмной и всё равно поднимать дух. Love были на передовой».
+        en: "Andy Bell, the guitarist of Ride: “It’s a dark album, and good music can be dark and still uplifting. Love were on the front line.”"
+        ru: "Энди Белл, гитарист группы Ride: «Это тёмный альбом, а хорошая музыка может быть тёмной и всё равно поднимать дух. Love были на передовой»."
         lens: critics
-      - id: bell-who
-        role: caption
-        draft: false
-        en: Andy Bell, guitarist of Ride
-        ru: Энди Белл, гитарист Ride
       - id: screen
         role: text
         draft: false
         en: “Alone Again Or” plays in Wes Anderson’s “Bottle Rocket” and at the end of the first season of “Russian Doll”. And Johnny Echols still plays the whole album with his Love Band.
-        ru: «Alone Again Or» звучит в «Бутылочной ракете» Уэса Андерсона и в финале первого сезона «Жизни на повторе». А Джонни Эколс до сих пор играет альбом целиком со своей Love Band.
+        ru: "«Alone Again Or» звучит в «Бутылочной ракете» Уэса Андерсона и в финале первого сезона сериала «Жизнь на повторе». А Джонни Эколс до сих пор играет альбом целиком со своей группой Love Band."
       - id: echols-on
         role: quote
         draft: false
@@ -1381,7 +1400,7 @@ scenes:
   - id: lee
     kind: lee
     decay: 0
-    name: { en: "Arthur Lee mode", ru: "Режим Артура Ли" }
+    name: { en: "Your room on LSD", ru: "Ваша комната под ЛСД" }
     visions: [ eye, siren, telephone ]
     art:
       generated: true
@@ -1411,16 +1430,16 @@ scenes:
       - id: kicker
         role: kicker
         draft: false
-        en: Through his eyes
-        ru: Его глазами
+        en: A mode for the phone
+        ru: Режим для телефона
       - id: lede
         role: lede
         draft: false
-        en: From his hill above Los Angeles he saw the same city as everyone else, and saw sirens, death, delirium and beauty in it all at once. Take your phone, point the camera at your room, and see what this album does to it.
-        ru: С холма над Лос-Анджелесом он видел тот же город, что и все, — и видел в нём сирены, смерть, бред и красоту сразу. Возьмите телефон, наведите камеру на свою комнату и посмотрите, что с ней сделает этот альбом.
+        en: "In the years of Forever Changes, Louder magazine writes, Lee and Love took a great deal of LSD. This mode shows your room roughly as the world looks on it: the phone’s camera films the room, the walls slowly flow with colour, figures appear at the edge of the frame and melt when you turn to them, and things from the songs of the chapter you are reading come into the room: a red telephone, a newspaper, an old man. The longer the mode runs, the more the picture changes. On a computer it works over a still picture, and the QR code opens it on your phone."
+        ru: "В годы Forever Changes, как пишет журнал Louder, Ли и музыканты Love принимали очень много ЛСД. Этот режим показывает вашу комнату примерно такой, какой мир видится под ним: камера телефона снимает комнату, стены медленно переливаются цветом, по краям кадра появляются фигуры и тают, когда вы к ним поворачиваетесь, а в комнату приходят вещи из песен той главы, которую вы читаете, — красный телефон, газета, старик. Чем дольше работает режим, тем сильнее меняется картинка. На компьютере он работает с неподвижной картинкой, а QR-код откроет его на телефоне."
       - id: privacy
         role: line
         draft: false
         en: Everything happens on your phone. The camera picture goes nowhere.
-        ru: Всё происходит в вашем телефоне. Изображение с камеры никуда не уходит.
+        ru: Изображение с камеры обрабатывается прямо в телефоне и никуда не отправляется.
     differ: false
