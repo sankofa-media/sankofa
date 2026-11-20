@@ -79,6 +79,14 @@
   gap: var(--ft-gap, 0px);
   padding: 34svh var(--gutter) 40svh;
 }
+/* The flow lies over the whole scene; only its blocks take the pointer, so a
+   control on the stage beside the text (the clap circle) can be pressed. */
+.ft-flow {
+  pointer-events: none;
+}
+.ft-flow > * {
+  pointer-events: auto;
+}
 .ft-flow > .ft-block + .ft-block {
   padding-top: 6px;
 }
