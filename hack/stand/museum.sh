@@ -44,6 +44,8 @@ mkdir -p dist/museum-site/etc/nginx/conf.d
 rm -rf dist/museum-site/usr/share/nginx/html/media
 rsync -a --exclude /media web/dist/ dist/museum-site/usr/share/nginx/html/
 cp web/nginx.conf dist/museum-site/etc/nginx/conf.d/default.conf
+mkdir -p dist/museum-site/etc/nginx/museum
+cp web/nginx-pulse.conf dist/museum-site/etc/nginx/museum/pulse.conf
 tars=()
 for l in "${layers[@]}"; do
   (cd "dist/museum-$l" && chmod -R a+rX . && { [ "$l" = site ] || find . -exec touch -h -t 202601010000 {} +; } &&

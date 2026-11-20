@@ -16,6 +16,15 @@ web=$(cd "$(dirname "$0")/.." && pwd)
 root=$(cd "$web/.." && pwd)
 cd "$root"
 
+# SANKOFA_BIN is an executable path, not a shell command.
+sankofa() {
+  if [ -n "${SANKOFA_BIN:-}" ]; then
+    "$SANKOFA_BIN" "$@"
+  else
+    go run ./cmd/sankofa "$@"
+  fi
+}
+
 src=${SANKOFA_CONTENT:-}
 if [ -z "$src" ]; then
   if ls content/chapters/*.md >/dev/null 2>&1; then src=content; else src=web/fixtures; fi
@@ -34,10 +43,10 @@ if ! ls "$src/roots"/*.yaml >/dev/null 2>&1 && [ "$src" != web/fixtures ]; then
   cards="$tmp/cards"
   echo "roots: placeholders from web/fixtures/roots"
 fi
-go run ./cmd/sankofa content export "$cards" -o web/public/data/cards.json
+sankofa content export "$cards" -o web/public/data/cards.json
 # Short verified facts: only status "checked", validated against the cards;
 # an empty list when the content has none.
-go run ./cmd/sankofa content factoids "$src/factoids" --cards "$cards" -o web/public/data/factoids.json
+sankofa content factoids "$src/factoids" --cards "$cards" -o web/public/data/factoids.json
 # Present-day countries of the card places (content/countries.yaml).
 node "$web/scripts/build-countries.ts" web/public/data/cards.json "$src/countries.yaml" web/public/data/countries.json
 node "$web/scripts/build-chapters.ts" "$src/chapters" web/public/data/chapters.json
