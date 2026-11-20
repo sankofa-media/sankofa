@@ -64,7 +64,7 @@
       .prerender a{color:#e3ab3d}
       .prerender .crumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:.6em;padding:0;margin:0 0 24px;font-size:15px}
     </style>
-    <script type="module" src="/src/main.ts"></script>
+    <script type="module" src="/src/entry.ts"></script>
   </head>
   <body>
     <a class="skip" href="#story"><span data-l="en">Skip to the story</span><span data-l="ru">Перейти к истории</span></a>
@@ -81,7 +81,7 @@
         <button class="btn nav-fact" type="button" data-open-fact><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6m-5 3h4M12 3a6 6 0 0 0-3.6 10.8c.7.6 1.1 1.3 1.1 2.2h5c0-.9.4-1.6 1.1-2.2A6 6 0 0 0 12 3Z"/></svg><span class="label"><span data-l="en">A fact</span><span data-l="ru">Факт</span></span></button>
         <a class="btn mx-nav" href="#view=workshop" data-mech="workshop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10h18M5 10v10m14-10v10M3 20h18M8 10V6h8v4m-6-2h4"/></svg><span class="label"><span data-l="en">Workshop</span><span data-l="ru">Мастерская</span></span></a>
         <a class="btn mx-nav" href="#view=cabinet" data-mech="cabinet"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h14v18H5zM5 9h14M5 15h14M11 6h2m-2 6h2m-2 6h2M7 21v1m10-1v1"/></svg><span class="label"><span data-l="en">Cabinet</span><span data-l="ru">Кабинет редкостей</span></span></a>
-        <a class="btn ft-nav" href="features/" data-features><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 4 6 7.2 6 11a6 6 0 0 1-12 0c0-3.8 3-7 6-11Zm-2.5 11.5a2.5 2.5 0 0 0 2.5 2.5"/></svg><span class="label"><span data-l="en">Special projects</span><span data-l="ru">Спецпроекты</span></span></a>
+        <a class="btn ft-nav" href="/features/" data-features><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c3 4 6 7.2 6 11a6 6 0 0 1-12 0c0-3.8 3-7 6-11Zm-2.5 11.5a2.5 2.5 0 0 0 2.5 2.5"/></svg><span class="label"><span data-l="en">Special projects</span><span data-l="ru">Спецпроекты</span></span></a>
         <a class="btn mx-nav" href="#view=index" data-mech="index"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h4M6 4v16m-2 0h4M12 6h8m-8 4h8m-8 4h8m-8 4h5"/></svg><span class="label"><span data-l="en">Index</span><span data-l="ru">Указатель</span></span></a>
         <a class="btn mx-nav" href="#view=guide" data-mech="guide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Zm-2.6-11.5a2.7 2.7 0 0 1 5.2 1c0 1.8-2.6 2.2-2.6 3.8m0 2.6v.1"/></svg><span class="label"><span data-l="en">Guide</span><span data-l="ru">Как читать</span></span></a>
         <a class="btn mx-nav" href="#view=dedication" data-mech="dedication"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10v18l-5-3.5L7 21V3Z"/></svg><span class="label"><span data-l="en">Dedication</span><span data-l="ru">Посвящение</span></span></a>
@@ -128,6 +128,11 @@
         </aside>
       </section>
     </main>
+    <script>
+      document.querySelectorAll('a[data-features]').forEach(function (a) {
+        a.href = document.documentElement.lang === 'ru' ? '/ru/features/' : '/features/';
+      });
+    </script>
     <noscript>
       <p class="error">The museum needs JavaScript to draw its maps and timeline. Музею нужен JavaScript, чтобы нарисовать карты и хронологию.</p>
       <!-- seo:noscript — the build lists the pages that read without JavaScript here. -->

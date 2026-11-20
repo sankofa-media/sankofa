@@ -165,6 +165,10 @@ export class Kit {
 
   /** Start scrolling: call once every scene is in the page. */
   start(initial?: string): void {
+    let settling = !!initial;
+    let moved = false;
+    const release = () => { moved = true; settling = false; };
+    for (const event of ['wheel', 'touchstart', 'keydown']) this.ctx.scroller.addEventListener(event, release, { once: true, passive: true });
     this.scroller = new Scroller({
       root: this.ctx.scroller,
       scenes: this.sceneEls,
@@ -175,14 +179,20 @@ export class Kit {
       onCurrent: (el, i) => {
         const id = el.dataset.scene!;
         this.placeCircle(el, i);
-        this.ctx.onScene(id);
+        if (!settling) this.ctx.onScene(id);
         this.enter.get(id)?.(el);
       },
     });
     if (this.ink.calm) this.scroller.revealAll();
     for (const el of this.sceneEls) this.ink.draw(el, 0);
     // A link to a scene opens there before the first frame says where we are.
-    if (initial) this.goTo(initial);
+    if (initial) {
+      this.goTo(initial);
+      void document.fonts.ready.then(() => {
+        if (!moved) this.goTo(initial);
+        settling = false;
+      });
+    }
   }
 
   goTo(id: string | undefined, smooth = false): void {

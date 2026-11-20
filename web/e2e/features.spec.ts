@@ -215,7 +215,8 @@ test('in Russian, the feature, its labels and its menu entry are Russian', async
   await expect(feature(page).locator('.ft-knock')).toHaveText('Постучать — так включится звук');
   await expect(sheet(page).locator('.ft-sound')).toHaveText('Включить хлопок');
   await expect(scene(page, 'door').locator('[data-block="when"]')).toContainText('13 мая 1939 года');
-  await expect(page.locator('.nav-actions [data-features]')).toHaveAttribute('aria-label', 'Спецпроекты');
+  await expect(sheet(page).locator('.ft-back')).toHaveText('Все спецпроекты');
+  await expect(sheet(page).locator('.ft-back')).toHaveAttribute('href', '/ru/features/');
 });
 
 test('a link keeps the scene: reload and back return to it', async ({ page }) => {

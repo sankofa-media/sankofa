@@ -40,12 +40,11 @@ import { compileLexicon, type NamesFile } from './lib/names';
 import { setLexicon, weaveLive } from './lib/weave';
 import { Facts, usableFactoids, type FactoidsFile } from './lib/factoids';
 import { FactPanel } from './views/factoid';
-import { takeReviewToken, watchReviewHash } from './lib/reviewGate';
 
 async function load<T>(url: string): Promise<T> {
   // The cover paints first; the data comes at a lower priority, with a
   // timeout and further tries on a slow line.
-  const data = await loadJson<T>(url, { priority: 'low', timeout: 20_000 });
+  const data = await loadJson<T>(url, { priority: 'low', timeout: 120_000 });
   if (data === null) throw new Error(`${url}: not found`);
   return data;
 }
@@ -145,10 +144,7 @@ async function start(): Promise<void> {
 
   // Factoids are an extra, like listening: they arrive after the cards and
   // fill the views that wait for them; without them the museum is whole.
-  const facts = new Facts();
-  void loadJson<FactoidsFile>('data/factoids.json', { priority: 'low', timeout: 20_000 })
-    .then((f) => facts.fill(usableFactoids(f)))
-    .catch(() => facts.fill([]));
+  const facts = new Facts(async () => usableFactoids(await loadJson<FactoidsFile>('data/factoids.json', { priority: 'low', timeout: 60_000 })));
 
   const app: App = {
     set,
@@ -609,9 +605,4 @@ function trackChapters(app: App): void {
   tick();
 }
 
-// The owner's review mode: its token leaves the link before the route is read,
-// and only a device holding it downloads the mode at all.
-const reviewToken = takeReviewToken();
-watchReviewHash();
 start();
-if (reviewToken) void import('./review').then((m) => m.install(reviewToken));
