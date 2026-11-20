@@ -21,4 +21,4 @@ Why is all of this packed into Kubernetes? There is a reason for that, too. It w
 
 And yes, my term papers and my thesis with her were on Milorad Pavić. So the ideas from his "Dictionary of the Khazars" are here for a reason.
 
-So this project is dedicated to her. <span class="unseen">And not only to her.</span>
+So this project is dedicated to her.
