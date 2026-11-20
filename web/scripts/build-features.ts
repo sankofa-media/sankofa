@@ -10,7 +10,7 @@
 // second source (hold: true) are dropped here and never reach a reader.
 // Usage: node scripts/build-features.ts <content-dir> <data-dir> [<media-dir>]
 import { createHash } from 'node:crypto';
-import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, rmSync, statSync, utimesSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import YAML from 'yaml';
 import { featureCover, isFeatureId, publishFeature, sceneArtFiles, validateFeature, type Bi, type FeatureEntry, type FeatureSource, type FeaturesIndex } from '../src/features/model.ts';
@@ -85,7 +85,12 @@ for (const id of index.order ?? []) {
   writeFileSync(join(outDir, `${id}.json`), JSON.stringify(pub.data));
   const used = sceneArtFiles(f);
   if (used.length) mkdirSync(join(artOut, id), { recursive: true });
-  for (const file of used) copyFileSync(join(artDir, file), join(artOut, id, file));
+  for (const file of used) {
+    copyFileSync(join(artDir, file), join(artOut, id, file));
+    // Keep the source's time: build-media.ts remakes a smaller copy only when the layer changed.
+    const st = statSync(join(artDir, file));
+    utimesSync(join(artOut, id, file), st.atime, st.mtime);
+  }
   art += used.length;
   const cover = featureCover(f);
   if (f.cover && !cover) errors.push(`${id}: cover ${f.cover} is not a scene with art`);
