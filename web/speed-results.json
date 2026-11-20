@@ -890,5 +890,965 @@
         }
       ]
     }
+  },
+  "round2": {
+    "capturedAt": "2026-11-20T22:32:14.939966+00:00",
+    "baselineCommit": "250eb4b3a15ce8028ecc9ac194a2dfa74a78d9c6",
+    "implementationCommit": "83477e666a43df1214f9ca92b20d84016fcf41e2",
+    "method": {
+      "inherits": "Top-level method: same server, Chromium viewport, CDP throughput/latency, byte accounting and museum readiness predicate.",
+      "cold": "Fresh context per language, Network.setCacheDisabled=true, one sample per language, as in round 1.",
+      "warmAndSwitch": "MODE=visits uses a fresh context per language with cache enabled. Measure the priming navigation, wait for networkidle (up to 15 seconds), revisit the same URL, wait again, then click the actual language switch. Reset wire counters before each navigation.",
+      "samplesPerScenario": 1,
+      "commands": [
+        "cd web && GOCACHE=/tmp/sankofa-speed-go-cache sh scripts/build-data.sh && npx vite build",
+        "npx tsc --noEmit",
+        "npm test",
+        "nice npx playwright test --workers=1",
+        "PORT=4173 node scripts/measure-speed.mjs",
+        "PORT=4173 MODE=visits node scripts/measure-speed.mjs"
+      ],
+      "caveat": "Local preview, not a production deployment. Single samples vary: the separate cache-enabled RU priming navigation took 8.586 seconds; all priming measurements are retained below."
+    },
+    "runs": {
+      "museum": {
+        "cold": [
+          {
+            "language": "en",
+            "page": "museum",
+            "ready": true,
+            "throughput": 102400,
+            "latency": 100,
+            "seconds": 6.051,
+            "bytes": 565579,
+            "requests": [
+              {
+                "url": "http://localhost:4173/data/cache/card-index.en.ae722f77b5c83ef7.json",
+                "bytes": 115446
+              },
+              {
+                "url": "http://localhost:4173/assets/main-DEoUQH7k.js",
+                "bytes": 89306
+              },
+              {
+                "url": "http://localhost:4173/media/cover-1600.webp",
+                "bytes": 71930
+              },
+              {
+                "url": "http://localhost:4173/assets/focusTrap-C_ZTaEMo.js",
+                "bytes": 64047
+              },
+              {
+                "url": "http://localhost:4173/assets/card-Hc87h7xK.js",
+                "bytes": 35758
+              },
+              {
+                "url": "http://localhost:4173/assets/focusTrap-BOkhywwi.css",
+                "bytes": 27861
+              },
+              {
+                "url": "http://localhost:4173/assets/fraunces-cover-italic-BI3k4r3C.woff2",
+                "bytes": 21584
+              },
+              {
+                "url": "http://localhost:4173/assets/inter-cover-BHB7Tb6O.woff2",
+                "bytes": 21252
+              },
+              {
+                "url": "http://localhost:4173/data/cache/media.en.47904f945bda2e57.json",
+                "bytes": 18276
+              },
+              {
+                "url": "http://localhost:4173/assets/fraunces-cover-BcTn-Zm6.woff2",
+                "bytes": 17392
+              },
+              {
+                "url": "http://localhost:4173/data/cache/chapters.en.c9c3d6ad21e74306.json",
+                "bytes": 15263
+              },
+              {
+                "url": "http://localhost:4173/data/cache/listen.en.227c619c59cd0e62.json",
+                "bytes": 12171
+              },
+              {
+                "url": "http://localhost:4173/assets/index-B2HD8ogq.js",
+                "bytes": 10544
+              },
+              {
+                "url": "http://localhost:4173/data/cache/names.en.4bbb3ea135125e5d.json",
+                "bytes": 9865
+              },
+              {
+                "url": "http://localhost:4173/assets/mechanics-BBp9ZWBl.css",
+                "bytes": 8129
+              },
+              {
+                "url": "http://localhost:4173/assets/hide-D88sMIq9.js",
+                "bytes": 7525
+              },
+              {
+                "url": "http://localhost:4173/",
+                "bytes": 7060
+              },
+              {
+                "url": "http://localhost:4173/assets/main-CvaRb4-h.css",
+                "bytes": 5574
+              },
+              {
+                "url": "http://localhost:4173/assets/miniPlayer-BewU_no9.js",
+                "bytes": 3140
+              },
+              {
+                "url": "http://localhost:4173/data/cache/voices.en.a65a3d9a78d52cd8.json",
+                "bytes": 2585
+              },
+              {
+                "url": "http://localhost:4173/assets/rolldown-runtime-DK3Fl9T5.js",
+                "bytes": 479
+              },
+              {
+                "url": "http://localhost:4173/assets/mechanics-CkTiwdjZ.js",
+                "bytes": 392
+              }
+            ]
+          },
+          {
+            "language": "ru",
+            "page": "museum",
+            "ready": true,
+            "throughput": 102400,
+            "latency": 100,
+            "seconds": 6.896,
+            "bytes": 658262,
+            "requests": [
+              {
+                "url": "http://localhost:4173/data/cache/card-index.ru.e30e0a38771a584c.json",
+                "bytes": 165180
+              },
+              {
+                "url": "http://localhost:4173/assets/main-DEoUQH7k.js",
+                "bytes": 89306
+              },
+              {
+                "url": "http://localhost:4173/media/cover-1600.webp",
+                "bytes": 71930
+              },
+              {
+                "url": "http://localhost:4173/assets/focusTrap-C_ZTaEMo.js",
+                "bytes": 64047
+              },
+              {
+                "url": "http://localhost:4173/assets/card-Hc87h7xK.js",
+                "bytes": 35758
+              },
+              {
+                "url": "http://localhost:4173/assets/focusTrap-BOkhywwi.css",
+                "bytes": 27861
+              },
+              {
+                "url": "http://localhost:4173/data/cache/chapters.ru.7683851a44cb99dc.json",
+                "bytes": 22863
+              },
+              {
+                "url": "http://localhost:4173/assets/fraunces-cover-italic-BI3k4r3C.woff2",
+                "bytes": 21584
+              },
+              {
+                "url": "http://localhost:4173/assets/inter-cover-BHB7Tb6O.woff2",
+                "bytes": 21252
+              },
+              {
+                "url": "http://localhost:4173/data/cache/media.ru.47904f945bda2e57.json",
+                "bytes": 18276
+              },
+              {
+                "url": "http://localhost:4173/assets/fraunces-cover-BcTn-Zm6.woff2",
+                "bytes": 17392
+              },
+              {
+                "url": "http://localhost:4173/data/cache/listen.ru.04c541910855e59e.json",
+                "bytes": 13827
+              },
+              {
+                "url": "http://localhost:4173/data/cache/names.ru.28ed6ad500932ec5.json",
+                "bytes": 12713
+              },
+              {
+                "url": "http://localhost:4173/assets/literata-cover-italic-BnFQCwQm.woff2",
+                "bytes": 11912
+              },
+              {
+                "url": "http://localhost:4173/assets/literata-cover-BWlJIXKW.woff2",
+                "bytes": 11052
+              },
+              {
+                "url": "http://localhost:4173/assets/index-B2HD8ogq.js",
+                "bytes": 10544
+              },
+              {
+                "url": "http://localhost:4173/assets/mechanics-BBp9ZWBl.css",
+                "bytes": 8129
+              },
+              {
+                "url": "http://localhost:4173/assets/hide-D88sMIq9.js",
+                "bytes": 7525
+              },
+              {
+                "url": "http://localhost:4173/assets/inter-cyrillic-cover-BycXJRUF.woff2",
+                "bytes": 7354
+              },
+              {
+                "url": "http://localhost:4173/ru/",
+                "bytes": 7132
+              },
+              {
+                "url": "http://localhost:4173/assets/main-CvaRb4-h.css",
+                "bytes": 5574
+              },
+              {
+                "url": "http://localhost:4173/assets/miniPlayer-BewU_no9.js",
+                "bytes": 3140
+              },
+              {
+                "url": "http://localhost:4173/data/cache/voices.ru.1032a042ea3ce0e6.json",
+                "bytes": 3040
+              },
+              {
+                "url": "http://localhost:4173/assets/rolldown-runtime-DK3Fl9T5.js",
+                "bytes": 479
+              },
+              {
+                "url": "http://localhost:4173/assets/mechanics-CkTiwdjZ.js",
+                "bytes": 392
+              }
+            ]
+          }
+        ],
+        "warm": [
+          {
+            "language": "en",
+            "visit": "warm",
+            "fromLanguage": "en",
+            "page": "museum",
+            "ready": true,
+            "throughput": 102400,
+            "latency": 100,
+            "seconds": 0.751,
+            "bytes": 3574,
+            "requests": [
+              {
+                "url": "http://localhost:4173/assets/fraunces-cover-BcTn-Zm6.woff2",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/index-B2HD8ogq.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/data/cache/card-index.en.ae722f77b5c83ef7.json",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/main-DEoUQH7k.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/rolldown-runtime-DK3Fl9T5.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/focusTrap-C_ZTaEMo.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/focusTrap-BOkhywwi.css",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/card-Hc87h7xK.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/miniPlayer-BewU_no9.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/hide-D88sMIq9.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/mechanics-CkTiwdjZ.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/mechanics-BBp9ZWBl.css",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/main-CvaRb4-h.css",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/fraunces-cover-italic-BI3k4r3C.woff2",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/inter-cover-BHB7Tb6O.woff2",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/",
+                "bytes": 127
+              },
+              {
+                "url": "http://localhost:4173/media/cover-1600.webp",
+                "bytes": 127
+              },
+              {
+                "url": "http://localhost:4173/data/cache/chapters.en.c9c3d6ad21e74306.json",
+                "bytes": 127
+              },
+              {
+                "url": "http://localhost:4173/data/cache/listen.en.227c619c59cd0e62.json",
+                "bytes": 127
+              },
+              {
+                "url": "http://localhost:4173/data/cache/media.en.47904f945bda2e57.json",
+                "bytes": 127
+              },
+              {
+                "url": "http://localhost:4173/data/cache/names.en.4bbb3ea135125e5d.json",
+                "bytes": 127
+              },
+              {
+                "url": "http://localhost:4173/data/cache/voices.en.a65a3d9a78d52cd8.json",
+                "bytes": 127
+              }
+            ]
+          },
+          {
+            "language": "ru",
+            "visit": "warm",
+            "fromLanguage": "ru",
+            "page": "museum",
+            "ready": true,
+            "throughput": 102400,
+            "latency": 100,
+            "seconds": 0.868,
+            "bytes": 4111,
+            "requests": [
+              {
+                "url": "http://localhost:4173/assets/fraunces-cover-BcTn-Zm6.woff2",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/index-B2HD8ogq.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/data/cache/card-index.ru.e30e0a38771a584c.json",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/main-DEoUQH7k.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/rolldown-runtime-DK3Fl9T5.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/focusTrap-C_ZTaEMo.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/focusTrap-BOkhywwi.css",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/card-Hc87h7xK.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/miniPlayer-BewU_no9.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/hide-D88sMIq9.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/mechanics-CkTiwdjZ.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/mechanics-BBp9ZWBl.css",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/main-CvaRb4-h.css",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/fraunces-cover-italic-BI3k4r3C.woff2",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/inter-cover-BHB7Tb6O.woff2",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/literata-cover-BWlJIXKW.woff2",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/literata-cover-italic-BnFQCwQm.woff2",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/inter-cyrillic-cover-BycXJRUF.woff2",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/ru/",
+                "bytes": 127
+              },
+              {
+                "url": "http://localhost:4173/media/cover-1600.webp",
+                "bytes": 127
+              },
+              {
+                "url": "http://localhost:4173/data/cache/chapters.ru.7683851a44cb99dc.json",
+                "bytes": 127
+              },
+              {
+                "url": "http://localhost:4173/data/cache/listen.ru.04c541910855e59e.json",
+                "bytes": 127
+              },
+              {
+                "url": "http://localhost:4173/data/cache/media.ru.47904f945bda2e57.json",
+                "bytes": 127
+              },
+              {
+                "url": "http://localhost:4173/data/cache/names.ru.28ed6ad500932ec5.json",
+                "bytes": 127
+              },
+              {
+                "url": "http://localhost:4173/data/cache/voices.ru.1032a042ea3ce0e6.json",
+                "bytes": 127
+              }
+            ]
+          }
+        ],
+        "languageSwitch": [
+          {
+            "language": "ru",
+            "visit": "language-switch",
+            "fromLanguage": "en",
+            "page": "museum",
+            "ready": true,
+            "throughput": 102400,
+            "latency": 100,
+            "seconds": 3.485,
+            "bytes": 268977,
+            "requests": [
+              {
+                "url": "http://localhost:4173/data/cache/card-index.ru.e30e0a38771a584c.json",
+                "bytes": 165180
+              },
+              {
+                "url": "http://localhost:4173/data/cache/chapters.ru.7683851a44cb99dc.json",
+                "bytes": 22863
+              },
+              {
+                "url": "http://localhost:4173/data/cache/media.ru.47904f945bda2e57.json",
+                "bytes": 18276
+              },
+              {
+                "url": "http://localhost:4173/data/cache/listen.ru.04c541910855e59e.json",
+                "bytes": 13827
+              },
+              {
+                "url": "http://localhost:4173/data/cache/names.ru.28ed6ad500932ec5.json",
+                "bytes": 12713
+              },
+              {
+                "url": "http://localhost:4173/assets/literata-cover-italic-BnFQCwQm.woff2",
+                "bytes": 11912
+              },
+              {
+                "url": "http://localhost:4173/assets/literata-cover-BWlJIXKW.woff2",
+                "bytes": 11052
+              },
+              {
+                "url": "http://localhost:4173/assets/inter-cyrillic-cover-BycXJRUF.woff2",
+                "bytes": 7354
+              },
+              {
+                "url": "http://localhost:4173/data/cache/voices.ru.1032a042ea3ce0e6.json",
+                "bytes": 3040
+              },
+              {
+                "url": "http://localhost:4173/assets/fraunces-cover-BcTn-Zm6.woff2",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/index-B2HD8ogq.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/main-DEoUQH7k.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/rolldown-runtime-DK3Fl9T5.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/focusTrap-C_ZTaEMo.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/focusTrap-BOkhywwi.css",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/card-Hc87h7xK.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/miniPlayer-BewU_no9.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/hide-D88sMIq9.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/mechanics-CkTiwdjZ.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/mechanics-BBp9ZWBl.css",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/main-CvaRb4-h.css",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/fraunces-cover-italic-BI3k4r3C.woff2",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/inter-cover-BHB7Tb6O.woff2",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/",
+                "bytes": 127
+              },
+              {
+                "url": "http://localhost:4173/media/cover-1600.webp",
+                "bytes": 127
+              }
+            ]
+          },
+          {
+            "language": "en",
+            "visit": "language-switch",
+            "fromLanguage": "ru",
+            "page": "museum",
+            "ready": true,
+            "throughput": 102400,
+            "latency": 100,
+            "seconds": 2.483,
+            "bytes": 183299,
+            "requests": [
+              {
+                "url": "http://localhost:4173/data/cache/card-index.en.ae722f77b5c83ef7.json",
+                "bytes": 115446
+              },
+              {
+                "url": "http://localhost:4173/data/cache/media.en.47904f945bda2e57.json",
+                "bytes": 18276
+              },
+              {
+                "url": "http://localhost:4173/data/cache/chapters.en.c9c3d6ad21e74306.json",
+                "bytes": 15263
+              },
+              {
+                "url": "http://localhost:4173/data/cache/listen.en.227c619c59cd0e62.json",
+                "bytes": 12171
+              },
+              {
+                "url": "http://localhost:4173/data/cache/names.en.4bbb3ea135125e5d.json",
+                "bytes": 9865
+              },
+              {
+                "url": "http://localhost:4173/",
+                "bytes": 7060
+              },
+              {
+                "url": "http://localhost:4173/data/cache/voices.en.a65a3d9a78d52cd8.json",
+                "bytes": 2585
+              },
+              {
+                "url": "http://localhost:4173/assets/fraunces-cover-BcTn-Zm6.woff2",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/index-B2HD8ogq.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/main-DEoUQH7k.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/rolldown-runtime-DK3Fl9T5.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/focusTrap-C_ZTaEMo.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/focusTrap-BOkhywwi.css",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/card-Hc87h7xK.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/miniPlayer-BewU_no9.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/hide-D88sMIq9.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/mechanics-CkTiwdjZ.js",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/mechanics-BBp9ZWBl.css",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/main-CvaRb4-h.css",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/fraunces-cover-italic-BI3k4r3C.woff2",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/assets/inter-cover-BHB7Tb6O.woff2",
+                "bytes": 179
+              },
+              {
+                "url": "http://localhost:4173/media/cover-1600.webp",
+                "bytes": 127
+              }
+            ]
+          }
+        ],
+        "cacheEnabledPriming": [
+          {
+            "language": "en",
+            "visit": "cold",
+            "fromLanguage": "en",
+            "page": "museum",
+            "ready": true,
+            "throughput": 102400,
+            "latency": 100,
+            "seconds": 5.978,
+            "bytes": 565579,
+            "requests": [
+              {
+                "url": "http://localhost:4173/data/cache/card-index.en.ae722f77b5c83ef7.json",
+                "bytes": 115446
+              },
+              {
+                "url": "http://localhost:4173/assets/main-DEoUQH7k.js",
+                "bytes": 89306
+              },
+              {
+                "url": "http://localhost:4173/media/cover-1600.webp",
+                "bytes": 71930
+              },
+              {
+                "url": "http://localhost:4173/assets/focusTrap-C_ZTaEMo.js",
+                "bytes": 64047
+              },
+              {
+                "url": "http://localhost:4173/assets/card-Hc87h7xK.js",
+                "bytes": 35758
+              },
+              {
+                "url": "http://localhost:4173/assets/focusTrap-BOkhywwi.css",
+                "bytes": 27861
+              },
+              {
+                "url": "http://localhost:4173/assets/fraunces-cover-italic-BI3k4r3C.woff2",
+                "bytes": 21584
+              },
+              {
+                "url": "http://localhost:4173/assets/inter-cover-BHB7Tb6O.woff2",
+                "bytes": 21252
+              },
+              {
+                "url": "http://localhost:4173/data/cache/media.en.47904f945bda2e57.json",
+                "bytes": 18276
+              },
+              {
+                "url": "http://localhost:4173/assets/fraunces-cover-BcTn-Zm6.woff2",
+                "bytes": 17392
+              },
+              {
+                "url": "http://localhost:4173/data/cache/chapters.en.c9c3d6ad21e74306.json",
+                "bytes": 15263
+              },
+              {
+                "url": "http://localhost:4173/data/cache/listen.en.227c619c59cd0e62.json",
+                "bytes": 12171
+              },
+              {
+                "url": "http://localhost:4173/assets/index-B2HD8ogq.js",
+                "bytes": 10544
+              },
+              {
+                "url": "http://localhost:4173/data/cache/names.en.4bbb3ea135125e5d.json",
+                "bytes": 9865
+              },
+              {
+                "url": "http://localhost:4173/assets/mechanics-BBp9ZWBl.css",
+                "bytes": 8129
+              },
+              {
+                "url": "http://localhost:4173/assets/hide-D88sMIq9.js",
+                "bytes": 7525
+              },
+              {
+                "url": "http://localhost:4173/",
+                "bytes": 7060
+              },
+              {
+                "url": "http://localhost:4173/assets/main-CvaRb4-h.css",
+                "bytes": 5574
+              },
+              {
+                "url": "http://localhost:4173/assets/miniPlayer-BewU_no9.js",
+                "bytes": 3140
+              },
+              {
+                "url": "http://localhost:4173/data/cache/voices.en.a65a3d9a78d52cd8.json",
+                "bytes": 2585
+              },
+              {
+                "url": "http://localhost:4173/assets/rolldown-runtime-DK3Fl9T5.js",
+                "bytes": 479
+              },
+              {
+                "url": "http://localhost:4173/assets/mechanics-CkTiwdjZ.js",
+                "bytes": 392
+              }
+            ]
+          },
+          {
+            "language": "ru",
+            "visit": "cold",
+            "fromLanguage": "ru",
+            "page": "museum",
+            "ready": true,
+            "throughput": 102400,
+            "latency": 100,
+            "seconds": 8.586,
+            "bytes": 658262,
+            "requests": [
+              {
+                "url": "http://localhost:4173/data/cache/card-index.ru.e30e0a38771a584c.json",
+                "bytes": 165180
+              },
+              {
+                "url": "http://localhost:4173/assets/main-DEoUQH7k.js",
+                "bytes": 89306
+              },
+              {
+                "url": "http://localhost:4173/media/cover-1600.webp",
+                "bytes": 71930
+              },
+              {
+                "url": "http://localhost:4173/assets/focusTrap-C_ZTaEMo.js",
+                "bytes": 64047
+              },
+              {
+                "url": "http://localhost:4173/assets/card-Hc87h7xK.js",
+                "bytes": 35758
+              },
+              {
+                "url": "http://localhost:4173/assets/focusTrap-BOkhywwi.css",
+                "bytes": 27861
+              },
+              {
+                "url": "http://localhost:4173/data/cache/chapters.ru.7683851a44cb99dc.json",
+                "bytes": 22863
+              },
+              {
+                "url": "http://localhost:4173/assets/fraunces-cover-italic-BI3k4r3C.woff2",
+                "bytes": 21584
+              },
+              {
+                "url": "http://localhost:4173/assets/inter-cover-BHB7Tb6O.woff2",
+                "bytes": 21252
+              },
+              {
+                "url": "http://localhost:4173/data/cache/media.ru.47904f945bda2e57.json",
+                "bytes": 18276
+              },
+              {
+                "url": "http://localhost:4173/assets/fraunces-cover-BcTn-Zm6.woff2",
+                "bytes": 17392
+              },
+              {
+                "url": "http://localhost:4173/data/cache/listen.ru.04c541910855e59e.json",
+                "bytes": 13827
+              },
+              {
+                "url": "http://localhost:4173/data/cache/names.ru.28ed6ad500932ec5.json",
+                "bytes": 12713
+              },
+              {
+                "url": "http://localhost:4173/assets/literata-cover-italic-BnFQCwQm.woff2",
+                "bytes": 11912
+              },
+              {
+                "url": "http://localhost:4173/assets/literata-cover-BWlJIXKW.woff2",
+                "bytes": 11052
+              },
+              {
+                "url": "http://localhost:4173/assets/index-B2HD8ogq.js",
+                "bytes": 10544
+              },
+              {
+                "url": "http://localhost:4173/assets/mechanics-BBp9ZWBl.css",
+                "bytes": 8129
+              },
+              {
+                "url": "http://localhost:4173/assets/hide-D88sMIq9.js",
+                "bytes": 7525
+              },
+              {
+                "url": "http://localhost:4173/assets/inter-cyrillic-cover-BycXJRUF.woff2",
+                "bytes": 7354
+              },
+              {
+                "url": "http://localhost:4173/ru/",
+                "bytes": 7132
+              },
+              {
+                "url": "http://localhost:4173/assets/main-CvaRb4-h.css",
+                "bytes": 5574
+              },
+              {
+                "url": "http://localhost:4173/assets/miniPlayer-BewU_no9.js",
+                "bytes": 3140
+              },
+              {
+                "url": "http://localhost:4173/data/cache/voices.ru.1032a042ea3ce0e6.json",
+                "bytes": 3040
+              },
+              {
+                "url": "http://localhost:4173/assets/rolldown-runtime-DK3Fl9T5.js",
+                "bytes": 479
+              },
+              {
+                "url": "http://localhost:4173/assets/mechanics-CkTiwdjZ.js",
+                "bytes": 392
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "startupPayloads": [
+      {
+        "language": "en",
+        "cardIndexTransferBytes": 115446,
+        "fontTransferBytes": 60228,
+        "heroTransferBytes": 71930
+      },
+      {
+        "language": "ru",
+        "cardIndexTransferBytes": 165180,
+        "fontTransferBytes": 90546,
+        "heroTransferBytes": 71930
+      }
+    ],
+    "validation": {
+      "build": "passed; data generation used a writable Go cache in /tmp; no local Docker",
+      "typescript": "passed",
+      "unit": {
+        "passed": 454,
+        "files": 39
+      },
+      "browser": {
+        "completeRun": {
+          "passed": 502,
+          "failed": 10,
+          "skipped": 48
+        },
+        "museumRegressionRun": {
+          "passed": 116,
+          "failed": 1,
+          "skipped": 7,
+          "note": "The remaining mobile check was adapted to scroll its requested card into view before expecting deferred prose; final regression below passed."
+        },
+        "finalRegressionRun": {
+          "passed": 16,
+          "failed": 0,
+          "skipped": 2,
+          "scope": "Both platforms: lazy card opens/cache/close race, phone cover sizing, Workshop, descent prose, timeline/jump targets and edition-filtered paragraphs."
+        },
+        "finalFeatureRecheck": {
+          "desktopContrast": "passed",
+          "mobileContrast": "passed",
+          "mobileAnimation": "passed"
+        },
+        "uniquePassingScenariosAcrossRuns": 511,
+        "knownBaselineFailures": [
+          {
+            "scenario": "desktop: forever-changes.spec.ts:418, the trip scales with the chapters",
+            "assertion": "Line 444: data-trip-fps remains null after the 15000 ms polling timeout.",
+            "baselineResult": "Same failure reproduced in isolation against an unchanged build of baselineCommit with identical generated content.",
+            "finalResult": "Same failure reproduced in isolation. The test and feature implementation were not changed or skipped."
+          }
+        ],
+        "note": "The complete run preceded final fixes. Every introduced regression passed its final targeted rerun. Skips are platform/content/opt-in conditions, including the phone-only cover check."
+      },
+      "seo": {
+        "htmlPages": 942,
+        "bodyText": "Identical to baseline",
+        "metadataAndJsonLd": "Identical after removing content commit dates unavailable in the git-archive baseline",
+        "llmsFiles": "All three byte-identical to baseline"
+      },
+      "content": {
+        "localizedCardFilesByteIdentical": 912,
+        "rawCardFilesByteIdentical": 912
+      },
+      "phoneHero": "Pixel 7 test confirms cover-480.webp or cover-960.webp, never the desktop cover-1600.webp."
+    },
+    "implementationNotes": [
+      "The startup language index preserves names, dates, places, moments, books, pair/edition metadata, backlinks, short lines and story image metadata. Full localized prose and original card objects retain their content-hashed URLs. Failed loads can be retried; concurrent loads are deduplicated.",
+      "Roots artists and full musical-element content load on opening Roots. Startup retains element names needed by Workshop links. Descent and signature prose load as it enters view; measured mobile layout updates once per newly loaded card.",
+      "The cover and introduction remain in prerendered HTML. A language-aware preload starts the compact index before the application module graph finishes downloading.",
+      "Small normal/italic cover fonts use separate fallback family names; full variable faces keep their original families and load when reading or interacting. All faces use font-display: swap. Only the shared Fraunces cover face is preloaded; special-project pages retain full typography and omit that cover preload.",
+      "Literata latin was used for Latin characters, digits and punctuation even on Russian pages. Fraunces remains necessary for the Sankofa wordmark. Fraunces latin-ext is present in the recorded round-1 EN requests (the static opener contains Pavić), but absent from its RU request list and from a fresh RU baseline reproduction.",
+      "The first jump into the story is anchored during font swapping so layout changes do not leave smooth scrolling short of its target.",
+      "The hero has 480/960/1600px WebP variants at quality 25 and low fetch priority. The phone picture source is capped at 960px even at high device pixel ratios. The original image and its credit remain available."
+    ]
   }
 }
