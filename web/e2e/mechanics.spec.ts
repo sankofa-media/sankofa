@@ -197,13 +197,13 @@ test('the guide: from the top bar and from the copy note, with numbers filled in
 });
 
 test('the dedication: absent without content, then reachable from the end and the footer, with its unseen line', async ({ page }) => {
-  await page.route('**/data/dedication.json', (r) => r.fulfill({ status: 404, body: '' }));
+  await page.route(/\/data\/(?:cache\/)?dedication(?:\.(?:en|ru)\.[a-f0-9]+)?\.json$/, (r) => r.fulfill({ status: 404, body: '' }));
   await page.goto('/');
   await expect(page.locator('.mx-colophon a[data-mech="dedication"]')).toBeHidden();
   await expect(page.locator('.mx-coda-ded')).toBeHidden();
 
-  await page.unroute('**/data/dedication.json');
-  await page.route('**/data/dedication.json', (r) =>
+  await page.unroute(/\/data\/(?:cache\/)?dedication(?:\.(?:en|ru)\.[a-f0-9]+)?\.json$/);
+  await page.route(/\/data\/(?:cache\/)?dedication(?:\.(?:en|ru)\.[a-f0-9]+)?\.json$/, (r) =>
     r.fulfill({
       contentType: 'application/json',
       body: JSON.stringify({

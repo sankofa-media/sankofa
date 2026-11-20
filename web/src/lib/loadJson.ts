@@ -1,3 +1,4 @@
+import { dataUrl, hydrateLanguage } from './dataUrl';
 // Fetching the museum's data files: a slow or broken connection gets a
 // timeout and another try, and the caller learns the difference between a
 // file that is not there (null) and one that could not be loaded (an error).
@@ -55,7 +56,8 @@ export async function loadJson<T>(url: string, opts: LoadOptions = {}): Promise<
   let last: unknown;
   for (let i = 0; i < tries; i++) {
     try {
-      return await once<T>(url, f, timeout, opts.priority);
+      const result = await once<T>(opts.fetch ? url : dataUrl(url), f, timeout, opts.priority);
+      return opts.fetch || url.includes('/raw-cards/') ? result : hydrateLanguage(result);
     } catch (e) {
       last = e;
       if (i < tries - 1) await sleep((opts.backoff ?? 800) * 2 ** i);

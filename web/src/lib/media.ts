@@ -1,5 +1,6 @@
 // Smaller copies of images, made at build time (scripts/build-data.sh writes
 // media/w<width>/<file> and data/media.json). Without them, the originals.
+import { dataUrl } from './dataUrl';
 import type { App } from '../app';
 
 interface Manifest {
@@ -23,7 +24,7 @@ let colours: Record<string, string> = {};
 
 export async function loadMediaManifest(): Promise<void> {
   try {
-    const r = await fetch('data/media.json');
+    const r = await fetch(dataUrl('data/media.json'));
     if (!r.ok) return;
     const m = (await r.json()) as Manifest;
     variants = m.files ?? {};
