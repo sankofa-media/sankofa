@@ -1,4 +1,5 @@
 import { lazyView } from './lib/lazyView';
+import { readingFonts } from './lib/readingFonts';
 import './styles/main.css';
 import './styles/roots.css';
 import './styles/countries.css';
@@ -39,6 +40,8 @@ import { compileLexicon, type NamesFile } from './lib/names';
 import { setLexicon, weaveLive } from './lib/weave';
 import { Facts, usableFactoids, type FactoidsFile } from './lib/factoids';
 import { FactPanel } from './views/factoid';
+
+readingFonts();
 
 async function load<T>(url: string): Promise<T> {
   // Text takes priority over the cover image, with retries on a slow line.

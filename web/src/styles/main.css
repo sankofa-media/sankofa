@@ -37,8 +37,8 @@
   --v6: #b5475a;
   --v7: #9b7ee0;
 
-  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
-  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-display: 'Fraunces', 'Fraunces Cover', 'Iowan Old Style', Georgia, serif;
+  --font-sans: 'Inter', 'Inter Cover', system-ui, -apple-system, 'Segoe UI', sans-serif;
   --gutter: clamp(16px, 4vw, 56px);
   --measure: 36rem;
   --nav-h: 56px;
@@ -3318,12 +3318,12 @@ html:lang(ru) [data-l='en'] {
   display: none !important;
 }
 html:lang(ru) {
-  --font-display: 'Literata', 'Fraunces', 'PT Serif', Georgia, serif;
+  --font-display: 'Literata', 'Literata Cover', 'Fraunces', 'Fraunces Cover', 'PT Serif', Georgia, serif;
 }
 /* The wordmark and the cover title are the name, always in Fraunces. */
 .wordmark,
 .cover h1 {
-  font-family: 'Fraunces', Georgia, serif;
+  font-family: 'Fraunces', 'Fraunces Cover', Georgia, serif;
 }
 html:lang(ru) .hero h2,
 html:lang(ru) .finale h2,
@@ -8224,4 +8224,9 @@ html.nav-compact .nav-sheet-count {
   margin: 0;
   max-width: none;
   padding-top: 12px;
+}
+
+/* First jumps keep their target while deferred reading fonts settle. */
+html.fonts-pending {
+  scroll-behavior: auto;
 }

@@ -1,4 +1,5 @@
 import '../styles/main.css';
+import '../styles/fonts-full.css';
 import '../styles/factoids.css';
 import type { App } from '../app';
 import type { Card, CardsFile } from '../lib/types';

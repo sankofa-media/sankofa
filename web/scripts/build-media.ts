@@ -211,3 +211,13 @@ if (tool && webp && existsSync(featuresDir)) {
 mkdirSync(dirname(out), { recursive: true });
 writeFileSync(out, JSON.stringify({ widths: WIDTHS, files, sizes, ratios, colours, webp: webps }));
 console.log(`media variants: ${tool ?? 'none (no sips or vipsthumbnail)'}, ${Object.keys(files).length} images, ${webps.length} with WebP`);
+
+// The cover is a backdrop: give it its own lighter responsive encodings.
+const hero = join(dir, 'hero-v0.jpg');
+if (webp && existsSync(hero)) {
+  for (const w of WIDTHS) {
+    const dst = join(dir, `cover-${w}.webp`);
+    if (webp === 'cwebp') execFileSync('cwebp', ['-quiet', '-resize', String(w), '0', '-q', '25', hero, '-o', dst]);
+    else execFileSync('vipsthumbnail', [hero, '--size', `${w}x`, '-o', `${resolve(dst)}[Q=25,strip]`]);
+  }
+}

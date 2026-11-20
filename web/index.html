@@ -44,7 +44,7 @@
         if (l === 'ru' && location.pathname === '/') document.title = 'Sankofa — Вернись и забери';
       })();
     </script>
-    <link rel="preload" as="image" type="image/webp" imagesrcset="media/w960/hero-v0.webp 960w, media/hero-v0.webp 1600w" imagesizes="100vw" fetchpriority="high" />
+    <link rel="preload" as="font" type="font/woff2" href="/src/fonts/fraunces-cover.woff2" crossorigin />
     <style>
       /* Critical: what the first screen needs before the stylesheet arrives. */
       html,body{margin:0;background:#0c0d18;color:#f2e9d8}
@@ -92,7 +92,7 @@
     <main id="story" tabindex="-1">
       <section class="cover" aria-labelledby="cover-title">
         <figure class="cover-art">
-          <picture><source type="image/webp" srcset="media/w960/hero-v0.webp 960w, media/hero-v0.webp 1600w" sizes="100vw" /><img src="media/hero-v0.jpg" width="1600" height="1141" alt="" fetchpriority="high" decoding="async" onerror="var s=this.previousElementSibling;if(s&amp;&amp;s.tagName==='SOURCE'){s.remove();this.src=this.src}" /></picture>
+          <picture><source media="(max-width: 760px)" type="image/webp" srcset="media/cover-480.webp 480w, media/cover-960.webp 960w" sizes="100vw" /><source type="image/webp" srcset="media/cover-960.webp 960w, media/cover-1600.webp 1600w" sizes="100vw" /><img src="media/hero-v0.jpg" width="1600" height="1141" alt="" fetchpriority="low" decoding="async" onerror="this.parentElement.querySelectorAll('source').forEach(function(s){s.remove()});this.onerror=null;this.src=this.src" /></picture>
         </figure>
         <div class="cover-inner">
           <h1 id="cover-title">Sanko<em>f</em>a</h1>
