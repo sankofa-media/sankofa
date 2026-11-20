@@ -78,6 +78,13 @@ func (s *Server) Handler() http.Handler {
 	m.HandleFunc("POST "+Prefix+"/admin/pulses/{id}", s.admin(s.decidePulse))
 	m.HandleFunc("GET "+Prefix+"/admin/queue", s.admin(s.queue))
 	m.HandleFunc("POST "+Prefix+"/admin/words/{id}", s.admin(s.decide))
+	// The owner's review notes on the whole museum (review.go).
+	m.HandleFunc("GET "+Prefix+"/review", s.admin(s.listReviews))
+	m.HandleFunc("POST "+Prefix+"/review", s.admin(s.createReview))
+	m.HandleFunc("GET "+Prefix+"/review/export", s.admin(s.exportReviews))
+	m.HandleFunc("PATCH "+Prefix+"/review/{id}", s.admin(s.updateReview))
+	m.HandleFunc("DELETE "+Prefix+"/review/{id}", s.admin(s.deleteReview))
+	m.HandleFunc("GET "+Prefix+"/review/{id}/audio", s.admin(s.reviewAudio))
 	return headers(m)
 }
 
