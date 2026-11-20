@@ -6,7 +6,7 @@ import type { App } from './app';
 import { cardLink } from './app';
 import type { CardsFile, ChaptersFile } from './lib/types';
 import { ERAS } from './lib/types';
-import { holdScroll, placeTop, rememberPlace, takePlace } from './lib/place';
+import { holdScroll, placeNow, placeTop, rememberPlace, takePlace } from './lib/place';
 import { CardSet, cardForEdition, localizeCard, localizeChapter } from './lib/cards';
 import { chapterForEdition, sortChapters } from './lib/chapters';
 import { formatFragment } from './lib/fragment';
@@ -80,6 +80,10 @@ export function switchLang(to: Lang): void {
 }
 
 async function start(): Promise<void> {
+  const returnPlace = history.state?.museumPlace as ReturnType<typeof placeNow>;
+  window.addEventListener('pagehide', () => {
+    history.replaceState({ ...history.state, museumPlace: placeNow() }, '', location.href);
+  });
   // The link's language: lang= in the hash, or the page's path (/ru/…).
   const fromHash = langOfLocation(location.pathname, location.hash) ?? null;
   const current = detectLang(fromHash, storedLang(), navigator.languages ?? navigator.language);
@@ -87,6 +91,7 @@ async function start(): Promise<void> {
   if (isLang(fromHash)) storeLang(fromHash);
   document.documentElement.lang = current;
   localizeStatics(current);
+  installFeatures();
   const loading = h('div.loading', { role: 'progressbar', 'aria-label': t('Loading the museum') });
   document.body.append(loading);
   let cardsFile: CardsFile;
@@ -173,7 +178,7 @@ async function start(): Promise<void> {
       const next = reader.recordVisit(c.id);
       pathListeners.forEach((l) => l(next));
       route = { ...route, point: { ...route.point, focus: c.id } };
-      if (!atlas.isOpen && !descent.isOpen && !listen.isOpen && !engine.isOpen && !roots.isOpen && !rootsMap.isOpen && !features.isOpen && !route.ch && chapterNow) route.ch = chapterNow;
+      if (!atlas.isOpen && !descent.isOpen && !listen.isOpen && !engine.isOpen && !roots.isOpen && !rootsMap.isOpen && !route.ch && chapterNow) route.ch = chapterNow;
       writeRoute(route, opts.push ?? true);
     },
     closeCard() {
@@ -222,7 +227,7 @@ async function start(): Promise<void> {
       chapterNow = id;
       // The link follows the chapter being read, so a reload or a shared
       // link opens there; overlays keep their own links.
-      if (id && !atlas.isOpen && !descent.isOpen && !listen.isOpen && !engine.isOpen && !roots.isOpen && !rootsMap.isOpen && !features.isOpen && !route.point.focus && !route.view && route.ch !== id) {
+      if (id && !atlas.isOpen && !descent.isOpen && !listen.isOpen && !engine.isOpen && !roots.isOpen && !rootsMap.isOpen && !route.point.focus && !route.view && route.ch !== id) {
         route = { point: {}, ch: id };
         writeRoute(route, false);
       }
@@ -271,7 +276,6 @@ async function start(): Promise<void> {
     if (keep !== 'listen' && listen.isOpen) listen.close();
     if (keep !== 'engine' && engine.isOpen) engine.close();
     if (!isMechView(keep) && mech.isOpen) mech.close();
-    if (keep !== 'features' && keep !== 'feature' && features.isOpen) features.close();
   };
   const listen = new Listen(app);
   listen.onClose = () => {
@@ -315,8 +319,7 @@ async function start(): Promise<void> {
       if (isLang(to) && to !== lang()) switchLang(to);
     }),
   );
-  // The story is built when the museum itself is first shown: a reader who
-  // lands on a special project's page gets the project, not the museum behind it.
+  // This entry owns museum pages; special projects have a separate entry.
   let museumBuilt = false;
   const ensureMuseum = () => {
     if (museumBuilt) return;
@@ -325,6 +328,7 @@ async function start(): Promise<void> {
     buildStory(app, document.getElementById('story')!);
     trackChapters(app);
   };
+  ensureMuseum();
   // Documents, working objects, how we checked, the guide and the dedication.
   const mech = installMechanics(app, {
     navigate(view, item, push = true) {
@@ -332,25 +336,6 @@ async function start(): Promise<void> {
       bookDrawer.close(true);
       if (view) closeOverlays(view);
       route = view ? { point: {}, view, ...(item ? { item } : {}) } : { point: {}, ch: chapterNow ?? undefined };
-      writeRoute(route, push);
-    },
-  });
-  // Special projects: the list and each feature, loaded when opened.
-  const features = installFeatures(app, {
-    switchLang: () => switchLang(lang() === 'ru' ? 'en' : 'ru'),
-    navigate(view, item, scene, push = true) {
-      // Reading on into the next scene changes only the link.
-      const sceneOnly = !push && view === 'feature' && route.view === 'feature' && route.item === item;
-      if (!sceneOnly) {
-        cardDrawer.close(true);
-        bookDrawer.close(true);
-        if (view) closeOverlays(view);
-      }
-      route = view ? { point: {}, view, ...(item ? { item } : {}), ...(scene ? { scene } : {}) } : { point: {}, ch: chapterNow ?? undefined };
-      if (!view) {
-        ensureMuseum();
-        features.close();
-      }
       writeRoute(route, push);
     },
   });
@@ -487,7 +472,7 @@ async function start(): Promise<void> {
       // After a language or copy switch, come back to the same step; a plain
       // chapter link opens at the chapter's top. Either way the place is held
       // while pictures, maps and fonts above it settle.
-      const back = initial ? takePlace(route.ch, route.step) : undefined;
+      const back = initial ? (returnPlace?.ch === route.ch ? returnPlace : takePlace(route.ch, route.step)) : undefined;
       if (back && document.getElementById(`ch-${back.ch}`)) holdScroll(() => placeTop(back));
       else if (initial) holdChapter(route.ch);
       else scrollToChapter(route.ch);
