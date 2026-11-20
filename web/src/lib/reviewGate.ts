@@ -33,7 +33,7 @@ export function takeReviewToken(store: Storage | null = storage()): string | nul
   const { token, rest } = splitReviewHash(location.hash);
   try {
     if (token !== undefined) {
-      history.replaceState(history.state, '', rest || location.pathname + location.search);
+      history.replaceState(history.state, '', location.pathname + location.search + rest);
       if (token) store?.setItem(REVIEW_KEY, token);
       else store?.removeItem(REVIEW_KEY);
     }

@@ -303,8 +303,8 @@ describe('the mood of the page', () => {
 
 describe('the pulse page link', () => {
   it('opens the pulse page of this feature, in the reader’s language', () => {
-    expect(pulseUrl('https://sankofa.black/', 'ru')).toBe('https://sankofa.black/#lang=ru&view=feature&item=angel&scene=warm&pulse=1');
-    expect(pulseUrl('https://sankofa.black/#x', 'en')).toBe('https://sankofa.black/#view=feature&item=angel&scene=warm&pulse=1');
+    expect(pulseUrl('https://sankofa.black/', 'ru')).toBe('https://sankofa.black/ru/features/angel/#scene=warm&pulse=1');
+    expect(pulseUrl('https://sankofa.black/#x', 'en')).toBe('https://sankofa.black/features/angel/#scene=warm&pulse=1');
     expect(wantsPulse('#view=feature&item=angel&pulse=1')).toBe(true);
     expect(wantsPulse('#view=feature&item=angel')).toBe(false);
   });

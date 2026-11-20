@@ -109,6 +109,7 @@ export function overlaps(c: { years: number[] }, from?: number, to?: number): bo
  * in `en`, because fragments are built from it.
  */
 export function localizeCard(c0: Card, lang: string): Card {
+  if ((c0 as Card & { localized?: boolean }).localized) return c0;
   // Licences and the museum's own credit words are translated; names stay.
   const c: Card = lang === 'en' || !c0.media ? c0 : { ...c0, media: c0.media.map((m) => ({ ...m, credit: localizeCredit(m.credit, lang as 'ru'), license: localizeCredit(m.license, lang as 'ru') })) };
   const tr = lang === 'en' ? undefined : c.translations?.[lang];
@@ -153,6 +154,7 @@ export function cardForEdition(c: Card, edition: 'm' | 'f'): Card {
 
 /** A chapter in the reader's language; the body only when every step is there. */
 export function localizeChapter(ch: Chapter, lang: string): Chapter {
+  if ((ch as Chapter & { localized?: boolean }).localized) return ch;
   const tr = lang === 'en' ? undefined : ch.translations?.[lang];
   if (!tr) return { ...ch, textLang: 'en' };
   const steps = tr.steps && tr.steps.length === ch.steps.length ? tr.steps : ch.steps;

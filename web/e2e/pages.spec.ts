@@ -68,7 +68,9 @@ test('from the museum, a project opens on its path, and Back returns to the same
   await page.goBack();
   await expect(sheet(page)).toHaveCount(0);
   await expect(page.locator('#story')).toBeVisible();
-  expect(Math.abs((await page.evaluate(() => window.scrollY)) - y)).toBeLessThan(80);
+  // Back now loads a document; wait for its museum enhancement and scroll restoration.
+  await expect(page.locator('article.chapter').first()).toBeAttached();
+  await expect.poll(async () => Math.abs((await page.evaluate(() => window.scrollY)) - y)).toBeLessThan(80);
 });
 
 test('a pre-rendered page carries its text and metadata, and opens the museum at it', async ({ page, request }) => {

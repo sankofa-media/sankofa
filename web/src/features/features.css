@@ -1,4 +1,4 @@
-/* Special projects: the sheet and the list (main bundle; a feature brings its own styles). */
+/* The standalone page has its own scrolling viewport; cards overlay it. */
 .ft-sheet {
   position: fixed;
   inset: 0;

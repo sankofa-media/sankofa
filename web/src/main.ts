@@ -6,7 +6,7 @@ import type { App } from './app';
 import { cardLink } from './app';
 import type { CardsFile, ChaptersFile } from './lib/types';
 import { ERAS } from './lib/types';
-import { holdScroll, placeTop, rememberPlace, takePlace } from './lib/place';
+import { holdScroll, placeNow, placeTop, rememberPlace, takePlace } from './lib/place';
 import { CardSet, cardForEdition, localizeCard, localizeChapter } from './lib/cards';
 import { chapterForEdition, sortChapters } from './lib/chapters';
 import { formatFragment } from './lib/fragment';
@@ -40,12 +40,11 @@ import { compileLexicon, type NamesFile } from './lib/names';
 import { setLexicon, weaveLive } from './lib/weave';
 import { Facts, usableFactoids, type FactoidsFile } from './lib/factoids';
 import { FactPanel } from './views/factoid';
-import { takeReviewToken, watchReviewHash } from './lib/reviewGate';
 
 async function load<T>(url: string): Promise<T> {
   // The cover paints first; the data comes at a lower priority, with a
   // timeout and further tries on a slow line.
-  const data = await loadJson<T>(url, { priority: 'low', timeout: 20_000 });
+  const data = await loadJson<T>(url, { priority: 'low', timeout: 120_000 });
   if (data === null) throw new Error(`${url}: not found`);
   return data;
 }
@@ -81,6 +80,10 @@ export function switchLang(to: Lang): void {
 }
 
 async function start(): Promise<void> {
+  const returnPlace = history.state?.museumPlace as ReturnType<typeof placeNow>;
+  window.addEventListener('pagehide', () => {
+    history.replaceState({ ...history.state, museumPlace: placeNow() }, '', location.href);
+  });
   // The link's language: lang= in the hash, or the page's path (/ru/…).
   const fromHash = langOfLocation(location.pathname, location.hash) ?? null;
   const current = detectLang(fromHash, storedLang(), navigator.languages ?? navigator.language);
@@ -88,6 +91,7 @@ async function start(): Promise<void> {
   if (isLang(fromHash)) storeLang(fromHash);
   document.documentElement.lang = current;
   localizeStatics(current);
+  installFeatures();
   const loading = h('div.loading', { role: 'progressbar', 'aria-label': t('Loading the museum') });
   document.body.append(loading);
   let cardsFile: CardsFile;
@@ -145,10 +149,7 @@ async function start(): Promise<void> {
 
   // Factoids are an extra, like listening: they arrive after the cards and
   // fill the views that wait for them; without them the museum is whole.
-  const facts = new Facts();
-  void loadJson<FactoidsFile>('data/factoids.json', { priority: 'low', timeout: 20_000 })
-    .then((f) => facts.fill(usableFactoids(f)))
-    .catch(() => facts.fill([]));
+  const facts = new Facts(async () => usableFactoids(await loadJson<FactoidsFile>('data/factoids.json', { priority: 'low', timeout: 60_000 })));
 
   const app: App = {
     set,
@@ -177,7 +178,7 @@ async function start(): Promise<void> {
       const next = reader.recordVisit(c.id);
       pathListeners.forEach((l) => l(next));
       route = { ...route, point: { ...route.point, focus: c.id } };
-      if (!atlas.isOpen && !descent.isOpen && !listen.isOpen && !engine.isOpen && !roots.isOpen && !rootsMap.isOpen && !features.isOpen && !route.ch && chapterNow) route.ch = chapterNow;
+      if (!atlas.isOpen && !descent.isOpen && !listen.isOpen && !engine.isOpen && !roots.isOpen && !rootsMap.isOpen && !route.ch && chapterNow) route.ch = chapterNow;
       writeRoute(route, opts.push ?? true);
     },
     closeCard() {
@@ -226,7 +227,7 @@ async function start(): Promise<void> {
       chapterNow = id;
       // The link follows the chapter being read, so a reload or a shared
       // link opens there; overlays keep their own links.
-      if (id && !atlas.isOpen && !descent.isOpen && !listen.isOpen && !engine.isOpen && !roots.isOpen && !rootsMap.isOpen && !features.isOpen && !route.point.focus && !route.view && route.ch !== id) {
+      if (id && !atlas.isOpen && !descent.isOpen && !listen.isOpen && !engine.isOpen && !roots.isOpen && !rootsMap.isOpen && !route.point.focus && !route.view && route.ch !== id) {
         route = { point: {}, ch: id };
         writeRoute(route, false);
       }
@@ -275,7 +276,6 @@ async function start(): Promise<void> {
     if (keep !== 'listen' && listen.isOpen) listen.close();
     if (keep !== 'engine' && engine.isOpen) engine.close();
     if (!isMechView(keep) && mech.isOpen) mech.close();
-    if (keep !== 'features' && keep !== 'feature' && features.isOpen) features.close();
   };
   const listen = new Listen(app);
   listen.onClose = () => {
@@ -319,8 +319,7 @@ async function start(): Promise<void> {
       if (isLang(to) && to !== lang()) switchLang(to);
     }),
   );
-  // The story is built when the museum itself is first shown: a reader who
-  // lands on a special project's page gets the project, not the museum behind it.
+  // This entry owns museum pages; special projects have a separate entry.
   let museumBuilt = false;
   const ensureMuseum = () => {
     if (museumBuilt) return;
@@ -329,6 +328,7 @@ async function start(): Promise<void> {
     buildStory(app, document.getElementById('story')!);
     trackChapters(app);
   };
+  ensureMuseum();
   // Documents, working objects, how we checked, the guide and the dedication.
   const mech = installMechanics(app, {
     navigate(view, item, push = true) {
@@ -336,25 +336,6 @@ async function start(): Promise<void> {
       bookDrawer.close(true);
       if (view) closeOverlays(view);
       route = view ? { point: {}, view, ...(item ? { item } : {}) } : { point: {}, ch: chapterNow ?? undefined };
-      writeRoute(route, push);
-    },
-  });
-  // Special projects: the list and each feature, loaded when opened.
-  const features = installFeatures(app, {
-    switchLang: () => switchLang(lang() === 'ru' ? 'en' : 'ru'),
-    navigate(view, item, scene, push = true) {
-      // Reading on into the next scene changes only the link.
-      const sceneOnly = !push && view === 'feature' && route.view === 'feature' && route.item === item;
-      if (!sceneOnly) {
-        cardDrawer.close(true);
-        bookDrawer.close(true);
-        if (view) closeOverlays(view);
-      }
-      route = view ? { point: {}, view, ...(item ? { item } : {}), ...(scene ? { scene } : {}) } : { point: {}, ch: chapterNow ?? undefined };
-      if (!view) {
-        ensureMuseum();
-        features.close();
-      }
       writeRoute(route, push);
     },
   });
@@ -470,29 +451,28 @@ async function start(): Promise<void> {
       // An old hash link to a feature (#view=feature&item=…) moves to the
       // feature's own path, keeping the feature's own keys (lee=1, pulse=1).
       const extra = extraHashKeys(location.hash);
-      writeRoute(route, false, extra);
+      const url = urlOfRoute(route, lang());
+      location.replace(url + (extra ? (url.includes('#') ? '&' : '#') + extra : ''));
+      return;
     } else ensureMuseum();
     if (initial) {
       // What the build pre-rendered for readers without the museum's script.
       document.querySelectorAll('[data-prerender]').forEach((el) => el.remove());
       document.body.classList.remove('pre');
     }
-    // Back from a special project: the museum comes back where it was left.
-    const fromFeature = features.isOpen && screen !== 'features' && screen !== 'feature';
     closeOverlays(screen);
     if (screen === 'listen') listen.open();
     else if (screen === 'engine') engine.open();
     else if (screen === 'roots') roots.open(route.artist, route.item);
     else if (screen === 'roots-map') rootsMap.open();
     else if (isMechView(screen)) mech.open(screen, route.item);
-    else if (screen === 'features' || screen === 'feature') features.open(screen, route.item, route.scene);
     else if (screen === 'descent') descent.open(route.point.from, route.point.zoom);
     else if (screen === 'atlas') atlas.open(route.point, { atlas: route.atlas, country: route.country });
-    else if (route.ch && !fromFeature && (initial || route.ch !== chapterNow)) {
+    else if (route.ch && (initial || route.ch !== chapterNow)) {
       // After a language or copy switch, come back to the same step; a plain
       // chapter link opens at the chapter's top. Either way the place is held
       // while pictures, maps and fonts above it settle.
-      const back = initial ? takePlace(route.ch, route.step) : undefined;
+      const back = initial ? (returnPlace?.ch === route.ch ? returnPlace : takePlace(route.ch, route.step)) : undefined;
       if (back && document.getElementById(`ch-${back.ch}`)) holdScroll(() => placeTop(back));
       else if (initial) holdChapter(route.ch);
       else scrollToChapter(route.ch);
@@ -609,9 +589,4 @@ function trackChapters(app: App): void {
   tick();
 }
 
-// The owner's review mode: its token leaves the link before the route is read,
-// and only a device holding it downloads the mode at all.
-const reviewToken = takeReviewToken();
-watchReviewHash();
 start();
-if (reviewToken) void import('./review').then((m) => m.install(reviewToken));

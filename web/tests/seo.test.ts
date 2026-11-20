@@ -170,15 +170,15 @@ describe('the crawlable pages', () => {
     expect(JSON.parse(json)['@context']).toBe('https://schema.org');
   });
 
-  it('pre-renders into the built index.html without losing the museum', () => {
+  it('pre-renders standalone features while the home keeps the museum', () => {
     const template = `<!doctype html><html lang="en"><head><!-- seo:start x --><title>Old</title><!-- seo:end --><link rel="alternate" type="application/atom+xml" href="features.atom" /><link rel="preload" as="image" href="hero.webp" /></head><body><main id="story"></main><noscript><!-- seo:noscript --></noscript></body></html>`;
     const html = renderPage(template, SITE, at('/ru/features/sea-lion-girls/'), '<nav>links</nav>');
     expect(html).toContain('<html lang="ru"');
     expect(html).not.toContain('<title>Old</title>');
     expect(html).toContain('<body class="pre">');
     expect(html).toContain('<div class="prerender" data-prerender lang="ru">');
-    expect(html).toContain('<main id="story">');
-    expect(html).toContain('<noscript><nav>links</nav></noscript>');
+    expect(html).not.toContain('<main id="story">');
+    expect(html).not.toContain('<noscript><nav>links</nav></noscript>');
     expect(html).not.toContain('hero.webp');
     expect(html.match(/application\/atom\+xml/g)).toHaveLength(1);
     expect(html).toContain('href="/ru/features.atom"');

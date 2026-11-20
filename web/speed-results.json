@@ -1,0 +1,894 @@
+{
+  "capturedAt": "2026-11-20T21:51:25.186059+00:00",
+  "baselineCommit": "389a45cc358889c3c9e445398c89268274184e7d",
+  "implementationCommit": "1839405c6eca9087f5c6b28fe3388d631a2277c4",
+  "method": {
+    "server": "Local vite preview; not a production deployment",
+    "browser": "Playwright Chromium, fresh context per language, CDP cache disabled",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "downloadBytesPerSecond": 102400,
+    "uploadBytesPerSecond": 102400,
+    "latencyMilliseconds": 100,
+    "bytes": "CDP encodedDataLength: streamed response bytes, reconciled with completed response totals including headers; all requests started before readiness are counted to that point",
+    "museumReady": "At least one article.chapter exists and .loading is absent",
+    "featureReady": "Feature article exists and at least one feature image has naturalWidth > 0",
+    "samplesPerLanguageAndPage": 1,
+    "baseline": "Built from git archive of baselineCommit with the same generated public/data and public/media inputs",
+    "commands": [
+      "cd web && sh scripts/build-data.sh && npx vite build",
+      "npx vite preview --port 4173 --strictPort",
+      "PORT=4173 node scripts/measure-speed.mjs",
+      "PORT=4173 FEATURE=sea-lion-girls node scripts/measure-speed.mjs"
+    ]
+  },
+  "validation": {
+    "unit": {
+      "passed": 452,
+      "files": 39
+    },
+    "typescript": "passed",
+    "browser": {
+      "completeRun": {
+        "passed": 487,
+        "failed": 17,
+        "skipped": 46
+      },
+      "failedScenariosRechecked": {
+        "passed": 17,
+        "unresolved": 0
+      },
+      "finalRegressionRun": {
+        "passed": 157,
+        "skipped": 9,
+        "includesNewLegacyNavigationScenarios": 2
+      },
+      "finalOverlayAndPhotographRun": {
+        "passed": 6
+      },
+      "uniquePassingScenariosAcrossRuns": 506,
+      "note": "The complete run preceded final fixes; every failure passed a targeted rerun. Skips are pre-existing platform/content/opt-in conditions."
+    },
+    "seo": {
+      "htmlPages": 942,
+      "llmsFiles": "All three byte-identical to baseline",
+      "sitemap": "Identical apart from lastmod dates; the archived baseline has no content Git history."
+    }
+  },
+  "runs": {
+    "museum": {
+      "before": [
+        {
+          "language": "en",
+          "ready": true,
+          "throughput": 102400,
+          "latency": 100,
+          "seconds": 23.262,
+          "bytes": 2325744,
+          "requests": [
+            {
+              "url": "http://localhost:4174/data/cards.json",
+              "bytes": 1455288
+            },
+            {
+              "url": "http://localhost:4174/assets/index-DX9Cz2Ig.js",
+              "bytes": 180916
+            },
+            {
+              "url": "http://localhost:4174/media/hero-v0.webp",
+              "bytes": 166132
+            },
+            {
+              "url": "http://localhost:4174/assets/fraunces-latin-full-normal-CFFu7zhK.woff2",
+              "bytes": 121338
+            },
+            {
+              "url": "http://localhost:4174/assets/fraunces-latin-ext-full-normal-YHFkNujK.woff2",
+              "bytes": 105566
+            },
+            {
+              "url": "http://localhost:4174/assets/fraunces-latin-full-italic-DUzRa-kt.woff2",
+              "bytes": 81504
+            },
+            {
+              "url": "http://localhost:4174/assets/inter-latin-standard-normal-BwkfbSeq.woff2",
+              "bytes": 73240
+            },
+            {
+              "url": "http://localhost:4174/assets/index-BzI9CVck.css",
+              "bytes": 39027
+            },
+            {
+              "url": "http://localhost:4174/data/chapters.json",
+              "bytes": 37299
+            },
+            {
+              "url": "http://localhost:4174/data/names.json",
+              "bytes": 19597
+            },
+            {
+              "url": "http://localhost:4174/data/media.json",
+              "bytes": 18504
+            },
+            {
+              "url": "http://localhost:4174/data/listen.json",
+              "bytes": 16239
+            },
+            {
+              "url": "http://localhost:4174/",
+              "bytes": 6800
+            },
+            {
+              "url": "http://localhost:4174/data/voices.json",
+              "bytes": 4294
+            }
+          ],
+          "page": "museum"
+        },
+        {
+          "language": "ru",
+          "ready": true,
+          "throughput": 102400,
+          "latency": 100,
+          "seconds": 25.845,
+          "bytes": 2599147,
+          "requests": [
+            {
+              "url": "http://localhost:4174/data/cards.json",
+              "bytes": 1455288
+            },
+            {
+              "url": "http://localhost:4174/assets/index-DX9Cz2Ig.js",
+              "bytes": 180916
+            },
+            {
+              "url": "http://localhost:4174/media/hero-v0.webp",
+              "bytes": 166132
+            },
+            {
+              "url": "http://localhost:4174/assets/fraunces-latin-full-normal-CFFu7zhK.woff2",
+              "bytes": 121338
+            },
+            {
+              "url": "http://localhost:4174/assets/literata-latin-opsz-italic-CJ93D38p.woff2",
+              "bytes": 113502
+            },
+            {
+              "url": "http://localhost:4174/assets/literata-latin-opsz-normal-BHZsWIlc.woff2",
+              "bytes": 110402
+            },
+            {
+              "url": "http://localhost:4174/assets/fraunces-latin-full-italic-DUzRa-kt.woff2",
+              "bytes": 81504
+            },
+            {
+              "url": "http://localhost:4174/assets/inter-latin-standard-normal-BwkfbSeq.woff2",
+              "bytes": 73240
+            },
+            {
+              "url": "http://localhost:4174/assets/literata-cyrillic-opsz-italic-Bj0ndbyp.woff2",
+              "bytes": 63028
+            },
+            {
+              "url": "http://localhost:4174/assets/literata-cyrillic-opsz-normal-DgmypKXX.woff2",
+              "bytes": 62008
+            },
+            {
+              "url": "http://localhost:4174/assets/index-BzI9CVck.css",
+              "bytes": 39027
+            },
+            {
+              "url": "http://localhost:4174/data/chapters.json",
+              "bytes": 37299
+            },
+            {
+              "url": "http://localhost:4174/assets/inter-cyrillic-standard-normal-BFQXbQ-f.woff2",
+              "bytes": 29956
+            },
+            {
+              "url": "http://localhost:4174/data/names.json",
+              "bytes": 19597
+            },
+            {
+              "url": "http://localhost:4174/data/media.json",
+              "bytes": 18504
+            },
+            {
+              "url": "http://localhost:4174/data/listen.json",
+              "bytes": 16239
+            },
+            {
+              "url": "http://localhost:4174/ru/",
+              "bytes": 6873
+            },
+            {
+              "url": "http://localhost:4174/data/voices.json",
+              "bytes": 4294
+            }
+          ],
+          "page": "museum"
+        }
+      ],
+      "after": [
+        {
+          "language": "en",
+          "page": "museum",
+          "ready": true,
+          "throughput": 102400,
+          "latency": 100,
+          "seconds": 16.336,
+          "bytes": 1631008,
+          "requests": [
+            {
+              "url": "http://localhost:4173/data/cache/cards.en.8fef7c9c9382d0f2.json",
+              "bytes": 744506
+            },
+            {
+              "url": "http://localhost:4173/media/hero-v0.webp",
+              "bytes": 166132
+            },
+            {
+              "url": "http://localhost:4173/assets/fraunces-latin-full-normal-CFFu7zhK.woff2",
+              "bytes": 121338
+            },
+            {
+              "url": "http://localhost:4173/assets/main-Br3O3FgA.js",
+              "bytes": 110019
+            },
+            {
+              "url": "http://localhost:4173/assets/fraunces-latin-ext-full-normal-YHFkNujK.woff2",
+              "bytes": 105566
+            },
+            {
+              "url": "http://localhost:4173/assets/fraunces-latin-full-italic-DUzRa-kt.woff2",
+              "bytes": 81504
+            },
+            {
+              "url": "http://localhost:4173/assets/inter-latin-standard-normal-BwkfbSeq.woff2",
+              "bytes": 73240
+            },
+            {
+              "url": "http://localhost:4173/assets/focusTrap-B-bq5DsO.js",
+              "bytes": 63893
+            },
+            {
+              "url": "http://localhost:4173/assets/card-BxpoTY6W.js",
+              "bytes": 35746
+            },
+            {
+              "url": "http://localhost:4173/assets/focusTrap-CLQAH05U.css",
+              "bytes": 28074
+            },
+            {
+              "url": "http://localhost:4173/data/cache/media.en.ed0c6d5baef0bc07.json",
+              "bytes": 18504
+            },
+            {
+              "url": "http://localhost:4173/data/cache/chapters.en.c9c3d6ad21e74306.json",
+              "bytes": 15263
+            },
+            {
+              "url": "http://localhost:4173/data/cache/listen.en.227c619c59cd0e62.json",
+              "bytes": 12171
+            },
+            {
+              "url": "http://localhost:4173/assets/index-DC5L_QCT.js",
+              "bytes": 10519
+            },
+            {
+              "url": "http://localhost:4173/data/cache/names.en.4bbb3ea135125e5d.json",
+              "bytes": 9865
+            },
+            {
+              "url": "http://localhost:4173/assets/mechanics-BBp9ZWBl.css",
+              "bytes": 8129
+            },
+            {
+              "url": "http://localhost:4173/assets/hide-BDqPZrqr.js",
+              "bytes": 7526
+            },
+            {
+              "url": "http://localhost:4173/",
+              "bytes": 6844
+            },
+            {
+              "url": "http://localhost:4173/assets/main-CvaRb4-h.css",
+              "bytes": 5574
+            },
+            {
+              "url": "http://localhost:4173/assets/miniPlayer-BzDAoMpT.js",
+              "bytes": 3139
+            },
+            {
+              "url": "http://localhost:4173/data/cache/voices.en.a65a3d9a78d52cd8.json",
+              "bytes": 2585
+            },
+            {
+              "url": "http://localhost:4173/assets/rolldown-runtime-DK3Fl9T5.js",
+              "bytes": 479
+            },
+            {
+              "url": "http://localhost:4173/assets/mechanics-CkTiwdjZ.js",
+              "bytes": 392
+            }
+          ]
+        },
+        {
+          "language": "ru",
+          "page": "museum",
+          "ready": true,
+          "throughput": 102400,
+          "latency": 100,
+          "seconds": 22.067,
+          "bytes": 2210335,
+          "requests": [
+            {
+              "url": "http://localhost:4173/data/cache/cards.ru.de6bcd3562ecd6bb.json",
+              "bytes": 1037875
+            },
+            {
+              "url": "http://localhost:4173/media/hero-v0.webp",
+              "bytes": 166132
+            },
+            {
+              "url": "http://localhost:4173/assets/fraunces-latin-full-normal-CFFu7zhK.woff2",
+              "bytes": 121338
+            },
+            {
+              "url": "http://localhost:4173/assets/literata-latin-opsz-italic-CJ93D38p.woff2",
+              "bytes": 113502
+            },
+            {
+              "url": "http://localhost:4173/assets/literata-latin-opsz-normal-BHZsWIlc.woff2",
+              "bytes": 110402
+            },
+            {
+              "url": "http://localhost:4173/assets/main-Br3O3FgA.js",
+              "bytes": 110019
+            },
+            {
+              "url": "http://localhost:4173/assets/fraunces-latin-full-italic-DUzRa-kt.woff2",
+              "bytes": 81504
+            },
+            {
+              "url": "http://localhost:4173/assets/inter-latin-standard-normal-BwkfbSeq.woff2",
+              "bytes": 73240
+            },
+            {
+              "url": "http://localhost:4173/assets/focusTrap-B-bq5DsO.js",
+              "bytes": 63893
+            },
+            {
+              "url": "http://localhost:4173/assets/literata-cyrillic-opsz-italic-Bj0ndbyp.woff2",
+              "bytes": 63028
+            },
+            {
+              "url": "http://localhost:4173/assets/literata-cyrillic-opsz-normal-DgmypKXX.woff2",
+              "bytes": 62008
+            },
+            {
+              "url": "http://localhost:4173/assets/card-BxpoTY6W.js",
+              "bytes": 35746
+            },
+            {
+              "url": "http://localhost:4173/assets/inter-cyrillic-standard-normal-BFQXbQ-f.woff2",
+              "bytes": 29956
+            },
+            {
+              "url": "http://localhost:4173/assets/focusTrap-CLQAH05U.css",
+              "bytes": 28074
+            },
+            {
+              "url": "http://localhost:4173/data/cache/chapters.ru.7683851a44cb99dc.json",
+              "bytes": 22863
+            },
+            {
+              "url": "http://localhost:4173/data/cache/media.ru.ed0c6d5baef0bc07.json",
+              "bytes": 18504
+            },
+            {
+              "url": "http://localhost:4173/data/cache/listen.ru.04c541910855e59e.json",
+              "bytes": 13827
+            },
+            {
+              "url": "http://localhost:4173/data/cache/names.ru.28ed6ad500932ec5.json",
+              "bytes": 12713
+            },
+            {
+              "url": "http://localhost:4173/assets/index-DC5L_QCT.js",
+              "bytes": 10519
+            },
+            {
+              "url": "http://localhost:4173/assets/mechanics-BBp9ZWBl.css",
+              "bytes": 8129
+            },
+            {
+              "url": "http://localhost:4173/assets/hide-BDqPZrqr.js",
+              "bytes": 7526
+            },
+            {
+              "url": "http://localhost:4173/ru/",
+              "bytes": 6913
+            },
+            {
+              "url": "http://localhost:4173/assets/main-CvaRb4-h.css",
+              "bytes": 5574
+            },
+            {
+              "url": "http://localhost:4173/assets/miniPlayer-BzDAoMpT.js",
+              "bytes": 3139
+            },
+            {
+              "url": "http://localhost:4173/data/cache/voices.ru.1032a042ea3ce0e6.json",
+              "bytes": 3040
+            },
+            {
+              "url": "http://localhost:4173/assets/rolldown-runtime-DK3Fl9T5.js",
+              "bytes": 479
+            },
+            {
+              "url": "http://localhost:4173/assets/mechanics-CkTiwdjZ.js",
+              "bytes": 392
+            }
+          ]
+        }
+      ]
+    },
+    "sea-lion-girls": {
+      "before": [
+        {
+          "language": "en",
+          "page": "sea-lion-girls",
+          "ready": true,
+          "throughput": 102400,
+          "latency": 100,
+          "seconds": 24.553,
+          "bytes": 2341228,
+          "requests": [
+            {
+              "url": "http://localhost:4174/data/cards.json",
+              "bytes": 1455289
+            },
+            {
+              "url": "http://localhost:4174/assets/index-DX9Cz2Ig.js",
+              "bytes": 180916
+            },
+            {
+              "url": "http://localhost:4174/media/hero-v0.webp",
+              "bytes": 166132
+            },
+            {
+              "url": "http://localhost:4174/assets/fraunces-latin-full-normal-CFFu7zhK.woff2",
+              "bytes": 121338
+            },
+            {
+              "url": "http://localhost:4174/assets/inter-latin-standard-normal-BwkfbSeq.woff2",
+              "bytes": 73240
+            },
+            {
+              "url": "http://localhost:4174/data/factoids.json",
+              "bytes": 55515
+            },
+            {
+              "url": "http://localhost:4174/data/cabinet.json",
+              "bytes": 55515
+            },
+            {
+              "url": "http://localhost:4174/assets/index-BzI9CVck.css",
+              "bytes": 39027
+            },
+            {
+              "url": "http://localhost:4174/data/chapters.json",
+              "bytes": 37299
+            },
+            {
+              "url": "http://localhost:4174/data/features/sea-lion-girls.json",
+              "bytes": 35599
+            },
+            {
+              "url": "http://localhost:4174/features/sea-lion-girls/",
+              "bytes": 24779
+            },
+            {
+              "url": "http://localhost:4174/data/names.json",
+              "bytes": 19597
+            },
+            {
+              "url": "http://localhost:4174/data/media.json",
+              "bytes": 18504
+            },
+            {
+              "url": "http://localhost:4174/data/listen.json",
+              "bytes": 16239
+            },
+            {
+              "url": "http://localhost:4174/assets/sea-lion-girls-BbUzDaYO.js",
+              "bytes": 8533
+            },
+            {
+              "url": "http://localhost:4174/assets/engine-CuRVMqB_.js",
+              "bytes": 8327
+            },
+            {
+              "url": "http://localhost:4174/data/dedication.json",
+              "bytes": 6319
+            },
+            {
+              "url": "http://localhost:4174/data/voices.json",
+              "bytes": 4294
+            },
+            {
+              "url": "http://localhost:4174/assets/sea-lion-girls-qhKM57Ed.css",
+              "bytes": 4106
+            },
+            {
+              "url": "http://localhost:4174/assets/engine-BUe7yMvl.css",
+              "bytes": 3718
+            },
+            {
+              "url": "http://localhost:4174/assets/host-DN7TYLTj.js",
+              "bytes": 3116
+            },
+            {
+              "url": "http://localhost:4174/data/features.json",
+              "bytes": 2421
+            },
+            {
+              "url": "http://localhost:4174/assets/host-COZ0iv3o.css",
+              "bytes": 1405
+            }
+          ]
+        },
+        {
+          "language": "ru",
+          "page": "sea-lion-girls",
+          "ready": true,
+          "throughput": 102400,
+          "latency": 100,
+          "seconds": 29.688,
+          "bytes": 2971938,
+          "requests": [
+            {
+              "url": "http://localhost:4174/data/cards.json",
+              "bytes": 1455288
+            },
+            {
+              "url": "http://localhost:4174/assets/index-DX9Cz2Ig.js",
+              "bytes": 180916
+            },
+            {
+              "url": "http://localhost:4174/media/hero-v0.webp",
+              "bytes": 166132
+            },
+            {
+              "url": "http://localhost:4174/data/factoids.json",
+              "bytes": 139515
+            },
+            {
+              "url": "http://localhost:4174/data/cabinet.json",
+              "bytes": 138015
+            },
+            {
+              "url": "http://localhost:4174/assets/fraunces-latin-full-normal-CFFu7zhK.woff2",
+              "bytes": 121338
+            },
+            {
+              "url": "http://localhost:4174/assets/literata-latin-opsz-italic-CJ93D38p.woff2",
+              "bytes": 113502
+            },
+            {
+              "url": "http://localhost:4174/assets/literata-latin-opsz-normal-BHZsWIlc.woff2",
+              "bytes": 110402
+            },
+            {
+              "url": "http://localhost:4174/assets/fraunces-latin-full-italic-DUzRa-kt.woff2",
+              "bytes": 81504
+            },
+            {
+              "url": "http://localhost:4174/assets/inter-latin-standard-normal-BwkfbSeq.woff2",
+              "bytes": 73240
+            },
+            {
+              "url": "http://localhost:4174/assets/literata-cyrillic-opsz-italic-Bj0ndbyp.woff2",
+              "bytes": 63028
+            },
+            {
+              "url": "http://localhost:4174/assets/literata-cyrillic-opsz-normal-DgmypKXX.woff2",
+              "bytes": 62008
+            },
+            {
+              "url": "http://localhost:4174/assets/index-BzI9CVck.css",
+              "bytes": 39027
+            },
+            {
+              "url": "http://localhost:4174/data/chapters.json",
+              "bytes": 37299
+            },
+            {
+              "url": "http://localhost:4174/data/features/sea-lion-girls.json",
+              "bytes": 35599
+            },
+            {
+              "url": "http://localhost:4174/assets/inter-cyrillic-standard-normal-BFQXbQ-f.woff2",
+              "bytes": 29956
+            },
+            {
+              "url": "http://localhost:4174/ru/features/sea-lion-girls/",
+              "bytes": 28590
+            },
+            {
+              "url": "http://localhost:4174/data/names.json",
+              "bytes": 19597
+            },
+            {
+              "url": "http://localhost:4174/data/media.json",
+              "bytes": 18504
+            },
+            {
+              "url": "http://localhost:4174/data/listen.json",
+              "bytes": 16239
+            },
+            {
+              "url": "http://localhost:4174/assets/sea-lion-girls-BbUzDaYO.js",
+              "bytes": 8533
+            },
+            {
+              "url": "http://localhost:4174/assets/engine-CuRVMqB_.js",
+              "bytes": 8327
+            },
+            {
+              "url": "http://localhost:4174/data/dedication.json",
+              "bytes": 6319
+            },
+            {
+              "url": "http://localhost:4174/data/voices.json",
+              "bytes": 4294
+            },
+            {
+              "url": "http://localhost:4174/assets/sea-lion-girls-qhKM57Ed.css",
+              "bytes": 4106
+            },
+            {
+              "url": "http://localhost:4174/assets/engine-BUe7yMvl.css",
+              "bytes": 3718
+            },
+            {
+              "url": "http://localhost:4174/assets/host-DN7TYLTj.js",
+              "bytes": 3116
+            },
+            {
+              "url": "http://localhost:4174/data/features.json",
+              "bytes": 2421
+            },
+            {
+              "url": "http://localhost:4174/assets/host-COZ0iv3o.css",
+              "bytes": 1405
+            }
+          ]
+        }
+      ],
+      "after": [
+        {
+          "language": "en",
+          "page": "sea-lion-girls",
+          "ready": true,
+          "throughput": 102400,
+          "latency": 100,
+          "seconds": 5.392,
+          "bytes": 490761,
+          "requests": [
+            {
+              "url": "http://localhost:4173/assets/fraunces-latin-full-normal-CFFu7zhK.woff2",
+              "bytes": 121338
+            },
+            {
+              "url": "http://localhost:4173/assets/inter-latin-standard-normal-BwkfbSeq.woff2",
+              "bytes": 73240
+            },
+            {
+              "url": "http://localhost:4173/data/cache/card-index.en.42015974a1445fb8.json",
+              "bytes": 70215
+            },
+            {
+              "url": "http://localhost:4173/assets/focusTrap-B-bq5DsO.js",
+              "bytes": 63893
+            },
+            {
+              "url": "http://localhost:4173/assets/focusTrap-CLQAH05U.css",
+              "bytes": 28074
+            },
+            {
+              "url": "http://localhost:4173/features/sea-lion-girls/",
+              "bytes": 20518
+            },
+            {
+              "url": "http://localhost:4173/data/cache/features/sea-lion-girls.en.723d3b0af0ce2ef2.json",
+              "bytes": 19118
+            },
+            {
+              "url": "http://localhost:4173/data/cache/media.en.ed0c6d5baef0bc07.json",
+              "bytes": 18504
+            },
+            {
+              "url": "http://localhost:4173/assets/index-DC5L_QCT.js",
+              "bytes": 10519
+            },
+            {
+              "url": "http://localhost:4173/data/cache/names.en.4bbb3ea135125e5d.json",
+              "bytes": 9865
+            },
+            {
+              "url": "http://localhost:4173/assets/sea-lion-girls-XLwxy_qD.js",
+              "bytes": 8580
+            },
+            {
+              "url": "http://localhost:4173/assets/engine-CQgHKaNk.js",
+              "bytes": 8466
+            },
+            {
+              "url": "http://localhost:4173/assets/mechanics-BBp9ZWBl.css",
+              "bytes": 8129
+            },
+            {
+              "url": "http://localhost:4173/assets/hide-BDqPZrqr.js",
+              "bytes": 7526
+            },
+            {
+              "url": "http://localhost:4173/assets/page-CeKvpDYZ.js",
+              "bytes": 4280
+            },
+            {
+              "url": "http://localhost:4173/assets/sea-lion-girls-qhKM57Ed.css",
+              "bytes": 4106
+            },
+            {
+              "url": "http://localhost:4173/data/cache/feature-caches/sea-lion-girls.en.fd22b96864a4dd20.json",
+              "bytes": 3901
+            },
+            {
+              "url": "http://localhost:4173/assets/engine-BUe7yMvl.css",
+              "bytes": 3718
+            },
+            {
+              "url": "http://localhost:4173/assets/miniPlayer-BzDAoMpT.js",
+              "bytes": 3139
+            },
+            {
+              "url": "http://localhost:4173/assets/page-COZ0iv3o.css",
+              "bytes": 1405
+            },
+            {
+              "url": "http://localhost:4173/data/cache/features.en.a6e17fa8a155d659.json",
+              "bytes": 1356
+            },
+            {
+              "url": "http://localhost:4173/assets/rolldown-runtime-DK3Fl9T5.js",
+              "bytes": 479
+            },
+            {
+              "url": "http://localhost:4173/assets/mechanics-CkTiwdjZ.js",
+              "bytes": 392
+            }
+          ]
+        },
+        {
+          "language": "ru",
+          "page": "sea-lion-girls",
+          "ready": true,
+          "throughput": 102400,
+          "latency": 100,
+          "seconds": 8.094,
+          "bytes": 741282,
+          "requests": [
+            {
+              "url": "http://localhost:4173/assets/fraunces-latin-full-normal-CFFu7zhK.woff2",
+              "bytes": 121338
+            },
+            {
+              "url": "http://localhost:4173/assets/literata-latin-opsz-normal-BHZsWIlc.woff2",
+              "bytes": 110402
+            },
+            {
+              "url": "http://localhost:4173/data/cache/card-index.ru.ecd6caad18464dc1.json",
+              "bytes": 105338
+            },
+            {
+              "url": "http://localhost:4173/assets/inter-latin-standard-normal-BwkfbSeq.woff2",
+              "bytes": 73240
+            },
+            {
+              "url": "http://localhost:4173/assets/focusTrap-B-bq5DsO.js",
+              "bytes": 63893
+            },
+            {
+              "url": "http://localhost:4173/assets/literata-cyrillic-opsz-normal-DgmypKXX.woff2",
+              "bytes": 62008
+            },
+            {
+              "url": "http://localhost:4173/assets/inter-cyrillic-standard-normal-BFQXbQ-f.woff2",
+              "bytes": 29956
+            },
+            {
+              "url": "http://localhost:4173/assets/focusTrap-CLQAH05U.css",
+              "bytes": 28074
+            },
+            {
+              "url": "http://localhost:4173/ru/features/sea-lion-girls/",
+              "bytes": 24444
+            },
+            {
+              "url": "http://localhost:4173/data/cache/features/sea-lion-girls.ru.369d4f24b0a197c1.json",
+              "bytes": 23734
+            },
+            {
+              "url": "http://localhost:4173/data/cache/media.ru.ed0c6d5baef0bc07.json",
+              "bytes": 18504
+            },
+            {
+              "url": "http://localhost:4173/data/cache/names.ru.28ed6ad500932ec5.json",
+              "bytes": 12713
+            },
+            {
+              "url": "http://localhost:4173/assets/index-DC5L_QCT.js",
+              "bytes": 10519
+            },
+            {
+              "url": "http://localhost:4173/assets/sea-lion-girls-XLwxy_qD.js",
+              "bytes": 8580
+            },
+            {
+              "url": "http://localhost:4173/assets/engine-CQgHKaNk.js",
+              "bytes": 8466
+            },
+            {
+              "url": "http://localhost:4173/assets/mechanics-BBp9ZWBl.css",
+              "bytes": 8129
+            },
+            {
+              "url": "http://localhost:4173/assets/hide-BDqPZrqr.js",
+              "bytes": 7526
+            },
+            {
+              "url": "http://localhost:4173/data/cache/feature-caches/sea-lion-girls.ru.a5a29d5351b38c21.json",
+              "bytes": 5179
+            },
+            {
+              "url": "http://localhost:4173/assets/page-CeKvpDYZ.js",
+              "bytes": 4280
+            },
+            {
+              "url": "http://localhost:4173/assets/sea-lion-girls-qhKM57Ed.css",
+              "bytes": 4106
+            },
+            {
+              "url": "http://localhost:4173/assets/engine-BUe7yMvl.css",
+              "bytes": 3718
+            },
+            {
+              "url": "http://localhost:4173/assets/miniPlayer-BzDAoMpT.js",
+              "bytes": 3139
+            },
+            {
+              "url": "http://localhost:4173/data/cache/features.ru.b17a2cb9c044fa1a.json",
+              "bytes": 1720
+            },
+            {
+              "url": "http://localhost:4173/assets/page-COZ0iv3o.css",
+              "bytes": 1405
+            },
+            {
+              "url": "http://localhost:4173/assets/rolldown-runtime-DK3Fl9T5.js",
+              "bytes": 479
+            },
+            {
+              "url": "http://localhost:4173/assets/mechanics-CkTiwdjZ.js",
+              "bytes": 392
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

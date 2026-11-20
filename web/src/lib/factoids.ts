@@ -129,8 +129,14 @@ export class Facts {
   list: Factoid[] = [];
   readonly ready: Promise<void>;
   private done!: () => void;
-  constructor() {
+  constructor(private loader?: () => Promise<Factoid[]>) {
     this.ready = new Promise((r) => (this.done = r));
+  }
+  load(): void {
+    const loader = this.loader;
+    if (!loader) return;
+    this.loader = undefined;
+    void loader().then(list => this.fill(list)).catch(() => { this.loader = loader; });
   }
   fill(list: Factoid[]): void {
     this.list = list;

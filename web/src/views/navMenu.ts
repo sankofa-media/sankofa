@@ -73,12 +73,14 @@ export function installNavMenu(nav: HTMLElement): void {
     const hint = HINTS[key] ? pick(HINTS[key]) : '';
     const count = key === 'book' ? h('span.nav-sheet-count', { 'data-sheet-count': '' }) : null;
     const item = h(
-      'button.nav-sheet-item',
+      key === 'features' ? 'a.nav-sheet-item' : 'button.nav-sheet-item',
       {
         type: 'button',
+        ...(key === 'features' ? { href: l === 'ru' ? '/ru/features/' : '/features/' } : {}),
         'data-entry': key,
         onclick: () => {
           close();
+          if (key === 'features') return;
           if (ready) b.click();
           else pending = b;
         },

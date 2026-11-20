@@ -717,11 +717,11 @@ test('a card with {male}/{female} paragraphs reads its own paragraph in each cop
     const page = await (await browser.newContext({ baseURL })).newPage();
     await page.addInitScript((e) => localStorage.setItem('sankofa.edition', e), ed);
     // Mark one shared card's copies in the data the museum loads.
-    await page.route('**/data/cards.json', async (route) => {
+    await page.route(/\/data\/(?:cache\/)?cards(?:\.(?:en|ru)\.[a-f0-9]+)?\.json$/, async (route) => {
       const res = await route.fetch();
       const d = await res.json();
       const z = d.cards.find((c: { id: string }) => c.id === 'zong');
-      z.body += '\n\n{male} A paragraph for him.\n\n{female} A paragraph for her.';
+      z.body += route.request().url().includes('.ru.') ? '\n\n{male} Абзац для него.\n\n{female} Абзац для неё.' : '\n\n{male} A paragraph for him.\n\n{female} A paragraph for her.';
       if (z.translations?.ru?.body) z.translations.ru.body += '\n\n{male} Абзац для него.\n\n{female} Абзац для неё.';
       await route.fulfill({ response: res, json: d });
     });

@@ -1,3 +1,4 @@
+import { loadJson } from '../lib/loadJson';
 import type { App } from '../app';
 import { cardPoint, richText } from '../app';
 import type { Card } from '../lib/types';
@@ -248,6 +249,12 @@ function k8sObject(app: App, c: Card): HTMLElement {
     h('summary', {}, svgIcon('term'), t('This card is a Kubernetes object')),
     h('div.term.on.multi', {}, h('pre', {}, `$ ${cmd}\n$ kubectl get card ${c.id} -o yaml\n${cardYaml(raw)}`)),
   );
+  det.addEventListener('toggle', () => {
+    if (!det.hasAttribute('open')) return;
+    void loadJson<Card>(`data/raw-cards/${c.id}.json`).then(original => {
+      if (original) det.querySelector('pre')!.textContent = `$ ${cmd}\n$ kubectl get card ${c.id} -o yaml\n${cardYaml(original)}`;
+    }).catch(() => undefined);
+  }, { once: true });
   det.querySelector('.term')!.append(h('button', { onclick: async () => toast((await copyText(cmd)) ? t('Command copied') : t('Copy failed')) }, t('Copy')));
   return det;
 }

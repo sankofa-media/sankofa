@@ -27,6 +27,9 @@ export interface Media {
 }
 
 export interface Card {
+  /** Original printer-column title and counter wording, retained by localized runtime exports. */
+  sourceTitle?: string;
+  counterText?: Partial<Record<'m' | 'f', string>>;
   id: string;
   kind: string;
   title: string;

@@ -250,9 +250,9 @@ describe('lenses', () => {
 
 describe('the QR code to the phone', () => {
   it('carries the museum, the feature, the chapter and lee=1', () => {
-    expect(leeUrl('https://museum.example/', 'the-red-telephone')).toBe('https://museum.example/#view=feature&item=forever-changes&scene=the-red-telephone&lee=1');
-    expect(leeUrl('https://museum.example/#old', 'old-man', 'ru')).toBe('https://museum.example/#lang=ru&view=feature&item=forever-changes&scene=old-man&lee=1');
-    expect(leeUrl('https://museum.example/', 'bad scene!')).toBe('https://museum.example/#view=feature&item=forever-changes&lee=1');
+    expect(leeUrl('https://museum.example/', 'the-red-telephone')).toBe('https://museum.example/features/forever-changes/#scene=the-red-telephone&lee=1');
+    expect(leeUrl('https://museum.example/#old', 'old-man', 'ru')).toBe('https://museum.example/ru/features/forever-changes/#scene=old-man&lee=1');
+    expect(leeUrl('https://museum.example/', 'bad scene!')).toBe('https://museum.example/features/forever-changes/#lee=1');
     expect(wantsLee('#view=feature&item=forever-changes&lee=1')).toBe(true);
     expect(wantsLee('#view=feature&item=forever-changes')).toBe(false);
   });

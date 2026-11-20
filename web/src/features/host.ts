@@ -1,9 +1,4 @@
-// The special projects' page: the list (/features/) and one feature
-// (/features/<id>/#scene=<scene>; the old #view=feature&item=<id> links lead
-// here). It is the whole page while it is open: the museum is not shown
-// behind it, and its bar leads back to the museum. Loaded on the first visit (see
-// ./index.ts); every feature, and the scroll engine they share, is a module
-// of its own, loaded only when a reader opens it.
+// Standalone special-project pages share a bar, a list and a scroll engine.
 import type { App } from '../app';
 import { h, svgIcon } from '../lib/dom';
 import { lang, pick } from '../lib/i18n';
@@ -22,7 +17,7 @@ export interface FeatureContext {
   ui: Record<string, Bi>;
   /** Where the feature draws itself. */
   root: HTMLElement;
-  /** The sheet's bar slot for the feature's own controls. */
+  /** The page's bar slot for the feature's own controls. */
   tools: HTMLElement;
   /** The element that scrolls. */
   scroller: HTMLElement;
@@ -80,20 +75,13 @@ export function createFeatures(app: App, hooks: FeatureHooks): Features {
   // The other language, named in itself, as in the museum's top bar.
   const langBtn = h('button.btn.lang-switch.ft-lang', { type: 'button', onclick: () => hooks.switchLang() });
   // Not a "close" button: the special project is a page, and this is the way into the museum.
-  const home = h('a.btn.ft-home', {
-    href: lang() === 'ru' ? '/#lang=ru' : '/',
-    onclick: (ev: Event) => {
-      const e = ev as MouseEvent;
-      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
-      e.preventDefault();
-      closeAll(true);
-    },
-  });
+  const home = h('a.btn.ft-home', { href: lang() === 'ru' ? '/ru/' : '/' });
   const body = h('div.ft-body');
-  const el = h('section.ft-sheet', { role: 'dialog', 'aria-modal': 'true', tabindex: '-1', hidden: true }, h('div.ft-bar', {}, home, back, kicker, tools, langBtn), body);
+  const el = h('main.ft-sheet', { tabindex: '-1', hidden: true }, h('div.ft-bar', {}, home, back, kicker, tools, langBtn), body);
+  const prerender = document.querySelector('[data-prerender]');
+  if (prerender) body.append(prerender);
   document.body.append(el);
   weaveLive(app, body);
-  let returnTo: Element | null = null;
   let mounted: { id: string; inst: FeatureInstance } | null = null;
   let token = 0;
 
@@ -112,14 +100,9 @@ export function createFeatures(app: App, hooks: FeatureHooks): Features {
   };
 
   // The page's title follows what it shows, as a page's should.
-  let museumTitle = document.title;
   const title = (t?: string) => (document.title = t ? `${t} · Sankofa` : say('list-title') + ' · Sankofa');
 
   const show = () => {
-    if (el.hidden) {
-      returnTo = document.activeElement;
-      museumTitle = document.title;
-    }
     el.hidden = false;
     document.body.classList.add('locked', 'ft-on');
     el.focus({ preventScroll: true });
@@ -139,7 +122,7 @@ export function createFeatures(app: App, hooks: FeatureHooks): Features {
   const list = async (my: number) => {
     unmount();
     paintChrome(false);
-    body.replaceChildren(status('ft-loading', say('loading')));
+    if (!body.childNodes.length) body.replaceChildren(status('ft-loading', say('loading')));
     el.scrollTop = 0;
     const idx = await loadIndex();
     if (my !== token) return;
@@ -200,7 +183,7 @@ export function createFeatures(app: App, hooks: FeatureHooks): Features {
     }
     unmount();
     paintChrome(true);
-    body.replaceChildren(status('ft-loading', say('loading')));
+    if (!body.childNodes.length) body.replaceChildren(status('ft-loading', say('loading')));
     el.scrollTop = 0;
     try {
       const load = MODULES[id];
@@ -249,19 +232,7 @@ export function createFeatures(app: App, hooks: FeatureHooks): Features {
       body.replaceChildren();
       el.hidden = true;
       document.body.classList.remove('locked', 'ft-on');
-      document.title = museumTitle;
-      if (returnTo instanceof HTMLElement && returnTo.isConnected) returnTo.focus({ preventScroll: true });
     },
   };
-  // To the museum (the stub closes this page and brings the museum back where
-  // it was): a new step in the history from the home link, in place of this
-  // one from Escape.
-  const closeAll = (push = false) => hooks.navigate(null, undefined, undefined, push);
-  el.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !document.querySelector('.drawer.on')) {
-      e.stopPropagation();
-      closeAll();
-    }
-  });
   return api;
 }

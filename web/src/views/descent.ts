@@ -120,6 +120,7 @@ export class Descent {
   }
 
   open(year?: number, level?: number): void {
+    this.app.facts.load();
     const first = !this.isOpen;
     this.el.classList.add('open');
     document.body.classList.add('locked');

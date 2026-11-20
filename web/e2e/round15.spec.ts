@@ -11,7 +11,7 @@ const sheet = (page: Page) => page.locator('.mx-sheet.open');
 test('a view says it is loading, never that it is empty, while its data is on the way', async ({ page }) => {
   let release!: () => void;
   const held = new Promise<void>((r) => (release = r));
-  await page.route('**/data/objects.json', async (route) => {
+  await page.route(/\/data\/(?:cache\/)?objects(?:\.(?:en|ru)\.[a-f0-9]+)?\.json$/, async (route) => {
     await held;
     await route.continue();
   });
@@ -26,7 +26,7 @@ test('a view says it is loading, never that it is empty, while its data is on th
 
 test('a document that cannot be loaded says so and loads on "Try again"', async ({ page }) => {
   let fail = true;
-  await page.route('**/data/documents.json', (route) => (fail ? route.abort('failed') : route.continue()));
+  await page.route(/\/data\/(?:cache\/)?documents(?:\.(?:en|ru)\.[a-f0-9]+)?\.json$/, (route) => (fail ? route.abort('failed') : route.continue()));
   await page.goto('/#view=document');
   const err = sheet(page).locator('.mx-error');
   await expect(err).toBeVisible({ timeout: 15_000 });
