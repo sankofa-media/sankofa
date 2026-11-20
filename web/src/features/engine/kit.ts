@@ -173,7 +173,7 @@ export class Kit {
       },
       onCurrent: (el, i) => {
         const id = el.dataset.scene!;
-        this.circle.setPlace(this.circlePlace(id, i));
+        this.placeCircle(el, i);
         this.ctx.onScene(id);
         this.enter.get(id)?.(el);
       },
@@ -188,7 +188,24 @@ export class Kit {
     const el = this.sceneEls.find((s) => s.dataset.scene === id) ?? this.sceneEls[0];
     if (el && this.scroller) this.scroller.goTo(el, smooth && !this.ink.calm);
     // A jump stays quiet about the scene change, but the circle must still find its place.
-    if (el && !smooth) this.circle.setPlace(this.circlePlace(el.dataset.scene!, this.sceneEls.indexOf(el)));
+    if (el && !smooth) this.placeCircle(el, this.sceneEls.indexOf(el));
+  }
+
+  /**
+   * Put the circle where the scene wants it. On its stage it goes into the
+   * scene's own slot (`.cc-slot`) when the scene has one, so it never covers
+   * the picture: a scene may offer two (under the picture, and in the text
+   * for phones, where the text runs over the picture) and CSS shows the one
+   * that fits the screen. Otherwise it floats over the stage.
+   */
+  private placeCircle(el: HTMLElement, i: number): void {
+    const place = this.circlePlace(el.dataset.scene!, i);
+    const slots = place === 'stage' ? [...el.querySelectorAll<HTMLElement>('.cc-slot')] : [];
+    const slot = slots.find((x) => getComputedStyle(x).display !== 'none') ?? slots[0] ?? null;
+    const home = slot ?? this.ctx.root;
+    if (this.circle.el.parentElement !== home) home.append(this.circle.el);
+    this.circle.el.classList.toggle('cc-in-slot', !!slot);
+    this.circle.setPlace(place);
   }
 
   current(): string | undefined {

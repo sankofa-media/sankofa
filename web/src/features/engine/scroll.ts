@@ -2,8 +2,12 @@
 // the screen; on every frame the reader scrolls, each of those gets its
 // progress (0..1) as the CSS variable --p and through `onProgress`, and the
 // scene under the reading line becomes the current one. Text blocks reveal
-// once, when they come into view. Pictures load as their scene comes near:
-// an <img data-src> gets its src then, not with the page.
+// once, when they come into view. Pictures load ahead of their scene: an
+// <img data-src> gets its src when the scene two places before it comes
+// near, not with the page and not at the last moment (a slow phone network
+// must have the picture ready when the scene arrives). A scene counts as
+// reached as soon as its top comes on screen, so its picture is drawn in
+// while it arrives, not after the text has already slid over it.
 import { sceneAt, sceneProgress } from '../model';
 
 export interface ScrollerOptions {
@@ -22,6 +26,9 @@ export function load(scene: Element): void {
   });
 }
 
+/** How many scenes ahead of the one coming near load their pictures. */
+const AHEAD = 2;
+
 export class Scroller {
   private near = new Set<HTMLElement>();
   private io: IntersectionObserver;
@@ -39,7 +46,7 @@ export class Scroller {
           const el = e.target as HTMLElement;
           if (e.isIntersecting) {
             this.near.add(el);
-            load(el);
+            this.loadAround(el);
           } else {
             this.near.delete(el);
             // A scene that has left settles at its end or its start.
@@ -65,9 +72,17 @@ export class Scroller {
       this.io.observe(s);
       s.querySelectorAll('.ft-block').forEach((b) => this.reveal.observe(b));
     }
+    // The opening scenes load at once.
+    o.scenes.slice(0, AHEAD + 1).forEach(load);
     o.root.addEventListener('scroll', this.onScroll, { passive: true });
     window.addEventListener('resize', this.onScroll);
     this.onScroll();
+  }
+
+  /** Load a scene's pictures and those of the scenes after it. */
+  private loadAround(el: HTMLElement): void {
+    const i = this.o.scenes.indexOf(el);
+    for (let k = Math.max(0, i); k <= i + AHEAD && k < this.o.scenes.length; k++) load(this.o.scenes[k]);
   }
 
   private set(el: HTMLElement, p: number): void {
@@ -85,6 +100,7 @@ export class Scroller {
     for (const el of this.near) {
       const r = el.getBoundingClientRect();
       this.set(el, sceneProgress(r.top - top0, r.height, vh));
+      if (r.top - top0 < vh * 0.9) el.classList.add('reached');
     }
     const rects = this.o.scenes.map((s) => {
       const r = s.getBoundingClientRect();

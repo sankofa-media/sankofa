@@ -175,7 +175,8 @@
   .ft-back .ft-back-label {
     display: none;
   }
-  .ft-sheet:has(.ft) .ft-kicker {
+  /* The bar's own label gives way on a phone; the scenes' kickers stay. */
+  .ft-sheet:has(.ft) .ft-bar > .ft-kicker {
     display: none;
   }
 }
