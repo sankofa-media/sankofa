@@ -236,8 +236,8 @@ test('the prologue’s picture follows the text: Memphis, Dorsey High, the club,
 test('the opening shows the cover, the title, Lee\'s words and offers the mode at once', async ({ page, isMobile }) => {
   await page.goto('/#view=feature&item=forever-changes&lang=ru');
   const first = scene(page, 'warning');
-  await expect(first.locator('.fc-cover img')).toHaveJSProperty('complete', true);
-  expect(await first.locator('.fc-cover img').evaluate((i: HTMLImageElement) => i.naturalWidth)).toBeGreaterThan(200);
+  await expect(first.locator('.fc-cover:visible img')).toHaveJSProperty('complete', true);
+  expect(await first.locator('.fc-cover:visible img').evaluate((i: HTMLImageElement) => i.naturalWidth)).toBeGreaterThan(200);
   await expect(first.locator('h1.ft-h1')).toContainText('Forever Changes');
   await expect(first.locator('.fc-cover-sub')).toContainText('Артура Ли');
   await expect(first.locator('.fc-epigraph-who')).toContainText('автор песен и солист группы Love');
