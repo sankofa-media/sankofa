@@ -515,3 +515,44 @@ func TestHTTPTouch(t *testing.T) {
 		t.Fatalf("stream %q", got.String())
 	}
 }
+
+func TestRulesPublishAndHoldDanger(t *testing.T) {
+	ctx := context.Background()
+	j, _ := Rules{}.Moderate(ctx, "Прости меня, папа", "ru")
+	if j.Verdict != VerdictPublish || j.CleanText != "Прости меня, папа" {
+		t.Fatalf("plain words: %+v", j)
+	}
+	for _, s := range []string{"я больше не хочу жить", "I want to die without you"} {
+		if j, _ := (Rules{}).Moderate(ctx, s, ""); j.Verdict != VerdictCrisis {
+			t.Fatalf("%q: %+v", s, j)
+		}
+	}
+}
+
+func TestSeedFillsOnlyAnEmptyChorus(t *testing.T) {
+	ctx := context.Background()
+	st, err := OpenStore(":memory:")
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer st.Close()
+	now := time.Now()
+	if err := st.Seed(ctx, now); err != nil {
+		t.Fatal(err)
+	}
+	if err := st.Seed(ctx, now); err != nil {
+		t.Fatal(err)
+	}
+	ws, err := st.ByStatus(ctx, 100, StatusPublished)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(ws) != len(seedWords) {
+		t.Fatalf("published %d, want %d", len(ws), len(seedWords))
+	}
+	for _, w := range ws {
+		if w.TrEN == "" || w.TrRU == "" {
+			t.Fatalf("seed without both languages: %+v", w)
+		}
+	}
+}

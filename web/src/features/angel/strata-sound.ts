@@ -17,6 +17,8 @@ const FADE = 0.6; // seconds a layer takes to come in or go out
 const KEYS = Object.keys(FILES) as Stratum[];
 
 export class StrataSound {
+  constructor(private readonly onLoading: (loading: boolean) => void = () => {}) {}
+
   private ac: AudioContext | null = null;
   private bus = new Map<Stratum, GainNode>();
   private on = new Set<Stratum>();
@@ -35,6 +37,11 @@ export class StrataSound {
       this.startAll();
       this.ramp(k);
     });
+  }
+
+  /** Fetch and decode the four tracks ahead (no sound: the context stays suspended until a click). */
+  preload(): void {
+    if (this.ensure()) void this.load();
   }
 
   /** Silence everything (the reader left the scene); the layers stay chosen and come back, in step, on resume(). */
@@ -85,16 +92,22 @@ export class StrataSound {
 
   private load(): Promise<boolean> {
     const ac = this.ac!;
-    this.loading ??= Promise.all(
+    if (this.loading) return this.loading;
+    this.onLoading(true);
+    this.loading = Promise.all(
       KEYS.map(async (k) => {
         const res = await fetch(FILES[k]);
         if (!res.ok) throw new Error(String(res.status));
         this.buffers.set(k, await ac.decodeAudioData(await res.arrayBuffer()));
       }),
     ).then(
-      () => true,
+      () => {
+        this.onLoading(false);
+        return true;
+      },
       () => {
         this.loading = null;
+        this.onLoading(false);
         return false;
       },
     );

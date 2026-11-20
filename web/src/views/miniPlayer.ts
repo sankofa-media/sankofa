@@ -158,6 +158,11 @@ export class MiniPlayer {
     this.paint();
   }
 
+  /** Pause what is playing (another sound on the page is starting); nothing if it is not playing. */
+  pause(): void {
+    if (this.state === 'playing') this.toggle();
+  }
+
   next(): void {
     if (this.queue[this.i + 1]) this.load(this.i + 1);
   }

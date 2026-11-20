@@ -149,34 +149,38 @@ ui:
   # The warm last screen and the pulse page. The pulse belongs to no one:
   # never say whose it is.
   invite-lead:
-    en: "For almost thirty years this song has played at concerts, in films and in other people's headphones, and for many it has become a song about their own love. If you are in love right now, if you miss someone or have lost someone close, you are not alone. Open the page on your phone, put your finger or your palm on the screen and feel the heartbeats of the other people who were here before you. There you can also say what was never said, and leave your own heartbeat."
-    ru: "Почти тридцать лет эта песня звучит на концертах, в кино и в чужих наушниках, и для многих она стала песней об их собственной любви. Если ты сейчас любишь, скучаешь или потерял близкого человека, ты не один. Открой страницу на телефоне, приложи к экрану палец или ладонь и почувствуй, как бьются сердца других людей, которые были здесь до тебя. Там же можно сказать то, что так и не было сказано, и оставить своё сердцебиение."
-  invite: { en: "You are not alone. Feel the pulse.", ru: "Ты не один. Почувствуй пульс." }
+    en: "For almost thirty years this song has been played at concerts, put into films and heard in headphones, and many people hear their own story in it. Below you can leave yours here too: first feel someone else's pulse, then record your own and write the words you never said."
+    ru: "Почти тридцать лет эту песню играют на концертах, ставят в фильмы и слушают в наушниках, и многие слышат в ней свою историю. Ниже можно оставить здесь и свою: сначала почувствовать чужой пульс, потом записать свой и написать слова, которые ты так и не сказал."
+  ending: { en: "Pulse and words", ru: "Пульс и слова" }
+  step-feel: { en: "Someone's pulse", ru: "Чужой пульс" }
+  step-own: { en: "Your pulse", ru: "Свой пульс" }
+  step-say: { en: "Words", ru: "Слова" }
+  pulse-touch: { en: "Put your finger on the screen and keep it there. Under it beats the pulse of someone who was here before you.", ru: "Положи палец на экран и не убирай. Под ним забьётся пульс человека, который был здесь до тебя." }
+  pulse-touch-mouse: { en: "Press on the screen and hold. Under the pointer beats the pulse of someone who was here before you.", ru: "Нажми на экран и не отпускай. Под курсором забьётся пульс человека, который был здесь до тебя." }
+  pulse-felt: { en: "Beats to go: {n}", ru: "Ещё ударов: {n}" }
+  own-pulse: { en: "Now you can record yours. The phone's camera takes it: under the flash, a fingertip darkens a little with every beat.", ru: "Теперь можно записать свой. Его снимет камера телефона: со вспышкой палец чуть темнеет на каждом ударе." }
+  own-pulse-phone: { en: "The pulse is recorded by a phone's camera. Point the phone at the code and this page opens on it.", ru: "Пульс записывает камера телефона. Наведи её на код, и эта страница откроется на телефоне." }
+  own-pulse-skip: { en: "Go on without it", ru: "Дальше без пульса" }
+  words-cloud: { en: "Words left here before", ru: "Слова, которые здесь уже оставили" }
+  words-invite:
+    en: "These are the words of those who were here before. Write yours: what you never said to someone. Without your name, it stays here, beside theirs."
+    ru: "Это слова тех, кто был здесь раньше. Напиши своё: то, что ты так и не сказал кому-то. Без имени, оно останется здесь, рядом с ними."
+  words-send: { en: "Send", ru: "Отправить" }
+  words-skip: { en: "Not now", ru: "Не сейчас" }
+  end-count: { en: "Pulses here: {p}. Unsaid words: {w}.", ru: "Пульсов здесь: {p}. Несказанных слов: {w}." }
   invite-qr: { en: "Point your phone's camera at the code to open the page", ru: "Наведи камеру телефона на код, чтобы открыть страницу" }
-  invite-here: { en: "Feel it", ru: "Почувствовать" }
-  pulse-touch: { en: "Put your finger or your palm on the screen if things are hard right now.", ru: "Приложи палец или ладонь, если тебе сейчас тяжело." }
   pulse-others: { en: "{n} more here now", ru: "Сейчас здесь ещё {n}" }
   pulse-further: { en: "Further", ru: "Дальше" }
-  words-invite:
-    en: "Say what you never said. By voice or in writing. Without your name: your words will stay here, among the words of others."
-    ru: "Скажи то, что так и не было сказано. Голосом или текстом. Без имени: твои слова останутся здесь, среди слов других людей."
   words-placeholder: { en: "Your words", ru: "Твои слова" }
   words-voice: { en: "Say it aloud", ru: "Сказать голосом" }
   words-voice-stop: { en: "Stop", ru: "Стоп" }
   words-keep-voice: { en: "Let my voice stay in the chorus, unrecognisable", ru: "Пусть мой голос останется в хоре, неузнаваемым" }
-  words-release: { en: "Let go", ru: "Отпустить" }
-  words-keep: { en: "Keep to myself", ru: "Оставить себе" }
   words-sent: { en: "Your words are here.", ru: "Твои слова здесь." }
-  words-kept: { en: "They went nowhere.", ru: "Они никуда не ушли." }
-  words-checked:
-    en: "Before your words join the others, an AI made by Anthropic reads them, to keep out advertising and anything that could hurt someone. They are shown without a name."
-    ru: "Прежде чем слова попадут к другим, их прочитает нейросеть Anthropic, чтобы не пропустить рекламу и то, что может кому-то навредить. Показываются они без имени."
   words-delete: { en: "To remove them later, keep this code: {code}", ru: "Чтобы потом их убрать, сохрани этот код: {code}" }
   words-crisis:
     en: "It sounds as if things are very hard for you right now. You don't have to carry it alone. If you are in danger, call 112. People who can help, in your country: findahelpline.com"
     ru: "Похоже, тебе сейчас очень тяжело. Не нужно нести это одному. Если ты в опасности, звони 112. Те, кто умеет помочь, в твоей стране: findahelpline.com"
   words-report: { en: "Remove", ru: "Убрать" }
-  own-pulse: { en: "You can leave your pulse too.", ru: "Можно оставить и свой пульс." }
   own-pulse-step-1: { en: "Press “Begin” and let the page use the camera.", ru: "Нажми «Начать» и разреши странице включить камеру." }
   own-pulse-step-2:
     en: "Cover the back camera, the one next to the flash, with your fingertip. The flash turns on by itself, and your finger glows red."

@@ -57,6 +57,7 @@ function bigVideo(id: string, alt: { en: string; ru: string }, title: { en: stri
     h('span.an-video-play', { 'aria-hidden': 'true' }, '▶'));
   const box = h('div.ft-art.an-video', {}, cover);
   cover.addEventListener('click', () => {
+    miniPlayer().pause();
     box.replaceChildren(h('iframe', {
       src: `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`,
       title: pick(title),
@@ -120,14 +121,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
   let strataSound: StrataSound | null = null;
   let invite: HTMLElement | null = null;
   const gate = new FlashGate();
-  let pulsePage: { open(): void; dispose(): void; isOpen: boolean } | null = null;
-  const openPulse = async () => {
-    if (!pulsePage) {
-      const m = await import('./pulse/page');
-      pulsePage = new m.PulsePage({ host: document.body, say: (k, v) => kit.ui(k, v), engine: (k) => kit.ui(k), calm });
-    }
-    pulsePage.open();
-  };
+  let pulsePage: { open(): void; close(): void; dispose(): void; el: HTMLElement } | null = null;
 
   const render = (sc: Scene): HTMLElement => {
     switch (sc.kind) {
@@ -191,7 +185,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         clean.setAttribute('aria-hidden', 'true');
         const pic = picture(sc, clean);
         const stacked = new Set<string>();
-        strataSound = new StrataSound();
+        strataSound = new StrataSound((loading) => el.classList.toggle('an-strata-loading', loading));
         const live = h('p.ft-visually-hidden', { 'aria-live': 'polite' });
         const buttons = STRATA.map((k) => {
           const b = h('button.btn.an-stratum', { type: 'button', 'aria-pressed': 'false', 'data-stratum': k }, kit.ui(`strata-${k}`)) as HTMLButtonElement;
@@ -199,6 +193,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
             if (stacked.has(k)) stacked.delete(k);
             else stacked.add(k);
             b.setAttribute('aria-pressed', String(stacked.has(k)));
+            if (stacked.has(k)) miniPlayer().pause();
             strataSound?.set(k as Stratum, stacked.has(k));
             paintStrata();
           });
@@ -260,6 +255,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
             h('img', { src: `https://i.ytimg.com/vi/${v.youtube}/hqdefault.jpg`, alt: '', decoding: 'async', draggable: 'false' }),
             h('span.an-video-play', { 'aria-hidden': 'true' }, '▶'));
           cover.addEventListener('click', () => {
+            miniPlayer().pause();
             frame.replaceChildren(h('iframe', { src: `https://www.youtube-nocookie.com/embed/${v.youtube}?autoplay=1&rel=0`, title, allow: 'autoplay; encrypted-media; picture-in-picture; fullscreen', allowfullscreen: '' }));
           });
           frame.replaceChildren(cover);
@@ -336,6 +332,8 @@ export function mount(ctx: FeatureContext): FeatureInstance {
       } else beatAt(pulsePeriod(BPM_1998), sc.id === 'kingston' || sc.id === 'warm' ? 1 : 0);
       if (sc.id === 'strata') strataSound?.resume();
       else strataSound?.pause();
+      // The four tracks start loading a scene before they are needed, so the first button sounds at once.
+      if (Math.abs(i - ids.indexOf('strata')) <= 1) strataSound?.preload();
       if (sc.id === 'break') breakdown(el);
       if (sc.id === 'crowd') vibrate([90, 60, 90, 60, 90]);
     });
@@ -362,25 +360,36 @@ export function mount(ctx: FeatureContext): FeatureInstance {
       firstWord.classList.add('on');
     }
   });
-  void api.pulses().then((ps) => {
-    // The service answers: the pulse page works even before the first pulse (it is where that pulse is left).
-    if (!ps || !invite) return;
-    const url = pulseUrl(location.origin + location.pathname, lang());
-    const here = h('button.btn.primary.an-feel', { type: 'button' }, kit.ui('invite-here'));
-    here.addEventListener('click', () => void openPulse());
-    invite.replaceChildren(
-      h('p.an-invite-lead', {}, kit.ui('invite-lead')),
-      h('p.ft-line.an-invite-line', {}, kit.ui('invite')),
-      isPhone() ? here : h('figure.an-qr', {}, qrSvg(url, kit.ui('invite-qr'), 'an-qr-code'), h('figcaption', {}, kit.ui('invite-qr'))),
-    );
-    invite.hidden = false;
-    invite.closest('.an-warm-words')?.classList.add('has-invite');
+  // The end of the page: feel a pulse, leave one's own, say the words, and see them all together.
+  // Asked for before the scenes rewrite the address.
+  const askPulse = wantsPulse(location.hash);
+  const ending = h('div.an-ending');
+  root.append(ending);
+  const pulseLink = pulseUrl(location.origin + location.pathname, lang());
+  void import('./pulse/page').then((m) => {
+    const page = new m.PulsePage({ host: ending, phone: isPhone(), qr: () => qrSvg(pulseLink, kit.ui('invite-qr'), 'an-qr-code'), say: (k, v) => kit.ui(k, v), engine: (k) => kit.ui(k), calm });
+    pulsePage = page;
+    const io = new IntersectionObserver((es) => {
+      for (const e of es) e.isIntersecting ? page.open() : page.close();
+    }, { rootMargin: '200px 0px' });
+    io.observe(ending);
+    cleanups.push(() => io.disconnect());
+    if (askPulse) {
+      // From the code on another screen: straight to the ending, once the scenes have laid themselves out.
+      page.open();
+      for (const ms of [400, 1200]) window.setTimeout(() => ending.scrollIntoView({ block: 'start' }), ms);
+    }
   });
+  const inv = invite as HTMLElement | null;
+  if (inv) {
+    inv.replaceChildren(h('p.an-invite-lead', {}, kit.ui('invite-lead')));
+    inv.hidden = false;
+    inv.closest('.an-warm-words')?.classList.add('has-invite');
+  }
 
   cleanups.push(onCalm(() => queueMicrotask(() => fx.progress())));
   kit.start(ctx.scene);
   fx.progress();
-  if (wantsPulse(location.hash)) void openPulse();
 
   return {
     goTo: (s) => kit.goTo(s),

@@ -49,7 +49,11 @@ func run(listen, dir, whisperURL, ffmpeg, ipHeader string, log *slog.Logger) err
 		svc.Moderator = angel.NewClaude(key)
 		log.Info("moderation on", "model", angel.Model)
 	} else {
-		log.Warn("ANTHROPIC_API_KEY is not set: every word waits for the owner")
+		svc.Moderator = angel.Rules{}
+		log.Warn("ANTHROPIC_API_KEY is not set: words are checked by rules only")
+	}
+	if err := store.Seed(context.Background(), time.Now()); err != nil {
+		return err
 	}
 	if whisperURL != "" {
 		svc.Transcriber = angel.WhisperCPP{URL: whisperURL, Client: &http.Client{Timeout: 2 * time.Minute}}
