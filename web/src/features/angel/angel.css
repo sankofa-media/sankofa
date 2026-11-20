@@ -684,38 +684,124 @@
   }
 }
 
-/* ---------- the pulse page ---------- */
-body.an-pulse-on {
-  overflow: hidden;
-}
+/* ---------- the ending: feel, leave a pulse, say the words, all together ---------- */
 .an-pulse {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  background: radial-gradient(ellipse at 50% 60%, #2a1a10 0%, #120c08 60%, #0a0705 100%);
+  position: relative;
+  min-height: 100svh;
+  background: radial-gradient(ellipse at 50% 40%, #2a1a10 0%, #120c08 55%, #0a0705 100%);
   color: #f6e8d6;
   font-family: var(--font-display);
 }
-.an-pulse[hidden] {
+/* One step after another: what comes later stays closed until the step before it is done. */
+.an-pulse[data-step='feel'] :is(.ap-own, .ap-say, .ap-end),
+.an-pulse[data-step='own'] :is(.ap-say, .ap-end),
+.an-pulse[data-step='say'] .ap-end {
   display: none;
 }
-.ap-scroll {
+.ap-step {
+  margin: 0;
+  font: 600 12px/1.2 var(--font-sans);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #f1c46f;
+}
+.ap-touch-step {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  z-index: 1;
+}
+.ap-felt {
+  margin: 0;
+  font: 15px/1.4 var(--font-sans);
+  color: rgba(246, 232, 214, 0.8);
+}
+.ap-felt:empty {
+  display: none;
+}
+.ap-skip {
+  opacity: 0.8;
+}
+.ap-qr {
+  margin: 8px 0 0;
+  display: grid;
+  justify-items: start;
+  gap: 10px;
+}
+.ap-qr svg {
+  width: 180px;
+  height: 180px;
+  background: #f6e8d6;
+  padding: 10px;
+  border-radius: 6px;
+}
+.ap-qr figcaption {
+  max-width: 30rem;
+  font: 15px/1.45 var(--font-sans);
+  color: rgba(246, 232, 214, 0.8);
+}
+/* The words others left, as a crowd above the field. */
+.ap-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  align-items: baseline;
+  margin: 4px 0 8px;
+}
+.ap-cloud:empty {
+  display: none;
+}
+.ap-cloud-word {
+  display: inline-grid;
+  font-size: calc(var(--s, 1) * 17px);
+  line-height: 1.3;
+  opacity: var(--o, 0.8);
+  font-style: italic;
+}
+.ap-cloud-word small {
+  font: 12px/1.3 var(--font-sans);
+  font-style: normal;
+  opacity: 0.7;
+}
+/* The end: every pulse at once. */
+.ap-sec.ap-end {
+  max-width: none;
+  min-height: 100svh;
+  padding: 0;
+  align-content: end;
+  overflow: hidden;
+}
+.ap-end-canvas {
   position: absolute;
   inset: 0;
-  overflow-y: auto;
-  overscroll-behavior: contain;
+  width: 100%;
+  height: 100%;
 }
-.ap-close {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 3;
-  width: 44px;
-  height: 44px;
-  font-size: 26px;
-  color: #f6e8d6;
-  background: rgba(20, 13, 8, 0.6);
-  border-radius: 50%;
+.ap-end-words {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+  text-align: center;
+  padding: 0 20px 56px;
+}
+.ap-end-count {
+  margin: 0;
+  font: 15px/1.45 var(--font-sans);
+  color: rgba(246, 232, 214, 0.8);
+}
+.ap-end-count:empty {
+  display: none;
+}
+/* The four tracks are on their way: the buttons say so by breathing. */
+.an-strata-loading .an-stratum[aria-pressed='true'] {
+  animation: an-loading 1s ease-in-out infinite;
+}
+@keyframes an-loading {
+  50% {
+    opacity: 0.5;
+  }
 }
 .ap-particles {
   position: fixed;
@@ -756,7 +842,7 @@ body.an-pulse-on {
 }
 .ap-touch-line {
   position: absolute;
-  top: 64px;
+  top: 96px;
   left: 20px;
   right: 64px;
   margin: 0;
@@ -836,10 +922,6 @@ body.an-pulse-on {
 .an-pulse:not([data-state='full']) .ap-touch,
 .an-pulse:is([data-state='offline'], [data-state='loading']) :is(.ap-say, .ap-own) {
   display: none;
-}
-.an-pulse[data-state='offline'] .ap-last,
-.an-pulse[data-state='loading'] .ap-last {
-  min-height: 100svh;
 }
 .ap-lead {
   margin: 0;
