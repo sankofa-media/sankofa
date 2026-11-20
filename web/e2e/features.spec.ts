@@ -300,7 +300,7 @@ test('the 1939 recording plays the Library’s own file, credited, with a link t
 test('Nina Simone’s photo develops out of the drawing, with its CC0 credit', async ({ page }) => {
   await openFeature(page, '#view=feature&item=sea-lion-girls&scene=simone');
   const fig = scene(page, 'simone').locator('figure.ft-photo');
-  await expect(fig.locator('img.ink-photo')).toHaveAttribute('src', /nina-simone-1965\.jpg$/);
+  await expect(fig.locator('img.ink-photo')).toHaveAttribute('src', /nina-simone-1965\.(jpg|webp)$/);
   await expect(fig.locator('img.ink-photo')).toHaveAttribute('alt', /Nina Simone/);
   // It develops out of the generated drawing of a woman at the piano.
   await expect(fig.locator('.ink-develop > .ft-art [data-layer="piano-figure"]')).toHaveAttribute('data-role', 'figure');
@@ -311,14 +311,14 @@ test('Nina Simone’s photo develops out of the drawing, with its CC0 credit', a
 test('the illustrations load a couple of scenes ahead of the reader, not all at once', async ({ page }) => {
   const asked: string[] = [];
   page.on('request', (r) => {
-    const m = r.url().match(/media\/features\/sea-lion-girls\/([a-z0-9-]+\.webp)$/);
+    const m = r.url().match(/media\/(?:w\d+\/)?features\/sea-lion-girls\/([a-z0-9-]+\.webp)$/);
     if (m) asked.push(m[1]);
   });
   await openFeature(page);
   const door = scene(page, 'door').locator('.ft-art img');
   await expect(door).toHaveCount(5);
   await expect.poll(() => door.evaluateAll((els) => els.every((e) => (e as HTMLImageElement).complete && (e as HTMLImageElement).naturalWidth > 0))).toBe(true);
-  // Only the opening scenes are fetched at first, nothing further down.
+  // The pictures ahead load a scene or so before they are needed; nothing further down has been fetched yet.
   expect(asked.filter((f) => !/^(door|ring|expedition)-/.test(f))).toEqual([]);
   await expect(scene(page, 'classroom').locator('.ft-art img[data-src]')).toHaveCount(3);
   // Layers carry alt text where they mean something, and an empty alt where they are decoration.
@@ -448,7 +448,7 @@ test('every scene from the words to the silence has a picture; the photos are wh
   for (const [id, file] of Object.entries(photos)) {
     const fig = scene(page, id).locator('figure.ft-photo.ft-print');
     const img = fig.locator('img.ink-photo');
-    await expect(img, id).toHaveAttribute('src', new RegExp(`${file}\\.jpg$`));
+    await expect(img, id).toHaveAttribute('src', new RegExp(`${file}\\.(jpg|webp)$`));
     // Loaded ahead of the scene by the scroller, not lazily at the last moment.
     await expect(img, id).not.toHaveAttribute('loading', 'lazy');
     await expect(img, id).toHaveCSS('object-fit', 'contain');

@@ -626,6 +626,8 @@
     padding: 8px 12px 0;
     background: var(--ft-paper);
     transition: background 1.6s var(--ease);
+    /* A photograph in the text column pushes the picture up as it comes (./yield.ts). */
+    translate: 0 calc(-1 * var(--an-yield, 0px));
   }
   .an .ft-stage::after {
     content: '';
@@ -675,8 +677,17 @@
     box-shadow: 0 0 32px 26px rgba(14, 14, 16, 0.82);
     border-radius: 28px;
   }
+  /* The watermark stands large in the text's half of the screen, not behind the pinned picture. */
   .an-copy.an-mid {
-    font-size: 26vw;
+    top: 74% !important;
+    font-size: 38vw;
+  }
+  .an-copy.an-mid.on {
+    opacity: calc(0.075 + var(--an-anx, 0) * 0.05);
+  }
+  /* The opening reads as a cover: the title right under the picture, the first words a screen below. */
+  .an [data-scene='line'] .ft-block.ft-b-title {
+    margin-bottom: 40svh;
   }
   .an-watcher {
     height: 46svh;

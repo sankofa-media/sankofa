@@ -2,6 +2,10 @@
 // data/media.json listing which exist. Uses `sips` (macOS) or `vipsthumbnail`
 // (libvips, installed in the Docker build); without either, it writes an
 // empty manifest and the museum serves the originals.
+// The special projects' illustration layers (media/features/<id>/*.webp,
+// copied there by build-features.ts, so run this after it) get the same
+// copies at media/w<width>/features/<id>/<file>, made with cwebp or vips so
+// the layers keep their transparency.
 // Usage: node scripts/build-media.ts <media-dir> <manifest.json>
 import { execFileSync } from 'node:child_process';
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, statSync, writeFileSync } from 'node:fs';
@@ -168,6 +172,40 @@ if (tool) {
     // WebP for the original and every smaller copy, or none at all.
     const all = [src, ...(files[f] ?? []).map((w) => join(dir, `w${w}`, f))];
     if (webp && all.every((p) => toWebp(p))) webps.push(f);
+  }
+}
+
+/** A smaller copy of a transparent WebP layer, alpha kept. */
+function resizeWebp(src: string, dst: string, w: number): void {
+  if (webp === 'cwebp') execFileSync('cwebp', ['-quiet', '-resize', String(w), '0', '-q', '82', '-alpha_q', '90', src, '-o', dst], { stdio: 'ignore' });
+  else execFileSync('vipsthumbnail', [src, '--size', `${w}x`, '-o', `${dst}[Q=82,alpha_q=90,strip]`], { stdio: 'ignore' });
+}
+
+// The illustration layers of the special projects, at media/features/<id>/.
+const featuresDir = join(dir, 'features');
+if (tool && webp && existsSync(featuresDir)) {
+  for (const id of readdirSync(featuresDir)) {
+    const fdir = join(featuresDir, id);
+    if (!statSync(fdir).isDirectory()) continue;
+    for (const f of readdirSync(fdir)) {
+      if (!f.endsWith('.webp')) continue;
+      const key = `features/${id}/${f}`;
+      const src = join(dir, key);
+      const w0 = width(src);
+      if (!w0) continue;
+      sizes[key] = w0;
+      for (const w of WIDTHS) {
+        if (w >= w0 * 0.9) break;
+        const dst = join(dir, `w${w}`, key);
+        mkdirSync(dirname(dst), { recursive: true });
+        try {
+          if (!existsSync(dst) || statSync(dst).mtimeMs < statSync(src).mtimeMs) resizeWebp(src, dst, w);
+        } catch {
+          break; // no copy: the original serves
+        }
+        (files[key] ??= []).push(w);
+      }
+    }
   }
 }
 mkdirSync(dirname(out), { recursive: true });

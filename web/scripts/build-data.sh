@@ -49,11 +49,12 @@ if [ -d "$src/media" ]; then
   cp -R "$src/media/." web/public/media/
 fi
 echo "media: $(ls web/public/media | wc -l | tr -d ' ') files"
+# Special projects: scenes, bilingual text and their rivers, validated
+# (before the media copies: their illustration layers get smaller copies too).
+node "$web/scripts/build-features.ts" "$src" web/public/data web/public/media
 node "$web/scripts/build-media.ts" web/public/media web/public/data/media.json
 # Documents, working objects, how we checked, the guide and the dedication.
 node "$web/scripts/build-mechanics.ts" "$src" web/public/data
-# Special projects: scenes, bilingual text and their rivers, validated.
-node "$web/scripts/build-features.ts" "$src" web/public/data web/public/media
 # The dictionary's names, for linking mentions of cards in the museum's own
 # text, and the report of mentions still unlinked (dist/link-gaps.txt).
 node "$web/scripts/build-names.ts" "$src" web/public/data web/index.html dist/link-gaps.txt

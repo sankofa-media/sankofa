@@ -638,22 +638,48 @@ body.mp-on .cc[data-place='corner'] {
 }
 
 @media (max-width: 720px) {
+  /* Phone: the scene's picture comes up from below between paragraphs, pins
+     at the top of the screen and stays whole and in view; the text that
+     follows reads below it and slides under its lower edge, never over it,
+     until the next picture comes up and takes its place. */
+  .ft-scene {
+    --ft-stage-h: min(48svh, (100vw - 24px) / 1.5 + 10px);
+  }
   .ft-stage {
+    z-index: 2;
+    align-self: start;
+    height: auto;
+    max-height: 48svh;
     place-items: start center;
-    padding: 10px 12px;
+    padding: 10px 12px 0;
+    background: var(--ft-paper);
+  }
+  .ft-stage::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 24px;
+    background: linear-gradient(var(--ft-paper), transparent);
+    pointer-events: none;
   }
   .ft-stage > * {
     width: 100%;
   }
   .ink {
-    max-height: 46svh;
+    max-height: calc(48svh - 10px);
   }
   .ft-stage > .ft-art,
   .ft-stack > .ft-art {
-    width: min(100%, calc(46svh * 1.5));
+    width: min(100%, calc((48svh - 10px) * 1.5));
+    max-height: calc(48svh - 10px);
   }
   .ft-flow {
     padding-top: 52svh;
+  }
+  .ft-stage:not(:empty) + .ft-flow {
+    padding-top: calc(var(--ft-stage-h) + 28px);
   }
   .ft-block {
     padding: 14px 16px;

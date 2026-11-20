@@ -20,6 +20,7 @@ import { MoodFx } from './fx';
 import { anxietyAt, crowdShown, thenNowPeriod, pulsePeriod, BPM_1998 } from './mood';
 import { ANDY, ANGEL, SNATCH, VIDEO, type Official } from './recordings';
 import { pulseUrl, wantsPulse } from './url';
+import { yieldStage } from './yield';
 import '../engine/engine.css';
 import './angel.css';
 
@@ -80,7 +81,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
   const ids = scenes.map((s) => s.id);
   const cleanups: (() => void)[] = [];
   const calm = () => kit.calm || reduced();
-  const art = (file: string) => ctx.app.media(`features/${ctx.data.id}/${file}`);
+  const art = (file: string) => kit.artSrc(file);
   const link = (href: string, text: string) => h('a', { href, target: '_blank', rel: 'noopener noreferrer' }, text);
 
   const bar = h('div.an-progress', { role: 'progressbar', 'aria-label': kit.ui('progress'), 'aria-valuemin': '0', 'aria-valuemax': '100', 'aria-valuenow': '0' }, h('span.an-progress-fill'));
@@ -313,6 +314,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
   scenes.forEach((sc, i) => {
     kit.onProgress(sc.id, (p, el) => {
       if (el.classList.contains('current')) fx.set(anxietyAt(ids, i, p), sc.id);
+      yieldStage(el, ctx.scroller);
       switch (sc.kind) {
         case 'crowd':
           el.dataset.shown = String(calm() ? 3 : crowdShown(p));
