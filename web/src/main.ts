@@ -39,6 +39,7 @@ import { compileLexicon, type NamesFile } from './lib/names';
 import { setLexicon, weaveLive } from './lib/weave';
 import { Facts, usableFactoids, type FactoidsFile } from './lib/factoids';
 import { FactPanel } from './views/factoid';
+import { takeReviewToken, watchReviewHash } from './lib/reviewGate';
 
 async function load<T>(url: string): Promise<T> {
   // The cover paints first; the data comes at a lower priority, with a
@@ -579,4 +580,9 @@ function trackChapters(app: App): void {
   tick();
 }
 
+// The owner's review mode: its token leaves the link before the route is read,
+// and only a device holding it downloads the mode at all.
+const reviewToken = takeReviewToken();
+watchReviewHash();
 start();
+if (reviewToken) void import('./review').then((m) => m.install(reviewToken));

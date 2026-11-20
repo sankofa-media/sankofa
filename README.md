@@ -58,6 +58,34 @@ The museum: `web/` (see [web/README](web/) and `web/Dockerfile`),
 `deploy/museum.yaml`. A public read-only entrance for visitors:
 `deploy/visitor.yaml`.
 
+## Owner review mode
+
+The owner can leave notes on any element of the museum and its special
+projects, typed or dictated, from a phone or a desktop. The notes live in the
+angel service (`pkg/angel/review.go`) and need `ANGEL_ADMIN_TOKEN` from the
+`angel-anthropic` secret (see `deploy/angel.yaml`).
+
+- Turn it on: open `https://sankofa.black/#review=<ANGEL_ADMIN_TOKEN>` once on
+  the device. The token leaves the link at once and stays in that browser.
+  `#review=off` (or "Sign out" in the notes list) forgets it.
+- Use it: "Comment", then tap the element (or select text first, then
+  "Comment"); "Wider" takes the enclosing block; "Dictate" fills the note by
+  voice (or records audio where the browser cannot recognise speech).
+  Markers show open notes; "Notes" lists them; "Off" folds the bar.
+- Read and close them (the token goes only in the header):
+
+```bash
+T=...   # ANGEL_ADMIN_TOKEN
+curl -sH "Authorization: Bearer $T" https://sankofa.black/api/angel/review/export            # open notes, JSON
+curl -sH "Authorization: Bearer $T" 'https://sankofa.black/api/angel/review/export?format=md' # the same as Markdown
+curl -sH "Authorization: Bearer $T" -o note-12.webm https://sankofa.black/api/angel/review/12/audio
+curl -sX PATCH -H "Authorization: Bearer $T" -H 'Content-Type: application/json' \
+  -d '{"status":"done"}' https://sankofa.black/api/angel/review/12
+```
+
+`?status=done|all` widens the export; `DELETE /api/angel/review/<id>` removes
+a note with its voice.
+
 ## Content
 
 Cards live in `content/cards` ([format](docs/card-format.md)), chapters in
