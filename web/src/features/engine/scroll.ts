@@ -2,10 +2,9 @@
 // the screen; on every frame the reader scrolls, each of those gets its
 // progress (0..1) as the CSS variable --p and through `onProgress`, and the
 // scene under the reading line becomes the current one. Text blocks reveal
-// once, when they come into view. Pictures load ahead of their scene: an
-// <img data-src> gets its src when the scene two places before it comes
-// near, not with the page and not at the last moment (a slow phone network
-// must have the picture ready when the scene arrives). A scene counts as
+// once, when they come into view. Pictures load a little ahead of their
+// scene (about a screen before it scrolls in), one scene after another, not
+// all with the page: an <img data-src> gets its src then. A scene counts as
 // reached as soon as its top comes on screen, so its picture is drawn in
 // while it arrives, not after the text has already slid over it.
 import { sceneAt, sceneProgress } from '../model';
@@ -18,21 +17,33 @@ export interface ScrollerOptions {
   onCurrent?(scene: HTMLElement, index: number): void;
 }
 
-/** Give a scene's waiting pictures their files. */
-export function load(scene: Element): void {
-  scene.querySelectorAll<HTMLImageElement>('img[data-src]').forEach((img) => {
+/** Give a scene's waiting pictures their files; resolves when they have arrived (or failed). */
+export function load(scene: Element): Promise<unknown> {
+  const imgs = [...scene.querySelectorAll<HTMLImageElement>('img[data-src]')];
+  for (const img of imgs) {
     img.src = img.dataset.src!;
     delete img.dataset.src;
-  });
+  }
+  return Promise.all(imgs.map((img) => (img.complete ? null : new Promise((done) => {
+    img.addEventListener('load', done, { once: true });
+    img.addEventListener('error', done, { once: true });
+  }))));
 }
 
-/** How many scenes ahead of the one coming near load their pictures. */
-const AHEAD = 2;
+/** How far from the screen a scene counts as near (a share of the screen's height). */
+const NEAR = 0.25;
+/** How far ahead pictures start loading (a share of the screen's height). */
+const AHEAD = 1.2;
+/** How long pictures ahead wait at most for the ones on screen, ms. */
+const AHEAD_WAIT = 4000;
 
 export class Scroller {
   private near = new Set<HTMLElement>();
   private io: IntersectionObserver;
+  private ahead: IntersectionObserver;
   private reveal: IntersectionObserver;
+  /** The pictures on screen now: the ones ahead wait for them, so they do not share the line. */
+  private onScreen: Promise<unknown> = Promise.resolve();
   private raf = 0;
   private current = -1;
   private readonly onScroll = () => (this.raf ||= requestAnimationFrame(() => this.tick()));
@@ -46,7 +57,7 @@ export class Scroller {
           const el = e.target as HTMLElement;
           if (e.isIntersecting) {
             this.near.add(el);
-            this.loadAround(el);
+            this.loadNow(el);
           } else {
             this.near.delete(el);
             // A scene that has left settles at its end or its start.
@@ -56,7 +67,26 @@ export class Scroller {
         }
         this.onScroll();
       },
-      { root: o.root, rootMargin: '25% 0px 25% 0px' },
+      { root: o.root, rootMargin: `${NEAR * 100}% 0px ${NEAR * 100}% 0px` },
+    );
+    // The next scene's pictures are on their way while this one is read.
+    this.ahead = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting) continue;
+          const el = e.target;
+          // A scene already near the screen loads at once; one further on waits for it.
+          const r = e.boundingClientRect;
+          const screen = o.root.getBoundingClientRect();
+          const near = screen.height * NEAR;
+          if (r.top > screen.bottom + near || r.bottom < screen.top - near) {
+            const wait = new Promise((go) => setTimeout(go, AHEAD_WAIT));
+            void Promise.race([this.onScreen, wait]).then(() => load(el));
+          } else this.loadNow(el);
+          this.ahead.unobserve(el);
+        }
+      },
+      { root: o.root, rootMargin: `${AHEAD * 100}% 0px ${AHEAD * 100}% 0px` },
     );
     this.reveal = new IntersectionObserver(
       (entries) => {
@@ -70,19 +100,17 @@ export class Scroller {
     );
     for (const s of o.scenes) {
       this.io.observe(s);
+      this.ahead.observe(s);
       s.querySelectorAll('.ft-block').forEach((b) => this.reveal.observe(b));
     }
-    // The opening scenes load at once.
-    o.scenes.slice(0, AHEAD + 1).forEach(load);
     o.root.addEventListener('scroll', this.onScroll, { passive: true });
     window.addEventListener('resize', this.onScroll);
     this.onScroll();
   }
 
-  /** Load a scene's pictures and those of the scenes after it. */
-  private loadAround(el: HTMLElement): void {
-    const i = this.o.scenes.indexOf(el);
-    for (let k = Math.max(0, i); k <= i + AHEAD && k < this.o.scenes.length; k++) load(this.o.scenes[k]);
+  private loadNow(el: Element): void {
+    const arriving = load(el);
+    this.onScreen = Promise.all([this.onScreen, arriving]);
   }
 
   private set(el: HTMLElement, p: number): void {
@@ -139,6 +167,7 @@ export class Scroller {
 
   dispose(): void {
     this.io.disconnect();
+    this.ahead.disconnect();
     this.reveal.disconnect();
     this.o.root.removeEventListener('scroll', this.onScroll);
     window.removeEventListener('resize', this.onScroll);

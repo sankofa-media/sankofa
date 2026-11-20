@@ -1,5 +1,5 @@
-import { describe, expect, it } from 'vitest';
-import { mediaSrc, setVariants } from '../src/lib/media';
+import { describe, expect, it, vi } from 'vitest';
+import { fitSrc, mediaSrc, setVariants } from '../src/lib/media';
 import { firstBigNumber, narratedCards, pickInterlude, qualifierOf } from '../src/views/signature';
 import type { Card } from '../src/lib/types';
 
@@ -15,6 +15,30 @@ describe('media variants', () => {
     const r = mediaSrc(app, 'a.jpg', [600]);
     expect(r.src).toBe('media/w960/a.jpg');
     expect(r.srcset).toBe('media/w480/a.jpg 480w, media/w960/a.jpg 960w, media/a.jpg 1800w');
+  });
+});
+
+describe('fitted copies', () => {
+  it('give a phone the smallest copy that covers its screen at up to twice the density', () => {
+    setVariants({ 'features/x/a.webp': [480, 960, 1600] }, { 'features/x/a.webp': 2400 });
+    vi.stubGlobal('devicePixelRatio', 3);
+    expect(fitSrc(app, 'features/x/a.webp', 390)).toBe('media/w960/features/x/a.webp');
+    expect(fitSrc(app, 'features/x/a.webp', 768)).toBe('media/w1600/features/x/a.webp');
+    // A large dense screen keeps the original.
+    expect(fitSrc(app, 'features/x/a.webp', 1440)).toBe('media/features/x/a.webp');
+    vi.stubGlobal('devicePixelRatio', 1);
+    expect(fitSrc(app, 'features/x/a.webp', 1440)).toBe('media/w1600/features/x/a.webp');
+    vi.unstubAllGlobals();
+    setVariants({});
+    expect(fitSrc(app, 'features/x/a.webp', 390)).toBe('media/features/x/a.webp');
+  });
+  it('serve a photograph as WebP when the build made one', () => {
+    setVariants({ 'p.jpg': [480, 960] }, { 'p.jpg': 1600 }, ['p.jpg']);
+    vi.stubGlobal('devicePixelRatio', 2);
+    expect(fitSrc(app, 'p.jpg', 390)).toBe('media/w960/p.webp');
+    expect(fitSrc(app, 'p.jpg', 1440)).toBe('media/p.webp');
+    vi.unstubAllGlobals();
+    setVariants({});
   });
 });
 

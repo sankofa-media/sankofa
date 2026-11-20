@@ -88,6 +88,19 @@ export function naturalWidth(file: string): number | undefined {
 }
 
 /**
+ * One URL for a picture that fills about `cssWidth` CSS pixels (the screen's
+ * width by default): the smallest copy that covers it at up to twice the
+ * density, else the original. A phone gets a copy a few times lighter; a large
+ * or dense screen keeps the original.
+ */
+export function fitSrc(app: Pick<App, 'media'>, file: string, cssWidth = typeof innerWidth === 'number' ? innerWidth : 1600): string {
+  const dpr = typeof devicePixelRatio === 'number' && devicePixelRatio > 0 ? devicePixelRatio : 1;
+  const want = cssWidth * Math.min(dpr, 2);
+  const w = (variants[file] ?? []).find((v) => v >= want);
+  return w ? served(`media/w${w}/${file}`, file) : served(app.media(file), file);
+}
+
+/**
  * src and srcset for an image: the smallest variant that covers `want[0]` as
  * src, every variant plus the original in srcset. Never larger than the
  * source, so nothing is upscaled by us.

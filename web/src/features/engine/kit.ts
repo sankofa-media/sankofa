@@ -6,6 +6,7 @@
 import { richText } from '../../app';
 import { h } from '../../lib/dom';
 import { plain } from '../../lib/links';
+import { fitSrc } from '../../lib/media';
 import { pick } from '../../lib/i18n';
 import type { Recording } from '../../lib/listen';
 import { audioContext } from '../../lib/sound';
@@ -303,7 +304,12 @@ export class Kit {
   /** A scene's generated illustration as layers (null when it has none yet). */
   art(sc: Scene, opts: { state?: string; overlay?: Node | null } = {}): Picture | null {
     if (!sc.art?.layers?.length) return null;
-    return layered(sc.art, (file) => this.ctx.app.media(`features/${this.ctx.data.id}/${file}`), { name: sc.id, ...opts });
+    return layered(sc.art, (file) => this.artSrc(file), { name: sc.id, ...opts });
+  }
+
+  /** The URL of one of the feature's illustration files, a smaller copy on a small screen. */
+  artSrc(file: string): string {
+    return fitSrc(this.ctx.app, `features/${this.ctx.data.id}/${file}`);
   }
 
   /** A clap shows in the current scene's picture as ink where hands meet (not in calm mode). */
@@ -320,7 +326,7 @@ export class Kit {
   photo(id: unknown): { src: string; alt: string; credit: string; caption?: string; source?: string; license?: string } | null {
     const a = this.ctx.data.art.find((x) => x.id === id);
     if (!a || a.kind !== 'photo' || !a.alt || !a.credit) return null;
-    return { src: this.ctx.app.media(a.file), alt: pick(a.alt), credit: pick(a.credit), ...(a.caption ? { caption: pick(a.caption) } : {}), ...(a.source ? { source: a.source } : {}), ...(a.license_url ? { license: a.license_url } : {}) };
+    return { src: fitSrc(this.ctx.app, a.file), alt: pick(a.alt), credit: pick(a.credit), ...(a.caption ? { caption: pick(a.caption) } : {}), ...(a.source ? { source: a.source } : {}), ...(a.license_url ? { license: a.license_url } : {}) };
   }
 
   /** Play a node in the museum's docked player (call from a click). */
