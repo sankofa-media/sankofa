@@ -194,9 +194,9 @@ export function develop(draw: Element, photo: { src: string; alt: string } | nul
   if (photo) {
     const img = document.createElement('img');
     img.className = 'ink-photo';
-    img.src = photo.src;
+    // Loaded ahead of its scene by the scroller (img[data-src]), like the layered pictures.
+    img.dataset.src = photo.src;
     img.alt = photo.alt;
-    img.loading = 'lazy';
     img.decoding = 'async';
     box.append(img);
   }
