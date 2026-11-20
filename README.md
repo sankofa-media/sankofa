@@ -54,9 +54,25 @@ kubectl apply -f deploy/webhooks.yaml
 go install ./cmd/sankofa                # or: kubectl sankofa
 ```
 
-The museum: `web/` (see [web/README](web/) and `web/Dockerfile`),
-`deploy/museum.yaml`. A public read-only entrance for visitors:
-`deploy/visitor.yaml`.
+## Run your own museum
+
+From the repository root, build and serve at <http://localhost:8080>:
+
+```sh
+docker build -f web/Dockerfile --build-arg SITE_URL=http://localhost:8080 -t sankofa-museum . && docker run --rm -p 8080:8080 sankofa-museum
+```
+
+Set `SITE_URL` to your public origin for a mirror (default: `https://sankofa.black`).
+For Kubernetes, push the image to your registry, substitute `MUSEUM_IMAGE`,
+`MUSEUM_HOST` and optional `PUBLIC_HOST` in `deploy/museum.yaml`, then apply
+with plain `kubectl`. See [the self-hosting guide](docs/self-host.md) for the
+copyable substitution command, optional second Ingress and TLS setup.
+No stand scripts or access to our cluster are needed.
+
+Angel's shared words and pulse need the optional service in `deploy/angel.yaml`,
+an Anthropic key for automatic moderation and Whisper for voice transcription.
+The museum and Angel story work without it. The distribution's optional
+read-only visitor access is in `deploy/visitor.yaml`.
 
 ## Owner review mode
 
