@@ -686,11 +686,8 @@
     opacity: calc(0.075 + var(--an-anx, 0) * 0.05);
   }
   /* The opening reads as a cover: the title right under the picture, the first words a screen below. */
-  .an [data-scene='line'] .ft-block.ft-b-kicker {
-    margin-bottom: calc(10px - 16svh);
-  }
   .an [data-scene='line'] .ft-block.ft-b-title {
-    margin-bottom: 36svh;
+    margin-bottom: 40svh;
   }
   .an-watcher {
     height: 46svh;
