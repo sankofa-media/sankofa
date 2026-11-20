@@ -259,10 +259,10 @@
 }
 
 /* 1973 / 1998 */
-.an [data-layer^='kingston-v2'] {
+.an :is([data-layer='then-now-r2-plate'], [data-layer='then-now-r2-soundsystem'], [data-layer='then-now-r2-people'], [data-layer='then-now-r2-singer']) {
   opacity: calc(1 - var(--tn, 0));
 }
-.an [data-layer^='voice-v2'] {
+.an :is([data-layer='then-now-r2-dark'], [data-layer='then-now-r2-voice-singer'], [data-layer='then-now-r2-breath']) {
   opacity: var(--tn, 0);
 }
 .an [data-scene='then-now'] .ft-art .al {
@@ -324,7 +324,7 @@
 }
 
 /* Strata: the layers stack, and the clean line turns to noise. */
-.an [data-scene='strata'] .ft-art .al {
+.an [data-scene='strata'] .ft-art .al:not([data-layer='strata-r2-plate']) {
   mix-blend-mode: screen;
 }
 .an [data-scene='strata'] .ft-art .al img {
@@ -409,13 +409,13 @@
 }
 
 /* Crowd: one group at a time. */
-.an [data-scene='crowd'] [data-layer^='crowd-v1-crowd'] {
+.an [data-scene='crowd'] [data-layer^='crowd-r2-crowd'] {
   opacity: 0;
   transition: opacity 1.6s var(--ease);
 }
-.an [data-scene='crowd'][data-shown='1'] [data-layer='crowd-v1-crowd-1'],
-.an [data-scene='crowd'][data-shown='2'] :is([data-layer='crowd-v1-crowd-1'], [data-layer='crowd-v1-crowd-2']),
-.an [data-scene='crowd'][data-shown='3'] [data-layer^='crowd-v1-crowd'] {
+.an [data-scene='crowd'][data-shown='1'] [data-layer='crowd-r2-crowd-1'],
+.an [data-scene='crowd'][data-shown='2'] :is([data-layer='crowd-r2-crowd-1'], [data-layer='crowd-r2-crowd-2']),
+.an [data-scene='crowd'][data-shown='3'] [data-layer^='crowd-r2-crowd'] {
   opacity: 1;
 }
 /* Someone at the edge of the screen, for a moment, behind the text. */

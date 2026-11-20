@@ -37,7 +37,7 @@ const AFTER_STEPS: { from: string; photo: string }[] = [
 ];
 const STRATA = ['bass', 'drums', 'voice', 'guitar'] as const;
 /** Where each strip lies on the canvas (percent from the top) and where they meet. */
-const STRATA_ROW: Record<(typeof STRATA)[number], number> = { bass: 13.7, drums: 39.6, voice: 59.9, guitar: 84 };
+const STRATA_ROW: Record<(typeof STRATA)[number], number> = { bass: 31.5, drums: 44.3, voice: 56.3, guitar: 74 };
 const STRATA_MEET = 50;
 
 const reduced = () => typeof matchMedia === 'function' && matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -165,7 +165,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
       case 'studio': {
         const el = scene(sc, picture(sc)?.el ?? null, { after: [flowPhoto(sc)] });
         // The three figures, cut apart, drift a little further from one another as the reader goes on.
-        const fig = el.querySelector<HTMLElement>('.al[data-layer="studio-v1-figures"]');
+        const fig = el.querySelector<HTMLElement>('.al[data-layer="studio-r2-figures"]');
         if (fig) {
           const img = fig.querySelector('img')!;
           fig.replaceChildren(...[0, 1, 2].map((k) => {
@@ -214,7 +214,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         };
         const paintStrata = () => {
           for (const k of STRATA) {
-            const img = el.querySelector<HTMLElement>(`.al[data-layer="strata-v1-${k}"] img`);
+            const img = el.querySelector<HTMLElement>(`.al[data-layer="strata-r2-${k}"] img`);
             img?.style.setProperty('--y', stacked.has(k) ? `${STRATA_MEET - STRATA_ROW[k]}%` : '0%');
           }
           el.dataset.stacked = String(stacked.size);
