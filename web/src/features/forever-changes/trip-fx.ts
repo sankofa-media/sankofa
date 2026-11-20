@@ -188,6 +188,19 @@ export class TripFx {
     this.raf = requestAnimationFrame(this.frame);
   }
 
+  /**
+   * How much of the picture's melt to apply: none until the chapter's picture has loaded (a melting
+   * placeholder reads as a picture that failed), and on a narrow picture proportionally less, so a
+   * phone sees the same distortion of a recognisable picture as a wide screen, not a smear.
+   */
+  private artFit(): number {
+    const art = this.scene?.querySelector<HTMLElement>('.ft-stage .ft-art');
+    if (!art) return 0;
+    const imgs = [...art.querySelectorAll<HTMLImageElement>('img')].filter((i) => i.getAttribute('src'));
+    if (!imgs.length || imgs.some((i) => !i.complete || !i.naturalWidth)) return 0;
+    return Math.min(1, Math.max(0.3, art.clientWidth / 860));
+  }
+
   private get resting(): boolean {
     const t = this.target;
     const sh = this.shown;
@@ -292,8 +305,9 @@ export class TripFx {
         const v = `${fx.toFixed(4)} ${fy.toFixed(4)}`;
         if (f.el.getAttribute('baseFrequency') !== v) f.el.setAttribute('baseFrequency', v);
       }
-      for (const m of this.maps) this.attr(m.el, 'scale', sh[m.key]);
-      for (const sp of this.splits) this.attr(sp.el, 'dx', sh[sp.key] * sp.sign);
+      const art = this.artFit();
+      for (const m of this.maps) this.attr(m.el, 'scale', m.key === 'art' ? sh.art * art : sh[m.key]);
+      for (const sp of this.splits) this.attr(sp.el, 'dx', (sp.key === 'splitArt' ? sh.splitArt * art : sh[sp.key]) * sp.sign);
     }
     // Words swap places for a moment at the peak.
     if (this.target.swap && this.on && !this.swapTimer) this.swapTimer = window.setTimeout(() => this.swap(), 2600);
