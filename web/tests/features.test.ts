@@ -237,7 +237,7 @@ describe('the Sea Lion Girls content', () => {
     const drawn = f.scenes.filter((s) => s.art).map((s) => s.id);
     expect(drawn).toEqual(['door', 'ring', 'expedition', 'arrival', 'family', 'minute', 'words', 'album', 'simone', 'single', 'burial', 'screen', 'river', 'silence', 'classroom', 'finale']);
     // The single's player has the platter its record lies on: the record moves with that layer.
-    expect(f.scenes.find((s) => s.id === 'single')?.art?.layers.at(-1)?.file).toBe('single-player.webp');
+    expect(f.scenes.find((s) => s.id === 'single')?.art?.layers.at(-1)?.file).toBe('single-r2-player.webp');
     // Ring and minute: whole figures with their own hands, and ink where the hands meet.
     for (const id of ['ring', 'minute']) {
       const a = f.scenes.find((s) => s.id === id)!.art!;

@@ -303,7 +303,7 @@ test('Nina Simone’s photo develops out of the drawing, with its CC0 credit', a
   await expect(fig.locator('img.ink-photo')).toHaveAttribute('src', /nina-simone-1965\.(jpg|webp)$/);
   await expect(fig.locator('img.ink-photo')).toHaveAttribute('alt', /Nina Simone/);
   // It develops out of the generated drawing of a woman at the piano.
-  await expect(fig.locator('.ink-develop > .ft-art [data-layer="piano-figure"]')).toHaveAttribute('data-role', 'figure');
+  await expect(fig.locator('.ink-develop > .ft-art [data-layer="simone-r2-figure"]')).toHaveAttribute('data-role', 'figure');
   await expect(fig.locator('figcaption')).toContainText('Anefo');
   await expect(fig.locator('figcaption')).toContainText('CC0');
 });
@@ -322,13 +322,13 @@ test('the illustrations load a couple of scenes ahead of the reader, not all at 
   expect(asked.filter((f) => !/^(door|ring|expedition)-/.test(f))).toEqual([]);
   await expect(scene(page, 'classroom').locator('.ft-art img[data-src]')).toHaveCount(3);
   // Layers carry alt text where they mean something, and an empty alt where they are decoration.
-  await expect(scene(page, 'door').locator('[data-layer="door-house"] img')).toHaveAttribute('alt', /wooden house/);
-  await expect(scene(page, 'door').locator('[data-layer="door-tree"] img')).toHaveAttribute('alt', '');
+  await expect(scene(page, 'door').locator('[data-layer="door-r2-plate"] img')).toHaveAttribute('alt', /wooden house/);
+  await expect(scene(page, 'door').locator('[data-layer="door-r2-tree"] img')).toHaveAttribute('alt', '');
   await goToScene(page, 'expedition');
   const exp = scene(page, 'expedition').locator('.ft-art img');
   await expect(exp).toHaveCount(3);
   await expect.poll(() => exp.evaluateAll((els) => els.every((e) => (e as HTMLImageElement).naturalWidth > 0))).toBe(true);
-  expect(asked).toContain('expedition-machine.webp');
+  expect(asked).toContain('expedition-r2-machine.webp');
   expect(asked).not.toContain('classroom-room.webp');
   // No caption on the pictures themselves; one line in the closing credits says they are generated.
   await expect(feature(page).locator('.ft-art figcaption')).toHaveCount(0);
@@ -340,12 +340,12 @@ test('the finale: the door of the first scene opens, with the light behind it', 
   await expect.poll(() => page.url()).toContain('scene=finale');
   const art = scene(page, 'finale').locator('.ft-art');
   await expect(art).toHaveAttribute('data-state', 'closed');
-  await expect(art.locator('[data-layer="door-porch-open"]')).toHaveAttribute('aria-hidden', 'true');
+  await expect(art.locator('[data-layer="door-r2-porch-open"]')).toHaveAttribute('aria-hidden', 'true');
   await page.locator('.ft-sheet:not([hidden])').evaluate((el) => el.scrollBy(0, el.clientHeight));
   await expect(art).toHaveAttribute('data-state', 'open');
-  await expect(art.locator('[data-layer="door-porch-open"]')).not.toHaveAttribute('aria-hidden', 'true');
-  await expect(art.locator('[data-layer="door-porch"]')).toHaveAttribute('aria-hidden', 'true');
-  await expect.poll(() => art.locator('[data-layer="door-light"] img').evaluate((e) => Number(getComputedStyle(e).opacity))).toBe(1);
+  await expect(art.locator('[data-layer="door-r2-porch-open"]')).not.toHaveAttribute('aria-hidden', 'true');
+  await expect(art.locator('[data-layer="door-r2-porch"]')).toHaveAttribute('aria-hidden', 'true');
+  await expect.poll(() => art.locator('[data-layer="door-r2-light"] img').evaluate((e) => Number(getComputedStyle(e).opacity))).toBe(1);
 });
 
 test('calm mode keeps the illustrations still and finished', async ({ page }) => {
@@ -358,10 +358,10 @@ test('calm mode keeps the illustrations still and finished', async ({ page }) =>
   });
   // No ink wipe, no breathing, no turning disc, no parallax; the van's doors stand open.
   expect((await style('[data-scene="album"] .ft-art .al')).mask).toBe('none');
-  expect((await style('[data-layer="album-disc"] .al-face img')).anim).toBe('none');
+  expect((await style('[data-layer="album-r2-disc"] .al-face img')).anim).toBe('none');
   expect((await style('[data-layer="classroom-children"]')).anim).toBe('none');
-  expect((await style('[data-layer="album-sleeves"]')).transform).toBe('');
-  expect((await style('[data-layer="expedition-machine"]')).open).toBe('1');
+  expect((await style('[data-layer="album-r2-sleeves"]')).transform).toBe('');
+  expect((await style('[data-layer="expedition-r2-machine"]')).open).toBe('1');
   // The finale shows its door open at once.
   await goToScene(page, 'finale');
   await expect(scene(page, 'finale').locator('.ft-art')).toHaveAttribute('data-state', 'open');
@@ -421,7 +421,7 @@ test('the arrival: on 13 May the door of the cover opens to the two strangers', 
   await expect(scene(page, 'arrival').locator('[data-block="opened"]')).toContainText('Luella');
   await page.locator('.ft-sheet:not([hidden])').evaluate((el) => el.scrollBy(0, el.clientHeight * 0.8));
   await expect(art).toHaveAttribute('data-state', 'open');
-  await expect.poll(() => art.locator('[data-layer="door-light"] img').evaluate((e) => Number(getComputedStyle(e).opacity))).toBe(1);
+  await expect.poll(() => art.locator('[data-layer="door-r2-light"] img').evaluate((e) => Number(getComputedStyle(e).opacity))).toBe(1);
 });
 
 test('every control the text tells the reader to press exists, with that label', async ({ page }) => {
@@ -460,9 +460,9 @@ test('every scene from the words to the silence has a picture; the photos are wh
   // The single lies on the platter of a player on the table, and still turns over.
   await expect(scene(page, 'single').locator('.sg-table > .ft-art + .sg')).toHaveCount(1);
   // Words, the single, burial, screen and silence show their generated layers, not drawings in code.
-  for (const id of ['words', 'single', 'burial', 'screen', 'silence']) await expect(scene(page, id).locator('.ft-art .al img').first(), id).toHaveAttribute('src', new RegExp(`${id}-[a-z-]+\\.webp$`));
+  for (const id of ['words', 'single', 'burial', 'screen', 'silence']) await expect(scene(page, id).locator('.ft-art .al img').first(), id).toHaveAttribute('src', new RegExp(`${id}-[a-z0-9-]+\\.webp$`));
   await expect(page.locator('.ft-drawn[data-art="words"], .ft-drawn[data-art="single"], .ft-drawn[data-art="burial"], .ft-drawn[data-art="screen"], .ft-drawn[data-art="silence"]')).toHaveCount(0);
-  // The record sits on the drawn platter: centred on the picture, 52% of its width (within the parallax).
+  // The record sits on the drawn platter: centred on the picture, 47% of its width (within the parallax).
   await goToScene(page, 'single');
   const pic = await scene(page, 'single').locator('.sg-table > .ft-art').boundingBox();
   const rec = await scene(page, 'single').locator('.sg-table > .sg').boundingBox();
@@ -470,7 +470,7 @@ test('every scene from the words to the silence has a picture; the photos are wh
   if (pic && rec) {
     expect(Math.abs(rec.x + rec.width / 2 - (pic.x + pic.width / 2))).toBeLessThan(2);
     expect(Math.abs(rec.y + rec.height / 2 - (pic.y + pic.height / 2))).toBeLessThan(10);
-    expect(Math.abs(rec.width / pic.width - 0.52)).toBeLessThan(0.01);
+    expect(Math.abs(rec.width / pic.width - 0.47)).toBeLessThan(0.01);
   }
 });
 
