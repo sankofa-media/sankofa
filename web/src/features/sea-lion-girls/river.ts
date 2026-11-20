@@ -55,6 +55,8 @@ export function river(kit: Kit, backdrop: Picture | null = null): { el: HTMLElem
         x.setAttribute('aria-expanded', String(x === b));
       });
       show(n);
+      // On a phone the card covers the lower half of the screen: bring the chosen circle up above it.
+      if (matchMedia('(max-width: 720px)').matches) b.scrollIntoView({ block: 'start', behavior: kit.calm ? 'auto' : 'smooth' });
     });
     return b;
   });

@@ -646,6 +646,14 @@
   .rv-name {
     display: none;
   }
+  /* The chosen version is named on the diagram too, above its card. */
+  .rv-node.on .rv-name {
+    display: -webkit-box;
+    max-width: 96px;
+  }
+  .rv-node {
+    scroll-margin-top: calc(var(--nav-h) + 140px);
+  }
   .rv-node {
     max-width: 64px;
   }
