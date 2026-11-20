@@ -205,7 +205,7 @@ const single: Render = (kit, sc) => {
   const disc = h('div.sg-disc', {}, face('a'), face('b'));
   const record = h('div.sg', { 'data-side': 'b' }, h('div.sg-vinyl', { 'aria-hidden': 'true' }), disc);
   // The record lies on the platter of the player on the table (centre 50%/50%,
-  // 52% of the width) and moves with the player's layer, so it stays on it.
+  // 47% of the width) and moves with the player's layer, so it stays on it.
   const player = sc.art?.layers.at(-1);
   if (player?.depth) record.dataset.depth = String(player.depth);
   const table = h('div.sg-table', {}, kit.art(sc)?.el ?? null, record);

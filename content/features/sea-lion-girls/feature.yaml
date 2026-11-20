@@ -227,11 +227,11 @@ scenes:
     art: &door-art
       generated: true
       layers:
-        - { file: door-house.webp, depth: 6, alt: { en: "A small wooden house in rural Mississippi, spring 1939", ru: "Небольшой деревянный дом в сельском Миссисипи, весна 1939 года" } }
-        - { file: door-porch.webp, depth: 10, state: closed, alt: { en: "Its porch, the front door closed", ru: "Крыльцо, входная дверь закрыта" } }
-        - { file: door-porch-open.webp, depth: 10, state: open, alt: { en: "Its porch, the front door ajar", ru: "Крыльцо, входная дверь приоткрыта" } }
-        - { file: door-light.webp, depth: 10, state: open, alt: "" }
-        - { file: door-tree.webp, depth: 18, alt: "" }
+        - { file: door-r2-plate.webp, depth: 6, alt: { en: "A small wooden house in rural Mississippi, spring 1939", ru: "Небольшой деревянный дом в сельском Миссисипи, весна 1939 года" } }
+        - { file: door-r2-porch.webp, depth: 10, state: closed, alt: { en: "Its porch, the front door closed", ru: "Крыльцо, входная дверь закрыта" } }
+        - { file: door-r2-porch-open.webp, depth: 10, state: open, alt: { en: "Its porch, the front door ajar", ru: "Крыльцо, входная дверь приоткрыта" } }
+        - { file: door-r2-light.webp, depth: 10, state: open, alt: "" }
+        - { file: door-r2-tree.webp, depth: 18, alt: "" }
     blocks:
       - id: when
         role: kicker
@@ -254,8 +254,8 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: ring-ground.webp, depth: 3, alt: "" }
-        - { file: ring-children.webp, depth: 10, role: figure, pivot: "50 60", alt: { en: "Children in a ring, seen from a little above, clapping", ru: "Дети в кругу, вид чуть сверху, хлопают в ладоши" } }
+        - { file: ring-r2-plate.webp, depth: 3, alt: "" }
+        - { file: ring-r2-children.webp, depth: 10, role: figure, pivot: "50 60", alt: { en: "Children in a ring, seen from a little above, clapping", ru: "Дети в кругу, вид чуть сверху, хлопают в ладоши" } }
       # Where each child's hands meet: a ripple of ink spreads there with every clap.
       claps:
         depth: 10
@@ -307,13 +307,12 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: expedition-road.webp, depth: 4, alt: { en: "A dirt road through low fields", ru: "Грунтовая дорога среди низких полей" } }
-        - { file: expedition-ambulance.webp, depth: 10, alt: { en: "An old army ambulance turned into a recording studio on wheels", ru: "Старая армейская санитарная машина, превращённая в студию на колёсах" } }
-        - file: expedition-machine.webp
+        - { file: expedition-r2-plate.webp, depth: 4, alt: { en: "A dirt road through low fields", ru: "Грунтовая дорога среди низких полей" } }
+        - { file: expedition-r2-ambulance.webp, depth: 10, alt: { en: "An old army ambulance turned into a recording studio on wheels", ru: "Старая армейская санитарная машина, превращённая в студию на колёсах" } }
+        - file: expedition-r2-machine.webp
           depth: 10
           open: "0.12 0.4"
           pivot: "63.3 59.4"
-          fit: { x: 7.04, y: 0, scale: 0.73 }
           alt: { en: "Its back doors open on a machine that cuts sound onto discs", ru: "Задние двери открыты, внутри аппарат, режущий звук на диски" }
     blocks:
       - id: kicker
@@ -357,10 +356,10 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: family-church.webp, depth: 3, alt: { en: "A small wooden country church", ru: "Маленькая деревянная сельская церковь" } }
-        - { file: family-family.webp, depth: 8, role: figure, pivot: "40 90", alt: { en: "An older woman, a young man and a boy in their Sunday clothes", ru: "Пожилая женщина, молодой человек и мальчик в воскресной одежде" } }
-        - { file: family-sister-left.webp, depth: 12, role: step, pivot: "68 92", alt: { en: "Two young women standing half a step forward, one in a red dress", ru: "Две девушки на полшага впереди, одна в красном платье" } }
-        - { file: family-sister-right.webp, depth: 12, role: step, pivot: "80 92", alt: "" }
+        - { file: family-r2-plate.webp, depth: 3, alt: { en: "A small wooden country church", ru: "Маленькая деревянная сельская церковь" } }
+        - { file: family-r2-family.webp, depth: 8, role: figure, pivot: "40 90", alt: { en: "An older woman, a young man and a boy in their Sunday clothes", ru: "Пожилая женщина, молодой человек и мальчик в воскресной одежде" } }
+        - { file: family-r2-sister-left.webp, depth: 12, role: step, pivot: "68 92", alt: { en: "Two young women standing half a step forward, one in a red dress", ru: "Две девушки на полшага впереди, одна в красном платье" } }
+        - { file: family-r2-sister-right.webp, depth: 12, role: step, pivot: "80 92", alt: "" }
     figures:
       - { id: mary, name: { en: "Mary Shipp", ru: "Мэри Шипп" }, age: 47, role: { en: "John’s mother", ru: "мать Джона" } }
       - { id: isaac, name: { en: "Isaac", ru: "Айзек" }, age: 23 }
@@ -396,9 +395,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: minute-wash.webp, depth: 3, alt: "" }
-        - { file: minute-sister-left.webp, depth: 10, role: figure, pivot: "26 90", alt: { en: "Two sisters face each other and sing; one leads, the other answers", ru: "Две сестры стоят лицом друг к другу и поют: одна ведёт, другая отвечает" } }
-        - { file: minute-sister-right.webp, depth: 10, role: figure, pivot: "71 90", alt: { en: "The second sister, in a red dress, claps as she sings", ru: "Вторая сестра, в красном платье, хлопает в ладоши и поёт" } }
+        - { file: minute-r2-plate.webp, depth: 3, alt: "" }
+        - { file: minute-r2-sister-left.webp, depth: 10, role: figure, pivot: "26 90", alt: { en: "Two sisters face each other and sing; one leads, the other answers", ru: "Две сестры стоят лицом друг к другу и поют: одна ведёт, другая отвечает" } }
+        - { file: minute-r2-sister-right.webp, depth: 10, role: figure, pivot: "71 90", alt: { en: "The second sister, in a red dress, claps as she sings", ru: "Вторая сестра, в красном платье, хлопает в ладоши и поёт" } }
       claps:
         depth: 10
         at: [ [ 39.6, 34.1 ], [ 63.2, 34.1 ] ]
@@ -442,9 +441,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: words-table-sheet.webp, depth: 3, alt: { en: "A lined school sheet on a table, covered in pencil marks rubbed out and drawn again", ru: "Тетрадный лист в линейку на столе, весь в стёртых и заново наведённых карандашных линиях" } }
-        - { file: words-label.webp, depth: 6, alt: { en: "A blank luggage tag on a red thread", ru: "Пустая багажная бирка на красной нитке" } }
-        - { file: words-girls.webp, depth: 10, role: figure, pivot: "50 95", alt: { en: "Two young women at either side of the table lean over the sheet; one writes on it with a pencil, the other watches", ru: "Две девушки по разные стороны стола склонились над листом: одна пишет на нём карандашом, другая смотрит" } }
+        - { file: words-r2-plate.webp, depth: 3, alt: { en: "A lined school sheet on a table, covered in pencil marks rubbed out and drawn again", ru: "Тетрадный лист в линейку на столе, весь в стёртых и заново наведённых карандашных линиях" } }
+        - { file: words-r2-label.webp, depth: 6, alt: { en: "A blank luggage tag on a red thread", ru: "Пустая багажная бирка на красной нитке" } }
+        - { file: words-r2-girls.webp, depth: 10, role: figure, pivot: "50 95", alt: { en: "Two young women at either side of the table lean over the sheet; one writes on it with a pencil, the other watches", ru: "Две девушки по разные стороны стола склонились над листом: одна пишет на нём карандашом, другая смотрит" } }
     blocks:
       - id: kicker
         role: kicker
@@ -487,9 +486,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: album-table.webp, depth: 3, alt: "" }
-        - { file: album-sleeves.webp, depth: 8, alt: { en: "An open album of 78-rpm records, its sleeves fanned out", ru: "Раскрытый альбом пластинок на 78 оборотов, конверты веером" } }
-        - file: album-disc.webp
+        - { file: album-r2-plate.webp, depth: 3, alt: "" }
+        - { file: album-r2-sleeves.webp, depth: 8, alt: { en: "An open album of 78-rpm records, its sleeves fanned out", ru: "Раскрытый альбом пластинок на 78 оборотов, конверты веером" } }
+        - file: album-r2-disc.webp
           depth: 12
           role: spin
           spin: { x: 57.4, y: 69.19, ratio: 0.52, tilt: -5, face: [ 57.17, 71.4, 26.4, 19.9 ] }
@@ -534,9 +533,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: piano-stage.webp, depth: 3, alt: "" }
-        - { file: piano-grand.webp, depth: 8, alt: { en: "A grand piano on a dark stage", ru: "Рояль на тёмной сцене" } }
-        - { file: piano-figure.webp, depth: 12, role: figure, pivot: "34 88", alt: { en: "A woman at the piano, upright, her hands on the keys", ru: "Женщина за роялем, прямая, руки на клавишах" } }
+        - { file: simone-r2-plate.webp, depth: 3, alt: "" }
+        - { file: simone-r2-grand.webp, depth: 8, alt: { en: "A grand piano on a dark stage", ru: "Рояль на тёмной сцене" } }
+        - { file: simone-r2-figure.webp, depth: 12, role: figure, pivot: "34 88", alt: { en: "A woman at the piano, upright, her hands on the keys", ru: "Женщина за роялем, прямая, руки на клавишах" } }
     blocks:
       - id: kicker
         role: kicker
@@ -564,9 +563,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: single-table.webp, depth: 3, alt: "" }
-        - { file: single-sleeve-cups.webp, depth: 6, alt: { en: "A plain paper record sleeve with one red band, a cup of black coffee and a cup of tea", ru: "Простой бумажный конверт для пластинки с красной полосой, чашка чёрного кофе и чашка чая" } }
-        - { file: single-player.webp, depth: 8, alt: { en: "An open portable record player on a wooden table, seen from above", ru: "Раскрытый переносной проигрыватель на деревянном столе, вид сверху" } }
+        - { file: single-r2-plate.webp, depth: 3, alt: "" }
+        - { file: single-r2-sleeve-cups.webp, depth: 6, alt: { en: "A plain paper record sleeve with one red band, a cup of black coffee and a cup of tea", ru: "Простой бумажный конверт для пластинки с красной полосой, чашка чёрного кофе и чашка чая" } }
+        - { file: single-r2-player.webp, depth: 8, alt: { en: "An open portable record player on a wooden table, seen from above", ru: "Раскрытый переносной проигрыватель на деревянном столе, вид сверху" } }
     nodes: [ simone-single-1964 ]
     blocks:
       - id: kicker
@@ -777,9 +776,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: burial-houses.webp, depth: 3, alt: { en: "A row of terraced houses on a London street at night; in one upper window a light is on behind a red curtain", ru: "Ряд одинаковых домов на лондонской улице ночью; в одном окне наверху за красной занавеской горит свет" } }
-        - { file: burial-road-lamp.webp, depth: 8, alt: { en: "A wet road under a street lamp, with the lit window reflected in it", ru: "Мокрая мостовая под фонарём, в ней отражается освещённое окно" } }
-        - { file: burial-rain.webp, depth: 14, alt: "" }
+        - { file: burial-r2-plate.webp, depth: 3, alt: { en: "A row of terraced houses on a London street at night; in one upper window a light is on behind a red curtain", ru: "Ряд одинаковых домов на лондонской улице ночью; в одном окне наверху за красной занавеской горит свет" } }
+        - { file: burial-r2-road-lamp.webp, depth: 8, alt: { en: "A wet road under a street lamp, with the lit window reflected in it", ru: "Мокрая мостовая под фонарём, в ней отражается освещённое окно" } }
+        - { file: burial-r2-rain.webp, depth: 14, alt: "" }
     nodes: [ burial-2011 ]
     blocks:
       - id: kicker
@@ -798,9 +797,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: screen-room-screen.webp, depth: 3, alt: { en: "An empty cinema with a blank lit screen", ru: "Пустой кинозал с освещённым чистым экраном" } }
-        - { file: screen-beam.webp, depth: 6, alt: "" }
-        - { file: screen-projector-seats.webp, depth: 12, alt: { en: "A film projector at the back of the hall throws its beam over two rows of empty seats", ru: "Кинопроектор в глубине зала бросает луч над двумя рядами пустых кресел" } }
+        - { file: screen-r2-plate.webp, depth: 3, alt: { en: "An empty cinema with a blank lit screen", ru: "Пустой кинозал с освещённым чистым экраном" } }
+        - { file: screen-r2-beam.webp, depth: 6, alt: "" }
+        - { file: screen-r2-projector-seats.webp, depth: 12, alt: { en: "A film projector at the back of the hall throws its beam over two rows of empty seats", ru: "Кинопроектор в глубине зала бросает луч над двумя рядами пустых кресел" } }
     frames:
       - { work: "The General's Daughter", node: shes-began-to-lie-1999, caption: { en: "“The General’s Daughter” (1999): the Shipp sisters’ own voices from the 1939 recording, reworked by the composer Greg Hale Jones.", ru: "«Дочь генерала» (1999): в фильме звучат голоса самих сестёр Шипп из записи 1939 года, обработанные композитором Грегом Хейлом Джонсом." } }
       - { work: "Grey's Anatomy, Original Soundtrack Vol. 3 (series soundtrack album)", node: feist-sealion-2007, caption: { en: "Feist’s “Sealion” (2007) is on the soundtrack album of the series “Grey’s Anatomy”.", ru: "Песня Feist «Sealion» (2007) вошла в альбом с музыкой к сериалу «Анатомия страсти»." } }
@@ -826,7 +825,8 @@ scenes:
       generated: true
       aspect: "1 / 3"
       layers:
-        - { file: river-ink.webp, alt: "" }
+        - { file: river-r2-plate.webp, alt: "" }
+        - { file: river-r2-ink.webp, alt: "" }
     blocks:
       - id: kicker
         role: kicker
