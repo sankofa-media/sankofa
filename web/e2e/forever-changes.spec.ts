@@ -269,7 +269,7 @@ test('on a computer: a QR code for the phone at this chapter, and the mode over 
   const panel = feature(page).locator('.fc-lee-panel');
   await expect(panel).toBeVisible();
   const url = await panel.locator('svg.fc-qr').getAttribute('data-url');
-  expect(url).toMatch(/#view=feature&item=forever-changes&scene=the-red-telephone&lee=1$/);
+  expect(url).toMatch(/\/features\/forever-changes\/#scene=the-red-telephone&lee=1$/);
   await expect(panel.locator('svg.fc-qr path')).toHaveAttribute('d', /^M/);
   // Nothing leaves the page while the mode runs.
   const asked: string[] = [];

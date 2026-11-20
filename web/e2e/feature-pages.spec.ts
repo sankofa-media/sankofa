@@ -38,3 +38,12 @@ for (const language of ['en', 'ru']) {
     await expect(feature).toBeVisible();
   });
 }
+
+test('a legacy feature hash entered in a running museum navigates to its own page', async ({ page }) => {
+  await page.goto('/ru/');
+  await expect(page.locator('article.chapter').first()).toBeAttached();
+  await page.evaluate(() => { location.hash = 'view=feature&item=sea-lion-girls&scene=ring&lang=ru'; });
+  await expect(page).toHaveURL(/\/ru\/features\/sea-lion-girls\/#scene=ring/);
+  await expect(page.locator('article.ft')).toBeVisible();
+  await expect(page.locator('#story')).toHaveCount(0);
+});

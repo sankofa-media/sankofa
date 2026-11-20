@@ -92,6 +92,12 @@ async function start() {
     if (route.point.focus) app.openCard(route.point.focus, { push: false });
     else { ++request; drawer?.close(true); }
   };
+  document.addEventListener('keydown', e => {
+    if (e.key !== 'Escape' || !drawer?.isOpen) return;
+    e.preventDefault();
+    e.stopPropagation();
+    drawer.close();
+  }, true);
   document.addEventListener('click', e => {
     const anchor = (e.target as Element).closest<HTMLAnchorElement>('a[data-card]');
     if (!anchor || e.ctrlKey || e.metaKey || e.shiftKey || e.button !== 0) return;
