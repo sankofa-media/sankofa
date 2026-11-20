@@ -2,6 +2,16 @@
 # Each feature is a folder next to this file (feature.yaml, its data files).
 # `order` is the order of the list; a folder not named here is not built.
 # `ui` holds the labels of the engine itself (shared by every feature).
+#
+# Every feature built from this list also gets, with no further work, its
+# own pages /features/<id>/ and /ru/features/<id>/ with search and
+# link-preview metadata and JSON-LD, a 1200x630 preview picture drawn from
+# its cover, its entries in sitemap.xml, llms.txt, llms-full.txt and the
+# features.atom feeds (web/scripts/seo). The description is the dek, cut to
+# about 160 characters. A feature may set its own, optionally:
+#   seo:
+#     description: {en: "...", ru: "..."}   # about 160 characters
+#     image: some-file.webp                 # a file in its art/ folder
 order:
   - sea-lion-girls
   - forever-changes
