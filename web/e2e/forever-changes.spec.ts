@@ -280,7 +280,7 @@ test('on a computer: a QR code for the phone at this chapter, and the mode over 
   await expect(mode.locator('.fc-lee-vision[data-object="telephone"]')).toBeAttached({ timeout: 9000 });
   expect(await page.evaluate(() => (window as unknown as { __cam: { asked: unknown[] } }).__cam.asked.length)).toBe(0);
   // Only the mode's own painted overlays are fetched, from the museum itself; nothing is sent.
-  const own = new URL('media/features/forever-changes/lee-mode-', page.url()).href;
+  const own = new URL('/media/features/forever-changes/lee-mode-', page.url()).href;
   expect(asked.filter((a) => !(a.startsWith('GET ') && a.slice(4).startsWith(own)))).toEqual([]);
   // Escape closes the mode, not the feature behind it.
   await page.keyboard.press('Escape');

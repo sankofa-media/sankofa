@@ -10,7 +10,8 @@ import { holdScroll, placeTop, rememberPlace, takePlace } from './lib/place';
 import { CardSet, cardForEdition, localizeCard, localizeChapter } from './lib/cards';
 import { chapterForEdition, sortChapters } from './lib/chapters';
 import { formatFragment } from './lib/fragment';
-import { formatRoute, parseRoute, screenOf, type Route } from './lib/route';
+import { screenOf, type Route } from './lib/route';
+import { extraHashKeys, langOfLocation, pageOfPath, routeOfLocation, urlOfRoute } from './lib/pagePath';
 import * as reader from './lib/reader';
 import { copyText, h, svgIcon, toast } from './lib/dom';
 import { chapterLabel, chapterNumber, detectLang, isLang, lang, pick, setLang, storeLang, storedLang, t, t as tr, type Lang } from './lib/i18n';
@@ -50,21 +51,24 @@ async function load<T>(url: string): Promise<T> {
 }
 
 function readRoute(): Route {
-  return parseRoute(location.hash);
+  return routeOfLocation(location.pathname, location.hash);
 }
 
-function writeRoute(r: Route, push: boolean): void {
-  // Every link carries the language, so a shared link opens as it was read.
-  const frag = formatRoute({ ...r, point: { ...r.point, lang: lang() === 'en' ? undefined : lang() } });
-  const url = frag ? `#${frag}` : location.pathname + location.search;
-  if (url === (location.hash || location.pathname + location.search)) return;
+const here = () => location.pathname + location.search + location.hash;
+
+function writeRoute(r: Route, push: boolean, extra = ''): void {
+  // Every link carries the language, so a shared link opens as it was read:
+  // a special project in its path (/ru/features/<id>/), the rest in the hash.
+  let url = urlOfRoute(r, lang(), pageOfPath(location.pathname)?.kind === 'home' ? location.search : '');
+  if (extra) url += (url.includes('#') ? '&' : '#') + extra;
+  if (url === here() || (url === '/' + location.search && location.pathname === '/' && !location.hash)) return;
   history[push ? 'pushState' : 'replaceState'](null, '', url);
 }
 
 /** Switch language: remember it, put it in the link, and rebuild the museum. */
 export function switchLang(to: Lang): void {
   storeLang(to);
-  const r = parseRoute(location.hash);
+  const r = readRoute();
   // Keep the reader's place in the story across the rebuild: the chapter and
   // the step being read go into the link, the offset in it into this tab.
   const here = !r.view ? rememberPlace() : undefined;
@@ -72,13 +76,13 @@ export function switchLang(to: Lang): void {
     r.ch = here.ch;
     r.step = here.step >= 0 ? here.step : undefined;
   }
-  const frag = formatRoute({ ...r, point: { ...r.point, lang: to === 'en' ? undefined : to } });
-  history.replaceState(null, '', frag ? `#${frag}` : location.pathname + location.search);
+  history.replaceState(null, '', urlOfRoute(r, to, pageOfPath(location.pathname)?.kind === 'home' ? location.search : ''));
   location.reload();
 }
 
 async function start(): Promise<void> {
-  const fromHash = new URLSearchParams(location.hash.slice(1)).get('lang');
+  // The link's language: lang= in the hash, or the page's path (/ru/…).
+  const fromHash = langOfLocation(location.pathname, location.hash) ?? null;
   const current = detectLang(fromHash, storedLang(), navigator.languages ?? navigator.language);
   setLang(current);
   if (isLang(fromHash)) storeLang(fromHash);
@@ -315,8 +319,16 @@ async function start(): Promise<void> {
       if (isLang(to) && to !== lang()) switchLang(to);
     }),
   );
-  linkCover(app);
-  buildStory(app, document.getElementById('story')!);
+  // The story is built when the museum itself is first shown: a reader who
+  // lands on a special project's page gets the project, not the museum behind it.
+  let museumBuilt = false;
+  const ensureMuseum = () => {
+    if (museumBuilt) return;
+    museumBuilt = true;
+    linkCover(app);
+    buildStory(app, document.getElementById('story')!);
+    trackChapters(app);
+  };
   // Documents, working objects, how we checked, the guide and the dedication.
   const mech = installMechanics(app, {
     navigate(view, item, push = true) {
@@ -339,6 +351,10 @@ async function start(): Promise<void> {
         if (view) closeOverlays(view);
       }
       route = view ? { point: {}, view, ...(item ? { item } : {}), ...(scene ? { scene } : {}) } : { point: {}, ch: chapterNow ?? undefined };
+      if (!view) {
+        ensureMuseum();
+        features.close();
+      }
       writeRoute(route, push);
     },
   });
@@ -350,7 +366,6 @@ async function start(): Promise<void> {
   const countries = atlas.el.querySelector('.atlas-countries');
   if (countries) weaveLive(app, countries);
   watchTypography(current);
-  trackChapters(app);
   loading.remove();
 
   // Escape closes the topmost panel first, wherever the focus is.
@@ -446,10 +461,22 @@ async function start(): Promise<void> {
 
   const apply = (initial: boolean) => {
     // A link with another language (typed, pasted or followed) switches the museum.
-    const asked = new URLSearchParams(location.hash.slice(1)).get('lang');
+    // So does a page in the other language (/ru/features/…, back or forward).
+    const asked = langOfLocation(location.pathname, location.hash);
     if (!initial && isLang(asked) && asked !== lang()) return switchLang(asked);
     route = readRoute();
     const screen = screenOf(route);
+    if (screen === 'features' || screen === 'feature') {
+      // An old hash link to a feature (#view=feature&item=…) moves to the
+      // feature's own path, keeping the feature's own keys (lee=1, pulse=1).
+      const extra = extraHashKeys(location.hash);
+      writeRoute(route, false, extra);
+    } else ensureMuseum();
+    if (initial) {
+      // What the build pre-rendered for readers without the museum's script.
+      document.querySelectorAll('[data-prerender]').forEach((el) => el.remove());
+      document.body.classList.remove('pre');
+    }
     closeOverlays(screen);
     if (screen === 'listen') listen.open();
     else if (screen === 'engine') engine.open();
@@ -476,7 +503,7 @@ async function start(): Promise<void> {
     else cardDrawer.close(true);
   };
   // Mirror the language into the link, so what is shared opens as it was read.
-  if (lang() !== 'en' && !isLang(new URLSearchParams(location.hash.slice(1)).get('lang'))) writeRoute(readRoute(), false);
+  if (lang() !== 'en' && pageOfPath(location.pathname)?.kind === 'home' && !isLang(new URLSearchParams(location.hash.slice(1)).get('lang'))) writeRoute(readRoute(), false);
   window.addEventListener('popstate', () => apply(false));
   window.addEventListener('hashchange', () => apply(false));
   apply(true);

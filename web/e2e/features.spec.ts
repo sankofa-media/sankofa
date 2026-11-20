@@ -35,12 +35,12 @@ test('the menu opens the list of features, and the list opens Sea Lion Girls', a
     await page.locator('.nav-actions [data-features]').click();
   }
   await expect(sheet(page).locator('.ft-list-head h2')).toHaveText('Special projects');
-  expect(page.url()).toContain('view=features');
+  expect(new URL(page.url()).pathname).toBe('/features/');
   const item = sheet(page).locator('[data-feature="sea-lion-girls"]');
   await expect(item).toContainText('Sea Lion Girls: how two young women from Mississippi sang a song the whole world knows');
   await item.click();
   await expect(feature(page)).toBeVisible();
-  expect(page.url()).toContain('view=feature&item=sea-lion-girls');
+  expect(new URL(page.url()).pathname).toBe('/features/sea-lion-girls/');
   await expect(feature(page).locator('h1.ft-h1')).toContainText('Sea Lion Girls');
   // Back returns to the list, and back again to the museum.
   await page.goBack();
@@ -239,7 +239,7 @@ test('a dictionary link opens its card over the longread; closing it returns to 
   await expect(page.locator('.drawer.on article.card[data-card-id="jazz"]')).toBeVisible();
   const top = await page.locator('.ft-sheet').evaluate((el) => el.scrollTop);
   const at = page.url().match(/scene=([a-z-]+)/)?.[1];
-  expect(page.url()).toContain('view=feature');
+  expect(new URL(page.url()).pathname).toBe('/features/sea-lion-girls/');
   await expect(feature(page)).toBeAttached();
   await page.keyboard.press('Escape');
   await expect(page.locator('.drawer.on')).toHaveCount(0);

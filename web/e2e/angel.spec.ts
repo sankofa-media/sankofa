@@ -74,7 +74,7 @@ test('the list names Angel after Forever Changes, and it opens', async ({ page }
   expect(await items.evaluateAll((els) => els.map((e) => (e as HTMLElement).dataset.feature))).toEqual(['sea-lion-girls', 'forever-changes', 'angel']);
   await items.nth(2).click();
   await expect(feature(page)).toBeVisible();
-  expect(page.url()).toContain('item=angel');
+  expect(new URL(page.url()).pathname).toBe('/features/angel/');
 });
 
 test('the language switches inside the feature and the reader stays in the scene', async ({ page }) => {
@@ -84,13 +84,14 @@ test('the language switches inside the feature and the reader stays in the scene
   const btn = sheet(page).locator('.ft-lang');
   await expect(btn).toHaveText('RU');
   await btn.click();
-  await expect.poll(() => page.url()).toContain('lang=ru');
+  // The language is in the page's path now: /ru/features/angel/.
+  await expect.poll(() => new URL(page.url()).pathname).toBe('/ru/features/angel/');
   await expect(feature(page)).toBeVisible();
   expect(page.url()).toContain('scene=bristol');
   await expect(scene(page, 'bristol')).toContainText(LINES.bristol[1]);
   await expect(sheet(page).locator('.ft-lang')).toHaveText('EN');
   await sheet(page).locator('.ft-lang').click();
-  await expect.poll(() => page.url()).not.toContain('lang=ru');
+  await expect.poll(() => new URL(page.url()).pathname).toBe('/features/angel/');
   await expect(scene(page, 'bristol')).toContainText(LINES.bristol[0]);
 });
 

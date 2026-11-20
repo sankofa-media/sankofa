@@ -1,11 +1,14 @@
-// The special projects' sheet: the list (#view=features) and one feature
-// (#view=feature&item=<id>&scene=<scene>). Loaded on the first visit (see
+// The special projects' page: the list (/features/) and one feature
+// (/features/<id>/#scene=<scene>; the old #view=feature&item=<id> links lead
+// here). It is the whole page while it is open: the museum is not shown
+// behind it, and its bar leads back to the museum. Loaded on the first visit (see
 // ./index.ts); every feature, and the scroll engine they share, is a module
 // of its own, loaded only when a reader opens it.
 import type { App } from '../app';
 import { h, svgIcon } from '../lib/dom';
 import { lang, pick } from '../lib/i18n';
 import { loadJson } from '../lib/loadJson';
+import { featurePath } from '../lib/pagePath';
 import { stopWithin } from '../lib/sound';
 import { weaveLive } from '../lib/weave';
 import type { Bi, Cover, FeatureData, FeaturesIndex } from './model';
@@ -59,6 +62,9 @@ function loadIndex(): Promise<FeaturesIndex | null> {
 const FALLBACK: Record<string, Bi> = {
   'list-kicker': { en: 'Special projects', ru: 'Спецпроекты' },
   close: { en: 'Close', ru: 'Закрыть' },
+  home: { en: 'Sankofa', ru: 'В музей' },
+  'list-title': { en: 'Special projects', ru: 'Спецпроекты' },
+  'home-label': { en: 'Back to the Sankofa museum', ru: 'Вернуться в музей Sankofa' },
   back: { en: 'All features', ru: 'Все спецпроекты' },
   loading: { en: 'Loading…', ru: 'Загружается…' },
   error: { en: 'This feature could not be loaded. Try again.', ru: 'Не удалось загрузить спецпроект. Попробуйте ещё раз.' },
@@ -69,13 +75,22 @@ export function createFeatures(app: App, hooks: FeatureHooks): Features {
   let ui: Record<string, Bi> = FALLBACK;
   const say = (k: string) => pick(ui[k] ?? FALLBACK[k] ?? { en: k, ru: k });
   const kicker = h('span.ft-kicker');
-  const back = h('a.btn.ft-back', { href: '#view=features', 'data-features': '' }, svgIcon('prev'), h('span.ft-back-label'));
+  const back = h('a.btn.ft-back', { href: featurePath(undefined, lang()), 'data-features': '' }, svgIcon('prev'), h('span.ft-back-label'));
   const tools = h('div.ft-tools');
   // The other language, named in itself, as in the museum's top bar.
   const langBtn = h('button.btn.lang-switch.ft-lang', { type: 'button', onclick: () => hooks.switchLang() });
-  const closeBtn = h('button.icon-btn.ft-close', { type: 'button', onclick: () => closeAll() }, svgIcon('close'));
+  // Not a "close" button: the special project is a page, and this is the way into the museum.
+  const home = h('a.btn.ft-home', {
+    href: lang() === 'ru' ? '/#lang=ru' : '/',
+    onclick: (ev: Event) => {
+      const e = ev as MouseEvent;
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+      e.preventDefault();
+      closeAll(true);
+    },
+  });
   const body = h('div.ft-body');
-  const el = h('section.ft-sheet', { role: 'dialog', 'aria-modal': 'true', tabindex: '-1', hidden: true }, h('div.ft-bar', {}, back, kicker, tools, langBtn, closeBtn), body);
+  const el = h('section.ft-sheet', { role: 'dialog', 'aria-modal': 'true', tabindex: '-1', hidden: true }, h('div.ft-bar', {}, home, back, kicker, tools, langBtn), body);
   document.body.append(el);
   weaveLive(app, body);
   let returnTo: Element | null = null;
@@ -86,7 +101,9 @@ export function createFeatures(app: App, hooks: FeatureHooks): Features {
     kicker.textContent = say('list-kicker');
     back.hidden = !inFeature;
     back.querySelector('.ft-back-label')!.textContent = say('back');
-    closeBtn.setAttribute('aria-label', say('close'));
+    back.setAttribute('href', featurePath(undefined, lang()));
+    home.textContent = say('home');
+    home.setAttribute('aria-label', say('home-label'));
     const ru = lang() === 'ru';
     langBtn.textContent = ru ? 'EN' : 'RU';
     langBtn.lang = ru ? 'en' : 'ru';
@@ -94,8 +111,15 @@ export function createFeatures(app: App, hooks: FeatureHooks): Features {
     el.setAttribute('aria-label', say('list-kicker'));
   };
 
+  // The page's title follows what it shows, as a page's should.
+  let museumTitle = document.title;
+  const title = (t?: string) => (document.title = t ? `${t} · Sankofa` : say('list-title') + ' · Sankofa');
+
   const show = () => {
-    if (el.hidden) returnTo = document.activeElement;
+    if (el.hidden) {
+      returnTo = document.activeElement;
+      museumTitle = document.title;
+    }
     el.hidden = false;
     document.body.classList.add('locked', 'ft-on');
     el.focus({ preventScroll: true });
@@ -121,13 +145,14 @@ export function createFeatures(app: App, hooks: FeatureHooks): Features {
     if (my !== token) return;
     if (idx) ui = { ...FALLBACK, ...idx.ui };
     paintChrome(false);
+    title();
     const items = (idx?.features ?? []).map((f) =>
       h(
         'li.ft-item',
         {},
         h(
           'a.ft-item-link',
-          { href: `#view=feature&item=${f.id}`, 'data-feature': f.id },
+          { href: featurePath(f.id, lang()), 'data-feature': f.id },
           coverArt(f.id, f.cover),
           h('span.ft-item-tx', {}, h('b', {}, pick(f.title)), h('span', {}, pick(f.dek)), f.reading ? h('small', {}, pick(f.reading)) : null),
           h('span.btn.primary.ft-item-go', { 'aria-hidden': 'true' }, say('open')),
@@ -187,6 +212,7 @@ export function createFeatures(app: App, hooks: FeatureHooks): Features {
         hooks.navigate('features', undefined, undefined, false);
         return void list(my);
       }
+      title(pick(data.title).split(':')[0]);
       const root = h('article.ft', { 'data-feature-id': id });
       body.replaceChildren(root);
       const inst = mod.mount({
@@ -223,13 +249,14 @@ export function createFeatures(app: App, hooks: FeatureHooks): Features {
       body.replaceChildren();
       el.hidden = true;
       document.body.classList.remove('locked', 'ft-on');
+      document.title = museumTitle;
       if (returnTo instanceof HTMLElement && returnTo.isConnected) returnTo.focus({ preventScroll: true });
     },
   };
-  const closeAll = () => {
-    api.close();
-    hooks.navigate(null, undefined, undefined, false);
-  };
+  // To the museum (the stub closes this page and brings the museum back where
+  // it was): a new step in the history from the home link, in place of this
+  // one from Escape.
+  const closeAll = (push = false) => hooks.navigate(null, undefined, undefined, push);
   el.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !document.querySelector('.drawer.on')) {
       e.stopPropagation();
