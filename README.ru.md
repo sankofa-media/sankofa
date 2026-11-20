@@ -57,6 +57,31 @@ go install ./cmd/sankofa                # или: kubectl sankofa
 Музей: `web/` и `web/Dockerfile`, манифест `deploy/museum.yaml`. Публичный
 вход для посетителей только на чтение: `deploy/visitor.yaml`.
 
+## Режим ревью для владельца
+
+Владелец может оставлять заметки к любому элементу музея и спецпроектов —
+текстом или голосом, с телефона или компьютера. Заметки хранит сервис angel
+(`pkg/angel/review.go`); нужен `ANGEL_ADMIN_TOKEN` из секрета
+`angel-anthropic` (см. `deploy/angel.yaml`).
+
+- Включить: один раз открыть на устройстве
+  `https://sankofa.black/#review=<ANGEL_ADMIN_TOKEN>`. Токен сразу уходит из
+  ссылки и остаётся в этом браузере. `#review=off` (или «Выйти» в списке
+  заметок) его забывает.
+- Пользоваться: «Комментарий», затем коснуться элемента (или сначала выделить
+  текст, потом «Комментарий»); «Шире» берёт объемлющий блок; «Диктовать»
+  заполняет заметку голосом (или записывает аудио, если браузер не распознаёт
+  речь). Открытые заметки отмечены маркерами, «Заметки» — список, «Скрыть»
+  сворачивает панель.
+- Забрать и закрыть (токен — только в заголовке):
+
+```bash
+T=...   # ANGEL_ADMIN_TOKEN
+curl -sH "Authorization: Bearer $T" 'https://sankofa.black/api/angel/review/export?format=md'
+curl -sX PATCH -H "Authorization: Bearer $T" -H 'Content-Type: application/json' \
+  -d '{"status":"done"}' https://sankofa.black/api/angel/review/12
+```
+
 ## Содержание
 
 Карточки лежат в `content/cards` ([формат](docs/card-format.md)), главы — в

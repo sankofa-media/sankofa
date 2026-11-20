@@ -7,7 +7,8 @@
 #   kubectl -n sankofa-museum create secret generic angel-anthropic \
 #     --from-literal=ANTHROPIC_API_KEY=... --from-literal=ANGEL_ADMIN_TOKEN="$(openssl rand -hex 32)"
 # Both keys are optional: without ANTHROPIC_API_KEY every word waits for the
-# owner, without ANGEL_ADMIN_TOKEN the owner's queue is closed.
+# owner, without ANGEL_ADMIN_TOKEN the owner's queue and review notes are
+# closed (review mode: README, "Owner review mode").
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
