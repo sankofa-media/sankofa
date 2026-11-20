@@ -9,7 +9,11 @@ import { bodyForEdition, localizeCard, localizeChapter } from '../src/lib/cards.
 export function localized(value: any, language: 'en' | 'ru'): any {
   if (Array.isArray(value)) return value.map(v => localized(v, language));
   if (!value || typeof value !== 'object') return value;
+  // Roots and recording notes use field/fieldRu rather than {en, ru}.
+  // Keep bilingual names for search and geographic keys.
+  const prose = (key: string) => !['name', 'place', 'genre'].includes(key) && typeof value[key] === 'string' && typeof value[key + 'Ru'] === 'string';
   return Object.fromEntries(Object.entries(value)
+    .filter(([k]) => !(language === 'en' && k.endsWith('Ru') && prose(k.slice(0, -2))) && !(language === 'ru' && prose(k) && value[k + 'Ru']))
     .filter(([k]) => !('en' in value && 'ru' in value) || k !== (language === 'en' ? 'ru' : 'en'))
     .map(([k, v]) => [k, localized(v, language)]));
 }

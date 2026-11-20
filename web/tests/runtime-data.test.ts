@@ -5,7 +5,8 @@ import { localizeCard } from '../src/lib/cards';
 import { usableFactoids } from '../src/lib/factoids';
 import { readFileSync } from 'node:fs';
 
-const cards = JSON.parse(readFileSync('public/data/cards.json', 'utf8')).cards;
+const collection = JSON.parse(readFileSync('public/data/cards.json', 'utf8'));
+const cards = collection.cards;
 const facts = JSON.parse(readFileSync('public/data/factoids.json', 'utf8'));
 
 describe('single-language runtime data', () => {
@@ -14,6 +15,16 @@ describe('single-language runtime data', () => {
       const result = hydrateLanguage(localized(facts, language));
       expect(usableFactoids(result).map(f => f.id)).toEqual(usableFactoids(facts).map(f => f.id));
       for (let i = 0; i < facts.factoids.length; i++) expect(result.factoids[i][language]).toBe(facts.factoids[i][language]);
+    });
+    it(`keeps Roots prose and searchable names in ${language}`, () => {
+      const result = hydrateLanguage(localized(collection.roots, language));
+      for (let i = 0; i < result.length; i++) {
+        const original = collection.roots[i];
+        expect(result[i].story).toBe(language === 'ru' ? original.storyRu || original.story : original.story);
+        expect(result[i].name).toBe(original.name);
+        expect(result[i].nameRu).toBe(original.nameRu);
+        expect(result[i].aliases).toEqual(original.aliases);
+      }
     });
     it(`localizes each card once, preserving place fragment keys in ${language}`, () => {
       for (const original of cards) {
