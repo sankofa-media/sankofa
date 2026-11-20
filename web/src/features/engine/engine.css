@@ -73,8 +73,22 @@
   z-index: 1;
   display: flex;
   flex-direction: column;
-  gap: var(--ft-gap, 38svh);
+  /* Magazine spacing: blocks follow one another like paragraphs on a page
+     (each block's own padding makes the space between them, about a line);
+     the stage gets its room from the scene's length, not from gaps in the text. */
+  gap: var(--ft-gap, 0px);
   padding: 34svh var(--gutter) 40svh;
+}
+.ft-flow > .ft-block + .ft-block {
+  padding-top: 6px;
+}
+/* A heading sits on its text. */
+.ft-flow > .ft-block.ft-b-kicker + .ft-block {
+  padding-top: 10px;
+}
+/* Controls follow the text that explains them. */
+.ft-flow > .ft-block + .ft-controls {
+  padding-top: 14px;
 }
 .ft-long .ft-controls {
   max-width: none;
@@ -99,10 +113,6 @@
   opacity: 1;
   transform: none;
 }
-/* A caption or note completes the block above it: it sits right under it, not a screen away. */
-.ft-flow > .ft-block:not(.ft-b-kicker) + .ft-block:is(.ft-b-caption, .ft-b-note) {
-  margin-top: calc(14px - var(--ft-gap, 38svh));
-}
 .ft-long .ft-flow {
   --ft-gap: 28px;
 }
@@ -121,10 +131,6 @@
   background: none;
   box-shadow: none;
   padding: 0 4px;
-  margin-bottom: -34svh;
-}
-.ft-long .ft-block.ft-b-kicker {
-  margin-bottom: 0;
 }
 .ft-title {
   font-family: var(--font-display);
@@ -156,6 +162,27 @@
 .ft-quote {
   font-family: var(--font-display);
   font-size: clamp(22px, 2.6vw, 32px);
+}
+/* A quotation in the text: set off from the body by a rule and italics. */
+.ft-b-quote .ft-quote {
+  font-style: italic;
+  line-height: 1.35;
+  padding-left: 16px;
+  border-left: 2px solid var(--ft-red);
+}
+/* Whose words they are: a caption right under a quotation belongs to it… */
+.ft-b-quote + .ft-b-caption {
+  padding-top: 0;
+}
+.ft-b-quote + .ft-b-caption .ft-caption {
+  padding-left: 18px;
+}
+.ft-b-quote + .ft-b-caption .ft-caption::before {
+  content: '— ';
+}
+/* …and the text after the pair stands clearly apart from it. */
+.ft-b-quote + .ft-b-caption + .ft-block {
+  padding-top: 28px;
 }
 .ft-controls {
   display: flex;
@@ -455,6 +482,19 @@ body.mp-on .cc[data-place='corner'] {
   bottom: calc(100svh - var(--nav-h) - 3vh - var(--cc));
   width: var(--cc);
 }
+/* In its scene's slot under the picture: part of the stage, not over it. */
+.cc-slot {
+  display: grid;
+  justify-items: center;
+  pointer-events: auto;
+}
+.cc.cc-in-slot[data-place='stage'] {
+  position: relative;
+  left: auto;
+  bottom: auto;
+  width: var(--cc-size, 128px);
+  margin-bottom: 24px;
+}
 .cc-svg {
   width: 100%;
   height: auto;
@@ -605,14 +645,10 @@ body.mp-on .cc[data-place='corner'] {
     width: min(100%, calc(46svh * 1.5));
   }
   .ft-flow {
-    --ft-gap: 30svh;
     padding-top: 52svh;
   }
   .ft-block {
     padding: 14px 16px;
-  }
-  .ft-block.ft-b-kicker {
-    margin-bottom: -26svh;
   }
   .cc[data-place='stage'] {
     --cc: 30vw;
