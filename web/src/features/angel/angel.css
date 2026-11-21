@@ -750,6 +750,24 @@
   font: 15px/1.45 var(--font-sans);
   color: rgba(246, 232, 214, 0.8);
 }
+/* On a computer the first step also offers the phone, where the pulse is under a finger. */
+.ap-feel-qr {
+  position: absolute;
+  bottom: 18px;
+  right: 20px;
+  margin: 0;
+  justify-items: end;
+  z-index: 2;
+}
+.ap-feel-qr svg {
+  width: 120px;
+  height: 120px;
+}
+.ap-feel-qr figcaption {
+  max-width: 15rem;
+  text-align: right;
+  font-size: 13px;
+}
 /* The words others left, as a crowd above the field. */
 .ap-cloud {
   display: flex;

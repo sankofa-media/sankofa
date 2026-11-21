@@ -183,6 +183,13 @@ test('the ending, one step after another: feel, own pulse, words, and all of the
   await expect(p).toHaveAttribute('data-step', 'feel');
   await expect(p.locator('.ap-own')).toBeHidden();
   await expect(p.locator('.ap-touch-line')).toHaveText(isMobile ? 'Put your finger on the screen and keep it there. Under it beats the pulse of someone who was here before you.' : 'Press on the screen and hold. Under the pointer beats the pulse of someone who was here before you.');
+  // On a computer the first step also offers the phone, where the pulse is under a finger.
+  if (isMobile) await expect(p.locator('.ap-feel-qr')).toHaveCount(0);
+  else {
+    await expect(p.locator('.ap-feel-qr svg')).toBeVisible();
+    await expect(p.locator('.ap-feel-qr figcaption')).toHaveText("On a phone the pulse beats under your finger. Point the phone’s camera at the code to open this page there.");
+    await p.locator('.ap-touch').screenshot({ path: 'test-results/angel-feel-qr.png' });
+  }
   const release = await hold(page, isMobile);
   await expect(p.locator('.ap-touch')).toHaveAttribute('data-touching', '');
   // Lub-dub on the beats (vibrate is stubbed), a stranger's word near the hand, and the others here.
@@ -195,7 +202,7 @@ test('the ending, one step after another: feel, own pulse, words, and all of the
   await release();
   await expect(p.locator('.ap-own')).toBeVisible();
   if (isMobile) await expect(p.locator('.ap-own-start')).toBeVisible();
-  else await expect(p.locator('.ap-qr svg')).toBeVisible();
+  else await expect(p.locator('.ap-own .ap-qr svg')).toBeVisible();
   await expect(p.locator('.ap-say')).toBeHidden();
   await p.locator('.ap-own .ap-skip').click();
   await expect(p).toHaveAttribute('data-step', 'say');
