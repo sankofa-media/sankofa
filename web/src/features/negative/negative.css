@@ -35,7 +35,7 @@
 .ng-dotted p { font-size: .9rem; }
 .ng-tracks, .ng-lenses { display: flex; flex-wrap: wrap; gap: .6rem; }
 .negative .btn { white-space: normal; height: auto; min-height: 44px; color: var(--ft-ink); border-color: var(--ft-ink-2); }
-.negative .ng-map-pins .btn { color: #1a1512; }
+.negative .ng-map-pins .btn { color: #1a1512; background: #e9a820; }
 .ng-lens[aria-pressed='true'] { background: var(--ft-ink); color: var(--ft-paper); }
 .ng-status { min-height: 1.5em; }
 .ng-chorus img[data-row] { transition: opacity 2.4s linear; }
@@ -84,3 +84,7 @@
   .negative.ng-player-on .ng-picture[style*='2 / 3'], .mp-on .negative .ng-picture[style*='2 / 3'] { height: 23svh; }
   .ft-sheet:has(.negative.ng-player-on), .mp-on .ft-sheet:has(.negative) { scroll-padding-top: calc(var(--nav-h) + 27svh); scroll-padding-bottom: 330px; }
 }
+
+/* A failed intermediate layer must never leave a partial picture. */
+.ng-picture.ng-stage-failed > .ng-full { opacity: 1; transition: none; }
+.ng-map-pins button { font-weight: 700; }

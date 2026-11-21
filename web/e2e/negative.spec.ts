@@ -41,16 +41,28 @@ test('development, calm mode, a single flip and all scene review images', async 
   await page.goto('/ru/features/negative/');
   const opening = page.locator('[data-picture="glass"]');
   await expect(opening).toHaveAttribute('data-stage', 'contour');
+  const dir = process.env.NEGATIVE_SCREENSHOTS ?? join(homedir(), 'projects', 'negative-shots');
+  await mkdir(dir, { recursive: true });
+  await jump(page, 'glass', .3);
+  await expect(opening).toHaveAttribute('data-stage', 'fills', { timeout: 10_000 });
+  await jump(page, 'glass', 0);
+  await expect.poll(() => opening.locator('.ng-fills').evaluate(el => Number(getComputedStyle(el).opacity))).toBeGreaterThan(.4);
+  await expect(opening).not.toHaveAttribute('data-stage', 'full');
+  await page.screenshot({ path: `${dir}/${info.project.name}-glass-mid.png`, scale: 'css' });
   await jump(page, 'glass', .8);
   await expect(opening).toHaveAttribute('data-stage', 'full', { timeout: 15_000 });
   await page.locator('.ng-calm').click();
-  const dir = process.env.NEGATIVE_SCREENSHOTS ?? join(homedir(), 'projects', 'negative-shots');
-  await mkdir(dir, { recursive: true });
   for (const id of scenes) {
     await jump(page, id, 0);
     const scene = page.locator(`[data-scene="${id}"]`);
     await expect(scene.locator('.ng-picture:visible')).toHaveAttribute('data-stage', 'full');
     await expect.poll(() => scene.locator('img[src]').evaluateAll(imgs => imgs.length > 0 && imgs.every(img => (img as HTMLImageElement).complete && (img as HTMLImageElement).naturalWidth > 0))).toBe(true);
+    await expect(scene.locator('.ng-picture:visible > .ng-full')).toHaveCSS('opacity', '1');
+    if (id === 'chorus') await expect(scene.locator('.ng-chorus')).toHaveAttribute('data-rows', '3');
+    if (id === 'river') {
+      await expect(scene.locator('.ng-map-pins')).toContainText('Адзюбжа');
+      await expect(scene.locator('.ng-map-pins')).toContainText('Сухум');
+    }
     await page.screenshot({ path: `${dir}/${info.project.name}-${id}.png`, scale: 'css' });
   }
   await expect(page.locator('.negative')).toHaveAttribute('data-flipped', 'true');
@@ -141,4 +153,40 @@ test('camera permission racing with scene exit cannot leave a stream running', a
   await page.evaluate(() => (window as unknown as { resolveCamera: () => void }).resolveCamera());
   await expect.poll(() => page.evaluate(() => (window as unknown as { stoppedTracks: number }).stoppedTracks)).toBe(1);
   await expect(page.locator('.ng-reflection')).toBeHidden();
+});
+
+test('failed development layer falls back to the complete picture', async ({ page }) => {
+  await page.route(/observer-contour[^/]*\.(?:png|webp)/, route => route.abort());
+  await page.goto('/features/negative/');
+  await jump(page, 'observer');
+  const picture = page.locator('[data-picture="observer"]');
+  await expect(picture).toHaveClass(/ng-stage-failed/);
+  await expect(picture).toHaveAttribute('data-stage', 'full');
+  await expect(picture.locator('.ng-full')).toHaveCSS('opacity', '1');
+  await expect.poll(() => picture.locator('.ng-full').evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true);
+});
+
+test('all pictures finish after scrolling past their scenes without calm mode', async ({ page }) => {
+  await page.goto('/features/negative/');
+  for (const id of scenes) {
+    await jump(page, id, .99);
+    await page.waitForTimeout(100);
+  }
+  await expect.poll(() => page.locator('.ng-picture').evaluateAll(pictures => pictures.every(p => p.getAttribute('data-stage') === 'full')), { timeout: 15_000 }).toBe(true);
+  await expect(page.locator('[data-scene="final"] .ft-title')).toHaveCount(0);
+});
+
+
+test('map names have readable labels and status on hover or tap', async ({ page }, info) => {
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/features/negative/');
+  await jump(page, 'river');
+  const pins = page.locator('.ng-map-pins');
+  await expect(pins.getByRole('button', { name: 'Sukhum', exact: true })).toBeVisible();
+  await expect(pins.getByRole('button', { name: 'Adzyubzha', exact: true })).toBeVisible();
+  const place = page.locator('.ng-dotted details').first();
+  if (info.project.name === 'mobile') await place.locator('summary').tap();
+  else await place.locator('summary').hover();
+  await expect(place.locator('p')).toBeVisible();
+  await expect(place.locator('p')).toHaveText('Name from lists; not independently confirmed.');
 });

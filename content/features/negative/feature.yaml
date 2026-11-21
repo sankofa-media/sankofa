@@ -15,15 +15,15 @@ scenes:
     kind: glass
     name:
       en: Glass
-      ru: Стекло (вход, титул)
+      ru: Стекло
     pictures:
       - glass
     blocks:
       - id: title
         role: title
         draft: false
-        en: Negative. Abkhaz, of course
-        ru: Негатив. Абхазкой, конечно
+        en: Glass
+        ru: Стекло
       - id: text-0
         role: text
         draft: false
@@ -84,7 +84,7 @@ scenes:
   - id: observer
     kind: observer
     name:
-      en: The person behind the group
+      en: The man behind the group
       ru: Человек за группой
     pictures:
       - observer
@@ -92,7 +92,7 @@ scenes:
       - id: title
         role: title
         draft: false
-        en: The person behind the group
+        en: The man behind the group
         ru: Человек за группой
       - id: text-0
         role: text
@@ -282,7 +282,7 @@ scenes:
     kind: river
     name:
       en: The Kodor
-      ru: Река (карта)
+      ru: Кодор
     pictures:
       - river
     blocks:
@@ -290,7 +290,7 @@ scenes:
         role: title
         draft: false
         en: The Kodor
-        ru: Река (карта)
+        ru: Кодор
       - id: text-0
         role: text
         draft: false
@@ -337,7 +337,7 @@ scenes:
   - id: own
     kind: own
     name:
-      en: Their own lives
+      en: At home
       ru: Свои
     pictures:
       - vine
@@ -347,7 +347,7 @@ scenes:
       - id: title
         role: title
         draft: false
-        en: Their own lives
+        en: At home
         ru: Свои
       - id: text-0
         role: text
@@ -422,7 +422,7 @@ scenes:
     kind: chorus
     name:
       en: The feast
-      ru: Застолье (многоголосие)
+      ru: Застолье
     pictures:
       - chorus
     blocks:
@@ -430,7 +430,7 @@ scenes:
         role: title
         draft: false
         en: The feast
-        ru: Застолье (многоголосие)
+        ru: Застолье
       - id: text-0
         role: text
         draft: false
@@ -513,16 +513,16 @@ scenes:
   - id: versions
     kind: versions
     name:
-      en: Versions
-      ru: Версии (экспедиция по линзам)
+      en: Where from
+      ru: Откуда
     pictures:
       - versions
     blocks:
       - id: title
         role: title
         draft: false
-        en: Versions
-        ru: Версии (экспедиция по линзам)
+        en: Where from
+        ru: Откуда
       - id: text-0
         role: text
         draft: false
@@ -605,16 +605,16 @@ scenes:
   - id: family
     kind: family
     name:
-      en: Family
-      ru: Семья (род сквозь время)
+      en: The Abash family
+      ru: Род Абаш
     pictures:
       - family
     blocks:
       - id: title
         role: title
         draft: false
-        en: Family
-        ru: Семья (род сквозь время)
+        en: The Abash family
+        ru: Род Абаш
       - id: text-0
         role: text
         draft: false
@@ -670,8 +670,8 @@ scenes:
   - id: words
     kind: words
     name:
-      en: Words
-      ru: Слова (переворот стекла)
+      en: The flip
+      ru: Переворот
     pictures:
       - words-before
       - words-after
@@ -679,15 +679,13 @@ scenes:
       - id: title
         role: title
         draft: false
-        en: Words
-        ru: Слова (переворот стекла)
+        en: The flip
+        ru: Переворот
       - id: text-0
         role: text
         draft: false
-        en: Now let us turn the glass over. The one who measured is now being measured; the one who asked must answer.
-          Now Shirin, Nutsa, Shamil and Diana speak.
-        ru: А теперь — стекло перевернём. Кто мерил, тот теперь измеряем; кто спрашивал — отвечает. Теперь говорят
-          Ширин, Нуца, Шамиль и Диана.
+        en: "Now let us turn the glass over. Now those who were measured and questioned speak: Shirin, Nutsa, Shamil and Diana."
+        ru: "А теперь стекло перевернём. Теперь говорят те, кого мерили и спрашивали: Ширин, Нуца, Шамиль и Диана."
       - id: text-1
         role: text
         draft: false
@@ -847,16 +845,16 @@ scenes:
   - id: reverse-camera
     kind: reverse-camera
     name:
-      en: Turning the camera
-      ru: Разворот камеры
+      en: Who is in the frame
+      ru: Кто в кадре
     pictures:
       - reverse-camera
     blocks:
       - id: title
         role: title
         draft: false
-        en: Turning the camera
-        ru: Разворот камеры
+        en: Who is in the frame
+        ru: Кто в кадре
       - id: text-0
         role: text
         draft: false
@@ -952,11 +950,6 @@ scenes:
     pictures:
       - final
     blocks:
-      - id: title
-        role: title
-        draft: false
-        en: Finale
-        ru: Финал
       - id: text-0
         role: text
         draft: false

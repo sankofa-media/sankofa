@@ -86,6 +86,20 @@ export function mount(ctx: FeatureContext): FeatureInstance {
     let current = 0;
     let wanted = 0;
     let timer = 0;
+    let failed = false;
+    const finish = () => {
+      clearTimeout(timer);
+      timer = 0;
+      current = wanted = 3;
+      el.dataset.stage = 'full';
+    };
+    el.querySelectorAll<HTMLImageElement>('img:not(.ng-full)').forEach(img => {
+      img.addEventListener('error', () => {
+        failed = true;
+        el.classList.add('ng-stage-failed');
+        finish();
+      }, { once: true });
+    });
     const advance = () => {
       timer = 0;
       if (disposed) return;
@@ -96,6 +110,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
       }
     };
     const progress = (p: number) => {
+      if (failed || p >= 1) { finish(); return; }
       wanted = calm() ? 3 : Math.max(wanted, Math.min(3, Math.floor(p * 5)));
       if (calm()) { clearTimeout(timer); timer = 0; advance(); }
       else if (wanted > current && !timer) timer = window.setTimeout(advance, 2400);
@@ -186,10 +201,14 @@ export function mount(ctx: FeatureContext): FeatureInstance {
     }
 
     if (sc.id === 'river') {
-      const pins = h('div.ng-map-pins', {}, button('Sukhum · listen', 'Сухум · слушать', () => play(1)), button('Adzyubzha · listen', 'Адзюбжа · слушать', () => play(0)));
+      const pins = h('div.ng-map-pins', {}, button('Sukhum', 'Сухум', () => play(1)), button('Adzyubzha', 'Адзюбжа', () => play(0)));
       pictures[0].el.append(pins);
       const status = say('Name from lists; not independently confirmed.', 'Название из списков, не подтверждено независимо.');
-      after.push(h('div.ng-dotted', {}, ...['Кындыг / Kyndyg','Тамыш / Tamysh','Поквеш / Pokvesh','Меркула / Merkula','Члоу / Chlou','Тхина / Tkhina','Река / Reka','Илор / Ilor','Ачандара / Achandara'].map(name => h('details', {}, h('summary', {}, name), h('p', {}, status)))), musicButtons());
+      const places = ['Кындыг / Kyndyg','Тамыш / Tamysh','Поквеш / Pokvesh','Меркула / Merkula','Члоу / Chlou','Тхина / Tkhina','Река / Reka','Илор / Ilor','Ачандара / Achandara'];
+      after.push(h('div.ng-dotted', {}, ...places.map(name => h('details', {
+        onpointerenter: (e: Event) => { if ((e as PointerEvent).pointerType === 'mouse') (e.currentTarget as HTMLDetailsElement).open = true; },
+        onpointerleave: (e: Event) => { if ((e as PointerEvent).pointerType === 'mouse') (e.currentTarget as HTMLDetailsElement).open = false; },
+      }, h('summary', { title: status }, name), h('p', {}, status)))), musicButtons());
     }
 
     if (sc.id === 'chorus') {
