@@ -2,8 +2,8 @@
 // finger or a palm on the screen feels a living pulse (the first one left in
 // the chorus; whose it is is never said) with the others beating around it
 // and a stranger's word on every beat; then the reader may leave a pulse of
-// their own through the phone's camera; then, under the words others left,
-// say what was never said; and the end shows every pulse beating together,
+// their own through the phone's camera (desktop goes straight to words);
+// then, under the words others left, say what was never said; and the end shows every pulse beating together,
 // the reader's among them, with the words around. If the Angel service cannot
 // be reached, only the last line is shown.
 import { h } from '../../../lib/dom';
@@ -61,7 +61,7 @@ export class PulsePage {
   private floatBox: HTMLElement;
   private othersLine: HTMLElement;
   private sayEl: HTMLElement;
-  private ownEl: HTMLElement;
+  private ownEl: HTMLElement | null;
   private particles: HTMLCanvasElement;
   private endEl: HTMLElement;
   private endCanvas: HTMLCanvasElement;
@@ -102,7 +102,7 @@ export class PulsePage {
     this.touchSec = h('section.ap-sec.ap-touch', { 'aria-label': say(o.phone ? 'pulse-touch' : 'pulse-touch-mouse') }, this.canvas, h('p.ap-step.ap-touch-step', {}, say('step-feel')), h('p.ap-touch-line', {}, say(o.phone ? 'pulse-touch' : 'pulse-touch-mouse')), this.floatBox, h('div.ap-touch-foot', {}, this.othersLine, this.feltLine), ...(o.phone ? [] : [h('figure.an-qr.ap-qr.ap-feel-qr', {}, o.qr(), h('figcaption', {}, say('feel-phone')))]));
     this.cloud = h('div.ap-cloud', { 'aria-label': say('words-cloud') });
     this.sayEl = this.buildWords();
-    this.ownEl = this.buildOwn();
+    this.ownEl = o.phone ? this.buildOwn() : null;
     this.endCanvas = h('canvas.ap-end-canvas', { 'aria-hidden': 'true' }) as HTMLCanvasElement;
     this.endCount = h('p.ap-end-count');
     this.endEl = h('section.ap-sec.ap-end', {}, this.endCanvas, h('div.ap-end-words', {}, this.endCount, h('p.ap-last-line', {}, say('last'))));
@@ -155,10 +155,11 @@ export class PulsePage {
 
   /** Open the next step (never go back) and bring it into view. */
   private reach(step: Step, scroll = true): void {
+    if (step === 'own' && !this.o.phone) return;
     if (STEPS.indexOf(step) <= this.stepAt()) return;
     this.el.dataset.step = step;
     const target = { feel: this.touchSec, own: this.ownEl, say: this.sayEl, end: this.endEl }[step];
-    if (scroll) requestAnimationFrame(() => target.scrollIntoView({ behavior: this.o.calm() ? 'auto' : 'smooth', block: 'start' }));
+    if (scroll) requestAnimationFrame(() => target?.scrollIntoView({ behavior: this.o.calm() ? 'auto' : 'smooth', block: 'start' }));
     if (step === 'end') this.finale();
   }
 
@@ -175,7 +176,7 @@ export class PulsePage {
     if (!ps.first) {
       // The chorus is empty: no pulse to feel yet, but the first pulse and words can be left.
       this.el.dataset.state = 'empty';
-      this.reach('own', false);
+      this.reach(this.o.phone ? 'own' : 'say', false);
       return;
     }
     this.first = ps.first.rr;
@@ -289,7 +290,7 @@ export class PulsePage {
     if (this.el.dataset.step === 'feel') {
       this.felt++;
       this.paintFelt();
-      if (this.felt >= FEEL_BEATS) this.reach('own');
+      if (this.felt >= FEEL_BEATS) this.reach(this.o.phone ? 'own' : 'say');
     }
   }
 
@@ -511,6 +512,7 @@ export class PulsePage {
       keepRow,
       h('div.ap-row', {}, send, skip),
       said,
+      this.o.phone ? null : h('aside.ap-phone-aside', {}, h('figure.an-qr.ap-qr', {}, this.o.qr(), h('figcaption', {}, say('own-pulse-phone')))),
     );
   }
 
@@ -702,10 +704,7 @@ export class PulsePage {
       sent.replaceChildren(h('p.ap-said-line', {}, say('own-pulse-sent')), h('p.ap-note.ap-code', {}, say('own-pulse-delete', { code })), next);
     });
 
-    // Away from a phone, the camera step is a code to open this ending on one.
-    const here = this.o.phone
-      ? [h('ol.ap-steps', {}, h('li', {}, say('own-pulse-step-1')), h('li', {}, say('own-pulse-step-2')), h('li', {}, say('own-pulse-step-3'))), start, light, status, progress, wave, beats, failed, retry, result, sent]
-      : [h('figure.an-qr.ap-qr', {}, this.o.qr(), h('figcaption', {}, say('own-pulse-phone')))];
+    const here = [h('ol.ap-steps', {}, h('li', {}, say('own-pulse-step-1')), h('li', {}, say('own-pulse-step-2')), h('li', {}, say('own-pulse-step-3'))), start, light, status, progress, wave, beats, failed, retry, result, sent];
     return h('section.ap-sec.ap-own', {}, h('p.ap-step', {}, say('step-own')), h('p.ap-lead', {}, say('own-pulse')), ...here, h('div.ap-row', {}, skip));
   }
 
