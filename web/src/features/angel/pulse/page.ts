@@ -8,6 +8,7 @@
 // be reached, only the last line is shown.
 import { h } from '../../../lib/dom';
 import { lang } from '../../../lib/i18n';
+import { audioContext, claim, release } from '../../../lib/sound';
 import * as api from '../api';
 import { closeCamera, FrameReader, openBackCamera, type Camera } from './camera';
 import { analyse, checkRR, covered, type Sample } from './ppg';
@@ -68,6 +69,11 @@ export class PulsePage {
   private endCount: HTMLElement;
   private cloud: HTMLElement;
   private feltLine: HTMLElement;
+  private soundButton: HTMLButtonElement;
+  private sound: AudioContext | null = null;
+  private soundSources = new Set<AudioBufferSourceNode>();
+  private soundId = `angel-pulse-${api.tabId()}`;
+  private onVisibility = () => { if (document.hidden) this.stopSound(); };
   private felt = 0;
   private mine: number[] = [];
   private myWords = '';
@@ -99,7 +105,10 @@ export class PulsePage {
     this.floatBox = h('div.ap-float', { 'aria-hidden': 'true' });
     this.othersLine = h('p.ap-others', { 'aria-live': 'polite' });
     this.feltLine = h('p.ap-felt', { 'aria-live': 'polite' });
-    this.touchSec = h('section.ap-sec.ap-touch', { 'aria-label': say(o.phone ? 'pulse-touch' : 'pulse-touch-mouse') }, this.canvas, h('p.ap-step.ap-touch-step', {}, say('step-feel')), h('p.ap-touch-line', {}, say(o.phone ? 'pulse-touch' : 'pulse-touch-mouse')), this.floatBox, h('div.ap-touch-foot', {}, this.othersLine, this.feltLine), ...(o.phone ? [] : [h('figure.an-qr.ap-qr.ap-feel-qr', {}, o.qr(), h('figcaption', {}, say('feel-phone')))]));
+    this.soundButton = h('button.btn.ap-sound', { type: 'button', 'aria-pressed': 'false' }, say('pulse-listen')) as HTMLButtonElement;
+    this.soundButton.addEventListener('click', () => this.toggleSound());
+    document.addEventListener('visibilitychange', this.onVisibility);
+    this.touchSec = h('section.ap-sec.ap-touch', { 'aria-label': say(o.phone ? 'pulse-touch' : 'pulse-touch-mouse') }, this.canvas, h('p.ap-step.ap-touch-step', {}, say('step-feel')), h('div.ap-touch-intro', {}, h('p.ap-touch-line', {}, say(o.phone ? 'pulse-touch' : 'pulse-touch-mouse')), h('div.ap-sound-row', {}, this.soundButton, o.phone ? null : h('p.ap-note', {}, say('feel-phone')))), this.floatBox, h('div.ap-touch-foot', {}, this.othersLine, this.feltLine), ...(o.phone ? [] : [h('figure.an-qr.ap-qr.ap-feel-qr', {}, o.qr(), h('figcaption', {}, say('feel-phone')))]));
     this.cloud = h('div.ap-cloud', { 'aria-label': say('words-cloud') });
     this.sayEl = this.buildWords();
     this.ownEl = o.phone ? this.buildOwn() : null;
@@ -140,6 +149,7 @@ export class PulsePage {
   close(): void {
     if (!this.isOpen) return;
     this.isOpen = false;
+    this.stopSound();
     this.lift(true);
     this.stopPresence?.();
     this.stopPresence = null;
@@ -157,6 +167,7 @@ export class PulsePage {
   private reach(step: Step, scroll = true): void {
     if (step === 'own' && !this.o.phone) return;
     if (STEPS.indexOf(step) <= this.stepAt()) return;
+    this.stopSound();
     this.el.dataset.step = step;
     const target = { feel: this.touchSec, own: this.ownEl, say: this.sayEl, end: this.endEl }[step];
     if (scroll) requestAnimationFrame(() => target?.scrollIntoView({ behavior: this.o.calm() ? 'auto' : 'smooth', block: 'start' }));
@@ -273,7 +284,7 @@ export class PulsePage {
     if (!this.isOpen) return;
     const t = now - this.t0;
     const touching = this.touchSec.dataset.touching !== undefined;
-    for (const b of beatsBetween(this.lastT, t, this.first)) this.beat(b.rr, touching);
+    for (const b of beatsBetween(this.lastT, t, this.first)) this.beat(b.rr, touching, t - b.at);
     this.lastT = t;
     this.beatGlow *= 0.93;
     this.draw(t, touching);
@@ -281,8 +292,9 @@ export class PulsePage {
   }
 
   /** One beat of the first pulse: felt, seen, and a word surfaces near the hand. */
-  private beat(rr: number, touching: boolean): void {
+  private beat(rr: number, touching: boolean, late: number): void {
     this.beatGlow = 1;
+    this.soundBeat(rr, late);
     if (!touching) return;
     if (canVibrate()) buzz(lubDub(rr));
     else if (this.haptic) this.haptic.click();
@@ -292,6 +304,58 @@ export class PulsePage {
       this.paintFelt();
       if (this.felt >= FEEL_BEATS) this.reach(this.o.phone ? 'own' : 'say');
     }
+  }
+
+  private toggleSound(): void {
+    if (this.sound) return this.stopSound();
+    if (!this.isOpen || document.hidden || this.el.dataset.step !== 'feel' || !this.first.length) return;
+    try {
+      this.sound = audioContext();
+      claim(this.soundId, () => this.stopSound(), this.touchSec);
+      this.soundButton.setAttribute('aria-pressed', 'true');
+      this.soundButton.textContent = this.o.say('pulse-listen-stop');
+    } catch {
+      this.stopSound();
+    }
+  }
+
+  private stopSound(): void {
+    this.sound = null;
+    for (const source of this.soundSources) {
+      source.stop();
+      source.disconnect();
+    }
+    this.soundSources.clear();
+    release(this.soundId);
+    this.soundButton.setAttribute('aria-pressed', 'false');
+    this.soundButton.textContent = this.o.say('pulse-listen');
+  }
+
+  /** Two low, softly enveloped thuds at the visual wave's peaks, without a reverb tail. */
+  private soundBeat(rr: number, late: number): void {
+    const ctx = this.sound;
+    const duration = Math.min(rr, 800) / 1000;
+    if (!ctx || ctx.state !== 'running' || late / 1000 >= duration) return;
+    const buffer = ctx.createBuffer(1, Math.ceil(ctx.sampleRate * duration), ctx.sampleRate);
+    const data = buffer.getChannelData(0);
+    let noise = 0;
+    for (let i = 0; i < data.length; i++) {
+      const t = i / ctx.sampleRate;
+      const phase = t / duration;
+      noise += 0.025 * (Math.random() * 2 - 1 - noise);
+      // Smooth attacks and releases keep the low body from becoming a click or a beep.
+      const lub = Math.exp(-0.5 * ((phase - 0.16) / 0.055) ** 2);
+      const dub = 0.55 * Math.exp(-0.5 * ((phase - 0.42) / 0.05) ** 2);
+      const edge = Math.min(1, t / 0.015, (duration - t) / 0.025);
+      data[i] = edge * (lub + dub) * (0.10 * Math.sin(2 * Math.PI * (68 * t - 12 * t * t)) + 0.18 * noise);
+    }
+    const source = ctx.createBufferSource();
+    source.buffer = buffer;
+    source.connect(ctx.destination);
+    this.soundSources.add(source);
+    source.onended = () => { source.disconnect(); this.soundSources.delete(source); };
+    // Skip elapsed samples after a delayed frame instead of replaying old beats.
+    source.start(ctx.currentTime, late / 1000);
   }
 
   private paintFelt(): void {
@@ -791,6 +855,8 @@ export class PulsePage {
 
   dispose(): void {
     this.close();
+    this.stopSound();
+    document.removeEventListener('visibilitychange', this.onVisibility);
     this.timers.forEach((t) => clearInterval(t));
     this.el.remove();
   }
