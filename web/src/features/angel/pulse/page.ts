@@ -497,7 +497,6 @@ export class PulsePage {
       clock.textContent = '';
       const kept = h('p.ap-note.ap-code', {}, say('words-delete', { code }));
       this.endEl.querySelector('.ap-end-words')?.append(kept);
-      this.watchWords(code, this.endEl.querySelector('.ap-end-words') as HTMLElement);
       this.reach('end');
     });
 
@@ -513,22 +512,6 @@ export class PulsePage {
       h('div.ap-row', {}, send, skip),
       said,
     );
-  }
-
-  /** Words went for checking: if they show someone in danger, say so gently (the pulse keeps beating). */
-  private watchWords(code: string, said: HTMLElement): void {
-    let tries = 0;
-    const poll = window.setInterval(async () => {
-      if (++tries > 24 || !this.isOpen) return clearInterval(poll);
-      const st = await api.wordsStatus(code);
-      if (st === 'crisis') {
-        clearInterval(poll);
-        const msg = this.o.say('words-crisis');
-        const parts = msg.split('findahelpline.com');
-        said.append(h('p.ap-crisis', { role: 'status' }, parts[0], parts.length > 1 ? h('a', { href: 'https://findahelpline.com', target: '_blank', rel: 'noopener noreferrer' }, 'findahelpline.com') : null, parts[1] ?? ''));
-      } else if (st && st !== 'pending') clearInterval(poll);
-    }, 5000);
-    this.timers.push(poll);
   }
 
   /** The letters come apart into warm specks that drift up into the wave. */
