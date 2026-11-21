@@ -43,6 +43,7 @@ const MODULES: Record<string, () => Promise<FeatureModule>> = {
   'sea-lion-girls': () => import('./sea-lion-girls/index'),
   'forever-changes': () => import('./forever-changes/index'),
   angel: () => import('./angel/index'),
+  negative: () => import('./negative/index'),
 };
 
 import type { FeatureHooks, Features } from './index';
