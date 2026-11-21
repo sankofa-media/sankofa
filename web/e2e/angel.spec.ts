@@ -23,11 +23,11 @@ const LINES: Record<string, [string, string]> = {
 const RR = Array.from({ length: 40 }, (_, i) => 900 - i * 6);
 
 /** The Angel service, stood in for: `first` decides whether there is a pulse to feel. */
-async function mockApi(page: Page, opts: { first: boolean; words?: string[] } = { first: true }): Promise<void> {
+async function mockApi(page: Page, opts: { first: boolean; words?: string[]; rr?: number[] } = { first: true }): Promise<void> {
   await page.route('**/api/angel/**', async (r) => {
     const url = new URL(r.request().url());
     const json = (body: unknown, status = 200) => r.fulfill({ status, contentType: 'application/json', body: JSON.stringify(body) });
-    if (url.pathname.endsWith('/pulses') && r.request().method() === 'GET') return json({ first: opts.first ? { id: 1, rr: RR } : null, others: opts.first ? [{ id: 2, rr: RR.map((v) => v - 100) }, { id: 3, rr: RR.map((v) => v + 80) }] : [] });
+    if (url.pathname.endsWith('/pulses') && r.request().method() === 'GET') return json({ first: opts.first ? { id: 1, rr: opts.rr ?? RR } : null, others: opts.first ? [{ id: 2, rr: RR.map((v) => v - 100) }, { id: 3, rr: RR.map((v) => v + 80) }] : [] });
     if (url.pathname.endsWith('/words') && r.request().method() === 'GET') return json({ words: (opts.words ?? ['always', 'I miss you']).map((text, i) => ({ id: i + 1, text, lang: 'en', translation: text, theme: 'love' })) });
     if (url.pathname.endsWith('/words') && r.request().method() === 'POST') return json({ status: 'pending', delete_code: 'abc-def-ghi' }, 202);
     if (url.pathname.endsWith('/words/status')) return json({ status: 'published' });
@@ -174,7 +174,7 @@ async function hold(page: Page, isMobile: boolean): Promise<() => Promise<void>>
   };
 }
 
-test('the ending, one step after another: feel, own pulse, words, and all of them together', async ({ page, isMobile }) => {
+test('the ending follows the device sequence through words to the finale', async ({ page, isMobile }) => {
   test.setTimeout(60_000);
   await mockApi(page, { first: true });
   await open(page, '#view=feature&item=angel&pulse=1');
@@ -187,7 +187,7 @@ test('the ending, one step after another: feel, own pulse, words, and all of the
   if (isMobile) await expect(p.locator('.ap-feel-qr')).toHaveCount(0);
   else {
     await expect(p.locator('.ap-feel-qr svg')).toBeVisible();
-    await expect(p.locator('.ap-feel-qr figcaption')).toHaveText("On a phone the pulse beats under your finger. Point the phone’s camera at the code to open this page there.");
+    await expect(p.locator('.ap-feel-qr figcaption')).toHaveText("On a phone, feel the pulse vibrate under your finger.");
     await p.locator('.ap-touch').screenshot({ path: 'test-results/angel-feel-qr.png' });
   }
   const release = await hold(page, isMobile);
@@ -197,15 +197,22 @@ test('the ending, one step after another: feel, own pulse, words, and all of the
   await expect(p.locator('.ap-word').first()).toBeAttached({ timeout: 6000 });
   await expect(p.locator('.ap-others')).toHaveText('2 more here now');
   await expect(p.locator('.ap-felt')).toContainText('Beats to go');
-  // Felt long enough: the next step opens.
-  await expect(p).toHaveAttribute('data-step', 'own', { timeout: 15_000 });
+  // Only phones offer the recording step; desktop goes straight to words.
+  await expect(p).toHaveAttribute('data-step', isMobile ? 'own' : 'say', { timeout: 15_000 });
   await release();
-  await expect(p.locator('.ap-own')).toBeVisible();
-  if (isMobile) await expect(p.locator('.ap-own-start')).toBeVisible();
-  else await expect(p.locator('.ap-own .ap-qr svg')).toBeVisible();
-  await expect(p.locator('.ap-say')).toBeHidden();
-  await p.locator('.ap-own .ap-skip').click();
+  if (isMobile) {
+    await expect(p.locator('.ap-own .ap-step')).toHaveText('Your pulse');
+    await expect(p.locator('.ap-own-start')).toBeVisible();
+    await expect(p.locator('.ap-say')).toBeHidden();
+    await expect(p.locator('.ap-phone-aside')).toHaveCount(0);
+    await p.locator('.ap-own .ap-skip').click();
+  } else {
+    await expect(p.locator('.ap-own')).toHaveCount(0);
+    await expect(p.locator('.ap-phone-aside svg')).toBeVisible();
+    await expect(p.locator('.ap-phone-aside')).toContainText('its camera reads your fingertip under the flash');
+  }
   await expect(p).toHaveAttribute('data-step', 'say');
+  await expect(p.locator('.ap-say .ap-step')).toHaveText('Words');
   // The words others left are there before one's own.
   await expect(p.locator('.ap-cloud-word')).toHaveCount(2);
   await p.locator('.ap-text').fill('I never told you');
@@ -218,13 +225,116 @@ test('the ending, one step after another: feel, own pulse, words, and all of the
   await expect(p.locator('.ap-last-line')).toHaveText('You are not alone.');
 });
 
-test('the ending in Russian', async ({ page }) => {
+test('pulse audio is opt-in, follows RR beats and stops with its owner', async ({ page, isMobile }) => {
+  await page.addInitScript(() => {
+    const log = { contexts: 0, starts: [] as { at: number; offset: number; duration: number }[], stops: 0, disconnects: 0 };
+    Object.assign(window, { __pulseAudio: log });
+    class PulseAudioContext {
+      state = 'running';
+      sampleRate = 8000;
+      destination = {};
+      get currentTime() { return performance.now() / 1000; }
+      constructor() { log.contexts++; }
+      createBuffer(_channels: number, length: number, rate: number) {
+        return { duration: length / rate, getChannelData: () => new Float32Array(length) };
+      }
+      createBufferSource() {
+        return {
+          buffer: null as null | { duration: number },
+          connect() {},
+          disconnect() { log.disconnects++; },
+          start(at: number, offset: number) { log.starts.push({ at, offset, duration: this.buffer!.duration }); },
+          stop() { log.stops++; },
+        };
+      }
+    }
+    Object.defineProperty(window, 'AudioContext', { value: PulseAudioContext });
+  });
+  // Reduced motion and calm mode must leave the opt-in sound available.
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  const audioRR = [1000, 800, 600, 400];
+  await mockApi(page, { first: true, rr: Array.from({ length: 40 }, (_, i) => audioRR[i % audioRR.length]) });
+  await open(page, '#view=feature&item=angel&pulse=1');
+  const p = page.locator('.an-pulse');
+  const button = p.getByRole('button', { name: 'Listen to the pulse' });
+  await expect(p).toHaveAttribute('data-state', 'full');
+  await expect(button).toBeVisible();
+  const audio = () => page.evaluate(() => (window as unknown as { __pulseAudio: { contexts: number; starts: { at: number; offset: number; duration: number }[]; stops: number; disconnects: number } }).__pulseAudio);
+  expect((await audio()).contexts).toBe(0);
+  // The pulse deep link scrolls twice (400 and 1200 ms) as scene images settle.
+  await page.waitForTimeout(1500);
+  await button.click();
+  const toggle = p.locator('.ap-sound');
+  await expect(toggle).toHaveAttribute('aria-pressed', 'true');
+  await expect(p.locator('.ap-touch')).not.toHaveAttribute('data-touching', '');
+  await expect.poll(async () => (await audio()).starts.length).toBeGreaterThanOrEqual(3);
+  const beats = (await audio()).starts;
+  for (let i = 1; i < beats.length; i++) {
+    const interval = (beats[i].at - beats[i].offset - beats[i - 1].at + beats[i - 1].offset) * 1000;
+    expect(Math.min(...audioRR.map(rr => Math.abs(rr - interval)))).toBeLessThan(35);
+    expect(beats[i - 1].duration * 1000).toBeLessThanOrEqual(interval + 35);
+    if (i > 1) {
+      const previous = (beats[i - 1].at - beats[i - 1].offset - beats[i - 2].at + beats[i - 2].offset) * 1000;
+      expect(Math.min(Math.abs(interval - previous + 200), Math.abs(interval - previous - 600))).toBeLessThan(35);
+    }
+  }
+  await toggle.click();
+  await expect(toggle).toHaveAttribute('aria-pressed', 'false');
+  const stopped = await audio();
+  expect(stopped.stops).toBe(stopped.starts.length);
+  expect(stopped.disconnects).toBe(stopped.starts.length);
+  await page.waitForTimeout(1000);
+  expect((await audio()).starts.length).toBe(stopped.starts.length);
+  await toggle.click();
+  // Another museum source claims the sound, and starting the pulse pauses it too.
+  await page.evaluate(() => {
+    const media = document.createElement('audio');
+    media.id = 'other-sound';
+    Object.defineProperty(media, 'paused', { value: false, configurable: true });
+    media.pause = () => { media.dataset.paused = 'yes'; };
+    document.body.append(media);
+    media.dispatchEvent(new Event('play'));
+  });
+  await expect(toggle).toHaveAttribute('aria-pressed', 'false');
+  await toggle.click();
+  await expect(page.locator('#other-sound')).toHaveAttribute('data-paused', 'yes');
+  await page.evaluate(() => {
+    Object.defineProperty(document, 'hidden', { configurable: true, value: true });
+    document.dispatchEvent(new Event('visibilitychange'));
+  });
+  await expect(toggle).toHaveAttribute('aria-pressed', 'false');
+  await page.evaluate(() => {
+    Object.defineProperty(document, 'hidden', { configurable: true, value: false });
+    document.dispatchEvent(new Event('visibilitychange'));
+  });
+  await expect(toggle).toHaveAttribute('aria-pressed', 'false');
+  await toggle.click();
+  const release = await hold(page, isMobile);
+  await expect(p).toHaveAttribute('data-step', isMobile ? 'own' : 'say', { timeout: 15_000 });
+  await release();
+  await expect(toggle).toHaveAttribute('aria-pressed', 'false');
+  expect((await audio()).stops).toBe((await audio()).starts.length);
+});
+
+test('the ending in Russian', async ({ page, isMobile }) => {
   await mockApi(page, { first: true });
   await open(page, '#view=feature&item=angel&lang=ru&pulse=1');
   const p = page.locator('.an-pulse');
   await expect(p).toHaveAttribute('data-state', 'full');
   await expect(p.locator('.ap-touch-step')).toHaveText('Чужой пульс');
+  await expect(p.getByRole('button', { name: 'Слушать пульс' })).toBeVisible();
+  const release = await hold(page, isMobile);
+  await expect(p).toHaveAttribute('data-step', isMobile ? 'own' : 'say', { timeout: 15_000 });
+  await release();
+  if (isMobile) {
+    await expect(p.locator('.ap-own .ap-step')).toHaveText('Свой пульс');
+    await p.locator('.ap-own .ap-skip').click();
+  } else await expect(p.locator('.ap-phone-aside')).toContainText('камера считает пульс с пальца при свете вспышки');
+  await expect(p.locator('.ap-say .ap-step')).toHaveText('Слова');
   await expect(p.locator('.ap-release')).toHaveText('Отправить');
+  await p.locator('.ap-say .ap-skip').click();
+  await expect(p).toHaveAttribute('data-step', 'end');
+  await expect(p.locator('.ap-end-count')).toHaveText('Пульсов здесь: 3. Несказанных слов: 2.');
 });
 
 test('the ending without the service shows only the last line', async ({ page }) => {
@@ -237,15 +347,18 @@ test('the ending without the service shows only the last line', async ({ page })
   await expect(p.locator('.ap-own')).toBeHidden();
 });
 
-test('the ending with an empty chorus starts at one’s own pulse', async ({ page }) => {
+test('an empty chorus starts at the first available step for the device', async ({ page, isMobile }) => {
   await mockApi(page, { first: false });
   await open(page, '#view=feature&item=angel&pulse=1');
   const p = page.locator('.an-pulse');
   await expect(p).toHaveAttribute('data-state', 'empty');
-  await expect(p).toHaveAttribute('data-step', 'own');
+  await expect(p).toHaveAttribute('data-step', isMobile ? 'own' : 'say');
   await expect(p.locator('.ap-touch')).toBeHidden();
-  await expect(p.locator('.ap-own')).toBeVisible();
-  await expect(p.locator('.ap-say')).toBeHidden();
+  if (isMobile) await p.locator('.ap-own .ap-skip').click();
+  else await expect(p.locator('.ap-own')).toHaveCount(0);
+  await expect(p.locator('.ap-say')).toBeVisible();
+  await p.locator('.ap-say .ap-skip').click();
+  await expect(p).toHaveAttribute('data-step', 'end');
 });
 
 test('strata: the layers stack and the clean line turns to noise', async ({ page }) => {
@@ -281,14 +394,15 @@ test('screenshots of every act and the pulse page', async ({ page, isMobile }) =
   test.skip(!SHOTS, 'set ANGEL_SHOTS=<dir>');
   test.setTimeout(300_000);
   const name = isMobile ? 'phone' : 'desktop';
+  await page.setViewportSize(isMobile ? { width: 390, height: 844 } : { width: 1440, height: 900 });
   await mockApi(page, { first: true, words: ['always', 'forgive me', 'I still hear you', 'come home', 'спасибо'] });
   await open(page);
   let k = 1;
-  for (const id of SCENES) {
+  for (const id of process.env.ANGEL_ENDING_ONLY ? [] : SCENES) {
     for (const at of id === 'line' ? [0, 0.35] : id === 'then-now' ? [0.15, 0.85] : id === 'crowd' ? [0.2, 0.8] : [0.35]) {
       await goToScene(page, id, at);
       await page.waitForTimeout(2600);
-      await page.screenshot({ path: `${SHOTS}/${name}-${String(k++).padStart(2, '0')}-${id}.png` });
+      await page.screenshot({ scale: 'css', path: `${SHOTS}/${name}-${String(k++).padStart(2, '0')}-${id}.png` });
     }
   }
   // The ending, from the start.
@@ -298,16 +412,18 @@ test('screenshots of every act and the pulse page', async ({ page, isMobile }) =
   await expect(p).toHaveAttribute('data-state', 'full');
   const release = await hold(page, isMobile);
   await page.waitForTimeout(2500);
-  await page.screenshot({ path: `${SHOTS}/${name}-90-ending-feel.png` });
-  await expect(p).toHaveAttribute('data-step', 'own', { timeout: 15_000 });
+  await page.screenshot({ scale: 'css', path: `${SHOTS}/${name}-90-ending-feel.png` });
+  await expect(p).toHaveAttribute('data-step', isMobile ? 'own' : 'say', { timeout: 15_000 });
   await release();
+  if (isMobile) {
+    await page.waitForTimeout(900);
+    await page.screenshot({ scale: 'css', path: `${SHOTS}/${name}-91-ending-own.png` });
+    await p.locator('.ap-own .ap-skip').click();
+  }
   await page.waitForTimeout(900);
-  await page.screenshot({ path: `${SHOTS}/${name}-91-ending-own.png` });
-  await p.locator('.ap-own .ap-skip').click();
-  await page.waitForTimeout(900);
-  await page.screenshot({ path: `${SHOTS}/${name}-92-ending-words.png` });
+  await page.screenshot({ scale: 'css', path: `${SHOTS}/${name}-92-ending-words.png` });
   await p.locator('.ap-text').fill('I never told you how much that winter meant');
   await p.locator('.ap-release').click();
   await page.waitForTimeout(4200);
-  await page.screenshot({ path: `${SHOTS}/${name}-93-ending-end.png` });
+  await page.screenshot({ scale: 'css', path: `${SHOTS}/${name}-93-ending-end.png` });
 });

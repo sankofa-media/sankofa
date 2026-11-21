@@ -768,6 +768,27 @@
   text-align: right;
   font-size: 13px;
 }
+/* An optional phone recording beside the words, outside the step sequence. */
+.ap-phone-aside {
+  margin-top: 16px;
+  border-top: 1px solid rgba(246, 232, 214, 0.15);
+  padding-top: 16px;
+}
+.ap-phone-aside .ap-qr {
+  max-width: none;
+  grid-template-columns: 100px minmax(0, 1fr);
+  align-items: center;
+  gap: 16px;
+  margin: 0;
+}
+.ap-phone-aside .ap-qr svg {
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+}
+.ap-phone-aside figcaption {
+  font-size: 14px;
+}
 /* The words others left, as a crowd above the field. */
 .ap-cloud {
   display: flex;
@@ -868,7 +889,7 @@
   width: 100%;
   height: 100%;
 }
-.ap-touch-line {
+.ap-touch-intro {
   position: absolute;
   top: 96px;
   left: 20px;
@@ -876,8 +897,24 @@
   margin: 0;
   font-size: clamp(20px, 5.4vw, 26px);
   line-height: 1.4;
+}
+.ap-touch-line {
+  margin: 0;
   pointer-events: none;
   transition: opacity 1.2s;
+}
+.ap-sound-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+.ap-sound {
+  flex-shrink: 0;
+}
+.ap-sound[aria-pressed="true"] {
+  border-color: #e3c9a8;
 }
 .ap-touch[data-touching] .ap-touch-line {
   opacity: 0.35;

@@ -149,8 +149,8 @@ ui:
   # The warm last screen and the pulse page. The pulse belongs to no one:
   # never say whose it is.
   invite-lead:
-    en: "For almost thirty years this song has been played at concerts, put into films and heard in headphones, and many people hear their own story in it. Below you can leave yours here too: first feel someone else's pulse, then record your own and write the words you never said."
-    ru: "Почти тридцать лет эту песню играют на концертах, ставят в фильмы и слушают в наушниках, и многие слышат в ней свою историю. Ниже можно оставить здесь и свою: сначала почувствовать чужой пульс, потом записать свой и написать слова, которые ты так и не сказал."
+    en: "For almost thirty years this song has been played at concerts, put into films and heard in headphones, and many people hear their own story in it. Below you can leave yours here too: feel someone else's pulse and write the words you never said; on a phone, you can also record your pulse."
+    ru: "Почти тридцать лет эту песню играют на концертах, ставят в фильмы и слушают в наушниках, и многие слышат в ней свою историю. Ниже можно оставить здесь и свою: почувствуй чужой пульс и напиши слова, которые ты так и не сказал; на телефоне можно ещё записать свой пульс."
   ending: { en: "Pulse and words", ru: "Пульс и слова" }
   step-feel: { en: "Someone's pulse", ru: "Чужой пульс" }
   step-own: { en: "Your pulse", ru: "Свой пульс" }
@@ -159,8 +159,10 @@ ui:
   pulse-touch-mouse: { en: "Press on the screen and hold. Under the pointer beats the pulse of someone who was here before you.", ru: "Нажми на экран и не отпускай. Под курсором забьётся пульс человека, который был здесь до тебя." }
   pulse-felt: { en: "Beats to go: {n}", ru: "Ещё ударов: {n}" }
   own-pulse: { en: "Now you can record yours. The phone's camera takes it: under the flash, a fingertip darkens a little with every beat.", ru: "Теперь можно записать свой. Его снимет камера телефона: со вспышкой палец чуть темнеет на каждом ударе." }
-  feel-phone: { en: "On a phone the pulse beats under your finger. Point the phone's camera at the code to open this page there.", ru: "На телефоне пульс бьётся под пальцем. Наведи на код камеру телефона, и эта страница откроется на нём." }
-  own-pulse-phone: { en: "The pulse is recorded by a phone's camera. Point the phone at the code and this page opens on it.", ru: "Пульс записывает камера телефона. Наведи её на код, и эта страница откроется на телефоне." }
+  pulse-listen: { en: "Listen to the pulse", ru: "Слушать пульс" }
+  pulse-listen-stop: { en: "Turn off the sound", ru: "Выключить звук" }
+  feel-phone: { en: "On a phone, feel the pulse vibrate under your finger.", ru: "На телефоне пульс бьётся под пальцем — вибрацией." }
+  own-pulse-phone: { en: "To add your pulse, open this ending on your phone with the code: its camera reads your fingertip under the flash.", ru: "Если хочешь добавить свой пульс, открой этот финал на телефоне по коду: камера считает пульс с пальца при свете вспышки." }
   own-pulse-skip: { en: "Go on without it", ru: "Дальше без пульса" }
   words-cloud: { en: "Words left here before", ru: "Слова, которые здесь уже оставили" }
   words-invite:
