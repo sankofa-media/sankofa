@@ -143,3 +143,22 @@ export function tabId(): string {
   crypto.getRandomValues(a);
   return Array.from(a, (b) => 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-_'[b & 63]).join('');
 }
+
+export interface Notes { notes: Word[]; next: number }
+/** A null response means this installation has no reachable notes service. */
+export async function notes(lang: string, before = 0): Promise<Notes | null> {
+  const r = await call<Notes>(`/notes?lang=${encodeURIComponent(lang)}&before=${before}`);
+  return r?.status === 200 && Array.isArray(r.body?.notes) ? r.body : null;
+}
+
+export async function sendNote(text: string, lang: string): Promise<string | null> {
+  const r = await call<{ delete_code: string }>('/notes', {
+    method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ text, lang }),
+  }, 55_000);
+  return r?.status === 202 && typeof r.body?.delete_code === 'string' ? r.body.delete_code : null;
+}
+
+export async function deleteNote(code: string): Promise<boolean> {
+  const r = await call('/notes?code=' + encodeURIComponent(code), { method: 'DELETE' });
+  return r?.status === 200;
+}

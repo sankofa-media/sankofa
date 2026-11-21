@@ -39,7 +39,7 @@
 .ng-lens[aria-pressed='true'] { background: var(--ft-ink); color: var(--ft-paper); }
 .ng-status { min-height: 1.5em; }
 .ng-chorus img[data-row] { transition: opacity 2.4s linear; }
-.ng-tamada { position: absolute; z-index: 7; left: 40%; top: 48%; background: var(--ft-paper); }
+.ng-tamada { background: var(--ft-paper); margin-bottom: 1rem; }
 .ng-chorus-label { position: absolute; z-index: 7; top: 4%; left: 8%; right: 8%; background: var(--ft-glass); padding: .5rem; font-size: .85rem; }
 .ng-form { display: grid; gap: 1rem; padding: 1rem; border: 1px solid var(--ft-ink-2); }
 .ng-form input { width: 100%; min-width: 0; padding: .8rem; background: var(--ft-paper); color: var(--ft-ink); border: 1px solid var(--ft-ink-2); font: inherit; box-sizing: border-box; }
@@ -67,7 +67,6 @@
   .negative .ft-title { font-size: 2.3rem; }
   .ng-handle { font-size: .7rem; top: 0; }
   .ng-map-pins button { font-size: .65rem; padding: .3rem; }
-  .ng-tamada { font-size: .7rem; left: 35%; }
   .ng-chorus-label { top: 0; margin: 0; font-size: .65rem; }
 }
 @media (prefers-reduced-motion: reduce) { .negative * { animation: none !important; transition: none !important; } }
@@ -88,3 +87,12 @@
 /* A failed intermediate layer must never leave a partial picture. */
 .ng-picture.ng-stage-failed > .ng-full { opacity: 1; transition: none; }
 .ng-map-pins button { font-weight: 700; }
+
+.ng-notes { border-top: 1px solid var(--ft-ink-2); margin-top: 2rem; padding-top: 1rem; }
+.ng-note-form, .ng-note-delete { display: grid; gap: .7rem; }
+.ng-notes textarea, .ng-notes input { box-sizing: border-box; width: 100%; min-width: 0; padding: .7rem; font: inherit; color: var(--ft-ink); background: var(--ft-paper); border: 1px solid var(--ft-ink-2); }
+.ng-notes textarea { resize: vertical; }
+.ng-note { border-top: 1px solid var(--ft-ink-2); margin-top: 1rem; white-space: pre-wrap; overflow-wrap: anywhere; }
+.ng-note-receipt code { overflow-wrap: anywhere; user-select: all; }
+.ng-note-remove { margin-top: 1rem; font-size: .85rem; }
+.ng-note-remove summary { cursor: pointer; }

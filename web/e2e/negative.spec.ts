@@ -69,7 +69,7 @@ test('development, calm mode, a single flip and all scene review images', async 
   await expect(page.locator('.negative')).toHaveAttribute('data-flip-count', '1');
   await jump(page, 'glass'); await jump(page, 'words');
   await expect(page.locator('.negative')).toHaveAttribute('data-flip-count', '1');
-  await expect(page.locator('.ng-notes')).toBeDisabled();
+  await expect(page.locator('.ng-notes')).toBeHidden();
 });
 
 test('three real drags break the caliper; form forgets input; camera needs a gesture', async ({ page }) => {
@@ -189,4 +189,79 @@ test('map names have readable labels and status on hover or tap', async ({ page 
   else await place.locator('summary').hover();
   await expect(place.locator('p')).toBeVisible();
   await expect(place.locator('p')).toHaveText('Name from lists; not independently confirmed.');
+});
+
+for (const lang of ['ru', 'en']) {
+  test(`reader notes send, translate, paginate and delete (${lang})`, async ({ page }, info) => {
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    let submitted = false;
+    let deleted = false;
+    await page.route('**/api/angel/notes**', async route => {
+      const req = route.request();
+      if (req.method() === 'POST') {
+        expect(req.postDataJSON()).toEqual({ text: 'У нас дома говорили на двух языках.', lang });
+        submitted = true;
+        await route.fulfill({ status: 202, json: { status: 'received', delete_code: 'family-delete-code' } });
+      } else if (req.method() === 'DELETE') {
+        expect(new URL(req.url()).searchParams.get('code')).toBe('family-delete-code');
+        deleted = true;
+        await route.fulfill({ json: { status: 'deleted' } });
+      } else {
+        const older = new URL(req.url()).searchParams.get('before') === '2';
+        await route.fulfill({ json: { notes: deleted ? [] : [{ id: older ? 1 : 2, text: 'At home we spoke two languages.', lang: 'en', translation: lang === 'ru' ? (older ? 'Старая история.' : 'Дома говорили на двух языках.') : (older ? 'An older story.' : 'At home we spoke two languages.') }], next: older || deleted ? 0 : 2 } });
+      }
+    });
+    await page.goto(`${lang === 'ru' ? '/ru' : ''}/features/negative/`);
+    await jump(page, 'door');
+    const notes = page.locator('.ng-notes');
+    await expect(notes).toBeVisible();
+    await expect(notes.locator('.ng-note')).toHaveText(lang === 'ru' ? 'Дома говорили на двух языках.' : 'At home we spoke two languages.');
+    await notes.locator('textarea').fill('У нас дома говорили на двух языках.');
+    await notes.locator('.ng-note-form button').click();
+    await expect(notes.locator('code')).toHaveText('family-delete-code');
+    expect(submitted).toBe(true);
+    await expect(notes.locator('textarea')).toHaveValue('');
+    if (lang === 'ru') {
+      const dir = process.env.NEGATIVE_SCREENSHOTS ?? join(homedir(), 'projects', 'negative-shots');
+      await mkdir(dir, { recursive: true });
+      await notes.scrollIntoViewIfNeeded();
+      await page.screenshot({ path: `${dir}/${info.project.name}-door-notes.png`, scale: 'css' });
+      await notes.screenshot({ path: `${dir}/${info.project.name}-door-notes-detail.png`, scale: 'css' });
+    }
+    await notes.getByRole('button', { name: lang === 'ru' ? 'Ещё заметки' : 'More notes', exact: true }).click();
+    await expect(notes.locator('.ng-note')).toHaveCount(2);
+    await notes.locator('summary').click();
+    await notes.locator('.ng-note-delete button').click();
+    await expect(notes.locator('.ng-note-list')).toBeEmpty();
+    expect(deleted).toBe(true);
+  });
+}
+
+test('notes stay absent without the API while doors retain text and art', async ({ page }) => {
+  await page.route('**/api/angel/notes**', route => route.fulfill({ status: 404, body: '<html>Not found</html>', contentType: 'text/html' }));
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/ru/features/negative/');
+  await jump(page, 'door');
+  await expect(page.locator('.ng-notes')).toBeHidden();
+  await expect(page.locator('[data-scene="door"] .ng-picture')).toBeVisible();
+  await expect(page.locator('[data-scene="door"] .ft-text').first()).toBeVisible();
+});
+
+test('held note has only an acknowledgement and code', async ({ page }) => {
+  await page.route('**/api/angel/notes**', route => route.fulfill({
+    status: route.request().method() === 'POST' ? 202 : 200,
+    json: route.request().method() === 'POST' ? { status: 'received', delete_code: 'held-delete-code' } : { notes: [], next: 0 },
+  }));
+  await page.emulateMedia({ reducedMotion: 'reduce' });
+  await page.goto('/ru/features/negative/');
+  await page.locator('#negative-note').fill('История семьи.');
+  await page.locator('.ng-note-form button').click();
+  await expect(page.locator('.ng-note-receipt')).toHaveText('Получено.Сохраните код удаления: held-delete-code');
+  await expect(page.locator('.ng-note-list')).toBeEmpty();
+});
+
+test('bowl button is outside the tamada picture', async ({ page }) => {
+  await page.goto('/ru/features/negative/');
+  await expect(page.locator('.ng-picture .ng-tamada')).toHaveCount(0);
+  await expect(page.locator('.ng-tamada')).toHaveCount(1);
 });

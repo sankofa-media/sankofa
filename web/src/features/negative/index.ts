@@ -9,6 +9,7 @@ import type { FeatureContext, FeatureInstance } from '../host';
 import type { Scene } from '../model';
 import '../engine/engine.css';
 import './negative.css';
+import { readerNotes } from './notes';
 
 const say = (en: string, ru: string) => pick({ en, ru });
 const STAGES = ['contour', 'fills', 'ground', 'full'];
@@ -223,7 +224,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
       pictures[0].el.append(labels);
       let raised = false;
       const raise = button('Raise the bowl', 'Поднять чашу', () => { raised = true; customProgress(1); play(0); }, 'ng-tamada');
-      pictures[0].el.append(raise);
+      after.push(raise);
       customProgress = p => {
         const rows = calm() || raised ? 3 : Math.max(0, Math.min(3, Math.floor((p - .45) * 7)));
         motion.dataset.rows = String(rows);
@@ -284,7 +285,7 @@ export function mount(ctx: FeatureContext): FeatureInstance {
       after.push(enable, button('Turn camera off', 'Выключить камеру', () => { stopCamera(); video.srcObject = null; video.hidden = true; status.textContent = say('Camera off', 'Камера выключена'); }), status,
         h('p.ft-caption', {}, say('Optional front camera. The picture stays on your device.', 'Фронтальная камера — по желанию. Изображение остаётся на вашем устройстве.')));
     }
-    if (sc.id === 'door') after.push(h('button.btn.ng-notes', { type: 'button', disabled: true, 'data-notes-enabled': 'false' }, say('Reader notes · coming later', 'Заметки читателей · позже')));
+    if (sc.id === 'door') { const notes = readerNotes(); after.push(notes.el); cleanups.push(notes.dispose); }
     if (sc.id === 'final') after.push(h('details.ng-credits', {}, h('summary', {}, say('Sources and credits', 'Источники и кредиты')),
       h('p', {}, say('Illustrations generated in the tradition of Senegalese reverse-glass painting. Contemporary interpretations, not historical portraits.', 'Иллюстрации сгенерированы в технике сенегальского сувера. Современные интерпретации, не исторические портреты.')),
       h('p', {}, say('Family group: REM 3338-7, via Wikimedia Commons; reproduced by Kovalevsky in 1914 and cited by Gavrishina and Mikhailova in 2017. Sukhum: Sergei Prokudin-Gorsky, Library of Congress.', 'Семейная группа: РЭМ 3338-7, через Wikimedia Commons; публикация Ковалевского 1914 года и цитирование Гавришиной и Михайловой 2017 года. Сухум: Сергей Прокудин-Горский, Библиотека Конгресса.')),
