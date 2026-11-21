@@ -174,7 +174,7 @@ async function hold(page: Page, isMobile: boolean): Promise<() => Promise<void>>
   };
 }
 
-test('the ending, one step after another: feel, own pulse, words, and all of them together', async ({ page, isMobile }) => {
+test('the ending follows the device sequence through words to the finale', async ({ page, isMobile }) => {
   test.setTimeout(60_000);
   await mockApi(page, { first: true });
   await open(page, '#view=feature&item=angel&pulse=1');
@@ -197,15 +197,22 @@ test('the ending, one step after another: feel, own pulse, words, and all of the
   await expect(p.locator('.ap-word').first()).toBeAttached({ timeout: 6000 });
   await expect(p.locator('.ap-others')).toHaveText('2 more here now');
   await expect(p.locator('.ap-felt')).toContainText('Beats to go');
-  // Felt long enough: the next step opens.
-  await expect(p).toHaveAttribute('data-step', 'own', { timeout: 15_000 });
+  // Only phones offer the recording step; desktop goes straight to words.
+  await expect(p).toHaveAttribute('data-step', isMobile ? 'own' : 'say', { timeout: 15_000 });
   await release();
-  await expect(p.locator('.ap-own')).toBeVisible();
-  if (isMobile) await expect(p.locator('.ap-own-start')).toBeVisible();
-  else await expect(p.locator('.ap-own .ap-qr svg')).toBeVisible();
-  await expect(p.locator('.ap-say')).toBeHidden();
-  await p.locator('.ap-own .ap-skip').click();
+  if (isMobile) {
+    await expect(p.locator('.ap-own .ap-step')).toHaveText('Your pulse');
+    await expect(p.locator('.ap-own-start')).toBeVisible();
+    await expect(p.locator('.ap-say')).toBeHidden();
+    await expect(p.locator('.ap-phone-aside')).toHaveCount(0);
+    await p.locator('.ap-own .ap-skip').click();
+  } else {
+    await expect(p.locator('.ap-own')).toHaveCount(0);
+    await expect(p.locator('.ap-phone-aside svg')).toBeVisible();
+    await expect(p.locator('.ap-phone-aside')).toContainText('its camera reads your fingertip under the flash');
+  }
   await expect(p).toHaveAttribute('data-step', 'say');
+  await expect(p.locator('.ap-say .ap-step')).toHaveText('Words');
   // The words others left are there before one's own.
   await expect(p.locator('.ap-cloud-word')).toHaveCount(2);
   await p.locator('.ap-text').fill('I never told you');
@@ -218,13 +225,24 @@ test('the ending, one step after another: feel, own pulse, words, and all of the
   await expect(p.locator('.ap-last-line')).toHaveText('You are not alone.');
 });
 
-test('the ending in Russian', async ({ page }) => {
+test('the ending in Russian', async ({ page, isMobile }) => {
   await mockApi(page, { first: true });
   await open(page, '#view=feature&item=angel&lang=ru&pulse=1');
   const p = page.locator('.an-pulse');
   await expect(p).toHaveAttribute('data-state', 'full');
   await expect(p.locator('.ap-touch-step')).toHaveText('Чужой пульс');
+  const release = await hold(page, isMobile);
+  await expect(p).toHaveAttribute('data-step', isMobile ? 'own' : 'say', { timeout: 15_000 });
+  await release();
+  if (isMobile) {
+    await expect(p.locator('.ap-own .ap-step')).toHaveText('Свой пульс');
+    await p.locator('.ap-own .ap-skip').click();
+  } else await expect(p.locator('.ap-phone-aside')).toContainText('камера считает пульс с пальца при свете вспышки');
+  await expect(p.locator('.ap-say .ap-step')).toHaveText('Слова');
   await expect(p.locator('.ap-release')).toHaveText('Отправить');
+  await p.locator('.ap-say .ap-skip').click();
+  await expect(p).toHaveAttribute('data-step', 'end');
+  await expect(p.locator('.ap-end-count')).toHaveText('Пульсов здесь: 3. Несказанных слов: 2.');
 });
 
 test('the ending without the service shows only the last line', async ({ page }) => {
@@ -237,15 +255,18 @@ test('the ending without the service shows only the last line', async ({ page })
   await expect(p.locator('.ap-own')).toBeHidden();
 });
 
-test('the ending with an empty chorus starts at one’s own pulse', async ({ page }) => {
+test('an empty chorus starts at the first available step for the device', async ({ page, isMobile }) => {
   await mockApi(page, { first: false });
   await open(page, '#view=feature&item=angel&pulse=1');
   const p = page.locator('.an-pulse');
   await expect(p).toHaveAttribute('data-state', 'empty');
-  await expect(p).toHaveAttribute('data-step', 'own');
+  await expect(p).toHaveAttribute('data-step', isMobile ? 'own' : 'say');
   await expect(p.locator('.ap-touch')).toBeHidden();
-  await expect(p.locator('.ap-own')).toBeVisible();
-  await expect(p.locator('.ap-say')).toBeHidden();
+  if (isMobile) await p.locator('.ap-own .ap-skip').click();
+  else await expect(p.locator('.ap-own')).toHaveCount(0);
+  await expect(p.locator('.ap-say')).toBeVisible();
+  await p.locator('.ap-say .ap-skip').click();
+  await expect(p).toHaveAttribute('data-step', 'end');
 });
 
 test('strata: the layers stack and the clean line turns to noise', async ({ page }) => {
@@ -281,14 +302,15 @@ test('screenshots of every act and the pulse page', async ({ page, isMobile }) =
   test.skip(!SHOTS, 'set ANGEL_SHOTS=<dir>');
   test.setTimeout(300_000);
   const name = isMobile ? 'phone' : 'desktop';
+  await page.setViewportSize(isMobile ? { width: 390, height: 844 } : { width: 1440, height: 900 });
   await mockApi(page, { first: true, words: ['always', 'forgive me', 'I still hear you', 'come home', 'спасибо'] });
   await open(page);
   let k = 1;
-  for (const id of SCENES) {
+  for (const id of process.env.ANGEL_ENDING_ONLY ? [] : SCENES) {
     for (const at of id === 'line' ? [0, 0.35] : id === 'then-now' ? [0.15, 0.85] : id === 'crowd' ? [0.2, 0.8] : [0.35]) {
       await goToScene(page, id, at);
       await page.waitForTimeout(2600);
-      await page.screenshot({ path: `${SHOTS}/${name}-${String(k++).padStart(2, '0')}-${id}.png` });
+      await page.screenshot({ scale: 'css', path: `${SHOTS}/${name}-${String(k++).padStart(2, '0')}-${id}.png` });
     }
   }
   // The ending, from the start.
@@ -298,16 +320,18 @@ test('screenshots of every act and the pulse page', async ({ page, isMobile }) =
   await expect(p).toHaveAttribute('data-state', 'full');
   const release = await hold(page, isMobile);
   await page.waitForTimeout(2500);
-  await page.screenshot({ path: `${SHOTS}/${name}-90-ending-feel.png` });
-  await expect(p).toHaveAttribute('data-step', 'own', { timeout: 15_000 });
+  await page.screenshot({ scale: 'css', path: `${SHOTS}/${name}-90-ending-feel.png` });
+  await expect(p).toHaveAttribute('data-step', isMobile ? 'own' : 'say', { timeout: 15_000 });
   await release();
+  if (isMobile) {
+    await page.waitForTimeout(900);
+    await page.screenshot({ scale: 'css', path: `${SHOTS}/${name}-91-ending-own.png` });
+    await p.locator('.ap-own .ap-skip').click();
+  }
   await page.waitForTimeout(900);
-  await page.screenshot({ path: `${SHOTS}/${name}-91-ending-own.png` });
-  await p.locator('.ap-own .ap-skip').click();
-  await page.waitForTimeout(900);
-  await page.screenshot({ path: `${SHOTS}/${name}-92-ending-words.png` });
+  await page.screenshot({ scale: 'css', path: `${SHOTS}/${name}-92-ending-words.png` });
   await p.locator('.ap-text').fill('I never told you how much that winter meant');
   await p.locator('.ap-release').click();
   await page.waitForTimeout(4200);
-  await page.screenshot({ path: `${SHOTS}/${name}-93-ending-end.png` });
+  await page.screenshot({ scale: 'css', path: `${SHOTS}/${name}-93-ending-end.png` });
 });
