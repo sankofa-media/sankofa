@@ -99,7 +99,7 @@ export class PulsePage {
     this.floatBox = h('div.ap-float', { 'aria-hidden': 'true' });
     this.othersLine = h('p.ap-others', { 'aria-live': 'polite' });
     this.feltLine = h('p.ap-felt', { 'aria-live': 'polite' });
-    this.touchSec = h('section.ap-sec.ap-touch', { 'aria-label': say(o.phone ? 'pulse-touch' : 'pulse-touch-mouse') }, this.canvas, h('p.ap-step.ap-touch-step', {}, say('step-feel')), h('p.ap-touch-line', {}, say(o.phone ? 'pulse-touch' : 'pulse-touch-mouse')), this.floatBox, h('div.ap-touch-foot', {}, this.othersLine, this.feltLine));
+    this.touchSec = h('section.ap-sec.ap-touch', { 'aria-label': say(o.phone ? 'pulse-touch' : 'pulse-touch-mouse') }, this.canvas, h('p.ap-step.ap-touch-step', {}, say('step-feel')), h('p.ap-touch-line', {}, say(o.phone ? 'pulse-touch' : 'pulse-touch-mouse')), this.floatBox, h('div.ap-touch-foot', {}, this.othersLine, this.feltLine), ...(o.phone ? [] : [h('figure.an-qr.ap-qr.ap-feel-qr', {}, o.qr(), h('figcaption', {}, say('feel-phone')))]));
     this.cloud = h('div.ap-cloud', { 'aria-label': say('words-cloud') });
     this.sayEl = this.buildWords();
     this.ownEl = this.buildOwn();
@@ -197,7 +197,7 @@ export class PulsePage {
       return { x: e.clientX - r.left, y: e.clientY - r.top, w: e.width || 1, h: e.height || 1 };
     };
     c.addEventListener('pointerdown', (e) => {
-      if ((e.target as Element).closest('button')) return;
+      if ((e.target as Element).closest('button, .ap-feel-qr')) return;
       if (this.el.dataset.state !== 'full') return;
       e.preventDefault();
       try {
