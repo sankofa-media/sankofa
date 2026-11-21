@@ -57,6 +57,8 @@ done
 img=$(hack/stand/push.sh museum dist/museum.tar | tail -1)
 [[ $img == localhost:5000/* ]] || { echo "push failed" >&2; exit 1; }
 sed -e "s#MUSEUM_IMAGE#$img#" -e "s#MUSEUM_HOST#${MUSEUM_HOST:-museum.sankofa.workshop.aenix.io}#g" -e "s#PUBLIC_HOST#${PUBLIC_HOST:-sankofa.black}#g" deploy/museum.yaml > dist/museum.yaml
+# The sitemap before this deploy, so IndexNow hears only about pages that changed.
+curl -fsS "https://${PUBLIC_HOST:-sankofa.black}/sitemap.xml" -o dist/sitemap.before.xml 2>/dev/null || : >dist/sitemap.before.xml
 km apply -f dist/museum.yaml >/dev/null
 km -n sankofa-museum rollout status deploy/museum --timeout=180s
 echo "$img" >&2
@@ -64,7 +66,7 @@ echo "$img" >&2
 want=$(ls web/dist/assets/index-*.js | xargs -n1 basename)
 for _ in $(seq 1 20); do
   got=$(curl -sk "https://${MUSEUM_HOST:-museum.sankofa.workshop.aenix.io}/" | grep -o 'assets/index-[^"]*\.js' | head -1 | xargs -n1 basename 2>/dev/null || true)
-  [[ $got == "$want" ]] && { echo "served build $got"; exit 0; }
+  [[ $got == "$want" ]] && { echo "served build $got"; hack/stand/indexnow.sh dist/sitemap.before.xml "${PUBLIC_HOST:-sankofa.black}" || true; exit 0; }
   sleep 3
 done
 echo "the museum still serves $got, not $want" >&2
