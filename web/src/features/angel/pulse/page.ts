@@ -108,7 +108,7 @@ export class PulsePage {
     this.soundButton = h('button.btn.ap-sound', { type: 'button', 'aria-pressed': 'false' }, say('pulse-listen')) as HTMLButtonElement;
     this.soundButton.addEventListener('click', () => this.toggleSound());
     document.addEventListener('visibilitychange', this.onVisibility);
-    this.touchSec = h('section.ap-sec.ap-touch', { 'aria-label': say(o.phone ? 'pulse-touch' : 'pulse-touch-mouse') }, this.canvas, h('p.ap-step.ap-touch-step', {}, say('step-feel')), h('div.ap-touch-intro', {}, h('p.ap-touch-line', {}, say(o.phone ? 'pulse-touch' : 'pulse-touch-mouse')), h('div.ap-sound-row', {}, this.soundButton, o.phone ? null : h('p.ap-note', {}, say('feel-phone')))), this.floatBox, h('div.ap-touch-foot', {}, this.othersLine, this.feltLine), ...(o.phone ? [] : [h('figure.an-qr.ap-qr.ap-feel-qr', {}, o.qr(), h('figcaption', {}, say('feel-phone')))]));
+    this.touchSec = h('section.ap-sec.ap-touch', { 'aria-label': say(o.phone ? 'pulse-touch' : 'pulse-touch-mouse') }, this.canvas, h('p.ap-step.ap-touch-step', {}, say('step-feel')), h('div.ap-touch-intro', {}, h('p.ap-touch-line', {}, say(o.phone ? 'pulse-touch' : 'pulse-touch-mouse')), h('div.ap-sound-row', {}, this.soundButton)), this.floatBox, h('div.ap-touch-foot', {}, this.othersLine, this.feltLine), ...(o.phone ? [] : [h('figure.an-qr.ap-qr.ap-feel-qr', {}, o.qr(), h('figcaption', {}, say('feel-phone')))]));
     this.cloud = h('div.ap-cloud', { 'aria-label': say('words-cloud') });
     this.sayEl = this.buildWords();
     this.ownEl = o.phone ? this.buildOwn() : null;
