@@ -1,0 +1,1017 @@
+id: negative
+order: 4
+title:
+  en: Negative. Abkhaz, of course
+  ru: Негатив. Абхазкой, конечно
+dek:
+  en: A glass plate, a question, and people speaking for themselves.
+  ru: Стеклянная пластинка, вопрос и люди, которые говорят сами.
+reading:
+  en: 25–35 minutes · optional sound
+  ru: 25–35 минут · звук по желанию
+cover: glass
+scenes:
+  - id: glass
+    kind: glass
+    name:
+      en: Glass
+      ru: Стекло (вход, титул)
+    pictures:
+      - glass
+    blocks:
+      - id: title
+        role: title
+        draft: false
+        en: Negative. Abkhaz, of course
+        ru: Негатив. Абхазкой, конечно
+      - id: text-0
+        role: text
+        draft: false
+        en: "At first there is only glass. Dark, smooth, with the faintest glint. Then a line appears: an outline,
+          like the trace of a pen. It runs around faces, shoulders, folds of clothing; then colour flows into
+          it — warm, flat, without shadows — and last comes the ground, gold all the way to the edges. The
+          glass is turned over, and only then does the picture become itself."
+        ru: "Сначала — только стекло. Тёмное, ровное, с едва заметным бликом. Потом на нём проступает линия: контур,
+          как след пера. Линия обегает лица, плечи, складки одежды; потом в контур льётся цвет — тёплый,
+          плоский, без теней; и последним встаёт фон, золотой, до самых краёв. Стекло переворачивают — и
+          только тогда картина становится собой."
+      - id: text-1
+        role: text
+        draft: false
+        en: "This is how Senegalese reverse-glass painting, suwer, works: outline first, then colour, then ground, all
+          viewed through the glass from the other side. A photographic plate, too, once had to be developed.
+          This feature works like glass: it develops as you read, and once, it turns over."
+        ru: "Так устроена сенегальская живопись под стеклом, сувер: сначала контур, потом заливка, потом фон, и
+          смотрится всё сквозь стекло, с обратной стороны. Так когда-то проявляли фотопластинку. Этот выпуск
+          устроен как стекло: он проявляется, пока вы читаете, и один раз — переворачивается."
+      - id: text-2
+        role: text
+        draft: false
+        en: On the plate is a family group in Adzyubzha. Men, women and children in Abkhaz dress outside a wooden
+          house; behind the house, behind everyone, stands one more person. The names of the people in the
+          family group are unknown.
+        ru: На пластинке — семейная группа, Адзюбжа. Мужчины, женщины, дети в абхазском платье у деревянного дома; за
+          домом, позади всех, стоит ещё один человек. Имена людей в семейной группе неизвестны.
+      - id: text-3
+        role: text
+        draft: false
+        en: "Nineteenth- and early twentieth-century texts called this community “Abkhazian Negroes”: ethnographers
+          and newspapers used a word then regarded as scholarly. Today it is considered offensive. In this
+          feature it appears only in quotations; our term is Afro-Abkhazians."
+        ru: "В текстах девятнадцатого и начала двадцатого века эту общину называли «абхазские негры» — так писали
+          этнографы и газеты, слово считалось тогда учёным. Сегодня оно считается оскорбительным. В этом
+          выпуске оно появляется только в цитатах, а мы пишем: афроабхазы."
+    art:
+      generated: true
+      layers:
+        - file: glass-ground.png
+          alt: ""
+          state: glass
+        - file: glass-fills.png
+          alt: ""
+          state: glass
+        - file: glass-contour.png
+          alt: ""
+          state: glass
+        - file: glass-full.png
+          alt:
+            en: Glass — reverse-glass illustration
+            ru: Стекло (вход, титул) — иллюстрация под стеклом
+          state: glass
+      overlays: []
+      aspect: 3 / 2
+    photo: adzyubzha
+  - id: observer
+    kind: observer
+    name:
+      en: The person behind the group
+      ru: Человек за группой
+    pictures:
+      - observer
+    blocks:
+      - id: title
+        role: title
+        draft: false
+        en: The person behind the group
+        ru: Человек за группой
+      - id: text-0
+        role: text
+        draft: false
+        en: Adzyubzha, 1912. The plate's author was A. K. Serzhputovsky. He placed himself in the picture to show a
+          contrast in skin colour — that is what he wrote in the inventory. Kovalevsky published the
+          photograph in 1914. Usually the photographer remained on this side of the glass. For the first few
+          minutes of this feature, you see through his eyes.
+        ru: Адзюбжа, 1912 год. Автор пластинки — А. К. Сержпутовский. Сержпутовский встал в кадр сам, чтобы показать
+          контраст цвета кожи, — так он записал в инвентаре. В 1914 году снимок опубликовал Ковалевский.
+          Обычно фотограф оставался по эту сторону стекла. Первые минуты выпуска вы смотрите его глазами.
+      - id: text-1
+        role: text
+        draft: false
+        en: The ethnographer arrived with instruments. Now they are in your hands, too.
+        ru: Этнограф приехал с инструментами. Они у вас теперь тоже есть.
+    art:
+      generated: true
+      layers:
+        - file: observer-ground.png
+          alt: ""
+          state: observer
+        - file: observer-fills.png
+          alt: ""
+          state: observer
+        - file: observer-contour.png
+          alt: ""
+          state: observer
+        - file: observer-full.png
+          alt:
+            en: The person behind the group — reverse-glass illustration
+            ru: Человек за группой — иллюстрация под стеклом
+          state: observer
+      overlays: []
+      aspect: 2 / 3
+  - id: caliper
+    kind: caliper
+    name:
+      en: The caliper
+      ru: Штангенциркуль
+    pictures:
+      - caliper
+    blocks:
+      - id: title
+        role: title
+        draft: false
+        en: The caliper
+        ru: Штангенциркуль
+      - id: text-0
+        role: text
+        draft: false
+        en: "The caliper is heavy and cold, marked in millimetres. Try measuring a face. It will not hold: it slips
+          off cheekbones, catches awkwardly against a chin, and by the third attempt you realise that what you
+          are measuring is not really a face but your own position. The person doing the measuring is always
+          on this side of the glass."
+        ru: "Штангенциркуль тяжёлый, холодный, с миллиметровой шкалой. Попробуйте измерить лицо. Он не держится:
+          соскальзывает со скул, тупит о подбородок, и к третьей попытке вы понимаете, что измеряете на самом
+          деле не лицо, а своё собственное положение. Человек, который мерит, всегда по эту сторону стекла."
+      - id: text-1
+        role: text
+        draft: false
+        en: The plate shows neither a caliper nor a measurement session. Here, the instrument receives no answer.
+        ru: На пластинке нет ни циркуля, ни сеанса измерений. Здесь инструмент остаётся без ответа.
+    art:
+      generated: true
+      layers:
+        - file: caliper-ground.png
+          alt: ""
+          state: caliper
+        - file: caliper-fills.png
+          alt: ""
+          state: caliper
+        - file: caliper-contour.png
+          alt: ""
+          state: caliper
+        - file: caliper-full.png
+          alt:
+            en: The caliper — reverse-glass illustration
+            ru: Штангенциркуль — иллюстрация под стеклом
+          state: caliper
+      overlays:
+        - file: caliper-plate.png
+          alt: ""
+        - file: caliper-person-1.png
+          alt: ""
+        - file: caliper-person-2.png
+          alt: ""
+        - file: caliper-person-3.png
+          alt: ""
+        - file: caliper-person-4.png
+          alt: ""
+        - file: caliper-person-5.png
+          alt: ""
+        - file: caliper-person-6.png
+          alt: ""
+        - file: caliper-caliper-body.png
+          alt: ""
+        - file: caliper-jaw-left.png
+          alt: ""
+        - file: caliper-jaw-right.png
+          alt: ""
+        - file: caliper-tick-1.png
+          alt: ""
+        - file: caliper-tick-2.png
+          alt: ""
+        - file: caliper-tick-3.png
+          alt: ""
+        - file: caliper-tick-4.png
+          alt: ""
+        - file: caliper-tick-5.png
+          alt: ""
+        - file: caliper-tick-6.png
+          alt: ""
+        - file: caliper-tick-7.png
+          alt: ""
+        - file: caliper-tick-8.png
+          alt: ""
+        - file: caliper-tick-9.png
+          alt: ""
+        - file: caliper-glare.png
+          alt: ""
+      aspect: 3 / 2
+  - id: form
+    kind: form
+    name:
+      en: The form
+      ru: Анкета
+    pictures:
+      - form
+      - form-torn
+    blocks:
+      - id: title
+        role: title
+        draft: false
+        en: The form
+        ru: Анкета
+      - id: text-0
+        role: text
+        draft: false
+        en: "The form ends with its main question: “Where are you from?” Type something. The form answers for itself,
+          in the words Nutsa Abash spoke to an MK reporter in 2003: “Abkhaz, of course. I was born and grew up
+          here. This is my home…”"
+        ru: "В конце анкеты — главная графа: «Откуда вы?» Наберите что-нибудь. Анкета отвечает сама — словами Нуцы
+          Абаш, сказанными корреспонденту «МК» в 2003 году: «Абхазкой, конечно. Я здесь родилась и выросла.
+          Это — мой дом...»"
+      - id: text-1
+        role: text
+        draft: false
+        en: The form does not know how to record an answer like that. It opens across the screen, its ruled lines
+          break, and the box remains empty. It will remember this answer until the end of the feature.
+        ru: Такой ответ анкета записать не умеет. Бланк раскрывается на весь экран, линовка ломается, графа остаётся
+          пустой. Этот ответ она будет помнить до конца выпуска.
+    art:
+      generated: true
+      layers:
+        - file: form-ground.png
+          alt: ""
+          state: form
+        - file: form-fills.png
+          alt: ""
+          state: form
+        - file: form-contour.png
+          alt: ""
+          state: form
+        - file: form-full.png
+          alt:
+            en: The form — reverse-glass illustration
+            ru: Анкета — иллюстрация под стеклом
+          state: form
+        - file: form-torn-ground.png
+          alt: ""
+          state: form-torn
+        - file: form-torn-fills.png
+          alt: ""
+          state: form-torn
+        - file: form-torn-contour.png
+          alt: ""
+          state: form-torn
+        - file: form-torn-full.png
+          alt:
+            en: The form — reverse-glass illustration
+            ru: Анкета — иллюстрация под стеклом
+          state: form-torn
+      overlays: []
+      aspect: 2 / 3
+  - id: river
+    kind: river
+    name:
+      en: The Kodor
+      ru: Река (карта)
+    pictures:
+      - river
+    blocks:
+      - id: title
+        role: title
+        draft: false
+        en: The Kodor
+        ru: Река (карта)
+      - id: text-0
+        role: text
+        draft: false
+        en: "The Kodor comes down from the mountains and reaches the sea. Below, at its mouth on the coastal plain,
+          are the villages of this story. Gold marks Adzyubzha, where the photograph was taken and where
+          outsiders came twice, in different years, to record conversations. The second gold point is Sukhum:
+          Nutsa lived and worked there. The other names — Kyndyg, Tamysh, Pokvesh, Merkula, Chlou, Tkhina,
+          Reka, Ilor and Achandara — appear in lists and retellings, but the evidence for the community in
+          each village has not yet been independently confirmed. These names are marked with dotted lines."
+        ru: "Кодор выходит из гор и ложится в море. Внизу, у устья, на приморской равнине — сёла, о которых пойдёт
+          речь. На карте золотом отмечена Адзюбжа, село, где сделан снимок и куда дважды, в разные годы,
+          приезжали чужие записывать разговоры. Вторая золотая точка — Сухум: там жила и работала Нуца.
+          Остальные имена — Кындыг, Тамыш, Поквеш, Меркула, Члоу, Тхина, Река, Илор, Ачандара — встречаются в
+          списках и пересказах, но сведения об общине в каждом из этих сёл пока не подтверждены независимо.
+          Эти названия нанесены пунктиром."
+      - id: text-1
+        role: text
+        draft: false
+        en: "The gold points open recordings of Abkhaz polyphonic singing from Melodiya's official album, played in
+          the docked player. This is the music of the region, not the voices of the people in the photograph:
+          no such recording survives."
+        ru: "Золотые точки открывают записи абхазского многоголосия — официальный альбом «Мелодии», они звучат в
+          закреплённом плеере. Это музыка края, а не голоса людей со снимка: такой записи не сохранилось."
+    art:
+      generated: true
+      layers:
+        - file: river-ground.png
+          alt: ""
+          state: river
+        - file: river-fills.png
+          alt: ""
+          state: river
+        - file: river-contour.png
+          alt: ""
+          state: river
+        - file: river-full.png
+          alt:
+            en: The Kodor — reverse-glass illustration
+            ru: Река (карта) — иллюстрация под стеклом
+          state: river
+      overlays: []
+      aspect: 3 / 2
+    photo: sukhum
+  - id: own
+    kind: own
+    name:
+      en: Their own lives
+      ru: Свои
+    pictures:
+      - vine
+      - tobacco
+      - table
+    blocks:
+      - id: title
+        role: title
+        draft: false
+        en: Their own lives
+        ru: Свои
+      - id: text-0
+        role: text
+        draft: false
+        en: There is testimony about how they lived. Shirin Abash of Adzyubzha was a tobacco grower and
+          collective-farm organiser. A Zarya Vostoka reporter visited him in August 1958, and the issue of 17
+          August printed his account of hungry years, a fern-roofed house and work. His daughter Nutsa studied
+          medicine in Tbilisi and worked as an obstetrician-gynaecologist in Sukhum. American journalist
+          Allison Tynes wrote about this in 1973; thirty years later Nutsa told an MK reporter herself. Both
+          Allison Tynes and Yuri Zotov wrote about Shamil Chanba, an Adzyubzha resident and bus driver.
+        ru: "Как жили — об этом есть свидетельства. Ширин Абаш из Адзюбжи — табаковод и организатор колхоза: в августе
+          1958 года к нему приехал корреспондент «Зари Востока», и в номере от 17 августа напечатан его
+          рассказ — о голодных годах, о доме, крытом папоротником, о работе. Его дочь Нуца училась на врача в
+          Тбилиси и работала акушером-гинекологом в Сухуме: об этом в 1973 году писала американская
+          журналистка Эллисон Тайнс, а через тридцать лет Нуца рассказала сама — корреспонденту «МК». О Шамиле
+          Чанба, жителе Адзюбжи и водителе автобуса, писали Эллисон Тайнс и Юрий Зотов."
+      - id: text-1
+        role: text
+        draft: false
+        en: "These are people tending their own households: tobacco, vines trained up trees, a table. To that table —
+          and onto this stage — comes the tamada."
+        ru: "Это люди, которые сами ведут свой двор: табак, виноград на деревьях, стол. На стол — и на сцену — выходит
+          тамада."
+    art:
+      generated: true
+      layers:
+        - file: vine-ground.png
+          alt: ""
+          state: vine
+        - file: vine-fills.png
+          alt: ""
+          state: vine
+        - file: vine-contour.png
+          alt: ""
+          state: vine
+        - file: vine-full.png
+          alt:
+            en: Their own lives — reverse-glass illustration
+            ru: Свои — иллюстрация под стеклом
+          state: vine
+        - file: tobacco-ground.png
+          alt: ""
+          state: tobacco
+        - file: tobacco-fills.png
+          alt: ""
+          state: tobacco
+        - file: tobacco-contour.png
+          alt: ""
+          state: tobacco
+        - file: tobacco-full.png
+          alt:
+            en: Their own lives — reverse-glass illustration
+            ru: Свои — иллюстрация под стеклом
+          state: tobacco
+        - file: table-ground.png
+          alt: ""
+          state: table
+        - file: table-fills.png
+          alt: ""
+          state: table
+        - file: table-contour.png
+          alt: ""
+          state: table
+        - file: table-full.png
+          alt:
+            en: Their own lives — reverse-glass illustration
+            ru: Свои — иллюстрация под стеклом
+          state: table
+      overlays: []
+      aspect: 3 / 2
+  - id: chorus
+    kind: chorus
+    name:
+      en: The feast
+      ru: Застолье (многоголосие)
+    pictures:
+      - chorus
+    blocks:
+      - id: title
+        role: title
+        draft: false
+        en: The feast
+        ru: Застолье (многоголосие)
+      - id: text-0
+        role: text
+        draft: false
+        en: "A feast in an Abkhaz village is led by the tamada. He rises first and speaks for everyone, but no one at
+          this table is just a passenger: each person has a voice. Raise the bowl. Voices join the table one
+          by one, as in real polyphony, when a part enters and finds its line."
+        ru: "Застолье в абхазском селе ведёт тамада. Он встаёт первым и говорит за всех, но за столом нет пассажиров:
+          каждый здесь — со своим голосом. Поднимите чашу. К столу добавляются голоса — по одному, как поётся
+          в настоящем многоголосии, когда партия входит и находит свою строку."
+      - id: text-1
+        role: text
+        draft: false
+        en: "Shirin Abash joins the chorus — Zarya Vostoka, 1958; then Nutsa Abash — MK, 2003. Next comes Shamil
+          Chanba: a conversation with Allison Tynes, Afro-American, 1973, and a conversation around 1995 that
+          Yuri Zotov recalled in AiF in 2020. Diana Bobyleva — Sputnik, 2017. Their words will come after the
+          glass turns over. For now, names and years appear above the chorus, while the player carries Abkhaz
+          polyphony."
+        ru: "К хору присоединяется Ширин Абаш — «Заря Востока», 1958 год; затем Нуца Абаш — «МК», 2003-й. Следом —
+          Шамиль Чанба: беседа с Эллисон Тайнс, Afro-American, 1973 год, и разговор около 1995-го, который
+          Юрий Зотов вспомнил в «АиФ» в 2020-м. Диана Бобылева — «Спутник», 2017 год. Их слова прозвучат после
+          переворота стекла. Пока над хором появляются имена и годы, а в плеере звучит абхазское
+          многоголосие."
+    art:
+      generated: true
+      layers:
+        - file: chorus-ground.png
+          alt: ""
+          state: chorus
+        - file: chorus-fills.png
+          alt: ""
+          state: chorus
+        - file: chorus-contour.png
+          alt: ""
+          state: chorus
+        - file: chorus-full.png
+          alt:
+            en: The feast — reverse-glass illustration
+            ru: Застолье (многоголосие) — иллюстрация под стеклом
+          state: chorus
+      overlays:
+        - file: chorus-plate.png
+          alt: ""
+        - file: chorus-singer-1-1.png
+          alt: ""
+        - file: chorus-singer-1-2.png
+          alt: ""
+        - file: chorus-singer-1-3.png
+          alt: ""
+        - file: chorus-singer-1-4.png
+          alt: ""
+        - file: chorus-singer-2-1.png
+          alt: ""
+        - file: chorus-singer-2-2.png
+          alt: ""
+        - file: chorus-singer-2-3.png
+          alt: ""
+        - file: chorus-singer-2-4.png
+          alt: ""
+        - file: chorus-singer-3-1.png
+          alt: ""
+        - file: chorus-singer-3-2.png
+          alt: ""
+        - file: chorus-singer-3-3.png
+          alt: ""
+        - file: chorus-singer-3-4.png
+          alt: ""
+        - file: chorus-tamada.png
+          alt: ""
+        - file: chorus-bowl.png
+          alt: ""
+        - file: chorus-table-mask.png
+          alt: ""
+        - file: chorus-drum.png
+          alt: ""
+        - file: chorus-accordion.png
+          alt: ""
+        - file: chorus-glare.png
+          alt: ""
+      aspect: 3 / 2
+  - id: versions
+    kind: versions
+    name:
+      en: Versions
+      ru: Версии (экспедиция по линзам)
+    pictures:
+      - versions
+    blocks:
+      - id: title
+        role: title
+        draft: false
+        en: Versions
+        ru: Версии (экспедиция по линзам)
+      - id: text-0
+        role: text
+        draft: false
+        en: "The ethnographer asked “where from” in earnest, and many answers accumulated. Here they are on the map.
+          Watch the labels: every answer has a status."
+        ru: "Вопрос «откуда» этнограф задал всерьёз, и на него накопилось много ответов. Вот они — на карте. Смотреть
+          надо на ярлыки: у каждого ответа есть свой статус."
+      - id: text-1
+        role: text
+        draft: false
+        en: "The Ottoman slave trade, purchase by local princes, is the explanation researchers regard as the
+          principal one: Markov (1913), Lily Golden-Hanga (1966), Pachulia (1964), Maan (2006), Bogdanov
+          (2009) and Blakely (1986) supported it; the Abash family's accounts name Abashidze. Two independent
+          accounts agree on the central point: both Markov's 1913 letter and Nutsa's 2003 account describe
+          captivity through Turkey. Exact dates and numbers of people brought here are unknown; no purchase
+          records have been found."
+        ru: "Османская работорговля, покупка у местных князей — версия, которую исследователи считают главным
+          объяснением: её придерживались Марков (1913) и Лили Голден-Ханга (1966), Пачулия (1964), Маан
+          (2006), Богданов (2009), Блейкли (1986); семья Абаш в рассказах называет Абашидзе. Два независимых
+          свидетельства сходятся здесь в главном: и письмо Маркова 1913 года, и рассказ Нуцы 2003-го описывают
+          неволю через Турцию. Точные даты и число привезённых людей неизвестны; счета о покупке не найдены."
+      - id: text-2
+        role: text
+        draft: false
+        en: "A ship wrecked off the coast is a legend, recorded by several writers, beginning with Isakov, then
+          Halliburton, then Nutsa herself. The vessel, date and passenger list are unknown. Herodotus's
+          dark-skinned Colchians are a hypothesis as old as Herodotus's text (II.104), and as new as Patrick
+          English's 1959 article, which explicitly connected ancient Colchians with modern villages. No one
+          has demonstrated a bridge from antiquity to the families of the Kodor. A tsar's gift, later a
+          version involving Peter and [[gannibal|Gannibal]]: in 1958 Shirin told a family story about people
+          given away “like kittens”, without naming a monarch; the later association with Peter has no
+          documentary support. Narts returning from Africa belong to epic legend. The account of Sudanese
+          mercenaries in the Ottoman Empire remains unconfirmed."
+        ru: "Корабль, разбившийся у берега, — легенда: её записывали несколько писателей, начиная с Исакова, потом
+          Галлибёртон, потом сама Нуца. Судно, дата крушения и список пассажиров неизвестны. Темнокожие колхи
+          у Геродота — гипотеза, старая, как сам текст Геродота (II.104), и новая, как статья Патрика Инглиша
+          (1959): он прямо связал древних колхов с современными сёлами. Мост от античности к семьям Кодора не
+          показан никем. Дар царя, позже — вариант с Петром и [[gannibal|Ганнибалом]]: Ширин в 1958 году
+          рассказал семейную историю «как дарят котят», не называя никакого монарха; поздняя привязка к Петру
+          документов не имеет. Нарты, вернувшиеся из Африки, — легенда эпоса. Рассказ о суданских наёмниках
+          Османской империи пока не подтверждён."
+      - id: text-3
+        role: text
+        draft: false
+        en: The routes on the map do not meet at one point.
+        ru: Маршруты на карте не встречаются в одной точке.
+    art:
+      generated: true
+      layers:
+        - file: versions-ground.png
+          alt: ""
+          state: versions
+        - file: versions-fills.png
+          alt: ""
+          state: versions
+        - file: versions-contour.png
+          alt: ""
+          state: versions
+        - file: versions-full.png
+          alt:
+            en: Versions — reverse-glass illustration
+            ru: Версии (экспедиция по линзам) — иллюстрация под стеклом
+          state: versions
+      overlays:
+        - file: versions-plate.png
+          alt: ""
+        - file: versions-route-1.png
+          alt: ""
+        - file: versions-lens-1.png
+          alt: ""
+        - file: versions-route-2.png
+          alt: ""
+        - file: versions-lens-2.png
+          alt: ""
+        - file: versions-frame-mask.png
+          alt: ""
+        - file: versions-glare.png
+          alt: ""
+      aspect: 3 / 2
+  - id: family
+    kind: family
+    name:
+      en: Family
+      ru: Семья (род сквозь время)
+    pictures:
+      - family
+    blocks:
+      - id: title
+        role: title
+        draft: false
+        en: Family
+        ru: Семья (род сквозь время)
+      - id: text-0
+        role: text
+        draft: false
+        en: The Abash family remembers its earliest ancestor, Amber. The family account says he was brought here as a
+          child, bought by Prince Abashidze, married Sofia and had twelve children. That is how Amber's story
+          was passed down; documents of his arrival have not been found. The family remembered Sofia as
+          exceptionally long-lived; records of those memories give different ages, 115 and 112.
+        ru: "Род Абаш помнит своего первого предка — Амбера. Рассказ семьи говорит: привезён ребёнком, куплен князем
+          Абашидзе, женился на Софии, детей было двенадцать. Так историю Амбера передавали в семье; документы
+          о его приезде не найдены. Софию семья помнила как очень долгоживущую; в записях этих воспоминаний
+          названы разные возрасты — 115 и 112 лет."
+      - id: text-1
+        role: text
+        draft: false
+        en: Their son Shaaban served in the cavalry in the First World War, according to an archival roster and a
+          family account; later he belonged to Abkhazia's central executive body. The identity of the person
+          in the photograph circulated online under his name has not yet been established. Son Shirin was a
+          tobacco grower and collective-farm organiser. Shirin's daughter Nutsa was a doctor in Sukhum. Her
+          husband Semyon saw her photograph in a newspaper and wrote a letter; correspondence began, followed
+          by marriage. She told the story herself to MK, and separately to Tynes in 1973. The letter's first
+          words, as retold by Vitaly Sharia (Ekho Kavkaza, 2020), were “Hello, unfamiliar Nutsa!” Shamil
+          Chanba was a bus driver from Adzyubzha. Diana Bobyleva is Nutsa's granddaughter; in her Sputnik
+          interview (2017), she said, “now I am the one telling it.” On the family tree, solid lines join
+          confirmed relationships and dotted lines mark connections from family tradition.
+        ru: "Их сын Шаабан воевал в Первую мировую в коннице — об этом говорят архивный список и семейный рассказ;
+          позже он входил в центральный исполнительный орган Абхазии. Кто изображён на снимке, который в сети
+          подписывают его именем, пока не установлено. Сын Ширин — табаковод и организатор колхоза. Дочь
+          Ширина Нуца — врач из Сухума; её муж Семён увидел её фотографию в газете и написал письмо — началась
+          переписка, потом свадьба: она рассказывала об этом сама, в «МК», и отдельно — Тайнс в 1973-м. Первые
+          слова письма в пересказе Виталия Шариа («Эхо Кавказа», 2020): «Здравствуйте, незнакомая Нуца!»
+          Шамиль Чанба — водитель автобуса из Адзюбжи. Диана Бобылева — внучка Нуцы; в интервью «Спутнику»
+          (2017) она сказала: «теперь её рассказываю я». На семейном дереве сплошные линии соединяют
+          подтверждённые родственные связи, пунктирные — связи из семейных преданий."
+    art:
+      generated: true
+      layers:
+        - file: family-ground.png
+          alt: ""
+          state: family
+        - file: family-fills.png
+          alt: ""
+          state: family
+        - file: family-contour.png
+          alt: ""
+          state: family
+        - file: family-full.png
+          alt:
+            en: Family — reverse-glass illustration
+            ru: Семья (род сквозь время) — иллюстрация под стеклом
+          state: family
+      overlays: []
+      aspect: 2 / 3
+  - id: words
+    kind: words
+    name:
+      en: Words
+      ru: Слова (переворот стекла)
+    pictures:
+      - words-before
+      - words-after
+    blocks:
+      - id: title
+        role: title
+        draft: false
+        en: Words
+        ru: Слова (переворот стекла)
+      - id: text-0
+        role: text
+        draft: false
+        en: Now let us turn the glass over. The one who measured is now being measured; the one who asked must answer.
+          Now Shirin, Nutsa, Shamil and Diana speak.
+        ru: А теперь — стекло перевернём. Кто мерил, тот теперь измеряем; кто спрашивал — отвечает. Теперь говорят
+          Ширин, Нуца, Шамиль и Диана.
+      - id: text-1
+        role: text
+        draft: false
+        en: "Shirin Abash, interviewed by A. Kiknadze, Zarya Vostoka, 17 August 1958: “And all these years I have
+          lived on Abkhaz soil.” And from the same answer: “The officials did not even regard us as people.”"
+        ru: "Ширин Абаш, интервью А. Кикнадзе, «Заря Востока», 17 августа 1958 года: «И все эти годы живу я на
+          абхазской земле». И ещё из того же ответа: «А нас чиновники и за людей не считали»."
+      - id: text-2
+        role: text
+        draft: false
+        en: "Nutsa Abash, interviewed by MK, 2003, asked about her ancestors: “To be honest, I don't know.” About
+          Semyon: “At first we simply wrote to each other.” And you have already heard her answer to whether
+          she was Abkhaz: it stands at the beginning of this feature and will remain at the end."
+        ru: "Нуца Абаш, интервью «МК», 2003 год — на вопрос о предках: «Честно скажу — не знаю». О Семёне: «Мы с ним
+          сначала просто переписывались». И на вопрос, абхазка ли она, вы уже слышали ответ — он стоит в
+          начале выпуска и останется в конце."
+      - id: text-3
+        role: text
+        draft: false
+        en: "Nutsa Abash, speaking with Allison Tynes, Afro-American, 17 February 1973: “I have never encountered
+          anything but respect.”"
+        ru: "Нуца Абаш, беседа с Эллисон Тайнс, Afro-American, 17 февраля 1973 года (перевод с английского): «Я
+          никогда не встречала ничего, кроме уважения»."
+      - id: text-4
+        role: text
+        draft: false
+        en: "Shamil Chanba, a conversation around 1995 recalled by Yuri Zotov (AiF, 2020): “I was born in the
+          Caucasus!” And: “I am a Caucasian person.”"
+        ru: "Шамиль Чанба, разговор около 1995 года в воспоминании Юрия Зотова («АиФ», 2020): «Я родился на Кавказе!»
+          И ещё: «Я кавказский человек»."
+      - id: text-5
+        role: text
+        draft: false
+        en: "Diana Bobyleva, Sputnik, 2017, about her grandmother Nutsa: “now I am the one telling it.” About her
+          great-grandfather Shirin, recalling family memory: “My great-grandfather was deeply respected by his
+          neighbours.”"
+        ru: "Диана Бобылева, «Спутник», 2017 год, о бабушке Нуце: «теперь её рассказываю я». О прадеде Ширине, по
+          памяти семьи: «Моего прадеда глубоко уважали соседи»."
+      - id: text-6
+        role: text
+        draft: false
+        en: "In Fazil Iskander's novel Sandro of Chegem (1989 edition), the tamada says: “we are Abkhazians.” This is
+          the voice of a fictional character."
+        ru: "В романе Фазиля Искандера «Сандро из Чегема» (издание 1989 года) тамада говорит: «мы — абхазцы». Это
+          голос литературного героя."
+    art:
+      generated: true
+      layers:
+        - file: words-before-ground.png
+          alt: ""
+          state: words-before
+        - file: words-before-fills.png
+          alt: ""
+          state: words-before
+        - file: words-before-contour.png
+          alt: ""
+          state: words-before
+        - file: words-before-full.png
+          alt:
+            en: Words — reverse-glass illustration
+            ru: Слова (переворот стекла) — иллюстрация под стеклом
+          state: words-before
+        - file: words-after-ground.png
+          alt: ""
+          state: words-after
+        - file: words-after-fills.png
+          alt: ""
+          state: words-after
+        - file: words-after-contour.png
+          alt: ""
+          state: words-after
+        - file: words-after-full.png
+          alt:
+            en: Words — reverse-glass illustration
+            ru: Слова (переворот стекла) — иллюстрация под стеклом
+          state: words-after
+      overlays: []
+      aspect: 2 / 3
+  - id: war
+    kind: war
+    name:
+      en: War and after
+      ru: Война и после
+    pictures:
+      - war
+      - dispersal
+    blocks:
+      - id: title
+        role: title
+        draft: false
+        en: War and after
+        ru: Война и после
+      - id: text-0
+        role: text
+        draft: false
+        en: In 1992–1993 the region lived through war. In October 1992, according to an ITAR-TASS dispatch of 14
+          October quoted by Human Rights Watch in its 1995 report, Adzyubzha, Kyndyg, Tamysh and Tkvarcheli
+          were shelled. John Colarusso writes of the destruction of three villages and leaves the residents'
+          fate unresolved. These sources do not establish what happened to Afro-Abkhaz homes.
+        ru: В 1992–1993 годах край прожил войну. В октябре 1992-го, по сводке ИТАР-ТАСС от 14 октября, которую Human
+          Rights Watch приводит в докладе 1995 года, обстреливали Адзюбжу, Кындыг, Тамыш и Ткварчели; Джон
+          Коларуссо пишет об уничтожении трёх сёл — и оставляет судьбу жителей открытой. Судьба домов
+          афроабхазов в этих материалах не установлена.
+      - id: text-1
+        role: text
+        draft: false
+        en: Then came dispersal. There are documented stories of intermarriage and moves to Sukhum. The total number
+          who left is unknown. Accounts of relocation to Ethiopia and America have not yet been independently
+          confirmed. Publications sometimes use the word “last”, but the family's descendants are still
+          living.
+        ru: Дальше — рассеяние. Известны истории смешанных браков и переезда в Сухум. Сколько всего людей уехало,
+          неизвестно. Рассказы о переселении в Эфиопию и Америку пока не подтверждены независимо. В
+          публикациях встречается слово «последний», но потомки семьи продолжают жить.
+      - id: text-2
+        role: text
+        draft: false
+        en: The family story continued. Nutsa lived in Sukhum and gave an interview in 2003; her granddaughter Diana
+          spoke to Sputnik in 2017; independent accounts of descendants also appeared in 2020. Shirin has a
+          great-granddaughter, Diana. “Where did they go?” is a question outsiders ask. Their own people do
+          not ask it.
+        ru: Семейная история продолжилась. Нуца жила в Сухуме и дала интервью в 2003-м; её внучка Диана говорила с
+          «Спутником» в 2017-м; независимо друг от друга о потомках писали и в 2020-м. У Ширина есть правнучка
+          Диана. Вопрос «куда они делись» задают чужие. Свои его не задают.
+    art:
+      generated: true
+      layers:
+        - file: war-ground.png
+          alt: ""
+          state: war
+        - file: war-fills.png
+          alt: ""
+          state: war
+        - file: war-contour.png
+          alt: ""
+          state: war
+        - file: war-full.png
+          alt:
+            en: War and after — reverse-glass illustration
+            ru: Война и после — иллюстрация под стеклом
+          state: war
+        - file: dispersal-ground.png
+          alt: ""
+          state: dispersal
+        - file: dispersal-fills.png
+          alt: ""
+          state: dispersal
+        - file: dispersal-contour.png
+          alt: ""
+          state: dispersal
+        - file: dispersal-full.png
+          alt:
+            en: War and after — reverse-glass illustration
+            ru: Война и после — иллюстрация под стеклом
+          state: dispersal
+      overlays: []
+      aspect: 3 / 2
+  - id: reverse-camera
+    kind: reverse-camera
+    name:
+      en: Turning the camera
+      ru: Разворот камеры
+    pictures:
+      - reverse-camera
+    blocks:
+      - id: title
+        role: title
+        draft: false
+        en: Turning the camera
+        ru: Разворот камеры
+      - id: text-0
+        role: text
+        draft: false
+        en: Look at who is in the frame. People who have been asked “where from” for two centuries look straight
+          ahead. The camera is behind them, and through its lens — through the glass, in the glint — you are
+          visible.
+        ru: Посмотрите, кто в кадре. Люди, которых два века спрашивали «откуда», смотрят прямо. Камера стоит у них за
+          спиной, и в объектив — сквозь стекло, в блике — видно вас.
+      - id: text-1
+        role: text
+        draft: false
+        en: "An older resident of the region refused to speak to a reporter and explained why: “I feel like an animal
+          in a zoo” (Yuri Zotov's unnamed interviewee, AiF, 2020). But the question that broke the instruments
+          is no longer addressed to him."
+        ru: "Пожилой житель края отказался говорить с репортёром и объяснил почему: «я себя чувствую вроде зверя в
+          зоопарке» (безымянный собеседник Юрия Зотова, «АиФ», 2020). Но вопрос, от которого ломались
+          инструменты, сегодня адресован уже не ему."
+      - id: text-2
+        role: text
+        draft: false
+        en: It is not the people in the photograph who must explain themselves. Serzhputovsky placed himself in the
+          picture to show a contrast in skin colour — that is what he wrote in the inventory. There he is, in
+          the frame. Now he is the one to be explained.
+        ru: Объяснять придётся не тем, кто на снимке. Сержпутовский встал в кадр сам, чтобы показать контраст цвета
+          кожи, — так он записал в инвентаре. Вот он, в кадре. Теперь это его объяснять.
+    art:
+      generated: true
+      layers:
+        - file: reverse-camera-ground.png
+          alt: ""
+          state: reverse-camera
+        - file: reverse-camera-fills.png
+          alt: ""
+          state: reverse-camera
+        - file: reverse-camera-contour.png
+          alt: ""
+          state: reverse-camera
+        - file: reverse-camera-full.png
+          alt:
+            en: Turning the camera — reverse-glass illustration
+            ru: Разворот камеры — иллюстрация под стеклом
+          state: reverse-camera
+      overlays: []
+      aspect: 3 / 2
+  - id: door
+    kind: door
+    name:
+      en: Doors
+      ru: Двери
+    pictures:
+      - door
+    blocks:
+      - id: title
+        role: title
+        draft: false
+        en: Doors
+        ru: Двери
+      - id: text-0
+        role: text
+        draft: false
+        en: Many families have a photograph that begins a question too large for a box on a form. If yours does, leave
+          a note. It will be read before publication; no name is needed. Your words will become part of this
+          page.
+        ru: У многих семей есть снимок, с которого начинается вопрос, на который не хватило графы. Если у вас такой
+          есть — оставьте заметку. Её прочтут до публикации, имя не потребуется. Слова станут частью этой
+          страницы.
+    art:
+      generated: true
+      layers:
+        - file: door-ground.png
+          alt: ""
+          state: door
+        - file: door-fills.png
+          alt: ""
+          state: door
+        - file: door-contour.png
+          alt: ""
+          state: door
+        - file: door-full.png
+          alt:
+            en: Doors — reverse-glass illustration
+            ru: Двери — иллюстрация под стеклом
+          state: door
+      overlays: []
+      aspect: 2 / 3
+    notes:
+      enabled: false
+  - id: final
+    kind: final
+    name:
+      en: Finale
+      ru: Финал
+    pictures:
+      - final
+    blocks:
+      - id: title
+        role: title
+        draft: false
+        en: Finale
+        ru: Финал
+      - id: text-0
+        role: text
+        draft: false
+        en: “And all these years I have lived on Abkhaz soil.”
+        ru: «И все эти годы живу я на абхазской земле».
+      - id: text-1
+        role: text
+        draft: false
+        en: Shirin Abash. Interview with A. Kiknadze, Zarya Vostoka, 17 August 1958.
+        ru: Ширин Абаш. Интервью А. Кикнадзе, «Заря Востока», 17 августа 1958 года.
+    art:
+      generated: true
+      layers:
+        - file: final-ground.png
+          alt: ""
+          state: final
+        - file: final-fills.png
+          alt: ""
+          state: final
+        - file: final-contour.png
+          alt: ""
+          state: final
+        - file: final-full.png
+          alt:
+            en: Finale — reverse-glass illustration
+            ru: Финал — иллюстрация под стеклом
+          state: final
+      overlays: []
+      aspect: 3 / 2
+art:
+  - id: adzyubzha
+    kind: photo
+    file: features/negative/negative-adzyubzha.jpg
+    rights: features/negative/negative-adzyubzha.jpg
+    alt:
+      en: Family group, Adzyubzha.
+      ru: Семейная группа, Адзюбжа.
+    caption:
+      en: Family group, Adzyubzha.
+      ru: Семейная группа, Адзюбжа.
+    credit:
+      en: REM 3338-7 · Wikimedia Commons · Public domain
+      ru: РЭМ 3338-7 · Wikimedia Commons · Общественное достояние
+    source: https://commons.wikimedia.org/wiki/File:Afro-Abkhazians.jpg
+  - id: sukhum
+    kind: photo
+    file: features/negative/negative-sukhum.jpg
+    rights: features/negative/negative-sukhum.jpg
+    alt:
+      en: Sukhum. Photograph by Sergei Prokudin-Gorsky.
+      ru: Сухум. Фотография Сергея Прокудина-Горского.
+    caption:
+      en: Sukhum. Photograph by Sergei Prokudin-Gorsky.
+      ru: Сухум. Фотография Сергея Прокудина-Горского.
+    credit:
+      en: Library of Congress · LCCN 2018679763 · Public domain. Regional context.
+      ru: Библиотека Конгресса · LCCN 2018679763 · Общественное достояние. Контекст региона.
+    source: https://www.loc.gov/item/2018679763/

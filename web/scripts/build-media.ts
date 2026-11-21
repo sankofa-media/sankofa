@@ -188,15 +188,19 @@ if (tool && webp && existsSync(featuresDir)) {
     const fdir = join(featuresDir, id);
     if (!statSync(fdir).isDirectory()) continue;
     for (const f of readdirSync(fdir)) {
-      if (!f.endsWith('.webp')) continue;
+      if (!/\.(webp|png|jpe?g)$/i.test(f)) continue;
       const key = `features/${id}/${f}`;
       const src = join(dir, key);
       const w0 = width(src);
       if (!w0) continue;
       sizes[key] = w0;
+      const encoded = f.endsWith('.webp') ? src : toWebp(src);
+      if (!encoded) continue;
+      if (!f.endsWith('.webp')) webps.push(key);
+      const servedKey = key.replace(/\.(png|jpe?g)$/i, '.webp');
       for (const w of WIDTHS) {
         if (w >= w0 * 0.9) break;
-        const dst = join(dir, `w${w}`, key);
+        const dst = join(dir, `w${w}`, servedKey);
         mkdirSync(dirname(dst), { recursive: true });
         try {
           if (!existsSync(dst) || statSync(dst).mtimeMs < statSync(src).mtimeMs) resizeWebp(src, dst, w);

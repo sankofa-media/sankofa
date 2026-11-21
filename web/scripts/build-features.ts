@@ -37,9 +37,14 @@ const mediaLedger = join(src, 'ledger', 'media.yaml');
 const sha = (f: string) => createHash('sha256').update(readFileSync(f)).digest('hex');
 const ledgerEntries = existsSync(mediaLedger) ? (yaml<{ file: string; url?: string; license?: string; license_wording?: string; sha256?: string }[]>(mediaLedger) ?? []) : [];
 const ledger = new Set(ledgerEntries.map((e) => e.file));
+// Feature-local photographs share the rights ledger without duplicate originals.
+const photoSource = (file: string) => {
+  const scoped = /^features\/([a-z0-9-]+)\/([a-z0-9-]+\.(?:jpg|png|webp))$/.exec(file);
+  return scoped ? join(dir, scoped[1], 'media', scoped[2]) : join(src, 'media', file);
+};
 const rights = new Set(
   ledgerEntries
-    .filter((e) => e.url && e.license && e.license_wording && existsSync(join(src, 'media', e.file)) && e.sha256 === sha(join(src, 'media', e.file)))
+    .filter((e) => e.url && e.license && e.license_wording && existsSync(photoSource(e.file)) && e.sha256 === sha(photoSource(e.file)))
     .map((e) => e.file),
 );
 const cardsDir = join(src, 'cards');
@@ -90,6 +95,11 @@ for (const id of index.order ?? []) {
     // Keep the source's time: build-media.ts remakes a smaller copy only when the layer changed.
     const st = statSync(join(artDir, file));
     utimesSync(join(artOut, id, file), st.atime, st.mtime);
+  }
+  for (const photo of f.art ?? []) {
+    if (photo.kind !== 'photo' || !photo.file.startsWith(`features/${id}/`)) continue;
+    mkdirSync(join(artOut, id), { recursive: true });
+    copyFileSync(photoSource(photo.file), join(media, photo.file));
   }
   art += used.length;
   const cover = featureCover(f);
