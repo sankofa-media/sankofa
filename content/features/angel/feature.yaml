@@ -148,29 +148,21 @@ ui:
   progress: { en: "How far you are", ru: "Сколько прочитано" }
   # The warm last screen and the pulse page. The pulse belongs to no one:
   # never say whose it is.
-  invite-lead:
-    en: "For almost thirty years this song has been played at concerts, put into films and heard in headphones, and many people hear their own story in it. Below you can leave yours here too: feel someone else's pulse and write the words you never said; on a phone, you can also record your pulse."
-    ru: "Почти тридцать лет эту песню играют на концертах, ставят в фильмы и слушают в наушниках, и многие слышат в ней свою историю. Ниже можно оставить здесь и свою: почувствуй чужой пульс и напиши слова, которые ты так и не сказал; на телефоне можно ещё записать свой пульс."
   ending: { en: "Pulse and words", ru: "Пульс и слова" }
   step-feel: { en: "Someone's pulse", ru: "Чужой пульс" }
-  step-own: { en: "Your pulse", ru: "Свой пульс" }
   step-say: { en: "Words", ru: "Слова" }
   pulse-touch: { en: "Put your finger on the screen and keep it there. Under it beats the pulse of someone who was here before you.", ru: "Положи палец на экран и не убирай. Под ним забьётся пульс человека, который был здесь до тебя." }
-  pulse-touch-mouse: { en: "Press on the screen and hold. Under the pointer beats the pulse of someone who was here before you.", ru: "Нажми на экран и не отпускай. Под курсором забьётся пульс человека, который был здесь до тебя." }
+  pulse-phone:
+    en: "This pulse can only be felt, under a finger, on a phone. Point your phone's camera at the code, put your finger on the screen and keep it there: the pulse will beat under it."
+    ru: "Этот пульс можно только почувствовать — пальцем, на телефоне. Наведи камеру телефона на код, положи палец на экран и не убирай: под ним забьётся пульс."
   pulse-felt: { en: "Beats to go: {n}", ru: "Ещё ударов: {n}" }
-  own-pulse: { en: "Now you can record yours. The phone's camera takes it: under the flash, a fingertip darkens a little with every beat.", ru: "Теперь можно записать свой. Его снимет камера телефона: со вспышкой палец чуть темнеет на каждом ударе." }
-  pulse-listen: { en: "Listen to the pulse", ru: "Слушать пульс" }
-  pulse-listen-stop: { en: "Turn off the sound", ru: "Выключить звук" }
-  feel-phone: { en: "On a phone, feel the pulse vibrate under your finger.", ru: "На телефоне пульс бьётся под пальцем — вибрацией." }
-  own-pulse-phone: { en: "To add your pulse, open this ending on your phone with the code: its camera reads your fingertip under the flash.", ru: "Если хочешь добавить свой пульс, открой этот финал на телефоне по коду: камера считает пульс с пальца при свете вспышки." }
-  own-pulse-skip: { en: "Go on without it", ru: "Дальше без пульса" }
   words-cloud: { en: "Words left here before", ru: "Слова, которые здесь уже оставили" }
   words-invite:
     en: "These are the words of those who were here before. Write yours: what you never said to someone. Without your name, it stays here, beside theirs."
     ru: "Это слова тех, кто был здесь раньше. Напиши своё: то, что ты так и не сказал кому-то. Без имени, оно останется здесь, рядом с ними."
   words-send: { en: "Send", ru: "Отправить" }
   words-skip: { en: "Not now", ru: "Не сейчас" }
-  end-count: { en: "Pulses here: {p}. Unsaid words: {w}.", ru: "Пульсов здесь: {p}. Несказанных слов: {w}." }
+  end-count: { en: "Unsaid words: {w}.", ru: "Несказанных слов: {w}." }
   invite-qr: { en: "Point your phone's camera at the code to open the page", ru: "Наведи камеру телефона на код, чтобы открыть страницу" }
   pulse-others: { en: "{n} more here now", ru: "Сейчас здесь ещё {n}" }
   pulse-further: { en: "Further", ru: "Дальше" }
@@ -181,32 +173,6 @@ ui:
   words-sent: { en: "Your words are here.", ru: "Твои слова здесь." }
   words-delete: { en: "To remove them later, keep this code: {code}", ru: "Чтобы потом их убрать, сохрани этот код: {code}" }
   words-report: { en: "Remove", ru: "Убрать" }
-  own-pulse-step-1: { en: "Press “Begin” and let the page use the camera.", ru: "Нажми «Начать» и разреши странице включить камеру." }
-  own-pulse-step-2:
-    en: "Cover the back camera, the one next to the flash, with your fingertip. The flash turns on by itself, and your finger glows red."
-    ru: "Закрой подушечкой пальца заднюю камеру, ту, что рядом со вспышкой. Вспышка загорится сама, и палец засветится красным."
-  own-pulse-step-3:
-    en: "Do not press hard, and keep your finger still for forty seconds. Your pulse will appear on the screen."
-    ru: "Не дави и не двигай палец сорок секунд. Пульс появится на экране."
-  own-pulse-cover: { en: "Cover the camera completely with your finger.", ru: "Закрой камеру пальцем целиком." }
-  own-pulse-hold: { en: "Keep your finger there. Seconds left: {n}", ru: "Держи палец. Осталось секунд: {n}" }
-  own-pulse-moved: { en: "Your finger moved, so the count starts again.", ru: "Палец сдвинулся, поэтому отсчёт начался заново." }
-  own-pulse-start: { en: "Begin", ru: "Начать" }
-  own-pulse-light:
-    en: "This browser cannot turn on the flash. Hold your finger over the camera with a bright lamp or a window behind it."
-    ru: "Этот браузер не умеет включать вспышку. Закрой пальцем камеру, а за пальцем пусть будет яркая лампа или окно."
-  own-pulse-beats: { en: "{n} beats", ru: "Ударов: {n}" }
-  own-pulse-feel: { en: "Feel it", ru: "Почувствовать" }
-  own-pulse-again: { en: "Again", ru: "Заново" }
-  own-pulse-consent:
-    en: "My rhythm will become one of the pulses on this page, anonymously. Only the gaps between beats: no name, no video."
-    ru: "Мой ритм анонимно станет одним из пульсов этой страницы. Только промежутки между ударами: без имени и без видео."
-  own-pulse-send: { en: "Leave it", ru: "Оставить" }
-  own-pulse-failed:
-    en: "The pulse would not come through on this phone. Try with more light, or press a little more gently."
-    ru: "На этом телефоне пульс не поймался. Попробуй при более ярком свете или прижми палец чуть мягче."
-  own-pulse-sent: { en: "Your pulse is here.", ru: "Твой пульс здесь." }
-  own-pulse-delete: { en: "To remove it later, keep this code: {code}", ru: "Чтобы потом его убрать, сохрани этот код: {code}" }
   last: { en: "You are not alone.", ru: "Ты не один." }
 
 scenes:

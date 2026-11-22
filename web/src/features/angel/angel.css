@@ -527,17 +527,6 @@
 .an-warm-words .ft-line {
   margin: 0;
 }
-.an-warm-words.has-invite .an-last {
-  display: none;
-}
-.an-invite {
-  display: grid;
-  gap: 16px;
-  justify-items: start;
-}
-.an-invite[hidden] {
-  display: none;
-}
 .an .an-feel.btn.primary {
   background: #f1c58d;
   border-color: #f1c58d;
@@ -703,8 +692,7 @@
   font-family: var(--font-display);
 }
 /* One step after another: what comes later stays closed until the step before it is done. */
-.an-pulse[data-step='feel'] :is(.ap-own, .ap-say, .ap-end),
-.an-pulse[data-step='own'] :is(.ap-say, .ap-end),
+.an-pulse[data-step='feel'] :is(.ap-say, .ap-end),
 .an-pulse[data-step='say'] .ap-end {
   display: none;
 }
@@ -750,44 +738,14 @@
   font: 15px/1.45 var(--font-sans);
   color: rgba(246, 232, 214, 0.8);
 }
-/* On a computer the first step also offers the phone, where the pulse is under a finger. */
+/* On a computer the feel step is a calm centred block: the words, the code, and on to the words. */
 .ap-feel-qr {
-  position: absolute;
-  bottom: 18px;
-  right: 20px;
-  margin: 0;
-  justify-items: end;
-  z-index: 2;
+  margin: 0 auto;
+  justify-items: center;
 }
 .ap-feel-qr svg {
-  width: 120px;
-  height: 120px;
-}
-.ap-feel-qr figcaption {
-  max-width: 15rem;
-  text-align: right;
-  font-size: 13px;
-}
-/* An optional phone recording beside the words, outside the step sequence. */
-.ap-phone-aside {
-  margin-top: 16px;
-  border-top: 1px solid rgba(246, 232, 214, 0.15);
-  padding-top: 16px;
-}
-.ap-phone-aside .ap-qr {
-  max-width: none;
-  grid-template-columns: 100px minmax(0, 1fr);
-  align-items: center;
-  gap: 16px;
-  margin: 0;
-}
-.ap-phone-aside .ap-qr svg {
-  box-sizing: border-box;
-  width: 100px;
-  height: 100px;
-}
-.ap-phone-aside figcaption {
-  font-size: 14px;
+  width: 220px;
+  height: 220px;
 }
 /* The words others left, as a crowd above the field. */
 .ap-cloud {
@@ -889,7 +847,8 @@
   width: 100%;
   height: 100%;
 }
-.ap-touch-intro {
+/* The phone field only: the intro stands over it; a computer gets the calm block below. */
+.ap-touch:not(.ap-desk) .ap-touch-intro {
   position: absolute;
   top: 96px;
   left: 20px;
@@ -903,18 +862,31 @@
   pointer-events: none;
   transition: opacity 1.2s;
 }
-.ap-sound-row {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 16px;
+/* A computer: the feel step cannot be touched, so it is a centred block around the code. */
+.ap-touch.ap-desk {
+  height: auto;
+  min-height: 100svh;
+  padding: 72px 20px 48px;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  gap: 22px;
+  touch-action: auto;
+  user-select: auto;
+  -webkit-user-select: auto;
+  -webkit-touch-callout: default;
+  overflow: visible;
+  cursor: default;
 }
-.ap-sound {
-  flex-shrink: 0;
+.ap-touch.ap-desk .ap-touch-step {
+  position: static;
 }
-.ap-sound[aria-pressed="true"] {
-  border-color: #e3c9a8;
+.ap-touch.ap-desk .ap-touch-line {
+  max-width: 30rem;
+  font-size: clamp(20px, 2.6vw, 27px);
+  line-height: 1.5;
+  color: #f6e8d6;
+  text-align: center;
 }
 .ap-touch[data-touching] .ap-touch-line {
   opacity: 0.35;
@@ -940,13 +912,11 @@
 }
 .ap-further {
   pointer-events: auto;
-  width: 44px;
-  height: 44px;
-  border: 1px solid rgba(246, 232, 214, 0.35);
-  border-radius: 50%;
-  background: transparent;
-  color: #f6e8d6;
-  font-size: 20px;
+  margin-top: 4px;
+}
+/* The foot never takes touches (the field captures them), but the way on is a real button. */
+.ap-touch-foot .ap-further {
+  pointer-events: auto;
 }
 .ap-float {
   position: absolute;
@@ -958,14 +928,14 @@
   translate: -50% -50%;
   display: grid;
   justify-items: center;
-  max-width: 60vw;
+  max-width: min(46vw, 320px);
   font-style: italic;
   font-size: 19px;
   line-height: 1.3;
   text-align: center;
   color: #fff3e2;
   opacity: 0;
-  animation: ap-word 2.6s ease-in-out forwards;
+  animation: ap-word 5s ease-in-out forwards;
 }
 .ap-word small {
   font: 12px/1.3 var(--font-sans);
@@ -976,8 +946,8 @@
   0% {
     opacity: 0;
   }
-  35%,
-  60% {
+  14%,
+  62% {
     opacity: 0.95;
   }
   100% {
@@ -985,7 +955,7 @@
   }
 }
 .an-pulse:not([data-state='full']) .ap-touch,
-.an-pulse:is([data-state='offline'], [data-state='loading']) :is(.ap-say, .ap-own) {
+.an-pulse:is([data-state='offline'], [data-state='loading']) .ap-say {
   display: none;
 }
 .ap-lead {
@@ -1074,59 +1044,6 @@
   font-family: var(--font-mono, monospace);
   user-select: all;
 }
-.ap-own-wave {
-  width: 100%;
-  height: 90px;
-  border-radius: 6px;
-  background: rgba(10, 7, 5, 0.55);
-}
-.ap-own-wave.ap-flash {
-  animation: ap-flash 0.35s ease-out;
-}
-@keyframes ap-flash {
-  0% {
-    background: rgba(241, 197, 141, 0.45);
-  }
-}
-.ap-steps {
-  margin: 0;
-  padding-left: 1.4em;
-  display: grid;
-  gap: 8px;
-  font: 16px/1.5 var(--font-sans);
-  color: #f1e3cf;
-}
-.ap-status {
-  margin: 0;
-  font: 600 18px/1.4 var(--font-sans);
-  color: #f6e8d6;
-}
-.ap-progress {
-  height: 6px;
-  border-radius: 3px;
-  background: rgba(246, 232, 214, 0.18);
-  overflow: hidden;
-}
-.ap-progress span {
-  display: block;
-  height: 100%;
-  width: 0;
-  background: #e3a35f;
-  transition: width 0.3s linear;
-}
-.ap-status[hidden],
-.ap-progress[hidden] {
-  display: none;
-}
-.ap-beats {
-  margin: 0;
-  font: 16px/1.4 var(--font-sans);
-}
-.ap-own-result {
-  display: grid;
-  gap: 14px;
-}
-.ap-own-result[hidden],
 .an-pulse [hidden] {
   display: none !important;
 }
@@ -1149,7 +1066,7 @@
 }
 @media (prefers-reduced-motion: reduce) {
   .ap-word {
-    animation-duration: 3.4s;
+    animation-duration: 6s;
   }
   .ap-text {
     transition: none;
@@ -1269,15 +1186,6 @@
   margin: 0 auto;
   filter: none;
   image-rendering: auto;
-}
-
-.an .an-invite-lead {
-  margin: 0;
-  max-width: 30rem;
-  font-family: var(--font-serif);
-  font-size: 18px;
-  line-height: 1.55;
-  color: #f6e8d6;
 }
 
 /* The other versions: a row of official players to swipe through. */

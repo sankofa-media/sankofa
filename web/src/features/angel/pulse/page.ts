@@ -1,22 +1,21 @@
-// The end of Angel, in the page itself, one step after another: first a
-// finger or a palm on the screen feels a living pulse (the first one left in
-// the chorus; whose it is is never said) with the others beating around it
-// and a stranger's word on every beat; then the reader may leave a pulse of
-// their own through the phone's camera (desktop goes straight to words);
-// then, under the words others left, say what was never said; and the end shows every pulse beating together,
-// the reader's among them, with the words around. If the Angel service cannot
-// be reached, only the last line is shown.
+// The end of Angel, in the page itself, three steps: feel, say, end. On a
+// phone the first step is a field: a finger held on the screen feels the one
+// pulse left here (whose it is is never said) beating under it in vibration,
+// with a stranger's word surfacing on every beat, and the way on opens after
+// eight beats. On a computer the pulse cannot be felt or heard: the first
+// step is a calm block — a line of words and a code that opens this ending on
+// a phone — and the page goes on to the words at once. Then the reader may
+// leave the words that were never said; the end shows the one pulse beating
+// in the middle, the words drifting around it, the reader's own whole under
+// it. If the Angel service cannot be reached, only the last line is shown.
 import { h } from '../../../lib/dom';
 import { lang } from '../../../lib/i18n';
-import { audioContext, claim, release } from '../../../lib/sound';
 import * as api from '../api';
-import { closeCamera, FrameReader, openBackCamera, type Camera } from './camera';
-import { analyse, checkRR, covered, type Sample } from './ppg';
-import { beatsBetween, lubDub, vibrationPattern, waveAt } from './wave';
+import { beatsBetween, lubDub, waveAt } from './wave';
 
 export interface PulsePageOptions {
   host: HTMLElement;
-  /** A phone: the camera step is offered here; elsewhere a code opens it on a phone. */
+  /** A phone: the pulse is felt here; elsewhere a code opens this ending on a phone. */
   phone: boolean;
   /** The code to open this ending on a phone. */
   qr(): Node;
@@ -27,15 +26,17 @@ export interface PulsePageOptions {
   calm(): boolean;
 }
 
-/** How long the camera reads a pulse, seconds (the server takes 20 to 120 beats). */
-export const RECORD_SECONDS = 40;
 const WORDS_MAX = 280;
 const VOICE_MAX = 30;
 const PRINT_MS = 12_000;
 const PALM_PX = 38;
-/** Beats felt under the finger before the next step opens. */
-export const FEEL_BEATS = 8;
-const STEPS = ['feel', 'own', 'say', 'end'] as const;
+/** Beats felt under the finger before the way on opens. */
+const FEEL_BEATS = 8;
+/** At most this many surfaced words stay on screen at once. */
+const WORDS_ON_SCREEN = 2;
+/** Where the reader's own words are kept between visits, on this device only. */
+const MY_WORDS_KEY = 'sankofa.angel.mywords';
+const STEPS = ['feel', 'say', 'end'] as const;
 type Step = (typeof STEPS)[number];
 
 interface Point {
@@ -62,27 +63,21 @@ export class PulsePage {
   private floatBox: HTMLElement;
   private othersLine: HTMLElement;
   private sayEl: HTMLElement;
-  private ownEl: HTMLElement | null;
   private particles: HTMLCanvasElement;
   private endEl: HTMLElement;
   private endCanvas: HTMLCanvasElement;
   private endCount: HTMLElement;
   private cloud: HTMLElement;
   private feltLine: HTMLElement;
-  private soundButton: HTMLButtonElement;
-  private sound: AudioContext | null = null;
-  private soundSources = new Set<AudioBufferSourceNode>();
-  private soundId = `angel-pulse-${api.tabId()}`;
-  private onVisibility = () => { if (document.hidden) this.stopSound(); };
+  private further: HTMLButtonElement;
+  private mineCloud: HTMLElement | null = null;
   private felt = 0;
-  private mine: number[] = [];
   private myWords = '';
   private endRaf = 0;
   private raf = 0;
   private t0 = 0;
   private lastT = 0;
   private first: number[] = [];
-  private chorus: number[][] = [];
   private words: api.Word[] = [];
   private wordAt = 0;
   private pointers = new Map<number, { x: number; y: number; w: number; h: number }>();
@@ -95,30 +90,51 @@ export class PulsePage {
   private heartbeat = 0;
   private lastSent = 0;
   private haptic: HTMLLabelElement | null = null;
-  private timers: number[] = [];
-  private camera: Camera | null = null;
-  private reader: FrameReader | null = null;
 
   constructor(private readonly o: PulsePageOptions) {
     const say = o.say;
+    try {
+      this.myWords = localStorage.getItem(MY_WORDS_KEY) ?? '';
+    } catch {
+      /* storage is unavailable */
+    }
     this.canvas = h('canvas.ap-canvas', { 'aria-hidden': 'true' }) as HTMLCanvasElement;
     this.floatBox = h('div.ap-float', { 'aria-hidden': 'true' });
     this.othersLine = h('p.ap-others', { 'aria-live': 'polite' });
     this.feltLine = h('p.ap-felt', { 'aria-live': 'polite' });
-    this.soundButton = h('button.btn.ap-sound', { type: 'button', 'aria-pressed': 'false' }, say('pulse-listen')) as HTMLButtonElement;
-    this.soundButton.addEventListener('click', () => this.toggleSound());
-    document.addEventListener('visibilitychange', this.onVisibility);
-    this.touchSec = h('section.ap-sec.ap-touch', { 'aria-label': say(o.phone ? 'pulse-touch' : 'pulse-touch-mouse') }, this.canvas, h('p.ap-step.ap-touch-step', {}, say('step-feel')), h('div.ap-touch-intro', {}, h('p.ap-touch-line', {}, say(o.phone ? 'pulse-touch' : 'pulse-touch-mouse')), h('div.ap-sound-row', {}, this.soundButton)), this.floatBox, h('div.ap-touch-foot', {}, this.othersLine, this.feltLine), ...(o.phone ? [] : [h('figure.an-qr.ap-qr.ap-feel-qr', {}, o.qr(), h('figcaption', {}, say('feel-phone')))]));
+    this.further = h('button.btn.primary.ap-further', { type: 'button' }, say('pulse-further')) as HTMLButtonElement;
+    this.further.addEventListener('click', () => this.goWords());
+    if (o.phone) {
+      this.further.hidden = true;
+      this.touchSec = h(
+        'section.ap-sec.ap-touch',
+        { 'aria-label': say('pulse-touch') },
+        this.canvas,
+        h('p.ap-step.ap-touch-step', {}, say('step-feel')),
+        h('div.ap-touch-intro', {}, h('p.ap-touch-line', {}, say('pulse-touch'))),
+        this.floatBox,
+        h('div.ap-touch-foot', {}, this.othersLine, this.feltLine, this.further),
+      );
+      this.wireTouch();
+    } else {
+      // No field on a computer: the words, the code, and on to the words.
+      this.touchSec = h(
+        'section.ap-sec.ap-touch.ap-desk',
+        {},
+        h('p.ap-step.ap-touch-step', {}, say('step-feel')),
+        h('p.ap-touch-line', {}, say('pulse-phone')),
+        h('figure.ap-qr.ap-feel-qr', {}, o.qr()),
+        this.further,
+      );
+    }
     this.cloud = h('div.ap-cloud', { 'aria-label': say('words-cloud') });
     this.sayEl = this.buildWords();
-    this.ownEl = o.phone ? this.buildOwn() : null;
     this.endCanvas = h('canvas.ap-end-canvas', { 'aria-hidden': 'true' }) as HTMLCanvasElement;
     this.endCount = h('p.ap-end-count');
     this.endEl = h('section.ap-sec.ap-end', {}, this.endCanvas, h('div.ap-end-words', {}, this.endCount, h('p.ap-last-line', {}, say('last'))));
-    this.scroll = h('div.ap-scroll', {}, this.touchSec, this.ownEl, this.sayEl, this.endEl);
+    this.scroll = h('div.ap-scroll', {}, this.touchSec, this.sayEl, this.endEl);
     this.particles = h('canvas.ap-particles', { 'aria-hidden': 'true' }) as HTMLCanvasElement;
     this.el = h('section.an-pulse', { 'aria-label': say('ending'), 'data-state': 'loading', 'data-step': 'feel' }, this.scroll, this.particles);
-    this.wireTouch();
     o.host.append(this.el);
     // The iOS switch's tactile click, behind a flag until it is proven on a device.
     if (this.switchHaptic()) {
@@ -145,33 +161,35 @@ export class PulsePage {
     void this.load();
   }
 
-  /** The reader scrolled back up: stop the camera and the presence, keep the steps. */
+  /** The reader scrolled back up: stop the presence and the frame loops, keep the steps. */
   close(): void {
     if (!this.isOpen) return;
     this.isOpen = false;
-    this.stopSound();
     this.lift(true);
     this.stopPresence?.();
     this.stopPresence = null;
     cancelAnimationFrame(this.raf);
     cancelAnimationFrame(this.endRaf);
     this.raf = this.endRaf = 0;
-    this.stopCamera();
   }
 
   private stepAt(): number {
     return STEPS.indexOf(this.el.dataset.step as Step);
   }
 
-  /** Open the next step (never go back) and bring it into view. */
+  /** Open the next step (never go back) and, unless asked not to, bring it into view. */
   private reach(step: Step, scroll = true): void {
-    if (step === 'own' && !this.o.phone) return;
     if (STEPS.indexOf(step) <= this.stepAt()) return;
-    this.stopSound();
     this.el.dataset.step = step;
-    const target = { feel: this.touchSec, own: this.ownEl, say: this.sayEl, end: this.endEl }[step];
-    if (scroll) requestAnimationFrame(() => target?.scrollIntoView({ behavior: this.o.calm() ? 'auto' : 'smooth', block: 'start' }));
+    const target = { feel: this.touchSec, say: this.sayEl, end: this.endEl }[step];
+    if (scroll) requestAnimationFrame(() => target.scrollIntoView({ behavior: this.o.calm() ? 'auto' : 'smooth', block: 'start' }));
     if (step === 'end') this.finale();
+  }
+
+  /** On to the words, and bring them under the eye (a no-op where they already are). */
+  private goWords(): void {
+    this.reach('say', false);
+    requestAnimationFrame(() => this.sayEl.scrollIntoView({ behavior: this.o.calm() ? 'auto' : 'smooth', block: 'start' }));
   }
 
   private async load(): Promise<void> {
@@ -182,21 +200,26 @@ export class PulsePage {
       this.el.dataset.step = 'end';
       return;
     }
-    this.chorus = ps.others.map((p) => p.rr);
     if (!this.words.length) void api.words(lang()).then((w) => this.setWords(w));
     if (!ps.first) {
-      // The chorus is empty: no pulse to feel yet, but the first pulse and words can be left.
+      // No pulse yet: nothing to feel, but the words can be left.
       this.el.dataset.state = 'empty';
-      this.reach(this.o.phone ? 'own' : 'say', false);
+      this.reach('say', false);
       return;
     }
     this.first = ps.first.rr;
     this.el.dataset.state = 'full';
     this.t0 = performance.now();
     this.lastT = 0;
-    this.stopPresence = api.presence((p) => (this.others = p));
-    this.paintFelt();
-    if (this.isOpen && !this.raf) this.raf = requestAnimationFrame((t) => this.frame(t));
+    if (this.o.phone) {
+      // The field, the presence and the beating run on a phone only.
+      this.stopPresence = api.presence((p) => (this.others = p));
+      this.paintFelt();
+      if (this.isOpen && !this.raf) this.raf = requestAnimationFrame((t) => this.frame(t));
+    } else {
+      // On a computer the words step opens at once: the feel block stays right above it.
+      this.reach('say', false);
+    }
     if (this.el.dataset.step === 'end') this.finale();
   }
 
@@ -209,7 +232,7 @@ export class PulsePage {
       return { x: e.clientX - r.left, y: e.clientY - r.top, w: e.width || 1, h: e.height || 1 };
     };
     c.addEventListener('pointerdown', (e) => {
-      if ((e.target as Element).closest('button, .ap-feel-qr')) return;
+      if ((e.target as Element).closest('button')) return;
       if (this.el.dataset.state !== 'full') return;
       e.preventDefault();
       try {
@@ -284,106 +307,102 @@ export class PulsePage {
     if (!this.isOpen) return;
     const t = now - this.t0;
     const touching = this.touchSec.dataset.touching !== undefined;
-    for (const b of beatsBetween(this.lastT, t, this.first)) this.beat(b.rr, touching, t - b.at);
+    for (const b of beatsBetween(this.lastT, t, this.first)) this.beat(b.rr, touching);
     this.lastT = t;
     this.beatGlow *= 0.93;
     this.draw(t, touching);
     this.raf = requestAnimationFrame((tt) => this.frame(tt));
   }
 
-  /** One beat of the first pulse: felt, seen, and a word surfaces near the hand. */
-  private beat(rr: number, touching: boolean, late: number): void {
+  /** One beat of the pulse: felt in the hand, seen in the light, and a word surfaces near it. */
+  private beat(rr: number, touching: boolean): void {
     this.beatGlow = 1;
-    this.soundBeat(rr, late);
     if (!touching) return;
     if (canVibrate()) buzz(lubDub(rr));
     else if (this.haptic) this.haptic.click();
     this.surfaceWord();
     if (this.el.dataset.step === 'feel') {
-      this.felt++;
+      this.felt = Math.min(FEEL_BEATS, this.felt + 1);
       this.paintFelt();
-      if (this.felt >= FEEL_BEATS) this.reach(this.o.phone ? 'own' : 'say');
     }
-  }
-
-  private toggleSound(): void {
-    if (this.sound) return this.stopSound();
-    if (!this.isOpen || document.hidden || this.el.dataset.step !== 'feel' || !this.first.length) return;
-    try {
-      this.sound = audioContext();
-      claim(this.soundId, () => this.stopSound(), this.touchSec);
-      this.soundButton.setAttribute('aria-pressed', 'true');
-      this.soundButton.textContent = this.o.say('pulse-listen-stop');
-    } catch {
-      this.stopSound();
-    }
-  }
-
-  private stopSound(): void {
-    this.sound = null;
-    for (const source of this.soundSources) {
-      source.stop();
-      source.disconnect();
-    }
-    this.soundSources.clear();
-    release(this.soundId);
-    this.soundButton.setAttribute('aria-pressed', 'false');
-    this.soundButton.textContent = this.o.say('pulse-listen');
-  }
-
-  /** Two low, softly enveloped thuds at the visual wave's peaks, without a reverb tail. */
-  private soundBeat(rr: number, late: number): void {
-    const ctx = this.sound;
-    const duration = Math.min(rr, 800) / 1000;
-    if (!ctx || ctx.state !== 'running' || late / 1000 >= duration) return;
-    const buffer = ctx.createBuffer(1, Math.ceil(ctx.sampleRate * duration), ctx.sampleRate);
-    const data = buffer.getChannelData(0);
-    let noise = 0;
-    for (let i = 0; i < data.length; i++) {
-      const t = i / ctx.sampleRate;
-      const phase = t / duration;
-      noise += 0.025 * (Math.random() * 2 - 1 - noise);
-      // Smooth attacks and releases keep the low body from becoming a click or a beep.
-      const lub = Math.exp(-0.5 * ((phase - 0.16) / 0.055) ** 2);
-      const dub = 0.55 * Math.exp(-0.5 * ((phase - 0.42) / 0.05) ** 2);
-      const edge = Math.min(1, t / 0.015, (duration - t) / 0.025);
-      data[i] = edge * (lub + dub) * (0.10 * Math.sin(2 * Math.PI * (68 * t - 12 * t * t)) + 0.18 * noise);
-    }
-    const source = ctx.createBufferSource();
-    source.buffer = buffer;
-    source.connect(ctx.destination);
-    this.soundSources.add(source);
-    source.onended = () => { source.disconnect(); this.soundSources.delete(source); };
-    // Skip elapsed samples after a delayed frame instead of replaying old beats.
-    source.start(ctx.currentTime, late / 1000);
   }
 
   private paintFelt(): void {
     const left = FEEL_BEATS - this.felt;
-    this.feltLine.textContent = this.el.dataset.step !== 'feel' ? '' : this.felt === 0 ? '' : this.o.say('pulse-felt', { n: Math.max(0, left) });
+    this.feltLine.textContent = this.el.dataset.step !== 'feel' || this.felt === 0 || left <= 0 ? '' : this.o.say('pulse-felt', { n: left });
+    if (left <= 0 && this.o.phone) this.further.hidden = false;
   }
 
   /** The words others left: the cloud above the field, and the words that surface under the finger. */
   private setWords(ws: api.Word[]): void {
     this.words = ws.sort(() => Math.random() - 0.5);
     this.cloud.replaceChildren(...this.words.slice(0, 40).map((w, i) => cloudWord(w.text, w.translation, w.lang, i)));
+    this.showMine();
   }
 
+  /** The reader's own words stand in the cloud at once, here and on this device later; the others see them only after moderation. */
+  private showMine(): void {
+    if (!this.myWords) return;
+    this.mineCloud ??= h('span.ap-cloud-word.ap-mine', { style: '--s:1.15;--o:0.95' }, this.myWords);
+    if (this.mineCloud.parentElement !== this.cloud) this.cloud.append(this.mineCloud);
+  }
+
+  /** A word surfaces on the beat and stays a while: fully inside the field, clear of the finger and of the words still up. */
   private surfaceWord(): void {
-    if (!this.words.length || !this.centre || this.floatBox.childElementCount >= 4) return;
+    if (!this.words.length || !this.centre || this.floatBox.childElementCount >= WORDS_ON_SCREEN) return;
     const w = this.words[this.wordAt++ % this.words.length];
-    const a = Math.random() * Math.PI * 2;
-    const d = this.centre.r + 40 + Math.random() * 60;
-    const r = this.touchSec.getBoundingClientRect();
-    const x = Math.min(r.width - 40, Math.max(40, this.centre.x + Math.cos(a) * d));
-    const y = Math.min(r.height - 60, Math.max(60, this.centre.y + Math.sin(a) * d));
     const tr = w.translation && w.translation !== w.text ? h('small', {}, w.translation) : null;
-    const span = h('span.ap-word', { lang: w.lang || undefined, style: `left:${x.toFixed(0)}px;top:${y.toFixed(0)}px` }, w.text, tr);
+    const span = h('span.ap-word', { lang: w.lang || undefined }, w.text, tr);
     span.addEventListener('animationend', () => span.remove());
     this.floatBox.append(span);
-    // A long word is centred on its point and may reach past the edge: pull it back inside.
-    const half = span.offsetWidth / 2 + 12;
-    if (half * 2 < r.width) span.style.left = `${Math.min(r.width - half, Math.max(half, x)).toFixed(0)}px`;
+    const spot = this.wordSpot(span);
+    if (!spot) {
+      // No room: the beat passes without a word.
+      span.remove();
+      return;
+    }
+    span.style.left = `${spot.x.toFixed(0)}px`;
+    span.style.top = `${spot.y.toFixed(0)}px`;
+  }
+
+  /** A free place for a surfaced word, tried around the finger (a few radii, eight angles, a little jitter). */
+  private wordSpot(span: HTMLElement): { x: number; y: number } | null {
+    const c = this.centre;
+    if (!c) return null;
+    const field = this.touchSec.getBoundingClientRect();
+    const intro = this.touchSec.querySelector('.ap-touch-intro')?.getBoundingClientRect();
+    const foot = this.touchSec.querySelector('.ap-touch-foot')?.getBoundingClientRect();
+    const pad = 16;
+    const topLim = (intro ? intro.bottom - field.top : 0) + 14;
+    const botLim = (foot ? foot.top - field.top : field.height) - 14;
+    const up = ([...this.floatBox.children] as HTMLElement[])
+      .filter((s) => s !== span)
+      .map((s) => {
+        const r = s.getBoundingClientRect();
+        return { left: r.left - field.left, top: r.top - field.top, right: r.right - field.left, bottom: r.bottom - field.top };
+      });
+    const fits = (r: { left: number; top: number; right: number; bottom: number }) => {
+      if (r.left < pad || r.right > field.width - pad || r.top < topLim || r.bottom > botLim) return false;
+      // Clear of the finger: the box stays outside the circle around it.
+      const nx = Math.max(r.left, Math.min(c.x, r.right));
+      const ny = Math.max(r.top, Math.min(c.y, r.bottom));
+      if (Math.hypot(nx - c.x, ny - c.y) < c.r + 24) return false;
+      return !up.some((o) => r.left < o.right && r.right > o.left && r.top < o.bottom && r.bottom > o.top);
+    };
+    const a0 = Math.random() * Math.PI * 2;
+    for (const radius of [c.r + 84, c.r + 150, c.r + 216]) {
+      for (let k = 0; k < 8; k++) {
+        const a = a0 + (k * Math.PI) / 4;
+        const d = radius + (Math.random() - 0.5) * 28;
+        const x = c.x + Math.cos(a) * d;
+        const y = c.y + Math.sin(a) * d;
+        span.style.left = `${x.toFixed(0)}px`;
+        span.style.top = `${y.toFixed(0)}px`;
+        const r = span.getBoundingClientRect();
+        if (fits({ left: r.left - field.left, top: r.top - field.top, right: r.right - field.left, bottom: r.bottom - field.top })) return { x, y };
+      }
+    }
+    return null;
   }
 
   private draw(t: number, touching: boolean): void {
@@ -451,19 +470,6 @@ export class PulsePage {
     const n = Math.max(0, this.others.count - (touching ? 1 : 0));
     const line = n > 0 ? this.o.say('pulse-others', { n }) : '';
     if (this.othersLine.textContent !== line) this.othersLine.textContent = line;
-
-    // The chorus: every other pulse left here, beating its own rhythm, further out and fainter.
-    const maxR = Math.min(W, H) * 0.46;
-    this.chorus.forEach((rr, i) => {
-      const ring = Math.min(maxR, 120 + i * 22);
-      const a = i * 2.399963;
-      const x = centre.x + Math.cos(a) * ring;
-      const y = centre.y + Math.sin(a) * ring;
-      if (x < -10 || y < -10 || x > W + 10 || y > H + 10) return;
-      const v = waveAt(t + i * 337, rr);
-      const alpha = Math.max(0.14, 0.55 - i * 0.02);
-      glow(g, x, y, 10 + v * 10, `rgba(255, 196, 140, ${(alpha * (0.4 + 0.6 * v)).toFixed(3)})`);
-    });
 
     // The pulse: warmth under the hand that swells with every beat.
     const swell = 1 + (calm ? 0.08 : 0.16 + (light - 0.35) * 0.3) * Math.max(wave, this.beatGlow * 0.6);
@@ -555,6 +561,12 @@ export class PulsePage {
         return;
       }
       this.myWords = words;
+      try {
+        localStorage.setItem(MY_WORDS_KEY, words);
+      } catch {
+        /* storage is unavailable: the words still live on this page */
+      }
+      this.showMine();
       text.value = '';
       text.classList.remove('ap-gone');
       audio = null;
@@ -576,7 +588,6 @@ export class PulsePage {
       keepRow,
       h('div.ap-row', {}, send, skip),
       said,
-      this.o.phone ? null : h('aside.ap-phone-aside', {}, h('figure.an-qr.ap-qr', {}, this.o.qr(), h('figcaption', {}, say('own-pulse-phone')))),
     );
   }
 
@@ -612,173 +623,14 @@ export class PulsePage {
     requestAnimationFrame(step);
   }
 
-  // ---------- a pulse of one's own ----------
+  // ---------- the end ----------
 
-  private buildOwn(): HTMLElement {
-    const say = this.o.say;
-    const start = h('button.btn.primary.ap-own-start', { type: 'button' }, say('own-pulse-start')) as HTMLButtonElement;
-    const light = h('p.ap-note.ap-light', { hidden: true }, say('own-pulse-light'));
-    const wave = h('canvas.ap-own-wave', { 'aria-hidden': 'true', hidden: true }) as HTMLCanvasElement;
-    const beats = h('p.ap-beats', { 'aria-live': 'polite' });
-    const status = h('p.ap-status', { 'aria-live': 'polite', hidden: true });
-    const bar = h('span');
-    const progress = h('div.ap-progress', { hidden: true, 'aria-hidden': 'true' }, bar);
-    const failed = h('p.ap-note.ap-failed', { hidden: true }, say('own-pulse-failed'));
-    const feel = h('button.btn.ap-feel', { type: 'button' }, say('own-pulse-feel')) as HTMLButtonElement;
-    const again = h('button.btn.ap-again', { type: 'button' }, say('own-pulse-again')) as HTMLButtonElement;
-    const consent = h('input', { type: 'checkbox' }) as HTMLInputElement;
-    const send = h('button.btn.primary.ap-send', { type: 'button', disabled: true }, say('own-pulse-send')) as HTMLButtonElement;
-    const result = h('div.ap-own-result', { hidden: true }, h('div.ap-row', {}, feel, again), h('label.ap-check', {}, consent, h('span', {}, say('own-pulse-consent'))), h('div.ap-row', {}, send));
-    const sent = h('div.ap-said', { 'aria-live': 'polite' });
-    const retry = h('button.btn.ap-again', { type: 'button', hidden: true }, say('own-pulse-again')) as HTMLButtonElement;
-    const skip = h('button.btn.ap-skip', { type: 'button' }, say('own-pulse-skip')) as HTMLButtonElement;
-    skip.addEventListener('click', () => {
-      this.stopCamera();
-      this.reach('say');
-    });
-    let rr: number[] = [];
-
-    const reset = () => {
-      this.stopCamera();
-      rr = [];
-      start.hidden = false;
-      start.disabled = false;
-      light.hidden = failed.hidden = retry.hidden = result.hidden = status.hidden = progress.hidden = true;
-      wave.hidden = true;
-      beats.textContent = '';
-      consent.checked = false;
-      send.disabled = true;
-      sent.replaceChildren();
-    };
-    const fail = () => {
-      this.stopCamera();
-      start.hidden = true;
-      status.hidden = progress.hidden = true;
-      failed.hidden = false;
-      retry.hidden = false;
-    };
-    retry.addEventListener('click', reset);
-    again.addEventListener('click', reset);
-    consent.addEventListener('change', () => (send.disabled = !consent.checked));
-
-    start.addEventListener('click', async () => {
-      start.disabled = true;
-      let cam: Camera;
-      try {
-        cam = await openBackCamera();
-      } catch {
-        start.disabled = false;
-        return fail();
-      }
-      this.camera = cam;
-      light.hidden = cam.torch;
-      start.hidden = true;
-      wave.hidden = false;
-      const video = h('video', { muted: true, playsinline: true, autoplay: true }) as HTMLVideoElement;
-      video.muted = true;
-      video.srcObject = cam.stream;
-      try {
-        await video.play();
-      } catch {
-        return fail();
-      }
-      let samples: Sample[] = [];
-      let t0 = -1;
-      let tick = 0;
-      // Only an unbroken stretch with the lens covered counts; a finger lifted for more than a moment starts the count again.
-      let offSince = -1;
-      let wasOn = false;
-      status.hidden = progress.hidden = false;
-      status.textContent = say('own-pulse-cover');
-      bar.style.width = '0%';
-      this.reader = new FrameReader(video, (s) => {
-        if (!covered(s)) {
-          if (offSince < 0) offSince = s.t;
-          if (s.t - offSince > 0.7 && samples.length) {
-            samples = [];
-            t0 = -1;
-            beats.textContent = '';
-            bar.style.width = '0%';
-            status.textContent = wasOn ? say('own-pulse-moved') : say('own-pulse-cover');
-          } else if (!samples.length) status.textContent = wasOn ? say('own-pulse-moved') : say('own-pulse-cover');
-          return;
-        }
-        offSince = -1;
-        wasOn = true;
-        if (t0 < 0) t0 = s.t;
-        samples.push(s);
-        const left = Math.max(0, Math.ceil(RECORD_SECONDS - (s.t - t0)));
-        status.textContent = say('own-pulse-hold', { n: left });
-        bar.style.width = `${Math.min(100, ((s.t - t0) / RECORD_SECONDS) * 100).toFixed(1)}%`;
-        if (s.t - t0 >= RECORD_SECONDS) finish();
-      });
-      const show = () => {
-        if (samples.length < 60) return;
-        const a = analyse(samples);
-        beats.textContent = say('own-pulse-beats', { n: a.beats.length });
-        drawWave(wave, a.wave, a.hz);
-      };
-      tick = window.setInterval(show, 500);
-      this.timers.push(tick);
-      const finish = () => {
-        clearInterval(tick);
-        status.hidden = progress.hidden = true;
-        // The camera stops the moment the reading is done; nothing of the picture is kept.
-        this.stopCamera();
-        const a = analyse(samples);
-        beats.textContent = say('own-pulse-beats', { n: a.beats.length });
-        drawWave(wave, a.wave, a.hz);
-        if (checkRR(a.rr)) return fail();
-        rr = a.rr;
-        result.hidden = false;
-      };
-      this.reader.start();
-    });
-
-    feel.addEventListener('click', () => {
-      if (!rr.length) return;
-      if (canVibrate()) buzz(vibrationPattern(rr.slice(0, 40)));
-      // And in the light, beat by beat.
-      let at = 0;
-      for (const v of rr.slice(0, 40)) {
-        const id = window.setTimeout(() => {
-          wave.classList.remove('ap-flash');
-          void wave.offsetWidth;
-          wave.classList.add('ap-flash');
-        }, at);
-        this.timers.push(id);
-        at += v;
-      }
-    });
-
-    send.addEventListener('click', async () => {
-      if (!consent.checked || !rr.length) return;
-      send.disabled = true;
-      const code = await api.sendPulse(rr);
-      if (!code) {
-        send.disabled = false;
-        return;
-      }
-      api.forgetPulses();
-      this.mine = rr;
-      result.hidden = true;
-      skip.hidden = true;
-      const next = h('button.btn.primary.ap-next', { type: 'button' }, say('pulse-further')) as HTMLButtonElement;
-      next.addEventListener('click', () => this.reach('say'));
-      sent.replaceChildren(h('p.ap-said-line', {}, say('own-pulse-sent')), h('p.ap-note.ap-code', {}, say('own-pulse-delete', { code })), next);
-    });
-
-    const here = [h('ol.ap-steps', {}, h('li', {}, say('own-pulse-step-1')), h('li', {}, say('own-pulse-step-2')), h('li', {}, say('own-pulse-step-3'))), start, light, status, progress, wave, beats, failed, retry, result, sent];
-    return h('section.ap-sec.ap-own', {}, h('p.ap-step', {}, say('step-own')), h('p.ap-lead', {}, say('own-pulse')), ...here, h('div.ap-row', {}, skip));
-  }
-
-  /** The end: every pulse left here beating at once, the reader's in the middle, and the words around. */
+  /** The end: the one pulse beating in the middle, the words drifting around it, the reader's own whole under it. */
   private finale(): void {
-    const all = [...(this.mine.length ? [this.mine] : []), ...(this.first.length ? [this.first] : []), ...this.chorus];
     const words = this.words.length + (this.myWords ? 1 : 0);
-    this.endCount.textContent = all.length ? this.o.say('end-count', { p: all.length, w: words }) : '';
-    if (!all.length || this.endRaf) return;
-    const floating = [...(this.myWords ? [this.myWords] : []), ...this.words.slice(0, 14).map((w) => w.text)];
+    this.endCount.textContent = words ? this.o.say('end-count', { w: words }) : '';
+    if (!this.first.length || this.endRaf) return;
+    const floating = this.words.slice(0, 14).map((w) => w.text);
     const t0 = performance.now();
     const draw = (now: number) => {
       if (!this.isOpen) return;
@@ -797,39 +649,27 @@ export class PulsePage {
         const cx = W / 2;
         const cy = H * 0.42;
         const R = Math.min(W, H) * 0.36;
-        // The pulses gather: from scattered to a ring around the middle in the first seconds.
-        const k = calm ? 1 : Math.min(1, t / 3500);
+        // A short fade-in, then the picture holds: one pulse, no gathering.
+        const k = calm ? 1 : Math.min(1, t / 1600);
         const ease = 1 - (1 - k) ** 3;
-        all.forEach((rr, i) => {
-          const v = waveAt(t + i * 293, rr);
-          if (i === 0) {
-            glow(g, cx, cy, 34 + v * 30, `rgba(255, 196, 132, ${(0.45 + 0.4 * v).toFixed(3)})`);
-            glow(g, cx, cy, 12 + v * 8, `rgba(255, 238, 214, ${(0.6 + 0.35 * v).toFixed(3)})`);
-            return;
-          }
-          const a = i * 2.399963 + t / 40000;
-          const ring = R * (0.45 + 0.55 * ((i * 0.618) % 1));
-          const far = Math.max(W, H);
-          const x = cx + Math.cos(a) * (ring * ease + far * (1 - ease));
-          const y = cy + Math.sin(a) * (ring * ease + far * (1 - ease)) * 0.8;
-          g.strokeStyle = `rgba(255, 214, 170, ${(0.08 + 0.12 * v).toFixed(3)})`;
-          g.lineWidth = 1;
-          g.beginPath();
-          g.moveTo(cx, cy);
-          g.lineTo(x, y);
-          g.stroke();
-          glow(g, x, y, 8 + v * 12, `rgba(255, 196, 140, ${(0.25 + 0.5 * v).toFixed(3)})`);
-        });
-        // The words drift slowly around the pulses; the reader's own stand under the middle, whole.
+        const v = waveAt(t, this.first);
+        // One faint static halo around the middle, then the beating warmth and the bright core.
+        g.strokeStyle = 'rgba(255, 214, 170, 0.12)';
+        g.lineWidth = 1;
+        g.beginPath();
+        g.arc(cx, cy, 44 + R * 0.18, 0, Math.PI * 2);
+        g.stroke();
+        glow(g, cx, cy, 34 + v * 30, `rgba(255, 196, 132, ${(0.45 + 0.4 * v).toFixed(3)})`);
+        glow(g, cx, cy, 12 + v * 8, `rgba(255, 238, 214, ${(0.6 + 0.35 * v).toFixed(3)})`);
+        // The words drift slowly around the pulse; the reader's own stand under the middle, whole.
         g.textAlign = 'center';
         const font = getComputedStyle(this.el).fontFamily;
+        if (this.myWords) {
+          g.font = `20px ${font}`;
+          g.fillStyle = `rgba(255, 236, 210, ${(0.95 * ease).toFixed(3)})`;
+          wrapLines(g, this.myWords, W - 48).forEach((line, k2) => g.fillText(line, cx, cy + 74 + k2 * 26));
+        }
         floating.forEach((w, i) => {
-          if (i === 0 && this.myWords) {
-            g.font = `20px ${font}`;
-            g.fillStyle = `rgba(255, 236, 210, ${(0.95 * ease).toFixed(3)})`;
-            wrapLines(g, w, W - 48).forEach((line, k) => g.fillText(line, cx, cy + 74 + k * 26));
-            return;
-          }
           const a = i * 1.7 + t / (calm ? 1e9 : 26000);
           const r = R * (1.05 + (i % 3) * 0.12);
           g.font = `15px ${font}`;
@@ -846,18 +686,8 @@ export class PulsePage {
     this.endRaf = requestAnimationFrame(draw);
   }
 
-  private stopCamera(): void {
-    this.reader?.stop();
-    this.reader = null;
-    closeCamera(this.camera);
-    this.camera = null;
-  }
-
   dispose(): void {
     this.close();
-    this.stopSound();
-    document.removeEventListener('visibilitychange', this.onVisibility);
-    this.timers.forEach((t) => clearInterval(t));
     this.el.remove();
   }
 }
@@ -871,33 +701,6 @@ function glow(g: CanvasRenderingContext2D, x: number, y: number, r: number, colo
   g.beginPath();
   g.arc(x, y, r, 0, Math.PI * 2);
   g.fill();
-}
-
-/** The last six seconds of the camera's pulse wave. */
-function drawWave(c: HTMLCanvasElement, wave: Float64Array, hz: number): void {
-  const dpr = Math.min(2, devicePixelRatio || 1);
-  const W = c.clientWidth || 300;
-  const H = c.clientHeight || 90;
-  c.width = W * dpr;
-  c.height = H * dpr;
-  const g = c.getContext('2d');
-  if (!g) return;
-  g.setTransform(dpr, 0, 0, dpr, 0, 0);
-  g.clearRect(0, 0, W, H);
-  const n = Math.min(wave.length, Math.round(6 * hz));
-  const seg = wave.subarray(wave.length - n);
-  let m = 0.001;
-  for (const v of seg) m = Math.max(m, Math.abs(v));
-  g.strokeStyle = 'rgba(255, 220, 180, 0.95)';
-  g.lineWidth = 1.6;
-  g.beginPath();
-  seg.forEach((v, i) => {
-    const x = (i / Math.max(1, n - 1)) * W;
-    const y = H / 2 - (v / m) * (H * 0.4);
-    if (i === 0) g.moveTo(x, y);
-    else g.lineTo(x, y);
-  });
-  g.stroke();
 }
 
 /** Words broken into lines no wider than `max` (at most four). */

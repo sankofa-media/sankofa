@@ -55,18 +55,13 @@ const isPulse = (p: unknown): p is Pulse => !!p && typeof p === 'object' && isRR
 let pulsesP: Promise<Pulses | null> | undefined;
 /** The pulses: null when the service cannot be reached. Asked once per page. */
 export function pulses(): Promise<Pulses | null> {
-  pulsesP ??= call<{ first?: unknown; others?: unknown }>('/pulses?n=40').then((r) => {
+  pulsesP ??= call<{ first?: unknown; others?: unknown }>('/pulses').then((r) => {
     if (!r || r.status !== 200 || !r.body) return null;
     const first = isPulse(r.body.first) ? r.body.first : null;
     const others = Array.isArray(r.body.others) ? r.body.others.filter(isPulse) : [];
     return { first, others };
   });
   return pulsesP;
-}
-
-/** Forget what was asked (a pulse was just left). */
-export function forgetPulses(): void {
-  pulsesP = undefined;
 }
 
 /** A sample of the readers' published words, with translations into `lang`. */
@@ -97,12 +92,6 @@ export async function sendWords(w: { text: string; lang: string; audio?: Blob | 
 export async function wordsStatus(code: string): Promise<string | null> {
   const r = await call<{ status?: string }>(`/words/status?code=${encodeURIComponent(code)}`);
   return r && r.status === 200 && typeof r.body?.status === 'string' ? r.body.status : null;
-}
-
-/** Leave a pulse: only the intervals between beats, with consent. The delete code, or null. */
-export async function sendPulse(rr: number[]): Promise<string | null> {
-  const r = await call<{ delete_code?: string }>('/pulses', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ rr, source: 'camera', consent: true }) });
-  return r && r.status === 201 && typeof r.body?.delete_code === 'string' ? r.body.delete_code : null;
 }
 
 /** A finger down (with where, 0..1) or up, for the others to see. Fire and forget. */
