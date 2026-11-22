@@ -178,36 +178,35 @@ river:
     - post-ghostpoet-2023
 
 ui:
-  knock: { en: "Knock — this turns the sound on", ru: "Постучать — так включится звук", draft: true }
-  knocked: { en: "The sound is on", ru: "Звук включён", draft: true }
+  knock: { en: "Knock — this turns the sound on", ru: "Постучать — так включится звук" }
+  knocked: { en: "The sound is on", ru: "Звук включён" }
   # The clap's switches (in the bar and in the ring scene) name what pressing them will do.
   sound-on: { en: "Turn the clap off", ru: "Выключить хлопок" }
   sound-off: { en: "Turn the clap on", ru: "Включить хлопок" }
-  clap-circle: { en: "Tap to clap", ru: "Нажмите, чтобы хлопнуть", draft: true }
+  clap-circle: { en: "Tap to clap", ru: "Нажмите, чтобы хлопнуть" }
   verse-lead: { en: "Lead", ru: "Ведущая" }
   verse-answer: { en: "Answer", ru: "Ответ" }
-  clap-count: { en: "Your claps: {n}", ru: "Ваши хлопки: {n}", draft: true }
-  play-1939: { en: "Play the 1939 recording", ru: "Включить запись 1939 года", draft: true }
+  clap-count: { en: "Your claps: {n}", ru: "Ваши хлопки: {n}" }
+  play-1939: { en: "Play the 1939 recording", ru: "Включить запись 1939 года" }
   loc-credit:
     en: "Recording: Library of Congress, American Folklife Center (AFC 1939/005). Played from the Library’s own file for educational use."
-    ru: "Запись: Библиотека Конгресса, Американский центр фольклора (AFC 1939/005). Звучит из файла самой Библиотеки, в образовательных целях."
-    draft: true
-  loc-item: { en: "The recording at the Library of Congress", ru: "Запись на сайте Библиотеки Конгресса", draft: true }
-  play: { en: "Play", ru: "Слушать", draft: true }
-  play-label: { en: "Play “{title}”, {artist}, {year}", ru: "Слушать «{title}», {artist}, {year}", draft: true }
-  listen-at-source: { en: "Listen at the source", ru: "Слушать у источника", draft: true }
-  no-recording: { en: "No official recording to play here yet", ru: "Официальной записи для плеера пока нет", draft: true }
-  sources: { en: "Sources", ru: "Источники", draft: true }
-  listen-for: { en: "What to listen for", ru: "Что слушать", draft: true }
-  side-a: { en: "Side A", ru: "Сторона A", draft: true }
-  side-b: { en: "Side B", ru: "Сторона B", draft: true }
-  filter: { en: "Show", ru: "Показать", draft: true }
-  filter-all: { en: "Everything", ru: "Всё", draft: true }
-  filter-cover: { en: "Covers", ru: "Каверы", draft: true }
-  filter-sample: { en: "Samples", ru: "Сэмплы", draft: true }
-  filter-remix: { en: "Remixes", ru: "Ремиксы", draft: true }
-  filter-screen: { en: "On screen", ru: "На экране", draft: true }
-  filter-archive: { en: "Archive", ru: "Архив", draft: true }
+    ru: "Запись: Библиотека Конгресса, Американский центр фольклора (AFC 1939/005). Здесь звучит файл с сайта самой Библиотеки; запись показана в образовательных целях."
+  loc-item: { en: "The recording at the Library of Congress", ru: "Запись на сайте Библиотеки Конгресса" }
+  play: { en: "Play", ru: "Слушать" }
+  play-label: { en: "Play “{title}”, {artist}, {year}", ru: "Слушать «{title}», {artist}, {year}" }
+  listen-at-source: { en: "Listen at the source", ru: "Слушать на сайте источника" }
+  no-recording: { en: "No official recording to play here yet", ru: "Официальной записи, которую можно включить здесь, пока нет" }
+  sources: { en: "Sources", ru: "Источники" }
+  listen-for: { en: "What to listen for", ru: "Что расслышать" }
+  side-a: { en: "Side A", ru: "Сторона A" }
+  side-b: { en: "Side B", ru: "Сторона B" }
+  filter: { en: "Show", ru: "Показать" }
+  filter-all: { en: "Everything", ru: "Всё" }
+  filter-cover: { en: "Covers", ru: "Каверы" }
+  filter-sample: { en: "Samples", ru: "Сэмплы" }
+  filter-remix: { en: "Remixes", ru: "Ремиксы" }
+  filter-screen: { en: "On screen", ru: "На экране" }
+  filter-archive: { en: "Archive", ru: "Архив" }
   legend: { en: "The mark on each version shows what it took from the song:", ru: "Значок у каждой версии показывает, что она взяла из песни:" }
   glyph-clap: { en: "the rhythm of the claps", ru: "ритм хлопков" }
   glyph-refrain: { en: "the refrain", ru: "припев" }
@@ -217,9 +216,9 @@ ui:
   close-card: { en: "Close", ru: "Закрыть" }
   branch-girls: { en: "From the Shipp sisters’ recording", ru: "От записи сестёр Шипп" }
   branch-simone: { en: "From Nina Simone’s record", ru: "От пластинки Нины Симон" }
-  play-together: { en: "Clap together", ru: "Хлопнуть вместе", draft: true }
+  play-together: { en: "Clap together", ru: "Хлопнуть вместе" }
   art-credit: { en: "Illustrations generated, edited by the museum", ru: "Иллюстрации созданы нейросетью, отобраны музеем" }
-  filmstrip: { en: "On screen, year by year", ru: "На экране, год за годом", draft: true }
+  filmstrip: { en: "On screen, year by year", ru: "На экране, год за годом" }
 
 scenes:
   - id: door
