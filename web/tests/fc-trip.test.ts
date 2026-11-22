@@ -171,6 +171,11 @@ describe('the Arthur Lee mode over a session', () => {
 });
 
 describe('the frame budget', () => {
+  it('reduces quality promptly when active frames take hundreds of milliseconds', () => {
+    const q = new Quality();
+    for (let k = 0; k < 8; k++) q.frame(400);
+    expect(q.step).toBe(Quality.STEPS.length - 1);
+  });
   it('drops resolution and octaves when frames are slow, climbs back when there is room, ignores a pause', () => {
     const q = new Quality();
     expect(q.step).toBe(0);

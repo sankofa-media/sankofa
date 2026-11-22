@@ -50,6 +50,7 @@ export class TripFx {
   private nextBlink = 6;
   private gate = new FlashGate(3, 1000);
   private filterAt = 0;
+  private reportAt = 0;
   private filterTick = 0;
   private turb: { el: SVGElement; base: [number, number]; amp: [number, number]; speed: number; art: boolean }[] = [];
   private maps: { el: SVGElement; key: 'text' | 'title' | 'art' }[] = [];
@@ -252,7 +253,13 @@ export class TripFx {
     this.vel *= Math.pow(0.04, dt);
     this.velShown += (this.vel - this.velShown) * Math.min(1, dt * 10);
     this.paint(t, dt, now);
-    if (++this.frames % 60 === 0) this.o.root.dataset.tripFps = String(Math.round(this.quality.fps));
+    this.frames++;
+    // Report on elapsed time: a struggling renderer must not wait for sixty frames.
+    if (now - this.reportAt >= 500) {
+      this.o.root.dataset.tripFps = String(Math.round(this.quality.fps));
+      this.o.root.dataset.tripFrames = String(this.frames);
+      this.reportAt = now;
+    }
     // With nothing to show and nothing moving, the loop sleeps until the reader moves on.
     if (!this.resting) this.raf = requestAnimationFrame(this.frame);
   };
