@@ -1,0 +1,90 @@
+# Research audit, 2026-11-22. This is evidence metadata, not visitor prose.
+# A preview establishes only the passages actually exposed, not the whole book.
+- feature: forever-changes
+  block: after/lede
+  fact: November 1967 release; US peak 154; ten weeks on the chart; UK peak 24.
+  verdict: confirmed
+  sources:
+    - title: Andrew Hultkrans, Love's Forever Changes (2003), pp. 3 and 13
+      url: https://books.google.com/books?id=DOqoAwAAQBAJ&pg=PA3
+      note: Searchable preview supports the month and US peak, but misdates the peak to the release year.
+    - title: Mark A. Olson, National Recording Registry essay
+      url: https://www.loc.gov/static/programs/national-recording-preservation-board/documents/Love-Forever-Changes.pdf
+      note: Independently supports November 1967 and both peaks; places the chart peaks in 1968.
+    - title: Billboard, 9 March 1968, p. 70
+      url: https://www.worldradiohistory.com/Archive-All-Music/Billboard/60s/1968/Billboard%201968-03-09.pdf#page=78
+      note: Original scan visually checked; Love is number 171 in its tenth chart week.
+    - title: Official Charts, original UK album run
+      url: https://www.officialcharts.com/albums/love-1968-forever-changes/
+      note: Peak 24, six weeks, first chart date 24 February 1968.
+  note: The exact US release day remains unconfirmed. No day is asserted in this block.
+
+- feature: forever-changes
+  block: after/prison
+  fact: The shooting incident was in 1995; conviction followed in 1996.
+  verdict: confirmed
+  sources:
+    - title: Paul Lester, Hard times, The Guardian (21 May 2002)
+      url: https://www.theguardian.com/culture/2002/may/21/artsfeatures.love
+      note: June 1995 incident; its release chronology is unreliable.
+    - title: Patrick Ambrose, Forever Changing, The Morning News (2004)
+      url: https://themorningnews.org/forever-changing/
+      note: Reports arrest in June 1995.
+    - title: Andrew Hultkrans, Love's Forever Changes, p. 117
+      url: https://books.google.com/books?id=DOqoAwAAQBAJ&pg=PA117
+      note: Dates conviction to 1996, quoting RollingStone.com of 12 December 2001.
+    - title: Richard Cromelin, In Bloom Again, Los Angeles Times (1 May 2002)
+      url: https://www.latimes.com/archives/la-xpm-2002-may-01-et-cromelin1-story.html
+      note: Conviction in 1996; sentence of 12 years and four months.
+  note: Current prose says mid-nineties and twelve years. The latter is rounded; Hultkrans's quoted report instead says eleven. Do not equate arrest and conviction dates.
+
+- feature: forever-changes
+  block: after/released
+  fact: December 2001 release; court finding of prosecution misconduct.
+  verdict: partially-confirmed
+  sources:
+    - title: John Einarson, Forever Changes (2010), Introduction
+      url: https://www.everand.com/book/613062250/Forever-Changes-Arthur-Lee-The-Book-Of-Love
+      note: Public preview gives 12 December 2001 release, two charges dismissed on appeal, and a March 2002 no-contest plea on the remaining charge.
+    - title: Andrew Hultkrans, Love's Forever Changes, p. 117
+      url: https://books.google.com/books?id=DOqoAwAAQBAJ&pg=PA117
+      note: Reproduces a release report dated 12 December 2001.
+  note: Release date corroborated. The opened book passages do not establish the specific misconduct finding. No court opinion found; editor review required for the causal clause. Visitor prose unchanged.
+
+- feature: forever-changes
+  block: end/lede
+  fact: Lee's 2006 leukaemia is reported as acute myeloid leukaemia.
+  verdict: confirmed
+  sources:
+    - title: NME, Arthur Lee dies after long illness (4 August 2006)
+      url: https://www.nme.com/news/music/love-3-1362411
+      note: Myeloid diagnosis; reports manager Mark Linn's announcement.
+    - title: Reuters, Influential rocker Arthur Lee dies in Memphis (4 August 2006)
+      url: https://mg.co.za/2006-08-04-influential-rocker-arthur-lee-dies-in-memphis/
+      note: Myeloid diagnosis; includes reporting attributed to the Memphis Commercial Appeal.
+  note: Earlier reports used lymphoblastic, including NME on 11 April 2006. Prefer the later agreement; these are press accounts, not a medical record. Current prose gives no subtype and needs no change.
+
+- feature: forever-changes
+  block: research-only
+  fact: Mojo placed the album at number 11 in both its August 1995 list and January 1996 readers' list.
+  verdict: provisional
+  sources:
+    - title: Rocklist, Mojo August 1995 list transcription
+      url: https://music.co.uk/rocklist/mojo.html
+    - title: Rocklist, Mojo January 1996 readers' list transcription
+      url: https://music.co.uk/rocklist/mojo_p3.htm
+    - title: Mojo August 1995 issue scan, public text preview
+      url: https://www.scribd.com/document/616204922/Mojo-100-Greatest-Albums-Ever-Made-1995-08
+      note: Indexed text announces readers' results in the January issue; full pages not inspected.
+  note: Two distinct lists explain the apparent year conflict. Both transcriptions are one source; verify magazine pages before adding this to visitor prose. No Mojo claim is currently in the feature.
+
+- feature: forever-changes
+  block: session-day/lede
+  fact: Young withdrew before the sessions; Einarson's alleged Daily Planet arrangement claim.
+  verdict: unconfirmed-book-cross-check
+  sources:
+    - title: John Einarson, Forever Changes, catalogue and unavailable search
+      url: https://books.google.com/books?id=FeGeQO0Q2DoC
+    - title: Internet Archive lending copy
+      url: https://archive.org/details/foreverchangesar0000eina
+  note: Google exposed no passage; Internet Archive search returned Item not available. The legal Everand preview covers the preface and introduction, not p. 170. Claims attributed to pp. 170, 189 and 194 remain unread; do not cite them as checked. Existing Botnick account is unchanged.
