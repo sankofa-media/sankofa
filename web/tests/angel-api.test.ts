@@ -1,9 +1,12 @@
-import { afterEach, describe, expect, it, vi } from 'vitest';
-import { forgetPulses, pulses, sendPulse, sendWords, words, wordsStatus } from '../src/features/angel/api';
+import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+
+beforeEach(() => {
+  // pulses() is asked once per module: every case gets a fresh import.
+  vi.resetModules();
+});
 
 afterEach(() => {
   vi.unstubAllGlobals();
-  forgetPulses();
 });
 
 describe('Angel without an optional backend', () => {
@@ -15,10 +18,10 @@ describe('Angel without an optional backend', () => {
         headers: { 'Content-Type': 'text/html' },
       });
     }));
+    const { pulses, sendWords, words, wordsStatus } = await import('../src/features/angel/api');
     expect(await pulses()).toBeNull();
     expect(await words('en')).toEqual([]);
     expect(await sendWords({ text: 'Hello', lang: 'en' })).toBeNull();
-    expect(await sendPulse([800, 810])).toBeNull();
     expect(await wordsStatus('test')).toBeNull();
   });
 });

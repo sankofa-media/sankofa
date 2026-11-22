@@ -120,7 +120,6 @@ export function mount(ctx: FeatureContext): FeatureInstance {
 
   let firstWord: HTMLElement | null = null;
   let strataSound: StrataSound | null = null;
-  let invite: HTMLElement | null = null;
   const gate = new FlashGate();
   let pulsePage: { open(): void; close(): void; dispose(): void; el: HTMLElement } | null = null;
 
@@ -274,9 +273,8 @@ export function mount(ctx: FeatureContext): FeatureInstance {
         return el;
       }
       case 'warm': {
-        invite = h('div.an-invite', { hidden: true });
         const last = h('p.ft-line.an-last', {}, kit.ui('last'));
-        const el = scene(sc, picture(sc)?.el ?? null, { after: [h('div.an-warm-words', {}, invite, last)], screens: 1.3, long: false });
+        const el = scene(sc, picture(sc)?.el ?? null, { after: [h('div.an-warm-words', {}, last)], screens: 1.3, long: false });
         return el;
       }
       default: {
@@ -382,13 +380,6 @@ export function mount(ctx: FeatureContext): FeatureInstance {
       for (const ms of [400, 1200]) window.setTimeout(() => ending.scrollIntoView({ block: 'start' }), ms);
     }
   });
-  const inv = invite as HTMLElement | null;
-  if (inv) {
-    inv.replaceChildren(h('p.an-invite-lead', {}, kit.ui('invite-lead')));
-    inv.hidden = false;
-    inv.closest('.an-warm-words')?.classList.add('has-invite');
-  }
-
   cleanups.push(onCalm(() => queueMicrotask(() => fx.progress())));
   kit.start(ctx.scene);
   fx.progress();
