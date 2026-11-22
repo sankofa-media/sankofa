@@ -8,16 +8,16 @@ import (
 	"fmt"
 	"net/http"
 	"strconv"
-	"strings"
 	"time"
 )
 
-// Pulses are readers' own heartbeats, gathered into a chorus around the
-// author's. A pulse is health data (GDPR art. 9), so only its anonymous form
-// is ever accepted or kept: the RR intervals (milliseconds between beats),
-// rounded to 5 ms, the kind of source, and the day. No ECG or camera frames,
-// no device, no name, no age, no time of day: the browser derives the
-// intervals from the camera itself and sends only them.
+// Pulses are readers' own heartbeats. A pulse is health data (GDPR art. 9),
+// so only its anonymous form is kept: the RR intervals (milliseconds between
+// beats), rounded to 5 ms, the kind of source, and the day. No ECG or camera
+// frames, no device, no name, no age, no time of day. The service no longer
+// accepts new reader pulses over HTTP: only the first pulse left is ever
+// played to readers, the one under every reader's finger. The stored rows,
+// the store and the owner's moderation stay.
 
 // Limits of a pulse.
 const (
@@ -135,21 +135,9 @@ func (s *Store) FirstPulse(ctx context.Context) (Pulse, error) {
 	return ps[0], nil
 }
 
-// SamplePulses returns up to n random visible pulses other than except.
-func (s *Store) SamplePulses(ctx context.Context, n int, except int64) ([]Pulse, error) {
-	return s.pulses(ctx, `SELECT id, rr, source, day, hidden FROM pulses WHERE hidden = 0 AND id != ? ORDER BY random() LIMIT ?`, except, n)
-}
-
 // RecentPulses returns the newest pulses, hidden ones included, for the owner.
 func (s *Store) RecentPulses(ctx context.Context, n int) ([]Pulse, error) {
 	return s.pulses(ctx, `SELECT id, rr, source, day, hidden FROM pulses ORDER BY id DESC LIMIT ?`, n)
-}
-
-// CountPulses returns the number of visible pulses.
-func (s *Store) CountPulses(ctx context.Context) (int, error) {
-	var n int
-	err := s.db.QueryRowContext(ctx, `SELECT count(*) FROM pulses WHERE hidden = 0`).Scan(&n)
-	return n, err
 }
 
 // SetPulseHidden hides or shows a pulse.
@@ -179,54 +167,14 @@ func (s *Store) DeletePulseByCode(ctx context.Context, code string) error {
 
 // --- HTTP ------------------------------------------------------------------
 
-func (s *Server) submitPulse(w http.ResponseWriter, r *http.Request) {
-	// Unknown fields are refused, so nothing beyond RR can slip into the
-	// request by mistake (an ECG trace, a birth date, a device name).
-	dec := json.NewDecoder(http.MaxBytesReader(w, r.Body, 4<<10))
-	dec.DisallowUnknownFields()
-	var in struct {
-		RR      []int  `json:"rr"`
-		Source  string `json:"source"`
-		Consent bool   `json:"consent"`
-	}
-	if err := dec.Decode(&in); err != nil {
-		fail(w, http.StatusBadRequest, "want {rr: [ms], source: camera, consent: true}")
-		return
-	}
-	if !in.Consent {
-		fail(w, http.StatusBadRequest, "consent is required")
-		return
-	}
-	if !PulseSources[in.Source] {
-		fail(w, http.StatusBadRequest, "source must be camera")
-		return
-	}
-	rr, err := ValidateRR(in.RR)
-	if err != nil {
-		fail(w, http.StatusBadRequest, strings.TrimPrefix(err.Error(), ErrInput.Error()+": "))
-		return
-	}
-	if !s.Clients.Allow(s.client(r), "pulses", PulsesPerHour, time.Hour) {
-		fail(w, http.StatusTooManyRequests, "you have left your pulse already; come back later")
-		return
-	}
-	code := NewDeleteCode()
-	if _, err := s.Svc.Store.InsertPulse(r.Context(), rr, in.Source, code, s.Svc.now()); err != nil {
-		s.log().Error("angel pulse", "err", err)
-		fail(w, http.StatusInternalServerError, "could not keep the pulse")
-		return
-	}
-	writeJSON(w, http.StatusCreated, map[string]string{"delete_code": code})
-}
-
 // PublicPulse is a pulse as readers get it.
 type PublicPulse struct {
 	ID int64 `json:"id"`
 	RR []int `json:"rr"`
 }
 
-// samplePulses returns {first, others}: the centre pulse (or null) and a
-// random sample of the rest.
+// samplePulses returns {first, others}: the only pulse readers ever get — the
+// first one left (or null) — and no others.
 func (s *Server) samplePulses(w http.ResponseWriter, r *http.Request) {
 	var first *PublicPulse
 	f, err := s.Svc.Store.FirstPulse(r.Context())
@@ -237,46 +185,7 @@ func (s *Server) samplePulses(w http.ResponseWriter, r *http.Request) {
 		fail(w, http.StatusInternalServerError, "store")
 		return
 	}
-	ps, err := s.Svc.Store.SamplePulses(r.Context(), count(r, 24, 100), f.ID)
-	if err != nil {
-		fail(w, http.StatusInternalServerError, "store")
-		return
-	}
-	others := make([]PublicPulse, 0, len(ps))
-	for _, p := range ps {
-		others = append(others, PublicPulse{p.ID, p.RR})
-	}
-	writeJSON(w, http.StatusOK, map[string]any{"first": first, "others": others})
-}
-
-func (s *Server) countPulses(w http.ResponseWriter, r *http.Request) {
-	n, err := s.Svc.Store.CountPulses(r.Context())
-	if err != nil {
-		fail(w, http.StatusInternalServerError, "store")
-		return
-	}
-	writeJSON(w, http.StatusOK, map[string]int{"count": n})
-}
-
-func (s *Server) deletePulse(w http.ResponseWriter, r *http.Request) {
-	code := r.URL.Query().Get("code")
-	if code == "" {
-		fail(w, http.StatusBadRequest, "code required")
-		return
-	}
-	if !s.Clients.Allow(s.client(r), "delete", 30, time.Hour) {
-		fail(w, http.StatusTooManyRequests, "slow down")
-		return
-	}
-	err := s.Svc.Store.DeletePulseByCode(r.Context(), code)
-	if errors.Is(err, ErrNotFound) {
-		fail(w, http.StatusNotFound, "no such code")
-		return
-	} else if err != nil {
-		fail(w, http.StatusInternalServerError, "store")
-		return
-	}
-	writeJSON(w, http.StatusOK, map[string]string{"status": "deleted"})
+	writeJSON(w, http.StatusOK, map[string]any{"first": first, "others": []PublicPulse{}})
 }
 
 func (s *Server) adminPulses(w http.ResponseWriter, r *http.Request) {
