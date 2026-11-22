@@ -47,8 +47,8 @@ export class Scroller {
   private raf = 0;
   private current = -1;
   private readonly onScroll = () => (this.raf ||= requestAnimationFrame(() => this.tick()));
-  /** While set, the current scene is not reported (a jump to a scene is under way). */
-  private quietUntil = 0;
+  /** Suppress only the destination of an explicit jump, never a later reader scroll. */
+  private quietScene: HTMLElement | undefined;
 
   constructor(private readonly o: ScrollerOptions) {
     this.io = new IntersectionObserver(
@@ -142,14 +142,15 @@ export class Scroller {
       el.classList.add('current', 'reached');
       // Everything above the current scene has been reached too.
       for (let k = 0; k < i; k++) this.o.scenes[k].classList.add('reached');
-      if (performance.now() >= this.quietUntil) this.o.onCurrent?.(el, i);
+      if (el !== this.quietScene) this.o.onCurrent?.(el, i);
+      this.quietScene = undefined;
     }
   }
 
   /** Bring a scene to the top of the screen. */
   goTo(el: HTMLElement, smooth: boolean): void {
     const top = el.getBoundingClientRect().top - this.o.root.getBoundingClientRect().top + this.o.root.scrollTop;
-    this.quietUntil = smooth ? 0 : performance.now() + 50;
+    this.quietScene = smooth ? undefined : el;
     this.o.root.scrollTo({ top: Math.max(0, top), behavior: smooth ? 'smooth' : 'auto' });
     // Reveal what a jump skipped over: a reader arriving by link sees the text at once.
     el.querySelectorAll('.ft-block').forEach((b) => b.classList.add('on'));

@@ -145,11 +145,12 @@ export class Quality {
 
   /** One frame took `ms`. Returns true when the quality changed. */
   frame(ms: number): boolean {
-    if (!(ms > 0) || ms > 250) return false; // a hidden tab or a pause, not a slow frame
+    if (!(ms > 0) || !Number.isFinite(ms) || ms >= 1000) return false; // a suspended tab
+    // Sub-second frames are still work; ignoring them locks a struggling renderer at full quality.
     this.ema += (ms - this.ema) * 0.08;
     if (this.ema > 21) {
       this.fast = 0;
-      if (++this.slow > 24 && this.step < Quality.STEPS.length - 1) {
+      if ((this.slow += Math.min(ms, 250) / 16.7) > 24 && this.step < Quality.STEPS.length - 1) {
         this.step++;
         this.slow = 0;
         this.ema = 16.7;

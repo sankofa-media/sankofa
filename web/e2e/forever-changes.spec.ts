@@ -442,6 +442,8 @@ test('the trip scales with the chapters: calm prologue, dark mushrooms, the peak
   // The frames keep coming, and words that swap come back as they were.
   const text = await scene(page, 'the-red-telephone').locator('.ft-flow').evaluate((e) => (e.textContent ?? '').replace(/\s+/g, ' '));
   await expect.poll(() => feature(page).getAttribute('data-trip-fps'), { timeout: 15_000 }).not.toBeNull();
+  const frames = Number(await feature(page).getAttribute('data-trip-frames'));
+  await expect.poll(async () => Number(await feature(page).getAttribute('data-trip-frames')), { timeout: 15_000 }).toBeGreaterThan(frames);
   await page.waitForTimeout(5000);
   expect(await scene(page, 'the-red-telephone').locator('.ft-flow').evaluate((e) => (e.textContent ?? '').replace(/\s+/g, ' '))).toBe(text);
   // The keyboard still scrolls at the peak: nothing holds the page.
