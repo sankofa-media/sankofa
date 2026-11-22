@@ -1,5 +1,6 @@
 import { expect, test, type Page } from '@playwright/test';
 import { mkdir } from 'node:fs/promises';
+import { readFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join } from 'node:path';
 
@@ -10,6 +11,9 @@ async function jump(page: Page, id: string, progress = 0) {
     sheet.scrollTop += el.getBoundingClientRect().top - sheet.getBoundingClientRect().top - 70 + (el.clientHeight - 200) * p;
   }, progress);
 }
+// The feature is built only while content/features/index.yaml lists it.
+const listed = /^\s*-\s*negative\s*$/m.test(readFileSync(new URL('../../content/features/index.yaml', import.meta.url), 'utf8'));
+test.skip(!listed, 'Negative is hidden from the site');
 test.beforeEach(async ({ page }, info) => {
   await page.setViewportSize(info.project.name === 'mobile' ? { width: 390, height: 844 } : { width: 1440, height: 900 });
   await page.route(/youtube|ytimg|googlevideo|embed.music.apple.com/, route => route.abort());
