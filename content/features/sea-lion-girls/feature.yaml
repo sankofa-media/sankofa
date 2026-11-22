@@ -848,9 +848,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: silence-sky-fence.webp, depth: 3, alt: { en: "An empty schoolyard at dusk: a wire fence, a bare tree, a swing hanging still", ru: "Пустой школьный двор в сумерках: сетчатый забор, голое дерево, неподвижные качели" } }
-        - { file: silence-ground.webp, depth: 6, alt: "" }
-        - { file: silence-circle-ribbon.webp, depth: 9, alt: { en: "A chalk circle on the ground with nobody in it, and a small red ribbon at its edge", ru: "Меловой круг на земле, в нём никого, а у края — маленькая красная ленточка" } }
+        - { file: silence-r2-plate.webp, depth: 3, alt: { en: "An empty schoolyard at dusk: a wire fence, a bare tree, a swing hanging still", ru: "Пустой школьный двор в сумерках: сетчатый забор, голое дерево, неподвижные качели" } }
+        - { file: silence-r2-ground.webp, depth: 6, alt: "" }
+        - { file: silence-r2-circle-ribbon.webp, depth: 9, alt: { en: "A chalk circle on the ground with nobody in it, and a small red ribbon at its edge", ru: "Меловой круг на земле, в нём никого, а у края — маленькая красная ленточка" } }
     blocks:
       - id: stop
         role: line
@@ -878,9 +878,9 @@ scenes:
     art:
       generated: true
       layers:
-        - { file: classroom-room.webp, depth: 4, alt: { en: "A school music room, seen from its doorway", ru: "Музыкальный класс в школе, вид из дверей" } }
-        - { file: classroom-children.webp, depth: 9, role: figure, pivot: "50 80", fit: { x: -2.5 }, alt: { en: "Children standing in a circle, clapping", ru: "Дети стоят в кругу и хлопают" } }
-        - { file: classroom-teacher.webp, depth: 13, role: figure, pivot: "86 88", fit: { x: 3.19, y: 1.63, scale: 0.96 }, alt: { en: "Their teacher keeps the beat beside a small speaker", ru: "Учительница отбивает ритм рядом с небольшой колонкой" } }
+        - { file: classroom-r2-plate.webp, depth: 4, alt: { en: "A school music room, seen from its doorway", ru: "Музыкальный класс в школе, вид из дверей" } }
+        - { file: classroom-r2-children.webp, depth: 9, role: figure, pivot: "50 80", alt: { en: "Children standing in a circle, clapping", ru: "Дети стоят в кругу и хлопают" } }
+        - { file: classroom-r2-teacher.webp, depth: 13, role: figure, pivot: "70 80", alt: { en: "Their teacher keeps the beat beside a small speaker", ru: "Учительница отбивает ритм рядом с небольшой колонкой" } }
     blocks:
       - id: kicker
         role: kicker

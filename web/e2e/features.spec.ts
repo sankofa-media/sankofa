@@ -360,7 +360,7 @@ test('calm mode keeps the illustrations still and finished', async ({ page }) =>
   // No ink wipe, no breathing, no turning disc, no parallax; the van's doors stand open.
   expect((await style('[data-scene="album"] .ft-art .al')).mask).toBe('none');
   expect((await style('[data-layer="album-r2-disc"] .al-face img')).anim).toBe('none');
-  expect((await style('[data-layer="classroom-children"]')).anim).toBe('none');
+  expect((await style('[data-layer="classroom-r2-children"]')).anim).toBe('none');
   expect((await style('[data-layer="album-r2-sleeves"]')).transform).toBe('');
   expect((await style('[data-layer="expedition-r2-machine"]')).open).toBe('1');
   // The finale shows its door open at once.
@@ -371,7 +371,7 @@ test('calm mode keeps the illustrations still and finished', async ({ page }) =>
 test('with reduced motion the illustrations do not move either', async ({ page }) => {
   await page.emulateMedia({ reducedMotion: 'reduce' });
   await openFeature(page, '#view=feature&item=sea-lion-girls&scene=classroom');
-  const anim = await scene(page, 'classroom').locator('[data-layer="classroom-teacher"]').evaluate((e) => getComputedStyle(e).animationName);
+  const anim = await scene(page, 'classroom').locator('[data-layer="classroom-r2-teacher"]').evaluate((e) => getComputedStyle(e).animationName);
   expect(anim).toBe('none');
   const mask = await scene(page, 'classroom').locator('.ft-art .al').first().evaluate((e) => getComputedStyle(e).maskImage);
   expect(mask).toBe('none');
