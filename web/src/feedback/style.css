@@ -13,3 +13,5 @@
 .feedback-dialog button { font: inherit; color: inherit; background: transparent; border: 1px solid #817867; padding: 8px 16px; cursor: pointer; }
 .feedback-dialog a { color: #e0c17b; overflow-wrap: anywhere; }
 .feedback-dialog [hidden] { display: none; }
+/* Leave room for the special projects' floating player and phone controls. */
+.ft-sheet > .feedback-footer { padding-bottom: calc(96px + env(safe-area-inset-bottom)); }

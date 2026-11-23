@@ -22,6 +22,13 @@ const say = (key: keyof typeof strings) => pick(strings[key]);
 
 export function openFeedback(opener: HTMLElement): void {
  const context = pageContext(location.href, lang(), document.documentElement.dataset.theme ?? 'dark', innerWidth, innerHeight);
+ // A room can be open while its legacy hash is being normalized.
+ const room = opener.closest('.atlas,.descent,.engine,.listen,.roots,.rmap,.book-panel,[data-card-id]');
+ if (room) {
+  const view = ['atlas','descent','engine','listen','roots'].find(name => room.classList.contains(name));
+  context.view = view ?? (room.classList.contains('rmap') ? 'roots-map' : room.classList.contains('book-panel') ? 'book' : 'card');
+  context.item = room.getAttribute('data-card-id') ?? context.item;
+ }
  const dialog = h('dialog.feedback-dialog', { 'aria-labelledby': 'feedback-title', 'aria-modal': 'true' }) as HTMLDialogElement;
  const text = h('textarea', { required: true, rows: 5, placeholder: say('text'), 'aria-label': say('text') }) as HTMLTextAreaElement;
  const contact = h('input', { type: 'text', 'aria-label': say('contact') }) as HTMLInputElement;
@@ -69,7 +76,7 @@ export function installFeedback(): void {
   const dialog = document.querySelector<HTMLDialogElement>('.feedback-dialog[open]');
   if (dialog && e.key === 'Escape') { e.preventDefault(); e.stopImmediatePropagation(); dialog.close(); }
  }, true);
- const hosts = 'footer.mx-colophon, .ft-sheet, .drawer .card, .atlas, .mx-body, .engine > .e-wrap, .r-wrap, .l-wrap, .rmap, .descent';
+ const hosts = 'footer.mx-colophon, .ft-sheet, .drawer .card, .drawer .book-panel, .atlas, .mx-sheet, .engine > .e-wrap, .r-wrap, .l-wrap, .rmap, .descent';
  const add = () => {
   document.querySelectorAll<HTMLElement>(hosts).forEach(host => {
    if (host.querySelector(':scope > .feedback-footer')) return;
