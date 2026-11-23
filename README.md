@@ -49,21 +49,27 @@ the installed distribution passes upstream Kubernetes conformance **462/462**
 
 ```bash
 kubectl apply -f deploy/crds/
-kubectl apply -f deploy/griot.yaml      # replace the image reference first
+kubectl apply -f deploy/griot.yaml      # uses ghcr.io/sankofa-media/sankofa/griot:latest
 kubectl apply -f deploy/webhooks.yaml
 go install ./cmd/sankofa                # or: kubectl sankofa
 ```
 
 ## Run your own museum
 
-From the repository root, build and serve at <http://localhost:8080>:
+Run the published museum at <http://localhost:8080>:
+
+```sh
+docker run --rm -p 8080:8080 ghcr.io/sankofa-media/sankofa/museum:latest
+```
+
+Or build from the repository root:
 
 ```sh
 docker build -f web/Dockerfile --build-arg SITE_URL=http://localhost:8080 -t sankofa-museum . && docker run --rm -p 8080:8080 sankofa-museum
 ```
 
 Set `SITE_URL` to your public origin for a mirror (default: `https://sankofa.black`).
-For Kubernetes, push the image to your registry, substitute `MUSEUM_IMAGE`,
+For Kubernetes, use `ghcr.io/sankofa-media/sankofa/museum:latest` (or your own image), substitute `MUSEUM_IMAGE`,
 `MUSEUM_HOST` and optional `PUBLIC_HOST` in `deploy/museum.yaml`, then apply
 with plain `kubectl`. See [the self-hosting guide](docs/self-host.md) for the
 copyable substitution command, optional second Ingress and TLS setup.
@@ -120,3 +126,21 @@ cd web && npm test && npm run e2e
 
 Code: Apache-2.0. Cards and chapters: CC BY 4.0. Media keep their own public
 domain or open licences, credited on every card.
+
+## Container images
+
+The image workflow publishes `ghcr.io/sankofa-media/sankofa/{griot,sankofa,angel,museum}`
+for `linux/amd64` and `linux/arm64`. Main builds receive `latest` and
+`sha-<short>` tags; a `v1.2.3` Git tag produces `1.2.3` and a SHA tag.
+Use a release tag or digest for reproducible installations. The Griot chart
+uses the same registry with `latest` by default; override `image.tag` or
+`image.digest` to pin it. The CLI image runs `sankofa` as its entrypoint.
+Angel includes static ffmpeg and stores its data in `/var/lib/angel`; mount a
+writable volume there. Feedback needs no model key. Public words and voice
+features retain their separate moderation and transcription configuration.
+
+On the first publication, the owner must check each package's **Package settings
+→ Change visibility → Public** to enable anonymous pulls. Repository linkage and
+`packages: write` do not configure package visibility; see
+[GitHub's package access documentation](https://docs.github.com/en/packages/learn-github-packages/configuring-a-packages-access-control-and-visibility).
+The workflow uses only `GITHUB_TOKEN`; it requires no registry password secret.
