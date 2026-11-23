@@ -1,4 +1,4 @@
-module github.com/tym83/sankofa
+module github.com/sankofa-media/sankofa
 
 go 1.26.5
 

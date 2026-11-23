@@ -39,7 +39,7 @@ English version: [README.md](README.md).
 
 ## Дистрибутив
 
-Sankofa — ещё и полноценный дистрибутив на [kuberoot](https://github.com/tym83/kuberoot):
+Sankofa — ещё и полноценный дистрибутив на [kuberoot](https://github.com/kuberoot-dev/kuberoot):
 Griot работает службой узла, узлы загружаются с подписанных образов и
 обновляются по схеме A/B, а установленный дистрибутив проходит upstream
 conformance Kubernetes **462/462** (v1.37.2). Как собрать, загрузить и

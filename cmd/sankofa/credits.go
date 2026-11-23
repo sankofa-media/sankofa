@@ -10,8 +10,8 @@ import (
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 	"k8s.io/client-go/dynamic"
 
-	"github.com/tym83/sankofa/pkg/atlas"
-	"github.com/tym83/sankofa/pkg/credits"
+	"github.com/sankofa-media/sankofa/pkg/atlas"
+	"github.com/sankofa-media/sankofa/pkg/credits"
 )
 
 func creditsCmd() *cobra.Command {

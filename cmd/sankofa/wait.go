@@ -12,12 +12,12 @@ import (
 	"github.com/spf13/cobra"
 	"golang.org/x/term"
 
-	"github.com/tym83/sankofa/content"
-	"github.com/tym83/sankofa/pkg/atlas"
-	"github.com/tym83/sankofa/pkg/card"
-	"github.com/tym83/sankofa/pkg/crumbs"
-	"github.com/tym83/sankofa/pkg/factoid"
-	"github.com/tym83/sankofa/pkg/reader"
+	"github.com/sankofa-media/sankofa/content"
+	"github.com/sankofa-media/sankofa/pkg/atlas"
+	"github.com/sankofa-media/sankofa/pkg/card"
+	"github.com/sankofa-media/sankofa/pkg/crumbs"
+	"github.com/sankofa-media/sankofa/pkg/factoid"
+	"github.com/sankofa-media/sankofa/pkg/reader"
 )
 
 func crumbPicker(cmd *cobra.Command) (*crumbs.Picker, *reader.State, error) {

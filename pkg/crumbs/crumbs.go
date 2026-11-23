@@ -6,8 +6,8 @@ package crumbs
 import (
 	"math/rand/v2"
 
-	"github.com/tym83/sankofa/pkg/card"
-	"github.com/tym83/sankofa/pkg/factoid"
+	"github.com/sankofa-media/sankofa/pkg/card"
+	"github.com/sankofa-media/sankofa/pkg/factoid"
 )
 
 // Crumb is one line to show: a card's wow line or a factoid.

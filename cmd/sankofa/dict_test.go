@@ -6,8 +6,8 @@ import (
 
 	tea "github.com/charmbracelet/bubbletea"
 
-	"github.com/tym83/sankofa/pkg/card"
-	"github.com/tym83/sankofa/pkg/reader"
+	"github.com/sankofa-media/sankofa/pkg/card"
+	"github.com/sankofa-media/sankofa/pkg/reader"
 )
 
 func TestDictIndexAndEdition(t *testing.T) {

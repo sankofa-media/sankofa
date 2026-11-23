@@ -1,6 +1,6 @@
 package atlas
 
-import "github.com/tym83/sankofa/pkg/card"
+import "github.com/sankofa-media/sankofa/pkg/card"
 
 // ForCard is the atlas point a card opens at.
 func ForCard(c *card.Card) Point {

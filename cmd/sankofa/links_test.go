@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/tym83/sankofa/pkg/card"
+	"github.com/sankofa-media/sankofa/pkg/card"
 )
 
 func linkSet() *card.Set {

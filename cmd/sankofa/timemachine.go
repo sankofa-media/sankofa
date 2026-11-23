@@ -21,7 +21,7 @@ import (
 	"k8s.io/client-go/kubernetes"
 	"sigs.k8s.io/yaml"
 
-	"github.com/tym83/sankofa/pkg/history"
+	"github.com/sankofa-media/sankofa/pkg/history"
 )
 
 // when reads a moment: RFC3339, a duration back from now ("2h", "7d"), or

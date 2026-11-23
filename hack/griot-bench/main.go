@@ -37,7 +37,7 @@ import (
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/tools/clientcmd"
 
-	"github.com/tym83/sankofa/pkg/history"
+	"github.com/sankofa-media/sankofa/pkg/history"
 )
 
 var (

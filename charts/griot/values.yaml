@@ -1,6 +1,6 @@
 image:
   # Build with: KO_DOCKER_REPO=<registry>/griot ko build --bare ./cmd/griot
-  repository: ghcr.io/tym83/sankofa/griot
+  repository: ghcr.io/sankofa-media/sankofa/griot
   tag: ""        # defaults to the chart appVersion
   digest: ""     # sha256:...; wins over tag
   pullPolicy: IfNotPresent

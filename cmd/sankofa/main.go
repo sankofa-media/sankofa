@@ -8,7 +8,7 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/tym83/sankofa/pkg/atlas"
+	"github.com/sankofa-media/sankofa/pkg/atlas"
 )
 
 func main() {

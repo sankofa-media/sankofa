@@ -8,8 +8,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/tym83/sankofa/content"
-	"github.com/tym83/sankofa/pkg/cabinet"
+	"github.com/sankofa-media/sankofa/content"
+	"github.com/sankofa-media/sankofa/pkg/cabinet"
 )
 
 // rummageCmd is a door of the museum's Cabinet of Curiosities, left out of

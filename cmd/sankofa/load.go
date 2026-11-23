@@ -11,9 +11,9 @@ import (
 	clientgoscheme "k8s.io/client-go/kubernetes/scheme"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/tym83/sankofa/api/v1alpha1"
-	"github.com/tym83/sankofa/content"
-	"github.com/tym83/sankofa/pkg/card"
+	"github.com/sankofa-media/sankofa/api/v1alpha1"
+	"github.com/sankofa-media/sankofa/content"
+	"github.com/sankofa-media/sankofa/pkg/card"
 )
 
 var kubeFlags = genericclioptions.NewConfigFlags(true)
