@@ -1,7 +1,7 @@
 image:
-  # Build with: KO_DOCKER_REPO=<registry>/griot ko build --bare ./cmd/griot
+  # Published for linux/amd64 and linux/arm64 by .github/workflows/images.yml.
   repository: ghcr.io/sankofa-media/sankofa/griot
-  tag: ""        # defaults to the chart appVersion
+  tag: "latest"  # main; use a release version or sha-<short> to pin
   digest: ""     # sha256:...; wins over tag
   pullPolicy: IfNotPresent
 

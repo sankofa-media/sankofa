@@ -118,7 +118,7 @@ spec:
       securityContext: {runAsNonRoot: true, runAsUser: 65532, fsGroup: 65532, seccompProfile: {type: RuntimeDefault}}
       containers:
         - name: griot
-          image: ko://github.com/sankofa-media/sankofa/cmd/griot
+          image: ghcr.io/sankofa-media/sankofa/griot:latest
           args: ["--db=/var/lib/griot/memory.db"]
           ports: [{name: https, containerPort: 8443}, {name: pulse, containerPort: 8081}]
           readinessProbe: {httpGet: {path: /readyz, port: https, scheme: HTTPS}}
