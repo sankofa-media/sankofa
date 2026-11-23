@@ -73,8 +73,9 @@ function input(featureIds = ['sea-lion-girls', 'brand-new']): SeoInput {
     guide: { version: 1, en: { title: 'How to read this museum', blocks: [{ type: 'p', inline: [{ t: 'text', s: 'Sankofa is a museum. ' }, { t: 'card', id: 'a', s: 'A' }, { t: 'unseen', s: 'Hidden.' }] }] } },
     home: { en: { title: 'Sankofa — Go back and fetch it', description: 'Seven centuries of Black culture.', lede: ['This museum tells seven centuries.'] }, ru: { title: 'Sankofa — Вернись и забери', description: 'Семь веков чёрной культуры.', lede: ['Этот музей рассказывает.'] } },
     dates: (k) => (k.startsWith('feature:') ? { first: '2026-11-01T10:00:00Z', last: '2026-11-19T10:00:00Z' } : {}),
-    featureImage: (id) => ({ url: `${SITE}/social/features/${id}.jpg`, width: 1200, height: 630 }),
-    defaultImage: { url: `${SITE}/social-card.jpg`, width: 1200, height: 630 },
+    featureImage: (id, lang) => ({ url: `${SITE}/social/${lang}/features/${id}.jpg`, width: 1200, height: 630 }),
+    defaultImage: lang => ({ url: `${SITE}/social/${lang}/home.jpg`, width: 1200, height: 630 }),
+    featuresImage: lang => ({url: `${SITE}/social/${lang}/features.jpg`, width:1200, height:630}),
   };
 }
 
@@ -112,7 +113,7 @@ describe('the crawlable pages', () => {
       url: `${SITE}/features/sea-lion-girls/`,
       datePublished: '2026-11-01T10:00:00Z',
       dateModified: '2026-11-19T10:00:00Z',
-      image: [`${SITE}/social/features/sea-lion-girls.jpg`],
+      image: [`${SITE}/social/en/features/sea-lion-girls.jpg`],
       author: { '@id': `${SITE}/#organization` },
       publisher: { '@id': `${SITE}/#organization` },
     });
@@ -211,7 +212,7 @@ describe('the service files', () => {
     expect(locs).toContain(`${SITE}/ru/features/brand-new/`);
     expect(xml).toContain('<lastmod>2026-11-19T10:00:00Z</lastmod>');
     expect(xml).toContain(`<xhtml:link rel="alternate" hreflang="ru" href="${SITE}/ru/features/sea-lion-girls/"/>`);
-    expect(xml).toContain(`<image:loc>${SITE}/social/features/sea-lion-girls.jpg</image:loc>`);
+    expect(xml).toContain(`<image:loc>${SITE}/social/en/features/sea-lion-girls.jpg</image:loc>`);
     expect(xml).not.toMatch(/&(?!amp;|lt;|gt;|quot;)/);
   });
 
@@ -281,4 +282,17 @@ describe('helpers', () => {
     expect(h.en).toEqual({ title: 'Sankofa — Go back', description: 'Seven centuries.', lede: ['This museum.', 'A cluster.'] });
     expect(h.ru).toEqual({ title: 'Sankofa — Вернись', description: 'Семь веков.', lede: ['Этот музей.', 'Кластер.'] });
   });
+});
+
+describe('localized social pictures', () => {
+ it('uses language-specific JPEGs in both preview tags on every page', () => {
+  for (const page of buildPages(input())) {
+   expect(page.image.url).toContain(`/social/${page.lang}/`);
+   const head = headHtml(SITE, page);
+   expect(head).toContain(`property="og:image" content="${page.image.url}"`);
+   expect(head).toContain(`name="twitter:image" content="${page.image.url}"`);
+   const stem = page.kind === 'feature' ? `features/${page.id}` : page.kind === 'features' ? 'features' : 'home';
+   expect(page.image.url).toBe(`${SITE}/social/${page.lang}/${stem}.jpg`);
+  }
+ });
 });

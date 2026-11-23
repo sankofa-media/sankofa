@@ -18,8 +18,7 @@ import type { ProseFile } from '../../src/mechanics/guide/model.ts';
 import { buildPages, LANGS, sitemapLinks, type Dates, type HomeText, type Image, type SeoInput } from './pages.ts';
 import { featuresAtom, llmsFullTxt, llmsTxt, robotsTxt, sitemaps } from './files.ts';
 import { noscriptHtml, renderPage } from './render.ts';
-import { composeSocial, SOCIAL_H, SOCIAL_W, socialTool } from './social.ts';
-import { plain } from './text.ts';
+import { renderSocial, socialPath, SOCIAL_H, SOCIAL_W } from './social.ts';
 
 export const DEFAULT_SITE = 'https://sankofa.black';
 
@@ -104,7 +103,7 @@ export interface SeoBuild {
 }
 
 /** Write the crawlable layer into a built museum (`dist`). */
-export function buildSeo(dist: string, repo: string, site = DEFAULT_SITE, log: (s: string) => void = console.log): SeoBuild | undefined {
+export async function buildSeo(dist: string, repo: string, site = DEFAULT_SITE, log: (s: string) => void = console.log): Promise<SeoBuild | undefined> {
   const data = join(dist, 'data');
   const cardsFile = readJson<CardsFile>(join(data, 'cards.json'));
   const chaptersFile = readJson<ChaptersFile>(join(data, 'chapters.json'));
@@ -120,17 +119,8 @@ export function buildSeo(dist: string, repo: string, site = DEFAULT_SITE, log: (
   }
   const template = readFileSync(join(dist, 'index.html'), 'utf8');
 
-  // The special projects' link previews, drawn from their own art.
-  const tool = socialTool();
-  const social: string[] = [];
-  const featureImages = new Map<string, Image>();
-  for (const e of features.features) {
-    const files = e.seo?.image ? [e.seo.image] : (e.cover?.layers ?? []).map((l) => l.file);
-    const out = join(dist, 'social', 'features', `${e.id}.jpg`);
-    if (!files.length || !composeSocial(files.map((f) => join(dist, 'media', 'features', e.id, f)), out, tool)) continue;
-    social.push(`social/features/${e.id}.jpg`);
-    featureImages.set(e.id, { url: `${site}/social/features/${e.id}.jpg`, width: SOCIAL_W, height: SOCIAL_H, alt: plain(e.title.en) });
-  }
+  const social = await renderSocial(dist, repo, features, featureData);
+  const image = (path: string): Image => ({ url: `${site}/${path}`, width: SOCIAL_W, height: SOCIAL_H, alt: 'Sankofa' });
 
   const input: SeoInput = {
     site,
@@ -142,8 +132,9 @@ export function buildSeo(dist: string, repo: string, site = DEFAULT_SITE, log: (
     dedication: readJson<ProseFile>(join(data, 'dedication.json')),
     home: homeText(template),
     dates: contentDates(repo),
-    featureImage: (id) => featureImages.get(id),
-    defaultImage: { url: `${site}/social-card.jpg`, width: 1200, height: 630, alt: 'Sankofa' },
+    featureImage: (id, lang) => image(socialPath('feature', lang, id)),
+    featuresImage: lang => image(socialPath('features', lang)),
+    defaultImage: lang => image(socialPath('home', lang)),
   };
   const pages = buildPages(input);
   const noscript = Object.fromEntries(LANGS.map((l) => [l, noscriptHtml(sitemapLinks(pages, l), l)]));
@@ -159,7 +150,7 @@ export function buildSeo(dist: string, repo: string, site = DEFAULT_SITE, log: (
     'ru/features.atom': featuresAtom(site, pages, 'ru', new Date().toISOString()),
   };
   for (const [name, text] of Object.entries(files)) write(join(dist, name), text);
-  log(`seo: ${pages.length} pages, ${social.length} social image(s)${tool ? '' : ' (no magick or vips: features use the site picture)'}, ${Object.keys(files).join(', ')} -> ${dist}`);
+  log(`seo: ${pages.length} pages, ${social.length} social image(s), ${Object.keys(files).join(', ')} -> ${dist}`);
   return { pages: pages.length, files: Object.keys(files), social };
 }
 
@@ -172,9 +163,9 @@ export function seo(): Plugin {
     configResolved(c) {
       config = c;
     },
-    closeBundle() {
+    async closeBundle() {
       const dist = resolve(config.root, config.build.outDir);
-      buildSeo(dist, resolve(config.root, '..'), (process.env.SITE_URL || process.env.SANKOFA_SITE)?.replace(/\/+$/, '') || DEFAULT_SITE, (s) => config.logger.info(s));
+      await buildSeo(dist, resolve(config.root, '..'), (process.env.SITE_URL || process.env.SANKOFA_SITE)?.replace(/\/+$/, '') || DEFAULT_SITE, (s) => config.logger.info(s));
     },
   };
 }
