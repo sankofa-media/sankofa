@@ -69,9 +69,10 @@ export interface SeoInput {
   /** First and last change of a piece of content: 'card:<id>', 'chapter:<id>', 'feature:<id>', 'guide', 'dedication'. */
   dates(key: string): Dates;
   /** The link-preview picture made for a feature, when one was made. */
-  featureImage(id: string): Image | undefined;
+  featureImage(id: string, lang: PageLang): Image | undefined;
+  featuresImage(lang: PageLang): Image;
   /** The site's own preview picture. */
-  defaultImage: Image;
+  defaultImage(lang: PageLang): Image;
 }
 
 const L = {
@@ -116,7 +117,7 @@ export function siteGraph(input: SeoInput, lang: PageLang): Record<string, unkno
       name: 'Sankofa',
       url: s + '/',
       logo: { '@type': 'ImageObject', url: s + '/icon-512.png', width: 512, height: 512 },
-      image: input.defaultImage.url,
+      image: input.defaultImage(lang).url,
       description: input.home.en.description,
       sameAs: ['https://github.com/sankofa-media/sankofa'],
     },
@@ -237,8 +238,8 @@ function featurePage(input: SeoInput, e: FeatureEntry, f: FeatureData, lang: Pag
   const path = pagePath('feature', lang, f.id);
   const list = { name: input.features.ui['list-title']?.[lang] ?? 'Special projects', path: pagePath('features', lang) };
   const crumbs = [{ name: 'Sankofa', path: homePath(lang) }, list, { name: name.split(':')[0], path }];
-  const made = input.featureImage(f.id);
-  const image = made ? { ...made, alt: name } : input.defaultImage;
+  const made = input.featureImage(f.id, lang);
+  const image = made ? { ...made, alt: name } : input.defaultImage(lang);
   const lenses = new Map((f.lenses ?? []).map((l) => [l.id, l.name[lang]]));
   const images: string[] = [image.url];
   const scenes = f.scenes
@@ -317,7 +318,7 @@ function featuresListPage(input: SeoInput, lang: PageLang): SeoPage {
     title: titled(name),
     name,
     description: describe(dek),
-    image: input.featureImage(input.features.features[0]?.id ?? '') ?? input.defaultImage,
+    image: input.featuresImage(lang),
     ogType: 'website',
     modified: last,
     jsonLd: [
@@ -337,7 +338,7 @@ function featuresListPage(input: SeoInput, lang: PageLang): SeoPage {
       breadcrumbs(input, crumbs),
     ],
     body: `${breadcrumbHtml(crumbs)}<article><header><h1>${esc(name)}</h1><p class="lede">${esc(dek)}</p></header><ul class="list">${items.join('')}</ul></article>`,
-    images: input.features.features.map((e) => input.featureImage(e.id)?.url).filter((u): u is string => !!u),
+    images: input.features.features.map((e) => input.featureImage(e.id, lang)?.url).filter((u): u is string => !!u),
   });
 }
 
@@ -351,7 +352,7 @@ function chapterPage(input: SeoInput, ch0: Chapter, lang: PageLang, cardHref: (i
   const ch = localizeChapter(ch0, lang);
   const path = pagePath('chapter', lang, ch.id);
   const crumbs = [{ name: 'Sankofa', path: homePath(lang) }, { name: ch.title, path }];
-  const image = ch.hero ? { url: mediaUrl(input, ch.hero.file), alt: ch.hero.caption } : input.defaultImage;
+  const image = input.defaultImage(lang);
   const d = input.dates(`chapter:${ch.id}`);
   const steps = ch.steps
     .map((s, i) => {
@@ -415,7 +416,7 @@ function cardPage(input: SeoInput, c0: Card, lang: PageLang, cardHref: (id: stri
   const chTitle = ch ? localizeChapter(ch, lang).title : undefined;
   const crumbs = [{ name: 'Sankofa', path: homePath(lang) }, ...(ch && chTitle ? [{ name: chTitle, path: pagePath('chapter', lang, ch.id) }] : []), { name: c.title, path }];
   const img = c.media?.find((m) => m.type === 'image');
-  const image = img ? { url: mediaUrl(input, img.file), alt: img.caption } : input.defaultImage;
+  const image = input.defaultImage(lang);
   const d = input.dates(`card:${c.id}`);
   const body = paragraphs(bodyForEdition(c.body, cardEdition(c0)))
     .map((p) => `<p>${linked(p, cardHref)}</p>`)
@@ -514,7 +515,7 @@ function prosePage(input: SeoInput, kind: 'guide' | 'dedication', file: ProseFil
     title: titled(name),
     name,
     description,
-    image: input.defaultImage,
+    image: input.defaultImage(lang),
     ogType: 'website',
     published: d.first,
     modified: d.last,
@@ -537,12 +538,12 @@ function homePage(input: SeoInput, lang: PageLang, all: SeoPage[]): SeoPage {
     title: h.title,
     name: 'Sankofa',
     description: describe(h.description),
-    image: input.defaultImage,
+    image: input.defaultImage(lang),
     ogType: 'website',
     modified: last,
     jsonLd: [{ '@type': 'WebPage', '@id': url, url, name: h.title, description: h.description, inLanguage: lang, isPartOf: { '@id': input.site + SITE_ID }, about: { '@id': input.site + ORG_ID } }],
     body: '',
-    images: [input.defaultImage.url],
+    images: [input.defaultImage(lang).url],
   });
 }
 

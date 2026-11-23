@@ -87,3 +87,16 @@ Griot and the optional nginx configuration in `web/nginx-pulse.conf`. The
 stand packaging includes that configuration; the standalone image does not
 require cluster DNS or Griot. A static installation has no live cluster pulse
 or visitor kubeconfig.
+
+### Social preview images
+
+The production build renders ten localized JPEG previews at 1200 × 630 under
+`dist/social/{en,ru}/`: the museum, special-project list and each feature.
+Titles come from the feature data, with the museum's bundled serif fonts.
+The build fails if a cover is missing or a title cannot fit into two lines at
+56 px or larger. Rendering uses local assets only.
+
+For a local source build, run `cd web && npm ci && npx playwright install chromium`
+once before `sh scripts/build-data.sh && npm run build`. The museum Dockerfile
+installs Chromium itself; `PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH` can select a
+system Chromium when building on another platform.

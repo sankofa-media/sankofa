@@ -12,9 +12,10 @@ COPY content ./content
 COPY pkg ./pkg
 RUN CGO_ENABLED=0 go build -o /out/sankofa ./cmd/sankofa
 
-FROM node:24-alpine AS web
+FROM node:24-bookworm-slim AS web
 # libvips makes the smaller image copies (scripts/build-media.ts).
-RUN apk add --no-cache vips-tools libwebp-tools
+RUN apt-get update && apt-get install -y --no-install-recommends libvips-tools webp chromium ca-certificates && rm -rf /var/lib/apt/lists/*
+ENV PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium
 WORKDIR /src
 COPY web/package.json web/package-lock.json web/
 RUN cd web && npm ci --no-audit --no-fund
