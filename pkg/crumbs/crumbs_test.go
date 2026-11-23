@@ -48,13 +48,25 @@ func facts() []factoid.Factoid {
 
 func TestFactoidsJoinThePool(t *testing.T) {
 	p := &Picker{Set: set(), Facts: facts()}
-	got := map[string]bool{}
-	for i := 0; i < 6; i++ {
-		got[p.Next().ID()] = true
-	}
-	// Three cards of both copies and three factoids, none repeated.
-	if len(got) != 6 || !got["fx-1"] || !got["fx-3"] || got["d"] {
-		t.Fatalf("want every crumb once, got %v", got)
+	// Both copies include every card, including the paired card d. Together
+	// with three factoids, the pool has seven entries (not six).
+	want := map[string]bool{"a": true, "b": true, "c": true, "d": true, "fx-1": true, "fx-2": true, "fx-3": true}
+	for cycle := 0; cycle < 2; cycle++ {
+		got := map[string]bool{}
+		for range len(want) {
+			crumb := p.Next()
+			if crumb == nil {
+				t.Fatal("pool ran dry")
+			}
+			id := crumb.ID()
+			if !want[id] || got[id] {
+				t.Fatalf("cycle %d: unexpected or repeated crumb %q; seen %v", cycle, id, got)
+			}
+			got[id] = true
+		}
+		if len(got) != len(want) {
+			t.Fatalf("want every card and factoid once, got %v", got)
+		}
 	}
 }
 
