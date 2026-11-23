@@ -1,0 +1,15 @@
+name: Correction
+description: What is incorrect, and what should it say? Please include reliable sources.
+body:
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What is incorrect, and what should it say? Please include reliable sources.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Related page or component
+      placeholder: https://sankofa.black/

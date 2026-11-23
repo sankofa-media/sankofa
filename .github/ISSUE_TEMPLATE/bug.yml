@@ -1,0 +1,15 @@
+name: Bug in the site or the distribution
+description: What happened? What did you expect? Include steps to reproduce, browser or cluster version, and relevant logs without secrets.
+body:
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What happened? What did you expect? Include steps to reproduce, browser or cluster version, and relevant logs without secrets.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Related page or component
+      placeholder: https://sankofa.black/
