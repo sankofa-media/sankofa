@@ -13,7 +13,7 @@ import (
 
 	"sigs.k8s.io/yaml"
 
-	"github.com/tym83/sankofa/pkg/card"
+	"github.com/sankofa-media/sankofa/pkg/card"
 )
 
 // Checked is the status of a factoid confirmed by two independent sources.

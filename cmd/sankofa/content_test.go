@@ -5,7 +5,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/tym83/sankofa/pkg/factoid"
+	"github.com/sankofa-media/sankofa/pkg/factoid"
 )
 
 func TestStepLabel(t *testing.T) {

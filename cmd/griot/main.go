@@ -40,14 +40,14 @@ import (
 	"k8s.io/client-go/tools/clientcmd"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 
-	"github.com/tym83/sankofa/api/v1alpha1"
-	"github.com/tym83/sankofa/content"
-	"github.com/tym83/sankofa/pkg/admission"
-	"github.com/tym83/sankofa/pkg/cabinet"
-	"github.com/tym83/sankofa/pkg/card"
-	"github.com/tym83/sankofa/pkg/credits"
-	"github.com/tym83/sankofa/pkg/history"
-	"github.com/tym83/sankofa/pkg/pulse"
+	"github.com/sankofa-media/sankofa/api/v1alpha1"
+	"github.com/sankofa-media/sankofa/content"
+	"github.com/sankofa-media/sankofa/pkg/admission"
+	"github.com/sankofa-media/sankofa/pkg/cabinet"
+	"github.com/sankofa-media/sankofa/pkg/card"
+	"github.com/sankofa-media/sankofa/pkg/credits"
+	"github.com/sankofa-media/sankofa/pkg/history"
+	"github.com/sankofa-media/sankofa/pkg/pulse"
 )
 
 const managedBy = "griot"

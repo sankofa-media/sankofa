@@ -5,7 +5,7 @@ import (
 	"testing"
 	"testing/fstest"
 
-	"github.com/tym83/sankofa/pkg/card"
+	"github.com/sankofa-media/sankofa/pkg/card"
 )
 
 const sample = `

@@ -18,7 +18,7 @@ import (
 	"k8s.io/client-go/kubernetes"
 	"sigs.k8s.io/yaml"
 
-	"github.com/tym83/sankofa/pkg/history"
+	"github.com/sankofa-media/sankofa/pkg/history"
 )
 
 // target resolves "deployment/web" or "deployments.apps/web" to a resource.

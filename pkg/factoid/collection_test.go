@@ -4,7 +4,7 @@ import (
 	"os"
 	"testing"
 
-	"github.com/tym83/sankofa/pkg/card"
+	"github.com/sankofa-media/sankofa/pkg/card"
 )
 
 // The museum's own collection always validates: a broken factoid fails here

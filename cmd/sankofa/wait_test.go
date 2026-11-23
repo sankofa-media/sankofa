@@ -4,9 +4,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/tym83/sankofa/pkg/card"
-	"github.com/tym83/sankofa/pkg/crumbs"
-	"github.com/tym83/sankofa/pkg/factoid"
+	"github.com/sankofa-media/sankofa/pkg/card"
+	"github.com/sankofa-media/sankofa/pkg/crumbs"
+	"github.com/sankofa-media/sankofa/pkg/factoid"
 )
 
 func TestFactCrumbSaysItsYearAndLeadsToItsCard(t *testing.T) {

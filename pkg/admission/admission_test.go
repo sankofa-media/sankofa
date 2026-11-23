@@ -13,8 +13,8 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 
-	"github.com/tym83/sankofa/api/v1alpha1"
-	"github.com/tym83/sankofa/pkg/credits"
+	"github.com/sankofa-media/sankofa/api/v1alpha1"
+	"github.com/sankofa-media/sankofa/pkg/credits"
 )
 
 func raw(v any) runtime.RawExtension {

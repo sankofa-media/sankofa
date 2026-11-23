@@ -5,7 +5,7 @@ package lineage
 import (
 	"sort"
 
-	"github.com/tym83/sankofa/pkg/card"
+	"github.com/sankofa-media/sankofa/pkg/card"
 )
 
 // Node is a genre in a tree.

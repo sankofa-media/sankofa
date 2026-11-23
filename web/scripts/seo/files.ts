@@ -87,7 +87,7 @@ export function llmsTxt(input: SeoInput, pages: SeoPage[]): string {
   const chapters = byKind(pages, 'en', 'chapter');
   if (chapters.length) lines.push(`## ${label('chapters', 'en')}`, '', ...chapters.map((p) => link(p, p.description)), '');
   const about = [...byKind(pages, 'en', 'guide'), ...byKind(pages, 'en', 'dedication')];
-  lines.push('## About the museum', '', `- [Sankofa](${s}/): the museum itself, with its atlas, timeline and listening room`, ...about.map((p) => link(p, p.description)), `- [Source code and content](https://github.com/tym83/sankofa): the museum is also a Kubernetes distribution; every card is an object in the cluster`, '');
+  lines.push('## About the museum', '', `- [Sankofa](${s}/): the museum itself, with its atlas, timeline and listening room`, ...about.map((p) => link(p, p.description)), `- [Source code and content](https://github.com/sankofa-media/sankofa): the museum is also a Kubernetes distribution; every card is an object in the cluster`, '');
   lines.push('## In Russian', '', `- [Sankofa](${s}/ru/)`, ...byKind(pages, 'ru', 'feature').map((p) => link(p)), ...byKind(pages, 'ru', 'chapter').map((p) => link(p)), '');
   lines.push('## Optional', '', `- [Feed of special projects](${s}/features.atom)`, `- [Sitemap](${s}/sitemap.xml)`, ...byKind(pages, 'en', 'card').map((p) => link(p)), '');
   return lines.join('\n');

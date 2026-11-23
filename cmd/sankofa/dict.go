@@ -11,9 +11,9 @@ import (
 	"github.com/charmbracelet/lipgloss"
 	"github.com/spf13/cobra"
 
-	"github.com/tym83/sankofa/pkg/atlas"
-	"github.com/tym83/sankofa/pkg/card"
-	"github.com/tym83/sankofa/pkg/reader"
+	"github.com/sankofa-media/sankofa/pkg/atlas"
+	"github.com/sankofa-media/sankofa/pkg/card"
+	"github.com/sankofa-media/sankofa/pkg/reader"
 )
 
 func dictCmd() *cobra.Command {

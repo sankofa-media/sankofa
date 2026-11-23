@@ -3,8 +3,8 @@ package content_test
 import (
 	"testing"
 
-	"github.com/tym83/sankofa/api/v1alpha1"
-	"github.com/tym83/sankofa/content"
+	"github.com/sankofa-media/sankofa/api/v1alpha1"
+	"github.com/sankofa-media/sankofa/content"
 )
 
 func TestEmbeddedQuestsDecode(t *testing.T) {

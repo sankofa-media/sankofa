@@ -118,7 +118,7 @@ export function siteGraph(input: SeoInput, lang: PageLang): Record<string, unkno
       logo: { '@type': 'ImageObject', url: s + '/icon-512.png', width: 512, height: 512 },
       image: input.defaultImage.url,
       description: input.home.en.description,
-      sameAs: ['https://github.com/tym83/sankofa'],
+      sameAs: ['https://github.com/sankofa-media/sankofa'],
     },
     {
       '@type': 'WebSite',

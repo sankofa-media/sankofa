@@ -12,9 +12,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/tym83/sankofa/api/v1alpha1"
-	"github.com/tym83/sankofa/pkg/card"
-	"github.com/tym83/sankofa/pkg/reader"
+	"github.com/sankofa-media/sankofa/api/v1alpha1"
+	"github.com/sankofa-media/sankofa/pkg/card"
+	"github.com/sankofa-media/sankofa/pkg/reader"
 )
 
 func questCmd() *cobra.Command {

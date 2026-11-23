@@ -3,8 +3,8 @@ package crumbs
 import (
 	"testing"
 
-	"github.com/tym83/sankofa/pkg/card"
-	"github.com/tym83/sankofa/pkg/factoid"
+	"github.com/sankofa-media/sankofa/pkg/card"
+	"github.com/sankofa-media/sankofa/pkg/factoid"
 )
 
 func set() *card.Set {

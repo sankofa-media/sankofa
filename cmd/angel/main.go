@@ -16,7 +16,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/tym83/sankofa/pkg/angel"
+	"github.com/sankofa-media/sankofa/pkg/angel"
 )
 
 func main() {

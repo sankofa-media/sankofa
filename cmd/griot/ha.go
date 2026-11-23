@@ -15,7 +15,7 @@ import (
 	"k8s.io/client-go/tools/leaderelection"
 	"k8s.io/client-go/tools/leaderelection/resourcelock"
 
-	"github.com/tym83/sankofa/pkg/history"
+	"github.com/sankofa-media/sankofa/pkg/history"
 )
 
 // elect runs the recorder only while this replica holds the lease. Every

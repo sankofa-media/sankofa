@@ -11,7 +11,7 @@ import (
 	admissionv1 "k8s.io/api/admission/v1"
 	corev1 "k8s.io/api/core/v1"
 
-	"github.com/tym83/sankofa/pkg/credits"
+	"github.com/sankofa-media/sankofa/pkg/credits"
 )
 
 // Resolve returns the credits of an image.

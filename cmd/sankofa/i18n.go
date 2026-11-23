@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/tym83/sankofa/pkg/atlas"
-	"github.com/tym83/sankofa/pkg/card"
+	"github.com/sankofa-media/sankofa/pkg/atlas"
+	"github.com/sankofa-media/sankofa/pkg/card"
 )
 
 // tr translates the few interface words the CLI prints around cards.

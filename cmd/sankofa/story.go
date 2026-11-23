@@ -11,8 +11,8 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 
-	"github.com/tym83/sankofa/pkg/card"
-	"github.com/tym83/sankofa/pkg/history"
+	"github.com/sankofa-media/sankofa/pkg/card"
+	"github.com/sankofa-media/sankofa/pkg/history"
 )
 
 // entry is one line of the incident story, told by one of three books:

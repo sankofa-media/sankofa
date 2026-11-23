@@ -8,9 +8,9 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/tym83/sankofa/content"
-	"github.com/tym83/sankofa/pkg/atlas"
-	"github.com/tym83/sankofa/pkg/roots"
+	"github.com/sankofa-media/sankofa/content"
+	"github.com/sankofa-media/sankofa/pkg/atlas"
+	"github.com/sankofa-media/sankofa/pkg/roots"
 )
 
 func loadRoots(cmd *cobra.Command) (*roots.Set, error) {

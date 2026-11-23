@@ -11,10 +11,10 @@ import (
 	"github.com/spf13/cobra"
 	"sigs.k8s.io/yaml"
 
-	"github.com/tym83/sankofa/api/v1alpha1"
-	"github.com/tym83/sankofa/pkg/card"
-	"github.com/tym83/sankofa/pkg/factoid"
-	"github.com/tym83/sankofa/pkg/roots"
+	"github.com/sankofa-media/sankofa/api/v1alpha1"
+	"github.com/sankofa-media/sankofa/pkg/card"
+	"github.com/sankofa-media/sankofa/pkg/factoid"
+	"github.com/sankofa-media/sankofa/pkg/roots"
 )
 
 func contentCmd() *cobra.Command {

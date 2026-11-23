@@ -11,7 +11,7 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/apis/meta/v1/unstructured"
 
-	"github.com/tym83/sankofa/api/v1alpha1"
+	"github.com/sankofa-media/sankofa/api/v1alpha1"
 )
 
 // Protected marks an object that may only be deleted after a council.
