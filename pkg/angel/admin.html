@@ -34,6 +34,7 @@
       <option value="hidden">hidden</option>
       <option value="crisis">crisis</option>
       <option value="queued">queued</option>
+      <option value="feedback">Museum feedback</option>
       <option value="notes">Negative: reader notes</option>
       <option value="pulses">readers' pulses</option>
     </select>
@@ -72,8 +73,29 @@
       list.append(a);
     }
   }
+  async function loadFeedback(before = 0) {
+    const r = await fetch(api + "admin/feedback?before=" + before, { headers: auth() });
+    const list = $("list");
+    list.replaceChildren();
+    if (!r.ok) { $("msg").textContent = "Error " + r.status; return; }
+    const data = await r.json();
+    $("msg").textContent = data.feedback.length + " message(s), newest first";
+    for (const f of data.feedback) {
+      const a = el("article");
+      a.append(el("div", "meta", [f.id, f.kind, f.status, f.created].join(" · ")), el("div", "text", f.text), el("div", "meta", f.contact), el("div", "text", JSON.stringify(f.page, null, 2)));
+      const status = f.status === "open" ? "done" : "open";
+      const b = el("button", "", status);
+      b.onclick = async () => {
+        const r = await fetch(api + "admin/feedback/" + f.id, { method: "POST", headers: { ...auth(), "Content-Type": "application/json" }, body: JSON.stringify({ status }) });
+        if (r.ok) loadFeedback(before); else $("msg").textContent = "Error " + r.status;
+      };
+      a.append(b); list.append(a);
+    }
+    if (data.next) { const more = el("button", "", "Older messages"); more.onclick = () => loadFeedback(data.next); list.append(more); }
+  }
   async function load(before = 0) {
     const st = $("status").value;
+    if (st === "feedback") return loadFeedback(before);
     if (st === "pulses") return loadPulses();
     const isNotes = st === "notes";
     const r = await fetch(api + (isNotes ? "admin/notes?before=" + before : "admin/queue" + (st ? "?status=" + encodeURIComponent(st) : "")), { headers: auth() });

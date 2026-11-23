@@ -1,7 +1,9 @@
+import { installFeedback } from './feedback';
 import { takeReviewToken, watchReviewHash } from './lib/reviewGate';
 import { extraHashKeys, langOfLocation, pageOfPath, routeOfLocation, urlOfRoute } from './lib/pagePath';
 import { detectLang, storedLang } from './lib/i18n';
 
+installFeedback();
 const reviewToken = takeReviewToken();
 watchReviewHash();
 if (reviewToken) void import('./review').then(m => m.install(reviewToken));

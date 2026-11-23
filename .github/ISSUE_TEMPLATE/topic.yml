@@ -1,0 +1,15 @@
+name: Topic request
+description: What topic should the museum explain?
+body:
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What topic should the museum explain?
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Related page or component
+      placeholder: https://sankofa.black/

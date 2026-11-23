@@ -1,0 +1,15 @@
+name: New dictionary card
+description: Who or what belongs in the dictionary? Include dates, places and sources.
+body:
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Who or what belongs in the dictionary? Include dates, places and sources.
+    validations:
+      required: true
+  - type: input
+    id: page
+    attributes:
+      label: Related page or component
+      placeholder: https://sankofa.black/
