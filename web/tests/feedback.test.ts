@@ -13,3 +13,9 @@ it('captures route context and strips credentials from URLs', () => {
  expect(page).toEqual({url:'https://sankofa.black/ru/features/angel/#scene=touch',key:'feature',view:'feature',item:'angel',scene:'touch',language:'ru',theme:'light',viewport:{width:390,height:844}});
  expect(pageContext('https://sankofa.black/cards/sun-ra/', 'en','dark',1440,900).item).toBe('sun-ra');
 });
+
+it('keeps atlas coordinates and zoom in shared context', () => {
+ const page = pageContext('https://sankofa.black/#zoom=1&t=1900-1950&place=lagos&review=secret', 'en', 'dark', 390, 844);
+ expect(page.url).toBe('https://sankofa.black/#zoom=1&t=1900-1950&place=lagos');
+ expect(page.view).toBe('atlas');
+});
