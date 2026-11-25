@@ -49,7 +49,7 @@ conformance Kubernetes **462/462** (v1.37.2). Как собрать, загру�
 
 ```bash
 kubectl apply -f deploy/crds/
-kubectl apply -f deploy/griot.yaml      # сначала подставить ссылку на образ
+sed 's#GRIOT_IMAGE#ghcr.io/sankofa-media/sankofa/griot:latest#' deploy/griot.yaml | kubectl apply -f -   # или тег релиза, или дайджест
 kubectl apply -f deploy/webhooks.yaml
 go install ./cmd/sankofa                # или: kubectl sankofa
 ```

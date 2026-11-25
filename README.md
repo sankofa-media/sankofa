@@ -49,7 +49,7 @@ the installed distribution passes upstream Kubernetes conformance **462/462**
 
 ```bash
 kubectl apply -f deploy/crds/
-kubectl apply -f deploy/griot.yaml      # uses ghcr.io/sankofa-media/sankofa/griot:latest
+sed 's#GRIOT_IMAGE#ghcr.io/sankofa-media/sankofa/griot:latest#' deploy/griot.yaml | kubectl apply -f -   # or a release tag or digest
 kubectl apply -f deploy/webhooks.yaml
 go install ./cmd/sankofa                # or: kubectl sankofa
 ```
