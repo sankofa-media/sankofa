@@ -1,31 +1,15 @@
 #!/usr/bin/env bash
-# Build the angel service (cmd/angel) with a static ffmpeg on distroless,
-# without a Docker daemon, push it to the stand and roll it out together with
-# whisper.cpp. Same path as museum.sh: crane append, push.sh, sed, km apply.
+# Roll out the angel image CI published for the checked-out commit (cmd/angel
+# with a static ffmpeg on distroless, ghcr_image in env.sh) together with
+# whisper.cpp. Nothing is built here: push the commit to main and wait for the
+# Images workflow first.
 set -euo pipefail
 cd "$(dirname "$0")/../.."
 source hack/stand/env.sh
 export PATH="$HOME/go/bin:$PATH"
-BASE_IMAGE=${BASE_IMAGE:-gcr.io/distroless/static-debian12:nonroot}
-FFMPEG_IMAGE=${FFMPEG_IMAGE:-mwader/static-ffmpeg:9.0.2}
 WHISPER_IMAGE=${WHISPER_IMAGE:-ghcr.io/ggml-org/whisper.cpp:main}
-
-rm -rf dist/angel-bin dist/angel-ffmpeg dist/angel-*.tar dist/angel.tar
-mkdir -p dist/angel-bin/usr/local/bin dist/angel-ffmpeg/usr/local/bin
-CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -trimpath -ldflags='-s -w' -o dist/angel-bin/usr/local/bin/angel ./cmd/angel
-# A fully static ffmpeg (with libmp3lame) taken out of its image: it runs on
-# distroless/static, which has no shell and no libc to speak of.
-crane export --platform linux/amd64 "$FFMPEG_IMAGE" - | tar -x -C dist/angel-ffmpeg/usr/local/bin ffmpeg
-# Reproducible layers (fixed times, owners, sorted names): an unchanged ffmpeg
-# keeps its digest and is never pushed again.
-for l in ffmpeg bin; do
-  (cd "dist/angel-$l" && chmod -R a+rX . && find . -exec touch -h -t 202601010000 {} + &&
-    find . -mindepth 1 | LC_ALL=C sort | COPYFILE_DISABLE=1 tar --uid 0 --gid 0 --uname root --gname root --no-recursion -cf "../angel-$l.tar" -T -)
-done
-crane append --platform linux/amd64 -b "$BASE_IMAGE" \
-  -f dist/angel-ffmpeg.tar -f dist/angel-bin.tar -t sankofa/angel:dev -o dist/angel.tar >/dev/null
-img=$(hack/stand/push.sh angel dist/angel.tar | tail -1)
-[[ $img == localhost:5000/* ]] || { echo "push failed" >&2; exit 1; }
+mkdir -p dist
+img=$(ghcr_image angel)
 # whisper.cpp is pulled from its official registry, pinned to the digest the
 # tag points at right now.
 whisper="${WHISPER_IMAGE%%:*}@$(crane digest "$WHISPER_IMAGE")"
