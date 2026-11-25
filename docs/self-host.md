@@ -76,15 +76,17 @@ The museum, including the Angel story, works without `/api`. Angel's shared
 words and pulse need the optional service in
 [deploy/angel.yaml](../deploy/angel.yaml). That manifest also includes Whisper
 for voice transcription; an Anthropic API key enables automatic moderation
-(without it, words wait for owner review). Package `cmd/angel` and ffmpeg in an image, supply `ANGEL_IMAGE` and
+(without it, words wait for owner review). Use the published `ghcr.io/sankofa-media/sankofa/angel` image (or your own with `cmd/angel` and ffmpeg), supply `ANGEL_IMAGE` and
 `WHISPER_IMAGE` (a whisper.cpp server image), substitute
 your hostnames, and adapt its Ingress, storage and TLS to your cluster. Store
 keys in Kubernetes Secrets, never in the site image or repository. This is a
 separate deployment, not a requirement for viewing the museum.
 
 The listening room's live cluster heartbeat is separate from Angel. It needs
-Griot and the optional nginx configuration in `web/nginx-pulse.conf`. The
-stand packaging includes that configuration; the standalone image does not
+Griot and the optional nginx configuration in `web/nginx-pulse.conf`: put it
+in a ConfigMap named `museum-nginx` (key `pulse.conf`), which
+`deploy/museum.yaml` mounts at `/etc/nginx/museum` when it exists. The stand
+does this in `hack/stand/museum.sh`; the standalone image does not
 require cluster DNS or Griot. A static installation has no live cluster pulse
 or visitor kubeconfig.
 
