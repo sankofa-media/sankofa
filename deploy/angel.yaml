@@ -42,7 +42,7 @@ spec:
       containers:
         - name: angel
           image: ANGEL_IMAGE
-          command: [/usr/local/bin/angel]
+          command: [/usr/local/bin/service] # the CI image names every Go command "service"
           args: [-listen=:8080, -data=/var/lib/angel, -ffmpeg=/usr/local/bin/ffmpeg, -whisper-url=http://whisper:8080, -ip-header=X-Real-IP]
           envFrom:
             - secretRef: {name: angel-anthropic, optional: true}

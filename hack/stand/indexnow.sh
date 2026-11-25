@@ -4,7 +4,11 @@
 # the deploy, or that is new. Usage: indexnow.sh <old-sitemap.xml> <host>
 set -euo pipefail
 old=$1 host=$2
-key_file=$(cd "$(dirname "$0")/../../web/public" && ls | grep -E '^[0-9a-f]{32}\.txt$' | head -1)
+key_file=
+for f in "$(dirname "$0")"/../../web/public/*.txt; do
+  f=${f##*/}
+  [[ $f =~ ^[0-9a-f]{32}\.txt$ ]] && { key_file=$f; break; }
+done
 [ -n "$key_file" ] || { echo "indexnow: no key file in web/public" >&2; exit 0; }
 key=${key_file%.txt}
 pairs() { tr '<' '\n' | sed -n 's#^loc>\(.*\)#L \1#p; s#^lastmod>\(.*\)#M \1#p' | awk '$1=="L"{if(u)print u, m; u=$2; m=""} $1=="M"{m=$2} END{if(u)print u, m}'; }

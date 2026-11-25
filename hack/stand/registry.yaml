@@ -1,7 +1,9 @@
 # A registry on every node of the stand, on the node's localhost:5000.
 # containerd pulls from localhost over plain HTTP, so the stand needs no
 # external registry and no credentials. Images are pushed to each node with
-# hack/stand/push.sh.
+# hack/stand/push.sh. Storage is an emptyDir: a recreated node starts empty,
+# which is why the stand's own services run images from ghcr.io instead and
+# this registry is left for experiments (hack/griot-bench).
 apiVersion: v1
 kind: Namespace
 metadata:
