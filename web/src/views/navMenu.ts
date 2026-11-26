@@ -19,6 +19,7 @@ const HINTS: Record<string, { en: string; ru: string }> = {
   index: { en: 'Every name in the dictionary, from A to Z', ru: 'Все имена словаря — от А до Я' },
   guide: { en: 'What is where, and how the facts were checked', ru: 'Что где лежит и как проверяли факты' },
   dedication: { en: 'Whom this museum is for', ru: 'Кому посвящён этот музей' },
+  friends: { en: 'Dormer, damn.academy, Paleocomputing and more', ru: 'Dormer, damn.academy, Палеокомпьютинг и другие' },
 };
 
 /** Which entry a top-bar button is. */
@@ -62,6 +63,7 @@ export function installNavMenu(nav: HTMLElement): void {
   const actions = nav.querySelector<HTMLElement>('.nav-actions');
   if (!actions || actions.querySelector('.nav-menu-btn')) return;
   const l = lang();
+  actions.querySelector<HTMLAnchorElement>('[data-mech="friends"]')?.setAttribute('href', l === 'ru' ? '/ru/friends/' : '/friends/');
   const entries = [...actions.querySelectorAll<HTMLElement>('.btn:not(.lang-switch)')];
   const sheet = h('div.nav-sheet', { id: 'nav-sheet', role: 'dialog', 'aria-modal': 'false', 'aria-label': pick({ en: 'Museum menu', ru: 'Меню музея' }), hidden: true });
   const list = h('ul.nav-sheet-list');
