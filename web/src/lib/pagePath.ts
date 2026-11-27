@@ -1,6 +1,6 @@
 // Real paths next to the museum's hash links. A special project is a page of
 // its own (/features/<id>/, /ru/features/<id>/), and the pages the build
-// pre-renders for search engines (/cards/<id>/, /chapters/<id>/, /guide/,
+// pre-renders for search engines (/cards/<id>/, the A–Z index /cards/, /chapters/<id>/, /guide/,
 // /dedication/, /ru/) open the museum at the same place as their hash link.
 // The language of a path is its prefix: /ru/… is Russian, any other page
 // path is English; the bare root keeps the reader's own language.
@@ -8,7 +8,7 @@
 import { formatRoute, parseRoute, type Route } from './route.ts';
 
 export type PageLang = 'en' | 'ru';
-export type PageKind = 'home' | 'features' | 'feature' | 'chapter' | 'card' | 'guide' | 'dedication';
+export type PageKind = 'home' | 'features' | 'feature' | 'chapter' | 'card' | 'index' | 'guide' | 'dedication';
 
 export interface PathPage {
   kind: PageKind;
@@ -31,6 +31,7 @@ export function pageOfPath(pathname: string): PathPage | null {
   if (!section) return page('home');
   if (section === 'features') return id === undefined ? page('features') : isId(id) ? page('feature', id) : null;
   if (section === 'chapters' && isId(id)) return page('chapter', id);
+  if (section === 'cards' && id === undefined) return page('index');
   if (section === 'cards' && isId(id)) return page('card', id);
   if ((section === 'guide' || section === 'dedication') && id === undefined) return page(section);
   return null;
@@ -50,6 +51,8 @@ export function pathOfPage(p: PathPage): string {
       return `${pre}/chapters/${p.id}/`;
     case 'card':
       return `${pre}/cards/${p.id}/`;
+    case 'index':
+      return `${pre}/cards/`;
     default:
       return `${pre}/${p.kind}/`;
   }
