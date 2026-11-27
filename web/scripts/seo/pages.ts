@@ -492,6 +492,43 @@ function inlineHtml(xs: Inline[], cardHref: (id: string) => string | undefined):
     .join('');
 }
 
+/** Every card from A to Z: the one static page that links to all of them, so a
+ * crawler that never runs the museum's script still reaches each card. */
+function indexPage(input: SeoInput, lang: PageLang, cardHref: (id: string) => string | undefined): SeoPage {
+  const name = lang === 'ru' ? 'Указатель' : 'Index';
+  const path = pagePath('index', lang);
+  const crumbs = [{ name: 'Sankofa', path: homePath(lang) }, { name, path }];
+  const cards = input.cards.map((c) => localizeCard(c, lang)).sort((a, b) => a.title.localeCompare(b.title, lang));
+  const groups = new Map<string, typeof cards>();
+  for (const c of cards) {
+    const k = c.title.charAt(0).toLocaleUpperCase(lang);
+    groups.set(k, [...(groups.get(k) ?? []), c]);
+  }
+  const description = lang === 'ru'
+    ? `Все ${cards.length} карточек музея Sankofa от А до Я: люди, музыка, события, книги и места семи веков чёрной культуры.`
+    : `All ${cards.length} cards of the Sankofa museum from A to Z: people, music, events, books and places from seven centuries of Black culture.`;
+  const d = input.dates('index');
+  const url = input.site + path;
+  const body = [...groups].map(([k, cs]) => `<section><h2>${esc(k)}</h2><ul>${cs.map((c) => `<li><a href="${esc(cardHref(c.id) ?? '')}">${esc(c.title)}</a></li>`).join('')}</ul></section>`).join('');
+  return page(input, {
+    kind: 'index',
+    lang,
+    title: titled(name),
+    name,
+    description,
+    image: input.defaultImage(lang),
+    ogType: 'website',
+    published: d.first,
+    modified: d.last,
+    jsonLd: [
+      { '@type': 'CollectionPage', '@id': url, url, name, description, inLanguage: lang, isPartOf: { '@id': input.site + SITE_ID }, mainEntity: { '@type': 'ItemList', numberOfItems: cards.length } },
+      breadcrumbs(input, crumbs),
+    ],
+    body: `${breadcrumbHtml(crumbs)}<article><header><h1>${esc(name)}</h1><p>${esc(description)}</p></header>${body}</article>`,
+    images: [],
+  });
+}
+
 function prosePage(input: SeoInput, kind: 'guide' | 'dedication', file: ProseFile, lang: PageLang, cardHref: (id: string) => string | undefined): SeoPage | undefined {
   const doc = file[lang] ?? file.en;
   if (!doc) return undefined;
@@ -561,6 +598,7 @@ export function buildPages(input: SeoInput): SeoPage[] {
     }
     for (const ch of input.chapters) out.push(chapterPage(input, ch, lang, cardHref, cardsById));
     for (const c of input.cards) out.push(cardPage(input, c, lang, cardHref, chapters));
+    if (input.cards.length) out.push(indexPage(input, lang, cardHref));
     if (input.guide) {
       const p = prosePage(input, 'guide', input.guide, lang, cardHref);
       if (p) out.push(p);
@@ -576,6 +614,6 @@ export function buildPages(input: SeoInput): SeoPage[] {
 
 /** The pages a reader without the museum's script can go to, for the home page's <noscript>. */
 export function sitemapLinks(pages: SeoPage[], lang: PageLang): { name: string; path: string }[] {
-  const order: PageKind[] = ['features', 'feature', 'chapter', 'guide', 'dedication'];
+  const order: PageKind[] = ['features', 'feature', 'chapter', 'index', 'guide', 'dedication'];
   return pages.filter((p) => p.lang === lang && order.includes(p.kind)).sort((a, b) => order.indexOf(a.kind) - order.indexOf(b.kind)).map((p) => ({ name: p.name, path: p.path }));
 }

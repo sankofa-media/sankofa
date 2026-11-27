@@ -14,16 +14,21 @@ describe('page paths', () => {
     expect(pageOfPath('/ru/chapters/v0/')).toEqual({ kind: 'chapter', id: 'v0', lang: 'ru' });
     expect(pageOfPath('/guide/')).toEqual({ kind: 'guide', lang: 'en' });
     expect(pageOfPath('/media/x.jpg')).toBeNull();
-    expect(pageOfPath('/cards/')).toBeNull();
+    expect(pageOfPath('/cards/')).toEqual({ kind: 'index', lang: 'en' });
+    expect(pageOfPath('/ru/cards/')).toEqual({ kind: 'index', lang: 'ru' });
     expect(pageOfPath('/features/Bad_Id/')).toBeNull();
   });
 
   it('writes the same paths back', () => {
-    for (const p of ['/', '/ru/', '/features/', '/ru/features/angel/', '/cards/sun-ra/', '/ru/chapters/v3/', '/dedication/']) {
+    for (const p of ['/', '/ru/', '/features/', '/ru/features/angel/', '/cards/sun-ra/', '/ru/cards/', '/ru/chapters/v3/', '/dedication/']) {
       expect(pathOfPage(pageOfPath(p)!)).toBe(p);
     }
     expect(featurePath('angel', 'ru')).toBe('/ru/features/angel/');
     expect(featurePath(undefined, 'en')).toBe('/features/');
+  });
+
+  it('opens the index from the A–Z page', () => {
+    expect(routeOfLocation('/ru/cards/', '')).toMatchObject({ view: 'index' });
   });
 
   it('opens a feature from its path, the scene from the hash', () => {
