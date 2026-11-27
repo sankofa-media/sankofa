@@ -18,7 +18,7 @@ import type { ProseFile } from '../../src/mechanics/guide/model.ts';
 import { buildPages, LANGS, sitemapLinks, type Dates, type HomeText, type Image, type SeoInput } from './pages.ts';
 import { featuresAtom, llmsFullTxt, llmsTxt, robotsTxt, sitemaps } from './files.ts';
 import { noscriptHtml, renderPage } from './render.ts';
-import { renderSocial, socialPath, SOCIAL_H, SOCIAL_W } from './social.ts';
+import { renderPagePreviews, renderSocial, socialPath, SOCIAL_H, SOCIAL_W, type PagePreview } from './social.ts';
 
 export const DEFAULT_SITE = 'https://sankofa.black';
 
@@ -137,6 +137,36 @@ export async function buildSeo(dist: string, repo: string, site = DEFAULT_SITE, 
     defaultImage: lang => image(socialPath('home', lang)),
   };
   const pages = buildPages(input);
+  // Give every card, chapter and prose page its own link preview instead of
+  // the museum's front page: its title, a line of its text, its own picture.
+  const chapterName = new Map(pages.filter((p) => p.kind === 'chapter').map((p) => [`${p.lang}:${p.id}`, p.name]));
+  const cardById = new Map(input.cards.map((c) => [c.id, c]));
+  const chapterById = new Map(input.chapters.map((c) => [c.id, c]));
+  const mediaFile = (file?: string) => (file && existsSync(join(dist, 'media', file)) ? join(dist, 'media', file) : undefined);
+  const previews: (PagePreview & { page: (typeof pages)[number] })[] = [];
+  for (const p of pages) {
+    const path = `social/${p.lang}/${p.kind === 'guide' || p.kind === 'dedication' ? p.kind : `${p.kind}s/${p.id}`}.jpg`;
+    if (p.kind === 'card' && p.id) {
+      const c = cardById.get(p.id)!;
+      const year = c.moment?.year ?? c.years?.[0];
+      const era = c.era ? chapterName.get(`${p.lang}:${c.era}`) : undefined;
+      previews.push({ page: p, path, lang: p.lang, kicker: [era, year].filter((x) => x !== undefined && x !== '').join(' · ') || 'Sankofa', title: p.name, line: p.description, art: mediaFile(c.media?.find((m) => m.type === 'image')?.file) });
+    } else if (p.kind === 'chapter' && p.id) {
+      const ch = chapterById.get(p.id)!;
+      previews.push({ page: p, path, lang: p.lang, kicker: p.lang === 'ru' ? 'ГЛАВА МУЗЕЯ' : 'A MUSEUM CHAPTER', title: p.name, line: p.description, art: mediaFile(ch.hero?.file) });
+    } else if (p.kind === 'guide' || p.kind === 'dedication') {
+      previews.push({ page: p, path, lang: p.lang, kicker: 'Sankofa', title: p.name, line: p.description });
+    }
+  }
+  const pageSocial = await renderPagePreviews(repo, dist, previews);
+  for (const v of previews) {
+    const old = v.page.image.url;
+    const made = { ...image(v.path), alt: v.page.name };
+    v.page.image = made;
+    v.page.images = v.page.images.map((u) => (u === old ? made.url : u));
+    v.page.jsonLd = JSON.parse(JSON.stringify(v.page.jsonLd).split(old).join(made.url));
+  }
+  social.push(...pageSocial);
   const noscript = Object.fromEntries(LANGS.map((l) => [l, noscriptHtml(sitemapLinks(pages, l), l)]));
   for (const p of pages) write(join(dist, p.path, 'index.html'), renderPage(template, site, p, noscript[p.lang]));
 
