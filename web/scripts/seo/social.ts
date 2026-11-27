@@ -40,14 +40,9 @@ function mapArt(repo: string): string {
  return `<svg class="map" viewBox="0 0 1200 630"><defs><pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0V60" fill="none" stroke="#aaa" stroke-opacity=".1"/></pattern></defs><rect width="1200" height="630" fill="url(#grid)"/><path d="${path}" fill="#353749" stroke="#b59a58" stroke-opacity=".35"/>${[0,1,2,3,4,5].map(i=>`<path d="M${110+i*50} ${100+i*45} Q${590-i*60} ${-130+i*45} ${1070-i*32} ${370+i*40}" fill="none" stroke="${['#d8ad4b','#71998a','#897cbb'][i%3]}" stroke-opacity=".5" stroke-width="2"/>`).join('')}</svg>`;
 }
 
-export async function renderSocial(dist: string, repo: string, index: FeaturesIndex, data: Record<string,FeatureData>): Promise<string[]> {
- const browser = await chromium.launch({ headless: true, ...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ? {executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH} : {}) });
- const files: string[] = [];
- try {
-  const page = await browser.newPage({viewport:{width:SOCIAL_W,height:SOCIAL_H},deviceScaleFactor:1});
-  await page.route('http://**/*', route => route.abort());
-  await page.route('https://**/*', route => route.abort());
-  const css = `${fonts(repo)}
+/** The stylesheet every preview is drawn with: the museum's fonts and layouts. */
+function socialCss(repo: string): string {
+ return `${fonts(repo)}
    *{box-sizing:border-box}body{margin:0;width:1200px;height:630px;overflow:hidden;background:#0c0d18;color:#f3ecdb;font-family:Inter,InterRU,sans-serif}
    .map{position:absolute;inset:0;width:100%;height:100%;opacity:.6}.shade{position:absolute;inset:0;background:linear-gradient(90deg,#0c0d18dd,#0c0d1844),linear-gradient(0deg,#0c0d18,transparent)}
    .content{position:absolute;inset:48px 56px}.wordmark{font-family:Fraunces,serif;font-weight:400;letter-spacing:-.065em;line-height:1}.wordmark em{color:#e3b34d;font-weight:400}
@@ -55,8 +50,19 @@ export async function renderSocial(dist: string, repo: string, index: FeaturesIn
    .domain{font-size:24px;letter-spacing:1px;color:#d4caba}.main .domain{position:absolute;bottom:0;right:0}
    .art{position:absolute;inset:0}.art img{position:absolute;width:100%;height:100%;object-fit:cover}.feature .shade{background:linear-gradient(0deg,#080913fa 0%,#080913b0 42%,transparent 85%),linear-gradient(90deg,#08091388,transparent)}
    .feature .content{display:flex;flex-direction:column;justify-content:end}.feature h1{font-family:Fraunces,Literata,serif;font-weight:450;letter-spacing:-.035em;font-size:76px;line-height:1.12;margin:0 0 28px;max-width:1088px;text-wrap:balance}.brand{display:flex;align-items:baseline;gap:28px}.brand .wordmark{font-size:48px}
+   .page .content{display:flex;flex-direction:column;justify-content:end}.page .kicker{margin:0 0 14px}.page h1{font-family:Fraunces,Literata,serif;font-weight:450;letter-spacing:-.03em;font-size:72px;line-height:1.08;margin:0 0 18px;max-width:1088px;text-wrap:balance;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.page .line{font-family:Fraunces,Literata,serif;font-size:27px;line-height:1.35;color:#e9dfca;max-width:1000px;margin:0 0 26px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.page .art img{filter:saturate(.9)}
    .list .wordmark{font-size:118px}.strip{position:absolute;left:56px;right:56px;top:280px;height:240px;display:flex;gap:16px}.tile{position:relative;flex:1;overflow:hidden;border:1px solid #b6974b55}.list .domain{position:absolute;bottom:44px;right:56px}
   `;
+}
+
+export async function renderSocial(dist: string, repo: string, index: FeaturesIndex, data: Record<string,FeatureData>): Promise<string[]> {
+ const browser = await chromium.launch({ headless: true, ...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ? {executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH} : {}) });
+ const files: string[] = [];
+ try {
+  const page = await browser.newPage({viewport:{width:SOCIAL_W,height:SOCIAL_H},deviceScaleFactor:1});
+  await page.route('http://**/*', route => route.abort());
+  await page.route('https://**/*', route => route.abort());
+  const css = socialCss(repo);
   const arts = new Map(index.features.map(e => {
    const layers = e.seo?.image ? [e.seo.image] : (e.cover?.layers ?? []).map(l=>l.file);
    if (!layers.length) throw new Error(`Missing social cover: ${e.id}`);
@@ -83,6 +89,32 @@ export async function renderSocial(dist: string, repo: string, index: FeaturesIn
    await draw(socialPath('home',lang),lang,'main',`${mapArt(repo)}<div class="shade"></div><main class="content"><p class="kicker">${MAIN[lang].kicker}</p>${wordmark}<p class="subtitle">${esc(balancedSubtitle(lang))}</p><span class="domain">sankofa.black</span></main>`);
    await draw(socialPath('features',lang),lang,'list',`${mapArt(repo)}<div class="shade"></div><main class="content"><p class="kicker">${lang==='en'?'Special projects':'Спецпроекты'}</p>${wordmark}</main><div class="strip">${index.features.slice(0,3).map(e=>`<div class="tile">${arts.get(e.id)}</div>`).join('')}</div><span class="domain">sankofa.black</span>`);
    for (const e of index.features) await draw(socialPath('feature',lang,e.id),lang,'feature',`${arts.get(e.id)}<div class="shade"></div><main class="content"><h1>${esc(plain((data[e.id]?.title ?? e.title)[lang]))}</h1><div class="brand">${wordmark}<span class="domain">sankofa.black</span></div></main>`);
+  }
+ } finally { await browser.close(); }
+ return files;
+}
+
+/** One preview per crawlable page (a card, a chapter, the guide): its own title,
+ * a line of its text, and its own picture when it has one. */
+export interface PagePreview { path: string; lang: PageLang; kicker: string; title: string; line?: string; art?: string }
+
+export async function renderPagePreviews(repo: string, dist: string, items: PagePreview[]): Promise<string[]> {
+ if (!items.length) return [];
+ const browser = await chromium.launch({ headless: true, ...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ? {executablePath:process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH} : {}) });
+ const files: string[] = [];
+ try {
+  const page = await browser.newPage({viewport:{width:SOCIAL_W,height:SOCIAL_H},deviceScaleFactor:1});
+  await page.route('http://**/*', route => route.abort());
+  await page.route('https://**/*', route => route.abort());
+  const css = socialCss(repo);
+  const map = mapArt(repo);
+  for (const it of items) {
+   const art = it.art ? `<div class="art"><img src="${dataURL(it.art)}" alt=""></div>` : map;
+   await page.setContent(`<!doctype html><html lang="${it.lang}"><meta charset="utf-8"><style>${css}</style><body class="page">${art}<div class="shade" style="background:linear-gradient(0deg,#080913fa 0%,#080913c8 45%,#08091340 90%),linear-gradient(90deg,#08091399,transparent)"></div><main class="content"><p class="kicker">${esc(it.kicker)}</p><h1>${esc(it.title)}</h1>${it.line ? `<p class="line">${esc(it.line)}</p>` : ''}<div class="brand">${wordmark}<span class="domain">sankofa.black</span></div></main></body></html>`);
+   await page.evaluate(async () => { await document.fonts.ready; await Promise.all([...document.images].map(i=>i.decode())); });
+   mkdirSync(dirname(join(dist,it.path)),{recursive:true});
+   await page.screenshot({path:join(dist,it.path),type:'jpeg',quality:82});
+   files.push(it.path);
   }
  } finally { await browser.close(); }
  return files;
