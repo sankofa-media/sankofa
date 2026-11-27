@@ -20,6 +20,7 @@ const HINTS: Record<string, { en: string; ru: string }> = {
   guide: { en: 'What is where, and how the facts were checked', ru: 'Что где лежит и как проверяли факты' },
   dedication: { en: 'Whom this museum is for', ru: 'Кому посвящён этот музей' },
   friends: { en: 'Dormer, damn.academy, Paleocomputing and more', ru: 'Dormer, damn.academy, Палеокомпьютинг и другие' },
+  telegram: { en: 'Our Telegram channel, in Russian', ru: 'Новые карточки и спецпроекты в нашем канале' },
 };
 
 /** Which entry a top-bar button is. */
@@ -64,6 +65,8 @@ export function installNavMenu(nav: HTMLElement): void {
   if (!actions || actions.querySelector('.nav-menu-btn')) return;
   const l = lang();
   actions.querySelector<HTMLAnchorElement>('[data-mech="friends"]')?.setAttribute('href', l === 'ru' ? '/ru/friends/' : '/friends/');
+  // The Telegram channel is in Russian, so only the Russian museum links to it.
+  if (l !== 'ru') actions.querySelector('[data-mech="telegram"]')?.remove();
   const entries = [...actions.querySelectorAll<HTMLElement>('.btn:not(.lang-switch)')];
   const sheet = h('div.nav-sheet', { id: 'nav-sheet', role: 'dialog', 'aria-modal': 'false', 'aria-label': pick({ en: 'Museum menu', ru: 'Меню музея' }), hidden: true });
   const list = h('ul.nav-sheet-list');
